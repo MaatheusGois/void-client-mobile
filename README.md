@@ -6,6 +6,10 @@ Architecture / maintenance: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
 https://github.com/user-attachments/assets/10381f43-aba1-4b22-b725-282112065ff2
 
+https://github.com/user-attachments/assets/8af3c16e-3fdd-4318-8e53-485b70628348
+
+
+
 ## Server
 
 Clients expect a [Void](https://github.com/GregHib/void) (or compatible) game server on **TCP 43594** (JS5 + login). Run that separately, then point each client at the host IP (defaults below).
