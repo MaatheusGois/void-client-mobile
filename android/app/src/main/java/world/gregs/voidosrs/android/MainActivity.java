@@ -23,6 +23,10 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -71,11 +75,57 @@ public class MainActivity extends Activity {
         root.addView(keyboardBall, ballLp);
 
         setContentView(root);
+        hideSystemUi();
         instance = this;
         installLogBridge();
-        debugHud = buildDebugHud();
-        root.addView(debugHud);
+        // On-screen debug HUD off — still mirrors to logcat via installLogBridge.
+        // debugHud = buildDebugHud();
+        // root.addView(debugHud);
         AwtHost.presenter = game;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        hideSystemUi();
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            hideSystemUi();
+        }
+    }
+
+    /** Sticky immersive: hide status (clock) + nav (back/home). */
+    private void hideSystemUi() {
+        Window window = getWindow();
+        if (window == null) {
+            return;
+        }
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        View decor = window.getDecorView();
+        // Must run after setContentView — DecorView is null before that on some OEMs.
+        if (decor == null) {
+            return;
+        }
+        if (Build.VERSION.SDK_INT >= 30) {
+            window.setDecorFitsSystemWindows(false);
+            WindowInsetsController c = decor.getWindowInsetsController();
+            if (c != null) {
+                c.hide(WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
+                c.setSystemBarsBehavior(WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        } else {
+            decor.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN);
+        }
     }
 
     private EditText buildImeField() {
@@ -402,6 +452,9 @@ public class MainActivity extends Activity {
             setFocusable(true);
             setFocusableInTouchMode(true);
             addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
+                if (keyboardOpen) {
+                    return;
+                }
                 int w = Math.max(0, right - left);
                 int h = Math.max(0, bottom - top);
                 if (w > 0 && h > 0) {
@@ -662,15 +715,27 @@ public class MainActivity extends Activity {
         }
 
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            if (width > 0 && height > 0) {
-                AwtHost.setDisplaySize(width, height);
-                startClientIfReady(width, height);
-                if (getHolder().getSurface().isValid()) {
-                    Canvas canvas = getHolder().lockCanvas();
-                    if (canvas != null) {
-                        drawFrame(canvas);
-                        getHolder().unlockCanvasAndPost(canvas);
-                    }
+            if (width <= 0 || height <= 0) {
+                return;
+            }
+            // IME used to use adjustResize and shrink the surface → client viewport
+            // stuck at a tiny size with black bars. Ignore shrinks while the keyboard
+            // is up (manifest is adjustNothing; this is belt-and-suspenders).
+            if (keyboardOpen) {
+                redraw();
+                return;
+            }
+            AwtHost.setDisplaySize(width, height);
+            startClientIfReady(width, height);
+            redraw();
+        }
+
+        private void redraw() {
+            if (getHolder().getSurface().isValid()) {
+                Canvas canvas = getHolder().lockCanvas();
+                if (canvas != null) {
+                    drawFrame(canvas);
+                    getHolder().unlockCanvasAndPost(canvas);
                 }
             }
         }
