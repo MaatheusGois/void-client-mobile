@@ -32,19 +32,9 @@ final class Class265 implements Interface1 {
         if (bool) {
             int i_0_ = (Math.max(Class321.anInt4017, Class92.anInt1524));
             int i_1_ = (Math.max(Class348_Sub42_Sub8_Sub2.anInt10432, ha_Sub2.anInt7666));
-            int i_2_ = aClass105_4688.method966();
-            int i_3_ = aClass105_4688.method980();
-            int i_4_ = 0;
-            int i_5_ = i_0_;
-            int i_6_ = i_0_ * i_3_ / i_2_;
-            int i_7_ = (i_1_ + -i_6_) / 2;
-            if (i_1_ < i_6_) {
-                i_6_ = i_1_;
-                i_5_ = i_1_ * i_2_ / i_3_;
-                i_7_ = 0;
-                i_4_ = (i_0_ - i_5_) / 2;
-            }
-            aClass105_4688.method973(i_4_, i_7_, i_5_, i_6_);
+            // Stretch title/login background to the full viewport (same full-bleed
+            // feel as in-game). Cover/fit left letterboxing or cropped art.
+            aClass105_4688.method973(0, 0, i_0_, i_1_);
         }
     }
 

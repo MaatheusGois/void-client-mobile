@@ -65,7 +65,7 @@ final class Class248 {
             if (i_0_ > 200) i_0_ = 200;
             aLong3207 = l;
             anInt3210 += i_0_;
-            if (anInt3210 > 30000) {
+            if (anInt3210 > 90000) {
                 try {
                     aClass202_3209.method1476((byte) -121);
                 } catch (Exception exception) {
@@ -247,13 +247,13 @@ final class Class248 {
     final boolean method1899(int i) {
         if (i > -91) this.anInt3214 = -39;
         anInt3186++;
-        return method1894(4350) >= 20;
+        return method1894(4350) >= 48;
     }
 
     final boolean method1900(int i) {
         int i_27_ = -51 % ((41 - i) / 47);
         anInt3195++;
-        return method1902(4) >= 20;
+        return method1902(4) >= 48;
     }
 
     final void method1901(int i) {
@@ -359,10 +359,10 @@ final class Class248 {
         class348_sub42_sub16_sub1.aLong7057 = l;
         class348_sub42_sub16_sub1.aByte10449 = i_29_;
         if (bool) {
-            if (method1902(4) >= 20) throw new RuntimeException();
+            if (method1902(4) >= 48) throw new RuntimeException();
             aClass107_3197.method1005(true, class348_sub42_sub16_sub1);
         } else {
-            if (method1894(4350) >= 20) throw new RuntimeException();
+            if (method1894(4350) >= 48) throw new RuntimeException();
             aClass107_3205.method1005(true, class348_sub42_sub16_sub1);
         }
         return class348_sub42_sub16_sub1;

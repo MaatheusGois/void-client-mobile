@@ -33,16 +33,30 @@ public class Toolkit {
 
     public Image createImage(byte[] data) {
         if (data == null) {
-            return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+            throw new IllegalArgumentException("image data");
         }
-        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+        BitmapFactory.Options opts = new BitmapFactory.Options();
+        opts.inPreferredConfig = Bitmap.Config.ARGB_8888;
+        opts.inDither = false;
+        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length, opts);
         if (bitmap == null) {
-            return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+            throw new IllegalArgumentException("decode failed");
+        }
+        if (bitmap.getConfig() != Bitmap.Config.ARGB_8888) {
+            Bitmap converted = bitmap.copy(Bitmap.Config.ARGB_8888, false);
+            bitmap.recycle();
+            bitmap = converted;
         }
         int w = bitmap.getWidth();
         int h = bitmap.getHeight();
         BufferedImage image = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-        bitmap.getPixels(image.peekArgb(), 0, w, 0, 0, w, h);
+        int[] pixels = image.peekArgb();
+        bitmap.getPixels(pixels, 0, w, 0, 0, w, h);
+        bitmap.recycle();
+        // Game sprite code treats only alpha==255 as opaque.
+        for (int i = 0; i < pixels.length; i++) {
+            pixels[i] |= 0xff000000;
+        }
         return image;
     }
 
@@ -85,7 +99,19 @@ public class Toolkit {
             if (image == null) {
                 setDimensions(x + w, y + h);
             }
-            image.setRGB(x, y, w, h, pixels, off, scansize);
+            if (model == null) {
+                image.setRGB(x, y, w, h, pixels, off, scansize);
+                return;
+            }
+            int[] argb = new int[w * h];
+            for (int row = 0; row < h; row++) {
+                int src = off + row * scansize;
+                int dst = row * w;
+                for (int col = 0; col < w; col++) {
+                    argb[dst + col] = model.getRGB(pixels[src + col]);
+                }
+            }
+            image.setRGB(x, y, w, h, argb, 0, w);
         }
 
         public void imageComplete(int status) {

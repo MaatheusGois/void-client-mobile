@@ -1,12 +1,14 @@
-# Void Client — Android spike
+# Void Client — Android
 
-Open this folder (`void-client/android`) in Android Studio.
+Software-rendered 634 client on ART. Architecture, rewrite pipeline, input, networking, JS5/display pitfalls: **[ARCHITECTURE.md](../ARCHITECTURE.md)**.
 
-Emulator talks to the host machine as `10.0.2.2` (already the default in `MainActivity`). Run the game server on the Mac first.
+Physical device needs the game server on the Mac **and** USB reverse (LAN is usually firewalled):
 
 ```bash
 cd void-client/android
 ./gradlew :app:installDebug
+./scripts/adb-reverse.sh
+adb logcat -s void-osrs:I
 ```
 
-Software renderer only. Touch = left click. Type in the bar at the bottom for login/chat. Two-finger / right-click is not wired yet.
+Emulator talks to the host as `10.0.2.2`. Touch: tap = left click, long-press = right click, pinch = wheel, two-finger drag = camera. Keyboard FAB (top-left) for login/chat.

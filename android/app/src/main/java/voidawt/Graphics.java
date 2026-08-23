@@ -85,16 +85,38 @@ public class Graphics {
         if (str == null || str.length() == 0) {
             return;
         }
-        int w = Math.max(1, target.getWidth());
-        int h = Math.max(1, target.getHeight());
-        Bitmap bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
-        bitmap.setPixels(target.peekArgb(), 0, w, 0, 0, w, h);
-        android.graphics.Canvas canvas = new android.graphics.Canvas(bitmap);
         Paint paint = new Paint(font.paint);
         paint.setColor(color.getRGB());
-        canvas.drawText(str, x, y, paint);
-        bitmap.getPixels(target.peekArgb(), 0, w, 0, 0, w, h);
+        Paint.FontMetrics fm = paint.getFontMetrics();
+        int textW = Math.max(1, (int) Math.ceil(paint.measureText(str)));
+        int textH = Math.max(1, (int) Math.ceil(fm.bottom - fm.top));
+        int pad = 2;
+        int bw = textW + pad * 2;
+        int bh = textH + pad * 2;
+        Bitmap bitmap = Bitmap.createBitmap(bw, bh, Bitmap.Config.ARGB_8888);
+        android.graphics.Canvas canvas = new android.graphics.Canvas(bitmap);
+        canvas.drawText(str, pad, pad - fm.top, paint);
+        int[] src = new int[bw * bh];
+        bitmap.getPixels(src, 0, bw, 0, 0, bw, bh);
         bitmap.recycle();
+        int[] dst = target.peekArgb();
+        int tw = target.getWidth();
+        int th = target.getHeight();
+        int dx0 = x - pad;
+        int dy0 = y - (int) (-fm.top) - pad;
+        for (int row = 0; row < bh; row++) {
+            int dy = dy0 + row;
+            if (dy < 0 || dy >= th) continue;
+            int sy = row * bw;
+            int dyOff = dy * tw;
+            for (int col = 0; col < bw; col++) {
+                int px = src[sy + col];
+                if ((px >>> 24) == 0) continue;
+                int dx = dx0 + col;
+                if (dx < 0 || dx >= tw) continue;
+                dst[dyOff + dx] = px;
+            }
+        }
     }
 
     public boolean drawImage(Image img, int x, int y, ImageObserver observer) {

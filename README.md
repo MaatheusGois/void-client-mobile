@@ -1,6 +1,8 @@
 # Void Client
 
-Deobfuscated 634 2010-12-14 client
+Deobfuscated 634 2010-12-14 client.
+
+Mobile (Android + iOS) architecture and how to maintain the ports: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
 # Build
 

@@ -81,7 +81,7 @@ final class Class314_Sub1 extends Class314 {
                 while (aClass291_6342.anIntArray3725.length > anInt6373) {
                     if (aClass291_6342.anIntArray3725[anInt6373] == 0) anInt6373++;
                     else {
-                        if (aClass112_6354.anInt1734 >= 250) {
+                        if (aClass112_6354.anInt1734 >= 512) {
                             bool = false;
                             break;
                         }

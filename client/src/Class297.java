@@ -100,7 +100,27 @@ final class Class297 implements Runnable {
                     if (Loader.debug) {
                         System.out.println("Connect: " + class144.anObject1996 + " " + class144.anInt2000);
                     }
-                    class144.anObject1998 = new Socket(InetAddress.getByName((String) (class144.anObject1996)), class144.anInt2000);
+                    {
+                        String host = (String) class144.anObject1996;
+                        InetAddress addr;
+                        if (host != null && host.matches("\\d+\\.\\d+\\.\\d+\\.\\d+")) {
+                            String[] p = host.split("\\.");
+                            addr = InetAddress.getByAddress(new byte[]{
+                                    (byte) Integer.parseInt(p[0]),
+                                    (byte) Integer.parseInt(p[1]),
+                                    (byte) Integer.parseInt(p[2]),
+                                    (byte) Integer.parseInt(p[3])
+                            });
+                        } else {
+                            addr = InetAddress.getByName(host);
+                        }
+                        Socket socket = new Socket();
+                        socket.connect(new java.net.InetSocketAddress(addr, class144.anInt2000), 5000);
+                        class144.anObject1998 = socket;
+                    }
+                    if (Loader.debug) {
+                        System.out.println("Connect OK: " + class144.anObject1996 + ":" + class144.anInt2000);
+                    }
                 } else if (i == 22) {
                     if (aLong3781 > Class62.method599(-92)) throw new IOException();
                     try {
@@ -192,6 +212,10 @@ final class Class297 implements Runnable {
                 } else throw new Exception("");
                 class144.anInt1997 = 1;
             } catch (Throwable throwable) {
+                if (Loader.debug && class144.anInt1994 == 1) {
+                    System.out.println("Connect FAIL: " + class144.anObject1996 + ":" + class144.anInt2000
+                            + " " + throwable.getClass().getSimpleName() + ": " + throwable.getMessage());
+                }
                 if (Loader.trace) {
                     throwable.printStackTrace();
                 }

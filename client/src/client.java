@@ -736,6 +736,11 @@ public final class client extends Applet_Sub1 {
         Class348_Sub4.aClass248_6601.anInt3213++;
         aa.aClass144_114 = null;
         Class348_Sub4.aClass248_6601.anInt3214 = i;
+        if (Loader.debug) {
+            System.out.println("js5 fail code=" + i
+                    + " attempts=" + Class348_Sub4.aClass248_6601.anInt3213
+                    + " handshake=" + Class47.anInt846);
+        }
         if (i_5_ > 74) {
             Class47.anInt846 = 0;
             Class193.aClass202_2589 = null;

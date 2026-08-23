@@ -27,7 +27,9 @@ final class Class215 {
                 Class14_Sub2.method243(37);
             }
         }
-        if (i_2_ == 3 && Class34.aFrame476 == null) method1580((byte) -126, true, -1, i_1_, Class316.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1);
+        // Prefer fallback to resizable (2) — not preferred prefs — if exclusive FS
+        // fails; preferred may itself be 3 and would recurse forever.
+        if (i_2_ == 3 && Class34.aFrame476 == null) method1580((byte) -126, true, -1, i_1_, 2, -1);
         else {
             java.awt.Container container;
             if (Class34.aFrame476 != null) {
@@ -46,9 +48,12 @@ final class Class215 {
                 container = Class52.aFrame4904;
             }
             if (i_2_ == 1) {
-                Class321.anInt4017 = Class92.anInt1524;
-                Class348_Sub42_Sub8_Sub2.anInt10432 = ha_Sub2.anInt7666;
-                Class348_Sub48.anInt7129 = (Class272.anInt3473 + -Class92.anInt1524) / 2;
+                // Fill the container instead of centering a fixed 765x503 canvas.
+                Class92.anInt1524 = Class272.anInt3473;
+                ha_Sub2.anInt7666 = Class348_Sub22.anInt6857;
+                Class321.anInt4017 = Class272.anInt3473;
+                Class348_Sub42_Sub8_Sub2.anInt10432 = Class348_Sub22.anInt6857;
+                Class348_Sub48.anInt7129 = 0;
                 Class335.anInt4167 = 0;
             } else Class286_Sub5.method2158((byte) 56);
             if (Class55_Sub1.aClass364_5271 != Class8.aClass364_165) {
@@ -66,6 +71,7 @@ final class Class215 {
                     Class305.aCanvas3869.setLocation((Class348_Sub48.anInt7129 + insets.left), (insets.top - -Class335.anInt4167));
                 } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
             }
+            // Must match method3229 (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
             Class50_Sub1.aBoolean5219 = i_2_ >= 2;
             if (r.anInt9721 != -1) Class239.method1713(true, 520);
             if (Class348_Sub40_Sub8.aClass238_9165 != null && Class334.method2653(true, Class240.anInt4674)) Class286_Sub2.method2145(-24498);

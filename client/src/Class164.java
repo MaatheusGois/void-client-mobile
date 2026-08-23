@@ -47,7 +47,8 @@ final class Class164 {
             if (Class175.aClass340_2327 == null) Class175.aClass340_2327 = new Class340(Class348_Sub4.aClass248_6601, Class39.aClass112_520, Class52.aBigInteger4896, Class348_Sub42_Sub15.aBigInteger9657);
             if (!Class175.aClass340_2327.method2674(7)) return 0;
             Class348_Sub23.method2965(null, 0, true, 0);
-            Class286_Sub7.aBoolean6289 = !Class348_Sub14.method2804((byte) -63);
+            // Prefer Class207 sprites over JPEG Toolkit path (wrong colors on Android).
+            Class286_Sub7.aBoolean6289 = true;
             Class286_Sub7.aClass45_6277 = Class369_Sub2.method3571(false, (Class286_Sub7.aBoolean6289 ? 34 : 32), (byte) -23, 1);
             Class348_Sub40_Sub17_Sub1.aClass45_10426 = Class369_Sub2.method3571(false, 33, (byte) -23, 1);
             Class104.aClass45_1627 = Class369_Sub2.method3571(false, 13, (byte) -23, 1);
@@ -268,7 +269,10 @@ final class Class164 {
             Class14_Sub2.method243(i ^ ~0x6fd6);
             if (Class348_Sub23_Sub2.aBoolean9038) Class367_Sub10.method3553(false, (byte) 108, 0);
             else Class367_Sub10.method3553(false, (byte) 102, Class316.aClass348_Sub51_3959.aClass239_Sub25_7251.method1829(-32350));
-            Class85.method830(Class316.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+            // Default to fullscreen 800x600 — scales up cleanly on phone/tablet.
+            Class316.aClass348_Sub51_3959.method3429((byte) 74, Class316.aClass348_Sub51_3959.aClass239_Sub8_7227, 3);
+            if (Class316.aClass348_Sub51_3959.aClass239_Sub8_7254 != null) Class316.aClass348_Sub51_3959.method3429((byte) 74, Class316.aClass348_Sub51_3959.aClass239_Sub8_7254, 3);
+            Class85.method830(3, 800, (byte) 102, false, 600);
             Class170.method1311(5139, Class348_Sub8.aHa6654);
             Class369.method3568(Class348_Sub8.aHa6654, i ^ ~0x6ff7);
             Class255.method1933(Class21.aClass45_322, Class348_Sub8.aHa6654, true);

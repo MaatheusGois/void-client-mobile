@@ -14,7 +14,7 @@ final class Class311 implements Runnable {
     static int anInt3905;
     static int anInt3906;
     private Interface16 anInterface16_3907 = new Class294();
-    private boolean aBoolean3908;
+    private volatile boolean aBoolean3908;
     static int anInt3909;
     private volatile boolean aBoolean3910;
     static int anInt3911;
@@ -40,7 +40,7 @@ final class Class311 implements Runnable {
         return aClass56_3916.anInt1025;
     }
 
-    final synchronized void method2316(Class56 class56, String string, int i, long l, boolean bool) {
+    final void method2316(Class56 class56, String string, int i, long l, boolean bool) {
         try {
             if (bool != false) method2318(9);
             aString3921 = string;
@@ -57,9 +57,8 @@ final class Class311 implements Runnable {
         anInt3902++;
         while (!aBoolean3910) {
             long l = Class62.method599(-61);
-            synchronized (this) {
-                try {
-                    anInt3920++;
+            try {
+                anInt3920++;
                     if (anInterface16_3907 instanceof Class294) anInterface16_3907.method58(aBoolean3908, -104);
                     else {
                         long l_1_ = Class62.method599(-104);
@@ -108,9 +107,8 @@ final class Class311 implements Runnable {
                     if (Class52.aFrame4904 == container) Class52.aFrame4904.getInsets();
                     aBoolean3908 = false;
                     if (Class348_Sub8.aHa6654 != null && !(anInterface16_3907 instanceof Class294) && (aClass56_3916.method525(-112) < Class56.aClass56_1041.method525(-127))) Class367_Sub11.method3556(false);
-                } catch (Exception exception) {
-                    continue;
-                }
+            } catch (Exception exception) {
+                continue;
             }
             long l_3_ = Class62.method599(-73);
             int i = (int) (-l_3_ - -l + 20L);
@@ -175,7 +173,7 @@ final class Class311 implements Runnable {
         return anInt3920;
     }
 
-    final synchronized void method2326(int i) {
+    final void method2326(int i) {
         if (i <= 39) method2315((byte) 28);
         anInt3905++;
         aBoolean3908 = true;

@@ -9,7 +9,7 @@ public final class jagmisc {
 
     public static void Quit0() {}
 
-    public static long nanoTime() { return 0L; }
+    public static long nanoTime() { return System.nanoTime(); }
 
     public static long getTotalPhysicalMemory() { return 0L; }
 

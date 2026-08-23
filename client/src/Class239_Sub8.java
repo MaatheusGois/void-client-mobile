@@ -96,8 +96,8 @@ final class Class239_Sub8 extends Class239 {
     final int method1710(int i) {
         if (i != 20014) method1749(null, null, false, 94, (byte) -39);
         anInt5914++;
-        if (this.aClass348_Sub51_3136.method3428((byte) -80).method1456((byte) 111)) return 3;
-        return 2;
+        // Prefer fullscreen 800x600 on mobile (voidawt fakes exclusive FS).
+        return 3;
     }
 
     static final void method1750(int i, int i_6_) {

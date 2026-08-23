@@ -76,6 +76,12 @@ final class Class52 implements Interface12 {
             Class64_Sub2.aString5420 = Class348_Sub42_Sub15.aClass56_9660.aClass274_1012.method2063(Class348_Sub33.anInt6967, 544);
             if (Class348_Sub42_Sub15.aClass56_9660.aBoolean1016) Class251.anInt3236 = (i * ((Class348_Sub42_Sub15.aClass56_9660.anInt1021) + -(Class348_Sub42_Sub15.aClass56_9660.anInt1025)) / 100 + (Class348_Sub42_Sub15.aClass56_9660.anInt1025));
             if (Class348_Sub42_Sub15.aClass56_9660.aBoolean1013) Class64_Sub2.aString5420 += Class251.anInt3236 + "%";
+            if (Loader.debug && Class251.anInt3236 != lastLoggedLoadPct
+                    && (Class251.anInt3236 < 5 || Class251.anInt3236 % 5 == 0)) {
+                lastLoggedLoadPct = Class251.anInt3236;
+                System.out.println("load " + Class64_Sub2.aString5420
+                        + " stage=" + Class348_Sub42_Sub15.aClass56_9660.method525(-120));
+            }
         } else if (Class348_Sub42_Sub15.aClass56_9660 == Class56.aClass56_1043) {
             Class51.aClass311_897 = null;
             Class348_Sub49.method3379(2, 3);
@@ -84,6 +90,12 @@ final class Class52 implements Interface12 {
             if (Class348_Sub42_Sub15.aClass56_9660.aBoolean1013) Class64_Sub2.aString5420 += class56.anInt1021 + "%";
             Class251.anInt3236 = class56.anInt1021;
             if (Class348_Sub42_Sub15.aClass56_9660.aBoolean1016 || class56.aBoolean1016) Class283.aLong3660 = Class62.method599(-128);
+            if (Loader.debug) {
+                lastLoggedLoadPct = -1;
+                System.out.println("load stage " + class56.method525(-120)
+                        + "->" + Class348_Sub42_Sub15.aClass56_9660.method525(-120)
+                        + " " + Class64_Sub2.aString5420);
+            }
         }
         if (bool == true) {
             if (Class51.aClass311_897 != null) {
@@ -112,6 +124,8 @@ final class Class52 implements Interface12 {
         anInt4898++;
         return 0x7f & i_6_;
     }
+
+    private static int lastLoggedLoadPct = -1;
 
     static {
         aClass138_4901 = new Class138(12, 0, 1, 0);

@@ -144,10 +144,12 @@ final class Class367_Sub11 extends Class367 {
                         Class348_Sub22.anInt6857 -= insets.bottom + insets.top;
                     }
                     if (Class348_Sub42_Sub12.method3229(-86) == 1) {
-                        Class321.anInt4017 = Class92.anInt1524;
+                        Class92.anInt1524 = Class272.anInt3473;
+                        ha_Sub2.anInt7666 = Class348_Sub22.anInt6857;
+                        Class321.anInt4017 = Class272.anInt3473;
+                        Class348_Sub42_Sub8_Sub2.anInt10432 = Class348_Sub22.anInt6857;
+                        Class348_Sub48.anInt7129 = 0;
                         Class335.anInt4167 = 0;
-                        Class348_Sub48.anInt7129 = (Class272.anInt3473 - Class92.anInt1524) / 2;
-                        Class348_Sub42_Sub8_Sub2.anInt10432 = ha_Sub2.anInt7666;
                     } else Class286_Sub5.method2158((byte) 56);
                     if (Class55_Sub1.aClass364_5271 != Class8.aClass364_165) {
                         if (Class321.anInt4017 < 1024 && Class348_Sub42_Sub8_Sub2.anInt10432 < 768) {
