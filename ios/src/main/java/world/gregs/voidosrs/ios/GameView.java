@@ -2,14 +2,12 @@ package world.gregs.voidosrs.ios;
 
 import org.robovm.apple.coregraphics.CGPoint;
 import org.robovm.apple.coregraphics.CGRect;
+import org.robovm.apple.dispatch.DispatchQueue;
 import org.robovm.apple.foundation.NSArray;
 import org.robovm.apple.foundation.NSSet;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIEvent;
-import org.robovm.apple.uikit.UIGestureRecognizer;
-import org.robovm.apple.uikit.UIGestureRecognizerState;
 import org.robovm.apple.uikit.UIImageView;
-import org.robovm.apple.uikit.UILongPressGestureRecognizer;
 import org.robovm.apple.uikit.UITouch;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewContentMode;
@@ -18,15 +16,17 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import voidawt.AwtHost;
-import voidawt.event.MouseEvent;
 
 public class GameView extends UIView implements AwtHost.Presenter {
     private static final float PINCH_PX_PER_NOTCH = 28f;
-    private static final float TOUCH_SLOP = 24f;
-    private static final double LONG_PRESS_SECONDS = 0.4;
-    private static final double LONG_PRESS_SLOP = 24.0;
+    /**
+     * Hold still within this → long-press right-click.
+     * Move past this before timeout → one-finger camera orbit.
+     */
+    private static final float TOUCH_SLOP = 100f;
 
     private final UIImageView imageView;
     private final Map<Long, CGPoint> active = new LinkedHashMap<Long, CGPoint>();
@@ -41,12 +41,14 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private int downY;
     private float lastPinchDist = -1f;
     private float pinchAccum;
-    private float lastMidX;
-    private float lastMidY;
+    private float lastOrbitX;
+    private float lastOrbitY;
     private int frameW = AwtHost.GAME_WIDTH;
     private int frameH = AwtHost.GAME_HEIGHT;
     private CGPoint lastTouchPoint = new CGPoint(0, 0);
     private Runnable sizeListener;
+    /** Bumped to cancel a pending long-press callback. */
+    private int pressGeneration;
 
     public GameView(CGRect frame) {
         super(frame);
@@ -57,29 +59,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
         imageView.setContentMode(UIViewContentMode.ScaleToFill);
         imageView.setUserInteractionEnabled(false);
         addSubview(imageView);
-        UILongPressGestureRecognizer longPress = new UILongPressGestureRecognizer(
-                new UIGestureRecognizer.OnGestureListener() {
-                    public void onGesture(UIGestureRecognizer recognizer) {
-                        if (recognizer.getState() != UIGestureRecognizerState.Began) {
-                            return;
-                        }
-                        if (!down || multiTouch || dragging || longPressFired || ignoreSingleFinger) {
-                            return;
-                        }
-                        longPressFired = true;
-                        CGPoint p = recognizer.getLocationInView(GameView.this);
-                        int[] xy = map(p);
-                        downX = xy[0];
-                        downY = xy[1];
-                        AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON3, 1);
-                        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON3, 1);
-                        AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, downX, downY, MouseEvent.BUTTON3, 1);
-                    }
-                });
-        longPress.setMinimumPressDuration(LONG_PRESS_SECONDS);
-        longPress.setAllowableMovement(LONG_PRESS_SLOP);
-        longPress.setCancelsTouchesInView(false);
-        addGestureRecognizer(longPress);
     }
 
     public void setSizeListener(Runnable listener) {
@@ -115,27 +94,40 @@ public class GameView extends UIView implements AwtHost.Presenter {
         imageView.setImage(ArgbBridge.toImage(argb, width, height));
     }
 
+    private void scheduleLongPress() {
+        final int gen = ++pressGeneration;
+        DispatchQueue.getMainQueue().after(450, TimeUnit.MILLISECONDS, new Runnable() {
+            public void run() {
+                if (gen != pressGeneration) {
+                    return;
+                }
+                if (!down || multiTouch || dragging || longPressFired || ignoreSingleFinger) {
+                    return;
+                }
+                longPressFired = true;
+                System.out.println("longPress right-click @ " + downX + "," + downY);
+                AwtHost.injectRightClick(downX, downY);
+            }
+        });
+    }
+
+    private void cancelLongPress() {
+        pressGeneration++;
+    }
+
     @Override
     public void touchesBegan(NSSet<UITouch> touches, UIEvent event) {
         updateActive(touches, false);
         int count = active.size();
         if (count >= 2) {
-            if (down) {
-                if (dragging && !longPressFired) {
-                    int[] xy = map(lastTouchPoint);
-                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
-                }
-                down = false;
-                dragging = false;
-                longPressFired = false;
-            }
+            cancelLongPress();
+            down = false;
+            dragging = false;
+            longPressFired = false;
             ignoreSingleFinger = true;
             multiTouch = true;
             lastPinchDist = spacing();
             pinchAccum = 0f;
-            CGPoint mid = midpoint();
-            lastMidX = (float) mid.getX();
-            lastMidY = (float) mid.getY();
             return;
         }
         if (ignoreSingleFinger) {
@@ -148,8 +140,11 @@ public class GameView extends UIView implements AwtHost.Presenter {
         longPressFired = false;
         downVx = (float) p.getX();
         downVy = (float) p.getY();
+        lastOrbitX = downVx;
+        lastOrbitY = downVy;
         downX = xy[0];
         downY = xy[1];
+        scheduleLongPress();
     }
 
     @Override
@@ -172,14 +167,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
                     }
                 }
                 lastPinchDist = dist;
-                CGPoint mid = midpoint();
-                float dx = (float) mid.getX() - lastMidX;
-                float dy = (float) mid.getY() - lastMidY;
-                if (dx != 0f || dy != 0f) {
-                    AwtHost.injectCameraOrbit(dx, dy);
-                }
-                lastMidX = (float) mid.getX();
-                lastMidY = (float) mid.getY();
             }
             return;
         }
@@ -187,14 +174,19 @@ public class GameView extends UIView implements AwtHost.Presenter {
             return;
         }
         CGPoint p = firstPoint();
-        int[] xy = map(p);
         float moved = Math.max(Math.abs((float) p.getX() - downVx), Math.abs((float) p.getY() - downVy));
         if (!dragging && moved > TOUCH_SLOP) {
             dragging = true;
-            AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
+            cancelLongPress();
+            lastOrbitX = (float) p.getX();
+            lastOrbitY = (float) p.getY();
         }
         if (dragging) {
-            AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
+            float dx = (float) p.getX() - lastOrbitX;
+            float dy = (float) p.getY() - lastOrbitY;
+            AwtHost.injectCameraOrbit(dx, dy);
+            lastOrbitX = (float) p.getX();
+            lastOrbitY = (float) p.getY();
         }
     }
 
@@ -219,11 +211,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
                 longPressFired = false;
                 lastPinchDist = -1f;
                 pinchAccum = 0f;
+                cancelLongPress();
             } else {
                 lastPinchDist = spacing();
-                CGPoint mid = midpoint();
-                lastMidX = (float) mid.getX();
-                lastMidY = (float) mid.getY();
             }
             return;
         }
@@ -233,22 +223,19 @@ public class GameView extends UIView implements AwtHost.Presenter {
             down = false;
             dragging = false;
             longPressFired = false;
+            cancelLongPress();
             return;
         }
-        CGPoint p = lastTouchPoint;
         updateActive(touches, true);
-        int[] xy = map(p);
+        cancelLongPress();
         if (!down) {
             // leftover
         } else if (longPressFired) {
             // right-click already injected
         } else if (dragging) {
-            AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
-            AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+            // one-finger camera orbit — no mouse click
         } else if (!cancelled) {
-            AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
-            AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON1, 1);
-            AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, downX, downY, MouseEvent.BUTTON1, 1);
+            AwtHost.injectLeftClick(downX, downY);
         }
         down = false;
         dragging = false;

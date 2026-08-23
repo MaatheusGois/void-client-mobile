@@ -39,5 +39,8 @@
         <framework>QuartzCore</framework>
         <framework>Security</framework>
         <framework>CFNetwork</framework>
+        <framework>AVFoundation</framework>
+        <framework>AudioToolbox</framework>
+        <framework>CoreAudio</framework>
     </frameworks>
 </config>

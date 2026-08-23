@@ -47,7 +47,7 @@ The 634 code imports desktop JDK types Android/iOS do not provide. `prepareClien
 |----------|-------------|-----|
 | `java.awt` | `voidawt` | No AWT on ART / RoboVM UIKit |
 | `javax.swing` | `voidswing` | Loader still constructs a `JFrame` on desktop; mobile stubs it |
-| `javax.sound` | `voidsound` | No JavaSound |
+| `javax.sound` | `voidsound` | No JavaSound — real PCM out (see [Audio](#5-audio-voidsound)) |
 | `java.applet` | `voidapplet` | No applet container |
 | `java.lang.management` / `com.sun.management` | `voidmgmt` / `voidsun.management` | No MXBeans |
 | `sun.net` | `voidsun.net` | Internal HTTP auth types |
@@ -110,7 +110,48 @@ iOS long-press: `UILongPressGestureRecognizer` on `GameView` (GCD timers were ca
 
 Keyboard: Android IME / floating field; iOS keyboard ball (top-left) drives a hidden `UITextField` and `AwtHost.injectKey`.
 
-### 5. Networking (JS5 + login)
+### 5. Audio (voidsound)
+
+Desktop uses `javax.sound.sampled` (`Class279_Sub1` → `SourceDataLine`). Mobile rewrites that to `voidsound`. Early stubs threw on `AudioSystem.getLine()`, so the mixer fell through to DirectSound / empty `Class279` and produced **no PCM**.
+
+Both platforms now implement a real line:
+
+| Piece | Role |
+|-------|------|
+| `AudioSystem.getLine` | Returns `PcmSourceDataLine` with format + buffer size from `DataLine.Info` |
+| `ByteRing` | JavaSound-style ring; `available()` = **free** bytes (what `Class279_Sub1.method2081` expects) |
+| Game mixer | Soft synth + SFX still run in `client/src` (`Class279_Sub1`, `Class348_Sub16_Sub3`, title track “scape main”) |
+
+#### Android
+
+- `android/.../voidsound/sampled/PcmSourceDataLine.java` → `AudioTrack` stream + pump thread.
+- Resamples **22050→44100** when the device rejects 22050.
+- `USAGE_MEDIA` / full volume; `MainActivity.requestAudioFocus()` on create/resume.
+- Shared sources live under Android; iOS copies them except the platform line (below).
+
+```bash
+adb logcat -s void-osrs:I | rg 'audio open|peak='
+# Healthy after title music loads: peak > 0 (early peak=0 during splash is normal)
+```
+
+#### iOS
+
+- Own `ios/.../voidsound/sampled/PcmSourceDataLine.java` (Android `AudioTrack` version is **excluded** in `ios/build.gradle`).
+- **AudioQueue** (16-bit PCM), not `AVAudioEngine` — RoboVM’s `setAudioData(byte[])` only *points* at the Java array; copy into the native `AudioQueueBuffer` via `VM.newDirectByteBuffer`.
+- Create/dispose the queue on the **main** thread (`DispatchQueue`) — `AudioQueueNewOutput` from the mixer thread crashes (`objc_retain`).
+- Keep `AudioQueue.OutputCallback` as a strong field so the block marshaler cannot GC it.
+- `Main` activates `AVAudioSession` category **Playback** at launch.
+- Frameworks in `robovm.xml`: `AVFoundation`, `AudioToolbox`, `CoreAudio`.
+
+```bash
+# Simulator: look for
+# void-osrs audio open (AudioQueue/main) …
+# void-osrs audio write#N … peak=NNNN   (NNNN > 0 once music/SFX mix)
+```
+
+Title music needs JS5 archives (index 6 + instruments). Silence with working hardware usually means cache/music state, not the output path.
+
+### 6. Networking (JS5 + login)
 
 Both JS5 (cache) and login use **TCP 43594** against the Void game process (`:game:run` on the Mac). `Loader.modewhere=0` (LIVE) keeps that port; do **not** switch to LOCAL (`4`) unless ports are patched — LOCAL rewrites to `40000+worldid`.
 
@@ -171,7 +212,7 @@ Debug codes we log: `1000` socket fail, `1001` handshake timeout, `1002` IOExcep
 
 Healthy phone boot (with reverse): probe/boot → `Connect OK` → stages 1→19 in ~20–30s when cache is warm.
 
-### 6. Android host
+### 7. Android host
 
 - Package `world.gregs.voidosrs.android`; device under test: Moto G 50 5G.
 - `MainActivity`: landscape `SurfaceView`, present `Bitmap` on the UI thread.
@@ -222,7 +263,7 @@ CS2 compares requested window mode to `Class348_Sub42_Sub12.method3229()`. Lying
 
 5. **Gradle JDK transform flake** (`IllegalArgumentException: …/jdkImage`): `./gradlew --stop` and delete the bad `~/.gradle/caches/.../transforms/...` entry, retry.
 
-### 7. iOS host
+### 8. iOS host
 
 RoboVM **AOT-compiles Java 8** to an arm64 Simulator/device binary (MobiVM 2.3.25).
 

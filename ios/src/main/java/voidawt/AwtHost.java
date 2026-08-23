@@ -147,6 +147,20 @@ public final class AwtHost {
         });
     }
 
+    public static void injectRightClick(int x, int y) {
+        injectMouse(MouseEvent.MOUSE_MOVED, x, y, 0, 0);
+        injectMouse(MouseEvent.MOUSE_PRESSED, x, y, MouseEvent.BUTTON3, 1);
+        injectMouse(MouseEvent.MOUSE_RELEASED, x, y, MouseEvent.BUTTON3, 1);
+        injectMouse(MouseEvent.MOUSE_CLICKED, x, y, MouseEvent.BUTTON3, 1);
+    }
+
+    public static void injectLeftClick(int x, int y) {
+        injectMouse(MouseEvent.MOUSE_MOVED, x, y, 0, 0);
+        injectMouse(MouseEvent.MOUSE_PRESSED, x, y, MouseEvent.BUTTON1, 1);
+        injectMouse(MouseEvent.MOUSE_RELEASED, x, y, MouseEvent.BUTTON1, 1);
+        injectMouse(MouseEvent.MOUSE_CLICKED, x, y, MouseEvent.BUTTON1, 1);
+    }
+
     public static void injectMouse(int id, int x, int y, int button, int clickCount) {
         Component target = gameCanvas != null ? gameCanvas : root;
         if (target == null) {

@@ -17,6 +17,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
+import android.view.InputDevice;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -29,12 +31,14 @@ import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.media.AudioAttributes;
+import android.media.AudioFocusRequest;
+import android.media.AudioManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import voidawt.AwtHost;
-import voidawt.event.KeyEvent;
 import voidawt.event.MouseEvent;
 
 public class MainActivity extends Activity {
@@ -76,18 +80,72 @@ public class MainActivity extends Activity {
 
         setContentView(root);
         hideSystemUi();
+        requestAudioFocus();
         instance = this;
         installLogBridge();
         // On-screen debug HUD off — still mirrors to logcat via installLogBridge.
         // debugHud = buildDebugHud();
         // root.addView(debugHud);
         AwtHost.presenter = game;
+        game.requestFocus();
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (game != null && game.handlePadKey(event)) {
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+    @Override
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        if (game != null && game.handlePadMotion(event)) {
+            return true;
+        }
+        return super.onGenericMotionEvent(event);
+    }
+
+    @Override
+    protected void onPause() {
+        if (game != null) {
+            game.stopPadTick();
+        }
+        super.onPause();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        requestAudioFocus();
         hideSystemUi();
+        if (game != null) {
+            game.requestFocus();
+            game.kickPadTick();
+        }
+    }
+
+    private void requestAudioFocus() {
+        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
+        if (am == null) {
+            return;
+        }
+        try {
+            AudioAttributes attrs = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .build();
+            AudioFocusRequest req = new AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                    .setAudioAttributes(attrs)
+                    .setOnAudioFocusChangeListener(new AudioManager.OnAudioFocusChangeListener() {
+                        public void onAudioFocusChange(int focusChange) {
+                        }
+                    })
+                    .build();
+            am.requestAudioFocus(req);
+        } catch (Throwable t) {
+            Log.w("void-osrs", "audio focus", t);
+        }
     }
 
     @Override
@@ -236,21 +294,21 @@ public class MainActivity extends Activity {
 
     private void injectChar(char c) {
         int code = Character.toUpperCase(c);
-        AwtHost.injectKey(KeyEvent.KEY_PRESSED, code, c);
-        AwtHost.injectKey(KeyEvent.KEY_TYPED, 0, c);
-        AwtHost.injectKey(KeyEvent.KEY_RELEASED, code, c);
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_PRESSED, code, c);
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_TYPED, 0, c);
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_RELEASED, code, c);
     }
 
     private void injectBackspace() {
-        AwtHost.injectKey(KeyEvent.KEY_PRESSED, KeyEvent.VK_BACK_SPACE, '\b');
-        AwtHost.injectKey(KeyEvent.KEY_TYPED, 0, '\b');
-        AwtHost.injectKey(KeyEvent.KEY_RELEASED, KeyEvent.VK_BACK_SPACE, '\b');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_PRESSED, voidawt.event.KeyEvent.VK_BACK_SPACE, '\b');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_TYPED, 0, '\b');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_RELEASED, voidawt.event.KeyEvent.VK_BACK_SPACE, '\b');
     }
 
     private void injectEnter() {
-        AwtHost.injectKey(KeyEvent.KEY_PRESSED, KeyEvent.VK_ENTER, '\n');
-        AwtHost.injectKey(KeyEvent.KEY_TYPED, 0, '\n');
-        AwtHost.injectKey(KeyEvent.KEY_RELEASED, KeyEvent.VK_ENTER, '\n');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_PRESSED, voidawt.event.KeyEvent.VK_ENTER, '\n');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_TYPED, 0, '\n');
+        AwtHost.injectKey(voidawt.event.KeyEvent.KEY_RELEASED, voidawt.event.KeyEvent.VK_ENTER, '\n');
         typedBuffer = "";
         syncingText = true;
         imeInput.setText("");
@@ -411,6 +469,7 @@ public class MainActivity extends Activity {
     final class GameView extends SurfaceView implements SurfaceHolder.Callback, AwtHost.Presenter {
         private Bitmap frame;
         private final Paint paint = new Paint(Paint.FILTER_BITMAP_FLAG);
+        private final Paint cursorPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         private final Rect src = new Rect();
         private final Rect dst = new Rect();
         private boolean down;
@@ -425,32 +484,71 @@ public class MainActivity extends Activity {
         private int downY;
         private float lastPinchDist = -1f;
         private float pinchAccum;
-        private float lastMidX;
-        private float lastMidY;
+        private float lastOrbitX;
+        private float lastOrbitY;
         private int frameW = AwtHost.GAME_WIDTH;
         private int frameH = AwtHost.GAME_HEIGHT;
         private static final float PINCH_PX_PER_NOTCH = 28f;
-        private final int touchSlop;
+        /**
+         * Hold still within this → long-press right-click.
+         * Move past this before timeout → one-finger camera orbit.
+         */
+        private static final float LONG_PRESS_CANCEL_SLOP = 100f;
         private final Handler touchHandler = new Handler(Looper.getMainLooper());
+        // DualShock / gamepad → virtual mouse
+        private static final float PAD_DEADZONE = 0.15f;
+        private static final float PAD_CURSOR_SPEED = 14f;
+        private static final float PAD_ORBIT_SCALE = 10f;
+        private static final long PAD_ZOOM_INTERVAL_MS = 90L;
+        private static final float PAD_TRIGGER_THRESHOLD = 0.35f;
+        private float cursorVx = -1f;
+        private float cursorVy = -1f;
+        private boolean padActive;
+        private float stickLX;
+        private float stickLY;
+        private float stickRX;
+        private float stickRY;
+        private float triggerL2;
+        private boolean l1Held;
+        private boolean l2DigitalHeld;
+        private boolean padLeftDown;
+        private boolean padRightDown;
+        private boolean padTickRunning;
+        private long lastPadZoomAt;
+        private final Runnable padTick = new Runnable() {
+            public void run() {
+                padTickRunning = false;
+                if (!padActive) {
+                    return;
+                }
+                boolean keep = tickPad();
+                if (keep) {
+                    padTickRunning = true;
+                    touchHandler.postDelayed(this, 16);
+                }
+            }
+        };
         private final Runnable longPressRunnable = new Runnable() {
             public void run() {
                 if (!down || multiTouch || dragging || longPressFired || ignoreSingleFinger) {
+                    Log.i("void-osrs", "longPress SKIP down=" + down + " drag=" + dragging
+                            + " multi=" + multiTouch + " fired=" + longPressFired);
                     return;
                 }
                 longPressFired = true;
-                // Long-press → right click (context menu).
-                AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON3, 1);
-                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON3, 1);
-                AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, downX, downY, MouseEvent.BUTTON3, 1);
+                Log.i("void-osrs", "longPress right-click @ " + downX + "," + downY);
+                AwtHost.injectRightClick(downX, downY);
             }
         };
 
         GameView(MainActivity activity) {
             super(activity);
-            touchSlop = ViewConfiguration.get(activity).getScaledTouchSlop();
             getHolder().addCallback(this);
             setFocusable(true);
             setFocusableInTouchMode(true);
+            cursorPaint.setStyle(Paint.Style.STROKE);
+            cursorPaint.setStrokeWidth(2.5f);
+            cursorPaint.setColor(0xFFE8F0FF);
             addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
                 if (keyboardOpen) {
                     return;
@@ -460,8 +558,235 @@ public class MainActivity extends Activity {
                 if (w > 0 && h > 0) {
                     AwtHost.setDisplaySize(w, h);
                     startClientIfReady(w, h);
+                    if (cursorVx < 0f) {
+                        cursorVx = w * 0.5f;
+                        cursorVy = h * 0.5f;
+                    } else {
+                        cursorVx = Math.min(cursorVx, w - 1);
+                        cursorVy = Math.min(cursorVy, h - 1);
+                    }
                 }
             });
+        }
+
+        void stopPadTick() {
+            touchHandler.removeCallbacks(padTick);
+            padTickRunning = false;
+        }
+
+        void kickPadTick() {
+            if (padActive && needsPadTick()) {
+                startPadTick();
+            }
+        }
+
+        private void activatePad() {
+            padActive = true;
+            ensureCursor();
+            startPadTick();
+            redraw();
+        }
+
+        private void ensureCursor() {
+            int w = Math.max(1, getWidth());
+            int h = Math.max(1, getHeight());
+            if (cursorVx < 0f || cursorVy < 0f) {
+                cursorVx = w * 0.5f;
+                cursorVy = h * 0.5f;
+            }
+        }
+
+        private void startPadTick() {
+            if (padTickRunning) {
+                return;
+            }
+            padTickRunning = true;
+            touchHandler.post(padTick);
+        }
+
+        private boolean needsPadTick() {
+            return Math.abs(stickLX) > PAD_DEADZONE
+                    || Math.abs(stickLY) > PAD_DEADZONE
+                    || Math.abs(stickRX) > PAD_DEADZONE
+                    || Math.abs(stickRY) > PAD_DEADZONE
+                    || triggerL2 > PAD_TRIGGER_THRESHOLD
+                    || l2DigitalHeld
+                    || l1Held;
+        }
+
+        private float dead(float v) {
+            return Math.abs(v) < PAD_DEADZONE ? 0f : v;
+        }
+
+        private boolean tickPad() {
+            ensureCursor();
+            float lx = dead(stickLX);
+            float ly = dead(stickLY);
+            float rx = dead(stickRX);
+            float ry = dead(stickRY);
+            boolean moved = false;
+
+            if (lx != 0f || ly != 0f) {
+                float w = Math.max(1, getWidth());
+                float h = Math.max(1, getHeight());
+                cursorVx = Math.max(0f, Math.min(w - 1f, cursorVx + lx * PAD_CURSOR_SPEED));
+                cursorVy = Math.max(0f, Math.min(h - 1f, cursorVy + ly * PAD_CURSOR_SPEED));
+                int[] xy = map(cursorVx, cursorVy);
+                if (padLeftDown) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
+                } else if (padRightDown) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON3, 0);
+                } else {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
+                }
+                moved = true;
+            }
+
+            if (rx != 0f || ry != 0f) {
+                AwtHost.injectCameraOrbit(rx * PAD_ORBIT_SCALE, ry * PAD_ORBIT_SCALE);
+                moved = true;
+            }
+
+            boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD || l2DigitalHeld;
+            boolean zoomOut = l1Held;
+            long now = System.currentTimeMillis();
+            if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
+                int[] xy = map(cursorVx, cursorVy);
+                if (zoomIn) {
+                    AwtHost.injectWheel(xy[0], xy[1], -1);
+                }
+                if (zoomOut) {
+                    AwtHost.injectWheel(xy[0], xy[1], 1);
+                }
+                lastPadZoomAt = now;
+                moved = true;
+            }
+
+            if (moved) {
+                redraw();
+            }
+            return needsPadTick();
+        }
+
+        private boolean isGamepad(KeyEvent event) {
+            int src = event.getSource();
+            if ((src & InputDevice.SOURCE_GAMEPAD) == InputDevice.SOURCE_GAMEPAD
+                    || (src & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK) {
+                return true;
+            }
+            int code = event.getKeyCode();
+            return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
+        }
+
+        boolean handlePadKey(KeyEvent event) {
+            if (!isGamepad(event) && event.getKeyCode() < KeyEvent.KEYCODE_BUTTON_A) {
+                return false;
+            }
+            int code = event.getKeyCode();
+            // Ignore repeats for clicks; L1 held is tracked via down/up.
+            if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() > 0) {
+                if (code == KeyEvent.KEYCODE_BUTTON_L1) {
+                    return true;
+                }
+                if (code == KeyEvent.KEYCODE_BUTTON_L2) {
+                    return true;
+                }
+                return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
+            }
+            if (code < KeyEvent.KEYCODE_BUTTON_A || code > KeyEvent.KEYCODE_BUTTON_MODE) {
+                // Still accept if source is gamepad for unknown codes
+                if (!isGamepad(event)) {
+                    return false;
+                }
+            }
+
+            activatePad();
+            int[] xy = map(cursorVx, cursorVy);
+            boolean down = event.getAction() == KeyEvent.ACTION_DOWN;
+
+            switch (code) {
+                case KeyEvent.KEYCODE_BUTTON_A: // ✕ Cross → left click
+                    if (down) {
+                        padLeftDown = true;
+                        AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+                    } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                        padLeftDown = false;
+                        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+                        AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+                    }
+                    return true;
+                case KeyEvent.KEYCODE_BUTTON_B: // ○ Circle → right click
+                    if (down) {
+                        padRightDown = true;
+                        Log.i("void-osrs", "pad ○ right-press @ " + xy[0] + "," + xy[1]);
+                        AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
+                        AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+                    } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                        padRightDown = false;
+                        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+                        AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+                    }
+                    return true;
+                case KeyEvent.KEYCODE_BUTTON_L1: // zoom out
+                    l1Held = down;
+                    if (down) {
+                        AwtHost.injectWheel(xy[0], xy[1], 1);
+                        lastPadZoomAt = System.currentTimeMillis();
+                        startPadTick();
+                    }
+                    return true;
+                case KeyEvent.KEYCODE_BUTTON_L2: // zoom in (digital)
+                    l2DigitalHeld = down;
+                    if (down) {
+                        AwtHost.injectWheel(xy[0], xy[1], -1);
+                        lastPadZoomAt = System.currentTimeMillis();
+                        startPadTick();
+                    }
+                    return true;
+                default:
+                    return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
+            }
+        }
+
+        boolean handlePadMotion(MotionEvent event) {
+            int src = event.getSource();
+            boolean joy = (src & InputDevice.SOURCE_CLASS_JOYSTICK) != 0
+                    || (src & InputDevice.SOURCE_GAMEPAD) != 0
+                    || (src & InputDevice.SOURCE_JOYSTICK) != 0;
+            if (!joy) {
+                return false;
+            }
+            if (event.getActionMasked() != MotionEvent.ACTION_MOVE) {
+                return false;
+            }
+            activatePad();
+            stickLX = axis(event, MotionEvent.AXIS_X);
+            stickLY = axis(event, MotionEvent.AXIS_Y);
+
+            float rz = axis(event, MotionEvent.AXIS_RZ);
+            float z = axis(event, MotionEvent.AXIS_Z);
+            float rx = axis(event, MotionEvent.AXIS_RX);
+            float ry = axis(event, MotionEvent.AXIS_RY);
+            // Prefer Z/RZ (common DS4 HID); fall back to RX/RY.
+            if (Math.abs(z) > PAD_DEADZONE || Math.abs(rz) > PAD_DEADZONE) {
+                stickRX = z;
+                stickRY = rz;
+            } else {
+                stickRX = rx;
+                stickRY = ry;
+            }
+
+            float lTrigger = axis(event, MotionEvent.AXIS_LTRIGGER);
+            float brake = axis(event, MotionEvent.AXIS_BRAKE);
+            triggerL2 = Math.max(lTrigger, brake);
+
+            startPadTick();
+            return true;
+        }
+
+        private float axis(MotionEvent e, int axis) {
+            float v = e.getAxisValue(axis);
+            return Float.isNaN(v) ? 0f : v;
         }
 
         public boolean onTouchEvent(MotionEvent event) {
@@ -470,22 +795,13 @@ public class MainActivity extends Activity {
 
             if (action == MotionEvent.ACTION_POINTER_DOWN && count >= 2) {
                 cancelLongPressWatch();
-                if (down) {
-                    if (dragging && !longPressFired) {
-                        int[] xy = map(event.getX(0), event.getY(0));
-                        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
-                    }
-                    down = false;
-                    dragging = false;
-                    longPressFired = false;
-                }
+                down = false;
+                dragging = false;
+                longPressFired = false;
                 ignoreSingleFinger = true;
                 multiTouch = true;
                 lastPinchDist = spacing(event);
                 pinchAccum = 0f;
-                float[] mid = midpoint(event);
-                lastMidX = mid[0];
-                lastMidY = mid[1];
                 return true;
             }
 
@@ -495,33 +811,21 @@ public class MainActivity extends Activity {
                     if (lastPinchDist > 0f) {
                         pinchAccum += dist - lastPinchDist;
                         while (pinchAccum >= PINCH_PX_PER_NOTCH) {
-                            // fingers apart → zoom in (negative wheel)
                             int[] midGame = mapMid(event);
                             AwtHost.injectWheel(midGame[0], midGame[1], -1);
                             pinchAccum -= PINCH_PX_PER_NOTCH;
                         }
                         while (pinchAccum <= -PINCH_PX_PER_NOTCH) {
-                            // fingers together → zoom out
                             int[] midGame = mapMid(event);
                             AwtHost.injectWheel(midGame[0], midGame[1], 1);
                             pinchAccum += PINCH_PX_PER_NOTCH;
                         }
                     }
                     lastPinchDist = dist;
-
-                    float[] mid = midpoint(event);
-                    float dx = mid[0] - lastMidX;
-                    float dy = mid[1] - lastMidY;
-                    if (dx != 0f || dy != 0f) {
-                        AwtHost.injectCameraOrbit(dx, dy);
-                    }
-                    lastMidX = mid[0];
-                    lastMidY = mid[1];
                     return true;
                 }
                 if (action == MotionEvent.ACTION_POINTER_UP) {
                     if (count - 1 < 2) {
-                        // One finger left — don't treat it as a tap/drag.
                         multiTouch = false;
                         ignoreSingleFinger = true;
                         down = false;
@@ -531,9 +835,6 @@ public class MainActivity extends Activity {
                         pinchAccum = 0f;
                     } else {
                         lastPinchDist = spacingAfterPointerUp(event);
-                        float[] mid = midpointAfterPointerUp(event);
-                        lastMidX = mid[0];
-                        lastMidY = mid[1];
                     }
                     return true;
                 }
@@ -547,7 +848,6 @@ public class MainActivity extends Activity {
                     longPressFired = false;
                     return true;
                 }
-                // MOVE with 1 finger while leaving multitouch — swallow.
                 return true;
             }
 
@@ -575,33 +875,43 @@ public class MainActivity extends Activity {
                 longPressFired = false;
                 downVx = event.getX();
                 downVy = event.getY();
+                lastOrbitX = downVx;
+                lastOrbitY = downVy;
                 downX = x;
                 downY = y;
-                touchHandler.postDelayed(longPressRunnable, ViewConfiguration.getLongPressTimeout());
+                cancelLongPressWatch();
+                long timeout = Math.max(350, ViewConfiguration.getLongPressTimeout());
+                Log.i("void-osrs", "longPress SCHEDULE " + timeout + "ms @ " + downX + "," + downY);
+                touchHandler.postDelayed(longPressRunnable, timeout);
             } else if (action == MotionEvent.ACTION_MOVE && down && !longPressFired) {
                 float moved = Math.max(Math.abs(event.getX() - downVx), Math.abs(event.getY() - downVy));
-                if (!dragging && moved > touchSlop) {
+                if (!dragging && moved > LONG_PRESS_CANCEL_SLOP) {
                     dragging = true;
                     cancelLongPressWatch();
-                    AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
+                    lastOrbitX = event.getX();
+                    lastOrbitY = event.getY();
+                    Log.i("void-osrs", "orbit START moved=" + moved);
                 }
                 if (dragging) {
-                    AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, x, y, MouseEvent.BUTTON1, 0);
+                    // One-finger drag → camera orbit (was two-finger pan).
+                    float dx = event.getX() - lastOrbitX;
+                    float dy = event.getY() - lastOrbitY;
+                    AwtHost.injectCameraOrbit(dx, dy);
+                    lastOrbitX = event.getX();
+                    lastOrbitY = event.getY();
                 }
             } else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
                 cancelLongPressWatch();
                 if (!down) {
-                    // No active single-finger gesture (e.g. leftover after multitouch).
+                    // leftover
                 } else if (longPressFired) {
-                    // right-click already injected
+                    Log.i("void-osrs", "longPress UP after right-click");
                 } else if (dragging) {
-                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, x, y, MouseEvent.BUTTON1, 1);
-                    AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, x, y, MouseEvent.BUTTON1, 1);
+                    // camera orbit — no mouse click
+                    Log.i("void-osrs", "orbit END");
                 } else if (action == MotionEvent.ACTION_UP) {
-                    // tap → left click
-                    AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
-                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON1, 1);
-                    AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, downX, downY, MouseEvent.BUTTON1, 1);
+                    Log.i("void-osrs", "tap left-click @ " + downX + "," + downY);
+                    AwtHost.injectLeftClick(downX, downY);
                 }
                 down = false;
                 dragging = false;
@@ -703,12 +1013,27 @@ public class MainActivity extends Activity {
         private void drawFrame(Canvas canvas) {
             canvas.drawColor(0xff000000);
             Bitmap bmp = frame;
-            if (bmp == null) {
-                return;
+            if (bmp != null) {
+                src.set(0, 0, bmp.getWidth(), bmp.getHeight());
+                dst.set(0, 0, canvas.getWidth(), canvas.getHeight());
+                canvas.drawBitmap(bmp, src, dst, paint);
             }
-            src.set(0, 0, bmp.getWidth(), bmp.getHeight());
-            dst.set(0, 0, canvas.getWidth(), canvas.getHeight());
-            canvas.drawBitmap(bmp, src, dst, paint);
+            if (padActive && cursorVx >= 0f && cursorVy >= 0f) {
+                float x = cursorVx;
+                float y = cursorVy;
+                float r = 12f;
+                cursorPaint.setStyle(Paint.Style.STROKE);
+                cursorPaint.setColor(0xEE101010);
+                cursorPaint.setStrokeWidth(4f);
+                canvas.drawCircle(x, y, r, cursorPaint);
+                canvas.drawLine(x - r - 4f, y, x + r + 4f, y, cursorPaint);
+                canvas.drawLine(x, y - r - 4f, x, y + r + 4f, cursorPaint);
+                cursorPaint.setColor(0xFFE8F0FF);
+                cursorPaint.setStrokeWidth(2f);
+                canvas.drawCircle(x, y, r, cursorPaint);
+                canvas.drawLine(x - r - 4f, y, x + r + 4f, y, cursorPaint);
+                canvas.drawLine(x, y - r - 4f, x, y + r + 4f, cursorPaint);
+            }
         }
 
         public void surfaceCreated(SurfaceHolder holder) {

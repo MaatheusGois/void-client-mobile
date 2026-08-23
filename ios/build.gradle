@@ -67,6 +67,7 @@ tasks.register('prepareSharedSources', Copy) {
         exclude 'voidawt/Font.java'
         exclude 'voidawt/FontMetrics.java'
         exclude 'voidawt/Toolkit.java'
+        exclude 'voidsound/sampled/PcmSourceDataLine.java'
     }
     into(generatedShared)
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
