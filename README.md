@@ -4,7 +4,7 @@ Deobfuscated 634 2010-12-14 client.
 
 Mobile (Android + iOS) architecture and how to maintain the ports: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
-https://github.com/user-attachments/assets/994cf970-8643-4cf7-8d26-836c46834b88
+https://github.com/user-attachments/assets/10381f43-aba1-4b22-b725-282112065ff2
 
 
 # Build
