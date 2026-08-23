@@ -235,6 +235,11 @@ public class GameView extends UIView implements AwtHost.Presenter {
         } else if (dragging) {
             // one-finger camera orbit — no mouse click
         } else if (!cancelled) {
+            System.out.println("void-osrs tap left-click @ " + downX + "," + downY
+                    + " frac=" + String.format(java.util.Locale.US, "%.3f,%.3f",
+                        downX / (float) Math.max(1, frameW),
+                        downY / (float) Math.max(1, frameH))
+                    + " frame=" + frameW + "x" + frameH);
             AwtHost.injectLeftClick(downX, downY);
         }
         down = false;

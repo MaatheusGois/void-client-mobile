@@ -1,6 +1,7 @@
 package world.gregs.voidosrs.ios;
 
 import org.robovm.apple.coregraphics.CGRect;
+import org.robovm.apple.dispatch.DispatchQueue;
 import org.robovm.apple.foundation.NSArray;
 import org.robovm.apple.foundation.NSRange;
 import org.robovm.apple.foundation.NSURL;
@@ -106,8 +107,28 @@ public class GameController extends UIViewController {
                 }
             }
         });
-        root.addSubview(keyboardBall);
+        // Keyboard ball hidden — soft keyboard opens on in-game text-field taps.
+        keyboardBall.setHidden(true);
         setView(root);
+        AwtHost.softKeyboardListener = new AwtHost.SoftKeyboardListener() {
+            public void showSoftKeyboard(final String reason) {
+                System.out.println("void-osrs softKeyboard show: " + reason);
+                DispatchQueue.getMainQueue().async(new Runnable() {
+                    public void run() {
+                        showKeyboard();
+                    }
+                });
+            }
+
+            public void hideSoftKeyboard(final String reason) {
+                System.out.println("void-osrs softKeyboard hide: " + reason);
+                DispatchQueue.getMainQueue().async(new Runnable() {
+                    public void run() {
+                        hideKeyboard();
+                    }
+                });
+            }
+        };
     }
 
     @Override
@@ -131,7 +152,9 @@ public class GameController extends UIViewController {
 
     private void showKeyboard() {
         keyboardOpen = true;
-        keyboardBall.setAlpha(0.35);
+        if (keyboardBall != null) {
+            keyboardBall.setAlpha(0.35);
+        }
         syncingText = true;
         ime.setText(typedBuffer);
         syncingText = false;
@@ -140,7 +163,9 @@ public class GameController extends UIViewController {
 
     private void hideKeyboard() {
         keyboardOpen = false;
-        keyboardBall.setAlpha(1);
+        if (keyboardBall != null) {
+            keyboardBall.setAlpha(1);
+        }
         ime.resignFirstResponder();
     }
 

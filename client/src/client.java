@@ -1274,6 +1274,7 @@ public final class client extends Applet_Sub1 {
                             }
                             if (!class46.aBoolean793 && bool_54_) {
                                 class46.aBoolean793 = true;
+                                MobileKeyboard.onInterfacePress(class46);
                                 if (class46.anObjectArray763 != null) {
                                     Class348_Sub36 class348_sub36 = new Class348_Sub36();
                                     class348_sub36.aBoolean6993 = true;

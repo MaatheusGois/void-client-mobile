@@ -240,6 +240,27 @@ public final class AwtHost {
         target.dispatchKey(e);
     }
 
+    public interface SoftKeyboardListener {
+        void showSoftKeyboard(String reason);
+        void hideSoftKeyboard(String reason);
+    }
+
+    public static volatile SoftKeyboardListener softKeyboardListener;
+
+    public static void requestSoftKeyboard(String reason) {
+        SoftKeyboardListener l = softKeyboardListener;
+        if (l != null) {
+            l.showSoftKeyboard(reason);
+        }
+    }
+
+    public static void requestHideSoftKeyboard(String reason) {
+        SoftKeyboardListener l = softKeyboardListener;
+        if (l != null) {
+            l.hideSoftKeyboard(reason);
+        }
+    }
+
     public static void injectFocus(boolean gained) {
         Component target = gameCanvas != null ? gameCanvas : root;
         if (target == null) {

@@ -72,11 +72,9 @@ public class MainActivity extends Activity {
         imeLp.gravity = Gravity.BOTTOM | Gravity.START;
         root.addView(imeInput, imeLp);
 
-        int ballSize = dp(40);
-        FrameLayout.LayoutParams ballLp = new FrameLayout.LayoutParams(ballSize, ballSize);
-        ballLp.gravity = Gravity.TOP | Gravity.START;
-        ballLp.setMargins(20, 20, 0, 0);
-        root.addView(keyboardBall, ballLp);
+        // Keyboard ball hidden — soft keyboard opens on in-game text-field taps.
+        // Keep instance for emergency toggle via long-press on empty corner if needed.
+        keyboardBall.setVisibility(View.GONE);
 
         setContentView(root);
         hideSystemUi();
@@ -87,6 +85,17 @@ public class MainActivity extends Activity {
         // debugHud = buildDebugHud();
         // root.addView(debugHud);
         AwtHost.presenter = game;
+        AwtHost.softKeyboardListener = new AwtHost.SoftKeyboardListener() {
+            public void showSoftKeyboard(String reason) {
+                Log.i("void-osrs", "softKeyboard show: " + reason);
+                runOnUiThread(() -> showKeyboard());
+            }
+
+            public void hideSoftKeyboard(String reason) {
+                Log.i("void-osrs", "softKeyboard hide: " + reason);
+                runOnUiThread(() -> hideKeyboard());
+            }
+        };
         game.requestFocus();
     }
 
@@ -269,7 +278,9 @@ public class MainActivity extends Activity {
 
     private void showKeyboard() {
         keyboardOpen = true;
-        keyboardBall.setAlpha(0.35f);
+        if (keyboardBall != null) {
+            keyboardBall.setAlpha(0.35f);
+        }
         syncingText = true;
         imeInput.setText(typedBuffer);
         imeInput.setSelection(typedBuffer.length());
@@ -283,7 +294,9 @@ public class MainActivity extends Activity {
 
     private void hideKeyboard() {
         keyboardOpen = false;
-        keyboardBall.setAlpha(1f);
+        if (keyboardBall != null) {
+            keyboardBall.setAlpha(1f);
+        }
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm != null) {
             imm.hideSoftInputFromWindow(imeInput.getWindowToken(), 0);
@@ -910,7 +923,11 @@ public class MainActivity extends Activity {
                     // camera orbit — no mouse click
                     Log.i("void-osrs", "orbit END");
                 } else if (action == MotionEvent.ACTION_UP) {
-                    Log.i("void-osrs", "tap left-click @ " + downX + "," + downY);
+                    Log.i("void-osrs", "tap left-click @ " + downX + "," + downY
+                            + " frac=" + String.format(java.util.Locale.US, "%.3f,%.3f",
+                                downX / (float) Math.max(1, frameW),
+                                downY / (float) Math.max(1, frameH))
+                            + " frame=" + frameW + "x" + frameH);
                     AwtHost.injectLeftClick(downX, downY);
                 }
                 down = false;
