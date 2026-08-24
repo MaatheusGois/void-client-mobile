@@ -79,7 +79,8 @@ tasks.named('compileJava') {
 }
 
 robovm {
-    iosSkipSigning = true
+    // Simulator can skip signing; device needs a development identity + profile.
+    iosSkipSigning = (findProperty('robovm.iosSkipSigning') ?: 'true').toString().toBoolean()
 }
 
 tasks.withType(JavaCompile).configureEach {

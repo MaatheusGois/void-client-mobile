@@ -7,6 +7,7 @@ import org.robovm.apple.foundation.NSArray;
 import org.robovm.apple.foundation.NSSet;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIEvent;
+import org.robovm.apple.uikit.UIImage;
 import org.robovm.apple.uikit.UIImageView;
 import org.robovm.apple.uikit.UITouch;
 import org.robovm.apple.uikit.UIView;
@@ -22,6 +23,9 @@ import voidawt.AwtHost;
 
 public class GameView extends UIView implements AwtHost.Presenter {
     private static final float PINCH_PX_PER_NOTCH = 28f;
+    private static final float CURSOR_SIZE = 32f;
+    private static final float CURSOR_HOT_X = 6f;
+    private static final float CURSOR_HOT_Y = 6f;
     /**
      * Hold still within this → long-press right-click.
      * Move past this before timeout → one-finger camera orbit.
@@ -29,6 +33,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private static final float TOUCH_SLOP = 100f;
 
     private final UIImageView imageView;
+    private final UIImageView cursorView;
     private final Map<Long, CGPoint> active = new LinkedHashMap<Long, CGPoint>();
     private boolean down;
     private boolean multiTouch;
@@ -63,6 +68,25 @@ public class GameView extends UIView implements AwtHost.Presenter {
         imageView.setContentMode(UIViewContentMode.ScaleToFill);
         imageView.setUserInteractionEnabled(false);
         addSubview(imageView);
+        cursorView = new UIImageView(new CGRect(0, 0, CURSOR_SIZE, CURSOR_SIZE));
+        UIImage cursor = UIImage.getImage("cursor_normal_select");
+        if (cursor == null) {
+            cursor = UIImage.getImage("cursor_normal_select.png");
+        }
+        cursorView.setImage(cursor);
+        cursorView.setContentMode(UIViewContentMode.ScaleToFill);
+        cursorView.setUserInteractionEnabled(false);
+        cursorView.setHidden(true);
+        addSubview(cursorView);
+    }
+
+    public void setPadCursor(float x, float y, boolean visible) {
+        cursorView.setHidden(!visible);
+        if (!visible) {
+            return;
+        }
+        cursorView.setFrame(new CGRect(x - CURSOR_HOT_X, y - CURSOR_HOT_Y, CURSOR_SIZE, CURSOR_SIZE));
+        bringSubviewToFront(cursorView);
     }
 
     public void setSizeListener(Runnable listener) {
@@ -74,6 +98,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
         super.layoutSubviews();
         CGRect bounds = getBounds();
         imageView.setFrame(bounds);
+        bringSubviewToFront(cursorView);
         int w = Math.max(0, (int) Math.round(bounds.getWidth()));
         int h = Math.max(0, (int) Math.round(bounds.getHeight()));
         if (w > 0 && h > 0) {

@@ -9,10 +9,12 @@ import android.util.Log;
 import android.os.Handler;
 import android.os.Looper;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.InputType;
@@ -692,9 +694,15 @@ public class MainActivity extends Activity {
     final class GameView extends View implements AwtHost.Presenter {
         private Bitmap frame;
         private final Paint paint = new Paint(Paint.FILTER_BITMAP_FLAG);
-        private final Paint cursorPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint cursorPaint = new Paint(Paint.FILTER_BITMAP_FLAG | Paint.ANTI_ALIAS_FLAG);
         private final Rect src = new Rect();
         private final Rect dst = new Rect();
+        private final RectF cursorDst = new RectF();
+        private Bitmap cursorBmp;
+        private float cursorHotX;
+        private float cursorHotY;
+        private float cursorDrawW;
+        private float cursorDrawH;
         private boolean down;
         private boolean multiTouch;
         private boolean dragging;
@@ -774,9 +782,12 @@ public class MainActivity extends Activity {
             setWillNotDraw(false);
             setFocusable(true);
             setFocusableInTouchMode(true);
-            cursorPaint.setStyle(Paint.Style.STROKE);
-            cursorPaint.setStrokeWidth(2.5f);
-            cursorPaint.setColor(0xFFE8F0FF);
+            cursorBmp = BitmapFactory.decodeResource(getResources(), R.drawable.cursor_normal_select);
+            float density = getResources().getDisplayMetrics().density;
+            cursorDrawW = 32f * density;
+            cursorDrawH = 32f * density;
+            cursorHotX = 6f / 32f * cursorDrawW;
+            cursorHotY = 6f / 32f * cursorDrawH;
             addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
                 if (keyboardOpen) {
                     return;
@@ -1311,21 +1322,11 @@ public class MainActivity extends Activity {
                 dst.set(0, 0, dw, dh);
                 canvas.drawBitmap(bmp, src, dst, paint);
             }
-            if (padActive && cursorVx >= 0f && cursorVy >= 0f) {
-                float x = cursorVx;
-                float y = cursorVy;
-                float r = 12f;
-                cursorPaint.setStyle(Paint.Style.STROKE);
-                cursorPaint.setColor(0xEE101010);
-                cursorPaint.setStrokeWidth(4f);
-                canvas.drawCircle(x, y, r, cursorPaint);
-                canvas.drawLine(x - r - 4f, y, x + r + 4f, y, cursorPaint);
-                canvas.drawLine(x, y - r - 4f, x, y + r + 4f, cursorPaint);
-                cursorPaint.setColor(0xFFE8F0FF);
-                cursorPaint.setStrokeWidth(2f);
-                canvas.drawCircle(x, y, r, cursorPaint);
-                canvas.drawLine(x - r - 4f, y, x + r + 4f, y, cursorPaint);
-                canvas.drawLine(x, y - r - 4f, x, y + r + 4f, cursorPaint);
+            if (padActive && cursorVx >= 0f && cursorVy >= 0f && cursorBmp != null) {
+                float left = cursorVx - cursorHotX;
+                float top = cursorVy - cursorHotY;
+                cursorDst.set(left, top, left + cursorDrawW, top + cursorDrawH);
+                canvas.drawBitmap(cursorBmp, null, cursorDst, cursorPaint);
             }
         }
 
