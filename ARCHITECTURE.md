@@ -95,9 +95,10 @@ Mapped to AWT so `Class373_Sub1` / `Class373_Sub2` keep working.
 |---------|-----|
 | Tap | Left click (`BUTTON1`) |
 | Long-press (~400–500ms) | Right click (`BUTTON3` + `META_MASK` / modifier `0x4`) |
-| Drag (one finger, past slop) | Left press + drag |
-| Pinch | Mouse wheel (zoom) |
-| Two-finger drag | Camera yaw/pitch |
+| Drag (one finger, past slop) | Camera yaw/pitch |
+| Pinch (2+ fingers) | Mouse wheel (zoom) |
+| Four-finger tap | Developer console toggle (same as `` ` ``); opens/closes soft keyboard |
+| Tap while console open | Soft keyboard |
 
 `Class373_Sub2` reads **modifiers**, not only `getButton()`. `AwtHost.injectMouse` must set:
 

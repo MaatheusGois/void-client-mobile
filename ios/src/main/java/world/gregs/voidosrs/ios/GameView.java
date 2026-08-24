@@ -34,6 +34,10 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private boolean multiTouch;
     private boolean dragging;
     private boolean longPressFired;
+    /** Fired once while 4+ fingers are down; reset when all fingers lift. */
+    private boolean fourFingerConsoleFired;
+    private boolean pendingConsoleKeyboard;
+    private int multiTouchMaxCount;
     private boolean ignoreSingleFinger;
     private float downVx;
     private float downVy;
@@ -115,6 +119,34 @@ public class GameView extends UIView implements AwtHost.Presenter {
         pressGeneration++;
     }
 
+    private void maybeFourFingerConsole() {
+        if (fourFingerConsoleFired || multiTouchMaxCount < 4) {
+            return;
+        }
+        fourFingerConsoleFired = true;
+        boolean wasOpen = AwtHost.isDevConsoleOpen();
+        System.out.println("void-osrs 4-finger tap → developer console (wasOpen=" + wasOpen + ")");
+        if (wasOpen) {
+            AwtHost.setDevConsoleOpen(false);
+            pendingConsoleKeyboard = false;
+            AwtHost.requestHideSoftKeyboard("dev-console-close");
+        } else {
+            AwtHost.setDevConsoleOpen(true);
+            pendingConsoleKeyboard = true;
+        }
+    }
+
+    private void finishFourFingerGesture() {
+        fourFingerConsoleFired = false;
+        multiTouchMaxCount = 0;
+        if (pendingConsoleKeyboard) {
+            pendingConsoleKeyboard = false;
+            if (AwtHost.isDevConsoleOpen()) {
+                AwtHost.requestSoftKeyboard("dev-console-open");
+            }
+        }
+    }
+
     @Override
     public void touchesBegan(NSSet<UITouch> touches, UIEvent event) {
         updateActive(touches, false);
@@ -125,9 +157,15 @@ public class GameView extends UIView implements AwtHost.Presenter {
             dragging = false;
             longPressFired = false;
             ignoreSingleFinger = true;
+            if (!multiTouch) {
+                multiTouchMaxCount = 0;
+            }
             multiTouch = true;
+            multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
             lastPinchDist = spacing();
             pinchAccum = 0f;
+            AwtHost.requestHideSoftKeyboard("multi-touch");
+            maybeFourFingerConsole();
             return;
         }
         if (ignoreSingleFinger) {
@@ -151,6 +189,8 @@ public class GameView extends UIView implements AwtHost.Presenter {
     public void touchesMoved(NSSet<UITouch> touches, UIEvent event) {
         updateActive(touches, false);
         if (multiTouch) {
+            multiTouchMaxCount = Math.max(multiTouchMaxCount, active.size());
+            maybeFourFingerConsole();
             if (active.size() >= 2) {
                 float dist = spacing();
                 if (lastPinchDist > 0f) {
@@ -212,6 +252,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
                 lastPinchDist = -1f;
                 pinchAccum = 0f;
                 cancelLongPress();
+                finishFourFingerGesture();
             } else {
                 lastPinchDist = spacing();
             }
@@ -241,6 +282,11 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         downY / (float) Math.max(1, frameH))
                     + " frame=" + frameW + "x" + frameH);
             AwtHost.injectLeftClick(downX, downY);
+            if (AwtHost.isDevConsoleOpen()) {
+                AwtHost.requestToggleSoftKeyboard("dev-console-tap");
+            } else {
+                AwtHost.requestHideSoftKeyboard("dev-console-stuck");
+            }
         }
         down = false;
         dragging = false;

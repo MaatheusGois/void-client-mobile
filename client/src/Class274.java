@@ -9,7 +9,7 @@ final class Class274 {
     static int anInt3480;
     private final String[] aStringArray3481;
     static int anInt3482;
-    static Class274 aClass274_3483 = (new Class274("This is the developer console. To close, press the `, \u00b2 or \u00a7 keys on your keyboard.", "Das ist die Entwicklerkonsole. Zum Schlie\u00dfen, die Tasten `, \u00b2 or \u00a7 dr\u00fccken.", "Ceci est la console de d\u00e9veloppement. Pour la fermer, appuyez sur les touches `, \u00b2 ou \u00a7.", "Este \u00e9 o painel de controle do desenvolvedor. Para fechar, pressione `, \u00b2 ou \u00a7."));
+    static Class274 aClass274_3483 = (new Class274("This is the developer console. To close, press the `, \u00b2 or \u00a7 keys, or tap with four fingers on mobile.", "Das ist die Entwicklerkonsole. Zum Schlie\u00dfen: `, \u00b2 oder \u00a7, oder auf dem Handy mit vier Fingern tippen.", "Ceci est la console de d\u00e9veloppement. Pour la fermer: `, \u00b2 ou \u00a7, ou tapez avec quatre doigts sur mobile.", "Este \u00e9 o painel de controle do desenvolvedor. Para fechar, pressione `, \u00b2 ou \u00a7, ou toque com quatro dedos no celular."));
     static int anInt3484;
     static Class274 aClass274_3485 = (new Class274("There was an error executing the command.", "Es gab einen Fehler beim Ausf\u00fchren des Befehls.", "Une erreur s'est produite lors de l'ex\u00e9cution de la commande.", "Houve um erro quando o comando foi executado."));
     static Class274 aClass274_3486 = new Class274("Unknown developer command: ", "Unbekannter Befehl: ", "Commande inconnue : ", "Comando desconhecido: ");

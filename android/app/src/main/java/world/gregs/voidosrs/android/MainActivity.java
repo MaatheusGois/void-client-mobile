@@ -20,8 +20,6 @@ import android.view.Gravity;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
@@ -79,14 +77,28 @@ public class MainActivity extends Activity {
             if (game == null) {
                 return;
             }
-            int w = game.getWidth();
-            int h = game.getHeight();
+            int[] win = windowSizePx();
+            int vw = game.getWidth();
+            int vh = game.getHeight();
+            int w = vw > 0 ? vw : win[0];
+            int h = vh > 0 ? vh : win[1];
+            // If the view is still transiently shrunk, pin client to the larger of
+            // last stable size and real window metrics (not the shrunk view).
+            long viewArea = (long) Math.max(0, vw) * Math.max(0, vh);
+            long stableArea = (long) stableSurfaceW * stableSurfaceH;
+            long winArea = (long) win[0] * win[1];
+            if (stableArea > 0 && viewArea > 0 && viewArea * 100 < stableArea * 85) {
+                w = Math.max(stableSurfaceW, win[0]);
+                h = Math.max(stableSurfaceH, win[1]);
+            } else if (winArea > viewArea && win[0] > 0 && win[1] > 0) {
+                w = win[0];
+                h = win[1];
+            }
             if (w > 0 && h > 0) {
                 applySurfaceSize(w, h, "resume-restore", true);
-            } else if (stableSurfaceW > 0 && stableSurfaceH > 0) {
-                applySurfaceSize(stableSurfaceW, stableSurfaceH, "resume-stable", true);
             }
-            game.redraw();
+            game.requestLayout();
+            game.invalidate();
         }
     };
 
@@ -132,6 +144,21 @@ public class MainActivity extends Activity {
             public void hideSoftKeyboard(String reason) {
                 Log.i("void-osrs", "softKeyboard hide: " + reason);
                 runOnUiThread(() -> hideKeyboard());
+            }
+
+            public void toggleSoftKeyboard(String reason) {
+                Log.i("void-osrs", "softKeyboard toggle: " + reason + " open=" + keyboardOpen);
+                runOnUiThread(() -> {
+                    if (keyboardOpen) {
+                        hideKeyboard();
+                    } else {
+                        showKeyboard();
+                    }
+                });
+            }
+
+            public void syncSoftKeyboardToDevConsole() {
+                // No-op: delayed sync raced the game thread and re-opened the IME on close.
             }
         };
         game.requestFocus();
@@ -180,6 +207,17 @@ public class MainActivity extends Activity {
             uiHandler.postDelayed(resumeSizeRestore, 120);
             uiHandler.postDelayed(resumeSizeRestore, 400);
         }
+    }
+
+    /** Real window pixel size (includes cutout area when immersive). */
+    private int[] windowSizePx() {
+        if (Build.VERSION.SDK_INT >= 30) {
+            android.graphics.Rect b = getWindowManager().getCurrentWindowMetrics().getBounds();
+            return new int[]{Math.max(1, b.width()), Math.max(1, b.height())};
+        }
+        android.util.DisplayMetrics dm = new android.util.DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getRealMetrics(dm);
+        return new int[]{Math.max(1, dm.widthPixels), Math.max(1, dm.heightPixels)};
     }
 
     /**
@@ -268,6 +306,12 @@ public class MainActivity extends Activity {
             return;
         }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        if (Build.VERSION.SDK_INT >= 28) {
+            WindowManager.LayoutParams lp = window.getAttributes();
+            lp.layoutInDisplayCutoutMode =
+                    WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+            window.setAttributes(lp);
+        }
         View decor = window.getDecorView();
         // Must run after setContentView — DecorView is null before that on some OEMs.
         if (decor == null) {
@@ -373,32 +417,102 @@ public class MainActivity extends Activity {
     }
 
     private void showKeyboard() {
+        Log.i("void-osrs", "showKeyboard");
         keyboardOpen = true;
+        uiHandler.removeCallbacks(forceHideImeRunnable);
         if (keyboardBall != null) {
             keyboardBall.setAlpha(0.35f);
+        }
+        if (imeInput == null) {
+            return;
         }
         syncingText = true;
         imeInput.setText(typedBuffer);
         imeInput.setSelection(typedBuffer.length());
         syncingText = false;
+        imeInput.setFocusable(true);
+        imeInput.setFocusableInTouchMode(true);
         imeInput.requestFocus();
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (imm != null) {
-            imm.showSoftInput(imeInput, InputMethodManager.SHOW_IMPLICIT);
+            imm.restartInput(imeInput);
+            imm.showSoftInput(imeInput, InputMethodManager.SHOW_FORCED);
+        }
+        if (Build.VERSION.SDK_INT >= 30) {
+            View decor = getWindow().getDecorView();
+            WindowInsetsController c = decor.getWindowInsetsController();
+            if (c != null) {
+                c.show(WindowInsets.Type.ime());
+            }
+        }
+    }
+
+    private final Runnable forceHideImeRunnable = new Runnable() {
+        public void run() {
+            if (keyboardOpen) {
+                return;
+            }
+            forceHideIme();
+        }
+    };
+
+    private void forceHideIme() {
+        View decor = getWindow() != null ? getWindow().getDecorView() : null;
+        if (Build.VERSION.SDK_INT >= 30 && decor != null) {
+            WindowInsetsController c = decor.getWindowInsetsController();
+            if (c != null) {
+                c.hide(WindowInsets.Type.ime());
+            }
+        }
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            if (imeInput != null && imeInput.getWindowToken() != null) {
+                imm.hideSoftInputFromWindow(imeInput.getWindowToken(), 0);
+            }
+            if (game != null && game.getWindowToken() != null) {
+                imm.hideSoftInputFromWindow(game.getWindowToken(), 0);
+            }
+            if (decor != null && decor.getWindowToken() != null) {
+                imm.hideSoftInputFromWindow(decor.getWindowToken(), 0);
+            }
         }
     }
 
     private void hideKeyboard() {
+        Log.i("void-osrs", "hideKeyboard");
         keyboardOpen = false;
         if (keyboardBall != null) {
             keyboardBall.setAlpha(1f);
         }
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        if (imm != null) {
-            imm.hideSoftInputFromWindow(imeInput.getWindowToken(), 0);
+        if (imeInput != null) {
+            imeInput.clearFocus();
+            // Drop focusability so the IME cannot linger on this field.
+            imeInput.setFocusable(false);
+            imeInput.setFocusableInTouchMode(false);
         }
-        imeInput.clearFocus();
-        game.requestFocus();
+        if (game != null) {
+            game.requestFocus();
+            game.requestFocusFromTouch();
+        }
+        forceHideIme();
+        // IME often ignores the first hide while still animating in.
+        uiHandler.removeCallbacks(forceHideImeRunnable);
+        uiHandler.postDelayed(forceHideImeRunnable, 50);
+        uiHandler.postDelayed(forceHideImeRunnable, 200);
+        uiHandler.postDelayed(forceHideImeRunnable, 450);
+    }
+
+    private boolean isImeVisible() {
+        if (Build.VERSION.SDK_INT >= 30) {
+            View decor = getWindow() != null ? getWindow().getDecorView() : null;
+            if (decor != null) {
+                android.view.WindowInsets insets = decor.getRootWindowInsets();
+                if (insets != null) {
+                    return insets.isVisible(WindowInsets.Type.ime());
+                }
+            }
+        }
+        return keyboardOpen;
     }
 
     private void injectChar(char c) {
@@ -575,7 +689,7 @@ public class MainActivity extends Activity {
         }, "void-client").start();
     }
 
-    final class GameView extends SurfaceView implements SurfaceHolder.Callback, AwtHost.Presenter {
+    final class GameView extends View implements AwtHost.Presenter {
         private Bitmap frame;
         private final Paint paint = new Paint(Paint.FILTER_BITMAP_FLAG);
         private final Paint cursorPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -585,6 +699,11 @@ public class MainActivity extends Activity {
         private boolean multiTouch;
         private boolean dragging;
         private boolean longPressFired;
+        /** Fired once while 4+ fingers are down; reset when all fingers lift. */
+        private boolean fourFingerConsoleFired;
+        /** Show soft keyboard after the open gesture fully ends (fingers up). */
+        private boolean pendingConsoleKeyboard;
+        private int multiTouchMaxCount;
         /** After a 2-finger gesture, ignore leftover single-finger UP/MOVE until a fresh DOWN. */
         private boolean ignoreSingleFinger;
         private float downVx;
@@ -652,7 +771,7 @@ public class MainActivity extends Activity {
 
         GameView(MainActivity activity) {
             super(activity);
-            getHolder().addCallback(this);
+            setWillNotDraw(false);
             setFocusable(true);
             setFocusableInTouchMode(true);
             cursorPaint.setStyle(Paint.Style.STROKE);
@@ -907,14 +1026,25 @@ public class MainActivity extends Activity {
                 dragging = false;
                 longPressFired = false;
                 ignoreSingleFinger = true;
+                if (!multiTouch) {
+                    multiTouchMaxCount = 0;
+                }
                 multiTouch = true;
+                multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
                 lastPinchDist = spacing(event);
                 pinchAccum = 0f;
+                // IME covers the view — dismiss so a 4-finger close can finish.
+                if (keyboardOpen || isImeVisible()) {
+                    hideKeyboard();
+                }
+                maybeFourFingerConsole();
                 return true;
             }
 
             if (multiTouch) {
                 if (action == MotionEvent.ACTION_MOVE && count >= 2) {
+                    multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
+                    maybeFourFingerConsole();
                     float dist = spacing(event);
                     if (lastPinchDist > 0f) {
                         pinchAccum += dist - lastPinchDist;
@@ -941,6 +1071,7 @@ public class MainActivity extends Activity {
                         longPressFired = false;
                         lastPinchDist = -1f;
                         pinchAccum = 0f;
+                        finishFourFingerGesture();
                     } else {
                         lastPinchDist = spacingAfterPointerUp(event);
                     }
@@ -954,6 +1085,7 @@ public class MainActivity extends Activity {
                     down = false;
                     dragging = false;
                     longPressFired = false;
+                    finishFourFingerGesture();
                     return true;
                 }
                 return true;
@@ -1024,6 +1156,15 @@ public class MainActivity extends Activity {
                                 downY / (float) Math.max(1, frameH))
                             + " frame=" + frameW + "x" + frameH);
                     AwtHost.injectLeftClick(downX, downY);
+                    if (AwtHost.isDevConsoleOpen()) {
+                        if (isImeVisible() || keyboardOpen) {
+                            hideKeyboard();
+                        } else {
+                            showKeyboard();
+                        }
+                    } else if (isImeVisible() || keyboardOpen) {
+                        hideKeyboard();
+                    }
                 }
                 down = false;
                 dragging = false;
@@ -1034,6 +1175,35 @@ public class MainActivity extends Activity {
 
         private void cancelLongPressWatch() {
             touchHandler.removeCallbacks(longPressRunnable);
+        }
+
+        private void maybeFourFingerConsole() {
+            if (fourFingerConsoleFired || multiTouchMaxCount < 4) {
+                return;
+            }
+            fourFingerConsoleFired = true;
+            boolean wasOpen = AwtHost.isDevConsoleOpen();
+            Log.i("void-osrs", "4-finger tap → developer console (wasOpen=" + wasOpen + ")");
+            if (wasOpen) {
+                AwtHost.setDevConsoleOpen(false);
+                pendingConsoleKeyboard = false;
+                hideKeyboard();
+            } else {
+                AwtHost.setDevConsoleOpen(true);
+                // Don't show IME until fingers lift — otherwise the gesture aborts.
+                pendingConsoleKeyboard = true;
+            }
+        }
+
+        private void finishFourFingerGesture() {
+            fourFingerConsoleFired = false;
+            multiTouchMaxCount = 0;
+            if (pendingConsoleKeyboard) {
+                pendingConsoleKeyboard = false;
+                if (AwtHost.isDevConsoleOpen()) {
+                    showKeyboard();
+                }
+            }
         }
 
         private float spacing(MotionEvent e) {
@@ -1113,12 +1283,21 @@ public class MainActivity extends Activity {
             if (old != null && old != bitmap) {
                 old.recycle();
             }
-            if (getHolder().getSurface().isValid()) {
-                Canvas canvas = getHolder().lockCanvas();
-                if (canvas != null) {
-                    drawFrame(canvas);
-                    getHolder().unlockCanvasAndPost(canvas);
-                }
+            // View.onDraw always uses the layout size — avoids SurfaceView buffer
+            // sticking at ~half width after resume on some OEM devices.
+            postInvalidateOnAnimation();
+        }
+
+        @Override
+        protected void onDraw(Canvas canvas) {
+            drawFrame(canvas);
+        }
+
+        @Override
+        protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+            super.onSizeChanged(w, h, oldw, oldh);
+            if (w > 0 && h > 0 && !keyboardOpen) {
+                applySurfaceSize(w, h, "sizeChanged", false);
             }
         }
 
@@ -1127,7 +1306,9 @@ public class MainActivity extends Activity {
             Bitmap bmp = frame;
             if (bmp != null) {
                 src.set(0, 0, bmp.getWidth(), bmp.getHeight());
-                dst.set(0, 0, canvas.getWidth(), canvas.getHeight());
+                int dw = Math.max(canvas.getWidth(), getWidth());
+                int dh = Math.max(canvas.getHeight(), getHeight());
+                dst.set(0, 0, dw, dh);
                 canvas.drawBitmap(bmp, src, dst, paint);
             }
             if (padActive && cursorVx >= 0f && cursorVy >= 0f) {
@@ -1148,30 +1329,8 @@ public class MainActivity extends Activity {
             }
         }
 
-        public void surfaceCreated(SurfaceHolder holder) {
-        }
-
-        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            if (width <= 0 || height <= 0) {
-                return;
-            }
-            // IME / resume can briefly shrink the surface. applySurfaceSize ignores
-            // transient shrinks so the client viewport does not stick at ~half size.
-            applySurfaceSize(width, height, "surfaceChanged", false);
-            redraw();
-        }
-
         void redraw() {
-            if (getHolder().getSurface().isValid()) {
-                Canvas canvas = getHolder().lockCanvas();
-                if (canvas != null) {
-                    drawFrame(canvas);
-                    getHolder().unlockCanvasAndPost(canvas);
-                }
-            }
-        }
-
-        public void surfaceDestroyed(SurfaceHolder holder) {
+            invalidate();
         }
     }
 }

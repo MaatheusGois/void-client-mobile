@@ -223,9 +223,53 @@ public final class AwtHost {
         target.dispatchKey(e);
     }
 
+    /** Toggle developer console (same as desktop ` key). Used by 4-finger tap on mobile. */
+    public static void injectDevConsoleToggle() {
+        injectKey(KeyEvent.KEY_PRESSED, '`', '`');
+        injectKey(KeyEvent.KEY_TYPED, 0, '`');
+        injectKey(KeyEvent.KEY_RELEASED, '`', '`');
+    }
+
+    /** {@code Class351.aBoolean4328} — developer console visible. */
+    public static boolean isDevConsoleOpen() {
+        try {
+            java.lang.reflect.Field f = Class.forName("Class351").getDeclaredField("aBoolean4328");
+            f.setAccessible(true);
+            return f.getBoolean(null);
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
+    /**
+     * Open/close developer console without injecting {@code `} (avoids console text / IME races).
+     * Mirrors {@code Class316.method2363} / {@code Class367_Sub4.method3543}.
+     */
+    public static void setDevConsoleOpen(boolean open) {
+        try {
+            if (open) {
+                Class.forName("Class316")
+                        .getDeclaredMethod("method2363", int.class)
+                        .invoke(null, -84);
+            } else {
+                Class.forName("Class367_Sub4")
+                        .getDeclaredMethod("method3543", byte.class)
+                        .invoke(null, (byte) -89);
+            }
+        } catch (Throwable t) {
+            injectDevConsoleToggle();
+        }
+    }
+
+    public static void toggleDevConsole() {
+        setDevConsoleOpen(!isDevConsoleOpen());
+    }
+
     public interface SoftKeyboardListener {
         void showSoftKeyboard(String reason);
         void hideSoftKeyboard(String reason);
+        void toggleSoftKeyboard(String reason);
+        void syncSoftKeyboardToDevConsole();
     }
 
     public static volatile SoftKeyboardListener softKeyboardListener;
@@ -241,6 +285,20 @@ public final class AwtHost {
         SoftKeyboardListener l = softKeyboardListener;
         if (l != null) {
             l.hideSoftKeyboard(reason);
+        }
+    }
+
+    public static void requestToggleSoftKeyboard(String reason) {
+        SoftKeyboardListener l = softKeyboardListener;
+        if (l != null) {
+            l.toggleSoftKeyboard(reason);
+        }
+    }
+
+    public static void requestSyncSoftKeyboardToDevConsole() {
+        SoftKeyboardListener l = softKeyboardListener;
+        if (l != null) {
+            l.syncSoftKeyboardToDevConsole();
         }
     }
 

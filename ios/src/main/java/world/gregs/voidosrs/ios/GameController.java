@@ -128,6 +128,23 @@ public class GameController extends UIViewController {
                     }
                 });
             }
+
+            public void toggleSoftKeyboard(final String reason) {
+                System.out.println("void-osrs softKeyboard toggle: " + reason + " open=" + keyboardOpen);
+                DispatchQueue.getMainQueue().async(new Runnable() {
+                    public void run() {
+                        if (keyboardOpen) {
+                            hideKeyboard();
+                        } else {
+                            showKeyboard();
+                        }
+                    }
+                });
+            }
+
+            public void syncSoftKeyboardToDevConsole() {
+                // No-op: delayed sync raced and could re-show the keyboard on close.
+            }
         };
     }
 
