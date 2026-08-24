@@ -18,6 +18,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.text.InputType;
+import android.hardware.input.InputManager;
 import android.view.Gravity;
 import android.view.InputDevice;
 import android.view.KeyEvent;
@@ -740,6 +741,7 @@ public class MainActivity extends Activity {
         private float cursorVx = -1f;
         private float cursorVy = -1f;
         private boolean padActive;
+        private int padDeviceId = -1;
         private float stickLX;
         private float stickLY;
         private float stickRX;
@@ -751,6 +753,22 @@ public class MainActivity extends Activity {
         private boolean padRightDown;
         private boolean padTickRunning;
         private long lastPadZoomAt;
+        private InputManager inputManager;
+        private final InputManager.InputDeviceListener padDeviceListener =
+                new InputManager.InputDeviceListener() {
+                    public void onInputDeviceAdded(int deviceId) {
+                    }
+
+                    public void onInputDeviceRemoved(int deviceId) {
+                        onPadDeviceGone(deviceId);
+                    }
+
+                    public void onInputDeviceChanged(int deviceId) {
+                        if (InputDevice.getDevice(deviceId) == null) {
+                            onPadDeviceGone(deviceId);
+                        }
+                    }
+                };
         private final Runnable padTick = new Runnable() {
             public void run() {
                 padTickRunning = false;
@@ -807,22 +825,103 @@ public class MainActivity extends Activity {
             });
         }
 
+        @Override
+        protected void onAttachedToWindow() {
+            super.onAttachedToWindow();
+            inputManager = (InputManager) getContext().getSystemService(Context.INPUT_SERVICE);
+            if (inputManager != null) {
+                inputManager.registerInputDeviceListener(padDeviceListener, touchHandler);
+            }
+        }
+
+        @Override
+        protected void onDetachedFromWindow() {
+            if (inputManager != null) {
+                inputManager.unregisterInputDeviceListener(padDeviceListener);
+                inputManager = null;
+            }
+            super.onDetachedFromWindow();
+        }
+
         void stopPadTick() {
             touchHandler.removeCallbacks(padTick);
             padTickRunning = false;
         }
 
         void kickPadTick() {
+            if (padActive && !anyPadConnected()) {
+                deactivatePad();
+                return;
+            }
             if (padActive && needsPadTick()) {
                 startPadTick();
             }
         }
 
-        private void activatePad() {
+        private void activatePad(int deviceId) {
             padActive = true;
+            if (deviceId >= 0) {
+                padDeviceId = deviceId;
+            }
             ensureCursor();
             startPadTick();
             redraw();
+        }
+
+        private void deactivatePad() {
+            if (!padActive) {
+                return;
+            }
+            if (padLeftDown || padRightDown) {
+                int[] xy = map(cursorVx, cursorVy);
+                if (padLeftDown) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+                }
+                if (padRightDown) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+                }
+            }
+            padActive = false;
+            padDeviceId = -1;
+            stickLX = 0f;
+            stickLY = 0f;
+            stickRX = 0f;
+            stickRY = 0f;
+            triggerL2 = 0f;
+            l1Held = false;
+            l2DigitalHeld = false;
+            padLeftDown = false;
+            padRightDown = false;
+            stopPadTick();
+            redraw();
+        }
+
+        private void onPadDeviceGone(int deviceId) {
+            if (!padActive) {
+                return;
+            }
+            if (padDeviceId >= 0 && deviceId != padDeviceId && anyPadConnected()) {
+                return;
+            }
+            deactivatePad();
+        }
+
+        private boolean isPadDevice(InputDevice device) {
+            if (device == null || device.isVirtual()) {
+                return false;
+            }
+            int src = device.getSources();
+            return (src & InputDevice.SOURCE_GAMEPAD) == InputDevice.SOURCE_GAMEPAD
+                    || (src & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK;
+        }
+
+        private boolean anyPadConnected() {
+            for (int id : InputDevice.getDeviceIds()) {
+                if (isPadDevice(InputDevice.getDevice(id))) {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private void ensureCursor() {
@@ -938,7 +1037,7 @@ public class MainActivity extends Activity {
                 }
             }
 
-            activatePad();
+            activatePad(event.getDeviceId());
             int[] xy = map(cursorVx, cursorVy);
             boolean down = event.getAction() == KeyEvent.ACTION_DOWN;
 
@@ -994,10 +1093,15 @@ public class MainActivity extends Activity {
             if (!joy) {
                 return false;
             }
-            if (event.getActionMasked() != MotionEvent.ACTION_MOVE) {
+            int action = event.getActionMasked();
+            if (action == MotionEvent.ACTION_CANCEL) {
+                onPadDeviceGone(event.getDeviceId());
+                return true;
+            }
+            if (action != MotionEvent.ACTION_MOVE) {
                 return false;
             }
-            activatePad();
+            activatePad(event.getDeviceId());
             stickLX = axis(event, MotionEvent.AXIS_X);
             stickLY = axis(event, MotionEvent.AXIS_Y);
 
