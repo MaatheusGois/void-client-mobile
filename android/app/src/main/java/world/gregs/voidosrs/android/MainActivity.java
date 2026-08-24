@@ -51,6 +51,44 @@ public class MainActivity extends Activity {
     private boolean keyboardOpen;
     private String typedBuffer = "";
     private boolean syncingText;
+    /** Largest surface size we have accepted (ignores transient resume/IME shrinks). */
+    private int stableSurfaceW;
+    private int stableSurfaceH;
+    /** Ignore / don't commit shrinks until this uptime (resume inset flash). */
+    private long resumeGraceUntilMs;
+    private final Handler uiHandler = new Handler(Looper.getMainLooper());
+    private final Runnable deferredShrinkApply = new Runnable() {
+        public void run() {
+            if (game == null || keyboardOpen) {
+                return;
+            }
+            if (android.os.SystemClock.uptimeMillis() < resumeGraceUntilMs) {
+                uiHandler.postDelayed(this, 200);
+                return;
+            }
+            int w = game.getWidth();
+            int h = game.getHeight();
+            if (w > 0 && h > 0) {
+                applySurfaceSize(w, h, "deferred-shrink", true);
+            }
+        }
+    };
+    private final Runnable resumeSizeRestore = new Runnable() {
+        public void run() {
+            hideSystemUi();
+            if (game == null) {
+                return;
+            }
+            int w = game.getWidth();
+            int h = game.getHeight();
+            if (w > 0 && h > 0) {
+                applySurfaceSize(w, h, "resume-restore", true);
+            } else if (stableSurfaceW > 0 && stableSurfaceH > 0) {
+                applySurfaceSize(stableSurfaceW, stableSurfaceH, "resume-stable", true);
+            }
+            game.redraw();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +155,8 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onPause() {
+        uiHandler.removeCallbacks(resumeSizeRestore);
+        uiHandler.removeCallbacks(deferredShrinkApply);
         if (game != null) {
             game.stopPadTick();
         }
@@ -128,10 +168,61 @@ public class MainActivity extends Activity {
         super.onResume();
         requestAudioFocus();
         hideSystemUi();
+        resumeGraceUntilMs = android.os.SystemClock.uptimeMillis() + 750;
         if (game != null) {
             game.requestFocus();
             game.kickPadTick();
+            // System bars flash on resume and briefly shrink the SurfaceView; that used
+            // to stick the client viewport at ~half size. Re-hide + re-apply after settle.
+            uiHandler.removeCallbacks(resumeSizeRestore);
+            uiHandler.removeCallbacks(deferredShrinkApply);
+            uiHandler.post(resumeSizeRestore);
+            uiHandler.postDelayed(resumeSizeRestore, 120);
+            uiHandler.postDelayed(resumeSizeRestore, 400);
         }
+    }
+
+    /**
+     * Push surface size into the AWT client. Ignores transient shrinks (keyboard /
+     * immersive bar flash) so the viewport does not stick at a tiny size.
+     */
+    private void applySurfaceSize(int width, int height, String reason, boolean force) {
+        if (width <= 0 || height <= 0) {
+            return;
+        }
+        if (keyboardOpen && !force) {
+            return;
+        }
+        long area = (long) width * height;
+        long stableArea = (long) stableSurfaceW * stableSurfaceH;
+        boolean significantShrink = stableArea > 0 && area * 100 < stableArea * 85;
+        boolean inResumeGrace = android.os.SystemClock.uptimeMillis() < resumeGraceUntilMs;
+        // Transient inset flash on resume / IME — do not teach the client a tiny viewport.
+        if (significantShrink && (inResumeGrace || !force || !"deferred-shrink".equals(reason))) {
+            Log.w("void-osrs", "ignore shrink " + width + "x" + height
+                    + " vs stable " + stableSurfaceW + "x" + stableSurfaceH
+                    + " (" + reason + (inResumeGrace ? " grace" : "") + ")");
+            if (!inResumeGrace && !force) {
+                uiHandler.removeCallbacks(deferredShrinkApply);
+                uiHandler.postDelayed(deferredShrinkApply, 400);
+            }
+            if (stableSurfaceW > 0 && stableSurfaceH > 0
+                    && (force || "surfaceChanged".equals(reason) || "layout".equals(reason))) {
+                // Keep client at last good size while the view catches up.
+                AwtHost.setDisplaySize(stableSurfaceW, stableSurfaceH);
+            }
+            return;
+        }
+        uiHandler.removeCallbacks(deferredShrinkApply);
+        if (area >= stableArea || "deferred-shrink".equals(reason)) {
+            stableSurfaceW = width;
+            stableSurfaceH = height;
+        }
+        Log.i("void-osrs", "surface size " + width + "x" + height
+                + " stable=" + stableSurfaceW + "x" + stableSurfaceH
+                + " (" + reason + (force ? " force" : "") + ")");
+        AwtHost.setDisplaySize(width, height);
+        startClientIfReady(width, height);
     }
 
     private void requestAudioFocus() {
@@ -162,6 +253,11 @@ public class MainActivity extends Activity {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             hideSystemUi();
+            resumeGraceUntilMs = Math.max(resumeGraceUntilMs,
+                    android.os.SystemClock.uptimeMillis() + 400);
+            uiHandler.removeCallbacks(resumeSizeRestore);
+            uiHandler.post(resumeSizeRestore);
+            uiHandler.postDelayed(resumeSizeRestore, 200);
         }
     }
 
@@ -569,8 +665,7 @@ public class MainActivity extends Activity {
                 int w = Math.max(0, right - left);
                 int h = Math.max(0, bottom - top);
                 if (w > 0 && h > 0) {
-                    AwtHost.setDisplaySize(w, h);
-                    startClientIfReady(w, h);
+                    applySurfaceSize(w, h, "layout", false);
                     if (cursorVx < 0f) {
                         cursorVx = w * 0.5f;
                         cursorVy = h * 0.5f;
@@ -1060,19 +1155,13 @@ public class MainActivity extends Activity {
             if (width <= 0 || height <= 0) {
                 return;
             }
-            // IME used to use adjustResize and shrink the surface → client viewport
-            // stuck at a tiny size with black bars. Ignore shrinks while the keyboard
-            // is up (manifest is adjustNothing; this is belt-and-suspenders).
-            if (keyboardOpen) {
-                redraw();
-                return;
-            }
-            AwtHost.setDisplaySize(width, height);
-            startClientIfReady(width, height);
+            // IME / resume can briefly shrink the surface. applySurfaceSize ignores
+            // transient shrinks so the client viewport does not stick at ~half size.
+            applySurfaceSize(width, height, "surfaceChanged", false);
             redraw();
         }
 
-        private void redraw() {
+        void redraw() {
             if (getHolder().getSurface().isValid()) {
                 Canvas canvas = getHolder().lockCanvas();
                 if (canvas != null) {
