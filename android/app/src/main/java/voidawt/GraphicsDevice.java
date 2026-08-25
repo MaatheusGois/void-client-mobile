@@ -1,5 +1,10 @@
 package voidawt;
 
+/**
+ * Fake screen device. Reports {@link AwtHost} logical size as the current
+ * {@link DisplayMode}; exclusive fullscreen is supported in name only so the
+ * client can construct its FS frame without crashing.
+ */
 public class GraphicsDevice {
     private boolean valid = true;
     private DisplayMode mode = new DisplayMode(AwtHost.GAME_WIDTH, AwtHost.GAME_HEIGHT, 32, 60);

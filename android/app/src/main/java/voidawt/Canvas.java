@@ -3,6 +3,10 @@ package voidawt;
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
 
+/**
+ * AWT {@code Canvas} shim: owns the software back-buffer and pushes pixels to
+ * {@link AwtHost#present} after each blit ({@link #drawBackbuffer}).
+ */
 public class Canvas extends Component {
     private BufferedImage buffer;
 

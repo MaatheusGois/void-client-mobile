@@ -14,8 +14,20 @@ import org.robovm.apple.foundation.NSThread;
 import org.robovm.rt.VM;
 
 /**
- * PCM out via AudioQueue. Must create the queue on the main thread — RoboVM's
- * AudioQueueNewOutput crashes (objc_retain) when opened from a game mixer thread.
+ * iOS PCM sink for the 634 mixer ({@code Class279_Sub1}).
+ * <p>
+ * Uses AudioQueue (16-bit LE PCM) instead of AVAudioEngine — more reliable under
+ * RoboVM. Hard requirements learned the hard way:
+ * <ul>
+ *   <li>Create/dispose the queue on the <b>main</b> thread — mixer-thread
+ *       {@code AudioQueueNewOutput} crashes in {@code objc_retain}.</li>
+ *   <li>Copy PCM into the native buffer via {@link VM#newDirectByteBuffer} —
+ *       RoboVM {@code setAudioData(byte[])} only points at the Java array and
+ *       the GC can reclaim it before Core Audio reads it.</li>
+ *   <li>Keep {@link #callback} as a field so the block marshaler cannot GC it.</li>
+ * </ul>
+ * Android's AudioTrack implementation is excluded in {@code ios/build.gradle};
+ * this file is the iOS overlay.
  */
 final class PcmSourceDataLine implements SourceDataLine {
     private static final int QUEUE_BUFFERS = 3;
@@ -23,7 +35,7 @@ final class PcmSourceDataLine implements SourceDataLine {
 
     private final AudioFormat format;
     private final int requestedBufferBytes;
-    /** Kept as a field so RoboVM's block marshaler cannot GC the callback. */
+    /** Strong ref — RoboVM block marshaler must not GC the OutputCallback. */
     private final AudioQueue.OutputCallback callback = new AudioQueue.OutputCallback() {
         public void onOutput(AudioQueue q, long bufferPtr) {
             PcmSourceDataLine.this.onOutput(q, bufferPtr);
@@ -39,6 +51,10 @@ final class PcmSourceDataLine implements SourceDataLine {
     private int writes;
     private int maxPeak;
 
+    /**
+     * Thin wrapper so we can copy bytes into the Core Audio buffer's native
+     * memory (RoboVM's AudioQueueBuffer setters are pointer-only).
+     */
     private static final class NativeBuf extends AudioQueueBuffer {
         NativeBuf(long handle) {
             super(handle);
@@ -75,6 +91,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         ringBytes = Math.max(ringBytes, frameSize * 2048);
         ring = new ByteRing(ringBytes);
         try {
+            // Mixer thread → hop to main before touching AudioQueue APIs.
             runOnMain(new Runnable() {
                 public void run() {
                     openOnMain();
@@ -108,8 +125,8 @@ final class PcmSourceDataLine implements SourceDataLine {
                     frameSize,
                     channels,
                     16);
-            // Default callback queue (AudioQueue's own). Creating here on main is the important bit.
             queue = AudioQueue.createOutput(asbd, callback);
+            // Prime three buffers so the queue never underruns on start.
             byte[] priming = new byte[BUFFER_BYTES];
             fill(priming);
             for (int i = 0; i < QUEUE_BUFFERS; i++) {
@@ -156,6 +173,7 @@ final class PcmSourceDataLine implements SourceDataLine {
     }
 
     public void start() {
+        // AudioQueue starts in openOnMain; nothing else to do.
     }
 
     public void flush() {
@@ -179,6 +197,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         }
     }
 
+    /** Free ring space (JavaSound {@code available()}). */
     public int available() {
         ByteRing r = ring;
         return r == null ? 0 : r.free();
@@ -194,6 +213,7 @@ final class PcmSourceDataLine implements SourceDataLine {
             maxPeak = p;
         }
         writes++;
+        // Sparse logs: splash is peak=0; title music should push peak > 0.
         if (writes == 1 || writes == 50 || (writes % 200 == 0)) {
             System.out.println("void-osrs audio write#" + writes + " len=" + len
                     + " peak=" + p + " max=" + maxPeak + " buffered=" + r.used());
@@ -201,6 +221,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         return r.write(b, off, len);
     }
 
+    /** AudioQueue callback: refill a finished buffer from the ring (or silence). */
     private void onOutput(AudioQueue q, long bufferPtr) {
         if (!running || q == null) {
             return;
@@ -231,6 +252,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         }
     }
 
+    /** Run {@code task} on the main queue and wait (mixer threads call this). */
     private static void runOnMain(final Runnable task) {
         if (NSThread.getCurrentThread().isMainThread()) {
             task.run();
@@ -273,6 +295,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         }
     }
 
+    /** Max abs amplitude of LE 16-bit samples — debug for silent mixer. */
     private static int peak(byte[] b, int off, int len) {
         int peak = 0;
         int end = Math.min(b.length, off + len) - 1;

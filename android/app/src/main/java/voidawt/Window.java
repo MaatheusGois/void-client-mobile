@@ -1,5 +1,6 @@
 package voidawt;
 
+/** AWT {@code Window} stub — pack/toFront/dispose are no-ops on mobile. */
 public class Window extends Container {
     public void pack() {
     }

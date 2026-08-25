@@ -16,6 +16,8 @@ public class Main extends UIApplicationDelegateAdapter {
     @Override
     public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {
         System.setProperty("java.net.preferIPv4Stack", "true");
+        // Activate Playback early so AudioQueue (voidsound) is not muted / silent
+        // until the first line opens on the mixer thread.
         try {
             AVAudioSession session = AVAudioSession.getSharedInstance();
             session.setCategory(AVAudioSessionCategory.Playback);

@@ -1,6 +1,13 @@
 package voidsound.sampled;
 
-/** JavaSound-style PCM ring: {@link #free()} is SourceDataLine.available(). */
+/**
+ * Thread-safe PCM ring between the game mixer thread and the platform pump.
+ * <p>
+ * JavaSound {@code SourceDataLine.available()} returns <b>free</b> bytes — not
+ * used bytes. {@link #free()} is what {@link PcmSourceDataLine#available()}
+ * exposes so {@code Class279_Sub1.method2081} can compute how full the buffer is.
+ * {@link #write} blocks when full (mixer paces itself); {@link #read} never blocks.
+ */
 final class ByteRing {
     private final byte[] buf;
     private int head;
@@ -14,10 +21,12 @@ final class ByteRing {
         return buf.length;
     }
 
+    /** Bytes that can still be written without blocking. */
     synchronized int free() {
         return buf.length - size;
     }
 
+    /** Bytes waiting to be played. */
     synchronized int used() {
         return size;
     }
@@ -28,6 +37,7 @@ final class ByteRing {
         notifyAll();
     }
 
+    /** Blocks until all {@code len} bytes are queued (or interrupted). */
     synchronized int write(byte[] src, int off, int len) {
         int done = 0;
         while (done < len) {
@@ -54,6 +64,7 @@ final class ByteRing {
         return done;
     }
 
+    /** Non-blocking; returns 0 if empty. */
     synchronized int read(byte[] dst, int off, int len) {
         if (size == 0 || len <= 0) {
             return 0;

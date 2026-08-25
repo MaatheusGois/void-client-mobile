@@ -7,8 +7,14 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
- * Persisted JS5/login hosts ({@code user.home/void-server.txt}), newest first, max 5.
- * Shared Android + iOS (copied into the iOS source set).
+ * Persisted JS5 / login host list and light game-state helpers for the mobile hosts.
+ * <p>
+ * File: {@code user.home/void-server.txt} (newest first, max {@link #MAX_HISTORY}).
+ * Shared Android + iOS — lives under the Android tree and is copied into the iOS
+ * source set by {@code prepareSharedSources}.
+ * <p>
+ * Game-state helpers read obfuscated statics via reflection so the picker overlay
+ * can show on title / connect-fail without pulling 634 types into the host package.
  */
 public final class ServerPrefs {
     public static final int MAX_HISTORY = 5;
@@ -16,16 +22,19 @@ public final class ServerPrefs {
     private ServerPrefs() {
     }
 
+    /** {@code user.home/void-server.txt} */
     public static File file() {
         String home = System.getProperty("user.home", ".");
         return new File(home, "void-server.txt");
     }
 
+    /** Most recently used host, or {@code null} if none saved. */
     public static String load() {
         String[] all = loadAll();
         return all.length > 0 ? all[0] : null;
     }
 
+    /** History newest-first, already normalized and de-duplicated. */
     public static String[] loadAll() {
         File f = file();
         if (!f.isFile()) {
@@ -54,6 +63,7 @@ public final class ServerPrefs {
         return out.toArray(new String[out.size()]);
     }
 
+    /** Push {@code host} to the front of history (creates the file if needed). */
     public static void save(String host) {
         String n = normalize(host);
         if (n == null) {
@@ -91,7 +101,10 @@ public final class ServerPrefs {
         }
     }
 
-    /** {@code http://192.168.1.10:43594/} → {@code 192.168.1.10} */
+    /**
+     * Strip scheme / path / port / userinfo to a bare host.
+     * {@code http://192.168.1.10:43594/} → {@code 192.168.1.10}
+     */
     public static String normalize(String raw) {
         if (raw == null) {
             return null;
@@ -136,7 +149,10 @@ public final class ServerPrefs {
         return s.length() == 0 ? null : s;
     }
 
-    /** Title / lobby / account screens — not splash (0–2) and not in-world (10). */
+    /**
+     * {@code Class240.anInt4674} — client game state.
+     * Splash ≈ 0–2, title/login/lobby ≈ 3–9 / 12, in-world = 10, fatal connect = 14.
+     */
     public static int gameState() {
         try {
             java.lang.reflect.Field f = Class.forName("Class240").getDeclaredField("anInt4674");
@@ -147,6 +163,7 @@ public final class ServerPrefs {
         }
     }
 
+    /** Title / lobby / account screens — not splash and not in-world. */
     public static boolean isLoginScreen() {
         int state = gameState();
         return state == 3 || state == 4 || state == 5 || state == 6
@@ -158,7 +175,7 @@ public final class ServerPrefs {
         return gameState() == 14;
     }
 
-    /** JS5 retry counter — increments on each Connect/handshake fail. */
+    /** JS5 retry counter on the live connection object — increments per Connect fail. */
     public static int js5FailCount() {
         try {
             java.lang.reflect.Field inst = Class.forName("Class348_Sub4").getDeclaredField("aClass248_6601");
@@ -175,7 +192,7 @@ public final class ServerPrefs {
         }
     }
 
-    /** Splash still running and JS5 already failed at least once — don't wait for state 14. */
+    /** Splash still running and JS5 already failed — show picker before state 14. */
     public static boolean isConnectFailing() {
         if (isConnectFailScreen()) {
             return true;
@@ -184,6 +201,7 @@ public final class ServerPrefs {
         return state >= 0 && state <= 2 && js5FailCount() >= 1;
     }
 
+    /** Whether the host should show Change-server / auto-open the picker. */
     public static boolean showsServerPicker() {
         return isLoginScreen() || isConnectFailing();
     }

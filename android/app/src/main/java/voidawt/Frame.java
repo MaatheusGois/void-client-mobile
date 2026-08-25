@@ -1,5 +1,10 @@
 package voidawt;
 
+/**
+ * AWT {@code Frame} stub. Exclusive fullscreen in the client sets
+ * {@code Class34.aFrame476} to an instance of this; {@link AwtHost} reads that
+ * field to pin logical size at 800×600 (or the chosen FS dims).
+ */
 public class Frame extends Window {
     private String title = "";
 

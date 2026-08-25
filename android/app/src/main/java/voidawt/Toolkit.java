@@ -7,6 +7,11 @@ import voidawt.datatransfer.Clipboard;
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageProducer;
 
+/**
+ * AWT {@code Toolkit} singleton: screen size from {@link AwtHost}, PNG decode,
+ * clipboard, and a stub event queue. Enough for the client to boot without a
+ * real desktop toolkit.
+ */
 public class Toolkit {
     private static final Toolkit INSTANCE = new Toolkit();
     private final Clipboard clipboard = new Clipboard();

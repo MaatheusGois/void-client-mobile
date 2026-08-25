@@ -2,6 +2,11 @@ package voidawt;
 
 import android.graphics.Paint;
 
+/**
+ * AWT {@code FontMetrics} over the Font's {@link Paint}.
+ * Must match {@link Graphics#drawString} metrics so {@code Class323} glyph
+ * crops (ascent/width) line up with the baked pixels.
+ */
 public class FontMetrics {
     private final Paint paint;
 

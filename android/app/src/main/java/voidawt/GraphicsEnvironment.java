@@ -1,5 +1,6 @@
 package voidawt;
 
+/** Singleton graphics environment exposing the one {@link GraphicsDevice}. */
 public class GraphicsEnvironment {
     private static final GraphicsEnvironment INSTANCE = new GraphicsEnvironment();
     private final GraphicsDevice device = new GraphicsDevice();

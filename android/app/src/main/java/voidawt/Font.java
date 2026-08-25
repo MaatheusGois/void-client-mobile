@@ -3,6 +3,12 @@ package voidawt;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 
+/**
+ * AWT {@code Font} shim for Android.
+ * Holds a {@link Paint} with the resolved {@link Typeface} so
+ * {@link Graphics#drawString} / {@link FontMetrics} share one face
+ * (splash {@code Class199}, glyph bake {@code Class323}).
+ */
 public class Font {
     public static final int PLAIN = 0;
     public static final int BOLD = 1;
@@ -11,6 +17,7 @@ public class Font {
     final String name;
     final int style;
     final int size;
+    /** Shared by drawString + FontMetrics; anti-aliased like desktop AWT defaults. */
     final Paint paint;
 
     public Font(String name, int style, int size) {
@@ -26,6 +33,7 @@ public class Font {
         } else if ((style & ITALIC) != 0) {
             tf = Typeface.ITALIC;
         }
+        // Helvetica → system fallback (usually Roboto) when the face is absent.
         paint.setTypeface(Typeface.create(name, tf));
         paint.setTextSize(size);
     }

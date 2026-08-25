@@ -3,6 +3,7 @@ package voidawt;
 import java.util.ArrayList;
 import java.util.List;
 
+/** AWT {@code Container} stub: child list + optional {@link LayoutManager}. */
 public class Container extends Component {
     private final List<Component> children = new ArrayList<Component>();
     private LayoutManager layout;

@@ -83,7 +83,7 @@
     <key>UILaunchScreen</key>
     <dict/>
     <key>UIRequiresFullScreen</key>
-    <true/>
+    <false/>
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>

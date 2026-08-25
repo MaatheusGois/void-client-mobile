@@ -6,11 +6,17 @@ import android.graphics.Paint;
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
 
+/**
+ * Software {@code Graphics} over a {@link BufferedImage}. When constructed with
+ * {@code presentOnDraw=true} (game canvas), each draw also presents the buffer
+ * to {@link AwtHost} so the native host can blit the frame.
+ */
 public class Graphics {
     private final BufferedImage target;
     private Color color = Color.black;
     private Font font = new Font("Helvetica", Font.PLAIN, 12);
     private Shape clip;
+    /** When true, {@link #drawImage} presents the buffer (game canvas backbuffer). */
     private final boolean presentOnDraw;
 
     public Graphics(BufferedImage target) {
@@ -81,6 +87,11 @@ public class Graphics {
         fillRect(x + w, y, 1, h);
     }
 
+    /**
+     * AWT baseline at {@code y}. Renders into a tight glyph-sized bitmap (not a
+     * full-frame alloc — that killed splash perf) then blits non-empty pixels.
+     * Callers: splash {@code Class199}, glyph bake {@code Class323}.
+     */
     public void drawString(String str, int x, int y) {
         if (str == null || str.length() == 0) {
             return;
@@ -95,6 +106,7 @@ public class Graphics {
         int bh = textH + pad * 2;
         Bitmap bitmap = Bitmap.createBitmap(bw, bh, Bitmap.Config.ARGB_8888);
         android.graphics.Canvas canvas = new android.graphics.Canvas(bitmap);
+        // -fm.top == ascent; drawText y is baseline within the temp bitmap.
         canvas.drawText(str, pad, pad - fm.top, paint);
         int[] src = new int[bw * bh];
         bitmap.getPixels(src, 0, bw, 0, 0, bw, bh);

@@ -4,6 +4,14 @@ import org.robovm.apple.coretext.CTLine;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIFont;
 
+/**
+ * AWT {@code FontMetrics} shim backed by {@link UIFont} / CoreText.
+ * <p>
+ * Used when the client bakes per-glyph images in {@code Class323}
+ * ({@code charWidth}, ascent, descent) and anywhere else that sizes text
+ * before {@link Graphics#drawString}. Must match the same face that
+ * {@code drawString} rasterizes, or glyph crops come out wrong.
+ */
 public class FontMetrics {
     private final Font font;
     private final UIFont uiFont;
@@ -17,6 +25,7 @@ public class FontMetrics {
         return stringWidth(String.valueOf(c));
     }
 
+    /** Advance width via {@link CTLine} (same path as {@code drawString}). */
     public int stringWidth(String s) {
         if (s == null || s.length() == 0) {
             return 1;
@@ -34,7 +43,7 @@ public class FontMetrics {
     }
 
     public int getDescent() {
-        // UIKit descender is negative.
+        // UIKit reports descender as a negative offset below the baseline.
         return Math.max(1, (int) Math.ceil(-uiFont.getDescender()));
     }
 

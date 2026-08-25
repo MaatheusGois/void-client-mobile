@@ -16,6 +16,11 @@ import voidawt.image.ImageProducer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Minimal AWT {@code Component}: bounds, listeners, and dispatch helpers used by
+ * the client for mouse/key/focus. Not a real native widget — events are injected
+ * by {@link AwtHost} from the mobile touch/IME layer.
+ */
 public class Component implements ImageObserver {
     Container parent;
     int x;

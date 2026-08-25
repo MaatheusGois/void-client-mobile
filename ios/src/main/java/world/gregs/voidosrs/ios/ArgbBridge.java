@@ -11,10 +11,21 @@ import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.foundation.NSData;
 import org.robovm.apple.uikit.UIImage;
 
+/**
+ * Pixel bridge between the Java software framebuffer ({@code int[]} ARGB) and UIKit.
+ * <p>
+ * {@link #toImage} is the present path ({@code AwtHost} → {@code GameView}).
+ * {@link #copy} decodes PNGs for {@code voidawt.Toolkit} into the same ARGB layout
+ * the 634 client expects.
+ */
 public final class ArgbBridge {
     private ArgbBridge() {
     }
 
+    /**
+     * ARGB ints → {@link UIImage}. Zero alpha is forced opaque so the software
+     * renderer’s “clear” blacks don’t punch holes through the UIImageView.
+     */
     public static UIImage toImage(int[] argb, int w, int h) {
         byte[] rgba = new byte[w * h * 4];
         int n = Math.min(argb.length, w * h);
@@ -37,6 +48,7 @@ public final class ArgbBridge {
         return new UIImage(cg);
     }
 
+    /** {@link UIImage} / PNG decode → opaque ARGB ints for {@code Toolkit.createImage}. */
     public static void copy(UIImage image, int[] dest, int w, int h) {
         CGImage cg = image.getCGImage();
         if (cg == null || dest == null) {

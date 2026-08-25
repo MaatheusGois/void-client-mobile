@@ -5,6 +5,14 @@ import org.robovm.apple.uikit.NSAttributedStringAttributes;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIFont;
 
+/**
+ * AWT {@code Font} shim for iOS (RoboVM).
+ * <p>
+ * The 634 client asks for desktop faces like {@code Helvetica} / bold-13 for the
+ * splash ({@code Class199}) and for baking toolkit glyphs ({@code Class323}).
+ * There is no java.awt on iOS, so we resolve a real {@link UIFont} and expose it
+ * to {@link Graphics#drawString} / {@link FontMetrics} via CoreText.
+ */
 public class Font {
     public static final int PLAIN = 0;
     public static final int BOLD = 1;
@@ -13,6 +21,7 @@ public class Font {
     final String name;
     final int style;
     final int size;
+    /** Lazily resolved PostScript / system face; cached for the life of this Font. */
     private UIFont uiFont;
 
     public Font(String name, int style, int size) {
@@ -29,6 +38,11 @@ public class Font {
         return style;
     }
 
+    /**
+     * Map AWT name+style → {@link UIFont}.
+     * Tries PostScript names ({@code Helvetica-Bold}, …) then falls back to the
+     * system bold/italic/regular fonts when the named face is missing.
+     */
     UIFont uiFont() {
         if (uiFont != null) {
             return uiFont;
@@ -65,6 +79,7 @@ public class Font {
         return uiFont;
     }
 
+    /** Build a CoreText-ready attributed string (font + foreground). */
     NSAttributedString attributed(String text, UIColor color) {
         NSAttributedStringAttributes attrs = new NSAttributedStringAttributes();
         attrs.setFont(uiFont());

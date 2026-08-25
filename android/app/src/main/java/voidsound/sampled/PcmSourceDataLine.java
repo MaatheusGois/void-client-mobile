@@ -5,6 +5,17 @@ import android.media.AudioFormat;
 import android.media.AudioTrack;
 import android.util.Log;
 
+/**
+ * Android PCM sink for the 634 mixer ({@code Class279_Sub1}).
+ * <p>
+ * Mixer thread writes LE 16-bit frames into a {@link ByteRing}; a dedicated
+ * high-priority pump drains the ring into {@link AudioTrack} (MODE_STREAM).
+ * Some devices reject 22050 Hz — we fall back to 44100 and duplicate each
+ * sample frame ({@link #stretch2x}).
+ * <p>
+ * Shared with iOS via Gradle copy, but iOS excludes this file and ships its
+ * own AudioQueue-based {@code PcmSourceDataLine}.
+ */
 final class PcmSourceDataLine implements SourceDataLine {
     private static final String TAG = "void-osrs";
 
@@ -37,6 +48,7 @@ final class PcmSourceDataLine implements SourceDataLine {
                 ? AudioFormat.CHANNEL_OUT_STEREO
                 : AudioFormat.CHANNEL_OUT_MONO;
 
+        // Prefer native rate; many phones only accept 44100/48000.
         outRate = srcRate;
         int min = AudioTrack.getMinBufferSize(outRate, channelMask, AudioFormat.ENCODING_PCM_16BIT);
         if (min <= 0) {
@@ -129,6 +141,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         }
     }
 
+    /** Free ring space (JavaSound {@code available()}). */
     public int available() {
         ByteRing r = ring;
         return r == null ? 0 : r.free();
@@ -139,6 +152,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         if (r == null || b == null || len <= 0) {
             return 0;
         }
+        // peak=0 during splash is normal; after title music loads it should rise.
         if (!logged) {
             logged = true;
             Log.i(TAG, "audio first write " + len + " peak=" + peak(b, off, len));
@@ -146,6 +160,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         return r.write(b, off, len);
     }
 
+    /** Drain ring → AudioTrack; stretch when hw rate is 2× game rate. */
     private void pumpLoop() {
         byte[] src = new byte[512 * srcFrameSize];
         byte[] stretched = outRate != srcRate ? new byte[src.length * 4] : src;
@@ -191,6 +206,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         }
     }
 
+    /** Nearest-neighbour upsample: duplicate each frame (22050 → 44100). */
     private int stretch2x(byte[] src, int len, byte[] dst) {
         int frames = len / srcFrameSize;
         int o = 0;
@@ -204,6 +220,7 @@ final class PcmSourceDataLine implements SourceDataLine {
         return o;
     }
 
+    /** Max abs amplitude of LE 16-bit samples — debug for "is the mixer silent?". */
     private static int peak(byte[] b, int off, int len) {
         int peak = 0;
         int end = Math.min(b.length, off + len) - 1;

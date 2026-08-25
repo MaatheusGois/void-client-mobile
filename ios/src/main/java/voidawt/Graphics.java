@@ -13,11 +13,20 @@ import org.robovm.apple.uikit.UIFont;
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
 
+/**
+ * Software AWT {@code Graphics} for the iOS host.
+ * <p>
+ * Draws into a {@link BufferedImage} {@code int[]} ARGB buffer. The canvas path
+ * sets {@code presentOnDraw} so {@link #drawImage} pushes frames via
+ * {@link AwtHost#present}. Splash loading UI ({@code Class199}) and AWT glyph
+ * baking ({@code Class323}) both go through {@link #drawString}.
+ */
 public class Graphics {
     private final BufferedImage target;
     private Color color = Color.black;
     private Font font = new Font("Helvetica", Font.PLAIN, 12);
     private Shape clip;
+    /** When true, {@link #drawImage} presents the buffer (game canvas backbuffer). */
     private final boolean presentOnDraw;
 
     public Graphics(BufferedImage target) {
@@ -88,6 +97,18 @@ public class Graphics {
         fillRect(x + w, y, 1, h);
     }
 
+    /**
+     * Rasterize {@code str} with CoreText into a tight glyph bitmap, then blit
+     * non-empty pixels into the ARGB target.
+     * <p>
+     * AWT {@code drawString(x,y)} treats {@code y} as the <em>baseline</em>.
+     * We flip the CGBitmapContext CTM so CoreText's +y-up matches the buffer's
+     * top-left layout — without that flip the splash text renders upside-down.
+     * Android does the equivalent with {@code Paint}/{@code Canvas.drawText}.
+     * <p>
+     * Callers: splash progress ({@code Class199}), and {@code Class323} glyph bake
+     * (black fill + white string + {@code PixelGrabber}).
+     */
     public void drawString(String str, int x, int y) {
         if (str == null || str.length() == 0) {
             return;
@@ -114,7 +135,7 @@ public class Graphics {
             return;
         }
         ctx.clearRect(new CGRect(0, 0, bw, bh));
-        // Bitmap buffer is top-left; CoreText expects +y up. Flip CTM, keep identity text matrix.
+        // Top-left bitmap ↔ CoreText +y-up: flip CTM, identity text matrix, baseline at pad+descent.
         ctx.translateCTM(0, bh);
         ctx.scaleCTM(1, -1);
         ctx.setTextMatrix(CGAffineTransform.Identity());
@@ -125,6 +146,7 @@ public class Graphics {
         int tw = target.getWidth();
         int th = target.getHeight();
         int dx0 = x - pad;
+        // AWT baseline at y → top of glyph box is roughly y - ascent.
         int dy0 = y - (int) Math.ceil(ascent) - pad;
         for (int row = 0; row < bh; row++) {
             int dy = dy0 + row;
@@ -146,6 +168,7 @@ public class Graphics {
                 int r = rgba[o] & 0xff;
                 int g = rgba[o + 1] & 0xff;
                 int b = rgba[o + 2] & 0xff;
+                // PremultipliedLast RGBA → ARGB; skip fully transparent (keeps black under glyphs).
                 dst[dyOff + dx] = (a << 24) | (r << 16) | (g << 8) | b;
             }
         }

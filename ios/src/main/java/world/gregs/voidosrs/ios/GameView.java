@@ -21,6 +21,15 @@ import java.util.concurrent.TimeUnit;
 
 import voidawt.AwtHost;
 
+/**
+ * iOS game surface: blits each {@link AwtHost} frame into an {@link UIImageView}
+ * and maps multitouch to AWT mouse / wheel / camera orbit (same gestures as Android).
+ *
+ * <p>Tap → left click, long-press → right click, drag → orbit, pinch → zoom,
+ * 4-finger tap → developer console. Soft keyboard open is owned by
+ * {@link GameController} / {@code MobileKeyboard}; this view dismisses IME on
+ * tap-outside while {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
+ */
 public class GameView extends UIView implements AwtHost.Presenter {
     private static final float PINCH_PX_PER_NOTCH = 28f;
     private static final float CURSOR_SIZE = 32f;
