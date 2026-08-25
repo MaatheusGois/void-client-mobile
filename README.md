@@ -12,8 +12,19 @@ https://github.com/user-attachments/assets/6ce421c3-5856-49f1-9daa-08f2341a6bbc
 
 https://github.com/user-attachments/assets/379d17f0-9077-4746-84fc-c9c4796f1507
 
+## What's new
 
+### Auto-login
+Credentials are saved on login (`~/void-login.txt`). On the next cold start the title screen restores them and connects once graphics Auto Setup is ready. “Exit to login” stays on the title — auto-login does not loop.
 
+### Default left-click
+Long-press (right-click) an NPC, object, inventory item, or bank item → **Default: …** (lilac). That action becomes the next tap / left-click tip. **Default: Reset** clears it. Skipped when the target only has one real option. Stored in `~/.void-osrs/default-click.properties`.
+
+### Mobile controls extras
+- Soft keyboard on login / chat fields; chat lift above the IME
+- DualShock / Xbox / MFi: left stick moves a cursor, ✕ left-click, ○ right-click, L1/L2 zoom, right stick camera (Android + iOS)
+
+---
 
 ## Server
 
