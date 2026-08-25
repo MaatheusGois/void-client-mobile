@@ -1043,7 +1043,9 @@ public final class client extends Applet_Sub1 {
             if (class46 != null && class46.anInt834 == i) {
                 int i_43_ = class46.anInt800 + i_36_;
                 int i_44_ = class46.anInt750 + i_37_;
+                int rawY = i_44_;
                 i_44_ -= MobileKeyboard.liftPx(class46, i_43_, i_44_);
+                i_44_ -= MobileKeyboard.loginHitShift(class46);
                 int i_45_;
                 int i_46_;
                 int i_47_;
@@ -1275,7 +1277,7 @@ public final class client extends Applet_Sub1 {
                             }
                             if (!class46.aBoolean793 && bool_54_) {
                                 class46.aBoolean793 = true;
-                                MobileKeyboard.onInterfacePress(class46);
+                                MobileKeyboard.onInterfacePress(class46, i_43_, rawY);
                                 if (class46.anObjectArray763 != null) {
                                     Class348_Sub36 class348_sub36 = new Class348_Sub36();
                                     class348_sub36.aBoolean6993 = true;

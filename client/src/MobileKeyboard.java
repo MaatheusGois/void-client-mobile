@@ -5,6 +5,9 @@ final class MobileKeyboard {
     private static int insetPx;
     private static int viewH = 1;
     private static int lastLoggedShift = -1;
+    /** Unlifted screen Y/H of the text field that opened the IME. */
+    private static int focusY;
+    private static int focusH;
 
     private MobileKeyboard() {
     }
@@ -20,8 +23,8 @@ final class MobileKeyboard {
                 + " shift=" + shiftY());
     }
 
-    /** Called when the player presses a UI component (mouse-down). */
-    static void onInterfacePress(Class46 component) {
+    /** Called when the player presses a UI component (mouse-down). {@code screenY} is unlifted. */
+    static void onInterfacePress(Class46 component, int screenX, int screenY) {
         if (component == null) {
             return;
         }
@@ -39,6 +42,7 @@ final class MobileKeyboard {
                 + " mouseDown=" + mouseDown
                 + " state=" + gameState
                 + " size=" + component.anInt709 + "x" + component.anInt789
+                + " xy=" + screenX + "," + screenY
                 + " text=[" + text + "]");
 
         // Login root (type 0, 800x600) has a keyListener — must NOT open IME.
@@ -46,6 +50,8 @@ final class MobileKeyboard {
         if (!isTextInput(component)) {
             return;
         }
+        focusY = screenY;
+        focusH = component.anInt789;
         if (keyListener) {
             requestShow("keyListener id=" + component.anInt830);
             return;
@@ -94,6 +100,45 @@ final class MobileKeyboard {
                     + " state=" + Class240.anInt4674);
         }
         return lift;
+    }
+
+    /**
+     * Login interface 744 — lift just enough that the focused field sits a bit
+     * above the IME, not the full keyboard height.
+     */
+    static int loginLayerShift() {
+        if (!isLoginState(Class240.anInt4674)) {
+            return 0;
+        }
+        int kb = shiftY();
+        if (kb <= 0 || focusH <= 0) {
+            return 0;
+        }
+        int gh = ha_Sub2.anInt7666;
+        if (gh <= 0) {
+            gh = 503;
+        }
+        int kbTop = gh - kb;
+        int pad = 12;
+        int need = focusY + focusH + pad - kbTop;
+        if (need <= 0) {
+            return 0;
+        }
+        if (need > kb) {
+            need = kb;
+        }
+        if (need > focusY) {
+            need = Math.max(0, focusY);
+        }
+        return need;
+    }
+
+    /** Keep 744 hit-testing aligned with {@link #loginLayerShift()} draw offset. */
+    static int loginHitShift(Class46 c) {
+        if (c == null || (c.anInt830 >>> 16) != 744) {
+            return 0;
+        }
+        return loginLayerShift();
     }
 
     private static boolean inChatBand(Class46 c, int screenX, int screenY) {

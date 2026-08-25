@@ -31,8 +31,13 @@ final class Class159 {
                 i_14_ = Class348_Sub3.anInt6585;
                 Class348_Sub42_Sub16_Sub2.anInt10463 = 1;
             }
-            if (Class369_Sub2.aClass46ArrayArray8584[i_2_] == null) Class348_Sub40_Sub7.method3064(i_9_, i, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Class348_Sub40_Sub33.aClass46ArrayArray9427[i_2_]), -1, i_7_);
-            else Class348_Sub40_Sub7.method3064(i_9_, i, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Class369_Sub2.aClass46ArrayArray8584[i_2_]), -1, i_7_);
+            int drawY = i;
+            int loginShift = MobileKeyboard.loginLayerShift();
+            if (loginShift > 0 && i_2_ == 744) {
+                drawY -= loginShift;
+            }
+            if (Class369_Sub2.aClass46ArrayArray8584[i_2_] == null) Class348_Sub40_Sub7.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Class348_Sub40_Sub33.aClass46ArrayArray9427[i_2_]), -1, i_7_);
+            else Class348_Sub40_Sub7.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Class369_Sub2.aClass46ArrayArray8584[i_2_]), -1, i_7_);
             if (i_8_ <= 58) anInt2127 = -84;
             if (Class59_Sub1.aBoolean5300) {
                 if (i_4_ >= 0 && Class348_Sub42_Sub16_Sub2.anInt10463 == 2) Class338.method2663(-5590, Class314.anInt3941, Class314.anInt3939, Class239.anInt3142, Class348_Sub3.anInt6585);
