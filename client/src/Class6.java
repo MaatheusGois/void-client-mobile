@@ -130,7 +130,7 @@ final class Class6 {
                     i_36_ = Class16.method260(false);
                 }
                 // Purple developer console band: half height on mobile only.
-                final int consoleH = isMobileHost() ? 175 : 350;
+                final int consoleH = Class6.isMobile() ? 175 : 350;
                 final int scrollTrack = consoleH - 8;
                 var_ha.KA(i_35_, i_36_, Class321.anInt4017 + i_35_, i_36_ + consoleH);
                 var_ha.aa(i_35_, i_36_, Class321.anInt4017, consoleH, 0x332277 | Class168.anInt2254 << 24, 1);
@@ -173,12 +173,19 @@ final class Class6 {
     }
 
     /** Android/iOS rewrite to {@code voidawt}; desktop keeps {@code java.awt}. */
-    private static boolean isMobileHost() {
+    static boolean isMobile() {
         try {
             Class.forName("voidawt.AwtHost");
             return true;
         } catch (Throwable ignored) {
             return false;
+        }
+    }
+
+    /** Explicit GC stalls the game thread for seconds on mobile ART — skip there. */
+    static void maybeGc() {
+        if (!isMobile()) {
+            System.gc();
         }
     }
 

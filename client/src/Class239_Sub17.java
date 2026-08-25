@@ -89,7 +89,14 @@ final class Class239_Sub17 extends Class239 {
         return i_10_ == 18 || i_10_ == 6 || i_10_ == 1011 || i_10_ == 13 || i_10_ == 16;
     }
 
+    /**
+     * Builds right-click options for an interface component (inventory, bank, …).
+     * When the component holds an item ({@code anInt812}), preferred left-click
+     * is boosted and {@link DefaultClickSwapper} Default rows are injected.
+     */
     static final void method1797(int i, int i_11_, Class46 class46, byte i_12_) {
+        // Preferred inventory/bank action for this item id (Wear, Withdraw-All, …).
+        String preferredItem = DefaultClickSwapper.getPreferredItemAction(class46.anInt812);
         if (r.aBoolean9722) {
             Class254 class254 = (Class246.anInt3176 != -1 ? Class101_Sub3.aClass326_5764.method2600(Class246.anInt3176, 28364) : null);
             if (client.method105(class46).method3303(1) && (Class38.anInt500 & 0x20) != 0 && (class254 == null || (class46.method428(class254.anInt3256, Class246.anInt3176, -128) != class254.anInt3256))) {
@@ -101,20 +108,35 @@ final class Class239_Sub17 extends Class239 {
         for (int i_13_ = 9; i_13_ >= 5; i_13_--) {
             String string = Class368.method3561(i_13_, class46, true);
             if (string != null) {
-                Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -122, false, class46.anInt704, class46.anInt812, true, 1011, (class46.anInt704 << 0) | class46.anInt830, string, 1 + i_13_, Class100.method888((byte) 57, i_13_, class46));
+                int prio = Class100.method888((byte) 57, i_13_, class46);
+                // Preferred must use opcode 18 — 1011 makes left-click open the menu.
+                int opcode = 1011;
+                if (preferredItem != null && preferredItem.equalsIgnoreCase(string)) {
+                    prio = DefaultClickSwapper.PRIORITY_PREFERRED;
+                    opcode = 18;
+                }
+                Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -122, false, class46.anInt704, class46.anInt812, true, opcode, (class46.anInt704 << 0) | class46.anInt830, string, 1 + i_13_, prio);
                 Class335.anInt4169++;
             }
         }
         String string = Class239_Sub8.method1753(0, class46);
         if (string != null) {
-            Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -83, false, class46.anInt704, class46.anInt812, true, 13, (class46.anInt704 << 0) | class46.anInt830, string, 0L, class46.anInt713);
+            int usePrio = class46.anInt713;
+            if (preferredItem != null && preferredItem.equalsIgnoreCase(string)) {
+                usePrio = DefaultClickSwapper.PRIORITY_PREFERRED;
+            }
+            Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -83, false, class46.anInt704, class46.anInt812, true, 13, (class46.anInt704 << 0) | class46.anInt830, string, 0L, usePrio);
             Class178.anInt2340++;
         }
         if (i_12_ >= -55) method1793(null, -19, 70, -103);
         for (int i_14_ = 4; i_14_ >= 0; i_14_--) {
             String string_15_ = Class368.method3561(i_14_, class46, true);
             if (string_15_ != null) {
-                Class50_Sub3.method466(false, class46.aString752, class46.anInt830, (byte) -67, false, class46.anInt704, class46.anInt812, true, 18, (class46.anInt704 << 0) | class46.anInt830, string_15_, 1 + i_14_, Class100.method888((byte) 57, i_14_, class46));
+                int prio = Class100.method888((byte) 57, i_14_, class46);
+                if (preferredItem != null && preferredItem.equalsIgnoreCase(string_15_)) {
+                    prio = DefaultClickSwapper.PRIORITY_PREFERRED;
+                }
+                Class50_Sub3.method466(false, class46.aString752, class46.anInt830, (byte) -67, false, class46.anInt704, class46.anInt812, true, 18, (class46.anInt704 << 0) | class46.anInt830, string_15_, 1 + i_14_, prio);
                 Class335.anInt4169++;
             }
         }
@@ -122,6 +144,10 @@ final class Class239_Sub17 extends Class239 {
             if (class46.aString816 != null) Class50_Sub3.method466(false, "", class46.anInt830, (byte) -118, false, class46.anInt704, class46.anInt812, true, 16, (class46.anInt704 << 0) | class46.anInt830, class46.aString816, 0L, -1);
             else Class50_Sub3.method466(false, "", class46.anInt830, (byte) -79, false, class46.anInt704, class46.anInt812, true, 16, class46.anInt704 << 0 | class46.anInt830, Class274.aClass274_3492.method2063(Class348_Sub33.anInt6967, 544), 0L, -1);
             Class348_Sub42_Sub15.anInt9655++;
+        }
+        // Inventory / bank item: inject lilac Default: Wear / Withdraw-All / …
+        if (class46.anInt812 > 0) {
+            DefaultClickSwapper.injectItemMenu(class46);
         }
     }
 

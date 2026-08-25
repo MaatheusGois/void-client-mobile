@@ -37,7 +37,7 @@ final class Class164 {
             if (Class348_Sub17.aLong6791 == 0) Class348_Sub17.aLong6791 = l;
             if (i_1_ > 16384 && -Class348_Sub17.aLong6791 + l < 5000) {
                 if (-Class173.aLong2286 + l > 1000L) {
-                    System.gc();
+                    Class6.maybeGc();
                     Class173.aLong2286 = l;
                 }
                 return 0;

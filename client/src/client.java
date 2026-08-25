@@ -1964,6 +1964,10 @@ public final class client extends Applet_Sub1 {
                             Class362.method3511(false, Applet_Sub1.aClass324_20, Class246.aClass143_3179, ((Class274.aClass274_3497.method2063(Class348_Sub33.anInt6967, 544)) + "<br>" + (Class274.aClass274_3498.method2063(Class348_Sub33.anInt6967, 544))), 2, Class348_Sub8.aHa6654);
                     } else Class302.method2284((byte) -43, l);
                 } else Class239_Sub10.method1761(85);
+                // States 3/5/6 below: while logging in, show "Please wait..." instead of
+                // the idle title UI (otherwise auto-login looks frozen for several seconds).
+            } else if (Class225.anInt2955 != 0 || Class240.anInt4674 == 5 || Class240.anInt4674 == 6) {
+                Class362.method3511(true, Applet_Sub1.aClass324_20, Class246.aClass143_3179, (Class274.aClass274_3514.method2063(Class348_Sub33.anInt6967, 544)), 2, Class348_Sub8.aHa6654);
             } else Class239_Sub10.method1761(85);
             if (ha_Sub3.anInt8045 == 3) {
                 for (int i = 0; Class348_Sub38.anInt7008 > i; i++) {

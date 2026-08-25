@@ -229,7 +229,7 @@ final class Canvas_Sub1 extends Canvas {
                 Class259.aClass305_3304 = null;
                 Class55_Sub1.aBoolean5265 = false;
                 Class369_Sub1.method3570(false);
-                System.gc();
+                Class6.maybeGc();
                 Class289.method2193(true, (byte) -128);
                 Class36.method354(2);
                 Class291.anInt3720 = Class316.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350);

@@ -44,5 +44,7 @@
         <framework>AVFoundation</framework>
         <framework>AudioToolbox</framework>
         <framework>CoreAudio</framework>
+        <!-- DualShock / Xbox / MFi → virtual mouse (mirrors Android gamepad path). -->
+        <framework>GameController</framework>
     </frameworks>
 </config>

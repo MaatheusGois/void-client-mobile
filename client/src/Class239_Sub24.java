@@ -308,6 +308,7 @@ final class Class239_Sub24 extends Class239 {
                                 }
                                 if (class318_sub4.aClass318_Sub1_6410.plane == (Class132.aPlayer_1907.plane)) {
                                     String[] strings = class51.aStringArray913;
+                                    String preferred = DefaultClickSwapper.getPreferredObjectAction(class51.anInt941);
                                     if (strings != null) {
                                         for (int i_61_ = 4; i_61_ >= 0; i_61_--) {
                                             if (strings[i_61_] != null) {
@@ -320,6 +321,9 @@ final class Class239_Sub24 extends Class239 {
                                                 if (i_61_ == 4) i_62_ = 1007;
                                                 if ((class51.anInt950) == i_61_) i_63_ = (class51.anInt869);
                                                 if (i_61_ == (class51.anInt951)) i_63_ = (class51.anInt877);
+                                                if (preferred != null && strings[i_61_].equalsIgnoreCase(preferred)) {
+                                                    i_63_ = DefaultClickSwapper.PRIORITY_PREFERRED;
+                                                }
                                                 Class50_Sub3.method466(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (Class348_Sub40_Sub21.method3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
                                                 Class83.anInt1445++;
                                             }
@@ -329,6 +333,7 @@ final class Class239_Sub24 extends Class239 {
                                     int y = i_32_ + Class90.regionTileY;
                                     Class50_Sub3.method466(((Class132.aPlayer_1907.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544)), class51.anInt941, Class286_Sub8.anInt6299);
                                     anInt6094++;
+                                    DefaultClickSwapper.injectObjectMenu(class51);
                                 }
                             }
                         }

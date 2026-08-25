@@ -4,7 +4,12 @@ import org.robovm.apple.coregraphics.CGPoint;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.dispatch.DispatchQueue;
 import org.robovm.apple.foundation.NSArray;
+import org.robovm.apple.foundation.NSObject;
 import org.robovm.apple.foundation.NSSet;
+import org.robovm.apple.gamecontroller.GCController;
+import org.robovm.apple.gamecontroller.GCControllerButtonInput;
+import org.robovm.apple.gamecontroller.GCControllerDirectionPad;
+import org.robovm.apple.gamecontroller.GCExtendedGamepad;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIImage;
@@ -12,6 +17,8 @@ import org.robovm.apple.uikit.UIImageView;
 import org.robovm.apple.uikit.UITouch;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewContentMode;
+import org.robovm.objc.block.VoidBlock1;
+import org.robovm.objc.block.VoidBlock3;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -20,6 +27,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import voidawt.AwtHost;
+import voidawt.event.MouseEvent;
 
 /**
  * iOS game surface: blits each {@link AwtHost} frame into an {@link UIImageView}
@@ -29,6 +37,10 @@ import voidawt.AwtHost;
  * 4-finger tap → developer console. Soft keyboard open is owned by
  * {@link GameController} / {@code MobileKeyboard}; this view dismisses IME on
  * tap-outside while {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
+ *
+ * <p>DualShock / Xbox / MFi (via {@link GCController}): left stick moves a drawn
+ * cursor, ✕ left-click, ○ right-click, L1/L2 zoom, right stick camera orbit —
+ * same mapping as Android {@code MainActivity.GameView} pad path.
  *
  * <p>Window resize (Stage Manager / split): the image view stretches immediately;
  * {@link AwtHost#setDisplaySize} (client layout redraw) runs only after the size
@@ -44,6 +56,13 @@ public class GameView extends UIView implements AwtHost.Presenter {
      * Move past this before timeout → one-finger camera orbit.
      */
     private static final float TOUCH_SLOP = 100f;
+    /** DualShock / gamepad → virtual mouse (mirrors Android constants). */
+    private static final float PAD_DEADZONE = 0.15f;
+    private static final float PAD_CURSOR_SPEED = 14f;
+    private static final float PAD_ORBIT_SCALE = 10f;
+    private static final long PAD_ZOOM_INTERVAL_MS = 90L;
+    private static final float PAD_TRIGGER_THRESHOLD = 0.35f;
+    private static final long PAD_TICK_MS = 16L;
 
     private final UIImageView imageView;
     private final UIImageView cursorView;
@@ -87,6 +106,26 @@ public class GameView extends UIView implements AwtHost.Presenter {
     /** Quiet period after the last layout change before adapting the game layout. */
     private static final long RESIZE_SETTLE_MS = 3000;
 
+    // DualShock / gamepad → virtual mouse
+    private float cursorVx = -1f;
+    private float cursorVy = -1f;
+    private boolean padActive;
+    private GCController padController;
+    private float stickLX;
+    private float stickLY;
+    private float stickRX;
+    private float stickRY;
+    private float triggerL2;
+    private boolean l1Held;
+    private boolean padLeftDown;
+    private boolean padRightDown;
+    private boolean padTickRunning;
+    private long lastPadZoomAt;
+    /** Bumped to cancel a pending pad-tick callback. */
+    private int padTickGeneration;
+    private NSObject padConnectObserver;
+    private NSObject padDisconnectObserver;
+
     public GameView(CGRect frame) {
         super(frame);
         setMultipleTouchEnabled(true);
@@ -106,6 +145,354 @@ public class GameView extends UIView implements AwtHost.Presenter {
         cursorView.setUserInteractionEnabled(false);
         cursorView.setHidden(true);
         addSubview(cursorView);
+        startPadListening();
+    }
+
+    /**
+     * Subscribe to {@link GCController} connect/disconnect and pick up any pad
+     * already paired. Call once from the constructor.
+     */
+    private void startPadListening() {
+        padConnectObserver = GCController.Notifications.observeDidConnect(
+                new VoidBlock1<GCController>() {
+                    public void invoke(GCController controller) {
+                        System.out.println("void-osrs pad connect vendor="
+                                + (controller != null ? controller.getVendorName() : null));
+                        attachPad(controller);
+                    }
+                });
+        padDisconnectObserver = GCController.Notifications.observeDidDisconnect(
+                new VoidBlock1<GCController>() {
+                    public void invoke(GCController controller) {
+                        System.out.println("void-osrs pad disconnect vendor="
+                                + (controller != null ? controller.getVendorName() : null));
+                        if (padController != null && padController.equals(controller)) {
+                            deactivatePad();
+                        } else if (!anyPadConnected()) {
+                            deactivatePad();
+                        }
+                    }
+                });
+        // Bluetooth DualShock discovery (no-op if already connected).
+        GCController.startWirelessControllerDiscovery(new Runnable() {
+            public void run() {
+                System.out.println("void-osrs pad wireless discovery finished");
+            }
+        });
+        NSArray<GCController> already = GCController.getControllers();
+        if (already != null) {
+            long n = already.size();
+            for (int i = 0; i < n; i++) {
+                attachPad(already.get(i));
+                if (padActive) {
+                    break;
+                }
+            }
+        }
+    }
+
+    private boolean anyPadConnected() {
+        NSArray<GCController> list = GCController.getControllers();
+        if (list == null) {
+            return false;
+        }
+        long n = list.size();
+        for (int i = 0; i < n; i++) {
+            GCController c = list.get(i);
+            if (c != null && c.getExtendedGamepad() != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void attachPad(GCController controller) {
+        if (controller == null) {
+            return;
+        }
+        GCExtendedGamepad pad = controller.getExtendedGamepad();
+        if (pad == null) {
+            return;
+        }
+        // Prefer the newly connected pad; rebind handlers every time.
+        if (padController != null && padController != controller) {
+            clearPadHandlers(padController);
+        }
+        padController = controller;
+        controller.setHandlerQueue(DispatchQueue.getMainQueue());
+        bindPadHandlers(pad);
+        activatePad();
+    }
+
+    private void clearPadHandlers(GCController controller) {
+        if (controller == null) {
+            return;
+        }
+        GCExtendedGamepad pad = controller.getExtendedGamepad();
+        if (pad == null) {
+            return;
+        }
+        pad.getLeftThumbstick().setValueChangedHandler(null);
+        pad.getRightThumbstick().setValueChangedHandler(null);
+        pad.getButtonA().setPressedChangedHandler(null);
+        pad.getButtonB().setPressedChangedHandler(null);
+        pad.getLeftShoulder().setPressedChangedHandler(null);
+        pad.getLeftTrigger().setValueChangedHandler(null);
+        pad.getLeftTrigger().setPressedChangedHandler(null);
+    }
+
+    private void bindPadHandlers(final GCExtendedGamepad pad) {
+        // GCController Y: +up; screen Y: +down — negate both sticks.
+        pad.getLeftThumbstick().setValueChangedHandler(
+                new VoidBlock3<GCControllerDirectionPad, Float, Float>() {
+                    public void invoke(GCControllerDirectionPad dpad, Float x, Float y) {
+                        stickLX = x != null ? x.floatValue() : 0f;
+                        stickLY = y != null ? -y.floatValue() : 0f;
+                        startPadTick();
+                    }
+                });
+        pad.getRightThumbstick().setValueChangedHandler(
+                new VoidBlock3<GCControllerDirectionPad, Float, Float>() {
+                    public void invoke(GCControllerDirectionPad dpad, Float x, Float y) {
+                        stickRX = x != null ? x.floatValue() : 0f;
+                        stickRY = y != null ? -y.floatValue() : 0f;
+                        startPadTick();
+                    }
+                });
+        // ✕ Cross → left click (Apple maps Cross to buttonA on DualShock)
+        pad.getButtonA().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        onPadClick(true, pressed != null && pressed.booleanValue());
+                    }
+                });
+        // ○ Circle → right click
+        pad.getButtonB().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        onPadClick(false, pressed != null && pressed.booleanValue());
+                    }
+                });
+        // L1 → zoom out while held
+        pad.getLeftShoulder().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        l1Held = pressed != null && pressed.booleanValue();
+                        if (l1Held) {
+                            ensureCursor();
+                            int[] xy = mapCursor();
+                            AwtHost.injectWheel(xy[0], xy[1], 1);
+                            lastPadZoomAt = System.currentTimeMillis();
+                            startPadTick();
+                        }
+                    }
+                });
+        // L2 analog → zoom in (also treat digital press)
+        pad.getLeftTrigger().setValueChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        triggerL2 = value != null ? value.floatValue() : 0f;
+                        startPadTick();
+                    }
+                });
+        pad.getLeftTrigger().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        if (pressed != null && pressed.booleanValue()) {
+                            ensureCursor();
+                            int[] xy = mapCursor();
+                            AwtHost.injectWheel(xy[0], xy[1], -1);
+                            lastPadZoomAt = System.currentTimeMillis();
+                            startPadTick();
+                        }
+                    }
+                });
+    }
+
+    private void onPadClick(boolean left, boolean pressed) {
+        ensureCursor();
+        int[] xy = mapCursor();
+        if (left) {
+            if (pressed) {
+                padLeftDown = true;
+                AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+            } else if (padLeftDown) {
+                padLeftDown = false;
+                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+                AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+            }
+        } else {
+            if (pressed) {
+                padRightDown = true;
+                System.out.println("void-osrs pad ○ right-press @ " + xy[0] + "," + xy[1]);
+                AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
+                AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+            } else if (padRightDown) {
+                padRightDown = false;
+                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+                AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+            }
+        }
+        redrawCursor();
+    }
+
+    private void activatePad() {
+        padActive = true;
+        ensureCursor();
+        startPadTick();
+        redrawCursor();
+    }
+
+    private void deactivatePad() {
+        if (!padActive && padController == null) {
+            return;
+        }
+        if (padLeftDown || padRightDown) {
+            int[] xy = mapCursor();
+            if (padLeftDown) {
+                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+            }
+            if (padRightDown) {
+                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
+            }
+        }
+        clearPadHandlers(padController);
+        padActive = false;
+        padController = null;
+        stickLX = 0f;
+        stickLY = 0f;
+        stickRX = 0f;
+        stickRY = 0f;
+        triggerL2 = 0f;
+        l1Held = false;
+        padLeftDown = false;
+        padRightDown = false;
+        stopPadTick();
+        redrawCursor();
+    }
+
+    private void ensureCursor() {
+        float w = Math.max(1f, (float) getBounds().getWidth());
+        float h = Math.max(1f, (float) getBounds().getHeight());
+        if (cursorVx < 0f || cursorVy < 0f) {
+            cursorVx = w * 0.5f;
+            cursorVy = h * 0.5f;
+        } else {
+            cursorVx = Math.max(0f, Math.min(w - 1f, cursorVx));
+            cursorVy = Math.max(0f, Math.min(h - 1f, cursorVy));
+        }
+    }
+
+    private int[] mapCursor() {
+        return map(new CGPoint(cursorVx, cursorVy));
+    }
+
+    private void redrawCursor() {
+        setPadCursor(cursorVx, cursorVy, padActive);
+    }
+
+    private void stopPadTick() {
+        padTickGeneration++;
+        padTickRunning = false;
+    }
+
+    private void startPadTick() {
+        if (!padActive) {
+            return;
+        }
+        if (padTickRunning) {
+            return;
+        }
+        padTickRunning = true;
+        final int gen = ++padTickGeneration;
+        // First tick ASAP (mirrors Android Handler.post); then every PAD_TICK_MS.
+        DispatchQueue.getMainQueue().async(new Runnable() {
+            public void run() {
+                runPadTick(gen);
+            }
+        });
+    }
+
+    private void runPadTick(final int gen) {
+        if (gen != padTickGeneration) {
+            return;
+        }
+        boolean keep = tickPad();
+        if (!keep) {
+            padTickRunning = false;
+            return;
+        }
+        DispatchQueue.getMainQueue().after(PAD_TICK_MS, TimeUnit.MILLISECONDS, new Runnable() {
+            public void run() {
+                runPadTick(gen);
+            }
+        });
+    }
+
+    private boolean needsPadTick() {
+        return Math.abs(stickLX) > PAD_DEADZONE
+                || Math.abs(stickLY) > PAD_DEADZONE
+                || Math.abs(stickRX) > PAD_DEADZONE
+                || Math.abs(stickRY) > PAD_DEADZONE
+                || triggerL2 > PAD_TRIGGER_THRESHOLD
+                || l1Held;
+    }
+
+    private float dead(float v) {
+        return Math.abs(v) < PAD_DEADZONE ? 0f : v;
+    }
+
+    private boolean tickPad() {
+        if (!padActive) {
+            return false;
+        }
+        ensureCursor();
+        float lx = dead(stickLX);
+        float ly = dead(stickLY);
+        float rx = dead(stickRX);
+        float ry = dead(stickRY);
+        boolean moved = false;
+
+        if (lx != 0f || ly != 0f) {
+            float w = Math.max(1f, (float) getBounds().getWidth());
+            float h = Math.max(1f, (float) getBounds().getHeight());
+            cursorVx = Math.max(0f, Math.min(w - 1f, cursorVx + lx * PAD_CURSOR_SPEED));
+            cursorVy = Math.max(0f, Math.min(h - 1f, cursorVy + ly * PAD_CURSOR_SPEED));
+            int[] xy = mapCursor();
+            if (padLeftDown) {
+                AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
+            } else if (padRightDown) {
+                AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON3, 0);
+            } else {
+                AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
+            }
+            moved = true;
+        }
+
+        if (rx != 0f || ry != 0f) {
+            AwtHost.injectCameraOrbit(rx * PAD_ORBIT_SCALE, ry * PAD_ORBIT_SCALE);
+            moved = true;
+        }
+
+        boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD;
+        boolean zoomOut = l1Held;
+        long now = System.currentTimeMillis();
+        if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
+            int[] xy = mapCursor();
+            if (zoomIn) {
+                AwtHost.injectWheel(xy[0], xy[1], -1);
+            }
+            if (zoomOut) {
+                AwtHost.injectWheel(xy[0], xy[1], 1);
+            }
+            lastPadZoomAt = now;
+            moved = true;
+        }
+
+        if (moved) {
+            redrawCursor();
+        }
+        return needsPadTick();
     }
 
     public void setPadCursor(float x, float y, boolean visible) {
@@ -131,6 +518,13 @@ public class GameView extends UIView implements AwtHost.Presenter {
         int h = Math.max(0, (int) Math.round(bounds.getHeight()));
         if (w <= 0 || h <= 0) {
             return;
+        }
+        if (cursorVx >= 0f) {
+            cursorVx = Math.min(cursorVx, w - 1);
+            cursorVy = Math.min(cursorVy, h - 1);
+            if (padActive) {
+                redrawCursor();
+            }
         }
         pendingW = w;
         pendingH = h;
@@ -194,7 +588,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     private void scheduleLongPress() {
         final int gen = ++pressGeneration;
-        DispatchQueue.getMainQueue().after(450, TimeUnit.MILLISECONDS, new Runnable() {
+        DispatchQueue.getMainQueue().after(225, TimeUnit.MILLISECONDS, new Runnable() {
             public void run() {
                 if (gen != pressGeneration) {
                     return;

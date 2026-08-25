@@ -32,7 +32,7 @@ final class Class130_Sub1 extends Class130 {
         anInt5802++;
         if (i < 28) aClass144_5800 = null;
         Class301.method2282(-12648);
-        System.gc();
+        Class6.maybeGc();
     }
 
     static final void method1135(int i) {

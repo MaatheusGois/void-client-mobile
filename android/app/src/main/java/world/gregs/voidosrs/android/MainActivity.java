@@ -1614,7 +1614,7 @@ public class MainActivity extends Activity {
                 downX = x;
                 downY = y;
                 cancelLongPressWatch();
-                long timeout = Math.max(350, ViewConfiguration.getLongPressTimeout());
+                long timeout = Math.max(175, ViewConfiguration.getLongPressTimeout() / 2);
                 Log.i("void-osrs", "longPress SCHEDULE " + timeout + "ms @ " + downX + "," + downY);
                 touchHandler.postDelayed(longPressRunnable, timeout);
             } else if (action == MotionEvent.ACTION_MOVE && down && !longPressFired) {

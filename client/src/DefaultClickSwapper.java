@@ -1,0 +1,489 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+/**
+ * Left-click default swapper for NPCs, scenery, and interface items
+ * (inventory backpack + bank slots).
+ * <p>
+ * Right-click → {@code Default: Wear} / {@code Default: Withdraw-All}. Persists
+ * id → action name; menus promote that action to the left-click / tap tip.
+ */
+final class DefaultClickSwapper {
+
+    static final int OPCODE_SET_NPC = 1900;
+    static final int OPCODE_RESET_NPC = 1901;
+    static final int OPCODE_SET_OBJECT = 1902;
+    static final int OPCODE_RESET_OBJECT = 1903;
+    static final int OPCODE_SET_ITEM = 1904;
+    static final int OPCODE_RESET_ITEM = 1905;
+
+    /** NPC action-slot opcodes (index 0..4). */
+    private static final int[] NPC_OPCODES = {25, 20, 44, 46, 60};
+    /** Object action-slot opcodes (index 0..4). */
+    private static final int[] OBJECT_OPCODES = {3, 4, 9, 59, 1007};
+    /**
+     * Interface item / component ops used by inventory + bank.
+     * 18 / 1011 = CC_OP slots; 13 = Use / target.
+     */
+    private static final int[] ITEM_OPCODES = {18, 1011, 13};
+
+    static final int PRIORITY_PREFERRED = 0x7ffffffe;
+
+    private static final String FILE_NAME = "default-click.properties";
+    /** Lilac — same vivid palette as NPC yellow / object cyan. */
+    private static final String COL_ACCENT = "<col=ff80ff>";
+    private static final String COL_END = "</col>";
+
+    private static final Map<Integer, String> npcDefaults = new HashMap<Integer, String>();
+    private static final Map<Integer, String> objectDefaults = new HashMap<Integer, String>();
+    /** Item def id → preferred option name (Wear, Drop, Withdraw-All, …). */
+    private static final Map<Integer, String> itemDefaults = new HashMap<Integer, String>();
+    private static boolean loaded;
+
+    private DefaultClickSwapper() {
+    }
+
+    static String getPreferredNpcAction(int compositionId) {
+        ensureLoaded();
+        return npcDefaults.get(Integer.valueOf(compositionId));
+    }
+
+    /** @deprecated use {@link #getPreferredNpcAction(int)} */
+    static String getPreferredAction(int compositionId) {
+        return getPreferredNpcAction(compositionId);
+    }
+
+    static String getPreferredObjectAction(int objectId) {
+        ensureLoaded();
+        return objectDefaults.get(Integer.valueOf(objectId));
+    }
+
+    static String getPreferredItemAction(int itemId) {
+        ensureLoaded();
+        if (itemId <= 0) {
+            return null;
+        }
+        return itemDefaults.get(Integer.valueOf(itemId));
+    }
+
+    static void injectNpcMenu(Npc npc, Class79 composition) {
+        if (npc == null || composition == null) {
+            return;
+        }
+        ensureLoaded();
+        String[] actions = composition.aStringArray1349;
+        if (actions == null) {
+            return;
+        }
+        int compositionId = composition.anInt1344;
+        String current = npcDefaults.get(Integer.valueOf(compositionId));
+        injectActionRows(actions, current, OPCODE_SET_NPC, OPCODE_RESET_NPC, compositionId);
+    }
+
+    static void injectObjectMenu(Class51 object) {
+        if (object == null) {
+            return;
+        }
+        ensureLoaded();
+        String[] actions = object.aStringArray913;
+        if (actions == null) {
+            return;
+        }
+        int objectId = object.anInt941;
+        String current = objectDefaults.get(Integer.valueOf(objectId));
+        injectActionRows(actions, current, OPCODE_SET_OBJECT, OPCODE_RESET_OBJECT, objectId);
+    }
+
+    /**
+     * Inject Default rows for an inventory / bank item component.
+     * Options come from the widget strings already used to build the menu
+     * ({@link Class368#method3561}) — covers Wear/Drop and bank Withdraw-*.
+     */
+    static void injectItemMenu(Class46 component) {
+        if (component == null || component.anInt812 <= 0) {
+            return;
+        }
+        ensureLoaded();
+        int itemId = component.anInt812;
+        String current = itemDefaults.get(Integer.valueOf(itemId));
+        // Collect unique option labels from the same slots the menu builder uses.
+        java.util.LinkedHashSet unique = new java.util.LinkedHashSet();
+        for (int i = 0; i <= 9; i++) {
+            String opt = Class368.method3561(i, component, true);
+            if (opt == null || opt.length() == 0) {
+                continue;
+            }
+            if (opt.startsWith("Hidden-")) {
+                continue;
+            }
+            if (isSkippedItemOption(opt)) {
+                continue;
+            }
+            unique.add(opt);
+        }
+        String use = Class239_Sub8.method1753(0, component);
+        if (use != null && use.length() > 0 && !isSkippedItemOption(use)) {
+            unique.add(use);
+        }
+        // Nothing to choose when left-click already has only one real option.
+        if (unique.size() <= 1) {
+            return;
+        }
+        for (Object o : unique) {
+            String action = (String) o;
+            if (current != null && current.equalsIgnoreCase(action)) {
+                continue;
+            }
+            Class50_Sub3.method466(
+                    false, "", 0, (byte) -93, true, 0, -1, true,
+                    OPCODE_SET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) itemId, 0);
+        }
+        if (current != null) {
+            Class50_Sub3.method466(
+                    false, "", 0, (byte) -93, true, 0, -1, true,
+                    OPCODE_RESET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) itemId, 0);
+        }
+    }
+
+    private static boolean isSkippedItemOption(String action) {
+        if (action.equalsIgnoreCase("Examine") || action.equalsIgnoreCase("Cancel")
+                || action.equalsIgnoreCase("Walk here") || action.equalsIgnoreCase("Continue")) {
+            return true;
+        }
+        return false;
+    }
+
+    private static void injectActionRows(String[] actions, String current, int setOp, int resetOp, int id) {
+        int optionCount = 0;
+        for (int i = 0; i < actions.length && i < 5; i++) {
+            String action = actions[i];
+            if (action != null && action.length() > 0) {
+                optionCount++;
+            }
+        }
+        // Nothing to choose when left-click already has only one real option.
+        if (optionCount <= 1) {
+            return;
+        }
+        for (int i = 0; i < actions.length && i < 5; i++) {
+            String action = actions[i];
+            if (action == null || action.length() == 0) {
+                continue;
+            }
+            if (current != null && current.equalsIgnoreCase(action)) {
+                continue;
+            }
+            // Include Attack / Chop / everything — only "Default: " is lilac.
+            Class50_Sub3.method466(
+                    false, "", 0, (byte) -93, true, 0, -1, true,
+                    setOp, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) id, 0);
+        }
+        if (current != null) {
+            Class50_Sub3.method466(
+                    false, "", 0, (byte) -93, true, 0, -1, true,
+                    resetOp, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) id, 0);
+        }
+    }
+
+    /**
+     * @return entry that should be left-click tip, or null
+     */
+    static Class348_Sub42_Sub12 applySwaps() {
+        ensureLoaded();
+        if ((npcDefaults.isEmpty() && objectDefaults.isEmpty() && itemDefaults.isEmpty())
+                || Class73.anInt4776 <= 1) {
+            return null;
+        }
+        Class348_Sub42_Sub12 preferred = null;
+        for (Class348_Sub42_Sub12 entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4);
+             entry != null;
+             entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 83)) {
+            if (entry.aString9593 == null) {
+                continue;
+            }
+            int opcode = entry.anInt9608;
+            if (opcode >= 2000) {
+                opcode -= 2000;
+            }
+            String wanted = null;
+            if (isNpcOpcode(opcode)) {
+                Class79 composition = compositionForNpcEntry(entry);
+                if (composition != null) {
+                    wanted = npcDefaults.get(Integer.valueOf(composition.anInt1344));
+                }
+            } else if (isObjectOpcode(opcode)) {
+                int objectId = (int) (entry.aLong9605 >>> 32);
+                wanted = objectDefaults.get(Integer.valueOf(objectId));
+            } else if (isItemOpcode(opcode)) {
+                // anInt9599 = item id (class46.anInt812) for CC_OP / Use rows
+                int itemId = entry.anInt9599;
+                if (itemId > 0) {
+                    wanted = itemDefaults.get(Integer.valueOf(itemId));
+                }
+            }
+            if (wanted != null && entry.aString9593.equalsIgnoreCase(wanted)) {
+                preferred = entry;
+            }
+        }
+        if (preferred == null) {
+            return null;
+        }
+        preferred.anInt9609 = PRIORITY_PREFERRED;
+        Class348_Sub40_Sub4.aClass262_9111.method1999(preferred, -20180);
+        int prefOp = preferred.anInt9608 >= 2000 ? preferred.anInt9608 - 2000 : preferred.anInt9608;
+        // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
+        // (Class318_Sub1_Sub5.method2485). Same packet path as 18 — rewrite so tap executes.
+        if (prefOp == 1011) {
+            preferred.anInt9608 = preferred.anInt9608 >= 2000 ? 2018 : 18;
+            prefOp = 18;
+        }
+        if (isNpcOpcode(prefOp) && !preferred.aString9593.equalsIgnoreCase(attackLabel())) {
+            demoteAttackNear(preferred);
+        }
+        System.out.println("void-osrs default-click apply → '" + preferred.aString9593
+                + "' op=" + preferred.anInt9608);
+        return preferred;
+    }
+
+    /** @deprecated use {@link #applySwaps()} */
+    static Class348_Sub42_Sub12 applyNpcSwaps() {
+        return applySwaps();
+    }
+
+    static boolean handleMenuAction(Class348_Sub42_Sub12 entry) {
+        if (entry == null) {
+            return false;
+        }
+        int opcode = entry.anInt9608;
+        if (opcode >= 2000) {
+            opcode -= 2000;
+        }
+        int id = (int) entry.aLong9605;
+        String label = stripDefaultLabel(entry.aString9593);
+        if (opcode == OPCODE_SET_NPC) {
+            setDefault(npcDefaults, "npc", id, label);
+            return true;
+        }
+        if (opcode == OPCODE_RESET_NPC) {
+            clearDefault(npcDefaults, "npc", id);
+            return true;
+        }
+        if (opcode == OPCODE_SET_OBJECT) {
+            setDefault(objectDefaults, "object", id, label);
+            return true;
+        }
+        if (opcode == OPCODE_RESET_OBJECT) {
+            clearDefault(objectDefaults, "object", id);
+            return true;
+        }
+        if (opcode == OPCODE_SET_ITEM) {
+            setDefault(itemDefaults, "item", id, label);
+            return true;
+        }
+        if (opcode == OPCODE_RESET_ITEM) {
+            clearDefault(itemDefaults, "item", id);
+            return true;
+        }
+        return false;
+    }
+
+    private static String stripDefaultLabel(String label) {
+        if (label == null) {
+            return null;
+        }
+        label = label.replace(COL_ACCENT, "").replace("<col=0000ff>", "")
+                .replace("<col=ffff00>", "").replace("<col=ffffff>", "")
+                .replace(COL_END, "");
+        if (label.startsWith("Default: ")) {
+            label = label.substring(9);
+        }
+        return label.trim();
+    }
+
+    private static void setDefault(Map<Integer, String> map, String kind, int id, String actionName) {
+        ensureLoaded();
+        if (id <= 0 || actionName == null || actionName.length() == 0) {
+            System.out.println("void-osrs default-click refuse " + kind + " id=" + id + " action=" + actionName);
+            return;
+        }
+        map.put(Integer.valueOf(id), actionName);
+        save();
+        Class286_Sub2.method2144("", 5, (byte) -100, 0,
+                COL_ACCENT + "Default left-click set to '" + actionName + "'." + COL_END, "", "");
+        System.out.println("void-osrs default-click " + kind + "=" + id + " → " + actionName);
+    }
+
+    private static void clearDefault(Map<Integer, String> map, String kind, int id) {
+        ensureLoaded();
+        map.remove(Integer.valueOf(id));
+        save();
+        Class286_Sub2.method2144("", 5, (byte) -100, 0,
+                COL_ACCENT + "Default left-click reset." + COL_END, "", "");
+        System.out.println("void-osrs default-click " + kind + "=" + id + " reset");
+    }
+
+    private static void demoteAttackNear(Class348_Sub42_Sub12 preferred) {
+        String attack = attackLabel();
+        int npcIndex = (int) preferred.aLong9605;
+        for (Class348_Sub42_Sub12 entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4);
+             entry != null;
+             entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 83)) {
+            if (!isNpcOpcode(entry.anInt9608 >= 2000 ? entry.anInt9608 - 2000 : entry.anInt9608)) {
+                continue;
+            }
+            if ((int) entry.aLong9605 != npcIndex) {
+                continue;
+            }
+            if (entry.aString9593 == null || !entry.aString9593.equalsIgnoreCase(attack)) {
+                continue;
+            }
+            if (entry.anInt9608 < 2000) {
+                entry.anInt9608 += 2000;
+            }
+            entry.anInt9609 = 0;
+        }
+    }
+
+    private static boolean isNpcOpcode(int opcode) {
+        for (int i = 0; i < NPC_OPCODES.length; i++) {
+            if (NPC_OPCODES[i] == opcode) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isObjectOpcode(int opcode) {
+        for (int i = 0; i < OBJECT_OPCODES.length; i++) {
+            if (OBJECT_OPCODES[i] == opcode) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isItemOpcode(int opcode) {
+        for (int i = 0; i < ITEM_OPCODES.length; i++) {
+            if (ITEM_OPCODES[i] == opcode) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static Class79 compositionForNpcEntry(Class348_Sub42_Sub12 entry) {
+        Class348_Sub22 node = (Class348_Sub22) Class282.aClass356_3654.method3480((int) entry.aLong9605, -6008);
+        if (node == null) {
+            return null;
+        }
+        Npc npc = node.aNpc_6859;
+        if (npc == null) {
+            return null;
+        }
+        Class79 composition = npc.aClass79_10505;
+        if (composition != null && composition.anIntArray1377 != null) {
+            composition = composition.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+        }
+        return composition;
+    }
+
+    private static String attackLabel() {
+        return Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544);
+    }
+
+    private static void ensureLoaded() {
+        if (loaded) {
+            return;
+        }
+        loaded = true;
+        File file = storageFile();
+        if (!file.isFile()) {
+            return;
+        }
+        Properties props = new Properties();
+        FileInputStream in = null;
+        try {
+            in = new FileInputStream(file);
+            props.load(in);
+            for (Map.Entry<Object, Object> e : props.entrySet()) {
+                String key = String.valueOf(e.getKey());
+                String value = String.valueOf(e.getValue()).trim();
+                if (value.length() == 0 || value.matches("\\d+")) {
+                    continue;
+                }
+                try {
+                    if (key.startsWith("npc_")) {
+                        int id = Integer.parseInt(key.substring(4));
+                        if (id > 0) {
+                            npcDefaults.put(Integer.valueOf(id), value);
+                        }
+                    } else if (key.startsWith("object_")) {
+                        int id = Integer.parseInt(key.substring(7));
+                        if (id > 0) {
+                            objectDefaults.put(Integer.valueOf(id), value);
+                        }
+                    } else if (key.startsWith("item_")) {
+                        int id = Integer.parseInt(key.substring(5));
+                        if (id > 0) {
+                            itemDefaults.put(Integer.valueOf(id), value);
+                        }
+                    }
+                } catch (NumberFormatException ignored) {
+                    // skip
+                }
+            }
+            System.out.println("void-osrs default-click loaded npc=" + npcDefaults.size()
+                    + " object=" + objectDefaults.size() + " item=" + itemDefaults.size());
+        } catch (Exception e) {
+            System.out.println("void-osrs default-click load failed: " + e.getMessage());
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (Exception ignored) {
+                }
+            }
+        }
+    }
+
+    private static void save() {
+        Properties props = new Properties();
+        for (Map.Entry<Integer, String> e : npcDefaults.entrySet()) {
+            props.setProperty("npc_" + e.getKey().intValue(), e.getValue());
+        }
+        for (Map.Entry<Integer, String> e : objectDefaults.entrySet()) {
+            props.setProperty("object_" + e.getKey().intValue(), e.getValue());
+        }
+        for (Map.Entry<Integer, String> e : itemDefaults.entrySet()) {
+            props.setProperty("item_" + e.getKey().intValue(), e.getValue());
+        }
+        File file = storageFile();
+        FileOutputStream out = null;
+        try {
+            File parent = file.getParentFile();
+            if (parent != null && !parent.exists()) {
+                parent.mkdirs();
+            }
+            out = new FileOutputStream(file);
+            props.store(out, "void-osrs default left-click (npc_/object_/item_=actionName)");
+        } catch (Exception e) {
+            System.out.println("void-osrs default-click save failed: " + e.getMessage());
+        } finally {
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (Exception ignored) {
+                }
+            }
+        }
+    }
+
+    private static File storageFile() {
+        String home = System.getProperty("user.home", ".");
+        return new File(new File(home, ".void-osrs"), FILE_NAME);
+    }
+}

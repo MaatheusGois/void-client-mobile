@@ -59,6 +59,7 @@ final class Class88 {
 
     static final void method843(byte i) {
         anInt1499++;
+        LoginPrefs.tick();
         if (Class225.anInt2955 != 0 && Class225.anInt2955 != 5) {
             try {
                 int i_2_;

@@ -389,6 +389,11 @@ final class Class325 {
             try {
                 anInt4067++;
                 if (class348_sub42_sub12 != null && (class348_sub42_sub12 != (Class348_Sub40_Sub4.aClass262_9111.aClass348_3334))) {
+                    // Client-only Default click config — do not send a game packet.
+                    if (DefaultClickSwapper.handleMenuAction(class348_sub42_sub12)) {
+                        Class286_Sub2.method2146((byte) 84);
+                        break;
+                    }
                     int i_74_ = (class348_sub42_sub12.anInt9602);
                     int i_75_ = (class348_sub42_sub12.anInt9607);
                     int i_76_ = (class348_sub42_sub12.anInt9608);

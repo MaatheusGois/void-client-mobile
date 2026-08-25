@@ -220,9 +220,12 @@ final class Class286_Sub3 extends Class286 {
                 if (!bool) {
                     String[] strings = class79.aStringArray1349;
                     if (za_Sub2.aBoolean9783) strings = Class239_Sub28.method1847(strings, 0);
+                    String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.anInt1344);
+                    String attack = Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544);
                     if (strings != null) {
                         for (int i = 4; i >= 0; i--) {
-                            if (strings[i] != null && (class79.aByte1384 == 0 || !(strings[i].equalsIgnoreCase(Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544))))) {
+                            if (strings[i] != null && (class79.aByte1384 == 0 || !(strings[i].equalsIgnoreCase(attack)))) {
+                                boolean isAttack = strings[i].equalsIgnoreCase(attack);
                                 int i_16_ = 0;
                                 if (i == 0) i_16_ = 25;
                                 int i_17_ = Class38.anInt506;
@@ -232,16 +235,27 @@ final class Class286_Sub3 extends Class286 {
                                 if (class79.anInt1335 == i) i_17_ = class79.anInt1371;
                                 if (i == 4) i_16_ = 60;
                                 if (i == class79.anInt1385) i_17_ = class79.anInt1338;
+                                if (preferred != null && strings[i].equalsIgnoreCase(preferred)) {
+                                    i_17_ = 0x7ffffffe; // saved default wins left-click
+                                } else if (isAttack) {
+                                    i_17_ = class79.anInt1401;
+                                    // Swap active → bury Attack like the level-deprioritize path.
+                                    if (preferred != null) {
+                                        i_16_ += 2000;
+                                        i_17_ = 0;
+                                    }
+                                }
                                 Class229.anInt2976++;
-                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -93, false, 0, -1, true, i_16_, npc.anInt10290, strings[i], npc.anInt10290, (!(strings[i].equalsIgnoreCase(Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544))) ? i_17_ : class79.anInt1401));
+                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -93, false, 0, -1, true, i_16_, npc.anInt10290, strings[i], npc.anInt10290, i_17_);
                             }
                         }
                     }
                     if (class79.aByte1384 == 1 && strings != null) {
                         for (int i = 4; i >= 0; i--) {
-                            if (strings[i] != null && (strings[i].equalsIgnoreCase(Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544)))) {
-                                short i_18_ = 0;
-                                if ((Class132.aPlayer_1907.anInt10516) < class79.anInt1361) i_18_ = (short) 2000;
+                            if (strings[i] != null && (strings[i].equalsIgnoreCase(attack))) {
+                                // Always deprioritize Attack when a left-click swap is active.
+                                short i_18_ = (short) (preferred != null ? 2000 : 0);
+                                if (preferred == null && (Class132.aPlayer_1907.anInt10516) < class79.anInt1361) i_18_ = (short) 2000;
                                 short i_19_ = 0;
                                 if (i == 0) i_19_ = (short) 25;
                                 if (i == 1) i_19_ = (short) 20;
@@ -250,7 +264,8 @@ final class Class286_Sub3 extends Class286 {
                                 if (i == 4) i_19_ = (short) 60;
                                 if (i_19_ != 0) i_19_ += i_18_;
                                 Class368.anInt4510++;
-                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -101, false, 0, -1, true, i_19_, npc.anInt10290, strings[i], npc.anInt10290, class79.anInt1401);
+                                int attackPri = preferred != null ? 0 : class79.anInt1401;
+                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -101, false, 0, -1, true, i_19_, npc.anInt10290, strings[i], npc.anInt10290, attackPri);
                             }
                         }
                     }
@@ -259,6 +274,10 @@ final class Class286_Sub3 extends Class286 {
                 int npcX = (npc.x >> 9) + za_Sub2.regionTileX - npc.aClass79_10505.anInt1399 + 1;
                 int npcY = (npc.y >> 9) + Class90.regionTileY - npc.aClass79_10505.anInt1399 + 1;
                 Class50_Sub3.method466(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544), npc.anInt10290, Class286_Sub8.anInt6299);
+                // Last options: "Default click" cascade (Pickpocket → left-click, etc.)
+                if (!bool) {
+                    DefaultClickSwapper.injectNpcMenu(npc, class79);
+                }
             }
         }
     }

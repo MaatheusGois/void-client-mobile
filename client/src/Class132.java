@@ -25,6 +25,8 @@ final class Class132 {
             Class318_Sub1_Sub3_Sub3.aBoolean10238 = bool;
             if (!Class318_Sub1_Sub3_Sub3.aBoolean10238 && (Class64_Sub3.aString5600.equals("") || Class186.aString2496.equals(""))) Class14_Sub4.method254(3, (byte) -100);
             else {
+                // Persist for next launch / auto-login (desktop + mobile).
+                LoginPrefs.remember(Class64_Sub3.aString5600, Class186.aString2496);
                 int i_1_ = 34 % ((16 - i) / 55);
                 if (Class239_Sub12.anInt5969 != 1) {
                     Class63.anInt1121 = 0;

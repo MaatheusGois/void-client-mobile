@@ -33,7 +33,7 @@ final class Class348_Sub40_Sub34 extends Class348_Sub40 {
         for (int i_2_ = 0; i_2_ < 4; i_2_++)
             Class348_Sub45.aClass361Array7108[i_2_].method3500(700);
         Class348_Sub42_Sub3.method3177(-50, false);
-        System.gc();
+        Class6.maybeGc();
         Class348_Sub31.method3007(2, 22684);
         Class74.aBoolean1236 = false;
         Class267.anInt3428 = -1;

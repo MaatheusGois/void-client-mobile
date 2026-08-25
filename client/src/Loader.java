@@ -15,6 +15,8 @@ public class Loader extends Applet {
     public static boolean loadRunescape = false;
     public static boolean showCoordinates = true;
     public static boolean skipLobby = true;
+    /** When saved credentials exist, log in as soon as the title screen opens. */
+    public static boolean autoLogin = true;
     public static boolean splitPorts = false;
     public static boolean debug = false;
     public static boolean trace = false;

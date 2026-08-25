@@ -580,6 +580,12 @@ class Class348_Sub49 extends Class348 {
             }
             if (Class318_Sub1_Sub1_Sub2.method2402(i_71_, (byte) -64) || i_71_ == 13) Class348_Sub8.aHa6654.method3673();
             Class240.anInt4674 = i_71_;
+            // After state settles: restore/auto-login on title (once per session).
+            if (i_71_ == 3) {
+                LoginPrefs.onLoginScreen();
+            } else if (i_71_ == 10) {
+                LoginPrefs.onWorldEntered();
+            }
         }
     }
 
