@@ -75,15 +75,18 @@
         <string>UIInterfaceOrientationLandscapeLeft</string>
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <!-- iPad: all 4 orientations required for Split View / Stage Manager / continuous resize.
+         GameController still returns Landscape so the game UI does not rotate to portrait. -->
     <key>UISupportedInterfaceOrientations~ipad</key>
     <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
         <string>UIInterfaceOrientationLandscapeLeft</string>
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
     <key>UILaunchScreen</key>
     <dict/>
-    <key>UIRequiresFullScreen</key>
-    <false/>
+    <!-- Omit UIRequiresFullScreen — true opts into non-resizable compatibility mode (TN3192). -->
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>

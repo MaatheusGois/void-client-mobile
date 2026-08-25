@@ -226,6 +226,10 @@ public class GameController extends UIViewController {
         layoutServerUi(bounds);
     }
 
+    /**
+     * Keep the game landscape-only. Info.plist still lists all iPad orientations so
+     * the system allows multitasking / window resize (TN3192); this intersects that set.
+     */
     @Override
     public UIInterfaceOrientationMask getSupportedInterfaceOrientations() {
         return UIInterfaceOrientationMask.Landscape;

@@ -2,6 +2,7 @@ package world.gregs.voidosrs.ios;
 
 import org.robovm.apple.avfoundation.AVAudioSession;
 import org.robovm.apple.avfoundation.AVAudioSessionCategory;
+import org.robovm.apple.avfoundation.AVAudioSessionCategoryOptions;
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
@@ -18,9 +19,12 @@ public class Main extends UIApplicationDelegateAdapter {
         System.setProperty("java.net.preferIPv4Stack", "true");
         // Activate Playback early so AudioQueue (voidsound) is not muted / silent
         // until the first line opens on the mixer thread.
+        // MixWithOthers: exclusive Playback interrupts PiP / other apps even when
+        // in-game volume is 0 — we only need a session for our mixer, not audio focus.
         try {
             AVAudioSession session = AVAudioSession.getSharedInstance();
-            session.setCategory(AVAudioSessionCategory.Playback);
+            session.setCategory(AVAudioSessionCategory.Playback,
+                    AVAudioSessionCategoryOptions.MixWithOthers);
             session.setActive(true);
         } catch (Throwable t) {
             t.printStackTrace();

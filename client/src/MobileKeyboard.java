@@ -8,6 +8,9 @@ final class MobileKeyboard {
     /** Unlifted screen Y/H of the text field that opened the IME. */
     private static int focusY;
     private static int focusH;
+    /** Cached: client jar is shared; iOS host class is only on the RoboVM classpath. */
+    private static boolean iosHost;
+    private static boolean iosHostKnown;
 
     private MobileKeyboard() {
     }
@@ -119,7 +122,12 @@ final class MobileKeyboard {
             gh = 503;
         }
         int kbTop = gh - kb;
+        // Android: 12px gap above IME. iOS keyboard frame is short vs the
+        // predictive bar / home indicator, so keep at least +30 extra.
         int pad = 12;
+        if (isIosHost()) {
+            pad += 30;
+        }
         int need = focusY + focusH + pad - kbTop;
         if (need <= 0) {
             return 0;
@@ -174,6 +182,18 @@ final class MobileKeyboard {
     /** Title / login / lobby — not the in-game world (state 10). */
     private static boolean isLoginState(int gameState) {
         return gameState == 0 || gameState == 3 || gameState == 7;
+    }
+
+    private static boolean isIosHost() {
+        if (!iosHostKnown) {
+            iosHostKnown = true;
+            try {
+                Class.forName("world.gregs.voidosrs.ios.GameController");
+                iosHost = true;
+            } catch (Throwable ignored) {
+            }
+        }
+        return iosHost;
     }
 
     private static int shiftY() {

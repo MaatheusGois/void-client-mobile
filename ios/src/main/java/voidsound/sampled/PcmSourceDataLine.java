@@ -6,6 +6,7 @@ import org.robovm.apple.audiotoolbox.AudioQueue;
 import org.robovm.apple.audiotoolbox.AudioQueueBuffer;
 import org.robovm.apple.avfoundation.AVAudioSession;
 import org.robovm.apple.avfoundation.AVAudioSessionCategory;
+import org.robovm.apple.avfoundation.AVAudioSessionCategoryOptions;
 import org.robovm.apple.coreaudio.AudioFormatFlags;
 import org.robovm.apple.coreaudio.AudioStreamBasicDescription;
 import org.robovm.apple.corefoundation.OSStatusException;
@@ -110,8 +111,11 @@ final class PcmSourceDataLine implements SourceDataLine {
 
     private void openOnMain() {
         try {
+            // MixWithOthers so opening the AudioQueue does not steal focus from
+            // PiP / Spotify / etc. (plain Playback pauses them even at game mute).
             AVAudioSession session = AVAudioSession.getSharedInstance();
-            session.setCategory(AVAudioSessionCategory.Playback);
+            session.setCategory(AVAudioSessionCategory.Playback,
+                    AVAudioSessionCategoryOptions.MixWithOthers);
             session.setActive(true);
             AudioFormatFlags flags = new AudioFormatFlags(
                     AudioFormatFlags.LinearPCMFormatFlagIsSignedInteger.value()

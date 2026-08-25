@@ -29,6 +29,10 @@ import voidawt.AwtHost;
  * 4-finger tap → developer console. Soft keyboard open is owned by
  * {@link GameController} / {@code MobileKeyboard}; this view dismisses IME on
  * tap-outside while {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
+ *
+ * <p>Window resize (Stage Manager / split): the image view stretches immediately;
+ * {@link AwtHost#setDisplaySize} (client layout redraw) runs only after the size
+ * has been quiet for {@value #RESIZE_SETTLE_MS} ms.
  */
 public class GameView extends UIView implements AwtHost.Presenter {
     private static final float PINCH_PX_PER_NOTCH = 28f;
@@ -67,6 +71,21 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private Runnable sizeListener;
     /** Bumped to cancel a pending long-press callback. */
     private int pressGeneration;
+    /**
+     * Last size pushed into {@link AwtHost#setDisplaySize}. While the user is
+     * still dragging a Stage Manager / split window, we only stretch the
+     * existing framebuffer ({@link UIViewContentMode#ScaleToFill}) and defer
+     * the client viewport relayout until the size has been stable for
+     * {@link #RESIZE_SETTLE_MS}.
+     */
+    private int appliedW;
+    private int appliedH;
+    private int pendingW;
+    private int pendingH;
+    /** Bumped to cancel a pending settled-resize callback. */
+    private int resizeGeneration;
+    /** Quiet period after the last layout change before adapting the game layout. */
+    private static final long RESIZE_SETTLE_MS = 3000;
 
     public GameView(CGRect frame) {
         super(frame);
@@ -110,11 +129,52 @@ public class GameView extends UIView implements AwtHost.Presenter {
         bringSubviewToFront(cursorView);
         int w = Math.max(0, (int) Math.round(bounds.getWidth()));
         int h = Math.max(0, (int) Math.round(bounds.getHeight()));
-        if (w > 0 && h > 0) {
-            AwtHost.setDisplaySize(w, h);
-            if (sizeListener != null) {
-                sizeListener.run();
+        if (w <= 0 || h <= 0) {
+            return;
+        }
+        pendingW = w;
+        pendingH = h;
+        // Boot path: need a real size immediately so Loader can start.
+        if (appliedW == 0 || appliedH == 0) {
+            applyDisplaySize(w, h);
+            return;
+        }
+        if (w == appliedW && h == appliedH) {
+            return;
+        }
+        // Still resizing — stretch pixels only; settle before client redraw.
+        scheduleSettledResize();
+    }
+
+    /**
+     * After {@link #RESIZE_SETTLE_MS} with no further size changes, push the
+     * pending view size into the AWT / Jagex viewport so HUD / gameframe
+     * reflow. Cancelled if the user keeps dragging.
+     */
+    private void scheduleSettledResize() {
+        final int gen = ++resizeGeneration;
+        DispatchQueue.getMainQueue().after(RESIZE_SETTLE_MS, TimeUnit.MILLISECONDS, new Runnable() {
+            public void run() {
+                if (gen != resizeGeneration) {
+                    return;
+                }
+                if (pendingW <= 0 || pendingH <= 0) {
+                    return;
+                }
+                if (pendingW == appliedW && pendingH == appliedH) {
+                    return;
+                }
+                applyDisplaySize(pendingW, pendingH);
             }
+        });
+    }
+
+    private void applyDisplaySize(int w, int h) {
+        appliedW = w;
+        appliedH = h;
+        AwtHost.setDisplaySize(w, h);
+        if (sizeListener != null) {
+            sizeListener.run();
         }
     }
 
