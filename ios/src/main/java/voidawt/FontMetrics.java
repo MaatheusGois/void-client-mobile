@@ -1,27 +1,32 @@
 package voidawt;
 
+import org.robovm.apple.coretext.CTLine;
+import org.robovm.apple.uikit.UIColor;
+import org.robovm.apple.uikit.UIFont;
+
 public class FontMetrics {
     private final Font font;
+    private final UIFont uiFont;
 
     FontMetrics(Font font) {
         this.font = font == null ? new Font("Helvetica", Font.PLAIN, 12) : font;
+        this.uiFont = this.font.uiFont();
     }
 
     public int charWidth(char c) {
-        int size = Math.max(8, font.getSize());
-        int glyphW = Math.max(5, size * 3 / 5);
-        return glyphW + 1;
+        return stringWidth(String.valueOf(c));
     }
 
     public int stringWidth(String s) {
         if (s == null || s.length() == 0) {
             return 1;
         }
-        return Math.max(1, s.length() * charWidth('M'));
+        CTLine line = CTLine.create(font.attributed(s, UIColor.white()));
+        return Math.max(1, (int) Math.ceil(line.getWidth()));
     }
 
     public int getAscent() {
-        return Math.max(7, font.getSize());
+        return Math.max(1, (int) Math.ceil(uiFont.getAscender()));
     }
 
     public int getMaxAscent() {
@@ -29,7 +34,8 @@ public class FontMetrics {
     }
 
     public int getDescent() {
-        return Math.max(1, font.getSize() / 4);
+        // UIKit descender is negative.
+        return Math.max(1, (int) Math.ceil(-uiFont.getDescender()));
     }
 
     public int getMaxDescent() {
@@ -37,6 +43,6 @@ public class FontMetrics {
     }
 
     public int getHeight() {
-        return getAscent() + getDescent() + 1;
+        return Math.max(getAscent() + getDescent(), (int) Math.ceil(uiFont.getLineHeight()));
     }
 }

@@ -1,6 +1,7 @@
 package world.gregs.voidosrs.android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Build;
 import java.io.PrintStream;
@@ -28,6 +29,7 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowInsets;
+import android.view.WindowInsetsAnimation;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
@@ -37,10 +39,14 @@ import android.media.AudioFocusRequest;
 import android.media.AudioManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.List;
 
 import voidawt.AwtHost;
 import voidawt.event.MouseEvent;
+import world.gregs.voidosrs.ServerPrefs;
 
 public class MainActivity extends Activity {
     private volatile boolean clientStarted;
@@ -49,6 +55,16 @@ public class MainActivity extends Activity {
     private EditText imeInput;
     private TextView keyboardBall;
     private GameView game;
+    private FrameLayout rootLayout;
+    private View serverOverlay;
+    private EditText serverField;
+    private TextView changeServerBtn;
+    private TextView serverTitle;
+    private TextView serverSubtitle;
+    private View serverCancel;
+    private LinearLayout serverHistoryRow;
+    private int lastServerPollState = Integer.MIN_VALUE;
+    private boolean connectFailOverlayShown;
     private boolean keyboardOpen;
     private String typedBuffer = "";
     private boolean syncingText;
@@ -97,7 +113,17 @@ public class MainActivity extends Activity {
                 w = win[0];
                 h = win[1];
             }
-            if (w > 0 && h > 0) {
+            // Exclusive FS: pin logical 800x600 (aFrame476 is often null for a beat
+            // after resume) and only re-stretch the View — do not inflate the AWT
+            // buffer to the phone size (that letterboxes black bars).
+            if (AwtHost.isExclusiveFullscreen()) {
+                if (w > 0 && h > 0 && (stableSurfaceW < w || stableSurfaceH < h
+                        || stableSurfaceW == 0)) {
+                    stableSurfaceW = Math.max(stableSurfaceW, w);
+                    stableSurfaceH = Math.max(stableSurfaceH, h);
+                }
+                AwtHost.setDisplaySize(AwtHost.GAME_WIDTH, AwtHost.GAME_HEIGHT, true);
+            } else if (w > 0 && h > 0) {
                 applySurfaceSize(w, h, "resume-restore", true);
             }
             game.requestLayout();
@@ -117,7 +143,10 @@ public class MainActivity extends Activity {
         keyboardBall = buildKeyboardBall();
 
         FrameLayout root = new FrameLayout(this);
+        rootLayout = root;
         root.setBackgroundColor(Color.BLACK);
+        root.setClipChildren(true);
+        root.setClipToPadding(true);
         root.addView(game, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
@@ -129,7 +158,17 @@ public class MainActivity extends Activity {
         // Keep instance for emergency toggle via long-press on empty corner if needed.
         keyboardBall.setVisibility(View.GONE);
 
+        buildServerOverlay(root);
+        changeServerBtn = buildChangeServerButton();
+        FrameLayout.LayoutParams serverBtnLp = new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        serverBtnLp.gravity = Gravity.TOP | Gravity.START;
+        serverBtnLp.topMargin = 16;
+        serverBtnLp.leftMargin = 16;
+        root.addView(changeServerBtn, serverBtnLp);
+
         setContentView(root);
+        installKeyboardPan(root);
         hideSystemUi();
         requestAudioFocus();
         instance = this;
@@ -165,6 +204,10 @@ public class MainActivity extends Activity {
             }
         };
         game.requestFocus();
+        if (resolveBootHost() == null) {
+            showServerOverlay(false);
+        }
+        pollLoginButton();
     }
 
     @Override
@@ -238,6 +281,8 @@ public class MainActivity extends Activity {
         long stableArea = (long) stableSurfaceW * stableSurfaceH;
         boolean significantShrink = stableArea > 0 && area * 100 < stableArea * 85;
         boolean inResumeGrace = android.os.SystemClock.uptimeMillis() < resumeGraceUntilMs;
+        boolean pinExclusive = inResumeGrace || "resume-restore".equals(reason)
+                || "resume-stable".equals(reason);
         // Transient inset flash on resume / IME — do not teach the client a tiny viewport.
         if (significantShrink && (inResumeGrace || !force || !"deferred-shrink".equals(reason))) {
             Log.w("void-osrs", "ignore shrink " + width + "x" + height
@@ -250,7 +295,8 @@ public class MainActivity extends Activity {
             if (stableSurfaceW > 0 && stableSurfaceH > 0
                     && (force || "surfaceChanged".equals(reason) || "layout".equals(reason))) {
                 // Keep client at last good size while the view catches up.
-                AwtHost.setDisplaySize(stableSurfaceW, stableSurfaceH);
+                // pinExclusive: notification/resume often nulls aFrame476 briefly.
+                AwtHost.setDisplaySize(stableSurfaceW, stableSurfaceH, pinExclusive);
             }
             return;
         }
@@ -262,8 +308,297 @@ public class MainActivity extends Activity {
         Log.i("void-osrs", "surface size " + width + "x" + height
                 + " stable=" + stableSurfaceW + "x" + stableSurfaceH
                 + " (" + reason + (force ? " force" : "") + ")");
-        AwtHost.setDisplaySize(width, height);
+        AwtHost.setDisplaySize(width, height, pinExclusive);
         startClientIfReady(width, height);
+    }
+
+    private String defaultHostHint() {
+        return isEmulator() ? "10.0.2.2" : "192.168.18.188";
+    }
+
+    private String resolveBootHost() {
+        String override = readServerOverride();
+        if (override != null && !override.isEmpty()) {
+            String n = ServerPrefs.normalize(override);
+            if (n != null) {
+                return n;
+            }
+        }
+        return ServerPrefs.load();
+    }
+
+    private static final int GOLD = Color.rgb(212, 168, 71);
+    private static final int CREAM = Color.rgb(247, 242, 224);
+    private static final int INK = Color.rgb(26, 20, 10);
+
+    private TextView buildChangeServerButton() {
+        TextView t = styleButton("Server", false);
+        t.setTextSize(13);
+        t.setVisibility(View.GONE);
+        t.setOnClickListener(v -> showServerOverlay(false));
+        return t;
+    }
+
+    private void buildServerOverlay(FrameLayout root) {
+        FrameLayout overlay = new FrameLayout(this);
+        overlay.setBackgroundColor(Color.argb(158, 5, 3, 3));
+        overlay.setVisibility(View.GONE);
+        overlay.setClickable(true);
+
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        card.setPadding(44, 40, 44, 44);
+        GradientDrawable cardBg = new GradientDrawable();
+        cardBg.setColor(Color.argb(247, 18, 15, 13));
+        cardBg.setCornerRadius(32);
+        cardBg.setStroke(2, Color.argb(178, 212, 168, 71));
+        card.setBackground(cardBg);
+
+        serverTitle = new TextView(this);
+        serverTitle.setText("Server");
+        serverTitle.setTextColor(CREAM);
+        serverTitle.setTextSize(22);
+        serverTitle.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        serverTitle.setPadding(0, 0, 0, 4);
+
+        serverSubtitle = new TextView(this);
+        serverSubtitle.setTextColor(Color.rgb(237, 158, 122));
+        serverSubtitle.setTextSize(13);
+        serverSubtitle.setPadding(0, 8, 0, 4);
+        serverSubtitle.setVisibility(View.GONE);
+
+        serverField = new EditText(this);
+        serverField.setHint(defaultHostHint());
+        serverField.setHintTextColor(Color.argb(140, 180, 170, 150));
+        serverField.setTextColor(CREAM);
+        serverField.setTextSize(16);
+        serverField.setSingleLine(true);
+        serverField.setPadding(28, 26, 28, 26);
+        serverField.setBackground(roundRect(Color.rgb(31, 28, 23), Color.argb(90, 212, 168, 71), 20));
+        serverField.setInputType(InputType.TYPE_TEXT_VARIATION_URI);
+        serverField.setImeOptions(EditorInfo.IME_ACTION_GO | EditorInfo.IME_FLAG_NO_FULLSCREEN);
+        serverField.setOnEditorActionListener((v, actionId, event) -> {
+            applyServerFromOverlay();
+            return true;
+        });
+        LinearLayout.LayoutParams fieldLp = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        fieldLp.topMargin = 20;
+
+        serverHistoryRow = new LinearLayout(this);
+        serverHistoryRow.setOrientation(LinearLayout.VERTICAL);
+        serverHistoryRow.setPadding(0, 8, 0, 0);
+
+        LinearLayout buttons = new LinearLayout(this);
+        buttons.setOrientation(LinearLayout.HORIZONTAL);
+        buttons.setPadding(0, 20, 0, 0);
+
+        TextView cancel = styleButton("Cancel", false);
+        serverCancel = cancel;
+        cancel.setOnClickListener(v -> hideServerOverlay());
+        TextView connect = styleButton("Connect", true);
+        connect.setOnClickListener(v -> applyServerFromOverlay());
+
+        LinearLayout.LayoutParams half = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        half.rightMargin = 16;
+        buttons.addView(cancel, half);
+        buttons.addView(connect, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
+
+        card.addView(serverTitle);
+        card.addView(serverSubtitle);
+        card.addView(serverField, fieldLp);
+        card.addView(serverHistoryRow, new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        card.addView(buttons);
+
+        FrameLayout.LayoutParams cardLp = new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        cardLp.gravity = Gravity.CENTER;
+        cardLp.leftMargin = 56;
+        cardLp.rightMargin = 56;
+        overlay.addView(card, cardLp);
+        root.addView(overlay, new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        serverOverlay = overlay;
+    }
+
+    private GradientDrawable roundRect(int fill, int stroke, int radiusDp) {
+        GradientDrawable bg = new GradientDrawable();
+        bg.setColor(fill);
+        bg.setCornerRadius(radiusDp);
+        if (stroke != 0) {
+            bg.setStroke(2, stroke);
+        }
+        return bg;
+    }
+
+    private TextView styleButton(String label, boolean primary) {
+        TextView t = new TextView(this);
+        t.setText(label);
+        t.setTextSize(15);
+        t.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+        t.setGravity(Gravity.CENTER);
+        t.setPadding(20, 26, 20, 26);
+        if (primary) {
+            t.setTextColor(INK);
+            t.setBackground(roundRect(GOLD, 0, 20));
+        } else {
+            t.setTextColor(CREAM);
+            t.setBackground(roundRect(Color.rgb(36, 33, 28), Color.argb(115, 212, 168, 71), 20));
+        }
+        return t;
+    }
+
+    private TextView historyRow(String host, boolean selected) {
+        TextView t = new TextView(this);
+        t.setText(host);
+        t.setTextSize(14);
+        t.setGravity(Gravity.CENTER_VERTICAL | Gravity.START);
+        t.setPadding(28, 22, 28, 22);
+        if (selected) {
+            t.setTextColor(GOLD);
+            t.setBackground(roundRect(Color.argb(36, 212, 168, 71), GOLD, 20));
+        } else {
+            t.setTextColor(Color.rgb(219, 214, 199));
+            t.setBackground(roundRect(Color.rgb(33, 31, 26), Color.argb(16, 255, 255, 255), 20));
+        }
+        return t;
+    }
+
+    private void showServerOverlay(boolean connectionFailed) {
+        String current = resolveBootHost();
+        if (current == null) {
+            current = defaultHostHint();
+        }
+        serverField.setText(current);
+        if (serverTitle != null) {
+            if (connectionFailed) {
+                serverTitle.setText("Can't reach server");
+                serverSubtitle.setText(current + " isn't working. Try another server, then reopen the app.");
+                serverSubtitle.setVisibility(View.VISIBLE);
+            } else {
+                serverTitle.setText("Server");
+                serverSubtitle.setVisibility(View.GONE);
+            }
+        }
+        if (serverCancel != null) {
+            serverCancel.setVisibility(clientStarted ? View.VISIBLE : View.GONE);
+        }
+        serverOverlay.setVisibility(View.VISIBLE);
+        if (changeServerBtn != null) {
+            changeServerBtn.setVisibility(View.GONE);
+        }
+        refreshServerHistory();
+        hideKeyboard();
+        serverField.requestFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.showSoftInput(serverField, InputMethodManager.SHOW_IMPLICIT);
+        }
+    }
+
+    private void hideServerOverlay() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        if (imm != null) {
+            imm.hideSoftInputFromWindow(serverField.getWindowToken(), 0);
+        }
+        serverOverlay.setVisibility(View.GONE);
+    }
+
+    private void refreshServerHistory() {
+        if (serverHistoryRow == null) {
+            return;
+        }
+        serverHistoryRow.removeAllViews();
+        String[] history = ServerPrefs.loadAll();
+        serverHistoryRow.setVisibility(history.length == 0 ? View.GONE : View.VISIBLE);
+        if (history.length > 0) {
+            TextView recent = new TextView(this);
+            recent.setText("RECENT");
+            recent.setTextColor(Color.argb(191, 212, 168, 71));
+            recent.setTextSize(11);
+            recent.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+            recent.setPadding(4, 20, 0, 10);
+            serverHistoryRow.addView(recent);
+        }
+        String selected = ServerPrefs.normalize(serverField.getText().toString());
+        for (int i = 0; i < history.length; i++) {
+            final String host = history[i];
+            TextView chip = historyRow(host, host.equals(selected));
+            chip.setOnClickListener(v -> {
+                serverField.setText(host);
+                refreshServerHistory();
+            });
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            if (i > 0) {
+                lp.topMargin = 10;
+            }
+            serverHistoryRow.addView(chip, lp);
+        }
+    }
+
+    private void applyServerFromOverlay() {
+        String host = ServerPrefs.normalize(serverField.getText().toString());
+        if (host == null) {
+            host = ServerPrefs.normalize(defaultHostHint());
+        }
+        if (host == null) {
+            return;
+        }
+        if (!clientStarted) {
+            ServerPrefs.save(host);
+            hideServerOverlay();
+            int w = game != null ? game.getWidth() : 0;
+            int h = game != null ? game.getHeight() : 0;
+            if (w <= 0 || h <= 0) {
+                int[] win = windowSizePx();
+                w = win[0];
+                h = win[1];
+            }
+            startClientIfReady(w, h);
+            return;
+        }
+        String previous = ServerPrefs.load();
+        if (host.equals(previous)) {
+            hideServerOverlay();
+            return;
+        }
+        final String target = host;
+        new AlertDialog.Builder(this)
+                .setTitle("Switch server?")
+                .setMessage("The app will close. Open it again to connect to the new server.")
+                .setNegativeButton("Cancel", null)
+                .setPositiveButton("OK", (d, w) -> {
+                    ServerPrefs.save(target);
+                    hideServerOverlay();
+                    finishAffinity();
+                    Runtime.getRuntime().exit(0);
+                })
+                .show();
+    }
+
+    private void pollLoginButton() {
+        uiHandler.postDelayed(() -> {
+            boolean overlayUp = serverOverlay != null && serverOverlay.getVisibility() == View.VISIBLE;
+            int state = ServerPrefs.gameState();
+            boolean failing = ServerPrefs.isConnectFailing();
+            boolean show = clientStarted && !overlayUp && ServerPrefs.showsServerPicker();
+            if (ServerPrefs.isLoginScreen()) {
+                connectFailOverlayShown = false;
+            }
+            if (state != lastServerPollState) {
+                lastServerPollState = state;
+            }
+            if (clientStarted && !overlayUp && failing && !connectFailOverlayShown) {
+                connectFailOverlayShown = true;
+                showServerOverlay(true);
+            }
+            if (changeServerBtn != null) {
+                changeServerBtn.setVisibility(show ? View.VISIBLE : View.GONE);
+            }
+            pollLoginButton();
+        }, 200);
     }
 
     private void requestAudioFocus() {
@@ -419,7 +754,56 @@ public class MainActivity extends Activity {
         return ball;
     }
 
+    /** Slide the game canvas up so chat sits above the IME; size stays full-screen. */
+    private void installKeyboardPan(View root) {
+        if (Build.VERSION.SDK_INT >= 30) {
+            ImePan30.install(root, this);
+            return;
+        }
+        root.getViewTreeObserver().addOnGlobalLayoutListener(() -> applyImePan(visibleImeCoverPx(root)));
+    }
+
+    private int visibleImeCoverPx(View root) {
+        Rect r = new Rect();
+        root.getWindowVisibleDisplayFrame(r);
+        int covered = Math.max(0, root.getHeight() - r.bottom);
+        int minIme = (int) (80f * getResources().getDisplayMetrics().density);
+        return covered < minIme ? 0 : covered;
+    }
+
+    void applyImePan(int imeBottom) {
+        if (game != null && game.getTranslationY() != 0f) {
+            game.setTranslationY(0f);
+        }
+        boolean overlay = serverOverlay != null && serverOverlay.getVisibility() == View.VISIBLE;
+        int vh = game != null ? Math.max(1, game.getHeight()) : 1;
+        int inset = (!overlay && imeBottom > 0) ? imeBottom : 0;
+        AwtHost.setKeyboardInset(inset, vh);
+    }
+
+    @android.annotation.TargetApi(30)
+    private static final class ImePan30 {
+        static void install(View root, MainActivity host) {
+            root.setOnApplyWindowInsetsListener((v, insets) -> {
+                host.applyImePan(insets.getInsets(WindowInsets.Type.ime()).bottom);
+                return v.onApplyWindowInsets(insets);
+            });
+            root.setWindowInsetsAnimationCallback(new WindowInsetsAnimation.Callback(
+                    WindowInsetsAnimation.Callback.DISPATCH_MODE_CONTINUE_ON_SUBTREE) {
+                @Override
+                public WindowInsets onProgress(WindowInsets insets,
+                        List<WindowInsetsAnimation> runningAnimations) {
+                    host.applyImePan(insets.getInsets(WindowInsets.Type.ime()).bottom);
+                    return insets;
+                }
+            });
+        }
+    }
+
     private void showKeyboard() {
+        if (serverOverlay != null && serverOverlay.getVisibility() == View.VISIBLE) {
+            return;
+        }
         Log.i("void-osrs", "showKeyboard");
         keyboardOpen = true;
         uiHandler.removeCallbacks(forceHideImeRunnable);
@@ -484,6 +868,7 @@ public class MainActivity extends Activity {
     private void hideKeyboard() {
         Log.i("void-osrs", "hideKeyboard");
         keyboardOpen = false;
+        applyImePan(0);
         if (keyboardBall != null) {
             keyboardBall.setAlpha(1f);
         }
@@ -658,21 +1043,15 @@ public class MainActivity extends Activity {
         if (clientStarted || width <= 0 || height <= 0) {
             return;
         }
+        final String server = resolveBootHost();
+        if (server == null) {
+            return;
+        }
         clientStarted = true;
         AwtHost.setDisplaySize(width, height);
         new Thread(() -> {
             try {
                 Class<?> loaderCl = Class.forName("Loader");
-                // Prefer adb reverse (127.0.0.1). Fall back to LAN if reverse is down.
-                // Override: adb shell setprop debug.void.server <ip>
-                String server = readServerOverride();
-                if (server == null || server.isEmpty()) {
-                    if (isEmulator()) {
-                        server = "10.0.2.2";
-                    } else {
-                        server = pickReachableServer(43594, "127.0.0.1", "192.168.18.214");
-                    }
-                }
                 Log.i("void-osrs", "boot server=" + server + ":43594"
                         + " emu=" + isEmulator()
                         + " override=" + readServerOverride());
@@ -1420,9 +1799,21 @@ public class MainActivity extends Activity {
             canvas.drawColor(0xff000000);
             Bitmap bmp = frame;
             if (bmp != null) {
-                src.set(0, 0, bmp.getWidth(), bmp.getHeight());
-                int dw = Math.max(canvas.getWidth(), getWidth());
-                int dh = Math.max(canvas.getHeight(), getHeight());
+                int bw = bmp.getWidth();
+                int bh = bmp.getHeight();
+                int srcW = bw;
+                int srcH = bh;
+                // If present somehow still has a phone-sized letterboxed buffer,
+                // only stretch the logical FS content (top-left).
+                int gw = Math.max(1, AwtHost.GAME_WIDTH);
+                int gh = Math.max(1, AwtHost.GAME_HEIGHT);
+                if (bw > gw || bh > gh) {
+                    srcW = Math.min(gw, bw);
+                    srcH = Math.min(gh, bh);
+                }
+                src.set(0, 0, srcW, srcH);
+                int dw = Math.max(1, getWidth());
+                int dh = Math.max(1, getHeight());
                 dst.set(0, 0, dw, dh);
                 canvas.drawBitmap(bmp, src, dst, paint);
             }

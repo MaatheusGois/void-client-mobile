@@ -1,5 +1,15 @@
 package voidawt;
 
+import org.robovm.apple.coregraphics.CGAffineTransform;
+import org.robovm.apple.coregraphics.CGBitmapContext;
+import org.robovm.apple.coregraphics.CGColorSpace;
+import org.robovm.apple.coregraphics.CGImageAlphaInfo;
+import org.robovm.apple.coregraphics.CGRect;
+import org.robovm.apple.coretext.CTLine;
+import org.robovm.apple.foundation.NSAttributedString;
+import org.robovm.apple.uikit.UIColor;
+import org.robovm.apple.uikit.UIFont;
+
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
 
@@ -82,17 +92,62 @@ public class Graphics {
         if (str == null || str.length() == 0) {
             return;
         }
-        int[] px = target.peekArgb();
+        UIFont uiFont = font.uiFont();
+        UIColor uiColor = UIColor.fromRGBA(
+                color.getRed() / 255.0,
+                color.getGreen() / 255.0,
+                color.getBlue() / 255.0,
+                1.0);
+        NSAttributedString attributed = font.attributed(str, uiColor);
+        CTLine line = CTLine.create(attributed);
+        double ascent = Math.max(uiFont.getAscender(), line.getAscent());
+        double descent = Math.max(-uiFont.getDescender(), line.getDescent());
+        double width = Math.max(1.0, line.getWidth());
+        int pad = 2;
+        int bw = Math.max(1, (int) Math.ceil(width) + pad * 2);
+        int bh = Math.max(1, (int) Math.ceil(ascent + descent) + pad * 2);
+        byte[] rgba = new byte[bw * bh * 4];
+        CGColorSpace space = CGColorSpace.createDeviceRGB();
+        CGBitmapContext ctx = CGBitmapContext.create(
+                rgba, bw, bh, 8, bw * 4L, space, CGImageAlphaInfo.PremultipliedLast);
+        if (ctx == null) {
+            return;
+        }
+        ctx.clearRect(new CGRect(0, 0, bw, bh));
+        // Bitmap buffer is top-left; CoreText expects +y up. Flip CTM, keep identity text matrix.
+        ctx.translateCTM(0, bh);
+        ctx.scaleCTM(1, -1);
+        ctx.setTextMatrix(CGAffineTransform.Identity());
+        ctx.setTextPosition(pad, pad + descent);
+        line.draw(ctx);
+
+        int[] dst = target.peekArgb();
         int tw = target.getWidth();
         int th = target.getHeight();
-        int rgb = color.getRGB();
-        int size = Math.max(8, font.getSize());
-        int glyphH = Math.max(7, size);
-        int glyphW = Math.max(5, size * 3 / 5);
-        int baseline = y;
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            BitmapFont.blit(px, tw, th, x + i * (glyphW + 1), baseline - glyphH + 1, ch, rgb, glyphW, glyphH);
+        int dx0 = x - pad;
+        int dy0 = y - (int) Math.ceil(ascent) - pad;
+        for (int row = 0; row < bh; row++) {
+            int dy = dy0 + row;
+            if (dy < 0 || dy >= th) {
+                continue;
+            }
+            int dyOff = dy * tw;
+            int srcRow = row * bw * 4;
+            for (int col = 0; col < bw; col++) {
+                int o = srcRow + col * 4;
+                int a = rgba[o + 3] & 0xff;
+                if (a == 0) {
+                    continue;
+                }
+                int dx = dx0 + col;
+                if (dx < 0 || dx >= tw) {
+                    continue;
+                }
+                int r = rgba[o] & 0xff;
+                int g = rgba[o + 1] & 0xff;
+                int b = rgba[o + 2] & 0xff;
+                dst[dyOff + dx] = (a << 24) | (r << 16) | (g << 8) | b;
+            }
         }
     }
 

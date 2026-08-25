@@ -1043,6 +1043,7 @@ public final class client extends Applet_Sub1 {
             if (class46 != null && class46.anInt834 == i) {
                 int i_43_ = class46.anInt800 + i_36_;
                 int i_44_ = class46.anInt750 + i_37_;
+                i_44_ -= MobileKeyboard.liftPx(class46, i_43_, i_44_);
                 int i_45_;
                 int i_46_;
                 int i_47_;

@@ -52,19 +52,20 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                     if (class46 != null && (class46.anInt834 == i_16_ || (i_16_ == -1412584499 && Class289.aClass46_3701 == class46))) {
                         int i_19_ = i_11_ + class46.anInt800;
                         int i_20_ = class46.anInt750 + i_10_;
+                        i_20_ -= MobileKeyboard.liftPx(class46, i_19_, i_20_);
                         int i_21_ = 1 + (class46.anInt709 + i_19_);
                         int i_22_ = class46.anInt789 + i_20_ - -1;
                         int i_23_;
                         if (i_13_ == -1) {
-                            Class180.aRectangleArray2371[Class348_Sub38.anInt7008].setBounds(i_11_ + class46.anInt800, i_10_ + class46.anInt750, class46.anInt709, class46.anInt789);
+                            Class180.aRectangleArray2371[Class348_Sub38.anInt7008].setBounds(i_19_, i_20_, class46.anInt709, class46.anInt789);
                             i_23_ = Class348_Sub38.anInt7008++;
                         } else i_23_ = i_13_;
                         class46.anInt794 = Class367_Sub11.anInt7396;
                         class46.anInt760 = i_23_;
                         if (!client.method111(class46)) {
                             if (class46.anInt765 != 0) Class348_Sub18.method2942(class46, (byte) -36);
-                            int i_24_ = class46.anInt800 - -i_11_;
-                            int i_25_ = class46.anInt750 + i_10_;
+                            int i_24_ = i_19_;
+                            int i_25_ = i_20_;
                             int i_26_ = 0;
                             int i_27_ = 0;
                             if (Class59_Sub1.aBoolean5300) {

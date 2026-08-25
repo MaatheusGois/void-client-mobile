@@ -18,7 +18,7 @@ IOS_ARCH    ?= arm64
 	desktop desktop-jar desktop-run \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
-	ios ios-sim ios-build ios-relaunch ios-clean
+	ios ios-sim ios-build ios-relaunch ios-device ios-clean
 
 help:
 	@echo "void-client"
@@ -44,6 +44,7 @@ help:
 	@echo "  make ios-sim          alias of ios"
 	@echo "  make ios-build        assemble (no launch)"
 	@echo "  make ios-relaunch     simctl install + launch"
+	@echo "  make ios-device       physical iPad (sign + devicectl)"
 	@echo "  make ios-clean        clean"
 
 check-java17:
@@ -109,6 +110,9 @@ ios-build: check-java17
 ios-relaunch:
 	xcrun simctl install booted $(IOS)/build/robovm.tmp/Void.app
 	xcrun simctl launch booted $(IOS_PKG)
+
+ios-device:
+	bash .cursor/skills/run-mobile-device/scripts/ios-device.sh
 
 ios-clean: check-java17
 	cd $(IOS) && JAVA_HOME="$(JAVA_17)" PATH="$(JAVA_17)/bin:$$PATH" ./gradlew --no-daemon clean

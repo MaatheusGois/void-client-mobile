@@ -307,10 +307,12 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         downY / (float) Math.max(1, frameH))
                     + " frame=" + frameW + "x" + frameH);
             AwtHost.injectLeftClick(downX, downY);
+            // Match Android: dismiss on any tap while IME is up. Text-field taps
+            // re-open via MobileKeyboard.onInterfacePress after the click is processed.
             if (AwtHost.isDevConsoleOpen()) {
                 AwtHost.requestToggleSoftKeyboard("dev-console-tap");
-            } else {
-                AwtHost.requestHideSoftKeyboard("dev-console-stuck");
+            } else if (AwtHost.SOFT_KEYBOARD_OPEN) {
+                AwtHost.requestHideSoftKeyboard("tap-dismiss");
             }
         }
         down = false;

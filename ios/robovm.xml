@@ -12,6 +12,7 @@
     </resources>
     <forceLinkClasses>
         <pattern>*</pattern>
+        <pattern>MobileKeyboard</pattern>
         <pattern>voidawt.**</pattern>
         <pattern>voidapplet.**</pattern>
         <pattern>voidswing.**</pattern>
@@ -36,6 +37,7 @@
         <framework>UIKit</framework>
         <framework>Foundation</framework>
         <framework>CoreGraphics</framework>
+        <framework>CoreText</framework>
         <framework>QuartzCore</framework>
         <framework>Security</framework>
         <framework>CFNetwork</framework>

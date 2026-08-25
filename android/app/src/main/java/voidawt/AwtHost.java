@@ -25,27 +25,56 @@ public final class AwtHost {
     public static volatile Component root;
     public static volatile Canvas gameCanvas;
     private static final Handler MAIN = new Handler(Looper.getMainLooper());
+    /** Last exclusive-FS dims (800x600). Kept across brief aFrame476 null during resume. */
+    private static volatile int lastExclusiveW;
+    private static volatile int lastExclusiveH;
 
     public interface Presenter {
         void present(Bitmap frame);
     }
 
+    /** True while the client holds {@code Class34.aFrame476}, or we still pin last FS size. */
+    public static boolean isExclusiveFullscreen() {
+        return fullscreenLogicalSize() != null
+                || (lastExclusiveW > 0 && lastExclusiveH > 0);
+    }
+
     /**
      * Logical game size (aspect-matched to the surface). Android stretches the
      * presented frame to fill the SurfaceView when a logical cap is set.
+     *
+     * @param pinExclusive if true (resume/inset flash), keep last exclusive FS size
+     *                     even when {@code aFrame476} is briefly null so the buffer
+     *                     does not inflate to phone resolution with a letterboxed paint.
      */
     public static void setDisplaySize(int width, int height) {
+        setDisplaySize(width, height, false);
+    }
+
+    public static void setDisplaySize(int width, int height, boolean pinExclusive) {
         int[] locked = fullscreenLogicalSize();
         if (locked != null) {
             width = locked[0];
             height = locked[1];
+            lastExclusiveW = width;
+            lastExclusiveH = height;
+        } else if (lastExclusiveW > 0 && lastExclusiveH > 0) {
+            // Resume/inset often nulls aFrame476 for a beat — keep last FS size.
+            width = lastExclusiveW;
+            height = lastExclusiveH;
         } else {
-            width = Math.max(1, width);
-            height = Math.max(1, height);
-            int[] logical = logicalSize(width, height);
-            width = logical[0];
-            height = logical[1];
+            // Never adopt phone pixel size into the AWT buffer. The GameView
+            // stretches 800x600 (default) to fill the screen. Syncing 1600x720
+            // here letterboxes: client still paints FS into the top-left.
+            width = Math.max(1, GAME_WIDTH);
+            height = Math.max(1, GAME_HEIGHT);
+            if (LOGICAL_MAX_EDGE > 0) {
+                int[] logical = logicalSize(width, height);
+                width = logical[0];
+                height = logical[1];
+            }
         }
+        // Ignore unused surface hint from callers (kept for API compat / logging).
         GAME_WIDTH = width;
         GAME_HEIGHT = height;
         Component r = root;
@@ -147,14 +176,36 @@ public final class AwtHost {
         if (p == null || pixels == null || width <= 0 || height <= 0) {
             return;
         }
-        final Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-        int[] argb = new int[width * height];
-        int n = Math.min(argb.length, pixels.length);
+        // Notification / onPause flash can inflate the AWT buffer to the phone
+        // size while the client still paints the 800x600 FS frame into the
+        // top-left — crop so Android stretch fills the View instead of
+        // letterboxing black bars.
+        int outW = width;
+        int outH = height;
+        int[] src = pixels;
+        int gw = GAME_WIDTH;
+        int gh = GAME_HEIGHT;
+        if (gw > 0 && gh > 0 && (width > gw || height > gh)) {
+            int cw = Math.min(gw, width);
+            int ch = Math.min(gh, height);
+            int[] cropped = new int[cw * ch];
+            for (int y = 0; y < ch; y++) {
+                System.arraycopy(pixels, y * width, cropped, y * cw, cw);
+            }
+            src = cropped;
+            outW = cw;
+            outH = ch;
+        }
+        final int fw = outW;
+        final int fh = outH;
+        final Bitmap bitmap = Bitmap.createBitmap(fw, fh, Bitmap.Config.ARGB_8888);
+        int[] argb = new int[fw * fh];
+        int n = Math.min(argb.length, src.length);
         for (int i = 0; i < n; i++) {
-            int rgb = pixels[i];
+            int rgb = src[i];
             argb[i] = (rgb & 0xff000000) == 0 ? rgb | 0xff000000 : rgb;
         }
-        bitmap.setPixels(argb, 0, width, 0, 0, width, height);
+        bitmap.setPixels(argb, 0, fw, 0, 0, fw, fh);
         MAIN.post(new Runnable() {
             public void run() {
                 p.present(bitmap);
@@ -291,6 +342,20 @@ public final class AwtHost {
     }
 
     public static volatile SoftKeyboardListener softKeyboardListener;
+    /** Soft-keyboard overlap in view pixels (0 = hidden). Does not resize the canvas. */
+    public static volatile int KEYBOARD_INSET_PX;
+    public static volatile int VIEW_HEIGHT_PX = 1;
+
+    public static void setKeyboardInset(int insetPx, int viewHeightPx) {
+        KEYBOARD_INSET_PX = Math.max(0, insetPx);
+        VIEW_HEIGHT_PX = Math.max(1, viewHeightPx);
+        try {
+            Class.forName("MobileKeyboard")
+                    .getDeclaredMethod("setInset", int.class, int.class)
+                    .invoke(null, Integer.valueOf(KEYBOARD_INSET_PX), Integer.valueOf(VIEW_HEIGHT_PX));
+        } catch (Throwable ignored) {
+        }
+    }
 
     public static void requestSoftKeyboard(String reason) {
         SoftKeyboardListener l = softKeyboardListener;

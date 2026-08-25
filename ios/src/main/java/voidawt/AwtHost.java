@@ -273,6 +273,22 @@ public final class AwtHost {
     }
 
     public static volatile SoftKeyboardListener softKeyboardListener;
+    /** Soft-keyboard overlap in view pixels (0 = hidden). Does not resize the canvas. */
+    public static volatile int KEYBOARD_INSET_PX;
+    public static volatile int VIEW_HEIGHT_PX = 1;
+    /** True while the host soft keyboard is up (for tap-outside dismiss). */
+    public static volatile boolean SOFT_KEYBOARD_OPEN;
+
+    public static void setKeyboardInset(int insetPx, int viewHeightPx) {
+        KEYBOARD_INSET_PX = Math.max(0, insetPx);
+        VIEW_HEIGHT_PX = Math.max(1, viewHeightPx);
+        try {
+            Class.forName("MobileKeyboard")
+                    .getDeclaredMethod("setInset", int.class, int.class)
+                    .invoke(null, Integer.valueOf(KEYBOARD_INSET_PX), Integer.valueOf(VIEW_HEIGHT_PX));
+        } catch (Throwable ignored) {
+        }
+    }
 
     public static void requestSoftKeyboard(String reason) {
         SoftKeyboardListener l = softKeyboardListener;

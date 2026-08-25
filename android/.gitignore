@@ -4,3 +4,7 @@
 /local.properties
 *.iml
 .idea
+
+# adb / device screencaps — keep local only
+/debug-screenshots/
+/*.png
