@@ -327,12 +327,12 @@ class Class75 {
 
     private static final void method755(ha var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
         if (bool || i_60_ != 0 || i_61_ > 0) {
-            if (i_61_ == 0) var_ha.aa(i, i_57_, i_58_, i_59_, i_60_, 0);
+            if (i_61_ == 0) var_ha.fillRect(i, i_57_, i_58_, i_59_, i_60_, 0);
             else {
                 int i_64_ = i_62_ & 0x3f;
                 if (i_64_ == 0 || i_58_ <= 1 || i_59_ <= 1) {
                     int i_65_ = anIntArray1260[i_61_];
-                    if (bool || i_65_ != 0) var_ha.aa(i, i_57_, i_58_, i_59_, i_65_, 0);
+                    if (bool || i_65_ != 0) var_ha.fillRect(i, i_57_, i_58_, i_59_, i_65_, 0);
                 } else {
                     int i_66_ = bool ? 0 : 1;
                     Class46.method424(anIntArray1260[i_61_], i_60_, var_ha, 0, i_66_, anInt1255, i_62_ >> 6 & 0x3, aByteArrayArrayArray1251, i_58_, i, i_64_, i_59_, i_57_);
@@ -599,7 +599,7 @@ class Class75 {
                                 else if ((i_136_ + anInt1274 & 0x4) != (i_146_ + anInt1277 & 0x4)) i_152_ = -11840664;
                                 else i_152_ = (anIntArray1260[(aClass268_1239.anInt3447) + 1]);
                                 if (i_152_ == 0) i_152_ = -16777216;
-                                var_ha.aa(i_137_, i_147_, i_139_, i_149_, i_152_, 0);
+                                var_ha.fillRect(i_137_, i_147_, i_139_, i_149_, i_152_, 0);
                             } else if (i_154_ > 0) {
                                 if (i_154_ == 65535) {
                                     Class348_Sub39 class348_sub39 = ((Class348_Sub39) (aClass356_1271.method3480(i_140_ << 16 | i_150_, -6008)));
@@ -622,7 +622,7 @@ class Class75 {
                         else if ((i_136_ + anInt1274 & 0x4) != (i_141_ + anInt1277 & 0x4)) i_145_ = -11840664;
                         else i_145_ = anIntArray1260[(aClass268_1239.anInt3447) + 1];
                         if (i_145_ == 0) i_145_ = -16777216;
-                        var_ha.aa(i_137_, i_142_, i_139_, i_144_, i_145_, 0);
+                        var_ha.fillRect(i_137_, i_142_, i_139_, i_144_, i_145_, 0);
                     }
                 }
             }

@@ -131,7 +131,7 @@ final class Class130_Sub1 extends Class130 {
         Class243.anInt3162 = 0;
         Class348_Sub23_Sub1.anInt8999 = 0;
         Class243.anInt3160 = 0;
-        Class324.anInt4054 = 0;
+        BitmapFont.anInt4054 = 0;
         Class367_Sub10.anInt7389 = 0;
         Npc.anInt10496 = 0;
         Class377.anInt9842 = 0;
@@ -172,7 +172,7 @@ final class Class130_Sub1 extends Class130 {
         Class14_Sub3.anInt8625 = 0;
         Class348_Sub22.anInt6858 = 0;
         Class5_Sub3.anInt8367 = 0;
-        Class373_Sub2.anInt7434 = 0;
+        BasicMouseHandler.anInt7434 = 0;
         Class318_Sub1_Sub4_Sub2.anInt10102 = 0;
         ha_Sub2.anInt7552 = 0;
         Class64_Sub3.anInt5585 = 0;
@@ -203,7 +203,7 @@ final class Class130_Sub1 extends Class130 {
         Class318_Sub1_Sub1_Sub1.anInt9962 = 0;
         Class194.anInt2598 = 0;
         Class377.anInt9824 = 0;
-        Class324.anInt4051 = 0;
+        BitmapFont.anInt4051 = 0;
         Class348_Sub42_Sub7.anInt9540 = 0;
         Class348_Sub16_Sub3.anInt8951 = 0;
         Class318_Sub1_Sub3_Sub1.anInt10007 = 0;
@@ -381,7 +381,7 @@ final class Class130_Sub1 extends Class130 {
         Class33.anInt457 = 0;
         Class59_Sub2_Sub2.anInt8677 = 0;
         Class85.anInt1466 = 0;
-        Class373_Sub2.anInt7439 = 0;
+        BasicMouseHandler.anInt7439 = 0;
         Class64_Sub2.anInt5405 = 0;
         Class239_Sub4.anInt5875 = 0;
         Class311.anInt3901 = 0;
@@ -591,7 +591,7 @@ final class Class130_Sub1 extends Class130 {
         Class377.anInt9864 = 0;
         Class114.anInt1746 = 0;
         Class263.anInt3348 = 0;
-        Class324.anInt4050 = 0;
+        BitmapFont.anInt4050 = 0;
         ha_Sub3.anInt8006 = 0;
         Class318_Sub1_Sub1.anInt8722 = 0;
         Class367_Sub3.anInt7302 = 0;
@@ -661,7 +661,7 @@ final class Class130_Sub1 extends Class130 {
         Class226.anInt2963 = 0;
         ha_Sub2.anInt7534 = 0;
         Class348_Sub44.anInt7091 = 0;
-        Class324.anInt4052 = 0;
+        BitmapFont.anInt4052 = 0;
         Class348_Sub18.anInt6808 = 0;
         Class190.anInt2543 = 0;
         Class229.anInt2977 = 0;
@@ -899,7 +899,7 @@ final class Class130_Sub1 extends Class130 {
         Class101_Sub1.anInt5656 = 0;
         Class348_Sub27.anInt6906 = 0;
         Class318_Sub1_Sub4_Sub1.anInt10070 = 0;
-        Class324.anInt4060 = 0;
+        BitmapFont.anInt4060 = 0;
         Class183.anInt2465 = 0;
         Class43.anInt616 = 0;
         Class213.anInt2806 = 0;
@@ -950,10 +950,10 @@ final class Class130_Sub1 extends Class130 {
         Class295.anInt3757 = 0;
         Class318_Sub1_Sub4_Sub2.anInt10108 = 0;
         Class5_Sub3.anInt8372 = 0;
-        Class373_Sub2.anInt7428 = 0;
+        BasicMouseHandler.anInt7428 = 0;
         Class239_Sub22.anInt6071 = 0;
         Player.anInt10523 = 0;
-        Class324.anInt4064 = 0;
+        BitmapFont.anInt4064 = 0;
         Class318_Sub1_Sub4_Sub1.anInt10077 = 0;
         Class369_Sub1.anInt8581 = 0;
         Class170.anInt5076 = 0;
@@ -1017,7 +1017,7 @@ final class Class130_Sub1 extends Class130 {
         Class267.anInt3397 = 0;
         ha_Sub3.anInt8073 = 0;
         Class348_Sub42_Sub11.anInt9579 = 0;
-        Class373_Sub2.anInt7426 = 0;
+        BasicMouseHandler.anInt7426 = 0;
         Class286_Sub3.anInt6223 = 0;
         Class64_Sub2.anInt5444 = 0;
         ha_Sub2.anInt7580 = 0;
@@ -1032,7 +1032,7 @@ final class Class130_Sub1 extends Class130 {
         Class367_Sub3.anInt7305 = 0;
         Class101_Sub1.anInt5676 = 0;
         Class154.anInt2098 = 0;
-        Class373.anInt4533 = 0;
+        MouseHandler.anInt4533 = 0;
         Class348_Sub16_Sub3.anInt8935 = 0;
         Class377.anInt9893 = 0;
         Class233.anInt3023 = 0;
@@ -1125,7 +1125,7 @@ final class Class130_Sub1 extends Class130 {
         Class12.anInt214 = 0;
         Class258_Sub3.anInt8542 = 0;
         Class101_Sub2.anInt5717 = 0;
-        Class373_Sub2.anInt7438 = 0;
+        BasicMouseHandler.anInt7438 = 0;
         ha_Sub3.anInt8007 = 0;
         Class304.anInt3848 = 0;
         Class286_Sub3.anInt6215 = 0;
@@ -1242,7 +1242,7 @@ final class Class130_Sub1 extends Class130 {
         Class318_Sub1_Sub3_Sub2.anInt10038 = 0;
         Class318_Sub1_Sub4.anInt8763 = 0;
         ha_Sub3.anInt7942 = 0;
-        Class373_Sub2.anInt7427 = 0;
+        BasicMouseHandler.anInt7427 = 0;
         ha_Sub2.anInt7578 = 0;
         Class367_Sub3.anInt7306 = 0;
         Class99.anInt1573 = 0;
@@ -1300,7 +1300,7 @@ final class Class130_Sub1 extends Class130 {
         ha_Sub3.anInt8011 = 0;
         Class124.anInt1845 = 0;
         Class348_Sub40_Sub36.anInt9452 = 0;
-        Class373_Sub2.anInt7452 = 0;
+        BasicMouseHandler.anInt7452 = 0;
         ha_Sub2.anInt7724 = 0;
         Class64_Sub3.anInt5614 = 0;
         Class286_Sub7.anInt6280 = 0;
@@ -1406,7 +1406,7 @@ final class Class130_Sub1 extends Class130 {
         Class367_Sub4.anInt7316 = 0;
         ha_Sub2.anInt7615 = 0;
         Class287.anInt3692 = 0;
-        Class324.anInt4045 = 0;
+        BitmapFont.anInt4045 = 0;
         Class348_Sub49.anInt7178 = 0;
         Class333.anInt4149 = 0;
         client.anInt5173 = 0;
@@ -1492,7 +1492,7 @@ final class Class130_Sub1 extends Class130 {
         Class348_Sub49.anInt7187 = 0;
         Class348_Sub51.anInt7237 = 0;
         Class348_Sub40_Sub5.anInt9126 = 0;
-        Class373_Sub2.anInt7445 = 0;
+        BasicMouseHandler.anInt7445 = 0;
         Class51.anInt898 = 0;
         Class288_Sub1.anInt8578 = 0;
         Class348_Sub40_Sub29.anInt9381 = 0;
@@ -1685,7 +1685,7 @@ final class Class130_Sub1 extends Class130 {
         Class348_Sub40.anInt7038 = 0;
         Class314_Sub1.anInt6367 = 0;
         Class348_Sub49.anInt7181 = 0;
-        Class324.anInt4058 = 0;
+        BitmapFont.anInt4058 = 0;
         Class101_Sub2.anInt5721 = 0;
         Class348_Sub40_Sub33.anInt9428 = 0;
         Class342.anInt4243 = 0;
@@ -1712,7 +1712,7 @@ final class Class130_Sub1 extends Class130 {
         Class377.anInt9890 = 0;
         Class348_Sub16_Sub3.anInt8905 = 0;
         Class286_Sub7.anInt6291 = 0;
-        Class324.anInt4059 = 0;
+        BitmapFont.anInt4059 = 0;
         Player.anInt10533 = 0;
         Class348_Sub40_Sub8.anInt9161 = 0;
         Class239_Sub17.anInt6026 = 0;
@@ -1733,7 +1733,7 @@ final class Class130_Sub1 extends Class130 {
         Class126.anInt4986 = 0;
         Class318_Sub1_Sub3.anInt8753 = 0;
         ha_Sub2.anInt7515 = 0;
-        Class373_Sub2.anInt7431 = 0;
+        BasicMouseHandler.anInt7431 = 0;
         Class191.anInt2560 = 0;
         Class202.anInt2664 = 0;
         Class290.anInt3707 = 0;
@@ -1866,7 +1866,7 @@ final class Class130_Sub1 extends Class130 {
         Applet_Sub1.anInt34 = 0;
         Class348_Sub42_Sub13.anInt9619 = 0;
         Class318_Sub1_Sub3_Sub1.anInt10005 = 0;
-        Class373_Sub2.anInt7433 = 0;
+        BasicMouseHandler.anInt7433 = 0;
         ha_Sub2.anInt7617 = 0;
         Class318_Sub1_Sub5_Sub1.anInt10131 = 0;
         Class235.anInt3066 = 0;
@@ -1945,7 +1945,7 @@ final class Class130_Sub1 extends Class130 {
         Class121.anInt1799 = 0;
         Class238_Sub1.anInt5833 = 0;
         Class348_Sub16_Sub3.anInt8907 = 0;
-        Class373_Sub2.anInt7447 = 0;
+        BasicMouseHandler.anInt7447 = 0;
         Class6.anInt153 = 0;
         Class64_Sub3.anInt5651 = 0;
         Class33.anInt459 = 0;
@@ -2113,7 +2113,7 @@ final class Class130_Sub1 extends Class130 {
         Class27.anInt390 = 0;
         Class348_Sub42_Sub16_Sub1.anInt10455 = 0;
         Class330.anInt4120 = 0;
-        Class373_Sub2.anInt7449 = 0;
+        BasicMouseHandler.anInt7449 = 0;
         IOException_Sub1.anInt87 = 0;
         Class286_Sub6.anInt6271 = 0;
         Class348_Sub49.anInt7143 = 0;
@@ -2166,7 +2166,7 @@ final class Class130_Sub1 extends Class130 {
         Class64_Sub2.anInt5513 = 0;
         Class348_Sub17.anInt6803 = 0;
         Class78.anInt1310 = 0;
-        Class324.anInt4055 = 0;
+        BitmapFont.anInt4055 = 0;
         Class148.anInt2043 = 0;
         Class315.anInt3947 = 0;
         ha_Sub3.anInt8024 = 0;
@@ -2281,7 +2281,7 @@ final class Class130_Sub1 extends Class130 {
         ha_Sub2.anInt7699 = 0;
         Class64.anInt1125 = 0;
         Class73.anInt4775 = 0;
-        Class324.anInt4065 = 0;
+        BitmapFont.anInt4065 = 0;
         Class239_Sub15.anInt6004 = 0;
         Class64.anInt1134 = 0;
         Class314_Sub1.anInt6349 = 0;
@@ -2311,14 +2311,14 @@ final class Class130_Sub1 extends Class130 {
         Class239_Sub29.anInt6153 = 0;
         Class348_Sub49.anInt7198 = 0;
         Class110.anInt1705 = 0;
-        Class373_Sub2.anInt7455 = 0;
+        BasicMouseHandler.anInt7455 = 0;
         Class218.anInt2857 = 0;
         Class84.anInt1459 = 0;
         Class76.anInt1281 = 0;
         ha_Sub3.anInt8033 = 0;
         Class348_Sub11.anInt4769 = 0;
         Class286_Sub5.anInt6256 = 0;
-        Class324.anInt4061 = 0;
+        BitmapFont.anInt4061 = 0;
         Class98.anInt1568 = 0;
         Class50_Sub4.anInt5261 = 0;
         Class348_Sub11.anInt4768 = 0;
@@ -2460,7 +2460,7 @@ final class Class130_Sub1 extends Class130 {
         Class308.anInt3880 = 0;
         Class43.anInt613 = 0;
         s.anInt4593 = 0;
-        Class324.anInt4049 = 0;
+        BitmapFont.anInt4049 = 0;
         Class59_Sub2_Sub2.anInt8676 = 0;
         Class59_Sub1.anInt5295 = 0;
         r_Sub1.anInt10470 = 0;
@@ -2542,7 +2542,7 @@ final class Class130_Sub1 extends Class130 {
         Class348_Sub31_Sub2.anInt9068 = 0;
         Class239_Sub21.anInt6069 = 0;
         Class377.anInt9846 = 0;
-        Class324.anInt4057 = 0;
+        BitmapFont.anInt4057 = 0;
         Canvas_Sub1.anInt69 = 0;
         Class377.anInt9892 = 0;
         Class54.anInt972 = 0;
@@ -2559,7 +2559,7 @@ final class Class130_Sub1 extends Class130 {
         Class348_Sub40_Sub20.anInt9265 = 0;
         Class318_Sub1_Sub2_Sub1.anInt10179 = 0;
         ha_Sub2.anInt7622 = 0;
-        Class373_Sub2.anInt7436 = 0;
+        BasicMouseHandler.anInt7436 = 0;
         Class213.anInt2782 = 0;
         Npc.anInt10500 = 0;
         Class239_Sub14.anInt5984 = 0;
@@ -2574,7 +2574,7 @@ final class Class130_Sub1 extends Class130 {
         Class114.anInt1750 = 0;
         Class64_Sub2.anInt5448 = 0;
         Class58.anInt1061 = 0;
-        Class373_Sub2.anInt7443 = 0;
+        BasicMouseHandler.anInt7443 = 0;
         Class79.anInt1378 = 0;
         Class239_Sub21.anInt6067 = 0;
         Class318_Sub1_Sub3_Sub3.anInt10298 = 0;
@@ -2746,7 +2746,7 @@ final class Class130_Sub1 extends Class130 {
         Class367.anInt4482 = 0;
         Class76.anInt1278 = 0;
         Class377.anInt9863 = 0;
-        Class324.anInt4053 = 0;
+        BitmapFont.anInt4053 = 0;
         Class239_Sub3.anInt5861 = 0;
         Class318_Sub1_Sub3_Sub1.anInt10011 = 0;
         Class367_Sub11.anInt7400 = 0;
@@ -3045,7 +3045,7 @@ final class Class130_Sub1 extends Class130 {
         Class255.anInt3272 = 0;
         anInt5802 = 0;
         Class348_Sub47.anInt7117 = 0;
-        Class324.anInt4047 = 0;
+        BitmapFont.anInt4047 = 0;
         Class377.anInt9891 = 0;
         OutputStream_Sub2.anInt104 = 0;
         Class261.anInt3317 = 0;
@@ -3169,10 +3169,10 @@ final class Class130_Sub1 extends Class130 {
         Class105_Sub2.anInt8444 = 0;
         Class361.anInt4448 = 0;
         Class274.anInt3478 = 0;
-        Class373.anInt4535 = 0;
+        MouseHandler.anInt4535 = 0;
         Class239_Sub18.anInt6029 = 0;
         Class318_Sub1_Sub4_Sub2.anInt10107 = 0;
-        Class324.anInt4046 = 0;
+        BitmapFont.anInt4046 = 0;
         ha_Sub2.anInt7610 = 0;
         Class348_Sub23_Sub1.anInt8989 = 0;
         Class67.anInt4645 = 0;
@@ -3468,7 +3468,7 @@ final class Class130_Sub1 extends Class130 {
         Class219.anInt2870 = 0;
         ha_Sub2.anInt7601 = 0;
         Class64_Sub3.anInt5625 = 0;
-        Class373_Sub2.anInt7440 = 0;
+        BasicMouseHandler.anInt7440 = 0;
         Class367_Sub11.anInt7405 = 0;
         Class192.anInt2575 = 0;
         Class45.anInt648 = 0;
@@ -3533,7 +3533,7 @@ final class Class130_Sub1 extends Class130 {
         Class280.anInt3640 = 0;
         Class258_Sub3.anInt8548 = 0;
         Class10.anInt182 = 0;
-        Class324.anInt4056 = 0;
+        BitmapFont.anInt4056 = 0;
         Class348_Sub40_Sub36.anInt9454 = 0;
         Class311.anInt3905 = 0;
         Class348_Sub1_Sub1.anInt8804 = 0;
@@ -3683,7 +3683,7 @@ final class Class130_Sub1 extends Class130 {
         Class56.anInt1022 = 0;
         Class348_Sub21.anInt6856 = 0;
         ha.anInt4569 = 0;
-        Class373_Sub2.anInt7451 = 0;
+        BasicMouseHandler.anInt7451 = 0;
         Class248.anInt3185 = 0;
         Class248.anInt3199 = 0;
         Class348_Sub49_Sub1.anInt9741 = 0;
@@ -3791,7 +3791,7 @@ final class Class130_Sub1 extends Class130 {
         Class348_Sub31.anInt6918 = 0;
         Class192.anInt2580 = 0;
         Class248.anInt3186 = 0;
-        Class373_Sub2.anInt7435 = 0;
+        BasicMouseHandler.anInt7435 = 0;
         Class228.anInt2973 = 0;
         ha_Sub3.anInt7959 = 0;
         Class280.anInt3634 = 0;
@@ -4026,7 +4026,7 @@ final class Class130_Sub1 extends Class130 {
         Class177.anInt4663 = 0;
         Class286_Sub3.anInt6231 = 0;
         ha_Sub2.anInt7643 = 0;
-        Class373_Sub2.anInt7430 = 0;
+        BasicMouseHandler.anInt7430 = 0;
         Class228.anInt2971 = 0;
         Class299.anInt3812 = 0;
         Class234.anInt3038 = 0;
@@ -4069,7 +4069,7 @@ final class Class130_Sub1 extends Class130 {
         IOException_Sub1.anInt89 = 0;
         Class318_Sub1_Sub3_Sub5.anInt10385 = 0;
         Class105_Sub1.anInt8421 = 0;
-        Class373_Sub2.anInt7437 = 0;
+        BasicMouseHandler.anInt7437 = 0;
         Class239_Sub1.anInt5845 = 0;
         s_Sub3.anInt8295 = 0;
         Class318_Sub1_Sub3_Sub3.anInt10254 = 0;
@@ -4091,7 +4091,7 @@ final class Class130_Sub1 extends Class130 {
         Class239_Sub15.anInt5999 = 0;
         Class377.anInt9895 = 0;
         Class239_Sub13.anInt5974 = 0;
-        Class373_Sub2.anInt7457 = 0;
+        BasicMouseHandler.anInt7457 = 0;
         Class154.anInt2106 = 0;
         Class348_Sub40_Sub6.anInt9138 = 0;
         Class347.aBoolean4278 = true;

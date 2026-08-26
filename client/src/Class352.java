@@ -5,7 +5,7 @@
 final class Class352 {
     static int anInt4330;
     static Class114 aClass114_4331 = new Class114(31, -1);
-    Class324 aClass324_4332;
+    BitmapFont aClass324_4332;
     Class143 aClass143_4333 = null;
     static int anInt4334;
     static int anInt4335;
@@ -42,12 +42,12 @@ final class Class352 {
         }
     }
 
-    Class352(Class324 class324) {
+    Class352(BitmapFont class324) {
         this.aClass324_4332 = null;
         this.aClass324_4332 = class324;
     }
 
-    Class352(Class324 class324, Class143 class143) {
+    Class352(BitmapFont class324, Class143 class143) {
         this.aClass324_4332 = null;
         try {
             this.aClass143_4333 = class143;

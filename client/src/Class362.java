@@ -3,13 +3,13 @@
  */
 
 final class Class362 {
-    static Class324 aClass324_4456;
+    static BitmapFont aClass324_4456;
     static int anInt4457;
     static int anInt4458 = -1;
     static int anInt4459;
     static Class183 aClass183_4460;
 
-    static final void method3511(boolean bool, Class324 class324, Class143 class143, String string, int i, ha var_ha) {
+    static final void method3511(boolean bool, BitmapFont class324, Class143 class143, String string, int i, ha var_ha) {
         try {
             if (i != 2) aClass324_4456 = null;
             anInt4457++;
@@ -57,7 +57,7 @@ final class Class362 {
                     int i_9_ = 4;
                     int i_10_ = 6 - -i_9_;
                     int i_11_ = i_9_ + 6;
-                    var_ha.aa(i_10_ + -i_9_, i_11_ + -i_9_, i_9_ + i_7_ + i_9_, i_8_ + (i_9_ - -i_9_), -16777216, 0);
+                    var_ha.fillRect(i_10_ + -i_9_, i_11_ + -i_9_, i_9_ + i_7_ + i_9_, i_8_ + (i_9_ - -i_9_), -16777216, 0);
                     var_ha.method3628(i_10_ - i_9_, -i_9_ + i_11_, i_9_ + (i_7_ + i_9_), i_9_ + i_9_ + i_8_, -1, 0);
                     class324.method2584(null, 0, -1, null, -1, 1, i_8_, null, i_11_, 0, 0, i_7_, i_10_, false, 1, string);
                     Class13.method226(i_10_ - i_9_, i_9_ + i_7_ - -i_9_, i_11_ + -i_9_, i + -2, i_9_ + i_8_ - -i_9_);

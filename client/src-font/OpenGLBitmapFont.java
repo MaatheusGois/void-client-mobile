@@ -1,16 +1,17 @@
-/* Class324_Sub5 - Decompiled by JODE
+/* OpenGLBitmapFont - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import jaggl.OpenGL;
 
-final class Class324_Sub5 extends Class324 {
+/** OpenGL ({@link ha_Sub2} / jaggl) bitmap-font backend. */
+final class OpenGLBitmapFont extends BitmapFont {
     private final ha_Sub2 aHa_Sub2_6509;
     private final Class61 aClass61_6510;
     private final Class258_Sub3_Sub1 aClass258_Sub3_Sub1_6511;
     private final boolean aBoolean6512;
 
-    Class324_Sub5(ha_Sub2 var_ha_Sub2, Class143 class143, Class207[] class207s, boolean bool) {
+    OpenGLBitmapFont(ha_Sub2 var_ha_Sub2, Class143 class143, Class207[] class207s, boolean bool) {
         super(var_ha_Sub2, class143);
         aHa_Sub2_6509 = var_ha_Sub2;
         int i = 0;

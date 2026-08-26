@@ -82,8 +82,8 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                     continue;
                                 }
                                 if (Class300.aBoolean3819 && Class127_Sub1.aBoolean8386) {
-                                    int i_29_ = (Class258_Sub4.aClass373_8552.method3597(true) - -i_26_);
-                                    int i_30_ = (Class258_Sub4.aClass373_8552.method3594((byte) 101) + i_27_);
+                                    int i_29_ = (Class258_Sub4.mouseHandler.getCursorX(true) - -i_26_);
+                                    int i_30_ = (Class258_Sub4.mouseHandler.getCursorY((byte) 101) + i_27_);
                                     i_29_ -= Class318_Sub4.anInt6411;
                                     i_30_ -= Class219.anInt2872;
                                     if (Class348_Sub40_Sub37.anInt9461 > i_29_) i_29_ = Class348_Sub40_Sub37.anInt9461;
@@ -175,7 +175,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                             if (Class298.aBoolean3811) {
                                                 int i_39_ = -256;
                                                 if (Class239_Sub5.anInt5891 < 20) i_39_ = -65536;
-                                                Applet_Sub1.aClass324_20.method2569("Fps:" + (Class239_Sub5.anInt5891), i_38_, i_39_, i_37_, -128, -1);
+                                                Applet_Sub1.aClass324_20.drawTextRightAligned("Fps:" + (Class239_Sub5.anInt5891), i_38_, i_39_, i_37_, -128, -1);
                                                 i_38_ += 15;
                                                 Runtime runtime = Runtime.getRuntime();
                                                 int i_40_ = (int) (((runtime.totalMemory()) + -(runtime.freeMemory())) / 1024L);
@@ -190,12 +190,12 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                                         if (i_40_ > 65536) Class59.method544("WARNING: Memory usage over 64MB! Please inform whoever is responsible for the content/area you are using/in.", false, 4);
                                                     }
                                                 }
-                                                Applet_Sub1.aClass324_20.method2569("Mem:" + i_40_ + "k", i_38_, i_41_, i_37_, -124, -1);
+                                                Applet_Sub1.aClass324_20.drawTextRightAligned("Mem:" + i_40_ + "k", i_38_, i_41_, i_37_, -124, -1);
                                                 i_38_ += 15;
-                                                Applet_Sub1.aClass324_20.method2569(("In:" + Class264.anInt3372 + "B/s Out:" + (Class348_Sub48.anInt7134) + "B/s"), i_38_, -256, i_37_, -127, -1);
+                                                Applet_Sub1.aClass324_20.drawTextRightAligned(("In:" + Class264.anInt3372 + "B/s Out:" + (Class348_Sub48.anInt7134) + "B/s"), i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 15;
                                                 int i_43_ = (Class348_Sub8.aHa6654.E() / 1024);
-                                                Applet_Sub1.aClass324_20.method2569("Offheap:" + i_43_ + "k", i_38_, (i_43_ <= 65536 ? -256 : -65536), i_37_, -125, -1);
+                                                Applet_Sub1.aClass324_20.drawTextRightAligned("Offheap:" + i_43_ + "k", i_38_, (i_43_ <= 65536 ? -256 : -65536), i_37_, -125, -1);
                                                 i_38_ += 15;
                                                 int i_44_ = 0;
                                                 int i_45_ = 0;
@@ -210,25 +210,25 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                                 int i_48_ = i_46_ * 100 / i_44_;
                                                 int i_49_ = 10000 * i_45_ / i_44_;
                                                 String string = ("Cache:" + (Class357.method3486(2, true, 0, i_49_, 16980)) + "% (" + i_48_ + "%)");
-                                                Class240.aClass324_4684.method2569(string, i_38_, -256, i_37_, -127, -1);
+                                                Class240.aClass324_4684.drawTextRightAligned(string, i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 12;
                                                 if (Loader.showCoordinates) {
                                                     int playerX = (Class132.localPlayer.x >> 9) + za_Sub2.regionTileX;
                                                     int playerY = (Class132.localPlayer.y >> 9) + Class90.regionTileY;
-                                                    Class240.aClass324_4684.method2569("Coordinates: " + playerX + ", " + playerY + ", " + Class132.localPlayer.plane, i_38_, -256, i_37_, -127, -1);
+                                                    Class240.aClass324_4684.drawTextRightAligned("Coordinates: " + playerX + ", " + playerY + ", " + Class132.localPlayer.plane, i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
-                                                    Class240.aClass324_4684.method2569("Region id: " + (((playerX >> 6) << 8) + (playerY >> 6)) + " (" + (playerX >> 6) + ", " + (playerY >> 6) + ")", i_38_, -256, i_37_, -127, -1);
+                                                    Class240.aClass324_4684.drawTextRightAligned("Region id: " + (((playerX >> 6) << 8) + (playerY >> 6)) + " (" + (playerX >> 6) + ", " + (playerY >> 6) + ")", i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
-                                                    Class240.aClass324_4684.method2569("Chunk: " + (playerX >> 3) + ", " + (playerY >> 3), i_38_, -256, i_37_, -127, -1);
+                                                    Class240.aClass324_4684.drawTextRightAligned("Chunk: " + (playerX >> 3) + ", " + (playerY >> 3), i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
                                                 }
                                             }
-                                            if (Class313.anInt3936 > 0) Class240.aClass324_4684.method2569(("Particles: " + (Class318_Sub1_Sub5.anInt8780) + " / " + Class313.anInt3936), i_38_, -256, i_37_, -121, -1);
+                                            if (Class313.anInt3936 > 0) Class240.aClass324_4684.drawTextRightAligned(("Particles: " + (Class318_Sub1_Sub5.anInt8780) + " / " + Class313.anInt3936), i_38_, -256, i_37_, -121, -1);
                                             i_38_ += 12;
                                             if (Class188.aBoolean2514) {
-                                                Class240.aClass324_4684.method2569(("Polys: " + Class348_Sub8.aHa6654.I() + " Models: " + Class348_Sub8.aHa6654.M()), i_38_, -256, i_37_, -127, -1);
+                                                Class240.aClass324_4684.drawTextRightAligned(("Polys: " + Class348_Sub8.aHa6654.I() + " Models: " + Class348_Sub8.aHa6654.M()), i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 12;
-                                                Class240.aClass324_4684.method2569(("Ls: " + Class177.anInt4666 + " La: " + Class86.anInt1482 + " NPC: " + Class227.anInt2968 + " Pl: " + za_Sub1.anInt9776), i_38_, -256, i_37_, -122, -1);
+                                                Class240.aClass324_4684.drawTextRightAligned(("Ls: " + Class177.anInt4666 + " La: " + Class86.anInt1482 + " NPC: " + Class227.anInt2968 + " Pl: " + za_Sub1.anInt9776), i_38_, -256, i_37_, -122, -1);
                                                 Class110_Sub1.method1042((byte) -123);
                                                 i_38_ += 12;
                                             }
@@ -249,16 +249,16 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                 if (Class175.aBooleanArray2326[i_23_] || ha_Sub3.anInt8045 > 1) {
                                     if (class46.anInt774 == 3) {
                                         if (i_28_ == 0) {
-                                            if (class46.aBoolean810) Class348_Sub8.aHa6654.aa(i_24_, i_25_, (class46.anInt709), (class46.anInt789), (class46.anInt749), 0);
+                                            if (class46.aBoolean810) Class348_Sub8.aHa6654.fillRect(i_24_, i_25_, (class46.anInt709), (class46.anInt789), (class46.anInt749), 0);
                                             else Class348_Sub8.aHa6654.method3628(i_24_, i_25_, (class46.anInt709), (class46.anInt789), (class46.anInt749), 0);
                                         } else if (!class46.aBoolean810) Class348_Sub8.aHa6654.method3628(i_24_, i_25_, class46.anInt709, class46.anInt789, (0xffffff & class46.anInt749 | (-(i_28_ & 0xff) + 255 << 24)), 1);
-                                        else Class348_Sub8.aHa6654.aa(i_24_, i_25_, class46.anInt709, class46.anInt789, (0xffffff & class46.anInt749 | (-(0xff & i_28_) + 255 << 24)), 1);
+                                        else Class348_Sub8.aHa6654.fillRect(i_24_, i_25_, class46.anInt709, class46.anInt789, (0xffffff & class46.anInt749 | (-(0xff & i_28_) + 255 << 24)), 1);
                                         if (Class59_Sub1.aBoolean5300) {
                                             if (bool) Class338.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Class54.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                         }
                                     } else if (class46.anInt774 == 4) {
-                                        Class324 class324 = class46.method426((Class348_Sub8.aHa6654), (byte) 68);
+                                        BitmapFont class324 = class46.method426((Class348_Sub8.aHa6654), (byte) 68);
                                         if (class324 == null) {
                                             if (Class348_Sub42_Sub13.aBoolean9616) Class251.method1916(-9343, class46);
                                         } else {

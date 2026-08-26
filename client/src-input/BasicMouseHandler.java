@@ -1,4 +1,4 @@
-/* Class373_Sub2 - Decompiled by JODE
+/* BasicMouseHandler - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -7,7 +7,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotionListener {
+/**
+ * Fallback AWT mouse handler without wheel support.
+ * Used when {@link AwtMouseHandler} construction fails (see {@link Class348_Sub18#method2941}).
+ * Also hosts unrelated static dump fields left by the obfuscator.
+ */
+final class BasicMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener {
     static int anInt7426;
     static int anInt7427;
     static int anInt7428;
@@ -72,7 +77,7 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         if (bool && bool_2_) return 4;
         if (bool) return 1;
         if (bool_1_) return 2;
-        if (i != -6345) method3596(-12);
+        if (i != -6345) popEvent(-12);
         if (bool_2_) return 4;
         return 0;
     }
@@ -82,14 +87,14 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         anInt7452++;
     }
 
-    final boolean method3590(byte i) {
+    final boolean isRightButtonDown(byte i) {
         anInt7457++;
         if (i <= 112) method3606(-77, 6, -104, -59, 86);
         return (anInt7432 & 0x4) != 0;
     }
 
-    final synchronized void method3589(int i) {
-        if (i != 0) method3589(-46);
+    final synchronized void syncEvents(int i) {
+        if (i != 0) syncEvents(-46);
         anInt7432 = anInt7456;
         anInt7440++;
         anInt7448 = anInt7453;
@@ -113,13 +118,13 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         if (aBoolean7458) method3606(-1, i, i_4_, 0, -125);
     }
 
-    final int method3594(byte i) {
+    final int getCursorY(byte i) {
         anInt7430++;
         if (i <= 69) return -123;
         return anInt7448;
     }
 
-    final Class348_Sub45 method3596(int i) {
+    final Class348_Sub45 popEvent(int i) {
         if (i != 0) mouseReleased(null);
         anInt7437++;
         return (Class348_Sub45) aClass262_7441.method1997(i + 8);
@@ -142,19 +147,19 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         anInt7438++;
     }
 
-    final void method3592(int i) {
-        if (i != 0) method3597(false);
+    final void destroy(int i) {
+        if (i != 0) getCursorX(false);
         anInt7433++;
         method3608(84);
     }
 
-    final boolean method3588(int i) {
+    final boolean isMiddleButtonDown(int i) {
         int i_9_ = -108 % ((-38 - i) / 48);
         anInt7434++;
         return (anInt7432 & 0x2) != 0;
     }
 
-    final boolean method3595(int i) {
+    final boolean isLeftButtonDown(int i) {
         anInt7455++;
         if (i >= -67) mouseExited(null);
         return (anInt7432 & 0x1) != 0;
@@ -200,7 +205,7 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         }
     }
 
-    final int method3597(boolean bool) {
+    final int getCursorX(boolean bool) {
         if (bool != true) anInt7453 = -101;
         anInt7443++;
         return anInt7442;
@@ -222,7 +227,7 @@ final class Class373_Sub2 extends Class373 implements MouseListener, MouseMotion
         aClass283Array7446 = null;
     }
 
-    Class373_Sub2(Component component, boolean bool) {
+    BasicMouseHandler(Component component, boolean bool) {
         method3603((byte) -108, component);
         aBoolean7458 = bool;
     }

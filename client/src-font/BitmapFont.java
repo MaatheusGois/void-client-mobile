@@ -1,4 +1,4 @@
-/* Class324 - Decompiled by JODE
+/* BitmapFont - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -13,13 +13,13 @@ import java.util.Random;
  * Common draw helpers (coords are canvas pixels, colours are packed ARGB —
  * FPS overlay often uses {@code -256} yellow / {@code -1} white):
  * <ul>
- *   <li>{@link #method2576} — left-aligned at {@code (x, y)}</li>
- *   <li>{@link #method2575} — centred on X ({@code centreX}), Y separate</li>
- *   <li>{@link #method2569} — right-aligned to {@code rightX}</li>
+ *   <li>{@link #drawText} — left-aligned at {@code (x, y)}</li>
+ *   <li>{@link #drawTextCentred} — centred on X ({@code centreX}), Y separate</li>
+ *   <li>{@link #drawTextRightAligned} — right-aligned to {@code rightX}</li>
  * </ul>
- * Prefer {@link #method2576} for overlays you layout yourself (e.g. Microbot HUD).
+ * Prefer {@link #drawText} for overlays you layout yourself (e.g. Microbot HUD).
  */
-abstract class Class324 {
+abstract class BitmapFont {
     static int anInt4045;
     static int anInt4046;
     static int anInt4047;
@@ -195,7 +195,7 @@ abstract class Class324 {
      * @param unused must be {@code <= -119} or the call no-ops
      * @param shadow ARGB shadow (often {@code -1} or {@code -16777216})
      */
-    final void method2569(String string, int y, int colour, int rightX, int unused, int shadow) {
+    final void drawTextRightAligned(String string, int y, int colour, int rightX, int unused, int shadow) {
         anInt4052++;
         if (unused >= -119) method2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
         if (string != null) {
@@ -292,8 +292,8 @@ abstract class Class324 {
     /**
      * Draw {@code string} centred on {@code centreX} at baseline {@code y}.
      * <p>
-     * Args are easy to swap with {@link #method2576} — wrong order stacks glyphs.
-     * Prefer {@link #method2576} for left-aligned overlays.
+     * Args are easy to swap with {@link #drawText} — wrong order stacks glyphs.
+     * Prefer {@link #drawText} for left-aligned overlays.
      *
      * @param unused  obfuscation pad (any byte; unused for control flow)
      * @param centreX horizontal centre of the string
@@ -302,7 +302,7 @@ abstract class Class324 {
      * @param shadow  ARGB shadow
      * @param y       baseline Y
      */
-    final void method2575(byte unused, int centreX, int colour, String string, int shadow, int y) {
+    final void drawTextCentred(byte unused, int centreX, int colour, String string, int shadow, int y) {
         anInt4060++;
         if (string != null) {
             method2579(shadow, 115, colour);
@@ -322,7 +322,7 @@ abstract class Class324 {
      * @param shadow ARGB shadow
      * @param pad    must be {@code <= -108} or the call no-ops (obfuscation guard)
      */
-    final void method2576(String string, int colour, int y, int x, int shadow, int pad) {
+    final void drawText(String string, int colour, int y, int x, int shadow, int pad) {
         if (pad <= -108) {
             anInt4045++;
             if (string != null) {
@@ -497,7 +497,7 @@ abstract class Class324 {
         }
     }
 
-    Class324(ha var_ha, Class143 class143) {
+    BitmapFont(ha var_ha, Class143 class143) {
         try {
             aClass143_4063 = class143;
             aHa4048 = var_ha;

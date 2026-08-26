@@ -397,7 +397,7 @@ final class Class318_Sub7 extends Class318 {
             this.aClass129_6436 = class129;
             this.aClass318_Sub10_6439 = class318_sub10;
             this.aClass181_6441 = this.aClass129_6436.method1125((byte) 59);
-            if (!var_ha.method3644() && (this.aClass181_6441.anInt2387) != -1) this.aClass181_6441 = Class373.method3591((this.aClass181_6441.anInt2387), 0);
+            if (!var_ha.method3644() && (this.aClass181_6441.anInt2387) != -1) this.aClass181_6441 = MouseHandler.method3591((this.aClass181_6441.anInt2387), 0);
             this.aClass243_6433 = new Class243();
             anInt6434 += 64.0 * Math.random();
             method2507(true);

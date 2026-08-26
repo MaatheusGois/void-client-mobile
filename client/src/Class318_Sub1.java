@@ -130,7 +130,7 @@ abstract class Class318_Sub1 extends Class318 {
                     if (class42.aString597 == null) break;
                     int i_29_ = 0;
                     if (class105 != null) i_29_ = class105.method969();
-                    Class324 class324 = Class240.aClass324_4684;
+                    BitmapFont class324 = Class240.aClass324_4684;
                     Class143 class143 = Class258_Sub1.aClass143_8527;
                     if (class42.anInt576 == 1) {
                         class324 = Applet_Sub1.aClass324_20;

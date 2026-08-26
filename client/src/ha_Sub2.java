@@ -955,16 +955,16 @@ final class ha_Sub2 extends ha {
         anInt7726++;
     }
 
-    final Class324 method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
         try {
             anInt7574++;
-            return new Class324_Sub5(this, class143, class207s, bool);
+            return new OpenGLBitmapFont(this, class143, class207s, bool);
         } catch (RuntimeException runtimeexception) {
             throw Class348_Sub17.method2929(runtimeexception, ("qo.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
-    final void aa(int i, int i_85_, int i_86_, int i_87_, int i_88_, int i_89_) {
+    final void fillRect(int i, int i_85_, int i_86_, int i_87_, int i_88_, int i_89_) {
         anInt7601++;
         float f = (float) i + 0.35F;
         float f_90_ = (float) i_85_ + 0.35F;
@@ -3199,13 +3199,13 @@ final class ha_Sub2 extends ha {
                                             i_373_ = Class151.anIntArray2062[0];
                                         }
                                     }
-                                    Class324 class324 = Class240.aClass324_4684;
-                                    Class324 class324_387_ = Class240.aClass324_4684;
+                                    BitmapFont class324 = Class240.aClass324_4684;
+                                    BitmapFont class324_387_ = Class240.aClass324_4684;
                                     Class143 class143 = Class258_Sub1.aClass143_8527;
                                     int i_388_ = class31.anInt435;
                                     Class143 class143_389_ = Class258_Sub1.aClass143_8527;
                                     if (i_388_ >= 0) {
-                                        Class324 class324_390_ = Class14.method232((Class348_Sub8.aHa6654), (byte) -53, true, i_388_);
+                                        BitmapFont class324_390_ = Class14.method232((Class348_Sub8.aHa6654), (byte) -53, true, i_388_);
                                         Class143 class143_391_ = (Class135.method1151(-25411, Class348_Sub8.aHa6654, i_388_));
                                         if (class324_390_ != null && class143_391_ != null) {
                                             class324 = class324_390_;
@@ -3215,7 +3215,7 @@ final class ha_Sub2 extends ha {
                                     if (class31_349_ != null) {
                                         i_388_ = (class31_349_.anInt435);
                                         if (i_388_ >= 0) {
-                                            Class324 class324_392_ = (Class14.method232(Class348_Sub8.aHa6654, (byte) -53, true, i_388_));
+                                            BitmapFont class324_392_ = (Class14.method232(Class348_Sub8.aHa6654, (byte) -53, true, i_388_));
                                             Class143 class143_393_ = (Class135.method1151(-25411, Class348_Sub8.aHa6654, i_388_));
                                             if (class324_392_ != null && class143_393_ != null) {
                                                 class143_389_ = class143_393_;
@@ -3307,7 +3307,7 @@ final class ha_Sub2 extends ha {
                                                 class105_377_.method964((i_403_ + (i_416_ + (-i_360_ - -(i_356_ * i_429_)))), i_417_, 0, i_428_, 1);
                                         }
                                         if (class105_381_ != null) class105_381_.method964(i_406_ + i_416_ + -i_362_, i_417_, 0, i_428_, 1);
-                                        class324.method2576(string_396_, (class31.anInt444 | i_427_), i_420_, i_404_ + i_416_, 0, -124);
+                                        class324.drawText(string_396_, (class31.anInt444 | i_427_), i_420_, i_404_ + i_416_, 0, -124);
                                         if (class31_349_ != null) {
                                             if (class105 != null) class105.method964((i_416_ + i_407_ - i_370_), i_417_, 0, i_428_, 1);
                                             if (class105_364_ != null) class105_364_.method964(-i_372_ + (i_408_ + i_416_), i_417_, 0, i_428_, 1);
@@ -3316,7 +3316,7 @@ final class ha_Sub2 extends ha {
                                                     class105_363_.method964((i_430_ * i_367_ + i_416_ + (i_409_ + -i_371_)), i_417_, 0, i_428_, 1);
                                             }
                                             if (class105_365_ != null) class105_365_.method964((i_416_ - -i_410_ + -i_373_), i_417_, 0, i_428_, 1);
-                                            class324_387_.method2576(string, (i_427_ | (class31_349_.anInt444)), i_423_, i_416_ + i_411_, 0, -125);
+                                            class324_387_.drawText(string, (i_427_ | (class31_349_.anInt444)), i_423_, i_416_ + i_411_, 0, -125);
                                         }
                                     } else {
                                         if (class105_375_ != null) class105_375_.method974(i_416_ - (-i_401_ + i_359_), i_417_);
@@ -3326,7 +3326,7 @@ final class ha_Sub2 extends ha {
                                                 class105_377_.method974((i_403_ + i_416_ - (i_360_ - i_431_ * i_356_)), i_417_);
                                         }
                                         if (class105_381_ != null) class105_381_.method974(i_406_ + (i_416_ + -i_362_), i_417_);
-                                        class324.method2576(string_396_, (class31.anInt444 | ~0xffffff), i_420_, i_416_ + i_404_, 0, i_316_ ^ ~0x74);
+                                        class324.drawText(string_396_, (class31.anInt444 | ~0xffffff), i_420_, i_416_ + i_404_, 0, i_316_ ^ ~0x74);
                                         if (class31_349_ != null) {
                                             if (class105 != null) class105.method974((-i_370_ + i_416_ + i_407_), i_417_);
                                             if (class105_364_ != null) class105_364_.method974(i_408_ + (i_416_ + -i_372_), i_417_);
@@ -3335,7 +3335,7 @@ final class ha_Sub2 extends ha {
                                                     class105_363_.method974((i_432_ * i_367_ + (-i_371_ + i_416_ + i_409_)), i_417_);
                                             }
                                             if (class105_365_ != null) class105_365_.method974(i_410_ + i_416_ - i_373_, i_417_);
-                                            class324_387_.method2576(string, (class31_349_.anInt444) | ~0xffffff, i_423_, i_411_ + i_416_, 0, -119);
+                                            class324_387_.drawText(string, (class31_349_.anInt444) | ~0xffffff, i_423_, i_411_ + i_416_, 0, -119);
                                         }
                                     }
                                     Class338.method2663(-5590, i_416_, i_416_ + i_400_, i_418_, 1 + i_419_);
@@ -3408,7 +3408,7 @@ final class ha_Sub2 extends ha {
                 }
                 int i_452_ = ~0xffffff | i_448_;
                 if (Class309.anIntArray4806[i_438_] == 0) {
-                    Class262.aClass324_3326.method2575((byte) 115, i_439_ + i_317_, i_452_, string, -16777216, i_440_ + i);
+                    Class262.aClass324_3326.drawTextCentred((byte) 115, i_439_ + i_317_, i_452_, string, -16777216, i_440_ + i);
                     i_444_ -= i_443_ >> 1;
                     i_446_ -= i_443_ >> 1;
                 }
@@ -3438,7 +3438,7 @@ final class ha_Sub2 extends ha {
                     Class348_Sub8.aHa6654.T(i_317_ - (-i_439_ - -50), i, 50 + (i_439_ + i_317_), i - -i_315_);
                     i_444_ += 50 - i_453_;
                     i_446_ += -i_453_ + 50;
-                    Class262.aClass324_3326.method2576(string, i_452_, i + i_440_, (i_317_ - (-i_439_ - 50) - i_453_), -16777216, i_316_ + -125);
+                    Class262.aClass324_3326.drawText(string, i_452_, i + i_440_, (i_317_ - (-i_439_ - 50) - i_453_), -16777216, i_316_ + -125);
                     Class348_Sub8.aHa6654.KA(i_317_, i, i_318_ + i_317_, i + i_315_);
                 }
                 if (Class309.anIntArray4806[i_438_] == 5) {
@@ -3451,7 +3451,7 @@ final class ha_Sub2 extends ha {
                     Class348_Sub8.aHa6654.T(i_317_, i_440_ + i - (i_456_ - -1), i_318_ + i_317_, 5 + i_440_ + i);
                     i_444_ -= i_443_ >> 1;
                     i_447_ += i_455_;
-                    Class262.aClass324_3326.method2575((byte) -105, i_439_ + i_317_, i_452_, string, -16777216, i_455_ + (i + i_440_));
+                    Class262.aClass324_3326.drawTextCentred((byte) -105, i_439_ + i_317_, i_452_, string, -16777216, i_455_ + (i + i_440_));
                     i_445_ += i_455_;
                     i_446_ -= i_443_ >> 1;
                     Class348_Sub8.aHa6654.KA(i_317_, i, i_318_ + i_317_, i_315_ + i);
@@ -3459,7 +3459,7 @@ final class ha_Sub2 extends ha {
             } else {
                 i_444_ -= i_443_ >> 1;
                 i_446_ -= i_443_ >> 1;
-                Class262.aClass324_3326.method2575((byte) 118, i_439_ + i_317_, -256, string, -16777216, i_440_ + i);
+                Class262.aClass324_3326.drawTextCentred((byte) 118, i_439_ + i_317_, -256, string, -16777216, i_440_ + i);
             }
             Class338.method2663(i_316_ + -5592, i_444_, 1 + i_446_, i_445_, 1 + i_447_);
         }

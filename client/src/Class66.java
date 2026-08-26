@@ -52,15 +52,15 @@ final class Class66 {
                     i_1_ = Class168.aClass46_2249.anInt800;
                     i_2_ = Class168.aClass46_2249.anInt750;
                 }
-                anIntArray1164[0] = Class258_Sub4.aClass373_8552.method3597(true) - i_1_;
-                anIntArray1164[1] = (Class258_Sub4.aClass373_8552.method3594((byte) 80) - i_2_);
+                anIntArray1164[0] = Class258_Sub4.mouseHandler.getCursorX(true) - i_1_;
+                anIntArray1164[1] = (Class258_Sub4.mouseHandler.getCursorY((byte) 80) - i_2_);
             }
             method711(class348_sub42_sub19, 200000);
         }
     }
 
     private static final void method702(int i) {
-        Class46 class46 = Class324.method2570(1512932720, i);
+        Class46 class46 = BitmapFont.method2570(1512932720, i);
         if (class46 != null) {
             int i_3_ = i >>> 16;
             Class46[] class46s = Class369_Sub2.aClass46ArrayArray8584[i_3_];
@@ -2602,7 +2602,7 @@ final class Class66 {
                 int i_248_ = anIntArray1149[anInt1173 + 1];
                 int i_249_ = anIntArray1149[anInt1173 + 2];
                 if (i_248_ == 0) throw new RuntimeException();
-                Class46 class46 = Class324.method2570(1512932720, i_247_);
+                Class46 class46 = BitmapFont.method2570(1512932720, i_247_);
                 if (class46.aClass46Array798 == null) class46.aClass46Array798 = new Class46[i_249_ + 1];
                 if (class46.aClass46Array798.length <= i_249_) {
                     Class46[] class46s = new Class46[i_249_ + 1];
@@ -2627,13 +2627,13 @@ final class Class66 {
                     if (bool) throw new RuntimeException("Tried to .cc_delete static .active-component!");
                     throw new RuntimeException("Tried to cc_delete static active-component!");
                 }
-                Class46 class46_252_ = Class324.method2570(1512932720, class46.anInt830);
+                Class46 class46_252_ = BitmapFont.method2570(1512932720, class46.anInt830);
                 class46_252_.aClass46Array798[(class46.anInt704)] = null;
                 Class251.method1916(-9343, class46_252_);
                 return;
             }
             if (i == 102) {
-                Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                 class46.aClass46Array798 = null;
                 Class251.method1916(-9343, class46);
                 return;
@@ -2655,7 +2655,7 @@ final class Class66 {
             }
             if (i == 201) {
                 int i_255_ = anIntArray1149[--anInt1173];
-                Class46 class46 = Class324.method2570(1512932720, i_255_);
+                Class46 class46 = BitmapFont.method2570(1512932720, i_255_);
                 if (class46 == null) {
                     anIntArray1149[anInt1173++] = 0;
                     return;
@@ -2730,7 +2730,7 @@ final class Class66 {
             Class46 class46;
             if (i >= 2000) {
                 i -= 1000;
-                class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             if (i == 1000) {
                 anInt1173 -= 4;
@@ -2794,7 +2794,7 @@ final class Class66 {
             Class46 class46;
             if (i >= 2000) {
                 i -= 1000;
-                class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             if (i == 1100) {
                 anInt1173 -= 2;
@@ -3011,7 +3011,7 @@ final class Class66 {
             Class46 class46;
             if (i >= 2000) {
                 i -= 1000;
-                class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             Class251.method1916(-9343, class46);
             if (i == 1200 || i == 1205 || i == 1208 || i == 1209 || i == 1212 || i == 1213) {
@@ -3111,7 +3111,7 @@ final class Class66 {
             Class46 class46;
             if (i >= 2000) {
                 i -= 1000;
-                class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             if (i == 1300) {
                 int i_281_ = anIntArray1149[--anInt1173] - 1;
@@ -3224,7 +3224,7 @@ final class Class66 {
                 Class46 class46;
                 if (i >= 2000) {
                     i -= 1000;
-                    class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                    class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                 } else class46 = bool ? aClass46_1169 : aClass46_1150;
                 if (i == 1499) class46.method434(false);
                 else {
@@ -3438,7 +3438,7 @@ final class Class66 {
             } else if (i < 2000 || i >= 2900 && i < 3000) {
                 Class46 class46;
                 if (i >= 2000) {
-                    class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                    class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                     i -= 1000;
                 } else class46 = bool ? aClass46_1169 : aClass46_1150;
                 if (anInt1177 >= 10) throw new RuntimeException("C29xx-1");
@@ -3454,7 +3454,7 @@ final class Class66 {
                     return;
                 }
             } else if (i < 2600) {
-                Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2500) {
                     anIntArray1149[anInt1173++] = class46.anInt800;
                     return;
@@ -3485,7 +3485,7 @@ final class Class66 {
                     return;
                 }
             } else if (i < 2700) {
-                Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2600) {
                     anIntArray1149[anInt1173++] = class46.anInt747;
                     return;
@@ -3548,12 +3548,12 @@ final class Class66 {
                 }
             } else if (i < 2800) {
                 if (i == 2700) {
-                    Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                    Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                     anIntArray1149[anInt1173++] = class46.anInt812;
                     return;
                 }
                 if (i == 2701) {
-                    Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                    Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                     if (class46.anInt812 == -1) {
                         anIntArray1149[anInt1173++] = 0;
                         return;
@@ -3570,7 +3570,7 @@ final class Class66 {
                     return;
                 }
                 if (i == 2703) {
-                    Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                    Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                     if (class46.aClass46Array798 == null) anIntArray1149[anInt1173++] = 0;
                     else {
                         int i_299_ = class46.aClass46Array798.length;
@@ -3598,7 +3598,7 @@ final class Class66 {
                     return;
                 }
             } else if (i < 2900) {
-                Class46 class46 = Class324.method2570(1512932720, anIntArray1149[--anInt1173]);
+                Class46 class46 = BitmapFont.method2570(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2800) {
                     anIntArray1149[anInt1173++] = client.method105(class46).method3307(11);
                     return;
@@ -3675,7 +3675,7 @@ final class Class66 {
                     int i_306_ = anIntArray1149[anInt1173];
                     int i_307_ = anIntArray1149[anInt1173 + 1];
                     int i_308_ = anIntArray1149[anInt1173 + 2];
-                    Class46 class46 = Class324.method2570(1512932720, i_308_);
+                    Class46 class46 = BitmapFont.method2570(1512932720, i_308_);
                     Class100.method887(class46, i_306_, i_307_, 2147483647);
                     return;
                 }
@@ -3989,11 +3989,11 @@ final class Class66 {
                     return;
                 }
                 if (i == 3342) {
-                    anIntArray1149[anInt1173++] = Class258_Sub4.aClass373_8552.method3597(true);
+                    anIntArray1149[anInt1173++] = Class258_Sub4.mouseHandler.getCursorX(true);
                     return;
                 }
                 if (i == 3343) {
-                    anIntArray1149[anInt1173++] = Class258_Sub4.aClass373_8552.method3594((byte) 127);
+                    anIntArray1149[anInt1173++] = Class258_Sub4.mouseHandler.getCursorY((byte) 127);
                     return;
                 }
                 if (i == 3344) {
@@ -4017,9 +4017,9 @@ final class Class66 {
                     return;
                 }
                 if (i == 3351) {
-                    anIntArray1149[anInt1173++] = Class258_Sub4.aClass373_8552.method3595(-83) ? 1 : 0;
-                    anIntArray1149[anInt1173++] = Class258_Sub4.aClass373_8552.method3588(-121) ? 1 : 0;
-                    anIntArray1149[anInt1173++] = Class258_Sub4.aClass373_8552.method3590((byte) 125) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = Class258_Sub4.mouseHandler.isLeftButtonDown(-83) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = Class258_Sub4.mouseHandler.isMiddleButtonDown(-121) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = Class258_Sub4.mouseHandler.isRightButtonDown((byte) 125) ? 1 : 0;
                     return;
                 }
             } else if (i < 3500) {
@@ -5132,7 +5132,7 @@ final class Class66 {
     }
 
     private static final void method714(int i) {
-        Class46 class46 = Class324.method2570(1512932720, i);
+        Class46 class46 = BitmapFont.method2570(1512932720, i);
         if (class46 != null) {
             int i_520_ = i >>> 16;
             Class46[] class46s = Class369_Sub2.aClass46ArrayArray8584[i_520_];

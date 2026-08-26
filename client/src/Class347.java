@@ -33,8 +33,8 @@ final class Class347 {
                 i_0_ = s_Sub3.method4008((byte) -124);
                 i_1_ = Class16.method260(false);
             }
-            int i_2_ = i_0_ + Class258_Sub4.aClass373_8552.method3597(true);
-            int i_3_ = i_1_ + Class258_Sub4.aClass373_8552.method3594((byte) 80);
+            int i_2_ = i_0_ + Class258_Sub4.mouseHandler.getCursorX(true);
+            int i_3_ = i_1_ + Class258_Sub4.mouseHandler.getCursorY((byte) 80);
             i_3_ -= Class219.anInt2872;
             i_2_ -= Class318_Sub4.anInt6411;
             if (i_2_ < Class348_Sub40_Sub37.anInt9461) i_2_ = Class348_Sub40_Sub37.anInt9461;
@@ -44,7 +44,7 @@ final class Class347 {
                 if (Class289.aClass46_3701.anInt789 + i_3_ > (Class40.anInt558 - -Class331.aClass46_4130.anInt789)) i_3_ = (-Class289.aClass46_3701.anInt789 + (Class40.anInt558 - -Class331.aClass46_4130.anInt789));
                 int i_4_ = (-Class348_Sub40_Sub37.anInt9461 + (i_2_ - -Class331.aClass46_4130.anInt747));
                 int i_5_ = (-Class40.anInt558 + (i_3_ + Class331.aClass46_4130.anInt755));
-                if (Class258_Sub4.aClass373_8552.method3593(94)) {
+                if (Class258_Sub4.mouseHandler.isAnyButtonDown(94)) {
                     if (Class289.aClass46_3701.anInt703 < Class318_Sub1.anInt6392) {
                         int i_6_ = i_2_ + -ha_Sub3.anInt8001;
                         int i_7_ = -Class348_Sub40_Sub13.anInt9203 + i_3_;

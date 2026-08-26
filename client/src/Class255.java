@@ -54,7 +54,7 @@ final class Class255 {
         aClass161_3285 = null;
     }
 
-    final Class105 method1932(ha var_ha, int i, int i_0_, Class324 class324, Class154 class154, int i_1_, boolean bool, byte i_2_, ha var_ha_3_, int i_4_, boolean bool_5_, int i_6_) {
+    final Class105 method1932(ha var_ha, int i, int i_0_, BitmapFont class324, Class154 class154, int i_1_, boolean bool, byte i_2_, ha var_ha_3_, int i_4_, boolean bool_5_, int i_6_) {
         try {
             anInt3266++;
             Class105 class105 = method1941(i_6_, (byte) -74, i_4_, i_0_, i, i_1_, var_ha_3_, class154);
@@ -101,7 +101,7 @@ final class Class255 {
             Class348_Sub45.aClass105Array7107 = new Class105[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 Class348_Sub45.aClass105Array7107[i] = var_ha.method3691(class207s[i], true);
-            class207s = Class207.method1519(class45, Class373_Sub2.anInt7429, 0);
+            class207s = Class207.method1519(class45, BasicMouseHandler.anInt7429, 0);
             Class239_Sub2.aClass105Array5857 = new Class105[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 Class239_Sub2.aClass105Array5857[i] = var_ha.method3691(class207s[i], true);

@@ -1,7 +1,7 @@
 /**
  * Microbot mini HUD — canvas overlay (not an RS {@link Class46} iface, not Swing).
  * <p>
- * <b>Draw:</b> {@link ha#aa} for the translucent box + {@link Class324#method2576}
+ * <b>Draw:</b> {@link ha#fillRect} for the translucent box + {@link BitmapFont#drawText}
  * for left-aligned labels (same stack as the developer console / FPS overlay).
  * Wired from {@code client} after the console draw so the panel sits on top of the
  * game world.
@@ -55,7 +55,7 @@ final class MicrobotPanel {
 
     /**
      * Hit-test in canvas coordinates (same space as
-     * {@link Class373#method3597} / {@link Class373#method3594}).
+     * {@link MouseHandler#getCursorX} / {@link MouseHandler#getCursorY}).
      */
     static boolean contains(int x, int y) {
         if (!isVisible()) {
@@ -72,7 +72,7 @@ final class MicrobotPanel {
 
     /**
      * Paint the panel into the current frame buffer.
-     * Prefer {@link Class324#method2576} (left-aligned) — {@link Class324#method2575}
+     * Prefer {@link BitmapFont#drawText} (left-aligned) — {@link BitmapFont#drawTextCentred}
      * is centre-X and easy to mis-wire (garbled / stacked glyphs).
      *
      * @param renderer active toolkit ({@link Class348_Sub8#aHa6654})
@@ -82,7 +82,7 @@ final class MicrobotPanel {
             return;
         }
         try {
-            Class324 font = Applet_Sub1.aClass324_20;
+            BitmapFont font = Applet_Sub1.aClass324_20;
             if (font == null) {
                 font = Class240.aClass324_4684;
             }
@@ -91,22 +91,22 @@ final class MicrobotPanel {
             }
             int h = height();
             // aa(x, y, width, height, argb, mode) — filled rect.
-            renderer.aa(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
-            renderer.aa(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
+            renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
+            renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
 
             int textX = PANEL_X + PAD;
             int y = PANEL_Y + PAD + 12;
             String header = collapsed ? "Microbot [+]" : "Microbot [-]";
-            font.method2576(header, ACCENT, y, textX, SHADOW, -110);
+            font.drawText(header, ACCENT, y, textX, SHADOW, -110);
 
             if (!collapsed) {
                 y += ROW_H;
                 boolean combatOn = Microbot.getExampleCombat().isRunning();
-                font.method2576(combatOn ? "Combat: ON" : "Combat: OFF",
+                font.drawText(combatOn ? "Combat: ON" : "Combat: OFF",
                         combatOn ? ON : OFF, y, textX, SHADOW, -110);
                 y += ROW_H;
                 boolean paused = Microbot.pauseAllScripts;
-                font.method2576(paused ? "Pause: ON" : "Pause: OFF",
+                font.drawText(paused ? "Pause: ON" : "Pause: OFF",
                         paused ? OFF : ON, y, textX, SHADOW, -110);
             }
         } catch (Throwable t) {
@@ -119,16 +119,16 @@ final class MicrobotPanel {
      * <p>
      * Must run after mouse drain into {@link Class318_Sub1_Sub3#aClass262_8744}
      * and before {@link Class261#method1987} / walk packet builders.
-     * Click type {@code 0} = left press ({@link Class373_Sub1#mousePressed}).
+     * Click type {@code 0} = left press ({@link AwtMouseHandler#mousePressed}).
      */
     static void pollInput() {
         mouseOver = false;
-        if (!isVisible() || Class258_Sub4.aClass373_8552 == null) {
+        if (!isVisible() || Class258_Sub4.mouseHandler == null) {
             return;
         }
         try {
-            int mx = Class258_Sub4.aClass373_8552.method3597(true);
-            int my = Class258_Sub4.aClass373_8552.method3594((byte) 100);
+            int mx = Class258_Sub4.mouseHandler.getCursorX(true);
+            int my = Class258_Sub4.mouseHandler.getCursorY((byte) 100);
             mouseOver = contains(mx, my);
 
             Class348 node = Class318_Sub1_Sub3.aClass262_8744.method1995(4);

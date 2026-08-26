@@ -237,7 +237,7 @@ abstract class ha {
 
     final void method3675(int i, byte i_125_, int i_126_, int i_127_, int i_128_, int i_129_) {
         if (i_125_ == -125) {
-            aa(i_126_, i_127_, i, i_128_, i_129_, 1);
+            fillRect(i_126_, i_127_, i, i_128_, i_129_, 1);
             anInt4566++;
         }
     }
@@ -272,7 +272,7 @@ abstract class ha {
 
     abstract void K(int[] is);
 
-    abstract Class324 method3686(Class143 class143, Class207[] class207s, boolean bool);
+    abstract BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool);
 
     abstract void H(int i, int i_146_, int i_147_, int[] is);
 
@@ -362,7 +362,7 @@ abstract class ha {
      * @param colour packed ARGB (alpha in high byte; console uses {@code 0x332277 | alpha<<24})
      * @param mode   blend mode (1 = normal translucent fill used by console / Microbot panel)
      */
-    abstract void aa(int x, int y, int width, int height, int colour, int mode);
+    abstract void fillRect(int x, int y, int width, int height, int colour, int mode);
 
     abstract void GA(int i);
 

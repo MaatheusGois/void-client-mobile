@@ -92,8 +92,8 @@ final class Class5_Sub2 extends Class5 {
         anInt8355++;
         int i_20_ = -110 / ((-20 - i) / 57);
         int i_21_ = (this.method183(116) * this.aClass369_4635.anInt4971 / 10000);
-        Class348_Sub8.aHa6654.aa(i_19_, 2 + i_18_, i_21_, (this.aClass369_4635.anInt4963) - 2, ((Class369_Sub2) this.aClass369_4635).anInt8591, 0);
-        Class348_Sub8.aHa6654.aa(i_21_ + i_19_, 2 + i_18_, this.aClass369_4635.anInt4971 - i_21_, this.aClass369_4635.anInt4963 - 2, 0, 0);
+        Class348_Sub8.aHa6654.fillRect(i_19_, 2 + i_18_, i_21_, (this.aClass369_4635.anInt4963) - 2, ((Class369_Sub2) this.aClass369_4635).anInt8591, 0);
+        Class348_Sub8.aHa6654.fillRect(i_21_ + i_19_, 2 + i_18_, this.aClass369_4635.anInt4971 - i_21_, this.aClass369_4635.anInt4963 - 2, 0, 0);
     }
 
     static final void method198(Class46 class46, boolean bool, int i, int i_22_) {

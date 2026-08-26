@@ -14,7 +14,7 @@ final class Class177 implements Interface1 {
     private final Class52 aClass52_4671;
 
     public final void method9(byte i, boolean bool) {
-        if (bool) Class348_Sub8.aHa6654.aa(0, 0, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432, aClass52_4671.anInt4899, 0);
+        if (bool) Class348_Sub8.aHa6654.fillRect(0, 0, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432, aClass52_4671.anInt4899, 0);
         anInt4668++;
         if (i != -49) anInt4666 = -20;
     }

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class h extends Class324 implements Interface19 {
+final class h extends BitmapFont implements Interface19 {
     long nativeid;
 
     h(oa var_oa, ya var_ya, Class143 class143, Class207[] class207s, Class105[] class105s) {

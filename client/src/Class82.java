@@ -406,8 +406,8 @@ final class Class82 {
                             return;
                         }
                         if (string.equals("nonpcs")) {
-                            Class373_Sub2.aBoolean7444 = !Class373_Sub2.aBoolean7444;
-                            Applet_Sub1.method94("nonpcs=" + (Class373_Sub2.aBoolean7444), -120);
+                            BasicMouseHandler.aBoolean7444 = !BasicMouseHandler.aBoolean7444;
+                            Applet_Sub1.method94("nonpcs=" + (BasicMouseHandler.aBoolean7444), -120);
                             return;
                         }
                         if (string.equals("autoworld")) {

@@ -17,9 +17,24 @@ dependencies {
 java {
     sourceSets {
         main {
-            // src = RS634 + Void helpers; src-microbot = bot API (still default package —
-            // Java forbids a named package from referencing the unnamed 634 types).
-            java.srcDirs("src", "src-microbot")
+            // All roots stay in the Java *unnamed* (default) package — a named package
+            // cannot reference the 634 Class* types. Extra dirs are for clarity only.
+            //   src           — RS634 deob (+ toolkit short names)
+            //   src-input     — MouseHandler / AWT mouse
+            //   src-font      — BitmapFont backends
+            //   src-menu      — MenuEntry / DefaultClickSwapper
+            //   src-void      — Void helpers (LoginPrefs, MobileKeyboard)
+            //   src-microbot  — bot runtime / HUD / mouse backends
+            //   src-rs2       — Rs2* scripting API
+            java.srcDirs(
+                "src",
+                "src-input",
+                "src-font",
+                "src-menu",
+                "src-void",
+                "src-microbot",
+                "src-rs2",
+            )
             resources.srcDirs("resources")
         }
     }

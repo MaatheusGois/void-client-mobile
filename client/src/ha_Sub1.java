@@ -60,7 +60,7 @@ final class ha_Sub1 extends ha {
     }
 
     final void GA(int i) {
-        aa(0, 0, this.anInt7477, anInt7486, i, 0);
+        fillRect(0, 0, this.anInt7477, anInt7486, i, 0);
     }
 
     final int[] na(int i, int i_0_, int i_1_, int i_2_) {
@@ -953,7 +953,7 @@ final class ha_Sub1 extends ha {
         class109.aBoolean1669 = true;
     }
 
-    final Class324 method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
         int[] is = new int[class207s.length];
         int[] is_283_ = new int[class207s.length];
         boolean bool_284_ = false;
@@ -963,11 +963,11 @@ final class ha_Sub1 extends ha {
             if (class207s[i].aByteArray2695 != null) bool_284_ = true;
         }
         if (bool) {
-            if (bool_284_) return new Class324_Sub4(this, class143, class207s, is, is_283_);
-            return new Class324_Sub1(this, class143, class207s, is, is_283_);
+            if (bool_284_) return new SoftwareBitmapFont3(this, class143, class207s, is, is_283_);
+            return new SoftwareBitmapFont(this, class143, class207s, is, is_283_);
         }
         if (bool_284_) throw new IllegalArgumentException("");
-        return new Class324_Sub3(this, class143, class207s, is, is_283_);
+        return new SoftwareBitmapFont2(this, class143, class207s, is, is_283_);
     }
 
     final Interface4 method3634(Interface3 interface3, Interface13 interface13) {
@@ -1121,7 +1121,7 @@ final class ha_Sub1 extends ha {
         method3713();
     }
 
-    final void aa(int i, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_) {
+    final void fillRect(int i, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_) {
         if (i < this.anInt7496) {
             i_335_ -= this.anInt7496 - i;
             i = this.anInt7496;

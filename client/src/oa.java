@@ -55,7 +55,7 @@ final class oa extends ha implements Interface19 {
 
     final native void A(int i, aa var_aa, int i_11_, int i_12_);
 
-    final native void aa(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_);
+    final native void fillRect(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_);
 
     final void method3698() {
         /* empty */
@@ -115,7 +115,7 @@ final class oa extends ha implements Interface19 {
         /* empty */
     }
 
-    final Class324 method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
         int[] is = new int[class207s.length];
         int[] is_60_ = new int[class207s.length];
         boolean bool_61_ = false;

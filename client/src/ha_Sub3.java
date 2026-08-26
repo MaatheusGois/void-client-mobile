@@ -949,7 +949,7 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3844(int i, Canvas canvas, Object object);
 
-    final void aa(int i, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_) {
+    final void fillRect(int i, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_) {
         method3903(false);
         anInt8017++;
         method3894(-28186, i_73_);
@@ -2518,10 +2518,10 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3939(byte i);
 
-    final Class324 method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
         try {
             anInt7952++;
-            return new Class324_Sub2(this, class143, class207s, bool);
+            return new JaclibBitmapFont(this, class143, class207s, bool);
         } catch (RuntimeException runtimeexception) {
             throw Class348_Sub17.method2929(runtimeexception, ("wga.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
         }

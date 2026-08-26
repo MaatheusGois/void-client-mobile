@@ -42,7 +42,7 @@ final class Class334 {
         return new Class334(this.anInt4156, this.anInt4165, this.anInt4162, this.anInt4158, this.anInt4154, this.anInt4151);
     }
 
-    static final void method2650(Class143 class143, int i, aa var_aa, int i_1_, int i_2_, String string, int i_3_, Class324 class324, int i_4_, Class46 class46, int i_5_, int i_6_) {
+    static final void method2650(Class143 class143, int i, aa var_aa, int i_1_, int i_2_, String string, int i_3_, BitmapFont class324, int i_4_, Class46 class46, int i_5_, int i_6_) {
         try {
             anInt4153++;
             int i_7_;

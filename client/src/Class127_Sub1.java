@@ -35,7 +35,7 @@ final class Class127_Sub1 extends Class127 {
             class348_sub41.method2715((byte) 35);
             if (bool) Class14.method235(i_3_, (byte) -116);
             Class166.method1288(i ^ ~0x9e2, i_3_);
-            Class46 class46 = Class324.method2570(1512932720, i_4_);
+            Class46 class46 = BitmapFont.method2570(1512932720, i_4_);
             if (class46 != null) Class251.method1916(-9343, class46);
             Class348_Sub42_Sub17.method3270((byte) 119);
             if (!bool_2_ && r.anInt9721 != -1) Class239_Sub12.method1775((byte) -8, r.anInt9721, 1);

@@ -5,7 +5,7 @@
 import jaggl.OpenGL;
 
 final class Class258_Sub4 extends Class258 {
-    static Class373 aClass373_8552;
+    static MouseHandler mouseHandler;
     static Class138 aClass138_8553;
     static int anInt8554;
     static int anInt8555;
@@ -42,7 +42,7 @@ final class Class258_Sub4 extends Class258 {
 
     public static void method1973(int i) {
         aClass138_8553 = null;
-        aClass373_8552 = null;
+        mouseHandler = null;
         if (i == 24885) anIntArray8557 = null;
     }
 

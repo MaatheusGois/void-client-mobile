@@ -18,7 +18,7 @@ final class MicrobotWidgets {
 
     static Class46 get(int packedId) {
         try {
-            return Class324.method2570(1512932720, packedId);
+            return BitmapFont.method2570(1512932720, packedId);
         } catch (Throwable t) {
             return null;
         }

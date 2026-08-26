@@ -68,8 +68,8 @@ final class Class112 implements Runnable {
         if (i != 3112) method1052((byte) 121);
         if (Class289.aClass46_3701 == null) {
             if (!Class5_Sub1.aBoolean8335 && Class316.menuTip != null) return (Class316.menuTip.priority);
-            int i_2_ = Class258_Sub4.aClass373_8552.method3597(true);
-            int i_3_ = Class258_Sub4.aClass373_8552.method3594((byte) 81);
+            int i_2_ = Class258_Sub4.mouseHandler.getCursorX(true);
+            int i_3_ = Class258_Sub4.mouseHandler.getCursorY((byte) 81);
             if (Class348_Sub42_Sub6.aBoolean9535) {
                 if (i_2_ > Class135_Sub1.anInt4717 && i_2_ < Class63.anInt1117 + Class135_Sub1.anInt4717) {
                     int i_9_ = -1;
@@ -93,10 +93,10 @@ final class Class112 implements Runnable {
                     int i_4_ = -1;
                     for (int i_5_ = 0; ((Class242.aClass348_Sub42_Sub13_3152.anInt9615) > i_5_); i_5_++) {
                         if (Class71.aBoolean1211) {
-                            int i_7_ = Class373.anInt4534 + (33 + 16 * i_5_);
+                            int i_7_ = MouseHandler.menuOriginY + (33 + 16 * i_5_);
                             if (-13 + i_7_ < i_3_ && 3 + i_7_ >= i_3_) i_4_ = i_5_;
                         } else {
-                            int i_6_ = i_5_ * 16 + 31 + Class373.anInt4534;
+                            int i_6_ = i_5_ * 16 + 31 + MouseHandler.menuOriginY;
                             if (-13 + i_6_ < i_3_ && i_6_ - -3 >= i_3_) i_4_ = i_5_;
                         }
                     }

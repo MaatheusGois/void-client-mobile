@@ -1,11 +1,16 @@
-/* Class373_Sub1 - Decompiled by JODE
+/* AwtMouseHandler - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import java.awt.*;
 import java.awt.event.*;
 
-final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotionListener, MouseWheelListener {
+/**
+ * Desktop AWT mouse handler (preferred): press / motion / wheel listeners on the game canvas.
+ * Constructed via reflection from {@link Class348_Sub18#method2941}; falls back to
+ * {@link BasicMouseHandler} when wheel support is unavailable.
+ */
+final class AwtMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener, MouseWheelListener {
     private int anInt7416;
     private int anInt7417;
     private Class262 aClass262_7418 = new Class262();
@@ -17,7 +22,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
     private final boolean aBoolean7424;
     private Component aComponent7425;
 
-    final boolean method3588(int i) {
+    final boolean isMiddleButtonDown(int i) {
         int i_0_ = -59 % ((i - -38) / 48);
         return (anInt7419 & 0x2) != 0;
     }
@@ -43,7 +48,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
-    final int method3594(byte i) {
+    final int getCursorY(byte i) {
         if (i < 69) method3598(92, 34, 59, 2, false);
         return anInt7416;
     }
@@ -56,7 +61,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         }
     }
 
-    final boolean method3590(byte i) {
+    final boolean isRightButtonDown(byte i) {
         if (i <= 112) return false;
         return (anInt7419 & 0x4) != 0;
     }
@@ -70,7 +75,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
-    final int method3597(boolean bool) {
+    final int getCursorX(boolean bool) {
         if (bool != true) return 27;
         return anInt7417;
     }
@@ -94,12 +99,12 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
-    final boolean method3595(int i) {
+    final boolean isLeftButtonDown(int i) {
         if (i >= -67) mouseMoved(null);
         return (anInt7419 & 0x1) != 0;
     }
 
-    final Class348_Sub45 method3596(int i) {
+    final Class348_Sub45 popEvent(int i) {
         if (i != 0) mouseReleased(null);
         return (Class348_Sub45) aClass262_7418.method1997(8);
     }
@@ -122,7 +127,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         }
     }
 
-    final synchronized void method3589(int i) {
+    final synchronized void syncEvents(int i) {
         anInt7416 = anInt7421;
         anInt7417 = anInt7423;
         anInt7419 = anInt7422;
@@ -150,7 +155,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         method3599(mouseevent.getX(), -1, mouseevent.getY());
     }
 
-    final void method3592(int i) {
+    final void destroy(int i) {
         if (i == 0) method3601(46);
     }
 
@@ -163,7 +168,7 @@ final class Class373_Sub1 extends Class373 implements MouseListener, MouseMotion
         aComponent7425.addMouseWheelListener(this);
     }
 
-    Class373_Sub1(Component component, boolean bool) {
+    AwtMouseHandler(Component component, boolean bool) {
         method3602(0, component);
         aBoolean7424 = bool;
     }

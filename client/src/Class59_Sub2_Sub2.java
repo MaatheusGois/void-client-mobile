@@ -18,11 +18,11 @@ final class Class59_Sub2_Sub2 extends Class59_Sub2 {
     static final void method569(byte i, Class348_Sub49 class348_sub49) {
         anInt8675++;
         int i_0_ = class348_sub49.readSmart(-128);
-        Class373_Sub2.aClass283Array7446 = new Class283[i_0_];
+        BasicMouseHandler.aClass283Array7446 = new Class283[i_0_];
         for (int i_1_ = 0; i_0_ > i_1_; i_1_++) {
-            Class373_Sub2.aClass283Array7446[i_1_] = new Class283();
-            Class373_Sub2.aClass283Array7446[i_1_].anInt3657 = class348_sub49.readSmart(-124);
-            Class373_Sub2.aClass283Array7446[i_1_].aString3663 = class348_sub49.method3371(-13487);
+            BasicMouseHandler.aClass283Array7446[i_1_] = new Class283();
+            BasicMouseHandler.aClass283Array7446[i_1_].anInt3657 = class348_sub49.readSmart(-124);
+            BasicMouseHandler.aClass283Array7446[i_1_].aString3663 = class348_sub49.method3371(-13487);
         }
         Class318_Sub1_Sub2.anInt8731 = class348_sub49.readSmart(-127);
         Class239_Sub29.anInt6151 = class348_sub49.readSmart(-119);

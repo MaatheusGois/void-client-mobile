@@ -64,7 +64,7 @@ abstract class Class318_Sub1_Sub3 extends Class318_Sub1 {
         if (i_5_ == -1 && class46.anInt774 == 0) {
             for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 56)) {
                 if (class348_sub42_sub12.opcode == 6 || class348_sub42_sub12.opcode == 1011 || (class348_sub42_sub12.opcode == 13) || (class348_sub42_sub12.opcode == 18) || (class348_sub42_sub12.opcode == 16)) {
-                    for (Class46 class46_9_ = Class324.method2570(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = Class237.method1687(class46_9_, 3)) {
+                    for (Class46 class46_9_ = BitmapFont.method2570(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = Class237.method1687(class46_9_, 3)) {
                         if (class46_9_.anInt830 == class46.anInt830) return true;
                     }
                 }

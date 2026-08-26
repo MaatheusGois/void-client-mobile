@@ -120,7 +120,7 @@ final class Class72 {
         var_ha.K(anIntArray1226);
         var_ha.KA(0, 0, anInt1220, anInt1220);
         var_ha.ya();
-        var_ha.aa(0, 0, anInt1220, anInt1220, ~0xffffff | anInt1222, 0);
+        var_ha.fillRect(0, 0, anInt1220, anInt1220, ~0xffffff | anInt1222, 0);
         int i = 0;
         int i_20_ = 0;
         int i_21_ = 256;
@@ -165,7 +165,7 @@ final class Class72 {
         aClass105_1215.method970(i_30_, i_30_, i_29_, i_29_, 0, ~0xffffff | anInt1222, 1);
         aClass105_1221 = var_ha.method3683(0, 0, anInt1220, anInt1220, true);
         var_ha.ya();
-        var_ha.aa(0, 0, anInt1220, anInt1220, 0, 0);
+        var_ha.fillRect(0, 0, anInt1220, anInt1220, 0, 0);
         aClass105_1228.method970(0, 0, anInt1220, anInt1220, 1, 0, 0);
         aClass105_1221.method968(0, 0, 0);
         var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);
@@ -248,7 +248,7 @@ final class Class72 {
         if (class124 != null) {
             var_ha.K(anIntArray1226);
             var_ha.KA(0, 0, anInt1220, anInt1220);
-            var_ha.aa(0, 0, anInt1220, anInt1220, 0, 0);
+            var_ha.fillRect(0, 0, anInt1220, anInt1220, 0, 0);
             int i = 0;
             int i_61_ = 0;
             int i_62_ = 256;

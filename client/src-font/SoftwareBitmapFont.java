@@ -1,8 +1,9 @@
-/* Class324_Sub1 - Decompiled by JODE
+/* SoftwareBitmapFont - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class Class324_Sub1 extends Class324 {
+/** Software ({@link ha_Sub1}) bitmap-font backend. */
+final class SoftwareBitmapFont extends BitmapFont {
     private final ha_Sub1 aHa_Sub1_6486;
     private final int[] anIntArray6487;
     private final int[] anIntArray6488;
@@ -228,7 +229,7 @@ final class Class324_Sub1 extends Class324 {
         }
     }
 
-    Class324_Sub1(ha_Sub1 var_ha_Sub1, Class143 class143, Class207[] class207s, int[] is, int[] is_103_) {
+    SoftwareBitmapFont(ha_Sub1 var_ha_Sub1, Class143 class143, Class207[] class207s, int[] is, int[] is_103_) {
         super(var_ha_Sub1, class143);
         aHa_Sub1_6486 = var_ha_Sub1;
         anIntArray6489 = is;

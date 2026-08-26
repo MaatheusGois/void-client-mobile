@@ -14,8 +14,8 @@ final class Class216 implements Interface13 {
     static final void method1583(byte i) {
         anInt4977++;
         if (r.anInt9721 != -1) {
-            int i_0_ = Class258_Sub4.aClass373_8552.method3597(true);
-            int i_1_ = Class258_Sub4.aClass373_8552.method3594((byte) 72);
+            int i_0_ = Class258_Sub4.mouseHandler.getCursorX(true);
+            int i_1_ = Class258_Sub4.mouseHandler.getCursorY((byte) 72);
             Class348_Sub45 class348_sub45 = ((Class348_Sub45) Class318_Sub1_Sub3.aClass262_8744.method1995(4));
             if (class348_sub45 != null) {
                 i_0_ = class348_sub45.method3308((byte) -128);

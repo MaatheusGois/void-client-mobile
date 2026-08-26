@@ -1,11 +1,12 @@
-/* Class324_Sub2 - Decompiled by JODE
+/* JaclibBitmapFont - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 
-final class Class324_Sub2 extends Class324 {
+/** Jaclib / toolkit-3 ({@link ha_Sub3}) bitmap-font backend. */
+final class JaclibBitmapFont extends BitmapFont {
     private final Interface18_Impl3 anInterface18_Impl3_6492;
     private final boolean aBoolean6493;
     private final ha_Sub3 aHa_Sub3_6494;
@@ -15,7 +16,7 @@ final class Class324_Sub2 extends Class324 {
         /* empty */
     }
 
-    Class324_Sub2(ha_Sub3 var_ha_Sub3, Class143 class143, Class207[] class207s, boolean bool) {
+    JaclibBitmapFont(ha_Sub3 var_ha_Sub3, Class143 class143, Class207[] class207s, boolean bool) {
         super(var_ha_Sub3, class143);
         aHa_Sub3_6494 = var_ha_Sub3;
         int i = 0;

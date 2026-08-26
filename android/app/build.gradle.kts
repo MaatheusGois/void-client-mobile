@@ -33,9 +33,16 @@ android {
 }
 
 val prepareClientSources by tasks.registering(Copy::class) {
-    // Flat merge: 634 client + Microbot API (both default package).
-    from(rootProject.projectDir.resolve("../client/src"))
-    from(rootProject.projectDir.resolve("../client/src-microbot"))
+    // Flat merge into generated/client (all default package). Folder roots are
+    // organizational only — see client/build.gradle.kts.
+    val clientDir = rootProject.projectDir.resolve("../client")
+    from(clientDir.resolve("src"))
+    from(clientDir.resolve("src-input"))
+    from(clientDir.resolve("src-font"))
+    from(clientDir.resolve("src-menu"))
+    from(clientDir.resolve("src-void"))
+    from(clientDir.resolve("src-microbot"))
+    from(clientDir.resolve("src-rs2"))
     into(layout.buildDirectory.dir("generated/client"))
     filter { line ->
         line

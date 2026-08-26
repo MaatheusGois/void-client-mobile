@@ -233,9 +233,9 @@ final class Class46 {
         return var_aa;
     }
 
-    final Class324 method426(ha var_ha, byte i) {
+    final BitmapFont method426(ha var_ha, byte i) {
         anInt827++;
-        Class324 class324 = Class14.method232(var_ha, (byte) -53, false, this.anInt702);
+        BitmapFont class324 = Class14.method232(var_ha, (byte) -53, false, this.anInt702);
         if (i != 68) method436(-71, -56, -125);
         Class348_Sub42_Sub13.aBoolean9616 = class324 == null;
         return class324;

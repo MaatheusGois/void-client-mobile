@@ -35,7 +35,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     private boolean aBoolean17 = false;
     static int anInt18;
     static int anInt19;
-    static Class324 aClass324_20;
+    static BitmapFont aClass324_20;
     static int anInt21;
     static int anInt22;
     static int anInt23;

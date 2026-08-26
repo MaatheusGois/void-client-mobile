@@ -16,7 +16,7 @@ final class Class110_Sub1 extends Class110 {
     final Class283 method1038(boolean bool) {
         if (bool != false) method1040(-125);
         anInt5789++;
-        return Class373_Sub2.aClass283Array7446[this.anInt1711];
+        return BasicMouseHandler.aClass283Array7446[this.anInt1711];
     }
 
     static final String method1039(String string, boolean bool) {

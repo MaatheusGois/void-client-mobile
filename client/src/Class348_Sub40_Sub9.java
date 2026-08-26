@@ -10,7 +10,7 @@ final class Class348_Sub40_Sub9 extends Class348_Sub40 {
     static int anInt9170;
     static Class60 aClass60_9171 = new Class60(4);
     static int anInt9172;
-    static Class324 aClass324_9173;
+    static BitmapFont aClass324_9173;
 
     public static void method3071(byte i) {
         if (i != 59) anApplet_Sub1_9169 = null;

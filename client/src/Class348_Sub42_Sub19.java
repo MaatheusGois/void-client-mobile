@@ -61,7 +61,7 @@ final class Class348_Sub42_Sub19 extends Class348_Sub42 {
         if (i != -48) method3276(null);
         if (Class242.aClass348_Sub42_Sub13_3152 != null) {
             Class242.aClass348_Sub42_Sub13_3152 = null;
-            Class13.method226(Class50_Sub3.anInt5252, Class348_Sub1_Sub1.anInt8806, Class373.anInt4534, 0, Class177.anInt4669);
+            Class13.method226(Class50_Sub3.anInt5252, Class348_Sub1_Sub1.anInt8806, MouseHandler.menuOriginY, 0, Class177.anInt4669);
         }
     }
 

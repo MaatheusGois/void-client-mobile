@@ -73,7 +73,7 @@ final class Class119_Sub1 extends Class119 implements Interface2 {
             } else string = Class316.method2367((byte) 125, Class316.menuTip);
             if (Class73.menuEntryCount > 2) string += ("<col=ffffff> / " + (Class73.menuEntryCount - 2) + Class274.aClass274_3508.method2063(Class348_Sub33.anInt6967, 544));
             if (Class348_Sub36.aClass46_6990 != null) {
-                Class324 class324 = Class348_Sub36.aClass46_6990.method426(var_ha, (byte) 68);
+                BitmapFont class324 = Class348_Sub36.aClass46_6990.method426(var_ha, (byte) 68);
                 if (class324 == null) class324 = Class262.aClass324_3326;
                 class324.method2585(Class175.anIntArray2330, Class348_Sub36.aClass46_6990.anInt709, Class341.aClass105Array4234, Class348_Sub36.aClass46_6990.anInt700, Class348_Sub36.aClass46_6990.anInt749, Class348_Sub36.aClass46_6990.anInt789, Class348_Sub36.aClass46_6990.anInt809, OutputStream_Sub1.aRandom93, Class348_Sub36.aClass46_6990.anInt762, Class32.anInt451, Class356.anInt4383, -33, Class332.anInt4141, string, Class195.anIntArray5007);
                 Class13.method226(Class195.anIntArray5007[0], Class195.anIntArray5007[2], Class195.anIntArray5007[1], 0, Class195.anIntArray5007[3]);

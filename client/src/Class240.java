@@ -20,7 +20,7 @@ final class Class240 implements Interface1 {
     static int anInt4681;
     private final Class339 aClass339_4682;
     static long aLong4683;
-    static Class324 aClass324_4684;
+    static BitmapFont aClass324_4684;
     private final Class125 aClass125_4685;
     static int anInt4686;
 
@@ -83,7 +83,7 @@ final class Class240 implements Interface1 {
         if (i != -49) method8((byte) 12);
     }
 
-    private final int method1855(int i, String string, boolean bool, Class324 class324, int i_9_, int i_10_) {
+    private final int method1855(int i, String string, boolean bool, BitmapFont class324, int i_9_, int i_10_) {
         try {
             if (bool != true) return -62;
             anInt4677++;

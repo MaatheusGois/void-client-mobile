@@ -10,7 +10,7 @@ final class Class67 implements Interface1 {
     private final Class158 aClass158_4646;
     static int anInt4647;
     static int[] anIntArray4648 = new int[14];
-    private Class324 aClass324_4649;
+    private BitmapFont aClass324_4649;
     private final Class45 aClass45_4650;
     private final Class45 aClass45_4651;
 

@@ -8,7 +8,7 @@ final class Class262 {
     static Class45 aClass45_3323;
     static int anInt3324;
     static int anInt3325;
-    static Class324 aClass324_3326;
+    static BitmapFont aClass324_3326;
     static int anInt3327;
     static int anInt3328;
     static int anInt3329;
