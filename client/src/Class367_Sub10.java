@@ -22,6 +22,13 @@ final class Class367_Sub10 extends Class367 {
 
     static final void method3553(boolean bool, byte i, int i_1_) {
         if (i <= 98) method3553(true, (byte) 34, 120);
+        // Toolkit 1 = OpenGL (ha_Sub2), 2 = SW3D (libsw3d). Both break JAWT on macOS.
+        if ((i_1_ == 1 || i_1_ == 2) && Loader.isMacOs()) {
+            Class221.aBoolean2881 = true;
+            Class330.aBoolean4117 = true;
+            System.out.println("void-osrs: toolkit " + i_1_ + " → software (macOS)");
+            i_1_ = 0;
+        }
         Class258_Sub3_Sub1.method1971(-2, Class274.aClass274_3495.method2063(Class348_Sub33.anInt6967, 544), bool, i_1_);
         anInt7388++;
     }

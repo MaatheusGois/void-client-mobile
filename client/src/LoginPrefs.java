@@ -186,6 +186,11 @@ final class LoginPrefs {
      * low VRAM, splash safe-mode flag, or toolkit recovered after a crash.
      */
     private static boolean needsGraphicsAutoSetup() {
+        // Creating / destroying SW3D or GL canvases mid-title crashes macOS JAWT.
+        // Stay on the current toolkit; user can change graphics manually later.
+        if (Loader.isMacOs()) {
+            return false;
+        }
         int vram = 0;
         if (Class348_Sub40_Sub20.aClass348_Sub4_9264 != null) {
             vram = Class348_Sub40_Sub20.aClass348_Sub4_9264.anInt6609;

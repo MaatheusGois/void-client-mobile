@@ -38,6 +38,8 @@ public class Loader extends Applet {
     static final double CULLING_DISTANCE_MULTIPLIER = 1.8; // Adjust distance before objects go into fog
 
     public static void main(String[] args) {
+        // libsw3d.dylib + modern macOS JAWT: Finalizer crashes in canvas::~canvas.
+        disableSw3dOnMacOs();
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             switch (arg) {
@@ -61,6 +63,32 @@ public class Loader extends Applet {
         }
         Loader l = new Loader();
         l.doFrame();
+    }
+
+    /**
+     * Native SW3D / jaggl toolkits are unsafe on modern macOS JAWT (Finalize crash
+     * or noisy RuntimeException during Auto Setup probes). Force software ha.
+     */
+    static void disableSw3dOnMacOs() {
+        try {
+            String os = System.getProperty("os.name", "").toLowerCase();
+            if (!os.startsWith("mac") && os.indexOf("darwin") < 0) {
+                return;
+            }
+            Class221.aBoolean2881 = true; // skip SW3D (toolkit 2) in method2478
+            Class330.aBoolean4117 = true; // skip OpenGL (toolkit 1) probe — ha_Sub2 JAWT fail
+            System.out.println("void-osrs: native toolkits disabled on macOS (use software)");
+        } catch (Throwable ignored) {
+        }
+    }
+
+    static boolean isMacOs() {
+        try {
+            String os = System.getProperty("os.name", "").toLowerCase();
+            return os.startsWith("mac") || os.indexOf("darwin") >= 0;
+        } catch (Throwable ignored) {
+            return false;
+        }
     }
 
     @Override
