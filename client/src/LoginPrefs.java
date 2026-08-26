@@ -168,8 +168,10 @@ final class LoginPrefs {
             graphicsSetupHandled = true;
             if (needsGraphicsAutoSetup()) {
                 runGraphicsAutoSetup();
-                closeModalOverlays();
             }
+            // Always dismiss Leave Alone / Auto Setup so auto-login is not stuck
+            // waiting on a type-3 overlay (especially on macOS where we skip toolkit switch).
+            closeModalOverlays();
         }
         // Still waiting on Leave Alone / Auto Setup dialog (or close failed).
         if (hasModalOverlay()) {
@@ -186,11 +188,6 @@ final class LoginPrefs {
      * low VRAM, splash safe-mode flag, or toolkit recovered after a crash.
      */
     private static boolean needsGraphicsAutoSetup() {
-        // Creating / destroying SW3D or GL canvases mid-title crashes macOS JAWT.
-        // Stay on the current toolkit; user can change graphics manually later.
-        if (Loader.isMacOs()) {
-            return false;
-        }
         int vram = 0;
         if (Class348_Sub40_Sub20.aClass348_Sub4_9264 != null) {
             vram = Class348_Sub40_Sub20.aClass348_Sub4_9264.anInt6609;
@@ -201,8 +198,15 @@ final class LoginPrefs {
     /**
      * Mirrors CS2 opcode 7000 (Auto Setup button): benchmark toolkits, apply best,
      * refresh display, persist prefs.
+     * <p>
+     * On macOS, skip the native toolkit probe (JAWT crash / ha_Sub2 fail) — software
+     * renderer stays; caller still dismisses the dialog via {@link #closeModalOverlays()}.
      */
     private static void runGraphicsAutoSetup() {
+        if (Loader.isMacOs()) {
+            System.out.println("void-osrs graphics auto-setup skipped on macOS (software toolkit)");
+            return;
+        }
         try {
             Class318_Sub1_Sub4.method2478(1000);
             Class64_Sub3.anInt5584 = Class316.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
