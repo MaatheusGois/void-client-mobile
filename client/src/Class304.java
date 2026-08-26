@@ -96,20 +96,20 @@ final class Class304 {
             for (Class348_Sub42_Sub13 class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1011(-87)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1003((byte) 126))) {
                 int i_9_;
                 if (class348_sub42_sub13.anInt9615 != 1) i_9_ = Class289.method2194(-1, class348_sub42_sub13);
-                else i_9_ = (OutputStream_Sub2.method138(((Class348_Sub42_Sub12) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), false));
+                else i_9_ = (OutputStream_Sub2.method138(((MenuEntry) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), false));
                 if (i_6_ < i_9_) i_6_ = i_9_;
             }
             i_6_ += 8;
             i_7_ = 21 + 16 * Class8.anInt166;
             Class237_Sub1.anInt5819 = (Class71.aBoolean1211 ? 26 : 22) + 16 * Class8.anInt166;
         } else {
-            for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 69)) {
+            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 69)) {
                 int i_8_ = OutputStream_Sub2.method138(class348_sub42_sub12, false);
                 if (i_6_ < i_8_) i_6_ = i_8_;
             }
             i_6_ += 8;
-            Class237_Sub1.anInt5819 = (!Class71.aBoolean1211 ? 22 : 26) + 16 * Class73.anInt4776;
-            i_7_ = 21 + Class73.anInt4776 * 16;
+            Class237_Sub1.anInt5819 = (!Class71.aBoolean1211 ? 22 : 26) + 16 * Class73.menuEntryCount;
+            i_7_ = 21 + Class73.menuEntryCount * 16;
         }
         int i_10_ = -(i_6_ / 2) + i_4_;
         if (Class321.anInt4017 < i_6_ + i_10_) i_10_ = -i_6_ + Class321.anInt4017;

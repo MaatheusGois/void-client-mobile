@@ -1,0 +1,188 @@
+/**
+ * Microbot mini HUD — canvas overlay (not an RS {@link Class46} iface, not Swing).
+ * <p>
+ * <b>Draw:</b> {@link ha#aa} for the translucent box + {@link Class324#method2576}
+ * for left-aligned labels (same stack as the developer console / FPS overlay).
+ * Wired from {@code client} after the console draw so the panel sits on top of the
+ * game world.
+ * <p>
+ * <b>Input:</b> {@link #pollInput()} runs right after mouse events are copied into
+ * {@link Class318_Sub1_Sub3#aClass262_8744}. Left-presses inside the panel are
+ * unlinked ({@link Class348#method2715}) so walk / tip menus never see them.
+ * {@link Class261#method1987} also bails when {@link #isMouseOver()} so right-click
+ * menus don't open through the HUD.
+ * <p>
+ * Rows (expanded): header → Combat toggle → Pause all scripts.
+ */
+final class MicrobotPanel {
+
+    /** Canvas-space top-left — below the tip / "X more options" strip. */
+    private static final int PANEL_X = 8;
+    private static final int PANEL_Y = 28;
+    private static final int WIDTH = 150;
+    /** Pixel height of one text row (hit-test + layout). */
+    private static final int ROW_H = 16;
+    private static final int PAD = 4;
+
+    /** ARGB fill — dark translucent purple. */
+    private static final int BG = 0xC01a1028;
+    /** Header / accent (cyan). */
+    private static final int ACCENT = 0xFF00FFFF;
+    private static final int ON = 0xFF66FF66;
+    private static final int OFF = 0xFFFF8888;
+    private static final int SHADOW = 0xFF000000;
+
+    /** When true, only the header row is drawn / clickable. */
+    private static boolean collapsed;
+    /**
+     * Cursor currently over the panel bounds — refreshed each {@link #pollInput()}.
+     * Used by {@link Class261} to suppress menus under the HUD.
+     */
+    private static boolean mouseOver;
+
+    private MicrobotPanel() {
+    }
+
+    /** True when Microbot is enabled and a local player exists. */
+    static boolean isVisible() {
+        return Loader.microbotEnabled && Microbot.enabled && Microbot.isLoggedIn();
+    }
+
+    /** Current panel pixel height (collapsed = header only). */
+    static int height() {
+        return collapsed ? ROW_H + PAD * 2 : ROW_H * 3 + PAD * 2;
+    }
+
+    /**
+     * Hit-test in canvas coordinates (same space as
+     * {@link Class373#method3597} / {@link Class373#method3594}).
+     */
+    static boolean contains(int x, int y) {
+        if (!isVisible()) {
+            return false;
+        }
+        return x >= PANEL_X && x < PANEL_X + WIDTH
+                && y >= PANEL_Y && y < PANEL_Y + height();
+    }
+
+    /** {@code true} when the cursor is over the panel this frame. */
+    static boolean isMouseOver() {
+        return mouseOver && isVisible();
+    }
+
+    /**
+     * Paint the panel into the current frame buffer.
+     * Prefer {@link Class324#method2576} (left-aligned) — {@link Class324#method2575}
+     * is centre-X and easy to mis-wire (garbled / stacked glyphs).
+     *
+     * @param renderer active toolkit ({@link Class348_Sub8#aHa6654})
+     */
+    static void draw(ha renderer) {
+        if (!isVisible() || renderer == null) {
+            return;
+        }
+        try {
+            Class324 font = Applet_Sub1.aClass324_20;
+            if (font == null) {
+                font = Class240.aClass324_4684;
+            }
+            if (font == null) {
+                return;
+            }
+            int h = height();
+            // aa(x, y, width, height, argb, mode) — filled rect.
+            renderer.aa(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
+            renderer.aa(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
+
+            int textX = PANEL_X + PAD;
+            int y = PANEL_Y + PAD + 12;
+            String header = collapsed ? "Microbot [+]" : "Microbot [-]";
+            font.method2576(header, ACCENT, y, textX, SHADOW, -110);
+
+            if (!collapsed) {
+                y += ROW_H;
+                boolean combatOn = Microbot.getExampleCombat().isRunning();
+                font.method2576(combatOn ? "Combat: ON" : "Combat: OFF",
+                        combatOn ? ON : OFF, y, textX, SHADOW, -110);
+                y += ROW_H;
+                boolean paused = Microbot.pauseAllScripts;
+                font.method2576(paused ? "Pause: ON" : "Pause: OFF",
+                        paused ? OFF : ON, y, textX, SHADOW, -110);
+            }
+        } catch (Throwable t) {
+            System.out.println("microbot panel draw: " + t.getMessage());
+        }
+    }
+
+    /**
+     * Consume left-presses that land on a panel row.
+     * <p>
+     * Must run after mouse drain into {@link Class318_Sub1_Sub3#aClass262_8744}
+     * and before {@link Class261#method1987} / walk packet builders.
+     * Click type {@code 0} = left press ({@link Class373_Sub1#mousePressed}).
+     */
+    static void pollInput() {
+        mouseOver = false;
+        if (!isVisible() || Class258_Sub4.aClass373_8552 == null) {
+            return;
+        }
+        try {
+            int mx = Class258_Sub4.aClass373_8552.method3597(true);
+            int my = Class258_Sub4.aClass373_8552.method3594((byte) 100);
+            mouseOver = contains(mx, my);
+
+            Class348 node = Class318_Sub1_Sub3.aClass262_8744.method1995(4);
+            while (node != null) {
+                Class348 next = Class318_Sub1_Sub3.aClass262_8744.method1990((byte) 79);
+                if (node instanceof Class348_Sub45) {
+                    Class348_Sub45 click = (Class348_Sub45) node;
+                    int type = click.method3310(86);
+                    if (type == 0) {
+                        int cx = click.method3308((byte) -128);
+                        int cy = click.method3311(33);
+                        if (contains(cx, cy)) {
+                            onClick(cx, cy);
+                            click.method2715((byte) 97);
+                        }
+                    }
+                }
+                node = next;
+            }
+        } catch (Throwable t) {
+            System.out.println("microbot panel input: " + t.getMessage());
+        }
+    }
+
+    /**
+     * Map a canvas click to a row action.
+     * Row 0 = collapse/expand; 1 = combat; 2 = pause.
+     */
+    private static void onClick(int x, int y) {
+        int relY = y - PANEL_Y - PAD;
+        int row = relY / ROW_H;
+        if (row <= 0) {
+            collapsed = !collapsed;
+            Microbot.log("panel " + (collapsed ? "collapsed" : "expanded"));
+            return;
+        }
+        if (collapsed) {
+            return;
+        }
+        if (row == 1) {
+            toggleCombat();
+        } else if (row == 2) {
+            Microbot.pauseAllScripts = !Microbot.pauseAllScripts;
+            Microbot.log("pause=" + Microbot.pauseAllScripts);
+        }
+    }
+
+    /** Start/stop {@link ExampleCombatScript} (shared with lilac NPC menu opcode 1907). */
+    static void toggleCombat() {
+        ExampleCombatScript script = Microbot.getExampleCombat();
+        if (script.isRunning()) {
+            script.shutdown();
+        } else {
+            script.start();
+        }
+    }
+}

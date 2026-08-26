@@ -470,7 +470,7 @@ abstract class Class318_Sub1_Sub3_Sub3 extends Class318_Sub1_Sub3 {
                                 i_67_ += class129s_73_.length;
                                 i_68_++;
                             }
-                            if (((this.aClass318_Sub10_10327) == null || this.aClass318_Sub10_10327.aBoolean6470) && (i_68_ > 0 || i_70_ > 0)) this.aClass318_Sub10_10327 = Class318_Sub10.method2526((Class367_Sub11.anInt7396), true);
+                            if (((this.aClass318_Sub10_10327) == null || this.aClass318_Sub10_10327.aBoolean6470) && (i_68_ > 0 || i_70_ > 0)) this.aClass318_Sub10_10327 = Class318_Sub10.method2526((Class367_Sub11.clientCycle), true);
                             if ((this.aClass318_Sub10_10327) != null) {
                                 Object object = null;
                                 Class129[] class129s_75_;
@@ -508,11 +508,11 @@ abstract class Class318_Sub1_Sub3_Sub3 extends Class318_Sub1_Sub3 {
                                     }
                                     if (class342s_74_ != null) Class214.method1575(class342s_74_, 0, class342s_78_, i_79_, class342s_74_.length);
                                 }
-                                this.aClass318_Sub10_10327.method2536(var_ha, Class367_Sub11.anInt7396, class129s_75_, class342s_78_, false);
+                                this.aClass318_Sub10_10327.method2536(var_ha, Class367_Sub11.clientCycle, class129s_75_, class342s_78_, false);
                             }
                             this.aBoolean10318 = true;
                         }
-                    } else if ((this.aClass318_Sub10_10327) != null) this.aClass318_Sub10_10327.method2540(Class367_Sub11.anInt7396);
+                    } else if ((this.aClass318_Sub10_10327) != null) this.aClass318_Sub10_10327.method2540(Class367_Sub11.clientCycle);
                     if (this.aClass318_Sub10_10327 == null) break;
                     this.aClass318_Sub10_10327.method2533(this.plane, this.aShort8743, this.aShort8751, this.aShort8750, this.aShort8747);
                 }
@@ -679,7 +679,7 @@ abstract class Class318_Sub1_Sub3_Sub3 extends Class318_Sub1_Sub3 {
                 }
             }
         }
-        int i_96_ = Class367_Sub11.anInt7396;
+        int i_96_ = Class367_Sub11.clientCycle;
         if (i_89_ != -1012294866) method2423(84, 124, 113);
         if (bool) {
             this.anInt10276 = 1;

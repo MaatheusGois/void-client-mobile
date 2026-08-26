@@ -30,7 +30,7 @@ final class Class108 {
             int i_16_ = (int) f_13_ >> 9;
             int i_17_ = (int) f_15_ >> 9;
             if (i_16_ > 0 && i_17_ > 0 && Class367_Sub4.anInt7319 > i_16_ && (i_17_ < Class348_Sub40_Sub3.anInt9109)) {
-                int i_18_ = (Class132.aPlayer_1907.plane);
+                int i_18_ = (Class132.localPlayer.plane);
                 if (i_18_ < 3 && ((Class348_Sub33.aByteArrayArrayArray6962[1][i_16_][i_17_]) & 0x2) != 0) i_18_++;
                 int i_19_ = Class348_Sub1_Sub1.aSArray8801[i_18_].method3986((int) f_13_, (int) f_15_, (byte) 109);
                 if (f_14_ > (float) i_19_) {
@@ -60,7 +60,7 @@ final class Class108 {
             if (class318_sub1_sub3_sub4.aBoolean10345) {
                 class348_sub42_sub6.method2715((byte) 76);
                 class318_sub1_sub3_sub4.method2466(false);
-            } else if (Class367_Sub11.anInt7396 >= (class318_sub1_sub3_sub4.anInt10349)) {
+            } else if (Class367_Sub11.clientCycle >= (class318_sub1_sub3_sub4.anInt10349)) {
                 class318_sub1_sub3_sub4.method2470(Class348_Sub51.anInt7267, (byte) -16);
                 if (class318_sub1_sub3_sub4.aBoolean10345) class348_sub42_sub6.method2715((byte) 42);
                 else Class89.method850(class318_sub1_sub3_sub4, true);

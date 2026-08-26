@@ -352,7 +352,17 @@ abstract class ha {
 
     abstract void U(int i, int i_194_, int i_195_, int i_196_, int i_197_);
 
-    abstract void aa(int i, int i_198_, int i_199_, int i_200_, int i_201_, int i_202_);
+    /**
+     * Fill a rectangle on the current draw target.
+     *
+     * @param x      left
+     * @param y      top
+     * @param width  width in pixels
+     * @param height height in pixels
+     * @param colour packed ARGB (alpha in high byte; console uses {@code 0x332277 | alpha<<24})
+     * @param mode   blend mode (1 = normal translucent fill used by console / Microbot panel)
+     */
+    abstract void aa(int x, int y, int width, int height, int colour, int mode);
 
     abstract void GA(int i);
 

@@ -13,7 +13,11 @@ final class Class367_Sub11 extends Class367 {
     static int anInt7393;
     static byte[] aByteArray7394;
     private Class193 aClass193_7395;
-    public static int anInt7396 = 0;
+    /**
+     * Monotonic client cycle — incremented once per {@link client#method114}
+     * while not in fatal state 14. Frame-rate coupled (not RS server tick).
+     */
+    public static int clientCycle = 0;
     static int[] anIntArray7397 = new int[4096];
     static Class114 aClass114_7398 = new Class114(16, 6);
     private boolean aBoolean7399 = false;
@@ -143,7 +147,7 @@ final class Class367_Sub11 extends Class367 {
                         Class272.anInt3473 -= insets.left - -insets.right;
                         Class348_Sub22.anInt6857 -= insets.bottom + insets.top;
                     }
-                    if (Class348_Sub42_Sub12.method3229(-86) == 1) {
+                    if (MenuEntry.method3229(-86) == 1) {
                         Class92.anInt1524 = Class272.anInt3473;
                         ha_Sub2.anInt7666 = Class348_Sub22.anInt6857;
                         Class321.anInt4017 = Class272.anInt3473;
@@ -156,15 +160,15 @@ final class Class367_Sub11 extends Class367 {
                             /* empty */
                         }
                     }
-                    Class305.aCanvas3869.setSize(Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
+                    Class305.gameCanvas.setSize(Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
                     if (Class348_Sub8.aHa6654 != null) {
-                        if (Class59_Sub1.aBoolean5300) s.method3980(120, Class305.aCanvas3869);
-                        else Class348_Sub8.aHa6654.method3669(Class305.aCanvas3869, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+                        if (Class59_Sub1.aBoolean5300) s.method3980(120, Class305.gameCanvas);
+                        else Class348_Sub8.aHa6654.method3669(Class305.gameCanvas, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
                     }
                     if (Class52.aFrame4904 == container) {
                         Insets insets = Class52.aFrame4904.getInsets();
-                        Class305.aCanvas3869.setLocation(insets.left - -Class348_Sub48.anInt7129, Class335.anInt4167 + insets.top);
-                    } else Class305.aCanvas3869.setLocation((Class348_Sub48.anInt7129), Class335.anInt4167);
+                        Class305.gameCanvas.setLocation(insets.left - -Class348_Sub48.anInt7129, Class335.anInt4167 + insets.top);
+                    } else Class305.gameCanvas.setLocation((Class348_Sub48.anInt7129), Class335.anInt4167);
                     if (r.anInt9721 != -1) Class239.method1713(true, 520);
                     Class140.method1170((byte) -78);
                 } else {

@@ -84,11 +84,11 @@ final class Class27 {
     static final void method317(String string, int i, boolean bool) {
         anInt391++;
         if (string != null) {
-            if (Class348_Sub42_Sub12.anInt9604 >= 100) Class59.method544((Class274.aClass274_3522.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
+            if (MenuEntry.anInt9604 >= 100) Class59.method544((Class274.aClass274_3522.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
             else {
                 String string_6_ = Class285_Sub1.method2127(2, string);
                 if (string_6_ != null) {
-                    for (int i_7_ = 0; (i_7_ < Class348_Sub42_Sub12.anInt9604); i_7_++) {
+                    for (int i_7_ = 0; (i_7_ < MenuEntry.anInt9604); i_7_++) {
                         String string_8_ = Class285_Sub1.method2127(2, (Class51.aStringArray932[i_7_]));
                         if (string_8_ != null && string_8_.equals(string_6_)) {
                             Class59.method544((string + (Class274.aClass274_3523.method2063(Class348_Sub33.anInt6967, 544))), false, 4);
@@ -117,7 +117,7 @@ final class Class27 {
                                 }
                             }
                         }
-                        if (Class285_Sub1.method2127(2, (Class132.aPlayer_1907.aString10544)).equals(string_6_)) Class59.method544((Class274.aClass274_3525.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
+                        if (Class285_Sub1.method2127(2, (Class132.localPlayer.aString10544)).equals(string_6_)) Class59.method544((Class274.aClass274_3525.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
                         else {
                             Class5.anInt4628++;
                             Class348_Sub47 class348_sub47 = (Class286_Sub3.method2148(Class348_Sub42_Sub19.aClass351_9687, Class348_Sub23_Sub2.aClass77_9029, -94));

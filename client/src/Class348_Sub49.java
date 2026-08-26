@@ -514,7 +514,7 @@ class Class348_Sub49 extends Class348 {
 
     static final void method3379(int i, int i_71_) {
         anInt7201++;
-        if (i_71_ != Class240.anInt4674) {
+        if (i_71_ != Class240.clientState) {
             if (i_71_ == 13) {
                 if (Class348_Sub23_Sub3.aString9043 != null) Class135_Sub2.method1157(RuntimeException_Sub1.anInt4596, (byte) -81);
                 else Class253.method1922(Class186.aString2496, RuntimeException_Sub1.anInt4596, Class64_Sub3.aString5600, true);
@@ -538,7 +538,7 @@ class Class348_Sub49 extends Class348 {
                 }
             } else if (Class348_Sub23_Sub3.aString9043 == null) Class253.method1922(Class186.aString2496, RuntimeException_Sub1.anInt4596, Class64_Sub3.aString5600, true);
             else Class135_Sub2.method1157(RuntimeException_Sub1.anInt4596, (byte) -99);
-            if (Class318_Sub1_Sub1_Sub2.method2402(Class240.anInt4674, (byte) -78)) {
+            if (Class318_Sub1_Sub1_Sub2.method2402(Class240.clientState, (byte) -78)) {
                 Class95.aClass45_1541.anInt634 = 2;
                 Class247.aClass45_3183.anInt634 = 2;
                 Class94.aClass45_1538.anInt634 = 2;
@@ -564,7 +564,7 @@ class Class348_Sub49 extends Class348 {
             }
             if (i_71_ == 11 || i_71_ == 3) Class348_Sub40_Sub16.method3088(9);
             boolean bool = (i == i_71_ || Class348_Sub42_Sub8.method3196(i_71_, i ^ ~0x58) || Class340.method2672(i_71_, -100));
-            boolean bool_72_ = (Class240.anInt4674 == 2 || Class348_Sub42_Sub8.method3196(Class240.anInt4674, -110) || Class340.method2672(Class240.anInt4674, -128));
+            boolean bool_72_ = (Class240.clientState == 2 || Class348_Sub42_Sub8.method3196(Class240.clientState, -110) || Class340.method2672(Class240.clientState, -128));
             if (bool != bool_72_) {
                 if (bool) {
                     Class267.anInt3428 = Class345.anInt4270;
@@ -579,7 +579,7 @@ class Class348_Sub49 extends Class348 {
                 }
             }
             if (Class318_Sub1_Sub1_Sub2.method2402(i_71_, (byte) -64) || i_71_ == 13) Class348_Sub8.aHa6654.method3673();
-            Class240.anInt4674 = i_71_;
+            Class240.clientState = i_71_;
             // After state settles: restore/auto-login on title (once per session).
             if (i_71_ == 3) {
                 LoginPrefs.onLoginScreen();

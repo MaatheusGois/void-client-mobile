@@ -38,10 +38,10 @@ abstract class Class318_Sub1_Sub5 extends Class318_Sub1 {
 
     static final boolean method2485(int i) {
         anInt8776++;
-        if (Class135_Sub2.aClass348_Sub42_Sub12_4846 == null) return false;
-        if ((Class135_Sub2.aClass348_Sub42_Sub12_4846.anInt9608) >= 2000) Class135_Sub2.aClass348_Sub42_Sub12_4846.anInt9608 -= 2000;
+        if (Class135_Sub2.menuTipSecondary == null) return false;
+        if ((Class135_Sub2.menuTipSecondary.opcode) >= 2000) Class135_Sub2.menuTipSecondary.opcode -= 2000;
         int i_1_ = -53 % ((-41 - i) / 54);
-        return (Class135_Sub2.aClass348_Sub42_Sub12_4846.anInt9608) == 1011;
+        return (Class135_Sub2.menuTipSecondary.opcode) == 1011;
     }
 
     final boolean method2382(byte i) {

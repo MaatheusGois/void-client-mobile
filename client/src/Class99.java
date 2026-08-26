@@ -36,7 +36,7 @@ final class Class99 {
         anInt1576++;
         if (Class5_Sub1.aBoolean8335) {
             int i_12_ = 0;
-            for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) class348_sub42_sub13.aClass107_9621.method1011(-59)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((Class348_Sub42_Sub12) class348_sub42_sub13.aClass107_9621.method1003((byte) 108))) {
+            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1011(-59)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1003((byte) 108))) {
                 int i_13_ = OutputStream_Sub2.method138(class348_sub42_sub12, false);
                 if (i_13_ > i_12_) i_12_ = i_13_;
             }

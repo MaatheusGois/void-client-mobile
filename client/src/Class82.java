@@ -25,7 +25,7 @@ final class Class82 {
                 if (i != -79) method814((byte) -79, 126L);
                 anInt1437++;
                 try {
-                    if (Class240.anInt4674 != 10 && (string.equalsIgnoreCase("commands") || string.equalsIgnoreCase("help"))) {
+                    if (Class240.clientState != 10 && (string.equalsIgnoreCase("commands") || string.equalsIgnoreCase("help"))) {
                         Applet_Sub1.method94("commands - This command", i ^ 0x1);
                         Applet_Sub1.method94("cls - Clear console", -54);
                         Applet_Sub1.method94("displayfps - Toggle FPS and other information", -89);
@@ -133,9 +133,9 @@ final class Class82 {
                         }
                         if (string.equalsIgnoreCase("clientdrop")) {
                             Applet_Sub1.method94("Dropped client connection", -119);
-                            if (Class240.anInt4674 == 10) Class272.method2049(105);
+                            if (Class240.clientState == 10) Class272.method2049(105);
                             else {
-                                if (Class240.anInt4674 == 11) Class110.aBoolean1712 = true;
+                                if (Class240.clientState == 11) Class110.aBoolean1712 = true;
                                 return;
                             }
                             return;
@@ -178,7 +178,7 @@ final class Class82 {
                         }
                         if (string.equalsIgnoreCase("wm1")) {
                             Class85.method830(1, -1, (byte) 102, false, -1);
-                            if (Class348_Sub42_Sub12.method3229(-61) == 1) {
+                            if (MenuEntry.method3229(-61) == 1) {
                                 Applet_Sub1.method94("wm1 succeeded", -65);
                                 return;
                             } else Applet_Sub1.method94("wm1 failed", i ^ ~0x17);
@@ -186,7 +186,7 @@ final class Class82 {
                         }
                         if (string.equalsIgnoreCase("wm2")) {
                             Class85.method830(2, -1, (byte) 102, false, -1);
-                            if (Class348_Sub42_Sub12.method3229(-119) == 2) Applet_Sub1.method94("wm2 succeeded", -109);
+                            if (MenuEntry.method3229(-119) == 2) Applet_Sub1.method94("wm2 succeeded", -109);
                             else {
                                 Applet_Sub1.method94("wm2 failed", i + 154);
                                 return;
@@ -195,7 +195,7 @@ final class Class82 {
                         }
                         if (string.equalsIgnoreCase("wm3")) {
                             Class85.method830(3, 1024, (byte) 102, false, 768);
-                            if (Class348_Sub42_Sub12.method3229(i ^ 0x3d) == 3) Applet_Sub1.method94("wm3 succeeded", 111);
+                            if (MenuEntry.method3229(i ^ 0x3d) == 3) Applet_Sub1.method94("wm3 succeeded", 111);
                             else {
                                 Applet_Sub1.method94("wm3 failed", 83);
                                 return;
@@ -330,11 +330,11 @@ final class Class82 {
                             return;
                         }
                         if (string.equalsIgnoreCase("getcgcoord")) {
-                            Applet_Sub1.method94(("x:" + ((Class132.aPlayer_1907.x) >> 9) + " z:" + ((Class132.aPlayer_1907.y) >> 9)), -117);
+                            Applet_Sub1.method94(("x:" + ((Class132.localPlayer.x) >> 9) + " z:" + ((Class132.localPlayer.y) >> 9)), -117);
                             return;
                         }
                         if (string.equalsIgnoreCase("getheight")) {
-                            Applet_Sub1.method94(("Height: " + (aa_Sub1.aSArray5191[(Class132.aPlayer_1907.plane)].method3982((byte) -86, (Class132.aPlayer_1907.y) >> 9, (Class132.aPlayer_1907.x) >> 9))), i ^ 0x1);
+                            Applet_Sub1.method94(("Height: " + (aa_Sub1.aSArray5191[(Class132.localPlayer.plane)].method3982((byte) -86, (Class132.localPlayer.y) >> 9, (Class132.localPlayer.x) >> 9))), i ^ 0x1);
                             return;
                         }
                         if (string.equalsIgnoreCase("resetminimap")) {
@@ -368,8 +368,8 @@ final class Class82 {
                             return;
                         }
                         if (string.equalsIgnoreCase("getcamerapos")) {
-                            Applet_Sub1.method94(("Pos: " + (Class132.aPlayer_1907.plane) + "," + (((Class286_Sub4.anInt6246 >> 9) - -za_Sub2.regionTileX) >> 6) + "," + ((Class59_Sub2_Sub2.anInt8685 >> 9) + Class90.regionTileY >> 6) + "," + (((Class286_Sub4.anInt6246 >> 9) - -za_Sub2.regionTileX) & 0x3f) + "," + ((Class59_Sub2_Sub2.anInt8685 >> 9) - -Class90.regionTileY & 0x3f) + " Height: " + ((Class275.method2064(Class286_Sub4.anInt6246, (Class132.aPlayer_1907.plane), 11219, Class59_Sub2_Sub2.anInt8685)) - Class305.anInt3855)), 126);
-                            Applet_Sub1.method94(("Look: " + (Class132.aPlayer_1907.plane) + "," + (Class352.anInt4336 - -za_Sub2.regionTileX >> 6) + "," + (Class90.regionTileY + Class281.anInt3647 >> 6) + "," + (0x3f & Class352.anInt4336 - -za_Sub2.regionTileX) + "," + (0x3f & Class281.anInt3647 - -Class90.regionTileY) + " Height: " + ((Class275.method2064(Class352.anInt4336, (Class132.aPlayer_1907.plane), 11219, Class281.anInt3647)) - Class121.anInt1797)), -90);
+                            Applet_Sub1.method94(("Pos: " + (Class132.localPlayer.plane) + "," + (((Class286_Sub4.anInt6246 >> 9) - -za_Sub2.regionTileX) >> 6) + "," + ((Class59_Sub2_Sub2.anInt8685 >> 9) + Class90.regionTileY >> 6) + "," + (((Class286_Sub4.anInt6246 >> 9) - -za_Sub2.regionTileX) & 0x3f) + "," + ((Class59_Sub2_Sub2.anInt8685 >> 9) - -Class90.regionTileY & 0x3f) + " Height: " + ((Class275.method2064(Class286_Sub4.anInt6246, (Class132.localPlayer.plane), 11219, Class59_Sub2_Sub2.anInt8685)) - Class305.anInt3855)), 126);
+                            Applet_Sub1.method94(("Look: " + (Class132.localPlayer.plane) + "," + (Class352.anInt4336 - -za_Sub2.regionTileX >> 6) + "," + (Class90.regionTileY + Class281.anInt3647 >> 6) + "," + (0x3f & Class352.anInt4336 - -za_Sub2.regionTileX) + "," + (0x3f & Class281.anInt3647 - -Class90.regionTileY) + " Height: " + ((Class275.method2064(Class352.anInt4336, (Class132.localPlayer.plane), 11219, Class281.anInt3647)) - Class121.anInt1797)), -90);
                             return;
                         }
                         if (string.equals("renderprofile") || string.equals("rp")) {
@@ -634,7 +634,7 @@ final class Class82 {
                         return;
                     }
                 }
-                if (Class240.anInt4674 == 10) {
+                if (Class240.clientState == 10) {
                     Class292.anInt4799++;
                     Class348_Sub47 class348_sub47 = Class286_Sub3.method2148((Class101_Sub2.aClass351_5699), (Class348_Sub23_Sub2.aClass77_9029), i ^ 0x24);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string.length() + 3);
@@ -643,7 +643,7 @@ final class Class82 {
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                     Class348_Sub42_Sub14.method3243(120, class348_sub47);
                 }
-                if (Class240.anInt4674 == 10) {
+                if (Class240.clientState == 10) {
                     return;
                 }
                 Applet_Sub1.method94(Class274.aClass274_3486.method2063(Class348_Sub33.anInt6967, 544) + string, 57);

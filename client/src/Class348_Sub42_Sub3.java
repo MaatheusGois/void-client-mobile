@@ -82,9 +82,9 @@ final class Class348_Sub42_Sub3 extends Class348_Sub42 {
     }
 
     static final void method3175(byte i) {
-        if (!Class348_Sub42_Sub8.method3196(Class240.anInt4674, -114) && !Class340.method2672(Class240.anInt4674, -103)) {
-            int i_12_ = ((Class132.aPlayer_1907.anIntArray10320[0]) >> 3);
-            int i_13_ = ((Class132.aPlayer_1907.anIntArray10317[0]) >> 3);
+        if (!Class348_Sub42_Sub8.method3196(Class240.clientState, -114) && !Class340.method2672(Class240.clientState, -103)) {
+            int i_12_ = ((Class132.localPlayer.anIntArray10320[0]) >> 3);
+            int i_13_ = ((Class132.localPlayer.anIntArray10317[0]) >> 3);
             if (i_12_ < 0 || Class367_Sub4.anInt7319 >> 3 <= i_12_ || i_13_ < 0 || (Class348_Sub40_Sub3.anInt9109 >> 3 <= i_13_)) Class346_Sub1.method2703(0, Class367_Sub4.anInt7319 >> 4, (Class348_Sub40_Sub3.anInt9109 >> 4), (byte) -13);
             else Class346_Sub1.method2703(5000, i_12_, i_13_, (byte) -13);
         } else Class346_Sub1.method2703(5000, Class286_Sub4.anInt6246 >> 12, Class59_Sub2_Sub2.anInt8685 >> 12, (byte) -13);
@@ -163,7 +163,7 @@ final class Class348_Sub42_Sub3 extends Class348_Sub42 {
             } else if (i_16_ != 3) break;
             Class18.method282(2, Class348_Sub8.aHa6654, Class321.anInt4017, (byte) 73, Class45.anInt666, Class186_Sub1.anInt5812, Class348_Sub42_Sub8_Sub2.anInt10432, 2);
         } while (false);
-        if (Class316.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, Class305.aCanvas3869);
+        if (Class316.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, Class305.gameCanvas);
         if (Class348_Sub8.aHa6654 != null) Class290.method2196((byte) -9);
         Class305.aBoolean3870 = i != Class316.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
         Class59_Sub1.aBoolean5300 = Class316.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false);

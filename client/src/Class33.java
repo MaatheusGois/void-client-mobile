@@ -37,12 +37,12 @@ final class Class33 {
                 Class207 class207 = class222.method1610((byte) 71);
                 if (class207 == null) i_0_ = -1;
                 else {
-                    Class348_Sub23_Sub1.aClass297_8992.method2238(class207.method1522(), class207.method1516(), 17, new Point(class222.anInt2883, class222.anInt2890), Class305.aCanvas3869, class207.method1510());
+                    Class348_Sub23_Sub1.aClass297_8992.method2238(class207.method1522(), class207.method1516(), 17, new Point(class222.anInt2883, class222.anInt2890), Class305.gameCanvas, class207.method1510());
                     Class337.anInt4179 = i_0_;
                 }
             }
             if (i_0_ == -1 && Class337.anInt4179 != -1) {
-                Class348_Sub23_Sub1.aClass297_8992.method2238(-1, null, i + 17, new Point(), (Class305.aCanvas3869), -1);
+                Class348_Sub23_Sub1.aClass297_8992.method2238(-1, null, i + 17, new Point(), (Class305.gameCanvas), -1);
                 Class337.anInt4179 = -1;
             }
         }

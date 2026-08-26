@@ -108,7 +108,7 @@ final class Class235 {
                 }
                 anInt3083 = anInt3084 - -1;
                 if (anInt3083 < 0 || anInt3083 >= aClass17_3057.anIntArray237.length) anInt3083 = -1;
-                anInt3074 = -anInt3054 + Class367_Sub11.anInt7396;
+                anInt3074 = -anInt3054 + Class367_Sub11.clientCycle;
             }
         }
     }
@@ -218,12 +218,12 @@ final class Class235 {
                 if ((this.aClass318_Sub10_3081 == null || this.aClass318_Sub10_3081.aBoolean6470) && (class129s != null || class342s != null)) {
                     Class51 class51 = Class348_Sub40_Sub12.aClass263_9195.method2005(0, this.anInt3063);
                     if (class51.anIntArray945 != null) class51 = class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47);
-                    if (class51 != null) this.aClass318_Sub10_3081 = Class318_Sub10.method2526(Class367_Sub11.anInt7396, true);
+                    if (class51 != null) this.aClass318_Sub10_3081 = Class318_Sub10.method2526(Class367_Sub11.clientCycle, true);
                 }
                 if (this.aClass318_Sub10_3081 == null) break;
                 class64.method620(class101);
-                if (bool) this.aClass318_Sub10_3081.method2536(var_ha, Class367_Sub11.anInt7396, class129s, class342s, false);
-                else this.aClass318_Sub10_3081.method2540(Class367_Sub11.anInt7396);
+                if (bool) this.aClass318_Sub10_3081.method2536(var_ha, Class367_Sub11.clientCycle, class129s, class342s, false);
+                else this.aClass318_Sub10_3081.method2540(Class367_Sub11.clientCycle);
                 this.aClass318_Sub10_3081.method2533(aByte3085, i_8_, i, i_10_, i_7_);
             } catch (RuntimeException runtimeexception) {
                 throw Class348_Sub17.method2929(runtimeexception, ("bv.E(" + i + ',' + (class101 != null ? "{...}" : "null") + ',' + i_7_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_8_ + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_9_ + ',' + i_10_ + ')'));
@@ -255,7 +255,7 @@ final class Class235 {
                 method1666((byte) 69, -1);
                 if (aClass17_3057 == null) return;
             }
-            i = -anInt3074 + Class367_Sub11.anInt7396;
+            i = -anInt3074 + Class367_Sub11.clientCycle;
             if (i > 100 && aClass17_3057.anInt238 > 0) {
                 int i_12_;
                 for (i_12_ = (-aClass17_3057.anInt238 + aClass17_3057.anIntArray237.length); (anInt3084 < i_12_ && (aClass17_3057.anIntArray267[anInt3084] < i)); anInt3084++)
@@ -292,7 +292,7 @@ final class Class235 {
             }
         }
         anInt3054 = i;
-        anInt3074 = -i + Class367_Sub11.anInt7396;
+        anInt3074 = -i + Class367_Sub11.clientCycle;
     }
 
     public static void method1673(int i) {

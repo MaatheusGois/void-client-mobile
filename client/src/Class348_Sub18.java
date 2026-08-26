@@ -161,19 +161,19 @@ final class Class348_Sub18 extends Class348 {
     static final void method2942(Class46 class46, byte i) {
         anInt6805++;
         if (class46.anInt765 == Class244.anInt4610) {
-            if (Class132.aPlayer_1907.aString10544 == null) {
+            if (Class132.localPlayer.aString10544 == null) {
                 class46.anInt779 = 0;
                 class46.anInt753 = 0;
             } else {
                 class46.anInt757 = 150;
-                class46.anInt675 = 0x7ff & (int) (256.0 * Math.sin((double) (Class367_Sub11.anInt7396) / 40.0));
+                class46.anInt675 = 0x7ff & (int) (256.0 * Math.sin((double) (Class367_Sub11.clientCycle) / 40.0));
                 class46.anInt770 = 5;
                 class46.anInt753 = Class348_Sub42_Sub11.anInt9591;
-                class46.anInt779 = (Class318_Sub1_Sub3_Sub1.method2418((Class132.aPlayer_1907.aString10544), (byte) -41));
-                class46.anInt699 = Class132.aPlayer_1907.anInt10268;
+                class46.anInt779 = (Class318_Sub1_Sub3_Sub1.method2418((Class132.localPlayer.aString10544), (byte) -41));
+                class46.anInt699 = Class132.localPlayer.anInt10268;
                 class46.anInt841 = 0;
-                class46.anInt730 = Class132.aPlayer_1907.anInt10312;
-                class46.anInt795 = Class132.aPlayer_1907.anInt10245;
+                class46.anInt730 = Class132.localPlayer.anInt10312;
+                class46.anInt795 = Class132.localPlayer.anInt10245;
                 Class17 class17 = (class46.anInt699 != -1 ? Class10.aClass87_191.method835(class46.anInt699, 7) : null);
                 if (class17 != null) Class264.method2017(class46.anInt795, class17, 50);
             }

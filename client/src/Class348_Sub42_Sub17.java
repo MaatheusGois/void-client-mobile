@@ -102,8 +102,8 @@ final class Class348_Sub42_Sub17 extends Class348_Sub42 {
 
     static final void method3270(byte i) {
         if (i <= 106) method3266(null, -91, null);
-        for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 115)) {
-            if (Class239_Sub17.method1796(69, class348_sub42_sub12.anInt9608)) Class5_Sub3.method202(6, class348_sub42_sub12);
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 115)) {
+            if (Class239_Sub17.method1796(69, class348_sub42_sub12.opcode)) Class5_Sub3.method202(6, class348_sub42_sub12);
         }
         anInt9680++;
     }

@@ -31,7 +31,7 @@ final class Class195 implements Interface16 {
 
     static final void method1448(int i) {
         anInt5003++;
-        if (i <= -55) Class348_Sub40_Sub7.aClass348_Sub42_Sub12_9144 = new Class348_Sub42_Sub12((Class274.aClass274_3487.method2063(Class348_Sub33.anInt6967, 544)), "", Class362.anInt4458, 1004, -1, 0L, 0, 0, true, false, 0L, true);
+        if (i <= -55) Class348_Sub40_Sub7.aMenuEntry_9144 = new MenuEntry((Class274.aClass274_3487.method2063(Class348_Sub33.anInt6967, 544)), "", Class362.anInt4458, 1004, -1, 0L, 0, 0, true, false, 0L, true);
     }
 
     public final void method57(int i) {

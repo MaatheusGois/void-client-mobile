@@ -37,7 +37,7 @@ final class Class239_Sub10 extends Class239 {
 
     static final void method1761(int i) {
         anInt5935++;
-        Class348_Sub47.method3324(Class348_Sub8.aHa6654, (byte) 105, Class367_Sub11.anInt7396);
+        Class348_Sub47.method3324(Class348_Sub8.aHa6654, (byte) 105, Class367_Sub11.clientCycle);
         if (i != 85) anInt5943 = -99;
         if (r.anInt9721 != -1) Class75_Sub1.method769(r.anInt9721, (byte) 118);
         for (int i_6_ = 0; Class348_Sub38.anInt7008 > i_6_; i_6_++) {
@@ -45,7 +45,7 @@ final class Class239_Sub10 extends Class239 {
             Class175.aBooleanArray2326[i_6_] = Class152.aBooleanArray2076[i_6_];
             Class152.aBooleanArray2076[i_6_] = false;
         }
-        Class58.anInt1064 = Class367_Sub11.anInt7396;
+        Class58.anInt1064 = Class367_Sub11.clientCycle;
         if (r.anInt9721 != -1) {
             Class348_Sub38.anInt7008 = 0;
             Class88.method842(false);

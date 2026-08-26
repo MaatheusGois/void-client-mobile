@@ -18,7 +18,7 @@ final class Class19 {
 
     static final void method283(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         for (Class318_Sub5 class318_sub5 = (Class318_Sub5) Class225.aClass243_2957.method1872(8); class318_sub5 != null; class318_sub5 = ((Class318_Sub5) Class225.aClass243_2957.method1878((byte) 0))) {
-            if (class318_sub5.anInt6421 <= Class367_Sub11.anInt7396) class318_sub5.method2373(false);
+            if (class318_sub5.anInt6421 <= Class367_Sub11.clientCycle) class318_sub5.method2373(false);
             else {
                 Class318_Sub5.method2505(i_0_ >> 1, class318_sub5.anInt6420 * 2, 0, i_5_, i_2_ >> 1, class318_sub5.anInt6418, 256 + (class318_sub5.anInt6422 << 9), i_1_, (class318_sub5.anInt6419 << 9) + 256);
                 Class262.aClass324_3326.method2575((byte) 122, i_3_ - -Class239_Sub21.anIntArray6062[0], ~0xffffff | class318_sub5.anInt6415, class318_sub5.aString6416, 0, i_4_ - -Class239_Sub21.anIntArray6062[1]);

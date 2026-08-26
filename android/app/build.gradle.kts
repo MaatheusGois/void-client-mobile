@@ -33,7 +33,9 @@ android {
 }
 
 val prepareClientSources by tasks.registering(Copy::class) {
+    // Flat merge: 634 client + Microbot API (both default package).
     from(rootProject.projectDir.resolve("../client/src"))
+    from(rootProject.projectDir.resolve("../client/src-microbot"))
     into(layout.buildDirectory.dir("generated/client"))
     filter { line ->
         line

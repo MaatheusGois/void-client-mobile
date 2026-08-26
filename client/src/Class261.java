@@ -52,7 +52,7 @@ final class Class261 {
     }
 
     static final void method1982(int i, int i_8_, String string) {
-        Class348_Sub42_Sub12.anInt9594++;
+        MenuEntry.anInt9594++;
         anInt3318++;
         Class348_Sub47 class348_sub47 = Class286_Sub3.method2148(Class117.aClass351_1766, Class348_Sub23_Sub2.aClass77_9029, i + -107);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 1 - -Class239_Sub6.method1745(string, -65));
@@ -108,35 +108,49 @@ final class Class261 {
     static final void method1987(int i) {
         int i_12_ = 81 % ((i - -70) / 35);
         anInt3313++;
-        if (!Class5_Sub1.aBoolean8335) Class348_Sub42_Sub6.aBoolean9535 = ((Class332.anInt4143 != -1 && Class73.anInt4776 >= Class332.anInt4143) || (Class348_Sub42_Sub8_Sub2.anInt10432 < 16 * Class73.anInt4776 - -(!Class71.aBoolean1211 ? 22 : 26)));
+        if (!Class5_Sub1.aBoolean8335) Class348_Sub42_Sub6.aBoolean9535 = ((Class332.anInt4143 != -1 && Class73.menuEntryCount >= Class332.anInt4143) || (Class348_Sub42_Sub8_Sub2.anInt10432 < 16 * Class73.menuEntryCount - -(!Class71.aBoolean1211 ? 22 : 26)));
         Class166.aClass262_2187.method1996(103);
         Class348_Sub40_Sub38.aClass262_9478.method1996(104);
-        for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 83)) {
-            int i_13_ = class348_sub42_sub12.anInt9608;
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+            int i_13_ = class348_sub42_sub12.opcode;
             if (i_13_ < 1000) {
                 class348_sub42_sub12.method2715((byte) 97);
                 if (i_13_ == 15 || i_13_ == 2 || i_13_ == 30 || i_13_ == 49 || i_13_ == 51 || i_13_ == 50 || i_13_ == 6) Class348_Sub40_Sub38.aClass262_9478.method1999(class348_sub42_sub12, -20180);
                 else Class166.aClass262_2187.method1999(class348_sub42_sub12, -20180);
             }
         }
-        Class166.aClass262_2187.method1988(Class348_Sub40_Sub4.aClass262_9111, (byte) -115);
-        Class348_Sub40_Sub38.aClass262_9478.method1988(Class348_Sub40_Sub4.aClass262_9111, (byte) -115);
-        Class348_Sub42_Sub12 swapped = DefaultClickSwapper.applySwaps();
-        if (Class73.anInt4776 > 1) {
+        Class166.aClass262_2187.method1988(Class348_Sub40_Sub4.menuEntries, (byte) -115);
+        Class348_Sub40_Sub38.aClass262_9478.method1988(Class348_Sub40_Sub4.menuEntries, (byte) -115);
+        MenuEntry swapped = DefaultClickSwapper.applySwaps();
+        // Microbot menu-inject: force tip to targetMenu when a script is clicking.
+        MenuEntry microTip = MicrobotMenu.applyTargetMenu();
+        if (microTip != null) {
+            swapped = microTip;
+        }
+        if (microTip != null) {
+            Class316.menuTip = microTip;
+            Class135_Sub2.menuTipSecondary = microTip;
+        } else if (Class73.menuEntryCount > 1) {
             if (swapped != null) {
                 // Force tip — list front alone loses to Attack priority on some NPCs.
-                Class316.aClass348_Sub42_Sub12_3963 = swapped;
-                Class135_Sub2.aClass348_Sub42_Sub12_4846 = swapped;
-            } else if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -122) || Class73.anInt4776 <= 2) {
-                Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295);
-                Class135_Sub2.aClass348_Sub42_Sub12_4846 = Class316.aClass348_Sub42_Sub12_3963;
+                Class316.menuTip = swapped;
+                Class135_Sub2.menuTipSecondary = swapped;
+            } else if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -122) || Class73.menuEntryCount <= 2) {
+                Class316.menuTip = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.aClass348_3334.aClass348_4295);
+                Class135_Sub2.menuTipSecondary = Class316.menuTip;
             } else {
-                Class316.aClass348_Sub42_Sub12_3963 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295.aClass348_4295);
-                Class135_Sub2.aClass348_Sub42_Sub12_4846 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.aClass348_3334.aClass348_4295);
+                Class316.menuTip = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.aClass348_3334.aClass348_4295.aClass348_4295);
+                Class135_Sub2.menuTipSecondary = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.aClass348_3334.aClass348_4295);
             }
         } else {
-            Class316.aClass348_Sub42_Sub12_3963 = null;
-            Class135_Sub2.aClass348_Sub42_Sub12_4846 = null;
+            Class316.menuTip = null;
+            Class135_Sub2.menuTipSecondary = null;
+        }
+        // Don't open menus / walk through the Microbot HUD (script tip inject still allowed above).
+        if (Loader.microbotEnabled && Microbot.targetMenu == null && MicrobotPanel.isMouseOver()) {
+            Class316.menuTip = null;
+            Class135_Sub2.menuTipSecondary = null;
+            return;
         }
         int i_14_ = -1;
         Class348_Sub45 class348_sub45 = (Class348_Sub45) Class318_Sub1_Sub3.aClass262_8744.method1995(4);
@@ -204,9 +218,9 @@ final class Class261 {
                     if (i_25_ != -1) {
                         int i_29_ = 0;
                         Class156 class156 = new Class156(Class242.aClass348_Sub42_Sub13_3152.aClass107_9621);
-                        for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) class156.method1240(98)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((Class348_Sub42_Sub12) class156.method1243((byte) 122))) {
+                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.method1240(98)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.method1243((byte) 122))) {
                             if (i_29_ == i_25_) {
-                                Class325.method2599((byte) 126, class348_sub42_sub12, i_24_, i_23_);
+                                Class325.processMenuAction((byte) 126, class348_sub42_sub12, i_24_, i_23_);
                                 break;
                             }
                             i_29_++;
@@ -236,7 +250,7 @@ final class Class261 {
                             Class156 class156 = new Class156(Class233.aClass107_3022);
                             for (Class348_Sub42_Sub13 class348_sub42_sub13 = ((Class348_Sub42_Sub13) class156.method1240(18)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) class156.method1243((byte) 55))) {
                                 if (i_34_ == i_30_) {
-                                    Class325.method2599((byte) 122, ((Class348_Sub42_Sub12) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), i_24_, i_23_);
+                                    Class325.processMenuAction((byte) 122, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), i_24_, i_23_);
                                     Class286_Sub2.method2146((byte) 118);
                                     break;
                                 }
@@ -245,21 +259,21 @@ final class Class261 {
                         }
                     } else {
                         int i_35_ = -1;
-                        for (int i_36_ = 0; (i_36_ < Class73.anInt4776); i_36_++) {
+                        for (int i_36_ = 0; (i_36_ < Class73.menuEntryCount); i_36_++) {
                             if (Class71.aBoolean1211) {
-                                int i_37_ = (33 + Class348_Sub42_Sub5.anInt9532 + 16 * (Class73.anInt4776 - (1 - -i_36_)));
+                                int i_37_ = (33 + Class348_Sub42_Sub5.anInt9532 + 16 * (Class73.menuEntryCount - (1 - -i_36_)));
                                 if (i_37_ - 13 < i_24_ && 4 + i_37_ > i_24_) i_35_ = i_36_;
                             } else {
-                                int i_38_ = (Class348_Sub42_Sub5.anInt9532 + (31 - -((Class73.anInt4776 - 1 - i_36_) * 16)));
+                                int i_38_ = (Class348_Sub42_Sub5.anInt9532 + (31 - -((Class73.menuEntryCount - 1 - i_36_) * 16)));
                                 if (i_38_ - 13 < i_24_ && (i_24_ < i_38_ - -3)) i_35_ = i_36_;
                             }
                         }
                         if (i_35_ != -1) {
                             int i_39_ = 0;
-                            Class312 class312 = new Class312(Class348_Sub40_Sub4.aClass262_9111);
-                            for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((Class348_Sub42_Sub12) class312.method2329(10))) {
+                            Class312 class312 = new Class312(Class348_Sub40_Sub4.menuEntries);
+                            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.method2329(10))) {
                                 if (i_35_ == i_39_) {
-                                    Class325.method2599((byte) 107, class348_sub42_sub12, i_24_, i_23_);
+                                    Class325.processMenuAction((byte) 107, class348_sub42_sub12, i_24_, i_23_);
                                     break;
                                 }
                                 i_39_++;
@@ -270,17 +284,17 @@ final class Class261 {
                 }
             }
         } else {
-            if (i_14_ == 0 && ((Class318_Sub1_Sub5.anInt8770 == 1 && Class73.anInt4776 > 2) || Class318_Sub1_Sub5.method2485(-100))) i_14_ = 2;
-            if (i_14_ == 2 && Class73.anInt4776 > 0 && class348_sub45 != null) {
+            if (i_14_ == 0 && ((Class318_Sub1_Sub5.anInt8770 == 1 && Class73.menuEntryCount > 2) || Class318_Sub1_Sub5.method2485(-100))) i_14_ = 2;
+            if (i_14_ == 2 && Class73.menuEntryCount > 0 && class348_sub45 != null) {
                 if (Class289.aClass46_3701 == null && Class348_Sub42.anInt7059 == 0) Class304.method2291((byte) -124, class348_sub45.method3308((byte) -127), class348_sub45.method3311(-104));
                 else Class282.anInt3655 = 2;
             }
             if (i_14_ == 0) {
-                if (Class316.aClass348_Sub42_Sub12_3963 != null) Class239_Sub3.method1731(1);
+                if (Class316.menuTip != null) Class239_Sub3.method1731(1);
                 else if (r.aBoolean9722) Class341.method2678(-2049);
             }
             if (Class289.aClass46_3701 == null && Class348_Sub42.anInt7059 == 0) {
-                Class138.aClass348_Sub42_Sub12_1946 = null;
+                Class138.aMenuEntry_1946 = null;
                 Class282.anInt3655 = 0;
             }
         }

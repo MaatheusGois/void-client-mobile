@@ -384,22 +384,37 @@ final class Class325 {
         return null;
     }
 
-    static final void method2599(byte i, Class348_Sub42_Sub12 class348_sub42_sub12, int i_72_, int i_73_) {
+    /**
+     * Executes a {@link MenuEntry}: custom 1900-ops first (DefaultClick / Microbot),
+     * else builds the matching outbound packet (Attack, Walk, object, CC_OP, …).
+     *
+     * @param entry tip or explicitly chosen menu row
+     * @param i_72_ click Y (cursor feedback)
+     * @param i_73_ click X
+     */
+    static final void processMenuAction(byte i, MenuEntry class348_sub42_sub12, int i_72_, int i_73_) {
         do {
             try {
                 anInt4067++;
-                if (class348_sub42_sub12 != null && (class348_sub42_sub12 != (Class348_Sub40_Sub4.aClass262_9111.aClass348_3334))) {
+                if (class348_sub42_sub12 != null && (class348_sub42_sub12 != (Class348_Sub40_Sub4.menuEntries.aClass348_3334))) {
                     // Client-only Default click config — do not send a game packet.
                     if (DefaultClickSwapper.handleMenuAction(class348_sub42_sub12)) {
                         Class286_Sub2.method2146((byte) 84);
                         break;
                     }
-                    int i_74_ = (class348_sub42_sub12.anInt9602);
-                    int i_75_ = (class348_sub42_sub12.anInt9607);
-                    int i_76_ = (class348_sub42_sub12.anInt9608);
-                    int i_77_ = (int) (class348_sub42_sub12.aLong9605);
+                    // Client-only Microbot toggle — do not send a game packet.
+                    if (MicrobotRuntime.handleMenuAction(class348_sub42_sub12)) {
+                        Class286_Sub2.method2146((byte) 84);
+                        break;
+                    }
+                    // Clear Microbot targetMenu after any real (or attempted) menu consume.
+                    MicrobotMenu.onMenuOptionClicked();
+                    int i_74_ = (class348_sub42_sub12.param0);
+                    int i_75_ = (class348_sub42_sub12.param1);
+                    int i_76_ = (class348_sub42_sub12.opcode);
+                    int i_77_ = (int) (class348_sub42_sub12.identifier);
                     if (i_76_ >= 2000) i_76_ -= 2000;
-                    long l = (class348_sub42_sub12.aLong9605);
+                    long l = (class348_sub42_sub12.identifier);
                     if (i_76_ == 19) {
                         if (Class192.anInt2581 <= 0 || !Class182.aClass346_2449.method2696(82, -125) || !Class182.aClass346_2449.method2696(81, -126)) {
                             Class348_Sub47 class348_sub47 = Class348_Sub14.method2807(i_75_, i_74_, (byte) -110, i_77_);
@@ -411,8 +426,8 @@ final class Class325 {
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, r_Sub2.anInt10483);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Class348_Sub49_Sub1.anInt9750);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 89);
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (Class132.aPlayer_1907.x));
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (Class132.aPlayer_1907.y));
+                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (Class132.localPlayer.x));
+                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (Class132.localPlayer.y));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 63);
                             } else {
                                 Class93.anInt1534 = i_72_;
@@ -422,7 +437,7 @@ final class Class325 {
                             }
                             Class348_Sub42_Sub14.method3243(123, class348_sub47);
                             Class298.method2252(true, i_74_, i_75_, (byte) -120, 1, 0, 1, -4, 0);
-                        } else Class361.method3502(i_75_ + Class90.regionTileY, 2, (Class132.aPlayer_1907.plane), i_74_ + za_Sub2.regionTileX);
+                        } else Class361.method3502(i_75_ + Class90.regionTileY, 2, (Class132.localPlayer.plane), i_74_ + za_Sub2.regionTileX);
                     }
                     if (i_76_ == 4) {
                         Class93.anInt1534 = i_72_;
@@ -571,7 +586,7 @@ final class Class325 {
                         }
                     }
                     if (i_76_ == 12) {
-                        if (Class192.anInt2581 > 0 && Class182.aClass346_2449.method2696(82, -127) && Class182.aClass346_2449.method2696(81, -126)) Class361.method3502(i_75_ + Class90.regionTileY, 2, (Class132.aPlayer_1907.plane), za_Sub2.regionTileX - -i_74_);
+                        if (Class192.anInt2581 > 0 && Class182.aClass346_2449.method2696(82, -127) && Class182.aClass346_2449.method2696(81, -126)) Class361.method3502(i_75_ + Class90.regionTileY, 2, (Class132.localPlayer.plane), za_Sub2.regionTileX - -i_74_);
                         else {
                             Class93.anInt1534 = i_72_;
                             Class26.anInt385 = i_73_;
@@ -845,13 +860,13 @@ final class Class325 {
                             Class228.anInt2975++;
                             Class348_Sub47 class348_sub47 = Class286_Sub3.method2148((Class52.aClass351_4907), (Class348_Sub23_Sub2.aClass77_9029), -127);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, Class9.anInt169);
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle((Class132.aPlayer_1907.anInt10290), (byte) 3);
+                            class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle((Class132.localPlayer.anInt10290), (byte) 3);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(Class301.anInt3829, (byte) 3);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeIntInverseMiddle(Class149.anInt2046, -4086);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeByteInverse((byte) -29, (Class182.aClass346_2449.method2696(82, -121) ? 1 : 0));
                             Class348_Sub42_Sub14.method3243(-40, class348_sub47);
                         }
-                        if (i_76_ == 18 || i_76_ == 1011) Class348_Sub9.method2780(i_74_, (class348_sub42_sub12.aString9601), (byte) 5, i_77_, i_75_);
+                        if (i_76_ == 18 || i_76_ == 1011) Class348_Sub9.method2780(i_74_, (class348_sub42_sub12.target), (byte) 5, i_77_, i_75_);
                         if (i_76_ == 13) {
                             Class46 class46 = Class348_Sub22.method2957(i_74_, (byte) -54, i_75_);
                             if (class46 != null) {

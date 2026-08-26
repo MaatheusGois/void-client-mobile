@@ -134,20 +134,20 @@ final class Class239_Sub24 extends Class239 {
                     int i_23_ = -is[2] + is_21_[2];
                     int i_24_ = (int) ((float) is[0] + (float) i_22_ * f);
                     int i_25_ = (int) ((float) is[2] + (float) i_23_ * f);
-                    i_13_ = (Class132.aPlayer_1907.method2436((byte) 71) + -1 << 8) + i_24_ >> 9;
-                    i_14_ = i_25_ - -(Class132.aPlayer_1907.method2436((byte) 73) + -1 << 8) >> 9;
-                    int i_26_ = (Class132.aPlayer_1907.plane);
+                    i_13_ = (Class132.localPlayer.method2436((byte) 71) + -1 << 8) + i_24_ >> 9;
+                    i_14_ = i_25_ - -(Class132.localPlayer.method2436((byte) 73) + -1 << 8) >> 9;
+                    int i_26_ = (Class132.localPlayer.plane);
                     if (i_26_ < 3 && ((0x2 & (Class348_Sub33.aByteArrayArrayArray6962[1][i_24_ >> 9][i_25_ >> 9])) != 0)) i_26_++;
                 }
                 if (i_13_ != -1 && i_14_ != -1) {
                     if (!r.aBoolean9722 || (0x40 & Class38.anInt500) == 0) {
-                        if (Class122.aBoolean1801) Class50_Sub3.method466(false, "", i_14_, (byte) -109, true, i_13_, -1, true, 12, i_14_ | i_13_ << 0, (Class274.aClass274_3510.method2063(Class348_Sub33.anInt6967, 544)), 0L, -1);
+                        if (Class122.aBoolean1801) Class50_Sub3.addMenuEntry(false, "", i_14_, (byte) -109, true, i_13_, -1, true, 12, i_14_ | i_13_ << 0, (Class274.aClass274_3510.method2063(Class348_Sub33.anInt6967, 544)), 0L, -1);
                         Class352.anInt4334++;
-                        Class50_Sub3.method466(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Class239_Sub4.aString5882, 0L, Class333.anInt4144);
+                        Class50_Sub3.addMenuEntry(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Class239_Sub4.aString5882, 0L, Class333.anInt4144);
                     } else {
                         Class46 class46 = Class348_Sub22.method2957(Class9.anInt169, (byte) -54, Class149.anInt2046);
                         if (class46 == null) Class341.method2678(-2049);
-                        else Class50_Sub3.method466(false, " ->", i_14_, (byte) -101, true, i_13_, -1, true, 15, i_13_ << 0 | i_14_, Class28.aString5001, 0L, (Class348_Sub49_Sub1.anInt9747));
+                        else Class50_Sub3.addMenuEntry(false, " ->", i_14_, (byte) -101, true, i_13_, -1, true, 15, i_13_ << 0 | i_14_, Class28.aString5001, 0L, (Class348_Sub49_Sub1.anInt9747));
                     }
                 }
             }
@@ -164,7 +164,7 @@ final class Class239_Sub24 extends Class239 {
                 }
                 Class243 class243 = class76.aClass243_1282;
                 for (Class318_Sub4 class318_sub4 = (Class318_Sub4) class243.method1872(8); class318_sub4 != null; class318_sub4 = (Class318_Sub4) class243.method1878((byte) -123)) {
-                    if ((RuntimeException_Sub1.aBoolean4599 || ((Class132.aPlayer_1907.plane) == class318_sub4.aClass318_Sub1_6410.plane)) && class318_sub4.method2504(i_29_, i_28_, var_ha, -115)) {
+                    if ((RuntimeException_Sub1.aBoolean4599 || ((Class132.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) && class318_sub4.method2504(i_29_, i_28_, var_ha, -115)) {
                         boolean bool_30_ = false;
                         boolean bool_31_ = false;
                         int i_32_;
@@ -186,12 +186,12 @@ final class Class239_Sub24 extends Class239 {
                                     Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480(Class74.anIntArray1233[i_37_], -6008)));
                                     if (class348_sub22 != null) {
                                         Npc npc = (class348_sub22.aNpc_6859);
-                                        if ((Class367_Sub11.anInt7396 != (npc.anInt10215)) && (npc.aBoolean10309)) {
+                                        if ((Class367_Sub11.clientCycle != (npc.anInt10215)) && (npc.aBoolean10309)) {
                                             int i_38_ = ((npc.x) - ((npc.aClass79_10505.anInt1399) + -1 << 8));
                                             int i_39_ = (-((-1 + (npc.aClass79_10505.anInt1399)) << 8) + (npc.y));
                                             if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.method2436((byte) 68))) >= (npc.aClass79_10505.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.method2436((byte) 97))) >= (npc.aClass79_10505.anInt1399))) {
-                                                Class286_Sub3.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.aPlayer_1907.plane)), false, npc);
-                                                npc.anInt10215 = Class367_Sub11.anInt7396;
+                                                Class286_Sub3.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.localPlayer.plane)), false, npc);
+                                                npc.anInt10215 = Class367_Sub11.clientCycle;
                                             }
                                         }
                                     }
@@ -200,19 +200,19 @@ final class Class239_Sub24 extends Class239 {
                                 int[] is = Class286_Sub7.anIntArray6290;
                                 for (int i_41_ = 0; (i_40_ > i_41_); i_41_++) {
                                     Player player_42_ = (Class294.aPlayerArray5058[is[i_41_]]);
-                                    if ((player_42_ != null) && (Class367_Sub11.anInt7396 != (player_42_.anInt10215)) && (player != player_42_) && (player_42_.aBoolean10309)) {
+                                    if ((player_42_ != null) && (Class367_Sub11.clientCycle != (player_42_.anInt10215)) && (player != player_42_) && (player_42_.aBoolean10309)) {
                                         int i_43_ = ((player_42_.x) + -((player_42_.method2436((byte) 94) - 1) << 8));
                                         int i_44_ = ((player_42_.y) + -((-1 + (player_42_.method2436((byte) 82))) << 8));
                                         if ((i_43_ >= i_35_) && ((player.method2436((byte) 70) - (-i_35_ + i_43_ >> 9)) >= player_42_.method2436((byte) 89)) && (i_44_ >= i_36_) && ((player.method2436((byte) 42) - (i_44_ - i_36_ >> 9)) >= player_42_.method2436((byte) 127))) {
-                                            Class348_Sub43.method3298((byte) 114, ((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.aPlayer_1907.plane)), player_42_);
-                                            player_42_.anInt10215 = Class367_Sub11.anInt7396;
+                                            Class348_Sub43.method3298((byte) 114, ((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.localPlayer.plane)), player_42_);
+                                            player_42_.anInt10215 = Class367_Sub11.clientCycle;
                                         }
                                     }
                                 }
                             }
-                            if (Class367_Sub11.anInt7396 == player.anInt10215) continue;
-                            Class348_Sub43.method3298((byte) 96, ((Class132.aPlayer_1907.plane) != class318_sub4.aClass318_Sub1_6410.plane), player);
-                            player.anInt10215 = Class367_Sub11.anInt7396;
+                            if (Class367_Sub11.clientCycle == player.anInt10215) continue;
+                            Class348_Sub43.method3298((byte) 96, ((Class132.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), player);
+                            player.anInt10215 = Class367_Sub11.clientCycle;
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Npc) {
                             Npc npc = ((Npc) (class318_sub4.aClass318_Sub1_6410));
@@ -224,12 +224,12 @@ final class Class239_Sub24 extends Class239 {
                                         Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480(Class74.anIntArray1233[i_47_], -6008)));
                                         if (class348_sub22 != null) {
                                             Npc npc_48_ = (class348_sub22.aNpc_6859);
-                                            if (((npc_48_.anInt10215) != Class367_Sub11.anInt7396) && (npc != npc_48_) && (npc_48_.aBoolean10309)) {
+                                            if (((npc_48_.anInt10215) != Class367_Sub11.clientCycle) && (npc != npc_48_) && (npc_48_.aBoolean10309)) {
                                                 int i_49_ = (-((npc_48_.aClass79_10505.anInt1399) - 1 << 8) + (npc_48_.x));
                                                 int i_50_ = ((npc_48_.y) + -((npc_48_.aClass79_10505.anInt1399) - 1 << 8));
                                                 if (i_49_ >= i_45_ && ((npc_48_.aClass79_10505.anInt1399) <= ((npc.aClass79_10505.anInt1399) - (-i_45_ + i_49_ >> 9))) && (i_46_ <= i_50_) && ((npc_48_.aClass79_10505.anInt1399) <= ((npc.aClass79_10505.anInt1399) + -(i_50_ + -i_46_ >> 9)))) {
-                                                    Class286_Sub3.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.aPlayer_1907.plane)), false, npc_48_);
-                                                    npc_48_.anInt10215 = (Class367_Sub11.anInt7396);
+                                                    Class286_Sub3.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.localPlayer.plane)), false, npc_48_);
+                                                    npc_48_.anInt10215 = (Class367_Sub11.clientCycle);
                                                 }
                                             }
                                         }
@@ -238,19 +238,19 @@ final class Class239_Sub24 extends Class239 {
                                     int[] is = Class286_Sub7.anIntArray6290;
                                     for (int i_52_ = 0; (i_51_ > i_52_); i_52_++) {
                                         Player player = (Class294.aPlayerArray5058[is[i_52_]]);
-                                        if ((player != null) && (Class367_Sub11.anInt7396 != (player.anInt10215)) && (player.aBoolean10309)) {
+                                        if ((player != null) && (Class367_Sub11.clientCycle != (player.anInt10215)) && (player.aBoolean10309)) {
                                             int i_53_ = ((player.x) - ((-1 + (player.method2436((byte) 116))) << 8));
                                             int i_54_ = ((player.y) + -((player.method2436((byte) 121)) + -1 << 8));
                                             if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.aClass79_10505.anInt1399)) >= player.method2436((byte) 114)) && (i_54_ >= i_46_) && (player.method2436((byte) 58) <= ((npc.aClass79_10505.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
-                                                Class348_Sub43.method3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.aPlayer_1907.plane)), player);
-                                                player.anInt10215 = Class367_Sub11.anInt7396;
+                                                Class348_Sub43.method3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Class132.localPlayer.plane)), player);
+                                                player.anInt10215 = Class367_Sub11.clientCycle;
                                             }
                                         }
                                     }
                                 }
-                                if (Class367_Sub11.anInt7396 == npc.anInt10215) continue;
-                                Class286_Sub3.method2150((class318_sub4.aClass318_Sub1_6410.plane != (Class132.aPlayer_1907.plane)), false, npc);
-                                npc.anInt10215 = Class367_Sub11.anInt7396;
+                                if (Class367_Sub11.clientCycle == npc.anInt10215) continue;
+                                Class286_Sub3.method2150((class318_sub4.aClass318_Sub1_6410.plane != (Class132.localPlayer.plane)), false, npc);
+                                npc.anInt10215 = Class367_Sub11.clientCycle;
                             }
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Class318_Sub1_Sub2_Sub1) {
@@ -262,14 +262,14 @@ final class Class239_Sub24 extends Class239 {
                                 Class348_Sub34 class348_sub34 = ((Class348_Sub34) class348_sub37.aClass262_6998.method1993(-92));
                                 while (class348_sub34 != null) {
                                     Class213 class213 = (Exception_Sub1.aClass255_112.method1940(79, (class348_sub34.anInt6973)));
-                                    if (r.aBoolean9722 && ((Class132.aPlayer_1907.plane) == class318_sub4.aClass318_Sub1_6410.plane)) {
+                                    if (r.aBoolean9722 && ((Class132.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) {
                                         Class254 class254 = (Class246.anInt3176 != -1 ? (Class101_Sub3.aClass326_5764.method2600(Class246.anInt3176, 28364)) : null);
                                         if ((Class38.anInt500 & 0x1) != 0 && (class254 == null || ((class254.anInt3256) != (class213.method1567((class254.anInt3256), 29, Class246.anInt3176))))) {
                                             Class97.anInt1555++;
-                                            Class50_Sub3.method466(false, (Class28.aString5000 + " -> <col=ff9040>" + (class213.aString2795)), i_32_, (byte) -76, false, i_33_, -1, true, 49, i_57_, Class28.aString5001, class348_sub34.anInt6973, (Class348_Sub49_Sub1.anInt9747));
+                                            Class50_Sub3.addMenuEntry(false, (Class28.aString5000 + " -> <col=ff9040>" + (class213.aString2795)), i_32_, (byte) -76, false, i_33_, -1, true, 49, i_57_, Class28.aString5001, class348_sub34.anInt6973, (Class348_Sub49_Sub1.anInt9747));
                                         }
                                     }
-                                    if (class318_sub4.aClass318_Sub1_6410.plane == (Class132.aPlayer_1907.plane)) {
+                                    if (class318_sub4.aClass318_Sub1_6410.plane == (Class132.localPlayer.plane)) {
                                         String[] strings = (class213.aStringArray2811);
                                         for (int i_58_ = 4; i_58_ >= 0; i_58_--) {
                                             if (strings != null && strings[i_58_] != null) {
@@ -282,13 +282,13 @@ final class Class239_Sub24 extends Class239 {
                                                 if (i_58_ == (class213.anInt2752)) i_60_ = class213.anInt2759;
                                                 if (i_58_ == 4) i_59_ = 5;
                                                 if ((class213.anInt2764) == i_58_) i_60_ = class213.anInt2830;
-                                                Class50_Sub3.method466(false, ("<col=ff9040>" + (class213.aString2795)), i_32_, (byte) -119, false, i_33_, -1, true, i_59_, i_57_, strings[i_58_], class348_sub34.anInt6973, i_60_);
+                                                Class50_Sub3.addMenuEntry(false, ("<col=ff9040>" + (class213.aString2795)), i_32_, (byte) -119, false, i_33_, -1, true, i_59_, i_57_, strings[i_58_], class348_sub34.anInt6973, i_60_);
                                                 Class348_Sub42_Sub8.anInt9548++;
                                             }
                                         }
                                     }
                                     Class348_Sub33.anInt6956++;
-                                    Class50_Sub3.method466(((Class132.aPlayer_1907.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.aString2795) + Loader.getDebug(class213.anInt2769), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544)), class348_sub34.anInt6973, Class286_Sub8.anInt6299);
+                                    Class50_Sub3.addMenuEntry(((Class132.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.aString2795) + Loader.getDebug(class213.anInt2769), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544)), class348_sub34.anInt6973, Class286_Sub8.anInt6299);
                                     class348_sub34 = ((Class348_Sub34) class348_sub37.aClass262_6998.method2003(-127));
                                     i_57_++;
                                 }
@@ -299,14 +299,14 @@ final class Class239_Sub24 extends Class239 {
                             Class51 class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, interface10.method42(-100)));
                             if (class51.anIntArray945 != null) class51 = (class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47));
                             if (class51 != null) {
-                                if (r.aBoolean9722 && ((Class132.aPlayer_1907.plane) == (class318_sub4.aClass318_Sub1_6410.plane))) {
+                                if (r.aBoolean9722 && ((Class132.localPlayer.plane) == (class318_sub4.aClass318_Sub1_6410.plane))) {
                                     Class254 class254 = (Class246.anInt3176 != -1 ? (Class101_Sub3.aClass326_5764.method2600(Class246.anInt3176, 28364)) : null);
                                     if (((0x4 & Class38.anInt500) != 0) && (class254 == null || ((class254.anInt3256) != (class51.method487(Class246.anInt3176, (class254.anInt3256), 54))))) {
                                         Class220.anInt2877++;
-                                        Class50_Sub3.method466(false, (Class28.aString5000 + " -> <col=00ffff>" + (class51.aString884)), i_32_, (byte) -94, false, i_33_, -1, true, 2, interface10.hashCode(), Class28.aString5001, (Class348_Sub40_Sub21.method3107((byte) 95, interface10, i_32_, i_33_)), Class348_Sub49_Sub1.anInt9747);
+                                        Class50_Sub3.addMenuEntry(false, (Class28.aString5000 + " -> <col=00ffff>" + (class51.aString884)), i_32_, (byte) -94, false, i_33_, -1, true, 2, interface10.hashCode(), Class28.aString5001, (Class348_Sub40_Sub21.method3107((byte) 95, interface10, i_32_, i_33_)), Class348_Sub49_Sub1.anInt9747);
                                     }
                                 }
-                                if (class318_sub4.aClass318_Sub1_6410.plane == (Class132.aPlayer_1907.plane)) {
+                                if (class318_sub4.aClass318_Sub1_6410.plane == (Class132.localPlayer.plane)) {
                                     String[] strings = class51.aStringArray913;
                                     String preferred = DefaultClickSwapper.getPreferredObjectAction(class51.anInt941);
                                     if (strings != null) {
@@ -324,14 +324,14 @@ final class Class239_Sub24 extends Class239 {
                                                 if (preferred != null && strings[i_61_].equalsIgnoreCase(preferred)) {
                                                     i_63_ = DefaultClickSwapper.PRIORITY_PREFERRED;
                                                 }
-                                                Class50_Sub3.method466(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (Class348_Sub40_Sub21.method3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
+                                                Class50_Sub3.addMenuEntry(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (Class348_Sub40_Sub21.method3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
                                                 Class83.anInt1445++;
                                             }
                                         }
                                     }
                                     int x = i_33_ + za_Sub2.regionTileX;
                                     int y = i_32_ + Class90.regionTileY;
-                                    Class50_Sub3.method466(((Class132.aPlayer_1907.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544)), class51.anInt941, Class286_Sub8.anInt6299);
+                                    Class50_Sub3.addMenuEntry(((Class132.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544)), class51.anInt941, Class286_Sub8.anInt6299);
                                     anInt6094++;
                                     DefaultClickSwapper.injectObjectMenu(class51);
                                 }

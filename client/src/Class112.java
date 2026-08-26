@@ -67,7 +67,7 @@ final class Class112 implements Runnable {
         anInt1728++;
         if (i != 3112) method1052((byte) 121);
         if (Class289.aClass46_3701 == null) {
-            if (!Class5_Sub1.aBoolean8335 && Class316.aClass348_Sub42_Sub12_3963 != null) return (Class316.aClass348_Sub42_Sub12_3963.anInt9609);
+            if (!Class5_Sub1.aBoolean8335 && Class316.menuTip != null) return (Class316.menuTip.priority);
             int i_2_ = Class258_Sub4.aClass373_8552.method3597(true);
             int i_3_ = Class258_Sub4.aClass373_8552.method3594((byte) 81);
             if (Class348_Sub42_Sub6.aBoolean9535) {
@@ -86,7 +86,7 @@ final class Class112 implements Runnable {
                         int i_13_ = 0;
                         Class156 class156 = new Class156(Class233.aClass107_3022);
                         for (Class348_Sub42_Sub13 class348_sub42_sub13 = ((Class348_Sub42_Sub13) class156.method1240(110)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) class156.method1243((byte) 77))) {
-                            if (i_9_ == i_13_++) return ((Class348_Sub42_Sub12) class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063).anInt9609;
+                            if (i_9_ == i_13_++) return ((MenuEntry) class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063).priority;
                         }
                     }
                 } else if (Class242.aClass348_Sub42_Sub13_3152 != null && Class50_Sub3.anInt5252 < i_2_ && (Class348_Sub1_Sub1.anInt8806 + Class50_Sub3.anInt5252) > i_2_) {
@@ -103,27 +103,27 @@ final class Class112 implements Runnable {
                     if (i_4_ != -1) {
                         int i_8_ = 0;
                         Class156 class156 = new Class156(Class242.aClass348_Sub42_Sub13_3152.aClass107_9621);
-                        for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) class156.method1240(9)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((Class348_Sub42_Sub12) class156.method1243((byte) 90))) {
-                            if (i_8_++ == i_4_) return (class348_sub42_sub12.anInt9609);
+                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.method1240(9)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.method1243((byte) 90))) {
+                            if (i_8_++ == i_4_) return (class348_sub42_sub12.priority);
                         }
                     }
                 }
             } else if (i_2_ > Class135_Sub1.anInt4717 && (i_2_ < Class135_Sub1.anInt4717 - -Class63.anInt1117)) {
                 int i_14_ = -1;
-                for (int i_15_ = 0; Class73.anInt4776 > i_15_; i_15_++) {
+                for (int i_15_ = 0; Class73.menuEntryCount > i_15_; i_15_++) {
                     if (Class71.aBoolean1211) {
-                        int i_17_ = ((-i_15_ + (-1 + Class73.anInt4776)) * 16 + Class348_Sub42_Sub5.anInt9532 + 33);
+                        int i_17_ = ((-i_15_ + (-1 + Class73.menuEntryCount)) * 16 + Class348_Sub42_Sub5.anInt9532 + 33);
                         if (i_3_ > i_17_ - 13 && i_17_ + 3 >= i_3_) i_14_ = i_15_;
                     } else {
-                        int i_16_ = 31 + (Class348_Sub42_Sub5.anInt9532 + (-i_15_ + (Class73.anInt4776 - 1)) * 16);
+                        int i_16_ = 31 + (Class348_Sub42_Sub5.anInt9532 + (-i_15_ + (Class73.menuEntryCount - 1)) * 16);
                         if (-13 + i_16_ < i_3_ && i_16_ + 3 >= i_3_) i_14_ = i_15_;
                     }
                 }
                 if (i_14_ != -1) {
                     int i_18_ = 0;
-                    Class312 class312 = new Class312(Class348_Sub40_Sub4.aClass262_9111);
-                    for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((Class348_Sub42_Sub12) class312.method2329(i + -3102))) {
-                        if (i_14_ == i_18_++) return (class348_sub42_sub12.anInt9609);
+                    Class312 class312 = new Class312(Class348_Sub40_Sub4.menuEntries);
+                    for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.method2329(i + -3102))) {
+                        if (i_14_ == i_18_++) return (class348_sub42_sub12.priority);
                     }
                 }
             }

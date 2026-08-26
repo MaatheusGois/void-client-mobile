@@ -32,13 +32,22 @@ final class Class50_Sub3 extends Class50 {
         Class348_Sub42_Sub9_Sub1.aClass356_10442.method3481(0);
     }
 
-    static final void method466(boolean bool, String string, int i, byte i_0_, boolean bool_1_, int i_2_, int i_3_, boolean bool_4_, int i_5_, long l, String string_6_, long l_7_, int i_8_) {
+    /**
+     * Appends one {@link MenuEntry} to {@link Class348_Sub40_Sub4#menuEntries}
+     * (via {@link ha_Sub2#method3743}) and bumps {@link Class73#menuEntryCount}.
+     * <p>
+     * Arg map → {@link MenuEntry} fields: {@code string_6_=option},
+     * {@code string=target}, {@code i_5_=opcode}, {@code l_7_=identifier},
+     * {@code i_2_=param0}, {@code i=param1}, {@code i_3_=itemId}, {@code i_8_=priority},
+     * {@code l=groupKey}.
+     */
+    static final void addMenuEntry(boolean bool, String string, int i, byte i_0_, boolean bool_1_, int i_2_, int i_3_, boolean bool_4_, int i_5_, long l, String string_6_, long l_7_, int i_8_) {
         try {
             anInt5238++;
-            if (!Class5_Sub1.aBoolean8335 && Class73.anInt4776 < 500) {
+            if (!Class5_Sub1.aBoolean8335 && Class73.menuEntryCount < 500) {
                 i_8_ = i_8_ != -1 ? i_8_ : Class362.anInt4458;
                 if (i_0_ >= -65) method469((byte) 19);
-                Class348_Sub42_Sub12 class348_sub42_sub12 = new Class348_Sub42_Sub12(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
+                MenuEntry class348_sub42_sub12 = new MenuEntry(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
                 ha_Sub2.method3743((byte) 6, class348_sub42_sub12);
             }
         } catch (RuntimeException runtimeexception) {

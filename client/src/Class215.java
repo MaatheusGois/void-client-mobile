@@ -63,18 +63,18 @@ final class Class215 {
             }
             if (bool) Class348_Sub47.method3327(1406);
             else {
-                Class305.aCanvas3869.setSize(Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
-                if (!Class59_Sub1.aBoolean5300) Class348_Sub8.aHa6654.method3669(Class305.aCanvas3869, Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
-                else s.method3980(86, Class305.aCanvas3869);
+                Class305.gameCanvas.setSize(Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
+                if (!Class59_Sub1.aBoolean5300) Class348_Sub8.aHa6654.method3669(Class305.gameCanvas, Class321.anInt4017, (Class348_Sub42_Sub8_Sub2.anInt10432));
+                else s.method3980(86, Class305.gameCanvas);
                 if (Class52.aFrame4904 == container) {
                     Insets insets = Class52.aFrame4904.getInsets();
-                    Class305.aCanvas3869.setLocation((Class348_Sub48.anInt7129 + insets.left), (insets.top - -Class335.anInt4167));
-                } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
+                    Class305.gameCanvas.setLocation((Class348_Sub48.anInt7129 + insets.left), (insets.top - -Class335.anInt4167));
+                } else Class305.gameCanvas.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
             }
             // Must match method3229 (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
             Class50_Sub1.aBoolean5219 = i_2_ >= 2;
             if (r.anInt9721 != -1) Class239.method1713(true, 520);
-            if (Class348_Sub40_Sub8.aClass238_9165 != null && Class334.method2653(true, Class240.anInt4674)) Class286_Sub2.method2145(-24498);
+            if (Class348_Sub40_Sub8.aClass238_9165 != null && Class334.method2653(true, Class240.clientState)) Class286_Sub2.method2145(-24498);
             for (int i_5_ = 0; i_5_ < 100; i_5_++)
                 Class152.aBooleanArray2076[i_5_] = true;
             Class49.aBoolean4726 = true;

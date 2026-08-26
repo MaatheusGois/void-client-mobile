@@ -9,13 +9,13 @@ final class Class138 {
     int anInt1943;
     int anInt1944;
     int anInt1945;
-    static Class348_Sub42_Sub12 aClass348_Sub42_Sub12_1946;
+    static MenuEntry aMenuEntry_1946;
     static int anInt1947;
 
     public static void method1164(byte i) {
         if (i <= -42) {
             aClass45_1940 = null;
-            aClass348_Sub42_Sub12_1946 = null;
+            aMenuEntry_1946 = null;
             aClass46Array1942 = null;
         }
     }

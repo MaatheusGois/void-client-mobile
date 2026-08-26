@@ -49,10 +49,10 @@ final class Class348_Sub22 extends Class348 {
         anInt6860++;
         Class258_Sub4.aClass373_8552.method3592(0);
         Class79.aClient1367.method87((byte) -49);
-        Class305.aCanvas3869.setBackground(Color.black);
+        Class305.gameCanvas.setBackground(Color.black);
         Class337.anInt4179 = i;
-        Class182.aClass346_2449 = Class348_Sub3.method2743(Class305.aCanvas3869, (byte) 84);
-        Class258_Sub4.aClass373_8552 = Class348_Sub18.method2941(Class305.aCanvas3869, 0, true);
+        Class182.aClass346_2449 = Class348_Sub3.method2743(Class305.gameCanvas, (byte) 84);
+        Class258_Sub4.aClass373_8552 = Class348_Sub18.method2941(Class305.gameCanvas, 0, true);
     }
 
     Class348_Sub22(Npc npc) {

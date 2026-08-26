@@ -41,37 +41,37 @@ final class Class119_Sub1 extends Class119 implements Interface2 {
 
     static final void method1077(ha var_ha, byte i) {
         anInt4700++;
-        if ((Class73.anInt4776 >= 2 || r.aBoolean9722) && Class289.aClass46_3701 == null) {
+        if ((Class73.menuEntryCount >= 2 || r.aBoolean9722) && Class289.aClass46_3701 == null) {
             if (i >= -71) method1077(null, (byte) -41);
             String string;
-            if (r.aBoolean9722 && Class73.anInt4776 < 2) string = (Class28.aString5001 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + Class28.aString5000 + " ->");
-            else if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -121) || Class73.anInt4776 <= 2) {
-                Class348_Sub42_Sub12 class348_sub42_sub12 = Class316.aClass348_Sub42_Sub12_3963;
+            if (r.aBoolean9722 && Class73.menuEntryCount < 2) string = (Class28.aString5001 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + Class28.aString5000 + " ->");
+            else if (!Class116.shiftClick || !Class182.aClass346_2449.method2696(81, -121) || Class73.menuEntryCount <= 2) {
+                MenuEntry class348_sub42_sub12 = Class316.menuTip;
                 if (class348_sub42_sub12 == null) return;
                 string = Class316.method2367((byte) -52, class348_sub42_sub12);
                 int[] is = null;
-                if (!Class148.method1197(-12081, class348_sub42_sub12.anInt9608)) {
-                    if (class348_sub42_sub12.anInt9599 != -1) is = Exception_Sub1.aClass255_112.method1940(98, (class348_sub42_sub12.anInt9599)).anIntArray2772;
-                    else if (Class367_Sub8.method3549((class348_sub42_sub12.anInt9608), (byte) 107)) {
-                        Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480((int) class348_sub42_sub12.aLong9605, -6008)));
+                if (!Class148.method1197(-12081, class348_sub42_sub12.opcode)) {
+                    if (class348_sub42_sub12.itemId != -1) is = Exception_Sub1.aClass255_112.method1940(98, (class348_sub42_sub12.itemId)).anIntArray2772;
+                    else if (Class367_Sub8.method3549((class348_sub42_sub12.opcode), (byte) 107)) {
+                        Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480((int) class348_sub42_sub12.identifier, -6008)));
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.aNpc_6859);
                             Class79 class79 = (npc.aClass79_10505);
                             if (class79.anIntArray1377 != null) class79 = (class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1));
                             if (class79 != null) is = class79.anIntArray1342;
                         }
-                    } else if (Class239_Sub21.method1813(8806, (class348_sub42_sub12.anInt9608))) {
+                    } else if (Class239_Sub21.method1813(8806, (class348_sub42_sub12.opcode))) {
                         Object object = null;
                         Class51 class51;
-                        if ((class348_sub42_sub12.anInt9608) != 1001) class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) ((class348_sub42_sub12.aLong9605) >>> 32 & 0x7fffffffL)));
-                        else class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.aLong9605)));
+                        if ((class348_sub42_sub12.opcode) != 1001) class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) ((class348_sub42_sub12.identifier) >>> 32 & 0x7fffffffL)));
+                        else class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.identifier)));
                         if (class51.anIntArray945 != null) class51 = class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47);
                         if (class51 != null) is = class51.anIntArray917;
                     }
-                } else is = (Exception_Sub1.aClass255_112.method1940(-73, (int) (class348_sub42_sub12.aLong9605)).anIntArray2772);
+                } else is = (Exception_Sub1.aClass255_112.method1940(-73, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
                 if (is != null) string += Class163.method1273(is, true);
-            } else string = Class316.method2367((byte) 125, Class316.aClass348_Sub42_Sub12_3963);
-            if (Class73.anInt4776 > 2) string += ("<col=ffffff> / " + (Class73.anInt4776 - 2) + Class274.aClass274_3508.method2063(Class348_Sub33.anInt6967, 544));
+            } else string = Class316.method2367((byte) 125, Class316.menuTip);
+            if (Class73.menuEntryCount > 2) string += ("<col=ffffff> / " + (Class73.menuEntryCount - 2) + Class274.aClass274_3508.method2063(Class348_Sub33.anInt6967, 544));
             if (Class348_Sub36.aClass46_6990 != null) {
                 Class324 class324 = Class348_Sub36.aClass46_6990.method426(var_ha, (byte) 68);
                 if (class324 == null) class324 = Class262.aClass324_3326;

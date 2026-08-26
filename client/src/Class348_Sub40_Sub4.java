@@ -3,7 +3,8 @@
  */
 
 final class Class348_Sub40_Sub4 extends Class348_Sub40 {
-    static Class262 aClass262_9111 = new Class262();
+    /** Linked list of open {@link MenuEntry} rows for the current hover. */
+    static Class262 menuEntries = new Class262();
     static int anInt9112;
     static d aD9113;
     static Class101 aClass101_9114;
@@ -11,7 +12,7 @@ final class Class348_Sub40_Sub4 extends Class348_Sub40 {
 
     final int[] method3042(int i, int i_0_) {
         anInt9115++;
-        if (i_0_ != 255) aClass262_9111 = null;
+        if (i_0_ != 255) menuEntries = null;
         int[] is = this.aClass191_7032.method1433(0, i);
         if (this.aClass191_7032.aBoolean2570) Class214.method1579(is, 0, Class348_Sub40_Sub6.anInt9139, Class239_Sub18.anIntArray6035[i]);
         return is;
@@ -20,7 +21,7 @@ final class Class348_Sub40_Sub4 extends Class348_Sub40 {
     public static void method3057(byte i) {
         if (i > -32) method3058(-76, 25, -12);
         aClass101_9114 = null;
-        aClass262_9111 = null;
+        menuEntries = null;
         aD9113 = null;
     }
 

@@ -91,7 +91,7 @@ final class Class348_Sub9 extends Class348 {
                         class348_sub36.anInt6986 = i_8_;
                         Class66.method705(class348_sub36);
                     }
-                    if (Class240.anInt4674 == 10 && client.method105(class46).method3301(-1 + i_8_, false)) {
+                    if (Class240.clientState == 10 && client.method105(class46).method3301(-1 + i_8_, false)) {
                         if (i_8_ == 1) {
                             Class127_Sub1.anInt8380++;
                             Class348_Sub47 class348_sub47 = Class286_Sub3.method2148((Class27.aClass351_398), (Class348_Sub23_Sub2.aClass77_9029), -93);

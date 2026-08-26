@@ -8,7 +8,13 @@ final class Class316 {
     static int anInt3960;
     private final int[] anIntArray3961;
     static int anInt3962;
-    static Class348_Sub42_Sub12 aClass348_Sub42_Sub12_3963;
+    /**
+     * Left-click / tip menu row — the action that fires when the user clicks
+     * without opening the full menu. Set in {@link Class261#method1987};
+     * consumed by {@link Class239_Sub3#method1731} → {@link Class325#processMenuAction}.
+     * Microbot forces this to {@link Microbot#targetMenu} when injecting.
+     */
+    static MenuEntry menuTip;
     static int anInt3964;
     static int anInt3965;
     static int anInt3966;
@@ -93,20 +99,20 @@ final class Class316 {
     }
 
     public static void method2366(boolean bool) {
-        aClass348_Sub42_Sub12_3963 = null;
+        menuTip = null;
         aClass348_Sub51_3959 = null;
         if (bool != true) method2368(46);
     }
 
-    static final String method2367(byte i, Class348_Sub42_Sub12 class348_sub42_sub12) {
+    static final String method2367(byte i, MenuEntry class348_sub42_sub12) {
         anInt3962++;
         int i_41_ = 9 / ((79 - i) / 46);
         if (class348_sub42_sub12.aString9595 == null || class348_sub42_sub12.aString9595.length() == 0) {
-            if ((class348_sub42_sub12.aString9601 == null) || class348_sub42_sub12.aString9601.length() <= 0) return (class348_sub42_sub12.aString9593);
-            return (class348_sub42_sub12.aString9593 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + (class348_sub42_sub12.aString9601));
+            if ((class348_sub42_sub12.target == null) || class348_sub42_sub12.target.length() <= 0) return (class348_sub42_sub12.option);
+            return (class348_sub42_sub12.option + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + (class348_sub42_sub12.target));
         }
-        if (class348_sub42_sub12.aString9601 == null || class348_sub42_sub12.aString9601.length() <= 0) return (class348_sub42_sub12.aString9593 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + (class348_sub42_sub12.aString9595));
-        return (class348_sub42_sub12.aString9593 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + class348_sub42_sub12.aString9601 + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + class348_sub42_sub12.aString9595);
+        if (class348_sub42_sub12.target == null || class348_sub42_sub12.target.length() <= 0) return (class348_sub42_sub12.option + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + (class348_sub42_sub12.aString9595));
+        return (class348_sub42_sub12.option + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + class348_sub42_sub12.target + Class274.aClass274_3515.method2063(Class348_Sub33.anInt6967, 544) + class348_sub42_sub12.aString9595);
     }
 
     static final void method2368(int i) {

@@ -86,7 +86,7 @@ final class Class6 {
             npc.method2434((byte) 111, npc.aClass79_10505.anInt1399);
             npc.anInt10310 = (npc.aClass79_10505.anInt1329) << 3;
             if (bool) npc.method2435((byte) -108, i_23_, true);
-            npc.method2444((Class132.aPlayer_1907.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Class132.aPlayer_1907.anIntArray10320[0]) + i_22_, i + 724138125, npc.method2436((byte) 50), i_19_);
+            npc.method2444((Class132.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Class132.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.method2436((byte) 50), i_19_);
             if (npc.aClass79_10505.method793(0)) Class223.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
         }
         if (i == -724138005) Class299.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
@@ -99,7 +99,7 @@ final class Class6 {
             class318_sub5.anInt6419 = i_25_;
             class318_sub5.anInt6418 = i_30_;
             class318_sub5.anInt6422 = i_29_;
-            class318_sub5.anInt6421 = i + Class367_Sub11.anInt7396;
+            class318_sub5.anInt6421 = i + Class367_Sub11.clientCycle;
             if (i_28_ >= -48) method206(-90, -126, -8);
             class318_sub5.aString6416 = string;
             class318_sub5.anInt6415 = i_26_;
@@ -158,7 +158,7 @@ final class Class6 {
                 Class262.aClass324_3326.method2576("--> " + Class250.method1909((byte) 31, Class363.aString4461), -1, (i_36_ - (-consoleH + Class369.aClass143_4962.anInt1993) - 1), 10 + i_35_, -16777216, -127);
                 if (!Class175.aBoolean2329) break;
                 int i_45_ = -1;
-                if (Class367_Sub11.anInt7396 % 30 > 15) i_45_ = 16777215;
+                if (Class367_Sub11.clientCycle % 30 > 15) i_45_ = 16777215;
                 var_ha.method3660(10 + (i_35_ - -(Class369.aClass143_4962.method1183(true, "--> " + (Class250.method1909((byte) 31, Class363.aString4461).substring(0, Class348_Sub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Class369.aClass143_4962.anInt1993 - 11), true);
             } catch (RuntimeException runtimeexception) {
                 throw Class348_Sub17.method2929(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));

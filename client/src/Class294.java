@@ -182,12 +182,12 @@ final class Class294 implements Interface16 {
         }
         if (aBoolean5022) method2219(33);
         else {
-            Graphics graphics = Class305.aCanvas3869.getGraphics();
+            Graphics graphics = Class305.gameCanvas.getGraphics();
             if (graphics != null) {
                 try {
                     int i_5_ = Class51.aClass311_897.method2320((byte) 103);
                     String string = Class51.aClass311_897.method2318(-9324);
-                    if (Class342.anImage4249 == null) Class342.anImage4249 = (Class305.aCanvas3869.createImage(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432));
+                    if (Class342.anImage4249 == null) Class342.anImage4249 = (Class305.gameCanvas.createImage(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432));
                     Graphics graphics_6_ = Class342.anImage4249.getGraphics();
                     graphics_6_.clearRect(0, 0, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
                     int i_7_ = anImage5030.getWidth(null);
@@ -216,7 +216,7 @@ final class Class294 implements Interface16 {
                     int i_27_ = method2218(anInt5036, -6277) - -anInt5051;
                     graphics_6_.drawImage(anImage5032, i_26_, i_27_ - -((anInt5036 + -i_17_) / 2), null);
                     graphics_6_.drawImage(anImage5037, anInt5023 + i_26_ - i_18_, (anInt5036 - i_19_) / 2 + i_27_, null);
-                    if (anImage5059 == null) anImage5059 = (Class305.aCanvas3869.createImage(-i_18_ + (-i_16_ + anInt5023), anInt5036));
+                    if (anImage5059 == null) anImage5059 = (Class305.gameCanvas.createImage(-i_18_ + (-i_16_ + anInt5023), anInt5036));
                     Graphics graphics_28_ = anImage5059.getGraphics();
                     for (int i_29_ = 0; (-i_18_ + (anInt5023 + -i_16_) > i_29_); i_29_ += i_21_)
                         graphics_28_.drawImage(anImage5054, i_29_, 0, null);
@@ -224,7 +224,7 @@ final class Class294 implements Interface16 {
                         graphics_28_.drawImage(anImage5041, i_30_, -i_20_ + anInt5036, null);
                     int i_31_ = i_5_ * (-i_18_ + (-i_16_ + anInt5023)) / 100;
                     if (i_31_ > 0) {
-                        Image image = Class305.aCanvas3869.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
+                        Image image = Class305.gameCanvas.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
                         int i_32_ = image.getWidth(null);
                         Graphics graphics_33_ = image.getGraphics();
                         int i_34_ = anInt5042 * aa_Sub2.method163(512) / 10 % i_24_;
@@ -235,7 +235,7 @@ final class Class294 implements Interface16 {
                     int i_36_ = i_31_;
                     i_31_ = -i_31_ + -i_18_ + anInt5023 + -i_16_;
                     if (i_31_ > 0) {
-                        Image image = Class305.aCanvas3869.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
+                        Image image = Class305.gameCanvas.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
                         int i_37_ = image.getWidth(null);
                         Graphics graphics_38_ = image.getGraphics();
                         for (int i_39_ = 0; i_39_ < i_37_; i_39_ += i_25_)
@@ -250,7 +250,7 @@ final class Class294 implements Interface16 {
                 } catch (Exception exception) {
                     aBoolean5022 = true;
                 }
-            } else Class305.aCanvas3869.repaint();
+            } else Class305.gameCanvas.repaint();
         }
     }
 

@@ -22,7 +22,8 @@ final class Class305 {
     private final int anInt3866;
     private Class105 aClass105_3867;
     static int anInt3868;
-    static Canvas aCanvas3869;
+    /** AWT / voidawt canvas the game paints to and receives mouse/key on. */
+    static Canvas gameCanvas;
     static boolean aBoolean3870 = false;
     private final Class72 aClass72_3871;
 
@@ -103,7 +104,7 @@ final class Class305 {
     }
 
     public static void method2294(int i) {
-        aCanvas3869 = null;
+        gameCanvas = null;
         if (i <= 94) method2296(-107);
     }
 

@@ -62,10 +62,10 @@ final class Class258_Sub3_Sub1 extends Class258_Sub3 {
         Class101.method901(Class113.aClass105Array1744, 515880227);
         Class354.method3466(i ^ ~0x4f);
         Class348_Sub40.method3038(-1);
-        if (Class240.anInt4674 == 3) Class348_Sub49.method3379(2, 4);
-        else if (Class240.anInt4674 == 7) Class348_Sub49.method3379(2, 8);
-        else if (Class240.anInt4674 != 10) {
-            if (Class240.anInt4674 == 1 || Class240.anInt4674 == 2) Class376.method3616(12639);
+        if (Class240.clientState == 3) Class348_Sub49.method3379(2, 4);
+        else if (Class240.clientState == 7) Class348_Sub49.method3379(2, 8);
+        else if (Class240.clientState != 10) {
+            if (Class240.clientState == 1 || Class240.clientState == 2) Class376.method3616(12639);
         } else Class348_Sub49.method3379(2, 11);
     }
 

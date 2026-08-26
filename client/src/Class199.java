@@ -24,13 +24,13 @@ final class Class199 {
         try {
             anInt2627++;
             try {
-                Graphics graphics = Class305.aCanvas3869.getGraphics();
+                Graphics graphics = Class305.gameCanvas.getGraphics();
                 if (Class351.aFont4329 == null) Class351.aFont4329 = new Font("Helvetica", 1, 13);
                 if (color == null) color = new Color(140, 17, 17);
                 if (color_0_ == null) color_0_ = new Color(140, 17, 17);
                 if (color_2_ == null) color_2_ = new Color(255, 255, 255);
                 try {
-                    if (Class342.anImage4249 == null) Class342.anImage4249 = (Class305.aCanvas3869.createImage(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432));
+                    if (Class342.anImage4249 == null) Class342.anImage4249 = (Class305.gameCanvas.createImage(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432));
                     Graphics graphics_3_ = Class342.anImage4249.getGraphics();
                     graphics_3_.setColor(Color.black);
                     graphics_3_.fillRect(0, 0, Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
@@ -75,7 +75,7 @@ final class Class199 {
                     graphics.drawString(string, i_6_ - -((304 + -(string.length() * 6)) / 2), 22 + i_7_);
                 }
             } catch (Exception exception) {
-                Class305.aCanvas3869.repaint();
+                Class305.gameCanvas.repaint();
             }
         } catch (RuntimeException runtimeexception) {
             throw Class348_Sub17.method2929(runtimeexception, ("rc.A(" + i + ',' + (color != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (color_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (color_2_ != null ? "{...}" : "null") + ')'));

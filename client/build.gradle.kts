@@ -17,7 +17,9 @@ dependencies {
 java {
     sourceSets {
         main {
-            java.srcDirs("src")
+            // src = RS634 + Void helpers; src-microbot = bot API (still default package —
+            // Java forbids a named package from referencing the unnamed 634 types).
+            java.srcDirs("src", "src-microbot")
             resources.srcDirs("resources")
         }
     }

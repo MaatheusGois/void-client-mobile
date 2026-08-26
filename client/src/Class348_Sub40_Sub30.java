@@ -80,7 +80,7 @@ final class Class348_Sub40_Sub30 extends Class348_Sub40 {
                                     }
                                 }
                             }
-                            for (int i_5_ = 0; i_5_ < Class348_Sub42_Sub12.anInt9604; i_5_++) {
+                            for (int i_5_ = 0; i_5_ < MenuEntry.anInt9604; i_5_++) {
                                 String string_6_ = (Class285_Sub1.method2127(2, Class51.aStringArray932[i_5_]));
                                 if (string_6_ != null && string_6_.equals(string_1_)) {
                                     Class59.method544(((Class274.aClass274_3526.method2063(Class348_Sub33.anInt6967, 544)) + string + (Class274.aClass274_3527.method2063(Class348_Sub33.anInt6967, 544))), false, 4);
@@ -94,7 +94,7 @@ final class Class348_Sub40_Sub30 extends Class348_Sub40 {
                                     }
                                 }
                             }
-                            if (Class285_Sub1.method2127(2, (Class132.aPlayer_1907.aString10544)).equals(string_1_)) Class59.method544((Class274.aClass274_3524.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
+                            if (Class285_Sub1.method2127(2, (Class132.localPlayer.aString10544)).equals(string_1_)) Class59.method544((Class274.aClass274_3524.method2063(Class348_Sub33.anInt6967, 544)), false, 4);
                             else {
                                 Class146.anInt2012++;
                                 Class348_Sub47 class348_sub47 = (Class286_Sub3.method2148(Class294.aClass351_5057, Class348_Sub23_Sub2.aClass77_9029, -85));

@@ -46,9 +46,9 @@ final class Class318_Sub1_Sub5_Sub1 extends Class318_Sub1_Sub5 implements Interf
     static final int method2489(byte i) {
         anInt10135++;
         if (Class5_Sub1.aBoolean8335) return 6;
-        if (Class316.aClass348_Sub42_Sub12_3963 == null) return 0;
+        if (Class316.menuTip == null) return 0;
         if (i >= -11) return -42;
-        int i_1_ = (Class316.aClass348_Sub42_Sub12_3963.anInt9608);
+        int i_1_ = (Class316.menuTip.opcode);
         if (Class239_Sub17.method1796(80, i_1_)) return 1;
         if (Class148.method1197(-12081, i_1_)) return 2;
         if (Class239_Sub21.method1813(8806, i_1_)) return 3;

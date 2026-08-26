@@ -17,7 +17,7 @@ final class Class351 {
     static final boolean method3455(String string, int i) {
         anInt4324++;
         if (string == null) return false;
-        for (int i_0_ = 0; (i_0_ < Class348_Sub42_Sub12.anInt9604); i_0_++) {
+        for (int i_0_ = 0; (i_0_ < MenuEntry.anInt9604); i_0_++) {
             if (string.equalsIgnoreCase(Class122.aStringArray1808[i_0_])) return true;
             if (string.equalsIgnoreCase(aa_Sub2.aStringArray5197[i_0_])) return true;
         }

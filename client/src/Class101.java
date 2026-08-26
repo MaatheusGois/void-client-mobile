@@ -26,8 +26,8 @@ abstract class Class101 {
         anInt1595++;
         int i_4_ = ((Class286_Sub4.anInt6246 >> 12) - -(za_Sub2.regionTileX >> 3));
         int i_5_ = ((Class90.regionTileY >> 3) + (Class59_Sub2_Sub2.anInt8685 >> 12));
-        Class355.anInt4372 = Class132.aPlayer_1907.plane = (byte) 0;
-        Class132.aPlayer_1907.method2449(8, 8, (byte) 118);
+        Class355.anInt4372 = Class132.localPlayer.plane = (byte) 0;
+        Class132.localPlayer.method2449(8, 8, (byte) 118);
         if (i != -49) anInt1597 = 115;
         int i_6_ = 18;
         Class322.anIntArray4031 = new int[i_6_];
@@ -69,7 +69,7 @@ abstract class Class101 {
             r.anIntArray9724[i_10_] = -1;
         }
         int i_11_;
-        if (Class240.anInt4674 != 3) i_11_ = 8;
+        if (Class240.clientState != 3) i_11_ = 8;
         else i_11_ = 4;
         Class348_Sub41.method3157(i_5_, (byte) 123, i_4_, i_11_, false);
     }

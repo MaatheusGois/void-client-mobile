@@ -144,7 +144,7 @@ final class LoginPrefs {
             return;
         }
         // Same guards as CS2 opcode 5600.
-        if (Class240.anInt4674 != 3) {
+        if (Class240.clientState != 3) {
             return;
         }
         if (Class225.anInt2955 != 0 || Class367_Sub2.anInt7297 != 0) {

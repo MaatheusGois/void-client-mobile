@@ -38,7 +38,7 @@ final class MobileKeyboard {
         if (text != null && text.length() > 48) {
             text = text.substring(0, 48);
         }
-        int gameState = Class240.anInt4674;
+        int gameState = Class240.clientState;
         System.out.println("void-osrs ifPress id=" + component.anInt830
                 + " type=" + type
                 + " keyListener=" + keyListener
@@ -81,7 +81,7 @@ final class MobileKeyboard {
      */
     static int liftPx(Class46 c, int screenX, int screenY) {
         int shift = shiftY();
-        if (shift <= 0 || c == null || isLoginState(Class240.anInt4674)) {
+        if (shift <= 0 || c == null || isLoginState(Class240.clientState)) {
             return 0;
         }
         Class46 parent = c.aClass46_782;
@@ -100,7 +100,7 @@ final class MobileKeyboard {
                     + " id=" + c.anInt830
                     + " xy=" + screenX + "," + screenY
                     + " size=" + c.anInt709 + "x" + c.anInt789
-                    + " state=" + Class240.anInt4674);
+                    + " state=" + Class240.clientState);
         }
         return lift;
     }
@@ -110,7 +110,7 @@ final class MobileKeyboard {
      * above the IME, not the full keyboard height.
      */
     static int loginLayerShift() {
-        if (!isLoginState(Class240.anInt4674)) {
+        if (!isLoginState(Class240.clientState)) {
             return 0;
         }
         int kb = shiftY();

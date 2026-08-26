@@ -23,10 +23,10 @@ final class Class5_Sub2 extends Class5 {
                 if (!Class59_Sub1.aBoolean5300) Class304.method2291((byte) -127, i, i_0_);
                 else Class304.method2291((byte) -122, i + s_Sub3.method4008((byte) -128), Class16.method260(!bool) + i_0_);
             }
-        } else Class325.method2599((byte) 101, Class138.aClass348_Sub42_Sub12_1946, i_0_, i);
+        } else Class325.processMenuAction((byte) 101, Class138.aMenuEntry_1946, i_0_, i);
         anInt8354++;
         Class282.anInt3655 = 0;
-        Class138.aClass348_Sub42_Sub12_1946 = null;
+        Class138.aMenuEntry_1946 = null;
         if (bool != true) method197(true);
     }
 

@@ -55,7 +55,7 @@ final class Class92 {
                             Class282.aClass356_3654.method3483((byte) 91, i_5_, class348_sub22_12_);
                             Class348_Sub40_Sub23.aClass348_Sub22Array9319[Class348_Sub32.anInt6930++] = class348_sub22_12_;
                             Class74.anIntArray1233[Class150.anInt2057++] = i_5_;
-                            npc.anInt10306 = Class367_Sub11.anInt7396;
+                            npc.anInt10306 = Class367_Sub11.clientCycle;
                             npc.method2448(class79, -2);
                             npc.method2434((byte) 120, npc.aClass79_10505.anInt1399);
                             npc.anInt10310 = (npc.aClass79_10505.anInt1329 << 3);

@@ -245,7 +245,7 @@ final class Class101_Sub1 extends Class101 {
     static final boolean method913(byte i) {
         if (i <= 115) return true;
         anInt5679++;
-        return Class73.anInt4776 > 0;
+        return Class73.menuEntryCount > 0;
     }
 
     public Class101_Sub1() {

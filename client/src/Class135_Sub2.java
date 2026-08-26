@@ -16,7 +16,11 @@ final class Class135_Sub2 extends Class135 implements Interface8 {
     static Class45 aClass45_4843;
     static int anInt4844;
     private static char[] aCharArray4845 = new char[64];
-    static Class348_Sub42_Sub12 aClass348_Sub42_Sub12_4846;
+    /**
+     * Secondary tip used for shift-click / "open menu" (opcode 1011) checks
+     * ({@link Class318_Sub1_Sub5#method2485}). Usually mirrors {@link Class316#menuTip}.
+     */
+    static MenuEntry menuTipSecondary;
 
     final void method1152(int i) {
         anInt4840++;
@@ -44,7 +48,7 @@ final class Class135_Sub2 extends Class135 implements Interface8 {
         int i_2_ = -29 / ((i - -49) / 43);
         aClass45_4843 = null;
         aCharArray4845 = null;
-        aClass348_Sub42_Sub12_4846 = null;
+        menuTipSecondary = null;
     }
 
     public final int method33(int i) {

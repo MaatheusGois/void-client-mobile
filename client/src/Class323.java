@@ -29,7 +29,7 @@ final class Class323 {
         int i_2_ = fontmetrics.getMaxAscent();
         int i_3_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
         int i_4_ = fontmetrics.getHeight();
-        Image image = Class305.aCanvas3869.createImage(i_0_, i_3_);
+        Image image = Class305.gameCanvas.createImage(i_0_, i_3_);
         Graphics graphics = image.getGraphics();
         graphics.setColor(Color.black);
         graphics.fillRect(0, 0, i_0_, i_3_);

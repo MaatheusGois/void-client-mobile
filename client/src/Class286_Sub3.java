@@ -198,7 +198,7 @@ final class Class286_Sub3 extends Class286 {
 
     static final void method2150(boolean bool, boolean bool_14_, Npc npc) {
         anInt6226++;
-        if (Class73.anInt4776 < 400) {
+        if (Class73.menuEntryCount < 400) {
             Class79 class79 = (npc.aClass79_10505);
             if (class79.anIntArray1377 != null) {
                 class79 = class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1);
@@ -208,12 +208,12 @@ final class Class286_Sub3 extends Class286 {
                 String string = class79.aString1372;
                 if (class79.anInt1361 != 0) {
                     String string_15_ = ((Class14_Sub4.aClass230_8638 != Class348_Sub42_Sub8_Sub2.aClass230_10434) ? Class274.aClass274_3511.method2063(Class348_Sub33.anInt6967, 544) : Class274.aClass274_3513.method2063(Class348_Sub33.anInt6967, 544));
-                    string += ((Class14_Sub4.method250((Class132.aPlayer_1907.anInt10516), true, class79.anInt1361)) + " (" + string_15_ + class79.anInt1361 + ")");
+                    string += ((Class14_Sub4.method250((Class132.localPlayer.anInt10516), true, class79.anInt1361)) + " (" + string_15_ + class79.anInt1361 + ")");
                 }
                 if (r.aBoolean9722 && !bool) {
                     Class254 class254 = (Class246.anInt3176 == -1 ? null : Class101_Sub3.aClass326_5764.method2600(Class246.anInt3176, 28364));
                     if ((Class38.anInt500 & 0x2) != 0 && (class254 == null || (class79.method805((class254.anInt3256), Class246.anInt3176, 61) != class254.anInt3256))) {
-                        Class50_Sub3.method466(false, Class28.aString5000 + " -> <col=ffff00>" + string, 0, (byte) -81, false, 0, -1, true, 30, npc.anInt10290, Class28.aString5001, npc.anInt10290, Class348_Sub49_Sub1.anInt9747);
+                        Class50_Sub3.addMenuEntry(false, Class28.aString5000 + " -> <col=ffff00>" + string, 0, (byte) -81, false, 0, -1, true, 30, npc.anInt10290, Class28.aString5001, npc.anInt10290, Class348_Sub49_Sub1.anInt9747);
                         Class193.anInt2586++;
                     }
                 }
@@ -246,7 +246,7 @@ final class Class286_Sub3 extends Class286 {
                                     }
                                 }
                                 Class229.anInt2976++;
-                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -93, false, 0, -1, true, i_16_, npc.anInt10290, strings[i], npc.anInt10290, i_17_);
+                                Class50_Sub3.addMenuEntry(false, "<col=ffff00>" + string, 0, (byte) -93, false, 0, -1, true, i_16_, npc.anInt10290, strings[i], npc.anInt10290, i_17_);
                             }
                         }
                     }
@@ -255,7 +255,7 @@ final class Class286_Sub3 extends Class286 {
                             if (strings[i] != null && (strings[i].equalsIgnoreCase(attack))) {
                                 // Always deprioritize Attack when a left-click swap is active.
                                 short i_18_ = (short) (preferred != null ? 2000 : 0);
-                                if (preferred == null && (Class132.aPlayer_1907.anInt10516) < class79.anInt1361) i_18_ = (short) 2000;
+                                if (preferred == null && (Class132.localPlayer.anInt10516) < class79.anInt1361) i_18_ = (short) 2000;
                                 short i_19_ = 0;
                                 if (i == 0) i_19_ = (short) 25;
                                 if (i == 1) i_19_ = (short) 20;
@@ -265,7 +265,7 @@ final class Class286_Sub3 extends Class286 {
                                 if (i_19_ != 0) i_19_ += i_18_;
                                 Class368.anInt4510++;
                                 int attackPri = preferred != null ? 0 : class79.anInt1401;
-                                Class50_Sub3.method466(false, "<col=ffff00>" + string, 0, (byte) -101, false, 0, -1, true, i_19_, npc.anInt10290, strings[i], npc.anInt10290, attackPri);
+                                Class50_Sub3.addMenuEntry(false, "<col=ffff00>" + string, 0, (byte) -101, false, 0, -1, true, i_19_, npc.anInt10290, strings[i], npc.anInt10290, attackPri);
                             }
                         }
                     }
@@ -273,10 +273,11 @@ final class Class286_Sub3 extends Class286 {
                 Class205.anInt2690++;
                 int npcX = (npc.x >> 9) + za_Sub2.regionTileX - npc.aClass79_10505.anInt1399 + 1;
                 int npcY = (npc.y >> 9) + Class90.regionTileY - npc.aClass79_10505.anInt1399 + 1;
-                Class50_Sub3.method466(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544), npc.anInt10290, Class286_Sub8.anInt6299);
+                Class50_Sub3.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, Class274.aClass274_3505.method2063(Class348_Sub33.anInt6967, 544), npc.anInt10290, Class286_Sub8.anInt6299);
                 // Last options: "Default click" cascade (Pickpocket → left-click, etc.)
                 if (!bool) {
                     DefaultClickSwapper.injectNpcMenu(npc, class79);
+                    MicrobotRuntime.injectNpcMenu(npc, class79);
                 }
             }
         }

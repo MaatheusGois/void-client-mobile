@@ -181,10 +181,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     synchronized void method87(byte i) {
         if (i > -11) paint(null);
-        if (Class305.aCanvas3869 != null) {
-            Class305.aCanvas3869.removeFocusListener(this);
-            Class305.aCanvas3869.getParent().setBackground(Color.black);
-            Class305.aCanvas3869.getParent().remove(Class305.aCanvas3869);
+        if (Class305.gameCanvas != null) {
+            Class305.gameCanvas.removeFocusListener(this);
+            Class305.gameCanvas.getParent().setBackground(Color.black);
+            Class305.gameCanvas.getParent().remove(Class305.gameCanvas);
         }
         anInt7++;
         Container container;
@@ -195,16 +195,16 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             } else container = Class52.aFrame4904;
         } else container = Class34.aFrame476;
         container.setLayout(null);
-        Class305.aCanvas3869 = new Canvas_Sub1(this);
-        container.add(Class305.aCanvas3869);
-        Class305.aCanvas3869.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
-        Class305.aCanvas3869.setVisible(true);
+        Class305.gameCanvas = new Canvas_Sub1(this);
+        container.add(Class305.gameCanvas);
+        Class305.gameCanvas.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+        Class305.gameCanvas.setVisible(true);
         if (container == Class52.aFrame4904) {
             Insets insets = Class52.aFrame4904.getInsets();
-            Class305.aCanvas3869.setLocation((insets.left + Class348_Sub48.anInt7129), insets.top - -Class335.anInt4167);
-        } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
-        Class305.aCanvas3869.addFocusListener(this);
-        Class305.aCanvas3869.requestFocus();
+            Class305.gameCanvas.setLocation((insets.left + Class348_Sub48.anInt7129), insets.top - -Class335.anInt4167);
+        } else Class305.gameCanvas.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
+        Class305.gameCanvas.addFocusListener(this);
+        Class305.gameCanvas.requestFocus();
         Class348_Sub40_Sub16.aBoolean9229 = true;
         Class175.aBoolean2329 = true;
         Class49.aBoolean4726 = true;
@@ -240,12 +240,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         if (Class159.anInt2127++ > 50) {
             Class159.anInt2127 -= 50;
             Class49.aBoolean4726 = true;
-            Class305.aCanvas3869.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
-            Class305.aCanvas3869.setVisible(true);
+            Class305.gameCanvas.setSize(Class321.anInt4017, Class348_Sub42_Sub8_Sub2.anInt10432);
+            Class305.gameCanvas.setVisible(true);
             if (Class52.aFrame4904 != null && Class34.aFrame476 == null) {
                 Insets insets = Class52.aFrame4904.getInsets();
-                Class305.aCanvas3869.setLocation((insets.left - -Class348_Sub48.anInt7129), (insets.top + Class335.anInt4167));
-            } else Class305.aCanvas3869.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
+                Class305.gameCanvas.setLocation((insets.left - -Class348_Sub48.anInt7129), (insets.top + Class335.anInt4167));
+            } else Class305.gameCanvas.setLocation(Class348_Sub48.anInt7129, Class335.anInt4167);
         }
         method93(-11018);
         if (i > -107) method90(true, true);
@@ -308,10 +308,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
         Class257.method1945((byte) -128, true);
         Class228.method1629(!bool_4_);
-        if (Class305.aCanvas3869 != null) {
+        if (Class305.gameCanvas != null) {
             try {
-                Class305.aCanvas3869.removeFocusListener(this);
-                Class305.aCanvas3869.getParent().remove(Class305.aCanvas3869);
+                Class305.gameCanvas.removeFocusListener(this);
+                Class305.gameCanvas.getParent().remove(Class305.gameCanvas);
             } catch (Exception exception) {
                 /* empty */
             }
@@ -413,7 +413,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                     for (int i = 0; Class101_Sub2.anInt5744 > i; i++)
                         method84(-1);
                     method88(-119);
-                    Class369_Sub3_Sub1.method3578((byte) -42, Class305.aCanvas3869, (Class348_Sub23_Sub1.aClass297_8992));
+                    Class369_Sub3_Sub1.method3578((byte) -42, Class305.gameCanvas, (Class348_Sub23_Sub1.aClass297_8992));
                 }
             } catch (Throwable throwable) {
                 Class156.method1242(method81((byte) 109), throwable, 15004);

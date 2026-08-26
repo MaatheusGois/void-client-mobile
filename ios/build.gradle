@@ -44,7 +44,9 @@ sourceSets {
 }
 
 tasks.register('prepareClientSources', Copy) {
+    // Flat merge: 634 client + Microbot API (both default package).
     from(file('../client/src'))
+    from(file('../client/src-microbot'))
     into(generatedClient)
     filter { String line ->
         line

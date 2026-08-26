@@ -42,7 +42,7 @@ final class Class88 {
     static final void method842(boolean bool) {
         anInt1501++;
         Class138.aClass46Array1942 = null;
-        if (Class59_Sub1.aBoolean5300 && Class348_Sub42_Sub12.method3229(-82) != 1) OutputStream_Sub1.method132(106, (Class240.anInt4674 == 3) || Class240.anInt4674 == 7, za_Sub1.method3439(107), 0, Class348_Sub44.method3306((byte) -111), 0);
+        if (Class59_Sub1.aBoolean5300 && MenuEntry.method3229(-82) != 1) OutputStream_Sub1.method132(106, (Class240.clientState == 3) || Class240.clientState == 7, za_Sub1.method3439(107), 0, Class348_Sub44.method3306((byte) -111), 0);
         int i = 0;
         if (bool != false) method847(null, -110);
         int i_1_ = 0;
@@ -131,7 +131,7 @@ final class Class88 {
                     Class348_Sub47 class348_sub47 = Class203.method1478(true);
                     Class348_Sub49_Sub2 class348_sub49_sub2 = (class348_sub47.aClass348_Sub49_Sub2_7116);
                     if (Class239_Sub12.anInt5969 == 2) {
-                        if (Class240.anInt4674 != 13) class348_sub49_sub2.writeByte(false, Class178.aClass29_2342.anInt400);
+                        if (Class240.clientState != 13) class348_sub49_sub2.writeByte(false, Class178.aClass29_2342.anInt400);
                         else class348_sub49_sub2.writeByte(false, Class178.aClass29_2344.anInt400);
                         class348_sub49_sub2.writeShort((byte) 107, 0);
                         int i_6_ = class348_sub49_sub2.anInt7197;
@@ -140,7 +140,7 @@ final class Class88 {
                         int i_7_ = class348_sub49_sub2.anInt7197;
                         class348_sub49_sub2.writeString((byte) -5, Class64_Sub3.aString5600);
                         class348_sub49_sub2.writeByte(false, (RuntimeException_Sub1.anInt4596));
-                        class348_sub49_sub2.writeByte(false, Class348_Sub42_Sub12.method3229(-71));
+                        class348_sub49_sub2.writeByte(false, MenuEntry.method3229(-71));
                         class348_sub49_sub2.writeShort((byte) 107, Class321.anInt4017);
                         class348_sub49_sub2.writeShort((byte) 107, Class348_Sub42_Sub8_Sub2.anInt10432);
                         class348_sub49_sub2.writeByte(false, Class316.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
@@ -299,7 +299,7 @@ final class Class88 {
                             Class130_Sub1.anInt5797 = class348_sub49_sub2.readUnsignedShort(842397944);
                             Class348_Sub6.anInt6632 = class348_sub49_sub2.readUnsignedShort(842397944);
                             Class290.aBoolean3706 = class348_sub49_sub2.readUnsignedByte(255) == 1;
-                            Class132.aPlayer_1907.aString10544 = Class132.aPlayer_1907.aString10537 = s_Sub2.aString8265 = class348_sub49_sub2.method3371(-13487);
+                            Class132.localPlayer.aString10544 = Class132.localPlayer.aString10537 = s_Sub2.aString8265 = class348_sub49_sub2.method3371(-13487);
                             Applet_Sub1.anInt37 = class348_sub49_sub2.readUnsignedByte(255);
                             Class348_Sub1.anInt6551 = class348_sub49_sub2.readInt((byte) -126);
                             aa_Sub2.aClass161_5199 = new Class161();

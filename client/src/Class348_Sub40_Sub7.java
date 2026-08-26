@@ -7,7 +7,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
     static int anInt9141;
     static int anInt9142;
     static int anInt9143;
-    static Class348_Sub42_Sub12 aClass348_Sub42_Sub12_9144;
+    static MenuEntry aMenuEntry_9144;
     static int anInt9145;
     static int anInt9146;
     private boolean aBoolean9147 = true;
@@ -60,7 +60,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                             Class180.aRectangleArray2371[Class348_Sub38.anInt7008].setBounds(i_19_, i_20_, class46.anInt709, class46.anInt789);
                             i_23_ = Class348_Sub38.anInt7008++;
                         } else i_23_ = i_13_;
-                        class46.anInt794 = Class367_Sub11.anInt7396;
+                        class46.anInt794 = Class367_Sub11.clientCycle;
                         class46.anInt760 = i_23_;
                         if (!client.method111(class46)) {
                             if (class46.anInt765 != 0) Class348_Sub18.method2942(class46, (byte) -36);
@@ -213,9 +213,9 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                                 Class240.aClass324_4684.method2569(string, i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 12;
                                                 if (Loader.showCoordinates) {
-                                                    int playerX = (Class132.aPlayer_1907.x >> 9) + za_Sub2.regionTileX;
-                                                    int playerY = (Class132.aPlayer_1907.y >> 9) + Class90.regionTileY;
-                                                    Class240.aClass324_4684.method2569("Coordinates: " + playerX + ", " + playerY + ", " + Class132.aPlayer_1907.plane, i_38_, -256, i_37_, -127, -1);
+                                                    int playerX = (Class132.localPlayer.x >> 9) + za_Sub2.regionTileX;
+                                                    int playerY = (Class132.localPlayer.y >> 9) + Class90.regionTileY;
+                                                    Class240.aClass324_4684.method2569("Coordinates: " + playerX + ", " + playerY + ", " + Class132.localPlayer.plane, i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
                                                     Class240.aClass324_4684.method2569("Region id: " + (((playerX >> 6) << 8) + (playerY >> 6)) + " (" + (playerX >> 6) + ", " + (playerY >> 6) + ")", i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
@@ -304,7 +304,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                         else {
                                             Class105 class105;
                                             if (class46.anInt812 != -1) {
-                                                Class154 class154 = ((class46.aBoolean720) ? (Class132.aPlayer_1907.aClass154_10536) : null);
+                                                Class154 class154 = ((class46.aBoolean720) ? (Class132.localPlayer.aClass154_10536) : null);
                                                 class105 = (Exception_Sub1.aClass255_112.method1941((class46.anInt672), (byte) -74, (class46.anInt812), (class46.anInt781), (~0xffffff | (class46.anInt809)), (class46.anInt678), Class348_Sub8.aHa6654, class154));
                                             } else if ((class46.anInt806) == -1) class105 = (class46.method443(Class348_Sub8.aHa6654, (byte) -57));
                                             else class105 = (Class299_Sub1_Sub2.method2263(Class348_Sub8.aHa6654, 0, (class46.anInt806)));
@@ -350,7 +350,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                             if (class213 != null) {
                                                 class213 = (class213.method1560((class46.anInt781), (byte) 97));
                                                 Class17 class17 = ((class46.anInt699) == -1 ? null : (Class10.aClass87_191.method835((class46.anInt699), 7)));
-                                                Class154 class154 = (!(class46.aBoolean720) ? null : (Class132.aPlayer_1907.aClass154_10536));
+                                                Class154 class154 = (!(class46.aBoolean720) ? null : (Class132.localPlayer.aClass154_10536));
                                                 class64 = (class213.method1559(class154, class17, Class348_Sub8.aHa6654, 2048, (class46.anInt841), 1, (class46.anInt795), (byte) 88, (class46.anInt730)));
                                                 if (class64 != null) i_60_ = (-class64.fa() >> 1);
                                                 else Class251.method1916(-9343, class46);
@@ -367,15 +367,15 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                             Class348_Sub13 class348_sub13 = (Class258_Sub4.method1974((byte) -123, (class46.anInt753), false));
                                             Class17 class17 = ((class46.anInt699) == -1 ? null : (Class10.aClass87_191.method835((class46.anInt699), 7)));
                                             if (class348_sub13 != null) {
-                                                Class154 class154 = ((class46.aBoolean720) ? (Class132.aPlayer_1907.aClass154_10536) : null);
+                                                Class154 class154 = ((class46.aBoolean720) ? (Class132.localPlayer.aClass154_10536) : null);
                                                 class64 = (class348_sub13.method2803(class17, class154, (class46.anInt779), (class46.anInt795), (class46.anInt841), (class46.anInt730), 2048, Class348_Sub8.aHa6654, (class46.anInt770) == 9, -1));
                                             }
                                         } else if (class46.anInt699 == -1) {
-                                            class64 = (class46.method430((Class348_Sub40_Sub25.aClass150_9342), Class10.aClass87_191, 2048, Class348_Sub8.aHa6654, -1, 0, (Exception_Sub1.aClass255_112), (Class318_Sub1_Sub3_Sub3.aClass170_10209), 255, (Class132.aPlayer_1907.aClass154_10536), null, (Class64_Sub3.aClass261_5558), (Class189.aClass278_2529), -1));
+                                            class64 = (class46.method430((Class348_Sub40_Sub25.aClass150_9342), Class10.aClass87_191, 2048, Class348_Sub8.aHa6654, -1, 0, (Exception_Sub1.aClass255_112), (Class318_Sub1_Sub3_Sub3.aClass170_10209), 255, (Class132.localPlayer.aClass154_10536), null, (Class64_Sub3.aClass261_5558), (Class189.aClass278_2529), -1));
                                             if (class64 == null && (Class348_Sub42_Sub13.aBoolean9616)) Class251.method1916(-9343, class46);
                                         } else {
                                             Class17 class17 = (Class10.aClass87_191.method835((class46.anInt699), 7));
-                                            class64 = (class46.method430((Class348_Sub40_Sub25.aClass150_9342), Class10.aClass87_191, 2048, Class348_Sub8.aHa6654, (class46.anInt795), (class46.anInt841), (Exception_Sub1.aClass255_112), (Class318_Sub1_Sub3_Sub3.aClass170_10209), 255, (Class132.aPlayer_1907.aClass154_10536), class17, (Class64_Sub3.aClass261_5558), (Class189.aClass278_2529), (class46.anInt730)));
+                                            class64 = (class46.method430((Class348_Sub40_Sub25.aClass150_9342), Class10.aClass87_191, 2048, Class348_Sub8.aHa6654, (class46.anInt795), (class46.anInt841), (Exception_Sub1.aClass255_112), (Class318_Sub1_Sub3_Sub3.aClass170_10209), 255, (Class132.localPlayer.aClass154_10536), class17, (Class64_Sub3.aClass261_5558), (Class189.aClass278_2529), (class46.anInt730)));
                                             if (class64 == null && (Class348_Sub42_Sub13.aBoolean9616)) Class251.method1916(-9343, class46);
                                         }
                                         if (class64 != null) {
@@ -409,7 +409,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
                                                 Class50_Sub1.aClass101_5209.method891(((class46.anInt808) << 2), (((class46.anInt786) << 2) + (i_66_ + i_60_)), ((class46.anInt786) << 2) + i_67_);
                                                 Class50_Sub1.aClass101_5209.method900((class46.anInt757) << 3);
                                             }
-                                            class46.method437(-20154, class64, Class348_Sub8.aHa6654, Class367_Sub11.anInt7396, Class50_Sub1.aClass101_5209);
+                                            class46.method437(-20154, class64, Class348_Sub8.aHa6654, Class367_Sub11.clientCycle, Class50_Sub1.aClass101_5209);
                                             if (Class318_Sub1_Sub3_Sub2.aBoolean10046) Class348_Sub8.aHa6654.T(i_24_, i_25_, (class46.anInt709) + i_24_, (i_25_ + (class46.anInt789)));
                                             if (!class46.aBoolean784) {
                                                 if (!class46.aBoolean689) {
@@ -506,7 +506,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
 
     final int[] method3042(int i, int i_75_) {
         anInt9143++;
-        if (i_75_ != 255) aClass348_Sub42_Sub12_9144 = null;
+        if (i_75_ != 255) aMenuEntry_9144 = null;
         int[] is = this.aClass191_7032.method1433(0, i);
         if (this.aClass191_7032.aBoolean2570) {
             int[] is_76_ = this.method3048((aBoolean9147 ? Class299_Sub2.anInt6325 - i : i), i_75_ + 633706082, 0);
@@ -519,7 +519,7 @@ final class Class348_Sub40_Sub7 extends Class348_Sub40 {
     }
 
     public static void method3066(int i) {
-        if (i != -1) aClass348_Sub42_Sub12_9144 = null;
-        aClass348_Sub42_Sub12_9144 = null;
+        if (i != -1) aMenuEntry_9144 = null;
+        aMenuEntry_9144 = null;
     }
 }

@@ -314,7 +314,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         int i_37_ = class225.anInt2932;
         int i_38_ = class225.anInt2941;
         if (i_37_ != 0 || i_38_ != 0 || class225.anInt2950 != 0 || class225.anInt2926 != 0) i_34_ |= 0x7;
-        boolean bool = (this.aByte10279 != 0 && (Class367_Sub11.anInt7396 >= this.anInt10248) && (Class367_Sub11.anInt7396 < this.anInt10250));
+        boolean bool = (this.aByte10279 != 0 && (Class367_Sub11.clientCycle >= this.anInt10248) && (Class367_Sub11.clientCycle < this.anInt10250));
         if (bool) i_34_ |= 0x80000;
         int i_39_ = this.aClass264_10217.method2019((byte) -25);
         Class64 class64 = (this.aClass64Array10323[0] = (this.aClass79_10505.method800(i_39_, this.aClass182Array10308, Class10.aClass87_191, false, class17_36_, this.anInt10203, Class64_Sub3.aClass261_5558, this.anInt10267, class17, Class318_Sub1_Sub3_Sub3.aClass170_10209, var_ha, this.anInt10312, this.anIntArray10296, this.anInt10244, this.anInt10245, i_34_, this.anInt10232)));

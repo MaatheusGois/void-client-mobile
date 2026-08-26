@@ -6,6 +6,19 @@ import jaggl.OpenGL;
 
 import java.util.Random;
 
+/**
+ * Bitmap font / text drawer used by the 634 UI (chat, FPS overlay, console,
+ * Microbot panel, etc.).
+ * <p>
+ * Common draw helpers (coords are canvas pixels, colours are packed ARGB —
+ * FPS overlay often uses {@code -256} yellow / {@code -1} white):
+ * <ul>
+ *   <li>{@link #method2576} — left-aligned at {@code (x, y)}</li>
+ *   <li>{@link #method2575} — centred on X ({@code centreX}), Y separate</li>
+ *   <li>{@link #method2569} — right-aligned to {@code rightX}</li>
+ * </ul>
+ * Prefer {@link #method2576} for overlays you layout yourself (e.g. Microbot HUD).
+ */
 abstract class Class324 {
     static int anInt4045;
     static int anInt4046;
@@ -172,12 +185,22 @@ abstract class Class324 {
 
     abstract void fa(char c, int i, int i_39_, int i_40_, boolean bool);
 
-    final void method2569(String string, int i, int i_41_, int i_42_, int i_43_, int i_44_) {
+    /**
+     * Draw {@code string} right-aligned to {@code rightX}.
+     *
+     * @param string text
+     * @param y      baseline Y
+     * @param colour ARGB (e.g. {@code -256} yellow, {@code -1} white)
+     * @param rightX right edge X — glyphs end here
+     * @param unused must be {@code <= -119} or the call no-ops
+     * @param shadow ARGB shadow (often {@code -1} or {@code -16777216})
+     */
+    final void method2569(String string, int y, int colour, int rightX, int unused, int shadow) {
         anInt4052++;
-        if (i_43_ >= -119) method2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
+        if (unused >= -119) method2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
         if (string != null) {
-            method2579(i_44_, 122, i_41_);
-            method2583(0, i, 0, null, null, string, null, 25625, -aClass143_4063.method1183(true, string) + i_42_);
+            method2579(shadow, 122, colour);
+            method2583(0, y, 0, null, null, string, null, 25625, -aClass143_4063.method1183(true, string) + rightX);
         }
     }
 
@@ -266,21 +289,45 @@ abstract class Class324 {
         }
     }
 
-    final void method2575(byte i, int i_64_, int i_65_, String string, int i_66_, int i_67_) {
+    /**
+     * Draw {@code string} centred on {@code centreX} at baseline {@code y}.
+     * <p>
+     * Args are easy to swap with {@link #method2576} — wrong order stacks glyphs.
+     * Prefer {@link #method2576} for left-aligned overlays.
+     *
+     * @param unused  obfuscation pad (any byte; unused for control flow)
+     * @param centreX horizontal centre of the string
+     * @param colour  ARGB
+     * @param string  text
+     * @param shadow  ARGB shadow
+     * @param y       baseline Y
+     */
+    final void method2575(byte unused, int centreX, int colour, String string, int shadow, int y) {
         anInt4060++;
         if (string != null) {
-            method2579(i_66_, 115, i_65_);
-            method2583(0, i_67_, 0, null, null, string, null, 25625, -(aClass143_4063.method1183(true, string) / 2) + i_64_);
-            int i_68_ = 7 % ((66 - i) / 44);
+            method2579(shadow, 115, colour);
+            method2583(0, y, 0, null, null, string, null, 25625, -(aClass143_4063.method1183(true, string) / 2) + centreX);
+            int i_68_ = 7 % ((66 - unused) / 44);
         }
     }
 
-    final void method2576(String string, int i, int i_69_, int i_70_, int i_71_, int i_72_) {
-        if (i_72_ <= -108) {
+    /**
+     * Draw {@code string} left-aligned at {@code (x, y)}.
+     * Used by the developer console and {@code MicrobotPanel}.
+     *
+     * @param string text
+     * @param colour ARGB
+     * @param y      baseline Y
+     * @param x      left edge X
+     * @param shadow ARGB shadow
+     * @param pad    must be {@code <= -108} or the call no-ops (obfuscation guard)
+     */
+    final void method2576(String string, int colour, int y, int x, int shadow, int pad) {
+        if (pad <= -108) {
             anInt4045++;
             if (string != null) {
-                method2579(i_71_, 110, i);
-                method2583(0, i_69_, 0, null, null, string, null, 25625, i_70_);
+                method2579(shadow, 110, colour);
+                method2583(0, y, 0, null, null, string, null, 25625, x);
             }
         }
     }

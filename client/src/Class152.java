@@ -30,9 +30,9 @@ final class Class152 {
     static final void method1215(byte i) {
         if (i != 3) method1217(-39, null);
         anInt2078++;
-        if (Class240.anInt4674 != 9) {
-            if (Class240.anInt4674 == 5 || Class240.anInt4674 == 6) Class348_Sub49.method3379(2, 3);
-            else if (Class240.anInt4674 == 12) Class348_Sub49.method3379(2, 3);
+        if (Class240.clientState != 9) {
+            if (Class240.clientState == 5 || Class240.clientState == 6) Class348_Sub49.method3379(2, 3);
+            else if (Class240.clientState == 12) Class348_Sub49.method3379(2, 3);
         } else Class348_Sub49.method3379(2, 5);
     }
 

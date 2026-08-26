@@ -7,7 +7,8 @@ final class Class73 implements Interface7 {
     static int anInt4773;
     static int anInt4774;
     static int anInt4775;
-    static int anInt4776;
+    /** Number of {@link MenuEntry} rows currently in {@link Class348_Sub40_Sub4#menuEntries}. */
+    static int menuEntryCount;
     static int anInt4777;
     private final String aString4778;
     static Class114 aClass114_4779;
@@ -68,7 +69,7 @@ final class Class73 implements Interface7 {
     }
 
     static {
-        anInt4776 = 0;
+        menuEntryCount = 0;
         aFloatArray4772 = new float[16];
         anIntArray4780 = new int[]{104, 120, 136, 168};
         aClass114_4779 = new Class114(76, 6);

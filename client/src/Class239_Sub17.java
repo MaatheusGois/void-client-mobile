@@ -101,7 +101,7 @@ final class Class239_Sub17 extends Class239 {
             Class254 class254 = (Class246.anInt3176 != -1 ? Class101_Sub3.aClass326_5764.method2600(Class246.anInt3176, 28364) : null);
             if (client.method105(class46).method3303(1) && (Class38.anInt500 & 0x20) != 0 && (class254 == null || (class46.method428(class254.anInt3256, Class246.anInt3176, -128) != class254.anInt3256))) {
                 Class31.anInt436++;
-                Class50_Sub3.method466(false, (Class28.aString5000 + " -> " + class46.aString752) + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -90, false, class46.anInt704, class46.anInt812, true, 6, class46.anInt830 | (class46.anInt704 << 0), Class28.aString5001, 0L, Class348_Sub49_Sub1.anInt9747);
+                Class50_Sub3.addMenuEntry(false, (Class28.aString5000 + " -> " + class46.aString752) + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -90, false, class46.anInt704, class46.anInt812, true, 6, class46.anInt830 | (class46.anInt704 << 0), Class28.aString5001, 0L, Class348_Sub49_Sub1.anInt9747);
             }
         }
         anInt6022++;
@@ -115,7 +115,7 @@ final class Class239_Sub17 extends Class239 {
                     prio = DefaultClickSwapper.PRIORITY_PREFERRED;
                     opcode = 18;
                 }
-                Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -122, false, class46.anInt704, class46.anInt812, true, opcode, (class46.anInt704 << 0) | class46.anInt830, string, 1 + i_13_, prio);
+                Class50_Sub3.addMenuEntry(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -122, false, class46.anInt704, class46.anInt812, true, opcode, (class46.anInt704 << 0) | class46.anInt830, string, 1 + i_13_, prio);
                 Class335.anInt4169++;
             }
         }
@@ -125,7 +125,7 @@ final class Class239_Sub17 extends Class239 {
             if (preferredItem != null && preferredItem.equalsIgnoreCase(string)) {
                 usePrio = DefaultClickSwapper.PRIORITY_PREFERRED;
             }
-            Class50_Sub3.method466(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -83, false, class46.anInt704, class46.anInt812, true, 13, (class46.anInt704 << 0) | class46.anInt830, string, 0L, usePrio);
+            Class50_Sub3.addMenuEntry(false, class46.aString752 + Loader.getDebug(class46.anInt830 >> 16, class46.anInt830 & 0xffff), class46.anInt830, (byte) -83, false, class46.anInt704, class46.anInt812, true, 13, (class46.anInt704 << 0) | class46.anInt830, string, 0L, usePrio);
             Class178.anInt2340++;
         }
         if (i_12_ >= -55) method1793(null, -19, 70, -103);
@@ -136,13 +136,13 @@ final class Class239_Sub17 extends Class239 {
                 if (preferredItem != null && preferredItem.equalsIgnoreCase(string_15_)) {
                     prio = DefaultClickSwapper.PRIORITY_PREFERRED;
                 }
-                Class50_Sub3.method466(false, class46.aString752, class46.anInt830, (byte) -67, false, class46.anInt704, class46.anInt812, true, 18, (class46.anInt704 << 0) | class46.anInt830, string_15_, 1 + i_14_, prio);
+                Class50_Sub3.addMenuEntry(false, class46.aString752, class46.anInt830, (byte) -67, false, class46.anInt704, class46.anInt812, true, 18, (class46.anInt704 << 0) | class46.anInt830, string_15_, 1 + i_14_, prio);
                 Class335.anInt4169++;
             }
         }
         if (client.method105(class46).method3305(0)) {
-            if (class46.aString816 != null) Class50_Sub3.method466(false, "", class46.anInt830, (byte) -118, false, class46.anInt704, class46.anInt812, true, 16, (class46.anInt704 << 0) | class46.anInt830, class46.aString816, 0L, -1);
-            else Class50_Sub3.method466(false, "", class46.anInt830, (byte) -79, false, class46.anInt704, class46.anInt812, true, 16, class46.anInt704 << 0 | class46.anInt830, Class274.aClass274_3492.method2063(Class348_Sub33.anInt6967, 544), 0L, -1);
+            if (class46.aString816 != null) Class50_Sub3.addMenuEntry(false, "", class46.anInt830, (byte) -118, false, class46.anInt704, class46.anInt812, true, 16, (class46.anInt704 << 0) | class46.anInt830, class46.aString816, 0L, -1);
+            else Class50_Sub3.addMenuEntry(false, "", class46.anInt830, (byte) -79, false, class46.anInt704, class46.anInt812, true, 16, class46.anInt704 << 0 | class46.anInt830, Class274.aClass274_3492.method2063(Class348_Sub33.anInt6967, 544), 0L, -1);
             Class348_Sub42_Sub15.anInt9655++;
         }
         // Inventory / bank item: inject lilac Default: Wear / Withdraw-All / …

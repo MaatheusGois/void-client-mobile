@@ -95,7 +95,7 @@ final class Class85 {
         anInt1461++;
         Class348_Sub42_Sub3.method3179(0);
         Class348_Sub16_Sub2.aLong8866 = 0L;
-        int i_24_ = Class348_Sub42_Sub12.method3229(-82);
+        int i_24_ = MenuEntry.method3229(-82);
         if (i_22_ == 102) {
             if (i == 3 || i_24_ == 3) bool = true;
             if (!Class348_Sub8.aHa6654.method3695()) bool = true;

@@ -33,7 +33,7 @@ final class Class275 {
 
     static final boolean method2066(byte i) {
         anInt3553++;
-        if (Class240.anInt4674 < 1) return false;
+        if (Class240.clientState < 1) return false;
         if (i < 101) method2065(66);
         return true;
     }

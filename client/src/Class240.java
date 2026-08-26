@@ -5,7 +5,12 @@
 final class Class240 implements Interface1 {
     static Class323 aClass323_4672;
     static float aFloat4673;
-    static int anInt4674 = 0;
+    /**
+     * Client FSM state (title / lobby / world / …). Examples used in-tree:
+     * 3 title, 5–6 connecting, 7 lobby/chat-ish, 10–11 world, 12–14 logout/error.
+     * Prefer {@link Class132#localPlayer}{@code != null} for “in world” checks.
+     */
+    static int clientState = 0;
     static int anInt4675;
     static int anInt4676;
     static int anInt4677;
@@ -43,7 +48,7 @@ final class Class240 implements Interface1 {
 
     public static void method1853(byte i) {
         aClass105Array4679 = null;
-        if (i != 48) anInt4674 = -62;
+        if (i != 48) clientState = -62;
         aClass323_4672 = null;
         aClass324_4684 = null;
     }

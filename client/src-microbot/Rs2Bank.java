@@ -1,0 +1,128 @@
+/**
+ * Bank facade — open/close detection by widget text / item grid, deposit/withdraw
+ * via menu-inject on bank item components.
+ */
+final class Rs2Bank {
+
+    private Rs2Bank() {
+    }
+
+    static boolean isOpen() {
+        Class46 title = Rs2Widget.findByText("Bank of");
+        if (title != null && Rs2Widget.isVisible(title)) {
+            return true;
+        }
+        // Many banks show "The Bank of" or just Withdraw options densely
+        Class46[] bankSlots = bankSlots();
+        return bankSlots.length >= 20;
+    }
+
+    static boolean close() {
+        Class46 close = Rs2Widget.findByText("Close");
+        if (close != null) {
+            return Rs2Widget.click(close, "Close");
+        }
+        // Escape via keyboard
+        Rs2Keyboard.keyPress(27);
+        return true;
+    }
+
+    static boolean depositAll(int itemId) {
+        Class46 slot = Rs2Inventory.findSlot(itemId);
+        if (slot == null) {
+            return false;
+        }
+        return Rs2Inventory.interact(itemId, "Deposit-All")
+                || Rs2Inventory.interact(itemId, "Deposit All")
+                || Rs2Widget.click(slot, "Deposit-All");
+    }
+
+    static boolean withdraw(int itemId, String action) {
+        Class46[] slots = bankSlots();
+        for (int i = 0; i < slots.length; i++) {
+            if (slots[i] != null && slots[i].anInt812 == itemId) {
+                NewMenuEntry entry = new NewMenuEntry(action != null ? action : "Withdraw-1",
+                        slots[i].aString752 != null ? slots[i].aString752 : "",
+                        Rs2Widget.OPCODE_CC_OP, 1L, slots[i].anInt704, slots[i].anInt830, itemId);
+                Microbot.doInvoke(entry);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static boolean withdrawOne(int itemId) {
+        return withdraw(itemId, "Withdraw-1") || withdraw(itemId, "Withdraw-X");
+    }
+
+    /**
+     * Open nearest banker NPC or bank booth object by interacting "Bank".
+     */
+    static boolean open() {
+        if (isOpen()) {
+            return true;
+        }
+        Npc banker = Rs2Npc.getNearest("Banker");
+        if (banker != null && Rs2Npc.interact(banker, "Bank")) {
+            return true;
+        }
+        return Rs2GameObject.interactNearest("Bank booth", "Use")
+                || Rs2GameObject.interactNearest("Bank booth", "Bank")
+                || Rs2GameObject.interactNearest("Bank chest", "Use");
+    }
+
+    static Class46[] bankSlots() {
+        java.util.ArrayList list = new java.util.ArrayList();
+        if (Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
+            return new Class46[0];
+        }
+        // Prefer configured bank group, else largest item grid that isn't inventory-sized (28)
+        collect(MicrobotWidgets.BANK_GROUP, list);
+        if (list.size() < 20) {
+            list.clear();
+            Class46[][] roots = Class348_Sub40_Sub33.aClass46ArrayArray9427;
+            int best = 0;
+            java.util.ArrayList bestList = new java.util.ArrayList();
+            for (int g = 0; g < roots.length; g++) {
+                java.util.ArrayList tmp = new java.util.ArrayList();
+                collect(g, tmp);
+                if (tmp.size() > best && tmp.size() > 28) {
+                    best = tmp.size();
+                    bestList = tmp;
+                }
+            }
+            list = bestList;
+        }
+        return (Class46[]) list.toArray(new Class46[list.size()]);
+    }
+
+    private static void collect(int group, java.util.ArrayList list) {
+        if (Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
+            return;
+        }
+        if (group < 0 || group >= Class348_Sub40_Sub33.aClass46ArrayArray9427.length) {
+            return;
+        }
+        Class46[] all = Class348_Sub40_Sub33.aClass46ArrayArray9427[group];
+        if (all == null) {
+            return;
+        }
+        for (int i = 0; i < all.length; i++) {
+            walk(all[i], list);
+        }
+    }
+
+    private static void walk(Class46 c, java.util.ArrayList list) {
+        if (c == null) {
+            return;
+        }
+        if (c.anInt812 > 0) {
+            list.add(c);
+        }
+        if (c.aClass46Array798 != null) {
+            for (int i = 0; i < c.aClass46Array798.length; i++) {
+                walk(c.aClass46Array798[i], list);
+            }
+        }
+    }
+}

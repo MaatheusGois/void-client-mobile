@@ -30,14 +30,14 @@ final class Class302 {
                     if (Class348_Sub40_Sub21.anInt9282 == 4) Class82.method814((byte) 125, l);
                 } else Canvas_Sub1.method119(-1, l);
             }
-            Class348_Sub47.method3324(Class348_Sub8.aHa6654, (byte) 83, Class367_Sub11.anInt7396);
+            Class348_Sub47.method3324(Class348_Sub8.aHa6654, (byte) 83, Class367_Sub11.clientCycle);
             if (r.anInt9721 != -1) Class75_Sub1.method769(r.anInt9721, (byte) 118);
             for (int i_3_ = 0; i_3_ < Class348_Sub38.anInt7008; i_3_++) {
                 if (Class152.aBooleanArray2076[i_3_]) Class268.aBooleanArray3438[i_3_] = true;
                 Class175.aBooleanArray2326[i_3_] = Class152.aBooleanArray2076[i_3_];
                 Class152.aBooleanArray2076[i_3_] = false;
             }
-            Class58.anInt1064 = Class367_Sub11.anInt7396;
+            Class58.anInt1064 = Class367_Sub11.clientCycle;
             Class5_Sub2.method198(null, false, -1, -1);
             Class175.method1343(-1, null, 1, -1);
             if (r.anInt9721 != -1) {
@@ -51,8 +51,8 @@ final class Class302 {
             if (i_4_ == -1) i_4_ = Class348_Sub42_Sub16_Sub1.anInt10447;
             Class33.method338(0, i_4_);
             if (i == -43) {
-                int i_5_ = (Class132.aPlayer_1907.method2436((byte) 103) << 8);
-                Class335.method2655(98, Class132.aPlayer_1907.plane, Class348_Sub51.anInt7267, i_5_ + (Class132.aPlayer_1907.y), (Class132.aPlayer_1907.x - -i_5_));
+                int i_5_ = (Class132.localPlayer.method2436((byte) 103) << 8);
+                Class335.method2655(98, Class132.localPlayer.plane, Class348_Sub51.anInt7267, i_5_ + (Class132.localPlayer.y), (Class132.localPlayer.x - -i_5_));
                 Class348_Sub51.anInt7267 = 0;
             }
         } catch (RuntimeException runtimeexception) {

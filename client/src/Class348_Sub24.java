@@ -28,7 +28,7 @@ final class Class348_Sub24 extends Class348 {
             for (int i_0_ = 0; i_0_ < 100; i_0_++) {
                 if (!Class292.method2203((byte) -52)) break;
             }
-            if (Class240.anInt4674 == 10) {
+            if (Class240.clientState == 10) {
                 while (Class286.method2138(i ^ 0x2ca2)) {
                     Class348_Sub47 class348_sub47 = Class286_Sub3.method2148(Class140.aClass351_1961, (Class348_Sub23_Sub2.aClass77_9029), -92);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
@@ -172,7 +172,7 @@ final class Class348_Sub24 extends Class348 {
                 if (!Class50_Sub1.aBoolean5224) Class348_Sub27.aFloat6898 /= 2.0F;
                 else Class50_Sub1.aBoolean5224 = false;
                 Class348_Sub35.method3027((byte) 33);
-                if (Class240.anInt4674 == 10) {
+                if (Class240.clientState == 10) {
                     Class348_Sub42_Sub3.method3175((byte) 55);
                     Class38.method362(i + -11335);
                     Class206.method1501(-123);
@@ -370,11 +370,11 @@ final class Class348_Sub24 extends Class348 {
                         if (Class168.aClass46_2249 == null) Class348_Sub42.anInt7059 = 0;
                         if (Class289.aClass46_3701 != null) Class347.method2708(-30206);
                         if (Class192.anInt2581 > 0 && Class182.aClass346_2449.method2696(82, i ^ ~0x2cd5) && Class182.aClass346_2449.method2696(81, -121) && Class98.anInt1565 != 0) {
-                            int i_30_ = ((Class132.aPlayer_1907.plane) - Class98.anInt1565);
+                            int i_30_ = ((Class132.localPlayer.plane) - Class98.anInt1565);
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
                             } else i_30_ = 0;
-                            Class361.method3502((Class132.aPlayer_1907.anIntArray10317[0]) + Class90.regionTileY, i ^ 0x2caa, i_30_, (Class132.aPlayer_1907.anIntArray10320[0]) + za_Sub2.regionTileX);
+                            Class361.method3502((Class132.localPlayer.anIntArray10317[0]) + Class90.regionTileY, i ^ 0x2caa, i_30_, (Class132.localPlayer.anIntArray10320[0]) + za_Sub2.regionTileX);
                         }
                         Class261.method1987(-120);
                         int i_31_ = 0;

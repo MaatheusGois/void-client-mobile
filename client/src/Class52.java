@@ -102,7 +102,7 @@ final class Class52 implements Interface12 {
                 Class51.aClass311_897.method2316((Class348_Sub42_Sub15.aClass56_9660), Class64_Sub2.aString5420, Class251.anInt3236, Class283.aLong3660, false);
                 if (Class182.anInterface16Array2447 != null) {
                     for (int i_5_ = Class375.anInt4544 - -1; (Class182.anInterface16Array2447.length > i_5_); i_5_++) {
-                        if (Class182.anInterface16Array2447[i_5_].method60(-19079) >= 100 && Class375.anInt4544 == -1 + i_5_ && Class240.anInt4674 >= 1 && Class51.aClass311_897.method2322(0)) {
+                        if (Class182.anInterface16Array2447[i_5_].method60(-19079) >= 100 && Class375.anInt4544 == -1 + i_5_ && Class240.clientState >= 1 && Class51.aClass311_897.method2322(0)) {
                             try {
                                 Class182.anInterface16Array2447[i_5_].method57(117);
                             } catch (Exception exception) {

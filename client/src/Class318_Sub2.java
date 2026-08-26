@@ -12,33 +12,33 @@ final class Class318_Sub2 extends Class318 {
     static int anInt6399;
     static Class147[] aClass147Array6400 = new Class147[100];
 
-    static final void method2494(int i, int i_0_, int i_1_, ha var_ha, Class348_Sub42_Sub12 class348_sub42_sub12, int i_2_, int i_3_, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_) {
+    static final void method2494(int i, int i_0_, int i_1_, ha var_ha, MenuEntry class348_sub42_sub12, int i_2_, int i_3_, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_) {
         do {
             try {
                 anInt6397++;
                 if (i_5_ < 123) method2499(27, -8, -96, 71, 72, (byte) 72, -82);
                 if (i_8_ > i_7_ && i_7_ + i_2_ > i_8_ && i_3_ > -13 + i_1_ && i_1_ + 3 > i_3_ && (class348_sub42_sub12.aBoolean9610)) i_4_ = i_0_;
                 int[] is = null;
-                if (!Class148.method1197(-12081, class348_sub42_sub12.anInt9608)) {
-                    if ((class348_sub42_sub12.anInt9599) == -1) {
-                        if (Class367_Sub8.method3549((class348_sub42_sub12.anInt9608), (byte) -119)) {
-                            Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480((int) (class348_sub42_sub12.aLong9605), -6008)));
+                if (!Class148.method1197(-12081, class348_sub42_sub12.opcode)) {
+                    if ((class348_sub42_sub12.itemId) == -1) {
+                        if (Class367_Sub8.method3549((class348_sub42_sub12.opcode), (byte) -119)) {
+                            Class348_Sub22 class348_sub22 = ((Class348_Sub22) (Class282.aClass356_3654.method3480((int) (class348_sub42_sub12.identifier), -6008)));
                             if (class348_sub22 != null) {
                                 Npc npc = (class348_sub22.aNpc_6859);
                                 Class79 class79 = (npc.aClass79_10505);
                                 if (class79.anIntArray1377 != null) class79 = (class79.method794((Class318_Sub1_Sub3_Sub3.aClass170_10209), -1));
                                 if (class79 != null) is = class79.anIntArray1342;
                             }
-                        } else if (Class239_Sub21.method1813(8806, (class348_sub42_sub12.anInt9608))) {
+                        } else if (Class239_Sub21.method1813(8806, (class348_sub42_sub12.opcode))) {
                             Object object = null;
                             Class51 class51;
-                            if (class348_sub42_sub12.anInt9608 != 1001) class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (0x7fffffffL & ((class348_sub42_sub12.aLong9605) >>> 32))));
-                            else class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.aLong9605)));
+                            if (class348_sub42_sub12.opcode != 1001) class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (0x7fffffffL & ((class348_sub42_sub12.identifier) >>> 32))));
+                            else class51 = (Class348_Sub40_Sub12.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.identifier)));
                             if (class51.anIntArray945 != null) class51 = (class51.method480((Class318_Sub1_Sub3_Sub3.aClass170_10209), (byte) 47));
                             if (class51 != null) is = class51.anIntArray917;
                         }
-                    } else is = Exception_Sub1.aClass255_112.method1940(113, (class348_sub42_sub12.anInt9599)).anIntArray2772;
-                } else is = (Exception_Sub1.aClass255_112.method1940(-67, (int) (class348_sub42_sub12.aLong9605)).anIntArray2772);
+                    } else is = Exception_Sub1.aClass255_112.method1940(113, (class348_sub42_sub12.itemId)).anIntArray2772;
+                } else is = (Exception_Sub1.aClass255_112.method1940(-67, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
                 String string = Class316.method2367((byte) 125, class348_sub42_sub12);
                 if (is != null) string += Class163.method1273(is, true);
                 Class262.aClass324_3326.method2567(i_1_, string, (byte) 116, i_4_, 0, i_7_ - -3, Class341.aClass105Array4234, Class175.anIntArray2330);

@@ -192,9 +192,9 @@ final class Class348_Sub20 extends Class348 {
     static final void method2953(byte i) {
         if (i > -102) anIntArray6830 = null;
         anInt6836++;
-        if (Class240.anInt4674 == 3) Class348_Sub49.method3379(2, 4);
-        else if (Class240.anInt4674 != 7) {
-            if (Class240.anInt4674 == 10) Class348_Sub49.method3379(2, 11);
+        if (Class240.clientState == 3) Class348_Sub49.method3379(2, 4);
+        else if (Class240.clientState != 7) {
+            if (Class240.clientState == 10) Class348_Sub49.method3379(2, 11);
         } else Class348_Sub49.method3379(2, 8);
     }
 

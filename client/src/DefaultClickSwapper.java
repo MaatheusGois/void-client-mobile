@@ -138,12 +138,12 @@ final class DefaultClickSwapper {
             if (current != null && current.equalsIgnoreCase(action)) {
                 continue;
             }
-            Class50_Sub3.method466(
+            Class50_Sub3.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     OPCODE_SET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) itemId, 0);
         }
         if (current != null) {
-            Class50_Sub3.method466(
+            Class50_Sub3.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     OPCODE_RESET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) itemId, 0);
         }
@@ -178,12 +178,12 @@ final class DefaultClickSwapper {
                 continue;
             }
             // Include Attack / Chop / everything — only "Default: " is lilac.
-            Class50_Sub3.method466(
+            Class50_Sub3.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     setOp, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) id, 0);
         }
         if (current != null) {
-            Class50_Sub3.method466(
+            Class50_Sub3.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     resetOp, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) id, 0);
         }
@@ -192,20 +192,20 @@ final class DefaultClickSwapper {
     /**
      * @return entry that should be left-click tip, or null
      */
-    static Class348_Sub42_Sub12 applySwaps() {
+    static MenuEntry applySwaps() {
         ensureLoaded();
         if ((npcDefaults.isEmpty() && objectDefaults.isEmpty() && itemDefaults.isEmpty())
-                || Class73.anInt4776 <= 1) {
+                || Class73.menuEntryCount <= 1) {
             return null;
         }
-        Class348_Sub42_Sub12 preferred = null;
-        for (Class348_Sub42_Sub12 entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4);
+        MenuEntry preferred = null;
+        for (MenuEntry entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4);
              entry != null;
-             entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 83)) {
-            if (entry.aString9593 == null) {
+             entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+            if (entry.option == null) {
                 continue;
             }
-            int opcode = entry.anInt9608;
+            int opcode = entry.opcode;
             if (opcode >= 2000) {
                 opcode -= 2000;
             }
@@ -216,54 +216,54 @@ final class DefaultClickSwapper {
                     wanted = npcDefaults.get(Integer.valueOf(composition.anInt1344));
                 }
             } else if (isObjectOpcode(opcode)) {
-                int objectId = (int) (entry.aLong9605 >>> 32);
+                int objectId = (int) (entry.identifier >>> 32);
                 wanted = objectDefaults.get(Integer.valueOf(objectId));
             } else if (isItemOpcode(opcode)) {
-                // anInt9599 = item id (class46.anInt812) for CC_OP / Use rows
-                int itemId = entry.anInt9599;
+                // itemId = item id (class46.anInt812) for CC_OP / Use rows
+                int itemId = entry.itemId;
                 if (itemId > 0) {
                     wanted = itemDefaults.get(Integer.valueOf(itemId));
                 }
             }
-            if (wanted != null && entry.aString9593.equalsIgnoreCase(wanted)) {
+            if (wanted != null && entry.option.equalsIgnoreCase(wanted)) {
                 preferred = entry;
             }
         }
         if (preferred == null) {
             return null;
         }
-        preferred.anInt9609 = PRIORITY_PREFERRED;
-        Class348_Sub40_Sub4.aClass262_9111.method1999(preferred, -20180);
-        int prefOp = preferred.anInt9608 >= 2000 ? preferred.anInt9608 - 2000 : preferred.anInt9608;
+        preferred.priority = PRIORITY_PREFERRED;
+        Class348_Sub40_Sub4.menuEntries.method1999(preferred, -20180);
+        int prefOp = preferred.opcode >= 2000 ? preferred.opcode - 2000 : preferred.opcode;
         // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
         // (Class318_Sub1_Sub5.method2485). Same packet path as 18 — rewrite so tap executes.
         if (prefOp == 1011) {
-            preferred.anInt9608 = preferred.anInt9608 >= 2000 ? 2018 : 18;
+            preferred.opcode = preferred.opcode >= 2000 ? 2018 : 18;
             prefOp = 18;
         }
-        if (isNpcOpcode(prefOp) && !preferred.aString9593.equalsIgnoreCase(attackLabel())) {
+        if (isNpcOpcode(prefOp) && !preferred.option.equalsIgnoreCase(attackLabel())) {
             demoteAttackNear(preferred);
         }
-        System.out.println("void-osrs default-click apply → '" + preferred.aString9593
-                + "' op=" + preferred.anInt9608);
+        System.out.println("void-osrs default-click apply → '" + preferred.option
+                + "' op=" + preferred.opcode);
         return preferred;
     }
 
     /** @deprecated use {@link #applySwaps()} */
-    static Class348_Sub42_Sub12 applyNpcSwaps() {
+    static MenuEntry applyNpcSwaps() {
         return applySwaps();
     }
 
-    static boolean handleMenuAction(Class348_Sub42_Sub12 entry) {
+    static boolean handleMenuAction(MenuEntry entry) {
         if (entry == null) {
             return false;
         }
-        int opcode = entry.anInt9608;
+        int opcode = entry.opcode;
         if (opcode >= 2000) {
             opcode -= 2000;
         }
-        int id = (int) entry.aLong9605;
-        String label = stripDefaultLabel(entry.aString9593);
+        int id = (int) entry.identifier;
+        String label = stripDefaultLabel(entry.option);
         if (opcode == OPCODE_SET_NPC) {
             setDefault(npcDefaults, "npc", id, label);
             return true;
@@ -326,25 +326,25 @@ final class DefaultClickSwapper {
         System.out.println("void-osrs default-click " + kind + "=" + id + " reset");
     }
 
-    private static void demoteAttackNear(Class348_Sub42_Sub12 preferred) {
+    private static void demoteAttackNear(MenuEntry preferred) {
         String attack = attackLabel();
-        int npcIndex = (int) preferred.aLong9605;
-        for (Class348_Sub42_Sub12 entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4);
+        int npcIndex = (int) preferred.identifier;
+        for (MenuEntry entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4);
              entry != null;
-             entry = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 83)) {
-            if (!isNpcOpcode(entry.anInt9608 >= 2000 ? entry.anInt9608 - 2000 : entry.anInt9608)) {
+             entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+            if (!isNpcOpcode(entry.opcode >= 2000 ? entry.opcode - 2000 : entry.opcode)) {
                 continue;
             }
-            if ((int) entry.aLong9605 != npcIndex) {
+            if ((int) entry.identifier != npcIndex) {
                 continue;
             }
-            if (entry.aString9593 == null || !entry.aString9593.equalsIgnoreCase(attack)) {
+            if (entry.option == null || !entry.option.equalsIgnoreCase(attack)) {
                 continue;
             }
-            if (entry.anInt9608 < 2000) {
-                entry.anInt9608 += 2000;
+            if (entry.opcode < 2000) {
+                entry.opcode += 2000;
             }
-            entry.anInt9609 = 0;
+            entry.priority = 0;
         }
     }
 
@@ -375,8 +375,8 @@ final class DefaultClickSwapper {
         return false;
     }
 
-    private static Class79 compositionForNpcEntry(Class348_Sub42_Sub12 entry) {
-        Class348_Sub22 node = (Class348_Sub22) Class282.aClass356_3654.method3480((int) entry.aLong9605, -6008);
+    private static Class79 compositionForNpcEntry(MenuEntry entry) {
+        Class348_Sub22 node = (Class348_Sub22) Class282.aClass356_3654.method3480((int) entry.identifier, -6008);
         if (node == null) {
             return null;
         }

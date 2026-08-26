@@ -31,7 +31,7 @@ final class Class239_Sub26 extends Class239 {
 
     static final void method1834(Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3, byte i) {
         anInt6125++;
-        int i_2_ = (class318_sub1_sub3_sub3.anInt10239 - Class367_Sub11.anInt7396);
+        int i_2_ = (class318_sub1_sub3_sub3.anInt10239 - Class367_Sub11.clientCycle);
         if (i < 0) {
             int i_3_ = ((class318_sub1_sub3_sub3.anInt10293) * 512 + 256 * class318_sub1_sub3_sub3.method2436((byte) 73));
             int i_4_ = (512 * (class318_sub1_sub3_sub3.anInt10314) - -(class318_sub1_sub3_sub3.method2436((byte) 114) * 256));

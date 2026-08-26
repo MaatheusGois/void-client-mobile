@@ -81,8 +81,8 @@ final class Class239_Sub3 extends Class239 {
         int i_19_ = class348_sub45.method3308((byte) -128);
         int i_20_ = class348_sub45.method3311(119);
         if (bool) Class282.anInt3655 = 1;
-        if (!bool) Class325.method2599((byte) 109, Class316.aClass348_Sub42_Sub12_3963, i_20_, i_19_);
-        else Class138.aClass348_Sub42_Sub12_1946 = Class316.aClass348_Sub42_Sub12_3963;
+        if (!bool) Class325.processMenuAction((byte) 109, Class316.menuTip, i_20_, i_19_);
+        else Class138.aMenuEntry_1946 = Class316.menuTip;
         if (i != 1) method1734(-88, null, (byte) -126, false);
     }
 

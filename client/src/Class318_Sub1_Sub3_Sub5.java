@@ -126,9 +126,9 @@ final class Class318_Sub1_Sub3_Sub5 extends Class318_Sub1_Sub3 {
                 class64.method620(class101);
                 Class129[] class129s = class64.method619();
                 Class342[] class342s = class64.method604();
-                if ((aClass318_Sub10_10378 == null || aClass318_Sub10_10378.aBoolean6470) && (class129s != null || class342s != null)) aClass318_Sub10_10378 = Class318_Sub10.method2526(Class367_Sub11.anInt7396, true);
+                if ((aClass318_Sub10_10378 == null || aClass318_Sub10_10378.aBoolean6470) && (class129s != null || class342s != null)) aClass318_Sub10_10378 = Class318_Sub10.method2526(Class367_Sub11.clientCycle, true);
                 if (aClass318_Sub10_10378 != null) {
-                    aClass318_Sub10_10378.method2536(var_ha, Class367_Sub11.anInt7396, class129s, class342s, false);
+                    aClass318_Sub10_10378.method2536(var_ha, Class367_Sub11.clientCycle, class129s, class342s, false);
                     aClass318_Sub10_10378.method2533(this.plane, this.aShort8743, this.aShort8751, this.aShort8750, this.aShort8747);
                 }
                 if (i == -2393) break;
@@ -159,7 +159,7 @@ final class Class318_Sub1_Sub3_Sub5 extends Class318_Sub1_Sub3 {
                 Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3 = null;
                 if (anInt10387 < 0) {
                     int i_9_ = -1 + -anInt10387;
-                    if (i_9_ == Class348_Sub42_Sub11.anInt9591) class318_sub1_sub3_sub3 = Class132.aPlayer_1907;
+                    if (i_9_ == Class348_Sub42_Sub11.anInt9591) class318_sub1_sub3_sub3 = Class132.localPlayer;
                     else class318_sub1_sub3_sub3 = (Class294.aPlayerArray5058[i_9_]);
                 } else {
                     int i_10_ = -1 + anInt10387;

@@ -68,8 +68,8 @@ final class Class348_Sub42_Sub1 extends Class348_Sub42 {
     static final boolean method3169(int i, int i_8_) {
         if (i_8_ != 0) return true;
         anInt9496++;
-        for (Class348_Sub42_Sub12 class348_sub42_sub12 = ((Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (Class348_Sub42_Sub12) Class348_Sub40_Sub4.aClass262_9111.method1990((byte) 99)) {
-            if (Class367_Sub8.method3549(class348_sub42_sub12.anInt9608, (byte) -28) && (long) i == (class348_sub42_sub12.aLong9605)) return true;
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 99)) {
+            if (Class367_Sub8.method3549(class348_sub42_sub12.opcode, (byte) -28) && (long) i == (class348_sub42_sub12.identifier)) return true;
         }
         return false;
     }

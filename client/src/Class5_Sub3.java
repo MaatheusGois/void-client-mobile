@@ -62,7 +62,7 @@ final class Class5_Sub3 extends Class5 {
                     boolean bool = false;
                     for (int i_7_ = 0; i_6_ > i_7_; i_7_++) {
                         Player player = (Class294.aPlayerArray5058[is[i_7_]]);
-                        if (player != null && (Class132.aPlayer_1907 != player) && (player.aString10544 != null) && player.aString10544.equalsIgnoreCase(string)) {
+                        if (player != null && (Class132.localPlayer != player) && (player.aString10544 != null) && player.aString10544.equalsIgnoreCase(string)) {
                             bool = true;
                             if (i == 1) {
                                 Class127.anInt4657++;
@@ -127,18 +127,18 @@ final class Class5_Sub3 extends Class5 {
         Class348_Sub8.aHa6654.KA(is[0], is[1], is[2], is[3]);
     }
 
-    static final void method202(int i, Class348_Sub42_Sub12 class348_sub42_sub12) {
+    static final void method202(int i, MenuEntry class348_sub42_sub12) {
         do {
             try {
                 anInt8375++;
                 if (i == 6 && !Class5_Sub1.aBoolean8335) {
                     class348_sub42_sub12.method2715((byte) 111);
-                    Class73.anInt4776--;
+                    Class73.menuEntryCount--;
                     if (class348_sub42_sub12.aBoolean9611) {
                         for (Class348_Sub42_Sub13 class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1011(-99)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class233.aClass107_3022.method1003((byte) 110))) {
-                            if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.aString9601)) {
+                            if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.target)) {
                                 boolean bool = false;
-                                for (Class348_Sub42_Sub12 class348_sub42_sub12_12_ = ((Class348_Sub42_Sub12) class348_sub42_sub13.aClass107_9621.method1011(-58)); class348_sub42_sub12_12_ != null; class348_sub42_sub12_12_ = ((Class348_Sub42_Sub12) class348_sub42_sub13.aClass107_9621.method1003((byte) 112))) {
+                                for (MenuEntry class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1011(-58)); class348_sub42_sub12_12_ != null; class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1003((byte) 112))) {
                                     if (class348_sub42_sub12 == class348_sub42_sub12_12_) {
                                         if (class348_sub42_sub13.method3234((byte) -123, class348_sub42_sub12)) Class242.method1868((byte) -98, class348_sub42_sub13);
                                         bool = true;
@@ -149,10 +149,10 @@ final class Class5_Sub3 extends Class5 {
                             }
                         }
                     } else {
-                        long l = (class348_sub42_sub12.aLong9600);
+                        long l = (class348_sub42_sub12.groupKey);
                         Class348_Sub42_Sub13 class348_sub42_sub13;
-                        for (class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class348_Sub42_Sub12.aClass356_9603.method3480(l, -6008)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) Class348_Sub42_Sub12.aClass356_9603.method3476(true))) {
-                            if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.aString9601)) break;
+                        for (class348_sub42_sub13 = ((Class348_Sub42_Sub13) MenuEntry.aClass356_9603.method3480(l, -6008)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((Class348_Sub42_Sub13) MenuEntry.aClass356_9603.method3476(true))) {
+                            if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.target)) break;
                         }
                         if (class348_sub42_sub13 == null || !(class348_sub42_sub13.method3234((byte) 15, class348_sub42_sub12))) break;
                         Class242.method1868((byte) 120, class348_sub42_sub13);
