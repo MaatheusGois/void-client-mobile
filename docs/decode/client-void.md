@@ -1,4 +1,4 @@
-# Decode — `client/src-void` (2 classes)
+# Decode — `client/void` (2 classes)
 
 > **Subsistema:** Void — customizações
 
@@ -8,7 +8,7 @@ Total: 2
 
 ## LoginPrefs.java — Classe LoginPrefs
 
-- **Arquivo:** `client/src-void/LoginPrefs.java`
+- **Arquivo:** `client/void/LoginPrefs.java`
 - **Declaração:** `class LoginPrefs`
 - **Package:** `(default)`
 - **Subsistema:** Void — customizações
@@ -59,7 +59,7 @@ Total: 2
 
 ## MobileKeyboard.java — Classe MobileKeyboard
 
-- **Arquivo:** `client/src-void/MobileKeyboard.java`
+- **Arquivo:** `client/void/MobileKeyboard.java`
 - **Declaração:** `class MobileKeyboard`
 - **Package:** `(default)`
 - **Subsistema:** Void — customizações

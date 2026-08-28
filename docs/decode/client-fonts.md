@@ -1,4 +1,4 @@
-# Decode — `client/src-font` (6 classes)
+# Decode — `client/fonts` (6 classes)
 
 > **Subsistema:** UI — Fontes
 
@@ -8,7 +8,7 @@ Total: 6
 
 ## BitmapFont.java — Classe BitmapFont
 
-- **Arquivo:** `client/src-font/BitmapFont.java`
+- **Arquivo:** `client/fonts/BitmapFont.java`
 - **Declaração:** `class BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes
@@ -77,7 +77,7 @@ Total: 6
 
 ## JaclibBitmapFont.java — Classe JaclibBitmapFont
 
-- **Arquivo:** `client/src-font/JaclibBitmapFont.java`
+- **Arquivo:** `client/fonts/JaclibBitmapFont.java`
 - **Declaração:** `class JaclibBitmapFont extends BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes
@@ -114,7 +114,7 @@ Total: 6
 
 ## OpenGLBitmapFont.java — Classe OpenGLBitmapFont
 
-- **Arquivo:** `client/src-font/OpenGLBitmapFont.java`
+- **Arquivo:** `client/fonts/OpenGLBitmapFont.java`
 - **Declaração:** `class OpenGLBitmapFont extends BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes
@@ -151,7 +151,7 @@ Total: 6
 
 ## SoftwareBitmapFont.java — Classe SoftwareBitmapFont
 
-- **Arquivo:** `client/src-font/SoftwareBitmapFont.java`
+- **Arquivo:** `client/fonts/SoftwareBitmapFont.java`
 - **Declaração:** `class SoftwareBitmapFont extends BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes
@@ -193,7 +193,7 @@ Total: 6
 
 ## SoftwareBitmapFont2.java — Classe SoftwareBitmapFont2
 
-- **Arquivo:** `client/src-font/SoftwareBitmapFont2.java`
+- **Arquivo:** `client/fonts/SoftwareBitmapFont2.java`
 - **Declaração:** `class SoftwareBitmapFont2 extends BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes
@@ -236,7 +236,7 @@ Total: 6
 
 ## SoftwareBitmapFont3.java — Classe SoftwareBitmapFont3
 
-- **Arquivo:** `client/src-font/SoftwareBitmapFont3.java`
+- **Arquivo:** `client/fonts/SoftwareBitmapFont3.java`
 - **Declaração:** `class SoftwareBitmapFont3 extends BitmapFont`
 - **Package:** `(default)`
 - **Subsistema:** UI — Fontes

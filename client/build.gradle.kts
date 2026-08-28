@@ -18,22 +18,22 @@ java {
     sourceSets {
         main {
             // All roots stay in the Java *unnamed* (default) package — a named package
-            // cannot reference the 634 Class* types. Extra dirs are for clarity only.
-            //   src           — RS634 deob (+ toolkit short names)
-            //   src-input     — MouseHandler / AWT mouse
-            //   src-font      — BitmapFont backends
-            //   src-menu      — MenuEntry / DefaultClickSwapper
-            //   src-void      — Void helpers (LoginPrefs, MobileKeyboard)
-            //   src-microbot  — bot runtime / HUD / mouse backends
-            //   src-rs2       — Rs2* scripting API
+            // cannot reference the 634 Class* types. Extra dirs mirror client domains:
+            //   src        — RS634 deob core (+ toolkit short names)
+            //   fonts      — BitmapFont + software/GL/jaclib backends
+            //   input      — MouseHandler / AWT mouse
+            //   menu       — MenuEntry / DefaultClickSwapper
+            //   void       — host extras (LoginPrefs, MobileKeyboard)
+            //   microbot   — bot runtime / HUD / mouse backends
+            //   rs2        — Rs2* scripting API (used by microbot)
             java.srcDirs(
                 "src",
-                "src-input",
-                "src-font",
-                "src-menu",
-                "src-void",
-                "src-microbot",
-                "src-rs2",
+                "fonts",
+                "input",
+                "menu",
+                "void",
+                "microbot",
+                "rs2",
             )
             resources.srcDirs("resources")
         }

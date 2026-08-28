@@ -37,12 +37,12 @@ val prepareClientSources by tasks.registering(Copy::class) {
     // organizational only — see client/build.gradle.kts.
     val clientDir = rootProject.projectDir.resolve("../client")
     from(clientDir.resolve("src"))
-    from(clientDir.resolve("src-input"))
-    from(clientDir.resolve("src-font"))
-    from(clientDir.resolve("src-menu"))
-    from(clientDir.resolve("src-void"))
-    from(clientDir.resolve("src-microbot"))
-    from(clientDir.resolve("src-rs2"))
+    from(clientDir.resolve("fonts"))
+    from(clientDir.resolve("input"))
+    from(clientDir.resolve("menu"))
+    from(clientDir.resolve("void"))
+    from(clientDir.resolve("microbot"))
+    from(clientDir.resolve("rs2"))
     into(layout.buildDirectory.dir("generated/client"))
     filter { line ->
         line

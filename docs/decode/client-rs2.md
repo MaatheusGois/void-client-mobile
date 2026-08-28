@@ -1,4 +1,4 @@
-# Decode — `client/src-rs2` (13 classes)
+# Decode — `client/rs2` (13 classes)
 
 > **Subsistema:** Compat — RS2
 
@@ -8,7 +8,7 @@ Total: 13
 
 ## Rs2Bank.java — Classe Rs2Bank
 
-- **Arquivo:** `client/src-rs2/Rs2Bank.java`
+- **Arquivo:** `client/rs2/Rs2Bank.java`
 - **Declaração:** `class Rs2Bank`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -56,7 +56,7 @@ Total: 13
 
 ## Rs2Combat.java — Classe Rs2Combat
 
-- **Arquivo:** `client/src-rs2/Rs2Combat.java`
+- **Arquivo:** `client/rs2/Rs2Combat.java`
 - **Declaração:** `class Rs2Combat`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -82,7 +82,7 @@ Total: 13
 
 ## Rs2GameObject.java — Classe Rs2GameObject
 
-- **Arquivo:** `client/src-rs2/Rs2GameObject.java`
+- **Arquivo:** `client/rs2/Rs2GameObject.java`
 - **Declaração:** `class Rs2GameObject`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -124,7 +124,7 @@ Total: 13
 
 ## Rs2GroundItem.java — Classe Rs2GroundItem
 
-- **Arquivo:** `client/src-rs2/Rs2GroundItem.java`
+- **Arquivo:** `client/rs2/Rs2GroundItem.java`
 - **Declaração:** `class Rs2GroundItem`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -151,7 +151,7 @@ Total: 13
 
 ## Rs2Inventory.java — Classe Rs2Inventory
 
-- **Arquivo:** `client/src-rs2/Rs2Inventory.java`
+- **Arquivo:** `client/rs2/Rs2Inventory.java`
 - **Declaração:** `class Rs2Inventory`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -196,7 +196,7 @@ Total: 13
 
 ## Rs2Keyboard.java — Classe Rs2Keyboard
 
-- **Arquivo:** `client/src-rs2/Rs2Keyboard.java`
+- **Arquivo:** `client/rs2/Rs2Keyboard.java`
 - **Declaração:** `class Rs2Keyboard`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -233,7 +233,7 @@ Total: 13
 
 ## Rs2Npc.java — Classe Rs2Npc
 
-- **Arquivo:** `client/src-rs2/Rs2Npc.java`
+- **Arquivo:** `client/rs2/Rs2Npc.java`
 - **Declaração:** `class Rs2Npc`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -278,7 +278,7 @@ Total: 13
 
 ## Rs2NpcCache.java — Classe Rs2NpcCache
 
-- **Arquivo:** `client/src-rs2/Rs2NpcCache.java`
+- **Arquivo:** `client/rs2/Rs2NpcCache.java`
 - **Declaração:** `class Rs2NpcCache`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -311,7 +311,7 @@ Total: 13
 
 ## Rs2Player.java — Classe Rs2Player
 
-- **Arquivo:** `client/src-rs2/Rs2Player.java`
+- **Arquivo:** `client/rs2/Rs2Player.java`
 - **Declaração:** `class Rs2Player`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -351,7 +351,7 @@ Total: 13
 
 ## Rs2PlayerCache.java — Classe Rs2PlayerCache
 
-- **Arquivo:** `client/src-rs2/Rs2PlayerCache.java`
+- **Arquivo:** `client/rs2/Rs2PlayerCache.java`
 - **Declaração:** `class Rs2PlayerCache`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -385,7 +385,7 @@ Total: 13
 
 ## Rs2TileCaches.java — Classe Rs2TileObjectCache
 
-- **Arquivo:** `client/src-rs2/Rs2TileCaches.java`
+- **Arquivo:** `client/rs2/Rs2TileCaches.java`
 - **Declaração:** `class Rs2TileObjectCache`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -410,7 +410,7 @@ _—_
 
 ## Rs2Walker.java — Classe Rs2Walker
 
-- **Arquivo:** `client/src-rs2/Rs2Walker.java`
+- **Arquivo:** `client/rs2/Rs2Walker.java`
 - **Declaração:** `class Rs2Walker`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2
@@ -439,7 +439,7 @@ _—_
 
 ## Rs2Widget.java — Classe Rs2Widget
 
-- **Arquivo:** `client/src-rs2/Rs2Widget.java`
+- **Arquivo:** `client/rs2/Rs2Widget.java`
 - **Declaração:** `class Rs2Widget`
 - **Package:** `(default)`
 - **Subsistema:** Compat — RS2

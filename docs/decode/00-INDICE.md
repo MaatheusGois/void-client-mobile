@@ -42,12 +42,12 @@ Total de pacotes: 40
 | `client/src [lote 4]` | 150 | `docs/decode/01-client-src-lote-04.md` | Core — lógica ofuscada |
 | `client/src [lote 5]` | 146 | `docs/decode/01-client-src-lote-05.md` | Core — lógica ofuscada |
 | `client/src` (renomes) | 707 | `docs/decode/RENAMES.md` | Renomes — log completo ofuscação→nome significativo |
-| `client/src-font` | 6 | `docs/decode/client-src-font.md` | UI — Fontes |
-| `client/src-input` | 3 | `docs/decode/client-src-input.md` | Input |
-| `client/src-menu` | 2 | `docs/decode/client-src-menu.md` | UI — Menus |
-| `client/src-microbot` | 14 | `docs/decode/client-src-microbot.md` | Automação — Microbot |
-| `client/src-rs2` | 13 | `docs/decode/client-src-rs2.md` | Compat — RS2 |
-| `client/src-void` | 2 | `docs/decode/client-src-void.md` | Void — customizações |
+| `client/fonts` | 6 | `docs/decode/client-fonts.md` | UI — Fontes |
+| `client/input` | 3 | `docs/decode/client-input.md` | Input |
+| `client/menu` | 2 | `docs/decode/client-menu.md` | UI — Menus |
+| `client/microbot` | 14 | `docs/decode/client-microbot.md` | Automação — Microbot |
+| `client/rs2` | 13 | `docs/decode/client-rs2.md` | Compat — RS2 |
+| `client/void` | 2 | `docs/decode/client-void.md` | Void — customizações |
 | `ios/src/main/java/voidawt` | 5 | `docs/decode/ios-src-main-java-voidawt.md` | UI — AWT reimplementado (voidawt) |
 | `ios/src/main/java/voidsound/sampled` | 1 | `docs/decode/ios-src-main-java-voidsound-sampled.md` | Áudio — voidsound/sampled |
 | `ios/src/main/java/world/gregs/voidosrs/ios` | 4 | `docs/decode/ios-src-main-java-world-gregs-voidosrs-ios.md` | Plataforma — bootstrap Android/iOS |

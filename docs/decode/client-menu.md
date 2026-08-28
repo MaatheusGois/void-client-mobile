@@ -1,4 +1,4 @@
-# Decode — `client/src-menu` (2 classes)
+# Decode — `client/menu` (2 classes)
 
 > **Subsistema:** UI — Menus
 
@@ -8,7 +8,7 @@ Total: 2
 
 ## DefaultClickSwapper.java — Classe DefaultClickSwapper
 
-- **Arquivo:** `client/src-menu/DefaultClickSwapper.java`
+- **Arquivo:** `client/menu/DefaultClickSwapper.java`
 - **Declaração:** `class DefaultClickSwapper`
 - **Package:** `(default)`
 - **Subsistema:** UI — Menus
@@ -77,7 +77,7 @@ Total: 2
 
 ## MenuEntry.java — Classe MenuEntry
 
-- **Arquivo:** `client/src-menu/MenuEntry.java`
+- **Arquivo:** `client/menu/MenuEntry.java`
 - **Declaração:** `class MenuEntry extends Class348_Sub42`
 - **Package:** `(default)`
 - **Subsistema:** UI — Menus

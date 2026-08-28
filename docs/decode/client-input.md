@@ -1,4 +1,4 @@
-# Decode — `client/src-input` (3 classes)
+# Decode — `client/input` (3 classes)
 
 > **Subsistema:** Input
 
@@ -8,7 +8,7 @@ Total: 3
 
 ## AwtMouseHandler.java — Classe AwtMouseHandler
 
-- **Arquivo:** `client/src-input/AwtMouseHandler.java`
+- **Arquivo:** `client/input/AwtMouseHandler.java`
 - **Declaração:** `class AwtMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener, MouseWheelListener`
 - **Package:** `(default)`
 - **Subsistema:** Input
@@ -60,7 +60,7 @@ Total: 3
 
 ## BasicMouseHandler.java — Classe BasicMouseHandler
 
-- **Arquivo:** `client/src-input/BasicMouseHandler.java`
+- **Arquivo:** `client/input/BasicMouseHandler.java`
 - **Declaração:** `class BasicMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener`
 - **Package:** `(default)`
 - **Subsistema:** Input
@@ -115,7 +115,7 @@ Total: 3
 
 ## MouseHandler.java — Classe MouseHandler
 
-- **Arquivo:** `client/src-input/MouseHandler.java`
+- **Arquivo:** `client/input/MouseHandler.java`
 - **Declaração:** `class MouseHandler`
 - **Package:** `(default)`
 - **Subsistema:** Input

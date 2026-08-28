@@ -1,4 +1,4 @@
-# Decode — `client/src-microbot` (14 classes)
+# Decode — `client/microbot` (14 classes)
 
 > **Subsistema:** Automação — Microbot
 
@@ -8,7 +8,7 @@ Total: 14
 
 ## DesktopAwtMouse.java — Classe DesktopAwtMouse
 
-- **Arquivo:** `client/src-microbot/DesktopAwtMouse.java`
+- **Arquivo:** `client/microbot/DesktopAwtMouse.java`
 - **Declaração:** `class DesktopAwtMouse implements MicrobotMouseBackend`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -49,7 +49,7 @@ Total: 14
 
 ## ExampleCombatScript.java — Classe ExampleCombatScript
 
-- **Arquivo:** `client/src-microbot/ExampleCombatScript.java`
+- **Arquivo:** `client/microbot/ExampleCombatScript.java`
 - **Declaração:** `class ExampleCombatScript`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -84,7 +84,7 @@ Total: 14
 
 ## Microbot.java — Classe Microbot
 
-- **Arquivo:** `client/src-microbot/Microbot.java`
+- **Arquivo:** `client/microbot/Microbot.java`
 - **Declaração:** `class Microbot`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -122,7 +122,7 @@ Total: 14
 
 ## MicrobotBlockingEvents.java — Classe MicrobotBlockingEvents
 
-- **Arquivo:** `client/src-microbot/MicrobotBlockingEvents.java`
+- **Arquivo:** `client/microbot/MicrobotBlockingEvents.java`
 - **Declaração:** `class MicrobotBlockingEvents`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -145,7 +145,7 @@ _—_
 
 ## MicrobotGlobal.java — Classe MicrobotGlobal
 
-- **Arquivo:** `client/src-microbot/MicrobotGlobal.java`
+- **Arquivo:** `client/microbot/MicrobotGlobal.java`
 - **Declaração:** `class MicrobotGlobal`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -177,7 +177,7 @@ _—_
 
 ## MicrobotMenu.java — Classe MicrobotMenu
 
-- **Arquivo:** `client/src-microbot/MicrobotMenu.java`
+- **Arquivo:** `client/microbot/MicrobotMenu.java`
 - **Declaração:** `class MicrobotMenu`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -215,7 +215,7 @@ _—_
 
 ## MicrobotMouseBackend.java — Classe MicrobotMouseBackend
 
-- **Arquivo:** `client/src-microbot/MicrobotMouseBackend.java`
+- **Arquivo:** `client/microbot/MicrobotMouseBackend.java`
 - **Declaração:** `interface MicrobotMouseBackend`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -242,7 +242,7 @@ _—_
 
 ## MicrobotPanel.java — Classe MicrobotPanel
 
-- **Arquivo:** `client/src-microbot/MicrobotPanel.java`
+- **Arquivo:** `client/microbot/MicrobotPanel.java`
 - **Declaração:** `class MicrobotPanel`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -281,7 +281,7 @@ _—_
 
 ## MicrobotRuntime.java — Classe MicrobotRuntime
 
-- **Arquivo:** `client/src-microbot/MicrobotRuntime.java`
+- **Arquivo:** `client/microbot/MicrobotRuntime.java`
 - **Declaração:** `class MicrobotRuntime`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -318,7 +318,7 @@ _—_
 
 ## MicrobotScript.java — Classe MicrobotScript
 
-- **Arquivo:** `client/src-microbot/MicrobotScript.java`
+- **Arquivo:** `client/microbot/MicrobotScript.java`
 - **Declaração:** `class MicrobotScript extends MicrobotGlobal`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -354,7 +354,7 @@ _—_
 
 ## MicrobotWidgets.java — Classe MicrobotWidgets
 
-- **Arquivo:** `client/src-microbot/MicrobotWidgets.java`
+- **Arquivo:** `client/microbot/MicrobotWidgets.java`
 - **Declaração:** `class MicrobotWidgets`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -385,7 +385,7 @@ _—_
 
 ## NewMenuEntry.java — Classe NewMenuEntry
 
-- **Arquivo:** `client/src-microbot/NewMenuEntry.java`
+- **Arquivo:** `client/microbot/NewMenuEntry.java`
 - **Declaração:** `class NewMenuEntry`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -426,7 +426,7 @@ _—_
 
 ## VirtualMouse.java — Classe VirtualMouse
 
-- **Arquivo:** `client/src-microbot/VirtualMouse.java`
+- **Arquivo:** `client/microbot/VirtualMouse.java`
 - **Declaração:** `class VirtualMouse`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot
@@ -467,7 +467,7 @@ _—_
 
 ## VoidAwtHostMouse.java — Classe VoidAwtHostMouse
 
-- **Arquivo:** `client/src-microbot/VoidAwtHostMouse.java`
+- **Arquivo:** `client/microbot/VoidAwtHostMouse.java`
 - **Declaração:** `class VoidAwtHostMouse implements MicrobotMouseBackend`
 - **Package:** `(default)`
 - **Subsistema:** Automação — Microbot

@@ -47,12 +47,12 @@ tasks.register('prepareClientSources', Copy) {
     // Flat merge into generated/client (all default package). Folder roots are
     // organizational only — see client/build.gradle.kts.
     from(file('../client/src'))
-    from(file('../client/src-input'))
-    from(file('../client/src-font'))
-    from(file('../client/src-menu'))
-    from(file('../client/src-void'))
-    from(file('../client/src-microbot'))
-    from(file('../client/src-rs2'))
+    from(file('../client/fonts'))
+    from(file('../client/input'))
+    from(file('../client/menu'))
+    from(file('../client/void'))
+    from(file('../client/microbot'))
+    from(file('../client/rs2'))
     into(generatedClient)
     filter { String line ->
         line
