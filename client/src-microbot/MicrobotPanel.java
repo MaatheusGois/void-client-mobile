@@ -1,5 +1,5 @@
 /**
- * Microbot mini HUD — canvas overlay (not an RS {@link Class46} iface, not Swing).
+ * Microbot mini HUD — canvas overlay (not an RS {@link DisplayModeManagerContainer57} iface, not Swing).
  * <p>
  * <b>Draw:</b> {@link ha#fillRect} for the translucent box + {@link BitmapFont#drawText}
  * for left-aligned labels (same stack as the developer console / FPS overlay).
@@ -7,9 +7,9 @@
  * game world.
  * <p>
  * <b>Input:</b> {@link #pollInput()} runs right after mouse events are copied into
- * {@link Class318_Sub1_Sub3#aClass262_8744}. Left-presses inside the panel are
- * unlinked ({@link Class348#method2715}) so walk / tip menus never see them.
- * {@link Class261#method1987} also bails when {@link #isMouseOver()} so right-click
+ * {@link Component327#aClass262_8744}. Left-presses inside the panel are
+ * unlinked ({@link Node#method2715}) so walk / tip menus never see them.
+ * {@link DisplayModeManagerContainer1#method1987} also bails when {@link #isMouseOver()} so right-click
  * menus don't open through the HUD.
  * <p>
  * Rows (expanded): header → Combat toggle → Pause all scripts.
@@ -36,7 +36,7 @@ final class MicrobotPanel {
     private static boolean collapsed;
     /**
      * Cursor currently over the panel bounds — refreshed each {@link #pollInput()}.
-     * Used by {@link Class261} to suppress menus under the HUD.
+     * Used by {@link DisplayModeManagerContainer1} to suppress menus under the HUD.
      */
     private static boolean mouseOver;
 
@@ -75,7 +75,7 @@ final class MicrobotPanel {
      * Prefer {@link BitmapFont#drawText} (left-aligned) — {@link BitmapFont#drawTextCentred}
      * is centre-X and easy to mis-wire (garbled / stacked glyphs).
      *
-     * @param renderer active toolkit ({@link Class348_Sub8#aHa6654})
+     * @param renderer active toolkit ({@link NodeSub8#aHa6654})
      */
     static void draw(ha renderer) {
         if (!isVisible() || renderer == null) {
@@ -84,7 +84,7 @@ final class MicrobotPanel {
         try {
             BitmapFont font = Applet_Sub1.aClass324_20;
             if (font == null) {
-                font = Class240.aClass324_4684;
+                font = Component49.aClass324_4684;
             }
             if (font == null) {
                 return;
@@ -117,25 +117,25 @@ final class MicrobotPanel {
     /**
      * Consume left-presses that land on a panel row.
      * <p>
-     * Must run after mouse drain into {@link Class318_Sub1_Sub3#aClass262_8744}
-     * and before {@link Class261#method1987} / walk packet builders.
+     * Must run after mouse drain into {@link Component327#aClass262_8744}
+     * and before {@link DisplayModeManagerContainer1#method1987} / walk packet builders.
      * Click type {@code 0} = left press ({@link AwtMouseHandler#mousePressed}).
      */
     static void pollInput() {
         mouseOver = false;
-        if (!isVisible() || Class258_Sub4.mouseHandler == null) {
+        if (!isVisible() || AbstractGlTextureSub4.mouseHandler == null) {
             return;
         }
         try {
-            int mx = Class258_Sub4.mouseHandler.getCursorX(true);
-            int my = Class258_Sub4.mouseHandler.getCursorY((byte) 100);
+            int mx = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
+            int my = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 100);
             mouseOver = contains(mx, my);
 
-            Class348 node = Class318_Sub1_Sub3.aClass262_8744.method1995(4);
+            Node node = Component327.aClass262_8744.method1995(4);
             while (node != null) {
-                Class348 next = Class318_Sub1_Sub3.aClass262_8744.method1990((byte) 79);
-                if (node instanceof Class348_Sub45) {
-                    Class348_Sub45 click = (Class348_Sub45) node;
+                Node next = Component327.aClass262_8744.method1990((byte) 79);
+                if (node instanceof NodeSub45) {
+                    NodeSub45 click = (NodeSub45) node;
                     int type = click.method3310(86);
                     if (type == 0) {
                         int cx = click.method3308((byte) -128);

@@ -27,7 +27,7 @@ final class MobileKeyboard {
     }
 
     /** Called when the player presses a UI component (mouse-down). {@code screenY} is unlifted. */
-    static void onInterfacePress(Class46 component, int screenX, int screenY) {
+    static void onInterfacePress(DisplayModeManagerContainer57 component, int screenX, int screenY) {
         if (component == null) {
             return;
         }
@@ -38,7 +38,7 @@ final class MobileKeyboard {
         if (text != null && text.length() > 48) {
             text = text.substring(0, 48);
         }
-        int gameState = Class240.clientState;
+        int gameState = Component49.clientState;
         System.out.println("void-osrs ifPress id=" + component.anInt830
                 + " type=" + type
                 + " keyListener=" + keyListener
@@ -65,7 +65,7 @@ final class MobileKeyboard {
     }
 
     /** Single-line text widget suitable for soft-keyboard focus. */
-    private static boolean isTextInput(Class46 c) {
+    private static boolean isTextInput(DisplayModeManagerContainer57 c) {
         if (c.anInt774 != 4 || isFullscreen(c)) {
             return false;
         }
@@ -79,12 +79,12 @@ final class MobileKeyboard {
      * Only the gameframe slot (parent fullscreen) is lifted — lifting a nested
      * 137 inside an unmoved clip makes the chat draw off-clip and vanish.
      */
-    static int liftPx(Class46 c, int screenX, int screenY) {
+    static int liftPx(DisplayModeManagerContainer57 c, int screenX, int screenY) {
         int shift = shiftY();
-        if (shift <= 0 || c == null || isLoginState(Class240.clientState)) {
+        if (shift <= 0 || c == null || isLoginState(Component49.clientState)) {
             return 0;
         }
-        Class46 parent = c.aClass46_782;
+        DisplayModeManagerContainer57 parent = c.aClass46_782;
         if (parent != null && !isFullscreen(parent)) {
             return 0;
         }
@@ -100,7 +100,7 @@ final class MobileKeyboard {
                     + " id=" + c.anInt830
                     + " xy=" + screenX + "," + screenY
                     + " size=" + c.anInt709 + "x" + c.anInt789
-                    + " state=" + Class240.clientState);
+                    + " state=" + Component49.clientState);
         }
         return lift;
     }
@@ -110,7 +110,7 @@ final class MobileKeyboard {
      * above the IME, not the full keyboard height.
      */
     static int loginLayerShift() {
-        if (!isLoginState(Class240.clientState)) {
+        if (!isLoginState(Component49.clientState)) {
             return 0;
         }
         int kb = shiftY();
@@ -142,15 +142,15 @@ final class MobileKeyboard {
     }
 
     /** Keep 744 hit-testing aligned with {@link #loginLayerShift()} draw offset. */
-    static int loginHitShift(Class46 c) {
+    static int loginHitShift(DisplayModeManagerContainer57 c) {
         if (c == null || (c.anInt830 >>> 16) != 744) {
             return 0;
         }
         return loginLayerShift();
     }
 
-    private static boolean inChatBand(Class46 c, int screenX, int screenY) {
-        int sw = Math.max(1, Class92.anInt1524);
+    private static boolean inChatBand(DisplayModeManagerContainer57 c, int screenX, int screenY) {
+        int sw = Math.max(1, DisplayModeManagerContainer23.anInt1524);
         int sh = Math.max(1, ha_Sub2.anInt7666);
         if (isFullscreen(c)) {
             return false;
@@ -173,8 +173,8 @@ final class MobileKeyboard {
         return w >= 120;
     }
 
-    private static boolean isFullscreen(Class46 c) {
-        int sw = Math.max(1, Class92.anInt1524);
+    private static boolean isFullscreen(DisplayModeManagerContainer57 c) {
+        int sw = Math.max(1, DisplayModeManagerContainer23.anInt1524);
         int sh = Math.max(1, ha_Sub2.anInt7666);
         return c.anInt709 >= sw - 8 && c.anInt789 >= sh - 8;
     }

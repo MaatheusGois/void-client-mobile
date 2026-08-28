@@ -3,7 +3,7 @@
  * <p>
  * Mirrors Microbot's {@code NewMenuEntry}: scripts build one of these, then
  * {@link Microbot#doInvoke} sets {@link Microbot#targetMenu} and clicks; the
- * client tip is forced to this entry so {@link Class325#method2599} runs the
+ * client tip is forced to this entry so {@link ColoredTextBuilder#method2599} runs the
  * real game opcode (not a Void 1900-range client-only op).
  * <p>
  * Field mapping onto {@link MenuEntry}:

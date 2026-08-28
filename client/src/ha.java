@@ -2,6 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
+/**
+ * RENAMED from `ha` (JODE-obfuscated).
+ * Abstract rendering toolkit. Base interface for all graphics backends (OpenGL/D3D/software). Declares the abstract draw/rasterize/texture methods implemented by concrete toolkits such as oa.
+ */
+
 import java.awt.*;
 import java.util.Random;
 
@@ -16,7 +21,7 @@ abstract class ha {
     static int anInt4568;
     static int anInt4569;
     static int anInt4570;
-    static Class351 aClass351_4571;
+    static StringCache aClass351_4571;
     static int anInt4572;
     static int anInt4573;
     static int anInt4574;
@@ -34,7 +39,7 @@ abstract class ha {
 
     abstract void b(int i, int i_1_, int i_2_, int i_3_, double d);
 
-    abstract Class64 method3625(Class124 class124, int i, int i_4_, int i_5_, int i_6_);
+    abstract DisplayModeManagerContainer370 method3625(DisplayModeManagerContainer77 class124, int i, int i_4_, int i_5_, int i_6_);
 
     abstract void F(int i, int i_7_);
 
@@ -44,7 +49,7 @@ abstract class ha {
 
     abstract void method3628(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_);
 
-    abstract Class105 method3629(int i, int i_14_, boolean bool);
+    abstract Component24 method3629(int i, int i_14_, boolean bool);
 
     abstract int[] Y();
 
@@ -71,15 +76,15 @@ abstract class ha {
     final void method3635(byte i) {
         int i_15_ = -90 % ((i - 8) / 33);
         anInt4573++;
-        Class348_Sub40_Sub26.aBooleanArray9351[this.anInt4567] = false;
+        DefinitionSub26.aBooleanArray9351[this.anInt4567] = false;
         method3652();
     }
 
     abstract void method3636(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, aa var_aa, int i_21_, int i_22_);
 
-    abstract Class365 c();//c
+    abstract Component6 c();//c
 
-    abstract void method3638(Class101 class101);
+    abstract void method3638(DisplayModeManagerContainer204 class101);
 
     abstract int[] na(int i, int i_23_, int i_24_, int i_25_);
 
@@ -89,17 +94,17 @@ abstract class ha {
 
     abstract boolean method3639();
 
-    abstract Class101 method3640();
+    abstract DisplayModeManagerContainer204 method3640();
 
     static final void method3641(int i, int i_35_, byte i_36_, int i_37_, int i_38_, int i_39_) {
         anInt4575++;
         if (i_36_ != -75) anInt4581 = 73;
-        if (i_35_ == i_38_) Class127.method1116(i, i_37_, i_39_, i_38_, (byte) -99);
-        else if (Class369.anInt4960 <= i_39_ + -i_38_ && Class113.anInt1745 >= i_39_ - -i_38_ && -i_35_ + i >= Class132.anInt1910 && Class38.anInt513 >= i + i_35_) Class55.method515(i_37_, i_39_, i, i_35_, i_38_, -122);
-        else Class239_Sub27.method1839(i_39_, i_35_, i, i_36_ ^ 0x4a, i_37_, i_38_);
+        if (i_35_ == i_38_) Component296.method1116(i, i_37_, i_39_, i_38_, (byte) -99);
+        else if (Component27.anInt4960 <= i_39_ + -i_38_ && Component22.anInt1745 >= i_39_ - -i_38_ && -i_35_ + i >= Component72.anInt1910 && PauseTimer.anInt513 >= i + i_35_) JagTheoraDecoder.method515(i_37_, i_39_, i, i_35_, i_38_, -122);
+        else Component139.method1839(i_39_, i_35_, i, i_36_ ^ 0x4a, i_37_, i_38_);
     }
 
-    abstract void method3642(int i, Class348_Sub1[] class348_sub1s);
+    abstract void method3642(int i, NodeSub1[] class348_sub1s);
 
     abstract void method3643(Canvas canvas, int i, int i_40_);
 
@@ -132,9 +137,9 @@ abstract class ha {
 
     abstract void za(int i, int i_59_, int i_60_, int i_61_, int i_62_);
 
-    abstract void method3653(Class299 class299);
+    abstract void method3653(Component80 class299);
 
-    abstract Class101 method3654();
+    abstract DisplayModeManagerContainer204 method3654();
 
     abstract int JA(int i, int i_63_, int i_64_, int i_65_, int i_66_, int i_67_);
 
@@ -172,7 +177,7 @@ abstract class ha {
 
     abstract aa method3661(int i, int i_82_, int[] is, int[] is_83_);
 
-    final Class105 method3662(int i, int[] is, byte i_84_, int i_85_, int i_86_, int i_87_) {
+    final Component24 method3662(int i, int[] is, byte i_84_, int i_85_, int i_86_, int i_87_) {
         anInt4565++;
         if (i_84_ != 94) return null;
         return method3711(is, i_85_, i_86_, i, i_87_, true);
@@ -183,7 +188,7 @@ abstract class ha {
     static final byte[] method3664(int i, int i_88_) {
         anInt4564++;
         if (i_88_ <= 21) anInt4583 = 60;
-        Class348_Sub42_Sub3 class348_sub42_sub3 = ((Class348_Sub42_Sub3) Class348_Sub1_Sub2.aClass308_8815.method2302(i, (byte) -120));
+        HashNodeSub3 class348_sub42_sub3 = ((HashNodeSub3) NodeSub1Sub2.aClass308_8815.method2302(i, (byte) -120));
         if (class348_sub42_sub3 == null) {
             byte[] is = new byte[512];
             Random random = new Random(i);
@@ -191,13 +196,13 @@ abstract class ha {
                 is[i_89_] = (byte) i_89_;
             for (int i_90_ = 0; i_90_ < 255; i_90_++) {
                 int i_91_ = -i_90_ + 255;
-                int i_92_ = Class124.method1097((byte) 95, i_91_, random);
+                int i_92_ = DisplayModeManagerContainer77.method1097((byte) 95, i_91_, random);
                 byte i_93_ = is[i_92_];
                 is[i_92_] = is[i_91_];
                 is[i_91_] = is[511 + -i_90_] = i_93_;
             }
-            class348_sub42_sub3 = new Class348_Sub42_Sub3(is);
-            Class348_Sub1_Sub2.aClass308_8815.method2305(i, class348_sub42_sub3, -1);
+            class348_sub42_sub3 = new HashNodeSub3(is);
+            NodeSub1Sub2.aClass308_8815.method2305(i, class348_sub42_sub3, -1);
         }
         return class348_sub42_sub3.aByteArray9499;
     }
@@ -256,7 +261,7 @@ abstract class ha {
         aClass351_4571 = null;
     }
 
-    final void method3681(Class105 class105, int i) {
+    final void method3681(Component24 class105, int i) {
         method3687(method3634(class105, method3624(class105.method971(), class105.method969())));
         anInt4561++;
         if (i != 0) DA(-75, -67, 18, -116);
@@ -264,15 +269,15 @@ abstract class ha {
 
     abstract boolean method3682();
 
-    abstract Class105 method3683(int i, int i_143_, int i_144_, int i_145_, boolean bool);
+    abstract Component24 method3683(int i, int i_143_, int i_144_, int i_145_, boolean bool);
 
-    abstract void method3684(Class98 class98);
+    abstract void method3684(Component122 class98);
 
-    abstract void method3685(Class98 class98, int i);
+    abstract void method3685(Component122 class98, int i);
 
     abstract void K(int[] is);
 
-    abstract BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool);
+    abstract BitmapFont method3686(Component184 class143, Component170[] class207s, boolean bool);
 
     abstract void H(int i, int i_146_, int i_147_, int[] is);
 
@@ -295,21 +300,21 @@ abstract class ha {
         if (i >= 53) anInt4572++;
     }
 
-    abstract Class348_Sub1 method3690(int i, int i_164_, int i_165_, int i_166_, int i_167_, float f);
+    abstract NodeSub1 method3690(int i, int i_164_, int i_165_, int i_166_, int i_167_, float f);
 
-    abstract Class105 method3691(Class207 class207, boolean bool);
+    abstract Component24 method3691(Component170 class207, boolean bool);
 
-    static final synchronized ha method3692(int i, int i_168_, int i_169_, Class45 class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
+    static final synchronized ha method3692(int i, int i_168_, int i_169_, CacheStore class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
         try {
             anInt4576++;
-            if (i_170_ == i_171_) return Class348_Sub5.method2753(true, i_168_, i_169_, canvas, var_d);
-            if (i_171_ == 2) return Class306.method2297(-6, i_168_, var_d, canvas, i_169_);
-            if (i_171_ == 1) return Class262.method2000(3, i, canvas, var_d);
-            if (i_171_ == 5) return Class93.method862(canvas, var_d, class45, 25542, i);
-            if (i_171_ == 3) return Class96.method870(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
+            if (i_170_ == i_171_) return NodeSub5.method2753(true, i_168_, i_169_, canvas, var_d);
+            if (i_171_ == 2) return Component314.method2297(-6, i_168_, var_d, canvas, i_169_);
+            if (i_171_ == 1) return NodeList.method2000(3, i, canvas, var_d);
+            if (i_171_ == 5) return ToolkitFactory.method862(canvas, var_d, class45, 25542, i);
+            if (i_171_ == 3) return ToolkitLoader.method870(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
             throw new IllegalArgumentException("UM");
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ha.TJ(" + i + ',' + i_168_ + ',' + i_169_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_170_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_171_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("ha.TJ(" + i + ',' + i_168_ + ',' + i_169_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_170_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_171_ + ')'));
         }
     }
 
@@ -321,7 +326,7 @@ abstract class ha {
 
     abstract void method3696(int i);
 
-    abstract Class299 method3697(int i, int i_172_, int i_173_, int i_174_, int i_175_, int i_176_);
+    abstract Component80 method3697(int i, int i_172_, int i_173_, int i_174_, int i_175_, int i_176_);
 
     protected void finalize() {
         method3635((byte) 46);
@@ -346,7 +351,7 @@ abstract class ha {
 
     abstract int method3704();
 
-    abstract Class101 method3705();
+    abstract DisplayModeManagerContainer204 method3705();
 
     abstract int XA();
 
@@ -366,7 +371,7 @@ abstract class ha {
 
     abstract void GA(int i);
 
-    abstract Class299 method3706(Class299 class299, Class299 class299_203_, float f, Class299 class299_204_);
+    abstract Component80 method3706(Component80 class299, Component80 class299_203_, float f, Component80 class299_204_);
 
     abstract void method3707(Rectangle[] rectangles, int i, int i_205_, int i_206_) throws Exception_Sub1;
 
@@ -376,14 +381,14 @@ abstract class ha {
 
     abstract void method3710();
 
-    abstract Class105 method3711(int[] is, int i, int i_212_, int i_213_, int i_214_, boolean bool);
+    abstract Component24 method3711(int[] is, int i, int i_212_, int i_213_, int i_214_, boolean bool);
 
     ha(d var_d) {
         this.aD4579 = var_d;
         int i = -1;
         for (int i_215_ = 0; i_215_ < 8; i_215_++) {
-            if (!Class348_Sub40_Sub26.aBooleanArray9351[i_215_]) {
-                Class348_Sub40_Sub26.aBooleanArray9351[i_215_] = true;
+            if (!DefinitionSub26.aBooleanArray9351[i_215_]) {
+                DefinitionSub26.aBooleanArray9351[i_215_] = true;
                 i = i_215_;
                 break;
             }
@@ -393,6 +398,6 @@ abstract class ha {
     }
 
     static {
-        aClass351_4571 = new Class351(73, -1);
+        aClass351_4571 = new StringCache(73, -1);
     }
 }

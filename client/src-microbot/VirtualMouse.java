@@ -1,6 +1,7 @@
 import java.awt.event.MouseEvent;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -12,11 +13,14 @@ import java.util.concurrent.TimeUnit;
  */
 final class VirtualMouse {
 
+    // Anonymous ThreadFactory — RoboVM/Soot cannot AOT lambdas (invokedynamic).
     private final ScheduledExecutorService scheduler =
-            Executors.newSingleThreadScheduledExecutor(r -> {
-                Thread t = new Thread(r, "microbot-mouse");
-                t.setDaemon(true);
-                return t;
+            Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+                public Thread newThread(Runnable r) {
+                    Thread t = new Thread(r, "microbot-mouse");
+                    t.setDaemon(true);
+                    return t;
+                }
             });
 
     private MicrobotMouseBackend backend;

@@ -2,12 +2,12 @@
  * Simplified walker — BFS on local collision then walk-click (opcode 19) via
  * menu-inject. Transports/doors deferred (Microbot shortestpath later).
  * <p>
- * Uses {@link Class298#method2252} as an internal reliability assist after the
+ * Uses {@link Component10#method2252} as an internal reliability assist after the
  * click is issued when the path is short.
  */
 final class Rs2Walker {
 
-    /** Walk-here opcode (see {@link Class325#method2599} i_76_ == 19). */
+    /** Walk-here opcode (see {@link ColoredTextBuilder#method2599} i_76_ == 19). */
     static final int OPCODE_WALK = 19;
 
     private Rs2Walker() {
@@ -26,13 +26,13 @@ final class Rs2Walker {
             return false;
         }
         int localX = absX - za_Sub2.regionTileX;
-        int localY = absY - Class90.regionTileY;
-        if (localX < 0 || localY < 0 || localX >= Class367_Sub4.anInt7319 || localY >= Class348_Sub40_Sub3.anInt9109) {
+        int localY = absY - Component330.regionTileY;
+        if (localX < 0 || localY < 0 || localX >= AbstractShaderSub4.anInt7319 || localY >= ParametricDefinition.anInt9109) {
             Microbot.log("walkTo out of scene: " + absX + "," + absY);
             return false;
         }
         NewMenuEntry entry = new NewMenuEntry("Walk here", "", OPCODE_WALK, 1L, localX, localY, -1);
-        // Walk uses param0=x, param1=y (see client walk method466 + Class325 op 19)
+        // Walk uses param0=x, param1=y (see client walk method466 + ColoredTextBuilder op 19)
         entry.setParam0(localX);
         entry.setParam1(localY);
         entry.setIdentifier(1L);
@@ -43,6 +43,6 @@ final class Rs2Walker {
     }
 
     static boolean walkToLocal(int localX, int localY) {
-        return walkTo(localX + za_Sub2.regionTileX, localY + Class90.regionTileY);
+        return walkTo(localX + za_Sub2.regionTileX, localY + Component330.regionTileY);
     }
 }

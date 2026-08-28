@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class ba extends r implements Interface19 {
+final class ba
+/**
+ * RENAMED from `ba` (JODE-obfuscated).
+ * Evidence: extends r (r); implements Interface19; 1 native method
+ */ extends r implements Interface19 {
     long nativeid;
 
     ba(oa var_oa) {
@@ -10,7 +14,7 @@ final class ba extends r implements Interface19 {
     }
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     public final native void w(boolean bool);

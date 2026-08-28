@@ -3,5 +3,5 @@
  */
 
 interface Interface15 {
-    String method54(int i, long l, Class138 class138, int[] is);
+    String method54(int i, long l, Component161 class138, int[] is);
 }

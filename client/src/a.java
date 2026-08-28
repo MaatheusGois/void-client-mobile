@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class a implements Interface19 {
+final class a
+/**
+ * RENAMED from `a` (JODE-obfuscated).
+ * Evidence: implements Interface19 (toolkit iface); 15 native JNI methods; instantiates i (i)
+ */ implements Interface19 {
     private final i anI5105;
     long nativeid;
     private final i anI5106;
@@ -23,11 +27,11 @@ final class a implements Interface19 {
 
     private final native boolean R(long l, long l_1_, int i, int i_2_, long l_3_, boolean bool);
 
-    final boolean method143(Class64 class64, int i, int i_4_, Class101 class101, boolean bool, int i_5_) {
+    final boolean method143(DisplayModeManagerContainer370 class64, int i, int i_4_, DisplayModeManagerContainer204 class101, boolean bool, int i_5_) {
         return n(this.nativeid, ((i) class64).nativeid, i, i_4_, ((ja) class101).nativeid, bool, i_5_);
     }
 
-    final void method144(Class64 class64, Class64 class64_6_, int i, int i_7_, int i_8_, boolean bool) {
+    final void method144(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer370 class64_6_, int i, int i_7_, int i_8_, boolean bool) {
         r(this.nativeid, ((i) class64).nativeid, ((i) class64_6_).nativeid, i, i_7_, i_8_, bool);
     }
 
@@ -38,16 +42,16 @@ final class a implements Interface19 {
     private final native void W(long l);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
-    final void method145(Class64 class64, Class101 class101, int[] is, int i) {
+    final void method145(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i) {
         UA(this.nativeid, ((i) class64).nativeid, ((ja) class101).nativeid, is, i);
     }
 
     private final native boolean n(long l, long l_11_, int i, int i_12_, long l_13_, boolean bool, int i_14_);
 
-    final boolean method146(Class64 class64, int i, int i_15_, Class101 class101, boolean bool) {
+    final boolean method146(DisplayModeManagerContainer370 class64, int i, int i_15_, DisplayModeManagerContainer204 class101, boolean bool) {
         return R(this.nativeid, ((i) class64).nativeid, i, i_15_, ((ja) class101).nativeid, bool);
     }
 
@@ -63,7 +67,7 @@ final class a implements Interface19 {
         ta(this.nativeid, ((t) var_s).nativeid, i, i_18_, i_19_, i_20_, i_21_, i_22_, i_23_, bools);
     }
 
-    final void method149(Class64 class64, Class101 class101, int[] is, int i, int i_24_) {
+    final void method149(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i, int i_24_) {
         f(this.nativeid, ((i) class64).nativeid, ((ja) class101).nativeid, is, i, i_24_);
     }
 
@@ -79,11 +83,11 @@ final class a implements Interface19 {
 
     private final native void r(long l, long l_43_, long l_44_, int i, int i_45_, int i_46_, boolean bool);
 
-    final void method151(Class64 class64, int[] is, Class101 class101) {
+    final void method151(DisplayModeManagerContainer370 class64, int[] is, DisplayModeManagerContainer204 class101) {
         e(this.nativeid, ((i) class64).nativeid, is, ((ja) class101).nativeid);
     }
 
-    final Class64 method152(i var_i, byte i, int i_47_, boolean bool) {
+    final DisplayModeManagerContainer370 method152(i var_i, byte i, int i_47_, boolean bool) {
         i var_i_48_;
         i var_i_49_;
         if (i == 1) {

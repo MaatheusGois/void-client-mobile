@@ -1,8 +1,12 @@
-/* Class318_Sub1_Sub3_Sub3_Sub1 - Decompiled by JODE
+/* Npc - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class Npc extends Class318_Sub1_Sub3_Sub3 {
+/**
+ * RENAMED from `Class318_Sub1_Sub3_Sub3_Sub1` (JODE-obfuscated).
+ * Evidence: JODE header recorded original obfuscated name
+ */
+final class Npc extends DisplayModeManagerContainer58 {
     static int anInt10493;
     static int anInt10494;
     static int anInt10495;
@@ -15,7 +19,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
     static int anInt10502;
     static int anInt10503;
     static int anInt10504;
-    Class79 aClass79_10505;
+    DisplayModeManagerContainer206 aClass79_10505;
     static int anInt10506;
     static int anInt10507;
     static int anInt10508;
@@ -29,8 +33,8 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
 
     static final void method2441(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         if (i_2_ != -22728) anInt10503 = 121;
-        if (i_5_ - i_0_ >= Class369.anInt4960 && Class113.anInt1745 >= i_0_ + i_5_ && -i_0_ + i_3_ >= Class132.anInt1910 && i_3_ + i_0_ <= Class38.anInt513) Class299.method2255(i_0_, i_5_, (byte) -68, i_1_, i_3_, i_4_, i);
-        else Class205.method1496(i, i_3_, i_4_, i_0_, 2, i_1_, i_5_);
+        if (i_5_ - i_0_ >= Component27.anInt4960 && Component22.anInt1745 >= i_0_ + i_5_ && -i_0_ + i_3_ >= Component72.anInt1910 && i_3_ + i_0_ <= PauseTimer.anInt513) Component80.method2255(i_0_, i_5_, (byte) -68, i_1_, i_3_, i_4_, i);
+        else Component275.method1496(i, i_3_, i_4_, i_0_, 2, i_1_, i_5_);
         anInt10498++;
     }
 
@@ -40,13 +44,13 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         return (this.aClass79_10505.aBoolean1396);
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, Class318_Sub1 class318_sub1, int i_6_, byte i_7_, int i_8_) {
+    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
         try {
             if (i_7_ > -106) this.aClass79_10505 = null;
             anInt10513++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("ff.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("ff.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -59,7 +63,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
     final boolean method2391(ha var_ha, int i, int i_9_, int i_10_) {
         anInt10514++;
         if (this.aClass79_10505 == null || !method2447(97, 131072, var_ha)) return false;
-        Class101 class101 = var_ha.method3705();
+        DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_11_ = this.aClass264_10217.method2019((byte) -78);
         class101.method895(i_11_);
         class101.method891(this.x, this.anInt6382, this.y);
@@ -68,7 +72,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
             if (this.aClass64Array10323[i_12_] != null) {
                 boolean bool_13_ = (this.aClass79_10505.anInt1337 > 0 || (this.aClass79_10505.anInt1333 != -1 ? this.aClass79_10505.anInt1333 == 1 : this.aClass79_10505.anInt1399 == 1));
                 boolean bool_14_;
-                if (Class305.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].method623(i_9_, i, class101, bool_13_, this.aClass79_10505.anInt1337, Class132.anInt1906));
+                if (DisplayModeManagerContainer50.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].method623(i_9_, i, class101, bool_13_, this.aClass79_10505.anInt1337, Component72.anInt1906));
                 else bool_14_ = (this.aClass64Array10323[i_12_].method628(i_9_, i, class101, bool_13_, this.aClass79_10505.anInt1337));
                 if (bool_14_) {
                     bool = true;
@@ -104,17 +108,17 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
             i_17_--;
             i_18_++;
         }
-        if (this.anInt10286 != -1 && Class10.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
+        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
             this.anInt10286 = -1;
             this.anIntArray10236 = null;
         }
         if (this.anInt10269 != -1) {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 118, this.anInt10269));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (Class10.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 118, this.anInt10269));
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
         }
         if (this.anInt10291 != -1) {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 77, this.anInt10291));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (Class10.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 77, this.anInt10291));
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
         }
         if ((~this.anInt10319) > i_16_) this.anInt10319++;
         for (int i_19_ = this.anInt10319; i_19_ > 0; i_19_--) {
@@ -127,32 +131,32 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         this.aByteArray10321[0] = (byte) i_15_;
     }
 
-    final Class318_Sub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, ha var_ha) {
         anInt10501++;
         if (this.aClass79_10505 == null || !method2447(i + 114, 2048, var_ha)) return null;
-        Class101 class101 = var_ha.method3705();
+        DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_20_ = this.aClass264_10217.method2019((byte) -69);
         class101.method895(i_20_);
-        Class357 class357 = (Class147.aClass357ArrayArrayArray2029[this.plane][this.x >> Class362.anInt4459][this.y >> Class362.anInt4459]);
+        Component186 class357 = (Component335.aClass357ArrayArrayArray2029[this.plane][this.x >> Component149.anInt4459][this.y >> Component149.anInt4459]);
         if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null) {
             int i_21_ = (-class357.aClass318_Sub1_Sub1_4402.aShort8727 + this.anInt10274);
             this.anInt10274 -= (float) i_21_ / 10.0F;
         } else this.anInt10274 -= (float) this.anInt10274 / 10.0F;
         class101.method891(this.x, (-this.anInt10274 + this.anInt6382 + -20), this.y);
-        Class225 class225 = this.method2422((byte) 72);
-        Class79 class79 = (this.aClass79_10505.anIntArray1377 != null ? this.aClass79_10505.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1) : this.aClass79_10505);
+        Component241 class225 = this.method2422((byte) 72);
+        DisplayModeManagerContainer206 class79 = (this.aClass79_10505.anIntArray1377 != null ? this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.aClass79_10505);
         this.aBoolean10324 = false;
-        Class318_Sub4 class318_sub4 = null;
-        if (Class316.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
-            Class17 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : Class10.aClass87_191.method835(this.anInt10286, 7));
-            Class17 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : Class10.aClass87_191.method835(this.anInt10268, 7));
-            Class64 class64 = (Class348.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.aClass79_10505.aShort1339, this.aClass79_10505.anInt1399, this.anInt10252, var_ha, 0xff & this.aClass79_10505.aByte1353, this.aClass79_10505.aShort1350 & 0xffff, this.aClass79_10505.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));
+        RenderableSub4 class318_sub4 = null;
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
+            DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
+            DisplayModeManagerContainer167 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10268, 7));
+            DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.aClass79_10505.aShort1339, this.aClass79_10505.anInt1399, this.anInt10252, var_ha, 0xff & this.aClass79_10505.aByte1353, this.aClass79_10505.aShort1350 & 0xffff, this.aClass79_10505.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));
             if (class64 != null) {
                 class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, method2442(1810797122), false));
                 this.aBoolean10324 = true;
                 var_ha.C(false);
-                if (!Class305.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
-                else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), Class132.anInt1906, 0);
+                if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
+                else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), Component72.anInt1906, 0);
                 var_ha.C(true);
             }
         }
@@ -160,9 +164,9 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         class101.method891(this.x, (-this.anInt10274 + (-5 + this.anInt6382)), this.y);
         if (class318_sub4 == null) class318_sub4 = OutputStream_Sub2.method136((this.aClass64Array10323).length, method2442(1810797122), false);
         this.method2432(var_ha, -15074, class101, false, this.aClass64Array10323);
-        if (Class305.aBoolean3870) {
+        if (DisplayModeManagerContainer50.aBoolean3870) {
             for (int i_24_ = 0; (this.aClass64Array10323.length > i_24_); i_24_++) {
-                if (this.aClass64Array10323[i_24_] != null) this.aClass64Array10323[i_24_].method608(class101, (class318_sub4.aClass318_Sub3Array6414[i_24_]), Class132.anInt1906, 0);
+                if (this.aClass64Array10323[i_24_] != null) this.aClass64Array10323[i_24_].method608(class101, (class318_sub4.aClass318_Sub3Array6414[i_24_]), Component72.anInt1906, 0);
             }
         } else {
             for (int i_23_ = 0; (this.aClass64Array10323.length > i_23_); i_23_++) {
@@ -170,14 +174,14 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
             }
         }
         if (this.aClass318_Sub10_10327 != null) {
-            Class98 class98 = this.aClass318_Sub10_10327.method2525();
-            if (Class305.aBoolean3870) var_ha.method3685(class98, Class132.anInt1906);
+            Component122 class98 = this.aClass318_Sub10_10327.method2525();
+            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.method3685(class98, Component72.anInt1906);
             else var_ha.method3684(class98);
         }
         for (int i_25_ = 0; (this.aClass64Array10323.length > i_25_); i_25_++) {
             if (this.aClass64Array10323[i_25_] != null) this.aBoolean10324 |= this.aClass64Array10323[i_25_].F();
         }
-        this.anInt10301 = Class239_Sub15.anInt6006;
+        this.anInt10301 = DisplayModeManagerContainer341.anInt6006;
         this.aClass64Array10323[0] = this.aClass64Array10323[1] = this.aClass64Array10323[2] = null;
         return class318_sub4;
     }
@@ -185,7 +189,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
     final int method2421(byte i) {
         anInt10495++;
         if ((this.aClass79_10505.anIntArray1377) != null) {
-            Class79 class79 = this.aClass79_10505.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1366 != -1) return class79.anInt1366;
         }
         if (i < 113) method2448(null, 88);
@@ -202,18 +206,18 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
     final void method2444(int i, boolean bool, int i_26_, int i_27_, int i_28_, int i_29_) {
         this.plane = this.aByte6376 = (byte) i_29_;
         anInt10515++;
-        if (Class79.method802(i, i_26_, true)) this.aByte6376++;
-        if (this.anInt10286 != -1 && Class10.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
+        if (DisplayModeManagerContainer206.method802(i, i_26_, true)) this.aByte6376++;
+        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
             this.anIntArray10236 = null;
             this.anInt10286 = -1;
         }
         if (this.anInt10269 != -1) {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 117, this.anInt10269));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (Class10.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 117, this.anInt10269));
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
         }
         if (this.anInt10291 != -1) {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 56, this.anInt10291));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (Class10.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 56, this.anInt10291));
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
         }
         if (!bool) {
             int i_30_ = i_26_ - this.anIntArray10320[0];
@@ -243,7 +247,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         }
     }
 
-    final Class30 method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(ha var_ha, int i) {
         if (i != 7) this.anInt10512 = 102;
         anInt10493++;
         return null;
@@ -259,7 +263,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
     final int method2425(int i) {
         anInt10496++;
         if ((this.aClass79_10505.anIntArray1377) != null) {
-            Class79 class79 = this.aClass79_10505.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1336 != -1) return class79.anInt1336;
         }
         if (i != -1) this.anInt10499 = -69;
@@ -275,7 +279,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         anInt10504++;
         if (i != 200) return 115;
         if ((this.aClass79_10505.anIntArray1377) != null) {
-            Class79 class79 = this.aClass79_10505.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1390 != -1) return class79.anInt1390;
         }
         if ((this.aClass79_10505.anInt1390) == -1) return super.method2426(200);
@@ -286,7 +290,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         anInt10509++;
         if (this.aClass79_10505 != null && (this.aBoolean10318 || method2447(123, 0, var_ha))) {
             if (i > -125) method2391(null, -2, -103, 34);
-            Class101 class101 = var_ha.method3705();
+            DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method895(this.aClass264_10217.method2019((byte) -118));
             class101.method891(this.x, -20 + this.anInt6382, this.y);
             this.method2432(var_ha, -15074, class101, this.aBoolean10318, (this.aClass64Array10323));
@@ -308,16 +312,16 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         if (i <= 84) this.aClass79_10505 = null;
         anInt10494++;
         int i_35_ = i_34_;
-        Class225 class225 = this.method2422((byte) 72);
-        Class17 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : Class10.aClass87_191.method835(this.anInt10286, 7));
-        Class17 class17_36_ = ((this.anInt10268 != -1 && (!this.aBoolean10213 || class17 == null)) ? Class10.aClass87_191.method835(this.anInt10268, 7) : null);
+        Component241 class225 = this.method2422((byte) 72);
+        DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
+        DisplayModeManagerContainer167 class17_36_ = ((this.anInt10268 != -1 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.method835(this.anInt10268, 7) : null);
         int i_37_ = class225.anInt2932;
         int i_38_ = class225.anInt2941;
         if (i_37_ != 0 || i_38_ != 0 || class225.anInt2950 != 0 || class225.anInt2926 != 0) i_34_ |= 0x7;
-        boolean bool = (this.aByte10279 != 0 && (Class367_Sub11.clientCycle >= this.anInt10248) && (Class367_Sub11.clientCycle < this.anInt10250));
+        boolean bool = (this.aByte10279 != 0 && (OpenGlShader.clientCycle >= this.anInt10248) && (OpenGlShader.clientCycle < this.anInt10250));
         if (bool) i_34_ |= 0x80000;
         int i_39_ = this.aClass264_10217.method2019((byte) -25);
-        Class64 class64 = (this.aClass64Array10323[0] = (this.aClass79_10505.method800(i_39_, this.aClass182Array10308, Class10.aClass87_191, false, class17_36_, this.anInt10203, Class64_Sub3.aClass261_5558, this.anInt10267, class17, Class318_Sub1_Sub3_Sub3.aClass170_10209, var_ha, this.anInt10312, this.anIntArray10296, this.anInt10244, this.anInt10245, i_34_, this.anInt10232)));
+        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.aClass79_10505.method800(i_39_, this.aClass182Array10308, RunescapeInfo.aClass87_191, false, class17_36_, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558, this.anInt10267, class17, DisplayModeManagerContainer58.aClass170_10209, var_ha, this.anInt10312, this.anIntArray10296, this.anInt10244, this.anInt10245, i_34_, this.anInt10232)));
         if (class64 == null) return false;
         this.anInt10207 = class64.fa();
         this.anInt10230 = class64.ma();
@@ -331,7 +335,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         if (bool) class64.method624(this.aByte10255, this.aByte10206, this.aByte10270, (0xff & this.aByte10279));
         if (this.anInt10269 == -1 || this.anInt10240 == -1) this.aClass64Array10323[1] = null;
         else {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 56, this.anInt10269));
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 56, this.anInt10269));
             boolean bool_40_ = (class368.aByte4488 == 3 && (i_37_ != 0 || i_38_ != 0));
             int i_41_ = i_35_;
             if (!bool_40_) {
@@ -339,7 +343,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
                 if (this.anInt10220 != 0) i_41_ |= 0x2;
                 if (this.anInt10278 >= 0) i_41_ |= 0x7;
             } else i_41_ |= 0x7;
-            Class64 class64_42_ = (this.aClass64Array10323[1] = (class368.method3562(this.anInt10240, var_ha, this.anInt10243, i_41_, this.anInt10283, Class10.aClass87_191, (byte) 78)));
+            DisplayModeManagerContainer370 class64_42_ = (this.aClass64Array10323[1] = (class368.method3562(this.anInt10240, var_ha, this.anInt10243, i_41_, this.anInt10283, RunescapeInfo.aClass87_191, (byte) 78)));
             if (class64_42_ != null) {
                 if (this.anInt10278 < 0) {
                     if (this.anInt10237 != 0) class64_42_.a(2048 * (this.anInt10237));
@@ -362,8 +366,8 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
                         if ((this.anIntArray10296 != null) && ((this.anIntArray10296[this.anInt10278]) != -1)) i_46_ = (this.anIntArray10296[(this.anInt10278)]);
                         int i_47_ = (-i_39_ + (i_46_ + 2048 * this.anInt10237) & 0x3fff);
                         if (i_47_ != 0) class64_42_.a(i_47_);
-                        int i_48_ = Class70.anIntArray1207[i_47_];
-                        int i_49_ = Class70.anIntArray1204[i_47_];
+                        int i_48_ = DisplayModeManagerContainer88.anIntArray1207[i_47_];
+                        int i_49_ = DisplayModeManagerContainer88.anIntArray1204[i_47_];
                         int i_50_ = i_45_ * i_48_ - -(i_43_ * i_49_) >> 14;
                         i_45_ = i_45_ * i_49_ + -(i_43_ * i_48_) >> 14;
                         i_43_ = i_50_;
@@ -380,7 +384,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         }
         if (this.anInt10291 == -1 || this.anInt10224 == -1) this.aClass64Array10323[2] = null;
         else {
-            Class368 class368 = (Class348_Sub40_Sub18.aClass319_9245.method2543((byte) 98, this.anInt10291));
+            Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 98, this.anInt10291));
             boolean bool_51_ = (class368.aByte4488 == 3 && (i_37_ != 0 || i_38_ != 0));
             int i_52_ = i_35_;
             if (!bool_51_) {
@@ -388,7 +392,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
                 if (this.anInt10260 != 0) i_52_ |= 0x2;
                 if (this.anInt10289 >= 0) i_52_ |= 0x7;
             } else i_52_ |= 0x7;
-            Class64 class64_53_ = (this.aClass64Array10323[2] = (class368.method3558(this.anInt10273, this.anInt10276, var_ha, i_52_, 3172, Class10.aClass87_191, this.anInt10224)));
+            DisplayModeManagerContainer370 class64_53_ = (this.aClass64Array10323[2] = (class368.method3558(this.anInt10273, this.anInt10276, var_ha, i_52_, 3172, RunescapeInfo.aClass87_191, this.anInt10224)));
             if (class64_53_ != null) {
                 if (this.anInt10289 >= 0 && class225.anIntArrayArray2939 != null && ((class225.anIntArrayArray2939[this.anInt10289]) != null)) {
                     int i_54_ = 0;
@@ -409,8 +413,8 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
                         if ((this.anIntArray10296 != null) && ((this.anIntArray10296[this.anInt10289]) != -1)) i_57_ = (this.anIntArray10296[(this.anInt10289)]);
                         int i_58_ = (0x3fff & -i_39_ + (i_57_ + 2048 * this.anInt10202));
                         if (i_58_ != 0) class64_53_.a(i_58_);
-                        int i_59_ = Class70.anIntArray1207[i_58_];
-                        int i_60_ = Class70.anIntArray1204[i_58_];
+                        int i_59_ = DisplayModeManagerContainer88.anIntArray1207[i_58_];
+                        int i_60_ = DisplayModeManagerContainer88.anIntArray1204[i_58_];
                         int i_61_ = i_56_ * i_59_ - -(i_60_ * i_54_) >> 14;
                         i_56_ = i_60_ * i_56_ - i_59_ * i_54_ >> 14;
                         i_54_ = i_61_;
@@ -428,7 +432,7 @@ final class Npc extends Class318_Sub1_Sub3_Sub3 {
         return true;
     }
 
-    final void method2448(Class79 class79, int i) {
+    final void method2448(DisplayModeManagerContainer206 class79, int i) {
         anInt10511++;
         this.aClass79_10505 = class79;
         if (i != -2) this.anInt10512 = 69;

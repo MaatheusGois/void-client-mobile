@@ -22,8 +22,8 @@ final class Rs2Keyboard {
     }
 
     static void keyPress(int keyCode) {
-        dispatch(KeyEvent.KEY_PRESSED, keyCode, KeyEvent.CHAR_UNDEFINED);
-        dispatch(KeyEvent.KEY_RELEASED, keyCode, KeyEvent.CHAR_UNDEFINED);
+        dispatch(KeyEvent.KEY_PRESSED, keyCode, (char) KeyEvent.CHAR_UNDEFINED);
+        dispatch(KeyEvent.KEY_RELEASED, keyCode, (char) KeyEvent.CHAR_UNDEFINED);
     }
 
     static void keyType(char ch) {
@@ -37,7 +37,7 @@ final class Rs2Keyboard {
         if (tryMobileInject(id, keyCode, ch)) {
             return;
         }
-        Canvas canvas = Class305.gameCanvas;
+        Canvas canvas = DisplayModeManagerContainer50.gameCanvas;
         if (canvas == null) {
             return;
         }

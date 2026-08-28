@@ -2,9 +2,13 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class aa {
+abstract class aa
+/**
+ * RENAMED from `aa` (JODE-obfuscated).
+ * Evidence: abstract base class; references aa; parent of aa_Sub1/2/3
+ */ {
     static int anInt113;
-    static Class144 aClass144_114;
+    static Task aClass144_114;
     static int anInt115;
 
     public static void method158(byte i) {
@@ -13,15 +17,15 @@ abstract class aa {
     }
 
     static final void method159(int i) {
-        if (Class260.anInt3312 > 0) {
+        if (Component92.anInt3312 > 0) {
             int i_1_ = 0;
-            for (int i_2_ = 0; Class286_Sub1.aStringArray6200.length > i_2_; i_2_++) {
-                if (Class286_Sub1.aStringArray6200[i_2_].indexOf("--> ") != -1 && ++i_1_ == Class260.anInt3312) {
-                    Class363.aString4461 = (Class286_Sub1.aStringArray6200[i_2_].substring(2 + Class286_Sub1.aStringArray6200[i_2_].indexOf(">")));
+            for (int i_2_ = 0; ArbShaderProgram.aStringArray6200.length > i_2_; i_2_++) {
+                if (ArbShaderProgram.aStringArray6200[i_2_].indexOf("--> ") != -1 && ++i_1_ == Component92.anInt3312) {
+                    Component126.aString4461 = (ArbShaderProgram.aStringArray6200[i_2_].substring(2 + ArbShaderProgram.aStringArray6200[i_2_].indexOf(">")));
                     break;
                 }
             }
-        } else Class363.aString4461 = "";
+        } else Component126.aString4461 = "";
         if (i != -615751774) aClass144_114 = null;
         anInt115++;
     }

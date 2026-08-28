@@ -77,8 +77,8 @@ public class Loader extends Applet {
             if (!os.startsWith("mac") && os.indexOf("darwin") < 0) {
                 return;
             }
-            Class221.aBoolean2881 = true; // skip SW3D (toolkit 2) in method2478
-            Class330.aBoolean4117 = true; // skip OpenGL (toolkit 1) probe — ha_Sub2 JAWT fail
+            Component85.aBoolean2881 = true; // skip SW3D (toolkit 2) in method2478
+            Component301.aBoolean4117 = true; // skip OpenGL (toolkit 1) probe — ha_Sub2 JAWT fail
             System.out.println("void-osrs: native toolkits disabled on macOS (use software)");
         } catch (Throwable ignored) {
         }

@@ -15,7 +15,7 @@ import org.robovm.apple.foundation.NSThread;
 import org.robovm.rt.VM;
 
 /**
- * iOS PCM sink for the 634 mixer ({@code Class279_Sub1}).
+ * iOS PCM sink for the 634 mixer ({@code SourceAudioLine}).
  * <p>
  * Uses AudioQueue (16-bit LE PCM) instead of AVAudioEngine — more reliable under
  * RoboVM. Hard requirements learned the hard way:

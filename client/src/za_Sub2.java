@@ -5,36 +5,40 @@
 import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
 
-final class za_Sub2 extends za {
+final class za_Sub2
+/**
+ * RENAMED from `za_Sub2` (JODE-obfuscated).
+ * Evidence: extends za (za)
+ */ extends za {
     static int anInt9777;
     static int anInt9778;
     static int anInt9779;
     static int regionTileX;
-    static Class138 aClass138_9781;
+    static Component161 aClass138_9781;
     NativeHeap aNativeHeap9782;
     static boolean aBoolean9783 = false;
 
-    static final Class193 method3442(int i, byte[] is, Class377 class377, int i_0_) {
+    static final Component321 method3442(int i, byte[] is, GlExtensionManager class377, int i_0_) {
         try {
             anInt9779++;
             if (is == null) return null;
             int i_1_ = OpenGL.glGenProgramARB();
             OpenGL.glBindProgramARB(i, i_1_);
             OpenGL.glProgramRawARB(i, 34933, is);
-            OpenGL.glGetIntegerv(34379, Class104.anIntArray1626, 0);
-            if (Class104.anIntArray1626[0] != -1) {
+            OpenGL.glGetIntegerv(34379, Component65.anIntArray1626, 0);
+            if (Component65.anIntArray1626[0] != -1) {
                 OpenGL.glBindProgramARB(i, 0);
                 return null;
             }
             OpenGL.glBindProgramARB(i, 0);
             if (i_0_ != 4) return null;
-            return new Class193(class377, i, i_1_);
+            return new Component321(class377, i, i_1_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("cu.A(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class377 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("cu.A(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class377 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 
-    static final void method3443(boolean bool, Class318_Sub1_Sub3_Sub3 class318_sub1_sub3_sub3) {
+    static final void method3443(boolean bool, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt9778++;
         if ((class318_sub1_sub3_sub3.anIntArray10242) != null || (class318_sub1_sub3_sub3.anIntArray10296) != null) {
             boolean bool_2_ = bool;
@@ -54,9 +58,9 @@ final class za_Sub2 extends za {
                         int i_9_ = i_8_ >> 14;
                         i_7_ = (class318_sub1_sub3_sub3.x) - 512 * (i_9_ - regionTileX) - 256;
                         int i_10_ = i_8_ & 0x3fff;
-                        i_6_ = (-256 - (i_10_ - Class90.regionTileY) * 512 + (class318_sub1_sub3_sub3.y));
+                        i_6_ = (-256 - (i_10_ - Component330.regionTileY) * 512 + (class318_sub1_sub3_sub3.y));
                     } else if ((0x8000 & i_3_) == 0) {
-                        Class348_Sub22 class348_sub22 = ((Class348_Sub22) Class282.aClass356_3654.method3480(i_3_, -6008));
+                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_3_, -6008));
                         if (class348_sub22 == null) {
                             class318_sub1_sub3_sub3.method2423(-96, i, -1);
                             continue;
@@ -66,7 +70,7 @@ final class za_Sub2 extends za {
                         i_7_ = (-(npc.x) + (class318_sub1_sub3_sub3.x));
                     } else {
                         int i_11_ = i_3_ & 0x7fff;
-                        Player player = (Class294.aPlayerArray5058[i_11_]);
+                        Player player = (InterfaceRenderer.aPlayerArray5058[i_11_]);
                         if (player == null) {
                             class318_sub1_sub3_sub3.method2423(67, i, -1);
                             continue;
@@ -99,6 +103,6 @@ final class za_Sub2 extends za {
     }
 
     static {
-        aClass138_9781 = new Class138(14, 0, 4, 1);
+        aClass138_9781 = new Component161(14, 0, 4, 1);
     }
 }

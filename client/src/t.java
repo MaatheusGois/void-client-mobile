@@ -2,9 +2,13 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class t extends s implements Interface19 {
+final class t
+/**
+ * RENAMED from `t` (JODE-obfuscated).
+ * Evidence: extends s (s); implements Interface19; 10 native methods
+ */ extends s implements Interface19 {
     long nativeid;
-    private final Class262 aClass262_5149 = new Class262();
+    private final NodeList aClass262_5149 = new NodeList();
     private final oa anOa5150;
     private int anInt5151 = -1;
 
@@ -12,7 +16,7 @@ final class t extends s implements Interface19 {
         anInt5151 = i_2_;
         int i_4_ = 0;
         float[] fs = new float[aClass262_5149.method1998(0)];
-        for (Class348_Sub1 class348_sub1 = (Class348_Sub1) aClass262_5149.method1995(4); class348_sub1 != null; class348_sub1 = (Class348_Sub1) aClass262_5149.method1990((byte) 34))
+        for (NodeSub1 class348_sub1 = (NodeSub1) aClass262_5149.method1995(4); class348_sub1 != null; class348_sub1 = (NodeSub1) aClass262_5149.method1990((byte) 34))
             fs[i_4_++] = class348_sub1.method2721(-37);
         q(fs);
         for (int i_5_ = 0; i_5_ < i_1_ + i_1_; i_5_++) {
@@ -92,7 +96,7 @@ final class t extends s implements Interface19 {
         if (bool_27_ || is_37_ != null) U(i, i_13_, is_32_, is_38_, is_33_, is_39_, is_34_, is_37_, is_35_, is_36_, i_24_, i_25_, i_26_, bool);
     }
 
-    final void method3981(Class348_Sub1 class348_sub1, int[] is) {
+    final void method3981(NodeSub1 class348_sub1, int[] is) {
         aClass262_5149.method1999(class348_sub1, -20180);
         V(class348_sub1.hashCode(), class348_sub1.method2724(-1), class348_sub1.method2722(124), class348_sub1.method2717((byte) 83), class348_sub1.method2723(-1), class348_sub1.method2720(-1), is);
     }
@@ -121,7 +125,7 @@ final class t extends s implements Interface19 {
         anInt5151 = -1;
         int i_66_ = 0;
         float[] fs = new float[aClass262_5149.method1998(0)];
-        for (Class348_Sub1 class348_sub1 = (Class348_Sub1) aClass262_5149.method1995(4); class348_sub1 != null; class348_sub1 = (Class348_Sub1) aClass262_5149.method1990((byte) 40))
+        for (NodeSub1 class348_sub1 = (NodeSub1) aClass262_5149.method1995(4); class348_sub1 != null; class348_sub1 = (NodeSub1) aClass262_5149.method1990((byte) 40))
             fs[i_66_++] = class348_sub1.method2721(-65);
         q(fs);
         for (int i_67_ = 0; i_67_ < i_64_ + i_64_; i_67_++) {
@@ -138,7 +142,7 @@ final class t extends s implements Interface19 {
     final native r fa(int i, int i_71_, r var_r);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     private final native void ga(oa var_oa, ya var_ya, int i, int i_72_, int[][] is, int[][] is_73_, int i_74_, int i_75_, int i_76_);

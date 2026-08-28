@@ -11,7 +11,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
     private final int[] anIntArray6507;
     private final int[] anIntArray6508;
 
-    SoftwareBitmapFont3(ha_Sub1 var_ha_Sub1, Class143 class143, Class207[] class207s, int[] is, int[] is_0_) {
+    SoftwareBitmapFont3(ha_Sub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_0_) {
         super(var_ha_Sub1, class143);
         aHa_Sub1_6506 = var_ha_Sub1;
         aHa_Sub1_6506 = var_ha_Sub1;
@@ -21,7 +21,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
         anIntArray6508 = new int[class207s.length];
         anIntArray6507 = new int[class207s.length];
         for (int i = 0; i < class207s.length; i++) {
-            Class207 class207 = class207s[i];
+            Component170 class207 = class207s[i];
             if (class207.aByteArray2695 == null) {
                 byte[] is_1_ = class207.aByteArray2699;
                 byte[] is_2_ = aByteArrayArray6504[i] = new byte[is_1_.length];

@@ -58,7 +58,7 @@ final class MicrobotRuntime {
         if (walkAssistX >= 0 && walkAssistTicks > 0) {
             walkAssistTicks--;
             try {
-                Class298.method2252(true, walkAssistX, walkAssistY, (byte) -120, 1, 0, 1, -4, 0);
+                Component10.method2252(true, walkAssistX, walkAssistY, (byte) -120, 1, 0, 1, -4, 0);
             } catch (Throwable ignored) {
             }
             if (walkAssistTicks <= 0) {
@@ -78,12 +78,12 @@ final class MicrobotRuntime {
      * Inject lilac toggle row on attackable NPC menus:
      * {@code Microbot: Combat} when off, {@code Stop Combat} when on.
      */
-    static void injectNpcMenu(Npc npc, Class79 composition) {
+    static void injectNpcMenu(Npc npc, DisplayModeManagerContainer206 composition) {
         if (!Loader.microbotEnabled || npc == null || composition == null) {
             return;
         }
         try {
-            String attack = Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544);
+            String attack = FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
             String[] actions = composition.aStringArray1349;
             boolean hasAttack = false;
             if (actions != null) {
@@ -101,7 +101,7 @@ final class MicrobotRuntime {
             String label = Microbot.getExampleCombat().isRunning()
                     ? "Stop Combat"
                     : "Microbot: Combat";
-            Class50_Sub3.addMenuEntry(false, "", 0, (byte) -93, true, 0, -1, true,
+            DisplayModeManagerContainer368.addMenuEntry(false, "", 0, (byte) -93, true, 0, -1, true,
                     OPCODE_TOGGLE_COMBAT, (long) npc.anInt10290,
                     "<col=00ffff>" + label + "</col>", (long) npc.anInt10290, 0);
         } catch (Throwable ignored) {

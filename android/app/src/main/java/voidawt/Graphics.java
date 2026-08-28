@@ -90,7 +90,7 @@ public class Graphics {
     /**
      * AWT baseline at {@code y}. Renders into a tight glyph-sized bitmap (not a
      * full-frame alloc — that killed splash perf) then blits non-empty pixels.
-     * Callers: splash {@code Class199}, glyph bake {@code Class323}.
+     * Callers: splash {@code HelveticaFont}, glyph bake {@code FontGlyphCache}.
      */
     public void drawString(String str, int x, int y) {
         if (str == null || str.length() == 0) {

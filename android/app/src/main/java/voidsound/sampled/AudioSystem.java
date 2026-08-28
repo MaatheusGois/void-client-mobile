@@ -3,7 +3,7 @@ package voidsound.sampled;
 /**
  * Stand-in for {@code javax.sound.sampled.AudioSystem}.
  * <p>
- * The 634 mixer ({@code Class279_Sub1}) calls {@link #getLine} for a
+ * The 634 mixer ({@code SourceAudioLine}) calls {@link #getLine} for a
  * {@link SourceDataLine}. Returning a real {@link PcmSourceDataLine} is what
  * makes music/SFX audible on mobile — stubs that threw here fell through to an
  * empty mixer with no PCM output.

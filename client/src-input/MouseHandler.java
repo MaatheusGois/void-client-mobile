@@ -8,9 +8,9 @@
  * <p>
  * Live cursor: {@link #getCursorX} = X, {@link #getCursorY} = Y (canvas pixels).
  * Button held: {@link #isLeftButtonDown} left, {@link #isMiddleButtonDown} middle, {@link #isRightButtonDown} right.
- * Queued events: {@link #popEvent} yields {@link Class348_Sub45}
+ * Queued events: {@link #popEvent} yields {@link NodeSub45}
  * ({@code method3310}: 0=left press, 1=middle, 2=right, 3/4/5=releases, 6=wheel).
- * Singleton used by the client: {@link Class258_Sub4#mouseHandler}.
+ * Singleton used by the client: {@link AbstractGlTextureSub4#mouseHandler}.
  */
 abstract class MouseHandler {
     static int anInt4533;
@@ -31,15 +31,15 @@ abstract class MouseHandler {
     /** Right mouse button currently held. */
     abstract boolean isRightButtonDown(byte i);
 
-    static final Class181 method3591(int i, int i_0_) {
+    static final Component113 method3591(int i, int i_0_) {
         anInt4535++;
-        Class181 class181 = (Class181) Class5.aClass60_4636.method583(i, i_0_ + -128);
+        Component113 class181 = (Component113) Component298.aClass60_4636.method583(i, i_0_ + -128);
         if (class181 != null) return class181;
-        byte[] is = Class239_Sub12.aClass45_5964.method410(-1860, i_0_, i);
-        class181 = new Class181();
-        if (is != null) class181.method1370(24, new Class348_Sub49(is));
+        byte[] is = Component205.aClass45_5964.method410(-1860, i_0_, i);
+        class181 = new Component113();
+        if (is != null) class181.method1370(24, new Buffer(is));
         class181.method1371(4);
-        Class5.aClass60_4636.method582(class181, i, (byte) -103);
+        Component298.aClass60_4636.method582(class181, i, (byte) -103);
         return class181;
     }
 
@@ -59,7 +59,7 @@ abstract class MouseHandler {
     abstract boolean isLeftButtonDown(int i);
 
     /** Pop next queued mouse event, or {@code null} when empty. */
-    abstract Class348_Sub45 popEvent(int i);
+    abstract NodeSub45 popEvent(int i);
 
     /** Current cursor X in canvas pixels. */
     abstract int getCursorX(boolean bool);

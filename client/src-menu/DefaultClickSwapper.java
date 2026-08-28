@@ -70,7 +70,7 @@ final class DefaultClickSwapper {
         return itemDefaults.get(Integer.valueOf(itemId));
     }
 
-    static void injectNpcMenu(Npc npc, Class79 composition) {
+    static void injectNpcMenu(Npc npc, DisplayModeManagerContainer206 composition) {
         if (npc == null || composition == null) {
             return;
         }
@@ -84,7 +84,7 @@ final class DefaultClickSwapper {
         injectActionRows(actions, current, OPCODE_SET_NPC, OPCODE_RESET_NPC, compositionId);
     }
 
-    static void injectObjectMenu(Class51 object) {
+    static void injectObjectMenu(Component44 object) {
         if (object == null) {
             return;
         }
@@ -101,9 +101,9 @@ final class DefaultClickSwapper {
     /**
      * Inject Default rows for an inventory / bank item component.
      * Options come from the widget strings already used to build the menu
-     * ({@link Class368#method3561}) — covers Wear/Drop and bank Withdraw-*.
+     * ({@link Component63#method3561}) — covers Wear/Drop and bank Withdraw-*.
      */
-    static void injectItemMenu(Class46 component) {
+    static void injectItemMenu(DisplayModeManagerContainer57 component) {
         if (component == null || component.anInt812 <= 0) {
             return;
         }
@@ -113,7 +113,7 @@ final class DefaultClickSwapper {
         // Collect unique option labels from the same slots the menu builder uses.
         java.util.LinkedHashSet unique = new java.util.LinkedHashSet();
         for (int i = 0; i <= 9; i++) {
-            String opt = Class368.method3561(i, component, true);
+            String opt = Component63.method3561(i, component, true);
             if (opt == null || opt.length() == 0) {
                 continue;
             }
@@ -125,7 +125,7 @@ final class DefaultClickSwapper {
             }
             unique.add(opt);
         }
-        String use = Class239_Sub8.method1753(0, component);
+        String use = DisplayModeManagerContainer295.method1753(0, component);
         if (use != null && use.length() > 0 && !isSkippedItemOption(use)) {
             unique.add(use);
         }
@@ -138,12 +138,12 @@ final class DefaultClickSwapper {
             if (current != null && current.equalsIgnoreCase(action)) {
                 continue;
             }
-            Class50_Sub3.addMenuEntry(
+            DisplayModeManagerContainer368.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     OPCODE_SET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) itemId, 0);
         }
         if (current != null) {
-            Class50_Sub3.addMenuEntry(
+            DisplayModeManagerContainer368.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     OPCODE_RESET_ITEM, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) itemId, 0);
         }
@@ -178,12 +178,12 @@ final class DefaultClickSwapper {
                 continue;
             }
             // Include Attack / Chop / everything — only "Default: " is lilac.
-            Class50_Sub3.addMenuEntry(
+            DisplayModeManagerContainer368.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     setOp, 0L, COL_ACCENT + "Default: " + COL_END + action, (long) id, 0);
         }
         if (current != null) {
-            Class50_Sub3.addMenuEntry(
+            DisplayModeManagerContainer368.addMenuEntry(
                     false, "", 0, (byte) -93, true, 0, -1, true,
                     resetOp, 0L, COL_ACCENT + "Default: " + COL_END + "Reset", (long) id, 0);
         }
@@ -195,13 +195,13 @@ final class DefaultClickSwapper {
     static MenuEntry applySwaps() {
         ensureLoaded();
         if ((npcDefaults.isEmpty() && objectDefaults.isEmpty() && itemDefaults.isEmpty())
-                || Class73.menuEntryCount <= 1) {
+                || DisplayModeManagerContainer306.menuEntryCount <= 1) {
             return null;
         }
         MenuEntry preferred = null;
-        for (MenuEntry entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
              entry != null;
-             entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
             if (entry.option == null) {
                 continue;
             }
@@ -211,7 +211,7 @@ final class DefaultClickSwapper {
             }
             String wanted = null;
             if (isNpcOpcode(opcode)) {
-                Class79 composition = compositionForNpcEntry(entry);
+                DisplayModeManagerContainer206 composition = compositionForNpcEntry(entry);
                 if (composition != null) {
                     wanted = npcDefaults.get(Integer.valueOf(composition.anInt1344));
                 }
@@ -233,10 +233,10 @@ final class DefaultClickSwapper {
             return null;
         }
         preferred.priority = PRIORITY_PREFERRED;
-        Class348_Sub40_Sub4.menuEntries.method1999(preferred, -20180);
+        DefinitionSub4.menuEntries.method1999(preferred, -20180);
         int prefOp = preferred.opcode >= 2000 ? preferred.opcode - 2000 : preferred.opcode;
         // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
-        // (Class318_Sub1_Sub5.method2485). Same packet path as 18 — rewrite so tap executes.
+        // (Component203.method2485). Same packet path as 18 — rewrite so tap executes.
         if (prefOp == 1011) {
             preferred.opcode = preferred.opcode >= 2000 ? 2018 : 18;
             prefOp = 18;
@@ -312,7 +312,7 @@ final class DefaultClickSwapper {
         }
         map.put(Integer.valueOf(id), actionName);
         save();
-        Class286_Sub2.method2144("", 5, (byte) -100, 0,
+        ShaderProgramSub2.method2144("", 5, (byte) -100, 0,
                 COL_ACCENT + "Default left-click set to '" + actionName + "'." + COL_END, "", "");
         System.out.println("void-osrs default-click " + kind + "=" + id + " → " + actionName);
     }
@@ -321,7 +321,7 @@ final class DefaultClickSwapper {
         ensureLoaded();
         map.remove(Integer.valueOf(id));
         save();
-        Class286_Sub2.method2144("", 5, (byte) -100, 0,
+        ShaderProgramSub2.method2144("", 5, (byte) -100, 0,
                 COL_ACCENT + "Default left-click reset." + COL_END, "", "");
         System.out.println("void-osrs default-click " + kind + "=" + id + " reset");
     }
@@ -329,9 +329,9 @@ final class DefaultClickSwapper {
     private static void demoteAttackNear(MenuEntry preferred) {
         String attack = attackLabel();
         int npcIndex = (int) preferred.identifier;
-        for (MenuEntry entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
              entry != null;
-             entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
             if (!isNpcOpcode(entry.opcode >= 2000 ? entry.opcode - 2000 : entry.opcode)) {
                 continue;
             }
@@ -375,8 +375,8 @@ final class DefaultClickSwapper {
         return false;
     }
 
-    private static Class79 compositionForNpcEntry(MenuEntry entry) {
-        Class348_Sub22 node = (Class348_Sub22) Class282.aClass356_3654.method3480((int) entry.identifier, -6008);
+    private static DisplayModeManagerContainer206 compositionForNpcEntry(MenuEntry entry) {
+        NodeSub22 node = (NodeSub22) Component21.aClass356_3654.method3480((int) entry.identifier, -6008);
         if (node == null) {
             return null;
         }
@@ -384,15 +384,15 @@ final class DefaultClickSwapper {
         if (npc == null) {
             return null;
         }
-        Class79 composition = npc.aClass79_10505;
+        DisplayModeManagerContainer206 composition = npc.aClass79_10505;
         if (composition != null && composition.anIntArray1377 != null) {
-            composition = composition.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            composition = composition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
         }
         return composition;
     }
 
     private static String attackLabel() {
-        return Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544);
+        return FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
     }
 
     private static void ensureLoaded() {

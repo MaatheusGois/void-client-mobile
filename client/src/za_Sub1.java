@@ -4,11 +4,15 @@
 
 import jaclib.memory.heap.NativeHeap;
 
-final class za_Sub1 extends za {
+final class za_Sub1
+/**
+ * RENAMED from `za_Sub1` (JODE-obfuscated).
+ * Evidence: extends za (za)
+ */ extends za {
     NativeHeap aNativeHeap9770;
     static int anInt9771;
     static int anInt9772;
-    static Class113 aClass113_9773 = new Class113();
+    static Component22 aClass113_9773 = new Component22();
     static int anInt9774;
     static int anInt9775 = -1;
     static int anInt9776 = 0;
@@ -16,8 +20,8 @@ final class za_Sub1 extends za {
     static final int method3439(int i) {
         anInt9771++;
         if (i <= 92) return 99;
-        if (Class348_Sub49.anInt7207 == 1) return Class348_Sub16_Sub1.anInt8854;
-        return Class59_Sub1.anInt5283;
+        if (Buffer.anInt7207 == 1) return GpiLogger.anInt8854;
+        return Component210.anInt5283;
     }
 
     za_Sub1(int i) {

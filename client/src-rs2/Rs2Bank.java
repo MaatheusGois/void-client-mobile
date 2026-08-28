@@ -8,17 +8,17 @@ final class Rs2Bank {
     }
 
     static boolean isOpen() {
-        Class46 title = Rs2Widget.findByText("Bank of");
+        DisplayModeManagerContainer57 title = Rs2Widget.findByText("Bank of");
         if (title != null && Rs2Widget.isVisible(title)) {
             return true;
         }
         // Many banks show "The Bank of" or just Withdraw options densely
-        Class46[] bankSlots = bankSlots();
+        DisplayModeManagerContainer57[] bankSlots = bankSlots();
         return bankSlots.length >= 20;
     }
 
     static boolean close() {
-        Class46 close = Rs2Widget.findByText("Close");
+        DisplayModeManagerContainer57 close = Rs2Widget.findByText("Close");
         if (close != null) {
             return Rs2Widget.click(close, "Close");
         }
@@ -28,7 +28,7 @@ final class Rs2Bank {
     }
 
     static boolean depositAll(int itemId) {
-        Class46 slot = Rs2Inventory.findSlot(itemId);
+        DisplayModeManagerContainer57 slot = Rs2Inventory.findSlot(itemId);
         if (slot == null) {
             return false;
         }
@@ -38,7 +38,7 @@ final class Rs2Bank {
     }
 
     static boolean withdraw(int itemId, String action) {
-        Class46[] slots = bankSlots();
+        DisplayModeManagerContainer57[] slots = bankSlots();
         for (int i = 0; i < slots.length; i++) {
             if (slots[i] != null && slots[i].anInt812 == itemId) {
                 NewMenuEntry entry = new NewMenuEntry(action != null ? action : "Withdraw-1",
@@ -71,16 +71,16 @@ final class Rs2Bank {
                 || Rs2GameObject.interactNearest("Bank chest", "Use");
     }
 
-    static Class46[] bankSlots() {
+    static DisplayModeManagerContainer57[] bankSlots() {
         java.util.ArrayList list = new java.util.ArrayList();
-        if (Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
-            return new Class46[0];
+        if (DefinitionSub33.aClass46ArrayArray9427 == null) {
+            return new DisplayModeManagerContainer57[0];
         }
         // Prefer configured bank group, else largest item grid that isn't inventory-sized (28)
         collect(MicrobotWidgets.BANK_GROUP, list);
         if (list.size() < 20) {
             list.clear();
-            Class46[][] roots = Class348_Sub40_Sub33.aClass46ArrayArray9427;
+            DisplayModeManagerContainer57[][] roots = DefinitionSub33.aClass46ArrayArray9427;
             int best = 0;
             java.util.ArrayList bestList = new java.util.ArrayList();
             for (int g = 0; g < roots.length; g++) {
@@ -93,17 +93,17 @@ final class Rs2Bank {
             }
             list = bestList;
         }
-        return (Class46[]) list.toArray(new Class46[list.size()]);
+        return (DisplayModeManagerContainer57[]) list.toArray(new DisplayModeManagerContainer57[list.size()]);
     }
 
     private static void collect(int group, java.util.ArrayList list) {
-        if (Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
+        if (DefinitionSub33.aClass46ArrayArray9427 == null) {
             return;
         }
-        if (group < 0 || group >= Class348_Sub40_Sub33.aClass46ArrayArray9427.length) {
+        if (group < 0 || group >= DefinitionSub33.aClass46ArrayArray9427.length) {
             return;
         }
-        Class46[] all = Class348_Sub40_Sub33.aClass46ArrayArray9427[group];
+        DisplayModeManagerContainer57[] all = DefinitionSub33.aClass46ArrayArray9427[group];
         if (all == null) {
             return;
         }
@@ -112,7 +112,7 @@ final class Rs2Bank {
         }
     }
 
-    private static void walk(Class46 c, java.util.ArrayList list) {
+    private static void walk(DisplayModeManagerContainer57 c, java.util.ArrayList list) {
         if (c == null) {
             return;
         }

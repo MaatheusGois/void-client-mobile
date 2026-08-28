@@ -7,6 +7,7 @@ import voidawt.event.KeyListener;
 import voidawt.event.MouseEvent;
 import voidawt.event.MouseListener;
 import voidawt.event.MouseMotionListener;
+import voidawt.event.AWTEvent;
 import voidawt.event.MouseWheelEvent;
 import voidawt.event.MouseWheelListener;
 import voidawt.image.BufferedImage;
@@ -170,6 +171,22 @@ public class Component implements ImageObserver {
 
     public void requestFocus() {
         AwtHost.injectFocus(true);
+    }
+
+    /** Shim no-op: focus is owned by the native AwtHost view, not the canvas. */
+    public boolean isFocusOwner() {
+        return false;
+    }
+
+    public boolean isFocusable() {
+        return false;
+    }
+
+    public void setFocusable(boolean focusable) {
+    }
+
+    /** Shim no-op: events are injected by AwtHost; DesktopAwtMouse is dead code on mobile. */
+    public void dispatchEvent(voidawt.event.AWTEvent e) {
     }
 
     public Graphics getGraphics() {

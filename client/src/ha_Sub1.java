@@ -4,23 +4,27 @@
 
 import java.awt.*;
 
-final class ha_Sub1 extends ha {
+final class ha_Sub1
+/**
+ * RENAMED from `ha_Sub1` (JODE-obfuscated).
+ * Evidence: extends ha (ha)
+ */ extends ha {
     private int anInt7465;
     private int anInt7466;
-    private Class356 aClass356_7467;
+    private LruCache aClass356_7467;
     private Canvas aCanvas7468;
-    Class348_Sub31 aClass348_Sub31_7469;
+    Sprite aClass348_Sub31_7469;
     private boolean aBoolean7470 = false;
     private boolean aBoolean7471 = false;
     private int anInt7472;
     int anInt7473;
     int anInt7474;
-    private Class49 aClass49_7475;
+    private Component297 aClass49_7475;
     int anInt7476;
     int anInt7477;
     int anInt7478;
     int anInt7479;
-    private Class167[] aClass167Array7480;
+    private Component385[] aClass167Array7480;
     private int anInt7481;
     int anInt7482;
     int[] anIntArray7483;
@@ -32,14 +36,14 @@ final class ha_Sub1 extends ha {
     private boolean aBoolean7489;
     int anInt7490;
     int anInt7491;
-    Class101_Sub1 aClass101_Sub1_7492;
+    MatrixSub1 aClass101_Sub1_7492;
     private int anInt7493;
     int anInt7494;
     private int anInt7495;
     int anInt7496;
     int anInt7497;
-    private final Class60 aClass60_7498;
-    private final Class60 aClass60_7499;
+    private final NodeCache aClass60_7498;
+    private final NodeCache aClass60_7499;
     int anInt7500;
     int anInt7501;
     float[] aFloatArray7502;
@@ -53,7 +57,7 @@ final class ha_Sub1 extends ha {
     int anInt7510;
     float[] aFloatArray7511;
     private int anInt7512;
-    private Class105 aClass105_7513;
+    private Component24 aClass105_7513;
 
     final boolean method3695() {
         return true;
@@ -239,11 +243,11 @@ final class ha_Sub1 extends ha {
         return new aa_Sub3(i, i_63_, is, is_64_);
     }
 
-    final void method3685(Class98 class98, int i) {
-        Class167 class167 = method3724(Thread.currentThread());
-        Class318_Sub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
-        for (Class318_Sub9 class318_sub9_65_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_65_ != class318_sub9; class318_sub9_65_ = class318_sub9_65_.aClass318_Sub9_6469) {
-            Class318_Sub9_Sub2 class318_sub9_sub2 = (Class318_Sub9_Sub2) class318_sub9_65_;
+    final void method3685(Component122 class98, int i) {
+        Component385 class167 = method3724(Thread.currentThread());
+        RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
+        for (RenderableSub9 class318_sub9_65_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_65_ != class318_sub9; class318_sub9_65_ = class318_sub9_65_.aClass318_Sub9_6469) {
+            RenderableSub9Sub2 class318_sub9_sub2 = (RenderableSub9Sub2) class318_sub9_65_;
             int i_66_ = class318_sub9_sub2.anInt8791 >> 12;
             int i_67_ = class318_sub9_sub2.anInt8796 >> 12;
             int i_68_ = class318_sub9_sub2.anInt8789 >> 12;
@@ -259,7 +263,7 @@ final class ha_Sub1 extends ha {
         }
     }
 
-    final void method3642(int i, Class348_Sub1[] class348_sub1s) {
+    final void method3642(int i, NodeSub1[] class348_sub1s) {
         /* empty */
     }
 
@@ -327,14 +331,14 @@ final class ha_Sub1 extends ha {
         /* empty */
     }
 
-    private final void method3712(Class318_Sub9_Sub2 class318_sub9_sub2, int i, int i_91_, int i_92_, int i_93_) {
+    private final void method3712(RenderableSub9Sub2 class318_sub9_sub2, int i, int i_91_, int i_92_, int i_93_) {
         int i_94_ = class318_sub9_sub2.anInt8792;
         int i_95_ = i_93_;
         i_93_ <<= 1;
         if (i_94_ == -1) method3723(i, i_91_, i_92_, i_95_, class318_sub9_sub2.anInt8790, 1);
         else {
             if (anInt7512 != i_94_) {
-                Class105 class105 = (Class105) aClass60_7499.method583(i_94_, 117);
+                Component24 class105 = (Component24) aClass60_7499.method583(i_94_, 117);
                 if (class105 == null) {
                     int[] is = method3719(i_94_);
                     if (is != null) {
@@ -347,7 +351,7 @@ final class ha_Sub1 extends ha {
                 aClass105_7513 = class105;
             }
             i_93_++;
-            ((Class105_Sub3) aClass105_7513).method996(i - i_95_, i_91_ - i_95_, i_92_, i_93_, i_93_, 0, class318_sub9_sub2.anInt8790, 1, 1);
+            ((SpriteSub3) aClass105_7513).method996(i - i_95_, i_91_ - i_95_, i_92_, i_93_, i_93_, 0, class318_sub9_sub2.anInt8790, 1, 1);
         }
     }
 
@@ -357,7 +361,7 @@ final class ha_Sub1 extends ha {
         this.anInt7490 = this.anInt7476 - this.anInt7504;
         this.anInt7506 = this.anInt7503 - this.anInt7504;
         for (int i = 0; i < this.anInt7485; i++) {
-            Class109 class109 = aClass167Array7480[i].aClass109_2220;
+            Component8 class109 = aClass167Array7480[i].aClass109_2220;
             class109.anInt1665 = this.anInt7510 - this.anInt7496;
             class109.anInt1668 = this.anInt7504 - this.anInt7476;
             class109.anInt1679 = this.anInt7507 - this.anInt7496;
@@ -375,8 +379,8 @@ final class ha_Sub1 extends ha {
         return this.anInt7482;
     }
 
-    final Class101 method3705() {
-        Class167 class167 = method3724(Thread.currentThread());
+    final DisplayModeManagerContainer204 method3705() {
+        Component385 class167 = method3724(Thread.currentThread());
         return class167.aClass101_Sub1_2209;
     }
 
@@ -471,7 +475,7 @@ final class ha_Sub1 extends ha {
         return false;
     }
 
-    final Class299 method3697(int i, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_) {
+    final Component80 method3697(int i, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_) {
         return null;
     }
 
@@ -491,8 +495,8 @@ final class ha_Sub1 extends ha {
         /* empty */
     }
 
-    final void method3638(Class101 class101) {
-        this.aClass101_Sub1_7492 = (Class101_Sub1) class101;
+    final void method3638(DisplayModeManagerContainer204 class101) {
+        this.aClass101_Sub1_7492 = (MatrixSub1) class101;
     }
 
     final void A(int i, aa var_aa, int i_145_, int i_146_) {
@@ -531,7 +535,7 @@ final class ha_Sub1 extends ha {
     }
 
     final void f(int i, int i_156_) {
-        Class167 class167 = method3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         this.anInt7482 = i;
         this.anInt7494 = i_156_;
         class167.anInt2210 = this.anInt7494 - 255;
@@ -688,11 +692,11 @@ final class ha_Sub1 extends ha {
         /* empty */
     }
 
-    final void method3684(Class98 class98) {
-        Class167 class167 = method3724(Thread.currentThread());
-        Class318_Sub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
-        for (Class318_Sub9 class318_sub9_208_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_208_ != class318_sub9; class318_sub9_208_ = class318_sub9_208_.aClass318_Sub9_6469) {
-            Class318_Sub9_Sub2 class318_sub9_sub2 = (Class318_Sub9_Sub2) class318_sub9_208_;
+    final void method3684(Component122 class98) {
+        Component385 class167 = method3724(Thread.currentThread());
+        RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
+        for (RenderableSub9 class318_sub9_208_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_208_ != class318_sub9; class318_sub9_208_ = class318_sub9_208_.aClass318_Sub9_6469) {
+            RenderableSub9Sub2 class318_sub9_sub2 = (RenderableSub9Sub2) class318_sub9_208_;
             int i = class318_sub9_sub2.anInt8791 >> 12;
             int i_209_ = class318_sub9_sub2.anInt8796 >> 12;
             int i_210_ = class318_sub9_sub2.anInt8789 >> 12;
@@ -712,7 +716,7 @@ final class ha_Sub1 extends ha {
         /* empty */
     }
 
-    final Class105 method3683(int i, int i_215_, int i_216_, int i_217_, boolean bool) {
+    final Component24 method3683(int i, int i_215_, int i_216_, int i_217_, boolean bool) {
         int[] is = new int[i_216_ * i_217_];
         int i_218_ = i_215_ * this.anInt7477 + i;
         int i_219_ = this.anInt7477 - i_216_;
@@ -722,8 +726,8 @@ final class ha_Sub1 extends ha {
                 is[i_221_ + i_222_] = this.anIntArray7483[i_218_++];
             i_218_ += i_219_;
         }
-        if (bool) return new Class105_Sub3_Sub3(this, is, i_216_, i_217_);
-        return new Class105_Sub3_Sub1(this, is, i_216_, i_217_);
+        if (bool) return new SpriteSub3Sub3(this, is, i_216_, i_217_);
+        return new SpriteCapture(this, is, i_216_, i_217_);
     }
 
     private final void method3717() {
@@ -750,13 +754,13 @@ final class ha_Sub1 extends ha {
 
     final void method3701(Canvas canvas) {
         if (aCanvas7468 == canvas) method3677(null);
-        Class348_Sub31 class348_sub31 = ((Class348_Sub31) aClass356_7467.method3480(canvas.hashCode(), -6008));
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
         if (class348_sub31 != null) class348_sub31.method2715((byte) 100);
     }
 
     final void L(int i, int i_226_, int i_227_) {
         for (int i_228_ = 0; i_228_ < aClass167Array7480.length; i_228_++) {
-            Class167 class167 = aClass167Array7480[i_228_];
+            Component385 class167 = aClass167Array7480[i_228_];
             class167.anInt2192 = i & 0xffffff;
             int i_229_ = class167.anInt2192 >>> 16 & 0xff;
             if (i_229_ < 2) i_229_ = 2;
@@ -774,9 +778,9 @@ final class ha_Sub1 extends ha {
     }
 
     final void method3643(Canvas canvas, int i, int i_232_) {
-        Class348_Sub31 class348_sub31 = ((Class348_Sub31) aClass356_7467.method3480(canvas.hashCode(), -6008));
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
         if (class348_sub31 == null) {
-            class348_sub31 = Class110.method1035(9029, i_232_, canvas, i);
+            class348_sub31 = Component338.method1035(9029, i_232_, canvas, i);
             aClass356_7467.method3483((byte) 21, canvas.hashCode(), class348_sub31);
         } else if (class348_sub31.anInt6917 != i || class348_sub31.anInt6920 != i_232_) method3669(canvas, i, i_232_);
     }
@@ -805,9 +809,9 @@ final class ha_Sub1 extends ha {
 
     final void method3631(int i) {
         this.anInt7485 = i;
-        aClass167Array7480 = new Class167[this.anInt7485];
+        aClass167Array7480 = new Component385[this.anInt7485];
         for (int i_240_ = 0; i_240_ < this.anInt7485; i_240_++)
-            aClass167Array7480[i_240_] = new Class167(this);
+            aClass167Array7480[i_240_] = new Component385(this);
     }
 
     final void method3709(int i, int i_241_, int i_242_, int i_243_, int i_244_, int i_245_) {
@@ -926,8 +930,8 @@ final class ha_Sub1 extends ha {
     }
 
     final void method3676(int i, int i_270_, int i_271_, int i_272_, int i_273_, int i_274_, int i_275_, int i_276_, int i_277_, int i_278_, int i_279_, int i_280_, int i_281_) {
-        Class167 class167 = method3724(Thread.currentThread());
-        Class109 class109 = class167.aClass109_2220;
+        Component385 class167 = method3724(Thread.currentThread());
+        Component8 class109 = class167.aClass109_2220;
         class109.aBoolean1669 = false;
         i -= this.anInt7509;
         i_272_ -= this.anInt7509;
@@ -953,7 +957,7 @@ final class ha_Sub1 extends ha {
         class109.aBoolean1669 = true;
     }
 
-    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Component184 class143, Component170[] class207s, boolean bool) {
         int[] is = new int[class207s.length];
         int[] is_283_ = new int[class207s.length];
         boolean bool_284_ = false;
@@ -971,11 +975,11 @@ final class ha_Sub1 extends ha {
     }
 
     final Interface4 method3634(Interface3 interface3, Interface13 interface13) {
-        return new Class49(this, (Class105) interface3, (Class216) interface13);
+        return new Component297(this, (Component24) interface3, (Component43) interface13);
     }
 
     final void C(boolean bool) {
-        Class167 class167 = method3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         class167.aBoolean2202 = bool;
     }
 
@@ -1187,14 +1191,14 @@ final class ha_Sub1 extends ha {
     }
 
     final int[] method3718(int i) {
-        Class348_Sub25 class348_sub25;
+        NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
-            class348_sub25 = (Class348_Sub25) aClass60_7498.method583(i, 77);
+            class348_sub25 = (NodeSub25) aClass60_7498.method583(i, 77);
             if (class348_sub25 == null) {
                 if (!this.aD4579.method4(-7953, i)) return null;
-                Class12 class12 = this.aD4579.method3(i, -6662);
+                Component319 class12 = this.aD4579.method3(i, -6662);
                 int i_354_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
-                class348_sub25 = new Class348_Sub25(i, i_354_, this.aD4579.method5(true, i, 0.7F, i_354_, i_354_, 71), class12.anInt200 != 1);
+                class348_sub25 = new NodeSub25(i, i_354_, this.aD4579.method5(true, i, 0.7F, i_354_, i_354_, 71), class12.anInt200 != 1);
                 aClass60_7498.method582(class348_sub25, i, (byte) -122);
             }
         }
@@ -1204,7 +1208,7 @@ final class ha_Sub1 extends ha {
 
     final void method3652() {
         if (aBoolean7471) {
-            Class286_Sub8.method2173(false, -101, true);
+            CookieManager.method2173(false, -101, true);
             aBoolean7471 = false;
         }
         this.aClass348_Sub31_7469 = null;
@@ -1215,7 +1219,7 @@ final class ha_Sub1 extends ha {
         aBoolean7470 = true;
     }
 
-    final Class101 method3640() {
+    final DisplayModeManagerContainer204 method3640() {
         return this.aClass101_Sub1_7492;
     }
 
@@ -1232,14 +1236,14 @@ final class ha_Sub1 extends ha {
     }
 
     final int[] method3719(int i) {
-        Class348_Sub25 class348_sub25;
+        NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
-            class348_sub25 = ((Class348_Sub25) aClass60_7498.method583((long) i | ~0x7fffffffffffffffL, 107));
+            class348_sub25 = ((NodeSub25) aClass60_7498.method583((long) i | ~0x7fffffffffffffffL, 107));
             if (class348_sub25 == null) {
                 if (!this.aD4579.method4(-7953, i)) return null;
-                Class12 class12 = this.aD4579.method3(i, -6662);
+                Component319 class12 = this.aD4579.method3(i, -6662);
                 int i_356_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
-                class348_sub25 = new Class348_Sub25(i, i_356_, this.aD4579.method6(-21540, i_356_, 0.7F, i, true, i_356_), class12.anInt200 != 1);
+                class348_sub25 = new NodeSub25(i, i_356_, this.aD4579.method6(-21540, i_356_, 0.7F, i, true, i_356_), class12.anInt200 != 1);
                 aClass60_7498.method582(class348_sub25, (long) i | ~0x7fffffffffffffffL, (byte) -126);
             }
         }
@@ -1263,8 +1267,8 @@ final class ha_Sub1 extends ha {
         }
     }
 
-    final Class101 method3654() {
-        return new Class101_Sub1();
+    final DisplayModeManagerContainer204 method3654() {
+        return new MatrixSub1();
     }
 
     final void la() {
@@ -1275,12 +1279,12 @@ final class ha_Sub1 extends ha {
         method3713();
     }
 
-    final Class64 method3625(Class124 class124, int i, int i_366_, int i_367_, int i_368_) {
-        return new Class64_Sub1(this, class124, i, i_367_, i_368_, i_366_);
+    final DisplayModeManagerContainer370 method3625(DisplayModeManagerContainer77 class124, int i, int i_366_, int i_367_, int i_368_) {
+        return new DisplayModeManagerContainer164(this, class124, i, i_367_, i_368_, i_366_);
     }
 
     final Interface13 method3624(int i, int i_369_) {
-        return new Class216(i, i_369_);
+        return new Component43(i, i_369_);
     }
 
     final void method3632(int[] is) {
@@ -1296,23 +1300,23 @@ final class ha_Sub1 extends ha {
             float[] fs = this.aFloatArray7511;
             if (i_371_ < 0) {
                 int i_373_ = is.length + i_371_;
-                Class214.method1578(is, -i_371_, is, 0, i_373_);
+                Component313.method1578(is, -i_371_, is, 0, i_373_);
             } else if (i_371_ > 0) {
                 int i_374_ = is.length - i_371_;
-                Class214.method1578(is, 0, is, i_371_, i_374_);
+                Component313.method1578(is, 0, is, i_371_, i_374_);
             }
             if (i_372_ < 0) {
                 int i_375_ = fs.length + i_372_;
-                Class214.method1574(fs, -i_372_, fs, 0, i_375_);
+                Component313.method1574(fs, -i_372_, fs, 0, i_375_);
             } else if (i_372_ > 0) {
                 int i_376_ = fs.length - i_372_;
-                Class214.method1574(fs, 0, fs, i_372_, i_376_);
+                Component313.method1574(fs, 0, fs, i_372_, i_376_);
             }
         }
     }
 
     final void method3687(Interface4 interface4) {
-        Class49 class49 = (Class49) interface4;
+        Component297 class49 = (Component297) interface4;
         this.anInt7477 = class49.anInt4725;
         anInt7486 = class49.anInt4722;
         this.anIntArray7483 = class49.anIntArray4731;
@@ -1327,7 +1331,7 @@ final class ha_Sub1 extends ha {
         if (i_379_ != 0 && i_380_ != 0) {
             if (i_382_ != 65535 && !(this.aD4579.method3(i_382_, -6662).aBoolean209)) {
                 if (anInt7512 != i_382_) {
-                    Class105 class105 = ((Class105) aClass60_7499.method583(i_382_, 97));
+                    Component24 class105 = ((Component24) aClass60_7499.method583(i_382_, 97));
                     if (class105 == null) {
                         int[] is = method3719(i_382_);
                         if (is == null) return;
@@ -1338,17 +1342,17 @@ final class ha_Sub1 extends ha {
                     anInt7512 = i_382_;
                     aClass105_7513 = class105;
                 }
-                ((Class105_Sub3) aClass105_7513).method996(i - i_379_, i_377_ - i_380_, i_378_, i_379_ << 1, i_380_ << 1, i_384_, i_383_, i_385_, 1);
+                ((SpriteSub3) aClass105_7513).method996(i - i_379_, i_377_ - i_380_, i_378_, i_379_ << 1, i_380_ << 1, i_384_, i_383_, i_385_, 1);
             } else method3723(i, i_377_, i_378_, i_379_, i_383_, i_385_);
         }
     }
 
-    final void method3653(Class299 class299) {
+    final void method3653(Component80 class299) {
         /* empty */
     }
 
     final void EA(int i, int i_387_, int i_388_, int i_389_) {
-        Class167 class167 = method3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         class167.anInt2211 = i;
         class167.anInt2192 = i_387_;
         class167.anInt2197 = i_388_;
@@ -1410,7 +1414,7 @@ final class ha_Sub1 extends ha {
                 method3717();
             }
         } else {
-            Class348_Sub31 class348_sub31 = ((Class348_Sub31) aClass356_7467.method3480(canvas.hashCode(), -6008));
+            Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
             if (class348_sub31 != null) {
                 aCanvas7468 = canvas;
                 Dimension dimension = canvas.getSize();
@@ -1487,7 +1491,7 @@ final class ha_Sub1 extends ha {
         return false;
     }
 
-    final Class105 method3711(int[] is, int i, int i_422_, int i_423_, int i_424_, boolean bool) {
+    final Component24 method3711(int[] is, int i, int i_422_, int i_423_, int i_424_, boolean bool) {
         boolean bool_425_ = false;
         int i_426_ = i;
         while_229_:
@@ -1500,16 +1504,16 @@ final class ha_Sub1 extends ha {
                 }
             }
         }
-        if (bool_425_) return new Class105_Sub3_Sub3(this, is, i, i_422_, i_423_, i_424_, bool);
-        return new Class105_Sub3_Sub1(this, is, i, i_422_, i_423_, i_424_, bool);
+        if (bool_425_) return new SpriteSub3Sub3(this, is, i, i_422_, i_423_, i_424_, bool);
+        return new SpriteCapture(this, is, i, i_422_, i_423_, i_424_, bool);
     }
 
-    final Class105 method3691(Class207 class207, boolean bool) {
+    final Component24 method3691(Component170 class207, boolean bool) {
         int[] is = class207.anIntArray2697;
         byte[] is_430_ = class207.aByteArray2699;
         int i = class207.anInt2702;
         int i_431_ = class207.anInt2696;
-        Class105_Sub3 class105_sub3;
+        SpriteSub3 class105_sub3;
         if (bool && class207.aByteArray2695 == null) {
             int[] is_432_ = new int[is.length];
             byte[] is_433_ = new byte[i * i_431_];
@@ -1520,7 +1524,7 @@ final class ha_Sub1 extends ha {
             }
             for (int i_437_ = 0; i_437_ < is.length; i_437_++)
                 is_432_[i_437_] = is[i_437_];
-            class105_sub3 = new Class105_Sub3_Sub2(this, is_433_, is_432_, i, i_431_);
+            class105_sub3 = new SpriteSub3Sub2(this, is_433_, is_432_, i, i_431_);
         } else {
             int[] is_438_ = new int[i * i_431_];
             byte[] is_439_ = class207.aByteArray2695;
@@ -1532,14 +1536,14 @@ final class ha_Sub1 extends ha {
                         is_438_[i_444_ + i_445_] = i_446_ != 0 ? ~0xffffff | i_446_ : 0;
                     }
                 }
-                class105_sub3 = new Class105_Sub3_Sub1(this, is_438_, i, i_431_);
+                class105_sub3 = new SpriteCapture(this, is_438_, i, i_431_);
             } else {
                 for (int i_440_ = 0; i_440_ < i_431_; i_440_++) {
                     int i_441_ = i_440_ * i;
                     for (int i_442_ = 0; i_442_ < i; i_442_++)
                         is_438_[i_441_ + i_442_] = (is[is_430_[i_441_ + i_442_] & 0xff] | is_439_[i_441_ + i_442_] << 24);
                 }
-                class105_sub3 = new Class105_Sub3_Sub3(this, is_438_, i, i_431_);
+                class105_sub3 = new SpriteSub3Sub3(this, is_438_, i, i_431_);
             }
         }
         class105_sub3.method985(class207.anInt2703, class207.anInt2700, class207.anInt2698, class207.anInt2701);
@@ -1700,8 +1704,8 @@ final class ha_Sub1 extends ha {
     }
 
     final void method3688(int i, int i_494_, int i_495_, int i_496_, int i_497_, int i_498_, int i_499_) {
-        Class167 class167 = method3724(Thread.currentThread());
-        Class109 class109 = class167.aClass109_2220;
+        Component385 class167 = method3724(Thread.currentThread());
+        Component8 class109 = class167.aClass109_2220;
         int i_500_ = i_495_ - i;
         int i_501_ = i_496_ - i_494_;
         int i_502_ = i_500_ >= 0 ? i_500_ : -i_500_;
@@ -1741,9 +1745,9 @@ final class ha_Sub1 extends ha {
         }
     }
 
-    final Class105 method3629(int i, int i_519_, boolean bool) {
-        if (bool) return new Class105_Sub3_Sub3(this, i, i_519_);
-        return new Class105_Sub3_Sub1(this, i, i_519_);
+    final Component24 method3629(int i, int i_519_, boolean bool) {
+        if (bool) return new SpriteSub3Sub3(this, i, i_519_);
+        return new SpriteCapture(this, i, i_519_);
     }
 
     final void method3630(boolean bool) {
@@ -1752,13 +1756,13 @@ final class ha_Sub1 extends ha {
     }
 
     final void method3650(int i) {
-        Class64_Sub1.anInt5346 = Class64_Sub1.anInt5350 = i;
+        DisplayModeManagerContainer164.anInt5346 = DisplayModeManagerContainer164.anInt5350 = i;
         if (this.anInt7485 > 1) throw new IllegalStateException("No MT");
         method3631(this.anInt7485);
         method3659(0);
     }
 
-    final Class348_Sub1 method3690(int i, int i_520_, int i_521_, int i_522_, int i_523_, float f) {
+    final NodeSub1 method3690(int i, int i_520_, int i_521_, int i_522_, int i_523_, float f) {
         return null;
     }
 
@@ -1766,7 +1770,7 @@ final class ha_Sub1 extends ha {
         return false;
     }
 
-    final Class299 method3706(Class299 class299, Class299 class299_524_, float f, Class299 class299_525_) {
+    final Component80 method3706(Component80 class299, Component80 class299_524_, float f, Component80 class299_525_) {
         return null;
     }
 
@@ -1907,7 +1911,7 @@ final class ha_Sub1 extends ha {
         } else throw new IllegalArgumentException();
     }
 
-    final Class167 method3724(Runnable runnable) {
+    final Component385 method3724(Runnable runnable) {
         for (int i = 0; i < this.anInt7485; i++) {
             if (aClass167Array7480[i].aRunnable2198 == runnable) return aClass167Array7480[i];
         }
@@ -1943,10 +1947,10 @@ final class ha_Sub1 extends ha {
     }
 
     final void method3669(Canvas canvas, int i, int i_578_) {
-        Class348_Sub31 class348_sub31 = ((Class348_Sub31) aClass356_7467.method3480(canvas.hashCode(), -6008));
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
         if (class348_sub31 != null) {
             class348_sub31.method2715((byte) 95);
-            class348_sub31 = Class110.method1035(9029, i_578_, canvas, i);
+            class348_sub31 = Component338.method1035(9029, i_578_, canvas, i);
             aClass356_7467.method3483((byte) 112, canvas.hashCode(), class348_sub31);
             if (aCanvas7468 == canvas && aClass49_7475 == null) {
                 Dimension dimension = canvas.getSize();
@@ -1989,7 +1993,7 @@ final class ha_Sub1 extends ha {
 
     private ha_Sub1(d var_d) {
         super(var_d);
-        aClass356_7467 = new Class356(4);
+        aClass356_7467 = new LruCache(4);
         this.anInt7474 = 45823;
         aBoolean7489 = false;
         anInt7487 = 0;
@@ -2005,16 +2009,16 @@ final class ha_Sub1 extends ha {
         this.anInt7494 = 3500;
         this.anInt7507 = 0;
         this.anInt7478 = 78642;
-        aClass60_7499 = new Class60(16);
+        aClass60_7499 = new NodeCache(16);
         anInt7512 = -1;
         try {
-            aClass60_7498 = new Class60(256);
-            this.aClass101_Sub1_7492 = new Class101_Sub1();
+            aClass60_7498 = new NodeCache(256);
+            this.aClass101_Sub1_7492 = new MatrixSub1();
             method3631(1);
             method3659(0);
-            Class59_Sub2_Sub1.method566(true, true, (byte) -126);
+            Component54.method566(true, true, (byte) -126);
             aBoolean7471 = true;
-            anInt7466 = (int) Class62.method599(-70);
+            anInt7466 = (int) Component240.method599(-70);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
             this.method3635((byte) -98);
@@ -2194,8 +2198,8 @@ final class ha_Sub1 extends ha {
         /* empty */
     }
 
-    final Class365 c() {
-        return new Class365(0, "Pure Java", 1, "CPU", 0L);
+    final Component6 c() {
+        return new Component6(0, "Pure Java", 1, "CPU", 0L);
     }
 
     final void method3659(int i) {
@@ -2239,12 +2243,12 @@ final class ha_Sub1 extends ha {
     final void method3646(int i) {
         int i_634_ = i - anInt7466;
         for (Object object = aClass60_7498.method588(-5052); object != null; object = aClass60_7498.method579(-117)) {
-            Class348_Sub25 class348_sub25 = (Class348_Sub25) object;
+            NodeSub25 class348_sub25 = (NodeSub25) object;
             if (class348_sub25.aBoolean6882) {
                 class348_sub25.anInt6879 += i_634_;
                 int i_635_ = class348_sub25.anInt6879 / 20;
                 if (i_635_ > 0) {
-                    Class12 class12 = this.aD4579.method3((class348_sub25.anInt6883), -6662);
+                    Component319 class12 = this.aD4579.method3((class348_sub25.anInt6883), -6662);
                     class348_sub25.method2995((class12.aByte198 * i_634_ * 50 / 1000), (class12.aByte211 * i_634_ * 50 / 1000));
                     class348_sub25.anInt6879 -= i_635_ * 20;
                 }

@@ -10,7 +10,7 @@ public class GraphicsDevice {
     private DisplayMode mode = new DisplayMode(AwtHost.GAME_WIDTH, AwtHost.GAME_HEIGHT, 32, 60);
 
     public boolean isFullScreenSupported() {
-        // Keep Class7 constructable; exclusive FS is faked/no-op on Android.
+        // Keep DisplayModeManager constructable; exclusive FS is faked/no-op on Android.
         return true;
     }
 

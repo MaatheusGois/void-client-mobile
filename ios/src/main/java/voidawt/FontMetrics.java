@@ -7,7 +7,7 @@ import org.robovm.apple.uikit.UIFont;
 /**
  * AWT {@code FontMetrics} shim backed by {@link UIFont} / CoreText.
  * <p>
- * Used when the client bakes per-glyph images in {@code Class323}
+ * Used when the client bakes per-glyph images in {@code FontGlyphCache}
  * ({@code charWidth}, ascent, descent) and anywhere else that sizes text
  * before {@link Graphics#drawString}. Must match the same face that
  * {@code drawString} rasterizes, or glyph crops come out wrong.

@@ -13,5 +13,5 @@ interface Interface5_Impl2 extends Interface5 {
 
     Buffer method24(boolean bool, boolean bool_1_);
 
-    Class68 method25(byte i);
+    Component342 method25(byte i);
 }

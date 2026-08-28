@@ -4,9 +4,13 @@
 
 import java.awt.*;
 
-abstract class s {
+abstract class s
+/**
+ * RENAMED from `s` (JODE-obfuscated).
+ * Evidence: abstract base; Hash/Cache/Buffer usage
+ */ {
     int[][] anIntArrayArray4584;
-    static Class45 aClass45_4585;
+    static CacheStore aClass45_4585;
     static int anInt4586;
     int anInt4587;
     int anInt4588;
@@ -24,9 +28,9 @@ abstract class s {
         if (i > 85) {
             anInt4586++;
             Dimension dimension = canvas.getSize();
-            Class85.method828((byte) 38, dimension.height, dimension.width);
-            if (Class348_Sub49.anInt7207 != 1) Class21.aHa326.method3669(canvas, Class59_Sub1.anInt5283, Class107.anInt1651);
-            else Class21.aHa326.method3669(canvas, Class348_Sub16_Sub1.anInt8854, Class239_Sub16.anInt6008);
+            LogicError.method828((byte) 38, dimension.height, dimension.width);
+            if (Buffer.anInt7207 != 1) Component158.aHa326.method3669(canvas, Component210.anInt5283, HashTable.anInt1651);
+            else Component158.aHa326.method3669(canvas, GpiLogger.anInt8854, Component25.anInt6008);
         }
     }
 
@@ -34,7 +38,7 @@ abstract class s {
 
     abstract void ka(int i, int i_18_, int i_19_);
 
-    abstract void method3981(Class348_Sub1 class348_sub1, int[] is);
+    abstract void method3981(NodeSub1 class348_sub1, int[] is);
 
     final int method3982(byte i, int i_20_, int i_21_) {
         anInt4593++;
@@ -46,11 +50,11 @@ abstract class s {
 
     abstract void method3984(int i, int i_25_, int i_26_, boolean[][] bools, boolean bool, int i_27_, int i_28_);
 
-    static final Class147 method3985(int i, int i_29_) {
+    static final Component335 method3985(int i, int i_29_) {
         anInt4591++;
         if (i != -101) method3980(-117, null);
         if (i_29_ < 0 || i_29_ >= 100) return null;
-        return Class318_Sub2.aClass147Array6400[i_29_];
+        return RenderableSub2.aClass147Array6400[i_29_];
     }
 
     final int method3986(int i, int i_30_, byte i_31_) {

@@ -150,12 +150,12 @@ public final class ServerPrefs {
     }
 
     /**
-     * {@code Class240.anInt4674} — client game state.
+     * {@code Component49.anInt4674} — client game state.
      * Splash ≈ 0–2, title/login/lobby ≈ 3–9 / 12, in-world = 10, fatal connect = 14.
      */
     public static int gameState() {
         try {
-            java.lang.reflect.Field f = Class.forName("Class240").getDeclaredField("anInt4674");
+            java.lang.reflect.Field f = Class.forName("Component49").getDeclaredField("anInt4674");
             f.setAccessible(true);
             return f.getInt(null);
         } catch (Throwable ignored) {
@@ -178,7 +178,7 @@ public final class ServerPrefs {
     /** JS5 retry counter on the live connection object — increments per Connect fail. */
     public static int js5FailCount() {
         try {
-            java.lang.reflect.Field inst = Class.forName("Class348_Sub4").getDeclaredField("aClass248_6601");
+            java.lang.reflect.Field inst = Class.forName("HardwareProbe").getDeclaredField("aClass248_6601");
             inst.setAccessible(true);
             Object js5 = inst.get(null);
             if (js5 == null) {

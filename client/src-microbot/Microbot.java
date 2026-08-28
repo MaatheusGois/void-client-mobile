@@ -2,7 +2,7 @@
  * Microbot static locator — Guice-free port of Microbot's singleton.
  * <p>
  * Scripts reach client state via here. {@link #doInvoke} queues a menu entry for
- * {@link Class325#method2599} on the next {@link MicrobotRuntime#tick()} — same
+ * {@link ColoredTextBuilder#method2599} on the next {@link MicrobotRuntime#tick()} — same
  * packet path as a real tip click, without depending on canvas hit-testing.
  */
 final class Microbot {
@@ -15,14 +15,14 @@ final class Microbot {
 
     /**
      * Intended menu action (tip force while pending). Cleared after
-     * {@link Class325#method2599}.
+     * {@link ColoredTextBuilder#method2599}.
      */
     static volatile NewMenuEntry targetMenu;
 
     /** Request {@link MicrobotMenu#injectPending()} on the next client tick. */
     static volatile boolean pendingMenuInject;
 
-    /** Entry to run through {@link Class325#method2599} on the client thread. */
+    /** Entry to run through {@link ColoredTextBuilder#method2599} on the client thread. */
     static volatile NewMenuEntry pendingDispatch;
 
     static volatile int pendingClickX;
@@ -47,7 +47,7 @@ final class Microbot {
 
     /** In-world gate: local player present (FSM state varies; 7 is lobby/game UI). */
     static boolean isLoggedIn() {
-        return Class132.localPlayer != null;
+        return Component72.localPlayer != null;
     }
 
     /**

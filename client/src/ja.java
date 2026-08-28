@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class ja extends Class101 implements Interface19 {
+final class ja
+/**
+ * RENAMED from `ja` (JODE-obfuscated).
+ * Evidence: extends Class101 (Matrix); implements Interface19; 17 native methods
+ */ extends DisplayModeManagerContainer204 implements Interface19 {
     long nativeid;
 
     private final native void la();
@@ -73,7 +77,7 @@ final class ja extends Class101 implements Interface19 {
 
     private final native void J(long l, int i);
 
-    final void method898(Class101 class101) {
+    final void method898(DisplayModeManagerContainer204 class101) {
         l(this.nativeid, ((ja) class101).nativeid);
     }
 
@@ -88,14 +92,14 @@ final class ja extends Class101 implements Interface19 {
     private final native void a(long l, int i, int i_27_, int i_28_);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final void method896(int i) {
         m(this.nativeid, i);
     }
 
-    final Class101 method907() {
+    final DisplayModeManagerContainer204 method907() {
         ja var_ja_29_ = new ja();
         var_ja_29_.method898(this);
         return var_ja_29_;

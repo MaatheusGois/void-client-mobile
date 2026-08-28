@@ -2,11 +2,15 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class i extends Class64 implements Interface19 {
+final class i
+/**
+ * RENAMED from `i` (JODE-obfuscated).
+ * Evidence: extends Class64 (Sprite base); implements Interface19; 37 native GL methods
+ */ extends DisplayModeManagerContainer370 implements Interface19 {
     private final oa anOa5117;
-    Class342[] aClass342Array5118;
+    DisplayModeManagerContainer173[] aClass342Array5118;
     long nativeid;
-    Class129[] aClass129Array5119;
+    Component30[] aClass129Array5119;
     private final ya aYa5120;
 
     final native void C(int i);
@@ -29,19 +33,19 @@ final class i extends Class64 implements Interface19 {
 
     final native void ZA(i var_i_2_, i var_i_3_, int i, boolean bool, boolean bool_4_);
 
-    final void method613(Class64 class64, int i, int i_5_, int i_6_, boolean bool) {
+    final void method613(DisplayModeManagerContainer370 class64, int i, int i_5_, int i_6_, boolean bool) {
         anOa5117.method3973().method144(this, class64, i, i_5_, i_6_, bool);
     }
 
     final native void aa(short i, short i_7_);
 
-    final boolean method623(int i, int i_8_, Class101 class101, boolean bool, int i_9_, int i_10_) {
+    final boolean method623(int i, int i_8_, DisplayModeManagerContainer204 class101, boolean bool, int i_9_, int i_10_) {
         return anOa5117.method3973().method143(this, i, i_8_, class101, bool, i_10_);
     }
 
     final native int EA();
 
-    final Class129[] method619() {
+    final Component30[] method619() {
         return this.aClass129Array5119;
     }
 
@@ -49,7 +53,7 @@ final class i extends Class64 implements Interface19 {
 
     final native void P(int i, int i_11_, int i_12_, int i_13_);
 
-    final void method608(Class101 class101, Class318_Sub3 class318_sub3, int i, int i_14_) {
+    final void method608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_14_) {
         if (class318_sub3 == null) anOa5117.method3973().method149(this, class101, null, i, i_14_);
         else {
             oa.anIntArray5132[5] = 0;
@@ -82,11 +86,11 @@ final class i extends Class64 implements Interface19 {
 
     final native void VA(int i);
 
-    final boolean method628(int i, int i_19_, Class101 class101, boolean bool, int i_20_) {
+    final boolean method628(int i, int i_19_, DisplayModeManagerContainer204 class101, boolean bool, int i_20_) {
         return anOa5117.method3973().method146(this, i, i_19_, class101, bool);
     }
 
-    final Class64 method614(byte i, int i_21_, boolean bool) {
+    final DisplayModeManagerContainer370 method614(byte i, int i_21_, boolean bool) {
         return anOa5117.method3973().method152(this, i, i_21_, bool);
     }
 
@@ -123,12 +127,12 @@ final class i extends Class64 implements Interface19 {
     final native void ia(short i, short i_73_);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final native int WA();
 
-    final void method610(Class101 class101, int i, boolean bool) {
+    final void method610(DisplayModeManagerContainer204 class101, int i, boolean bool) {
         A(((ja) class101).nativeid, i, bool);
     }
 
@@ -147,7 +151,7 @@ final class i extends Class64 implements Interface19 {
         }
     }
 
-    final void method615(Class101 class101, Class318_Sub3 class318_sub3, int i) {
+    final void method615(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
         if (class318_sub3 == null) anOa5117.method3973().method145(this, class101, null, i);
         else {
             oa.anIntArray5132[5] = 0;
@@ -163,12 +167,12 @@ final class i extends Class64 implements Interface19 {
 
     final native boolean r();
 
-    final void method620(Class101 class101) {
+    final void method620(DisplayModeManagerContainer204 class101) {
         method693(oa.anIntArray5140, class101);
         int i = 0;
         if (this.aClass129Array5119 != null) {
             for (int i_74_ = 0; i_74_ < this.aClass129Array5119.length; i_74_++) {
-                Class129 class129 = this.aClass129Array5119[i_74_];
+                Component30 class129 = this.aClass129Array5119[i_74_];
                 class129.anInt1882 = oa.anIntArray5140[i++];
                 class129.anInt1891 = oa.anIntArray5140[i++];
                 class129.anInt1889 = oa.anIntArray5140[i++];
@@ -182,8 +186,8 @@ final class i extends Class64 implements Interface19 {
         }
         if (this.aClass342Array5118 != null) {
             for (int i_75_ = 0; i_75_ < this.aClass342Array5118.length; i_75_++) {
-                Class342 class342 = this.aClass342Array5118[i_75_];
-                Class342 class342_76_ = class342;
+                DisplayModeManagerContainer173 class342 = this.aClass342Array5118[i_75_];
+                DisplayModeManagerContainer173 class342_76_ = class342;
                 if (class342.aClass342_4248 != null) class342_76_ = class342.aClass342_4248;
                 if (class342.aClass101_4252 != null) class342.aClass101_4252.method898(class101);
                 else class342.aClass101_4252 = class101.method907();
@@ -196,11 +200,11 @@ final class i extends Class64 implements Interface19 {
 
     final native void a(int i);
 
-    final Class342[] method604() {
+    final DisplayModeManagerContainer173[] method604() {
         return this.aClass342Array5118;
     }
 
-    private final void method693(int[] is, Class101 class101) {
+    private final void method693(int[] is, DisplayModeManagerContainer204 class101) {
         anOa5117.method3973().method151(this, is, class101);
     }
 
@@ -208,7 +212,7 @@ final class i extends Class64 implements Interface19 {
 
     final native void H(int i, int i_77_, int i_78_);
 
-    i(oa var_oa, ya var_ya, Class124 class124, int i, int i_79_, int i_80_, int i_81_) {
+    i(oa var_oa, ya var_ya, DisplayModeManagerContainer77 class124, int i, int i_79_, int i_80_, int i_81_) {
         anOa5117 = var_oa;
         aYa5120 = var_ya;
         this.aClass129Array5119 = class124.aClass129Array1846;
@@ -228,8 +232,8 @@ final class i extends Class64 implements Interface19 {
         int[] is_88_ = new int[i_87_ * 8];
         int i_89_ = 0;
         for (int i_90_ = 0; i_90_ < i_87_; i_90_++) {
-            Class162 class162 = class124.aClass162Array1832[i_90_];
-            Class189 class189 = Class73.method742(104, class162.anInt2153);
+            DisplayModeManagerContainer133 class162 = class124.aClass162Array1832[i_90_];
+            Component291 class189 = DisplayModeManagerContainer306.method742(104, class162.anInt2153);
             is_88_[i_89_++] = class162.anInt2155;
             is_88_[i_89_++] = class189.anInt2526;
             is_88_[i_89_++] = class189.anInt2530;
@@ -239,7 +243,7 @@ final class i extends Class64 implements Interface19 {
             is_88_[i_89_++] = class189.aBoolean2531 ? -1 : 0;
         }
         for (int i_91_ = 0; i_91_ < i_87_; i_91_++) {
-            Class162 class162 = class124.aClass162Array1832[i_91_];
+            DisplayModeManagerContainer133 class162 = class124.aClass162Array1832[i_91_];
             is_88_[i_89_++] = class162.anInt2156;
         }
         R(anOa5117, aYa5120, class124.anInt1836, class124.anInt1821, class124.anIntArray1841, class124.anIntArray1847, class124.anIntArray1852, class124.anIntArray1868, class124.aShortArray1842, class124.anInt1817, class124.aShortArray1863, class124.aShortArray1835, class124.aShortArray1855, class124.aByteArray1843, class124.aByteArray1839, class124.aByteArray1834, class124.aByteArray1820, class124.aShortArray1862, class124.aShortArray1822, class124.anIntArray1824, class124.aByte1851, class124.aShortArray1856, class124.anInt1818, class124.aByteArray1823, class124.aShortArray1829, class124.aShortArray1849, class124.aShortArray1825, class124.anIntArray1859, class124.anIntArray1816, class124.anIntArray1844, class124.aByteArray1833, class124.aByteArray1853, class124.anIntArray1867, class124.anIntArray1857, class124.anIntArray1865, is, i_82_, i_83_, i, i_79_, i_80_, i_81_, is_88_);

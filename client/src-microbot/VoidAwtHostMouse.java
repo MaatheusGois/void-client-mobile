@@ -36,11 +36,11 @@ final class VoidAwtHostMouse implements MicrobotMouseBackend {
     }
 
     public int canvasWidth() {
-        return Class321.anInt4017 > 0 ? Class321.anInt4017 : 765;
+        return Component236.anInt4017 > 0 ? Component236.anInt4017 : 765;
     }
 
     public int canvasHeight() {
-        return Class348_Sub42_Sub8_Sub2.anInt10432 > 0 ? Class348_Sub42_Sub8_Sub2.anInt10432 : 503;
+        return PacketReader.anInt10432 > 0 ? PacketReader.anInt10432 : 503;
     }
 
     private void invoke(int id, int x, int y, int button, int clickCount) {

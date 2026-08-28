@@ -7,15 +7,15 @@ import java.awt.event.*;
 
 /**
  * Desktop AWT mouse handler (preferred): press / motion / wheel listeners on the game canvas.
- * Constructed via reflection from {@link Class348_Sub18#method2941}; falls back to
+ * Constructed via reflection from {@link NodeSub18#method2941}; falls back to
  * {@link BasicMouseHandler} when wheel support is unavailable.
  */
 final class AwtMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener, MouseWheelListener {
     private int anInt7416;
     private int anInt7417;
-    private Class262 aClass262_7418 = new Class262();
+    private NodeList aClass262_7418 = new NodeList();
     private int anInt7419;
-    private Class262 aClass262_7420 = new Class262();
+    private NodeList aClass262_7420 = new NodeList();
     private int anInt7421;
     private int anInt7422;
     private int anInt7423;
@@ -28,11 +28,11 @@ final class AwtMouseHandler extends MouseHandler implements MouseListener, Mouse
     }
 
     private final void method3598(int i, int i_1_, int i_2_, int i_3_, boolean bool) {
-        Class348_Sub45_Sub1 class348_sub45_sub1 = new Class348_Sub45_Sub1();
+        NodeSub45Sub1 class348_sub45_sub1 = new NodeSub45Sub1();
         class348_sub45_sub1.anInt9725 = i_3_;
         class348_sub45_sub1.anInt9728 = i_1_;
         class348_sub45_sub1.anInt9729 = i;
-        class348_sub45_sub1.aLong9726 = Class62.method599(-115);
+        class348_sub45_sub1.aLong9726 = Component240.method599(-115);
         class348_sub45_sub1.anInt9727 = i_2_;
         if (bool) mouseDragged(null);
         aClass262_7420.method1999(class348_sub45_sub1, -20180);
@@ -104,9 +104,9 @@ final class AwtMouseHandler extends MouseHandler implements MouseListener, Mouse
         return (anInt7419 & 0x1) != 0;
     }
 
-    final Class348_Sub45 popEvent(int i) {
+    final NodeSub45 popEvent(int i) {
         if (i != 0) mouseReleased(null);
-        return (Class348_Sub45) aClass262_7418.method1997(8);
+        return (NodeSub45) aClass262_7418.method1997(8);
     }
 
     public final synchronized void mouseMoved(MouseEvent mouseevent) {
@@ -132,7 +132,7 @@ final class AwtMouseHandler extends MouseHandler implements MouseListener, Mouse
         anInt7417 = anInt7423;
         anInt7419 = anInt7422;
         if (i == 0) {
-            Class262 class262 = aClass262_7418;
+            NodeList class262 = aClass262_7418;
             aClass262_7418 = aClass262_7420;
             aClass262_7420 = class262;
             aClass262_7420.method1996(127);

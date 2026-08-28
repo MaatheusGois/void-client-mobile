@@ -2,12 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-interface d {
+interface d
+/**
+ * RENAMED from `d` (JODE-obfuscated).
+ * Evidence: interface (no impl); used as type
+ */ {
     float[] method1(int i, float f, boolean bool, int i_0_, int i_1_, int i_2_);
 
     int method2(boolean bool);
 
-    Class12 method3(int i, int i_3_);
+    Component319 method3(int i, int i_3_);
 
     boolean method4(int i, int i_4_);
 

@@ -7,7 +7,7 @@ import android.graphics.Typeface;
  * AWT {@code Font} shim for Android.
  * Holds a {@link Paint} with the resolved {@link Typeface} so
  * {@link Graphics#drawString} / {@link FontMetrics} share one face
- * (splash {@code Class199}, glyph bake {@code Class323}).
+ * (splash {@code HelveticaFont}, glyph bake {@code FontGlyphCache}).
  */
 public class Font {
     public static final int PLAIN = 0;

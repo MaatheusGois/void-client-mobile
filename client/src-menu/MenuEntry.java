@@ -1,18 +1,18 @@
 /**
  * One right-click / left-click menu row (option + target + opcode + params).
  * <p>
- * Built by {@link Class50_Sub3#addMenuEntry} while hovering NPCs / objects /
- * widgets; sorted into {@link Class348_Sub40_Sub4#menuEntries}; the tip row
- * lives in {@link Class316#menuTip}. Left-click or menu pick runs
- * {@link Class325#processMenuAction}, which turns the opcode into a game packet.
+ * Built by {@link DisplayModeManagerContainer368#addMenuEntry} while hovering NPCs / objects /
+ * widgets; sorted into {@link DefinitionSub4#menuEntries}; the tip row
+ * lives in {@link Component192#menuTip}. Left-click or menu pick runs
+ * {@link ColoredTextBuilder#processMenuAction}, which turns the opcode into a game packet.
  * <p>
  * Custom Void opcodes in the 1900-range (DefaultClickSwapper, Microbot toggle)
  * are intercepted client-side and never sent.
  * <p>
  * Microbot plants synthetic rows with real game opcodes, then calls
- * {@link Class325#processMenuAction} on the client thread.
+ * {@link ColoredTextBuilder#processMenuAction} on the client thread.
  */
-final class MenuEntry extends Class348_Sub42 {
+final class MenuEntry extends HashNode {
 
     /**
      * Left-side option text shown in the menu, e.g. {@code "Attack"},
@@ -25,12 +25,12 @@ final class MenuEntry extends Class348_Sub42 {
     String aString9595;
     static int anInt9596;
 
-    /** Construction flag from {@link Class50_Sub3#addMenuEntry} (bool arg). */
+    /** Construction flag from {@link DisplayModeManagerContainer368#addMenuEntry} (bool arg). */
     boolean aBoolean9597;
     static int anInt9598;
 
     /**
-     * Item id on interface / inventory rows ({@link Class46#anInt812}), or
+     * Item id on interface / inventory rows ({@link DisplayModeManagerContainer57#anInt812}), or
      * {@code -1} for world entities.
      */
     int itemId;
@@ -48,15 +48,15 @@ final class MenuEntry extends Class348_Sub42 {
 
     /**
      * First action param — local tile X for walk / object, component child for
-     * interface ops ({@link Class46#anInt704}).
+     * interface ops ({@link DisplayModeManagerContainer57#anInt704}).
      */
     int param0;
 
-    static Class356 aClass356_9603;
+    static LruCache aClass356_9603;
     static int anInt9604 = 0;
 
     /**
-     * Entity / action identifier consumed by {@link Class325#processMenuAction}:
+     * Entity / action identifier consumed by {@link ColoredTextBuilder#processMenuAction}:
      * NPC index, packed object id (high bits), walk flag, etc.
      */
     long identifier;
@@ -65,7 +65,7 @@ final class MenuEntry extends Class348_Sub42 {
 
     /**
      * Second action param — local tile Y for walk / object, packed interface id
-     * for CC_OP ({@link Class46#anInt830}).
+     * for CC_OP ({@link DisplayModeManagerContainer57#anInt830}).
      */
     int param1;
 
@@ -94,9 +94,9 @@ final class MenuEntry extends Class348_Sub42 {
 
     static final int method3229(int i) {
         anInt9596++;
-        if (Class34.aFrame476 != null) return 3;
+        if (Component225.aFrame476 != null) return 3;
         if (i >= -59) anInt9604 = 79;
-        if (!Class50_Sub1.aBoolean5219) return 1;
+        if (!Cp1252Decoder.aBoolean5219) return 1;
         return 2;
     }
 
@@ -104,45 +104,45 @@ final class MenuEntry extends Class348_Sub42 {
         try {
             anInt9606++;
             if (is == null || is_1_ == null) {
-                Class348_Sub40_Sub6.aByteArrayArrayArray9134 = null;
-                Class190.anIntArray2552 = null;
-                Class59_Sub2_Sub2.anIntArray8684 = null;
+                DefinitionSub6.aByteArrayArrayArray9134 = null;
+                DisplayModeManagerContainer56.anIntArray2552 = null;
+                Component317.anIntArray8684 = null;
             } else {
-                Class59_Sub2_Sub2.anIntArray8684 = is;
-                Class190.anIntArray2552 = new int[is.length];
-                Class348_Sub40_Sub6.aByteArrayArrayArray9134 = new byte[is.length][][];
-                for (int i_2_ = i; i_2_ < Class59_Sub2_Sub2.anIntArray8684.length; i_2_++)
-                    Class348_Sub40_Sub6.aByteArrayArrayArray9134[i_2_] = new byte[is_1_[i_2_]][];
+                Component317.anIntArray8684 = is;
+                DisplayModeManagerContainer56.anIntArray2552 = new int[is.length];
+                DefinitionSub6.aByteArrayArrayArray9134 = new byte[is.length][][];
+                for (int i_2_ = i; i_2_ < Component317.anIntArray8684.length; i_2_++)
+                    DefinitionSub6.aByteArrayArrayArray9134[i_2_] = new byte[is_1_[i_2_]][];
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("db.D(" + (is != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("db.D(" + (is != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
     static final void method3231(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
         if (i_7_ > -123) method3229(14);
-        Class239_Sub12.anInt5973 = i_5_;
-        Class121.anInt1797 = i_4_;
-        Class352.anInt4336 = i_3_;
-        Class367_Sub11.anInt7403 = i_6_;
+        Component205.anInt5973 = i_5_;
+        Component221.anInt1797 = i_4_;
+        Component48.anInt4336 = i_3_;
+        OpenGlShader.anInt7403 = i_6_;
         anInt9598++;
-        Class281.anInt3647 = i;
-        if (Class239_Sub12.anInt5973 >= 100) {
-            int i_8_ = Class352.anInt4336 * 512 - -256;
-            int i_9_ = Class281.anInt3647 * 512 - -256;
-            int i_10_ = (Class275.method2064(i_8_, Class355.anInt4372, 11219, i_9_) + -Class121.anInt1797);
-            int i_11_ = i_8_ - Class286_Sub4.anInt6246;
-            int i_12_ = -Class305.anInt3855 + i_10_;
-            int i_13_ = i_9_ - Class59_Sub2_Sub2.anInt8685;
+        Component337.anInt3647 = i;
+        if (Component205.anInt5973 >= 100) {
+            int i_8_ = Component48.anInt4336 * 512 - -256;
+            int i_9_ = Component337.anInt3647 * 512 - -256;
+            int i_10_ = (Component300.method2064(i_8_, Component117.anInt4372, 11219, i_9_) + -Component221.anInt1797);
+            int i_11_ = i_8_ - WaterSurfaceShader.anInt6246;
+            int i_12_ = -DisplayModeManagerContainer50.anInt3855 + i_10_;
+            int i_13_ = i_9_ - Component317.anInt8685;
             int i_14_ = (int) Math.sqrt(i_11_ * i_11_ + i_13_ * i_13_);
-            Class348_Sub42_Sub19.anInt9701 = (int) (Math.atan2(i_12_, i_14_) * 2607.5945876176133) & 0x3fff;
-            Class5.anInt4638 = (int) (-2607.5945876176133 * Math.atan2(i_11_, i_13_)) & 0x3fff;
-            if (Class348_Sub42_Sub19.anInt9701 < 1024) Class348_Sub42_Sub19.anInt9701 = 1024;
-            Class338.anInt4186 = 0;
-            if (Class348_Sub42_Sub19.anInt9701 > 3072) Class348_Sub42_Sub19.anInt9701 = 3072;
+            HashNodeSub19.anInt9701 = (int) (Math.atan2(i_12_, i_14_) * 2607.5945876176133) & 0x3fff;
+            Component298.anInt4638 = (int) (-2607.5945876176133 * Math.atan2(i_11_, i_13_)) & 0x3fff;
+            if (HashNodeSub19.anInt9701 < 1024) HashNodeSub19.anInt9701 = 1024;
+            Component103.anInt4186 = 0;
+            if (HashNodeSub19.anInt9701 > 3072) HashNodeSub19.anInt9701 = 3072;
         }
-        Class348_Sub40_Sub21.anInt9282 = 2;
-        Class9.anInt167 = Class318_Sub1_Sub5_Sub2.anInt10163 = -1;
+        DefinitionSub21.anInt9282 = 2;
+        JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
     }
 
     /**
@@ -170,12 +170,12 @@ final class MenuEntry extends Class348_Sub42 {
             this.groupKey = groupKey;
             this.param0 = param0;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + priority + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + priority + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
         }
     }
 
     static {
-        aClass356_9603 = new Class356(16);
+        aClass356_9603 = new LruCache(16);
         anIntArray9612 = new int[8];
     }
 }

@@ -1,6 +1,6 @@
 /**
- * Per-tick NPC snapshot (Queryable-lite). Refresh when {@link Class367_Sub11#clientCycle}
- * advances. Source: {@link Class282#aClass356_3654} + {@link Class74#anIntArray1233}.
+ * Per-tick NPC snapshot (Queryable-lite). Refresh when {@link OpenGlShader#clientCycle}
+ * advances. Source: {@link Component21#aClass356_3654} + {@link DisplayModeManagerContainer238#anIntArray1233}.
  */
 final class Rs2NpcCache {
 
@@ -12,12 +12,12 @@ final class Rs2NpcCache {
     }
 
     void refreshIfNeeded() {
-        int tick = Class367_Sub11.clientCycle;
+        int tick = OpenGlShader.clientCycle;
         if (tick == lastTick) {
             return;
         }
         lastTick = tick;
-        int n = Class150.anInt2057;
+        int n = Component324.anInt2057;
         if (n < 0) {
             n = 0;
         }
@@ -25,9 +25,9 @@ final class Rs2NpcCache {
             npcs = new Npc[Math.max(n, 64)];
         }
         count = 0;
-        for (int i = 0; i < Class150.anInt2057; i++) {
+        for (int i = 0; i < Component324.anInt2057; i++) {
             try {
-                Class348_Sub22 node = (Class348_Sub22) Class282.aClass356_3654.method3480(Class74.anIntArray1233[i], -6008);
+                NodeSub22 node = (NodeSub22) Component21.aClass356_3654.method3480(DisplayModeManagerContainer238.anIntArray1233[i], -6008);
                 if (node == null || node.aNpc_6859 == null) {
                     continue;
                 }

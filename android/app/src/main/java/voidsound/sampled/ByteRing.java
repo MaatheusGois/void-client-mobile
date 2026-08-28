@@ -5,7 +5,7 @@ package voidsound.sampled;
  * <p>
  * JavaSound {@code SourceDataLine.available()} returns <b>free</b> bytes — not
  * used bytes. {@link #free()} is what {@link PcmSourceDataLine#available()}
- * exposes so {@code Class279_Sub1.method2081} can compute how full the buffer is.
+ * exposes so {@code SourceAudioLine.method2081} can compute how full the buffer is.
  * {@link #write} blocks when full (mixer paces itself); {@link #read} never blocks.
  */
 final class ByteRing {

@@ -13,7 +13,11 @@ import java.lang.reflect.Method;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-abstract class ha_Sub3 extends ha {
+abstract class ha_Sub3
+/**
+ * RENAMED from `ha_Sub3` (JODE-obfuscated).
+ * Evidence: extends ha (ha)
+ */ extends ha {
     static int anInt7884;
     static int anInt7885;
     static int anInt7886;
@@ -57,7 +61,7 @@ abstract class ha_Sub3 extends ha {
     NativeInterface aNativeInterface7924;
     Canvas aCanvas7925;
     static int anInt7926;
-    private Class262 aClass262_7927 = new Class262();
+    private NodeList aClass262_7927 = new NodeList();
     static int anInt7928;
     static int anInt7929;
     static int anInt7930;
@@ -67,7 +71,7 @@ abstract class ha_Sub3 extends ha {
     static int anInt7934;
     static int anInt7935;
     static int anInt7936;
-    Class269 aClass269_7937;
+    Component209 aClass269_7937;
     static int anInt7938;
     static int anInt7939;
     static int anInt7940;
@@ -169,7 +173,7 @@ abstract class ha_Sub3 extends ha {
     static int anInt8036;
     static int anInt8037;
     static int anInt8038;
-    Class45 aClass45_8039;
+    CacheStore aClass45_8039;
     static int anInt8040;
     static int anInt8041;
     static int anInt8042;
@@ -204,25 +208,25 @@ abstract class ha_Sub3 extends ha {
     static int anInt8071;
     static int anInt8072;
     static int anInt8073;
-    Class101_Sub2 aClass101_Sub2_8074 = new Class101_Sub2();
+    MatrixSub2 aClass101_Sub2_8074 = new MatrixSub2();
     static int anInt8075;
     static int anInt8076;
     static int anInt8077;
     static int anInt8078;
     int anInt8079;
-    Class101_Sub2 aClass101_Sub2_8080 = new Class101_Sub2();
+    MatrixSub2 aClass101_Sub2_8080 = new MatrixSub2();
     static int anInt8081;
-    Class101_Sub2 aClass101_Sub2_8082 = new Class101_Sub2();
-    Class101_Sub2 aClass101_Sub2_8083 = new Class101_Sub2();
-    private final Class101_Sub2 aClass101_Sub2_8084 = new Class101_Sub2();
-    private Class101_Sub2 aClass101_Sub2_8085 = new Class101_Sub2();
-    Class229[] aClass229Array8086;
+    MatrixSub2 aClass101_Sub2_8082 = new MatrixSub2();
+    MatrixSub2 aClass101_Sub2_8083 = new MatrixSub2();
+    private final MatrixSub2 aClass101_Sub2_8084 = new MatrixSub2();
+    private MatrixSub2 aClass101_Sub2_8085 = new MatrixSub2();
+    Component267[] aClass229Array8086;
     float aFloat8087;
     private Stream aStream8088;
     float aFloat8089;
     int anInt8090;
     int anInt8091;
-    Class229[] aClass229Array8092;
+    Component267[] aClass229Array8092;
     float aFloat8093 = 1.0F;
     int anInt8094;
     int anInt8095;
@@ -243,7 +247,7 @@ abstract class ha_Sub3 extends ha {
     boolean aBoolean8110;
     private final float[] aFloatArray8111;
     private boolean aBoolean8112;
-    Class251[] aClass251Array8113;
+    Component111[] aClass251Array8113;
     int anInt8114;
     float aFloat8115;
     boolean aBoolean8116;
@@ -261,19 +265,19 @@ abstract class ha_Sub3 extends ha {
     private float aFloat8128;
     int anInt8129;
     int anInt8130;
-    Class101_Sub2[] aClass101_Sub2Array8131;
-    Class348_Sub1[] aClass348_Sub1Array8132;
+    MatrixSub2[] aClass101_Sub2Array8131;
+    NodeSub1[] aClass348_Sub1Array8132;
     int anInt8133;
     int anInt8134;
     float[] aFloatArray8135;
-    private Class280 aClass280_8136;
-    private final Class372 aClass372_8137;
+    private Component333 aClass280_8136;
+    private final Component86 aClass372_8137;
     int anInt8138;
-    private final Class367[] aClass367Array8139;
+    private final AbstractShader[] aClass367Array8139;
     private float[] aFloatArray8140;
     boolean aBoolean8141;
     private float[] aFloatArray8142;
-    private Class367 aClass367_8143;
+    private AbstractShader aClass367_8143;
     int anInt8144;
     boolean aBoolean8145;
     int anInt8146;
@@ -293,7 +297,7 @@ abstract class ha_Sub3 extends ha {
     boolean aBoolean8160;
     private int anInt8161;
     private int anInt8162;
-    Class173 aClass173_8163;
+    Component75 aClass173_8163;
     boolean aBoolean8164;
     int anInt8165;
     private float aFloat8166;
@@ -301,7 +305,7 @@ abstract class ha_Sub3 extends ha {
     float aFloat8168;
     float aFloat8169;
     float[] aFloatArray8170;
-    private Class299_Sub2 aClass299_Sub2_8171;
+    private DisplayModeManagerContainer356 aClass299_Sub2_8171;
     private int anInt8172;
     float aFloat8173;
     float aFloat8174;
@@ -314,31 +318,31 @@ abstract class ha_Sub3 extends ha {
     int anInt8181;
     boolean aBoolean8182;
     int anInt8183;
-    Class196 aClass196_8184;
+    Component169 aClass196_8184;
     float aFloat8185;
     float aFloat8186;
-    Class64_Sub2 aClass64_Sub2_8187;
-    Class64_Sub2 aClass64_Sub2_8188;
-    Class64_Sub2 aClass64_Sub2_8189;
-    private Class130 aClass130_8190;
-    Class130 aClass130_8191;
-    Class64_Sub2 aClass64_Sub2_8192;
+    DisplayModeManagerContainer190 aClass64_Sub2_8187;
+    DisplayModeManagerContainer190 aClass64_Sub2_8188;
+    DisplayModeManagerContainer190 aClass64_Sub2_8189;
+    private Component387 aClass130_8190;
+    Component387 aClass130_8191;
+    DisplayModeManagerContainer190 aClass64_Sub2_8192;
     private Interface5_Impl1 anInterface5_Impl1_8193;
-    Class64_Sub2 aClass64_Sub2_8194;
+    DisplayModeManagerContainer190 aClass64_Sub2_8194;
     private Interface5_Impl2 anInterface5_Impl2_8195;
-    private final Class101_Sub2 aClass101_Sub2_8196;
-    private Class130 aClass130_8197;
-    Class64_Sub2 aClass64_Sub2_8198;
-    Class64_Sub2 aClass64_Sub2_8199;
-    Class64_Sub2 aClass64_Sub2_8200;
+    private final MatrixSub2 aClass101_Sub2_8196;
+    private Component387 aClass130_8197;
+    DisplayModeManagerContainer190 aClass64_Sub2_8198;
+    DisplayModeManagerContainer190 aClass64_Sub2_8199;
+    DisplayModeManagerContainer190 aClass64_Sub2_8200;
     private Interface5_Impl1 anInterface5_Impl1_8201;
-    Class130 aClass130_8202;
+    Component387 aClass130_8202;
     private Interface5_Impl1 anInterface5_Impl1_8203;
-    Class130 aClass130_8204;
-    private Class130 aClass130_8205;
-    Class64_Sub2 aClass64_Sub2_8206;
-    Class64_Sub2 aClass64_Sub2_8207;
-    Class130 aClass130_8208;
+    Component387 aClass130_8204;
+    private Component387 aClass130_8205;
+    DisplayModeManagerContainer190 aClass64_Sub2_8206;
+    DisplayModeManagerContainer190 aClass64_Sub2_8207;
+    Component387 aClass130_8208;
     boolean aBoolean8209;
     private int anInt8210;
     /*synthetic*/ static Class aClass8211;
@@ -360,7 +364,7 @@ abstract class ha_Sub3 extends ha {
             is[0] = (int) ((float) i_3_ - this.aFloat8126);
             is[1] = (int) ((float) i_2_ - this.aFloat8103);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.da(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.da(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -370,7 +374,7 @@ abstract class ha_Sub3 extends ha {
             this.aNativeHeap7891 = ((za_Sub2) var_za).aNativeHeap9782;
             this.aNativeHeapBuffer7974 = this.aNativeHeap7891.a(32768, false);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.PF(" + (var_za != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.PF(" + (var_za != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -396,7 +400,7 @@ abstract class ha_Sub3 extends ha {
         return i_9_;
     }
 
-    abstract Class130 method3812(int i, Class58[] class58s);
+    abstract Component387 method3812(int i, Component255[] class58s);
 
     final void ZA(int i, float f, float f_15_, float f_16_, float f_17_, float f_18_) {
         anInt7912++;
@@ -449,14 +453,14 @@ abstract class ha_Sub3 extends ha {
                 byte i_25_ = this.aBoolean8160 ? (byte) 3 : (byte) 0;
                 if (i >= 0) {
                     interface18_impl3 = aClass372_8137.method3587((byte) -97, i);
-                    Class12 class12 = this.aD4579.method3(i, -6662);
+                    Component319 class12 = this.aD4579.method3(i, -6662);
                     if (class12.aByte198 == 0 && class12.aByte211 == 0) method3879(-8629);
                     else {
                         int i_26_ = !class12.aBoolean199 ? 128 : 64;
                         int i_27_ = i_26_ * 50;
-                        Class101_Sub2 class101_sub2 = method3820(false);
+                        MatrixSub2 class101_sub2 = method3820(false);
                         class101_sub2.method916(((float) (this.anInt8146 % i_27_ * class12.aByte211) / (float) i_27_), true, 0.0F, ((float) (class12.aByte198 * (this.anInt8146 % i_27_)) / (float) i_27_));
-                        method3853(-32, Class239_Sub18.aClass251_6030);
+                        method3853(-32, Component302.aClass251_6030);
                     }
                     i_22_ = class12.anInt203;
                     if (!this.aBoolean8160) {
@@ -477,7 +481,7 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    final void method3815(int i, Class101_Sub2 class101_sub2) {
+    final void method3815(int i, MatrixSub2 class101_sub2) {
         try {
             anInt8029++;
             if (i != 0) this.anInt8062 = -6;
@@ -485,7 +489,7 @@ abstract class ha_Sub3 extends ha {
             this.aBoolean8069 = false;
             method3836(1);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.JH(" + i + ',' + (class101_sub2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.JH(" + i + ',' + (class101_sub2 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -494,30 +498,30 @@ abstract class ha_Sub3 extends ha {
         int i_28_ = -85 / ((41 - i) / 54);
         anInt7948++;
         anInterface5_Impl1_8203.method20(24, (byte) 125, 12);
-        aClass130_8205 = method3812(0, (new Class58[]{new Class58(Class325.aClass325_4073)}));
+        aClass130_8205 = method3812(0, (new Component255[]{new Component255(ColoredTextBuilder.aClass325_4073)}));
     }
 
     final void method3817(int i, int i_29_) {
         if (i <= 53) method3878(-0.15425435F, 84, -0.11598543F, 0.9862154F, -1.0921319F, -1.1620088F, -1.5202727F);
         if (anInt8167 != i_29_) {
             boolean bool;
-            Class173 class173;
+            Component75 class173;
             boolean bool_30_;
             if (i_29_ == 1) {
                 bool = true;
-                class173 = Class348_Sub4.aClass173_6602;
+                class173 = HardwareProbe.aClass173_6602;
                 bool_30_ = true;
             } else if (i_29_ == 2) {
-                class173 = Class69.aClass173_1201;
+                class173 = Component325.aClass173_1201;
                 bool_30_ = true;
                 bool = false;
             } else if (i_29_ == 128) {
                 bool = true;
-                class173 = Class273.aClass173_5169;
+                class173 = Component224.aClass173_5169;
                 bool_30_ = true;
             } else {
                 bool_30_ = false;
-                class173 = Class225.aClass173_2944;
+                class173 = Component241.aClass173_2944;
                 bool = false;
             }
             if (bool != this.aBoolean8141) {
@@ -541,9 +545,9 @@ abstract class ha_Sub3 extends ha {
     final aa method3661(int i, int i_31_, int[] is, int[] is_32_) {
         try {
             anInt7957++;
-            return Class318_Sub4.method2501(i_31_, this, is, (byte) -42, is_32_, i);
+            return RenderableSub4.method2501(i_31_, this, is, (byte) -42, is_32_, i);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.RF(" + i + ',' + i_31_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_32_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.RF(" + i + ',' + i_31_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_32_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -551,7 +555,7 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3819(byte i);
 
-    final Class101_Sub2 method3820(boolean bool) {
+    final MatrixSub2 method3820(boolean bool) {
         anInt8004++;
         if (bool != false) method3903(true);
         return (this.aClass101_Sub2Array8131[this.anInt8175]);
@@ -580,48 +584,48 @@ abstract class ha_Sub3 extends ha {
 
     static final void method3824(int i, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_) {
         anInt7933++;
-        if (i_37_ >= 0 && i >= 0 && -1 + Class367_Sub4.anInt7319 > i_37_ && (i < -1 + Class348_Sub40_Sub3.anInt9109)) {
-            if (Class147.aClass357ArrayArrayArray2029 == null) return;
+        if (i_37_ >= 0 && i >= 0 && -1 + AbstractShaderSub4.anInt7319 > i_37_ && (i < -1 + ParametricDefinition.anInt9109)) {
+            if (Component335.aClass357ArrayArrayArray2029 == null) return;
             if (i_41_ == 0) {
                 Interface10 interface10 = (Interface10) r_Sub2.method3297(i_40_, i_37_, i);
-                Interface10 interface10_42_ = (Interface10) Class82.method813(i_40_, i_37_, i);
+                Interface10 interface10_42_ = (Interface10) CommandHandler.method813(i_40_, i_37_, i);
                 if (interface10 != null && i_36_ != 2) {
-                    if (interface10 instanceof Class318_Sub1_Sub4_Sub2) ((Class318_Sub1_Sub4_Sub2) interface10).aClass235_10115.method1671(262144, i_35_);
-                    else Class218.method1591(i_37_, 89, i_41_, i_35_, interface10.method42(-76), i_36_, i, i_38_, i_40_);
+                    if (interface10 instanceof Component171) ((Component171) interface10).aClass235_10115.method1671(262144, i_35_);
+                    else SceneManager.method1591(i_37_, 89, i_41_, i_35_, interface10.method42(-76), i_36_, i, i_38_, i_40_);
                 }
                 if (interface10_42_ != null) {
-                    if (interface10_42_ instanceof Class318_Sub1_Sub4_Sub2) ((Class318_Sub1_Sub4_Sub2) interface10_42_).aClass235_10115.method1671(262144, i_35_);
-                    else Class218.method1591(i_37_, 92, i_41_, i_35_, interface10_42_.method42(-71), i_36_, i, i_38_, i_40_);
+                    if (interface10_42_ instanceof Component171) ((Component171) interface10_42_).aClass235_10115.method1671(262144, i_35_);
+                    else SceneManager.method1591(i_37_, 92, i_41_, i_35_, interface10_42_.method42(-71), i_36_, i, i_38_, i_40_);
                 }
             } else if (i_41_ == 1) {
-                Interface10 interface10 = ((Interface10) Class348_Sub40_Sub32.method3135(i_40_, i_37_, i));
+                Interface10 interface10 = ((Interface10) DefinitionSub32.method3135(i_40_, i_37_, i));
                 if (interface10 != null) {
-                    if (interface10 instanceof Class318_Sub1_Sub5_Sub2) ((Class318_Sub1_Sub5_Sub2) interface10).aClass235_10155.method1671(262144, i_35_);
+                    if (interface10 instanceof ShaderLinker) ((ShaderLinker) interface10).aClass235_10155.method1671(262144, i_35_);
                     else {
                         int i_43_ = interface10.method42(-83);
                         if (i_36_ != 4 && i_36_ != 5) {
                             if (i_36_ != 6) {
-                                if (i_36_ == 7) Class218.method1591(i_37_, 50, i_41_, i_35_, i_43_, 4, i, 4 + (0x3 & 2 + i_38_), i_40_);
+                                if (i_36_ == 7) SceneManager.method1591(i_37_, 50, i_41_, i_35_, i_43_, 4, i, 4 + (0x3 & 2 + i_38_), i_40_);
                                 else if (i_36_ == 8) {
-                                    Class218.method1591(i_37_, 116, i_41_, i_35_, i_43_, 4, i, 4 + i_38_, i_40_);
-                                    Class218.method1591(i_37_, 91, i_41_, i_35_, i_43_, 4, i, 4 + (0x3 & i_38_ - -2), i_40_);
+                                    SceneManager.method1591(i_37_, 116, i_41_, i_35_, i_43_, 4, i, 4 + i_38_, i_40_);
+                                    SceneManager.method1591(i_37_, 91, i_41_, i_35_, i_43_, 4, i, 4 + (0x3 & i_38_ - -2), i_40_);
                                 }
-                            } else Class218.method1591(i_37_, 22, i_41_, i_35_, i_43_, 4, i, i_38_ + 4, i_40_);
-                        } else Class218.method1591(i_37_, 86, i_41_, i_35_, i_43_, 4, i, i_38_, i_40_);
+                            } else SceneManager.method1591(i_37_, 22, i_41_, i_35_, i_43_, 4, i, i_38_ + 4, i_40_);
+                        } else SceneManager.method1591(i_37_, 86, i_41_, i_35_, i_43_, 4, i, i_38_, i_40_);
                     }
                 }
             } else if (i_41_ == 2) {
-                Interface10 interface10 = ((Interface10) (Class177.method1353(i_40_, i_37_, i, (aClass8211 != null ? aClass8211 : (aClass8211 = Interface10.class)))));
+                Interface10 interface10 = ((Interface10) (DisplayModeManagerContainer249.method1353(i_40_, i_37_, i, (aClass8211 != null ? aClass8211 : (aClass8211 = Interface10.class)))));
                 if (interface10 != null) {
                     if (i_36_ == 11) i_36_ = 10;
-                    if (!(interface10 instanceof Class318_Sub1_Sub3_Sub2)) Class218.method1591(i_37_, 43, i_41_, i_35_, interface10.method42(-107), i_36_, i, i_38_, i_40_);
-                    else ((Class318_Sub1_Sub3_Sub2) interface10).aClass235_10045.method1671(262144, i_35_);
+                    if (!(interface10 instanceof Component29)) SceneManager.method1591(i_37_, 43, i_41_, i_35_, interface10.method42(-107), i_36_, i, i_38_, i_40_);
+                    else ((Component29) interface10).aClass235_10045.method1671(262144, i_35_);
                 }
             } else if (i_41_ == 3) {
-                Interface10 interface10 = ((Interface10) Class348_Sub16_Sub3.method2878(i_40_, i_37_, i));
+                Interface10 interface10 = ((Interface10) BrowserUrlOpener.method2878(i_40_, i_37_, i));
                 if (interface10 != null) {
-                    if (interface10 instanceof Class318_Sub1_Sub1_Sub1) ((Class318_Sub1_Sub1_Sub1) interface10).aClass235_9955.method1671(262144, i_35_);
-                    else Class218.method1591(i_37_, 28, i_41_, i_35_, interface10.method42(-123), i_36_, i, i_38_, i_40_);
+                    if (interface10 instanceof Component141) ((Component141) interface10).aClass235_9955.method1671(262144, i_35_);
+                    else SceneManager.method1591(i_37_, 28, i_41_, i_35_, interface10.method42(-123), i_36_, i, i_38_, i_40_);
                 }
             }
         }
@@ -654,14 +658,14 @@ abstract class ha_Sub3 extends ha {
     void method3652() {
         anInt8065++;
         if (!aBoolean8176) {
-            for (Class348 class348 = aClass262_7927.method1995(4); class348 != null; class348 = aClass262_7927.method1990((byte) 102))
+            for (Node class348 = aClass262_7927.method1995(4); class348 != null; class348 = aClass262_7927.method1990((byte) 102))
                 ((za_Sub2) class348).method3445(-9503);
             Enumeration enumeration = aHashtable8014.keys();
             while (enumeration.hasMoreElements()) {
                 Canvas canvas = (Canvas) enumeration.nextElement();
                 method3911(canvas, 1, aHashtable8014.get(canvas));
             }
-            Class286_Sub8.method2173(true, -125, false);
+            CookieManager.method2173(true, -125, false);
             this.aNativeInterface7924.release();
             aBoolean8176 = true;
         }
@@ -679,7 +683,7 @@ abstract class ha_Sub3 extends ha {
                 is[0] = (int) (-this.aFloat8126 + (float) i_47_);
             } else is[0] = is[1] = is[2] = -1;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.HA(" + i + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.HA(" + i + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -698,14 +702,14 @@ abstract class ha_Sub3 extends ha {
         try {
             anInt8000++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.Q(" + i + ',' + i_49_ + ',' + i_50_ + ',' + i_51_ + ',' + i_52_ + ',' + i_53_ + ',' + (is != null ? "{...}" : "null") + ',' + i_54_ + ',' + i_55_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.Q(" + i + ',' + i_49_ + ',' + i_50_ + ',' + i_51_ + ',' + i_52_ + ',' + i_53_ + ',' + (is != null ? "{...}" : "null") + ',' + i_54_ + ',' + i_55_ + ')'));
         }
     }
 
-    final void method3638(Class101 class101) {
+    final void method3638(DisplayModeManagerContainer204 class101) {
         do {
             try {
-                this.aClass101_Sub2_8080 = (Class101_Sub2) class101;
+                this.aClass101_Sub2_8080 = (MatrixSub2) class101;
                 anInt7923++;
                 this.aClass101_Sub2_8083.method898(this.aClass101_Sub2_8080);
                 this.aClass101_Sub2_8083.method934((byte) 64);
@@ -714,7 +718,7 @@ abstract class ha_Sub3 extends ha {
                 if (!this.aClass196_8184.method1450(-112)) break;
                 method3913((byte) 107);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, "wga.DE(" + (class101 != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.method2929(runtimeexception, "wga.DE(" + (class101 != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -807,10 +811,10 @@ abstract class ha_Sub3 extends ha {
                 if (anInterface5_Impl1_8193.method18(6331)) break;
             }
         }
-        aClass130_8197 = method3812(0, (new Class58[]{new Class58(new Class325[]{Class325.aClass325_4073, Class325.aClass325_4078, Class325.aClass325_4078})}));
+        aClass130_8197 = method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4078})}));
     }
 
-    abstract void method3829(Class70 class70, int i, byte i_56_, boolean bool);
+    abstract void method3829(DisplayModeManagerContainer88 class70, int i, byte i_56_, boolean bool);
 
     abstract Interface18_Impl3 method3830(int i, int[] is, boolean bool, byte i_57_, int i_58_, int i_59_, int i_60_);
 
@@ -824,10 +828,10 @@ abstract class ha_Sub3 extends ha {
         aBoolean8097 = false;
         anInt7893++;
         method3906((byte) 122);
-        if (Class180.aClass196_2372 == this.aClass196_8184) method3929(true);
+        if (Component166.aClass196_2372 == this.aClass196_8184) method3929(true);
     }
 
-    Class367 method3832(int i, byte i_61_) {
+    AbstractShader method3832(int i, byte i_61_) {
         if (i_61_ > -57) method3817(22, -65);
         anInt7969++;
         int i_62_ = i;
@@ -843,14 +847,14 @@ abstract class ha_Sub3 extends ha {
                             } else break;
                             break while_230_;
                         }
-                    } else return new Class367_Sub3(this);
-                    return new Class367_Sub4(this);
+                    } else return new AbstractShaderSub3(this);
+                    return new AbstractShaderSub4(this);
                 } while (false);
-                return new Class367_Sub8(this, this.aClass269_7937);
+                return new WaterShaderSub8(this, this.aClass269_7937);
             } while (false);
-            return new Class367_Sub10(this);
+            return new SoftwareFallbackShader(this);
         } while (false);
-        return new Class367_Sub1(this);
+        return new AbstractShaderSub1(this);
     }
 
     final int method3833(byte i) {
@@ -888,12 +892,12 @@ abstract class ha_Sub3 extends ha {
             fs[11] = this.aFloatArray8135[14];
             return fs;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.OA(" + (fs != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.OA(" + (fs != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
     private final void method3836(int i) {
-        if (Class148.aClass196_2042 == this.aClass196_8184) {
+        if (Component3.aClass196_2042 == this.aClass196_8184) {
             float f = method3858(false);
             this.aClass101_Sub2_8074.method920(f, false, 0.0F, f);
         }
@@ -927,7 +931,7 @@ abstract class ha_Sub3 extends ha {
             anInt7965++;
             return method3830(i_64_, is, bool, (byte) 107, 0, 0, i);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.JG(" + i + ',' + i_64_ + ',' + i_65_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.JG(" + i + ',' + i_64_ + ',' + i_65_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -937,7 +941,7 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3842(boolean bool);
 
-    abstract Interface18_Impl3 method3843(int i, int i_66_, int i_67_, int i_68_, byte[] is, Class304 class304, int i_69_, boolean bool);
+    abstract Interface18_Impl3 method3843(int i, int i_66_, int i_67_, int i_68_, byte[] is, DisplayModeManagerContainer42 class304, int i_69_, boolean bool);
 
     final void X(int i) {
         anInt7920++;
@@ -953,8 +957,8 @@ abstract class ha_Sub3 extends ha {
         method3903(false);
         anInt8017++;
         method3894(-28186, i_73_);
-        method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
-        method3885(0, true, Class348_Sub40_Sub39.aClass70_9485);
+        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(113, i_74_);
         this.aClass101_Sub2_8074.method932(1.0F, (float) i_72_, (float) i_71_, (byte) -22);
         this.aClass101_Sub2_8074.method891(i, i_70_, 0);
@@ -962,14 +966,14 @@ abstract class ha_Sub3 extends ha {
         method3926((byte) 67, false);
         method3933(-70);
         method3926((byte) 83, true);
-        method3885(0, true, Class342.aClass70_4247);
-        method3849((byte) 47, 0, Class342.aClass70_4247);
+        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     private final void method3845(byte i) {
-        if (Class148.aClass196_2042 != this.aClass196_8184) {
-            Class196 class196 = this.aClass196_8184;
-            this.aClass196_8184 = Class148.aClass196_2042;
+        if (Component3.aClass196_2042 != this.aClass196_8184) {
+            Component169 class196 = this.aClass196_8184;
+            this.aClass196_8184 = Component3.aClass196_2042;
             if (class196.method1450(-48)) method3913((byte) -121);
             method3919(20794);
             this.aFloatArray8135 = aFloatArray8120;
@@ -985,14 +989,14 @@ abstract class ha_Sub3 extends ha {
         aBoolean8112 = false;
         int i_75_ = -77 / ((i - 78) / 48);
         method3949((byte) -58);
-        if (Class46.aClass196_838 == this.aClass196_8184) method3929(true);
+        if (DisplayModeManagerContainer57.aClass196_838 == this.aClass196_8184) method3929(true);
     }
 
     private final void method3847(int i) {
         if (i != 0) this.aFloatArray8102 = null;
-        if (Class46.aClass196_838 != this.aClass196_8184) {
-            Class196 class196 = this.aClass196_8184;
-            this.aClass196_8184 = Class46.aClass196_838;
+        if (DisplayModeManagerContainer57.aClass196_838 != this.aClass196_8184) {
+            Component169 class196 = this.aClass196_8184;
+            this.aClass196_8184 = DisplayModeManagerContainer57.aClass196_838;
             if (!class196.method1450(-45)) method3913((byte) 94);
             method3949((byte) -113);
             this.aFloatArray8135 = aFloatArray8157;
@@ -1002,19 +1006,19 @@ abstract class ha_Sub3 extends ha {
         anInt7999++;
     }
 
-    final Class101_Sub2 method3848(int i) {
+    final MatrixSub2 method3848(int i) {
         anInt8031++;
         if (i != 5) method3890(false, (byte) 95);
         return (this.aClass101_Sub2Array8131[this.anInt8175]);
     }
 
-    final void method3849(byte i, int i_76_, Class70 class70) {
+    final void method3849(byte i, int i_76_, DisplayModeManagerContainer88 class70) {
         try {
             if (i != 47) this.aFloat8087 = -0.68323714F;
             anInt8036++;
             method3924(false, false, i_76_, class70, false);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.NJ(" + i + ',' + i_76_ + ',' + (class70 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.NJ(" + i + ',' + i_76_ + ',' + (class70 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1030,15 +1034,15 @@ abstract class ha_Sub3 extends ha {
         if (method3878((float) i_77_, 0, (float) i_78_ + f, 0.0F, f_82_ + (float) i_79_, 0.0F, (float) i)) {
             method3903(false);
             method3894(-28186, i_80_);
-            method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
-            method3885(0, true, Class348_Sub40_Sub39.aClass70_9485);
+            method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+            method3885(0, true, DefinitionSub39.aClass70_9485);
             method3817(112, i_81_);
             method3942(5);
             method3926((byte) 45, false);
             method3907(true);
             method3926((byte) 48, true);
-            method3885(0, true, Class342.aClass70_4247);
-            method3849((byte) 47, 0, Class342.aClass70_4247);
+            method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+            method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         }
     }
 
@@ -1053,11 +1057,11 @@ abstract class ha_Sub3 extends ha {
             int i_84_ = 96 / ((i - 20) / 42);
             anInt7900++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.WA(" + i + ',' + (interface18 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.WA(" + i + ',' + (interface18 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final Class101 method3640() {
+    final DisplayModeManagerContainer204 method3640() {
         anInt7945++;
         return this.aClass101_Sub2_8080;
     }
@@ -1070,29 +1074,29 @@ abstract class ha_Sub3 extends ha {
             method3864(81);
             method3850((byte) -47, interface18_impl3);
             method3817(99, 1);
-            method3874(Class328_Sub3.aClass229_6519, 114, Class328_Sub3.aClass229_6519);
-            method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
+            method3874(ShaderCompilerSub3.aClass229_6519, 114, ShaderCompilerSub3.aClass229_6519);
+            method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
             method3894(-28186, i);
             this.aClass101_Sub2_8074.method932(0.0F, (float) this.anInt7962, (float) this.anInt7931, (byte) -52);
             method3915(0);
             this.aClass101_Sub2Array8131[0].method932(1.0F, interface18_impl3.method71((byte) -46, (float) this.anInt7962), interface18_impl3.method67((float) this.anInt7931, 109), (byte) -37);
             this.aClass101_Sub2Array8131[0].method920(interface18_impl3.method71((byte) -52, (float) -i_86_), false, 0.0F, interface18_impl3.method67((float) -i_85_, 94));
-            this.aClass251Array8113[0] = Class239_Sub18.aClass251_6030;
+            this.aClass251Array8113[0] = Component302.aClass251_6030;
             method3905((byte) 127);
             method3933(-127);
             method3879(-8629);
-            method3849((byte) 47, 0, Class342.aClass70_4247);
+            method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_85_ + ',' + i_86_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_85_ + ',' + i_86_ + ')'));
         }
     }
 
-    final Class64 method3625(Class124 class124, int i, int i_87_, int i_88_, int i_89_) {
+    final DisplayModeManagerContainer370 method3625(DisplayModeManagerContainer77 class124, int i, int i_87_, int i_88_, int i_89_) {
         try {
             anInt8016++;
-            return new Class64_Sub2(this, class124, i, i_88_, i_89_, i_87_);
+            return new DisplayModeManagerContainer190(this, class124, i, i_88_, i_89_, i_87_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_87_ + ',' + i_88_ + ',' + i_89_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_87_ + ',' + i_88_ + ',' + i_89_ + ')'));
         }
     }
 
@@ -1108,7 +1112,7 @@ abstract class ha_Sub3 extends ha {
                 if (canvas != aCanvas7910) break;
                 method3917(false);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_90_ + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_90_ + ')'));
             }
             break;
         } while (false);
@@ -1130,14 +1134,14 @@ abstract class ha_Sub3 extends ha {
         if (i != 9) aFloatArray8140 = null;
     }
 
-    final void method3853(int i, Class251 class251) {
+    final void method3853(int i, Component111 class251) {
         try {
             anInt8057++;
             if (i != -32) aFloatArray8142 = null;
             this.aClass251Array8113[this.anInt8175] = class251;
             method3905((byte) 111);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.HI(" + i + ',' + (class251 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.HI(" + i + ',' + (class251 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1146,13 +1150,13 @@ abstract class ha_Sub3 extends ha {
         return true;
     }
 
-    final Class101_Sub2 method3854(byte i) {
+    final MatrixSub2 method3854(byte i) {
         anInt7983++;
         int i_91_ = 97 / ((i - 35) / 63);
         return aClass101_Sub2_8084;
     }
 
-    abstract Interface18_Impl3 method3855(Class304 class304, int i, int i_92_, float[] fs, boolean bool, int i_93_, int i_94_, int i_95_);
+    abstract Interface18_Impl3 method3855(DisplayModeManagerContainer42 class304, int i, int i_92_, float[] fs, boolean bool, int i_93_, int i_94_, int i_95_);
 
     private final void method3856(byte i) {
         anInt8044++;
@@ -1174,29 +1178,29 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    final Class105 method3629(int i, int i_97_, boolean bool) {
+    final Component24 method3629(int i, int i_97_, boolean bool) {
         anInt8040++;
-        return new Class105_Sub1(this, i, i_97_, bool);
+        return new SpriteSub1(this, i, i_97_, bool);
     }
 
     abstract float method3858(boolean bool);
 
     abstract void method3859(int i);
 
-    private final void method3860(Class21 class21, int i, int i_98_) {
+    private final void method3860(Component158 class21, int i, int i_98_) {
         try {
             method3925(-96, anInterface5_Impl1_8193, 0);
             anInt8067++;
             method3862(0, aClass130_8197);
             method3899(i, 0, class21, true);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.QI(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + i_98_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.QI(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + i_98_ + ')'));
         }
     }
 
-    abstract Interface18_Impl3 method3861(int i, byte i_99_, int i_100_, Class68 class68, Class304 class304);
+    abstract Interface18_Impl3 method3861(int i, byte i_99_, int i_100_, Component342 class68, DisplayModeManagerContainer42 class304);
 
-    abstract void method3862(int i, Class130 class130);
+    abstract void method3862(int i, Component387 class130);
 
     final int method3863(int i) {
         int i_101_ = -95 / ((i - 7) / 57);
@@ -1212,7 +1216,7 @@ abstract class ha_Sub3 extends ha {
             is[2] = this.anInt8183;
             is[1] = this.anInt8165;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.K(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.K(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1230,7 +1234,7 @@ abstract class ha_Sub3 extends ha {
         anInt7930++;
     }
 
-    final Class101 method3705() {
+    final DisplayModeManagerContainer204 method3705() {
         anInt8077++;
         return aClass101_Sub2_8196;
     }
@@ -1264,7 +1268,7 @@ abstract class ha_Sub3 extends ha {
         try {
             anInt7914++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.IF(" + i + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + i_107_ + ',' + i_108_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + i_112_ + ',' + i_113_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.IF(" + i + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + i_107_ + ',' + i_108_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + i_112_ + ',' + i_113_ + ')'));
         }
     }
 
@@ -1300,9 +1304,9 @@ abstract class ha_Sub3 extends ha {
         return (this.anInt8079 + this.anInt8062 + this.anInt8063);
     }
 
-    abstract void method3871(Class113 class113, int i);
+    abstract void method3871(Component22 class113, int i);
 
-    abstract Interface18_Impl1 method3872(int i, int i_117_, Class304 class304, boolean bool, int i_118_, byte[] is);
+    abstract Interface18_Impl1 method3872(int i, int i_117_, DisplayModeManagerContainer42 class304, boolean bool, int i_118_, byte[] is);
 
     final void KA(int i, int i_119_, int i_120_, int i_121_) {
         anInt7972++;
@@ -1326,7 +1330,7 @@ abstract class ha_Sub3 extends ha {
             anInt8011++;
             return new s_Sub3(this, i_125_, i_126_, i, i_122_, is, is_123_, i_124_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.VE(" + i + ',' + i_122_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_123_ != null ? "{...}" : "null") + ',' + i_124_ + ',' + i_125_ + ',' + i_126_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.VE(" + i + ',' + i_122_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_123_ != null ? "{...}" : "null") + ',' + i_124_ + ',' + i_125_ + ',' + i_126_ + ')'));
         }
     }
 
@@ -1335,10 +1339,10 @@ abstract class ha_Sub3 extends ha {
             anInt8015++;
             int i_127_ = is.length;
             byte[] is_128_ = new byte[i_127_];
-            Class214.method1577(is, i, is_128_, 0, i_127_);
+            Component313.method1577(is, i, is_128_, 0, i_127_);
             return is_128_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.GI(" + (is != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.GI(" + (is != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1350,7 +1354,7 @@ abstract class ha_Sub3 extends ha {
         anInt8002++;
     }
 
-    final void method3874(Class229 class229, int i, Class229 class229_129_) {
+    final void method3874(Component267 class229, int i, Component267 class229_129_) {
         do {
             try {
                 anInt7959++;
@@ -1369,7 +1373,7 @@ abstract class ha_Sub3 extends ha {
                 if (!bool) break;
                 anInt8100 &= ~0x1d;
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.RI(" + (class229 != null ? "{...}" : "null") + ',' + i + ',' + (class229_129_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.RI(" + (class229 != null ? "{...}" : "null") + ',' + i + ',' + (class229_129_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1417,8 +1421,8 @@ abstract class ha_Sub3 extends ha {
         anInt8026++;
         method3903(false);
         method3894(-28186, i_136_);
-        method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
-        method3885(0, true, Class348_Sub40_Sub39.aClass70_9485);
+        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(83, i_137_);
         this.aClass101_Sub2_8074.method932(1.0F, (float) i_135_, (float) i_135_, (byte) -75);
         this.aClass101_Sub2_8074.method891(i, i_134_, 0);
@@ -1426,10 +1430,10 @@ abstract class ha_Sub3 extends ha {
         method3926((byte) 75, false);
         method3925(23, anInterface5_Impl1_8201, 0);
         method3862(0, aClass130_8190);
-        method3899(256, 0, Class348_Sub42_Sub16.aClass21_9661, true);
+        method3899(256, 0, HashNodeSub16.aClass21_9661, true);
         method3926((byte) 41, true);
-        method3885(0, true, Class342.aClass70_4247);
-        method3849((byte) 47, 0, Class342.aClass70_4247);
+        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     final int i() {
@@ -1469,9 +1473,9 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    final Class299 method3697(int i, int i_139_, int i_140_, int i_141_, int i_142_, int i_143_) {
+    final Component80 method3697(int i, int i_139_, int i_140_, int i_141_, int i_142_, int i_143_) {
         anInt7892++;
-        return new Class299_Sub2_Sub1(this, i, i_139_, i_140_, i_141_, i_142_, i_143_);
+        return new Component201(this, i, i_139_, i_140_, i_141_, i_142_, i_143_);
     }
 
     private final boolean method3878(float f, int i, float f_144_, float f_145_, float f_146_, float f_147_, float f_148_) {
@@ -1500,8 +1504,8 @@ abstract class ha_Sub3 extends ha {
     }
 
     final void method3879(int i) {
-        if (this.aClass251Array8113[this.anInt8175] != Class348_Sub42_Sub18.aClass251_9685) {
-            this.aClass251Array8113[this.anInt8175] = Class348_Sub42_Sub18.aClass251_9685;
+        if (this.aClass251Array8113[this.anInt8175] != HashNodeSub18.aClass251_9685) {
+            this.aClass251Array8113[this.anInt8175] = HashNodeSub18.aClass251_9685;
             this.aClass101_Sub2Array8131[this.anInt8175].method910();
             method3905((byte) 95);
         }
@@ -1517,7 +1521,7 @@ abstract class ha_Sub3 extends ha {
         anInt8162 = i;
     }
 
-    abstract boolean method3880(Class68 class68, Class304 class304, byte i);
+    abstract boolean method3880(Component342 class68, DisplayModeManagerContainer42 class304, byte i);
 
     abstract void method3881(Object object, byte i, Canvas canvas);
 
@@ -1559,7 +1563,7 @@ abstract class ha_Sub3 extends ha {
         anInt8032++;
     }
 
-    final void method3885(int i, boolean bool, Class70 class70) {
+    final void method3885(int i, boolean bool, DisplayModeManagerContainer88 class70) {
         do {
             try {
                 method3829(class70, i, (byte) 80, false);
@@ -1567,14 +1571,14 @@ abstract class ha_Sub3 extends ha {
                 if (bool == true) break;
                 method3643(null, -42, 69);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.IH(" + i + ',' + bool + ',' + (class70 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.IH(" + i + ',' + bool + ',' + (class70 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
     }
 
     static final void method3886(int i) {
-        Class345.aClass60_4273.method590(0);
+        Component35.aClass60_4273.method590(0);
         if (i >= -58) method3824(43, 63, -121, -1, 72, 77, -11, 22);
         anInt8018++;
     }
@@ -1608,7 +1612,7 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    final Class101_Sub2 method3887(byte i) {
+    final MatrixSub2 method3887(byte i) {
         int i_167_ = 62 / ((i - -58) / 33);
         anInt7941++;
         return this.aClass101_Sub2_8083;
@@ -1633,13 +1637,13 @@ abstract class ha_Sub3 extends ha {
         anInt8072++;
     }
 
-    final Interface18_Impl3 method3891(float[] fs, int i, int i_168_, Class304 class304, int i_169_, boolean bool) {
+    final Interface18_Impl3 method3891(float[] fs, int i, int i_168_, DisplayModeManagerContainer42 class304, int i_169_, boolean bool) {
         try {
             int i_170_ = 97 / ((i_169_ - -38) / 57);
             anInt8052++;
             return method3855(class304, i, 0, fs, bool, 0, 2, i_168_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.LI(" + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_168_ + ',' + (class304 != null ? "{...}" : "null") + ',' + i_169_ + ',' + bool + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.LI(" + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_168_ + ',' + (class304 != null ? "{...}" : "null") + ',' + i_169_ + ',' + bool + ')'));
         }
     }
 
@@ -1652,7 +1656,7 @@ abstract class ha_Sub3 extends ha {
             if (i != 9179) this.aFloat8093 = -1.2765714F;
             return aStream8088;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.FI(" + (buffer != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.FI(" + (buffer != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1675,16 +1679,16 @@ abstract class ha_Sub3 extends ha {
             is[0] = this.anInt7931;
             anInt8076++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.KE(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.KE(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void method3653(Class299 class299) {
+    final void method3653(Component80 class299) {
         try {
-            aClass299_Sub2_8171 = (Class299_Sub2) class299;
+            aClass299_Sub2_8171 = (DisplayModeManagerContainer356) class299;
             anInt7950++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.DF(" + (class299 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.DF(" + (class299 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1711,9 +1715,9 @@ abstract class ha_Sub3 extends ha {
     private final void method3895(int i) {
         anInt8035++;
         if (i != -8) method3644();
-        if (Class180.aClass196_2372 != this.aClass196_8184) {
-            Class196 class196 = this.aClass196_8184;
-            this.aClass196_8184 = Class180.aClass196_2372;
+        if (Component166.aClass196_2372 != this.aClass196_8184) {
+            Component169 class196 = this.aClass196_8184;
+            this.aClass196_8184 = Component166.aClass196_2372;
             if (!class196.method1450(-90)) method3913((byte) 60);
             method3906((byte) 118);
             this.aFloatArray8135 = aFloatArray8152;
@@ -1722,15 +1726,15 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    static final void method3896(Class296 class296, byte i) {
+    static final void method3896(HuffmanDecoder class296, byte i) {
         do {
             try {
                 anInt8028++;
-                Class64.aClass296_1131 = class296;
+                DisplayModeManagerContainer370.aClass296_1131 = class296;
                 if (i == 13) break;
                 method3873(null, -3);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.DI(" + (class296 != null ? "{...}" : "null") + ',' + i + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.DI(" + (class296 != null ? "{...}" : "null") + ',' + i + ')'));
             }
             break;
         } while (false);
@@ -1751,7 +1755,7 @@ abstract class ha_Sub3 extends ha {
         anInt8068++;
     }
 
-    abstract void method3899(int i, int i_178_, Class21 class21, boolean bool);
+    abstract void method3899(int i, int i_178_, Component158 class21, boolean bool);
 
     final void DA(int i, int i_179_, int i_180_, int i_181_) {
         this.anInt8130 = i_179_;
@@ -1851,7 +1855,7 @@ abstract class ha_Sub3 extends ha {
                 if (object == null) throw new RuntimeException();
                 aHashtable8014.put(canvas, object);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_195_ + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_195_ + ')'));
             }
             break;
         } while (false);
@@ -1916,7 +1920,7 @@ abstract class ha_Sub3 extends ha {
         anInt7888++;
         method3925(-128, anInterface5_Impl1_8203, 0);
         method3862(0, aClass130_8205);
-        method3899(1, 0, Class249.aClass21_3217, bool);
+        method3899(1, 0, Component217.aClass21_3217, bool);
     }
 
     final int[] Y() {
@@ -1934,9 +1938,9 @@ abstract class ha_Sub3 extends ha {
         anInt7942++;
     }
 
-    final Class105 method3683(int i, int i_206_, int i_207_, int i_208_, boolean bool) {
+    final Component24 method3683(int i, int i_206_, int i_207_, int i_208_, boolean bool) {
         anInt7993++;
-        Class105_Sub1 class105_sub1 = new Class105_Sub1(this, i_207_, i_208_, bool);
+        SpriteSub1 class105_sub1 = new SpriteSub1(this, i_207_, i_208_, bool);
         class105_sub1.method979(0, 0, i_207_, i_208_, i, i_206_);
         return class105_sub1;
     }
@@ -1949,19 +1953,19 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3910(byte i, int i_210_);
 
-    final void method3685(Class98 class98, int i) {
+    final void method3685(Component122 class98, int i) {
         try {
             aClass280_8136.method2101(this, class98, i, 0);
             anInt7968++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
-    final Class105 method3691(Class207 class207, boolean bool) {
+    final Component24 method3691(Component170 class207, boolean bool) {
         try {
             anInt7978++;
-            Class105 class105;
+            Component24 class105;
             if (class207.anInt2702 == 0 || class207.anInt2696 == 0) class105 = this.method3662(1, new int[1], (byte) 94, 0, 1, 1);
             else {
                 int[] is = new int[(class207.anInt2702 * class207.anInt2696)];
@@ -1971,13 +1975,13 @@ abstract class ha_Sub3 extends ha {
                     for (int i_212_ = 0; (i_212_ < class207.anInt2696); i_212_++) {
                         for (int i_213_ = 0; i_213_ < class207.anInt2702; i_213_++) {
                             int i_214_ = (class207.anIntArray2697[0xff & (class207.aByteArray2699[i++])]);
-                            is[i_211_++] = (i_214_ != 0 ? Class273.method2057(i_214_, -16777216) : 0);
+                            is[i_211_++] = (i_214_ != 0 ? Component224.method2057(i_214_, -16777216) : 0);
                         }
                     }
                 } else {
                     for (int i_215_ = 0; i_215_ < class207.anInt2696; i_215_++) {
                         for (int i_216_ = 0; class207.anInt2702 > i_216_; i_216_++) {
-                            is[i_211_++] = (Class273.method2057((class207.anIntArray2697[Class139.method1166((class207.aByteArray2699[i]), 255)]), (class207.aByteArray2695[i] << 24)));
+                            is[i_211_++] = (Component224.method2057((class207.anIntArray2697[GpsOverlay.method1166((class207.aByteArray2699[i]), 255)]), (class207.aByteArray2695[i] << 24)));
                             i++;
                         }
                     }
@@ -1987,7 +1991,7 @@ abstract class ha_Sub3 extends ha {
             class105.method985(class207.anInt2703, class207.anInt2700, class207.anInt2698, class207.anInt2701);
             return class105;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -1995,7 +1999,7 @@ abstract class ha_Sub3 extends ha {
         try {
             anInt7918++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.ME(" + i + ',' + i_217_ + ',' + i_218_ + ',' + i_219_ + ',' + i_220_ + ',' + i_221_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_222_ + ',' + i_223_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.ME(" + i + ',' + i_217_ + ',' + i_218_ + ',' + i_219_ + ',' + i_220_ + ',' + i_221_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_222_ + ',' + i_223_ + ')'));
         }
     }
 
@@ -2006,9 +2010,9 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3911(Canvas canvas, int i, Object object);
 
-    final Class101 method3654() {
+    final DisplayModeManagerContainer204 method3654() {
         anInt8060++;
-        return new Class101_Sub2();
+        return new MatrixSub2();
     }
 
     private final void method3912(int i) {
@@ -2058,7 +2062,7 @@ abstract class ha_Sub3 extends ha {
                     if (anInterface5_Impl1_8201.method18(6331)) break;
                 }
             }
-            aClass130_8190 = method3812(0, (new Class58[]{new Class58(Class325.aClass325_4073)}));
+            aClass130_8190 = method3812(0, (new Component255[]{new Component255(ColoredTextBuilder.aClass325_4073)}));
         }
     }
 
@@ -2123,7 +2127,7 @@ abstract class ha_Sub3 extends ha {
         anInt7904++;
         if (i != 1) aStream8088 = null;
         aBoolean8127 = false;
-        if (Class148.aClass196_2042 == this.aClass196_8184) {
+        if (Component3.aClass196_2042 == this.aClass196_8184) {
             method3919(i + 20793);
             method3929(true);
         }
@@ -2195,7 +2199,7 @@ abstract class ha_Sub3 extends ha {
             method3881(anObject8020, (byte) 99, aCanvas7910);
             method3917(false);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.MF(" + (canvas != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.MF(" + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2220,8 +2224,8 @@ abstract class ha_Sub3 extends ha {
         } else f = 1.0F;
         method3903(false);
         method3894(-28186, i_236_);
-        method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
-        method3885(0, true, Class348_Sub40_Sub39.aClass70_9485);
+        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(94, i_237_);
         method3942(5);
         method3926((byte) 86, false);
@@ -2266,8 +2270,8 @@ abstract class ha_Sub3 extends ha {
             f_248_ = f_244_;
         }
         method3926((byte) 88, true);
-        method3885(0, true, Class342.aClass70_4247);
-        method3849((byte) 47, 0, Class342.aClass70_4247);
+        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     final void pa() {
@@ -2298,16 +2302,16 @@ abstract class ha_Sub3 extends ha {
     final void method3923(boolean bool, int i) {
         if (i != 1) {
             if (i != 0) {
-                if (i == 2) method3874(Class328_Sub3.aClass229_6519, 117, Class248.aClass229_3196);
-                else if (i == 3) method3874(Class167.aClass229_2207, 111, Class348_Sub23_Sub2.aClass229_9011);
-                else if (i == 4) method3874(Class348_Sub7.aClass229_6644, 126, Class348_Sub7.aClass229_6644);
-            } else method3874(Class167.aClass229_2207, 120, Class167.aClass229_2207);
-        } else method3874(Class328_Sub3.aClass229_6519, 127, Class328_Sub3.aClass229_6519);
+                if (i == 2) method3874(ShaderCompilerSub3.aClass229_6519, 117, Component253.aClass229_3196);
+                else if (i == 3) method3874(Component385.aClass229_2207, 111, DisplayModeManagerContainer64.aClass229_9011);
+                else if (i == 4) method3874(NodeSub7.aClass229_6644, 126, NodeSub7.aClass229_6644);
+            } else method3874(Component385.aClass229_2207, 120, Component385.aClass229_2207);
+        } else method3874(ShaderCompilerSub3.aClass229_6519, 127, ShaderCompilerSub3.aClass229_6519);
         anInt8034++;
         if (bool != true) aFloatArray8152 = null;
     }
 
-    abstract void method3924(boolean bool, boolean bool_253_, int i, Class70 class70, boolean bool_254_);
+    abstract void method3924(boolean bool, boolean bool_253_, int i, DisplayModeManagerContainer88 class70, boolean bool_254_);
 
     abstract void method3925(int i, Interface5_Impl1 interface5_impl1, int i_255_);
 
@@ -2345,18 +2349,18 @@ abstract class ha_Sub3 extends ha {
                 method3911(canvas, 1, aHashtable8014.get(canvas));
                 aHashtable8014.remove(canvas);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, "wga.AG(" + (canvas != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.method2929(runtimeexception, "wga.AG(" + (canvas != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
     }
 
-    final Class105 method3711(int[] is, int i, int i_260_, int i_261_, int i_262_, boolean bool) {
+    final Component24 method3711(int[] is, int i, int i_260_, int i_261_, int i_262_, boolean bool) {
         try {
             anInt7944++;
-            return new Class105_Sub1(this, i_261_, i_262_, is, i, i_260_);
+            return new SpriteSub1(this, i_261_, i_262_, is, i, i_260_);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_260_ + ',' + i_261_ + ',' + i_262_ + ',' + bool + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_260_ + ',' + i_261_ + ',' + i_262_ + ',' + bool + ')'));
         }
     }
 
@@ -2367,39 +2371,39 @@ abstract class ha_Sub3 extends ha {
     }
 
     final void method3930(byte i) {
-        this.aClass101_Sub2Array8131 = new Class101_Sub2[this.anInt8090];
+        this.aClass101_Sub2Array8131 = new MatrixSub2[this.anInt8090];
         anInterface18Array8098 = new Interface18[this.anInt8090];
-        this.aClass229Array8086 = new Class229[this.anInt8090];
-        this.aClass229Array8092 = new Class229[this.anInt8090];
-        this.aClass251Array8113 = new Class251[this.anInt8090];
+        this.aClass229Array8086 = new Component267[this.anInt8090];
+        this.aClass229Array8092 = new Component267[this.anInt8090];
+        this.aClass251Array8113 = new Component111[this.anInt8090];
         anInt7889++;
         for (int i_263_ = 0; this.anInt8090 > i_263_; i_263_++) {
-            this.aClass229Array8092[i_263_] = Class167.aClass229_2207;
-            this.aClass229Array8086[i_263_] = Class167.aClass229_2207;
-            this.aClass251Array8113[i_263_] = Class348_Sub42_Sub18.aClass251_9685;
-            this.aClass101_Sub2Array8131[i_263_] = new Class101_Sub2();
+            this.aClass229Array8092[i_263_] = Component385.aClass229_2207;
+            this.aClass229Array8086[i_263_] = Component385.aClass229_2207;
+            this.aClass251Array8113[i_263_] = HashNodeSub18.aClass251_9685;
+            this.aClass101_Sub2Array8131[i_263_] = new MatrixSub2();
         }
-        this.aClass348_Sub1Array8132 = new Class348_Sub1[-2 + this.anInt8138];
-        this.anInterface18_8147 = method3861(1, (byte) -84, 1, Class68.aClass68_1183, Class108.aClass304_1662);
+        this.aClass348_Sub1Array8132 = new NodeSub1[-2 + this.anInt8138];
+        this.anInterface18_8147 = method3861(1, (byte) -84, 1, Component342.aClass68_1183, Component83.aClass304_1662);
         method3651(new za_Sub2(262144));
-        this.aClass130_8204 = method3812(0, (new Class58[]{new Class58(new Class325[]{Class325.aClass325_4073, Class325.aClass325_4078})}));
-        this.aClass130_8202 = method3812(i ^ 0x1a, (new Class58[]{new Class58(new Class325[]{Class325.aClass325_4073, Class325.aClass325_4076})}));
-        this.aClass130_8208 = method3812(0, (new Class58[]{new Class58(Class325.aClass325_4073), new Class58(Class325.aClass325_4076), new Class58(Class325.aClass325_4078), new Class58(Class325.aClass325_4075)}));
-        this.aClass130_8191 = method3812(0, (new Class58[]{new Class58(Class325.aClass325_4073), new Class58(Class325.aClass325_4076), new Class58(Class325.aClass325_4078)}));
-        this.aClass64_Sub2_8206 = new Class64_Sub2(this, 0, 0, false, false);
-        this.aClass64_Sub2_8198 = new Class64_Sub2(this, 0, 0, true, true);
-        this.aClass64_Sub2_8192 = new Class64_Sub2(this, 0, 0, false, false);
-        this.aClass64_Sub2_8194 = new Class64_Sub2(this, 0, 0, true, true);
-        this.aClass64_Sub2_8200 = new Class64_Sub2(this, 0, 0, false, false);
-        this.aClass64_Sub2_8187 = new Class64_Sub2(this, 0, 0, true, true);
-        this.aClass64_Sub2_8188 = new Class64_Sub2(this, 0, 0, false, false);
-        this.aClass64_Sub2_8199 = new Class64_Sub2(this, 0, 0, true, true);
-        this.aClass64_Sub2_8207 = new Class64_Sub2(this, 0, 0, false, false);
-        this.aClass64_Sub2_8189 = new Class64_Sub2(this, 0, 0, true, true);
-        aClass280_8136 = new Class280(this);
+        this.aClass130_8204 = method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078})}));
+        this.aClass130_8202 = method3812(i ^ 0x1a, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4076})}));
+        this.aClass130_8208 = method3812(0, (new Component255[]{new Component255(ColoredTextBuilder.aClass325_4073), new Component255(ColoredTextBuilder.aClass325_4076), new Component255(ColoredTextBuilder.aClass325_4078), new Component255(ColoredTextBuilder.aClass325_4075)}));
+        this.aClass130_8191 = method3812(0, (new Component255[]{new Component255(ColoredTextBuilder.aClass325_4073), new Component255(ColoredTextBuilder.aClass325_4076), new Component255(ColoredTextBuilder.aClass325_4078)}));
+        this.aClass64_Sub2_8206 = new DisplayModeManagerContainer190(this, 0, 0, false, false);
+        this.aClass64_Sub2_8198 = new DisplayModeManagerContainer190(this, 0, 0, true, true);
+        this.aClass64_Sub2_8192 = new DisplayModeManagerContainer190(this, 0, 0, false, false);
+        this.aClass64_Sub2_8194 = new DisplayModeManagerContainer190(this, 0, 0, true, true);
+        this.aClass64_Sub2_8200 = new DisplayModeManagerContainer190(this, 0, 0, false, false);
+        this.aClass64_Sub2_8187 = new DisplayModeManagerContainer190(this, 0, 0, true, true);
+        this.aClass64_Sub2_8188 = new DisplayModeManagerContainer190(this, 0, 0, false, false);
+        this.aClass64_Sub2_8199 = new DisplayModeManagerContainer190(this, 0, 0, true, true);
+        this.aClass64_Sub2_8207 = new DisplayModeManagerContainer190(this, 0, 0, false, false);
+        this.aClass64_Sub2_8189 = new DisplayModeManagerContainer190(this, 0, 0, true, true);
+        aClass280_8136 = new Component333(this);
         anInterface5_Impl2_8195 = method3840(-28633, true);
         method3902((byte) -42);
-        this.aClass269_7937 = new Class269(this);
+        this.aClass269_7937 = new Component209(this);
         aClass367Array8139[1] = method3832(1, (byte) -103);
         aClass367Array8139[2] = method3832(2, (byte) -65);
         aClass367Array8139[4] = method3832(4, (byte) -73);
@@ -2419,12 +2423,12 @@ abstract class ha_Sub3 extends ha {
         this.method3673();
     }
 
-    abstract boolean method3931(boolean bool, Class304 class304, Class68 class68);
+    abstract boolean method3931(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68);
 
     final void method3932(byte i) {
-        if (this.aClass196_8184 != Class219.aClass196_2864) {
-            Class196 class196 = this.aClass196_8184;
-            this.aClass196_8184 = Class219.aClass196_2864;
+        if (this.aClass196_8184 != Component386.aClass196_2864) {
+            Component169 class196 = this.aClass196_8184;
+            this.aClass196_8184 = Component386.aClass196_2864;
             if (class196.method1450(-116)) method3913((byte) -100);
             anInt8100 &= ~0x1f;
             this.aFloatArray8135 = aFloatArray8111;
@@ -2450,14 +2454,14 @@ abstract class ha_Sub3 extends ha {
             is[0] = (int) ((float) i_267_ - this.aFloat8126);
             is[2] = (int) f;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.H(" + i + ',' + i_264_ + ',' + i_265_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.H(" + i + ',' + i_264_ + ',' + i_265_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
     final void method3933(int i) {
         anInt7956++;
         if (i >= -34) aClass299_Sub2_8171 = null;
-        method3860(Class348_Sub42_Sub16.aClass21_9661, 2, 8);
+        method3860(HashNodeSub16.aClass21_9661, 2, 8);
     }
 
     final void method3628(int i, int i_268_, int i_269_, int i_270_, int i_271_, int i_272_) {
@@ -2465,20 +2469,20 @@ abstract class ha_Sub3 extends ha {
         float f = method3858(false);
         method3903(false);
         method3894(-28186, i_271_);
-        method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
-        method3885(0, true, Class348_Sub40_Sub39.aClass70_9485);
+        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(89, i_272_);
         this.aClass101_Sub2_8074.method932(1.0F, (float) (-1 + i_270_), (float) (i_269_ - 1), (byte) -33);
         this.aClass101_Sub2_8074.method920(-f + (float) i_268_, false, 0.0F, (float) i - f);
         method3915(0);
         method3926((byte) 98, false);
-        method3860(Class348_Sub5_Sub1.aClass21_8832, 4, 8);
+        method3860(GlWaterShader.aClass21_8832, 4, 8);
         method3926((byte) 104, true);
-        method3885(0, true, Class342.aClass70_4247);
-        method3849((byte) 47, 0, Class342.aClass70_4247);
+        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
-    final Class101_Sub2 method3934(int i) {
+    final MatrixSub2 method3934(int i) {
         if (i > -69) return null;
         anInt8055++;
         return this.aClass101_Sub2_8074;
@@ -2498,10 +2502,10 @@ abstract class ha_Sub3 extends ha {
 
     static final void method3936(int i) {
         anInt7990++;
-        if (Class262.aClass190ArrayArray3335 != null) {
-            for (int i_274_ = 0; (i_274_ < Class262.aClass190ArrayArray3335.length); i_274_++) {
-                for (int i_275_ = 0; (Class262.aClass190ArrayArray3335[i_274_].length > i_275_); i_275_++)
-                    Class262.aClass190ArrayArray3335[i_274_][i_275_] = Class274.aClass190_3547;
+        if (NodeList.aClass190ArrayArray3335 != null) {
+            for (int i_274_ = 0; (i_274_ < NodeList.aClass190ArrayArray3335.length); i_274_++) {
+                for (int i_275_ = 0; (NodeList.aClass190ArrayArray3335[i_274_].length > i_275_); i_275_++)
+                    NodeList.aClass190ArrayArray3335[i_274_][i_275_] = FriendsIgnoreList.aClass190_3547;
             }
         }
         if (i != 0) method3870(-90);
@@ -2509,7 +2513,7 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3937(byte i);
 
-    abstract void method3938(Class21 class21, int i, Interface5_Impl2 interface5_impl2, int i_276_, int i_277_, int i_278_, int i_279_);
+    abstract void method3938(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_276_, int i_277_, int i_278_, int i_279_);
 
     final int method3667(int i, int i_280_) {
         anInt7997++;
@@ -2518,16 +2522,16 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3939(byte i);
 
-    final BitmapFont method3686(Class143 class143, Class207[] class207s, boolean bool) {
+    final BitmapFont method3686(Component184 class143, Component170[] class207s, boolean bool) {
         try {
             anInt7952++;
             return new JaclibBitmapFont(this, class143, class207s, bool);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
-    final void method3642(int i, Class348_Sub1[] class348_sub1s) {
+    final void method3642(int i, NodeSub1[] class348_sub1s) {
         do {
             try {
                 for (int i_281_ = 0; i_281_ < i; i_281_++)
@@ -2537,7 +2541,7 @@ abstract class ha_Sub3 extends ha {
                 if (!this.aClass196_8184.method1450(-94)) break;
                 method3823((byte) 51);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("wga.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("wga.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -2576,9 +2580,9 @@ abstract class ha_Sub3 extends ha {
         method3836(1);
     }
 
-    final Class348_Sub1 method3690(int i, int i_283_, int i_284_, int i_285_, int i_286_, float f) {
+    final NodeSub1 method3690(int i, int i_283_, int i_284_, int i_285_, int i_286_, float f) {
         anInt7894++;
-        return new Class348_Sub1_Sub3(i, i_283_, i_284_, i_285_, i_286_, f);
+        return new NodeSub1Sub3(i, i_283_, i_284_, i_285_, i_286_, f);
     }
 
     final void method3943(boolean bool, int i) {
@@ -2590,13 +2594,13 @@ abstract class ha_Sub3 extends ha {
         }
     }
 
-    final Interface18_Impl3 method3944(byte[] is, int i, Class304 class304, int i_287_, boolean bool, int i_288_) {
+    final Interface18_Impl3 method3944(byte[] is, int i, DisplayModeManagerContainer42 class304, int i_287_, boolean bool, int i_288_) {
         try {
             if (i_287_ != 2) return null;
             anInt7929++;
             return method3843(i_288_, 0, i, 0, is, class304, i_287_ ^ 0x22, bool);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.MG(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + i_287_ + ',' + bool + ',' + i_288_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.MG(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + i_287_ + ',' + bool + ',' + i_288_ + ')'));
         }
     }
 
@@ -2607,7 +2611,7 @@ abstract class ha_Sub3 extends ha {
         return true;
     }
 
-    ha_Sub3(Canvas canvas, Object object, d var_d, Class45 class45, int i, int i_289_) {
+    ha_Sub3(Canvas canvas, Object object, d var_d, CacheStore class45, int i, int i_289_) {
         super(var_d);
         this.aFloat8089 = 3584.0F;
         this.anInt8095 = 50;
@@ -2639,14 +2643,14 @@ abstract class ha_Sub3 extends ha {
         this.anInt8144 = -1;
         this.anInt8154 = 3584;
         this.anInt8107 = 3;
-        aClass367Array8139 = new Class367[10];
+        aClass367Array8139 = new AbstractShader[10];
         this.anInt8150 = 128;
         this.anInt8134 = 512;
         this.aBoolean8164 = false;
         aFloatArray8140 = new float[]{0.0F, 0.0F, 1.0F, 0.0F};
         this.aFloat8169 = 3584.0F;
         this.aBoolean8141 = true;
-        this.aClass173_8163 = Class348_Sub4.aClass173_6602;
+        this.aClass173_8163 = HardwareProbe.aClass173_6602;
         this.aBoolean8148 = true;
         aBoolean8097 = false;
         this.anInt8165 = 0;
@@ -2666,13 +2670,13 @@ abstract class ha_Sub3 extends ha {
         this.aFloat8174 = -1.0F;
         this.aFloatArray8170 = new float[]{0.0F, 0.0F, 1.0F, 0.0F};
         this.anInt8181 = 0;
-        this.aClass196_8184 = Class219.aClass196_2864;
+        this.aClass196_8184 = Component386.aClass196_2864;
         this.aFloat8180 = 1.0F;
         this.aFloat8186 = -1.0F;
         anInt8172 = 16777215;
         this.anInt8183 = 0;
         aStream8088 = new Stream();
-        aClass101_Sub2_8196 = new Class101_Sub2();
+        aClass101_Sub2_8196 = new MatrixSub2();
         try {
             try {
                 this.anInt8117 = i;
@@ -2683,15 +2687,15 @@ abstract class ha_Sub3 extends ha {
                 this.anInt7962 = anInt7987 = dimension.height;
                 this.anInt7931 = anInt7958 = dimension.width;
                 this.anInt8178 = i_289_;
-                Class59_Sub2_Sub1.method566(false, true, (byte) -127);
+                Component54.method566(false, true, (byte) -127);
                 if (this.aD4579 == null) {
                     this.aNativeInterface7924 = new NativeInterface(0, this.anInt8178);
                     aClass372_8137 = null;
                 } else {
-                    aClass372_8137 = new Class372(this, this.aD4579);
+                    aClass372_8137 = new Component86(this, this.aD4579);
                     this.aNativeInterface7924 = new NativeInterface(this.aD4579.method2(true), this.anInt8178);
                     for (int i_290_ = 0; this.aD4579.method2(true) > i_290_; i_290_++) {
-                        Class12 class12 = this.aD4579.method3(i_290_, -6662);
+                        Component319 class12 = this.aD4579.method3(i_290_, -6662);
                         if (class12 != null) this.aNativeInterface7924.initTextureMetrics(i_290_, class12.aByte201, class12.aByte216);
                     }
                 }
@@ -2701,7 +2705,7 @@ abstract class ha_Sub3 extends ha {
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
         }
     }
 
@@ -2717,16 +2721,16 @@ abstract class ha_Sub3 extends ha {
 
     abstract void method3947(int i);
 
-    final void method3684(Class98 class98) {
+    final void method3684(Component122 class98) {
         try {
             aClass280_8136.method2101(this, class98, -1, 0);
             anInt7984++;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, "wga.EF(" + (class98 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.method2929(runtimeexception, "wga.EF(" + (class98 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final Class101_Sub2 method3948(int i) {
+    final MatrixSub2 method3948(int i) {
         if (!aBoolean8121) {
             aClass101_Sub2_8085.method927(this.aClass101_Sub2_8083, (this.aClass101_Sub2_8074));
             aBoolean8121 = true;

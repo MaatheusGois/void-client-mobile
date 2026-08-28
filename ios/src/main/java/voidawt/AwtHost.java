@@ -15,7 +15,7 @@ public final class AwtHost {
     /**
      * Cap longest logical edge, or {@code 0} to use the native view size.
      * Native size fills the phone; a lower cap makes HUD sprites larger when stretched.
-     * Ignored while the client holds an exclusive FS frame ({@code Class34.aFrame476}).
+     * Ignored while the client holds an exclusive FS frame ({@code Component225.aFrame476}).
      */
     public static volatile int LOGICAL_MAX_EDGE = 0;
 
@@ -58,12 +58,12 @@ public final class AwtHost {
     /** Keep surface resize from expanding past exclusive FS (e.g. 800x600). */
     private static int[] fullscreenLogicalSize() {
         try {
-            Object frame = Class.forName("Class34").getDeclaredField("aFrame476").get(null);
+            Object frame = Class.forName("Component225").getDeclaredField("aFrame476").get(null);
             if (frame == null) {
                 return null;
             }
-            int fw = Class.forName("Class346").getDeclaredField("anInt4276").getInt(null);
-            int fh = Class.forName("Class239_Sub8").getDeclaredField("anInt5911").getInt(null);
+            int fw = Class.forName("InputHandler").getDeclaredField("anInt4276").getInt(null);
+            int fh = Class.forName("DisplayModeManagerContainer295").getDeclaredField("anInt5911").getInt(null);
             if (fw <= 0 || fh <= 0) {
                 return null;
             }
@@ -75,15 +75,15 @@ public final class AwtHost {
 
     private static void syncClientViewport(int width, int height) {
         try {
-            setStaticInt("Class92", "anInt1524", width);
+            setStaticInt("DisplayModeManagerContainer23", "anInt1524", width);
             setStaticInt("ha_Sub2", "anInt7666", height);
-            setStaticInt("Class321", "anInt4017", width);
-            setStaticInt("Class348_Sub42_Sub8_Sub2", "anInt10432", height);
-            setStaticInt("Class272", "anInt3473", width);
-            setStaticInt("Class348_Sub22", "anInt6857", height);
-            setStaticInt("Class348_Sub48", "anInt7129", 0);
-            setStaticInt("Class335", "anInt4167", 0);
-            setStaticBoolean("Class50_Sub1", "aBoolean5219", true);
+            setStaticInt("Component236", "anInt4017", width);
+            setStaticInt("PacketReader", "anInt10432", height);
+            setStaticInt("SocketConnector", "anInt3473", width);
+            setStaticInt("NodeSub22", "anInt6857", height);
+            setStaticInt("NodeSub48", "anInt7129", 0);
+            setStaticInt("DisplayModeManagerContainer147", "anInt4167", 0);
+            setStaticBoolean("Cp1252Decoder", "aBoolean5219", true);
         } catch (Throwable ignored) {
         }
     }
@@ -197,17 +197,17 @@ public final class AwtHost {
         try {
             float yawScale = 8f;
             float pitchScale = 4f;
-            Class<?> yawCl = Class.forName("Class314");
+            Class<?> yawCl = Class.forName("Component112");
             java.lang.reflect.Field yawF = yawCl.getDeclaredField("aFloat3938");
             yawF.setAccessible(true);
             yawF.setFloat(null, yawF.getFloat(null) + dx * yawScale);
 
-            Class<?> pitchCl = Class.forName("Class76");
+            Class<?> pitchCl = Class.forName("DisplayModeManagerContainer154");
             java.lang.reflect.Field pitchF = pitchCl.getDeclaredField("aFloat1287");
             pitchF.setAccessible(true);
             pitchF.setFloat(null, pitchF.getFloat(null) + dy * pitchScale);
 
-            Class.forName("Class239_Sub2")
+            Class.forName("DisplayModeManagerContainer199")
                     .getDeclaredMethod("method1725", int.class)
                     .invoke(null, 262144);
         } catch (Throwable ignored) {
@@ -230,10 +230,10 @@ public final class AwtHost {
         injectKey(KeyEvent.KEY_RELEASED, '`', '`');
     }
 
-    /** {@code Class351.aBoolean4328} — developer console visible. */
+    /** {@code StringCache.aBoolean4328} — developer console visible. */
     public static boolean isDevConsoleOpen() {
         try {
-            java.lang.reflect.Field f = Class.forName("Class351").getDeclaredField("aBoolean4328");
+            java.lang.reflect.Field f = Class.forName("StringCache").getDeclaredField("aBoolean4328");
             f.setAccessible(true);
             return f.getBoolean(null);
         } catch (Throwable ignored) {
@@ -243,16 +243,16 @@ public final class AwtHost {
 
     /**
      * Open/close developer console without injecting {@code `} (avoids console text / IME races).
-     * Mirrors {@code Class316.method2363} / {@code Class367_Sub4.method3543}.
+     * Mirrors {@code Component192.method2363} / {@code AbstractShaderSub4.method3543}.
      */
     public static void setDevConsoleOpen(boolean open) {
         try {
             if (open) {
-                Class.forName("Class316")
+                Class.forName("Component192")
                         .getDeclaredMethod("method2363", int.class)
                         .invoke(null, -84);
             } else {
-                Class.forName("Class367_Sub4")
+                Class.forName("AbstractShaderSub4")
                         .getDeclaredMethod("method3543", byte.class)
                         .invoke(null, (byte) -89);
             }

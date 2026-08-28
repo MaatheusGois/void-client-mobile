@@ -7,6 +7,6 @@ final class MicrobotBlockingEvents {
     }
 
     static boolean isBlocking() {
-        return Class132.localPlayer == null;
+        return Component72.localPlayer == null;
     }
 }

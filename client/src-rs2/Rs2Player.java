@@ -73,7 +73,7 @@ final class Rs2Player {
             return Integer.MAX_VALUE;
         }
         int nx = npc.anIntArray10320[0] + za_Sub2.regionTileX;
-        int ny = npc.anIntArray10317[0] + Class90.regionTileY;
+        int ny = npc.anIntArray10317[0] + Component330.regionTileY;
         return distanceTo(nx, ny);
     }
 }

@@ -15,6 +15,13 @@ public class MouseEvent extends AWTEvent {
     public static final int BUTTON1 = 1;
     public static final int BUTTON2 = 2;
     public static final int BUTTON3 = 3;
+    public static final int SHIFT_DOWN_MASK = 1 << 6;
+    public static final int CTRL_DOWN_MASK = 1 << 7;
+    public static final int META_DOWN_MASK = 1 << 8;
+    public static final int ALT_DOWN_MASK = 1 << 9;
+    public static final int BUTTON1_DOWN_MASK = 1 << 10;
+    public static final int BUTTON2_DOWN_MASK = 1 << 11;
+    public static final int BUTTON3_DOWN_MASK = 1 << 12;
 
     private final int x;
     private final int y;

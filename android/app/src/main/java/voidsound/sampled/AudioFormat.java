@@ -3,8 +3,8 @@ package voidsound.sampled;
 /**
  * PCM format descriptor — mirrors {@code javax.sound.sampled.AudioFormat}.
  * <p>
- * RS634 opens 16-bit little-endian PCM at {@code Class22.anInt339} Hz
- * (typically 22050), mono or stereo via {@code Class282.aBoolean3652}.
+ * RS634 opens 16-bit little-endian PCM at {@code Component231.anInt339} Hz
+ * (typically 22050), mono or stereo via {@code Component21.aBoolean3652}.
  */
 public class AudioFormat {
     private final float sampleRate;

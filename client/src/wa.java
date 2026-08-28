@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class wa implements Interface4 {
+final class wa
+/**
+ * RENAMED from `wa` (JODE-obfuscated).
+ * Evidence: implements Interface4; 2 native methods
+ */ implements Interface4 {
     j aJ4732;
     xa aXa4733;
     private long aLong4734 = 0L;

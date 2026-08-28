@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class r_Sub1 extends r {
+final class r_Sub1
+/**
+ * RENAMED from `r_Sub1` (JODE-obfuscated).
+ * Evidence: extends r (r)
+ */ extends r {
     int anInt10466;
     int anInt10467;
     int anInt10468;
@@ -14,9 +18,9 @@ final class r_Sub1 extends r {
     int anInt10474;
     static int anInt10475;
     static int anInt10476;
-    static Class351 aClass351_10477 = new Class351(22, 7);
+    static StringCache aClass351_10477 = new StringCache(22, 7);
     static int[] anIntArray10478 = new int[1];
-    static Class262 aClass262_10479;
+    static NodeList aClass262_10479;
 
     final void method3286(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         this.anInt10466 = i - i_3_;
@@ -55,13 +59,13 @@ final class r_Sub1 extends r {
                         i -= i_7_;
                         i_7_ = this.anInt10466 * i_7_;
                         while (--i >= 0) {
-                            Class33.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_9_ += i_10_;
                             i_7_ += this.anInt10466;
                             i_6_ += i_11_;
                         }
                         while (--i_8_ >= 0) {
-                            Class33.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_6_ += i_11_;
                             i_7_ += this.anInt10466;
                             i_5_ += i_13_;
@@ -71,13 +75,13 @@ final class r_Sub1 extends r {
                         i -= i_7_;
                         i_7_ = this.anInt10466 * i_7_;
                         while (--i >= 0) {
-                            Class33.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                             i_7_ += this.anInt10466;
                             i_6_ += i_11_;
                             i_9_ += i_10_;
                         }
                         while (--i_8_ >= 0) {
-                            Class33.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_6_ += i_11_;
                             i_5_ += i_13_;
                             i_7_ += this.anInt10466;
@@ -100,13 +104,13 @@ final class r_Sub1 extends r {
                         i_8_ -= i_7_;
                         i_7_ *= this.anInt10466;
                         while (--i_8_ >= 0) {
-                            Class33.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                             i_6_ += i_11_;
                         }
                         while (--i >= 0) {
-                            Class33.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                             i_9_ += i_13_;
@@ -116,13 +120,13 @@ final class r_Sub1 extends r {
                         i_8_ -= i_7_;
                         i_7_ *= this.anInt10466;
                         while (--i_8_ >= 0) {
-                            Class33.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_6_ += i_11_;
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                         }
                         while (--i >= 0) {
-                            Class33.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                             i_7_ += this.anInt10466;
                             i_9_ += i_13_;
                             i_5_ += i_10_;
@@ -146,13 +150,13 @@ final class r_Sub1 extends r {
                     i -= i_8_;
                     i_8_ *= this.anInt10466;
                     while (--i >= 0) {
-                        Class33.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
                         i_9_ += i_13_;
                     }
                     while (--i_7_ >= 0) {
-                        Class33.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                         i_5_ += i_10_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
@@ -162,13 +166,13 @@ final class r_Sub1 extends r {
                     i -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i >= 0) {
-                        Class33.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_6_ += i_11_;
                         i_8_ += this.anInt10466;
                         i_9_ += i_13_;
                     }
                     while (--i_7_ >= 0) {
-                        Class33.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_5_ += i_10_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
@@ -191,13 +195,13 @@ final class r_Sub1 extends r {
                     i_7_ -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i_7_ >= 0) {
-                        Class33.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                         i_8_ += this.anInt10466;
                         i_5_ += i_11_;
                         i_9_ += i_13_;
                     }
                     while (--i >= 0) {
-                        Class33.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_6_ += i_10_;
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
@@ -207,13 +211,13 @@ final class r_Sub1 extends r {
                     i_7_ -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i_7_ >= 0) {
-                        Class33.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_5_ += i_11_;
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
                     }
                     while (--i >= 0) {
-                        Class33.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_10_;
@@ -237,13 +241,13 @@ final class r_Sub1 extends r {
                 i_8_ -= i;
                 i = this.anInt10466 * i;
                 while (--i_8_ >= 0) {
-                    Class33.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i += this.anInt10466;
                     i_5_ += i_10_;
                     i_6_ += i_13_;
                 }
                 while (--i_7_ >= 0) {
-                    Class33.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_11_;
                     i_5_ += i_10_;
@@ -253,13 +257,13 @@ final class r_Sub1 extends r {
                 i_8_ -= i;
                 i *= this.anInt10466;
                 while (--i_8_ >= 0) {
-                    Class33.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                     i_6_ += i_13_;
                     i_5_ += i_10_;
                     i += this.anInt10466;
                 }
                 while (--i_7_ >= 0) {
-                    Class33.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_11_;
                     i_5_ += i_10_;
@@ -282,13 +286,13 @@ final class r_Sub1 extends r {
                 i_7_ -= i;
                 i = this.anInt10466 * i;
                 while (--i_7_ >= 0) {
-                    Class33.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i_9_ += i_13_;
                     i += this.anInt10466;
                     i_5_ += i_10_;
                 }
                 while (--i_8_ >= 0) {
-                    Class33.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i_6_ += i_11_;
                     i += this.anInt10466;
                     i_9_ += i_13_;
@@ -298,13 +302,13 @@ final class r_Sub1 extends r {
                 i_7_ -= i;
                 i *= this.anInt10466;
                 while (--i_7_ >= 0) {
-                    Class33.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i_5_ += i_10_;
                     i_9_ += i_13_;
                     i += this.anInt10466;
                 }
                 while (--i_8_ >= 0) {
-                    Class33.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_13_;
                     i_6_ += i_11_;
@@ -340,15 +344,15 @@ final class r_Sub1 extends r {
 
     static final void method3290(int i) {
         if (i < 30) aClass262_10479 = null;
-        IOException_Sub1.method131(Class316.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
+        IOException_Sub1.method131(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
         anInt10470++;
-        Class348_Sub40.aClass279_7042 = Class193.method1439(22050, Class348_Sub23_Sub1.aClass297_8992, Class305.gameCanvas, 0, 7);
-        Class348_Sub42_Sub18.method3273(true, -114, Class172.method1326(null, 9));
-        Class194.aClass279_2596 = Class193.method1439(2048, Class348_Sub23_Sub1.aClass297_8992, Class305.gameCanvas, 1, 7);
-        Class348_Sub43.aClass348_Sub16_Sub4_7065 = new Class348_Sub16_Sub4();
-        Class194.aClass279_2596.method2088(false, Class348_Sub43.aClass348_Sub16_Sub4_7065);
-        Class57.aClass163_1050 = new Class163(22050, Class22.anInt339);
-        Class348_Sub40_Sub17_Sub1.method3093(110);
+        Definition.aClass279_7042 = Component321.method1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
+        HashNodeSub18.method3273(true, -114, Component16.method1326(null, 9));
+        Component276.aClass279_2596 = Component321.method1439(2048, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 1, 7);
+        PlayerState.aClass348_Sub16_Sub4_7065 = new NodeSub16Sub4();
+        Component276.aClass279_2596.method2088(false, PlayerState.aClass348_Sub16_Sub4_7065);
+        DisplayModeManagerContainer115.aClass163_1050 = new ImageTagText(22050, Component231.anInt339);
+        DefinitionSub17Sub1.method3093(110);
     }
 
     final boolean method3291(int i, int i_17_, byte i_18_) {
@@ -361,12 +365,12 @@ final class r_Sub1 extends r {
         try {
             this.aByteArray10471 = new byte[i_19_ * i];
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("fc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_19_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("fc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_19_ + ')'));
         }
     }
 
     static {
-        new Class273("", 76);
-        aClass262_10479 = new Class262();
+        new Component224("", 76);
+        aClass262_10479 = new NodeList();
     }
 }

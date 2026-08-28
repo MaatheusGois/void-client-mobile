@@ -229,7 +229,7 @@ final class SoftwareBitmapFont extends BitmapFont {
         }
     }
 
-    SoftwareBitmapFont(ha_Sub1 var_ha_Sub1, Class143 class143, Class207[] class207s, int[] is, int[] is_103_) {
+    SoftwareBitmapFont(ha_Sub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_103_) {
         super(var_ha_Sub1, class143);
         aHa_Sub1_6486 = var_ha_Sub1;
         anIntArray6489 = is;

@@ -1,6 +1,6 @@
 /**
  * Platform mouse backend for Microbot VirtualMouse.
- * Desktop dispatches AWT events on {@link Class305#gameCanvas}; mobile uses
+ * Desktop dispatches AWT events on {@link DisplayModeManagerContainer50#gameCanvas}; mobile uses
  * voidawt {@code AwtHost} inject APIs (resolved by reflection so desktop builds
  * do not hard-depend on android sources).
  */

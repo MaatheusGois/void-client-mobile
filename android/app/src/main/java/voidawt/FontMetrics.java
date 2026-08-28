@@ -4,7 +4,7 @@ import android.graphics.Paint;
 
 /**
  * AWT {@code FontMetrics} over the Font's {@link Paint}.
- * Must match {@link Graphics#drawString} metrics so {@code Class323} glyph
+ * Must match {@link Graphics#drawString} metrics so {@code FontGlyphCache} glyph
  * crops (ascent/width) line up with the baked pixels.
  */
 public class FontMetrics {

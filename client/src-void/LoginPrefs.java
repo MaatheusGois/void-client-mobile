@@ -122,8 +122,8 @@ final class LoginPrefs {
         if (creds == null) {
             return;
         }
-        Class64_Sub3.aString5600 = creds[0];
-        Class186.aString2496 = creds[1];
+        DisplayModeManagerContainer282.aString5600 = creds[0];
+        DisplayModeManagerContainer51.aString2496 = creds[1];
         fillLoginFields(creds[0], creds[1]);
         if (!Loader.autoLogin || !autoArmed) {
             return;
@@ -144,14 +144,14 @@ final class LoginPrefs {
             return;
         }
         // Same guards as CS2 opcode 5600.
-        if (Class240.clientState != 3) {
+        if (Component49.clientState != 3) {
             return;
         }
-        if (Class225.anInt2955 != 0 || Class367_Sub2.anInt7297 != 0) {
+        if (Component241.anInt2955 != 0 || AbstractShaderSub2.anInt7297 != 0) {
             return;
         }
-        if (Class64_Sub3.aString5600 == null || Class64_Sub3.aString5600.length() == 0
-                || Class186.aString2496 == null || Class186.aString2496.length() == 0) {
+        if (DisplayModeManagerContainer282.aString5600 == null || DisplayModeManagerContainer282.aString5600.length() == 0
+                || DisplayModeManagerContainer51.aString2496 == null || DisplayModeManagerContainer51.aString2496.length() == 0) {
             pendingAutoLogin = false;
             return;
         }
@@ -161,7 +161,7 @@ final class LoginPrefs {
         }
         // Title draw clears pref 1→0 once the iface is up (see client.method116).
         // Leaving earlier left pref at 1 → next cold start forced safe-mode toolkit.
-        if (Class316.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1) {
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1) {
             return;
         }
         if (!graphicsSetupHandled) {
@@ -178,9 +178,9 @@ final class LoginPrefs {
             return;
         }
         pendingAutoLogin = false;
-        System.out.println("void-osrs auto-login go user=" + Class64_Sub3.aString5600);
+        System.out.println("void-osrs auto-login go user=" + DisplayModeManagerContainer282.aString5600);
         // Enter connecting — method3379(6) calls method1922 and leaves the title UI.
-        Class348_Sub49.method3379(2, 6);
+        Buffer.method3379(2, 6);
     }
 
     /**
@@ -189,10 +189,10 @@ final class LoginPrefs {
      */
     private static boolean needsGraphicsAutoSetup() {
         int vram = 0;
-        if (Class348_Sub40_Sub20.aClass348_Sub4_9264 != null) {
-            vram = Class348_Sub40_Sub20.aClass348_Sub4_9264.anInt6609;
+        if (DefinitionSub20.aClass348_Sub4_9264 != null) {
+            vram = DefinitionSub20.aClass348_Sub4_9264.anInt6609;
         }
-        return vram < 512 || Class348_Sub23_Sub2.aBoolean9038 || Class139.aBoolean1952;
+        return vram < 512 || DisplayModeManagerContainer64.aBoolean9038 || GpsOverlay.aBoolean1952;
     }
 
     /**
@@ -208,12 +208,12 @@ final class LoginPrefs {
             return;
         }
         try {
-            Class318_Sub1_Sub4.method2478(1000);
-            Class64_Sub3.anInt5584 = Class316.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
-            Class348_Sub20.method2953((byte) -113);
-            Class14_Sub2.method243(37);
+            Component269.method2478(1000);
+            DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
+            NodeSub20.method2953((byte) -113);
+            DisplayModeManagerContainer389.method243(37);
             r.aBoolean9719 = false;
-            System.out.println("void-osrs graphics auto-setup toolkit=" + Class64_Sub3.anInt5584);
+            System.out.println("void-osrs graphics auto-setup toolkit=" + DisplayModeManagerContainer282.anInt5584);
         } catch (Throwable t) {
             System.out.println("void-osrs graphics auto-setup failed: " + t);
             t.printStackTrace();
@@ -223,9 +223,9 @@ final class LoginPrefs {
     /** True if a type-3 (modal) overlay is open — Auto Setup uses this. */
     private static boolean hasModalOverlay() {
         try {
-            for (Class348_Sub41 o = (Class348_Sub41) Class125.aClass356_4915.method3484(0);
+            for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.method3484(0);
                  o != null;
-                 o = (Class348_Sub41) Class125.aClass356_4915.method3482(0)) {
+                 o = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
                 if (o.anInt7053 == 3) {
                     return true;
                 }
@@ -239,10 +239,10 @@ final class LoginPrefs {
     private static void closeModalOverlays() {
         try {
             for (; ; ) {
-                Class348_Sub41 target = null;
-                for (Class348_Sub41 o = (Class348_Sub41) Class125.aClass356_4915.method3484(0);
+                NodeSub41 target = null;
+                for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.method3484(0);
                      o != null;
-                     o = (Class348_Sub41) Class125.aClass356_4915.method3482(0)) {
+                     o = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
                     if (o.anInt7053 == 3) {
                         target = o;
                         break;
@@ -251,7 +251,7 @@ final class LoginPrefs {
                 if (target == null) {
                     return;
                 }
-                Class127_Sub1.method1118(true, true, target, 2533);
+                Component162.method1118(true, true, target, 2533);
             }
         } catch (Throwable ignored) {
         }
@@ -273,22 +273,22 @@ final class LoginPrefs {
     private static void fillLoginFields(String user, String pass) {
         try {
             int root = r.anInt9721;
-            if (root < 0 || Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
+            if (root < 0 || DefinitionSub33.aClass46ArrayArray9427 == null) {
                 return;
             }
-            if (root >= Class348_Sub40_Sub33.aClass46ArrayArray9427.length) {
+            if (root >= DefinitionSub33.aClass46ArrayArray9427.length) {
                 return;
             }
-            Class46[] all = Class348_Sub40_Sub33.aClass46ArrayArray9427[root];
+            DisplayModeManagerContainer57[] all = DefinitionSub33.aClass46ArrayArray9427[root];
             if (all == null) {
                 return;
             }
-            Class46 first = null;
-            Class46 second = null;
+            DisplayModeManagerContainer57 first = null;
+            DisplayModeManagerContainer57 second = null;
             int firstId = Integer.MAX_VALUE;
             int secondId = Integer.MAX_VALUE;
             for (int i = 0; i < all.length; i++) {
-                Class46 c = all[i];
+                DisplayModeManagerContainer57 c = all[i];
                 if (c == null || c.anInt774 != 4) {
                     continue;
                 }
@@ -312,11 +312,11 @@ final class LoginPrefs {
             }
             if (first != null && !user.equals(first.aString792)) {
                 first.aString792 = user;
-                Class251.method1916(-9343, first);
+                Component111.method1916(-9343, first);
             }
             if (second != null && !pass.equals(second.aString792)) {
                 second.aString792 = pass;
-                Class251.method1916(-9343, second);
+                Component111.method1916(-9343, second);
             }
         } catch (Throwable ignored) {
         }

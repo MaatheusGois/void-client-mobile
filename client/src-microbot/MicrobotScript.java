@@ -1,6 +1,7 @@
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -16,11 +17,14 @@ abstract class MicrobotScript extends MicrobotGlobal {
     /** Default script cadence — ~1 RS tick. */
     static final long DEFAULT_DELAY_MS = 600L;
 
+    // Anonymous ThreadFactory — RoboVM/Soot cannot AOT lambdas (invokedynamic).
     private final ScheduledExecutorService executor =
-            Executors.newSingleThreadScheduledExecutor(r -> {
-                Thread t = new Thread(r, "microbot-script");
-                t.setDaemon(true);
-                return t;
+            Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+                public Thread newThread(Runnable r) {
+                    Thread t = new Thread(r, "microbot-script");
+                    t.setDaemon(true);
+                    return t;
+                }
             });
 
     private final AtomicBoolean running = new AtomicBoolean(false);

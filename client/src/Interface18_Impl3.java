@@ -13,7 +13,7 @@ interface Interface18_Impl3 extends Interface18 {
 
     int method69(boolean bool);
 
-    void method70(int i, int i_12_, byte i_13_, int i_14_, int i_15_, int i_16_, int i_17_, byte[] is, Class304 class304);
+    void method70(int i, int i_12_, byte i_13_, int i_14_, int i_15_, int i_16_, int i_17_, byte[] is, DisplayModeManagerContainer42 class304);
 
     float method71(byte i, float f);
 

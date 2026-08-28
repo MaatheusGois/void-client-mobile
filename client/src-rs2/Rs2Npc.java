@@ -1,6 +1,6 @@
 /**
  * NPC query + interact (menu-inject Attack / action).
- * Attack opcode slot 0 = 25 (see {@link Class286_Sub3#method2150}).
+ * Attack opcode slot 0 = 25 (see {@link ParticleShader#method2150}).
  */
 final class Rs2Npc {
 
@@ -49,9 +49,9 @@ final class Rs2Npc {
             if (n == null || n.aClass79_10505 == null) {
                 continue;
             }
-            Class79 def = n.aClass79_10505;
+            DisplayModeManagerContainer206 def = n.aClass79_10505;
             if (def.anIntArray1377 != null) {
-                def = def.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+                def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (def == null) {
                     continue;
                 }
@@ -72,12 +72,12 @@ final class Rs2Npc {
         if (npc == null || action == null) {
             return false;
         }
-        Class79 def = npc.aClass79_10505;
+        DisplayModeManagerContainer206 def = npc.aClass79_10505;
         if (def == null) {
             return false;
         }
         if (def.anIntArray1377 != null) {
-            def = def.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+            def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (def == null) {
                 return false;
             }
@@ -103,13 +103,13 @@ final class Rs2Npc {
 
     private static String attackLabel() {
         try {
-            return Class274.aClass274_3506.method2063(Class348_Sub33.anInt6967, 544);
+            return FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
         } catch (Throwable t) {
             return "Attack";
         }
     }
 
-    private static boolean hasAction(Class79 def, String action) {
+    private static boolean hasAction(DisplayModeManagerContainer206 def, String action) {
         String[] actions = def.aStringArray1349;
         if (actions == null) {
             return false;
@@ -122,7 +122,7 @@ final class Rs2Npc {
         return false;
     }
 
-    private static int opcodeForAction(Class79 def, String action) {
+    private static int opcodeForAction(DisplayModeManagerContainer206 def, String action) {
         String[] actions = def.aStringArray1349;
         if (actions == null) {
             return -1;

@@ -18,8 +18,8 @@ import voidawt.image.ImageObserver;
  * <p>
  * Draws into a {@link BufferedImage} {@code int[]} ARGB buffer. The canvas path
  * sets {@code presentOnDraw} so {@link #drawImage} pushes frames via
- * {@link AwtHost#present}. Splash loading UI ({@code Class199}) and AWT glyph
- * baking ({@code Class323}) both go through {@link #drawString}.
+ * {@link AwtHost#present}. Splash loading UI ({@code HelveticaFont}) and AWT glyph
+ * baking ({@code FontGlyphCache}) both go through {@link #drawString}.
  */
 public class Graphics {
     private final BufferedImage target;
@@ -106,7 +106,7 @@ public class Graphics {
      * top-left layout — without that flip the splash text renders upside-down.
      * Android does the equivalent with {@code Paint}/{@code Canvas.drawText}.
      * <p>
-     * Callers: splash progress ({@code Class199}), and {@code Class323} glyph bake
+     * Callers: splash progress ({@code HelveticaFont}), and {@code FontGlyphCache} glyph bake
      * (black fill + white string + {@code PixelGrabber}).
      */
     public void drawString(String str, int x, int y) {

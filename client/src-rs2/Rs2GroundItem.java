@@ -1,6 +1,6 @@
 /**
  * Ground-item helpers — interact via orange item menu opcodes (21/10/47/22/5)
- * as built in {@link Class239_Sub24}.
+ * as built in {@link ColoredText}.
  */
 final class Rs2GroundItem {
 
@@ -17,10 +17,10 @@ final class Rs2GroundItem {
 
     static boolean interactNearest(String name, String action) {
         // Ground items are ephemeral in the hover picker; for MVP, walk the
-        // recent ground-item nodes if Class348_Sub34 lists are available via
-        // Class348_Sub37. Fallback: click tip after forcing a Take entry when
+        // recent ground-item nodes if NodeSub34 lists are available via
+        // NodeSub37. Fallback: click tip after forcing a Take entry when
         // the player is standing on a pile (script responsibility to be near).
-        Class46 label = Rs2Widget.findByText(name);
+        DisplayModeManagerContainer57 label = Rs2Widget.findByText(name);
         if (label != null) {
             return Rs2Widget.click(label, action);
         }

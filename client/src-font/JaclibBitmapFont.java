@@ -16,12 +16,12 @@ final class JaclibBitmapFont extends BitmapFont {
         /* empty */
     }
 
-    JaclibBitmapFont(ha_Sub3 var_ha_Sub3, Class143 class143, Class207[] class207s, boolean bool) {
+    JaclibBitmapFont(ha_Sub3 var_ha_Sub3, Component184 class143, Component170[] class207s, boolean bool) {
         super(var_ha_Sub3, class143);
         aHa_Sub3_6494 = var_ha_Sub3;
         int i = 0;
         for (int i_4_ = 0; i_4_ < 256; i_4_++) {
-            Class207 class207 = class207s[i_4_];
+            Component170 class207 = class207s[i_4_];
             if (class207.anInt2696 > i) i = class207.anInt2696;
             if (class207.anInt2702 > i) i = class207.anInt2702;
         }
@@ -29,7 +29,7 @@ final class JaclibBitmapFont extends BitmapFont {
         if (bool) {
             byte[] is = new byte[i_5_ * i_5_];
             for (int i_6_ = 0; i_6_ < 256; i_6_++) {
-                Class207 class207 = class207s[i_6_];
+                Component170 class207 = class207s[i_6_];
                 int i_7_ = class207.anInt2696;
                 int i_8_ = class207.anInt2702;
                 int i_9_ = i_6_ % 16 * i;
@@ -52,17 +52,17 @@ final class JaclibBitmapFont extends BitmapFont {
                     }
                 }
             }
-            if (!var_ha_Sub3.method3880(Class68.aClass68_1183, Class348_Sub40_Sub38.aClass304_9471, (byte) 126)) {
+            if (!var_ha_Sub3.method3880(Component342.aClass68_1183, DefinitionSub38.aClass304_9471, (byte) 126)) {
                 int[] is_19_ = new int[is.length];
                 for (int i_20_ = 0; i_20_ < is.length; i_20_++)
                     is_19_[i_20_] = is[i_20_] << 24;
                 anInterface18_Impl3_6492 = var_ha_Sub3.method3839(i_5_, i_5_, -15137, false, is_19_);
-            } else anInterface18_Impl3_6492 = var_ha_Sub3.method3944(is, i_5_, (Class348_Sub40_Sub38.aClass304_9471), 2, false, i_5_);
+            } else anInterface18_Impl3_6492 = var_ha_Sub3.method3944(is, i_5_, (DefinitionSub38.aClass304_9471), 2, false, i_5_);
             aBoolean6493 = true;
         } else {
             int[] is = new int[i_5_ * i_5_];
             for (int i_21_ = 0; i_21_ < 256; i_21_++) {
-                Class207 class207 = class207s[i_21_];
+                Component170 class207 = class207s[i_21_];
                 int[] is_22_ = class207.anIntArray2697;
                 byte[] is_23_ = class207.aByteArray2695;
                 byte[] is_24_ = class207.aByteArray2699;
@@ -94,7 +94,7 @@ final class JaclibBitmapFont extends BitmapFont {
             anInterface18_Impl3_6492 = var_ha_Sub3.method3839(i_5_, i_5_, -15137, false, is);
             aBoolean6493 = false;
         }
-        anInterface18_Impl3_6492.method64(Class206.aClass209_4874, -22095);
+        anInterface18_Impl3_6492.method64(DisplayModeManagerContainer105.aClass209_4874, -22095);
         anInterface5_Impl1_6495 = var_ha_Sub3.method3889(false, 16711680);
         anInterface5_Impl1_6495.method20(20480, (byte) 126, 20);
         for (int i_36_ = 0; i_36_ < 4; i_36_++) {
@@ -104,7 +104,7 @@ final class JaclibBitmapFont extends BitmapFont {
                 float f = (anInterface18_Impl3_6492.method67((float) i_5_, 96) / (float) i_5_);
                 float f_37_ = (anInterface18_Impl3_6492.method71((byte) -45, (float) i_5_) / (float) i_5_);
                 for (int i_38_ = 0; i_38_ < 256; i_38_++) {
-                    Class207 class207 = class207s[i_38_];
+                    Component170 class207 = class207s[i_38_];
                     int i_39_ = class207.anInt2696;
                     int i_40_ = class207.anInt2702;
                     int i_41_ = class207.anInt2700;
@@ -169,16 +169,16 @@ final class JaclibBitmapFont extends BitmapFont {
         aHa_Sub3_6494.method3927(true);
         aHa_Sub3_6494.method3850((byte) -41, anInterface18_Impl3_6492);
         if (aBoolean6493 || bool) {
-            aHa_Sub3_6494.method3874(Class167.aClass229_2207, 112, Class328_Sub3.aClass229_6519);
-            aHa_Sub3_6494.method3849((byte) 47, 0, Class348_Sub40_Sub39.aClass70_9485);
+            aHa_Sub3_6494.method3874(Component385.aClass229_2207, 112, ShaderCompilerSub3.aClass229_6519);
+            aHa_Sub3_6494.method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
             aHa_Sub3_6494.method3894(-28186, i_50_);
-        } else aHa_Sub3_6494.method3874(Class328_Sub3.aClass229_6519, 126, Class328_Sub3.aClass229_6519);
-        Class101_Sub2 class101_sub2 = aHa_Sub3_6494.method3934(-99);
+        } else aHa_Sub3_6494.method3874(ShaderCompilerSub3.aClass229_6519, 126, ShaderCompilerSub3.aClass229_6519);
+        MatrixSub2 class101_sub2 = aHa_Sub3_6494.method3934(-99);
         class101_sub2.method894(i, i_49_, 0);
         aHa_Sub3_6494.method3915(0);
         aHa_Sub3_6494.method3925(54, anInterface5_Impl1_6495, 0);
         aHa_Sub3_6494.method3862(0, aHa_Sub3_6494.aClass130_8204);
-        aHa_Sub3_6494.method3899(2, c * '\004', Class348_Sub42_Sub16.aClass21_9661, true);
-        if (aBoolean6493 || bool) aHa_Sub3_6494.method3849((byte) 47, 0, Class342.aClass70_4247);
+        aHa_Sub3_6494.method3899(2, c * '\004', HashNodeSub16.aClass21_9661, true);
+        if (aBoolean6493 || bool) aHa_Sub3_6494.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 }

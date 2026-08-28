@@ -11,7 +11,7 @@ final class Rs2TileObjectCache {
     }
 
     void refreshIfNeeded() {
-        int tick = Class367_Sub11.clientCycle;
+        int tick = OpenGlShader.clientCycle;
         if (tick == lastTick) {
             return;
         }
@@ -28,7 +28,7 @@ final class Rs2TileItemCache {
     }
 
     void refreshIfNeeded() {
-        int tick = Class367_Sub11.clientCycle;
+        int tick = OpenGlShader.clientCycle;
         if (tick == lastTick) {
             return;
         }

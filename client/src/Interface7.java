@@ -5,5 +5,5 @@
 interface Interface7 {
     int method31(int i);
 
-    Class69 method32(int i);
+    Component325 method32(int i);
 }

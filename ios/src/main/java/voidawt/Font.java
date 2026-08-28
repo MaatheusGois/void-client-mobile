@@ -9,7 +9,7 @@ import org.robovm.apple.uikit.UIFont;
  * AWT {@code Font} shim for iOS (RoboVM).
  * <p>
  * The 634 client asks for desktop faces like {@code Helvetica} / bold-13 for the
- * splash ({@code Class199}) and for baking toolkit glyphs ({@code Class323}).
+ * splash ({@code HelveticaFont}) and for baking toolkit glyphs ({@code FontGlyphCache}).
  * There is no java.awt on iOS, so we resolve a real {@link UIFont} and expose it
  * to {@link Graphics#drawString} / {@link FontMetrics} via CoreText.
  */

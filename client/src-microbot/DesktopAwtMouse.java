@@ -12,7 +12,7 @@ final class DesktopAwtMouse implements MicrobotMouseBackend {
     }
 
     private Canvas canvas() {
-        return Class305.gameCanvas;
+        return DisplayModeManagerContainer50.gameCanvas;
     }
 
     public void mouseMoved(int x, int y) {

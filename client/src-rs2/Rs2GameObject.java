@@ -1,6 +1,6 @@
 /**
  * Scene object interact — scans tile nodes for {@link Interface10}, resolves
- * {@link Class51} via {@link Class348_Sub40_Sub12#aClass263_9195}.
+ * {@link Component44} via {@link GradientPreset#aClass263_9195}.
  */
 final class Rs2GameObject {
 
@@ -32,7 +32,7 @@ final class Rs2GameObject {
         if (opcode <= 0) {
             return false;
         }
-        long packed = Class348_Sub40_Sub21.method3107((byte) 95, hit.iface, hit.localY, hit.localX);
+        long packed = DefinitionSub21.method3107((byte) 95, hit.iface, hit.localY, hit.localX);
         String target = "<col=00ffff>" + (hit.def.aString884 != null ? hit.def.aString884 : "");
         NewMenuEntry entry = new NewMenuEntry(act, target, opcode, packed, hit.localX, hit.localY, -1);
         Microbot.doInvoke(entry);
@@ -40,32 +40,32 @@ final class Rs2GameObject {
     }
 
     static SceneObjectHit findNearest(String name) {
-        if (Class147.aClass357ArrayArrayArray2029 == null || Class132.localPlayer == null) {
+        if (Component335.aClass357ArrayArrayArray2029 == null || Component72.localPlayer == null) {
             return null;
         }
-        int plane = Class132.localPlayer.plane;
-        if (plane < 0 || plane >= Class147.aClass357ArrayArrayArray2029.length) {
+        int plane = Component72.localPlayer.plane;
+        if (plane < 0 || plane >= Component335.aClass357ArrayArrayArray2029.length) {
             return null;
         }
-        Class357[][] layer = Class147.aClass357ArrayArrayArray2029[plane];
+        Component186[][] layer = Component335.aClass357ArrayArrayArray2029[plane];
         if (layer == null) {
             return null;
         }
         SceneObjectHit best = null;
         int bestDist = Integer.MAX_VALUE;
-        int px = Class132.localPlayer.anIntArray10320[0];
-        int py = Class132.localPlayer.anIntArray10317[0];
+        int px = Component72.localPlayer.anIntArray10320[0];
+        int py = Component72.localPlayer.anIntArray10317[0];
         int minX = Math.max(0, px - 20);
         int maxX = Math.min(layer.length - 1, px + 20);
         for (int x = minX; x <= maxX; x++) {
-            Class357[] col = layer[x];
+            Component186[] col = layer[x];
             if (col == null) {
                 continue;
             }
             int minY = Math.max(0, py - 20);
             int maxY = Math.min(col.length - 1, py + 20);
             for (int y = minY; y <= maxY; y++) {
-                Class357 tile = col[y];
+                Component186 tile = col[y];
                 if (tile == null) {
                     continue;
                 }
@@ -114,7 +114,7 @@ final class Rs2GameObject {
                         best = h;
                     }
                 }
-                for (Class148 link = tile.aClass148_4396; link != null; link = link.aClass148_2038) {
+                for (Component3 link = tile.aClass148_4396; link != null; link = link.aClass148_2038) {
                     h = hitFromNode(link.aClass318_Sub1_Sub3_2040, name, x, y, plane);
                     if (h != null) {
                         int d = Math.max(Math.abs(x - px), Math.abs(y - py));
@@ -143,12 +143,12 @@ final class Rs2GameObject {
         }
         Interface10 iface = (Interface10) node;
         try {
-            Class51 def = Class348_Sub40_Sub12.aClass263_9195.method2005(0, iface.method42(-100));
+            Component44 def = GradientPreset.aClass263_9195.method2005(0, iface.method42(-100));
             if (def == null) {
                 return null;
             }
             if (def.anIntArray945 != null) {
-                def = def.method480(Class318_Sub1_Sub3_Sub3.aClass170_10209, (byte) 47);
+                def = def.method480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47);
                 if (def == null) {
                     return null;
                 }
@@ -163,7 +163,7 @@ final class Rs2GameObject {
         }
     }
 
-    private static int opcodeFor(Class51 def, String action) {
+    private static int opcodeFor(Component44 def, String action) {
         if (def == null || def.aStringArray913 == null || action == null) {
             return -1;
         }
@@ -176,13 +176,13 @@ final class Rs2GameObject {
     }
 
     static final class SceneObjectHit {
-        final Class51 def;
+        final Component44 def;
         final Interface10 iface;
         final int localX;
         final int localY;
         final int plane;
 
-        SceneObjectHit(Class51 def, Interface10 iface, int localX, int localY, int plane) {
+        SceneObjectHit(Component44 def, Interface10 iface, int localX, int localY, int plane) {
             this.def = def;
             this.iface = iface;
             this.localX = localX;

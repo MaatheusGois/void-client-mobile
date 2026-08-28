@@ -7,16 +7,16 @@ import jaggl.OpenGL;
 /** OpenGL ({@link ha_Sub2} / jaggl) bitmap-font backend. */
 final class OpenGLBitmapFont extends BitmapFont {
     private final ha_Sub2 aHa_Sub2_6509;
-    private final Class61 aClass61_6510;
-    private final Class258_Sub3_Sub1 aClass258_Sub3_Sub1_6511;
+    private final Component128 aClass61_6510;
+    private final GlRectangleTexture aClass258_Sub3_Sub1_6511;
     private final boolean aBoolean6512;
 
-    OpenGLBitmapFont(ha_Sub2 var_ha_Sub2, Class143 class143, Class207[] class207s, boolean bool) {
+    OpenGLBitmapFont(ha_Sub2 var_ha_Sub2, Component184 class143, Component170[] class207s, boolean bool) {
         super(var_ha_Sub2, class143);
         aHa_Sub2_6509 = var_ha_Sub2;
         int i = 0;
         for (int i_0_ = 0; i_0_ < 256; i_0_++) {
-            Class207 class207 = class207s[i_0_];
+            Component170 class207 = class207s[i_0_];
             if (class207.anInt2696 > i) i = class207.anInt2696;
             if (class207.anInt2702 > i) i = class207.anInt2702;
         }
@@ -24,7 +24,7 @@ final class OpenGLBitmapFont extends BitmapFont {
         if (bool) {
             byte[] is = new byte[i_1_ * i_1_];
             for (int i_2_ = 0; i_2_ < 256; i_2_++) {
-                Class207 class207 = class207s[i_2_];
+                Component170 class207 = class207s[i_2_];
                 int i_3_ = class207.anInt2696;
                 int i_4_ = class207.anInt2702;
                 int i_5_ = i_2_ % 16 * i;
@@ -47,12 +47,12 @@ final class OpenGLBitmapFont extends BitmapFont {
                     }
                 }
             }
-            aClass258_Sub3_Sub1_6511 = Class371.method3583(false, is, 6406, i_1_, var_ha_Sub2, -86, 6406, i_1_);
+            aClass258_Sub3_Sub1_6511 = Component307.method3583(false, is, 6406, i_1_, var_ha_Sub2, -86, 6406, i_1_);
             aBoolean6512 = true;
         } else {
             int[] is = new int[i_1_ * i_1_];
             for (int i_15_ = 0; i_15_ < 256; i_15_++) {
-                Class207 class207 = class207s[i_15_];
+                Component170 class207 = class207s[i_15_];
                 int[] is_16_ = class207.anIntArray2697;
                 byte[] is_17_ = class207.aByteArray2695;
                 byte[] is_18_ = class207.aByteArray2699;
@@ -81,15 +81,15 @@ final class OpenGLBitmapFont extends BitmapFont {
                     }
                 }
             }
-            aClass258_Sub3_Sub1_6511 = Class348_Sub40_Sub32.method3132(is, 0, 0, i_1_, i_1_, var_ha_Sub2, false, (byte) 12);
+            aClass258_Sub3_Sub1_6511 = DefinitionSub32.method3132(is, 0, 0, i_1_, i_1_, var_ha_Sub2, false, (byte) 12);
             aBoolean6512 = false;
         }
         aClass258_Sub3_Sub1_6511.method1957(9728, false);
-        aClass61_6510 = new Class61(var_ha_Sub2, 256);
+        aClass61_6510 = new Component128(var_ha_Sub2, 256);
         float f = (aClass258_Sub3_Sub1_6511.aFloat9937 / (float) (aClass258_Sub3_Sub1_6511.anInt9940));
         float f_30_ = (aClass258_Sub3_Sub1_6511.aFloat9938 / (float) (aClass258_Sub3_Sub1_6511.anInt9939));
         for (int i_31_ = 0; i_31_ < 256; i_31_++) {
-            Class207 class207 = class207s[i_31_];
+            Component170 class207 = class207s[i_31_];
             int i_32_ = class207.anInt2696;
             int i_33_ = class207.anInt2702;
             int i_34_ = class207.anInt2700;
@@ -117,7 +117,7 @@ final class OpenGLBitmapFont extends BitmapFont {
 
     final void method2578(char c, int i, int i_42_, int i_43_, boolean bool, aa var_aa, int i_44_, int i_45_) {
         aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
-        Class258_Sub3_Sub1 class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
+        GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
         aHa_Sub2_6509.method3735(9473);
         aHa_Sub2_6509.method3771((byte) -109, aClass258_Sub3_Sub1_6511);
         if (aBoolean6512 || bool) {

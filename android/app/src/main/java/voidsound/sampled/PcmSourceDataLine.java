@@ -6,7 +6,7 @@ import android.media.AudioTrack;
 import android.util.Log;
 
 /**
- * Android PCM sink for the 634 mixer ({@code Class279_Sub1}).
+ * Android PCM sink for the 634 mixer ({@code SourceAudioLine}).
  * <p>
  * Mixer thread writes LE 16-bit frames into a {@link ByteRing}; a dedicated
  * high-priority pump drains the ring into {@link AudioTrack} (MODE_STREAM).

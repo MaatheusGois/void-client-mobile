@@ -16,7 +16,7 @@ final class MicrobotWidgets {
     private MicrobotWidgets() {
     }
 
-    static Class46 get(int packedId) {
+    static DisplayModeManagerContainer57 get(int packedId) {
         try {
             return BitmapFont.method2570(1512932720, packedId);
         } catch (Throwable t) {
@@ -24,9 +24,9 @@ final class MicrobotWidgets {
         }
     }
 
-    static Class46 getChild(int packedParent, int child) {
+    static DisplayModeManagerContainer57 getChild(int packedParent, int child) {
         try {
-            return Class348_Sub22.method2957(child, (byte) -54, packedParent);
+            return NodeSub22.method2957(child, (byte) -54, packedParent);
         } catch (Throwable t) {
             return null;
         }
@@ -34,7 +34,7 @@ final class MicrobotWidgets {
 
     /** Absolute scene tile X for local player. */
     static int localAbsX() {
-        Player p = Class132.localPlayer;
+        Player p = Component72.localPlayer;
         if (p == null) {
             return -1;
         }
@@ -42,15 +42,15 @@ final class MicrobotWidgets {
     }
 
     static int localAbsY() {
-        Player p = Class132.localPlayer;
+        Player p = Component72.localPlayer;
         if (p == null) {
             return -1;
         }
-        return p.anIntArray10317[0] + Class90.regionTileY;
+        return p.anIntArray10317[0] + Component330.regionTileY;
     }
 
     static int localPlane() {
-        Player p = Class132.localPlayer;
+        Player p = Component72.localPlayer;
         return p != null ? p.plane : 0;
     }
 }

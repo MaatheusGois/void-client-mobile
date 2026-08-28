@@ -2,8 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class r_Sub2 extends r {
-    static Class45 aClass45_10480;
+final class r_Sub2
+/**
+ * RENAMED from `r_Sub2` (JODE-obfuscated).
+ * Evidence: extends r (r)
+ */ extends r {
+    static CacheStore aClass45_10480;
     static int anInt10481;
     int anInt10482;
     static int anInt10483 = 0;
@@ -11,11 +15,11 @@ final class r_Sub2 extends r {
     static int anInt10485;
     byte[] aByteArray10486;
     int anInt10487;
-    static Class252 aClass252_10488;
+    static Component278 aClass252_10488;
     int anInt10489;
     static int anInt10490;
     static int anInt10491;
-    static Class262 aClass262_10492 = new Class262();
+    static NodeList aClass262_10492 = new NodeList();
 
     final void method3292(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         this.anInt10484 = i_1_;
@@ -71,13 +75,13 @@ final class r_Sub2 extends r {
                     i_11_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i_6_ >> 16, i_7_, -36, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -36, 0, this.aByteArray10486, i >> 16);
                         i_6_ += i_12_;
                         i_7_ += this.anInt10482;
                         i += i_15_;
                     }
                     while (--i_10_ >= 0) {
-                        Class304.method2289(i_9_ >> 16, i_7_, -104, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_7_, -104, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_7_ += this.anInt10482;
                         i_9_ += i_14_;
@@ -87,13 +91,13 @@ final class r_Sub2 extends r {
                     i_11_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i >> 16, i_7_, -111, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -111, 0, this.aByteArray10486, i_6_ >> 16);
                         i_7_ += this.anInt10482;
                         i += i_15_;
                         i_6_ += i_12_;
                     }
                     while (--i_10_ >= 0) {
-                        Class304.method2289(i >> 16, i_7_, -120, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -120, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_14_;
                         i_7_ += this.anInt10482;
                         i += i_15_;
@@ -116,13 +120,13 @@ final class r_Sub2 extends r {
                     i_10_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_10_ >= 0) {
-                        Class304.method2289(i_6_ >> 16, i_7_, -75, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -75, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_15_;
                         i_7_ += this.anInt10482;
                         i_6_ += i_12_;
                     }
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i_6_ >> 16, i_7_, -62, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -62, 0, this.aByteArray10486, i >> 16);
                         i_7_ += this.anInt10482;
                         i_6_ += i_12_;
                         i += i_14_;
@@ -132,13 +136,13 @@ final class r_Sub2 extends r {
                     i_10_ -= i_7_;
                     i_7_ *= this.anInt10482;
                     while (--i_10_ >= 0) {
-                        Class304.method2289(i_9_ >> 16, i_7_, -102, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_7_, -102, 0, this.aByteArray10486, i_6_ >> 16);
                         i_7_ += this.anInt10482;
                         i_9_ += i_15_;
                         i_6_ += i_12_;
                     }
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i >> 16, i_7_, -92, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -92, 0, this.aByteArray10486, i_6_ >> 16);
                         i += i_14_;
                         i_6_ += i_12_;
                         i_7_ += this.anInt10482;
@@ -163,13 +167,13 @@ final class r_Sub2 extends r {
                     i_11_ -= i_10_;
                     i_10_ = this.anInt10482 * i_10_;
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i >> 16, i_10_, -68, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -68, 0, this.aByteArray10486, i_6_ >> 16);
                         i_6_ += i_14_;
                         i_10_ += this.anInt10482;
                         i += i_15_;
                     }
                     while (--i_7_ >= 0) {
-                        Class304.method2289(i >> 16, i_10_, -101, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -101, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_12_;
                         i += i_15_;
                         i_10_ += this.anInt10482;
@@ -179,13 +183,13 @@ final class r_Sub2 extends r {
                     i_11_ -= i_10_;
                     i_10_ *= this.anInt10482;
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i_6_ >> 16, i_10_, -99, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_10_, -99, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_6_ += i_14_;
                         i_10_ += this.anInt10482;
                     }
                     while (--i_7_ >= 0) {
-                        Class304.method2289(i_9_ >> 16, i_10_, -122, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -122, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_9_ += i_12_;
                         i_10_ += this.anInt10482;
@@ -208,13 +212,13 @@ final class r_Sub2 extends r {
                     i_7_ -= i_10_;
                     i_10_ = this.anInt10482 * i_10_;
                     while (--i_7_ >= 0) {
-                        Class304.method2289(i_9_ >> 16, i_10_, -36, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -36, 0, this.aByteArray10486, i >> 16);
                         i_10_ += this.anInt10482;
                         i += i_15_;
                         i_9_ += i_14_;
                     }
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i_9_ >> 16, i_10_, -48, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -48, 0, this.aByteArray10486, i_6_ >> 16);
                         i_9_ += i_14_;
                         i_6_ += i_12_;
                         i_10_ += this.anInt10482;
@@ -224,13 +228,13 @@ final class r_Sub2 extends r {
                     i_7_ -= i_10_;
                     i_10_ *= this.anInt10482;
                     while (--i_7_ >= 0) {
-                        Class304.method2289(i >> 16, i_10_, -83, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -83, 0, this.aByteArray10486, i_9_ >> 16);
                         i += i_15_;
                         i_9_ += i_14_;
                         i_10_ += this.anInt10482;
                     }
                     while (--i_11_ >= 0) {
-                        Class304.method2289(i_6_ >> 16, i_10_, -104, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_10_, -104, 0, this.aByteArray10486, i_9_ >> 16);
                         i_10_ += this.anInt10482;
                         i_9_ += i_14_;
                         i_6_ += i_12_;
@@ -254,13 +258,13 @@ final class r_Sub2 extends r {
                 i_7_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_7_ >= 0) {
-                    Class304.method2289(i >> 16, i_11_, -62, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i >> 16, i_11_, -62, 0, this.aByteArray10486, i_9_ >> 16);
                     i += i_12_;
                     i_9_ += i_14_;
                     i_11_ += this.anInt10482;
                 }
                 while (--i_10_ >= 0) {
-                    Class304.method2289(i_6_ >> 16, i_11_, -66, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -66, 0, this.aByteArray10486, i_9_ >> 16);
                     i_6_ += i_15_;
                     i_9_ += i_14_;
                     i_11_ += this.anInt10482;
@@ -270,13 +274,13 @@ final class r_Sub2 extends r {
                 i_7_ -= i_11_;
                 i_11_ *= this.anInt10482;
                 while (--i_7_ >= 0) {
-                    Class304.method2289(i_9_ >> 16, i_11_, -67, 0, this.aByteArray10486, i >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -67, 0, this.aByteArray10486, i >> 16);
                     i_9_ += i_14_;
                     i += i_12_;
                     i_11_ += this.anInt10482;
                 }
                 while (--i_10_ >= 0) {
-                    Class304.method2289(i_9_ >> 16, i_11_, -108, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -108, 0, this.aByteArray10486, i_6_ >> 16);
                     i_9_ += i_14_;
                     i_6_ += i_15_;
                     i_11_ += this.anInt10482;
@@ -299,13 +303,13 @@ final class r_Sub2 extends r {
                 i_10_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_10_ >= 0) {
-                    Class304.method2289(i_9_ >> 16, i_11_, -85, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -85, 0, this.aByteArray10486, i_6_ >> 16);
                     i_6_ += i_12_;
                     i_11_ += this.anInt10482;
                     i_9_ += i_14_;
                 }
                 while (--i_7_ >= 0) {
-                    Class304.method2289(i >> 16, i_11_, -92, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i >> 16, i_11_, -92, 0, this.aByteArray10486, i_6_ >> 16);
                     i_11_ += this.anInt10482;
                     i += i_15_;
                     i_6_ += i_12_;
@@ -315,13 +319,13 @@ final class r_Sub2 extends r {
                 i_10_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_10_ >= 0) {
-                    Class304.method2289(i_6_ >> 16, i_11_, -113, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -113, 0, this.aByteArray10486, i_9_ >> 16);
                     i_11_ += this.anInt10482;
                     i_6_ += i_12_;
                     i_9_ += i_14_;
                 }
                 while (--i_7_ >= 0) {
-                    Class304.method2289(i_6_ >> 16, i_11_, -125, 0, this.aByteArray10486, i >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -125, 0, this.aByteArray10486, i >> 16);
                     i_6_ += i_12_;
                     i += i_15_;
                     i_11_ += this.anInt10482;
@@ -347,8 +351,8 @@ final class r_Sub2 extends r {
         this.aByteArray10486 = new byte[i * i_19_];
     }
 
-    static final Class318_Sub1_Sub4 method3297(int i, int i_20_, int i_21_) {
-        Class357 class357 = Class147.aClass357ArrayArrayArray2029[i][i_20_][i_21_];
+    static final Component269 method3297(int i, int i_20_, int i_21_) {
+        Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_][i_21_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub4_4406;
     }

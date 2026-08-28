@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class xa implements Interface13, Interface19 {
+final class xa
+/**
+ * RENAMED from `xa` (JODE-obfuscated).
+ * Evidence: implements Interface13, Interface19; 2 native methods
+ */ implements Interface13, Interface19 {
     long nativeid = 0L;
 
     private final native void r(int i, int i_0_);
@@ -14,7 +18,7 @@ final class xa implements Interface13, Interface19 {
     }
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     xa(int i, int i_1_) {

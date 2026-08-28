@@ -9,7 +9,7 @@ final class IOException_Sub1 extends IOException {
     static int anInt87;
     static int anInt88;
     static int anInt89;
-    static Class114 aClass114_90 = new Class114(42, -1);
+    static Component183 aClass114_90 = new Component183(42, -1);
     static int[] anIntArray91 = new int[8];
 
     static final void method129(int i, int i_0_, long[] ls, int i_1_, int[] is) {
@@ -46,7 +46,7 @@ final class IOException_Sub1 extends IOException {
                 if (i_0_ < -72) break;
                 method130(99);
             } catch (RuntimeException runtimeexception) {
-                throw Class348_Sub17.method2929(runtimeexception, ("gv.A(" + i + ',' + i_0_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.method2929(runtimeexception, ("gv.A(" + i + ',' + i_0_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -62,9 +62,9 @@ final class IOException_Sub1 extends IOException {
     static final void method131(boolean bool, int i, boolean bool_9_, int i_10_) {
         anInt87++;
         if (i_10_ < 8000 || i_10_ > 48000) throw new IllegalArgumentException();
-        Class253.anInt3248 = i;
-        Class22.anInt339 = i_10_;
-        Class282.aBoolean3652 = bool;
+        Component193.anInt3248 = i;
+        Component231.anInt339 = i_10_;
+        Component21.aBoolean3652 = bool;
         if (bool_9_ != true) method130(-125);
     }
 

@@ -12,13 +12,13 @@ final class Rs2PlayerCache {
     }
 
     void refreshIfNeeded() {
-        int tick = Class367_Sub11.clientCycle;
+        int tick = OpenGlShader.clientCycle;
         if (tick == lastTick) {
             return;
         }
         lastTick = tick;
-        local = Class132.localPlayer;
-        int n = Class328_Sub1.anInt6513;
+        local = Component72.localPlayer;
+        int n = ShaderCompilerSub1.anInt6513;
         if (n < 0) {
             n = 0;
         }
@@ -26,10 +26,10 @@ final class Rs2PlayerCache {
             players = new Player[Math.max(n, 32)];
         }
         count = 0;
-        int[] indices = Class286_Sub7.anIntArray6290;
+        int[] indices = ShaderProgramSub7.anIntArray6290;
         for (int i = 0; i < n && indices != null; i++) {
             try {
-                Player p = Class294.aPlayerArray5058[indices[i]];
+                Player p = InterfaceRenderer.aPlayerArray5058[indices[i]];
                 if (p != null) {
                     players[count++] = p;
                 }

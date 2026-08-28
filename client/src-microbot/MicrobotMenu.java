@@ -2,7 +2,7 @@
  * Menu-inject helpers — 634 equivalent of Microbot's MenuEntryAdded rewrite.
  * <p>
  * Primary invoke path: build a {@link MenuEntry} and call
- * {@link Class325#method2599} on the client thread (same handler as a real tip
+ * {@link ColoredTextBuilder#method2599} on the client thread (same handler as a real tip
  * click). Centre-canvas VirtualMouse is unreliable under fullscreen widgets.
  */
 final class MicrobotMenu {
@@ -31,8 +31,8 @@ final class MicrobotMenu {
             return null;
         }
         match.priority = PRIORITY_FORCE;
-        Class316.menuTip = match;
-        Class135_Sub2.menuTipSecondary = match;
+        Component192.menuTip = match;
+        MenuOpener.menuTipSecondary = match;
         return match;
     }
 
@@ -49,7 +49,7 @@ final class MicrobotMenu {
 
     /**
      * Client-thread: turn {@link Microbot#pendingDispatch} into a real
-     * {@link Class325#method2599} call (stock opcode path).
+     * {@link ColoredTextBuilder#method2599} call (stock opcode path).
      */
     static void dispatchPending() {
         NewMenuEntry t = Microbot.pendingDispatch;
@@ -63,7 +63,7 @@ final class MicrobotMenu {
             int cy = Microbot.pendingClickY;
             Microbot.log("dispatch op=" + t.getOpcode() + " id=" + t.getIdentifier()
                     + " '" + t.getOption() + "'");
-            Class325.processMenuAction((byte) 109, entry, cy, cx);
+            ColoredTextBuilder.processMenuAction((byte) 109, entry, cy, cx);
         } catch (Throwable ex) {
             System.out.println("microbot dispatch failed: " + ex.getMessage());
             ex.printStackTrace();
@@ -71,7 +71,7 @@ final class MicrobotMenu {
         }
     }
 
-    /** Build a menu row matching {@link Class50_Sub3#method466} field layout. */
+    /** Build a menu row matching {@link DisplayModeManagerContainer368#method466} field layout. */
     static MenuEntry buildEntry(NewMenuEntry t) {
         return new MenuEntry(
                 t.getOption(),
@@ -88,7 +88,7 @@ final class MicrobotMenu {
                 false);
     }
 
-    /** Clears tip bookkeeping after {@link Class325#method2599} consumes an action. */
+    /** Clears tip bookkeeping after {@link ColoredTextBuilder#method2599} consumes an action. */
     static void onMenuOptionClicked() {
         Microbot.targetMenu = null;
         Microbot.pendingMenuInject = false;
@@ -99,9 +99,9 @@ final class MicrobotMenu {
         if (wantOp >= 2000) {
             wantOp -= 2000;
         }
-        for (MenuEntry entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
              entry != null;
-             entry = (MenuEntry) Class348_Sub40_Sub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
             int op = entry.opcode;
             if (op >= 2000) {
                 op -= 2000;
@@ -125,11 +125,11 @@ final class MicrobotMenu {
 
     private static MenuEntry plant(NewMenuEntry t) {
         try {
-            Class348_Sub40_Sub4.menuEntries.method1996(103);
-            Class73.menuEntryCount = 0;
-            Class50_Sub3.addMenuEntry(false, "", 0, (byte) -93, false, 0, -1, true,
+            DefinitionSub4.menuEntries.method1996(103);
+            DisplayModeManagerContainer306.menuEntryCount = 0;
+            DisplayModeManagerContainer368.addMenuEntry(false, "", 0, (byte) -93, false, 0, -1, true,
                     1006, 0L, "Cancel", 0L, -1);
-            Class50_Sub3.addMenuEntry(false, t.getTarget(), t.getParam1(), (byte) -93, false,
+            DisplayModeManagerContainer368.addMenuEntry(false, t.getTarget(), t.getParam1(), (byte) -93, false,
                     t.getParam0(), t.getItemId(), true, t.getOpcode(), t.getIdentifier(),
                     t.getOption(), t.getIdentifier(), PRIORITY_FORCE);
             return findMatching(t);

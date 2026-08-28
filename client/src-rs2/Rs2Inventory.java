@@ -1,6 +1,6 @@
 /**
  * Inventory backpack facade — scans loaded interface trees for item-bearing
- * components ({@link Class46#anInt812} &gt; 0). Interact via {@link Rs2Widget}.
+ * components ({@link DisplayModeManagerContainer57#anInt812} &gt; 0). Interact via {@link Rs2Widget}.
  */
 final class Rs2Inventory {
 
@@ -9,7 +9,7 @@ final class Rs2Inventory {
 
     static int count(int itemId) {
         int total = 0;
-        Class46[] slots = slots();
+        DisplayModeManagerContainer57[] slots = slots();
         for (int i = 0; i < slots.length; i++) {
             if (slots[i] != null && slots[i].anInt812 == itemId) {
                 total++;
@@ -23,7 +23,7 @@ final class Rs2Inventory {
     }
 
     static boolean isFull() {
-        Class46[] slots = slots();
+        DisplayModeManagerContainer57[] slots = slots();
         int filled = 0;
         int capacity = 0;
         for (int i = 0; i < slots.length; i++) {
@@ -39,7 +39,7 @@ final class Rs2Inventory {
     }
 
     static boolean interact(int itemId, String action) {
-        Class46 slot = findSlot(itemId);
+        DisplayModeManagerContainer57 slot = findSlot(itemId);
         if (slot == null) {
             return false;
         }
@@ -58,8 +58,8 @@ final class Rs2Inventory {
         return interact(itemId, "Drop");
     }
 
-    static Class46 findSlot(int itemId) {
-        Class46[] slots = slots();
+    static DisplayModeManagerContainer57 findSlot(int itemId) {
+        DisplayModeManagerContainer57[] slots = slots();
         for (int i = 0; i < slots.length; i++) {
             if (slots[i] != null && slots[i].anInt812 == itemId) {
                 return slots[i];
@@ -72,13 +72,13 @@ final class Rs2Inventory {
      * Collect item components under inventory-ish groups. Prefers group
      * {@link MicrobotWidgets#INVENTORY_GROUP}, else any visible item grid.
      */
-    static Class46[] slots() {
+    static DisplayModeManagerContainer57[] slots() {
         java.util.ArrayList list = new java.util.ArrayList();
         collectGroup(MicrobotWidgets.INVENTORY_GROUP, list);
         if (list.isEmpty()) {
             // Fallback: first group with many item children
-            if (Class348_Sub40_Sub33.aClass46ArrayArray9427 != null) {
-                Class46[][] roots = Class348_Sub40_Sub33.aClass46ArrayArray9427;
+            if (DefinitionSub33.aClass46ArrayArray9427 != null) {
+                DisplayModeManagerContainer57[][] roots = DefinitionSub33.aClass46ArrayArray9427;
                 for (int g = 0; g < roots.length; g++) {
                     int before = list.size();
                     collectGroup(g, list);
@@ -92,17 +92,17 @@ final class Rs2Inventory {
                 }
             }
         }
-        return (Class46[]) list.toArray(new Class46[list.size()]);
+        return (DisplayModeManagerContainer57[]) list.toArray(new DisplayModeManagerContainer57[list.size()]);
     }
 
     private static void collectGroup(int group, java.util.ArrayList list) {
-        if (Class348_Sub40_Sub33.aClass46ArrayArray9427 == null) {
+        if (DefinitionSub33.aClass46ArrayArray9427 == null) {
             return;
         }
-        if (group < 0 || group >= Class348_Sub40_Sub33.aClass46ArrayArray9427.length) {
+        if (group < 0 || group >= DefinitionSub33.aClass46ArrayArray9427.length) {
             return;
         }
-        Class46[] all = Class348_Sub40_Sub33.aClass46ArrayArray9427[group];
+        DisplayModeManagerContainer57[] all = DefinitionSub33.aClass46ArrayArray9427[group];
         if (all == null) {
             return;
         }
@@ -111,7 +111,7 @@ final class Rs2Inventory {
         }
     }
 
-    private static void collectItems(Class46 c, java.util.ArrayList list) {
+    private static void collectItems(DisplayModeManagerContainer57 c, java.util.ArrayList list) {
         if (c == null) {
             return;
         }

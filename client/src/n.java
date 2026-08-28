@@ -2,12 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class n extends BitmapFont implements Interface19 {
+final class n
+/**
+ * RENAMED from `n` (JODE-obfuscated).
+ * Evidence: extends BitmapFont; implements Interface19; 4 native font methods
+ */ extends BitmapFont implements Interface19 {
     long nativeid;
 
     private final native void S(oa var_oa, ya var_ya, byte[][] is, int[] is_0_, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_);
 
-    n(oa var_oa, ya var_ya, Class143 class143, Class207[] class207s, Class105[] class105s) {
+    n(oa var_oa, ya var_ya, Component184 class143, Component170[] class207s, Component24[] class105s) {
         super(var_oa, class143);
         byte[][] is = new byte[class207s.length][];
         int[] is_5_ = new int[class207s.length];
@@ -27,7 +31,7 @@ final class n extends BitmapFont implements Interface19 {
     public final native void w(boolean bool);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final native void fa(char c, int i, int i_9_, int i_10_, boolean bool);

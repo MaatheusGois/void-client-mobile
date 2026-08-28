@@ -2,7 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class j extends Class105 implements Interface19 {
+final class j
+/**
+ * RENAMED from `j` (JODE-obfuscated).
+ * Evidence: extends Class105 (Sprite/texture); implements Interface19; 19 native methods
+ */ extends Component24 implements Interface19 {
     long nativeid;
 
     private final native void R(long l, boolean bool);
@@ -98,7 +102,7 @@ final class j extends Class105 implements Interface19 {
     private final native int I(long l);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     private final native void ua(oa var_oa, int[] is, int i, int i_91_, int i_92_, int i_93_, boolean bool);

@@ -3,5 +3,5 @@
  */
 
 interface Interface12 {
-    Class223 method51(byte i);
+    DisplayModeManagerContainer369 method51(byte i);
 }

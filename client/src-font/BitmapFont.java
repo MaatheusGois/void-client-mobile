@@ -37,12 +37,12 @@ abstract class BitmapFont {
     static int anInt4059;
     static int anInt4060;
     static int anInt4061;
-    static Class138 aClass138_4062 = new Class138(2, 4, 4, 0);
-    private Class143 aClass143_4063;
+    static Component161 aClass138_4062 = new Component161(2, 4, 4, 0);
+    private Component184 aClass143_4063;
     static int anInt4064;
     static int anInt4065;
 
-    private final void method2566(Class105[] class105s, int[] is, int i, int[] is_0_, int[] is_1_, int i_2_, String string, int i_3_) {
+    private final void method2566(Component24[] class105s, int[] is, int i, int[] is_0_, int[] is_1_, int i_2_, String string, int i_3_) {
         try {
             i_2_ -= aClass143_4063.anInt1992;
             anInt4058++;
@@ -53,7 +53,7 @@ abstract class BitmapFont {
                 int i_7_ = string.length();
                 int i_8_ = 0;
                 for (/**/; i_7_ > i_8_; i_8_++) {
-                    char c = (char) (Class354.method3464(string.charAt(i_8_), false) & 0xff);
+                    char c = (char) (Component160.method3464(string.charAt(i_8_), false) & 0xff);
                     if (c == 60) i_4_ = i_8_;
                     else {
                         if (c == 62 && i_4_ != -1) {
@@ -77,8 +77,8 @@ abstract class BitmapFont {
                                                     if (is != null) i_11_ = is[i_6_];
                                                     else i_11_ = 0;
                                                     i_6_++;
-                                                    int i_12_ = (Class348_Sub41.method3156(true, (string_9_.substring(4))));
-                                                    Class105 class105 = class105s[i_12_];
+                                                    int i_12_ = (NodeSub41.method3156(true, (string_9_.substring(4))));
+                                                    Component24 class105 = class105s[i_12_];
                                                     int i_13_ = (is_0_ == null ? class105.method980() : is_0_[i_12_]);
                                                     class105.method964(i + i_10_, (-i_13_ + (aClass143_4063.anInt1992) + (i_2_ - -i_11_)), 1, 0, 1);
                                                     i += class105s[i_12_].method966();
@@ -102,17 +102,17 @@ abstract class BitmapFont {
                             if (is == null) i_15_ = 0;
                             else i_15_ = is[i_6_];
                             if (c != 32) {
-                                if ((Class20.anInt320 & ~0xffffff) != 0) fa(c, 1 + i - -i_14_, i_2_ - -1 + i_15_, Class20.anInt320, true);
-                                fa(c, i + i_14_, i_2_ + i_15_, Class348_Sub42_Sub1.anInt9492, false);
-                            } else if (Class131.anInt1902 > 0) {
-                                Class258.anInt4848 += Class131.anInt1902;
-                                i += Class258.anInt4848 >> 8;
-                                Class258.anInt4848 &= 0xff;
+                                if ((Component120.anInt320 & ~0xffffff) != 0) fa(c, 1 + i - -i_14_, i_2_ - -1 + i_15_, Component120.anInt320, true);
+                                fa(c, i + i_14_, i_2_ + i_15_, HashNodeSub1.anInt9492, false);
+                            } else if (Component286.anInt1902 > 0) {
+                                AbstractGlTexture.anInt4848 += Component286.anInt1902;
+                                i += AbstractGlTexture.anInt4848 >> 8;
+                                AbstractGlTexture.anInt4848 &= 0xff;
                             }
                             i_6_++;
                             int i_16_ = aClass143_4063.method1184((byte) -48, c);
                             if (Player.anInt10567 != -1) aHa4048.method3649((byte) -103, i_16_, i_2_ - -(int) ((double) (aClass143_4063.anInt1992) * 0.7), Player.anInt10567, i);
-                            if (Class348_Sub40_Sub2.anInt9101 != -1) aHa4048.method3649((byte) -96, i_16_, (aClass143_4063.anInt1992) + i_2_, (Class348_Sub40_Sub2.anInt9101), i);
+                            if (DefinitionSub2.anInt9101 != -1) aHa4048.method3649((byte) -96, i_16_, (aClass143_4063.anInt1992) + i_2_, (DefinitionSub2.anInt9101), i);
                             i_5_ = c;
                             i += i_16_;
                         }
@@ -120,11 +120,11 @@ abstract class BitmapFont {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.V(" + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.V(" + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ')'));
         }
     }
 
-    final void method2567(int i, String string, byte i_17_, int i_18_, int i_19_, int i_20_, Class105[] class105s, int[] is) {
+    final void method2567(int i, String string, byte i_17_, int i_18_, int i_19_, int i_20_, Component24[] class105s, int[] is) {
         try {
             anInt4056++;
             if (i_17_ > 114 && string != null) {
@@ -132,11 +132,11 @@ abstract class BitmapFont {
                 method2583(0, i, 0, class105s, null, string, is, 25625, i_20_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.R(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.R(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final int method2568(int[] is, int i, byte i_21_, aa var_aa, int i_22_, Class105[] class105s, int i_23_, int i_24_, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
+    final int method2568(int[] is, int i, byte i_21_, aa var_aa, int i_22_, Component24[] class105s, int i_23_, int i_24_, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
         try {
             anInt4054++;
             if (string == null) return 0;
@@ -145,13 +145,13 @@ abstract class BitmapFont {
             int[] is_33_;
             if ((aClass143_4063.anInt1993 + aClass143_4063.anInt1988 - -i_32_) <= i || i_32_ + i_32_ <= i) is_33_ = new int[]{i_25_};
             else is_33_ = null;
-            int i_34_ = aClass143_4063.method1188(string, is_33_, Class156.aStringArray2113, (byte) 87, class105s);
+            int i_34_ = aClass143_4063.method1188(string, is_33_, ClientErrorReporter.aStringArray2113, (byte) 87, class105s);
             if (i_31_ == -1) {
                 i_31_ = i / i_32_;
                 if (i_31_ <= 0) i_31_ = 1;
             }
             if (i_31_ > 0 && i_31_ <= i_34_) {
-                Class156.aStringArray2113[i_31_ - 1] = aClass143_4063.method1181(class105s, i_25_, (Class156.aStringArray2113[i_31_ - 1]), (byte) 55);
+                ClientErrorReporter.aStringArray2113[i_31_ - 1] = aClass143_4063.method1181(class105s, i_25_, (ClientErrorReporter.aStringArray2113[i_31_ - 1]), (byte) 55);
                 i_34_ = i_31_;
             }
             if (i_26_ == 3 && i_34_ == 1) i_26_ = 1;
@@ -167,19 +167,19 @@ abstract class BitmapFont {
                 } else i_36_ = (-aClass143_4063.anInt1993 + i + (i_24_ - (i_34_ + -1) * i_32_));
             } else i_36_ = ((-aClass143_4063.anInt1993 + (-aClass143_4063.anInt1988 + i + -(i_32_ * (-1 + i_34_)))) / 2 + (aClass143_4063.anInt1988 + i_24_));
             for (int i_38_ = 0; i_38_ < i_34_; i_38_++) {
-                if (i_29_ == 0) method2583(i_27_, i_36_, i_22_, class105s, var_aa, Class156.aStringArray2113[i_38_], is, 25625, i_28_);
-                else if (i_29_ == 1) method2583(i_27_, i_36_, i_22_, class105s, var_aa, Class156.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (Class156.aStringArray2113[i_38_])) + i_25_) / 2 + i_28_);
-                else if (i_29_ == 2) method2583(i_27_, i_36_, i_22_, class105s, var_aa, Class156.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (Class156.aStringArray2113[i_38_])) + (i_25_ + i_28_)));
+                if (i_29_ == 0) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, i_28_);
+                else if (i_29_ == 1) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (ClientErrorReporter.aStringArray2113[i_38_])) + i_25_) / 2 + i_28_);
+                else if (i_29_ == 2) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (ClientErrorReporter.aStringArray2113[i_38_])) + (i_25_ + i_28_)));
                 else if (i_38_ != i_34_ - 1) {
-                    method2580(Class156.aStringArray2113[i_38_], 0, i_25_);
-                    method2583(i_27_, i_36_, i_22_, class105s, var_aa, Class156.aStringArray2113[i_38_], is, 25625, i_28_);
-                    Class131.anInt1902 = 0;
-                } else method2583(i_27_, i_36_, i_22_, class105s, var_aa, Class156.aStringArray2113[i_38_], is, 25625, i_28_);
+                    method2580(ClientErrorReporter.aStringArray2113[i_38_], 0, i_25_);
+                    method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, i_28_);
+                    Component286.anInt1902 = 0;
+                } else method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, i_28_);
                 i_36_ += i_32_;
             }
             return i_34_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.W(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_22_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_23_ + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.W(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_22_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_23_ + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
         }
     }
 
@@ -204,19 +204,19 @@ abstract class BitmapFont {
         }
     }
 
-    static final Class46 method2570(int i, int i_45_) {
+    static final DisplayModeManagerContainer57 method2570(int i, int i_45_) {
         anInt4055++;
         if (i != 1512932720) return null;
         int i_46_ = i_45_ >> 16;
         int i_47_ = i_45_ & 0xffff;
-        if (Class348_Sub40_Sub33.aClass46ArrayArray9427[i_46_] == null || (Class348_Sub40_Sub33.aClass46ArrayArray9427[i_46_][i_47_] == null)) {
-            boolean bool = Class320.method2547(i_46_, (byte) 84);
+        if (DefinitionSub33.aClass46ArrayArray9427[i_46_] == null || (DefinitionSub33.aClass46ArrayArray9427[i_46_][i_47_] == null)) {
+            boolean bool = Component233.method2547(i_46_, (byte) 84);
             if (!bool) return null;
         }
-        return Class348_Sub40_Sub33.aClass46ArrayArray9427[i_46_][i_47_];
+        return DefinitionSub33.aClass46ArrayArray9427[i_46_][i_47_];
     }
 
-    final int method2571(int i, int i_48_, int[] is, String string, int i_49_, int i_50_, Class105[] class105s, int i_51_, int i_52_, Random random) {
+    final int method2571(int i, int i_48_, int[] is, String string, int i_49_, int i_50_, Component24[] class105s, int i_51_, int i_52_, Random random) {
         try {
             anInt4047++;
             if (string == null) return 0;
@@ -234,7 +234,7 @@ abstract class BitmapFont {
             method2566(class105s, null, i_52_, is, is_55_, i_51_, string, 174);
             return i_56_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.BA(" + i + ',' + i_48_ + ',' + (is != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i_49_ + ',' + i_50_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_51_ + ',' + i_52_ + ',' + (random != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.BA(" + i + ',' + i_48_ + ',' + (is != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i_49_ + ',' + i_50_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_51_ + ',' + i_52_ + ',' + (random != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -247,29 +247,29 @@ abstract class BitmapFont {
         anInt4046++;
         try {
             if (i <= -78) {
-                if (string.startsWith("col=")) Class348_Sub42_Sub1.anInt9492 = (Class348_Sub42_Sub1.anInt9492 & ~0xffffff | Class48.method450(-20188, string.substring(4), 16) & 0xffffff);
-                else if (string.equals("/col")) Class348_Sub42_Sub1.anInt9492 = (Class348_Sub42_Sub1.anInt9492 & ~0xffffff | 0xffffff & Class186_Sub1.anInt5807);
-                if (string.startsWith("argb=")) Class348_Sub42_Sub1.anInt9492 = Class48.method450(-20188, string.substring(5), 16);
+                if (string.startsWith("col=")) HashNodeSub1.anInt9492 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.method450(-20188, string.substring(4), 16) & 0xffffff);
+                else if (string.equals("/col")) HashNodeSub1.anInt9492 = (HashNodeSub1.anInt9492 & ~0xffffff | 0xffffff & Component134.anInt5807);
+                if (string.startsWith("argb=")) HashNodeSub1.anInt9492 = Component377.method450(-20188, string.substring(5), 16);
                 else if (!string.equals("/argb")) {
                     if (!string.startsWith("str=")) {
-                        if (string.equals("str")) Player.anInt10567 = (Class348_Sub42_Sub1.anInt9492 & ~0xffffff | 0x800000);
+                        if (string.equals("str")) Player.anInt10567 = (HashNodeSub1.anInt9492 & ~0xffffff | 0x800000);
                         else if (!string.equals("/str")) {
                             if (!string.startsWith("u=")) {
                                 if (!string.equals("u")) {
                                     if (!string.equals("/u")) {
                                         if (!string.equalsIgnoreCase("shad=-1")) {
-                                            if (string.startsWith("shad=")) Class20.anInt320 = ((~0xffffff & (Class348_Sub42_Sub1.anInt9492)) | (Class48.method450(-20188, string.substring(5), 16)));
-                                            else if (string.equals("shad")) Class20.anInt320 = (~0xffffff & (Class348_Sub42_Sub1.anInt9492));
+                                            if (string.startsWith("shad=")) Component120.anInt320 = ((~0xffffff & (HashNodeSub1.anInt9492)) | (Component377.method450(-20188, string.substring(5), 16)));
+                                            else if (string.equals("shad")) Component120.anInt320 = (~0xffffff & (HashNodeSub1.anInt9492));
                                             else if (!string.equals("/shad")) {
-                                                if (string.equals("br")) method2579((Class151.anInt2061), 117, (Class186_Sub1.anInt5807));
-                                            } else Class20.anInt320 = Class151.anInt2061;
-                                        } else Class20.anInt320 = 0;
-                                    } else Class348_Sub40_Sub2.anInt9101 = -1;
-                                } else Class348_Sub40_Sub2.anInt9101 = (Class348_Sub42_Sub1.anInt9492 & ~0xffffff);
-                            } else Class348_Sub40_Sub2.anInt9101 = ((Class348_Sub42_Sub1.anInt9492 & ~0xffffff) | Class48.method450(-20188, string.substring(2), 16));
+                                                if (string.equals("br")) method2579((DisplayModeManagerContainer346.anInt2061), 117, (Component134.anInt5807));
+                                            } else Component120.anInt320 = DisplayModeManagerContainer346.anInt2061;
+                                        } else Component120.anInt320 = 0;
+                                    } else DefinitionSub2.anInt9101 = -1;
+                                } else DefinitionSub2.anInt9101 = (HashNodeSub1.anInt9492 & ~0xffffff);
+                            } else DefinitionSub2.anInt9101 = ((HashNodeSub1.anInt9492 & ~0xffffff) | Component377.method450(-20188, string.substring(2), 16));
                         } else Player.anInt10567 = -1;
-                    } else Player.anInt10567 = (Class348_Sub42_Sub1.anInt9492 & ~0xffffff | Class48.method450(-20188, string.substring(4), 16));
-                } else Class348_Sub42_Sub1.anInt9492 = Class186_Sub1.anInt5807;
+                    } else Player.anInt10567 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.method450(-20188, string.substring(4), 16));
+                } else HashNodeSub1.anInt9492 = Component134.anInt5807;
             }
         } catch (Exception exception) {
             /* empty */
@@ -350,15 +350,15 @@ abstract class BitmapFont {
     abstract void method2578(char c, int i, int i_81_, int i_82_, boolean bool, aa var_aa, int i_83_, int i_84_);
 
     private final void method2579(int i, int i_85_, int i_86_) {
-        Class348_Sub40_Sub2.anInt9101 = -1;
+        DefinitionSub2.anInt9101 = -1;
         if (i == -1) i = 0;
-        Class348_Sub42_Sub1.anInt9492 = Class186_Sub1.anInt5807 = i_86_;
-        Class258.anInt4848 = 0;
-        Class131.anInt1902 = 0;
+        HashNodeSub1.anInt9492 = Component134.anInt5807 = i_86_;
+        AbstractGlTexture.anInt4848 = 0;
+        Component286.anInt1902 = 0;
         int i_87_ = -28 / ((56 - i_85_) / 49);
         anInt4053++;
         Player.anInt10567 = -1;
-        Class20.anInt320 = Class151.anInt2061 = i;
+        Component120.anInt320 = DisplayModeManagerContainer346.anInt2061 = i;
     }
 
     private final void method2580(String string, int i, int i_88_) {
@@ -372,7 +372,7 @@ abstract class BitmapFont {
                 else if (!bool && i_91_ == 32) i_89_++;
             } else bool = true;
         }
-        if (i_89_ > 0) Class131.anInt1902 = (-aClass143_4063.method1183(true, string) + i_88_ << 8) / i_89_;
+        if (i_89_ > 0) Component286.anInt1902 = (-aClass143_4063.method1183(true, string) + i_88_ << 8) / i_89_;
     }
 
     final void method2581(String string, int i, int i_92_, int i_93_, byte i_94_, int i_95_, int i_96_) {
@@ -391,7 +391,7 @@ abstract class BitmapFont {
         }
     }
 
-    static final Class89 method2582(Class377 class377, Class39[] class39s, int i) {
+    static final Component84 method2582(GlExtensionManager class377, DisplayModeManagerContainer271[] class39s, int i) {
         try {
             anInt4065++;
             if (i != -2113) aClass138_4062 = null;
@@ -402,29 +402,29 @@ abstract class BitmapFont {
             for (int i_101_ = 0; class39s.length > i_101_; i_101_++)
                 OpenGL.glAttachObjectARB(l, (class39s[i_101_].aLong517));
             OpenGL.glLinkProgramARB(l);
-            OpenGL.glGetObjectParameterivARB(l, 35714, Class211.anIntArray2744, 0);
-            if (Class211.anIntArray2744[0] == 0) {
-                if (Class211.anIntArray2744[0] == 0) System.out.println("Shader linking failed:");
-                OpenGL.glGetObjectParameterivARB(l, 35716, Class211.anIntArray2744, 1);
-                if (Class211.anIntArray2744[1] > 1) {
-                    byte[] is = new byte[Class211.anIntArray2744[1]];
-                    OpenGL.glGetInfoLogARB(l, Class211.anIntArray2744[1], Class211.anIntArray2744, 0, is, 0);
+            OpenGL.glGetObjectParameterivARB(l, 35714, DisplayModeManagerContainer159.anIntArray2744, 0);
+            if (DisplayModeManagerContainer159.anIntArray2744[0] == 0) {
+                if (DisplayModeManagerContainer159.anIntArray2744[0] == 0) System.out.println("aa linking failed:");
+                OpenGL.glGetObjectParameterivARB(l, 35716, DisplayModeManagerContainer159.anIntArray2744, 1);
+                if (DisplayModeManagerContainer159.anIntArray2744[1] > 1) {
+                    byte[] is = new byte[DisplayModeManagerContainer159.anIntArray2744[1]];
+                    OpenGL.glGetInfoLogARB(l, DisplayModeManagerContainer159.anIntArray2744[1], DisplayModeManagerContainer159.anIntArray2744, 0, is, 0);
                     System.out.println(new String(is));
                 }
-                if (Class211.anIntArray2744[0] == 0) {
+                if (DisplayModeManagerContainer159.anIntArray2744[0] == 0) {
                     for (int i_102_ = 0; class39s.length > i_102_; i_102_++)
                         OpenGL.glDetachObjectARB(l, (class39s[i_102_].aLong517));
                     OpenGL.glDeleteObjectARB(l);
                     return null;
                 }
             }
-            return new Class89(class377, l, class39s);
+            return new Component84(class377, l, class39s);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.M(" + (class377 != null ? "{...}" : "null") + ',' + (class39s != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.M(" + (class377 != null ? "{...}" : "null") + ',' + (class39s != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
-    private final void method2583(int i, int i_103_, int i_104_, Class105[] class105s, aa var_aa, String string, int[] is, int i_105_, int i_106_) {
+    private final void method2583(int i, int i_103_, int i_104_, Component24[] class105s, aa var_aa, String string, int[] is, int i_105_, int i_106_) {
         try {
             i_103_ -= aClass143_4063.anInt1992;
             anInt4061++;
@@ -434,7 +434,7 @@ abstract class BitmapFont {
             if (i_105_ == 25625) {
                 int i_110_ = 0;
                 for (/**/; i_110_ < i_109_; i_110_++) {
-                    char c = (char) (Class354.method3464(string.charAt(i_110_), false) & 0xff);
+                    char c = (char) (Component160.method3464(string.charAt(i_110_), false) & 0xff);
                     if (c == 60) i_107_ = i_110_;
                     else {
                         if (c == 62 && i_107_ != -1) {
@@ -451,10 +451,10 @@ abstract class BitmapFont {
                                         else {
                                             if (string_111_.startsWith("img=")) {
                                                 try {
-                                                    int i_112_ = (Class348_Sub41.method3156(true, (string_111_.substring(4))));
-                                                    Class105 class105 = class105s[i_112_];
+                                                    int i_112_ = (NodeSub41.method3156(true, (string_111_.substring(4))));
+                                                    Component24 class105 = class105s[i_112_];
                                                     int i_113_ = (is == null ? class105.method980() : is[i_112_]);
-                                                    if (((Class348_Sub42_Sub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (aClass143_4063.anInt1992) + i_103_), 0, (0xffffff | (~0xffffff & (Class348_Sub42_Sub1.anInt9492))), 1);
+                                                    if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (aClass143_4063.anInt1992) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
                                                     else class105.method964(i_106_, ((aClass143_4063.anInt1992) + (i_103_ - i_113_)), 1, 0, 1);
                                                     i_108_ = -1;
                                                     i_106_ += class105s[i_112_].method966();
@@ -472,20 +472,20 @@ abstract class BitmapFont {
                             if (i_108_ != -1) i_106_ += aClass143_4063.method1182(i_108_, (byte) -90, c);
                             if (c != 32) {
                                 if (var_aa == null) {
-                                    if ((Class20.anInt320 & ~0xffffff) != 0) fa(c, i_106_ + 1, 1 + i_103_, Class20.anInt320, true);
-                                    fa(c, i_106_, i_103_, Class348_Sub42_Sub1.anInt9492, false);
+                                    if ((Component120.anInt320 & ~0xffffff) != 0) fa(c, i_106_ + 1, 1 + i_103_, Component120.anInt320, true);
+                                    fa(c, i_106_, i_103_, HashNodeSub1.anInt9492, false);
                                 } else {
-                                    if ((~0xffffff & Class20.anInt320) != 0) method2578(c, 1 + i_106_, i_103_ + 1, Class20.anInt320, true, var_aa, i_104_, i);
-                                    method2578(c, i_106_, i_103_, Class348_Sub42_Sub1.anInt9492, false, var_aa, i_104_, i);
+                                    if ((~0xffffff & Component120.anInt320) != 0) method2578(c, 1 + i_106_, i_103_ + 1, Component120.anInt320, true, var_aa, i_104_, i);
+                                    method2578(c, i_106_, i_103_, HashNodeSub1.anInt9492, false, var_aa, i_104_, i);
                                 }
-                            } else if (Class131.anInt1902 > 0) {
-                                Class258.anInt4848 += Class131.anInt1902;
-                                i_106_ += Class258.anInt4848 >> 8;
-                                Class258.anInt4848 &= 0xff;
+                            } else if (Component286.anInt1902 > 0) {
+                                AbstractGlTexture.anInt4848 += Component286.anInt1902;
+                                i_106_ += AbstractGlTexture.anInt4848 >> 8;
+                                AbstractGlTexture.anInt4848 &= 0xff;
                             }
                             int i_114_ = aClass143_4063.method1184((byte) -48, c);
                             if (Player.anInt10567 != -1) aHa4048.method3649((byte) -119, i_114_, (int) ((double) aClass143_4063.anInt1992 * 0.7) + i_103_, Player.anInt10567, i_106_);
-                            if (Class348_Sub40_Sub2.anInt9101 != -1) aHa4048.method3649((byte) -114, i_114_, (aClass143_4063.anInt1992) + (i_103_ + 1), (Class348_Sub40_Sub2.anInt9101), i_106_);
+                            if (DefinitionSub2.anInt9101 != -1) aHa4048.method3649((byte) -114, i_114_, (aClass143_4063.anInt1992) + (i_103_ + 1), (DefinitionSub2.anInt9101), i_106_);
                             i_106_ += i_114_;
                             i_108_ = c;
                         }
@@ -493,30 +493,30 @@ abstract class BitmapFont {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.AA(" + i + ',' + i_103_ + ',' + i_104_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_105_ + ',' + i_106_ + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.AA(" + i + ',' + i_103_ + ',' + i_104_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_105_ + ',' + i_106_ + ')'));
         }
     }
 
-    BitmapFont(ha var_ha, Class143 class143) {
+    BitmapFont(ha var_ha, Component184 class143) {
         try {
             aClass143_4063 = class143;
             aHa4048 = var_ha;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final int method2584(int[] is, int i, int i_115_, Class105[] class105s, int i_116_, int i_117_, int i_118_, aa var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
+    final int method2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, aa var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
         try {
             if (bool != false) method2570(-23, 41);
             anInt4057++;
             return method2568(is, i_118_, (byte) 97, var_aa, i_120_, class105s, i_116_, i_119_, i_122_, i_117_, string, i_121_, i_123_, i_124_, i_115_, 0, i);
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.J(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_115_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_119_ + ',' + i_120_ + ',' + i_121_ + ',' + i_122_ + ',' + i_123_ + ',' + bool + ',' + i_124_ + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.J(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_115_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_119_ + ',' + i_120_ + ',' + i_121_ + ',' + i_122_ + ',' + i_123_ + ',' + bool + ',' + i_124_ + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final int method2585(int[] is, int i, Class105[] class105s, int i_125_, int i_126_, int i_127_, int i_128_, Random random, int i_129_, int i_130_, int i_131_, int i_132_, int i_133_, String string, int[] is_134_) {
+    final int method2585(int[] is, int i, Component24[] class105s, int i_125_, int i_126_, int i_127_, int i_128_, Random random, int i_129_, int i_130_, int i_131_, int i_132_, int i_133_, String string, int[] is_134_) {
         try {
             anInt4050++;
             if (string == null) return 0;
@@ -553,7 +553,7 @@ abstract class BitmapFont {
             }
             return i_138_;
         } catch (RuntimeException runtimeexception) {
-            throw Class348_Sub17.method2929(runtimeexception, ("da.P(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ',' + i_125_ + ',' + i_126_ + ',' + i_127_ + ',' + i_128_ + ',' + (random != null ? "{...}" : "null") + ',' + i_129_ + ',' + i_130_ + ',' + i_131_ + ',' + i_132_ + ',' + i_133_ + ',' + (string != null ? "{...}" : "null") + ',' + (is_134_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.method2929(runtimeexception, ("da.P(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ',' + i_125_ + ',' + i_126_ + ',' + i_127_ + ',' + i_128_ + ',' + (random != null ? "{...}" : "null") + ',' + i_129_ + ',' + i_130_ + ',' + i_131_ + ',' + i_132_ + ',' + i_133_ + ',' + (string != null ? "{...}" : "null") + ',' + (is_134_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -4,7 +4,11 @@
 
 import java.awt.*;
 
-final class p extends Class348 implements Interface19 {
+final class p
+/**
+ * RENAMED from `p` (JODE-obfuscated).
+ * Evidence: extends Node; implements Interface19; 5 native methods
+ */ extends Node implements Interface19 {
     long nativeid;
     private static boolean aBoolean5144 = false;
     int anInt5145;
@@ -22,9 +26,9 @@ final class p extends Class348 implements Interface19 {
 
     private final void method3432(Exception exception) {
         if (!aBoolean5144) {
-            aLong5146 = Class62.method599(-54);
+            aLong5146 = Component240.method599(-54);
             aBoolean5144 = true;
-        } else if (Class62.method599(-88) - aLong5146 < 30000L) this.aCanvas5147.repaint();
+        } else if (Component240.method599(-88) - aLong5146 < 30000L) this.aCanvas5147.repaint();
         else throw new RuntimeException(exception.getMessage());
     }
 
@@ -43,7 +47,7 @@ final class p extends Class348 implements Interface19 {
     }
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Class257.method1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     p(oa var_oa, Canvas canvas, int i, int i_11_) {

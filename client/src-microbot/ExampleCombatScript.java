@@ -43,7 +43,7 @@ final class ExampleCombatScript {
      * Called once per {@link client#method114} while {@link #isRunning()}.
      */
     void pulse() {
-        if (!running || Class132.localPlayer == null) {
+        if (!running || Component72.localPlayer == null) {
             return;
         }
         if (++heartbeat % HEARTBEAT_FRAMES == 1) {
@@ -91,9 +91,9 @@ final class ExampleCombatScript {
             if (n == null || n.aClass79_10505 == null) {
                 continue;
             }
-            Class79 def = n.aClass79_10505;
+            DisplayModeManagerContainer206 def = n.aClass79_10505;
             if (def.anIntArray1377 != null) {
-                Class79 t = def.method794(Class318_Sub1_Sub3_Sub3.aClass170_10209, -1);
+                DisplayModeManagerContainer206 t = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (t != null) {
                     def = t;
                 }
