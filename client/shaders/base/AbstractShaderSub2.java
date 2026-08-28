@@ -68,7 +68,7 @@ final class AbstractShaderSub2
             if (class45 == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
             else aClass193_7293 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "transparent_water", -29832), aClass377_7296, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -88,7 +88,7 @@ final class AbstractShaderSub2
         }
     }
 
-    public static void method3537(int i) {
+    public static void clearStatics(int i) {
         aShortArrayArrayArray7290 = null;
         if (i != 34336) anInt7297 = 99;
     }
@@ -114,25 +114,26 @@ final class AbstractShaderSub2
         return aClass193_7293 != null;
     }
 
-    static final void method3538(boolean bool, String string) {
+    /** Remove {@code string} from the ignore list and notify the server. */
+    static final void removeIgnore(boolean bool, String string) {
         anInt7291++;
         if (string != null) {
             if (string.startsWith("*")) string = string.substring(1);
             String string_8_ = DebugPanicSub1.method2127(2, string);
             if (string_8_ != null) {
                 if (bool != true) method3536(9, 65, -72, 107, null);
-                for (int i = 0; (MenuEntry.anInt9604 > i); i++) {
-                    String string_9_ = Component44.aStringArray932[i];
+                for (int i = 0; (MenuEntry.ignoreCount > i); i++) {
+                    String string_9_ = Component44.ignoreNames[i];
                     if (string_9_.startsWith("*")) string_9_ = string_9_.substring(1);
                     string_9_ = DebugPanicSub1.method2127(2, string_9_);
                     if (string_9_ != null && string_9_.equals(string_8_)) {
-                        MenuEntry.anInt9604--;
-                        for (int i_10_ = i; MenuEntry.anInt9604 > i_10_; i_10_++) {
-                            Component44.aStringArray932[i_10_] = Component44.aStringArray932[i_10_ + 1];
-                            DisplayModeManagerContainer145.aStringArray1808[i_10_] = DisplayModeManagerContainer145.aStringArray1808[1 + i_10_];
-                            DefinitionSub21.aStringArray9275[i_10_] = (DefinitionSub21.aStringArray9275[1 + i_10_]);
-                            ShaderSub2.aStringArray5197[i_10_] = ShaderSub2.aStringArray5197[1 + i_10_];
-                            AbstractShaderSub3.aBooleanArray7304[i_10_] = AbstractShaderSub3.aBooleanArray7304[i_10_ - -1];
+                        MenuEntry.ignoreCount--;
+                        for (int i_10_ = i; MenuEntry.ignoreCount > i_10_; i_10_++) {
+                            Component44.ignoreNames[i_10_] = Component44.ignoreNames[i_10_ + 1];
+                            DisplayModeManagerContainer145.ignoreDisplayNames[i_10_] = DisplayModeManagerContainer145.ignoreDisplayNames[1 + i_10_];
+                            DefinitionSub21.ignoreLastNames[i_10_] = (DefinitionSub21.ignoreLastNames[1 + i_10_]);
+                            ShaderSub2.ignoreLastDisplayNames[i_10_] = ShaderSub2.ignoreLastDisplayNames[1 + i_10_];
+                            AbstractShaderSub3.ignoreTemporary[i_10_] = AbstractShaderSub3.ignoreTemporary[i_10_ - -1];
                         }
                         DebugPanicSub1.anInt8493++;
                         Component380.anInt4985 = ResourceLoader.anInt3918;

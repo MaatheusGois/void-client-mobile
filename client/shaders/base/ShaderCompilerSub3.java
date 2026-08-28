@@ -15,7 +15,7 @@ final class ShaderCompilerSub3
 
     static final void method2615(int i, int i_0_) {
         anInt6521++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_0_, (byte) 105, 12);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 12);
         class348_sub42_sub15.method3251(-16058);
         if (i >= -59) method2617((byte) -108);
     }

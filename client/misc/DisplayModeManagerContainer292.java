@@ -151,12 +151,12 @@ final class DisplayModeManagerContainer292
     static final void method1315(int i) {
         anInt5077++;
         if (Component203.aClass144_8766 != null) {
-            if (Component203.aClass144_8766.anInt1997 == 1) {
+            if (Component203.aClass144_8766.status == 1) {
                 Component203.aClass144_8766 = null;
                 return;
             }
-            if (Component203.aClass144_8766.anInt1997 == 2) {
-                BrowserUrlOpener.method2862(Component195.aClass297_5017, CacheNode.aString9554, -120, 2);
+            if (Component203.aClass144_8766.status == 2) {
+                BrowserUrlOpener.openUrl(Component195.aClass297_5017, CacheNode.aString9554, -120, 2);
                 Component203.aClass144_8766 = null;
                 return;
             }
@@ -239,7 +239,7 @@ final class DisplayModeManagerContainer292
                     int i_56_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
                     if ((0xc000 & i_56_) == 49152) {
                         int i_57_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(i + 842463480);
-                        is[i_55_] = Component224.method2057(i_57_, i_56_ << 16);
+                        is[i_55_] = Component224.bitwiseOr(i_57_, i_56_ << 16);
                     } else is[i_55_] = i_56_;
                     is_54_[i_55_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                 }

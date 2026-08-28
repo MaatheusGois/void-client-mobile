@@ -10,7 +10,8 @@ class Component118
     int anInt4950;
     int anInt4951;
     DisplayModeManagerContainer196 aClass341_4952;
-    static DisplayModeManagerContainer155 aClass231_4953 = new DisplayModeManagerContainer155("WIP", 2);
+    /** Work-in-progress channel ({@code id}=2). */
+    static BuildType WIP = new BuildType("WIP", 2);
     static int anInt4954;
     Component85 aClass221_4955;
     static int anInt4956;
@@ -18,8 +19,8 @@ class Component118
     int anInt4958;
 
     public static void method2185(int i) {
-        aClass231_4953 = null;
-        if (i != 2) aClass231_4953 = null;
+        WIP = null;
+        if (i != 2) WIP = null;
     }
 
     static final int method2186(byte i, String string) {
@@ -48,7 +49,7 @@ class Component118
             this.aClass221_4955 = class221;
             this.aClass341_4952 = class341;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vr.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vr.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ')'));
         }
     }
 }

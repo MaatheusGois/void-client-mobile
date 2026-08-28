@@ -51,11 +51,11 @@ abstract class DisplayModeManagerContainer204
             for (int i_8_ = (-(ParametricDefinition.anInt9109 >> 4) + i_5_) / 8; ((i_5_ + (ParametricDefinition.anInt9109 >> 4)) / 8 >= i_8_); i_8_++) {
                 int i_9_ = i_8_ + (i_7_ << 8);
                 OggStreamReader.anIntArray9042[i_6_] = i_9_;
-                ShaderSub1.anIntArray5192[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_7_ + "_" + i_8_, i + 49);
-                Applet_Sub1.anIntArray38[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_7_ + "_" + i_8_, 0);
-                ImageCacheStore.anIntArray4031[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("n" + i_7_ + "_" + i_8_, 0);
-                DisplayModeManagerContainer61.anIntArray3759[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("um" + i_7_ + "_" + i_8_, 0);
-                r.anIntArray9724[i_6_] = (SoftwareFallbackShader.aClass45_7382.method417("ul" + i_7_ + "_" + i_8_, NodeSub21.method2955(i, -49)));
+                ShaderSub1.anIntArray5192[i_6_] = SoftwareFallbackShader.aClass45_7382.getGroupId("m" + i_7_ + "_" + i_8_, i + 49);
+                Applet_Sub1.anIntArray38[i_6_] = SoftwareFallbackShader.aClass45_7382.getGroupId("l" + i_7_ + "_" + i_8_, 0);
+                ImageCacheStore.anIntArray4031[i_6_] = SoftwareFallbackShader.aClass45_7382.getGroupId("n" + i_7_ + "_" + i_8_, 0);
+                DisplayModeManagerContainer61.anIntArray3759[i_6_] = SoftwareFallbackShader.aClass45_7382.getGroupId("um" + i_7_ + "_" + i_8_, 0);
+                r.anIntArray9724[i_6_] = (SoftwareFallbackShader.aClass45_7382.getGroupId("ul" + i_7_ + "_" + i_8_, NodeSub21.bitwiseXor(i, -49)));
                 if (ImageCacheStore.anIntArray4031[i_6_] == -1) {
                     ShaderSub1.anIntArray5192[i_6_] = -1;
                     Applet_Sub1.anIntArray38[i_6_] = -1;
@@ -98,14 +98,14 @@ abstract class DisplayModeManagerContainer204
             Component175.anInt5850 = class105s.length;
             Component143.anIntArray2330 = new int[Component175.anInt5850 + 10];
             DisplayModeManagerContainer196.aClass105Array4234 = new Component24[Component175.anInt5850 + 10];
-            Component313.method1575(class105s, 0, DisplayModeManagerContainer196.aClass105Array4234, 0, Component175.anInt5850);
+            Component313.arraycopyObjects(class105s, 0, DisplayModeManagerContainer196.aClass105Array4234, 0, Component175.anInt5850);
             for (int i_17_ = 0; Component175.anInt5850 > i_17_; i_17_++)
                 Component143.anIntArray2330[i_17_] = DisplayModeManagerContainer196.aClass105Array4234[i_17_].method980();
             if (i != 515880227) anInt1597 = 49;
             for (int i_18_ = Component175.anInt5850; (i_18_ < DisplayModeManagerContainer196.aClass105Array4234.length); i_18_++)
                 Component143.anIntArray2330[i_18_] = 12;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bca.RA(" + (class105s != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bca.RA(" + (class105s != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -119,9 +119,9 @@ abstract class DisplayModeManagerContainer204
             if (i <= 42) method906(123);
             if (var_ha_Sub2.aBoolean7793 || (Component353.method1436(82, i_25_) && Component353.method1436(81, i_26_))) return new GlRectangleTexture(var_ha_Sub2, 3553, i_24_, i_25_, i_26_);
             if (var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, 34037, i_24_, i_25_, i_26_);
-            return new GlRectangleTexture(var_ha_Sub2, i_24_, i_25_, i_26_, Component373.method340(i_25_, (byte) 108), Component373.method340(i_26_, (byte) 108));
+            return new GlRectangleTexture(var_ha_Sub2, i_24_, i_25_, i_26_, Component373.nextPowerOfTwo(i_25_, (byte) 108), Component373.nextPowerOfTwo(i_26_, (byte) 108));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bca.TA(" + i + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bca.TA(" + i + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ')'));
         }
     }
 

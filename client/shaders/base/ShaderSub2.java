@@ -10,12 +10,13 @@ final class ShaderSub2
     static int anInt5194;
     static int anInt5195;
     Interface18_Impl3 anInterface18_Impl3_5196;
-    static String[] aStringArray5197 = new String[100];
+    /** Ignore-list last display names (update lookup key). */
+    static String[] ignoreLastDisplayNames = new String[100];
     static int anInt5198;
     static DisplayModeManagerContainer254 aClass161_5199;
 
     public static void method162(byte i) {
-        aStringArray5197 = null;
+        ignoreLastDisplayNames = null;
         if (i >= -67) aClass161_5199 = null;
         aClass161_5199 = null;
     }
@@ -23,7 +24,7 @@ final class ShaderSub2
     static final int method163(int i) {
         anInt5198++;
         if (i != 512) method165(122, 62, -125, 72, -74, 116, 43, (byte) 104, 62, -115);
-        return Component44.aClass311_897.method2325((byte) -98);
+        return Component44.aClass311_897.getPulseCount((byte) -98);
     }
 
     static final boolean method164(int i, int i_0_, byte i_1_, int i_2_) {
@@ -71,7 +72,7 @@ final class ShaderSub2
             this.anInterface18_Impl3_5196 = var_ha_Sub3.method3944(is, i, DefinitionSub38.aClass304_9471, 2, false, i_16_);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_16_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_16_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -80,7 +81,7 @@ final class ShaderSub2
             this.anInterface18_Impl3_5196 = var_ha_Sub3.method3839(i_17_, i, -15137, false, is);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 }

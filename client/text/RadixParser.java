@@ -32,7 +32,8 @@ final class RadixParser {
     private boolean aBoolean2308;
     static Component24 aClass105_2309;
 
-    static final boolean method1332(boolean bool, boolean bool_0_, int i, String string) {
+    /** True if {@code string} is a non-empty integer in radix {@code i} (2–36). */
+    static final boolean isValidNumber(boolean bool, boolean bool_0_, int i, String string) {
         anInt2293++;
         if (i < 2 || i > 36) throw new IllegalArgumentException("Invalid radix:" + i);
         boolean bool_1_ = false;
@@ -71,7 +72,7 @@ final class RadixParser {
             anInt2295++;
             DisplayModeManagerContainer370.method607(strings.length + -1, strings, is, 0, false);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("po.B(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (strings != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("po.B(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (strings != null ? "{...}" : "null") + ')'));
         }
     }
 

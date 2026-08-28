@@ -45,7 +45,7 @@ final class DefinitionSub9
     }
 
     final void method3049(Buffer class348_sub49, int i, int i_2_) {
-        if (i_2_ != 31015) method3042(-111, 25);
+        if (i_2_ != 31015) getMonochromeOutput(-111, 25);
         anInt9170++;
         if (i == 0) anInt9167 = class348_sub49.readUnsignedShort(842397944);
     }
@@ -56,10 +56,10 @@ final class DefinitionSub9
         return (0x34 & i_3_) != 0;
     }
 
-    final int[] method3042(int i, int i_5_) {
+    final int[] getMonochromeOutput(int i, int i_5_) {
         anInt9166++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int[] is_6_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & -1 + i, 633706337, 0);
             int[] is_7_ = this.method3048(i, 633706337, 0);
             int[] is_8_ = this.method3048(i - -1 & DisplayModeManagerContainer356.anInt6325, 633706337, 0);

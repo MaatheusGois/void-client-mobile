@@ -21,11 +21,12 @@ final class Component279
 
     static final int method256(int i, byte i_0_) {
         anInt228++;
-        if (i_0_ < 61) method257(-27, null, 'G');
+        if (i_0_ < 61) countChar(-27, null, 'G');
         return i >>> 7;
     }
 
-    static final int method257(int i, String string, char c) {
+    /** Count occurrences of {@code c} in {@code string}. */
+    static final int countChar(int i, String string, char c) {
         anInt227++;
         int i_1_ = 0;
         if (i != 4) aClass114_229 = null;

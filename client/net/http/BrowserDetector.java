@@ -13,18 +13,22 @@ final class BrowserDetector {
     static int anInt2357;
     static int anInt2358;
     static int anInt2359;
-    private boolean aBoolean2360 = false;
+    /** When true, capacity grows by ×{@link #growth}; else by +{@link #growth}. */
+    private boolean doubleCapacity = false;
     static int anInt2361 = 1;
     static int anInt2362;
     static int anInt2363;
-    private int anInt2364 = -1;
-    private final int anInt2365;
+    /** Highest used index in {@link #elements} (−1 if empty). */
+    private int highestIndex = -1;
+    /** Capacity growth step/factor for {@link #nextCapacity}. */
+    private final int growth;
     static int anInt2366;
-    private String[] aStringArray2367 = new String[0];
+    /** Backing store for capability / probe strings. */
+    private String[] elements = new String[0];
     static int anInt2368;
     static int anInt2369;
 
-    static final Object method1357(byte[] is, boolean bool, byte i) {
+    static final Object wrapSoft(byte[] is, boolean bool, byte i) {
         if (i < 73) anInt2361 = -51;
         anInt2363++;
         if (is == null) return null;
@@ -41,13 +45,14 @@ final class BrowserDetector {
         return is;
     }
 
-    private final int method1358(int i, int i_0_) {
+    /** Next capacity ≥ {@code i} using {@link #growth}/{@link #doubleCapacity}. */
+    private final int nextCapacity(int i, int i_0_) {
         int i_1_ = 71 % ((i_0_ - -4) / 53);
         anInt2362++;
-        int i_2_ = aStringArray2367.length;
+        int i_2_ = elements.length;
         while (i_2_ <= i) {
-            if (!aBoolean2360) i_2_ += anInt2365;
-            else if (i_2_ != 0) i_2_ *= anInt2365;
+            if (!doubleCapacity) i_2_ += growth;
+            else if (i_2_ != 0) i_2_ *= growth;
             else i_2_ = 1;
         }
         return i_2_;
@@ -63,11 +68,11 @@ final class BrowserDetector {
         try {
             anInt2369++;
             if (bool_3_) {
-                if (ReflectionInvoker.aString3803.startsWith("win") && class297.aBoolean3777) {
+                if (ReflectionInvoker.aString3803.startsWith("win") && class297.signed) {
                     String string_4_ = null;
                     if (ToolkitFactory.anApplet1530 != null) string_4_ = ToolkitFactory.anApplet1530.getParameter("haveie6");
                     if (string_4_ == null || !string_4_.equals("1")) {
-                        Task class144 = BrowserUrlOpener.method2862(class297, string, -117, 0);
+                        Task class144 = BrowserUrlOpener.openUrl(class297, string, -117, 0);
                         Component203.aClass144_8766 = class144;
                         Component195.aClass297_5017 = class297;
                         CacheNode.aString9554 = string;
@@ -78,46 +83,50 @@ final class BrowserDetector {
                     String string_5_ = null;
                     if (ToolkitFactory.anApplet1530 != null) string_5_ = ToolkitFactory.anApplet1530.getParameter("havefirefox");
                     if (string_5_ != null && string_5_.equals("1") && bool) {
-                        BrowserUrlOpener.method2862(class297, string, 42, 1);
+                        BrowserUrlOpener.openUrl(class297, string, 42, 1);
                         return;
                     }
                 }
-                BrowserUrlOpener.method2862(class297, string, 96, 2);
-            } else BrowserUrlOpener.method2862(class297, string, -96, 3);
+                BrowserUrlOpener.openUrl(class297, string, 96, 2);
+            } else BrowserUrlOpener.openUrl(class297, string, -96, 3);
             int i_6_ = -6 / ((i - 20) / 44);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bo.C(" + (string != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + bool + ',' + bool_3_ + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bo.C(" + (string != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + bool + ',' + bool_3_ + ',' + i + ')'));
         }
     }
 
-    final String[] method1361(int i) {
+    /** Copy used slots {@code [0 .. highestIndex]} inclusive. */
+    final String[] toArray(int i) {
         anInt2359++;
         int i_7_ = 95 % ((15 - i) / 32);
-        String[] strings = new String[1 + anInt2364];
-        Component313.method1575(aStringArray2367, 0, strings, 0, anInt2364 - -1);
+        String[] strings = new String[1 + highestIndex];
+        Component313.arraycopyObjects(elements, 0, strings, 0, highestIndex - -1);
         return strings;
     }
 
-    private final void method1362(String string, int i, int i_8_) {
-        if (i >= -56) aBoolean2360 = true;
+    /** Store {@code string} at index {@code i_8_}, growing as needed. */
+    private final void set(String string, int i, int i_8_) {
+        if (i >= -56) doubleCapacity = true;
         anInt2366++;
-        if (i_8_ > anInt2364) anInt2364 = i_8_;
-        if (aStringArray2367.length <= i_8_) method1363(i_8_, -107);
-        aStringArray2367[i_8_] = string;
+        if (i_8_ > highestIndex) highestIndex = i_8_;
+        if (elements.length <= i_8_) ensureCapacity(i_8_, -107);
+        elements[i_8_] = string;
     }
 
-    private final void method1363(int i, int i_9_) {
+    /** Grow {@link #elements} to at least index {@code i}. */
+    private final void ensureCapacity(int i, int i_9_) {
         int i_10_ = 50 % ((3 - i_9_) / 63);
         anInt2358++;
-        String[] strings = new String[method1358(i, 108)];
-        Component313.method1575(aStringArray2367, 0, strings, 0, aStringArray2367.length);
-        aStringArray2367 = strings;
+        String[] strings = new String[nextCapacity(i, 108)];
+        Component313.arraycopyObjects(elements, 0, strings, 0, elements.length);
+        elements = strings;
     }
 
-    final void method1364(int i, String string) {
-        method1362(string, -99, 1 + anInt2364);
+    /** Append {@code string} after {@link #highestIndex}. */
+    final void add(int i, String string) {
+        set(string, -99, 1 + highestIndex);
         anInt2356++;
-        if (i != -1) aBoolean2360 = true;
+        if (i != -1) doubleCapacity = true;
     }
 
     static final void method1365(int i, byte i_11_, Buffer class348_sub49) {
@@ -134,17 +143,17 @@ final class BrowserDetector {
     }
 
     BrowserDetector(int i, boolean bool) {
-        anInt2365 = i;
-        aBoolean2360 = bool;
+        growth = i;
+        doubleCapacity = bool;
     }
 
     public final String toString() {
         anInt2357++;
         StringBuffer stringbuffer = new StringBuffer();
         stringbuffer.append("[");
-        for (int i = 0; anInt2364 > i; i++) {
+        for (int i = 0; highestIndex > i; i++) {
             if (i != 0) stringbuffer.append(", ");
-            stringbuffer.append(aStringArray2367[i]);
+            stringbuffer.append(elements[i]);
         }
         stringbuffer.append("]");
         return stringbuffer.toString();

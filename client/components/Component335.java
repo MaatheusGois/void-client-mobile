@@ -43,7 +43,7 @@ final class Component335
             this.anInt2027 = i_0_;
             this.anInt2026 = i_4_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("og.<init>(" + i + ',' + i_0_ + ',' + (string != null ? "{...}" : "null") + ',' + (string_1_ != null ? "{...}" : "null") + ',' + (string_2_ != null ? "{...}" : "null") + ',' + (string_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + (string_5_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("og.<init>(" + i + ',' + i_0_ + ',' + (string != null ? "{...}" : "null") + ',' + (string_1_ != null ? "{...}" : "null") + ',' + (string_2_ != null ? "{...}" : "null") + ',' + (string_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + (string_5_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -62,7 +62,7 @@ final class Component335
             if (i_9_ != -18691) this.anInt2027 = -83;
             this.anInt2026 = i_10_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("og.A(" + i + ',' + i_6_ + ',' + (string != null ? "{...}" : "null") + ',' + (string_7_ != null ? "{...}" : "null") + ',' + (string_8_ != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ',' + (string_11_ != null ? "{...}" : "null") + ',' + (string_12_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("og.A(" + i + ',' + i_6_ + ',' + (string != null ? "{...}" : "null") + ',' + (string_7_ != null ? "{...}" : "null") + ',' + (string_8_ != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ',' + (string_11_ != null ? "{...}" : "null") + ',' + (string_12_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

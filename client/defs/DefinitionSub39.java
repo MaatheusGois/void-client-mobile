@@ -40,10 +40,10 @@ final class DefinitionSub39
         if (i != 255) method3152(-42);
     }
 
-    final int[] method3042(int i, int i_5_) {
+    final int[] getMonochromeOutput(int i, int i_5_) {
         anInt9486++;
-        int[] is = this.aClass191_7032.method1433(i_5_ + -255, i);
-        if (this.aClass191_7032.aBoolean2570) method3151(this.aClass191_7032.method1427((byte) 16), (byte) -27);
+        int[] is = this.imageCache.getPixels(i_5_ + -255, i);
+        if (this.imageCache.cacheMiss) method3151(this.imageCache.getAllBuffers((byte) 16), (byte) -27);
         if (i_5_ != 255) method3049(null, 66, -50);
         return is;
     }
@@ -85,27 +85,27 @@ final class DefinitionSub39
                             } else break;
                             break while_214_;
                         }
-                        aClass50Array9481[i_7_] = (OggUrlStream.method2970(NodeSub21.method2955(i_6_, 31013), class348_sub49));
+                        aClass50Array9481[i_7_] = (OggUrlStream.method2970(NodeSub21.bitwiseXor(i_6_, 31013), class348_sub49));
                         continue while_216_;
                     } while (false);
-                    aClass50Array9481[i_7_] = (Definition.method3036(class348_sub49, NodeSub21.method2955(i_6_, -31102)));
+                    aClass50Array9481[i_7_] = (Definition.method3036(class348_sub49, NodeSub21.bitwiseXor(i_6_, -31102)));
                     continue while_216_;
                 } while (false);
                 aClass50Array9481[i_7_] = DisplayModeManagerContainer232.method2022(class348_sub49, 0);
             }
-        } else if (i == 1) this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+        } else if (i == 1) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         anInt9484++;
     }
 
-    final int[][] method3047(int i, int i_10_) {
+    final int[][] getColourOutput(int i, int i_10_) {
         anInt9483++;
-        int[][] is = this.aClass322_7033.method2557(i_10_ + 1564598923, i);
+        int[][] is = this.imageCacheStore.getPixels(i_10_ + 1564598923, i);
         if (i_10_ != -1564599039) aClass70_9485 = null;
-        if (this.aClass322_7033.aBoolean4035) {
+        if (this.imageCacheStore.cacheMiss) {
             int i_11_ = DefinitionSub6.anInt9139;
             int i_12_ = ShaderProgramSub2.anInt6212;
             int[][] is_13_ = new int[i_12_][i_11_];
-            int[][][] is_14_ = this.aClass322_7033.method2553(0);
+            int[][][] is_14_ = this.imageCacheStore.getAllBuffers(0);
             method3151(is_13_, (byte) -27);
             for (int i_15_ = 0; ShaderProgramSub2.anInt6212 > i_15_; i_15_++) {
                 int[] is_16_ = is_13_[i_15_];
@@ -115,9 +115,9 @@ final class DefinitionSub39
                 int[] is_20_ = is_17_[2];
                 for (int i_21_ = 0; i_21_ < DefinitionSub6.anInt9139; i_21_++) {
                     int i_22_ = is_16_[i_21_];
-                    is_20_[i_21_] = GpsOverlay.method1166(i_22_, 255) << 4;
-                    is_19_[i_21_] = GpsOverlay.method1166(i_22_ >> 4, 4080);
-                    is_18_[i_21_] = GpsOverlay.method1166(4080, i_22_ >> 12);
+                    is_20_[i_21_] = GpsOverlay.bitwiseAnd(i_22_, 255) << 4;
+                    is_19_[i_21_] = GpsOverlay.bitwiseAnd(i_22_ >> 4, 4080);
+                    is_18_[i_21_] = GpsOverlay.bitwiseAnd(4080, i_22_ >> 12);
                 }
             }
         }

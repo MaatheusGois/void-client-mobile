@@ -7,7 +7,8 @@ final class DefinitionSub30
  * RENAMED from `Class348_Sub40_Sub30` (JODE-obfuscated).
  * Evidence: subclass of Definition (hierarchy)
  */ extends Definition {
-    static int anInt9383 = 0;
+    /** Number of entries in the friend parallel arrays. */
+    static int friendCount = 0;
     static int anInt9384;
     static int anInt9385 = 0;
     private int anInt9386;
@@ -63,42 +64,42 @@ final class DefinitionSub30
             try {
                 anInt9391++;
                 if (string != null) {
-                    if (anInt9383 >= 200 && !DisplayModeManagerContainer105.aBoolean4888 || anInt9383 >= 200) {
-                        DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3493.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
-                        String string_0_ = FriendsIgnoreList.aClass274_3494.method2063(ObjectDeserializer.anInt6967, 544);
+                    if (friendCount >= 200 && !DisplayModeManagerContainer105.aBoolean4888 || friendCount >= 200) {
+                        DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3493.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
+                        String string_0_ = FriendsIgnoreList.aClass274_3494.getLocalized(ObjectDeserializer.languageId, 544);
                         if (string_0_ != null) DisplayModeManagerContainer213.method544(string_0_, false, 4);
                     } else {
                         String string_1_ = DebugPanicSub1.method2127(2, string);
                         if (string_1_ != null) {
-                            for (int i_2_ = 0; (anInt9383 > i_2_); i_2_++) {
-                                String string_3_ = (DebugPanicSub1.method2127(2, Component178.aStringArray1441[i_2_]));
+                            for (int i_2_ = 0; (friendCount > i_2_); i_2_++) {
+                                String string_3_ = (DebugPanicSub1.method2127(2, Component178.friendNames[i_2_]));
                                 if (string_3_ != null && string_3_.equals(string_1_)) {
-                                    DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.method2063((ObjectDeserializer.anInt6967), 544))), false, 4);
+                                    DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.getLocalized((ObjectDeserializer.languageId), 544))), false, 4);
                                     return;
                                 }
-                                if (ShaderProgramSub2.aStringArray6205[i_2_] != null) {
-                                    String string_4_ = (DebugPanicSub1.method2127(2, (ShaderProgramSub2.aStringArray6205[i_2_])));
+                                if (ShaderProgramSub2.friendFormerNames[i_2_] != null) {
+                                    String string_4_ = (DebugPanicSub1.method2127(2, (ShaderProgramSub2.friendFormerNames[i_2_])));
                                     if (string_4_ != null && string_4_.equals(string_1_)) {
-                                        DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                                        DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                         return;
                                     }
                                 }
                             }
-                            for (int i_5_ = 0; i_5_ < MenuEntry.anInt9604; i_5_++) {
-                                String string_6_ = (DebugPanicSub1.method2127(2, Component44.aStringArray932[i_5_]));
+                            for (int i_5_ = 0; i_5_ < MenuEntry.ignoreCount; i_5_++) {
+                                String string_6_ = (DebugPanicSub1.method2127(2, Component44.ignoreNames[i_5_]));
                                 if (string_6_ != null && string_6_.equals(string_1_)) {
-                                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.method2063(ObjectDeserializer.anInt6967, 544)) + string + (FriendsIgnoreList.aClass274_3527.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                     return;
                                 }
-                                if (DefinitionSub21.aStringArray9275[i_5_] != null) {
-                                    String string_7_ = (DebugPanicSub1.method2127(2, (DefinitionSub21.aStringArray9275[i_5_])));
+                                if (DefinitionSub21.ignoreLastNames[i_5_] != null) {
+                                    String string_7_ = (DebugPanicSub1.method2127(2, (DefinitionSub21.ignoreLastNames[i_5_])));
                                     if (string_7_ != null && string_7_.equals(string_1_)) {
-                                        DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.method2063(ObjectDeserializer.anInt6967, 544)) + string + (FriendsIgnoreList.aClass274_3527.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                                        DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                         return;
                                     }
                                 }
                             }
-                            if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_1_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3524.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
+                            if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_1_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3524.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
                             else {
                                 Component334.anInt2012++;
                                 ParticleSystem class348_sub47 = (ParticleShader.method2148(InterfaceRenderer.aClass351_5057, DisplayModeManagerContainer64.aClass77_9029, -85));
@@ -112,16 +113,16 @@ final class DefinitionSub30
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("vj.B(" + i + ',' + (string != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("vj.B(" + i + ',' + (string != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
     }
 
-    final int[][] method3047(int i, int i_8_) {
+    final int[][] getColourOutput(int i, int i_8_) {
         anInt9393++;
-        int[][] is = this.aClass322_7033.method2557(-105, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-105, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[][] is_9_ = this.method3039((byte) 50, i, 0);
             int[] is_10_ = is_9_[0];
             int[] is_11_ = is_9_[1];
@@ -269,7 +270,7 @@ final class DefinitionSub30
                 }
                 break;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("vj.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_39_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("vj.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_39_ + ')'));
             }
         } while (false);
     }

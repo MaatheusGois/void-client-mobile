@@ -36,10 +36,10 @@ abstract class Component41
         try {
             anInt3149++;
             long l_1_ = method1858(-73);
-            if ((long) i < l_1_) SpriteAtlasShader.method2161((byte) 61, l_1_);
+            if ((long) i < l_1_) SpriteAtlasShader.sleep((byte) 61, l_1_);
             return method1859(71, l);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "tb.H(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "tb.H(" + i + ',' + l + ')');
         }
     }
 

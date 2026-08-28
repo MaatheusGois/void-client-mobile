@@ -4,7 +4,8 @@
 
 /**
  * RENAMED from `Class85` (JODE-obfuscated).
- * Debug/assertion helper. Logs 'LOGIC ERROR' when an internal invariant is violated; used as a sanity-check trap across the client.
+ * Whirlpool-512 digest engine (misnamed from an internal "LOGIC ERROR" throw).
+ * Used for JS5 index / archive signature checks via {@link NodeSub1Sub2#whirlpoolDigest}.
  */
 
 final class LogicError {
@@ -41,7 +42,7 @@ final class LogicError {
                 int i_5_ = 0;
                 int i_6_ = 56;
                 for (/**/; i_5_ < 8; i_5_++) {
-                    aLongArray1471[i_4_] = (SpriteSub2.method993(aLongArray1471[i_4_], (InputStream_Sub1.aLongArrayArray75[i_5_][(GpsOverlay.method1166(255, (int) ((aLongArray1472[GpsOverlay.method1166(7, i_4_ - i_5_)]) >>> i_6_)))])));
+                    aLongArray1471[i_4_] = (SpriteSub2.method993(aLongArray1471[i_4_], (InputStream_Sub1.aLongArrayArray75[i_5_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1472[GpsOverlay.bitwiseAnd(7, i_4_ - i_5_)]) >>> i_6_)))])));
                     i_6_ -= 8;
                 }
             }
@@ -53,7 +54,7 @@ final class LogicError {
                 int i_9_ = 0;
                 int i_10_ = 56;
                 for (/**/; i_9_ < 8; i_9_++) {
-                    aLongArray1471[i_8_] = (SpriteSub2.method993(aLongArray1471[i_8_], (InputStream_Sub1.aLongArrayArray75[i_9_][(GpsOverlay.method1166(255, (int) ((aLongArray1469[GpsOverlay.method1166(-i_9_ + i_8_, 7)]) >>> i_10_)))])));
+                    aLongArray1471[i_8_] = (SpriteSub2.method993(aLongArray1471[i_8_], (InputStream_Sub1.aLongArrayArray75[i_9_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1469[GpsOverlay.bitwiseAnd(-i_9_ + i_8_, 7)]) >>> i_10_)))])));
                     i_10_ -= 8;
                 }
             }
@@ -85,7 +86,8 @@ final class LogicError {
         }
     }
 
-    final void method829(int i) {
+    /** Reset digest state. */
+    final void reset(int i) {
         anInt1466++;
         int i_18_ = -69 % ((i - 33) / 43);
         for (int i_19_ = 0; i_19_ < 32; i_19_++)
@@ -115,7 +117,8 @@ final class LogicError {
         return Math.min(i_25_, i);
     }
 
-    final void method832(long l, byte[] is, int i) {
+    /** Absorb {@code l} bits from {@code is}. */
+    final void update(long l, byte[] is, int i) {
         try {
             anInt1464++;
             int i_29_ = 0;
@@ -134,14 +137,14 @@ final class LogicError {
             while (l > 8L) {
                 int i_36_ = (is[i_29_] << i_30_ & 0xff | (0xff & is[1 + i_29_]) >>> 8 + -i_30_);
                 if (i_36_ < 0 || i_36_ >= 256) throw new RuntimeException("LOGIC ERROR");
-                aByteArray1475[anInt1468] = (byte) Component224.method2057(aByteArray1475[anInt1468], i_36_ >>> i_31_);
+                aByteArray1475[anInt1468] = (byte) Component224.bitwiseOr(aByteArray1475[anInt1468], i_36_ >>> i_31_);
                 anInt1468++;
                 anInt1463 += 8 - i_31_;
                 if (anInt1463 == 512) {
                     method827(0);
                     anInt1463 = anInt1468 = 0;
                 }
-                aByteArray1475[anInt1468] = (byte) GpsOverlay.method1166(i_36_ << -i_31_ + 8, 255);
+                aByteArray1475[anInt1468] = (byte) GpsOverlay.bitwiseAnd(i_36_ << -i_31_ + 8, 255);
                 i_29_++;
                 l -= 8L;
                 anInt1463 += i_31_;
@@ -149,7 +152,7 @@ final class LogicError {
             int i_37_;
             if (l > 0L) {
                 i_37_ = 0xff & is[i_29_] << i_30_;
-                aByteArray1475[anInt1468] = (byte) Component224.method2057(aByteArray1475[anInt1468], i_37_ >>> i_31_);
+                aByteArray1475[anInt1468] = (byte) Component224.bitwiseOr(aByteArray1475[anInt1468], i_37_ >>> i_31_);
             } else i_37_ = 0;
             if (l + (long) i_31_ >= 8) {
                 anInt1463 += 8 - i_31_;
@@ -159,17 +162,18 @@ final class LogicError {
                     method827(0);
                     anInt1463 = anInt1468 = 0;
                 }
-                aByteArray1475[anInt1468] = (byte) GpsOverlay.method1166(i_37_ << 8 + -i_31_, 255);
+                aByteArray1475[anInt1468] = (byte) GpsOverlay.bitwiseAnd(i_37_ << 8 + -i_31_, 255);
                 anInt1463 += (int) l;
             } else anInt1463 += l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lda.B(" + l + ',' + (is != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lda.B(" + l + ',' + (is != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
-    final void method833(boolean bool, int i, byte[] is) {
+    /** Finalize into 64-byte {@code is}. */
+    final void digest(boolean bool, int i, byte[] is) {
         anInt1470++;
-        aByteArray1475[anInt1468] = (byte) Component224.method2057(aByteArray1475[anInt1468], 128 >>> GpsOverlay.method1166(anInt1463, 7));
+        aByteArray1475[anInt1468] = (byte) Component224.bitwiseOr(aByteArray1475[anInt1468], 128 >>> GpsOverlay.bitwiseAnd(anInt1463, 7));
         anInt1468++;
         if (anInt1468 > 32) {
             while (anInt1468 < 64) aByteArray1475[anInt1468++] = (byte) 0;
@@ -177,7 +181,7 @@ final class LogicError {
             anInt1468 = 0;
         }
         while (anInt1468 < 32) aByteArray1475[anInt1468++] = (byte) 0;
-        Component313.method1577(aByteArray1465, 0, aByteArray1475, 32, 32);
+        Component313.arraycopy(aByteArray1465, 0, aByteArray1475, 32, 32);
         method827(0);
         int i_38_ = 0;
         if (bool != true) method830(-1, -123, (byte) 39, false, 61);

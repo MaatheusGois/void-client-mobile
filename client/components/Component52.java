@@ -14,7 +14,7 @@ final class Component52
         anInt3294++;
         RadixParser class174 = ((RadixParser) DisplayModeManagerContainer343.aClass60_8732.get(i, -78));
         if (class174 != null) return class174;
-        byte[] is = Component54.aClass45_8670.method410(-1860, 1, i);
+        byte[] is = Component54.aClass45_8670.getFile(-1860, 1, i);
         class174 = new RadixParser();
         if (bool != false) method1944(64);
         class174.anInt2303 = i;

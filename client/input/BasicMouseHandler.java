@@ -19,7 +19,8 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     static int anInt7429;
     static int anInt7430;
     static int anInt7431;
-    private int anInt7432;
+    /** Published button bitfield: 1=left, 2=middle, 4=right. */
+    private int buttonState;
     static int anInt7433;
     static int anInt7434;
     static int anInt7435;
@@ -28,46 +29,52 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     static int anInt7438;
     static int anInt7439;
     static int anInt7440;
-    private NodeList aClass262_7441 = new NodeList();
-    private int anInt7442;
+    /** Events ready for {@link #popEvent}. */
+    private NodeList eventQueue = new NodeList();
+    /** Published cursor X. */
+    private int cursorX;
     static int anInt7443;
     static boolean aBoolean7444 = false;
     static int anInt7445;
     static Component69[] aClass283Array7446;
     static int anInt7447;
-    private int anInt7448;
+    /** Published cursor Y. */
+    private int cursorY;
     static int anInt7449;
-    private NodeList aClass262_7450 = new NodeList();
+    /** Events enqueued this frame before sync. */
+    private NodeList pendingEvents = new NodeList();
     static int anInt7451;
     static int anInt7452;
-    private int anInt7453;
-    private int anInt7454;
+    private int pendingY;
+    private int pendingX;
     static int anInt7455;
-    private int anInt7456;
+    private int pendingButtons;
     static int anInt7457;
-    private final boolean aBoolean7458;
-    private Component aComponent7459;
+    /** When true, motion synthesises type=-1 events. */
+    private final boolean recordMotionEvents;
+    /** Canvas Component listeners are attached to. */
+    private Component target;
 
-    private final void method3603(byte i, Component component) {
+    private final void attachListeners(byte i, Component component) {
         anInt7447++;
         if (i >= -83) mouseExited(null);
-        method3608(85);
-        aComponent7459 = component;
-        aComponent7459.addMouseListener(this);
-        aComponent7459.addMouseMotionListener(this);
+        detachListeners(85);
+        target = component;
+        target.addMouseListener(this);
+        target.addMouseMotionListener(this);
     }
 
     public final synchronized void mouseDragged(MouseEvent mouseevent) {
-        method3605(mouseevent.getY(), (byte) -76, mouseevent.getX());
+        updateCursor(mouseevent.getY(), (byte) -76, mouseevent.getX());
         anInt7427++;
     }
 
     public final synchronized void mouseEntered(MouseEvent mouseevent) {
-        method3605(mouseevent.getY(), (byte) -76, mouseevent.getX());
+        updateCursor(mouseevent.getY(), (byte) -76, mouseevent.getX());
         anInt7426++;
     }
 
-    private final int method3604(int i, MouseEvent mouseevent) {
+    private final int buttonMask(int i, MouseEvent mouseevent) {
         anInt7436++;
         int i_0_ = mouseevent.getModifiers();
         boolean bool = (0x10 & i_0_) != 0;
@@ -83,63 +90,63 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     }
 
     public final synchronized void mouseExited(MouseEvent mouseevent) {
-        method3605(mouseevent.getY(), (byte) -76, mouseevent.getX());
+        updateCursor(mouseevent.getY(), (byte) -76, mouseevent.getX());
         anInt7452++;
     }
 
     final boolean isRightButtonDown(byte i) {
         anInt7457++;
-        if (i <= 112) method3606(-77, 6, -104, -59, 86);
-        return (anInt7432 & 0x4) != 0;
+        if (i <= 112) enqueueEvent(-77, 6, -104, -59, 86);
+        return (buttonState & 0x4) != 0;
     }
 
     final synchronized void syncEvents(int i) {
         if (i != 0) syncEvents(-46);
-        anInt7432 = anInt7456;
+        buttonState = pendingButtons;
         anInt7440++;
-        anInt7448 = anInt7453;
-        anInt7442 = anInt7454;
-        NodeList class262 = aClass262_7441;
-        aClass262_7441 = aClass262_7450;
-        aClass262_7450 = class262;
-        aClass262_7450.clear(i ^ 0x66);
+        cursorY = pendingY;
+        cursorX = pendingX;
+        NodeList class262 = eventQueue;
+        eventQueue = pendingEvents;
+        pendingEvents = class262;
+        pendingEvents.clear(i ^ 0x66);
     }
 
     public final synchronized void mouseMoved(MouseEvent mouseevent) {
         anInt7435++;
-        method3605(mouseevent.getY(), (byte) -76, mouseevent.getX());
+        updateCursor(mouseevent.getY(), (byte) -76, mouseevent.getX());
     }
 
-    private final void method3605(int i, byte i_3_, int i_4_) {
+    private final void updateCursor(int i, byte i_3_, int i_4_) {
         anInt7445++;
-        anInt7454 = i_4_;
+        pendingX = i_4_;
         if (i_3_ != -76) anInt7429 = 51;
-        anInt7453 = i;
-        if (aBoolean7458) method3606(-1, i, i_4_, 0, -125);
+        pendingY = i;
+        if (recordMotionEvents) enqueueEvent(-1, i, i_4_, 0, -125);
     }
 
     final int getCursorY(byte i) {
         anInt7430++;
         if (i <= 69) return -123;
-        return anInt7448;
+        return cursorY;
     }
 
     final NodeSub45 popEvent(int i) {
         if (i != 0) mouseReleased(null);
         anInt7437++;
-        return (NodeSub45) aClass262_7441.peekFirst(i + 8);
+        return (NodeSub45) eventQueue.peekFirst(i + 8);
     }
 
-    private final void method3606(int i, int i_5_, int i_6_, int i_7_, int i_8_) {
+    private final void enqueueEvent(int i, int i_5_, int i_6_, int i_7_, int i_8_) {
         anInt7439++;
         NodeSub45Sub2 class348_sub45_sub2 = new NodeSub45Sub2();
-        class348_sub45_sub2.anInt9739 = i_6_;
-        class348_sub45_sub2.anInt9733 = i_5_;
-        class348_sub45_sub2.anInt9730 = i_7_;
-        class348_sub45_sub2.anInt9736 = i;
-        class348_sub45_sub2.aLong9734 = Component240.currentTimeMillis(-110);
-        aClass262_7450.addTail(class348_sub45_sub2, -20180);
-        if (i_8_ >= -110) method3607(28, null, -68);
+        class348_sub45_sub2.x = i_6_;
+        class348_sub45_sub2.y = i_5_;
+        class348_sub45_sub2.clickCount = i_7_;
+        class348_sub45_sub2.eventType = i;
+        class348_sub45_sub2.when = Component240.currentTimeMillis(-110);
+        pendingEvents.addTail(class348_sub45_sub2, -20180);
+        if (i_8_ >= -110) readJagStringLimited(28, null, -68);
     }
 
     public final synchronized void mouseClicked(MouseEvent mouseevent) {
@@ -150,30 +157,31 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     final void destroy(int i) {
         if (i != 0) getCursorX(false);
         anInt7433++;
-        method3608(84);
+        detachListeners(84);
     }
 
     final boolean isMiddleButtonDown(int i) {
         int i_9_ = -108 % ((-38 - i) / 48);
         anInt7434++;
-        return (anInt7432 & 0x2) != 0;
+        return (buttonState & 0x2) != 0;
     }
 
     final boolean isLeftButtonDown(int i) {
         anInt7455++;
         if (i >= -67) mouseExited(null);
-        return (anInt7432 & 0x1) != 0;
+        return (buttonState & 0x1) != 0;
     }
 
-    static final String method3607(int i, Buffer class348_sub49, int i_10_) {
+    /** Reads a length-capped Jagex string from {@code class348_sub49} (returns {@code "Cabbage"} on error). */
+    static final String readJagStringLimited(int i, Buffer class348_sub49, int i_10_) {
         int i_11_ = 17 % ((9 - i_10_) / 59);
         anInt7451++;
         try {
             int i_12_ = class348_sub49.readSmart(-122);
             if (i < i_12_) i_12_ = i;
             byte[] is = new byte[i_12_];
-            class348_sub49.offset += (DisplayModeManagerContainer370.aClass296_1131.method2226(is, class348_sub49.offset, class348_sub49.payload, i_12_, -1, 0));
-            String string = WaterShaderSub8.method3546(is, 0, i_12_, 0);
+            class348_sub49.offset += (DisplayModeManagerContainer370.huffman.decompress(is, class348_sub49.offset, class348_sub49.payload, i_12_, -1, 0));
+            String string = WaterShaderSub8.decodeCp1252(is, 0, i_12_, 0);
             return string;
         } catch (Exception exception) {
             return "Cabbage";
@@ -182,43 +190,43 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
 
     public final synchronized void mouseReleased(MouseEvent mouseevent) {
         anInt7428++;
-        int i = method3604(-6345, mouseevent);
-        if ((i & anInt7456) == 0) i = anInt7456;
-        if ((i & 0x1) != 0) method3606(3, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -116);
-        if ((0x4 & i) != 0) method3606(5, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -119);
-        if ((0x2 & i) != 0) method3606(4, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -117);
-        anInt7456 &= ~i;
+        int i = buttonMask(-6345, mouseevent);
+        if ((i & pendingButtons) == 0) i = pendingButtons;
+        if ((i & 0x1) != 0) enqueueEvent(3, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -116);
+        if ((0x4 & i) != 0) enqueueEvent(5, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -119);
+        if ((0x2 & i) != 0) enqueueEvent(4, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -117);
+        pendingButtons &= ~i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
-    private final void method3608(int i) {
+    private final void detachListeners(int i) {
         anInt7431++;
-        if (aComponent7459 != null) {
-            aComponent7459.removeMouseMotionListener(this);
-            aComponent7459.removeMouseListener(this);
-            aComponent7459 = null;
-            aClass262_7441 = null;
-            aClass262_7450 = null;
-            anInt7442 = anInt7448 = anInt7432 = 0;
+        if (target != null) {
+            target.removeMouseMotionListener(this);
+            target.removeMouseListener(this);
+            target = null;
+            eventQueue = null;
+            pendingEvents = null;
+            cursorX = cursorY = buttonState = 0;
             int i_13_ = -106 / ((-57 - i) / 46);
-            anInt7454 = anInt7453 = anInt7456 = 0;
+            pendingX = pendingY = pendingButtons = 0;
         }
     }
 
     final int getCursorX(boolean bool) {
-        if (bool != true) anInt7453 = -101;
+        if (bool != true) pendingY = -101;
         anInt7443++;
-        return anInt7442;
+        return cursorX;
     }
 
     public final synchronized void mousePressed(MouseEvent mouseevent) {
         anInt7449++;
-        int i = method3604(-6345, mouseevent);
+        int i = buttonMask(-6345, mouseevent);
         if (i != 1) {
-            if (i == 4) method3606(2, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -112);
-            else if (i == 2) method3606(1, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -121);
-        } else method3606(0, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -126);
-        anInt7456 |= i;
+            if (i == 4) enqueueEvent(2, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -112);
+            else if (i == 2) enqueueEvent(1, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -121);
+        } else enqueueEvent(0, mouseevent.getY(), mouseevent.getX(), mouseevent.getClickCount(), -126);
+        pendingButtons |= i;
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
@@ -228,7 +236,7 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     }
 
     BasicMouseHandler(Component component, boolean bool) {
-        method3603((byte) -108, component);
-        aBoolean7458 = bool;
+        attachListeners((byte) -108, component);
+        recordMotionEvents = bool;
     }
 }

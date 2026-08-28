@@ -286,7 +286,7 @@ final class Component301
             anInt4121 = aS_Sub3_4116.anInt4587 >> anInt4124;
             anInt4118 = aS_Sub3_4116.anInt4590 >> anInt4124;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dg.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dg.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ')'));
         }
     }
 }

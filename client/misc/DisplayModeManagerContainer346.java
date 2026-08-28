@@ -55,7 +55,7 @@ final class DisplayModeManagerContainer346
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ok.C(" + i + ',' + (class105 != null ? "{...}" : "null") + ',' + i_2_ + ',' + (class46 != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ok.C(" + i + ',' + (class105 != null ? "{...}" : "null") + ',' + i_2_ + ',' + (class46 != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
         }
     }
 
@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer346
             Component205.anInt5969 = Loader.skipLobby ? 2 : 1;
             Component72.method1138(string, false, string_16_, (byte) -95);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ok.E(" + (string != null ? "{...}" : "null") + ',' + (string_16_ != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ok.E(" + (string != null ? "{...}" : "null") + ',' + (string_16_ != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 }

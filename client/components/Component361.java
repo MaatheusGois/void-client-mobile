@@ -46,7 +46,7 @@ final class Component361
         if (class38 != null) return class38;
         byte[] is;
         synchronized (aClass45_366) {
-            is = aClass45_366.method410(-1860, 30, i);
+            is = aClass45_366.getFile(-1860, 30, i);
         }
         if (i_2_ < 6) aClass60_360 = null;
         class38 = new PauseTimer();
@@ -83,7 +83,7 @@ final class Component361
     static final void method304(int i, int i_10_, int i_11_) {
         anInt363++;
         if (i_10_ != 437853543) aBoolean368 = true;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_11_, (byte) 105, 16);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_11_, (byte) 105, 16);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i;
     }
@@ -95,12 +95,12 @@ final class Component361
         aClass105Array367 = null;
     }
 
-    Component361(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component361(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_366 = class45;
-            aClass45_366.method407(0, 30);
+            aClass45_366.getFileCount(0, 30);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hq.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hq.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

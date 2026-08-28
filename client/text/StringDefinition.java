@@ -61,12 +61,12 @@ final class StringDefinition extends HashNode {
     final void method3224(byte i) {
         if (this.anIntArray9580 != null) {
             for (int i_3_ = 0; (this.anIntArray9580.length > i_3_); i_3_++)
-                this.anIntArray9580[i_3_] = Component224.method2057((this.anIntArray9580[i_3_]), 32768);
+                this.anIntArray9580[i_3_] = Component224.bitwiseOr((this.anIntArray9580[i_3_]), 32768);
         }
         anInt9579++;
         if (this.anIntArray9592 != null) {
             for (int i_4_ = 0; (this.anIntArray9592.length > i_4_); i_4_++)
-                this.anIntArray9592[i_4_] = Component224.method2057((this.anIntArray9592[i_4_]), 32768);
+                this.anIntArray9592[i_4_] = Component224.bitwiseOr((this.anIntArray9592[i_4_]), 32768);
         }
         if (i <= 102) method3222((byte) 78, '\uffc1');
     }
@@ -109,7 +109,7 @@ final class StringDefinition extends HashNode {
                             if (i_15_ <= i_13_) i_17_ = -i_15_ + i_13_;
                             else i_17_ = i_15_ + -i_13_;
                             if (i_16_ == 0 && i_17_ == 0 || -AbstractShaderSub4.anInt7319 >= i_16_ || (AbstractShaderSub4.anInt7319 <= i_16_) || i_17_ <= -ParametricDefinition.anInt9109 || ParametricDefinition.anInt9109 <= i_17_)
-                                ClientErrorReporter.method1242(("RC: " + i_12_ + "," + i_13_ + " " + i_14_ + "," + i_15_ + " " + NodeBaseSub2.regionTileX + "," + Component330.regionTileY), null, 15004);
+                                ClientErrorReporter.reportError(("RC: " + i_12_ + "," + i_13_ + " " + i_14_ + "," + i_15_ + " " + NodeBaseSub2.regionTileX + "," + Component330.regionTileY), null, 15004);
                             else if (i_16_ <= i_17_) {
                                 int i_18_ = i_16_ * 65536 / i_17_;
                                 int i_19_ = 32768;

@@ -15,16 +15,18 @@ final class JaclibLoader {
     /** Shared GraphicsToolkit instance used by debug overlay / early init paths. */
     static GraphicsToolkit toolkit;
 
-    static final boolean method215(int i) {
+    /** Load {@code jaclib} then {@code hw3d} native libraries. */
+    static final boolean loadNatives(int i) {
         anInt170++;
         if (i != 27165) return false;
-        if (!DefinitionSub19.method3098(-30282, "jaclib")) return false;
-        return DefinitionSub19.method3098(-30282, "hw3d");
+        if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "jaclib")) return false;
+        return DefinitionSub19.tryLoadNativeLibrary(-30282, "hw3d");
     }
 
-    public static void method216(boolean bool) {
+    /** Nulls jaclib statics (toolkit + scratch) at shutdown. */
+    public static void clearStatics(boolean bool) {
         anIntArray168 = null;
-        if (bool != false) method216(true);
+        if (bool != false) clearStatics(true);
         toolkit = null;
     }
 }

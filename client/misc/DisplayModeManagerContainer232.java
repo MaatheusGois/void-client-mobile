@@ -54,13 +54,13 @@ final class DisplayModeManagerContainer232
             aClass45_4694 = class45;
             aClass120_4687 = class120;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class120 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class120 != null ? "{...}" : "null") + ')'));
         }
     }
 
     public final boolean method8(byte i) {
         int i_8_ = -105 % ((25 - i) / 52);
         anInt4690++;
-        return aClass45_4694.method421(false, aClass120_4687.anInt4912);
+        return aClass45_4694.isSingletonFileReady(false, aClass120_4687.anInt4912);
     }
 }

@@ -18,11 +18,15 @@ abstract class DisplayModeManagerContainer343
     static DisplayModeManagerContainer88 aClass70_8737 = new DisplayModeManagerContainer88();
     static int anInt8738;
 
-    static final void method2405(int i) {
+    /**
+     * Persists dirty client preferences/varps to the {@code "2"} game-preferences RAF
+     * via {@link ReflectionInvoker#openGamePreferences}.
+     */
+    static final void saveClientPreferences(int i) {
         anInt8729++;
         RandomAccessFileReader class234 = null;
         try {
-            class234 = ReflectionInvoker.method2231("2", -1141472112);
+            class234 = ReflectionInvoker.openGamePreferences("2", -1141472112);
             Buffer class348_sub49 = new Buffer(3 + 6 * DisplayModeManagerContainer147.anInt4168);
             class348_sub49.writeByte(false, 1);
             class348_sub49.writeShort((byte) 107, DisplayModeManagerContainer147.anInt4168);
@@ -86,11 +90,11 @@ abstract class DisplayModeManagerContainer343
 
     final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_3_, byte i_4_, int i_5_) {
         try {
-            if (i_4_ > -106) method2405(-8);
+            if (i_4_ > -106) saveClientPreferences(-8);
             anInt8736++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fha.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fha.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
         }
     }
 

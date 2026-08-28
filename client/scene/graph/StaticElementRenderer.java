@@ -92,7 +92,7 @@ final class StaticElementRenderer extends Renderable {
                 AbstractShaderSub3.anIntArray7299[i] = 255;
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("rba.G(" + (class45 != null ? "{...}" : "null") + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + bool + ',' + (class279 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.G(" + (class45 != null ? "{...}" : "null") + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + bool + ',' + (class279 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -103,7 +103,7 @@ final class StaticElementRenderer extends Renderable {
             for (RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = ((RenderableSub9Sub2Sub1) this.aClass243_6433.method1872(8)); class318_sub9_sub2_sub1 != null; class318_sub9_sub2_sub1 = (RenderableSub9Sub2Sub1) this.aClass243_6433.method1878((byte) 126))
                 class318_sub9_sub2_sub1.method2522(var_ha, l);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("rba.F(" + bool + ',' + (var_ha != null ? "{...}" : "null") + ',' + l + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.F(" + bool + ',' + (var_ha != null ? "{...}" : "null") + ',' + l + ')'));
         }
     }
 
@@ -112,8 +112,8 @@ final class StaticElementRenderer extends Renderable {
             anInt6440++;
             if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243 != null) {
                 if (Node.anInt4290 < 10) {
-                    if (!DisplayModeManagerContainer229.aClass45_1237.method413(100, DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625)) {
-                        Node.anInt4290 = (NodeSub32.aClass45_6950.method397((DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625), 0)) / 10;
+                    if (!DisplayModeManagerContainer229.aClass45_1237.isGroupReadyByName(100, DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625)) {
+                        Node.anInt4290 = (NodeSub32.aClass45_6950.getNamedGroupLoadPercent((DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625), 0)) / 10;
                         return;
                     }
                     InputStream_Sub1.method126(-16203);
@@ -185,9 +185,9 @@ final class StaticElementRenderer extends Renderable {
                     Component97.method867(true);
                 } else if (i <= -43) {
                     if (Node.anInt4290 == 60) {
-                        if (DisplayModeManagerContainer229.aClass45_1237.method400(-18308, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) {
-                            if (!DisplayModeManagerContainer229.aClass45_1237.method413(100, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) return;
-                            DisplayModeManagerContainer229.aClass252_1246 = (Component358.method2300(DisplayModeManagerContainer229.aClass45_1237, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements", Component387.aBoolean1900, (byte) -91));
+                        if (DisplayModeManagerContainer229.aClass45_1237.hasGroup(-18308, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) {
+                            if (!DisplayModeManagerContainer229.aClass45_1237.isGroupReadyByName(100, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) return;
+                            DisplayModeManagerContainer229.aClass252_1246 = (Component358.loadStaticElements(DisplayModeManagerContainer229.aClass45_1237, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements", Component387.aBoolean1900, (byte) -91));
                         } else DisplayModeManagerContainer229.aClass252_1246 = new Component278(0);
                         DisplayModeManagerContainer229.method761();
                         Node.anInt4290 = 70;
@@ -238,7 +238,7 @@ final class StaticElementRenderer extends Renderable {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("rba.A(" + (var_d != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.A(" + (var_d != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -387,7 +387,7 @@ final class StaticElementRenderer extends Renderable {
                 if (i_9_ == 3) break;
                 method2508(124);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("rba.C(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + l + ',' + i_9_ + ',' + bool + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.C(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + l + ',' + i_9_ + ',' + bool + ')'));
             }
             break;
         } while (false);
@@ -416,7 +416,7 @@ final class StaticElementRenderer extends Renderable {
             aClass284_6449.anInt3672 = this.aClass284_6444.anInt3672;
             aClass284_6449.anInt3679 = this.aClass284_6444.anInt3679;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("rba.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class129 != null ? "{...}" : "null") + ',' + (class318_sub10 != null ? "{...}" : "null") + ',' + l + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class129 != null ? "{...}" : "null") + ',' + (class318_sub10 != null ? "{...}" : "null") + ',' + l + ')'));
         }
     }
 }

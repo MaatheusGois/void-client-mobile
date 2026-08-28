@@ -100,7 +100,7 @@ final class OpenGLBitmapFont extends BitmapFont {
             float f_39_ = f_37_ * f_30_;
             float f_40_ = (f_36_ + (float) i_33_) * f;
             float f_41_ = (f_37_ + (float) i_32_) * f_30_;
-            aClass61_6510.method595((byte) 123, i_31_);
+            aClass61_6510.beginDisplayList((byte) 123, i_31_);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(f_38_, aClass258_Sub3_Sub1_6511.aFloat9938 - f_39_);
             OpenGL.glVertex2i(i_35_, i_34_);
@@ -111,7 +111,7 @@ final class OpenGLBitmapFont extends BitmapFont {
             OpenGL.glTexCoord2f(f_40_, aClass258_Sub3_Sub1_6511.aFloat9938 - f_39_);
             OpenGL.glVertex2i(i_35_ + i_33_, i_34_);
             OpenGL.glEnd();
-            aClass61_6510.method591(-1);
+            aClass61_6510.endDisplayList(-1);
         }
     }
 
@@ -138,7 +138,7 @@ final class OpenGLBitmapFont extends BitmapFont {
         OpenGL.glEnable(3169);
         OpenGL.glColor4ub((byte) (i_43_ >> 16), (byte) (i_43_ >> 8), (byte) i_43_, (byte) (i_43_ >> 24));
         OpenGL.glTranslatef((float) i, (float) i_42_, 0.0F);
-        aClass61_6510.method594(c, 28666);
+        aClass61_6510.callDisplayList(c, 28666);
         OpenGL.glLoadIdentity();
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
@@ -158,7 +158,7 @@ final class OpenGLBitmapFont extends BitmapFont {
         } else aHa_Sub2_6509.method3729(7681, (byte) 117, 7681);
         OpenGL.glColor4ub((byte) (i_48_ >> 16), (byte) (i_48_ >> 8), (byte) i_48_, (byte) (i_48_ >> 24));
         OpenGL.glTranslatef((float) i, (float) i_47_, 0.0F);
-        aClass61_6510.method594(c, 28666);
+        aClass61_6510.callDisplayList(c, 28666);
         OpenGL.glLoadIdentity();
         if (aBoolean6512 || bool) aHa_Sub2_6509.method3762(5890, 768, (byte) -87, 0);
     }

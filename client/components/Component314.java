@@ -21,7 +21,7 @@ final class Component314
             anInt3875++;
             return new OpenGLToolkit(canvas, var_d, i_1_, i_0_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ws.C(" + i + ',' + i_0_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ws.C(" + i + ',' + i_0_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_1_ + ')'));
         }
     }
 

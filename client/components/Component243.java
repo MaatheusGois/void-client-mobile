@@ -14,7 +14,7 @@ final class Component243
     static final void method352(int i) {
         anInt483++;
         DisplayModeManagerContainer133.method1265(i + 15);
-        IOException_Sub1.method131(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
+        IOException_Sub1.configureAudio(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
         Definition.aClass279_7042 = Component321.method1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
         HashNodeSub18.method3273(true, i + -82, Component16.method1326(null, 9));
         Component276.aClass279_2596 = Component321.method1439(2048, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, i, 7);

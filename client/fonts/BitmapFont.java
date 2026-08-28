@@ -77,7 +77,7 @@ abstract class BitmapFont {
                                                     if (is != null) i_11_ = is[i_6_];
                                                     else i_11_ = 0;
                                                     i_6_++;
-                                                    int i_12_ = (NodeSub41.method3156(true, (string_9_.substring(4))));
+                                                    int i_12_ = (NodeSub41.parseInt(true, (string_9_.substring(4))));
                                                     Component24 class105 = class105s[i_12_];
                                                     int i_13_ = (is_0_ == null ? class105.method980() : is_0_[i_12_]);
                                                     class105.method964(i + i_10_, (-i_13_ + (metrics.ascent) + (i_2_ - -i_11_)), 1, 0, 1);
@@ -120,7 +120,7 @@ abstract class BitmapFont {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.V(" + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.V(" + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ')'));
         }
     }
 
@@ -132,7 +132,7 @@ abstract class BitmapFont {
                 method2583(0, i, 0, class105s, null, string, is, 25625, i_20_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.R(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.R(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -179,7 +179,7 @@ abstract class BitmapFont {
             }
             return i_34_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.W(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_22_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_23_ + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.W(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_22_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_23_ + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
         }
     }
 
@@ -234,7 +234,7 @@ abstract class BitmapFont {
             method2566(class105s, null, i_52_, is, is_55_, i_51_, string, 174);
             return i_56_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.BA(" + i + ',' + i_48_ + ',' + (is != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i_49_ + ',' + i_50_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_51_ + ',' + i_52_ + ',' + (random != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.BA(" + i + ',' + i_48_ + ',' + (is != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i_49_ + ',' + i_50_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_51_ + ',' + i_52_ + ',' + (random != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -420,7 +420,7 @@ abstract class BitmapFont {
             }
             return new Component84(class377, l, class39s);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.M(" + (class377 != null ? "{...}" : "null") + ',' + (class39s != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.M(" + (class377 != null ? "{...}" : "null") + ',' + (class39s != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -451,7 +451,7 @@ abstract class BitmapFont {
                                         else {
                                             if (string_111_.startsWith("img=")) {
                                                 try {
-                                                    int i_112_ = (NodeSub41.method3156(true, (string_111_.substring(4))));
+                                                    int i_112_ = (NodeSub41.parseInt(true, (string_111_.substring(4))));
                                                     Component24 class105 = class105s[i_112_];
                                                     int i_113_ = (is == null ? class105.method980() : is[i_112_]);
                                                     if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (metrics.ascent) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
@@ -493,7 +493,7 @@ abstract class BitmapFont {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.AA(" + i + ',' + i_103_ + ',' + i_104_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_105_ + ',' + i_106_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.AA(" + i + ',' + i_103_ + ',' + i_104_ + ',' + (class105s != null ? "{...}" : "null") + ',' + (var_aa != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_105_ + ',' + i_106_ + ')'));
         }
     }
 
@@ -502,7 +502,7 @@ abstract class BitmapFont {
             metrics = class143;
             toolkit = var_ha;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -512,7 +512,7 @@ abstract class BitmapFont {
             anInt4057++;
             return method2568(is, i_118_, (byte) 97, var_aa, i_120_, class105s, i_116_, i_119_, i_122_, i_117_, string, i_121_, i_123_, i_124_, i_115_, 0, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.J(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_115_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_119_ + ',' + i_120_ + ',' + i_121_ + ',' + i_122_ + ',' + i_123_ + ',' + bool + ',' + i_124_ + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.J(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_115_ + ',' + (class105s != null ? "{...}" : "null") + ',' + i_116_ + ',' + i_117_ + ',' + i_118_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_119_ + ',' + i_120_ + ',' + i_121_ + ',' + i_122_ + ',' + i_123_ + ',' + bool + ',' + i_124_ + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -553,7 +553,7 @@ abstract class BitmapFont {
             }
             return i_138_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("da.P(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ',' + i_125_ + ',' + i_126_ + ',' + i_127_ + ',' + i_128_ + ',' + (random != null ? "{...}" : "null") + ',' + i_129_ + ',' + i_130_ + ',' + i_131_ + ',' + i_132_ + ',' + i_133_ + ',' + (string != null ? "{...}" : "null") + ',' + (is_134_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("da.P(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ',' + i_125_ + ',' + i_126_ + ',' + i_127_ + ',' + i_128_ + ',' + (random != null ? "{...}" : "null") + ',' + i_129_ + ',' + i_130_ + ',' + i_131_ + ',' + i_132_ + ',' + i_133_ + ',' + (string != null ? "{...}" : "null") + ',' + (is_134_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

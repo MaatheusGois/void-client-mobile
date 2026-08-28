@@ -3,45 +3,46 @@
  */
 /**
  * RENAMED from `Class322` (JODE-obfuscated).
- * Full image cache store. Holds int[][][] RGB pixel buffers; method2553 throws 'Can only retrieve a full image cache' if the cache is not fully populated.
+ * Full image cache store. Holds int[][][] RGB pixel buffers; getAllBuffers throws 'Can only retrieve a full image cache' if the cache is not fully populated.
  */
 
 final class ImageCacheStore {
     static int anInt4018;
     static int anInt4019;
-    private final int anInt4020;
-    private NodeList aClass262_4021;
-    private int anInt4022;
+    private final int capacity;
+    private NodeList lruList;
+    private int singleImageId;
     static int anInt4023;
-    private final int anInt4024;
-    private int anInt4025 = 0;
+    private final int imageCount;
+    private int usedSlots = 0;
     static int anInt4026;
     static Component183 aClass114_4027;
     static int anInt4028;
-    private int[][][] anIntArrayArrayArray4029;
+    private int[][][] buffers;
     static int anInt4030;
     static int[] anIntArray4031;
     static int anInt4032 = -1;
-    private ClientSystemInfo[] aClass348_Sub24Array4033;
+    private ClientSystemInfo[] slots;
     static int anInt4034;
-    boolean aBoolean4035;
+    /** True when the last {@link #getPixels} allocated or reused a different slot. */
+    boolean cacheMiss;
     static Component17 aClass308_4036;
 
     static final int method2552(boolean bool, int i, int i_0_, int i_1_) {
         if (i_1_ != -24667) method2554((byte) 95);
         anInt4023++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) 4, i, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) 4, i, bool);
         if (class348_sub13 == null) return -1;
         if (i_0_ < 0 || i_0_ >= class348_sub13.anIntArray6757.length) return -1;
         return class348_sub13.anIntArray6757[i_0_];
     }
 
-    final int[][][] method2553(int i) {
+    final int[][][] getAllBuffers(int i) {
         anInt4018++;
-        if (anInt4024 != anInt4020) throw new RuntimeException("Can only retrieve a full image cache");
-        for (int i_2_ = i; i_2_ < anInt4020; i_2_++)
-            aClass348_Sub24Array4033[i_2_] = DisplayModeManagerContainer196.aClass348_Sub24_4226;
-        return anIntArrayArrayArray4029;
+        if (imageCount != capacity) throw new RuntimeException("Can only retrieve a full image cache");
+        for (int i_2_ = i; i_2_ < capacity; i_2_++)
+            slots[i_2_] = DisplayModeManagerContainer196.aClass348_Sub24_4226;
+        return buffers;
     }
 
     static final void method2554(byte i) {
@@ -104,63 +105,63 @@ final class ImageCacheStore {
         NodeBaseSub2.method3443(true, class318_sub1_sub3_sub3);
         DisplayModeManagerContainer5.method729(i_3_, i_5_, (byte) 67, class318_sub1_sub3_sub3, i_4_);
         Component140.method3208(class318_sub1_sub3_sub3, i_3_, -98);
-        DisplayModeManagerContainer124.method1635(-69, class318_sub1_sub3_sub3);
+        GameType.method1635(-69, class318_sub1_sub3_sub3);
     }
 
-    final int[][] method2557(int i, int i_6_) {
+    final int[][] getPixels(int i, int i_6_) {
         anInt4034++;
         if (i >= -75) method2554((byte) -61);
-        if (anInt4020 != anInt4024) {
-            if (anInt4020 == 1) {
-                this.aBoolean4035 = i_6_ != anInt4022;
-                anInt4022 = i_6_;
-                return anIntArrayArrayArray4029[0];
+        if (capacity != imageCount) {
+            if (capacity == 1) {
+                this.cacheMiss = i_6_ != singleImageId;
+                singleImageId = i_6_;
+                return buffers[0];
             }
-            ClientSystemInfo class348_sub24 = aClass348_Sub24Array4033[i_6_];
+            ClientSystemInfo class348_sub24 = slots[i_6_];
             if (class348_sub24 == null) {
-                this.aBoolean4035 = true;
-                if (anInt4020 <= anInt4025) {
-                    ClientSystemInfo class348_sub24_7_ = (ClientSystemInfo) aClass262_4021.last(-126);
+                this.cacheMiss = true;
+                if (capacity <= usedSlots) {
+                    ClientSystemInfo class348_sub24_7_ = (ClientSystemInfo) lruList.last(-126);
                     class348_sub24 = new ClientSystemInfo(i_6_, class348_sub24_7_.anInt6875);
-                    aClass348_Sub24Array4033[class348_sub24_7_.anInt6872] = null;
+                    slots[class348_sub24_7_.anInt6872] = null;
                     class348_sub24_7_.unlink((byte) 56);
                 } else {
-                    class348_sub24 = new ClientSystemInfo(i_6_, anInt4025);
-                    anInt4025++;
+                    class348_sub24 = new ClientSystemInfo(i_6_, usedSlots);
+                    usedSlots++;
                 }
-                aClass348_Sub24Array4033[i_6_] = class348_sub24;
-            } else this.aBoolean4035 = false;
-            aClass262_4021.method2001(class348_sub24, -110);
-            return (anIntArrayArrayArray4029[class348_sub24.anInt6875]);
+                slots[i_6_] = class348_sub24;
+            } else this.cacheMiss = false;
+            lruList.addHead(class348_sub24, -110);
+            return (buffers[class348_sub24.anInt6875]);
         }
-        this.aBoolean4035 = aClass348_Sub24Array4033[i_6_] == null;
-        aClass348_Sub24Array4033[i_6_] = DisplayModeManagerContainer196.aClass348_Sub24_4226;
-        return anIntArrayArrayArray4029[i_6_];
+        this.cacheMiss = slots[i_6_] == null;
+        slots[i_6_] = DisplayModeManagerContainer196.aClass348_Sub24_4226;
+        return buffers[i_6_];
     }
 
-    final void method2558(int i) {
+    final void clear(int i) {
         anInt4019++;
-        if (i != 6144) anIntArrayArrayArray4029 = null;
-        for (int i_8_ = 0; anInt4020 > i_8_; i_8_++) {
-            anIntArrayArrayArray4029[i_8_][0] = null;
-            anIntArrayArrayArray4029[i_8_][1] = null;
-            anIntArrayArrayArray4029[i_8_][2] = null;
-            anIntArrayArrayArray4029[i_8_] = null;
+        if (i != 6144) buffers = null;
+        for (int i_8_ = 0; capacity > i_8_; i_8_++) {
+            buffers[i_8_][0] = null;
+            buffers[i_8_][1] = null;
+            buffers[i_8_][2] = null;
+            buffers[i_8_] = null;
         }
-        aClass348_Sub24Array4033 = null;
-        anIntArrayArrayArray4029 = null;
-        aClass262_4021.clear(99);
-        aClass262_4021 = null;
+        slots = null;
+        buffers = null;
+        lruList.clear(99);
+        lruList = null;
     }
 
     ImageCacheStore(int i, int i_9_, int i_10_) {
-        anInt4022 = -1;
-        aClass262_4021 = new NodeList();
-        this.aBoolean4035 = false;
-        anInt4020 = i;
-        anInt4024 = i_9_;
-        aClass348_Sub24Array4033 = new ClientSystemInfo[anInt4024];
-        anIntArrayArrayArray4029 = new int[anInt4020][3][i_10_];
+        singleImageId = -1;
+        lruList = new NodeList();
+        this.cacheMiss = false;
+        capacity = i;
+        imageCount = i_9_;
+        slots = new ClientSystemInfo[imageCount];
+        buffers = new int[capacity][3][i_10_];
     }
 
     static {

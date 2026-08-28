@@ -22,9 +22,9 @@ final class StringCache {
     static final boolean method3455(String string, int i) {
         anInt4324++;
         if (string == null) return false;
-        for (int i_0_ = 0; (i_0_ < MenuEntry.anInt9604); i_0_++) {
-            if (string.equalsIgnoreCase(DisplayModeManagerContainer145.aStringArray1808[i_0_])) return true;
-            if (string.equalsIgnoreCase(ShaderSub2.aStringArray5197[i_0_])) return true;
+        for (int i_0_ = 0; (i_0_ < MenuEntry.ignoreCount); i_0_++) {
+            if (string.equalsIgnoreCase(DisplayModeManagerContainer145.ignoreDisplayNames[i_0_])) return true;
+            if (string.equalsIgnoreCase(ShaderSub2.ignoreLastDisplayNames[i_0_])) return true;
         }
         if (i != 28280) aBoolean4328 = false;
         return false;

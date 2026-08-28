@@ -32,7 +32,7 @@ final class Component258
         if (class218 != null) return class218;
         byte[] is;
         synchronized (aClass45_1971) {
-            is = aClass45_1971.method410(i + -1891, 34, i_0_);
+            is = aClass45_1971.getFile(i + -1891, 34, i_0_);
         }
         class218 = new SceneManager();
         if (i != 31) return null;
@@ -99,13 +99,13 @@ final class Component258
         if (i >= -111) method1177((byte) 47);
     }
 
-    Component258(DisplayModeManagerContainer124 class230, int i, CacheStore class45, CacheStore class45_4_) {
+    Component258(GameType class230, int i, CacheStore class45, CacheStore class45_4_) {
         try {
             this.aClass45_1965 = class45_4_;
             aClass45_1971 = class45;
-            aClass45_1971.method407(0, 34);
+            aClass45_1971.getFileCount(0, 34);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_4_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_4_ != null ? "{...}" : "null") + ')'));
         }
     }
 

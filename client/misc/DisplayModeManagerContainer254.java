@@ -72,7 +72,7 @@ final class DisplayModeManagerContainer254
     final Task method1262(ReflectionInvoker class297, byte i) {
         if (i != 36) method1258(-105, -70, -80);
         anInt2144++;
-        return class297.method2235(aBoolean2139, (aBoolean2146 ? this.anInt2138 : this.anInt2148), this.aString2147, i ^ 0x6e65);
+        return class297.openSocket(aBoolean2139, (aBoolean2146 ? this.anInt2138 : this.anInt2148), this.aString2147, i ^ 0x6e65);
     }
 
     static final void method1263(boolean bool) {

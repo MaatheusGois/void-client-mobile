@@ -13,8 +13,10 @@ final class HardwareProbe extends Node {
     private int anInt6591;
     private int anInt6592;
     static int anInt6593;
-    private int anInt6594;
-    private int anInt6595;
+    /** 1=Sun, 2=Microsoft, 3=Apple, 4=other. */
+    private int javaVendorId;
+    /** Encoded OS version bucket from {@link ReflectionInvoker#osVersion}. */
+    private int osVersionId;
     private int anInt6596;
     private String aString6597;
     private int anInt6598;
@@ -24,18 +26,22 @@ final class HardwareProbe extends Node {
     static Component75 aClass173_6602 = new Component75();
     private int anInt6603;
     private String aString6604;
-    private int anInt6605;
+    /** Parsed Java minor version. */
+    private int javaMinor;
     private int anInt6606;
-    private boolean aBoolean6607;
+    /** True when the applet is unsigned (!{@link ReflectionInvoker#signed}). */
+    private boolean unsignedClient;
     private boolean aBoolean6608;
     int anInt6609;
     private String aString6610;
     static int anInt6611;
-    private int anInt6612;
+    /** Parsed Java patch/update number. */
+    private int javaPatch;
     private int anInt6613;
     private String aString6614;
     static int anInt6615;
-    private int anInt6616;
+    /** Parsed Java major version. */
+    private int javaMajor;
     private int anInt6617;
 
     private final void method2745(int i) {
@@ -62,12 +68,12 @@ final class HardwareProbe extends Node {
         anInt6611++;
         class348_sub49.writeByte(false, anInt6613);
         class348_sub49.writeByte(false, aBoolean6608 ? 1 : 0);
-        class348_sub49.writeByte(false, anInt6595);
-        class348_sub49.writeByte(false, anInt6594);
-        class348_sub49.writeByte(false, anInt6616);
-        class348_sub49.writeByte(false, anInt6605);
-        class348_sub49.writeByte(false, anInt6612);
-        class348_sub49.writeByte(false, !aBoolean6607 ? 0 : 1);
+        class348_sub49.writeByte(false, osVersionId);
+        class348_sub49.writeByte(false, javaVendorId);
+        class348_sub49.writeByte(false, javaMajor);
+        class348_sub49.writeByte(false, javaMinor);
+        class348_sub49.writeByte(false, javaPatch);
+        class348_sub49.writeByte(false, !unsignedClient ? 0 : 1);
         class348_sub49.writeShort((byte) 107, anInt6592);
         class348_sub49.writeByte(false, anInt6599);
         class348_sub49.writeMedium(i ^ ~0x26b6, this.anInt6609);
@@ -107,36 +113,36 @@ final class HardwareProbe extends Node {
             else if (ReflectionInvoker.aString3803.startsWith("mac")) anInt6613 = 2;
             else if (ReflectionInvoker.aString3803.startsWith("linux")) anInt6613 = 3;
             else anInt6613 = 4;
-            aBoolean6608 = ReflectionInvoker.aString3780.startsWith("amd64") || ReflectionInvoker.aString3780.startsWith("x86_64");
+            aBoolean6608 = ReflectionInvoker.osArch.startsWith("amd64") || ReflectionInvoker.osArch.startsWith("x86_64");
             if (anInt6613 != 1) {
                 if (anInt6613 == 2) {
-                    if (ReflectionInvoker.aString3778.indexOf("10.4") == -1) {
-                        if (ReflectionInvoker.aString3778.indexOf("10.5") == -1) {
-                            if (ReflectionInvoker.aString3778.indexOf("10.6") != -1) anInt6595 = 22;
-                        } else anInt6595 = 21;
-                    } else anInt6595 = 20;
+                    if (ReflectionInvoker.osVersion.indexOf("10.4") == -1) {
+                        if (ReflectionInvoker.osVersion.indexOf("10.5") == -1) {
+                            if (ReflectionInvoker.osVersion.indexOf("10.6") != -1) osVersionId = 22;
+                        } else osVersionId = 21;
+                    } else osVersionId = 20;
                 }
-            } else if (ReflectionInvoker.aString3778.indexOf("4.0") != -1) anInt6595 = 1;
-            else if (ReflectionInvoker.aString3778.indexOf("4.1") == -1) {
-                if (ReflectionInvoker.aString3778.indexOf("4.9") == -1) {
-                    if (ReflectionInvoker.aString3778.indexOf("5.0") != -1) anInt6595 = 4;
-                    else if (ReflectionInvoker.aString3778.indexOf("5.1") == -1) {
-                        if (ReflectionInvoker.aString3778.indexOf("6.0") != -1) anInt6595 = 6;
-                        else if (ReflectionInvoker.aString3778.indexOf("6.1") != -1) anInt6595 = 7;
-                    } else anInt6595 = 5;
-                } else anInt6595 = 3;
-            } else anInt6595 = 2;
-            if (ReflectionInvoker.aString3782.toLowerCase().indexOf("sun") != -1) anInt6594 = 1;
-            else if (ReflectionInvoker.aString3782.toLowerCase().indexOf("microsoft") == -1) {
-                if (ReflectionInvoker.aString3782.toLowerCase().indexOf("apple") != -1) anInt6594 = 3;
-                else anInt6594 = 4;
-            } else anInt6594 = 2;
-            boolean oldJava = ReflectionInvoker.aString3796.startsWith("1.");
+            } else if (ReflectionInvoker.osVersion.indexOf("4.0") != -1) osVersionId = 1;
+            else if (ReflectionInvoker.osVersion.indexOf("4.1") == -1) {
+                if (ReflectionInvoker.osVersion.indexOf("4.9") == -1) {
+                    if (ReflectionInvoker.osVersion.indexOf("5.0") != -1) osVersionId = 4;
+                    else if (ReflectionInvoker.osVersion.indexOf("5.1") == -1) {
+                        if (ReflectionInvoker.osVersion.indexOf("6.0") != -1) osVersionId = 6;
+                        else if (ReflectionInvoker.osVersion.indexOf("6.1") != -1) osVersionId = 7;
+                    } else osVersionId = 5;
+                } else osVersionId = 3;
+            } else osVersionId = 2;
+            if (ReflectionInvoker.javaVendor.toLowerCase().indexOf("sun") != -1) javaVendorId = 1;
+            else if (ReflectionInvoker.javaVendor.toLowerCase().indexOf("microsoft") == -1) {
+                if (ReflectionInvoker.javaVendor.toLowerCase().indexOf("apple") != -1) javaVendorId = 3;
+                else javaVendorId = 4;
+            } else javaVendorId = 2;
+            boolean oldJava = ReflectionInvoker.javaVersion.startsWith("1.");
             int i = oldJava ? 2 : 0;
             int i_3_ = 0;
             try {
-                while (ReflectionInvoker.aString3796.length() > i) {
-                    int i_4_ = ReflectionInvoker.aString3796.charAt(i);
+                while (ReflectionInvoker.javaVersion.length() > i) {
+                    int i_4_ = ReflectionInvoker.javaVersion.charAt(i);
                     if (i_4_ < 48 || i_4_ > 57) break;
                     i++;
                     i_3_ = i_3_ * 10 - -i_4_ + -48;
@@ -144,34 +150,34 @@ final class HardwareProbe extends Node {
             } catch (Exception exception) {
                 /* empty */
             }
-            anInt6616 = i_3_;
-            i = ReflectionInvoker.aString3796.indexOf('.', 2) - -1;
+            javaMajor = i_3_;
+            i = ReflectionInvoker.javaVersion.indexOf('.', 2) - -1;
             i_3_ = 0;
             try {
-                for (/**/; (i < ReflectionInvoker.aString3796.length()); i++) {
-                    int i_5_ = ReflectionInvoker.aString3796.charAt(i);
+                for (/**/; (i < ReflectionInvoker.javaVersion.length()); i++) {
+                    int i_5_ = ReflectionInvoker.javaVersion.charAt(i);
                     if (i_5_ < 48 || i_5_ > 57) break;
                     i_3_ = i_3_ * 10 + i_5_ + -48;
                 }
             } catch (Exception exception) {
                 /* empty */
             }
-            anInt6605 = i_3_;
+            javaMinor = i_3_;
             i_3_ = 0;
-            i = 1 + ReflectionInvoker.aString3796.indexOf(oldJava ? '_' : '.', 4);
+            i = 1 + ReflectionInvoker.javaVersion.indexOf(oldJava ? '_' : '.', 4);
             try {
-                for (/**/; ReflectionInvoker.aString3796.length() > i; i++) {
-                    int i_6_ = ReflectionInvoker.aString3796.charAt(i);
+                for (/**/; ReflectionInvoker.javaVersion.length() > i; i++) {
+                    int i_6_ = ReflectionInvoker.javaVersion.charAt(i);
                     if (i_6_ < 48 || i_6_ > 57) break;
                     i_3_ = i_6_ + -48 + i_3_ * 10;
                 }
             } catch (Exception exception) {
                 /* empty */
             }
-            aBoolean6607 = !class297.aBoolean3777;
-            anInt6612 = i_3_;
+            unsignedClient = !class297.signed;
+            javaPatch = i_3_;
             anInt6592 = Component127.anInt2964;
-            if (anInt6616 <= 3) anInt6599 = 0;
+            if (javaMajor <= 3) anInt6599 = 0;
             else anInt6599 = DefinitionSub29.anInt9372;
             try {
                 int[] is = HardwareInfo.getCPUInfo();

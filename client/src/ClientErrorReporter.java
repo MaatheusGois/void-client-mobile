@@ -3,7 +3,7 @@
  */
 /**
  * RENAMED from `Class156` (JODE-obfuscated).
- * Client error reporter. Posts exceptions/messages to the clienterror.ws?c= endpoint (TheoraVideoPlayer.method847) for server-side error logging.
+ * Client error reporter. Posts exceptions/messages to the clienterror.ws?c= endpoint (TheoraVideoPlayer.printClientError) for server-side error logging.
  */
 
 import java.io.DataInputStream;
@@ -55,26 +55,27 @@ final class ClientErrorReporter {
         /* empty */
     }
 
-    static final void method1242(String string, Throwable throwable, int i) {
+    /** Build an error string and POST it to the applet error endpoint. */
+    static final void reportError(String string, Throwable throwable, int i) {
         anInt2112++;
         do {
             try {
                 String string_4_ = "";
-                if (throwable != null) string_4_ = GlWaterShader.method2766(false, throwable);
+                if (throwable != null) string_4_ = GlWaterShader.throwableToString(false, throwable);
                 if (string != null) {
                     if (throwable != null) string_4_ += " | ";
                     string_4_ += string;
                 }
-                TheoraVideoPlayer.method847(string_4_, -5192);
-                string_4_ = DisplayModeManagerContainer196.method2680("%3a", true, ":", string_4_);
-                string_4_ = DisplayModeManagerContainer196.method2680("%40", true, "@", string_4_);
-                string_4_ = DisplayModeManagerContainer196.method2680("%26", true, "&", string_4_);
-                string_4_ = DisplayModeManagerContainer196.method2680("%23", true, "#", string_4_);
+                TheoraVideoPlayer.printClientError(string_4_, -5192);
+                string_4_ = DisplayModeManagerContainer196.replaceAll("%3a", true, ":", string_4_);
+                string_4_ = DisplayModeManagerContainer196.replaceAll("%40", true, "@", string_4_);
+                string_4_ = DisplayModeManagerContainer196.replaceAll("%26", true, "&", string_4_);
+                string_4_ = DisplayModeManagerContainer196.replaceAll("%23", true, "#", string_4_);
                 if (NodeSub8.anApplet6662 != null) {
                     if (i != 15004) method1238(-69, 63, 124);
-                    Task class144 = (DisplayModeManagerContainer155.aClass297_2993.method2237(new URL(NodeSub8.anApplet6662.getCodeBase(), ("clienterror.ws?c=" + NodeSub1Sub3.anInt8818 + "&u=" + (BufferCacheSub2.aString8265 != null ? BufferCacheSub2.aString8265 : String.valueOf(Component84.aLong1507)) + "&v1=" + ReflectionInvoker.aString3782 + "&v2=" + ReflectionInvoker.aString3796 + "&e=" + string_4_)), 8362));
-                    while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -123, 1L);
-                    if (class144.anInt1997 != 1) break;
+                    Task class144 = (BuildType.aClass297_2993.openUrlStream(new URL(NodeSub8.anApplet6662.getCodeBase(), ("clienterror.ws?c=" + NodeSub1Sub3.anInt8818 + "&u=" + (BufferCacheSub2.aString8265 != null ? BufferCacheSub2.aString8265 : String.valueOf(Component84.aLong1507)) + "&v1=" + ReflectionInvoker.javaVendor + "&v2=" + ReflectionInvoker.javaVersion + "&e=" + string_4_)), 8362));
+                    while (class144.status == 0) SpriteAtlasShader.sleep((byte) -123, 1L);
+                    if (class144.status != 1) break;
                     DataInputStream datainputstream = (DataInputStream) class144.result;
                     datainputstream.read();
                     datainputstream.close();

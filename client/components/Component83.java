@@ -8,7 +8,8 @@ final class Component83
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt1656 = 0;
-    static NamedInteger aClass364_1657 = new NamedInteger("WTWIP", 3);
+    /** World-test WIP channel. */
+    static NamedInteger WTWIP = new NamedInteger("WTWIP", 3);
     static int anInt1658;
     static int anInt1659;
     static int anInt1660;
@@ -51,7 +52,7 @@ final class Component83
     }
 
     public static void method1013(byte i) {
-        aClass364_1657 = null;
+        WTWIP = null;
         if (i < 111) method1013((byte) 17);
         aClass304_1662 = null;
         aClass105_1664 = null;

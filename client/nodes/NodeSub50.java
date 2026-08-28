@@ -8,7 +8,8 @@ final class NodeSub50
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
     static int anInt7210;
-    String aString7211;
+    /** Payload string — typically an enum String value. */
+    String stringValue;
     static byte[][] aByteArrayArray7212;
     static int anInt7213 = 0;
     static int anInt7214;
@@ -19,7 +20,7 @@ final class NodeSub50
 
     static final void method3419(int i) {
         ClientSystemInfo.anIntArray6878 = null;
-        RenderableSub9Sub1.anIntArray8785 = null;
+        FriendLoginMessage.anIntArray8785 = null;
         DefinitionSub6.anIntArray9135 = null;
         anInt7210++;
         if (i != 13022) method3418(-79);
@@ -33,7 +34,7 @@ final class NodeSub50
     }
 
     NodeSub50(String string) {
-        this.aString7211 = string;
+        this.stringValue = string;
     }
 
     static final int method3420(int i) {

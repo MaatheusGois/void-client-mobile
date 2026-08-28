@@ -70,7 +70,8 @@ final class NodeSub21
         }
     }
 
-    static int method2955(int i, int i_24_) {
+    /** {@code i ^ i_24_}. */
+    static int bitwiseXor(int i, int i_24_) {
         return i ^ i_24_;
     }
 

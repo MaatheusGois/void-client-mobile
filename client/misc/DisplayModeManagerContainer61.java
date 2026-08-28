@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer61
             this.aString3758 = string_5_;
             this.aString3756 = string;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wc.<init>(" + (string != null ? "{...}" : "null") + ',' + (string_4_ != null ? "{...}" : "null") + ',' + (string_5_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wc.<init>(" + (string != null ? "{...}" : "null") + ',' + (string_4_ != null ? "{...}" : "null") + ',' + (string_5_ != null ? "{...}" : "null") + ')'));
         }
     }
 

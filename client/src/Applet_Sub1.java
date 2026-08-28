@@ -76,11 +76,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     public static boolean aBoolean58;
     public static int anInt59;
 
-    abstract void method80(int i);
+    /** Close toolkit, sockets, and cache files. */
+    abstract void closeResources(int i);
 
     public final void stop() {
         anInt24++;
-        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) Component22.aLong1739 = Component240.currentTimeMillis(-73) - -4000L;
+        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.shuttingDown) Component22.aLong1739 = Component240.currentTimeMillis(-73) - -4000L;
     }
 
     public final String getParameter(String string) {
@@ -96,7 +97,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         return null;
     }
 
-    final void method82(int i, String string) {
+    /** Print {@code error_game_<string>} and redirect to error page once. */
+    final void reportGameError(int i, String string) {
         int i_0_ = 88 / ((i - -5) / 54);
         anInt22++;
         if (!aBoolean27) {
@@ -122,7 +124,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     final boolean method83(boolean bool) {
         if (bool != true) getDocumentBase();
         anInt5++;
-        return DefinitionSub19.method3098(-30282, "jagmisc");
+        return DefinitionSub19.tryLoadNativeLibrary(-30282, "jagmisc");
     }
 
     public final void focusLost(FocusEvent focusevent) {
@@ -218,7 +220,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final synchronized void paint(Graphics graphics) {
         anInt18++;
-        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) {
+        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.shuttingDown) {
             Component297.aBoolean4726 = true;
             if (AbstractShaderSub4.aBoolean7320 && -NodeSub12.aLong6748 + Component240.currentTimeMillis(-57) > 1000) {
                 Rectangle rectangle = graphics.getClipBounds();
@@ -248,7 +250,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
         }
         method93(-11018);
-        if (i > -107) method90(true, true);
+        if (i > -107) shutdown(true, true);
     }
 
     public final void windowDeiconified(WindowEvent windowevent) {
@@ -280,21 +282,22 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             }
         }
         if (string.endsWith("192.168.1.")) return true;
-        method82(53, "invalidhost");
+        reportGameError(53, "invalidhost");
         return false;*/
     }
 
-    private final void method90(boolean bool, boolean bool_4_) {
+    /** Begin client shutdown ({@code clean=}{@code bool}); calls {@link #cleanup}. */
+    private final void shutdown(boolean bool, boolean bool_4_) {
         anInt26++;
         synchronized (this) {
-            if (AssetCacheLoader.aBoolean384) return;
-            AssetCacheLoader.aBoolean384 = true;
+            if (AssetCacheLoader.shuttingDown) return;
+            AssetCacheLoader.shuttingDown = true;
         }
         System.out.println("Shutdown start - clean:" + bool);
         if (ToolkitFactory.anApplet1530 != null) ToolkitFactory.anApplet1530.destroy();
         if (bool_4_ != false) aBoolean17 = false;
         try {
-            method80(0);
+            closeResources(0);
         } catch (Exception exception) {
             /* empty */
         }
@@ -307,7 +310,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             aBoolean17 = false;
         }
         Component36.method1945((byte) -128, true);
-        NativeLibraryLoader.method1629(!bool_4_);
+        NativeLibraryLoader.unloadNativeLibraries(!bool_4_);
         if (DisplayModeManagerContainer50.gameCanvas != null) {
             try {
                 DisplayModeManagerContainer50.gameCanvas.removeFocusListener(this);
@@ -318,12 +321,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
         if (OggUrlStream.aClass297_8992 != null) {
             try {
-                OggUrlStream.aClass297_8992.method2234((byte) 103);
+                OggUrlStream.aClass297_8992.shutdown((byte) 103);
             } catch (Exception exception) {
                 /* empty */
             }
         }
-        method91((byte) 108);
+        cleanup((byte) 108);
         if (RSACipher.aFrame4904 != null) {
             RSACipher.aFrame4904.setVisible(false);
             RSACipher.aFrame4904.dispose();
@@ -337,7 +340,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         ToolkitFactory.anApplet1530 = applet;
     }
 
-    abstract void method91(byte i);
+    /** Subclass static-table / resource teardown after {@link #closeResources}. */
+    abstract void cleanup(byte i);
 
     public final AppletContext getAppletContext() {
         anInt19++;
@@ -357,11 +361,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final void destroy() {
         anInt21++;
-        if (DefinitionSub9.anApplet_Sub1_9169 == this && !AssetCacheLoader.aBoolean384) {
+        if (DefinitionSub9.anApplet_Sub1_9169 == this && !AssetCacheLoader.shuttingDown) {
             Component22.aLong1739 = Component240.currentTimeMillis(-108);
-            SpriteAtlasShader.method2161((byte) 77, 5000L);
-            DisplayModeManagerContainer155.aClass297_2993 = null;
-            method90(false, false);
+            SpriteAtlasShader.sleep((byte) 77, 5000L);
+            BuildType.aClass297_2993 = null;
+            shutdown(false, false);
         }
     }
 
@@ -369,24 +373,24 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt28++;
         do {
             try {
-                if (ReflectionInvoker.aString3782 != null) {
-                    String string = ReflectionInvoker.aString3782.toLowerCase();
+                if (ReflectionInvoker.javaVendor != null) {
+                    String string = ReflectionInvoker.javaVendor.toLowerCase();
                     if (string.indexOf("sun") != -1 || string.indexOf("apple") != -1) {
-                        String string_5_ = ReflectionInvoker.aString3796;
+                        String string_5_ = ReflectionInvoker.javaVersion;
                         if (string_5_.equals("1.1") || string_5_.startsWith("1.1.") || string_5_.equals("1.2") || string_5_.startsWith("1.2.")) {
-                            method82(-119, "wrongjava");
+                            reportGameError(-119, "wrongjava");
                             break;
                         }
-                    } else if (string.indexOf("ibm") != -1 && (ReflectionInvoker.aString3796 == null || ReflectionInvoker.aString3796.equals("1.4.2"))) {
-                        method82(81, "wrongjava");
+                    } else if (string.indexOf("ibm") != -1 && (ReflectionInvoker.javaVersion == null || ReflectionInvoker.javaVersion.equals("1.4.2"))) {
+                        reportGameError(81, "wrongjava");
                         break;
                     }
                 }
-                if (ReflectionInvoker.aString3796 != null && ReflectionInvoker.aString3796.startsWith("1.")) {
+                if (ReflectionInvoker.javaVersion != null && ReflectionInvoker.javaVersion.startsWith("1.")) {
                     int i = 2;
                     int i_6_ = 0;
-                    while (ReflectionInvoker.aString3796.length() > i) {
-                        int i_7_ = ReflectionInvoker.aString3796.charAt(i);
+                    while (ReflectionInvoker.javaVersion.length() > i) {
+                        int i_7_ = ReflectionInvoker.javaVersion.charAt(i);
                         if (i_7_ < 48 || i_7_ > 57) break;
                         i++;
                         i_6_ = 10 * i_6_ - (-i_7_ + 48);
@@ -413,13 +417,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                     for (int i = 0; MatrixSub2.anInt5744 > i; i++)
                         method84(-1);
                     method88(-119);
-                    DummyClass.method3578((byte) -42, DisplayModeManagerContainer50.gameCanvas, (OggUrlStream.aClass297_8992));
+                    DummyClass.pulseAwtQueue((byte) -42, DisplayModeManagerContainer50.gameCanvas, (OggUrlStream.aClass297_8992));
                 }
             } catch (Throwable throwable) {
-                ClientErrorReporter.method1242(method81((byte) 109), throwable, 15004);
-                method82(123, "crash");
+                ClientErrorReporter.reportError(method81((byte) 109), throwable, 15004);
+                reportGameError(123, "crash");
             } finally {
-                method90(true, false);
+                shutdown(true, false);
             }
         } while (false);
     }
@@ -433,7 +437,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         NodeSub38.anInt7006 = string.length();
     }
 
-    static final void method94(String string, int i) {
+    /** Append timestamped line(s) to the client console (and optional log stream). */
+    static final void printConsole(String string, int i) {
         anInt6++;
         if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.method249(2);
         ParticleShader.aCalendar6221.setTime(new Date(Component240.currentTimeMillis(-102)));
@@ -441,14 +446,14 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         int i_9_ = ParticleShader.aCalendar6221.get(12);
         int i_10_ = ParticleShader.aCalendar6221.get(13);
         String string_11_ = (Integer.toString(i_8_ / 10) + i_8_ % 10 + ":" + i_9_ / 10 + i_9_ % 10 + ":" + i_10_ / 10 + i_10_ % 10);
-        String[] strings = DefinitionSub23.method3113('\n', true, string);
+        String[] strings = DefinitionSub23.splitByChar('\n', true, string);
         for (int i_12_ = 0; i_12_ < strings.length; i_12_++) {
             for (int i_13_ = Component14.anInt8587; i_13_ > 0; i_13_--)
                 ArbShaderProgram.aStringArray6200[i_13_] = ArbShaderProgram.aStringArray6200[-1 + i_13_];
             ArbShaderProgram.aStringArray6200[0] = string_11_ + ": " + strings[i_12_];
-            if (Component40.aFileOutputStream6323 != null) {
+            if (Component40.consoleLogStream != null) {
                 try {
-                    Component40.aFileOutputStream6323.write(ClientSystemInfo.method2992(((ArbShaderProgram.aStringArray6200[0]) + "\n"), (byte) -20));
+                    Component40.consoleLogStream.write(ClientSystemInfo.encodeCp1252(((ArbShaderProgram.aStringArray6200[0]) + "\n"), (byte) -20));
                 } catch (java.io.IOException ioexception) {
                     /* empty */
                 }
@@ -472,18 +477,18 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 NodeSub1Sub3.anInt8818 = i_15_;
                 DefinitionSub9.anApplet_Sub1_9169 = this;
                 NodeSub8.anApplet6662 = ToolkitFactory.anApplet1530;
-                DisplayModeManagerContainer155.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i_17_, string, i_18_, ToolkitFactory.anApplet1530 != null);
-                Task class144 = OggUrlStream.aClass297_8992.method2236(this, -10240, 1);
+                BuildType.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i_17_, string, i_18_, ToolkitFactory.anApplet1530 != null);
+                Task class144 = OggUrlStream.aClass297_8992.startThread(this, -10240, 1);
                 if (i_19_ != 50) anInt37 = -13;
-                while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -126, 10L);
+                while (class144.status == 0) SpriteAtlasShader.sleep((byte) -126, 10L);
             } else {
                 NodeSub51.anInt7252++;
-                if (NodeSub51.anInt7252 >= 3) method82(112, "alreadyloaded");
+                if (NodeSub51.anInt7252 >= 3) reportGameError(112, "alreadyloaded");
                 else getAppletContext().showDocument(getDocumentBase(), "_self");
             }
         } catch (Throwable throwable) {
-            ClientErrorReporter.method1242(null, throwable, 15004);
-            method82(52, "crash");
+            ClientErrorReporter.reportError(null, throwable, 15004);
+            reportGameError(52, "crash");
         }
     }
 
@@ -505,11 +510,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             RSACipher.aFrame4904.toFront();
             Insets insets = RSACipher.aFrame4904.getInsets();
             RSACipher.aFrame4904.setSize(insets.right + (insets.left + SocketConnector.anInt3473), (insets.bottom + (NodeSub22.anInt6857 + insets.top)));
-            DisplayModeManagerContainer155.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i, string, i_22_, true);
-            Task class144 = OggUrlStream.aClass297_8992.method2236(this, i_23_ + -33739, 1);
-            while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 21, 10L);
+            BuildType.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i, string, i_22_, true);
+            Task class144 = OggUrlStream.aClass297_8992.startThread(this, i_23_ + -33739, 1);
+            while (class144.status == 0) SpriteAtlasShader.sleep((byte) 21, 10L);
         } catch (Exception exception) {
-            ClientErrorReporter.method1242(null, exception, i_23_ + -8495);
+            ClientErrorReporter.reportError(null, exception, i_23_ + -8495);
         }
         anInt31++;
     }
@@ -521,7 +526,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     final boolean method97(int i) {
         if (i != -1) method88(-104);
         anInt4++;
-        return DefinitionSub19.method3098(-30282, "jaclib");
+        return DefinitionSub19.tryLoadNativeLibrary(-30282, "jaclib");
     }
 
     public static void method98(int i) {
@@ -532,7 +537,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final void start() {
         anInt36++;
-        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) Component22.aLong1739 = 0L;
+        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.shuttingDown) Component22.aLong1739 = 0L;
     }
 
     abstract void method99(byte i);
@@ -540,6 +545,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     final boolean method100(int i) {
         anInt10++;
         if (i != 10) return true;
-        return DefinitionSub19.method3098(-30282, "jagtheora");
+        return DefinitionSub19.tryLoadNativeLibrary(-30282, "jagtheora");
     }
 }

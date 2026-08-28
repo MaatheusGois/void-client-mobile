@@ -43,7 +43,7 @@ abstract class NodeSub5
             if (bool != true) aByteArray6624 = null;
             return new GlToolkitSub1(canvas, var_d, i_4_, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fba.M(" + bool + ',' + i + ',' + i_4_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fba.M(" + bool + ',' + i + ',' + i_4_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -88,8 +88,8 @@ abstract class NodeSub5
                         AbstractShaderSub2.anInt7297 = 2;
                     }
                     if (AbstractShaderSub2.anInt7297 == 2) {
-                        if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 == 2) throw new IOException();
-                        if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 != 1) return;
+                        if (DisplayModeManagerContainer273.aClass144_5800.status == 2) throw new IOException();
+                        if (DisplayModeManagerContainer273.aClass144_5800.status != 1) return;
                         DefinitionSub8.aClass238_9165 = OggStreamReader.openSocketStream(((Socket) (DisplayModeManagerContainer273.aClass144_5800.result)), (byte) 24, 7500);
                         DisplayModeManagerContainer273.aClass144_5800 = null;
                         Component302.method1802(0);

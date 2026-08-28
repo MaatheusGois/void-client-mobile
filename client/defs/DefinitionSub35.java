@@ -36,10 +36,10 @@ final class DefinitionSub35
         }
     }
 
-    final int[] method3042(int i, int i_4_) {
+    final int[] getMonochromeOutput(int i, int i_4_) {
         anInt9446++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_5_ = Component253.anInt3201 * anInt9448 >> 12;
             int[] is_6_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & -1 + i, 633706337, 0);
             int[] is_7_ = this.method3048(i, 633706337, 0);
@@ -72,7 +72,7 @@ final class DefinitionSub35
         if (i < 34) method3144((byte) 127);
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i <= 108) method3143(38);
         anInt9441++;
         method3143(-119);

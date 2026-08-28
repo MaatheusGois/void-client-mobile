@@ -97,13 +97,13 @@ final class Component54
                             f_22_ = (float) (class124.anIntArray1844[i_20_]) / 1024.0F;
                             f_23_ = (float) (class124.anIntArray1859[i_20_]) / 1024.0F;
                         }
-                        fs[i_20_] = (Component143.method1347(class124.aShortArray1825[i_20_], class124.aShortArray1849[i_20_], f_22_, f_23_, 126, f, class124.aShortArray1829[i_20_], GpsOverlay.method1166(255, (class124.aByteArray1833[i_20_]))));
+                        fs[i_20_] = (Component143.method1347(class124.aShortArray1825[i_20_], class124.aShortArray1849[i_20_], f_22_, f_23_, 126, f, class124.aShortArray1829[i_20_], GpsOverlay.bitwiseAnd(255, (class124.aByteArray1833[i_20_]))));
                     }
                 }
             }
             return new Component142(is_1_, is_2_, is_3_, fs);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dha.B(" + i + ',' + i_0_ + ',' + (class124 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dha.B(" + i + ',' + i_0_ + ',' + (class124 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 

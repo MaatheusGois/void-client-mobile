@@ -11,7 +11,8 @@ class Component185
     private int anInt5302;
     private final int[] anIntArray5303 = new int[this.anInt1071];
     static int anInt5304;
-    static String[] aStringArray5305 = {"en", "de", "fr", "pt", "nl"};
+    /** Supported language codes (index = {@link ObjectDeserializer#languageId}). */
+    static String[] languageNames = {"en", "de", "fr", "pt", "nl"};
     static int[] anIntArray5306 = {36064, 36065, 36066, 36067, 36068, 36069, 36070, 36071, 36096};
     static int anInt5307;
     private int anInt5308;
@@ -47,13 +48,13 @@ class Component185
     }
 
     void method563(byte i, int i_7_, byte i_8_) {
-        aByteArray5309[anInt5308++] = (byte) (GpsOverlay.method1166(127, i_8_ >> 1) + 127);
+        aByteArray5309[anInt5308++] = (byte) (GpsOverlay.bitwiseAnd(127, i_8_ >> 1) + 127);
         if (i < 79) method543(true);
         anInt5310++;
     }
 
     public static void method564(byte i) {
-        aStringArray5305 = null;
+        languageNames = null;
         anIntArray5306 = null;
         if (i >= -39) method564((byte) 50);
     }

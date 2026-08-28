@@ -14,7 +14,8 @@ abstract class DisplayModeManagerContainer28
     static float aFloat8725;
     static int anInt8726;
     short aShort8727;
-    static long aLong8728;
+    /** Accumulated positive skew when wall clock jumps backwards (monotonic offset). */
+    static long clockSkewMillis;
 
     final boolean method2382(byte i) {
         if (i > -51) aClass351_8724 = null;

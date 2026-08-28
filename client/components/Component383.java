@@ -18,7 +18,7 @@ final class Component383
         try {
             this.anInt8577 = i_2_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wg.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wg.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 

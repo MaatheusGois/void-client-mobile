@@ -51,8 +51,8 @@ final class Component201
     static final void method2270(int i, int i_4_, GraphicsToolkit var_ha, String string, boolean bool, int i_5_, int i_6_, int i_7_) {
         try {
             if (OutputStream_Sub2.aClass105_106 == null || Component221.aClass105_1800 == null) {
-                if (Component158.aClass45_322.method421(false, DisplayModeManagerContainer155.anInt2996) && Component158.aClass45_322.method421(false, ToolbarRefreshDefinition.anInt9231)) {
-                    OutputStream_Sub2.aClass105_106 = (var_ha.method3691(Component170.method1521(Component158.aClass45_322, DisplayModeManagerContainer155.anInt2996, 0), true));
+                if (Component158.aClass45_322.isSingletonFileReady(false, BuildType.anInt2996) && Component158.aClass45_322.isSingletonFileReady(false, ToolbarRefreshDefinition.anInt9231)) {
+                    OutputStream_Sub2.aClass105_106 = (var_ha.method3691(Component170.method1521(Component158.aClass45_322, BuildType.anInt2996, 0), true));
                     Component170 class207 = Component170.method1521(Component158.aClass45_322, ToolbarRefreshDefinition.anInt9231, 0);
                     Component221.aClass105_1800 = var_ha.method3691(class207, true);
                     class207.method1518();
@@ -72,7 +72,7 @@ final class Component201
                 var_ha.fillRect(i_4_, i_7_ + i_5_, i, i_6_ + -i_7_, (Component235.anInt3376 | 255 + -Component44.anInt948 << 24), 1);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kv.G(" + i + ',' + i_4_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kv.G(" + i + ',' + i_4_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ')'));
         }
     }
 

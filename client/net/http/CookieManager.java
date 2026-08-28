@@ -27,7 +27,7 @@ final class CookieManager extends ShaderProgram {
     final void method2133(int i) {
         if (i <= -75) {
             if (aBoolean6301) {
-                aClass61_6302.method594('\001', 28666);
+                aClass61_6302.callDisplayList('\001', 28666);
                 this.aHa_Sub2_3684.method3738(-15039, 1);
                 this.aHa_Sub2_3684.method3771((byte) -92, null);
                 this.aHa_Sub2_3684.method3738(-15039, 0);
@@ -78,7 +78,7 @@ final class CookieManager extends ShaderProgram {
         super(var_ha_Sub2);
         if (var_ha_Sub2.aBoolean7863) {
             aClass61_6302 = new Component128(var_ha_Sub2, 2);
-            aClass61_6302.method595((byte) 123, 0);
+            aClass61_6302.beginDisplayList((byte) 123, 0);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3729(34165, (byte) -35, 7681);
             this.aHa_Sub2_3684.method3762(34168, 770, (byte) -87, 2);
@@ -90,8 +90,8 @@ final class CookieManager extends ShaderProgram {
             OpenGL.glEnable(3169);
             OpenGL.glEnable(3170);
             this.aHa_Sub2_3684.method3738(-15039, 0);
-            aClass61_6302.method591(-1);
-            aClass61_6302.method595((byte) 126, 1);
+            aClass61_6302.endDisplayList(-1);
+            aClass61_6302.beginDisplayList((byte) 126, 1);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3729(8448, (byte) -73, 8448);
             this.aHa_Sub2_3684.method3762(34166, 770, (byte) -87, 2);
@@ -103,7 +103,7 @@ final class CookieManager extends ShaderProgram {
             OpenGL.glLoadIdentity();
             OpenGL.glMatrixMode(5888);
             this.aHa_Sub2_3684.method3738(-15039, 0);
-            aClass61_6302.method591(-1);
+            aClass61_6302.endDisplayList(-1);
         }
     }
 
@@ -137,7 +137,7 @@ final class CookieManager extends ShaderProgram {
         anInt6293++;
         GlFramebufferTexture class258_sub2 = this.aHa_Sub2_3684.method3741(444720536);
         if (aClass61_6302 != null && class258_sub2 != null && bool) {
-            aClass61_6302.method594('\0', 28666);
+            aClass61_6302.callDisplayList('\0', 28666);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3771((byte) -77, class258_sub2);
             OpenGL.glMatrixMode(5890);

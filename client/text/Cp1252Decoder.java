@@ -67,7 +67,7 @@ final class Cp1252Decoder extends Component47 {
         GraphicsToolkit.method3641(i_18_, i_19_, (byte) -75, this.anInt864, i_17_, i_16_);
     }
 
-    static final byte[] method461(boolean bool, Object object, int i) {
+    static final byte[] unwrapBytes(boolean bool, Object object, int i) {
         anInt5215++;
         if (object == null) return null;
         if (object instanceof byte[]) {
@@ -88,7 +88,7 @@ final class Cp1252Decoder extends Component47 {
         int i_21_ = 0xff & i;
         if (i_21_ == 0) throw new IllegalArgumentException("Non cp1252 character 0x" + Integer.toString(i_21_, 16) + " provided");
         if (i_21_ >= 128 && i_21_ < 160) {
-            int i_22_ = Component352.aCharArray625[i_21_ + -128];
+            int i_22_ = Component352.cp1252HighChars[i_21_ + -128];
             if (i_22_ == 0) i_22_ = 63;
             i_21_ = i_22_;
         }

@@ -29,8 +29,8 @@ abstract class Component298
         int i_2_ = -94 % ((i - 25) / 52);
         anInt4641++;
         boolean bool = true;
-        if (!this.aClass45_4632.method421(false, this.aClass369_4635.anInt4965)) bool = false;
-        if (!aClass45_4631.method421(false, this.aClass369_4635.anInt4965)) bool = false;
+        if (!this.aClass45_4632.isSingletonFileReady(false, this.aClass369_4635.anInt4965)) bool = false;
+        if (!aClass45_4631.isSingletonFileReady(false, this.aClass369_4635.anInt4965)) bool = false;
         return bool;
     }
 
@@ -101,11 +101,11 @@ abstract class Component298
         if (i == -49) {
             anInt4634++;
             int i_13_ = ((this.aClass369_4635.aClass221_4968.method1607(DisplayModeManagerContainer23.anInt1524, this.aClass369_4635.anInt4971, (byte) -123)) + this.aClass369_4635.anInt4970);
-            int i_14_ = ((this.aClass369_4635.aClass341_4973.method2679(GlToolkitSub2.anInt7666, this.aClass369_4635.anInt4963, i ^ ~0x60b)) + this.aClass369_4635.anInt4959);
+            int i_14_ = ((this.aClass369_4635.aClass341_4973.getAlignedOffset(GlToolkitSub2.anInt7666, this.aClass369_4635.anInt4963, i ^ ~0x60b)) + this.aClass369_4635.anInt4959);
             method178(i_13_, bool, (byte) -84, i_14_);
             method182(63, i_14_, i_13_, bool);
             String string = Component44.aClass311_897.method2318(i ^ 0x245b);
-            if (-aLong4640 + Component240.currentTimeMillis(-100) > 10000L) string += " (" + Component44.aClass311_897.method2324(i + 149).method525(-117) + ")";
+            if (-aLong4640 + Component240.currentTimeMillis(-100) > 10000L) string += " (" + Component44.aClass311_897.method2324(i + 149).getStageId(-117) + ")";
             aClass324_4637.drawTextCentred((byte) 115, (i_13_ + this.aClass369_4635.anInt4971 / 2), this.aClass369_4635.anInt4961, string, -1, (this.aClass369_4635.anInt4966 + 4 + (i_14_ - -(this.aClass369_4635.anInt4963 / 2))));
         }
     }
@@ -116,7 +116,7 @@ abstract class Component298
             this.aClass45_4632 = class45;
             this.aClass369_4635 = class369;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gl.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ',' + (class369 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gl.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ',' + (class369 != null ? "{...}" : "null") + ')'));
         }
     }
 }

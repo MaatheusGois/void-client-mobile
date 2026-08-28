@@ -75,7 +75,7 @@ final class Component277
     }
 
     static final Component277 method2372(CacheStore class45, int i, int i_11_) {
-        byte[] is = class45.method410(-1860, i, i_11_);
+        byte[] is = class45.getFile(-1860, i, i_11_);
         if (is == null) return null;
         return new Component277(new Buffer(is));
     }

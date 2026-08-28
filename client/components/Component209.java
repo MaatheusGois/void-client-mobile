@@ -44,9 +44,9 @@ final class Component209
         if (this.anInterface18_Impl1_3455 == null) {
             if (NodeList.anObject3331 == null) {
                 byte[] is = Component2.method194(128, -1922, 8, 0.6F, 128, 4.0F, 4.0F, 0.5F, 16.0F, new Component134(419684), 16);
-                NodeList.anObject3331 = BrowserDetector.method1357(is, false, (byte) 87);
+                NodeList.anObject3331 = BrowserDetector.wrapSoft(is, false, (byte) 87);
             }
-            byte[] is = Cp1252Decoder.method461(false, NodeList.anObject3331, 53146732);
+            byte[] is = Cp1252Decoder.unwrapBytes(false, NodeList.anObject3331, 53146732);
             byte[] is_0_ = new byte[4 * is.length];
             int i_1_ = 0;
             for (int i_2_ = 0; i_2_ < 16; i_2_++) {
@@ -86,9 +86,9 @@ final class Component209
         if (this.aBoolean3458 || aHa_Sub3_3457.method3880(Component342.aClass68_1183, ImageCache.aClass304_2571, (byte) 123)) {
             OutputStream_Sub1.method134((byte) -126);
             if (this.aBoolean3458) {
-                byte[] is = Cp1252Decoder.method461(false, Component117.anObject4366, 53146732);
+                byte[] is = Cp1252Decoder.unwrapBytes(false, Component117.anObject4366, 53146732);
                 this.anInterface18_Impl1_3452 = aHa_Sub3_3457.method3872(16, 128, ImageCache.aClass304_2571, true, 128, is);
-                is = Cp1252Decoder.method461(false, Component150.anObject2969, 53146732);
+                is = Cp1252Decoder.unwrapBytes(false, Component150.anObject2969, 53146732);
                 aHa_Sub3_3457.method3872(16, 128, ImageCache.aClass304_2571, true, 128, is);
             } else {
                 this.anInterface18_Impl3Array3459 = new Interface18_Impl3[16];

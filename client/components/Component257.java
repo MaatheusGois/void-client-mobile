@@ -29,7 +29,7 @@ final class Component257
             aString4788 = string;
             aClass45_4789 = class45;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nv.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nv.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -41,8 +41,8 @@ final class Component257
 
     public final int method31(int i) {
         anInt4790++;
-        if (aClass45_4789.method413(100, aString4788)) return 100;
+        if (aClass45_4789.isGroupReadyByName(100, aString4788)) return 100;
         int i_0_ = 31 % ((-43 - i) / 62);
-        return aClass45_4789.method397(aString4788, 0);
+        return aClass45_4789.getNamedGroupLoadPercent(aString4788, 0);
     }
 }

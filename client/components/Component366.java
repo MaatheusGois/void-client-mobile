@@ -230,7 +230,7 @@ final class Component366
                 else this.aClass318_Sub10_3081.method2540(OpenGlShader.clientCycle);
                 this.aClass318_Sub10_3081.method2533(aByte3085, i_8_, i, i_10_, i_7_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("bv.E(" + i + ',' + (class101 != null ? "{...}" : "null") + ',' + i_7_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_8_ + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_9_ + ',' + i_10_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("bv.E(" + i + ',' + (class101 != null ? "{...}" : "null") + ',' + i_7_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_8_ + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_9_ + ',' + i_10_ + ')'));
             }
             break;
         } while (false);
@@ -324,7 +324,7 @@ final class Component366
             if (i_18_ != -1) aBoolean3064 = true;
             method1666((byte) 69, i_18_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bv.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + bool + ',' + i_18_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bv.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + bool + ',' + i_18_ + ')'));
         }
     }
 

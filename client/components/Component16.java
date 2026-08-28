@@ -10,11 +10,12 @@ final class Component16
     static int anInt2277;
     static int anInt2278;
     static Component183 aClass114_2279 = new Component183(60, 0);
-    static int[] anIntArray2280 = new int[200];
+    /** Friend chat ranks / privilege bytes. */
+    static int[] friendRanks = new int[200];
     static int anInt2281;
 
     public static void method1325(int i) {
-        anIntArray2280 = null;
+        friendRanks = null;
         if (i <= -123) aClass114_2279 = null;
     }
 
@@ -26,13 +27,13 @@ final class Component16
     }
 
     static final int method1327(int i) {
-        if (i <= 17) anIntArray2280 = null;
+        if (i <= 17) friendRanks = null;
         anInt2277++;
         return Sprite.anInt6924;
     }
 
     static final void method1328(int i) {
-        if (i != -26162) anIntArray2280 = null;
+        if (i != -26162) friendRanks = null;
         StringCache.aClass60_4327.method587(-118);
         anInt2281++;
         Component142.aClass60_4417.method587(-89);

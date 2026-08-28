@@ -315,7 +315,7 @@ final class RenderableSub9Sub2Sub1
                     class181.anIntArray2385 = new int[class181.anIntArray2395.length];
                     for (int i_63_ = 0; i_63_ < class181.anIntArray2395.length; i_63_++) {
                         Component52.method1943(false, (class181.anIntArray2395[i_63_]));
-                        class181.anIntArray2385[i_63_] = ((NodeSub35) Component317.aClass356_8679.get(class181.anIntArray2395[i_63_], -6008)).anInt6976;
+                        class181.anIntArray2385[i_63_] = ((NodeSub35) Component317.aClass356_8679.get(class181.anIntArray2395[i_63_], -6008)).intValue;
                     }
                 }
                 for (int i_64_ = 0; i_64_ < class181.anIntArray2385.length; i_64_++) {

@@ -127,7 +127,7 @@ final class Component71
             }
             return 0;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vu.F(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_18_ + ',' + (string_19_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vu.F(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_18_ + ',' + (string_19_ != null ? "{...}" : "null") + ')'));
         }
     }
 

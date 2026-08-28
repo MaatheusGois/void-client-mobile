@@ -25,13 +25,13 @@ final class NsnDefinition
             int i_2_ = ShaderProgramSub7.anIntArray6290[i_1_];
             if ((0x1 & NodeSub5.aByteArray6624[i_2_]) == 0) {
                 if (i_0_ > 0) {
-                    NodeSub5.aByteArray6624[i_2_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_2_]), 2);
+                    NodeSub5.aByteArray6624[i_2_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_2_]), 2);
                     i_0_--;
                 } else {
                     int i_3_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_3_ == 0) {
                         i_0_ = Component327.method2413(1, class348_sub49_sub2);
-                        NodeSub5.aByteArray6624[i_2_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_2_]), 2);
+                        NodeSub5.aByteArray6624[i_2_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_2_]), 2);
                     } else {
                         ShaderProgramSub9.method2177(1, i_2_, class348_sub49_sub2);
                     }
@@ -45,13 +45,13 @@ final class NsnDefinition
             int i_5_ = ShaderProgramSub7.anIntArray6290[i_4_];
             if ((0x1 & NodeSub5.aByteArray6624[i_5_]) != 0) {
                 if (i_0_ > 0) {
-                    NodeSub5.aByteArray6624[i_5_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_5_]), 2);
+                    NodeSub5.aByteArray6624[i_5_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_5_]), 2);
                     i_0_--;
                 } else {
                     int i_6_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_6_ == 0) {
                         i_0_ = Component327.method2413(1, class348_sub49_sub2);
-                        NodeSub5.aByteArray6624[i_5_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_5_]), 2);
+                        NodeSub5.aByteArray6624[i_5_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_5_]), 2);
                     } else ShaderProgramSub9.method2177(i ^ ~0x53e4, i_5_, class348_sub49_sub2);
                 }
             }
@@ -63,14 +63,14 @@ final class NsnDefinition
             int i_8_ = DisplayModeManagerContainer136.anIntArray4709[i_7_];
             if ((0x1 & NodeSub5.aByteArray6624[i_8_]) != 0) {
                 if (i_0_ > 0) {
-                    NodeSub5.aByteArray6624[i_8_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_8_]), 2);
+                    NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
                     i_0_--;
                 } else {
                     int i_9_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_9_ == 0) {
                         i_0_ = Component327.method2413(i + 21479, class348_sub49_sub2);
-                        NodeSub5.aByteArray6624[i_8_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_8_]), 2);
-                    } else if (DisplayModeManagerContainer159.method1538(i_8_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_8_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_8_]), 2);
+                        NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
+                    } else if (DisplayModeManagerContainer159.method1538(i_8_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
                 }
             }
         }
@@ -82,14 +82,14 @@ final class NsnDefinition
                 int i_11_ = DisplayModeManagerContainer136.anIntArray4709[i_10_];
                 if ((NodeSub5.aByteArray6624[i_11_] & 0x1) == 0) {
                     if (i_0_ > 0) {
-                        NodeSub5.aByteArray6624[i_11_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_11_]), 2);
+                        NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
                         i_0_--;
                     } else {
                         int i_12_ = class348_sub49_sub2.readBits((byte) -24, 1);
                         if (i_12_ == 0) {
                             i_0_ = Component327.method2413(1, class348_sub49_sub2);
-                            NodeSub5.aByteArray6624[i_11_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_11_]), 2);
-                        } else if (DisplayModeManagerContainer159.method1538(i_11_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_11_] = (byte) Component224.method2057((NodeSub5.aByteArray6624[i_11_]), 2);
+                            NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
+                        } else if (DisplayModeManagerContainer159.method1538(i_11_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
                     }
                 }
             }
@@ -111,10 +111,10 @@ final class NsnDefinition
         method3095(-104, i);
     }
 
-    final int[][] method3047(int i, int i_14_) {
+    final int[][] getColourOutput(int i, int i_14_) {
         anInt9246++;
-        int[][] is = this.aClass322_7033.method2557(i_14_ ^ 0x5d41e2b0, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(i_14_ ^ 0x5d41e2b0, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_15_ = is[0];
             int[] is_16_ = is[1];
             int[] is_17_ = is[2];

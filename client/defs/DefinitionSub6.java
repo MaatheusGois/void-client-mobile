@@ -21,11 +21,11 @@ final class DefinitionSub6
         super(3, false);
     }
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9137++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_0_ != 255) method3049(null, -123, 82);
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             int[] is_1_ = this.method3048(i, i_0_ + 633706082, 1);
             int[] is_2_ = this.method3048(i, i_0_ ^ 0x25c5979e, 2);
             for (int i_3_ = 0; i_3_ < anInt9139; i_3_++) {
@@ -55,23 +55,23 @@ final class DefinitionSub6
                 anInt9133 = class348_sub49.readUnsignedShort(842397944) << 4;
                 break;
             } else if (i_12_ != 1) break;
-            this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+            this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         } while (false);
         if (i_11_ != 31015) method3062(false);
         anInt9138++;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         Component7.method1605(26188);
         anInt9136++;
         if (i < 108) anInt9139 = 126;
     }
 
-    final int[][] method3047(int i, int i_13_) {
+    final int[][] getColourOutput(int i, int i_13_) {
         anInt9131++;
-        int[][] is = this.aClass322_7033.method2557(i_13_ ^ 0x5d41e284, i);
+        int[][] is = this.imageCacheStore.getPixels(i_13_ ^ 0x5d41e284, i);
         if (i_13_ != -1564599039) aByteArrayArrayArray9134 = null;
-        if (this.aClass322_7033.aBoolean4035) {
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_14_ = this.method3048(i, 633706337, 1);
             int[] is_15_ = this.method3048(i, 633706337, 2);
             int[] is_16_ = is[0];
@@ -95,7 +95,7 @@ final class DefinitionSub6
 
     static final int method3063(boolean bool) {
         anInt9132++;
-        int i = RSARequest.aClass56_9660.method525(-125);
+        int i = RSARequest.aClass56_9660.getStageId(-125);
         if (bool != false) anIntArray9135 = null;
         if (i < ShaderCompilerSub2.aClass56Array6515.length + -1) RSARequest.aClass56_9660 = ShaderCompilerSub2.aClass56Array6515[1 + i];
         return 100;

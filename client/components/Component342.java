@@ -18,7 +18,8 @@ final class Component342
     static Component342 aClass68_1186 = new Component342(2);
     static Component342 aClass68_1187 = new Component342(4);
     static int anInt1188;
-    static DisplayModeManagerContainer155 aClass231_1189;
+    /** Production build channel ({@code id}=0). */
+    static BuildType LIVE;
     static int[][] anIntArrayArray1190 = {{2, 4}, {2, 4}, {5, 2, 4}, {4, 5, 2}, {2, 4, 5}, {5, 2, 4}, {1, 6, 2, 5}, {1, 6, 7, 1}, {6, 7, 1, 1}, {0, 8, 9, 8, 9, 4}, {8, 9, 4, 0, 8, 9}, {2, 10, 0, 10, 11, 11}, {2, 4}, {1, 6, 7, 1}, {1, 6, 7, 1}};
 
     public static void method719(byte i) {
@@ -29,7 +30,7 @@ final class Component342
             aClass68_1182 = null;
             anIntArrayArray1190 = null;
             aClass68_1187 = null;
-            aClass231_1189 = null;
+            LIVE = null;
             aClass68_1179 = null;
             aClass68_1186 = null;
             aClass68_1185 = null;
@@ -46,6 +47,6 @@ final class Component342
     }
 
     static {
-        aClass231_1189 = new DisplayModeManagerContainer155("LIVE", 0);
+        LIVE = new BuildType("LIVE", 0);
     }
 }

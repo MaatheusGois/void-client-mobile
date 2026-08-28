@@ -60,7 +60,7 @@ final class ScreenModeManager {
                 NodeSub48.anInt7129 = 0;
                 DisplayModeManagerContainer147.anInt4167 = 0;
             } else SpriteAtlasShader.method2158((byte) 56);
-            if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
+            if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                 if (Component236.anInt4017 < 1024 && (PacketReader.anInt10432 < 768)) {
                     /* empty */
                 }
@@ -78,7 +78,7 @@ final class ScreenModeManager {
             // Must match method3229 (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
             Cp1252Decoder.aBoolean5219 = i_2_ >= 2;
             if (r.anInt9721 != -1) Component339.method1713(true, 520);
-            if (DefinitionSub8.aClass238_9165 != null && NativeLibLoader.method2653(true, Component49.clientState)) ShaderProgramSub2.method2145(-24498);
+            if (DefinitionSub8.aClass238_9165 != null && NativeLibLoader.isPostLoginState(true, Component49.clientState)) ShaderProgramSub2.method2145(-24498);
             for (int i_5_ = 0; i_5_ < 100; i_5_++)
                 InflaterDecompressor.aBooleanArray2076[i_5_] = true;
             Component297.aBoolean4726 = true;

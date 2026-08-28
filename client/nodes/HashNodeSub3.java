@@ -86,7 +86,7 @@ final class HashNodeSub3
     }
 
     static final void method3175(byte i) {
-        if (!CacheNode.method3196(Component49.clientState, -114) && !CacheFileStore.method2672(Component49.clientState, -103)) {
+        if (!CacheNode.method3196(Component49.clientState, -114) && !CacheFileStore.isReconnectState(Component49.clientState, -103)) {
             int i_12_ = ((Component72.localPlayer.anIntArray10320[0]) >> 3);
             int i_13_ = ((Component72.localPlayer.anIntArray10317[0]) >> 3);
             if (i_12_ < 0 || AbstractShaderSub4.anInt7319 >> 3 <= i_12_ || i_13_ < 0 || (ParametricDefinition.anInt9109 >> 3 <= i_13_)) KeyFocusHandler.method2703(0, AbstractShaderSub4.anInt7319 >> 4, (ParametricDefinition.anInt9109 >> 4), (byte) -13);
@@ -152,7 +152,7 @@ final class HashNodeSub3
             if (i >= -6) method3177(-36, true);
             DisplayModeManagerContainer271.aClass45_518 = class45_15_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lk.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lk.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ')'));
         }
     }
 

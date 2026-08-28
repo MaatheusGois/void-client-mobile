@@ -50,7 +50,7 @@ final class Component114
             }
             NodeSub8.toolkit.la();
             HashNodeSub20.method3281((byte) 46, NodeSub8.toolkit);
-            int i_4_ = DisplayModeManagerContainer67.method1053(3112);
+            int i_4_ = DisplayModeManagerContainer67.getHoveredMenuPriority(3112);
             if (i_4_ == -1) i_4_ = Component149.anInt4458;
             if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.anInt10447;
             Component373.method338(0, i_4_);
@@ -60,7 +60,7 @@ final class Component114
                 NodeSub51.anInt7267 = 0;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wo.B(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wo.B(" + i + ',' + l + ')');
         }
     }
 

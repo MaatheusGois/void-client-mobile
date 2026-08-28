@@ -434,7 +434,7 @@ final class BufferCacheSub1
             int i_92_ = is_67_[0];
             int i_93_ = is_69_[0];
             if (is_68_ != null) {
-                class102.anInt1600 = ReferenceTable.method2198(0, (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]), Component361.method303(is_68_[0], 30));
+                class102.anInt1600 = ReferenceTable.clampHslLightness(0, (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]), Component361.method303(is_68_[0], 30));
                 if (i_92_ == -1) class102.aByte1606 |= 0x2;
             }
             if ((this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_ + 1]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i][i_60_ + 1])) class102.aByte1606 |= 0x1;
@@ -449,10 +449,10 @@ final class BufferCacheSub1
                 if (method3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class102.aByte1606 |= 0x4;
             } else {
                 short i_94_ = Component361.method303(i_92_, 30);
-                class102.aShort1601 = (short) ReferenceTable.method2198(0, ((aByteArrayArray8220[i][i_60_]) - (aByteArrayArray8232[i][i_60_])), i_94_);
-                class102.aShort1603 = (short) ReferenceTable.method2198(0, ((aByteArrayArray8220[i + 1][i_60_]) - (aByteArrayArray8232[i + 1][i_60_])), i_94_);
-                class102.aShort1602 = (short) ReferenceTable.method2198(0, ((aByteArrayArray8220[i + 1][i_60_ + 1]) - (aByteArrayArray8232[i + 1][i_60_ + 1])), i_94_);
-                class102.aShort1604 = (short) ReferenceTable.method2198(0, ((aByteArrayArray8220[i][i_60_ + 1]) - (aByteArrayArray8232[i][i_60_ + 1])), i_94_);
+                class102.aShort1601 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i][i_60_]) - (aByteArrayArray8232[i][i_60_])), i_94_);
+                class102.aShort1603 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i + 1][i_60_]) - (aByteArrayArray8232[i + 1][i_60_])), i_94_);
+                class102.aShort1602 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i + 1][i_60_ + 1]) - (aByteArrayArray8232[i + 1][i_60_ + 1])), i_94_);
+                class102.aShort1604 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i][i_60_ + 1]) - (aByteArrayArray8232[i][i_60_ + 1])), i_94_);
                 class102.aShort1605 = (short) -1;
             }
             aClass102ArrayArray8215[i][i_60_] = class102;
@@ -1048,8 +1048,8 @@ final class BufferCacheSub1
                             Component157 class266 = aClass266ArrayArray8230[i_271_][i_272_];
                             if (class266.aShort3379 != -1 && (class266.aByte3386 & 0x2) == 0 && class266.anInt3388 == 0) {
                                 int i_273_ = aHa_Sub1_8217.method3722(class266.aShort3379);
-                                class109.method1022((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.method2198(0, (class266.anInt3380), i_273_), (float) ReferenceTable.method2198(0, (class266.anInt3381), i_273_), (float) ReferenceTable.method2198(0, (class266.anInt3387), i_273_));
-                                class109.method1022((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.method2198(0, (class266.anInt3389), i_273_), (float) ReferenceTable.method2198(0, (class266.anInt3387), i_273_), (float) ReferenceTable.method2198(0, (class266.anInt3381), i_273_));
+                                class109.method1022((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3380), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_));
+                                class109.method1022((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3389), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_));
                             } else if (class266.anInt3388 == 0) {
                                 class109.method1027((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, class266.anInt3380, class266.anInt3381, class266.anInt3387);
                                 class109.method1027((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, class266.anInt3389, class266.anInt3387, class266.anInt3381);
@@ -1166,7 +1166,7 @@ final class BufferCacheSub1
                             int i_406_ = class236.anIntArray3093[i_396_];
                             if (i_406_ != -1) {
                                 class109.aBoolean1671 = (i_400_ < 0 || i_401_ < 0 || i_402_ < 0 || (i_400_ > class109.anInt1679) || (i_401_ > class109.anInt1679) || (i_402_ > class109.anInt1679));
-                                class109.method1022((float) i_403_, (float) i_404_, (float) i_405_, (float) i_400_, (float) i_401_, (float) i_402_, (float) is_302_[i_397_], (float) is_302_[i_398_], (float) is_302_[i_399_], (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_397_]), i_406_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_398_]), i_406_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_399_]), i_406_)));
+                                class109.method1022((float) i_403_, (float) i_404_, (float) i_405_, (float) i_400_, (float) i_401_, (float) i_402_, (float) is_302_[i_397_], (float) is_302_[i_398_], (float) is_302_[i_399_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_397_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_398_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_399_]), i_406_)));
                             }
                         }
                     }
@@ -1187,7 +1187,7 @@ final class BufferCacheSub1
                             if (i_382_ == -1) {
                                 int i_383_ = (class236.anIntArray3093[i_372_]);
                                 if (i_383_ != -1)
-                                    class109.method1022((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_373_]), i_383_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_374_]), i_383_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_375_]), i_383_)));
+                                    class109.method1022((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_373_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_374_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_375_]), i_383_)));
                             } else
                                 class109.method1024((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], ((float) (class236.aShortArray3096[i_373_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_374_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_375_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_373_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_374_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_375_]) / (float) this.anInt4592), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_373_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_374_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_375_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_382_);
                         }
@@ -1209,7 +1209,7 @@ final class BufferCacheSub1
                             if (i_394_ == -1) {
                                 int i_395_ = (class236.anIntArray3093[i_384_]);
                                 if (i_395_ != -1)
-                                    class109.method1022((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_385_]), i_395_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_386_]), i_395_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_387_]), i_395_)));
+                                    class109.method1022((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_385_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_386_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_387_]), i_395_)));
                             } else
                                 class109.method1024((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], ((float) (class236.aShortArray3096[i_385_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_386_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_387_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_385_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_386_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_387_]) / (float) this.anInt4592), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_385_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_386_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_387_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_394_);
                         }
@@ -1509,8 +1509,8 @@ final class BufferCacheSub1
                         Component180 class102 = aClass102ArrayArray8215[i_464_][i_465_];
                         if (class102.aShort1605 != -1 && (class102.aByte1606 & 0x2) == 0 && class102.anInt1600 == -1) {
                             int i_466_ = aHa_Sub1_8217.method3722(class102.aShort1605);
-                            class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.method2198(0, ((class102.aShort1602) & 0xffff), i_466_), (float) ReferenceTable.method2198(0, ((class102.aShort1604) & 0xffff), i_466_), (float) ReferenceTable.method2198(0, ((class102.aShort1603) & 0xffff), i_466_));
-                            class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.method2198(0, ((class102.aShort1601) & 0xffff), i_466_), (float) ReferenceTable.method2198(0, ((class102.aShort1603) & 0xffff), i_466_), (float) ReferenceTable.method2198(0, ((class102.aShort1604) & 0xffff), i_466_));
+                            class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1602) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_));
+                            class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1601) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_));
                         } else if (class102.anInt1600 == -1) {
                             class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
                             class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
@@ -1537,13 +1537,13 @@ final class BufferCacheSub1
                             int i_478_ = is_459_[i_472_];
                             if (class236.anIntArray3092 != null && (class236.anIntArray3092[i_469_]) != -1) {
                                 int i_479_ = (class236.anIntArray3092[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_470_]), i_479_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_471_]), i_479_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_472_]), i_479_)));
+                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_479_)));
                             } else if ((class236.aShortArray3095 != null) && (class236.aShortArray3095[i_469_]) != -1) {
                                 int i_480_ = aHa_Sub1_8217.method3722(class236.aShortArray3095[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_470_]), i_480_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_471_]), i_480_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_472_]), i_480_)));
+                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_480_)));
                             } else {
                                 int i_481_ = (class236.anIntArray3093[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_470_]), i_481_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_471_]), i_481_)), (float) (ReferenceTable.method2198(0, (class236.aShortArray3088[i_472_]), i_481_)));
+                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_481_)));
                             }
                         }
                     }

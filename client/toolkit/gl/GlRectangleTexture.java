@@ -95,7 +95,7 @@ final class GlRectangleTexture extends GlTexture {
             this.aBoolean9941 = false;
             this.method1965(false, false, 10243);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (is != null ? "{...}" : "null") + ',' + i_21_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (is != null ? "{...}" : "null") + ',' + i_21_ + ')'));
         }
     }
 
@@ -113,7 +113,7 @@ final class GlRectangleTexture extends GlTexture {
             this.anInt9939 = i_23_;
             this.anInt9940 = i_22_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ')'));
         }
     }
 
@@ -128,7 +128,7 @@ final class GlRectangleTexture extends GlTexture {
             this.aBoolean9941 = false;
             this.method1965(false, false, 10243);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_26_ + ',' + i_27_ + ',' + i_28_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_26_ + ',' + i_27_ + ',' + i_28_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -146,7 +146,7 @@ final class GlRectangleTexture extends GlTexture {
             }
             this.anInt9939 = i_31_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_32_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_32_ + ')'));
         }
     }
 }

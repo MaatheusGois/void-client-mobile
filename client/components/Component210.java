@@ -35,14 +35,14 @@ class Component210
     static boolean aBoolean5300 = false;
 
     void method550(int i, byte i_0_, byte i_1_) {
-        if (i_1_ != 14) method555(true, -38);
+        if (i_1_ != 14) submitConsoleLine(true, -38);
         anInt5281++;
         aByteArray5296[i] = i_0_;
     }
 
     final void method543(boolean bool) {
         anInt5287 = 0;
-        if (bool != true) method555(false, -53);
+        if (bool != true) submitConsoleLine(false, -53);
         anInt5290 = 0;
         anInt5291++;
     }
@@ -151,18 +151,23 @@ class Component210
         aClass297_5297 = null;
     }
 
-    static final int method554(int i, int i_42_, byte[] is) {
+    /** CRC32 over {@code is[0..i_42_)}. {@code i} must be 5126. */
+    static final int crc32(int i, int i_42_, byte[] is) {
         if (i != 5126) method553(52);
         anInt5284++;
-        return Component382.method1319(i_42_, true, is, 0);
+        return Component382.computeCrc32(i_42_, true, is, 0);
     }
 
-    static final void method555(boolean bool, int i) {
+    /**
+     * Submits {@link Component126#aString4461} to {@link CommandHandler#handleCommand}
+     * (console enter). When {@code bool} is false, echoes {@code --> ...} and clears the line.
+     */
+    static final void submitConsoleLine(boolean bool, int i) {
         anInt5286++;
         if (i != Component126.aString4461.length()) {
             CommandHandler.handleCommand(Component126.aString4461, false, bool, (byte) -79);
             if (!bool) {
-                Applet_Sub1.method94("--> " + Component126.aString4461, 110);
+                Applet_Sub1.printConsole("--> " + Component126.aString4461, 110);
                 NodeSub38.anInt7006 = 0;
                 Component126.aString4461 = "";
                 Component92.anInt3312 = 0;

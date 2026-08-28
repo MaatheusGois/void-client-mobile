@@ -43,7 +43,7 @@ final class DisplayModeManagerContainer89
         int i_2_ = 2 % ((25 - i) / 52);
         anInt8373++;
         if (!super.method8((byte) 82)) return false;
-        return this.aClass45_4632.method421(false, (((Component381) this.aClass369_4635).anInt8582));
+        return this.aClass45_4632.isSingletonFileReady(false, (((Component381) this.aClass369_4635).anInt8582));
     }
 
     static final int method200(int i, int i_3_) {
@@ -103,10 +103,10 @@ final class DisplayModeManagerContainer89
                         }
                     }
                     if (bool) break;
-                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3504.method2063(ObjectDeserializer.anInt6967, 544)) + string), false, 4);
+                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3504.getLocalized(ObjectDeserializer.languageId, 544)) + string), false, 4);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("tq.A(" + i + ',' + i_5_ + ',' + (string != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("tq.A(" + i + ',' + i_5_ + ',' + (string != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -163,7 +163,7 @@ final class DisplayModeManagerContainer89
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("tq.I(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("tq.I(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

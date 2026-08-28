@@ -14,13 +14,13 @@ final class DisplayModeManagerContainer351
 
     static final void method1477(int i, int i_0_) {
         anInt2672++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, i_0_);//14
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_0_);//14
         class348_sub42_sub15.method3251(-16058);
     }
 
     static final ParticleSystem method1478(boolean bool) {
         anInt2673++;
-        ParticleSystem class348_sub47 = Component189.method2273((byte) -103);
+        ParticleSystem class348_sub47 = Component189.obtainParticleSystem((byte) -103);
         if (bool != true) return null;
         class348_sub47.anInt7122 = 0;
         class348_sub47.aClass351_7118 = null;

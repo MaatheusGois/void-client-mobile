@@ -40,7 +40,7 @@ final class Component256
 
     static final void method1825(int i, int i_3_, int i_4_) {
         anInt6102++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(0, (byte) 105, 15);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(0, (byte) 105, 15);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_4_;
         class348_sub42_sub15.anInt9651 = i_3_;

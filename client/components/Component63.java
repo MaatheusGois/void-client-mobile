@@ -42,7 +42,7 @@ final class Component63
             anInt4505++;
             return method3566(var_ha, i_3_, i_1_, null, 0, class87, i, (byte) 5, null, 0, false, 0, (byte) -68, i_0_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fk.B(" + i + ',' + i_0_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fk.B(" + i + ',' + i_0_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_3_ + ')'));
         }
     }
 
@@ -79,7 +79,7 @@ final class Component63
             anInt4511++;
             return method3566(var_ha, i, i_6_, null, 0, class87, i_5_, (byte) 2, null, 0, false, 0, (byte) -68, i_7_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fk.A(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fk.A(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_8_ + ')'));
         }
     }
 
@@ -148,7 +148,7 @@ final class Component63
             if (i_21_ != -129) method3566(null, 36, -84, null, 43, null, 2, (byte) 54, null, -17, true, -42, (byte) 95, -81);
             return method3566(var_ha, i_16_, i_18_, var_s, i_22_, class87, i, (byte) 2, var_s_23_, i_17_, bool, i_20_, (byte) -68, i_19_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fk.F(" + i + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_19_ + ',' + i_20_ + ',' + i_21_ + ',' + (class87 != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i_22_ + ',' + (var_s_23_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fk.F(" + i + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_19_ + ',' + i_20_ + ',' + i_21_ + ',' + (class87 != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i_22_ + ',' + (var_s_23_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -177,11 +177,11 @@ final class Component63
                 class64 = ((DisplayModeManagerContainer370) (this.aClass319_4513.aClass60_3990.get(this.anInt4501 |= var_ha.anInt4567 << 29, -122)));
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_33_) != 0) {
-                if (class64 != null) i_33_ = var_ha.method3679(i_33_, class64.ua());
+                if (class64 != null) i_33_ = var_ha.bitwiseOr(i_33_, class64.ua());
                 int i_34_ = i_33_;
                 if (aShortArray4490 != null) i_34_ |= 0x4000;
                 if (aShortArray4499 != null) i_34_ |= 0x8000;
-                DisplayModeManagerContainer77 class124 = Component189.method2277(0, (this.aClass319_4513.aClass45_3981), anInt4506, -1);
+                DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, (this.aClass319_4513.aClass45_3981), anInt4506, -1);
                 if (class124 == null) return null;
                 if (class124.anInt1830 < 13) class124.method1092(2, 114);
                 class64 = var_ha.method3625(class124, i_34_, (this.aClass319_4513.anInt3991), 64 + anInt4489, anInt4512 - -850);
@@ -210,7 +210,7 @@ final class Component63
             class64_37_.s(i_24_);
             return class64_37_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fk.I(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_24_ + ',' + (var_s != null ? "{...}" : "null") + ',' + i_25_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_26_ + ',' + i_27_ + ',' + (var_s_28_ != null ? "{...}" : "null") + ',' + i_29_ + ',' + bool + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fk.I(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_24_ + ',' + (var_s != null ? "{...}" : "null") + ',' + i_25_ + ',' + (class87 != null ? "{...}" : "null") + ',' + i_26_ + ',' + i_27_ + ',' + (var_s_28_ != null ? "{...}" : "null") + ',' + i_29_ + ',' + bool + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ')'));
         }
     }
 }

@@ -36,8 +36,8 @@ final class Component117
         HashNodeSub10 class348_sub42_sub10 = (HashNodeSub10) aClass60_4362.get(i, 70);
         if (class348_sub42_sub10 != null) return class348_sub42_sub10;
         byte[] is;
-        if (i >= 32768) is = aClass45_4369.method410(-1860, 1, 0x7fff & i);
-        else is = aClass45_4368.method410(-1860, 1, i);
+        if (i >= 32768) is = aClass45_4369.getFile(-1860, 1, 0x7fff & i);
+        else is = aClass45_4368.getFile(-1860, 1, i);
         class348_sub42_sub10 = new HashNodeSub10();
         class348_sub42_sub10.aClass355_9567 = this;
         if (is != null) class348_sub42_sub10.method3218(new Buffer(is), 0);
@@ -57,7 +57,7 @@ final class Component117
             }
             return Long.toString(l);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("aha.D(" + l + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (class138 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("aha.D(" + l + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (class138 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -75,11 +75,11 @@ final class Component117
                 anInterface15_4373 = interface15;
                 aClass45_4368 = class45;
                 aClass45_4369 = class45_1_;
-                if (aClass45_4368 != null) this.anInt4365 = aClass45_4368.method407(0, 1);
+                if (aClass45_4368 != null) this.anInt4365 = aClass45_4368.getFileCount(0, 1);
                 if (aClass45_4369 == null) break;
-                this.anInt4364 = aClass45_4369.method407(0, 1);
+                this.anInt4364 = aClass45_4369.getFileCount(0, 1);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("aha.<init>(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_1_ != null ? "{...}" : "null") + ',' + (interface15 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("aha.<init>(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_1_ != null ? "{...}" : "null") + ',' + (interface15 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

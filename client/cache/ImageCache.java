@@ -4,34 +4,35 @@
 
 /**
  * RENAMED from `Class191` (JODE-obfuscated).
- * Image pixel cache. Holds int[][] RGB pixel buffers (method1427 throws 'Can only retrieve a full image cache'), backed by NodederUtil[] and a NodeList; caches decoded images for reuse.
+ * Image pixel cache. Holds int[][] RGB pixel buffers (getAllBuffers throws 'Can only retrieve a full image cache'), backed by NodederUtil[] and a NodeList; caches decoded images for reuse.
  */
 
 final class ImageCache {
     static int anInt2556;
-    private int anInt2557 = 0;
+    private int usedSlots = 0;
     static int anInt2558;
-    private final int anInt2559;
+    private final int capacity;
     static int anInt2560;
-    private NodeList aClass262_2561;
-    private int anInt2562 = -1;
-    private NodederUtil[] aClass348_Sub6Array2563;
-    private int[][] anIntArrayArray2564;
-    private int anInt2565;
+    private NodeList lruList;
+    private int singleImageId = -1;
+    private NodederUtil[] slots;
+    private int[][] buffers;
+    private int imageCount;
     static int anInt2566;
     static int anInt2567;
     static Component150 aClass227_2568 = new Component150(0);
     static int anInt2569;
-    boolean aBoolean2570;
+    /** True when the last {@link #getPixels} allocated or reused a different slot. */
+    boolean cacheMiss;
     static DisplayModeManagerContainer42 aClass304_2571 = new DisplayModeManagerContainer42(2);
 
-    final int[][] method1427(byte i) {
+    final int[][] getAllBuffers(byte i) {
         anInt2558++;
-        if (anInt2559 != anInt2565) throw new RuntimeException("Can only retrieve a full image cache");
-        for (int i_0_ = 0; anInt2559 > i_0_; i_0_++)
-            aClass348_Sub6Array2563[i_0_] = ShaderSub3.aClass348_Sub6_5206;
-        if (i != 16) method1427((byte) -42);
-        return anIntArrayArray2564;
+        if (capacity != imageCount) throw new RuntimeException("Can only retrieve a full image cache");
+        for (int i_0_ = 0; capacity > i_0_; i_0_++)
+            slots[i_0_] = ShaderSub3.aClass348_Sub6_5206;
+        if (i != 16) getAllBuffers((byte) -42);
+        return buffers;
     }
 
     static final void method1428(boolean bool) {
@@ -77,7 +78,7 @@ final class ImageCache {
                 InputStream_Sub2.aClass243_83.method1869(-87, class318_sub6);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qk.G(" + i + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + (class318_sub1_sub3_sub3 != null ? "{...}" : "null") + ',' + ((class318_sub1_sub3_sub3_8_ != null) ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qk.G(" + i + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + (class318_sub1_sub3_sub3 != null ? "{...}" : "null") + ',' + ((class318_sub1_sub3_sub3_8_ != null) ? "{...}" : "null") + ')'));
         }
     }
 
@@ -87,54 +88,54 @@ final class ImageCache {
         if (i != 0) aClass227_2568 = null;
     }
 
-    final void method1432(byte i) {
-        for (int i_13_ = 0; i_13_ < anInt2559; i_13_++)
-            anIntArrayArray2564[i_13_] = null;
+    final void clear(byte i) {
+        for (int i_13_ = 0; i_13_ < capacity; i_13_++)
+            buffers[i_13_] = null;
         anInt2556++;
-        aClass348_Sub6Array2563 = null;
-        anIntArrayArray2564 = null;
-        aClass262_2561.clear(112);
-        if (i != 124) anInt2565 = -126;
-        aClass262_2561 = null;
+        slots = null;
+        buffers = null;
+        lruList.clear(112);
+        if (i != 124) imageCount = -126;
+        lruList = null;
     }
 
-    final int[] method1433(int i, int i_14_) {
-        if (i != 0) method1427((byte) 108);
+    final int[] getPixels(int i, int i_14_) {
+        if (i != 0) getAllBuffers((byte) 108);
         anInt2566++;
-        if (anInt2559 == anInt2565) {
-            this.aBoolean2570 = aClass348_Sub6Array2563[i_14_] == null;
-            aClass348_Sub6Array2563[i_14_] = ShaderSub3.aClass348_Sub6_5206;
-            return anIntArrayArray2564[i_14_];
+        if (capacity == imageCount) {
+            this.cacheMiss = slots[i_14_] == null;
+            slots[i_14_] = ShaderSub3.aClass348_Sub6_5206;
+            return buffers[i_14_];
         }
-        if (anInt2559 != 1) {
-            NodederUtil class348_sub6 = aClass348_Sub6Array2563[i_14_];
+        if (capacity != 1) {
+            NodederUtil class348_sub6 = slots[i_14_];
             if (class348_sub6 == null) {
-                this.aBoolean2570 = true;
-                if (anInt2557 < anInt2559) {
-                    class348_sub6 = new NodederUtil(i_14_, anInt2557);
-                    anInt2557++;
+                this.cacheMiss = true;
+                if (usedSlots < capacity) {
+                    class348_sub6 = new NodederUtil(i_14_, usedSlots);
+                    usedSlots++;
                 } else {
-                    NodederUtil class348_sub6_15_ = (NodederUtil) aClass262_2561.last(i + -123);
+                    NodederUtil class348_sub6_15_ = (NodederUtil) lruList.last(i + -123);
                     class348_sub6 = new NodederUtil(i_14_, class348_sub6_15_.anInt6636);
-                    aClass348_Sub6Array2563[class348_sub6_15_.anInt6630] = null;
+                    slots[class348_sub6_15_.anInt6630] = null;
                     class348_sub6_15_.unlink((byte) 80);
                 }
-                aClass348_Sub6Array2563[i_14_] = class348_sub6;
-            } else this.aBoolean2570 = false;
-            aClass262_2561.method2001(class348_sub6, -90);
-            return (anIntArrayArray2564[class348_sub6.anInt6636]);
+                slots[i_14_] = class348_sub6;
+            } else this.cacheMiss = false;
+            lruList.addHead(class348_sub6, -90);
+            return (buffers[class348_sub6.anInt6636]);
         }
-        this.aBoolean2570 = i_14_ != anInt2562;
-        anInt2562 = i_14_;
-        return anIntArrayArray2564[0];
+        this.cacheMiss = i_14_ != singleImageId;
+        singleImageId = i_14_;
+        return buffers[0];
     }
 
     ImageCache(int i, int i_16_, int i_17_) {
-        aClass262_2561 = new NodeList();
-        this.aBoolean2570 = false;
-        anInt2559 = i;
-        anInt2565 = i_16_;
-        aClass348_Sub6Array2563 = new NodederUtil[anInt2565];
-        anIntArrayArray2564 = new int[anInt2559][i_17_];
+        lruList = new NodeList();
+        this.cacheMiss = false;
+        capacity = i;
+        imageCount = i_16_;
+        slots = new NodederUtil[imageCount];
+        buffers = new int[capacity][i_17_];
     }
 }

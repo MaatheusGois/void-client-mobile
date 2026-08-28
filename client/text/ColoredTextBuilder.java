@@ -966,7 +966,7 @@ final class ColoredTextBuilder {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("daa.A(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ',' + i_72_ + ',' + i_73_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("daa.A(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ',' + i_72_ + ',' + i_73_ + ')'));
             }
             break;
         } while (false);
@@ -980,7 +980,7 @@ final class ColoredTextBuilder {
             this.anInt4069 = aClass68_4071.anInt1178 * anInt4072;
             if (this.anInt4070 >= 16) throw new RuntimeException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("daa.<init>(" + i + ',' + i_78_ + ',' + (class68 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("daa.<init>(" + i + ',' + i_78_ + ',' + (class68 != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -150,19 +150,19 @@ abstract class DisplayModeManagerContainer213
 
     static final int method547(String string, int i) {
         anInt1076++;
-        if (!Component210.aClass297_5297.aBoolean3777) return -1;
+        if (!Component210.aClass297_5297.signed) return -1;
         if (Component300.aHashtable3548.containsKey(string)) return 100;
-        String string_52_ = NativeLibLoader.method2651(string, 3);
+        String string_52_ = NativeLibLoader.toNativeLibraryFileName(string, 3);
         if (string_52_ == null) return -1;
         String string_53_ = NodeSub41.aString7048 + string_52_;
         if (i != 7468) method549((byte) 28, null, null, null);
-        if (!Component385.aClass45_2208.method422("", string_53_, -88)) return -1;
-        if (!Component385.aClass45_2208.method413(i ^ 0x1d48, string_53_)) return Component385.aClass45_2208.method397(string_53_, 0);
+        if (!Component385.aClass45_2208.containsNamed("", string_53_, -88)) return -1;
+        if (!Component385.aClass45_2208.isGroupReadyByName(i ^ 0x1d48, string_53_)) return Component385.aClass45_2208.getNamedGroupLoadPercent(string_53_, 0);
         byte[] is = Component385.aClass45_2208.getFile(string_53_, "", -29832);
         Object object = null;
         File file;
         try {
-            file = CacheDirectory.method1466(i + -7470, string_52_);
+            file = CacheDirectory.getCacheFile(i + -7470, string_52_);
         } catch (RuntimeException runtimeexception) {
             if (Loader.trace) {
                 runtimeexception.printStackTrace();
@@ -182,7 +182,7 @@ abstract class DisplayModeManagerContainer213
                 }
             }
             try {
-                if (!bool) Component210.aClass297_5297.method2242(is, (byte) -104, file);
+                if (!bool) Component210.aClass297_5297.writeFileBytes(is, (byte) -104, file);
             } catch (Throwable throwable) {
                 if (Loader.trace) {
                     throwable.printStackTrace();
@@ -277,7 +277,7 @@ abstract class DisplayModeManagerContainer213
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jp.I(" + i + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class42 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jp.I(" + i + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class42 != null ? "{...}" : "null") + ')'));
         }
     }
 

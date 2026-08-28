@@ -4,13 +4,14 @@
 
 /**
  * RENAMED from `Class348_Sub42_Sub8_Sub1` (JODE-obfuscated).
- * Soft-reference cache entry. extends CacheNode; wraps a SoftReference (aSoftReference10428) and returns its referent via getValue.
+ * Soft-reference cache entry. extends CacheNode; wraps a SoftReference (softReference) and returns its referent via getValue.
  */
 
 import java.lang.ref.SoftReference;
 
 final class SoftReferenceCacheNode extends CacheNode {
-    private final SoftReference aSoftReference10428;
+    /** Soft referent for the cached value. */
+    private final SoftReference softReference;
 
     final boolean isSoft(int i) {
         if (i != -4) getValue(-41);
@@ -19,11 +20,11 @@ final class SoftReferenceCacheNode extends CacheNode {
 
     final Object getValue(int i) {
         if (i <= 75) return null;
-        return aSoftReference10428.get();
+        return softReference.get();
     }
 
     SoftReferenceCacheNode(Object object, int i) {
         super(i);
-        aSoftReference10428 = new SoftReference(object);
+        softReference = new SoftReference(object);
     }
 }

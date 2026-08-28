@@ -17,18 +17,18 @@ final class NodeSub37
         if (Component244.anObject4177 == null) {
             DisplayModeManagerContainer34 class59_sub1_sub2 = new DisplayModeManagerContainer34();
             byte[] is = class59_sub1_sub2.method562(128, 128, (byte) 121, 16);
-            Component244.anObject4177 = BrowserDetector.method1357(is, false, (byte) 81);
+            Component244.anObject4177 = BrowserDetector.wrapSoft(is, false, (byte) 81);
         }
         if (Component144.anObject3985 == null) {
             Component54 class59_sub2_sub1 = new Component54();
             byte[] is = class59_sub2_sub1.method567(128, (byte) 111, 16, 128);
-            Component144.anObject3985 = BrowserDetector.method1357(is, false, (byte) 103);
+            Component144.anObject3985 = BrowserDetector.wrapSoft(is, false, (byte) 103);
         }
         if (i != 8) method3031(-39, null);
         ReliefShader class188 = var_ha_Sub2.aClass188_7736;
         if (class188.method1414(35632) && Component14.anObject8592 == null) {
             byte[] is = Component2.method194(128, -1922, 8, 0.6F, 128, 4.0F, 4.0F, 0.5F, 16.0F, new Component134(419684), 16);
-            Component14.anObject8592 = BrowserDetector.method1357(is, false, (byte) 78);
+            Component14.anObject8592 = BrowserDetector.wrapSoft(is, false, (byte) 78);
         }
     }
 
@@ -44,7 +44,7 @@ final class NodeSub37
             int i_3_ = class348_sub49.readUnsignedByte(255);
             class348_sub40.method3049(class348_sub49, i_3_, 31015);
         }
-        class348_sub40.method3044(120);
+        class348_sub40.postDecode(120);
         return class348_sub40;
     }
 

@@ -133,7 +133,7 @@ final class Component119
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("up.C(" + i + ',' + (class51 != null ? "{...}" : "null") + ',' + i_0_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("up.C(" + i + ',' + (class51 != null ? "{...}" : "null") + ',' + i_0_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 

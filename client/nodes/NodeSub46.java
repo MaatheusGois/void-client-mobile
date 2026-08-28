@@ -9,23 +9,25 @@ final class NodeSub46
  */ extends Node {
     static int anInt7109;
     static int anInt7110;
-    String aString7111;
+    /** Identity string for this node (equals-matched by callers). */
+    String name;
     static int anInt7112;
     static Component183 aClass114_7113 = new Component183(97, 0);
     static int anInt7114;
     static int anInt7115 = 1;
 
-    static final void method3317(byte i) {
-        if (Component40.aFileOutputStream6323 != null) {
+    /** Close and clear {@link Component40#consoleLogStream}. */
+    static final void closeConsoleLogStream(byte i) {
+        if (Component40.consoleLogStream != null) {
             try {
-                Component40.aFileOutputStream6323.close();
+                Component40.consoleLogStream.close();
             } catch (java.io.IOException ioexception) {
                 /* empty */
             }
         }
         if (i > -33) method3321(-73, 3, 6);
         anInt7110++;
-        Component40.aFileOutputStream6323 = null;
+        Component40.consoleLogStream = null;
     }
 
     public static void method3318(byte i) {
@@ -90,6 +92,6 @@ final class NodeSub46
     }
 
     NodeSub46(String string, int i) {
-        this.aString7111 = string;
+        this.name = string;
     }
 }

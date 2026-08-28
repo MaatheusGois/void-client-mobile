@@ -224,7 +224,7 @@ final class NodeSub38
                 } else i_48_ += -anInt7023 + anInt7017;
             }
             if (anInt7018 > 0) {
-                aClass356_7011 = new LruCache(Component373.method340(anInt7018, (byte) 108));
+                aClass356_7011 = new LruCache(Component373.nextPowerOfTwo(anInt7018, (byte) 108));
                 anInterface5_Impl2_7002 = aHa_Sub3_7007.method3840(-28633, false);
                 anInterface5_Impl2_7002.method23(15959, anInt7018);
                 jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = aHa_Sub3_7007.method3869((byte) 86, false, 16 * anInt7018);
@@ -301,7 +301,7 @@ final class NodeSub38
             aStream7021 = null;
             aClass356_7011 = null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sea.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ',' + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sea.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ',' + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 }

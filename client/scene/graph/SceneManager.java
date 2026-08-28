@@ -62,7 +62,7 @@ final class SceneManager {
     final boolean method1593(int i) {
         if (i != 106) this.aClass141_2851 = null;
         anInt2858++;
-        return this.aClass141_2851.aClass45_1965.method421(false, this.anInt2853);
+        return this.aClass141_2851.aClass45_1965.isSingletonFileReady(false, this.anInt2853);
     }
 
     public static void method1594(int i) {
@@ -88,7 +88,7 @@ final class SceneManager {
         long l = var_ha.anInt4567 << 19 | (this.anInt2853 | i << 16 | (!bool ? 0 : 262144));
         Component24 class105 = (Component24) this.aClass141_2851.aClass60_1976.get(l, -87);
         if (class105 != null) return class105;
-        if (!this.aClass141_2851.aClass45_1965.method421(false, this.anInt2853)) return null;
+        if (!this.aClass141_2851.aClass45_1965.isSingletonFileReady(false, this.anInt2853)) return null;
         Component170 class207 = Component170.method1521(this.aClass141_2851.aClass45_1965, this.anInt2853, 0);
         if (class207 != null) {
             class207.anInt2701 = class207.anInt2703 = class207.anInt2698 = class207.anInt2700 = 0;

@@ -45,11 +45,11 @@ final class DefinitionSub25
         anInt9337++;
     }
 
-    final int[] method3042(int i, int i_2_) {
+    final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9336++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_2_ != 255) return null;
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             for (int i_3_ = 0; i_3_ < DefinitionSub6.anInt9139; i_3_++) {
                 int i_4_ = anInt9339 + (RenderableSub6.anIntArray6432[i_3_] << 12) / anInt9340;
                 int i_5_ = anInt9338 + (Component302.anIntArray6035[i] << 12) / anInt9340;

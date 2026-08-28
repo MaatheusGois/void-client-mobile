@@ -24,8 +24,8 @@ final class Component294
             anInt6331 = i_0_;
             anInt6333 = i;
         } else {
-            anInt6333 = Component373.method340(i, (byte) 108);
-            anInt6331 = Component373.method340(i_0_, (byte) 108);
+            anInt6333 = Component373.nextPowerOfTwo(i, (byte) 108);
+            anInt6331 = Component373.nextPowerOfTwo(i_0_, (byte) 108);
         }
         if (!bool) anIDirect3DTexture6332 = this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 1, 0, 21, 1);
         else anIDirect3DTexture6332 = this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 0, 1024, 21, 1);
@@ -49,8 +49,8 @@ final class Component294
             anInt6333 = i;
             anInt6331 = i_6_;
         } else {
-            anInt6333 = Component373.method340(i, (byte) 108);
-            anInt6331 = Component373.method340(i_6_, (byte) 108);
+            anInt6333 = Component373.nextPowerOfTwo(i, (byte) 108);
+            anInt6331 = Component373.nextPowerOfTwo(i_6_, (byte) 108);
         }
         anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(i, i_6_, 1, 0, D3DToolkit.method3958(22, this.aClass68_3895, this.aClass304_3896), 1));
     }
@@ -95,8 +95,8 @@ final class Component294
             anInt6333 = i;
             anInt6331 = i_16_;
         } else {
-            anInt6333 = Component373.method340(i, (byte) 108);
-            anInt6331 = Component373.method340(i_16_, (byte) 108);
+            anInt6333 = Component373.nextPowerOfTwo(i, (byte) 108);
+            anInt6331 = Component373.nextPowerOfTwo(i_16_, (byte) 108);
         }
         if (bool) anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 0, 1024, D3DToolkit.method3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));
         else anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 1, 0, D3DToolkit.method3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));

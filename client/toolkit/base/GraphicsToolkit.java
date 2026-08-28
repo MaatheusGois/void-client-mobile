@@ -28,7 +28,8 @@ abstract class GraphicsToolkit {
     static int anInt4575;
     static int anInt4576;
     static int anInt4577;
-    static int[] anIntArray4578 = new int[200];
+    /** Friend world ids (0 = offline). */
+    static int[] friendWorldIds = new int[200];
     d aD4579;
     static int anInt4580;
     static int anInt4581;
@@ -265,11 +266,11 @@ abstract class GraphicsToolkit {
 
     abstract void method3678(int i);
 
-    abstract int method3679(int i, int i_142_);
+    abstract int bitwiseOr(int i, int i_142_);
 
     public static void method3680(int i) {
-        if (i != -24016) anIntArray4578 = null;
-        anIntArray4578 = null;
+        if (i != -24016) friendWorldIds = null;
+        friendWorldIds = null;
         aClass351_4571 = null;
     }
 
@@ -326,7 +327,7 @@ abstract class GraphicsToolkit {
             if (i_171_ == 3) return ToolkitLoader.method870(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
             throw new IllegalArgumentException("UM");
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ha.TJ(" + i + ',' + i_168_ + ',' + i_169_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_170_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_171_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ha.TJ(" + i + ',' + i_168_ + ',' + i_169_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_170_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_171_ + ')'));
         }
     }
 

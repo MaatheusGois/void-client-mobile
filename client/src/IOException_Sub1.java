@@ -46,7 +46,7 @@ final class IOException_Sub1 extends IOException {
                 if (i_0_ < -72) break;
                 method130(99);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("gv.A(" + i + ',' + i_0_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("gv.A(" + i + ',' + i_0_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -59,12 +59,13 @@ final class IOException_Sub1 extends IOException {
         }
     }
 
-    static final void method131(boolean bool, int i, boolean bool_9_, int i_10_) {
+    /** Set {@link Component21#stereo}, {@link Component231#sampleRate}, and mixer thread priority. */
+    static final void configureAudio(boolean bool, int i, boolean bool_9_, int i_10_) {
         anInt87++;
         if (i_10_ < 8000 || i_10_ > 48000) throw new IllegalArgumentException();
-        Component193.anInt3248 = i;
-        Component231.anInt339 = i_10_;
-        Component21.aBoolean3652 = bool;
+        Component193.audioThreadPriority = i;
+        Component231.sampleRate = i_10_;
+        Component21.stereo = bool;
         if (bool_9_ != true) method130(-125);
     }
 

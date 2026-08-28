@@ -3,18 +3,14 @@
  */
 
 /**
- * RENAMED from `Class348_Sub6` (JODE-obfuscated).
- * ClassLoader comparison/equality helper (extends Node). method2769(Class,byte,String) checks getClassLoader() equality; used to validate class identity across loaders.
+ * LRU slot node for {@link ImageCache}, plus static native-library loader.
+ * {@link #loadNativeLibrary} {@code System.load}s an extracted {@code .so}/{@code .dll}
+ * and records which ClassLoader owns it.
  */
-
 import java.io.File;
 import java.lang.reflect.Method;
 
-final class NodederUtil
-/**
- * RENAMED from NodederUtil
- * Evidence: subclass of Node (hierarchy)
- */ extends Node {
+final class NodederUtil extends Node {
     int anInt6630;
     static int[] anIntArray6631 = new int[13];
     static int anInt6632;
@@ -33,7 +29,8 @@ final class NodederUtil
         if (i != 3) anInt6634 = 101;
     }
 
-    static final boolean method2769(Class var_class, byte i, String string) {
+    /** Load native lib {@code string} from the extracted-file cache; true if already loaded by same ClassLoader. */
+    static final boolean loadNativeLibrary(Class var_class, byte i, String string) {
         try {
             anInt6639++;
             Class var_class_0_ = ((Class) Player.aHashtable10565.get(string));
@@ -56,7 +53,7 @@ final class NodederUtil
             }
             return false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gba.C(" + (var_class != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gba.C(" + (var_class != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

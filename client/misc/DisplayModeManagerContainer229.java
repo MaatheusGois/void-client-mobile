@@ -245,8 +245,8 @@ class DisplayModeManagerContainer229
         aClass141_1242 = class141;
         anInterface17_1244 = interface17;
         aClass356_1241.clear(0);
-        int i = aClass45_1237.method417("details", 0);
-        int[] is = aClass45_1237.method396(i, 0);
+        int i = aClass45_1237.getGroupId("details", 0);
+        int[] is = aClass45_1237.getFileIds(i, 0);
         if (is != null) {
             for (int i_47_ = 0; i_47_ < is.length; i_47_++) {
                 HashNodeSub14 class348_sub42_sub14 = Component324.method1205(is[i_47_], true, aClass45_1237, i);

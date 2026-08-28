@@ -65,7 +65,7 @@ final class ColorTagNode extends Node {
 
     static final void method2813(boolean bool, int i, int i_0_) {
         anInt6778++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_0_, (byte) 105, 7);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 7);
         class348_sub42_sub15.method3246(-25490);
         if (bool != true) anInt6769 = -113;
         class348_sub42_sub15.anInt9652 = i;

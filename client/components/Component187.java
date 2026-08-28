@@ -5,7 +5,7 @@
 final class Component187
 /**
  * RENAMED from `Class212` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * Bzip2 decompressor used by {@link NodeSub41#decompressContainer}.
  */ {
     private static DisplayModeManagerContainer172 aClass40_2750 = new DisplayModeManagerContainer172();
 
@@ -51,7 +51,8 @@ final class Component187
             is_1_[i_15_] = (is[i_15_ - 1] + 1 << 1) - is_1_[i_15_];
     }
 
-    static final int method1547(byte[] is, int i, byte[] is_16_, int i_17_, int i_18_) {
+    /** Bzip2 decompress into {@code is} (JS5 container type 1). */
+    static final int decompressBzip2(byte[] is, int i, byte[] is_16_, int i_17_, int i_18_) {
         synchronized (aClass40_2750) {
             aClass40_2750.aByteArray534 = is_16_;
             aClass40_2750.anInt522 = i_18_;

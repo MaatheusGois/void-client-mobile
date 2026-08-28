@@ -41,8 +41,8 @@ final class DisplayModeManagerContainer207
         if (i != 2012104999) method3405(118, false);
         for (int i_2_ = 0; NodeSub1.anIntArray6547.length > i_2_; i_2_++) {
             int i_3_ = NodeSub1.anIntArray6547[i_2_];
-            if (DisplayModeManagerContainer271.aClass45_518.method421(false, i_3_)) i_1_++;
-            if (s.aClass45_4585.method421(false, i_3_)) i_1_++;
+            if (DisplayModeManagerContainer271.aClass45_518.isSingletonFileReady(false, i_3_)) i_1_++;
+            if (s.aClass45_4585.isSingletonFileReady(false, i_3_)) i_1_++;
         }
         return i_1_;
     }
@@ -92,7 +92,7 @@ final class DisplayModeManagerContainer207
 
     static final void method3411(int i, int i_13_, int i_14_) {
         anInt9761++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, i_13_);//12
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_13_);//12
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_14_;
     }
@@ -112,7 +112,7 @@ final class DisplayModeManagerContainer207
         class348_sub40_sub8.anInt9158 = i_17_;
         class348_sub40_sub8.anInt9164 = i;
         class348_sub40_sub8.aBoolean9160 = bool_20_;
-        class348_sub40_sub8.method3044(109);
+        class348_sub40_sub8.postDecode(109);
         DisplayModeManagerContainer206.method797(i_18_, i_16_, (byte) 120);
         if (bool != true) anIntArray9757 = null;
         for (int i_21_ = 0; i_21_ < i_18_; i_21_++)

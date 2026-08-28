@@ -9,40 +9,44 @@ final class AudioLineSub2
  * RENAMED from `Class279_Sub2` (JODE-obfuscated).
  * Evidence: subclass of AudioLine (hierarchy)
  */ extends AudioLine {
-    private final int anInt6181;
-    private static Interface20 anInterface20_6182;
+    /** Native audio channel index. */
+    private final int channelId;
+    /** Shared {@link DirectSoundAudio} peer from {@link ReflectionInvoker}. */
+    private static NativeAudio nativeAudio;
 
     final void flush() {
-        anInterface20_6182.method77((byte) 98, anInt6181);
+        nativeAudio.flush((byte) 98, channelId);
     }
 
     final int getBufferedSamples() {
-        return anInterface20_6182.method75((byte) -93, anInt6181);
+        return nativeAudio.getBufferedSamples((byte) -93, channelId);
     }
 
-    public static void method2097() {
-        anInterface20_6182 = null;
+    /** Drop the static native peer reference. */
+    public static void clearNativeAudio() {
+        nativeAudio = null;
     }
 
     final void close() {
-        anInterface20_6182.method74(anInt6181, (byte) 122);
+        nativeAudio.close(channelId, (byte) 122);
     }
 
     final void initOnComponent(Component component) throws Exception {
-        anInterface20_6182.method78(Component231.anInt339, Component21.aBoolean3652, component, 27929);
+        nativeAudio.initOnComponent(Component231.sampleRate, Component21.stereo, component, 27929);
     }
 
-    final void method2094() {
-        anInterface20_6182.method76(anInt6181, this.anIntArray3603);
+    /** Push mixed PCM into the native channel. */
+    final void writeSamples() {
+        nativeAudio.writeSamples(channelId, this.anIntArray3603);
     }
 
     AudioLineSub2(ReflectionInvoker class297, int i) {
-        anInterface20_6182 = (Interface20) class297.method2244(21);
-        anInt6181 = i;
+        nativeAudio = (NativeAudio) class297.getNativeInterface(21);
+        channelId = i;
     }
 
     final void open(int i) throws Exception {
         if (i > 32768) throw new IllegalArgumentException();
-        anInterface20_6182.method79(i, anInt6181, (byte) 112);
+        nativeAudio.open(i, channelId, (byte) 112);
     }
 }

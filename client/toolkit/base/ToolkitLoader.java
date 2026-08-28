@@ -15,8 +15,8 @@ final class ToolkitLoader {
         if (i_0_ != 18993) return null;
         GraphicsToolkit var_ha;
         try {
-            if (!JaclibLoader.method215(27165)) throw new RuntimeException("");
-            if (!DefinitionSub19.method3098(-30282, "jagdx")) throw new RuntimeException("");
+            if (!JaclibLoader.loadNatives(27165)) throw new RuntimeException("");
+            if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "jagdx")) throw new RuntimeException("");
             Method method = (D3DToolkit.class.getDeclaredMethod("createToolkit", Canvas.class, d.class, CacheStore.class, Integer.class));
             var_ha = (GraphicsToolkit) method.invoke(null, new Object[]{canvas, var_d, class45, new Integer(i)});
         } catch (Throwable throwable) {

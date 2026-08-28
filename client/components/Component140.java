@@ -26,7 +26,7 @@ final class Component140
         try {
             anObject10440 = object;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ct.<init>(" + (interface14 != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ct.<init>(" + (interface14 != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

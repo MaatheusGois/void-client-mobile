@@ -43,13 +43,13 @@ final class RenderableSub2
                         }
                     } else is = Exception_Sub1.aClass255_112.method1940(113, (class348_sub42_sub12.itemId)).anIntArray2772;
                 } else is = (Exception_Sub1.aClass255_112.method1940(-67, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
-                String string = Component192.method2367((byte) 125, class348_sub42_sub12);
+                String string = Component192.formatMenuEntry((byte) 125, class348_sub42_sub12);
                 if (is != null) string += ImageTagText.method1273(is, true);
                 NodeList.aClass324_3326.method2567(i_1_, string, (byte) 116, i_4_, 0, i_7_ - -3, DisplayModeManagerContainer196.aClass105Array4234, Component143.anIntArray2330);
                 if (!class348_sub42_sub12.aBoolean9597) break;
                 ColoredText.aClass105_6097.method974(Component27.aClass143_4962.stringWidth(true, string) + (i_7_ - -5), -12 + i_1_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("vo.C(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub42_sub12 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("vo.C(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub42_sub12 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
             }
             break;
         } while (false);
@@ -88,15 +88,15 @@ final class RenderableSub2
                 int i_15_ = (i_12_ > i_13_ - -1 ? Component134.method1399(7, string.charAt(1 + i_13_)) : -1);
                 int i_16_ = (2 + i_13_ < i_12_ ? Component134.method1399(7, string.charAt(i_13_ + 2)) : -1);
                 int i_17_ = (i_12_ <= 3 + i_13_ ? -1 : Component134.method1399(7, string.charAt(i_13_ + 3)));
-                is[i_10_++] = (byte) Component224.method2057(i_14_ << 2, i_15_ >>> 4);
+                is[i_10_++] = (byte) Component224.bitwiseOr(i_14_ << 2, i_15_ >>> 4);
                 if (i_16_ == -1) break;
-                is[i_10_++] = (byte) Component224.method2057((GpsOverlay.method1166(15, i_15_) << 4), i_16_ >>> 2);
+                is[i_10_++] = (byte) Component224.bitwiseOr((GpsOverlay.bitwiseAnd(15, i_15_) << 4), i_16_ >>> 2);
                 if (i_17_ == -1) break;
-                is[i_10_++] = (byte) Component224.method2057((GpsOverlay.method1166(3, i_16_) << 6), i_17_);
+                is[i_10_++] = (byte) Component224.bitwiseOr((GpsOverlay.bitwiseAnd(3, i_16_) << 6), i_17_);
             }
             return -i_11_ + i_10_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vo.B(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vo.B(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_10_ + ')'));
         }
     }
 
@@ -202,7 +202,7 @@ final class RenderableSub2
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vo.A(" + (class338 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_18_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vo.A(" + (class338 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_18_ + ')'));
         }
     }
 

@@ -20,7 +20,8 @@ final class Component231
     int anInt336 = 512;
     private int anInt337 = 0;
     static int anInt338;
-    static int anInt339;
+    /** Mix / output sample rate in Hz (e.g. 22050). */
+    static int sampleRate;
     static int anInt340;
     int anInt341;
     boolean aBoolean342;
@@ -109,7 +110,7 @@ final class Component231
                     Canvas canvas = new Canvas();
                     canvas.setSize(36, 32);
                     NodeSub34.aHa6968 = Component65.method958(true, 0, DefinitionSub4.aD9113, 0, canvas, Component257.aClass45_4796);
-                    DefinitionSub9.aClass324_9173 = (NodeSub34.aHa6968.method3686(Component388.method1819(LoadingState.anInt1044, 0, -44, Component65.aClass45_1627), Component170.method1519(Component158.aClass45_322, LoadingState.anInt1044, 0), true));
+                    DefinitionSub9.aClass324_9173 = (NodeSub34.aHa6968.method3686(Component388.method1819(LoadingState.p11FullGroupId, 0, -44, Component65.aClass45_1627), Component170.method1519(Component158.aClass45_322, LoadingState.p11FullGroupId, 0), true));
                 }
                 for (NodeSub7 class348_sub7 = ((NodeSub7) Component305.aClass262_9931.first(i + 4)); class348_sub7 != null; class348_sub7 = (NodeSub7) Component305.aClass262_9931.next((byte) 118)) {
                     Exception_Sub1.aClass255_112.method1932(NodeSub34.aHa6968, class348_sub7.anInt6647, class348_sub7.anInt6648, DefinitionSub9.aClass324_9173, (class348_sub7.aBoolean6650 ? (Component72.localPlayer.appearance) : null), class348_sub7.anInt6642, false, (byte) 83, var_ha, class348_sub7.anInt6649, false, class348_sub7.anInt6645);
@@ -124,7 +125,7 @@ final class Component231
             anInt338++;
             int i_18_ = -(i_13_ >> 2);
             i_13_ = -(0x3 & i_13_);
-            if (i_12_ != 256) anInt339 = -63;
+            if (i_12_ != 256) sampleRate = -63;
             for (int i_19_ = -i_15_; i_19_ < 0; i_19_++) {
                 for (int i_20_ = i_18_; i_20_ < 0; i_20_++) {
                     is_14_[i_16_++] += is[i_11_++];
@@ -138,7 +139,7 @@ final class Component231
                 i_11_ += i;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hk.E(" + i + ',' + i_11_ + ',' + i_12_ + ',' + (is != null ? "{...}" : "null") + ',' + i_13_ + ',' + (is_14_ != null ? "{...}" : "null") + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hk.E(" + i + ',' + i_11_ + ',' + i_12_ + ',' + (is != null ? "{...}" : "null") + ',' + i_13_ + ',' + (is_14_ != null ? "{...}" : "null") + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ')'));
         }
     }
 

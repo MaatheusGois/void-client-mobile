@@ -64,7 +64,7 @@ abstract class CacheNode extends HashNode {
             r.anInt9721 = DebugPanic.anInt4737;
             Component339.method1713(false, 520);
             Component160.method3466(100);
-            ClientScriptExecutor.method703(r.anInt9721);
+            ClientScriptExecutor.runInterfaceScripts(r.anInt9721);
         }
         DisplayModeManagerContainer369.aBoolean2895 = false;
         DisplayModeManagerContainer282.username = DisplayModeManagerContainer51.password = "";

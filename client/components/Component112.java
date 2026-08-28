@@ -18,7 +18,8 @@ abstract class Component112
         /* empty */
     }
 
-    abstract int method2335(int i, int i_0_);
+        /** Download/load percent for group {@code i_0_} (0..100). */
+    abstract int getGroupLoadPercent(int i, int i_0_);
 
     static final void method2336(Component44 class51, int i, int i_1_, int i_2_, int i_3_) {
         anInt3940++;
@@ -45,9 +46,12 @@ abstract class Component112
         return f + (-f + f_4_) * f_5_;
     }
 
-    abstract void method2338(byte i, int i_6_);
+        /** Prefetch packed group {@code i_6_}. */
+    abstract void requestGroup(byte i, int i_6_);
 
-    abstract byte[] method2339(int i, byte i_7_);
+        /** Raw packed bytes for group {@code i}. */
+    abstract byte[] getGroupData(int i, byte i_7_);
 
-    abstract ReferenceTable method2340(byte i);
+        /** Load/parse the archive reference table, or null if not ready. */
+    abstract ReferenceTable getReferenceTable(byte i);
 }

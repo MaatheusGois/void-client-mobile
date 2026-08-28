@@ -40,7 +40,7 @@ final class DisplayModeManagerContainer273
     }
 
     static final void method1135(int i) {
-        Component181.aClass45_1541.anInt634 = 1;
+        Component181.aClass45_1541.discardMode = 1;
         anInt5798++;
         HashNodeSub10.method3211((byte) -119);
         MatrixSub2.anInt5740 = 0;
@@ -159,7 +159,7 @@ final class DisplayModeManagerContainer273
         Component69.anInt3656 = 0;
         DefinitionSub22.anInt9295 = 0;
         DisplayModeManagerContainer370.anInt1132 = 0;
-        DisplayModeManagerContainer155.anInt2990 = 0;
+        BuildType.anInt2990 = 0;
         NodeSub46.anInt7114 = 0;
         Component364.anInt8337 = 0;
         NodeSub29.anInt6910 = 0;
@@ -215,7 +215,7 @@ final class DisplayModeManagerContainer273
         GlToolkitSub3.anInt8054 = 0;
         Component210.anInt5286 = 0;
         DisplayModeManagerContainer220.anInt288 = 0;
-        DisplayModeManagerContainer124.anInt2982 = 0;
+        GameType.anInt2982 = 0;
         Component128.anInt1105 = 0;
         Component197.anInt10091 = 0;
         Component137.anInt1922 = 0;
@@ -275,7 +275,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer190.anInt5496 = 0;
         Component269.anInt8758 = 0;
         LoadingState.anInt1019 = 0;
-        DisplayModeManagerContainer115.anInt1049 = 0;
+        DisplayModeInfo.anInt1049 = 0;
         Component212.anInt9978 = 0;
         DisplayModeManagerContainer194.anInt5103 = 0;
         DisplayModeManagerContainer64.anInt9021 = 0;
@@ -1503,7 +1503,7 @@ final class DisplayModeManagerContainer273
         NodeList.anInt3324 = 0;
         RSARequest.anInt9655 = 0;
         Component253.anInt3190 = 0;
-        DisplayModeManagerContainer155.anInt2992 = 0;
+        BuildType.anInt2992 = 0;
         CookieManager.anInt6295 = 0;
         Component223.anInt124 = 0;
         MatrixSub2.anInt5709 = 0;
@@ -1669,7 +1669,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer207.anInt9752 = 0;
         GlFramebufferTexture.anInt8534 = 0;
         JagTheoraDecoder.anInt1003 = 0;
-        RenderableSub9Sub1.anInt8788 = 0;
+        FriendLoginMessage.anInt8788 = 0;
         MatrixSub3.anInt5782 = 0;
         DebugPanicSub1.anInt8485 = 0;
         DisplayModeManagerContainer87.anInt3127 = 0;
@@ -1891,13 +1891,13 @@ final class DisplayModeManagerContainer273
         DefinitionGroup.anInt9522 = 0;
         Component244.anInt4180 = 0;
         Buffer.anInt7165 = 0;
-        RenderableSub9Sub1.anInt8782 = 0;
+        FriendLoginMessage.anInt8782 = 0;
         NodeSub16Sub2.anInt8864 = 0;
         NumberFormatter.anInt2790 = 0;
         AbstractShaderSub1.anInt7279 = 0;
         Component245.anInt116 = 0;
         TheoraVideoPlayer.anInt1496 = 0;
-        DisplayModeManagerContainer155.anInt2991 = 0;
+        BuildType.anInt2991 = 0;
         ResourceLoader.anInt3912 = 0;
         InputStream_Sub1.anInt72 = 0;
         RenderableSub2.anInt6398 = 0;
@@ -1986,7 +1986,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer295.anInt5916 = 0;
         Component212.anInt9969 = 0;
         DisplayModeManagerContainer104.anInt10328 = 0;
-        DisplayModeManagerContainer124.anInt2983 = 0;
+        GameType.anInt2983 = 0;
         NodeSub20.anInt6837 = 0;
         DisplayModeManagerContainer190.anInt5426 = 0;
         GlToolkitSub2.anInt7642 = 0;
@@ -2036,7 +2036,7 @@ final class DisplayModeManagerContainer273
         WaterShaderSub8.anInt7354 = 0;
         Request.anInt6886 = 0;
         AbstractShaderSub2.anInt7286 = 0;
-        DisplayModeManagerContainer155.anInt2994 = 0;
+        BuildType.anInt2994 = 0;
         Component291.anInt2532 = 0;
         Npc.anInt10514 = 0;
         HuffmanDecoder.anInt3765 = 0;
@@ -2732,7 +2732,7 @@ final class DisplayModeManagerContainer273
         Component330.anInt1513 = 0;
         Component60.anInt5906 = 0;
         ColoredText.anInt6090 = 0;
-        DisplayModeManagerContainer155.anInt2997 = 0;
+        BuildType.anInt2997 = 0;
         Component267.anInt2980 = 0;
         DisplayModeManagerContainer194.anInt5094 = 0;
         Player.anInt10528 = 0;
@@ -2909,7 +2909,7 @@ final class DisplayModeManagerContainer273
         GlToolkitSub3.anInt7903 = 0;
         Component175.anInt5843 = 0;
         GlToolkitSub3.anInt7960 = 0;
-        DisplayModeManagerContainer115.anInt1053 = 0;
+        DisplayModeInfo.anInt1053 = 0;
         GlToolkitSub3.anInt8077 = 0;
         DefinitionSub17Sub1.anInt10425 = 0;
         Component210.anInt5291 = 0;
@@ -3572,7 +3572,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer57.anInt718 = 0;
         GlToolkitSub2.anInt7653 = 0;
         Buffer.anInt7137 = 0;
-        DisplayModeManagerContainer124.anInt2989 = 0;
+        GameType.anInt2989 = 0;
         Component349.anInt10018 = 0;
         GlExtensionManager.anInt9877 = 0;
         DisplayModeManagerContainer87.anInt3102 = 0;
@@ -3955,7 +3955,7 @@ final class DisplayModeManagerContainer273
         NodeSub1.anInt6549 = 0;
         Component82.anInt436 = 0;
         Component168.anInt3948 = 0;
-        DisplayModeManagerContainer124.anInt2988 = 0;
+        GameType.anInt2988 = 0;
         GraphicsToolkit.anInt4574 = 0;
         DisplayModeManagerContainer57.anInt819 = 0;
         Component289.anInt10119 = 0;
@@ -4067,7 +4067,7 @@ final class DisplayModeManagerContainer273
         Component211.anInt1958 = 0;
         ParticleShader.anInt6232 = 0;
         HashNodeSub1.anInt9496 = 0;
-        DisplayModeManagerContainer124.anInt2984 = 0;
+        GameType.anInt2984 = 0;
         Component146.anInt2124 = 0;
         GlToolkitSub2.anInt7572 = 0;
         IOException_Sub1.anInt89 = 0;
@@ -4175,7 +4175,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer154.method773(true);
         DummyClass.aBoolean10174 = true;
         RenderableSub6.aShortArray6428 = Request.aShortArray6889 = HashNodeSub3.aShortArray9502 = Component226.aShortArray4172 = new short[256];
-        Component323.aString5882 = FriendsIgnoreList.aClass274_3509.method2063(ObjectDeserializer.anInt6967, 544);
+        Component323.aString5882 = FriendsIgnoreList.aClass274_3509.getLocalized(ObjectDeserializer.languageId, 544);
         Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub14_7264, Component192.aClass348_Sub51_3959.aClass239_Sub14_7250.method1778(i + -32350));
         Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub27_7261, Component192.aClass348_Sub51_3959.aClass239_Sub27_7255.method1840(-32350));
         DisplayModeManagerContainer136.anInt4718 = 0;
@@ -4183,7 +4183,7 @@ final class DisplayModeManagerContainer273
         ShaderProgramSub2.method2145(-24498);
         MatrixSub2.aLong5745 = 0L;
         Component323.aClass348_Sub26_5881 = null;
-        Component181.aClass45_1541.anInt634 = 2;
+        Component181.aClass45_1541.discardMode = 2;
     }
 
     static int anInt5795;

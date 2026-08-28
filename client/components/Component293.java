@@ -33,7 +33,7 @@ final class Component293
         int i_2_ = 44 % ((-41 - i_1_) / 33);
         byte[] is;
         synchronized (aClass45_3299) {
-            is = aClass45_3299.method410(-1860, 19, i);
+            is = aClass45_3299.getFile(-1860, 19, i);
         }
         class160 = new Component214();
         if (is != null) class160.method1255(new Buffer(is), -1);
@@ -43,12 +43,12 @@ final class Component293
         return class160;
     }
 
-    Component293(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component293(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_3299 = class45;
-            this.anInt3305 = aClass45_3299.method407(0, 19);
+            this.anInt3305 = aClass45_3299.getFileCount(0, 19);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uea.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uea.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

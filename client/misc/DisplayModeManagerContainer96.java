@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer96
         try {
             anInt4697 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 
@@ -33,7 +33,7 @@ final class DisplayModeManagerContainer96
         try {
             anInt4697 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -48,11 +48,11 @@ final class DisplayModeManagerContainer96
         if ((DisplayModeManagerContainer306.menuEntryCount >= 2 || r.aBoolean9722) && Component156.aClass46_3701 == null) {
             if (i >= -71) method1077(null, (byte) -41);
             String string;
-            if (r.aBoolean9722 && DisplayModeManagerContainer306.menuEntryCount < 2) string = (DisplayModeManagerContainer332.aString5001 + FriendsIgnoreList.aClass274_3515.method2063(ObjectDeserializer.anInt6967, 544) + DisplayModeManagerContainer332.aString5000 + " ->");
+            if (r.aBoolean9722 && DisplayModeManagerContainer306.menuEntryCount < 2) string = (DisplayModeManagerContainer332.aString5001 + FriendsIgnoreList.aClass274_3515.getLocalized(ObjectDeserializer.languageId, 544) + DisplayModeManagerContainer332.aString5000 + " ->");
             else if (!Component262.shiftClick || !Component280.aClass346_2449.isKeyDown(81, -121) || DisplayModeManagerContainer306.menuEntryCount <= 2) {
                 MenuEntry class348_sub42_sub12 = Component192.menuTip;
                 if (class348_sub42_sub12 == null) return;
-                string = Component192.method2367((byte) -52, class348_sub42_sub12);
+                string = Component192.formatMenuEntry((byte) -52, class348_sub42_sub12);
                 int[] is = null;
                 if (!Component3.method1197(-12081, class348_sub42_sub12.opcode)) {
                     if (class348_sub42_sub12.itemId != -1) is = Exception_Sub1.aClass255_112.method1940(98, (class348_sub42_sub12.itemId)).anIntArray2772;
@@ -74,14 +74,14 @@ final class DisplayModeManagerContainer96
                     }
                 } else is = (Exception_Sub1.aClass255_112.method1940(-73, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
                 if (is != null) string += ImageTagText.method1273(is, true);
-            } else string = Component192.method2367((byte) 125, Component192.menuTip);
-            if (DisplayModeManagerContainer306.menuEntryCount > 2) string += ("<col=ffffff> / " + (DisplayModeManagerContainer306.menuEntryCount - 2) + FriendsIgnoreList.aClass274_3508.method2063(ObjectDeserializer.anInt6967, 544));
+            } else string = Component192.formatMenuEntry((byte) 125, Component192.menuTip);
+            if (DisplayModeManagerContainer306.menuEntryCount > 2) string += ("<col=ffffff> / " + (DisplayModeManagerContainer306.menuEntryCount - 2) + FriendsIgnoreList.aClass274_3508.getLocalized(ObjectDeserializer.languageId, 544));
             if (NodeSub36.aClass46_6990 != null) {
                 BitmapFont class324 = NodeSub36.aClass46_6990.method426(var_ha, (byte) 68);
                 if (class324 == null) class324 = NodeList.aClass324_3326;
                 class324.method2585(Component143.anIntArray2330, NodeSub36.aClass46_6990.anInt709, DisplayModeManagerContainer196.aClass105Array4234, NodeSub36.aClass46_6990.anInt700, NodeSub36.aClass46_6990.anInt749, NodeSub36.aClass46_6990.anInt789, NodeSub36.aClass46_6990.anInt809, OutputStream_Sub1.aRandom93, NodeSub36.aClass46_6990.anInt762, Component299.anInt451, LruCache.anInt4383, -33, Component9.anInt4141, string, Component195.anIntArray5007);
                 Component354.method226(Component195.anIntArray5007[0], Component195.anIntArray5007[2], Component195.anIntArray5007[1], 0, Component195.anIntArray5007[3]);
-            } else if (Component158.aClass46_323 != null && (PacketReader.aClass230_10434 == RunescapeInfo.aClass230_186)) {
+            } else if (Component158.aClass46_323 != null && (PacketReader.currentGameType == RunescapeInfo.RUNESCAPE)) {
                 int i_1_ = (NodeList.aClass324_3326.method2571(-1, LruCache.anInt4383, Component143.anIntArray2330, string, 16777215, 0, DisplayModeManagerContainer196.aClass105Array4234, 16 + TcpSocketStream.anInt5832, 4 + Component247.anInt4911, OutputStream_Sub1.aRandom93));
                 Component354.method226(Component247.anInt4911 - -4, (Component27.aClass143_4962.stringWidth(true, string) + i_1_), TcpSocketStream.anInt5832, 0, 16);
             }

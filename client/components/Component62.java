@@ -57,10 +57,10 @@ final class Component62
 
     static final HashNodeSub19 method1223(int i, int i_5_, int i_6_, Component224 class273) {
         anInt2086++;
-        int i_7_ = class273.anInt5167 | i << 10;
+        int i_7_ = class273.id | i << 10;
         HashNodeSub19 class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.method2302((long) i_7_ << 16, (byte) -91));
         if (class348_sub42_sub19 != null) return class348_sub42_sub19;
-        byte[] is = (Component22.aClass45_1743.method415((byte) 73, Component22.aClass45_1743.method423(i_7_, (byte) -90)));
+        byte[] is = (Component22.aClass45_1743.getSingletonFile((byte) 73, Component22.aClass45_1743.getGroupIdByHash(i_7_, (byte) -90)));
         if (is != null) {
             if (is.length <= 1) return null;
             try {
@@ -72,10 +72,10 @@ final class Component62
             ImageCacheStore.aClass308_4036.method2305((long) i_7_ << 16, class348_sub42_sub19, -1);
             return class348_sub42_sub19;
         }
-        i_7_ = class273.anInt5167 | 65536 + i_5_ << 10;
+        i_7_ = class273.id | 65536 + i_5_ << 10;
         class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.method2302((long) i_7_ << 16, (byte) -31));
         if (class348_sub42_sub19 != null) return class348_sub42_sub19;
-        is = (Component22.aClass45_1743.method415((byte) 73, Component22.aClass45_1743.method423(i_7_, (byte) -107)));
+        is = (Component22.aClass45_1743.getSingletonFile((byte) 73, Component22.aClass45_1743.getGroupIdByHash(i_7_, (byte) -107)));
         if (is != null) {
             if (is.length <= 1) return null;
             try {
@@ -87,10 +87,10 @@ final class Component62
             ImageCacheStore.aClass308_4036.method2305((long) i_7_ << 16, class348_sub42_sub19, -1);
             return class348_sub42_sub19;
         }
-        i_7_ = class273.anInt5167 | 0x3fffc00;
+        i_7_ = class273.id | 0x3fffc00;
         class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.method2302((long) i_7_ << 16, (byte) -107));
         if (class348_sub42_sub19 != null) return class348_sub42_sub19;
-        is = (Component22.aClass45_1743.method415((byte) 73, Component22.aClass45_1743.method423(i_7_, (byte) 104)));
+        is = (Component22.aClass45_1743.getSingletonFile((byte) 73, Component22.aClass45_1743.getGroupIdByHash(i_7_, (byte) 104)));
         if (is != null) {
             if (is.length <= 1) return null;
             try {
@@ -127,7 +127,7 @@ final class Component62
         if (i_9_ < 36) return null;
         byte[] is;
         synchronized (aClass45_2084) {
-            is = aClass45_2084.method410(-1860, 36, i);
+            is = aClass45_2084.getFile(-1860, 36, i);
         }
         class42 = new Component274();
         class42.aClass153_593 = this;
@@ -140,13 +140,13 @@ final class Component62
         return class42;
     }
 
-    Component62(DisplayModeManagerContainer124 class230, int i, CacheStore class45, CacheStore class45_10_) {
+    Component62(GameType class230, int i, CacheStore class45, CacheStore class45_10_) {
         try {
             aClass45_2084 = class45;
             this.aClass45_2087 = class45_10_;
-            aClass45_2084.method407(0, 36);
+            aClass45_2084.getFileCount(0, 36);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("on.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_10_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("on.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_10_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

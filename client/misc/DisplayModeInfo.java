@@ -1,27 +1,31 @@
-/* DisplayModeManagerContainer115 - Decompiled by JODE
+/* DisplayModeInfo - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer115
 /**
- * RENAMED from `Class57` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
-    int anInt1046;
-    int anInt1047;
+ * RENAMED from {@code Class57} (JODE-obfuscated).
+ * Packed display mode from {@link Component248#getDisplayModes}: width×height, bit depth, refresh.
+ */
+final class DisplayModeInfo {
+    /** Colour depth in bits (prefer ≥24). */
+    int bitDepth;
+    /** Mode width in pixels. */
+    int width;
     static DisplayModeManagerContainer167[] aClass17Array1048 = new DisplayModeManagerContainer167[14];
     static int anInt1049;
     static ImageTagText aClass163_1050;
     static Component111 aClass251_1051 = new Component111();
-    int anInt1052;
+    /** Vertical refresh rate in Hz (0 = any). */
+    int refreshRate;
     static int anInt1053;
-    int anInt1054;
+    /** Mode height in pixels. */
+    int height;
     static Component150 aClass227_1055;
 
     static final void method529(int i, boolean bool) {
         anInt1053++;
         if (bool != true) method530(-105);
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, 2);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 2);
         class348_sub42_sub15.method3251(-16058);
     }
 
@@ -46,7 +50,7 @@ final class DisplayModeManagerContainer115
         throw new IllegalArgumentException();
     }
 
-    public DisplayModeManagerContainer115() {
+    public DisplayModeInfo() {
         /* empty */
     }
 }

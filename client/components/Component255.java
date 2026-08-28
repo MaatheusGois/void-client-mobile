@@ -22,7 +22,7 @@ final class Component255
 
     static final int method532(int i, int i_0_, boolean bool, int i_1_) {
         anInt1061++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) -120, i_0_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -120, i_0_, bool);
         if (class348_sub13 == null) return 0;
         if (i == -1) return 0;
         int i_2_ = 0;
@@ -55,15 +55,15 @@ final class Component255
         int i_17_ = LogicError.method831(PauseTimer.anInt513, i_11_ + i_8_, Component72.anInt1910, 32);
         int i_18_ = LogicError.method831(PauseTimer.anInt513, -i_8_ + i_7_, Component72.anInt1910, 41);
         for (int i_19_ = i_13_; i_17_ > i_19_; i_19_++)
-            MenuOpener.method1156(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_19_], i_15_, i_10_);
+            MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_19_], i_15_, i_10_);
         for (int i_20_ = i_14_; i_18_ < i_20_; i_20_--)
-            MenuOpener.method1156(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_20_], i_15_, i_10_);
+            MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_20_], i_15_, i_10_);
         int i_21_ = LogicError.method831(Component22.anInt1745, i_8_ + i, Component27.anInt4960, 121);
         int i_22_ = LogicError.method831(Component22.anInt1745, -i_8_ + i_9_, Component27.anInt4960, -101);
         for (int i_23_ = i_17_; i_23_ <= i_18_; i_23_++) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_23_];
-            MenuOpener.method1156(-27, i_21_, is, i_15_, i_10_);
-            MenuOpener.method1156(-27, i_16_, is, i_22_, i_10_);
+            MenuOpener.fillInts(-27, i_21_, is, i_15_, i_10_);
+            MenuOpener.fillInts(-27, i_16_, is, i_22_, i_10_);
         }
     }
 

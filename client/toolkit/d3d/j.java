@@ -49,7 +49,7 @@ final class j
 
     private final native void ma(OpenGLToolkit var_oa, int[] is, byte[] is_32_, byte[] is_33_, int i, int i_34_, int i_35_, int i_36_);
 
-    final void method968(int i, int i_37_, int i_38_) {
+    final void capturePixels(int i, int i_37_, int i_38_) {
         N(this.nativeid, i, i_37_, i_38_);
     }
 

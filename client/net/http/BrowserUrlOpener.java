@@ -137,51 +137,51 @@ final class BrowserUrlOpener extends NodeSub16 {
             int i_15_ = 0xf & i_4_;
             int i_16_ = (0x7f93 & i_4_) >> 8;
             int i_17_ = 0x7f & i_4_ >> 16;
-            if (i_16_ == 0) anIntArray8947[i_15_] = ((i_17_ << 14) + GpsOverlay.method1166(anIntArray8947[i_15_], -2080769));
-            if (i_16_ == 32) anIntArray8947[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(anIntArray8947[i_15_], -16257));
-            if (i_16_ == 1) anIntArray8899[i_15_] = (GpsOverlay.method1166(-16257, anIntArray8899[i_15_]) + (i_17_ << 7));
-            if (i_16_ == 33) anIntArray8899[i_15_] = (GpsOverlay.method1166(anIntArray8899[i_15_], -128) - -i_17_);
-            if (i_16_ == 5) anIntArray8939[i_15_] = (GpsOverlay.method1166(anIntArray8939[i_15_], -16257) - -(i_17_ << 7));
-            if (i_16_ == 37) anIntArray8939[i_15_] = i_17_ + GpsOverlay.method1166(-128, anIntArray8939[i_15_]);
-            if (i_16_ == 7) anIntArray8953[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(-16257, anIntArray8953[i_15_]));
-            if (i_16_ == 39) anIntArray8953[i_15_] = i_17_ + GpsOverlay.method1166(anIntArray8953[i_15_], -128);
-            if (i_16_ == 10) anIntArray8894[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(anIntArray8894[i_15_], -16257));
-            if (i_16_ == 42) anIntArray8894[i_15_] = i_17_ + GpsOverlay.method1166(anIntArray8894[i_15_], -128);
-            if (i_16_ == 11) anIntArray8896[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(-16257, anIntArray8896[i_15_]));
-            if (i_16_ == 43) anIntArray8896[i_15_] = (GpsOverlay.method1166(-128, anIntArray8896[i_15_]) - -i_17_);
+            if (i_16_ == 0) anIntArray8947[i_15_] = ((i_17_ << 14) + GpsOverlay.bitwiseAnd(anIntArray8947[i_15_], -2080769));
+            if (i_16_ == 32) anIntArray8947[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(anIntArray8947[i_15_], -16257));
+            if (i_16_ == 1) anIntArray8899[i_15_] = (GpsOverlay.bitwiseAnd(-16257, anIntArray8899[i_15_]) + (i_17_ << 7));
+            if (i_16_ == 33) anIntArray8899[i_15_] = (GpsOverlay.bitwiseAnd(anIntArray8899[i_15_], -128) - -i_17_);
+            if (i_16_ == 5) anIntArray8939[i_15_] = (GpsOverlay.bitwiseAnd(anIntArray8939[i_15_], -16257) - -(i_17_ << 7));
+            if (i_16_ == 37) anIntArray8939[i_15_] = i_17_ + GpsOverlay.bitwiseAnd(-128, anIntArray8939[i_15_]);
+            if (i_16_ == 7) anIntArray8953[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(-16257, anIntArray8953[i_15_]));
+            if (i_16_ == 39) anIntArray8953[i_15_] = i_17_ + GpsOverlay.bitwiseAnd(anIntArray8953[i_15_], -128);
+            if (i_16_ == 10) anIntArray8894[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(anIntArray8894[i_15_], -16257));
+            if (i_16_ == 42) anIntArray8894[i_15_] = i_17_ + GpsOverlay.bitwiseAnd(anIntArray8894[i_15_], -128);
+            if (i_16_ == 11) anIntArray8896[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(-16257, anIntArray8896[i_15_]));
+            if (i_16_ == 43) anIntArray8896[i_15_] = (GpsOverlay.bitwiseAnd(-128, anIntArray8896[i_15_]) - -i_17_);
             if (i_16_ == 64) {
-                if (i_17_ < 64) this.anIntArray8895[i_15_] = GpsOverlay.method1166((this.anIntArray8895[i_15_]), -2);
-                else this.anIntArray8895[i_15_] = Component224.method2057((this.anIntArray8895[i_15_]), 1);
+                if (i_17_ < 64) this.anIntArray8895[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8895[i_15_]), -2);
+                else this.anIntArray8895[i_15_] = Component224.bitwiseOr((this.anIntArray8895[i_15_]), 1);
             }
             if (i_16_ == 65) {
-                if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.method2057((this.anIntArray8895[i_15_]), 2);
+                if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.bitwiseOr((this.anIntArray8895[i_15_]), 2);
                 else {
                     method2858(-106, i_15_);
-                    this.anIntArray8895[i_15_] = GpsOverlay.method1166((this.anIntArray8895[i_15_]), -3);
+                    this.anIntArray8895[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8895[i_15_]), -3);
                 }
             }
-            if (i_16_ == 99) anIntArray8904[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(127, anIntArray8904[i_15_]));
-            if (i_16_ == 98) anIntArray8904[i_15_] = (GpsOverlay.method1166(16256, anIntArray8904[i_15_]) + i_17_);
-            if (i_16_ == 101) anIntArray8904[i_15_] = (16384 - -GpsOverlay.method1166(anIntArray8904[i_15_], 127) + (i_17_ << 7));
-            if (i_16_ == 100) anIntArray8904[i_15_] = i_17_ + (GpsOverlay.method1166(16256, anIntArray8904[i_15_]) + 16384);
+            if (i_16_ == 99) anIntArray8904[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(127, anIntArray8904[i_15_]));
+            if (i_16_ == 98) anIntArray8904[i_15_] = (GpsOverlay.bitwiseAnd(16256, anIntArray8904[i_15_]) + i_17_);
+            if (i_16_ == 101) anIntArray8904[i_15_] = (16384 - -GpsOverlay.bitwiseAnd(anIntArray8904[i_15_], 127) + (i_17_ << 7));
+            if (i_16_ == 100) anIntArray8904[i_15_] = i_17_ + (GpsOverlay.bitwiseAnd(16256, anIntArray8904[i_15_]) + 16384);
             if (i_16_ == 120) method2872(2005674600, i_15_);
             if (i_16_ == 121) method2865(0, i_15_);
             if (i_16_ == 123) method2855(i_15_, (byte) -70);
             if (i_16_ == 6) {
                 int i_18_ = anIntArray8904[i_15_];
-                if (i_18_ == 16384) anIntArray8902[i_15_] = ((i_17_ << 7) + GpsOverlay.method1166(anIntArray8902[i_15_], -16257));
+                if (i_18_ == 16384) anIntArray8902[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(anIntArray8902[i_15_], -16257));
             }
             if (i_16_ == 38) {
                 int i_19_ = anIntArray8904[i_15_];
-                if (i_19_ == 16384) anIntArray8902[i_15_] = i_17_ + GpsOverlay.method1166(-128, anIntArray8902[i_15_]);
+                if (i_19_ == 16384) anIntArray8902[i_15_] = i_17_ + GpsOverlay.bitwiseAnd(-128, anIntArray8902[i_15_]);
             }
-            if (i_16_ == 16) this.anIntArray8914[i_15_] = (GpsOverlay.method1166(-16257, (this.anIntArray8914[i_15_])) + (i_17_ << 7));
-            if (i_16_ == 48) this.anIntArray8914[i_15_] = GpsOverlay.method1166((this.anIntArray8914[i_15_]), -128) - -i_17_;
+            if (i_16_ == 16) this.anIntArray8914[i_15_] = (GpsOverlay.bitwiseAnd(-16257, (this.anIntArray8914[i_15_])) + (i_17_ << 7));
+            if (i_16_ == 48) this.anIntArray8914[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8914[i_15_]), -128) - -i_17_;
             if (i_16_ == 81) {
-                if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.method2057((this.anIntArray8895[i_15_]), 4);
+                if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.bitwiseOr((this.anIntArray8895[i_15_]), 4);
                 else {
                     method2850(i_15_, 0);
-                    this.anIntArray8895[i_15_] = GpsOverlay.method1166((this.anIntArray8895[i_15_]), -5);
+                    this.anIntArray8895[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8895[i_15_]), -5);
                 }
             }
             if (i_16_ == 17) method2857(i_15_, 125, (i_17_ << 7) + (~0x3f80 & anIntArray8942[i_15_]));
@@ -237,10 +237,10 @@ final class BrowserUrlOpener extends NodeSub16 {
                 double d = Math.sin((double) ((class348_sub43.anInt7076) & 0x1ff) * 0.01227184630308513);
                 i_30_ += (int) (d * (double) i_31_);
             }
-            int i_33_ = (int) (((double) (class348_sub43.aClass348_Sub19_Sub1_7077.anInt8988 * 256) * Math.pow(2.0, 3.255208333333333E-4 * (double) i_30_) / (double) Component231.anInt339) + 0.5);
+            int i_33_ = (int) (((double) (class348_sub43.aClass348_Sub19_Sub1_7077.anInt8988 * 256) * Math.pow(2.0, 3.255208333333333E-4 * (double) i_30_) / (double) Component231.sampleRate) + 0.5);
             return Math.max(i_33_, 1);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.JA(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.JA(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -264,7 +264,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 if (bool == false) break;
                 aClass348_Sub16_Sub1_8958 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ma.T(" + bool + ',' + bool_34_ + ',' + (class348_sub2 != null ? "{...}" : "null") + ',' + bool_35_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.T(" + bool + ',' + bool_34_ + ',' + (class348_sub2 != null ? "{...}" : "null") + ',' + bool_35_ + ')'));
             }
             break;
         } while (false);
@@ -283,7 +283,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             }
             return false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.W(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.W(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -295,7 +295,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_38_ >= 8192) return 16384 - ((-class348_sub43.anInt7074 + 128) * (16384 - i_38_) - -32 >> 6);
             return (class348_sub43.anInt7074 * i_38_ - -32 >> 6);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.GA(" + (class348_sub43 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.GA(" + (class348_sub43 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -334,12 +334,12 @@ final class BrowserUrlOpener extends NodeSub16 {
         for (int i = 0; i < 16; i++)
             anIntArray8916[i] = anIntArray8945[i];
         for (int i = 0; i < 16; i++)
-            anIntArray8947[i] = GpsOverlay.method1166(anIntArray8945[i], -128);
+            anIntArray8947[i] = GpsOverlay.bitwiseAnd(anIntArray8945[i], -128);
     }
 
     final boolean method2852(int[] is, int i, PlayerState class348_sub43, int i_46_, byte i_47_) {
         try {
-            class348_sub43.anInt7086 = Component231.anInt339 / 100;
+            class348_sub43.anInt7086 = Component231.sampleRate / 100;
             anInt8952++;
             if (class348_sub43.anInt7087 >= 0 && ((class348_sub43.aClass348_Sub16_Sub5_7081) == null || class348_sub43.aClass348_Sub16_Sub5_7081.method2890())) {
                 class348_sub43.method3299((byte) 36);
@@ -396,7 +396,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             class348_sub43.aClass348_Sub16_Sub5_7081.method2888(class348_sub43.anInt7086, method2868(class348_sub43, -76), method2848(class348_sub43, (byte) -70));
             return false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.U(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ',' + i_46_ + ',' + i_47_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.U(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ',' + i_46_ + ',' + i_47_ + ')'));
         }
     }
 
@@ -404,7 +404,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         method2849(64, i_50_, (byte) 86, i_51_);
         anInt8931++;
         if ((0x2 & this.anIntArray8895[i_51_]) != 0) {
-            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.last(i ^ ~0x51)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method2003(-50))) {
+            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.last(i ^ ~0x51)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.previous(-50))) {
                 if ((class348_sub43.anInt7067 == i_51_) && class348_sub43.anInt7087 < 0) {
                     aClass348_Sub43ArrayArray8928[i_51_][class348_sub43.anInt7071] = null;
                     aClass348_Sub43ArrayArray8928[i_51_][i_50_] = class348_sub43;
@@ -460,7 +460,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         anInt8943++;
         anIntArray8945[i_54_] = i;
         if (i_55_ < 39) aClass45_8926 = null;
-        anIntArray8947[i_54_] = GpsOverlay.method1166(i, -128);
+        anIntArray8947[i_54_] = GpsOverlay.bitwiseAnd(i, -128);
         method2873((byte) -21, i, i_54_);
     }
 
@@ -547,7 +547,7 @@ final class BrowserUrlOpener extends NodeSub16 {
     final synchronized void method2819(int i) {
         anInt8908++;
         if (aClass204_8944.method1491()) {
-            int i_63_ = (aClass204_8944.anInt2683 * anInt8921 / Component231.anInt339);
+            int i_63_ = (aClass204_8944.anInt2683 * anInt8921 / Component231.sampleRate);
             do {
                 long l = aLong8959 + (long) i_63_ * (long) i;
                 if (-l + aLong8957 >= 0L) {
@@ -579,7 +579,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         try {
             anInt8898++;
             if (aClass204_8944.method1491()) {
-                int i_68_ = (anInt8921 * aClass204_8944.anInt2683 / Component231.anInt339);
+                int i_68_ = (anInt8921 * aClass204_8944.anInt2683 / Component231.sampleRate);
                 do {
                     long l = aLong8959 + (long) i_67_ * (long) i_68_;
                     if (aLong8957 + -l >= 0L) {
@@ -596,7 +596,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             }
             aClass348_Sub16_Sub1_8958.method2817(is, i, i_67_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_67_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_67_ + ')'));
         }
     }
 
@@ -606,20 +606,21 @@ final class BrowserUrlOpener extends NodeSub16 {
         anInt8938++;
     }
 
-    static final Task method2862(ReflectionInvoker class297, String string, int i, int i_71_) {
+    /** Open {@code string} relative to codebase: 0=JS task, 1=openjs, 2=_blank, 3=_top. */
+    static final Task openUrl(ReflectionInvoker class297, String string, int i, int i_71_) {
         try {
             int i_72_ = 16 % ((-37 - i) / 51);
             anInt8911++;
-            if (i_71_ == 0) return class297.method2245(string, 16);
+            if (i_71_ == 0) return class297.openUrlTask(string, 16);
             if (i_71_ == 1) {
                 try {
                     AppletInvoker.callApplet("openjs", (new Object[]{new URL(ToolkitFactory.anApplet1530.getCodeBase(), string).toString()}), ToolkitFactory.anApplet1530, (byte) 38);
                     Task class144 = new Task();
-                    class144.anInt1997 = 1;
+                    class144.status = 1;
                     return class144;
                 } catch (Throwable throwable) {
                     Task class144 = new Task();
-                    class144.anInt1997 = 2;
+                    class144.status = 2;
                     return class144;
                 }
             }
@@ -627,11 +628,11 @@ final class BrowserUrlOpener extends NodeSub16 {
                 try {
                     ToolkitFactory.anApplet1530.getAppletContext().showDocument(new URL(ToolkitFactory.anApplet1530.getCodeBase(), string), "_blank");
                     Task class144 = new Task();
-                    class144.anInt1997 = 1;
+                    class144.status = 1;
                     return class144;
                 } catch (Exception exception) {
                     Task class144 = new Task();
-                    class144.anInt1997 = 2;
+                    class144.status = 2;
                     return class144;
                 }
             }
@@ -644,17 +645,17 @@ final class BrowserUrlOpener extends NodeSub16 {
                 try {
                     ToolkitFactory.anApplet1530.getAppletContext().showDocument(new URL(ToolkitFactory.anApplet1530.getCodeBase(), string), "_top");
                     Task class144 = new Task();
-                    class144.anInt1997 = 1;
+                    class144.status = 1;
                     return class144;
                 } catch (Exception exception) {
                     Task class144 = new Task();
-                    class144.anInt1997 = 2;
+                    class144.status = 2;
                     return class144;
                 }
             }
             throw new IllegalArgumentException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.EA(" + (class297 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + i_71_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.EA(" + (class297 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + i_71_ + ')'));
         }
     }
 
@@ -716,7 +717,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (bool) class348_sub2.method2735();
             return bool;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.CA(" + (class348_sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class26 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i_77_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.CA(" + (class348_sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class26 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i_77_ + ')'));
         }
     }
 
@@ -762,7 +763,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             }
             return i_79_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.DA(" + (class348_sub43 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.DA(" + (class348_sub43 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -771,7 +772,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             anInt8932++;
             method2846(bool_88_, true, class348_sub2, bool);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.L(" + (class348_sub2 != null ? "{...}" : "null") + ',' + bool + ',' + bool_88_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.L(" + (class348_sub2 != null ? "{...}" : "null") + ',' + bool + ',' + bool_88_ + ')'));
         }
     }
 
@@ -783,7 +784,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 method2876((long) aClass204_8944.anInt2683 * l, -125);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.O(" + (class348_sub2 != null ? "{...}" : "null") + ',' + l + ',' + bool + ',' + bool_89_ + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.O(" + (class348_sub2 != null ? "{...}" : "null") + ',' + l + ',' + bool + ',' + bool_89_ + ',' + i + ')'));
         }
     }
 
@@ -794,7 +795,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     public static void method2871(int i) {
         anIntArrayArray8910 = null;
-        if (i != -65) method2862(null, null, 96, -71);
+        if (i != -65) openUrl(null, null, 96, -71);
         aClass45_8926 = null;
     }
 
@@ -803,7 +804,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(i + -2005674596)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 68))) {
             if (i_90_ < 0 || (class348_sub43.anInt7067 == i_90_)) {
                 if (class348_sub43.aClass348_Sub16_Sub5_7081 != null) {
-                    class348_sub43.aClass348_Sub16_Sub5_7081.method2902(Component231.anInt339 / 100);
+                    class348_sub43.aClass348_Sub16_Sub5_7081.method2902(Component231.sampleRate / 100);
                     if (class348_sub43.aClass348_Sub16_Sub5_7081.method2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.method2883(class348_sub43.aClass348_Sub16_Sub5_7081);
                     class348_sub43.method3299((byte) 72);
                 }
@@ -841,7 +842,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             } else i_95_ = (int) (((long) i_94_ * (long) (this.anIntArray8914[(class348_sub43.anInt7067)])) >> 6);
             if (i > 93) class348_sub43.aClass348_Sub16_Sub5_7081.method2924(i_95_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.WA(" + i + ',' + bool + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.WA(" + i + ',' + bool + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -891,7 +892,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "ma.UA(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "ma.UA(" + l + ',' + i + ')');
         }
     }
 
@@ -976,7 +977,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             method2843(256, -1, -7836);
             method2851(true, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ma.<init>(" + ((class348_sub16_sub3_107_ != null) ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.<init>(" + ((class348_sub16_sub3_107_ != null) ? "{...}" : "null") + ')'));
         }
     }
 }

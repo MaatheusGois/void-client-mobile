@@ -204,7 +204,7 @@ abstract class DisplayModeManagerContainer194
                     i_40_ += 0xff & i_44_ >> 16;
                     i_43_ += 0xff & i_44_ >> 8;
                     i_42_ += i_44_ & 0xff;
-                    is_31_[i_32_++] = (Component224.method2057((Component224.method2057(GpsOverlay.method1166(i_43_ << 6, 65280), Component224.method2057((GpsOverlay.method1166(i_41_, 1020) << 22), (GpsOverlay.method1166(1020, i_40_) << 14)))), GpsOverlay.method1166(255, i_42_ >> 2)));
+                    is_31_[i_32_++] = (Component224.bitwiseOr((Component224.bitwiseOr(GpsOverlay.bitwiseAnd(i_43_ << 6, 65280), Component224.bitwiseOr((GpsOverlay.bitwiseAnd(i_41_, 1020) << 22), (GpsOverlay.bitwiseAnd(1020, i_40_) << 14)))), GpsOverlay.bitwiseAnd(255, i_42_ >> 2)));
                 }
                 i_33_ += i;
                 i_34_ += i;
@@ -234,7 +234,7 @@ abstract class DisplayModeManagerContainer194
     static final void method235(int i, byte i_46_) {
         anInt5087++;
         if (i != -1 && ImageTagText.aBooleanArray2162[i]) {
-            Component267.aClass45_2978.method411(i, -120);
+            Component267.aClass45_2978.clearUnpackedGroup(i, -120);
             DefinitionSub33.aClass46ArrayArray9427[i] = null;
             Component14.aClass46ArrayArray8584[i] = null;
             if (i_46_ <= -94) ImageTagText.aBooleanArray2162[i] = false;
@@ -330,7 +330,7 @@ abstract class DisplayModeManagerContainer194
             method229(true);
             method236(0, (byte) -126);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hda.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i_66_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hda.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i_66_ + ',' + bool + ')'));
         }
     }
 }

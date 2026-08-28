@@ -94,7 +94,7 @@ final class Component143
                 class348_sub42_sub9_sub1.accessAge = 0L;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pq.L(" + (object != null ? "{...}" : "null") + ',' + (interface14 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pq.L(" + (object != null ? "{...}" : "null") + ',' + (interface14 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
         }
     }
 
@@ -227,7 +227,7 @@ final class Component143
                 if (i > 62) break;
                 aClass107_2316 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("pq.K(" + i + ',' + (object != null ? "{...}" : "null") + ',' + (interface14 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("pq.K(" + i + ',' + (object != null ? "{...}" : "null") + ',' + (interface14 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

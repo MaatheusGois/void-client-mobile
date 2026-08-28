@@ -25,7 +25,7 @@ abstract class Component137
 
     static final void method1148(int i, int i_0_) {
         anInt1925++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, i_0_);//6
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_0_);//6
         class348_sub42_sub15.method3251(i_0_ ^ ~0x3ebf);
     }
 
@@ -74,7 +74,7 @@ abstract class Component137
             OpenGL.glBufferDataARBub(i, anInt1921, is, 0, aBoolean1923 ? 35040 : 35044);
             this.aHa_Sub2_1927.anInt7747 += anInt1921;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bi.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bi.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + bool + ')'));
         }
     }
 
@@ -90,7 +90,7 @@ abstract class Component137
             OpenGL.glBufferDataARBa(i, anInt1921, buffer.getAddress(), !aBoolean1923 ? 35044 : 35040);
             this.aHa_Sub2_1927.anInt7747 += anInt1921;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bi.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ',' + i_5_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bi.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ',' + i_5_ + ',' + bool + ')'));
         }
     }
 }

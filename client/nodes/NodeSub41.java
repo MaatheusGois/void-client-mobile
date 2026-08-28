@@ -67,10 +67,11 @@ final class NodeSub41
         if (i != -5) anInt7054 = 110;
     }
 
-    static final int method3156(boolean bool, String string) {
+    /** Parse decimal int ({@link RadixText#parseIntRadix} radix 10). */
+    static final int parseInt(boolean bool, String string) {
         anInt7055++;
         if (bool != true) aClass114_7052 = null;
-        return RadixText.method1836(-123, 10, true, string);
+        return RadixText.parseIntRadix(-123, 10, true, string);
     }
 
     static final void method3157(int i, byte i_15_, int i_16_, int i_17_, boolean bool) {
@@ -81,7 +82,7 @@ final class NodeSub41
             Component385.anInt2204 = Component117.anInt4372;
             if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) Component385.anInt2204 = 0;
             Buffer.setClientState(2, i_17_);
-            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544), 2, NodeSub8.toolkit);
+            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544), 2, NodeSub8.toolkit);
             int i_18_ = NodeBaseSub2.regionTileX;
             int i_19_ = Component330.regionTileY;
             NodeBaseSub2.regionTileX = (-(AbstractShaderSub4.anInt7319 >> 4) + GraphicsToolkit.anInt4581) * 8;
@@ -205,11 +206,15 @@ final class NodeSub41
         }
     }
 
-    static final byte[] method3158(byte[] is, int i) {
+    /**
+     * JS5 container: type 0 = raw, 1 = bzip2, else GZIP.
+     * Header: {@code type}, uncompressed length, optional compressed length.
+     */
+    static final byte[] decompressContainer(byte[] is, int i) {
         anInt7046++;
         Buffer class348_sub49 = new Buffer(is);
         int i_37_ = class348_sub49.readUnsignedByte(255);
-        if (i > -74) method3156(true, null);
+        if (i > -74) parseInt(true, null);
         int i_38_ = class348_sub49.readInt((byte) -126);
         if (i_38_ < 0 || (Component336.anInt401 != 0 && i_38_ > Component336.anInt401)) {
             throw new RuntimeException();
@@ -220,10 +225,10 @@ final class NodeSub41
                 return new byte[4];
             }
             byte[] is_40_ = new byte[i_39_];
-            if (i_37_ == 1) Component187.method1547(is_40_, i_39_, is, i_38_, 9);
+            if (i_37_ == 1) Component187.decompressBzip2(is_40_, i_39_, is, i_38_, 9);
             else {
-                synchronized (ObjectDeserializer.aClass152_6955) {
-                    ObjectDeserializer.aClass152_6955.method1218(is_40_, 29123, class348_sub49);
+                synchronized (ObjectDeserializer.gzipDecompressor) {
+                    ObjectDeserializer.gzipDecompressor.inflateGzip(is_40_, 29123, class348_sub49);
                 }
             }
             return is_40_;

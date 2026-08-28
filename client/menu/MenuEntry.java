@@ -22,7 +22,11 @@ final class MenuEntry extends HashNode {
 
     /** Unused / leftover deob field (kept for binary layout parity). */
     static int anInt9594;
-    String aString9595;
+    /**
+     * Optional third tip fragment after {@link #option} / {@link #target}
+     * (e.g. player name painted onto Walk-here when hovering a player).
+     */
+    String extraTarget;
     static int anInt9596;
 
     /** Construction flag from {@link DisplayModeManagerContainer368#addMenuEntry} (bool arg). */
@@ -53,7 +57,8 @@ final class MenuEntry extends HashNode {
     int param0;
 
     static LruCache aClass356_9603;
-    static int anInt9604 = 0;
+    /** Number of ignore-list entries (max 100). */
+    static int ignoreCount = 0;
 
     /**
      * Entity / action identifier consumed by {@link ColoredTextBuilder#processMenuAction}:
@@ -95,7 +100,7 @@ final class MenuEntry extends HashNode {
     static final int method3229(int i) {
         anInt9596++;
         if (Component225.aFrame476 != null) return 3;
-        if (i >= -59) anInt9604 = 79;
+        if (i >= -59) ignoreCount = 79;
         if (!Cp1252Decoder.aBoolean5219) return 1;
         return 2;
     }
@@ -115,7 +120,7 @@ final class MenuEntry extends HashNode {
                     DefinitionSub6.aByteArrayArrayArray9134[i_2_] = new byte[is_1_[i_2_]][];
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("db.D(" + (is != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("db.D(" + (is != null ? "{...}" : "null") + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -170,7 +175,7 @@ final class MenuEntry extends HashNode {
             this.groupKey = groupKey;
             this.param0 = param0;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + priority + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + priority + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
         }
     }
 

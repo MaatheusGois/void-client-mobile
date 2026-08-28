@@ -131,7 +131,7 @@ final class Component333
                 method2099(i_3_ ^ 0x66d6, var_ha_Sub3);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ve.G(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class98 != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ve.G(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class98 != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ')'));
         }
     }
 

@@ -31,7 +31,7 @@ final class Component38
 
     static final void method1405(int i, boolean bool, boolean bool_0_) {
         anInt2506++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) 42, i, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) 42, i, bool);
         if (class348_sub13 != null && bool_0_ == true) {
             for (int i_1_ = 0; (class348_sub13.anIntArray6757.length > i_1_); i_1_++) {
                 class348_sub13.anIntArray6757[i_1_] = -1;
@@ -63,7 +63,7 @@ final class Component38
         if (class321 != null) return class321;
         byte[] is;
         synchronized (aClass45_2498) {
-            is = aClass45_2498.method410(-1860, 35, i_3_);
+            is = aClass45_2498.getFile(-1860, 35, i_3_);
         }
         class321 = new Component236();
         if (is != null) class321.method2551(-125, new Buffer(is));
@@ -91,14 +91,14 @@ final class Component38
         anInt2502++;
     }
 
-    Component38(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component38(GameType class230, int i, CacheStore class45) {
         do {
             try {
                 aClass45_2498 = class45;
                 if (aClass45_2498 == null) break;
-                aClass45_2498.method407(0, 35);
+                aClass45_2498.getFileCount(0, 35);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

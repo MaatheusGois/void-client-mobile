@@ -73,7 +73,8 @@ final class DisplayModeManagerContainer196
         }
     }
 
-    final int method2679(int i, int i_7_, int i_8_) {
+    /** Align child of size {@code i_7_} in parent extent {@code i}: start/end/center. */
+    final int getAlignedOffset(int i, int i_7_, int i_8_) {
         anInt4232++;
         if (i_8_ != 1595) return 38;
         int i_9_ = (Math.max(PacketReader.anInt10432, i));
@@ -83,7 +84,8 @@ final class DisplayModeManagerContainer196
         return 0;
     }
 
-    static final String method2680(String string, boolean bool, String string_10_, String string_11_) {
+    /** Replace all {@code string_10_} in {@code string_11_} with {@code string}. */
+    static final String replaceAll(String string, boolean bool, String string_10_, String string_11_) {
         anInt4237++;
         for (int i = string_11_.indexOf(string_10_); i != -1; i = string_11_.indexOf(string_10_, string.length() + i))
             string_11_ = (string_11_.substring(0, i) + string + string_11_.substring(string_10_.length() + i));

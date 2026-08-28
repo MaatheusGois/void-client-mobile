@@ -47,7 +47,7 @@ final class DisplayModeManagerContainer136
         try {
             anInt4708 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jt.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_2_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jt.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_2_ + ',' + bool + ')'));
         }
     }
 
@@ -56,7 +56,7 @@ final class DisplayModeManagerContainer136
         try {
             anInt4708 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jt.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ',' + i_3_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jt.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (buffer != null ? "{...}" : "null") + ',' + i_3_ + ',' + bool + ')'));
         }
     }
 
@@ -73,7 +73,7 @@ final class DisplayModeManagerContainer136
         int i_8_ = Component227.anInt1117;
         int i_9_ = -3 + Component251.anInt5819;
         int i_10_ = 20;
-        Component201.method2270(Component227.anInt1117, i_4_ + anInt4717, var_ha, FriendsIgnoreList.aClass274_3507.method2063(ObjectDeserializer.anInt6967, i + 528), false, i_5_ + DefinitionGroup.anInt9532, Component251.anInt5819, i_10_);
+        Component201.method2270(Component227.anInt1117, i_4_ + anInt4717, var_ha, FriendsIgnoreList.aClass274_3507.getLocalized(ObjectDeserializer.languageId, i + 528), false, i_5_ + DefinitionGroup.anInt9532, Component251.anInt5819, i_10_);
         int i_11_ = i_4_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true);
         if (i != 16) method1154((byte) 9);
         int i_12_ = i_5_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 95);

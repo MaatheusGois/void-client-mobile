@@ -20,15 +20,15 @@ final class Component84
         int i_6_ = i_0_ + i;
         int i_7_ = -i + i_3_;
         for (int i_8_ = i_0_; i_8_ < i_6_; i_8_++)
-            MenuOpener.method1156(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_8_], i_1_, i_5_);
+            MenuOpener.fillInts(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_8_], i_1_, i_5_);
         int i_9_ = -i + i_2_;
         for (int i_10_ = i_3_; i_10_ > i_7_; i_10_--)
-            MenuOpener.method1156(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_10_], i_1_, i_5_);
+            MenuOpener.fillInts(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_10_], i_1_, i_5_);
         int i_11_ = i + i_1_;
         for (int i_12_ = i_6_; i_7_ >= i_12_; i_12_++) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_12_];
-            MenuOpener.method1156(-27, i_11_, is, i_1_, i_5_);
-            MenuOpener.method1156(-27, i_2_, is, i_9_, i_5_);
+            MenuOpener.fillInts(-27, i_11_, is, i_1_, i_5_);
+            MenuOpener.fillInts(-27, i_2_, is, i_9_, i_5_);
         }
     }
 
@@ -109,7 +109,7 @@ final class Component84
             this.aLong1510 = l;
             aClass377_1506 = class377;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lha.<init>(" + (class377 != null ? "{...}" : "null") + ',' + l + ',' + (class39s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lha.<init>(" + (class377 != null ? "{...}" : "null") + ',' + l + ',' + (class39s != null ? "{...}" : "null") + ')'));
         }
     }
 

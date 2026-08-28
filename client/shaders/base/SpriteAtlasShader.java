@@ -86,7 +86,7 @@ final class SpriteAtlasShader extends ShaderProgram {
 
     final void method2133(int i) {
         anInt6249++;
-        aClass61_6254.method594('\001', 28666);
+        aClass61_6254.callDisplayList('\001', 28666);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         this.aHa_Sub2_3684.method3771((byte) -113, null);
         if (i > -75) anInt6248 = -7;
@@ -98,7 +98,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         try {
             aClass83_6259 = class83;
             aClass61_6254 = new Component128(var_ha_Sub2, 2);
-            aClass61_6254.method595((byte) 104, 0);
+            aClass61_6254.beginDisplayList((byte) 104, 0);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             if (aClass83_6259.aBoolean1442) {
                 OpenGL.glTexGeni(8194, 9472, 9217);
@@ -109,43 +109,43 @@ final class SpriteAtlasShader extends ShaderProgram {
             OpenGL.glEnable(3168);
             OpenGL.glEnable(3169);
             this.aHa_Sub2_3684.method3738(-15039, 0);
-            aClass61_6254.method591(-1);
-            aClass61_6254.method595((byte) 117, 1);
+            aClass61_6254.endDisplayList(-1);
+            aClass61_6254.beginDisplayList((byte) 117, 1);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             if (aClass83_6259.aBoolean1442) OpenGL.glDisable(3170);
             OpenGL.glDisable(3168);
             OpenGL.glDisable(3169);
             this.aHa_Sub2_3684.method3738(-15039, 0);
-            aClass61_6254.method591(-1);
+            aClass61_6254.endDisplayList(-1);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gn.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gn.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
         }
     }
 
     static final void method2159(byte i, CacheStore class45) {
-        NodeSub22.anInt6862 = class45.method417("hitmarks", 0);
+        NodeSub22.anInt6862 = class45.getGroupId("hitmarks", 0);
         anInt6258++;
-        KeyStoreLoader.anInt1639 = class45.method417("hitbar_default", 0);
-        BasicMouseHandler.anInt7429 = class45.method417("timerbar_default", 0);
-        GraphicsToolkit.anInt4562 = class45.method417("headicons_pk", 0);
-        CommandHandler.anInt1435 = class45.method417("headicons_prayer", 0);
-        Component95.anInt1756 = class45.method417("hint_headicons", 0);
-        ReferenceTable.anInt3739 = class45.method417("hint_mapmarkers", 0);
-        Component328.anInt1481 = class45.method417("mapflag", 0);
-        Component98.anInt5948 = class45.method417("cross", 0);
-        Component22.anInt1742 = class45.method417("mapdots", 0);
-        NamedInteger.anInt4469 = class45.method417("scrollbar", 0);
-        DefinitionSub38.anInt9473 = class45.method417("name_icons", 0);
-        Component38.anInt2510 = class45.method417("floorshadows", 0);
-        RSACipher.anInt4895 = class45.method417("compass", 0);
-        if (i > -72) method2161((byte) 106, 125L);
-        Component134.anInt5814 = class45.method417("otherlevel", 0);
-        DisplayModeManagerContainer89.anInt8370 = class45.method417("hint_mapedge", 0);
+        KeyStoreLoader.anInt1639 = class45.getGroupId("hitbar_default", 0);
+        BasicMouseHandler.anInt7429 = class45.getGroupId("timerbar_default", 0);
+        GraphicsToolkit.anInt4562 = class45.getGroupId("headicons_pk", 0);
+        CommandHandler.anInt1435 = class45.getGroupId("headicons_prayer", 0);
+        Component95.anInt1756 = class45.getGroupId("hint_headicons", 0);
+        ReferenceTable.anInt3739 = class45.getGroupId("hint_mapmarkers", 0);
+        Component328.anInt1481 = class45.getGroupId("mapflag", 0);
+        Component98.anInt5948 = class45.getGroupId("cross", 0);
+        Component22.anInt1742 = class45.getGroupId("mapdots", 0);
+        NamedInteger.anInt4469 = class45.getGroupId("scrollbar", 0);
+        DefinitionSub38.anInt9473 = class45.getGroupId("name_icons", 0);
+        Component38.anInt2510 = class45.getGroupId("floorshadows", 0);
+        RSACipher.anInt4895 = class45.getGroupId("compass", 0);
+        if (i > -72) sleep((byte) 106, 125L);
+        Component134.anInt5814 = class45.getGroupId("otherlevel", 0);
+        DisplayModeManagerContainer89.anInt8370 = class45.getGroupId("hint_mapedge", 0);
     }
 
     final void method2134(boolean bool, boolean bool_11_) {
         anInt6250++;
-        aClass61_6254.method594('\0', 28666);
+        aClass61_6254.callDisplayList('\0', 28666);
         if (aClass83_6259.aBoolean1442) {
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3771((byte) -117, (aClass83_6259.aClass258_Sub1_1446));
@@ -172,18 +172,19 @@ final class SpriteAtlasShader extends ShaderProgram {
         return true;
     }
 
-    static final void method2161(byte i, long l) {
+    /** Sleep {@code l} ms (splits multiples of 10 to dodge scheduler quirks). */
+    static final void sleep(byte i, long l) {
         try {
             anInt6251++;
             if (l > 0L) {
                 if (l % 10L == 0) {
-                    DisplayModeManagerContainer363.method2606(-125, -1L + l);
-                    DisplayModeManagerContainer363.method2606(-125, 1L);
-                } else DisplayModeManagerContainer363.method2606(59, l);
+                    DisplayModeManagerContainer363.sleepMillis(-125, -1L + l);
+                    DisplayModeManagerContainer363.sleepMillis(-125, 1L);
+                } else DisplayModeManagerContainer363.sleepMillis(59, l);
                 int i_13_ = 70 % ((i - -52) / 32);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "gn.D(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "gn.D(" + i + ',' + l + ')');
         }
     }
 }

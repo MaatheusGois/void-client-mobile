@@ -37,7 +37,7 @@ final class NodeSub20
     final void method2945(int i, byte i_0_, int i_1_, int i_2_) {
         anInt6845++;
         if (i_0_ != 18) this.anInt6825 = 85;
-        anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i] = Component224.method2057((anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i]), 1 << i_2_);
+        anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i] = Component224.bitwiseOr((anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i]), 1 << i_2_);
     }
 
     final void method2946(int i, int i_3_) {
@@ -91,11 +91,11 @@ final class NodeSub20
                         if ((i_18_ & 1 << i_20_++) == 0) i_21_ += 3;
                         else {
                             i_9_++;
-                            class348_sub49_sub1.method3397(97, 0xffff & is_19_[i_21_++]);
-                            class348_sub49_sub1.method3397(125, 0xffff & is_19_[i_21_++]);
+                            class348_sub49_sub1.writeShortLE(97, 0xffff & is_19_[i_21_++]);
+                            class348_sub49_sub1.writeShortLE(125, 0xffff & is_19_[i_21_++]);
                             i_9_++;
                             i_9_++;
-                            class348_sub49_sub1.method3397(i ^ 0x142f, (is_19_[i_21_++] & 0xffff));
+                            class348_sub49_sub1.writeShortLE(i ^ 0x142f, (is_19_[i_21_++] & 0xffff));
                         }
                     }
                 }

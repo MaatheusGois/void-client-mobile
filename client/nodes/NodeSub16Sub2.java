@@ -83,7 +83,7 @@ final class NodeSub16Sub2
             IOException_Sub1.method129(i, i + -107, ls, ls.length - 1, is);
             anInt8882++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("iha.I(" + (is != null ? "{...}" : "null") + ',' + (ls != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("iha.I(" + (is != null ? "{...}" : "null") + ',' + (ls != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -97,7 +97,7 @@ final class NodeSub16Sub2
                 }
             } else {
                 int i_3_ = i - -i_2_;
-                if (Component21.aBoolean3652) i_3_ <<= 1;
+                if (Component21.stereo) i_3_ <<= 1;
                 int i_4_ = 0;
                 int i_5_ = 0;
                 if (anInt8879 == 2) i_5_ = 1;
@@ -106,7 +106,7 @@ final class NodeSub16Sub2
                     if (class348_sub42_sub4 == null) break;
                     short[][] is_6_;
                     for (is_6_ = (class348_sub42_sub4.aShortArrayArray9518); i < i_3_ && anInt8883 < is_6_[0].length; anInt8883++) {
-                        if (Component21.aBoolean3652) {
+                        if (Component21.stereo) {
                             is[i++] = anInt8885 * is_6_[i_4_][anInt8883];
                             is[i++] = is_6_[i_5_][anInt8883] * anInt8887;
                         } else is[i++] += (is_6_[i_5_][anInt8883] * anInt8887 + anInt8885 * is_6_[i_4_][anInt8883]);
@@ -165,7 +165,7 @@ final class NodeSub16Sub2
         if (i != -21987) method2818();
         HashNodeSub4 class348_sub42_sub4 = (HashNodeSub4) aClass262_8861.first(4);
         if (class348_sub42_sub4 == null) return -1.0;
-        return ((double) -((float) (class348_sub42_sub4.aShortArrayArray9518[0]).length / (float) Component231.anInt339) + class348_sub42_sub4.aDouble9512);
+        return ((double) -((float) (class348_sub42_sub4.aShortArrayArray9518[0]).length / (float) Component231.sampleRate) + class348_sub42_sub4.aDouble9512);
     }
 
     final HashNodeSub4 method2838(int i, double d, int i_14_) {

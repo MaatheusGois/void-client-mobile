@@ -2,74 +2,90 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer67
 /**
- * RENAMED from `Class112` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ implements Runnable {
+ * RENAMED from {@code Class112} (JODE-obfuscated).
+ * Background JS5 disk worker ({@link Runnable}): queue of {@link HashNodeSub16Sub2}
+ * jobs. Type 2 = write entry, type 3 = async read, type 1 = sync read result.
+ * {@link #pendingCount} is checked by archive stores before enqueueing more work
+ * (hard cap ~512).
+ */
+final class DisplayModeManagerContainer67 implements Runnable {
     static int anInt1726;
     static Component170 aClass207_1727;
     static int anInt1728;
     static int anInt1729;
-    private final HashTable aClass107_1730 = new HashTable();
+    /** Pending disk jobs waiting for {@link #run}. */
+    private final HashTable queue = new HashTable();
     static int anInt1731;
     static int anInt1732;
-    private Thread aThread1733;
-    int anInt1734;
+    private Thread workerThread;
+    /** Number of jobs currently in {@link #queue}. */
+    int pendingCount;
     static int anInt1735;
     static int anInt1736;
     static int anInt1737;
-    private boolean aBoolean1738 = false;
+    /** Set by {@link #shutdown} to stop the worker loop. */
+    private boolean stopRequested = false;
 
-    final HashNodeSub16Sub2 method1049(byte[] is, CacheIndexReader class137, byte i, int i_0_) {
+    /**
+     * Enqueue a write of {@code is} into {@code class137} at group {@code i_0_}
+     * (job type 2).
+     */
+    final HashNodeSub16Sub2 enqueueWrite(byte[] is, CacheIndexReader class137, byte i, int i_0_) {
         try {
-            if (i != 10) aBoolean1738 = false;
+            if (i != 10) stopRequested = false;
             anInt1732++;
             HashNodeSub16Sub2 class348_sub42_sub16_sub2 = new HashNodeSub16Sub2();
-            class348_sub42_sub16_sub2.aByteArray10461 = is;
-            class348_sub42_sub16_sub2.aBoolean9663 = false;
-            class348_sub42_sub16_sub2.aClass137_10458 = class137;
+            class348_sub42_sub16_sub2.data = is;
+            class348_sub42_sub16_sub2.priority = false;
+            class348_sub42_sub16_sub2.indexReader = class137;
             class348_sub42_sub16_sub2.accessAge = i_0_;
-            class348_sub42_sub16_sub2.anInt10457 = 2;
-            method1050(class348_sub42_sub16_sub2, i + -123);
+            class348_sub42_sub16_sub2.type = 2;
+            enqueue(class348_sub42_sub16_sub2, i + -123);
             return class348_sub42_sub16_sub2;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("aca.G(" + (is != null ? "{...}" : "null") + ',' + (class137 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("aca.G(" + (is != null ? "{...}" : "null") + ',' + (class137 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
         }
     }
 
-    private final void method1050(HashNodeSub16Sub2 class348_sub42_sub16_sub2, int i) {
+    /** Push {@code class348_sub42_sub16_sub2} onto the worker queue and wake the thread. */
+    private final void enqueue(HashNodeSub16Sub2 class348_sub42_sub16_sub2, int i) {
         anInt1735++;
-        synchronized (aClass107_1730) {
-            aClass107_1730.add(true, class348_sub42_sub16_sub2);
-            this.anInt1734++;
+        synchronized (queue) {
+            queue.add(true, class348_sub42_sub16_sub2);
+            this.pendingCount++;
             if (i > -100) aClass207_1727 = null;
-            aClass107_1730.notifyAll();
+            queue.notifyAll();
         }
     }
 
-    final void method1051(boolean bool) {
-        aBoolean1738 = bool;
+    /** Request worker stop and join the thread. */
+    final void shutdown(boolean bool) {
+        stopRequested = bool;
         anInt1731++;
-        synchronized (aClass107_1730) {
-            aClass107_1730.notifyAll();
+        synchronized (queue) {
+            queue.notifyAll();
         }
         try {
-            aThread1733.join();
+            workerThread.join();
         } catch (InterruptedException interruptedexception) {
             /* empty */
         }
-        aThread1733 = null;
+        workerThread = null;
     }
 
-    public static void method1052(byte i) {
+    public static void clearStatics(byte i) {
         aClass207_1727 = null;
         int i_1_ = 107 % ((i - -20) / 50);
     }
 
-    static final int method1053(int i) {
+    /**
+     * Returns the menu-entry priority under the mouse cursor, or -1 if none.
+     * (Unrelated to disk IO — parked in this deob class.)
+     */
+    static final int getHoveredMenuPriority(int i) {
         anInt1728++;
-        if (i != 3112) method1052((byte) 121);
+        if (i != 3112) clearStatics((byte) 121);
         if (Component156.aClass46_3701 == null) {
             if (!Component364.aBoolean8335 && Component192.menuTip != null) return (Component192.menuTip.priority);
             int i_2_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
@@ -135,69 +151,74 @@ final class DisplayModeManagerContainer67
         return -1;
     }
 
-    final HashNodeSub16Sub2 method1054(CacheIndexReader class137, int i, byte i_19_) {
+    /** Enqueue an async disk read of group {@code i} (job type 3). */
+    final HashNodeSub16Sub2 enqueueRead(CacheIndexReader class137, int i, byte i_19_) {
         anInt1729++;
         HashNodeSub16Sub2 class348_sub42_sub16_sub2 = new HashNodeSub16Sub2();
         if (i_19_ != -112) return null;
-        class348_sub42_sub16_sub2.aBoolean9663 = false;
-        class348_sub42_sub16_sub2.anInt10457 = 3;
+        class348_sub42_sub16_sub2.priority = false;
+        class348_sub42_sub16_sub2.type = 3;
         class348_sub42_sub16_sub2.accessAge = i;
-        class348_sub42_sub16_sub2.aClass137_10458 = class137;
-        method1050(class348_sub42_sub16_sub2, -101);
+        class348_sub42_sub16_sub2.indexReader = class137;
+        enqueue(class348_sub42_sub16_sub2, -101);
         return class348_sub42_sub16_sub2;
     }
 
     public final void run() {
-        while (!aBoolean1738) {
+        while (!stopRequested) {
             HashNodeSub16Sub2 class348_sub42_sub16_sub2;
-            synchronized (aClass107_1730) {
-                class348_sub42_sub16_sub2 = ((HashNodeSub16Sub2) aClass107_1730.removeHead(20));
+            synchronized (queue) {
+                class348_sub42_sub16_sub2 = ((HashNodeSub16Sub2) queue.removeHead(20));
                 if (class348_sub42_sub16_sub2 == null) {
                     try {
-                        aClass107_1730.wait();
+                        queue.wait();
                     } catch (InterruptedException interruptedexception) {
                         /* empty */
                     }
                     continue;
-                } else this.anInt1734--;
+                } else this.pendingCount--;
             }
             try {
-                if ((class348_sub42_sub16_sub2.anInt10457) != 2) {
-                    if (class348_sub42_sub16_sub2.anInt10457 == 3) class348_sub42_sub16_sub2.aByteArray10461 = (class348_sub42_sub16_sub2.aClass137_10458.readEntry((byte) -4, (int) class348_sub42_sub16_sub2.accessAge));
-                } else class348_sub42_sub16_sub2.aClass137_10458.writeEntry(class348_sub42_sub16_sub2.aByteArray10461.length, (int) (class348_sub42_sub16_sub2.accessAge), class348_sub42_sub16_sub2.aByteArray10461, -7305);
+                if ((class348_sub42_sub16_sub2.type) != 2) {
+                    if (class348_sub42_sub16_sub2.type == 3) class348_sub42_sub16_sub2.data = (class348_sub42_sub16_sub2.indexReader.readEntry((byte) -4, (int) class348_sub42_sub16_sub2.accessAge));
+                } else class348_sub42_sub16_sub2.indexReader.writeEntry(class348_sub42_sub16_sub2.data.length, (int) (class348_sub42_sub16_sub2.accessAge), class348_sub42_sub16_sub2.data, -7305);
             } catch (Exception exception) {
-                ClientErrorReporter.method1242(null, exception, 15004);
+                ClientErrorReporter.reportError(null, exception, 15004);
             }
-            class348_sub42_sub16_sub2.aBoolean9664 = false;
+            class348_sub42_sub16_sub2.incomplete = false;
         }
         anInt1736++;
     }
 
-    final HashNodeSub16Sub2 method1055(CacheIndexReader class137, int i, byte i_20_) {
-        if (i_20_ >= -98) method1052((byte) 110);
+    /**
+     * Synchronous read of group {@code i}, or reuse an in-flight write's buffer.
+     * Returns immediately with {@link HashNodeSub16#incomplete} false.
+     */
+    final HashNodeSub16Sub2 readImmediate(CacheIndexReader class137, int i, byte i_20_) {
+        if (i_20_ >= -98) clearStatics((byte) 110);
         anInt1737++;
         HashNodeSub16Sub2 class348_sub42_sub16_sub2 = new HashNodeSub16Sub2();
-        class348_sub42_sub16_sub2.anInt10457 = 1;
-        synchronized (aClass107_1730) {
-            for (HashNodeSub16Sub2 class348_sub42_sub16_sub2_21_ = ((HashNodeSub16Sub2) aClass107_1730.first(-95)); class348_sub42_sub16_sub2_21_ != null; class348_sub42_sub16_sub2_21_ = ((HashNodeSub16Sub2) aClass107_1730.next((byte) 73))) {
-                if ((class348_sub42_sub16_sub2_21_.accessAge == (long) i) && (class348_sub42_sub16_sub2_21_.aClass137_10458 == class137) && class348_sub42_sub16_sub2_21_.anInt10457 == 2) {
-                    class348_sub42_sub16_sub2.aByteArray10461 = class348_sub42_sub16_sub2_21_.aByteArray10461;
-                    class348_sub42_sub16_sub2.aBoolean9664 = false;
+        class348_sub42_sub16_sub2.type = 1;
+        synchronized (queue) {
+            for (HashNodeSub16Sub2 class348_sub42_sub16_sub2_21_ = ((HashNodeSub16Sub2) queue.first(-95)); class348_sub42_sub16_sub2_21_ != null; class348_sub42_sub16_sub2_21_ = ((HashNodeSub16Sub2) queue.next((byte) 73))) {
+                if ((class348_sub42_sub16_sub2_21_.accessAge == (long) i) && (class348_sub42_sub16_sub2_21_.indexReader == class137) && class348_sub42_sub16_sub2_21_.type == 2) {
+                    class348_sub42_sub16_sub2.data = class348_sub42_sub16_sub2_21_.data;
+                    class348_sub42_sub16_sub2.incomplete = false;
                     return class348_sub42_sub16_sub2;
                 }
             }
         }
-        class348_sub42_sub16_sub2.aByteArray10461 = class137.readEntry((byte) -4, i);
-        class348_sub42_sub16_sub2.aBoolean9663 = true;
-        class348_sub42_sub16_sub2.aBoolean9664 = false;
+        class348_sub42_sub16_sub2.data = class137.readEntry((byte) -4, i);
+        class348_sub42_sub16_sub2.priority = true;
+        class348_sub42_sub16_sub2.incomplete = false;
         return class348_sub42_sub16_sub2;
     }
 
     DisplayModeManagerContainer67(ReflectionInvoker class297) {
-        this.anInt1734 = 0;
-        Task class144 = class297.method2236(this, -10240, 5);
-        while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 43, 10L);
-        if (class144.anInt1997 == 2) throw new RuntimeException();
-        aThread1733 = (Thread) class144.result;
+        this.pendingCount = 0;
+        Task class144 = class297.startThread(this, -10240, 5);
+        while (class144.status == 0) SpriteAtlasShader.sleep((byte) 43, 10L);
+        if (class144.status == 2) throw new RuntimeException();
+        workerThread = (Thread) class144.result;
     }
 }

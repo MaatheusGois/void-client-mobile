@@ -22,8 +22,8 @@ final class Component43
             int i_1_ = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 72);
             NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(4));
             if (class348_sub45 != null) {
-                i_0_ = class348_sub45.method3308((byte) -128);
-                i_1_ = class348_sub45.method3311(58);
+                i_0_ = class348_sub45.getX((byte) -128);
+                i_1_ = class348_sub45.getY(58);
             }
             int i_2_ = 0;
             if (i != -73) anInt4976 = 105;

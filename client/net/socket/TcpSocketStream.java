@@ -4,7 +4,9 @@
 
 /**
  * RENAMED from `Class238_Sub1` (JODE-obfuscated).
- * Concrete Socket-backed stream. extends SocketStream; wraps a `Socket socket` opened in the constructor and closed in method161.
+ * Concrete {@link Socket}-backed stream.
+ * {@link #input}/{@link #output} are async ring buffers; {@link #shutdownStreams}
+ * swaps them for dummy streams without joining threads.
  */
 
 import java.io.IOException;
@@ -17,10 +19,10 @@ final class TcpSocketStream extends SocketStream {
     static int anInt5831;
     static int anInt5832 = -1;
     static int anInt5833;
-    private Component239 aClass376_5834;
+    private Component239 input;
     static int anInt5835;
     private final Socket socket;
-    private final Component222 aClass208_5837;
+    private final Component222 output;
     static int anInt5838;
     static int anInt5839;
     static boolean aBoolean5840 = true;
@@ -33,15 +35,15 @@ final class TcpSocketStream extends SocketStream {
 
     final void writeBytes(int i, int i_0_, int i_1_, byte[] is) throws IOException {
         anInt5833++;
-        aClass208_5837.method1528((byte) 5, i_1_, i, is);
+        output.queueWrite((byte) 5, i_1_, i, is);
         if (i_0_ < 89) method1708(-99, 31, -13, 83, (byte) 112, null);
     }
 
-    final void method1702(int i) {
+    final void shutdownStreams(int i) {
         anInt5828++;
-        aClass376_5834.method3618(0);
+        input.detachInput(0);
         int i_2_ = 29 / ((-25 - i) / 38);
-        aClass208_5837.method1527(-21179);
+        output.detachOutput(-21179);
     }
 
     static final void method1708(int i, int i_3_, int i_4_, int i_5_, byte i_6_, SceneNode class348_sub9) {
@@ -105,7 +107,7 @@ final class TcpSocketStream extends SocketStream {
                         } else {
                             Component277 class317 = Component277.method2372(Component30.aClass45_1878, (class348_sub9.anInt6685), 0);
                             if (class317 != null) {
-                                NodeSub19Sub1 class348_sub19_sub1 = class317.method2369().method2944(DisplayModeManagerContainer115.aClass163_1050);
+                                NodeSub19Sub1 class348_sub19_sub1 = class317.method2369().method2944(DisplayModeInfo.aClass163_1050);
                                 NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911(class348_sub19_sub1, i_15_, i_9_ << 6, i_10_));
                                 class348_sub16_sub5.method2917(-1);
                                 PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
@@ -136,7 +138,7 @@ final class TcpSocketStream extends SocketStream {
                                     int i_18_ = (int) (Math.random() * (double) (class348_sub9.anIntArray6697).length);
                                     Component277 class317 = Component277.method2372((Component30.aClass45_1878), (class348_sub9.anIntArray6697[i_18_]), 0);
                                     if (class317 == null) break;
-                                    NodeSub19Sub1 class348_sub19_sub1 = (class317.method2369().method2944(DisplayModeManagerContainer115.aClass163_1050));
+                                    NodeSub19Sub1 class348_sub19_sub1 = (class317.method2369().method2944(DisplayModeInfo.aClass163_1050));
                                     NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911(class348_sub19_sub1, i_16_, i_9_ << 6, i_10_));
                                     class348_sub16_sub5.method2917(0);
                                     PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
@@ -167,28 +169,28 @@ final class TcpSocketStream extends SocketStream {
         } catch (IOException ioexception) {
             /* empty */
         }
-        aClass376_5834.method3615(15984);
-        if (i == 36) aClass208_5837.method1526((byte) -99);
+        input.closeAndJoin(15984);
+        if (i == 36) output.closeAndJoin((byte) -99);
     }
 
     final int readBytes(int i, int i_19_, byte i_20_, byte[] is) throws IOException {
         int i_21_ = 84 / ((-56 - i_20_) / 47);
         anInt5831++;
-        return aClass376_5834.method3617(i, i_19_, 0, is);
+        return input.method3617(i, i_19_, 0, is);
     }
 
     final boolean availableAtLeast(int i, int i_22_) throws IOException {
-        if (i_22_ <= 91) aClass376_5834 = null;
+        if (i_22_ <= 91) input = null;
         anInt5838++;
-        return aClass376_5834.method3619(i, false);
+        return input.hasBytes(i, false);
     }
 
     TcpSocketStream(Socket socket, int i) throws IOException {
         this.socket = socket;
         socket.setSoTimeout(30000);
         socket.setTcpNoDelay(true);
-        aClass376_5834 = new Component239(socket.getInputStream(), i);
-        aClass208_5837 = new Component222(socket.getOutputStream(), i);
+        input = new Component239(socket.getInputStream(), i);
+        output = new Component222(socket.getOutputStream(), i);
     }
 
     protected final void finalize() {

@@ -143,14 +143,14 @@ class DisplayModeManagerContainer87
                                         DisplayModeManagerContainer369.anIntArray2899[i_33_] = (class277_30_.anInt3575);
                                         NodederUtil.anIntArray6631[i_33_] = (class277_30_.anInt3570);
                                         if (Component314.anIntArray3873[i_33_] != (class277_30_.anInt3564)) Component166.anIntArray2370[i_33_] = 32;
-                                        else Component166.anIntArray2370[i_33_] = (Component224.method2057((Component166.anIntArray2370[i_33_]), 32));
+                                        else Component166.anIntArray2370[i_33_] = (Component224.bitwiseOr((Component166.anIntArray2370[i_33_]), 32));
                                         Component314.anIntArray3873[i_33_] = (class277_30_.anInt3564);
                                     }
                                     i_34_++;
                                     i_33_--;
                                 }
-                                if (!bools_8_[0x3 & i_4_]) bools[0] = (Cp1252Decoder.aBooleanArrayArray5225[i_31_][GpsOverlay.method1166(i_32_ + 2, 3)]);
-                            } else if (!bools_8_[0x3 & i_4_]) bools[0] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_31_][GpsOverlay.method1166(3, i_32_ + 2)]);
+                                if (!bools_8_[0x3 & i_4_]) bools[0] = (Cp1252Decoder.aBooleanArrayArray5225[i_31_][GpsOverlay.bitwiseAnd(i_32_ + 2, 3)]);
+                            } else if (!bools_8_[0x3 & i_4_]) bools[0] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_31_][GpsOverlay.bitwiseAnd(3, i_32_ + 2)]);
                         }
                     }
                 }
@@ -174,14 +174,14 @@ class DisplayModeManagerContainer87
                                         DisplayModeManagerContainer369.anIntArray2899[i_41_] = (class277_38_.anInt3575);
                                         NodederUtil.anIntArray6631[i_41_] = (class277_38_.anInt3570);
                                         if (Component314.anIntArray3873[i_41_] != (class277_38_.anInt3564)) Component166.anIntArray2370[i_41_] = 16;
-                                        else Component166.anIntArray2370[i_41_] = (Component224.method2057((Component166.anIntArray2370[i_41_]), 16));
+                                        else Component166.anIntArray2370[i_41_] = (Component224.bitwiseOr((Component166.anIntArray2370[i_41_]), 16));
                                         Component314.anIntArray3873[i_41_] = (class277_38_.anInt3564);
                                     }
                                     i_42_--;
                                     i_41_++;
                                 }
-                                if (!bools_8_[0x3 & i_4_ + 2]) bools[2] = (Cp1252Decoder.aBooleanArrayArray5225[i_39_][GpsOverlay.method1166(3, --i_40_)]);
-                            } else if (!bools_8_[0x3 & 2 + i_4_]) bools[2] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_39_][GpsOverlay.method1166(3, i_40_)]);
+                                if (!bools_8_[0x3 & i_4_ + 2]) bools[2] = (Cp1252Decoder.aBooleanArrayArray5225[i_39_][GpsOverlay.bitwiseAnd(3, --i_40_)]);
+                            } else if (!bools_8_[0x3 & 2 + i_4_]) bools[2] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_39_][GpsOverlay.bitwiseAnd(3, i_40_)]);
                         }
                     }
                 }
@@ -205,14 +205,14 @@ class DisplayModeManagerContainer87
                                         DisplayModeManagerContainer369.anIntArray2899[i_49_] = (class277_46_.anInt3575);
                                         NodederUtil.anIntArray6631[i_49_] = (class277_46_.anInt3570);
                                         if (Component314.anIntArray3873[i_49_] != (class277_46_.anInt3564)) Component166.anIntArray2370[i_49_] = 8;
-                                        else Component166.anIntArray2370[i_49_] = (Component224.method2057((Component166.anIntArray2370[i_49_]), 8));
+                                        else Component166.anIntArray2370[i_49_] = (Component224.bitwiseOr((Component166.anIntArray2370[i_49_]), 8));
                                         Component314.anIntArray3873[i_49_] = (class277_46_.anInt3564);
                                     }
                                     i_49_++;
                                     i_50_--;
                                 }
-                                if (!bools_8_[3 - -i_4_ & 0x3]) bools[3] = (Cp1252Decoder.aBooleanArrayArray5225[i_47_][GpsOverlay.method1166(3, 1 + i_48_)]);
-                            } else if (!bools_8_[0x3 & 3 - -i_4_]) bools[3] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_47_][GpsOverlay.method1166(3, 1 + i_48_)]);
+                                if (!bools_8_[3 - -i_4_ & 0x3]) bools[3] = (Cp1252Decoder.aBooleanArrayArray5225[i_47_][GpsOverlay.bitwiseAnd(3, 1 + i_48_)]);
+                            } else if (!bools_8_[0x3 & 3 - -i_4_]) bools[3] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_47_][GpsOverlay.bitwiseAnd(3, 1 + i_48_)]);
                         }
                     }
                 }
@@ -235,15 +235,15 @@ class DisplayModeManagerContainer87
                                         DefinitionSub38.anIntArray9480[i_57_] = i_59_;
                                         DisplayModeManagerContainer369.anIntArray2899[i_57_] = (class277_54_.anInt3575);
                                         NodederUtil.anIntArray6631[i_57_] = (class277_54_.anInt3570);
-                                        if (class277_54_.anInt3564 == Component314.anIntArray3873[i_57_]) Component166.anIntArray2370[i_57_] = (Component224.method2057((Component166.anIntArray2370[i_57_]), 4));
+                                        if (class277_54_.anInt3564 == Component314.anIntArray3873[i_57_]) Component166.anIntArray2370[i_57_] = (Component224.bitwiseOr((Component166.anIntArray2370[i_57_]), 4));
                                         else Component166.anIntArray2370[i_57_] = 4;
                                         Component314.anIntArray3873[i_57_] = (class277_54_.anInt3564);
                                     }
                                     i_58_++;
                                     i_57_--;
                                 }
-                                if (!bools_8_[1 + i_4_ & 0x3]) bools[1] = (Cp1252Decoder.aBooleanArrayArray5225[i_55_][GpsOverlay.method1166(3, i_56_ + 3)]);
-                            } else if (!bools_8_[1 - -i_4_ & 0x3]) bools[1] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_55_][GpsOverlay.method1166(3, 3 - -i_56_)]);
+                                if (!bools_8_[1 + i_4_ & 0x3]) bools[1] = (Cp1252Decoder.aBooleanArrayArray5225[i_55_][GpsOverlay.bitwiseAnd(3, i_56_ + 3)]);
+                            } else if (!bools_8_[1 - -i_4_ & 0x3]) bools[1] = (DisplayModeManagerContainer232.aBooleanArrayArray4693[i_55_][GpsOverlay.bitwiseAnd(3, 3 - -i_56_)]);
                         }
                     }
                 }
@@ -258,12 +258,12 @@ class DisplayModeManagerContainer87
                         DisplayModeManagerContainer369.anIntArray2899[i_63_] = class277.anInt3575;
                         NodederUtil.anIntArray6631[i_63_] = class277.anInt3570;
                         if (Component314.anIntArray3873[i_63_] != class277.anInt3564) Component166.anIntArray2370[i_63_] = 2;
-                        else Component166.anIntArray2370[i_63_] = Component224.method2057((Component166.anIntArray2370[i_63_]), 2);
+                        else Component166.anIntArray2370[i_63_] = Component224.bitwiseOr((Component166.anIntArray2370[i_63_]), 2);
                         Component314.anIntArray3873[i_63_] = class277.anInt3564;
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("sr.M(" + i + ',' + i_0_ + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is_2_ != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class277 != null ? "{...}" : "null") + ',' + (class22 != null ? "{...}" : "null") + ',' + (bools != null ? "{...}" : "null") + ',' + i_4_ + ',' + (is_5_ != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.M(" + i + ',' + i_0_ + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is_2_ != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class277 != null ? "{...}" : "null") + ',' + (class22 != null ? "{...}" : "null") + ',' + (bools != null ? "{...}" : "null") + ',' + i_4_ + ',' + (is_5_ != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -369,10 +369,10 @@ class DisplayModeManagerContainer87
                                     }
                                 }
                             }
-                            if (!bools_91_[i_77_ + 1 & 0x3]) bools[1] = (DummyClass.method3576(bools[1], GpsOverlay.method1166((Component166.anIntArray2370[2]), (Component166.anIntArray2370[4])) == 0));
-                            if (!bools_91_[0x3 & i_77_ + 3]) bools[3] = (DummyClass.method3576(bools[3], GpsOverlay.method1166((Component166.anIntArray2370[0]), (Component166.anIntArray2370[6])) == 0));
-                            if (!bools_91_[i_77_ & 0x3]) bools[0] = (DummyClass.method3576(bools[0], GpsOverlay.method1166((Component166.anIntArray2370[0]), (Component166.anIntArray2370[2])) == 0));
-                            if (!bools_91_[i_77_ + 2 & 0x3]) bools[2] = (DummyClass.method3576(bools[2], GpsOverlay.method1166((Component166.anIntArray2370[4]), (Component166.anIntArray2370[6])) == 0));
+                            if (!bools_91_[i_77_ + 1 & 0x3]) bools[1] = (DummyClass.method3576(bools[1], GpsOverlay.bitwiseAnd((Component166.anIntArray2370[2]), (Component166.anIntArray2370[4])) == 0));
+                            if (!bools_91_[0x3 & i_77_ + 3]) bools[3] = (DummyClass.method3576(bools[3], GpsOverlay.bitwiseAnd((Component166.anIntArray2370[0]), (Component166.anIntArray2370[6])) == 0));
+                            if (!bools_91_[i_77_ & 0x3]) bools[0] = (DummyClass.method3576(bools[0], GpsOverlay.bitwiseAnd((Component166.anIntArray2370[0]), (Component166.anIntArray2370[2])) == 0));
+                            if (!bools_91_[i_77_ + 2 & 0x3]) bools[2] = (DummyClass.method3576(bools[2], GpsOverlay.bitwiseAnd((Component166.anIntArray2370[4]), (Component166.anIntArray2370[6])) == 0));
                             if (!bool_75_ && (i_76_ == 0 || i_76_ == 12)) {
                                 if (!bools[0] || bools[1] || bools[2] || !bools[3]) {
                                     if (!bools[0] || !bools[1] || bools[2] || bools[3]) {
@@ -683,9 +683,9 @@ class DisplayModeManagerContainer87
                                                                 is_109_[i_103_] = (class22_134_.anInt331);
                                                                 is_110_[i_103_] = (class22_134_.anInt336);
                                                             }
-                                                            int i_153_ = (NativeLibLoader.method2652((is[i_71_][i_73_]), (is[i_72_][i_73_]), 1, (i_146_ << 7 >> 9)));
-                                                            int i_154_ = (NativeLibLoader.method2652((is[i_71_][i_74_]), (is[i_72_][i_74_]), 1, (i_146_ << 7 >> 9)));
-                                                            is_108_[i_103_] = (NativeLibLoader.method2652(i_153_, i_154_, i + 26834, (i_145_ << 7 >> 9)));
+                                                            int i_153_ = (NativeLibLoader.mixHsl((is[i_71_][i_73_]), (is[i_72_][i_73_]), 1, (i_146_ << 7 >> 9)));
+                                                            int i_154_ = (NativeLibLoader.mixHsl((is[i_71_][i_74_]), (is[i_72_][i_74_]), 1, (i_146_ << 7 >> 9)));
+                                                            is_108_[i_103_] = (NativeLibLoader.mixHsl(i_153_, i_154_, i + 26834, (i_145_ << 7 >> 9)));
                                                         } else {
                                                             is_108_[i_103_] = (is[i_72_][i_73_]);
                                                             is_109_[i_103_] = (class22_136_.anInt331);
@@ -718,7 +718,7 @@ class DisplayModeManagerContainer87
                                     if (class22 != null && !class22.aBoolean334) bool_160_ = false;
                                     else if (i_79_ == 0 && i_76_ != 0) bool_160_ = false;
                                     else if (i_78_ > 0 && class277_83_ != null && !(class277_83_.aBoolean3561)) bool_160_ = false;
-                                    if (bool_160_ && (i_156_ == i_155_) && i_157_ == i_155_ && i_155_ == i_158_) this.aByteArrayArrayArray3108[i_66_][i_71_][i_73_] = (byte) (Component224.method2057((this.aByteArrayArrayArray3108[i_66_][i_71_][i_73_]), 4));
+                                    if (bool_160_ && (i_156_ == i_155_) && i_157_ == i_155_ && i_155_ == i_158_) this.aByteArrayArrayArray3108[i_66_][i_71_][i_73_] = (byte) (Component224.bitwiseOr((this.aByteArrayArrayArray3108[i_66_][i_71_][i_73_]), 4));
                                 }
                                 int i_161_ = 0;
                                 int i_162_ = 0;
@@ -736,17 +736,18 @@ class DisplayModeManagerContainer87
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.B(" + (var_s != null ? "{...}" : "null") + ',' + (var_s_64_ != null ? "{...}" : "null") + ',' + i + ',' + (var_s_65_ != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_66_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.B(" + (var_s != null ? "{...}" : "null") + ',' + (var_s_64_ != null ? "{...}" : "null") + ',' + i + ',' + (var_s_65_ != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_66_ + ')'));
         }
     }
 
-    static final DisplayModeManagerContainer155 method1677(int i, int i_164_) {
+    /** Lookup {@link BuildType} by {@link BuildType#id}. */
+    static final BuildType getById(int i, int i_164_) {
         anInt3116++;
-        DisplayModeManagerContainer155[] class231s = Component339.method1709(-126);
+        BuildType[] class231s = Component339.values(-126);
         if (i >= -111) return null;
         for (int i_165_ = 0; i_165_ < class231s.length; i_165_++) {
-            DisplayModeManagerContainer155 class231 = class231s[i_165_];
-            if (class231.anInt2995 == i_164_) return class231;
+            BuildType class231 = class231s[i_165_];
+            if (class231.id == i_164_) return class231;
         }
         return null;
     }
@@ -799,7 +800,7 @@ class DisplayModeManagerContainer87
                     [this.anInt3114]);
             if (i <= -122) {
                 if (ClientSystemInfo.anIntArray6878 == null || (this.anInt3114 != ClientSystemInfo.anIntArray6878.length)) {
-                    RenderableSub9Sub1.anIntArray8785 = new int[this.anInt3114];
+                    FriendLoginMessage.anIntArray8785 = new int[this.anInt3114];
                     DefinitionSub6.anIntArray9135 = new int[this.anInt3114];
                     DisplayModeManagerContainer232.anIntArray4692 = new int[this.anInt3114];
                     ClientSystemInfo.anIntArray6878 = new int[this.anInt3114];
@@ -811,7 +812,7 @@ class DisplayModeManagerContainer87
                         DefinitionSub6.anIntArray9135[i_181_] = 0;
                         NodeSub8.anIntArray6655[i_181_] = 0;
                         DisplayModeManagerContainer232.anIntArray4692[i_181_] = 0;
-                        RenderableSub9Sub1.anIntArray8785[i_181_] = 0;
+                        FriendLoginMessage.anIntArray8785[i_181_] = 0;
                     }
                     for (int i_182_ = -5; i_182_ < this.anInt3117; i_182_++) {
                         for (int i_183_ = 0; (i_183_ < this.anInt3114); i_183_++) {
@@ -824,7 +825,7 @@ class DisplayModeManagerContainer87
                                     DefinitionSub6.anIntArray9135[i_183_] += class22.anInt332;
                                     NodeSub8.anIntArray6655[i_183_] += class22.anInt335;
                                     DisplayModeManagerContainer232.anIntArray4692[i_183_] += class22.anInt343;
-                                    RenderableSub9Sub1.anIntArray8785[i_183_]++;
+                                    FriendLoginMessage.anIntArray8785[i_183_]++;
                                 }
                             }
                             int i_186_ = i_182_ - 5;
@@ -836,7 +837,7 @@ class DisplayModeManagerContainer87
                                     DefinitionSub6.anIntArray9135[i_183_] -= class22.anInt332;
                                     NodeSub8.anIntArray6655[i_183_] -= class22.anInt335;
                                     DisplayModeManagerContainer232.anIntArray4692[i_183_] -= class22.anInt343;
-                                    RenderableSub9Sub1.anIntArray8785[i_183_]--;
+                                    FriendLoginMessage.anIntArray8785[i_183_]--;
                                 }
                             }
                         }
@@ -852,7 +853,7 @@ class DisplayModeManagerContainer87
                                     i_190_ += (NodeSub8.anIntArray6655[i_194_]);
                                     i_189_ += (DefinitionSub6.anIntArray9135[i_194_]);
                                     i_188_ += (ClientSystemInfo.anIntArray6878[i_194_]);
-                                    i_192_ += (RenderableSub9Sub1.anIntArray8785[i_194_]);
+                                    i_192_ += (FriendLoginMessage.anIntArray8785[i_194_]);
                                     i_191_ += DisplayModeManagerContainer232.anIntArray4692[i_194_];
                                 }
                                 int i_195_ = i_193_ + -5;
@@ -860,7 +861,7 @@ class DisplayModeManagerContainer87
                                     i_191_ -= DisplayModeManagerContainer232.anIntArray4692[i_195_];
                                     i_188_ -= (ClientSystemInfo.anIntArray6878[i_195_]);
                                     i_190_ -= (NodeSub8.anIntArray6655[i_195_]);
-                                    i_192_ -= (RenderableSub9Sub1.anIntArray8785[i_195_]);
+                                    i_192_ -= (FriendLoginMessage.anIntArray8785[i_195_]);
                                     i_189_ -= (DefinitionSub6.anIntArray9135[i_195_]);
                                 }
                                 if (i_193_ >= 0 && i_191_ > 0 && i_192_ > 0) is[i_182_][i_193_] = VideoAdDisplay.method1890(i_190_ / i_192_, (byte) 66, i_189_ / i_192_, (256 * i_188_ / i_191_));
@@ -882,7 +883,7 @@ class DisplayModeManagerContainer87
                     ShaderSub1.aSArray5191[i_196_].YA();
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.L(" + (var_s != null ? "{...}" : "null") + ',' + i + ',' + (var_s_179_ != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.L(" + (var_s != null ? "{...}" : "null") + ',' + i + ',' + (var_s_179_ != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -911,7 +912,7 @@ class DisplayModeManagerContainer87
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.I(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (class361s != null ? "{...}" : "null") + ',' + i_197_ + ',' + i_198_ + ',' + i_199_ + ',' + i_200_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.I(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (class361s != null ? "{...}" : "null") + ',' + i_197_ + ',' + i_198_ + ',' + i_199_ + ',' + i_200_ + ')'));
         }
     }
 
@@ -958,7 +959,7 @@ class DisplayModeManagerContainer87
                     else {
                         aByteArrayArrayArray3123[i_219_][i_216_][i_212_] = class348_sub49.readByte(i_215_ + -1115212859);
                         aByteArrayArrayArray3126[i_219_][i_216_][i_212_] = (byte) ((i_221_ + -2) / 4);
-                        aByteArrayArrayArray3129[i_219_][i_216_][i_212_] = (byte) GpsOverlay.method1166(3, -2 + i_221_ + i_213_);
+                        aByteArrayArrayArray3129[i_219_][i_216_][i_212_] = (byte) GpsOverlay.bitwiseAnd(3, -2 + i_221_ + i_213_);
                     }
                 } else if (i_221_ <= 81) {
                     if (!this.aBoolean3109 && !bool) ObjectDeserializer.aByteArrayArrayArray6962[i_219_][i_216_][i_212_] = (byte) (i_221_ - 49);
@@ -1087,7 +1088,7 @@ class DisplayModeManagerContainer87
                                     if (class22 != null && !class22.aBoolean334) bool_268_ = false;
                                     else if (i_231_ == 0 && i_228_ != 0) bool_268_ = false;
                                     else if (i_230_ > 0 && class277 != null && !(class277.aBoolean3561)) bool_268_ = false;
-                                    if (bool_268_ && (i_264_ == i_263_) && (i_263_ == i_265_) && (i_263_ == i_266_)) this.aByteArrayArrayArray3108[i][i_226_][i_227_] = (byte) (Component224.method2057((this.aByteArrayArrayArray3108[i][i_226_][i_227_]), 4));
+                                    if (bool_268_ && (i_264_ == i_263_) && (i_263_ == i_265_) && (i_263_ == i_266_)) this.aByteArrayArrayArray3108[i][i_226_][i_227_] = (byte) (Component224.bitwiseOr((this.aByteArrayArrayArray3108[i][i_226_][i_227_]), 4));
                                 }
                                 int i_269_ = 0;
                                 int i_270_ = 0;
@@ -1106,7 +1107,7 @@ class DisplayModeManagerContainer87
                 if (i_223_ >= 115) break;
                 this.anInt3117 = 57;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("sr.H(" + (var_ha != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i + ',' + i_223_ + ',' + (is != null ? "{...}" : "null") + ',' + (var_s_224_ != null ? "{...}" : "null") + ',' + (var_s_225_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.H(" + (var_ha != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i + ',' + i_223_ + ',' + (is != null ? "{...}" : "null") + ',' + (var_s_224_ != null ? "{...}" : "null") + ',' + (var_s_225_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1200,7 +1201,7 @@ class DisplayModeManagerContainer87
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.E(" + i + ',' + i_272_ + ',' + i_273_ + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i_274_ + ',' + i_275_ + ',' + i_276_ + ',' + (class361s != null ? "{...}" : "null") + ',' + i_277_ + ',' + i_278_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.E(" + i + ',' + i_272_ + ',' + i_273_ + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i_274_ + ',' + i_275_ + ',' + i_276_ + ',' + (class361s != null ? "{...}" : "null") + ',' + i_277_ + ',' + i_278_ + ')'));
         }
     }
 
@@ -1238,7 +1239,7 @@ class DisplayModeManagerContainer87
                 NodeSub45.method3313(i_304_, var_ha.method3648(this.anInt3117, this.anInt3114, (this.anIntArrayArrayArray3122[i_304_]), is_307_, 512, i_305_, i_306_));
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.J(" + (var_ha != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (class361s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.J(" + (var_ha != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + (class361s != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1293,7 +1294,7 @@ class DisplayModeManagerContainer87
             aByteArrayArrayArray3123 = (new byte[this.anInt3130]
                     [this.anInt3117][this.anInt3114]);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sr.<init>(" + i + ',' + i_315_ + ',' + i_316_ + ',' + bool + ',' + (class268 != null ? "{...}" : "null") + ',' + (class183 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sr.<init>(" + i + ',' + i_315_ + ',' + i_316_ + ',' + bool + ',' + (class268 != null ? "{...}" : "null") + ',' + (class183 != null ? "{...}" : "null") + ')'));
         }
     }
 }

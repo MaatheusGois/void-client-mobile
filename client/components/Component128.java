@@ -6,26 +6,28 @@ import jaggl.OpenGL;
 
 final class Component128
 /**
- * RENAMED from `Class61` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * RENAMED from {@code Class61} (JODE-obfuscated).
+ * OpenGL display-list helper for glyph/UI lists: {@link #beginDisplayList},
+ * {@link #callDisplayList}, {@link #endDisplayList} around {@link #listBase}.
  */ {
     static int anInt1104;
     static int anInt1105;
     static int anInt1106;
     static int anInt1107;
     static int anInt1108;
-    private final int anInt1109;
+    /** First GL list id from {@link OpenGL#glGenLists}. */
+    private final int listBase;
 
-    final void method591(int i) {
+    final void endDisplayList(int i) {
         anInt1108++;
         OpenGL.glEndList();
-        if (i != -1) method595((byte) -56, 72);
+        if (i != -1) beginDisplayList((byte) -56, 72);
     }
 
     static final int method592(boolean bool, byte i, boolean bool_0_, int i_1_, int i_2_) {
         anInt1105++;
         if (i != -128) return -20;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) -1, i_1_, bool_0_);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -1, i_1_, bool_0_);
         if (class348_sub13 == null) return 0;
         int i_3_ = 0;
         for (int i_4_ = 0; (class348_sub13.anIntArray6757.length > i_4_); i_4_++) {
@@ -39,7 +41,11 @@ final class Component128
         return i_3_;
     }
 
-    static final SocketConnector method593(int i, byte i_6_, String string) {
+    /**
+     * Build a {@link SocketConnector} for {@code host}:{@code port}, preferring
+     * {@link ProxySocketConnector} and falling back to {@link DirectSocketConnector}.
+     */
+    static final SocketConnector createSocketConnector(int i, byte i_6_, String string) {
         anInt1104++;
         SocketConnector class272;
         try {
@@ -53,19 +59,19 @@ final class Component128
         return class272;
     }
 
-    final void method594(char c, int i) {
+    final void callDisplayList(char c, int i) {
         anInt1107++;
-        OpenGL.glCallList(anInt1109 - -c);
-        if (i != 28666) method591(30);
+        OpenGL.glCallList(listBase - -c);
+        if (i != 28666) endDisplayList(30);
     }
 
-    final void method595(byte i, int i_7_) {
-        OpenGL.glNewList(i_7_ + anInt1109, 4864);
+    final void beginDisplayList(byte i, int i_7_) {
+        OpenGL.glNewList(i_7_ + listBase, 4864);
         anInt1106++;
-        if (i <= 101) method594('\ufff3', -3);
+        if (i <= 101) callDisplayList('\ufff3', -3);
     }
 
     Component128(GlToolkitSub2 var_ha_Sub2, int i) {
-        anInt1109 = OpenGL.glGenLists(i);
+        listBase = OpenGL.glGenLists(i);
     }
 }

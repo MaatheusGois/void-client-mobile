@@ -25,15 +25,18 @@ abstract class SocketConnector {
         return new Socket(this.host, this.port);
     }
 
-    public static void method2048(int i) {
+    public static void clearStatics(int i) {
         anIntArray3475 = null;
         if (i != 1) anInt3473 = -69;
     }
 
-    static final void method2049(int i) {
+    /**
+     * Drop to lobby/login: state 7 → logged-out path, otherwise stash world and set state 13.
+     */
+    static final void forceLogout(int i) {
         anInt3474++;
         if (i > 49) {
-            if (Component49.clientState == 7) LoggedOutDefinition.method3141(false, (byte) 11);
+            if (Component49.clientState == 7) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
             else {
                 NumberFormatter.aClass238_2773 = DefinitionSub8.aClass238_9165;
                 DefinitionSub8.aClass238_9165 = null;
@@ -69,7 +72,7 @@ abstract class SocketConnector {
             int i_9_ = -77 % ((i_4_ - 29) / 34);
             DisplayModeManagerContainer61.aBoolean3763 = true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uu.E(" + i + ',' + i_0_ + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uu.E(" + i + ',' + i_0_ + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 }

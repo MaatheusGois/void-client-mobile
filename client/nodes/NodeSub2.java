@@ -71,7 +71,7 @@ final class NodeSub2
     }
 
     static final NodeSub2 method2734(CacheStore class45, int i, int i_15_) {
-        byte[] is = class45.method410(-1860, i, i_15_);
+        byte[] is = class45.getFile(-1860, i, i_15_);
         if (is == null) return null;
         return new NodeSub2(new Buffer(is));
     }

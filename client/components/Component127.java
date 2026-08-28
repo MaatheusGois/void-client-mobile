@@ -25,8 +25,8 @@ final class Component127
         StringDefinition class348_sub42_sub11 = (StringDefinition) aClass60_2960.get(i_0_, -51);
         if (class348_sub42_sub11 != null) return class348_sub42_sub11;
         byte[] is;
-        if (i_0_ < 32768) is = aClass45_2961.method410(-1860, 0, i_0_);
-        else is = aClass45_2965.method410(-1860, 0, 0x7fff & i_0_);
+        if (i_0_ < 32768) is = aClass45_2961.getFile(-1860, 0, i_0_);
+        else is = aClass45_2965.getFile(-1860, 0, 0x7fff & i_0_);
         class348_sub42_sub11 = new StringDefinition();
         if (is != null) class348_sub42_sub11.method3221(117, new Buffer(is));
         if (i_0_ >= 32768) class348_sub42_sub11.method3224((byte) 104);
@@ -53,11 +53,11 @@ final class Component127
             try {
                 aClass45_2961 = class45;
                 aClass45_2965 = class45_3_;
-                if (aClass45_2961 != null) aClass45_2961.method407(0, 0);
+                if (aClass45_2961 != null) aClass45_2961.getFileCount(0, 0);
                 if (aClass45_2965 == null) break;
-                aClass45_2965.method407(0, 0);
+                aClass45_2965.getFileCount(0, 0);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("sga.<init>(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("sga.<init>(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

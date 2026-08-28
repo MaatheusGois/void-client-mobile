@@ -33,7 +33,7 @@ final class Component299
             aClass348_Sub42_454 = null;
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "ib.C(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "ib.C(" + l + ',' + i + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class Component299
             class348_sub42.next.previous = class348_sub42;
             class348_sub42.accessAge = l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ib.A(" + (class348_sub42 != null ? "{...}" : "null") + ',' + i + ',' + l + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ib.A(" + (class348_sub42 != null ? "{...}" : "null") + ',' + i + ',' + l + ')'));
         }
     }
 

@@ -76,7 +76,7 @@ final class HashTable {
             r.anInt9721 = Component285.anInt970;
             Component339.method1713(false, 520);
             Component160.method3466(-119);
-            ClientScriptExecutor.method703(r.anInt9721);
+            ClientScriptExecutor.runInterfaceScripts(r.anInt9721);
         }
         DisplayModeManagerContainer369.aBoolean2895 = true;
         if (i < 49) anInt1651 = 10;
@@ -109,7 +109,7 @@ final class HashTable {
                     int i_8_ = (208 - (ParametricDefinition.anInt9109 * 2 - 48) + 4 * ParametricDefinition.anInt9109 - i_3_ / 128);
                     Component83.aClass105_1664.method967(((float) class46.anInt709 / 2.0F + (float) i), ((float) class46.anInt789 / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
                     for (NodeSub35 class348_sub35 = (NodeSub35) Component289.aClass262_10125.first(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (NodeSub35) Component289.aClass262_10125.next((byte) 92)) {
-                        int i_9_ = class348_sub35.anInt6976;
+                        int i_9_ = class348_sub35.intValue;
                         int i_10_ = (-NodeBaseSub2.regionTileX + ((0xfffe5b0 & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
                         int i_11_ = (-Component330.regionTileY + (0x3fff & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])));
                         int i_12_ = -(i_4_ / 128) + 2 + 4 * i_10_;
@@ -160,8 +160,8 @@ final class HashTable {
                             int i_27_ = (-(i_4_ / 128) + (player.x) / 128);
                             int i_28_ = (-(i_3_ / 128) + (player.y) / 128);
                             boolean bool = false;
-                            for (int i_29_ = 0; (DefinitionSub30.anInt9383 > i_29_); i_29_++) {
-                                if ((player.username.equals(Component178.aStringArray1441[i_29_])) && (GraphicsToolkit.anIntArray4578[i_29_] != 0)) {
+                            for (int i_29_ = 0; (DefinitionSub30.friendCount > i_29_); i_29_++) {
+                                if ((player.username.equals(Component178.friendNames[i_29_])) && (GraphicsToolkit.friendWorldIds[i_29_] != 0)) {
                                     bool = true;
                                     break;
                                 }
@@ -225,7 +225,7 @@ final class HashTable {
                 } else var_ha.A(-16777216, var_aa, i, i_1_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mn.F(" + (class46 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mn.F(" + (class46 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 

@@ -14,7 +14,8 @@ import java.lang.reflect.Method;
 
 final class ObjectDeserializer extends Node {
     boolean[] aBooleanArray6954;
-    static InflaterDecompressor aClass152_6955 = new InflaterDecompressor();
+    /** Shared GZIP inflater for {@link NodeSub41#decompressContainer}. */
+    static InflaterDecompressor gzipDecompressor = new InflaterDecompressor();
     static int anInt6956;
     int[] anIntArray6957;
     int anInt6958;
@@ -25,12 +26,14 @@ final class ObjectDeserializer extends Node {
     static long aLong6963 = 0L;
     static int anInt6964;
     int anInt6965;
-    static long aLong6966;
-    static int anInt6967 = 0;
+    /** Hashed username / player identity written on login. */
+    static long userHash;
+    /** UI language index into {@link Component185#languageNames} (applet {@code lang}). */
+    static int languageId = 0;
 
     public static void method3024(int i) {
-        aClass152_6955 = null;
-        if (i >= -74) anInt6967 = 12;
+        gzipDecompressor = null;
+        if (i >= -74) languageId = 12;
         aByteArrayArrayArray6962 = null;
     }
 
@@ -41,15 +44,15 @@ final class ObjectDeserializer extends Node {
             boolean bool = false;
             for (int i_0_ = 0; i_0_ < class348_sub48.anInt7126; i_0_++) {
                 if (class348_sub48.aClass144Array7135[i_0_] != null) {
-                    if ((class348_sub48.aClass144Array7135[i_0_].anInt1997) == 2) class348_sub48.anIntArray7131[i_0_] = -5;
-                    if ((class348_sub48.aClass144Array7135[i_0_].anInt1997) == 0) bool = true;
+                    if ((class348_sub48.aClass144Array7135[i_0_].status) == 2) class348_sub48.anIntArray7131[i_0_] = -5;
+                    if ((class348_sub48.aClass144Array7135[i_0_].status) == 0) bool = true;
                 }
                 if (class348_sub48.aClass144Array7127[i_0_] != null) {
-                    if ((class348_sub48.aClass144Array7127[i_0_].anInt1997) == 2) class348_sub48.anIntArray7131[i_0_] = -6;
-                    if ((class348_sub48.aClass144Array7127[i_0_].anInt1997) == 0) bool = true;
+                    if ((class348_sub48.aClass144Array7127[i_0_].status) == 2) class348_sub48.anIntArray7131[i_0_] = -6;
+                    if ((class348_sub48.aClass144Array7127[i_0_].status) == 0) bool = true;
                 }
             }
-            if (i < 37) aLong6966 = -3L;
+            if (i < 37) userHash = -3L;
             if (!bool) {
                 int i_1_ = class348_sub49_sub2.offset;
                 class348_sub49_sub2.writeInt((byte) 94, class348_sub48.anInt7130);
@@ -154,6 +157,6 @@ final class ObjectDeserializer extends Node {
     }
 
     static {
-        aLong6966 = 0L;
+        userHash = 0L;
     }
 }

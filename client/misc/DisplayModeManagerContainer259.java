@@ -75,7 +75,7 @@ final class DisplayModeManagerContainer259
         if (class277 != null) return class277;
         byte[] is;
         synchronized (aClass45_3442) {
-            is = aClass45_3442.method410(-1860, 4, i);
+            is = aClass45_3442.getFile(-1860, 4, i);
         }
         class277 = new Component11();
         class277.anInt3573 = i;
@@ -145,12 +145,12 @@ final class DisplayModeManagerContainer259
         }
     }
 
-    DisplayModeManagerContainer259(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    DisplayModeManagerContainer259(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_3442 = class45;
-            this.anInt3429 = aClass45_3442.method407(0, 4);
+            this.anInt3429 = aClass45_3442.getFileCount(0, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 

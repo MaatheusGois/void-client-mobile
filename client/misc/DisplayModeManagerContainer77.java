@@ -321,7 +321,7 @@ final class DisplayModeManagerContainer77
             i_82_ = this.anIntArray1852[i_83_];
             i_81_ = this.anIntArray1847[i_83_];
             i_80_ = this.anIntArray1841[i_83_];
-            if (i_61_ == 1) this.anIntArray1868[i_83_] = class348_sub49_56_.readUnsignedByte(NodeSub21.method2955(i, 254));
+            if (i_61_ == 1) this.anIntArray1868[i_83_] = class348_sub49_56_.readUnsignedByte(NodeSub21.bitwiseXor(i, 254));
         }
         class348_sub49.offset = i_75_;
         class348_sub49_53_.offset = i_71_;
@@ -347,7 +347,7 @@ final class DisplayModeManagerContainer77
                 }
             }
             if (i_58_ == 255) this.aByteArray1839[i_88_] = class348_sub49_54_.readByte(-108);
-            if (i_59_ == 1) this.aByteArray1834[i_88_] = class348_sub49_55_.readByte(NodeSub21.method2955(i, -120));
+            if (i_59_ == 1) this.aByteArray1834[i_88_] = class348_sub49_55_.readByte(NodeSub21.bitwiseXor(i, -120));
             if (i_60_ == 1) this.anIntArray1824[i_88_] = class348_sub49_56_.readUnsignedByte(255);
         }
         class348_sub49.offset = i_74_;
@@ -433,7 +433,7 @@ final class DisplayModeManagerContainer77
         int i_106_ = class124_101_.anIntArray1852[i_102_];
         for (int i_107_ = i; i_107_ < this.anInt1836; i_107_++) {
             if (this.anIntArray1841[i_107_] == i_104_ && i_105_ == this.anIntArray1847[i_107_] && (i_106_ == this.anIntArray1852[i_107_])) {
-                this.aShortArray1842[i_107_] = (short) Component224.method2057((this.aShortArray1842[i_107_]), i_103_);
+                this.aShortArray1842[i_107_] = (short) Component224.bitwiseOr((this.aShortArray1842[i_107_]), i_103_);
                 return i_107_;
             }
         }

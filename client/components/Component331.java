@@ -23,7 +23,7 @@ final class Component331
 
     final DisplayModeManagerContainer260 method1043(int i, byte i_0_) {
         anInt1721++;
-        byte[] is = aClass45_1718.method410(-1860, 1, i);
+        byte[] is = aClass45_1718.getFile(-1860, 1, i);
         if (i_0_ < 12) return null;
         DisplayModeManagerContainer260 class287 = new DisplayModeManagerContainer260();
         class287.method2183(new Buffer(is), 21890);
@@ -93,11 +93,11 @@ final class Component331
         Component19.method239((byte) -114, i_16_, i_15_, class46);
     }
 
-    Component331(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component331(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_1718 = class45;
-            aClass45_1718.method407(0, 1);
-            Buffer class348_sub49 = new Buffer(aClass45_1718.method410(-1860, 0, 0));
+            aClass45_1718.getFileCount(0, 1);
+            Buffer class348_sub49 = new Buffer(aClass45_1718.getFile(-1860, 0, 0));
             int i_17_ = class348_sub49.readUnsignedByte(255);
             if (i_17_ > 3) {
                 anIntArrayArray1724 = new int[0][];
@@ -151,7 +151,7 @@ final class Component331
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mt.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mt.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

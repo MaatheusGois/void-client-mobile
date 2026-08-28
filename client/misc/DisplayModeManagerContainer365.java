@@ -104,7 +104,7 @@ final class DisplayModeManagerContainer365
             aClass105_1221 = null;
             return false;
         }
-        int i_18_ = Component373.method340(anInt1217, (byte) 108);
+        int i_18_ = Component373.nextPowerOfTwo(anInt1217, (byte) 108);
         if (i_18_ > i_13_) i_18_ = PrimitiveTypeDefinition.method3051(i_13_, 4096);
         if (i_18_ > 512) i_18_ = 512;
         if (i_18_ != anInt1220) anInt1220 = i_18_;
@@ -171,7 +171,7 @@ final class DisplayModeManagerContainer365
         var_ha.NativeHandle();
         var_ha.fillRect(0, 0, anInt1220, anInt1220, 0, 0);
         aClass105_1228.method970(0, 0, anInt1220, anInt1220, 1, 0, 0);
-        aClass105_1221.method968(0, 0, 0);
+        aClass105_1221.capturePixels(0, 0, 0);
         var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);
     }
 
@@ -248,7 +248,7 @@ final class DisplayModeManagerContainer365
     }
 
     private final void method740(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_60_) {
-        DisplayModeManagerContainer77 class124 = Component189.method2277(0, Component92.aClass45_3309, anInt1224, -1);
+        DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, Component92.aClass45_3309, anInt1224, -1);
         if (class124 != null) {
             var_ha.K(anIntArray1226);
             var_ha.KA(0, 0, anInt1220, anInt1220);
@@ -297,7 +297,7 @@ final class DisplayModeManagerContainer365
             class101.method894(0, 0, var_ha.i() - class64.HA());
             class64.method608(class101, null, var_ha.i(), 1);
             aClass105_1221 = var_ha.method3683(0, 0, anInt1220, anInt1220, true);
-            aClass105_1221.method968(0, 0, 3);
+            aClass105_1221.capturePixels(0, 0, 3);
             var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);
         }
     }

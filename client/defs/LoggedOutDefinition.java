@@ -24,7 +24,11 @@ final class LoggedOutDefinition
         return Shader.method160(27076, i_0_);
     }
 
-    static final void method3141(boolean bool, byte i) {
+    /**
+     * Tear down the game session: close socket, clear entities/scene, stop music.
+     * When {@code bool} is true, advances client state to 12 (logged-out).
+     */
+    static final void disconnectAndReset(boolean bool, byte i) {
         if (DefinitionSub8.aClass238_9165 != null) {
             DefinitionSub8.aClass238_9165.close((byte) 36);
             DefinitionSub8.aClass238_9165 = null;
@@ -38,7 +42,7 @@ final class LoggedOutDefinition
             NodeSub45.aClass361Array7108[i_2_].method3500(700);
         HashNodeSub3.method3177(-50, false);
         BuildInfo.maybeGc();
-        Sprite.method3007(2, 22684);
+        Sprite.resetMusic(2, 22684);
         DisplayModeManagerContainer238.aBoolean1236 = false;
         Component119.anInt3428 = -1;
         DefinitionSub17Sub1.method3093(i + 79);
@@ -88,7 +92,7 @@ final class LoggedOutDefinition
                 aBoolean9439 = class348_sub49.readUnsignedByte(255) == 1;
                 break;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("cfa.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_5_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("cfa.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_5_ + ')'));
             }
         } while (false);
     }
@@ -104,11 +108,11 @@ final class LoggedOutDefinition
         aClass293Array9432 = null;
     }
 
-    final int[][] method3047(int i, int i_7_) {
+    final int[][] getColourOutput(int i, int i_7_) {
         anInt9434++;
-        int[][] is = this.aClass322_7033.method2557(-111, i);
+        int[][] is = this.imageCacheStore.getPixels(-111, i);
         if (i_7_ != -1564599039) method3140(72, -13);
-        if (this.aClass322_7033.aBoolean4035) {
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_8_ = this.method3048(-1 + i & DisplayModeManagerContainer356.anInt6325, 633706337, 0);
             int[] is_9_ = this.method3048(i, i_7_ + -2096661920, 0);
             int[] is_10_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & 1 + i, 633706337, 0);

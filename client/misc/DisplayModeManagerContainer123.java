@@ -190,8 +190,8 @@ final class DisplayModeManagerContainer123
             else anInt1293 ^= anInt1293 << 13;
             anInt1293 += anIntArray1296[0xff & 128 + i];
             int i_14_;
-            anIntArray1296[i] = i_14_ = (anIntArray1296[GpsOverlay.method1166(255, i_13_ >> 2)] - (-anInt1293 - anInt1291));
-            anIntArray1289[i] = anInt1291 = i_13_ + anIntArray1296[(GpsOverlay.method1166(261268, i_14_) >> 278777480 >> 242087490)];
+            anIntArray1296[i] = i_14_ = (anIntArray1296[GpsOverlay.bitwiseAnd(255, i_13_ >> 2)] - (-anInt1293 - anInt1291));
+            anIntArray1289[i] = anInt1291 = i_13_ + anIntArray1296[(GpsOverlay.bitwiseAnd(261268, i_14_) >> 278777480 >> 242087490)];
         }
         if (bool != false) method776(-33, -56, 52);
     }

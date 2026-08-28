@@ -54,7 +54,7 @@ final class Canvas_Sub1 extends Canvas {
                 DisplayModeManagerContainer199.method1725(262144);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "vg.A(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "vg.A(" + i + ',' + l + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class Canvas_Sub1 extends Canvas {
         DisplayModeManagerContainer370 class64 = (DisplayModeManagerContainer370) Component279.aClass60_225.get(l, 81);
         int i_18_ = 2055;
         if (class64 == null) {
-            DisplayModeManagerContainer77 class124 = Component189.method2277(0, ShaderSub3.aClass45_5207, i_16_, -1);
+            DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, ShaderSub3.aClass45_5207, i_16_, -1);
             if (class124 == null) return null;
             if (class124.anInt1830 < 13) class124.method1092(2, 105);
             class64 = var_ha.method3625(class124, i_18_, Component382.anInt2275, 64, 768);
@@ -128,35 +128,35 @@ final class Canvas_Sub1 extends Canvas {
         boolean bool = true;
         for (int i_19_ = 0; DisplayModeManagerContainer322.aByteArrayArray4281.length > i_19_; i_19_++) {
             if (ShaderSub1.anIntArray5192[i_19_] != -1 && DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] == null) {
-                DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] = SoftwareFallbackShader.aClass45_7382.method410(-1860, ShaderSub1.anIntArray5192[i_19_], 0);
+                DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] = SoftwareFallbackShader.aClass45_7382.getFile(-1860, ShaderSub1.anIntArray5192[i_19_], 0);
                 if (DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] == null) {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
                 }
             }
             if (Applet_Sub1.anIntArray38[i_19_] != -1 && WorldNameText.aByteArrayArray8642[i_19_] == null) {
-                WorldNameText.aByteArrayArray8642[i_19_] = (SoftwareFallbackShader.aClass45_7382.method393(Applet_Sub1.anIntArray38[i_19_], 0, i + 2, Component31.anIntArrayArray5894[i_19_]));
+                WorldNameText.aByteArrayArray8642[i_19_] = (SoftwareFallbackShader.aClass45_7382.getFile(Applet_Sub1.anIntArray38[i_19_], 0, i + 2, Component31.anIntArrayArray5894[i_19_]));
                 if (WorldNameText.aByteArrayArray8642[i_19_] == null) {
                     DisplayModeManagerContainer259.anInt3441++;
                     bool = false;
                 }
             }
             if (DisplayModeManagerContainer61.anIntArray3759[i_19_] != -1 && Component30.aByteArrayArray1887[i_19_] == null) {
-                Component30.aByteArrayArray1887[i_19_] = SoftwareFallbackShader.aClass45_7382.method410(-1860, DisplayModeManagerContainer61.anIntArray3759[i_19_], 0);
+                Component30.aByteArrayArray1887[i_19_] = SoftwareFallbackShader.aClass45_7382.getFile(-1860, DisplayModeManagerContainer61.anIntArray3759[i_19_], 0);
                 if (Component30.aByteArrayArray1887[i_19_] == null) {
                     DisplayModeManagerContainer259.anInt3441++;
                     bool = false;
                 }
             }
             if (r.anIntArray9724[i_19_] != -1 && OggUrlStream.aByteArrayArray8996[i_19_] == null) {
-                OggUrlStream.aByteArrayArray8996[i_19_] = SoftwareFallbackShader.aClass45_7382.method410(-1860, r.anIntArray9724[i_19_], 0);
+                OggUrlStream.aByteArrayArray8996[i_19_] = SoftwareFallbackShader.aClass45_7382.getFile(-1860, r.anIntArray9724[i_19_], 0);
                 if (OggUrlStream.aByteArrayArray8996[i_19_] == null) {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
                 }
             }
             if (ImageCacheStore.anIntArray4031 != null && NodeSub50.aByteArrayArray7212[i_19_] == null && ImageCacheStore.anIntArray4031[i_19_] != -1) {
-                NodeSub50.aByteArrayArray7212[i_19_] = (SoftwareFallbackShader.aClass45_7382.method393(ImageCacheStore.anIntArray4031[i_19_], 0, i + 2, Component31.anIntArrayArray5894[i_19_]));
+                NodeSub50.aByteArrayArray7212[i_19_] = (SoftwareFallbackShader.aClass45_7382.getFile(ImageCacheStore.anIntArray4031[i_19_], 0, i + 2, Component31.anIntArrayArray5894[i_19_]));
                 if (NodeSub50.aByteArrayArray7212[i_19_] == null) {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
@@ -164,9 +164,9 @@ final class Canvas_Sub1 extends Canvas {
             }
         }
         if (CacheNodeSub2.aClass252_10488 == null) {
-            if (Request.aClass348_Sub42_Sub14_6885 != null && (NodeSub32.aClass45_6950.method400(-18308, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))) {
-                if (NodeSub32.aClass45_6950.method413(100, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))
-                    CacheNodeSub2.aClass252_10488 = Component358.method2300(NodeSub32.aClass45_6950, ((Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"), Component387.aBoolean1900, (byte) -91);
+            if (Request.aClass348_Sub42_Sub14_6885 != null && (NodeSub32.aClass45_6950.hasGroup(-18308, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))) {
+                if (NodeSub32.aClass45_6950.isGroupReadyByName(100, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))
+                    CacheNodeSub2.aClass252_10488 = Component358.loadStaticElements(NodeSub32.aClass45_6950, ((Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"), Component387.aBoolean1900, (byte) -91);
                 else {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
@@ -199,7 +199,7 @@ final class Canvas_Sub1 extends Canvas {
                 }
             }
             if (bool) {
-                if (Component129.anInt489 != 0) Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)) + "<br>(100%)"), 2, NodeSub8.toolkit);
+                if (Component129.anInt489 != 0) Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(100%)"), 2, NodeSub8.toolkit);
                 Component381.method3570(false);
                 NodeSub18.method2938((byte) 102);
                 Component205.method1772(i ^ 0x41);
@@ -316,8 +316,8 @@ final class Canvas_Sub1 extends Canvas {
                     for (int i_37_ = i_33_ - 1; i_37_ <= i_34_ - -1; i_37_++) {
                         for (int i_38_ = i_35_ + -1; i_38_ <= i_36_ - -1; i_38_++) {
                             if (i_33_ > i_37_ || i_34_ < i_37_ || i_38_ < i_35_ || i_38_ > i_36_) {
-                                SoftwareFallbackShader.aClass45_7382.method409("m" + i_37_ + "_" + i_38_, true);
-                                SoftwareFallbackShader.aClass45_7382.method409("l" + i_37_ + "_" + i_38_, true);
+                                SoftwareFallbackShader.aClass45_7382.requestGroupByName("m" + i_37_ + "_" + i_38_, true);
+                                SoftwareFallbackShader.aClass45_7382.requestGroupByName("l" + i_37_ + "_" + i_38_, true);
                             }
                         }
                     }
@@ -336,7 +336,7 @@ final class Canvas_Sub1 extends Canvas {
                 Component97.method867(true);
                 NodeSub16Sub2.aBoolean8870 = true;
                 if (AbstractGlTextureSub4.aBoolean8558) {
-                    Applet_Sub1.method94(("Took: " + (Component240.currentTimeMillis(-117) + -Component330.aLong1516) + "ms"), i + 52);
+                    Applet_Sub1.printConsole(("Took: " + (Component240.currentTimeMillis(-117) + -Component330.aLong1516) + "ms"), i + 52);
                     AbstractGlTextureSub4.aBoolean8558 = false;
                 }
             } else Component129.anInt489 = 2;

@@ -20,7 +20,7 @@ final class DefinitionSub28
     private int anInt9369 = 0;
     static int anInt9370;
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         anInt9363++;
         Component7.method1605(26188);
         if (i < 108) method3122((byte) -111);
@@ -29,7 +29,7 @@ final class DefinitionSub28
     static final NamedInteger[] method3122(byte i) {
         if (i < 86) aClass45_9365 = null;
         anInt9361++;
-        return (new NamedInteger[]{Component326.aClass364_5271, WaterShaderSub8.aClass364_7361, AssetCacheLoader.aClass364_382, Component83.aClass364_1657, DisplayModeManagerContainer154.aClass364_1279, DisplayModeManagerContainer173.aClass364_4246});
+        return (new NamedInteger[]{Component326.LIVE, WaterShaderSub8.WTRC, AssetCacheLoader.WTQA, Component83.WTWIP, DisplayModeManagerContainer154.LOCAL, DisplayModeManagerContainer173.WTI});
     }
 
     public static void method3123(int i) {
@@ -73,13 +73,13 @@ final class DefinitionSub28
         } while (false);
     }
 
-    final int[] method3042(int i, int i_2_) {
+    final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9366++;
-        if (i_2_ != 255) method3044(-48);
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        if (i_2_ != 255) postDecode(-48);
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_3_ = anInt9364 >> 1;
-            int[][] is_4_ = this.aClass191_7032.method1427((byte) 16);
+            int[][] is_4_ = this.imageCache.getAllBuffers((byte) 16);
             Random random = new Random(anInt9367);
             for (int i_5_ = 0; anInt9362 > i_5_; i_5_++) {
                 int i_6_ = (anInt9364 > 0 ? anInt9369 + DisplayModeManagerContainer77.method1097((byte) 92, anInt9364, random) + -i_3_ : anInt9369);

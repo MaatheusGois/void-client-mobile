@@ -69,7 +69,7 @@ final class Component170
     }
 
     static final Component170 method1512(CacheStore class45, int i) {
-        byte[] is = class45.method415((byte) 73, i);
+        byte[] is = class45.getSingletonFile((byte) 73, i);
         if (is == null) return null;
         return method1517(is)[0];
     }
@@ -346,7 +346,7 @@ final class Component170
     }
 
     static final Component170[] method1519(CacheStore class45, int i, int i_105_) {
-        byte[] is = class45.method410(-1860, i, i_105_);
+        byte[] is = class45.getFile(-1860, i, i_105_);
         if (is == null) return null;
         return method1517(is);
     }
@@ -387,7 +387,7 @@ final class Component170
     }
 
     static final Component170 method1521(CacheStore class45, int i, int i_112_) {
-        byte[] is = class45.method410(-1860, i, i_112_);
+        byte[] is = class45.getFile(-1860, i, i_112_);
         if (is == null) return null;
         return method1517(is)[0];
     }
@@ -397,7 +397,7 @@ final class Component170
     }
 
     static final Component170[] method1523(CacheStore class45, int i) {
-        byte[] is = class45.method415((byte) 73, i);
+        byte[] is = class45.getSingletonFile((byte) 73, i);
         if (is == null) return null;
         return method1517(is);
     }

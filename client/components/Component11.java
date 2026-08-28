@@ -36,7 +36,7 @@ final class Component11
         try {
             return l | l_0_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "vd.D(" + l + ',' + l_0_ + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "vd.D(" + l + ',' + l_0_ + ')');
         }
     }
 

@@ -28,7 +28,7 @@ final class DebugOverlay {
             class318_0_.previous.next = class318_0_;
             class318_0_.next.previous = class318_0_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("te.B(" + (class318 != null ? "{...}" : "null") + ',' + (class318_0_ != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("te.B(" + (class318 != null ? "{...}" : "null") + ',' + (class318_0_ != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 

@@ -22,7 +22,7 @@ final class DefinitionSub15
 
     static final void method3084(int i, byte i_2_, int i_3_) {
         anInt9218++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_3_, (byte) 105, 17);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_3_, (byte) 105, 17);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i;
         int i_4_ = 59 / ((i_2_ - -7) / 49);
@@ -45,14 +45,14 @@ final class DefinitionSub15
             NodeSub1Sub3.method2732(i_6_, i_7_, bool, 96, class45, i_5_);
             DebugPanic.aClass348_Sub16_Sub3_4743 = class348_sub16_sub3;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pba.D(" + i + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (class45 != null ? "{...}" : "null") + ',' + bool + ',' + i_6_ + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pba.D(" + i + ',' + (class348_sub16_sub3 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (class45 != null ? "{...}" : "null") + ',' + bool + ',' + i_6_ + ',' + i_7_ + ')'));
         }
     }
 
-    final int[] method3042(int i, int i_8_) {
+    final int[] getMonochromeOutput(int i, int i_8_) {
         anInt9221++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) Component313.method1579(is, 0, DefinitionSub6.anInt9139, anInt9220);
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) Component313.method1579(is, 0, DefinitionSub6.anInt9139, anInt9220);
         if (i_8_ != 255) method3085(63);
         return is;
     }

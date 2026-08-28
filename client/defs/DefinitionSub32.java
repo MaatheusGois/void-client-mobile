@@ -24,12 +24,12 @@ final class DefinitionSub32
             if (i_3_ != 12) method3134(9);
             anInt9418++;
             if (!var_ha_Sub2.aBoolean7793 && (!Component353.method1436(-74, i_2_) || !Component353.method1436(127, i_1_))) {
-                if (!var_ha_Sub2.aBoolean7837) return (new GlRectangleTexture(var_ha_Sub2, i_2_, i_1_, Component373.method340(i_2_, (byte) 108), Component373.method340(i_1_, (byte) 108), is));
+                if (!var_ha_Sub2.aBoolean7837) return (new GlRectangleTexture(var_ha_Sub2, i_2_, i_1_, Component373.nextPowerOfTwo(i_2_, (byte) 108), Component373.nextPowerOfTwo(i_1_, (byte) 108), is));
                 return new GlRectangleTexture(var_ha_Sub2, 34037, i_2_, i_1_, bool, is, i_0_, i);
             }
             return new GlRectangleTexture(var_ha_Sub2, 3553, i_2_, i_1_, bool, is, i_0_, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wi.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + bool + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wi.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + bool + ',' + i_3_ + ')'));
         }
     }
 
@@ -85,11 +85,11 @@ final class DefinitionSub32
         return class357.aClass318_Sub1_Sub5_4395;
     }
 
-    final int[][] method3047(int i, int i_9_) {
+    final int[][] getColourOutput(int i, int i_9_) {
         if (i_9_ != -1564599039) method3133((byte) 4);
         anInt9417++;
-        int[][] is = this.aClass322_7033.method2557(-78, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-78, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[][] is_10_ = this.method3039((byte) -104, i, 0);
             int[] is_11_ = is_10_[0];
             int[] is_12_ = is_10_[1];
@@ -110,11 +110,11 @@ final class DefinitionSub32
         super(1, false);
     }
 
-    final int[] method3042(int i, int i_18_) {
+    final int[] getMonochromeOutput(int i, int i_18_) {
         anInt9420++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (i_18_ != 255) method3047(-113, -46);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (i_18_ != 255) getColourOutput(-113, -46);
+        if (this.imageCache.cacheMiss) {
             int[] is_19_ = this.method3048(i, 633706337, 0);
             for (int i_20_ = 0; (i_20_ < DefinitionSub6.anInt9139); i_20_++)
                 is[i_20_] = 4096 + -is_19_[i_20_];
@@ -125,12 +125,12 @@ final class DefinitionSub32
     final void method3049(Buffer class348_sub49, int i, int i_21_) {
         anInt9414++;
         if (i_21_ != 31015) aClass273_9415 = null;
-        if (i == 0) this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+        if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
     }
 
     static final String method3136(byte i, Buffer class348_sub49) {
         anInt9416++;
         if (i != 64) aShortArray9423 = null;
-        return BasicMouseHandler.method3607(32767, class348_sub49, -77);
+        return BasicMouseHandler.readJagStringLimited(32767, class348_sub49, -77);
     }
 }

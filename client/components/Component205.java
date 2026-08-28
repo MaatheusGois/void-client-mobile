@@ -13,7 +13,8 @@ final class Component205
     static int anInt5963;
     static CacheStore aClass45_5964;
     static int anInt5965;
-    static String aString5966 = null;
+    /** Last settings cookie payload ({@link CookieBuilder#setSettingsCookie}). */
+    static String settingsCookie = null;
     static int anInt5967;
     static int anInt5968;
     static int anInt5969;
@@ -44,14 +45,14 @@ final class Component205
     static final void method1772(int i) {
         anInt5968++;
         ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0);
-        if (i <= 4) aString5966 = null;
+        if (i <= 4) settingsCookie = null;
         for (/**/; class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0))
             DisplayModeManagerContainer282.method690((byte) 108, (class348_sub15.anInt6773));
     }
 
     public static void method1773(byte i) {
         int i_3_ = -86 / ((i - 13) / 45);
-        aString5966 = null;
+        settingsCookie = null;
         aClass45_5964 = null;
     }
 

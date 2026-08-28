@@ -2,46 +2,51 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class NodeSub11
 /**
- * RENAMED from `Class348_Sub11` (JODE-obfuscated).
- * Evidence: subclass of Node (hierarchy)
- */ extends Node implements Interface6 {
+ * Keyboard event node produced by {@link KeyFocusHandler}.
+ * Implements {@link Interface6} getters over the packed fields below.
+ */
+final class NodeSub11 extends Node implements Interface6 {
     static int anInt4760;
-    char aChar4761;
+    /** Typed character ({@code '\0'} if none). */
+    char keyChar;
     static int anInt4762;
     static int anInt4763;
-    long aLong4764;
+    /** Enqueue time (client millis). */
+    long when;
     static int anInt4765;
-    int anInt4766;
-    int anInt4767;
+    /** Modifier flags snapshot. */
+    int modifiers;
+    /** Mapped key code / key index. */
+    int keyCode;
     static int anInt4768;
     static int anInt4769;
     static CacheStore aClass45_4770;
-    int anInt4771;
+    /** See {@link Interface6#getEventType}. */
+    int eventType;
 
-    public final int method27(int i) {
-        if (i != 26276) method27(113);
+    public final int getEventType(int i) {
+        if (i != 26276) getEventType(113);
         anInt4769++;
-        return this.anInt4771;
+        return this.eventType;
     }
 
-    public final char method28(byte i) {
+    public final char getKeyChar(byte i) {
         anInt4768++;
-        if (i < 8) method27(113);
-        return this.aChar4761;
+        if (i < 8) getEventType(113);
+        return this.keyChar;
     }
 
-    public final int method26(int i) {
+    public final int getModifiers(int i) {
         anInt4762++;
-        if (i != -7616) method29((byte) 38);
-        return this.anInt4766;
+        if (i != -7616) getWhen((byte) 38);
+        return this.modifiers;
     }
 
-    public final long method29(byte i) {
+    public final long getWhen(byte i) {
         int i_0_ = 17 / ((i - 46) / 58);
         anInt4765++;
-        return this.aLong4764;
+        return this.when;
     }
 
     public static void method2796(byte i) {
@@ -52,17 +57,17 @@ final class NodeSub11
     static final boolean method2797(String string, byte i) {
         anInt4763++;
         if (string == null) return false;
-        for (int i_1_ = 0; (i_1_ < DefinitionSub30.anInt9383); i_1_++) {
-            if (string.equalsIgnoreCase(Component178.aStringArray1441[i_1_])) return true;
+        for (int i_1_ = 0; (i_1_ < DefinitionSub30.friendCount); i_1_++) {
+            if (string.equalsIgnoreCase(Component178.friendNames[i_1_])) return true;
         }
         if (string.equalsIgnoreCase(Component72.localPlayer.username)) return true;
         if (i != -63) return false;
         return false;
     }
 
-    public final int method30(boolean bool) {
+    public final int getKeyCode(boolean bool) {
         anInt4760++;
         if (bool != false) return -114;
-        return this.anInt4767;
+        return this.keyCode;
     }
 }

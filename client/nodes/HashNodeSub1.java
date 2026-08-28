@@ -31,7 +31,7 @@ final class HashNodeSub1
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_9494.get(i, -6008);
         if (i_1_ < 91) return 72;
         if (class348_sub35 == null) return i_0_;
-        return class348_sub35.anInt6976;
+        return class348_sub35.intValue;
     }
 
     private final void method3167(int i, Buffer class348_sub49, byte i_2_) {
@@ -40,7 +40,7 @@ final class HashNodeSub1
             if (i == 249) {
                 int i_3_ = class348_sub49.readUnsignedByte(255);
                 if (aClass356_9494 == null) {
-                    int i_4_ = Component373.method340(i_3_, (byte) 108);
+                    int i_4_ = Component373.nextPowerOfTwo(i_3_, (byte) 108);
                     aClass356_9494 = new LruCache(i_4_);
                 }
                 for (int i_5_ = 0; i_5_ < i_3_; i_5_++) {
@@ -84,7 +84,7 @@ final class HashNodeSub1
         if (i != -250) method3165((byte) 0);
         NodeSub50 class348_sub50 = (NodeSub50) aClass356_9494.get(i_9_, -6008);
         if (class348_sub50 == null) return string;
-        return class348_sub50.aString7211;
+        return class348_sub50.stringValue;
     }
 
     static {

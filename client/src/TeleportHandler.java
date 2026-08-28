@@ -35,13 +35,13 @@ final class TeleportHandler {
     static float aFloat4455;
 
     private final void method3493(int i, int i_0_, int i_1_, int i_2_) {
-        this.anIntArrayArray4438[i_1_][i_2_] = GpsOverlay.method1166((this.anIntArrayArray4438[i_1_][i_2_]), ~i);
+        this.anIntArrayArray4438[i_1_][i_2_] = GpsOverlay.bitwiseAnd((this.anIntArrayArray4438[i_1_][i_2_]), ~i);
         if (i_0_ > -120) method3509(-18, true, false, 122, 119, -54, 18, -57);
         anInt4452++;
     }
 
     private final void method3494(int i, int i_3_, int i_4_, int i_5_) {
-        this.anIntArrayArray4438[i][i_4_] = Component224.method2057((this.anIntArrayArray4438[i][i_4_]), i_3_);
+        this.anIntArrayArray4438[i][i_4_] = Component224.bitwiseOr((this.anIntArrayArray4438[i][i_4_]), i_3_);
         if (i_5_ != -6496) method3494(20, -107, -63, 115);
         anInt4448++;
     }
@@ -165,7 +165,7 @@ final class TeleportHandler {
         if (i_17_ != 1) method3510(113, 9, 32, -49, -123, false, false);
         anInt4444++;
         i_16_ -= this.anInt4453;
-        this.anIntArrayArray4438[i_16_][i] = Component224.method2057((this.anIntArrayArray4438[i_16_][i]), 262144);
+        this.anIntArrayArray4438[i_16_][i] = Component224.bitwiseOr((this.anIntArrayArray4438[i_16_][i]), 262144);
     }
 
     final boolean method3497(int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
@@ -225,7 +225,7 @@ final class TeleportHandler {
                     if (bool != true) method3498(44, null, -27, -91, true, -26);
                     int i_47_ = (-i_45_ + i_41_ - (-i_43_ + (i_43_ * DisplayModeManagerContainer34.anInt8665 / DisplayModeManagerContainer229.anInt1267)));
                     int i_48_ = -1996554240;
-                    if (WorldNameText.aClass230_8638 == PacketReader.aClass230_10434) i_48_ = -1996488705;
+                    if (WorldNameText.STELLARDAWN == PacketReader.currentGameType) i_48_ = -1996488705;
                     var_ha.fillRect(i_46_, i_47_, i_44_, i_45_, i_48_, 1);
                     var_ha.method3628(i_46_, i_47_, i_44_, i_45_, i_48_, 0);
                     if (WaterShader.anInt7379 <= 0) break;
@@ -248,7 +248,7 @@ final class TeleportHandler {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("fe.E(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_39_ + ',' + i_40_ + ',' + bool + ',' + i_41_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("fe.E(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_39_ + ',' + i_40_ + ',' + bool + ',' + i_41_ + ')'));
             }
             break;
         } while (false);
@@ -258,7 +258,7 @@ final class TeleportHandler {
         i_55_ -= this.anInt4441;
         i_54_ -= this.anInt4453;
         anInt4446++;
-        if (i == -52) this.anIntArrayArray4438[i_54_][i_55_] = GpsOverlay.method1166((this.anIntArrayArray4438[i_54_][i_55_]), -262145);
+        if (i == -52) this.anIntArrayArray4438[i_54_][i_55_] = GpsOverlay.bitwiseAnd((this.anIntArrayArray4438[i_54_][i_55_]), -262145);
     }
 
     final void method3500(int i) {
@@ -278,7 +278,7 @@ final class TeleportHandler {
         anInt4447++;
         i_58_ -= this.anInt4441;
         int i_60_ = -79 % ((i - 66) / 39);
-        this.anIntArrayArray4438[i_59_][i_58_] = GpsOverlay.method1166((this.anIntArrayArray4438[i_59_][i_58_]), -2097153);
+        this.anIntArrayArray4438[i_59_][i_58_] = GpsOverlay.bitwiseAnd((this.anIntArrayArray4438[i_59_][i_58_]), -2097153);
     }
 
     static final void method3502(int i, int i_61_, int i_62_, int i_63_) {
@@ -574,7 +574,7 @@ final class TeleportHandler {
         i -= this.anInt4441;
         anInt4431++;
         i_97_ -= this.anInt4453;
-        this.anIntArrayArray4438[i_97_][i] = Component224.method2057((this.anIntArrayArray4438[i_97_][i]), 2097152);
+        this.anIntArrayArray4438[i_97_][i] = Component224.bitwiseOr((this.anIntArrayArray4438[i_97_][i]), 2097152);
     }
 
     public static void method3508(int i) {

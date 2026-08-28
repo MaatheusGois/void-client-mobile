@@ -70,7 +70,7 @@ final class DebugPanicSub2
         try {
             aClass68_8504 = class68;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 }

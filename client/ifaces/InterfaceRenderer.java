@@ -91,7 +91,7 @@ final class InterfaceRenderer implements Interface16 {
             Field field = var_class.getDeclaredField(string);
             return field.getInt(object);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wba.K(" + (object != null ? "{...}" : "null") + ',' + (var_class != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wba.K(" + (object != null ? "{...}" : "null") + ',' + (var_class != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -104,7 +104,7 @@ final class InterfaceRenderer implements Interface16 {
             field.set(ToolkitFactory.anApplet1530, null);
             return object;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wba.C(" + (var_class != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wba.C(" + (var_class != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -120,7 +120,7 @@ final class InterfaceRenderer implements Interface16 {
             anInt5061++;
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wba.I(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wba.I(" + i + ',' + l + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class InterfaceRenderer implements Interface16 {
             Field field = var_class.getDeclaredField(string);
             return field.getBoolean(object);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wba.H(" + (object != null ? "{...}" : "null") + ',' + bool + ',' + (var_class != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wba.H(" + (object != null ? "{...}" : "null") + ',' + bool + ',' + (var_class != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

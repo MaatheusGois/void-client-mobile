@@ -65,16 +65,16 @@ final class Component272
         int i_12_ = -i_9_ + i_5_;
         int i_13_ = i_9_ + i_6_;
         for (int i_14_ = i_6_; i_14_ < i_13_; i_14_++)
-            MenuOpener.method1156(-27, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_14_], i_11_, i);
+            MenuOpener.fillInts(-27, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_14_], i_11_, i);
         int i_15_ = i_7_ + -i_9_;
         int i_16_ = i_9_ + i_11_;
         for (int i_17_ = i_5_; i_12_ < i_17_; i_17_--)
-            MenuOpener.method1156(i_10_ + 101, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_17_], i_11_, i);
+            MenuOpener.fillInts(i_10_ + 101, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_17_], i_11_, i);
         for (int i_18_ = i_13_; i_18_ <= i_12_; i_18_++) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_18_];
-            MenuOpener.method1156(-27, i_16_, is, i_11_, i);
-            MenuOpener.method1156(-27, i_15_, is, i_16_, i_8_);
-            MenuOpener.method1156(-27, i_7_, is, i_15_, i);
+            MenuOpener.fillInts(-27, i_16_, is, i_11_, i);
+            MenuOpener.fillInts(-27, i_15_, is, i_16_, i_8_);
+            MenuOpener.fillInts(-27, i_7_, is, i_15_, i);
         }
     }
 
@@ -82,8 +82,8 @@ final class Component272
         anInt5863++;
         NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(i ^ 0x5));
         boolean bool = (Component156.aClass46_3701 != null || HashNode.anInt7059 > 0);
-        int i_19_ = class348_sub45.method3308((byte) -128);
-        int i_20_ = class348_sub45.method3311(119);
+        int i_19_ = class348_sub45.getX((byte) -128);
+        int i_20_ = class348_sub45.getY(119);
         if (bool) Component21.anInt3655 = 1;
         if (!bool) ColoredTextBuilder.processMenuAction((byte) 109, Component192.menuTip, i_20_, i_19_);
         else Component161.aMenuEntry_1946 = Component192.menuTip;
@@ -94,7 +94,7 @@ final class Component272
         anInt5865++;
         int i_22_ = i & 0xff;
         if (i_22_ == 0) return false;
-        return i_21_ < (~i_22_) || i_22_ >= 160 || Component352.aCharArray625[i_22_ + -128] != 0;
+        return i_21_ < (~i_22_) || i_22_ >= 160 || Component352.cp1252HighChars[i_22_ + -128] != 0;
     }
 
     final void method1716(boolean bool) {
@@ -111,7 +111,7 @@ final class Component272
     static final void method1733(byte i, int i_23_) {
         anInt5870++;
         if (i != -78) method1732((byte) 80, -38);
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_23_, (byte) 105, 11);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_23_, (byte) 105, 11);
         class348_sub42_sub15.method3251(-16058);
     }
 
@@ -154,7 +154,7 @@ final class Component272
             Component9.aClass60_4139.putOne(class352, i, (byte) -109);
             return class352;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jaa.K(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_25_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jaa.K(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_25_ + ',' + bool + ')'));
         }
     }
 

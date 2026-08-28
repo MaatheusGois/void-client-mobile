@@ -131,7 +131,7 @@ final class Component237
                 method1650(var_ha_Sub2, (byte) -5);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sn.G(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + (class98 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sn.G(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + (class98 != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -48,7 +48,7 @@ final class DefinitionSub19
         }
     }
 
-    final int[] method3042(int i, int i_3_) {
+    final int[] getMonochromeOutput(int i, int i_3_) {
         if (i_3_ != 255) aClass114_9254 = null;
         anInt9256++;
         return RenderableSub6.anIntArray6432;
@@ -58,10 +58,11 @@ final class DefinitionSub19
         super(0, true);
     }
 
-    static final boolean method3098(int i, String string) {
+    /** Try {@link NodederUtil#loadNativeLibrary} for {@code string} (e.g. {@code jagtheora}). */
+    static final boolean tryLoadNativeLibrary(int i, String string) {
         if (i != -30282) return true;
         anInt9255++;
-        return NodederUtil.method2769((aClass9260 != null ? aClass9260 : (aClass9260 = Component330.class)), (byte) 20, string);
+        return NodederUtil.loadNativeLibrary((aClass9260 != null ? aClass9260 : (aClass9260 = Component330.class)), (byte) 20, string);
     }
 
     public static void method3099(byte i) {
@@ -74,7 +75,7 @@ final class DefinitionSub19
     static final boolean method3100(int i, boolean bool, int i_4_) {
         anInt9253++;
         if (bool != false) anIntArray9259 = null;
-        return DisplayModeManagerContainer124.method1637(i, 32768, i_4_) | (0x800 & i_4_) != 0 || Component224.method2056(i_4_, 86, i);
+        return GameType.method1637(i, 32768, i_4_) | (0x800 & i_4_) != 0 || Component224.method2056(i_4_, 86, i);
     }
 
     static {

@@ -31,7 +31,7 @@ final class Component149
                     if (i_2_ < Component209.anInt3451) i_2_ = Component209.anInt3451;
                     if (i_1_ < Component156.anInt3704) i_1_ = Component156.anInt3704;
                     int i_5_ = (Component181.aClass221_1542.method1607(DisplayModeManagerContainer23.anInt1524, i_1_, (byte) -107) - -Component200.anInt3712);
-                    int i_6_ = (Component139.aClass341_6128.method2679(GlToolkitSub2.anInt7666, i_2_, 1595) + Component272.anInt5871);
+                    int i_6_ = (Component139.aClass341_6128.getAlignedOffset(GlToolkitSub2.anInt7666, i_2_, 1595) + Component272.anInt5871);
                     if (Component210.aBoolean5300) {
                         i_5_ += BufferCacheSub3.method4008((byte) -124);
                         i_6_ += Component110.method260(false);
@@ -76,7 +76,7 @@ final class Component149
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fg.A(" + bool + ',' + (class324 != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fg.A(" + bool + ',' + (class324 != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + (var_ha != null ? "{...}" : "null") + ')'));
         }
     }
 

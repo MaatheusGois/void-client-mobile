@@ -12,14 +12,16 @@ final class DisplayModeManagerContainer145
     static int anInt1803;
     static int anInt1804;
     static int anInt1805;
-    static boolean[] aBooleanArray1806 = new boolean[200];
+    /** Whether each friend entry is marked referred. */
+    static boolean[] friendReferred = new boolean[200];
     static int anInt1807;
-    static String[] aStringArray1808;
+    /** Ignore-list display names. */
+    static String[] ignoreDisplayNames;
     static int anInt1809;
 
     static final void method1085(int i, int i_0_, byte i_1_, int i_2_, int i_3_) {
         anInt1805++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_3_, (byte) 105, 8);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_3_, (byte) 105, 8);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_0_;
         if (i_1_ < -57) {
@@ -28,10 +30,11 @@ final class DisplayModeManagerContainer145
         }
     }
 
-    public static void method1086(boolean bool) {
+    /** Nulls friend/ignore static arrays at shutdown. */
+    public static void clearStatics(boolean bool) {
         if (bool != true) anInt1803 = -25;
-        aStringArray1808 = null;
-        aBooleanArray1806 = null;
+        ignoreDisplayNames = null;
+        friendReferred = null;
     }
 
     static final boolean method1087(int i, int i_4_, int i_5_) {
@@ -40,19 +43,24 @@ final class DisplayModeManagerContainer145
         return (0x84080 & i_5_) != 0;
     }
 
-    static final int method1088(int i, byte i_6_, int i_7_, int i_8_, int i_9_) {
+    /**
+     * Cosine-weighted mix of {@code i} and {@code i_9_}; {@code i_8_}/{@code i_7_} pick the
+     * angle into {@link DisplayModeManagerContainer88#anIntArray1204}.
+     */
+    static final int mixCosine(int i, byte i_6_, int i_7_, int i_8_, int i_9_) {
         anInt1804++;
         int i_10_ = -DisplayModeManagerContainer88.anIntArray1204[8192 * i_8_ / i_7_] + 65536 >> 1;
         if (i_6_ != 22) return -73;
         return ((i_10_ * i >> 16) + (i_9_ * (65536 + -i_10_) >> 16));
     }
 
-    static final boolean method1089(int i, char c) {
+    /** True if {@code c} is representable in the client's CP1252 text encoding. */
+    static final boolean isCp1252Char(int i, char c) {
         anInt1807++;
-        if (i >= -107) aBooleanArray1806 = null;
+        if (i >= -107) friendReferred = null;
         if (c > 0 && c < 128 || c >= 160 && c <= 255) return true;
         if (c != 0) {
-            char[] cs = Component352.aCharArray625;
+            char[] cs = Component352.cp1252HighChars;
             for (int i_11_ = 0; cs.length > i_11_; i_11_++) {
                 int i_12_ = cs[i_11_];
                 if (c == i_12_) return true;
@@ -77,12 +85,12 @@ final class DisplayModeManagerContainer145
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nga.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class237_sub1 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nga.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class237_sub1 != null ? "{...}" : "null") + ')'));
         }
     }
 
     static {
         anInt1803 = 0;
-        aStringArray1808 = new String[100];
+        ignoreDisplayNames = new String[100];
     }
 }

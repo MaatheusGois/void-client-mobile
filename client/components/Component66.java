@@ -84,7 +84,7 @@ final class Component66
     static final String method1795(byte[] is, boolean bool) {
         if (bool != true) method1797(4, -104, null, (byte) -82);
         anInt6026++;
-        return WaterShaderSub8.method3546(is, 0, is.length, 0);
+        return WaterShaderSub8.decodeCp1252(is, 0, is.length, 0);
     }
 
     static final boolean method1796(int i, int i_10_) {
@@ -146,7 +146,7 @@ final class Component66
         }
         if (client.method105(class46).method3305(0)) {
             if (class46.aString816 != null) DisplayModeManagerContainer368.addMenuEntry(false, "", class46.anInt830, (byte) -118, false, class46.anInt704, class46.anInt812, true, 16, (class46.anInt704 << 0) | class46.anInt830, class46.aString816, 0L, -1);
-            else DisplayModeManagerContainer368.addMenuEntry(false, "", class46.anInt830, (byte) -79, false, class46.anInt704, class46.anInt812, true, 16, class46.anInt704 << 0 | class46.anInt830, FriendsIgnoreList.aClass274_3492.method2063(ObjectDeserializer.anInt6967, 544), 0L, -1);
+            else DisplayModeManagerContainer368.addMenuEntry(false, "", class46.anInt830, (byte) -79, false, class46.anInt704, class46.anInt812, true, 16, class46.anInt704 << 0 | class46.anInt830, FriendsIgnoreList.aClass274_3492.getLocalized(ObjectDeserializer.languageId, 544), 0L, -1);
             RSARequest.anInt9655++;
         }
         // Inventory / bank item: inject lilac Default: Wear / Withdraw-All / …

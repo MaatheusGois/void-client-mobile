@@ -9,7 +9,8 @@ final class DefinitionSub20
  */ extends Definition {
     static int anInt9261;
     static int anInt9262;
-    static DisplayModeManagerContainer155 aClass231_9263 = new DisplayModeManagerContainer155("RC", 1);
+    /** Release-candidate channel ({@code id}=1). */
+    static BuildType RC = new BuildType("RC", 1);
     static HardwareProbe aClass348_Sub4_9264;
     static int anInt9265;
 
@@ -34,19 +35,19 @@ final class DefinitionSub20
     public static void method3104(boolean bool) {
         if (bool == false) {
             aClass348_Sub4_9264 = null;
-            aClass231_9263 = null;
+            RC = null;
         }
     }
 
-    final int[] method3042(int i, int i_3_) {
+    final int[] getMonochromeOutput(int i, int i_3_) {
         anInt9261++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_4_ = Component302.anIntArray6035[i];
             for (int i_5_ = 0; (i_5_ < DefinitionSub6.anInt9139); i_5_++)
                 is[i_5_] = method3103(i_4_, RenderableSub6.anIntArray6432[i_5_], 22) % 4096;
         }
-        if (i_3_ != 255) method3042(38, -42);
+        if (i_3_ != 255) getMonochromeOutput(38, -42);
         return is;
     }
 

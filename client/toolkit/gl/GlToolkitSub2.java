@@ -413,7 +413,7 @@ final class GlToolkitSub2
             anInt7579++;
             return new DisplayModeManagerContainer282(this, class124, i, i_3_, i_4_, i_2_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ')'));
         }
     }
 
@@ -452,7 +452,7 @@ final class GlToolkitSub2
             anInt7550++;
             aClass299_Sub1_7769 = (Component40) class299;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.DF(" + (class299 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.DF(" + (class299 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -463,7 +463,7 @@ final class GlToolkitSub2
             if (aBoolean7873 && (!bool || aBoolean7869)) return new DisplayModeManagerContainer136(this, i_8_, is, i_9_, bool);
             return new DisplayModeManagerContainer96(this, i_8_, is, i_9_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.VB(" + i + ',' + bool + ',' + i_8_ + ',' + (is != null ? "{...}" : "null") + ',' + i_9_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.VB(" + i + ',' + bool + ',' + i_8_ + ',' + (is != null ? "{...}" : "null") + ',' + i_9_ + ')'));
         }
     }
 
@@ -493,7 +493,7 @@ final class GlToolkitSub2
             if (aBoolean7873 && (!bool || aBoolean7869)) return new MenuOpener(this, i, is, i_15_, bool);
             return new Component261(this, i, is, i_15_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.G(" + i + ',' + i_14_ + ',' + i_15_ + ',' + (is != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.G(" + i + ',' + i_14_ + ',' + i_15_ + ',' + (is != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -560,7 +560,7 @@ final class GlToolkitSub2
             OpenGL.glEnd();
             method3762(5890, 768, (byte) -87, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.ME(" + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + i_24_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_25_ + ',' + i_26_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.ME(" + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + i_24_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_25_ + ',' + i_26_ + ')'));
         }
     }
 
@@ -593,7 +593,7 @@ final class GlToolkitSub2
             if (aBoolean7873 && (!bool || aBoolean7869)) return new DisplayModeManagerContainer136(this, i_35_, buffer, i_36_, bool);
             return new DisplayModeManagerContainer96(this, i_35_, buffer);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.OG(" + i + ',' + (buffer != null ? "{...}" : "null") + ',' + bool + ',' + i_35_ + ',' + i_36_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.OG(" + i + ',' + (buffer != null ? "{...}" : "null") + ',' + bool + ',' + i_35_ + ',' + i_36_ + ')'));
         }
     }
 
@@ -634,7 +634,7 @@ final class GlToolkitSub2
                 } else is[0] = is[1] = is[2] = -1;
             } else is[0] = is[1] = is[2] = -1;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.HA(" + i + ',' + i_37_ + ',' + i_38_ + ',' + i_39_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.HA(" + i + ',' + i_37_ + ',' + i_38_ + ',' + i_39_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -692,7 +692,7 @@ final class GlToolkitSub2
                     Component359.method1868((byte) -39, class348_sub42_sub13);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.VC(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.VC(" + i + ',' + ((class348_sub42_sub12 != null) ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -800,7 +800,7 @@ final class GlToolkitSub2
             anInt7580++;
             is[2] = anInt7855;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.K(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.K(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -848,7 +848,7 @@ final class GlToolkitSub2
             method3775(false, 0, 770, 5890);
             method3775(false, 2, 770, 34166);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.Q(" + i + ',' + i_57_ + ',' + i_58_ + ',' + i_59_ + ',' + i_60_ + ',' + i_61_ + ',' + (is != null ? "{...}" : "null") + ',' + i_62_ + ',' + i_63_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.Q(" + i + ',' + i_57_ + ',' + i_58_ + ',' + i_59_ + ',' + i_60_ + ',' + i_61_ + ',' + (is != null ? "{...}" : "null") + ',' + i_62_ + ',' + i_63_ + ')'));
         }
     }
 
@@ -857,7 +857,7 @@ final class GlToolkitSub2
             aClass233_7711.method1651(this, (byte) -119, -1, class98);
             anInt7569++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.EF(" + (class98 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.EF(" + (class98 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -882,7 +882,7 @@ final class GlToolkitSub2
                 if (anInt7865 == 1) break;
                 method3754((byte) 89);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "qo.DE(" + (class101 != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "qo.DE(" + (class101 != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -897,7 +897,7 @@ final class GlToolkitSub2
             }
             anInt7552++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.D(" + i + ',' + (interface2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.D(" + i + ',' + (interface2 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -944,7 +944,7 @@ final class GlToolkitSub2
             anInterface11_7740 = anInterface11Array7737[++anInt7742] = interface11;
             anInterface11_7740.method47(-11421);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.NG(" + (interface11 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.NG(" + (interface11 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -964,7 +964,7 @@ final class GlToolkitSub2
             anInt7574++;
             return new OpenGLBitmapFont(this, class143, class207s, bool);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -1022,7 +1022,7 @@ final class GlToolkitSub2
         }
     }
 
-    final int method3679(int i, int i_98_) {
+    final int bitwiseOr(int i, int i_98_) {
         anInt7634++;
         return i | i_98_;
     }
@@ -1114,8 +1114,8 @@ final class GlToolkitSub2
         try {
             aCanvas7575 = aCanvas7626 = canvas;
             this.anInt7713 = i;
-            if (!DefinitionSub19.method3098(-30282, "jaclib")) throw new RuntimeException("");
-            if (!DefinitionSub19.method3098(-30282, "jaggl")) throw new RuntimeException("");
+            if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "jaclib")) throw new RuntimeException("");
+            if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "jaggl")) throw new RuntimeException("");
             try {
                 anOpenGL7664 = new OpenGL();
                 aLong7636 = aLong7553 = anOpenGL7664.init(canvas, 8, 8, 8, 24, 0, this.anInt7713);
@@ -1128,12 +1128,12 @@ final class GlToolkitSub2
                     int i_100_ = 0;
                     boolean bool = false;
                     boolean bool_101_ = false;
-                    String[] strings = (DefinitionSub23.method3113(' ', true, aString7790.replace('/', ' ')));
+                    String[] strings = (DefinitionSub23.splitByChar(' ', true, aString7790.replace('/', ' ')));
                     for (int i_102_ = 0; i_102_ < strings.length; i_102_++) {
                         String string = strings[i_102_];
                         try {
                             if (string.length() > 0) {
-                                if (string.charAt(0) == 'x' && string.length() >= 3 && (DisplayModeManagerContainer368.method468(string.substring(1, 3), 111))) {
+                                if (string.charAt(0) == 'x' && string.length() >= 3 && (DisplayModeManagerContainer368.isDecimal(string.substring(1, 3), 111))) {
                                     string = string.substring(1);
                                     bool_101_ = true;
                                 }
@@ -1143,8 +1143,8 @@ final class GlToolkitSub2
                                         bool = true;
                                         string = string.substring(2);
                                     }
-                                    if (string.length() >= 4 && (DisplayModeManagerContainer368.method468(string.substring(0, 4), 47))) {
-                                        i_100_ = (NodeSub41.method3156(true, string.substring(0, 4)));
+                                    if (string.length() >= 4 && (DisplayModeManagerContainer368.isDecimal(string.substring(0, 4), 47))) {
+                                        i_100_ = (NodeSub41.parseInt(true, string.substring(0, 4)));
                                         break;
                                     }
                                 }
@@ -1195,7 +1195,7 @@ final class GlToolkitSub2
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1316,7 +1316,7 @@ final class GlToolkitSub2
             anInt7653++;
             OpenGL.glMultMatrixf(class101_sub3.method940(1), 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.WC(" + bool + ',' + (class101_sub3 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.WC(" + bool + ',' + (class101_sub3 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1334,7 +1334,7 @@ final class GlToolkitSub2
             method3793(1, interface8);
             OpenGL.glDrawElements(i_119_, i, i_121_, (interface8.method36((byte) 78) + (long) i_120_));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.MA(" + i + ',' + i_118_ + ',' + i_119_ + ',' + (interface8 != null ? "{...}" : "null") + ',' + i_120_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.MA(" + i + ',' + i_118_ + ',' + i_119_ + ',' + (interface8 != null ? "{...}" : "null") + ',' + i_120_ + ')'));
         }
     }
 
@@ -1342,10 +1342,10 @@ final class GlToolkitSub2
         anInt7699++;
         int i_122_ = 0;
         i &= 0x7fffffff;
-        while (!aClass262_7751.method2002((byte) 18)) {
+        while (!aClass262_7751.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7751.peekFirst(8);
             ShaderCompilerSub3.anIntArray6522[i_122_++] = (int) class348_sub35.key;
-            this.anInt7747 -= class348_sub35.anInt6976;
+            this.anInt7747 -= class348_sub35.intValue;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteBuffersARB(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1355,10 +1355,10 @@ final class GlToolkitSub2
             OpenGL.glDeleteBuffersARB(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
             i_122_ = 0;
         }
-        while (!aClass262_7752.method2002((byte) 18)) {
+        while (!aClass262_7752.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7752.peekFirst(8);
             ShaderCompilerSub3.anIntArray6522[i_122_++] = (int) class348_sub35.key;
-            this.anInt7748 -= class348_sub35.anInt6976;
+            this.anInt7748 -= class348_sub35.intValue;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteTextures(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1368,9 +1368,9 @@ final class GlToolkitSub2
             OpenGL.glDeleteTextures(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
             i_122_ = 0;
         }
-        while (!aClass262_7753.method2002((byte) 18)) {
+        while (!aClass262_7753.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7753.peekFirst(8);
-            ShaderCompilerSub3.anIntArray6522[i_122_++] = class348_sub35.anInt6976;
+            ShaderCompilerSub3.anIntArray6522[i_122_++] = class348_sub35.intValue;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1380,10 +1380,10 @@ final class GlToolkitSub2
             OpenGL.glDeleteFramebuffersEXT(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
             i_122_ = 0;
         }
-        while (!aClass262_7754.method2002((byte) 18)) {
+        while (!aClass262_7754.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7754.peekFirst(8);
             ShaderCompilerSub3.anIntArray6522[i_122_++] = (int) class348_sub35.key;
-            anInt7750 -= class348_sub35.anInt6976;
+            anInt7750 -= class348_sub35.intValue;
             if (i_122_ == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
                 i_122_ = 0;
@@ -1393,21 +1393,21 @@ final class GlToolkitSub2
             OpenGL.glDeleteRenderbuffersEXT(i_122_, ShaderCompilerSub3.anIntArray6522, 0);
             boolean bool = false;
         }
-        while (!aClass262_7749.method2002((byte) 18)) {
+        while (!aClass262_7749.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7749.peekFirst(8);
-            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.intValue);
         }
-        while (!aClass262_7755.method2002((byte) 18)) {
+        while (!aClass262_7755.isEmpty((byte) 18)) {
             Node class348 = aClass262_7755.peekFirst(8);
             OpenGL.glDeleteProgramARB((int) class348.key);
         }
-        while (!aClass262_7756.method2002((byte) 18)) {
+        while (!aClass262_7756.isEmpty((byte) 18)) {
             Node class348 = aClass262_7756.peekFirst(8);
             OpenGL.glDeleteObjectARB(class348.key);
         }
-        while (!aClass262_7749.method2002((byte) 18)) {
+        while (!aClass262_7749.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_7749.peekFirst(8);
-            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.intValue);
         }
         aClass354_7723.method3469(8218);
         if (E() > 100663296 && 60000L + aLong7757 < Component240.currentTimeMillis(-96)) {
@@ -1504,7 +1504,7 @@ final class GlToolkitSub2
                 anInterface11_7740.method47(-11421);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.FA(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.FA(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1524,7 +1524,7 @@ final class GlToolkitSub2
                 if (i == 55) break;
                 method3782(null, -47);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.GC(" + i + ',' + (class101_sub3 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.GC(" + i + ',' + (class101_sub3 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1547,7 +1547,7 @@ final class GlToolkitSub2
                 anOpenGL7664.releaseSurface(canvas, var_long.longValue());
                 aHashtable7577.remove(canvas);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "qo.AG(" + (canvas != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "qo.AG(" + (canvas != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -1691,7 +1691,7 @@ final class GlToolkitSub2
             class348.key = l;
             aClass262_7756.addTail(class348, -20180);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.CD(" + l + ',' + bool + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.CD(" + l + ',' + bool + ')');
         }
     }
 
@@ -1715,7 +1715,7 @@ final class GlToolkitSub2
                 if (i == -422613672) break;
                 this.anInt7788 = 30;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.FD(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.FD(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1741,7 +1741,7 @@ final class GlToolkitSub2
             }
             anInt7765 &= ~0x1;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.VA(" + i + ',' + (class258 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.VA(" + i + ',' + (class258 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1821,7 +1821,7 @@ final class GlToolkitSub2
                 if (l == -1L) throw new RuntimeException();
                 aHashtable7577.put(canvas, new Long(l));
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_177_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_177_ + ')'));
             }
             break;
         } while (false);
@@ -1848,7 +1848,7 @@ final class GlToolkitSub2
             anInt7600++;
             return new BufferCacheSub2(this, i_181_, i_182_, i, i_178_, is, is_179_, i_180_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.VE(" + i + ',' + i_178_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_179_ != null ? "{...}" : "null") + ',' + i_180_ + ',' + i_181_ + ',' + i_182_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.VE(" + i + ',' + i_178_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_179_ != null ? "{...}" : "null") + ',' + i_180_ + ',' + i_181_ + ',' + i_182_ + ')'));
         }
     }
 
@@ -1871,7 +1871,7 @@ final class GlToolkitSub2
                 anInterface11_7745.method46(-11762);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.JB(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.JB(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1883,11 +1883,11 @@ final class GlToolkitSub2
         if (aString7845.indexOf("microsoft") != -1) i_183_ |= 0x1;
         if (aString7845.indexOf("brian paul") != -1 || aString7845.indexOf("mesa") != -1) i_183_ |= 0x1;
         String string = OpenGL.glGetString(7938);
-        String[] strings = DefinitionSub23.method3113(' ', true, string.replace('.', ' '));
+        String[] strings = DefinitionSub23.splitByChar(' ', true, string.replace('.', ' '));
         if (strings.length >= 2) {
             try {
-                int i_184_ = NodeSub41.method3156(true, strings[0]);
-                int i_185_ = NodeSub41.method3156(true, strings[1]);
+                int i_184_ = NodeSub41.parseInt(true, strings[0]);
+                int i_185_ = NodeSub41.parseInt(true, strings[1]);
                 anInt7789 = i_184_ * 10 - -i_185_;
             } catch (NumberFormatException numberformatexception) {
                 i_183_ |= 0x4;
@@ -1994,7 +1994,7 @@ final class GlToolkitSub2
                 method3762(5890, 768, (byte) -87, 0);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.IF(" + i + ',' + i_186_ + ',' + i_187_ + ',' + i_188_ + ',' + i_189_ + ',' + i_190_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_191_ + ',' + i_192_ + ',' + i_193_ + ',' + i_194_ + ',' + i_195_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.IF(" + i + ',' + i_186_ + ',' + i_187_ + ',' + i_188_ + ',' + i_189_ + ',' + i_190_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_191_ + ',' + i_192_ + ',' + i_193_ + ',' + i_194_ + ',' + i_195_ + ')'));
         }
     }
 
@@ -2011,7 +2011,7 @@ final class GlToolkitSub2
             anInt7589++;
             return RuntimeException_Sub1.method4009(i, is, is_211_, 0, this, i_210_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.RF(" + i + ',' + i_210_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_211_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.RF(" + i + ',' + i_210_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_211_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2021,7 +2021,7 @@ final class GlToolkitSub2
             anInt7675++;
             is[1] = this.anInt7641;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.KE(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.KE(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2080,7 +2080,7 @@ final class GlToolkitSub2
                 this.aClass123_7833 = new Component132(anInterface2_7797, 5126, 2, 12);
                 aClass233_7711.method1654(643267468, this);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "qo.PF(" + (var_za != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "qo.PF(" + (var_za != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -2111,7 +2111,7 @@ final class GlToolkitSub2
             OpenGL.glEnd();
             method3762(5890, 768, (byte) -87, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_212_ + ',' + i_213_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_212_ + ',' + i_213_ + ')'));
         }
     }
 
@@ -2138,7 +2138,7 @@ final class GlToolkitSub2
         int i_218_ = 0;
         while (!anOpenGL7664.b()) {
             if (i_218_++ > 5) throw new RuntimeException("");
-            SpriteAtlasShader.method2161((byte) -3, 1000L);
+            SpriteAtlasShader.sleep((byte) -3, 1000L);
         }
     }
 
@@ -2194,7 +2194,7 @@ final class GlToolkitSub2
                 if (aCanvas7575 != canvas) break;
                 method3745((byte) 117);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_231_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_231_ + ')'));
             }
             break;
         } while (false);
@@ -2205,7 +2205,7 @@ final class GlToolkitSub2
             anInt7522++;
             return new SpriteSub2(this, i_233_, i_234_, is, i, i_232_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_232_ + ',' + i_233_ + ',' + i_234_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_232_ + ',' + i_233_ + ',' + i_234_ + ',' + bool + ')'));
         }
     }
 
@@ -2277,7 +2277,7 @@ final class GlToolkitSub2
             anInterface11_7745 = anInterface11Array7741[++anInt7738] = interface11;
             anInterface11_7745.method49(-27141);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.HD(" + (interface11 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.HD(" + (interface11 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -2313,7 +2313,7 @@ final class GlToolkitSub2
                 is[1] = (int) (-this.aFloat7836 + (float) i_249_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.H(" + i + ',' + i_246_ + ',' + i_247_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.H(" + i + ',' + i_246_ + ',' + i_247_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2347,9 +2347,9 @@ final class GlToolkitSub2
             OpenGL.glLightfv(i_251_, 4611, ShaderCompilerSub1.aFloatArray6514, 0);
             int i_252_ = class348_sub1.method2720(-1);
             float f = class348_sub1.method2721(-76) / 255.0F;
-            ShaderCompilerSub1.aFloatArray6514[2] = (float) GpsOverlay.method1166(i_252_, 255) * f;
-            ShaderCompilerSub1.aFloatArray6514[0] = ((float) (GpsOverlay.method1166(16762087, i_252_) >> 16) * f);
-            ShaderCompilerSub1.aFloatArray6514[1] = ((float) (GpsOverlay.method1166(i_252_, 65533) >> 8) * f);
+            ShaderCompilerSub1.aFloatArray6514[2] = (float) GpsOverlay.bitwiseAnd(i_252_, 255) * f;
+            ShaderCompilerSub1.aFloatArray6514[0] = ((float) (GpsOverlay.bitwiseAnd(16762087, i_252_) >> 16) * f);
+            ShaderCompilerSub1.aFloatArray6514[1] = ((float) (GpsOverlay.bitwiseAnd(i_252_, 65533) >> 8) * f);
             OpenGL.glLightfv(i_251_, 4609, ShaderCompilerSub1.aFloatArray6514, 0);
             OpenGL.glLightf(i_251_, 4617, 1.0F / (float) (class348_sub1.method2723(-1) * class348_sub1.method2723(-1)));
             OpenGL.glEnable(i_251_);
@@ -2386,7 +2386,7 @@ final class GlToolkitSub2
             aClass233_7711.method1651(this, (byte) -116, i, class98);
             anInt7687++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -2449,7 +2449,7 @@ final class GlToolkitSub2
                 }
             } else is[0] = is[1] = is[2] = -1;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.da(" + i + ',' + i_254_ + ',' + i_255_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.da(" + i + ',' + i_254_ + ',' + i_255_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2466,7 +2466,7 @@ final class GlToolkitSub2
         try {
             anInt7590++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.IA(" + (interface4 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.IA(" + (interface4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2645,7 +2645,7 @@ final class GlToolkitSub2
                     anInterface8_7817 = interface8;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.OE(" + i + ',' + (interface8 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.OE(" + i + ',' + (interface8 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -2677,7 +2677,7 @@ final class GlToolkitSub2
                 } else OpenGL.glDisableClientState(32888);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.KB(" + (class123 != null ? "{...}" : "null") + ',' + (class123_279_ != null ? "{...}" : "null") + ',' + i + ',' + (class123_280_ != null ? "{...}" : "null") + ',' + (class123_281_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.KB(" + (class123 != null ? "{...}" : "null") + ',' + (class123_279_ != null ? "{...}" : "null") + ',' + i + ',' + (class123_280_ != null ? "{...}" : "null") + ',' + (class123_281_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2691,7 +2691,7 @@ final class GlToolkitSub2
             anInt7596++;
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.NB(" + (interface3 != null ? "{...}" : "null") + ',' + (interface13 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.NB(" + (interface3 != null ? "{...}" : "null") + ',' + (interface13 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2752,7 +2752,7 @@ final class GlToolkitSub2
                 if (anInt7865 == 1) break;
                 method3783(0);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("qo.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -2871,7 +2871,7 @@ final class GlToolkitSub2
             if (f < 0.5F) return class299;
             return class299_305_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.SD(" + (class299 != null ? "{...}" : "null") + ',' + (class299_305_ != null ? "{...}" : "null") + ',' + f + ',' + (class299_306_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.SD(" + (class299 != null ? "{...}" : "null") + ',' + (class299_305_ != null ? "{...}" : "null") + ',' + f + ',' + (class299_306_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2892,7 +2892,7 @@ final class GlToolkitSub2
             anOpenGL7664.setSurface(aLong7636);
             method3745((byte) 92);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qo.MF(" + (canvas != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qo.MF(" + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2912,7 +2912,7 @@ final class GlToolkitSub2
             method3626(i_313_, i_314_);
             anInt7584++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_313_ + ',' + i_314_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_313_ + ',' + i_314_ + ')'));
         }
     }
 
@@ -3476,9 +3476,9 @@ final class GlToolkitSub2
         if ((float) this.anInt7826 > this.aFloat7792) this.aFloat7792 = (float) this.anInt7826;
         OpenGL.glFogf(2915, this.aFloat7792);
         OpenGL.glFogf(2916, aFloat7824);
-        InputStream_Sub2.aFloatArray84[0] = ((float) GpsOverlay.method1166(i, this.anInt7856) / 1.671168E7F);
-        InputStream_Sub2.aFloatArray84[1] = ((float) GpsOverlay.method1166(this.anInt7856, 65280) / 65280.0F);
-        InputStream_Sub2.aFloatArray84[2] = ((float) GpsOverlay.method1166(this.anInt7856, 255) / 255.0F);
+        InputStream_Sub2.aFloatArray84[0] = ((float) GpsOverlay.bitwiseAnd(i, this.anInt7856) / 1.671168E7F);
+        InputStream_Sub2.aFloatArray84[1] = ((float) GpsOverlay.bitwiseAnd(this.anInt7856, 65280) / 65280.0F);
+        InputStream_Sub2.aFloatArray84[2] = ((float) GpsOverlay.bitwiseAnd(this.anInt7856, 255) / 255.0F);
         OpenGL.glFogfv(2918, InputStream_Sub2.aFloatArray84, 0);
     }
 
@@ -3530,7 +3530,7 @@ final class GlToolkitSub2
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.CA(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.CA(" + i + ',' + (interface11 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -3606,13 +3606,13 @@ final class GlToolkitSub2
                 for (int i_470_ = 0; class207.anInt2696 > i_470_; i_470_++) {
                     for (int i_471_ = 0; (class207.anInt2702 > i_471_); i_471_++) {
                         int i_472_ = (class207.anIntArray2697[0xff & (class207.aByteArray2699[i++])]);
-                        is[i_467_++] = i_472_ == 0 ? 0 : Component224.method2057(-16777216, i_472_);
+                        is[i_467_++] = i_472_ == 0 ? 0 : Component224.bitwiseOr(-16777216, i_472_);
                     }
                 }
             } else {
                 for (int i_468_ = 0; class207.anInt2696 > i_468_; i_468_++) {
                     for (int i_469_ = 0; (i_469_ < class207.anInt2702); i_469_++) {
-                        is[i_467_++] = (Component224.method2057((class207.aByteArray2695[i] << 24), (class207.anIntArray2697[GpsOverlay.method1166((class207.aByteArray2699[i]), 255)])));
+                        is[i_467_++] = (Component224.bitwiseOr((class207.aByteArray2695[i] << 24), (class207.anIntArray2697[GpsOverlay.bitwiseAnd((class207.aByteArray2699[i]), 255)])));
                         i++;
                     }
                 }
@@ -3621,7 +3621,7 @@ final class GlToolkitSub2
             class105.method985(class207.anInt2703, class207.anInt2700, class207.anInt2698, class207.anInt2701);
             return class105;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qo.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -3636,12 +3636,12 @@ final class GlToolkitSub2
     }
 
     final void method3808(int i, int i_473_) {
-        InputStream_Sub2.aFloatArray84[2] = (float) GpsOverlay.method1166(i, 255) / 255.0F;
+        InputStream_Sub2.aFloatArray84[2] = (float) GpsOverlay.bitwiseAnd(i, 255) / 255.0F;
         if (i_473_ <= 116) this.anInt7771 = 76;
         InputStream_Sub2.aFloatArray84[3] = (float) (i >>> 24) / 255.0F;
-        InputStream_Sub2.aFloatArray84[1] = (float) GpsOverlay.method1166(i, 65280) / 65280.0F;
+        InputStream_Sub2.aFloatArray84[1] = (float) GpsOverlay.bitwiseAnd(i, 65280) / 65280.0F;
         anInt7659++;
-        InputStream_Sub2.aFloatArray84[0] = (float) GpsOverlay.method1166(16711680, i) / 1.671168E7F;
+        InputStream_Sub2.aFloatArray84[0] = (float) GpsOverlay.bitwiseAnd(16711680, i) / 1.671168E7F;
         OpenGL.glTexEnvfv(8960, 8705, InputStream_Sub2.aFloatArray84, 0);
     }
 

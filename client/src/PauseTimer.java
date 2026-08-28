@@ -91,13 +91,13 @@ final class PauseTimer {
                     } catch (Exception exception) {
                         /* empty */
                     }
-                    Applet_Sub1.method94("Pausing for " + i_5_ + " seconds...", 58);
+                    Applet_Sub1.printConsole("Pausing for " + i_5_ + " seconds...", 58);
                     Component221.anInt1794 = 1 + i_4_;
                     Component100.aLong8694 = (long) (1000 * i_5_) + Component240.currentTimeMillis(-97);
                     return;
                 } else {
                     Component126.aString4461 = Cp1252Decoder.aStringArray5223[i_4_];
-                    Component210.method555(false, 0);
+                    Component210.submitConsoleLine(false, 0);
                 }
             }
             Component221.anInt1794 = -1;
@@ -111,9 +111,9 @@ final class PauseTimer {
         if (i >= 124) {
             for (int i_6_ = 0; (HashNodeSub19.anInt9699 > i_6_); i_6_++) {
                 Interface6 interface6 = DefinitionGroup.anInterface6Array9534[i_6_];
-                int i_7_ = interface6.method30(false);
-                char c = interface6.method28((byte) 46);
-                int i_8_ = interface6.method26(-7616);
+                int i_7_ = interface6.getKeyCode(false);
+                char c = interface6.getKeyChar((byte) 46);
+                int i_8_ = interface6.getModifiers(-7616);
                 if (i_7_ == 98) {
                     for (int index = HISTORY_INDEX; index < ArbShaderProgram.aStringArray6200.length; index++) {
                         if (index == -1) {
@@ -154,7 +154,7 @@ final class PauseTimer {
                         NodeSub38.anInt7006 = 0;
                     }
                 } else if (i_7_ == 84) {
-                    Component210.method555(false, 0);
+                    Component210.submitConsoleLine(false, 0);
                     HISTORY_INDEX = -1;
                 } else if (i_7_ != 80) {
                     if (i_7_ == 66 && (0x4 & i_8_) != 0) {
@@ -195,7 +195,7 @@ final class PauseTimer {
                                         Shader.method159(-615751774);
                                         NodeSub38.anInt7006 = Component126.aString4461.length();
                                     } else if (Npc.method2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
-                                        Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006)) + DefinitionGroup.anInterface6Array9534[i_6_].method28((byte) 23) + (Component126.aString4461.substring(NodeSub38.anInt7006)));
+                                        Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006)) + DefinitionGroup.anInterface6Array9534[i_6_].getKeyChar((byte) 23) + (Component126.aString4461.substring(NodeSub38.anInt7006)));
                                         NodeSub38.anInt7006++;
                                     }
                                 } else {
@@ -227,15 +227,15 @@ final class PauseTimer {
                             try {
                                 String string = (String) (transferable.getTransferData(DataFlavor.stringFlavor));
                                 if (string != null) {
-                                    String[] strings = DefinitionSub23.method3113('\n', true, string);
-                                    PauseHandler.method3189(0, strings);
+                                    String[] strings = DefinitionSub23.splitByChar('\n', true, string);
+                                    PauseHandler.runConsoleCommands(0, strings);
                                 }
                             } catch (Exception exception) {
                                 /* empty */
                             }
                         }
                     }
-                } else Component210.method555(true, 0);
+                } else Component210.submitConsoleLine(true, 0);
             }
             HashNodeSub19.anInt9699 = 0;
             Component193.anInt3246 = 0;

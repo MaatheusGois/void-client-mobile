@@ -41,7 +41,7 @@ final class PlayerState extends Node {
             if (Component72.localPlayer == player) {
                 if (r.aBoolean9722 && (PauseTimer.anInt500 & 0x10) != 0) {
                     Component299.anInt450++;
-                    DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=ffffff>" + FriendsIgnoreList.aClass274_3520.method2063(ObjectDeserializer.anInt6967, 544)), 0, (byte) -109, false, 0, -1, true, 50, player.anInt10290, DisplayModeManagerContainer332.aString5001, 0L, Component182.anInt9747);
+                    DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=ffffff>" + FriendsIgnoreList.aClass274_3520.getLocalized(ObjectDeserializer.languageId, 544)), 0, (byte) -109, false, 0, -1, true, 50, player.anInt10290, DisplayModeManagerContainer332.aString5001, 0L, Component182.anInt9747);
                 }
             } else {
                 String string;
@@ -55,13 +55,13 @@ final class PlayerState extends Node {
                         if (i_4_ < 0) i_4_ = -i_4_;
                         if (i_3_ < i_4_) bool_0_ = false;
                     }
-                    String string_5_ = ((WorldNameText.aClass230_8638 == PacketReader.aClass230_10434) ? FriendsIgnoreList.aClass274_3513.method2063(ObjectDeserializer.anInt6967, 544) : FriendsIgnoreList.aClass274_3511.method2063(ObjectDeserializer.anInt6967, 544));
+                    String string_5_ = ((WorldNameText.STELLARDAWN == PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544));
                     if (player.anInt10516 >= player.anInt10557)
                         string = (player.method2456(true, 255) + (!bool_0_ ? "<col=ffffff>" : (WorldNameText.method250((Component72.localPlayer.anInt10516), true, (player.anInt10516)))) + " (" + string_5_ + player.anInt10516 + ")");
                     else
                         string = (player.method2456(true, 255) + (bool_0_ ? (WorldNameText.method250((Component72.localPlayer.anInt10516), true, (player.anInt10516))) : "<col=ffffff>") + " (" + string_5_ + player.anInt10516 + "+" + (-player.anInt10516 + player.anInt10557) + ")");
                 } else if (player.anInt10564 == -1) string = player.method2456(true, 255);
-                else string = (player.method2456(true, 255) + " (" + FriendsIgnoreList.aClass274_3512.method2063(ObjectDeserializer.anInt6967, 544) + player.anInt10564 + ")");
+                else string = (player.method2456(true, 255) + " (" + FriendsIgnoreList.aClass274_3512.getLocalized(ObjectDeserializer.languageId, 544) + player.anInt10564 + ")");
                 if (r.aBoolean9722 && !bool && (0x8 & PauseTimer.anInt500) != 0) {
                     DisplayModeManagerContainer368.addMenuEntry(false, DisplayModeManagerContainer332.aString5000 + " -> <col=ffffff>" + string, 0, (byte) -109, false, 0, -1, true, 51, player.anInt10290, DisplayModeManagerContainer332.aString5001, player.anInt10290, Component182.anInt9747);
                     DisplayModeManagerContainer196.anInt4228++;
@@ -72,7 +72,7 @@ final class PlayerState extends Node {
                     for (int i_6_ = 7; i_6_ >= 0; i_6_--) {
                         if (Component252.aStringArray10195[i_6_] != null) {
                             short i_7_ = 0;
-                            if ((PacketReader.aClass230_10434 != RunescapeInfo.aClass230_186) || !(Component252.aStringArray10195[i_6_].equalsIgnoreCase(FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544)))) {
+                            if ((PacketReader.currentGameType != RunescapeInfo.RUNESCAPE) || !(Component252.aStringArray10195[i_6_].equalsIgnoreCase(FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544)))) {
                                 if (DisplayModeManagerContainer5.aBooleanArray1214[i_6_]) i_7_ = (short) 2000;
                             } else {
                                 if ((Component72.localPlayer.anInt10516) < (player.anInt10516)) i_7_ = (short) 2000;
@@ -91,7 +91,7 @@ final class PlayerState extends Node {
                 if (!bool) {
                     for (MenuEntry class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.first(4); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.next((byte) 105))) {
                         if ((class348_sub42_sub12.opcode) == 19) {
-                            class348_sub42_sub12.aString9595 = "<col=ffffff>" + string;
+                            class348_sub42_sub12.extraTarget = "<col=ffffff>" + string;
                             break;
                         }
                     }

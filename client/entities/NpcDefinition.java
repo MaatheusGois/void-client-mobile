@@ -33,7 +33,8 @@ final class NpcDefinition extends Node {
         }
     }
 
-    static final RuntimeException_Sub1 method2929(Throwable throwable, String string) {
+    /** Wraps {@code throwable} with a client {@link RuntimeException_Sub1} tagged by {@code string}. */
+    static final RuntimeException_Sub1 wrapThrowable(Throwable throwable, String string) {
         anInt6789++;
         if (Loader.trace) {
             throwable.printStackTrace();
@@ -41,7 +42,7 @@ final class NpcDefinition extends Node {
         RuntimeException_Sub1 runtimeexception_sub1;
         if (throwable instanceof RuntimeException_Sub1) {
             runtimeexception_sub1 = (RuntimeException_Sub1) throwable;
-            runtimeexception_sub1.aString4594 += ' ' + string;
+            runtimeexception_sub1.detail += ' ' + string;
         } else runtimeexception_sub1 = new RuntimeException_Sub1(throwable, string);
         return runtimeexception_sub1;
     }
@@ -92,7 +93,7 @@ final class NpcDefinition extends Node {
                 npc.anInt10218 = i;
                 npc.anInt10322 = (npc.anInt10319);
             } catch (RuntimeException runtimeexception) {
-                throw method2929(runtimeexception, ("jf.E(" + i + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ',' + (npc != null ? "{...}" : "null") + ')'));
+                throw wrapThrowable(runtimeexception, ("jf.E(" + i + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ',' + (npc != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -123,7 +124,7 @@ final class NpcDefinition extends Node {
             }
             return bool;
         } catch (RuntimeException runtimeexception) {
-            throw method2929(runtimeexception, ("jf.B(" + (class26 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_5_ != null ? "{...}" : "null") + ',' + i + ')'));
+            throw wrapThrowable(runtimeexception, ("jf.B(" + (class26 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_5_ != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -235,7 +236,7 @@ final class NpcDefinition extends Node {
                 else i_35_ = -1;
                 i_37_ = class348_sub49.readVarInt((byte) 124);
             }
-            this.aShortArray6795[i_38_] += GpsOverlay.method1166(32768, i_37_ + -1 << 14);
+            this.aShortArray6795[i_38_] += GpsOverlay.bitwiseAnd(32768, i_37_ + -1 << 14);
             i_35_--;
             anIntArray6793[i_38_] = i_37_;
         }

@@ -1,18 +1,20 @@
-/* DisplayModeManagerContainer155 - Decompiled by JODE
+/* BuildType - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer155
 /**
- * RENAMED from `Class231` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
+ * RENAMED from {@code Class231} (JODE-obfuscated).
+ * Client build channel: {@link Component342#LIVE}, {@link DefinitionSub20#RC}, {@link Component118#WIP}.
+ * Selected via applet {@code modewhat} / CLI; {@link #id} is 0/1/2.
+ */
+final class BuildType {
     static int anInt2990;
     static int anInt2991;
     static int anInt2992;
     static ReflectionInvoker aClass297_2993;
     static int anInt2994;
-    int anInt2995;
+    /** 0=LIVE, 1=RC, 2=WIP. */
+    int id;
     static int anInt2996;
     static int anInt2997;
 
@@ -35,10 +37,11 @@ final class DisplayModeManagerContainer155
         return i >= 12 && i <= 17;
     }
 
-    final int method1640(int i) {
+    /** {@link #id}. */
+    final int getId(int i) {
         if (i != 0) return -76;
         anInt2991++;
-        return this.anInt2995;
+        return this.id;
     }
 
     public static void method1641(byte i) {
@@ -57,7 +60,7 @@ final class DisplayModeManagerContainer155
         int i_5_ = -10660793;
         StaticElementRenderer.method2509(Component227.anInt1117, DefinitionGroup.anInt9532 - -i_4_, var_ha, DisplayModeManagerContainer136.anInt4717 - -i_3_, i_5_, true, Component251.anInt5819, -16777216);
         if (i > 98) {
-            NodeList.aClass324_3326.drawText(FriendsIgnoreList.aClass274_3507.method2063(ObjectDeserializer.anInt6967, 544), i_5_, i_4_ + (DefinitionGroup.anInt9532 - -14), i_3_ + (DisplayModeManagerContainer136.anInt4717 + 3), -1, -125);
+            NodeList.aClass324_3326.drawText(FriendsIgnoreList.aClass274_3507.getLocalized(ObjectDeserializer.languageId, 544), i_5_, i_4_ + (DefinitionGroup.anInt9532 - -14), i_3_ + (DisplayModeManagerContainer136.anInt4717 + 3), -1, -125);
             int i_6_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true) - -i_3_;
             int i_7_ = i_4_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 127);
             if (PauseHandler.aBoolean9535) {
@@ -92,7 +95,8 @@ final class DisplayModeManagerContainer155
         }
     }
 
-    DisplayModeManagerContainer155(String string, int i) {
-        this.anInt2995 = i;
+    /** {@code string} is label only (LIVE/RC/WIP); stored key is {@code i}. */
+    BuildType(String string, int i) {
+        this.id = i;
     }
 }

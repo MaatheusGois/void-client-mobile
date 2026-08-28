@@ -90,7 +90,7 @@ final class DisplayModeManagerContainer320
             }
             return class105_9_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ub.C(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (class324 != null ? "{...}" : "null") + ',' + (class154 != null ? "{...}" : "null") + ',' + i_1_ + ',' + bool + ',' + i_2_ + ',' + (var_ha_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + bool_5_ + ',' + i_6_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ub.C(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (class324 != null ? "{...}" : "null") + ',' + (class154 != null ? "{...}" : "null") + ',' + i_1_ + ',' + bool + ',' + i_2_ + ',' + (var_ha_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + bool_5_ + ',' + i_6_ + ')'));
         }
     }
 
@@ -152,7 +152,7 @@ final class DisplayModeManagerContainer320
             for (int i = 0; i < class207s.length; i++)
                 Component33.aClass105Array2640[i] = var_ha.method3691(class207s[i], true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ub.N(" + (class45 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ub.N(" + (class45 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -173,7 +173,7 @@ final class DisplayModeManagerContainer320
                 class30.method320(class64.EA(), class64.fa(), (byte) -4, i_11_, class64.ShaderImpl(), i, class64.V(), class64.G(), class64.HA(), i_10_, class64.RA());
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ub.H(" + i + ',' + i_10_ + ',' + (class30 != null ? "{...}" : "null") + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_11_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ub.H(" + i + ',' + i_10_ + ',' + (class30 != null ? "{...}" : "null") + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_11_ + ')'));
         }
     }
 
@@ -236,20 +236,20 @@ final class DisplayModeManagerContainer320
         if (class213 != null) return class213;
         byte[] is;
         synchronized (aClass45_3267) {
-            is = aClass45_3267.method410(-1860, Component285.method500(7, i_13_), Component111.method1914(-23590, i_13_));
+            is = aClass45_3267.getFile(-1860, Component285.method500(7, i_13_), Component111.method1914(-23590, i_13_));
         }
         class213 = new NumberFormatter();
         class213.aClass255_2761 = this;
         class213.anInt2769 = i_13_;
-        class213.aStringArray2811 = new String[]{null, null, FriendsIgnoreList.aClass274_3490.method2063(this.anInt3286, 544), null, null};
-        class213.aStringArray2763 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.method2063(this.anInt3286, 544)});
+        class213.aStringArray2811 = new String[]{null, null, FriendsIgnoreList.aClass274_3490.getLocalized(this.anInt3286, 544), null, null};
+        class213.aStringArray2763 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.getLocalized(this.anInt3286, 544)});
         if (is != null) class213.method1569(768, new Buffer(is));
         class213.method1563((byte) 92);
         int i_14_ = 4 / ((i - 13) / 59);
         if (class213.anInt2833 != -1) class213.method1570(1, method1940(90, class213.anInt2758), method1940(101, class213.anInt2833));
         if (class213.anInt2812 != -1) class213.method1556(method1940(-58, class213.anInt2778), (byte) -29, method1940(-82, class213.anInt2812));
         if (!aBoolean3269 && class213.aBoolean2783) {
-            class213.aString2795 = FriendsIgnoreList.aClass274_3488.method2063(this.anInt3286, 544);
+            class213.aString2795 = FriendsIgnoreList.aClass274_3488.getLocalized(this.anInt3286, 544);
             class213.anInt2827 = 0;
             class213.aStringArray2811 = aStringArray3290;
             class213.aStringArray2763 = aStringArray3293;
@@ -284,7 +284,7 @@ final class DisplayModeManagerContainer320
             aClass126_3289.anInt4993 = i;
             return (Component24) this.aClass175_3288.method1340(123, aClass126_3289);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ub.D(" + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class154 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ub.D(" + i + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class154 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -297,7 +297,7 @@ final class DisplayModeManagerContainer320
         }
     }
 
-    DisplayModeManagerContainer320(DisplayModeManagerContainer124 class230, int i, boolean bool, Component311 class326, CacheStore class45, CacheStore class45_22_) {
+    DisplayModeManagerContainer320(GameType class230, int i, boolean bool, Component311 class326, CacheStore class45, CacheStore class45_22_) {
         try {
             aBoolean3269 = bool;
             aClass326_3292 = class326;
@@ -305,13 +305,13 @@ final class DisplayModeManagerContainer320
             this.anInt3286 = i;
             aClass45_3267 = class45;
             if (aClass45_3267 != null) {
-                int i_23_ = -1 + aClass45_3267.method414(-1);
-                this.anInt3271 = aClass45_3267.method407(0, i_23_) + i_23_ * 256;
+                int i_23_ = -1 + aClass45_3267.getGroupCapacity(-1);
+                this.anInt3271 = aClass45_3267.getFileCount(0, i_23_) + i_23_ * 256;
             } else this.anInt3271 = 0;
-            aStringArray3290 = (new String[]{null, null, FriendsIgnoreList.aClass274_3490.method2063(this.anInt3286, 544), null, null});
-            aStringArray3293 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.method2063(this.anInt3286, 544)});
+            aStringArray3290 = (new String[]{null, null, FriendsIgnoreList.aClass274_3490.getLocalized(this.anInt3286, 544), null, null});
+            aStringArray3293 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.getLocalized(this.anInt3286, 544)});
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ub.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class326 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_22_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ub.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class326 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_22_ != null ? "{...}" : "null") + ')'));
         }
     }
 

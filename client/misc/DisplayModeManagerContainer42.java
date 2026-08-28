@@ -52,7 +52,7 @@ final class DisplayModeManagerContainer42
             }
             if (bool) break;
             try {
-                SpriteAtlasShader.method2161((byte) -18, 1L);
+                SpriteAtlasShader.sleep((byte) -18, 1L);
             } catch (Exception exception) {
                 /* empty */
             }
@@ -71,7 +71,7 @@ final class DisplayModeManagerContainer42
             }
             if (bool) break;
             try {
-                SpriteAtlasShader.method2161((byte) 72, 1L);
+                SpriteAtlasShader.sleep((byte) 72, 1L);
             } catch (Exception exception) {
                 /* empty */
             }
@@ -84,7 +84,7 @@ final class DisplayModeManagerContainer42
                 LoggedOutDefinition.aClass293Array9432[0].notify();
             }
             try {
-                SpriteAtlasShader.method2161((byte) 112, 1L);
+                SpriteAtlasShader.sleep((byte) 112, 1L);
             } catch (Exception exception) {
                 /* empty */
             }
@@ -94,7 +94,7 @@ final class DisplayModeManagerContainer42
 
     static final void method2291(byte i, int i_4_, int i_5_) {
         anInt3849++;
-        int i_6_ = (Component27.aClass143_4962.stringWidth(true, FriendsIgnoreList.aClass274_3507.method2063(ObjectDeserializer.anInt6967, 544)));
+        int i_6_ = (Component27.aClass143_4962.stringWidth(true, FriendsIgnoreList.aClass274_3507.getLocalized(ObjectDeserializer.languageId, 544)));
         int i_7_;
         if (PauseHandler.aBoolean9535) {
             for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-87)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 126))) {

@@ -319,7 +319,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             var_ya.r();
     }
 
-    final int method3679(int i, int i_121_) {
+    final int bitwiseOr(int i, int i_121_) {
         return i | i_121_;
     }
 
@@ -470,7 +470,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         do {
             try {
 
-                if (!DefinitionSub19.method3098(-30282, "sw3d")) throw new RuntimeException("");
+                if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "sw3d")) throw new RuntimeException("");
                 Component36.method1949((byte) -128);
                 MA(aD4579, 0, 0);
                 Component54.method566(false, true, (byte) 23);

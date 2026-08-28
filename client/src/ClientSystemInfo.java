@@ -27,7 +27,7 @@ final class ClientSystemInfo extends Node {
         anInt6874++;
         if (Component338.aBoolean1712) {
             Component338.aBoolean1712 = false;
-            SocketConnector.method2049(67);
+            SocketConnector.forceLogout(67);
         } else {
             if (!Component364.aBoolean8335) DisplayModeManagerContainer190.method661((byte) 95);
             for (int i_0_ = 0; i_0_ < 100; i_0_++) {
@@ -58,11 +58,11 @@ final class ClientSystemInfo extends Node {
                     for (NodeSub45 class348_sub45_3_ = ((NodeSub45) CacheNodeSub1.aClass262_10479.first(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) CacheNodeSub1.aClass262_10479.next((byte) 79)) {
                         if (class348_sub47 != null && (class348_sub47.aClass348_Sub49_Sub2_7116.offset - i_2_ >= 240)) break;
                         class348_sub45_3_.unlink((byte) 107);
-                        int i_4_ = class348_sub45_3_.method3311(-15);
+                        int i_4_ = class348_sub45_3_.getY(-15);
                         if (i_4_ >= -1) {
                             if (i_4_ > 65534) i_4_ = 65534;
                         } else i_4_ = -1;
-                        int i_5_ = class348_sub45_3_.method3308((byte) -127);
+                        int i_5_ = class348_sub45_3_.getX((byte) -127);
                         if (i_5_ >= -1) {
                             if (i_5_ > 65534) i_5_ = 65534;
                         } else i_5_ = -1;
@@ -77,7 +77,7 @@ final class ClientSystemInfo extends Node {
                             BufferCacheSub2.anInt8270 = i_5_;
                             int i_7_ = i_4_ - ImageCacheStore.anInt4032;
                             ImageCacheStore.anInt4032 = i_4_;
-                            int i_8_ = (int) ((class348_sub45_3_.method3312((byte) -107) + -Component117.aLong4367) / 20L);
+                            int i_8_ = (int) ((class348_sub45_3_.getWhen((byte) -107) + -Component117.aLong4367) / 20L);
                             if (i_8_ >= 8 || i_6_ < -32 || i_6_ > 31 || i_7_ < -32 || i_7_ > 31) {
                                 if (i_8_ < 32 && i_6_ >= -128 && i_6_ <= 127 && i_7_ >= -128 && i_7_ <= 127) {
                                     i_6_ += 128;
@@ -98,7 +98,7 @@ final class ClientSystemInfo extends Node {
                                 i_7_ += 32;
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (i_7_ + (i_6_ << 6) + (i_8_ << 12)));
                             }
-                            Component117.aLong4367 = class348_sub45_3_.method3312((byte) -109);
+                            Component117.aLong4367 = class348_sub45_3_.getWhen((byte) -109);
                         }
                     }
                     if (class348_sub47 != null) {
@@ -107,14 +107,14 @@ final class ClientSystemInfo extends Node {
                     }
                 }
                 if (class348_sub45 != null) {
-                    long l = ((class348_sub45.method3312((byte) -110) + -DisplayModeManagerContainer194.aLong5089) / 50L);
-                    DisplayModeManagerContainer194.aLong5089 = class348_sub45.method3312((byte) -87);
+                    long l = ((class348_sub45.getWhen((byte) -110) + -DisplayModeManagerContainer194.aLong5089) / 50L);
+                    DisplayModeManagerContainer194.aLong5089 = class348_sub45.getWhen((byte) -87);
                     if (l > 32767) l = 32767L;
-                    int i_9_ = class348_sub45.method3311(20);
+                    int i_9_ = class348_sub45.getY(20);
                     if (i_9_ >= 0) {
                         if (i_9_ > 65535) i_9_ = 65535;
                     } else i_9_ = 0;
-                    int i_10_ = class348_sub45.method3308((byte) -128);
+                    int i_10_ = class348_sub45.getX((byte) -128);
                     if (i_10_ < 0) i_10_ = 0;
                     else if (i_10_ > 65535) i_10_ = 65535;
                     int i_11_ = 0;
@@ -132,10 +132,10 @@ final class ClientSystemInfo extends Node {
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 3 * Component193.anInt3246);
                     for (int i_13_ = 0; (i_13_ < Component193.anInt3246); i_13_++) {
                         Interface6 interface6 = Component17.anInterface6Array3884[i_13_];
-                        long l = ((interface6.method29((byte) -29) + -NodeSub7.aLong6651) / 50L);
-                        NodeSub7.aLong6651 = interface6.method29((byte) 106);
+                        long l = ((interface6.getWhen((byte) -29) + -NodeSub7.aLong6651) / 50L);
+                        NodeSub7.aLong6651 = interface6.getWhen((byte) 106);
                         if (l > 65535L) l = 65535L;
-                        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, interface6.method30(false));
+                        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, interface6.getKeyCode(false));
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) l);
                     }
                     HashNodeSub14.method3243(-49, class348_sub47);
@@ -182,14 +182,14 @@ final class ClientSystemInfo extends Node {
                     PauseTimer.method362(i + -11335);
                     DisplayModeManagerContainer105.method1501(-123);
                     NodeSub50.anInt7213++;
-                    if (NodeSub50.anInt7213 > 750) SocketConnector.method2049(83);
+                    if (NodeSub50.anInt7213 > 750) SocketConnector.forceLogout(83);
                     else {
                         Component225.method349(i + -6692);
                         DefinitionSub38.method3150(true);
                         DisplayModeManagerContainer51.method1397(0);
                         for (int i_15_ = DisplayModeManagerContainer58.aClass170_10209.method1305((byte) -126, true); i_15_ != -1; i_15_ = DisplayModeManagerContainer58.aClass170_10209.method1305((byte) -128, false)) {
                             LibraryCreditsText.method1767(true, i_15_);
-                            DisplayModeManagerContainer363.anIntArray4096[GpsOverlay.method1166(31, DisplayModeManagerContainer260.anInt3695++)] = i_15_;
+                            DisplayModeManagerContainer363.anIntArray4096[GpsOverlay.bitwiseAnd(31, DisplayModeManagerContainer260.anInt3695++)] = i_15_;
                         }
                         for (RSARequest class348_sub42_sub15 = DefinitionSub30.method3127(2681); class348_sub42_sub15 != null; class348_sub42_sub15 = DefinitionSub30.method3127(2681)) {
                             int i_16_ = class348_sub42_sub15.method3245(true);
@@ -197,10 +197,10 @@ final class ClientSystemInfo extends Node {
                             if (i_16_ == 1) {
                                 DisplayModeManagerContainer123.anIntArray1303[i_17_] = class348_sub42_sub15.anInt9652;
                                 Component357.aBoolean2469 |= WaterShaderProgram.aBooleanArray6270[i_17_];
-                                Request.anIntArray6890[GpsOverlay.method1166(31, Component364.anInt8352++)] = i_17_;
+                                Request.anIntArray6890[GpsOverlay.bitwiseAnd(31, Component364.anInt8352++)] = i_17_;
                             } else if (i_16_ == 2) {
                                 GlFramebufferTexture.aStringArray8532[i_17_] = class348_sub42_sub15.aString9654;
-                                Component71.anIntArray6061[GpsOverlay.method1166(DefinitionSub30.anInt9385++, 31)] = i_17_;
+                                Component71.anIntArray6061[GpsOverlay.bitwiseAnd(DefinitionSub30.anInt9385++, 31)] = i_17_;
                             } else if (i_16_ == 3) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
                                 if (!class348_sub42_sub15.aString9654.equals(class46.aString792)) {
@@ -381,16 +381,16 @@ final class ClientSystemInfo extends Node {
                             } else i_30_ = 0;
                             TeleportHandler.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
                         }
-                        DisplayModeManagerContainer1.method1987(-120);
+                        DisplayModeManagerContainer1.updateMenuTip(-120);
                         int i_31_ = 0;
                         if (i == 11432) {
                             for (/**/; i_31_ < 5; i_31_++)
                                 Component212.anIntArray9981[i_31_]++;
-                            if (Component357.aBoolean2469 && (-60000L + Component240.currentTimeMillis(-84) > Component225.aLong482)) DisplayModeManagerContainer343.method2405(i + -11313);
-                            for (RenderableSub9Sub1 class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1872(i + -11424)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1878((byte) -105))) {
-                                if ((Component240.currentTimeMillis(i ^ ~0x2ce9) / 1000L + -5L) > (long) class318_sub9_sub1.anInt8787) {
-                                    if (class318_sub9_sub1.aShort8786 > 0) ShaderProgramSub2.method2144("", 5, (byte) -128, 0, (class318_sub9_sub1.aString8783 + (FriendsIgnoreList.aClass274_3502.method2063(ObjectDeserializer.anInt6967, 544))), "", "");
-                                    if (class318_sub9_sub1.aShort8786 == 0) ShaderProgramSub2.method2144("", 5, (byte) -105, 0, (class318_sub9_sub1.aString8783 + (FriendsIgnoreList.aClass274_3503.method2063(ObjectDeserializer.anInt6967, 544))), "", "");
+                            if (Component357.aBoolean2469 && (-60000L + Component240.currentTimeMillis(-84) > Component225.aLong482)) DisplayModeManagerContainer343.saveClientPreferences(i + -11313);
+                            for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1872(i + -11424)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1878((byte) -105))) {
+                                if ((Component240.currentTimeMillis(i ^ ~0x2ce9) / 1000L + -5L) > (long) class318_sub9_sub1.timestampSeconds) {
+                                    if (class318_sub9_sub1.worldId > 0) ShaderProgramSub2.method2144("", 5, (byte) -128, 0, (class318_sub9_sub1.username + (FriendsIgnoreList.aClass274_3502.getLocalized(ObjectDeserializer.languageId, 544))), "", "");
+                                    if (class318_sub9_sub1.worldId == 0) ShaderProgramSub2.method2144("", 5, (byte) -105, 0, (class318_sub9_sub1.username + (FriendsIgnoreList.aClass274_3503.getLocalized(ObjectDeserializer.languageId, 544))), "", "");
                                     class318_sub9_sub1.unlink(false);
                                 }
                             }
@@ -432,7 +432,7 @@ final class ClientSystemInfo extends Node {
                             try {
                                 Component302.method1802(0);
                             } catch (java.io.IOException ioexception) {
-                                SocketConnector.method2049(93);
+                                SocketConnector.forceLogout(93);
                             }
                         }
                     }
@@ -441,7 +441,8 @@ final class ClientSystemInfo extends Node {
         }
     }
 
-    static final byte[] method2992(String string, byte i) {
+    /** Encode {@code string} to Windows-1252 bytes (specials like € → 0x80). */
+    static final byte[] encodeCp1252(String string, byte i) {
         try {
             anInt6873++;
             int i_34_ = string.length();
@@ -495,7 +496,7 @@ final class ClientSystemInfo extends Node {
             }
             return is;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ls.B(" + (string != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ls.B(" + (string != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

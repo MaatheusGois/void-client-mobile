@@ -23,7 +23,7 @@ final class Component175
             DisplayModeManagerContainer109.method1356(true, string_0_, i_1_, i, bool, string, true);
             anInt5845++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("aj.G(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + (string_0_ != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("aj.G(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + (string_0_ != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
         }
     }
 
@@ -56,7 +56,7 @@ final class Component175
                     break;
                 }
             }
-            if (!bool) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3504.method2063(ObjectDeserializer.anInt6967, 544)) + string, false, 4);
+            if (!bool) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3504.getLocalized(ObjectDeserializer.languageId, 544)) + string, false, 4);
             if (r.aBoolean9722) DisplayModeManagerContainer196.method2678(-2049);
         }
     }

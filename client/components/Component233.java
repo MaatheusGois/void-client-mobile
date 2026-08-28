@@ -17,8 +17,8 @@ final class Component233
     static final boolean method2547(int i, byte i_0_) {
         anInt3993++;
         if (ImageTagText.aBooleanArray2162[i]) return true;
-        if (!Component267.aClass45_2978.method408((byte) -124, i)) return false;
-        int i_1_ = Component267.aClass45_2978.method407(0, i);
+        if (!Component267.aClass45_2978.isGroupReady((byte) -124, i)) return false;
+        int i_1_ = Component267.aClass45_2978.getFileCount(0, i);
         if (i_1_ == 0) {
             ImageTagText.aBooleanArray2162[i] = true;
             return true;
@@ -26,7 +26,7 @@ final class Component233
         if (DefinitionSub33.aClass46ArrayArray9427[i] == null) DefinitionSub33.aClass46ArrayArray9427[i] = new DisplayModeManagerContainer57[i_1_];
         for (int i_2_ = 0; i_1_ > i_2_; i_2_++) {
             if (DefinitionSub33.aClass46ArrayArray9427[i][i_2_] == null) {
-                byte[] is = Component267.aClass45_2978.method410(i_0_ ^ ~0x717, i, i_2_);
+                byte[] is = Component267.aClass45_2978.getFile(i_0_ ^ ~0x717, i, i_2_);
                 if (is != null) {
                     DisplayModeManagerContainer57 class46 = (DefinitionSub33.aClass46ArrayArray9427[i][i_2_] = new DisplayModeManagerContainer57());
                     class46.anInt830 = i_2_ + (i << 16);

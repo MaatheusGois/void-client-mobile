@@ -14,7 +14,8 @@ final class PauseHandler extends HashNode {
     DisplayModeManagerContainer104 aClass318_Sub1_Sub3_Sub4_9538;
     static int anInt9539;
 
-    static final void method3188(byte i, Buffer class348_sub49) {
+    /** Update world-list population fields from a login/world-list packet. */
+    static final void readWorldPopulations(byte i, Buffer class348_sub49) {
         anInt9539++;
         for (int i_0_ = 0; i_0_ < Component241.anInt2956; i_0_++) {
             int i_1_ = class348_sub49.readSmart(-127);
@@ -25,7 +26,10 @@ final class PauseHandler extends HashNode {
         int i_3_ = -75 / ((53 - i) / 48);
     }
 
-    static final void method3189(int i, String[] strings) {
+    /**
+     * Run console command lines; lines starting with {@code pause N} delay the rest.
+     */
+    static final void runConsoleCommands(int i, String[] strings) {
         if (i == 0) {
             anInt9537++;
             if (strings.length > 1) {
@@ -37,14 +41,14 @@ final class PauseHandler extends HashNode {
                         } catch (Exception exception) {
                             /* empty */
                         }
-                        Applet_Sub1.method94(("Pausing for " + i_5_ + " seconds..."), -109);
+                        Applet_Sub1.printConsole(("Pausing for " + i_5_ + " seconds..."), -109);
                         Cp1252Decoder.aStringArray5223 = strings;
                         Component221.anInt1794 = i_4_ - -1;
                         Component100.aLong8694 = (long) (i_5_ * 1000) + Component240.currentTimeMillis(-104);
                         break;
                     }
                     Component126.aString4461 = strings[i_4_];
-                    Component210.method555(false, 0);
+                    Component210.submitConsoleLine(false, 0);
                 }
             } else {
                 Component126.aString4461 += strings[0];

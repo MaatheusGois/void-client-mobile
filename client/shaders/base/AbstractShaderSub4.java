@@ -233,54 +233,54 @@ final class AbstractShaderSub4
             }
             if (!bool_24_) {
                 if (i_19_ >= 1 && (Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - 1][i_22_]) != i_16_) {
-                    NodeSub16Sub2.anIntArray8862[i_17_] = Component224.method2057(Component224.method2057(1179648, i_19_ + -1), -754974720);
-                    Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 1245184);
+                    NodeSub16Sub2.anIntArray8862[i_17_] = Component224.bitwiseOr(Component224.bitwiseOr(1179648, i_19_ + -1), -754974720);
+                    Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 1245184);
                     i_17_ = 0xfff & 1 + i_17_;
                     Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - 1][i_22_] = i_16_;
                 }
                 if (++i_22_ < ParametricDefinition.anInt9109) {
                     if (i_19_ - 1 >= 0 && i_16_ != (Component156.aByteArrayArrayArray3700[Component117.anInt4372][-1 + i_19_][i_22_]) && ((ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_19_][i_22_]) & 0x4) == 0 && (0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][-1 + i_19_][-1 + i_22_])) == 0) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.method2057(1375731712, Component224.method2057(i_19_ + -1, 1179648)));
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 1245184);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.bitwiseOr(1375731712, Component224.bitwiseOr(i_19_ + -1, 1179648)));
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 1245184);
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][-1 + i_19_][i_22_] = i_16_;
                         i_17_ = 0xfff & 1 + i_17_;
                     }
                     if ((Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_][i_22_]) != i_16_) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.method2057(318767104, Component224.method2057(i_19_, 5373952)));
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 5439488);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.bitwiseOr(318767104, Component224.bitwiseOr(i_19_, 5373952)));
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 5439488);
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_][i_22_] = i_16_;
                         i_17_ = i_17_ + 1 & 0xfff;
                     }
                     if (1 + i_19_ < anInt7319 && ((Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ + 1][i_22_]) != i_16_) && (0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_19_][i_22_])) == 0 && (0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][1 + i_19_][i_22_ + -1])) == 0) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.method2057(-1845493760, Component224.method2057(1 + i_19_, 5373952)));
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(5439488, i_22_);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.bitwiseOr(-1845493760, Component224.bitwiseOr(1 + i_19_, 5373952)));
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(5439488, i_22_);
                         i_17_ = 1 + i_17_ & 0xfff;
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - -1][i_22_] = i_16_;
                     }
                 }
                 i_22_--;
                 if (i_19_ - -1 < anInt7319 && (Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - -1][i_22_]) != i_16_) {
-                    NodeSub16Sub2.anIntArray8862[i_17_] = Component224.method2057(1392508928, Component224.method2057(9568256, 1 + i_19_));
-                    Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 9633792);
+                    NodeSub16Sub2.anIntArray8862[i_17_] = Component224.bitwiseOr(1392508928, Component224.bitwiseOr(9568256, 1 + i_19_));
+                    Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 9633792);
                     i_17_ = 1 + i_17_ & 0xfff;
                     Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - -1][i_22_] = i_16_;
                 }
                 if (--i_22_ >= 0) {
                     if (i_19_ + -1 >= 0 && i_16_ != (Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - 1][i_22_]) && (0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_19_][i_22_])) == 0 && (0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][-1 + i_19_][1 + i_22_])) == 0) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.method2057(301989888, Component224.method2057(13762560, -1 + i_19_)));
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 13828096);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.bitwiseOr(301989888, Component224.bitwiseOr(13762560, -1 + i_19_)));
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 13828096);
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - 1][i_22_] = i_16_;
                         i_17_ = i_17_ - -1 & 0xfff;
                     }
                     if ((Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_][i_22_]) != i_16_) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = Component224.method2057(Component224.method2057(13762560, i_19_), -1828716544);
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(13828096, i_22_);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = Component224.bitwiseOr(Component224.bitwiseOr(13762560, i_19_), -1828716544);
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(13828096, i_22_);
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_][i_22_] = i_16_;
                         i_17_ = 0xfff & i_17_ - -1;
                     }
                     if (anInt7319 > 1 + i_19_ && (Component156.aByteArrayArrayArray3700[Component117.anInt4372][1 + i_19_][i_22_]) != i_16_ && ((ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_19_][i_22_]) & 0x4) == 0 && ((ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_19_ + 1][i_22_ + 1]) & 0x4) == 0) {
-                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.method2057(-771751936, Component224.method2057(i_19_ - -1, 9568256)));
-                        Exception_Sub1.anIntArray110[i_17_] = Component224.method2057(i_22_, 9633792);
+                        NodeSub16Sub2.anIntArray8862[i_17_] = (Component224.bitwiseOr(-771751936, Component224.bitwiseOr(i_19_ - -1, 9568256)));
+                        Exception_Sub1.anIntArray110[i_17_] = Component224.bitwiseOr(i_22_, 9633792);
                         Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_19_ - -1][i_22_] = i_16_;
                         i_17_ = 0xfff & i_17_ - -1;
                     }
@@ -297,7 +297,8 @@ final class AbstractShaderSub4
         return true;
     }
 
-    static final void method3543(byte i) {
+    /** Close the developer console and refresh related UI. */
+    static final void closeDevConsole(byte i) {
         anInt7309++;
         if (i == -89) {
             StringCache.aBoolean4328 = false;
@@ -305,17 +306,18 @@ final class AbstractShaderSub4
         }
     }
 
-    static final int method3544(Buffer class348_sub49, int i, String string) {
+    /** Write {@code string} as Huffman-compressed CP1252; returns bytes written. */
+    static final int writeHuffmanString(Buffer class348_sub49, int i, String string) {
         try {
             anInt7321++;
             int i_38_ = class348_sub49.offset;
-            byte[] is = ClientSystemInfo.method2992(string, (byte) -20);
+            byte[] is = ClientSystemInfo.encodeCp1252(string, (byte) -20);
             int i_39_ = 1 % ((-6 - i) / 63);
             class348_sub49.writeSmart(5537, is.length);
-            class348_sub49.offset += (DisplayModeManagerContainer370.aClass296_1131.method2227(is.length, 0, class348_sub49.offset, is, 103, class348_sub49.payload));
+            class348_sub49.offset += (DisplayModeManagerContainer370.huffman.compress(is.length, 0, class348_sub49.offset, is, 103, class348_sub49.payload));
             return class348_sub49.offset + -i_38_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bk.O(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bk.O(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

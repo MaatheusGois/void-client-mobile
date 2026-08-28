@@ -35,7 +35,7 @@ abstract class InputHandler {
             anInt4277++;
             return is;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("efa.L(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (fs != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("efa.L(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (fs != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -34,7 +34,7 @@ final class DisplayModeManagerContainer295
                 }
                 return -i_3_ + i_2_;
             }
-            if (i == 2) return (Component71.method1811(9152, (class110_sub1_0_.method1038(false).aString3663), ObjectDeserializer.anInt6967, (class110_sub1.method1038(false).aString3663)));
+            if (i == 2) return (Component71.method1811(9152, (class110_sub1_0_.method1038(false).aString3663), ObjectDeserializer.languageId, (class110_sub1.method1038(false).aString3663)));
             if (i == 3) {
                 if (class110_sub1.aString5787.equals("-")) {
                     if (class110_sub1_0_.aString5787.equals("-")) return 0;
@@ -44,7 +44,7 @@ final class DisplayModeManagerContainer295
                     if (!bool) return -1;
                     return 1;
                 }
-                return (Component71.method1811(9152, class110_sub1_0_.aString5787, ObjectDeserializer.anInt6967, class110_sub1.aString5787));
+                return (Component71.method1811(9152, class110_sub1_0_.aString5787, ObjectDeserializer.languageId, class110_sub1.aString5787));
             }
             if (i == 4) {
                 if (!class110_sub1.method1033(-85)) {
@@ -93,7 +93,7 @@ final class DisplayModeManagerContainer295
             }
             return (class110_sub1.anInt5786 + -class110_sub1_0_.anInt5786);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mfa.L(" + (class110_sub1 != null ? "{...}" : "null") + ',' + (class110_sub1_0_ != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mfa.L(" + (class110_sub1 != null ? "{...}" : "null") + ',' + (class110_sub1_0_ != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_1_ + ')'));
         }
     }
 
@@ -227,7 +227,7 @@ final class DisplayModeManagerContainer295
             }
             return -i_35_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mfa.K(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_22_ + ',' + i_23_ + ',' + (is_24_ != null ? "{...}" : "null") + ',' + (is_25_ != null ? "{...}" : "null") + ',' + (is_26_ != null ? "{...}" : "null") + ',' + (is_27_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mfa.K(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_22_ + ',' + i_23_ + ',' + (is_24_ != null ? "{...}" : "null") + ',' + (is_25_ != null ? "{...}" : "null") + ',' + (is_26_ != null ? "{...}" : "null") + ',' + (is_27_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

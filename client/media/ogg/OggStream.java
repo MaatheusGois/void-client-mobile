@@ -65,8 +65,8 @@ abstract class OggStream extends Node {
             NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.aD9113, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
             if (string != null) {
                 NodeSub8.toolkit.GA(0);
-                Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.anInt235, 0, -117, Component65.aClass45_1627);
-                BitmapFont class324 = (NodeSub8.toolkit.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.anInt235, 0), true));
+                Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -117, Component65.aClass45_1627);
+                BitmapFont class324 = (NodeSub8.toolkit.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.p12FullGroupId, 0), true));
                 Component211.method1170((byte) -89);
                 Component149.method3511(true, class324, class143, string, 2, NodeSub8.toolkit);
             }
@@ -75,8 +75,8 @@ abstract class OggStream extends Node {
             if (string != null) {
                 var_ha = Component65.method958(true, 0, DefinitionSub4.aD9113, 0, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 var_ha.GA(0);
-                Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.anInt235, 0, -115, Component65.aClass45_1627);
-                BitmapFont class324 = var_ha.method3686(class143, Component170.method1519((Component158.aClass45_322), DisplayModeManagerContainer167.anInt235, 0), true);
+                Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -115, Component65.aClass45_1627);
+                BitmapFont class324 = var_ha.method3686(class143, Component170.method1519((Component158.aClass45_322), DisplayModeManagerContainer167.p12FullGroupId, 0), true);
                 Component211.method1170((byte) -107);
                 Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
             }
@@ -84,8 +84,8 @@ abstract class OggStream extends Node {
                 NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.aD9113, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 if (string != null) {
                     var_ha.GA(0);
-                    Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.anInt235, 0, -51, Component65.aClass45_1627);
-                    BitmapFont class324 = (var_ha.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.anInt235, 0), true));
+                    Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -51, Component65.aClass45_1627);
+                    BitmapFont class324 = (var_ha.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.p12FullGroupId, 0), true));
                     Component211.method1170((byte) -26);
                     Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
                 }
@@ -130,7 +130,7 @@ abstract class OggStream extends Node {
         Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
         DisplayModeManagerContainer154.method773(true);
         r.aBoolean9719 = false;
-        NativeLibraryLoader.aClass57Array2974 = null;
+        NativeLibraryLoader.cachedDisplayModes = null;
         RuntimeException_Sub1.aBoolean4604 = true;
         HashNodeSub3.method3179(i_1_);
     }
@@ -141,7 +141,7 @@ abstract class OggStream extends Node {
 
     static final void method2966(int i, int i_4_, boolean bool) {
         anInt6864++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, 14);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 14);
         if (bool != false) aFloatArray6865 = null;
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_4_;

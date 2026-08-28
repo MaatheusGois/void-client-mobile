@@ -68,7 +68,8 @@ final class GpsOverlay {
         }
     }
 
-    static int method1166(int i, int i_12_) {
+    /** {@code i & i_12_}. */
+    static int bitwiseAnd(int i, int i_12_) {
         return i & i_12_;
     }
 

@@ -109,7 +109,7 @@ final class LruCache {
             lookupCursor = null;
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "eq.C(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "eq.C(" + l + ',' + i + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class LruCache {
             class348.next.previous = class348;
             class348.key = l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eq.K(" + i + ',' + l + ',' + (class348 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eq.K(" + i + ',' + l + ',' + (class348 != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -10,7 +10,8 @@
 import jaggl.OpenGL;
 
 final class WaterShaderProgram extends ShaderProgram {
-    static DisplayModeManagerContainer124 aClass230_6262 = new DisplayModeManagerContainer124("game3", 2);
+    /** Alternate product slot game3 ({@code id}=2). */
+    static GameType GAME3 = new GameType("game3", 2);
     static int anInt6263;
     static int anInt6264;
     static int anInt6265;
@@ -50,14 +51,14 @@ final class WaterShaderProgram extends ShaderProgram {
         if (bool != false) occludeCalcNanos = -88L;
         anInt6271++;
         String string = "www";
-        if (WaterShaderSub8.aClass364_7361 != DisplayModeManagerContainer345.aClass364_165) {
-            if (DisplayModeManagerContainer345.aClass364_165 != AssetCacheLoader.aClass364_382) {
-                if (DisplayModeManagerContainer345.aClass364_165 == Component83.aClass364_1657) string = "www-wtwip";
+        if (WaterShaderSub8.WTRC != DisplayModeManagerContainer345.aClass364_165) {
+            if (DisplayModeManagerContainer345.aClass364_165 != AssetCacheLoader.WTQA) {
+                if (DisplayModeManagerContainer345.aClass364_165 == Component83.WTWIP) string = "www-wtwip";
             } else string = "www-wtqa";
         } else string = "www-wtrc";
         String string_2_ = "";
-        if (Component205.aString5966 != null) string_2_ = "/p=" + Component205.aString5966;
-        return ("http://" + string + "." + (PacketReader.aClass230_10434.aString2985) + ".com/l=" + ObjectDeserializer.anInt6967 + "/a=" + Connection.anInt2670 + string_2_ + "/");
+        if (Component205.settingsCookie != null) string_2_ = "/p=" + Component205.settingsCookie;
+        return ("http://" + string + "." + (PacketReader.currentGameType.domain) + ".com/l=" + ObjectDeserializer.languageId + "/a=" + Connection.affiliateId + string_2_ + "/");
     }
 
     static final boolean method2163(boolean bool) {
@@ -152,7 +153,7 @@ final class WaterShaderProgram extends ShaderProgram {
 
     public static void method2164(boolean bool) {
         if (bool == true) {
-            aClass230_6262 = null;
+            GAME3 = null;
             aBooleanArray6270 = null;
         }
     }
@@ -166,10 +167,10 @@ final class WaterShaderProgram extends ShaderProgram {
                 if (aClass83_6268.aClass258_Sub1_1443 == null || !(this.aHa_Sub2_3684.aBoolean7791) || !(this.aHa_Sub2_3684.aBoolean7783)) break;
                 Component359 class242 = (RSARequest.method3249(35633, -110, this.aHa_Sub2_3684, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n"));
                 Component359 class242_4_ = (RSARequest.method3249(35632, -38, this.aHa_Sub2_3684, "varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 2.0);\nvec4 surfaceColour = vec4(envColour, fresnel*shoreFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n"));
-                aClass337_6274 = ShaderLinker.method2493((this.aHa_Sub2_3684), -1, (new Component359[]{class242, class242_4_}));
+                aClass337_6274 = ShaderLinker.linkProgram((this.aHa_Sub2_3684), -1, (new Component359[]{class242, class242_4_}));
                 aBoolean6272 = aClass337_6274 != null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("tia.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("tia.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

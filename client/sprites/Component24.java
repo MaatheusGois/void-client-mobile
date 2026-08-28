@@ -47,7 +47,8 @@ abstract class Component24
         }
     }
 
-    abstract void method968(int i, int i_50_, int i_51_);
+    /** Copy framebuffer pixels into this sprite (mode in {@code i_51_}). */
+    abstract void capturePixels(int i, int i_50_, int i_51_);
 
     abstract int method969();
 

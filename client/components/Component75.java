@@ -25,7 +25,7 @@ final class Component75
 
     static final void method1330(int i, int i_0_, int i_1_) {
         anInt2284++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_1_, (byte) 105, 5);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_1_, (byte) 105, 5);
         class348_sub42_sub15.method3246(-25490);
         if (i_0_ != -19906) method1329(71);
         class348_sub42_sub15.anInt9652 = i;

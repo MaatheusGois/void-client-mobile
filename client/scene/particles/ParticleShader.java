@@ -76,7 +76,7 @@ final class ParticleShader extends ShaderProgram {
     static final ParticleSystem method2148(StringCache class351, DisplayModeManagerContainer123 class77, int i) {
         try {
             anInt6230++;
-            ParticleSystem class348_sub47 = Component189.method2273((byte) -103);
+            ParticleSystem class348_sub47 = Component189.obtainParticleSystem((byte) -103);
             if (i >= -80) aCalendar6221 = null;
             class348_sub47.anInt7122 = class351.anInt4323;
             class348_sub47.aClass351_7118 = class351;
@@ -95,7 +95,7 @@ final class ParticleShader extends ShaderProgram {
             class348_sub47.anInt7119 = 0;
             return class348_sub47;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("em.C(" + (class351 != null ? "{...}" : "null") + ',' + (class77 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("em.C(" + (class351 != null ? "{...}" : "null") + ',' + (class77 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -122,7 +122,7 @@ final class ParticleShader extends ShaderProgram {
                     method2149(-25);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("em.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("em.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -131,7 +131,7 @@ final class ParticleShader extends ShaderProgram {
     private final void method2149(int i) {
         anInt6217++;
         aClass61_6222 = new Component128(this.aHa_Sub2_3684, 2);
-        aClass61_6222.method595((byte) 103, 0);
+        aClass61_6222.beginDisplayList((byte) 103, 0);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         this.aHa_Sub2_3684.method3808(-16777216, 118);
         this.aHa_Sub2_3684.method3729(260, (byte) 114, 7681);
@@ -139,8 +139,8 @@ final class ParticleShader extends ShaderProgram {
         this.aHa_Sub2_3684.method3738(-15039, 0);
         OpenGL.glBindProgramARB(34336, aClass171_6220.anInt2270);
         OpenGL.glEnable(34336);
-        aClass61_6222.method591(-1);
-        aClass61_6222.method595((byte) 127, 1);
+        aClass61_6222.endDisplayList(-1);
+        aClass61_6222.beginDisplayList((byte) 127, 1);
         int i_10_ = 65 / ((i - 62) / 49);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         OpenGL.glMatrixMode(5890);
@@ -152,7 +152,7 @@ final class ParticleShader extends ShaderProgram {
         OpenGL.glBindProgramARB(34336, 0);
         OpenGL.glDisable(34336);
         OpenGL.glDisable(34820);
-        aClass61_6222.method591(-1);
+        aClass61_6222.endDisplayList(-1);
     }
 
     final boolean method2137(int i) {
@@ -165,7 +165,7 @@ final class ParticleShader extends ShaderProgram {
         anInt6231++;
         if (aClass61_6222 != null) {
             if (i >= -75) method2134(true, false);
-            aClass61_6222.method594('\001', 28666);
+            aClass61_6222.callDisplayList('\001', 28666);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3771((byte) -103, null);
             this.aHa_Sub2_3684.method3738(-15039, 0);
@@ -175,7 +175,7 @@ final class ParticleShader extends ShaderProgram {
     final void method2134(boolean bool, boolean bool_11_) {
         anInt6232++;
         if (aClass61_6222 != null) {
-            aClass61_6222.method594('\0', 28666);
+            aClass61_6222.callDisplayList('\0', 28666);
             this.aHa_Sub2_3684.method3738(-15039, 1);
             OpenGL.glMatrixMode(5890);
             if (bool_11_ == false) {
@@ -212,7 +212,7 @@ final class ParticleShader extends ShaderProgram {
             if (class79.aBoolean1396) {
                 String string = class79.name;
                 if (class79.anInt1361 != 0) {
-                    String string_15_ = ((WorldNameText.aClass230_8638 != PacketReader.aClass230_10434) ? FriendsIgnoreList.aClass274_3511.method2063(ObjectDeserializer.anInt6967, 544) : FriendsIgnoreList.aClass274_3513.method2063(ObjectDeserializer.anInt6967, 544));
+                    String string_15_ = ((WorldNameText.STELLARDAWN != PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544));
                     string += ((WorldNameText.method250((Component72.localPlayer.anInt10516), true, class79.anInt1361)) + " (" + string_15_ + class79.anInt1361 + ")");
                 }
                 if (r.aBoolean9722 && !bool) {
@@ -226,7 +226,7 @@ final class ParticleShader extends ShaderProgram {
                     String[] strings = class79.aStringArray1349;
                     if (NodeBaseSub2.aBoolean9783) strings = Component188.method1847(strings, 0);
                     String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.anInt1344);
-                    String attack = FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
+                    String attack = FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
                     if (strings != null) {
                         for (int i = 4; i >= 0; i--) {
                             if (strings[i] != null && (class79.aByte1384 == 0 || !(strings[i].equalsIgnoreCase(attack)))) {
@@ -278,7 +278,7 @@ final class ParticleShader extends ShaderProgram {
                 Component275.anInt2690++;
                 int npcX = (npc.x >> 9) + NodeBaseSub2.regionTileX - npc.definition.anInt1399 + 1;
                 int npcY = (npc.y >> 9) + Component330.regionTileY - npc.definition.anInt1399 + 1;
-                DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544), npc.anInt10290, CookieManager.anInt6299);
+                DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544), npc.anInt10290, CookieManager.anInt6299);
                 // Last options: "Default click" cascade (Pickpocket → left-click, etc.)
                 if (!bool) {
                     DefaultClickSwapper.injectNpcMenu(npc, class79);

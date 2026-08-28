@@ -20,7 +20,7 @@ final class DisplayModeManagerContainer165
             ParticleSystem class348_sub47 = ParticleShader.method2148(Component41.aClass351_3150, DisplayModeManagerContainer64.aClass77_9029, -126);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_0_);
             HashNodeSub14.method3243(42, class348_sub47);
-        } else ClientScriptExecutor.method701(Component258.aClass273_1966, i_0_, -1);
+        } else ClientScriptExecutor.runScript(Component258.aClass273_1966, i_0_, -1);
     }
 
     public static void method2286(int i) {
@@ -47,7 +47,7 @@ final class DisplayModeManagerContainer165
 
     static final void method2288(boolean bool, GraphicsToolkit var_ha) {
         anInt3845++;
-        if (!DisplayModeManagerContainer5.aBoolean1211) DisplayModeManagerContainer155.method1642((byte) 108, var_ha);
+        if (!DisplayModeManagerContainer5.aBoolean1211) BuildType.method1642((byte) 108, var_ha);
         else DisplayModeManagerContainer136.method1153(var_ha, 16);
         if (bool != false) anInt3844 = -97;
     }

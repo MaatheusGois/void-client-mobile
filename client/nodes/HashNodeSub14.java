@@ -27,7 +27,8 @@ final class HashNodeSub14
     boolean aBoolean9639 = true;
     int anInt9640;
     static int anInt9641;
-    static Component315 aClass243_9642 = new Component315();
+    /** Queue of pending {@link FriendLoginMessage} chat tips. */
+    static Component315 friendLoginMessages = new Component315();
     int anInt9643;
     int anInt9644;
     static int anInt9645 = 1;
@@ -45,7 +46,7 @@ final class HashNodeSub14
     }
 
     public static void method3237(byte i) {
-        aClass243_9642 = null;
+        friendLoginMessages = null;
         anIntArray9626 = null;
         aByteArray9622 = null;
         if (i != 42) anInt9645 = -112;
@@ -188,7 +189,7 @@ final class HashNodeSub14
             if (this.anInt9631 == 255) this.anInt9631 = 0;
             this.aClass262_9629 = new NodeList();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dfa.<init>(" + i + ',' + (string != null ? "{...}" : "null") + ',' + (string_20_ != null ? "{...}" : "null") + ',' + i_21_ + ',' + i_22_ + ',' + bool + ',' + i_23_ + ',' + i_24_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dfa.<init>(" + i + ',' + (string != null ? "{...}" : "null") + ',' + (string_20_ != null ? "{...}" : "null") + ',' + i_21_ + ',' + i_22_ + ',' + bool + ',' + i_23_ + ',' + i_24_ + ')'));
         }
     }
 }

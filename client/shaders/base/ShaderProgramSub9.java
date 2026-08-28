@@ -40,7 +40,7 @@ final class ShaderProgramSub9
             this.aHa_Sub2_3684.method3738(-15039, 1);
             this.aHa_Sub2_3684.method3771((byte) -87, null);
             this.aHa_Sub2_3684.method3738(-15039, 0);
-            aClass61_6310.method594('\001', 28666);
+            aClass61_6310.callDisplayList('\001', 28666);
             aBoolean6316 = false;
         } else this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
         if (i < -75) this.aHa_Sub2_3684.method3729(8448, (byte) -75, 8448);
@@ -64,7 +64,7 @@ final class ShaderProgramSub9
         aClass61_6310 = new Component128(this.aHa_Sub2_3684, 2);
         if (i >= -7) method2140(null, (byte) 112, -64);
         anInt6314++;
-        aClass61_6310.method595((byte) 105, 0);
+        aClass61_6310.beginDisplayList((byte) 105, 0);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         OpenGL.glTexGeni(8192, 9472, 34065);
         OpenGL.glTexGeni(8193, 9472, 34065);
@@ -90,8 +90,8 @@ final class ShaderProgramSub9
             this.aHa_Sub2_3684.method3775(false, 0, 770, 34167);
         }
         this.aHa_Sub2_3684.method3738(-15039, 0);
-        aClass61_6310.method591(-1);
-        aClass61_6310.method595((byte) 114, 1);
+        aClass61_6310.endDisplayList(-1);
+        aClass61_6310.beginDisplayList((byte) 114, 1);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
@@ -113,7 +113,7 @@ final class ShaderProgramSub9
             this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
         }
         this.aHa_Sub2_3684.method3738(-15039, 0);
-        aClass61_6310.method591(-1);
+        aClass61_6310.endDisplayList(-1);
     }
 
     final void method2136(int i, int i_6_, byte i_7_) {
@@ -141,7 +141,7 @@ final class ShaderProgramSub9
                     this.aHa_Sub2_3684.method3771((byte) -120, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
                     this.aHa_Sub2_3684.method3738(-15039, 0);
                 }
-                aClass61_6310.method594('\0', 28666);
+                aClass61_6310.callDisplayList('\0', 28666);
                 aBoolean6316 = true;
             }
         }

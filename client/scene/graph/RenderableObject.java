@@ -50,7 +50,7 @@ abstract class RenderableObject extends Renderable {
                 Component305.aClass262_9931.addTail(new NodeSub7(class46.anInt812, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
                 Component111.method1916(-9343, class46);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ga.QA(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class46 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ga.QA(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class46 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -148,7 +148,7 @@ abstract class RenderableObject extends Renderable {
                     NativeLibLoader.method2650(class143, class42.anInt580, var_aa, i_8_, i_6_, class42.aString597, i, class324, i_29_, class46, i_5_, 100);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ga.KA(" + (class46 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ga.KA(" + (class46 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

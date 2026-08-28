@@ -54,7 +54,7 @@ final class DisplayModeManagerContainer91
             }
             return stringbuffer.reverse().toString();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "ht.A(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "ht.A(" + l + ',' + i + ')');
         }
     }
 
@@ -67,12 +67,13 @@ final class DisplayModeManagerContainer91
         DefinitionSub30.anInt9399 = -1;
     }
 
-    static final int method315(byte i, String string) {
+    /** Index of {@code string} in {@link Component185#languageNames}, or −1. */
+    static final int languageIdFromName(byte i, String string) {
         anInt393++;
         int i_5_ = 0;
         if (i <= 70) return -84;
-        for (/**/; i_5_ < Component185.aStringArray5305.length; i_5_++) {
-            if (Component185.aStringArray5305[i_5_].equalsIgnoreCase(string)) return i_5_;
+        for (/**/; i_5_ < Component185.languageNames.length; i_5_++) {
+            if (Component185.languageNames[i_5_].equalsIgnoreCase(string)) return i_5_;
         }
         return -1;
     }
@@ -88,40 +89,40 @@ final class DisplayModeManagerContainer91
     static final void method317(String string, int i, boolean bool) {
         anInt391++;
         if (string != null) {
-            if (MenuEntry.anInt9604 >= 100) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3522.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
+            if (MenuEntry.ignoreCount >= 100) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3522.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
             else {
                 String string_6_ = DebugPanicSub1.method2127(2, string);
                 if (string_6_ != null) {
-                    for (int i_7_ = 0; (i_7_ < MenuEntry.anInt9604); i_7_++) {
-                        String string_8_ = DebugPanicSub1.method2127(2, (Component44.aStringArray932[i_7_]));
+                    for (int i_7_ = 0; (i_7_ < MenuEntry.ignoreCount); i_7_++) {
+                        String string_8_ = DebugPanicSub1.method2127(2, (Component44.ignoreNames[i_7_]));
                         if (string_8_ != null && string_8_.equals(string_6_)) {
-                            DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3523.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                            DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3523.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                             return;
                         }
-                        if (DefinitionSub21.aStringArray9275[i_7_] != null) {
-                            String string_9_ = (DebugPanicSub1.method2127(2, (DefinitionSub21.aStringArray9275[i_7_])));
+                        if (DefinitionSub21.ignoreLastNames[i_7_] != null) {
+                            String string_9_ = (DebugPanicSub1.method2127(2, (DefinitionSub21.ignoreLastNames[i_7_])));
                             if (string_9_ != null && string_9_.equals(string_6_)) {
-                                DisplayModeManagerContainer213.method544(string + (FriendsIgnoreList.aClass274_3523.method2063((ObjectDeserializer.anInt6967), 544)), false, 4);
+                                DisplayModeManagerContainer213.method544(string + (FriendsIgnoreList.aClass274_3523.getLocalized((ObjectDeserializer.languageId), 544)), false, 4);
                                 return;
                             }
                         }
                     }
                     if (i >= 90) {
-                        for (int i_10_ = 0; i_10_ < DefinitionSub30.anInt9383; i_10_++) {
-                            String string_11_ = DebugPanicSub1.method2127(2, (Component178.aStringArray1441[i_10_]));
+                        for (int i_10_ = 0; i_10_ < DefinitionSub30.friendCount; i_10_++) {
+                            String string_11_ = DebugPanicSub1.method2127(2, (Component178.friendNames[i_10_]));
                             if (string_11_ != null && string_11_.equals(string_6_)) {
-                                DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3528.method2063(ObjectDeserializer.anInt6967, 544)) + string + (FriendsIgnoreList.aClass274_3529.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                                DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3528.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3529.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                 return;
                             }
-                            if (ShaderProgramSub2.aStringArray6205[i_10_] != null) {
-                                String string_12_ = (DebugPanicSub1.method2127(2, (ShaderProgramSub2.aStringArray6205[i_10_])));
+                            if (ShaderProgramSub2.friendFormerNames[i_10_] != null) {
+                                String string_12_ = (DebugPanicSub1.method2127(2, (ShaderProgramSub2.friendFormerNames[i_10_])));
                                 if (string_12_ != null && string_12_.equals(string_6_)) {
-                                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3528.method2063(ObjectDeserializer.anInt6967, 544)) + string + (FriendsIgnoreList.aClass274_3529.method2063(ObjectDeserializer.anInt6967, 544))), false, 4);
+                                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3528.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3529.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                     return;
                                 }
                             }
                         }
-                        if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_6_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3525.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
+                        if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_6_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3525.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
                         else {
                             Component298.anInt4628++;
                             ParticleSystem class348_sub47 = (ParticleShader.method2148(HashNodeSub19.aClass351_9687, DisplayModeManagerContainer64.aClass77_9029, -94));

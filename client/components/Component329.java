@@ -69,13 +69,13 @@ final class Component329
         anInt5983++;
         if (Sprite.anInt6923 == -1) return 1;
         if (i != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350)) {
-            GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3496.method2063(ObjectDeserializer.anInt6967, 544), true, i);
+            GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3496.getLocalized(ObjectDeserializer.languageId, 544), true, i);
             if (i != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350)) return -1;
         }
         try {
             Dimension dimension = DisplayModeManagerContainer50.gameCanvas.getSize();
-            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3496.method2063(ObjectDeserializer.anInt6967, 544), 2, NodeSub8.toolkit);
-            DisplayModeManagerContainer77 class124 = Component189.method2277(0, ShaderSub3.aClass45_5207, Sprite.anInt6923, -1);
+            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3496.getLocalized(ObjectDeserializer.languageId, 544), 2, NodeSub8.toolkit);
+            DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, ShaderSub3.aClass45_5207, Sprite.anInt6923, -1);
             long l = Component240.currentTimeMillis(-88);
             NodeSub8.toolkit.la();
             Component270.aClass101_2123.method894(0, DisplayModeManagerContainer64.anInt9037, 0);

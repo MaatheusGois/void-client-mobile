@@ -9,7 +9,7 @@ final class DisplayModeManagerContainer347
  */ {
     CacheStore aClass45_3576;
     private NodeCache aClass60_3577 = new NodeCache(64);
-    DisplayModeManagerContainer124 aClass230_3578;
+    GameType aClass230_3578;
     static int anInt3579;
     static int anInt3580;
     static int anInt3581;
@@ -109,7 +109,7 @@ final class DisplayModeManagerContainer347
         if (class79 != null) return class79;
         byte[] is;
         synchronized (aClass45_3585) {
-            is = aClass45_3585.method410(i_6_ + -1859, Component95.method1060(i, (byte) 69), Component193.method1920(127, i));
+            is = aClass45_3585.getFile(i_6_ + -1859, Component95.method1060(i, (byte) 69), Component193.method1920(127, i));
         }
         class79 = new DisplayModeManagerContainer206();
         class79.anInt1344 = i;
@@ -137,7 +137,7 @@ final class DisplayModeManagerContainer347
         if (i <= 122) method2075(-125, -46, 9);
     }
 
-    DisplayModeManagerContainer347(DisplayModeManagerContainer124 class230, int i, boolean bool, CacheStore class45, CacheStore class45_7_) {
+    DisplayModeManagerContainer347(GameType class230, int i, boolean bool, CacheStore class45, CacheStore class45_7_) {
         do {
             try {
                 this.aBoolean3583 = bool;
@@ -145,10 +145,10 @@ final class DisplayModeManagerContainer347
                 this.aClass45_3576 = class45_7_;
                 this.aClass230_3578 = class230;
                 if (aClass45_3585 == null) break;
-                int i_8_ = aClass45_3585.method414(-1) + -1;
-                aClass45_3585.method407(0, i_8_);
+                int i_8_ = aClass45_3585.getGroupCapacity(-1) + -1;
+                aClass45_3585.getFileCount(0, i_8_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("vda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_7_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("vda.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_7_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

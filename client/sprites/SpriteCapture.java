@@ -1718,7 +1718,7 @@ final class SpriteCapture extends SpriteSub3 {
         }
     }
 
-    final void method968(int i, int i_741_, int i_742_) {
+    final void capturePixels(int i, int i_741_, int i_742_) {
         throw new IllegalStateException("Can't capture alpha into a java_sprite_24");
     }
 

@@ -6,36 +6,36 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 
-final class Component239
 /**
- * RENAMED from `Class376` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ implements Runnable {
-    private int anInt4546;
+ * Async ring-buffer reader over an {@link InputStream} (daemon thread).
+ * Used by {@link TcpSocketStream} for non-blocking socket reads.
+ */
+final class Component239 implements Runnable {
+    private int capacity;
     static int anInt4547;
-    private InputStream anInputStream4548;
+    private InputStream inputStream;
     static int anInt4549;
     static int anInt4550;
     static int anInt4551;
     static int anInt4552;
     static int anInt4553;
-    private final byte[] aByteArray4554;
+    private final byte[] buffer;
     static int anInt4555;
-    private int anInt4556 = 0;
-    private final Thread aThread4557;
-    private int anInt4558 = 0;
+    private int readPos = 0;
+    private final Thread thread;
+    private int writePos = 0;
     static int anInt4559 = 0;
-    private IOException anIOException4560;
+    private IOException exception;
 
-    final void method3615(int i) {
+    final void closeAndJoin(int i) {
         synchronized (this) {
             if (i != 15984) run();
-            if (anIOException4560 == null) anIOException4560 = new IOException("");
+            if (exception == null) exception = new IOException("");
             this.notifyAll();
         }
         anInt4552++;
         try {
-            aThread4557.join();
+            thread.join();
         } catch (InterruptedException interruptedexception) {
             /* empty */
         }
@@ -59,11 +59,11 @@ final class Component239
             int i;
             synchronized (this) {
                 for (; ; ) {
-                    if (anIOException4560 != null) return;
-                    if (anInt4556 != 0) {
-                        if (anInt4556 < anInt4558) i = -anInt4558 + anInt4546;
-                        else i = -1 + anInt4556 - anInt4558;
-                    } else i = -1 + (anInt4546 + -anInt4558);
+                    if (exception != null) return;
+                    if (readPos != 0) {
+                        if (readPos < writePos) i = -writePos + capacity;
+                        else i = -1 + readPos - writePos;
+                    } else i = -1 + (capacity + -writePos);
                     if (i > 0) break;
                     try {
                         this.wait();
@@ -74,16 +74,16 @@ final class Component239
             }
             int i_1_;
             try {
-                i_1_ = anInputStream4548.read(aByteArray4554, anInt4558, i);
+                i_1_ = inputStream.read(buffer, writePos, i);
                 if (i_1_ == -1) throw new EOFException();
             } catch (IOException ioexception) {
                 synchronized (this) {
-                    anIOException4560 = ioexception;
+                    exception = ioexception;
                     break;
                 }
             }
             synchronized (this) {
-                anInt4558 = (i_1_ + anInt4558) % anInt4546;
+                writePos = (i_1_ + writePos) % capacity;
             }
         }
     }
@@ -93,36 +93,36 @@ final class Component239
         if (i < 0 || i_2_ < 0 || is.length < i_2_ + i) throw new IOException();
         synchronized (this) {
             int i_4_;
-            if (anInt4556 <= anInt4558) i_4_ = anInt4558 + -anInt4556;
-            else i_4_ = anInt4546 + (-anInt4556 - -anInt4558);
+            if (readPos <= writePos) i_4_ = writePos + -readPos;
+            else i_4_ = capacity + (-readPos - -writePos);
             if (i_4_ < i) i = i_4_;
-            if (i_3_ == i && anIOException4560 != null) throw new IOException(anIOException4560.toString());
-            if (anInt4546 < i + anInt4556) {
-                int i_5_ = anInt4546 - anInt4556;
-                Component313.method1577(aByteArray4554, anInt4556, is, i_2_, i_5_);
-                Component313.method1577(aByteArray4554, 0, is, i_2_ - -i_5_, i - i_5_);
-            } else Component313.method1577(aByteArray4554, anInt4556, is, i_2_, i);
-            anInt4556 = (anInt4556 - -i) % anInt4546;
+            if (i_3_ == i && exception != null) throw new IOException(exception.toString());
+            if (capacity < i + readPos) {
+                int i_5_ = capacity - readPos;
+                Component313.arraycopy(buffer, readPos, is, i_2_, i_5_);
+                Component313.arraycopy(buffer, 0, is, i_2_ - -i_5_, i - i_5_);
+            } else Component313.arraycopy(buffer, readPos, is, i_2_, i);
+            readPos = (readPos - -i) % capacity;
             this.notifyAll();
             return i;
         }
     }
 
-    final void method3618(int i) {
+    final void detachInput(int i) {
         anInt4550++;
-        if (i != 0) anInt4546 = 110;
-        anInputStream4548 = new InputStream_Sub1();
+        if (i != 0) capacity = 110;
+        inputStream = new InputStream_Sub1();
     }
 
-    final boolean method3619(int i, boolean bool) throws IOException {
+    final boolean hasBytes(int i, boolean bool) throws IOException {
         anInt4551++;
-        if (i <= 0 || i >= anInt4546) throw new IOException();
+        if (i <= 0 || i >= capacity) throw new IOException();
         synchronized (this) {
             int i_6_;
-            if (anInt4556 > anInt4558) i_6_ = -anInt4556 + anInt4546 - -anInt4558;
-            else i_6_ = anInt4558 - anInt4556;
+            if (readPos > writePos) i_6_ = -readPos + capacity - -writePos;
+            else i_6_ = writePos - readPos;
             if (i > i_6_) {
-                if (anIOException4560 != null) throw new IOException(anIOException4560.toString());
+                if (exception != null) throw new IOException(exception.toString());
                 return false;
             }
             return bool == false;
@@ -130,12 +130,12 @@ final class Component239
     }
 
     Component239(InputStream inputstream, int i) {
-        anInt4546 = i - -1;
-        anInputStream4548 = inputstream;
-        aByteArray4554 = new byte[anInt4546];
-        aThread4557 = new Thread(this);
-        aThread4557.setDaemon(true);
-        aThread4557.start();
+        capacity = i - -1;
+        inputStream = inputstream;
+        buffer = new byte[capacity];
+        thread = new Thread(this);
+        thread.setDaemon(true);
+        thread.start();
     }
 
     static final Component3 method3620(Component327 class318_sub1_sub3, int i) {

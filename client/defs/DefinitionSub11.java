@@ -21,11 +21,11 @@ final class DefinitionSub11
         super(0, true);
     }
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9186++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_0_ != 255) anIntArray9185 = null;
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             int i_1_ = Component302.anIntArray6035[i];
             for (int i_2_ = 0; (i_2_ < DefinitionSub6.anInt9139); i_2_++) {
                 int i_3_ = RenderableSub6.anIntArray6432[i_2_];

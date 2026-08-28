@@ -78,7 +78,7 @@ final class ComponentDownloader {
                 } else NodeSub41.aString7048 += "linux/";
             } else NodeSub41.aString7048 += "windows/";
             if (i != 95) anIntArray407 = null;
-            if (!Component210.aClass297_5297.aBoolean3794) {
+            if (!Component210.aClass297_5297.useDirectDraw) {
                 if (!ClientSystemInfo.aString6876.startsWith("amd64") && !ClientSystemInfo.aString6876.startsWith("x86_64")) {
                     if (!ClientSystemInfo.aString6876.startsWith("i386") && !ClientSystemInfo.aString6876.startsWith("i486") && !ClientSystemInfo.aString6876.startsWith("i586") && !ClientSystemInfo.aString6876.startsWith("x86")) {
                         if (!ClientSystemInfo.aString6876.startsWith("ppc")) NodeSub41.aString7048 += "universal/";
@@ -87,7 +87,7 @@ final class ComponentDownloader {
                 } else NodeSub41.aString7048 += "x86_64/";
             } else NodeSub41.aString7048 += "msjava/";
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hw.A(" + (class45 != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hw.A(" + (class45 != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

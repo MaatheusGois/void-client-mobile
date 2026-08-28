@@ -37,7 +37,7 @@ final class RenderableSub4
             }
             return new ShaderSub2(var_ha_Sub3, i_2_, i, is_7_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jda.A(" + i + ',' + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_0_ + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jda.A(" + i + ',' + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_0_ + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ')'));
         }
     }
 
@@ -60,7 +60,7 @@ final class RenderableSub4
             class348_sub42_sub19.aClass356Array9693 = new LruCache[i_14_];
             for (int i_15_ = 0; i_15_ < i_14_; i_15_++) {
                 int i_16_ = class348_sub49.readUnsignedShort(842397944);
-                LruCache class356 = new LruCache(Component373.method340(i_16_, (byte) 108));
+                LruCache class356 = new LruCache(Component373.nextPowerOfTwo(i_16_, (byte) 108));
                 class348_sub42_sub19.aClass356Array9693[i_15_] = class356;
                 while (i_16_-- > 0) {
                     int i_17_ = class348_sub49.readInt((byte) -126);

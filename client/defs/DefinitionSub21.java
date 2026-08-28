@@ -16,7 +16,8 @@ final class DefinitionSub21
     static int anInt9272;
     static int anInt9273;
     static DisplayModeManagerContainer369 aClass223_9274;
-    static String[] aStringArray9275 = new String[100];
+    /** Ignore-list last/previous names. */
+    static String[] ignoreLastNames = new String[100];
     private int anInt9276 = 4096;
     private int anInt9277;
     private int anInt9278 = 0;
@@ -26,11 +27,11 @@ final class DefinitionSub21
     static int anInt9282;
     static long[] aLongArray9283;
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9267++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_0_ != 255) method3108(-114, -119, -89);
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             int i_1_ = -2048 + Component302.anIntArray6035[i];
             for (int i_2_ = 0; (i_2_ < DefinitionSub6.anInt9139); i_2_++) {
                 int i_3_ = -2048 + RenderableSub6.anIntArray6432[i_2_];
@@ -52,9 +53,9 @@ final class DefinitionSub21
         return is;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         anInt9272++;
-        if (i <= 108) method3042(69, 74);
+        if (i <= 108) getMonochromeOutput(69, 74);
         Component7.method1605(26188);
     }
 
@@ -71,14 +72,14 @@ final class DefinitionSub21
 
     public static void method3106(byte i) {
         aLongArray9283 = null;
-        aStringArray9275 = null;
+        ignoreLastNames = null;
         aClass223_9274 = null;
         int i_12_ = 69 % ((19 - i) / 41);
     }
 
     final void method3049(Buffer class348_sub49, int i, int i_13_) {
         anInt9268++;
-        if (i_13_ != 31015) method3042(72, 12);
+        if (i_13_ != 31015) getMonochromeOutput(72, 12);
         int i_14_ = i;
         while_183_:
         do {

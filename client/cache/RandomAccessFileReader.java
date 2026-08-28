@@ -14,9 +14,11 @@ import java.io.RandomAccessFile;
 
 final class RandomAccessFileReader {
     private RandomAccessFile randomAccessFile;
-    private final long aLong3037;
+    /** Hard cap on writable size (EOFException past this). */
+    private final long maxLength;
     static int anInt3038;
-    private long aLong3039;
+    /** Current RAF file pointer. */
+    private long position;
     static int anInt3040;
     static int anInt3041;
     static int anInt3042;
@@ -32,7 +34,7 @@ final class RandomAccessFileReader {
         anInt3040++;
         int i_2_ = randomAccessFile.read(is, i, i_1_);
         int i_3_ = 39 % ((75 - i_0_) / 39);
-        if (i_2_ > 0) aLong3039 += i_2_;
+        if (i_2_ > 0) position += i_2_;
         return i_2_;
     }
 
@@ -47,24 +49,25 @@ final class RandomAccessFileReader {
 
     final void write(byte i, int i_4_, int i_5_, byte[] is) throws IOException {
         anInt3043++;
-        if (aLong3037 < (long) i_5_ - -aLong3039) {
-            randomAccessFile.seek(aLong3037);
+        if (maxLength < (long) i_5_ - -position) {
+            randomAccessFile.seek(maxLength);
             randomAccessFile.write(1);
             throw new EOFException();
         }
-        if (i < 108) aLong3039 = 124L;
+        if (i < 108) position = 124L;
         randomAccessFile.write(is, i_4_, i_5_);
-        aLong3039 += i_5_;
+        position += i_5_;
     }
 
-    public static void method1659(byte i) {
-        if (i >= -2) method1659((byte) 126);
+    /** Nulls static type-tag handle at shutdown. */
+    public static void clearStatics(byte i) {
+        if (i >= -2) clearStatics((byte) 126);
         aClass138_3044 = null;
     }
 
     final File getFile(int i) {
         anInt3042++;
-        if (i <= 64) method1659((byte) -48);
+        if (i <= 64) clearStatics((byte) -48);
         return file;
     }
 
@@ -73,13 +76,14 @@ final class RandomAccessFileReader {
             anInt3048++;
             if (i != -18968) randomAccessFile = null;
             randomAccessFile.seek(l);
-            aLong3039 = l;
+            position = l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "so.B(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "so.B(" + i + ',' + l + ')');
         }
     }
 
-    final long method1662(byte i) throws IOException {
+    /** @return {@link RandomAccessFile#length()}. */
+    final long length(byte i) throws IOException {
         anInt3038++;
         if (i != -46) return 97L;
         return randomAccessFile.length();
@@ -98,8 +102,8 @@ final class RandomAccessFileReader {
             if (l == -1) l = 9223372036854775807L;
             if (l < file.length()) file.delete();
             randomAccessFile = new RandomAccessFile(file, string);
-            aLong3037 = l;
-            aLong3039 = 0L;
+            maxLength = l;
+            position = 0L;
             this.file = file;
             int i = randomAccessFile.read();
             if (i != -1 && !string.equals("r")) {
@@ -108,7 +112,7 @@ final class RandomAccessFileReader {
             }
             randomAccessFile.seek(0L);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("so.<init>(" + (file != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + l + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("so.<init>(" + (file != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + l + ')'));
         }
     }
 

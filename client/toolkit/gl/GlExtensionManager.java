@@ -134,10 +134,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9870++;
         int i_0_ = 0;
         i &= 0x7fffffff;
-        while (!aClass262_9899.method2002((byte) 18)) {
+        while (!aClass262_9899.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9899.peekFirst(8);
             HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
-            this.anInt8063 -= class348_sub35.anInt6976;
+            this.anInt8063 -= class348_sub35.intValue;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteBuffersARB(i_0_, HashTable.anIntArray1650, 0);
                 i_0_ = 0;
@@ -147,10 +147,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
             OpenGL.glDeleteBuffersARB(i_0_, HashTable.anIntArray1650, 0);
             i_0_ = 0;
         }
-        while (!aClass262_9901.method2002((byte) 18)) {
+        while (!aClass262_9901.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9901.peekFirst(8);
             HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
-            this.anInt8062 -= class348_sub35.anInt6976;
+            this.anInt8062 -= class348_sub35.intValue;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteTextures(i_0_, HashTable.anIntArray1650, 0);
                 i_0_ = 0;
@@ -160,9 +160,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
             OpenGL.glDeleteTextures(i_0_, HashTable.anIntArray1650, 0);
             i_0_ = 0;
         }
-        while (!aClass262_9902.method2002((byte) 18)) {
+        while (!aClass262_9902.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9902.peekFirst(8);
-            HashTable.anIntArray1650[i_0_++] = class348_sub35.anInt6976;
+            HashTable.anIntArray1650[i_0_++] = class348_sub35.intValue;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(i_0_, HashTable.anIntArray1650, 0);
                 i_0_ = 0;
@@ -172,10 +172,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
             OpenGL.glDeleteFramebuffersEXT(i_0_, HashTable.anIntArray1650, 0);
             i_0_ = 0;
         }
-        while (!aClass262_9903.method2002((byte) 18)) {
+        while (!aClass262_9903.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9903.peekFirst(8);
             HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
-            this.anInt8079 -= class348_sub35.anInt6976;
+            this.anInt8079 -= class348_sub35.intValue;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(i_0_, HashTable.anIntArray1650, 0);
                 i_0_ = 0;
@@ -185,21 +185,21 @@ final class GlExtensionManager extends GlToolkitSub3 {
             OpenGL.glDeleteRenderbuffersEXT(i_0_, HashTable.anIntArray1650, 0);
             boolean bool = false;
         }
-        while (!aClass262_9869.method2002((byte) 18)) {
+        while (!aClass262_9869.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.peekFirst(8);
-            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.intValue);
         }
-        while (!aClass262_9904.method2002((byte) 18)) {
+        while (!aClass262_9904.isEmpty((byte) 18)) {
             Node class348 = aClass262_9904.peekFirst(8);
             OpenGL.glDeleteProgramARB((int) class348.key);
         }
-        while (!aClass262_9905.method2002((byte) 18)) {
+        while (!aClass262_9905.isEmpty((byte) 18)) {
             Node class348 = aClass262_9905.peekFirst(8);
             OpenGL.glDeleteObjectARB(class348.key);
         }
-        while (!aClass262_9869.method2002((byte) 18)) {
+        while (!aClass262_9869.isEmpty((byte) 18)) {
             NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.peekFirst(8);
-            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.intValue);
         }
         if (this.E() > 100663296 && (Component240.currentTimeMillis(-82) > 60000L + aLong9906)) {
             System.gc();
@@ -221,7 +221,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (i != 0) this.aMapBuffer9913 = null;
             return new DisplayModeManagerContainer273(class58s);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.KD(" + i + ',' + (class58s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.KD(" + i + ',' + (class58s != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -240,11 +240,11 @@ final class GlExtensionManager extends GlToolkitSub3 {
     static final void method3965(String string, int i, int i_1_) {
         try {
             anInt9841++;
-            RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, i_1_);//2
+            RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_1_);//2
             class348_sub42_sub15.method3246(-25490);
             class348_sub42_sub15.aString9654 = string;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.AA(" + (string != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.AA(" + (string != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
         }
     }
 
@@ -256,7 +256,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 if (!anOpenGL9856.setSurface(var_long.longValue())) throw new RuntimeException();
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.UB(" + (object != null ? "{...}" : "null") + ',' + i + ',' + (canvas != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.UB(" + (object != null ? "{...}" : "null") + ',' + i + ',' + (canvas != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -269,12 +269,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9852++;
             if (bool_2_ == false) {
-                OpenGL.glTexEnvi(8960, i + 34176, DisplayModeManagerContainer115.method531((byte) 101, class70));
+                OpenGL.glTexEnvi(8960, i + 34176, DisplayModeInfo.method531((byte) 101, class70));
                 if (bool) OpenGL.glTexEnvi(8960, i + 34192, !bool_3_ ? 770 : 771);
                 else OpenGL.glTexEnvi(8960, i + 34192, !bool_3_ ? 768 : 769);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.DD(" + bool + ',' + bool_2_ + ',' + i + ',' + (class70 != null ? "{...}" : "null") + ',' + bool_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.DD(" + bool + ',' + bool_2_ + ',' + i + ',' + (class70 != null ? "{...}" : "null") + ',' + bool_3_ + ')'));
         }
     }
 
@@ -284,7 +284,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             int i_4_ = -21 / ((85 - i) / 37);
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.FB(" + (class68 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.FB(" + (class68 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -309,7 +309,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             class348.key = l;
             if (i == 34192) aClass262_9905.addTail(class348, i ^ ~0xcb43);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "bga.N(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "bga.N(" + l + ',' + i + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9832++;
             return new DisplayModeManagerContainer288(this, class304, i_6_, i_7_, i, is);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.ND(" + i + ',' + i_6_ + ',' + (class304 != null ? "{...}" : "null") + ',' + bool + ',' + i_7_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.ND(" + i + ',' + i_6_ + ',' + (class304 != null ? "{...}" : "null") + ',' + bool + ',' + i_7_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -367,13 +367,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (i_14_ != 32) anOpenGL9856 = null;
             if (!aBoolean9926 && (!Component353.method1436(i_14_ ^ 0x46, i_12_) || !Component353.method1436(i_14_ + 83, i))) {
                 if (aBoolean9919) return new WorldNameText(this, class304, i_12_, i, is, i_11_, i_13_);
-                Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1183, Component373.method340(i_12_, (byte) 108), Component373.method340(i, (byte) 108));
+                Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1183, Component373.nextPowerOfTwo(i_12_, (byte) 108), Component373.nextPowerOfTwo(i, (byte) 108));
                 class14_sub1.method70(0, i_11_, (byte) -45, i_13_, i, i_12_, 0, is, class304);
                 return class14_sub1;
             }
             return new Component19(this, class304, i_12_, i, bool, is, i_11_, i_13_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.B(" + i + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i_14_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.B(" + i + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i_14_ + ',' + bool + ')'));
         }
     }
 
@@ -400,7 +400,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.CD(" + (class113 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.CD(" + (class113 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -426,7 +426,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             int i_18_ = 86 / ((i - -26) / 39);
             aClass285_Sub1Array9907[i_17_] = (DebugPanicSub1) interface5_impl1;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.WB(" + i + ',' + (interface5_impl1 != null ? "{...}" : "null") + ',' + i_17_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.WB(" + i + ',' + (interface5_impl1 != null ? "{...}" : "null") + ',' + i_17_ + ')'));
         }
     }
 
@@ -502,7 +502,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9897++;
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.NB(" + (interface3 != null ? "{...}" : "null") + ',' + (interface13 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.NB(" + (interface3 != null ? "{...}" : "null") + ',' + (interface13 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -514,7 +514,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (l == -1) throw new RuntimeException();
             return new Long(l);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.MC(" + i + ',' + (canvas != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.MC(" + i + ',' + (canvas != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -533,7 +533,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (f < 0.5F) return class299;
             return class299_24_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.SD(" + (class299 != null ? "{...}" : "null") + ',' + (class299_24_ != null ? "{...}" : "null") + ',' + f + ',' + (class299_25_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.SD(" + (class299 != null ? "{...}" : "null") + ',' + (class299_24_ != null ? "{...}" : "null") + ',' + f + ',' + (class299_25_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -604,9 +604,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
         if (this.aFloat8173 < (float) this.anInt8095) this.aFloat8173 = (float) this.anInt8095;
         OpenGL.glFogf(2915, this.aFloat8173);
         OpenGL.glFogf(2916, this.aFloat8115);
-        RuntimeException_Sub1.aFloatArray4602[2] = ((float) GpsOverlay.method1166(this.anInt8144, 255) / 255.0F);
-        RuntimeException_Sub1.aFloatArray4602[0] = ((float) GpsOverlay.method1166(16711680, this.anInt8144) / 1.671168E7F);
-        RuntimeException_Sub1.aFloatArray4602[1] = ((float) GpsOverlay.method1166(65280, this.anInt8144) / 65280.0F);
+        RuntimeException_Sub1.aFloatArray4602[2] = ((float) GpsOverlay.bitwiseAnd(this.anInt8144, 255) / 255.0F);
+        RuntimeException_Sub1.aFloatArray4602[0] = ((float) GpsOverlay.bitwiseAnd(16711680, this.anInt8144) / 1.671168E7F);
+        RuntimeException_Sub1.aFloatArray4602[1] = ((float) GpsOverlay.bitwiseAnd(65280, this.anInt8144) / 65280.0F);
         OpenGL.glFogfv(2918, RuntimeException_Sub1.aFloatArray4602, 0);
     }
 
@@ -650,11 +650,11 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 aString9916 = OpenGL.glGetString(7937).toLowerCase();
                 if (aString9917.indexOf("microsoft") != -1 || aString9917.indexOf("brian paul") != -1 || aString9917.indexOf("mesa") != -1) throw new RuntimeException("");
                 String string = OpenGL.glGetString(7938);
-                String[] strings = DefinitionSub23.method3113(' ', true, string.replace('.', ' '));
+                String[] strings = DefinitionSub23.splitByChar(' ', true, string.replace('.', ' '));
                 if (strings.length < 2) throw new RuntimeException("");
                 try {
-                    int i_32_ = NodeSub41.method3156(true, strings[0]);
-                    int i_33_ = NodeSub41.method3156(true, strings[1]);
+                    int i_32_ = NodeSub41.parseInt(true, strings[0]);
+                    int i_33_ = NodeSub41.parseInt(true, strings[1]);
                     anInt9924 = i_32_ * 10 - -i_33_;
                 } catch (NumberFormatException numberformatexception) {
                     throw new RuntimeException("");
@@ -683,12 +683,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
                     int i_34_ = 0;
                     boolean bool = false;
                     boolean bool_35_ = false;
-                    String[] strings_36_ = (DefinitionSub23.method3113(' ', true, aString9916.replace('/', ' ')));
+                    String[] strings_36_ = (DefinitionSub23.splitByChar(' ', true, aString9916.replace('/', ' ')));
                     for (int i_37_ = 0; (i_37_ < strings_36_.length); i_37_++) {
                         String string_38_ = strings_36_[i_37_];
                         try {
                             if (string_38_.length() > 0) {
-                                if (string_38_.charAt(0) == 'x' && string_38_.length() >= 3 && (DisplayModeManagerContainer368.method468(string_38_.substring(1, 3), -115))) {
+                                if (string_38_.charAt(0) == 'x' && string_38_.length() >= 3 && (DisplayModeManagerContainer368.isDecimal(string_38_.substring(1, 3), -115))) {
                                     bool_35_ = true;
                                     string_38_ = string_38_.substring(1);
                                 }
@@ -698,8 +698,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
                                         bool = true;
                                         string_38_ = string_38_.substring(2);
                                     }
-                                    if (string_38_.length() >= 4 && (DisplayModeManagerContainer368.method468(string_38_.substring(0, 4), 92))) {
-                                        i_34_ = (NodeSub41.method3156(true, string_38_.substring(0, 4)));
+                                    if (string_38_.length() >= 4 && (DisplayModeManagerContainer368.isDecimal(string_38_.substring(0, 4), 92))) {
+                                        i_34_ = (NodeSub41.parseInt(true, string_38_.substring(0, 4)));
                                         break;
                                     }
                                 }
@@ -729,7 +729,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.<init>(" + (opengl != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + l + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.<init>(" + (opengl != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + l + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -763,7 +763,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             class285_sub2.method2125(0);
             OpenGL.glDrawElements(i_44_, i_45_, Component387.method1128(-20, class68), (class285_sub2.method2122(27819) + (long) (i_41_ * (class68.anInt1178))));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.JC(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + (interface5_impl2 != null ? "{...}" : "null") + ',' + i_40_ + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.JC(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + (interface5_impl2 != null ? "{...}" : "null") + ',' + i_40_ + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ')'));
         }
     }
 
@@ -782,9 +782,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
             RuntimeException_Sub1.aFloatArray4602[2] = (float) class348_sub1.method2717((byte) 111);
             RuntimeException_Sub1.aFloatArray4602[3] = 1.0F;
             OpenGL.glLightfv(i_49_, 4611, RuntimeException_Sub1.aFloatArray4602, 0);
-            RuntimeException_Sub1.aFloatArray4602[2] = (float) GpsOverlay.method1166(255, i_48_) * f;
-            RuntimeException_Sub1.aFloatArray4602[1] = f * (float) (GpsOverlay.method1166(i_48_, 65338) >> 8);
-            RuntimeException_Sub1.aFloatArray4602[0] = (float) GpsOverlay.method1166(255, i_48_ >> 16) * f;
+            RuntimeException_Sub1.aFloatArray4602[2] = (float) GpsOverlay.bitwiseAnd(255, i_48_) * f;
+            RuntimeException_Sub1.aFloatArray4602[1] = f * (float) (GpsOverlay.bitwiseAnd(i_48_, 65338) >> 8);
+            RuntimeException_Sub1.aFloatArray4602[0] = (float) GpsOverlay.bitwiseAnd(255, i_48_ >> 16) * f;
             RuntimeException_Sub1.aFloatArray4602[3] = 1.0F;
             OpenGL.glLightfv(i_49_, 4609, RuntimeException_Sub1.aFloatArray4602, 0);
             OpenGL.glLightf(i_49_, 4617, 1.0F / (float) (class348_sub1.method2723(-1) * class348_sub1.method2723(-1)));
@@ -802,7 +802,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             Long var_long = (Long) object;
             anOpenGL9856.surfaceResized(var_long.longValue());
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.FC(" + i + ',' + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.FC(" + i + ',' + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -817,7 +817,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9855++;
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.RA(" + bool + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.RA(" + bool + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -848,7 +848,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             }
             OpenGL.glDrawArrays(i_52_, i_50_, i_51_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.V(" + i + ',' + i_50_ + ',' + (class21 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.V(" + i + ',' + i_50_ + ',' + (class21 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -858,7 +858,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9883++;
             return new DisplayModeManagerContainer389(this, i_53_, bool, is);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.HB(" + (is != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_53_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.HB(" + (is != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_53_ + ')'));
         }
     }
 
@@ -868,13 +868,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (i_56_ != 2) this.aMapBuffer9913 = null;
             if (!aBoolean9926 && (!Component353.method1436(60, i) || !Component353.method1436(-73, i_57_))) {
                 if (aBoolean9919) return new WorldNameText(this, class304, i, i_57_, fs, i_54_, i_55_);
-                Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1187, Component373.method340(i, (byte) 108), Component373.method340(i_57_, (byte) 108));
+                Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1187, Component373.nextPowerOfTwo(i, (byte) 108), Component373.nextPowerOfTwo(i_57_, (byte) 108));
                 class14_sub1.method240(i_55_, (byte) -126, fs, class304, 0, i_54_, 0, i, i_57_);
                 return class14_sub1;
             }
             return new Component19(this, class304, i, i_57_, bool, fs, i_54_, i_55_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.WC(" + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_54_ + ',' + (fs != null ? "{...}" : "null") + ',' + bool + ',' + i_55_ + ',' + i_56_ + ',' + i_57_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.WC(" + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_54_ + ',' + (fs != null ? "{...}" : "null") + ',' + bool + ',' + i_55_ + ',' + i_56_ + ',' + i_57_ + ')'));
         }
     }
 
@@ -909,13 +909,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9830++;
             if (aBoolean9926 || Component353.method1436(103, i) && Component353.method1436(-53, i_63_)) return new Component19(this, i, i_63_, bool, is, i_61_, i_62_);
             if (!aBoolean9919) {
-                Component19 class14_sub1 = new Component19(this, Component83.aClass304_1662, Component342.aClass68_1183, Component373.method340(i, (byte) 108), Component373.method340(i_63_, (byte) 108));
+                Component19 class14_sub1 = new Component19(this, Component83.aClass304_1662, Component342.aClass68_1183, Component373.nextPowerOfTwo(i, (byte) 108), Component373.nextPowerOfTwo(i_63_, (byte) 108));
                 class14_sub1.method68(i_62_, 22809, is, 0, i_61_, i, 0, i_63_);
                 return class14_sub1;
             }
             return new WorldNameText(this, i, i_63_, is, i_61_, i_62_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.R(" + i + ',' + (is != null ? "{...}" : "null") + ',' + bool + ',' + i_60_ + ',' + i_61_ + ',' + i_62_ + ',' + i_63_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.R(" + i + ',' + (is != null ? "{...}" : "null") + ',' + bool + ',' + i_60_ + ',' + i_61_ + ',' + i_62_ + ',' + i_63_ + ')'));
         }
     }
 
@@ -986,12 +986,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final void method3829(DisplayModeManagerContainer88 class70, int i, byte i_71_, boolean bool) {
         try {
             if (i_71_ == 80) {
-                OpenGL.glTexEnvi(8960, i + 34184, DisplayModeManagerContainer115.method531((byte) 123, class70));
+                OpenGL.glTexEnvi(8960, i + 34184, DisplayModeInfo.method531((byte) 123, class70));
                 anInt9885++;
                 OpenGL.glTexEnvi(8960, 34200 + i, bool ? 771 : 770);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.AD(" + (class70 != null ? "{...}" : "null") + ',' + i + ',' + i_71_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.AD(" + (class70 != null ? "{...}" : "null") + ',' + i + ',' + i_71_ + ',' + bool + ')'));
         }
     }
 
@@ -1000,7 +1000,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             anInt9823++;
             method3626(i_72_, i_73_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ',' + i_73_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ',' + i_73_ + ')'));
         }
     }
 
@@ -1077,7 +1077,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 anInt9909 = i_74_;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.KC(" + i + ',' + (class130 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.KC(" + i + ',' + (class130 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1120,16 +1120,16 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (i != 1) this.anInt9918 = -120;
             anOpenGL9856.releaseSurface(canvas, var_long.longValue());
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.QD(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + (object != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.QD(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + (object != null ? "{...}" : "null") + ')'));
         }
     }
 
     final void method3945(int i) {
-        RuntimeException_Sub1.aFloatArray4602[1] = ((float) GpsOverlay.method1166(65280, this.anInt8119) / 65280.0F);
-        RuntimeException_Sub1.aFloatArray4602[2] = ((float) GpsOverlay.method1166(255, this.anInt8119) / 255.0F);
+        RuntimeException_Sub1.aFloatArray4602[1] = ((float) GpsOverlay.bitwiseAnd(65280, this.anInt8119) / 65280.0F);
+        RuntimeException_Sub1.aFloatArray4602[2] = ((float) GpsOverlay.bitwiseAnd(255, this.anInt8119) / 255.0F);
         RuntimeException_Sub1.aFloatArray4602[3] = (float) (this.anInt8119 >>> 24) / 255.0F;
         anInt9889++;
-        RuntimeException_Sub1.aFloatArray4602[0] = ((float) GpsOverlay.method1166(16711680, this.anInt8119) / 1.671168E7F);
+        RuntimeException_Sub1.aFloatArray4602[0] = ((float) GpsOverlay.bitwiseAnd(16711680, this.anInt8119) / 1.671168E7F);
         if (i >= -107) anInt9909 = -64;
         OpenGL.glTexEnvfv(8960, 8705, RuntimeException_Sub1.aFloatArray4602, 0);
     }
@@ -1165,10 +1165,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
             if (i_88_ != -84) method3842(false);
             anInt9882++;
             if (aBoolean9926 || (Component353.method1436(i_88_ + 15, i_89_) && Component353.method1436(65, i))) return new Component19(this, class304, class68, i_89_, i);
-            if (!aBoolean9919) return new Component19(this, class304, class68, Component373.method340(i_89_, (byte) 108), Component373.method340(i, (byte) 108));
+            if (!aBoolean9919) return new Component19(this, class304, class68, Component373.nextPowerOfTwo(i_89_, (byte) 108), Component373.nextPowerOfTwo(i, (byte) 108));
             return new WorldNameText(this, class304, class68, i_89_, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bga.NC(" + i + ',' + i_88_ + ',' + i_89_ + ',' + (class68 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.NC(" + i + ',' + i_88_ + ',' + i_89_ + ',' + (class68 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1218,7 +1218,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9816++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "bga.IA(" + (interface4 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "bga.IA(" + (interface4 != null ? "{...}" : "null") + ')');
         }
     }
 }

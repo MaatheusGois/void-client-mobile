@@ -54,7 +54,7 @@ final class Component359
             aHa_Sub2_3153 = var_ha_Sub2;
             this.aLong3156 = l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
         }
     }
 }

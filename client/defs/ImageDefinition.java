@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub40_Sub7` (JODE-obfuscated).
- * Image/sprite definition (extends renamed Definition). method3047() builds RGB int[][] pixel buffers (R/G/B channels) from a config cache (ImageCacheStore) and applies horizontal flip; produces decoded image data for the cache.
+ * Image/sprite definition (extends renamed Definition). getColourOutput() builds RGB int[][] pixel buffers (R/G/B channels) from a config cache (ImageCacheStore) and applies horizontal flip; produces decoded image data for the cache.
  */
 
 final class ImageDefinition extends Definition {
@@ -17,10 +17,10 @@ final class ImageDefinition extends Definition {
     static int anInt9146;
     private boolean aBoolean9147 = true;
 
-    final int[][] method3047(int i, int i_0_) {
+    final int[][] getColourOutput(int i, int i_0_) {
         anInt9141++;
-        int[][] is = this.aClass322_7033.method2557(-119, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-119, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[][] is_1_ = this.method3039((byte) 120, (aBoolean9147 ? -i + DisplayModeManagerContainer356.anInt6325 : i), 0);
             int[] is_2_ = is_1_[0];
             int[] is_3_ = is_1_[1];
@@ -207,9 +207,9 @@ final class ImageDefinition extends Definition {
                                                 int i_46_ = 0;
                                                 for (int i_47_ = 0; (i_47_ < 37); i_47_++) {
                                                     if ((Component354.aClass314_Sub1Array223[i_47_]) != null) {
-                                                        i_44_ += (Component354.aClass314_Sub1Array223[i_47_].method2345(0));
-                                                        i_45_ += (Component354.aClass314_Sub1Array223[i_47_].method2351(0));
-                                                        i_46_ += (Component354.aClass314_Sub1Array223[i_47_].method2341(24940));
+                                                        i_44_ += (Component354.aClass314_Sub1Array223[i_47_].getGroupCount(0));
+                                                        i_45_ += (Component354.aClass314_Sub1Array223[i_47_].getLoadedGroupCount(0));
+                                                        i_46_ += (Component354.aClass314_Sub1Array223[i_47_].getPrefetchProgress(24940));
                                                     }
                                                 }
                                                 int i_48_ = i_46_ * 100 / i_44_;
@@ -273,14 +273,14 @@ final class ImageDefinition extends Definition {
                                                 NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(-67, (class46.anInt812)));
                                                 string = (class213.aString2795);
                                                 if (string == null) string = "null";
-                                                if (((class213.anInt2820) == 1 || (class46.anInt781) != 1) && (class46.anInt781) != -1) string = ("<col=ff9040>" + string + "</col> x" + (NameFormatter.method356(-127, (class46.anInt781))));
+                                                if (((class213.anInt2820) == 1 || (class46.anInt781) != 1) && (class46.anInt781) != -1) string = ("<col=ff9040>" + string + "</col> x" + (NameFormatter.formatQuantity(-127, (class46.anInt781))));
                                             }
                                             if (class46.anInt806 != -1) {
                                                 string = (WaterSurfaceShader.method2157((class46.anInt806), -1431655765));
                                                 if (string == null) string = "";
                                             }
                                             if (Component297.aClass46_4730 == class46) {
-                                                string = (FriendsIgnoreList.aClass274_3514.method2063((ObjectDeserializer.anInt6967), 544));
+                                                string = (FriendsIgnoreList.aClass274_3514.getLocalized((ObjectDeserializer.languageId), 544));
                                                 i_50_ = (class46.anInt749);
                                             }
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.T(i_24_, i_25_, (class46.anInt709) + i_24_, (class46.anInt789) + i_25_);
@@ -369,7 +369,7 @@ final class ImageDefinition extends Definition {
                                                     class64 = (player.appearance.method1226((DisplayModeManagerContainer58.aClass170_10209), null, null, true, (Exception_Sub1.aClass255_112), 0, class17, class46.anInt730, true, -1, null, 2048, (DefinitionSub25.aClass150_9342), class46.anInt841, (NodeSub8.toolkit), (Component291.aClass278_2529), (RunescapeInfo.aClass87_191), 0, class46.anInt795, 0, (DisplayModeManagerContainer282.aClass261_5558)));
                                             }
                                         } else if ((class46.anInt770) == 8 || (class46.anInt770) == 9) {
-                                            NodeSub13 class348_sub13 = (AbstractGlTextureSub4.method1974((byte) -123, (class46.anInt753), false));
+                                            NodeSub13 class348_sub13 = (AbstractGlTextureSub4.getImageCacheNode((byte) -123, (class46.anInt753), false));
                                             DisplayModeManagerContainer167 class17 = ((class46.anInt699) == -1 ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
                                             if (class348_sub13 != null) {
                                                 Component101 class154 = ((class46.aBoolean720) ? (Component72.localPlayer.appearance) : null);
@@ -463,7 +463,7 @@ final class ImageDefinition extends Definition {
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jia.B(" + i + ',' + i_10_ + ',' + bool + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ',' + bool_15_ + ',' + (class46s != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jia.B(" + i + ',' + i_10_ + ',' + bool + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ',' + bool_15_ + ',' + (class46s != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ')'));
         }
     }
 
@@ -485,12 +485,12 @@ final class ImageDefinition extends Definition {
                         aBoolean9147 = class348_sub49.readUnsignedByte(255) == 1;
                         return;
                     } while (false);
-                    this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+                    this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
                     break;
                 }
                 break;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("jia.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("jia.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ')'));
             }
         } while (false);
     }
@@ -509,11 +509,11 @@ final class ImageDefinition extends Definition {
         HashNodeSub14.method3243(25, class348_sub47);
     }
 
-    final int[] method3042(int i, int i_75_) {
+    final int[] getMonochromeOutput(int i, int i_75_) {
         anInt9143++;
         if (i_75_ != 255) aMenuEntry_9144 = null;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int[] is_76_ = this.method3048((aBoolean9147 ? DisplayModeManagerContainer356.anInt6325 - i : i), i_75_ + 633706082, 0);
             if (aBoolean9140) {
                 for (int i_77_ = 0; (i_77_ < DefinitionSub6.anInt9139); i_77_++)

@@ -121,7 +121,7 @@ final class BufferCacheSub2
             }
             U(i, i_5_, is_20_, is_26_, is_21_, is_27_, is_22_, is_23_, is_24_, is_25_, i_16_, i_17_, i_18_, bool);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ed.E(" + i + ',' + i_5_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_6_ != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ',' + (is_9_ != null ? "{...}" : "null") + ',' + (is_10_ != null ? "{...}" : "null") + ',' + (is_11_ != null ? "{...}" : "null") + ',' + (is_12_ != null ? "{...}" : "null") + ',' + (is_13_ != null ? "{...}" : "null") + ',' + (is_14_ != null ? "{...}" : "null") + ',' + (is_15_ != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ed.E(" + i + ',' + i_5_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_6_ != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ',' + (is_9_ != null ? "{...}" : "null") + ',' + (is_10_ != null ? "{...}" : "null") + ',' + (is_11_ != null ? "{...}" : "null") + ',' + (is_12_ != null ? "{...}" : "null") + ',' + (is_13_ != null ? "{...}" : "null") + ',' + (is_14_ != null ? "{...}" : "null") + ',' + (is_15_ != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ')'));
         }
     }
 
@@ -485,7 +485,7 @@ final class BufferCacheSub2
                 if ((0x10 & this.anInt8235) == 0) break;
                 aClass104_8266 = new Component65(this.aHa_Sub2_8272, this);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ed.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_133_ + ',' + i_134_ + ',' + i_135_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_136_ != null ? "{...}" : "null") + ',' + i_137_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ed.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_133_ + ',' + i_134_ + ',' + i_135_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_136_ != null ? "{...}" : "null") + ',' + i_137_ + ')'));
             }
             break;
         } while (false);
@@ -598,7 +598,7 @@ final class BufferCacheSub2
                             short[] is = this.aShortArrayArray8267[i_164_];
                             if (is != null) {
                                 for (int i_166_ = 0; i_166_ < is.length; i_166_++) {
-                                    class348_sub49_sub1.method3397(84, 0xffff & is[i_166_]);
+                                    class348_sub49_sub1.writeShortLE(84, 0xffff & is[i_166_]);
                                     i_158_++;
                                 }
                             }
@@ -669,7 +669,7 @@ final class BufferCacheSub2
             anInt8271++;
             aClass262_8256.addTail(new NodeSub32((this.aHa_Sub2_8272), this, class348_sub1, is), -20180);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ed.L(" + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ed.L(" + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -704,11 +704,11 @@ final class BufferCacheSub2
                     aClass356_8278.put((byte) 99, l, class348_sub20s[i_187_]);
                 } else class348_sub20s[i_187_] = (NodeSub20) class348;
             }
-            if (bool) aByteArrayArray8240[i][i_176_] = (byte) Component224.method2057((aByteArrayArray8240[i][i_176_]), 1);
+            if (bool) aByteArrayArray8240[i][i_176_] = (byte) Component224.bitwiseOr((aByteArrayArray8240[i][i_176_]), 1);
             if (is_180_.length > anInt8280) anInt8280 = is_180_.length;
             anInt8284 += is_180_.length;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ed.U(" + i + ',' + i_176_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_177_ != null ? "{...}" : "null") + ',' + (is_178_ != null ? "{...}" : "null") + ',' + (is_179_ != null ? "{...}" : "null") + ',' + (is_180_ != null ? "{...}" : "null") + ',' + (is_181_ != null ? "{...}" : "null") + ',' + (is_182_ != null ? "{...}" : "null") + ',' + (is_183_ != null ? "{...}" : "null") + ',' + i_184_ + ',' + i_185_ + ',' + i_186_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ed.U(" + i + ',' + i_176_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_177_ != null ? "{...}" : "null") + ',' + (is_178_ != null ? "{...}" : "null") + ',' + (is_179_ != null ? "{...}" : "null") + ',' + (is_180_ != null ? "{...}" : "null") + ',' + (is_181_ != null ? "{...}" : "null") + ',' + (is_182_ != null ? "{...}" : "null") + ',' + (is_183_ != null ? "{...}" : "null") + ',' + i_184_ + ',' + i_185_ + ',' + i_186_ + ',' + bool + ')'));
         }
     }
 
@@ -750,7 +750,7 @@ final class BufferCacheSub2
             this.aHa_Sub2_8272.method3728((0x7 & (this.anInt8235)) != 0, 120);
             for (int i_208_ = 0; aClass348_Sub20Array8282.length > i_208_; i_208_++)
                 aClass348_Sub20Array8282[i_208_].method2948(5123, i_204_, is);
-            if (!aClass262_8256.method2002((byte) 18)) {
+            if (!aClass262_8256.isEmpty((byte) 18)) {
                 int i_209_ = this.aHa_Sub2_8272.anInt7856;
                 int i_210_ = this.aHa_Sub2_8272.anInt7782;
                 this.aHa_Sub2_8272.L(0, i_210_, (this.aHa_Sub2_8272.anInt7813));

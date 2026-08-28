@@ -58,7 +58,7 @@ final class Component388
 
     static final Component184 method1819(int i, int i_1_, int i_2_, CacheStore class45) {
         anInt6081++;
-        byte[] is = class45.method410(-1860, i, i_1_);
+        byte[] is = class45.getFile(-1860, i, i_1_);
         if (i_2_ >= -31) method1819(65, -4, -97, null);
         if (is == null) return null;
         return new Component184(is);

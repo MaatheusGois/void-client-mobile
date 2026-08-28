@@ -10,18 +10,22 @@ final class Component358
     static int anInt3877;
     static int anInt3878;
 
-    static final Component278 method2300(CacheStore class45, String string, boolean bool, byte i) {
+    /**
+     * Load a named {@code *_staticelements} table from {@code class45}: pairs of
+     * (id, secondary) skipping members with flag 1 when {@code bool} is false.
+     */
+    static final Component278 loadStaticElements(CacheStore class45, String string, boolean bool, byte i) {
         try {
             anInt3877++;
-            int i_0_ = class45.method417(string, 0);
+            int i_0_ = class45.getGroupId(string, 0);
             if (i != -91) return null;
             if (i_0_ == -1) return new Component278(0);
-            int[] is = class45.method396(i_0_, i ^ ~0x5a);
+            int[] is = class45.getFileIds(i_0_, i ^ ~0x5a);
             Component278 class252 = new Component278(is.length);
             int i_1_ = 0;
             int i_2_ = 0;
             while (i_1_ < class252.anInt3241) {
-                Buffer class348_sub49 = new Buffer(class45.method410(-1860, i_0_, is[i_2_++]));
+                Buffer class348_sub49 = new Buffer(class45.getFile(-1860, i_0_, is[i_2_++]));
                 int i_3_ = class348_sub49.readInt((byte) -126);
                 int i_4_ = class348_sub49.readUnsignedShort(i ^ ~0x3235f8a2);
                 int i_5_ = class348_sub49.readUnsignedByte(255);
@@ -34,20 +38,20 @@ final class Component358
             }
             return class252;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wt.A(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wt.A(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + i + ')'));
         }
     }
 
-    static final int method2301(byte i, int i_6_, boolean bool) {
+    static final int countEmptyInvSlots(byte i, int i_6_, boolean bool) {
         anInt3878++;
         if (bool) return 0;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) -9, i_6_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -9, i_6_, bool);
         if (class348_sub13 == null) return (Component162.aClass271_8378.method2044(109, i_6_).anInt9542);
         int i_7_ = 0;
         for (int i_8_ = 0; (i_8_ < class348_sub13.anIntArray6757.length); i_8_++) {
             if (class348_sub13.anIntArray6757[i_8_] == -1) i_7_++;
         }
-        if (i != 35) method2301((byte) -102, 43, true);
+        if (i != 35) countEmptyInvSlots((byte) -102, 43, true);
         i_7_ += (Component162.aClass271_8378.method2044(82, i_6_).anInt9542 + -class348_sub13.anIntArray6757.length);
         return i_7_;
     }

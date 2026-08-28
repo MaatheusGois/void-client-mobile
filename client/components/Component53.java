@@ -10,12 +10,13 @@ final class Component53
     static int anInt193 = 0;
     static int anInt194;
     static int anInt195;
-    static DisplayModeManagerContainer155 aClass231_196;
+    /** Active {@link BuildType} for this session. */
+    static BuildType currentBuildType;
     static int anInt197 = 0;
 
     public static void method221(int i) {
         if (i != 0) anInt197 = -100;
-        aClass231_196 = null;
+        currentBuildType = null;
     }
 
     static final void method222(Player player, int i, byte i_0_, int i_1_) {

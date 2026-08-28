@@ -39,7 +39,7 @@ final class Component168
     static final boolean method2354(NamedInteger class364, int i) {
         anInt3954++;
         if (i != -1) method2355(-93, (byte) 115, true, null, -92, -67, 6);
-        return WaterShaderSub8.aClass364_7361 == class364 || AssetCacheLoader.aClass364_382 == class364 || Component83.aClass364_1657 == class364 || class364 == DisplayModeManagerContainer173.aClass364_4246;
+        return WaterShaderSub8.WTRC == class364 || AssetCacheLoader.WTQA == class364 || Component83.WTWIP == class364 || class364 == DisplayModeManagerContainer173.WTI;
     }
 
     static final void method2355(int i, byte i_0_, boolean bool, CacheStore class45, int i_1_, int i_2_, int i_3_) {

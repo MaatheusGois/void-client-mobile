@@ -140,10 +140,10 @@ final class DefinitionSub22
         } while (false);
     }
 
-    final int[] method3042(int i, int i_10_) {
+    final int[] getMonochromeOutput(int i, int i_10_) {
         anInt9296++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_11_ = 0;
             int i_12_;
             for (i_12_ = anInt9293 + Component302.anIntArray6035[i]; i_12_ < 0; i_12_ += 4096) {
@@ -207,7 +207,7 @@ final class DefinitionSub22
         }
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i <= 108) method3111(-110, -119);
         anInt9295++;
         method3109((byte) -125);

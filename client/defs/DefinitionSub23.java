@@ -94,7 +94,7 @@ final class DefinitionSub23
         } while (false);
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i >= 108) anInt9316++;
     }
 
@@ -132,12 +132,12 @@ final class DefinitionSub23
                         if (anInt9312 == 0) {
                             for (int i_23_ = 0; i_23_ < i_16_; i_23_++) {
                                 int i_24_ = i_6_ * i_23_ / i_16_;
-                                is_21_[GpsOverlay.method1166(i_23_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.method1166(Component287.anInt6076, i_3_ - (-i_5_ + (i_23_ - -1))))] = i_22_ * i_24_ >> 12;
+                                is_21_[GpsOverlay.bitwiseAnd(i_23_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, i_3_ - (-i_5_ + (i_23_ - -1))))] = i_22_ * i_24_ >> 12;
                             }
                         } else {
                             for (int i_25_ = 0; i_16_ > i_25_; i_25_++) {
                                 int i_26_ = i_6_ * i_25_ / i_16_;
-                                is_21_[GpsOverlay.method1166((Component287.anInt6076), i_25_ + i_3_)] = is_21_[(GpsOverlay.method1166(i_3_ - -i_5_ + (-i_25_ - 1), Component287.anInt6076))] = Math.min(i_26_, i_22_);
+                                is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_25_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(i_3_ - -i_5_ + (-i_25_ - 1), Component287.anInt6076))] = Math.min(i_26_, i_22_);
                             }
                         }
                         if (DefinitionSub6.anInt9139 >= i_19_ + i_18_) Component313.method1579(is_21_, i_18_, i_19_, i_22_);
@@ -153,12 +153,12 @@ final class DefinitionSub23
                             if (anInt9312 == 0) {
                                 for (int i_30_ = 0; i_16_ > i_30_; i_30_++) {
                                     int i_31_ = i_6_ * i_30_ / i_16_;
-                                    is_21_[GpsOverlay.method1166((Component287.anInt6076), i_30_ + i_3_)] = is_21_[(GpsOverlay.method1166(Component287.anInt6076, -1 + i_5_ + i_3_ - i_30_))] = i_31_ * i_29_ >> 12;
+                                    is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_30_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -1 + i_5_ + i_3_ - i_30_))] = i_31_ * i_29_ >> 12;
                                 }
                             } else {
                                 for (int i_32_ = 0; (i_16_ > i_32_); i_32_++) {
                                     int i_33_ = i_32_ * i_6_ / i_16_;
-                                    is_21_[GpsOverlay.method1166((Component287.anInt6076), i_3_ + i_32_)] = is_21_[(GpsOverlay.method1166(Component287.anInt6076, -i_32_ + i_5_ + (i_3_ + -1)))] = Math.min(i_29_, i_33_);
+                                    is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_3_ + i_32_)] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -i_32_ + i_5_ + (i_3_ + -1)))] = Math.min(i_29_, i_33_);
                                 }
                             }
                             if (i_19_ + i_18_ <= DefinitionSub6.anInt9139) Component313.method1579(is_21_, i_18_, i_19_, i_29_);
@@ -169,7 +169,7 @@ final class DefinitionSub23
                             }
                         } else {
                             for (int i_35_ = 0; i_35_ < i_16_; i_35_++)
-                                is_21_[GpsOverlay.method1166(i_35_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.method1166(Component287.anInt6076, -i_35_ + (i_3_ - (-i_5_ + 1))))] = i_6_ * i_35_ / i_16_;
+                                is_21_[GpsOverlay.bitwiseAnd(i_35_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -i_35_ + (i_3_ - (-i_5_ + 1))))] = i_6_ * i_35_ / i_16_;
                             if (DefinitionSub6.anInt9139 >= i_18_ - -i_19_) Component313.method1579(is_21_, i_18_, i_19_, i_6_);
                             else {
                                 int i_36_ = -i_18_ + DefinitionSub6.anInt9139;
@@ -181,13 +181,14 @@ final class DefinitionSub23
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cc.C(" + i + ',' + i_2_ + ',' + (is != null ? "{...}" : "null") + ',' + (random != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cc.C(" + i + ',' + i_2_ + ',' + (is != null ? "{...}" : "null") + ',' + (random != null ? "{...}" : "null") + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ')'));
         }
     }
 
-    static final String[] method3113(char c, boolean bool, String string) {
+    /** Split {@code string} on delimiter {@code c} (keeps empty segments). */
+    static final String[] splitByChar(char c, boolean bool, String string) {
         anInt9315++;
-        int i = Component279.method257(4, string, c);
+        int i = Component279.countChar(4, string, c);
         String[] strings = new String[i - -1];
         int i_37_ = 0;
         int i_38_ = 0;
@@ -220,12 +221,12 @@ final class DefinitionSub23
         anInt9323 = 819;
     }
 
-    final int[] method3042(int i, int i_41_) {
+    final int[] getMonochromeOutput(int i, int i_41_) {
         anInt9321++;
         if (i_41_ != 255) anInt9312 = 113;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
-            int[][] is_42_ = this.aClass191_7032.method1427((byte) 16);
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
+            int[][] is_42_ = this.imageCache.getAllBuffers((byte) 16);
             int i_43_ = 0;
             int i_44_ = 0;
             int i_45_ = 0;

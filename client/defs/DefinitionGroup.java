@@ -30,7 +30,7 @@ final class DefinitionGroup extends HashNode {
             SpriteAtlasShader.aD6247 = var_d;
             Node.aClass45_4286 = class45;
             for (int i_2_ = 0; aClass348_Sub40Array9520.length > i_2_; i_2_++)
-                aClass348_Sub40Array9520[i_2_].method3045(i, i_0_, -256);
+                aClass348_Sub40Array9520[i_2_].initImageCache(i, i_0_, -256);
             HashNodeSub13.method3232(d, (byte) -122);
             DisplayModeManagerContainer206.method797(i_0_, i, (byte) 114);
             int[] is = new int[i * i_0_];
@@ -39,21 +39,21 @@ final class DefinitionGroup extends HashNode {
                 int[] is_5_;
                 int[] is_6_;
                 int[] is_7_;
-                if (aClass348_Sub40_9521.aBoolean7045) {
-                    int[] is_8_ = aClass348_Sub40_9521.method3042(i_4_, 255);
+                if (aClass348_Sub40_9521.use2dImageCache) {
+                    int[] is_8_ = aClass348_Sub40_9521.getMonochromeOutput(i_4_, 255);
                     is_7_ = is_8_;
                     is_5_ = is_8_;
                     is_6_ = is_8_;
                 } else {
-                    int[][] is_9_ = aClass348_Sub40_9521.method3047(i_4_, -1564599039);
+                    int[][] is_9_ = aClass348_Sub40_9521.getColourOutput(i_4_, -1564599039);
                     is_5_ = is_9_[2];
                     is_6_ = is_9_[1];
                     is_7_ = is_9_[0];
                 }
                 if (bool) i_3_ = i_4_;
                 int[] is_10_;
-                if (aClass348_Sub40_9527.aBoolean7045) is_10_ = aClass348_Sub40_9527.method3042(i_4_, i_1_ + 244);
-                else is_10_ = (aClass348_Sub40_9527.method3047(i_4_, -1564599039)[0]);
+                if (aClass348_Sub40_9527.use2dImageCache) is_10_ = aClass348_Sub40_9527.getMonochromeOutput(i_4_, i_1_ + 244);
+                else is_10_ = (aClass348_Sub40_9527.getColourOutput(i_4_, -1564599039)[0]);
                 for (int i_11_ = i - 1; i_11_ >= 0; i_11_--) {
                     int i_12_ = is_7_[i_11_] >> 4;
                     if (i_12_ > 255) i_12_ = 255;
@@ -79,11 +79,11 @@ final class DefinitionGroup extends HashNode {
                 }
             }
             for (int i_16_ = 0; (i_16_ < aClass348_Sub40Array9520.length); i_16_++)
-                aClass348_Sub40Array9520[i_16_].method3046((byte) -116);
+                aClass348_Sub40Array9520[i_16_].clearImageCache((byte) -116);
             if (i_1_ != 11) anInt9532 = 97;
             return is;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lr.D(" + (var_d != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool + ',' + d + ',' + (class45 != null ? "{...}" : "null") + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lr.D(" + (var_d != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool + ',' + d + ',' + (class45 != null ? "{...}" : "null") + ',' + i_1_ + ')'));
         }
     }
 
@@ -92,11 +92,11 @@ final class DefinitionGroup extends HashNode {
             anInt9529++;
             if (MatrixSub2.anInt5713 < 0) {
                 for (int i_17_ = 0; (anIntArray9524.length > i_17_); i_17_++) {
-                    if (!class45.method421(false, anIntArray9524[i_17_])) return false;
+                    if (!class45.isSingletonFileReady(false, anIntArray9524[i_17_])) return false;
                 }
             } else {
                 for (int i_18_ = 0; (i_18_ < anIntArray9524.length); i_18_++) {
-                    if (!class45.method420(-10499, MatrixSub2.anInt5713, anIntArray9524[i_18_])) return false;
+                    if (!class45.isFileReady(-10499, MatrixSub2.anInt5713, anIntArray9524[i_18_])) return false;
                 }
             }
             int i_19_ = 0;
@@ -106,7 +106,7 @@ final class DefinitionGroup extends HashNode {
             }
             return true;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lr.B(" + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lr.B(" + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -116,7 +116,7 @@ final class DefinitionGroup extends HashNode {
             Node.aClass45_4286 = class45;
             anInt9526++;
             for (int i_24_ = 0; aClass348_Sub40Array9520.length > i_24_; i_24_++)
-                aClass348_Sub40Array9520[i_24_].method3045(i, i_23_, i_21_ + -256);
+                aClass348_Sub40Array9520[i_24_].initImageCache(i, i_23_, i_21_ + -256);
             HashNodeSub13.method3232(d, (byte) -89);
             DisplayModeManagerContainer206.method797(i_23_, i, (byte) 122);
             int[] is = new int[i_23_ * i];
@@ -137,13 +137,13 @@ final class DefinitionGroup extends HashNode {
                 int[] is_30_;
                 int[] is_31_;
                 int[] is_32_;
-                if (aClass348_Sub40_9521.aBoolean7045) {
-                    int[] is_33_ = aClass348_Sub40_9521.method3042(i_29_, 255);
+                if (aClass348_Sub40_9521.use2dImageCache) {
+                    int[] is_33_ = aClass348_Sub40_9521.getMonochromeOutput(i_29_, 255);
                     is_30_ = is_33_;
                     is_31_ = is_33_;
                     is_32_ = is_33_;
                 } else {
-                    int[][] is_34_ = aClass348_Sub40_9521.method3047(i_29_, -1564599039);
+                    int[][] is_34_ = aClass348_Sub40_9521.getColourOutput(i_29_, -1564599039);
                     is_30_ = is_34_[1];
                     is_31_ = is_34_[0];
                     is_32_ = is_34_[2];
@@ -169,10 +169,10 @@ final class DefinitionGroup extends HashNode {
                 }
             }
             for (int i_40_ = i_21_; (aClass348_Sub40Array9520.length > i_40_); i_40_++)
-                aClass348_Sub40Array9520[i_40_].method3046((byte) -106);
+                aClass348_Sub40Array9520[i_40_].clearImageCache((byte) -106);
             return is;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lr.C(" + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_21_ + ',' + bool + ',' + d + ',' + bool_22_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_23_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lr.C(" + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_21_ + ',' + bool + ',' + d + ',' + bool_22_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_23_ + ')'));
         }
     }
 
@@ -183,7 +183,7 @@ final class DefinitionGroup extends HashNode {
             SpriteAtlasShader.aD6247 = var_d;
             if (i_42_ >= -1) method3183(null, -60, 98, false, -0.11623531533038078, null, (byte) -72);
             for (int i_43_ = 0; aClass348_Sub40Array9520.length > i_43_; i_43_++)
-                aClass348_Sub40Array9520[i_43_].method3045(i, i_41_, -256);
+                aClass348_Sub40Array9520[i_43_].initImageCache(i, i_41_, -256);
             DisplayModeManagerContainer206.method797(i_41_, i, (byte) 115);
             float[] fs = new float[4 * i * i_41_];
             int i_44_ = 0;
@@ -191,23 +191,23 @@ final class DefinitionGroup extends HashNode {
                 int[] is;
                 int[] is_46_;
                 int[] is_47_;
-                if (aClass348_Sub40_9521.aBoolean7045) {
-                    int[] is_49_ = aClass348_Sub40_9521.method3042(i_45_, 255);
+                if (aClass348_Sub40_9521.use2dImageCache) {
+                    int[] is_49_ = aClass348_Sub40_9521.getMonochromeOutput(i_45_, 255);
                     is = is_49_;
                     is_46_ = is_49_;
                     is_47_ = is_49_;
                 } else {
-                    int[][] is_48_ = aClass348_Sub40_9521.method3047(i_45_, -1564599039);
+                    int[][] is_48_ = aClass348_Sub40_9521.getColourOutput(i_45_, -1564599039);
                     is_46_ = is_48_[1];
                     is_47_ = is_48_[0];
                     is = is_48_[2];
                 }
                 int[] is_50_;
-                if (aClass348_Sub40_9527.aBoolean7045) is_50_ = aClass348_Sub40_9527.method3042(i_45_, 255);
-                else is_50_ = (aClass348_Sub40_9527.method3047(i_45_, -1564599039)[0]);
+                if (aClass348_Sub40_9527.use2dImageCache) is_50_ = aClass348_Sub40_9527.getMonochromeOutput(i_45_, 255);
+                else is_50_ = (aClass348_Sub40_9527.getColourOutput(i_45_, -1564599039)[0]);
                 int[] is_51_;
-                if (aClass348_Sub40_9528.aBoolean7045) is_51_ = aClass348_Sub40_9528.method3042(i_45_, 255);
-                else is_51_ = (aClass348_Sub40_9528.method3047(i_45_, -1564599039)[0]);
+                if (aClass348_Sub40_9528.use2dImageCache) is_51_ = aClass348_Sub40_9528.getMonochromeOutput(i_45_, 255);
+                else is_51_ = (aClass348_Sub40_9528.getColourOutput(i_45_, -1564599039)[0]);
                 if (bool) i_44_ = i_45_ << 2;
                 for (int i_52_ = i + -1; i_52_ >= 0; i_52_--) {
                     float f = (float) is_50_[i_52_] / 4096.0F;
@@ -223,10 +223,10 @@ final class DefinitionGroup extends HashNode {
                 }
             }
             for (int i_54_ = 0; (aClass348_Sub40Array9520.length > i_54_); i_54_++)
-                aClass348_Sub40Array9520[i_54_].method3046((byte) -125);
+                aClass348_Sub40Array9520[i_54_].clearImageCache((byte) -125);
             return fs;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lr.A(" + i + ',' + (var_d != null ? "{...}" : "null") + ',' + bool + ',' + i_41_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_42_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lr.A(" + i + ',' + (var_d != null ? "{...}" : "null") + ',' + bool + ',' + i_41_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_42_ + ')'));
         }
     }
 
@@ -258,7 +258,7 @@ final class DefinitionGroup extends HashNode {
         for (int i_58_ = 0; i_58_ < i; i_58_++) {
             Definition class348_sub40 = NodeSub37.method3031(125, class348_sub49);
             if (class348_sub40.method3037(-121) >= 0) i_56_++;
-            if (class348_sub40.method3043(-1) >= 0) i_57_++;
+            if (class348_sub40.getOutputColourType(-1) >= 0) i_57_++;
             int i_59_ = (class348_sub40.aClass348_Sub40Array7031).length;
             is[i_58_] = new int[i_59_];
             for (int i_60_ = 0; i_60_ < i_59_; i_60_++)
@@ -275,7 +275,7 @@ final class DefinitionGroup extends HashNode {
             for (int i_63_ = 0; i_62_ > i_63_; i_63_++)
                 class348_sub40.aClass348_Sub40Array7031[i_63_] = aClass348_Sub40Array9520[is[i_61_][i_63_]];
             int i_64_ = class348_sub40.method3037(-119);
-            int i_65_ = class348_sub40.method3043(-1);
+            int i_65_ = class348_sub40.getOutputColourType(-1);
             if (i_64_ > 0) anIntArray9524[i_56_++] = i_64_;
             if (i_65_ > 0) anIntArray9523[i_57_++] = i_65_;
             is[i_61_] = null;

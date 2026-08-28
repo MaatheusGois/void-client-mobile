@@ -19,7 +19,7 @@ final class OutputStream_Sub2 extends OutputStream {
         anInt103++;
         if (i < 101) method139(34);
         byte[] is_1_ = new byte[i_0_];
-        Component313.method1577(is, 0, is_1_, 0, i_0_);
+        Component313.arraycopy(is, 0, is_1_, 0, i_0_);
         return is_1_;
     }
 
@@ -51,7 +51,7 @@ final class OutputStream_Sub2 extends OutputStream {
 
     static final int method138(MenuEntry class348_sub42_sub12, boolean bool) {
         anInt107++;
-        String string = Component192.method2367((byte) -126, class348_sub42_sub12);
+        String string = Component192.formatMenuEntry((byte) -126, class348_sub42_sub12);
         int[] is = null;
         if (!Component3.method1197(-12081, (class348_sub42_sub12.opcode))) {
             if (class348_sub42_sub12.itemId == -1) {

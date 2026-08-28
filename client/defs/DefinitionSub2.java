@@ -33,7 +33,7 @@ final class DefinitionSub2
             } while (false);
             anInt9098 = class348_sub49.readUnsignedShort(842397944);
         } while (false);
-        if (i_0_ != 31015) method3042(-14, -114);
+        if (i_0_ != 31015) getMonochromeOutput(-14, -114);
     }
 
     public DefinitionSub2() {
@@ -44,10 +44,10 @@ final class DefinitionSub2
         if (i == 4) anIntArray9096 = null;
     }
 
-    final int[] method3042(int i, int i_2_) {
+    final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9097++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_3_ = 0;
             for (/**/; i_3_ < DefinitionSub6.anInt9139; i_3_++) {
                 int i_4_ = RenderableSub6.anIntArray6432[i_3_];

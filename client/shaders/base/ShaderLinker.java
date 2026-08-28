@@ -146,7 +146,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
             this.aClass235_10155 = new Component366(var_ha, class51, i_11_, i_12_, this.plane, i_5_, this, bool, i_13_);
             aBoolean10153 = class51.anInt874 != 0 && !bool;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pw.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + bool + ',' + i_9_ + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pw.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + bool + ',' + i_9_ + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ')'));
         }
     }
 
@@ -161,7 +161,8 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return class64.method628(i_14_, i, class101, false, 0);
     }
 
-    static final Component244 method2493(GlToolkitSub2 var_ha_Sub2, int i, Component359[] class242s) {
+    /** Link ARB program from compiled stages; logs {@code aa linking failed:} on error. */
+    static final Component244 linkProgram(GlToolkitSub2 var_ha_Sub2, int i, Component359[] class242s) {
         try {
             anInt10167++;
             for (int i_16_ = 0; i_16_ < class242s.length; i_16_++) {
@@ -189,7 +190,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
             }
             return new Component244(var_ha_Sub2, l, class242s);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pw.D(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class242s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pw.D(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class242s != null ? "{...}" : "null") + ')'));
         }
     }
 

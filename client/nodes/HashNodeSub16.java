@@ -4,16 +4,21 @@
 
 abstract class HashNodeSub16
 /**
- * RENAMED from `Class348_Sub42_Sub16` (JODE-obfuscated).
- * Evidence: subclass of HashNode (hierarchy)
+ * RENAMED from {@code Class348_Sub42_Sub16} (JODE-obfuscated).
+ * Base for JS5/on-demand archive download nodes (TCP or disk).
+ * {@link #incomplete} stays true until payload is fully received;
+ * {@link #priority} marks urgent (opcode 1) vs normal (opcode 0) requests.
  */ extends HashNode {
     static Component158 aClass21_9661;
     static int anInt9662;
-    boolean aBoolean9663;
-    volatile boolean aBoolean9664 = true;
+    /** True for priority (urgent) requests. */
+    boolean priority;
+    /** True until the full archive payload has been received. */
+    volatile boolean incomplete = true;
     static String aString9665 = null;
     static int anInt9666;
-    boolean aBoolean9667;
+    /** Two-tick discard mark for completed non-priority requests. */
+    boolean markedForDiscard;
     static int anInt9668;
 
     public static void method3252(int i) {
@@ -72,7 +77,11 @@ abstract class HashNodeSub16
         }
     }
 
-    static final int method3255(int i, byte[] is, int i_6_, boolean bool, String string, int i_7_) {
+    /**
+     * Encodes {@code string[i..i_6_)} as CP1252 into {@code is} at {@code i_7_}.
+     * Unmappable chars become {@code '?'}. Returns bytes written.
+     */
+    static final int encodeCp1252Into(int i, byte[] is, int i_6_, boolean bool, String string, int i_7_) {
         try {
             anInt9666++;
             if (bool != false) return -119;
@@ -121,7 +130,7 @@ abstract class HashNodeSub16
             }
             return i_8_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ffa.E(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_6_ + ',' + bool + ',' + (string != null ? "{...}" : "null") + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ffa.E(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_6_ + ',' + bool + ',' + (string != null ? "{...}" : "null") + ',' + i_7_ + ')'));
         }
     }
 
@@ -132,7 +141,7 @@ abstract class HashNodeSub16
         return 2 * NodeSub1.anIntArray6547.length;
     }
 
-    abstract int method3257(int i);
+    abstract int getProgressPercent(int i);
 
     public HashNodeSub16() {
         /* empty */
@@ -145,7 +154,7 @@ abstract class HashNodeSub16
         return fs_12_;
     }
 
-    abstract byte[] method3259(int i);
+    abstract byte[] getData(int i);
 
     static {
         aClass21_9661 = new Component158();

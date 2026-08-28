@@ -158,7 +158,7 @@ final class NodeSub32
     private final void method3022(byte i, short i_34_) {
         anInt6939++;
         if (i == -46) {
-            if (!aHa_Sub2_6951.aBoolean7775) aClass348_Sub49_6936.method3397(i + 135, i_34_);
+            if (!aHa_Sub2_6951.aBoolean7775) aClass348_Sub49_6936.writeShortLE(i + 135, i_34_);
             else aClass348_Sub49_6936.writeShort((byte) 107, i_34_);
         }
     }
@@ -236,7 +236,7 @@ final class NodeSub32
             if (anInt6934 > 0) {
                 aClass348_Sub49_6936 = new Buffer(anInt6934 * 2);
                 aClass348_Sub49_Sub1_6953 = new Component182(anInt6934 * 16);
-                aClass356_6932 = new LruCache(Component373.method340(anInt6934, (byte) 108));
+                aClass356_6932 = new LruCache(Component373.nextPowerOfTwo(anInt6934, (byte) 108));
                 int i_56_ = 0;
                 i_50_ = 0;
                 for (int i_57_ = anInt6948; anInt6944 >= i_57_; i_57_++) {
@@ -302,7 +302,7 @@ final class NodeSub32
             aClass348_Sub49_6936 = null;
             aClass356_6932 = null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ',' + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ',' + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 }

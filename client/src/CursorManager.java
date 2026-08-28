@@ -11,24 +11,26 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 final class CursorManager {
-    private final Robot aRobot2176;
-    private Component aComponent2177;
+    /** AWT {@link Robot} for {@link #setCursorPos}. */
+    private final Robot robot;
+    /** Component currently showing the 1×1 blank cursor, or null. */
+    private Component blankCursorTarget;
 
     final void setCursorPos(int i, int i_0_) {
-        aRobot2176.mouseMove(i, i_0_);
+        robot.mouseMove(i, i_0_);
     }
 
     final void setBlankCursor(Component component, boolean bool) {
         if (bool) component = null;
         else if (component == null) throw new NullPointerException();
-        if (component != aComponent2177) {
-            if (null != aComponent2177) {
-                aComponent2177.setCursor(null);
-                aComponent2177 = null;
+        if (component != blankCursorTarget) {
+            if (null != blankCursorTarget) {
+                blankCursorTarget.setCursor(null);
+                blankCursorTarget = null;
             }
             if (null != component) {
                 component.setCursor(component.getToolkit().createCustomCursor(new BufferedImage(1, 1, 2), new Point(0, 0), null));
-                aComponent2177 = component;
+                blankCursorTarget = component;
             }
         }
     }
@@ -42,6 +44,6 @@ final class CursorManager {
     }
 
     CursorManager() throws Exception {
-        aRobot2176 = new Robot();
+        robot = new Robot();
     }
 }

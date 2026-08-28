@@ -11,7 +11,8 @@ final class Component193
     int anInt3245 = 0;
     static int anInt3246 = 0;
     static int anInt3247;
-    static int anInt3248;
+    /** Priority for the audio mixer thread ({@link ReflectionInvoker#startThread}). */
+    static int audioThreadPriority;
     int anInt3249;
     static int anInt3250;
     int anInt3251;
@@ -30,7 +31,7 @@ final class Component193
             }
             anInt3250++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("u.B(" + i + ',' + f + ',' + (is != null ? "{...}" : "null") + ',' + f_0_ + ',' + i_1_ + ',' + f_2_ + ',' + (class186 != null ? "{...}" : "null") + ',' + f_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + f_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("u.B(" + i + ',' + f + ',' + (is != null ? "{...}" : "null") + ',' + f_0_ + ',' + i_1_ + ',' + f_2_ + ',' + (class186 != null ? "{...}" : "null") + ',' + f_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + f_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -59,7 +60,7 @@ final class Component193
                 Component72.method1138(string_12_, false, string, (byte) -45);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("u.E(" + (string != null ? "{...}" : "null") + ',' + i + ',' + (string_12_ != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("u.E(" + (string != null ? "{...}" : "null") + ',' + i + ',' + (string_12_ != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 

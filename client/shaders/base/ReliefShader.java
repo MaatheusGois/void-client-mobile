@@ -81,14 +81,14 @@ final class ReliefShader {
             aHa_Sub2_2511.method3770(-422613672, class206);
             return bool;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qi.D(" + (class258_sub1 != null ? "{...}" : "null") + ',' + (class258_sub1_2_ != null ? "{...}" : "null") + ',' + i + ',' + f + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qi.D(" + (class258_sub1 != null ? "{...}" : "null") + ',' + (class258_sub1_2_ != null ? "{...}" : "null") + ',' + i + ',' + f + ')'));
         }
     }
 
     final boolean method1414(int i) {
         if (aHa_Sub2_2511.aBoolean7820 && aHa_Sub2_2511.aBoolean7783 && aClass337_2513 == null) {
             Component359 class242 = (RSARequest.method3249(35632, 121, aHa_Sub2_2511, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n"));
-            if (class242 != null) aClass337_2513 = ShaderLinker.method2493(aHa_Sub2_2511, i + -35633, (new Component359[]{class242}));
+            if (class242 != null) aClass337_2513 = ShaderLinker.linkProgram(aHa_Sub2_2511, i + -35633, (new Component359[]{class242}));
         }
         anInt2518++;
         if (i != 35632) method1413(null, null, 102, 0.17865802F);
@@ -97,7 +97,7 @@ final class ReliefShader {
 
     static final void method1415(int i, int i_6_) {
         anInt2520++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, 17);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 17);
         if (i_6_ < 106) method1417(-62, null, -125);
         class348_sub42_sub15.method3251(-16058);
     }
@@ -114,7 +114,7 @@ final class ReliefShader {
         NsnDefinition.aClass319_9245.method2544(5, (byte) -41);
         Component267.aClass194_2981.method1442(5, (byte) 1);
         Component209.aClass217_3453.method1587(5, i ^ 0xeab);
-        DisplayModeManagerContainer282.aClass261_5558.method1984((byte) 119, 5);
+        DisplayModeManagerContainer282.aClass261_5558.processSoftEntries((byte) 119, 5);
         DisplayModeManagerContainer64.aClass153_9031.method1224(5, (byte) -98);
         Component245.aClass141_117.method1176(5, (byte) 52);
         MatrixSub3.aClass326_5764.method2603(5, 11);
@@ -140,7 +140,7 @@ final class ReliefShader {
     static final NpcDefinition method1417(int i, CacheStore class45, int i_7_) {
         anInt2516++;
         if (i != 0) aBoolean2514 = true;
-        byte[] is = class45.method415((byte) 73, i_7_);
+        byte[] is = class45.getSingletonFile((byte) 73, i_7_);
         if (is == null) return null;
         return new NpcDefinition(is);
     }

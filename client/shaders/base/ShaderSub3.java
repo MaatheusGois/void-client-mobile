@@ -35,7 +35,7 @@ final class ShaderSub3
 
     static final void method168(byte i) {
         do {
-            if (!OggUrlStream.aClass297_8992.aBoolean3794) {
+            if (!OggUrlStream.aClass297_8992.useDirectDraw) {
                 try {
                     try {
                         Runtime runtime = Runtime.getRuntime();
@@ -60,7 +60,7 @@ final class ShaderSub3
             this.anIntArray5201 = is;
             this.anIntArray5202 = is_4_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nba.<init>(" + i + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_4_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nba.<init>(" + i + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_4_ != null ? "{...}" : "null") + ')'));
         }
     }
 

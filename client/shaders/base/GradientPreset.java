@@ -30,9 +30,9 @@ final class GradientPreset extends Definition {
                     anIntArrayArray9194[i_2_][0] = class348_sub49.readUnsignedShort(842397944);
                     anIntArrayArray9194[i_2_][1] = class348_sub49.readUnsignedByte(255) << 4;
                     anIntArrayArray9194[i_2_][2] = class348_sub49.readUnsignedByte(255) << 4;
-                    anIntArrayArray9194[i_2_][3] = ((class348_sub49.readUnsignedByte(NodeSub21.method2955(i_0_, 31192))) << 4);
+                    anIntArrayArray9194[i_2_][3] = ((class348_sub49.readUnsignedByte(NodeSub21.bitwiseXor(i_0_, 31192))) << 4);
                 }
-            } else method3078(i_1_, i_0_ + -31111);
+            } else ensureDefaultGradient(i_1_, i_0_ + -31111);
         }
         anInt9190++;
         if (i_0_ != 31015) method3077((byte) 100);
@@ -67,10 +67,10 @@ final class GradientPreset extends Definition {
         RuntimeException_Sub1.aBoolean4604 = true;
     }
 
-    final int[][] method3047(int i, int i_3_) {
+    final int[][] getColourOutput(int i, int i_3_) {
         anInt9192++;
-        int[][] is = this.aClass322_7033.method2557(i_3_ ^ 0x5d41e287, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(i_3_ ^ 0x5d41e287, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_4_ = this.method3048(i, 633706337, 0);
             int[] is_5_ = is[0];
             int[] is_6_ = is[1];
@@ -80,9 +80,9 @@ final class GradientPreset extends Definition {
                 if (i_9_ < 0) i_9_ = 0;
                 if (i_9_ > 256) i_9_ = 256;
                 i_9_ = anIntArray9199[i_9_];
-                is_5_[i_8_] = GpsOverlay.method1166(i_9_, 16711680) >> 12;
-                is_6_[i_8_] = GpsOverlay.method1166(65280, i_9_) >> 4;
-                is_7_[i_8_] = GpsOverlay.method1166(4080, i_9_ << 4);
+                is_5_[i_8_] = GpsOverlay.bitwiseAnd(i_9_, 16711680) >> 12;
+                is_6_[i_8_] = GpsOverlay.bitwiseAnd(65280, i_9_) >> 4;
+                is_7_[i_8_] = GpsOverlay.bitwiseAnd(4080, i_9_ << 4);
             }
         }
         if (i_3_ != -1564599039) return null;
@@ -96,15 +96,15 @@ final class GradientPreset extends Definition {
         aClass263_9195 = null;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i >= 108) {
             anInt9196++;
-            if (anIntArrayArray9194 == null) method3078(1, -97);
+            if (anIntArrayArray9194 == null) ensureDefaultGradient(1, -97);
             method3079(-29547);
         }
     }
 
-    private final void method3078(int i, int i_10_) {
+    private final void ensureDefaultGradient(int i, int i_10_) {
         anInt9193++;
         while_157_:
         do {
@@ -372,7 +372,7 @@ final class GradientPreset extends Definition {
                 if (i_19_ >= 0) {
                     if (i_19_ > 255) i_19_ = 255;
                 } else i_19_ = 0;
-                anIntArray9199[i_13_] = (Component224.method2057(i_18_, Component224.method2057(i_17_ << 16, i_19_ << 8)));
+                anIntArray9199[i_13_] = (Component224.bitwiseOr(i_18_, Component224.bitwiseOr(i_17_ << 16, i_19_ << 8)));
             }
         }
     }

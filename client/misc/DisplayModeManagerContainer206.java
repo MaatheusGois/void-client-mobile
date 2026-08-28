@@ -200,7 +200,7 @@ final class DisplayModeManagerContainer206
                                                     for (int i_15_ = 0; (i_14_ > i_15_); i_15_++) {
                                                         int i_16_ = (class348_sub49.readUnsignedByte(255));
                                                         int[] is = (anIntArrayArray1388[i_16_] = new int[3]);
-                                                        is[0] = (class348_sub49.readByte(NodeSub21.method2955(i_4_, -50)));
+                                                        is[0] = (class348_sub49.readByte(NodeSub21.bitwiseXor(i_4_, -50)));
                                                         is[1] = (class348_sub49.readByte(-113));
                                                         is[2] = (class348_sub49.readByte(-84));
                                                     }
@@ -256,7 +256,7 @@ final class DisplayModeManagerContainer206
                                                                                         if (i == 249) {
                                                                                             int i_17_ = class348_sub49.readUnsignedByte(255);
                                                                                             if (aClass356_1386 == null) {
-                                                                                                int i_18_ = Component373.method340(i_17_, (byte) 108);
+                                                                                                int i_18_ = Component373.nextPowerOfTwo(i_17_, (byte) 108);
                                                                                                 aClass356_1386 = new LruCache(i_18_);
                                                                                             }
                                                                                             for (int i_19_ = 0; i_17_ > i_19_; i_19_++) {
@@ -341,7 +341,7 @@ final class DisplayModeManagerContainer206
         if (i >= -75) aByte1376 = (byte) 102;
         anInt1334++;
         if (this.aByte1384 == -1) {
-            if (RunescapeInfo.aClass230_186 == this.aClass278_1348.aClass230_3578) this.aByte1384 = (byte) 1;
+            if (RunescapeInfo.RUNESCAPE == this.aClass278_1348.aClass230_3578) this.aByte1384 = (byte) 1;
             else this.aByte1384 = (byte) 0;
         }
     }
@@ -476,14 +476,14 @@ final class DisplayModeManagerContainer206
                 class64 = (DisplayModeManagerContainer370) this.aClass278_1348.aClass60_3590.get(l, 80);
             }
             Component241 class225 = null;
-            if (this.anInt1366 != -1) class225 = class261.method1983(this.anInt1366, 32);
+            if (this.anInt1366 != -1) class225 = class261.get(this.anInt1366, 32);
             if (class64 == null || i_43_ != (i_43_ & class64.ua())) {
                 if (class64 != null) i_43_ |= class64.ua();
                 int i_69_ = i_43_;
                 boolean bool_70_ = false;
                 synchronized (this.aClass278_1348.aClass45_3576) {
                     for (int i_71_ = 0; (anIntArray1402.length > i_71_); i_71_++) {
-                        if (anIntArray1402[i_71_] != -1 && !(this.aClass278_1348.aClass45_3576.method420(-10499, anIntArray1402[i_71_], 0))) bool_70_ = true;
+                        if (anIntArray1402[i_71_] != -1 && !(this.aClass278_1348.aClass45_3576.isFileReady(-10499, anIntArray1402[i_71_], 0))) bool_70_ = true;
                     }
                 }
                 if (bool_70_) return null;
@@ -491,7 +491,7 @@ final class DisplayModeManagerContainer206
                 for (int i_72_ = 0; i_72_ < anIntArray1402.length; i_72_++) {
                     if (anIntArray1402[i_72_] != -1) {
                         synchronized (this.aClass278_1348.aClass45_3576) {
-                            class124s[i_72_] = Component189.method2277(0, (this.aClass278_1348.aClass45_3576), anIntArray1402[i_72_], -1);
+                            class124s[i_72_] = Component189.loadFromCache(0, (this.aClass278_1348.aClass45_3576), anIntArray1402[i_72_], -1);
                         }
                         if (class124s[i_72_] != null) {
                             if (class124s[i_72_].anInt1830 < 13) class124s[i_72_].method1092(2, 115);
@@ -596,7 +596,7 @@ final class DisplayModeManagerContainer206
             class64_82_.s(i_40_);
             return class64_82_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bb.F(" + i + ',' + (class182s != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + bool + ',' + (class17 != null ? "{...}" : "null") + ',' + i_34_ + ',' + (class261 != null ? "{...}" : "null") + ',' + i_35_ + ',' + (class17_36_ != null ? "{...}" : "null") + ',' + (interface17 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_37_ + ',' + (is != null ? "{...}" : "null") + ',' + i_38_ + ',' + i_39_ + ',' + i_40_ + ',' + i_41_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bb.F(" + i + ',' + (class182s != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + bool + ',' + (class17 != null ? "{...}" : "null") + ',' + i_34_ + ',' + (class261 != null ? "{...}" : "null") + ',' + i_35_ + ',' + (class17_36_ != null ? "{...}" : "null") + ',' + (interface17 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_37_ + ',' + (is != null ? "{...}" : "null") + ',' + i_38_ + ',' + i_39_ + ',' + i_40_ + ',' + i_41_ + ')'));
         }
     }
 
@@ -606,7 +606,7 @@ final class DisplayModeManagerContainer206
         if (i != 17) method801((byte) -115, -68, null);
         NodeSub50 class348_sub50 = ((NodeSub50) aClass356_1386.get(i_92_, i + -6025));
         if (class348_sub50 == null) return string;
-        return class348_sub50.aString7211;
+        return class348_sub50.stringValue;
     }
 
     static final boolean method802(int i, int i_93_, boolean bool) {
@@ -638,14 +638,14 @@ final class DisplayModeManagerContainer206
                 boolean bool = false;
                 synchronized (this.aClass278_1348.aClass45_3576) {
                     for (int i_101_ = 0; (anIntArray1380.length > i_101_); i_101_++) {
-                        if (!this.aClass278_1348.aClass45_3576.method420(-10499, anIntArray1380[i_101_], 0)) bool = true;
+                        if (!this.aClass278_1348.aClass45_3576.isFileReady(-10499, anIntArray1380[i_101_], 0)) bool = true;
                     }
                 }
                 if (bool) return null;
                 DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[anIntArray1380.length];
                 synchronized (this.aClass278_1348.aClass45_3576) {
                     for (int i_102_ = 0; (anIntArray1380.length > i_102_); i_102_++)
-                        class124s[i_102_] = Component189.method2277(0, (this.aClass278_1348.aClass45_3576), anIntArray1380[i_102_], -1);
+                        class124s[i_102_] = Component189.loadFromCache(0, (this.aClass278_1348.aClass45_3576), anIntArray1380[i_102_], -1);
                 }
                 for (int i_103_ = 0; (i_103_ < anIntArray1380.length); i_103_++) {
                     if (class124s[i_103_] != null && class124s[i_103_].anInt1830 < 13) class124s[i_103_].method1092(2, 66);
@@ -677,7 +677,7 @@ final class DisplayModeManagerContainer206
             class64.s(i_97_);
             return class64;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bb.H(" + (interface17 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_94_ + ',' + (class17 != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + i_95_ + ',' + i_96_ + ',' + i_97_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bb.H(" + (interface17 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + i_94_ + ',' + (class17 != null ? "{...}" : "null") + ',' + (class87 != null ? "{...}" : "null") + ',' + i_95_ + ',' + i_96_ + ',' + i_97_ + ')'));
         }
     }
 
@@ -693,7 +693,7 @@ final class DisplayModeManagerContainer206
         if (i_107_ <= 12) method805(46, 116, 126);
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_1386.get(i_106_, -6008);
         if (class348_sub35 == null) return i;
-        return class348_sub35.anInt6976;
+        return class348_sub35.intValue;
     }
 
     public DisplayModeManagerContainer206() {

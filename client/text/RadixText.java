@@ -72,7 +72,8 @@ final class RadixText extends Component339 {
         super(i, class348_sub51);
     }
 
-    static final int method1836(int i, int i_6_, boolean bool, String string) {
+    /** Parse {@code string} as signed int in radix {@code i_6_} (2–36). */
+    static final int parseIntRadix(int i, int i_6_, boolean bool, String string) {
         anInt6118++;
         if (i_6_ < 2 || i_6_ > 36) throw new IllegalArgumentException("Invalid radix:" + i_6_);
         boolean bool_7_ = false;
@@ -121,7 +122,7 @@ final class RadixText extends Component339 {
     }
 
     final int method1838(int i) {
-        if (i != -32350) method1836(89, 103, false, null);
+        if (i != -32350) parseIntRadix(89, 103, false, null);
         anInt6123++;
         return this.anInt3138;
     }

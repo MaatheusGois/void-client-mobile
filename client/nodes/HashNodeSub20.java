@@ -62,12 +62,12 @@ final class HashNodeSub20
             this.aClass174_9704 = this.aClass342_9702.method2685((byte) -13);
             method3279(2);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jo.<init>(" + (class342 != null ? "{...}" : "null") + ',' + (class318_sub10 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jo.<init>(" + (class342 != null ? "{...}" : "null") + ',' + (class318_sub10 != null ? "{...}" : "null") + ')'));
         }
     }
 
     static final void method3283(int i) {
-        if (OggUrlStream.aClass297_8992.aBoolean3777 && (ShaderSub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.method2972((ShaderSub2.aClass161_5199.aString2147), (ShaderSub2.aClass161_5199.anInt2143), -54);
+        if (OggUrlStream.aClass297_8992.signed && (ShaderSub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.method2972((ShaderSub2.aClass161_5199.aString2147), (ShaderSub2.aClass161_5199.anInt2143), -54);
         anInt9713++;
         int i_7_ = 9 / ((i - 60) / 50);
     }

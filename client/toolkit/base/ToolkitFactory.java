@@ -30,8 +30,8 @@ final class ToolkitFactory {
     static final GraphicsToolkit createOpenGlToolkit(Canvas canvas, d var_d, CacheStore class45, int i, int i_1_) {
         try {
             anInt1532++;
-            if (!JaclibLoader.method215(27165)) throw new RuntimeException("");
-            if (!DefinitionSub19.method3098(i ^ ~0x158f, "jaggl")) throw new RuntimeException("");
+            if (!JaclibLoader.loadNatives(27165)) throw new RuntimeException("");
+            if (!DefinitionSub19.tryLoadNativeLibrary(i ^ ~0x158f, "jaggl")) throw new RuntimeException("");
             OpenGL opengl = new OpenGL();
             long l = opengl.init(canvas, 8, 8, 8, 24, 0, i_1_);
             if (l == 0L) throw new RuntimeException("");
@@ -40,7 +40,7 @@ final class ToolkitFactory {
             class377.method3930((byte) 26);
             return class377;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lt.D(" + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lt.D(" + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
         }
     }
 
@@ -48,7 +48,7 @@ final class ToolkitFactory {
         if (i_2_ < 64) return null;
         anInt1529++;
         byte[] is_3_ = new byte[i];
-        Component313.method1577(is, 0, is_3_, 0, i);
+        Component313.arraycopy(is, 0, is_3_, 0, i);
         return is_3_;
     }
 
@@ -56,7 +56,7 @@ final class ToolkitFactory {
         anInt1533++;
         if (i_5_ >= -30) aStringArray1531 = null;
         byte[] is_6_ = new byte[i_4_];
-        Component313.method1577(is, i, is_6_, 0, i_4_);
+        Component313.arraycopy(is, i, is_6_, 0, i_4_);
         return is_6_;
     }
 }

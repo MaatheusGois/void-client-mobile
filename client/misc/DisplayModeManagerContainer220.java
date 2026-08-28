@@ -152,7 +152,7 @@ final class DisplayModeManagerContainer220
     final boolean method275(int i, int i_9_, int i_10_, int i_11_, int i_12_) {
         if (i_12_ != -1) return true;
         anInt272++;
-        if (aClass206_284 == null || aClass262_292.method2002((byte) 18)) return false;
+        if (aClass206_284 == null || aClass262_292.isEmpty((byte) 18)) return false;
         if (anInt286 != i || i_10_ != anInt275) {
             anInt286 = i;
             anInt275 = i_10_;
@@ -273,7 +273,7 @@ final class DisplayModeManagerContainer220
         aClass258_Sub3_300 = null;
         aClass348_Sub42_Sub2_298 = null;
         aClass258_Sub3Array295 = null;
-        if (!aClass262_292.method2002((byte) 18)) {
+        if (!aClass262_292.isEmpty((byte) 18)) {
             for (Node class348 = aClass262_292.first(4); aClass262_292.sentinel != class348; class348 = class348.next)
                 ((NodeSub5) class348).method2763((byte) -124);
         }

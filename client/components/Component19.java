@@ -44,7 +44,7 @@ final class Component19
                 OpenGL.glPixelStorei(3314, 0);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 
@@ -91,7 +91,7 @@ final class Component19
             } else this.method230(7365, i, is, i_6_, this.anInt5093);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -110,7 +110,7 @@ final class Component19
             OpenGL.glTexSubImage2Df(this.anInt5093, 0, i_12_, i_10_, i_13_, i_14_, ParametricDefinition.method3055(106, class304), 5121, fs, i_11_);
             OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.CA(" + i + ',' + i_9_ + ',' + (fs != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.CA(" + i + ',' + i_9_ + ',' + (fs != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ')'));
         }
     }
 
@@ -199,7 +199,7 @@ final class Component19
             OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.T(" + i + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.T(" + i + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ',' + i_31_ + ',' + i_32_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -252,7 +252,7 @@ final class Component19
             this.aClass377_5082.method3850((byte) 110, this);
             OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(113), i, i_47_, 0, ParametricDefinition.method3055(113, this.aClass304_5084), Component387.method1128(-112, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_47_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_47_ + ')'));
         }
     }
 
@@ -276,7 +276,7 @@ final class Component19
                 OpenGL.glPixelStorei(3314, 0);
             } else this.method238(this.anInt5093, 1, i, fs, i_49_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_49_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_50_ + ',' + i_51_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_49_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_50_ + ',' + i_51_ + ')'));
         }
     }
 }

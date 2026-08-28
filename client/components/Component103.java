@@ -41,7 +41,7 @@ final class Component103
         }
         HashNodeSub17.method3270((byte) 120);
         if (class46 != null) Component111.method1913(!bool, i_2_ + -104, class46);
-        if (!bool) ClientScriptExecutor.method703(i);
+        if (!bool) ClientScriptExecutor.runInterfaceScripts(i);
         if (!bool && r.anInt9721 != -1) Component205.method1775((byte) -8, r.anInt9721, 1);
         return class348_sub41;
     }

@@ -53,7 +53,7 @@ final class NodeList {
                 if (bool == false) break;
                 aClass45_3323 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uh.K(" + (class348 != null ? "{...}" : "null") + ',' + bool + ',' + (class262_1_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uh.K(" + (class348 != null ? "{...}" : "null") + ',' + bool + ',' + (class262_1_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -119,7 +119,7 @@ final class NodeList {
                 if (bool == false) break;
                 method1991(0.31271333F, 1.5829445F, null, -17, 88, true, -70, -107, 8, 5, -0.347415F, null, -24, -19);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uh.B(" + f + ',' + f_3_ + ',' + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + bool + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + f_9_ + ',' + (fs_10_ != null ? "{...}" : "null") + ',' + i_11_ + ',' + i_12_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uh.B(" + f + ',' + f_3_ + ',' + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + bool + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + f_9_ + ',' + (fs_10_ != null ? "{...}" : "null") + ',' + i_11_ + ',' + i_12_ + ')'));
             }
             break;
         } while (false);
@@ -165,7 +165,7 @@ final class NodeList {
     }
 
     final Node first(int i) {
-        if (i != 4) method2001(null, -30);
+        if (i != 4) addHead(null, -30);
         anInt3332++;
         Node class348 = this.sentinel.next;
         if (class348 == this.sentinel) {
@@ -214,7 +214,7 @@ final class NodeList {
         class348.next = this.sentinel;
         class348.previous = this.sentinel.previous;
         class348.previous.next = class348;
-        if (i != -20180) method2001(null, -94);
+        if (i != -20180) addHead(null, -94);
         class348.next.previous = class348;
     }
 
@@ -224,11 +224,12 @@ final class NodeList {
             if (i != 3) method1992(null, -40, 69, -1);
             return new GlToolkitSub2(canvas, var_d, i_23_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uh.D(" + i + ',' + i_23_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uh.D(" + i + ',' + i_23_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final void method2001(Node class348, int i) {
+    /** Insert {@code class348} at the head (after sentinel); used for LRU touch. */
+    final void addHead(Node class348, int i) {
         anInt3330++;
         if (class348.previous != null) class348.unlink((byte) 63);
         class348.previous = this.sentinel;
@@ -238,13 +239,15 @@ final class NodeList {
         class348.next.previous = class348;
     }
 
-    final boolean method2002(byte i) {
+    /** @return true when the list has no elements. */
+    final boolean isEmpty(byte i) {
         if (i != 18) aClass190ArrayArray3335 = null;
         anInt3327++;
         return this.sentinel == this.sentinel.next;
     }
 
-    final Node method2003(int i) {
+    /** Walk the list backwards from {@link #cursor}. */
+    final Node previous(int i) {
         anInt3337++;
         Node class348 = cursor;
         if (class348 == this.sentinel) {

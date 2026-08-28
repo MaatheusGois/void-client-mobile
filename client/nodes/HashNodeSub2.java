@@ -157,7 +157,7 @@ final class HashNodeSub2
             OpenGL.glRenderbufferStorageEXT(36161, anInt8567, (this.anInt8572), (this.anInt8565));
             anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.method3798(anInt8567, 2));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_11_ + ',' + i_12_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_11_ + ',' + i_12_ + ')'));
         }
     }
 
@@ -173,7 +173,7 @@ final class HashNodeSub2
             OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_15_, anInt8567, this.anInt8572, this.anInt8565);
             anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.method3798(anInt8567, 2));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ')'));
         }
     }
 }

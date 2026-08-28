@@ -57,7 +57,7 @@ final class Component48
             this.aClass143_4333 = class143;
             this.aClass324_4332 = class324;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("el.<init>(" + (class324 != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("el.<init>(" + (class324 != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
         }
     }
 }

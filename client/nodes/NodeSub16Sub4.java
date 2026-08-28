@@ -67,7 +67,7 @@ final class NodeSub16Sub4
     }
 
     final synchronized void method2883(NodeSub16 class348_sub16) {
-        aClass262_8965.method2001(class348_sub16, -109);
+        aClass262_8965.addHead(class348_sub16, -109);
     }
 
     private final void method2884(int i) {

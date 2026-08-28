@@ -83,7 +83,7 @@ final class Component230
             if (bool_27_) return -i_30_;
             return i_30_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("o.B(" + i + ',' + i_25_ + ',' + (class110_sub1 != null ? "{...}" : "null") + ',' + i_26_ + ',' + bool + ',' + bool_27_ + ',' + (class110_sub1_28_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("o.B(" + i + ',' + i_25_ + ',' + (class110_sub1 != null ? "{...}" : "null") + ',' + i_26_ + ',' + bool + ',' + bool_27_ + ',' + (class110_sub1_28_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

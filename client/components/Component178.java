@@ -8,7 +8,8 @@ final class Component178
  * Evidence: root class; no distinctive extends/strings
  */ {
     AbstractGlTextureSub1 aClass258_Sub1_1440;
-    static String[] aStringArray1441 = new String[200];
+    /** Friend list display names (parallel arrays, length {@link DefinitionSub30#friendCount}). */
+    static String[] friendNames = new String[200];
     boolean aBoolean1442;
     AbstractGlTextureSub1 aClass258_Sub1_1443 = null;
     GlTexture[] aClass258_Sub3Array1444 = null;
@@ -19,7 +20,7 @@ final class Component178
 
     public static void method815(boolean bool) {
         if (bool != false) method815(true);
-        aStringArray1441 = null;
+        friendNames = null;
     }
 
     Component178(GlToolkitSub2 var_ha_Sub2) {
@@ -28,13 +29,13 @@ final class Component178
         this.aBoolean1442 = var_ha_Sub2.aBoolean7831;
         NodeSub37.method3030(8, var_ha_Sub2);
         if (this.aBoolean1442) {
-            byte[] is = Cp1252Decoder.method461(false, Component244.anObject4177, 53146732);
+            byte[] is = Cp1252Decoder.unwrapBytes(false, Component244.anObject4177, 53146732);
             this.aClass258_Sub1_1440 = new AbstractGlTextureSub1(var_ha_Sub2, 6410, 128, 128, 16, is, 6410);
-            is = Cp1252Decoder.method461(false, Component144.anObject3985, 53146732);
+            is = Cp1252Decoder.unwrapBytes(false, Component144.anObject3985, 53146732);
             this.aClass258_Sub1_1446 = new AbstractGlTextureSub1(var_ha_Sub2, 6410, 128, 128, 16, is, 6410);
             ReliefShader class188 = var_ha_Sub2.aClass188_7736;
             if (class188.method1414(35632)) {
-                is = Cp1252Decoder.method461(false, Component14.anObject8592, 53146732);
+                is = Cp1252Decoder.unwrapBytes(false, Component14.anObject8592, 53146732);
                 this.aClass258_Sub1_1443 = new AbstractGlTextureSub1(var_ha_Sub2, 6408, 128, 128, 16);
                 AbstractGlTextureSub1 class258_sub1 = new AbstractGlTextureSub1(var_ha_Sub2, 6409, 128, 128, 16, is, 6409);
                 if (!class188.method1413(this.aClass258_Sub1_1443, class258_sub1, -114, 2.0F)) {

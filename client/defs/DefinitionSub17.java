@@ -52,19 +52,19 @@ class DefinitionSub17
         return anInt9243;
     }
 
-    final void method3046(byte i) {
-        super.method3046((byte) -112);
+    final void clearImageCache(byte i) {
+        super.clearImageCache((byte) -112);
         if (i < -102) {
             anInt9238++;
             this.anIntArray9232 = null;
         }
     }
 
-    int[][] method3047(int i, int i_1_) {
+    int[][] getColourOutput(int i, int i_1_) {
         anInt9239++;
-        if (i_1_ != -1564599039) method3047(8, -86);
-        int[][] is = this.aClass322_7033.method2557(-108, i);
-        if (this.aClass322_7033.aBoolean4035 && method3090(true)) {
+        if (i_1_ != -1564599039) getColourOutput(8, -86);
+        int[][] is = this.imageCacheStore.getPixels(-108, i);
+        if (this.imageCacheStore.cacheMiss && method3090(true)) {
             int[] is_2_ = is[0];
             int[] is_3_ = is[1];
             int[] is_4_ = is[2];
@@ -72,17 +72,17 @@ class DefinitionSub17
             if (DefinitionSub6.anInt9139 == this.anInt9237) {
                 for (int i_6_ = 0; (DefinitionSub6.anInt9139 > i_6_); i_6_++) {
                     int i_7_ = this.anIntArray9232[i_5_++];
-                    is_4_[i_6_] = GpsOverlay.method1166(4080, i_7_ << 4);
-                    is_3_[i_6_] = GpsOverlay.method1166(65280, i_7_) >> 4;
-                    is_2_[i_6_] = GpsOverlay.method1166(4080, i_7_ >> 12);
+                    is_4_[i_6_] = GpsOverlay.bitwiseAnd(4080, i_7_ << 4);
+                    is_3_[i_6_] = GpsOverlay.bitwiseAnd(65280, i_7_) >> 4;
+                    is_2_[i_6_] = GpsOverlay.bitwiseAnd(4080, i_7_ >> 12);
                 }
             } else {
                 for (int i_8_ = 0; (DefinitionSub6.anInt9139 > i_8_); i_8_++) {
                     int i_9_ = (this.anInt9237 * i_8_ / DefinitionSub6.anInt9139);
                     int i_10_ = (this.anIntArray9232[i_9_ + i_5_]);
-                    is_4_[i_8_] = GpsOverlay.method1166(i_10_, 255) << 4;
-                    is_3_[i_8_] = GpsOverlay.method1166(i_10_ >> 4, 4080);
-                    is_2_[i_8_] = GpsOverlay.method1166(i_10_, 16711680) >> 12;
+                    is_4_[i_8_] = GpsOverlay.bitwiseAnd(i_10_, 255) << 4;
+                    is_3_[i_8_] = GpsOverlay.bitwiseAnd(i_10_ >> 4, 4080);
+                    is_2_[i_8_] = GpsOverlay.bitwiseAnd(i_10_, 16711680) >> 12;
                 }
             }
         }

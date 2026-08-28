@@ -99,7 +99,8 @@ class Buffer extends Node {
         return ((0xff & (this.payload[-1 + this.offset])) + ((this.payload[-2 + this.offset]) << 8 & 0xff00));
     }
 
-    static final int method3331(int i, byte i_0_, int i_1_) {
+    /** Integer power: {@code i_1_ ^ i} via binary exponentiation. */
+    static final int pow(int i, byte i_0_, int i_1_) {
         anInt7161++;
         int i_2_ = 1;
         for (/**/; i > 1; i >>= 1) {
@@ -124,7 +125,7 @@ class Buffer extends Node {
         if (i != -5) this.payload = null;
         int i_5_ = string.indexOf('\0');
         if (i_5_ >= 0) throw new IllegalArgumentException("NUL character at " + i_5_ + " - cannot pjstr");
-        this.offset += HashNodeSub16.method3255(0, (this.payload), string.length(), false, string, (this.offset));
+        this.offset += HashNodeSub16.encodeCp1252Into(0, (this.payload), string.length(), false, string, (this.offset));
         this.payload[this.offset++] = (byte) 0;
     }
 
@@ -184,7 +185,8 @@ class Buffer extends Node {
         if (i == -9912) this.payload[this.offset++] = (byte) i_15_;
     }
 
-    final byte method3341(int i) {
+    /** Read {@code payload[offset++] - 128}. */
+    final byte readByte128(int i) {
         if (i != -8679) aClass223_7175 = null;
         anInt7195++;
         return (byte) (-128 + (this.payload[this.offset++]));
@@ -206,7 +208,7 @@ class Buffer extends Node {
     final int writeCrc(int i, boolean bool) {
         anInt7165++;
         if (bool != false) this.payload = null;
-        int i_17_ = Component382.method1319(this.offset, true, this.payload, i);
+        int i_17_ = Component382.computeCrc32(this.offset, true, this.payload, i);
         writeInt((byte) 93, i_17_);
         return i_17_;
     }
@@ -268,7 +270,7 @@ class Buffer extends Node {
             writeInt((byte) 91, i_29_);
             writeInt((byte) 98, i_30_);
         }
-        if (bool != true) method3394(88, 83);
+        if (bool != true) writeIntLittleEndian(88, 83);
         this.offset = i_26_;
     }
 
@@ -283,7 +285,7 @@ class Buffer extends Node {
         anInt7168++;
         this.offset -= 4;
         if (i != -25541) readSignedMedium((byte) 56);
-        int i_34_ = Component382.method1319(this.offset, true, this.payload, 0);
+        int i_34_ = Component382.computeCrc32(this.offset, true, this.payload, 0);
         int i_35_ = readInt((byte) -126);
         return i_35_ == i_34_;
     }
@@ -329,7 +331,7 @@ class Buffer extends Node {
             for (int i_42_ = 8 * i; i_42_ >= 0; i_42_ -= 8)
                 this.payload[this.offset++] = (byte) (int) (l >> i_42_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cea.JB(" + i + ',' + l + ',' + i_40_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cea.JB(" + i + ',' + l + ',' + i_40_ + ')'));
         }
     }
 
@@ -348,7 +350,7 @@ class Buffer extends Node {
     }
 
     final void release(byte i) {
-        if (this.payload != null) NameFormatter.method357(0, this.payload);
+        if (this.payload != null) NameFormatter.releaseByteArray(0, this.payload);
         anInt7177++;
         this.payload = null;
         if (i != -69) writeCrc(-115, true);
@@ -461,7 +463,7 @@ class Buffer extends Node {
         int i_64_ = this.offset - (i_63_ + 1);
         if (i != -13487) writeInt((byte) 10, -125);
         if (i_64_ == 0) return "";
-        return WaterShaderSub8.method3546(this.payload, 0, i_64_, i_63_);
+        return WaterShaderSub8.decodeCp1252(this.payload, 0, i_64_, i_63_);
     }
 
     final int readShort(int i) {
@@ -486,7 +488,8 @@ class Buffer extends Node {
         anInt7140++;
     }
 
-    final int method3375(byte i) {
+    /** Read signed short: high byte + (low-128), with 16-bit sign extend. */
+    final int readShort128(byte i) {
         anInt7187++;
         this.offset += 2;
         int i_67_ = ((0xff & -128 + (this.payload[this.offset - 1])) + (((this.payload[-2 + this.offset]) & 0xff) << 8));
@@ -510,7 +513,7 @@ class Buffer extends Node {
         }
         int i_70_ = -1 + this.offset - i_69_;
         if (i_70_ == 0) return "";
-        return WaterShaderSub8.method3546(this.payload, 0, i_70_, i_69_);
+        return WaterShaderSub8.decodeCp1252(this.payload, 0, i_70_, i_69_);
     }
 
     final void writeByte(boolean bool, int i) {
@@ -546,13 +549,13 @@ class Buffer extends Node {
             } else if (OggStreamReader.aString9043 == null) Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             else MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -99);
             if (Component212.method2402(Component49.clientState, (byte) -78)) {
-                Component181.aClass45_1541.anInt634 = 2;
-                VideoAdDisplay.aClass45_3183.anInt634 = 2;
-                Component97.aClass45_1538.anInt634 = 2;
-                Component43.aClass45_4975.anInt634 = 2;
-                RadixParser.aClass45_2306.anInt634 = 2;
-                CacheNodeSub2.aClass45_10480.anInt634 = 2;
-                SeekableFile.aClass45_1322.anInt634 = 2;
+                Component181.aClass45_1541.discardMode = 2;
+                VideoAdDisplay.aClass45_3183.discardMode = 2;
+                Component97.aClass45_1538.discardMode = 2;
+                Component43.aClass45_4975.discardMode = 2;
+                RadixParser.aClass45_2306.discardMode = 2;
+                CacheNodeSub2.aClass45_10480.discardMode = 2;
+                SeekableFile.aClass45_1322.discardMode = 2;
             }
             if (Component212.method2402(i_71_, (byte) -119)) {
                 Component82.anInt443 = 1;
@@ -561,28 +564,28 @@ class Buffer extends Node {
                 Component101.anInt2101 = 0;
                 DisplayModeManagerContainer259.anInt3441 = 0;
                 HashNodeSub3.method3177(-111, true);
-                Component181.aClass45_1541.anInt634 = 1;
-                VideoAdDisplay.aClass45_3183.anInt634 = 1;
-                Component97.aClass45_1538.anInt634 = 1;
-                Component43.aClass45_4975.anInt634 = 1;
-                RadixParser.aClass45_2306.anInt634 = 1;
-                CacheNodeSub2.aClass45_10480.anInt634 = 1;
-                SeekableFile.aClass45_1322.anInt634 = 1;
+                Component181.aClass45_1541.discardMode = 1;
+                VideoAdDisplay.aClass45_3183.discardMode = 1;
+                Component97.aClass45_1538.discardMode = 1;
+                Component43.aClass45_4975.discardMode = 1;
+                RadixParser.aClass45_2306.discardMode = 1;
+                CacheNodeSub2.aClass45_10480.discardMode = 1;
+                SeekableFile.aClass45_1322.discardMode = 1;
             }
             if (i_71_ == 11 || i_71_ == 3) ToolbarRefreshDefinition.method3088(9);
-            boolean bool = (i == i_71_ || CacheNode.method3196(i_71_, i ^ ~0x58) || CacheFileStore.method2672(i_71_, -100));
-            boolean bool_72_ = (Component49.clientState == 2 || CacheNode.method3196(Component49.clientState, -110) || CacheFileStore.method2672(Component49.clientState, -128));
+            boolean bool = (i == i_71_ || CacheNode.method3196(i_71_, i ^ ~0x58) || CacheFileStore.isReconnectState(i_71_, -100));
+            boolean bool_72_ = (Component49.clientState == 2 || CacheNode.method3196(Component49.clientState, -110) || CacheFileStore.isReconnectState(Component49.clientState, -128));
             if (bool != bool_72_) {
                 if (bool) {
                     Component119.anInt3428 = Component35.anInt4270;
                     if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350) != 0) {
                         Component168.method2355(Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350), (byte) 50, false, Component54.aClass45_8667, Component35.anInt4270, 0, 2);
                         DefinitionSub17Sub1.method3093(i ^ 0x66);
-                    } else Sprite.method3007(2, 22684);
-                    HardwareProbe.aClass248_6601.method1892(-117, false);
+                    } else Sprite.resetMusic(2, 22684);
+                    HardwareProbe.aClass248_6601.writeLoginState(-117, false);
                 } else {
-                    Sprite.method3007(2, 22684);
-                    HardwareProbe.aClass248_6601.method1892(i ^ ~0x4b, true);
+                    Sprite.resetMusic(2, 22684);
+                    HardwareProbe.aClass248_6601.writeLoginState(i ^ ~0x4b, true);
                 }
             }
             if (Component212.method2402(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.method3673();
@@ -648,7 +651,7 @@ class Buffer extends Node {
         int i_81_ = string.indexOf('\0');
         if (i_81_ >= 0) throw new IllegalArgumentException("NUL character at " + i_81_ + " - cannot pjstr2");
         this.payload[this.offset++] = (byte) 0;
-        this.offset += HashNodeSub16.method3255(0, (this.payload), string.length(), false, string, (this.offset));
+        this.offset += HashNodeSub16.encodeCp1252Into(0, (this.payload), string.length(), false, string, (this.offset));
         this.payload[this.offset++] = (byte) 0;
     }
 
@@ -686,7 +689,7 @@ class Buffer extends Node {
             writeShort((byte) 107, is_89_.length);
             writeBytes(is_89_.length, 0, is_89_, 85);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cea.SA(" + (biginteger != null ? "{...}" : "null") + ',' + i + ',' + (biginteger_85_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cea.SA(" + (biginteger != null ? "{...}" : "null") + ',' + i + ',' + (biginteger_85_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -712,7 +715,7 @@ class Buffer extends Node {
             this.payload[this.offset++] = (byte) (int) (l >> 8);
             this.payload[this.offset++] = (byte) (int) l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "cea.BB(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "cea.BB(" + l + ',' + i + ')');
         }
     }
 
@@ -724,10 +727,14 @@ class Buffer extends Node {
 
     Buffer(int i) {
         this.offset = 0;
-        this.payload = NameFormatter.method359(i, -1);
+        this.payload = NameFormatter.allocateByteArray(i, -1);
     }
 
-    final void method3394(int i, int i_93_) {
+    /**
+     * Writes little-endian int {@code i_93_}. First two bytes always; high two only when
+     * {@code i == -23892} (all live call sites pass that sentinel).
+     */
+    final void writeIntLittleEndian(int i, int i_93_) {
         this.payload[this.offset++] = (byte) i_93_;
         anInt7141++;
         this.payload[this.offset++] = (byte) (i_93_ >> 8);
@@ -759,7 +766,8 @@ class Buffer extends Node {
         writeByte(false, i & 0x7f);
     }
 
-    final void method3397(int i, int i_97_) {
+    /** Write 16-bit little-endian. */
+    final void writeShortLE(int i, int i_97_) {
         anInt7189++;
         this.payload[this.offset++] = (byte) i_97_;
         this.payload[this.offset++] = (byte) (i_97_ >> 8);

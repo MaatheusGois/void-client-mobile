@@ -34,7 +34,7 @@ final class NodeBaseSub2
             if (i_0_ != 4) return null;
             return new Component321(class377, i, i_1_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cu.A(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class377 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cu.A(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class377 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 

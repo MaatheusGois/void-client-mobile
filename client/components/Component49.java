@@ -60,7 +60,7 @@ final class Component49
     static final int method1854(int i, int i_5_, boolean bool, int i_6_) {
         if (i < 45) method1852(83, 33, 101, -55);
         anInt4681++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) 37, i_5_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) 37, i_5_, bool);
         if (class348_sub13 == null) return 0;
         if (i_6_ < 0 || i_6_ >= class348_sub13.anIntArray6758.length) return 0;
         return class348_sub13.anIntArray6758[i_6_];
@@ -75,7 +75,7 @@ final class Component49
         DisplayModeManagerContainer61 class295 = aClass339_4682.method2667(false, aClass125_4685.anInt4918);
         if (class295 != null) {
             int i_7_ = ((aClass125_4685.aClass221_4922.method1607(DisplayModeManagerContainer23.anInt1524, aClass125_4685.anInt4929, (byte) -118)) - -aClass125_4685.anInt4924);
-            int i_8_ = ((aClass125_4685.aClass341_4925.method2679(GlToolkitSub2.anInt7666, aClass125_4685.anInt4923, i ^ ~0x60b)) - -aClass125_4685.anInt4920);
+            int i_8_ = ((aClass125_4685.aClass341_4925.getAlignedOffset(GlToolkitSub2.anInt7666, aClass125_4685.anInt4923, i ^ ~0x60b)) - -aClass125_4685.anInt4920);
             if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.method3628(i_7_, i_8_, aClass125_4685.anInt4929, aClass125_4685.anInt4923, aClass125_4685.anInt4917, 0);
             i_8_ += method1855(5, class295.aString3756, true, NodeList.aClass324_3326, i_7_, i_8_) * 12;
             i_8_ += 8;
@@ -93,7 +93,7 @@ final class Component49
             anInt4677++;
             return (class324.method2584(null, 0, aClass125_4685.anInt4928, null, aClass125_4685.anInt4913, 0, -(i * 2) + aClass125_4685.anInt4923, null, i + i_10_, 0, 0, -(i * 2) + aClass125_4685.anInt4929, i_9_ + i, false, 0, string));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ta.A(" + i + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + (class324 != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ta.A(" + i + ',' + (string != null ? "{...}" : "null") + ',' + bool + ',' + (class324 != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ')'));
         }
     }
 
@@ -102,7 +102,7 @@ final class Component49
             aClass125_4685 = class125;
             aClass339_4682 = class339;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ta.<init>(" + (class339 != null ? "{...}" : "null") + ',' + (class125 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ta.<init>(" + (class339 != null ? "{...}" : "null") + ',' + (class125 != null ? "{...}" : "null") + ')'));
         }
     }
 }

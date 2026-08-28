@@ -73,7 +73,8 @@ final class Component44
     boolean aBoolean929;
     int anInt930;
     boolean aBoolean931;
-    static String[] aStringArray932 = new String[100];
+    /** Ignore-list primary names (parallel arrays, length {@link MenuEntry#ignoreCount}). */
+    static String[] ignoreNames = new String[100];
     Component309 aClass263_933;
     private int anInt934;
     private int anInt935;
@@ -126,7 +127,7 @@ final class Component44
         if (i_3_ != -16) return null;
         NodeSub50 class348_sub50 = (NodeSub50) aClass356_881.get(i, -6008);
         if (class348_sub50 == null) return string;
-        return class348_sub50.aString7211;
+        return class348_sub50.stringValue;
     }
 
     final Component245 method476(GraphicsToolkit var_ha, s var_s, int i, int i_4_, int i_5_, boolean bool, s var_s_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
@@ -150,7 +151,7 @@ final class Component44
             DisplayModeManagerContainer370 class64 = class2 == null ? null : class2.aClass64_119;
             r var_r = null;
             if (class64 == null || var_ha.method3667(class64.ua(), i_11_) != 0) {
-                if (class64 != null) i_11_ = var_ha.method3679(i_11_, class64.ua());
+                if (class64 != null) i_11_ = var_ha.bitwiseOr(i_11_, class64.ua());
                 int i_12_ = i_11_;
                 if (i == 10 && i_9_ > 3) i_12_ |= 0x5;
                 class64 = method477(i_9_, var_ha, i, i_10_ ^ ~0xec, i_12_);
@@ -182,7 +183,7 @@ final class Component44
             HashNode.aClass2_7058.aR118 = var_r;
             return HashNode.aClass2_7058;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("iv.B(" + (var_ha != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + i_5_ + ',' + bool + ',' + (var_s_6_ != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + i_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("iv.B(" + (var_ha != null ? "{...}" : "null") + ',' + (var_s != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + i_5_ + ',' + bool + ',' + (var_s_6_ != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + i_10_ + ')'));
         }
     }
 
@@ -226,12 +227,12 @@ final class Component44
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_17_) != 0) {
                 int i_25_ = i_17_ | 0x1f01f;
-                if (class64 != null) i_25_ = var_ha.method3679(i_25_, class64.ua());
+                if (class64 != null) i_25_ = var_ha.bitwiseOr(i_25_, class64.ua());
                 DisplayModeManagerContainer77 class124 = null;
                 synchronized (DisplayModeManagerContainer196.aClass124Array4236) {
                     for (int i_26_ = 0; i_26_ < i_23_; i_26_++) {
                         synchronized (this.aClass263_933.aClass45_3345) {
-                            class124 = Component189.method2277(0, (this.aClass263_933.aClass45_3345), (0xffff & (anIntArrayArray907[i_21_][i_26_])), -1);
+                            class124 = Component189.loadFromCache(0, (this.aClass263_933.aClass45_3345), (0xffff & (anIntArrayArray907[i_21_][i_26_])), -1);
                         }
                         if (class124 == null) return null;
                         if (class124.anInt1830 < 13) class124.method1092(2, 96);
@@ -283,7 +284,7 @@ final class Component44
             for (int i_31_ = 0; aByteArray885.length > i_31_; i_31_++) {
                 if (aByteArray885[i_31_] == i) {
                     for (int i_32_ = 0; (anIntArrayArray907[i_31_].length > i_32_); i_32_++) {
-                        if (!this.aClass263_933.aClass45_3345.method420(i_30_ ^ 0x5061, anIntArrayArray907[i_31_][i_32_], 0)) return false;
+                        if (!this.aClass263_933.aClass45_3345.isFileReady(i_30_ ^ 0x5061, anIntArrayArray907[i_31_][i_32_], 0)) return false;
                     }
                     return true;
                 }
@@ -477,7 +478,7 @@ final class Component44
                                                                                                                 } else if (i == 249) {
                                                                                                                     int i_42_ = class348_sub49.readUnsignedByte(255);
                                                                                                                     if (aClass356_881 == null) {
-                                                                                                                        int i_43_ = Component373.method340(i_42_, (byte) 108);
+                                                                                                                        int i_43_ = Component373.nextPowerOfTwo(i_42_, (byte) 108);
                                                                                                                         aClass356_881 = new LruCache(i_43_);
                                                                                                                     }
                                                                                                                     for (int i_44_ = 0; i_44_ < i_42_; i_44_++) {
@@ -554,7 +555,7 @@ final class Component44
                 class64 = (DisplayModeManagerContainer370) this.aClass263_933.aClass60_3362.get(l, 100);
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_67_) != 0) {
-                if (class64 != null) i_67_ = var_ha.method3679(i_67_, class64.ua());
+                if (class64 != null) i_67_ = var_ha.bitwiseOr(i_67_, class64.ua());
                 class64 = method477(i_66_, var_ha, i_64_, -125, i_67_);
                 if (class64 == null) return null;
                 synchronized (this.aClass263_933.aClass60_3362) {
@@ -591,7 +592,7 @@ final class Component44
             if (bool) class64.s(i_73_);
             return class64;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("iv.L(" + i + ',' + i_63_ + ',' + i_64_ + ',' + i_65_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_66_ + ',' + i_67_ + ',' + i_68_ + ',' + (var_s != null ? "{...}" : "null") + ',' + i_69_ + ',' + i_70_ + ',' + i_71_ + ',' + (class17 != null ? "{...}" : "null") + ',' + (var_s_72_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("iv.L(" + i + ',' + i_63_ + ',' + i_64_ + ',' + i_65_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_66_ + ',' + i_67_ + ',' + i_68_ + ',' + (var_s != null ? "{...}" : "null") + ',' + i_69_ + ',' + i_70_ + ',' + i_71_ + ',' + (class17 != null ? "{...}" : "null") + ',' + (var_s_72_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -614,14 +615,14 @@ final class Component44
         synchronized (this.aClass263_933.aClass45_3345) {
             for (int i_77_ = 0; i_77_ < anIntArrayArray907.length; i_77_++) {
                 for (int i_78_ = 0; (anIntArrayArray907[i_77_].length > i_78_); i_78_++)
-                    bool &= (this.aClass263_933.aClass45_3345.method420(-10499, anIntArrayArray907[i_77_][i_78_], 0));
+                    bool &= (this.aClass263_933.aClass45_3345.isFileReady(-10499, anIntArrayArray907[i_77_][i_78_], 0));
             }
         }
         return bool;
     }
 
     public static void method486(int i) {
-        aStringArray932 = null;
+        ignoreNames = null;
         if (i > -19) method486(-34);
         aClass101_905 = null;
         aClass311_897 = null;
@@ -633,7 +634,7 @@ final class Component44
         if (aClass356_881 == null) return i_79_;
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_881.get(i, -6008);
         if (class348_sub35 == null) return i_79_;
-        return class348_sub35.anInt6976;
+        return class348_sub35.intValue;
     }
 
     final void method488(int i) {

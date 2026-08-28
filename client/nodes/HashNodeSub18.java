@@ -34,7 +34,7 @@ final class HashNodeSub18
     static final void method3275(int i, int i_0_, int i_1_) {
         anInt9683++;
         if (i != 1) aClass351_9684 = null;
-        if (PacketReader.aClass230_10434 != WorldNameText.aClass230_8638) {
+        if (PacketReader.currentGameType != WorldNameText.STELLARDAWN) {
             if (!Component10.method2252(false, i_1_, i_0_, (byte) -108, 1, 0, 1, -3, 0)) Component10.method2252(false, i_1_, i_0_, (byte) -99, 1, 0, 1, -2, 0);
         } else if (!Component10.method2252(false, i_1_, i_0_, (byte) -128, 1, 0, 1, -2, 0)) Component10.method2252(false, i_1_, i_0_, (byte) -115, 1, 0, 1, -3, 0);
     }

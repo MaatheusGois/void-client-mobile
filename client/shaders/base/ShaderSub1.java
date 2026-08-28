@@ -22,7 +22,7 @@ final class ShaderSub1
             this.aClass258_Sub3_Sub1_5193 = Component307.method3583(false, is, 6406, i_1_, var_ha_Sub2, -119, 6406, i);
             this.aClass258_Sub3_Sub1_5193.method1965(false, false, 10243);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ag.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ag.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 }

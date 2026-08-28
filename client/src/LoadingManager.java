@@ -27,7 +27,7 @@ final class LoadingManager {
     static final int method1278(int i) {
         if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(i + -3690) == 0) {
             for (int i_0_ = 0; (i_0_ < HashNodeSub19.anInt9699); i_0_++) {
-                if (DefinitionGroup.anInterface6Array9534[i_0_].method28((byte) 31) == 115 || DefinitionGroup.anInterface6Array9534[i_0_].method28((byte) 71) == 83) {
+                if (DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 31) == 115 || DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 71) == 83) {
                     Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
                     DisplayModeManagerContainer42.aBoolean3847 = true;
                     break;
@@ -59,17 +59,17 @@ final class LoadingManager {
             Component65.aClass45_1627 = Component14.method3571(false, 13, (byte) -23, 1);
         }
         if (LoadingState.aClass56_1024 == RSARequest.aClass56_9660) {
-            boolean bool = DefinitionSub17Sub1.aClass45_10426.method401(89);
-            int i_2_ = Component354.aClass314_Sub1Array223[33].method2349(1);
-            i_2_ = i_2_ + Component354.aClass314_Sub1Array223[!ShaderProgramSub7.aBoolean6289 ? 32 : 34].method2349(1);
-            i_2_ += Component354.aClass314_Sub1Array223[13].method2349(1);
-            i_2_ = i_2_ + (!bool ? DefinitionSub17Sub1.aClass45_10426.method398((byte) -31) : 100);
+            boolean bool = DefinitionSub17Sub1.aClass45_10426.prefetchMandatory(89);
+            int i_2_ = Component354.aClass314_Sub1Array223[33].getReferenceTableProgress(1);
+            i_2_ = i_2_ + Component354.aClass314_Sub1Array223[!ShaderProgramSub7.aBoolean6289 ? 32 : 34].getReferenceTableProgress(1);
+            i_2_ += Component354.aClass314_Sub1Array223[13].getReferenceTableProgress(1);
+            i_2_ = i_2_ + (!bool ? DefinitionSub17Sub1.aClass45_10426.getAverageLoadPercent((byte) -31) : 100);
             if (i_2_ != 400) return i_2_ / 4;
-            Sprite.anInt6924 = ShaderProgramSub7.aClass45_6277.method389(77);
-            Component83.anInt1663 = DefinitionSub17Sub1.aClass45_10426.method389(i + 28561);
-            KeyStoreLoader.method1001(ShaderProgramSub7.aClass45_6277, 0);
+            Sprite.anInt6924 = ShaderProgramSub7.aClass45_6277.getCrc(77);
+            Component83.anInt1663 = DefinitionSub17Sub1.aClass45_10426.getCrc(i + 28561);
+            KeyStoreLoader.resolveFontGroupIds(ShaderProgramSub7.aClass45_6277, 0);
             int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub19_7257.method1805(i ^ 0x11ae);
-            Component134.aClass111_5813 = new Component331(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, DefinitionSub17Sub1.aClass45_10426);
+            Component134.aClass111_5813 = new Component331(PacketReader.currentGameType, ObjectDeserializer.languageId, DefinitionSub17Sub1.aClass45_10426);
             int[] is = Component134.aClass111_5813.method1046(i_3_, 0);
             if (is.length == 0) is = Component134.aClass111_5813.method1046(0, 0);
             KeyStoreLoader class106 = new KeyStoreLoader(ShaderProgramSub7.aClass45_6277, Component65.aClass45_1627);
@@ -135,7 +135,7 @@ final class LoadingManager {
         if (LoadingState.aClass56_1031 == RSARequest.aClass56_9660) {
             int i_8_ = 0;
             for (int i_9_ = 0; i_9_ < 37; i_9_++) {
-                if (Component354.aClass314_Sub1Array223[i_9_] != null) i_8_ += (Component354.aClass314_Sub1Array223[i_9_].method2349(i + 28661) * DisplayModeManagerContainer345.anIntArray164[i_9_] / 100);
+                if (Component354.aClass314_Sub1Array223[i_9_] != null) i_8_ += (Component354.aClass314_Sub1Array223[i_9_].getReferenceTableProgress(i + 28661) * DisplayModeManagerContainer345.anIntArray164[i_9_] / 100);
             }
             if (i_8_ != 100) {
                 if (DisplayModeManagerContainer259.anInt3435 < 0) DisplayModeManagerContainer259.anInt3435 = i_8_;
@@ -145,7 +145,7 @@ final class LoadingManager {
             HashNodeSub3.method3178(Component65.aClass45_1627, -124, Component364.method184(i ^ ~0x40a46ff3), Component158.aClass45_322);
         }
         if (LoadingState.aClass56_1032 == RSARequest.aClass56_9660) {
-            if (Component35.anInt4270 == -1) Component35.anInt4270 = Component54.aClass45_8667.method417("scape main", 0);
+            if (Component35.anInt4270 == -1) Component35.anInt4270 = Component54.aClass45_8667.getGroupId("scape main", 0);
             CacheNodeSub1.method3290(56);
             Buffer.setClientState(2, 2);
         }
@@ -153,42 +153,42 @@ final class LoadingManager {
         if (LoadingState.aClass56_1034 == RSARequest.aClass56_9660) {
             int i_10_ = LibraryCreditsText.method1770((byte) -25);
             if (i_10_ < 100) return i_10_;
-            Component309.method2013(WaterShaderSub8.aClass45_7362.method415((byte) 73, 1), (byte) 112);
-            RuntimeException_Sub1.method4012(WaterShaderSub8.aClass45_7362.method415((byte) 73, 3), (byte) -111);
+            Component309.method2013(WaterShaderSub8.aClass45_7362.getSingletonFile((byte) 73, 1), (byte) 112);
+            RuntimeException_Sub1.method4012(WaterShaderSub8.aClass45_7362.getSingletonFile((byte) 73, 3), (byte) -111);
         }
         if (i != -28660) return 2;
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1035) {
-            if (Sprite.anInt6923 != -1 && !ShaderSub3.aClass45_5207.method420(-10499, Sprite.anInt6923, 0)) return 99;
+            if (Sprite.anInt6923 != -1 && !ShaderSub3.aClass45_5207.isFileReady(-10499, Sprite.anInt6923, 0)) return 99;
             DefinitionSub4.aD9113 = new Component283(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
-            MatrixSub3.aClass326_5764 = new Component311(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            DisplayModeManagerContainer282.aClass261_5558 = new DisplayModeManagerContainer1(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component339.aClass166_3147 = new Component290(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            NodeSub7.aClass33_6653 = new Component373(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, VideoAdDisplay.aClass45_3183);
-            Component267.aClass268_2979 = new DisplayModeManagerContainer259(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component149.aClass183_4460 = new Component191(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            DisplayModeManagerContainer306.aClass219_4782 = new Component386(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            DefinitionSub25.aClass150_9342 = new Component324(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, ShaderSub3.aClass45_5207);
-            Component162.aClass271_8378 = new DisplayModeManagerContainer130(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            NodeSub1.aClass185_6559 = new Component316(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            GradientPreset.aClass263_9195 = new Component309(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component97.aClass45_1538, ShaderSub3.aClass45_5207);
-            DisplayModeManagerContainer64.aClass153_9031 = new Component62(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            Component245.aClass141_117 = new Component258(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            Component291.aClass278_2529 = new DisplayModeManagerContainer347(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component43.aClass45_4975, ShaderSub3.aClass45_5207);
-            Exception_Sub1.aClass255_112 = new DisplayModeManagerContainer320(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, ShaderSub3.aClass45_5207);
-            DisplayModeManagerContainer64.aClass187_9036 = new Component38(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            RunescapeInfo.aClass87_191 = new Component344(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, CacheNodeSub2.aClass45_10480, NodeSub29.aClass45_6909, DisplayModeManagerContainer51.aClass45_2490);
-            ComponentDownloader.aClass84_413 = new DisplayModeManagerContainer26(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component132.aClass25_1813 = new Component361(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            NsnDefinition.aClass319_9245 = new Component144(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, SeekableFile.aClass45_1322, ShaderSub3.aClass45_5207);
-            Component257.aClass65_4787 = new Component304(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            GnpPositionLogger.aClass82_1523 = new CommandHandler(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component329.aClass259_5995 = new Component293(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component267.aClass194_2981 = new Component276(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, BrowserUrlOpener.aClass45_8926);
-            Component209.aClass217_3453 = new Component46(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
+            MatrixSub3.aClass326_5764 = new Component311(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            DisplayModeManagerContainer282.aClass261_5558 = new DisplayModeManagerContainer1(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            Component339.aClass166_3147 = new Component290(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
+            NodeSub7.aClass33_6653 = new Component373(PacketReader.currentGameType, ObjectDeserializer.languageId, VideoAdDisplay.aClass45_3183);
+            Component267.aClass268_2979 = new DisplayModeManagerContainer259(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            Component149.aClass183_4460 = new Component191(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            DisplayModeManagerContainer306.aClass219_4782 = new Component386(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
+            DefinitionSub25.aClass150_9342 = new Component324(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, ShaderSub3.aClass45_5207);
+            Component162.aClass271_8378 = new DisplayModeManagerContainer130(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            NodeSub1.aClass185_6559 = new Component316(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            GradientPreset.aClass263_9195 = new Component309(PacketReader.currentGameType, ObjectDeserializer.languageId, true, Component97.aClass45_1538, ShaderSub3.aClass45_5207);
+            DisplayModeManagerContainer64.aClass153_9031 = new Component62(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
+            Component245.aClass141_117 = new Component258(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
+            Component291.aClass278_2529 = new DisplayModeManagerContainer347(PacketReader.currentGameType, ObjectDeserializer.languageId, true, Component43.aClass45_4975, ShaderSub3.aClass45_5207);
+            Exception_Sub1.aClass255_112 = new DisplayModeManagerContainer320(PacketReader.currentGameType, ObjectDeserializer.languageId, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, ShaderSub3.aClass45_5207);
+            DisplayModeManagerContainer64.aClass187_9036 = new Component38(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            RunescapeInfo.aClass87_191 = new Component344(PacketReader.currentGameType, ObjectDeserializer.languageId, CacheNodeSub2.aClass45_10480, NodeSub29.aClass45_6909, DisplayModeManagerContainer51.aClass45_2490);
+            ComponentDownloader.aClass84_413 = new DisplayModeManagerContainer26(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            Component132.aClass25_1813 = new Component361(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            NsnDefinition.aClass319_9245 = new Component144(PacketReader.currentGameType, ObjectDeserializer.languageId, SeekableFile.aClass45_1322, ShaderSub3.aClass45_5207);
+            Component257.aClass65_4787 = new Component304(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            GnpPositionLogger.aClass82_1523 = new CommandHandler(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            Component329.aClass259_5995 = new Component293(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
+            Component267.aClass194_2981 = new Component276(PacketReader.currentGameType, ObjectDeserializer.languageId, BrowserUrlOpener.aClass45_8926);
+            Component209.aClass217_3453 = new Component46(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             Component304.method699(Component65.aClass45_1627, (byte) -100, NodeSub35.aClass45_6980, Component158.aClass45_322, ShaderSub3.aClass45_5207);
             Applet_Sub1.method85(0, NodeList.aClass45_3323);
-            Component33.aClass226_2639 = new Component127(ObjectDeserializer.anInt6967, Component387.aClass45_1897, CommandHandler.aClass45_1434);
-            Component31.aClass355_5900 = new Component117(ObjectDeserializer.anInt6967, Component387.aClass45_1897, CommandHandler.aClass45_1434, new DisplayModeManagerContainer332());
+            Component33.aClass226_2639 = new Component127(ObjectDeserializer.languageId, Component387.aClass45_1897, CommandHandler.aClass45_1434);
+            Component31.aClass355_5900 = new Component117(ObjectDeserializer.languageId, Component387.aClass45_1897, CommandHandler.aClass45_1434, new DisplayModeManagerContainer332());
             Component324.method1202(0);
             GradientPreset.aClass263_9195.method2008(i + 28539, Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(i + -3690) == 0);
             DisplayModeManagerContainer58.aClass170_10209 = new DisplayModeManagerContainer292();
@@ -224,30 +224,30 @@ final class LoadingManager {
                 }
                 DisplayModeManagerContainer123.anIntArray1303[i_13_] = -1;
             }
-            Component262.method1063(1);
-            DebugPanic.anInt4737 = NodeSub35.aClass45_6980.method417("loginscreen", i ^ ~0x6ff3);
-            Component285.anInt970 = NodeSub35.aClass45_6980.method417("lobbyscreen", 0);
-            SoftwareFallbackShader.aClass45_7382.method404(0, true, false);
-            Component54.aClass45_8667.method404(0, true, true);
-            Component158.aClass45_322.method404(i + 28660, true, true);
-            Component65.aClass45_1627.method404(0, true, true);
-            Component110.aClass45_233.method404(0, true, true);
-            NodeSub35.aClass45_6980.method404(0, true, true);
-            Component181.aClass45_1541.anInt634 = 2;
+            Component262.loadPreferences(1);
+            DebugPanic.anInt4737 = NodeSub35.aClass45_6980.getGroupId("loginscreen", i ^ ~0x6ff3);
+            Component285.anInt970 = NodeSub35.aClass45_6980.getGroupId("lobbyscreen", 0);
+            SoftwareFallbackShader.aClass45_7382.clearNameTables(0, true, false);
+            Component54.aClass45_8667.clearNameTables(0, true, true);
+            Component158.aClass45_322.clearNameTables(i + 28660, true, true);
+            Component65.aClass45_1627.clearNameTables(0, true, true);
+            Component110.aClass45_233.clearNameTables(0, true, true);
+            NodeSub35.aClass45_6980.clearNameTables(0, true, true);
+            Component181.aClass45_1541.discardMode = 2;
             Component144.aBoolean3988 = true;
-            VideoAdDisplay.aClass45_3183.anInt634 = 2;
-            Component97.aClass45_1538.anInt634 = 2;
-            Component43.aClass45_4975.anInt634 = 2;
-            RadixParser.aClass45_2306.anInt634 = 2;
-            CacheNodeSub2.aClass45_10480.anInt634 = 2;
-            SeekableFile.aClass45_1322.anInt634 = 2;
+            VideoAdDisplay.aClass45_3183.discardMode = 2;
+            Component97.aClass45_1538.discardMode = 2;
+            Component43.aClass45_4975.discardMode = 2;
+            RadixParser.aClass45_2306.discardMode = 2;
+            CacheNodeSub2.aClass45_10480.discardMode = 2;
+            SeekableFile.aClass45_1322.discardMode = 2;
         }
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1040) {
             if (!Component233.method2547(DebugPanic.anInt4737, (byte) 84)) return 0;
             boolean bool = true;
             for (int i_14_ = 0; i_14_ < (DefinitionSub33.aClass46ArrayArray9427[DebugPanic.anInt4737]).length; i_14_++) {
                 DisplayModeManagerContainer57 class46 = (DefinitionSub33.aClass46ArrayArray9427[DebugPanic.anInt4737][i_14_]);
-                if (class46.anInt774 == 5 && class46.anInt756 != -1 && !Component158.aClass45_322.method420(-10499, (class46.anInt756), 0)) bool = false;
+                if (class46.anInt774 == 5 && class46.anInt756 != -1 && !Component158.aClass45_322.isFileReady(-10499, (class46.anInt756), 0)) bool = false;
             }
             if (!bool) return 0;
         }
@@ -311,7 +311,7 @@ final class LoadingManager {
             if (bool != true) clearDefinitionCaches((byte) -20);
             return stringbuffer.toString();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pea.C(" + bool + ',' + i + ',' + (strings != null ? "{...}" : "null") + ',' + i_15_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pea.C(" + bool + ',' + i + ',' + (strings != null ? "{...}" : "null") + ',' + i_15_ + ')'));
         }
     }
 }

@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer88
         anInt1206++;
         if (RSARequest.aClass56_9660 != null) {
             Component44.aClass311_897 = new ResourceLoader();
-            Component44.aClass311_897.method2316(RSARequest.aClass56_9660, RSARequest.aClass56_9660.aClass274_1012.method2063(ObjectDeserializer.anInt6967, 544), RSARequest.aClass56_9660.maxProgress, Component69.aLong3660, false);
+            Component44.aClass311_897.method2316(RSARequest.aClass56_9660, RSARequest.aClass56_9660.aClass274_1012.getLocalized(ObjectDeserializer.languageId, 544), RSARequest.aClass56_9660.maxProgress, Component69.aLong3660, false);
             NodeSub32.aThread6946 = new Thread(Component44.aClass311_897, "");
             NodeSub32.aThread6946.start();
         }
@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer88
 
     static final void method727(byte i, int i_0_, int i_1_, int i_2_) {
         anInt1205++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_2_, (byte) 105, 9);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_2_, (byte) 105, 9);
         class348_sub42_sub15.method3246(i + -25427);
         class348_sub42_sub15.anInt9652 = i_1_;
         class348_sub42_sub15.anInt9651 = i_0_;

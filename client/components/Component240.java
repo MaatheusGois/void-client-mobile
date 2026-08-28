@@ -36,13 +36,14 @@ final class Component240
         }
     }
 
+    /** Monotonic millis: wall clock + {@link DisplayModeManagerContainer28#clockSkewMillis}. */
     static final synchronized long currentTimeMillis(int i) {
         if (i > -52) return -121L;
         anInt1113++;
         long l = System.currentTimeMillis();
-        if (MatrixSub1.aLong5663 > l) DisplayModeManagerContainer28.aLong8728 += MatrixSub1.aLong5663 - l;
-        MatrixSub1.aLong5663 = l;
-        return l + DisplayModeManagerContainer28.aLong8728;
+        if (MatrixSub1.lastWallClockMillis > l) DisplayModeManagerContainer28.clockSkewMillis += MatrixSub1.lastWallClockMillis - l;
+        MatrixSub1.lastWallClockMillis = l;
+        return l + DisplayModeManagerContainer28.clockSkewMillis;
     }
 
     static final int method600(byte i, int i_1_, int i_2_) {

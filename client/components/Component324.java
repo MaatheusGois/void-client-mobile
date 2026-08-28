@@ -42,7 +42,7 @@ final class Component324
         if (class34 != null) return class34;
         byte[] is;
         synchronized (aClass45_2048) {
-            is = aClass45_2048.method410(i + -1893, 3, i_3_);
+            is = aClass45_2048.getFile(i + -1893, 3, i_3_);
         }
         class34 = new Component225();
         class34.aClass150_475 = this;
@@ -63,7 +63,7 @@ final class Component324
 
     static final HashNodeSub14 method1205(int i, boolean bool, CacheStore class45, int i_4_) {
         anInt2053++;
-        Buffer class348_sub49 = new Buffer(class45.method410(-1860, i_4_, i));
+        Buffer class348_sub49 = new Buffer(class45.getFile(-1860, i_4_, i));
         if (bool != true) method1208(102);
         HashNodeSub14 class348_sub42_sub14 = new HashNodeSub14(i, class348_sub49.readString((byte) 88), class348_sub49.readString((byte) 120), class348_sub49.readInt((byte) -126), class348_sub49.readInt((byte) -126), class348_sub49.readUnsignedByte(255) == 1, class348_sub49.readUnsignedByte(255), class348_sub49.readUnsignedByte(255));
         int i_5_ = class348_sub49.readUnsignedByte(255);
@@ -95,13 +95,13 @@ final class Component324
         int i_8_ = -65 / ((i - -58) / 57);
     }
 
-    Component324(DisplayModeManagerContainer124 class230, int i, CacheStore class45, CacheStore class45_9_) {
+    Component324(GameType class230, int i, CacheStore class45, CacheStore class45_9_) {
         try {
             this.aClass45_2054 = class45_9_;
             aClass45_2048 = class45;
-            aClass45_2048.method407(0, 3);
+            aClass45_2048.getFileCount(0, 3);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oha.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oha.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
         }
     }
 

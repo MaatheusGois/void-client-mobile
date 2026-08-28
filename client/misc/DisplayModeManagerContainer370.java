@@ -14,7 +14,7 @@ abstract class DisplayModeManagerContainer370
     static int anInt1128;
     static int anInt1129;
     static int anInt1130;
-    static HuffmanDecoder aClass296_1131;
+    static HuffmanDecoder huffman;
     static int anInt1132;
     static int anInt1133;
     static int anInt1134;
@@ -135,7 +135,7 @@ abstract class DisplayModeManagerContainer370
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.AC(" + i + ',' + (class348_sub33 != null ? "{...}" : "null") + ',' + i_5_ + ',' + bool + ',' + i_6_ + ',' + (class4 != null ? "{...}" : "null") + ',' + i_7_ + ',' + (is != null ? "{...}" : "null") + ',' + (bools != null ? "{...}" : "null") + ',' + (class4_8_ != null ? "{...}" : "null") + ',' + i_9_ + ',' + bool_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.AC(" + i + ',' + (class348_sub33 != null ? "{...}" : "null") + ',' + i_5_ + ',' + bool + ',' + i_6_ + ',' + (class4 != null ? "{...}" : "null") + ',' + i_7_ + ',' + (is != null ? "{...}" : "null") + ',' + (bools != null ? "{...}" : "null") + ',' + (class4_8_ != null ? "{...}" : "null") + ',' + i_9_ + ',' + bool_10_ + ')'));
         }
     }
 
@@ -159,7 +159,7 @@ abstract class DisplayModeManagerContainer370
                 } else method621();
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.QB(" + i + ',' + i_40_ + ',' + (is != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_44_ + ',' + (class348_sub42_sub17_45_ != null ? "{...}" : "null") + ',' + bool + ',' + i_46_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.QB(" + i + ',' + i_40_ + ',' + (is != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_44_ + ',' + (class348_sub42_sub17_45_ != null ? "{...}" : "null") + ',' + bool + ',' + i_46_ + ')'));
         }
     }
 
@@ -198,7 +198,7 @@ abstract class DisplayModeManagerContainer370
         Component353.aShortArray2579 = is;
         String[] strings = new String[DisplayModeManagerContainer154.anInt1285];
         for (int i_58_ = 0; DisplayModeManagerContainer154.anInt1285 > i_58_; i_58_++)
-            strings[i_58_] = Component31.aClass355_5900.method3471(is[i_58_], (byte) -91).method3219(NodeSub21.method2955(i, 81));
+            strings[i_58_] = Component31.aClass355_5900.method3471(is[i_58_], (byte) -91).method3219(NodeSub21.bitwiseXor(i, 81));
         RadixParser.method1333(Component353.aShortArray2579, i + 26073, strings);
     }
 
@@ -239,7 +239,7 @@ abstract class DisplayModeManagerContainer370
             }
             anInt1134++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.UB(" + i + ',' + (strings != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_64_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.UB(" + i + ',' + (strings != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_64_ + ',' + bool + ')'));
         }
     }
 
@@ -257,7 +257,7 @@ abstract class DisplayModeManagerContainer370
 
     public static void method609(byte i) {
         if (i <= -7) {
-            aClass296_1131 = null;
+            huffman = null;
             anIntArray1127 = null;
         }
     }
@@ -332,7 +332,7 @@ abstract class DisplayModeManagerContainer370
                 } else method621();
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.BC(" + i + ',' + i_83_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_84_ + ',' + ((class348_sub42_sub17_85_ != null) ? "{...}" : "null") + ',' + bool + ',' + bool_86_ + ',' + i_87_ + ',' + i_88_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.BC(" + i + ',' + i_83_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_84_ + ',' + ((class348_sub42_sub17_85_ != null) ? "{...}" : "null") + ',' + bool + ',' + bool_86_ + ',' + i_87_ + ',' + i_88_ + ')'));
         }
     }
 
@@ -401,7 +401,7 @@ abstract class DisplayModeManagerContainer370
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.VB(" + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i + ',' + i_101_ + ',' + i_102_ + ',' + (class348_sub42_sub17_103_ != null ? "{...}" : "null") + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + (class348_sub42_sub17_107_ != null ? "{...}" : "null") + ',' + bool + ',' + i_108_ + ',' + (class348_sub42_sub17_109_ != null ? "{...}" : "null") + ',' + i_110_ + ',' + (bools != null ? "{...}" : "null") + ',' + i_111_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.VB(" + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i + ',' + i_101_ + ',' + i_102_ + ',' + (class348_sub42_sub17_103_ != null ? "{...}" : "null") + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + (class348_sub42_sub17_107_ != null ? "{...}" : "null") + ',' + bool + ',' + i_108_ + ',' + (class348_sub42_sub17_109_ != null ? "{...}" : "null") + ',' + i_110_ + ',' + (bools != null ? "{...}" : "null") + ',' + i_111_ + ')'));
         }
     }
 
@@ -504,7 +504,7 @@ abstract class DisplayModeManagerContainer370
                 else I(i_147_, is, i_150_, i_146_, i_152_, bool, i_148_, is_151_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ka.PB(" + (is != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_146_ + ',' + i_147_ + ',' + i_148_ + ',' + i_149_ + ',' + i_150_ + ',' + (is_151_ != null ? "{...}" : "null") + ',' + i_152_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.PB(" + (is != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + i_146_ + ',' + i_147_ + ',' + i_148_ + ',' + i_149_ + ',' + i_150_ + ',' + (is_151_ != null ? "{...}" : "null") + ',' + i_152_ + ')'));
         }
     }
 

@@ -6,25 +6,32 @@ import java.util.Date;
 
 final class HashNodeSub16Sub1
 /**
- * RENAMED from `Class348_Sub42_Sub16_Sub1` (JODE-obfuscated).
- * Evidence: subclass of HashNodeSub16 (hierarchy)
+ * RENAMED from {@code Class348_Sub42_Sub16_Sub1} (JODE-obfuscated).
+ * JS5 TCP response node: accumulates 512-byte blocks into {@link #buffer}
+ * until {@link #incomplete} clears. {@link #padding} is the unused trailer
+ * length on the last block; {@link #blockPosition} tracks progress within
+ * the current 512-byte window (resets at 512).
  */ extends HashNodeSub16 {
     static int anInt10447 = -1;
     static int anInt10448;
-    byte aByte10449;
+    /** Unused bytes at end of last block (payload length = buffer.length - padding). */
+    byte padding;
     static boolean aBoolean10450;
     static int anInt10451;
     static int anInt10452;
-    Buffer aClass348_Sub49_10453;
+    /** Growing response payload (header + archive bytes). */
+    Buffer buffer;
     static int anInt10454;
     static int anInt10455;
-    int anInt10456;
+    /** Bytes read in the current 512-byte JS5 block (0..512). */
+    int blockPosition;
 
-    final byte[] method3259(int i) {
+    /** Returns payload when complete; throws if still {@link #incomplete} or short. */
+    final byte[] getData(int i) {
         anInt10454++;
         if (i != 16) return null;
-        if (this.aBoolean9664 || (this.aClass348_Sub49_10453.offset < (-this.aByte10449 + (this.aClass348_Sub49_10453.payload).length))) throw new RuntimeException();
-        return (this.aClass348_Sub49_10453.payload);
+        if (this.incomplete || (this.buffer.offset < (-this.padding + (this.buffer.payload).length))) throw new RuntimeException();
+        return (this.buffer.payload);
     }
 
     static final void method3260(int i) {
@@ -35,7 +42,7 @@ final class HashNodeSub16Sub1
                 try {
                     class348_sub15.aClass55_Sub1_6768.method517(-2);
                 } catch (Exception exception) {
-                    ClientErrorReporter.method1242("TV: " + class348_sub15.anInt6773, exception, 15004);
+                    ClientErrorReporter.reportError("TV: " + class348_sub15.anInt6773, exception, 15004);
                     DisplayModeManagerContainer282.method690((byte) 15, (class348_sub15.anInt6773));
                 }
                 if (!class348_sub15.aBoolean6783 && !class348_sub15.aBoolean6781) {
@@ -55,7 +62,8 @@ final class HashNodeSub16Sub1
         anInt10448++;
     }
 
-    static final String method3261(long l, int i) {
+    /** Format {@code l} as HTTP-date ({@code Day, DD-Mon-YYYY HH:MM:SS GMT}). */
+    static final String formatHttpDate(long l, int i) {
         try {
             ParticleShader.aCalendar6221.setTime(new Date(l));
             anInt10455++;
@@ -69,18 +77,19 @@ final class HashNodeSub16Sub1
             int i_7_ = ParticleShader.aCalendar6221.get(13);
             return (ToolkitFactory.aStringArray1531[i_1_ - 1] + ", " + i_2_ / 10 + i_2_ % 10 + "-" + Component374.aStringArray4129[i_3_] + "-" + i_4_ + " " + i_5_ / 10 + i_5_ % 10 + ":" + i_6_ / 10 + i_6_ % 10 + ":" + i_7_ / 10 + i_7_ % 10 + " GMT");
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "mba.I(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "mba.I(" + l + ',' + i + ')');
         }
     }
 
-    final int method3257(int i) {
-        if (i != 16) this.aByte10449 = (byte) -4;
+    /** Download progress 0..100 based on buffer offset vs expected length. */
+    final int getProgressPercent(int i) {
+        if (i != 16) this.padding = (byte) -4;
         anInt10452++;
-        if (this.aClass348_Sub49_10453 == null) return 0;
-        return (100 * this.aClass348_Sub49_10453.offset / (-this.aByte10449 + (this.aClass348_Sub49_10453.payload).length));
+        if (this.buffer == null) return 0;
+        return (100 * this.buffer.offset / (-this.padding + (this.buffer.payload).length));
     }
 
-    static final boolean method3262(int i, int i_8_, int i_9_) {
+    static final boolean hasFlag0x10(int i, int i_8_, int i_9_) {
         if (i_9_ <= 75) aBoolean10450 = false;
         anInt10451++;
         return (i & 0x10) != 0;

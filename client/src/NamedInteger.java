@@ -4,7 +4,8 @@
 
 /**
  * RENAMED from `Class364` (JODE-obfuscated).
- * Node holding a named integer (String name + value). Used inside hashtables of named integer constants.
+ * Named int constant (label + {@link #value}).
+ * World-list channels use statics like {@link Component326#LIVE}, {@link WaterShaderSub8#WTRC}, {@link DisplayModeManagerContainer154#LOCAL}.
  */
 
 final class NamedInteger {

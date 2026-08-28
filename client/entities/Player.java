@@ -146,7 +146,7 @@ final class Player extends DisplayModeManagerContainer58 {
         this.anInt10540 = class348_sub49.readByte(-89);
         this.anInt10522 = class348_sub49.readByte(i ^ ~0x1);
         this.aBoolean10551 = class348_sub49.readByte(i + -199) == 1;
-        if (DisplayModeManagerContainer345.aClass364_165 == Component326.aClass364_5271 && Component353.anInt2581 >= 2) this.aBoolean10551 = false;
+        if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE && Component353.anInt2581 >= 2) this.aBoolean10551 = false;
         this.anInt10542 = 0;
         int i_14_ = -1;
         int[] is = new int[12];
@@ -163,10 +163,10 @@ final class Player extends DisplayModeManagerContainer58 {
                 }
                 if (i_18_ >= 32768) {
                     i_18_ = Component361.anIntArray369[-32768 + i_18_];
-                    is[i_15_] = Component224.method2057(1073741824, i_18_);
+                    is[i_15_] = Component224.bitwiseOr(1073741824, i_18_);
                     int i_19_ = (Exception_Sub1.aClass255_112.method1940(-111, i_18_).anInt2827);
                     if (i_19_ != 0) this.anInt10542 = i_19_;
-                } else is[i_15_] = Component224.method2057(-256 + i_18_, -2147483648);
+                } else is[i_15_] = Component224.bitwiseOr(-256 + i_18_, -2147483648);
             }
         }
         int[] is_20_ = new int[5];
@@ -250,7 +250,7 @@ final class Player extends DisplayModeManagerContainer58 {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ke.OB(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_32_ + ',' + (class64 != null ? "{...}" : "null") + ',' + i_33_ + ',' + i_34_ + ',' + (class101 != null ? "{...}" : "null") + ',' + i_35_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ke.OB(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_32_ + ',' + (class64 != null ? "{...}" : "null") + ',' + i_33_ + ',' + i_34_ + ',' + (class101 != null ? "{...}" : "null") + ',' + i_35_ + ')'));
             }
             break;
         } while (false);
@@ -271,7 +271,7 @@ final class Player extends DisplayModeManagerContainer58 {
                     var_ha.C(true);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ke.V(" + i + ',' + i_39_ + ',' + i_40_ + ',' + i_41_ + ',' + (class64 != null ? "{...}" : "null") + ',' + i_42_ + ',' + (class101 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_43_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ke.V(" + i + ',' + i_39_ + ',' + i_40_ + ',' + i_41_ + ',' + (class64 != null ? "{...}" : "null") + ',' + i_42_ + ',' + (class101 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_43_ + ')'));
             }
             break;
         } while (false);
@@ -295,7 +295,7 @@ final class Player extends DisplayModeManagerContainer58 {
             anInt10545++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ke.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_47_ + ',' + i_48_ + ',' + i_49_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ke.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_47_ + ',' + i_48_ + ',' + i_49_ + ')'));
         }
     }
 
@@ -427,10 +427,10 @@ final class Player extends DisplayModeManagerContainer58 {
         if (i != 255) anInt10567 = 81;
         if (is != null && is[aByte10552] != -1) {
             Component208 class117 = NodeSub7.aClass33_6653.method337(true, is[aByte10552]);
-            if (class117.aChar1779 != 115) {
-                ClientErrorReporter.method1242("gdn1", new Throwable(), 15004);
+            if (class117.valueType != 115) {
+                ClientErrorReporter.reportError("gdn1", new Throwable(), 15004);
                 is[aByte10552] = -1;
-            } else string += class117.method1074(0xff & aByte10556, i + -145);
+            } else string += class117.getString(0xff & aByte10556, i + -145);
         }
         if (!bool) string += this.username;
         else string += this.displayName;
@@ -485,7 +485,7 @@ final class Player extends DisplayModeManagerContainer58 {
         int i_75_ = Component102.method2201(2121);
         if (Component127.anInt2964 < 96 && i_75_ > 50) Component201.method2271(31268);
         int i_76_ = 3 % ((63 - i_69_) / 47);
-        if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165 && i_75_ < 50) {
+        if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165 && i_75_ < 50) {
             int i_77_;
             for (i_77_ = -i_75_ + 50; Component162.anInt8388 < i_77_; Component162.anInt8388++)
                 Component17.aByteArrayArray3882[Component162.anInt8388] = new byte[102400];
@@ -493,7 +493,7 @@ final class Player extends DisplayModeManagerContainer58 {
                 Component162.anInt8388--;
                 Component17.aByteArrayArray3882[Component162.anInt8388] = null;
             }
-        } else if (DisplayModeManagerContainer345.aClass364_165 != Component326.aClass364_5271) {
+        } else if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) {
             Component162.anInt8388 = 0;
             Component17.aByteArrayArray3882 = new byte[50][];
         }
@@ -639,7 +639,7 @@ final class Player extends DisplayModeManagerContainer58 {
                 if (i_105_ == 30) break;
                 aHashtable10565 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ke.LB(" + f + ',' + i + ',' + f_100_ + ',' + i_101_ + ',' + i_102_ + ',' + f_103_ + ',' + (class186 != null ? "{...}" : "null") + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + f_107_ + ',' + (is != null ? "{...}" : "null") + ',' + i_108_ + ',' + f_109_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ke.LB(" + f + ',' + i + ',' + f_100_ + ',' + i_101_ + ',' + i_102_ + ',' + f_103_ + ',' + (class186 != null ? "{...}" : "null") + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + f_107_ + ',' + (is != null ? "{...}" : "null") + ',' + i_108_ + ',' + f_109_ + ')'));
             }
             break;
         } while (false);

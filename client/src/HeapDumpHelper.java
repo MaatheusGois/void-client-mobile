@@ -80,7 +80,7 @@ final class HeapDumpHelper implements Interface12 {
             this.anInt4935 = i_8_;
             this.anInt4937 = i_4_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ot.<init>(" + (string != null ? "{...}" : "null") + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ot.<init>(" + (string != null ? "{...}" : "null") + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
         }
     }
 

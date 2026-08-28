@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer271
                 if (i <= -97) break;
                 method367(-67);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ifa.B(" + (objects != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ifa.B(" + (objects != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -48,7 +48,7 @@ final class DisplayModeManagerContainer271
             this.aLong517 = l;
             aClass377_519 = class377;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ifa.<init>(" + (class377 != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ifa.<init>(" + (class377 != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
         }
     }
 }

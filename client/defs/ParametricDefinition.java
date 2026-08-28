@@ -6,7 +6,7 @@
  * ParametricDefinition — definição com faixa parametrizada (antigo `ParametricDefinition`).
  * <p>
  * Lê dois limites de um buffer ({@code anInt9104} inferior e {@code anInt9107}
- * superior, padrão 0..4096) via {@code method3049}. {@code method3042}
+ * superior, padrão 0..4096) via {@code method3049}. {@code getMonochromeOutput}
  * mapeia um array de valores para 4096 se estiver dentro da faixa, senão 0 —
  * padrão comum de varp/varbit/filtro de estado. {@code method3055} traduz
  * {@code DisplayModeManagerContainer42} (enum de tipo) para opcode ClientScript (6407..6410).
@@ -45,7 +45,7 @@ final class ParametricDefinition extends Definition {
     static final void method3054(boolean bool, int i, int i_2_) {
         anInt9105++;
         if (i_2_ < -127) {
-            NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) -122, i, bool);
+            NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -122, i, bool);
             if (class348_sub13 != null) class348_sub13.unlink((byte) 97);
         }
     }
@@ -69,11 +69,11 @@ final class ParametricDefinition extends Definition {
         throw new IllegalStateException();
     }
 
-    final int[] method3042(int i, int i_3_) {
+    final int[] getMonochromeOutput(int i, int i_3_) {
         anInt9110++;
         if (i_3_ != 255) anInt9107 = -121;
-        int[] is = this.aClass191_7032.method1433(i_3_ + -255, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(i_3_ + -255, i);
+        if (this.imageCache.cacheMiss) {
             int[] is_4_ = this.method3048(i, 633706337, 0);
             for (int i_5_ = 0; (DefinitionSub6.anInt9139 > i_5_); i_5_++) {
                 int i_6_ = is_4_[i_5_];

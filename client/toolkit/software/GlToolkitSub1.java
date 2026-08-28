@@ -2290,7 +2290,8 @@ final class GlToolkitSub1
         aClass60_7499.clear(0);
     }
 
-    final int method3679(int i, int i_640_) {
+    /** {@code i | i_640_} (GL toolkit override). */
+    final int bitwiseOr(int i, int i_640_) {
         return i | i_640_;
     }
 

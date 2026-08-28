@@ -115,20 +115,20 @@ final class Component82
     private final void method330(GraphicsToolkit var_ha, int i) {
         anInt446++;
         CacheStore class45 = this.aClass219_438.aClass45_2873;
-        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.get(anInt421, 121) == null && class45.method421(false, anInt421)) {
+        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.get(anInt421, 121) == null && class45.isSingletonFileReady(false, anInt421)) {
             Component170 class207 = Component170.method1512(class45, anInt421);
             this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt421, (byte) -112);
         }
-        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.get(anInt433, -99) == null && class45.method421(false, anInt433)) {
+        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.get(anInt433, -99) == null && class45.isSingletonFileReady(false, anInt433)) {
             Component170 class207 = Component170.method1512(class45, anInt433);
             this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt433, (byte) -128);
         }
-        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.get(anInt429, 86) == null && class45.method421(false, anInt429)) {
+        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.get(anInt429, 86) == null && class45.isSingletonFileReady(false, anInt429)) {
             Component170 class207 = Component170.method1512(class45, anInt429);
             this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt429, (byte) -108);
         }
         if (i > -7) this.anInt434 = -14;
-        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.get(anInt439, -83) == null && class45.method421(false, anInt439)) {
+        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.get(anInt439, -83) == null && class45.isSingletonFileReady(false, anInt439)) {
             Component170 class207 = Component170.method1512(class45, anInt439);
             this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt439, (byte) -101);
         }

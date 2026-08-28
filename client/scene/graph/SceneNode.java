@@ -160,7 +160,7 @@ final class SceneNode extends Node {
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("hf.D(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("hf.D(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
             }
             break;
         } while (false);
@@ -247,7 +247,7 @@ final class SceneNode extends Node {
     static final boolean method2783(int i, byte i_15_, int i_16_) {
         anInt6682++;
         int i_17_ = 53 / ((15 - i_15_) / 55);
-        return (HashNodeSub16Sub1.method3262(i_16_, i, 118) & Component63.method3563(i_16_, (byte) 56, i));
+        return (HashNodeSub16Sub1.hasFlag0x10(i_16_, i, 118) & Component63.method3563(i_16_, (byte) 56, i));
     }
 
     public SceneNode() {

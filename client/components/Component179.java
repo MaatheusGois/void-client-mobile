@@ -104,7 +104,7 @@ final class Component179
             for (int i_11_ = 0; (NodeSub44.anInt7101 > i_11_); i_11_++) {
                 Component103 class338 = InterfaceRenderer.aClass338Array5060[i_11_];
                 if ((class338.aByte4192 == i_7_ && i_10_ == class338.aShort4185 && i_8_ == class338.aShort4193) || ((class338.aShort4182 == i_10_) && (class338.aShort4193 == i_8_))) {
-                    if (i_11_ != NodeSub44.anInt7101) Component313.method1575(InterfaceRenderer.aClass338Array5060, 1 + i_11_, InterfaceRenderer.aClass338Array5060, i_11_, (InterfaceRenderer.aClass338Array5060.length + -i_11_ - 1));
+                    if (i_11_ != NodeSub44.anInt7101) Component313.arraycopyObjects(InterfaceRenderer.aClass338Array5060, 1 + i_11_, InterfaceRenderer.aClass338Array5060, i_11_, (InterfaceRenderer.aClass338Array5060.length + -i_11_ - 1));
                     NodeSub44.anInt7101--;
                     return;
                 }

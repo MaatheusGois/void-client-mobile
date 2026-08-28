@@ -32,7 +32,7 @@ final class BuildInfo {
         int i_7_ = -1;
         int i_8_ = LogicError.method831(Component22.anInt1745, i_3_ + i_0_, Component27.anInt4960, -108);
         int i_9_ = LogicError.method831(Component22.anInt1745, -i_3_ + i_0_, Component27.anInt4960, 81);
-        MenuOpener.method1156(-27, i_8_, DisplayModeManagerContainer167.anIntArrayArray255[i_2_], i_9_, i_1_);
+        MenuOpener.fillInts(-27, i_8_, DisplayModeManagerContainer167.anIntArrayArray255[i_2_], i_9_, i_1_);
         while (i_5_ > i_4_) {
             i_7_ += 2;
             i_6_ += i_7_;
@@ -44,8 +44,8 @@ final class BuildInfo {
                 if (i_11_ >= Component72.anInt1910 && PauseTimer.anInt513 >= i_10_) {
                     int i_12_ = LogicError.method831(Component22.anInt1745, i_4_ + i_0_, Component27.anInt4960, 74);
                     int i_13_ = LogicError.method831(Component22.anInt1745, i_0_ + -i_4_, Component27.anInt4960, 98);
-                    if (i_11_ <= PauseTimer.anInt513) MenuOpener.method1156(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_11_]), i_13_, i_1_);
-                    if (Component72.anInt1910 <= i_10_) MenuOpener.method1156(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_10_]), i_13_, i_1_);
+                    if (i_11_ <= PauseTimer.anInt513) MenuOpener.fillInts(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_11_]), i_13_, i_1_);
+                    if (Component72.anInt1910 <= i_10_) MenuOpener.fillInts(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_10_]), i_13_, i_1_);
                 }
             }
             int i_14_ = -++i_4_ + i_2_;
@@ -53,8 +53,8 @@ final class BuildInfo {
             if (Component72.anInt1910 <= i_15_ && PauseTimer.anInt513 >= i_14_) {
                 int i_16_ = LogicError.method831(Component22.anInt1745, i_0_ + i_5_, Component27.anInt4960, 52);
                 int i_17_ = LogicError.method831(Component22.anInt1745, i_0_ + -i_5_, Component27.anInt4960, -106);
-                if (i_15_ <= PauseTimer.anInt513) MenuOpener.method1156(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_15_], i_17_, i_1_);
-                if (i_14_ >= Component72.anInt1910) MenuOpener.method1156(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_14_], i_17_, i_1_);
+                if (i_15_ <= PauseTimer.anInt513) MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_15_], i_17_, i_1_);
+                if (i_14_ >= Component72.anInt1910) MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_14_], i_17_, i_1_);
             }
         }
     }
@@ -111,7 +111,7 @@ final class BuildInfo {
             class318_sub5.anInt6420 = i_27_;
             Component241.aClass243_2957.method1869(-103, class318_sub5);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("go.F(" + i + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("go.F(" + i + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ')'));
         }
     }
 
@@ -148,25 +148,25 @@ final class BuildInfo {
                     if (Component14.anInt8587 > 1) i_40_ += ((Component14.anInt8587 + (-1 + -Component94.anInt3676)) * (i_38_ - i_39_) / (Component14.anInt8587 + -1));
                     var_ha.fillRect(-16 + (Component236.anInt4017 + i_35_), i_36_ + i_40_, 12, i_39_, 0x332277 | Component39.anInt2254 << 24, 2);
                     for (int i_41_ = Component94.anInt3676; ((i_41_ < i_37_ + Component94.anInt3676) && Component14.anInt8587 > i_41_); i_41_++) {
-                        String[] strings = (DefinitionSub23.method3113('\010', true, ArbShaderProgram.aStringArray6200[i_41_]));
+                        String[] strings = (DefinitionSub23.splitByChar('\010', true, ArbShaderProgram.aStringArray6200[i_41_]));
                         int i_42_ = (-16 + Component236.anInt4017 + -8) / strings.length;
                         for (int i_43_ = 0; i_43_ < strings.length; i_43_++) {
                             int i_44_ = i_42_ * i_43_ + 8;
                             var_ha.KA(i_35_ + i_44_, i_36_, i_42_ + i_35_ - (-i_44_ - -8), i_36_ + consoleH);
-                            Applet_Sub1.aClass324_20.drawText(AudioMixer.method1909((byte) 31, strings[i_43_]), -1, (-((-Component94.anInt3676 + i_41_) * Component342.anInt1188) + (-ImageProducerSprite.anInt9077 + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.descent))))), i_35_ + i_44_, -16777216, -110);
+                            Applet_Sub1.aClass324_20.drawText(AudioMixer.redactConsoleLine((byte) 31, strings[i_43_]), -1, (-((-Component94.anInt3676 + i_41_) * Component342.anInt1188) + (-ImageProducerSprite.anInt9077 + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.descent))))), i_35_ + i_44_, -16777216, -110);
                         }
                     }
                 }
                 Component49.aClass324_4684.drawTextRightAligned("Build: 634", consoleH + (i_36_ + -20), -1, (Component236.anInt4017 + i_35_ + -25), -121, -16777216);
                 var_ha.KA(i_35_, i_36_, i_35_ - -Component236.anInt4017, i_36_ - -consoleH);
                 var_ha.method3649((byte) -80, Component236.anInt4017, -ImageProducerSprite.anInt9077 + (consoleH + i_36_), -1, i_35_);
-                NodeList.aClass324_3326.drawText("--> " + AudioMixer.method1909((byte) 31, Component126.aString4461), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
+                NodeList.aClass324_3326.drawText("--> " + AudioMixer.redactConsoleLine((byte) 31, Component126.aString4461), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
                 if (!Component143.aBoolean2329) break;
                 int i_45_ = -1;
                 if (OpenGlShader.clientCycle % 30 > 15) i_45_ = 16777215;
-                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.method1909((byte) 31, Component126.aString4461).substring(0, NodeSub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
+                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.redactConsoleLine((byte) 31, Component126.aString4461).substring(0, NodeSub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
             }
             break;
         } while (false);

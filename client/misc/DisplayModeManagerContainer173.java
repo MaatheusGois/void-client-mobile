@@ -17,7 +17,8 @@ final class DisplayModeManagerContainer173
     static int anInt4243;
     int anInt4244;
     int anInt4245;
-    static NamedInteger aClass364_4246 = new NamedInteger("WTI", 5);
+    /** World-test internal channel. */
+    static NamedInteger WTI = new NamedInteger("WTI", 5);
     static DisplayModeManagerContainer88 aClass70_4247;
     DisplayModeManagerContainer173 aClass342_4248;
     static Image anImage4249;
@@ -28,7 +29,7 @@ final class DisplayModeManagerContainer173
     static NodeCache aClass60_4254;
 
     public static void method2682(int i) {
-        aClass364_4246 = null;
+        WTI = null;
         anIntArrayArray4253 = null;
         if (i > 5) {
             aClass70_4247 = null;
@@ -56,7 +57,7 @@ final class DisplayModeManagerContainer173
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eca.A(" + (class323 != null ? "{...}" : "null") + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + (class42 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eca.A(" + (class323 != null ? "{...}" : "null") + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + (class42 != null ? "{...}" : "null") + ')'));
         }
     }
 

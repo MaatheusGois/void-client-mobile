@@ -55,23 +55,24 @@ final class DisplayModeManagerContainer368
                 GlToolkitSub2.method3743((byte) 6, class348_sub42_sub12);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hc.B(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool_1_ + ',' + i_2_ + ',' + i_3_ + ',' + bool_4_ + ',' + i_5_ + ',' + l + ',' + (string_6_ != null ? "{...}" : "null") + ',' + l_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hc.B(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool_1_ + ',' + i_2_ + ',' + i_3_ + ',' + bool_4_ + ',' + i_5_ + ',' + l + ',' + (string_6_ != null ? "{...}" : "null") + ',' + l_7_ + ',' + i_8_ + ')'));
         }
     }
 
     static final void method467(int i, int i_9_, int i_10_) {
         if (i_9_ == -18075) {
             anInt5248++;
-            RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, 1);
+            RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 1);
             class348_sub42_sub15.method3246(-25490);
             class348_sub42_sub15.anInt9652 = i_10_;
         }
     }
 
-    static final boolean method468(String string, int i) {
+    /** {@link RadixParser#isValidNumber} with radix 10. */
+    static final boolean isDecimal(String string, int i) {
         int i_11_ = -91 % ((-35 - i) / 52);
         anInt5239++;
-        return RadixParser.method1332(true, true, 10, string);
+        return RadixParser.isValidNumber(true, true, 10, string);
     }
 
     final void method457(int i, int i_12_, int i_13_) {
@@ -115,7 +116,7 @@ final class DisplayModeManagerContainer368
         anInt5253++;
         if (is == null) return null;
         short[] is_34_ = new short[is.length];
-        Component313.method1576(is, 0, is_34_, 0, is.length);
+        Component313.arraycopyShorts(is, 0, is_34_, 0, is.length);
         if (i >= -103) method470(null, (byte) -35);
         return is_34_;
     }

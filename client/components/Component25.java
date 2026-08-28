@@ -45,7 +45,7 @@ final class Component25
             stringbuffer.setCharAt(0, Character.toUpperCase(stringbuffer.charAt(0)));
             return stringbuffer.toString();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "sba.F(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "sba.F(" + i + ',' + l + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class Component25
                 player.anIntArray10236 = is;
                 player.anInt10218 = i_8_;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("sba.E(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_8_ + ',' + (player != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("sba.E(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_8_ + ',' + (player != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -149,6 +149,6 @@ final class Component25
         int i_20_ = LogicError.method831(Component22.anInt1745, i_14_, Component27.anInt4960, 59);
         int i_21_ = -27 / ((i_15_ - -6) / 55);
         for (int i_22_ = i_17_; i_22_ <= i_18_; i_22_++)
-            MenuOpener.method1156(-27, i_20_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_19_, i_16_);
+            MenuOpener.fillInts(-27, i_20_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_19_, i_16_);
     }
 }

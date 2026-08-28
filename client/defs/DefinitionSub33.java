@@ -32,11 +32,11 @@ final class DefinitionSub33
         int i_1_ = 93 % ((-58 - i) / 55);
     }
 
-    final int[][] method3047(int i, int i_2_) {
+    final int[][] getColourOutput(int i, int i_2_) {
         anInt9429++;
-        int[][] is = this.aClass322_7033.method2557(-97, i);
+        int[][] is = this.imageCacheStore.getPixels(-97, i);
         if (i_2_ != -1564599039) aClass46ArrayArray9427 = null;
-        if (this.aClass322_7033.aBoolean4035) {
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_3_ = is[0];
             int[] is_4_ = is[1];
             int[] is_5_ = is[2];
@@ -51,11 +51,11 @@ final class DefinitionSub33
         return is;
     }
 
-    final int[] method3042(int i, int i_8_) {
+    final int[] getMonochromeOutput(int i, int i_8_) {
         anInt9428++;
         if (i_8_ != 255) aClass46ArrayArray9427 = null;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             for (int i_9_ = 0; (i_9_ < DefinitionSub6.anInt9139); i_9_++) {
                 method3139(i_9_, i, (byte) -31);
                 int[] is_10_ = this.method3048(AbstractBuffer.anInt4265, i_8_ ^ 0x25c5979e, 0);
@@ -68,7 +68,7 @@ final class DefinitionSub33
     final void method3049(Buffer class348_sub49, int i, int i_11_) {
         if (i_11_ != 31015) aClass46ArrayArray9427 = null;
         anInt9430++;
-        if (i == 0) this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+        if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
     }
 
     public DefinitionSub33() {

@@ -3,8 +3,10 @@
  */
 
 /**
- * RENAMED from `Class334` (JODE-obfuscated).
- * Native library loader. Loads platform native libraries (.dylib on macOS, .so on linux) for the toolkit.
+ * RENAMED from {@code Class334} (JODE-obfuscated).
+ * Grab-bag of small helpers that ended up in one deob class: platform native-lib
+ * file-name mapping, HSL colour lerp, digit/client-state predicates, plus a
+ * 6-int parameter blob (defaults 128) used by sprite/minimap scale paths.
  */
 
 final class NativeLibLoader {
@@ -19,21 +21,25 @@ final class NativeLibLoader {
     static int anInt4159;
     static int anInt4160;
     static int anInt4161;
+    /** Default scale component (often width); starts at 128. */
     int anInt4162 = 128;
     static int anInt4163;
     static int anInt4164;
+    /** Default scale component (often height); starts at 128. */
     int anInt4165 = 128;
 
-    static final boolean method2647(boolean bool, char c) {
+    /** True when {@code c} is an ASCII decimal digit. */
+    static final boolean isDigit(boolean bool, char c) {
         anInt4161++;
-        if (bool != true) method2653(true, 83);
+        if (bool != true) isPostLoginState(true, 83);
         return c >= '0' && c <= '9';
     }
 
-    final void method2648(NativeLibLoader class334_0_, byte i) {
+    /** Copies the six int parameters from {@code class334_0_} into this. */
+    final void copyFrom(NativeLibLoader class334_0_, byte i) {
         this.anInt4158 = class334_0_.anInt4158;
         this.anInt4151 = class334_0_.anInt4151;
-        if (i != 118) method2647(true, '\uffe5');
+        if (i != 118) isDigit(true, '\uffe5');
         anInt4159++;
         this.anInt4156 = class334_0_.anInt4156;
         this.anInt4165 = class334_0_.anInt4165;
@@ -41,8 +47,9 @@ final class NativeLibLoader {
         this.anInt4162 = class334_0_.anInt4162;
     }
 
-    final NativeLibLoader method2649(int i) {
-        if (i != 2) method2648(null, (byte) -10);
+    /** Returns a new instance with the same six int parameters. */
+    final NativeLibLoader copy(int i) {
+        if (i != 2) copyFrom(null, (byte) -10);
         anInt4163++;
         return new NativeLibLoader(this.anInt4156, this.anInt4165, this.anInt4162, this.anInt4158, this.anInt4154, this.anInt4151);
     }
@@ -71,11 +78,15 @@ final class NativeLibLoader {
                     class324.method2584(null, 0, 0, null, i, 0, 50, var_aa, (-i_4_ + (i_3_ + (class46.anInt789 / 2 + (-i_13_ - i_15_)))), i_2_, i_3_, i_14_, (class46.anInt709 / 2 + (i_2_ + i_12_)), false, 1, string);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dk.H(" + (class143 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class324 != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dk.H(" + (class143 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class324 != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ')'));
         }
     }
 
-    static final String method2651(String string, int i) {
+    /**
+     * Maps a bare library stem (e.g. {@code jaclib}) to the platform file name:
+     * {@code .dll} / {@code lib*.so} / {@code lib*.dylib}. Returns null if OS unknown.
+     */
+    static final String toNativeLibraryFileName(String string, int i) {
         if (i != 3) method2650(null, -94, null, 2, -110, null, -7, null, -71, null, -47, 104);
         anInt4160++;
         if (!ClientSystemInfo.aString6877.startsWith("win")) {
@@ -85,7 +96,11 @@ final class NativeLibLoader {
         return null;
     }
 
-    static final int method2652(int i, int i_16_, int i_17_, int i_18_) {
+    /**
+     * Linearly blends two packed HSL colours by weight {@code i_18_} in 0..128
+     * (channels: 7-bit L, 3-bit S, 6-bit H).
+     */
+    static final int mixHsl(int i, int i_16_, int i_17_, int i_18_) {
         anInt4157++;
         if (i == i_16_) return i;
         int i_19_ = 128 + -i_18_;
@@ -96,7 +111,8 @@ final class NativeLibLoader {
         return i_22_ & 0xfc00 | 0x380 & i_21_ | i_20_ & 0x7f;
     }
 
-    static final boolean method2653(boolean bool, int i) {
+    /** True for client states 10/11/12 (lobby / world / post-login variants). */
+    static final boolean isPostLoginState(boolean bool, int i) {
         if (bool != true) anIntArray4152 = null;
         anInt4164++;
         return i == 10 || i == 11 || i == 12;

@@ -41,7 +41,7 @@ final class Component283
         anInt4620++;
         HashNode class348_sub42 = aClass308_4622.method2302(i, (byte) -34);
         if (class348_sub42 != null) return (DefinitionGroup) class348_sub42;
-        byte[] is = aClass45_4619.method415((byte) 73, i);
+        byte[] is = aClass45_4619.getSingletonFile((byte) 73, i);
         if (is == null) return null;
         if (bool != false) method1(-58, 1.9039171F, false, -106, -22, -18);
         DefinitionGroup class348_sub42_sub5 = new DefinitionGroup(new Buffer(is));
@@ -84,7 +84,7 @@ final class Component283
         try {
             aClass45_4619 = class45_12_;
             aClass45_4624 = class45_13_;
-            Buffer class348_sub49 = new Buffer(class45.method410(-1860, 0, 0));
+            Buffer class348_sub49 = new Buffer(class45.getFile(-1860, 0, 0));
             anInt4625 = class348_sub49.readUnsignedShort(842397944);
             aClass12Array4611 = new Component319[anInt4625];
             for (int i = 0; anInt4625 > i; i++) {
@@ -148,7 +148,7 @@ final class Component283
                 if (aClass12Array4611[i] != null) aClass12Array4611[i].anInt200 = class348_sub49.readUnsignedByte(255);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tda.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_12_ != null ? "{...}" : "null") + ',' + (class45_13_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tda.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_12_ != null ? "{...}" : "null") + ',' + (class45_13_ != null ? "{...}" : "null") + ')'));
         }
     }
 

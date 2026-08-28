@@ -15,11 +15,11 @@ final class DefinitionSub27
     static int anInt9359;
     static int anInt9360;
 
-    final int[][] method3047(int i, int i_0_) {
+    final int[][] getColourOutput(int i, int i_0_) {
         if (i_0_ != -1564599039) return null;
         anInt9356++;
-        int[][] is = this.aClass322_7033.method2557(-90, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-90, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[] is_1_ = this.method3048(i, i_0_ + -2096661920, 2);
             int[][] is_2_ = this.method3039((byte) -74, i, 0);
             int[][] is_3_ = this.method3039((byte) -58, i, 1);
@@ -53,11 +53,11 @@ final class DefinitionSub27
         return is;
     }
 
-    final int[] method3042(int i, int i_16_) {
+    final int[] getMonochromeOutput(int i, int i_16_) {
         if (i_16_ != 255) return null;
         anInt9359++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int[] is_17_ = this.method3048(i, i_16_ ^ 0x25c5979e, 0);
             int[] is_18_ = this.method3048(i, 633706337, 1);
             int[] is_19_ = this.method3048(i, i_16_ + 633706082, 2);
@@ -84,6 +84,6 @@ final class DefinitionSub27
     final void method3049(Buffer class348_sub49, int i, int i_22_) {
         anInt9358++;
         if (i_22_ != 31015) anInt9360 = -16;
-        if (i == 0) this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+        if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
     }
 }

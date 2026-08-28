@@ -31,19 +31,19 @@ final class ShaderProgramSub7
             if (string.startsWith("*")) string = string.substring(1);
             String string_0_ = DebugPanicSub1.method2127(2, string);
             if (string_0_ != null) {
-                for (int i = 0; (DefinitionSub30.anInt9383 > i); i++) {
-                    String string_1_ = Component178.aStringArray1441[i];
+                for (int i = 0; (DefinitionSub30.friendCount > i); i++) {
+                    String string_1_ = Component178.friendNames[i];
                     if (string_1_.startsWith("*")) string_1_ = string_1_.substring(1);
                     string_1_ = DebugPanicSub1.method2127(2, string_1_);
                     if (string_1_ != null && string_1_.equals(string_0_)) {
-                        DefinitionSub30.anInt9383--;
-                        for (int i_2_ = i; i_2_ < DefinitionSub30.anInt9383; i_2_++) {
-                            Component178.aStringArray1441[i_2_] = Component178.aStringArray1441[i_2_ - -1];
-                            ShaderProgramSub2.aStringArray6205[i_2_] = ShaderProgramSub2.aStringArray6205[1 + i_2_];
-                            GraphicsToolkit.anIntArray4578[i_2_] = GraphicsToolkit.anIntArray4578[i_2_ - -1];
-                            DebugPanic.aStringArray4744[i_2_] = DebugPanic.aStringArray4744[1 + i_2_];
-                            Component16.anIntArray2280[i_2_] = Component16.anIntArray2280[i_2_ - -1];
-                            DisplayModeManagerContainer145.aBooleanArray1806[i_2_] = DisplayModeManagerContainer145.aBooleanArray1806[1 + i_2_];
+                        DefinitionSub30.friendCount--;
+                        for (int i_2_ = i; i_2_ < DefinitionSub30.friendCount; i_2_++) {
+                            Component178.friendNames[i_2_] = Component178.friendNames[i_2_ - -1];
+                            ShaderProgramSub2.friendFormerNames[i_2_] = ShaderProgramSub2.friendFormerNames[1 + i_2_];
+                            GraphicsToolkit.friendWorldIds[i_2_] = GraphicsToolkit.friendWorldIds[i_2_ - -1];
+                            DebugPanic.friendWorldNames[i_2_] = DebugPanic.friendWorldNames[1 + i_2_];
+                            Component16.friendRanks[i_2_] = Component16.friendRanks[i_2_ - -1];
+                            DisplayModeManagerContainer145.friendReferred[i_2_] = DisplayModeManagerContainer145.friendReferred[1 + i_2_];
                         }
                         Component380.anInt4985 = ResourceLoader.anInt3918;
                         HashNodeSub7.anInt9540++;
@@ -101,7 +101,7 @@ final class ShaderProgramSub7
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }
         anInt6286++;
-        aClass61_6284.method594('\0', 28666);
+        aClass61_6284.callDisplayList('\0', 28666);
         OpenGL.glMatrixMode(5890);
         OpenGL.glPushMatrix();
         if (bool_6_ == false) {
@@ -120,7 +120,7 @@ final class ShaderProgramSub7
     private final void method2167(int i) {
         aClass61_6284 = new Component128(this.aHa_Sub2_3684, 2);
         anInt6283++;
-        aClass61_6284.method595((byte) 109, 0);
+        aClass61_6284.beginDisplayList((byte) 109, 0);
         this.aHa_Sub2_3684.method3738(i + 6366, 1);
         this.aHa_Sub2_3684.method3729(7681, (byte) 98, 260);
         this.aHa_Sub2_3684.method3762(34168, 768, (byte) -87, 0);
@@ -135,8 +135,8 @@ final class ShaderProgramSub7
             OpenGL.glEnable(3170);
             OpenGL.glEnable(3171);
         }
-        aClass61_6284.method591(-1);
-        aClass61_6284.method595((byte) 117, 1);
+        aClass61_6284.endDisplayList(-1);
+        aClass61_6284.beginDisplayList((byte) 117, 1);
         this.aHa_Sub2_3684.method3738(-15039, 1);
         if (i != -21405) method2137(-18);
         this.aHa_Sub2_3684.method3729(8448, (byte) -115, 8448);
@@ -148,7 +148,7 @@ final class ShaderProgramSub7
             OpenGL.glDisable(3170);
             OpenGL.glDisable(3171);
         }
-        aClass61_6284.method591(i + 21404);
+        aClass61_6284.endDisplayList(i + 21404);
     }
 
     ShaderProgramSub7(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
@@ -159,7 +159,7 @@ final class ShaderProgramSub7
             aClass258_Sub4_6285 = new AbstractGlTextureSub4(this.aHa_Sub2_3684, 6406, 2, new byte[]{0, -1}, 6406);
             aClass258_Sub4_6285.method1972((byte) -91, false);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tn.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tn.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -180,7 +180,7 @@ final class ShaderProgramSub7
     }
 
     final void method2133(int i) {
-        aClass61_6284.method594('\001', 28666);
+        aClass61_6284.callDisplayList('\001', 28666);
         anInt6282++;
         if (this.aHa_Sub2_3684.anInt7782 > 0) {
             this.aHa_Sub2_3684.method3738(-15039, 1);

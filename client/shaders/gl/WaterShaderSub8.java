@@ -19,13 +19,15 @@ final class WaterShaderSub8
     static int anInt7358;
     static int anInt7359;
     static int anInt7360;
-    static NamedInteger aClass364_7361 = new NamedInteger("WTRC", 1);
+    /** World-test RC channel. */
+    static NamedInteger WTRC = new NamedInteger("WTRC", 1);
     static CacheStore aClass45_7362;
     static Component183 aClass114_7363;
     static int anInt7364;
     static int anInt7365 = 0;
 
-    static final String method3546(byte[] is, int i, int i_0_, int i_1_) {
+    /** Decode {@code is[i_1_ .. i_1_+i_0_)} as CP1252 ({@link Component352#cp1252HighChars}). */
+    static final String decodeCp1252(byte[] is, int i, int i_0_, int i_1_) {
         anInt7349++;
         char[] cs = new char[i_0_];
         int i_2_ = 0;
@@ -33,7 +35,7 @@ final class WaterShaderSub8
             int i_4_ = 0xff & is[i_3_ + i_1_];
             if (i_4_ != 0) {
                 if (i_4_ >= 128 && i_4_ < 160) {
-                    int i_5_ = Component352.aCharArray625[i_4_ - 128];
+                    int i_5_ = Component352.cp1252HighChars[i_4_ - 128];
                     if (i_5_ == 0) i_5_ = 63;
                     i_4_ = i_5_;
                 }
@@ -91,7 +93,7 @@ final class WaterShaderSub8
             }
             anInt7359++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kl.E(" + i + ',' + (npc != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kl.E(" + i + ',' + (npc != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -113,7 +115,7 @@ final class WaterShaderSub8
         try {
             aClass269_7353 = class269;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kl.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kl.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -153,7 +155,7 @@ final class WaterShaderSub8
         aClass114_7363 = null;
         aClass45_7362 = null;
         int i_20_ = -90 % ((-54 - i) / 60);
-        aClass364_7361 = null;
+        WTRC = null;
     }
 
     final void method3532(int i) {

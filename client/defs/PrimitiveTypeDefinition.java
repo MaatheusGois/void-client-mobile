@@ -62,9 +62,9 @@ final class PrimitiveTypeDefinition
                 return;
             } while (false);
             int i_2_ = class348_sub49.readMedium(-1);
-            anIntArray9086[2] = GpsOverlay.method1166(0, i_2_ >> 12);
-            anIntArray9086[1] = GpsOverlay.method1166(i_2_, 65280) >> 4;
-            anIntArray9086[0] = GpsOverlay.method1166(i_2_ << 4, 267386880);
+            anIntArray9086[2] = GpsOverlay.bitwiseAnd(0, i_2_ >> 12);
+            anIntArray9086[1] = GpsOverlay.bitwiseAnd(i_2_, 65280) >> 4;
+            anIntArray9086[0] = GpsOverlay.bitwiseAnd(i_2_ << 4, 267386880);
         } while (false);
     }
 
@@ -80,11 +80,11 @@ final class PrimitiveTypeDefinition
         return (~i_4_) & i;
     }
 
-    final int[][] method3047(int i, int i_5_) {
+    final int[][] getColourOutput(int i, int i_5_) {
         if (i_5_ != -1564599039) anInt9091 = 64;
         anInt9093++;
-        int[][] is = this.aClass322_7033.method2557(-127, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-127, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[][] is_6_ = this.method3039((byte) 62, i, 0);
             int[] is_7_ = is_6_[0];
             int[] is_8_ = is_6_[1];

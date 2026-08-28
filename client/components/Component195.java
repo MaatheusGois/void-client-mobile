@@ -35,7 +35,7 @@ final class Component195
 
     static final void method1448(int i) {
         anInt5003++;
-        if (i <= -55) ImageDefinition.aMenuEntry_9144 = new MenuEntry((FriendsIgnoreList.aClass274_3487.method2063(ObjectDeserializer.anInt6967, 544)), "", Component149.anInt4458, 1004, -1, 0L, 0, 0, true, false, 0L, true);
+        if (i <= -55) ImageDefinition.aMenuEntry_9144 = new MenuEntry((FriendsIgnoreList.aClass274_3487.getLocalized(ObjectDeserializer.languageId, 544)), "", Component149.anInt4458, 1004, -1, 0L, 0, 0, true, false, 0L, true);
     }
 
     public final void method57(int i) {
@@ -88,7 +88,7 @@ final class Component195
             if (i < 30) method1449(-81, 10, -115);
             return l - -(long) aClass287_5006.anInt3690 <= Component240.currentTimeMillis(-97);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "qt.I(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "qt.I(" + i + ',' + l + ')');
         }
     }
 
@@ -97,9 +97,9 @@ final class Component195
             aClass287_5006 = class287;
             anInterface1Array5012 = new Interface1[(aClass287_5006.anInterface12Array3688).length];
             for (int i = 0; (i < anInterface1Array5012.length); i++)
-                anInterface1Array5012[i] = class106.method1000(true, (aClass287_5006.anInterface12Array3688[i]));
+                anInterface1Array5012[i] = class106.createProvider(true, (aClass287_5006.anInterface12Array3688[i]));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qt.<init>(" + (class287 != null ? "{...}" : "null") + ',' + (class106 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qt.<init>(" + (class287 != null ? "{...}" : "null") + ',' + (class106 != null ? "{...}" : "null") + ')'));
         }
     }
 

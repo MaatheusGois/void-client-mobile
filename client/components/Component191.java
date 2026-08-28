@@ -86,7 +86,7 @@ final class Component191
         if (class22 != null) return class22;
         byte[] is;
         synchronized (aClass45_2461) {
-            is = aClass45_2461.method410(-1860, 1, i);
+            is = aClass45_2461.getFile(-1860, 1, i);
         }
         class22 = new Component231();
         if (is != null) class22.method290(new Buffer(is), -1);
@@ -127,12 +127,12 @@ final class Component191
         if (i != 32841) anInt2464 = 86;
     }
 
-    Component191(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component191(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_2461 = class45;
-            aClass45_2461.method407(0, 1);
+            aClass45_2461.getFileCount(0, 1);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qe.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qe.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

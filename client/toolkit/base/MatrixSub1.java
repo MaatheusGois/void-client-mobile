@@ -15,7 +15,8 @@ final class MatrixSub1
     static int anInt5660;
     static int anInt5661;
     float aFloat5662;
-    static long aLong5663;
+    /** Last {@link System#currentTimeMillis()} seen by {@link Component240#currentTimeMillis}. */
+    static long lastWallClockMillis;
     float aFloat5664;
     static int anInt5665;
     float aFloat5666;

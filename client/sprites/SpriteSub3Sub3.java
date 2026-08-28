@@ -1608,7 +1608,7 @@ final class SpriteSub3Sub3
         }
     }
 
-    final void method968(int i, int i_593_, int i_594_) {
+    final void capturePixels(int i, int i_593_, int i_594_) {
         if (i_594_ == 0) {
             int[] is = (this.aHa_Sub1_8460.anIntArray7483);
             for (int i_595_ = 0; i_595_ < this.anInt8470; i_595_++) {

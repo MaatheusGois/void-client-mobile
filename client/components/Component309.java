@@ -47,7 +47,7 @@ final class Component309
         if (class51 != null) return class51;
         byte[] is;
         synchronized (aClass45_3343) {
-            is = aClass45_3343.method410(i + -1860, Component284.method1850(i_0_, 111), Component364.method185(i_0_, (byte) -90));
+            is = aClass45_3343.getFile(i + -1860, Component284.method1850(i_0_, 111), Component364.method185(i_0_, (byte) -90));
         }
         class51 = new Component44();
         class51.anInt941 = i_0_;
@@ -336,7 +336,7 @@ final class Component309
         if (bool != true) this.aClass60_3362 = null;
     }
 
-    Component309(DisplayModeManagerContainer124 class230, int i, boolean bool, CacheStore class45, CacheStore class45_29_) {
+    Component309(GameType class230, int i, boolean bool, CacheStore class45, CacheStore class45_29_) {
         aClass60_3350 = new NodeCache(64);
         this.aClass60_3360 = new NodeCache(500);
         this.aClass60_3361 = new NodeCache(30);
@@ -347,10 +347,10 @@ final class Component309
                 this.aClass45_3345 = class45_29_;
                 aClass45_3343 = class45;
                 if (aClass45_3343 == null) break;
-                int i_30_ = aClass45_3343.method414(-1) + -1;
-                aClass45_3343.method407(0, i_30_);
+                int i_30_ = aClass45_3343.getGroupCapacity(-1) + -1;
+                aClass45_3343.getFileCount(0, i_30_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uha.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_29_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uha.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_29_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

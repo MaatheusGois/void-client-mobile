@@ -7,7 +7,8 @@ final class DisplayModeManagerContainer167
  * RENAMED from `Class17` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static int anInt235;
+    /** JS5 group id for bitmap font archive {@code p12_full}. */
+    static int p12FullGroupId;
     int[] anIntArray236;
     int[] anIntArray237;
     int anInt238;
@@ -150,7 +151,7 @@ final class DisplayModeManagerContainer167
                                                 for (int i_24_ = 0; ((this.anIntArrayArray264).length > i_24_); i_24_++)
                                                     this.anIntArray253[i_24_] = 255;
                                             }
-                                            this.anIntArray253[class348_sub49.readUnsignedByte(255)] = (class348_sub49.readUnsignedByte(NodeSub21.method2955(i_10_, -15092)));
+                                            this.anIntArray253[class348_sub49.readUnsignedByte(255)] = (class348_sub49.readUnsignedByte(NodeSub21.bitwiseXor(i_10_, -15092)));
                                         } else if (i == 20) {
                                             if ((this.anIntArray236 == null) || (this.anIntArray265) == null) {
                                                 this.anIntArray236 = (new int[(this.anIntArrayArray264).length]);

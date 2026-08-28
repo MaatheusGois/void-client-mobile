@@ -19,11 +19,11 @@ final class DefinitionSub24
     private int[] anIntArray9333;
     private int anInt9334 = 2048;
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         if (i_0_ != 255) anIntArray9333 = null;
         anInt9328++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_1_ = Component302.anIntArray6035[i];
             if (anInt9325 == 0) {
                 int i_7_ = 0;
@@ -68,7 +68,7 @@ final class DefinitionSub24
         return is;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i < 108) method3049(null, -68, -1);
         anInt9330++;
         method3116((byte) -111);

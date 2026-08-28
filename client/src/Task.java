@@ -3,16 +3,25 @@
  */
 
 /**
- * RENAMED from `Class144` (JODE-obfuscated).
- * Async task / result holder. Holds a volatile result (result) and state (anInt1997), plus a next pointer (aClass144_1995) for linked lists of pending tasks. Produced by reflection-based loaders.
+ * RENAMED from {@code Class144} (JODE-obfuscated).
+ * Async work item for {@link ReflectionInvoker}.
+ * {@link #status}: 0=pending, 1=ok, 2=error. {@link #opcode} selects the worker action;
+ * {@link #argument}/{@link #intArg0}/{@link #intArg1} are payload; {@link #result} is the outcome.
  */
 
 public class Task {
-    int anInt1994;
-    Task aClass144_1995;
-    Object anObject1996;
-    public volatile int anInt1997 = 0;
+    /** Worker opcode (1=socket, 2=thread, 4=URL, 8=getMethod, …). */
+    int opcode;
+    /** Next queued task. */
+    Task next;
+    /** Primary argument (host, Runnable, URL, Object[], …). */
+    Object argument;
+    /** 0=pending, 1=success, 2=failure. */
+    public volatile int status = 0;
+    /** Result object, or error message on failure. */
     public volatile Object result;
-    int anInt1999;
-    public int anInt2000;
+    /** Packed secondary ints (e.g. display mode bits). */
+    int intArg0;
+    /** Packed tertiary ints (e.g. port, thread priority). */
+    public int intArg1;
 }

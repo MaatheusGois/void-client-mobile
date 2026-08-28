@@ -64,7 +64,7 @@ final class ColoredText extends Component339 {
 
     final int method1714(int i, int i_3_) {
         anInt6092++;
-        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.aClass230_186) {
+        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) {
             if (this.aClass348_Sub51_3136.method3425(i + -70)) return 3;
             if (i_3_ == 0 || this.aClass348_Sub51_3136.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
             return 2;
@@ -145,7 +145,7 @@ final class ColoredText extends Component339 {
                 }
                 if (i_13_ != -1 && i_14_ != -1) {
                     if (!r.aBoolean9722 || (0x40 & PauseTimer.anInt500) == 0) {
-                        if (DisplayModeManagerContainer145.aBoolean1801) DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -109, true, i_13_, -1, true, 12, i_14_ | i_13_ << 0, (FriendsIgnoreList.aClass274_3510.method2063(ObjectDeserializer.anInt6967, 544)), 0L, -1);
+                        if (DisplayModeManagerContainer145.aBoolean1801) DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -109, true, i_13_, -1, true, 12, i_14_ | i_13_ << 0, (FriendsIgnoreList.aClass274_3510.getLocalized(ObjectDeserializer.languageId, 544)), 0L, -1);
                         Component48.anInt4334++;
                         DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Component323.aString5882, 0L, Component79.anInt4144);
                     } else {
@@ -292,8 +292,8 @@ final class ColoredText extends Component339 {
                                         }
                                     }
                                     ObjectDeserializer.anInt6956++;
-                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.aString2795) + Loader.getDebug(class213.anInt2769), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544)), class348_sub34.anInt6973, CookieManager.anInt6299);
-                                    class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method2003(-127));
+                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.aString2795) + Loader.getDebug(class213.anInt2769), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544)), class348_sub34.anInt6973, CookieManager.anInt6299);
+                                    class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.previous(-127));
                                     i_57_++;
                                 }
                             }
@@ -335,7 +335,7 @@ final class ColoredText extends Component339 {
                                     }
                                     int x = i_33_ + NodeBaseSub2.regionTileX;
                                     int y = i_32_ + Component330.regionTileY;
-                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544)), class51.anInt941, CookieManager.anInt6299);
+                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544)), class51.anInt941, CookieManager.anInt6299);
                                     anInt6094++;
                                     DefaultClickSwapper.injectObjectMenu(class51);
                                 }
@@ -350,7 +350,7 @@ final class ColoredText extends Component339 {
     }
 
     final void method1716(boolean bool) {
-        if (this.aClass348_Sub51_3136.method3422(674) != RunescapeInfo.aClass230_186) this.anInt3138 = 1;
+        if (this.aClass348_Sub51_3136.method3422(674) != RunescapeInfo.RUNESCAPE) this.anInt3138 = 1;
         else if (this.aClass348_Sub51_3136.method3425(-95)) this.anInt3138 = 0;
         anInt6090++;
         if (this.anInt3138 != 0 && this.anInt3138 != 1) this.anInt3138 = method1710(20014);
@@ -360,7 +360,7 @@ final class ColoredText extends Component339 {
     final boolean method1824(int i) {
         anInt6087++;
         if (i < 85) method1823(null, 104, -95, (byte) 26);
-        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.aClass230_186) {
+        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) {
             return !this.aClass348_Sub51_3136.method3425(-96);
         }
         return false;

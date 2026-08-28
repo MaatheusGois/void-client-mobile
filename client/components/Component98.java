@@ -56,7 +56,7 @@ final class Component98
         }
         NodeSub8.toolkit.la();
         HashNodeSub20.method3281((byte) 77, NodeSub8.toolkit);
-        int i_7_ = DisplayModeManagerContainer67.method1053(3112);
+        int i_7_ = DisplayModeManagerContainer67.getHoveredMenuPriority(3112);
         if (i_7_ == -1) i_7_ = Component149.anInt4458;
         if (i_7_ == -1) i_7_ = HashNodeSub16Sub1.anInt10447;
         Component373.method338(0, i_7_);
@@ -123,7 +123,7 @@ final class Component98
     static final Component184 method1766(byte i, int i_16_, CacheStore class45) {
         anInt5944++;
         if (i >= -24) return null;
-        byte[] is = class45.method415((byte) 73, i_16_);
+        byte[] is = class45.getSingletonFile((byte) 73, i_16_);
         if (is == null) return null;
         return new Component184(is);
     }

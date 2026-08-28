@@ -102,7 +102,7 @@ final class DisplayModeManagerContainer174
             anInt10415++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("to.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("to.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -138,7 +138,7 @@ final class DisplayModeManagerContainer174
                 if (i == -2393) break;
                 finalize();
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("to.L(" + (class101 != null ? "{...}" : "null") + ',' + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("to.L(" + (class101 != null ? "{...}" : "null") + ',' + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
             }
             break;
         } while (false);
@@ -335,7 +335,7 @@ final class DisplayModeManagerContainer174
             HashNodeSub3.anInt9501 = ResourceLoader.anInt3918;
             if (i <= -109) NodeBaseSub1.anInt9774++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("to.K(" + (string != null ? "{...}" : "null") + ',' + (string_37_ != null ? "{...}" : "null") + ',' + i + ',' + i_38_ + ',' + (string_39_ != null ? "{...}" : "null") + ',' + (string_40_ != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + (string_43_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("to.K(" + (string != null ? "{...}" : "null") + ',' + (string_37_ != null ? "{...}" : "null") + ',' + i + ',' + i_38_ + ',' + (string_39_ != null ? "{...}" : "null") + ',' + (string_40_ != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + (string_43_ != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -40,11 +40,11 @@ final class Component377
                 int[] is = Cp1252Decoder.method463(class348_sub47, false);
                 int i_4_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_1_);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Connection.anInt2670);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Connection.affiliateId);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeLong(Component283.aLong4615, (byte) 104);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, ObjectDeserializer.anInt6967);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, (PacketReader.aClass230_10434.anInt2987));
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, ObjectDeserializer.languageId);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, (PacketReader.currentGameType.id));
                 BufferCacheSub2.method4002((class348_sub47.aClass348_Sub49_Sub2_7116), (byte) 55);
                 String string_5_ = Component19.aString8605;
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string_5_ == null ? 0 : 1);
@@ -63,7 +63,7 @@ final class Component377
                 Component301.aBoolean4127 = true;
                 CookieManager.method2172(60);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("iq.D(" + (string != null ? "{...}" : "null") + ',' + (string_1_ != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + bool_2_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("iq.D(" + (string != null ? "{...}" : "null") + ',' + (string_1_ != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + bool_2_ + ')'));
             }
             break;
         } while (false);
@@ -72,7 +72,7 @@ final class Component377
     static final int method450(int i, String string, int i_6_) {
         if (i != -20188) return 88;
         anInt850++;
-        return RadixText.method1836(-123, i_6_, true, string);
+        return RadixText.parseIntRadix(-123, i_6_, true, string);
     }
 
     final void method451(Component377 class48_7_, byte i) {

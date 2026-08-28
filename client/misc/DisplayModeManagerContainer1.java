@@ -13,16 +13,19 @@ final class DisplayModeManagerContainer1
     static int anInt3316;
     static int anInt3317;
     static int anInt3318;
-    private final CacheStore aClass45_3319;
+    private final CacheStore cacheStore;
     static int anInt3320;
-    private final NodeCache aClass60_3321 = new NodeCache(64);
+    private final NodeCache cache = new NodeCache(64);
     static int anInt3322;
 
-    public static void method1980(int i) {
+    public static void clearStatics(int i) {
         if (i > 92) aClass113_3314 = null;
     }
 
-    static final String method1981(String string, byte i, char c, String string_0_) {
+    /**
+     * Replace every occurrence of {@code c} in {@code string} with {@code string_0_}.
+     */
+    static final String replaceChar(String string, byte i, char c, String string_0_) {
         try {
             anInt3322++;
             int i_1_ = string.length();
@@ -51,11 +54,12 @@ final class DisplayModeManagerContainer1
             stringbuffer.append(string.substring(i_6_));
             return stringbuffer.toString();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uga.H(" + (string != null ? "{...}" : "null") + ',' + i + ',' + c + ',' + (string_0_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uga.H(" + (string != null ? "{...}" : "null") + ',' + i + ',' + c + ',' + (string_0_ != null ? "{...}" : "null") + ')'));
         }
     }
 
-    static final void method1982(int i, int i_8_, String string) {
+    /** Send a length-prefixed string packet (script/chat helper). */
+    static final void sendStringPacket(int i, int i_8_, String string) {
         MenuEntry.anInt9594++;
         anInt3318++;
         ParticleSystem class348_sub47 = ParticleShader.method2148(Component208.aClass351_1766, DisplayModeManagerContainer64.aClass77_9029, i + -107);
@@ -67,49 +71,51 @@ final class DisplayModeManagerContainer1
         }
     }
 
-    final Component241 method1983(int i, int i_9_) {
+    /** Load {@link Component241} id {@code i} from the cache (cached in {@link #cache}). */
+    final Component241 get(int i, int i_9_) {
         anInt3320++;
         Component241 class225;
-        synchronized (aClass60_3321) {
-            class225 = (Component241) aClass60_3321.get(i, 69);
+        synchronized (cache) {
+            class225 = (Component241) cache.get(i, 69);
         }
         if (class225 != null) return class225;
         byte[] is;
-        synchronized (aClass45_3319) {
-            is = aClass45_3319.method410(-1860, i_9_, i);
+        synchronized (cacheStore) {
+            is = cacheStore.getFile(-1860, i_9_, i);
         }
         class225 = new Component241();
         if (is != null) class225.method1620(new Buffer(is), -108);
-        synchronized (aClass60_3321) {
-            aClass60_3321.putOne(class225, i, (byte) -109);
+        synchronized (cache) {
+            cache.putOne(class225, i, (byte) -109);
         }
         return class225;
     }
 
-    final void method1984(byte i, int i_10_) {
-        synchronized (aClass60_3321) {
-            aClass60_3321.processSoftEntries(2, i_10_);
+    final void processSoftEntries(byte i, int i_10_) {
+        synchronized (cache) {
+            cache.processSoftEntries(2, i_10_);
         }
         anInt3315++;
-        if (i < 36) method1980(-32);
+        if (i < 36) clearStatics(-32);
     }
 
-    final void method1985(int i) {
+    final void clearCache(int i) {
         anInt3317++;
-        synchronized (aClass60_3321) {
-            aClass60_3321.clear(i);
+        synchronized (cache) {
+            cache.clear(i);
         }
     }
 
-    final void method1986(byte i) {
-        synchronized (aClass60_3321) {
-            aClass60_3321.method587(-112);
+    final void removeSoft(byte i) {
+        synchronized (cache) {
+            cache.method587(-112);
         }
         int i_11_ = 119 / ((i - 47) / 55);
         anInt3316++;
     }
 
-    static final void method1987(int i) {
+    /** Rebuild {@link Component192#menuTip} / secondary tip from the current menu list. */
+    static final void updateMenuTip(int i) {
         int i_12_ = 81 % ((i - -70) / 35);
         anInt3313++;
         if (!Component364.aBoolean8335) PauseHandler.aBoolean9535 = ((Component9.anInt4143 != -1 && DisplayModeManagerContainer306.menuEntryCount >= Component9.anInt4143) || (PacketReader.anInt10432 < 16 * DisplayModeManagerContainer306.menuEntryCount - -(!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26)));
@@ -206,8 +212,8 @@ final class DisplayModeManagerContainer1
                 }
             }
             if (i_14_ == 0) {
-                int i_23_ = class348_sub45.method3308((byte) -128);
-                int i_24_ = class348_sub45.method3311(33);
+                int i_23_ = class348_sub45.getX((byte) -128);
+                int i_24_ = class348_sub45.getY(33);
                 if (Component359.aClass348_Sub42_Sub13_3152 != null && DisplayModeManagerContainer368.anInt5252 <= i_23_ && (NodeSub1Sub1.anInt8806 + DisplayModeManagerContainer368.anInt5252 >= i_23_) && i_24_ >= MouseHandler.menuOriginY && MouseHandler.menuOriginY + DisplayModeManagerContainer249.anInt4669 >= i_24_) {
                     int i_25_ = -1;
                     for (int i_26_ = 0; (Component359.aClass348_Sub42_Sub13_3152.anInt9615 > i_26_); i_26_++) {
@@ -290,7 +296,7 @@ final class DisplayModeManagerContainer1
         } else {
             if (i_14_ == 0 && ((Component203.anInt8770 == 1 && DisplayModeManagerContainer306.menuEntryCount > 2) || Component203.method2485(-100))) i_14_ = 2;
             if (i_14_ == 2 && DisplayModeManagerContainer306.menuEntryCount > 0 && class348_sub45 != null) {
-                if (Component156.aClass46_3701 == null && HashNode.anInt7059 == 0) DisplayModeManagerContainer42.method2291((byte) -124, class348_sub45.method3308((byte) -127), class348_sub45.method3311(-104));
+                if (Component156.aClass46_3701 == null && HashNode.anInt7059 == 0) DisplayModeManagerContainer42.method2291((byte) -124, class348_sub45.getX((byte) -127), class348_sub45.getY(-104));
                 else Component21.anInt3655 = 2;
             }
             if (i_14_ == 0) {
@@ -304,12 +310,12 @@ final class DisplayModeManagerContainer1
         }
     }
 
-    DisplayModeManagerContainer1(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    DisplayModeManagerContainer1(GameType class230, int i, CacheStore class45) {
         try {
-            aClass45_3319 = class45;
-            aClass45_3319.method407(0, 32);
+            cacheStore = class45;
+            cacheStore.getFileCount(0, 32);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("uga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("uga.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

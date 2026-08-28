@@ -26,7 +26,7 @@ final class Request extends Node {
 
     static final void method2999(byte i, int i_0_) {
         anInt6886++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_0_, (byte) 105, 7);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 7);
         if (i < 42) method2999((byte) 62, -64);
         class348_sub42_sub15.method3251(-16058);
     }

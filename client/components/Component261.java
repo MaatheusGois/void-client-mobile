@@ -19,7 +19,7 @@ final class Component261
         anInt4829++;
         if (i_0_ < 87) method1078(null, 22, -24);
         short[] is_1_ = new short[i];
-        Component313.method1576(is, 0, is_1_, 0, i);
+        Component313.arraycopyShorts(is, 0, is_1_, 0, i);
         return is_1_;
     }
 
@@ -63,7 +63,7 @@ final class Component261
         try {
             anInt4827 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wv.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wv.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ')'));
         }
     }
 }

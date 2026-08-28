@@ -57,7 +57,7 @@ final class Component212
                 if (aClass64_9993 == null || class318_sub1_sub1_sub2_3_.aClass64_9993 == null) break;
                 aClass64_9993.method613((class318_sub1_sub1_sub2_3_.aClass64_9993), i_2_, i, i_0_, bool);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uo.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uo.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
             }
             break;
         } while (false);
@@ -258,7 +258,7 @@ final class Component212
                 if (!aBoolean9989) break;
                 aClass64_9993 = aClass64_9993.method614((byte) 0, i_26_, false);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uo.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + i_24_ + ',' + bool_25_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uo.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + i_24_ + ',' + bool_25_ + ')'));
             }
             break;
         } while (false);

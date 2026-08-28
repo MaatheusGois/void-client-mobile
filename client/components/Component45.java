@@ -65,7 +65,7 @@ final class Component45
                     i_24_ += i_25_ >> 8 & 0xff;
                     i_23_ += 0xff & i_25_ >> 24;
                     i_22_ += (0xff943a & i_25_) >> 16;
-                    is_11_[i_12_++] = (Component224.method2057((Component224.method2057(GpsOverlay.method1166(i_24_ << 6, 65280), Component224.method2057((GpsOverlay.method1166(1020, i_22_) << 14), (GpsOverlay.method1166(i_23_, 1020) << 22)))), GpsOverlay.method1166(i_21_, 1020) >> 2));
+                    is_11_[i_12_++] = (Component224.bitwiseOr((Component224.bitwiseOr(GpsOverlay.bitwiseAnd(i_24_ << 6, 65280), Component224.bitwiseOr((GpsOverlay.bitwiseAnd(1020, i_22_) << 14), (GpsOverlay.bitwiseAnd(i_23_, 1020) << 22)))), GpsOverlay.bitwiseAnd(i_21_, 1020) >> 2));
                 }
                 i_13_ += i_3_;
                 i_14_ += i_3_;
@@ -115,7 +115,7 @@ final class Component45
                 if (i_27_ == 9455) break;
                 aClass60_4346 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("en.B(" + i + ',' + (objects != null ? "{...}" : "null") + ',' + i_26_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_27_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("en.B(" + i + ',' + (objects != null ? "{...}" : "null") + ',' + i_26_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_27_ + ')'));
             }
             break;
         } while (false);

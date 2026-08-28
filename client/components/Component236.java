@@ -84,7 +84,7 @@ final class Component236
                                 anIntArrayArray4002 = new int[i_13_][2];
                                 for (int i_14_ = 0; i_14_ < i_13_; i_14_++) {
                                     anIntArrayArray4002[i_14_][0] = class348_sub49.readUnsignedByte(255);
-                                    anIntArrayArray4002[i_14_][1] = (class348_sub49.readUnsignedByte(NodeSub21.method2955(i_0_, 203)));
+                                    anIntArrayArray4002[i_14_][1] = (class348_sub49.readUnsignedByte(NodeSub21.bitwiseXor(i_0_, 203)));
                                 }
                             } else if (i == 15) class348_sub49.readUnsignedShort(842397944);
                             else if (i == 17) this.anInt4000 = class348_sub49.readUnsignedShort(842397944);
@@ -115,7 +115,7 @@ final class Component236
                             } else if (i == 249) {
                                 int i_9_ = class348_sub49.readUnsignedByte(255);
                                 if (aClass356_4006 == null) {
-                                    int i_10_ = (Component373.method340(i_9_, (byte) 108));
+                                    int i_10_ = (Component373.nextPowerOfTwo(i_9_, (byte) 108));
                                     aClass356_4006 = new LruCache(i_10_);
                                 }
                                 for (int i_11_ = 0; i_9_ > i_11_; i_11_++) {

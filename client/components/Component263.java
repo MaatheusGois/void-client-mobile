@@ -51,7 +51,7 @@ final class Component263
         NodeList.aClass190ArrayArray3335 = new DisplayModeManagerContainer56[i][i_7_];
         if (i_6_ == 21719) {
             anInt1549++;
-            if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = DisplayModeManagerContainer124.method1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
+            if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = GameType.method1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
             FriendsIgnoreList.aClass190_3547 = new DisplayModeManagerContainer56();
             GlToolkitSub3.method3936(0);
         }
@@ -213,7 +213,7 @@ final class Component263
                 this.anInt1563 = i_29_ / 3;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class330 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + i_27_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (class330 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_24_ + ',' + i_25_ + ',' + i_26_ + ',' + i_27_ + ')'));
         }
     }
 }

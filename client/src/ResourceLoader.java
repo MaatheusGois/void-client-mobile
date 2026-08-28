@@ -31,14 +31,15 @@ final class ResourceLoader implements Runnable {
     private long aLong3917;
     static int anInt3918 = 1;
     private Interface16 anInterface16_3919 = null;
-    private int anInt3920;
+    /** Loading-render loop iterations ({@link #run}). */
+    private int pulseCount;
     private String aString3921;
 
     final int method2315(byte i) {
         anInt3909++;
         if (aClass56_3916 == null) return 0;
         if (i < 103) aLong3917 = -58L;
-        int i_0_ = aClass56_3916.method525(-118);
+        int i_0_ = aClass56_3916.getStageId(-118);
         if (aClass56_3916.isBlocking && (anInt3915 < aClass56_3916.currentProgress)) return 1 + anInt3915;
         if (i_0_ < 0 || -1 + ShaderCompilerSub2.aClass56Array6515.length <= i_0_) return 100;
         if (aClass56_3916.maxProgress == anInt3915) return aClass56_3916.currentProgress;
@@ -54,7 +55,7 @@ final class ResourceLoader implements Runnable {
             aLong3917 = l;
             aClass56_3916 = class56;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ae.J(" + (class56 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + l + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ae.J(" + (class56 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + l + ',' + bool + ')'));
         }
     }
 
@@ -63,7 +64,7 @@ final class ResourceLoader implements Runnable {
         while (!aBoolean3910) {
             long l = Component240.currentTimeMillis(-61);
             try {
-                anInt3920++;
+                pulseCount++;
                     if (anInterface16_3907 instanceof InterfaceRenderer) anInterface16_3907.method58(aBoolean3908, -104);
                     else {
                         long l_1_ = Component240.currentTimeMillis(-104);
@@ -99,7 +100,7 @@ final class ResourceLoader implements Runnable {
                         try {
                             if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.toolkit.method3689((byte) 57);
                         } catch (Exception_Sub1 exception_sub1) {
-                            ClientErrorReporter.method1242((exception_sub1.getMessage() + " (Recovered) " + DisplayModeManagerContainer206.aClient1367.method81((byte) 80)), exception_sub1, 15004);
+                            ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + DisplayModeManagerContainer206.aClient1367.method81((byte) 80)), exception_sub1, 15004);
                             SoftwareFallbackShader.method3553(true, (byte) 114, 0);
                         }
                     }
@@ -111,13 +112,13 @@ final class ResourceLoader implements Runnable {
                     container.getSize();
                     if (RSACipher.aFrame4904 == container) RSACipher.aFrame4904.getInsets();
                     aBoolean3908 = false;
-                    if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.method525(-112) < LoadingState.aClass56_1041.method525(-127))) OpenGlShader.method3556(false);
+                    if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.getStageId(-112) < LoadingState.aClass56_1041.getStageId(-127))) OpenGlShader.method3556(false);
             } catch (Exception exception) {
                 continue;
             }
             long l_3_ = Component240.currentTimeMillis(-73);
             int i = (int) (-l_3_ - -l + 20L);
-            if (i > 0) SpriteAtlasShader.method2161((byte) -3, i);
+            if (i > 0) SpriteAtlasShader.sleep((byte) -3, i);
         }
     }
 
@@ -172,10 +173,11 @@ final class ResourceLoader implements Runnable {
         return aClass56_3916;
     }
 
-    final int method2325(byte i) {
+    /** {@link #pulseCount} — frames processed by the loader thread. */
+    final int getPulseCount(byte i) {
         int i_5_ = 32 / ((i - -41) / 47);
         anInt3899++;
-        return anInt3920;
+        return pulseCount;
     }
 
     final void method2326(int i) {

@@ -11,32 +11,37 @@ import javax.sound.sampled.*;
 import java.awt.*;
 
 final class SourceAudioLine extends AudioLine {
-    private int anInt6175;
-    private byte[] aByteArray6176;
-    private SourceDataLine aSourceDataLine6177;
-    private boolean aBoolean6178 = false;
-    private AudioFormat anAudioFormat6179;
+    /** SourceDataLine buffer size in samples. */
+    private int bufferSize;
+    /** Scratch PCM bytes for {@link #writeSamples}. */
+    private byte[] pcmBytes;
+    /** Active javax.sound output line. */
+    private SourceDataLine sourceDataLine;
+    /** True if a "SoundMax" mixer was detected (needs reopen-on-flush). */
+    private boolean soundmaxMixer = false;
+    /** Output {@link AudioFormat} (16-bit, sampleRate, mono/stereo). */
+    private AudioFormat audioFormat;
     static Class aClass6180;
 
     final void close() {
-        if (null != aSourceDataLine6177) {
-            aSourceDataLine6177.close();
-            aSourceDataLine6177 = null;
+        if (null != sourceDataLine) {
+            sourceDataLine.close();
+            sourceDataLine = null;
         }
     }
 
     final void open(int i) throws LineUnavailableException {
         try {
-            DataLine.Info info = (new DataLine.Info((aClass6180 == null ? (aClass6180 = SourceDataLine.class) : aClass6180), anAudioFormat6179, i << (Component21.aBoolean3652 ? 2 : 1)));
-            aSourceDataLine6177 = (SourceDataLine) AudioSystem.getLine(info);
-            aSourceDataLine6177.open();
-            aSourceDataLine6177.start();
-            anInt6175 = i;
+            DataLine.Info info = (new DataLine.Info((aClass6180 == null ? (aClass6180 = SourceDataLine.class) : aClass6180), audioFormat, i << (Component21.stereo ? 2 : 1)));
+            sourceDataLine = (SourceDataLine) AudioSystem.getLine(info);
+            sourceDataLine.open();
+            sourceDataLine.start();
+            bufferSize = i;
         } catch (LineUnavailableException lineunavailableexception) {
-            if (1 == WaterSurfaceShader.method2155(i, (byte) 43)) {
-                aSourceDataLine6177 = null;
+            if (1 == WaterSurfaceShader.bitCount(i, (byte) 43)) {
+                sourceDataLine = null;
                 throw lineunavailableexception;
-            } else open(Component373.method340(i, (byte) 108));
+            } else open(Component373.nextPowerOfTwo(i, (byte) 108));
         }
     }
 
@@ -48,39 +53,39 @@ final class SourceAudioLine extends AudioLine {
                 Mixer.Info info = infos_0_[i];
                 if (info != null) {
                     String string = info.getName();
-                    if (null != string && string.toLowerCase().indexOf("soundmax") >= 0) aBoolean6178 = true;
+                    if (null != string && string.toLowerCase().indexOf("soundmax") >= 0) soundmaxMixer = true;
                 }
             }
         }
-        anAudioFormat6179 = new AudioFormat((float) Component231.anInt339, 16, Component21.aBoolean3652 ? 2 : 1, true, false);
-        aByteArray6176 = new byte[256 << (!Component21.aBoolean3652 ? 1 : 2)];
+        audioFormat = new AudioFormat((float) Component231.sampleRate, 16, Component21.stereo ? 2 : 1, true, false);
+        pcmBytes = new byte[256 << (!Component21.stereo ? 1 : 2)];
     }
 
     final int getBufferedSamples() {
-        return anInt6175 - (aSourceDataLine6177.available() >> (Component21.aBoolean3652 ? 2 : 1));
+        return bufferSize - (sourceDataLine.available() >> (Component21.stereo ? 2 : 1));
     }
 
     final void flush() throws LineUnavailableException {
-        aSourceDataLine6177.flush();
-        if (aBoolean6178) {
-            aSourceDataLine6177.close();
-            aSourceDataLine6177 = null;
-            DataLine.Info info = (new DataLine.Info((aClass6180 == null ? (aClass6180 = SourceDataLine.class) : aClass6180), anAudioFormat6179, anInt6175 << (!Component21.aBoolean3652 ? 1 : 2)));
-            aSourceDataLine6177 = (SourceDataLine) AudioSystem.getLine(info);
-            aSourceDataLine6177.open();
-            aSourceDataLine6177.start();
+        sourceDataLine.flush();
+        if (soundmaxMixer) {
+            sourceDataLine.close();
+            sourceDataLine = null;
+            DataLine.Info info = (new DataLine.Info((aClass6180 == null ? (aClass6180 = SourceDataLine.class) : aClass6180), audioFormat, bufferSize << (!Component21.stereo ? 1 : 2)));
+            sourceDataLine = (SourceDataLine) AudioSystem.getLine(info);
+            sourceDataLine.open();
+            sourceDataLine.start();
         }
     }
 
-    final void method2094() {
+    final void writeSamples() {
         int i = 256;
-        if (Component21.aBoolean3652) i <<= 1;
+        if (Component21.stereo) i <<= 1;
         for (int i_1_ = 0; i_1_ < i; i_1_++) {
             int i_2_ = this.anIntArray3603[i_1_];
             if ((i_2_ + 8388608 & ~0xffffff) != 0) i_2_ = 0x7fffff ^ i_2_ >> 31;
-            aByteArray6176[i_1_ * 2] = (byte) (i_2_ >> 8);
-            aByteArray6176[i_1_ * 2 + 1] = (byte) (i_2_ >> 16);
+            pcmBytes[i_1_ * 2] = (byte) (i_2_ >> 8);
+            pcmBytes[i_1_ * 2 + 1] = (byte) (i_2_ >> 16);
         }
-        aSourceDataLine6177.write(aByteArray6176, 0, i << 1);
+        sourceDataLine.write(pcmBytes, 0, i << 1);
     }
 }

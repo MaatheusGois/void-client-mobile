@@ -97,7 +97,7 @@ final class Component274
         int i_4_ = i_3_ | var_ha.anInt4567 << 29;
         Component24 class105 = (Component24) this.aClass153_593.aClass60_2089.get(i_4_, 64);
         if (class105 != null) return class105;
-        if (!this.aClass153_593.aClass45_2087.method421(false, i_3_)) return null;
+        if (!this.aClass153_593.aClass45_2087.isSingletonFileReady(false, i_3_)) return null;
         Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), i_3_, 0);
         if (class207 != null) {
             class105 = var_ha.method3691(class207, true);
@@ -111,7 +111,7 @@ final class Component274
         if (bool != false) method375(null, true);
         Component24 class105 = (Component24) (this.aClass153_593.aClass60_2089.get(anInt598 | 0x20000 | var_ha.anInt4567 << 29, -75));
         if (class105 != null) return class105;
-        this.aClass153_593.aClass45_2087.method421(bool, anInt598);
+        this.aClass153_593.aClass45_2087.isSingletonFileReady(bool, anInt598);
         Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), anInt598, 0);
         if (class207 != null) {
             class105 = var_ha.method3691(class207, true);
@@ -126,7 +126,7 @@ final class Component274
         if (aClass356_588 == null) return string;
         NodeSub50 class348_sub50 = (NodeSub50) aClass356_588.get(i, -6008);
         if (class348_sub50 == null) return string;
-        return class348_sub50.aString7211;
+        return class348_sub50.stringValue;
     }
 
     private final void method377(int i, Buffer class348_sub49, int i_7_) {
@@ -186,7 +186,7 @@ final class Component274
                         } else if (i == 249) {
                             int i_14_ = class348_sub49.readUnsignedByte(255);
                             if (aClass356_588 == null) {
-                                int i_15_ = Component373.method340(i_14_, (byte) 108);
+                                int i_15_ = Component373.nextPowerOfTwo(i_14_, (byte) 108);
                                 aClass356_588 = new LruCache(i_15_);
                             }
                             for (int i_16_ = 0; (i_16_ < i_14_); i_16_++) {
@@ -211,7 +211,7 @@ final class Component274
         if (bool != false) return -1;
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_588.get(i_18_, -6008);
         if (class348_sub35 == null) return i;
-        return class348_sub35.anInt6976;
+        return class348_sub35.intValue;
     }
 
     final void method379(Buffer class348_sub49, int i) {

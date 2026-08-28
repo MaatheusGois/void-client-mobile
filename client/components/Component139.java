@@ -34,7 +34,7 @@ final class Component139
         if (Component72.anInt1910 <= i_1_ && PauseTimer.anInt513 >= i_1_) {
             int i_19_ = LogicError.method831(Component22.anInt1745, i + i_4_, Component27.anInt4960, -89);
             int i_20_ = LogicError.method831(Component22.anInt1745, -i_4_ + i, Component27.anInt4960, -116);
-            MenuOpener.method1156(-27, i_19_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_20_, i_3_);
+            MenuOpener.fillInts(-27, i_19_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_20_, i_3_);
         }
         int i_21_ = i_14_ * (i_6_ - 1);
         while (i_6_ > 0) {
@@ -64,8 +64,8 @@ final class Component139
             if (i_23_ >= Component72.anInt1910 && i_22_ <= PauseTimer.anInt513) {
                 int i_24_ = LogicError.method831(Component22.anInt1745, i + i_5_, Component27.anInt4960, 86);
                 int i_25_ = LogicError.method831(Component22.anInt1745, -i_5_ + i, Component27.anInt4960, 32);
-                if (Component72.anInt1910 <= i_22_) MenuOpener.method1156(i_2_ + -26, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_25_, i_3_);
-                if (PauseTimer.anInt513 >= i_23_) MenuOpener.method1156(-27, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_23_], i_25_, i_3_);
+                if (Component72.anInt1910 <= i_22_) MenuOpener.fillInts(i_2_ + -26, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_25_, i_3_);
+                if (PauseTimer.anInt513 >= i_23_) MenuOpener.fillInts(-27, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_23_], i_25_, i_3_);
             }
         }
     }
@@ -104,7 +104,7 @@ final class Component139
     final int method1710(int i) {
         anInt6133++;
         if (i != 20014) method1716(true);
-        if ((this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.aClass230_186) && this.aClass348_Sub51_3136.method3425(-111)) return 0;
+        if ((this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) && this.aClass348_Sub51_3136.method3425(-111)) return 0;
         return 1;
     }
 

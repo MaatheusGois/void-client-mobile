@@ -41,7 +41,7 @@ abstract class Component47
             OpenGL.glBindProgramARB(i, 0);
             return new Component382(var_ha_Sub2, i, i_6_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("iu.I(" + i + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("iu.I(" + i + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 

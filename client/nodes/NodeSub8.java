@@ -95,7 +95,7 @@ final class NodeSub8
         try {
             return l & l_7_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "gia.C(" + l + ',' + l_7_ + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "gia.C(" + l + ',' + l_7_ + ')');
         }
     }
 

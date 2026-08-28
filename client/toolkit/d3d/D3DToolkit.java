@@ -729,7 +729,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (class251 == MenuOpener.aClass251_4835) return 1;
         if (class251 != Component302.aClass251_6030) {
             if (class251 != DefinitionSub38.aClass251_9477) {
-                if (DisplayModeManagerContainer115.aClass251_1051 == class251) return 4;
+                if (DisplayModeInfo.aClass251_1051 == class251) return 4;
                 if (class251 == Component329.aClass251_5989) return 256;
             } else return 3;
         } else return 2;

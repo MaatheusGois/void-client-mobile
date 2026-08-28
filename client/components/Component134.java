@@ -63,7 +63,7 @@ final class Component134
                 i_32_ &= i_8_;
                 i_33_ &= i_8_;
                 float f_36_ = DisplayModeManagerContainer173.method2684(i_4_ ^ 0x7, f_34_);
-                fs[i_2_++] = f_3_ * (Component112.method2337((Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.method1166((anIntArray5804[i_26_ + i_32_]), 7), f_15_, -70, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.method1166(7, (anIntArray5804[i_33_ - -i_26_])), f_15_, -73, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.method1166(7, (anIntArray5804[i_32_ + i_27_])), f_15_, -75, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.method1166((anIntArray5804[i_27_ + i_33_]), 7), f_15_, -91, f_34_)), f_36_)), f_25_)), true, (Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.method1166((anIntArray5804[i_28_ + i_32_]), 7), f_14_, -72, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.method1166((anIntArray5804[i_28_ + i_33_]), 7), f_14_, -75, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.method1166((anIntArray5804[i_29_ + i_32_]), 7), f_14_, -100, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.method1166((anIntArray5804[i_29_ + i_33_]), 7), f_14_, -72, f_34_)), f_36_)), f_25_)), f_16_));
+                fs[i_2_++] = f_3_ * (Component112.method2337((Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_26_ + i_32_]), 7), f_15_, -70, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_33_ - -i_26_])), f_15_, -73, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_32_ + i_27_])), f_15_, -75, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_27_ + i_33_]), 7), f_15_, -91, f_34_)), f_36_)), f_25_)), true, (Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_32_]), 7), f_14_, -72, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_33_]), 7), f_14_, -75, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_32_]), 7), f_14_, -100, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_33_]), 7), f_14_, -72, f_34_)), f_36_)), f_25_)), f_16_));
             }
         }
     }
@@ -85,7 +85,7 @@ final class Component134
         anInt5809++;
         if (i_37_ != 34037) aClass341_5808 = null;
         if (var_ha_Sub2.aBoolean7793 || Component353.method1436(-20, i_38_) && Component353.method1436(-119, i_40_)) return new GlRectangleTexture(var_ha_Sub2, 3553, i, i_39_, i_38_, i_40_, true);
-        if (!var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, i, i_39_, i_38_, i_40_, Component373.method340(i_38_, (byte) 108), Component373.method340(i_40_, (byte) 108), true);
+        if (!var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, i, i_39_, i_38_, i_40_, Component373.nextPowerOfTwo(i_38_, (byte) 108), Component373.nextPowerOfTwo(i_40_, (byte) 108), true);
         return new GlRectangleTexture(var_ha_Sub2, 34037, i, i_39_, i_38_, i_40_, true);
     }
 

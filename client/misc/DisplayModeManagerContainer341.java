@@ -155,7 +155,7 @@ final class DisplayModeManagerContainer341
 
     static final void method1787(int i, int i_22_) {
         anInt6002++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, i_22_);//8
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_22_);//8
         class348_sub42_sub15.method3251(-16058);
     }
 }

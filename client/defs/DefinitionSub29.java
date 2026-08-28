@@ -20,11 +20,11 @@ final class DefinitionSub29
     static int anInt9381;
     static int anInt9382;
 
-    final int[][] method3047(int i, int i_0_) {
+    final int[][] getColourOutput(int i, int i_0_) {
         if (i_0_ != -1564599039) return null;
         anInt9378++;
-        int[][] is = this.aClass322_7033.method2557(-94, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-94, i);
+        if (this.imageCacheStore.cacheMiss) {
             int i_1_ = (anInt9374 * (ShaderProgramSub2.anInt6212 == anInt9379 ? i : anInt9379 * i / ShaderProgramSub2.anInt6212));
             int[] is_2_ = is[0];
             int[] is_3_ = is[1];
@@ -32,25 +32,25 @@ final class DefinitionSub29
             if (DefinitionSub6.anInt9139 == anInt9374) {
                 for (int i_8_ = 0; (DefinitionSub6.anInt9139 > i_8_); i_8_++) {
                     int i_9_ = anIntArray9375[i_1_++];
-                    is_4_[i_8_] = GpsOverlay.method1166(255, i_9_) << 4;
-                    is_3_[i_8_] = GpsOverlay.method1166(i_9_ >> 4, 4080);
-                    is_2_[i_8_] = GpsOverlay.method1166(16711680, i_9_) >> 12;
+                    is_4_[i_8_] = GpsOverlay.bitwiseAnd(255, i_9_) << 4;
+                    is_3_[i_8_] = GpsOverlay.bitwiseAnd(i_9_ >> 4, 4080);
+                    is_2_[i_8_] = GpsOverlay.bitwiseAnd(16711680, i_9_) >> 12;
                 }
             } else {
                 for (int i_5_ = 0; i_5_ < DefinitionSub6.anInt9139; i_5_++) {
                     int i_6_ = anInt9374 * i_5_ / DefinitionSub6.anInt9139;
                     int i_7_ = anIntArray9375[i_6_ + i_1_];
-                    is_4_[i_5_] = GpsOverlay.method1166(i_7_, 255) << 4;
-                    is_3_[i_5_] = GpsOverlay.method1166(65280, i_7_) >> 4;
-                    is_2_[i_5_] = GpsOverlay.method1166(i_7_ >> 12, 4080);
+                    is_4_[i_5_] = GpsOverlay.bitwiseAnd(i_7_, 255) << 4;
+                    is_3_[i_5_] = GpsOverlay.bitwiseAnd(65280, i_7_) >> 4;
+                    is_2_[i_5_] = GpsOverlay.bitwiseAnd(i_7_ >> 12, 4080);
                 }
             }
         }
         return is;
     }
 
-    final void method3045(int i, int i_10_, int i_11_) {
-        super.method3045(i, i_10_, i_11_);
+    final void initImageCache(int i, int i_10_, int i_11_) {
+        super.initImageCache(i, i_10_, i_11_);
         anInt9382++;
         if (anInt9380 >= 0 && SpriteAtlasShader.aD6247 != null) {
             int i_12_ = (!(SpriteAtlasShader.aD6247.method3(anInt9380, -6662).aBoolean199) ? 128 : 64);
@@ -64,10 +64,10 @@ final class DefinitionSub29
         super(0, false);
     }
 
-    final void method3046(byte i) {
+    final void clearImageCache(byte i) {
         if (i >= -102) anInt9374 = -104;
         anInt9373++;
-        super.method3046((byte) -107);
+        super.clearImageCache((byte) -107);
         anIntArray9375 = null;
     }
 
@@ -450,7 +450,7 @@ final class DefinitionSub29
         return true;
     }
 
-    final int method3043(int i) {
+    final int getOutputColourType(int i) {
         if (i != -1) anInt9379 = 10;
         anInt9381++;
         return anInt9380;

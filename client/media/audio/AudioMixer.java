@@ -4,23 +4,27 @@
 
 /**
  * RENAMED from `Class250` (JODE-obfuscated).
- * Audio mixer thread (implements Runnable). run() pumps an array of AudioLine (aClass279Array3218), calling process on each and sleeping; mixes client audio.
+ * Audio mixer thread (implements Runnable). run() pumps an array of AudioLine (lines), calling process on each and sleeping; mixes client audio.
  */
 
 final class AudioMixer implements Runnable {
-    volatile AudioLine[] aClass279Array3218 = new AudioLine[2];
+    /** Primary / secondary output lines. */
+    volatile AudioLine[] lines = new AudioLine[2];
     static int anInt3219;
     static int[] anIntArray3220;
-    volatile boolean aBoolean3221 = false;
+    /** Set to stop the mixer loop. */
+    volatile boolean stopRequested = false;
     static int anInt3222;
-    volatile boolean aBoolean3223 = false;
+    /** True while {@link #run} is inside the mix loop. */
+    volatile boolean running = false;
     static int anInt3224;
     static int anInt3225;
     static RenderableObject[] aClass318_Sub1Array3226;
     static int anInt3227 = 0;
-    ReflectionInvoker aClass297_3228;
+    ReflectionInvoker invoker;
 
-    static final String method1909(byte i, String string) {
+    /** Mask {@code directlogin} password chars with {@code *} for console echo. */
+    static final String redactConsoleLine(byte i, String string) {
         if (i != 31) method1911((byte) 87);
         anInt3222++;
         String string_0_ = null;
@@ -43,21 +47,21 @@ final class AudioMixer implements Runnable {
     }
 
     public final void run() {
-        this.aBoolean3223 = true;
+        this.running = true;
         anInt3224++;
         try {
-            while (!this.aBoolean3221) {
+            while (!this.stopRequested) {
                 for (int i = 0; i < 2; i++) {
-                    AudioLine class279 = this.aClass279Array3218[i];
+                    AudioLine class279 = this.lines[i];
                     if (class279 != null) class279.process(-6858);
                 }
-                SpriteAtlasShader.method2161((byte) -107, 10L);
-                DummyClass.method3578((byte) -42, null, (this.aClass297_3228));
+                SpriteAtlasShader.sleep((byte) -107, 10L);
+                DummyClass.pulseAwtQueue((byte) -42, null, (this.invoker));
             }
         } catch (Exception exception) {
-            ClientErrorReporter.method1242(null, exception, 15004);
+            ClientErrorReporter.reportError(null, exception, 15004);
         } finally {
-            this.aBoolean3223 = false;
+            this.running = false;
         }
     }
 

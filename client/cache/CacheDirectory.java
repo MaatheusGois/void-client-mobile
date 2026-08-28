@@ -12,17 +12,23 @@ import java.io.RandomAccessFile;
 import java.util.Hashtable;
 
 public class CacheDirectory {
-    private static int anInt2641;
-    private static final Hashtable aHashtable2642;
-    private static String aString2643;
-    private static boolean aBoolean2644 = false;
-    private static String aString2645;
+    /** Cache store id ("jagex_cache_<id>" / "file_store_<id>"). */
+    private static int cacheId;
+    /** Logical name → resolved {@link File} cache. */
+    private static final Hashtable resolvedFiles;
+    /** {@code user.home}/ with trailing slash (or "~/"). */
+    private static String userHome;
+    /** True after {@link #init}; {@link #resolveCacheFile} requires it. */
+    private static boolean initialized = false;
+    /** Optional game subdirectory under the cache root. */
+    private static String gameSubdir;
 
-    public static File method1464(int i, int i_0_, String string, String string_1_) {
-        if (!aBoolean2644) throw new RuntimeException("");
-        File file = (File) aHashtable2642.get(string);
+    /** Locate/create {@code string} under rscache / jagex_cache paths; memoized. */
+    public static File resolveCacheFile(int i, int i_0_, String string, String string_1_) {
+        if (!initialized) throw new RuntimeException("");
+        File file = (File) resolvedFiles.get(string);
         if (file != null) return file;
-        String[] strings = {"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", aString2643, "/tmp/", ""};
+        String[] strings = {"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", userHome, "/tmp/", ""};
         String[] strings_2_ = {".jagex_cache_" + i_0_, ".file_store_" + i_0_};
         for (int i_3_ = i; i_3_ < 2; i_3_++) {
             for (int i_4_ = 0; strings_2_.length > i_4_; i_4_++) {
@@ -42,7 +48,7 @@ public class CacheDirectory {
                                 randomaccessfile.write(i_9_);
                                 randomaccessfile.seek(0L);
                                 randomaccessfile.close();
-                                aHashtable2642.put(string, file_7_);
+                                resolvedFiles.put(string, file_7_);
                                 return file_7_;
                             }
                         }
@@ -62,26 +68,28 @@ public class CacheDirectory {
         throw new RuntimeException();
     }
 
-    public static void method1465(byte i, String string, int i_11_) {
-        anInt2641 = i_11_;
-        if (i != -121) aBoolean2644 = false;
-        aString2645 = string;
+    /** Set {@link #cacheId}/{@link #gameSubdir} and resolve {@link #userHome}. */
+    public static void init(byte i, String string, int i_11_) {
+        cacheId = i_11_;
+        if (i != -121) initialized = false;
+        gameSubdir = string;
         try {
-            aString2643 = System.getProperty("user.home");
-            if (aString2643 != null) aString2643 += "/";
+            userHome = System.getProperty("user.home");
+            if (userHome != null) userHome += "/";
         } catch (Exception exception) {
             /* empty */
         }
-        aBoolean2644 = true;
-        if (aString2643 == null) aString2643 = "~/";
+        initialized = true;
+        if (userHome == null) userHome = "~/";
     }
 
-    public static File method1466(int i, String string) {
-        if (i != -2) method1466(75, null);
-        return method1464(0, anInt2641, string, aString2645);
+    /** {@link #resolveCacheFile} using {@link #cacheId} and {@link #gameSubdir}. */
+    public static File getCacheFile(int i, String string) {
+        if (i != -2) getCacheFile(75, null);
+        return resolveCacheFile(0, cacheId, string, gameSubdir);
     }
 
     static {
-        aHashtable2642 = new Hashtable(16);
+        resolvedFiles = new Hashtable(16);
     }
 }

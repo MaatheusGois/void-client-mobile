@@ -4,201 +4,230 @@
 
 final class Component219
 /**
- * RENAMED from `Class314_Sub1` (JODE-obfuscated).
- * Evidence: subclass of Component112 (hierarchy)
+ * RENAMED from {@code Class314_Sub1} (JODE-obfuscated).
+ * Per-index JS5 archive store: loads {@link ReferenceTable}, fetches groups via
+ * {@link Component253} and/or local {@link CacheIndexReader}, verifies CRC/Whirlpool,
+ * and tracks per-group load status for prefetch/verify passes.
  */ extends Component112 {
     static Component183 aClass114_6340 = new Component183(74, 28);
     static int anInt6341;
-    private ReferenceTable aClass291_6342;
+    /** Parsed index reference table once ready. */
+    private ReferenceTable referenceTable;
     static int anInt6343;
-    private final int anInt6344;
+    /** Expected CRC of the reference table (from master index). */
+    private final int expectedCrc;
     static int anInt6345;
-    private final byte[] aByteArray6346;
-    private final Component253 aClass248_6347;
+    /** Expected 64-byte Whirlpool of the reference table. */
+    private final byte[] expectedWhirlpool;
+    /** JS5 TCP client for network fetches. */
+    private final Component253 js5Client;
     static int anInt6348;
     static int anInt6349;
-    private final int anInt6350;
-    private byte[] aByteArray6351;
-    private int anInt6352;
+    /** JS5 index id (0..254). */
+    private final int indexId;
+    /**
+     * Per-group status: {@code 0} unset, {@code 1} verified/loaded,
+     * {@code -1} failed disk verify (force network).
+     */
+    private byte[] groupLoadStatus;
+    private int expectedRevision;
     static int anInt6353;
-    private final DisplayModeManagerContainer67 aClass112_6354;
-    private HashNodeSub16 aClass348_Sub42_Sub16_6355;
+    /** Local disk cache helper ({@link DisplayModeManagerContainer67}). */
+    private final DisplayModeManagerContainer67 diskCache;
+    /** In-flight reference-table request (index 255 child = this index). */
+    private HashNodeSub16 referenceTableRequest;
     static int anInt6356;
     static int anInt6357;
     static int anInt6358;
     static int anInt6359;
-    private final LruCache aClass356_6360;
-    private int anInt6361 = 0;
+    /** Active group download nodes keyed by group id. */
+    private final LruCache activeRequests;
+    /** Count of groups with status 1. */
+    private int loadedGroupCount = 0;
     static int anInt6362;
     static int anInt6363;
-    private final CacheIndexReader aClass137_6364;
-    private final CacheIndexReader aClass137_6365;
+    /** Disk index for the reference table itself. */
+    private final CacheIndexReader metaIndex;
+    /** Disk index for group payloads. */
+    private final CacheIndexReader dataIndex;
     static int anInt6366;
     static int anInt6367;
-    private boolean aBoolean6368;
-    private final NodeList aClass262_6369;
+    /** True while bulk-prefetching missing groups from disk. */
+    private boolean prefetching;
+    /** Groups explicitly requested via {@link #requestGroup}. */
+    private final NodeList requestedGroups;
     static int anInt6370;
-    private boolean aBoolean6371;
-    private NodeList aClass262_6372;
-    private int anInt6373;
-    private long aLong6374;
-    private boolean aBoolean6375;
+    /** True while bulk-verifying groups over the network. */
+    private boolean verifying;
+    /** Work list for prefetch/verify sweeps. */
+    private NodeList workQueue;
+    /** Cursor into {@link ReferenceTable#fileIdCounts} during sweeps. */
+    private int workCursor;
+    /** Next wall-clock ms to discard stale non-priority requests. */
+    private long nextDiscardMillis;
+    /** When true, completed non-priority requests are discarded after ~1s. */
+    private boolean discardStaleRequests;
 
-    final int method2341(int i) {
+    /** Prefetch progress: named group count, or current work-queue head while prefetching. */
+    final int getPrefetchProgress(int i) {
         anInt6370++;
-        if (aClass291_6342 == null) return 0;
-        if (!aBoolean6368) return aClass291_6342.anInt3727;
-        if (i != 24940) method2345(-32);
-        Node class348 = aClass262_6372.first(i ^ 0x6168);
+        if (referenceTable == null) return 0;
+        if (!prefetching) return referenceTable.namedGroupCount;
+        if (i != 24940) getGroupCount(-32);
+        Node class348 = workQueue.first(i ^ 0x6168);
         if (class348 == null) return 0;
         return (int) class348.key;
     }
 
-    final void method2342(int i) {
+    /** Service explicitly requested groups (disk load / network fallback). */
+    final void processRequestedGroups(int i) {
         anInt6349++;
-        if (i != 0) aBoolean6375 = false;
-        if (aClass262_6372 != null && method2340((byte) 56) != null) {
-            for (Node class348 = aClass262_6369.first(4); class348 != null; class348 = aClass262_6369.next((byte) 112)) {
+        if (i != 0) discardStaleRequests = false;
+        if (workQueue != null && getReferenceTable((byte) 56) != null) {
+            for (Node class348 = requestedGroups.first(4); class348 != null; class348 = requestedGroups.next((byte) 112)) {
                 int i_0_ = (int) class348.key;
-                if (i_0_ < 0 || (aClass291_6342.anInt3734 <= i_0_) || aClass291_6342.anIntArray3725[i_0_] == 0) class348.unlink((byte) 37);
+                if (i_0_ < 0 || (referenceTable.groupCapacity <= i_0_) || referenceTable.fileIdCounts[i_0_] == 0) class348.unlink((byte) 37);
                 else {
-                    if (aByteArray6351[i_0_] == 0) method2350(i_0_, (byte) 65, 1);
-                    if (aByteArray6351[i_0_] == -1) method2350(i_0_, (byte) 65, 2);
-                    if (aByteArray6351[i_0_] == 1) class348.unlink((byte) 29);
+                    if (groupLoadStatus[i_0_] == 0) fetchGroup(i_0_, (byte) 65, 1);
+                    if (groupLoadStatus[i_0_] == -1) fetchGroup(i_0_, (byte) 65, 2);
+                    if (groupLoadStatus[i_0_] == 1) class348.unlink((byte) 29);
                 }
             }
         }
     }
 
-    final void method2343(int i) {
+    /** Pulse prefetch/verify sweeps and optional stale-request discard. */
+    final void pulse(int i) {
         anInt6356++;
-        if (aClass262_6372 != null) {
-            if (method2340((byte) 56) == null) return;
-            if (aBoolean6368) {
+        if (workQueue != null) {
+            if (getReferenceTable((byte) 56) == null) return;
+            if (prefetching) {
                 boolean bool = true;
-                for (Node class348 = aClass262_6372.first(4); class348 != null; class348 = aClass262_6372.next((byte) 106)) {
+                for (Node class348 = workQueue.first(4); class348 != null; class348 = workQueue.next((byte) 106)) {
                     int i_1_ = (int) class348.key;
-                    if (aByteArray6351[i_1_] == 0) method2350(i_1_, (byte) 65, 1);
-                    if (aByteArray6351[i_1_] != 0) class348.unlink((byte) 22);
+                    if (groupLoadStatus[i_1_] == 0) fetchGroup(i_1_, (byte) 65, 1);
+                    if (groupLoadStatus[i_1_] != 0) class348.unlink((byte) 22);
                     else bool = false;
                 }
-                while (aClass291_6342.anIntArray3725.length > anInt6373) {
-                    if (aClass291_6342.anIntArray3725[anInt6373] == 0) anInt6373++;
+                while (referenceTable.fileIdCounts.length > workCursor) {
+                    if (referenceTable.fileIdCounts[workCursor] == 0) workCursor++;
                     else {
-                        if (aClass112_6354.anInt1734 >= 512) {
+                        if (diskCache.pendingCount >= 512) {
                             bool = false;
                             break;
                         }
-                        if (aByteArray6351[anInt6373] == 0) method2350(anInt6373, (byte) 65, 1);
-                        if (aByteArray6351[anInt6373] == 0) {
+                        if (groupLoadStatus[workCursor] == 0) fetchGroup(workCursor, (byte) 65, 1);
+                        if (groupLoadStatus[workCursor] == 0) {
                             Node class348 = new Node();
-                            class348.key = anInt6373;
-                            aClass262_6372.addTail(class348, -20180);
+                            class348.key = workCursor;
+                            workQueue.addTail(class348, -20180);
                             bool = false;
                         }
-                        anInt6373++;
+                        workCursor++;
                     }
                 }
                 if (bool) {
-                    anInt6373 = 0;
-                    aBoolean6368 = false;
+                    workCursor = 0;
+                    prefetching = false;
                 }
-            } else if (aBoolean6371) {
+            } else if (verifying) {
                 boolean bool = true;
-                for (Node class348 = aClass262_6372.first(4); class348 != null; class348 = aClass262_6372.next((byte) 43)) {
+                for (Node class348 = workQueue.first(4); class348 != null; class348 = workQueue.next((byte) 43)) {
                     int i_2_ = (int) class348.key;
-                    if (aByteArray6351[i_2_] != 1) method2350(i_2_, (byte) 65, 2);
-                    if (aByteArray6351[i_2_] != 1) bool = false;
+                    if (groupLoadStatus[i_2_] != 1) fetchGroup(i_2_, (byte) 65, 2);
+                    if (groupLoadStatus[i_2_] != 1) bool = false;
                     else class348.unlink((byte) 60);
                 }
-                while (aClass291_6342.anIntArray3725.length > anInt6373) {
-                    if (aClass291_6342.anIntArray3725[anInt6373] == 0) anInt6373++;
+                while (referenceTable.fileIdCounts.length > workCursor) {
+                    if (referenceTable.fileIdCounts[workCursor] == 0) workCursor++;
                     else {
-                        if (aClass248_6347.method1899(-124)) {
+                        if (js5Client.isNormalQueueFull(-124)) {
                             bool = false;
                             break;
                         }
-                        if (aByteArray6351[anInt6373] != 1) method2350(anInt6373, (byte) 65, 2);
-                        if (aByteArray6351[anInt6373] != 1) {
+                        if (groupLoadStatus[workCursor] != 1) fetchGroup(workCursor, (byte) 65, 2);
+                        if (groupLoadStatus[workCursor] != 1) {
                             Node class348 = new Node();
-                            class348.key = anInt6373;
+                            class348.key = workCursor;
                             bool = false;
-                            aClass262_6372.addTail(class348, i + -20179);
+                            workQueue.addTail(class348, i + -20179);
                         }
-                        anInt6373++;
+                        workCursor++;
                     }
                 }
                 if (bool) {
-                    anInt6373 = 0;
-                    aBoolean6371 = false;
+                    workCursor = 0;
+                    verifying = false;
                 }
-            } else aClass262_6372 = null;
+            } else workQueue = null;
         }
         if (i == -1) {
-            if (aBoolean6375 && Component240.currentTimeMillis(-94) >= aLong6374) {
-                for (HashNodeSub16 class348_sub42_sub16 = (HashNodeSub16) aClass356_6360.first(0); class348_sub42_sub16 != null; class348_sub42_sub16 = ((HashNodeSub16) aClass356_6360.next(0))) {
-                    if (!class348_sub42_sub16.aBoolean9664) {
-                        if (class348_sub42_sub16.aBoolean9667) {
-                            if (!class348_sub42_sub16.aBoolean9663) throw new RuntimeException();
+            if (discardStaleRequests && Component240.currentTimeMillis(-94) >= nextDiscardMillis) {
+                for (HashNodeSub16 class348_sub42_sub16 = (HashNodeSub16) activeRequests.first(0); class348_sub42_sub16 != null; class348_sub42_sub16 = ((HashNodeSub16) activeRequests.next(0))) {
+                    if (!class348_sub42_sub16.incomplete) {
+                        if (class348_sub42_sub16.markedForDiscard) {
+                            if (!class348_sub42_sub16.priority) throw new RuntimeException();
                             class348_sub42_sub16.unlink((byte) 116);
-                        } else class348_sub42_sub16.aBoolean9667 = true;
+                        } else class348_sub42_sub16.markedForDiscard = true;
                     }
                 }
-                aLong6374 = Component240.currentTimeMillis(-82) - -1000L;
+                nextDiscardMillis = Component240.currentTimeMillis(-82) - -1000L;
             }
         }
     }
 
-    public static void method2344(int i) {
+    public static void clearStatics(int i) {
         if (i == 0) aClass114_6340 = null;
     }
 
-    final int method2345(int i) {
+    final int getGroupCount(int i) {
         anInt6357++;
-        if (aClass291_6342 == null) return 0;
-        if (i != 0) method2338((byte) -34, 120);
-        return aClass291_6342.anInt3727;
+        if (referenceTable == null) return 0;
+        if (i != 0) requestGroup((byte) -34, 120);
+        return referenceTable.namedGroupCount;
     }
 
-    final byte[] method2339(int i, byte i_3_) {
+        /** Raw packed bytes for group {@code i}. */
+    final byte[] getGroupData(int i, byte i_3_) {
         int i_4_ = -16 / ((i_3_ - -44) / 37);
         anInt6363++;
-        HashNodeSub16 class348_sub42_sub16 = method2350(i, (byte) 65, 0);
+        HashNodeSub16 class348_sub42_sub16 = fetchGroup(i, (byte) 65, 0);
         if (class348_sub42_sub16 == null) return null;
-        byte[] is = class348_sub42_sub16.method3259(16);
+        byte[] is = class348_sub42_sub16.getData(16);
         class348_sub42_sub16.unlink((byte) 33);
         return is;
     }
 
-    final void method2346(int i) {
+    final void startVerifyPass(int i) {
         if (i == 27872) {
             anInt6366++;
-            if (aClass137_6365 != null) {
-                aBoolean6371 = true;
-                if (aClass262_6372 == null) aClass262_6372 = new NodeList();
+            if (dataIndex != null) {
+                verifying = true;
+                if (workQueue == null) workQueue = new NodeList();
             }
         }
     }
 
-    final void method2338(byte i, int i_5_) {
+        /** Prefetch packed group {@code i_5_}. */
+    final void requestGroup(byte i, int i_5_) {
         anInt6345++;
-        if (i != -52) aClass291_6342 = null;
-        if (aClass137_6365 != null) {
-            for (Node class348 = aClass262_6369.first(i ^ ~0x37); class348 != null; class348 = aClass262_6369.next((byte) 124)) {
+        if (i != -52) referenceTable = null;
+        if (dataIndex != null) {
+            for (Node class348 = requestedGroups.first(i ^ ~0x37); class348 != null; class348 = requestedGroups.next((byte) 124)) {
                 if ((long) i_5_ == class348.key) return;
             }
             Node class348 = new Node();
             class348.key = i_5_;
-            aClass262_6369.addTail(class348, -20180);
+            requestedGroups.addTail(class348, -20180);
         }
     }
 
-    static final String method2347(byte i) {
+    static final String getMenuTarget(byte i) {
         if (i != -119) return null;
         anInt6343++;
         if (Component364.aBoolean8335 || Component192.menuTip == null) return "";
-        if (((Component192.menuTip.target) == null || Component192.menuTip.target.length() == 0) && (Component192.menuTip.aString9595) != null && Component192.menuTip.aString9595.length() > 0)
-            return (Component192.menuTip.aString9595);
+        if (((Component192.menuTip.target) == null || Component192.menuTip.target.length() == 0) && (Component192.menuTip.extraTarget) != null && Component192.menuTip.extraTarget.length() > 0)
+            return (Component192.menuTip.extraTarget);
         return (Component192.menuTip.target);
     }
 
@@ -210,7 +239,7 @@ final class Component219
             GradientPreset.method3076(0, true);
             i_6_ = 1;
         } else {
-            int i_7_ = Component94.method2116(-26584);
+            int i_7_ = Component94.benchmarkToolkitMs(-26584);
             if (i_7_ > 100) {
                 if (i_7_ <= 500) {
                     i_6_ = 3;
@@ -235,87 +264,91 @@ final class Component219
         return i_6_;
     }
 
-    final int method2349(int i) {
-        if (i != 1) method2335(11, -116);
+    final int getReferenceTableProgress(int i) {
+        if (i != 1) getGroupLoadPercent(11, -116);
         anInt6367++;
-        if (method2340((byte) 56) == null) {
-            if (aClass348_Sub42_Sub16_6355 == null) return 0;
-            return aClass348_Sub42_Sub16_6355.method3257(16);
+        if (getReferenceTable((byte) 56) == null) {
+            if (referenceTableRequest == null) return 0;
+            return referenceTableRequest.getProgressPercent(16);
         }
         return 100;
     }
 
-    final int method2335(int i, int i_8_) {
+    final int getGroupLoadPercent(int i, int i_8_) {
         anInt6341++;
-        HashNodeSub16 class348_sub42_sub16 = ((HashNodeSub16) aClass356_6360.get(i, -6008));
-        if (i_8_ != -22197) anInt6352 = 21;
-        if (class348_sub42_sub16 != null) return class348_sub42_sub16.method3257(16);
+        HashNodeSub16 class348_sub42_sub16 = ((HashNodeSub16) activeRequests.get(i, -6008));
+        if (i_8_ != -22197) expectedRevision = 21;
+        if (class348_sub42_sub16 != null) return class348_sub42_sub16.getProgressPercent(16);
         return 0;
     }
 
-    private final HashNodeSub16 method2350(int i, byte i_9_, int i_10_) {
-        if (i_9_ != 65) aByteArray6351 = null;
+    /**
+     * Fetch group {@code i}: mode 0 = priority load, 1 = disk prefetch, 2 = network verify.
+     * Verifies CRC/Whirlpool and updates {@link #groupLoadStatus}.
+     */
+    private final HashNodeSub16 fetchGroup(int i, byte i_9_, int i_10_) {
+        if (i_9_ != 65) groupLoadStatus = null;
         anInt6362++;
-        HashNodeSub16 class348_sub42_sub16 = ((HashNodeSub16) aClass356_6360.get(i, -6008));
-        if (class348_sub42_sub16 != null && i_10_ == 0 && !class348_sub42_sub16.aBoolean9663 && class348_sub42_sub16.aBoolean9664) {
+        HashNodeSub16 class348_sub42_sub16 = ((HashNodeSub16) activeRequests.get(i, -6008));
+        if (class348_sub42_sub16 != null && i_10_ == 0 && !class348_sub42_sub16.priority && class348_sub42_sub16.incomplete) {
             class348_sub42_sub16.unlink((byte) 66);
             class348_sub42_sub16 = null;
         }
         if (class348_sub42_sub16 == null) {
             if (i_10_ == 0) {
-                if (aClass137_6365 == null || aByteArray6351[i] == -1) {
-                    if (aClass248_6347.method1900(-9)) return null;
-                    class348_sub42_sub16 = aClass248_6347.method1906((byte) -125, (byte) 2, true, i, anInt6350);
-                } else class348_sub42_sub16 = aClass112_6354.method1055(aClass137_6365, i, (byte) -110);
+                if (dataIndex == null || groupLoadStatus[i] == -1) {
+                    if (js5Client.isPriorityQueueFull(-9)) return null;
+                    class348_sub42_sub16 = js5Client.queueRequest((byte) -125, (byte) 2, true, i, indexId);
+                } else class348_sub42_sub16 = diskCache.readImmediate(dataIndex, i, (byte) -110);
             } else if (i_10_ == 1) {
-                if (aClass137_6365 == null) throw new RuntimeException();
-                class348_sub42_sub16 = aClass112_6354.method1054(aClass137_6365, i, (byte) -112);
+                if (dataIndex == null) throw new RuntimeException();
+                class348_sub42_sub16 = diskCache.enqueueRead(dataIndex, i, (byte) -112);
             } else {
                 if (i_10_ != 2) throw new RuntimeException();
-                if (aClass137_6365 == null) throw new RuntimeException();
-                if (aByteArray6351[i] != -1) throw new RuntimeException();
-                if (aClass248_6347.method1899(-120)) return null;
-                class348_sub42_sub16 = aClass248_6347.method1906((byte) 97, (byte) 2, false, i, anInt6350);
+                if (dataIndex == null) throw new RuntimeException();
+                if (groupLoadStatus[i] != -1) throw new RuntimeException();
+                if (js5Client.isNormalQueueFull(-120)) return null;
+                class348_sub42_sub16 = js5Client.queueRequest((byte) 97, (byte) 2, false, i, indexId);
             }
-            aClass356_6360.put((byte) 73, i, class348_sub42_sub16);
+            activeRequests.put((byte) 73, i, class348_sub42_sub16);
         }
-        if (class348_sub42_sub16.aBoolean9664) return null;
-        byte[] is = class348_sub42_sub16.method3259(16);
+        if (class348_sub42_sub16.incomplete) return null;
+        byte[] is = class348_sub42_sub16.getData(16);
         if (!(class348_sub42_sub16 instanceof HashNodeSub16Sub2)) {
             try {
                 if (is == null || is.length <= 2) throw new RuntimeException();
                 DisplayModeManagerContainer260.aCRC32_3691.reset();
                 DisplayModeManagerContainer260.aCRC32_3691.update(is, 0, -2 + is.length);
                 int i_11_ = (int) DisplayModeManagerContainer260.aCRC32_3691.getValue();
-                if (aClass291_6342.anIntArray3729[i] != i_11_) throw new RuntimeException();
-                if (aClass291_6342.aByteArrayArray3730 != null && (aClass291_6342.aByteArrayArray3730[i] != null)) {
-                    byte[] is_12_ = aClass291_6342.aByteArrayArray3730[i];
-                    byte[] is_13_ = NodeSub1Sub2.method2730(i_9_ ^ 0x1196, 0, is, is.length + -2);
+                if (referenceTable.groupCrcs[i] != i_11_) throw new RuntimeException();
+                if (referenceTable.whirlpools != null && (referenceTable.whirlpools[i] != null)) {
+                    byte[] is_12_ = referenceTable.whirlpools[i];
+                    byte[] is_13_ = NodeSub1Sub2.whirlpoolDigest(i_9_ ^ 0x1196, 0, is, is.length + -2);
                     for (int i_14_ = 0; i_14_ < 64; i_14_++) {
                         if (is_12_[i_14_] != is_13_[i_14_]) throw new RuntimeException();
                     }
                 }
-                aClass248_6347.anInt3213 = 0;
-                aClass248_6347.anInt3214 = 0;
+                js5Client.errorCount = 0;
+                js5Client.disconnectCode = 0;
             } catch (RuntimeException runtimeexception) {
-                aClass248_6347.method1904(-1);
+                js5Client.forceDisconnect(-1);
                 class348_sub42_sub16.unlink((byte) 44);
-                if (class348_sub42_sub16.aBoolean9663 && !aClass248_6347.method1900(i_9_ ^ 0x1f)) {
-                    HashNodeSub16Sub1 class348_sub42_sub16_sub1 = aClass248_6347.method1906((byte) 111, (byte) 2, true, i, anInt6350);
-                    aClass356_6360.put((byte) 84, i, class348_sub42_sub16_sub1);
+                if (class348_sub42_sub16.priority && !js5Client.isPriorityQueueFull(i_9_ ^ 0x1f)) {
+                    HashNodeSub16Sub1 class348_sub42_sub16_sub1 = js5Client.queueRequest((byte) 111, (byte) 2, true, i, indexId);
+                    activeRequests.put((byte) 84, i, class348_sub42_sub16_sub1);
                 }
                 return null;
             }
-            is[is.length - 2] = (byte) (aClass291_6342.anIntArray3722[i] >>> 8);
-            is[is.length - 1] = (byte) aClass291_6342.anIntArray3722[i];
-            if (aClass137_6365 != null) {
-                aClass112_6354.method1049(is, aClass137_6365, (byte) 10, i);
-                if (aByteArray6351[i] != 1) {
-                    anInt6361++;
-                    aByteArray6351[i] = (byte) 1;
+            is[is.length - 2] = (byte) (referenceTable.groupVersions[i] >>> 8);
+            is[is.length - 1] = (byte) referenceTable.groupVersions[i];
+            if (dataIndex != null) {
+                diskCache.enqueueWrite(is, dataIndex, (byte) 10, i);
+                if (groupLoadStatus[i] != 1) {
+                    loadedGroupCount++;
+                    groupLoadStatus[i] = (byte) 1;
                 }
             }
-            if (!class348_sub42_sub16.aBoolean9663) class348_sub42_sub16.unlink((byte) 110);
+            if (!class348_sub42_sub16.priority) class348_sub42_sub16.unlink((byte) 110);
             return class348_sub42_sub16;
         }
         try {
@@ -323,81 +356,82 @@ final class Component219
             DisplayModeManagerContainer260.aCRC32_3691.reset();
             DisplayModeManagerContainer260.aCRC32_3691.update(is, 0, is.length + -2);
             int i_15_ = (int) DisplayModeManagerContainer260.aCRC32_3691.getValue();
-            if (i_15_ != aClass291_6342.anIntArray3729[i]) throw new RuntimeException();
-            if (aClass291_6342.aByteArrayArray3730 != null && (aClass291_6342.aByteArrayArray3730[i] != null)) {
-                byte[] is_16_ = aClass291_6342.aByteArrayArray3730[i];
-                byte[] is_17_ = NodeSub1Sub2.method2730(i_9_ + 4502, 0, is, is.length - 2);
+            if (i_15_ != referenceTable.groupCrcs[i]) throw new RuntimeException();
+            if (referenceTable.whirlpools != null && (referenceTable.whirlpools[i] != null)) {
+                byte[] is_16_ = referenceTable.whirlpools[i];
+                byte[] is_17_ = NodeSub1Sub2.whirlpoolDigest(i_9_ + 4502, 0, is, is.length - 2);
                 for (int i_18_ = 0; i_18_ < 64; i_18_++) {
                     if (is_17_[i_18_] != is_16_[i_18_]) throw new RuntimeException();
                 }
             }
             int i_19_ = ((0xff00 & is[-2 + is.length] << 8) + (0xff & is[is.length + -1]));
-            if ((aClass291_6342.anIntArray3722[i] & 0xffff) != i_19_) throw new RuntimeException();
-            if (aByteArray6351[i] != 1) {
-                anInt6361++;
-                aByteArray6351[i] = (byte) 1;
+            if ((referenceTable.groupVersions[i] & 0xffff) != i_19_) throw new RuntimeException();
+            if (groupLoadStatus[i] != 1) {
+                loadedGroupCount++;
+                groupLoadStatus[i] = (byte) 1;
             }
-            if (!class348_sub42_sub16.aBoolean9663) class348_sub42_sub16.unlink((byte) 115);
+            if (!class348_sub42_sub16.priority) class348_sub42_sub16.unlink((byte) 115);
             return class348_sub42_sub16;
         } catch (Exception exception) {
-            aByteArray6351[i] = (byte) -1;
+            groupLoadStatus[i] = (byte) -1;
             class348_sub42_sub16.unlink((byte) 121);
-            if (class348_sub42_sub16.aBoolean9663 && !aClass248_6347.method1900(-30)) {
-                HashNodeSub16Sub1 class348_sub42_sub16_sub1 = aClass248_6347.method1906((byte) 99, (byte) 2, true, i, anInt6350);
-                aClass356_6360.put((byte) 66, i, class348_sub42_sub16_sub1);
+            if (class348_sub42_sub16.priority && !js5Client.isPriorityQueueFull(-30)) {
+                HashNodeSub16Sub1 class348_sub42_sub16_sub1 = js5Client.queueRequest((byte) 99, (byte) 2, true, i, indexId);
+                activeRequests.put((byte) 66, i, class348_sub42_sub16_sub1);
             }
             return null;
         }
     }
 
-    final int method2351(int i) {
+    final int getLoadedGroupCount(int i) {
         if (i != 0) return -19;
         anInt6359++;
-        return anInt6361;
+        return loadedGroupCount;
     }
 
-    final ReferenceTable method2340(byte i) {
+        /** Load/parse the archive reference table, or null if not ready. */
+    final ReferenceTable getReferenceTable(byte i) {
         anInt6348++;
-        if (aClass291_6342 != null) return aClass291_6342;
+        if (referenceTable != null) return referenceTable;
         if (i != 56) return null;
-        if (aClass348_Sub42_Sub16_6355 == null) {
-            if (aClass248_6347.method1900(-14)) return null;
-            aClass348_Sub42_Sub16_6355 = aClass248_6347.method1906((byte) -114, (byte) 0, true, anInt6350, 255);
+        if (referenceTableRequest == null) {
+            if (js5Client.isPriorityQueueFull(-14)) return null;
+            referenceTableRequest = js5Client.queueRequest((byte) -114, (byte) 0, true, indexId, 255);
         }
-        if (aClass348_Sub42_Sub16_6355.aBoolean9664) return null;
-        byte[] is = aClass348_Sub42_Sub16_6355.method3259(16);
+        if (referenceTableRequest.incomplete) return null;
+        byte[] is = referenceTableRequest.getData(16);
         do {
-            if (aClass348_Sub42_Sub16_6355 instanceof HashNodeSub16Sub2) {
+            if (referenceTableRequest instanceof HashNodeSub16Sub2) {
                 try {
                     if (is == null) throw new RuntimeException();
-                    aClass291_6342 = new ReferenceTable(is, anInt6344, aByteArray6346);
-                    if (anInt6352 != aClass291_6342.anInt3732) throw new RuntimeException();
+                    referenceTable = new ReferenceTable(is, expectedCrc, expectedWhirlpool);
+                    if (expectedRevision != referenceTable.revision) throw new RuntimeException();
                     break;
                 } catch (RuntimeException runtimeexception) {
-                    aClass291_6342 = null;
-                    if (aClass248_6347.method1900(i + 66)) aClass348_Sub42_Sub16_6355 = null;
-                    else aClass348_Sub42_Sub16_6355 = aClass248_6347.method1906((byte) -95, (byte) 0, true, anInt6350, 255);
+                    referenceTable = null;
+                    if (js5Client.isPriorityQueueFull(i + 66)) referenceTableRequest = null;
+                    else referenceTableRequest = js5Client.queueRequest((byte) -95, (byte) 0, true, indexId, 255);
                     return null;
                 }
             }
             try {
                 if (is == null) throw new RuntimeException();
-                aClass291_6342 = new ReferenceTable(is, anInt6344, aByteArray6346);
+                referenceTable = new ReferenceTable(is, expectedCrc, expectedWhirlpool);
             } catch (RuntimeException runtimeexception) {
-                aClass248_6347.method1904(i + -57);
-                aClass291_6342 = null;
-                if (aClass248_6347.method1900(i ^ ~0x16)) aClass348_Sub42_Sub16_6355 = null;
-                else aClass348_Sub42_Sub16_6355 = aClass248_6347.method1906((byte) 47, (byte) 0, true, anInt6350, 255);
+                js5Client.forceDisconnect(i + -57);
+                referenceTable = null;
+                if (js5Client.isPriorityQueueFull(i ^ ~0x16)) referenceTableRequest = null;
+                else referenceTableRequest = js5Client.queueRequest((byte) 47, (byte) 0, true, indexId, 255);
                 return null;
             }
-            if (aClass137_6364 != null) aClass112_6354.method1049(is, aClass137_6364, (byte) 10, anInt6350);
+            if (metaIndex != null) diskCache.enqueueWrite(is, metaIndex, (byte) 10, indexId);
         } while (false);
-        aClass348_Sub42_Sub16_6355 = null;
-        if (aClass137_6365 != null) {
-            anInt6361 = 0;
-            aByteArray6351 = new byte[aClass291_6342.anInt3734];
+        referenceTableRequest = null;
+        if (dataIndex != null) {
+            loadedGroupCount = 0;
+            groupLoadStatus = new byte[referenceTable.groupCapacity];
         }
-        return aClass291_6342;
+        return referenceTable;
     }
 
     static final boolean method2352(int i, int i_20_, int i_21_) {
@@ -407,29 +441,29 @@ final class Component219
     }
 
     Component219(int i, CacheIndexReader class137, CacheIndexReader class137_23_, Component253 class248, DisplayModeManagerContainer67 class112, int i_24_, byte[] is, int i_25_, boolean bool) {
-        aClass356_6360 = new LruCache(16);
-        anInt6373 = 0;
-        aClass262_6369 = new NodeList();
-        aLong6374 = 0L;
+        activeRequests = new LruCache(16);
+        workCursor = 0;
+        requestedGroups = new NodeList();
+        nextDiscardMillis = 0L;
         do {
             try {
-                anInt6350 = i;
-                aClass137_6365 = class137;
-                if (aClass137_6365 != null) {
-                    aBoolean6368 = true;
-                    aClass262_6372 = new NodeList();
-                } else aBoolean6368 = false;
-                anInt6344 = i_24_;
-                aByteArray6346 = is;
-                anInt6352 = i_25_;
-                aClass137_6364 = class137_23_;
-                aBoolean6375 = bool;
-                aClass248_6347 = class248;
-                aClass112_6354 = class112;
-                if (aClass137_6364 == null) break;
-                aClass348_Sub42_Sub16_6355 = aClass112_6354.method1055(aClass137_6364, anInt6350, (byte) -112);
+                indexId = i;
+                dataIndex = class137;
+                if (dataIndex != null) {
+                    prefetching = true;
+                    workQueue = new NodeList();
+                } else prefetching = false;
+                expectedCrc = i_24_;
+                expectedWhirlpool = is;
+                expectedRevision = i_25_;
+                metaIndex = class137_23_;
+                discardStaleRequests = bool;
+                js5Client = class248;
+                diskCache = class112;
+                if (metaIndex == null) break;
+                referenceTableRequest = diskCache.readImmediate(metaIndex, indexId, (byte) -112);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("bja.<init>(" + i + ',' + (class137 != null ? "{...}" : "null") + ',' + (class137_23_ != null ? "{...}" : "null") + ',' + (class248 != null ? "{...}" : "null") + ',' + (class112 != null ? "{...}" : "null") + ',' + i_24_ + ',' + (is != null ? "{...}" : "null") + ',' + i_25_ + ',' + bool + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("bja.<init>(" + i + ',' + (class137 != null ? "{...}" : "null") + ',' + (class137_23_ != null ? "{...}" : "null") + ',' + (class248 != null ? "{...}" : "null") + ',' + (class112 != null ? "{...}" : "null") + ',' + i_24_ + ',' + (is != null ? "{...}" : "null") + ',' + i_25_ + ',' + bool + ')'));
             }
             break;
         } while (false);

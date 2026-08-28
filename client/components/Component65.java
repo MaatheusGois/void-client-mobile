@@ -201,7 +201,7 @@ final class Component65
                                             }
                                         } else {
                                             for (int i_49_ = 0; is.length > i_49_; i_49_++) {
-                                                class348_sub49_sub1.method3397(111, is[i_49_] & 0xffff);
+                                                class348_sub49_sub1.writeShortLE(111, is[i_49_] & 0xffff);
                                                 i_43_++;
                                             }
                                         }
@@ -249,7 +249,7 @@ final class Component65
             }
             return GraphicsToolkit.method3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -316,7 +316,7 @@ final class Component65
             anInt1618 = aS_Sub2_1622.anInt4587 >> anInt1613;
             anInt1625 = aS_Sub2_1622.anInt4590 >> anInt1613;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("mha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("mha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ')'));
         }
     }
 }

@@ -170,7 +170,7 @@ final class Component182
     }
 
     static final void method3402(byte i) {
-        if (ReflectionInvoker.aString3782.toLowerCase().indexOf("microsoft") == -1) {
+        if (ReflectionInvoker.javaVendor.toLowerCase().indexOf("microsoft") == -1) {
             DebugPanicSub2.anIntArray8507[46] = 72;
             DebugPanicSub2.anIntArray8507[92] = 74;
             DebugPanicSub2.anIntArray8507[44] = 71;

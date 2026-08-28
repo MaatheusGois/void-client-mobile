@@ -33,7 +33,8 @@ final class Component94
         return class284_0_.anInt3673 == this.anInt3673 && (this.anInt3667 == class284_0_.anInt3667) && (this.anInt3671 == class284_0_.anInt3671);
     }
 
-    static final int method2116(int i) {
+    /** Time (ms) to draw 10k triangles with the current/fallback toolkit. */
+    static final int benchmarkToolkitMs(int i) {
         anInt3665++;
         GraphicsToolkit var_ha = NodeSub8.toolkit;
         boolean bool = false;
@@ -47,7 +48,7 @@ final class Component94
         for (int i_1_ = 0; i_1_ < 10000; i_1_++)
             var_ha.method3676(5, 10, 100, 75, 50, 100, 15, 90, 100, -65536, -65536, -65536, 1);
         int i_2_ = (int) (-l + Component240.currentTimeMillis(-71));
-        if (i != -26584) method2116(-124);
+        if (i != -26584) benchmarkToolkitMs(-124);
         var_ha.method3675(100, (byte) -125, 0, 0, 100, -16777216);
         if (bool) var_ha.method3635((byte) 121);
         return i_2_;

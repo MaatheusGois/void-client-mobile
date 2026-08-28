@@ -25,12 +25,12 @@ final class Component337
         int[] is = Cp1252Decoder.method463(class348_sub47, false);
         int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, ObjectDeserializer.anInt6967);
+        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, ObjectDeserializer.languageId);
         class348_sub47.aClass348_Sub49_Sub2_7116.offset += 7;
         class348_sub47.aClass348_Sub49_Sub2_7116.xteaEncrypt(i_1_, true, is, class348_sub47.aClass348_Sub49_Sub2_7116.offset);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthShort(1809639944, -i_0_ + (class348_sub47.aClass348_Sub49_Sub2_7116.offset));
         HashNodeSub14.method3243(118, class348_sub47);
-        if (i <= 99) method2108(null, 70);
+        if (i <= 99) hashString(null, 70);
         AbstractShaderSub2.anInt7297 = 1;
         Component48.anInt4337 = -3;
         RequestProcessor.anInt2264 = 0;
@@ -44,7 +44,8 @@ final class Component337
         if (i != 77) method2107((byte) -107);
     }
 
-    static final int method2108(String string, int i) {
+    /** Jagex string hash used for archive name tables. */
+    static final int hashString(String string, int i) {
         anInt3646++;
         int i_2_ = string.length();
         int i_3_ = 0;

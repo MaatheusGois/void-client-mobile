@@ -23,7 +23,7 @@ final class Component323
     final void method1716(boolean bool) {
         if (bool != false) method1736(-57);
         anInt5880++;
-        if (this.aClass348_Sub51_3136.method3422(674) != RunescapeInfo.aClass230_186) this.anInt3138 = 1;
+        if (this.aClass348_Sub51_3136.method3422(674) != RunescapeInfo.RUNESCAPE) this.anInt3138 = 1;
         else if (this.aClass348_Sub51_3136.method3425(-95)) this.anInt3138 = 0;
         if (this.anInt3138 != 0 && this.anInt3138 != 1) this.anInt3138 = method1710(20014);
     }
@@ -38,7 +38,7 @@ final class Component323
         anInt5873++;
         if (this.aClass348_Sub51_3136.method3425(-80)) return false;
         if (i < 85) method1716(true);
-        return this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.aClass230_186;
+        return this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE;
     }
 
     Component323(NodeSub51 class348_sub51) {
@@ -61,7 +61,7 @@ final class Component323
         if (i != 3) aString5882 = null;
         anInt5872++;
         if (this.aClass348_Sub51_3136.method3425(-63)) return 3;
-        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.aClass230_186) return 1;
+        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) return 1;
         return 3;
     }
 

@@ -44,7 +44,7 @@ final class Component325
                 if (i == -1) break;
                 aClass69_1199 = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("kea.B(" + (class348_sub42 != null ? "{...}" : "null") + ',' + (class348_sub42_1_ != null ? "{...}" : "null") + ',' + i + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("kea.B(" + (class348_sub42 != null ? "{...}" : "null") + ',' + (class348_sub42_1_ != null ? "{...}" : "null") + ',' + i + ')'));
             }
             break;
         } while (false);

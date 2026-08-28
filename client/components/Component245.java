@@ -47,7 +47,7 @@ final class Component245
             if (i > -50) aClass141_117 = null;
             HashNodeSub14.method3243(-100, class348_sub47);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ak.E(" + i + ',' + (class46 != null ? "{...}" : "null") + ',' + (class46_0_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ak.E(" + i + ',' + (class46 != null ? "{...}" : "null") + ',' + (class46_0_ != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -57,7 +57,7 @@ final class Component184
                                             if (!string_7_.equals("reg")) {
                                                 if (string_7_.startsWith("img=") && class105s != null) {
                                                     try {
-                                                        int i_8_ = (NodeSub41.method3156(true, (string_7_.substring(4))));
+                                                        int i_8_ = (NodeSub41.parseInt(true, (string_7_.substring(4))));
                                                         i_2_ = -1;
                                                         i_3_ += (class105s[i_8_].method966());
                                                         if (i_3_ > i) return (string_5_ + "...");
@@ -88,7 +88,7 @@ final class Component184
             }
             return string;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.I(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.I(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 
@@ -119,7 +119,7 @@ final class Component184
             int i_15_ = (-1 + i_14_) * i_12_;
             return (this.maxAscent + (i_15_ + this.descent));
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.A(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + i_12_ + ',' + i_13_ + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.A(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + i_12_ + ',' + i_13_ + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -150,7 +150,7 @@ final class Component184
                                             else {
                                                 if (string_20_.startsWith("img=") && class105s != null) {
                                                     try {
-                                                        int i_21_ = (NodeSub41.method3156(true, (string_20_.substring(4))));
+                                                        int i_21_ = (NodeSub41.parseInt(true, (string_20_.substring(4))));
                                                         i_16_ = -1;
                                                         i_17_ += (class105s[i_21_].method966());
                                                     } catch (Exception exception) {
@@ -174,7 +174,7 @@ final class Component184
             }
             return i_17_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.F(" + (string != null ? "{...}" : "null") + ',' + (class105s != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.F(" + (string != null ? "{...}" : "null") + ',' + (class105s != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -190,7 +190,7 @@ final class Component184
             }
             return i_23_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.K(" + (string != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.K(" + (string != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -268,7 +268,7 @@ final class Component184
                             i_32_ = 174;
                         } else if (string_39_.startsWith("img=") && class105s != null) {
                             try {
-                                int i_40_ = (NodeSub41.method3156(true, (string_39_.substring(4))));
+                                int i_40_ = (NodeSub41.parseInt(true, (string_39_.substring(4))));
                                 i_32_ = -1;
                                 i_37_ += class105s[i_40_].method966();
                             } catch (Exception exception) {
@@ -318,7 +318,7 @@ final class Component184
             }
             return i_33_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.J(" + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (strings != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.J(" + (string != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (strings != null ? "{...}" : "null") + ',' + i + ',' + (class105s != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -338,7 +338,7 @@ final class Component184
             if (i != 1) this.ascent = -13;
             return method1188(string, new int[]{i_42_}, DisplayModeManagerContainer51.aStringArray2494, (byte) 87, class105s);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("oea.B(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_42_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("oea.B(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_42_ + ')'));
         }
     }
 

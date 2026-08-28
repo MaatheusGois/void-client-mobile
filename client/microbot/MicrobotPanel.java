@@ -9,7 +9,7 @@
  * <b>Input:</b> {@link #pollInput()} runs right after mouse events are copied into
  * {@link Component327#aClass262_8744}. Left-presses inside the panel are
  * unlinked ({@link Node#unlink}) so walk / tip menus never see them.
- * {@link DisplayModeManagerContainer1#method1987} also bails when {@link #isMouseOver()} so right-click
+ * {@link DisplayModeManagerContainer1#updateMenuTip} also bails when {@link #isMouseOver()} so right-click
  * menus don't open through the HUD.
  * <p>
  * Rows (expanded): header → Combat toggle → Pause all scripts.
@@ -118,7 +118,7 @@ final class MicrobotPanel {
      * Consume left-presses that land on a panel row.
      * <p>
      * Must run after mouse drain into {@link Component327#aClass262_8744}
-     * and before {@link DisplayModeManagerContainer1#method1987} / walk packet builders.
+     * and before {@link DisplayModeManagerContainer1#updateMenuTip} / walk packet builders.
      * Click type {@code 0} = left press ({@link AwtMouseHandler#mousePressed}).
      */
     static void pollInput() {
@@ -138,8 +138,8 @@ final class MicrobotPanel {
                     NodeSub45 click = (NodeSub45) node;
                     int type = click.getEventType(86);
                     if (type == 0) {
-                        int cx = click.method3308((byte) -128);
-                        int cy = click.method3311(33);
+                        int cx = click.getX((byte) -128);
+                        int cy = click.getY(33);
                         if (contains(cx, cy)) {
                             onClick(cx, cy);
                             click.unlink((byte) 97);

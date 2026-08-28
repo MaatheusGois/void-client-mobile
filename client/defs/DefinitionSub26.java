@@ -31,11 +31,11 @@ final class DefinitionSub26
         return (i & 0xc580) != 0;
     }
 
-    final int[][] method3047(int i, int i_3_) {
+    final int[][] getColourOutput(int i, int i_3_) {
         if (i_3_ != -1564599039) return null;
         anInt9353++;
-        int[][] is = this.aClass322_7033.method2557(i_3_ + 1564598957, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(i_3_ + 1564598957, i);
+        if (this.imageCacheStore.cacheMiss) {
             int[][] is_4_ = this.method3039((byte) -60, i, 0);
             int[] is_5_ = is_4_[0];
             int[] is_6_ = is_4_[1];
@@ -93,10 +93,10 @@ final class DefinitionSub26
         for (int i_21_ = (-(AbstractShaderSub4.anInt7319 >> 4) + i_17_) / 8; i_21_ <= (i_17_ + (AbstractShaderSub4.anInt7319 >> 4)) / 8; i_21_++) {
             for (int i_22_ = (i_16_ - (ParametricDefinition.anInt9109 >> 4)) / 8; (i_22_ <= ((ParametricDefinition.anInt9109 >> 4) + i_16_) / 8); i_22_++) {
                 OggStreamReader.anIntArray9042[i_18_] = i_22_ + (i_21_ << 8);
-                ShaderSub1.anIntArray5192[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_21_ + "_" + i_22_, 0);
-                Applet_Sub1.anIntArray38[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_21_ + "_" + i_22_, 0);
-                DisplayModeManagerContainer61.anIntArray3759[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("um" + i_21_ + "_" + i_22_, 0);
-                r.anIntArray9724[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("ul" + i_21_ + "_" + i_22_, 0);
+                ShaderSub1.anIntArray5192[i_18_] = SoftwareFallbackShader.aClass45_7382.getGroupId("m" + i_21_ + "_" + i_22_, 0);
+                Applet_Sub1.anIntArray38[i_18_] = SoftwareFallbackShader.aClass45_7382.getGroupId("l" + i_21_ + "_" + i_22_, 0);
+                DisplayModeManagerContainer61.anIntArray3759[i_18_] = SoftwareFallbackShader.aClass45_7382.getGroupId("um" + i_21_ + "_" + i_22_, 0);
+                r.anIntArray9724[i_18_] = SoftwareFallbackShader.aClass45_7382.getGroupId("ul" + i_21_ + "_" + i_22_, 0);
                 i_18_++;
             }
         }
@@ -126,7 +126,7 @@ final class DefinitionSub26
                 if (i_23_ == 31015) break;
                 method3118((byte) 96);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("uf.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_23_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("uf.F(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + i_23_ + ')'));
             }
             break;
         } while (false);

@@ -34,7 +34,7 @@ final class SoftwareFallbackShader extends AbstractShader {
             System.out.println("void-osrs: toolkit " + i_1_ + " → software (macOS)");
             i_1_ = 0;
         }
-        GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544), bool, i_1_);
+        GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544), bool, i_1_);
         anInt7388++;
     }
 

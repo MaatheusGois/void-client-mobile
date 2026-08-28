@@ -163,7 +163,7 @@ final class InputStream_Sub2 extends InputStream {
                             break;
                         }
                     }
-                    if (class348_sub37.aClass262_6998.method2002((byte) 18)) class348_sub37.unlink((byte) 62);
+                    if (class348_sub37.aClass262_6998.isEmpty((byte) 18)) class348_sub37.unlink((byte) 62);
                     if (i_73_ >= 0 && i_71_ >= 0 && AbstractShaderSub4.anInt7319 > i_73_ && ParametricDefinition.anInt9109 > i_71_) DisplayModeManagerContainer351.method1479(i_71_, (byte) -125, i_73_, GradientPreset.anInt9200);
                 }
             } else if (DisplayModeManagerContainer34.aClass74_8662 == class74) {
@@ -268,17 +268,17 @@ final class InputStream_Sub2 extends InputStream {
                     String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -126);
                     BuildInfo.method205(i_121_, i_119_, i_123_, string, i_122_, -109, i_120_, GradientPreset.anInt9200);
                 } else {
-                    ClientErrorReporter.method1242("T3 - " + class74, null, 15004);
-                    LoggedOutDefinition.method3141(false, (byte) 11);
+                    ClientErrorReporter.reportError("T3 - " + class74, null, 15004);
+                    LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sfa.A(" + (class74 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sfa.A(" + (class74 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
     public final int read() {
-        SpriteAtlasShader.method2161((byte) -118, 30000L);
+        SpriteAtlasShader.sleep((byte) -118, 30000L);
         anInt80++;
         return -1;
     }

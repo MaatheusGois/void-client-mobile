@@ -364,7 +364,7 @@ abstract class GlToolkitSub3
             is[0] = (int) ((float) i_3_ - this.aFloat8126);
             is[1] = (int) ((float) i_2_ - this.aFloat8103);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.da(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.da(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -374,7 +374,7 @@ abstract class GlToolkitSub3
             this.aNativeHeap7891 = ((NodeBaseSub2) var_za).aNativeHeap9782;
             this.aNativeHeapBuffer7974 = this.aNativeHeap7891.a(32768, false);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.PF(" + (var_za != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.PF(" + (var_za != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -489,7 +489,7 @@ abstract class GlToolkitSub3
             this.aBoolean8069 = false;
             method3836(1);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.JH(" + i + ',' + (class101_sub2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.JH(" + i + ',' + (class101_sub2 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -547,7 +547,7 @@ abstract class GlToolkitSub3
             anInt7957++;
             return RenderableSub4.method2501(i_31_, this, is, (byte) -42, is_32_, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.RF(" + i + ',' + i_31_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_32_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.RF(" + i + ',' + i_31_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_32_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -683,7 +683,7 @@ abstract class GlToolkitSub3
                 is[0] = (int) (-this.aFloat8126 + (float) i_47_);
             } else is[0] = is[1] = is[2] = -1;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.HA(" + i + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.HA(" + i + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -702,7 +702,7 @@ abstract class GlToolkitSub3
         try {
             anInt8000++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.Q(" + i + ',' + i_49_ + ',' + i_50_ + ',' + i_51_ + ',' + i_52_ + ',' + i_53_ + ',' + (is != null ? "{...}" : "null") + ',' + i_54_ + ',' + i_55_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.Q(" + i + ',' + i_49_ + ',' + i_50_ + ',' + i_51_ + ',' + i_52_ + ',' + i_53_ + ',' + (is != null ? "{...}" : "null") + ',' + i_54_ + ',' + i_55_ + ')'));
         }
     }
 
@@ -718,7 +718,7 @@ abstract class GlToolkitSub3
                 if (!this.aClass196_8184.method1450(-112)) break;
                 method3913((byte) 107);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "wga.DE(" + (class101 != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "wga.DE(" + (class101 != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -892,7 +892,7 @@ abstract class GlToolkitSub3
             fs[11] = this.aFloatArray8135[14];
             return fs;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.OA(" + (fs != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.OA(" + (fs != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -931,7 +931,7 @@ abstract class GlToolkitSub3
             anInt7965++;
             return method3830(i_64_, is, bool, (byte) 107, 0, 0, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.JG(" + i + ',' + i_64_ + ',' + i_65_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.JG(" + i + ',' + i_64_ + ',' + i_65_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1018,7 +1018,7 @@ abstract class GlToolkitSub3
             anInt8036++;
             method3924(false, false, i_76_, class70, false);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.NJ(" + i + ',' + i_76_ + ',' + (class70 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.NJ(" + i + ',' + i_76_ + ',' + (class70 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1057,7 +1057,7 @@ abstract class GlToolkitSub3
             int i_84_ = 96 / ((i - 20) / 42);
             anInt7900++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.WA(" + i + ',' + (interface18 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.WA(" + i + ',' + (interface18 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1087,7 +1087,7 @@ abstract class GlToolkitSub3
             method3879(-8629);
             method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_85_ + ',' + i_86_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_85_ + ',' + i_86_ + ')'));
         }
     }
 
@@ -1096,7 +1096,7 @@ abstract class GlToolkitSub3
             anInt8016++;
             return new DisplayModeManagerContainer190(this, class124, i, i_88_, i_89_, i_87_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_87_ + ',' + i_88_ + ',' + i_89_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.EG(" + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_87_ + ',' + i_88_ + ',' + i_89_ + ')'));
         }
     }
 
@@ -1112,7 +1112,7 @@ abstract class GlToolkitSub3
                 if (canvas != aCanvas7910) break;
                 method3917(false);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_90_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.HF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_90_ + ')'));
             }
             break;
         } while (false);
@@ -1141,7 +1141,7 @@ abstract class GlToolkitSub3
             this.aClass251Array8113[this.anInt8175] = class251;
             method3905((byte) 111);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.HI(" + i + ',' + (class251 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.HI(" + i + ',' + (class251 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -1194,7 +1194,7 @@ abstract class GlToolkitSub3
             method3862(0, aClass130_8197);
             method3899(i, 0, class21, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.QI(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + i_98_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.QI(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + i_98_ + ')'));
         }
     }
 
@@ -1216,7 +1216,7 @@ abstract class GlToolkitSub3
             is[2] = this.anInt8183;
             is[1] = this.anInt8165;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.K(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.K(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1268,7 +1268,7 @@ abstract class GlToolkitSub3
         try {
             anInt7914++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.IF(" + i + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + i_107_ + ',' + i_108_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + i_112_ + ',' + i_113_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.IF(" + i + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ',' + i_107_ + ',' + i_108_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + i_112_ + ',' + i_113_ + ')'));
         }
     }
 
@@ -1330,7 +1330,7 @@ abstract class GlToolkitSub3
             anInt8011++;
             return new BufferCacheSub3(this, i_125_, i_126_, i, i_122_, is, is_123_, i_124_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.VE(" + i + ',' + i_122_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_123_ != null ? "{...}" : "null") + ',' + i_124_ + ',' + i_125_ + ',' + i_126_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.VE(" + i + ',' + i_122_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_123_ != null ? "{...}" : "null") + ',' + i_124_ + ',' + i_125_ + ',' + i_126_ + ')'));
         }
     }
 
@@ -1339,10 +1339,10 @@ abstract class GlToolkitSub3
             anInt8015++;
             int i_127_ = is.length;
             byte[] is_128_ = new byte[i_127_];
-            Component313.method1577(is, i, is_128_, 0, i_127_);
+            Component313.arraycopy(is, i, is_128_, 0, i_127_);
             return is_128_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.GI(" + (is != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.GI(" + (is != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1373,7 +1373,7 @@ abstract class GlToolkitSub3
                 if (!bool) break;
                 anInt8100 &= ~0x1d;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.RI(" + (class229 != null ? "{...}" : "null") + ',' + i + ',' + (class229_129_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.RI(" + (class229 != null ? "{...}" : "null") + ',' + i + ',' + (class229_129_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1571,7 +1571,7 @@ abstract class GlToolkitSub3
                 if (bool == true) break;
                 method3643(null, -42, 69);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.IH(" + i + ',' + bool + ',' + (class70 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.IH(" + i + ',' + bool + ',' + (class70 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -1643,7 +1643,7 @@ abstract class GlToolkitSub3
             anInt8052++;
             return method3855(class304, i, 0, fs, bool, 0, 2, i_168_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.LI(" + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_168_ + ',' + (class304 != null ? "{...}" : "null") + ',' + i_169_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.LI(" + (fs != null ? "{...}" : "null") + ',' + i + ',' + i_168_ + ',' + (class304 != null ? "{...}" : "null") + ',' + i_169_ + ',' + bool + ')'));
         }
     }
 
@@ -1656,7 +1656,7 @@ abstract class GlToolkitSub3
             if (i != 9179) this.aFloat8093 = -1.2765714F;
             return aStream8088;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.FI(" + (buffer != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.FI(" + (buffer != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1679,7 +1679,7 @@ abstract class GlToolkitSub3
             is[0] = this.anInt7931;
             anInt8076++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.KE(" + (is != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.KE(" + (is != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1688,7 +1688,7 @@ abstract class GlToolkitSub3
             aClass299_Sub2_8171 = (DisplayModeManagerContainer356) class299;
             anInt7950++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.DF(" + (class299 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.DF(" + (class299 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1730,11 +1730,11 @@ abstract class GlToolkitSub3
         do {
             try {
                 anInt8028++;
-                DisplayModeManagerContainer370.aClass296_1131 = class296;
+                DisplayModeManagerContainer370.huffman = class296;
                 if (i == 13) break;
                 method3873(null, -3);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.DI(" + (class296 != null ? "{...}" : "null") + ',' + i + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.DI(" + (class296 != null ? "{...}" : "null") + ',' + i + ')'));
             }
             break;
         } while (false);
@@ -1855,7 +1855,7 @@ abstract class GlToolkitSub3
                 if (object == null) throw new RuntimeException();
                 aHashtable8014.put(canvas, object);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_195_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.VF(" + (canvas != null ? "{...}" : "null") + ',' + i + ',' + i_195_ + ')'));
             }
             break;
         } while (false);
@@ -1958,7 +1958,7 @@ abstract class GlToolkitSub3
             aClass280_8136.method2101(this, class98, i, 0);
             anInt7968++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.FG(" + (class98 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1975,13 +1975,13 @@ abstract class GlToolkitSub3
                     for (int i_212_ = 0; (i_212_ < class207.anInt2696); i_212_++) {
                         for (int i_213_ = 0; i_213_ < class207.anInt2702; i_213_++) {
                             int i_214_ = (class207.anIntArray2697[0xff & (class207.aByteArray2699[i++])]);
-                            is[i_211_++] = (i_214_ != 0 ? Component224.method2057(i_214_, -16777216) : 0);
+                            is[i_211_++] = (i_214_ != 0 ? Component224.bitwiseOr(i_214_, -16777216) : 0);
                         }
                     }
                 } else {
                     for (int i_215_ = 0; i_215_ < class207.anInt2696; i_215_++) {
                         for (int i_216_ = 0; class207.anInt2702 > i_216_; i_216_++) {
-                            is[i_211_++] = (Component224.method2057((class207.anIntArray2697[GpsOverlay.method1166((class207.aByteArray2699[i]), 255)]), (class207.aByteArray2695[i] << 24)));
+                            is[i_211_++] = (Component224.bitwiseOr((class207.anIntArray2697[GpsOverlay.bitwiseAnd((class207.aByteArray2699[i]), 255)]), (class207.aByteArray2695[i] << 24)));
                             i++;
                         }
                     }
@@ -1991,7 +1991,7 @@ abstract class GlToolkitSub3
             class105.method985(class207.anInt2703, class207.anInt2700, class207.anInt2698, class207.anInt2701);
             return class105;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.GF(" + (class207 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -1999,7 +1999,7 @@ abstract class GlToolkitSub3
         try {
             anInt7918++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.ME(" + i + ',' + i_217_ + ',' + i_218_ + ',' + i_219_ + ',' + i_220_ + ',' + i_221_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_222_ + ',' + i_223_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.ME(" + i + ',' + i_217_ + ',' + i_218_ + ',' + i_219_ + ',' + i_220_ + ',' + i_221_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_222_ + ',' + i_223_ + ')'));
         }
     }
 
@@ -2199,7 +2199,7 @@ abstract class GlToolkitSub3
             method3881(anObject8020, (byte) 99, aCanvas7910);
             method3917(false);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.MF(" + (canvas != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.MF(" + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2349,7 +2349,7 @@ abstract class GlToolkitSub3
                 method3911(canvas, 1, aHashtable8014.get(canvas));
                 aHashtable8014.remove(canvas);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "wga.AG(" + (canvas != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "wga.AG(" + (canvas != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -2360,7 +2360,7 @@ abstract class GlToolkitSub3
             anInt7944++;
             return new SpriteSub1(this, i_261_, i_262_, is, i, i_260_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_260_ + ',' + i_261_ + ',' + i_262_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.BE(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_260_ + ',' + i_261_ + ',' + i_262_ + ',' + bool + ')'));
         }
     }
 
@@ -2454,7 +2454,7 @@ abstract class GlToolkitSub3
             is[0] = (int) ((float) i_267_ - this.aFloat8126);
             is[2] = (int) f;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.H(" + i + ',' + i_264_ + ',' + i_265_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.H(" + i + ',' + i_264_ + ',' + i_265_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2495,7 +2495,7 @@ abstract class GlToolkitSub3
         return this.anInt8154;
     }
 
-    final int method3679(int i, int i_273_) {
+    final int bitwiseOr(int i, int i_273_) {
         anInt8030++;
         return i_273_ | i;
     }
@@ -2527,7 +2527,7 @@ abstract class GlToolkitSub3
             anInt7952++;
             return new JaclibBitmapFont(this, class143, class207s, bool);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.JE(" + (class143 != null ? "{...}" : "null") + ',' + (class207s != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -2541,7 +2541,7 @@ abstract class GlToolkitSub3
                 if (!this.aClass196_8184.method1450(-94)) break;
                 method3823((byte) 51);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wga.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -2600,7 +2600,7 @@ abstract class GlToolkitSub3
             anInt7929++;
             return method3843(i_288_, 0, i, 0, is, class304, i_287_ ^ 0x22, bool);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.MG(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + i_287_ + ',' + bool + ',' + i_288_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.MG(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class304 != null ? "{...}" : "null") + ',' + i_287_ + ',' + bool + ',' + i_288_ + ')'));
         }
     }
 
@@ -2705,7 +2705,7 @@ abstract class GlToolkitSub3
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.<init>(" + (canvas != null ? "{...}" : "null") + ',' + (object != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_289_ + ')'));
         }
     }
 
@@ -2726,7 +2726,7 @@ abstract class GlToolkitSub3
             aClass280_8136.method2101(this, class98, -1, 0);
             anInt7984++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wga.EF(" + (class98 != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wga.EF(" + (class98 != null ? "{...}" : "null") + ')');
         }
     }
 

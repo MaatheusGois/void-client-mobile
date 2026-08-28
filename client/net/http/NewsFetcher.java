@@ -39,8 +39,8 @@ final class NewsFetcher implements Runnable {
             String string = bufferedreader.readLine();
             BrowserDetector class179 = CookieBuilder.method381((byte) 68);
             for (/**/; string != null; string = bufferedreader.readLine())
-                class179.method1364(-1, string);
-            String[] strings = class179.method1361(63);
+                class179.add(-1, string);
+            String[] strings = class179.toArray(63);
             if (strings.length % 3 != 0) return;
             aClass295Array4204 = new DisplayModeManagerContainer61[strings.length / 3];
             for (int i = 0; i < strings.length; i += 3)
@@ -148,15 +148,15 @@ final class NewsFetcher implements Runnable {
         if (aBoolean4205) return true;
         if (aClass144_4201 == null) {
             try {
-                int i_15_ = (DisplayModeManagerContainer345.aClass364_165 == Component326.aClass364_5271 ? 80 : 7000 - -(MenuOpener.aClass161_4839.anInt2143));
-                aClass144_4201 = (OggUrlStream.aClass297_8992.method2237(new URL("http://" + (MenuOpener.aClass161_4839.aString2147) + ":" + i_15_ + "/news.ws?game=" + PacketReader.aClass230_10434.anInt2987), 8362));
+                int i_15_ = (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE ? 80 : 7000 - -(MenuOpener.aClass161_4839.anInt2143));
+                aClass144_4201 = (OggUrlStream.aClass297_8992.openUrlStream(new URL("http://" + (MenuOpener.aClass161_4839.aString2147) + ":" + i_15_ + "/news.ws?game=" + PacketReader.currentGameType.id), 8362));
             } catch (java.net.MalformedURLException malformedurlexception) {
                 return true;
             }
         }
-        if (aClass144_4201 == null || aClass144_4201.anInt1997 == 2) return true;
+        if (aClass144_4201 == null || aClass144_4201.status == 2) return true;
         if (i != -21913) return false;
-        if (aClass144_4201.anInt1997 != 1) return false;
+        if (aClass144_4201.status != 1) return false;
         if (aThread4206 == null) {
             aThread4206 = new Thread(this);
             aThread4206.start();
@@ -171,7 +171,7 @@ final class NewsFetcher implements Runnable {
                 Component45.method3461(0, objects, -1 + ls.length, ls, 9455);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eaa.E(" + (objects != null ? "{...}" : "null") + ',' + (ls != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eaa.E(" + (objects != null ? "{...}" : "null") + ',' + (ls != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 }

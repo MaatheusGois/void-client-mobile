@@ -29,7 +29,7 @@ final class VideoAdPlayer implements Interface1 {
     public final void method9(byte i, boolean bool) {
         if (bool) {
             int i_0_ = ((aClass158_4646.aClass221_4948.method1607(DisplayModeManagerContainer23.anInt1524, aClass158_4646.anInt4931, (byte) -119)) + aClass158_4646.anInt4947);
-            int i_1_ = ((aClass158_4646.aClass341_4945.method2679(GlToolkitSub2.anInt7666, aClass158_4646.anInt4936, i + 1644)) + aClass158_4646.anInt4932);
+            int i_1_ = ((aClass158_4646.aClass341_4945.getAlignedOffset(GlToolkitSub2.anInt7666, aClass158_4646.anInt4936, i + 1644)) + aClass158_4646.anInt4932);
             aClass324_4649.method2584(null, aClass158_4646.anInt4937, aClass158_4646.anInt4940, null, aClass158_4646.anInt4935, aClass158_4646.anInt4946, aClass158_4646.anInt4936, null, i_1_, 0, 0, aClass158_4646.anInt4931, i_0_, false, aClass158_4646.anInt4943, aClass158_4646.aString4942);
         }
         if (i == -49) anInt4642++;
@@ -38,8 +38,8 @@ final class VideoAdPlayer implements Interface1 {
     public final boolean method8(byte i) {
         anInt4644++;
         boolean bool = true;
-        if (!aClass45_4650.method421(false, aClass158_4646.anInt4944)) bool = false;
-        if (!aClass45_4651.method421(false, aClass158_4646.anInt4944)) bool = false;
+        if (!aClass45_4650.isSingletonFileReady(false, aClass158_4646.anInt4944)) bool = false;
+        if (!aClass45_4651.isSingletonFileReady(false, aClass158_4646.anInt4944)) bool = false;
         int i_2_ = -53 % ((i - 25) / 52);
         return bool;
     }
@@ -70,7 +70,7 @@ final class VideoAdPlayer implements Interface1 {
             aClass158_4646 = class158;
             aClass45_4650 = class45;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kd.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ',' + (class158 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kd.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ',' + (class158 != null ? "{...}" : "null") + ')'));
         }
     }
 

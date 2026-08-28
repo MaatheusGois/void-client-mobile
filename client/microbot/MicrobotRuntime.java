@@ -83,7 +83,7 @@ final class MicrobotRuntime {
             return;
         }
         try {
-            String attack = FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
+            String attack = FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
             String[] actions = composition.aStringArray1349;
             boolean hasAttack = false;
             if (actions != null) {

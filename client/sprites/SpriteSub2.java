@@ -96,7 +96,7 @@ final class SpriteSub2
         return aClass258_Sub3_Sub1_8434.anInt9939;
     }
 
-    final void method968(int i, int i_24_, int i_25_) {
+    final void capturePixels(int i, int i_24_, int i_25_) {
         anInt8438++;
         OpenGL.glPixelTransferf(3348, 0.5F);
         OpenGL.glPixelTransferf(3349, 0.499F);
@@ -503,7 +503,7 @@ final class SpriteSub2
         try {
             return l ^ l_104_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "nda.Q(" + l + ',' + l_104_ + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "nda.Q(" + l + ',' + l_104_ + ')');
         }
     }
 
@@ -534,7 +534,7 @@ final class SpriteSub2
             aHa_Sub2_8430 = var_ha_Sub2;
             aClass258_Sub3_Sub1_8434 = DefinitionSub32.method3132(is, i_110_, i_111_, i_109_, i, var_ha_Sub2, false, (byte) 12);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nda.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_109_ + ',' + (is != null ? "{...}" : "null") + ',' + i_110_ + ',' + i_111_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nda.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_109_ + ',' + (is != null ? "{...}" : "null") + ',' + i_110_ + ',' + i_111_ + ')'));
         }
     }
 }

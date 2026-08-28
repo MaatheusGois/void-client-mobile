@@ -12,7 +12,8 @@ abstract class Component40
     static int anInt6320;
     static Component161 aClass138_6321 = new Component161(1, 2, 2, 0);
     static int anInt6322;
-    static FileOutputStream aFileOutputStream6323;
+    /** Optional tee of console lines (opened by "output" command). */
+    static FileOutputStream consoleLogStream;
 
     abstract GlFramebufferTexture method2256(byte i);
 
@@ -27,7 +28,7 @@ abstract class Component40
 
     public static void method2258(byte i) {
         aClass138_6321 = null;
-        if (i < -119) aFileOutputStream6323 = null;
+        if (i < -119) consoleLogStream = null;
     }
 
     static final boolean method2259(int i, int i_5_, int i_6_) {

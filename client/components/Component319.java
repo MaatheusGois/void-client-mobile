@@ -30,8 +30,8 @@ final class Component319
     boolean aBoolean218;
 
     static final void method223(int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
-        if (i_2_ > i) MenuOpener.method1156(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i, i_0_);
-        else MenuOpener.method1156(-27, i, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_2_, i_0_);
+        if (i_2_ > i) MenuOpener.fillInts(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i, i_0_);
+        else MenuOpener.fillInts(-27, i, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_2_, i_0_);
         anInt214++;
         if (i_3_ >= 20) {
             /* empty */

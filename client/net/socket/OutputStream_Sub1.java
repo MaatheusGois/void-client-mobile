@@ -99,7 +99,7 @@ final class OutputStream_Sub1 extends OutputStream {
                 byte i_16_ = (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264.method1778(-32350) != 2 ? (byte) 1 : (byte) DisplayModeManagerContainer341.anInt6006);
                 if (Component210.aBoolean5300) {
                     Component158.method289(-15902, 0x3fff & -Component298.anInt4638, -Component103.anInt4186 & 0x3fff, (-HashNodeSub19.anInt9701 & 0x3fff));
-                    DisplayModeManagerContainer124.method1634(DisplayModeManagerContainer370.anIntArray1127, -2, Component156.aByteArrayArrayArray3700, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.plane) - -1, DisplayModeManagerContainer363.anIntArray4097, WaterSurfaceShader.anInt6246, Component317.anInt8685, Component192.aClass348_Sub51_3959.aClass239_Sub1_7246.method1720(-32350) == 0, DisplayModeManagerContainer50.anInt3855, (Component72.localPlayer.x) >> 9, ClientErrorReporter.anIntArray2117, DefinitionSub19.anIntArray9259, i_16_, LoadingState.anIntArray1045, OpenGlShader.clientCycle, true, Component72.anInt1906);
+                    GameType.method1634(DisplayModeManagerContainer370.anIntArray1127, -2, Component156.aByteArrayArrayArray3700, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.plane) - -1, DisplayModeManagerContainer363.anIntArray4097, WaterSurfaceShader.anInt6246, Component317.anInt8685, Component192.aClass348_Sub51_3959.aClass239_Sub1_7246.method1720(-32350) == 0, DisplayModeManagerContainer50.anInt3855, (Component72.localPlayer.x) >> 9, ClientErrorReporter.anIntArray2117, DefinitionSub19.anIntArray9259, i_16_, LoadingState.anIntArray1045, OpenGlShader.clientCycle, true, Component72.anInt1906);
                 } else
                     AbstractGlTextureSub1.method1960(OpenGlShader.clientCycle, WaterSurfaceShader.anInt6246, DisplayModeManagerContainer50.anInt3855, Component317.anInt8685, Component156.aByteArrayArrayArray3700, DisplayModeManagerContainer363.anIntArray4097, ClientErrorReporter.anIntArray2117, DefinitionSub19.anIntArray9259, LoadingState.anIntArray1045, DisplayModeManagerContainer370.anIntArray1127, (Component72.localPlayer.plane) - -1, i_16_, (Component72.localPlayer.x) >> 9, (Component72.localPlayer.y) >> 9, Component192.aClass348_Sub51_3959.aClass239_Sub1_7246.method1720(-32350) == 0, true, !DisplayModeManagerContainer50.aBoolean3870 ? -1 : Component72.anInt1906, 0, false);
                 Component381.method3570(false);
@@ -115,10 +115,10 @@ final class OutputStream_Sub1 extends OutputStream {
                 Component298.anInt4638 = i_12_;
                 DisplayModeManagerContainer50.anInt3855 = i_9_;
                 Component317.anInt8685 = i_10_;
-                if (TcpSocketStream.aBoolean5840 && HardwareProbe.aClass248_6601.method1902(4) == 0) TcpSocketStream.aBoolean5840 = false;
+                if (TcpSocketStream.aBoolean5840 && HardwareProbe.aClass248_6601.priorityQueueSize(4) == 0) TcpSocketStream.aBoolean5840 = false;
                 if (TcpSocketStream.aBoolean5840) {
                     NodeSub8.toolkit.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
-                    Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)), 2, NodeSub8.toolkit);
+                    Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
                 }
                 Component127.method1626(1, false);
             }
@@ -143,13 +143,13 @@ final class OutputStream_Sub1 extends OutputStream {
         if (Component117.anObject4366 == null) {
             Component350 class59_sub1_sub1 = new Component350();
             byte[] is = class59_sub1_sub1.method559(128, 128, (byte) 106, 16);
-            Component117.anObject4366 = BrowserDetector.method1357(is, false, (byte) 111);
+            Component117.anObject4366 = BrowserDetector.wrapSoft(is, false, (byte) 111);
         }
         anInt92++;
         if (Component150.anObject2969 == null) {
             Component317 class59_sub2_sub2 = new Component317();
             byte[] is = class59_sub2_sub2.method571(128, (byte) -38, 16, 128);
-            Component150.anObject2969 = BrowserDetector.method1357(is, false, (byte) 106);
+            Component150.anObject2969 = BrowserDetector.wrapSoft(is, false, (byte) 106);
         }
     }
 

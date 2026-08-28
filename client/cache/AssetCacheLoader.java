@@ -34,14 +34,16 @@ final class AssetCacheLoader {
     static int anInt380;
     /** Cache principal de resultados (NodeSub19Sub1) — 256 entradas. */
     private final LruCache decodedCache = new LruCache(256);
-    static NamedInteger aClass364_382 = new NamedInteger("WTQA", 2);
+    /** World-test QA channel. */
+    static NamedInteger WTQA = new NamedInteger("WTQA", 2);
     static int anInt383;
-    static boolean aBoolean384 = false;
+    /** Set once {@link Applet_Sub1#shutdown} begins; blocks re-entry. */
+    static boolean shuttingDown = false;
     static int anInt385 = 0;
     static int anInt386;
 
     public static void method306(boolean bool) {
-        aClass364_382 = null;
+        WTQA = null;
         if (bool != true) method311((byte) -5, '\002');
     }
 
@@ -64,15 +66,15 @@ final class AssetCacheLoader {
 
     final NodeSub19Sub1 method308(int i, int[] is, int i_3_) {
         anInt373++;
-        if ((~primaryStore.method414(-1)) == i_3_) return method307(i, is, 122, 0);
-        if (primaryStore.method407(0, i) == 1) return method307(0, is, 69, i);
+        if ((~primaryStore.getGroupCapacity(-1)) == i_3_) return method307(i, is, 122, 0);
+        if (primaryStore.getFileCount(0, i) == 1) return method307(0, is, 69, i);
         throw new RuntimeException();
     }
 
     final NodeSub19Sub1 method309(int[] is, int i, int i_4_) {
         anInt376++;
-        if (secondaryStore.method414(i_4_) == 1) return method310(i, 0, (byte) 92, is);
-        if (secondaryStore.method407(0, i) == 1) return method310(0, i, (byte) 78, is);
+        if (secondaryStore.getGroupCapacity(i_4_) == 1) return method310(i, 0, (byte) 92, is);
+        if (secondaryStore.getFileCount(0, i) == 1) return method310(0, i, (byte) 78, is);
         if (i_4_ != -1) method307(44, null, -124, -47);
         throw new RuntimeException();
     }
@@ -110,7 +112,7 @@ final class AssetCacheLoader {
             secondaryStore = class45_9_;
             primaryStore = class45;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("AssetCacheLoader.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("AssetCacheLoader.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (class45_9_ != null ? "{...}" : "null") + ')'));
         }
     }
 

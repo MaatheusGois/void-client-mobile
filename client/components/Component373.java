@@ -23,9 +23,9 @@ final class Component373
             class117 = (Component208) aClass60_460.get(i, 111);
         }
         if (class117 != null) return class117;
-        byte[] is = aClass45_458.method410(-1860, DisplayModeManagerContainer89.method200(-107, i), Sprite.method3013(i, bool));
+        byte[] is = aClass45_458.getFile(-1860, DisplayModeManagerContainer89.method200(-107, i), Sprite.method3013(i, bool));
         class117 = new Component208();
-        if (is != null) class117.method1069(0, new Buffer(is));
+        if (is != null) class117.decode(0, new Buffer(is));
         synchronized (aClass60_460) {
             aClass60_460.putOne(class117, i, (byte) -102);
         }
@@ -41,12 +41,12 @@ final class Component373
                 Component170 class207 = class222.method1610((byte) 71);
                 if (class207 == null) i_0_ = -1;
                 else {
-                    OggUrlStream.aClass297_8992.method2238(class207.method1522(), class207.method1516(), 17, new Point(class222.anInt2883, class222.anInt2890), DisplayModeManagerContainer50.gameCanvas, class207.method1510());
+                    OggUrlStream.aClass297_8992.setCustomCursor(class207.method1522(), class207.method1516(), 17, new Point(class222.anInt2883, class222.anInt2890), DisplayModeManagerContainer50.gameCanvas, class207.method1510());
                     Component244.anInt4179 = i_0_;
                 }
             }
             if (i_0_ == -1 && Component244.anInt4179 != -1) {
-                OggUrlStream.aClass297_8992.method2238(-1, null, i + 17, new Point(), (DisplayModeManagerContainer50.gameCanvas), -1);
+                OggUrlStream.aClass297_8992.setCustomCursor(-1, null, i + 17, new Point(), (DisplayModeManagerContainer50.gameCanvas), -1);
                 Component244.anInt4179 = -1;
             }
         }
@@ -70,7 +70,8 @@ final class Component373
         }
     }
 
-    static final int method340(int i, byte i_5_) {
+    /** Smallest power of two {@code > i-1} (bit-smear idiom). */
+    static final int nextPowerOfTwo(int i, byte i_5_) {
         anInt459++;
         i = --i | i >>> 1;
         i |= i >>> 2;
@@ -81,15 +82,15 @@ final class Component373
         return 1 + i;
     }
 
-    Component373(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component373(GameType class230, int i, CacheStore class45) {
         do {
             try {
                 aClass45_458 = class45;
                 if (aClass45_458 == null) break;
-                int i_6_ = -1 + aClass45_458.method414(-1);
-                aClass45_458.method407(0, i_6_);
+                int i_6_ = -1 + aClass45_458.getGroupCapacity(-1);
+                aClass45_458.getFileCount(0, i_6_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("iba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("iba.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

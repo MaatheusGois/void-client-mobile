@@ -11,7 +11,8 @@ final class Component352
     static int anInt622;
     static int anInt623;
     static DisplayModeManagerContainer204 aClass101_624;
-    static char[] aCharArray625 = {'\u20ac', '\0', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020', '\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\0', '\u017d', '\0', '\0', '\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161', '\u203a', '\u0153', '\0', '\u017e', '\u0178'};
+    /** CP1252 mapping for bytes 0x80–0x9F (nul = unmapped → '?'). */
+    static char[] cp1252HighChars = {'\u20ac', '\0', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020', '\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\0', '\u017d', '\0', '\0', '\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161', '\u203a', '\u0153', '\0', '\u017e', '\u0178'};
 
     static final int method384(int i, int i_0_, int i_1_) {
         anInt623++;
@@ -67,7 +68,7 @@ final class Component352
                 if (bool == false) break;
                 method387(26);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ik.D(" + bool + ',' + (class237_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ik.D(" + bool + ',' + (class237_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -81,8 +82,8 @@ final class Component352
 
     public static void method387(int i) {
         aClass101_624 = null;
-        aCharArray625 = null;
-        if (i < 33) aCharArray625 = null;
+        cp1252HighChars = null;
+        if (i < 33) cp1252HighChars = null;
     }
 
     static final void method388(int i, int i_18_, int i_19_, Component203 class318_sub1_sub5, Component203 class318_sub1_sub5_20_) {

@@ -119,7 +119,7 @@ final class DisplayModeManagerContainer159
 
     static final void method1540(int i, int i_31_, int i_32_) {
         anInt2746++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_31_, (byte) 105, 13);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_31_, (byte) 105, 13);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_32_;
         if (i >= -84) anIntArray2744 = null;
@@ -369,7 +369,7 @@ final class DisplayModeManagerContainer159
                 if (i_47_ <= i_50_) i_50_ = i_47_ - 1;
                 int i_51_ = 0xff & i_49_;
                 if (-i_50_ + i_47_ < i_51_) i_51_ = i_47_ - i_50_;
-                this.aShortArray2742[i_48_] = (short) Component224.method2057(i_51_, i_50_ << 8);
+                this.aShortArray2742[i_48_] = (short) Component224.bitwiseOr(i_51_, i_50_ << 8);
             }
             i_46_ = ((i_46_ << Component149.anInt4459) + DisplayModeManagerContainer64.anInt9037);
             int i_52_ = (RunescapeInfo.anIntArray179 == null ? (Component380.anIntArray4983[Component361.method303(class348_sub49.readUnsignedShort(842397944), 30) & 0xffff]) : (RunescapeInfo.anIntArray179[class348_sub49.readUnsignedShort(842397944)]));
@@ -379,7 +379,7 @@ final class DisplayModeManagerContainer159
             if (this.anInt2734 != 31) method1542(32402);
             method1541(i_45_, var_ha, i_44_, i_43_, 3, i_52_, i_46_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ro.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ro.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 }

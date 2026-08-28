@@ -81,7 +81,7 @@ final class Component297
                 if ((aClass216_4724.anInt4974 != this.anInt4725) || (this.anInt4722 != aClass216_4724.anInt4978)) throw new RuntimeException();
                 this.aFloatArray4719 = aClass216_4724.aFloatArray4980;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("it.<init>(" + (var_ha_Sub1 != null ? "{...}" : "null") + ',' + (class105 != null ? "{...}" : "null") + ',' + (class216 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("it.<init>(" + (var_ha_Sub1 != null ? "{...}" : "null") + ',' + (class105 != null ? "{...}" : "null") + ',' + (class216 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

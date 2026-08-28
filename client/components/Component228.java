@@ -55,7 +55,7 @@ final class Component228
     static final void method1647(int i, int i_3_) {
         if (i != -128) anIntArray3014 = null;
         anInt3012++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_3_, (byte) 105, 1);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_3_, (byte) 105, 1);
         class348_sub42_sub15.method3251(-16058);
     }
 
@@ -98,7 +98,7 @@ final class Component228
                             short[] is = (var_s_Sub2.aShortArrayArray8267[i_16_++]);
                             if (is != null) {
                                 for (int i_18_ = 0; is.length > i_18_; i_18_++)
-                                    class348_sub49.method3397(87, is[i_18_] & 0xffff);
+                                    class348_sub49.writeShortLE(87, is[i_18_] & 0xffff);
                             }
                         }
                     }
@@ -107,7 +107,7 @@ final class Component228
                 aClass119_Sub2_3011 = new Component261(aHa_Sub2_3000, 5123, null, 1);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sm.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class104 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sm.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class104 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ')'));
         }
     }
 

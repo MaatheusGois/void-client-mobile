@@ -8,7 +8,8 @@ final class Component21
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt3651;
-    static boolean aBoolean3652;
+    /** True for stereo PCM (2 channels). */
+    static boolean stereo;
     static int anInt3653;
     static LruCache aClass356_3654;
     static int anInt3655 = 0;

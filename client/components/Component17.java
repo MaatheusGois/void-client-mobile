@@ -29,7 +29,7 @@ final class Component17
             if (class348_sub42 != null) aClass107_3889.add(true, class348_sub42);
             return class348_sub42;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "wu.D(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "wu.D(" + l + ',' + i + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class Component17
                 if (i <= -110) break;
                 method2304(36, -86L);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "wu.C(" + i + ',' + l + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "wu.C(" + i + ',' + l + ')');
             }
             break;
         } while (false);
@@ -77,7 +77,7 @@ final class Component17
             aClass356_3888.put((byte) 37, l, class348_sub42);
             aClass107_3889.add(true, class348_sub42);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wu.E(" + l + ',' + (class348_sub42 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wu.E(" + l + ',' + (class348_sub42 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

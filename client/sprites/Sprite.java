@@ -26,7 +26,8 @@ abstract class Sprite extends Node {
     static StringCache aClass351_6925;
     static String aString6926;
 
-    static final void method3007(int i, int i_0_) {
+    /** Stop / reset the current music stream state. */
+    static final void resetMusic(int i, int i_0_) {
         Component197.anInt10074 = -1;
         DebugPanic.aClass348_Sub16_Sub3_4743 = null;
         if (i_0_ != 22684) anInt6913 = -117;
@@ -121,9 +122,9 @@ abstract class Sprite extends Node {
         int i_81_ = i_73_;
         int i_82_ = (-1 + i_55_) * i_72_;
         int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_49_];
-        MenuOpener.method1156(-27, i_47_ - i_54_, is, -i_45_ + i_47_, i_46_);
-        MenuOpener.method1156(-27, i_47_ + i_54_, is, -i_54_ + i_47_, i_44_);
-        MenuOpener.method1156(-27, i_45_ + i_47_, is, i_47_ + i_54_, i_46_);
+        MenuOpener.fillInts(-27, i_47_ - i_54_, is, -i_45_ + i_47_, i_46_);
+        MenuOpener.fillInts(-27, i_47_ + i_54_, is, -i_54_ + i_47_, i_44_);
+        MenuOpener.fillInts(-27, i_45_ + i_47_, is, i_47_ + i_54_, i_46_);
         while (i_52_ > 0) {
             boolean bool = i_55_ >= i_52_;
             if (i_66_ < 0) {
@@ -176,15 +177,15 @@ abstract class Sprite extends Node {
             if (bool) {
                 int i_87_ = i_47_ + i_53_;
                 int i_88_ = -i_53_ + i_47_;
-                MenuOpener.method1156(-27, i_88_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_86_, i_46_);
-                MenuOpener.method1156(-27, i_87_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_88_, i_44_);
-                MenuOpener.method1156(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_87_, i_46_);
-                MenuOpener.method1156(-27, i_88_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_86_, i_46_);
-                MenuOpener.method1156(-27, i_87_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_88_, i_44_);
-                MenuOpener.method1156(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_87_, i_46_);
+                MenuOpener.fillInts(-27, i_88_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_86_, i_46_);
+                MenuOpener.fillInts(-27, i_87_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_88_, i_44_);
+                MenuOpener.fillInts(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_87_, i_46_);
+                MenuOpener.fillInts(-27, i_88_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_86_, i_46_);
+                MenuOpener.fillInts(-27, i_87_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_88_, i_44_);
+                MenuOpener.fillInts(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_87_, i_46_);
             } else {
-                MenuOpener.method1156(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_86_, i_46_);
-                MenuOpener.method1156(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_86_, i_46_);
+                MenuOpener.fillInts(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_83_], i_86_, i_46_);
+                MenuOpener.fillInts(-27, i_85_, DisplayModeManagerContainer167.anIntArrayArray255[i_84_], i_86_, i_46_);
             }
         }
     }
@@ -195,7 +196,8 @@ abstract class Sprite extends Node {
         return i & 0xff;
     }
 
-    static final void method3014(Buffer class348_sub49, byte i) {
+    /** Decode client-preference varp values from a preferences buffer. */
+    static final void readPreferences(Buffer class348_sub49, byte i) {
         anInt6914++;
         if ((class348_sub49.payload.length - class348_sub49.offset) >= 1) {
             int i_89_ = class348_sub49.readUnsignedByte(255);

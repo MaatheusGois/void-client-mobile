@@ -21,7 +21,7 @@ final class DisplayModeManagerContainer130
         if (class348_sub42_sub7 != null) return class348_sub42_sub7;
         byte[] is;
         synchronized (aClass45_3468) {
-            is = aClass45_3468.method410(-1860, 5, i_0_);
+            is = aClass45_3468.getFile(-1860, 5, i_0_);
         }
         class348_sub42_sub7 = new HashNodeSub7();
         if (i < 78) method2046();
@@ -41,12 +41,12 @@ final class DisplayModeManagerContainer130
         DisplayModeManagerContainer5.aClass76_1208 = DisplayModeManagerContainer5.aClass76_1210;
     }
 
-    DisplayModeManagerContainer130(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    DisplayModeManagerContainer130(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_3468 = class45;
-            aClass45_3468.method407(0, 5);
+            aClass45_3468.getFileCount(0, 5);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ut.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ut.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 }

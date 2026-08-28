@@ -73,7 +73,7 @@ final class Component186
             if (i_1_ != 16980) aLongArray4410 = null;
             return stringbuffer.reverse().toString();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("es.C(" + i + ',' + bool + ',' + i_0_ + ',' + l + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("es.C(" + i + ',' + bool + ',' + i_0_ + ',' + l + ',' + i_1_ + ')'));
         }
     }
 

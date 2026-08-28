@@ -13,7 +13,8 @@ final class DisplayModeManagerContainer152
     static DisplayModeManagerContainer238 aClass74_4537 = new DisplayModeManagerContainer238(3, 2);
     static SeekableFile aClass78_4538;
 
-    static final void method3610(byte[] is, byte i, int i_0_, File file) throws IOException {
+    /** Read up to {@code i_0_} bytes from {@code file} into {@code is} (EOF tolerated). */
+    static final void readFileFully(byte[] is, byte i, int i_0_, File file) throws IOException {
         try {
             anInt4536++;
             DataInputStream datainputstream = (new DataInputStream(new BufferedInputStream(new FileInputStream(file))));
@@ -25,7 +26,7 @@ final class DisplayModeManagerContainer152
             }
             datainputstream.close();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gca.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (file != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gca.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (file != null ? "{...}" : "null") + ')'));
         }
     }
 

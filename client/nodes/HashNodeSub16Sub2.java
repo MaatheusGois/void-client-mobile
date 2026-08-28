@@ -4,14 +4,18 @@
 
 final class HashNodeSub16Sub2
 /**
- * RENAMED from `Class348_Sub42_Sub16_Sub2` (JODE-obfuscated).
- * Evidence: subclass of HashNodeSub16 (hierarchy)
+ * RENAMED from {@code Class348_Sub42_Sub16_Sub2} (JODE-obfuscated).
+ * Disk-backed JS5 request node processed by {@link DisplayModeManagerContainer67}.
+ * {@link #type}: 1 = sync read result, 2 = write, 3 = async read.
  */ extends HashNodeSub16 {
-    int anInt10457;
-    CacheIndexReader aClass137_10458;
+    /** Job kind (1 sync-read / 2 write / 3 async-read). */
+    int type;
+    /** Target cache index reader for this job. */
+    CacheIndexReader indexReader;
     static int anInt10459;
     static int anInt10460;
-    byte[] aByteArray10461;
+    /** Payload bytes (input for writes, output for reads). */
+    byte[] data;
     static int anInt10462;
     static int anInt10463 = 0;
     static int anInt10464;
@@ -28,10 +32,10 @@ final class HashNodeSub16Sub2
         if (i != -24) method3265(-70, null, null);
     }
 
-    final int method3257(int i) {
+    final int getProgressPercent(int i) {
         anInt10460++;
-        if (i != 16) this.aClass137_10458 = null;
-        if (this.aBoolean9664) return 0;
+        if (i != 16) this.indexReader = null;
+        if (this.incomplete) return 0;
         return 100;
     }
 
@@ -45,15 +49,15 @@ final class HashNodeSub16Sub2
             class348.previous.next = class348;
             class348.next.previous = class348;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qh.K(" + i + ',' + (class348 != null ? "{...}" : "null") + ',' + (class348_0_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qh.K(" + i + ',' + (class348 != null ? "{...}" : "null") + ',' + (class348_0_ != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final byte[] method3259(int i) {
+    final byte[] getData(int i) {
         anInt10464++;
-        if (i != 16) method3259(8);
-        if (this.aBoolean9664) throw new RuntimeException();
-        return this.aByteArray10461;
+        if (i != 16) getData(8);
+        if (this.incomplete) throw new RuntimeException();
+        return this.data;
     }
 
     public HashNodeSub16Sub2() {

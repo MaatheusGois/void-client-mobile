@@ -91,7 +91,7 @@ final class DisplayModeManagerContainer104
             if (i_1_ > -106) this.aBoolean10345 = false;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lf.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lf.N(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (class318_sub1 != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ')'));
         }
     }
 
@@ -125,25 +125,25 @@ final class DisplayModeManagerContainer104
 
     static final Frame createFrame(int i, int i_6_, ReflectionInvoker class297, int i_7_, int i_8_, int i_9_) {
         anInt10344++;
-        if (!class297.method2247(-4)) return null;
+        if (!class297.hasFullscreenSupport(-4)) return null;
         if (i_7_ == 0) {
-            DisplayModeManagerContainer115[] class57s = Component248.method286((byte) -49, class297);
+            DisplayModeInfo[] class57s = Component248.getDisplayModes((byte) -49, class297);
             if (class57s == null) return null;
             boolean bool = false;
             for (int i_10_ = 0; class57s.length > i_10_; i_10_++) {
-                if (i_6_ == class57s[i_10_].anInt1047 && (i == class57s[i_10_].anInt1054) && (i_9_ == 0 || (class57s[i_10_].anInt1052 == i_9_)) && (!bool || (class57s[i_10_].anInt1046 > i_7_))) {
-                    i_7_ = class57s[i_10_].anInt1046;
+                if (i_6_ == class57s[i_10_].width && (i == class57s[i_10_].height) && (i_9_ == 0 || (class57s[i_10_].refreshRate == i_9_)) && (!bool || (class57s[i_10_].bitDepth > i_7_))) {
+                    i_7_ = class57s[i_10_].bitDepth;
                     bool = true;
                 }
             }
             if (!bool) return null;
         }
-        Task class144 = class297.method2229(i_9_, i, i_7_, i_6_, (byte) -11);
-        while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 19, 10L);
+        Task class144 = class297.createFullscreenFrame(i_9_, i, i_7_, i_6_, (byte) -11);
+        while (class144.status == 0) SpriteAtlasShader.sleep((byte) 19, 10L);
         Frame frame = (Frame) class144.result;
         if (frame == null) return null;
         if (i_8_ != 14199) return null;
-        if (class144.anInt1997 == 2) {
+        if (class144.status == 2) {
             LoadingState.startLoadingTask(frame, class297, false);
             return null;
         }
@@ -163,7 +163,7 @@ final class DisplayModeManagerContainer104
                     var_ha.fillRect(i_11_, i_14_, i_12_, i_13_, -16777216, 0);
                     var_ha.method3628(-152 + i_16_, i_17_, 304, 34, DefinitionSub8.aColorArray9163[Component303.anInt2884].getRGB(), 0);
                     var_ha.fillRect(i_16_ - 150, 2 + i_17_, Node.anInt4290 * 3, 30, Component137.aColorArray1928[Component303.anInt2884].getRGB(), 0);
-                    NodeList.aClass324_3326.drawTextCentred((byte) -116, i_16_, DisplayModeManagerContainer368.aColorArray5242[Component303.anInt2884].getRGB(), FriendsIgnoreList.aClass274_3501.method2063(ObjectDeserializer.anInt6967, i + 551), -1, i_15_ + i_17_);
+                    NodeList.aClass324_3326.drawTextCentred((byte) -116, i_16_, DisplayModeManagerContainer368.aColorArray5242[Component303.anInt2884].getRGB(), FriendsIgnoreList.aClass274_3501.getLocalized(ObjectDeserializer.languageId, i + 551), -1, i_15_ + i_17_);
                 } else {
                     int i_18_ = (NodeSub36.anInt6992 + -(int) ((float) i_12_ / DisplayModeManagerContainer229.aFloat1247));
                     int i_19_ = ((int) ((float) i_13_ / DisplayModeManagerContainer229.aFloat1247) + DebugOverlay.anInt3170);
@@ -198,7 +198,7 @@ final class DisplayModeManagerContainer104
                     i_23_ -= 15;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("lf.L(" + i + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_14_ + ',' + (var_d != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("lf.L(" + i + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_14_ + ',' + (var_d != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -241,7 +241,7 @@ final class DisplayModeManagerContainer104
                     aClass318_Sub10_10341.method2533(this.plane, this.aShort8743, this.aShort8751, this.aShort8750, this.aShort8747);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("lf.BA(" + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class101 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("lf.BA(" + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class101 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

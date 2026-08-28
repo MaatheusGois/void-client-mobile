@@ -36,7 +36,7 @@ final class DisplayModeManagerContainer306
         anInt4777++;
         Component291 class189 = (Component291) Component46.aClass60_2844.get(i_0_, -104);
         if (class189 != null) return class189;
-        byte[] is = Component76.aClass45_8601.method410(-1860, 0, i_0_);
+        byte[] is = Component76.aClass45_8601.getFile(-1860, 0, i_0_);
         if (i != 104) method741((byte) 98);
         class189 = new Component291();
         if (is != null) class189.method1419(i_0_, new Buffer(is), (byte) 64);
@@ -47,13 +47,13 @@ final class DisplayModeManagerContainer306
     public final int method31(int i) {
         int i_1_ = -62 / ((i - -43) / 62);
         anInt4774++;
-        if (aClass45_4785.method416((byte) -74, aString4778)) return 100;
+        if (aClass45_4785.contains((byte) -74, aString4778)) return 100;
         return 0;
     }
 
     static final void method743(int i, int i_2_) {
         anInt4775++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_2_, (byte) 105, i);//9
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_2_, (byte) 105, i);//9
         class348_sub42_sub15.method3251(i ^ ~0x3eb0);
     }
 
@@ -68,7 +68,7 @@ final class DisplayModeManagerContainer306
             aClass45_4785 = class45;
             aString4778 = string;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kk.<init>(" + (class45 != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ')'));
         }
     }
 

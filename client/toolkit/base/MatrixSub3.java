@@ -340,7 +340,7 @@ final class MatrixSub3
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("iaa.W(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class237_sub1 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("iaa.W(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class237_sub1 != null ? "{...}" : "null") + ')'));
         }
     }
 

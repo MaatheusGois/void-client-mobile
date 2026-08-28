@@ -26,18 +26,18 @@ final class ToolbarRefreshDefinition
                 anInt9226 = class348_sub49.readUnsignedByte(255);
                 break;
             } else if (i_1_ != 1) break;
-            this.aBoolean7045 = class348_sub49.readUnsignedByte(255) == 1;
+            this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         } while (false);
         anInt9227++;
     }
 
-    final int[][] method3047(int i, int i_2_) {
+    final int[][] getColourOutput(int i, int i_2_) {
         if (i_2_ != -1564599039) method3089(-88);
         anInt9223++;
-        int[][] is = this.aClass322_7033.method2557(i_2_ ^ 0x5d41e2a7, i);
+        int[][] is = this.imageCacheStore.getPixels(i_2_ ^ 0x5d41e2a7, i);
         while_168_:
         do {
-            if (this.aClass322_7033.aBoolean4035) {
+            if (this.imageCacheStore.cacheMiss) {
                 int[][] is_3_ = this.method3039((byte) -51, i, 0);
                 int[][] is_4_ = this.method3039((byte) -66, i, 1);
                 int[] is_5_ = is[0];
@@ -228,13 +228,13 @@ final class ToolbarRefreshDefinition
         super(2, false);
     }
 
-    final int[] method3042(int i, int i_51_) {
-        if (i_51_ != 255) method3047(50, -18);
+    final int[] getMonochromeOutput(int i, int i_51_) {
+        if (i_51_ != 255) getColourOutput(50, -18);
         anInt9224++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         while_178_:
         do {
-            if (this.aClass191_7032.aBoolean2570) {
+            if (this.imageCache.cacheMiss) {
                 int[] is_52_ = this.method3048(i, 633706337, 0);
                 int[] is_53_ = this.method3048(i, 633706337, 1);
                 int i_54_ = anInt9226;
@@ -356,7 +356,7 @@ final class ToolbarRefreshDefinition
 
     static final void method3088(int i) {
         anInt9228++;
-        if (DisplayModeManagerContainer154.aClass364_1279 != DisplayModeManagerContainer345.aClass364_165 && i == 9) {
+        if (DisplayModeManagerContainer154.LOCAL != DisplayModeManagerContainer345.aClass364_165 && i == 9) {
             try {
                 AppletInvoker.callAppletNoArgs((byte) 125, DisplayModeManagerContainer206.aClient1367, "tbrefresh");
             } catch (Throwable throwable) {

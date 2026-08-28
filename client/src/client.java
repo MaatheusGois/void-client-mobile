@@ -33,31 +33,31 @@ public final class client extends Applet_Sub1 {
 
     private final void method101(byte i) {
         anInt5179++;
-        if (HardwareProbe.aClass248_6601.anInt3213 > LibraryCreditsText.anInt5959) {
+        if (HardwareProbe.aClass248_6601.errorCount > LibraryCreditsText.anInt5959) {
             Component223.aClass161_125.method1259(0);
-            DisplayModeManagerContainer196.anInt4235 = (HardwareProbe.aClass248_6601.anInt3213 * 50 + -50) * 5;
+            DisplayModeManagerContainer196.anInt4235 = (HardwareProbe.aClass248_6601.errorCount * 50 + -50) * 5;
             if (DisplayModeManagerContainer196.anInt4235 > 3000) DisplayModeManagerContainer196.anInt4235 = 3000;
-            if (HardwareProbe.aClass248_6601.anInt3213 >= 2 && HardwareProbe.aClass248_6601.anInt3214 == 6) {
-                this.method82(-80, "js5connect_outofdate");
+            if (HardwareProbe.aClass248_6601.errorCount >= 2 && HardwareProbe.aClass248_6601.disconnectCode == 6) {
+                this.reportGameError(-80, "js5connect_outofdate");
                 Component49.clientState = 14;
                 return;
             }
-            if (HardwareProbe.aClass248_6601.anInt3213 >= 4 && HardwareProbe.aClass248_6601.anInt3214 == -1) {
-                this.method82(81, "js5crc");
+            if (HardwareProbe.aClass248_6601.errorCount >= 4 && HardwareProbe.aClass248_6601.disconnectCode == -1) {
+                this.reportGameError(81, "js5crc");
                 Component49.clientState = 14;
                 return;
             }
-            if (HardwareProbe.aClass248_6601.anInt3213 >= 4 && GpsOverlay.method1167(Component49.clientState, (byte) -81)) {
-                if (HardwareProbe.aClass248_6601.anInt3214 != 7 && HardwareProbe.aClass248_6601.anInt3214 != 9) {
-                    if (HardwareProbe.aClass248_6601.anInt3214 <= 0) this.method82(72, "js5io");
-                    else if (Sprite.aString6926 == null) this.method82(-116, "js5connect");
-                    else this.method82(113, ("js5proxy_" + Sprite.aString6926.trim()));
-                } else this.method82(-93, "js5connect_full");
+            if (HardwareProbe.aClass248_6601.errorCount >= 4 && GpsOverlay.method1167(Component49.clientState, (byte) -81)) {
+                if (HardwareProbe.aClass248_6601.disconnectCode != 7 && HardwareProbe.aClass248_6601.disconnectCode != 9) {
+                    if (HardwareProbe.aClass248_6601.disconnectCode <= 0) this.reportGameError(72, "js5io");
+                    else if (Sprite.aString6926 == null) this.reportGameError(-116, "js5connect");
+                    else this.reportGameError(113, ("js5proxy_" + Sprite.aString6926.trim()));
+                } else this.reportGameError(-93, "js5connect_full");
                 Component49.clientState = 14;
                 return;
             }
         }
-        LibraryCreditsText.anInt5959 = HardwareProbe.aClass248_6601.anInt3213;
+        LibraryCreditsText.anInt5959 = HardwareProbe.aClass248_6601.errorCount;
         if (DisplayModeManagerContainer196.anInt4235 > 0) DisplayModeManagerContainer196.anInt4235--;
         else {
             try {
@@ -66,12 +66,12 @@ public final class client extends Applet_Sub1 {
                     DisplayModeManagerContainer32.anInt846++;
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 1) {
-                    if (Shader.aClass144_114.anInt1997 == 2) {
+                    if (Shader.aClass144_114.status == 2) {
                         if (Shader.aClass144_114.result != null) Sprite.aString6926 = (String) Shader.aClass144_114.result;
-                        method103(1000, (byte) 100);
+                        onJs5Failure(1000, (byte) 100);
                         return;
                     }
-                    if (Shader.aClass144_114.anInt1997 == 1) DisplayModeManagerContainer32.anInt846++;
+                    if (Shader.aClass144_114.status == 1) DisplayModeManagerContainer32.anInt846++;
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 2) {
                     Component321.aClass202_2589 = new Connection((Socket) Shader.aClass144_114.result, OggUrlStream.aClass297_8992, 25000);
@@ -86,30 +86,30 @@ public final class client extends Applet_Sub1 {
                     if (GpsOverlay.method1167(Component49.clientState, (byte) -100) || Component321.aClass202_2589.available((byte) 83) > 0) {
                         int i_0_ = Component321.aClass202_2589.read(0);
                         if (i_0_ != 0) {
-                            method103(i_0_, (byte) 111);
+                            onJs5Failure(i_0_, (byte) 111);
                             return;
                         }
                         DisplayModeManagerContainer32.anInt846++;
                     } else if (Component240.currentTimeMillis(-63) - CacheStore.aLong667 > 30000) {
-                        method103(1001, (byte) 85);
+                        onJs5Failure(1001, (byte) 85);
                         return;
                     }
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 4) {
-                    boolean bool = (GpsOverlay.method1167(Component49.clientState, (byte) -100) || CacheNode.method3196(Component49.clientState, -87) || CacheFileStore.method2672(Component49.clientState, -127));
+                    boolean bool = (GpsOverlay.method1167(Component49.clientState, (byte) -100) || CacheNode.method3196(Component49.clientState, -87) || CacheFileStore.isReconnectState(Component49.clientState, -127));
                     Component119[] class267s = Component119.method2029(105);
                     Buffer class348_sub49 = new Buffer(class267s.length * 4);
-                    Component321.aClass202_2589.method1474(class348_sub49.payload, 0, (byte) -72, (class348_sub49.payload).length);
+                    Component321.aClass202_2589.readFully(class348_sub49.payload, 0, (byte) -72, (class348_sub49.payload).length);
                     for (int i_1_ = 0; i_1_ < class267s.length; i_1_++)
                         class267s[i_1_].method2030(1, class348_sub49.readInt((byte) -126));
-                    HardwareProbe.aClass248_6601.method1903(false, !bool, Component321.aClass202_2589);
+                    HardwareProbe.aClass248_6601.setConnection(false, !bool, Component321.aClass202_2589);
                     DisplayModeManagerContainer32.anInt846 = 0;
                     Shader.aClass144_114 = null;
                     Component321.aClass202_2589 = null;
                 }
                 int i_2_ = 127 / ((1 - i) / 60);
             } catch (java.io.IOException ioexception) {
-                method103(1002, (byte) 127);
+                onJs5Failure(1002, (byte) 127);
             }
         }
     }
@@ -124,9 +124,9 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer271.aClass112_520 = new DisplayModeManagerContainer67(OggUrlStream.aClass297_8992);
         HardwareProbe.aClass248_6601 = new Component253();
         MenuEntry.method3230(new int[]{20, 260}, new int[]{1000, 100}, 0);
-        if (DisplayModeManagerContainer345.aClass364_165 != Component326.aClass364_5271) Component17.aByteArrayArray3882 = new byte[50][];
+        if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) Component17.aByteArrayArray3882 = new byte[50][];
         Component192.aClass348_Sub51_3959 = DisplayModeManagerContainer288.method247(24916);
-        if (DisplayModeManagerContainer345.aClass364_165 == Component326.aClass364_5271) MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
+        if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE) MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
         else if (Component168.method2354(DisplayModeManagerContainer345.aClass364_165, i ^ ~0x7044)) {
             MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
             MenuOpener.aClass161_4839.anInt2148 = 40000 - -MenuOpener.aClass161_4839.anInt2143;
@@ -135,7 +135,7 @@ public final class client extends Applet_Sub1 {
             DefinitionSub35.aClass161_9443.anInt2148 = (DefinitionSub35.aClass161_9443.anInt2143 + 40000);
             DisplayModeManagerContainer320.aClass161_3285.anInt2138 = 50000 - -DisplayModeManagerContainer320.aClass161_3285.anInt2143;
             DefinitionSub35.aClass161_9443.anInt2138 = (DefinitionSub35.aClass161_9443.anInt2143 + 50000);
-        } else if (DisplayModeManagerContainer154.aClass364_1279 == DisplayModeManagerContainer345.aClass364_165) {
+        } else if (DisplayModeManagerContainer154.LOCAL == DisplayModeManagerContainer345.aClass364_165) {
             MenuOpener.aClass161_4839.aString2147 = "127.0.0.1";
             DisplayModeManagerContainer320.aClass161_3285.aString2147 = "127.0.0.1";
             MenuOpener.aClass161_4839.anInt2148 = (40000 + MenuOpener.aClass161_4839.anInt2143);
@@ -147,14 +147,14 @@ public final class client extends Applet_Sub1 {
             DefinitionSub35.aClass161_9443.anInt2138 = 50000 - -DefinitionSub35.aClass161_9443.anInt2143;
         }
         RenderableSub6.aShortArray6428 = Request.aShortArray6889 = HashNodeSub3.aShortArray9502 = Component226.aShortArray4172 = new short[256];
-        if (PacketReader.aClass230_10434 == RunescapeInfo.aClass230_186) RuntimeException_Sub1.aBoolean4599 = false;
-        if (WorldNameText.aClass230_8638 == PacketReader.aClass230_10434) {
+        if (PacketReader.currentGameType == RunescapeInfo.RUNESCAPE) RuntimeException_Sub1.aBoolean4599 = false;
+        if (WorldNameText.STELLARDAWN == PacketReader.currentGameType) {
             Component262.shiftClick = true;
             Component257.aShortArrayArray4791 = NodeSub8.aShortArrayArray6664;
             DisplayModeManagerContainer259.anInt3439 = 16777215;
             AbstractShaderSub2.aShortArrayArrayArray7290 = NodeSub51.aShortArrayArrayArray7262;
             DisplayModeManagerContainer259.anInt3444 = 0;
-        } else if (PacketReader.aClass230_10434 == Component379.aClass230_5932) {
+        } else if (PacketReader.currentGameType == Component379.GAME4) {
             Component257.aShortArrayArray4791 = DisplayModeManagerContainer259.aShortArrayArray3443;
             AbstractShaderSub2.aShortArrayArrayArray7290 = DisplayModeManagerContainer58.aShortArrayArrayArray10253;
         } else {
@@ -170,17 +170,17 @@ public final class client extends Applet_Sub1 {
         Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) -124);
         AbstractGlTextureSub4.mouseHandler = NodeSub18.createMouseHandler(DisplayModeManagerContainer50.gameCanvas, 0, true);
         try {
-            if (OggUrlStream.aClass297_8992.aClass234_3785 != null) {
-                DisplayModeManagerContainer356.aClass78_6328 = new SeekableFile((OggUrlStream.aClass297_8992.aClass234_3785), 5200, 0);
+            if (OggUrlStream.aClass297_8992.cacheDat2 != null) {
+                DisplayModeManagerContainer356.aClass78_6328 = new SeekableFile((OggUrlStream.aClass297_8992.cacheDat2), 5200, 0);
                 for (int i_3_ = 0; i_3_ < 37; i_3_++)
-                    Component265.aClass78Array1579[i_3_] = new SeekableFile((OggUrlStream.aClass297_8992.aClass234Array3795[i_3_]), 6000, 0);
-                Component366.aClass78_3075 = new SeekableFile((OggUrlStream.aClass297_8992.aClass234_3779), 6000, 0);
+                    Component265.aClass78Array1579[i_3_] = new SeekableFile((OggUrlStream.aClass297_8992.cacheIndexFiles[i_3_]), 6000, 0);
+                Component366.aClass78_3075 = new SeekableFile((OggUrlStream.aClass297_8992.cacheIdx255), 6000, 0);
                 Component11.aClass137_3568 = new CacheIndexReader(255, DisplayModeManagerContainer356.aClass78_6328, Component366.aClass78_3075, 500000);
-                DisplayModeManagerContainer152.aClass78_4538 = new SeekableFile((OggUrlStream.aClass297_8992.aClass234_3788), 24, 0);
-                OggUrlStream.aClass297_8992.aClass234_3779 = null;
-                OggUrlStream.aClass297_8992.aClass234_3785 = null;
-                OggUrlStream.aClass297_8992.aClass234Array3795 = null;
-                OggUrlStream.aClass297_8992.aClass234_3788 = null;
+                DisplayModeManagerContainer152.aClass78_4538 = new SeekableFile((OggUrlStream.aClass297_8992.randomDat), 24, 0);
+                OggUrlStream.aClass297_8992.cacheIdx255 = null;
+                OggUrlStream.aClass297_8992.cacheDat2 = null;
+                OggUrlStream.aClass297_8992.cacheIndexFiles = null;
+                OggUrlStream.aClass297_8992.randomDat = null;
             }
         } catch (java.io.IOException ioexception) {
             DisplayModeManagerContainer356.aClass78_6328 = null;
@@ -188,11 +188,12 @@ public final class client extends Applet_Sub1 {
             DisplayModeManagerContainer152.aClass78_4538 = null;
             Component11.aClass137_3568 = null;
         }
-        if (DisplayModeManagerContainer345.aClass364_165 != Component326.aClass364_5271) Component10.fpsOverlayEnabled = true;
-        HashNodeSub16.aString9665 = FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544);
+        if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) Component10.fpsOverlayEnabled = true;
+        HashNodeSub16.aString9665 = FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544);
     }
 
-    final void method91(byte i) {
+    /** Null static caches during shutdown. */
+    final void cleanup(byte i) {
         int i_4_ = anInt5190;
         anInt5181++;
         method110(31);
@@ -200,7 +201,7 @@ public final class client extends Applet_Sub1 {
         Component92.method1979((byte) 125);
         RSARequest.method3247(-74);
         FriendsIgnoreList.method2059(i ^ ~0x1f);
-        JaclibLoader.method216(false);
+        JaclibLoader.clearStatics(false);
         Component119.method2026(23377);
         Component82.method328(i ^ 0x6c);
         Component386.method1604(11868);
@@ -211,7 +212,7 @@ public final class client extends Applet_Sub1 {
         LruCache.method3478(false);
         Applet_Sub1.method98(i + 32609);
         Component41.method1860((byte) -89);
-        DisplayModeManagerContainer155.method1641((byte) 85);
+        BuildType.method1641((byte) 85);
         DisplayModeManagerContainer204.method906(-31777);
         GraphicsToolkit.method3680(-24016);
         NodeSub51.method3430(false);
@@ -219,14 +220,14 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer292.method1310(true);
         NodeList.method1994(-13722);
         Connection.method1471((byte) 124);
-        Component253.method1897((byte) 119);
-        DisplayModeManagerContainer67.method1052((byte) -124);
-        CacheFileStore.method2671(0);
-        Component219.method2344(i + -108);
-        CacheStore.method390((byte) 10);
+        Component253.clearStatics((byte) 119);
+        DisplayModeManagerContainer67.clearStatics((byte) -124);
+        CacheFileStore.clearStatics(0);
+        Component219.clearStatics(i + -108);
+        CacheStore.clearStatics((byte) 10);
         SeekableFile.method786((byte) 0);
         NodeCache.method584((byte) 116);
-        DisplayModeManagerContainer1.method1980(i ^ 0xe);
+        DisplayModeManagerContainer1.clearStatics(i ^ 0xe);
         Component290.method1284(-21165);
         DisplayModeManagerContainer259.method2036((byte) 121);
         Component191.method1378(14);
@@ -259,7 +260,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer50.method2294(126);
         Component315.method1873((byte) -120);
         DisplayModeManagerContainer57.method442((byte) -84);
-        DisplayModeManagerContainer115.method530(14);
+        DisplayModeInfo.method530(14);
         Player.method2458(true);
         Component150.method1627((byte) 116);
         Component248.method284((byte) 51);
@@ -278,13 +279,13 @@ public final class client extends Applet_Sub1 {
         Renderable.method2374((byte) -125);
         Component268.method810(true);
         Component240.method597((byte) -122);
-        DisplayModeManagerContainer145.method1086(true);
+        DisplayModeManagerContainer145.clearStatics(true);
         Component354.method225((byte) 57);
         Component362.method1040(i + 404);
         Component10.method2251(16711680);
         DisplayModeManagerContainer254.method1261((byte) 108);
         Component314.method2299((byte) -128);
-        RuntimeException_Sub1.method4010(-3);
+        RuntimeException_Sub1.clearStatics(-3);
         DisplayModeManagerContainer153.method883((byte) 66);
         HashNodeSub16Sub2.method3264((byte) -24);
         Component16.method1325(-128);
@@ -304,7 +305,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer206.method804(-3752);
         NumberFormatter.method1564(104);
         BitmapFont.method2572((byte) 23);
-        RandomAccessFileReader.method1659((byte) -71);
+        RandomAccessFileReader.clearStatics((byte) -71);
         HelveticaFont.method1461((byte) 112);
         Component20.method1807((byte) -121);
         Component205.method1773((byte) 120);
@@ -355,9 +356,9 @@ public final class client extends Applet_Sub1 {
         Component226.method2657((byte) 124);
         Component110.method261((byte) -120);
         Component283.method1880(i + -221);
-        HuffmanDecoder.method2225(i + -76);
+        HuffmanDecoder.clearStatics(i + -76);
         Component286.method1136((byte) -98);
-        KeyStoreLoader.method999(21745);
+        KeyStoreLoader.clearStatics(21745);
         DisplayModeManagerContainer332.method318(122);
         Component331.method1047(1);
         Component214.method1254((byte) 62);
@@ -379,7 +380,7 @@ public final class client extends Applet_Sub1 {
         RenderableSub10.method2527();
         Component241.method1619((byte) 108);
         DisplayModeManagerContainer91.method316((byte) -94);
-        ReferenceTable.method2199((byte) 63);
+        ReferenceTable.clearStatics((byte) 63);
         InflaterDecompressor.method1216((byte) -97);
         DisplayModeManagerContainer165.method2286(114);
         Component79.method2645(i + -16777324);
@@ -411,7 +412,7 @@ public final class client extends Applet_Sub1 {
         Component303.method1609((byte) -121);
         Component143.method1349((byte) -121);
         Component63.method3560(-13);
-        Component262.method1062((byte) 35);
+        Component262.clearStatics((byte) 35);
         Component83.method1013((byte) 114);
         NodeSub10.method2785();
         Component135.method3491(1);
@@ -462,7 +463,7 @@ public final class client extends Applet_Sub1 {
         HeapDumpHelper.method1249(true);
         NewsFetcher.method2664(i ^ 0x6f);
         DefinitionGroup.method3187((byte) -52);
-        Component208.method1064(-3);
+        Component208.clearStatics(-3);
         Component291.method1421((byte) -85);
         StringDefinition.method3220((byte) 102);
         if (i != 108) anInt5171 = -60;
@@ -471,13 +472,13 @@ public final class client extends Applet_Sub1 {
         Component103.method2662(4);
         Canvas_Sub1.method120(false);
         Component352.method387(67);
-        SocketConnector.method2048(1);
+        SocketConnector.clearStatics(1);
         IOException_Sub1.method130(i + -100);
         Component374.method2637(i + -108);
         Component55.method2333(false);
         DisplayModeManagerContainer310.method296((byte) -99);
         Component223.method176(-1);
-        Component192.method2366(true);
+        Component192.clearStatics(true);
         AbstractBuffer.method2690(-124);
         Component187.method1551();
         DisplayModeManagerContainer172.method370(true);
@@ -501,7 +502,7 @@ public final class client extends Applet_Sub1 {
         Component202.method808();
         Component116.method1536();
         NodeSub8.method2775((byte) -127);
-        AudioLineSub2.method2097();
+        AudioLineSub2.clearNativeAudio();
         DebugOverlay.clear(25365);
         OggStreamReader.method2981(false);
         HeapDumper.method1139(2767);
@@ -645,7 +646,7 @@ public final class client extends Applet_Sub1 {
         WaterShaderProgram.method2164(true);
         WaterSurfaceShader.method2156(77);
         Component359.method1866(0);
-        NativeLibraryLoader.method1628((byte) 54);
+        NativeLibraryLoader.clearStatics((byte) 54);
         Component246.method1529(true);
         NodeBaseSub2.method3444(i + -198);
         Component45.method3462(-30094);
@@ -671,7 +672,7 @@ public final class client extends Applet_Sub1 {
         WorldNameText.method251((byte) 2);
         OpenGlShader.method3557(true);
         Component321.method1440(-127);
-        AbstractShaderSub2.method3537(i ^ 0x864c);
+        AbstractShaderSub2.clearStatics(i ^ 0x864c);
         WaterShader.method3552(i ^ 0x3b);
         Component84.method851(i + -107);
         DebugPanic.method2124(0);
@@ -686,7 +687,7 @@ public final class client extends Applet_Sub1 {
         NodeSub32.method3020((byte) -64);
         NodeSub38.method3035(1);
         DisplayModeManagerContainer271.method367(-15833);
-        RenderableSub9Sub1.method2517((byte) 4);
+        FriendLoginMessage.method2517((byte) 4);
         HashNodeSub18.method3274(true);
         PauseHandler.method3190(false);
         NodeSub45.method3314(5);
@@ -727,18 +728,19 @@ public final class client extends Applet_Sub1 {
     private final void method102(byte i) {
         if (i != 61) method106();
         anInt5184++;
-        boolean bool = HardwareProbe.aClass248_6601.method1893((byte) 99);
+        boolean bool = HardwareProbe.aClass248_6601.process((byte) 99);
         if (!bool) method101((byte) -112);
     }
 
-    private final void method103(int i, byte i_5_) {
+    /** Handle JS5 connection failure ({@code js5 fail code=}{@code i}). */
+    private final void onJs5Failure(int i, byte i_5_) {
         anInt5182++;
-        HardwareProbe.aClass248_6601.anInt3213++;
+        HardwareProbe.aClass248_6601.errorCount++;
         Shader.aClass144_114 = null;
-        HardwareProbe.aClass248_6601.anInt3214 = i;
+        HardwareProbe.aClass248_6601.disconnectCode = i;
         if (Loader.debug) {
             System.out.println("js5 fail code=" + i
-                    + " attempts=" + HardwareProbe.aClass248_6601.anInt3213
+                    + " attempts=" + HardwareProbe.aClass248_6601.errorCount
                     + " handshake=" + DisplayModeManagerContainer32.anInt846);
         }
         if (i_5_ > 74) {
@@ -747,8 +749,9 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    final void method80(int i) {
-        if (Component357.aBoolean2469) DisplayModeManagerContainer343.method2405(i + -110);
+    /** Close toolkit, sockets, and cache files. */
+    final void closeResources(int i) {
+        if (Component357.aBoolean2469) DisplayModeManagerContainer343.saveClientPreferences(i + -110);
         anInt5170++;
         Component350.method556(false);
         if (NodeSub8.toolkit != null) NodeSub8.toolkit.method3635((byte) 89);
@@ -761,8 +764,8 @@ public final class client extends Applet_Sub1 {
             DefinitionSub8.aClass238_9165 = null;
         }
         DisplayModeManagerContainer133.method1265(16);
-        HardwareProbe.aClass248_6601.method1901(i ^ ~0x44);
-        DisplayModeManagerContainer271.aClass112_520.method1051(true);
+        HardwareProbe.aClass248_6601.closeConnection(i ^ ~0x44);
+        DisplayModeManagerContainer271.aClass112_520.shutdown(true);
         if (DisplayModeManagerContainer154.aClass169_1286 != null) {
             DisplayModeManagerContainer154.aClass169_1286.method1303((byte) 16);
             DisplayModeManagerContainer154.aClass169_1286 = null;
@@ -773,7 +776,7 @@ public final class client extends Applet_Sub1 {
                 Component265.aClass78Array1579[i_6_].close((byte) 118);
             Component366.aClass78_3075.close((byte) -84);
             DisplayModeManagerContainer152.aClass78_4538.close((byte) 80);
-            NodeSub46.method3317((byte) -53);
+            NodeSub46.closeConsoleLogStream((byte) -53);
         } catch (Exception exception) {
             /* empty */
         }
@@ -881,18 +884,18 @@ public final class client extends Applet_Sub1 {
                 DisplayModeManagerContainer320.aClass161_3285.anInt2143 = Integer.parseInt(strings[1]);
                 DefinitionSub35.aClass161_9443 = new DisplayModeManagerContainer254();
                 DefinitionSub35.aClass161_9443.anInt2143 = Integer.parseInt(strings[2]);
-                DisplayModeManagerContainer345.aClass364_165 = DisplayModeManagerContainer154.aClass364_1279;
-                if (strings[3].equals("live")) Component53.aClass231_196 = Component342.aClass231_1189;
+                DisplayModeManagerContainer345.aClass364_165 = DisplayModeManagerContainer154.LOCAL;
+                if (strings[3].equals("live")) Component53.currentBuildType = Component342.LIVE;
                 else if (!strings[3].equals("rc")) {
-                    if (strings[3].equals("wip")) Component53.aClass231_196 = Component118.aClass231_4953;
+                    if (strings[3].equals("wip")) Component53.currentBuildType = Component118.WIP;
                     else JagTheoraDecoder.method518("modewhat", (byte) 41);
-                } else Component53.aClass231_196 = DefinitionSub20.aClass231_9263;
-                ObjectDeserializer.anInt6967 = DisplayModeManagerContainer91.method315((byte) 103, strings[4]);
-                if (ObjectDeserializer.anInt6967 == -1) {
+                } else Component53.currentBuildType = DefinitionSub20.RC;
+                ObjectDeserializer.languageId = DisplayModeManagerContainer91.languageIdFromName((byte) 103, strings[4]);
+                if (ObjectDeserializer.languageId == -1) {
                     if (!strings[4].equals("english")) {
-                        if (strings[4].equals("german")) ObjectDeserializer.anInt6967 = 1;
+                        if (strings[4].equals("german")) ObjectDeserializer.languageId = 1;
                         else JagTheoraDecoder.method518("language", (byte) -128);
-                    } else ObjectDeserializer.anInt6967 = 0;
+                    } else ObjectDeserializer.languageId = 0;
                 }
                 NodeSub37.aBoolean6997 = false;
                 Component156.aBoolean3697 = false;
@@ -900,31 +903,31 @@ public final class client extends Applet_Sub1 {
                     if (!strings[5].equals("game1")) {
                         if (!strings[5].equals("game2")) {
                             if (!strings[5].equals("game3")) JagTheoraDecoder.method518("game", (byte) -124);
-                            else PacketReader.aClass230_10434 = Component379.aClass230_5932;
-                        } else PacketReader.aClass230_10434 = WaterShaderProgram.aClass230_6262;
-                    } else PacketReader.aClass230_10434 = WorldNameText.aClass230_8638;
-                } else PacketReader.aClass230_10434 = RunescapeInfo.aClass230_186;
+                            else PacketReader.currentGameType = Component379.GAME4;
+                        } else PacketReader.currentGameType = WaterShaderProgram.GAME3;
+                    } else PacketReader.currentGameType = WorldNameText.STELLARDAWN;
+                } else PacketReader.currentGameType = RunescapeInfo.RUNESCAPE;
                 DisplayModeManagerContainer254.aBoolean2151 = false;
-                Component205.aString5966 = "";
+                Component205.settingsCookie = "";
                 Component283.aLong4615 = 0L;
                 OggStreamReader.aString9043 = null;
-                Connection.anInt2670 = 0;
+                Connection.affiliateId = 0;
                 DisplayModeManagerContainer105.aBoolean4888 = Component177.aBoolean2110 = true;
                 Component121.aBoolean4540 = false;
                 Component111.anInt3234 = 0;
-                Component303.anInt2884 = (PacketReader.aClass230_10434.anInt2987);
+                Component303.anInt2884 = (PacketReader.currentGameType.id);
                 GraphicsToolkit.anInt4583 = 0;
                 Component19.aString8605 = null;
                 client var_client = new client();
                 DisplayModeManagerContainer206.aClient1367 = var_client;
-                var_client.method96(Component53.aClass231_196.method1640(0) + 32, 1024, false, 634, 37, (PacketReader.aClass230_10434.aString2985), 23499, 768);
+                var_client.method96(Component53.currentBuildType.getId(0) + 32, 1024, false, 634, 37, (PacketReader.currentGameType.domain), 23499, 768);
                 RSACipher.aFrame4904.setLocation(40, 40);
             } catch (Exception exception) {
-                ClientErrorReporter.method1242(null, exception, 15004);
+                ClientErrorReporter.reportError(null, exception, 15004);
             }
             anInt5178++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "client.main(" + (strings != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "client.main(" + (strings != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -935,7 +938,7 @@ public final class client extends Applet_Sub1 {
             try {
                 processGameTick(i ^ 0x66);
             } catch (Throwable throwable) {
-                ClientErrorReporter.method1242((throwable.getMessage() + " (Recovered) " + method81((byte) 115)), throwable, 15004);
+                ClientErrorReporter.reportError((throwable.getMessage() + " (Recovered) " + method81((byte) 115)), throwable, 15004);
                 GpsOverlay.aBoolean1952 = true;
                 SoftwareFallbackShader.method3553(false, (byte) 102, 0);
             }
@@ -954,18 +957,18 @@ public final class client extends Applet_Sub1 {
             DefinitionSub35.aClass161_9443.anInt2143 = Integer.parseInt(this.getParameter("demoid"));
             DefinitionSub35.aClass161_9443.aString2147 = this.getParameter("demoaddress");
             DisplayModeManagerContainer345.aClass364_165 = (NodeSub8.method2776((byte) -93, Integer.parseInt(this.getParameter("modewhere"))));
-            if (DisplayModeManagerContainer154.aClass364_1279 == DisplayModeManagerContainer345.aClass364_165) {
-                DisplayModeManagerContainer345.aClass364_165 = Component83.aClass364_1657;
+            if (DisplayModeManagerContainer154.LOCAL == DisplayModeManagerContainer345.aClass364_165) {
+                DisplayModeManagerContainer345.aClass364_165 = Component83.WTWIP;
             }
-            else if (!Component168.method2354(DisplayModeManagerContainer345.aClass364_165, -1) && Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
-                DisplayModeManagerContainer345.aClass364_165 = Component326.aClass364_5271;
+            else if (!Component168.method2354(DisplayModeManagerContainer345.aClass364_165, -1) && Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
+                DisplayModeManagerContainer345.aClass364_165 = Component326.LIVE;
             }
-            Component53.aClass231_196 = (DisplayModeManagerContainer87.method1677(-121, Integer.parseInt(this.getParameter("modewhat"))));
-            if (Component53.aClass231_196 != Component118.aClass231_4953 && Component53.aClass231_196 != DefinitionSub20.aClass231_9263 && Component342.aClass231_1189 != Component53.aClass231_196) Component53.aClass231_196 = Component342.aClass231_1189;
+            Component53.currentBuildType = (DisplayModeManagerContainer87.getById(-121, Integer.parseInt(this.getParameter("modewhat"))));
+            if (Component53.currentBuildType != Component118.WIP && Component53.currentBuildType != DefinitionSub20.RC && Component342.LIVE != Component53.currentBuildType) Component53.currentBuildType = Component342.LIVE;
             try {
-                ObjectDeserializer.anInt6967 = Integer.parseInt(this.getParameter("lang"));
+                ObjectDeserializer.languageId = Integer.parseInt(this.getParameter("lang"));
             } catch (Exception exception) {
-                ObjectDeserializer.anInt6967 = 0;
+                ObjectDeserializer.languageId = 0;
             }
             String string = this.getParameter("objecttag");
             NodeSub37.aBoolean6997 = string != null && string.equals("1");
@@ -975,20 +978,20 @@ public final class client extends Applet_Sub1 {
             Component203.aBoolean8773 = string_25_ != null && string_25_.equals("1");
             String string_26_ = this.getParameter("game");
             if (string_26_ != null) {
-                if (string_26_.equals("0")) PacketReader.aClass230_10434 = RunescapeInfo.aClass230_186;
-                else if (string_26_.equals("1")) PacketReader.aClass230_10434 = WorldNameText.aClass230_8638;
+                if (string_26_.equals("0")) PacketReader.currentGameType = RunescapeInfo.RUNESCAPE;
+                else if (string_26_.equals("1")) PacketReader.currentGameType = WorldNameText.STELLARDAWN;
                 else if (!string_26_.equals("2")) {
-                    if (string_26_.equals("3")) PacketReader.aClass230_10434 = Component379.aClass230_5932;
-                } else PacketReader.aClass230_10434 = WaterShaderProgram.aClass230_6262;
+                    if (string_26_.equals("3")) PacketReader.currentGameType = Component379.GAME4;
+                } else PacketReader.currentGameType = WaterShaderProgram.GAME3;
             }
             try {
-                Connection.anInt2670 = Integer.parseInt(this.getParameter("affid"));
+                Connection.affiliateId = Integer.parseInt(this.getParameter("affid"));
             } catch (Exception exception) {
-                Connection.anInt2670 = 0;
+                Connection.affiliateId = 0;
             }
-            Component262.aString1761 = this.getParameter("quiturl");
-            Component205.aString5966 = this.getParameter("settings");
-            if (Component205.aString5966 == null) Component205.aString5966 = "";
+            Component262.quitUrl = this.getParameter("quiturl");
+            Component205.settingsCookie = this.getParameter("settings");
+            if (Component205.settingsCookie == null) Component205.settingsCookie = "";
             Component301.aBoolean4127 = "1".equals(this.getParameter("under"));
             String string_27_ = this.getParameter("country");
             if (string_27_ != null) {
@@ -1025,15 +1028,15 @@ public final class client extends Applet_Sub1 {
             }
             Component19.aString8605 = this.getParameter("additionalInfo");
             if (Component19.aString8605 != null && Component19.aString8605.length() > 50) Component19.aString8605 = null;
-            if (RunescapeInfo.aClass230_186 == PacketReader.aClass230_10434) {
+            if (RunescapeInfo.RUNESCAPE == PacketReader.currentGameType) {
                 GlToolkitSub2.anInt7666 = 503;
                 DisplayModeManagerContainer23.anInt1524 = 765;
-            } else if (PacketReader.aClass230_10434 == WorldNameText.aClass230_8638) {
+            } else if (PacketReader.currentGameType == WorldNameText.STELLARDAWN) {
                 DisplayModeManagerContainer23.anInt1524 = 640;
                 GlToolkitSub2.anInt7666 = 480;
             }
             DisplayModeManagerContainer206.aClient1367 = this;
-            this.method95(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.aClass231_196.method1640(0) + 32, 37, PacketReader.aClass230_10434.aString2985, 50);
+            this.method95(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
         }
     }
 
@@ -1112,7 +1115,7 @@ public final class client extends Applet_Sub1 {
                         if (AbstractGlTextureSub4.mouseHandler.isLeftButtonDown(-91) && bool) bool_53_ = true;
                         boolean bool_54_ = false;
                         NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(4));
-                        if (class348_sub45 != null && class348_sub45.getEventType(109) == 0 && (class348_sub45.method3308((byte) -128) + i_51_ >= i_45_) && class348_sub45.method3311(33) + i_52_ >= i_46_ && (class348_sub45.method3308((byte) -127) + i_51_ < i_47_) && class348_sub45.method3311(8) + i_52_ < i_48_)
+                        if (class348_sub45 != null && class348_sub45.getEventType(109) == 0 && (class348_sub45.getX((byte) -128) + i_51_ >= i_45_) && class348_sub45.getY(33) + i_52_ >= i_46_ && (class348_sub45.getX((byte) -127) + i_51_ < i_47_) && class348_sub45.getY(8) + i_52_ < i_48_)
                             bool_54_ = true;
                         if (class46.aByteArray746 != null && !HashNodeSub16Sub2.method3263(true)) {
                             for (int i_55_ = 0; (i_55_ < class46.aByteArray746.length); i_55_++) {
@@ -1139,7 +1142,7 @@ public final class client extends Applet_Sub1 {
                                 }
                             }
                         }
-                        if (bool_54_) Component265.method887(class46, (i_51_ + class348_sub45.method3308((byte) -127) - i_43_), (i_52_ + class348_sub45.method3311(-114) - i_44_), 2147483647);
+                        if (bool_54_) Component265.method887(class46, (i_51_ + class348_sub45.getX((byte) -127) - i_43_), (i_52_ + class348_sub45.getY(-114) - i_44_), 2147483647);
                         if (Component156.aClass46_3701 != null && Component156.aClass46_3701 != class46 && bool && method105(class46).method3302(17356)) DisplayModeManagerContainer104.aClass46_10336 = class46;
                         if (class46 == Component374.aClass46_4130) {
                             Component162.aBoolean8386 = true;
@@ -1212,7 +1215,7 @@ public final class client extends Applet_Sub1 {
                                                 if (class46_69_ != null) DisplayModeManagerContainer368.addMenuEntry(false, " ->", i_67_, (byte) -109, true, i_66_, (class46.anInt812), true, 15, ((class46.anInt704) << 0) | (class46.anInt830), DisplayModeManagerContainer332.aString5001, 1L, (Component182.anInt9747));
                                                 else DisplayModeManagerContainer196.method2678(-2049);
                                             } else {
-                                                if ((PacketReader.aClass230_10434) == (WorldNameText.aClass230_8638)) DisplayModeManagerContainer368.addMenuEntry(false, "", i_67_, (byte) -116, true, i_66_, -1, true, 12, 0L, (FriendsIgnoreList.aClass274_3510.method2063((ObjectDeserializer.anInt6967), 544)), 1L, -1);
+                                                if ((PacketReader.currentGameType) == (WorldNameText.STELLARDAWN)) DisplayModeManagerContainer368.addMenuEntry(false, "", i_67_, (byte) -116, true, i_66_, -1, true, 12, 0L, (FriendsIgnoreList.aClass274_3510.getLocalized((ObjectDeserializer.languageId), 544)), 1L, -1);
                                                 DisplayModeManagerContainer368.addMenuEntry(false, "", i_67_, (byte) -93, true, i_66_, -1, true, 19, 0L, Component323.aString5882, 1L, Component79.anInt4144);
                                             }
                                         }
@@ -1223,8 +1226,8 @@ public final class client extends Applet_Sub1 {
                                     Component39.aClass46_2249 = class46;
                                     if (bool) Component163.aBoolean3174 = true;
                                     if (bool_54_) {
-                                        int i_70_ = (int) ((double) (i_51_ + (class348_sub45.method3308((byte) -127)) - i_43_ - ((class46.anInt709) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
-                                        int i_71_ = (int) -((double) (i_52_ + (class348_sub45.method3311(-111)) - i_44_ - ((class46.anInt789) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
+                                        int i_70_ = (int) ((double) (i_51_ + (class348_sub45.getX((byte) -127)) - i_43_ - ((class46.anInt709) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
+                                        int i_71_ = (int) -((double) (i_52_ + (class348_sub45.getY(-111)) - i_44_ - ((class46.anInt789) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
                                         int i_72_ = (NodeSub36.anInt6992 + i_70_ + DisplayModeManagerContainer229.anInt1266);
                                         int i_73_ = (DebugOverlay.anInt3170 + i_71_ + DisplayModeManagerContainer229.anInt1263);
                                         HashNodeSub14 class348_sub42_sub14 = ImageTagText.method1269(-17096);
@@ -1282,8 +1285,8 @@ public final class client extends Applet_Sub1 {
                                     NodeSub36 class348_sub36 = new NodeSub36();
                                     class348_sub36.aBoolean6993 = true;
                                     class348_sub36.aClass46_6989 = class46;
-                                    class348_sub36.anInt6984 = (i_51_ + class348_sub45.method3308((byte) -128) - i_43_);
-                                    class348_sub36.anInt6995 = (i_52_ + class348_sub45.method3311(-123) - i_44_);
+                                    class348_sub36.anInt6984 = (i_51_ + class348_sub45.getX((byte) -128) - i_43_);
+                                    class348_sub36.anInt6995 = (i_52_ + class348_sub45.getY(-123) - i_44_);
                                     class348_sub36.anObjectArray6987 = class46.anObjectArray763;
                                     NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                                 }
@@ -1484,7 +1487,7 @@ public final class client extends Applet_Sub1 {
                                 class348_sub36.anObjectArray6987 = class46.anObjectArray734;
                                 NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                             }
-                            if ((DisplayModeManagerContainer124.anInt2986 > class46.anInt726) && (class46.anObjectArray761 != null)) {
+                            if ((GameType.anInt2986 > class46.anInt726) && (class46.anObjectArray761 != null)) {
                                 NodeSub36 class348_sub36 = new NodeSub36();
                                 class348_sub36.aClass46_6989 = class46;
                                 class348_sub36.anObjectArray6987 = class46.anObjectArray761;
@@ -1507,8 +1510,8 @@ public final class client extends Applet_Sub1 {
                                 for (int i_89_ = 0; i_89_ < HashNodeSub19.anInt9699; i_89_++) {
                                     NodeSub36 class348_sub36 = new NodeSub36();
                                     class348_sub36.aClass46_6989 = class46;
-                                    class348_sub36.anInt6991 = DefinitionGroup.anInterface6Array9534[i_89_].method30(false);
-                                    class348_sub36.anInt6982 = DefinitionGroup.anInterface6Array9534[i_89_].method28((byte) 39);
+                                    class348_sub36.anInt6991 = DefinitionGroup.anInterface6Array9534[i_89_].getKeyCode(false);
+                                    class348_sub36.anInt6982 = DefinitionGroup.anInterface6Array9534[i_89_].getKeyChar((byte) 39);
                                     class348_sub36.anObjectArray6987 = class46.anObjectArray822;
                                     NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                                 }
@@ -1527,7 +1530,7 @@ public final class client extends Applet_Sub1 {
                             if (class46.aClass46Array798 != null) method107(class46.aClass46Array798, class46.anInt830, i_45_, i_46_, i_47_, i_48_, i_43_ - class46.anInt747, i_44_ - class46.anInt755, i_38_, i_39_, i_40_, i_41_);
                             NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.anInt830, -6008)));
                             if (class348_sub41 != null) {
-                                if ((PacketReader.aClass230_10434 == RunescapeInfo.aClass230_186) && (class348_sub41.anInt7053) == 0 && !Component364.aBoolean8335 && bool && !DisplayModeManagerContainer356.aBoolean6327) DisplayModeManagerContainer190.method661((byte) 105);
+                                if ((PacketReader.currentGameType == RunescapeInfo.RUNESCAPE) && (class348_sub41.anInt7053) == 0 && !Component364.aBoolean8335 && bool && !DisplayModeManagerContainer356.aBoolean6327) DisplayModeManagerContainer190.method661((byte) 105);
                                 Component280.method1373(class348_sub41.anInt7050, i_43_, i_45_, i_47_, i_39_, i_38_, -1391, i_40_, i_48_, i_44_, i_41_, i_46_);
                             }
                         }
@@ -1569,13 +1572,13 @@ public final class client extends Applet_Sub1 {
     }
 
     final void method93(int i) {
-        if (i != -11018) method80(9);
+        if (i != -11018) closeResources(9);
         anInt5186++;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
             try {
                 method116(true);
             } catch (Throwable throwable) {
-                ClientErrorReporter.method1242((throwable.getMessage() + " (Recovered) " + method81((byte) 52)), throwable, 15004);
+                ClientErrorReporter.reportError((throwable.getMessage() + " (Recovered) " + method81((byte) 52)), throwable, 15004);
                 GpsOverlay.aBoolean1952 = true;
                 SoftwareFallbackShader.method3553(false, (byte) 123, 0);
             }
@@ -1651,7 +1654,7 @@ public final class client extends Applet_Sub1 {
                     NodeBaseSub2.method3443(true, npc);
                     DisplayModeManagerContainer5.method729(Component366.anInt3062, i_105_, (byte) 122, npc, Component162.anInt8387);
                     Component140.method3208(npc, Component366.anInt3062, -84);
-                    DisplayModeManagerContainer124.method1635(-106, npc);
+                    GameType.method1635(-106, npc);
                 }
             }
         }
@@ -1694,19 +1697,19 @@ public final class client extends Applet_Sub1 {
         }
         if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
         if (OpenGlShader.clientCycle % 1500 == 0) ToolbarRefreshDefinition.method3088(9);
-        if (Component49.clientState == 7 && Component241.anInt2955 == 0) DisplayModeManagerContainer1.method1987(-124);
+        if (Component49.clientState == 7 && Component241.anInt2955 == 0) DisplayModeManagerContainer1.updateMenuTip(-124);
         DisplayModeManagerContainer204.method909(3553);
-        if (Component357.aBoolean2469 && (Component225.aLong482 < Component240.currentTimeMillis(-107) + -60000L)) DisplayModeManagerContainer343.method2405(41);
-        for (RenderableSub9Sub1 class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1872(8)); class318_sub9_sub1 != null; class318_sub9_sub1 = (RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1878((byte) -43)) {
-            if ((long) class318_sub9_sub1.anInt8787 < -5L + Component240.currentTimeMillis(-80) / 1000L) {
-                if (class318_sub9_sub1.aShort8786 > 0) ShaderProgramSub2.method2144("", 5, (byte) -91, 0, (class318_sub9_sub1.aString8783 + FriendsIgnoreList.aClass274_3502.method2063(ObjectDeserializer.anInt6967, 544)), "", "");
-                if (class318_sub9_sub1.aShort8786 == 0) ShaderProgramSub2.method2144("", 5, (byte) -105, 0, (class318_sub9_sub1.aString8783 + FriendsIgnoreList.aClass274_3503.method2063((ObjectDeserializer.anInt6967), i ^ 0x250)), "", "");
+        if (Component357.aBoolean2469 && (Component225.aLong482 < Component240.currentTimeMillis(-107) + -60000L)) DisplayModeManagerContainer343.saveClientPreferences(41);
+        for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1872(8)); class318_sub9_sub1 != null; class318_sub9_sub1 = (FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1878((byte) -43)) {
+            if ((long) class318_sub9_sub1.timestampSeconds < -5L + Component240.currentTimeMillis(-80) / 1000L) {
+                if (class318_sub9_sub1.worldId > 0) ShaderProgramSub2.method2144("", 5, (byte) -91, 0, (class318_sub9_sub1.username + FriendsIgnoreList.aClass274_3502.getLocalized(ObjectDeserializer.languageId, 544)), "", "");
+                if (class318_sub9_sub1.worldId == 0) ShaderProgramSub2.method2144("", 5, (byte) -105, 0, (class318_sub9_sub1.username + FriendsIgnoreList.aClass274_3503.getLocalized((ObjectDeserializer.languageId), i ^ 0x250)), "", "");
                 class318_sub9_sub1.unlink(false);
             }
         }
         do {
             if (Component49.clientState == 7 && Component241.anInt2955 == 0) {
-                if (DefinitionSub8.aClass238_9165 == null) LoggedOutDefinition.method3141(false, (byte) 11);
+                if (DefinitionSub8.aClass238_9165 == null) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                 else {
                     Component53.anInt193++;
                     if (Component53.anInt193 > 50) {
@@ -1717,7 +1720,7 @@ public final class client extends Applet_Sub1 {
                     try {
                         Component302.method1802(0);
                     } catch (java.io.IOException ioexception) {
-                        LoggedOutDefinition.method3141(false, (byte) 11);
+                        LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                         break;
                     }
                     break;
@@ -1753,16 +1756,16 @@ public final class client extends Applet_Sub1 {
             Component193.anInt3246 = 0;
             HashNodeSub19.anInt9699 = 0;
             for (Interface6 interface6 = Component280.aClass346_2449.popKeyEvent(0); interface6 != null; interface6 = Component280.aClass346_2449.popKeyEvent(0)) {
-                int i_109_ = interface6.method27(26276);
+                int i_109_ = interface6.getEventType(26276);
                 if (i_109_ == 2 || i_109_ == 3) {
-                    int i_110_ = interface6.method28((byte) 96);
+                    int i_110_ = interface6.getKeyChar((byte) 96);
                     if (!Component300.method2066((byte) 116) || (i_110_ != 96 && i_110_ != 167 && i_110_ != 178)) {
                         if (HashNodeSub19.anInt9699 < 128) {
                             DefinitionGroup.anInterface6Array9534[HashNodeSub19.anInt9699] = interface6;
                             HashNodeSub19.anInt9699++;
                         }
-                    } else if (!HashNodeSub16Sub2.method3263(true)) Component192.method2363(-84);
-                    else AbstractShaderSub4.method3543((byte) -89);
+                    } else if (!HashNodeSub16Sub2.method3263(true)) Component192.openDevConsole(-84);
+                    else AbstractShaderSub4.closeDevConsole((byte) -89);
                 } else if (i_109_ == 0 && Component193.anInt3246 < 75) {
                     Component17.anInterface6Array3884[Component193.anInt3246] = interface6;
                     Component193.anInt3246++;
@@ -1779,7 +1782,7 @@ public final class client extends Applet_Sub1 {
                             if (Component327.aClass262_8744.size(0) > 10) Component327.aClass262_8744.peekFirst(8);
                         }
                     } else {
-                        int anInt1565 = class348_sub45.method3315(0);
+                        int anInt1565 = class348_sub45.getClickCount(0);
                         Component233.scrollWheelDiff = anInt1565;
                         Component122.anInt1565 += anInt1565;
                     }
@@ -1797,12 +1800,12 @@ public final class client extends Applet_Sub1 {
                 method113((byte) 112);
                 NodeSub5.method2757(110);
                 TheoraVideoPlayer.method843((byte) 102);
-            } else if (!CacheFileStore.method2672(Component49.clientState, -123) || Component212.method2402(Component49.clientState, (byte) -115)) {
+            } else if (!CacheFileStore.isReconnectState(Component49.clientState, -123) || Component212.method2402(Component49.clientState, (byte) -115)) {
                 if (Component49.clientState == 12) TheoraVideoPlayer.method843((byte) 113);
-                else if (NativeLibLoader.method2653(true, Component49.clientState) && !Component212.method2402(Component49.clientState, (byte) -86)) ClientSystemInfo.method2991(11432);
+                else if (NativeLibLoader.isPostLoginState(true, Component49.clientState) && !Component212.method2402(Component49.clientState, (byte) -86)) ClientSystemInfo.method2991(11432);
                 else if (Component49.clientState == 13) {
                     TheoraVideoPlayer.method843((byte) -75);
-                    if (NodederUtil.anInt6634 != -3 && NodederUtil.anInt6634 != 2 && NodederUtil.anInt6634 != 15) LoggedOutDefinition.method3141(false, (byte) 11);
+                    if (NodederUtil.anInt6634 != -3 && NodederUtil.anInt6634 != 2 && NodederUtil.anInt6634 != 15) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                 }
             } else {
                 method113((byte) 112);
@@ -1892,7 +1895,7 @@ public final class client extends Applet_Sub1 {
     final synchronized void method87(byte i) {
         if (i > -11) aClass262_5185 = null;
         anInt5173++;
-        if (ToolkitFactory.anApplet1530 != null && DisplayModeManagerContainer50.gameCanvas == null && !OggUrlStream.aClass297_8992.aBoolean3794) {
+        if (ToolkitFactory.anApplet1530 != null && DisplayModeManagerContainer50.gameCanvas == null && !OggUrlStream.aClass297_8992.useDirectDraw) {
             try {
                 Class var_class = ToolkitFactory.anApplet1530.getClass();
                 Field field = var_class.getDeclaredField("canvas");
@@ -1957,21 +1960,21 @@ public final class client extends Applet_Sub1 {
                         if (Component129.anInt489 == 1) {
                             if (DisplayModeManagerContainer259.anInt3441 > NodeSub46.anInt7115) NodeSub46.anInt7115 = DisplayModeManagerContainer259.anInt3441;
                             int i = ((-DisplayModeManagerContainer259.anInt3441 + NodeSub46.anInt7115) * 50 / NodeSub46.anInt7115);
-                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
+                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
                         } else if (Component129.anInt489 == 2) {
                             if (Component82.anInt443 < Component101.anInt2101) Component82.anInt443 = Component101.anInt2101;
                             int i = (((Component82.anInt443 - Component101.anInt2101) * 50 / Component82.anInt443) + 50);
-                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
-                        } else Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)), 2, NodeSub8.toolkit);
+                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
+                        } else Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
                     } else if (Component49.clientState != 10) {
                         if (Component49.clientState == 13)
-                            Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3497.method2063(ObjectDeserializer.anInt6967, 544)) + "<br>" + (FriendsIgnoreList.aClass274_3498.method2063(ObjectDeserializer.anInt6967, 544))), 2, NodeSub8.toolkit);
+                            Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3497.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>" + (FriendsIgnoreList.aClass274_3498.getLocalized(ObjectDeserializer.languageId, 544))), 2, NodeSub8.toolkit);
                     } else Component114.method2284((byte) -43, l);
                 } else Component98.method1761(85);
                 // States 3/5/6 below: while logging in, show "Please wait..." instead of
                 // the idle title UI (otherwise auto-login looks frozen for several seconds).
             } else if (Component241.anInt2955 != 0 || Component49.clientState == 5 || Component49.clientState == 6) {
-                Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3514.method2063(ObjectDeserializer.anInt6967, 544)), 2, NodeSub8.toolkit);
+                Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3514.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
             } else Component98.method1761(85);
             if (GlToolkitSub3.anInt8045 == 3) {
                 for (int i = 0; NodeSub38.anInt7008 > i; i++) {
@@ -1984,7 +1987,7 @@ public final class client extends Applet_Sub1 {
             if (HashNodeSub16Sub2.method3263(bool)) BuildInfo.method207(NodeSub8.toolkit, (byte) 124);
             // Microbot HUD — after console so it stays on top of game, under console if open.
             if (Loader.microbotEnabled) MicrobotPanel.draw(NodeSub8.toolkit);
-            if (OggUrlStream.aClass297_8992.aBoolean3794 && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.method3229(-85) == 1 && !bool_120_) {
+            if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.method3229(-85) == 1 && !bool_120_) {
                 int i = 0;
                 for (int i_121_ = 0; (NodeSub38.anInt7008 > i_121_); i_121_++) {
                     if (DisplayModeManagerContainer259.aBooleanArray3438[i_121_]) {
@@ -2005,18 +2008,18 @@ public final class client extends Applet_Sub1 {
                     if (Component210.aBoolean5300) CacheStore.method395(107);
                     else NodeSub8.toolkit.method3689((byte) 104);
                 } catch (Exception_Sub1 exception_sub1) {
-                    ClientErrorReporter.method1242((exception_sub1.getMessage() + " (Recovered) " + method81((byte) 79)), exception_sub1, 15004);
+                    ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + method81((byte) 79)), exception_sub1, 15004);
                     SoftwareFallbackShader.method3553(false, (byte) 113, 0);
                 }
             }
             Component240.method598(9013);
             int i = Component192.aClass348_Sub51_3959.aClass239_Sub17_7263.method1798(-32350);
-            if (i == 0) SpriteAtlasShader.method2161((byte) -127, 15L);
+            if (i == 0) SpriteAtlasShader.sleep((byte) -127, 15L);
             else if (i != 1) {
                 if (i != 2) {
-                    if (i == 3) SpriteAtlasShader.method2161((byte) -102, 2L);
-                } else SpriteAtlasShader.method2161((byte) -97, 5L);
-            } else SpriteAtlasShader.method2161((byte) -104, 10L);
+                    if (i == 3) SpriteAtlasShader.sleep((byte) -102, 2L);
+                } else SpriteAtlasShader.sleep((byte) -97, 5L);
+            } else SpriteAtlasShader.sleep((byte) -104, 10L);
             if (Component144.aBoolean3988) ReliefShader.method1416(5);
             if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
                 Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 0);

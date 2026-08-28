@@ -21,7 +21,7 @@ final class DisplayModeManagerContainer363
 
     public static void method2604(byte i) {
         aClass273_4091 = null;
-        if (i >= -49) method2606(31, -15L);
+        if (i >= -49) sleepMillis(31, -15L);
         aClass74_4098 = null;
         aClass351_4094 = null;
         anIntArray4096 = null;
@@ -34,7 +34,8 @@ final class DisplayModeManagerContainer363
         return PlayerState.anInt7068 != 0;
     }
 
-    static final void method2606(int i, long l) {
+    /** {@link Thread#sleep(long)} swallowing interrupts. */
+    static final void sleepMillis(int i, long l) {
         try {
             anInt4090++;
             try {
@@ -44,7 +45,7 @@ final class DisplayModeManagerContainer363
                 /* empty */
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "de.A(" + i + ',' + l + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "de.A(" + i + ',' + l + ')');
         }
     }
 
@@ -53,7 +54,7 @@ final class DisplayModeManagerContainer363
         try {
             int i_2_ = -87 / ((28 - i_1_) / 54);
             byte[] is = new byte[i];
-            DisplayModeManagerContainer152.method3610(is, (byte) 7, i, file);
+            DisplayModeManagerContainer152.readFileFully(is, (byte) 7, i, file);
             return is;
         } catch (java.io.IOException ioexception) {
             return null;

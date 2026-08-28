@@ -27,7 +27,7 @@ final class DisplayModeManagerContainer389
                     OpenGL.glTexImage2Di(34069 + i_0_, 0, this.method228(121), i, i, 0, ParametricDefinition.method3055(110, this.aClass304_5084), (this.aClass377_5082.anInt9918), is[i_0_], 0);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("le.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("le.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -35,9 +35,9 @@ final class DisplayModeManagerContainer389
         anInt8620++;
         RandomAccessFileReader class234 = null;
         try {
-            Task class144 = OggUrlStream.aClass297_8992.method2233((byte) -46, "", true);
-            while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -122, 1L);
-            if (class144.anInt1997 == 1) {
+            Task class144 = OggUrlStream.aClass297_8992.openCacheFile((byte) -46, "", true);
+            while (class144.status == 0) SpriteAtlasShader.sleep((byte) -122, 1L);
+            if (class144.status == 1) {
                 class234 = (RandomAccessFileReader) class144.result;
                 Buffer class348_sub49 = Component192.aClass348_Sub51_3959.method3427(24);
                 class234.write((byte) 114, 0, (class348_sub49.offset), (class348_sub49.payload));

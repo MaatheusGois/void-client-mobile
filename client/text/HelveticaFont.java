@@ -83,7 +83,7 @@ final class HelveticaFont {
                 DisplayModeManagerContainer50.gameCanvas.repaint();
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("rc.A(" + i + ',' + (color != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (color_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (color_2_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("rc.A(" + i + ',' + (color != null ? "{...}" : "null") + ',' + (string != null ? "{...}" : "null") + ',' + (color_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (color_2_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -106,7 +106,7 @@ final class HelveticaFont {
 
     static final void method1459(int i, int i_9_) {
         anInt2637++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i, (byte) 105, 10);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 10);
         class348_sub42_sub15.method3251(-16058);
         if (i_9_ != 2) aClass352Array2636 = null;
     }

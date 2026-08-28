@@ -20,9 +20,9 @@ final class Component307
             if (i_1_ > -17) return null;
             if (var_ha_Sub2.aBoolean7793 || Component353.method1436(-58, i_3_) && Component353.method1436(-68, i_0_)) return new GlRectangleTexture(var_ha_Sub2, 3553, i_2_, i_3_, i_0_, bool, is, i);
             if (var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, 34037, i_2_, i_3_, i_0_, bool, is, i);
-            return new GlRectangleTexture(var_ha_Sub2, i_2_, i_3_, i_0_, Component373.method340(i_3_, (byte) 108), Component373.method340(i_0_, (byte) 108), is, i);
+            return new GlRectangleTexture(var_ha_Sub2, i_2_, i_3_, i_0_, Component373.nextPowerOfTwo(i_3_, (byte) 108), Component373.nextPowerOfTwo(i_0_, (byte) 108), is, i);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fr.B(" + bool + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fr.B(" + bool + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ')'));
         }
     }
 

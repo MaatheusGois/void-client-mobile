@@ -29,7 +29,7 @@ final class Component39
     static final boolean method1299(int i, int i_0_, int i_1_) {
         anInt2253++;
         if (i != 393216) anInt2251 = -106;
-        return HashNodeSub16Sub1.method3262(i_0_, i_1_, 102) | (i_0_ & 0x60000) != 0 || SceneNode.method2783(i_1_, (byte) -99, i_0_);
+        return HashNodeSub16Sub1.hasFlag0x10(i_0_, i_1_, 102) | (i_0_ & 0x60000) != 0 || SceneNode.method2783(i_1_, (byte) -99, i_0_);
     }
 
     static {

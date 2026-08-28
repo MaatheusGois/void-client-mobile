@@ -33,7 +33,7 @@ final class NodeSub29
                 if (bool == false) break;
                 method3004(null, false, null);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("oia.B(" + (class45 != null ? "{...}" : "null") + ',' + bool + ',' + (var_d != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("oia.B(" + (class45 != null ? "{...}" : "null") + ',' + bool + ',' + (var_d != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

@@ -307,7 +307,7 @@ final class SpriteSub1
         aHa_Sub3_8407.method3879(-8629);
     }
 
-    final void method968(int i, int i_77_, int i_78_) {
+    final void capturePixels(int i, int i_77_, int i_78_) {
         anInt8406++;
         int[] is = aHa_Sub3_8407.ShaderImpl(i, i_77_, anInt8411, anInt8417);
         int[] is_79_ = new int[anInt8417 * anInt8411];
@@ -316,25 +316,25 @@ final class SpriteSub1
             for (int i_80_ = 0; anInt8417 > i_80_; i_80_++) {
                 int i_81_ = i_80_ * anInt8411;
                 for (int i_82_ = 0; i_82_ < anInt8411; i_82_++)
-                    is_79_[i_81_ + i_82_] = (Component224.method2057((GpsOverlay.method1166(1828651008, is[i_81_ - -i_82_]) << 8), GpsOverlay.method1166(is_79_[i_81_ - -i_82_], 16777215)));
+                    is_79_[i_81_ + i_82_] = (Component224.bitwiseOr((GpsOverlay.bitwiseAnd(1828651008, is[i_81_ - -i_82_]) << 8), GpsOverlay.bitwiseAnd(is_79_[i_81_ - -i_82_], 16777215)));
             }
         } else if (i_78_ == 1) {
             for (int i_83_ = 0; anInt8417 > i_83_; i_83_++) {
                 int i_84_ = i_83_ * anInt8411;
                 for (int i_85_ = 0; anInt8411 > i_85_; i_85_++)
-                    is_79_[i_85_ + i_84_] = (Component224.method2057(GpsOverlay.method1166(is_79_[i_85_ + i_84_], 16777215), (GpsOverlay.method1166(is[i_84_ - -i_85_], 743571200) << 16)));
+                    is_79_[i_85_ + i_84_] = (Component224.bitwiseOr(GpsOverlay.bitwiseAnd(is_79_[i_85_ + i_84_], 16777215), (GpsOverlay.bitwiseAnd(is[i_84_ - -i_85_], 743571200) << 16)));
             }
         } else if (i_78_ == 2) {
             for (int i_89_ = 0; anInt8417 > i_89_; i_89_++) {
                 int i_90_ = i_89_ * anInt8411;
                 for (int i_91_ = 0; i_91_ < anInt8411; i_91_++)
-                    is_79_[i_90_ + i_91_] = (Component224.method2057(GpsOverlay.method1166(is_79_[i_90_ + i_91_], 16777215), GpsOverlay.method1166(-3725444, (is[i_91_ + i_90_] << 24))));
+                    is_79_[i_90_ + i_91_] = (Component224.bitwiseOr(GpsOverlay.bitwiseAnd(is_79_[i_90_ + i_91_], 16777215), GpsOverlay.bitwiseAnd(-3725444, (is[i_91_ + i_90_] << 24))));
             }
         } else if (i_78_ == 3) {
             for (int i_86_ = 0; anInt8417 > i_86_; i_86_++) {
                 int i_87_ = i_86_ * anInt8411;
                 for (int i_88_ = 0; i_88_ < anInt8411; i_88_++)
-                    is_79_[i_88_ + i_87_] = (Component224.method2057(is[i_88_ + i_87_] != 0 ? -16777216 : 0, GpsOverlay.method1166(16777215, is_79_[i_88_ + i_87_])));
+                    is_79_[i_88_ + i_87_] = (Component224.bitwiseOr(is[i_88_ + i_87_] != 0 ? -16777216 : 0, GpsOverlay.bitwiseAnd(16777215, is_79_[i_88_ + i_87_])));
             }
         }
         method986(0, 0, anInt8411, anInt8417, is_79_, 0, anInt8411);
@@ -419,7 +419,7 @@ final class SpriteSub1
         int[] is = aHa_Sub3_8407.ShaderImpl(i_110_, i_111_, i_108_, i_109_);
         if (is != null) {
             for (int i_112_ = 0; i_112_ < is.length; i_112_++)
-                is[i_112_] = Component224.method2057(is[i_112_], -16777216);
+                is[i_112_] = Component224.bitwiseOr(is[i_112_], -16777216);
             method986(i, i_107_, i_108_, i_109_, is, 0, i_108_);
         }
     }
@@ -487,7 +487,7 @@ final class SpriteSub1
             aBoolean8396 = !aBoolean8410 && anInterface18_Impl3_8403.method73(91);
             aBoolean8391 = !aBoolean8408 && anInterface18_Impl3_8403.method73(101);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jd.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_119_ + ',' + (is != null ? "{...}" : "null") + ',' + i_120_ + ',' + i_121_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jd.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_119_ + ',' + (is != null ? "{...}" : "null") + ',' + i_120_ + ',' + i_121_ + ')'));
         }
     }
 }

@@ -74,7 +74,7 @@ final class GpiLogger extends NodeSub16 {
 
     private final void method2824(int i, byte i_4_, PlayerState class348_sub43) {
         if (((aClass348_Sub16_Sub3_8852.anIntArray8895[class348_sub43.anInt7067]) & 0x4) != 0 && (class348_sub43.anInt7087 < 0)) {
-            int i_5_ = ((aClass348_Sub16_Sub3_8852.anIntArray8906[class348_sub43.anInt7067]) / Component231.anInt339);
+            int i_5_ = ((aClass348_Sub16_Sub3_8852.anIntArray8906[class348_sub43.anInt7067]) / Component231.sampleRate);
             int i_6_ = ((-class348_sub43.anInt7082 + (1048575 + i_5_)) / i_5_);
             class348_sub43.anInt7082 = (i_5_ * i + class348_sub43.anInt7082 & 0xfffff);
             if (i_6_ <= i) {
@@ -120,7 +120,7 @@ final class GpiLogger extends NodeSub16 {
             anInt8859++;
             if (i_10_ != -114) method2821();
             if ((0x4 & (aClass348_Sub16_Sub3_8852.anIntArray8895[class348_sub43.anInt7067])) != 0 && (class348_sub43.anInt7087 < 0)) {
-                int i_12_ = ((aClass348_Sub16_Sub3_8852.anIntArray8906[class348_sub43.anInt7067]) / Component231.anInt339);
+                int i_12_ = ((aClass348_Sub16_Sub3_8852.anIntArray8906[class348_sub43.anInt7067]) / Component231.sampleRate);
                 for (; ; ) {
                     int i_13_ = ((i_12_ + (1048575 + -class348_sub43.anInt7082)) / i_12_);
                     if (i_13_ > i_11_) break;
@@ -128,7 +128,7 @@ final class GpiLogger extends NodeSub16 {
                     i_9_ += i_13_;
                     class348_sub43.anInt7082 += -1048576 + i_12_ * i_13_;
                     i_11_ -= i_13_;
-                    int i_14_ = Component231.anInt339 / 100;
+                    int i_14_ = Component231.sampleRate / 100;
                     int i_15_ = 262144 / i_12_;
                     if (i_15_ < i_14_) i_14_ = i_15_;
                     NodeSub16Sub5 class348_sub16_sub5 = (class348_sub43.aClass348_Sub16_Sub5_7081);
@@ -146,7 +146,7 @@ final class GpiLogger extends NodeSub16 {
             }
             class348_sub43.aClass348_Sub16_Sub5_7081.method2817(is, i_9_, i_11_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bea.H(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ',' + i_11_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bea.H(" + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ',' + i_9_ + ',' + i_10_ + ',' + i_11_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 

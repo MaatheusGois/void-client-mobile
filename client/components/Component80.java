@@ -48,7 +48,7 @@ abstract class Component80
     }
 
     static final void method2255(int i, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
-        Component208.method1070((byte) 117, i);
+        Component208.ensureIntArrayCapacity((byte) 117, i);
         anInt3812++;
         if (i_4_ >= -65) method2255(-118, -20, (byte) -121, 100, -62, 77, -119);
         int i_9_ = 0;
@@ -63,9 +63,9 @@ abstract class Component80
         int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_6_];
         int i_17_ = i_3_ + -i_10_;
         int i_18_ = i_10_ + i_3_;
-        MenuOpener.method1156(-27, i_17_, is, -i + i_3_, i_8_);
-        MenuOpener.method1156(-27, i_18_, is, i_17_, i_7_);
-        MenuOpener.method1156(-27, i + i_3_, is, i_18_, i_8_);
+        MenuOpener.fillInts(-27, i_17_, is, -i + i_3_, i_8_);
+        MenuOpener.fillInts(-27, i_18_, is, i_17_, i_7_);
+        MenuOpener.fillInts(-27, i + i_3_, is, i_18_, i_8_);
         while (i_11_ > i_9_) {
             i_16_ += 2;
             i_15_ += 2;
@@ -85,8 +85,8 @@ abstract class Component80
                     int[] is_20_ = DisplayModeManagerContainer167.anIntArrayArray255[i_6_ + -i_11_];
                     int i_21_ = i_3_ - -i_9_;
                     int i_22_ = -i_9_ + i_3_;
-                    MenuOpener.method1156(-27, i_21_, is_19_, i_22_, i_8_);
-                    MenuOpener.method1156(-27, i_21_, is_20_, i_22_, i_8_);
+                    MenuOpener.fillInts(-27, i_21_, is_19_, i_22_, i_8_);
+                    MenuOpener.fillInts(-27, i_21_, is_20_, i_22_, i_8_);
                 } else {
                     int[] is_23_ = DisplayModeManagerContainer167.anIntArrayArray255[i_6_ - -i_11_];
                     int[] is_24_ = DisplayModeManagerContainer167.anIntArrayArray255[-i_11_ + i_6_];
@@ -95,12 +95,12 @@ abstract class Component80
                     int i_27_ = i_3_ - i_9_;
                     int i_28_ = i_3_ - -i_25_;
                     int i_29_ = -i_25_ + i_3_;
-                    MenuOpener.method1156(-27, i_29_, is_23_, i_27_, i_8_);
-                    MenuOpener.method1156(-27, i_28_, is_23_, i_29_, i_7_);
-                    MenuOpener.method1156(-27, i_26_, is_23_, i_28_, i_8_);
-                    MenuOpener.method1156(-27, i_29_, is_24_, i_27_, i_8_);
-                    MenuOpener.method1156(-27, i_28_, is_24_, i_29_, i_7_);
-                    MenuOpener.method1156(-27, i_26_, is_24_, i_28_, i_8_);
+                    MenuOpener.fillInts(-27, i_29_, is_23_, i_27_, i_8_);
+                    MenuOpener.fillInts(-27, i_28_, is_23_, i_29_, i_7_);
+                    MenuOpener.fillInts(-27, i_26_, is_23_, i_28_, i_8_);
+                    MenuOpener.fillInts(-27, i_29_, is_24_, i_27_, i_8_);
+                    MenuOpener.fillInts(-27, i_28_, is_24_, i_29_, i_7_);
+                    MenuOpener.fillInts(-27, i_26_, is_24_, i_28_, i_8_);
                 }
             }
             int[] is_30_ = DisplayModeManagerContainer167.anIntArrayArray255[i_6_ + i_9_];
@@ -111,15 +111,15 @@ abstract class Component80
                 int i_34_ = (i_9_ <= i_13_ ? i_13_ : DisplayModeManagerContainer207.anIntArray9757[i_9_]);
                 int i_35_ = i_34_ + i_3_;
                 int i_36_ = i_3_ + -i_34_;
-                MenuOpener.method1156(-27, i_36_, is_30_, i_33_, i_8_);
-                MenuOpener.method1156(-27, i_35_, is_30_, i_36_, i_7_);
-                MenuOpener.method1156(-27, i_32_, is_30_, i_35_, i_8_);
-                MenuOpener.method1156(-27, i_36_, is_31_, i_33_, i_8_);
-                MenuOpener.method1156(-27, i_35_, is_31_, i_36_, i_7_);
-                MenuOpener.method1156(-27, i_32_, is_31_, i_35_, i_8_);
+                MenuOpener.fillInts(-27, i_36_, is_30_, i_33_, i_8_);
+                MenuOpener.fillInts(-27, i_35_, is_30_, i_36_, i_7_);
+                MenuOpener.fillInts(-27, i_32_, is_30_, i_35_, i_8_);
+                MenuOpener.fillInts(-27, i_36_, is_31_, i_33_, i_8_);
+                MenuOpener.fillInts(-27, i_35_, is_31_, i_36_, i_7_);
+                MenuOpener.fillInts(-27, i_32_, is_31_, i_35_, i_8_);
             } else {
-                MenuOpener.method1156(-27, i_32_, is_30_, i_33_, i_8_);
-                MenuOpener.method1156(-27, i_32_, is_31_, i_33_, i_8_);
+                MenuOpener.fillInts(-27, i_32_, is_30_, i_33_, i_8_);
+                MenuOpener.fillInts(-27, i_32_, is_31_, i_33_, i_8_);
             }
         }
     }

@@ -108,11 +108,11 @@ final class CurvePreset extends Definition {
         super(1, true);
     }
 
-    final int[] method3042(int i, int i_33_) {
+    final int[] getMonochromeOutput(int i, int i_33_) {
         anInt9207++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_33_ != 255) anIntArray9214 = null;
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             int[] is_34_ = this.method3048(i, 633706337, 0);
             for (int i_35_ = 0; i_35_ < DefinitionSub6.anInt9139; i_35_++) {
                 int i_36_ = is_34_[i_35_] >> 4;
@@ -131,11 +131,11 @@ final class CurvePreset extends Definition {
         int[] is_38_ = anIntArrayArray9210[-2 + anIntArrayArray9210.length];
         int[] is_39_ = anIntArrayArray9210[-1 + anIntArrayArray9210.length];
         anIntArray9208 = new int[]{is_38_[0] - (is_39_[0] + -is_38_[0]), is_38_[1] - (-is_38_[1] + is_39_[1])};
-        if (i != 73) method3042(75, 39);
+        if (i != 73) getMonochromeOutput(75, 39);
         anIntArray9214 = new int[]{is[0] + -is_37_[0] + is[0], is[1] - (-is[1] - -is_37_[1])};
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (anIntArrayArray9210 == null) anIntArrayArray9210 = new int[][]{new int[2], {4096, 4096}};
         if (i <= 108) anIntArrayArray9210 = null;
         anInt9209++;

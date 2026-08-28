@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class56` (JODE-obfuscated).
- * Loading/progress state. method525/getProgress report progress; startLoadingTask(Frame, ReflectionInvoker, boolean) spins up a loading Task and waits. Holds current/max (currentProgress/maxProgress) and flags (isBlocking/isSmooth).
+ * Loading/progress state. getStageId/getProgress report progress; startLoadingTask(Frame, ReflectionInvoker, boolean) spins up a loading Task and waits. Holds current/max (currentProgress/maxProgress) and flags (isBlocking/isSmooth).
  */
 
 import java.awt.*;
@@ -15,7 +15,8 @@ final class LoadingState {
     static int anInt1014;
     FriendsIgnoreList aClass274_1015;
     boolean isBlocking;
-    private final int anInt1017;
+    /** Ordinal loading stage id (logged as "load stage N"). */
+    private final int stageId;
     static LoadingState aClass56_1018 = new LoadingState(0, FriendsIgnoreList.aClass274_3499, FriendsIgnoreList.aClass274_3499, 0, 1);
     static int anInt1019;
     static int anInt1020;
@@ -42,17 +43,19 @@ final class LoadingState {
     static LoadingState aClass56_1041 = new LoadingState(18, FriendsIgnoreList.aClass274_3500, 100);
     static LoadingState aClass56_1042 = new LoadingState(19, FriendsIgnoreList.aClass274_3500, 100);
     static LoadingState aClass56_1043 = new LoadingState(20, FriendsIgnoreList.aClass274_3500, 100);
-    static int anInt1044;
+    /** JS5 group id for bitmap font archive {@code p11_full}. */
+    static int p11FullGroupId;
     static int[] anIntArray1045 = new int[2];
 
     private LoadingState(int i, FriendsIgnoreList class274, int i_0_) {
         this(i, class274, class274, i_0_, i_0_, true, false);
     }
 
-    final int method525(int i) {
+    /** @return ordinal stage id ({@link #stageId}). */
+    final int getStageId(int i) {
         if (i >= -109) aClass56_1039 = null;
         anInt1019++;
-        return anInt1017;
+        return stageId;
     }
 
     public final String toString() {
@@ -91,15 +94,15 @@ final class LoadingState {
         try {
             anInt1020++;
             for (; ; ) {
-                Task class144 = class297.method2248((byte) 89, frame);
-                while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -124, 10L);
-                if (class144.anInt1997 == 1) break;
-                SpriteAtlasShader.method2161((byte) 33, 100L);
+                Task class144 = class297.exitFullscreen((byte) 89, frame);
+                while (class144.status == 0) SpriteAtlasShader.sleep((byte) -124, 10L);
+                if (class144.status == 1) break;
+                SpriteAtlasShader.sleep((byte) 33, 100L);
             }
             frame.setVisible(bool);
             frame.dispose();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jj.D(" + (frame != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jj.D(" + (frame != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -107,7 +110,8 @@ final class LoadingState {
         this(i, class274, class274_1_, i_2_, i_3_, true, false);
     }
 
-    static final LoadingState[] method528(int i) {
+    /** All loading stage constants in ordinal order. */
+    static final LoadingState[] allStages(int i) {
         anInt1014++;
         int i_4_ = 108 / ((i - 34) / 55);
         return (new LoadingState[]{aClass56_1018, aClass56_1023, aClass56_1024, aClass56_1026, aClass56_1027, aClass56_1028, aClass56_1029, aClass56_1030, aClass56_1031, aClass56_1032, aClass56_1033, aClass56_1034, aClass56_1035, aClass56_1036, aClass56_1037, aClass56_1038, aClass56_1039, aClass56_1040, aClass56_1041, aClass56_1042, aClass56_1043});
@@ -117,13 +121,13 @@ final class LoadingState {
         try {
             this.aClass274_1012 = class274;
             this.currentProgress = i_7_;
-            anInt1017 = i;
+            stageId = i;
             this.maxProgress = i_6_;
             this.aClass274_1015 = class274_5_;
             this.isBlocking = bool_8_;
             this.isSmooth = bool;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jj.<init>(" + i + ',' + (class274 != null ? "{...}" : "null") + ',' + (class274_5_ != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + bool + ',' + bool_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jj.<init>(" + i + ',' + (class274 != null ? "{...}" : "null") + ',' + (class274_5_ != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + bool + ',' + bool_8_ + ')'));
         }
     }
 }

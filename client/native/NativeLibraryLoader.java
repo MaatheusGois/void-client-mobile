@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class228` (JODE-obfuscated).
- * Native-library / JNI loader utility. Reflectively reaches ClassLoader.nativeLibraries (method1629), walks the Vector and forces finalize() via setAccessible; used to unload/reload native libs.
+ * Native-library / JNI loader utility. Reflectively reaches ClassLoader.nativeLibraries (unloadNativeLibraries), walks the Vector and forces finalize() via setAccessible; used to unload/reload native libs.
  */
 
 import java.io.File;
@@ -18,16 +18,22 @@ final class NativeLibraryLoader {
     static int anInt2971;
     static Component183 aClass114_2972 = new Component183(49, 4);
     static int anInt2973;
-    static DisplayModeManagerContainer115[] aClass57Array2974;
+    /** Cached result of {@link FriendLoginMessage#getFilteredDisplayModes}. */
+    static DisplayModeInfo[] cachedDisplayModes;
     static int anInt2975;
 
-    public static void method1628(byte i) {
-        aClass57Array2974 = null;
-        if (i <= 47) aClass57Array2974 = null;
+    public static void clearStatics(byte i) {
+        cachedDisplayModes = null;
+        if (i <= 47) cachedDisplayModes = null;
         aClass114_2972 = null;
     }
 
-    static final boolean method1629(boolean bool) {
+    /**
+     * Reflectively walks {@code ClassLoader.nativeLibraries}, finalizes matching
+     * entries, and clears handles so natives can be reloaded. Returns true if the
+     * tracked lib table is empty afterwards.
+     */
+    static final boolean unloadNativeLibraries(boolean bool) {
         anInt2973++;
         Hashtable hashtable = new Hashtable();
         Enumeration enumeration = Player.aHashtable10565.keys();
@@ -161,12 +167,12 @@ final class NativeLibraryLoader {
                     }
                     if (!class348_sub12.aClass348_Sub21_6751.aBoolean6848) {
                         class348_sub12.aClass348_Sub21_6751.aBoolean6848 = true;
-                        ClientScriptExecutor.method701(Component330.aClass273_1512, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
+                        ClientScriptExecutor.runScript(Component330.aClass273_1512, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
                     }
-                    if (class348_sub12.aClass348_Sub21_6751.aBoolean6848) ClientScriptExecutor.method701(DisplayModeManagerContainer34.aClass273_8664, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
+                    if (class348_sub12.aClass348_Sub21_6751.aBoolean6848) ClientScriptExecutor.runScript(DisplayModeManagerContainer34.aClass273_8664, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
                 } else if (class348_sub12.aClass348_Sub21_6751.aBoolean6848) {
                     class348_sub12.aClass348_Sub21_6751.aBoolean6848 = false;
-                    ClientScriptExecutor.method701(DisplayModeManagerContainer123.aClass273_1298, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
+                    ClientScriptExecutor.runScript(DisplayModeManagerContainer123.aClass273_1298, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
                 }
             }
         }

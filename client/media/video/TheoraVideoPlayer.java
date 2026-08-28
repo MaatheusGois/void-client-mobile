@@ -39,7 +39,7 @@ final class TheoraVideoPlayer {
     }
 
     static final Component150[] method841(int i) {
-        if (i > -126) method847(null, -66);
+        if (i > -126) printClientError(null, -66);
         anInt1504++;
         return (new Component150[]{ImageCache.aClass227_2568, Component265.aClass227_1591, BuildInfo.aClass227_151});
     }
@@ -49,7 +49,7 @@ final class TheoraVideoPlayer {
         Component161.aClass46Array1942 = null;
         if (Component210.aBoolean5300 && MenuEntry.method3229(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
         int i = 0;
-        if (bool != false) method847(null, -110);
+        if (bool != false) printClientError(null, -110);
         int i_1_ = 0;
         if (Component210.aBoolean5300) {
             i = BufferCacheSub3.method4008((byte) -124);
@@ -92,8 +92,8 @@ final class TheoraVideoPlayer {
                     Component241.anInt2955 = 2;
                 }
                 if (Component241.anInt2955 == 2) {
-                    if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 == 2) throw new IOException();
-                    if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 != 1) return;
+                    if (DisplayModeManagerContainer273.aClass144_5800.status == 2) throw new IOException();
+                    if (DisplayModeManagerContainer273.aClass144_5800.status != 1) return;
                     DefinitionSub8.aClass238_9165 = OggStreamReader.openSocketStream(((Socket) (DisplayModeManagerContainer273.aClass144_5800.result)), (byte) -118, 7500);
                     DisplayModeManagerContainer273.aClass144_5800 = null;
                     NodeSub3.method2739(0);
@@ -129,7 +129,7 @@ final class TheoraVideoPlayer {
                     class348_sub49.writeInt((byte) 127, is[3]);
                     class348_sub49.writeLong(0L, (byte) 70);
                     class348_sub49.writeString((byte) -5, DisplayModeManagerContainer51.password);
-                    class348_sub49.writeLong(ObjectDeserializer.aLong6966, (byte) -124);
+                    class348_sub49.writeLong(ObjectDeserializer.userHash, (byte) -124);
                     class348_sub49.writeLong(OutputStream_Sub2.aLong108, (byte) -112);
                     class348_sub49.applyRsa(Sprite.aBigInteger6921, (byte) -76, (Component269.aBigInteger8762));
                     NodeSub3.method2739(0);
@@ -150,8 +150,8 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeShort((byte) 107, PacketReader.anInt10432);
                         class348_sub49_sub2.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
                         BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
-                        class348_sub49_sub2.writeString((byte) -5, Component205.aString5966);
-                        class348_sub49_sub2.writeInt((byte) 120, Connection.anInt2670);
+                        class348_sub49_sub2.writeString((byte) -5, Component205.settingsCookie);
+                        class348_sub49_sub2.writeInt((byte) 120, Connection.affiliateId);
                         Buffer class348_sub49_8_ = Component192.aClass348_Sub51_3959.method3427(24);
                         class348_sub49_sub2.writeByte(false, (class348_sub49_8_.offset));
                         class348_sub49_sub2.writeBytes(class348_sub49_8_.offset, 0, (class348_sub49_8_.payload), 74);
@@ -175,11 +175,11 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, -109);
                         int i_5_ = class348_sub49_sub2.offset;
                         class348_sub49_sub2.writeString((byte) -5, DisplayModeManagerContainer282.username);
-                        class348_sub49_sub2.writeByte(false, PacketReader.aClass230_10434.anInt2987);
-                        class348_sub49_sub2.writeByte(false, ObjectDeserializer.anInt6967);
+                        class348_sub49_sub2.writeByte(false, PacketReader.currentGameType.id);
+                        class348_sub49_sub2.writeByte(false, ObjectDeserializer.languageId);
                         BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
-                        class348_sub49_sub2.writeString((byte) -5, Component205.aString5966);
-                        class348_sub49_sub2.writeInt((byte) 106, Connection.anInt2670);
+                        class348_sub49_sub2.writeString((byte) -5, Component205.settingsCookie);
+                        class348_sub49_sub2.writeInt((byte) 106, Connection.affiliateId);
                         Component270.method1244(92, class348_sub49_sub2);
                         class348_sub49_sub2.xteaEncrypt(i_5_, true, is, (class348_sub49_sub2.offset));
                         class348_sub49_sub2.writeLengthShort(1809639944, -i_4_ + (class348_sub49_sub2.offset));
@@ -299,7 +299,7 @@ final class TheoraVideoPlayer {
                             ImageCacheStore.anInt4026 = class348_sub49_sub2.readUnsignedShort(842397944);
                             DisplayModeManagerContainer105.anInt4870 = class348_sub49_sub2.readUnsignedShort(842397944);
                             DisplayModeManagerContainer292.anInt5065 = class348_sub49_sub2.readInt((byte) -126);
-                            PauseHandler.aClass144_9536 = OggUrlStream.aClass297_8992.method2232(116, DisplayModeManagerContainer292.anInt5065);
+                            PauseHandler.aClass144_9536 = OggUrlStream.aClass297_8992.reverseDns(116, DisplayModeManagerContainer292.anInt5065);
                             Component43.anInt4976 = class348_sub49_sub2.readUnsignedByte(255);
                             DisplayModeManagerContainer273.anInt5797 = class348_sub49_sub2.readUnsignedShort(842397944);
                             NodederUtil.anInt6632 = class348_sub49_sub2.readUnsignedShort(842397944);
@@ -311,11 +311,11 @@ final class TheoraVideoPlayer {
                             ShaderSub2.aClass161_5199.anInt2143 = class348_sub49_sub2.readUnsignedShort(842397944);
                             if (ShaderSub2.aClass161_5199.anInt2143 == 65535) ShaderSub2.aClass161_5199.anInt2143 = -1;
                             ShaderSub2.aClass161_5199.aString2147 = class348_sub49_sub2.readGjstr2(-13487);
-                            if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
+                            if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                                 ShaderSub2.aClass161_5199.anInt2138 = (50000 + (ShaderSub2.aClass161_5199.anInt2143));
                                 ShaderSub2.aClass161_5199.anInt2148 = (40000 + (ShaderSub2.aClass161_5199.anInt2143));
                             }
-                            if (DisplayModeManagerContainer345.aClass364_165 != DisplayModeManagerContainer154.aClass364_1279 && ((Component223.aClass161_125.method1264((byte) 94, MenuOpener.aClass161_4839)) || (Component223.aClass161_125.method1264((byte) 112, (DefinitionSub35.aClass161_9443))))) HashNodeSub20.method3283(114);
+                            if (DisplayModeManagerContainer345.aClass364_165 != DisplayModeManagerContainer154.LOCAL && ((Component223.aClass161_125.method1264((byte) 94, MenuOpener.aClass161_4839)) || (Component223.aClass161_125.method1264((byte) 112, (DefinitionSub35.aClass161_9443))))) HashNodeSub20.method3283(114);
                         }
                         if ((!ParametricDefinition.aBoolean9103 || RSACipher.aBoolean4903) && !DisplayModeManagerContainer105.aBoolean4888) {
                             try {
@@ -336,7 +336,7 @@ final class TheoraVideoPlayer {
                                 }
                             }
                         }
-                        if (DisplayModeManagerContainer345.aClass364_165 == Component326.aClass364_5271) {
+                        if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE) {
                             try {
                                 AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "loggedin");
                             } catch (Throwable throwable) {
@@ -437,7 +437,7 @@ final class TheoraVideoPlayer {
             class318_sub9.aClass318_Sub9_6468.aClass318_Sub9_6469 = class318_sub9;
             class318_sub9.aClass318_Sub9_6469.aClass318_Sub9_6468 = class318_sub9;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("lh.A(" + (class318_sub9 != null ? "{...}" : "null") + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("lh.A(" + (class318_sub9 != null ? "{...}" : "null") + ',' + bool + ')'));
         }
     }
 
@@ -464,8 +464,8 @@ final class TheoraVideoPlayer {
         return class318_sub9;
     }
 
-    static final void method847(String string, int i) {
-        System.out.println("Error: " + DisplayModeManagerContainer196.method2680("\n", true, "%0a", string));
+    static final void printClientError(String string, int i) {
+        System.out.println("Error: " + DisplayModeManagerContainer196.replaceAll("\n", true, "%0a", string));
         anInt1492++;
         if (i != -5192) method843((byte) 17);
     }

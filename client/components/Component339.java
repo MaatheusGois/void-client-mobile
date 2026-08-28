@@ -17,15 +17,17 @@ abstract class Component339
     static int anInt3141;
     static int anInt3142;
     static Component183 aClass114_3143;
-    static byte[] aByteArray3144 = new byte[520];
+    /** Shared 520+ byte sector scratch for {@link CacheIndexReader}. */
+    static byte[] sectorBuffer = new byte[520];
     static Component183 aClass114_3145;
     static CacheStore aClass45_3146;
     static Component290 aClass166_3147;
 
-    static final DisplayModeManagerContainer155[] method1709(int i) {
+    /** All {@link BuildType}s: LIVE, RC, WIP. */
+    static final BuildType[] values(int i) {
         if (i > -110) method1715(97);
         anInt3141++;
-        return (new DisplayModeManagerContainer155[]{Component342.aClass231_1189, DefinitionSub20.aClass231_9263, Component118.aClass231_4953});
+        return (new BuildType[]{Component342.LIVE, DefinitionSub20.RC, Component118.WIP});
     }
 
     abstract int method1710(int i);
@@ -37,7 +39,7 @@ abstract class Component339
             if (i != 7) aClass45_3146 = null;
             Component161.aClass45_1940 = class45;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("su.Q(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + i_0_ + ',' + (class45_1_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("su.Q(" + i + ',' + (class45 != null ? "{...}" : "null") + ',' + i_0_ + ',' + (class45_1_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -55,9 +57,9 @@ abstract class Component339
         aClass114_3143 = null;
         aClass45_3146 = null;
         aClass114_3135 = null;
-        aByteArray3144 = null;
+        sectorBuffer = null;
         aClass166_3147 = null;
-        if (i < 13) method1709(-99);
+        if (i < 13) values(-99);
     }
 
     abstract void method1716(boolean bool);

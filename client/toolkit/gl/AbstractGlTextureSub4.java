@@ -33,7 +33,7 @@ final class AbstractGlTextureSub4
             OpenGL.glPixelStorei(3317, 4);
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("wha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("wha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ')'));
         }
     }
 
@@ -50,7 +50,8 @@ final class AbstractGlTextureSub4
         if (i == 24885) anIntArray8557 = null;
     }
 
-    static final NodeSub13 method1974(byte i, int i_3_, boolean bool) {
+    /** Lookup decoded image node by id ({@code bool} selects high bit in key). */
+    static final NodeSub13 getImageCacheNode(byte i, int i_3_, boolean bool) {
         anInt8559++;
         int i_4_ = -43 / ((-65 - i) / 55);
         long l = i_3_ | (bool ? -2147483648 : 0);

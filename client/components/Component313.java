@@ -63,7 +63,8 @@ final class Component313
         while (i < i_3_) fs_1_[i_2_++] = fs[i++];
     }
 
-    static final void method1575(Object[] objects, int i, Object[] objects_4_, int i_5_, int i_6_) {
+    /** Overlap-safe {@code Object[]} copy. */
+    static final void arraycopyObjects(Object[] objects, int i, Object[] objects_4_, int i_5_, int i_6_) {
         if (objects == objects_4_) {
             if (i == i_5_) return;
             if (i_5_ > i && i_5_ < i + i_6_) {
@@ -103,7 +104,8 @@ final class Component313
         while (i < i_6_) objects_4_[i_5_++] = objects[i++];
     }
 
-    static final void method1576(short[] is, int i, short[] is_7_, int i_8_, int i_9_) {
+    /** Overlap-safe {@code short[]} copy. */
+    static final void arraycopyShorts(short[] is, int i, short[] is_7_, int i_8_, int i_9_) {
         if (is == is_7_) {
             if (i == i_8_) return;
             if (i_8_ > i && i_8_ < i + i_9_) {
@@ -143,7 +145,8 @@ final class Component313
         while (i < i_9_) is_7_[i_8_++] = is[i++];
     }
 
-    static final void method1577(byte[] is, int i, byte[] is_10_, int i_11_, int i_12_) {
+    /** Overlap-safe {@code byte[]} copy (like {@link System#arraycopy}). */
+    static final void arraycopy(byte[] is, int i, byte[] is_10_, int i_11_, int i_12_) {
         if (is == is_10_) {
             if (i == i_11_) return;
             if (i_11_ > i && i_11_ < i + i_12_) {

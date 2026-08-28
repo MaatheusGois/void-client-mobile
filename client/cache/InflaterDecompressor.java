@@ -12,7 +12,8 @@ import java.util.zip.Inflater;
 final class InflaterDecompressor {
     static int anInt2070;
     static int anInt2071;
-    private Inflater anInflater2072;
+    /** Shared java.util.zip inflater (nowrap/GZIP). */
+    private Inflater inflater;
     static int anInt2073;
     static int anInt2074;
     static float[] aFloatArray2075 = new float[2];
@@ -28,7 +29,7 @@ final class InflaterDecompressor {
         class348_sub49.offset = 0;
         if (i != 9) aFloatArray2075 = null;
         byte[] is_1_ = new byte[i_0_];
-        method1218(is_1_, 29123, class348_sub49);
+        inflateGzip(is_1_, 29123, class348_sub49);
         return is_1_;
     }
 
@@ -75,22 +76,23 @@ final class InflaterDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final void method1218(byte[] is, int i, Buffer class348_sub49) {
+    /** Inflate GZIP payload from {@code class348_sub49} into {@code is}. */
+    final void inflateGzip(byte[] is, int i, Buffer class348_sub49) {
         try {
             if (i != 29123) method1217(-91, null);
             anInt2073++;
             if ((class348_sub49.payload[class348_sub49.offset]) != 31 || (class348_sub49.payload[1 + class348_sub49.offset]) != -117) throw new RuntimeException("Invalid GZIP header!");
-            if (anInflater2072 == null) anInflater2072 = new Inflater(true);
+            if (inflater == null) inflater = new Inflater(true);
             try {
-                anInflater2072.setInput(class348_sub49.payload, class348_sub49.offset - -10, -8 - (10 + class348_sub49.offset - (class348_sub49.payload).length));
-                anInflater2072.inflate(is);
+                inflater.setInput(class348_sub49.payload, class348_sub49.offset - -10, -8 - (10 + class348_sub49.offset - (class348_sub49.payload).length));
+                inflater.inflate(is);
             } catch (Exception exception) {
-                anInflater2072.reset();
+                inflater.reset();
                 throw new RuntimeException("Invalid GZIP compressed data!");
             }
-            anInflater2072.reset();
+            inflater.reset();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ol.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ol.A(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
         }
     }
 

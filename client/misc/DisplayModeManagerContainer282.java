@@ -211,9 +211,9 @@ final class DisplayModeManagerContainer282
             }
         } else {
             for (int i_13_ = 0; i_13_ < anInt5537; i_13_++) {
-                class348_sub49_sub1.method3397(122, aShortArray5592[i_13_]);
-                class348_sub49_sub1.method3397(67, aShortArray5579[i_13_]);
-                class348_sub49_sub1.method3397(31, aShortArray5566[i_13_]);
+                class348_sub49_sub1.writeShortLE(122, aShortArray5592[i_13_]);
+                class348_sub49_sub1.writeShortLE(67, aShortArray5579[i_13_]);
+                class348_sub49_sub1.writeShortLE(31, aShortArray5566[i_13_]);
             }
         }
         if (class348_sub49_sub1.offset != 0) {
@@ -231,7 +231,7 @@ final class DisplayModeManagerContainer282
             anInt5533++;
             return method684(bool, 1566382404, -1, i_14_, i_15_, i, class101);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.MA(" + i + ',' + i_14_ + ',' + (class101 != null ? "{...}" : "null") + ',' + bool + ',' + i_15_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.MA(" + i + ',' + i_14_ + ',' + (class101 != null ? "{...}" : "null") + ',' + bool + ',' + i_15_ + ')'));
         }
     }
 
@@ -437,7 +437,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.PA(" + (class64 != null ? "{...}" : "null") + ',' + i + ',' + i_42_ + ',' + i_43_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.PA(" + (class64 != null ? "{...}" : "null") + ',' + i + ',' + i_42_ + ',' + i_43_ + ',' + bool + ')'));
         }
     }
 
@@ -446,7 +446,7 @@ final class DisplayModeManagerContainer282
             anInt5633++;
             return method684(bool, 1566382404, i_89_, i_87_, i_88_, i, class101);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.OA(" + i + ',' + i_87_ + ',' + (class101 != null ? "{...}" : "null") + ',' + bool + ',' + i_88_ + ',' + i_89_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.OA(" + i + ',' + i_87_ + ',' + (class101 != null ? "{...}" : "null") + ',' + bool + ',' + i_88_ + ',' + i_89_ + ')'));
         }
     }
 
@@ -472,7 +472,7 @@ final class DisplayModeManagerContainer282
                     float f_91_ = ((float) ((anIntArray5644[class118.anInt1788]) + (anIntArray5644[class118.anInt1781]) + (anIntArray5644[class118.anInt1782])) * 0.3333333F);
                     float f_92_ = (DisplayModeManagerContainer56.aFloat2555 + (f_91_ * Component55.aFloat3935 + (f_90_ * Component100.aFloat8696 + Component385.aFloat2203 * f)));
                     float f_93_ = (ClientErrorReporter.aFloat2111 + (ScreenModeManager.aFloat2836 * f_91_ + (f_90_ * Component278.aFloat3242 + Component112.aFloat3943 * f)));
-                    float f_94_ = (f * RenderableSub9Sub1.aFloat8784 + f_90_ * Component233.aFloat3994 + f_91_ * CookieManager.aFloat6304 + Component297.aFloat4720);
+                    float f_94_ = (f * FriendLoginMessage.aFloat8784 + f_90_ * Component233.aFloat3994 + f_91_ * CookieManager.aFloat6304 + Component297.aFloat4720);
                     float f_95_ = ((float) (1.0 / Math.sqrt(f_94_ * f_94_ + (f_93_ * f_93_ + (f_92_ * f_92_)))) * (float) class118.anInt1784);
                     class101_sub3.method939(-f_94_ + f_94_ * f_95_, (class118.aShort1785 * class48.anInt856) >> 7, (-(f_92_ * f_95_) + (f_92_ + (float) class48.anInt854)), (class118.aShort1790 * class48.anInt857) >> 7, class48.anInt853, 90, (f_95_ * f_93_ + (-f_93_ + (float) class48.anInt847)));
                     aHa_Sub2_5598.method3766((byte) 55, class101_sub3);
@@ -514,7 +514,7 @@ final class DisplayModeManagerContainer282
             aFloatArray5571[anInt5529] = f_102_;
             return (short) anInt5529++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.R(" + i + ',' + i_97_ + ',' + l + ',' + i_98_ + ',' + (class124 != null ? "{...}" : "null") + ',' + i_99_ + ',' + f + ',' + i_100_ + ',' + i_101_ + ',' + f_102_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.R(" + i + ',' + i_97_ + ',' + l + ',' + i_98_ + ',' + (class124 != null ? "{...}" : "null") + ',' + i_99_ + ',' + f + ',' + i_100_ + ',' + i_101_ + ',' + f_102_ + ')'));
         }
     }
 
@@ -533,7 +533,7 @@ final class DisplayModeManagerContainer282
             float f_113_ = (class101_sub3_112_.aFloat5772 + ((class101_sub3.aFloat5751 * class101_sub3_112_.aFloat5762) + ((class101_sub3.aFloat5747 * class101_sub3_112_.aFloat5761) + (class101_sub3.aFloat5772 * (class101_sub3_112_.aFloat5769)))));
             Component100.aFloat8696 = ((class101_sub3_112_.aFloat5781 * class101_sub3.aFloat5754) + ((class101_sub3.aFloat5769 * class101_sub3_112_.aFloat5750) + (class101_sub3_112_.aFloat5770 * class101_sub3.aFloat5750)));
             ScreenModeManager.aFloat2836 = ((class101_sub3.aFloat5781 * class101_sub3_112_.aFloat5761) + (class101_sub3_112_.aFloat5769 * class101_sub3.aFloat5762) + (class101_sub3_112_.aFloat5762 * class101_sub3.aFloat5784));
-            RenderableSub9Sub1.aFloat8784 = ((class101_sub3_112_.aFloat5754 * class101_sub3.aFloat5761) + (class101_sub3.aFloat5770 * class101_sub3_112_.aFloat5756) + (class101_sub3.aFloat5756 * class101_sub3_112_.aFloat5784));
+            FriendLoginMessage.aFloat8784 = ((class101_sub3_112_.aFloat5754 * class101_sub3.aFloat5761) + (class101_sub3.aFloat5770 * class101_sub3_112_.aFloat5756) + (class101_sub3.aFloat5756 * class101_sub3_112_.aFloat5784));
             CookieManager.aFloat6304 = ((class101_sub3.aFloat5781 * class101_sub3_112_.aFloat5756) + (class101_sub3.aFloat5762 * class101_sub3_112_.aFloat5754) + (class101_sub3_112_.aFloat5784 * class101_sub3.aFloat5784));
             float f_114_ = ((class101_sub3_112_.aFloat5756 * class101_sub3.aFloat5747) + (class101_sub3_112_.aFloat5754 * class101_sub3.aFloat5772) + (class101_sub3.aFloat5751 * class101_sub3_112_.aFloat5784) + class101_sub3_112_.aFloat5751);
             Component278.aFloat3242 = ((class101_sub3_112_.aFloat5761 * class101_sub3.aFloat5750) + (class101_sub3_112_.aFloat5769 * class101_sub3.aFloat5769) + (class101_sub3_112_.aFloat5762 * class101_sub3.aFloat5754));
@@ -590,7 +590,7 @@ final class DisplayModeManagerContainer282
                 float f_135_ = (float) Component283.anIntArray4623[i_134_];
                 float f_136_ = (float) IOException_Sub1.anIntArray91[i_134_];
                 float f_137_ = (float) RenderableSub2.anIntArray6393[i_134_];
-                float f_138_ = (CookieManager.aFloat6304 * f_135_ + (f_137_ * RenderableSub9Sub1.aFloat8784 + Component233.aFloat3994 * f_136_) + f_114_);
+                float f_138_ = (CookieManager.aFloat6304 * f_135_ + (f_137_ * FriendLoginMessage.aFloat8784 + Component233.aFloat3994 * f_136_) + f_114_);
                 float f_139_ = f_113_ + (Component112.aFloat3943 * f_137_ + Component278.aFloat3242 * f_136_ + ScreenModeManager.aFloat2836 * f_135_);
                 float f_140_ = f + (Component100.aFloat8696 * f_136_ + f_137_ * Component385.aFloat2203 + Component55.aFloat3935 * f_135_);
                 if ((float) aHa_Sub2_5598.anInt7826 <= f_138_) {
@@ -616,7 +616,7 @@ final class DisplayModeManagerContainer282
                     float f_145_ = (float) anIntArray5543[i_144_];
                     float f_146_ = (float) anIntArray5644[i_144_];
                     float f_147_ = (float) anIntArray5593[i_144_];
-                    float f_148_ = f_114_ + (f_146_ * CookieManager.aFloat6304 + (RenderableSub9Sub1.aFloat8784 * f_145_ + f_147_ * Component233.aFloat3994));
+                    float f_148_ = f_114_ + (f_146_ * CookieManager.aFloat6304 + (FriendLoginMessage.aFloat8784 * f_145_ + f_147_ * Component233.aFloat3994));
                     float f_149_ = f + (f_147_ * Component100.aFloat8696 + f_145_ * Component385.aFloat2203 + Component55.aFloat3935 * f_146_);
                     float f_150_ = f_113_ + (Component278.aFloat3242 * f_147_ + f_145_ * Component112.aFloat3943 + f_146_ * ScreenModeManager.aFloat2836);
                     if (f_148_ >= (float) aHa_Sub2_5598.anInt7826) {
@@ -648,7 +648,7 @@ final class DisplayModeManagerContainer282
             }
             return false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.SA(" + bool + ',' + i + ',' + i_108_ + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + (class101 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.SA(" + bool + ',' + i + ',' + i_108_ + ',' + i_109_ + ',' + i_110_ + ',' + i_111_ + ',' + (class101 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -699,7 +699,7 @@ final class DisplayModeManagerContainer282
             method685((byte) 118, var_r_Sub2_170_);
             return var_r_Sub2_170_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "paa.ba(" + (var_r != null ? "{...}" : "null") + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "paa.ba(" + (var_r != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -775,7 +775,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.U(" + i + ',' + (var_r_Sub2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.U(" + i + ',' + (var_r_Sub2 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -789,7 +789,7 @@ final class DisplayModeManagerContainer282
             int i_202_ = i_199_ & 0x7f;
             if (i_195_ != -1) i_201_ = (i_197_ * (i_195_ - i_201_) >> 7) + i_201_;
             if (i_196_ != -1) i_202_ += (i_196_ + -i_202_) * i_197_ >> 7;
-            aShortArray5580[i_198_] = (short) (Component224.method2057(Component224.method2057(i_201_ << 7, i_200_ << 10), i_202_));
+            aShortArray5580[i_198_] = (short) (Component224.bitwiseOr(Component224.bitwiseOr(i_201_ << 7, i_200_ << 10), i_202_));
         }
         if (aClass118Array5621 != null) {
             for (int i_203_ = 0; i_203_ < anInt5536; i_203_++) {
@@ -977,7 +977,7 @@ final class DisplayModeManagerContainer282
                 if (bool_214_) class64_sub3_211_.aByte5581 |= 0x8;
                 class64_sub3_211_.aClass123_5620.anInterface2_1811 = aClass123_5620.anInterface2_1811;
                 class64_sub3_211_.aClass123_5620.aByte1812 = aClass123_5620.aByte1812;
-            } else if (CacheIndexReader.method1163(anInt5556, (byte) -60, i)) class64_sub3_211_.aClass123_5620 = aClass123_5620;
+            } else if (CacheIndexReader.hasFlag0x800(anInt5556, (byte) -60, i)) class64_sub3_211_.aClass123_5620 = aClass123_5620;
             else class64_sub3_211_.aClass123_5620 = null;
             if (Component219.method2352(-19, anInt5556, i)) {
                 if (class64_sub3_213_.aShortArray5592 != null && (anInt5632 <= class64_sub3_213_.aShortArray5592.length)) {
@@ -1006,7 +1006,7 @@ final class DisplayModeManagerContainer282
                 class64_sub3_211_.aClass270_5575.anInterface8_3463 = aClass270_5575.anInterface8_3463;
             } else if (!ClientErrorReporter.method1238(i, anInt5556, -93)) class64_sub3_211_.aClass270_5575 = null;
             else class64_sub3_211_.aClass270_5575 = aClass270_5575;
-            if (DisplayModeManagerContainer124.method1637(anInt5556, 32768, i)) {
+            if (GameType.method1637(anInt5556, 32768, i)) {
                 if (class64_sub3_213_.aShortArray5601 == null || class64_sub3_213_.aShortArray5601.length < anInt5632) {
                     int i_230_ = anInt5632;
                     class64_sub3_211_.aShortArray5601 = class64_sub3_213_.aShortArray5601 = new short[i_230_];
@@ -1050,7 +1050,7 @@ final class DisplayModeManagerContainer282
             class64_sub3_211_.aClass129Array5640 = aClass129Array5640;
             return class64_sub3_211_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.K(" + (class64_sub3_211_ != null ? "{...}" : "null") + ',' + i + ',' + i_212_ + ',' + bool + ',' + (class64_sub3_213_ != null ? "{...}" : "null") + ',' + bool_214_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.K(" + (class64_sub3_211_ != null ? "{...}" : "null") + ',' + i + ',' + i_212_ + ',' + bool + ',' + (class64_sub3_213_ != null ? "{...}" : "null") + ',' + bool_214_ + ')'));
         }
     }
 
@@ -1124,7 +1124,7 @@ final class DisplayModeManagerContainer282
                             if (class318_sub3 != null || aClass118Array5621 != null) {
                                 Component112.aFloat3943 = (((class101_sub3_236_.aFloat5770) * (class101_sub3.aFloat5761)) + ((class101_sub3.aFloat5769) * class101_sub3_236_.aFloat5761) + ((class101_sub3_236_.aFloat5756) * (class101_sub3.aFloat5762)));
                                 Component55.aFloat3935 = (((class101_sub3.aFloat5781) * (class101_sub3_236_.aFloat5784)) + ((class101_sub3_236_.aFloat5781 * (class101_sub3.aFloat5770)) + ((class101_sub3.aFloat5750) * (class101_sub3_236_.aFloat5762))));
-                                RenderableSub9Sub1.aFloat8784 = (((class101_sub3.aFloat5784) * (class101_sub3_236_.aFloat5756)) + ((class101_sub3_236_.aFloat5770 * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (class101_sub3_236_.aFloat5761))));
+                                FriendLoginMessage.aFloat8784 = (((class101_sub3.aFloat5784) * (class101_sub3_236_.aFloat5756)) + ((class101_sub3_236_.aFloat5770 * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (class101_sub3_236_.aFloat5761))));
                                 ScreenModeManager.aFloat2836 = (((class101_sub3_236_.aFloat5762) * (class101_sub3.aFloat5769)) + ((class101_sub3_236_.aFloat5781) * (class101_sub3.aFloat5761)) + ((class101_sub3.aFloat5762) * class101_sub3_236_.aFloat5784));
                                 CookieManager.aFloat6304 = (((class101_sub3.aFloat5784) * (class101_sub3_236_.aFloat5784)) + ((class101_sub3_236_.aFloat5762 * (class101_sub3.aFloat5754)) + (class101_sub3_236_.aFloat5781 * (class101_sub3.aFloat5756))));
                                 Component385.aFloat2203 = (((class101_sub3_236_.aFloat5756) * (class101_sub3.aFloat5781)) + ((class101_sub3_236_.aFloat5761 * (class101_sub3.aFloat5750)) + (class101_sub3_236_.aFloat5770 * (class101_sub3.aFloat5770))));
@@ -1134,13 +1134,13 @@ final class DisplayModeManagerContainer282
                                 int i_249_ = aShort5617 + aShort5646 >> 1;
                                 int i_250_ = (int) (((float) aShort5591 * Component100.aFloat8696) + (((float) i_248_ * Component385.aFloat2203) + DisplayModeManagerContainer56.aFloat2555) + (Component55.aFloat3935 * (float) i_249_));
                                 int i_251_ = (int) (ClientErrorReporter.aFloat2111 + ((float) i_248_ * Component112.aFloat3943) + (Component278.aFloat3242 * (float) aShort5591) + (ScreenModeManager.aFloat2836 * (float) i_249_));
-                                int i_252_ = (int) (Component297.aFloat4720 + ((float) i_248_ * (RenderableSub9Sub1.aFloat8784)) + (Component233.aFloat3994 * (float) aShort5591) + (CookieManager.aFloat6304 * (float) i_249_));
+                                int i_252_ = (int) (Component297.aFloat4720 + ((float) i_248_ * (FriendLoginMessage.aFloat8784)) + (Component233.aFloat3994 * (float) aShort5591) + (CookieManager.aFloat6304 * (float) i_249_));
                                 int i_253_ = (int) ((Component55.aFloat3935 * (float) i_249_) + ((Component100.aFloat8696 * (float) aShort5629) + (DisplayModeManagerContainer56.aFloat2555 + (Component385.aFloat2203 * (float) i_248_))));
                                 int i_254_ = (int) (ClientErrorReporter.aFloat2111 + (Component112.aFloat3943 * (float) i_248_) + (Component278.aFloat3242 * (float) aShort5629) + ((float) i_249_ * ScreenModeManager.aFloat2836));
                                 class318_sub3.anInt6405 = (aHa_Sub2_5598.anInt7853 - -(i_250_ * (aHa_Sub2_5598.anInt7771) / i));
                                 class318_sub3.anInt6402 = ((i_251_ * aHa_Sub2_5598.anInt7794 / i) + aHa_Sub2_5598.anInt7810);
                                 class318_sub3.anInt6404 = (aHa_Sub2_5598.anInt7810 + (i_254_ * aHa_Sub2_5598.anInt7794 / i));
-                                int i_255_ = (int) (((float) i_249_ * CookieManager.aFloat6304) + ((Component233.aFloat3994 * (float) aShort5629) + (((RenderableSub9Sub1.aFloat8784) * (float) i_248_) + Component297.aFloat4720)));
+                                int i_255_ = (int) (((float) i_249_ * CookieManager.aFloat6304) + ((Component233.aFloat3994 * (float) aShort5629) + (((FriendLoginMessage.aFloat8784) * (float) i_248_) + Component297.aFloat4720)));
                                 class318_sub3.anInt6406 = (aHa_Sub2_5598.anInt7853 + (i_253_ * aHa_Sub2_5598.anInt7771 / i));
                                 if (i_252_ >= aHa_Sub2_5598.anInt7826 || i_255_ >= (aHa_Sub2_5598.anInt7826)) {
                                     class318_sub3.aBoolean6401 = true;
@@ -1158,7 +1158,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.Q(" + (class101 != null ? "{...}" : "null") + ',' + (class318_sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_235_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.Q(" + (class101 != null ? "{...}" : "null") + ',' + (class318_sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_235_ + ')'));
         }
     }
 
@@ -1248,7 +1248,7 @@ final class DisplayModeManagerContainer282
                     aClass123_5605.anInterface2_1811 = null;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("paa.p(" + i + ',' + i_256_ + ',' + (var_s != null ? "{...}" : "null") + ',' + (var_s_257_ != null ? "{...}" : "null") + ',' + i_258_ + ',' + i_259_ + ',' + i_260_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.p(" + i + ',' + i_256_ + ',' + (var_s != null ? "{...}" : "null") + ',' + (var_s_257_ != null ? "{...}" : "null") + ',' + i_258_ + ',' + i_259_ + ',' + i_260_ + ')'));
             }
             break;
         } while (false);
@@ -1257,7 +1257,7 @@ final class DisplayModeManagerContainer282
     static final void method687(byte i, int i_282_) {
         int i_283_ = 113 / ((-63 - i) / 53);
         anInt5570++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_282_, (byte) 105, 5);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_282_, (byte) 105, 5);
         class348_sub42_sub15.method3251(-16058);
     }
 
@@ -1360,9 +1360,9 @@ final class DisplayModeManagerContainer282
                                 int i_315_ = -1 + aShortArray5649[i_314_];
                                 if (i_315_ == -1) break;
                                 class348_sub49_sub1.offset = i_295_ * i_315_;
-                                class348_sub49_sub1.method3394(-23892, i_309_);
-                                class348_sub49_sub1.method3394(i + -23897, i_310_);
-                                class348_sub49_sub1.method3394(-23892, i_311_);
+                                class348_sub49_sub1.writeIntLittleEndian(-23892, i_309_);
+                                class348_sub49_sub1.writeIntLittleEndian(i + -23897, i_310_);
+                                class348_sub49_sub1.writeIntLittleEndian(-23892, i_311_);
                             }
                         }
                     }
@@ -1620,7 +1620,7 @@ final class DisplayModeManagerContainer282
                         if (!(f_361_ / f_353_ >= aHa_Sub2_5598.aFloat7830) && !(aHa_Sub2_5598.aFloat7836 >= f_360_ / f_353_)) {
                             if (class318_sub3 != null || aClass118Array5621 != null) {
                                 CookieManager.aFloat6304 = (((class101_sub3_350_.aFloat5762) * (class101_sub3.aFloat5754)) + ((class101_sub3_350_.aFloat5781) * (class101_sub3.aFloat5756)) + ((class101_sub3_350_.aFloat5784) * (class101_sub3.aFloat5784)));
-                                RenderableSub9Sub1.aFloat8784 = (((class101_sub3.aFloat5784) * (class101_sub3_350_.aFloat5756)) + ((class101_sub3_350_.aFloat5770 * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (class101_sub3_350_.aFloat5761))));
+                                FriendLoginMessage.aFloat8784 = (((class101_sub3.aFloat5784) * (class101_sub3_350_.aFloat5756)) + ((class101_sub3_350_.aFloat5770 * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (class101_sub3_350_.aFloat5761))));
                                 Component55.aFloat3935 = (((class101_sub3.aFloat5781) * (class101_sub3_350_.aFloat5784)) + ((class101_sub3_350_.aFloat5762 * (class101_sub3.aFloat5750)) + (class101_sub3_350_.aFloat5781 * (class101_sub3.aFloat5770))));
                                 Component112.aFloat3943 = (((class101_sub3.aFloat5761) * (class101_sub3_350_.aFloat5770)) + ((class101_sub3_350_.aFloat5761) * (class101_sub3.aFloat5769)) + ((class101_sub3_350_.aFloat5756) * (class101_sub3.aFloat5762)));
                                 Component385.aFloat2203 = (((class101_sub3_350_.aFloat5761) * (class101_sub3.aFloat5750)) + ((class101_sub3.aFloat5770) * class101_sub3_350_.aFloat5770) + ((class101_sub3.aFloat5781) * class101_sub3_350_.aFloat5756));
@@ -1633,14 +1633,14 @@ final class DisplayModeManagerContainer282
                                 int i_364_ = aShort5617 - -aShort5646 >> 1;
                                 int i_365_ = (int) (((float) i_364_ * Component55.aFloat3935) + ((Component385.aFloat2203 * (float) i_363_) + DisplayModeManagerContainer56.aFloat2555 + ((float) aShort5591 * (Component100.aFloat8696))));
                                 int i_366_ = (int) (ClientErrorReporter.aFloat2111 + ((float) i_363_ * Component112.aFloat3943) + ((float) aShort5591 * Component278.aFloat3242) + ((float) i_364_ * ScreenModeManager.aFloat2836));
-                                int i_367_ = (int) ((RenderableSub9Sub1.aFloat8784 * (float) i_363_) + Component297.aFloat4720 + (Component233.aFloat3994 * (float) aShort5591) + (CookieManager.aFloat6304 * (float) i_364_));
+                                int i_367_ = (int) ((FriendLoginMessage.aFloat8784 * (float) i_363_) + Component297.aFloat4720 + (Component233.aFloat3994 * (float) aShort5591) + (CookieManager.aFloat6304 * (float) i_364_));
                                 if (aHa_Sub2_5598.anInt7826 <= i_367_) {
                                     class318_sub3.anInt6405 = (i_365_ * (aHa_Sub2_5598.anInt7771) / i_367_ + (aHa_Sub2_5598.anInt7853));
                                     class318_sub3.anInt6402 = (i_366_ * (aHa_Sub2_5598.anInt7794) / i_367_ + (aHa_Sub2_5598.anInt7810));
                                 } else bool = true;
                                 int i_368_ = (int) (DisplayModeManagerContainer56.aFloat2555 + (Component385.aFloat2203 * (float) i_363_) + (Component100.aFloat8696 * (float) aShort5629) + (Component55.aFloat3935 * (float) i_364_));
                                 int i_369_ = (int) (((float) i_364_ * ScreenModeManager.aFloat2836) + ((Component278.aFloat3242 * (float) aShort5629) + (ClientErrorReporter.aFloat2111 + (Component112.aFloat3943 * (float) i_363_))));
-                                int i_370_ = (int) ((CookieManager.aFloat6304 * (float) i_364_) + (((float) i_363_ * (RenderableSub9Sub1.aFloat8784)) + Component297.aFloat4720 + ((float) aShort5629 * Component233.aFloat3994)));
+                                int i_370_ = (int) ((CookieManager.aFloat6304 * (float) i_364_) + (((float) i_363_ * (FriendLoginMessage.aFloat8784)) + Component297.aFloat4720 + ((float) aShort5629 * Component233.aFloat3994)));
                                 if (i_370_ >= aHa_Sub2_5598.anInt7826) {
                                     class318_sub3.anInt6406 = (i_368_ * (aHa_Sub2_5598.anInt7771) / i_370_ + (aHa_Sub2_5598.anInt7853));
                                     class318_sub3.anInt6404 = (i_369_ * (aHa_Sub2_5598.anInt7794) / i_370_ + (aHa_Sub2_5598.anInt7810));
@@ -1678,7 +1678,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.KA(" + (class101 != null ? "{...}" : "null") + ',' + (class318_sub3 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.KA(" + (class101 != null ? "{...}" : "null") + ',' + (class318_sub3 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
@@ -1855,7 +1855,7 @@ final class DisplayModeManagerContainer282
                     class342_385_.anInt4240 = (int) (class101_sub3.aFloat5751 + (((float) (anIntArray5644[(class342.anInt4244)]) * (class101_sub3.aFloat5784)) + (((float) (anIntArray5543[(class342.anInt4244)]) * (class101_sub3.aFloat5756)) + ((float) (anIntArray5593[(class342.anInt4244)]) * (class101_sub3.aFloat5754)))));
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, "paa.J(" + (class101 != null ? "{...}" : "null") + ')');
+                throw NpcDefinition.wrapThrowable(runtimeexception, "paa.J(" + (class101 != null ? "{...}" : "null") + ')');
             }
             break;
         } while (false);
@@ -2090,7 +2090,7 @@ final class DisplayModeManagerContainer282
                                 } else i_464_ = 0;
                                 if (i_465_ < 0) i_465_ = 0;
                                 else if (i_465_ > 127) i_465_ = 127;
-                                aShortArray5580[i_461_] = (short) (Component224.method2057((Component224.method2057(i_464_ << 7, i_463_ << 10)), i_465_));
+                                aShortArray5580[i_461_] = (short) (Component224.bitwiseOr((Component224.bitwiseOr(i_464_ << 7, i_463_ << 10)), i_465_));
                             }
                             if (is_459_.length > 0 && aClass123_5610 != null) aClass123_5610.anInterface2_1811 = null;
                         }
@@ -2146,7 +2146,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.BB(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_386_ + ',' + i_387_ + ',' + i_388_ + ',' + i_389_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.BB(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_386_ + ',' + i_387_ + ',' + i_388_ + ',' + i_389_ + ',' + bool + ')'));
         }
     }
 
@@ -2262,7 +2262,7 @@ final class DisplayModeManagerContainer282
                 if (i_503_ >= 0) {
                     if (i_503_ > 127) i_503_ = 127;
                 } else i_503_ = 0;
-                aShortArray5580[i_499_] = (short) (Component224.method2057(i_503_, Component224.method2057(i_502_ << 7, i_501_ << 10)));
+                aShortArray5580[i_499_] = (short) (Component224.bitwiseOr(i_503_, Component224.bitwiseOr(i_502_ << 7, i_501_ << 10)));
             }
             if (aClass123_5610 != null) aClass123_5610.anInterface2_1811 = null;
             if (aClass118Array5621 != null) {
@@ -2346,7 +2346,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.za(" + (class101 != null ? "{...}" : "null") + ',' + i + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.za(" + (class101 != null ? "{...}" : "null") + ',' + i + ',' + bool + ')'));
         }
     }
 
@@ -2737,7 +2737,7 @@ final class DisplayModeManagerContainer282
                                     i_668_ += i_512_;
                                     if (i_668_ < 0) i_668_ = 0;
                                     else if (i_668_ > 127) i_668_ = 127;
-                                    aShortArray5580[i_664_] = (short) (Component224.method2057(i_668_, (Component224.method2057(i_666_ << 10, i_667_ << 7))));
+                                    aShortArray5580[i_664_] = (short) (Component224.bitwiseOr(i_668_, (Component224.bitwiseOr(i_666_ << 10, i_667_ << 7))));
                                     if (aClass123_5610 != null) aClass123_5610.anInterface2_1811 = null;
                                 }
                             }
@@ -2794,7 +2794,7 @@ final class DisplayModeManagerContainer282
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.I(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_510_ + ',' + i_511_ + ',' + i_512_ + ',' + bool + ',' + i_513_ + ',' + (is_514_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.I(" + i + ',' + (is != null ? "{...}" : "null") + ',' + i_510_ + ',' + i_511_ + ',' + i_512_ + ',' + bool + ',' + i_513_ + ',' + (is_514_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2856,7 +2856,7 @@ final class DisplayModeManagerContainer282
             aClass123_5610 = new Component132(null, 5121, 4, 0);
             aClass270_5575 = new Component148();
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("paa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -2873,7 +2873,7 @@ final class DisplayModeManagerContainer282
                 anInt5648 = i;
                 aHa_Sub2_5598 = var_ha_Sub2;
                 if (DisplayModeManagerContainer370.method616(2, i, i_697_)) aClass123_5605 = new Component132(null, 5126, 3, 0);
-                if (CacheIndexReader.method1163(i_697_, (byte) 78, i)) aClass123_5620 = new Component132(null, 5126, 2, 0);
+                if (CacheIndexReader.hasFlag0x800(i_697_, (byte) 78, i)) aClass123_5620 = new Component132(null, 5126, 2, 0);
                 if (ShaderSub3.method166((byte) 69, i_697_, i)) aClass123_5563 = new Component132(null, 5126, 3, 0);
                 if (Component334.method1193(i_697_, i, true)) aClass123_5610 = new Component132(null, 5121, 4, 0);
                 if (ClientErrorReporter.method1238(i, i_697_, -31)) aClass270_5575 = new Component148();
@@ -3308,8 +3308,8 @@ final class DisplayModeManagerContainer282
                 aShortArray5583 = Component261.method1078(aShortArray5583, anInt5529, 126);
                 aShortArray5576 = Component261.method1078(aShortArray5576, anInt5529, 100);
                 aByteArray5594 = ToolkitFactory.method863(anInt5529, (byte) 113, aByteArray5594);
-                aFloatArray5552 = DisplayModeManagerContainer155.method1638(anInt5529, aFloatArray5552, -1);
-                aFloatArray5571 = DisplayModeManagerContainer155.method1638(anInt5529, aFloatArray5571, -1);
+                aFloatArray5552 = BuildType.method1638(anInt5529, aFloatArray5552, -1);
+                aFloatArray5571 = BuildType.method1638(anInt5529, aFloatArray5571, -1);
                 if (class124.anIntArray1868 != null && Component37.method2332(anInt5556, (byte) 125, i)) anIntArrayArray5539 = class124.method1100(false, -42);
                 if (class124.aClass162Array1832 != null && Component267.method1633(false, i, anInt5556)) anIntArrayArray5627 = class124.method1093((byte) -69);
                 if (class124.anIntArray1824 == null || !DisplayModeManagerContainer172.method371(i, 256, anInt5556)) break;
@@ -3332,7 +3332,7 @@ final class DisplayModeManagerContainer282
                     if (i_823_ >= 0) anIntArrayArray5553[i_823_][is_818_[i_823_]++] = i_822_;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("paa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_695_ + ',' + i_696_ + ',' + i_697_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("paa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class124 != null ? "{...}" : "null") + ',' + i + ',' + i_695_ + ',' + i_696_ + ',' + i_697_ + ')'));
             }
             break;
         } while (false);

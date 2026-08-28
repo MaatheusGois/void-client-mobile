@@ -83,7 +83,7 @@ final class InputStream_Sub1 extends InputStream {
 
     public final int read() {
         anInt74++;
-        SpriteAtlasShader.method2161((byte) 31, 30000L);
+        SpriteAtlasShader.sleep((byte) 31, 30000L);
         return -1;
     }
 

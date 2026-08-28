@@ -52,7 +52,7 @@ final class Component144
         if (class368 != null) return class368;
         byte[] is;
         synchronized (aClass45_3979) {
-            is = aClass45_3979.method410(-1860, Component349.method2419((byte) 127, i_1_), NodeSub1Sub2.method2729(i_1_, 16));
+            is = aClass45_3979.getFile(-1860, Component349.method2419((byte) 127, i_1_), NodeSub1Sub2.method2729(i_1_, 16));
         }
         class368 = new Component63();
         class368.aClass319_4513 = this;
@@ -92,14 +92,14 @@ final class Component144
         }
     }
 
-    Component144(DisplayModeManagerContainer124 class230, int i, CacheStore class45, CacheStore class45_3_) {
+    Component144(GameType class230, int i, CacheStore class45, CacheStore class45_3_) {
         try {
             this.aClass45_3981 = class45_3_;
             aClass45_3979 = class45;
-            int i_4_ = -1 + aClass45_3979.method414(-1);
-            aClass45_3979.method407(0, i_4_);
+            int i_4_ = -1 + aClass45_3979.getGroupCapacity(-1);
+            aClass45_3979.getFileCount(0, i_4_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cn.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cn.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_3_ != null ? "{...}" : "null") + ')'));
         }
     }
 }

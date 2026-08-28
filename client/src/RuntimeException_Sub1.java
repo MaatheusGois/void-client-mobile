@@ -3,8 +3,10 @@
  */
 
 final class RuntimeException_Sub1 extends RuntimeException {
-    String aString4594;
-    Throwable aThrowable4595;
+    /** Detail message attached when wrapping a throwable for the error reporter. */
+    String detail;
+    /** Original cause retained alongside {@link #detail}. */
+    Throwable cause;
     static int anInt4596;
     static int anInt4597;
     static int anInt4598;
@@ -27,11 +29,11 @@ final class RuntimeException_Sub1 extends RuntimeException {
             }
             return new ShaderSub1(var_ha_Sub2, i, i_2_, is_3_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kg.C(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_2_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kg.C(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_2_ + ')'));
         }
     }
 
-    public static void method4010(int i) {
+    public static void clearStatics(int i) {
         if (i == -3) {
             anIntArray4603 = null;
             aFloatArray4602 = null;
@@ -40,8 +42,8 @@ final class RuntimeException_Sub1 extends RuntimeException {
     }
 
     RuntimeException_Sub1(Throwable throwable, String string) {
-        this.aString4594 = string;
-        this.aThrowable4595 = throwable;
+        this.detail = string;
+        this.cause = throwable;
     }
 
     static final void method4011(int i, CacheStore class45) {
@@ -54,7 +56,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
         NodeSub51.aClass318_Sub10Array7249 = new RenderableSub10[(ReferenceHolder.anIntArray9558[NodederUtil.anInt6637]) + 1];
         GlTexture.anInt8550 = 0;
         Component239.anInt4559 = 0;
-        Component208.method1072(class45, (byte) -107);
+        Component208.setEnumCacheStore(class45, (byte) -107);
         Component245.method172(30284, class45);
     }
 

@@ -14,11 +14,11 @@ final class DefinitionSub4
     static DisplayModeManagerContainer204 aClass101_9114;
     static int anInt9115;
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9115++;
         if (i_0_ != 255) menuEntries = null;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) Component313.method1579(is, 0, DefinitionSub6.anInt9139, Component302.anIntArray6035[i]);
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) Component313.method1579(is, 0, DefinitionSub6.anInt9139, Component302.anIntArray6035[i]);
         return is;
     }
 

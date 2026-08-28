@@ -40,7 +40,7 @@ final class DefinitionSub36
         } while (false);
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         Component7.method1605(26188);
         if (i <= 108) method3145(-17);
         anInt9452++;
@@ -51,11 +51,11 @@ final class DefinitionSub36
         aClass114_9456 = null;
     }
 
-    final int[] method3042(int i, int i_2_) {
+    final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9454++;
-        int[] is = this.aClass191_7032.method1433(0, i);
+        int[] is = this.imageCache.getPixels(0, i);
         if (i_2_ != 255) anInt9451 = -74;
-        if (this.aClass191_7032.aBoolean2570) {
+        if (this.imageCache.cacheMiss) {
             int i_3_ = Component302.anIntArray6035[i];
             int i_4_ = -2048 + i_3_ >> 1;
             for (int i_5_ = 0; (i_5_ < DefinitionSub6.anInt9139); i_5_++) {

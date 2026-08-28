@@ -30,7 +30,7 @@ final class Component6
             this.aString4472 = string_1_;
             this.aString4470 = string;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fia.<init>(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_0_ + ',' + (string_1_ != null ? "{...}" : "null") + ',' + l + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fia.<init>(" + i + ',' + (string != null ? "{...}" : "null") + ',' + i_0_ + ',' + (string_1_ != null ? "{...}" : "null") + ',' + l + ')'));
         }
     }
 

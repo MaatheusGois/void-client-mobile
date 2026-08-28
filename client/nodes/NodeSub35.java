@@ -8,7 +8,8 @@ final class NodeSub35
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
     static int anInt6975;
-    int anInt6976;
+    /** Payload int — enum value, GL list length, etc. depending on owner. */
+    int intValue;
     static DisplayModeManagerContainer238 aClass74_6977 = new DisplayModeManagerContainer238(8, 3);
     static NodeList aClass262_6978;
     static int anInt6979 = 0;
@@ -37,7 +38,7 @@ final class NodeSub35
     }
 
     NodeSub35(int i) {
-        this.anInt6976 = i;
+        this.intValue = i;
     }
 
     static {

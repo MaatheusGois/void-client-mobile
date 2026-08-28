@@ -196,7 +196,7 @@ abstract class JagTheoraDecoder {
         int i_19_ = (3 + (i_7_ << 1)) * i_11_;
         int i_20_ = i_12_ * ((i_8_ << 1) - 3);
         int i_21_ = i_18_ * (i_7_ + 1);
-        MenuOpener.method1156(-27, i_2_ + i_5_, DisplayModeManagerContainer167.anIntArrayArray255[i_3_], -i_5_ + i_2_, i);
+        MenuOpener.fillInts(-27, i_2_ + i_5_, DisplayModeManagerContainer167.anIntArrayArray255[i_3_], -i_5_ + i_2_, i);
         int i_22_ = i_17_ * (-1 + i_8_);
         while (i_8_ > 0) {
             if (i_15_ < 0) {
@@ -223,8 +223,8 @@ abstract class JagTheoraDecoder {
             int i_24_ = i_3_ - -i_8_;
             int i_25_ = i_2_ - -i_7_;
             int i_26_ = i_2_ + -i_7_;
-            MenuOpener.method1156(-27, i_25_, DisplayModeManagerContainer167.anIntArrayArray255[i_23_], i_26_, i);
-            MenuOpener.method1156(-27, i_25_, DisplayModeManagerContainer167.anIntArrayArray255[i_24_], i_26_, i);
+            MenuOpener.fillInts(-27, i_25_, DisplayModeManagerContainer167.anIntArrayArray255[i_23_], i_26_, i);
+            MenuOpener.fillInts(-27, i_25_, DisplayModeManagerContainer167.anIntArrayArray255[i_24_], i_26_, i);
         }
     }
 
@@ -351,7 +351,7 @@ abstract class JagTheoraDecoder {
     }
 
     JagTheoraDecoder(int i) {
-        if (!DefinitionSub19.method3098(-30282, "jagtheora")) throw new RuntimeException("Failed to load jagtheora library");
+        if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "jagtheora")) throw new RuntimeException("Failed to load jagtheora library");
         aByteArray995 = new byte[i];
         anOggSyncState987 = new OggSyncState();
         anOggPage981 = new OggPage();

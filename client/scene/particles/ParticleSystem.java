@@ -45,7 +45,7 @@ final class ParticleSystem extends Node {
                     System.out.println("Emitters: " + DisplayModeManagerContainer145.anInt1803 + " Particles: " + Component55.anInt3936 + ". Time taken: " + (-l_1_ + Component240.currentTimeMillis(-112)) + "ms");
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("wm.A(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + l + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("wm.A(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + l + ')'));
             }
             break;
         } while (false);

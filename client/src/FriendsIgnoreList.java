@@ -12,7 +12,8 @@ final class FriendsIgnoreList {
     static int anInt3478;
     static int anInt3479;
     static int anInt3480;
-    private final String[] aStringArray3481;
+    /** EN/DE/FR/PT strings for this message key. */
+    private final String[] localizedTexts;
     static int anInt3482;
     static FriendsIgnoreList aClass274_3483 = (new FriendsIgnoreList("This is the developer console. To close, press the `, \u00b2 or \u00a7 keys, or tap with four fingers on mobile.", "Das ist die Entwicklerkonsole. Zum Schlie\u00dfen: `, \u00b2 oder \u00a7, oder auf dem Handy mit vier Fingern tippen.", "Ceci est la console de d\u00e9veloppement. Pour la fermer: `, \u00b2 ou \u00a7, ou tapez avec quatre doigts sur mobile.", "Este \u00e9 o painel de controle do desenvolvedor. Para fechar, pressione `, \u00b2 ou \u00a7, ou toque com quatro dedos no celular."));
     static int anInt3484;
@@ -213,9 +214,9 @@ final class FriendsIgnoreList {
 
     private FriendsIgnoreList(String string, String string_7_, String string_8_, String string_9_) {
         try {
-            aStringArray3481 = new String[]{string, string_7_, string_8_, string_9_};
+            localizedTexts = new String[]{string, string_7_, string_8_, string_9_};
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("va.<init>(" + (string != null ? "{...}" : "null") + ',' + (string_7_ != null ? "{...}" : "null") + ',' + (string_8_ != null ? "{...}" : "null") + ',' + (string_9_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("va.<init>(" + (string != null ? "{...}" : "null") + ',' + (string_7_ != null ? "{...}" : "null") + ',' + (string_8_ != null ? "{...}" : "null") + ',' + (string_9_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -224,10 +225,11 @@ final class FriendsIgnoreList {
         throw new IllegalStateException();
     }
 
-    final String method2063(int i, int i_10_) {
+    /** @param i language index ({@link ObjectDeserializer#languageId}); {@code i_10_} must be 544. */
+    final String getLocalized(int i, int i_10_) {
         if (i_10_ != 544) method2061(126);
         anInt3479++;
-        return aStringArray3481[i];
+        return localizedTexts[i];
     }
 
     static {

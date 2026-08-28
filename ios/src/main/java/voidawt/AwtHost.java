@@ -243,17 +243,17 @@ public final class AwtHost {
 
     /**
      * Open/close developer console without injecting {@code `} (avoids console text / IME races).
-     * Mirrors {@code Component192.method2363} / {@code AbstractShaderSub4.method3543}.
+     * Mirrors {@code Component192.openDevConsole} / {@code AbstractShaderSub4.closeDevConsole}.
      */
     public static void setDevConsoleOpen(boolean open) {
         try {
             if (open) {
                 Class.forName("Component192")
-                        .getDeclaredMethod("method2363", int.class)
+                        .getDeclaredMethod("openDevConsole", int.class)
                         .invoke(null, -84);
             } else {
                 Class.forName("AbstractShaderSub4")
-                        .getDeclaredMethod("method3543", byte.class)
+                        .getDeclaredMethod("closeDevConsole", byte.class)
                         .invoke(null, (byte) -89);
             }
         } catch (Throwable t) {

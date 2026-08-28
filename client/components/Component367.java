@@ -73,7 +73,7 @@ final class Component367
 
     private static final int method3580(int i, int i_18_) {
         int i_19_;
-        for (i_19_ = (int) Math.pow(i, 1.0 / (double) i_18_) + 1; Buffer.method3331(i_18_, (byte) 64, i_19_) > i; i_19_--) {
+        for (i_19_ = (int) Math.pow(i, 1.0 / (double) i_18_) + 1; Buffer.pow(i_18_, (byte) 64, i_19_) > i; i_19_--) {
             /* empty */
         }
         return i_19_;

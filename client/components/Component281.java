@@ -25,9 +25,9 @@ final class Component281
         int i_9_ = Component352.method384(i_4_ - -1, -1, i_6_);
         int i_10_ = Component352.method384(i_4_, -1, 1 + i_6_);
         int i_11_ = Component352.method384(i_4_ + 1, -1, i_6_ + 1);
-        int i_12_ = DisplayModeManagerContainer145.method1088(i_9_, (byte) 22, i, i_5_, i_8_);
-        int i_13_ = DisplayModeManagerContainer145.method1088(i_11_, (byte) 22, i, i_5_, i_10_);
-        return DisplayModeManagerContainer145.method1088(i_13_, (byte) 22, i, i_7_, i_12_);
+        int i_12_ = DisplayModeManagerContainer145.mixCosine(i_9_, (byte) 22, i, i_5_, i_8_);
+        int i_13_ = DisplayModeManagerContainer145.mixCosine(i_11_, (byte) 22, i, i_5_, i_10_);
+        return DisplayModeManagerContainer145.mixCosine(i_13_, (byte) 22, i, i_7_, i_12_);
     }
 
     static final int method2279(boolean bool, int i, int i_14_, int i_15_, int i_16_) {

@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer153
                 i_1_ += i_6_;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("me.D(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("me.D(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ')'));
         }
     }
 
@@ -65,10 +65,10 @@ final class DisplayModeManagerContainer153
 
     static final void method882(byte i) {
         if (i != 11) method882((byte) -62);
-        DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.method414(-1)][];
+        DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
         anInt1573++;
-        Component14.aClass46ArrayArray8584 = new DisplayModeManagerContainer57[Component267.aClass45_2978.method414(-1)][];
-        ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.method414(-1)];
+        Component14.aClass46ArrayArray8584 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
+        ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.getGroupCapacity(-1)];
     }
 
     public static void method883(byte i) {

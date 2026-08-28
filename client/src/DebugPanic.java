@@ -23,7 +23,8 @@ abstract class DebugPanic implements Interface5 {
     static boolean aBoolean4741 = false;
     static int anInt4742;
     static BrowserUrlOpener aClass348_Sub16_Sub3_4743;
-    static String[] aStringArray4744 = new String[200];
+    /** Friend world activity / host strings when online. */
+    static String[] friendWorldNames = new String[200];
     static int anInt4745;
     private int anInt4746 = -1;
     private int anInt4747;
@@ -124,7 +125,7 @@ abstract class DebugPanic implements Interface5 {
     public static void method2124(int i) {
         aClass348_Sub16_Sub3_4743 = null;
         aClass323_4754 = null;
-        aStringArray4744 = null;
+        friendWorldNames = null;
         if (i != 0) method2119(-1.1717526F, -45, -2.0738192F, 18, -0.4863547F);
     }
 
@@ -141,7 +142,7 @@ abstract class DebugPanic implements Interface5 {
             anInt4739 = i_4_;
         }
         anInt4747 = i_4_;
-        if (i != 15959) aStringArray4744 = null;
+        if (i != 15959) friendWorldNames = null;
     }
 
     final void method2125(int i) {

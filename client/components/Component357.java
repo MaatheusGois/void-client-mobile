@@ -75,9 +75,9 @@ final class Component357
     }
 
     static final void method1388(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
-        MenuOpener.method1156(-27, i_6_, DisplayModeManagerContainer167.anIntArrayArray255[i++], i_7_, i_4_);
+        MenuOpener.fillInts(-27, i_6_, DisplayModeManagerContainer167.anIntArrayArray255[i++], i_7_, i_4_);
         anInt2472++;
-        MenuOpener.method1156(-27, i_6_, DisplayModeManagerContainer167.anIntArrayArray255[i_8_--], i_7_, i_4_);
+        MenuOpener.fillInts(-27, i_6_, DisplayModeManagerContainer167.anIntArrayArray255[i_8_--], i_7_, i_4_);
         int i_9_ = -52 / ((i_5_ - -32) / 55);
         for (int i_10_ = i; i_8_ >= i_10_; i_10_++) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_10_];

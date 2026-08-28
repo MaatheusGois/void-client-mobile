@@ -48,7 +48,7 @@ abstract class Component269
         boolean bool = false;
         boolean bool_5_ = false;
         boolean bool_6_ = false;
-        if (OggUrlStream.aClass297_8992.aBoolean3777 && !OggUrlStream.aClass297_8992.aBoolean3794) {
+        if (OggUrlStream.aClass297_8992.signed && !OggUrlStream.aClass297_8992.useDirectDraw) {
             bool = (DefinitionSub20.aClass348_Sub4_9264.anInt6609) >= 512 || (DefinitionSub20.aClass348_Sub4_9264.anInt6609) == 0;
             if (ReflectionInvoker.aString3803.startsWith("win")) {
                 bool_6_ = true;

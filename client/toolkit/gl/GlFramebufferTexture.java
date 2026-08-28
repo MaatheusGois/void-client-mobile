@@ -54,7 +54,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
                 OpenGL.glTexImage2Dub(i_8_ + 34069, 0, this.anInt4858, i_6_, i_6_, 0, i_7_, 5121, is[i_8_], 0);
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ')'));
         }
     }
 
@@ -72,7 +72,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
             }
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_9_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_9_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 

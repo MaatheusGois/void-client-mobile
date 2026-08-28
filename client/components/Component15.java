@@ -55,7 +55,7 @@ final class Component15
 
     static final void method1111(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
         for (int i_11_ = i_9_; i >= i_11_; i_11_++)
-            MenuOpener.method1156(-27, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_11_], i_8_, i_10_);
+            MenuOpener.fillInts(-27, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_11_], i_8_, i_10_);
         if (i_6_ != 0) anInt4930 = 29;
         anInt4926++;
     }
@@ -74,7 +74,7 @@ final class Component15
             this.anInt4928 = i_17_;
             this.aClass221_4922 = class221;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nha.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nha.<init>(" + i + ',' + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ',' + i_16_ + ',' + i_17_ + ',' + i_18_ + ',' + bool + ')'));
         }
     }
 

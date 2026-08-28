@@ -29,8 +29,8 @@ final class Component14
         if (i_0_ != -23) return null;
         CacheIndexReader class137 = null;
         if (DisplayModeManagerContainer356.aClass78_6328 != null) class137 = new CacheIndexReader(i, DisplayModeManagerContainer356.aClass78_6328, Component265.aClass78Array1579[i], 1000000);
-        Component354.aClass314_Sub1Array223[i] = Component143.aClass340_2327.method2673(class137, i, Component11.aClass137_3568, 255);
-        Component354.aClass314_Sub1Array223[i].method2346(27872);
+        Component354.aClass314_Sub1Array223[i] = Component143.aClass340_2327.getArchive(class137, i, Component11.aClass137_3568, 255);
+        Component354.aClass314_Sub1Array223[i].startVerifyPass(27872);
         return new CacheStore(Component354.aClass314_Sub1Array223[i], bool, i_1_);
     }
 
@@ -40,7 +40,7 @@ final class Component14
             this.anInt8585 = i_9_;
             this.anInt8591 = i_8_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ou.<init>(" + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ou.<init>(" + (class221 != null ? "{...}" : "null") + ',' + (class341 != null ? "{...}" : "null") + ',' + i + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
         }
     }
 

@@ -9,7 +9,8 @@ final class ShaderProgramSub2
  */ extends ShaderProgram {
     static int anInt6203;
     static int anInt6204;
-    static String[] aStringArray6205 = new String[200];
+    /** Previous names (for rename updates in the friend packet). */
+    static String[] friendFormerNames = new String[200];
     static int anInt6206;
     static int anInt6207;
     static int anInt6208;
@@ -32,9 +33,9 @@ final class ShaderProgramSub2
                 DisplayModeManagerContainer174.method2477(string, string_2_, (byte) -110, -1, string_3_, null, i, i_1_, string_4_);
                 anInt6203++;
                 if (i_0_ < -86) break;
-                aStringArray6205 = null;
+                friendFormerNames = null;
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("di.G(" + (string != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (string_2_ != null ? "{...}" : "null") + ',' + (string_3_ != null ? "{...}" : "null") + ',' + (string_4_ != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("di.G(" + (string != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (string_2_ != null ? "{...}" : "null") + ',' + (string_3_ != null ? "{...}" : "null") + ',' + (string_4_ != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -51,7 +52,7 @@ final class ShaderProgramSub2
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, MenuEntry.method3229(-96));
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component236.anInt4017);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, PacketReader.anInt10432);
-        if (i != -24498) aStringArray6205 = null;
+        if (i != -24498) friendFormerNames = null;
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
         HashNodeSub14.method3243(-101, class348_sub47);
     }
@@ -84,7 +85,7 @@ final class ShaderProgramSub2
 
     public static void method2147(int i) {
         if (i != -1) anInt6212 = -79;
-        aStringArray6205 = null;
+        friendFormerNames = null;
     }
 
     final void method2134(boolean bool, boolean bool_9_) {

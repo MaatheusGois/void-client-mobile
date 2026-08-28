@@ -4,7 +4,8 @@
 
 /**
  * RENAMED from `Class202` (JODE-obfuscated).
- * Network socket connection. Implements Runnable; owns a Socket (socket) and does blocking InputStream/OutputStream I/O (available/1470/1472/1473 throw IOException).
+ * Async socket writer ({@link Runnable}) plus blocking {@link #read}/{@link #readFully}/{@link #write}.
+ * {@link #detachStreams} swaps real streams for dummies; {@link #close} joins the writer thread.
  */
 
 import java.io.EOFException;
@@ -16,44 +17,46 @@ import java.net.Socket;
 final class Connection implements Runnable {
     static int anInt2646;
     static int anInt2647;
-    private int anInt2648 = 0;
-    private final ReflectionInvoker aClass297_2649;
+    private int writePos = 0;
+    private final ReflectionInvoker invoker;
     static int anInt2650;
     static int anInt2651;
-    private InputStream anInputStream2652;
+    private InputStream inputStream;
     static int anInt2653;
-    private boolean aBoolean2654 = false;
+    private boolean closed = false;
     static int anInt2655;
-    private int anInt2656 = 0;
-    private OutputStream anOutputStream2657;
-    private Task aClass144_2658;
-    private boolean aBoolean2659 = false;
+    private int readPos = 0;
+    private OutputStream outputStream;
+    private Task writeTask;
+    private boolean writeFailed = false;
     static int anInt2660;
     static StringCache aClass351_2661 = new StringCache(24, 7);
     static int anInt2662;
-    private byte[] aByteArray2663;
+    private byte[] writeBuffer;
     static int anInt2664;
     static Component183 aClass114_2665 = new Component183(12, 0);
     static int anInt2666;
     static int anInt2667;
     private final Socket socket;
-    private final int anInt2669;
-    static int anInt2670 = 0;
+    private final int capacity;
+    /** Affiliate id from applet {@code affid} (URL {@code /a=}). */
+    static int affiliateId = 0;
     static NodeCache aClass60_2671 = new NodeCache(10);
 
     final int available(byte i) throws IOException {
         anInt2651++;
         if (i != 83) aClass114_2665 = null;
-        if (aBoolean2654) return 0;
-        return anInputStream2652.available();
+        if (closed) return 0;
+        return inputStream.available();
     }
 
-    final void method1468(int i) {
+    /** Replace real streams with discard stubs (keep socket open). */
+    final void detachStreams(int i) {
         anInt2667++;
-        if (!aBoolean2654) {
-            if (i < 63) anOutputStream2657 = null;
-            anInputStream2652 = new InputStream_Sub2();
-            anOutputStream2657 = new OutputStream_Sub2();
+        if (!closed) {
+            if (i < 63) outputStream = null;
+            inputStream = new InputStream_Sub2();
+            outputStream = new OutputStream_Sub2();
         }
     }
 
@@ -73,20 +76,20 @@ final class Connection implements Runnable {
 
     final void write(byte[] is, int i, int i_5_, int i_6_) throws IOException {
         anInt2655++;
-        if (!aBoolean2654) {
-            if (aBoolean2659) {
-                aBoolean2659 = false;
+        if (!closed) {
+            if (writeFailed) {
+                writeFailed = false;
                 throw new IOException();
             }
-            if (aByteArray2663 == null) aByteArray2663 = new byte[anInt2669];
+            if (writeBuffer == null) writeBuffer = new byte[capacity];
             synchronized (this) {
                 if (i_6_ == -1) {
                     for (int i_7_ = 0; i_7_ < i; i_7_++) {
-                        aByteArray2663[anInt2648] = is[i_7_ + i_5_];
-                        anInt2648 = (anInt2648 - -1) % anInt2669;
-                        if (anInt2648 == (anInt2656 - (-anInt2669 - -100)) % anInt2669) throw new IOException();
+                        writeBuffer[writePos] = is[i_7_ + i_5_];
+                        writePos = (writePos - -1) % capacity;
+                        if (writePos == (readPos - (-capacity - -100)) % capacity) throw new IOException();
                     }
-                    if (aClass144_2658 == null) aClass144_2658 = aClass297_2649.method2236(this, -10240, 3);
+                    if (writeTask == null) writeTask = invoker.startThread(this, -10240, 3);
                     this.notifyAll();
                 } else {
                     /* empty */
@@ -105,9 +108,9 @@ final class Connection implements Runnable {
 
     final void checkError(boolean bool) throws IOException {
         anInt2650++;
-        if (bool == true && !aBoolean2654) {
-            if (aBoolean2659) {
-                aBoolean2659 = false;
+        if (bool == true && !closed) {
+            if (writeFailed) {
+                writeFailed = false;
                 throw new IOException();
             }
         }
@@ -115,9 +118,9 @@ final class Connection implements Runnable {
 
     final int read(int i) throws IOException {
         anInt2647++;
-        if (aBoolean2654) return 0;
+        if (closed) return 0;
         if (i != 0) return 38;
-        return anInputStream2652.read();
+        return inputStream.read();
     }
 
     public final void run() {
@@ -126,51 +129,52 @@ final class Connection implements Runnable {
                 int i;
                 int i_8_;
                 synchronized (this) {
-                    if (anInt2648 == anInt2656) {
-                        if (aBoolean2654) break;
+                    if (writePos == readPos) {
+                        if (closed) break;
                         try {
                             this.wait();
                         } catch (InterruptedException interruptedexception) {
                             /* empty */
                         }
                     }
-                    i = anInt2656;
-                    if (anInt2656 > anInt2648) i_8_ = anInt2669 - anInt2656;
-                    else i_8_ = -anInt2656 + anInt2648;
+                    i = readPos;
+                    if (readPos > writePos) i_8_ = capacity - readPos;
+                    else i_8_ = -readPos + writePos;
                 }
                 if (i_8_ > 0) {
                     try {
-                        anOutputStream2657.write(aByteArray2663, i, i_8_);
+                        outputStream.write(writeBuffer, i, i_8_);
                     } catch (IOException ioexception) {
-                        aBoolean2659 = true;
+                        writeFailed = true;
                     }
-                    anInt2656 = (i_8_ + anInt2656) % anInt2669;
+                    readPos = (i_8_ + readPos) % capacity;
                     try {
-                        if (anInt2648 == anInt2656) anOutputStream2657.flush();
+                        if (writePos == readPos) outputStream.flush();
                     } catch (IOException ioexception) {
-                        aBoolean2659 = true;
+                        writeFailed = true;
                     }
                 }
             }
             try {
-                if (anInputStream2652 != null) anInputStream2652.close();
-                if (anOutputStream2657 != null) anOutputStream2657.close();
+                if (inputStream != null) inputStream.close();
+                if (outputStream != null) outputStream.close();
                 if (socket != null) socket.close();
             } catch (IOException ioexception) {
                 /* empty */
             }
-            aByteArray2663 = null;
+            writeBuffer = null;
         } catch (Exception exception) {
-            ClientErrorReporter.method1242(null, exception, 15004);
+            ClientErrorReporter.reportError(null, exception, 15004);
         }
         anInt2664++;
     }
 
-    final void method1474(byte[] is, int i, byte i_9_, int i_10_) throws IOException {
+    /** Read exactly {@code i_10_} bytes into {@code is} at {@code i}. */
+    final void readFully(byte[] is, int i, byte i_9_, int i_10_) throws IOException {
         anInt2666++;
-        if (!aBoolean2654) {
+        if (!closed) {
             while (i_10_ > 0) {
-                int i_11_ = anInputStream2652.read(is, i, i_10_);
+                int i_11_ = inputStream.read(is, i, i_10_);
                 if (i_11_ <= 0) throw new EOFException();
                 i_10_ -= i_11_;
                 i += i_11_;
@@ -182,47 +186,48 @@ final class Connection implements Runnable {
     static final boolean method1475(byte i, int i_12_, int i_13_) {
         anInt2653++;
         if (i > -95) method1469(-48);
-        return (ShaderProgramSub9.method2174((byte) -115, i_13_, i_12_) & CacheIndexReader.method1163(i_12_, (byte) -72, i_13_));
+        return (ShaderProgramSub9.method2174((byte) -115, i_13_, i_12_) & CacheIndexReader.hasFlag0x800(i_12_, (byte) -72, i_13_));
     }
 
     protected final void finalize() {
         anInt2646++;
-        method1476((byte) -126);
+        close((byte) -126);
     }
 
-    final void method1476(byte i) {
+    /** Signal writer thread to exit and join it. */
+    final void close(byte i) {
         anInt2660++;
-        if (!aBoolean2654) {
+        if (!closed) {
             synchronized (this) {
-                aBoolean2654 = true;
-                if (i > -120) method1476((byte) -105);
+                closed = true;
+                if (i > -120) close((byte) -105);
                 this.notifyAll();
             }
-            if (aClass144_2658 != null) {
-                while (aClass144_2658.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 105, 1L);
-                if (aClass144_2658.anInt1997 == 1) {
+            if (writeTask != null) {
+                while (writeTask.status == 0) SpriteAtlasShader.sleep((byte) 105, 1L);
+                if (writeTask.status == 1) {
                     try {
-                        ((Thread) aClass144_2658.result).join();
+                        ((Thread) writeTask.result).join();
                     } catch (InterruptedException interruptedexception) {
                         /* empty */
                     }
                 }
             }
-            aClass144_2658 = null;
+            writeTask = null;
         }
     }
 
     Connection(Socket socket, ReflectionInvoker class297, int i) throws IOException {
         try {
             this.socket = socket;
-            aClass297_2649 = class297;
+            invoker = class297;
             socket.setSoTimeout(30000);
             socket.setTcpNoDelay(true);
-            anInputStream2652 = socket.getInputStream();
-            anOutputStream2657 = socket.getOutputStream();
-            anInt2669 = i;
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+            capacity = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("re.<init>(" + (socket != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("re.<init>(" + (socket != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 }

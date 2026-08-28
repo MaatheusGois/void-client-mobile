@@ -132,7 +132,7 @@ final class OpenGlShader extends AbstractShader {
             Component100.method2260(i_9_, i_8_, l, 0, bool, class45, (byte) 126, i_7_);
             int i_10_ = -35 / ((-41 - i) / 38);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("or.Q(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + l + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("or.Q(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + bool + ',' + l + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ')'));
         }
     }
 
@@ -160,7 +160,7 @@ final class OpenGlShader extends AbstractShader {
                         NodeSub48.anInt7129 = 0;
                         DisplayModeManagerContainer147.anInt4167 = 0;
                     } else SpriteAtlasShader.method2158((byte) 56);
-                    if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
+                    if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                         if (Component236.anInt4017 < 1024 && PacketReader.anInt10432 < 768) {
                             /* empty */
                         }
@@ -198,7 +198,7 @@ final class OpenGlShader extends AbstractShader {
                 } else aBoolean7391 = false;
             } else aBoolean7391 = false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("or.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("or.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 

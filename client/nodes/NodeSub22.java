@@ -28,23 +28,23 @@ final class NodeSub22
     static final int method2958(int i, CacheStore class45) {
         anInt6861++;
         int i_2_ = 0;
-        if (class45.method421(false, anInt6862)) i_2_++;
-        if (class45.method421(false, KeyStoreLoader.anInt1639)) i_2_++;
-        if (class45.method421(false, BasicMouseHandler.anInt7429)) i_2_++;
-        if (class45.method421(false, GraphicsToolkit.anInt4562)) i_2_++;
-        if (class45.method421(false, CommandHandler.anInt1435)) i_2_++;
-        if (class45.method421(false, Component95.anInt1756)) i_2_++;
-        if (class45.method421(false, ReferenceTable.anInt3739)) i_2_++;
-        if (class45.method421(false, Component328.anInt1481)) i_2_++;
-        if (class45.method421(false, Component98.anInt5948)) i_2_++;
-        if (class45.method421(false, Component22.anInt1742)) i_2_++;
-        if (class45.method421(false, NamedInteger.anInt4469)) i_2_++;
+        if (class45.isSingletonFileReady(false, anInt6862)) i_2_++;
+        if (class45.isSingletonFileReady(false, KeyStoreLoader.anInt1639)) i_2_++;
+        if (class45.isSingletonFileReady(false, BasicMouseHandler.anInt7429)) i_2_++;
+        if (class45.isSingletonFileReady(false, GraphicsToolkit.anInt4562)) i_2_++;
+        if (class45.isSingletonFileReady(false, CommandHandler.anInt1435)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component95.anInt1756)) i_2_++;
+        if (class45.isSingletonFileReady(false, ReferenceTable.anInt3739)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component328.anInt1481)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component98.anInt5948)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component22.anInt1742)) i_2_++;
+        if (class45.isSingletonFileReady(false, NamedInteger.anInt4469)) i_2_++;
         if (i != 22388) return 8;
-        if (class45.method421(false, DefinitionSub38.anInt9473)) i_2_++;
-        if (class45.method421(false, Component38.anInt2510)) i_2_++;
-        if (class45.method421(false, RSACipher.anInt4895)) i_2_++;
-        if (class45.method421(false, Component134.anInt5814)) i_2_++;
-        if (class45.method421(false, DisplayModeManagerContainer89.anInt8370)) i_2_++;
+        if (class45.isSingletonFileReady(false, DefinitionSub38.anInt9473)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component38.anInt2510)) i_2_++;
+        if (class45.isSingletonFileReady(false, RSACipher.anInt4895)) i_2_++;
+        if (class45.isSingletonFileReady(false, Component134.anInt5814)) i_2_++;
+        if (class45.isSingletonFileReady(false, DisplayModeManagerContainer89.anInt8370)) i_2_++;
         return i_2_;
     }
 

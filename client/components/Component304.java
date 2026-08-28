@@ -37,12 +37,12 @@ final class Component304
 
     static final void method696(int i, int i_0_, int i_1_, int i_2_) {
         if (i_2_ == -1007) {
-            if (i == 1009) ClientScriptExecutor.method701(DisplayModeManagerContainer363.aClass273_4091, i_1_, i_0_);
+            if (i == 1009) ClientScriptExecutor.runScript(DisplayModeManagerContainer363.aClass273_4091, i_1_, i_0_);
             else if (i != 1012) {
-                if (i == 1002) ClientScriptExecutor.method701(DefinitionSub32.aClass273_9415, i_1_, i_0_);
-                else if (i == 1003) ClientScriptExecutor.method701(NodeSub12.aClass273_6743, i_1_, i_0_);
-                else if (i == 1006) ClientScriptExecutor.method701(Component66.aClass273_6018, i_1_, i_0_);
-            } else ClientScriptExecutor.method701(Component2.aClass273_8356, i_1_, i_0_);
+                if (i == 1002) ClientScriptExecutor.runScript(DefinitionSub32.aClass273_9415, i_1_, i_0_);
+                else if (i == 1003) ClientScriptExecutor.runScript(NodeSub12.aClass273_6743, i_1_, i_0_);
+                else if (i == 1006) ClientScriptExecutor.runScript(Component66.aClass273_6018, i_1_, i_0_);
+            } else ClientScriptExecutor.runScript(Component2.aClass273_8356, i_1_, i_0_);
             anInt1138++;
         }
     }
@@ -69,11 +69,11 @@ final class Component304
             anInt1147++;
             Component327.aClass45_8755 = class45_5_;
             Component267.aClass45_2978 = class45_4_;
-            DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.method414(-1)][];
-            ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.method414(-1)];
+            DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
+            ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.getGroupCapacity(-1)];
             int i_7_ = -72 % ((35 - i) / 41);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kb.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (class45_4_ != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kb.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (class45_4_ != null ? "{...}" : "null") + ',' + (class45_5_ != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -87,7 +87,7 @@ final class Component304
         if (class348_sub42_sub1 != null) return class348_sub42_sub1;
         byte[] is;
         synchronized (aClass45_1141) {
-            is = aClass45_1141.method410(-1860, 26, i);
+            is = aClass45_1141.getFile(-1860, 26, i);
         }
         class348_sub42_sub1 = new HashNodeSub1();
         if (is != null) class348_sub42_sub1.method3168(new Buffer(is), (byte) -101);
@@ -97,12 +97,12 @@ final class Component304
         return class348_sub42_sub1;
     }
 
-    Component304(DisplayModeManagerContainer124 class230, int i, CacheStore class45) {
+    Component304(GameType class230, int i, CacheStore class45) {
         try {
             aClass45_1141 = class45;
-            aClass45_1141.method407(0, 26);
+            aClass45_1141.getFileCount(0, 26);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kb.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 

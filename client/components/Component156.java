@@ -39,7 +39,7 @@ final class Component156
     static final void method2193(boolean bool, byte i) {
         anInt3698++;
         Component381.method3570(false);
-        if (NativeLibLoader.method2653(true, Component49.clientState)) {
+        if (NativeLibLoader.isPostLoginState(true, Component49.clientState)) {
             Component53.anInt193++;
             if (i < -118 && (Component53.anInt193 >= 50 || bool)) {
                 Component53.anInt193 = 0;

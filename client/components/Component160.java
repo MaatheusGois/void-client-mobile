@@ -130,7 +130,7 @@ final class Component160
             aHa_Sub2_4355 = var_ha_Sub2;
             aD4359 = var_d;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("eo.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("eo.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }
     }
 }

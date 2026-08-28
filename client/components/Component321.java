@@ -21,25 +21,25 @@ final class Component321
     static final AudioLine method1439(int i, ReflectionInvoker class297, Component component, int i_0_, int i_1_) {
         try {
             anInt2583++;
-            if (Component231.anInt339 == 0) throw new IllegalStateException();
+            if (Component231.sampleRate == 0) throw new IllegalStateException();
             if (i_0_ < 0 || i_0_ >= 2) throw new IllegalArgumentException();
             if (i < 256) i = 256;
             try {
                 AudioLine class279 = new SourceAudioLine();
                 class279.anInt3620 = i;
-                class279.anIntArray3603 = new int[(Component21.aBoolean3652 ? 2 : 1) * 256];
+                class279.anIntArray3603 = new int[(Component21.stereo ? 2 : 1) * 256];
                 class279.initOnComponent(component);
                 class279.anInt3613 = (i & ~0x3ff) + 1024;
                 if (class279.anInt3613 > 16384) class279.anInt3613 = 16384;
                 class279.open(class279.anInt3613);
-                if (Component193.anInt3248 > 0 && Component191.aClass250_2462 == null) {
+                if (Component193.audioThreadPriority > 0 && Component191.aClass250_2462 == null) {
                     Component191.aClass250_2462 = new AudioMixer();
-                    Component191.aClass250_2462.aClass297_3228 = class297;
-                    class297.method2236(Component191.aClass250_2462, -10240, Component193.anInt3248);
+                    Component191.aClass250_2462.invoker = class297;
+                    class297.startThread(Component191.aClass250_2462, -10240, Component193.audioThreadPriority);
                 }
                 if (Component191.aClass250_2462 != null) {
-                    if ((Component191.aClass250_2462.aClass279Array3218[i_0_]) != null) throw new IllegalArgumentException();
-                    Component191.aClass250_2462.aClass279Array3218[i_0_] = class279;
+                    if ((Component191.aClass250_2462.lines[i_0_]) != null) throw new IllegalArgumentException();
+                    Component191.aClass250_2462.lines[i_0_] = class279;
                 }
                 if (i_1_ != 7) method1440(107);
                 return class279;
@@ -47,18 +47,18 @@ final class Component321
                 try {
                     AudioLineSub2 class279_sub2 = new AudioLineSub2(class297, i_0_);
                     class279_sub2.anInt3620 = i;
-                    class279_sub2.anIntArray3603 = new int[(!Component21.aBoolean3652 ? 1 : 2) * 256];
+                    class279_sub2.anIntArray3603 = new int[(!Component21.stereo ? 1 : 2) * 256];
                     class279_sub2.initOnComponent(component);
                     class279_sub2.anInt3613 = 16384;
                     class279_sub2.open(class279_sub2.anInt3613);
-                    if (Component193.anInt3248 > 0 && Component191.aClass250_2462 == null) {
+                    if (Component193.audioThreadPriority > 0 && Component191.aClass250_2462 == null) {
                         Component191.aClass250_2462 = new AudioMixer();
-                        Component191.aClass250_2462.aClass297_3228 = class297;
-                        class297.method2236(Component191.aClass250_2462, -10240, Component193.anInt3248);
+                        Component191.aClass250_2462.invoker = class297;
+                        class297.startThread(Component191.aClass250_2462, -10240, Component193.audioThreadPriority);
                     }
                     if (Component191.aClass250_2462 != null) {
-                        if ((Component191.aClass250_2462.aClass279Array3218[i_0_]) != null) throw new IllegalArgumentException();
-                        Component191.aClass250_2462.aClass279Array3218[i_0_] = class279_sub2;
+                        if ((Component191.aClass250_2462.lines[i_0_]) != null) throw new IllegalArgumentException();
+                        Component191.aClass250_2462.lines[i_0_] = class279_sub2;
                     }
                     return class279_sub2;
                 } catch (Throwable throwable_2_) {
@@ -66,7 +66,7 @@ final class Component321
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qr.A(" + i + ',' + (class297 != null ? "{...}" : "null") + ',' + (component != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qr.A(" + i + ',' + (class297 != null ? "{...}" : "null") + ',' + (component != null ? "{...}" : "null") + ',' + i_0_ + ',' + i_1_ + ')'));
         }
     }
 

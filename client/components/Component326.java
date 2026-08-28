@@ -15,7 +15,8 @@ final class Component326
     static int anInt5268;
     private int[] anIntArray5269;
     private int anInt5270;
-    static NamedInteger aClass364_5271 = new NamedInteger("LIVE", 0);
+    /** Live world-list channel. */
+    static NamedInteger LIVE = new NamedInteger("LIVE", 0);
     private final int anInt5272;
     static int anInt5273;
     private final Buffer aClass348_Sub49_5274;
@@ -26,14 +27,14 @@ final class Component326
         anInt5266++;
         if (anIntArray5269 != null && i < -27) {
             for (int i_0_ = 0; i_0_ < 10 && anIntArray5269.length > anInt5270 + i_0_; i_0_++) {
-                if (aByteArrayArray5275[i_0_] == null && aClass45_5267.method420(-10499, (anIntArray5269[i_0_ + anInt5270]), 0)) aByteArrayArray5275[i_0_] = aClass45_5267.method410(-1860, (anIntArray5269[anInt5270 + i_0_]), 0);
+                if (aByteArrayArray5275[i_0_] == null && aClass45_5267.isFileReady(-10499, (anIntArray5269[i_0_ + anInt5270]), 0)) aByteArrayArray5275[i_0_] = aClass45_5267.getFile(-1860, (anIntArray5269[anInt5270 + i_0_]), 0);
             }
         }
     }
 
     public static void method523(int i) {
         if (i <= 80) method524(-87, true, 104, 0);
-        aClass364_5271 = null;
+        LIVE = null;
     }
 
     private Component326(int i, CacheStore class45, int i_1_) {
@@ -49,7 +50,7 @@ final class Component326
         if (DisplayModeManagerContainer91.aClass356_389.get(i_2_, -6008) == null) {
             if (PauseTimer.aBoolean510) {
                 ColorTagNode class348_sub15 = new ColorTagNode(i_2_, new Component326(4096, (Component334.aClass45_2015), i_2_), i, bool);
-                class348_sub15.aClass55_Sub1_6768.method509(-92, Component185.aStringArray5305[ObjectDeserializer.anInt6967]);
+                class348_sub15.aClass55_Sub1_6768.method509(-92, Component185.languageNames[ObjectDeserializer.languageId]);
                 DisplayModeManagerContainer91.aClass356_389.put((byte) 35, i_2_, class348_sub15);
             } else DisplayModeManagerContainer165.method2285(bool, (byte) -90, i_2_);
         }
@@ -59,8 +60,8 @@ final class Component326
     final int method516(byte i, byte[] is) throws IOException {
         anInt5273++;
         if (anIntArray5269 == null) {
-            if (!aClass45_5267.method420(-10499, anInt5272, 0)) return 0;
-            byte[] is_4_ = aClass45_5267.method410(-1860, anInt5272, 0);
+            if (!aClass45_5267.isFileReady(-10499, anInt5272, 0)) return 0;
+            byte[] is_4_ = aClass45_5267.getFile(-1860, anInt5272, 0);
             if (is_4_ == null) throw new IllegalStateException("");
             aClass348_Sub49_5276.payload = is_4_;
             aClass348_Sub49_5276.offset = 0;

@@ -76,11 +76,11 @@ final class OggUrlStream extends OggStream {
 
     static final boolean method2972(String string, int i, int i_3_) {
         anInt9004++;
-        if (aClass297_8992.aBoolean3777) {
+        if (aClass297_8992.signed) {
             Component223.aClass161_125 = new DisplayModeManagerContainer254();
             Component223.aClass161_125.anInt2143 = i;
             Component223.aClass161_125.aString2147 = string;
-            if (DisplayModeManagerContainer345.aClass364_165 != Component326.aClass364_5271) {
+            if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) {
                 Component223.aClass161_125.anInt2138 = 50000 - -Component223.aClass161_125.anInt2143;
                 Component223.aClass161_125.anInt2148 = 40000 - -Component223.aClass161_125.anInt2143;
             }
@@ -88,10 +88,10 @@ final class OggUrlStream extends OggStream {
             return true;
         }
         String string_4_ = "";
-        if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) string_4_ = ":" + (7000 + i);
+        if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) string_4_ = ":" + (7000 + i);
         String string_5_ = "";
-        if (Component205.aString5966 != null) string_5_ = "/p=" + Component205.aString5966;
-        String string_6_ = ("http://" + string + string_4_ + "/l=" + ObjectDeserializer.anInt6967 + "/a=" + Connection.anInt2670 + string_5_ + "/j" + (!Component156.aBoolean3697 ? "0" : "1") + ",o" + (NodeSub37.aBoolean6997 ? "1" : "0") + ",a2");
+        if (Component205.settingsCookie != null) string_5_ = "/p=" + Component205.settingsCookie;
+        String string_6_ = ("http://" + string + string_4_ + "/l=" + ObjectDeserializer.languageId + "/a=" + Connection.affiliateId + string_5_ + "/j" + (!Component156.aBoolean3697 ? "0" : "1") + ",o" + (NodeSub37.aBoolean6997 ? "1" : "0") + ",a2");
         try {
             DisplayModeManagerContainer206.aClient1367.getAppletContext().showDocument(new URL(string_6_), "_self");
             if (i_3_ >= -17) aClass297_8992 = null;
@@ -109,7 +109,7 @@ final class OggUrlStream extends OggStream {
             d = aClass348_Sub16_Sub2_8995.method2837(i ^ ~0x5599);
             if (d < 0.0) d = aDouble9005;
         }
-        return (double) -(256.0F / (float) Component231.anInt339) + d;
+        return (double) -(256.0F / (float) Component231.sampleRate) + d;
     }
 
     final void shutdown(byte i) {
@@ -131,7 +131,7 @@ final class OggUrlStream extends OggStream {
                 if (aVorbisInfo9006.channels > 2 || aVorbisInfo9006.channels < 1) throw new RuntimeException(String.valueOf(aVorbisInfo9006.channels));
                 aDSPState8993 = new DSPState(aVorbisInfo9006);
                 aVorbisBlock9000 = new VorbisBlock(aDSPState8993);
-                aClass163_8994 = new ImageTagText(aVorbisInfo9006.rate, Component231.anInt339);
+                aClass163_8994 = new ImageTagText(aVorbisInfo9006.rate, Component231.sampleRate);
                 aClass348_Sub16_Sub2_8995 = new NodeSub16Sub2(aVorbisInfo9006.channels);
             }
         } else {

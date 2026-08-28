@@ -37,7 +37,7 @@ final class Component225
         DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[anIntArray472.length];
         synchronized (this.aClass150_475.aClass45_2054) {
             for (int i_0_ = 0; i_0_ < anIntArray472.length; i_0_++)
-                class124s[i_0_] = Component189.method2277(0, (this.aClass150_475.aClass45_2054), anIntArray472[i_0_], -1);
+                class124s[i_0_] = Component189.loadFromCache(0, (this.aClass150_475.aClass45_2054), anIntArray472[i_0_], -1);
         }
         for (int i_1_ = 0; anIntArray472.length > i_1_; i_1_++) {
             if (class124s[i_1_].anInt1830 < 13) class124s[i_1_].method1092(2, 113);
@@ -63,7 +63,7 @@ final class Component225
         boolean bool = true;
         synchronized (this.aClass150_475.aClass45_2054) {
             for (int i_4_ = 0; i_4_ < 5; i_4_++) {
-                if (anIntArray464[i_4_] != -1 && !this.aClass150_475.aClass45_2054.method420(-10499, anIntArray464[i_4_], 0)) bool = false;
+                if (anIntArray464[i_4_] != -1 && !this.aClass150_475.aClass45_2054.isFileReady(-10499, anIntArray464[i_4_], 0)) bool = false;
             }
             if (i <= 87) method351(96);
         }
@@ -76,7 +76,7 @@ final class Component225
         int i_5_ = 0;
         synchronized (this.aClass150_475.aClass45_2054) {
             for (int i_6_ = 0; i_6_ < 5; i_6_++) {
-                if (anIntArray464[i_6_] != -1) class124s[i_5_++] = Component189.method2277(0, (this.aClass150_475.aClass45_2054), anIntArray464[i_6_], -1);
+                if (anIntArray464[i_6_] != -1) class124s[i_5_++] = Component189.loadFromCache(0, (this.aClass150_475.aClass45_2054), anIntArray464[i_6_], -1);
             }
         }
         for (int i_7_ = 0; i_7_ < 5; i_7_++) {
@@ -175,7 +175,7 @@ final class Component225
                 method347(is, is_20_, i, -22222, -1 + i_24_);
                 method347(is, is_20_, i_24_ - -1, i_21_, i_22_);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ic.K(" + (is != null ? "{...}" : "null") + ',' + (is_20_ != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + i_22_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ic.K(" + (is != null ? "{...}" : "null") + ',' + (is_20_ != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + i_22_ + ')'));
             }
             break;
         } while (false);
@@ -188,7 +188,7 @@ final class Component225
         boolean bool = true;
         synchronized (this.aClass150_475.aClass45_2054) {
             for (int i_31_ = 0; anIntArray472.length > i_31_; i_31_++) {
-                if (!this.aClass150_475.aClass45_2054.method420(-10499, anIntArray472[i_31_], 0)) bool = false;
+                if (!this.aClass150_475.aClass45_2054.isFileReady(-10499, anIntArray472[i_31_], 0)) bool = false;
             }
         }
         return bool;
@@ -207,7 +207,7 @@ final class Component225
 
     static final void method350(int i, int i_34_, int i_35_, int i_36_, int i_37_) {
         anInt466++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_36_, (byte) 105, 10);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_36_, (byte) 105, 10);
         class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9651 = i_34_;
         int i_38_ = 112 % ((i_35_ - 76) / 44);

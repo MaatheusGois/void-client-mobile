@@ -56,7 +56,7 @@ final class DefinitionSub5
         anInt9129 = 5;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         if (i > 108) {
             aByteArray9119 = GraphicsToolkit.method3664(anInt9122, 124);
             anInt9126++;
@@ -64,11 +64,11 @@ final class DefinitionSub5
         }
     }
 
-    final int[] method3042(int i, int i_0_) {
+    final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9123++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (i_0_ != 255) method3044(-57);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (i_0_ != 255) postDecode(-57);
+        if (this.imageCache.cacheMiss) {
             int i_1_ = anInt9117 * Component302.anIntArray6035[i] + 2048;
             int i_2_ = i_1_ >> 12;
             int i_3_ = 1 + i_2_;

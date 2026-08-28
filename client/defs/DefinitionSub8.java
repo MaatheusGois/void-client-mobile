@@ -84,10 +84,10 @@ final class DefinitionSub8
         anInt9153++;
     }
 
-    final int[] method3042(int i, int i_2_) {
+    final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9154++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) method3069(i, is, (byte) 98);
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) method3069(i, is, (byte) 98);
         return is;
     }
 
@@ -99,7 +99,7 @@ final class DefinitionSub8
         this.anInt9158 = 4;
     }
 
-    final void method3044(int i) {
+    final void postDecode(int i) {
         aByteArray9152 = GraphicsToolkit.method3664(this.anInt9156, 95);
         anInt9148++;
         method3067((byte) -98);

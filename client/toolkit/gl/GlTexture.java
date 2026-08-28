@@ -61,7 +61,7 @@ class GlTexture extends AbstractGlTexture {
             }
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_9_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_9_ + ')'));
         }
     }
 
@@ -113,7 +113,7 @@ class GlTexture extends AbstractGlTexture {
             }
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ',' + bool_26_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ',' + bool_26_ + ')'));
         }
     }
 
@@ -145,7 +145,7 @@ class GlTexture extends AbstractGlTexture {
             OpenGL.glPixelStorei(3317, 4);
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_32_ + ',' + i_33_ + ',' + i_34_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_35_ + ',' + bool_36_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_32_ + ',' + i_33_ + ',' + i_34_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_35_ + ',' + bool_36_ + ')'));
         }
     }
 

@@ -13,14 +13,15 @@ class ShaderCompiler {
     static int anInt4100;
     static int anInt4101;
 
-    static final DisplayModeManagerContainer271 method2608(GlExtensionManager class377, byte[] is, int i, int i_0_) {
+    /** Compile ARB shader object from {@code is}; logs {@code aa compile failed:} on error. */
+    static final DisplayModeManagerContainer271 compileShader(GlExtensionManager class377, byte[] is, int i, int i_0_) {
         try {
             anInt4099++;
             if (is == null || is.length == 0) return null;
             long l = OpenGL.glCreateShaderObjectARB(i_0_);
             OpenGL.glShaderSourceRawARB(l, is);
             OpenGL.glCompileShaderARB(l);
-            if (i > -95) method2608(null, null, -27, 75);
+            if (i > -95) compileShader(null, null, -27, 75);
             OpenGL.glGetObjectParameterivARB(l, 35713, (DefinitionSub2.anIntArray9096), 0);
             if (DefinitionSub2.anIntArray9096[0] == 0) {
                 if (DefinitionSub2.anIntArray9096[0] == 0) System.out.println("aa compile failed:");
@@ -37,7 +38,7 @@ class ShaderCompiler {
             }
             return new DisplayModeManagerContainer271(class377, l, i_0_);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dea.E(" + (class377 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dea.E(" + (class377 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
         }
     }
 
@@ -45,7 +46,7 @@ class ShaderCompiler {
         anInt4101++;
         HashNodeSub19 class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.method2302(i_2_, (byte) -68));
         if (class348_sub42_sub19 != null) return class348_sub42_sub19;
-        byte[] is = Component22.aClass45_1743.method410(-1860, i_2_, 0);
+        byte[] is = Component22.aClass45_1743.getFile(-1860, i_2_, 0);
         if (is == null || is.length <= 1) return null;
         try {
             class348_sub42_sub19 = RenderableSub4.method2502(is, -104);

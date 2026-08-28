@@ -1,18 +1,22 @@
-/* DisplayModeManagerContainer124 - Decompiled by JODE
+/* GameType - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer124
 /**
- * RENAMED from `Class230` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
+ * RENAMED from {@code Class230} (JODE-obfuscated).
+ * Game product / ModeWhere: {@link RunescapeInfo#RUNESCAPE}, {@link WorldNameText#STELLARDAWN},
+ * {@link WaterShaderProgram#GAME3}, {@link Component379#GAME4}.
+ * {@link #domain} feeds URLs like {@code http://*.domain.com/...}; {@link #id} is the game id byte.
+ */
+final class GameType {
     static int anInt2982;
     static int anInt2983;
     static int anInt2984;
-    String aString2985;
+    /** DNS label under *.com (e.g. "runescape", "stellardawn"). */
+    String domain;
     static int anInt2986 = 0;
-    int anInt2987;
+    /** Game id written to login/news packets (0=RS, 1=SD, …). */
+    int id;
     static int anInt2988;
     static int anInt2989;
 
@@ -286,7 +290,7 @@ final class DisplayModeManagerContainer124
                     anInt2986 = -82;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("sj.D(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (is_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + bool + ',' + i_6_ + ',' + i_7_ + ',' + (is_8_ != null ? "{...}" : "null") + ',' + (is_9_ != null ? "{...}" : "null") + ',' + i_10_ + ',' + (is_11_ != null ? "{...}" : "null") + ',' + i_12_ + ',' + bool_13_ + ',' + i_14_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("sj.D(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (is_3_ != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + bool + ',' + i_6_ + ',' + i_7_ + ',' + (is_8_ != null ? "{...}" : "null") + ',' + (is_9_ != null ? "{...}" : "null") + ',' + i_10_ + ',' + (is_11_ != null ? "{...}" : "null") + ',' + i_12_ + ',' + bool_13_ + ',' + i_14_ + ')'));
             }
             break;
         } while (false);
@@ -508,7 +512,7 @@ final class DisplayModeManagerContainer124
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sj.A(" + i + ',' + (class318_sub1_sub3_sub3 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sj.A(" + i + ',' + (class318_sub1_sub3_sub3 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -528,12 +532,13 @@ final class DisplayModeManagerContainer124
         throw new IllegalStateException();
     }
 
-    DisplayModeManagerContainer124(String string, int i) {
+    /** @param string domain label; @param i game id */
+    GameType(String string, int i) {
         try {
-            this.aString2985 = string;
-            this.anInt2987 = i;
+            this.domain = string;
+            this.id = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("sj.<init>(" + (string != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("sj.<init>(" + (string != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

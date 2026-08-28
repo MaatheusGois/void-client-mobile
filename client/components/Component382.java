@@ -18,7 +18,11 @@ final class Component382
     static int anInt2275;
     /*synthetic*/ static Class aClass2276;
 
-    static final int method1319(int i, boolean bool, byte[] is, int i_0_) {
+    /**
+     * CRC-32 over {@code is[i_0_..i)} using the shared table
+     * {@link Component84#anIntArray1508}. Final result is inverted.
+     */
+    static final int computeCrc32(int i, boolean bool, byte[] is, int i_0_) {
         anInt2267++;
         if (bool != true) return 63;
         int i_1_ = -1;

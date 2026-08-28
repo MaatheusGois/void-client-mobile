@@ -419,7 +419,7 @@ final class MatrixSub2
             this.aFloat5710 = (class101_sub2_53_.aFloat5710 + ((class101_sub2_53_.aFloat5732 * class101_sub2_54_.aFloat5724) + ((class101_sub2_54_.aFloat5710 * class101_sub2_53_.aFloat5722) + (class101_sub2_53_.aFloat5708 * (class101_sub2_54_.aFloat5729)))));
             this.aFloat5724 = ((class101_sub2_53_.aFloat5691 * class101_sub2_54_.aFloat5710) + (class101_sub2_53_.aFloat5736 * class101_sub2_54_.aFloat5729) + (class101_sub2_54_.aFloat5724 * class101_sub2_53_.aFloat5716) + class101_sub2_53_.aFloat5724);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("haa.HA(" + (class101 != null ? "{...}" : "null") + ',' + (class101_52_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("haa.HA(" + (class101 != null ? "{...}" : "null") + ',' + (class101_52_ != null ? "{...}" : "null") + ')'));
         }
     }
 

@@ -42,7 +42,7 @@ abstract class Component163
             fs[1] = f_13_;
             fs[0] = f_12_;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ca.D(" + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + (fs != null ? "{...}" : "null") + ',' + i_4_ + ',' + f + ',' + i_5_ + ',' + i_6_ + ',' + f_7_ + ',' + (fs_8_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ca.D(" + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + (fs != null ? "{...}" : "null") + ',' + i_4_ + ',' + f + ',' + i_5_ + ',' + i_6_ + ',' + f_7_ + ',' + (fs_8_ != null ? "{...}" : "null") + ')'));
         }
     }
 

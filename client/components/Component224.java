@@ -9,7 +9,8 @@ final class Component224
  */ implements Interface21 {
     static int[] anIntArray5165 = {-1, -1, 1, 1};
     static int anInt5166;
-    int anInt5167;
+    /** Packed type/opcode id for this constant. */
+    int id;
     static int anInt5168;
     static Component75 aClass173_5169 = new Component75();
 
@@ -27,7 +28,8 @@ final class Component224
         return ((ClientErrorReporter.method1241(i_1_, i, -128) | Component175.method1722(i, i_1_, (byte) 92)) & (0x37 & i_1_) == 0);
     }
 
-    static int method2057(int i, int i_2_) {
+    /** {@code i | i_2_}. */
+    static int bitwiseOr(int i, int i_2_) {
         return i | i_2_;
     }
 
@@ -37,6 +39,6 @@ final class Component224
     }
 
     Component224(String string, int i) {
-        this.anInt5167 = i;
+        this.id = i;
     }
 }

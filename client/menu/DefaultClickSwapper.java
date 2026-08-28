@@ -392,7 +392,7 @@ final class DefaultClickSwapper {
     }
 
     private static String attackLabel() {
-        return FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
+        return FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
     }
 
     private static void ensureLoaded() {

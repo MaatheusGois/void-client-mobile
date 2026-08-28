@@ -22,7 +22,8 @@ final class RunescapeInfo {
     Component277 aClass317_183;
     int anInt184;
     int anInt185;
-    static DisplayModeManagerContainer124 aClass230_186;
+    /** RuneScape game product ({@code id}=0, domain {@code runescape}). */
+    static GameType RUNESCAPE;
     static int[] anIntArray187 = {-1, 8192, 0, -1, 12288, 10240, 14336, -1, 4096, 6144, 2048};
     int anInt188;
     NodeSub19Sub1 aClass348_Sub19_Sub1_189;
@@ -41,7 +42,7 @@ final class RunescapeInfo {
         if (i < 101) method218((byte) -85);
         anIntArray187 = null;
         anIntArray179 = null;
-        aClass230_186 = null;
+        RUNESCAPE = null;
         aClass87_191 = null;
         anIntArrayArray174 = null;
     }
@@ -70,6 +71,6 @@ final class RunescapeInfo {
     }
 
     static {
-        aClass230_186 = new DisplayModeManagerContainer124("runescape", 0);
+        RUNESCAPE = new GameType("runescape", 0);
     }
 }

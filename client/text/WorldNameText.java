@@ -15,7 +15,8 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     static int anInt8635;
     static int anInt8636;
     static int anInt8637;
-    static DisplayModeManagerContainer124 aClass230_8638 = new DisplayModeManagerContainer124("stellardawn", 1);
+    /** Stellar Dawn product ({@code id}=1). */
+    static GameType STELLARDAWN = new GameType("stellardawn", 1);
     static int anInt8639;
     private int anInt8640;
     static int anInt8641;
@@ -54,7 +55,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     public static void method251(byte i) {
         if (i != 2) method250(-45, false, -102);
         aClass323_8644 = null;
-        aClass230_8638 = null;
+        STELLARDAWN = null;
         aByteArrayArray8642 = null;
     }
 
@@ -68,7 +69,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             OpenGL.glTexImage2Di(this.anInt5093, 0, 6408, anInt8640, anInt8634, 0, 32993, (this.aClass377_5082.anInt9918), is, i_4_ * 4);
             OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ',' + (is != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ')'));
         }
     }
 
@@ -84,7 +85,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ')'));
         }
     }
 
@@ -101,7 +102,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             this.aClass377_5082.method3850((byte) 115, this);
             OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(109), i, i_10_, 0, ParametricDefinition.method3055(105, this.aClass304_5084), Component387.method1128(-54, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_10_ + ')'));
         }
     }
 
@@ -118,7 +119,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         int i_17_ = i_15_;
         int i_18_ = -i_15_;
         int i_19_ = -1;
-        MenuOpener.method1156(i_13_ + 621, i_12_ + i_15_, DisplayModeManagerContainer167.anIntArrayArray255[i], i_12_ + -i_15_, i_14_);
+        MenuOpener.fillInts(i_13_ + 621, i_12_ + i_15_, DisplayModeManagerContainer167.anIntArrayArray255[i], i_12_ + -i_15_, i_14_);
         while (i_16_ < i_17_) {
             i_19_ += 2;
             i_18_ += i_19_;
@@ -130,15 +131,15 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
                 int[] is_20_ = DisplayModeManagerContainer167.anIntArrayArray255[i + -i_17_];
                 int i_21_ = i_16_ + i_12_;
                 int i_22_ = i_12_ + -i_16_;
-                MenuOpener.method1156(-27, i_21_, is, i_22_, i_14_);
-                MenuOpener.method1156(-27, i_21_, is_20_, i_22_, i_14_);
+                MenuOpener.fillInts(-27, i_21_, is, i_22_, i_14_);
+                MenuOpener.fillInts(-27, i_21_, is_20_, i_22_, i_14_);
             }
             int i_23_ = i_17_ + i_12_;
             int i_24_ = i_12_ - i_17_;
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_16_ + i];
             int[] is_25_ = DisplayModeManagerContainer167.anIntArrayArray255[-i_16_ + i];
-            MenuOpener.method1156(i_13_ + 621, i_23_, is, i_24_, i_14_);
-            MenuOpener.method1156(-27, i_23_, is_25_, i_24_, i_14_);
+            MenuOpener.fillInts(i_13_ + 621, i_23_, is, i_24_, i_14_);
+            MenuOpener.fillInts(-27, i_23_, is_25_, i_24_, i_14_);
         }
     }
 
@@ -168,7 +169,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             OpenGL.glTexImage2Df(this.anInt5093, 0, this.method228(107), i, i_33_, 0, (ParametricDefinition.method3055(126, this.aClass304_5084)), 5126, fs, i_34_ * 4);
             OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_33_ + ',' + (fs != null ? "{...}" : "null") + ',' + i_34_ + ',' + i_35_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_33_ + ',' + (fs != null ? "{...}" : "null") + ',' + i_34_ + ',' + i_35_ + ')'));
         }
     }
 
@@ -212,7 +213,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             if (i_46_ != i_44_) OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("tw.T(" + i + ',' + i_42_ + ',' + i_43_ + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + i_47_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.T(" + i + ',' + i_42_ + ',' + i_43_ + ',' + i_44_ + ',' + i_45_ + ',' + i_46_ + ',' + i_47_ + ',' + (is != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ')'));
         }
     }
 

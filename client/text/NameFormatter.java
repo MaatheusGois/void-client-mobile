@@ -16,22 +16,26 @@ final class NameFormatter {
     static int anInt495 = 0;
     static int anInt496;
 
-    static final String method356(int i, int i_0_) {
+    /**
+     * Formats a quantity with thousands separators and K/M colour suffixes for the UI.
+     */
+    static final String formatQuantity(int i, int i_0_) {
         anInt494++;
         String string = Integer.toString(i_0_);
         if (i >= -109) return null;
         for (int i_1_ = -3 + string.length(); i_1_ > 0; i_1_ -= 3)
             string = string.substring(0, i_1_) + "," + string.substring(i_1_);
-        if (string.length() > 9) return (" <col=00ff80>" + string.substring(0, string.length() + -8) + FriendsIgnoreList.aClass274_3516.method2063(ObjectDeserializer.anInt6967, 544) + " (" + string + ")</col>");
-        if (string.length() > 6) return (" <col=ffffff>" + string.substring(0, -4 + string.length()) + FriendsIgnoreList.aClass274_3518.method2063(ObjectDeserializer.anInt6967, 544) + " (" + string + ")</col>");
+        if (string.length() > 9) return (" <col=00ff80>" + string.substring(0, string.length() + -8) + FriendsIgnoreList.aClass274_3516.getLocalized(ObjectDeserializer.languageId, 544) + " (" + string + ")</col>");
+        if (string.length() > 6) return (" <col=ffffff>" + string.substring(0, -4 + string.length()) + FriendsIgnoreList.aClass274_3518.getLocalized(ObjectDeserializer.languageId, 544) + " (" + string + ")</col>");
         return " <col=ffff00>" + string + "</col>";
     }
 
-    static final synchronized void method357(int i, byte[] is) {
+    /** Returns {@code is} to the size-bucketed byte[] pool (100 / 5000 / 30000 / custom). */
+    static final synchronized void releaseByteArray(int i, byte[] is) {
         anInt491++;
         if (is.length == 100 && DefinitionSub31.anInt9412 < 1000) DisplayModeManagerContainer310.aByteArrayArray358[DefinitionSub31.anInt9412++] = is;
         else {
-            if (i != 0) method359(-119, -101);
+            if (i != 0) allocateByteArray(-119, -101);
             if (is.length == 5000 && DefinitionSub21.anInt9280 < 250) HeapDumper.aByteArrayArray1918[DefinitionSub21.anInt9280++] = is;
             else if (is.length == 30000 && Sprite.anInt6913 < 50) DebugPanicSub2.aByteArrayArray8505[Sprite.anInt6913++] = is;
             else if (DefinitionSub6.aByteArrayArrayArray9134 != null) {
@@ -51,7 +55,8 @@ final class NameFormatter {
         anInt490++;
     }
 
-    static final synchronized byte[] method359(int i, int i_9_) {
+    /** Allocates (or reuses from the pool) a {@code byte[i]} buffer. */
+    static final synchronized byte[] allocateByteArray(int i, int i_9_) {
         anInt493++;
         if (i == 100 && DefinitionSub31.anInt9412 > 0) {
             byte[] is = DisplayModeManagerContainer310.aByteArrayArray358[--DefinitionSub31.anInt9412];
@@ -63,7 +68,7 @@ final class NameFormatter {
             HeapDumper.aByteArrayArray1918[DefinitionSub21.anInt9280] = null;
             return is;
         }
-        if (i_9_ != -1) method359(-88, -45);
+        if (i_9_ != -1) allocateByteArray(-88, -45);
         if (i == 30000 && Sprite.anInt6913 > 0) {
             byte[] is = (DebugPanicSub2.aByteArrayArray8505[--Sprite.anInt6913]);
             DebugPanicSub2.aByteArrayArray8505[Sprite.anInt6913] = null;

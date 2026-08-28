@@ -1216,14 +1216,14 @@ final class DisplayModeManagerContainer164
                 short i_290_ = Component361.method303(i_288_ & ~0x7f | i_289_, 30);
                 if (anIntArray5366[i] == -1) {
                     int i_291_ = anIntArray5368[i] & ~0x1ffff;
-                    anIntArray5368[i] = i_291_ | ReferenceTable.method2198(0, i_291_ >> 17, i_290_);
+                    anIntArray5368[i] = i_291_ | ReferenceTable.clampHslLightness(0, i_291_ >> 17, i_290_);
                 } else if (anIntArray5366[i] != -2) {
                     int i_292_ = anIntArray5368[i] & ~0x1ffff;
-                    anIntArray5368[i] = i_292_ | ReferenceTable.method2198(0, i_292_ >> 17, i_290_);
+                    anIntArray5368[i] = i_292_ | ReferenceTable.clampHslLightness(0, i_292_ >> 17, i_290_);
                     i_292_ = anIntArray5337[i] & ~0x1ffff;
-                    anIntArray5337[i] = i_292_ | ReferenceTable.method2198(0, i_292_ >> 17, i_290_);
+                    anIntArray5337[i] = i_292_ | ReferenceTable.clampHslLightness(0, i_292_ >> 17, i_290_);
                     i_292_ = anIntArray5366[i] & ~0x1ffff;
-                    anIntArray5366[i] = i_292_ | ReferenceTable.method2198(0, i_292_ >> 17, i_290_);
+                    anIntArray5366[i] = i_292_ | ReferenceTable.clampHslLightness(0, i_292_ >> 17, i_290_);
                 }
             }
         }
@@ -2756,19 +2756,19 @@ final class DisplayModeManagerContainer164
                         int i_746_ = (((i * class360.anInt4430 + i_734_ * class360.anInt4428 + i_735_ * class360.anInt4427) / class360.anInt4429) >> 16);
                         int i_747_ = i_746_ > 256 ? i_737_ : i_738_;
                         int i_748_ = (i_736_ >> 1) + (i_747_ * i_746_ >> 17);
-                        anIntArray5368[i_739_] = i_748_ << 17 | ReferenceTable.method2198(0, i_748_, i_745_);
+                        anIntArray5368[i_739_] = i_748_ << 17 | ReferenceTable.clampHslLightness(0, i_748_, i_745_);
                         if (aClass360Array5313 != null && (aClass360Array5313[aShortArray5394[i_739_]] != null)) class360 = aClass360Array5313[aShortArray5394[i_739_]];
                         else class360 = aClass360Array5360[aShortArray5394[i_739_]];
                         i_746_ = ((i * class360.anInt4430 + i_734_ * class360.anInt4428 + i_735_ * class360.anInt4427) / class360.anInt4429) >> 16;
                         i_747_ = i_746_ > 256 ? i_737_ : i_738_;
                         i_748_ = (i_736_ >> 1) + (i_747_ * i_746_ >> 17);
-                        anIntArray5337[i_739_] = i_748_ << 17 | ReferenceTable.method2198(0, i_748_, i_745_);
+                        anIntArray5337[i_739_] = i_748_ << 17 | ReferenceTable.clampHslLightness(0, i_748_, i_745_);
                         if (aClass360Array5313 != null && (aClass360Array5313[aShortArray5364[i_739_]] != null)) class360 = aClass360Array5313[aShortArray5364[i_739_]];
                         else class360 = aClass360Array5360[aShortArray5364[i_739_]];
                         i_746_ = ((i * class360.anInt4430 + i_734_ * class360.anInt4428 + i_735_ * class360.anInt4427) / class360.anInt4429) >> 16;
                         i_747_ = i_746_ > 256 ? i_737_ : i_738_;
                         i_748_ = (i_736_ >> 1) + (i_747_ * i_746_ >> 17);
-                        anIntArray5366[i_739_] = i_748_ << 17 | ReferenceTable.method2198(0, i_748_, i_745_);
+                        anIntArray5366[i_739_] = i_748_ << 17 | ReferenceTable.clampHslLightness(0, i_748_, i_745_);
                     } else if (i_740_ == 1) {
                         int i_749_ = aShortArray5311[i_739_] & 0xffff;
                         int i_750_ = (i_749_ & 0x7f) * anInt5344 >> 7;
@@ -2777,7 +2777,7 @@ final class DisplayModeManagerContainer164
                         int i_752_ = ((i * class41.anInt561 + i_734_ * class41.anInt560 + i_735_ * class41.anInt559) >> 16);
                         int i_753_ = i_752_ > 256 ? i_737_ : i_738_;
                         int i_754_ = (i_736_ >> 1) + (i_753_ * i_752_ >> 17);
-                        anIntArray5368[i_739_] = i_754_ << 17 | ReferenceTable.method2198(0, i_754_, i_751_);
+                        anIntArray5368[i_739_] = i_754_ << 17 | ReferenceTable.clampHslLightness(0, i_754_, i_751_);
                         anIntArray5366[i_739_] = -1;
                     } else if (i_740_ == 3) {
                         anIntArray5368[i_739_] = 128;

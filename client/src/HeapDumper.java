@@ -80,7 +80,7 @@ final class HeapDumper {
                             int i_7_ = class348_sub49_sub2.readShortAddLittle(-118);
                             if ((i_7_ & 0xc000) == 49152) {
                                 int i_8_ = class348_sub49_sub2.readShortLittle(false);
-                                is[i_6_] = Component224.method2057(i_7_ << 16, i_8_);
+                                is[i_6_] = Component224.bitwiseOr(i_7_ << 16, i_8_);
                             } else is[i_6_] = i_7_;
                             is_5_[i_6_] = class348_sub49_sub2.readShortLittle(false);
                         }
@@ -232,7 +232,7 @@ final class HeapDumper {
                     } else player.method2449(player.anInt10531, player.anInt10549, (byte) 84);
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("ns.A(" + (class348_sub49_sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (player != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("ns.A(" + (class348_sub49_sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (player != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

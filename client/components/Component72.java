@@ -44,7 +44,7 @@ final class Component72
                 Component212.anInt9971 = 0;
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("nr.A(" + (string != null ? "{...}" : "null") + ',' + bool + ',' + (string_0_ != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("nr.A(" + (string != null ? "{...}" : "null") + ',' + bool + ',' + (string_0_ != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

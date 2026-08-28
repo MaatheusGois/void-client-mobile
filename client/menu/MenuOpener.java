@@ -62,7 +62,8 @@ final class MenuOpener extends Component137 implements Interface8 {
         return this.anInt1929;
     }
 
-    static final void method1156(int i, int i_3_, int[] is, int i_4_, int i_5_) {
+    /** Fill {@code is[i_4_+1 .. i_3_)} with {@code i_5_} (unrolled x8). */
+    static final void fillInts(int i, int i_3_, int[] is, int i_4_, int i_5_) {
         i_4_--;
         anInt4841++;
         int i_6_ = --i_3_ - 7;
@@ -93,7 +94,7 @@ final class MenuOpener extends Component137 implements Interface8 {
             } else {
                 Buffer class348_sub49 = (new Buffer(Component122.method878((Component362.method1039(OggStreamReader.aString9043, true)), -126)));
                 l = class348_sub49.readLong(-456577760);
-                ObjectDeserializer.aLong6966 = class348_sub49.readLong(-456577760);
+                ObjectDeserializer.userHash = class348_sub49.readLong(-456577760);
             }
             Component72.method1138(DisplayModeManagerContainer91.method313(l, -95), true, "", (byte) 79);
         }
@@ -110,7 +111,7 @@ final class MenuOpener extends Component137 implements Interface8 {
         try {
             anInt4837 = i;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("kaa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_8_ + ',' + bool + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("kaa.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + i_8_ + ',' + bool + ')'));
         }
     }
 

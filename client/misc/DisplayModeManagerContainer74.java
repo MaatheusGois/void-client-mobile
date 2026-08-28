@@ -52,7 +52,7 @@ final class DisplayModeManagerContainer74
                 Component10.method2252(true, i_0_, i, (byte) -99, i_5_, i_7_, i_6_, 0, 0);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cf.B(" + i + ',' + l + ',' + i_0_ + ',' + i_1_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cf.B(" + i + ',' + l + ',' + i_0_ + ',' + i_1_ + ')'));
         }
     }
 
@@ -76,7 +76,7 @@ final class DisplayModeManagerContainer74
         if (is == null) return null;
         byte[] is_11_ = new byte[is.length];
         if (i >= -9) anInt4814 = 49;
-        Component313.method1577(is, 0, is_11_, 0, is.length);
+        Component313.arraycopy(is, 0, is_11_, 0, is.length);
         return is_11_;
     }
 
@@ -100,7 +100,7 @@ final class DisplayModeManagerContainer74
 
     static final void method2311(byte i, int i_12_) {
         anInt4820++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(i_12_, (byte) 105, 16);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_12_, (byte) 105, 16);
         class348_sub42_sub15.method3251(-16058);
         int i_13_ = 126 / ((i - -54) / 38);
     }
@@ -122,7 +122,7 @@ final class DisplayModeManagerContainer74
                     aStringArray4818 = null;
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("cf.G(" + i + ',' + i_14_ + ',' + (class262 != null ? "{...}" : "null") + ',' + i_15_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("cf.G(" + i + ',' + i_14_ + ',' + (class262 != null ? "{...}" : "null") + ',' + i_15_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);

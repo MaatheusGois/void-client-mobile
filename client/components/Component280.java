@@ -31,7 +31,7 @@ final class Component280
         } else {
             Buffer class348_sub49 = new Buffer(Component122.method878((Component362.method1039((OggStreamReader.aString9043), true)), -125));
             l = class348_sub49.readLong(-456577760);
-            ObjectDeserializer.aLong6966 = class348_sub49.readLong(-456577760);
+            ObjectDeserializer.userHash = class348_sub49.readLong(-456577760);
         }
         Component72.method1138(DisplayModeManagerContainer91.method313(l, -100), true, "", (byte) -115);
     }

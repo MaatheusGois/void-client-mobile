@@ -63,7 +63,7 @@ final class NodeSub51
     static int anInt7266;
     static int anInt7267;
     private static short[][] aShortArrayArray7268;
-    private final DisplayModeManagerContainer124 aClass230_7269;
+    private final GameType aClass230_7269;
     Component71 aClass239_Sub21_7270;
     Component256 aClass239_Sub25_7271;
     RadixText aClass239_Sub26_7272;
@@ -131,13 +131,13 @@ final class NodeSub51
                 if (i_0_ < 22) break;
                 this.aClass239_Sub19_7257 = new Component372(class348_sub49.readUnsignedByte(255), this);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("dh.I(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.I(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
             }
             break;
         } while (false);
     }
 
-    final DisplayModeManagerContainer124 method3422(int i) {
+    final GameType method3422(int i) {
         anInt7258++;
         if (i != 674) method3425(45);
         return aClass230_7269;
@@ -247,7 +247,7 @@ final class NodeSub51
                 method3426((byte) 36);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dh.C(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.C(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -331,7 +331,7 @@ final class NodeSub51
             class239.method1718(i_7_, 72);
             method3426((byte) 36);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dh.A(" + i + ',' + (class239 != null ? "{...}" : "null") + ',' + i_7_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.A(" + i + ',' + (class239 != null ? "{...}" : "null") + ',' + i_7_ + ')'));
         }
     }
 
@@ -345,25 +345,25 @@ final class NodeSub51
         aShortArrayArrayArray7262 = null;
     }
 
-    NodeSub51(DisplayModeManagerContainer124 class230, int i) {
+    NodeSub51(GameType class230, int i) {
         try {
             aClass230_7269 = class230;
-            aClass199_7221 = new HelveticaFont((OggUrlStream.aClass297_8992.aBoolean3777), Component127.anInt2964, DefinitionSub29.anInt9372, ReflectionInvoker.aString3780.toLowerCase().indexOf("arm") != -1);
+            aClass199_7221 = new HelveticaFont((OggUrlStream.aClass297_8992.signed), Component127.anInt2964, DefinitionSub29.anInt9372, ReflectionInvoker.osArch.toLowerCase().indexOf("arm") != -1);
             this.aClass239_Sub25_7271 = new Component256(i, this);
             method3423(true, 31286);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dh.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 
-    NodeSub51(Buffer class348_sub49, DisplayModeManagerContainer124 class230, int i) {
+    NodeSub51(Buffer class348_sub49, GameType class230, int i) {
         try {
             aClass230_7269 = class230;
-            aClass199_7221 = new HelveticaFont((OggUrlStream.aClass297_8992.aBoolean3777), Component127.anInt2964, DefinitionSub29.anInt9372, ReflectionInvoker.aString3780.indexOf("arm") != -1);
+            aClass199_7221 = new HelveticaFont((OggUrlStream.aClass297_8992.signed), Component127.anInt2964, DefinitionSub29.anInt9372, ReflectionInvoker.osArch.indexOf("arm") != -1);
             this.aClass239_Sub25_7271 = new Component256(i, this);
             method3424(925, class348_sub49);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("dh.<init>(" + (class348_sub49 != null ? "{...}" : "null") + ',' + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.<init>(" + (class348_sub49 != null ? "{...}" : "null") + ',' + (class230 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 

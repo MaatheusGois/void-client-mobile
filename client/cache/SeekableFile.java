@@ -4,7 +4,9 @@
 
 /**
  * RENAMED from `Class78` (JODE-obfuscated).
- * Seekable random-access file reader. Throws IOException 'Invalid seek to ' when a negative seek offset is requested (getFileName returns the file name).
+ * Buffered seekable random-access file over {@link RandomAccessFileReader}.
+ * Throws IOException {@code Invalid seek to …} on negative seeks.
+ * {@link #position}/{@link #length} are logical; write/read buffers reduce RAF traffic.
  */
 
 import java.io.EOFException;
@@ -13,74 +15,84 @@ import java.io.IOException;
 
 final class SeekableFile {
     static int anInt1304;
-    private final byte[] aByteArray1305;
+    /** Dirty write-side cache pages. */
+    private final byte[] writeBuffer;
     static int anInt1306;
     static int anInt1307;
     static int anInt1308;
     static int anInt1309;
     static int anInt1310;
-    private final byte[] aByteArray1311;
+    /** Read-ahead cache pages. */
+    private final byte[] readBuffer;
     private final RandomAccessFileReader fileReader;
     static int anInt1313;
-    private int anInt1314 = 0;
-    private long aLong1315;
+    /** Valid byte count in {@link #writeBuffer}. */
+    private int writeBufferLength = 0;
+    /** Last seek/write position on the underlying RAF. */
+    private long rafPosition;
     static int anInt1316;
-    private long aLong1317;
+    /** Highest byte written through the RAF so far. */
+    private long rafLength;
     static int anInt1318;
-    private long aLong1319 = -1L;
-    private int anInt1320;
-    private long aLong1321 = -1L;
+    /** File offset of {@link #readBuffer} ({@code -1} = empty). */
+    private long readBufferPosition = -1L;
+    /** Valid byte count in {@link #readBuffer}. */
+    private int readBufferLength;
+    /** File offset of {@link #writeBuffer} ({@code -1} = empty). */
+    private long writeBufferPosition = -1L;
     static CacheStore aClass45_1322;
-    private long aLong1323;
-    private long aLong1324;
+    /** Logical file length (grows on write past EOF). */
+    private long length;
+    /** Current seek position in the file. */
+    private long position;
 
     final void write(int i, int i_0_, boolean bool, byte[] is) throws IOException {
         anInt1310++;
         try {
-            if (aLong1324 - -(long) i_0_ > aLong1323) aLong1323 = (long) i_0_ + aLong1324;
-            if (aLong1321 != -1 && (aLong1321 > aLong1324 || (aLong1324 > (long) anInt1314 + aLong1321))) method791(-1);
-            if (aLong1321 != -1L && (aLong1324 + (long) i_0_ > (long) aByteArray1305.length + aLong1321)) {
-                int i_1_ = (int) ((long) aByteArray1305.length + (aLong1321 + -aLong1324));
-                Component313.method1577(is, i, aByteArray1305, (int) (-aLong1321 + aLong1324), i_1_);
+            if (position - -(long) i_0_ > length) length = (long) i_0_ + position;
+            if (writeBufferPosition != -1 && (writeBufferPosition > position || (position > (long) writeBufferLength + writeBufferPosition))) flushWriteBuffer(-1);
+            if (writeBufferPosition != -1L && (position + (long) i_0_ > (long) writeBuffer.length + writeBufferPosition)) {
+                int i_1_ = (int) ((long) writeBuffer.length + (writeBufferPosition + -position));
+                Component313.arraycopy(is, i, writeBuffer, (int) (-writeBufferPosition + position), i_1_);
                 i += i_1_;
                 i_0_ -= i_1_;
-                aLong1324 += i_1_;
-                anInt1314 = aByteArray1305.length;
-                method791(-1);
+                position += i_1_;
+                writeBufferLength = writeBuffer.length;
+                flushWriteBuffer(-1);
             }
-            if (aByteArray1305.length < i_0_) {
-                if (aLong1315 != aLong1324) {
-                    fileReader.seek(-18968, aLong1324);
-                    aLong1315 = aLong1324;
+            if (writeBuffer.length < i_0_) {
+                if (rafPosition != position) {
+                    fileReader.seek(-18968, position);
+                    rafPosition = position;
                 }
                 fileReader.write((byte) 115, i, i_0_, is);
-                aLong1315 += i_0_;
-                if (aLong1317 < aLong1315) aLong1317 = aLong1315;
+                rafPosition += i_0_;
+                if (rafLength < rafPosition) rafLength = rafPosition;
                 long l = -1L;
-                if ((aLong1319 <= aLong1324) && (aLong1319 + (long) anInt1320 > aLong1324)) l = aLong1324;
-                else if ((aLong1324 <= aLong1319) && aLong1319 < aLong1324 - -(long) i_0_) l = aLong1319;
+                if ((readBufferPosition <= position) && (readBufferPosition + (long) readBufferLength > position)) l = position;
+                else if ((position <= readBufferPosition) && readBufferPosition < position - -(long) i_0_) l = readBufferPosition;
                 long l_2_ = -1L;
-                if ((long) i_0_ + aLong1324 > aLong1319 && (long) anInt1320 + aLong1319 >= aLong1324 + (long) i_0_) l_2_ = (long) i_0_ + aLong1324;
-                else if ((aLong1324 < (long) anInt1320 + aLong1319) && ((long) i_0_ + aLong1324 >= aLong1319 + (long) anInt1320)) l_2_ = (long) anInt1320 + aLong1319;
+                if ((long) i_0_ + position > readBufferPosition && (long) readBufferLength + readBufferPosition >= position + (long) i_0_) l_2_ = (long) i_0_ + position;
+                else if ((position < (long) readBufferLength + readBufferPosition) && ((long) i_0_ + position >= readBufferPosition + (long) readBufferLength)) l_2_ = (long) readBufferLength + readBufferPosition;
                 if (l > -1L && l_2_ > l) {
                     int i_3_ = (int) (l_2_ + -l);
-                    Component313.method1577(is, (int) (-aLong1324 + l + (long) i), aByteArray1311, (int) (-aLong1319 + l), i_3_);
+                    Component313.arraycopy(is, (int) (-position + l + (long) i), readBuffer, (int) (-readBufferPosition + l), i_3_);
                 }
-                aLong1324 += i_0_;
+                position += i_0_;
                 return;
             }
             if (i_0_ > 0) {
-                if (aLong1321 == -1L) aLong1321 = aLong1324;
-                Component313.method1577(is, i, aByteArray1305, (int) (-aLong1321 + aLong1324), i_0_);
-                aLong1324 += i_0_;
-                if (aLong1324 + -aLong1321 > (long) anInt1314) anInt1314 = (int) (-aLong1321 + aLong1324);
+                if (writeBufferPosition == -1L) writeBufferPosition = position;
+                Component313.arraycopy(is, i, writeBuffer, (int) (-writeBufferPosition + position), i_0_);
+                position += i_0_;
+                if (position + -writeBufferPosition > (long) writeBufferLength) writeBufferLength = (int) (-writeBufferPosition + position);
                 return;
             }
         } catch (IOException ioexception) {
-            aLong1315 = -1L;
+            rafPosition = -1L;
             throw ioexception;
         }
-        if (bool != true) anInt1314 = -69;
+        if (bool != true) writeBufferLength = -69;
     }
 
     final void readFully(int i, byte[] is) throws IOException {
@@ -103,7 +115,7 @@ final class SeekableFile {
     final long length(int i) {
         if (i != 0) return 26L;
         anInt1318++;
-        return aLong1323;
+        return length;
     }
 
     final void read(int i, byte[] is, int i_5_, int i_6_) throws IOException {
@@ -111,71 +123,71 @@ final class SeekableFile {
         try {
             if (i_5_ + i > is.length) throw new ArrayIndexOutOfBoundsException(i + (i_5_ - is.length));
             if (i_6_ != -16717) return;
-            if (aLong1321 != -1 && aLong1324 >= aLong1321 && (aLong1324 - -(long) i_5_ <= (long) anInt1314 + aLong1321)) {
-                Component313.method1577(aByteArray1305, (int) (-aLong1321 + aLong1324), is, i, i_5_);
-                aLong1324 += i_5_;
+            if (writeBufferPosition != -1 && position >= writeBufferPosition && (position - -(long) i_5_ <= (long) writeBufferLength + writeBufferPosition)) {
+                Component313.arraycopy(writeBuffer, (int) (-writeBufferPosition + position), is, i, i_5_);
+                position += i_5_;
                 return;
             }
-            long l = aLong1324;
+            long l = position;
             int i_7_ = i;
             int i_8_ = i_5_;
-            if (aLong1324 >= aLong1319 && (aLong1319 - -(long) anInt1320 > aLong1324)) {
-                int i_9_ = (int) ((long) anInt1320 - (-aLong1319 + aLong1324));
+            if (position >= readBufferPosition && (readBufferPosition - -(long) readBufferLength > position)) {
+                int i_9_ = (int) ((long) readBufferLength - (-readBufferPosition + position));
                 if (i_5_ < i_9_) i_9_ = i_5_;
-                Component313.method1577(aByteArray1311, (int) (aLong1324 + -aLong1319), is, i, i_9_);
-                aLong1324 += i_9_;
+                Component313.arraycopy(readBuffer, (int) (position + -readBufferPosition), is, i, i_9_);
+                position += i_9_;
                 i_5_ -= i_9_;
                 i += i_9_;
             }
-            if (i_5_ > aByteArray1311.length) {
-                fileReader.seek(i_6_ + -2251, aLong1324);
-                aLong1315 = aLong1324;
+            if (i_5_ > readBuffer.length) {
+                fileReader.seek(i_6_ + -2251, position);
+                rafPosition = position;
                 int i_10_;
                 for (/**/; i_5_ > 0; i_5_ -= i_10_) {
                     i_10_ = fileReader.read(is, i, (byte) 8, i_5_);
                     if (i_10_ == -1) break;
                     i += i_10_;
-                    aLong1315 += i_10_;
-                    aLong1324 += i_10_;
+                    rafPosition += i_10_;
+                    position += i_10_;
                 }
             } else if (i_5_ > 0) {
-                method792((byte) -46);
+                fillReadBuffer((byte) -46);
                 int i_11_ = i_5_;
-                if (anInt1320 < i_11_) i_11_ = anInt1320;
-                Component313.method1577(aByteArray1311, 0, is, i, i_11_);
+                if (readBufferLength < i_11_) i_11_ = readBufferLength;
+                Component313.arraycopy(readBuffer, 0, is, i, i_11_);
                 i += i_11_;
-                aLong1324 += i_11_;
+                position += i_11_;
                 i_5_ -= i_11_;
             }
-            if (aLong1321 != -1L) {
-                if (aLong1324 < aLong1321 && i_5_ > 0) {
-                    int i_12_ = (int) (aLong1321 - aLong1324) + i;
+            if (writeBufferPosition != -1L) {
+                if (position < writeBufferPosition && i_5_ > 0) {
+                    int i_12_ = (int) (writeBufferPosition - position) + i;
                     if (i + i_5_ < i_12_) i_12_ = i + i_5_;
                     while (i_12_ > i) {
                         is[i++] = (byte) 0;
                         i_5_--;
-                        aLong1324++;
+                        position++;
                     }
                 }
                 long l_13_ = -1L;
-                if (aLong1321 < l || (l - -(long) i_8_ <= aLong1321)) {
-                    if (aLong1321 <= l && l < aLong1321 - -(long) anInt1314) l_13_ = l;
-                } else l_13_ = aLong1321;
+                if (writeBufferPosition < l || (l - -(long) i_8_ <= writeBufferPosition)) {
+                    if (writeBufferPosition <= l && l < writeBufferPosition - -(long) writeBufferLength) l_13_ = l;
+                } else l_13_ = writeBufferPosition;
                 long l_14_ = -1L;
-                if ((long) anInt1314 + aLong1321 <= l || ((long) i_8_ + l < (long) anInt1314 + aLong1321)) {
-                    if ((aLong1321 < l - -(long) i_8_) && ((long) anInt1314 + aLong1321 >= l - -(long) i_8_)) l_14_ = l + (long) i_8_;
-                } else l_14_ = aLong1321 - -(long) anInt1314;
+                if ((long) writeBufferLength + writeBufferPosition <= l || ((long) i_8_ + l < (long) writeBufferLength + writeBufferPosition)) {
+                    if ((writeBufferPosition < l - -(long) i_8_) && ((long) writeBufferLength + writeBufferPosition >= l - -(long) i_8_)) l_14_ = l + (long) i_8_;
+                } else l_14_ = writeBufferPosition - -(long) writeBufferLength;
                 if (l_13_ > -1L && (l_13_ < l_14_)) {
                     int i_15_ = (int) (l_14_ + -l_13_);
-                    Component313.method1577(aByteArray1305, (int) (l_13_ + -aLong1321), is, i_7_ - -(int) (l_13_ - l), i_15_);
-                    if (l_14_ > aLong1324) {
-                        i_5_ -= -aLong1324 + l_14_;
-                        aLong1324 = l_14_;
+                    Component313.arraycopy(writeBuffer, (int) (l_13_ + -writeBufferPosition), is, i_7_ - -(int) (l_13_ - l), i_15_);
+                    if (l_14_ > position) {
+                        i_5_ -= -position + l_14_;
+                        position = l_14_;
                     }
                 }
             }
         } catch (IOException ioexception) {
-            aLong1315 = -1L;
+            rafPosition = -1L;
             throw ioexception;
         }
         if (i_5_ > 0) throw new EOFException();
@@ -186,69 +198,71 @@ final class SeekableFile {
             anInt1309++;
             if (l < 0) throw new IOException("Invalid seek to " + l + " in file " + getFileName(-8659));
             int i_16_ = -67 / ((i - -49) / 34);
-            aLong1324 = l;
+            position = l;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "l.A(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "l.A(" + l + ',' + i + ')');
         }
     }
 
     final void close(byte i) throws IOException {
         anInt1304++;
-        method791(-1);
+        flushWriteBuffer(-1);
         fileReader.close(false);
         int i_17_ = -26 % ((i - -7) / 51);
     }
 
-    private final void method791(int i) throws IOException {
-        if (i != -1) aLong1321 = 47L;
-        if (aLong1321 != -1) {
-            if (aLong1315 != aLong1321) {
-                fileReader.seek(-18968, aLong1321);
-                aLong1315 = aLong1321;
+    /** Writes the dirty write-buffer range to disk and invalidates it. */
+    private final void flushWriteBuffer(int i) throws IOException {
+        if (i != -1) writeBufferPosition = 47L;
+        if (writeBufferPosition != -1) {
+            if (rafPosition != writeBufferPosition) {
+                fileReader.seek(-18968, writeBufferPosition);
+                rafPosition = writeBufferPosition;
             }
-            fileReader.write((byte) 120, 0, anInt1314, aByteArray1305);
-            aLong1315 += anInt1314;
-            if (aLong1317 < aLong1315) aLong1317 = aLong1315;
+            fileReader.write((byte) 120, 0, writeBufferLength, writeBuffer);
+            rafPosition += writeBufferLength;
+            if (rafLength < rafPosition) rafLength = rafPosition;
             long l = -1L;
             long l_18_ = -1L;
-            if (aLong1319 <= aLong1321 && (aLong1321 < (long) anInt1320 + aLong1319)) l = aLong1321;
-            else if ((aLong1319 >= aLong1321) && (aLong1319 < aLong1321 - -(long) anInt1314)) l = aLong1319;
-            if (((long) anInt1314 + aLong1321 > aLong1319) && ((long) anInt1314 + aLong1321 <= (long) anInt1320 + aLong1319)) l_18_ = aLong1321 - -(long) anInt1314;
-            else if ((aLong1321 < aLong1319 + (long) anInt1320) && (aLong1319 + (long) anInt1320 <= (long) anInt1314 + aLong1321)) l_18_ = (long) anInt1320 + aLong1319;
+            if (readBufferPosition <= writeBufferPosition && (writeBufferPosition < (long) readBufferLength + readBufferPosition)) l = writeBufferPosition;
+            else if ((readBufferPosition >= writeBufferPosition) && (readBufferPosition < writeBufferPosition - -(long) writeBufferLength)) l = readBufferPosition;
+            if (((long) writeBufferLength + writeBufferPosition > readBufferPosition) && ((long) writeBufferLength + writeBufferPosition <= (long) readBufferLength + readBufferPosition)) l_18_ = writeBufferPosition - -(long) writeBufferLength;
+            else if ((writeBufferPosition < readBufferPosition + (long) readBufferLength) && (readBufferPosition + (long) readBufferLength <= (long) writeBufferLength + writeBufferPosition)) l_18_ = (long) readBufferLength + readBufferPosition;
             if (l > -1 && l < l_18_) {
                 int i_19_ = (int) (-l + l_18_);
-                Component313.method1577(aByteArray1305, (int) (l - aLong1321), aByteArray1311, (int) (-aLong1319 + l), i_19_);
+                Component313.arraycopy(writeBuffer, (int) (l - writeBufferPosition), readBuffer, (int) (-readBufferPosition + l), i_19_);
             }
-            aLong1321 = -1L;
-            anInt1314 = 0;
+            writeBufferPosition = -1L;
+            writeBufferLength = 0;
         }
         anInt1308++;
     }
 
-    private final void method792(byte i) throws IOException {
-        anInt1320 = 0;
+    /** Refills {@link #readBuffer} from the RAF at {@link #position}. */
+    private final void fillReadBuffer(byte i) throws IOException {
+        readBufferLength = 0;
         anInt1306++;
         if (i != -46) getFileName(111);
-        if (aLong1315 != aLong1324) {
-            fileReader.seek(-18968, aLong1324);
-            aLong1315 = aLong1324;
+        if (rafPosition != position) {
+            fileReader.seek(-18968, position);
+            rafPosition = position;
         }
-        aLong1319 = aLong1324;
-        while (anInt1320 < aByteArray1311.length) {
-            int i_20_ = -anInt1320 + aByteArray1311.length;
+        readBufferPosition = position;
+        while (readBufferLength < readBuffer.length) {
+            int i_20_ = -readBufferLength + readBuffer.length;
             if (i_20_ > 200000000) i_20_ = 200000000;
-            int i_21_ = fileReader.read(aByteArray1311, anInt1320, (byte) 125, i_20_);
+            int i_21_ = fileReader.read(readBuffer, readBufferLength, (byte) 125, i_20_);
             if (i_21_ == -1) break;
-            anInt1320 += i_21_;
-            aLong1315 += i_21_;
+            readBufferLength += i_21_;
+            rafPosition += i_21_;
         }
     }
 
     SeekableFile(RandomAccessFileReader class234, int i, int i_22_) throws IOException {
         fileReader = class234;
-        aLong1323 = aLong1317 = class234.method1662((byte) -46);
-        aByteArray1305 = new byte[i_22_];
-        aByteArray1311 = new byte[i];
-        aLong1324 = 0L;
+        length = rafLength = class234.length((byte) -46);
+        writeBuffer = new byte[i_22_];
+        readBuffer = new byte[i];
+        position = 0L;
     }
 }

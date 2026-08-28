@@ -32,7 +32,7 @@ final class HashNodeSub10
         anInt9563++;
         if (this.anIntArray9566 != null) {
             for (int i = 0; this.anIntArray9566.length > i; i++)
-                this.anIntArray9566[i] = Component224.method2057((this.anIntArray9566[i]), 32768);
+                this.anIntArray9566[i] = Component224.bitwiseOr((this.anIntArray9566[i]), 32768);
         }
     }
 
@@ -53,7 +53,7 @@ final class HashNodeSub10
                     }
                 }
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("td.C(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("td.C(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
             }
             break;
         } while (false);
@@ -71,7 +71,7 @@ final class HashNodeSub10
         int i_3_ = -122 % ((i - 13) / 45);
         SocketStream.aClass114_3133 = null;
         DisplayModeManagerContainer50.method2296(-99);
-        DefinitionSub30.anInt9383 = 0;
+        DefinitionSub30.friendCount = 0;
         Component47.aString863 = null;
         NameFormatter.anInt496 = 0;
         RequestProcessor.aClass19Array2261 = null;
@@ -116,7 +116,7 @@ final class HashNodeSub10
                         }
                     }
                 } else if (i == 4) this.aBoolean9562 = false;
-            } else aStringArray9564 = (DefinitionSub23.method3113('<', true, class348_sub49.readString((byte) -82)));
+            } else aStringArray9564 = (DefinitionSub23.splitByChar('<', true, class348_sub49.readString((byte) -82)));
             anInt9575++;
         }
     }

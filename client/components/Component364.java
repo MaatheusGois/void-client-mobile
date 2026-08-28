@@ -34,20 +34,20 @@ class Component364
     static final int[] method184(int i) {
         anInt8346++;
         if (i != 1084489728) method189((byte) 33);
-        return (new int[]{LoadingState.anInt1044, DisplayModeManagerContainer167.anInt235, ReferenceTable.anInt3736});
+        return (new int[]{LoadingState.p11FullGroupId, DisplayModeManagerContainer167.p12FullGroupId, ReferenceTable.b12FullGroupId});
     }
 
     public final boolean method8(byte i) {
         anInt8351++;
         if (!super.method8((byte) -125)) return false;
         Component76 class369_sub3 = (Component76) this.aClass369_4635;
-        if (!this.aClass45_4632.method421(false, class369_sub3.anInt8599)) return false;
-        if (!this.aClass45_4632.method421(false, class369_sub3.anInt8595)) return false;
-        if (!this.aClass45_4632.method421(false, class369_sub3.anInt8603)) return false;
-        if (!this.aClass45_4632.method421(false, class369_sub3.anInt8602)) return false;
+        if (!this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8599)) return false;
+        if (!this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8595)) return false;
+        if (!this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8603)) return false;
+        if (!this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8602)) return false;
         int i_1_ = 47 / ((25 - i) / 52);
-        if (!this.aClass45_4632.method421(false, class369_sub3.anInt8600)) return false;
-        return this.aClass45_4632.method421(false, class369_sub3.anInt8597);
+        if (!this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8600)) return false;
+        return this.aClass45_4632.isSingletonFileReady(false, class369_sub3.anInt8597);
     }
 
     static final int method185(int i, byte i_2_) {

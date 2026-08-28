@@ -40,26 +40,27 @@ final class Component248
 
     static final DisplayModeManagerContainer369[] method285(int i) {
         anInt309++;
-        if (i > -62) method286((byte) 66, null);
+        if (i > -62) getDisplayModes((byte) 66, null);
         return (new DisplayModeManagerContainer369[]{Component386.aClass223_2868, Buffer.aClass223_7175, Component55.aClass223_3934, Component316.aClass223_2489, MatrixSub1.aClass223_5689, DefinitionSub21.aClass223_9274, DisplayModeManagerContainer332.aClass223_4997, RadixParser.aClass223_2307, Component90.aClass223_2045, Component38.aClass223_2507});
     }
 
-    static final DisplayModeManagerContainer115[] method286(byte i, ReflectionInvoker class297) {
+    /** Query host display modes via {@link ReflectionInvoker#getLocalHost} result ints. */
+    static final DisplayModeInfo[] getDisplayModes(byte i, ReflectionInvoker class297) {
         anInt307++;
-        if (!class297.method2247(-4)) return new DisplayModeManagerContainer115[0];
+        if (!class297.hasFullscreenSupport(-4)) return new DisplayModeInfo[0];
         int i_6_ = 52 / ((39 - i) / 61);
-        Task class144 = class297.method2240(972476528);
-        while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -97, 10L);
-        if (class144.anInt1997 == 2) return new DisplayModeManagerContainer115[0];
+        Task class144 = class297.getLocalHost(972476528);
+        while (class144.status == 0) SpriteAtlasShader.sleep((byte) -97, 10L);
+        if (class144.status == 2) return new DisplayModeInfo[0];
         int[] is = (int[]) class144.result;
-        DisplayModeManagerContainer115[] class57s = new DisplayModeManagerContainer115[is.length >> 2];
+        DisplayModeInfo[] class57s = new DisplayModeInfo[is.length >> 2];
         for (int i_7_ = 0; class57s.length > i_7_; i_7_++) {
-            DisplayModeManagerContainer115 class57 = new DisplayModeManagerContainer115();
+            DisplayModeInfo class57 = new DisplayModeInfo();
             class57s[i_7_] = class57;
-            class57.anInt1047 = is[i_7_ << 2];
-            class57.anInt1054 = is[1 + (i_7_ << 2)];
-            class57.anInt1046 = is[2 + (i_7_ << 2)];
-            class57.anInt1052 = is[(i_7_ << 2) + 3];
+            class57.width = is[i_7_ << 2];
+            class57.height = is[1 + (i_7_ << 2)];
+            class57.bitDepth = is[2 + (i_7_ << 2)];
+            class57.refreshRate = is[(i_7_ << 2) + 3];
         }
         return class57s;
     }

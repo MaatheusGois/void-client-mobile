@@ -46,7 +46,7 @@ final class AbstractGlTextureSub1
             OpenGL.glPixelStorei(3317, 4);
             this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gj.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + (is != null ? "{...}" : "null") + ',' + i_10_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gj.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + (is != null ? "{...}" : "null") + ',' + i_10_ + ')'));
         }
     }
 

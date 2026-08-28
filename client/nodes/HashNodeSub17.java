@@ -32,7 +32,7 @@ final class HashNodeSub17
             if (i <= 123) return -68;
             return class277.anInt3563;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("gw.F(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class277 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("gw.F(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class277 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -47,11 +47,11 @@ final class HashNodeSub17
         if (this.aClass4Array9673 != null) return true;
         if (aByteArrayArray9671 == null) {
             synchronized (Component161.aClass45_1940) {
-                if (!Component161.aClass45_1940.method408((byte) -116, anInt9669)) return false;
-                int[] is = Component161.aClass45_1940.method396(anInt9669, 0);
+                if (!Component161.aClass45_1940.isGroupReady((byte) -116, anInt9669)) return false;
+                int[] is = Component161.aClass45_1940.getFileIds(anInt9669, 0);
                 aByteArrayArray9671 = new byte[is.length][];
                 for (int i_1_ = 0; i_1_ < is.length; i_1_++)
-                    aByteArrayArray9671[i_1_] = Component161.aClass45_1940.method410(-1860, anInt9669, is[i_1_]);
+                    aByteArrayArray9671[i_1_] = Component161.aClass45_1940.getFile(-1860, anInt9669, is[i_1_]);
             }
         }
         boolean bool = true;
@@ -61,16 +61,16 @@ final class HashNodeSub17
             class348_sub49.offset = 1;
             int i_3_ = class348_sub49.readUnsignedShort(842397944);
             synchronized (MenuOpener.aClass45_4843) {
-                bool &= MenuOpener.aClass45_4843.method421(false, i_3_);
+                bool &= MenuOpener.aClass45_4843.isSingletonFileReady(false, i_3_);
             }
         }
         if (!bool) return false;
         NodeList class262 = new NodeList();
         int[] is;
         synchronized (Component161.aClass45_1940) {
-            int i_4_ = Component161.aClass45_1940.method407(0, anInt9669);
+            int i_4_ = Component161.aClass45_1940.getFileCount(0, anInt9669);
             this.aClass4Array9673 = new Component376[i_4_];
-            is = Component161.aClass45_1940.method396(anInt9669, 0);
+            is = Component161.aClass45_1940.getFileIds(anInt9669, 0);
             if (i > -115) method3266(null, 123, null);
         }
         for (int i_5_ = 0; i_5_ < is.length; i_5_++) {
@@ -87,7 +87,7 @@ final class HashNodeSub17
             }
             if (class348_sub33 == null) {
                 synchronized (MenuOpener.aClass45_4843) {
-                    class348_sub33 = new ObjectDeserializer(i_7_, MenuOpener.aClass45_4843.method415((byte) 73, i_7_));
+                    class348_sub33 = new ObjectDeserializer(i_7_, MenuOpener.aClass45_4843.getSingletonFile((byte) 73, i_7_));
                 }
                 class262.addTail(class348_sub33, -20180);
             }

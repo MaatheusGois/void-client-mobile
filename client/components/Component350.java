@@ -345,7 +345,7 @@ final class Component350
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("hha.E(" + (class318_sub4 != null ? "{...}" : "null") + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("hha.E(" + (class318_sub4 != null ? "{...}" : "null") + ',' + i + ')'));
         }
     }
 }

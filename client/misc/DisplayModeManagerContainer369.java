@@ -105,7 +105,7 @@ final class DisplayModeManagerContainer369
                 SceneManager.aClass262_2859.addTail(class348_sub9, -20180);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("ad.B(" + i + ',' + (npc != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + (player != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("ad.B(" + i + ',' + (npc != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + (player != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i_5_ + ')'));
         }
     }
 

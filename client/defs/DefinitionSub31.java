@@ -22,11 +22,11 @@ final class DefinitionSub31
         super(1, false);
     }
 
-    final int[][] method3047(int i, int i_0_) {
+    final int[][] getColourOutput(int i, int i_0_) {
         anInt9407++;
         if (i_0_ != -1564599039) return null;
-        int[][] is = this.aClass322_7033.method2557(-111, i);
-        if (this.aClass322_7033.aBoolean4035) {
+        int[][] is = this.imageCacheStore.getPixels(-111, i);
+        if (this.imageCacheStore.cacheMiss) {
             int i_1_ = DefinitionSub6.anInt9139 / anInt9405;
             int i_2_ = ShaderProgramSub2.anInt6212 / anInt9410;
             int[][] is_3_;
@@ -75,11 +75,11 @@ final class DefinitionSub31
         return Player.aHashtable10565.containsKey(string);
     }
 
-    final int[] method3042(int i, int i_16_) {
+    final int[] getMonochromeOutput(int i, int i_16_) {
         if (i_16_ != 255) return null;
         anInt9409++;
-        int[] is = this.aClass191_7032.method1433(0, i);
-        if (this.aClass191_7032.aBoolean2570) {
+        int[] is = this.imageCache.getPixels(0, i);
+        if (this.imageCache.cacheMiss) {
             int i_17_ = DefinitionSub6.anInt9139 / anInt9405;
             int i_18_ = ShaderProgramSub2.anInt6212 / anInt9410;
             int[] is_19_;

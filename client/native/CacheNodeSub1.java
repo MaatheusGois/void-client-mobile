@@ -344,14 +344,14 @@ final class CacheNodeSub1
 
     static final void method3290(int i) {
         if (i < 30) aClass262_10479 = null;
-        IOException_Sub1.method131(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
+        IOException_Sub1.configureAudio(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
         anInt10470++;
         Definition.aClass279_7042 = Component321.method1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
         HashNodeSub18.method3273(true, -114, Component16.method1326(null, 9));
         Component276.aClass279_2596 = Component321.method1439(2048, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 1, 7);
         PlayerState.aClass348_Sub16_Sub4_7065 = new NodeSub16Sub4();
         Component276.aClass279_2596.method2088(false, PlayerState.aClass348_Sub16_Sub4_7065);
-        DisplayModeManagerContainer115.aClass163_1050 = new ImageTagText(22050, Component231.anInt339);
+        DisplayModeInfo.aClass163_1050 = new ImageTagText(22050, Component231.sampleRate);
         DefinitionSub17Sub1.method3093(110);
     }
 
@@ -365,7 +365,7 @@ final class CacheNodeSub1
         try {
             this.aByteArray10471 = new byte[i_19_ * i];
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("fc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_19_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("fc.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_19_ + ')'));
         }
     }
 

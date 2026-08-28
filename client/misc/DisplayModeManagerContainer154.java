@@ -8,7 +8,8 @@ final class DisplayModeManagerContainer154
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt1278;
-    static NamedInteger aClass364_1279 = new NamedInteger("LOCAL", 4);
+    /** Local/dev world-list channel. */
+    static NamedInteger LOCAL = new NamedInteger("LOCAL", 4);
     static int anInt1280;
     static int anInt1281;
     Component315 aClass243_1282 = new Component315();
@@ -68,7 +69,7 @@ final class DisplayModeManagerContainer154
 
     public static void method772(byte i) {
         aClass169_1286 = null;
-        aClass364_1279 = null;
+        LOCAL = null;
         if (i >= -110) method771(-68, (byte) 45, 58, 119, 101, -92, null, 79);
     }
 

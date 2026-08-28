@@ -64,7 +64,7 @@ final class Component100
                 if (i_6_ >= 54) break;
                 method2260(36, 99, 61L, 90, false, null, (byte) 126, -67);
             } catch (RuntimeException runtimeexception) {
-                throw NpcDefinition.method2929(runtimeexception, ("dq.E(" + i + ',' + i_4_ + ',' + l + ',' + i_5_ + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ')'));
+                throw NpcDefinition.wrapThrowable(runtimeexception, ("dq.E(" + i + ',' + i_4_ + ',' + l + ',' + i_5_ + ',' + bool + ',' + (class45 != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ')'));
             }
             break;
         } while (false);

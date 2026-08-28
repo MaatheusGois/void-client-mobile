@@ -32,26 +32,26 @@ final class DisplayModeManagerContainer288
             OpenGL.glTexImage3Dub(this.anInt5093, 0, this.method228(105), anInt8631, anInt8629, anInt8626, 0, ParametricDefinition.method3055(109, this.aClass304_5084), 5121, is, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qba.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qba.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
     static final NodeSub51 method247(int i) {
         anInt8632++;
         RandomAccessFileReader class234 = null;
-        NodeSub51 class348_sub51 = new NodeSub51(PacketReader.aClass230_10434, 0);
+        NodeSub51 class348_sub51 = new NodeSub51(PacketReader.currentGameType, 0);
         try {
-            Task class144 = OggUrlStream.aClass297_8992.method2233((byte) -46, "", true);
-            while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -85, 1L);
-            if (class144.anInt1997 == 1) {
+            Task class144 = OggUrlStream.aClass297_8992.openCacheFile((byte) -46, "", true);
+            while (class144.status == 0) SpriteAtlasShader.sleep((byte) -85, 1L);
+            if (class144.status == 1) {
                 class234 = (RandomAccessFileReader) class144.result;
-                byte[] is = new byte[(int) class234.method1662((byte) -46)];
+                byte[] is = new byte[(int) class234.length((byte) -46)];
                 int i_2_;
                 for (int i_3_ = 0; is.length > i_3_; i_3_ += i_2_) {
                     i_2_ = class234.read(is, i_3_, (byte) -49, -i_3_ + is.length);
                     if (i_2_ == -1) throw new IOException("EOF");
                 }
-                class348_sub51 = new NodeSub51(new Buffer(is), (PacketReader.aClass230_10434), 0);
+                class348_sub51 = new NodeSub51(new Buffer(is), (PacketReader.currentGameType), 0);
             }
         } catch (Exception exception) {
             /* empty */
@@ -78,6 +78,6 @@ final class DisplayModeManagerContainer288
         Component342.anInt1188 = (Component163.aClass143_3179.maxAscent - (-Component163.aClass143_3179.descent - i));
         for (int i_4_ = 0; (i_4_ < ArbShaderProgram.aStringArray6200.length); i_4_++)
             ArbShaderProgram.aStringArray6200[i_4_] = "";
-        Applet_Sub1.method94(FriendsIgnoreList.aClass274_3483.method2063(ObjectDeserializer.anInt6967, 544), 67);
+        Applet_Sub1.printConsole(FriendsIgnoreList.aClass274_3483.getLocalized(ObjectDeserializer.languageId, 544), 67);
     }
 }

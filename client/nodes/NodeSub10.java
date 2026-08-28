@@ -233,7 +233,7 @@ final class NodeSub10
 
     private static final boolean method2792(CacheStore class45) {
         if (!aBoolean6724) {
-            byte[] is = class45.method410(-1860, 0, 0);
+            byte[] is = class45.getFile(-1860, 0, 0);
             if (is == null) return false;
             method2790(is);
         }
@@ -242,10 +242,10 @@ final class NodeSub10
 
     static final NodeSub10 method2793(CacheStore class45, int i) {
         if (!method2792(class45)) {
-            class45.method421(false, i);
+            class45.isSingletonFileReady(false, i);
             return null;
         }
-        byte[] is = class45.method415((byte) 73, i);
+        byte[] is = class45.getSingletonFile((byte) 73, i);
         if (is == null) return null;
         return new NodeSub10(is);
     }
@@ -454,10 +454,10 @@ final class NodeSub10
 
     static final NodeSub10 method2795(CacheStore class45, int i, int i_115_) {
         if (!method2792(class45)) {
-            class45.method420(-10499, i, i_115_);
+            class45.isFileReady(-10499, i, i_115_);
             return null;
         }
-        byte[] is = class45.method410(-1860, i, i_115_);
+        byte[] is = class45.getFile(-1860, i, i_115_);
         if (is == null) return null;
         return new NodeSub10(is);
     }

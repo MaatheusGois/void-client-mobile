@@ -153,7 +153,7 @@ final class DisplayModeManagerContainer56
             }
             return false;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("bp.C(" + i + ',' + (class42 != null ? "{...}" : "null") + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_6_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("bp.C(" + i + ',' + (class42 != null ? "{...}" : "null") + ',' + (class348_sub21 != null ? "{...}" : "null") + ',' + i_5_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_6_ + ')'));
         }
     }
 
@@ -218,7 +218,7 @@ final class DisplayModeManagerContainer56
             int i_30_ = class348_sub49.readUnsignedShort(842397944);
             int i_31_ = class348_sub49.readUnsignedShort(842397944);
             int i_32_ = class348_sub49.readUnsignedShort(842397944);
-            this.aClass299_2541 = DisplayModeManagerContainer124.method1636(i_31_, i_30_, i_27_, i_32_, i_28_, -1, i_29_);
+            this.aClass299_2541 = GameType.method1636(i_31_, i_30_, i_27_, i_32_, i_28_, -1, i_29_);
         } else this.aClass299_2541 = HashNodeSub10.aClass299_9571;
     }
 }

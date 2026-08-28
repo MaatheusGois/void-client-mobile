@@ -177,7 +177,7 @@ final class Component264
             if (bool && !aHa_Sub2_8707.aBoolean7847) aClass258_Sub2_8701.method1950(69);
             return bool;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("qda.L(" + (class258_sub2 != null ? "{...}" : "null") + ',' + f + ',' + i + ',' + (class258_sub2_0_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("qda.L(" + (class258_sub2 != null ? "{...}" : "null") + ',' + f + ',' + i + ',' + (class258_sub2_0_ != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -208,7 +208,7 @@ final class Component264
     static final void method2264(boolean bool) {
         if (bool != false) aClass348_Sub49_8698 = null;
         anInt8704++;
-        RSARequest class348_sub42_sub15 = RenderableSub9Sub1.method2516(0, (byte) 105, 15);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(0, (byte) 105, 15);
         class348_sub42_sub15.method3251(-16058);
     }
 

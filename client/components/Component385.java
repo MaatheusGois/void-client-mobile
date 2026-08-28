@@ -94,7 +94,7 @@ final class Component385
         if (i_0_ != 2) return false;
         boolean bool = class348_sub49.readUnsignedByte(255) == 1;
         if (bool) Component317.method569((byte) -123, class348_sub49);
-        PauseHandler.method3188((byte) -67, class348_sub49);
+        PauseHandler.readWorldPopulations((byte) -67, class348_sub49);
         return true;
     }
 
@@ -170,7 +170,7 @@ final class Component385
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("pga.G(" + i + ',' + (player != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("pga.G(" + i + ',' + (player != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + (is_7_ != null ? "{...}" : "null") + ',' + (is_8_ != null ? "{...}" : "null") + ')'));
         }
     }
 

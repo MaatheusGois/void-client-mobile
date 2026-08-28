@@ -79,10 +79,10 @@ final class Component330
                             OggStreamReader.anIntArray9042[i_7_] = i_16_;
                             int i_18_ = 0xff & i_16_ >> 8;
                             int i_19_ = 0xff & i_16_;
-                            ShaderSub1.anIntArray5192[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("m" + i_18_ + "_" + i_19_, NodeSub21.method2955(i, 99)));
-                            Applet_Sub1.anIntArray38[i_7_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_18_ + "_" + i_19_, 0);
-                            DisplayModeManagerContainer61.anIntArray3759[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("um" + i_18_ + "_" + i_19_, 0));
-                            r.anIntArray9724[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("ul" + i_18_ + "_" + i_19_, 0));
+                            ShaderSub1.anIntArray5192[i_7_] = (SoftwareFallbackShader.aClass45_7382.getGroupId("m" + i_18_ + "_" + i_19_, NodeSub21.bitwiseXor(i, 99)));
+                            Applet_Sub1.anIntArray38[i_7_] = SoftwareFallbackShader.aClass45_7382.getGroupId("l" + i_18_ + "_" + i_19_, 0);
+                            DisplayModeManagerContainer61.anIntArray3759[i_7_] = (SoftwareFallbackShader.aClass45_7382.getGroupId("um" + i_18_ + "_" + i_19_, 0));
+                            r.anIntArray9724[i_7_] = (SoftwareFallbackShader.aClass45_7382.getGroupId("ul" + i_18_ + "_" + i_19_, 0));
                             i_7_++;
                         }
                     }

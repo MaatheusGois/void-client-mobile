@@ -50,11 +50,15 @@ final class DisplayModeManagerContainer260
                 }
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vp.A(" + (class318_sub1 != null ? "{...}" : "null") + ',' + i + ',' + (class17 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vp.A(" + (class318_sub1 != null ? "{...}" : "null") + ',' + i + ',' + (class17 != null ? "{...}" : "null") + ',' + i_0_ + ')'));
         }
     }
 
-    static final long method2179(String string, byte i) {
+    /**
+     * DJB2-style string hash: {@code h = h * 31 + c} via {@code (h << 5) - h + c}.
+     * Used as LRU/hashtable keys for string reverse lookups.
+     */
+    static final long hashString(String string, byte i) {
         anInt3689++;
         int i_11_ = string.length();
         long l = 0L;
@@ -96,7 +100,7 @@ final class DisplayModeManagerContainer260
                 } else DisplayModeManagerContainer346.method1211(i, Component210.aClass105Array5294[i_17_], i_15_, class46, var_aa, i_14_, 2, i_16_);
             }
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vp.D(" + l + ',' + i + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + (var_aa != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vp.D(" + l + ',' + i + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_16_ + ',' + i_17_ + ',' + (var_aa != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -120,7 +124,7 @@ final class DisplayModeManagerContainer260
             if (Component38.aClass223_2507 == class223) return DebugPanicSub1.method2128(-1730, class348_sub49);
             return null;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("vp.F(" + bool + ',' + (class223 != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("vp.F(" + bool + ',' + (class223 != null ? "{...}" : "null") + ',' + (class348_sub49 != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -133,7 +137,7 @@ final class DisplayModeManagerContainer260
         int i_27_ = 0;
         if (i != 21890) method2180((byte) 25);
         for (/**/; this.anInterface12Array3688.length > i_27_; i_27_++)
-            this.anInterface12Array3688[i_27_] = method2182(true, class223s[(class348_sub49.readUnsignedByte(NodeSub21.method2955(i, 21885)))], class348_sub49);
+            this.anInterface12Array3688[i_27_] = method2182(true, class223s[(class348_sub49.readUnsignedByte(NodeSub21.bitwiseXor(i, 21885)))], class348_sub49);
     }
 
     static final char method2184(char c, int i) {

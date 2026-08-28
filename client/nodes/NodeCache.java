@@ -109,7 +109,7 @@ final class NodeCache {
             history.add(true, class348_sub42_sub8_sub2);
             class348_sub42_sub8_sub2.accessAge = 0L;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jr.E(" + i + ',' + (object != null ? "{...}" : "null") + ',' + l + ',' + i_5_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jr.E(" + i + ',' + (object != null ? "{...}" : "null") + ',' + l + ',' + i_5_ + ')'));
         }
     }
 
@@ -125,7 +125,7 @@ final class NodeCache {
             anInt1095++;
             put(31902, object, l, 1);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("jr.B(" + (object != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("jr.B(" + (object != null ? "{...}" : "null") + ',' + l + ',' + i + ')'));
         }
     }
 
@@ -155,7 +155,7 @@ final class NodeCache {
             }
             return object;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "jr.K(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "jr.K(" + l + ',' + i + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class NodeCache {
             CacheNode class348_sub42_sub8 = (CacheNode) table.get(l, -6008);
             method585(class348_sub42_sub8, -57);
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, "jr.J(" + l + ',' + i + ')');
+            throw NpcDefinition.wrapThrowable(runtimeexception, "jr.J(" + l + ',' + i + ')');
         }
     }
 

@@ -66,7 +66,7 @@ class AudioLine {
                 if (i != -6858) anInt3616 = 114;
                 for (/**/; aLong3602 + 5000L < l; l = Component240.currentTimeMillis(-96)) {
                     method2089(256, (byte) -99);
-                    aLong3602 += 256000 / Component231.anInt339;
+                    aLong3602 += 256000 / Component231.sampleRate;
                 }
             } catch (Exception exception) {
                 aLong3602 = l;
@@ -97,7 +97,7 @@ class AudioLine {
                     }
                     for (/**/; i_0_ < i_1_; i_0_ += 256) {
                         method2086(this.anIntArray3603, 256);
-                        method2094();
+                        writeSamples();
                     }
                     if (l > aLong3618) {
                         if (!aBoolean3623) {
@@ -134,11 +134,11 @@ class AudioLine {
 
     private final void method2086(int[] is, int i) {
         int i_5_ = i;
-        if (Component21.aBoolean3652) i_5_ <<= 1;
+        if (Component21.stereo) i_5_ <<= 1;
         Component313.method1573(is, 0, i_5_);
         anInt3615 -= i;
         if (aClass348_Sub16_3604 != null && anInt3615 <= 0) {
-            anInt3615 += Component231.anInt339 >> 4;
+            anInt3615 += Component231.sampleRate >> 4;
             ColorTagNode.method2814(aClass348_Sub16_3604, 112);
             method2085(-1846918107, aClass348_Sub16_3604, aClass348_Sub16_3604.method2820());
             int i_6_ = 0;
@@ -275,7 +275,7 @@ class AudioLine {
             }
             anInt3594++;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.method2929(runtimeexception, ("cba.K(" + i + ',' + i_25_ + ',' + (is != null ? "{...}" : "null") + ',' + i_26_ + ',' + (objects != null ? "{...}" : "null") + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("cba.K(" + i + ',' + i_25_ + ',' + (is != null ? "{...}" : "null") + ',' + i_26_ + ',' + (objects != null ? "{...}" : "null") + ')'));
         }
     }
 
@@ -284,12 +284,12 @@ class AudioLine {
         if (Component191.aClass250_2462 != null) {
             boolean bool_35_ = true;
             for (int i = 0; i < 2; i++) {
-                if (Component191.aClass250_2462.aClass279Array3218[i] == this) Component191.aClass250_2462.aClass279Array3218[i] = null;
-                if (Component191.aClass250_2462.aClass279Array3218[i] != null) bool_35_ = false;
+                if (Component191.aClass250_2462.lines[i] == this) Component191.aClass250_2462.lines[i] = null;
+                if (Component191.aClass250_2462.lines[i] != null) bool_35_ = false;
             }
             if (bool_35_) {
-                Component191.aClass250_2462.aBoolean3221 = true;
-                while (Component191.aClass250_2462.aBoolean3223) SpriteAtlasShader.method2161((byte) 68, 50L);
+                Component191.aClass250_2462.stopRequested = true;
+                while (Component191.aClass250_2462.running) SpriteAtlasShader.sleep((byte) 68, 50L);
                 Component191.aClass250_2462 = null;
             }
         }
@@ -298,7 +298,8 @@ class AudioLine {
         aBoolean3610 = bool;
     }
 
-    void method2094() throws Exception {
+    /** Write pending PCM to the backend (SourceDataLine / DirectSound). */
+    void writeSamples() throws Exception {
         anInt3612++;
     }
 

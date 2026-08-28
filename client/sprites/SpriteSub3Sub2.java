@@ -14,7 +14,7 @@ final class SpriteSub3Sub2
         throw new IllegalStateException();
     }
 
-    final void method968(int i, int i_5_, int i_6_) {
+    final void capturePixels(int i, int i_5_, int i_6_) {
         throw new IllegalStateException();
     }
 

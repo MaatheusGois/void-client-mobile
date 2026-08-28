@@ -1,4 +1,4 @@
-/* Component131 - Decompiled by JODE
+/* DirectSoundAudio - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -7,11 +7,12 @@ import com.ms.directX.*;
 
 import java.awt.*;
 
-public final class Component131
 /**
- * RENAMED from `Class1` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ implements Interface20 {
+ * RENAMED from {@code Class1} (JODE-obfuscated).
+ * Microsoft DirectSound audio backend ({@link NativeAudio}) for the signed Microsoft JVM path.
+ * Created as {@link ReflectionInvoker#nativeInterface} when {@link ReflectionInvoker#useDirectDraw}.
+ */
+public final class DirectSoundAudio implements NativeAudio {
     private final DSBufferDesc[] aDSBufferDescArray5152;
     private final DirectSoundBuffer[] aDirectSoundBufferArray5153;
     private int[] anIntArray5154;
@@ -26,7 +27,7 @@ public final class Component131
     private final WaveFormatEx aWaveFormatEx5163;
     private final int[] anIntArray5164;
 
-    public final void method77(byte i, int i_0_) {
+    public final void flush(byte i, int i_0_) {
         try {
             aDirectSoundBufferArray5153[i_0_].stop();
         } catch (ComFailException e) {
@@ -40,7 +41,7 @@ public final class Component131
         }
     }
 
-    public final void method74(int i, byte i_1_) {
+    public final void close(int i, byte i_1_) {
         if (aDirectSoundBufferArray5153[i] != null) {
             try {
                 aDirectSoundBufferArray5153[i].stop();
@@ -52,7 +53,7 @@ public final class Component131
         int i_2_ = 73 / ((i_1_ - 79) / 43);
     }
 
-    public final void method76(int i, int[] is) {
+    public final void writeSamples(int i, int[] is) {
         int i_3_ = is.length;
         if (i_3_ != 256 * anInt5157) throw new IllegalArgumentException();
         int i_4_ = anIntArray5160[i] * anInt5161;
@@ -70,7 +71,7 @@ public final class Component131
         }
     }
 
-    public final int method75(byte i, int i_7_) {
+    public final int getBufferedSamples(byte i, int i_7_) {
         if (i >= -79) return -15;
         if (!aBooleanArray5156[i_7_]) return 0;
         aDirectSoundBufferArray5153[i_7_].getCurrentPosition(aDSCursorsArray5155[i_7_]);
@@ -78,13 +79,13 @@ public final class Component131
         int i_9_ = anIntArray5160[i_7_] + -i_8_ & 0xffff;
         if (i_9_ > anIntArray5164[i_7_]) {
             for (int i_10_ = 0xffff & i_8_ + -anIntArray5160[i_7_]; i_10_ > 0; i_10_ -= 256)
-                method76(i_7_, anIntArray5154);
+                writeSamples(i_7_, anIntArray5154);
             i_9_ = 0xffff & -i_8_ + anIntArray5160[i_7_];
         }
         return i_9_;
     }
 
-    public final void method78(int i, boolean bool, Component component, int i_11_) throws Exception {
+    public final void initOnComponent(int i, boolean bool, Component component, int i_11_) throws Exception {
         if (anInt5158 == 0) {
             if (i < 8000 || i > 48000) throw new IllegalArgumentException();
             anInt5157 = !bool ? 1 : 2;
@@ -105,7 +106,7 @@ public final class Component131
         }
     }
 
-    public final void method79(int i, int i_13_, byte i_14_) throws Exception {
+    public final void open(int i, int i_13_, byte i_14_) throws Exception {
         if (anInt5158 == 0 || aDirectSoundBufferArray5153[i_13_] != null) throw new IllegalStateException();
         int i_15_ = anInt5161 * 65536;
         if (aByteArrayArray5159[i_13_] == null || i_15_ != aByteArrayArray5159[i_13_].length) {
@@ -114,12 +115,12 @@ public final class Component131
         }
         aDirectSoundBufferArray5153[i_13_] = aDirectSound5162.createSoundBuffer(aDSBufferDescArray5152[i_13_], aWaveFormatEx5163);
         aBooleanArray5156[i_13_] = false;
-        if (i_14_ < 106) method74(-6, (byte) -123);
+        if (i_14_ < 106) close(-6, (byte) -123);
         anIntArray5160[i_13_] = 0;
         anIntArray5164[i_13_] = i;
     }
 
-    public Component131() throws Exception {
+    public DirectSoundAudio() throws Exception {
         aDSBufferDescArray5152 = new DSBufferDesc[2];
         aBooleanArray5156 = new boolean[2];
         aDirectSoundBufferArray5153 = new DirectSoundBuffer[2];
