@@ -54,7 +54,7 @@ final class DisplayModeManagerContainer206
     boolean aBoolean1369;
     boolean aBoolean1370;
     int anInt1371;
-    String aString1372;
+    String name;
     int anInt1373;
     private byte[] aByteArray1374;
     int anInt1375;
@@ -265,7 +265,7 @@ final class DisplayModeManagerContainer206
                                                                                                 Node class348;
                                                                                                 if (!bool) class348 = new NodeSub35(class348_sub49.readInt((byte) -126));
                                                                                                 else class348 = new NodeSub50(class348_sub49.readString((byte) -120));
-                                                                                                aClass356_1386.method3483((byte) 61, i_20_, class348);
+                                                                                                aClass356_1386.put((byte) 61, i_20_, class348);
                                                                                             }
                                                                                         }
                                                                                     } else this.anInt1337 = class348_sub49.readUnsignedByte(255);
@@ -287,7 +287,7 @@ final class DisplayModeManagerContainer206
                     } else this.aBoolean1397 = false;
                 } else this.aStringArray1349[-30 + i] = class348_sub49.readString((byte) 124);
             } else this.anInt1399 = class348_sub49.readUnsignedByte(i_4_ + 128);
-        } else this.aString1372 = class348_sub49.readString((byte) 122);
+        } else this.name = class348_sub49.readString((byte) 122);
         anInt1357++;
     }
 
@@ -473,7 +473,7 @@ final class DisplayModeManagerContainer206
             long l = var_ha.anInt4567 << 16 | this.anInt1344;
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass278_1348.aClass60_3590) {
-                class64 = (DisplayModeManagerContainer370) this.aClass278_1348.aClass60_3590.method583(l, 80);
+                class64 = (DisplayModeManagerContainer370) this.aClass278_1348.aClass60_3590.get(l, 80);
             }
             Component241 class225 = null;
             if (this.anInt1366 != -1) class225 = class261.method1983(this.anInt1366, 32);
@@ -541,7 +541,7 @@ final class DisplayModeManagerContainer206
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_43_);
                 synchronized (this.aClass278_1348.aClass60_3590) {
-                    this.aClass278_1348.aClass60_3590.method582(class64, this.anInt1344 | var_ha.anInt4567 << 16, (byte) -125);
+                    this.aClass278_1348.aClass60_3590.putOne(class64, this.anInt1344 | var_ha.anInt4567 << 16, (byte) -125);
                 }
             }
             DisplayModeManagerContainer370 class64_82_ = class64.method614((byte) 4, i_43_, true);
@@ -604,7 +604,7 @@ final class DisplayModeManagerContainer206
         anInt1378++;
         if (aClass356_1386 == null) return string;
         if (i != 17) method801((byte) -115, -68, null);
-        NodeSub50 class348_sub50 = ((NodeSub50) aClass356_1386.method3480(i_92_, i + -6025));
+        NodeSub50 class348_sub50 = ((NodeSub50) aClass356_1386.get(i_92_, i + -6025));
         if (class348_sub50 == null) return string;
         return class348_sub50.aString7211;
     }
@@ -630,7 +630,7 @@ final class DisplayModeManagerContainer206
             if (class17 != null && i_95_ != -1) i_99_ |= class17.method263(i_94_, 97, i_95_, true);
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass278_1348.aClass60_3592) {
-                class64 = ((DisplayModeManagerContainer370) (this.aClass278_1348.aClass60_3592.method583(var_ha.anInt4567 << 16 | this.anInt1344, 64)));
+                class64 = ((DisplayModeManagerContainer370) (this.aClass278_1348.aClass60_3592.get(var_ha.anInt4567 << 16 | this.anInt1344, 64)));
             }
             if (class64 == null || i_99_ != (class64.ua() & i_99_)) {
                 if (class64 != null) i_99_ |= class64.ua();
@@ -670,7 +670,7 @@ final class DisplayModeManagerContainer206
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_99_);
                 synchronized (this.aClass278_1348.aClass60_3592) {
-                    this.aClass278_1348.aClass60_3592.method582(class64, var_ha.anInt4567 << 16 | this.anInt1344, (byte) -96);
+                    this.aClass278_1348.aClass60_3592.putOne(class64, var_ha.anInt4567 << 16 | this.anInt1344, (byte) -96);
                 }
             }
             if (class17 != null && i_95_ != -1) class64 = class17.method269(-9, class64, i_94_, i, i_99_, i_95_);
@@ -691,7 +691,7 @@ final class DisplayModeManagerContainer206
         anInt1326++;
         if (aClass356_1386 == null) return i;
         if (i_107_ <= 12) method805(46, 116, 126);
-        NodeSub35 class348_sub35 = (NodeSub35) aClass356_1386.method3480(i_106_, -6008);
+        NodeSub35 class348_sub35 = (NodeSub35) aClass356_1386.get(i_106_, -6008);
         if (class348_sub35 == null) return i;
         return class348_sub35.anInt6976;
     }
@@ -719,7 +719,7 @@ final class DisplayModeManagerContainer206
         this.aByte1384 = (byte) -1;
         this.aBoolean1381 = false;
         this.anInt1383 = -1;
-        this.aString1372 = "null";
+        this.name = "null";
         this.anInt1382 = -1;
         this.anInt1371 = -1;
         this.aByte1325 = (byte) 0;

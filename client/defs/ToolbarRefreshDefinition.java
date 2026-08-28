@@ -358,7 +358,7 @@ final class ToolbarRefreshDefinition
         anInt9228++;
         if (DisplayModeManagerContainer154.aClass364_1279 != DisplayModeManagerContainer345.aClass364_165 && i == 9) {
             try {
-                AppletInvoker.method1617((byte) 125, DisplayModeManagerContainer206.aClient1367, "tbrefresh");
+                AppletInvoker.callAppletNoArgs((byte) 125, DisplayModeManagerContainer206.aClient1367, "tbrefresh");
             } catch (Throwable throwable) {
                 /* empty */
             }

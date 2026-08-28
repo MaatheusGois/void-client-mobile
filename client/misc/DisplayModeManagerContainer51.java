@@ -13,7 +13,7 @@ abstract class DisplayModeManagerContainer51
     static int anInt2493;
     static String[] aStringArray2494;
     static StringCache aClass351_2495;
-    static String aString2496;
+    static String password;
     static int[] anIntArray2497;
 
     public static void method1396(int i) {
@@ -21,7 +21,7 @@ abstract class DisplayModeManagerContainer51
         aClass74_2491 = null;
         aStringArray2494 = null;
         anIntArray2497 = null;
-        aString2496 = null;
+        password = null;
         aClass351_2495 = null;
         if (i != 25) aClass351_2495 = null;
     }
@@ -31,7 +31,7 @@ abstract class DisplayModeManagerContainer51
         int i_0_ = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
         for (int i_1_ = 0; i_1_ < i_0_; i_1_++) {
-            Player player = InterfaceRenderer.aPlayerArray5058[is[i_1_]];
+            Player player = InterfaceRenderer.players[is[i_1_]];
             if (player != null && (player.anInt10264) > 0) {
                 player.anInt10264--;
                 if ((player.anInt10264) == 0) player.aString10292 = null;
@@ -39,9 +39,9 @@ abstract class DisplayModeManagerContainer51
         }
         for (int i_2_ = i; i_2_ < Component324.anInt2057; i_2_++) {
             long l = DisplayModeManagerContainer238.anIntArray1233[i_2_];
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(l, -6008));
+            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(l, -6008));
             if (class348_sub22 != null) {
-                Npc npc = (class348_sub22.aNpc_6859);
+                Npc npc = (class348_sub22.npc);
                 if ((npc.anInt10264) > 0) {
                     npc.anInt10264--;
                     if (npc.anInt10264 == 0) npc.aString10292 = null;
@@ -60,7 +60,7 @@ abstract class DisplayModeManagerContainer51
         aClass74_2491 = new DisplayModeManagerContainer238(13, -1);
         aStringArray2494 = new String[100];
         aClass351_2495 = new StringCache(35, 5);
-        aString2496 = "";
+        password = "";
         anIntArray2497 = new int[25];
     }
 }

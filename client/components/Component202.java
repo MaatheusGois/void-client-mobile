@@ -53,7 +53,7 @@ final class Component202
         aClass197_1408.method1452(class348_sub49);
         int i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            class348_sub49.offset--;
             aClass197_1415 = new Component108();
             aClass197_1415.method1452(class348_sub49);
             aClass197_1425 = new Component108();
@@ -61,7 +61,7 @@ final class Component202
         }
         i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            class348_sub49.offset--;
             aClass197_1413 = new Component108();
             aClass197_1413.method1452(class348_sub49);
             aClass197_1423 = new Component108();
@@ -69,7 +69,7 @@ final class Component202
         }
         i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
-            class348_sub49.anInt7197--;
+            class348_sub49.offset--;
             aClass197_1414 = new Component108();
             aClass197_1414.method1452(class348_sub49);
             aClass197_1420 = new Component108();
@@ -79,7 +79,7 @@ final class Component202
             int i_3_ = class348_sub49.readSmart(-118);
             if (i_3_ == 0) break;
             anIntArray1410[i_2_] = i_3_;
-            anIntArray1411[i_2_] = class348_sub49.method3362((byte) 77);
+            anIntArray1411[i_2_] = class348_sub49.readSmartSigned((byte) 77);
             anIntArray1428[i_2_] = class348_sub49.readSmart(-121);
         }
         anInt1427 = class348_sub49.readSmart(-120);

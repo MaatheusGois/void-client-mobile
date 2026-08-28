@@ -55,8 +55,8 @@ final class RenderableSub10
 
     final void method2530() {
         this.aBoolean6470 = true;
-        for (HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) this.aClass262_6479.method1995(4)); class348_sub42_sub20 != null; class348_sub42_sub20 = (HashNodeSub20) this.aClass262_6479.method1990((byte) 89)) {
-            if (class348_sub42_sub20.aClass174_9704.anInt2296 == 1) class348_sub42_sub20.method3162(true);
+        for (HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) this.aClass262_6479.first(4)); class348_sub42_sub20 != null; class348_sub42_sub20 = (HashNodeSub20) this.aClass262_6479.next((byte) 89)) {
+            if (class348_sub42_sub20.aClass174_9704.anInt2296 == 1) class348_sub42_sub20.unlink(true);
         }
         for (int i = 0; i < (this.aClass318_Sub9_Sub2_Sub1Array6475).length; i++) {
             if (this.aClass318_Sub9_Sub2_Sub1Array6475[i] != null) {
@@ -69,7 +69,7 @@ final class RenderableSub10
         anInt6480 = 0;
         this.aClass262_6479 = new NodeList();
         anInt6485 = 0;
-        this.method2373(false);
+        this.unlink(false);
         NodeSub51.aClass318_Sub10Array7249[GlTexture.anInt8550] = this;
         GlTexture.anInt8550 = (GlTexture.anInt8550 + 1 & ReferenceHolder.anIntArray9558[NodederUtil.anInt6637]);
     }
@@ -99,7 +99,7 @@ final class RenderableSub10
             }
             if (!bool) {
                 if (class318_sub7.anInt6447 == 0) {
-                    class318_sub7.method2373(false);
+                    class318_sub7.unlink(false);
                     anInt6480--;
                 } else class318_sub7.aBoolean6446 = true;
             }
@@ -162,7 +162,7 @@ final class RenderableSub10
         for (int i = 0; i < 8; i++)
             aBooleanArray6477[i] = false;
         while_112_:
-        for (HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) this.aClass262_6479.method1995(4)); class348_sub42_sub20 != null; class348_sub42_sub20 = (HashNodeSub20) this.aClass262_6479.method1990((byte) 85)) {
+        for (HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) this.aClass262_6479.first(4)); class348_sub42_sub20 != null; class348_sub42_sub20 = (HashNodeSub20) this.aClass262_6479.next((byte) 85)) {
             if (class342s != null) {
                 for (int i = 0; i < class342s.length; i++) {
                     if ((class348_sub42_sub20.aClass342_9702) == class342s[i] || ((class348_sub42_sub20.aClass342_9702) == class342s[i].aClass342_4248)) {
@@ -173,10 +173,10 @@ final class RenderableSub10
                 }
             }
             if (!bool) {
-                class348_sub42_sub20.method2715((byte) 108);
+                class348_sub42_sub20.unlink((byte) 108);
                 anInt6485--;
-                if (class348_sub42_sub20.method3164((byte) 1)) {
-                    class348_sub42_sub20.method3162(true);
+                if (class348_sub42_sub20.isChainLinked((byte) 1)) {
+                    class348_sub42_sub20.unlink(true);
                     StaticElementRenderer.anInt6450--;
                 }
             }
@@ -192,7 +192,7 @@ final class RenderableSub10
                         StaticElementRenderer.anInt6450++;
                     }
                     if (class348_sub42_sub20 == null) class348_sub42_sub20 = new HashNodeSub20(class342s[i], this);
-                    this.aClass262_6479.method1999(class348_sub42_sub20, -20180);
+                    this.aClass262_6479.addTail(class348_sub42_sub20, -20180);
                     anInt6485++;
                     aBooleanArray6477[i] = true;
                 }

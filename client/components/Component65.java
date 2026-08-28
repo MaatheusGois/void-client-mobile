@@ -186,7 +186,7 @@ final class Component65
                     int i_44_ = i_42_ << anInt1613;
                     int i_45_ = 1 + i_42_ << anInt1613;
                     Component182 class348_sub49_sub1 = aHa_Sub2_1616.aClass348_Sub49_Sub1_7798;
-                    class348_sub49_sub1.anInt7197 = 0;
+                    class348_sub49_sub1.offset = 0;
                     for (int i_46_ = i_40_; i_41_ > i_46_; i_46_++) {
                         if (-i_35_ <= -i_36_ + i_46_ && -i_36_ + i_46_ <= i_35_) {
                             int i_47_ = i_44_ + i_46_ * aS_Sub2_1622.anInt4587;
@@ -217,7 +217,7 @@ final class Component65
                         OpenGL.glScalef(f, f, 1.0F);
                         OpenGL.glTranslatef((float) -i_42_ / f, (float) -i_39_ / f, 1.0F);
                         OpenGL.glMatrixMode(5888);
-                        aClass232ArrayArray1623[i_42_][i_39_].method1643((class348_sub49_sub1.aByteArray7154), 5123, i_43_, (byte) 70);
+                        aClass232ArrayArray1623[i_42_][i_39_].method1643((class348_sub49_sub1.payload), 5123, i_43_, (byte) 70);
                     }
                 }
             }

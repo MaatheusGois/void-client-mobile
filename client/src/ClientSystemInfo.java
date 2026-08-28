@@ -37,9 +37,9 @@ final class ClientSystemInfo extends Node {
                 while (ShaderProgram.method2138(i ^ 0x2ca2)) {
                     ParticleSystem class348_sub47 = ParticleShader.method2148(Component211.aClass351_1961, (DisplayModeManagerContainer64.aClass77_9029), -92);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                    int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                     ObjectDeserializer.method3025((byte) 121, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                    class348_sub47.aClass348_Sub49_Sub2_7116.method3339(113, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) + -i_1_);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(113, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) + -i_1_);
                     HashNodeSub14.method3243(119, class348_sub47);
                 }
                 if (Component323.aClass348_Sub26_5881 != null) {
@@ -48,16 +48,16 @@ final class ClientSystemInfo extends Node {
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component323.aClass348_Sub26_5881.anInt6887);
                         HashNodeSub14.method3243(122, class348_sub47);
                         Component323.aClass348_Sub26_5881 = null;
-                        MatrixSub2.aLong5745 = Component240.method599(-106) + 30000L;
+                        MatrixSub2.aLong5745 = Component240.currentTimeMillis(-106) + 30000L;
                     }
-                } else if (MatrixSub2.aLong5745 <= Component240.method599(-121)) Component323.aClass348_Sub26_5881 = DisplayModeManagerContainer154.aClass169_1286.method1302(-5255, (Component223.aClass161_125.aString2147));
-                NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.method1995(4));
-                if (class348_sub45 != null || (Component117.aLong4367 < -2000L + Component240.method599(-97))) {
+                } else if (MatrixSub2.aLong5745 <= Component240.currentTimeMillis(-121)) Component323.aClass348_Sub26_5881 = DisplayModeManagerContainer154.aClass169_1286.enqueue(-5255, (Component223.aClass161_125.aString2147));
+                NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(4));
+                if (class348_sub45 != null || (Component117.aLong4367 < -2000L + Component240.currentTimeMillis(-97))) {
                     ParticleSystem class348_sub47 = null;
                     int i_2_ = 0;
-                    for (NodeSub45 class348_sub45_3_ = ((NodeSub45) CacheNodeSub1.aClass262_10479.method1995(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) CacheNodeSub1.aClass262_10479.method1990((byte) 79)) {
-                        if (class348_sub47 != null && (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 - i_2_ >= 240)) break;
-                        class348_sub45_3_.method2715((byte) 107);
+                    for (NodeSub45 class348_sub45_3_ = ((NodeSub45) CacheNodeSub1.aClass262_10479.first(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) CacheNodeSub1.aClass262_10479.next((byte) 79)) {
+                        if (class348_sub47 != null && (class348_sub47.aClass348_Sub49_Sub2_7116.offset - i_2_ >= 240)) break;
+                        class348_sub45_3_.unlink((byte) 107);
                         int i_4_ = class348_sub45_3_.method3311(-15);
                         if (i_4_ >= -1) {
                             if (i_4_ > 65534) i_4_ = 65534;
@@ -71,7 +71,7 @@ final class ClientSystemInfo extends Node {
                                 TeleportHandler.anInt4450++;
                                 class348_sub47 = (ParticleShader.method2148(StringDefinition.aClass351_9590, DisplayModeManagerContainer64.aClass77_9029, -94));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                                i_2_ = class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197;
+                                i_2_ = class348_sub47.aClass348_Sub49_Sub2_7116.offset;
                             }
                             int i_6_ = -BufferCacheSub2.anInt8270 + i_5_;
                             BufferCacheSub2.anInt8270 = i_5_;
@@ -102,7 +102,7 @@ final class ClientSystemInfo extends Node {
                         }
                     }
                     if (class348_sub47 != null) {
-                        class348_sub47.aClass348_Sub49_Sub2_7116.method3339(105, class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 + -i_2_);
+                        class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(105, class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_2_);
                         HashNodeSub14.method3243(23, class348_sub47);
                     }
                 }
@@ -118,7 +118,7 @@ final class ClientSystemInfo extends Node {
                     if (i_10_ < 0) i_10_ = 0;
                     else if (i_10_ > 65535) i_10_ = 65535;
                     int i_11_ = 0;
-                    if (class348_sub45.method3310(i ^ 0x2cee) == 2) i_11_ = 1;
+                    if (class348_sub45.getEventType(i ^ 0x2cee) == 2) i_11_ = 1;
                     int i_12_ = (int) l;
                     RunescapeInfo.anInt182++;
                     ParticleSystem class348_sub47 = ParticleShader.method2148(DisplayModeManagerContainer91.aClass351_395, (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
@@ -161,10 +161,10 @@ final class ClientSystemInfo extends Node {
                     Component240.anInt1110++;
                     ParticleSystem class348_sub47 = ParticleShader.method2148((Component182.aClass351_9743), (DisplayModeManagerContainer64.aClass77_9029), -113);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_14_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                    int i_14_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                     Buffer class348_sub49 = Component192.aClass348_Sub51_3959.method3427(i ^ 0x2cb0);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.anInt7197, 0, class348_sub49.aByteArray7154, 82);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.method3339(96, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) + -i_14_);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 82);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(96, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) + -i_14_);
                     HashNodeSub14.method3243(i + -11473, class348_sub47);
                     r.aBoolean9719 = true;
                 }
@@ -331,7 +331,7 @@ final class ClientSystemInfo extends Node {
                         Component43.method1583((byte) -73);
                         ResourceLoader.anInt3918++;
                         if (Component233.overGameScreen && Component233.scrollWheelDiff != 0 && !StringCache.aBoolean4328) {
-                            if (Component353.anInt2581 <= 0 || !Component280.aClass346_2449.method2696(82, -125) || !Component280.aClass346_2449.method2696(81, -126)) {
+                            if (Component353.anInt2581 <= 0 || !Component280.aClass346_2449.isKeyDown(82, -125) || !Component280.aClass346_2449.isKeyDown(81, -126)) {
                                 Component233.zoomStep += -Component233.scrollWheelDiff * Loader.ZOOM_OFFSET_STEP;
                             }
                         }
@@ -343,7 +343,7 @@ final class ClientSystemInfo extends Node {
                             DisplayModeManagerContainer87.aBoolean3103 = false;
                         }
                         for (; ; ) {
-                            NodeSub36 class348_sub36 = ((NodeSub36) Component222.aClass262_2707.method1997(8));
+                            NodeSub36 class348_sub36 = ((NodeSub36) Component222.aClass262_2707.peekFirst(8));
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.anInt704 >= 0) {
@@ -353,7 +353,7 @@ final class ClientSystemInfo extends Node {
                             ClientScriptExecutor.method705(class348_sub36);
                         }
                         for (; ; ) {
-                            NodeSub36 class348_sub36 = ((NodeSub36) Component6.aClass262_4473.method1997(8));
+                            NodeSub36 class348_sub36 = ((NodeSub36) Component6.aClass262_4473.peekFirst(8));
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.anInt704 >= 0) {
@@ -363,7 +363,7 @@ final class ClientSystemInfo extends Node {
                             ClientScriptExecutor.method705(class348_sub36);
                         }
                         for (; ; ) {
-                            NodeSub36 class348_sub36 = ((NodeSub36) NodeSub1Sub2.aClass262_8810.method1997(i + -11424));
+                            NodeSub36 class348_sub36 = ((NodeSub36) NodeSub1Sub2.aClass262_8810.peekFirst(i + -11424));
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.anInt704 >= 0) {
@@ -374,7 +374,7 @@ final class ClientSystemInfo extends Node {
                         }
                         if (Component39.aClass46_2249 == null) HashNode.anInt7059 = 0;
                         if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
-                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.method2696(82, i ^ ~0x2cd5) && Component280.aClass346_2449.method2696(81, -121) && Component122.anInt1565 != 0) {
+                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, i ^ ~0x2cd5) && Component280.aClass346_2449.isKeyDown(81, -121) && Component122.anInt1565 != 0) {
                             int i_30_ = ((Component72.localPlayer.plane) - Component122.anInt1565);
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
@@ -386,12 +386,12 @@ final class ClientSystemInfo extends Node {
                         if (i == 11432) {
                             for (/**/; i_31_ < 5; i_31_++)
                                 Component212.anIntArray9981[i_31_]++;
-                            if (Component357.aBoolean2469 && (-60000L + Component240.method599(-84) > Component225.aLong482)) DisplayModeManagerContainer343.method2405(i + -11313);
+                            if (Component357.aBoolean2469 && (-60000L + Component240.currentTimeMillis(-84) > Component225.aLong482)) DisplayModeManagerContainer343.method2405(i + -11313);
                             for (RenderableSub9Sub1 class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1872(i + -11424)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1878((byte) -105))) {
-                                if ((Component240.method599(i ^ ~0x2ce9) / 1000L + -5L) > (long) class318_sub9_sub1.anInt8787) {
+                                if ((Component240.currentTimeMillis(i ^ ~0x2ce9) / 1000L + -5L) > (long) class318_sub9_sub1.anInt8787) {
                                     if (class318_sub9_sub1.aShort8786 > 0) ShaderProgramSub2.method2144("", 5, (byte) -128, 0, (class318_sub9_sub1.aString8783 + (FriendsIgnoreList.aClass274_3502.method2063(ObjectDeserializer.anInt6967, 544))), "", "");
                                     if (class318_sub9_sub1.aShort8786 == 0) ShaderProgramSub2.method2144("", 5, (byte) -105, 0, (class318_sub9_sub1.aString8783 + (FriendsIgnoreList.aClass274_3503.method2063(ObjectDeserializer.anInt6967, 544))), "", "");
-                                    class318_sub9_sub1.method2373(false);
+                                    class318_sub9_sub1.unlink(false);
                                 }
                             }
                             DisplayModeManagerContainer332.anInt4999++;

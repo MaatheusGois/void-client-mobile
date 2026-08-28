@@ -158,7 +158,7 @@ final class BufferCacheSub3
                 for (int i_44_ = 1; i_44_ < this.anInt4590; i_44_++)
                     is[i][i_44_] = (byte) ((aByteArrayArray8330[i][-1 + i_44_] >> 2) + (aByteArrayArray8330[1 + i][i_44_] >> 3) + ((aByteArrayArray8330[i + -1][i_44_] >> 2) + (aByteArrayArray8330[i][1 + i_44_] >> 3)) + (aByteArrayArray8330[i][i_44_] >> 1));
             }
-            NodeSub3[] class348_sub3s = new NodeSub3[aClass356_8325.method3474(1)];
+            NodeSub3[] class348_sub3s = new NodeSub3[aClass356_8325.size(1)];
             aClass356_8325.method3477(3, class348_sub3s);
             for (int i = 0; i < class348_sub3s.length; i++)
                 class348_sub3s[i].method2736((byte) -57, anInt8329);
@@ -279,7 +279,7 @@ final class BufferCacheSub3
                                 }
                             }
                             Node class348 = null;
-                            if ((i_79_ & anInt8311 - 1) == 0 && (-1 + anInt8311 & i_80_) == 0) class348 = class356.method3480(l, -6008);
+                            if ((i_79_ & anInt8311 - 1) == 0 && (-1 + anInt8311 & i_80_) == 0) class348 = class356.get(l, -6008);
                             int i_105_;
                             if (class348 == null) {
                                 int i_106_;
@@ -339,11 +339,11 @@ final class BufferCacheSub3
                                 i_105_ = anInt8303++;
                                 is_77_[i_78_] = (short) i_105_;
                                 if (i_83_ != -1) class348_sub3s_47_[i_105_] = class348_sub3s_52_[i_78_];
-                                class356.method3483((byte) 108, l, new NodeSub29(is_77_[i_78_]));
+                                class356.put((byte) 108, l, new NodeSub29(is_77_[i_78_]));
                             } else {
                                 is_77_[i_78_] = ((NodeSub29) class348).aShort6911;
                                 i_105_ = 0xffff & is_77_[i_78_];
-                                if (i_83_ != -1 && (class348_sub3s_47_[i_105_].aLong4291 > class348_sub3s_52_[i_78_].aLong4291)) class348_sub3s_47_[i_105_] = class348_sub3s_52_[i_78_];
+                                if (i_83_ != -1 && (class348_sub3s_47_[i_105_].key > class348_sub3s_52_[i_78_].key)) class348_sub3s_47_[i_105_] = class348_sub3s_52_[i_78_];
                             }
                             for (int i_112_ = 0; i_74_ > i_112_; i_112_++)
                                 class348_sub3s_49_[i_112_].method2741(i_105_, f_103_, 1624, i_88_, i_89_);
@@ -376,11 +376,11 @@ final class BufferCacheSub3
                             }
                             if (class348_sub3_122_ != null) {
                                 class348_sub3_122_.method2742(i_117_, i_115_, i_114_, (byte) -69);
-                                if (class348_sub3_124_ == null || ((class348_sub3_124_.aLong4291) > (class348_sub3_122_.aLong4291))) class348_sub3_124_ = class348_sub3_122_;
+                                if (class348_sub3_124_ == null || ((class348_sub3_124_.key) > (class348_sub3_122_.key))) class348_sub3_124_ = class348_sub3_122_;
                             }
                             if (class348_sub3_123_ != null) {
                                 class348_sub3_123_.method2742(i_117_, i_115_, i_114_, (byte) -79);
-                                if (class348_sub3_124_ == null || ((class348_sub3_124_.aLong4291) > (class348_sub3_123_.aLong4291))) class348_sub3_124_ = class348_sub3_123_;
+                                if (class348_sub3_124_ == null || ((class348_sub3_124_.key) > (class348_sub3_123_.key))) class348_sub3_124_ = class348_sub3_123_;
                             }
                             if (class348_sub3_124_ != null) {
                                 if (class348_sub3 != null) class348_sub3_124_.method2744((byte) -113, i_119_);
@@ -412,7 +412,7 @@ final class BufferCacheSub3
             long[] ls = new long[i_125_];
             for (int i_127_ = 0; i_125_ > i_127_; i_127_++) {
                 NodeSub3 class348_sub3 = class348_sub3s[i_127_];
-                ls[i_127_] = class348_sub3.aLong4291;
+                ls[i_127_] = class348_sub3.key;
                 aClass348_Sub3Array8328[i_127_] = class348_sub3;
                 class348_sub3.method2740(-84, anInt8303);
             }
@@ -549,7 +549,7 @@ final class BufferCacheSub3
                     this.aHa_Sub3_8322.method3874(ShaderCompilerSub3.aClass229_6519, 116, Component385.aClass229_2207);
                     this.aHa_Sub3_8322.method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
                     this.aHa_Sub3_8322.method3885(0, true, DebugPanicSub2.aClass70_8503);
-                    for (Node class348 = aClass262_8286.method1995(i_151_ + 5); class348 != null; class348 = aClass262_8286.method1990((byte) 106)) {
+                    for (Node class348 = aClass262_8286.first(i_151_ + 5); class348 != null; class348 = aClass262_8286.next((byte) 106)) {
                         NodeSub38 class348_sub38 = (NodeSub38) class348;
                         class348_sub38.method3032(i_149_, i_153_, bools, false, i);
                     }
@@ -571,7 +571,7 @@ final class BufferCacheSub3
 
     final void method3981(NodeSub1 class348_sub1, int[] is) {
         try {
-            aClass262_8286.method1999(new NodeSub38((this.aHa_Sub3_8322), this, class348_sub1, is), -20180);
+            aClass262_8286.addTail(new NodeSub38((this.aHa_Sub3_8322), this, class348_sub1, is), -20180);
             anInt8287++;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("qm.L(" + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
@@ -600,13 +600,13 @@ final class BufferCacheSub3
                 }
                 long l = (long) i_179_ | ((long) (i_180_ << 14) | ((long) i_176_ << 42 | (long) i_177_ << 48 | (long) i_175_ << 28));
                 Node class348;
-                for (class348 = aClass356_8325.method3480(l, -6008); class348 != null; class348 = aClass356_8325.method3476(true)) {
+                for (class348 = aClass356_8325.get(l, -6008); class348 != null; class348 = aClass356_8325.continueGet(true)) {
                     NodeSub3 class348_sub3 = (NodeSub3) class348;
                     if (i_179_ == class348_sub3.anInt6567 && (class348_sub3.aFloat6582 == (float) i_180_) && i_175_ == class348_sub3.anInt6571 && class348_sub3.anInt6575 == i_176_ && class348_sub3.anInt6569 == i_177_) break;
                 }
                 if (class348 == null) {
                     class348_sub3s[i_178_] = new NodeSub3(this, i_179_, i_180_, i_175_, i_176_, i_177_);
-                    aClass356_8325.method3483((byte) 27, l, class348_sub3s[i_178_]);
+                    aClass356_8325.put((byte) 27, l, class348_sub3s[i_178_]);
                 } else class348_sub3s[i_178_] = (NodeSub3) class348;
             }
             if (bool) aByteArrayArray8317[i][i_167_] = (byte) Component224.method2057((aByteArrayArray8317[i][i_167_]), 1);

@@ -9,6 +9,6 @@ final class Component215
  */ extends Component163 {
     final CacheNode method1888(int i, CacheNode class348_sub42_sub8) {
         if (i != 3) return null;
-        return new SoftReferenceCacheNode(class348_sub42_sub8.method3193(i + 95), class348_sub42_sub8.anInt9545);
+        return new SoftReferenceCacheNode(class348_sub42_sub8.getValue(i + 95), class348_sub42_sub8.weight);
     }
 }

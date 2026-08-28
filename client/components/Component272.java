@@ -80,7 +80,7 @@ final class Component272
 
     static final void method1731(int i) {
         anInt5863++;
-        NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.method1995(i ^ 0x5));
+        NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(i ^ 0x5));
         boolean bool = (Component156.aClass46_3701 != null || HashNode.anInt7059 > 0);
         int i_19_ = class348_sub45.method3308((byte) -128);
         int i_20_ = class348_sub45.method3311(119);
@@ -135,7 +135,7 @@ final class Component272
                     if (NodeSub1.anIntArray6547[i_26_] == i) return HelveticaFont.aClass352Array2636[i_26_];
                 }
             }
-            Component48 class352 = (Component48) Component9.aClass60_4139.method583(i, -92);
+            Component48 class352 = (Component48) Component9.aClass60_4139.get(i, -92);
             if (class352 != null) {
                 if (bool && class352.aClass143_4333 == null) {
                     Component184 class143 = Component98.method1766((byte) -76, i, s.aClass45_4585);
@@ -151,7 +151,7 @@ final class Component272
             if (class143 == null) return null;
             if (!bool) class352 = new Component48(var_ha.method3686(class143, class207s, true));
             else class352 = new Component48(var_ha.method3686(class143, class207s, true), class143);
-            Component9.aClass60_4139.method582(class352, i, (byte) -109);
+            Component9.aClass60_4139.putOne(class352, i, (byte) -109);
             return class352;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("jaa.K(" + i + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_25_ + ',' + bool + ')'));

@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class344` (JODE-obfuscated).
- * Abstract base for byte buffers. Declares abstract read/write (method2689/2691/2692). Subclass ByteBufferReader wraps a java.nio.ByteBuffer.
+ * Abstract base for byte buffers. Declares abstract read/write (getBytes/2691/2692). Subclass ByteBufferReader wraps a java.nio.ByteBuffer.
  */
 
 abstract class AbstractBuffer {
@@ -15,7 +15,7 @@ abstract class AbstractBuffer {
     static StringCache aClass351_4266 = new StringCache(72, 16);
     static int anInt4267;
 
-    abstract byte[] method2689(int i, int i_0_, int i_1_);
+    abstract byte[] getBytes(int i, int i_0_, int i_1_);
 
     public static void method2690(int i) {
         aClass351_4266 = null;
@@ -24,7 +24,7 @@ abstract class AbstractBuffer {
         int i_2_ = -29 / ((i - -54) / 45);
     }
 
-    abstract void method2691(byte i, byte[] is);
+    abstract void setBytes(byte i, byte[] is);
 
-    abstract byte[] method2692(int i);
+    abstract byte[] toByteArray(int i);
 }

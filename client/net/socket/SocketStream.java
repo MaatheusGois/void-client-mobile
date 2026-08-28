@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class238` (JODE-obfuscated).
- * Abstract byte-I/O connection stream. method1701(int,int,byte,byte[]) reads/writes bytes; method1703 builds an RSARequest during the connection handshake; parent of TcpSocketStream.
+ * Abstract byte-I/O connection stream. readBytes(int,int,byte,byte[]) reads/writes bytes; method1703 builds an RSARequest during the connection handshake; parent of TcpSocketStream.
  */
 
 import java.io.IOException;
@@ -13,9 +13,9 @@ abstract class SocketStream {
     static int anInt3132;
     static Component183 aClass114_3133;
 
-    abstract void method1700(byte i);
+    abstract void close(byte i);
 
-    abstract int method1701(int i, int i_0_, byte i_1_, byte[] is) throws IOException;
+    abstract int readBytes(int i, int i_0_, byte i_1_, byte[] is) throws IOException;
 
     abstract void method1702(int i);
 
@@ -37,7 +37,7 @@ abstract class SocketStream {
         /* empty */
     }
 
-    abstract boolean method1705(int i, int i_6_) throws IOException;
+    abstract boolean availableAtLeast(int i, int i_6_) throws IOException;
 
-    abstract void method1706(int i, int i_7_, int i_8_, byte[] is) throws IOException;
+    abstract void writeBytes(int i, int i_7_, int i_8_, byte[] is) throws IOException;
 }

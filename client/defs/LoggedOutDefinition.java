@@ -26,7 +26,7 @@ final class LoggedOutDefinition
 
     static final void method3141(boolean bool, byte i) {
         if (DefinitionSub8.aClass238_9165 != null) {
-            DefinitionSub8.aClass238_9165.method1700((byte) 36);
+            DefinitionSub8.aClass238_9165.close((byte) 36);
             DefinitionSub8.aClass238_9165 = null;
         }
         anInt9437++;
@@ -52,11 +52,11 @@ final class LoggedOutDefinition
             NodeSub27.aClass302Array6897[i_3_] = null;
         HashNode.method3163((byte) -114);
         for (int i_4_ = 0; i_4_ < 2048; i_4_++)
-            InterfaceRenderer.aPlayerArray5058[i_4_] = null;
+            InterfaceRenderer.players[i_4_] = null;
         Component324.anInt2057 = 0;
-        Component21.aClass356_3654.method3481(i ^ 0xb);
+        Component21.aClass356_3654.clear(i ^ 0xb);
         NodeSub32.anInt6930 = 0;
-        Component387.aClass356_1895.method3481(0);
+        Component387.aClass356_1895.clear(0);
         Component59.method1122(0);
         DisplayModeManagerContainer136.anInt4718 = 0;
         DisplayModeManagerContainer58.aClass170_10209.method1314((byte) -107);
@@ -64,11 +64,11 @@ final class LoggedOutDefinition
         DisplayModeManagerContainer368.method465(i + -1636518175);
         MatrixSub2.aLong5745 = 0L;
         Component323.aClass348_Sub26_5881 = null;
-        if (bool) Buffer.method3379(2, 12);
+        if (bool) Buffer.setClientState(2, 12);
         else {
-            Buffer.method3379(i + -9, 3);
+            Buffer.setClientState(i + -9, 3);
             try {
-                AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
+                AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
             } catch (Throwable throwable) {
                 /* empty */
             }

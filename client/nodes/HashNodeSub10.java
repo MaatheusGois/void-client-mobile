@@ -24,11 +24,11 @@ final class HashNodeSub10
     private int[] anIntArray9574;
     static int anInt9575;
     static int anInt9576;
-    static int anInt9577 = 0;
+    static int activeOccluderCount = 0;
     static int anInt9578;
 
     final void method3209(boolean bool) {
-        if (bool != false) anInt9577 = 26;
+        if (bool != false) activeOccluderCount = 26;
         anInt9563++;
         if (this.anIntArray9566 != null) {
             for (int i = 0; this.anIntArray9566.length > i; i++)
@@ -48,7 +48,7 @@ final class HashNodeSub10
                         if (anIntArray9574.length <= i_1_) break while_221_;
                         if (i_1_ >= is.length) break;
                         int i_2_ = method3212(0, i_1_).anInt1945;
-                        if (i_2_ > 0) class348_sub49.method3357(i_2_, is[i_1_], (byte) 116);
+                        if (i_2_ > 0) class348_sub49.writeLongVar(i_2_, is[i_1_], (byte) 116);
                         i_1_++;
                     }
                 }
@@ -67,7 +67,7 @@ final class HashNodeSub10
         DefinitionSub36.aClass114_9456 = null;
         NodeSub50.anInt7213 = 0;
         Component339.aClass114_3145 = null;
-        Component80.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+        Component80.aClass348_Sub49_Sub2_3813.offset = 0;
         int i_3_ = -122 % ((i - 13) / 45);
         SocketStream.aClass114_3133 = null;
         DisplayModeManagerContainer50.method2296(-99);
@@ -139,7 +139,7 @@ final class HashNodeSub10
         if (anIntArray9574 != null) {
             for (int i_13_ = 0; i_13_ < anIntArray9574.length; i_13_++) {
                 stringbuffer.append(aStringArray9564[i_13_]);
-                stringbuffer.append(this.aClass355_9567.method3472((class348_sub49.method3368((NodeSub5.method2752(anIntArray9574[i_13_], 0).anInt1943), 3060)), anIntArrayArray9565[i_13_], -1, method3212(0, i_13_)));
+                stringbuffer.append(this.aClass355_9567.method3472((class348_sub49.readLongVar((NodeSub5.method2752(anIntArray9574[i_13_], 0).anInt1943), 3060)), anIntArrayArray9565[i_13_], -1, method3212(0, i_13_)));
             }
         }
         stringbuffer.append(aStringArray9564[aStringArray9564.length + -1]);

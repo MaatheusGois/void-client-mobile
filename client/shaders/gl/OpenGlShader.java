@@ -19,7 +19,7 @@ final class OpenGlShader extends AbstractShader {
     static byte[] aByteArray7394;
     private Component321 aClass193_7395;
     /**
-     * Monotonic client cycle — incremented once per {@link client#method114}
+     * Monotonic client cycle — incremented once per {@link client#processGameTick}
      * while not in fatal state 14. Frame-rate coupled (not RS server tick).
      */
     public static int clientCycle = 0;
@@ -166,9 +166,9 @@ final class OpenGlShader extends AbstractShader {
                         }
                     }
                     DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
-                    if (NodeSub8.aHa6654 != null) {
+                    if (NodeSub8.toolkit != null) {
                         if (Component210.aBoolean5300) s.method3980(120, DisplayModeManagerContainer50.gameCanvas);
-                        else NodeSub8.aHa6654.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, PacketReader.anInt10432);
+                        else NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, PacketReader.anInt10432);
                     }
                     if (RSACipher.aFrame4904 == container) {
                         Insets insets = RSACipher.aFrame4904.getInsets();
@@ -187,10 +187,10 @@ final class OpenGlShader extends AbstractShader {
         super(class377);
         try {
             if (class45 != null && class377.aBoolean9923) {
-                aClass193_7395 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_ground_unlit", -29832), class377, 4);
-                aClass193_7392 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_ground_lit", -29832), class377, 4);
-                aClass193_7404 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_model_unlit", -29832), class377, 4);
-                aClass193_7407 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_model_lit", -29832), class377, 4);
+                aClass193_7395 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_ground_unlit", -29832), class377, 4);
+                aClass193_7392 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_ground_lit", -29832), class377, 4);
+                aClass193_7404 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_unlit", -29832), class377, 4);
+                aClass193_7407 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_lit", -29832), class377, 4);
                 if (aClass193_7395 != null & aClass193_7392 != null & aClass193_7404 != null & aClass193_7407 != null) {
                     anInterface18_Impl3_7390 = this.aHa_Sub3_4479.method3839(1, 2, -15137, false, (new int[]{0, -1}));
                     anInterface18_Impl3_7390.method66(false, false, 25688);

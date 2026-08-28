@@ -27,11 +27,11 @@ final class Rs2NpcCache {
         count = 0;
         for (int i = 0; i < Component324.anInt2057; i++) {
             try {
-                NodeSub22 node = (NodeSub22) Component21.aClass356_3654.method3480(DisplayModeManagerContainer238.anIntArray1233[i], -6008);
-                if (node == null || node.aNpc_6859 == null) {
+                NodeSub22 node = (NodeSub22) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i], -6008);
+                if (node == null || node.npc == null) {
                     continue;
                 }
-                npcs[count++] = node.aNpc_6859;
+                npcs[count++] = node.npc;
             } catch (Throwable ignored) {
             }
         }

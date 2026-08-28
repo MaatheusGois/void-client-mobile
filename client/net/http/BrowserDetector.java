@@ -31,7 +31,7 @@ final class BrowserDetector {
         if (is.length > 136 && !DisplayModeManagerContainer167.aBoolean247) {
             try {
                 AbstractBuffer class344 = new ByteBufferReader();
-                class344.method2691((byte) 62, is);
+                class344.setBytes((byte) 62, is);
                 return class344;
             } catch (Throwable throwable) {
                 DisplayModeManagerContainer167.aBoolean247 = true;
@@ -124,8 +124,8 @@ final class BrowserDetector {
         if (i_11_ > -113) anInt2361 = -64;
         if (DisplayModeManagerContainer152.aClass78_4538 != null) {
             try {
-                DisplayModeManagerContainer152.aClass78_4538.method789(0L, (byte) 59);
-                DisplayModeManagerContainer152.aClass78_4538.method783(i, 24, true, (class348_sub49.aByteArray7154));
+                DisplayModeManagerContainer152.aClass78_4538.seek(0L, (byte) 59);
+                DisplayModeManagerContainer152.aClass78_4538.write(i, 24, true, (class348_sub49.payload));
             } catch (Exception exception) {
                 /* empty */
             }

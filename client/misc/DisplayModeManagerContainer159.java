@@ -36,9 +36,9 @@ final class DisplayModeManagerContainer159
             int i_3_ = class348_sub49_sub2.readBits((byte) -24, 6);
             boolean bool = (class348_sub49_sub2.readBits((byte) -24, 1) == 1);
             if (bool) DisplayModeManagerContainer220.anIntArray279[MatrixSub3.anInt5768++] = i;
-            if (InterfaceRenderer.aPlayerArray5058[i] != null) throw new RuntimeException("hr:lr");
+            if (InterfaceRenderer.players[i] != null) throw new RuntimeException("hr:lr");
             Component135 class359 = NpcDefinition.aClass359Array6802[i];
-            Player player = (InterfaceRenderer.aPlayerArray5058[i] = new Player());
+            Player player = (InterfaceRenderer.players[i] = new Player());
             player.anInt10290 = i;
             if (Component101.aClass348_Sub49Array2105[i] != null) player.method2452((byte) 84, Component101.aClass348_Sub49Array2105[i]);
             player.method2435((byte) -108, (class359.anInt4423), true);

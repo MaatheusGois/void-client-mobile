@@ -658,7 +658,7 @@ abstract class GlToolkitSub3
     void method3652() {
         anInt8065++;
         if (!aBoolean8176) {
-            for (Node class348 = aClass262_7927.method1995(4); class348 != null; class348 = aClass262_7927.method1990((byte) 102))
+            for (Node class348 = aClass262_7927.first(4); class348 != null; class348 = aClass262_7927.next((byte) 102))
                 ((NodeBaseSub2) class348).method3445(-9503);
             Enumeration enumeration = aHashtable8014.keys();
             while (enumeration.hasMoreElements()) {
@@ -1578,7 +1578,7 @@ abstract class GlToolkitSub3
     }
 
     static final void method3886(int i) {
-        Component35.aClass60_4273.method590(0);
+        Component35.aClass60_4273.clear(0);
         if (i >= -58) method3824(43, 63, -121, -1, 72, 77, -11, 22);
         anInt8018++;
     }
@@ -2555,7 +2555,7 @@ abstract class GlToolkitSub3
     final NodeBase method3702(int i) {
         anInt8049++;
         NodeBaseSub2 var_za_Sub2 = new NodeBaseSub2(i);
-        aClass262_7927.method1999(var_za_Sub2, -20180);
+        aClass262_7927.addTail(var_za_Sub2, -20180);
         return var_za_Sub2;
     }
 

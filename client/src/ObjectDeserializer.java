@@ -36,7 +36,7 @@ final class ObjectDeserializer extends Node {
 
     static final void method3025(byte i, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt6961++;
-        NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.method1995(4);
+        NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.first(4);
         if (class348_sub48 != null) {
             boolean bool = false;
             for (int i_0_ = 0; i_0_ < class348_sub48.anInt7126; i_0_++) {
@@ -51,29 +51,29 @@ final class ObjectDeserializer extends Node {
             }
             if (i < 37) aLong6966 = -3L;
             if (!bool) {
-                int i_1_ = class348_sub49_sub2.anInt7197;
+                int i_1_ = class348_sub49_sub2.offset;
                 class348_sub49_sub2.writeInt((byte) 94, class348_sub48.anInt7130);
                 for (int i_2_ = 0; (i_2_ < class348_sub48.anInt7126); i_2_++) {
                     if (class348_sub48.anIntArray7131[i_2_] == 0) {
                         try {
                             int i_3_ = (class348_sub48.anIntArray7132[i_2_]);
                             if (i_3_ == 0) {
-                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].anObject1998));
+                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].result));
                                 int i_5_ = field.getInt(null);
                                 class348_sub49_sub2.writeByte(false, 0);
                                 class348_sub49_sub2.writeInt((byte) 108, i_5_);
                             } else if (i_3_ == 1) {
-                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].anObject1998));
+                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].result));
                                 field.setInt(null, (class348_sub48.anIntArray7136[i_2_]));
                                 class348_sub49_sub2.writeByte(false, 0);
                             } else if (i_3_ == 2) {
-                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].anObject1998));
+                                Field field = ((Field) (class348_sub48.aClass144Array7135[i_2_].result));
                                 int i_4_ = field.getModifiers();
                                 class348_sub49_sub2.writeByte(false, 0);
                                 class348_sub49_sub2.writeInt((byte) 122, i_4_);
                             }
                             if (i_3_ == 3) {
-                                Method method = ((Method) (class348_sub48.aClass144Array7127[i_2_].anObject1998));
+                                Method method = ((Method) (class348_sub48.aClass144Array7127[i_2_].result));
                                 byte[][] is = (class348_sub48.aByteArrayArrayArray7128[i_2_]);
                                 Object[] objects = new Object[is.length];
                                 for (int i_6_ = 0; is.length > i_6_; i_6_++) {
@@ -91,7 +91,7 @@ final class ObjectDeserializer extends Node {
                                     } else class348_sub49_sub2.writeByte(false, 4);
                                 } else class348_sub49_sub2.writeByte(false, 0);
                             } else if (i_3_ == 4) {
-                                Method method = ((Method) (class348_sub48.aClass144Array7127[i_2_].anObject1998));
+                                Method method = ((Method) (class348_sub48.aClass144Array7127[i_2_].result));
                                 int i_7_ = method.getModifiers();
                                 class348_sub49_sub2.writeByte(false, 0);
                                 class348_sub49_sub2.writeInt((byte) 95, i_7_);
@@ -123,8 +123,8 @@ final class ObjectDeserializer extends Node {
                         }
                     } else class348_sub49_sub2.writeByte(false, (class348_sub48.anIntArray7131[i_2_]));
                 }
-                class348_sub49_sub2.method3344(i_1_, false);
-                class348_sub48.method2715((byte) 46);
+                class348_sub49_sub2.writeCrc(i_1_, false);
+                class348_sub48.unlink((byte) 46);
             }
         }
     }

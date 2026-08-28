@@ -103,8 +103,8 @@ final class LogicError {
         int i_24_ = MenuEntry.method3229(-82);
         if (i_22_ == 102) {
             if (i == 3 || i_24_ == 3) bool = true;
-            if (!NodeSub8.aHa6654.method3695()) bool = true;
-            ScreenModeManager.method1580((byte) -125, bool, i_21_, i_24_, i, i_23_);
+            if (!NodeSub8.toolkit.method3695()) bool = true;
+            ScreenModeManager.setScreenMode((byte) -125, bool, i_21_, i_24_, i, i_23_);
         }
     }
 

@@ -4,17 +4,20 @@
 
 /**
  * RENAMED from `Class348_Sub42` (JODE-obfuscated).
- * Node used inside HashTable chains. Holds a long hash key (aLong7057) and chain prev/next (aClass348_Sub42_7060/7063). Base for HashNodeSub19 and other hash-keyed nodes.
+ * Node used inside HashTable chains. Chain prev/next ({@link #previous}/{@link #next});
+ * {@link #accessAge} is MRU age (NodeCache increments it) — the lookup key is {@link Node#key}.
  */
-
 class HashNode extends Node {
-    long aLong7057;
+    /** MRU / access counter used by NodeCache eviction; not the hash key. */
+    long accessAge;
     static Component245 aClass2_7058;
     static int anInt7059 = 0;
-    HashNode aClass348_Sub42_7060;
+    /** Previous in the HashTable sentinel ring. */
+    HashNode previous;
     static int anInt7061;
     static int anInt7062;
-    HashNode aClass348_Sub42_7063;
+    /** Next in the HashTable sentinel ring. */
+    HashNode next;
     static int anInt7064;
 
     public static void method3161(int i) {
@@ -22,14 +25,14 @@ class HashNode extends Node {
         aClass2_7058 = null;
     }
 
-    final void method3162(boolean bool) {
+    final void unlink(boolean bool) {
         anInt7064++;
         if (bool != true) method3163((byte) 50);
-        if (this.aClass348_Sub42_7060 != null) {
-            this.aClass348_Sub42_7060.aClass348_Sub42_7063 = this.aClass348_Sub42_7063;
-            this.aClass348_Sub42_7063.aClass348_Sub42_7060 = this.aClass348_Sub42_7060;
-            this.aClass348_Sub42_7060 = null;
-            this.aClass348_Sub42_7063 = null;
+        if (this.previous != null) {
+            this.previous.next = this.next;
+            this.next.previous = this.previous;
+            this.previous = null;
+            this.next = null;
         }
     }
 
@@ -45,10 +48,11 @@ class HashNode extends Node {
         }
     }
 
-    final boolean method3164(byte i) {
+    /** True when linked in the HashTable chain (not Node list). */
+    final boolean isChainLinked(byte i) {
         anInt7061++;
-        if (this.aClass348_Sub42_7060 == null) return false;
-        if (i != 1) method3162(false);
+        if (this.previous == null) return false;
+        if (i != 1) unlink(false);
         return true;
     }
 

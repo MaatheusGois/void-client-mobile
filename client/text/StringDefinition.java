@@ -50,12 +50,12 @@ final class StringDefinition extends HashNode {
     }
 
     static final void method3223() {
-        for (int i = 0; i < Component328.anInt1477; i++) {
+        for (int i = 0; i < Component328.dynamicOnscreenCount; i++) {
             Component327 class318_sub1_sub3 = DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i];
             NodeSub46.method3320(class318_sub1_sub3, true);
             DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i] = null;
         }
-        Component328.anInt1477 = 0;
+        Component328.dynamicOnscreenCount = 0;
     }
 
     final void method3224(byte i) {

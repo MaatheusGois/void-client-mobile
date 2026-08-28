@@ -144,7 +144,7 @@ final class Component382
 
     static final void method1323(int i, int i_44_) {
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-            DisplayModeManagerContainer173.aClass60_4254.method578(2, i);
+            DisplayModeManagerContainer173.aClass60_4254.processSoftEntries(2, i);
         }
         if (i_44_ == 26603) anInt2271++;
     }

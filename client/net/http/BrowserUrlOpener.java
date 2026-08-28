@@ -276,7 +276,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             int i_37_ = 47 / ((i - -62) / 36);
             if (class348_sub43.aClass348_Sub16_Sub5_7081 == null) {
                 if (class348_sub43.anInt7087 >= 0) {
-                    class348_sub43.method2715((byte) 97);
+                    class348_sub43.unlink((byte) 97);
                     if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][(class348_sub43.anInt7088)]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
                 }
                 return true;
@@ -306,7 +306,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             int i_42_ = -123 % ((i_40_ - 24) / 42);
             aClass348_Sub43ArrayArray8928[i_41_][i_39_] = null;
             if ((this.anIntArray8895[i_41_] & 0x2) != 0) {
-                for (PlayerState class348_sub43_43_ = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1995(4)); class348_sub43_43_ != null; class348_sub43_43_ = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1990((byte) 36))) {
+                for (PlayerState class348_sub43_43_ = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43_43_ != null; class348_sub43_43_ = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 36))) {
                     if ((class348_sub43_43_.anInt7067 == class348_sub43.anInt7067) && class348_sub43_43_.anInt7087 < 0 && class348_sub43 != class348_sub43_43_) {
                         class348_sub43.anInt7087 = 0;
                         break;
@@ -318,7 +318,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     private final void method2850(int i, int i_44_) {
         if ((0x4 & this.anIntArray8895[i]) != 0) {
-            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1995(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1990((byte) 65))) {
+            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 65))) {
                 if (i == class348_sub43.anInt7067) class348_sub43.anInt7082 = 0;
             }
         }
@@ -343,7 +343,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             anInt8952++;
             if (class348_sub43.anInt7087 >= 0 && ((class348_sub43.aClass348_Sub16_Sub5_7081) == null || class348_sub43.aClass348_Sub16_Sub5_7081.method2890())) {
                 class348_sub43.method3299((byte) 36);
-                class348_sub43.method2715((byte) 66);
+                class348_sub43.unlink((byte) 66);
                 if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
                 return true;
             }
@@ -388,7 +388,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 if (class348_sub43.aClass348_Sub16_Sub5_7081.method2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.method2883(class348_sub43.aClass348_Sub16_Sub5_7081);
                 class348_sub43.method3299((byte) -100);
                 if (class348_sub43.anInt7087 >= 0) {
-                    class348_sub43.method2715((byte) 124);
+                    class348_sub43.unlink((byte) 124);
                     if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][(class348_sub43.anInt7088)]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
                 }
                 return true;
@@ -404,7 +404,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         method2849(64, i_50_, (byte) 86, i_51_);
         anInt8931++;
         if ((0x2 & this.anIntArray8895[i_51_]) != 0) {
-            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1993(i ^ ~0x51)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method2003(-50))) {
+            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.last(i ^ ~0x51)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method2003(-50))) {
                 if ((class348_sub43.anInt7067 == i_51_) && class348_sub43.anInt7087 < 0) {
                     aClass348_Sub43ArrayArray8928[i_51_][class348_sub43.anInt7071] = null;
                     aClass348_Sub43ArrayArray8928[i_51_][i_50_] = class348_sub43;
@@ -417,7 +417,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 }
             }
         }
-        NpcDefinition class348_sub17 = ((NpcDefinition) aClass356_8891.method3480(anIntArray8916[i_51_], -6008));
+        NpcDefinition class348_sub17 = ((NpcDefinition) aClass356_8891.get(anIntArray8916[i_51_], -6008));
         if (class348_sub17 != null) {
             NodeSub19Sub1 class348_sub19_sub1 = (class348_sub17.aClass348_Sub19_Sub1Array6800[i_50_]);
             if (class348_sub19_sub1 != null) {
@@ -450,7 +450,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     }
                     aClass348_Sub43ArrayArray8915[i_51_][class348_sub43.anInt7088] = class348_sub43;
                 }
-                aClass348_Sub16_Sub1_8958.aClass262_8848.method1999(class348_sub43, i ^ ~0x4ed3);
+                aClass348_Sub16_Sub1_8958.aClass262_8848.addTail(class348_sub43, i ^ ~0x4ed3);
                 aClass348_Sub43ArrayArray8928[i_51_][i_50_] = class348_sub43;
             }
         }
@@ -467,7 +467,7 @@ final class BrowserUrlOpener extends NodeSub16 {
     private final void method2855(int i, byte i_56_) {
         anInt8927++;
         if (i_56_ < -42) {
-            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1995(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1990((byte) 60))) {
+            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 60))) {
                 if ((i < 0 || i == class348_sub43.anInt7067) && class348_sub43.anInt7087 < 0) {
                     aClass348_Sub43ArrayArray8928[class348_sub43.anInt7067][class348_sub43.anInt7071] = null;
                     class348_sub43.anInt7087 = 0;
@@ -538,7 +538,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         anInt8893++;
         if (i >= -101) method2856((byte) -89);
         if ((this.anIntArray8895[i_62_] & 0x2) != 0) {
-            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1995(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1990((byte) 41))) {
+            for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 41))) {
                 if ((class348_sub43.anInt7067 == i_62_) && (aClass348_Sub43ArrayArray8928[i_62_][class348_sub43.anInt7071]) == null && class348_sub43.anInt7087 < 0) class348_sub43.anInt7087 = 0;
             }
         }
@@ -613,7 +613,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_71_ == 0) return class297.method2245(string, 16);
             if (i_71_ == 1) {
                 try {
-                    AppletInvoker.method1616("openjs", (new Object[]{new URL(ToolkitFactory.anApplet1530.getCodeBase(), string).toString()}), ToolkitFactory.anApplet1530, (byte) 38);
+                    AppletInvoker.callApplet("openjs", (new Object[]{new URL(ToolkitFactory.anApplet1530.getCodeBase(), string).toString()}), ToolkitFactory.anApplet1530, (byte) 38);
                     Task class144 = new Task();
                     class144.anInt1997 = 1;
                     return class144;
@@ -637,7 +637,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             }
             if (i_71_ == 3) {
                 try {
-                    AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
+                    AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
                 } catch (Throwable throwable) {
                     /* empty */
                 }
@@ -666,7 +666,7 @@ final class BrowserUrlOpener extends NodeSub16 {
     final synchronized void method2864(byte i) {
         anInt8924++;
         if (i <= 46) aClass204_8944 = null;
-        for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.method3484(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.method3482(0))
+        for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.first(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.next(0))
             class348_sub17.method2933((byte) -103);
     }
 
@@ -699,16 +699,16 @@ final class BrowserUrlOpener extends NodeSub16 {
             boolean bool = true;
             int[] is = null;
             if (i > 0) is = new int[]{i};
-            for (NodeSub8 class348_sub8 = (NodeSub8) class348_sub2.aClass356_6565.method3484(0); class348_sub8 != null; class348_sub8 = (NodeSub8) class348_sub2.aClass356_6565.method3482(0)) {
-                int i_78_ = (int) class348_sub8.aLong4291;
-                NpcDefinition class348_sub17 = ((NpcDefinition) aClass356_8891.method3480(i_78_, -6008));
+            for (NodeSub8 class348_sub8 = (NodeSub8) class348_sub2.aClass356_6565.first(0); class348_sub8 != null; class348_sub8 = (NodeSub8) class348_sub2.aClass356_6565.next(0)) {
+                int i_78_ = (int) class348_sub8.key;
+                NpcDefinition class348_sub17 = ((NpcDefinition) aClass356_8891.get(i_78_, -6008));
                 if (class348_sub17 == null) {
                     class348_sub17 = ReliefShader.method1417(0, class45, i_78_);
                     if (class348_sub17 == null) {
                         bool = false;
                         continue;
                     }
-                    aClass356_8891.method3483((byte) 69, i_78_, class348_sub17);
+                    aClass356_8891.put((byte) 69, i_78_, class348_sub17);
                 }
                 if (!class348_sub17.method2932(class26, is, (class348_sub8.aByteArray6657), 0)) bool = false;
             }
@@ -723,8 +723,8 @@ final class BrowserUrlOpener extends NodeSub16 {
     final synchronized void method2867(int i) {
         anInt8903++;
         if (i == 4) {
-            for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.method3484(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.method3482(i ^ 0x4))
-                class348_sub17.method2715((byte) 53);
+            for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.first(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.next(i ^ 0x4))
+                class348_sub17.unlink((byte) 53);
         }
     }
 
@@ -800,7 +800,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     private final void method2872(int i, int i_90_) {
         anInt8918++;
-        for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1995(i + -2005674596)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.method1990((byte) 68))) {
+        for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(i + -2005674596)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 68))) {
             if (i_90_ < 0 || (class348_sub43.anInt7067 == i_90_)) {
                 if (class348_sub43.aClass348_Sub16_Sub5_7081 != null) {
                     class348_sub43.aClass348_Sub16_Sub5_7081.method2902(Component231.anInt339 / 100);
@@ -808,7 +808,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     class348_sub43.method3299((byte) 72);
                 }
                 if (class348_sub43.anInt7087 < 0) aClass348_Sub43ArrayArray8928[class348_sub43.anInt7067][class348_sub43.anInt7071] = null;
-                class348_sub43.method2715((byte) 21);
+                class348_sub43.unlink((byte) 21);
             }
         }
         if (i != 2005674600) anIntArray8902 = null;

@@ -25,8 +25,8 @@ final class Component17
         try {
             if (i > -25) aClass107_3889 = null;
             anInt3885++;
-            HashNode class348_sub42 = (HashNode) aClass356_3888.method3480(l, -6008);
-            if (class348_sub42 != null) aClass107_3889.method1005(true, class348_sub42);
+            HashNode class348_sub42 = (HashNode) aClass356_3888.get(l, -6008);
+            if (class348_sub42 != null) aClass107_3889.add(true, class348_sub42);
             return class348_sub42;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "wu.D(" + l + ',' + i + ')');
@@ -36,8 +36,8 @@ final class Component17
     final void method2303(boolean bool) {
         anInt3879++;
         if (bool != true) method2305(-121L, null, -1);
-        aClass107_3889.method1009(2110355138);
-        aClass356_3888.method3481(0);
+        aClass107_3889.clear(2110355138);
+        aClass356_3888.clear(0);
         aClass348_Sub42_3887 = new HashNode();
         anInt3891 = anInt3890;
     }
@@ -46,10 +46,10 @@ final class Component17
         do {
             try {
                 anInt3880++;
-                HashNode class348_sub42 = (HashNode) aClass356_3888.method3480(l, -6008);
+                HashNode class348_sub42 = (HashNode) aClass356_3888.get(l, -6008);
                 if (class348_sub42 != null) {
-                    class348_sub42.method2715((byte) 73);
-                    class348_sub42.method3162(true);
+                    class348_sub42.unlink((byte) 73);
+                    class348_sub42.unlink(true);
                     anInt3891++;
                 }
                 if (i <= -110) break;
@@ -65,17 +65,17 @@ final class Component17
         try {
             anInt3881++;
             if ((~anInt3891) == i) {
-                HashNode class348_sub42_0_ = aClass107_3889.method1008(20);
-                class348_sub42_0_.method2715((byte) 113);
-                class348_sub42_0_.method3162(true);
+                HashNode class348_sub42_0_ = aClass107_3889.removeHead(20);
+                class348_sub42_0_.unlink((byte) 113);
+                class348_sub42_0_.unlink(true);
                 if (class348_sub42_0_ == aClass348_Sub42_3887) {
-                    class348_sub42_0_ = aClass107_3889.method1008(20);
-                    class348_sub42_0_.method2715((byte) 79);
-                    class348_sub42_0_.method3162(true);
+                    class348_sub42_0_ = aClass107_3889.removeHead(20);
+                    class348_sub42_0_.unlink((byte) 79);
+                    class348_sub42_0_.unlink(true);
                 }
             } else anInt3891--;
-            aClass356_3888.method3483((byte) 37, l, class348_sub42);
-            aClass107_3889.method1005(true, class348_sub42);
+            aClass356_3888.put((byte) 37, l, class348_sub42);
+            aClass107_3889.add(true, class348_sub42);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("wu.E(" + l + ',' + (class348_sub42 != null ? "{...}" : "null") + ',' + i + ')'));
         }

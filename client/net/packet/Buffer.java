@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub49` (JODE-obfuscated).
- * Byte buffer / packet reader-writer. Provides readUnsignedShort, readUnsignedByte, read/write helpers over byte[] aByteArray7154, plus BigInteger support for RSA. Extends Node.
+ * Byte buffer / packet reader-writer. Provides readUnsignedShort, readUnsignedByte, read/write helpers over byte[] payload, plus BigInteger support for RSA. Extends Node.
  */
 
 import java.math.BigInteger;
@@ -27,7 +27,8 @@ class Buffer extends Node {
     static int anInt7151;
     static int anInt7152;
     static int anInt7153;
-    byte[] aByteArray7154;
+    /** Packet byte array being read/written. */
+    byte[] payload;
     static int anInt7155;
     static int anInt7156;
     static int anInt7157;
@@ -70,7 +71,8 @@ class Buffer extends Node {
     static int anInt7194;
     static int anInt7195;
     static int anInt7196;
-    int anInt7197;
+    /** Current read/write index into {@link #payload}. */
+    int offset;
     static int anInt7198;
     static int anInt7199;
     static int anInt7200;
@@ -87,14 +89,14 @@ class Buffer extends Node {
     final int readByteInverse(byte i) {
         anInt7163++;
         if (i != 21) return -10;
-        return (-(this.aByteArray7154[this.anInt7197++]) & 0xff);
+        return (-(this.payload[this.offset++]) & 0xff);
     }
 
     final int readUnsignedShort(int i) {
         if (i != 842397944) return 111;
-        this.anInt7197 += 2;
+        this.offset += 2;
         anInt7186++;
-        return ((0xff & (this.aByteArray7154[-1 + this.anInt7197])) + ((this.aByteArray7154[-2 + this.anInt7197]) << 8 & 0xff00));
+        return ((0xff & (this.payload[-1 + this.offset])) + ((this.payload[-2 + this.offset]) << 8 & 0xff00));
     }
 
     static final int method3331(int i, byte i_0_, int i_1_) {
@@ -109,24 +111,24 @@ class Buffer extends Node {
         return i_2_;
     }
 
-    final long method3332(byte i) {
+    final long readLongLittle(byte i) {
         if (i <= 88) return -9L;
         anInt7179++;
-        long l = 0xffffffffL & (long) method3359(-45);
-        long l_4_ = 0xffffffffL & (long) method3359(-99);
+        long l = 0xffffffffL & (long) readIntLittleEndian(-45);
+        long l_4_ = 0xffffffffL & (long) readIntLittleEndian(-99);
         return (l_4_ << 32) + l;
     }
 
     final void writeString(byte i, String string) {
         anInt7172++;
-        if (i != -5) this.aByteArray7154 = null;
+        if (i != -5) this.payload = null;
         int i_5_ = string.indexOf('\0');
         if (i_5_ >= 0) throw new IllegalArgumentException("NUL character at " + i_5_ + " - cannot pjstr");
-        this.anInt7197 += HashNodeSub16.method3255(0, (this.aByteArray7154), string.length(), false, string, (this.anInt7197));
-        this.aByteArray7154[this.anInt7197++] = (byte) 0;
+        this.offset += HashNodeSub16.method3255(0, (this.payload), string.length(), false, string, (this.offset));
+        this.payload[this.offset++] = (byte) 0;
     }
 
-    final int method3334(int i) {
+    final int readLargeSmart(int i) {
         anInt7208++;
         int i_6_ = 0;
         int i_7_;
@@ -139,72 +141,72 @@ class Buffer extends Node {
 
     final void writeShortAdd(int i, int i_9_) {
         anInt7156++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_9_ >> 8);
+        this.payload[this.offset++] = (byte) (i_9_ >> 8);
         int i_10_ = -35 % ((-17 - i) / 48);
-        this.aByteArray7154[this.anInt7197++] = (byte) (128 + i_9_);
+        this.payload[this.offset++] = (byte) (128 + i_9_);
     }
 
     final void writeIntMiddle(int i, byte i_11_) {
         anInt7162++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 8);
-        this.aByteArray7154[this.anInt7197++] = (byte) i;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 24);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 16);
+        this.payload[this.offset++] = (byte) (i >> 8);
+        this.payload[this.offset++] = (byte) i;
+        this.payload[this.offset++] = (byte) (i >> 24);
+        this.payload[this.offset++] = (byte) (i >> 16);
         if (i_11_ != 44) anInt7207 = 1;
     }
 
     final void writeShort(byte i, int i_12_) {
         anInt7145++;
         if (i != 107) method3354(20);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_12_ >> 8);
-        this.aByteArray7154[this.anInt7197++] = (byte) i_12_;
+        this.payload[this.offset++] = (byte) (i_12_ >> 8);
+        this.payload[this.offset++] = (byte) i_12_;
     }
 
-    final void method3338(int i, int i_13_) {
-        this.aByteArray7154[-4 + this.anInt7197 - i_13_] = (byte) (i_13_ >> 24);
+    final void writeLengthInt(int i, int i_13_) {
+        this.payload[-4 + this.offset - i_13_] = (byte) (i_13_ >> 24);
         anInt7200++;
-        this.aByteArray7154[this.anInt7197 - i_13_ - 3] = (byte) (i_13_ >> 16);
-        this.aByteArray7154[this.anInt7197 - (i_13_ - -2)] = (byte) (i_13_ >> 8);
-        this.aByteArray7154[i + (this.anInt7197 + -i_13_)] = (byte) i_13_;
+        this.payload[this.offset - i_13_ - 3] = (byte) (i_13_ >> 16);
+        this.payload[this.offset - (i_13_ - -2)] = (byte) (i_13_ >> 8);
+        this.payload[i + (this.offset + -i_13_)] = (byte) i_13_;
     }
 
-    final void method3339(int i, int i_14_) {
+    final void writeLengthByte(int i, int i_14_) {
         if (i > 91) {
-            this.aByteArray7154[this.anInt7197 - i_14_ + -1] = (byte) i_14_;
+            this.payload[this.offset - i_14_ + -1] = (byte) i_14_;
             anInt7185++;
         }
     }
 
-    final void method3340(int i, int i_15_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_15_ >> 16);
+    final void writeMedium(int i, int i_15_) {
+        this.payload[this.offset++] = (byte) (i_15_ >> 16);
         anInt7148++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_15_ >> 8);
-        if (i == -9912) this.aByteArray7154[this.anInt7197++] = (byte) i_15_;
+        this.payload[this.offset++] = (byte) (i_15_ >> 8);
+        if (i == -9912) this.payload[this.offset++] = (byte) i_15_;
     }
 
     final byte method3341(int i) {
         if (i != -8679) aClass223_7175 = null;
         anInt7195++;
-        return (byte) (-128 + (this.aByteArray7154[this.anInt7197++]));
+        return (byte) (-128 + (this.payload[this.offset++]));
     }
 
     final int readUnsignedByteSubtract(byte i) {
         anInt7174++;
         int i_16_ = 27 / ((-33 - i) / 51);
-        return (-(this.aByteArray7154[this.anInt7197++]) + 128 & 0xff);
+        return (-(this.payload[this.offset++]) + 128 & 0xff);
     }
 
     final int readIntMiddleEndian(byte i) {
-        this.anInt7197 += 4;
+        this.offset += 4;
         anInt7184++;
         if (i != 82) readSmart(-12);
-        return ((0xff0000 & (this.aByteArray7154[this.anInt7197 - 1]) << 16) + (((this.aByteArray7154[this.anInt7197 - 2]) << 24 & ~0xffffff) + ((0xff & (this.aByteArray7154[this.anInt7197 + -4])) << 8) + (0xff & (this.aByteArray7154[this.anInt7197 - 3]))));
+        return ((0xff0000 & (this.payload[this.offset - 1]) << 16) + (((this.payload[this.offset - 2]) << 24 & ~0xffffff) + ((0xff & (this.payload[this.offset + -4])) << 8) + (0xff & (this.payload[this.offset - 3]))));
     }
 
-    final int method3344(int i, boolean bool) {
+    final int writeCrc(int i, boolean bool) {
         anInt7165++;
-        if (bool != false) this.aByteArray7154 = null;
-        int i_17_ = Component382.method1319(this.anInt7197, true, this.aByteArray7154, i);
+        if (bool != false) this.payload = null;
+        int i_17_ = Component382.method1319(this.offset, true, this.payload, i);
         writeInt((byte) 93, i_17_);
         return i_17_;
     }
@@ -212,44 +214,44 @@ class Buffer extends Node {
     final byte readByteSubtract(int i) {
         if (i != -27697) anInt7207 = -57;
         anInt7138++;
-        return (byte) (-(this.aByteArray7154[this.anInt7197++]) + 128);
+        return (byte) (-(this.payload[this.offset++]) + 128);
     }
 
     final int readIntInverseMiddle(int i) {
-        this.anInt7197 += 4;
+        this.offset += 4;
         anInt7194++;
         if (i != 255) return 93;
-        return (((0xff & (this.aByteArray7154[-1 + this.anInt7197])) << 8) + (((this.aByteArray7154[-3 + this.anInt7197]) & 0xff) << 24) - (-((0xff & (this.aByteArray7154[this.anInt7197 - 4])) << 16) + -(0xff & (this.aByteArray7154[this.anInt7197 - 2]))));
+        return (((0xff & (this.payload[-1 + this.offset])) << 8) + (((this.payload[-3 + this.offset]) & 0xff) << 24) - (-((0xff & (this.payload[this.offset - 4])) << 16) + -(0xff & (this.payload[this.offset - 2]))));
     }
 
-    final void method3347(byte[] is, int i, int i_18_, byte i_19_) {
+    final void readBytesReverse(byte[] is, int i, int i_18_, byte i_19_) {
         anInt7183++;
         for (int i_20_ = -1 + i_18_ + i; i_20_ >= i; i_20_--)
-            is[i_20_] = (this.aByteArray7154[this.anInt7197++]);
+            is[i_20_] = (this.payload[this.offset++]);
         int i_21_ = -53 / ((i_19_ - -72) / 47);
     }
 
     final void writeIntLittle(int i, int i_22_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) i_22_;
+        this.payload[this.offset++] = (byte) i_22_;
         anInt7164++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_22_ >> 8);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_22_ >> 16);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_22_ >> 24);
+        this.payload[this.offset++] = (byte) (i_22_ >> 8);
+        this.payload[this.offset++] = (byte) (i_22_ >> 16);
+        this.payload[this.offset++] = (byte) (i_22_ >> 24);
         int i_23_ = -32 / ((-74 - i) / 44);
     }
 
     final void writeShortAddLittle(int i, int i_24_) {
         if (i == 4325) {
             anInt7198++;
-            this.aByteArray7154[this.anInt7197++] = (byte) (i_24_ - -128);
-            this.aByteArray7154[this.anInt7197++] = (byte) (i_24_ >> 8);
+            this.payload[this.offset++] = (byte) (i_24_ - -128);
+            this.payload[this.offset++] = (byte) (i_24_ >> 8);
         }
     }
 
-    final void method3350(int i, boolean bool, int[] is, int i_25_) {
+    final void xteaEncrypt(int i, boolean bool, int[] is, int i_25_) {
         anInt7137++;
-        int i_26_ = this.anInt7197;
-        this.anInt7197 = i;
+        int i_26_ = this.offset;
+        this.offset = i;
         int i_27_ = (-i + i_25_) / 8;
         for (int i_28_ = 0; i_27_ > i_28_; i_28_++) {
             int i_29_ = readInt((byte) -126);
@@ -262,35 +264,35 @@ class Buffer extends Node {
                 i_31_ += i_32_;
                 i_30_ += (i_31_ - -is[(0x1a0b & i_31_) >>> 11] ^ i_29_ + (i_29_ >>> 5 ^ i_29_ << 4));
             }
-            this.anInt7197 -= 8;
+            this.offset -= 8;
             writeInt((byte) 91, i_29_);
             writeInt((byte) 98, i_30_);
         }
         if (bool != true) method3394(88, 83);
-        this.anInt7197 = i_26_;
+        this.offset = i_26_;
     }
 
     final int readMedium(int i) {
-        this.anInt7197 += 3;
+        this.offset += 3;
         anInt7203++;
         if (i != -1) return -52;
-        return ((0xff00 & (this.aByteArray7154[-2 + this.anInt7197]) << 8) + ((((this.aByteArray7154[-3 + this.anInt7197]) & 0xff) << 16) - -((this.aByteArray7154[-1 + this.anInt7197]) & 0xff)));
+        return ((0xff00 & (this.payload[-2 + this.offset]) << 8) + ((((this.payload[-3 + this.offset]) & 0xff) << 16) - -((this.payload[-1 + this.offset]) & 0xff)));
     }
 
-    final boolean method3352(int i) {
+    final boolean checkCrc(int i) {
         anInt7168++;
-        this.anInt7197 -= 4;
-        if (i != -25541) method3369((byte) 56);
-        int i_34_ = Component382.method1319(this.anInt7197, true, this.aByteArray7154, 0);
+        this.offset -= 4;
+        if (i != -25541) readSignedMedium((byte) 56);
+        int i_34_ = Component382.method1319(this.offset, true, this.payload, 0);
         int i_35_ = readInt((byte) -126);
         return i_35_ == i_34_;
     }
 
     final void writeShortLittle(int i, byte i_36_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) i;
-        if (i_36_ != 3) this.aByteArray7154 = null;
+        this.payload[this.offset++] = (byte) i;
+        if (i_36_ != 3) this.payload = null;
         anInt7151++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 8);
+        this.payload[this.offset++] = (byte) (i >> 8);
     }
 
     static final void method3354(int i) {
@@ -306,26 +308,26 @@ class Buffer extends Node {
     final int readShortAdd(int i) {
         anInt7158++;
         int i_38_ = -108 / ((i - 73) / 50);
-        this.anInt7197 += 2;
-        return (((this.aByteArray7154[-2 + this.anInt7197]) << 8 & 0xff00) - -(0xff & -128 + (this.aByteArray7154[this.anInt7197 + -1])));
+        this.offset += 2;
+        return (((this.payload[-2 + this.offset]) << 8 & 0xff00) - -(0xff & -128 + (this.payload[this.offset + -1])));
     }
 
     final void writeIntInverseMiddle(int i, int i_39_) {
         anInt7190++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 16);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 24);
-        this.aByteArray7154[this.anInt7197++] = (byte) i;
+        this.payload[this.offset++] = (byte) (i >> 16);
+        this.payload[this.offset++] = (byte) (i >> 24);
+        this.payload[this.offset++] = (byte) i;
         if (i_39_ != -4086) readShort(24);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i >> 8);
+        this.payload[this.offset++] = (byte) (i >> 8);
     }
 
-    final void method3357(int i, long l, byte i_40_) {
+    final void writeLongVar(int i, long l, byte i_40_) {
         try {
             anInt7193++;
             if (--i < 0 || i > 7) throw new IllegalArgumentException();
             int i_41_ = 101 % ((-11 - i_40_) / 49);
             for (int i_42_ = 8 * i; i_42_ >= 0; i_42_ -= 8)
-                this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> i_42_);
+                this.payload[this.offset++] = (byte) (int) (l >> i_42_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("cea.JB(" + i + ',' + l + ',' + i_40_ + ')'));
         }
@@ -333,51 +335,51 @@ class Buffer extends Node {
 
     final int readShortAddLittle(int i) {
         anInt7181++;
-        if (i > -105) this.aByteArray7154 = null;
-        this.anInt7197 += 2;
-        return (((this.aByteArray7154[this.anInt7197 + -2]) - 128 & 0xff) + ((this.aByteArray7154[-1 + this.anInt7197]) << 8 & 0xff00));
+        if (i > -105) this.payload = null;
+        this.offset += 2;
+        return (((this.payload[this.offset + -2]) - 128 & 0xff) + ((this.payload[-1 + this.offset]) << 8 & 0xff00));
     }
 
-    final int method3359(int i) {
+    final int readIntLittleEndian(int i) {
         if (i > -17) aLongArray7206 = null;
         anInt7188++;
-        this.anInt7197 += 4;
-        return (((this.aByteArray7154[-3 + this.anInt7197]) << 8 & 0xff00) + ((this.aByteArray7154[this.anInt7197 - 1]) << 24 & ~0xffffff) + (((0xff & (this.aByteArray7154[this.anInt7197 + -2])) << 16) + ((this.aByteArray7154[-4 + this.anInt7197]) & 0xff)));
+        this.offset += 4;
+        return (((this.payload[-3 + this.offset]) << 8 & 0xff00) + ((this.payload[this.offset - 1]) << 24 & ~0xffffff) + (((0xff & (this.payload[this.offset + -2])) << 16) + ((this.payload[-4 + this.offset]) & 0xff)));
     }
 
-    final void method3360(byte i) {
-        if (this.aByteArray7154 != null) NameFormatter.method357(0, this.aByteArray7154);
+    final void release(byte i) {
+        if (this.payload != null) NameFormatter.method357(0, this.payload);
         anInt7177++;
-        this.aByteArray7154 = null;
-        if (i != -69) method3344(-115, true);
+        this.payload = null;
+        if (i != -69) writeCrc(-115, true);
     }
 
     final byte readByteInverse(int i) {
         anInt7150++;
         if (i != -622951480) aClass223_7175 = null;
-        return (byte) -(this.aByteArray7154[this.anInt7197++]);
+        return (byte) -(this.payload[this.offset++]);
     }
 
-    final int method3362(byte i) {
+    final int readSmartSigned(byte i) {
         anInt7155++;
-        int i_43_ = ((this.aByteArray7154[this.anInt7197]) & 0xff);
+        int i_43_ = ((this.payload[this.offset]) & 0xff);
         if (i != 77) readByte(-48);
         if (i_43_ < 128) return -64 + readUnsignedByte(255);
         return readUnsignedShort(i ^ 0x3235f8b5) - 49152;
     }
 
-    final int method3363(int i) {
-        this.anInt7197 += 3;
+    final int readMediumLittle(int i) {
+        this.offset += 3;
         anInt7144++;
-        if (i != -13309) method3379(94, 83);
-        return (((this.aByteArray7154[this.anInt7197 - 3]) & 0xff) + (((this.aByteArray7154[-2 + this.anInt7197]) << 8 & 0xff00) + ((this.aByteArray7154[-1 + this.anInt7197]) << 16 & 0xff0000)));
+        if (i != -13309) setClientState(94, 83);
+        return (((this.payload[this.offset - 3]) & 0xff) + (((this.payload[-2 + this.offset]) << 8 & 0xff00) + ((this.payload[-1 + this.offset]) << 16 & 0xff0000)));
     }
 
     final int readIntLittle(byte i) {
-        if (i > -117) this.anInt7197 = 61;
-        this.anInt7197 += 4;
+        if (i > -117) this.offset = 61;
+        this.offset += 4;
         anInt7167++;
-        return ((0xff & (this.aByteArray7154[this.anInt7197 - 4])) + (((0xff & (this.aByteArray7154[-3 + this.anInt7197])) << 8) + (~0xffffff & ((this.aByteArray7154[this.anInt7197 - 1]) << 24)) + (((this.aByteArray7154[this.anInt7197 - 2]) & 0xff) << 16)));
+        return ((0xff & (this.payload[this.offset - 4])) + (((0xff & (this.payload[-3 + this.offset])) << 8) + (~0xffffff & ((this.payload[this.offset - 1]) << 24)) + (((this.payload[this.offset - 2]) & 0xff) << 16)));
     }
 
     final long readLong(int i) {
@@ -388,20 +390,20 @@ class Buffer extends Node {
         return l_44_ + (l << 32);
     }
 
-    final int method3366(byte i) {
+    final int readVarInt(byte i) {
         anInt7170++;
-        int i_45_ = (this.aByteArray7154[this.anInt7197++]);
+        int i_45_ = (this.payload[this.offset++]);
         int i_46_ = 0;
         if (i < 23) return -99;
-        for (/**/; i_45_ < 0; i_45_ = (this.aByteArray7154[this.anInt7197++]))
+        for (/**/; i_45_ < 0; i_45_ = (this.payload[this.offset++]))
             i_46_ = (0x7f & i_45_ | i_46_) << 7;
         return i_46_ | i_45_;
     }
 
-    final void method3367(int i, int[] is, int i_47_, int i_48_) {
+    final void xteaDecrypt(int i, int[] is, int i_47_, int i_48_) {
         anInt7178++;
-        int i_49_ = this.anInt7197;
-        this.anInt7197 = i_47_;
+        int i_49_ = this.offset;
+        this.offset = i_47_;
         int i_50_ = (i_48_ + -i_47_) / 8;
         for (int i_51_ = 0; i_50_ > i_51_; i_51_++) {
             int i_52_ = readInt((byte) -126);
@@ -414,14 +416,14 @@ class Buffer extends Node {
                 i_54_ -= i_55_;
                 i_52_ -= (i_54_ - -is[i_54_ & 0x3] ^ (i_53_ << 4 ^ i_53_ >>> 5) - -i_53_);
             }
-            this.anInt7197 -= 8;
+            this.offset -= 8;
             writeInt((byte) 113, i_52_);
             writeInt((byte) 126, i_53_);
         }
-        if (i == 607818341) this.anInt7197 = i_49_;
+        if (i == 607818341) this.offset = i_49_;
     }
 
-    final long method3368(int i, int i_57_) {
+    final long readLongVar(int i, int i_57_) {
         i--;
         anInt7191++;
         if (i < 0 || i > 7) throw new IllegalArgumentException();
@@ -429,15 +431,15 @@ class Buffer extends Node {
         int i_58_ = 8 * i;
         long l = 0L;
         for (/**/; i_58_ >= 0; i_58_ -= 8)
-            l |= ((long) (this.aByteArray7154[this.anInt7197++]) & 0xffL) << i_58_;
+            l |= ((long) (this.payload[this.offset++]) & 0xffL) << i_58_;
         return l;
     }
 
-    final int method3369(byte i) {
+    final int readSignedMedium(byte i) {
         if (i != 125) return 100;
         anInt7139++;
-        this.anInt7197 += 3;
-        int i_59_ = (((this.aByteArray7154[this.anInt7197 - 1]) & 0xff) + ((0xff0000 & ((this.aByteArray7154[this.anInt7197 + -3]) << 16)) + ((0xff & (this.aByteArray7154[this.anInt7197 + -2])) << 8)));
+        this.offset += 3;
+        int i_59_ = (((this.payload[this.offset - 1]) & 0xff) + ((0xff0000 & ((this.payload[this.offset + -3]) << 16)) + ((0xff & (this.payload[this.offset + -2])) << 8)));
         if (i_59_ > 8388607) i_59_ -= 16777216;
         return i_59_;
     }
@@ -445,28 +447,28 @@ class Buffer extends Node {
     final void writeByteSubtract(byte i, int i_60_) {
         int i_61_ = -4 % ((-35 - i) / 33);
         anInt7142++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (-i_60_ + 128);
+        this.payload[this.offset++] = (byte) (-i_60_ + 128);
     }
 
-    final String method3371(int i) {
+    final String readGjstr2(int i) {
         anInt7152++;
-        byte i_62_ = (this.aByteArray7154[this.anInt7197++]);
+        byte i_62_ = (this.payload[this.offset++]);
         if (i_62_ != 0) throw new IllegalStateException("Bad version number in gjstr2");
-        int i_63_ = this.anInt7197;
-        while ((this.aByteArray7154[this.anInt7197++]) != 0) {
+        int i_63_ = this.offset;
+        while ((this.payload[this.offset++]) != 0) {
             /* empty */
         }
-        int i_64_ = this.anInt7197 - (i_63_ + 1);
+        int i_64_ = this.offset - (i_63_ + 1);
         if (i != -13487) writeInt((byte) 10, -125);
         if (i_64_ == 0) return "";
-        return WaterShaderSub8.method3546(this.aByteArray7154, 0, i_64_, i_63_);
+        return WaterShaderSub8.method3546(this.payload, 0, i_64_, i_63_);
     }
 
     final int readShort(int i) {
         anInt7204++;
-        if (i != 13638) method3350(-23, true, null, -10);
-        this.anInt7197 += 2;
-        int i_65_ = (((this.aByteArray7154[this.anInt7197 - 1]) & 0xff) + (((this.aByteArray7154[-2 + this.anInt7197]) & 0xff) << 8));
+        if (i != 13638) xteaEncrypt(-23, true, null, -10);
+        this.offset += 2;
+        int i_65_ = (((this.payload[this.offset - 1]) & 0xff) + (((this.payload[-2 + this.offset]) & 0xff) << 8));
         if (i_65_ > 32767) i_65_ -= 65536;
         return i_65_;
     }
@@ -474,20 +476,20 @@ class Buffer extends Node {
     final int readShortLittle(boolean bool) {
         if (bool != false) return 113;
         anInt7171++;
-        this.anInt7197 += 2;
-        return ((0xff00 & (this.aByteArray7154[this.anInt7197 - 1]) << 8) + ((this.aByteArray7154[-2 + this.anInt7197]) & 0xff));
+        this.offset += 2;
+        return ((0xff00 & (this.payload[this.offset - 1]) << 8) + ((this.payload[-2 + this.offset]) & 0xff));
     }
 
     final void writeByteInverse(byte i, int i_66_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) -i_66_;
-        if (i >= -27) this.aByteArray7154 = null;
+        this.payload[this.offset++] = (byte) -i_66_;
+        if (i >= -27) this.payload = null;
         anInt7140++;
     }
 
     final int method3375(byte i) {
         anInt7187++;
-        this.anInt7197 += 2;
-        int i_67_ = ((0xff & -128 + (this.aByteArray7154[this.anInt7197 - 1])) + (((this.aByteArray7154[-2 + this.anInt7197]) & 0xff) << 8));
+        this.offset += 2;
+        int i_67_ = ((0xff & -128 + (this.payload[this.offset - 1])) + (((this.payload[-2 + this.offset]) & 0xff) << 8));
         if (i != 84) return 85;
         if (i_67_ > 32767) i_67_ -= 65536;
         return i_67_;
@@ -502,46 +504,46 @@ class Buffer extends Node {
     final String readString(byte i) {
         anInt7166++;
         int i_68_ = -81 / ((i - 30) / 52);
-        int i_69_ = this.anInt7197;
-        while ((this.aByteArray7154[this.anInt7197++]) != 0) {
+        int i_69_ = this.offset;
+        while ((this.payload[this.offset++]) != 0) {
             /* empty */
         }
-        int i_70_ = -1 + this.anInt7197 - i_69_;
+        int i_70_ = -1 + this.offset - i_69_;
         if (i_70_ == 0) return "";
-        return WaterShaderSub8.method3546(this.aByteArray7154, 0, i_70_, i_69_);
+        return WaterShaderSub8.method3546(this.payload, 0, i_70_, i_69_);
     }
 
     final void writeByte(boolean bool, int i) {
         anInt7160++;
-        this.aByteArray7154[this.anInt7197++] = (byte) i;
-        if (bool != false) this.anInt7197 = -121;
+        this.payload[this.offset++] = (byte) i;
+        if (bool != false) this.offset = -121;
     }
 
-    static final void method3379(int i, int i_71_) {
+    static final void setClientState(int i, int i_71_) {
         anInt7201++;
         if (i_71_ != Component49.clientState) {
             if (i_71_ == 13) {
                 if (OggStreamReader.aString9043 != null) MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -81);
-                else Component193.method1922(DisplayModeManagerContainer51.aString2496, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.aString5600, true);
+                else Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             }
             if (i_71_ != 13 && NumberFormatter.aClass238_2773 != null) {
-                NumberFormatter.aClass238_2773.method1700((byte) 36);
+                NumberFormatter.aClass238_2773.close((byte) 36);
                 NumberFormatter.aClass238_2773 = null;
             }
             if (i_71_ == 3) CacheNode.method3198((DebugPanic.anInt4737 != r.anInt9721), (byte) -45);
             if (i_71_ == 7) HashTable.method1006((r.anInt9721 != Component285.anInt970), (byte) 102);
             if (i_71_ == 5) {
-                if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.aString5600, DisplayModeManagerContainer51.aString2496, -124);
+                if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -124);
                 else Component280.method1372(-1);
             } else if (i_71_ != 6) {
                 if (i_71_ == 9) {
                     if (OggStreamReader.aString9043 != null) MenuOpener.method1157((RuntimeException_Sub1.anInt4596), (byte) -120);
-                    else Component193.method1922(DisplayModeManagerContainer51.aString2496, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.aString5600, true);
+                    else Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
                 } else if (i_71_ == 12) {
-                    if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.aString5600, DisplayModeManagerContainer51.aString2496, -98);
+                    if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -98);
                     else Component280.method1372(-1);
                 }
-            } else if (OggStreamReader.aString9043 == null) Component193.method1922(DisplayModeManagerContainer51.aString2496, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.aString5600, true);
+            } else if (OggStreamReader.aString9043 == null) Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             else MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -99);
             if (Component212.method2402(Component49.clientState, (byte) -78)) {
                 Component181.aClass45_1541.anInt634 = 2;
@@ -583,7 +585,7 @@ class Buffer extends Node {
                     HardwareProbe.aClass248_6601.method1892(i ^ ~0x4b, true);
                 }
             }
-            if (Component212.method2402(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.aHa6654.method3673();
+            if (Component212.method2402(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.method3673();
             Component49.clientState = i_71_;
             // After state settles: restore/auto-login on title (once per session).
             if (i_71_ == 3) {
@@ -596,12 +598,12 @@ class Buffer extends Node {
 
     final void writeBytes(int i, int i_73_, byte[] is, int i_74_) {
         for (int i_75_ = i_73_; i_73_ + i > i_75_; i_75_++)
-            this.aByteArray7154[this.anInt7197++] = is[i_75_];
+            this.payload[this.offset++] = is[i_75_];
         int i_76_ = -41 % ((8 - i_74_) / 52);
         anInt7199++;
     }
 
-    final void method3381(int i, int i_77_) {
+    final void writeSmart(int i, int i_77_) {
         anInt7180++;
         if (i_77_ >= 0 && i_77_ < 128) writeByte(false, i_77_);
         else if (i_77_ >= 0 && i_77_ < 32768) writeShort((byte) 107, i_77_ + 32768);
@@ -611,23 +613,23 @@ class Buffer extends Node {
     final int readSmart(int i) {
         if (i > -116) return -4;
         anInt7176++;
-        int i_78_ = 0xff & (this.aByteArray7154[this.anInt7197]);
+        int i_78_ = 0xff & (this.payload[this.offset]);
         if (i_78_ < 128) return readUnsignedByte(255);
         return readUnsignedShort(842397944) + -32768;
     }
 
-    final void method3383(int i, int i_79_) {
+    final void writeLengthShort(int i, int i_79_) {
         anInt7157++;
-        this.aByteArray7154[-2 + -i_79_ + this.anInt7197] = (byte) (i_79_ >> 8);
-        if (i != 1809639944) method3350(93, true, null, -39);
-        this.aByteArray7154[this.anInt7197 - i_79_ + -1] = (byte) i_79_;
+        this.payload[-2 + -i_79_ + this.offset] = (byte) (i_79_ >> 8);
+        if (i != 1809639944) xteaEncrypt(93, true, null, -39);
+        this.payload[this.offset - i_79_ + -1] = (byte) i_79_;
     }
 
-    final String method3384(int i) {
+    final String readStringOrNull(int i) {
         anInt7205++;
         if (i <= 105) aLongArray7206 = null;
-        if ((this.aByteArray7154[this.anInt7197]) == 0) {
-            this.anInt7197++;
+        if ((this.payload[this.offset]) == 0) {
+            this.offset++;
             return null;
         }
         return readString((byte) 92);
@@ -635,52 +637,52 @@ class Buffer extends Node {
 
     final int readInt(byte i) {
         anInt7196++;
-        this.anInt7197 += 4;
-        if (i != -126) method3368(-61, -64);
-        return ((0xff & (this.aByteArray7154[this.anInt7197 - 1])) + ((((this.aByteArray7154[-4 + this.anInt7197]) & 0xff) << 24) + (0xff0000 & ((this.aByteArray7154[-3 + this.anInt7197]) << 16))) - -(((this.aByteArray7154[-2 + this.anInt7197]) & 0xff) << 8));
+        this.offset += 4;
+        if (i != -126) readLongVar(-61, -64);
+        return ((0xff & (this.payload[this.offset - 1])) + ((((this.payload[-4 + this.offset]) & 0xff) << 24) + (0xff0000 & ((this.payload[-3 + this.offset]) << 16))) - -(((this.payload[-2 + this.offset]) & 0xff) << 8));
     }
 
-    final void method3386(String string, int i) {
+    final void writeGjstr2(String string, int i) {
         anInt7182++;
         int i_80_ = -21 % ((42 - i) / 52);
         int i_81_ = string.indexOf('\0');
         if (i_81_ >= 0) throw new IllegalArgumentException("NUL character at " + i_81_ + " - cannot pjstr2");
-        this.aByteArray7154[this.anInt7197++] = (byte) 0;
-        this.anInt7197 += HashNodeSub16.method3255(0, (this.aByteArray7154), string.length(), false, string, (this.anInt7197));
-        this.aByteArray7154[this.anInt7197++] = (byte) 0;
+        this.payload[this.offset++] = (byte) 0;
+        this.offset += HashNodeSub16.method3255(0, (this.payload), string.length(), false, string, (this.offset));
+        this.payload[this.offset++] = (byte) 0;
     }
 
     final int readUnsignedByte(int i) {
         if (i != 255) writeBytes(-101, 111, null, 33);
         anInt7153++;
-        return ((this.aByteArray7154[this.anInt7197++]) & 0xff);
+        return ((this.payload[this.offset++]) & 0xff);
     }
 
     final byte readByte(int i) {
         if (i >= -75) writeByteAdd((byte) -18, -24);
         anInt7143++;
-        return (this.aByteArray7154[this.anInt7197++]);
+        return (this.payload[this.offset++]);
     }
 
-    final void method3389(int i, int i_82_, int i_83_, byte[] is) {
+    final void readBytes(int i, int i_82_, int i_83_, byte[] is) {
         anInt7159++;
         for (int i_84_ = i_82_; i_83_ + i_82_ > i_84_; i_84_++)
-            is[i_84_] = (this.aByteArray7154[this.anInt7197++]);
+            is[i_84_] = (this.payload[this.offset++]);
         if (i != 2147483647) anInt7207 = -47;
     }
 
-    final void method3390(BigInteger biginteger, byte i, BigInteger biginteger_85_) {
+    final void applyRsa(BigInteger biginteger, byte i, BigInteger biginteger_85_) {
         try {
             anInt7147++;
-            int i_86_ = this.anInt7197;
-            this.anInt7197 = 0;
+            int i_86_ = this.offset;
+            this.offset = 0;
             byte[] is = new byte[i_86_];
-            method3389(2147483647, 0, i_86_, is);
+            readBytes(2147483647, 0, i_86_, is);
             if (i >= -33) method3354(-73);
             BigInteger biginteger_87_ = new BigInteger(is);
             BigInteger biginteger_88_ = biginteger_87_.modPow(biginteger_85_, biginteger);
             byte[] is_89_ = biginteger_88_.toByteArray();
-            this.anInt7197 = 0;
+            this.offset = 0;
             writeShort((byte) 107, is_89_.length);
             writeBytes(is_89_.length, 0, is_89_, 85);
         } catch (RuntimeException runtimeexception) {
@@ -689,26 +691,26 @@ class Buffer extends Node {
     }
 
     final void writeInt(byte i, int i_90_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_90_ >> 24);
+        this.payload[this.offset++] = (byte) (i_90_ >> 24);
         if (i < 84) writeByteAdd((byte) -122, -112);
         anInt7202++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_90_ >> 16);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_90_ >> 8);
-        this.aByteArray7154[this.anInt7197++] = (byte) i_90_;
+        this.payload[this.offset++] = (byte) (i_90_ >> 16);
+        this.payload[this.offset++] = (byte) (i_90_ >> 8);
+        this.payload[this.offset++] = (byte) i_90_;
     }
 
     final void writeLong(long l, byte i) {
         try {
             int i_91_ = -16 % ((i - -5) / 52);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 56);
+            this.payload[this.offset++] = (byte) (int) (l >> 56);
             anInt7209++;
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 48);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 40);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 32);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 24);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 16);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) (l >> 8);
-            this.aByteArray7154[this.anInt7197++] = (byte) (int) l;
+            this.payload[this.offset++] = (byte) (int) (l >> 48);
+            this.payload[this.offset++] = (byte) (int) (l >> 40);
+            this.payload[this.offset++] = (byte) (int) (l >> 32);
+            this.payload[this.offset++] = (byte) (int) (l >> 24);
+            this.payload[this.offset++] = (byte) (int) (l >> 16);
+            this.payload[this.offset++] = (byte) (int) (l >> 8);
+            this.payload[this.offset++] = (byte) (int) l;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "cea.BB(" + l + ',' + i + ')');
         }
@@ -717,31 +719,31 @@ class Buffer extends Node {
     final int readByteAdd(byte i) {
         anInt7169++;
         int i_92_ = 18 / ((-28 - i) / 40);
-        return ((this.aByteArray7154[this.anInt7197++]) - 128 & 0xff);
+        return ((this.payload[this.offset++]) - 128 & 0xff);
     }
 
     Buffer(int i) {
-        this.anInt7197 = 0;
-        this.aByteArray7154 = NameFormatter.method359(i, -1);
+        this.offset = 0;
+        this.payload = NameFormatter.method359(i, -1);
     }
 
     final void method3394(int i, int i_93_) {
-        this.aByteArray7154[this.anInt7197++] = (byte) i_93_;
+        this.payload[this.offset++] = (byte) i_93_;
         anInt7141++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_93_ >> 8);
+        this.payload[this.offset++] = (byte) (i_93_ >> 8);
         if (i == -23892) {
-            this.aByteArray7154[this.anInt7197++] = (byte) (i_93_ >> 16);
-            this.aByteArray7154[this.anInt7197++] = (byte) (i_93_ >> 24);
+            this.payload[this.offset++] = (byte) (i_93_ >> 16);
+            this.payload[this.offset++] = (byte) (i_93_ >> 24);
         }
     }
 
     final void writeByteAdd(byte i, int i_94_) {
         anInt7192++;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_94_ + 128);
+        this.payload[this.offset++] = (byte) (i_94_ + 128);
         int i_95_ = -21 % ((-8 - i) / 57);
     }
 
-    final void method3396(int i, int i_96_) {
+    final void writeVarInt(int i, int i_96_) {
         if (i_96_ > -5) aClass223_7175 = null;
         anInt7146++;
         if ((i & ~0x7f) != 0) {
@@ -759,13 +761,13 @@ class Buffer extends Node {
 
     final void method3397(int i, int i_97_) {
         anInt7189++;
-        this.aByteArray7154[this.anInt7197++] = (byte) i_97_;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_97_ >> 8);
+        this.payload[this.offset++] = (byte) i_97_;
+        this.payload[this.offset++] = (byte) (i_97_ >> 8);
         if (i < 22) readUnsignedByte(6);
     }
 
     Buffer(byte[] is) {
-        this.aByteArray7154 = is;
-        this.anInt7197 = 0;
+        this.payload = is;
+        this.offset = 0;
     }
 }

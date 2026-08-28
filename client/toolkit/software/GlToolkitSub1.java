@@ -338,13 +338,13 @@ final class GlToolkitSub1
         if (i_94_ == -1) method3723(i, i_91_, i_92_, i_95_, class318_sub9_sub2.anInt8790, 1);
         else {
             if (anInt7512 != i_94_) {
-                Component24 class105 = (Component24) aClass60_7499.method583(i_94_, 117);
+                Component24 class105 = (Component24) aClass60_7499.get(i_94_, 117);
                 if (class105 == null) {
                     int[] is = method3719(i_94_);
                     if (is != null) {
                         int i_96_ = (method3727(i_94_) ? 64 : this.anInt7501);
                         class105 = this.method3662(i_96_, is, (byte) 94, 0, i_96_, i_96_);
-                        aClass60_7499.method582(class105, i_94_, (byte) -121);
+                        aClass60_7499.putOne(class105, i_94_, (byte) -121);
                     } else return;
                 }
                 anInt7512 = i_94_;
@@ -754,8 +754,8 @@ final class GlToolkitSub1
 
     final void method3701(Canvas canvas) {
         if (aCanvas7468 == canvas) method3677(null);
-        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
-        if (class348_sub31 != null) class348_sub31.method2715((byte) 100);
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
+        if (class348_sub31 != null) class348_sub31.unlink((byte) 100);
     }
 
     final void L(int i, int i_226_, int i_227_) {
@@ -778,10 +778,10 @@ final class GlToolkitSub1
     }
 
     final void method3643(Canvas canvas, int i, int i_232_) {
-        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
         if (class348_sub31 == null) {
             class348_sub31 = Component338.method1035(9029, i_232_, canvas, i);
-            aClass356_7467.method3483((byte) 21, canvas.hashCode(), class348_sub31);
+            aClass356_7467.put((byte) 21, canvas.hashCode(), class348_sub31);
         } else if (class348_sub31.anInt6917 != i || class348_sub31.anInt6920 != i_232_) method3669(canvas, i, i_232_);
     }
 
@@ -1193,13 +1193,13 @@ final class GlToolkitSub1
     final int[] method3718(int i) {
         NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
-            class348_sub25 = (NodeSub25) aClass60_7498.method583(i, 77);
+            class348_sub25 = (NodeSub25) aClass60_7498.get(i, 77);
             if (class348_sub25 == null) {
                 if (!this.aD4579.method4(-7953, i)) return null;
                 Component319 class12 = this.aD4579.method3(i, -6662);
                 int i_354_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
                 class348_sub25 = new NodeSub25(i, i_354_, this.aD4579.method5(true, i, 0.7F, i_354_, i_354_, 71), class12.anInt200 != 1);
-                aClass60_7498.method582(class348_sub25, i, (byte) -122);
+                aClass60_7498.putOne(class348_sub25, i, (byte) -122);
             }
         }
         class348_sub25.aBoolean6882 = true;
@@ -1238,13 +1238,13 @@ final class GlToolkitSub1
     final int[] method3719(int i) {
         NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
-            class348_sub25 = ((NodeSub25) aClass60_7498.method583((long) i | ~0x7fffffffffffffffL, 107));
+            class348_sub25 = ((NodeSub25) aClass60_7498.get((long) i | ~0x7fffffffffffffffL, 107));
             if (class348_sub25 == null) {
                 if (!this.aD4579.method4(-7953, i)) return null;
                 Component319 class12 = this.aD4579.method3(i, -6662);
                 int i_356_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
                 class348_sub25 = new NodeSub25(i, i_356_, this.aD4579.method6(-21540, i_356_, 0.7F, i, true, i_356_), class12.anInt200 != 1);
-                aClass60_7498.method582(class348_sub25, (long) i | ~0x7fffffffffffffffL, (byte) -126);
+                aClass60_7498.putOne(class348_sub25, (long) i | ~0x7fffffffffffffffL, (byte) -126);
             }
         }
         class348_sub25.aBoolean6882 = true;
@@ -1331,13 +1331,13 @@ final class GlToolkitSub1
         if (i_379_ != 0 && i_380_ != 0) {
             if (i_382_ != 65535 && !(this.aD4579.method3(i_382_, -6662).aBoolean209)) {
                 if (anInt7512 != i_382_) {
-                    Component24 class105 = ((Component24) aClass60_7499.method583(i_382_, 97));
+                    Component24 class105 = ((Component24) aClass60_7499.get(i_382_, 97));
                     if (class105 == null) {
                         int[] is = method3719(i_382_);
                         if (is == null) return;
                         int i_386_ = (method3727(i_382_) ? 64 : this.anInt7501);
                         class105 = this.method3662(i_386_, is, (byte) 94, 0, i_386_, i_386_);
-                        aClass60_7499.method582(class105, i_382_, (byte) -100);
+                        aClass60_7499.putOne(class105, i_382_, (byte) -100);
                     }
                     anInt7512 = i_382_;
                     aClass105_7513 = class105;
@@ -1414,7 +1414,7 @@ final class GlToolkitSub1
                 method3717();
             }
         } else {
-            Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
+            Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
             if (class348_sub31 != null) {
                 aCanvas7468 = canvas;
                 Dimension dimension = canvas.getSize();
@@ -1752,7 +1752,7 @@ final class GlToolkitSub1
 
     final void method3630(boolean bool) {
         aBoolean7489 = bool;
-        aClass60_7498.method590(0);
+        aClass60_7498.clear(0);
     }
 
     final void method3650(int i) {
@@ -1943,15 +1943,15 @@ final class GlToolkitSub1
 
     final void method3696(int i) {
         this.anInt7501 = i;
-        aClass60_7498.method590(0);
+        aClass60_7498.clear(0);
     }
 
     final void method3669(Canvas canvas, int i, int i_578_) {
-        Sprite class348_sub31 = ((Sprite) aClass356_7467.method3480(canvas.hashCode(), -6008));
+        Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
         if (class348_sub31 != null) {
-            class348_sub31.method2715((byte) 95);
+            class348_sub31.unlink((byte) 95);
             class348_sub31 = Component338.method1035(9029, i_578_, canvas, i);
-            aClass356_7467.method3483((byte) 112, canvas.hashCode(), class348_sub31);
+            aClass356_7467.put((byte) 112, canvas.hashCode(), class348_sub31);
             if (aCanvas7468 == canvas && aClass49_7475 == null) {
                 Dimension dimension = canvas.getSize();
                 anInt7465 = dimension.width;
@@ -2018,7 +2018,7 @@ final class GlToolkitSub1
             method3659(0);
             Component54.method566(true, true, (byte) -126);
             aBoolean7471 = true;
-            anInt7466 = (int) Component240.method599(-70);
+            anInt7466 = (int) Component240.currentTimeMillis(-70);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
             this.method3635((byte) -98);
@@ -2256,8 +2256,8 @@ final class GlToolkitSub1
             }
         }
         anInt7466 = i;
-        aClass60_7499.method578(2, 5);
-        aClass60_7498.method578(2, 5);
+        aClass60_7499.processSoftEntries(2, 5);
+        aClass60_7498.processSoftEntries(2, 5);
     }
 
     final boolean method3694() {
@@ -2286,8 +2286,8 @@ final class GlToolkitSub1
     }
 
     final void method3663() {
-        aClass60_7498.method590(0);
-        aClass60_7499.method590(0);
+        aClass60_7498.clear(0);
+        aClass60_7499.clear(0);
     }
 
     final int method3679(int i, int i_640_) {

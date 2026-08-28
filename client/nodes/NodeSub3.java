@@ -122,7 +122,7 @@ final class NodeSub3
     }
 
     static final void method2739(int i) {
-        DefinitionSub13.aClass262_9201.method1996(98);
+        DefinitionSub13.aClass262_9201.clear(98);
         anInt6579++;
         NodeSub34.anInt6969 = i;
     }

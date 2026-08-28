@@ -31,9 +31,9 @@ final class DisplayModeManagerContainer368
 
     static final void method465(int i) {
         if (i != -1636518164) anInt5252 = -40;
-        HeapDumpHelper.aClass356_4934.method3481(0);
+        HeapDumpHelper.aClass356_4934.clear(0);
         anInt5251++;
-        Component140.aClass356_10442.method3481(0);
+        Component140.aClass356_10442.clear(0);
     }
 
     /**

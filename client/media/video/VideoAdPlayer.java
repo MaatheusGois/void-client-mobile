@@ -48,7 +48,7 @@ final class VideoAdPlayer implements Interface1 {
         anInt4645++;
         if (Component156.aBoolean3697) {
             try {
-                AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "showVideoAd");
+                AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "showVideoAd");
                 return true;
             } catch (Throwable throwable) {
                 /* empty */
@@ -61,7 +61,7 @@ final class VideoAdPlayer implements Interface1 {
     public final void method7(int i) {
         anInt4647++;
         Component184 class143 = Component98.method1766((byte) -45, aClass158_4646.anInt4944, aClass45_4651);
-        if (i == 10286) aClass324_4649 = (NodeSub8.aHa6654.method3686(class143, Component170.method1523(aClass45_4650, aClass158_4646.anInt4944), true));
+        if (i == 10286) aClass324_4649 = (NodeSub8.toolkit.method3686(class143, Component170.method1523(aClass45_4650, aClass158_4646.anInt4944), true));
     }
 
     VideoAdPlayer(CacheStore class45, CacheStore class45_3_, HeapDumpHelper class158) {

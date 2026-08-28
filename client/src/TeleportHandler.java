@@ -232,7 +232,7 @@ final class TeleportHandler {
                     int i_49_;
                     if (LoadingManager.anInt2173 <= 50) i_49_ = LoadingManager.anInt2173 * 5;
                     else i_49_ = -(5 * LoadingManager.anInt2173) + 500;
-                    for (NodeSub21 class348_sub21 = ((NodeSub21) DisplayModeManagerContainer229.aClass262_1254.method1995(4)); class348_sub21 != null; class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.method1990((byte) 126)) {
+                    for (NodeSub21 class348_sub21 = ((NodeSub21) DisplayModeManagerContainer229.aClass262_1254.first(4)); class348_sub21 != null; class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.next((byte) 126)) {
                         Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 71));
                         if (NodeCache.method589(class42, -4)) {
                             if (DefinitionSub30.anInt9399 == (class348_sub21.anInt6847)) {
@@ -285,7 +285,7 @@ final class TeleportHandler {
         anInt4439++;
         String string = ("tele " + i_62_ + "," + (i_63_ >> 6) + "," + (i >> 6) + "," + (0x3f & i_63_) + "," + (0x3f & i));
         if (i_61_ != 2) method3502(-25, -23, 24, 63);
-        CommandHandler.method812(string, true, false, (byte) -79);
+        CommandHandler.handleCommand(string, true, false, (byte) -79);
     }
 
     final boolean method3503(int i, byte i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_) {

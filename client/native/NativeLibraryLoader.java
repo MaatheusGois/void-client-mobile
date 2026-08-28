@@ -149,7 +149,7 @@ final class NativeLibraryLoader {
             DefinitionSub30.anInt9399 = -1;
         }
         if (Component163.aBoolean3174 && Component156.aClass262_3705 != null) {
-            for (NodeSub12 class348_sub12 = (NodeSub12) Component156.aClass262_3705.method1995(4); class348_sub12 != null; class348_sub12 = ((NodeSub12) Component156.aClass262_3705.method1990((byte) 116))) {
+            for (NodeSub12 class348_sub12 = (NodeSub12) Component156.aClass262_3705.first(4); class348_sub12 != null; class348_sub12 = ((NodeSub12) Component156.aClass262_3705.next((byte) 116))) {
                 Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub12.aClass348_Sub21_6751.anInt6847, (byte) 125));
                 if (class348_sub12.method2799(i_6_, i_7_, 95)) {
                     if (class42.aStringArray577 != null) {

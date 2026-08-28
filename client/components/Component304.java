@@ -30,7 +30,7 @@ final class Component304
     final void method695(boolean bool) {
         if (bool != true) aClass351_1144 = null;
         synchronized (aClass60_1145) {
-            aClass60_1145.method590(0);
+            aClass60_1145.clear(0);
         }
         anInt1139++;
     }
@@ -51,7 +51,7 @@ final class Component304
         if (i_3_ == 26) {
             anInt1142++;
             synchronized (aClass60_1145) {
-                aClass60_1145.method578(i_3_ ^ 0x18, i);
+                aClass60_1145.processSoftEntries(i_3_ ^ 0x18, i);
             }
         }
     }
@@ -82,7 +82,7 @@ final class Component304
         int i_9_ = -128 / ((-3 - i_8_) / 49);
         HashNodeSub1 class348_sub42_sub1;
         synchronized (aClass60_1145) {
-            class348_sub42_sub1 = (HashNodeSub1) aClass60_1145.method583(i, -101);
+            class348_sub42_sub1 = (HashNodeSub1) aClass60_1145.get(i, -101);
         }
         if (class348_sub42_sub1 != null) return class348_sub42_sub1;
         byte[] is;
@@ -92,7 +92,7 @@ final class Component304
         class348_sub42_sub1 = new HashNodeSub1();
         if (is != null) class348_sub42_sub1.method3168(new Buffer(is), (byte) -101);
         synchronized (aClass60_1145) {
-            aClass60_1145.method582(class348_sub42_sub1, i, (byte) -114);
+            aClass60_1145.putOne(class348_sub42_sub1, i, (byte) -114);
         }
         return class348_sub42_sub1;
     }

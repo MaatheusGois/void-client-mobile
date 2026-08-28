@@ -187,13 +187,13 @@ final class ColoredText extends Component339 {
                                 int i_35_ = (player.x - (-1 + player.method2436((byte) 82) << 8));
                                 int i_36_ = (player.y + -(-1 + player.method2436((byte) 105) << 8));
                                 for (int i_37_ = 0; (Component324.anInt2057 > i_37_); i_37_++) {
-                                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(DisplayModeManagerContainer238.anIntArray1233[i_37_], -6008)));
+                                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_37_], -6008)));
                                     if (class348_sub22 != null) {
-                                        Npc npc = (class348_sub22.aNpc_6859);
+                                        Npc npc = (class348_sub22.npc);
                                         if ((OpenGlShader.clientCycle != (npc.anInt10215)) && (npc.aBoolean10309)) {
-                                            int i_38_ = ((npc.x) - ((npc.aClass79_10505.anInt1399) + -1 << 8));
-                                            int i_39_ = (-((-1 + (npc.aClass79_10505.anInt1399)) << 8) + (npc.y));
-                                            if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.method2436((byte) 68))) >= (npc.aClass79_10505.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.method2436((byte) 97))) >= (npc.aClass79_10505.anInt1399))) {
+                                            int i_38_ = ((npc.x) - ((npc.definition.anInt1399) + -1 << 8));
+                                            int i_39_ = (-((-1 + (npc.definition.anInt1399)) << 8) + (npc.y));
+                                            if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.method2436((byte) 68))) >= (npc.definition.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.method2436((byte) 97))) >= (npc.definition.anInt1399))) {
                                                 ParticleShader.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc);
                                                 npc.anInt10215 = OpenGlShader.clientCycle;
                                             }
@@ -203,7 +203,7 @@ final class ColoredText extends Component339 {
                                 int i_40_ = ShaderCompilerSub1.anInt6513;
                                 int[] is = ShaderProgramSub7.anIntArray6290;
                                 for (int i_41_ = 0; (i_40_ > i_41_); i_41_++) {
-                                    Player player_42_ = (InterfaceRenderer.aPlayerArray5058[is[i_41_]]);
+                                    Player player_42_ = (InterfaceRenderer.players[is[i_41_]]);
                                     if ((player_42_ != null) && (OpenGlShader.clientCycle != (player_42_.anInt10215)) && (player != player_42_) && (player_42_.aBoolean10309)) {
                                         int i_43_ = ((player_42_.x) + -((player_42_.method2436((byte) 94) - 1) << 8));
                                         int i_44_ = ((player_42_.y) + -((-1 + (player_42_.method2436((byte) 82))) << 8));
@@ -220,18 +220,18 @@ final class ColoredText extends Component339 {
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Npc) {
                             Npc npc = ((Npc) (class318_sub4.aClass318_Sub1_6410));
-                            if (npc.aClass79_10505 != null) {
-                                if (((npc.aClass79_10505.anInt1399 & 0x1) == 0 && (0x1ff & (npc.x)) == 0 && (0x1ff & (npc.y)) == 0) || ((0x1 & npc.aClass79_10505.anInt1399) == 1 && (0x1ff & (npc.x)) == 256 && ((npc.y) & 0x1ff) == 256)) {
-                                    int i_45_ = ((npc.x) - ((-1 + npc.aClass79_10505.anInt1399) << 8));
-                                    int i_46_ = ((npc.y) - (npc.aClass79_10505.anInt1399 - 1 << 8));
+                            if (npc.definition != null) {
+                                if (((npc.definition.anInt1399 & 0x1) == 0 && (0x1ff & (npc.x)) == 0 && (0x1ff & (npc.y)) == 0) || ((0x1 & npc.definition.anInt1399) == 1 && (0x1ff & (npc.x)) == 256 && ((npc.y) & 0x1ff) == 256)) {
+                                    int i_45_ = ((npc.x) - ((-1 + npc.definition.anInt1399) << 8));
+                                    int i_46_ = ((npc.y) - (npc.definition.anInt1399 - 1 << 8));
                                     for (int i_47_ = 0; i_47_ < Component324.anInt2057; i_47_++) {
-                                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(DisplayModeManagerContainer238.anIntArray1233[i_47_], -6008)));
+                                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_47_], -6008)));
                                         if (class348_sub22 != null) {
-                                            Npc npc_48_ = (class348_sub22.aNpc_6859);
+                                            Npc npc_48_ = (class348_sub22.npc);
                                             if (((npc_48_.anInt10215) != OpenGlShader.clientCycle) && (npc != npc_48_) && (npc_48_.aBoolean10309)) {
-                                                int i_49_ = (-((npc_48_.aClass79_10505.anInt1399) - 1 << 8) + (npc_48_.x));
-                                                int i_50_ = ((npc_48_.y) + -((npc_48_.aClass79_10505.anInt1399) - 1 << 8));
-                                                if (i_49_ >= i_45_ && ((npc_48_.aClass79_10505.anInt1399) <= ((npc.aClass79_10505.anInt1399) - (-i_45_ + i_49_ >> 9))) && (i_46_ <= i_50_) && ((npc_48_.aClass79_10505.anInt1399) <= ((npc.aClass79_10505.anInt1399) + -(i_50_ + -i_46_ >> 9)))) {
+                                                int i_49_ = (-((npc_48_.definition.anInt1399) - 1 << 8) + (npc_48_.x));
+                                                int i_50_ = ((npc_48_.y) + -((npc_48_.definition.anInt1399) - 1 << 8));
+                                                if (i_49_ >= i_45_ && ((npc_48_.definition.anInt1399) <= ((npc.definition.anInt1399) - (-i_45_ + i_49_ >> 9))) && (i_46_ <= i_50_) && ((npc_48_.definition.anInt1399) <= ((npc.definition.anInt1399) + -(i_50_ + -i_46_ >> 9)))) {
                                                     ParticleShader.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc_48_);
                                                     npc_48_.anInt10215 = (OpenGlShader.clientCycle);
                                                 }
@@ -241,11 +241,11 @@ final class ColoredText extends Component339 {
                                     int i_51_ = ShaderCompilerSub1.anInt6513;
                                     int[] is = ShaderProgramSub7.anIntArray6290;
                                     for (int i_52_ = 0; (i_51_ > i_52_); i_52_++) {
-                                        Player player = (InterfaceRenderer.aPlayerArray5058[is[i_52_]]);
+                                        Player player = (InterfaceRenderer.players[is[i_52_]]);
                                         if ((player != null) && (OpenGlShader.clientCycle != (player.anInt10215)) && (player.aBoolean10309)) {
                                             int i_53_ = ((player.x) - ((-1 + (player.method2436((byte) 116))) << 8));
                                             int i_54_ = ((player.y) + -((player.method2436((byte) 121)) + -1 << 8));
-                                            if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.aClass79_10505.anInt1399)) >= player.method2436((byte) 114)) && (i_54_ >= i_46_) && (player.method2436((byte) 58) <= ((npc.aClass79_10505.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
+                                            if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.definition.anInt1399)) >= player.method2436((byte) 114)) && (i_54_ >= i_46_) && (player.method2436((byte) 58) <= ((npc.definition.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
                                                 PlayerState.method3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player);
                                                 player.anInt10215 = OpenGlShader.clientCycle;
                                             }
@@ -260,10 +260,10 @@ final class ColoredText extends Component339 {
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Component252) {
                             int i_55_ = NodeBaseSub2.regionTileX + i_33_;
                             int i_56_ = i_32_ - -Component330.regionTileY;
-                            NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.method3480((class318_sub4.aClass318_Sub1_6410.plane) << 28 | i_56_ << 14 | i_55_, -6008)));
+                            NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.get((class318_sub4.aClass318_Sub1_6410.plane) << 28 | i_56_ << 14 | i_55_, -6008)));
                             if (class348_sub37 != null) {
                                 int i_57_ = 0;
-                                NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1993(-92));
+                                NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.last(-92));
                                 while (class348_sub34 != null) {
                                     NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(79, (class348_sub34.anInt6973)));
                                     if (r.aBoolean9722 && ((Component72.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) {

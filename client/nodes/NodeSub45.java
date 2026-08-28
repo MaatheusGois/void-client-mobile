@@ -27,20 +27,20 @@ abstract class NodeSub45
         GlToolkitSub2.anInt7714 = Component148.anInt3465;
         Cp1252Decoder.aBoolean5226 = false;
         Component335.aClass338Array2034 = new Component103[500];
-        Component325.anInt1200 = 0;
-        RadixText.anInt6115 = 0;
+        Component325.occluderCountB = 0;
+        RadixText.occluderCountA = 0;
         InterfaceRenderer.aClass338Array5060 = new Component103[1000];
         if (i > -113) aClass304_7103 = null;
-        HashNodeSub10.anInt9577 = 0;
+        HashNodeSub10.activeOccluderCount = 0;
         HashNodeSub19.aClass338Array9700 = new Component103[(int) (500 * Loader.RENDER_DISTANCE_MULTIPLIER)];
-        DefinitionSub23.aBoolean9307 = !(JaclibLoader.aHa171 instanceof OpenGLToolkit);
+        DefinitionSub23.aBoolean9307 = !(JaclibLoader.toolkit instanceof OpenGLToolkit);
     }
 
     public NodeSub45() {
         /* empty */
     }
 
-    abstract int method3310(int i);
+    abstract int getEventType(int i);
 
     abstract int method3311(int i);
 

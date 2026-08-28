@@ -68,13 +68,13 @@ final class Component302
         if (DefinitionSub8.aClass238_9165 != null && NodeSub34.anInt6969 > 0) {
             int i_2_ = 0;
             for (; ; ) {
-                ParticleSystem class348_sub47 = (ParticleSystem) DefinitionSub13.aClass262_9201.method1995(i ^ 0x4);
+                ParticleSystem class348_sub47 = (ParticleSystem) DefinitionSub13.aClass262_9201.first(i ^ 0x4);
                 if (class348_sub47 == null) break;
-                DefinitionSub8.aClass238_9165.method1706(0, i ^ 0x77, class348_sub47.anInt7119, (class348_sub47.aClass348_Sub49_Sub2_7116.aByteArray7154));
+                DefinitionSub8.aClass238_9165.writeBytes(0, i ^ 0x77, class348_sub47.anInt7119, (class348_sub47.aClass348_Sub49_Sub2_7116.payload));
                 i_2_ += class348_sub47.anInt7119;
                 NodeSub34.anInt6969 -= class348_sub47.anInt7119;
-                class348_sub47.method2715((byte) 74);
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3360((byte) -69);
+                class348_sub47.unlink((byte) 74);
+                class348_sub47.aClass348_Sub49_Sub2_7116.release((byte) -69);
                 class348_sub47.method3326((byte) -45);
             }
             Component53.anInt193 = 0;

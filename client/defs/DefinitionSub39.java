@@ -50,18 +50,18 @@ final class DefinitionSub39
 
     static final void method3153(int i) {
         anInt9482++;
-        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1011(-49)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 51))) {
+        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-49)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 51))) {
             if (class348_sub42_sub13.anInt9615 > 1) {
                 class348_sub42_sub13.anInt9615 = 0;
-                Component293.aClass60_3301.method582(class348_sub42_sub13, ((MenuEntry) class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063).groupKey, (byte) -108);
-                class348_sub42_sub13.aClass107_9621.method1009(i ^ 0x7dc976c2);
+                Component293.aClass60_3301.putOne(class348_sub42_sub13, ((MenuEntry) class348_sub42_sub13.aClass107_9621.sentinel.next).groupKey, (byte) -108);
+                class348_sub42_sub13.aClass107_9621.clear(i ^ 0x7dc976c2);
             }
         }
         DisplayModeManagerContainer345.anInt166 = 0;
         DisplayModeManagerContainer306.menuEntryCount = i;
-        DefinitionSub4.menuEntries.method1996(125);
-        MenuEntry.aClass356_9603.method3481(0);
-        Component237.aClass107_3022.method1009(2110355138);
+        DefinitionSub4.menuEntries.clear(125);
+        MenuEntry.aClass356_9603.clear(0);
+        Component237.aClass107_3022.clear(2110355138);
         Component364.aBoolean8335 = false;
     }
 

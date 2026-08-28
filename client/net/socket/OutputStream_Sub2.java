@@ -29,7 +29,7 @@ final class OutputStream_Sub2 extends OutputStream {
             RenderableSub4 class318_sub4;
             if (Renderable.aClass243Array3974.length > i && !Renderable.aClass243Array3974[i].method1871((byte) 111)) {
                 class318_sub4 = (RenderableSub4) Renderable.aClass243Array3974[i].method1870(-104);
-                class318_sub4.method2373(false);
+                class318_sub4.unlink(false);
                 Component374.anIntArray4128[i]--;
             } else {
                 class318_sub4 = new RenderableSub4();
@@ -56,10 +56,10 @@ final class OutputStream_Sub2 extends OutputStream {
         if (!Component3.method1197(-12081, (class348_sub42_sub12.opcode))) {
             if (class348_sub42_sub12.itemId == -1) {
                 if (WaterShaderSub8.method3549(class348_sub42_sub12.opcode, (byte) -44)) {
-                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480((int) class348_sub42_sub12.identifier, -6008)));
+                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) class348_sub42_sub12.identifier, -6008)));
                     if (class348_sub22 != null) {
-                        Npc npc = (class348_sub22.aNpc_6859);
-                        DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+                        Npc npc = (class348_sub22.npc);
+                        DisplayModeManagerContainer206 class79 = (npc.definition);
                         if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                         if (class79 != null) is = class79.anIntArray1342;
                     }

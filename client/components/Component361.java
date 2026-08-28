@@ -24,7 +24,7 @@ final class Component361
     final void method299(int i, int i_0_) {
         if (i_0_ != 16) aClass45_366 = null;
         synchronized (aClass60_360) {
-            aClass60_360.method578(2, i);
+            aClass60_360.processSoftEntries(2, i);
         }
         anInt365++;
     }
@@ -33,7 +33,7 @@ final class Component361
         anInt371++;
         int i_1_ = 111 % ((i - -40) / 57);
         synchronized (aClass60_360) {
-            aClass60_360.method590(0);
+            aClass60_360.clear(0);
         }
     }
 
@@ -41,7 +41,7 @@ final class Component361
         anInt361++;
         PauseTimer class38;
         synchronized (aClass60_360) {
-            class38 = (PauseTimer) aClass60_360.method583(i, -91);
+            class38 = (PauseTimer) aClass60_360.get(i, -91);
         }
         if (class38 != null) return class38;
         byte[] is;
@@ -52,7 +52,7 @@ final class Component361
         class38 = new PauseTimer();
         if (is != null) class38.method364(new Buffer(is), (byte) 54);
         synchronized (aClass60_360) {
-            aClass60_360.method582(class38, i, (byte) -109);
+            aClass60_360.putOne(class38, i, (byte) -109);
         }
         return class38;
     }

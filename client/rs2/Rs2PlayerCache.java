@@ -29,7 +29,7 @@ final class Rs2PlayerCache {
         int[] indices = ShaderProgramSub7.anIntArray6290;
         for (int i = 0; i < n && indices != null; i++) {
             try {
-                Player p = InterfaceRenderer.aPlayerArray5058[indices[i]];
+                Player p = InterfaceRenderer.players[indices[i]];
                 if (p != null) {
                     players[count++] = p;
                 }

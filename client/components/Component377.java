@@ -35,10 +35,10 @@ final class Component377
                 ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, DisplayModeManagerContainer109.aClass29_2348.anInt400);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, 0);
-                int i_3_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                int i_3_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, 634);
                 int[] is = Cp1252Decoder.method463(class348_sub47, false);
-                int i_4_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                int i_4_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_1_);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Connection.anInt2670);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
@@ -51,9 +51,9 @@ final class Component377
                 if (string_5_ != null) class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_5_);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, !bool_2_ ? 0 : 1);
-                class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 += 7;
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3350(i_4_, true, is, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197));
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3383(1809639944, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 + -i_3_));
+                class348_sub47.aClass348_Sub49_Sub2_7116.offset += 7;
+                class348_sub47.aClass348_Sub49_Sub2_7116.xteaEncrypt(i_4_, true, is, (class348_sub47.aClass348_Sub49_Sub2_7116.offset));
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthShort(1809639944, (class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_3_));
                 HashNodeSub14.method3243(2, class348_sub47);
                 Component48.anInt4337 = -3;
                 AbstractShaderSub2.anInt7297 = 1;

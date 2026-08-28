@@ -42,11 +42,11 @@ final class Component290
     final void method1285(int i, int i_0_) {
         anInt2189++;
         synchronized (aClass60_2185) {
-            aClass60_2185.method578(2, i);
+            aClass60_2185.processSoftEntries(2, i);
         }
         synchronized (this.aClass60_2190) {
             if (i_0_ != 8) this.aClass45_2180 = null;
-            this.aClass60_2190.method578(i_0_ + -6, i);
+            this.aClass60_2190.processSoftEntries(i_0_ + -6, i);
         }
     }
 
@@ -68,7 +68,7 @@ final class Component290
         anInt2182++;
         Component303 class222;
         synchronized (aClass60_2185) {
-            class222 = (Component303) aClass60_2185.method583(i_1_, i ^ ~0x1d);
+            class222 = (Component303) aClass60_2185.get(i_1_, i ^ ~0x1d);
         }
         if (class222 != null) return class222;
         if (i != -104) this.aClass60_2190 = null;
@@ -80,15 +80,15 @@ final class Component290
         class222.aClass166_2886 = this;
         if (is != null) class222.method1611(new Buffer(is), false);
         synchronized (aClass60_2185) {
-            aClass60_2185.method582(class222, i_1_, (byte) -116);
+            aClass60_2185.putOne(class222, i_1_, (byte) -116);
         }
         return class222;
     }
 
     static final void method1288(int i, int i_2_) {
         anInt2186++;
-        for (Node class348 = Component127.aClass356_2959.method3484(0); class348 != null; class348 = Component127.aClass356_2959.method3482(0)) {
-            if ((class348.aLong4291 >> 48 & 0xffffL) == (long) i_2_) class348.method2715((byte) 119);
+        for (Node class348 = Component127.aClass356_2959.first(0); class348 != null; class348 = Component127.aClass356_2959.next(0)) {
+            if ((class348.key >> 48 & 0xffffL) == (long) i_2_) class348.unlink((byte) 119);
         }
     }
 
@@ -117,10 +117,10 @@ final class Component290
     final void method1290(int i) {
         anInt2184++;
         synchronized (aClass60_2185) {
-            aClass60_2185.method590(0);
+            aClass60_2185.clear(0);
         }
         synchronized (this.aClass60_2190) {
-            this.aClass60_2190.method590(0);
+            this.aClass60_2190.clear(0);
             if (i != -8) aClass114_2183 = null;
         }
     }

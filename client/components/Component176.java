@@ -57,7 +57,7 @@ final class Component176
                 Renderable class318 = aClass315_3743.method2362(25061);
                 if (class318 instanceof RenderableObject) {
                     RenderableObject class318_sub1 = (RenderableObject) class318;
-                    if (class318_sub1.aBoolean6387) class318_sub1.method2387(JaclibLoader.aHa171, -127);
+                    if (class318_sub1.aBoolean6387) class318_sub1.method2387(JaclibLoader.toolkit, -127);
                     else {
                         PauseTimer.method365(class318_sub1, aClass348_Sub1Array3748);
                         if (Component149.aClass324_4456 != null) Component149.aClass324_4456.drawText(aClass315_3743.aString3953, -256, class318_sub1.anInt6380, class318_sub1.anInt6386, -16777216, -114);
@@ -72,7 +72,7 @@ final class Component176
                                     int i_2_ = (Component256.anInt6111 - Component197.anInt10084 + i_0_);
                                     int i_3_ = (DebugPanicSub2.anInt8502 - Component197.anInt10084 + i_1_);
                                     if (i_2_ >= 0 && i_2_ < var_s.anInt4587 && i_3_ >= 0 && i_3_ < var_s.anInt4590) {
-                                        JaclibLoader.aHa171.H(i_2_ << Component149.anInt4459, var_s.method3982((byte) -86, i_3_, i_2_), i_3_ << Component149.anInt4459, anIntArray3747);
+                                        JaclibLoader.toolkit.H(i_2_ << Component149.anInt4459, var_s.method3982((byte) -86, i_3_, i_2_), i_3_ << Component149.anInt4459, anIntArray3747);
                                         if (WaterSurfaceShader.method2154(anIntArray3747[0]) == anInt3749 - 1) var_s.method3979(i_2_, i_3_);
                                     }
                                 }

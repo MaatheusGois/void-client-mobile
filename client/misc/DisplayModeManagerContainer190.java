@@ -309,19 +309,19 @@ final class DisplayModeManagerContainer190
 
     static final void method661(byte i) {
         anInt5466++;
-        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1011(-93)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 46))) {
+        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-93)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 46))) {
             if (class348_sub42_sub13.anInt9615 > 1) {
                 class348_sub42_sub13.anInt9615 = 0;
-                Component293.aClass60_3301.method582(class348_sub42_sub13, ((MenuEntry) class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063).groupKey, (byte) -124);
-                class348_sub42_sub13.aClass107_9621.method1009(2110355138);
+                Component293.aClass60_3301.putOne(class348_sub42_sub13, ((MenuEntry) class348_sub42_sub13.aClass107_9621.sentinel.next).groupKey, (byte) -124);
+                class348_sub42_sub13.aClass107_9621.clear(2110355138);
             }
         }
         DisplayModeManagerContainer345.anInt166 = 0;
         if (i < 92) method661((byte) 114);
         DisplayModeManagerContainer306.menuEntryCount = 0;
-        DefinitionSub4.menuEntries.method1996(115);
-        MenuEntry.aClass356_9603.method3481(0);
-        Component237.aClass107_3022.method1009(2110355138);
+        DefinitionSub4.menuEntries.clear(115);
+        MenuEntry.aClass356_9603.clear(0);
+        Component237.aClass107_3022.clear(2110355138);
         GlToolkitSub2.method3743((byte) 6, ImageDefinition.aMenuEntry_9144);
     }
 

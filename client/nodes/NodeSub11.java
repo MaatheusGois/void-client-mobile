@@ -55,7 +55,7 @@ final class NodeSub11
         for (int i_1_ = 0; (i_1_ < DefinitionSub30.anInt9383); i_1_++) {
             if (string.equalsIgnoreCase(Component178.aStringArray1441[i_1_])) return true;
         }
-        if (string.equalsIgnoreCase(Component72.localPlayer.aString10544)) return true;
+        if (string.equalsIgnoreCase(Component72.localPlayer.username)) return true;
         if (i != -63) return false;
         return false;
     }

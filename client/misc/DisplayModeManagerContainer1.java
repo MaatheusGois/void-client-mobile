@@ -71,7 +71,7 @@ final class DisplayModeManagerContainer1
         anInt3320++;
         Component241 class225;
         synchronized (aClass60_3321) {
-            class225 = (Component241) aClass60_3321.method583(i, 69);
+            class225 = (Component241) aClass60_3321.get(i, 69);
         }
         if (class225 != null) return class225;
         byte[] is;
@@ -81,14 +81,14 @@ final class DisplayModeManagerContainer1
         class225 = new Component241();
         if (is != null) class225.method1620(new Buffer(is), -108);
         synchronized (aClass60_3321) {
-            aClass60_3321.method582(class225, i, (byte) -109);
+            aClass60_3321.putOne(class225, i, (byte) -109);
         }
         return class225;
     }
 
     final void method1984(byte i, int i_10_) {
         synchronized (aClass60_3321) {
-            aClass60_3321.method578(2, i_10_);
+            aClass60_3321.processSoftEntries(2, i_10_);
         }
         anInt3315++;
         if (i < 36) method1980(-32);
@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer1
     final void method1985(int i) {
         anInt3317++;
         synchronized (aClass60_3321) {
-            aClass60_3321.method590(i);
+            aClass60_3321.clear(i);
         }
     }
 
@@ -113,18 +113,18 @@ final class DisplayModeManagerContainer1
         int i_12_ = 81 % ((i - -70) / 35);
         anInt3313++;
         if (!Component364.aBoolean8335) PauseHandler.aBoolean9535 = ((Component9.anInt4143 != -1 && DisplayModeManagerContainer306.menuEntryCount >= Component9.anInt4143) || (PacketReader.anInt10432 < 16 * DisplayModeManagerContainer306.menuEntryCount - -(!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26)));
-        Component290.aClass262_2187.method1996(103);
-        DefinitionSub38.aClass262_9478.method1996(104);
-        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
+        Component290.aClass262_2187.clear(103);
+        DefinitionSub38.aClass262_9478.clear(104);
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {
             int i_13_ = class348_sub42_sub12.opcode;
             if (i_13_ < 1000) {
-                class348_sub42_sub12.method2715((byte) 97);
-                if (i_13_ == 15 || i_13_ == 2 || i_13_ == 30 || i_13_ == 49 || i_13_ == 51 || i_13_ == 50 || i_13_ == 6) DefinitionSub38.aClass262_9478.method1999(class348_sub42_sub12, -20180);
-                else Component290.aClass262_2187.method1999(class348_sub42_sub12, -20180);
+                class348_sub42_sub12.unlink((byte) 97);
+                if (i_13_ == 15 || i_13_ == 2 || i_13_ == 30 || i_13_ == 49 || i_13_ == 51 || i_13_ == 50 || i_13_ == 6) DefinitionSub38.aClass262_9478.addTail(class348_sub42_sub12, -20180);
+                else Component290.aClass262_2187.addTail(class348_sub42_sub12, -20180);
             }
         }
-        Component290.aClass262_2187.method1988(DefinitionSub4.menuEntries, (byte) -115);
-        DefinitionSub38.aClass262_9478.method1988(DefinitionSub4.menuEntries, (byte) -115);
+        Component290.aClass262_2187.transferFrom(DefinitionSub4.menuEntries, (byte) -115);
+        DefinitionSub38.aClass262_9478.transferFrom(DefinitionSub4.menuEntries, (byte) -115);
         MenuEntry swapped = DefaultClickSwapper.applySwaps();
         // Microbot menu-inject: force tip to targetMenu when a script is clicking.
         MenuEntry microTip = MicrobotMenu.applyTargetMenu();
@@ -139,12 +139,12 @@ final class DisplayModeManagerContainer1
                 // Force tip — list front alone loses to Attack priority on some NPCs.
                 Component192.menuTip = swapped;
                 MenuOpener.menuTipSecondary = swapped;
-            } else if (!Component262.shiftClick || !Component280.aClass346_2449.method2696(81, -122) || DisplayModeManagerContainer306.menuEntryCount <= 2) {
-                Component192.menuTip = ((MenuEntry) DefinitionSub4.menuEntries.aClass348_3334.aClass348_4295);
+            } else if (!Component262.shiftClick || !Component280.aClass346_2449.isKeyDown(81, -122) || DisplayModeManagerContainer306.menuEntryCount <= 2) {
+                Component192.menuTip = ((MenuEntry) DefinitionSub4.menuEntries.sentinel.previous);
                 MenuOpener.menuTipSecondary = Component192.menuTip;
             } else {
-                Component192.menuTip = ((MenuEntry) DefinitionSub4.menuEntries.aClass348_3334.aClass348_4295.aClass348_4295);
-                MenuOpener.menuTipSecondary = ((MenuEntry) DefinitionSub4.menuEntries.aClass348_3334.aClass348_4295);
+                Component192.menuTip = ((MenuEntry) DefinitionSub4.menuEntries.sentinel.previous.previous);
+                MenuOpener.menuTipSecondary = ((MenuEntry) DefinitionSub4.menuEntries.sentinel.previous);
             }
         } else {
             Component192.menuTip = null;
@@ -157,8 +157,8 @@ final class DisplayModeManagerContainer1
             return;
         }
         int i_14_ = -1;
-        NodeSub45 class348_sub45 = (NodeSub45) Component327.aClass262_8744.method1995(4);
-        if (class348_sub45 != null) i_14_ = class348_sub45.method3310(58);
+        NodeSub45 class348_sub45 = (NodeSub45) Component327.aClass262_8744.first(4);
+        if (class348_sub45 != null) i_14_ = class348_sub45.getEventType(58);
         if (Component364.aBoolean8335) {
             if (i_14_ == -1) {
                 int i_15_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
@@ -254,7 +254,7 @@ final class DisplayModeManagerContainer1
                             ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
                             for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.method1240(18)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.method1243((byte) 55))) {
                                 if (i_34_ == i_30_) {
-                                    ColoredTextBuilder.processMenuAction((byte) 122, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), i_24_, i_23_);
+                                    ColoredTextBuilder.processMenuAction((byte) 122, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.sentinel.next)), i_24_, i_23_);
                                     ShaderProgramSub2.method2146((byte) 118);
                                     break;
                                 }

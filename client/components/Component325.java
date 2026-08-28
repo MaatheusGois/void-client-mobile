@@ -16,7 +16,7 @@ final class Component325
     static Component325 aClass69_1197 = new Component325();
     static Component325 aClass69_1198 = new Component325();
     static Component325 aClass69_1199 = new Component325();
-    static int anInt1200;
+    static int occluderCountB;
     static Component75 aClass173_1201 = new Component75();
     static int anInt1202;
 
@@ -25,22 +25,22 @@ final class Component325
         Component39.anInt2251 = i;
         synchronized (Component387.aClass60_1894) {
             if (i_0_ != 1226) aClass173_1201 = null;
-            Component387.aClass60_1894.method590(0);
+            Component387.aClass60_1894.clear(0);
         }
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-            DisplayModeManagerContainer310.aClass60_355.method590(0);
+            DisplayModeManagerContainer310.aClass60_355.clear(0);
         }
     }
 
     static final void method721(HashNode class348_sub42, HashNode class348_sub42_1_, int i) {
         do {
             try {
-                if (class348_sub42_1_.aClass348_Sub42_7060 != null) class348_sub42_1_.method3162(true);
+                if (class348_sub42_1_.previous != null) class348_sub42_1_.unlink(true);
                 anInt1194++;
-                class348_sub42_1_.aClass348_Sub42_7063 = class348_sub42;
-                class348_sub42_1_.aClass348_Sub42_7060 = class348_sub42.aClass348_Sub42_7060;
-                class348_sub42_1_.aClass348_Sub42_7060.aClass348_Sub42_7063 = class348_sub42_1_;
-                class348_sub42_1_.aClass348_Sub42_7063.aClass348_Sub42_7060 = class348_sub42_1_;
+                class348_sub42_1_.next = class348_sub42;
+                class348_sub42_1_.previous = class348_sub42.previous;
+                class348_sub42_1_.previous.next = class348_sub42_1_;
+                class348_sub42_1_.next.previous = class348_sub42_1_;
                 if (i == -1) break;
                 aClass69_1199 = null;
             } catch (RuntimeException runtimeexception) {

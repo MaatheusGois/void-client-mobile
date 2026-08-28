@@ -1,5 +1,5 @@
 /**
- * Client-thread Microbot pump — wired from {@link client#method114}.
+ * Client-thread Microbot pump — wired from {@link client#processGameTick}.
  * Refreshes caches, injects pending menus, runs walk assists, starts example script toggle hook.
  */
 final class MicrobotRuntime {

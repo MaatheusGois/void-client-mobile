@@ -23,7 +23,7 @@ abstract class BitmapFont {
     static int anInt4045;
     static int anInt4046;
     static int anInt4047;
-    private GraphicsToolkit aHa4048;
+    private GraphicsToolkit toolkit;
     static int anInt4049;
     static int anInt4050;
     static int anInt4051;
@@ -38,13 +38,13 @@ abstract class BitmapFont {
     static int anInt4060;
     static int anInt4061;
     static Component161 aClass138_4062 = new Component161(2, 4, 4, 0);
-    private Component184 aClass143_4063;
+    private Component184 metrics;
     static int anInt4064;
     static int anInt4065;
 
     private final void method2566(Component24[] class105s, int[] is, int i, int[] is_0_, int[] is_1_, int i_2_, String string, int i_3_) {
         try {
-            i_2_ -= aClass143_4063.anInt1992;
+            i_2_ -= metrics.ascent;
             anInt4058++;
             int i_4_ = -1;
             int i_5_ = -1;
@@ -80,7 +80,7 @@ abstract class BitmapFont {
                                                     int i_12_ = (NodeSub41.method3156(true, (string_9_.substring(4))));
                                                     Component24 class105 = class105s[i_12_];
                                                     int i_13_ = (is_0_ == null ? class105.method980() : is_0_[i_12_]);
-                                                    class105.method964(i + i_10_, (-i_13_ + (aClass143_4063.anInt1992) + (i_2_ - -i_11_)), 1, 0, 1);
+                                                    class105.method964(i + i_10_, (-i_13_ + (metrics.ascent) + (i_2_ - -i_11_)), 1, 0, 1);
                                                     i += class105s[i_12_].method966();
                                                     i_5_ = -1;
                                                 } catch (Exception exception) {
@@ -94,7 +94,7 @@ abstract class BitmapFont {
                             } else c = '>';
                         }
                         if (i_4_ == -1) {
-                            if (i_5_ != -1) i += aClass143_4063.method1182(i_5_, (byte) -104, c);
+                            if (i_5_ != -1) i += metrics.charKerning(i_5_, (byte) -104, c);
                             int i_14_;
                             if (is_1_ == null) i_14_ = 0;
                             else i_14_ = is_1_[i_6_];
@@ -110,9 +110,9 @@ abstract class BitmapFont {
                                 AbstractGlTexture.anInt4848 &= 0xff;
                             }
                             i_6_++;
-                            int i_16_ = aClass143_4063.method1184((byte) -48, c);
-                            if (Player.anInt10567 != -1) aHa4048.method3649((byte) -103, i_16_, i_2_ - -(int) ((double) (aClass143_4063.anInt1992) * 0.7), Player.anInt10567, i);
-                            if (DefinitionSub2.anInt9101 != -1) aHa4048.method3649((byte) -96, i_16_, (aClass143_4063.anInt1992) + i_2_, (DefinitionSub2.anInt9101), i);
+                            int i_16_ = metrics.charWidth((byte) -48, c);
+                            if (Player.anInt10567 != -1) toolkit.method3649((byte) -103, i_16_, i_2_ - -(int) ((double) (metrics.ascent) * 0.7), Player.anInt10567, i);
+                            if (DefinitionSub2.anInt9101 != -1) toolkit.method3649((byte) -96, i_16_, (metrics.ascent) + i_2_, (DefinitionSub2.anInt9101), i);
                             i_5_ = c;
                             i += i_16_;
                         }
@@ -141,35 +141,35 @@ abstract class BitmapFont {
             anInt4054++;
             if (string == null) return 0;
             method2579(i_30_, -76, i_23_);
-            if (i_32_ == 0) i_32_ = aClass143_4063.anInt1992;
+            if (i_32_ == 0) i_32_ = metrics.ascent;
             int[] is_33_;
-            if ((aClass143_4063.anInt1993 + aClass143_4063.anInt1988 - -i_32_) <= i || i_32_ + i_32_ <= i) is_33_ = new int[]{i_25_};
+            if ((metrics.descent + metrics.maxAscent - -i_32_) <= i || i_32_ + i_32_ <= i) is_33_ = new int[]{i_25_};
             else is_33_ = null;
-            int i_34_ = aClass143_4063.method1188(string, is_33_, ClientErrorReporter.aStringArray2113, (byte) 87, class105s);
+            int i_34_ = metrics.method1188(string, is_33_, ClientErrorReporter.aStringArray2113, (byte) 87, class105s);
             if (i_31_ == -1) {
                 i_31_ = i / i_32_;
                 if (i_31_ <= 0) i_31_ = 1;
             }
             if (i_31_ > 0 && i_31_ <= i_34_) {
-                ClientErrorReporter.aStringArray2113[i_31_ - 1] = aClass143_4063.method1181(class105s, i_25_, (ClientErrorReporter.aStringArray2113[i_31_ - 1]), (byte) 55);
+                ClientErrorReporter.aStringArray2113[i_31_ - 1] = metrics.method1181(class105s, i_25_, (ClientErrorReporter.aStringArray2113[i_31_ - 1]), (byte) 55);
                 i_34_ = i_31_;
             }
             if (i_26_ == 3 && i_34_ == 1) i_26_ = 1;
             int i_35_ = -116 % ((i_21_ - -28) / 43);
             int i_36_;
-            if (i_26_ == 0) i_36_ = aClass143_4063.anInt1988 + i_24_;
+            if (i_26_ == 0) i_36_ = metrics.maxAscent + i_24_;
             else if (i_26_ != 1) {
                 if (i_26_ != 2) {
-                    int i_37_ = ((-(i_32_ * (i_34_ + -1)) + (i + (-aClass143_4063.anInt1988 + -aClass143_4063.anInt1993))) / (1 + i_34_));
+                    int i_37_ = ((-(i_32_ * (i_34_ + -1)) + (i + (-metrics.maxAscent + -metrics.descent))) / (1 + i_34_));
                     if (i_37_ < 0) i_37_ = 0;
                     i_32_ += i_37_;
-                    i_36_ = aClass143_4063.anInt1988 + (i_24_ - -i_37_);
-                } else i_36_ = (-aClass143_4063.anInt1993 + i + (i_24_ - (i_34_ + -1) * i_32_));
-            } else i_36_ = ((-aClass143_4063.anInt1993 + (-aClass143_4063.anInt1988 + i + -(i_32_ * (-1 + i_34_)))) / 2 + (aClass143_4063.anInt1988 + i_24_));
+                    i_36_ = metrics.maxAscent + (i_24_ - -i_37_);
+                } else i_36_ = (-metrics.descent + i + (i_24_ - (i_34_ + -1) * i_32_));
+            } else i_36_ = ((-metrics.descent + (-metrics.maxAscent + i + -(i_32_ * (-1 + i_34_)))) / 2 + (metrics.maxAscent + i_24_));
             for (int i_38_ = 0; i_38_ < i_34_; i_38_++) {
                 if (i_29_ == 0) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, i_28_);
-                else if (i_29_ == 1) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (ClientErrorReporter.aStringArray2113[i_38_])) + i_25_) / 2 + i_28_);
-                else if (i_29_ == 2) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-aClass143_4063.method1183(true, (ClientErrorReporter.aStringArray2113[i_38_])) + (i_25_ + i_28_)));
+                else if (i_29_ == 1) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-metrics.stringWidth(true, (ClientErrorReporter.aStringArray2113[i_38_])) + i_25_) / 2 + i_28_);
+                else if (i_29_ == 2) method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, (-metrics.stringWidth(true, (ClientErrorReporter.aStringArray2113[i_38_])) + (i_25_ + i_28_)));
                 else if (i_38_ != i_34_ - 1) {
                     method2580(ClientErrorReporter.aStringArray2113[i_38_], 0, i_25_);
                     method2583(i_27_, i_36_, i_22_, class105s, var_aa, ClientErrorReporter.aStringArray2113[i_38_], is, 25625, i_28_);
@@ -200,7 +200,7 @@ abstract class BitmapFont {
         if (unused >= -119) method2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
         if (string != null) {
             method2579(shadow, 122, colour);
-            method2583(0, y, 0, null, null, string, null, 25625, -aClass143_4063.method1183(true, string) + rightX);
+            method2583(0, y, 0, null, null, string, null, 25625, -metrics.stringWidth(true, string) + rightX);
         }
     }
 
@@ -282,10 +282,10 @@ abstract class BitmapFont {
             method2579(i_60_, 108, i);
             int i_62_ = string.length();
             int[] is = new int[i_62_];
-            if (bool != false) aHa4048 = null;
+            if (bool != false) toolkit = null;
             for (int i_63_ = 0; i_63_ < i_62_; i_63_++)
                 is[i_63_] = (int) (5.0 * Math.sin((double) i_63_ / 2.0 + (double) i_61_ / 5.0));
-            method2566(null, is, -(aClass143_4063.method1183(!bool, string) / 2) + i_59_, null, null, i_58_, string, 174);
+            method2566(null, is, -(metrics.stringWidth(!bool, string) / 2) + i_59_, null, null, i_58_, string, 174);
         }
     }
 
@@ -306,7 +306,7 @@ abstract class BitmapFont {
         anInt4060++;
         if (string != null) {
             method2579(shadow, 115, colour);
-            method2583(0, y, 0, null, null, string, null, 25625, -(aClass143_4063.method1183(true, string) / 2) + centreX);
+            method2583(0, y, 0, null, null, string, null, 25625, -(metrics.stringWidth(true, string) / 2) + centreX);
             int i_68_ = 7 % ((66 - unused) / 44);
         }
     }
@@ -343,7 +343,7 @@ abstract class BitmapFont {
             int[] is = new int[i_79_];
             for (int i_80_ = 0; i_79_ > i_80_; i_80_++)
                 is[i_80_] = (int) (Math.sin((double) i + (double) i_80_ / 1.5) * d);
-            method2566(null, is, i_77_ + -(aClass143_4063.method1183(true, string) / 2), null, null, i_73_, string, 174);
+            method2566(null, is, i_77_ + -(metrics.stringWidth(true, string) / 2), null, null, i_73_, string, 174);
         }
     }
 
@@ -372,14 +372,14 @@ abstract class BitmapFont {
                 else if (!bool && i_91_ == 32) i_89_++;
             } else bool = true;
         }
-        if (i_89_ > 0) Component286.anInt1902 = (-aClass143_4063.method1183(true, string) + i_88_ << 8) / i_89_;
+        if (i_89_ > 0) Component286.anInt1902 = (-metrics.stringWidth(true, string) + i_88_ << 8) / i_89_;
     }
 
     final void method2581(String string, int i, int i_92_, int i_93_, byte i_94_, int i_95_, int i_96_) {
         anInt4049++;
         if (string != null) {
             method2579(i_95_, 117, i);
-            if (i_94_ > -12) aClass143_4063 = null;
+            if (i_94_ > -12) metrics = null;
             int i_97_ = string.length();
             int[] is = new int[i_97_];
             int[] is_98_ = new int[i_97_];
@@ -387,7 +387,7 @@ abstract class BitmapFont {
                 is[i_99_] = (int) (5.0 * Math.sin((double) i_92_ / 5.0 + (double) i_99_ / 5.0));
                 is_98_[i_99_] = (int) (5.0 * Math.sin((double) i_99_ / 3.0 + (double) i_92_ / 5.0));
             }
-            method2566(null, is_98_, -(aClass143_4063.method1183(true, string) / 2) + i_96_, null, is, i_93_, string, 174);
+            method2566(null, is_98_, -(metrics.stringWidth(true, string) / 2) + i_96_, null, is, i_93_, string, 174);
         }
     }
 
@@ -426,7 +426,7 @@ abstract class BitmapFont {
 
     private final void method2583(int i, int i_103_, int i_104_, Component24[] class105s, Shader var_aa, String string, int[] is, int i_105_, int i_106_) {
         try {
-            i_103_ -= aClass143_4063.anInt1992;
+            i_103_ -= metrics.ascent;
             anInt4061++;
             int i_107_ = -1;
             int i_108_ = -1;
@@ -454,8 +454,8 @@ abstract class BitmapFont {
                                                     int i_112_ = (NodeSub41.method3156(true, (string_111_.substring(4))));
                                                     Component24 class105 = class105s[i_112_];
                                                     int i_113_ = (is == null ? class105.method980() : is[i_112_]);
-                                                    if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (aClass143_4063.anInt1992) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
-                                                    else class105.method964(i_106_, ((aClass143_4063.anInt1992) + (i_103_ - i_113_)), 1, 0, 1);
+                                                    if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (metrics.ascent) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
+                                                    else class105.method964(i_106_, ((metrics.ascent) + (i_103_ - i_113_)), 1, 0, 1);
                                                     i_108_ = -1;
                                                     i_106_ += class105s[i_112_].method966();
                                                 } catch (Exception exception) {
@@ -469,7 +469,7 @@ abstract class BitmapFont {
                             } else c = '\u00a0';
                         }
                         if (i_107_ == -1) {
-                            if (i_108_ != -1) i_106_ += aClass143_4063.method1182(i_108_, (byte) -90, c);
+                            if (i_108_ != -1) i_106_ += metrics.charKerning(i_108_, (byte) -90, c);
                             if (c != 32) {
                                 if (var_aa == null) {
                                     if ((Component120.anInt320 & ~0xffffff) != 0) fa(c, i_106_ + 1, 1 + i_103_, Component120.anInt320, true);
@@ -483,9 +483,9 @@ abstract class BitmapFont {
                                 i_106_ += AbstractGlTexture.anInt4848 >> 8;
                                 AbstractGlTexture.anInt4848 &= 0xff;
                             }
-                            int i_114_ = aClass143_4063.method1184((byte) -48, c);
-                            if (Player.anInt10567 != -1) aHa4048.method3649((byte) -119, i_114_, (int) ((double) aClass143_4063.anInt1992 * 0.7) + i_103_, Player.anInt10567, i_106_);
-                            if (DefinitionSub2.anInt9101 != -1) aHa4048.method3649((byte) -114, i_114_, (aClass143_4063.anInt1992) + (i_103_ + 1), (DefinitionSub2.anInt9101), i_106_);
+                            int i_114_ = metrics.charWidth((byte) -48, c);
+                            if (Player.anInt10567 != -1) toolkit.method3649((byte) -119, i_114_, (int) ((double) metrics.ascent * 0.7) + i_103_, Player.anInt10567, i_106_);
+                            if (DefinitionSub2.anInt9101 != -1) toolkit.method3649((byte) -114, i_114_, (metrics.ascent) + (i_103_ + 1), (DefinitionSub2.anInt9101), i_106_);
                             i_106_ += i_114_;
                             i_108_ = c;
                         }
@@ -499,8 +499,8 @@ abstract class BitmapFont {
 
     BitmapFont(GraphicsToolkit var_ha, Component184 class143) {
         try {
-            aClass143_4063 = class143;
-            aHa4048 = var_ha;
+            metrics = class143;
+            toolkit = var_ha;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("da.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class143 != null ? "{...}" : "null") + ')'));
         }
@@ -531,25 +531,25 @@ abstract class BitmapFont {
                 if ((0x3 & random.nextInt()) == 0) i_138_++;
             }
             int i_140_ = i_133_;
-            int i_141_ = aClass143_4063.anInt1988 + i_130_;
+            int i_141_ = metrics.maxAscent + i_130_;
             int i_142_ = -1;
-            if (i_125_ == 1) i_141_ += (-aClass143_4063.anInt1988 + i_127_ + -aClass143_4063.anInt1993) / 2;
-            else if (i_125_ == 2) i_141_ = -aClass143_4063.anInt1993 + (i_127_ + i_130_);
+            if (i_125_ == 1) i_141_ += (-metrics.maxAscent + i_127_ + -metrics.descent) / 2;
+            else if (i_125_ == 2) i_141_ = -metrics.descent + (i_127_ + i_130_);
             if (i_132_ != -33) method2578('\ufffe', 83, -110, 26, true, null, 113, 97);
             if (i_129_ == 1) {
-                i_142_ = aClass143_4063.method1183(true, string) + i_138_;
+                i_142_ = metrics.stringWidth(true, string) + i_138_;
                 i_140_ += (i + -i_142_) / 2;
             } else if (i_129_ == 2) {
-                i_142_ = aClass143_4063.method1183(true, string) - -i_138_;
+                i_142_ = metrics.stringWidth(true, string) - -i_138_;
                 i_140_ += -i_142_ + i;
             }
             method2566(class105s, null, i_140_, is, is_137_, i_141_, string, 174);
             if (is_134_ != null) {
-                if (i_142_ == -1) i_142_ = aClass143_4063.method1183(true, string) - -i_138_;
+                if (i_142_ == -1) i_142_ = metrics.stringWidth(true, string) - -i_138_;
                 is_134_[2] = i_142_;
-                is_134_[3] = (aClass143_4063.anInt1993 + aClass143_4063.anInt1988);
+                is_134_[3] = (metrics.descent + metrics.maxAscent);
                 is_134_[0] = i_140_;
-                is_134_[1] = -aClass143_4063.anInt1988 + i_141_;
+                is_134_[1] = -metrics.maxAscent + i_141_;
             }
             return i_138_;
         } catch (RuntimeException runtimeexception) {

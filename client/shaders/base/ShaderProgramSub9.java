@@ -207,7 +207,7 @@ final class ShaderProgramSub9
         boolean bool = (class348_sub49_sub2.readBits((byte) -24, i) == 1);
         if (bool) DisplayModeManagerContainer220.anIntArray279[MatrixSub3.anInt5768++] = i_22_;
         int i_23_ = class348_sub49_sub2.readBits((byte) -24, 2);
-        Player player = InterfaceRenderer.aPlayerArray5058[i_22_];
+        Player player = InterfaceRenderer.players[i_22_];
         if (i_23_ == 0) {
             if (bool) player.aBoolean10539 = false;
             else {
@@ -219,7 +219,7 @@ final class ShaderProgramSub9
                 class359.aBoolean4426 = player.aBoolean10554;
                 class359.anInt4425 = (player.anInt10275);
                 if (player.anInt10553 > 0) DisplayModeManagerContainer61.method2221(player, -28482);
-                InterfaceRenderer.aPlayerArray5058[i_22_] = null;
+                InterfaceRenderer.players[i_22_] = null;
                 if (class348_sub49_sub2.readBits((byte) -24, 1) != 0) DisplayModeManagerContainer159.method1538(i_22_, (byte) 105, class348_sub49_sub2);
             }
         } else if (i_23_ == 1) {

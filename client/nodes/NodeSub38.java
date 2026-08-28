@@ -65,14 +65,14 @@ final class NodeSub38
         int i_14_ = aS_Sub3_7019.method3986(i_12_, i_13_, (byte) -127);
         if ((i_10_ & 0x7f) == 0 || (i_8_ & 0x7f) == 0) {
             l = ((long) i_13_ & 0xffffL) << 16 | (long) i_12_ & 0xffffL;
-            Node class348 = aClass356_7011.method3480(l, i_7_ + 23335);
+            Node class348 = aClass356_7011.get(l, i_7_ + 23335);
             if (class348 != null) {
                 method3034((((NodeSub29) class348).aShort6911), (byte) 49);
                 return;
             }
         }
         short i_15_ = (short) anInt7013++;
-        if (l != -1) aClass356_7011.method3483((byte) 101, l, new NodeSub29(i_15_));
+        if (l != -1) aClass356_7011.put((byte) 101, l, new NodeSub29(i_15_));
         float f;
         float f_16_;
         float f_17_;
@@ -286,7 +286,7 @@ final class NodeSub38
                         aStream7021.a();
                         if (anInterface5_Impl2_7002.method22(-23)) break;
                         aStream7022.e(0);
-                        aClass356_7011.method3481(0);
+                        aClass356_7011.clear(0);
                     }
                 }
                 aStream7022.a();

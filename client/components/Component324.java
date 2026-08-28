@@ -37,7 +37,7 @@ final class Component324
         if (i != 33) aClass45_2048 = null;
         Component225 class34;
         synchronized (aClass60_2050) {
-            class34 = (Component225) aClass60_2050.method583(i_3_, -58);
+            class34 = (Component225) aClass60_2050.get(i_3_, -58);
         }
         if (class34 != null) return class34;
         byte[] is;
@@ -48,7 +48,7 @@ final class Component324
         class34.aClass150_475 = this;
         if (is != null) class34.method346(~i, new Buffer(is));
         synchronized (aClass60_2050) {
-            aClass60_2050.method582(class34, i_3_, (byte) -109);
+            aClass60_2050.putOne(class34, i_3_, (byte) -109);
         }
         return class34;
     }
@@ -68,7 +68,7 @@ final class Component324
         HashNodeSub14 class348_sub42_sub14 = new HashNodeSub14(i, class348_sub49.readString((byte) 88), class348_sub49.readString((byte) 120), class348_sub49.readInt((byte) -126), class348_sub49.readInt((byte) -126), class348_sub49.readUnsignedByte(255) == 1, class348_sub49.readUnsignedByte(255), class348_sub49.readUnsignedByte(255));
         int i_5_ = class348_sub49.readUnsignedByte(255);
         for (int i_6_ = 0; i_6_ < i_5_; i_6_++)
-            class348_sub42_sub14.aClass262_9629.method1999(new NodeSub18(class348_sub49.readUnsignedByte(255), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944)), -20180);
+            class348_sub42_sub14.aClass262_9629.addTail(new NodeSub18(class348_sub49.readUnsignedByte(255), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944), class348_sub49.readUnsignedShort(842397944)), -20180);
         class348_sub42_sub14.method3240((byte) 37);
         return class348_sub42_sub14;
     }
@@ -77,7 +77,7 @@ final class Component324
         if (i != -37) aClass45_2048 = null;
         anInt2051++;
         synchronized (aClass60_2050) {
-            aClass60_2050.method590(0);
+            aClass60_2050.clear(0);
         }
     }
 
@@ -85,7 +85,7 @@ final class Component324
         anInt2055++;
         if (i == -17452) {
             synchronized (aClass60_2050) {
-                aClass60_2050.method578(i + 17454, i_7_);
+                aClass60_2050.processSoftEntries(i + 17454, i_7_);
             }
         }
     }

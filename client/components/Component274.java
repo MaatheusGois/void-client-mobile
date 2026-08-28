@@ -7,7 +7,7 @@ final class Component274
  * RENAMED from `Class42` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static int anInt562;
+    static int occludedWallCount;
     static int anInt563;
     byte[] aByteArray564;
     String aString565;
@@ -95,13 +95,13 @@ final class Component274
         int i_3_ = bool ? this.anInt605 : this.anInt578;
         if (i != 127) return null;
         int i_4_ = i_3_ | var_ha.anInt4567 << 29;
-        Component24 class105 = (Component24) this.aClass153_593.aClass60_2089.method583(i_4_, 64);
+        Component24 class105 = (Component24) this.aClass153_593.aClass60_2089.get(i_4_, 64);
         if (class105 != null) return class105;
         if (!this.aClass153_593.aClass45_2087.method421(false, i_3_)) return null;
         Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), i_3_, 0);
         if (class207 != null) {
             class105 = var_ha.method3691(class207, true);
-            this.aClass153_593.aClass60_2089.method582(class105, i_4_, (byte) -111);
+            this.aClass153_593.aClass60_2089.putOne(class105, i_4_, (byte) -111);
         }
         return class105;
     }
@@ -109,13 +109,13 @@ final class Component274
     final Component24 method375(GraphicsToolkit var_ha, boolean bool) {
         anInt563++;
         if (bool != false) method375(null, true);
-        Component24 class105 = (Component24) (this.aClass153_593.aClass60_2089.method583(anInt598 | 0x20000 | var_ha.anInt4567 << 29, -75));
+        Component24 class105 = (Component24) (this.aClass153_593.aClass60_2089.get(anInt598 | 0x20000 | var_ha.anInt4567 << 29, -75));
         if (class105 != null) return class105;
         this.aClass153_593.aClass45_2087.method421(bool, anInt598);
         Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), anInt598, 0);
         if (class207 != null) {
             class105 = var_ha.method3691(class207, true);
-            this.aClass153_593.aClass60_2089.method582(class105, var_ha.anInt4567 << 29 | (anInt598 | 0x20000), (byte) -121);
+            this.aClass153_593.aClass60_2089.putOne(class105, var_ha.anInt4567 << 29 | (anInt598 | 0x20000), (byte) -121);
         }
         return class105;
     }
@@ -124,7 +124,7 @@ final class Component274
         anInt589++;
         int i_6_ = -100 / ((63 - i_5_) / 58);
         if (aClass356_588 == null) return string;
-        NodeSub50 class348_sub50 = (NodeSub50) aClass356_588.method3480(i, -6008);
+        NodeSub50 class348_sub50 = (NodeSub50) aClass356_588.get(i, -6008);
         if (class348_sub50 == null) return string;
         return class348_sub50.aString7211;
     }
@@ -195,7 +195,7 @@ final class Component274
                                 Node class348;
                                 if (!bool) class348 = (new NodeSub35(class348_sub49.readInt((byte) -126)));
                                 else class348 = (new NodeSub50(class348_sub49.readString((byte) -41)));
-                                aClass356_588.method3483((byte) 60, i_17_, class348);
+                                aClass356_588.put((byte) 60, i_17_, class348);
                             }
                         }
                     } else this.anInt604 = class348_sub49.readInt((byte) -126);
@@ -209,7 +209,7 @@ final class Component274
         anInt600++;
         if (aClass356_588 == null) return i;
         if (bool != false) return -1;
-        NodeSub35 class348_sub35 = (NodeSub35) aClass356_588.method3480(i_18_, -6008);
+        NodeSub35 class348_sub35 = (NodeSub35) aClass356_588.get(i_18_, -6008);
         if (class348_sub35 == null) return i;
         return class348_sub35.anInt6976;
     }

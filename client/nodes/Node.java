@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348` (JODE-obfuscated).
- * Doubly-linked list node. Holds prev/next pointers (aClass348_4294 / aClass348_4295) and is the base type for caches, node lists and cacheable definitions throughout the client.
+ * Doubly-linked list node. Holds prev/next pointers (next / previous) and is the base type for caches, node lists and cacheable definitions throughout the client.
  */
 
 class Node {
@@ -14,11 +14,14 @@ class Node {
     static int[] anIntArray4288;
     static int anInt4289;
     static int anInt4290;
-    long aLong4291;
+    /** Hash / list key (also used as cache lookup id). */
+    long key;
     static int anInt4292 = 0;
     static RenderableObject[] aClass318_Sub1Array4293;
-    Node aClass348_4294;
-    Node aClass348_4295;
+    /** Next node in the doubly-linked list (toward sentinel.next). */
+    Node next;
+    /** Previous node in the doubly-linked list. */
+    Node previous;
     static int anInt4296;
     static int anInt4297;
     static int anInt4298;
@@ -50,7 +53,7 @@ class Node {
             long l = (((long) i_10_ << 48) + (long) (i_7_ + ((i_9_ << 16) + (i_11_ << 24))) - -((long) i_6_ << 32));
             DisplayModeManagerContainer370 class64_13_;
             synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-                class64_13_ = (DisplayModeManagerContainer370) DisplayModeManagerContainer173.aClass60_4254.method583(l, -64);
+                class64_13_ = (DisplayModeManagerContainer370) DisplayModeManagerContainer173.aClass60_4254.get(l, -64);
             }
             if (class64_13_ == null || (var_ha.method3667(class64_13_.ua(), i_12_) != 0)) {
                 if (class64_13_ != null) i_12_ = var_ha.method3679(i_12_, class64_13_.ua());
@@ -92,7 +95,7 @@ class Node {
                 }
                 class64_13_ = var_ha.method3625(class124, i_12_, Component316.anInt2482, 64, 768);
                 synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-                    DisplayModeManagerContainer173.aClass60_4254.method582(class64_13_, l, (byte) -103);
+                    DisplayModeManagerContainer173.aClass60_4254.putOne(class64_13_, l, (byte) -103);
                 }
             }
             int i_31_ = class64.V();
@@ -124,10 +127,10 @@ class Node {
         }
     }
 
-    final boolean method2712(byte i) {
+    final boolean isLinked(byte i) {
         if (i != 4) return true;
         anInt4297++;
-        return this.aClass348_4295 != null;
+        return this.previous != null;
     }
 
     public static void method2713(int i) {
@@ -143,14 +146,14 @@ class Node {
         return i_35_ == 1 || i_35_ == 3 || i_35_ == 5;
     }
 
-    final void method2715(byte i) {
+    final void unlink(byte i) {
         anInt4285++;
-        if (this.aClass348_4295 != null) {
-            this.aClass348_4295.aClass348_4294 = this.aClass348_4294;
-            this.aClass348_4294.aClass348_4295 = this.aClass348_4295;
-            if (i < 18) method2712((byte) 46);
-            this.aClass348_4294 = null;
-            this.aClass348_4295 = null;
+        if (this.previous != null) {
+            this.previous.next = this.next;
+            this.next.previous = this.previous;
+            if (i < 18) isLinked((byte) 46);
+            this.next = null;
+            this.previous = null;
         }
     }
 

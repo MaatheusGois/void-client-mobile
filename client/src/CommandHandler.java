@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class82` (JODE-obfuscated).
- * Console command handler. method812(String,...) prints/parses commands such as "cls - Clear console" and "commands"; dispatches to Applet_Sub1.
+ * Console command handler. handleCommand(String,...) prints/parses commands such as "cls - Clear console" and "commands"; dispatches to Applet_Sub1.
  */
 
 import jagex3.jagmisc.jagmisc;
@@ -25,7 +25,7 @@ final class CommandHandler {
         aClass45_1434 = null;
     }
 
-    static final void method812(String string, boolean bool, boolean bool_0_, byte i) {
+    static final void handleCommand(String string, boolean bool, boolean bool_0_, byte i) {
             try {
                 if (i != -79) method814((byte) -79, 126L);
                 anInt1437++;
@@ -44,8 +44,8 @@ final class CommandHandler {
                         return;
                     }
                     if (string.equalsIgnoreCase("displayfps")) {
-                        Component10.aBoolean3811 = !Component10.aBoolean3811;
-                        if (Component10.aBoolean3811) Applet_Sub1.method94("FPS on", 83);
+                        Component10.fpsOverlayEnabled = !Component10.fpsOverlayEnabled;
+                        if (Component10.fpsOverlayEnabled) Applet_Sub1.method94("FPS on", 83);
                         else {
                             Applet_Sub1.method94("FPS off", -69);
                             return;
@@ -53,7 +53,7 @@ final class CommandHandler {
                         return;
                     }
                     if (string.equals("renderer")) {
-                        Component6 class365 = NodeSub8.aHa6654.c();
+                        Component6 class365 = NodeSub8.toolkit.c();
                         Applet_Sub1.method94("Vendor: " + class365.anInt4476, 89);
                         Applet_Sub1.method94("Name: " + (class365.aString4470), 71);
                         Applet_Sub1.method94(("Version: " + (class365.anInt4475)), -110);
@@ -74,7 +74,7 @@ final class CommandHandler {
                     if (string.equals("nativememerror")) throw new OutOfMemoryError("native(MPR");
                     try {
                         if (string.equalsIgnoreCase("printfps")) {
-                            Applet_Sub1.method94(("FPS: " + DisplayModeManagerContainer348.anInt5891), -58);
+                            Applet_Sub1.method94(("FPS: " + DisplayModeManagerContainer348.fps), -58);
                             return;
                         }
                         if (string.equalsIgnoreCase("occlude")) {
@@ -86,12 +86,12 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("fpson")) {
-                            Component10.aBoolean3811 = true;
+                            Component10.fpsOverlayEnabled = true;
                             Applet_Sub1.method94("fps debug enabled", -115);
                             return;
                         }
                         if (string.equalsIgnoreCase("fpsoff")) {
-                            Component10.aBoolean3811 = false;
+                            Component10.fpsOverlayEnabled = false;
                             Applet_Sub1.method94("fps debug disabled", 125);
                             return;
                         }
@@ -174,7 +174,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("rebuildprofile")) {
-                            Component330.aLong1516 = Component240.method599(-75);
+                            Component330.aLong1516 = Component240.currentTimeMillis(-75);
                             AbstractGlTextureSub4.aBoolean8558 = true;
                             NodeSub20.method2953((byte) -114);
                             Component308.method464(-1);
@@ -302,7 +302,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("bloom")) {
-                            boolean bool_7_ = NodeSub8.aHa6654.method3666();
+                            boolean bool_7_ = NodeSub8.toolkit.method3666();
                             if (DefinitionSub33.method3137(!bool_7_, (byte) -24)) {
                                 if (bool_7_) {
                                     Applet_Sub1.method94("Bloom disabled", i + -49);
@@ -352,7 +352,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("mc")) {
-                            if (NodeSub8.aHa6654.method3708()) {
+                            if (NodeSub8.toolkit.method3708()) {
                                 int i_8_ = Integer.parseInt(string.substring(3));
                                 if (i_8_ >= 1) {
                                     if (i_8_ > 4) i_8_ = 4;
@@ -367,8 +367,8 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("cachespace")) {
-                            Applet_Sub1.method94(("I(s): " + StringCache.aClass60_4327.method581(-18529) + "/" + StringCache.aClass60_4327.method577(-4)), -101);
-                            Applet_Sub1.method94(("I(m): " + Component142.aClass60_4417.method581(-18529) + "/" + Component142.aClass60_4417.method577(i ^ 0x4d)), 127);
+                            Applet_Sub1.method94(("I(s): " + StringCache.aClass60_4327.getRemaining(-18529) + "/" + StringCache.aClass60_4327.getCapacity(-4)), -101);
+                            Applet_Sub1.method94(("I(m): " + Component142.aClass60_4417.getRemaining(-18529) + "/" + Component142.aClass60_4417.getCapacity(i ^ 0x4d)), 127);
                             Applet_Sub1.method94(("O(s): " + Exception_Sub1.aClass255_112.aClass175_3288.method1350((byte) 126) + "/" + Exception_Sub1.aClass255_112.aClass175_3288.method1339(100)), i + 203);
                             return;
                         }
@@ -379,7 +379,7 @@ final class CommandHandler {
                         }
                         if (string.equals("renderprofile") || string.equals("rp")) {
                             ReliefShader.aBoolean2514 = !ReliefShader.aBoolean2514;
-                            NodeSub8.aHa6654.method3647(ReliefShader.aBoolean2514);
+                            NodeSub8.toolkit.method3647(ReliefShader.aBoolean2514);
                             Component362.method1042((byte) 23);
                             Applet_Sub1.method94(("showprofiling=" + ReliefShader.aBoolean2514), 106);
                             return;
@@ -433,11 +433,11 @@ final class CommandHandler {
                         if (string.startsWith("pc")) {
                             ParticleSystem class348_sub47 = (ParticleShader.method2148(DefinitionSub22.aClass351_9304, DisplayModeManagerContainer64.aClass77_9029, -97));
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                            int i_12_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                            int i_12_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                             int i_13_ = string.indexOf(" ", 4);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string.substring(3, i_13_));
                             AbstractShaderSub4.method3544((class348_sub47.aClass348_Sub49_Sub2_7116), i + -12, string.substring(i_13_));
-                            class348_sub47.aClass348_Sub49_Sub2_7116.method3339(114, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 + -i_12_));
+                            class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(114, (class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_12_));
                             HashNodeSub14.method3243(i ^ ~0x49, class348_sub47);
                             return;
                         }
@@ -510,7 +510,7 @@ final class CommandHandler {
                         }
                         if (string.startsWith("texsize")) {
                             int i_18_ = Integer.parseInt(string.substring(8));
-                            NodeSub8.aHa6654.method3696(i_18_);
+                            NodeSub8.toolkit.method3696(i_18_);
                             return;
                         }
                         if (string.equals("soundstreamcount")) {
@@ -527,8 +527,8 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equals("heapdump")) {
-                            if (!ReflectionInvoker.aString3803.startsWith("win")) HeapDumpHelper.method1247(new File("/tmp/heap.dump"), false, false);
-                            else HeapDumpHelper.method1247(new File("C:\\Temp\\heap.dump"), false, false);
+                            if (!ReflectionInvoker.aString3803.startsWith("win")) HeapDumpHelper.dumpHeapToFile(new File("/tmp/heap.dump"), false, false);
+                            else HeapDumpHelper.dumpHeapToFile(new File("C:\\Temp\\heap.dump"), false, false);
                             Applet_Sub1.method94("Done", 74);
                             return;
                         }
@@ -587,7 +587,7 @@ final class CommandHandler {
                         if (string.startsWith("setoutput ")) {
                             File file = new File(string.substring(10));
                             if (file.exists()) {
-                                file = new File(string.substring(10) + "." + Component240.method599(-76) + ".log");
+                                file = new File(string.substring(10) + "." + Component240.currentTimeMillis(-76) + ".log");
                                 if (file.exists()) {
                                     Applet_Sub1.method94("file already exists!", 80);
                                     return;

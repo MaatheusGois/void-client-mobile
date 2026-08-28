@@ -1256,7 +1256,7 @@ class DisplayModeManagerContainer87
         int i_309_ = class46.anInt830 >>> 16;
         Component79 class333 = new Component79(Component15.aClass356_4915);
         for (NodeSub41 class348_sub41 = (NodeSub41) class333.method2644((byte) 123); class348_sub41 != null; class348_sub41 = (NodeSub41) class333.method2646((byte) 117)) {
-            if (i_309_ == class348_sub41.anInt7050) return BitmapFont.method2570(1512932720, (int) (class348_sub41.aLong4291));
+            if (i_309_ == class348_sub41.anInt7050) return BitmapFont.method2570(1512932720, (int) (class348_sub41.key));
         }
         return null;
     }

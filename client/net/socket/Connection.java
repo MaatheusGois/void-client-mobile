@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class202` (JODE-obfuscated).
- * Network socket connection. Implements Runnable; owns a Socket (aSocket2668) and does blocking InputStream/OutputStream I/O (method1467/1470/1472/1473 throw IOException).
+ * Network socket connection. Implements Runnable; owns a Socket (socket) and does blocking InputStream/OutputStream I/O (available/1470/1472/1473 throw IOException).
  */
 
 import java.io.EOFException;
@@ -36,12 +36,12 @@ final class Connection implements Runnable {
     static Component183 aClass114_2665 = new Component183(12, 0);
     static int anInt2666;
     static int anInt2667;
-    private final Socket aSocket2668;
+    private final Socket socket;
     private final int anInt2669;
     static int anInt2670 = 0;
     static NodeCache aClass60_2671 = new NodeCache(10);
 
-    final int method1467(byte i) throws IOException {
+    final int available(byte i) throws IOException {
         anInt2651++;
         if (i != 83) aClass114_2665 = null;
         if (aBoolean2654) return 0;
@@ -71,7 +71,7 @@ final class Connection implements Runnable {
         }
     }
 
-    final void method1470(byte[] is, int i, int i_5_, int i_6_) throws IOException {
+    final void write(byte[] is, int i, int i_5_, int i_6_) throws IOException {
         anInt2655++;
         if (!aBoolean2654) {
             if (aBoolean2659) {
@@ -103,7 +103,7 @@ final class Connection implements Runnable {
         }
     }
 
-    final void method1472(boolean bool) throws IOException {
+    final void checkError(boolean bool) throws IOException {
         anInt2650++;
         if (bool == true && !aBoolean2654) {
             if (aBoolean2659) {
@@ -113,7 +113,7 @@ final class Connection implements Runnable {
         }
     }
 
-    final int method1473(int i) throws IOException {
+    final int read(int i) throws IOException {
         anInt2647++;
         if (aBoolean2654) return 0;
         if (i != 0) return 38;
@@ -155,7 +155,7 @@ final class Connection implements Runnable {
             try {
                 if (anInputStream2652 != null) anInputStream2652.close();
                 if (anOutputStream2657 != null) anOutputStream2657.close();
-                if (aSocket2668 != null) aSocket2668.close();
+                if (socket != null) socket.close();
             } catch (IOException ioexception) {
                 /* empty */
             }
@@ -202,7 +202,7 @@ final class Connection implements Runnable {
                 while (aClass144_2658.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 105, 1L);
                 if (aClass144_2658.anInt1997 == 1) {
                     try {
-                        ((Thread) aClass144_2658.anObject1998).join();
+                        ((Thread) aClass144_2658.result).join();
                     } catch (InterruptedException interruptedexception) {
                         /* empty */
                     }
@@ -214,12 +214,12 @@ final class Connection implements Runnable {
 
     Connection(Socket socket, ReflectionInvoker class297, int i) throws IOException {
         try {
-            aSocket2668 = socket;
+            this.socket = socket;
             aClass297_2649 = class297;
-            aSocket2668.setSoTimeout(30000);
-            aSocket2668.setTcpNoDelay(true);
-            anInputStream2652 = aSocket2668.getInputStream();
-            anOutputStream2657 = aSocket2668.getOutputStream();
+            socket.setSoTimeout(30000);
+            socket.setTcpNoDelay(true);
+            anInputStream2652 = socket.getInputStream();
+            anOutputStream2657 = socket.getOutputStream();
             anInt2669 = i;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("re.<init>(" + (socket != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i + ')'));

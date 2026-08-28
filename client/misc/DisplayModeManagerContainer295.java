@@ -107,7 +107,7 @@ final class DisplayModeManagerContainer295
     static final void method1750(int i, int i_6_) {
         anInt5912++;
         HashNodeSub1.anInt9488 = i_6_;
-        Connection.aClass60_2671.method590(0);
+        Connection.aClass60_2671.clear(0);
     }
 
     final int method1751(int i) {
@@ -183,7 +183,7 @@ final class DisplayModeManagerContainer295
         int i_15_ = 2147483647;
         int i_16_ = i_12_ - DisplayModeManagerContainer229.anInt1266;
         int i_17_ = i_13_ - DisplayModeManagerContainer229.anInt1263;
-        for (NodeSub21 class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.method1995(4); class348_sub21 != null; class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.method1990((byte) 113)) {
+        for (NodeSub21 class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.first(4); class348_sub21 != null; class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.next((byte) 113)) {
             if (class348_sub21.anInt6847 == i) {
                 int i_18_ = class348_sub21.anInt6852;
                 int i_19_ = class348_sub21.anInt6851;

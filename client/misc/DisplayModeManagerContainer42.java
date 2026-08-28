@@ -94,20 +94,20 @@ final class DisplayModeManagerContainer42
 
     static final void method2291(byte i, int i_4_, int i_5_) {
         anInt3849++;
-        int i_6_ = (Component27.aClass143_4962.method1183(true, FriendsIgnoreList.aClass274_3507.method2063(ObjectDeserializer.anInt6967, 544)));
+        int i_6_ = (Component27.aClass143_4962.stringWidth(true, FriendsIgnoreList.aClass274_3507.method2063(ObjectDeserializer.anInt6967, 544)));
         int i_7_;
         if (PauseHandler.aBoolean9535) {
-            for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1011(-87)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 126))) {
+            for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-87)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 126))) {
                 int i_9_;
                 if (class348_sub42_sub13.anInt9615 != 1) i_9_ = Component156.method2194(-1, class348_sub42_sub13);
-                else i_9_ = (OutputStream_Sub2.method138(((MenuEntry) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), false));
+                else i_9_ = (OutputStream_Sub2.method138(((MenuEntry) (class348_sub42_sub13.aClass107_9621.sentinel.next)), false));
                 if (i_6_ < i_9_) i_6_ = i_9_;
             }
             i_6_ += 8;
             i_7_ = 21 + 16 * DisplayModeManagerContainer345.anInt166;
             Component251.anInt5819 = (DisplayModeManagerContainer5.aBoolean1211 ? 26 : 22) + 16 * DisplayModeManagerContainer345.anInt166;
         } else {
-            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 69)) {
+            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 69)) {
                 int i_8_ = OutputStream_Sub2.method138(class348_sub42_sub12, false);
                 if (i_6_ < i_8_) i_6_ = i_8_;
             }

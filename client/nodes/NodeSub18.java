@@ -33,7 +33,7 @@ final class NodeSub18
 
     final boolean method2934(int i, int i_0_, int i_1_) {
         anInt6822++;
-        if (i != 3589) method2941(null, 70, false);
+        if (i != 3589) createMouseHandler(null, 70, false);
         return i_0_ >= anInt6820 && i_0_ <= anInt6806 && i_1_ >= anInt6811 && anInt6810 >= i_1_;
     }
 
@@ -79,7 +79,7 @@ final class NodeSub18
         Component257.aClass65_4787.method695(true);
         DisplayModeManagerContainer306.aClass219_4782.method1602(0);
         Component76.method3573(-15326);
-        LoadingManager.method1277((byte) 62);
+        LoadingManager.clearDefinitionCaches((byte) 62);
         DisplayModeManagerContainer26.method821(-126);
         Renderable.method2375(16127);
         if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
@@ -93,8 +93,8 @@ final class NodeSub18
         if (i > 53) {
             DisplayModeManagerContainer310.method297(false);
             Component134.method1402(1);
-            ClientScriptExecutor.aClass60_1174.method590(0);
-            NodeSub8.aHa6654.method3663();
+            ClientScriptExecutor.aClass60_1174.clear(0);
+            NodeSub8.toolkit.method3663();
             TcpSocketStream.method1707(26469);
             Buffer.method3354(-52);
             NodeSub29.aClass45_6909.method412((byte) -124);
@@ -130,10 +130,10 @@ final class NodeSub18
             Component380.aClass45_4984.method412((byte) 85);
             Component257.aClass45_4796.method412((byte) 93);
             Component334.aClass45_2015.method412((byte) -122);
-            Component45.aClass60_4346.method590(0);
-            ShaderCompilerSub2.aClass60_6517.method590(0);
-            NodeSub1Sub1.aClass60_8807.method590(0);
-            Component225.aClass60_463.method590(0);
+            Component45.aClass60_4346.clear(0);
+            ShaderCompilerSub2.aClass60_6517.clear(0);
+            NodeSub1Sub1.aClass60_8807.clear(0);
+            Component225.aClass60_463.clear(0);
         }
     }
 
@@ -151,7 +151,7 @@ final class NodeSub18
         if (bool != true) this.anInt6812 = -26;
     }
 
-    static final MouseHandler method2941(Component component, int i, boolean bool) {
+    static final MouseHandler createMouseHandler(Component component, int i, boolean bool) {
         anInt6808++;
         try {
             Constructor constructor = (AwtMouseHandler.class.getDeclaredConstructor((aClass6823 != null ? aClass6823 : (aClass6823 = Component.class)), Boolean.TYPE));
@@ -165,7 +165,7 @@ final class NodeSub18
     static final void method2942(DisplayModeManagerContainer57 class46, byte i) {
         anInt6805++;
         if (class46.anInt765 == Component283.anInt4610) {
-            if (Component72.localPlayer.aString10544 == null) {
+            if (Component72.localPlayer.username == null) {
                 class46.anInt779 = 0;
                 class46.anInt753 = 0;
             } else {
@@ -173,7 +173,7 @@ final class NodeSub18
                 class46.anInt675 = 0x7ff & (int) (256.0 * Math.sin((double) (OpenGlShader.clientCycle) / 40.0));
                 class46.anInt770 = 5;
                 class46.anInt753 = StringDefinition.anInt9591;
-                class46.anInt779 = (Component349.method2418((Component72.localPlayer.aString10544), (byte) -41));
+                class46.anInt779 = (Component349.method2418((Component72.localPlayer.username), (byte) -41));
                 class46.anInt699 = Component72.localPlayer.anInt10268;
                 class46.anInt841 = 0;
                 class46.anInt730 = Component72.localPlayer.anInt10312;

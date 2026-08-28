@@ -141,7 +141,7 @@ final class DisplayModeManagerContainer105
                         }
                     }
                 } else bool = true;
-            } else if (!class10.aClass348_Sub16_Sub5_176.method2712((byte) 4)) bool = true;
+            } else if (!class10.aClass348_Sub16_Sub5_176.isLinked((byte) 4)) bool = true;
             if (bool) {
                 Component335.anInt2021--;
                 for (int i_19_ = i_4_; Component335.anInt2021 > i_19_; i_19_++)

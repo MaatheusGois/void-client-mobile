@@ -12,7 +12,7 @@ final class RenderableSub9Sub1
     static float aFloat8784;
     static int[] anIntArray8785;
     short aShort8786;
-    int anInt8787 = (int) (Component240.method599(-92) / 1000L);
+    int anInt8787 = (int) (Component240.currentTimeMillis(-92) / 1000L);
     static int anInt8788;
 
     static final DisplayModeManagerContainer115[] method2515(int i) {
@@ -52,11 +52,11 @@ final class RenderableSub9Sub1
 
     static final RSARequest method2516(int i, byte i_7_, int i_8_) {
         anInt8788++;
-        RSARequest class348_sub42_sub15 = ((RSARequest) Component265.aClass356_1585.method3480(((long) i_8_ << 32 | (long) i), i_7_ ^ ~0x171e));
+        RSARequest class348_sub42_sub15 = ((RSARequest) Component265.aClass356_1585.get(((long) i_8_ << 32 | (long) i), i_7_ ^ ~0x171e));
         if (i_7_ != 105) aFloat8784 = 0.99212307F;
         if (class348_sub42_sub15 == null) {
             class348_sub42_sub15 = new RSARequest(i_8_, i);
-            Component265.aClass356_1585.method3483((byte) 91, (class348_sub42_sub15.aLong4291), class348_sub42_sub15);
+            Component265.aClass356_1585.put((byte) 91, (class348_sub42_sub15.key), class348_sub42_sub15);
         }
         return class348_sub42_sub15;
     }

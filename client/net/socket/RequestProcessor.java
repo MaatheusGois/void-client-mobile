@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class169` (JODE-obfuscated).
- * Runnable that processes a NodeList queue of Request nodes (Request). method1302 enqueues a string request; the run loop (method1304) wakes and dispatches them.
+ * Runnable that processes a NodeList queue of Request nodes (Request). enqueue enqueues a string request; the run loop (processQueue) wakes and dispatches them.
  */
 
 import jagex3.jagmisc.jagmisc;
@@ -29,7 +29,7 @@ final class RequestProcessor implements Runnable {
             Request class348_sub26;
             synchronized (aClass262_2258) {
                 Node class348;
-                for (class348 = aClass262_2258.method1997(8); class348 == null; class348 = aClass262_2258.method1997(8)) {
+                for (class348 = aClass262_2258.peekFirst(8); class348 == null; class348 = aClass262_2258.peekFirst(8)) {
                     try {
                         aClass262_2258.wait();
                     } catch (InterruptedException interruptedexception) {
@@ -74,20 +74,20 @@ final class RequestProcessor implements Runnable {
         aThread2259.start();
     }
 
-    final Request method1302(int i, String string) {
+    final Request enqueue(int i, String string) {
         anInt2266++;
         if (aThread2259 == null) throw new IllegalStateException("");
         if (string == null) throw new IllegalArgumentException("");
         if (i != -5255) aClass262_2258 = null;
         Request class348_sub26 = new Request(string);
-        method1304(1000, class348_sub26);
+        processQueue(1000, class348_sub26);
         return class348_sub26;
     }
 
     final void method1303(byte i) {
         anInt2257++;
         if (aThread2259 != null) {
-            method1304(1000, new Node());
+            processQueue(1000, new Node());
             try {
                 aThread2259.join();
             } catch (InterruptedException interruptedexception) {
@@ -98,10 +98,10 @@ final class RequestProcessor implements Runnable {
         }
     }
 
-    private final void method1304(int i, Node class348) {
+    private final void processQueue(int i, Node class348) {
         if (i != 1000) method1303((byte) 95);
         synchronized (aClass262_2258) {
-            aClass262_2258.method1999(class348, -20180);
+            aClass262_2258.addTail(class348, -20180);
             aClass262_2258.notify();
         }
         anInt2262++;

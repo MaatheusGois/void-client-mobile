@@ -41,7 +41,7 @@ final class Component98
 
     static final void method1761(int i) {
         anInt5935++;
-        ParticleSystem.method3324(NodeSub8.aHa6654, (byte) 105, OpenGlShader.clientCycle);
+        ParticleSystem.method3324(NodeSub8.toolkit, (byte) 105, OpenGlShader.clientCycle);
         if (i != 85) anInt5943 = -99;
         if (r.anInt9721 != -1) DisplayModeManagerContainer216.method769(r.anInt9721, (byte) 118);
         for (int i_6_ = 0; NodeSub38.anInt7008 > i_6_; i_6_++) {
@@ -54,8 +54,8 @@ final class Component98
             NodeSub38.anInt7008 = 0;
             TheoraVideoPlayer.method842(false);
         }
-        NodeSub8.aHa6654.la();
-        HashNodeSub20.method3281((byte) 77, NodeSub8.aHa6654);
+        NodeSub8.toolkit.la();
+        HashNodeSub20.method3281((byte) 77, NodeSub8.toolkit);
         int i_7_ = DisplayModeManagerContainer67.method1053(3112);
         if (i_7_ == -1) i_7_ = Component149.anInt4458;
         if (i_7_ == -1) i_7_ = HashNodeSub16Sub1.anInt10447;

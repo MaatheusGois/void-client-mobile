@@ -9,7 +9,7 @@ import java.awt.event.MouseMotionListener;
 
 /**
  * Fallback AWT mouse handler without wheel support.
- * Used when {@link AwtMouseHandler} construction fails (see {@link NodeSub18#method2941}).
+ * Used when {@link AwtMouseHandler} construction fails (see {@link NodeSub18#createMouseHandler}).
  * Also hosts unrelated static dump fields left by the obfuscator.
  */
 final class BasicMouseHandler extends MouseHandler implements MouseListener, MouseMotionListener {
@@ -102,7 +102,7 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
         NodeList class262 = aClass262_7441;
         aClass262_7441 = aClass262_7450;
         aClass262_7450 = class262;
-        aClass262_7450.method1996(i ^ 0x66);
+        aClass262_7450.clear(i ^ 0x66);
     }
 
     public final synchronized void mouseMoved(MouseEvent mouseevent) {
@@ -127,7 +127,7 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
     final NodeSub45 popEvent(int i) {
         if (i != 0) mouseReleased(null);
         anInt7437++;
-        return (NodeSub45) aClass262_7441.method1997(i + 8);
+        return (NodeSub45) aClass262_7441.peekFirst(i + 8);
     }
 
     private final void method3606(int i, int i_5_, int i_6_, int i_7_, int i_8_) {
@@ -137,8 +137,8 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
         class348_sub45_sub2.anInt9733 = i_5_;
         class348_sub45_sub2.anInt9730 = i_7_;
         class348_sub45_sub2.anInt9736 = i;
-        class348_sub45_sub2.aLong9734 = Component240.method599(-110);
-        aClass262_7450.method1999(class348_sub45_sub2, -20180);
+        class348_sub45_sub2.aLong9734 = Component240.currentTimeMillis(-110);
+        aClass262_7450.addTail(class348_sub45_sub2, -20180);
         if (i_8_ >= -110) method3607(28, null, -68);
     }
 
@@ -172,7 +172,7 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
             int i_12_ = class348_sub49.readSmart(-122);
             if (i < i_12_) i_12_ = i;
             byte[] is = new byte[i_12_];
-            class348_sub49.anInt7197 += (DisplayModeManagerContainer370.aClass296_1131.method2226(is, class348_sub49.anInt7197, class348_sub49.aByteArray7154, i_12_, -1, 0));
+            class348_sub49.offset += (DisplayModeManagerContainer370.aClass296_1131.method2226(is, class348_sub49.offset, class348_sub49.payload, i_12_, -1, 0));
             String string = WaterShaderSub8.method3546(is, 0, i_12_, 0);
             return string;
         } catch (Exception exception) {

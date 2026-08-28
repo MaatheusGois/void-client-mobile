@@ -27,7 +27,7 @@ final class Component293
         anInt3302++;
         Component214 class160;
         synchronized (aClass60_3303) {
-            class160 = (Component214) aClass60_3303.method583(i, -51);
+            class160 = (Component214) aClass60_3303.get(i, -51);
         }
         if (class160 != null) return class160;
         int i_2_ = 44 % ((-41 - i_1_) / 33);
@@ -38,7 +38,7 @@ final class Component293
         class160 = new Component214();
         if (is != null) class160.method1255(new Buffer(is), -1);
         synchronized (aClass60_3303) {
-            aClass60_3303.method582(class160, i, (byte) -120);
+            aClass60_3303.putOne(class160, i, (byte) -120);
         }
         return class160;
     }

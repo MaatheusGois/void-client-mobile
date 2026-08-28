@@ -199,9 +199,9 @@ final class DefaultClickSwapper {
             return null;
         }
         MenuEntry preferred = null;
-        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.first(4);
              entry != null;
-             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {
             if (entry.option == null) {
                 continue;
             }
@@ -233,7 +233,7 @@ final class DefaultClickSwapper {
             return null;
         }
         preferred.priority = PRIORITY_PREFERRED;
-        DefinitionSub4.menuEntries.method1999(preferred, -20180);
+        DefinitionSub4.menuEntries.addTail(preferred, -20180);
         int prefOp = preferred.opcode >= 2000 ? preferred.opcode - 2000 : preferred.opcode;
         // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
         // (Component203.method2485). Same packet path as 18 — rewrite so tap executes.
@@ -329,9 +329,9 @@ final class DefaultClickSwapper {
     private static void demoteAttackNear(MenuEntry preferred) {
         String attack = attackLabel();
         int npcIndex = (int) preferred.identifier;
-        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.first(4);
              entry != null;
-             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {
             if (!isNpcOpcode(entry.opcode >= 2000 ? entry.opcode - 2000 : entry.opcode)) {
                 continue;
             }
@@ -376,15 +376,15 @@ final class DefaultClickSwapper {
     }
 
     private static DisplayModeManagerContainer206 compositionForNpcEntry(MenuEntry entry) {
-        NodeSub22 node = (NodeSub22) Component21.aClass356_3654.method3480((int) entry.identifier, -6008);
+        NodeSub22 node = (NodeSub22) Component21.aClass356_3654.get((int) entry.identifier, -6008);
         if (node == null) {
             return null;
         }
-        Npc npc = node.aNpc_6859;
+        Npc npc = node.npc;
         if (npc == null) {
             return null;
         }
-        DisplayModeManagerContainer206 composition = npc.aClass79_10505;
+        DisplayModeManagerContainer206 composition = npc.definition;
         if (composition != null && composition.anIntArray1377 != null) {
             composition = composition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
         }

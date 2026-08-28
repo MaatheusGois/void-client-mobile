@@ -34,7 +34,7 @@ final class HashNodeSub14
 
     final boolean method3236(int[] is, int i, int i_0_, int i_1_, byte i_2_) {
         anInt9623++;
-        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.method1995(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.method1990((byte) 117)) {
+        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 117)) {
             if (class348_sub18.method2935(i_0_, i, i_1_, true)) {
                 class348_sub18.method2940(i_0_, true, is, i);
                 return true;
@@ -54,7 +54,7 @@ final class HashNodeSub14
     final boolean method3238(byte i, int i_3_, int i_4_) {
         int i_5_ = 113 % ((-26 - i) / 46);
         anInt9641++;
-        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.method1995(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.method1990((byte) 117)) {
+        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 117)) {
             if (class348_sub18.method2934(3589, i_3_, i_4_)) return true;
         }
         return false;
@@ -63,7 +63,7 @@ final class HashNodeSub14
     final boolean method3239(boolean bool, int i, int i_6_, int[] is) {
         anInt9638++;
         if (bool != true) method3238((byte) 9, -26, -68);
-        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.method1995(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.method1990((byte) 126)) {
+        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 126)) {
             if (class348_sub18.method2939(i_6_, 2, i)) {
                 class348_sub18.method2937(i_6_, i, -3069, is);
                 return true;
@@ -79,7 +79,7 @@ final class HashNodeSub14
         anInt9636++;
         this.anInt9635 = 0;
         if (i != 37) method3244(30, -85, -43);
-        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.method1995(i + -33); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.method1990((byte) 52)) {
+        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(i + -33); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 52)) {
             if (this.anInt9643 > class348_sub18.anInt6812) this.anInt9643 = class348_sub18.anInt6812;
             if (class348_sub18.anInt6813 > this.anInt9627) this.anInt9627 = class348_sub18.anInt6813;
             if (this.anInt9635 < class348_sub18.anInt6819) this.anInt9635 = class348_sub18.anInt6819;
@@ -89,12 +89,12 @@ final class HashNodeSub14
 
     static final void method3241(int i, byte i_7_, GraphicsToolkit var_ha) {
         anInt9637++;
-        if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) HashNodeSub10.anInt9577 = 0;
+        if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) HashNodeSub10.activeOccluderCount = 0;
         else {
             if (DefinitionSub26.aBoolean9352) NumberFormatter.aLong2789 = Component230.aClass47_5262.method446(1);
-            Component274.anInt562 = 0;
-            DisplayModeManagerContainer64.anInt9039 = 0;
-            DefinitionSub4.anInt9112 = 0;
+            Component274.occludedWallCount = 0;
+            DisplayModeManagerContainer64.occludedGroundCount = 0;
+            DefinitionSub4.occludedCpCount = 0;
             int[] is = var_ha.Y();
             DebugPanicSub2.anInt8498 = (int) ((float) is[3] / 3.0F);
             Component211.anInt1962 = (int) ((float) is[2] / 3.0F);
@@ -107,17 +107,17 @@ final class HashNodeSub14
                 Component325.anInt1202 = Component314.anInt3872 >> 1;
             }
             DefinitionSub4.aClass101_9114 = var_ha.method3640();
-            HashNodeSub10.anInt9577 = 0;
+            HashNodeSub10.activeOccluderCount = 0;
             int i_8_ = 0;
             if (i_7_ < 37) method3241(-25, (byte) 65, null);
-            for (/**/; RadixText.anInt6115 > i_8_; i_8_++)
+            for (/**/; RadixText.occluderCountA > i_8_; i_8_++)
                 RenderableSub2.method2498(Component335.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
-            for (int i_9_ = 0; i_9_ < Component325.anInt1200; i_9_++)
+            for (int i_9_ = 0; i_9_ < Component325.occluderCountB; i_9_++)
                 RenderableSub2.method2498((DisplayModeManagerContainer104.aClass338Array10330[i_9_]), var_ha, (byte) -127, i);
             for (int i_10_ = 0; i_10_ < NodeSub44.anInt7101; i_10_++)
                 RenderableSub2.method2498(InterfaceRenderer.aClass338Array5060[i_10_], var_ha, (byte) -128, i);
-            Component241.anInt2946 = 0;
-            if (HashNodeSub10.anInt9577 > 0) {
+            Component241.occludedPixelCount = 0;
+            if (HashNodeSub10.activeOccluderCount > 0) {
                 int i_11_ = DisplayModeManagerContainer194.anIntArray5091.length;
                 int i_12_ = i_11_ + -i_11_ & 0x7;
                 int i_13_ = 0;
@@ -133,20 +133,20 @@ final class HashNodeSub14
                 }
                 while (i_11_ > i_13_) DisplayModeManagerContainer194.anIntArray5091[i_13_++] = 2147483647;
                 Component360.anInt4319 = 1;
-                for (int i_14_ = 0; (i_14_ < HashNodeSub10.anInt9577); i_14_++) {
+                for (int i_14_ = 0; (i_14_ < HashNodeSub10.activeOccluderCount); i_14_++) {
                     Component103 class338 = HashNodeSub19.aClass338Array9700[i_14_];
                     DefinitionSub29.method3125(class338.aShortArray4194[3], class338.aShortArray4183[0], class338.aShortArray4194[1], class338.aShortArray4188[3], class338.aShortArray4188[1], (byte) -105, class338.aShortArray4183[1], class338.aShortArray4188[0], class338.aShortArray4194[0], class338.aShortArray4183[3]);
                     DefinitionSub29.method3125(class338.aShortArray4194[3], class338.aShortArray4183[1], class338.aShortArray4194[2], class338.aShortArray4188[3], class338.aShortArray4188[2], (byte) -118, class338.aShortArray4183[2], class338.aShortArray4188[1], class338.aShortArray4194[1], class338.aShortArray4183[3]);
                 }
                 Component360.anInt4319 = 2;
             }
-            if (DefinitionSub26.aBoolean9352) WaterShaderProgram.aLong6276 = (Component230.aClass47_5262.method446(1) + -NumberFormatter.aLong2789);
+            if (DefinitionSub26.aBoolean9352) WaterShaderProgram.occludeCalcNanos = (Component230.aClass47_5262.method446(1) + -NumberFormatter.aLong2789);
         }
     }
 
     final boolean method3242(int[] is, int i, int i_15_, int i_16_) {
         anInt9624++;
-        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.method1995(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.method1990((byte) 115)) {
+        for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 115)) {
             if (class348_sub18.method2934(3589, i_16_, i_15_)) {
                 class348_sub18.method2940(i_15_, true, is, i_16_);
                 return true;
@@ -158,9 +158,9 @@ final class HashNodeSub14
 
     static final void method3243(int i, ParticleSystem class348_sub47) {
         anInt9630++;
-        DefinitionSub13.aClass262_9201.method1999(class348_sub47, -20180);
-        class348_sub47.anInt7119 = class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197;
-        class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 = 0;
+        DefinitionSub13.aClass262_9201.addTail(class348_sub47, -20180);
+        class348_sub47.anInt7119 = class348_sub47.aClass348_Sub49_Sub2_7116.offset;
+        class348_sub47.aClass348_Sub49_Sub2_7116.offset = 0;
         NodeSub34.anInt6969 += class348_sub47.anInt7119;
         int i_17_ = -41 / ((i - 79) / 37);
     }

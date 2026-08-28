@@ -135,8 +135,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         int i_0_ = 0;
         i &= 0x7fffffff;
         while (!aClass262_9899.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9899.method1997(8);
-            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9899.peekFirst(8);
+            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
             this.anInt8063 -= class348_sub35.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteBuffersARB(i_0_, HashTable.anIntArray1650, 0);
@@ -148,8 +148,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
             i_0_ = 0;
         }
         while (!aClass262_9901.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9901.method1997(8);
-            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9901.peekFirst(8);
+            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
             this.anInt8062 -= class348_sub35.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteTextures(i_0_, HashTable.anIntArray1650, 0);
@@ -161,7 +161,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             i_0_ = 0;
         }
         while (!aClass262_9902.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9902.method1997(8);
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9902.peekFirst(8);
             HashTable.anIntArray1650[i_0_++] = class348_sub35.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteFramebuffersEXT(i_0_, HashTable.anIntArray1650, 0);
@@ -173,8 +173,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
             i_0_ = 0;
         }
         while (!aClass262_9903.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9903.method1997(8);
-            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.aLong4291;
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9903.peekFirst(8);
+            HashTable.anIntArray1650[i_0_++] = (int) class348_sub35.key;
             this.anInt8079 -= class348_sub35.anInt6976;
             if (i_0_ == 1000) {
                 OpenGL.glDeleteRenderbuffersEXT(i_0_, HashTable.anIntArray1650, 0);
@@ -186,24 +186,24 @@ final class GlExtensionManager extends GlToolkitSub3 {
             boolean bool = false;
         }
         while (!aClass262_9869.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.peekFirst(8);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
         }
         while (!aClass262_9904.method2002((byte) 18)) {
-            Node class348 = aClass262_9904.method1997(8);
-            OpenGL.glDeleteProgramARB((int) class348.aLong4291);
+            Node class348 = aClass262_9904.peekFirst(8);
+            OpenGL.glDeleteProgramARB((int) class348.key);
         }
         while (!aClass262_9905.method2002((byte) 18)) {
-            Node class348 = aClass262_9905.method1997(8);
-            OpenGL.glDeleteObjectARB(class348.aLong4291);
+            Node class348 = aClass262_9905.peekFirst(8);
+            OpenGL.glDeleteObjectARB(class348.key);
         }
         while (!aClass262_9869.method2002((byte) 18)) {
-            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.method1997(8);
-            OpenGL.glDeleteLists((int) class348_sub35.aLong4291, class348_sub35.anInt6976);
+            NodeSub35 class348_sub35 = (NodeSub35) aClass262_9869.peekFirst(8);
+            OpenGL.glDeleteLists((int) class348_sub35.key, class348_sub35.anInt6976);
         }
-        if (this.E() > 100663296 && (Component240.method599(-82) > 60000L + aLong9906)) {
+        if (this.E() > 100663296 && (Component240.currentTimeMillis(-82) > 60000L + aLong9906)) {
             System.gc();
-            aLong9906 = Component240.method599(-96);
+            aLong9906 = Component240.currentTimeMillis(-96);
         }
         super.method3646(i);
     }
@@ -306,8 +306,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9853++;
             Node class348 = new Node();
-            class348.aLong4291 = l;
-            if (i == 34192) aClass262_9905.method1999(class348, i ^ ~0xcb43);
+            class348.key = l;
+            if (i == 34192) aClass262_9905.addTail(class348, i ^ ~0xcb43);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "bga.N(" + l + ',' + i + ')');
         }
@@ -338,8 +338,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9898++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
         if (i_8_ != 59) method3818(false);
-        class348_sub35.aLong4291 = i_9_;
-        aClass262_9901.method1999(class348_sub35, -20180);
+        class348_sub35.key = i_9_;
+        aClass262_9901.addTail(class348_sub35, -20180);
     }
 
     final void method3884(byte i) {
@@ -541,8 +541,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         if (i_27_ != 3089) this.anIntArray9927 = null;
         anInt9850++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
-        class348_sub35.aLong4291 = i_26_;
-        aClass262_9899.method1999(class348_sub35, i_27_ ^ ~0x42c2);
+        class348_sub35.key = i_26_;
+        aClass262_9899.addTail(class348_sub35, i_27_ ^ ~0x42c2);
     }
 
     final void method3842(boolean bool) {
@@ -971,8 +971,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final synchronized void method3971(int i, int i_70_) {
         anInt9819++;
         Node class348 = new Node();
-        class348.aLong4291 = i_70_;
-        aClass262_9904.method1999(class348, -20180);
+        class348.key = i_70_;
+        aClass262_9904.addTail(class348, -20180);
         if (i != 16386) method3928(-86);
     }
 

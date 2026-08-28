@@ -44,11 +44,11 @@ final class DisplayModeManagerContainer288
             Task class144 = OggUrlStream.aClass297_8992.method2233((byte) -46, "", true);
             while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -85, 1L);
             if (class144.anInt1997 == 1) {
-                class234 = (RandomAccessFileReader) class144.anObject1998;
+                class234 = (RandomAccessFileReader) class144.result;
                 byte[] is = new byte[(int) class234.method1662((byte) -46)];
                 int i_2_;
                 for (int i_3_ = 0; is.length > i_3_; i_3_ += i_2_) {
-                    i_2_ = class234.method1656(is, i_3_, (byte) -49, -i_3_ + is.length);
+                    i_2_ = class234.read(is, i_3_, (byte) -49, -i_3_ + is.length);
                     if (i_2_ == -1) throw new IOException("EOF");
                 }
                 class348_sub51 = new NodeSub51(new Buffer(is), (PacketReader.aClass230_10434), 0);
@@ -58,7 +58,7 @@ final class DisplayModeManagerContainer288
         }
         if (i != 24916) return null;
         try {
-            if (class234 != null) class234.method1657(false);
+            if (class234 != null) class234.close(false);
         } catch (Exception exception) {
             /* empty */
         }
@@ -74,8 +74,8 @@ final class DisplayModeManagerContainer288
     static final void method249(int i) {
         anInt8627++;
         ArbShaderProgram.aStringArray6200 = new String[500];
-        ImageProducerSprite.anInt9077 = 2 + (Component27.aClass143_4962.anInt1993 + Component27.aClass143_4962.anInt1988);
-        Component342.anInt1188 = (Component163.aClass143_3179.anInt1988 - (-Component163.aClass143_3179.anInt1993 - i));
+        ImageProducerSprite.anInt9077 = 2 + (Component27.aClass143_4962.descent + Component27.aClass143_4962.maxAscent);
+        Component342.anInt1188 = (Component163.aClass143_3179.maxAscent - (-Component163.aClass143_3179.descent - i));
         for (int i_4_ = 0; (i_4_ < ArbShaderProgram.aStringArray6200.length); i_4_++)
             ArbShaderProgram.aStringArray6200[i_4_] = "";
         Applet_Sub1.method94(FriendsIgnoreList.aClass274_3483.method2063(ObjectDeserializer.anInt6967, 544), 67);

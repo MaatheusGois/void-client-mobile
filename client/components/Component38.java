@@ -23,7 +23,7 @@ final class Component38
 
     final void method1404(byte i) {
         synchronized (aClass60_2501) {
-            aClass60_2501.method590(0);
+            aClass60_2501.clear(0);
             if (i >= -20) method1407((byte) -33);
         }
         anInt2508++;
@@ -58,7 +58,7 @@ final class Component38
         anInt2504++;
         Component236 class321;
         synchronized (aClass60_2501) {
-            class321 = (Component236) aClass60_2501.method583(i_3_, 76);
+            class321 = (Component236) aClass60_2501.get(i_3_, 76);
         }
         if (class321 != null) return class321;
         byte[] is;
@@ -70,7 +70,7 @@ final class Component38
         if (i != -12637) aClass60_2501 = null;
         class321.method2548((byte) 127);
         synchronized (aClass60_2501) {
-            aClass60_2501.method582(class321, i_3_, (byte) -99);
+            aClass60_2501.putOne(class321, i_3_, (byte) -99);
         }
         return class321;
     }
@@ -78,7 +78,7 @@ final class Component38
     final void method1409(int i, int i_4_) {
         synchronized (aClass60_2501) {
             if (i_4_ != -20721) aClass45_2498 = null;
-            aClass60_2501.method578(i_4_ + 20723, i);
+            aClass60_2501.processSoftEntries(i_4_ + 20723, i);
         }
         anInt2503++;
     }

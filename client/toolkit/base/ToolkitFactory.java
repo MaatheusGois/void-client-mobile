@@ -4,7 +4,8 @@
 
 /**
  * RENAMED from `Class93` (JODE-obfuscated).
- * GraphicsToolkit factory. method862(Canvas, d, CacheStore, int, int) builds and returns the global GraphicsToolkit (GraphicsToolkit); method861 tears it down. Called at client startup.
+ * GraphicsToolkit factory. {@link #createOpenGlToolkit} builds the OpenGL toolkit;
+ * {@link #clearStatics} tears down static refs. Called at client startup.
  */
 
 import jaggl.OpenGL;
@@ -20,13 +21,13 @@ final class ToolkitFactory {
     static int anInt1533;
     static int anInt1534 = 0;
 
-    public static void method861(int i) {
+    public static void clearStatics(int i) {
         aStringArray1531 = null;
         int i_0_ = 2 / ((i - 33) / 38);
         anApplet1530 = null;
     }
 
-    static final GraphicsToolkit method862(Canvas canvas, d var_d, CacheStore class45, int i, int i_1_) {
+    static final GraphicsToolkit createOpenGlToolkit(Canvas canvas, d var_d, CacheStore class45, int i, int i_1_) {
         try {
             anInt1532++;
             if (!JaclibLoader.method215(27165)) throw new RuntimeException("");

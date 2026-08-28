@@ -202,7 +202,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final NodeBase method3702(int i) {
         NativeHandle var_ya = new NativeHandle(this, i);
-        aClass262_5123.method1999(var_ya, -20180);
+        aClass262_5123.addTail(var_ya, -20180);
         return var_ya;
     }
 
@@ -223,9 +223,9 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final void method3701(Canvas canvas) {
         if (aP5137.aCanvas5147 == canvas) method3677(null);
-        p var_p = (p) aClass356_5126.method3480(canvas.hashCode(), -6008);
+        p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
         if (var_p != null) {
-            var_p.method2715((byte) 110);
+            var_p.unlink((byte) 110);
             var_p.method3436();
         }
     }
@@ -264,10 +264,10 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             aP5137 = null;
             aYa5121 = null;
             aClass101_5131 = null;
-            aClass356_5126.method3481(0);
-            for (NativeHandle var_ya = (NativeHandle) aClass262_5123.method1995(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.method1990((byte) 36))
+            aClass356_5126.clear(0);
+            for (NativeHandle var_ya = (NativeHandle) aClass262_5123.first(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.next((byte) 36))
                 var_ya.ga();
-            aClass262_5123.method1996(117);
+            aClass262_5123.clear(117);
             FA();
             if (aBoolean5142) {
                 CookieManager.method2173(true, -110, false);
@@ -280,7 +280,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     }
 
     final void method3669(Canvas canvas, int i, int i_108_) {
-        p var_p = (p) aClass356_5126.method3480(canvas.hashCode(), -6008);
+        p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
         var_p.method3435(canvas, i, i_108_);
         if (canvas != null && canvas == aP5137.aCanvas5147) method3677(canvas);
     }
@@ -315,7 +315,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     final void method3646(int i) {
         Component36.method1948((byte) -71);
         d(i);
-        for (NativeHandle var_ya = (NativeHandle) aClass262_5123.method1995(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.method1990((byte) 40))
+        for (NativeHandle var_ya = (NativeHandle) aClass262_5123.first(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.next((byte) 40))
             var_ya.r();
     }
 
@@ -371,11 +371,11 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     private final native void va(NodeBase var_za);
 
     final void method3643(Canvas canvas, int i, int i_153_) {
-        p var_p = (p) aClass356_5126.method3480(canvas.hashCode(), -6008);
+        p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
         if (var_p == null) {
             canvas.setIgnoreRepaint(true);
             var_p = new p(this, canvas, i, i_153_);
-            aClass356_5126.method3483((byte) 36, canvas.hashCode(), var_p);
+            aClass356_5126.put((byte) 36, canvas.hashCode(), var_p);
         } else if (var_p.anInt5145 != i || var_p.anInt5148 != i_153_) var_p.method3435(canvas, i, i_153_);
     }
 
@@ -428,7 +428,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             aP5137 = null;
             t(null);
         } else {
-            p var_p = (p) aClass356_5126.method3480(canvas.hashCode(), -6008);
+            p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
             aP5137 = var_p;
             t(var_p);
         }

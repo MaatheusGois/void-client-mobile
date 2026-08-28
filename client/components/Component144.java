@@ -26,7 +26,7 @@ final class Component144
         anInt3978++;
         this.anInt3991 = i_0_;
         synchronized (this.aClass60_3990) {
-            this.aClass60_3990.method590(0);
+            this.aClass60_3990.clear(0);
         }
         if (i < 72) aClass315Array3982 = null;
     }
@@ -47,7 +47,7 @@ final class Component144
         anInt3983++;
         Component63 class368;
         synchronized (aClass60_3989) {
-            class368 = (Component63) aClass60_3989.method583(i_1_, 101);
+            class368 = (Component63) aClass60_3989.get(i_1_, 101);
         }
         if (class368 != null) return class368;
         byte[] is;
@@ -59,19 +59,19 @@ final class Component144
         class368.anInt4501 = i_1_;
         if (is != null) class368.method3559(28105, new Buffer(is));
         synchronized (aClass60_3989) {
-            aClass60_3989.method582(class368, i_1_, (byte) -127);
+            aClass60_3989.putOne(class368, i_1_, (byte) -127);
         }
         return class368;
     }
 
     final void method2544(int i, byte i_2_) {
         synchronized (aClass60_3989) {
-            aClass60_3989.method578(2, i);
+            aClass60_3989.processSoftEntries(2, i);
             if (i_2_ >= -11) this.aClass45_3981 = null;
         }
         anInt3987++;
         synchronized (this.aClass60_3990) {
-            this.aClass60_3990.method578(2, i);
+            this.aClass60_3990.processSoftEntries(2, i);
         }
     }
 
@@ -85,10 +85,10 @@ final class Component144
     final void method2546(int i) {
         anInt3984++;
         synchronized (aClass60_3989) {
-            aClass60_3989.method590(0);
+            aClass60_3989.clear(0);
         }
         synchronized (this.aClass60_3990) {
-            this.aClass60_3990.method590(0);
+            this.aClass60_3990.clear(0);
         }
     }
 

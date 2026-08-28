@@ -17,12 +17,12 @@ final class Component184
     static int anInt1985;
     private final byte[] aByteArray1986;
     static StringCache aClass351_1987 = new StringCache(66, -1);
-    int anInt1988;
+    int maxAscent;
     static int anInt1989;
     static int anInt1990;
     static int anInt1991;
-    int anInt1992;
-    int anInt1993;
+    int ascent;
+    int descent;
 
     public static void method1180(byte i) {
         if (i != -76) method1180((byte) 27);
@@ -92,20 +92,20 @@ final class Component184
         }
     }
 
-    final int method1182(int i, byte i_10_, char c) {
+    final int charKerning(int i, byte i_10_, char c) {
         if (i_10_ > -47) aClass351_1987 = null;
         anInt1985++;
         if (aByteArrayArray1979 != null) return aByteArrayArray1979[i][c];
         return 0;
     }
 
-    final int method1183(boolean bool, String string) {
+    final int stringWidth(boolean bool, String string) {
         anInt1981++;
         if (bool != true) method1181(null, 54, null, (byte) 21);
         return method1186(string, null, false);
     }
 
-    final int method1184(byte i, int i_11_) {
+    final int charWidth(byte i, int i_11_) {
         anInt1982++;
         if (i != -48) aByteArrayArray1979 = null;
         return 0xff & aByteArray1986[i_11_];
@@ -114,10 +114,10 @@ final class Component184
     final int method1185(Component24[] class105s, int i, int i_12_, int i_13_, String string) {
         try {
             anInt1990++;
-            if (i_12_ == i) i_12_ = this.anInt1992;
+            if (i_12_ == i) i_12_ = this.ascent;
             int i_14_ = method1188(string, new int[]{i_13_}, DisplayModeManagerContainer51.aStringArray2494, (byte) 87, class105s);
             int i_15_ = (-1 + i_14_) * i_12_;
-            return (this.anInt1988 + (i_15_ + this.anInt1993));
+            return (this.maxAscent + (i_15_ + this.descent));
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("oea.A(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + i_12_ + ',' + i_13_ + ',' + (string != null ? "{...}" : "null") + ')'));
         }
@@ -125,7 +125,7 @@ final class Component184
 
     final int method1186(String string, Component24[] class105s, boolean bool) {
         try {
-            if (bool != false) this.anInt1993 = 95;
+            if (bool != false) this.descent = 95;
             anInt1980++;
             if (string == null) return 0;
             int i = -1;
@@ -183,7 +183,7 @@ final class Component184
             anInt1984++;
             int i_22_ = method1188(string, new int[]{i}, DisplayModeManagerContainer51.aStringArray2494, (byte) 87, class105s);
             int i_23_ = 0;
-            if (bool != false) this.anInt1988 = -58;
+            if (bool != false) this.maxAscent = -58;
             for (int i_24_ = 0; i_22_ > i_24_; i_24_++) {
                 int i_25_ = method1186(DisplayModeManagerContainer51.aStringArray2494[i_24_], class105s, false);
                 if (i_25_ > i_23_) i_23_ = i_25_;
@@ -215,7 +215,7 @@ final class Component184
                 else {
                     int i_38_;
                     if (i_31_ == -1) {
-                        i_37_ += method1184((byte) -48, i_36_);
+                        i_37_ += charWidth((byte) -48, i_36_);
                         i_38_ = i_35_;
                         if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][i_36_];
                         i_32_ = i_36_;
@@ -235,35 +235,35 @@ final class Component184
                             continue;
                         }
                         if (string_39_.equals("lt")) {
-                            i_37_ += method1184((byte) -48, 60);
+                            i_37_ += charWidth((byte) -48, 60);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][60];
                             i_32_ = 60;
                         } else if (string_39_.equals("gt")) {
-                            i_37_ += method1184((byte) -48, 62);
+                            i_37_ += charWidth((byte) -48, 62);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][62];
                             i_32_ = 62;
                         } else if (string_39_.equals("nbsp")) {
-                            i_37_ += method1184((byte) -48, 160);
+                            i_37_ += charWidth((byte) -48, 160);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][160];
                             i_32_ = 160;
                         } else if (string_39_.equals("shy")) {
-                            i_37_ += method1184((byte) -48, 173);
+                            i_37_ += charWidth((byte) -48, 173);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][173];
                             i_32_ = 173;
                         } else if (string_39_.equals("times")) {
-                            i_37_ += method1184((byte) -48, 215);
+                            i_37_ += charWidth((byte) -48, 215);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += aByteArrayArray1979[i_32_][215];
                             i_32_ = 215;
                         } else if (string_39_.equals("euro")) {
-                            i_37_ += method1184((byte) -48, 8364);
+                            i_37_ += charWidth((byte) -48, 8364);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += (aByteArrayArray1979[i_32_][8364]);
                             i_32_ = 8364;
                         } else if (string_39_.equals("copy")) {
-                            i_37_ += method1184((byte) -48, 169);
+                            i_37_ += charWidth((byte) -48, 169);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += (aByteArrayArray1979[i_32_][169]);
                             i_32_ = 169;
                         } else if (string_39_.equals("reg")) {
-                            i_37_ += method1184((byte) -48, 174);
+                            i_37_ += charWidth((byte) -48, 174);
                             if (aByteArrayArray1979 != null && i_32_ != -1) i_37_ += (aByteArrayArray1979[i_32_][174]);
                             i_32_ = 174;
                         } else if (string_39_.startsWith("img=") && class105s != null) {
@@ -325,7 +325,7 @@ final class Component184
     static final void method1189(int i, int i_41_) {
         anInt1991++;
         if (i != -1) aClass351_1987 = null;
-        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3480(i_41_, -6008));
+        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.get(i_41_, -6008));
         if (class348_sub15 != null) {
             class348_sub15.aBoolean6781 = !class348_sub15.aBoolean6781;
             class348_sub15.aClass55_Sub1_6768.method514((byte) 116, class348_sub15.aBoolean6781);
@@ -335,7 +335,7 @@ final class Component184
     final int method1190(Component24[] class105s, int i, String string, int i_42_) {
         try {
             anInt1983++;
-            if (i != 1) this.anInt1992 = -13;
+            if (i != 1) this.ascent = -13;
             return method1188(string, new int[]{i_42_}, DisplayModeManagerContainer51.aStringArray2494, (byte) 87, class105s);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("oea.B(" + (class105s != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ',' + i_42_ + ')'));
@@ -348,7 +348,7 @@ final class Component184
         if (i != 0) throw new RuntimeException("");
         boolean bool = class348_sub49.readUnsignedByte(255) == 1;
         aByteArray1986 = new byte[256];
-        class348_sub49.method3389(2147483647, 0, 256, aByteArray1986);
+        class348_sub49.readBytes(2147483647, 0, 256, aByteArray1986);
         if (bool) {
             int[] is_43_ = new int[256];
             int[] is_44_ = new int[256];
@@ -382,11 +382,11 @@ final class Component184
                     }
                 }
             }
-            this.anInt1992 = is_44_[32] - -is_43_[32];
-        } else this.anInt1992 = class348_sub49.readUnsignedByte(255);
+            this.ascent = is_44_[32] - -is_43_[32];
+        } else this.ascent = class348_sub49.readUnsignedByte(255);
         class348_sub49.readUnsignedByte(255);
         class348_sub49.readUnsignedByte(255);
-        this.anInt1988 = class348_sub49.readUnsignedByte(255);
-        this.anInt1993 = class348_sub49.readUnsignedByte(255);
+        this.maxAscent = class348_sub49.readUnsignedByte(255);
+        this.descent = class348_sub49.readUnsignedByte(255);
     }
 }

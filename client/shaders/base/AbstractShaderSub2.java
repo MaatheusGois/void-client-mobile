@@ -66,7 +66,7 @@ final class AbstractShaderSub2
             aClass377_7296 = class377;
             aClass269_7294 = class269;
             if (class45 == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
-            else aClass193_7293 = NodeBaseSub2.method3442(34336, class45.method391("gl", "transparent_water", -29832), aClass377_7296, 4);
+            else aClass193_7293 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "transparent_water", -29832), aClass377_7296, 4);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }

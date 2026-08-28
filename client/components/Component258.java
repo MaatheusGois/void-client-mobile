@@ -27,7 +27,7 @@ final class Component258
         anInt1964++;
         SceneManager class218;
         synchronized (aClass60_1963) {
-            class218 = (SceneManager) aClass60_1963.method583(i_0_, 118);
+            class218 = (SceneManager) aClass60_1963.get(i_0_, 118);
         }
         if (class218 != null) return class218;
         byte[] is;
@@ -39,7 +39,7 @@ final class Component258
         class218.aClass141_2851 = this;
         if (is != null) class218.method1597((byte) -114, new Buffer(is));
         synchronized (aClass60_1963) {
-            aClass60_1963.method582(class218, i_0_, (byte) -108);
+            aClass60_1963.putOne(class218, i_0_, (byte) -108);
         }
         return class218;
     }
@@ -58,12 +58,12 @@ final class Component258
 
     final void method1175(byte i) {
         synchronized (aClass60_1963) {
-            aClass60_1963.method590(i + -125);
+            aClass60_1963.clear(i + -125);
         }
         anInt1967++;
         if (i == 125) {
             synchronized (this.aClass60_1976) {
-                this.aClass60_1976.method590(0);
+                this.aClass60_1976.clear(0);
             }
         }
     }
@@ -71,11 +71,11 @@ final class Component258
     final void method1176(int i, byte i_1_) {
         if (i_1_ < 31) method1177((byte) -119);
         synchronized (aClass60_1963) {
-            aClass60_1963.method578(2, i);
+            aClass60_1963.processSoftEntries(2, i);
         }
         anInt1968++;
         synchronized (this.aClass60_1976) {
-            this.aClass60_1976.method578(2, i);
+            this.aClass60_1976.processSoftEntries(2, i);
         }
     }
 

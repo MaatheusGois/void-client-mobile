@@ -50,7 +50,7 @@ final class Component384
     }
 
     private final long method1863(int i) {
-        long l = Component240.method599(-56) * 1000000L;
+        long l = Component240.currentTimeMillis(-56) * 1000000L;
         long l_1_ = l + -aLong6155;
         aLong6155 = l;
         if (l_1_ > -5000000000L && l_1_ < 5000000000L) {

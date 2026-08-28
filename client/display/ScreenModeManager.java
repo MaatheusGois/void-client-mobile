@@ -3,7 +3,7 @@
  */
 /**
  * RENAMED from `Class215` (JODE-obfuscated).
- * Display/screen-mode helper. Creates and manages Frames (DisplayModeManagerContainer104.method2463) and resolves display modes; the CS2 error 'unable to enter display mode' originates here.
+ * Display/screen-mode helper. Creates and manages Frames (DisplayModeManagerContainer104.createFrame) and resolves display modes; the CS2 error 'unable to enter display mode' originates here.
  */
 
 import java.awt.*;
@@ -16,15 +16,15 @@ final class ScreenModeManager {
     static int anInt2838;
     static int anInt2839;
 
-    static final void method1580(byte i, boolean bool, int i_0_, int i_1_, int i_2_, int i_3_) {
+    static final void setScreenMode(byte i, boolean bool, int i_0_, int i_1_, int i_2_, int i_3_) {
         if (Component225.aFrame476 != null && (i_2_ != 3 || i_0_ != InputHandler.anInt4276 || i_3_ != DisplayModeManagerContainer295.anInt5911)) {
-            LoadingState.method527(Component225.aFrame476, OggUrlStream.aClass297_8992, false);
+            LoadingState.startLoadingTask(Component225.aFrame476, OggUrlStream.aClass297_8992, false);
             Component225.aFrame476 = null;
         }
         anInt2839++;
         int i_4_ = -33 / ((-74 - i) / 51);
         if (i_2_ == 3 && Component225.aFrame476 == null) {
-            Component225.aFrame476 = DisplayModeManagerContainer104.method2463(i_3_, i_0_, (OggUrlStream.aClass297_8992), 0, 14199, 0);
+            Component225.aFrame476 = DisplayModeManagerContainer104.createFrame(i_3_, i_0_, (OggUrlStream.aClass297_8992), 0, 14199, 0);
             if (Component225.aFrame476 != null) {
                 InputHandler.anInt4276 = i_0_;
                 DisplayModeManagerContainer295.anInt5911 = i_3_;
@@ -33,7 +33,7 @@ final class ScreenModeManager {
         }
         // Prefer fallback to resizable (2) — not preferred prefs — if exclusive FS
         // fails; preferred may itself be 3 and would recurse forever.
-        if (i_2_ == 3 && Component225.aFrame476 == null) method1580((byte) -126, true, -1, i_1_, 2, -1);
+        if (i_2_ == 3 && Component225.aFrame476 == null) setScreenMode((byte) -126, true, -1, i_1_, 2, -1);
         else {
             java.awt.Container container;
             if (Component225.aFrame476 != null) {
@@ -68,7 +68,7 @@ final class ScreenModeManager {
             if (bool) ParticleSystem.method3327(1406);
             else {
                 DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
-                if (!Component210.aBoolean5300) NodeSub8.aHa6654.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, (PacketReader.anInt10432));
+                if (!Component210.aBoolean5300) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, (PacketReader.anInt10432));
                 else s.method3980(86, DisplayModeManagerContainer50.gameCanvas);
                 if (RSACipher.aFrame4904 == container) {
                     Insets insets = RSACipher.aFrame4904.getInsets();

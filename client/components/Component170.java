@@ -239,12 +239,12 @@ final class Component170
 
     private static final Component170[] method1517(byte[] is) {
         Buffer class348_sub49 = new Buffer(is);
-        class348_sub49.anInt7197 = is.length - 2;
+        class348_sub49.offset = is.length - 2;
         int i = class348_sub49.readUnsignedShort(842397944);
         Component170[] class207s = new Component170[i];
         for (int i_72_ = 0; i_72_ < i; i_72_++)
             class207s[i_72_] = new Component170();
-        class348_sub49.anInt7197 = is.length - 7 - i * 8;
+        class348_sub49.offset = is.length - 7 - i * 8;
         int i_73_ = class348_sub49.readUnsignedShort(842397944);
         int i_74_ = class348_sub49.readUnsignedShort(842397944);
         int i_75_ = (class348_sub49.readUnsignedByte(255) & 0xff) + 1;
@@ -261,7 +261,7 @@ final class Component170
             class207.anInt2698 = (i_73_ - class207.anInt2702 - class207.anInt2703);
             class207.anInt2701 = (i_74_ - class207.anInt2696 - class207.anInt2700);
         }
-        class348_sub49.anInt7197 = is.length - 7 - i * 8 - (i_75_ - 1) * 3;
+        class348_sub49.offset = is.length - 7 - i * 8 - (i_75_ - 1) * 3;
         int[] is_81_ = new int[i_75_];
         for (int i_82_ = 1; i_82_ < i_75_; i_82_++) {
             is_81_[i_82_] = class348_sub49.readMedium(-1);
@@ -269,7 +269,7 @@ final class Component170
         }
         for (int i_83_ = 0; i_83_ < i; i_83_++)
             class207s[i_83_].anIntArray2697 = is_81_;
-        class348_sub49.anInt7197 = 0;
+        class348_sub49.offset = 0;
         for (int i_84_ = 0; i_84_ < i; i_84_++) {
             Component170 class207 = class207s[i_84_];
             int i_85_ = (class207.anInt2702 * class207.anInt2696);

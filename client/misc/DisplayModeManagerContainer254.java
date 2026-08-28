@@ -46,7 +46,7 @@ final class DisplayModeManagerContainer254
         anInt2140++;
         if (Component329.aClass190_5990 == null || !Component329.aClass190_5990.method1424(class190, (byte) 84)) {
             Component329.aClass190_5990 = class190;
-            ObjectDeserializer.aLong6963 = Component240.method599(-78);
+            ObjectDeserializer.aLong6963 = Component240.currentTimeMillis(-78);
             DisplayModeManagerContainer105.anInt4889 = SpriteAtlasShader.anInt6248 = i;
             if (DisplayModeManagerContainer105.anInt4889 == 0) DefinitionSub32.method3134(-1);
             else {

@@ -24,16 +24,16 @@ final class Component48
     static final void method3459(NodeSub34 class348_sub34, int i, int i_0_, int i_1_, int i_2_) {
         anInt4330++;
         long l = i_0_ << 14 | i << 28 | i_1_;
-        NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.method3480(l, -6008);
+        NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.get(l, -6008);
         if (class348_sub37 == null) {
             class348_sub37 = new NodeSub37();
-            Component387.aClass356_1895.method3483((byte) 50, l, class348_sub37);
-            class348_sub37.aClass262_6998.method1999(class348_sub34, -20180);
+            Component387.aClass356_1895.put((byte) 50, l, class348_sub37);
+            class348_sub37.aClass262_6998.addTail(class348_sub34, -20180);
         } else {
             NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(i_2_ ^ ~0x72, (class348_sub34.anInt6973));
             int i_3_ = class213.anInt2819;
             if (i_2_ == (~class213.anInt2820)) i_3_ *= 1 + class348_sub34.anInt6971;
-            for (NodeSub34 class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.method1995(i_2_ + 6); class348_sub34_4_ != null; class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 34)) {
+            for (NodeSub34 class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.first(i_2_ + 6); class348_sub34_4_ != null; class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.next((byte) 34)) {
                 class213 = (Exception_Sub1.aClass255_112.method1940(104, class348_sub34_4_.anInt6973));
                 int i_5_ = class213.anInt2819;
                 if (class213.anInt2820 == 1) i_5_ *= class348_sub34_4_.anInt6971 - -1;
@@ -42,7 +42,7 @@ final class Component48
                     return;
                 }
             }
-            class348_sub37.aClass262_6998.method1999(class348_sub34, i_2_ ^ 0x4ed2);
+            class348_sub37.aClass262_6998.addTail(class348_sub34, i_2_ ^ 0x4ed2);
         }
     }
 

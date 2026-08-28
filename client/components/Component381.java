@@ -30,9 +30,9 @@ final class Component381
     }
 
     static final void method3570(boolean bool) {
-        if (Definition.aClass279_7042 != null) Definition.aClass279_7042.method2084(-6858);
+        if (Definition.aClass279_7042 != null) Definition.aClass279_7042.process(-6858);
         anInt8579++;
-        if (Component276.aClass279_2596 != null) Component276.aClass279_2596.method2084(-6858);
+        if (Component276.aClass279_2596 != null) Component276.aClass279_2596.process(-6858);
         if (bool != false) anInt8583 = 30;
     }
 }

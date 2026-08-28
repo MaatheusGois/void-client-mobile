@@ -23,14 +23,14 @@ final class Component182
 
     static final void method3398(boolean bool, byte[][][] is, int i, byte i_0_, int i_1_, int i_2_, boolean bool_3_) {
         int i_4_ = bool ? 1 : 0;
-        Component305.anInt9930 = 0;
-        HashNodeSub3.anInt9504 = 0;
+        Component305.opaqueOnscreenCount = 0;
+        HashNodeSub3.translucentOnscreenCount = 0;
         RandomAccessFileReader.anInt3049++;
         if ((i_2_ & 0x2) == 0) {
             for (RenderableObject class318_sub1 = Node.aClass318_Sub1Array4293[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
                 if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
                     BufferCacheSub2.method4001(class318_sub1);
-                    if (class318_sub1.anInt6389 != -1) Component71.aClass318_Sub1Array6066[Component305.anInt9930++] = class318_sub1;
+                    if (class318_sub1.anInt6389 != -1) Component71.aClass318_Sub1Array6066[Component305.opaqueOnscreenCount++] = class318_sub1;
                 }
             }
         }
@@ -38,38 +38,38 @@ final class Component182
             for (RenderableObject class318_sub1 = AudioMixer.aClass318_Sub1Array3226[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
                 if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
                     BufferCacheSub2.method4001(class318_sub1);
-                    if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.anInt9504++] = class318_sub1;
+                    if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = class318_sub1;
                 }
             }
             for (RenderableObject class318_sub1 = Component95.aClass318_Sub1Array1754[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
                 if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
                     if (class318_sub1.method2377((byte) 122)) {
                         BufferCacheSub2.method4001(class318_sub1);
-                        if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.anInt9504++] = class318_sub1;
+                        if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = class318_sub1;
                     } else {
                         BufferCacheSub2.method4001(class318_sub1);
-                        if (class318_sub1.anInt6389 != -1) Component71.aClass318_Sub1Array6066[Component305.anInt9930++] = class318_sub1;
+                        if (class318_sub1.anInt6389 != -1) Component71.aClass318_Sub1Array6066[Component305.opaqueOnscreenCount++] = class318_sub1;
                     }
                 }
             }
             if (!bool) {
-                for (int i_5_ = 0; i_5_ < Component328.anInt1477; i_5_++) {
+                for (int i_5_ = 0; i_5_ < Component328.dynamicOnscreenCount; i_5_++) {
                     if (!SceneNode.method2778((DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]), bool, is, i, i_0_)) {
                         BufferCacheSub2.method4001(DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
                         if ((DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_].anInt6389) != -1) {
-                            if (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_].method2377((byte) 122)) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.anInt9504++] = (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
-                            else Component71.aClass318_Sub1Array6066[Component305.anInt9930++] = (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
+                            if (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_].method2377((byte) 122)) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
+                            else Component71.aClass318_Sub1Array6066[Component305.opaqueOnscreenCount++] = (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
                         }
                     }
                 }
             }
         }
-        if (Component305.anInt9930 > 0) {
-            Component385.method1295(Component71.aClass318_Sub1Array6066, 0, Component305.anInt9930 - 1);
-            for (int i_6_ = 0; i_6_ < Component305.anInt9930; i_6_++)
+        if (Component305.opaqueOnscreenCount > 0) {
+            Component385.method1295(Component71.aClass318_Sub1Array6066, 0, Component305.opaqueOnscreenCount - 1);
+            for (int i_6_ = 0; i_6_ < Component305.opaqueOnscreenCount; i_6_++)
                 Component354.method227(Component71.aClass318_Sub1Array6066[i_6_], true, bool_3_);
         }
-        if (DisplayModeManagerContainer58.aBoolean10221) JaclibLoader.aHa171.method3642(0, null);
+        if (DisplayModeManagerContainer58.aBoolean10221) JaclibLoader.toolkit.method3642(0, null);
         if ((i_2_ & 0x2) == 0) {
             for (int i_7_ = Canvas_Sub1.anInt67; i_7_ < Component291.anInt2524; i_7_++) {
                 if (i_7_ >= i && is != null) {
@@ -128,9 +128,9 @@ final class Component182
                 }
             }
         }
-        if (HashNodeSub3.anInt9504 > 0) {
-            VideoAdPlayer.method718(ReferenceTable.aClass318_Sub1Array3737, 0, HashNodeSub3.anInt9504 - 1);
-            for (int i_22_ = 0; i_22_ < HashNodeSub3.anInt9504; i_22_++)
+        if (HashNodeSub3.translucentOnscreenCount > 0) {
+            VideoAdPlayer.method718(ReferenceTable.aClass318_Sub1Array3737, 0, HashNodeSub3.translucentOnscreenCount - 1);
+            for (int i_22_ = 0; i_22_ < HashNodeSub3.translucentOnscreenCount; i_22_++)
                 Component354.method227(ReferenceTable.aClass318_Sub1Array3737[i_22_], true, bool_3_);
         }
     }
@@ -138,11 +138,11 @@ final class Component182
     final void method3399(int i, float f) {
         anInt9741++;
         int i_23_ = Stream.floatToRawIntBits(f);
-        this.aByteArray7154[this.anInt7197++] = (byte) i_23_;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_23_ >> 8);
+        this.payload[this.offset++] = (byte) i_23_;
+        this.payload[this.offset++] = (byte) (i_23_ >> 8);
         if (i != 18291) aBoolean9746 = true;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_23_ >> 16);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_23_ >> 24);
+        this.payload[this.offset++] = (byte) (i_23_ >> 16);
+        this.payload[this.offset++] = (byte) (i_23_ >> 24);
     }
 
     Component182(int i) {
@@ -152,11 +152,11 @@ final class Component182
     final void method3400(float f, byte i) {
         anInt9744++;
         int i_24_ = Stream.floatToRawIntBits(f);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_24_ >> 24);
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_24_ >> 16);
+        this.payload[this.offset++] = (byte) (i_24_ >> 24);
+        this.payload[this.offset++] = (byte) (i_24_ >> 16);
         if (i >= -76) aBoolean9746 = true;
-        this.aByteArray7154[this.anInt7197++] = (byte) (i_24_ >> 8);
-        this.aByteArray7154[this.anInt7197++] = (byte) i_24_;
+        this.payload[this.offset++] = (byte) (i_24_ >> 8);
+        this.payload[this.offset++] = (byte) i_24_;
     }
 
     static final int method3401(int i, int i_25_, byte i_26_) {

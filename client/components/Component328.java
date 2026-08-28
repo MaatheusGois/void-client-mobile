@@ -7,7 +7,7 @@ final class Component328
  * RENAMED from `Class86` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static int anInt1477 = 0;
+    static int dynamicOnscreenCount = 0;
     static float aFloat1478;
     static int anInt1479;
     static int anInt1480 = -1;

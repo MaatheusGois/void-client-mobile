@@ -15,19 +15,19 @@ final class Component21
 
     static final void method2109(int i) {
         anInt3653++;
-        HashNodeSub18 class348_sub42_sub18 = ((HashNodeSub18) DefinitionSub17.aClass262_9240.method1995(4));
+        HashNodeSub18 class348_sub42_sub18 = ((HashNodeSub18) DefinitionSub17.aClass262_9240.first(4));
         if (i != 512) method2110(-125, 79, 70);
-        for (/**/; class348_sub42_sub18 != null; class348_sub42_sub18 = (HashNodeSub18) DefinitionSub17.aClass262_9240.method1990((byte) 56)) {
+        for (/**/; class348_sub42_sub18 != null; class348_sub42_sub18 = (HashNodeSub18) DefinitionSub17.aClass262_9240.next((byte) 56)) {
             DisplayModeManagerContainer174 class318_sub1_sub3_sub5 = (class348_sub42_sub18.aClass318_Sub1_Sub3_Sub5_9682);
             if (OpenGlShader.clientCycle > class318_sub1_sub3_sub5.anInt10392) {
-                class348_sub42_sub18.method2715((byte) 101);
+                class348_sub42_sub18.unlink((byte) 101);
                 class318_sub1_sub3_sub5.method2472(-2159);
             } else if ((class318_sub1_sub3_sub5.anInt10411) <= OpenGlShader.clientCycle) {
                 class318_sub1_sub3_sub5.method2474((byte) 121);
                 if ((class318_sub1_sub3_sub5.anInt10412) > 0) {
-                    NodeSub22 class348_sub22 = ((NodeSub22) (aClass356_3654.method3480(-1 + class318_sub1_sub3_sub5.anInt10412, -6008)));
+                    NodeSub22 class348_sub22 = ((NodeSub22) (aClass356_3654.get(-1 + class318_sub1_sub3_sub5.anInt10412, -6008)));
                     if (class348_sub22 != null) {
-                        Npc npc = (class348_sub22.aNpc_6859);
+                        Npc npc = (class348_sub22.npc);
                         if ((npc.x) >= 0 && (AbstractShaderSub4.anInt7319 * 512 > npc.x) && (npc.y) >= 0 && (512 * ParametricDefinition.anInt9109 > npc.y))
                             class318_sub1_sub3_sub5.method2471((byte) -103, ((Component300.method2064(npc.x, (class318_sub1_sub3_sub5.plane), 11219, npc.y)) + -class318_sub1_sub3_sub5.anInt10366), npc.y, OpenGlShader.clientCycle, npc.x);
                     }
@@ -36,7 +36,7 @@ final class Component21
                     int i_0_ = -(class318_sub1_sub3_sub5.anInt10412) - 1;
                     Player player;
                     if (i_0_ == StringDefinition.anInt9591) player = Component72.localPlayer;
-                    else player = (InterfaceRenderer.aPlayerArray5058[i_0_]);
+                    else player = (InterfaceRenderer.players[i_0_]);
                     if (player != null && (player.x) >= 0 && ((player.x) < 512 * AbstractShaderSub4.anInt7319) && (player.y) >= 0 && (player.y) < 512 * ParametricDefinition.anInt9109)
                         class318_sub1_sub3_sub5.method2471((byte) -103, ((Component300.method2064((player.x), (class318_sub1_sub3_sub5.plane), 11219, (player.y))) - class318_sub1_sub3_sub5.anInt10366), (player.y), OpenGlShader.clientCycle, (player.x));
                 }

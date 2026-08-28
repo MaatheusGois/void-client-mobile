@@ -36,13 +36,13 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
     private boolean[] aBooleanArray6543 = new boolean[112];
     private Component aComponent6544;
 
-    final Interface6 method2697(int i) {
+    final Interface6 popKeyEvent(int i) {
         if (i != 0) aBooleanArray6543 = null;
         anInt6525++;
-        return (Interface6) aClass262_6541.method1997(8);
+        return (Interface6) aClass262_6541.peekFirst(8);
     }
 
-    final boolean method2696(int i, int i_0_) {
+    final boolean isKeyDown(int i, int i_0_) {
         if (i_0_ >= -120) method2700((byte) 119);
         anInt6539++;
         if (i < 0 || i >= 112) return false;
@@ -58,8 +58,8 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
                 aComponent6544 = null;
                 for (int i_1_ = 0; i_1_ < 112; i_1_++)
                     aBooleanArray6543[i_1_] = false;
-                aClass262_6541.method1996(116);
-                aClass262_6542.method1996(i ^ ~0x1b);
+                aClass262_6541.clear(116);
+                aClass262_6542.clear(i ^ ~0x1b);
             }
         }
     }
@@ -85,7 +85,7 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
         }
     }
 
-    final void method2698(int i) {
+    final void reset(int i) {
         anInt6530++;
         method2700((byte) -104);
         if (i != 14174) aClass262_6542 = null;
@@ -97,8 +97,8 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
         class348_sub11.anInt4771 = i_5_;
         class348_sub11.anInt4767 = i;
         class348_sub11.aChar4761 = c;
-        class348_sub11.aLong4764 = Component240.method599(-102);
-        aClass262_6542.method1999(class348_sub11, -20180);
+        class348_sub11.aLong4764 = Component240.currentTimeMillis(-102);
+        aClass262_6542.addTail(class348_sub11, -20180);
         if (i_4_ != 128) aComponent6544 = null;
     }
 
@@ -136,11 +136,11 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
         return i_9_;
     }
 
-    final synchronized void method2695(int i) {
+    final synchronized void sync(int i) {
         anInt6534++;
-        aClass262_6541.method1996(110);
+        aClass262_6541.clear(110);
         if (i >= 51) {
-            for (NodeSub11 class348_sub11 = (NodeSub11) aClass262_6542.method1997(8); class348_sub11 != null; class348_sub11 = (NodeSub11) aClass262_6542.method1997(8)) {
+            for (NodeSub11 class348_sub11 = (NodeSub11) aClass262_6542.peekFirst(8); class348_sub11 != null; class348_sub11 = (NodeSub11) aClass262_6542.peekFirst(8)) {
                 class348_sub11.anInt4766 = method2704((byte) 127);
                 if (class348_sub11.anInt4771 == 0) {
                     if (!aBooleanArray6543[class348_sub11.anInt4767]) {
@@ -150,11 +150,11 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
                         class348_sub11_10_.aChar4761 = '\0';
                         class348_sub11_10_.anInt4766 = class348_sub11.anInt4766;
                         class348_sub11_10_.aLong4764 = class348_sub11.aLong4764;
-                        aClass262_6541.method1999(class348_sub11_10_, -20180);
+                        aClass262_6541.addTail(class348_sub11_10_, -20180);
                         aBooleanArray6543[(class348_sub11.anInt4767)] = true;
                     }
                     class348_sub11.anInt4771 = 2;
-                    aClass262_6541.method1999(class348_sub11, -20180);
+                    aClass262_6541.addTail(class348_sub11, -20180);
                 } else if (class348_sub11.anInt4771 != 1) {
                     if (class348_sub11.anInt4771 == -1) {
                         for (int i_11_ = 0; i_11_ < 112; i_11_++) {
@@ -165,13 +165,13 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
                                 class348_sub11_12_.anInt4766 = (class348_sub11.anInt4766);
                                 class348_sub11_12_.anInt4771 = 1;
                                 class348_sub11_12_.aLong4764 = (class348_sub11.aLong4764);
-                                aClass262_6541.method1999(class348_sub11_12_, -20180);
+                                aClass262_6541.addTail(class348_sub11_12_, -20180);
                                 aBooleanArray6543[i_11_] = false;
                             }
                         }
-                    } else if (class348_sub11.anInt4771 == 3) aClass262_6541.method1999(class348_sub11, -20180);
+                    } else if (class348_sub11.anInt4771 == 3) aClass262_6541.addTail(class348_sub11, -20180);
                 } else if (aBooleanArray6543[class348_sub11.anInt4767]) {
-                    aClass262_6541.method1999(class348_sub11, -20180);
+                    aClass262_6541.addTail(class348_sub11, -20180);
                     aBooleanArray6543[(class348_sub11.anInt4767)] = false;
                 }
             }

@@ -19,9 +19,9 @@ final class OutputStream_Sub1 extends OutputStream {
 
     static final void method132(int i, boolean bool, int i_0_, int i_1_, int i_2_, int i_3_) {
         anInt94++;
-        if (Component335.aClass357ArrayArrayArray2029 == null) NodeSub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
+        if (Component335.aClass357ArrayArrayArray2029 == null) NodeSub8.toolkit.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
         else if (Component72.localPlayer.x < 0 || (Component72.localPlayer.x >= AbstractShaderSub4.anInt7319 * 512) || Component72.localPlayer.y < 0 || (512 * ParametricDefinition.anInt9109 <= Component72.localPlayer.y))
-            NodeSub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
+            NodeSub8.toolkit.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
         else {
             DisplayModeManagerContainer341.anInt6006++;
             if (Component72.localPlayer != null && Component253.anInt3203 == (Component72.localPlayer.x + -(256 * Component72.localPlayer.method2436((byte) 90)) - -256) >> 9 && Component263.anInt1548 == (Component72.localPlayer.y + 256 + -(256 * Component72.localPlayer.method2436((byte) 112))) >> 9) {
@@ -77,23 +77,23 @@ final class OutputStream_Sub1 extends OutputStream {
             if (Component317.anInt8685 > (NodeSub41.anInt7054 << 9) + -1) Component317.anInt8685 = (NodeSub41.anInt7054 << 9) - 1;
             StringDefinition.method3225(114);
             HashNodeSub3.method3175((byte) -107);
-            NodeSub8.aHa6654.KA(i_1_, i_3_, i_1_ - -i_0_, i_3_ + i_2_);
+            NodeSub8.toolkit.KA(i_1_, i_3_, i_1_ - -i_0_, i_3_ + i_2_);
             Component127.method1626(1, true);
             if (Component210.aBoolean5300) {
                 MatrixSub3.method941(124, Component38.anInt2500);
                 if (Component72.anInt1906 != Component121.anInt4545) NodeSub16Sub2.aBoolean8870 = true;
                 Component121.anInt4545 = Component72.anInt1906;
             } else {
-                NodeSub8.aHa6654.NativeHandle();
+                NodeSub8.toolkit.NativeHandle();
                 int i_15_ = Component38.anInt2500;
-                if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2293(Component316.anInt2481 << 3, NodeSub8.aHa6654, (byte) -72, i_1_, i_0_, i_3_, Component298.anInt4638, HashNodeSub19.anInt9701, i_15_, i_2_);
-                else NodeSub8.aHa6654.GA(i_15_);
+                if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2293(Component316.anInt2481 << 3, NodeSub8.toolkit, (byte) -72, i_1_, i_0_, i_3_, Component298.anInt4638, HashNodeSub19.anInt9701, i_15_, i_2_);
+                else NodeSub8.toolkit.GA(i_15_);
             }
             Component381.method3570(false);
             if (i >= 80) {
                 Component270.aClass101_2123.method903(WaterSurfaceShader.anInt6246, DisplayModeManagerContainer50.anInt3855, Component317.anInt8685, -HashNodeSub19.anInt9701 & 0x3fff, -Component298.anInt4638 & 0x3fff, 0x3fff & -Component103.anInt4186);
-                NodeSub8.aHa6654.method3638(Component270.aClass101_2123);
-                NodeSub8.aHa6654.DA(i_0_ / 2 + i_1_, i_3_ + i_2_ / 2, Component263.anInt1550 << 1, Component263.anInt1550 << 1);
+                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.DA(i_0_ / 2 + i_1_, i_3_ + i_2_ / 2, Component263.anInt1550 << 1, Component263.anInt1550 << 1);
                 ComponentDownloader.method319(Component263.anInt1550 << 1, Component263.anInt1550 << 1, (byte) -18, i_1_ + i_0_ / 2, i_3_ + i_2_ / 2);
                 HashNodeSub20.method3282(0x3fff & -(HashNodeSub19.anInt9701), Component317.anInt8685, DisplayModeManagerContainer50.anInt3855, 0, -Component298.anInt4638 & 0x3fff, WaterSurfaceShader.anInt6246, -Component103.anInt4186 & 0x3fff);
                 byte i_16_ = (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264.method1778(-32350) != 2 ? (byte) 1 : (byte) DisplayModeManagerContainer341.anInt6006);
@@ -117,8 +117,8 @@ final class OutputStream_Sub1 extends OutputStream {
                 Component317.anInt8685 = i_10_;
                 if (TcpSocketStream.aBoolean5840 && HardwareProbe.aClass248_6601.method1902(4) == 0) TcpSocketStream.aBoolean5840 = false;
                 if (TcpSocketStream.aBoolean5840) {
-                    NodeSub8.aHa6654.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
-                    Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)), 2, NodeSub8.aHa6654);
+                    NodeSub8.toolkit.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
+                    Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544)), 2, NodeSub8.toolkit);
                 }
                 Component127.method1626(1, false);
             }

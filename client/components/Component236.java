@@ -46,7 +46,7 @@ final class Component236
         if (i_0_ != 52) anIntArray4014 = null;
         anInt4013++;
         if (i != 1) {
-            if (i == 2) aString4010 = class348_sub49.method3371(i_0_ ^ ~0x349a);
+            if (i == 2) aString4010 = class348_sub49.readGjstr2(i_0_ ^ ~0x349a);
             else if (i == 3) {
                 int i_1_ = class348_sub49.readUnsignedByte(i_0_ ^ 0xcb);
                 anIntArrayArray3997 = new int[i_1_][3];
@@ -124,14 +124,14 @@ final class Component236
                                     Node class348;
                                     if (!bool) class348 = (new NodeSub35(class348_sub49.readInt((byte) -126)));
                                     else class348 = (new NodeSub50(class348_sub49.readString((byte) -98)));
-                                    aClass356_4006.method3483((byte) 123, i_12_, class348);
+                                    aClass356_4006.put((byte) 123, i_12_, class348);
                                 }
                             }
                         } else class348_sub49.readInt((byte) -126);
                     } else class348_sub49.readUnsignedByte(255);
                 }
             } else class348_sub49.readUnsignedShort(842397944);
-        } else aString4012 = class348_sub49.method3371(-13487);
+        } else aString4012 = class348_sub49.readGjstr2(-13487);
     }
 
     final void method2551(int i, Buffer class348_sub49) {

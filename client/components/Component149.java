@@ -23,7 +23,7 @@ final class Component149
                     class143 = Component337.aClass143_3649;
                     class324 = var_ha.method3686(class143, (Component305.aClass207Array9929), true);
                     int i_1_ = class143.method1187(string, false, 250, null);
-                    int i_2_ = class143.method1185(null, i ^ 0x2, class143.anInt1992, 250, string);
+                    int i_2_ = class143.method1185(null, i ^ 0x2, class143.ascent, 250, string);
                     int i_3_ = NodeSub7.aClass207_6643.anInt2702;
                     int i_4_ = i_3_ + 4;
                     i_2_ += 2 * i_4_;

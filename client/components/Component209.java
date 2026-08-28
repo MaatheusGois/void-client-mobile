@@ -35,7 +35,7 @@ final class Component209
         if (bool != true) aFloat3462 = -0.54794437F;
         anInt3450++;
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-            DisplayModeManagerContainer173.aClass60_4254.method590(0);
+            DisplayModeManagerContainer173.aClass60_4254.clear(0);
         }
     }
 

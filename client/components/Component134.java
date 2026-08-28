@@ -103,7 +103,7 @@ final class Component134
 
     static final void method1402(int i) {
         if (i == 1) {
-            DisplayModeManagerContainer343.aClass60_8732.method590(0);
+            DisplayModeManagerContainer343.aClass60_8732.clear(0);
             anInt5811++;
         }
     }

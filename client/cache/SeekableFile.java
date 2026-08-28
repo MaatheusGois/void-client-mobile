@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class78` (JODE-obfuscated).
- * Seekable random-access file reader. Throws IOException 'Invalid seek to ' when a negative seek offset is requested (method785 returns the file name).
+ * Seekable random-access file reader. Throws IOException 'Invalid seek to ' when a negative seek offset is requested (getFileName returns the file name).
  */
 
 import java.io.EOFException;
@@ -20,7 +20,7 @@ final class SeekableFile {
     static int anInt1309;
     static int anInt1310;
     private final byte[] aByteArray1311;
-    private final RandomAccessFileReader aClass234_1312;
+    private final RandomAccessFileReader fileReader;
     static int anInt1313;
     private int anInt1314 = 0;
     private long aLong1315;
@@ -34,7 +34,7 @@ final class SeekableFile {
     private long aLong1323;
     private long aLong1324;
 
-    final void method783(int i, int i_0_, boolean bool, byte[] is) throws IOException {
+    final void write(int i, int i_0_, boolean bool, byte[] is) throws IOException {
         anInt1310++;
         try {
             if (aLong1324 - -(long) i_0_ > aLong1323) aLong1323 = (long) i_0_ + aLong1324;
@@ -50,10 +50,10 @@ final class SeekableFile {
             }
             if (aByteArray1305.length < i_0_) {
                 if (aLong1315 != aLong1324) {
-                    aClass234_1312.method1661(-18968, aLong1324);
+                    fileReader.seek(-18968, aLong1324);
                     aLong1315 = aLong1324;
                 }
-                aClass234_1312.method1658((byte) 115, i, i_0_, is);
+                fileReader.write((byte) 115, i, i_0_, is);
                 aLong1315 += i_0_;
                 if (aLong1317 < aLong1315) aLong1317 = aLong1315;
                 long l = -1L;
@@ -83,16 +83,16 @@ final class SeekableFile {
         if (bool != true) anInt1314 = -69;
     }
 
-    final void method784(int i, byte[] is) throws IOException {
+    final void readFully(int i, byte[] is) throws IOException {
         int i_4_ = -98 % ((1 - i) / 40);
-        method788(0, is, is.length, -16717);
+        read(0, is, is.length, -16717);
         anInt1313++;
     }
 
-    private final File method785(int i) {
+    private final File getFileName(int i) {
         anInt1316++;
-        if (i != -8659) method785(-88);
-        return aClass234_1312.method1660(i ^ ~0x2198);
+        if (i != -8659) getFileName(-88);
+        return fileReader.getFile(i ^ ~0x2198);
     }
 
     public static void method786(byte i) {
@@ -100,13 +100,13 @@ final class SeekableFile {
         aClass45_1322 = null;
     }
 
-    final long method787(int i) {
+    final long length(int i) {
         if (i != 0) return 26L;
         anInt1318++;
         return aLong1323;
     }
 
-    final void method788(int i, byte[] is, int i_5_, int i_6_) throws IOException {
+    final void read(int i, byte[] is, int i_5_, int i_6_) throws IOException {
         anInt1307++;
         try {
             if (i_5_ + i > is.length) throw new ArrayIndexOutOfBoundsException(i + (i_5_ - is.length));
@@ -128,11 +128,11 @@ final class SeekableFile {
                 i += i_9_;
             }
             if (i_5_ > aByteArray1311.length) {
-                aClass234_1312.method1661(i_6_ + -2251, aLong1324);
+                fileReader.seek(i_6_ + -2251, aLong1324);
                 aLong1315 = aLong1324;
                 int i_10_;
                 for (/**/; i_5_ > 0; i_5_ -= i_10_) {
-                    i_10_ = aClass234_1312.method1656(is, i, (byte) 8, i_5_);
+                    i_10_ = fileReader.read(is, i, (byte) 8, i_5_);
                     if (i_10_ == -1) break;
                     i += i_10_;
                     aLong1315 += i_10_;
@@ -181,10 +181,10 @@ final class SeekableFile {
         if (i_5_ > 0) throw new EOFException();
     }
 
-    final void method789(long l, byte i) throws IOException {
+    final void seek(long l, byte i) throws IOException {
         try {
             anInt1309++;
-            if (l < 0) throw new IOException("Invalid seek to " + l + " in file " + method785(-8659));
+            if (l < 0) throw new IOException("Invalid seek to " + l + " in file " + getFileName(-8659));
             int i_16_ = -67 / ((i - -49) / 34);
             aLong1324 = l;
         } catch (RuntimeException runtimeexception) {
@@ -192,10 +192,10 @@ final class SeekableFile {
         }
     }
 
-    final void method790(byte i) throws IOException {
+    final void close(byte i) throws IOException {
         anInt1304++;
         method791(-1);
-        aClass234_1312.method1657(false);
+        fileReader.close(false);
         int i_17_ = -26 % ((i - -7) / 51);
     }
 
@@ -203,10 +203,10 @@ final class SeekableFile {
         if (i != -1) aLong1321 = 47L;
         if (aLong1321 != -1) {
             if (aLong1315 != aLong1321) {
-                aClass234_1312.method1661(-18968, aLong1321);
+                fileReader.seek(-18968, aLong1321);
                 aLong1315 = aLong1321;
             }
-            aClass234_1312.method1658((byte) 120, 0, anInt1314, aByteArray1305);
+            fileReader.write((byte) 120, 0, anInt1314, aByteArray1305);
             aLong1315 += anInt1314;
             if (aLong1317 < aLong1315) aLong1317 = aLong1315;
             long l = -1L;
@@ -228,16 +228,16 @@ final class SeekableFile {
     private final void method792(byte i) throws IOException {
         anInt1320 = 0;
         anInt1306++;
-        if (i != -46) method785(111);
+        if (i != -46) getFileName(111);
         if (aLong1315 != aLong1324) {
-            aClass234_1312.method1661(-18968, aLong1324);
+            fileReader.seek(-18968, aLong1324);
             aLong1315 = aLong1324;
         }
         aLong1319 = aLong1324;
         while (anInt1320 < aByteArray1311.length) {
             int i_20_ = -anInt1320 + aByteArray1311.length;
             if (i_20_ > 200000000) i_20_ = 200000000;
-            int i_21_ = aClass234_1312.method1656(aByteArray1311, anInt1320, (byte) 125, i_20_);
+            int i_21_ = fileReader.read(aByteArray1311, anInt1320, (byte) 125, i_20_);
             if (i_21_ == -1) break;
             anInt1320 += i_21_;
             aLong1315 += i_21_;
@@ -245,7 +245,7 @@ final class SeekableFile {
     }
 
     SeekableFile(RandomAccessFileReader class234, int i, int i_22_) throws IOException {
-        aClass234_1312 = class234;
+        fileReader = class234;
         aLong1323 = aLong1317 = class234.method1662((byte) -46);
         aByteArray1305 = new byte[i_22_];
         aByteArray1311 = new byte[i];

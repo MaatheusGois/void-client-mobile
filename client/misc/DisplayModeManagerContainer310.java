@@ -23,7 +23,7 @@ final class DisplayModeManagerContainer310
 
     static final void method297(boolean bool) {
         if (bool != false) aClass60_355 = null;
-        Component298.aClass60_4636.method590(0);
+        Component298.aClass60_4636.clear(0);
         anInt356++;
     }
 

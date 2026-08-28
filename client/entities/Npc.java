@@ -19,7 +19,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     static int anInt10502;
     static int anInt10503;
     static int anInt10504;
-    DisplayModeManagerContainer206 aClass79_10505;
+    DisplayModeManagerContainer206 definition;
     static int anInt10506;
     static int anInt10507;
     static int anInt10508;
@@ -41,12 +41,12 @@ final class Npc extends DisplayModeManagerContainer58 {
     private final boolean method2442(int i) {
         if (i != 1810797122) this.anInt10499 = -103;
         anInt10510++;
-        return (this.aClass79_10505.aBoolean1396);
+        return (this.definition.aBoolean1396);
     }
 
     final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
         try {
-            if (i_7_ > -106) this.aClass79_10505 = null;
+            if (i_7_ > -106) this.definition = null;
             anInt10513++;
             throw new IllegalStateException();
         } catch (RuntimeException runtimeexception) {
@@ -62,7 +62,7 @@ final class Npc extends DisplayModeManagerContainer58 {
 
     final boolean method2391(GraphicsToolkit var_ha, int i, int i_9_, int i_10_) {
         anInt10514++;
-        if (this.aClass79_10505 == null || !method2447(97, 131072, var_ha)) return false;
+        if (this.definition == null || !method2447(97, 131072, var_ha)) return false;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_11_ = this.aClass264_10217.method2019((byte) -78);
         class101.method895(i_11_);
@@ -70,10 +70,10 @@ final class Npc extends DisplayModeManagerContainer58 {
         boolean bool = false;
         for (int i_12_ = i_10_; (this.aClass64Array10323.length > i_12_); i_12_++) {
             if (this.aClass64Array10323[i_12_] != null) {
-                boolean bool_13_ = (this.aClass79_10505.anInt1337 > 0 || (this.aClass79_10505.anInt1333 != -1 ? this.aClass79_10505.anInt1333 == 1 : this.aClass79_10505.anInt1399 == 1));
+                boolean bool_13_ = (this.definition.anInt1337 > 0 || (this.definition.anInt1333 != -1 ? this.definition.anInt1333 == 1 : this.definition.anInt1399 == 1));
                 boolean bool_14_;
-                if (DisplayModeManagerContainer50.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].method623(i_9_, i, class101, bool_13_, this.aClass79_10505.anInt1337, Component72.anInt1906));
-                else bool_14_ = (this.aClass64Array10323[i_12_].method628(i_9_, i, class101, bool_13_, this.aClass79_10505.anInt1337));
+                if (DisplayModeManagerContainer50.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].method623(i_9_, i, class101, bool_13_, this.definition.anInt1337, Component72.anInt1906));
+                else bool_14_ = (this.aClass64Array10323[i_12_].method628(i_9_, i, class101, bool_13_, this.definition.anInt1337));
                 if (bool_14_) {
                     bool = true;
                     break;
@@ -133,7 +133,7 @@ final class Npc extends DisplayModeManagerContainer58 {
 
     final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10501++;
-        if (this.aClass79_10505 == null || !method2447(i + 114, 2048, var_ha)) return null;
+        if (this.definition == null || !method2447(i + 114, 2048, var_ha)) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_20_ = this.aClass264_10217.method2019((byte) -69);
         class101.method895(i_20_);
@@ -144,13 +144,13 @@ final class Npc extends DisplayModeManagerContainer58 {
         } else this.anInt10274 -= (float) this.anInt10274 / 10.0F;
         class101.method891(this.x, (-this.anInt10274 + this.anInt6382 + -20), this.y);
         Component241 class225 = this.method2422((byte) 72);
-        DisplayModeManagerContainer206 class79 = (this.aClass79_10505.anIntArray1377 != null ? this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.aClass79_10505);
+        DisplayModeManagerContainer206 class79 = (this.definition.anIntArray1377 != null ? this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.definition);
         this.aBoolean10324 = false;
         RenderableSub4 class318_sub4 = null;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
             DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
             DisplayModeManagerContainer167 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10268, 7));
-            DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.aClass79_10505.aShort1339, this.aClass79_10505.anInt1399, this.anInt10252, var_ha, 0xff & this.aClass79_10505.aByte1353, this.aClass79_10505.aShort1350 & 0xffff, this.aClass79_10505.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));
+            DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.definition.aShort1339, this.definition.anInt1399, this.anInt10252, var_ha, 0xff & this.definition.aByte1353, this.definition.aShort1350 & 0xffff, this.definition.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));
             if (class64 != null) {
                 class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, method2442(1810797122), false));
                 this.aBoolean10324 = true;
@@ -188,19 +188,19 @@ final class Npc extends DisplayModeManagerContainer58 {
 
     final int method2421(byte i) {
         anInt10495++;
-        if ((this.aClass79_10505.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+        if ((this.definition.anIntArray1377) != null) {
+            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1366 != -1) return class79.anInt1366;
         }
         if (i < 113) method2448(null, 88);
-        return (this.aClass79_10505.anInt1366);
+        return (this.definition.anInt1366);
     }
 
     final int method2393(int i) {
         anInt10506++;
         if (i >= -109) this.anInt10499 = -47;
-        if (this.aClass79_10505 == null) return 0;
-        return (this.aClass79_10505.anInt1337);
+        if (this.definition == null) return 0;
+        return (this.definition.anInt1337);
     }
 
     final void method2444(int i, boolean bool, int i_26_, int i_27_, int i_28_, int i_29_) {
@@ -255,19 +255,19 @@ final class Npc extends DisplayModeManagerContainer58 {
 
     final boolean method2445(byte i) {
         anInt10500++;
-        if (this.aClass79_10505 == null) return false;
+        if (this.definition == null) return false;
         int i_33_ = 116 % ((-44 - i) / 38);
         return true;
     }
 
     final int method2425(int i) {
         anInt10496++;
-        if ((this.aClass79_10505.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+        if ((this.definition.anIntArray1377) != null) {
+            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1336 != -1) return class79.anInt1336;
         }
         if (i != -1) this.anInt10499 = -69;
-        return (this.aClass79_10505.anInt1336);
+        return (this.definition.anInt1336);
     }
 
     final boolean method2388(int i) {
@@ -278,17 +278,17 @@ final class Npc extends DisplayModeManagerContainer58 {
     final int method2426(int i) {
         anInt10504++;
         if (i != 200) return 115;
-        if ((this.aClass79_10505.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.aClass79_10505.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+        if ((this.definition.anIntArray1377) != null) {
+            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1390 != -1) return class79.anInt1390;
         }
-        if ((this.aClass79_10505.anInt1390) == -1) return super.method2426(200);
-        return (this.aClass79_10505.anInt1390);
+        if ((this.definition.anInt1390) == -1) return super.method2426(200);
+        return (this.definition.anInt1390);
     }
 
     final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10509++;
-        if (this.aClass79_10505 != null && (this.aBoolean10318 || method2447(123, 0, var_ha))) {
+        if (this.definition != null && (this.aBoolean10318 || method2447(123, 0, var_ha))) {
             if (i > -125) method2391(null, -2, -103, 34);
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method895(this.aClass264_10217.method2019((byte) -118));
@@ -309,7 +309,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     }
 
     private final boolean method2447(int i, int i_34_, GraphicsToolkit var_ha) {
-        if (i <= 84) this.aClass79_10505 = null;
+        if (i <= 84) this.definition = null;
         anInt10494++;
         int i_35_ = i_34_;
         Component241 class225 = this.method2422((byte) 72);
@@ -321,7 +321,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         boolean bool = (this.aByte10279 != 0 && (OpenGlShader.clientCycle >= this.anInt10248) && (OpenGlShader.clientCycle < this.anInt10250));
         if (bool) i_34_ |= 0x80000;
         int i_39_ = this.aClass264_10217.method2019((byte) -25);
-        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.aClass79_10505.method800(i_39_, this.aClass182Array10308, RunescapeInfo.aClass87_191, false, class17_36_, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558, this.anInt10267, class17, DisplayModeManagerContainer58.aClass170_10209, var_ha, this.anInt10312, this.anIntArray10296, this.anInt10244, this.anInt10245, i_34_, this.anInt10232)));
+        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.definition.method800(i_39_, this.aClass182Array10308, RunescapeInfo.aClass87_191, false, class17_36_, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558, this.anInt10267, class17, DisplayModeManagerContainer58.aClass170_10209, var_ha, this.anInt10312, this.anIntArray10296, this.anInt10244, this.anInt10245, i_34_, this.anInt10232)));
         if (class64 == null) return false;
         this.anInt10207 = class64.fa();
         this.anInt10230 = class64.ma();
@@ -434,7 +434,7 @@ final class Npc extends DisplayModeManagerContainer58 {
 
     final void method2448(DisplayModeManagerContainer206 class79, int i) {
         anInt10511++;
-        this.aClass79_10505 = class79;
+        this.definition = class79;
         if (i != -2) this.anInt10512 = 69;
         if (this.aClass318_Sub10_10327 != null) this.aClass318_Sub10_10327.method2529();
     }

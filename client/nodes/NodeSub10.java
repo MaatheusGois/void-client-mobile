@@ -95,7 +95,7 @@ final class NodeSub10
                 i_4_ += i_5_;
             } while (i_5_ >= 255);
             byte[] is_6_ = new byte[i_4_];
-            class348_sub49.method3389(2147483647, 0, i_4_, is_6_);
+            class348_sub49.readBytes(2147483647, 0, i_4_, is_6_);
             aByteArrayArray6703[i_3_] = is_6_;
         }
     }

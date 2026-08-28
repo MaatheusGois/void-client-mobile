@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class262` (JODE-obfuscated).
- * Doubly-linked list backed by a sentinel Node (aClass348_3334 = new Node()). Provides insert/remove (method1988/method1989) and iteration (method1990). Also bundles unrelated static rendering helpers.
+ * Doubly-linked list backed by a sentinel Node (sentinel = new Node()). Provides insert/remove (transferFrom/transferRange) and iteration (next). Also bundles unrelated static rendering helpers.
  */
 
 import java.awt.*;
@@ -21,7 +21,7 @@ final class NodeList {
     static Object anObject3331;
     static int anInt3332;
     static int anInt3333;
-    Node aClass348_3334 = new Node();
+    Node sentinel = new Node();
     static DisplayModeManagerContainer56[][] aClass190ArrayArray3335;
     static int anInt3336;
     static int anInt3337;
@@ -29,26 +29,26 @@ final class NodeList {
     static int anInt3339;
     static int anInt3340;
     static int anInt3341;
-    private Node aClass348_3342;
+    private Node cursor;
 
-    final void method1988(NodeList class262_0_, byte i) {
-        if (i != -115) method1995(-53);
-        method1989((this.aClass348_3334.aClass348_4294), false, class262_0_);
+    final void transferFrom(NodeList class262_0_, byte i) {
+        if (i != -115) first(-53);
+        transferRange((this.sentinel.next), false, class262_0_);
         anInt3340++;
     }
 
-    private final void method1989(Node class348, boolean bool, NodeList class262_1_) {
+    private final void transferRange(Node class348, boolean bool, NodeList class262_1_) {
         do {
             try {
                 anInt3325++;
-                Node class348_2_ = (this.aClass348_3334.aClass348_4295);
-                this.aClass348_3334.aClass348_4295 = class348.aClass348_4295;
-                class348.aClass348_4295.aClass348_4294 = this.aClass348_3334;
-                if (this.aClass348_3334 != class348) {
-                    class348.aClass348_4295 = (class262_1_.aClass348_3334.aClass348_4295);
-                    class348.aClass348_4295.aClass348_4294 = class348;
-                    class262_1_.aClass348_3334.aClass348_4295 = class348_2_;
-                    class348_2_.aClass348_4294 = class262_1_.aClass348_3334;
+                Node class348_2_ = (this.sentinel.previous);
+                this.sentinel.previous = class348.previous;
+                class348.previous.next = this.sentinel;
+                if (this.sentinel != class348) {
+                    class348.previous = (class262_1_.sentinel.previous);
+                    class348.previous.next = class348;
+                    class262_1_.sentinel.previous = class348_2_;
+                    class348_2_.next = class262_1_.sentinel;
                 }
                 if (bool == false) break;
                 aClass45_3323 = null;
@@ -59,15 +59,15 @@ final class NodeList {
         } while (false);
     }
 
-    final Node method1990(byte i) {
+    final Node next(byte i) {
         anInt3329++;
-        if (i < 29) aClass348_3342 = null;
-        Node class348 = aClass348_3342;
-        if (this.aClass348_3334 == class348) {
-            aClass348_3342 = null;
+        if (i < 29) cursor = null;
+        Node class348 = cursor;
+        if (this.sentinel == class348) {
+            cursor = null;
             return null;
         }
-        aClass348_3342 = class348.aClass348_4294;
+        cursor = class348.next;
         return class348;
     }
 
@@ -128,31 +128,31 @@ final class NodeList {
     static final void method1992(RenderableObject class318_sub1, int i, int i_20_, int i_21_) {
         if (i_20_ < StaticElementRenderer.anInt6451) {
             Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_];
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.aHa171, 0, true, (class357.aClass318_Sub1_Sub1_4402), 0, (byte) -116, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), 0, (byte) -116, Component148.anInt3465);
         }
         if (i_21_ < StaticElementRenderer.anInt6451) {
             Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_][i_21_ + 1];
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-92)) class318_sub1.method2380(JaclibLoader.aHa171, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -128, 0);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-92)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -128, 0);
         }
         if (i_20_ < StaticElementRenderer.anInt6451 && i_21_ < NodeSub41.anInt7054) {
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_ + 1]);
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.aHa171, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -117, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -117, Component148.anInt3465);
         }
         if (i_20_ < StaticElementRenderer.anInt6451 && i_21_ > 0) {
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_ - 1]);
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-90)) class318_sub1.method2380(JaclibLoader.aHa171, 0, true, (class357.aClass318_Sub1_Sub1_4402), -Component148.anInt3465, (byte) -116, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-90)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), -Component148.anInt3465, (byte) -116, Component148.anInt3465);
         }
     }
 
-    final Node method1993(int i) {
+    final Node last(int i) {
         anInt3336++;
-        Node class348 = this.aClass348_3334.aClass348_4295;
-        if (this.aClass348_3334 == class348) {
-            aClass348_3342 = null;
+        Node class348 = this.sentinel.previous;
+        if (this.sentinel == class348) {
+            cursor = null;
             return null;
         }
-        aClass348_3342 = class348.aClass348_4295;
-        if (i > -65) method1993(67);
+        cursor = class348.previous;
+        if (i > -65) last(67);
         return class348;
     }
 
@@ -164,58 +164,58 @@ final class NodeList {
         aClass324_3326 = null;
     }
 
-    final Node method1995(int i) {
+    final Node first(int i) {
         if (i != 4) method2001(null, -30);
         anInt3332++;
-        Node class348 = this.aClass348_3334.aClass348_4294;
-        if (class348 == this.aClass348_3334) {
-            aClass348_3342 = null;
+        Node class348 = this.sentinel.next;
+        if (class348 == this.sentinel) {
+            cursor = null;
             return null;
         }
-        aClass348_3342 = class348.aClass348_4294;
+        cursor = class348.next;
         return class348;
     }
 
-    final void method1996(int i) {
+    final void clear(int i) {
         if (i > 97) {
             anInt3339++;
             for (; ; ) {
-                Node class348 = (this.aClass348_3334.aClass348_4294);
-                if (this.aClass348_3334 == class348) break;
-                class348.method2715((byte) 24);
+                Node class348 = (this.sentinel.next);
+                if (this.sentinel == class348) break;
+                class348.unlink((byte) 24);
             }
-            aClass348_3342 = null;
+            cursor = null;
         }
     }
 
-    final Node method1997(int i) {
+    final Node peekFirst(int i) {
         anInt3341++;
         if (i != 8) aClass190ArrayArray3335 = null;
-        Node class348 = this.aClass348_3334.aClass348_4294;
-        if (this.aClass348_3334 == class348) return null;
-        class348.method2715((byte) 114);
+        Node class348 = this.sentinel.next;
+        if (this.sentinel == class348) return null;
+        class348.unlink((byte) 114);
         return class348;
     }
 
-    final int method1998(int i) {
+    final int size(int i) {
         anInt3333++;
         int i_22_ = i;
-        Node class348 = this.aClass348_3334.aClass348_4294;
-        while (class348 != this.aClass348_3334) {
-            class348 = class348.aClass348_4294;
+        Node class348 = this.sentinel.next;
+        while (class348 != this.sentinel) {
+            class348 = class348.next;
             i_22_++;
         }
         return i_22_;
     }
 
-    final void method1999(Node class348, int i) {
-        if (class348.aClass348_4295 != null) class348.method2715((byte) 91);
+    final void addTail(Node class348, int i) {
+        if (class348.previous != null) class348.unlink((byte) 91);
         anInt3328++;
-        class348.aClass348_4294 = this.aClass348_3334;
-        class348.aClass348_4295 = this.aClass348_3334.aClass348_4295;
-        class348.aClass348_4295.aClass348_4294 = class348;
+        class348.next = this.sentinel;
+        class348.previous = this.sentinel.previous;
+        class348.previous.next = class348;
         if (i != -20180) method2001(null, -94);
-        class348.aClass348_4294.aClass348_4295 = class348;
+        class348.next.previous = class348;
     }
 
     static final GraphicsToolkit method2000(int i, int i_23_, Canvas canvas, d var_d) {
@@ -230,34 +230,34 @@ final class NodeList {
 
     final void method2001(Node class348, int i) {
         anInt3330++;
-        if (class348.aClass348_4295 != null) class348.method2715((byte) 63);
-        class348.aClass348_4295 = this.aClass348_3334;
-        class348.aClass348_4294 = this.aClass348_3334.aClass348_4294;
+        if (class348.previous != null) class348.unlink((byte) 63);
+        class348.previous = this.sentinel;
+        class348.next = this.sentinel.next;
         if (i > -89) aClass324_3326 = null;
-        class348.aClass348_4295.aClass348_4294 = class348;
-        class348.aClass348_4294.aClass348_4295 = class348;
+        class348.previous.next = class348;
+        class348.next.previous = class348;
     }
 
     final boolean method2002(byte i) {
         if (i != 18) aClass190ArrayArray3335 = null;
         anInt3327++;
-        return this.aClass348_3334 == this.aClass348_3334.aClass348_4294;
+        return this.sentinel == this.sentinel.next;
     }
 
     final Node method2003(int i) {
         anInt3337++;
-        Node class348 = aClass348_3342;
-        if (class348 == this.aClass348_3334) {
-            aClass348_3342 = null;
+        Node class348 = cursor;
+        if (class348 == this.sentinel) {
+            cursor = null;
             return null;
         }
         int i_24_ = -111 / ((i - -88) / 38);
-        aClass348_3342 = class348.aClass348_4295;
+        cursor = class348.previous;
         return class348;
     }
 
     public NodeList() {
-        this.aClass348_3334.aClass348_4295 = this.aClass348_3334;
-        this.aClass348_3334.aClass348_4294 = this.aClass348_3334;
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 }

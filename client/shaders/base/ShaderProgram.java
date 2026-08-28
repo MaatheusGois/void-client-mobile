@@ -27,7 +27,7 @@ abstract class ShaderProgram {
 
     static final boolean method2138(int i) {
         anInt3681++;
-        NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.method1995(4);
+        NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.first(4);
         if (class348_sub48 == null) return false;
         int i_3_ = 118 % ((-40 - i) / 50);
         for (int i_4_ = 0; (class348_sub48.anInt7126 > i_4_); i_4_++) {

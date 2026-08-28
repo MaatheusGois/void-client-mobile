@@ -46,10 +46,10 @@ final class DisplayModeManagerContainer220
 
     static final void method271(int i, DisplayModeManagerContainer57 class46, byte i_0_, int i_1_) {
         anInt278++;
-        Shader var_aa = class46.method425(NodeSub8.aHa6654, (byte) 19);
+        Shader var_aa = class46.method425(NodeSub8.toolkit, (byte) 19);
         if (var_aa != null) {
-            NodeSub8.aHa6654.KA(i_1_, i, class46.anInt709 + i_1_, i - -class46.anInt789);
-            if (Component293.anInt3306 >= 3) NodeSub8.aHa6654.A(-16777216, var_aa, i_1_, i);
+            NodeSub8.toolkit.KA(i_1_, i, class46.anInt709 + i_1_, i - -class46.anInt789);
+            if (Component293.anInt3306 >= 3) NodeSub8.toolkit.A(-16777216, var_aa, i_1_, i);
             else DisplayModeManagerContainer206.aClass105_1365.method976(((float) class46.anInt709 / 2.0F + (float) i_1_), (float) i + (float) class46.anInt789 / 2.0F, 4096, (0x3fff & (int) -Component112.aFloat3938) << 2, var_aa, i_1_, i);
             if (i_0_ != -98) method271(88, null, (byte) 15, 71);
         }
@@ -77,8 +77,8 @@ final class DisplayModeManagerContainer220
             int i_4_ = 0;
             int i_5_ = 1;
             NodeSub5 class348_sub5;
-            for (NodeSub5 class348_sub5_6_ = (NodeSub5) aClass262_292.method1995(4); class348_sub5_6_ != null; class348_sub5_6_ = class348_sub5) {
-                class348_sub5 = (NodeSub5) aClass262_292.method1990((byte) 113);
+            for (NodeSub5 class348_sub5_6_ = (NodeSub5) aClass262_292.first(4); class348_sub5_6_ != null; class348_sub5_6_ = class348_sub5) {
+                class348_sub5 = (NodeSub5) aClass262_292.next((byte) 113);
                 int i_7_ = class348_sub5_6_.method2764(1);
                 for (int i_8_ = 0; i_8_ < i_7_; i_8_++) {
                     class348_sub5_6_.method2750(aClass258_Sub3_300, aClass258_Sub3Array295[i_4_], i_8_, (byte) 103);
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer220
 
     static final void method273(DisplayModeManagerContainer57 class46, int i) {
         anInt288++;
-        if (class46.anInt774 == 5 && class46.anInt812 != -1) RenderableObject.method2383(NodeSub8.aHa6654, -2, class46);
+        if (class46.anInt774 == 5 && class46.anInt812 != -1) RenderableObject.method2383(NodeSub8.toolkit, -2, class46);
         if (i != -2835) method273(null, 44);
     }
 
@@ -135,7 +135,7 @@ final class DisplayModeManagerContainer220
         anInt273++;
         if (aClass206_284 != null) {
             if (class348_sub5.method2751(bool) || class348_sub5.method2758(85)) {
-                aClass262_292.method1999(class348_sub5, -20180);
+                aClass262_292.addTail(class348_sub5, -20180);
                 method281((byte) -94);
                 if (method276(false)) {
                     if (anInt286 != -1 && anInt275 != -1) class348_sub5.method2754(anInt275, (byte) 55, anInt286);
@@ -156,7 +156,7 @@ final class DisplayModeManagerContainer220
         if (anInt286 != i || i_10_ != anInt275) {
             anInt286 = i;
             anInt275 = i_10_;
-            for (Node class348 = aClass262_292.method1995(i_12_ ^ ~0x4); aClass262_292.aClass348_3334 != class348; class348 = class348.aClass348_4294)
+            for (Node class348 = aClass262_292.first(i_12_ ^ ~0x4); aClass262_292.sentinel != class348; class348 = class348.next)
                 ((NodeSub5) class348).method2754(anInt275, (byte) 41, anInt286);
             aBoolean297 = true;
             aBoolean293 = true;
@@ -260,7 +260,7 @@ final class DisplayModeManagerContainer220
         if (bool == true) {
             class348_sub5.aBoolean6621 = false;
             class348_sub5.method2763((byte) -126);
-            class348_sub5.method2715((byte) 103);
+            class348_sub5.unlink((byte) 103);
             method281((byte) -80);
         }
     }
@@ -274,7 +274,7 @@ final class DisplayModeManagerContainer220
         aClass348_Sub42_Sub2_298 = null;
         aClass258_Sub3Array295 = null;
         if (!aClass262_292.method2002((byte) 18)) {
-            for (Node class348 = aClass262_292.method1995(4); aClass262_292.aClass348_3334 != class348; class348 = class348.aClass348_4294)
+            for (Node class348 = aClass262_292.first(4); aClass262_292.sentinel != class348; class348 = class348.next)
                 ((NodeSub5) class348).method2763((byte) -124);
         }
         anInt286 = anInt275 = 1;
@@ -291,9 +291,9 @@ final class DisplayModeManagerContainer220
         boolean bool = false;
         int i_14_ = 0;
         int i_15_ = 0;
-        NodeSub5 class348_sub5 = (NodeSub5) aClass262_292.method1995(4);
+        NodeSub5 class348_sub5 = (NodeSub5) aClass262_292.first(4);
         int i_16_ = 50 / ((-34 - i) / 45);
-        for (/**/; class348_sub5 != null; class348_sub5 = (NodeSub5) aClass262_292.method1990((byte) 67)) {
+        for (/**/; class348_sub5 != null; class348_sub5 = (NodeSub5) aClass262_292.next((byte) 67)) {
             int i_17_ = class348_sub5.method2761(true);
             i_15_ += class348_sub5.method2764(1);
             if (i_14_ < i_17_) i_14_ = i_17_;

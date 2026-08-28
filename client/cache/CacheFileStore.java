@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class340` (JODE-obfuscated).
- * Manages an array of archive entries (Component219[]) with RSA BigInteger keys (modulus/exponent) and a Buffer; method2670 reloads/flushes archives. Cache/file store with signature verification.
+ * Manages an array of archive entries (Component219[]) with RSA BigInteger keys (modulus/exponent) and a Buffer; reload reloads/flushes archives. Cache/file store with signature verification.
  */
 
 import java.math.BigInteger;
@@ -25,7 +25,7 @@ final class CacheFileStore {
     static int anInt4224;
     static StringCache aClass351_4225 = new StringCache(43, -1);
 
-    final void method2670(int i) {
+    final void reload(int i) {
         anInt4222++;
         if (aClass314_Sub1Array4216 != null) {
             for (int i_0_ = 0; (i_0_ < aClass314_Sub1Array4216.length); i_0_++) {
@@ -59,7 +59,7 @@ final class CacheFileStore {
         }
     }
 
-    final boolean method2674(int i) {
+    final boolean isReady(int i) {
         anInt4214++;
         if (aClass348_Sub49_4215 != null) {
             return true;
@@ -74,11 +74,11 @@ final class CacheFileStore {
             return false;
         }
         Buffer class348_sub49 = new Buffer(aClass348_Sub42_Sub16_Sub1_4220.method3259(i ^ 0x17));
-        class348_sub49.anInt7197 = 5;
+        class348_sub49.offset = 5;
         int idxCount = class348_sub49.readUnsignedByte(i ^ 0xf8);
-        class348_sub49.anInt7197 += idxCount * 72;
-        byte[] is = new byte[(class348_sub49.aByteArray7154.length - class348_sub49.anInt7197)];
-        class348_sub49.method3389(2147483647, 0, is.length, is);
+        class348_sub49.offset += idxCount * 72;
+        byte[] is = new byte[(class348_sub49.payload.length - class348_sub49.offset)];
+        class348_sub49.readBytes(2147483647, 0, is.length, is);
         byte[] is_6_;
         if (aBigInteger4213 != null && aBigInteger4218 != null) {
             BigInteger biginteger = new BigInteger(is);
@@ -90,7 +90,7 @@ final class CacheFileStore {
         if (is_6_.length != 65) {
             throw new RuntimeException();
         }
-        byte[] is_8_ = NodeSub1Sub2.method2730(4567, 5, (class348_sub49.aByteArray7154), (class348_sub49.anInt7197) - (is.length + 5));
+        byte[] is_8_ = NodeSub1Sub2.method2730(4567, 5, (class348_sub49.payload), (class348_sub49.offset) - (is.length + 5));
         for (int i_9_ = 0; i_9_ < 64; i_9_++) {
             if (is_8_[i_9_] != is_6_[i_9_ + 1]) {
                 throw new RuntimeException();
@@ -107,11 +107,11 @@ final class CacheFileStore {
             if (aClass348_Sub49_4215 == null) throw new RuntimeException();
             if (i_10_ < 0 || i_10_ >= aClass314_Sub1Array4216.length) throw new RuntimeException();
             if (aClass314_Sub1Array4216[i_10_] != null) return aClass314_Sub1Array4216[i_10_];
-            aClass348_Sub49_4215.anInt7197 = 6 + i_10_ * 72;
+            aClass348_Sub49_4215.offset = 6 + i_10_ * 72;
             int i_12_ = aClass348_Sub49_4215.readInt((byte) -126);
             int i_13_ = aClass348_Sub49_4215.readInt((byte) -126);
             byte[] is = new byte[64];
-            aClass348_Sub49_4215.method3389(2147483647, 0, 64, is);
+            aClass348_Sub49_4215.readBytes(2147483647, 0, 64, is);
             if (i >= -18) method2671(103);
             Component219 class314_sub1 = new Component219(i_10_, class137, class137_11_, aClass248_4212, aClass112_4217, i_12_, is, i_13_, bool);
             aClass314_Sub1Array4216[i_10_] = class314_sub1;

@@ -53,7 +53,7 @@ abstract class JagTheoraDecoder {
     private final void method504(int i) {
         if (i != 1999) aByteArray995 = null;
         anInt982++;
-        for (OggStream class348_sub23 = (OggStream) aClass356_1011.method3484(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.method3482(0)) {
+        for (OggStream class348_sub23 = (OggStream) aClass356_1011.first(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.next(0)) {
             if (class348_sub23 instanceof Component179) {
                 Component179 class348_sub23_sub4 = (Component179) class348_sub23;
                 while (class348_sub23_sub4.anInt6868 <= 8 || (method519(i ^ 0x7b2) > (double) class348_sub23_sub4.method2984((byte) 97))) {
@@ -91,16 +91,16 @@ abstract class JagTheoraDecoder {
             return !aClass348_Sub23_Sub2_1001.method2976(-1) || method519(126) > aClass348_Sub23_Sub2_1001.method2980((byte) 100);
         }
         double d = aClass348_Sub23_Sub2_1001.method2977(0);
-        return d == 0.0 || (double) Component240.method599(-74) >= 1000.0 / d + (double) aClass348_Sub23_Sub2_1001.method2979(30);
+        return d == 0.0 || (double) Component240.currentTimeMillis(-74) >= 1000.0 / d + (double) aClass348_Sub23_Sub2_1001.method2979(30);
     }
 
     final void method508(int i) {
         anInt989++;
         if (!aBoolean1007) {
-            OggStream class348_sub23 = (OggStream) aClass356_1011.method3484(0);
+            OggStream class348_sub23 = (OggStream) aClass356_1011.first(0);
             if (i != 1) aBoolean991 = true;
-            for (/**/; class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.method3482(i ^ 0x1)) {
-                class348_sub23.method2961((byte) 13);
+            for (/**/; class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.next(i ^ 0x1)) {
+                class348_sub23.shutdown((byte) 13);
                 class348_sub23.anOggStreamState6869.a();
             }
             anOggPacket993.a();
@@ -118,7 +118,7 @@ abstract class JagTheoraDecoder {
             if (i > -4) anInt984 = -61;
             if (aClass348_Sub23_Sub4_999 != null && !aString1009.equals(aClass348_Sub23_Sub4_999.method2986(52))) aClass348_Sub23_Sub4_999 = null;
             if (aClass348_Sub23_Sub4_999 == null) {
-                for (OggStream class348_sub23 = (OggStream) aClass356_1011.method3484(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.method3482(0)) {
+                for (OggStream class348_sub23 = (OggStream) aClass356_1011.first(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.next(0)) {
                     if (class348_sub23 instanceof Component179) {
                         Component179 class348_sub23_sub4 = (Component179) class348_sub23;
                         if (aString1009.equals(class348_sub23_sub4.method2986(41))) {
@@ -140,7 +140,7 @@ abstract class JagTheoraDecoder {
 
     private final void method511(int i) {
         anInt1003++;
-        for (OggStream class348_sub23 = (OggStream) aClass356_1011.method3484(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.method3482(i + 2)) {
+        for (OggStream class348_sub23 = (OggStream) aClass356_1011.first(0); class348_sub23 != null; class348_sub23 = (OggStream) aClass356_1011.next(i + 2)) {
             if (class348_sub23 != aClass348_Sub23_Sub2_1001) {
                 while (class348_sub23.anOggStreamState6869.packetOut() == 1) class348_sub23.method2963(anOggPacket993, i ^ ~0x4001);
             }
@@ -244,7 +244,7 @@ abstract class JagTheoraDecoder {
                         }
                         if (class348_sub23 == null) throw new IllegalStateException();
                         aBoolean983 = true;
-                    } else class348_sub23 = ((OggStream) (aClass356_1011.method3480(anOggPage981.getSerialNumber(), -6008)));
+                    } else class348_sub23 = ((OggStream) (aClass356_1011.get(anOggPage981.getSerialNumber(), -6008)));
                     if (aClass348_Sub23_Sub1_1008 == class348_sub23) {
                         if (aClass348_Sub23_Sub1_1008.method2969(-11020) >= 50) break;
                         while (aClass348_Sub23_Sub1_1008.anOggStreamState6869.packetOut(anOggPacket993) == 1) {
@@ -321,7 +321,7 @@ abstract class JagTheoraDecoder {
         int i_32_ = anOggPage981.getSerialNumber();
         if (i != 1) aClass348_Sub23_Sub1_1008 = null;
         if (!anOggPage981.isBOS()) {
-            OggStream class348_sub23 = ((OggStream) aClass356_1011.method3480(i_32_, -6008));
+            OggStream class348_sub23 = ((OggStream) aClass356_1011.get(i_32_, -6008));
             if (!class348_sub23.anOggStreamState6869.pageIn(anOggPage981)) throw new IllegalStateException();
             return class348_sub23;
         }
@@ -346,7 +346,7 @@ abstract class JagTheoraDecoder {
             if (string.equals("kate")) class348_sub23 = new Component179(oggstreamstate);
             else class348_sub23 = new OggStreamReader(oggstreamstate);
         }
-        aClass356_1011.method3483((byte) 92, i_32_, class348_sub23);
+        aClass356_1011.put((byte) 92, i_32_, class348_sub23);
         return class348_sub23;
     }
 

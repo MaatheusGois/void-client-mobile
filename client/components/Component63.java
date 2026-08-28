@@ -174,7 +174,7 @@ final class Component63
             if (anInt4498 != 128 || anInt4508 != 0) i_33_ |= 0x5;
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass319_4513.aClass60_3990) {
-                class64 = ((DisplayModeManagerContainer370) (this.aClass319_4513.aClass60_3990.method583(this.anInt4501 |= var_ha.anInt4567 << 29, -122)));
+                class64 = ((DisplayModeManagerContainer370) (this.aClass319_4513.aClass60_3990.get(this.anInt4501 |= var_ha.anInt4567 << 29, -122)));
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_33_) != 0) {
                 if (class64 != null) i_33_ = var_ha.method3679(i_33_, class64.ua());
@@ -195,7 +195,7 @@ final class Component63
                 }
                 class64.s(i_33_);
                 synchronized (this.aClass319_4513.aClass60_3990) {
-                    this.aClass319_4513.aClass60_3990.method582(class64, this.anInt4501 |= var_ha.anInt4567 << 29, (byte) -113);
+                    this.aClass319_4513.aClass60_3990.putOne(class64, this.anInt4501 |= var_ha.anInt4567 << 29, (byte) -113);
                 }
             }
             if (i_31_ != -68) return null;

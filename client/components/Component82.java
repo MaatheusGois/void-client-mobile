@@ -39,10 +39,10 @@ final class Component82
         anInt440++;
         if (bool != true) return null;
         if (anInt429 < 0) return null;
-        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt429, -62);
+        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt429, -62);
         if (class105 == null) {
             method330(var_ha, -41);
-            class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt429, 53);
+            class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt429, 53);
         }
         return class105;
     }
@@ -50,11 +50,11 @@ final class Component82
     final Component24 method325(GraphicsToolkit var_ha, int i) {
         anInt428++;
         if (anInt439 < 0) return null;
-        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt439, -59);
+        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt439, -59);
         if (i < 23) return null;
         if (class105 == null) {
             method330(var_ha, -118);
-            class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt439, 123);
+            class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt439, 123);
         }
         return class105;
     }
@@ -72,10 +72,10 @@ final class Component82
     final Component24 method327(GraphicsToolkit var_ha, byte i) {
         anInt432++;
         if (anInt421 < 0) return null;
-        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt421, 118);
+        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt421, 118);
         if (class105 == null) {
             method330(var_ha, -66);
-            class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt421, 119);
+            class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt421, 119);
         }
         int i_0_ = 20 % ((i - 19) / 51);
         return class105;
@@ -103,7 +103,7 @@ final class Component82
                                     else if (i_1_ == 14) this.anInt426 = class348_sub49.readUnsignedShort(842397944);
                                 } else this.anInt422 = class348_sub49.readShort(13638);
                             } else this.anInt434 = class348_sub49.readUnsignedShort(842397944);
-                        } else aString423 = class348_sub49.method3371(i ^ 0x34af);
+                        } else aString423 = class348_sub49.readGjstr2(i ^ 0x34af);
                     } else this.anInt424 = class348_sub49.readShort(13638);
                 } else anInt429 = class348_sub49.readUnsignedShort(842397944);
             } else this.anInt444 = class348_sub49.readMedium(-1);
@@ -115,22 +115,22 @@ final class Component82
     private final void method330(GraphicsToolkit var_ha, int i) {
         anInt446++;
         CacheStore class45 = this.aClass219_438.aClass45_2873;
-        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt421, 121) == null && class45.method421(false, anInt421)) {
+        if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.get(anInt421, 121) == null && class45.method421(false, anInt421)) {
             Component170 class207 = Component170.method1512(class45, anInt421);
-            this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt421, (byte) -112);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt421, (byte) -112);
         }
-        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt433, -99) == null && class45.method421(false, anInt433)) {
+        if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.get(anInt433, -99) == null && class45.method421(false, anInt433)) {
             Component170 class207 = Component170.method1512(class45, anInt433);
-            this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt433, (byte) -128);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt433, (byte) -128);
         }
-        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt429, 86) == null && class45.method421(false, anInt429)) {
+        if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.get(anInt429, 86) == null && class45.method421(false, anInt429)) {
             Component170 class207 = Component170.method1512(class45, anInt429);
-            this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt429, (byte) -108);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt429, (byte) -108);
         }
         if (i > -7) this.anInt434 = -14;
-        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.method583(anInt439, -83) == null && class45.method421(false, anInt439)) {
+        if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.get(anInt439, -83) == null && class45.method421(false, anInt439)) {
             Component170 class207 = Component170.method1512(class45, anInt439);
-            this.aClass219_438.aClass60_2862.method582(var_ha.method3691(class207, true), anInt439, (byte) -101);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt439, (byte) -101);
         }
     }
 
@@ -138,10 +138,10 @@ final class Component82
         anInt441++;
         if (anInt433 < 0) return null;
         int i_2_ = -84 % ((i - 32) / 35);
-        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt433, -50);
+        Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt433, -50);
         if (class105 == null) {
             method330(var_ha, -89);
-            class105 = (Component24) this.aClass219_438.aClass60_2862.method583(anInt433, -117);
+            class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt433, -117);
         }
         return class105;
     }

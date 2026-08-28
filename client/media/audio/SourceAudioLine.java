@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class279_Sub1` (JODE-obfuscated).
- * Audio output line backed by a javax.sound SourceDataLine. Opens/closes the line (method2082/2091) and writes PCM via AudioSystem.
+ * Audio output line backed by a javax.sound SourceDataLine. Opens/closes the line (open/2091) and writes PCM via AudioSystem.
  */
 
 import javax.sound.sampled.*;
@@ -18,14 +18,14 @@ final class SourceAudioLine extends AudioLine {
     private AudioFormat anAudioFormat6179;
     static Class aClass6180;
 
-    final void method2091() {
+    final void close() {
         if (null != aSourceDataLine6177) {
             aSourceDataLine6177.close();
             aSourceDataLine6177 = null;
         }
     }
 
-    final void method2082(int i) throws LineUnavailableException {
+    final void open(int i) throws LineUnavailableException {
         try {
             DataLine.Info info = (new DataLine.Info((aClass6180 == null ? (aClass6180 = SourceDataLine.class) : aClass6180), anAudioFormat6179, i << (Component21.aBoolean3652 ? 2 : 1)));
             aSourceDataLine6177 = (SourceDataLine) AudioSystem.getLine(info);
@@ -36,11 +36,11 @@ final class SourceAudioLine extends AudioLine {
             if (1 == WaterSurfaceShader.method2155(i, (byte) 43)) {
                 aSourceDataLine6177 = null;
                 throw lineunavailableexception;
-            } else method2082(Component373.method340(i, (byte) 108));
+            } else open(Component373.method340(i, (byte) 108));
         }
     }
 
-    final void method2095(Component component) {
+    final void initOnComponent(Component component) {
         Mixer.Info[] infos = AudioSystem.getMixerInfo();
         if (null != infos) {
             Mixer.Info[] infos_0_ = infos;
@@ -56,11 +56,11 @@ final class SourceAudioLine extends AudioLine {
         aByteArray6176 = new byte[256 << (!Component21.aBoolean3652 ? 1 : 2)];
     }
 
-    final int method2081() {
+    final int getBufferedSamples() {
         return anInt6175 - (aSourceDataLine6177.available() >> (Component21.aBoolean3652 ? 2 : 1));
     }
 
-    final void method2083() throws LineUnavailableException {
+    final void flush() throws LineUnavailableException {
         aSourceDataLine6177.flush();
         if (aBoolean6178) {
             aSourceDataLine6177.close();

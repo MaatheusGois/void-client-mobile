@@ -21,13 +21,13 @@ final class Component37
 
     final Node method2327(byte i) {
         anInt3929++;
-        Node class348 = (aClass262_3923.aClass348_3334.aClass348_4294);
+        Node class348 = (aClass262_3923.sentinel.next);
         if (i != -53) method2329(-21);
-        if (aClass262_3923.aClass348_3334 == class348) {
+        if (aClass262_3923.sentinel == class348) {
             aClass348_3922 = null;
             return null;
         }
-        aClass348_3922 = class348.aClass348_4294;
+        aClass348_3922 = class348.next;
         return class348;
     }
 
@@ -41,11 +41,11 @@ final class Component37
         anInt3928++;
         if (i != 10) method2330((byte) -25);
         Node class348 = aClass348_3922;
-        if (aClass262_3923.aClass348_3334 == class348) {
+        if (aClass262_3923.sentinel == class348) {
             aClass348_3922 = null;
             return null;
         }
-        aClass348_3922 = class348.aClass348_4294;
+        aClass348_3922 = class348.next;
         return class348;
     }
 
@@ -55,7 +55,7 @@ final class Component37
         if (i == 86) {
             DefinitionSub25.anInt9341 = 0;
             DefinitionSub36.aClass114_9456 = null;
-            Component80.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
             SocketStream.aClass114_3133 = null;
             Component339.aClass114_3145 = null;
             NodeSub50.anInt7213 = 0;
@@ -64,16 +64,16 @@ final class Component37
             DefinitionSub39.method3153(0);
             DefinitionSub37.method3147((byte) 27);
             for (int i_0_ = 0; i_0_ < 2048; i_0_++)
-                InterfaceRenderer.aPlayerArray5058[i_0_] = null;
+                InterfaceRenderer.players[i_0_] = null;
             Component72.localPlayer = null;
             for (int i_1_ = 0; NodeSub32.anInt6930 > i_1_; i_1_++) {
-                Npc npc = (DefinitionSub23.aClass348_Sub22Array9319[i_1_].aNpc_6859);
+                Npc npc = (DefinitionSub23.aClass348_Sub22Array9319[i_1_].npc);
                 if (npc != null) npc.anInt10275 = -1;
             }
             Component126.method3515(i + 36);
             JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
             DefinitionSub21.anInt9282 = 1;
-            Buffer.method3379(2, 10);
+            Buffer.setClientState(2, 10);
             for (int i_2_ = 0; i_2_ < 100; i_2_++)
                 InflaterDecompressor.aBooleanArray2076[i_2_] = true;
             ShaderProgramSub2.method2145(-24498);

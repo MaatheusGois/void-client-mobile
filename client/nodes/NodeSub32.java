@@ -47,14 +47,14 @@ final class NodeSub32
         int i_8_ = aS_Sub2_6929.method3986(i_6_, i_7_, (byte) -17);
         if ((i_3_ & 0x7f) == 0 || (i & 0x7f) == 0) {
             l = ((long) i_7_ << 16 & 65535L << 16 | 0xffffL & (long) i_6_);
-            Node class348 = aClass356_6932.method3480(l, -6008);
+            Node class348 = aClass356_6932.get(l, -6008);
             if (class348 != null) {
                 method3022((byte) -46, (((NodeSub29) class348).aShort6911));
                 return;
             }
         }
         short i_9_ = (short) anInt6940++;
-        if (l != -1L) aClass356_6932.method3483((byte) 107, l, new NodeSub29(i_9_));
+        if (l != -1L) aClass356_6932.put((byte) 107, l, new NodeSub29(i_9_));
         float f;
         float f_10_;
         float f_11_;
@@ -287,8 +287,8 @@ final class NodeSub32
                     } else i_50_ += anInt6942 - anInt6935;
                     i_56_++;
                 }
-                anInterface8_6945 = (aHa_Sub2_6951.method3733(5123, -49, aClass348_Sub49_6936.anInt7197, aClass348_Sub49_6936.aByteArray7154, false));
-                anInterface2_6952 = aHa_Sub2_6951.method3731(2, false, 16, (aClass348_Sub49_Sub1_6953.aByteArray7154), (aClass348_Sub49_Sub1_6953.anInt7197));
+                anInterface8_6945 = (aHa_Sub2_6951.method3733(5123, -49, aClass348_Sub49_6936.offset, aClass348_Sub49_6936.payload, false));
+                anInterface2_6952 = aHa_Sub2_6951.method3731(2, false, 16, (aClass348_Sub49_Sub1_6953.payload), (aClass348_Sub49_Sub1_6953.offset));
                 aClass123_6927 = new Component132(anInterface2_6952, 5126, 3, 0);
                 aClass123_6943 = new Component132(anInterface2_6952, 5121, 4, 12);
             } else {

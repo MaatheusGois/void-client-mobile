@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer369
             if (class51 == null) {
                 if (npc != null) {
                     class348_sub9.aNpc_6691 = npc;
-                    DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+                    DisplayModeManagerContainer206 class79 = (npc.definition);
                     if (class79.anIntArray1377 != null) {
                         class348_sub9.aBoolean6684 = true;
                         class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), i ^ ~0x3a5d4149);
@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer369
                         class348_sub9.anInt6681 = class79.anInt1363;
                         class348_sub9.aBoolean6674 = class79.aBoolean1370;
                     }
-                    client.aClass262_5185.method1999(class348_sub9, i + -979210269);
+                    client.aClass262_5185.addTail(class348_sub9, i + -979210269);
                 } else if (player != null) {
                     class348_sub9.aPlayer_6679 = player;
                     class348_sub9.anInt6698 = (player.method2436((byte) 74) + i_4_) << 9;
@@ -75,7 +75,7 @@ final class DisplayModeManagerContainer369
                     class348_sub9.anInt6677 = player.anInt10558;
                     class348_sub9.anInt6696 = 256;
                     class348_sub9.aBoolean6674 = player.aBoolean10517;
-                    HashNodeSub16Sub2.aClass356_10465.method3483((byte) 65, player.anInt10290, class348_sub9);
+                    HashNodeSub16Sub2.aClass356_10465.put((byte) 65, player.anInt10290, class348_sub9);
                 }
             } else {
                 class348_sub9.aClass51_6695 = class51;
@@ -102,7 +102,7 @@ final class DisplayModeManagerContainer369
                     class348_sub9.method2781((byte) 21);
                 }
                 if (class348_sub9.anIntArray6697 != null) class348_sub9.anInt6670 = (class348_sub9.anInt6680 - -(int) ((double) (-class348_sub9.anInt6680 + class348_sub9.anInt6668) * Math.random()));
-                SceneManager.aClass262_2859.method1999(class348_sub9, -20180);
+                SceneManager.aClass262_2859.addTail(class348_sub9, -20180);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ad.B(" + i + ',' + (npc != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + (player != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i_5_ + ')'));

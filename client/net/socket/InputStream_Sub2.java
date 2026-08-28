@@ -46,7 +46,7 @@ final class InputStream_Sub2 extends InputStream {
                     int i_17_ = GradientPreset.anInt9200;
                     if (i_17_ < 3 && DisplayModeManagerContainer206.method802(i_10_, i_9_, true)) i_17_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_11_, i_13_, OpenGlShader.clientCycle, GradientPreset.anInt9200, i_17_, i_15_, Component300.method2064(i_15_, GradientPreset.anInt9200, 11219, i_16_) + -i_12_, i_16_, i_9_, i_9_, i_10_, i_10_, i_14_));
-                    CacheNodeSub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
+                    CacheNodeSub2.aClass262_10492.addTail(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }
             } else if (class74 == GnpPositionLogger.aClass74_1519) {
                 int i_18_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
@@ -131,12 +131,12 @@ final class InputStream_Sub2 extends InputStream {
                         DisplayModeManagerContainer58 class318_sub1_sub3_sub3 = null;
                         if (i_58_ < 0) {
                             int i_67_ = -i_58_ + -1;
-                            if (StringDefinition.anInt9591 != i_67_) class318_sub1_sub3_sub3 = (InterfaceRenderer.aPlayerArray5058[i_67_]);
+                            if (StringDefinition.anInt9591 != i_67_) class318_sub1_sub3_sub3 = (InterfaceRenderer.players[i_67_]);
                             else class318_sub1_sub3_sub3 = (Component72.localPlayer);
                         } else {
                             int i_68_ = i_58_ + -1;
-                            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_68_, -6008));
-                            if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.aNpc_6859);
+                            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_68_, -6008));
+                            if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.npc);
                         }
                         if (class318_sub1_sub3_sub3 != null) {
                             Component241 class225 = class318_sub1_sub3_sub3.method2422((byte) 72);
@@ -146,7 +146,7 @@ final class InputStream_Sub2 extends InputStream {
                     }
                     DisplayModeManagerContainer174 class318_sub1_sub3_sub5 = (new DisplayModeManagerContainer174(i_60_, GradientPreset.anInt9200, GradientPreset.anInt9200, i_51_, i_52_, i_61_, i_63_ - -OpenGlShader.clientCycle, i_64_ + OpenGlShader.clientCycle, i_65_, i_66_, i_58_, i_59_, i_62_, bool, i_55_));
                     class318_sub1_sub3_sub5.method2471((byte) -103, (-i_62_ + Component300.method2064(i_56_, GradientPreset.anInt9200, 11219, i_57_)), i_57_, i_63_ + OpenGlShader.clientCycle, i_56_);
-                    DefinitionSub17.aClass262_9240.method1999(new HashNodeSub18(class318_sub1_sub3_sub5), -20180);
+                    DefinitionSub17.aClass262_9240.addTail(new HashNodeSub18(class318_sub1_sub3_sub5), -20180);
                 }
             } else if (class74 == PacketReader.aClass74_10437) {
                 int i_69_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-128);
@@ -155,15 +155,15 @@ final class InputStream_Sub2 extends InputStream {
                 int i_72_ = Component330.regionTileY + i_71_;
                 int i_73_ = DisplayModeManagerContainer347.anInt3581 + (i_70_ >> 4 & 0x7);
                 int i_74_ = NodeBaseSub2.regionTileX + i_73_;
-                NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.method3480(i_72_ << 14 | GradientPreset.anInt9200 << 28 | i_74_, -6008)));
+                NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.get(i_72_ << 14 | GradientPreset.anInt9200 << 28 | i_74_, -6008)));
                 if (class348_sub37 != null) {
-                    for (NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1995(4)); class348_sub34 != null; class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 49))) {
+                    for (NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.first(4)); class348_sub34 != null; class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.next((byte) 49))) {
                         if ((0x7fff & i_69_) == class348_sub34.anInt6973) {
-                            class348_sub34.method2715((byte) 127);
+                            class348_sub34.unlink((byte) 127);
                             break;
                         }
                     }
-                    if (class348_sub37.aClass262_6998.method2002((byte) 18)) class348_sub37.method2715((byte) 62);
+                    if (class348_sub37.aClass262_6998.method2002((byte) 18)) class348_sub37.unlink((byte) 62);
                     if (i_73_ >= 0 && i_71_ >= 0 && AbstractShaderSub4.anInt7319 > i_73_ && ParametricDefinition.anInt9109 > i_71_) DisplayModeManagerContainer351.method1479(i_71_, (byte) -125, i_73_, GradientPreset.anInt9200);
                 }
             } else if (DisplayModeManagerContainer34.aClass74_8662 == class74) {
@@ -200,11 +200,11 @@ final class InputStream_Sub2 extends InputStream {
                     int i_95_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(i + 842397936);
                     int i_96_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                     if (Component387.aClass356_1895 != null) {
-                        NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.method3480(i_93_ | ((GradientPreset.anInt9200 << 28) | i_91_ << 14), -6008)));
+                        NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.get(i_93_ | ((GradientPreset.anInt9200 << 28) | i_91_ << 14), -6008)));
                         if (class348_sub37 != null) {
-                            for (NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1995(4)); class348_sub34 != null; class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 34))) {
+                            for (NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.first(4)); class348_sub34 != null; class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.next((byte) 34))) {
                                 if ((class348_sub34.anInt6973) == (0x7fff & i_94_) && i_95_ == class348_sub34.anInt6971) {
-                                    class348_sub34.method2715((byte) 32);
+                                    class348_sub34.unlink((byte) 32);
                                     class348_sub34.anInt6971 = i_96_;
                                     Component48.method3459(class348_sub34, (GradientPreset.anInt9200), i_91_, i_93_, i ^ ~0x9);
                                     break;
@@ -255,7 +255,7 @@ final class InputStream_Sub2 extends InputStream {
                         i_112_ <<= 2;
                         DisplayModeManagerContainer174 class318_sub1_sub3_sub5 = (new DisplayModeManagerContainer174(i_111_, GradientPreset.anInt9200, GradientPreset.anInt9200, i_106_, i_107_, i_112_, i_114_ + OpenGlShader.clientCycle, OpenGlShader.clientCycle + i_115_, i_116_, i_117_, 0, i_110_, i_113_, bool, -1));
                         class318_sub1_sub3_sub5.method2471((byte) -103, Component300.method2064(i_108_, (GradientPreset.anInt9200), 11219, i_109_) + -i_113_, i_109_, i_114_ + OpenGlShader.clientCycle, i_108_);
-                        DefinitionSub17.aClass262_9240.method1999(new HashNodeSub18(class318_sub1_sub3_sub5), -20180);
+                        DefinitionSub17.aClass262_9240.addTail(new HashNodeSub18(class318_sub1_sub3_sub5), -20180);
                     }
                 } else if (DisplayModeManagerContainer51.aClass74_2491 == class74) {
                     Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);

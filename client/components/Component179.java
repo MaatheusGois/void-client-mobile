@@ -32,7 +32,7 @@ final class Component179
         super(oggstreamstate);
     }
 
-    final void method2961(byte i) {
+    final void shutdown(byte i) {
         anInt9056++;
         if (i != 13) aString9058 = null;
     }
@@ -55,7 +55,7 @@ final class Component179
         return (0x100 & i_1_) != 0;
     }
 
-    final void method2964(byte i, OggPacket oggpacket) {
+    final void handlePacket(byte i, OggPacket oggpacket) {
         anInt9063++;
         if (this.anInt6868 <= 0 || "SUB".equals(aString9057)) {
             Buffer class348_sub49 = new Buffer(oggpacket.getData());
@@ -63,28 +63,28 @@ final class Component179
             if (this.anInt6868 <= 8) {
                 if ((i_2_ | 0x80) == 0) throw new IllegalStateException();
                 if (this.anInt6868 == 0) {
-                    class348_sub49.anInt7197 += 23;
-                    anInt9055 = class348_sub49.method3359(-89);
-                    anInt9054 = class348_sub49.method3359(-41);
+                    class348_sub49.offset += 23;
+                    anInt9055 = class348_sub49.readIntLittleEndian(-89);
+                    anInt9054 = class348_sub49.readIntLittleEndian(-41);
                     if (anInt9055 == 0 || anInt9054 == 0) throw new IllegalStateException();
                     Buffer class348_sub49_3_ = new Buffer(16);
-                    class348_sub49.method3389(2147483647, 0, 16, (class348_sub49_3_.aByteArray7154));
+                    class348_sub49.readBytes(2147483647, 0, 16, (class348_sub49_3_.payload));
                     aString9051 = class348_sub49_3_.readString((byte) -91);
-                    class348_sub49_3_.anInt7197 = 0;
-                    class348_sub49.method3389(2147483647, 0, 16, (class348_sub49_3_.aByteArray7154));
+                    class348_sub49_3_.offset = 0;
+                    class348_sub49.readBytes(2147483647, 0, 16, (class348_sub49_3_.payload));
                     aString9057 = class348_sub49_3_.readString((byte) -40);
                 }
             } else {
                 if (i_2_ == 0) {
-                    long l = class348_sub49.method3332((byte) 109);
-                    long l_4_ = class348_sub49.method3332((byte) 90);
-                    long l_5_ = class348_sub49.method3332((byte) 122);
+                    long l = class348_sub49.readLongLittle((byte) 109);
+                    long l_4_ = class348_sub49.readLongLittle((byte) 90);
+                    long l_5_ = class348_sub49.readLongLittle((byte) 122);
                     if (l < 0 || l_4_ < 0 || l_5_ < 0 || l_5_ > l) throw new IllegalStateException();
                     aFloat9062 = (float) ((long) anInt9054 * l) / (float) anInt9055;
                     aFloat9048 = ((float) ((l - -l_4_) * (long) anInt9054) / (float) anInt9055);
-                    int i_6_ = class348_sub49.method3359(-93);
-                    if (i_6_ < 0 || i_6_ > (-class348_sub49.anInt7197 + (class348_sub49.aByteArray7154).length)) throw new IllegalStateException();
-                    aString9058 = (Component66.method1793(class348_sub49.aByteArray7154, class348_sub49.anInt7197, -123, i_6_));
+                    int i_6_ = class348_sub49.readIntLittleEndian(-93);
+                    if (i_6_ < 0 || i_6_ > (-class348_sub49.offset + (class348_sub49.payload).length)) throw new IllegalStateException();
+                    aString9058 = (Component66.method1793(class348_sub49.payload, class348_sub49.offset, -123, i_6_));
                 }
                 if ((i_2_ | 0x80) != 0) return;
             }

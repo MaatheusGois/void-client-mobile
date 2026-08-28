@@ -16,11 +16,11 @@ final class DefinitionSub33
 
     static final boolean method3137(boolean bool, byte i) {
         anInt9426++;
-        boolean bool_0_ = NodeSub8.aHa6654.method3666();
+        boolean bool_0_ = NodeSub8.toolkit.method3666();
         if (i != -24) return true;
         if (!bool_0_ == !bool) return true;
-        if (!bool) NodeSub8.aHa6654.method3710();
-        else if (!NodeSub8.aHa6654.method3671()) bool = false;
+        if (!bool) NodeSub8.toolkit.method3710();
+        else if (!NodeSub8.toolkit.method3671()) bool = false;
         if (bool_0_ == bool) return false;
         Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243), bool ? 1 : 0);
         DisplayModeManagerContainer389.method243(37);

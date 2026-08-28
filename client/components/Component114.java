@@ -34,7 +34,7 @@ final class Component114
                     if (DefinitionSub21.anInt9282 == 4) CommandHandler.method814((byte) 125, l);
                 } else Canvas_Sub1.method119(-1, l);
             }
-            ParticleSystem.method3324(NodeSub8.aHa6654, (byte) 83, OpenGlShader.clientCycle);
+            ParticleSystem.method3324(NodeSub8.toolkit, (byte) 83, OpenGlShader.clientCycle);
             if (r.anInt9721 != -1) DisplayModeManagerContainer216.method769(r.anInt9721, (byte) 118);
             for (int i_3_ = 0; i_3_ < NodeSub38.anInt7008; i_3_++) {
                 if (InflaterDecompressor.aBooleanArray2076[i_3_]) DisplayModeManagerContainer259.aBooleanArray3438[i_3_] = true;
@@ -48,8 +48,8 @@ final class Component114
                 NodeSub38.anInt7008 = 0;
                 TheoraVideoPlayer.method842(false);
             }
-            NodeSub8.aHa6654.la();
-            HashNodeSub20.method3281((byte) 46, NodeSub8.aHa6654);
+            NodeSub8.toolkit.la();
+            HashNodeSub20.method3281((byte) 46, NodeSub8.toolkit);
             int i_4_ = DisplayModeManagerContainer67.method1053(3112);
             if (i_4_ == -1) i_4_ = Component149.anInt4458;
             if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.anInt10447;

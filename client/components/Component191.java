@@ -81,7 +81,7 @@ final class Component191
         if (bool != true) return null;
         Component231 class22;
         synchronized (aClass60_2458) {
-            class22 = (Component231) aClass60_2458.method583(i, 77);
+            class22 = (Component231) aClass60_2458.get(i, 77);
         }
         if (class22 != null) return class22;
         byte[] is;
@@ -91,7 +91,7 @@ final class Component191
         class22 = new Component231();
         if (is != null) class22.method290(new Buffer(is), -1);
         synchronized (aClass60_2458) {
-            aClass60_2458.method582(class22, i, (byte) -124);
+            aClass60_2458.putOne(class22, i, (byte) -124);
         }
         return class22;
     }
@@ -99,7 +99,7 @@ final class Component191
     final void method1381(boolean bool) {
         synchronized (aClass60_2458) {
             if (bool != true) method1382(-96, 76);
-            aClass60_2458.method590(0);
+            aClass60_2458.clear(0);
         }
         anInt2465++;
     }
@@ -122,7 +122,7 @@ final class Component191
     final void method1383(int i, int i_7_) {
         anInt2467++;
         synchronized (aClass60_2458) {
-            aClass60_2458.method578(2, i_7_);
+            aClass60_2458.processSoftEntries(2, i_7_);
         }
         if (i != 32841) anInt2464 = 86;
     }

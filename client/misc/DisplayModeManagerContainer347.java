@@ -40,22 +40,22 @@ final class DisplayModeManagerContainer347
         this.anInt3593 = i_0_;
         anInt3591++;
         synchronized (this.aClass60_3590) {
-            this.aClass60_3590.method590(0);
+            this.aClass60_3590.clear(0);
         }
         synchronized (this.aClass60_3592) {
-            this.aClass60_3592.method590(0);
+            this.aClass60_3592.clear(0);
         }
         if (i != -25032) method2079(-66, 101);
     }
 
     final void method2074(int i) {
         synchronized (this.aClass60_3590) {
-            this.aClass60_3590.method590(0);
+            this.aClass60_3590.clear(0);
         }
         if (i < -94) {
             anInt3582++;
             synchronized (this.aClass60_3592) {
-                this.aClass60_3592.method590(0);
+                this.aClass60_3592.clear(0);
             }
         }
     }
@@ -69,14 +69,14 @@ final class DisplayModeManagerContainer347
     final void method2076(int i, boolean bool) {
         anInt3589++;
         synchronized (aClass60_3577) {
-            aClass60_3577.method578(2, i);
+            aClass60_3577.processSoftEntries(2, i);
         }
         synchronized (this.aClass60_3590) {
-            this.aClass60_3590.method578(2, i);
+            this.aClass60_3590.processSoftEntries(2, i);
         }
         if (bool != true) method2072((byte) 120, true);
         synchronized (this.aClass60_3592) {
-            this.aClass60_3592.method578(2, i);
+            this.aClass60_3592.processSoftEntries(2, i);
         }
     }
 
@@ -90,13 +90,13 @@ final class DisplayModeManagerContainer347
         anInt3579++;
         synchronized (aClass60_3577) {
             if (i != -6080) this.aClass60_3590 = null;
-            aClass60_3577.method590(i + 6080);
+            aClass60_3577.clear(i + 6080);
         }
         synchronized (this.aClass60_3590) {
-            this.aClass60_3590.method590(i + 6080);
+            this.aClass60_3590.clear(i + 6080);
         }
         synchronized (this.aClass60_3592) {
-            this.aClass60_3592.method590(0);
+            this.aClass60_3592.clear(0);
         }
     }
 
@@ -104,7 +104,7 @@ final class DisplayModeManagerContainer347
         anInt3586++;
         DisplayModeManagerContainer206 class79;
         synchronized (aClass60_3577) {
-            class79 = (DisplayModeManagerContainer206) aClass60_3577.method583(i, -104);
+            class79 = (DisplayModeManagerContainer206) aClass60_3577.get(i, -104);
         }
         if (class79 != null) return class79;
         byte[] is;
@@ -117,7 +117,7 @@ final class DisplayModeManagerContainer347
         if (is != null) class79.method798(111, new Buffer(is));
         class79.method799(-117);
         synchronized (aClass60_3577) {
-            aClass60_3577.method582(class79, i, (byte) -102);
+            aClass60_3577.putOne(class79, i, (byte) -102);
             if (i_6_ != -1) aClass60_3577 = null;
         }
         return class79;

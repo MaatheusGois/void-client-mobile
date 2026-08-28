@@ -34,9 +34,9 @@ final class Component162
     static final void method1118(boolean bool, boolean bool_2_, NodeSub41 class348_sub41, int i) {
         anInt8382++;
         int i_3_ = class348_sub41.anInt7050;
-        int i_4_ = (int) class348_sub41.aLong4291;
+        int i_4_ = (int) class348_sub41.key;
         if (i == 2533) {
-            class348_sub41.method2715((byte) 35);
+            class348_sub41.unlink((byte) 35);
             if (bool) DisplayModeManagerContainer194.method235(i_3_, (byte) -116);
             Component290.method1288(i ^ ~0x9e2, i_3_);
             DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_4_);
@@ -45,12 +45,12 @@ final class Component162
             if (!bool_2_ && r.anInt9721 != -1) Component205.method1775((byte) -8, r.anInt9721, 1);
             Component79 class333 = new Component79(Component15.aClass356_4915);
             for (NodeSub41 class348_sub41_5_ = (NodeSub41) class333.method2644((byte) 123); class348_sub41_5_ != null; class348_sub41_5_ = (NodeSub41) class333.method2646((byte) 99)) {
-                if (!class348_sub41_5_.method2712((byte) 4)) {
+                if (!class348_sub41_5_.isLinked((byte) 4)) {
                     class348_sub41_5_ = (NodeSub41) class333.method2644((byte) 123);
                     if (class348_sub41_5_ == null) break;
                 }
                 if (class348_sub41_5_.anInt7053 == 3) {
-                    int i_6_ = (int) class348_sub41_5_.aLong4291;
+                    int i_6_ = (int) class348_sub41_5_.key;
                     if (i_3_ == i_6_ >>> 16) method1118(true, bool_2_, class348_sub41_5_, 2533);
                 }
             }

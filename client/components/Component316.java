@@ -31,7 +31,7 @@ final class Component316
         anInt2485++;
         Component193 class253;
         synchronized (aClass60_2479) {
-            class253 = (Component193) aClass60_2479.method583(i_1_, 96);
+            class253 = (Component193) aClass60_2479.get(i_1_, 96);
         }
         if (class253 != null) return class253;
         byte[] is;
@@ -42,21 +42,21 @@ final class Component316
         int i_2_ = 50 / ((i - -63) / 56);
         if (is != null) class253.method1921((byte) -69, new Buffer(is));
         synchronized (aClass60_2479) {
-            aClass60_2479.method582(class253, i_1_, (byte) -108);
+            aClass60_2479.putOne(class253, i_1_, (byte) -108);
         }
         return class253;
     }
 
     final void method1392(int i, int i_3_) {
         synchronized (aClass60_2479) {
-            aClass60_2479.method578(2, i_3_);
+            aClass60_2479.processSoftEntries(2, i_3_);
         }
         if (i >= 12) anInt2484++;
     }
 
     final void method1393(byte i) {
         synchronized (aClass60_2479) {
-            aClass60_2479.method590(0);
+            aClass60_2479.clear(0);
             int i_4_ = -89 % ((42 - i) / 50);
         }
         anInt2487++;

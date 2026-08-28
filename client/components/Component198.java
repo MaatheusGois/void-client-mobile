@@ -28,9 +28,9 @@ final class Component198
     private final int method1481(int i, int i_1_) {
         if (i_1_ == 255) {
             int i_2_ = aClass348_Sub49_2677.readUnsignedByte(255);
-            int i_3_ = aClass348_Sub49_2677.method3366((byte) 112);
+            int i_3_ = aClass348_Sub49_2677.readVarInt((byte) 112);
             if (i_2_ == 47) {
-                aClass348_Sub49_2677.anInt7197 += i_3_;
+                aClass348_Sub49_2677.offset += i_3_;
                 return 1;
             }
             if (i_2_ == 81) {
@@ -39,10 +39,10 @@ final class Component198
                 int i_5_ = this.anIntArray2681[i];
                 aLong2680 += (long) i_5_ * (long) (anInt2684 - i_4_);
                 anInt2684 = i_4_;
-                aClass348_Sub49_2677.anInt7197 += i_3_;
+                aClass348_Sub49_2677.offset += i_3_;
                 return 2;
             }
-            aClass348_Sub49_2677.anInt7197 += i_3_;
+            aClass348_Sub49_2677.offset += i_3_;
             return 3;
         }
         byte i_6_ = aByteArray2676[i_1_ - 128];
@@ -53,8 +53,8 @@ final class Component198
     }
 
     final void method1482(byte[] is) {
-        aClass348_Sub49_2677.aByteArray7154 = is;
-        aClass348_Sub49_2677.anInt7197 = 10;
+        aClass348_Sub49_2677.payload = is;
+        aClass348_Sub49_2677.offset = 10;
         int i = aClass348_Sub49_2677.readUnsignedShort(842397944);
         this.anInt2683 = aClass348_Sub49_2677.readUnsignedShort(842397944);
         anInt2684 = 500000;
@@ -64,10 +64,10 @@ final class Component198
             int i_9_ = aClass348_Sub49_2677.readInt((byte) -126);
             int i_10_ = aClass348_Sub49_2677.readInt((byte) -126);
             if (i_9_ == 1297379947) {
-                anIntArray2679[i_8_] = aClass348_Sub49_2677.anInt7197;
+                anIntArray2679[i_8_] = aClass348_Sub49_2677.offset;
                 i_8_++;
             }
-            aClass348_Sub49_2677.anInt7197 += i_10_;
+            aClass348_Sub49_2677.offset += i_10_;
         }
         aLong2680 = 0L;
         anIntArray2682 = new int[i];
@@ -87,23 +87,23 @@ final class Component198
         for (int i_12_ = 0; i_12_ < i; i_12_++) {
             this.anIntArray2681[i_12_] = 0;
             anIntArray2678[i_12_] = 0;
-            aClass348_Sub49_2677.anInt7197 = anIntArray2679[i_12_];
+            aClass348_Sub49_2677.offset = anIntArray2679[i_12_];
             method1485(i_12_);
-            anIntArray2682[i_12_] = aClass348_Sub49_2677.anInt7197;
+            anIntArray2682[i_12_] = aClass348_Sub49_2677.offset;
         }
     }
 
     final void method1485(int i) {
-        int i_13_ = aClass348_Sub49_2677.method3366((byte) 98);
+        int i_13_ = aClass348_Sub49_2677.readVarInt((byte) 98);
         this.anIntArray2681[i] += i_13_;
     }
 
     final void method1486(int i) {
-        anIntArray2682[i] = aClass348_Sub49_2677.anInt7197;
+        anIntArray2682[i] = aClass348_Sub49_2677.offset;
     }
 
     final void method1487() {
-        aClass348_Sub49_2677.aByteArray7154 = null;
+        aClass348_Sub49_2677.payload = null;
         anIntArray2679 = null;
         anIntArray2682 = null;
         this.anIntArray2681 = null;
@@ -115,23 +115,23 @@ final class Component198
     }
 
     private final int method1489(int i) {
-        int i_14_ = (aClass348_Sub49_2677.aByteArray7154[aClass348_Sub49_2677.anInt7197]);
+        int i_14_ = (aClass348_Sub49_2677.payload[aClass348_Sub49_2677.offset]);
         if (i_14_ < 0) {
             i_14_ &= 0xff;
             anIntArray2678[i] = i_14_;
-            aClass348_Sub49_2677.anInt7197++;
+            aClass348_Sub49_2677.offset++;
         } else i_14_ = anIntArray2678[i];
         if (i_14_ == 240 || i_14_ == 247) {
-            int i_15_ = aClass348_Sub49_2677.method3366((byte) 40);
+            int i_15_ = aClass348_Sub49_2677.readVarInt((byte) 40);
             if (i_14_ == 247 && i_15_ > 0) {
-                int i_16_ = ((aClass348_Sub49_2677.aByteArray7154[aClass348_Sub49_2677.anInt7197]) & 0xff);
+                int i_16_ = ((aClass348_Sub49_2677.payload[aClass348_Sub49_2677.offset]) & 0xff);
                 if (i_16_ >= 241 && i_16_ <= 243 || i_16_ == 246 || i_16_ == 248 || i_16_ >= 250 && i_16_ <= 252 || i_16_ == 254) {
-                    aClass348_Sub49_2677.anInt7197++;
+                    aClass348_Sub49_2677.offset++;
                     anIntArray2678[i] = i_16_;
                     return method1481(i, i_16_);
                 }
             }
-            aClass348_Sub49_2677.anInt7197 += i_15_;
+            aClass348_Sub49_2677.offset += i_15_;
             return 0;
         }
         return method1481(i, i_14_);
@@ -151,11 +151,11 @@ final class Component198
     }
 
     final boolean method1491() {
-        return aClass348_Sub49_2677.aByteArray7154 != null;
+        return aClass348_Sub49_2677.payload != null;
     }
 
     final void method1492(int i) {
-        aClass348_Sub49_2677.anInt7197 = anIntArray2682[i];
+        aClass348_Sub49_2677.offset = anIntArray2682[i];
     }
 
     public static void method1493() {
@@ -168,7 +168,7 @@ final class Component198
     }
 
     final void method1495() {
-        aClass348_Sub49_2677.anInt7197 = -1;
+        aClass348_Sub49_2677.offset = -1;
     }
 
     public Component198() {

@@ -27,7 +27,7 @@ final class InputStream_Sub1 extends InputStream {
     static final boolean method125(int i, int i_0_, int i_1_, Component269 class318_sub1_sub4, byte i_2_) {
         anInt72++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
-        if (Component241.anInt2946 < 100) return false;
+        if (Component241.occludedPixelCount < 100) return false;
         if (!ShaderSub2.method164(i_1_, i_0_, (byte) -97, i)) return false;
         int i_3_ = i_0_ << Component149.anInt4459;
         int i_4_ = i << Component149.anInt4459;
@@ -37,45 +37,45 @@ final class InputStream_Sub1 extends InputStream {
         if (class318_sub1_sub4.aShort8759 == 1) {
             if (!ShaderProgramSub7.method2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
             if (!ShaderProgramSub7.method2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_5_, i_6_, i_5_, i_4_ + Component148.anInt3465, false)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 2) {
             if (!ShaderProgramSub7.method2169(i_3_, i_3_ - -Component148.anInt3465, i_4_ - -Component148.anInt3465, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
             if (!ShaderProgramSub7.method2169(i_3_, Component148.anInt3465 + i_3_, i_4_ + Component148.anInt3465, Component148.anInt3465 + i_3_, Component148.anInt3465 + i_4_, i_6_, i_5_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 4) {
             if (!ShaderProgramSub7.method2169(i_3_ + Component148.anInt3465, Component148.anInt3465 + i_3_, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_6_, i_6_, i_5_, i_4_, false)) return false;
             if (!ShaderProgramSub7.method2169(i_3_ + Component148.anInt3465, i_3_ - -Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_5_, i_6_, i_5_, Component148.anInt3465 + i_4_, false)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 8) {
             if (!ShaderProgramSub7.method2169(i_3_, Component148.anInt3465 + i_3_, i_4_, i_3_, i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
             if (!ShaderProgramSub7.method2169(i_3_, i_3_ + Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_, i_6_, i_5_, i_5_, i_4_, false)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 16) {
             if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 32) {
             if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_ + DisplayModeManagerContainer64.anInt9037, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 64) {
             if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, DisplayModeManagerContainer64.anInt9037 + i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 128) {
             if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
-            Component274.anInt562++;
+            Component274.occludedWallCount++;
             return true;
         }
         return true;
@@ -97,7 +97,7 @@ final class InputStream_Sub1 extends InputStream {
         NodeSub18.method2938((byte) 98);
         Component205.method1772(28);
         System.gc();
-        NodeSub8.aHa6654.NativeHandle();
+        NodeSub8.toolkit.NativeHandle();
     }
 
     static {

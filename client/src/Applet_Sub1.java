@@ -80,7 +80,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     public final void stop() {
         anInt24++;
-        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) Component22.aLong1739 = Component240.method599(-73) - -4000L;
+        if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) Component22.aLong1739 = Component240.currentTimeMillis(-73) - -4000L;
     }
 
     public final String getParameter(String string) {
@@ -103,7 +103,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             aBoolean27 = true;
             System.out.println("error_game_" + string);
             try {
-                AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
+                AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "loggedout");
             } catch (Throwable throwable) {
                 /* empty */
             }
@@ -132,7 +132,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     private final void method84(int i) {
         anInt8++;
-        long l = Component240.method599(i + -88);
+        long l = Component240.currentTimeMillis(i + -88);
         long l_1_ = ShaderCompilerSub2Sub1.aLongArray8800[Component283.anInt4613];
         ShaderCompilerSub2Sub1.aLongArray8800[Component283.anInt4613] = l;
         Component283.anInt4613 = 0x1f & 1 + Component283.anInt4613;
@@ -209,7 +209,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         Component143.aBoolean2329 = true;
         Component297.aBoolean4726 = true;
         DisplayModeManagerContainer351.aBoolean2674 = false;
-        NodeSub12.aLong6748 = Component240.method599(-106);
+        NodeSub12.aLong6748 = Component240.currentTimeMillis(-106);
     }
 
     public final void windowOpened(WindowEvent windowevent) {
@@ -220,7 +220,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt18++;
         if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.aBoolean384) {
             Component297.aBoolean4726 = true;
-            if (AbstractShaderSub4.aBoolean7320 && -NodeSub12.aLong6748 + Component240.method599(-57) > 1000) {
+            if (AbstractShaderSub4.aBoolean7320 && -NodeSub12.aLong6748 + Component240.currentTimeMillis(-57) > 1000) {
                 Rectangle rectangle = graphics.getClipBounds();
                 if (rectangle == null || (rectangle.width >= SocketConnector.anInt3473 && (NodeSub22.anInt6857 <= rectangle.height))) DisplayModeManagerContainer351.aBoolean2674 = true;
             }
@@ -229,12 +229,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
     private final void method88(int i) {
         anInt2++;
-        long l = Component240.method599(-119);
+        long l = Component240.currentTimeMillis(-119);
         long l_2_ = Buffer.aLongArray7206[InflaterDecompressor.anInt2071];
         Buffer.aLongArray7206[InflaterDecompressor.anInt2071] = l;
         if (l_2_ != 0L && l_2_ < l) {
             int i_3_ = (int) (l - l_2_);
-            DisplayModeManagerContainer348.anInt5891 = (32000 + (i_3_ >> 1)) / i_3_;
+            DisplayModeManagerContainer348.fps = (32000 + (i_3_ >> 1)) / i_3_;
         }
         InflaterDecompressor.anInt2071 = InflaterDecompressor.anInt2071 - -1 & 0x1f;
         if (Component146.anInt2127++ > 50) {
@@ -358,7 +358,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     public final void destroy() {
         anInt21++;
         if (DefinitionSub9.anApplet_Sub1_9169 == this && !AssetCacheLoader.aBoolean384) {
-            Component22.aLong1739 = Component240.method599(-108);
+            Component22.aLong1739 = Component240.currentTimeMillis(-108);
             SpriteAtlasShader.method2161((byte) 77, 5000L);
             DisplayModeManagerContainer155.aClass297_2993 = null;
             method90(false, false);
@@ -408,7 +408,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 method87((byte) -97);
                 method92(28740);
                 NodeSub8.aClass241_6660 = Component267.method1631(false);
-                while (Component22.aLong1739 == 0L || (Component240.method599(-124) < Component22.aLong1739)) {
+                while (Component22.aLong1739 == 0L || (Component240.currentTimeMillis(-124) < Component22.aLong1739)) {
                     MatrixSub2.anInt5744 = NodeSub8.aClass241_6660.method1861(0, DisplayModeManagerContainer306.aLong4783);
                     for (int i = 0; MatrixSub2.anInt5744 > i; i++)
                         method84(-1);
@@ -436,7 +436,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     static final void method94(String string, int i) {
         anInt6++;
         if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.method249(2);
-        ParticleShader.aCalendar6221.setTime(new Date(Component240.method599(-102)));
+        ParticleShader.aCalendar6221.setTime(new Date(Component240.currentTimeMillis(-102)));
         int i_8_ = ParticleShader.aCalendar6221.get(11);
         int i_9_ = ParticleShader.aCalendar6221.get(12);
         int i_10_ = ParticleShader.aCalendar6221.get(13);

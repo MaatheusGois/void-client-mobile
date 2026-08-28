@@ -67,6 +67,7 @@ tasks.register('prepareClientSources', Copy) {
             .replace('java.awt', 'voidawt')
     }
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    outputs.dir(generatedClient)
 }
 
 tasks.register('prepareSharedSources', Copy) {
@@ -81,6 +82,9 @@ tasks.register('prepareSharedSources', Copy) {
     }
     into(generatedShared)
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    // Track output dir so a partial clean of generated/ invalidates UP-TO-DATE
+    // (avoids compile seeing AppletInvoker without netscape.javascript.JSObject).
+    outputs.dir(generatedShared)
 }
 
 tasks.named('compileJava') {

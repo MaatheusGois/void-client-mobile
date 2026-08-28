@@ -43,7 +43,7 @@ final class TransparentWaterShader extends AbstractShader {
         aClass269_7339 = class269;
         aClass378_7340 = class378;
         if (null == class45 || !aClass269_7339.method2039(123) || (257 > (aClass378_7340.aD3DCAPS9791.VertexShaderVersion & 0xffff))) anIDirect3DVertexShader7341 = null;
-        else anIDirect3DVertexShader7341 = aClass378_7340.anIDirect3DDevice9810.b(class45.method391("dx", "transparent_water", -29832));
+        else anIDirect3DVertexShader7341 = aClass378_7340.anIDirect3DDevice9810.b(class45.getFile("dx", "transparent_water", -29832));
     }
 
     final void method3523(byte i) {

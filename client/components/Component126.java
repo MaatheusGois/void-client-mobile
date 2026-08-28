@@ -26,18 +26,18 @@ final class Component126
 
     static final void method3514(byte i) {
         anInt4465++;
-        for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.method1995(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.method1990((byte) 57)) {
+        for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.next((byte) 57)) {
             if (class348_sub27.anInt6893 == -1) {
                 class348_sub27.anInt6894 = 0;
                 if ((class348_sub27.anInt6905 >= 0) && class348_sub27.anInt6896 >= 0 && (class348_sub27.anInt6905 < AbstractShaderSub4.anInt7319) && (class348_sub27.anInt6896 < ParametricDefinition.anInt9109)) Component357.method1387(i + 26, class348_sub27);
-            } else class348_sub27.method2715((byte) 39);
+            } else class348_sub27.unlink((byte) 39);
         }
         if (i != -105) method3516(-128);
     }
 
     static final void method3515(int i) {
         int i_2_ = 52 / ((33 - i) / 40);
-        Definition.aClass356_7041.method3481(0);
+        Definition.aClass356_7041.clear(0);
         anInt4464++;
     }
 

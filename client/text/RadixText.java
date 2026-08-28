@@ -9,7 +9,7 @@
 
 final class RadixText extends Component339 {
     static Component285[] aClass54Array6114;
-    static int anInt6115;
+    static int occluderCountA;
     static int anInt6116;
     static int anInt6117;
     static int anInt6118;
@@ -51,7 +51,7 @@ final class RadixText extends Component339 {
     }
 
     final void method1716(boolean bool) {
-        if (bool != false) anInt6115 = 87;
+        if (bool != false) occluderCountA = 87;
         if (this.anInt3138 < 0 && this.anInt3138 > 127) this.anInt3138 = method1710(20014);
         anInt6117++;
     }
@@ -65,7 +65,7 @@ final class RadixText extends Component339 {
     public static void method1835(int i) {
         aClass54Array6114 = null;
         aClass114_6121 = null;
-        if (i != -28594) anInt6115 = -7;
+        if (i != -28594) occluderCountA = -7;
     }
 
     RadixText(int i, NodeSub51 class348_sub51) {

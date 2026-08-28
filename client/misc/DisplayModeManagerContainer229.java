@@ -204,7 +204,7 @@ class DisplayModeManagerContainer229
                             is_34_[i_36_] = (short) class348_sub49.readUnsignedShort(842397944);
                             is_35_[i_36_] = class348_sub49.readByte(-120);
                         }
-                        aClass356_1271.method3483((byte) 33, i_22_ << 16 | i_23_, new NodeSub39(is_34_, is_35_));
+                        aClass356_1271.put((byte) 33, i_22_ << 16 | i_23_, new NodeSub39(is_34_, is_35_));
                     }
                 } else {
                     short[] is_37_ = null;
@@ -244,13 +244,13 @@ class DisplayModeManagerContainer229
         aClass153_1238 = class153;
         aClass141_1242 = class141;
         anInterface17_1244 = interface17;
-        aClass356_1241.method3481(0);
+        aClass356_1241.clear(0);
         int i = aClass45_1237.method417("details", 0);
         int[] is = aClass45_1237.method396(i, 0);
         if (is != null) {
             for (int i_47_ = 0; i_47_ < is.length; i_47_++) {
                 HashNodeSub14 class348_sub42_sub14 = Component324.method1205(is[i_47_], true, aClass45_1237, i);
-                aClass356_1241.method3483((byte) 25, class348_sub42_sub14.anInt9628, class348_sub42_sub14);
+                aClass356_1241.put((byte) 25, class348_sub42_sub14.anInt9628, class348_sub42_sub14);
             }
         }
         Component54.method566(true, false, (byte) 11);
@@ -262,7 +262,7 @@ class DisplayModeManagerContainer229
                 int i_49_ = aShortArray1261[i + i_48_ * anInt1259] & 0xffff;
                 if (i_49_ != 0) {
                     if (i_49_ == 65535) {
-                        NodeSub39 class348_sub39 = ((NodeSub39) aClass356_1271.method3480(i << 16 | i_48_, -6008));
+                        NodeSub39 class348_sub39 = ((NodeSub39) aClass356_1271.get(i << 16 | i_48_, -6008));
                         if (class348_sub39 != null) {
                             for (int i_50_ = 0; i_50_ < (class348_sub39.aShortArray7024).length; i_50_++) {
                                 Component44 class51 = (aClass263_1245.method2005(0, (class348_sub39.aShortArray7024[i_50_]) & 0xffff));
@@ -275,7 +275,7 @@ class DisplayModeManagerContainer229
                                     NodeSub21 class348_sub21 = new NodeSub21(i_51_);
                                     class348_sub21.anInt6852 = i;
                                     class348_sub21.anInt6851 = i_48_;
-                                    aClass262_1254.method1999(class348_sub21, -20180);
+                                    aClass262_1254.addTail(class348_sub21, -20180);
                                 }
                             }
                         }
@@ -290,7 +290,7 @@ class DisplayModeManagerContainer229
                             NodeSub21 class348_sub21 = new NodeSub21(i_52_);
                             class348_sub21.anInt6852 = i;
                             class348_sub21.anInt6851 = i_48_;
-                            aClass262_1254.method1999(class348_sub21, -20180);
+                            aClass262_1254.addTail(class348_sub21, -20180);
                         }
                     }
                 }
@@ -314,7 +314,7 @@ class DisplayModeManagerContainer229
                                         NodeSub21 class348_sub21 = new NodeSub21(i_56_);
                                         class348_sub21.anInt6852 = ((i_53_ + (anInt1266 >> 6)) * 64 + class318_sub8.aByte6466 - anInt1266);
                                         class348_sub21.anInt6851 = ((i_54_ + (anInt1263 >> 6)) * 64 + class318_sub8.aByte6464 - anInt1263);
-                                        aClass262_1254.method1999(class348_sub21, -20180);
+                                        aClass262_1254.addTail(class348_sub21, -20180);
                                     }
                                 }
                             }
@@ -326,7 +326,7 @@ class DisplayModeManagerContainer229
     }
 
     static final void method754(int i) {
-        aClass348_Sub42_Sub14_1243 = (HashNodeSub14) aClass356_1241.method3480(i, -6008);
+        aClass348_Sub42_Sub14_1243 = (HashNodeSub14) aClass356_1241.get(i, -6008);
     }
 
     private static final void method755(GraphicsToolkit var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
@@ -398,7 +398,7 @@ class DisplayModeManagerContainer229
     }
 
     static final void method756(GraphicsToolkit var_ha, int i, int i_75_) {
-        Buffer class348_sub49 = (new Buffer(aClass45_1237.method391((aClass348_Sub42_Sub14_1243.aString9625), "area", -29832)));
+        Buffer class348_sub49 = (new Buffer(aClass45_1237.getFile((aClass348_Sub42_Sub14_1243.aString9625), "area", -29832)));
         int i_76_ = class348_sub49.readUnsignedByte(255);
         int[] is = new int[i_76_];
         for (int i_77_ = 0; i_77_ < i_76_; i_77_++)
@@ -407,7 +407,7 @@ class DisplayModeManagerContainer229
         int[] is_79_ = new int[i_78_];
         for (int i_80_ = 0; i_80_ < i_78_; i_80_++)
             is_79_[i_80_] = class348_sub49.readUnsignedByte(255);
-        while (class348_sub49.anInt7197 < class348_sub49.aByteArray7154.length) {
+        while (class348_sub49.offset < class348_sub49.payload.length) {
             if (class348_sub49.readUnsignedByte(255) == 0) {
                 int i_81_ = class348_sub49.readUnsignedByte(255);
                 int i_82_ = class348_sub49.readUnsignedByte(255);
@@ -466,7 +466,7 @@ class DisplayModeManagerContainer229
     }
 
     static final HashNodeSub14 method757(int i) {
-        return ((HashNodeSub14) aClass356_1241.method3480(i, -6008));
+        return ((HashNodeSub14) aClass356_1241.get(i, -6008));
     }
 
     static final NodeList method758(GraphicsToolkit var_ha) {
@@ -522,13 +522,13 @@ class DisplayModeManagerContainer229
                 NodeSub21 class348_sub21 = new NodeSub21(aClass252_1246.anIntArray3239[i]);
                 class348_sub21.anInt6852 = is[1] - anInt1266;
                 class348_sub21.anInt6851 = is[2] - anInt1263;
-                aClass262_1254.method1999(class348_sub21, -20180);
+                aClass262_1254.addTail(class348_sub21, -20180);
             }
         }
     }
 
     private static final NodeList method762(GraphicsToolkit var_ha, int i, int i_115_, int i_116_, int i_117_) {
-        for (NodeSub21 class348_sub21 = (NodeSub21) aClass262_1254.method1995(4); class348_sub21 != null; class348_sub21 = (NodeSub21) aClass262_1254.method1990((byte) 74))
+        for (NodeSub21 class348_sub21 = (NodeSub21) aClass262_1254.first(4); class348_sub21 != null; class348_sub21 = (NodeSub21) aClass262_1254.next((byte) 74))
             method747(var_ha, class348_sub21, i, i_115_, i_116_, i_117_);
         return aClass262_1254;
     }
@@ -606,7 +606,7 @@ class DisplayModeManagerContainer229
                                 var_ha.fillRect(i_137_, i_147_, i_139_, i_149_, i_152_, 0);
                             } else if (i_154_ > 0) {
                                 if (i_154_ == 65535) {
-                                    NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.method3480(i_140_ << 16 | i_150_, -6008)));
+                                    NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.get(i_140_ << 16 | i_150_, -6008)));
                                     if (class348_sub39 != null) method755(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025), true);
                                 } else {
                                     aShortArray1252[0] = (short) (i_154_ - 1);
@@ -648,7 +648,7 @@ class DisplayModeManagerContainer229
                                 int i_165_ = ((aShortArray1261[i_159_ + i_164_ * anInt1259]) & 0xffff);
                                 if (i_165_ > 0) {
                                     if (i_165_ == 65535) {
-                                        NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.method3480(i_159_ << 16 | i_164_, -6008)));
+                                        NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.get(i_159_ << 16 | i_164_, -6008)));
                                         if (class348_sub39 != null) method763(var_ha, i_156_, i_161_, i_158_, i_163_, (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025));
                                     } else {
                                         aShortArray1252[0] = (short) (i_165_ - 1);
@@ -711,7 +711,7 @@ class DisplayModeManagerContainer229
     }
 
     static final HashNodeSub14 method766(int i, int i_191_) {
-        for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.method3484(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.method3482(0)) {
+        for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.first(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.next(0)) {
             if (class348_sub42_sub14.aBoolean9639 && class348_sub42_sub14.method3238((byte) -120, i, i_191_)) return class348_sub42_sub14;
         }
         return null;
@@ -719,8 +719,8 @@ class DisplayModeManagerContainer229
 
     static final HashTable method767(int i, int i_192_) {
         HashTable class107 = new HashTable();
-        for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.method3484(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.method3482(0)) {
-            if (class348_sub42_sub14.aBoolean9639 && class348_sub42_sub14.method3238((byte) 29, i, i_192_)) class107.method1005(true, class348_sub42_sub14);
+        for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.first(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.next(0)) {
+            if (class348_sub42_sub14.aBoolean9639 && class348_sub42_sub14.method3238((byte) 29, i, i_192_)) class107.add(true, class348_sub42_sub14);
         }
         return class107;
     }

@@ -41,7 +41,7 @@ final class Component330
             }
         }
         Component80.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
-        int i_7_ = (-Component80.aClass348_Sub49_Sub2_3813.anInt7197 + DefinitionSub25.anInt9341) / 16;
+        int i_7_ = (-Component80.aClass348_Sub49_Sub2_3813.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_7_][4];
         int i_8_ = 0;
         if (i != 99) method852(-55);

@@ -24,7 +24,7 @@ final class WaterShaderProgram extends ShaderProgram {
     static int anInt6273;
     private Component244 aClass337_6274;
     static int anInt6275;
-    static long aLong6276;
+    static long occludeCalcNanos;
 
     final void method2140(AbstractGlTexture class258, byte i, int i_0_) {
         if (!aBoolean6266) {
@@ -47,7 +47,7 @@ final class WaterShaderProgram extends ShaderProgram {
     }
 
     static final String method2162(boolean bool) {
-        if (bool != false) aLong6276 = -88L;
+        if (bool != false) occludeCalcNanos = -88L;
         anInt6271++;
         String string = "www";
         if (WaterShaderSub8.aClass364_7361 != DisplayModeManagerContainer345.aClass364_165) {

@@ -34,7 +34,7 @@ final class PacketReader extends CacheNode {
         anObject10429 = object;
     }
 
-    final boolean method3195(int i) {
+    final boolean isSoft(int i) {
         if (i != -4) method3202((byte) -58);
         anInt10438++;
         return false;
@@ -45,23 +45,23 @@ final class PacketReader extends CacheNode {
         if (DefinitionSub8.aClass238_9165 == null) return false;
         if (NodeSub3.aClass114_6584 == null) {
             if (Component83.aBoolean1661) {
-                if (!DefinitionSub8.aClass238_9165.method1705(1, 119)) return false;
-                DefinitionSub8.aClass238_9165.method1701(1, 0, (byte) 6, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
+                if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 119)) return false;
+                DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) 6, (Component80.aClass348_Sub49_Sub2_3813.payload));
                 NodeSub50.anInt7213 = 0;
                 Component83.aBoolean1661 = false;
                 Component354.anInt221++;
             }
-            Component80.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
             if (Component80.aClass348_Sub49_Sub2_3813.method3404(-1510)) {
-                if (!DefinitionSub8.aClass238_9165.method1705(1, 119)) return false;
-                DefinitionSub8.aClass238_9165.method1701(1, 1, (byte) 26, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
+                if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 119)) return false;
+                DefinitionSub8.aClass238_9165.readBytes(1, 1, (byte) 26, (Component80.aClass348_Sub49_Sub2_3813.payload));
                 Component354.anInt221++;
                 NodeSub50.anInt7213 = 0;
             }
             Component83.aBoolean1661 = true;
             Component183[] class114s = DisplayModeManagerContainer288.method248(-11271);
             int i = Component80.aClass348_Sub49_Sub2_3813.method3407(15295);
-            if (i < 0 || i >= class114s.length) throw new IOException("invo:" + i + " ip:" + (Component80.aClass348_Sub49_Sub2_3813.anInt7197));
+            if (i < 0 || i >= class114s.length) throw new IOException("invo:" + i + " ip:" + (Component80.aClass348_Sub49_Sub2_3813.offset));
             NodeSub3.aClass114_6584 = class114s[i];
             if (Loader.debug) {
                 System.out.println("Packet read: " + i + " length: " + NodeSub3.aClass114_6584.anInt1749);
@@ -69,24 +69,24 @@ final class PacketReader extends CacheNode {
             DefinitionSub25.anInt9341 = NodeSub3.aClass114_6584.anInt1749;
         }
         if (DefinitionSub25.anInt9341 == -1) {
-            if (!DefinitionSub8.aClass238_9165.method1705(1, 116)) return false;
-            DefinitionSub8.aClass238_9165.method1701(1, 0, (byte) -118, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
-            DefinitionSub25.anInt9341 = 0xff & (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154[0]);
+            if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 116)) return false;
+            DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -118, (Component80.aClass348_Sub49_Sub2_3813.payload));
+            DefinitionSub25.anInt9341 = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
             Component354.anInt221++;
             NodeSub50.anInt7213 = 0;
         }
         if (DefinitionSub25.anInt9341 == -2) {
-            if (!DefinitionSub8.aClass238_9165.method1705(2, 120)) return false;
-            DefinitionSub8.aClass238_9165.method1701(2, 0, (byte) 127, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
-            Component80.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
+            if (!DefinitionSub8.aClass238_9165.availableAtLeast(2, 120)) return false;
+            DefinitionSub8.aClass238_9165.readBytes(2, 0, (byte) 127, (Component80.aClass348_Sub49_Sub2_3813.payload));
+            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
             DefinitionSub25.anInt9341 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             Component354.anInt221 += 2;
             NodeSub50.anInt7213 = 0;
         }
         if (DefinitionSub25.anInt9341 > 0) {
-            if (!DefinitionSub8.aClass238_9165.method1705(DefinitionSub25.anInt9341, 104)) return false;
-            Component80.aClass348_Sub49_Sub2_3813.anInt7197 = 0;
-            DefinitionSub8.aClass238_9165.method1701(DefinitionSub25.anInt9341, 0, (byte) -123, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
+            if (!DefinitionSub8.aClass238_9165.availableAtLeast(DefinitionSub25.anInt9341, 104)) return false;
+            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+            DefinitionSub8.aClass238_9165.readBytes(DefinitionSub25.anInt9341, 0, (byte) -123, (Component80.aClass348_Sub49_Sub2_3813.payload));
             Component354.anInt221 += DefinitionSub25.anInt9341;
             NodeSub50.anInt7213 = 0;
         }
@@ -146,12 +146,12 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -123);
             int i_9_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             Component141.method2397((byte) -124);
-            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_9_, -6008));
-            NodeSub41 class348_sub41_10_ = ((NodeSub41) Component15.aClass356_4915.method3480(i, -6008));
+            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_9_, -6008));
+            NodeSub41 class348_sub41_10_ = ((NodeSub41) Component15.aClass356_4915.get(i, -6008));
             if (class348_sub41_10_ != null) Component162.method1118((class348_sub41 == null || (class348_sub41_10_.anInt7050 != class348_sub41.anInt7050)), false, class348_sub41_10_, 2533);
             if (class348_sub41 != null) {
-                class348_sub41.method2715((byte) 32);
-                Component15.aClass356_4915.method3483((byte) 102, i, class348_sub41);
+                class348_sub41.unlink((byte) 32);
+                Component15.aClass356_4915.put((byte) 102, i, class348_sub41);
             }
             DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_9_);
             if (class46 != null) Component111.method1916(-9343, class46);
@@ -324,8 +324,8 @@ final class PacketReader extends CacheNode {
             for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
                 int i_34_ = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -127);
                 if (i_34_ == 255) {
-                    int index = Component80.aClass348_Sub49_Sub2_3813.anInt7197;
-                    byte[] data = Component80.aClass348_Sub49_Sub2_3813.aByteArray7154;
+                    int index = Component80.aClass348_Sub49_Sub2_3813.offset;
+                    byte[] data = Component80.aClass348_Sub49_Sub2_3813.payload;
                     i_34_ = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
                 }
                 int i_35_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-78);
@@ -360,9 +360,9 @@ final class PacketReader extends CacheNode {
             if (i_40_ >> 30 == 0) {
                 if (i_40_ >> 29 != 0) {
                     int i_44_ = i_40_ & 0xffff;
-                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_44_, -6008));
+                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_44_, -6008));
                     if (class348_sub22 != null) {
-                        Npc npc = (class348_sub22.aNpc_6859);
+                        Npc npc = (class348_sub22.npc);
                         if (i_38_ == 65535) i_38_ = -1;
                         boolean bool_45_ = true;
                         int i_46_ = (!bool_41_ ? npc.anInt10269 : npc.anInt10291);
@@ -427,7 +427,7 @@ final class PacketReader extends CacheNode {
                 } else if (i_40_ >> 28 != 0) {
                     int i_52_ = i_40_ & 0xffff;
                     Player player;
-                    if (StringDefinition.anInt9591 != i_52_) player = (InterfaceRenderer.aPlayerArray5058[i_52_]);
+                    if (StringDefinition.anInt9591 != i_52_) player = (InterfaceRenderer.players[i_52_]);
                     else player = Component72.localPlayer;
                     if (player != null) {
                         if (i_38_ == 65535) i_38_ = -1;
@@ -504,7 +504,7 @@ final class PacketReader extends CacheNode {
                     int i_65_ = i_60_;
                     if (i_65_ < 3 && DisplayModeManagerContainer206.method802(i_62_, i_61_, true)) i_65_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_38_, i_39_, OpenGlShader.clientCycle, i_60_, i_65_, i_63_, -i_37_ + Component300.method2064(i_63_, i_60_, 11219, i_64_), i_64_, i_61_, i_61_, i_62_, i_62_, i_42_));
-                    CacheNodeSub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
+                    CacheNodeSub2.aClass262_10492.addTail(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }
             }
             NodeSub3.aClass114_6584 = null;
@@ -519,7 +519,7 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (NodeSub3.aClass114_6584 == DisplayModeManagerContainer238.aClass114_1234) {
-            DisplayModeManagerContainer310.anInt359 = Component80.aClass348_Sub49_Sub2_3813.method3369((byte) 125);
+            DisplayModeManagerContainer310.anInt359 = Component80.aClass348_Sub49_Sub2_3813.readSignedMedium((byte) 125);
             ParametricDefinition.aBoolean9103 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 1;
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -566,7 +566,7 @@ final class PacketReader extends CacheNode {
                         RequestProcessor.aClass19Array2261[i_73_].anInt308 = i;
                         RequestProcessor.aClass19Array2261[i_73_].aByte310 = i_68_;
                         RequestProcessor.aClass19Array2261[i_73_].aString313 = string_72_;
-                        if (string_67_.equals(Component72.localPlayer.aString10544)) DisplayModeManagerContainer96.aByte4702 = i_68_;
+                        if (string_67_.equals(Component72.localPlayer.username)) DisplayModeManagerContainer96.aByte4702 = i_68_;
                         DisplayModeManagerContainer124.anInt2986 = ResourceLoader.anInt3918;
                         NodeSub3.aClass114_6584 = null;
                         return true;
@@ -582,7 +582,7 @@ final class PacketReader extends CacheNode {
                 if (NameFormatter.anInt496 == 0) RequestProcessor.aClass19Array2261 = new Component248[100];
                 RequestProcessor.aClass19Array2261[i_73_ - -1] = class19;
                 NameFormatter.anInt496++;
-                if (string_67_.equals(Component72.localPlayer.aString10544)) DisplayModeManagerContainer96.aByte4702 = i_68_;
+                if (string_67_.equals(Component72.localPlayer.username)) DisplayModeManagerContainer96.aByte4702 = i_68_;
             }
             DisplayModeManagerContainer124.anInt2986 = ResourceLoader.anInt3918;
             NodeSub3.aClass114_6584 = null;
@@ -603,7 +603,7 @@ final class PacketReader extends CacheNode {
             if (class302.anInt3831 >= 0 && (class302.anInt3831 < Component379.aClass105Array5933.length)) {
                 if (class302.anInt3840 == 1 || class302.anInt3840 == 10) {
                     class302.anInt3833 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
-                    Component80.aClass348_Sub49_Sub2_3813.anInt7197 += 6;
+                    Component80.aClass348_Sub49_Sub2_3813.offset += 6;
                 } else if (class302.anInt3840 >= 2 && class302.anInt3840 <= 6) {
                     if (class302.anInt3840 == 2) {
                         class302.anInt3832 = 256;
@@ -761,7 +761,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component235.aClass114_3368) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             Component141.method2397((byte) -124);
-            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i, -6008));
+            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i, -6008));
             if (class348_sub41 != null) Component162.method1118(true, false, class348_sub41, 2533);
             if (Component297.aClass46_4730 != null) {
                 Component111.method1916(-9343, Component297.aClass46_4730);
@@ -792,7 +792,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component286.aClass114_1901) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             Player player;
-            if (i != StringDefinition.anInt9591) player = InterfaceRenderer.aPlayerArray5058[i];
+            if (i != StringDefinition.anInt9591) player = InterfaceRenderer.players[i];
             else player = Component72.localPlayer;
             if (player == null) {
                 NodeSub3.aClass114_6584 = null;
@@ -801,11 +801,11 @@ final class PacketReader extends CacheNode {
             int i_91_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_92_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             boolean bool_93_ = (0x8000 & i_91_) != 0;
-            if ((player.aString10544) != null && player.aClass154_10536 != null) {
+            if ((player.username) != null && player.appearance != null) {
                 boolean bool_94_ = false;
                 if (i_92_ <= 1) {
                     if (!bool_93_ && ((ParametricDefinition.aBoolean9103 && !HeapDumper.aBoolean1915) || Component308.aBoolean5233)) bool_94_ = true;
-                    else if (StringCache.method3455(player.aString10544, 28280)) bool_94_ = true;
+                    else if (StringCache.method3455(player.username, 28280)) bool_94_ = true;
                 }
                 if (!bool_94_ && AudioMixer.anInt3227 == 0) {
                     int i_95_ = -1;
@@ -824,9 +824,9 @@ final class PacketReader extends CacheNode {
                     if (i_92_ != 1 && i_92_ != 2) i_96_ = !bool_93_ ? 2 : 17;
                     else i_96_ = bool_93_ ? 17 : 1;
                     if (i_92_ != 2) {
-                        if (i_92_ != 1) DisplayModeManagerContainer174.method2477(player.method2450(false, -121), string, (byte) -126, i_95_, player.method2456(true, 255), null, i_96_, 0, player.aString10537);
-                        else DisplayModeManagerContainer174.method2477("<img=0>" + player.method2450(false, -93), string, (byte) -111, i_95_, "<img=0>" + player.method2456(true, 255), null, i_96_, 0, player.aString10537);
-                    } else DisplayModeManagerContainer174.method2477("<img=1>" + player.method2450(false, -95), string, (byte) -120, i_95_, "<img=1>" + player.method2456(true, 255), null, i_96_, 0, player.aString10537);
+                        if (i_92_ != 1) DisplayModeManagerContainer174.method2477(player.getName(false, -121), string, (byte) -126, i_95_, player.method2456(true, 255), null, i_96_, 0, player.displayName);
+                        else DisplayModeManagerContainer174.method2477("<img=0>" + player.getName(false, -93), string, (byte) -111, i_95_, "<img=0>" + player.method2456(true, 255), null, i_96_, 0, player.displayName);
+                    } else DisplayModeManagerContainer174.method2477("<img=1>" + player.getName(false, -95), string, (byte) -120, i_95_, "<img=1>" + player.method2456(true, 255), null, i_96_, 0, player.displayName);
                 }
             }
             NodeSub3.aClass114_6584 = null;
@@ -895,7 +895,7 @@ final class PacketReader extends CacheNode {
         if (Component291.aClass114_2527 == NodeSub3.aClass114_6584) {
             boolean bool_108_ = (Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 1);
             byte[] is = new byte[DefinitionSub25.anInt9341 - 1];
-            Component80.aClass348_Sub49_Sub2_3813.method3389(2147483647, 0, (DefinitionSub25.anInt9341) + -1, is);
+            Component80.aClass348_Sub49_Sub2_3813.readBytes(2147483647, 0, (DefinitionSub25.anInt9341) + -1, is);
             Component357.method1385(bool_108_, is, (byte) -104);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -912,7 +912,7 @@ final class PacketReader extends CacheNode {
             DisplayModeManagerContainer347.anInt3581 = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             GradientPreset.anInt9200 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 98);
             DisplayModeManagerContainer306.anInt4786 = (Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697) << 3);
-            while ((Component80.aClass348_Sub49_Sub2_3813.anInt7197) < DefinitionSub25.anInt9341) {
+            while ((Component80.aClass348_Sub49_Sub2_3813.offset) < DefinitionSub25.anInt9341) {
                 DisplayModeManagerContainer238 class74 = (DisplayModeManagerContainer320.method1929((byte) -19)[Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255)]);
                 InputStream_Sub2.method128(class74, (byte) 8);
             }
@@ -1043,15 +1043,15 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (Connection.aClass114_2665 == NodeSub3.aClass114_6584) {
-            for (int i = 0; i < InterfaceRenderer.aPlayerArray5058.length; i++) {
-                if (InterfaceRenderer.aPlayerArray5058[i] != null) {
-                    InterfaceRenderer.aPlayerArray5058[i].anIntArray10236 = null;
-                    InterfaceRenderer.aPlayerArray5058[i].anInt10286 = -1;
+            for (int i = 0; i < InterfaceRenderer.players.length; i++) {
+                if (InterfaceRenderer.players[i] != null) {
+                    InterfaceRenderer.players[i].anIntArray10236 = null;
+                    InterfaceRenderer.players[i].anInt10286 = -1;
                 }
             }
             for (int i = 0; NodeSub32.anInt6930 > i; i++) {
-                DefinitionSub23.aClass348_Sub22Array9319[i].aNpc_6859.anIntArray10236 = null;
-                DefinitionSub23.aClass348_Sub22Array9319[i].aNpc_6859.anInt10286 = -1;
+                DefinitionSub23.aClass348_Sub22Array9319[i].npc.anIntArray10236 = null;
+                DefinitionSub23.aClass348_Sub22Array9319[i].npc.anInt10286 = -1;
             }
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1134,7 +1134,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             if (Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 0) RadixText.aClass54Array6114[i] = new Component285();
             else {
-                Component80.aClass348_Sub49_Sub2_3813.anInt7197--;
+                Component80.aClass348_Sub49_Sub2_3813.offset--;
                 RadixText.aClass54Array6114[i] = new Component285(Component80.aClass348_Sub49_Sub2_3813);
             }
             NodeSub3.aClass114_6584 = null;
@@ -1159,22 +1159,22 @@ final class PacketReader extends CacheNode {
             if (i_146_ == 65535) i_146_ = -1;
             for (int i_147_ = i_146_; i_145_ >= i_147_; i_147_++) {
                 long l = ((long) i << 32) - -(long) i_147_;
-                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.method3480(l, -6008));
+                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.get(l, -6008));
                 NodeSub44 class348_sub44_148_;
                 if (class348_sub44 == null) {
                     if (i_147_ == -1) class348_sub44_148_ = (new NodeSub44(BitmapFont.method2570(1512932720, i).aClass348_Sub44_748.anInt7098, i_144_));
                     else class348_sub44_148_ = new NodeSub44(0, i_144_);
                 } else {
                     class348_sub44_148_ = new NodeSub44((class348_sub44.anInt7098), i_144_);
-                    class348_sub44.method2715((byte) 91);
+                    class348_sub44.unlink((byte) 91);
                 }
-                Component127.aClass356_2959.method3483((byte) 125, l, class348_sub44_148_);
+                Component127.aClass356_2959.put((byte) 125, l, class348_sub44_148_);
             }
             NodeSub3.aClass114_6584 = null;
             return true;
         }
         if (NodeSub3.aClass114_6584 == NodeSub45.aClass114_7106) {
-            while ((Component80.aClass348_Sub49_Sub2_3813.anInt7197) < DefinitionSub25.anInt9341) {
+            while ((Component80.aClass348_Sub49_Sub2_3813.offset) < DefinitionSub25.anInt9341) {
                 boolean bool_149_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) == 1;
                 String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -95);
                 String string_150_ = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 118);
@@ -1196,11 +1196,11 @@ final class PacketReader extends CacheNode {
                                         if (i == 0 || (class318_sub9_sub1.aShort8786 != 0)) {
                                             if (i == 0 && (class318_sub9_sub1.aShort8786) != 0) {
                                                 bool_155_ = false;
-                                                class318_sub9_sub1.method2373(false);
+                                                class318_sub9_sub1.unlink(false);
                                             }
                                         } else {
                                             bool_155_ = false;
-                                            class318_sub9_sub1.method2373(false);
+                                            class318_sub9_sub1.unlink(false);
                                         }
                                     }
                                 }
@@ -1369,7 +1369,7 @@ final class PacketReader extends CacheNode {
             int i_182_ = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -122);
             int i_183_ = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -95);
             Component141.method2397((byte) -125);
-            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_182_, -6008));
+            NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_182_, -6008));
             if (class348_sub41 != null) Component162.method1118(i != (class348_sub41.anInt7050), false, class348_sub41, 2533);
             Component103.method2661(i, i_182_, i_183_, false, 2);
             NodeSub3.aClass114_6584 = null;
@@ -1410,18 +1410,18 @@ final class PacketReader extends CacheNode {
             GradientPreset.anInt9200 = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) 126);
             DisplayModeManagerContainer306.anInt4786 = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             DisplayModeManagerContainer347.anInt3581 = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
-            for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.method3484(0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
-                int i = (int) ((class348_sub37.aLong4291 >> 28) & 0x3L);
-                int i_188_ = (int) (class348_sub37.aLong4291 & 0x3fffL);
+            for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.first(0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.next(0))) {
+                int i = (int) ((class348_sub37.key >> 28) & 0x3L);
+                int i_188_ = (int) (class348_sub37.key & 0x3fffL);
                 int i_189_ = i_188_ + -NodeBaseSub2.regionTileX;
-                int i_190_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
+                int i_190_ = (int) (0x3fffL & (class348_sub37.key >> 14));
                 int i_191_ = -Component330.regionTileY + i_190_;
                 if (i == GradientPreset.anInt9200 && DisplayModeManagerContainer347.anInt3581 <= i_189_ && 8 + DisplayModeManagerContainer347.anInt3581 > i_189_ && DisplayModeManagerContainer306.anInt4786 <= i_191_ && DisplayModeManagerContainer306.anInt4786 - -8 > i_191_) {
-                    class348_sub37.method2715((byte) 89);
+                    class348_sub37.unlink((byte) 89);
                     if (i_189_ >= 0 && i_191_ >= 0 && i_189_ < AbstractShaderSub4.anInt7319 && (i_191_ < ParametricDefinition.anInt9109)) DisplayModeManagerContainer351.method1479(i_191_, (byte) -118, i_189_, GradientPreset.anInt9200);
                 }
             }
-            for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.method1995(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.method1990((byte) 31)) {
+            for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.next((byte) 31)) {
                 if ((DisplayModeManagerContainer347.anInt3581 <= class348_sub27.anInt6905) && (class348_sub27.anInt6905 < DisplayModeManagerContainer347.anInt3581 - -8) && (class348_sub27.anInt6896 >= DisplayModeManagerContainer306.anInt4786) && (class348_sub27.anInt6896 < DisplayModeManagerContainer306.anInt4786 + 8) && (class348_sub27.anInt6899 == GradientPreset.anInt9200))
                     class348_sub27.anInt6893 = 0;
             }
@@ -1434,8 +1434,8 @@ final class PacketReader extends CacheNode {
             for (int i_192_ = 0; i_192_ < 4; i_192_++)
                 is[i_192_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_193_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_193_, -6008));
-            if (class348_sub22 != null) NpcDefinition.method2931(i, (byte) 110, is, (class348_sub22.aNpc_6859));
+            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_193_, -6008));
+            if (class348_sub22 != null) NpcDefinition.method2931(i, (byte) 110, is, (class348_sub22.npc));
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -1454,7 +1454,7 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (Component236.aClass114_4015 == NodeSub3.aClass114_6584) {
-            int i = Component80.aClass348_Sub49_Sub2_3813.method3363(-13309);
+            int i = Component80.aClass348_Sub49_Sub2_3813.readMediumLittle(-13309);
             int i_196_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-124);
             if (i_196_ == 65535) i_196_ = -1;
             int i_197_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
@@ -1559,14 +1559,14 @@ final class PacketReader extends CacheNode {
             Component141.method2397((byte) -127);
             for (int i_211_ = i_208_; i_211_ <= i; i_211_++) {
                 long l = (long) i_211_ + ((long) i_209_ << 32);
-                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.method3480(l, -6008));
+                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.get(l, -6008));
                 NodeSub44 class348_sub44_212_;
                 if (class348_sub44 != null) {
                     class348_sub44_212_ = new NodeSub44(i_210_, (class348_sub44.anInt7093));
-                    class348_sub44.method2715((byte) 80);
+                    class348_sub44.unlink((byte) 80);
                 } else if (i_211_ == -1) class348_sub44_212_ = (new NodeSub44(i_210_, BitmapFont.method2570(1512932720, i_209_).aClass348_Sub44_748.anInt7093));
                 else class348_sub44_212_ = new NodeSub44(i_210_, -1);
-                Component127.aClass356_2959.method3483((byte) 114, l, class348_sub44_212_);
+                Component127.aClass356_2959.put((byte) 114, l, class348_sub44_212_);
             }
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1579,8 +1579,8 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (NodeSub3.aClass114_6584 == Component219.aClass114_6340) {
-            Component80.aClass348_Sub49_Sub2_3813.anInt7197 += 28;
-            if (Component80.aClass348_Sub49_Sub2_3813.method3352(-25541)) BrowserDetector.method1365((Component80.aClass348_Sub49_Sub2_3813.anInt7197) + -28, (byte) -126, Component80.aClass348_Sub49_Sub2_3813);
+            Component80.aClass348_Sub49_Sub2_3813.offset += 28;
+            if (Component80.aClass348_Sub49_Sub2_3813.checkCrc(-25541)) BrowserDetector.method1365((Component80.aClass348_Sub49_Sub2_3813.offset) + -28, (byte) -126, Component80.aClass348_Sub49_Sub2_3813);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -1623,7 +1623,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_220_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             boolean bool_221_ = (i_220_ & 0x1) == 1;
-            while ((Component80.aClass348_Sub49_Sub2_3813.anInt7197) < DefinitionSub25.anInt9341) {
+            while ((Component80.aClass348_Sub49_Sub2_3813.offset) < DefinitionSub25.anInt9341) {
                 int i_222_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-125);
                 int i_223_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                 int i_224_ = 0;
@@ -1720,7 +1720,7 @@ final class PacketReader extends CacheNode {
                 class19s[i_234_].anInt308 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                 class19s[i_234_].aByte310 = Component80.aClass348_Sub49_Sub2_3813.readByte(-118);
                 class19s[i_234_].aString313 = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -124);
-                if (class19s[i_234_].aString306.equals(Component72.localPlayer.aString10544)) DisplayModeManagerContainer96.aByte4702 = class19s[i_234_].aByte310;
+                if (class19s[i_234_].aString306.equals(Component72.localPlayer.username)) DisplayModeManagerContainer96.aByte4702 = class19s[i_234_].aByte310;
             }
             boolean bool_235_ = false;
             int i_236_ = NameFormatter.anInt496;
@@ -1755,9 +1755,9 @@ final class PacketReader extends CacheNode {
         }
     }
 
-    final Object method3193(int i) {
+    final Object getValue(int i) {
         anInt10435++;
-        if (i < 75) method3193(-128);
+        if (i < 75) getValue(-128);
         return anObject10429;
     }
 }

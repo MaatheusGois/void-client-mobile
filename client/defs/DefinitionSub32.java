@@ -45,7 +45,7 @@ final class DefinitionSub32
     static final void method3134(int i) {
         anInt9419++;
         if ((~SpriteAtlasShader.anInt6248) <= i) {
-            long l = Component240.method599(i ^ 0x3c);
+            long l = Component240.currentTimeMillis(i ^ 0x3c);
             SpriteAtlasShader.anInt6248 -= -ObjectDeserializer.aLong6963 + l;
             if (SpriteAtlasShader.anInt6248 > 0) {
                 int i_4_ = ((SpriteAtlasShader.anInt6248 << 8) / DisplayModeManagerContainer105.anInt4889);

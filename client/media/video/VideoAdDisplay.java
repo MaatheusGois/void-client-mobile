@@ -36,7 +36,7 @@ final class VideoAdDisplay {
         anInt3184++;
         if (Component156.aBoolean3697) {
             try {
-                return !((Boolean) AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "showingVideoAd")).booleanValue();
+                return !((Boolean) AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "showingVideoAd")).booleanValue();
             } catch (Throwable throwable) {
                 /* empty */
             }

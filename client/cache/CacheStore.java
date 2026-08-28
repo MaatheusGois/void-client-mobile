@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class45` (JODE-obfuscated).
- * Archive/store that resolves and returns file bytes by name (method391(String,String,int) -> byte[]). Backed by a ReferenceTable reference table and a StringCache node cache.
+ * Archive/store that resolves and returns file bytes by name (getFile(String,String,int) -> byte[]). Backed by a ReferenceTable reference table and a StringCache node cache.
  */
 
 final class CacheStore {
@@ -66,7 +66,7 @@ final class CacheStore {
         if (i != 10) method390((byte) -3);
     }
 
-    final byte[] method391(String string, String string_1_, int i) {
+    final byte[] getFile(String string, String string_1_, int i) {
         try {
             anInt647++;
             if (!method399(false)) return null;
@@ -136,7 +136,7 @@ final class CacheStore {
         else {
             is_14_ = Cp1252Decoder.method461(true, anObjectArray656[i_9_], 53146732);
             Buffer class348_sub49 = new Buffer(is_14_);
-            class348_sub49.method3367(607818341, is, 5, (class348_sub49.aByteArray7154).length);
+            class348_sub49.xteaDecrypt(607818341, is, 5, (class348_sub49.payload).length);
         }
         byte[] is_15_;
         try {
@@ -154,7 +154,7 @@ final class CacheStore {
                 Buffer class348_sub49 = new Buffer(is_15_);
                 int i_32_ = 0;
                 int i_33_ = 0;
-                class348_sub49.anInt7197 = i_30_;
+                class348_sub49.offset = i_30_;
                 for (int i_34_ = 0; i_34_ < i_31_; i_34_++) {
                     int i_35_ = 0;
                     for (int i_36_ = 0; i_36_ < i_10_; i_36_++) {
@@ -170,7 +170,7 @@ final class CacheStore {
                 }
                 if (i_32_ == 0) return true;
                 byte[] is_38_ = new byte[i_32_];
-                class348_sub49.anInt7197 = i_30_;
+                class348_sub49.offset = i_30_;
                 i_32_ = 0;
                 int i_39_ = 0;
                 for (int i_40_ = 0; i_40_ < i_31_; i_40_++) {
@@ -194,7 +194,7 @@ final class CacheStore {
                 i_16_ -= 4 * (i_10_ * i_17_);
                 Buffer class348_sub49 = new Buffer(is_15_);
                 int[] is_18_ = new int[i_10_];
-                class348_sub49.anInt7197 = i_16_;
+                class348_sub49.offset = i_16_;
                 for (int i_19_ = 0; i_19_ < i_17_; i_19_++) {
                     int i_20_ = 0;
                     for (int i_21_ = 0; i_21_ < i_10_; i_21_++) {
@@ -207,7 +207,7 @@ final class CacheStore {
                     is_22_[i_23_] = new byte[is_18_[i_23_]];
                     is_18_[i_23_] = 0;
                 }
-                class348_sub49.anInt7197 = i_16_;
+                class348_sub49.offset = i_16_;
                 int i_24_ = 0;
                 for (int i_25_ = 0; i_25_ < i_17_; i_25_++) {
                     int i_26_ = 0;
@@ -341,7 +341,7 @@ final class CacheStore {
 
     final void method404(int i, boolean bool, boolean bool_59_) {
         anInt644++;
-        if (i != 0) method391(null, null, -3);
+        if (i != 0) getFile(null, null, -3);
         if (method399(false)) {
             if (bool_59_) {
                 aClass291_629.anIntArray3733 = null;

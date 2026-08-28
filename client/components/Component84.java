@@ -79,7 +79,7 @@ final class Component84
                 }
             }
         }
-        if (bool) DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[Component328.anInt1477++] = class318_sub1_sub3;
+        if (bool) DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[Component328.dynamicOnscreenCount++] = class318_sub1_sub3;
         else {
             int i_22_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
             if (class318_sub1_sub3.method2376(-118)) {

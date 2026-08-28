@@ -51,7 +51,7 @@ final class DisplayModeManagerContainer259
 
     final void method2032(int i, int i_3_) {
         synchronized (aClass60_3433) {
-            aClass60_3433.method578(2, i);
+            aClass60_3433.processSoftEntries(2, i);
             if (i_3_ > -10) method2035(116, 38);
         }
         anInt3436++;
@@ -70,7 +70,7 @@ final class DisplayModeManagerContainer259
         anInt3431++;
         Component11 class277;
         synchronized (aClass60_3433) {
-            class277 = (Component11) aClass60_3433.method583(i, 64);
+            class277 = (Component11) aClass60_3433.get(i, 64);
         }
         if (class277 != null) return class277;
         byte[] is;
@@ -83,7 +83,7 @@ final class DisplayModeManagerContainer259
         if (is != null) class277.method2070(true, new Buffer(is));
         class277.method2067(-4860);
         synchronized (aClass60_3433) {
-            aClass60_3433.method582(class277, i, (byte) -111);
+            aClass60_3433.putOne(class277, i, (byte) -111);
         }
         return class277;
     }
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer259
 
     final void method2037(int i) {
         synchronized (aClass60_3433) {
-            aClass60_3433.method590(0);
+            aClass60_3433.clear(0);
         }
         anInt3440++;
     }

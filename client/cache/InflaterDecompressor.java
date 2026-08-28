@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class152` (JODE-obfuscated).
- * Zlib/gzip decompressor. Uses java.util.zip.Inflater; method1214(int, byte[]) reads the uncompressed length from a Buffer and inflates the payload.
+ * Zlib/gzip decompressor. Uses java.util.zip.Inflater; decompress(int, byte[]) reads the uncompressed length from a Buffer and inflates the payload.
  */
 
 import java.util.zip.Inflater;
@@ -20,12 +20,12 @@ final class InflaterDecompressor {
     static Component315 aClass243_2077;
     static int anInt2078;
 
-    final byte[] method1214(int i, byte[] is) {
+    final byte[] decompress(int i, byte[] is) {
         anInt2074++;
         Buffer class348_sub49 = new Buffer(is);
-        class348_sub49.anInt7197 = is.length - 4;
-        int i_0_ = class348_sub49.method3359(-86);
-        class348_sub49.anInt7197 = 0;
+        class348_sub49.offset = is.length - 4;
+        int i_0_ = class348_sub49.readIntLittleEndian(-86);
+        class348_sub49.offset = 0;
         if (i != 9) aFloatArray2075 = null;
         byte[] is_1_ = new byte[i_0_];
         method1218(is_1_, 29123, class348_sub49);
@@ -36,9 +36,9 @@ final class InflaterDecompressor {
         if (i != 3) method1217(-39, null);
         anInt2078++;
         if (Component49.clientState != 9) {
-            if (Component49.clientState == 5 || Component49.clientState == 6) Buffer.method3379(2, 3);
-            else if (Component49.clientState == 12) Buffer.method3379(2, 3);
-        } else Buffer.method3379(2, 5);
+            if (Component49.clientState == 5 || Component49.clientState == 6) Buffer.setClientState(2, 3);
+            else if (Component49.clientState == 12) Buffer.setClientState(2, 3);
+        } else Buffer.setClientState(2, 5);
     }
 
     public static void method1216(byte i) {
@@ -79,10 +79,10 @@ final class InflaterDecompressor {
         try {
             if (i != 29123) method1217(-91, null);
             anInt2073++;
-            if ((class348_sub49.aByteArray7154[class348_sub49.anInt7197]) != 31 || (class348_sub49.aByteArray7154[1 + class348_sub49.anInt7197]) != -117) throw new RuntimeException("Invalid GZIP header!");
+            if ((class348_sub49.payload[class348_sub49.offset]) != 31 || (class348_sub49.payload[1 + class348_sub49.offset]) != -117) throw new RuntimeException("Invalid GZIP header!");
             if (anInflater2072 == null) anInflater2072 = new Inflater(true);
             try {
-                anInflater2072.setInput(class348_sub49.aByteArray7154, class348_sub49.anInt7197 - -10, -8 - (10 + class348_sub49.anInt7197 - (class348_sub49.aByteArray7154).length));
+                anInflater2072.setInput(class348_sub49.payload, class348_sub49.offset - -10, -8 - (10 + class348_sub49.offset - (class348_sub49.payload).length));
                 anInflater2072.inflate(is);
             } catch (Exception exception) {
                 anInflater2072.reset();

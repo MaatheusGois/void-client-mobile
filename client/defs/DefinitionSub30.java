@@ -42,19 +42,19 @@ final class DefinitionSub30
     static final RSARequest method3127(int i) {
         anInt9395++;
         if (i != 2681) aBoolean9403 = true;
-        RSARequest class348_sub42_sub15 = ((RSARequest) AbstractShaderSub4.aClass107_7325.method1011(-47));
+        RSARequest class348_sub42_sub15 = ((RSARequest) AbstractShaderSub4.aClass107_7325.first(-47));
         if (class348_sub42_sub15 != null) {
-            class348_sub42_sub15.method2715((byte) 81);
-            class348_sub42_sub15.method3162(true);
+            class348_sub42_sub15.unlink((byte) 81);
+            class348_sub42_sub15.unlink(true);
             return class348_sub42_sub15;
         }
         do {
-            class348_sub42_sub15 = (RSARequest) BufferCacheSub2.aClass107_8241.method1011(-87);
+            class348_sub42_sub15 = (RSARequest) BufferCacheSub2.aClass107_8241.first(-87);
             if (class348_sub42_sub15 == null) return null;
-            if (Component240.method599(-59) < class348_sub42_sub15.method3250((byte) -51)) return null;
-            class348_sub42_sub15.method2715((byte) 113);
-            class348_sub42_sub15.method3162(true);
-        } while ((~0x7fffffffffffffffL & class348_sub42_sub15.aLong7057) == 0L);
+            if (Component240.currentTimeMillis(-59) < class348_sub42_sub15.method3250((byte) -51)) return null;
+            class348_sub42_sub15.unlink((byte) 113);
+            class348_sub42_sub15.unlink(true);
+        } while ((~0x7fffffffffffffffL & class348_sub42_sub15.accessAge) == 0L);
         return class348_sub42_sub15;
     }
 
@@ -98,7 +98,7 @@ final class DefinitionSub30
                                     }
                                 }
                             }
-                            if (DebugPanicSub1.method2127(2, (Component72.localPlayer.aString10544)).equals(string_1_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3524.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
+                            if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_1_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3524.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
                             else {
                                 Component334.anInt2012++;
                                 ParticleSystem class348_sub47 = (ParticleShader.method2148(InterfaceRenderer.aClass351_5057, DisplayModeManagerContainer64.aClass77_9029, -85));

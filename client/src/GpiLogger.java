@@ -28,7 +28,7 @@ final class GpiLogger extends NodeSub16 {
         anInt8856++;
         PlayerState class348_sub43;
         do {
-            class348_sub43 = (PlayerState) this.aClass262_8848.method1990((byte) 122);
+            class348_sub43 = (PlayerState) this.aClass262_8848.next((byte) 122);
             if (class348_sub43 == null) return null;
         } while (class348_sub43.aClass348_Sub16_Sub5_7081 == null);
         return class348_sub43.aClass348_Sub16_Sub5_7081;
@@ -38,7 +38,7 @@ final class GpiLogger extends NodeSub16 {
         anInt8847++;
         this.aClass348_Sub16_Sub4_8855.method2817(is, i, i_0_);
         while_125_:
-        for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.method1995(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.method1990((byte) 121)) {
+        for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.next((byte) 121)) {
             if (!aClass348_Sub16_Sub3_8852.method2847(-107, class348_sub43)) {
                 int i_1_ = i;
                 int i_2_ = i_0_;
@@ -62,7 +62,7 @@ final class GpiLogger extends NodeSub16 {
             NsnDefinition.method3094(-21478, class348_sub49_sub2);
             Component121.method3612(75, class348_sub49_sub2);
             if (JagTheoraDecoder.aBoolean979) System.out.println("---endgpp---");
-            if (class348_sub49_sub2.anInt7197 != i_3_) throw new RuntimeException("gpi1 pos:" + class348_sub49_sub2.anInt7197 + " psize:" + i_3_);
+            if (class348_sub49_sub2.offset != i_3_) throw new RuntimeException("gpi1 pos:" + class348_sub49_sub2.offset + " psize:" + i_3_);
         }
     }
 
@@ -101,7 +101,7 @@ final class GpiLogger extends NodeSub16 {
         this.aClass348_Sub16_Sub4_8855.method2819(i);
         anInt8850++;
         while_127_:
-        for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.method1995(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.method1990((byte) 38)) {
+        for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.next((byte) 38)) {
             if (!aClass348_Sub16_Sub3_8852.method2847(53, class348_sub43)) {
                 int i_8_ = i;
                 while (i_8_ > class348_sub43.anInt7086) {
@@ -162,7 +162,7 @@ final class GpiLogger extends NodeSub16 {
 
     final NodeSub16 method2816() {
         anInt8851++;
-        PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.method1995(4));
+        PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.first(4));
         if (class348_sub43 == null) return null;
         if (class348_sub43.aClass348_Sub16_Sub5_7081 != null) return class348_sub43.aClass348_Sub16_Sub5_7081;
         return method2818();

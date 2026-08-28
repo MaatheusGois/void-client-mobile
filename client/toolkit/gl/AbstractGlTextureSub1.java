@@ -57,7 +57,7 @@ final class AbstractGlTextureSub1
 
     static final void method1960(int i, int i_12_, int i_13_, int i_14_, byte[][][] is, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int[] is_19_, int i_20_, byte i_21_, int i_22_, int i_23_, boolean bool, boolean bool_24_, int i_25_, int i_26_, boolean bool_27_) {
         Component234.aBoolean351 = true;
-        DisplayModeManagerContainer58.aBoolean10221 = JaclibLoader.aHa171.method3704() > 0;
+        DisplayModeManagerContainer58.aBoolean10221 = JaclibLoader.toolkit.method3704() > 0;
         DefinitionSub17.aBoolean9242 = bool_24_;
         Component256.anInt6111 = i_12_ >> Component149.anInt4459;
         DebugPanicSub2.anInt8502 = i_14_ >> Component149.anInt4459;
@@ -94,7 +94,7 @@ final class AbstractGlTextureSub1
                         int i_36_ = i_34_ << Component149.anInt4459;
                         int i_37_ = (NodeSub1Sub1.aSArray8801[NodeSub1Sub1.aSArray8801.length - 1].method3982((byte) -86, i_34_, i_33_) - (1000 << Component149.anInt4459 - 7));
                         int i_38_ = (Component9.aSArray4142 != null ? (Component9.aSArray4142[0].method3982((byte) -86, i_34_, i_33_) + Component148.anInt3465) : (NodeSub1Sub1.aSArray8801[0].method3982((byte) -86, i_34_, i_33_) + Component148.anInt3465));
-                        i_31_ = (i_25_ >= 0 ? JaclibLoader.aHa171.r(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_, i_25_) : JaclibLoader.aHa171.JA(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_));
+                        i_31_ = (i_25_ >= 0 ? JaclibLoader.toolkit.r(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_, i_25_) : JaclibLoader.toolkit.JA(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_));
                         NodeSub8.aBooleanArrayArray6656[i_29_][i_32_] = i_31_ == 0;
                     } else {
                         i_31_ = -1;
@@ -115,7 +115,7 @@ final class AbstractGlTextureSub1
                 DisplayModeManagerContainer34.anIntArray8666 = is_17_;
                 Component201.anIntArray8712 = is_18_;
                 client.anIntArray5176 = is_19_;
-                HashNodeSub14.method3241(i_20_, (byte) 39, JaclibLoader.aHa171);
+                HashNodeSub14.method3241(i_20_, (byte) 39, JaclibLoader.toolkit);
             }
         } else {
             if (Component76.aBooleanArrayArray8596 == null) Component76.aBooleanArrayArray8596 = (new boolean
@@ -133,11 +133,11 @@ final class AbstractGlTextureSub1
             Component210.anInt5293 = NodeSub41.anInt7054;
             Component234.aBoolean351 = false;
         }
-        Component315.method1877(JaclibLoader.aHa171, -69);
+        Component315.method1877(JaclibLoader.toolkit, -69);
         if (!DisplayModeManagerContainer5.aClass76_1208.aBoolean1283) {
             Component315 class243 = DisplayModeManagerContainer5.aClass76_1208.aClass243_1282;
             for (RenderableSub4 class318_sub4 = (RenderableSub4) class243.method1872(8); class318_sub4 != null; class318_sub4 = (RenderableSub4) class243.method1878((byte) 125)) {
-                class318_sub4.method2373(false);
+                class318_sub4.unlink(false);
                 Component350.method560(class318_sub4, 6);
             }
         }
@@ -146,8 +146,8 @@ final class AbstractGlTextureSub1
                 Component329.aClass211Array5993[i_42_].method1544(8688, bool, i);
         }
         if (DefinitionSub5.aBoolean9121) {
-            RSACipher.anIntArray4906 = JaclibLoader.aHa171.Y();
-            JaclibLoader.aHa171.K(DefinitionSub10.anIntArray9183);
+            RSACipher.anIntArray4906 = JaclibLoader.toolkit.Y();
+            JaclibLoader.toolkit.K(DefinitionSub10.anIntArray9183);
             int i_43_ = ((DefinitionSub10.anIntArray9183[2] - DefinitionSub10.anIntArray9183[0]) / DisplayModeManagerContainer216.anInt5652);
             for (int i_44_ = 0; i_44_ < DisplayModeManagerContainer216.anInt5652 - 1; i_44_++)
                 DisplayModeManagerContainer167.anIntArray256[i_44_] = i_43_ * (i_44_ + 1) + Component35.anIntArray4271[i_44_];
@@ -157,10 +157,10 @@ final class AbstractGlTextureSub1
         if (ImageProducerSprite.aClass357ArrayArrayArray9082 != null) {
             if (DefinitionSub5.aBoolean9121) DebugPanicSub1.method2131(0);
             Component315.method1879(true);
-            JaclibLoader.aHa171.ra(-1, 1583160, 40, 127);
+            JaclibLoader.toolkit.ra(-1, 1583160, 40, 127);
             Component182.method3398(true, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
             if (DefinitionSub5.aBoolean9121) DisplayModeManagerContainer42.method2290();
-            JaclibLoader.aHa171.pa();
+            JaclibLoader.toolkit.pa();
             Component315.method1879(false);
         }
         Component182.method3398(false, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
@@ -185,7 +185,7 @@ final class AbstractGlTextureSub1
             DisplayModeManagerContainer153.aBooleanArrayArray1572 = bools;
             NodeSub8.aBooleanArrayArray6656 = bools_28_;
         }
-        DebugOverlay.method1884();
+        DebugOverlay.drawStats();
     }
 
     AbstractGlTextureSub1(GlToolkitSub2 var_ha_Sub2, int i, int i_49_, int i_50_, int i_51_) {

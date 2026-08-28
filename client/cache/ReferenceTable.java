@@ -87,7 +87,7 @@ final class ReferenceTable {
         if (bool_4_) {
             for (int i_11_ = 0; i_11_ < this.anInt3727; i_11_++) {
                 byte[] is_12_ = new byte[64];
-                class348_sub49.method3389(2147483647, 0, 64, is_12_);
+                class348_sub49.readBytes(2147483647, 0, 64, is_12_);
                 this.aByteArrayArray3730[(this.anIntArray3738[i_11_])] = is_12_;
             }
         }

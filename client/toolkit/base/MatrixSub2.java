@@ -292,7 +292,7 @@ final class MatrixSub2
 
     static final void method921(byte i, boolean bool) {
         if (i == 99) {
-            for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.method1995(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.method1990((byte) 120)) {
+            for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.first(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.next((byte) 120)) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
                     PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
@@ -301,23 +301,23 @@ final class MatrixSub2
                     PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6673);
                     class348_sub9.aClass348_Sub16_Sub5_6673 = null;
                 }
-                class348_sub9.method2715((byte) 94);
+                class348_sub9.unlink((byte) 94);
             }
             anInt5739++;
             if (bool) {
-                for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.method1995(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.method1990((byte) 69))) {
+                for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 69))) {
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
                         PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                         class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                     }
-                    class348_sub9.method2715((byte) 66);
+                    class348_sub9.unlink((byte) 66);
                 }
-                for (SceneNode class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.method3484(0); class348_sub9 != null; class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.method3482(0)) {
+                for (SceneNode class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.first(0); class348_sub9 != null; class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.next(0)) {
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
                         PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                         class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                     }
-                    class348_sub9.method2715((byte) 112);
+                    class348_sub9.unlink((byte) 112);
                 }
             }
         }

@@ -20,7 +20,7 @@ final class Component43
         if (r.anInt9721 != -1) {
             int i_0_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
             int i_1_ = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 72);
-            NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.method1995(4));
+            NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(4));
             if (class348_sub45 != null) {
                 i_0_ = class348_sub45.method3308((byte) -128);
                 i_1_ = class348_sub45.method3311(58);

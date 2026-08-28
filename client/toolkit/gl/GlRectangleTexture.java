@@ -60,18 +60,18 @@ final class GlRectangleTexture extends GlTexture {
         NodeSub22.method2959(-1);
         OggStream.method2965(string, i_11_, bool, 0);
         ClientSystemInfo.method2994(2);
-        DisplayModeManagerContainer292.method1311(5139, NodeSub8.aHa6654);
-        Component27.method3568(NodeSub8.aHa6654, 4);
-        DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.aHa6654, true);
+        DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
+        Component27.method3568(NodeSub8.toolkit, 4);
+        DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
         FriendsIgnoreList.method2061(-128);
         DisplayModeManagerContainer204.method901(Component22.aClass105Array1744, 515880227);
         Component160.method3466(i ^ ~0x4f);
         Definition.method3038(-1);
-        if (Component49.clientState == 3) Buffer.method3379(2, 4);
-        else if (Component49.clientState == 7) Buffer.method3379(2, 8);
+        if (Component49.clientState == 3) Buffer.setClientState(2, 4);
+        else if (Component49.clientState == 7) Buffer.setClientState(2, 8);
         else if (Component49.clientState != 10) {
             if (Component49.clientState == 1 || Component49.clientState == 2) Component239.method3616(12639);
-        } else Buffer.method3379(2, 11);
+        } else Buffer.setClientState(2, 11);
     }
 
     GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool) {

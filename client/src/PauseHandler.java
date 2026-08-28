@@ -40,7 +40,7 @@ final class PauseHandler extends HashNode {
                         Applet_Sub1.method94(("Pausing for " + i_5_ + " seconds..."), -109);
                         Cp1252Decoder.aStringArray5223 = strings;
                         Component221.anInt1794 = i_4_ - -1;
-                        Component100.aLong8694 = (long) (i_5_ * 1000) + Component240.method599(-104);
+                        Component100.aLong8694 = (long) (i_5_ * 1000) + Component240.currentTimeMillis(-104);
                         break;
                     }
                     Component126.aString4461 = strings[i_4_];

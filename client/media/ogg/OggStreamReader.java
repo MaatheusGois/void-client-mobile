@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub23_Sub3` (JODE-obfuscated).
- * Ogg stream read over a network Socket (extends OggStream). method2982(Socket,byte,int) opens the stream; method2964 consumes OggPacket.
+ * Ogg stream read over a network Socket (extends OggStream). openSocketStream(Socket,byte,int) opens the stream; handlePacket consumes OggPacket.
  */
 
 import jagtheora.ogg.OggPacket;
@@ -22,7 +22,7 @@ final class OggStreamReader extends OggStream {
     static int anInt9045;
     static int anInt9046;
 
-    final void method2964(byte i, OggPacket oggpacket) {
+    final void handlePacket(byte i, OggPacket oggpacket) {
         if (i >= -91) anInt9041 = -51;
         anInt9046++;
     }
@@ -33,15 +33,15 @@ final class OggStreamReader extends OggStream {
         aString9043 = null;
     }
 
-    static final SocketStream method2982(Socket socket, byte i, int i_0_) throws IOException {
+    static final SocketStream openSocketStream(Socket socket, byte i, int i_0_) throws IOException {
         int i_1_ = -41 / ((i - -40) / 42);
         anInt9040++;
         return new TcpSocketStream(socket, i_0_);
     }
 
-    final void method2961(byte i) {
+    final void shutdown(byte i) {
         anInt9045++;
-        if (i != 13) method2961((byte) -50);
+        if (i != 13) shutdown((byte) -50);
     }
 
     OggStreamReader(OggStreamState oggstreamstate) {

@@ -37,16 +37,16 @@ final class Component359
     static final void method1868(byte i, HashNodeSub13 class348_sub42_sub13) {
         int i_0_ = -104 / ((i - 38) / 54);
         anInt3154++;
-        class348_sub42_sub13.method3162(true);
+        class348_sub42_sub13.unlink(true);
         boolean bool = false;
-        for (HashNodeSub13 class348_sub42_sub13_1_ = ((HashNodeSub13) Component237.aClass107_3022.method1011(-85)); class348_sub42_sub13_1_ != null; class348_sub42_sub13_1_ = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 84))) {
+        for (HashNodeSub13 class348_sub42_sub13_1_ = ((HashNodeSub13) Component237.aClass107_3022.first(-85)); class348_sub42_sub13_1_ != null; class348_sub42_sub13_1_ = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 84))) {
             if (RenderableSub2.method2496(class348_sub42_sub13_1_.method3235(-17937), class348_sub42_sub13.method3235(-17937), true)) {
                 Component325.method721(class348_sub42_sub13_1_, class348_sub42_sub13, -1);
                 bool = true;
                 break;
             }
         }
-        if (!bool) Component237.aClass107_3022.method1005(true, class348_sub42_sub13);
+        if (!bool) Component237.aClass107_3022.add(true, class348_sub42_sub13);
     }
 
     Component359(GlToolkitSub2 var_ha_Sub2, long l, int i) {

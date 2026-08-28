@@ -35,7 +35,7 @@ final class NewsFetcher implements Runnable {
     public final void run() {
         anInt4203++;
         try {
-            BufferedReader bufferedreader = new BufferedReader(new InputStreamReader((DataInputStream) (aClass144_4201.anObject1998)));
+            BufferedReader bufferedreader = new BufferedReader(new InputStreamReader((DataInputStream) (aClass144_4201.result)));
             String string = bufferedreader.readLine();
             BrowserDetector class179 = CookieBuilder.method381((byte) 68);
             for (/**/; string != null; string = bufferedreader.readLine())

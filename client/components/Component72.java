@@ -25,13 +25,13 @@ final class Component72
     static final void method1138(String string, boolean bool, String string_0_, byte i) {
         try {
             anInt1908++;
-            DisplayModeManagerContainer282.aString5600 = string;
-            DisplayModeManagerContainer51.aString2496 = string_0_;
+            DisplayModeManagerContainer282.username = string;
+            DisplayModeManagerContainer51.password = string_0_;
             DisplayModeManagerContainer58.aBoolean10238 = bool;
-            if (!DisplayModeManagerContainer58.aBoolean10238 && (DisplayModeManagerContainer282.aString5600.equals("") || DisplayModeManagerContainer51.aString2496.equals(""))) WorldNameText.method254(3, (byte) -100);
+            if (!DisplayModeManagerContainer58.aBoolean10238 && (DisplayModeManagerContainer282.username.equals("") || DisplayModeManagerContainer51.password.equals(""))) WorldNameText.method254(3, (byte) -100);
             else {
                 // Persist for next launch / auto-login (desktop + mobile).
-                LoginPrefs.remember(DisplayModeManagerContainer282.aString5600, DisplayModeManagerContainer51.aString2496);
+                LoginPrefs.remember(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password);
                 int i_1_ = 34 % ((16 - i) / 55);
                 if (Component205.anInt5969 != 1) {
                     Component227.anInt1121 = 0;

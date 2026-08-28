@@ -59,14 +59,14 @@ final class Component83
 
     static final void method1014(int i) {
         anInt1660++;
-        for (PauseHandler class348_sub42_sub6 = (PauseHandler) CacheNodeSub2.aClass262_10492.method1995(4); class348_sub42_sub6 != null; class348_sub42_sub6 = ((PauseHandler) CacheNodeSub2.aClass262_10492.method1990((byte) 55))) {
+        for (PauseHandler class348_sub42_sub6 = (PauseHandler) CacheNodeSub2.aClass262_10492.first(4); class348_sub42_sub6 != null; class348_sub42_sub6 = ((PauseHandler) CacheNodeSub2.aClass262_10492.next((byte) 55))) {
             DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (class348_sub42_sub6.aClass318_Sub1_Sub3_Sub4_9538);
             if (class318_sub1_sub3_sub4.aBoolean10345) {
-                class348_sub42_sub6.method2715((byte) 76);
+                class348_sub42_sub6.unlink((byte) 76);
                 class318_sub1_sub3_sub4.method2466(false);
             } else if (OpenGlShader.clientCycle >= (class318_sub1_sub3_sub4.anInt10349)) {
                 class318_sub1_sub3_sub4.method2470(NodeSub51.anInt7267, (byte) -16);
-                if (class318_sub1_sub3_sub4.aBoolean10345) class348_sub42_sub6.method2715((byte) 42);
+                if (class318_sub1_sub3_sub4.aBoolean10345) class348_sub42_sub6.unlink((byte) 42);
                 else Component84.method850(class318_sub1_sub3_sub4, true);
             }
         }

@@ -202,7 +202,7 @@ final class DefinitionSub22
             Component156.aByteArrayArrayArray3700 = (new byte[4][AbstractShaderSub4.anInt7319]
                     [ParametricDefinition.anInt9109]);
             Component339.method1717(19278, ParametricDefinition.anInt9109, AbstractShaderSub4.anInt7319, 4);
-            Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.aHa6654, ParametricDefinition.anInt9109 >> 3);
+            Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
             ColorTagNode.anInt6769 = i_23_;
         }
     }

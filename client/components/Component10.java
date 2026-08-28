@@ -10,10 +10,10 @@ final class Component10
     static int anInt3808;
     static Component183 aClass114_3809 = new Component183(44, 6);
     static int anInt3810;
-    static boolean aBoolean3811 = false;
+    static boolean fpsOverlayEnabled = false;
 
     static final int method2250(int i, int i_0_, int i_1_, int i_2_) {
-        if (i_0_ < 36) aBoolean3811 = true;
+        if (i_0_ < 36) fpsOverlayEnabled = true;
         anInt3810++;
         int i_3_ = -i_1_ + 255;
         i_2_ = (~0xff00ff & (i_2_ & 0xff00ff) * i_1_ | 0xff0000 & (0xff00 & i_2_) * i_1_) >>> 8;
@@ -36,7 +36,7 @@ final class Component10
         Component253.anInt3203 = HashNodeSub14.anIntArray9626[-1 + i_13_];
         Component263.anInt1548 = DefinitionSub11.anIntArray9185[-1 + i_13_];
         NodeSub13.aBoolean6759 = false;
-        if (i_5_ > -83) aBoolean3811 = true;
+        if (i_5_ > -83) fpsOverlayEnabled = true;
         Component264.method2264(false);
         return true;
     }

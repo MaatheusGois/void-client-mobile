@@ -13,7 +13,7 @@ final class HashNodeSub3
     static int anInt9501;
     static short[] aShortArray9502;
     static Component183 aClass114_9503;
-    static int anInt9504;
+    static int translucentOnscreenCount;
     static int[] anIntArray9505 = new int[3];
     static int anInt9506;
     static int anInt9507;
@@ -53,9 +53,9 @@ final class HashNodeSub3
                     int i_7_ = i_6_ * (i_1_ * 334) / (adjustedZoom * 512);
                     int i_8_ = (-i_7_ + i_3_) / 2;
                     if (bool) {
-                        NodeSub8.aHa6654.la();
-                        NodeSub8.aHa6654.method3675(i_1_, (byte) -125, i, i_0_, i_8_, -16777216);
-                        NodeSub8.aHa6654.method3675(i_1_, (byte) -125, i, i_3_ + i_0_ - i_8_, i_8_, -16777216);
+                        NodeSub8.toolkit.la();
+                        NodeSub8.toolkit.method3675(i_1_, (byte) -125, i, i_0_, i_8_, -16777216);
+                        NodeSub8.toolkit.method3675(i_1_, (byte) -125, i, i_3_ + i_0_ - i_8_, i_8_, -16777216);
                     }
                     i_0_ += i_8_;
                     i_3_ -= 2 * i_8_;
@@ -69,9 +69,9 @@ final class HashNodeSub3
                 int i_9_ = adjustedZoom * i_3_ * 512 / (334 * i_6_);
                 int i_10_ = (i_1_ + -i_9_) / 2;
                 if (bool) {
-                    NodeSub8.aHa6654.la();
-                    NodeSub8.aHa6654.method3675(i_10_, (byte) -125, i, i_0_, i_3_, -16777216);
-                    NodeSub8.aHa6654.method3675(i_10_, (byte) -125, -i_10_ + i + i_1_, i_0_, i_3_, -16777216);
+                    NodeSub8.toolkit.la();
+                    NodeSub8.toolkit.method3675(i_10_, (byte) -125, i, i_0_, i_3_, -16777216);
+                    NodeSub8.toolkit.method3675(i_10_, (byte) -125, -i_10_ + i + i_1_, i_0_, i_3_, -16777216);
                 }
                 i += i_10_;
                 i_1_ -= i_10_ * 2;
@@ -120,7 +120,7 @@ final class HashNodeSub3
         Node.anInt4290 = 0;
         Component156.aClass262_3705 = null;
         DisplayModeManagerContainer229.method749();
-        DisplayModeManagerContainer229.aClass262_1254.method1996(127);
+        DisplayModeManagerContainer229.aClass262_1254.clear(127);
         DebugPanic.aClass323_4754 = null;
         Component39.aClass323_2252 = null;
         VideoAdPlayer.aClass105_4643 = null;
@@ -162,13 +162,13 @@ final class HashNodeSub3
         int i_16_ = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
         do {
             if (i_16_ == 2) {
-                Component221.method1083(NodeSub8.aHa6654, 100, (byte) 9, PacketReader.anInt10432, 100, Component236.anInt4017);
+                Component221.method1083(NodeSub8.toolkit, 100, (byte) 9, PacketReader.anInt10432, 100, Component236.anInt4017);
                 break;
             } else if (i_16_ != 3) break;
-            DisplayModeManagerContainer220.method282(2, NodeSub8.aHa6654, Component236.anInt4017, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.anInt10432, 2);
+            DisplayModeManagerContainer220.method282(2, NodeSub8.toolkit, Component236.anInt4017, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.anInt10432, 2);
         } while (false);
         if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, DisplayModeManagerContainer50.gameCanvas);
-        if (NodeSub8.aHa6654 != null) Component200.method2196((byte) -9);
+        if (NodeSub8.toolkit != null) Component200.method2196((byte) -9);
         DisplayModeManagerContainer50.aBoolean3870 = i != Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
         Component210.aBoolean5300 = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false);
     }

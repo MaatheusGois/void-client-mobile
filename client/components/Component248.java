@@ -22,7 +22,7 @@ final class Component248
 
     static final void method283(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         for (RenderableSub5 class318_sub5 = (RenderableSub5) Component241.aClass243_2957.method1872(8); class318_sub5 != null; class318_sub5 = ((RenderableSub5) Component241.aClass243_2957.method1878((byte) 0))) {
-            if (class318_sub5.anInt6421 <= OpenGlShader.clientCycle) class318_sub5.method2373(false);
+            if (class318_sub5.anInt6421 <= OpenGlShader.clientCycle) class318_sub5.unlink(false);
             else {
                 RenderableSub5.method2505(i_0_ >> 1, class318_sub5.anInt6420 * 2, 0, i_5_, i_2_ >> 1, class318_sub5.anInt6418, 256 + (class318_sub5.anInt6422 << 9), i_1_, (class318_sub5.anInt6419 << 9) + 256);
                 NodeList.aClass324_3326.drawTextCentred((byte) 122, i_3_ - -Component71.anIntArray6062[0], ~0xffffff | class318_sub5.anInt6415, class318_sub5.aString6416, 0, i_4_ - -Component71.anIntArray6062[1]);
@@ -51,7 +51,7 @@ final class Component248
         Task class144 = class297.method2240(972476528);
         while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -97, 10L);
         if (class144.anInt1997 == 2) return new DisplayModeManagerContainer115[0];
-        int[] is = (int[]) class144.anObject1998;
+        int[] is = (int[]) class144.result;
         DisplayModeManagerContainer115[] class57s = new DisplayModeManagerContainer115[is.length >> 2];
         for (int i_7_ = 0; class57s.length > i_7_; i_7_++) {
             DisplayModeManagerContainer115 class57 = new DisplayModeManagerContainer115();

@@ -36,12 +36,12 @@ final class ClientErrorReporter {
     final HashNode method1240(int i) {
         anInt2114++;
         if (i <= 7) method1240(79);
-        HashNode class348_sub42 = (aClass107_2118.aClass348_Sub42_1647.aClass348_Sub42_7063);
-        if (class348_sub42 == aClass107_2118.aClass348_Sub42_1647) {
+        HashNode class348_sub42 = (aClass107_2118.sentinel.next);
+        if (class348_sub42 == aClass107_2118.sentinel) {
             aClass348_Sub42_2115 = null;
             return null;
         }
-        aClass348_Sub42_2115 = class348_sub42.aClass348_Sub42_7063;
+        aClass348_Sub42_2115 = class348_sub42.next;
         return class348_sub42;
     }
 
@@ -75,7 +75,7 @@ final class ClientErrorReporter {
                     Task class144 = (DisplayModeManagerContainer155.aClass297_2993.method2237(new URL(NodeSub8.anApplet6662.getCodeBase(), ("clienterror.ws?c=" + NodeSub1Sub3.anInt8818 + "&u=" + (BufferCacheSub2.aString8265 != null ? BufferCacheSub2.aString8265 : String.valueOf(Component84.aLong1507)) + "&v1=" + ReflectionInvoker.aString3782 + "&v2=" + ReflectionInvoker.aString3796 + "&e=" + string_4_)), 8362));
                     while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -123, 1L);
                     if (class144.anInt1997 != 1) break;
-                    DataInputStream datainputstream = (DataInputStream) class144.anObject1998;
+                    DataInputStream datainputstream = (DataInputStream) class144.result;
                     datainputstream.read();
                     datainputstream.close();
                 }
@@ -90,11 +90,11 @@ final class ClientErrorReporter {
         anInt2120++;
         if (i < 44) aStringArray2113 = null;
         HashNode class348_sub42 = aClass348_Sub42_2115;
-        if (class348_sub42 == aClass107_2118.aClass348_Sub42_1647) {
+        if (class348_sub42 == aClass107_2118.sentinel) {
             aClass348_Sub42_2115 = null;
             return null;
         }
-        aClass348_Sub42_2115 = class348_sub42.aClass348_Sub42_7063;
+        aClass348_Sub42_2115 = class348_sub42.next;
         return class348_sub42;
     }
 

@@ -126,7 +126,7 @@ final class Component386
             } else {
                 int i_7_ = 16;
                 boolean bool_8_ = true;
-                if (class318_sub1_sub3_sub3 instanceof Npc) bool_8_ = ((Npc) class318_sub1_sub3_sub3).aClass79_10505.aBoolean1331;
+                if (class318_sub1_sub3_sub3 instanceof Npc) bool_8_ = ((Npc) class318_sub1_sub3_sub3).definition.aBoolean1331;
                 if (bool_8_) {
                     int i_9_ = ((class318_sub1_sub3_sub3.anInt10282) - class318_sub1_sub3_sub3.aClass264_10217.anInt3370);
                     if (i_9_ != 0 && class318_sub1_sub3_sub3.anInt10275 == -1 && (class318_sub1_sub3_sub3.anInt10310) != 0) i_7_ = 8;
@@ -207,7 +207,7 @@ final class Component386
         anInt2874++;
         Component82 class31;
         synchronized (aClass60_2875) {
-            class31 = (Component82) aClass60_2875.method583(i_15_, i + -148);
+            class31 = (Component82) aClass60_2875.get(i_15_, i + -148);
         }
         if (class31 != null) return class31;
         byte[] is;
@@ -218,29 +218,29 @@ final class Component386
         class31.aClass219_438 = this;
         if (is != null) class31.method332(i ^ ~0x55, new Buffer(is));
         synchronized (aClass60_2875) {
-            aClass60_2875.method582(class31, i_15_, (byte) -109);
+            aClass60_2875.putOne(class31, i_15_, (byte) -109);
         }
         return class31;
     }
 
     final void method1602(int i) {
         synchronized (aClass60_2875) {
-            aClass60_2875.method590(i);
+            aClass60_2875.clear(i);
         }
         anInt2865++;
         synchronized (this.aClass60_2862) {
-            this.aClass60_2862.method590(0);
+            this.aClass60_2862.clear(0);
         }
     }
 
     final void method1603(int i, int i_16_) {
         anInt2870++;
         synchronized (aClass60_2875) {
-            aClass60_2875.method578(2, i);
+            aClass60_2875.processSoftEntries(2, i);
             if (i_16_ >= -22) this.aClass45_2873 = null;
         }
         synchronized (this.aClass60_2862) {
-            this.aClass60_2862.method578(2, i);
+            this.aClass60_2862.processSoftEntries(2, i);
         }
     }
 

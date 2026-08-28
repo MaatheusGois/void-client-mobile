@@ -4,7 +4,9 @@
 
 /**
  * RENAMED from `Class279` (JODE-obfuscated).
- * Abstract base for audio output lines. Manages open/close/feed of a sound line (method2081/2082/2083/2084) using a timing source (Component240.method599). Subclasses SourceAudioLine and AudioLineSub2.
+ * Abstract audio output line. {@link #open}/{@link #close}/{@link #flush}/{@link #process}
+ * drive the mix pump; {@link #getBufferedSamples} reports queued PCM.
+ * Subclasses: {@link SourceAudioLine}, AudioLineSub2.
  */
 
 import java.awt.*;
@@ -42,27 +44,27 @@ class AudioLine {
     private boolean aBoolean3623;
     private int anInt3624;
 
-    int method2081() throws Exception {
+    int getBufferedSamples() throws Exception {
         anInt3605++;
         return this.anInt3613;
     }
 
-    void method2082(int i) throws Exception {
+    void open(int i) throws Exception {
         anInt3607++;
     }
 
-    void method2083() throws Exception {
+    void flush() throws Exception {
         anInt3606++;
     }
 
-    final synchronized void method2084(int i) {
+    final synchronized void process(int i) {
         anInt3595++;
         if (!aBoolean3610) {
-            long l = Component240.method599(-107);
+            long l = Component240.currentTimeMillis(-107);
             try {
                 if (l > aLong3602 + 6000L) aLong3602 = -6000L + l;
                 if (i != -6858) anInt3616 = 114;
-                for (/**/; aLong3602 + 5000L < l; l = Component240.method599(-96)) {
+                for (/**/; aLong3602 + 5000L < l; l = Component240.currentTimeMillis(-96)) {
                     method2089(256, (byte) -99);
                     aLong3602 += 256000 / Component231.anInt339;
                 }
@@ -73,19 +75,19 @@ class AudioLine {
                 try {
                     if (aLong3614 != 0) {
                         if (aLong3614 > l) return;
-                        method2082(this.anInt3613);
+                        open(this.anInt3613);
                         aBoolean3623 = true;
                         aLong3614 = 0L;
                     }
-                    int i_0_ = method2081();
+                    int i_0_ = getBufferedSamples();
                     if (-i_0_ + anInt3622 > anInt3624) anInt3624 = -i_0_ + anInt3622;
                     int i_1_ = this.anInt3620 - -anInt3616;
                     if (i_1_ - -256 > 16384) i_1_ = 16128;
                     if (256 + i_1_ > this.anInt3613) {
                         this.anInt3613 += 1024;
                         if (this.anInt3613 > 16384) this.anInt3613 = 16384;
-                        method2091();
-                        method2082(this.anInt3613);
+                        close();
+                        open(this.anInt3613);
                         i_0_ = 0;
                         aBoolean3623 = true;
                         if (256 + i_1_ > this.anInt3613) {
@@ -100,7 +102,7 @@ class AudioLine {
                     if (l > aLong3618) {
                         if (!aBoolean3623) {
                             if (anInt3624 == 0 && anInt3617 == 0) {
-                                method2091();
+                                close();
                                 aLong3614 = 2000L + l;
                                 return;
                             }
@@ -112,7 +114,7 @@ class AudioLine {
                     }
                     anInt3622 = i_0_;
                 } catch (Exception exception) {
-                    method2091();
+                    close();
                     aLong3614 = 2000L + l;
                 }
             }
@@ -202,7 +204,7 @@ class AudioLine {
         }
         if (anInt3615 < 0) anInt3615 = 0;
         if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.method2817(is, 0, i);
-        aLong3602 = Component240.method599(-102);
+        aLong3602 = Component240.currentTimeMillis(-102);
     }
 
     final synchronized void method2087(int i) {
@@ -210,10 +212,10 @@ class AudioLine {
         anInt3599++;
         try {
             if (i >= -110) aLong3602 = -66L;
-            method2083();
+            flush();
         } catch (Exception exception) {
-            method2091();
-            aLong3614 = 2000L + Component240.method599(-96);
+            close();
+            aLong3614 = 2000L + Component240.currentTimeMillis(-96);
         }
     }
 
@@ -237,7 +239,7 @@ class AudioLine {
         if (i_21_ == -35) anInt3608++;
     }
 
-    void method2091() {
+    void close() {
         anInt3598++;
     }
 
@@ -291,7 +293,7 @@ class AudioLine {
                 Component191.aClass250_2462 = null;
             }
         }
-        method2091();
+        close();
         this.anIntArray3603 = null;
         aBoolean3610 = bool;
     }
@@ -300,12 +302,12 @@ class AudioLine {
         anInt3612++;
     }
 
-    void method2095(Component component) throws Exception {
+    void initOnComponent(Component component) throws Exception {
         anInt3596++;
     }
 
     public AudioLine() {
-        aLong3602 = Component240.method599(-99);
+        aLong3602 = Component240.currentTimeMillis(-99);
         aLong3614 = 0L;
         aLong3618 = 0L;
         anInt3615 = 0;

@@ -195,7 +195,7 @@ final class Component264
 
     static final Component24 method2263(GraphicsToolkit var_ha, int i, int i_4_) {
         anInt8705++;
-        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3480(i_4_, -6008));
+        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.get(i_4_, -6008));
         if (class348_sub15 != null) {
             DisplayModeManagerContainer64 class348_sub23_sub2 = class348_sub15.aClass55_Sub1_6768.method506(false);
             class348_sub15.aBoolean6772 = true;

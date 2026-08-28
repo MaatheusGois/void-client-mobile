@@ -40,7 +40,7 @@ final class DisplayModeManagerContainer153
         anInt1576++;
         if (Component364.aBoolean8335) {
             int i_12_ = 0;
-            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1011(-59)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1003((byte) 108))) {
+            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.first(-59)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.next((byte) 108))) {
                 int i_13_ = OutputStream_Sub2.method138(class348_sub42_sub12, false);
                 if (i_13_ > i_12_) i_12_ = i_13_;
             }

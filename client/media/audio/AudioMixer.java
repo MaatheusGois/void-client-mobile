@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class250` (JODE-obfuscated).
- * Audio mixer thread (implements Runnable). run() pumps an array of AudioLine (aClass279Array3218), calling method2084 on each and sleeping; mixes client audio.
+ * Audio mixer thread (implements Runnable). run() pumps an array of AudioLine (aClass279Array3218), calling process on each and sleeping; mixes client audio.
  */
 
 final class AudioMixer implements Runnable {
@@ -49,7 +49,7 @@ final class AudioMixer implements Runnable {
             while (!this.aBoolean3221) {
                 for (int i = 0; i < 2; i++) {
                     AudioLine class279 = this.aClass279Array3218[i];
-                    if (class279 != null) class279.method2084(-6858);
+                    if (class279 != null) class279.process(-6858);
                 }
                 SpriteAtlasShader.method2161((byte) -107, 10L);
                 DummyClass.method3578((byte) -42, null, (this.aClass297_3228));

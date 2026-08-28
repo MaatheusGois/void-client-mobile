@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class272_Sub2` (JODE-obfuscated).
- * Proxy-aware socket connector. extends SocketConnector; method2052/method2053 open sockets through a Proxy (localProxy); method2050 uses the proxy.
+ * Proxy-aware socket connector. extends SocketConnector; openProxiedSocket/openProxiedSocketWithTimeout open sockets through a Proxy (localProxy); connect uses the proxy.
  */
 
 import sun.net.www.protocol.http.AuthenticationInfo;
@@ -24,12 +24,12 @@ public final class ProxySocketConnector extends SocketConnector {
     static Class aClass6173;
     static Class aClass6174;
 
-    private final Socket method2052(String string, int i, String string_0_) throws IOException {
+    private final Socket openProxiedSocket(String string, int i, String string_0_) throws IOException {
         Socket socket = new Socket(string, i);
         socket.setSoTimeout(10000);
         OutputStream outputstream = socket.getOutputStream();
-        if (string_0_ != null) outputstream.write(("CONNECT " + this.aString3476 + ":" + this.anInt3470 + " HTTP/1.0\n" + string_0_ + "\n\n").getBytes(StandardCharsets.ISO_8859_1));
-        else outputstream.write(("CONNECT " + this.aString3476 + ":" + this.anInt3470 + " HTTP/1.0\n\n").getBytes(StandardCharsets.ISO_8859_1));
+        if (string_0_ != null) outputstream.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n" + string_0_ + "\n\n").getBytes(StandardCharsets.ISO_8859_1));
+        else outputstream.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n\n").getBytes(StandardCharsets.ISO_8859_1));
         outputstream.flush();
         BufferedReader bufferedreader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String string_1_ = bufferedreader.readLine();
@@ -57,11 +57,11 @@ public final class ProxySocketConnector extends SocketConnector {
         return null;
     }
 
-    final Socket method2050(int i) throws IOException {
+    final Socket connect(int i) throws IOException {
         boolean flag1;
         boolean flag = Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"));
         if (!flag) System.setProperty("java.net.useSystemProxies", "true");
-        flag1 = anInt3470 == 443;
+        flag1 = port == 443;
         IOException_Sub1 ioexception_sub1;
         Object[] aobj1;
         int j;
@@ -69,10 +69,10 @@ public final class ProxySocketConnector extends SocketConnector {
         List list;
         List list1;
         try {
-            list = aProxySelector6172.select(new URI((flag1 ? "https" : "http") + "://" + aString3476));
-            list1 = aProxySelector6172.select(new URI((flag1 ? "http" : "https") + "://" + aString3476));
+            list = aProxySelector6172.select(new URI((flag1 ? "https" : "http") + "://" + host));
+            list1 = aProxySelector6172.select(new URI((flag1 ? "http" : "https") + "://" + host));
         } catch (URISyntaxException urisyntaxexception) {
-            return method2047((byte) 121);
+            return openSocket((byte) 121);
         }
         list.addAll(list1);
         Object[] aobj = list.toArray();
@@ -85,7 +85,7 @@ public final class ProxySocketConnector extends SocketConnector {
 
             Proxy localProxy = (Proxy) localObject2;
             try {
-                Socket localSocket = method2053(localProxy, (byte) 125);
+                Socket localSocket = openProxiedSocketWithTimeout(localProxy, (byte) 125);
                 if (localSocket != null) {
                     return localSocket;
                 }
@@ -95,11 +95,11 @@ public final class ProxySocketConnector extends SocketConnector {
             }
         }
         if (ioexception_sub1 != null) throw ioexception_sub1;
-        else return method2047((byte) 92);
+        else return openSocket((byte) 92);
     }
 
-    private final Socket method2053(Proxy proxy, byte i) throws IOException {
-        if (proxy.type() == Proxy.Type.DIRECT) return method2047((byte) 126);
+    private final Socket openProxiedSocketWithTimeout(Proxy proxy, byte i) throws IOException {
+        if (proxy.type() == Proxy.Type.DIRECT) return openSocket((byte) 126);
         java.net.SocketAddress socketaddress = proxy.address();
         if (!(socketaddress instanceof InetSocketAddress)) return null;
         InetSocketAddress inetsocketaddress = (InetSocketAddress) socketaddress;
@@ -119,17 +119,17 @@ public final class ProxySocketConnector extends SocketConnector {
                         Method method_16_ = (AuthenticationInfo.class.getDeclaredMethod("getHeaderValue", (aClass6174 == null ? aClass6174 = URL.class : aClass6174), (aClass6173 == null ? (aClass6173 = String.class) : aClass6173)));
                         method_16_.setAccessible(true);
                         String string_17_ = ((String) method_15_.invoke(object, new Object[0]));
-                        String string_18_ = ((String) method_16_.invoke(object, (new Object[]{new URL("https://" + (this.aString3476) + "/"), "https"})));
+                        String string_18_ = ((String) method_16_.invoke(object, (new Object[]{new URL("https://" + (this.host) + "/"), "https"})));
                         string = string_17_ + ": " + string_18_;
                     }
                 }
             } catch (Exception exception) {
                 /* empty */
             }
-            return method2052(inetsocketaddress.getHostName(), inetsocketaddress.getPort(), string);
+            return openProxiedSocket(inetsocketaddress.getHostName(), inetsocketaddress.getPort(), string);
         } else if (proxy.type() == Proxy.Type.SOCKS) {
             Socket socket = new Socket(proxy);
-            socket.connect(new InetSocketAddress((this.aString3476), (this.anInt3470)));
+            socket.connect(new InetSocketAddress((this.host), (this.port)));
             return socket;
         }
         return null;

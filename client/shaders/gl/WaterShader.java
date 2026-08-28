@@ -104,8 +104,8 @@ final class WaterShader extends AbstractShader {
         try {
             aClass269_7375 = class269;
             if (class45 != null && class377.aBoolean9921 && class377.aBoolean9922) {
-                DisplayModeManagerContainer271 class39 = (ShaderCompiler.method2608(class377, class45.method391("gl", "environment_mapped_water_v", -29832), -108, 35633));
-                DisplayModeManagerContainer271 class39_13_ = (ShaderCompiler.method2608(class377, class45.method391("gl", "environment_mapped_water_f", -29832), -122, 35632));
+                DisplayModeManagerContainer271 class39 = (ShaderCompiler.method2608(class377, class45.getFile("gl", "environment_mapped_water_v", -29832), -108, 35633));
+                DisplayModeManagerContainer271 class39_13_ = (ShaderCompiler.method2608(class377, class45.getFile("gl", "environment_mapped_water_f", -29832), -122, 35632));
                 aClass89_7369 = BitmapFont.method2582(class377, new DisplayModeManagerContainer271[]{class39, class39_13_}, -2113);
                 aBoolean7376 = (aClass89_7369 != null && aClass269_7375.method2041((byte) 120));
             } else aBoolean7376 = false;

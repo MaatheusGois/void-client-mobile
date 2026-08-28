@@ -112,7 +112,7 @@ final class OggUrlStream extends OggStream {
         return (double) -(256.0F / (float) Component231.anInt339) + d;
     }
 
-    final void method2961(byte i) {
+    final void shutdown(byte i) {
         if (aVorbisBlock9000 != null) aVorbisBlock9000.a();
         anInt9003++;
         if (aDSPState8993 != null) aDSPState8993.a();
@@ -122,7 +122,7 @@ final class OggUrlStream extends OggStream {
         if (aClass348_Sub16_Sub2_8995 != null) aClass348_Sub16_Sub2_8995.method2836(-1);
     }
 
-    final void method2964(byte i, OggPacket oggpacket) {
+    final void handlePacket(byte i, OggPacket oggpacket) {
         anInt8990++;
         if (this.anInt6868 < 3) {
             int i_7_ = aVorbisInfo9006.headerIn(aVorbisComment9002, oggpacket);
@@ -147,6 +147,6 @@ final class OggUrlStream extends OggStream {
                 class348_sub42_sub4.aShortArrayArray9518[i_8_] = aClass163_8994.method1268(-56, (class348_sub42_sub4.aShortArrayArray9518[i_8_]));
             aClass348_Sub16_Sub2_8995.method2835(class348_sub42_sub4, 30700);
         }
-        if (i > -91) method2961((byte) -106);
+        if (i > -91) shutdown((byte) -106);
     }
 }

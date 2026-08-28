@@ -26,9 +26,9 @@ final class p
 
     private final void method3432(Exception exception) {
         if (!aBoolean5144) {
-            aLong5146 = Component240.method599(-54);
+            aLong5146 = Component240.currentTimeMillis(-54);
             aBoolean5144 = true;
-        } else if (Component240.method599(-88) - aLong5146 < 30000L) this.aCanvas5147.repaint();
+        } else if (Component240.currentTimeMillis(-88) - aLong5146 < 30000L) this.aCanvas5147.repaint();
         else throw new RuntimeException(exception.getMessage());
     }
 

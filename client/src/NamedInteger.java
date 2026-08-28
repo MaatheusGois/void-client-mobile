@@ -4,11 +4,11 @@
 
 /**
  * RENAMED from `Class364` (JODE-obfuscated).
- * Node holding a named integer (String name + anInt4466). Used inside hashtables of named integer constants.
+ * Node holding a named integer (String name + value). Used inside hashtables of named integer constants.
  */
 
 final class NamedInteger {
-    int anInt4466;
+    int value;
     static int anInt4467;
     static int anInt4468;
     static int anInt4469;
@@ -21,10 +21,10 @@ final class NamedInteger {
     static final void method3517(int i) {
         if (i <= 35) method3517(98);
         anInt4468++;
-        Component121.aClass60_4543.method590(0);
+        Component121.aClass60_4543.clear(0);
     }
 
     NamedInteger(String string, int i) {
-        this.anInt4466 = i;
+        this.value = i;
     }
 }

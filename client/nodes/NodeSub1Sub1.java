@@ -62,7 +62,7 @@ final class NodeSub1Sub1
                     int i_19_ = -Component330.regionTileY + i_17_ * 64;
                     Component381.method3570(false);
                     class237_sub1.method1681(class348_sub49, i_18_, NodeSub45.aClass361Array7108, Component330.regionTileY, NodeBaseSub2.regionTileX, i_19_, (byte) 110);
-                    class237_sub1.method1691(i_19_, NodeSub8.aHa6654, class348_sub49, is_11_, i_18_, (byte) -126);
+                    class237_sub1.method1691(i_19_, NodeSub8.toolkit, class348_sub49, is_11_, i_18_, (byte) -126);
                     if (!class237_sub1.aBoolean3109 && i_16_ == GraphicsToolkit.anInt4581 / 8 && (i_17_ == DisplayModeManagerContainer363.anInt4095 / 8) && is_11_[0] != -1) {
                         Component293.aClass305_3304 = ComponentDownloader.aClass84_413.method823(is_11_[2], is_11_[3], is_11_[1], -66, (Component132.aClass25_1813), is_11_[0]);
                         Component316.anInt2481 = is_11_[4];

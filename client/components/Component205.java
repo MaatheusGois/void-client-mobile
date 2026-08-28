@@ -43,9 +43,9 @@ final class Component205
 
     static final void method1772(int i) {
         anInt5968++;
-        ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3484(0);
+        ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0);
         if (i <= 4) aString5966 = null;
-        for (/**/; class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3482(0))
+        for (/**/; class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0))
             DisplayModeManagerContainer282.method690((byte) 108, (class348_sub15.anInt6773));
     }
 

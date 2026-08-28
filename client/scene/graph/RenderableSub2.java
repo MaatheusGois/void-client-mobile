@@ -26,10 +26,10 @@ final class RenderableSub2
                 if (!Component3.method1197(-12081, class348_sub42_sub12.opcode)) {
                     if ((class348_sub42_sub12.itemId) == -1) {
                         if (WaterShaderSub8.method3549((class348_sub42_sub12.opcode), (byte) -119)) {
-                            NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480((int) (class348_sub42_sub12.identifier), -6008)));
+                            NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) (class348_sub42_sub12.identifier), -6008)));
                             if (class348_sub22 != null) {
-                                Npc npc = (class348_sub22.aNpc_6859);
-                                DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+                                Npc npc = (class348_sub22.npc);
+                                DisplayModeManagerContainer206 class79 = (npc.definition);
                                 if (class79.anIntArray1377 != null) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
                                 if (class79 != null) is = class79.anIntArray1342;
                             }
@@ -47,7 +47,7 @@ final class RenderableSub2
                 if (is != null) string += ImageTagText.method1273(is, true);
                 NodeList.aClass324_3326.method2567(i_1_, string, (byte) 116, i_4_, 0, i_7_ - -3, DisplayModeManagerContainer196.aClass105Array4234, Component143.anIntArray2330);
                 if (!class348_sub42_sub12.aBoolean9597) break;
-                ColoredText.aClass105_6097.method974(Component27.aClass143_4962.method1183(true, string) + (i_7_ - -5), -12 + i_1_);
+                ColoredText.aClass105_6097.method974(Component27.aClass143_4962.stringWidth(true, string) + (i_7_ - -5), -12 + i_1_);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.method2929(runtimeexception, ("vo.C(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub42_sub12 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
             }
@@ -130,7 +130,7 @@ final class RenderableSub2
                         float f = (float) (Component258.anInt1974 - (class338.anIntArray4187[0]));
                         if (f < 0.0F) f *= -1.0F;
                         if (!(f < (float) Component53.anInt194) && Component160.method3465(0, 1, class338) && Component160.method3465(1, 1, class338) && Component160.method3465(2, 1, class338) && Component160.method3465(3, 1, class338))
-                            HashNodeSub19.aClass338Array9700[HashNodeSub10.anInt9577++] = class338;
+                            HashNodeSub19.aClass338Array9700[HashNodeSub10.activeOccluderCount++] = class338;
                     }
                 }
             } else if (class338.aByte4192 == 2) {
@@ -155,7 +155,7 @@ final class RenderableSub2
                         float f = (float) (DefinitionSub27.anInt9360 - (class338.anIntArray4184[0]));
                         if (f < 0.0F) f *= -1.0F;
                         if (!(f < (float) Component53.anInt194) && Component160.method3465(0, 1, class338) && Component160.method3465(1, 1, class338) && Component160.method3465(2, 1, class338) && Component160.method3465(3, 1, class338))
-                            HashNodeSub19.aClass338Array9700[HashNodeSub10.anInt9577++] = class338;
+                            HashNodeSub19.aClass338Array9700[HashNodeSub10.activeOccluderCount++] = class338;
                     }
                 }
             } else if (class338.aByte4192 == 16 || class338.aByte4192 == 8) {
@@ -168,7 +168,7 @@ final class RenderableSub2
                         float f_28_ = (float) (DefinitionSub27.anInt9360 + -(class338.anIntArray4184[0]));
                         if (f_28_ < 0.0F) f_28_ *= -1.0F;
                         if ((!(f < (float) Component53.anInt194) || !((float) Component53.anInt194 > f_28_)) && Component160.method3465(0, 1, class338) && Component160.method3465(1, 1, class338) && Component160.method3465(2, 1, class338) && Component160.method3465(3, 1, class338))
-                            HashNodeSub19.aClass338Array9700[HashNodeSub10.anInt9577++] = class338;
+                            HashNodeSub19.aClass338Array9700[HashNodeSub10.activeOccluderCount++] = class338;
                     }
                 }
             } else if (class338.aByte4192 == 4) {
@@ -198,7 +198,7 @@ final class RenderableSub2
                             }
                         }
                     }
-                    if (bool && Component160.method3465(0, 1, class338) && Component160.method3465(1, 1, class338) && Component160.method3465(2, 1, class338) && Component160.method3465(3, 1, class338)) HashNodeSub19.aClass338Array9700[HashNodeSub10.anInt9577++] = class338;
+                    if (bool && Component160.method3465(0, 1, class338) && Component160.method3465(1, 1, class338) && Component160.method3465(2, 1, class338) && Component160.method3465(3, 1, class338)) HashNodeSub19.aClass338Array9700[HashNodeSub10.activeOccluderCount++] = class338;
                 }
             }
         } catch (RuntimeException runtimeexception) {
@@ -209,13 +209,13 @@ final class RenderableSub2
     static final boolean method2499(int i, int i_35_, int i_36_, int i_37_, int i_38_, byte i_39_, int i_40_) {
         anInt6398++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
-        if (Component241.anInt2946 < 100) return false;
+        if (Component241.occludedPixelCount < 100) return false;
         if (i_38_ == i_40_ && i_36_ == i_35_) {
             if (!ShaderSub2.method164(i, i_38_, (byte) -97, i_36_)) return false;
             int i_41_ = i_38_ << Component149.anInt4459;
             int i_42_ = i_36_ << Component149.anInt4459;
             if (Component221.method1084(i_37_, Component148.anInt3465, i_42_, i_41_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465, 18507)) {
-                DefinitionSub4.anInt9112++;
+                DefinitionSub4.occludedCpCount++;
                 return true;
             }
             return false;
@@ -229,7 +229,7 @@ final class RenderableSub2
         int i_45_ = (i_38_ << Component149.anInt4459) + 1;
         int i_46_ = (i_36_ << Component149.anInt4459) + 2;
         if (!Component221.method1084(i_37_, (1 + -i_38_ + i_40_) * Component148.anInt3465, i_46_, i_45_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465 * (i_35_ + -i_36_ + 1), 18507)) return false;
-        DefinitionSub4.anInt9112++;
+        DefinitionSub4.occludedCpCount++;
         return true;
     }
 }

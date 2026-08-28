@@ -37,11 +37,11 @@ final class Component303
 
     final synchronized Component170 method1610(byte i) {
         anInt2888++;
-        Component170 class207 = (Component170) this.aClass166_2886.aClass60_2190.method583(anInt2891, -70);
+        Component170 class207 = (Component170) this.aClass166_2886.aClass60_2190.get(anInt2891, -70);
         if (class207 != null) return class207;
         class207 = Component170.method1521(this.aClass166_2886.aClass45_2180, anInt2891, 0);
         if (i < 49) method1609((byte) 93);
-        if (class207 != null) this.aClass166_2886.aClass60_2190.method582(class207, anInt2891, (byte) -120);
+        if (class207 != null) this.aClass166_2886.aClass60_2190.putOne(class207, anInt2891, (byte) -120);
         return class207;
     }
 

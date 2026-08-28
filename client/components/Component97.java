@@ -15,7 +15,7 @@ final class Component97
     static final void method865(int i, int i_0_) {
         anInt1536++;
         if (i != -8186) method866(-99);
-        Component279.aClass60_225.method578(2, i_0_);
+        Component279.aClass60_225.processSoftEntries(2, i_0_);
     }
 
     public static void method866(int i) {

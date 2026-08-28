@@ -78,7 +78,7 @@ final class Cp1252Decoder extends Component47 {
         if (i != 53146732) return null;
         if (object instanceof AbstractBuffer) {
             AbstractBuffer class344 = (AbstractBuffer) object;
-            return class344.method2692(-3672);
+            return class344.toByteArray(-3672);
         }
         throw new IllegalArgumentException();
     }
@@ -110,8 +110,8 @@ final class Cp1252Decoder extends Component47 {
         for (int i = 0; i < 10; i++)
             class348_sub49.writeInt((byte) 120, (int) (9.9999999E7 * Math.random()));
         class348_sub49.writeShort((byte) 107, (int) (9.9999999E7 * Math.random()));
-        class348_sub49.method3390(Sprite.aBigInteger6921, (byte) -98, Component269.aBigInteger8762);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.anInt7197, 0, class348_sub49.aByteArray7154, 80);
+        class348_sub49.applyRsa(Sprite.aBigInteger6921, (byte) -98, Component269.aBigInteger8762);
+        class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 80);
         return is;
     }
 

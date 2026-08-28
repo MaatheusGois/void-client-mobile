@@ -9,7 +9,7 @@ final class Component305
  */ extends Component364 {
     static int anInt9928;
     static Component170[] aClass207Array9929;
-    static int anInt9930;
+    static int opaqueOnscreenCount;
     static NodeList aClass262_9931 = new NodeList();
     static int[] anIntArray9932 = new int[1000];
 

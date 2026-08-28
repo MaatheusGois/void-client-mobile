@@ -44,7 +44,7 @@ final class Component208
                 Node class348;
                 if (i_0_ != 5) class348 = new NodeSub35(class348_sub49.readInt((byte) -126));
                 else class348 = new NodeSub50(class348_sub49.readString((byte) -35));
-                this.aClass356_1767.method3483((byte) 21, i_3_, class348);
+                this.aClass356_1767.put((byte) 21, i_3_, class348);
             }
         }
         anInt1765++;
@@ -56,7 +56,7 @@ final class Component208
         if (this.aClass356_1767 == null) return false;
         if (bool != false) aClass356_1770 = null;
         if (aClass356_1770 == null) method1071(true);
-        for (NodeSub46 class348_sub46 = ((NodeSub46) aClass356_1770.method3480(DisplayModeManagerContainer260.method2179(string, (byte) 109), -6008)); class348_sub46 != null; class348_sub46 = (NodeSub46) aClass356_1770.method3476(true)) {
+        for (NodeSub46 class348_sub46 = ((NodeSub46) aClass356_1770.get(DisplayModeManagerContainer260.method2179(string, (byte) 109), -6008)); class348_sub46 != null; class348_sub46 = (NodeSub46) aClass356_1770.continueGet(true)) {
             if (class348_sub46.aString7111.equals(string)) return true;
         }
         return false;
@@ -67,16 +67,16 @@ final class Component208
         if (this.aClass356_1767 == null) return false;
         if (bool != true) return true;
         if (aClass356_1770 == null) method1068((byte) 120);
-        NodeSub35 class348_sub35 = (NodeSub35) aClass356_1770.method3480(i, -6008);
+        NodeSub35 class348_sub35 = (NodeSub35) aClass356_1770.get(i, -6008);
         return class348_sub35 != null;
     }
 
     private final void method1068(byte i) {
         anInt1772++;
-        aClass356_1770 = new LruCache(this.aClass356_1767.method3475(true));
-        for (NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_1767.method3484(0)); class348_sub35 != null; class348_sub35 = (NodeSub35) this.aClass356_1767.method3482(0)) {
-            NodeSub35 class348_sub35_4_ = new NodeSub35((int) class348_sub35.aLong4291);
-            aClass356_1770.method3483((byte) 26, class348_sub35.anInt6976, class348_sub35_4_);
+        aClass356_1770 = new LruCache(this.aClass356_1767.getCapacity(true));
+        for (NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_1767.first(0)); class348_sub35 != null; class348_sub35 = (NodeSub35) this.aClass356_1767.next(0)) {
+            NodeSub35 class348_sub35_4_ = new NodeSub35((int) class348_sub35.key);
+            aClass356_1770.put((byte) 26, class348_sub35.anInt6976, class348_sub35_4_);
         }
         if (i < 85) method1069(111, null);
     }
@@ -98,11 +98,11 @@ final class Component208
     }
 
     private final void method1071(boolean bool) {
-        aClass356_1770 = new LruCache(this.aClass356_1767.method3475(bool));
+        aClass356_1770 = new LruCache(this.aClass356_1767.getCapacity(bool));
         anInt1768++;
-        for (NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_1767.method3484(0)); class348_sub50 != null; class348_sub50 = (NodeSub50) this.aClass356_1767.method3482(0)) {
-            NodeSub46 class348_sub46 = new NodeSub46((class348_sub50.aString7211), (int) (class348_sub50.aLong4291));
-            aClass356_1770.method3483((byte) 102, DisplayModeManagerContainer260.method2179((class348_sub50.aString7211), (byte) 120), class348_sub46);
+        for (NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_1767.first(0)); class348_sub50 != null; class348_sub50 = (NodeSub50) this.aClass356_1767.next(0)) {
+            NodeSub46 class348_sub46 = new NodeSub46((class348_sub50.aString7211), (int) (class348_sub50.key));
+            aClass356_1770.put((byte) 102, DisplayModeManagerContainer260.method2179((class348_sub50.aString7211), (byte) 120), class348_sub46);
         }
     }
 
@@ -116,7 +116,7 @@ final class Component208
         if (bool != false) method1067(false, -31);
         anInt1775++;
         if (this.aClass356_1767 == null) return anInt1764;
-        NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_1767.method3480(i, -6008));
+        NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_1767.get(i, -6008));
         if (class348_sub35 == null) return anInt1764;
         return class348_sub35.anInt6976;
     }
@@ -129,7 +129,7 @@ final class Component208
         anInt1777++;
         if (i_7_ <= 60) return null;
         if (this.aClass356_1767 == null) return aString1774;
-        NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_1767.method3480(i, -6008));
+        NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_1767.get(i, -6008));
         if (class348_sub50 == null) return aString1774;
         return class348_sub50.aString7211;
     }

@@ -28,10 +28,10 @@ final class Component321
                 AudioLine class279 = new SourceAudioLine();
                 class279.anInt3620 = i;
                 class279.anIntArray3603 = new int[(Component21.aBoolean3652 ? 2 : 1) * 256];
-                class279.method2095(component);
+                class279.initOnComponent(component);
                 class279.anInt3613 = (i & ~0x3ff) + 1024;
                 if (class279.anInt3613 > 16384) class279.anInt3613 = 16384;
-                class279.method2082(class279.anInt3613);
+                class279.open(class279.anInt3613);
                 if (Component193.anInt3248 > 0 && Component191.aClass250_2462 == null) {
                     Component191.aClass250_2462 = new AudioMixer();
                     Component191.aClass250_2462.aClass297_3228 = class297;
@@ -48,9 +48,9 @@ final class Component321
                     AudioLineSub2 class279_sub2 = new AudioLineSub2(class297, i_0_);
                     class279_sub2.anInt3620 = i;
                     class279_sub2.anIntArray3603 = new int[(!Component21.aBoolean3652 ? 1 : 2) * 256];
-                    class279_sub2.method2095(component);
+                    class279_sub2.initOnComponent(component);
                     class279_sub2.anInt3613 = 16384;
-                    class279_sub2.method2082(class279_sub2.anInt3613);
+                    class279_sub2.open(class279_sub2.anInt3613);
                     if (Component193.anInt3248 > 0 && Component191.aClass250_2462 == null) {
                         Component191.aClass250_2462 = new AudioMixer();
                         Component191.aClass250_2462.aClass297_3228 = class297;

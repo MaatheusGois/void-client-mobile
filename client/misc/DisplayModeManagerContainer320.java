@@ -45,7 +45,7 @@ final class DisplayModeManagerContainer320
 
     final void method1930(int i) {
         synchronized (this.aClass60_3287) {
-            this.aClass60_3287.method590(0);
+            this.aClass60_3287.clear(0);
             if (i != -21804) method1930(-35);
         }
         anInt3275++;
@@ -188,11 +188,11 @@ final class DisplayModeManagerContainer320
     final void method1937(int i, boolean bool) {
         anInt3274++;
         synchronized (aClass60_3278) {
-            aClass60_3278.method578(2, i);
+            aClass60_3278.processSoftEntries(2, i);
         }
         synchronized (this.aClass60_3287) {
             if (bool != false) method1939(-11);
-            this.aClass60_3287.method578(2, i);
+            this.aClass60_3287.processSoftEntries(2, i);
         }
         synchronized (this.aClass175_3288) {
             this.aClass175_3288.method1346(-1491, i);
@@ -216,11 +216,11 @@ final class DisplayModeManagerContainer320
     final void method1939(int i) {
         synchronized (aClass60_3278) {
             if (i > -28) aClass326_3292 = null;
-            aClass60_3278.method590(0);
+            aClass60_3278.clear(0);
         }
         anInt3277++;
         synchronized (this.aClass60_3287) {
-            this.aClass60_3287.method590(0);
+            this.aClass60_3287.clear(0);
         }
         synchronized (this.aClass175_3288) {
             this.aClass175_3288.method1345((byte) 47);
@@ -231,7 +231,7 @@ final class DisplayModeManagerContainer320
         anInt3283++;
         NumberFormatter class213;
         synchronized (aClass60_3278) {
-            class213 = (NumberFormatter) aClass60_3278.method583(i_13_, 90);
+            class213 = (NumberFormatter) aClass60_3278.get(i_13_, 90);
         }
         if (class213 != null) return class213;
         byte[] is;
@@ -257,16 +257,16 @@ final class DisplayModeManagerContainer320
             class213.anIntArray2772 = null;
             if (class213.aClass356_2757 != null) {
                 boolean bool = false;
-                for (Node class348 = class213.aClass356_2757.method3484(0); class348 != null; class348 = class213.aClass356_2757.method3482(0)) {
-                    Component355 class254 = aClass326_3292.method2600((int) class348.aLong4291, 28364);
-                    if (class254.aBoolean3261) class348.method2715((byte) 60);
+                for (Node class348 = class213.aClass356_2757.first(0); class348 != null; class348 = class213.aClass356_2757.next(0)) {
+                    Component355 class254 = aClass326_3292.method2600((int) class348.key, 28364);
+                    if (class254.aBoolean3261) class348.unlink((byte) 60);
                     else bool = true;
                 }
                 if (!bool) class213.aClass356_2757 = null;
             }
         }
         synchronized (aClass60_3278) {
-            aClass60_3278.method582(class213, i_13_, (byte) -118);
+            aClass60_3278.putOne(class213, i_13_, (byte) -118);
         }
         return class213;
     }
@@ -292,7 +292,7 @@ final class DisplayModeManagerContainer320
         this.anInt3291 = i;
         anInt3284++;
         synchronized (this.aClass60_3287) {
-            this.aClass60_3287.method590(0);
+            this.aClass60_3287.clear(0);
             int i_21_ = 89 % ((-65 - i_20_) / 60);
         }
     }

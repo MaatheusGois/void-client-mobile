@@ -48,8 +48,8 @@ final class Component128
             class272 = new DirectSocketConnector();
         }
         if (i_6_ != -90) return null;
-        class272.aString3476 = string;
-        class272.anInt3470 = i;
+        class272.host = string;
+        class272.port = i;
         return class272;
     }
 

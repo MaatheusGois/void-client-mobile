@@ -34,13 +34,13 @@ final class DisplayModeManagerContainer306
 
     static final Component291 method742(int i, int i_0_) {
         anInt4777++;
-        Component291 class189 = (Component291) Component46.aClass60_2844.method583(i_0_, -104);
+        Component291 class189 = (Component291) Component46.aClass60_2844.get(i_0_, -104);
         if (class189 != null) return class189;
         byte[] is = Component76.aClass45_8601.method410(-1860, 0, i_0_);
         if (i != 104) method741((byte) 98);
         class189 = new Component291();
         if (is != null) class189.method1419(i_0_, new Buffer(is), (byte) 64);
-        Component46.aClass60_2844.method582(class189, i_0_, (byte) -114);
+        Component46.aClass60_2844.putOne(class189, i_0_, (byte) -114);
         return class189;
     }
 

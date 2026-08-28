@@ -23,8 +23,8 @@ final class DisplayModeManagerContainer89
     final void method178(int i, boolean bool, byte i_0_, int i_1_) {
         if (i_0_ >= -6) method202(-4, null);
         anInt8376++;
-        NodeSub8.aHa6654.method3628(-2 + i, i_1_, 4 + this.aClass369_4635.anInt4971, this.aClass369_4635.anInt4963 + 2, (((Component381) this.aClass369_4635).anInt8580), 0);
-        NodeSub8.aHa6654.method3628(i + -1, i_1_ + 1, this.aClass369_4635.anInt4971 + 2, this.aClass369_4635.anInt4963, 0, 0);
+        NodeSub8.toolkit.method3628(-2 + i, i_1_, 4 + this.aClass369_4635.anInt4971, this.aClass369_4635.anInt4963 + 2, (((Component381) this.aClass369_4635).anInt8580), 0);
+        NodeSub8.toolkit.method3628(i + -1, i_1_ + 1, this.aClass369_4635.anInt4971 + 2, this.aClass369_4635.anInt4963, 0, 0);
     }
 
     static final NodeSub21 method199(int i) {
@@ -65,8 +65,8 @@ final class DisplayModeManagerContainer89
                 if (i_5_ == -7257) {
                     boolean bool = false;
                     for (int i_7_ = 0; i_6_ > i_7_; i_7_++) {
-                        Player player = (InterfaceRenderer.aPlayerArray5058[is[i_7_]]);
-                        if (player != null && (Component72.localPlayer != player) && (player.aString10544 != null) && player.aString10544.equalsIgnoreCase(string)) {
+                        Player player = (InterfaceRenderer.players[is[i_7_]]);
+                        if (player != null && (Component72.localPlayer != player) && (player.username != null) && player.username.equalsIgnoreCase(string)) {
                             bool = true;
                             if (i == 1) {
                                 Component296.anInt4657++;
@@ -125,10 +125,10 @@ final class DisplayModeManagerContainer89
         int i_10_ = (this.method183(48) * this.aClass369_4635.anInt4971 / 10000);
         int[] is = new int[4];
         int i_11_ = -50 % ((-20 - i) / 57);
-        NodeSub8.aHa6654.K(is);
-        NodeSub8.aHa6654.KA(i_9_, 2 + i_8_, i_9_ - -i_10_, i_8_ - -(this.aClass369_4635.anInt4963));
+        NodeSub8.toolkit.K(is);
+        NodeSub8.toolkit.KA(i_9_, 2 + i_8_, i_9_ - -i_10_, i_8_ - -(this.aClass369_4635.anInt4963));
         aClass105_8366.method972(i_9_, 2 + i_8_, (this.aClass369_4635.anInt4971), (this.aClass369_4635.anInt4963));
-        NodeSub8.aHa6654.KA(is[0], is[1], is[2], is[3]);
+        NodeSub8.toolkit.KA(is[0], is[1], is[2], is[3]);
     }
 
     static final void method202(int i, MenuEntry class348_sub42_sub12) {
@@ -136,13 +136,13 @@ final class DisplayModeManagerContainer89
             try {
                 anInt8375++;
                 if (i == 6 && !Component364.aBoolean8335) {
-                    class348_sub42_sub12.method2715((byte) 111);
+                    class348_sub42_sub12.unlink((byte) 111);
                     DisplayModeManagerContainer306.menuEntryCount--;
                     if (class348_sub42_sub12.aBoolean9611) {
-                        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1011(-99)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 110))) {
+                        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-99)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 110))) {
                             if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.target)) {
                                 boolean bool = false;
-                                for (MenuEntry class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1011(-58)); class348_sub42_sub12_12_ != null; class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.method1003((byte) 112))) {
+                                for (MenuEntry class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.first(-58)); class348_sub42_sub12_12_ != null; class348_sub42_sub12_12_ = ((MenuEntry) class348_sub42_sub13.aClass107_9621.next((byte) 112))) {
                                     if (class348_sub42_sub12 == class348_sub42_sub12_12_) {
                                         if (class348_sub42_sub13.method3234((byte) -123, class348_sub42_sub12)) Component359.method1868((byte) -98, class348_sub42_sub13);
                                         bool = true;
@@ -155,7 +155,7 @@ final class DisplayModeManagerContainer89
                     } else {
                         long l = (class348_sub42_sub12.groupKey);
                         HashNodeSub13 class348_sub42_sub13;
-                        for (class348_sub42_sub13 = ((HashNodeSub13) MenuEntry.aClass356_9603.method3480(l, -6008)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) MenuEntry.aClass356_9603.method3476(true))) {
+                        for (class348_sub42_sub13 = ((HashNodeSub13) MenuEntry.aClass356_9603.get(l, -6008)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) MenuEntry.aClass356_9603.continueGet(true))) {
                             if (class348_sub42_sub13.aString9617.equals(class348_sub42_sub12.target)) break;
                         }
                         if (class348_sub42_sub13 == null || !(class348_sub42_sub13.method3234((byte) 15, class348_sub42_sub12))) break;

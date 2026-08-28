@@ -164,11 +164,11 @@ final class DisplayModeManagerContainer174
                 if (anInt10387 < 0) {
                     int i_9_ = -1 + -anInt10387;
                     if (i_9_ == StringDefinition.anInt9591) class318_sub1_sub3_sub3 = Component72.localPlayer;
-                    else class318_sub1_sub3_sub3 = (InterfaceRenderer.aPlayerArray5058[i_9_]);
+                    else class318_sub1_sub3_sub3 = (InterfaceRenderer.players[i_9_]);
                 } else {
                     int i_10_ = -1 + anInt10387;
-                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_10_, -6008));
-                    if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.aNpc_6859);
+                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_10_, -6008));
+                    if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.npc);
                 }
                 if (class318_sub1_sub3_sub3 != null) {
                     this.y = class318_sub1_sub3_sub3.y;

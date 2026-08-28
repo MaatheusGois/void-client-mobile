@@ -23,10 +23,10 @@ final class Rs2Npc {
         Npc[] all = getAll();
         for (int i = 0; i < all.length; i++) {
             Npc n = all[i];
-            if (n == null || n.aClass79_10505 == null) {
+            if (n == null || n.definition == null) {
                 continue;
             }
-            String nname = n.aClass79_10505.aString1372;
+            String nname = n.definition.name;
             if (name != null && (nname == null || !nname.equalsIgnoreCase(name))) {
                 continue;
             }
@@ -46,10 +46,10 @@ final class Rs2Npc {
         Npc[] all = getAll();
         for (int i = 0; i < all.length; i++) {
             Npc n = all[i];
-            if (n == null || n.aClass79_10505 == null) {
+            if (n == null || n.definition == null) {
                 continue;
             }
-            DisplayModeManagerContainer206 def = n.aClass79_10505;
+            DisplayModeManagerContainer206 def = n.definition;
             if (def.anIntArray1377 != null) {
                 def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (def == null) {
@@ -72,7 +72,7 @@ final class Rs2Npc {
         if (npc == null || action == null) {
             return false;
         }
-        DisplayModeManagerContainer206 def = npc.aClass79_10505;
+        DisplayModeManagerContainer206 def = npc.definition;
         if (def == null) {
             return false;
         }
@@ -86,7 +86,7 @@ final class Rs2Npc {
         if (opcode <= 0) {
             return false;
         }
-        String target = "<col=ffff00>" + def.aString1372;
+        String target = "<col=ffff00>" + def.name;
         NewMenuEntry entry = new NewMenuEntry(action, target, opcode, npc.anInt10290, 0, 0, -1);
         Microbot.doInvoke(entry);
         return true;

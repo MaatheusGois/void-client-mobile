@@ -51,7 +51,7 @@ final class NodeSub12
         anInt6734++;
         if (i_10_ >= 118) {
             NodeSub27 class348_sub27 = null;
-            for (NodeSub27 class348_sub27_12_ = ((NodeSub27) HashNodeSub20.aClass262_9711.method1995(4)); class348_sub27_12_ != null; class348_sub27_12_ = (NodeSub27) HashNodeSub20.aClass262_9711.method1990((byte) 50)) {
+            for (NodeSub27 class348_sub27_12_ = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4)); class348_sub27_12_ != null; class348_sub27_12_ = (NodeSub27) HashNodeSub20.aClass262_9711.next((byte) 50)) {
                 if ((class348_sub27_12_.anInt6899 == i) && i_11_ == class348_sub27_12_.anInt6905 && i_4_ == class348_sub27_12_.anInt6896 && (class348_sub27_12_.anInt6904 == i_7_)) {
                     class348_sub27 = class348_sub27_12_;
                     break;
@@ -64,7 +64,7 @@ final class NodeSub12
                 class348_sub27.anInt6896 = i_4_;
                 class348_sub27.anInt6905 = i_11_;
                 if (i_11_ >= 0 && i_4_ >= 0 && AbstractShaderSub4.anInt7319 > i_11_ && ParametricDefinition.anInt9109 > i_4_) Component357.method1387(-69, class348_sub27);
-                HashNodeSub20.aClass262_9711.method1999(class348_sub27, -20180);
+                HashNodeSub20.aClass262_9711.addTail(class348_sub27, -20180);
             }
             class348_sub27.anInt6893 = i_5_;
             class348_sub27.anInt6900 = i_8_;

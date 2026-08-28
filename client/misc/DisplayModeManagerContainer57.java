@@ -205,7 +205,7 @@ final class DisplayModeManagerContainer57
 
     final Shader method425(GraphicsToolkit var_ha, byte i) {
         anInt767++;
-        Shader var_aa = (Shader) ColoredText.aClass60_6096.method583(this.anInt830, 119);
+        Shader var_aa = (Shader) ColoredText.aClass60_6096.get(this.anInt830, 119);
         if (var_aa != null) return var_aa;
         Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
         if (class207 == null) return null;
@@ -233,7 +233,7 @@ final class DisplayModeManagerContainer57
         }
         if (i < 0) method433(null, false);
         var_aa = var_ha.method3661(i_10_, i_11_, this.anIntArray677, this.anIntArray772);
-        ColoredText.aClass60_6096.method582(var_aa, this.anInt830, (byte) -104);
+        ColoredText.aClass60_6096.putOne(var_aa, this.anInt830, (byte) -104);
         return var_aa;
     }
 
@@ -285,7 +285,7 @@ final class DisplayModeManagerContainer57
         anInt736++;
         if (aClass356_711 == null) return i;
         if (i_19_ >= -124) this.anInt700 = 46;
-        NodeSub35 class348_sub35 = (NodeSub35) aClass356_711.method3480(i_18_, -6008);
+        NodeSub35 class348_sub35 = (NodeSub35) aClass356_711.get(i_18_, -6008);
         if (class348_sub35 == null) return i;
         return class348_sub35.anInt6976;
     }
@@ -294,7 +294,7 @@ final class DisplayModeManagerContainer57
         anInt783++;
         if (i_20_ != -1) method437(-123, null, null, -35, null);
         if (aClass356_711 == null) return string;
-        NodeSub50 class348_sub50 = (NodeSub50) aClass356_711.method3480(i, -6008);
+        NodeSub50 class348_sub50 = (NodeSub50) aClass356_711.get(i, -6008);
         if (class348_sub50 == null) return string;
         return class348_sub50.aString7211;
     }
@@ -309,7 +309,7 @@ final class DisplayModeManagerContainer57
                 int i_25_ = i;
                 if (class17 != null) i |= class17.method263(i_24_, 106, i_21_, true);
                 long l = this.anInt753 + ((this.anInt770 << 16) + (var_ha.anInt4567 << 29));
-                DisplayModeManagerContainer370 class64 = (DisplayModeManagerContainer370) Component142.aClass60_4417.method583(l, -90);
+                DisplayModeManagerContainer370 class64 = (DisplayModeManagerContainer370) Component142.aClass60_4417.get(l, -90);
                 if (class64 == null || var_ha.method3667(class64.ua(), i) != 0) {
                     if (class64 != null) i = var_ha.method3679(i, class64.ua());
                     DisplayModeManagerContainer77 class124 = Component189.method2277(0, (DefinitionSub28.aClass45_9365), this.anInt753, -1);
@@ -319,7 +319,7 @@ final class DisplayModeManagerContainer57
                     }
                     if (class124.anInt1830 < 13) class124.method1092(2, 114);
                     class64 = var_ha.method3625(class124, i, DisplayModeManagerContainer288.anInt8628, 64, 768);
-                    Component142.aClass60_4417.method582(class64, l, (byte) -125);
+                    Component142.aClass60_4417.putOne(class64, l, (byte) -125);
                 }
                 if (class17 != null) class64 = class17.method269(-101, class64, i_24_, i_22_, i, i_21_);
                 class64.s(i_25_);
@@ -568,13 +568,13 @@ final class DisplayModeManagerContainer57
             for (int i_54_ = 0; i_53_ > i_54_; i_54_++) {
                 int i_55_ = class348_sub49.readMedium(-1);
                 int i_56_ = class348_sub49.readInt((byte) -126);
-                aClass356_711.method3483((byte) 120, i_55_, new NodeSub35(i_56_));
+                aClass356_711.put((byte) 120, i_55_, new NodeSub35(i_56_));
             }
             int i_57_ = class348_sub49.readUnsignedByte(255);
             for (int i_58_ = 0; i_58_ < i_57_; i_58_++) {
                 int i_59_ = class348_sub49.readMedium(-1);
-                String string = class348_sub49.method3371(-13487);
-                aClass356_711.method3483((byte) 119, i_59_, new NodeSub50(string));
+                String string = class348_sub49.readGjstr2(-13487);
+                aClass356_711.put((byte) 119, i_59_, new NodeSub50(string));
             }
         }
         this.anObjectArray815 = method432(class348_sub49, -1);
@@ -649,8 +649,8 @@ final class DisplayModeManagerContainer57
     final void method435(int i, int i_60_) {
         anInt802++;
         if (aClass356_711 != null) {
-            Node class348 = aClass356_711.method3480(i, -6008);
-            if (class348 != null) class348.method2715((byte) 63);
+            Node class348 = aClass356_711.get(i, -6008);
+            if (class348 != null) class348.unlink((byte) 63);
         }
         if (i_60_ != -3437) method425(null, (byte) 83);
     }
@@ -659,10 +659,10 @@ final class DisplayModeManagerContainer57
         anInt694++;
         if (aClass356_711 == null) {
             aClass356_711 = new LruCache(16);
-            aClass356_711.method3483((byte) 60, i_61_, new NodeSub35(i_62_));
+            aClass356_711.put((byte) 60, i_61_, new NodeSub35(i_62_));
         } else if (i < -38) {
-            NodeSub35 class348_sub35 = ((NodeSub35) aClass356_711.method3480(i_61_, -6008));
-            if (class348_sub35 == null) aClass356_711.method3483((byte) 67, i_61_, new NodeSub35(i_62_));
+            NodeSub35 class348_sub35 = ((NodeSub35) aClass356_711.get(i_61_, -6008));
+            if (class348_sub35 == null) aClass356_711.put((byte) 67, i_61_, new NodeSub35(i_62_));
             else class348_sub35.anInt6976 = i_62_;
         }
     }
@@ -705,10 +705,10 @@ final class DisplayModeManagerContainer57
         if (i != 0) this.anInt756 = -106;
         if (aClass356_711 == null) {
             aClass356_711 = new LruCache(16);
-            aClass356_711.method3483((byte) 86, i_66_, new NodeSub50(string));
+            aClass356_711.put((byte) 86, i_66_, new NodeSub50(string));
         } else {
-            NodeSub50 class348_sub50 = ((NodeSub50) aClass356_711.method3480(i_66_, -6008));
-            if (class348_sub50 == null) aClass356_711.method3483((byte) 73, i_66_, new NodeSub50(string));
+            NodeSub50 class348_sub50 = ((NodeSub50) aClass356_711.get(i_66_, -6008));
+            if (class348_sub50 == null) aClass356_711.put((byte) 73, i_66_, new NodeSub50(string));
             else class348_sub50.aString7211 = string;
         }
     }
@@ -746,7 +746,7 @@ final class DisplayModeManagerContainer57
         anInt819++;
         HashNodeSub13.aBoolean9616 = false;
         long l = (((long) this.anInt809 << 40) + (((this.aBoolean790 ? 1L : 0L) << 38) + (((long) this.anInt672 << 36) + ((this.aBoolean745 ? 1L : 0L) << 35))) + ((long) this.anInt756 + ((!this.aBoolean735 ? 0L : 1L) << 39)));
-        Component24 class105 = (Component24) StringCache.aClass60_4327.method583(l, -71);
+        Component24 class105 = (Component24) StringCache.aClass60_4327.get(l, -71);
         if (i > -27) method434(true);
         if (class105 != null) return class105;
         Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
@@ -762,7 +762,7 @@ final class DisplayModeManagerContainer57
         if (this.anInt672 >= 2) class207.method1515(16777215);
         if (this.anInt809 != 0) class207.method1511(~0xffffff | this.anInt809);
         class105 = var_ha.method3691(class207, true);
-        StringCache.aClass60_4327.method580(31902, class105, l, (class105.method971() * class105.method969() * 4));
+        StringCache.aClass60_4327.put(31902, class105, l, (class105.method971() * class105.method969() * 4));
         return class105;
     }
 
@@ -772,10 +772,10 @@ final class DisplayModeManagerContainer57
             anInt804++;
             if (this.anInt705 == -1) return null;
             long l = (((long) this.anInt693 << 16 & 65535L << 16) | (((long) this.anInt733 << 32 & 65535L << 32) | ((long) this.anInt674 << 48 & 65535L << 48)) | (long) this.anInt705 & 0xffffL);
-            DisplayModeManagerContainer50 class305 = ((DisplayModeManagerContainer50) DefinitionSub9.aClass60_9171.method583(l, 78));
+            DisplayModeManagerContainer50 class305 = ((DisplayModeManagerContainer50) DefinitionSub9.aClass60_9171.get(l, 78));
             if (class305 == null) {
                 class305 = class84.method823(this.anInt733, this.anInt693, this.anInt674, -43, class25, this.anInt705);
-                DefinitionSub9.aClass60_9171.method582(class305, l, (byte) -120);
+                DefinitionSub9.aClass60_9171.putOne(class305, l, (byte) -120);
             }
             return class305;
         } catch (RuntimeException runtimeexception) {

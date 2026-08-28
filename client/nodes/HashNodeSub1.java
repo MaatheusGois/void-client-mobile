@@ -28,7 +28,7 @@ final class HashNodeSub1
     final int method3166(int i, int i_0_, byte i_1_) {
         anInt9490++;
         if (aClass356_9494 == null) return i_0_;
-        NodeSub35 class348_sub35 = (NodeSub35) aClass356_9494.method3480(i, -6008);
+        NodeSub35 class348_sub35 = (NodeSub35) aClass356_9494.get(i, -6008);
         if (i_1_ < 91) return 72;
         if (class348_sub35 == null) return i_0_;
         return class348_sub35.anInt6976;
@@ -49,7 +49,7 @@ final class HashNodeSub1
                     Node class348;
                     if (bool) class348 = new NodeSub50(class348_sub49.readString((byte) -39));
                     else class348 = new NodeSub35(class348_sub49.readInt((byte) -126));
-                    aClass356_9494.method3483((byte) 29, i_6_, class348);
+                    aClass356_9494.put((byte) 29, i_6_, class348);
                 }
             }
         }
@@ -72,7 +72,7 @@ final class HashNodeSub1
     static final boolean method3169(int i, int i_8_) {
         if (i_8_ != 0) return true;
         anInt9496++;
-        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 99)) {
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 99)) {
             if (WaterShaderSub8.method3549(class348_sub42_sub12.opcode, (byte) -28) && (long) i == (class348_sub42_sub12.identifier)) return true;
         }
         return false;
@@ -82,7 +82,7 @@ final class HashNodeSub1
         anInt9493++;
         if (aClass356_9494 == null) return string;
         if (i != -250) method3165((byte) 0);
-        NodeSub50 class348_sub50 = (NodeSub50) aClass356_9494.method3480(i_9_, -6008);
+        NodeSub50 class348_sub50 = (NodeSub50) aClass356_9494.get(i_9_, -6008);
         if (class348_sub50 == null) return string;
         return class348_sub50.aString7211;
     }

@@ -122,7 +122,7 @@ final class Component168
         synchronized (aClass243_3946) {
             if (i != 25061) method2353(null, true);
             class318 = aClass243_3946.method1872(8);
-            class318.method2373(false);
+            class318.unlink(false);
             anInt3957--;
         }
         return class318;

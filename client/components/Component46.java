@@ -31,7 +31,7 @@ final class Component46
     final void method1587(int i, int i_0_) {
         if (i_0_ != 3758) aClass60_2848 = null;
         synchronized (aClass60_2848) {
-            aClass60_2848.method578(2, i);
+            aClass60_2848.processSoftEntries(2, i);
         }
         anInt2841++;
     }
@@ -40,7 +40,7 @@ final class Component46
         anInt2847++;
         Component146 class159;
         synchronized (aClass60_2848) {
-            class159 = (Component146) aClass60_2848.method583(i_1_, -126);
+            class159 = (Component146) aClass60_2848.get(i_1_, -126);
         }
         if (class159 != null) return class159;
         byte[] is;
@@ -51,7 +51,7 @@ final class Component46
         class159 = new Component146();
         if (is != null) class159.method1253(new Buffer(is), true);
         synchronized (aClass60_2848) {
-            aClass60_2848.method582(class159, i_1_, (byte) -124);
+            aClass60_2848.putOne(class159, i_1_, (byte) -124);
         }
         return class159;
     }
@@ -59,7 +59,7 @@ final class Component46
     final void method1589(byte i) {
         anInt2843++;
         synchronized (aClass60_2848) {
-            aClass60_2848.method590(0);
+            aClass60_2848.clear(0);
         }
         if (i < 126) method1588(-98, -35);
     }

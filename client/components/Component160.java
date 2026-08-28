@@ -20,7 +20,7 @@ final class Component160
 
     final void method3463(byte i) {
         anInt4360++;
-        aClass60_4361.method590(0);
+        aClass60_4361.clear(0);
         if (i != -110) aClass60_4361 = null;
     }
 
@@ -92,7 +92,7 @@ final class Component160
 
     final GlTexture method3467(int i, int i_4_) {
         anInt4357++;
-        Object object = aClass60_4361.method583(i, -127);
+        Object object = aClass60_4361.get(i, -127);
         if (object != null) return (GlTexture) object;
         if (!aD4359.method4(-7953, i)) return null;
         Component319 class12 = aD4359.method3(i, -6662);
@@ -109,7 +109,7 @@ final class Component160
         }
         class258_sub3.method1965(class12.aBoolean215, class12.aBoolean217, 10243);
         if (i_4_ != 256) method3466(22);
-        aClass60_4361.method582(class258_sub3, i, (byte) -114);
+        aClass60_4361.putOne(class258_sub3, i, (byte) -114);
         return class258_sub3;
     }
 
@@ -121,7 +121,7 @@ final class Component160
     final void method3469(int i) {
         if (i == 8218) {
             anInt4353++;
-            aClass60_4361.method578(2, 5);
+            aClass60_4361.processSoftEntries(2, 5);
         }
     }
 

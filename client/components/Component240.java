@@ -30,13 +30,13 @@ final class Component240
     static final void method598(int i) {
         anInt1111++;
         if (i != 9013) method597((byte) 86);
-        for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3484(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3482(0)) {
+        for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0)) {
             if (!class348_sub15.aBoolean6772) DisplayModeManagerContainer282.method690((byte) -94, (class348_sub15.anInt6773));
             else class348_sub15.aBoolean6772 = false;
         }
     }
 
-    static final synchronized long method599(int i) {
+    static final synchronized long currentTimeMillis(int i) {
         if (i > -52) return -121L;
         anInt1113++;
         long l = System.currentTimeMillis();

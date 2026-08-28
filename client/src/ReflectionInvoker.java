@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class297` (JODE-obfuscated).
- * Reflection-based method/constructor invoker (method2246 dispatches by opcode). Used to call into restricted JDK APIs (e.g. system Clipboard get/setContents) and load classes; enforces a classloader null-check SecurityException. Implements Runnable.
+ * Reflection-based method/constructor invoker (invokeByOpcode dispatches by opcode). Used to call into restricted JDK APIs (e.g. system Clipboard get/setContents) and load classes; enforces a classloader null-check SecurityException. Implements Runnable.
  */
 
 import java.awt.*;
@@ -55,12 +55,12 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2229(int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
         if (i_3_ != -11) aLong3781 = 34L;
-        return method2246(8, (i_1_ << 16) - -i, 6, i_0_ + (i_2_ << 16), null);
+        return invokeByOpcode(8, (i_1_ << 16) - -i, 6, i_0_ + (i_2_ << 16), null);
     }
 
     final Task method2230(Class[] var_classes, int i, Class var_class, String string) {
         if (i < 49) return null;
-        return method2246(8, 0, 8, 0, new Object[]{var_class, string, var_classes});
+        return invokeByOpcode(8, 0, 8, 0, new Object[]{var_class, string, var_classes});
     }
 
     static final RandomAccessFileReader method2231(String string, int i) {
@@ -70,13 +70,13 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2232(int i, int i_4_) {
         if (i <= 20) method2236(null, -123, -128);
-        return method2246(8, 0, 3, i_4_, null);
+        return invokeByOpcode(8, 0, 3, i_4_, null);
     }
 
     final Task method2233(byte i, String string, boolean bool) {
         if (i != -46) return null;
-        if (!bool) return method2246(8, 0, 13, 0, string);
-        return method2246(8, 0, 12, 0, string);
+        if (!bool) return invokeByOpcode(8, 0, 13, 0, string);
+        return invokeByOpcode(8, 0, 12, 0, string);
     }
 
     public final void run() {
@@ -101,7 +101,7 @@ final class ReflectionInvoker implements Runnable {
             try {
                 int i = class144.anInt1994;
                 if (i == 1) {
-                    if (aLong3781 > Component240.method599(-53)) throw new IOException();
+                    if (aLong3781 > Component240.currentTimeMillis(-53)) throw new IOException();
                     if (Loader.debug) {
                         System.out.println("Connect: " + class144.anObject1996 + " " + class144.anInt2000);
                     }
@@ -121,17 +121,17 @@ final class ReflectionInvoker implements Runnable {
                         }
                         Socket socket = new Socket();
                         socket.connect(new java.net.InetSocketAddress(addr, class144.anInt2000), 5000);
-                        class144.anObject1998 = socket;
+                        class144.result = socket;
                     }
                     if (Loader.debug) {
                         System.out.println("Connect OK: " + class144.anObject1996 + ":" + class144.anInt2000);
                     }
                 } else if (i == 22) {
-                    if (aLong3781 > Component240.method599(-92)) throw new IOException();
+                    if (aLong3781 > Component240.currentTimeMillis(-92)) throw new IOException();
                     try {
-                        class144.anObject1998 = Component128.method593(class144.anInt2000, (byte) -90, ((String) class144.anObject1996)).method2050(-112);
+                        class144.result = Component128.method593(class144.anInt2000, (byte) -90, ((String) class144.anObject1996)).connect(-112);
                     } catch (IOException_Sub1 ioexception_sub1) {
-                        class144.anObject1998 = ioexception_sub1.getMessage();
+                        class144.result = ioexception_sub1.getMessage();
                         throw ioexception_sub1;
                     }
                 } else if (i == 2) {
@@ -139,63 +139,63 @@ final class ReflectionInvoker implements Runnable {
                     thread.setDaemon(true);
                     thread.start();
                     thread.setPriority(class144.anInt2000);
-                    class144.anObject1998 = thread;
+                    class144.result = thread;
                 } else if (i == 4) {
-                    if (Component240.method599(-73) < aLong3781) throw new IOException();
-                    class144.anObject1998 = new DataInputStream(((URL) (class144.anObject1996)).openStream());
+                    if (Component240.currentTimeMillis(-73) < aLong3781) throw new IOException();
+                    class144.result = new DataInputStream(((URL) (class144.anObject1996)).openStream());
                 } else if (i == 8) {
                     Object[] objects = ((Object[]) class144.anObject1996);
                     if (this.aBoolean3777 && (((Class) objects[0]).getClassLoader() == null)) throw new SecurityException();
-                    class144.anObject1998 = (((Class) objects[0]).getDeclaredMethod((String) objects[1], (Class[]) objects[2]));
+                    class144.result = (((Class) objects[0]).getDeclaredMethod((String) objects[1], (Class[]) objects[2]));
                 } else if (i == 9) {
                     Object[] objects = ((Object[]) class144.anObject1996);
                     if (this.aBoolean3777 && (((Class) objects[0]).getClassLoader() == null)) throw new SecurityException();
-                    class144.anObject1998 = (((Class) objects[0]).getDeclaredField((String) objects[1]));
+                    class144.result = (((Class) objects[0]).getDeclaredField((String) objects[1]));
                 } else if (i == 18) {
                     Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-                    class144.anObject1998 = clipboard.getContents(null);
+                    class144.result = clipboard.getContents(null);
                 } else if (i == 19) {
                     Transferable transferable = ((Transferable) (class144.anObject1996));
                     Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                     clipboard.setContents(transferable, null);
                 } else if (this.aBoolean3777) {
                     if (i == 3) {
-                        if (aLong3781 > Component240.method599(-123)) throw new IOException();
+                        if (aLong3781 > Component240.currentTimeMillis(-123)) throw new IOException();
                         String string = (((0xff & (class144.anInt2000 >> 24))) + "." + (0xff & (class144.anInt2000 >> 16)) + "." + ((class144.anInt2000 >> 8) & 0xff) + "." + (0xff & class144.anInt2000));
-                        class144.anObject1998 = InetAddress.getByName(string).getHostName();
+                        class144.result = InetAddress.getByName(string).getHostName();
                     } else if (i == 21) {
-                        if (Component240.method599(-82) < aLong3781) throw new IOException();
-                        class144.anObject1998 = InetAddress.getByName((String) (class144.anObject1996)).getAddress();
+                        if (Component240.currentTimeMillis(-82) < aLong3781) throw new IOException();
+                        class144.result = InetAddress.getByName((String) (class144.anObject1996)).getAddress();
                     } else if (i != 5) {
                         if (i == 6) {
                             Frame frame = (new Frame("Jagex Full Screen"));
-                            class144.anObject1998 = frame;
+                            class144.result = frame;
                             frame.setResizable(false);
                             if (this.aBoolean3794) aClass134_3802.method1146((class144.anInt2000 & 0xffff), (class144.anInt1999 >> 16), (class144.anInt2000 >>> 16), -43, 0xffff & (class144.anInt1999), frame);
                             else
-                                ((DisplayModeManager) anObject3793).method209(frame, (new Integer((class144.anInt2000) >>> 16)), (new Integer(0xffff & (class144.anInt2000))), (new Integer((class144.anInt1999) >> 16)), (new Integer((class144.anInt1999) & 0xffff)));
+                                ((DisplayModeManager) anObject3793).setDisplayMode(frame, (new Integer((class144.anInt2000) >>> 16)), (new Integer(0xffff & (class144.anInt2000))), (new Integer((class144.anInt1999) >> 16)), (new Integer((class144.anInt1999) & 0xffff)));
                         } else if (i == 7) {
                             if (this.aBoolean3794) aClass134_3802.method1147(((Frame) (class144.anObject1996)), 8);
-                            else ((DisplayModeManager) anObject3793).method211();
+                            else ((DisplayModeManager) anObject3793).restoreDisplayMode();
                         } else if (i == 12) {
                             RandomAccessFileReader class234 = (method2241(((String) (class144.anObject1996)), 12606, aString3789, anInt3792));
-                            class144.anObject1998 = class234;
+                            class144.result = class234;
                         } else if (i == 13) {
                             RandomAccessFileReader class234 = (method2241(((String) (class144.anObject1996)), 12606, "", anInt3792));
-                            class144.anObject1998 = class234;
+                            class144.result = class234;
                         } else if ((this.aBoolean3777) && i == 14) {
                             int i_5_ = (class144.anInt2000);
                             int i_6_ = (class144.anInt1999);
                             if (this.aBoolean3794) aCallback_Sub1_3776.method3621(i_5_, (byte) 115, i_6_);
-                            else ((CursorManager) anObject3791).method1280((new Integer(i_5_)), (new Integer(i_6_)));
+                            else ((CursorManager) anObject3791).setCursorPos((new Integer(i_5_)), (new Integer(i_6_)));
                         } else if ((this.aBoolean3777) && (i == 15)) {
                             boolean bool = ((class144.anInt2000) != 0);
                             Component component = ((Component) (class144.anObject1996));
                             if (this.aBoolean3794) aCallback_Sub1_3776.method3622(bool, 13259, component);
-                            else ((CursorManager) anObject3791).method1281(component, (new Boolean(bool)));
+                            else ((CursorManager) anObject3791).setBlankCursor(component, (new Boolean(bool)));
                         } else if (!(this.aBoolean3794) && (i == 17)) {
                             Object[] objects = ((Object[]) (class144.anObject1996));
-                            ((CursorManager) anObject3791).method1282((Component) objects[0], (int[]) objects[1], (new Integer(class144.anInt2000)), (new Integer(class144.anInt1999)), (Point) objects[2]);
+                            ((CursorManager) anObject3791).setCustomCursor((Component) objects[0], (int[]) objects[1], (new Integer(class144.anInt2000)), (new Integer(class144.anInt1999)), (Point) objects[2]);
                         } else if (i == 16) {
                             try {
                                 if (!aString3803.startsWith("win")) throw new Exception();
@@ -206,14 +206,14 @@ final class ReflectionInvoker implements Runnable {
                                     if ((string_7_.indexOf(string.charAt(i_8_))) == -1) throw new Exception();
                                 }
                                 Runtime.getRuntime().exec("cmd /c start \"j\" \"" + string + "\"");
-                                class144.anObject1998 = null;
+                                class144.result = null;
                             } catch (Exception exception) {
-                                class144.anObject1998 = exception;
+                                class144.result = exception;
                                 throw exception;
                             }
                         } else throw new Exception("");
-                    } else if (!this.aBoolean3794) class144.anObject1998 = ((DisplayModeManager) anObject3793).method210();
-                    else class144.anObject1998 = aClass134_3802.method1145(true);
+                    } else if (!this.aBoolean3794) class144.result = ((DisplayModeManager) anObject3793).getDisplayModesPacked();
+                    else class144.result = aClass134_3802.method1145(true);
                 } else throw new Exception("");
                 class144.anInt1997 = 1;
             } catch (Throwable throwable) {
@@ -245,14 +245,14 @@ final class ReflectionInvoker implements Runnable {
         }
         if (this.aClass234_3785 != null) {
             try {
-                this.aClass234_3785.method1657(false);
+                this.aClass234_3785.close(false);
             } catch (IOException ioexception) {
                 /* empty */
             }
         }
         if (this.aClass234_3779 != null) {
             try {
-                this.aClass234_3779.method1657(false);
+                this.aClass234_3779.close(false);
             } catch (IOException ioexception) {
                 /* empty */
             }
@@ -261,7 +261,7 @@ final class ReflectionInvoker implements Runnable {
             for (int i_9_ = 0; i_9_ < this.aClass234Array3795.length; i_9_++) {
                 if (this.aClass234Array3795[i_9_] != null) {
                     try {
-                        this.aClass234Array3795[i_9_].method1657(false);
+                        this.aClass234Array3795[i_9_].close(false);
                     } catch (IOException ioexception) {
                         /* empty */
                     }
@@ -271,7 +271,7 @@ final class ReflectionInvoker implements Runnable {
         do {
             if (this.aClass234_3788 != null) {
                 try {
-                    this.aClass234_3788.method1657(false);
+                    this.aClass234_3788.close(false);
                 } catch (IOException ioexception) {
                     break;
                 }
@@ -282,32 +282,32 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2235(boolean bool, int i, String string, int i_10_) {
         if (i_10_ != 28225) return null;
-        return method2246(i_10_ ^ 0x6e49, 0, bool ? 22 : 1, i, string);
+        return invokeByOpcode(i_10_ ^ 0x6e49, 0, bool ? 22 : 1, i, string);
     }
 
     final Task method2236(Runnable runnable, int i, int i_11_) {
         if (i != -10240) method2242(null, (byte) 57, null);
-        return method2246(8, 0, 2, i_11_, runnable);
+        return invokeByOpcode(8, 0, 2, i_11_, runnable);
     }
 
     final Task method2237(URL url, int i) {
         if (i != 8362) return null;
-        return method2246(8, 0, 4, 0, url);
+        return invokeByOpcode(8, 0, 4, 0, url);
     }
 
     final Task method2238(int i, int[] is, int i_12_, Point point, Component component, int i_13_) {
         if (i_12_ != 17) method2240(-75);
-        return method2246(i_12_ + -9, i, 17, i_13_, new Object[]{component, is, point});
+        return invokeByOpcode(i_12_ + -9, i, 17, i_13_, new Object[]{component, is, point});
     }
 
     final void method2239(int i) {
         if (i > -90) this.aClass234_3779 = null;
-        aLong3781 = 5000L + Component240.method599(-107);
+        aLong3781 = 5000L + Component240.currentTimeMillis(-107);
     }
 
     final Task method2240(int i) {
         if (i != 972476528) return null;
-        return method2246(8, 0, 5, 0, null);
+        return invokeByOpcode(8, 0, 5, 0, null);
     }
 
     private static final RandomAccessFileReader method2241(String string, int i, String string_14_, int i_15_) {
@@ -345,7 +345,7 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2243(int i, String string, Class var_class) {
         if (i != 0) method2239(-13);
-        return method2246(8, 0, 9, 0, new Object[]{var_class, string});
+        return invokeByOpcode(8, 0, 9, 0, new Object[]{var_class, string});
     }
 
     final Object method2244(int i) {
@@ -355,10 +355,10 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2245(String string, int i) {
         if (i != 16) return null;
-        return method2246(i + -8, 0, 16, 0, string);
+        return invokeByOpcode(i + -8, 0, 16, 0, string);
     }
 
-    private final Task method2246(int i, int i_19_, int i_20_, int i_21_, Object object) {
+    private final Task invokeByOpcode(int i, int i_19_, int i_20_, int i_21_, Object object) {
         Task class144 = new Task();
         class144.anObject1996 = object;
         class144.anInt1999 = i_19_;
@@ -387,7 +387,7 @@ final class ReflectionInvoker implements Runnable {
 
     final Task method2248(byte i, Frame frame) {
         if (i != 89) return null;
-        return method2246(i ^ 0x51, 0, 7, 0, frame);
+        return invokeByOpcode(i ^ 0x51, 0, 7, 0, frame);
     }
 
     ReflectionInvoker(int i, String string, int i_22_, boolean bool) throws Exception {

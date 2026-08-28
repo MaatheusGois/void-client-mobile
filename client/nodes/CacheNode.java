@@ -4,11 +4,11 @@
 
 /**
  * RENAMED from `Class348_Sub42_Sub8` (JODE-obfuscated).
- * Abstract HashNode subclass used as a cacheable, indexed entry. Declares method3193(Object getter) / method3195(contains); subclasses CacheNode_Sub1/_Sub2.
+ * Abstract HashNode subclass used as a cacheable, indexed entry. Declares getValue(Object getter) / isSoft(contains); subclasses CacheNode_Sub1/_Sub2.
  */
 
 abstract class CacheNode extends HashNode {
-    int anInt9545;
+    int weight;
     static int anInt9546;
     static int anInt9547;
     static int anInt9548;
@@ -20,7 +20,7 @@ abstract class CacheNode extends HashNode {
     static String aString9554;
     static short aShort9555 = 1;
 
-    abstract Object method3193(int i);
+    abstract Object getValue(int i);
 
     static final boolean method3194(int i, int i_0_, byte i_1_) {
         anInt9551++;
@@ -28,7 +28,7 @@ abstract class CacheNode extends HashNode {
         return false;
     }
 
-    abstract boolean method3195(int i);
+    abstract boolean isSoft(int i);
 
     static final boolean method3196(int i, int i_2_) {
         if (i_2_ >= -39) return false;
@@ -37,7 +37,7 @@ abstract class CacheNode extends HashNode {
     }
 
     CacheNode(int i) {
-        this.anInt9545 = i;
+        this.weight = i;
     }
 
     static final boolean method3197(int i, byte i_3_) {
@@ -51,9 +51,9 @@ abstract class CacheNode extends HashNode {
         if (i != -45) aShort9555 = (short) -74;
         if (bool) {
             if (r.anInt9721 != -1) DisplayModeManagerContainer194.method235(r.anInt9721, (byte) -113);
-            for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0); class348_sub41 != null; class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3482(0))) {
-                if (!class348_sub41.method2712((byte) 4)) {
-                    class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3484(i ^ ~0x2c));
+            for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = ((NodeSub41) Component15.aClass356_4915.next(0))) {
+                if (!class348_sub41.isLinked((byte) 4)) {
+                    class348_sub41 = ((NodeSub41) Component15.aClass356_4915.first(i ^ ~0x2c));
                     if (class348_sub41 == null) break;
                 }
                 Component162.method1118(true, false, class348_sub41, 2533);
@@ -67,7 +67,7 @@ abstract class CacheNode extends HashNode {
             ClientScriptExecutor.method703(r.anInt9721);
         }
         DisplayModeManagerContainer369.aBoolean2895 = false;
-        DisplayModeManagerContainer282.aString5600 = DisplayModeManagerContainer51.aString2496 = "";
+        DisplayModeManagerContainer282.username = DisplayModeManagerContainer51.password = "";
         Component195.method1448(-56);
         Component149.anInt4458 = -1;
         Component373.method338(i + 45, HashNodeSub16Sub1.anInt10447);

@@ -184,10 +184,10 @@ final class ClientScriptExecutor {
                     anInt1159++;
                     ParticleSystem class348_sub47 = ParticleShader.method2148((DefinitionSub22.aClass351_9304), (DisplayModeManagerContainer64.aClass77_9029), -116);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_16_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                    int i_16_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                     AbstractShaderSub4.method3544((class348_sub47.aClass348_Sub49_Sub2_7116), -70, string_15_);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.method3339(109, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) - i_16_);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(109, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_16_);
                     HashNodeSub14.method3243(2, class348_sub47);
                     return;
                 }
@@ -219,7 +219,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5015) {
                 String string;
-                if (Component72.localPlayer != null && (Component72.localPlayer.aString10537) != null) string = Component72.localPlayer.method2456(true, 255);
+                if (Component72.localPlayer != null && (Component72.localPlayer.displayName) != null) string = Component72.localPlayer.method2456(true, 255);
                 else string = "";
                 aStringArray1152[anInt1170++] = string;
                 return;
@@ -250,7 +250,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5020) {
                 String string;
-                if (Component72.localPlayer != null && (Component72.localPlayer.aString10537) != null) string = Component72.localPlayer.method2450(false, -78);
+                if (Component72.localPlayer != null && (Component72.localPlayer.displayName) != null) string = Component72.localPlayer.getName(false, -78);
                 else string = "";
                 aStringArray1152[anInt1170++] = string;
                 return;
@@ -353,11 +353,11 @@ final class ClientScriptExecutor {
                 anInt1165++;
                 ParticleSystem class348_sub47 = ParticleShader.method2148(CacheStore.aClass351_643, (DisplayModeManagerContainer64.aClass77_9029), -93);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_41_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                int i_41_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
                 aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) 12, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3339(115, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) - i_41_);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(115, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_41_);
                 HashNodeSub14.method3243(127, class348_sub47);
                 return;
             }
@@ -366,11 +366,11 @@ final class ClientScriptExecutor {
                 anInt1166++;
                 ParticleSystem class348_sub47 = ParticleShader.method2148(Component177.aClass351_2109, (DisplayModeManagerContainer64.aClass77_9029), -89);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_42_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                int i_42_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
                 aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -125, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3339(102, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) - i_42_);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(102, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_42_);
                 HashNodeSub14.method3243(127, class348_sub47);
                 return;
             }
@@ -378,11 +378,11 @@ final class ClientScriptExecutor {
                 anInt1165++;
                 ParticleSystem class348_sub47 = ParticleShader.method2148(CacheStore.aClass351_643, (DisplayModeManagerContainer64.aClass77_9029), -104);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_43_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+                int i_43_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 1);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
                 aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -126, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.method3339(92, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) - i_43_);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(92, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_43_);
                 HashNodeSub14.method3243(-111, class348_sub47);
                 return;
             }
@@ -480,7 +480,7 @@ final class ClientScriptExecutor {
             }
         } else if (i < 5200) {
             if (i == 5100) {
-                if (Component280.aClass346_2449.method2696(86, -121)) anIntArray1149[anInt1173++] = 1;
+                if (Component280.aClass346_2449.isKeyDown(86, -121)) anIntArray1149[anInt1173++] = 1;
                 else {
                     anIntArray1149[anInt1173++] = 0;
                     return;
@@ -488,7 +488,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5101) {
-                if (Component280.aClass346_2449.method2696(82, -126)) anIntArray1149[anInt1173++] = 1;
+                if (Component280.aClass346_2449.isKeyDown(82, -126)) anIntArray1149[anInt1173++] = 1;
                 else {
                     anIntArray1149[anInt1173++] = 0;
                     return;
@@ -496,7 +496,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5102) {
-                if (Component280.aClass346_2449.method2696(81, -128)) anIntArray1149[anInt1173++] = 1;
+                if (Component280.aClass346_2449.isKeyDown(81, -128)) anIntArray1149[anInt1173++] = 1;
                 else {
                     anIntArray1149[anInt1173++] = 0;
                     return;
@@ -612,7 +612,7 @@ final class ClientScriptExecutor {
                 int i_72_ = anIntArray1149[anInt1173 + 1];
                 HashTable class107 = DisplayModeManagerContainer229.method767(i_71_ >> 14 & 0x3fff, i_71_ & 0x3fff);
                 boolean bool_73_ = false;
-                for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) class107.method1011(-48); class348_sub42_sub14 != null; class348_sub42_sub14 = ((HashNodeSub14) class107.method1003((byte) 113))) {
+                for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) class107.first(-48); class348_sub42_sub14 != null; class348_sub42_sub14 = ((HashNodeSub14) class107.next((byte) 113))) {
                     if (class348_sub42_sub14.anInt9628 == i_72_) {
                         bool_73_ = true;
                         break;
@@ -736,11 +736,11 @@ final class ClientScriptExecutor {
                 int i_86_ = anIntArray1149[anInt1173];
                 boolean bool_87_ = anIntArray1149[anInt1173 + 1] == 1;
                 if (Component140.aClass356_10442 != null) {
-                    Node class348 = Component140.aClass356_10442.method3480(i_86_, -6008);
-                    if (class348 != null && !bool_87_) class348.method2715((byte) 48);
+                    Node class348 = Component140.aClass356_10442.get(i_86_, -6008);
+                    if (class348 != null && !bool_87_) class348.unlink((byte) 48);
                     else if (class348 == null && bool_87_) {
                         class348 = new Node();
-                        Component140.aClass356_10442.method3483((byte) 29, i_86_, class348);
+                        Component140.aClass356_10442.put((byte) 29, i_86_, class348);
                     }
                 }
                 return;
@@ -751,7 +751,7 @@ final class ClientScriptExecutor {
                     anIntArray1149[anInt1173++] = 0;
                     return;
                 } else {
-                    Node class348 = Component140.aClass356_10442.method3480(i_88_, -6008);
+                    Node class348 = Component140.aClass356_10442.get(i_88_, -6008);
                     anIntArray1149[anInt1173++] = class348 != null ? 1 : 0;
                 }
                 return;
@@ -761,11 +761,11 @@ final class ClientScriptExecutor {
                 int i_89_ = anIntArray1149[anInt1173];
                 boolean bool_90_ = anIntArray1149[anInt1173 + 1] == 1;
                 if (HeapDumpHelper.aClass356_4934 != null) {
-                    Node class348 = HeapDumpHelper.aClass356_4934.method3480(i_89_, -6008);
-                    if (class348 != null && !bool_90_) class348.method2715((byte) 83);
+                    Node class348 = HeapDumpHelper.aClass356_4934.get(i_89_, -6008);
+                    if (class348 != null && !bool_90_) class348.unlink((byte) 83);
                     else if (class348 == null && bool_90_) {
                         class348 = new Node();
-                        HeapDumpHelper.aClass356_4934.method3483((byte) 112, i_89_, class348);
+                        HeapDumpHelper.aClass356_4934.put((byte) 112, i_89_, class348);
                     }
                 }
                 return;
@@ -776,7 +776,7 @@ final class ClientScriptExecutor {
                     anIntArray1149[anInt1173++] = 0;
                     return;
                 } else {
-                    Node class348 = HeapDumpHelper.aClass356_4934.method3480(i_91_, -6008);
+                    Node class348 = HeapDumpHelper.aClass356_4934.get(i_91_, -6008);
                     anIntArray1149[anInt1173++] = class348 != null ? 1 : 0;
                 }
                 return;
@@ -935,7 +935,7 @@ final class ClientScriptExecutor {
             if (i == 5419) {
                 String string = "";
                 if (PauseHandler.aClass144_9536 != null) {
-                    if (PauseHandler.aClass144_9536.anObject1998 != null) string = (String) (PauseHandler.aClass144_9536.anObject1998);
+                    if (PauseHandler.aClass144_9536.result != null) string = (String) (PauseHandler.aClass144_9536.result);
                     else string = Component366.method1669(-19918, (PauseHandler.aClass144_9536.anInt2000));
                 }
                 aStringArray1152[anInt1170++] = string;
@@ -1020,12 +1020,12 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5429) {
-                CommandHandler.method812(aStringArray1152[--anInt1170], false, false, (byte) -79);
+                CommandHandler.handleCommand(aStringArray1152[--anInt1170], false, false, (byte) -79);
                 return;
             }
             if (i == 5430) {
                 try {
-                    AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "accountcreated");
+                    AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "accountcreated");
                 } catch (Throwable throwable) {
                     /* empty */
                 }
@@ -1033,7 +1033,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5431) {
                 try {
-                    AppletInvoker.method1617((byte) 125, ToolkitFactory.anApplet1530, "accountcreatestarted");
+                    AppletInvoker.callAppletNoArgs((byte) 125, ToolkitFactory.anApplet1530, "accountcreatestarted");
                 } catch (Throwable throwable) {
                     /* empty */
                 }
@@ -1191,10 +1191,10 @@ final class ClientScriptExecutor {
                 String string_142_ = aStringArray1152[anInt1170 + 1];
                 int i_143_ = anIntArray1149[--anInt1173];
                 if (string.length() <= 320 && Component49.clientState == 3 && (Component241.anInt2955 == 0 && AbstractShaderSub2.anInt7297 == 0)) {
-                    DisplayModeManagerContainer282.aString5600 = string;
-                    DisplayModeManagerContainer51.aString2496 = string_142_;
+                    DisplayModeManagerContainer282.username = string;
+                    DisplayModeManagerContainer51.password = string_142_;
                     RuntimeException_Sub1.anInt4596 = i_143_;
-                    Buffer.method3379(2, 6);
+                    Buffer.setClientState(2, 6);
                     return;
                 }
                 return;
@@ -1251,11 +1251,11 @@ final class ClientScriptExecutor {
                 int i_144_ = anIntArray1149[--anInt1173];
                 if (Component49.clientState == 7 && (Component241.anInt2955 == 0 && AbstractShaderSub2.anInt7297 == 0)) {
                     if (DefinitionSub8.aClass238_9165 != null) {
-                        DefinitionSub8.aClass238_9165.method1700((byte) 36);
+                        DefinitionSub8.aClass238_9165.close((byte) 36);
                         DefinitionSub8.aClass238_9165 = null;
                     }
                     RuntimeException_Sub1.anInt4596 = i_144_;
-                    Buffer.method3379(2, 9);
+                    Buffer.setClientState(2, 9);
                     return;
                 }
                 return;
@@ -1270,12 +1270,12 @@ final class ClientScriptExecutor {
                 String string_145_ = aStringArray1152[anInt1170 + 1];
                 if (string.length() <= 320 && Component49.clientState == 3 && (Component241.anInt2955 == 0 && AbstractShaderSub2.anInt7297 == 0)) {
                     if (DefinitionSub8.aClass238_9165 != null) {
-                        DefinitionSub8.aClass238_9165.method1700((byte) 36);
+                        DefinitionSub8.aClass238_9165.close((byte) 36);
                         DefinitionSub8.aClass238_9165 = null;
                     }
-                    DisplayModeManagerContainer282.aString5600 = string;
-                    DisplayModeManagerContainer51.aString2496 = string_145_;
-                    Buffer.method3379(2, 5);
+                    DisplayModeManagerContainer282.username = string;
+                    DisplayModeManagerContainer51.password = string_145_;
+                    Buffer.setClientState(2, 5);
                     return;
                 }
                 return;
@@ -1788,11 +1788,11 @@ final class ClientScriptExecutor {
             }
         } else if (i < 6400) {
             if (i == 6300) {
-                anIntArray1149[anInt1173++] = (int) (Component240.method599(-76) / 60000L);
+                anIntArray1149[anInt1173++] = (int) (Component240.currentTimeMillis(-76) / 60000L);
                 return;
             }
             if (i == 6301) {
-                anIntArray1149[anInt1173++] = (int) (Component240.method599(-77) / 86400000L) - 11745;
+                anIntArray1149[anInt1173++] = (int) (Component240.currentTimeMillis(-77) / 86400000L) - 11745;
                 return;
             }
             if (i == 6302) {
@@ -1810,7 +1810,7 @@ final class ClientScriptExecutor {
             }
             if (i == 6303) {
                 aCalendar1160.clear();
-                aCalendar1160.setTime(new Date(Component240.method599(-59)));
+                aCalendar1160.setTime(new Date(Component240.currentTimeMillis(-59)));
                 anIntArray1149[anInt1173++] = aCalendar1160.get(1);
                 return;
             }
@@ -1840,7 +1840,7 @@ final class ClientScriptExecutor {
                 else {
                     if (Component387.aBoolean1899) anIntArray1149[anInt1173++] = 0;
                     else {
-                        if (Component49.aLong4683 > Component240.method599(-126) - 1000L) anIntArray1149[anInt1173++] = 1;
+                        if (Component49.aLong4683 > Component240.currentTimeMillis(-126) - 1000L) anIntArray1149[anInt1173++] = 1;
                         else {
                             Component387.aBoolean1899 = true;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((DisplayModeManagerContainer64.aClass351_9034), (DisplayModeManagerContainer64.aClass77_9029), -115);
@@ -1966,7 +1966,7 @@ final class ClientScriptExecutor {
         } else if (i >= 6700) {
             if (i < 6800 && Component53.aClass231_196 == Component118.aClass231_4953) {
                 if (i == 6700) {
-                    int i_174_ = Component15.aClass356_4915.method3474(1);
+                    int i_174_ = Component15.aClass356_4915.size(1);
                     if (r.anInt9721 != -1) i_174_++;
                     anIntArray1149[anInt1173++] = i_174_;
                     return;
@@ -1980,8 +1980,8 @@ final class ClientScriptExecutor {
                         }
                         i_175_--;
                     }
-                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3484(0));
-                    while (i_175_-- > 0) class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3482(0));
+                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.first(0));
+                    while (i_175_-- > 0) class348_sub41 = ((NodeSub41) Component15.aClass356_4915.next(0));
                     anIntArray1149[anInt1173++] = class348_sub41.anInt7050;
                     return;
                 }
@@ -2192,7 +2192,7 @@ final class ClientScriptExecutor {
                 if (i == 6905) {
                     String string = "";
                     if (PauseHandler.aClass144_9536 != null) {
-                        if (PauseHandler.aClass144_9536.anObject1998 != null) string = (String) (PauseHandler.aClass144_9536.anObject1998);
+                        if (PauseHandler.aClass144_9536.result != null) string = (String) (PauseHandler.aClass144_9536.result);
                         else string = Component366.method1669(-19918, (PauseHandler.aClass144_9536.anInt2000));
                     }
                     aStringArray1152[anInt1170++] = string;
@@ -2330,7 +2330,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 7205) {
-                    anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1806(108) && NodeSub8.aHa6654.method3699()) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1806(108) && NodeSub8.toolkit.method3699()) ? 1 : 0;
                     return;
                 }
                 if (i == 7206) {
@@ -2342,7 +2342,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 7208) {
-                    anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1774(120) && NodeSub8.aHa6654.method3627()) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1774(120) && NodeSub8.toolkit.method3627()) ? 1 : 0;
                     return;
                 }
                 if (i == 7209) {
@@ -2392,7 +2392,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 7305) {
                     int i_230_ = anIntArray1149[--anInt1173];
-                    if (NodeSub8.aHa6654.method3699()) {
+                    if (NodeSub8.toolkit.method3699()) {
                         anIntArray1149[anInt1173++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1714(3, i_230_);
                         return;
                     } else anIntArray1149[anInt1173++] = 3;
@@ -2410,7 +2410,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 7308) {
                     int i_233_ = anIntArray1149[--anInt1173];
-                    if (NodeSub8.aHa6654.method3627()) {
+                    if (NodeSub8.toolkit.method3627()) {
                         anIntArray1149[anInt1173++] = Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1714(3, i_233_);
                         return;
                     } else anIntArray1149[anInt1173++] = 3;
@@ -2576,11 +2576,11 @@ final class ClientScriptExecutor {
             anInt1158++;
             ParticleSystem class348_sub47 = ParticleShader.method2148(Component275.aClass351_2686, DisplayModeManagerContainer64.aClass77_9029, -88);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-            int i_243_ = (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197);
+            int i_243_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_241_);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_242_);
             AbstractShaderSub4.method3544((class348_sub47.aClass348_Sub49_Sub2_7116), -101, string);
-            class348_sub47.aClass348_Sub49_Sub2_7116.method3339(119, (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197) - i_243_);
+            class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(119, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_243_);
             HashNodeSub14.method3243(124, class348_sub47);
         }
     }
@@ -2686,16 +2686,16 @@ final class ClientScriptExecutor {
                 anInt1173 -= 2;
                 int i_258_ = anIntArray1149[anInt1173];
                 int i_259_ = anIntArray1149[anInt1173 + 1];
-                if ((Component72.localPlayer.aClass154_10536) != null) {
+                if ((Component72.localPlayer.appearance) != null) {
                     for (int i_260_ = 0; i_260_ < Component258.anIntArray1973.length; i_260_++) {
                         if (Component258.anIntArray1973[i_260_] == i_258_) {
-                            Component72.localPlayer.aClass154_10536.method1233(DefinitionSub25.aClass150_9342, i_259_, -1, i_260_);
+                            Component72.localPlayer.appearance.method1233(DefinitionSub25.aClass150_9342, i_259_, -1, i_260_);
                             return;
                         }
                     }
                     for (int i_261_ = 0; i_261_ < GnpPositionLogger.anIntArray1521.length; i_261_++) {
                         if (GnpPositionLogger.anIntArray1521[i_261_] == i_258_) {
-                            Component72.localPlayer.aClass154_10536.method1233(DefinitionSub25.aClass150_9342, i_259_, -1, i_261_);
+                            Component72.localPlayer.appearance.method1233(DefinitionSub25.aClass150_9342, i_259_, -1, i_261_);
                             break;
                         }
                     }
@@ -2707,16 +2707,16 @@ final class ClientScriptExecutor {
                 anInt1173 -= 2;
                 int i_262_ = anIntArray1149[anInt1173];
                 int i_263_ = anIntArray1149[anInt1173 + 1];
-                if ((Component72.localPlayer.aClass154_10536) != null) {
-                    Component72.localPlayer.aClass154_10536.method1231(i_262_, 0, i_263_);
+                if ((Component72.localPlayer.appearance) != null) {
+                    Component72.localPlayer.appearance.method1231(i_262_, 0, i_263_);
                     return;
                 }
                 return;
             }
             if (i == 410) {
                 boolean bool_264_ = anIntArray1149[--anInt1173] != 0;
-                if ((Component72.localPlayer.aClass154_10536) != null) {
-                    Component72.localPlayer.aClass154_10536.method1229((byte) -17, bool_264_);
+                if ((Component72.localPlayer.appearance) != null) {
+                    Component72.localPlayer.appearance.method1229((byte) -17, bool_264_);
                     return;
                 }
                 return;
@@ -2725,8 +2725,8 @@ final class ClientScriptExecutor {
                 anInt1173 -= 2;
                 int i_265_ = anIntArray1149[anInt1173];
                 int i_266_ = anIntArray1149[anInt1173 + 1];
-                if ((Component72.localPlayer.aClass154_10536) != null) {
-                    Component72.localPlayer.aClass154_10536.method1227((byte) 42, i_265_, i_266_, Exception_Sub1.aClass255_112);
+                if ((Component72.localPlayer.appearance) != null) {
+                    Component72.localPlayer.appearance.method1227((byte) 42, i_265_, i_266_, Exception_Sub1.aClass255_112);
                     return;
                 }
                 return;
@@ -3453,7 +3453,7 @@ final class ClientScriptExecutor {
                         class348_sub36.aClass46_6989 = class46;
                         class348_sub36.anObjectArray6987 = class46.anObjectArray727;
                         class348_sub36.anInt6988 = anInt1177 + 1;
-                        NodeSub1Sub2.aClass262_8810.method1999(class348_sub36, -20180);
+                        NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                         return;
                     }
                     return;
@@ -3567,7 +3567,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 2702) {
                     int i_298_ = anIntArray1149[--anInt1173];
-                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_298_, -6008));
+                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_298_, -6008));
                     if (class348_sub41 == null) {
                         anIntArray1149[anInt1173++] = 0;
                         return;
@@ -3594,7 +3594,7 @@ final class ClientScriptExecutor {
                     anInt1173 -= 2;
                     int i_301_ = anIntArray1149[anInt1173];
                     int i_302_ = anIntArray1149[anInt1173 + 1];
-                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_301_, -6008));
+                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_301_, -6008));
                     if (class348_sub41 != null && (class348_sub41.anInt7050 == i_302_)) anIntArray1149[anInt1173++] = 1;
                     else {
                         anIntArray1149[anInt1173++] = 0;
@@ -3704,7 +3704,7 @@ final class ClientScriptExecutor {
                     anInt1173 -= 2;
                     int i_312_ = anIntArray1149[anInt1173];
                     int i_313_ = anIntArray1149[anInt1173 + 1];
-                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_312_, -6008));
+                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_312_, -6008));
                     if (class348_sub41 != null) Component162.method1118((class348_sub41.anInt7050 != i_313_), true, class348_sub41, 2533);
                     Component103.method2661(i_313_, i_312_, 3, true, 2);
                     return;
@@ -3712,7 +3712,7 @@ final class ClientScriptExecutor {
                 if (i == 3112) {
                     anInt1173--;
                     int i_314_ = anIntArray1149[anInt1173];
-                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3480(i_314_, -6008));
+                    NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_314_, -6008));
                     if (class348_sub41 != null && class348_sub41.anInt7053 == 3) Component162.method1118(true, true, class348_sub41, 2533);
                     return;
                 }
@@ -3927,7 +3927,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 3327) {
-                    anIntArray1149[anInt1173++] = ((Component72.localPlayer.aClass154_10536) != null && Component72.localPlayer.aClass154_10536.aBoolean2100) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = ((Component72.localPlayer.appearance) != null && Component72.localPlayer.appearance.aBoolean2100) ? 1 : 0;
                     return;
                 }
                 if (i == 3329) {
@@ -4074,7 +4074,7 @@ final class ClientScriptExecutor {
                 if (i == 3411) {
                     int i_358_ = anIntArray1149[--anInt1173];
                     Component208 class117 = NodeSub7.aClass33_6653.method337(true, i_358_);
-                    anIntArray1149[anInt1173++] = class117.aClass356_1767.method3474(1);
+                    anIntArray1149[anInt1173++] = class117.aClass356_1767.size(1);
                     return;
                 }
             } else if (i < 3700) {
@@ -4254,7 +4254,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 3624) {
                     int i_368_ = anIntArray1149[--anInt1173];
-                    if (RequestProcessor.aClass19Array2261 != null && i_368_ < NameFormatter.anInt496 && (RequestProcessor.aClass19Array2261[i_368_].aString306.equalsIgnoreCase(Component72.localPlayer.aString10544))) anIntArray1149[anInt1173++] = 1;
+                    if (RequestProcessor.aClass19Array2261 != null && i_368_ < NameFormatter.anInt496 && (RequestProcessor.aClass19Array2261[i_368_].aString306.equalsIgnoreCase(Component72.localPlayer.username))) anIntArray1149[anInt1173++] = 1;
                     else {
                         anIntArray1149[anInt1173++] = 0;
                         return;
@@ -4567,7 +4567,7 @@ final class ClientScriptExecutor {
                     anInt1170 -= 2;
                     String string = aStringArray1152[anInt1170];
                     String string_431_ = aStringArray1152[anInt1170 + 1];
-                    if ((Component72.localPlayer.aClass154_10536) != null && Component72.localPlayer.aClass154_10536.aBoolean2100) aStringArray1152[anInt1170++] = string_431_;
+                    if ((Component72.localPlayer.appearance) != null && Component72.localPlayer.appearance.aBoolean2100) aStringArray1152[anInt1170++] = string_431_;
                     else {
                         aStringArray1152[anInt1170++] = string;
                         return;
@@ -5043,7 +5043,7 @@ final class ClientScriptExecutor {
                         DisplayModeManagerContainer115.method529(i_512_, true);
                     } else if (i_490_ == 51) {
                         LruCache class356 = (class348_sub42_sub19.aClass356Array9693[is_489_[i_488_]]);
-                        NodeSub35 class348_sub35 = ((NodeSub35) class356.method3480(anIntArray1149[--anInt1173], -6008));
+                        NodeSub35 class348_sub35 = ((NodeSub35) class356.get(anIntArray1149[--anInt1173], -6008));
                         if (class348_sub35 != null) i_488_ += class348_sub35.anInt6976;
                     } else if (i_490_ == 86) {
                         if (anIntArray1149[--anInt1173] == 1) {
@@ -5064,9 +5064,9 @@ final class ClientScriptExecutor {
         } catch (Exception exception) {
             if (class348_sub42_sub19.aString9690 == null) {
                 StringBuffer stringbuffer = new StringBuffer(30);
-                stringbuffer.append("CS2: ").append(class348_sub42_sub19.aLong4291).append(" ");
+                stringbuffer.append("CS2: ").append(class348_sub42_sub19.key).append(" ");
                 for (int i_514_ = anInt1154 - 1; i_514_ >= 0; i_514_--)
-                    stringbuffer.append("v: ").append(aClass184Array1168[i_514_].aClass348_Sub42_Sub19_2474.aLong4291).append(" ");
+                    stringbuffer.append("v: ").append(aClass184Array1168[i_514_].aClass348_Sub42_Sub19_2474.key).append(" ");
                 stringbuffer.append("op: ").append(i_490_);
                 ClientErrorReporter.method1242(stringbuffer.toString(), exception, 15004);
             } else {

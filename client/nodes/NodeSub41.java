@@ -26,7 +26,7 @@ final class NodeSub41
         Buffer class348_sub49 = new Buffer(is);
         int i_4_ = -1;
         for (; ; ) {
-            int i_5_ = class348_sub49.method3334(107);
+            int i_5_ = class348_sub49.readLargeSmart(107);
             if (i_5_ == 0) break;
             i_4_ += i_5_;
             int i_6_ = 0;
@@ -80,8 +80,8 @@ final class NodeSub41
             DisplayModeManagerContainer363.anInt4095 = i;
             Component385.anInt2204 = Component117.anInt4372;
             if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) Component385.anInt2204 = 0;
-            Buffer.method3379(2, i_17_);
-            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544), 2, NodeSub8.aHa6654);
+            Buffer.setClientState(2, i_17_);
+            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544), 2, NodeSub8.toolkit);
             int i_18_ = NodeBaseSub2.regionTileX;
             int i_19_ = Component330.regionTileY;
             NodeBaseSub2.regionTileX = (-(AbstractShaderSub4.anInt7319 >> 4) + GraphicsToolkit.anInt4581) * 8;
@@ -94,7 +94,7 @@ final class NodeSub41
                 for (int i_22_ = 0; NodeSub32.anInt6930 > i_22_; i_22_++) {
                     NodeSub22 class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_22_];
                     if (class348_sub22 != null) {
-                        Npc npc = (class348_sub22.aNpc_6859);
+                        Npc npc = (class348_sub22.npc);
                         for (int i_23_ = 0; i_23_ < 10; i_23_++) {
                             npc.anIntArray10320[i_23_] -= i_20_;
                             npc.anIntArray10317[i_23_] -= i_21_;
@@ -111,12 +111,12 @@ final class NodeSub41
                 for (int i_27_ = 0; (NodeSub32.anInt6930 > i_27_); i_27_++) {
                     NodeSub22 class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_27_];
                     if (class348_sub22 != null) {
-                        Npc npc = (class348_sub22.aNpc_6859);
+                        Npc npc = (class348_sub22.npc);
                         npc.y -= 512 * i_21_;
                         npc.x -= 512 * i_20_;
                         if ((npc.x) < 0 || i_25_ < (npc.x) || (npc.y) < 0 || i_26_ < (npc.y)) {
                             npc.method2448(null, -2);
-                            class348_sub22.method2715((byte) 80);
+                            class348_sub22.unlink((byte) 80);
                             bool_24_ = true;
                         } else {
                             boolean bool_28_ = true;
@@ -129,19 +129,19 @@ final class NodeSub41
                             if (!bool_28_) {
                                 npc.method2448(null, -2);
                                 bool_24_ = true;
-                                class348_sub22.method2715((byte) 113);
+                                class348_sub22.unlink((byte) 113);
                             } else DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = (npc.anInt10290);
                         }
                     }
                 }
                 if (bool_24_) {
-                    NodeSub32.anInt6930 = Component21.aClass356_3654.method3474(1);
+                    NodeSub32.anInt6930 = Component21.aClass356_3654.size(1);
                     Component21.aClass356_3654.method3477(3, DefinitionSub23.aClass348_Sub22Array9319);
                 }
             }
             if (i_15_ > 122) {
                 for (int i_30_ = 0; i_30_ < 2048; i_30_++) {
-                    Player player = (InterfaceRenderer.aPlayerArray5058[i_30_]);
+                    Player player = (InterfaceRenderer.players[i_30_]);
                     if (player != null) {
                         for (int i_31_ = 0; i_31_ < 10; i_31_++) {
                             player.anIntArray10320[i_31_] -= i_20_;
@@ -159,18 +159,18 @@ final class NodeSub41
                         class302.anInt3835 -= 512 * i_20_;
                     }
                 }
-                for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.method1995(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.method1990((byte) 68)) {
+                for (NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4)); class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.next((byte) 68)) {
                     class348_sub27.anInt6896 -= i_21_;
                     class348_sub27.anInt6905 -= i_20_;
-                    if (Component37.anInt3931 != 4 && (class348_sub27.anInt6905 < 0 || class348_sub27.anInt6896 < 0 || (class348_sub27.anInt6905 >= AbstractShaderSub4.anInt7319) || (ParametricDefinition.anInt9109 <= (class348_sub27.anInt6896)))) class348_sub27.method2715((byte) 101);
+                    if (Component37.anInt3931 != 4 && (class348_sub27.anInt6905 < 0 || class348_sub27.anInt6896 < 0 || (class348_sub27.anInt6905 >= AbstractShaderSub4.anInt7319) || (ParametricDefinition.anInt9109 <= (class348_sub27.anInt6896)))) class348_sub27.unlink((byte) 101);
                 }
                 if (Component37.anInt3931 != 4) {
-                    for (NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3484(0)); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
-                        int i_33_ = (int) (0x3fffL & class348_sub37.aLong4291);
+                    for (NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.first(0)); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.next(0))) {
+                        int i_33_ = (int) (0x3fffL & class348_sub37.key);
                         int i_34_ = -NodeBaseSub2.regionTileX + i_33_;
-                        int i_35_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
+                        int i_35_ = (int) (0x3fffL & (class348_sub37.key >> 14));
                         int i_36_ = i_35_ + -Component330.regionTileY;
-                        if (i_34_ < 0 || i_36_ < 0 || (i_34_ >= AbstractShaderSub4.anInt7319) || i_36_ >= ParametricDefinition.anInt9109) class348_sub37.method2715((byte) 37);
+                        if (i_34_ < 0 || i_36_ < 0 || (i_34_ >= AbstractShaderSub4.anInt7319) || i_36_ >= ParametricDefinition.anInt9109) class348_sub37.unlink((byte) 37);
                     }
                 }
                 if (Component253.anInt3203 != 0) {
@@ -197,8 +197,8 @@ final class NodeSub41
                 }
                 DefinitionSub39.method3153(0);
                 Component308.method464(-1);
-                CacheNodeSub2.aClass262_10492.method1996(107);
-                DefinitionSub17.aClass262_9240.method1996(103);
+                CacheNodeSub2.aClass262_10492.clear(107);
+                DefinitionSub17.aClass262_9240.clear(103);
                 Component241.aClass243_2957.method1876((byte) -45);
                 AudioMixer.method1911((byte) 99);
             }
@@ -229,7 +229,7 @@ final class NodeSub41
             return is_40_;
         }
         byte[] is_41_ = new byte[i_38_];
-        class348_sub49.method3389(2147483647, 0, i_38_, is_41_);
+        class348_sub49.readBytes(2147483647, 0, i_38_, is_41_);
         return is_41_;
     }
 

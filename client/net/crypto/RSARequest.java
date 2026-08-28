@@ -31,13 +31,13 @@ final class RSARequest extends HashNode {
     final int method3245(boolean bool) {
         anInt9646++;
         if (bool != true) method3248(-60);
-        return (int) (this.aLong4291 >>> 32 & 0xffL);
+        return (int) (this.key >>> 32 & 0xffL);
     }
 
     final void method3246(int i) {
-        this.aLong7057 |= ~0x7fffffffffffffffL;
+        this.accessAge |= ~0x7fffffffffffffffL;
         anInt9653++;
-        if (method3250((byte) -89) == 0L) AbstractShaderSub4.aClass107_7325.method1005(true, this);
+        if (method3250((byte) -89) == 0L) AbstractShaderSub4.aClass107_7325.add(true, this);
         if (i != -25490) aClass105_9659 = null;
     }
 
@@ -52,7 +52,7 @@ final class RSARequest extends HashNode {
     final int method3248(int i) {
         if (i != 1) return -110;
         anInt9647++;
-        return (int) this.aLong4291;
+        return (int) this.key;
     }
 
     static final Component359 method3249(int i, int i_0_, GlToolkitSub2 var_ha_Sub2, String string) {
@@ -85,17 +85,17 @@ final class RSARequest extends HashNode {
     final long method3250(byte i) {
         anInt9649++;
         if (i >= -37) method3250((byte) 79);
-        return this.aLong7057 & 0x7fffffffffffffffL;
+        return this.accessAge & 0x7fffffffffffffffL;
     }
 
     RSARequest(int i, int i_2_) {
-        this.aLong4291 = (long) i << 32 | (long) i_2_;
+        this.key = (long) i << 32 | (long) i_2_;
     }
 
     final void method3251(int i) {
         anInt9648++;
-        this.aLong7057 = (~0x7fffffffffffffffL & this.aLong7057 | Component240.method599(-120) + 500L);
-        BufferCacheSub2.aClass107_8241.method1005(true, this);
+        this.accessAge = (~0x7fffffffffffffffL & this.accessAge | Component240.currentTimeMillis(-120) + 500L);
+        BufferCacheSub2.aClass107_8241.add(true, this);
         if (i != -16058) aClass105_9658 = null;
     }
 }

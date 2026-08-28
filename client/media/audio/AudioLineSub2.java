@@ -12,11 +12,11 @@ final class AudioLineSub2
     private final int anInt6181;
     private static Interface20 anInterface20_6182;
 
-    final void method2083() {
+    final void flush() {
         anInterface20_6182.method77((byte) 98, anInt6181);
     }
 
-    final int method2081() {
+    final int getBufferedSamples() {
         return anInterface20_6182.method75((byte) -93, anInt6181);
     }
 
@@ -24,11 +24,11 @@ final class AudioLineSub2
         anInterface20_6182 = null;
     }
 
-    final void method2091() {
+    final void close() {
         anInterface20_6182.method74(anInt6181, (byte) 122);
     }
 
-    final void method2095(Component component) throws Exception {
+    final void initOnComponent(Component component) throws Exception {
         anInterface20_6182.method78(Component231.anInt339, Component21.aBoolean3652, component, 27929);
     }
 
@@ -41,7 +41,7 @@ final class AudioLineSub2
         anInt6181 = i;
     }
 
-    final void method2082(int i) throws Exception {
+    final void open(int i) throws Exception {
         if (i > 32768) throw new IllegalArgumentException();
         anInterface20_6182.method79(i, anInt6181, (byte) 112);
     }

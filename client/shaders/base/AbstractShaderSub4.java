@@ -308,12 +308,12 @@ final class AbstractShaderSub4
     static final int method3544(Buffer class348_sub49, int i, String string) {
         try {
             anInt7321++;
-            int i_38_ = class348_sub49.anInt7197;
+            int i_38_ = class348_sub49.offset;
             byte[] is = ClientSystemInfo.method2992(string, (byte) -20);
             int i_39_ = 1 % ((-6 - i) / 63);
-            class348_sub49.method3381(5537, is.length);
-            class348_sub49.anInt7197 += (DisplayModeManagerContainer370.aClass296_1131.method2227(is.length, 0, class348_sub49.anInt7197, is, 103, class348_sub49.aByteArray7154));
-            return class348_sub49.anInt7197 + -i_38_;
+            class348_sub49.writeSmart(5537, is.length);
+            class348_sub49.offset += (DisplayModeManagerContainer370.aClass296_1131.method2227(is.length, 0, class348_sub49.offset, is, 103, class348_sub49.payload));
+            return class348_sub49.offset + -i_38_;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("bk.O(" + (class348_sub49 != null ? "{...}" : "null") + ',' + i + ',' + (string != null ? "{...}" : "null") + ')'));
         }

@@ -212,20 +212,20 @@ class Component364
     final void method178(int i, boolean bool, byte i_27_, int i_28_) {
         if (bool) {
             int[] is = new int[4];
-            NodeSub8.aHa6654.K(is);
-            NodeSub8.aHa6654.KA(i, i_28_, i - -this.aClass369_4635.anInt4971, (i_28_ + this.aClass369_4635.anInt4963));
+            NodeSub8.toolkit.K(is);
+            NodeSub8.toolkit.KA(i, i_28_, i - -this.aClass369_4635.anInt4971, (i_28_ + this.aClass369_4635.anInt4963));
             int i_29_ = aClass105_8342.method966();
             int i_30_ = aClass105_8342.method980();
             int i_31_ = aClass105_8339.method966();
             int i_32_ = aClass105_8339.method980();
             aClass105_8342.method974(i, i_28_ - -(((this.aClass369_4635.anInt4963) + -i_30_) / 2));
             aClass105_8339.method974((this.aClass369_4635.anInt4971 + (i + -i_31_)), i_28_ + (this.aClass369_4635.anInt4963 + -i_32_) / 2);
-            NodeSub8.aHa6654.KA(i, i_28_, (this.aClass369_4635.anInt4971 + i), i_28_ - -aClass105_8343.method980());
+            NodeSub8.toolkit.KA(i, i_28_, (this.aClass369_4635.anInt4971 + i), i_28_ - -aClass105_8343.method980());
             aClass105_8343.method972(i + i_29_, i_28_, -i_29_ + (this.aClass369_4635.anInt4971) - i_31_, this.aClass369_4635.anInt4963);
             int i_33_ = aClass105_8338.method980();
-            NodeSub8.aHa6654.KA(i, (-i_33_ + i_28_ - -this.aClass369_4635.anInt4963), this.aClass369_4635.anInt4971 + i, (i_28_ + this.aClass369_4635.anInt4963));
+            NodeSub8.toolkit.KA(i, (-i_33_ + i_28_ - -this.aClass369_4635.anInt4963), this.aClass369_4635.anInt4971 + i, (i_28_ + this.aClass369_4635.anInt4963));
             aClass105_8338.method972(i_29_ + i, (-i_33_ + i_28_ + this.aClass369_4635.anInt4963), (-i_29_ + this.aClass369_4635.anInt4971 + -i_31_), this.aClass369_4635.anInt4963);
-            NodeSub8.aHa6654.KA(is[0], is[1], is[2], is[3]);
+            NodeSub8.toolkit.KA(is[0], is[1], is[2], is[3]);
         }
         anInt8334++;
         if (i_27_ > -6) aClass105_8347 = null;
@@ -253,12 +253,12 @@ class Component364
         int i_43_ = -i_40_ + i_41_;
         int i_44_ = this.method183(124) * i_42_ / 10000;
         int[] is = new int[4];
-        NodeSub8.aHa6654.K(is);
-        NodeSub8.aHa6654.KA(i_38_, i_40_, i_44_ + i_38_, i_41_);
+        NodeSub8.toolkit.K(is);
+        NodeSub8.toolkit.KA(i_38_, i_40_, i_44_ + i_38_, i_41_);
         method186(i_40_, i_43_, (byte) 33, i_38_, i_42_);
-        NodeSub8.aHa6654.KA(i_44_ + i_38_, i_40_, i_39_, i_41_);
+        NodeSub8.toolkit.KA(i_44_ + i_38_, i_40_, i_39_, i_41_);
         aClass105_8347.method972(i_38_, i_40_, i_42_, i_43_);
-        NodeSub8.aHa6654.KA(is[0], is[1], is[2], is[3]);
+        NodeSub8.toolkit.KA(is[0], is[1], is[2], is[3]);
     }
 
     public final void method7(int i) {

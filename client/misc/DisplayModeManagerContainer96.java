@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer96
             if (i >= -71) method1077(null, (byte) -41);
             String string;
             if (r.aBoolean9722 && DisplayModeManagerContainer306.menuEntryCount < 2) string = (DisplayModeManagerContainer332.aString5001 + FriendsIgnoreList.aClass274_3515.method2063(ObjectDeserializer.anInt6967, 544) + DisplayModeManagerContainer332.aString5000 + " ->");
-            else if (!Component262.shiftClick || !Component280.aClass346_2449.method2696(81, -121) || DisplayModeManagerContainer306.menuEntryCount <= 2) {
+            else if (!Component262.shiftClick || !Component280.aClass346_2449.isKeyDown(81, -121) || DisplayModeManagerContainer306.menuEntryCount <= 2) {
                 MenuEntry class348_sub42_sub12 = Component192.menuTip;
                 if (class348_sub42_sub12 == null) return;
                 string = Component192.method2367((byte) -52, class348_sub42_sub12);
@@ -57,10 +57,10 @@ final class DisplayModeManagerContainer96
                 if (!Component3.method1197(-12081, class348_sub42_sub12.opcode)) {
                     if (class348_sub42_sub12.itemId != -1) is = Exception_Sub1.aClass255_112.method1940(98, (class348_sub42_sub12.itemId)).anIntArray2772;
                     else if (WaterShaderSub8.method3549((class348_sub42_sub12.opcode), (byte) 107)) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480((int) class348_sub42_sub12.identifier, -6008)));
+                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) class348_sub42_sub12.identifier, -6008)));
                         if (class348_sub22 != null) {
-                            Npc npc = (class348_sub22.aNpc_6859);
-                            DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+                            Npc npc = (class348_sub22.npc);
+                            DisplayModeManagerContainer206 class79 = (npc.definition);
                             if (class79.anIntArray1377 != null) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
                             if (class79 != null) is = class79.anIntArray1342;
                         }
@@ -83,7 +83,7 @@ final class DisplayModeManagerContainer96
                 Component354.method226(Component195.anIntArray5007[0], Component195.anIntArray5007[2], Component195.anIntArray5007[1], 0, Component195.anIntArray5007[3]);
             } else if (Component158.aClass46_323 != null && (PacketReader.aClass230_10434 == RunescapeInfo.aClass230_186)) {
                 int i_1_ = (NodeList.aClass324_3326.method2571(-1, LruCache.anInt4383, Component143.anIntArray2330, string, 16777215, 0, DisplayModeManagerContainer196.aClass105Array4234, 16 + TcpSocketStream.anInt5832, 4 + Component247.anInt4911, OutputStream_Sub1.aRandom93));
-                Component354.method226(Component247.anInt4911 - -4, (Component27.aClass143_4962.method1183(true, string) + i_1_), TcpSocketStream.anInt5832, 0, 16);
+                Component354.method226(Component247.anInt4911 - -4, (Component27.aClass143_4962.stringWidth(true, string) + i_1_), TcpSocketStream.anInt5832, 0, 16);
             }
         }
     }

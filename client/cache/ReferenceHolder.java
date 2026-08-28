@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub42_Sub9` (JODE-obfuscated).
- * Abstract reference holder. extends HashNode; declares abstract method3205(int) (get referent) and method3206(byte) (is alive). Parent of SoftReferenceHolder.
+ * Abstract reference holder. extends HashNode; declares abstract getReferent(int) (get referent) and isSoftRef(byte) (is alive). Parent of SoftReferenceHolder.
  */
 
 abstract class ReferenceHolder extends HashNode {
@@ -24,12 +24,12 @@ abstract class ReferenceHolder extends HashNode {
         anIntArray9558 = null;
     }
 
-    abstract Object method3205(int i);
+    abstract Object getReferent(int i);
 
     ReferenceHolder(Interface14 interface14, int i) {
         this.anInterface14_9559 = interface14;
         this.anInt9556 = i;
     }
 
-    abstract boolean method3206(byte i);
+    abstract boolean isSoftRef(byte i);
 }

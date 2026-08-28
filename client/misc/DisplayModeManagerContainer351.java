@@ -34,10 +34,10 @@ final class DisplayModeManagerContainer351
         int i_5_ = Component330.regionTileY + i;
         if (Component335.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && AbstractShaderSub4.anInt7319 > i_2_ && ParametricDefinition.anInt9109 > i && (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Component72.localPlayer.plane))) {
             long l = i_5_ << 14 | i_3_ << 28 | i_4_;
-            NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3480(l, -6008));
+            NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.get(l, -6008));
             if (class348_sub37 == null) Component21.method2110(i_3_, i_2_, i);
             else {
-                NodeSub34 class348_sub34 = (NodeSub34) class348_sub37.aClass262_6998.method1995(4);
+                NodeSub34 class348_sub34 = (NodeSub34) class348_sub37.aClass262_6998.first(4);
                 if (class348_sub34 == null) Component21.method2110(i_3_, i_2_, i);
                 else {
                     Component252 class318_sub1_sub2_sub1 = ((Component252) Component21.method2110(i_3_, i_2_, i));
@@ -47,13 +47,13 @@ final class DisplayModeManagerContainer351
                     if (i_1_ >= -112) aBoolean2674 = true;
                     class318_sub1_sub2_sub1.anInt10185 = class348_sub34.anInt6971;
                     for (; ; ) {
-                        NodeSub34 class348_sub34_6_ = ((NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 55));
+                        NodeSub34 class348_sub34_6_ = ((NodeSub34) class348_sub37.aClass262_6998.next((byte) 55));
                         if (class348_sub34_6_ == null) break;
                         if (class348_sub34_6_.anInt6973 != class318_sub1_sub2_sub1.anInt10181) {
                             class318_sub1_sub2_sub1.anInt10189 = (class348_sub34_6_.anInt6973);
                             class318_sub1_sub2_sub1.anInt10190 = (class348_sub34_6_.anInt6971);
                             for (; ; ) {
-                                NodeSub34 class348_sub34_7_ = ((NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 55));
+                                NodeSub34 class348_sub34_7_ = ((NodeSub34) class348_sub37.aClass262_6998.next((byte) 55));
                                 if (class348_sub34_7_ == null) break;
                                 if ((class318_sub1_sub2_sub1.anInt10181 != (class348_sub34_7_.anInt6973)) && ((class318_sub1_sub2_sub1.anInt10189) != (class348_sub34_7_.anInt6973))) {
                                     class318_sub1_sub2_sub1.anInt10180 = (class348_sub34_7_.anInt6973);

@@ -204,13 +204,13 @@ final class ParticleShader extends ShaderProgram {
     static final void method2150(boolean bool, boolean bool_14_, Npc npc) {
         anInt6226++;
         if (DisplayModeManagerContainer306.menuEntryCount < 400) {
-            DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+            DisplayModeManagerContainer206 class79 = (npc.definition);
             if (class79.anIntArray1377 != null) {
                 class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                 if (class79 == null) return;
             }
             if (class79.aBoolean1396) {
-                String string = class79.aString1372;
+                String string = class79.name;
                 if (class79.anInt1361 != 0) {
                     String string_15_ = ((WorldNameText.aClass230_8638 != PacketReader.aClass230_10434) ? FriendsIgnoreList.aClass274_3511.method2063(ObjectDeserializer.anInt6967, 544) : FriendsIgnoreList.aClass274_3513.method2063(ObjectDeserializer.anInt6967, 544));
                     string += ((WorldNameText.method250((Component72.localPlayer.anInt10516), true, class79.anInt1361)) + " (" + string_15_ + class79.anInt1361 + ")");
@@ -276,8 +276,8 @@ final class ParticleShader extends ShaderProgram {
                     }
                 }
                 Component275.anInt2690++;
-                int npcX = (npc.x >> 9) + NodeBaseSub2.regionTileX - npc.aClass79_10505.anInt1399 + 1;
-                int npcY = (npc.y >> 9) + Component330.regionTileY - npc.aClass79_10505.anInt1399 + 1;
+                int npcX = (npc.x >> 9) + NodeBaseSub2.regionTileX - npc.definition.anInt1399 + 1;
+                int npcY = (npc.y >> 9) + Component330.regionTileY - npc.definition.anInt1399 + 1;
                 DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544), npc.anInt10290, CookieManager.anInt6299);
                 // Last options: "Default click" cascade (Pickpocket → left-click, etc.)
                 if (!bool) {
@@ -295,10 +295,10 @@ final class ParticleShader extends ShaderProgram {
     }
 
     static final void method2152(boolean bool) {
-        for (int i = 0; i < Component325.anInt1200; i++)
+        for (int i = 0; i < Component325.occluderCountB; i++)
             DisplayModeManagerContainer104.aClass338Array10330[i] = null;
         anInt6223++;
-        Component325.anInt1200 = 0;
+        Component325.occluderCountB = 0;
         for (int i = 0; Component291.anInt2524 > i; i++) {
             for (int i_20_ = 0; i_20_ < StaticElementRenderer.anInt6451; i_20_++) {
                 for (int i_21_ = 0; (i_21_ < NodeSub41.anInt7054); i_21_++) {
@@ -340,7 +340,7 @@ final class ParticleShader extends ShaderProgram {
                             int i_36_ = i_23_ << Component149.anInt4459;
                             int i_37_ = i_25_ << Component149.anInt4459;
                             int i_38_ = (Component148.anInt3465 + (i_26_ << Component149.anInt4459));
-                            DisplayModeManagerContainer104.aClass338Array10330[Component325.anInt1200++] = (new Component103(1, i_28_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, i_32_, i_34_, i_35_, i_33_, i_37_, i_38_, i_38_, i_37_));
+                            DisplayModeManagerContainer104.aClass338Array10330[Component325.occluderCountB++] = (new Component103(1, i_28_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, class357.aShort4401 + i_36_, i_32_, i_34_, i_35_, i_33_, i_37_, i_38_, i_38_, i_37_));
                             for (int i_39_ = i_27_; i_28_ >= i_39_; i_39_++) {
                                 for (int i_40_ = i_25_; i_26_ >= i_40_; i_40_++)
                                     Component335.aClass357ArrayArrayArray2029[i_39_][i_23_][i_40_].aShort4409 *= -1;
@@ -369,7 +369,7 @@ final class ParticleShader extends ShaderProgram {
                             int i_52_ = i_41_ << Component149.anInt4459;
                             int i_53_ = ((i_42_ << Component149.anInt4459) + Component148.anInt3465);
                             int i_54_ = i_22_ << Component149.anInt4459;
-                            DisplayModeManagerContainer104.aClass338Array10330[Component325.anInt1200++] = (new Component103(2, i_44_, i_52_, i_53_, i_53_, i_52_, i_48_, i_50_, i_51_, i_49_, i_54_ + class357.aShort4397, i_54_ + class357.aShort4397, class357.aShort4397 + i_54_, (i_54_ - -class357.aShort4397)));
+                            DisplayModeManagerContainer104.aClass338Array10330[Component325.occluderCountB++] = (new Component103(2, i_44_, i_52_, i_53_, i_53_, i_52_, i_48_, i_50_, i_51_, i_49_, i_54_ + class357.aShort4397, i_54_ + class357.aShort4397, class357.aShort4397 + i_54_, (i_54_ - -class357.aShort4397)));
                             for (int i_55_ = i_43_; i_55_ <= i_44_; i_55_++) {
                                 for (int i_56_ = i_41_; (i_42_ >= i_56_); i_56_++)
                                     Component335.aClass357ArrayArrayArray2029[i_55_][i_56_][i_22_].aShort4398 *= -1;

@@ -26,11 +26,11 @@ class Component76
 
     static final void method3573(int i) {
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-            DisplayModeManagerContainer310.aClass60_355.method590(0);
+            DisplayModeManagerContainer310.aClass60_355.clear(0);
         }
         anInt8598++;
         synchronized (Component387.aClass60_1894) {
-            Component387.aClass60_1894.method590(0);
+            Component387.aClass60_1894.clear(0);
         }
         if (i != -15326) method3573(-67);
     }

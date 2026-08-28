@@ -109,9 +109,9 @@ final class DisplayModeManagerContainer74
         do {
             try {
                 anInt4811++;
-                Component156.aClass262_3705.method1996(125);
+                Component156.aClass262_3705.clear(125);
                 if (!NodeSub1Sub1.aBoolean8805) {
-                    for (NodeSub21 class348_sub21 = (NodeSub21) class262.method1995(4); class348_sub21 != null; class348_sub21 = ((NodeSub21) class262.method1990((byte) 104))) {
+                    for (NodeSub21 class348_sub21 = (NodeSub21) class262.first(4); class348_sub21 != null; class348_sub21 = ((NodeSub21) class262.next((byte) 104))) {
                         Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 82));
                         if (NodeCache.method589(class42, -4)) {
                             boolean bool = DisplayModeManagerContainer56.method1425((byte) -31, class42, class348_sub21, i_14_, var_ha, i_15_);

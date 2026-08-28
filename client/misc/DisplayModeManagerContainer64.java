@@ -43,7 +43,7 @@ final class DisplayModeManagerContainer64
     static Component38 aClass187_9036;
     static int anInt9037;
     static boolean aBoolean9038 = false;
-    static int anInt9039;
+    static int occludedGroundCount;
 
     public static void method2974(int i) {
         aClass351_9034 = null;
@@ -70,7 +70,7 @@ final class DisplayModeManagerContainer64
         aTheoraComment9010 = new TheoraComment();
     }
 
-    final void method2961(byte i) {
+    final void shutdown(byte i) {
         if (aFrame9024 != null) aFrame9024.a();
         anInt9021++;
         if (aDecoderContext9032 != null) {
@@ -123,11 +123,11 @@ final class DisplayModeManagerContainer64
         return aDouble9015;
     }
 
-    final void method2964(byte i, OggPacket oggpacket) {
+    final void handlePacket(byte i, OggPacket oggpacket) {
         anInt9017++;
         if (i < -91) {
             if (aBoolean9016) {
-                aLong9018 = Component240.method599(-102);
+                aLong9018 = Component240.currentTimeMillis(-102);
                 int i_1_ = aDecoderContext9032.decodePacketIn(oggpacket, aGranulePos9019);
                 if (i_1_ < 0) throw new IllegalStateException(String.valueOf(i_1_));
                 aDecoderContext9032.granuleFrame(aGranulePos9019);

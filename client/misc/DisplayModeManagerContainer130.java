@@ -16,7 +16,7 @@ final class DisplayModeManagerContainer130
         anInt3469++;
         HashNodeSub7 class348_sub42_sub7;
         synchronized (aClass60_3466) {
-            class348_sub42_sub7 = (HashNodeSub7) aClass60_3466.method583(i_0_, -85);
+            class348_sub42_sub7 = (HashNodeSub7) aClass60_3466.get(i_0_, -85);
         }
         if (class348_sub42_sub7 != null) return class348_sub42_sub7;
         byte[] is;
@@ -27,7 +27,7 @@ final class DisplayModeManagerContainer130
         if (i < 78) method2046();
         if (is != null) class348_sub42_sub7.method3192((byte) 16, new Buffer(is));
         synchronized (aClass60_3466) {
-            aClass60_3466.method582(class348_sub42_sub7, i_0_, (byte) -93);
+            aClass60_3466.putOne(class348_sub42_sub7, i_0_, (byte) -93);
         }
         return class348_sub42_sub7;
     }

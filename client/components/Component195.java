@@ -40,8 +40,8 @@ final class Component195
 
     public final void method57(int i) {
         anInt5004++;
-        if (aHa5010 != NodeSub8.aHa6654) {
-            aHa5010 = NodeSub8.aHa6654;
+        if (aHa5010 != NodeSub8.toolkit) {
+            aHa5010 = NodeSub8.toolkit;
             aBoolean5011 = true;
         }
         aHa5010.GA(0);
@@ -86,7 +86,7 @@ final class Component195
         try {
             anInt5005++;
             if (i < 30) method1449(-81, 10, -115);
-            return l - -(long) aClass287_5006.anInt3690 <= Component240.method599(-97);
+            return l - -(long) aClass287_5006.anInt3690 <= Component240.currentTimeMillis(-97);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "qt.I(" + i + ',' + l + ')');
         }

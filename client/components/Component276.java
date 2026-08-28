@@ -25,7 +25,7 @@ final class Component276
         anInt2598++;
         synchronized (aClass60_2594) {
             if (i_0_ != 1) aClass60_2594 = null;
-            aClass60_2594.method578(2, i);
+            aClass60_2594.processSoftEntries(2, i);
         }
     }
 
@@ -41,7 +41,7 @@ final class Component276
         int i_3_ = -6 % ((67 - i_2_) / 47);
         anInt2591++;
         synchronized (aClass60_2594) {
-            aClass60_2594.method590(0);
+            aClass60_2594.clear(0);
             aClass60_2594 = new NodeCache(i);
         }
     }
@@ -50,7 +50,7 @@ final class Component276
         anInt2592++;
         if (i == 64) {
             synchronized (aClass60_2594) {
-                aClass60_2594.method590(0);
+                aClass60_2594.clear(0);
             }
         }
     }
@@ -59,7 +59,7 @@ final class Component276
         anInt2593++;
         Component334 class146;
         synchronized (aClass60_2594) {
-            class146 = (Component334) aClass60_2594.method583(i, 76);
+            class146 = (Component334) aClass60_2594.get(i, 76);
         }
         if (class146 != null) return class146;
         byte[] is;
@@ -70,7 +70,7 @@ final class Component276
         if (i_4_ != -1) return null;
         if (is != null) class146.method1191(i_4_ ^ ~0x800, new Buffer(is));
         synchronized (aClass60_2594) {
-            aClass60_2594.method582(class146, i, (byte) -105);
+            aClass60_2594.putOne(class146, i, (byte) -105);
         }
         return class146;
     }

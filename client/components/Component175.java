@@ -41,8 +41,8 @@ final class Component175
             int i_3_ = ShaderCompilerSub1.anInt6513;
             int[] is = ShaderProgramSub7.anIntArray6290;
             for (int i_4_ = 0; i_3_ > i_4_; i_4_++) {
-                Player player = (InterfaceRenderer.aPlayerArray5058[is[i_4_]]);
-                if (player.aString10544 != null && player.aString10544.equalsIgnoreCase(string) && (((player == Component72.localPlayer) && (0x10 & PauseTimer.anInt500) != 0) || (player != null && (PauseTimer.anInt500 & 0x8) != 0))) {
+                Player player = (InterfaceRenderer.players[is[i_4_]]);
+                if (player.username != null && player.username.equalsIgnoreCase(string) && (((player == Component72.localPlayer) && (0x10 & PauseTimer.anInt500) != 0) || (player != null && (PauseTimer.anInt500 & 0x8) != 0))) {
                     NativeLibraryLoader.anInt2975++;
                     ParticleSystem class348_sub47 = ParticleShader.method2148(RSACipher.aClass351_4907, (DisplayModeManagerContainer64.aClass77_9029), -102);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, JaclibLoader.anInt169);

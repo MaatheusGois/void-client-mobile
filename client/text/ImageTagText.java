@@ -110,12 +110,12 @@ final class ImageTagText {
         for (int i_24_ = 0; is.length > i_24_; i_24_++) {
             Component236 class321 = DisplayModeManagerContainer64.aClass187_9036.method1408(-12637, is[i_24_]);
             if (class321.anInt4000 != -1) {
-                Component24 class105 = ((Component24) Component225.aClass60_463.method583(class321.anInt4000, -74));
+                Component24 class105 = ((Component24) Component225.aClass60_463.get(class321.anInt4000, -74));
                 if (class105 == null) {
                     Component170 class207 = Component170.method1521(Component158.aClass45_322, class321.anInt4000, 0);
                     if (class207 != null) {
-                        class105 = NodeSub8.aHa6654.method3691(class207, true);
-                        Component225.aClass60_463.method582(class105, class321.anInt4000, (byte) -127);
+                        class105 = NodeSub8.toolkit.method3691(class207, true);
+                        Component225.aClass60_463.putOne(class105, class321.anInt4000, (byte) -127);
                     }
                 }
                 if (class105 != null) {

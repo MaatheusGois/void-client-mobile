@@ -67,7 +67,7 @@ final class AbstractShaderSub1
     static final void method3535(int i, int i_11_) {
         Component382.anInt2275 = i;
         anInt7282++;
-        Component279.aClass60_225.method590(i_11_);
+        Component279.aClass60_225.clear(i_11_);
     }
 
     final void method3525(int i, boolean bool) {

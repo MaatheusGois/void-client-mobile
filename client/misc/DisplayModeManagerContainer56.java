@@ -149,7 +149,7 @@ final class DisplayModeManagerContainer56
                 class348_sub12.anInt6735 = i_14_;
                 class348_sub12.anInt6737 = i_20_;
                 class348_sub12.anInt6750 = i_12_;
-                Component156.aClass262_3705.method1999(class348_sub12, -20180);
+                Component156.aClass262_3705.addTail(class348_sub12, -20180);
             }
             return false;
         } catch (RuntimeException runtimeexception) {

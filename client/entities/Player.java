@@ -30,15 +30,15 @@ final class Player extends DisplayModeManagerContainer58 {
     static int anInt10533;
     static int anInt10534;
     int anInt10535;
-    Component101 aClass154_10536;
-    String aString10537;
+    Component101 appearance;
+    String displayName;
     private byte aByte10538;
     boolean aBoolean10539;
     int anInt10540;
     static int anInt10541;
     int anInt10542;
     static int anInt10543;
-    String aString10544;
+    String username;
     static int anInt10545;
     static int anInt10546;
     static int anInt10547;
@@ -65,7 +65,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10533++;
-        if (this.aClass154_10536 != null && (this.aBoolean10318 || method2459(0, var_ha, -123))) {
+        if (this.appearance != null && (this.aBoolean10318 || method2459(0, var_ha, -123))) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             if (i >= -125) method2457((byte) -106);
             class101.method895(this.aClass264_10217.method2019((byte) -116));
@@ -90,11 +90,11 @@ final class Player extends DisplayModeManagerContainer58 {
         if (this.aClass318_Sub10_10327 != null) this.aClass318_Sub10_10327.method2529();
     }
 
-    final String method2450(boolean bool, int i) {
+    final String getName(boolean bool, int i) {
         if (i > -67) this.aBoolean10554 = false;
         anInt10555++;
-        if (bool) return this.aString10537;
-        return this.aString10544;
+        if (bool) return this.displayName;
+        return this.username;
     }
 
     final void method2451(byte i, int i_3_, int i_4_, int i_5_) {
@@ -113,7 +113,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final boolean method2391(GraphicsToolkit var_ha, int i, int i_7_, int i_8_) {
         anInt10562++;
-        if (this.aClass154_10536 == null || !method2459(131072, var_ha, 113)) return false;
+        if (this.appearance == null || !method2459(131072, var_ha, 113)) return false;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_9_ = this.aClass264_10217.method2019((byte) -31);
         class101.method895(i_9_);
@@ -131,7 +131,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final void method2452(byte i, Buffer class348_sub49) {
         anInt10547++;
-        class348_sub49.anInt7197 = 0;
+        class348_sub49.offset = 0;
         int i_11_ = class348_sub49.readUnsignedByte(255);
         aByte10538 = (byte) (i_11_ & 0x1);
         boolean bool = this.aBoolean10517;
@@ -176,9 +176,9 @@ final class Player extends DisplayModeManagerContainer58 {
             is_20_[i_21_] = i_22_;
         }
         anInt10520 = class348_sub49.readUnsignedShort(842397944);
-        this.aString10537 = class348_sub49.readString((byte) -47);
-        this.aString10544 = this.aString10537;
-        if (this == Component72.localPlayer) BufferCacheSub2.aString8265 = this.aString10537;
+        this.displayName = class348_sub49.readString((byte) -47);
+        this.username = this.displayName;
+        if (this == Component72.localPlayer) BufferCacheSub2.aString8265 = this.displayName;
         this.anInt10516 = class348_sub49.readUnsignedByte(i ^ 0xab);
         if (i != 84) anInt10520 = 87;
         if (bool_12_) {
@@ -208,10 +208,10 @@ final class Player extends DisplayModeManagerContainer58 {
             this.anInt10558 = class348_sub49.readUnsignedByte(i ^ 0xab);
             if (!this.aBoolean10517 != !bool || this.anInt10553 != i_23_ || i_24_ != this.anInt10535 || i_25_ != this.anInt10526 || (this.anInt10560 != i_26_) || this.anInt10519 != i_27_ || i_28_ != this.anInt10558) DisplayModeManagerContainer23.method858(true, this);
         }
-        if (this.aClass154_10536 == null) this.aClass154_10536 = new Component101();
-        int i_29_ = (this.aClass154_10536.anInt2093);
-        int[] is_30_ = (this.aClass154_10536.anIntArray2095);
-        this.aClass154_10536.method1228(i_14_, 105, method2421((byte) 121), is, aByte10538 == 1, is_20_);
+        if (this.appearance == null) this.appearance = new Component101();
+        int i_29_ = (this.appearance.anInt2093);
+        int[] is_30_ = (this.appearance.anIntArray2095);
+        this.appearance.method1228(i_14_, 105, method2421((byte) 121), is, aByte10538 == 1, is_20_);
         if (i_14_ != i_29_) {
             this.x = (this.anIntArray10320[0] << 9) - -(method2436((byte) 89) << 8);
             this.y = (this.anIntArray10317[0] << 9) - -(method2436((byte) 98) << 8);
@@ -259,7 +259,7 @@ final class Player extends DisplayModeManagerContainer58 {
     private final void method2454(int i, int i_39_, int i_40_, int i_41_, DisplayModeManagerContainer370 class64, int i_42_, DisplayModeManagerContainer204 class101, GraphicsToolkit var_ha, int i_43_) {
         do {
             try {
-                if (i != 6253) this.aString10544 = null;
+                if (i != 6253) this.username = null;
                 anInt10563++;
                 int i_44_ = i_43_ * i_43_ + i_39_ * i_39_;
                 if (i_44_ >= 262144 && i_44_ <= i_42_) {
@@ -278,13 +278,13 @@ final class Player extends DisplayModeManagerContainer58 {
     }
 
     final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
-        if (i != 7) this.aString10544 = null;
+        if (i != 7) this.username = null;
         anInt10518++;
         return null;
     }
 
     final void method2392(boolean bool) {
-        if (bool != true) this.aString10544 = null;
+        if (bool != true) this.username = null;
         anInt10534++;
         throw new IllegalStateException();
     }
@@ -325,7 +325,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10527++;
-        if (this.aClass154_10536 == null || !method2459(2048, var_ha, -95)) return null;
+        if (this.appearance == null || !method2459(2048, var_ha, -95)) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         int i_53_ = this.aClass264_10217.method2019((byte) -126);
         class101.method895(i_53_);
@@ -340,7 +340,7 @@ final class Player extends DisplayModeManagerContainer58 {
         this.aBoolean10324 = false;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1) {
             Component241 class225 = this.method2422((byte) 72);
-            if (class225.aBoolean2913 && (this.aClass154_10536.anInt2093 == -1 || Component291.aClass278_2529.method2079(this.aClass154_10536.anInt2093, i + -2).aBoolean1369)) {
+            if (class225.aBoolean2913 && (this.appearance.anInt2093 == -1 || Component291.aClass278_2529.method2079(this.appearance.anInt2093, i + -2).aBoolean1369)) {
                 DisplayModeManagerContainer167 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (RunescapeInfo.aClass87_191.method835(this.anInt10286, 7)) : null);
                 DisplayModeManagerContainer167 class17_55_ = ((this.anInt10268 == -1 || this.aBoolean10521 || (this.aBoolean10213 && class17 != null)) ? null : (RunescapeInfo.aClass87_191.method835(this.anInt10268, 7)));
                 DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_53_, this.aClass64Array10323[0], this.anInt10208, false, (class17_55_ == null ? this.anInt10267 : this.anInt10245), 0, 1, this.anInt10252, var_ha, 160, 0, 240, class17_55_ == null ? class17 : class17_55_));
@@ -360,9 +360,9 @@ final class Player extends DisplayModeManagerContainer58 {
                 Component114 class302 = NodeSub27.aClass302Array6897[i_56_];
                 if (class302 != null && class302.anInt3834 != -1) {
                     if (class302.anInt3840 == 1) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(class302.anInt3833, -6008)));
+                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
                         if (class348_sub22 != null) {
-                            Npc npc = (class348_sub22.aNpc_6859);
+                            Npc npc = (class348_sub22.npc);
                             int i_57_ = (-(Component72.localPlayer.x) + npc.x);
                             int i_58_ = (-(Component72.localPlayer.y) + npc.y);
                             if (DisplayModeManagerContainer50.aBoolean3870) method2454(6253, i_57_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), 92160000, class101, var_ha, i_58_);
@@ -377,8 +377,8 @@ final class Player extends DisplayModeManagerContainer58 {
                         if (DisplayModeManagerContainer50.aBoolean3870) method2454(6253, i_59_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), i_61_, class101, var_ha, i_60_);
                         else method2453(i_59_, var_ha, i_61_, (this.aClass64Array10323[0]), 0, i_60_, class101, class302.anInt3834);
                     }
-                    if (class302.anInt3840 == 10 && class302.anInt3833 >= 0 && (class302.anInt3833 < (InterfaceRenderer.aPlayerArray5058).length)) {
-                        Player player_62_ = (InterfaceRenderer.aPlayerArray5058[class302.anInt3833]);
+                    if (class302.anInt3840 == 10 && class302.anInt3833 >= 0 && (class302.anInt3833 < (InterfaceRenderer.players).length)) {
+                        Player player_62_ = (InterfaceRenderer.players[class302.anInt3833]);
                         if (player_62_ != null) {
                             int i_63_ = (-(Component72.localPlayer.x) + (player_62_.x));
                             int i_64_ = (-(Component72.localPlayer.y) + (player_62_.y));
@@ -432,8 +432,8 @@ final class Player extends DisplayModeManagerContainer58 {
                 is[aByte10552] = -1;
             } else string += class117.method1074(0xff & aByte10556, i + -145);
         }
-        if (!bool) string += this.aString10544;
-        else string += this.aString10537;
+        if (!bool) string += this.username;
+        else string += this.displayName;
         if (Component285.aStringArray974 != null) string += Component285.aStringArray974[aByte10552];
         return string;
     }
@@ -447,7 +447,7 @@ final class Player extends DisplayModeManagerContainer58 {
     final boolean method2457(byte i) {
         anInt10530++;
         int i_68_ = 86 / ((-44 - i) / 38);
-        return this.aClass154_10536 != null;
+        return this.appearance != null;
     }
 
     final boolean method2388(int i) {
@@ -459,7 +459,7 @@ final class Player extends DisplayModeManagerContainer58 {
     final int method2436(byte i) {
         if (i <= 39) method2455(-97, -62, (byte) 0, 103);
         anInt10546++;
-        if (this.aClass154_10536 != null && this.aClass154_10536.anInt2093 != -1) return (Component291.aClass278_2529.method2079(this.aClass154_10536.anInt2093, -1).anInt1399);
+        if (this.appearance != null && this.appearance.anInt2093 != -1) return (Component291.aClass278_2529.method2079(this.appearance.anInt2093, -1).anInt1399);
         return super.method2436((byte) 72);
     }
 
@@ -481,7 +481,7 @@ final class Player extends DisplayModeManagerContainer58 {
         int i_74_ = this.aClass264_10217.method2019((byte) -106);
         boolean bool = (this.aByte10279 != 0 && (this.anInt10248 <= OpenGlShader.clientCycle) && (OpenGlShader.clientCycle < this.anInt10250));
         if (bool) i |= 0x80000;
-        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.aClass154_10536.method1226(DisplayModeManagerContainer58.aClass170_10209, class17_71_, this.aClass182Array10308, true, Exception_Sub1.aClass255_112, i_74_, class17, this.anInt10244, true, this.anInt10312, this.anIntArray10296, i, DefinitionSub25.aClass150_9342, this.anInt10232, var_ha, Component291.aClass278_2529, RunescapeInfo.aClass87_191, this.anInt10245, this.anInt10267, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558)));
+        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.appearance.method1226(DisplayModeManagerContainer58.aClass170_10209, class17_71_, this.aClass182Array10308, true, Exception_Sub1.aClass255_112, i_74_, class17, this.anInt10244, true, this.anInt10312, this.anIntArray10296, i, DefinitionSub25.aClass150_9342, this.anInt10232, var_ha, Component291.aClass278_2529, RunescapeInfo.aClass87_191, this.anInt10245, this.anInt10267, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558)));
         int i_75_ = Component102.method2201(2121);
         if (Component127.anInt2964 < 96 && i_75_ > 50) Component201.method2271(31268);
         int i_76_ = 3 % ((63 - i_69_) / 47);

@@ -120,7 +120,7 @@ final class Component192
     }
 
     static final void method2368(int i) {
-        Component279.aClass60_225.method590(0);
+        Component279.aClass60_225.clear(0);
         anInt3965++;
         if (i != -1) aClass348_Sub51_3959 = null;
     }

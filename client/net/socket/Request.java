@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub26` (JODE-obfuscated).
- * Queued request node (extends Node). Wraps a String command (method1302 builds one from a String) and is enqueued into a NodeList processed by RequestProcessor.
+ * Queued request node (extends Node). Wraps a String command (enqueue builds one from a String) and is enqueued into a NodeList processed by RequestProcessor.
  */
 
 final class Request extends Node {

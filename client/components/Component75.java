@@ -41,7 +41,7 @@ final class Component75
         if (i < 89) aClass114_2285 = null;
         if (object instanceof AbstractBuffer) {
             AbstractBuffer class344 = (AbstractBuffer) object;
-            return class344.method2689(2, i_3_, i_2_);
+            return class344.getBytes(2, i_3_, i_2_);
         }
         throw new IllegalArgumentException();
     }

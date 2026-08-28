@@ -72,7 +72,7 @@ final class DisplayModeManagerContainer145
                         int i_16_ = (64 * (OggStreamReader.anIntArray9042[i_14_] >> 8) + -NodeBaseSub2.regionTileX);
                         int i_17_ = ((OggStreamReader.anIntArray9042[i_14_] & 0xff) * 64 - Component330.regionTileY);
                         Component381.method3570(false);
-                        class237_sub1.method1695(is_15_, (NodeSub45.aClass361Array7108), i_17_, NodeSub8.aHa6654, i_16_, i ^ 0x1054f);
+                        class237_sub1.method1695(is_15_, (NodeSub45.aClass361Array7108), i_17_, NodeSub8.toolkit, i_16_, i ^ 0x1054f);
                     }
                 }
             }

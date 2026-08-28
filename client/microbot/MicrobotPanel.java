@@ -8,7 +8,7 @@
  * <p>
  * <b>Input:</b> {@link #pollInput()} runs right after mouse events are copied into
  * {@link Component327#aClass262_8744}. Left-presses inside the panel are
- * unlinked ({@link Node#method2715}) so walk / tip menus never see them.
+ * unlinked ({@link Node#unlink}) so walk / tip menus never see them.
  * {@link DisplayModeManagerContainer1#method1987} also bails when {@link #isMouseOver()} so right-click
  * menus don't open through the HUD.
  * <p>
@@ -75,7 +75,7 @@ final class MicrobotPanel {
      * Prefer {@link BitmapFont#drawText} (left-aligned) — {@link BitmapFont#drawTextCentred}
      * is centre-X and easy to mis-wire (garbled / stacked glyphs).
      *
-     * @param renderer active toolkit ({@link NodeSub8#aHa6654})
+     * @param renderer active toolkit ({@link NodeSub8#toolkit})
      */
     static void draw(GraphicsToolkit renderer) {
         if (!isVisible() || renderer == null) {
@@ -131,18 +131,18 @@ final class MicrobotPanel {
             int my = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 100);
             mouseOver = contains(mx, my);
 
-            Node node = Component327.aClass262_8744.method1995(4);
+            Node node = Component327.aClass262_8744.first(4);
             while (node != null) {
-                Node next = Component327.aClass262_8744.method1990((byte) 79);
+                Node next = Component327.aClass262_8744.next((byte) 79);
                 if (node instanceof NodeSub45) {
                     NodeSub45 click = (NodeSub45) node;
-                    int type = click.method3310(86);
+                    int type = click.getEventType(86);
                     if (type == 0) {
                         int cx = click.method3308((byte) -128);
                         int cy = click.method3311(33);
                         if (contains(cx, cy)) {
                             onClick(cx, cy);
-                            click.method2715((byte) 97);
+                            click.unlink((byte) 97);
                         }
                     }
                 }

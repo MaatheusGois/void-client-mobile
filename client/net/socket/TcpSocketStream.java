@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class238_Sub1` (JODE-obfuscated).
- * Concrete Socket-backed stream. extends SocketStream; wraps a `Socket aSocket5836` opened in the constructor and closed in method161.
+ * Concrete Socket-backed stream. extends SocketStream; wraps a `Socket socket` opened in the constructor and closed in method161.
  */
 
 import java.io.IOException;
@@ -19,7 +19,7 @@ final class TcpSocketStream extends SocketStream {
     static int anInt5833;
     private Component239 aClass376_5834;
     static int anInt5835;
-    private final Socket aSocket5836;
+    private final Socket socket;
     private final Component222 aClass208_5837;
     static int anInt5838;
     static int anInt5839;
@@ -31,7 +31,7 @@ final class TcpSocketStream extends SocketStream {
         anInt5829++;
     }
 
-    final void method1706(int i, int i_0_, int i_1_, byte[] is) throws IOException {
+    final void writeBytes(int i, int i_0_, int i_1_, byte[] is) throws IOException {
         anInt5833++;
         aClass208_5837.method1528((byte) 5, i_1_, i, is);
         if (i_0_ < 89) method1708(-99, 31, -13, 83, (byte) 112, null);
@@ -148,7 +148,7 @@ final class TcpSocketStream extends SocketStream {
                         } else {
                             class348_sub9.aClass348_Sub16_Sub5_6673.method2915(i_9_);
                             class348_sub9.aClass348_Sub16_Sub5_6673.method2909(i_10_);
-                            if (!class348_sub9.aClass348_Sub16_Sub5_6673.method2712((byte) 4)) {
+                            if (!class348_sub9.aClass348_Sub16_Sub5_6673.isLinked((byte) 4)) {
                                 class348_sub9.aClass348_Sub10_6683 = null;
                                 class348_sub9.aClass348_Sub19_Sub1_6692 = null;
                                 class348_sub9.aClass348_Sub16_Sub5_6673 = null;
@@ -160,10 +160,10 @@ final class TcpSocketStream extends SocketStream {
         }
     }
 
-    final void method1700(byte i) {
+    final void close(byte i) {
         anInt5839++;
         try {
-            aSocket5836.close();
+            socket.close();
         } catch (IOException ioexception) {
             /* empty */
         }
@@ -171,28 +171,28 @@ final class TcpSocketStream extends SocketStream {
         if (i == 36) aClass208_5837.method1526((byte) -99);
     }
 
-    final int method1701(int i, int i_19_, byte i_20_, byte[] is) throws IOException {
+    final int readBytes(int i, int i_19_, byte i_20_, byte[] is) throws IOException {
         int i_21_ = 84 / ((-56 - i_20_) / 47);
         anInt5831++;
         return aClass376_5834.method3617(i, i_19_, 0, is);
     }
 
-    final boolean method1705(int i, int i_22_) throws IOException {
+    final boolean availableAtLeast(int i, int i_22_) throws IOException {
         if (i_22_ <= 91) aClass376_5834 = null;
         anInt5838++;
         return aClass376_5834.method3619(i, false);
     }
 
     TcpSocketStream(Socket socket, int i) throws IOException {
-        aSocket5836 = socket;
-        aSocket5836.setSoTimeout(30000);
-        aSocket5836.setTcpNoDelay(true);
-        aClass376_5834 = new Component239(aSocket5836.getInputStream(), i);
-        aClass208_5837 = new Component222(aSocket5836.getOutputStream(), i);
+        this.socket = socket;
+        socket.setSoTimeout(30000);
+        socket.setTcpNoDelay(true);
+        aClass376_5834 = new Component239(socket.getInputStream(), i);
+        aClass208_5837 = new Component222(socket.getOutputStream(), i);
     }
 
     protected final void finalize() {
         anInt5835++;
-        method1700((byte) 36);
+        close((byte) 36);
     }
 }

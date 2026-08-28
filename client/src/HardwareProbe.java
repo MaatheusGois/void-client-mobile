@@ -70,16 +70,16 @@ final class HardwareProbe extends Node {
         class348_sub49.writeByte(false, !aBoolean6607 ? 0 : 1);
         class348_sub49.writeShort((byte) 107, anInt6592);
         class348_sub49.writeByte(false, anInt6599);
-        class348_sub49.method3340(i ^ ~0x26b6, this.anInt6609);
+        class348_sub49.writeMedium(i ^ ~0x26b6, this.anInt6609);
         class348_sub49.writeShort((byte) 107, anInt6591);
         class348_sub49.writeByte(false, anInt6598);
         class348_sub49.writeByte(false, anInt6596);
         class348_sub49.writeByte(false, anInt6603);
-        class348_sub49.method3386(aString6604, 123);
-        class348_sub49.method3386(aString6614, -45);
-        class348_sub49.method3386(aString6610, 100);
+        class348_sub49.writeGjstr2(aString6604, 123);
+        class348_sub49.writeGjstr2(aString6614, -45);
+        class348_sub49.writeGjstr2(aString6610, 100);
         if (i == 1) {
-            class348_sub49.method3386(aString6597, -14);
+            class348_sub49.writeGjstr2(aString6597, -14);
             class348_sub49.writeByte(false, anInt6606);
             class348_sub49.writeShort((byte) 107, anInt6617);
         }

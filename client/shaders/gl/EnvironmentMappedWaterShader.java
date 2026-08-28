@@ -74,8 +74,8 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
             aBoolean7347 = false;
             anIDirect3DPixelShader7343 = null;
         } else {
-            anIDirect3DVertexShader7345 = (aClass378_7346.anIDirect3DDevice9810.b(class45.method391("dx", "environment_mapped_water_v", -29832)));
-            anIDirect3DPixelShader7343 = (aClass378_7346.anIDirect3DDevice9810.a(class45.method391("dx", "environment_mapped_water_f", -29832)));
+            anIDirect3DVertexShader7345 = (aClass378_7346.anIDirect3DDevice9810.b(class45.getFile("dx", "environment_mapped_water_v", -29832)));
+            anIDirect3DPixelShader7343 = (aClass378_7346.anIDirect3DDevice9810.a(class45.getFile("dx", "environment_mapped_water_f", -29832)));
             aBoolean7347 = (anIDirect3DVertexShader7345 != null && null != anIDirect3DPixelShader7343 && aClass269_7348.method2041((byte) 49));
         }
     }

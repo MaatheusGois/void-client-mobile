@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class107` (JODE-obfuscated).
- * Chaining hashtable of Node entries (node type HashNode). Provides get/put/remove via method1002/method1003/method1005/method1008/method1009. Used by NodeCache and many systems.
+ * Chaining hashtable of Node entries (node type HashNode). Provides get/put/remove via size/next/add/removeHead/clear. Used by NodeCache and many systems.
  */
 
 final class HashTable {
@@ -13,33 +13,33 @@ final class HashTable {
     static int anInt1644;
     static int anInt1645 = -2;
     static int anInt1646;
-    HashNode aClass348_Sub42_1647 = new HashNode();
+    HashNode sentinel = new HashNode();
     static int anInt1648;
     static int anInt1649;
     static int[] anIntArray1650 = new int[1000];
     static int anInt1651;
-    private HashNode aClass348_Sub42_1652;
+    private HashNode cursor;
     static int anInt1653;
     static int anInt1654;
     static int anInt1655;
 
-    final int method1002(int i) {
+    final int size(int i) {
         anInt1643++;
         int i_0_ = i;
-        for (HashNode class348_sub42 = (this.aClass348_Sub42_1647.aClass348_Sub42_7063); this.aClass348_Sub42_1647 != class348_sub42; class348_sub42 = class348_sub42.aClass348_Sub42_7063)
+        for (HashNode class348_sub42 = (this.sentinel.next); this.sentinel != class348_sub42; class348_sub42 = class348_sub42.next)
             i_0_++;
         return i_0_;
     }
 
-    final HashNode method1003(byte i) {
+    final HashNode next(byte i) {
         anInt1644++;
         if (i <= 41) return null;
-        HashNode class348_sub42 = aClass348_Sub42_1652;
-        if (class348_sub42 == this.aClass348_Sub42_1647) {
-            aClass348_Sub42_1652 = null;
+        HashNode class348_sub42 = cursor;
+        if (class348_sub42 == this.sentinel) {
+            cursor = null;
             return null;
         }
-        aClass348_Sub42_1652 = class348_sub42.aClass348_Sub42_7063;
+        cursor = class348_sub42.next;
         return class348_sub42;
     }
 
@@ -48,14 +48,14 @@ final class HashTable {
         if (i != 16) method1006(false, (byte) -62);
     }
 
-    final void method1005(boolean bool, HashNode class348_sub42) {
-        if (class348_sub42.aClass348_Sub42_7060 != null) class348_sub42.method3162(bool);
+    final void add(boolean bool, HashNode class348_sub42) {
+        if (class348_sub42.previous != null) class348_sub42.unlink(bool);
         anInt1654++;
-        class348_sub42.aClass348_Sub42_7063 = this.aClass348_Sub42_1647;
-        class348_sub42.aClass348_Sub42_7060 = (this.aClass348_Sub42_1647.aClass348_Sub42_7060);
+        class348_sub42.next = this.sentinel;
+        class348_sub42.previous = (this.sentinel.previous);
         if (bool == true) {
-            class348_sub42.aClass348_Sub42_7060.aClass348_Sub42_7063 = class348_sub42;
-            class348_sub42.aClass348_Sub42_7063.aClass348_Sub42_7060 = class348_sub42;
+            class348_sub42.previous.next = class348_sub42;
+            class348_sub42.next.previous = class348_sub42;
         }
     }
 
@@ -63,9 +63,9 @@ final class HashTable {
         anInt1655++;
         if (bool) {
             if (r.anInt9721 != -1) DisplayModeManagerContainer194.method235(r.anInt9721, (byte) -108);
-            for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0); class348_sub41 != null; class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3482(0))) {
-                if (!class348_sub41.method2712((byte) 4)) {
-                    class348_sub41 = ((NodeSub41) Component15.aClass356_4915.method3484(0));
+            for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = ((NodeSub41) Component15.aClass356_4915.next(0))) {
+                if (!class348_sub41.isLinked((byte) 4)) {
+                    class348_sub41 = ((NodeSub41) Component15.aClass356_4915.first(0));
                     if (class348_sub41 == null) break;
                 }
                 Component162.method1118(true, false, class348_sub41, 2533);
@@ -108,7 +108,7 @@ final class HashTable {
                     int i_7_ = 48 - (-(i_4_ / 128) - -(AbstractShaderSub4.anInt7319 * 2)) - -208;
                     int i_8_ = (208 - (ParametricDefinition.anInt9109 * 2 - 48) + 4 * ParametricDefinition.anInt9109 - i_3_ / 128);
                     Component83.aClass105_1664.method967(((float) class46.anInt709 / 2.0F + (float) i), ((float) class46.anInt789 / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
-                    for (NodeSub35 class348_sub35 = (NodeSub35) Component289.aClass262_10125.method1995(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (NodeSub35) Component289.aClass262_10125.method1990((byte) 92)) {
+                    for (NodeSub35 class348_sub35 = (NodeSub35) Component289.aClass262_10125.first(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (NodeSub35) Component289.aClass262_10125.next((byte) 92)) {
                         int i_9_ = class348_sub35.anInt6976;
                         int i_10_ = (-NodeBaseSub2.regionTileX + ((0xfffe5b0 & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
                         int i_11_ = (-Component330.regionTileY + (0x3fff & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])));
@@ -126,22 +126,22 @@ final class HashTable {
                         }
                         RenderableObject.method2385(class46, i_1_, var_aa, class51.anInt921, i_15_, i, (byte) -113, i_16_, var_ha);
                     }
-                    for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.method3484(i_2_ ^ 0x59b0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
-                        int i_17_ = (int) (0x3L & (class348_sub37.aLong4291) >> 28);
+                    for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.first(i_2_ ^ 0x59b0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.next(0))) {
+                        int i_17_ = (int) (0x3L & (class348_sub37.key) >> 28);
                         if (NativeLibLoader.anInt4155 == i_17_) {
-                            int i_18_ = (-NodeBaseSub2.regionTileX + (int) ((class348_sub37.aLong4291) & 0x3fffL));
-                            int i_19_ = (-Component330.regionTileY + (int) ((class348_sub37.aLong4291) >> 14 & 0x3fffL));
+                            int i_18_ = (-NodeBaseSub2.regionTileX + (int) ((class348_sub37.key) & 0x3fffL));
+                            int i_19_ = (-Component330.regionTileY + (int) ((class348_sub37.key) >> 14 & 0x3fffL));
                             int i_20_ = -(i_4_ / 128) + (2 + i_18_ * 4);
                             int i_21_ = -(i_3_ / 128) + (2 + i_19_ * 4);
                             DisplayModeManagerContainer346.method1211(i_1_, (NodeSub12.aClass105Array6742[0]), i, class46, var_aa, i_21_, i_2_ ^ 0x59b2, i_20_);
                         }
                     }
                     for (int i_22_ = 0; (i_22_ < Component324.anInt2057); i_22_++) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(DisplayModeManagerContainer238.anIntArray1233[i_22_], -6008)));
+                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_22_], -6008)));
                         if (class348_sub22 != null) {
-                            Npc npc = (class348_sub22.aNpc_6859);
+                            Npc npc = (class348_sub22.npc);
                             if (npc.method2445((byte) -126) && ((npc.plane) == (Component72.localPlayer.plane))) {
-                                DisplayModeManagerContainer206 class79 = (npc.aClass79_10505);
+                                DisplayModeManagerContainer206 class79 = (npc.definition);
                                 if (class79 != null && (class79.anIntArray1377 != null)) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
                                 if (class79 != null && class79.aBoolean1397 && class79.aBoolean1396) {
                                     int i_23_ = (-(i_4_ / 128) + (npc.x) / 128);
@@ -155,20 +155,20 @@ final class HashTable {
                     int i_25_ = ShaderCompilerSub1.anInt6513;
                     int[] is = ShaderProgramSub7.anIntArray6290;
                     for (int i_26_ = 0; i_26_ < i_25_; i_26_++) {
-                        Player player = (InterfaceRenderer.aPlayerArray5058[is[i_26_]]);
+                        Player player = (InterfaceRenderer.players[is[i_26_]]);
                         if (player != null && player.method2457((byte) 37) && !player.aBoolean10551 && (Component72.localPlayer != player) && (player.plane == (Component72.localPlayer.plane))) {
                             int i_27_ = (-(i_4_ / 128) + (player.x) / 128);
                             int i_28_ = (-(i_3_ / 128) + (player.y) / 128);
                             boolean bool = false;
                             for (int i_29_ = 0; (DefinitionSub30.anInt9383 > i_29_); i_29_++) {
-                                if ((player.aString10544.equals(Component178.aStringArray1441[i_29_])) && (GraphicsToolkit.anIntArray4578[i_29_] != 0)) {
+                                if ((player.username.equals(Component178.aStringArray1441[i_29_])) && (GraphicsToolkit.anIntArray4578[i_29_] != 0)) {
                                     bool = true;
                                     break;
                                 }
                             }
                             boolean bool_30_ = false;
                             for (int i_31_ = 0; NameFormatter.anInt496 > i_31_; i_31_++) {
-                                if (player.aString10544.equals(RequestProcessor.aClass19Array2261[i_31_].aString306)) {
+                                if (player.username.equals(RequestProcessor.aClass19Array2261[i_31_].aString306)) {
                                     bool_30_ = true;
                                     break;
                                 }
@@ -189,9 +189,9 @@ final class HashTable {
                         Component114 class302 = class302s[i_33_];
                         if (class302 != null && (class302.anInt3840 != 0) && OpenGlShader.clientCycle % 20 < 10) {
                             if (class302.anInt3840 == 1) {
-                                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(class302.anInt3833, -6008)));
+                                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
                                 if (class348_sub22 != null) {
-                                    Npc npc = (class348_sub22.aNpc_6859);
+                                    Npc npc = (class348_sub22.npc);
                                     int i_34_ = (-(i_4_ / 128) + (npc.x) / 128);
                                     int i_35_ = (-(i_3_ / 128) + (npc.y) / 128);
                                     DisplayModeManagerContainer260.method2181(360000L, i_1_, -125, i_35_, i, class46, i_34_, (class302.anInt3831), var_aa);
@@ -204,8 +204,8 @@ final class HashTable {
                                 l *= l;
                                 DisplayModeManagerContainer260.method2181(l, i_1_, -112, i_37_, i, class46, i_36_, (class302.anInt3831), var_aa);
                             }
-                            if ((class302.anInt3840 == 10) && class302.anInt3833 >= 0 && (class302.anInt3833 < (InterfaceRenderer.aPlayerArray5058).length)) {
-                                Player player = (InterfaceRenderer.aPlayerArray5058[class302.anInt3833]);
+                            if ((class302.anInt3840 == 10) && class302.anInt3833 >= 0 && (class302.anInt3833 < (InterfaceRenderer.players).length)) {
+                                Player player = (InterfaceRenderer.players[class302.anInt3833]);
                                 if (player != null) {
                                     int i_38_ = (-(i_4_ / 128) + (player.x) / 128);
                                     int i_39_ = (-(i_3_ / 128) + (player.y) / 128);
@@ -229,24 +229,24 @@ final class HashTable {
         }
     }
 
-    final HashNode method1008(int i) {
-        if (i != 20) aClass348_Sub42_1652 = null;
+    final HashNode removeHead(int i) {
+        if (i != 20) cursor = null;
         anInt1653++;
-        HashNode class348_sub42 = (this.aClass348_Sub42_1647.aClass348_Sub42_7063);
-        if (class348_sub42 == this.aClass348_Sub42_1647) return null;
-        class348_sub42.method3162(true);
+        HashNode class348_sub42 = (this.sentinel.next);
+        if (class348_sub42 == this.sentinel) return null;
+        class348_sub42.unlink(true);
         return class348_sub42;
     }
 
-    final void method1009(int i) {
+    final void clear(int i) {
         anInt1646++;
         if (i == 2110355138) {
             for (; ; ) {
-                HashNode class348_sub42 = (this.aClass348_Sub42_1647.aClass348_Sub42_7063);
-                if (this.aClass348_Sub42_1647 == class348_sub42) break;
-                class348_sub42.method3162(true);
+                HashNode class348_sub42 = (this.sentinel.next);
+                if (this.sentinel == class348_sub42) break;
+                class348_sub42.unlink(true);
             }
-            aClass348_Sub42_1652 = null;
+            cursor = null;
         }
     }
 
@@ -268,20 +268,20 @@ final class HashTable {
         if (bool != false) method1010(true, true);
     }
 
-    final HashNode method1011(int i) {
+    final HashNode first(int i) {
         if (i > -23) method1006(false, (byte) -34);
         anInt1649++;
-        HashNode class348_sub42 = (this.aClass348_Sub42_1647.aClass348_Sub42_7063);
-        if (class348_sub42 == this.aClass348_Sub42_1647) {
-            aClass348_Sub42_1652 = null;
+        HashNode class348_sub42 = (this.sentinel.next);
+        if (class348_sub42 == this.sentinel) {
+            cursor = null;
             return null;
         }
-        aClass348_Sub42_1652 = class348_sub42.aClass348_Sub42_7063;
+        cursor = class348_sub42.next;
         return class348_sub42;
     }
 
     public HashTable() {
-        this.aClass348_Sub42_1647.aClass348_Sub42_7060 = this.aClass348_Sub42_1647;
-        this.aClass348_Sub42_1647.aClass348_Sub42_7063 = this.aClass348_Sub42_1647;
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 }

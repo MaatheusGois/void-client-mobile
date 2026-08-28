@@ -61,7 +61,7 @@ final class SceneNode extends Node {
                             if (DefinitionSub5.aBoolean9121) {
                                 Component144.aClass315Array3982[GpsOverlay.anInt1949++].method2361(-15481, class318_sub1);
                                 GpsOverlay.anInt1949 %= DisplayModeManagerContainer216.anInt5652;
-                            } else class318_sub1.method2387(JaclibLoader.aHa171, -128);
+                            } else class318_sub1.method2387(JaclibLoader.toolkit, -128);
                         }
                     } else return false;
                 }
@@ -185,13 +185,13 @@ final class SceneNode extends Node {
                     int i_12_ = (DisplayModeManagerContainer345.method214((this.aNpc_6691), -1));
                     if (i_12_ != i_11_) {
                         this.anInt6685 = i_12_;
-                        DisplayModeManagerContainer206 class79 = (this.aNpc_6691.aClass79_10505);
+                        DisplayModeManagerContainer206 class79 = (this.aNpc_6691.definition);
                         if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                         if (class79 == null) {
                             this.anInt6677 = this.anInt6694 = 0;
                             this.anInt6681 = 256;
                             this.anInt6696 = 256;
-                            this.aBoolean6674 = this.aNpc_6691.aClass79_10505.aBoolean1370;
+                            this.aBoolean6674 = this.aNpc_6691.definition.aBoolean1370;
                         } else {
                             this.anInt6694 = class79.anInt1392 << 9;
                             this.anInt6681 = class79.anInt1363;

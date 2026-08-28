@@ -36,15 +36,15 @@ final class Component79
     final Node method2646(byte i) {
         anInt4149++;
         int i_4_ = -49 / ((i - 44) / 40);
-        if (anInt4148 > 0 && (aClass356_4146.aClass348Array4374[-1 + anInt4148] != aClass348_4150)) {
+        if (anInt4148 > 0 && (aClass356_4146.buckets[-1 + anInt4148] != aClass348_4150)) {
             Node class348 = aClass348_4150;
-            aClass348_4150 = class348.aClass348_4294;
+            aClass348_4150 = class348.next;
             return class348;
         }
-        while (aClass356_4146.anInt4377 > anInt4148) {
-            Node class348 = (aClass356_4146.aClass348Array4374[anInt4148++].aClass348_4294);
-            if (aClass356_4146.aClass348Array4374[anInt4148 + -1] != class348) {
-                aClass348_4150 = class348.aClass348_4294;
+        while (aClass356_4146.capacity > anInt4148) {
+            Node class348 = (aClass356_4146.buckets[anInt4148++].next);
+            if (aClass356_4146.buckets[anInt4148 + -1] != class348) {
+                aClass348_4150 = class348.next;
                 return class348;
             }
         }

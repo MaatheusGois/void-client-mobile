@@ -160,7 +160,7 @@ class GlTexture extends AbstractGlTexture {
     }
 
     static final void method1966(int i, int i_43_, int i_44_, int i_45_, byte i_46_, int i_47_, int i_48_, int i_49_, int i_50_) {
-        Component335.aClass338Array2034[RadixText.anInt6115++] = new Component103(i_47_, i_49_, i_50_, i, i, i_50_, i_45_, i_43_, i_43_, i_45_, i_44_, i_44_, i_48_, i_48_);
+        Component335.aClass338Array2034[RadixText.occluderCountA++] = new Component103(i_47_, i_49_, i_50_, i, i, i_50_, i_45_, i_43_, i_43_, i_45_, i_44_, i_44_, i_48_, i_48_);
         anInt8548++;
         if (i_46_ != 0) method1968();
     }
@@ -202,7 +202,7 @@ class GlTexture extends AbstractGlTexture {
                 int[] is_60_ = new int[i_59_ * i_58_];
                 PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_58_, i_59_, is_60_, 0, i_58_);
                 pixelgrabber.grabPixels();
-                return NodeSub8.aHa6654.method3662(i_58_, is_60_, (byte) 94, 0, i_58_, i_59_);
+                return NodeSub8.toolkit.method3662(i_58_, is_60_, (byte) 94, 0, i_58_, i_59_);
             } catch (InterruptedException interruptedexception) {
                 /* empty */
             }

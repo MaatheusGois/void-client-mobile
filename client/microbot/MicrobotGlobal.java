@@ -3,7 +3,7 @@ import java.util.concurrent.Callable;
 /**
  * Sleep / wait helpers for Microbot scripts (off the client thread).
  * <p>
- * Never call from {@link client#method114} — sleeping on the game thread freezes
+ * Never call from {@link client#processGameTick} — sleeping on the game thread freezes
  * rendering and packet IO. Scripts run on a daemon executor (~600 ms).
  * <p>
  * Uses a local {@link Condition} instead of {@code java.util.function.BooleanSupplier}

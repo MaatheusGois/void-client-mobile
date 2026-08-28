@@ -17,18 +17,18 @@ final class Component86
 
     final void method3585(int i) {
         anInt4530++;
-        if (i == 7271) aClass60_4531.method590(0);
+        if (i == 7271) aClass60_4531.clear(0);
     }
 
     final void method3586(int i) {
-        aClass60_4531.method578(2, 5);
+        aClass60_4531.processSoftEntries(2, 5);
         if (i != -16130) method3586(-94);
         anInt4527++;
     }
 
     final Interface18_Impl3 method3587(byte i, int i_0_) {
         anInt4529++;
-        Object object = aClass60_4531.method583(i_0_, 107);
+        Object object = aClass60_4531.get(i_0_, 107);
         if (object != null) return (Interface18_Impl3) object;
         if (!aD4528.method4(-7953, i_0_)) return null;
         if (i > -30) anInt4532 = 37;
@@ -45,7 +45,7 @@ final class Component86
             interface18_impl3 = aHa_Sub3_4526.method3839(i_1_, i_1_, -15137, class12.aByte205 != 0, is);
         }
         interface18_impl3.method66(class12.aBoolean217, class12.aBoolean215, 25688);
-        aClass60_4531.method582(interface18_impl3, i_0_, (byte) -107);
+        aClass60_4531.putOne(interface18_impl3, i_0_, (byte) -107);
         return interface18_impl3;
     }
 

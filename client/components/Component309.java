@@ -42,7 +42,7 @@ final class Component309
         anInt3351++;
         Component44 class51;
         synchronized (aClass60_3350) {
-            class51 = (Component44) aClass60_3350.method583(i_0_, i ^ 0x32);
+            class51 = (Component44) aClass60_3350.get(i_0_, i ^ 0x32);
         }
         if (class51 != null) return class51;
         byte[] is;
@@ -64,7 +64,7 @@ final class Component309
             class51.aBoolean896 = false;
         }
         synchronized (aClass60_3350) {
-            aClass60_3350.method582(class51, i_0_, (byte) -109);
+            aClass60_3350.putOne(class51, i_0_, (byte) -109);
         }
         return class51;
     }
@@ -247,30 +247,30 @@ final class Component309
         this.anInt3363 = i;
         anInt3348++;
         synchronized (this.aClass60_3360) {
-            this.aClass60_3360.method590(0);
+            this.aClass60_3360.clear(0);
         }
         synchronized (this.aClass60_3361) {
-            this.aClass60_3361.method590(0);
+            this.aClass60_3361.clear(0);
         }
         if (i_21_ < 94) anIntArray3347 = null;
         synchronized (this.aClass60_3362) {
-            this.aClass60_3362.method590(0);
+            this.aClass60_3362.clear(0);
         }
     }
 
     final void method2010(int i, int i_22_) {
         anInt3349++;
         synchronized (aClass60_3350) {
-            aClass60_3350.method578(2, i);
+            aClass60_3350.processSoftEntries(2, i);
         }
         synchronized (this.aClass60_3360) {
-            this.aClass60_3360.method578(i_22_ ^ ~0x2, i);
+            this.aClass60_3360.processSoftEntries(i_22_ ^ ~0x2, i);
         }
         synchronized (this.aClass60_3361) {
-            this.aClass60_3361.method578(i_22_ ^ ~0x2, i);
+            this.aClass60_3361.processSoftEntries(i_22_ ^ ~0x2, i);
         }
         synchronized (this.aClass60_3362) {
-            this.aClass60_3362.method578(2, i);
+            this.aClass60_3362.processSoftEntries(2, i);
             if (i_22_ != -1) method2013(null, (byte) 96);
         }
     }
@@ -283,17 +283,17 @@ final class Component309
 
     final void method2012(int i) {
         synchronized (aClass60_3350) {
-            aClass60_3350.method590(0);
+            aClass60_3350.clear(0);
         }
         anInt3356++;
         synchronized (this.aClass60_3360) {
-            this.aClass60_3360.method590(0);
+            this.aClass60_3360.clear(0);
         }
         synchronized (this.aClass60_3361) {
-            this.aClass60_3361.method590(0);
+            this.aClass60_3361.clear(0);
         }
         synchronized (this.aClass60_3362) {
-            this.aClass60_3362.method590(0);
+            this.aClass60_3362.clear(0);
         }
     }
 

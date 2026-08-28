@@ -138,12 +138,12 @@ abstract class DisplayModeManagerContainer213
     }
 
     static final void method545(int i, int i_49_) {
-        StringCache.aClass60_4327.method578(2, i);
+        StringCache.aClass60_4327.processSoftEntries(2, i);
         anInt1077++;
-        Component142.aClass60_4417.method578(2, i);
+        Component142.aClass60_4417.processSoftEntries(2, i);
         if (i_49_ != -1) aClass114_1068 = null;
-        ColoredText.aClass60_6096.method578(2, i);
-        DefinitionSub9.aClass60_9171.method578(i_49_ ^ ~0x2, i);
+        ColoredText.aClass60_6096.processSoftEntries(2, i);
+        DefinitionSub9.aClass60_9171.processSoftEntries(i_49_ ^ ~0x2, i);
     }
 
     abstract void method546(int i, int i_50_, int i_51_);
@@ -158,7 +158,7 @@ abstract class DisplayModeManagerContainer213
         if (i != 7468) method549((byte) 28, null, null, null);
         if (!Component385.aClass45_2208.method422("", string_53_, -88)) return -1;
         if (!Component385.aClass45_2208.method413(i ^ 0x1d48, string_53_)) return Component385.aClass45_2208.method397(string_53_, 0);
-        byte[] is = Component385.aClass45_2208.method391(string_53_, "", -29832);
+        byte[] is = Component385.aClass45_2208.getFile(string_53_, "", -29832);
         Object object = null;
         File file;
         try {
@@ -273,7 +273,7 @@ abstract class DisplayModeManagerContainer213
                     class348_sub12.anInt6753 = i_69_;
                     class348_sub12.anInt6747 = i_58_ - i_56_;
                     class348_sub12.anInt6745 = i_68_;
-                    Component156.aClass262_3705.method1999(class348_sub12, -20180);
+                    Component156.aClass262_3705.addTail(class348_sub12, -20180);
                 }
             }
         } catch (RuntimeException runtimeexception) {

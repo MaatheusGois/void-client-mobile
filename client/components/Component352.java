@@ -42,7 +42,7 @@ final class Component352
                                         if ((i_13_ == (OggStreamReader.anIntArray9042[i_14_])) && is[i_14_] != null) {
                                             Buffer class348_sub49 = new Buffer(is[i_14_]);
                                             class237_sub1.method1684(i_6_ * 8, i, -1, class348_sub49, i_12_, 8 * i_7_, i_11_, (NodeSub45.aClass361Array7108), i_10_, i_9_);
-                                            class237_sub1.method1696(class348_sub49, false, i_12_, i_11_, 8 * i_6_, i, i_10_, 8 * i_7_, NodeSub8.aHa6654, is_5_[0] != -1 ? null : is_5_, i_9_);
+                                            class237_sub1.method1696(class348_sub49, false, i_12_, i_11_, 8 * i_6_, i, i_10_, 8 * i_7_, NodeSub8.toolkit, is_5_[0] != -1 ? null : is_5_, i_9_);
                                             break;
                                         }
                                     }

@@ -65,9 +65,9 @@ final class CookieManager extends ShaderProgram {
         if (ToolkitFactory.anApplet1530 != null) {
             try {
                 String string = ToolkitFactory.anApplet1530.getParameter("cookiehost");
-                int i_3_ = (int) (Component240.method599(-74) / 86400000L) - 11745;
+                int i_3_ = (int) (Component240.currentTimeMillis(-74) / 86400000L) - 11745;
                 String string_4_ = ("usrdob=" + i_3_ + "; version=1; path=/; domain=" + string);
-                AppletInvoker.method1615(ToolkitFactory.anApplet1530, -15092, "document.cookie=\"" + string_4_ + "\"");
+                AppletInvoker.invokeApplet(ToolkitFactory.anApplet1530, -15092, "document.cookie=\"" + string_4_ + "\"");
             } catch (Throwable throwable) {
                 /* empty */
             }

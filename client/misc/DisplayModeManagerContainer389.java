@@ -38,9 +38,9 @@ final class DisplayModeManagerContainer389
             Task class144 = OggUrlStream.aClass297_8992.method2233((byte) -46, "", true);
             while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) -122, 1L);
             if (class144.anInt1997 == 1) {
-                class234 = (RandomAccessFileReader) class144.anObject1998;
+                class234 = (RandomAccessFileReader) class144.result;
                 Buffer class348_sub49 = Component192.aClass348_Sub51_3959.method3427(24);
-                class234.method1658((byte) 114, 0, (class348_sub49.anInt7197), (class348_sub49.aByteArray7154));
+                class234.write((byte) 114, 0, (class348_sub49.offset), (class348_sub49.payload));
             }
         } catch (Exception exception) {
             /* empty */
@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer389
             try {
                 if (i != 37) aDouble8621 = -0.46512114956219314;
                 if (class234 == null) break;
-                class234.method1657(false);
+                class234.close(false);
             } catch (Exception exception) {
                 break;
             }

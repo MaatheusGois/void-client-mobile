@@ -13,7 +13,7 @@ final class NodeSub45Sub1
     int anInt9728;
     int anInt9729;
 
-    final int method3310(int i) {
+    final int getEventType(int i) {
         if (i < 50) return 113;
         return this.anInt9728;
     }

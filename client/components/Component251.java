@@ -317,7 +317,7 @@ final class Component251
                     DisplayModeManagerContainer56 class190 = null;
                     int i_41_ = -112 / ((-71 - i_40_) / 38);
                     if (is != null) is[0] = -1;
-                    while (class348_sub49.anInt7197 < (class348_sub49.aByteArray7154).length) {
+                    while (class348_sub49.offset < (class348_sub49.payload).length) {
                         int i_42_ = class348_sub49.readUnsignedByte(255);
                         if (i_42_ == 0) class190 = new DisplayModeManagerContainer56(class348_sub49);
                         else if (i_42_ == 1) {
@@ -419,7 +419,7 @@ final class Component251
                             is[2] = class348_sub49.readShort(13638);
                             is[3] = class348_sub49.readShort(13638);
                             is[4] = class348_sub49.readUnsignedShort(842397944);
-                        } else class348_sub49.anInt7197 += 10;
+                        } else class348_sub49.offset += 10;
                     }
                     if (class190 != null) {
                         for (int i_64_ = 0; i_64_ < 8; i_64_++) {
@@ -457,7 +457,7 @@ final class Component251
             Buffer class348_sub49 = new Buffer(is);
             int i_80_ = -1;
             for (; ; ) {
-                int i_81_ = class348_sub49.method3334(-85);
+                int i_81_ = class348_sub49.readLargeSmart(-85);
                 if (i_81_ == 0) break;
                 i_80_ += i_81_;
                 int i_82_ = 0;
@@ -560,7 +560,7 @@ final class Component251
                 Buffer class348_sub49 = new Buffer(is);
                 int i_101_ = -1;
                 for (; ; ) {
-                    int i_102_ = class348_sub49.method3334(-57);
+                    int i_102_ = class348_sub49.readLargeSmart(-57);
                     if (i_102_ == 0) break;
                     i_101_ += i_102_;
                     int i_103_ = 0;
@@ -607,7 +607,7 @@ final class Component251
                     if (is != null) is[0] = -1;
                     int i_123_ = 8 * (0x7 & i_116_);
                     int i_124_ = (i & 0x7) * 8;
-                    while ((class348_sub49.aByteArray7154).length > class348_sub49.anInt7197) {
+                    while ((class348_sub49.payload).length > class348_sub49.offset) {
                         int i_125_ = class348_sub49.readUnsignedByte(255);
                         if (i_125_ != 0) {
                             if (i_125_ == 1) {
@@ -646,7 +646,7 @@ final class Component251
                                     is[2] = class348_sub49.readShort(13638);
                                     is[3] = class348_sub49.readShort(13638);
                                     is[4] = class348_sub49.readUnsignedShort(842397944);
-                                } else class348_sub49.anInt7197 += 10;
+                                } else class348_sub49.offset += 10;
                             } else if (i_125_ == 129) {
                                 if (this.aByteArrayArrayArray3104 == null) this.aByteArrayArrayArray3104 = new byte[4][][];
                                 for (int i_132_ = 0; i_132_ < 4; i_132_++) {

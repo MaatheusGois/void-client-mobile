@@ -49,7 +49,7 @@ final class InterfaceRenderer implements Interface16 {
     static int anInt5055;
     private Image anImage5056;
     static StringCache aClass351_5057 = new StringCache(10, -1);
-    static Player[] aPlayerArray5058 = new Player[2048];
+    static Player[] players = new Player[2048];
     private Image anImage5059;
     static Component103[] aClass338Array5060;
     static int anInt5061;
@@ -126,9 +126,9 @@ final class InterfaceRenderer implements Interface16 {
 
     public static void method2214(int i) {
         aClass351_5057 = null;
-        if (i != 0) aPlayerArray5058 = null;
+        if (i != 0) players = null;
         aClass338Array5060 = null;
-        aPlayerArray5058 = null;
+        players = null;
     }
 
     public final int method60(int i) {

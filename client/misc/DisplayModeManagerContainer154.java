@@ -29,7 +29,7 @@ final class DisplayModeManagerContainer154
         i_1_ += i * i_4_;
         i_2_ = -i_4_ + i_3_ >> 2;
         if (Component360.anInt4319 == 1) {
-            Component241.anInt2946 += i_2_;
+            Component241.occludedPixelCount += i_2_;
             while (--i_2_ >= 0) {
                 if (is[++i_5_] > i_1_) is[i_5_] = i_1_;
                 i_1_ += i;
@@ -92,14 +92,14 @@ final class DisplayModeManagerContainer154
             if (this.aBoolean1283) {
                 for (RenderableSub4 class318_sub4_7_ = ((RenderableSub4) this.aClass243_1282.method1872(8)); class318_sub4_7_ != null; class318_sub4_7_ = (RenderableSub4) this.aClass243_1282.method1878((byte) -103)) {
                     if (class318_sub1 == (class318_sub4_7_.aClass318_Sub1_6410)) {
-                        class318_sub4_7_.method2373(false);
+                        class318_sub4_7_.unlink(false);
                         Component350.method560(class318_sub4_7_, -41);
                     }
                 }
             }
             for (RenderableSub4 class318_sub4_8_ = ((RenderableSub4) this.aClass243_1282.method1872(8)); class318_sub4_8_ != null; class318_sub4_8_ = (RenderableSub4) this.aClass243_1282.method1878((byte) -44)) {
                 if (class318_sub1.anInt6389 >= class318_sub4_8_.aClass318_Sub1_6410.anInt6389) {
-                    DebugOverlay.method1883(class318_sub4_8_, class318_sub4, true);
+                    DebugOverlay.linkRenderable(class318_sub4_8_, class318_sub4, true);
                     return;
                 }
             }
@@ -112,7 +112,7 @@ final class DisplayModeManagerContainer154
         for (; ; ) {
             RenderableSub4 class318_sub4 = ((RenderableSub4) this.aClass243_1282.method1875(60));
             if (class318_sub4 == null) break;
-            class318_sub4.method2373(false);
+            class318_sub4.unlink(false);
             Component350.method560(class318_sub4, 123);
         }
         anInt1278++;

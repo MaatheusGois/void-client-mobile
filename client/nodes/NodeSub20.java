@@ -57,7 +57,7 @@ final class NodeSub20
         anInt6829++;
         int i_9_ = 0;
         Component182 class348_sub49_sub1 = aHa_Sub2_6831.aClass348_Sub49_Sub1_7798;
-        class348_sub49_sub1.anInt7197 = 0;
+        class348_sub49_sub1.offset = 0;
         if (aHa_Sub2_6831.aBoolean7775) {
             for (int i_10_ = 0; i_8_ > i_10_; i_10_++) {
                 int i_11_ = is[i_10_];
@@ -102,7 +102,7 @@ final class NodeSub20
             }
         }
         if (i_9_ > 0) {
-            aClass119_Sub2_6843.method35(class348_sub49_sub1.aByteArray7154, 5123, 64, class348_sub49_sub1.anInt7197);
+            aClass119_Sub2_6843.method35(class348_sub49_sub1.payload, 5123, 64, class348_sub49_sub1.offset);
             aHa_Sub2_6831.method3794(aS_Sub2_6839.aClass123_8276, aClass123_6844, -26411, aS_Sub2_6839.aClass123_8277, aS_Sub2_6839.aClass123_8275);
             aHa_Sub2_6831.method3746(((0x7 & aS_Sub2_6839.anInt8235) != 0), this.anInt6841, ((aS_Sub2_6839.anInt8235 & 0x8) != 0), 112);
             if (aHa_Sub2_6831.aBoolean7846) aHa_Sub2_6831.EA(2147483647, this.anInt6825, this.anInt6833, this.anInt6826);
@@ -196,10 +196,10 @@ final class NodeSub20
     static final void method2953(byte i) {
         if (i > -102) anIntArray6830 = null;
         anInt6836++;
-        if (Component49.clientState == 3) Buffer.method3379(2, 4);
+        if (Component49.clientState == 3) Buffer.setClientState(2, 4);
         else if (Component49.clientState != 7) {
-            if (Component49.clientState == 10) Buffer.method3379(2, 11);
-        } else Buffer.method3379(2, 8);
+            if (Component49.clientState == 10) Buffer.setClientState(2, 11);
+        } else Buffer.setClientState(2, 8);
     }
 
     NodeSub20(BufferCacheSub2 var_s_Sub2, int i, int i_38_, int i_39_, int i_40_, int i_41_) {

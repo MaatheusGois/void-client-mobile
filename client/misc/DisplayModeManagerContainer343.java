@@ -33,16 +33,16 @@ abstract class DisplayModeManagerContainer343
                     class348_sub49.writeInt((byte) 124, DisplayModeManagerContainer123.anIntArray1303[i_1_]);
                 }
             }
-            class234.method1658((byte) 117, 0, class348_sub49.anInt7197, (class348_sub49.aByteArray7154));
+            class234.write((byte) 117, 0, class348_sub49.offset, (class348_sub49.payload));
         } catch (Exception exception) {
             /* empty */
         }
         try {
-            if (class234 != null) class234.method1657(false);
+            if (class234 != null) class234.close(false);
         } catch (Exception exception) {
             /* empty */
         }
-        Component225.aLong482 = Component240.method599(-117);
+        Component225.aLong482 = Component240.currentTimeMillis(-117);
         Component357.aBoolean2469 = false;
     }
 

@@ -249,7 +249,7 @@ final class NumberFormatter {
             if (class17 != null) i_27_ |= class17.method263(i_24_, 105, i_22_, true);
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass255_2761.aClass60_3287) {
-                class64 = (DisplayModeManagerContainer370) (this.aClass255_2761.aClass60_3287.method583(var_ha.anInt4567 << 29 | this.anInt2769, 69));
+                class64 = (DisplayModeManagerContainer370) (this.aClass255_2761.aClass60_3287.get(var_ha.anInt4567 << 29 | this.anInt2769, 69));
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_27_) != 0) {
                 if (class64 != null) i_27_ = var_ha.method3679(i_27_, class64.ua());
@@ -283,7 +283,7 @@ final class NumberFormatter {
                 }
                 class64.s(i_27_);
                 synchronized (this.aClass255_2761.aClass60_3287) {
-                    this.aClass255_2761.aClass60_3287.method582(class64, var_ha.anInt4567 << 29 | this.anInt2769, (byte) -111);
+                    this.aClass255_2761.aClass60_3287.putOne(class64, var_ha.anInt4567 << 29 | this.anInt2769, (byte) -111);
                 }
             }
             if (class17 != null) class64 = class17.method269(116, class64, i_24_, i_20_, i_27_, i_22_);
@@ -312,7 +312,7 @@ final class NumberFormatter {
             anInt2751++;
             if (this.aClass356_2757 == null) return string;
             if (i_36_ != -1511086397) method1569(25, null);
-            NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_2757.method3480(i, i_36_ ^ 0x5a114e4b));
+            NodeSub50 class348_sub50 = ((NodeSub50) this.aClass356_2757.get(i, i_36_ ^ 0x5a114e4b));
             if (class348_sub50 == null) return string;
             return class348_sub50.aString7211;
         } catch (RuntimeException runtimeexception) {
@@ -548,7 +548,7 @@ final class NumberFormatter {
                                                                         Node class348;
                                                                         if (bool) class348 = new NodeSub50(class348_sub49.readString((byte) 107));
                                                                         else class348 = new NodeSub35(class348_sub49.readInt((byte) -126));
-                                                                        this.aClass356_2757.method3483((byte) 76, i_67_, class348);
+                                                                        this.aClass356_2757.put((byte) 76, i_67_, class348);
                                                                     }
                                                                 }
                                                             } else this.anInt2812 = class348_sub49.readUnsignedShort(i + 842397940);
@@ -573,7 +573,7 @@ final class NumberFormatter {
     final int method1567(int i, int i_70_, int i_71_) {
         anInt2793++;
         if (this.aClass356_2757 == null) return i;
-        NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_2757.method3480(i_71_, -6008));
+        NodeSub35 class348_sub35 = ((NodeSub35) this.aClass356_2757.get(i_71_, -6008));
         if (class348_sub35 == null) return i;
         int i_72_ = 56 % ((-32 - i_70_) / 50);
         return class348_sub35.anInt6976;

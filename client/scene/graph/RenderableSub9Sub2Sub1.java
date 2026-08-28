@@ -21,7 +21,7 @@ final class RenderableSub9Sub2Sub1
         this.aClass318_Sub7_10419.aClass318_Sub10_6439.aClass318_Sub9_Sub2_Sub1Array6475[aShort10416] = null;
         Component256.aClass318_Sub9_Sub2_Sub1Array6103[client.anInt5171] = this;
         client.anInt5171 = client.anInt5171 + 1 & 0x3ff;
-        this.method2373(false);
+        this.unlink(false);
         this.method2514(-108);
     }
 
@@ -202,8 +202,8 @@ final class RenderableSub9Sub2Sub1
                 anInt10421 -= (long) anInt10421 * l_38_ >> 28;
             }
             if (class181.anIntArray2402 != null) {
-                Node class348 = (class318_sub10.aClass262_6479.aClass348_3334);
-                for (Node class348_39_ = class348.aClass348_4294; class348_39_ != class348; class348_39_ = class348_39_.aClass348_4294) {
+                Node class348 = (class318_sub10.aClass262_6479.sentinel);
+                for (Node class348_39_ = class348.next; class348_39_ != class348; class348_39_ = class348_39_.next) {
                     HashNodeSub20 class348_sub42_sub20 = (HashNodeSub20) class348_39_;
                     RadixParser class174 = (class348_sub42_sub20.aClass174_9704);
                     if (class174.anInt2296 != 1) {
@@ -315,7 +315,7 @@ final class RenderableSub9Sub2Sub1
                     class181.anIntArray2385 = new int[class181.anIntArray2395.length];
                     for (int i_63_ = 0; i_63_ < class181.anIntArray2395.length; i_63_++) {
                         Component52.method1943(false, (class181.anIntArray2395[i_63_]));
-                        class181.anIntArray2385[i_63_] = ((NodeSub35) Component317.aClass356_8679.method3480(class181.anIntArray2395[i_63_], -6008)).anInt6976;
+                        class181.anIntArray2385[i_63_] = ((NodeSub35) Component317.aClass356_8679.get(class181.anIntArray2395[i_63_], -6008)).anInt6976;
                     }
                 }
                 for (int i_64_ = 0; i_64_ < class181.anIntArray2385.length; i_64_++) {

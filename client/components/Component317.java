@@ -26,7 +26,7 @@ final class Component317
         for (int i_1_ = 0; i_0_ > i_1_; i_1_++) {
             BasicMouseHandler.aClass283Array7446[i_1_] = new Component69();
             BasicMouseHandler.aClass283Array7446[i_1_].anInt3657 = class348_sub49.readSmart(-124);
-            BasicMouseHandler.aClass283Array7446[i_1_].aString3663 = class348_sub49.method3371(-13487);
+            BasicMouseHandler.aClass283Array7446[i_1_].aString3663 = class348_sub49.readGjstr2(-13487);
         }
         DisplayModeManagerContainer343.anInt8731 = class348_sub49.readSmart(-127);
         Component284.anInt6151 = class348_sub49.readSmart(-119);
@@ -38,8 +38,8 @@ final class Component317
             class110_sub1.anInt1711 = class348_sub49.readUnsignedByte(255);
             class110_sub1.anInt1708 = class348_sub49.readInt((byte) -126);
             class110_sub1.anInt5786 = DisplayModeManagerContainer343.anInt8731 + i_3_;
-            class110_sub1.aString5787 = class348_sub49.method3371(-13487);
-            class110_sub1.aString5794 = class348_sub49.method3371(-13487);
+            class110_sub1.aString5787 = class348_sub49.readGjstr2(-13487);
+            class110_sub1.aString5794 = class348_sub49.readGjstr2(-13487);
         }
         Component364.anInt8349 = class348_sub49.readInt((byte) -126);
         Component195.aBoolean5013 = true;
@@ -96,13 +96,13 @@ final class Component317
 
     static final void method573(HashNode class348_sub42, HashNode class348_sub42_15_, byte i) {
         try {
-            if (class348_sub42.aClass348_Sub42_7060 != null) class348_sub42.method3162(true);
+            if (class348_sub42.previous != null) class348_sub42.unlink(true);
             anInt8680++;
-            class348_sub42.aClass348_Sub42_7060 = class348_sub42_15_;
-            class348_sub42.aClass348_Sub42_7063 = class348_sub42_15_.aClass348_Sub42_7063;
+            class348_sub42.previous = class348_sub42_15_;
+            class348_sub42.next = class348_sub42_15_.next;
             if (i != 63) anInt8685 = 110;
-            class348_sub42.aClass348_Sub42_7060.aClass348_Sub42_7063 = class348_sub42;
-            class348_sub42.aClass348_Sub42_7063.aClass348_Sub42_7060 = class348_sub42;
+            class348_sub42.previous.next = class348_sub42;
+            class348_sub42.next.previous = class348_sub42;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("wd.F(" + (class348_sub42 != null ? "{...}" : "null") + ',' + (class348_sub42_15_ != null ? "{...}" : "null") + ',' + i + ')'));
         }

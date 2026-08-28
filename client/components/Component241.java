@@ -52,7 +52,7 @@ final class Component241
     int anInt2943;
     static Component75 aClass173_2944;
     int anInt2945;
-    static int anInt2946 = 0;
+    static int occludedPixelCount = 0;
     int anInt2947;
     int anInt2948;
     int anInt2949;

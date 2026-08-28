@@ -4,14 +4,15 @@
 
 /**
  * RENAMED from `Class356` (JODE-obfuscated).
- * LRU cache of Node entries keyed by long. Uses a bucket array (aClass348Array4374) with head/tail nodes (aClass348_4389/4390) and a capacity (anInt4391).
+ * LRU cache of Node entries keyed by long. Bucket array {@link #buckets} (length {@link #capacity});
+ * {@link #lookupCursor} / {@link #iteratorCursor} / {@link #iteratorIndex} for get/iteration walks.
  */
 
 final class LruCache {
-    Node[] aClass348Array4374;
+    Node[] buckets;
     static int anInt4375;
     static int anInt4376;
-    int anInt4377;
+    int capacity;
     static int anInt4378;
     static int anInt4379;
     static int anInt4380;
@@ -23,41 +24,44 @@ final class LruCache {
     static int anInt4386;
     static int anInt4387;
     static Component183 aClass114_4388 = new Component183(3, 3);
-    private Node aClass348_4389;
-    private Node aClass348_4390;
-    private int anInt4391 = 0;
+    /** Cursor for {@link #get} / {@link #continueGet} bucket walks. */
+    private Node lookupCursor;
+    /** Cursor for {@link #first} / {@link #next} iteration. */
+    private Node iteratorCursor;
+    /** Bucket index for iterator ({@link #first}/{@link #next}). */
+    private int iteratorIndex = 0;
 
-    final int method3474(int i) {
+    final int size(int i) {
         if (i != 1) method3479(20);
         anInt4387++;
         int i_0_ = 0;
-        for (int i_1_ = 0; this.anInt4377 > i_1_; i_1_++) {
-            Node class348 = this.aClass348Array4374[i_1_];
-            for (Node class348_2_ = class348.aClass348_4294; class348 != class348_2_; class348_2_ = class348_2_.aClass348_4294)
+        for (int i_1_ = 0; this.capacity > i_1_; i_1_++) {
+            Node class348 = this.buckets[i_1_];
+            for (Node class348_2_ = class348.next; class348 != class348_2_; class348_2_ = class348_2_.next)
                 i_0_++;
         }
         return i_0_;
     }
 
-    final int method3475(boolean bool) {
+    final int getCapacity(boolean bool) {
         anInt4376++;
         if (bool != true) method3478(false);
-        return this.anInt4377;
+        return this.capacity;
     }
 
-    final Node method3476(boolean bool) {
+    final Node continueGet(boolean bool) {
         anInt4384++;
-        if (aClass348_4389 == null) return null;
-        Node class348 = (this.aClass348Array4374[(int) ((long) (this.anInt4377 - 1) & aLong4385)]);
+        if (lookupCursor == null) return null;
+        Node class348 = (this.buckets[(int) ((long) (this.capacity - 1) & aLong4385)]);
         if (bool != true) method3479(4);
-        for (/**/; aClass348_4389 != class348; aClass348_4389 = aClass348_4389.aClass348_4294) {
-            if (aClass348_4389.aLong4291 == aLong4385) {
-                Node class348_3_ = aClass348_4389;
-                aClass348_4389 = aClass348_4389.aClass348_4294;
+        for (/**/; lookupCursor != class348; lookupCursor = lookupCursor.next) {
+            if (lookupCursor.key == aLong4385) {
+                Node class348_3_ = lookupCursor;
+                lookupCursor = lookupCursor.next;
                 return class348_3_;
             }
         }
-        aClass348_4389 = null;
+        lookupCursor = null;
         return null;
     }
 
@@ -65,9 +69,9 @@ final class LruCache {
         if (i != 3) anInt4383 = -76;
         anInt4380++;
         int i_4_ = 0;
-        for (int i_5_ = 0; this.anInt4377 > i_5_; i_5_++) {
-            Node class348 = this.aClass348Array4374[i_5_];
-            for (Node class348_6_ = class348.aClass348_4294; class348 != class348_6_; class348_6_ = class348_6_.aClass348_4294)
+        for (int i_5_ = 0; this.capacity > i_5_; i_5_++) {
+            Node class348 = this.buckets[i_5_];
+            for (Node class348_6_ = class348.next; class348 != class348_6_; class348_6_ = class348_6_.next)
                 class348s[i_4_++] = class348_6_;
         }
         return i_4_;
@@ -89,86 +93,86 @@ final class LruCache {
         return null;
     }
 
-    final Node method3480(long l, int i) {
+    final Node get(long l, int i) {
         try {
             aLong4385 = l;
             anInt4379++;
-            Node class348 = (this.aClass348Array4374[(int) (l & (long) (this.anInt4377 + -1))]);
-            if (i != -6008) method3484(80);
-            for (aClass348_4389 = class348.aClass348_4294; aClass348_4389 != class348; aClass348_4389 = aClass348_4389.aClass348_4294) {
-                if (l == aClass348_4389.aLong4291) {
-                    Node class348_7_ = aClass348_4389;
-                    aClass348_4389 = aClass348_4389.aClass348_4294;
+            Node class348 = (this.buckets[(int) (l & (long) (this.capacity + -1))]);
+            if (i != -6008) first(80);
+            for (lookupCursor = class348.next; lookupCursor != class348; lookupCursor = lookupCursor.next) {
+                if (l == lookupCursor.key) {
+                    Node class348_7_ = lookupCursor;
+                    lookupCursor = lookupCursor.next;
                     return class348_7_;
                 }
             }
-            aClass348_4389 = null;
+            lookupCursor = null;
             return null;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "eq.C(" + l + ',' + i + ')');
         }
     }
 
-    final void method3481(int i) {
+    final void clear(int i) {
         anInt4375++;
-        for (int i_8_ = i; this.anInt4377 > i_8_; i_8_++) {
-            Node class348 = this.aClass348Array4374[i_8_];
+        for (int i_8_ = i; this.capacity > i_8_; i_8_++) {
+            Node class348 = this.buckets[i_8_];
             for (; ; ) {
-                Node class348_9_ = class348.aClass348_4294;
+                Node class348_9_ = class348.next;
                 if (class348_9_ == class348) break;
-                class348_9_.method2715((byte) 54);
+                class348_9_.unlink((byte) 54);
             }
         }
-        aClass348_4389 = null;
-        aClass348_4390 = null;
+        lookupCursor = null;
+        iteratorCursor = null;
     }
 
-    final Node method3482(int i) {
+    final Node next(int i) {
         anInt4381++;
-        if (anInt4391 > i && (aClass348_4390 != this.aClass348Array4374[-1 + anInt4391])) {
-            Node class348 = aClass348_4390;
-            aClass348_4390 = class348.aClass348_4294;
+        if (iteratorIndex > i && (iteratorCursor != this.buckets[-1 + iteratorIndex])) {
+            Node class348 = iteratorCursor;
+            iteratorCursor = class348.next;
             return class348;
         }
-        while (this.anInt4377 > anInt4391) {
-            Node class348 = (this.aClass348Array4374[anInt4391++].aClass348_4294);
-            if (this.aClass348Array4374[-1 + anInt4391] != class348) {
-                aClass348_4390 = class348.aClass348_4294;
+        while (this.capacity > iteratorIndex) {
+            Node class348 = (this.buckets[iteratorIndex++].next);
+            if (this.buckets[-1 + iteratorIndex] != class348) {
+                iteratorCursor = class348.next;
                 return class348;
             }
         }
         return null;
     }
 
-    final void method3483(byte i, long l, Node class348) {
+    final void put(byte i, long l, Node class348) {
         try {
             anInt4382++;
-            if (i < 18) method3481(71);
-            if (class348.aClass348_4295 != null) class348.method2715((byte) 57);
-            Node class348_10_ = (this.aClass348Array4374[(int) (l & (long) (-1 + this.anInt4377))]);
-            class348.aClass348_4294 = class348_10_;
-            class348.aClass348_4295 = class348_10_.aClass348_4295;
-            class348.aClass348_4295.aClass348_4294 = class348;
-            class348.aClass348_4294.aClass348_4295 = class348;
-            class348.aLong4291 = l;
+            if (i < 18) clear(71);
+            if (class348.previous != null) class348.unlink((byte) 57);
+            Node class348_10_ = (this.buckets[(int) (l & (long) (-1 + this.capacity))]);
+            class348.next = class348_10_;
+            class348.previous = class348_10_.previous;
+            class348.previous.next = class348;
+            class348.next.previous = class348;
+            class348.key = l;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("eq.K(" + i + ',' + l + ',' + (class348 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final Node method3484(int i) {
-        anInt4391 = i;
+    final Node first(int i) {
+        iteratorIndex = i;
         anInt4386++;
-        return method3482(0);
+        return next(0);
     }
 
     LruCache(int i) {
-        this.anInt4377 = i;
-        this.aClass348Array4374 = new Node[i];
+        this.capacity = i;
+        this.buckets = new Node[i];
         for (int i_11_ = 0; i > i_11_; i_11_++) {
-            Node class348 = this.aClass348Array4374[i_11_] = new Node();
-            class348.aClass348_4294 = class348;
-            class348.aClass348_4295 = class348;
+            Node class348 = this.buckets[i_11_] = new Node();
+            class348.next = class348;
+            class348.previous = class348;
         }
     }
 }

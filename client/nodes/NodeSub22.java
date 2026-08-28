@@ -11,7 +11,7 @@ final class NodeSub22
  */ extends Node {
     static int anInt6857;
     static int anInt6858;
-    Npc aNpc_6859;
+    Npc npc;
     static int anInt6860;
     static int anInt6861;
     static int anInt6862;
@@ -49,17 +49,17 @@ final class NodeSub22
     }
 
     static final void method2959(int i) {
-        Component280.aClass346_2449.method2698(14174);
+        Component280.aClass346_2449.reset(14174);
         anInt6860++;
         AbstractGlTextureSub4.mouseHandler.destroy(0);
         DisplayModeManagerContainer206.aClient1367.method87((byte) -49);
         DisplayModeManagerContainer50.gameCanvas.setBackground(Color.black);
         Component244.anInt4179 = i;
         Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) 84);
-        AbstractGlTextureSub4.mouseHandler = NodeSub18.method2941(DisplayModeManagerContainer50.gameCanvas, 0, true);
+        AbstractGlTextureSub4.mouseHandler = NodeSub18.createMouseHandler(DisplayModeManagerContainer50.gameCanvas, 0, true);
     }
 
     NodeSub22(Npc npc) {
-        this.aNpc_6859 = npc;
+        this.npc = npc;
     }
 }

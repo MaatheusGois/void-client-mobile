@@ -94,7 +94,7 @@ final class DisplayModeManagerContainer196
     static final void method2681(int i) {
         if (i == 9864) {
             anInt4230++;
-            if (NodeSub8.aHa6654 != null) {
+            if (NodeSub8.toolkit != null) {
                 if (Component210.aBoolean5300) Component38.method1406(true);
                 DisplayModeManagerContainer5.aClass76_1208.method775((byte) 69);
                 DisplayModeManagerContainer58.method2433();
@@ -109,14 +109,14 @@ final class DisplayModeManagerContainer196
                 Component239.method3616(12639);
                 HashNodeSub3.method3177(-78, false);
                 for (int i_12_ = 0; i_12_ < 2048; i_12_++) {
-                    Player player = (InterfaceRenderer.aPlayerArray5058[i_12_]);
+                    Player player = (InterfaceRenderer.players[i_12_]);
                     if (player != null) {
                         for (int i_13_ = 0; ((player.aClass64Array10323).length > i_13_); i_13_++)
                             player.aClass64Array10323[i_13_] = null;
                     }
                 }
                 for (int i_14_ = 0; i_14_ < NodeSub32.anInt6930; i_14_++) {
-                    Npc npc = (DefinitionSub23.aClass348_Sub22Array9319[i_14_].aNpc_6859);
+                    Npc npc = (DefinitionSub23.aClass348_Sub22Array9319[i_14_].npc);
                     if (npc != null) {
                         for (int i_15_ = 0; i_15_ < (npc.aClass64Array10323).length; i_15_++)
                             npc.aClass64Array10323[i_15_] = null;
@@ -124,8 +124,8 @@ final class DisplayModeManagerContainer196
                 }
                 Cp1252Decoder.aClass101_5209 = null;
                 Component270.aClass101_2123 = null;
-                NodeSub8.aHa6654.method3635((byte) 64);
-                NodeSub8.aHa6654 = null;
+                NodeSub8.toolkit.method3635((byte) 64);
+                NodeSub8.toolkit = null;
             }
         }
     }

@@ -101,7 +101,7 @@ final class NodeSub13
                 if (bool_21_) i_15_ |= 0x400;
             }
             long l = method2802((class154 != null ? class154.anIntArray2095 : null), i, bool, is, (byte) -74);
-            if (Connection.aClass60_2671 != null) class64 = (DisplayModeManagerContainer370) Connection.aClass60_2671.method583(l, i_14_ ^ 0x56);
+            if (Connection.aClass60_2671 != null) class64 = (DisplayModeManagerContainer370) Connection.aClass60_2671.get(l, i_14_ ^ 0x56);
             if (class64 == null || var_ha.method3667(class64.ua(), i_15_) != 0) {
                 if (class64 != null) i_15_ = var_ha.method3679(i_15_, class64.ua());
                 int i_28_ = i_15_;
@@ -140,7 +140,7 @@ final class NodeSub13
                 }
                 if (Connection.aClass60_2671 != null) {
                     class64.s(i_15_);
-                    Connection.aClass60_2671.method582(class64, l, (byte) -128);
+                    Connection.aClass60_2671.putOne(class64, l, (byte) -128);
                 }
             }
             if (class17 == null || class348_sub42_sub17 == null) return class64;

@@ -138,10 +138,10 @@ final class Component263
     static final void method876(int i, int i_23_) {
         anInt1557++;
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-            DisplayModeManagerContainer310.aClass60_355.method578(2, i);
+            DisplayModeManagerContainer310.aClass60_355.processSoftEntries(2, i);
         }
         synchronized (Component387.aClass60_1894) {
-            Component387.aClass60_1894.method578(2, i);
+            Component387.aClass60_1894.processSoftEntries(2, i);
             if (i_23_ != 0) method876(51, 108);
         }
     }

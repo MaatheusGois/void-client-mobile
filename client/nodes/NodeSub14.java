@@ -20,7 +20,7 @@ final class NodeSub14
         anInt6765++;
         try {
             InflaterDecompressor class152 = new InflaterDecompressor();
-            byte[] is = class152.method1214(9, HashNodeSub14.aByteArray9622);
+            byte[] is = class152.decompress(9, HashNodeSub14.aByteArray9622);
             int i_0_ = 19 % ((19 - i) / 43);
             GlTexture.method1969(is, -5901);
             return true;
@@ -65,7 +65,7 @@ final class NodeSub14
             DisplayModeManagerContainer249.anInt4665++;
         }
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(i + Component330.regionTileY, (byte) 3);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByteAdd((byte) 78, !Component280.aClass346_2449.method2696(82, -124) ? 0 : 1);
+        class348_sub47.aClass348_Sub49_Sub2_7116.writeByteAdd((byte) 78, !Component280.aClass346_2449.isKeyDown(82, -124) ? 0 : 1);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(-124, NodeBaseSub2.regionTileX + i_2_);
         Component253.anInt3203 = i_2_;
         if (i_3_ >= -88) aClass351_6764 = null;
@@ -167,7 +167,7 @@ final class NodeSub14
             var_ha.GA(-16777215);
             Component160.method3466(-86);
             DefinitionSub38.anInt9479 = 0;
-            Component289.aClass262_10125.method1996(116);
+            Component289.aClass262_10125.clear(116);
             if (!Component121.aBoolean4542) {
                 for (int i_37_ = i_5_; 104 + i_5_ > i_37_; i_37_++) {
                     for (int i_38_ = i_6_; 104 + i_6_ > i_38_; i_38_++) {
@@ -228,11 +228,11 @@ final class NodeSub14
                         if ((Component72.localPlayer.plane) == i_52_ >> 28) {
                             int i_53_ = ((i_52_ >> 14 & 0x3fff) - NodeBaseSub2.regionTileX);
                             int i_54_ = (i_52_ & 0x3fff) + -Component330.regionTileY;
-                            if (i_53_ >= 0 && i_53_ < AbstractShaderSub4.anInt7319 && i_54_ >= 0 && (ParametricDefinition.anInt9109 > i_54_)) Component289.aClass262_10125.method1999(new NodeSub35(i_51_), -20180);
+                            if (i_53_ >= 0 && i_53_ < AbstractShaderSub4.anInt7319 && i_54_ >= 0 && (ParametricDefinition.anInt9109 > i_54_)) Component289.aClass262_10125.addTail(new NodeSub35(i_51_), -20180);
                             else {
                                 Component274 class42 = (DisplayModeManagerContainer64.aClass153_9031.method1225((CacheNodeSub2.aClass252_10488.anIntArray3239[i_51_]), (byte) 120));
                                 if (class42.anIntArray591 != null && (i_53_ + class42.anInt595 >= 0) && (AbstractShaderSub4.anInt7319 > class42.anInt603 + i_53_) && i_54_ + class42.anInt570 >= 0 && (ParametricDefinition.anInt9109 > (i_54_ - -class42.anInt607)))
-                                    Component289.aClass262_10125.method1999(new NodeSub35(i_51_), -20180);
+                                    Component289.aClass262_10125.addTail(new NodeSub35(i_51_), -20180);
                             }
                         }
                     }

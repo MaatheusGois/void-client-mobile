@@ -47,7 +47,7 @@ final class Component244
         anInt4180++;
         if (i != 26) return null;
         Component118 class288 = Component383.method2189(class348_sub49, i + 59);
-        int i_3_ = class348_sub49.method3369((byte) 125);
+        int i_3_ = class348_sub49.readSignedMedium((byte) 125);
         return new Component383(class288.anInt4958, class288.aClass221_4955, class288.aClass341_4952, class288.anInt4950, class288.anInt4951, i_3_);
     }
 }

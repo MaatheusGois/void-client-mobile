@@ -15,13 +15,13 @@ final class LoadingManager {
     static int anInt2174;
     static int anInt2175;
 
-    static final void method1277(byte i) {
+    static final void clearDefinitionCaches(byte i) {
         anInt2175++;
-        StringCache.aClass60_4327.method590(i + -62);
-        Component142.aClass60_4417.method590(0);
-        ColoredText.aClass60_6096.method590(0);
-        if (i != 62) method1277((byte) 43);
-        DefinitionSub9.aClass60_9171.method590(0);
+        StringCache.aClass60_4327.clear(i + -62);
+        Component142.aClass60_4417.clear(0);
+        ColoredText.aClass60_6096.clear(0);
+        if (i != 62) clearDefinitionCaches((byte) 43);
+        DefinitionSub9.aClass60_9171.clear(0);
     }
 
     static final int method1278(int i) {
@@ -38,7 +38,7 @@ final class LoadingManager {
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1018) {
             Runtime runtime = Runtime.getRuntime();
             int i_1_ = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);
-            long l = Component240.method599(i + 28559);
+            long l = Component240.currentTimeMillis(i + 28559);
             if (NpcDefinition.aLong6791 == 0) NpcDefinition.aLong6791 = l;
             if (i_1_ > 16384 && -NpcDefinition.aLong6791 + l < 5000) {
                 if (-Component75.aLong2286 + l > 1000L) {
@@ -49,8 +49,8 @@ final class LoadingManager {
             }
         }
         if (LoadingState.aClass56_1023 == RSARequest.aClass56_9660) {
-            if (Component143.aClass340_2327 == null) Component143.aClass340_2327 = new CacheFileStore(HardwareProbe.aClass248_6601, DisplayModeManagerContainer271.aClass112_520, RSACipher.aBigInteger4896, RSARequest.aBigInteger9657);
-            if (!Component143.aClass340_2327.method2674(7)) return 0;
+            if (Component143.aClass340_2327 == null) Component143.aClass340_2327 = new CacheFileStore(HardwareProbe.aClass248_6601, DisplayModeManagerContainer271.aClass112_520, RSACipher.rsaPublicExponent, RSARequest.aBigInteger9657);
+            if (!Component143.aClass340_2327.isReady(7)) return 0;
             OggStream.method2965(null, 0, true, 0);
             // Prefer Component170 sprites over JPEG Toolkit path (wrong colors on Android).
             ShaderProgramSub7.aBoolean6289 = true;
@@ -90,9 +90,9 @@ final class LoadingManager {
                 if (Component280.anInterface16Array2447[0].method60(-19079) < 100) return 0;
                 if (Component280.anInterface16Array2447.length > 1 && Component134.aClass111_5813.method1044(86) && (Component280.anInterface16Array2447[1].method60(i + 9581) < 100)) return 0;
             }
-            DisplayModeManagerContainer292.method1311(5139, NodeSub8.aHa6654);
-            Component27.method3568(NodeSub8.aHa6654, 4);
-            Buffer.method3379(2, 1);
+            DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
+            Component27.method3568(NodeSub8.toolkit, 4);
+            Buffer.setClientState(2, 1);
         }
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1029) {
             for (int i_7_ = 0; i_7_ < 4; i_7_++)
@@ -147,7 +147,7 @@ final class LoadingManager {
         if (LoadingState.aClass56_1032 == RSARequest.aClass56_9660) {
             if (Component35.anInt4270 == -1) Component35.anInt4270 = Component54.aClass45_8667.method417("scape main", 0);
             CacheNodeSub1.method3290(56);
-            Buffer.method3379(2, 2);
+            Buffer.setClientState(2, 2);
         }
         if (LoadingState.aClass56_1033 == RSARequest.aClass56_9660) ComponentDownloader.method323(Component380.aClass45_4984, OggUrlStream.aClass297_8992, (byte) 95);
         if (LoadingState.aClass56_1034 == RSARequest.aClass56_9660) {
@@ -195,7 +195,7 @@ final class LoadingManager {
             Definition.method3038(-1);
             RuntimeException_Sub1.method4011(i + 29684, Component339.aClass45_3146);
             NodeSub29.method3004(ShaderSub3.aClass45_5207, false, DefinitionSub4.aD9113);
-            HuffmanDecoder class296 = new HuffmanDecoder(Component110.aClass45_233.method391("huffman", "", -29832));
+            HuffmanDecoder class296 = new HuffmanDecoder(Component110.aClass45_233.getFile("huffman", "", -29832));
             GlToolkitSub3.method3896(class296, (byte) 13);
             try {
                 jagmisc.init();
@@ -278,9 +278,9 @@ final class LoadingManager {
             Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7227, 3);
             if (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254 != null) Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7254, 3);
             LogicError.method830(3, 800, (byte) 102, false, 600);
-            DisplayModeManagerContainer292.method1311(5139, NodeSub8.aHa6654);
-            Component27.method3568(NodeSub8.aHa6654, i ^ ~0x6ff7);
-            DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.aHa6654, true);
+            DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
+            Component27.method3568(NodeSub8.toolkit, i ^ ~0x6ff7);
+            DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
             DisplayModeManagerContainer204.method901(Component22.aClass105Array1744, 515880227);
         }
         return DefinitionSub6.method3063(false);
@@ -308,7 +308,7 @@ final class LoadingManager {
                 if (string == null) stringbuffer.append("null");
                 else stringbuffer.append(string);
             }
-            if (bool != true) method1277((byte) -20);
+            if (bool != true) clearDefinitionCaches((byte) -20);
             return stringbuffer.toString();
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("pea.C(" + bool + ',' + i + ',' + (strings != null ? "{...}" : "null") + ',' + i_15_ + ')'));

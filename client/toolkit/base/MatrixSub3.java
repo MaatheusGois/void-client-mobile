@@ -330,7 +330,7 @@ final class MatrixSub3
                                 int i_60_ = i_59_ / 8 + (i_58_ / 8 << 8);
                                 for (int i_61_ = 0; i_61_ < OggStreamReader.anIntArray9042.length; i_61_++) {
                                     if (i_60_ == (OggStreamReader.anIntArray9042[i_61_]) && is[i_61_] != null) {
-                                        class237_sub1.method1692((i_58_ & 0x7) * 8, i_57_, is[i_61_], i_56_, (i_59_ & 0x7) * 8, NodeSub8.aHa6654, 8 * i_54_, 8 * i_53_, i + 8219, NodeSub45.aClass361Array7108, i_52_);
+                                        class237_sub1.method1692((i_58_ & 0x7) * 8, i_57_, is[i_61_], i_56_, (i_59_ & 0x7) * 8, NodeSub8.toolkit, 8 * i_54_, 8 * i_53_, i + 8219, NodeSub45.aClass361Array7108, i_52_);
                                         break;
                                     }
                                 }
@@ -407,10 +407,10 @@ final class MatrixSub3
     static final void method947(byte i) {
         anInt5783++;
         if (i != 41) anInt5768 = 38;
-        for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.method1995(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.method1990((byte) 117)) {
+        for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.first(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.next((byte) 117)) {
             if (class348_sub9.aBoolean6684) class348_sub9.method2781((byte) 21);
         }
-        for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.method1995(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.method1990((byte) 39))) {
+        for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 39))) {
             if (class348_sub9.aBoolean6684) class348_sub9.method2781((byte) 21);
         }
     }

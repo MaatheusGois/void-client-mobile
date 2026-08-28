@@ -122,8 +122,8 @@ final class LoginPrefs {
         if (creds == null) {
             return;
         }
-        DisplayModeManagerContainer282.aString5600 = creds[0];
-        DisplayModeManagerContainer51.aString2496 = creds[1];
+        DisplayModeManagerContainer282.username = creds[0];
+        DisplayModeManagerContainer51.password = creds[1];
         fillLoginFields(creds[0], creds[1]);
         if (!Loader.autoLogin || !autoArmed) {
             return;
@@ -150,8 +150,8 @@ final class LoginPrefs {
         if (Component241.anInt2955 != 0 || AbstractShaderSub2.anInt7297 != 0) {
             return;
         }
-        if (DisplayModeManagerContainer282.aString5600 == null || DisplayModeManagerContainer282.aString5600.length() == 0
-                || DisplayModeManagerContainer51.aString2496 == null || DisplayModeManagerContainer51.aString2496.length() == 0) {
+        if (DisplayModeManagerContainer282.username == null || DisplayModeManagerContainer282.username.length() == 0
+                || DisplayModeManagerContainer51.password == null || DisplayModeManagerContainer51.password.length() == 0) {
             pendingAutoLogin = false;
             return;
         }
@@ -178,9 +178,9 @@ final class LoginPrefs {
             return;
         }
         pendingAutoLogin = false;
-        System.out.println("void-osrs auto-login go user=" + DisplayModeManagerContainer282.aString5600);
-        // Enter connecting — method3379(6) calls method1922 and leaves the title UI.
-        Buffer.method3379(2, 6);
+        System.out.println("void-osrs auto-login go user=" + DisplayModeManagerContainer282.username);
+        // Enter connecting — setClientState(6) calls method1922 and leaves the title UI.
+        Buffer.setClientState(2, 6);
     }
 
     /**
@@ -223,9 +223,9 @@ final class LoginPrefs {
     /** True if a type-3 (modal) overlay is open — Auto Setup uses this. */
     private static boolean hasModalOverlay() {
         try {
-            for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.method3484(0);
+            for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.first(0);
                  o != null;
-                 o = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
+                 o = (NodeSub41) Component15.aClass356_4915.next(0)) {
                 if (o.anInt7053 == 3) {
                     return true;
                 }
@@ -240,9 +240,9 @@ final class LoginPrefs {
         try {
             for (; ; ) {
                 NodeSub41 target = null;
-                for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.method3484(0);
+                for (NodeSub41 o = (NodeSub41) Component15.aClass356_4915.first(0);
                      o != null;
-                     o = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
+                     o = (NodeSub41) Component15.aClass356_4915.next(0)) {
                     if (o.anInt7053 == 3) {
                         target = o;
                         break;

@@ -35,12 +35,12 @@ final class Component376
             Buffer class348_sub49 = new Buffer(is);
             Buffer class348_sub49_0_ = new Buffer(is);
             class348_sub49.readUnsignedByte(255);
-            class348_sub49.anInt7197 += 2;
+            class348_sub49.offset += 2;
             int i = class348_sub49.readUnsignedByte(255);//byte
             int i_1_ = 0;
             int i_2_ = -1;
             int i_3_ = -1;
-            class348_sub49_0_.anInt7197 = class348_sub49.anInt7197 + i;
+            class348_sub49_0_.offset = class348_sub49.offset + i;
             for (int i_4_ = 0; i_4_ < i; i_4_++) {
                 int i_5_ = (this.aClass348_Sub33_134.anIntArray6957[i_4_]);
                 if (i_5_ == 0) i_2_ = i_4_;
@@ -50,11 +50,11 @@ final class Component376
                     aShortArray141[i_1_] = (short) i_4_;
                     short i_7_ = 0;
                     if (i_5_ == 3 || i_5_ == 10) i_7_ = (short) 128;
-                    if ((i_6_ & 0x1) != 0) aShortArray127[i_1_] = (short) class348_sub49_0_.method3362((byte) 77);//smart
+                    if ((i_6_ & 0x1) != 0) aShortArray127[i_1_] = (short) class348_sub49_0_.readSmartSigned((byte) 77);//smart
                     else aShortArray127[i_1_] = i_7_;
-                    if ((i_6_ & 0x2) != 0) aShortArray133[i_1_] = (short) class348_sub49_0_.method3362((byte) 77);//smart
+                    if ((i_6_ & 0x2) != 0) aShortArray133[i_1_] = (short) class348_sub49_0_.readSmartSigned((byte) 77);//smart
                     else aShortArray133[i_1_] = i_7_;
-                    if ((i_6_ & 0x4) != 0) aShortArray142[i_1_] = (short) class348_sub49_0_.method3362((byte) 77);//smart
+                    if ((i_6_ & 0x4) != 0) aShortArray142[i_1_] = (short) class348_sub49_0_.readSmartSigned((byte) 77);//smart
                     else aShortArray142[i_1_] = i_7_;
                     aByteArray136[i_1_] = (byte) (i_6_ >>> 3 & 0x3);
                     if (i_5_ == 2 || i_5_ == 9) {
@@ -74,7 +74,7 @@ final class Component376
                     i_1_++;
                 }
             }
-            if (class348_sub49_0_.anInt7197 != is.length) throw new RuntimeException();
+            if (class348_sub49_0_.offset != is.length) throw new RuntimeException();
             this.anInt126 = i_1_;
             this.aShortArray130 = new short[i_1_];
             this.aShortArray140 = new short[i_1_];

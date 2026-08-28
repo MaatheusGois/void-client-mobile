@@ -9,7 +9,7 @@ final class DefinitionSub4
  */ extends Definition {
     /** Linked list of open {@link MenuEntry} rows for the current hover. */
     static NodeList menuEntries = new NodeList();
-    static int anInt9112;
+    static int occludedCpCount;
     static d aD9113;
     static DisplayModeManagerContainer204 aClass101_9114;
     static int anInt9115;

@@ -4,25 +4,25 @@
 
 /**
  * RENAMED from `Class272` (JODE-obfuscated).
- * Socket factory/connector. method2047(byte) builds `new Socket(host, port)` from aString3476/anInt3470; declares abstract method2050(int) for subclasses.
+ * Socket factory/connector. openSocket(byte) builds `new Socket(host, port)` from host/port; declares abstract connect(int) for subclasses.
  */
 
 import java.io.IOException;
 import java.net.Socket;
 
 abstract class SocketConnector {
-    int anInt3470;
+    int port;
     static int anInt3471;
     static int anInt3472;
     static int anInt3473;
     static int anInt3474;
     static int[] anIntArray3475 = {1, 4, 1, 2};
-    String aString3476;
+    String host;
 
-    final Socket method2047(byte i) throws IOException {
+    final Socket openSocket(byte i) throws IOException {
         anInt3472++;
         if (i <= 84) anIntArray3475 = null;
-        return new Socket(this.aString3476, this.anInt3470);
+        return new Socket(this.host, this.port);
     }
 
     public static void method2048(int i) {
@@ -37,7 +37,7 @@ abstract class SocketConnector {
             else {
                 NumberFormatter.aClass238_2773 = DefinitionSub8.aClass238_9165;
                 DefinitionSub8.aClass238_9165 = null;
-                Buffer.method3379(2, 13);
+                Buffer.setClientState(2, 13);
             }
         }
     }
@@ -46,7 +46,7 @@ abstract class SocketConnector {
         /* empty */
     }
 
-    abstract Socket method2050(int i) throws IOException;
+    abstract Socket connect(int i) throws IOException;
 
     static final void method2051(int i, int i_0_, Component85 class221, DisplayModeManagerContainer196 class341, int i_1_, int i_2_, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         try {

@@ -23,12 +23,12 @@ final class HashNodeSub16Sub1
     final byte[] method3259(int i) {
         anInt10454++;
         if (i != 16) return null;
-        if (this.aBoolean9664 || (this.aClass348_Sub49_10453.anInt7197 < (-this.aByte10449 + (this.aClass348_Sub49_10453.aByteArray7154).length))) throw new RuntimeException();
-        return (this.aClass348_Sub49_10453.aByteArray7154);
+        if (this.aBoolean9664 || (this.aClass348_Sub49_10453.offset < (-this.aByte10449 + (this.aClass348_Sub49_10453.payload).length))) throw new RuntimeException();
+        return (this.aClass348_Sub49_10453.payload);
     }
 
     static final void method3260(int i) {
-        for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3484(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3482(0)) {
+        for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0)) {
             if (class348_sub15.aClass55_Sub1_6768.method510((byte) -125)) DisplayModeManagerContainer282.method690((byte) 70, (class348_sub15.anInt6773));
             else {
                 class348_sub15.aClass55_Sub1_6768.method522((byte) -91);
@@ -77,7 +77,7 @@ final class HashNodeSub16Sub1
         if (i != 16) this.aByte10449 = (byte) -4;
         anInt10452++;
         if (this.aClass348_Sub49_10453 == null) return 0;
-        return (100 * this.aClass348_Sub49_10453.anInt7197 / (-this.aByte10449 + (this.aClass348_Sub49_10453.aByteArray7154).length));
+        return (100 * this.aClass348_Sub49_10453.offset / (-this.aByte10449 + (this.aClass348_Sub49_10453.payload).length));
     }
 
     static final boolean method3262(int i, int i_8_, int i_9_) {

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * press/release/click through the active {@link MicrobotMouseBackend}.
  * <p>
  * If invoked from the client thread, the click is offloaded to a daemon scheduler
- * so we never nest AWT dispatch inside {@code method114}.
+ * so we never nest AWT dispatch inside {@code processGameTick}.
  */
 final class VirtualMouse {
 

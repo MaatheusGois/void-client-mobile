@@ -31,7 +31,7 @@ final class Component103
         NodeSub41 class348_sub41 = new NodeSub41();
         class348_sub41.anInt7050 = i;
         class348_sub41.anInt7053 = i_1_;
-        Component15.aClass356_4915.method3483((byte) 109, i_0_, class348_sub41);
+        Component15.aClass356_4915.put((byte) 109, i_0_, class348_sub41);
         NodeSub7.method2772(i, (byte) 110);
         DisplayModeManagerContainer57 class46 = BitmapFont.method2570(i_2_ + 1512932718, i_0_);
         if (class46 != null) Component111.method1916(-9343, class46);

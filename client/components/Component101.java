@@ -164,7 +164,7 @@ final class Component101
             }
             DisplayModeManagerContainer370 class64;
             synchronized (DisplayModeManagerContainer310.aClass60_355) {
-                class64 = (DisplayModeManagerContainer370) DisplayModeManagerContainer310.aClass60_355.method583(l, -47);
+                class64 = (DisplayModeManagerContainer370) DisplayModeManagerContainer310.aClass60_355.get(l, -47);
             }
             Component241 class225 = null;
             if (anInt2103 != -1) class225 = class261.method1983(anInt2103, 32);
@@ -181,7 +181,7 @@ final class Component101
                 if (bool_37_) {
                     if (aLong2094 != -1) {
                         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-                            class64 = (DisplayModeManagerContainer370) DisplayModeManagerContainer310.aClass60_355.method583(aLong2094, -92);
+                            class64 = (DisplayModeManagerContainer370) DisplayModeManagerContainer310.aClass60_355.get(aLong2094, -92);
                         }
                     }
                     if (class64 == null || var_ha.method3667(class64.ua(), i_9_) != 0) return null;
@@ -232,7 +232,7 @@ final class Component101
                     if (bool) {
                         class64.s(i_9_);
                         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-                            DisplayModeManagerContainer310.aClass60_355.method582(class64, l, (byte) -98);
+                            DisplayModeManagerContainer310.aClass60_355.putOne(class64, l, (byte) -98);
                         }
                         aLong2094 = l;
                     }
@@ -372,7 +372,7 @@ final class Component101
             if (i != -402058072) aLong2094 = -101L;
             DisplayModeManagerContainer370 class64;
             synchronized (Component387.aClass60_1894) {
-                class64 = (DisplayModeManagerContainer370) Component387.aClass60_1894.method583(aLong2102, i ^ ~0x17f6eb29);
+                class64 = (DisplayModeManagerContainer370) Component387.aClass60_1894.get(aLong2102, i ^ ~0x17f6eb29);
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_70_) != 0) {
                 if (class64 != null) i_70_ = var_ha.method3679(i_70_, class64.ua());
@@ -409,7 +409,7 @@ final class Component101
                 }
                 class64.s(i_70_);
                 synchronized (Component387.aClass60_1894) {
-                    Component387.aClass60_1894.method582(class64, aLong2102, (byte) -97);
+                    Component387.aClass60_1894.putOne(class64, aLong2102, (byte) -97);
                 }
             }
             if (class17 == null) return class64;
@@ -474,7 +474,7 @@ final class Component101
             long l = (long) i_95_ | ((long) (i_93_ << 16) | (long) i_92_ << 32);
             DisplayModeManagerContainer370 class64;
             synchronized (Component387.aClass60_1894) {
-                class64 = (DisplayModeManagerContainer370) Component387.aClass60_1894.method583(l, i_94_ ^ ~0x3bd4);
+                class64 = (DisplayModeManagerContainer370) Component387.aClass60_1894.get(l, i_94_ ^ ~0x3bd4);
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_98_) != 0) {
                 if (class64 != null) i_98_ = var_ha.method3679(i_98_, class64.ua());
@@ -498,7 +498,7 @@ final class Component101
                 }
                 class64.s(i_98_);
                 synchronized (Component387.aClass60_1894) {
-                    Component387.aClass60_1894.method582(class64, l, (byte) -109);
+                    Component387.aClass60_1894.putOne(class64, l, (byte) -109);
                 }
             }
             if (class17 == null) return class64;

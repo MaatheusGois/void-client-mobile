@@ -33,7 +33,7 @@ final class Component117
 
     final HashNodeSub10 method3471(int i, byte i_0_) {
         anInt4363++;
-        HashNodeSub10 class348_sub42_sub10 = (HashNodeSub10) aClass60_4362.method583(i, 70);
+        HashNodeSub10 class348_sub42_sub10 = (HashNodeSub10) aClass60_4362.get(i, 70);
         if (class348_sub42_sub10 != null) return class348_sub42_sub10;
         byte[] is;
         if (i >= 32768) is = aClass45_4369.method410(-1860, 1, 0x7fff & i);
@@ -43,7 +43,7 @@ final class Component117
         if (is != null) class348_sub42_sub10.method3218(new Buffer(is), 0);
         if (i_0_ >= -86) method3473(-12);
         if (i >= 32768) class348_sub42_sub10.method3209(false);
-        aClass60_4362.method582(class348_sub42_sub10, i, (byte) -125);
+        aClass60_4362.putOne(class348_sub42_sub10, i, (byte) -125);
         return class348_sub42_sub10;
     }
 

@@ -37,13 +37,13 @@ final class HashNodeSub16Sub2
 
     static final void method3265(int i, Node class348, Node class348_0_) {
         try {
-            if (class348.aClass348_4295 != null) class348.method2715((byte) 27);
+            if (class348.previous != null) class348.unlink((byte) 27);
             int i_1_ = -109 % ((6 - i) / 43);
             anInt10462++;
-            class348.aClass348_4295 = class348_0_.aClass348_4295;
-            class348.aClass348_4294 = class348_0_;
-            class348.aClass348_4295.aClass348_4294 = class348;
-            class348.aClass348_4294.aClass348_4295 = class348;
+            class348.previous = class348_0_.previous;
+            class348.next = class348_0_;
+            class348.previous.next = class348;
+            class348.next.previous = class348;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("qh.K(" + i + ',' + (class348 != null ? "{...}" : "null") + ',' + (class348_0_ != null ? "{...}" : "null") + ')'));
         }

@@ -9,7 +9,8 @@ final class NodeSub8
  * RENAMED from `Class348_Sub8` (JODE-obfuscated).
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
-    static GraphicsToolkit aHa6654;
+    /** Active graphics toolkit used by most of the client (draw, scene, UI). */
+    static GraphicsToolkit toolkit;
     static int[] anIntArray6655;
     static boolean[][] aBooleanArrayArray6656;
     byte[] aByteArray6657;
@@ -31,10 +32,10 @@ final class NodeSub8
         if (class318_sub1_sub3_sub3.anInt10275 != -1) {
             DisplayModeManagerContainer58 class318_sub1_sub3_sub3_0_ = null;
             if (class318_sub1_sub3_sub3.anInt10275 >= 32768) {
-                if ((class318_sub1_sub3_sub3.anInt10275) >= 32768) class318_sub1_sub3_sub3_0_ = (InterfaceRenderer.aPlayerArray5058[class318_sub1_sub3_sub3.anInt10275 + -32768]);
+                if ((class318_sub1_sub3_sub3.anInt10275) >= 32768) class318_sub1_sub3_sub3_0_ = (InterfaceRenderer.players[class318_sub1_sub3_sub3.anInt10275 + -32768]);
             } else {
-                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.method3480(class318_sub1_sub3_sub3.anInt10275, -6008)));
-                if (class348_sub22 != null) class318_sub1_sub3_sub3_0_ = (class348_sub22.aNpc_6859);
+                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class318_sub1_sub3_sub3.anInt10275, -6008)));
+                if (class348_sub22 != null) class318_sub1_sub3_sub3_0_ = (class348_sub22.npc);
             }
             if (class318_sub1_sub3_sub3_0_ != null) {
                 int i_1_ = (class318_sub1_sub3_sub3.x + -(class318_sub1_sub3_sub3_0_.x));
@@ -62,7 +63,7 @@ final class NodeSub8
 
     public static void method2775(byte i) {
         aShortArray6658 = null;
-        aHa6654 = null;
+        toolkit = null;
         aShortArray6665 = null;
         anIntArray6666 = null;
         aShortArray6663 = null;
@@ -85,7 +86,7 @@ final class NodeSub8
         NamedInteger[] class364s = DefinitionSub28.method3122((byte) 91);
         for (int i_6_ = 0; class364s.length > i_6_; i_6_++) {
             NamedInteger class364 = class364s[i_6_];
-            if (class364.anInt4466 == i_5_) return class364;
+            if (class364.value == i_5_) return class364;
         }
         return null;
     }

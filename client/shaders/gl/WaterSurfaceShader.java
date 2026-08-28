@@ -143,7 +143,7 @@ final class WaterSurfaceShader extends ShaderProgram {
     static final String method2157(int i, int i_15_) {
         anInt6238++;
         if (i_15_ != -1431655765) method2157(-27, 75);
-        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3480(i, -6008));
+        ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.get(i, -6008));
         if (class348_sub15 != null) {
             Component179 class348_sub23_sub4 = class348_sub15.aClass55_Sub1_6768.method513(i_15_ + 1431655815);
             if (class348_sub23_sub4 != null) {

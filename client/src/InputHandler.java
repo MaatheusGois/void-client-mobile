@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class346` (JODE-obfuscated).
- * Abstract base for input handlers. Declares method2695/2696/2697(->Interface6)/2698; subclass KeyFocusHandler implements KeyListener + FocusListener.
+ * Abstract base for input handlers. Declares sync/2696/2697(->Interface6)/2698; subclass KeyFocusHandler implements KeyListener + FocusListener.
  */
 
 abstract class InputHandler {
@@ -13,17 +13,17 @@ abstract class InputHandler {
     static int anInt4276;
     static int anInt4277;
 
-    abstract void method2695(int i);
+    abstract void sync(int i);
 
-    abstract boolean method2696(int i, int i_0_);
+    abstract boolean isKeyDown(int i, int i_0_);
 
     public InputHandler() {
         /* empty */
     }
 
-    abstract Interface6 method2697(int i);
+    abstract Interface6 popKeyEvent(int i);
 
-    abstract void method2698(int i);
+    abstract void reset(int i);
 
     static final short[][] method2699(int i, short[][] is, float[][] fs) {
         try {

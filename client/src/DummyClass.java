@@ -73,12 +73,12 @@ final class DummyClass extends Component76 {
 
     static final Component24 method3577(int i, byte i_10_, CacheStore class45) {
         anInt10176++;
-        Component24 class105 = (Component24) Component35.aClass60_4273.method583(i, -68);
+        Component24 class105 = (Component24) Component35.aClass60_4273.get(i, -68);
         int i_11_ = -86 / ((55 - i_10_) / 51);
         if (class105 == null) {
-            if (ShaderProgramSub7.aBoolean6289) class105 = NodeSub8.aHa6654.method3691(Component170.method1512(class45, i), true);
+            if (ShaderProgramSub7.aBoolean6289) class105 = NodeSub8.toolkit.method3691(Component170.method1512(class45, i), true);
             else class105 = GlTexture.method1969(class45.method415((byte) 73, i), -5901);
-            Component35.aClass60_4273.method582(class105, i, (byte) -108);
+            Component35.aClass60_4273.putOne(class105, i, (byte) -108);
         }
         return class105;
     }

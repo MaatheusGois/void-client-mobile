@@ -32,7 +32,7 @@ final class Component143
     private final void method1338(int i, Interface14 interface14) {
         anInt2321++;
         long l = interface14.method52((byte) 117);
-        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.method3480(l, -6008); class348_sub42_sub9 != null; class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.method3476(true)) {
+        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.get(l, -6008); class348_sub42_sub9 != null; class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.continueGet(true)) {
             if (class348_sub42_sub9.anInterface14_9559.method53(78, interface14)) {
                 method1342(class348_sub42_sub9, (byte) 79);
                 break;
@@ -50,24 +50,24 @@ final class Component143
     final Object method1340(int i, Interface14 interface14) {
         anInt2313++;
         long l = interface14.method52((byte) 64);
-        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.method3480(l, -6008); class348_sub42_sub9 != null; class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.method3476(true)) {
+        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.get(l, -6008); class348_sub42_sub9 != null; class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.continueGet(true)) {
             if (class348_sub42_sub9.anInterface14_9559.method53(94, interface14)) {
-                Object object = class348_sub42_sub9.method3205(65536);
+                Object object = class348_sub42_sub9.getReferent(65536);
                 if (object == null) {
-                    class348_sub42_sub9.method2715((byte) 36);
-                    class348_sub42_sub9.method3162(true);
+                    class348_sub42_sub9.unlink((byte) 36);
+                    class348_sub42_sub9.unlink(true);
                     anInt2311 += (class348_sub42_sub9.anInt9556);
                 } else {
-                    if (class348_sub42_sub9.method3206((byte) -128)) {
+                    if (class348_sub42_sub9.isSoftRef((byte) -128)) {
                         Component140 class348_sub42_sub9_sub1 = (new Component140(interface14, object, (class348_sub42_sub9.anInt9556)));
-                        aClass356_2312.method3483((byte) 125, (class348_sub42_sub9.aLong4291), class348_sub42_sub9_sub1);
-                        aClass107_2316.method1005(true, class348_sub42_sub9_sub1);
-                        class348_sub42_sub9_sub1.aLong7057 = 0L;
-                        class348_sub42_sub9.method2715((byte) 65);
-                        class348_sub42_sub9.method3162(true);
+                        aClass356_2312.put((byte) 125, (class348_sub42_sub9.key), class348_sub42_sub9_sub1);
+                        aClass107_2316.add(true, class348_sub42_sub9_sub1);
+                        class348_sub42_sub9_sub1.accessAge = 0L;
+                        class348_sub42_sub9.unlink((byte) 65);
+                        class348_sub42_sub9.unlink(true);
                     } else {
-                        aClass107_2316.method1005(true, class348_sub42_sub9);
-                        class348_sub42_sub9.aLong7057 = 0L;
+                        aClass107_2316.add(true, class348_sub42_sub9);
+                        class348_sub42_sub9.accessAge = 0L;
                     }
                     return object;
                 }
@@ -85,13 +85,13 @@ final class Component143
                 method1338(7, interface14);
                 anInt2311 -= i_0_;
                 while (anInt2311 < 0) {
-                    ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.method1008(20);
+                    ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.removeHead(20);
                     method1342(class348_sub42_sub9, (byte) 60);
                 }
                 Component140 class348_sub42_sub9_sub1 = new Component140(interface14, object, i_0_);
-                aClass356_2312.method3483((byte) 120, interface14.method52((byte) 120), class348_sub42_sub9_sub1);
-                aClass107_2316.method1005(true, class348_sub42_sub9_sub1);
-                class348_sub42_sub9_sub1.aLong7057 = 0L;
+                aClass356_2312.put((byte) 120, interface14.method52((byte) 120), class348_sub42_sub9_sub1);
+                aClass107_2316.add(true, class348_sub42_sub9_sub1);
+                class348_sub42_sub9_sub1.accessAge = 0L;
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("pq.L(" + (object != null ? "{...}" : "null") + ',' + (interface14 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ')'));
@@ -102,8 +102,8 @@ final class Component143
         anInt2317++;
         if (i < 51) method1341(null, null, -110, 119);
         if (class348_sub42_sub9 != null) {
-            class348_sub42_sub9.method2715((byte) 42);
-            class348_sub42_sub9.method3162(true);
+            class348_sub42_sub9.unlink((byte) 42);
+            class348_sub42_sub9.unlink(true);
             anInt2311 += class348_sub42_sub9.anInt9556;
         }
     }
@@ -118,10 +118,10 @@ final class Component143
 
     final void method1344(byte i) {
         anInt2319++;
-        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.method1011(-87); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.method1003((byte) 69))) {
-            if (class348_sub42_sub9.method3206((byte) 5)) {
-                class348_sub42_sub9.method2715((byte) 127);
-                class348_sub42_sub9.method3162(true);
+        for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.first(-87); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.next((byte) 69))) {
+            if (class348_sub42_sub9.isSoftRef((byte) 5)) {
+                class348_sub42_sub9.unlink((byte) 127);
+                class348_sub42_sub9.unlink(true);
                 anInt2311 += class348_sub42_sub9.anInt9556;
             }
         }
@@ -129,9 +129,9 @@ final class Component143
     }
 
     final void method1345(byte i) {
-        aClass107_2316.method1009(2110355138);
+        aClass107_2316.clear(2110355138);
         anInt2325++;
-        aClass356_2312.method3481(0);
+        aClass356_2312.clear(0);
         int i_3_ = 18 % ((i - -89) / 35);
         anInt2311 = anInt2324;
     }
@@ -139,19 +139,19 @@ final class Component143
     final void method1346(int i, int i_4_) {
         anInt2322++;
         if (Component99.aClass345_1607 != null) {
-            for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.method1011(-72); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.method1003((byte) 59))) {
-                if (class348_sub42_sub9.method3206((byte) -124)) {
-                    if (class348_sub42_sub9.method3205(i + 67027) == null) {
-                        class348_sub42_sub9.method2715((byte) 103);
-                        class348_sub42_sub9.method3162(true);
+            for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.first(-72); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.next((byte) 59))) {
+                if (class348_sub42_sub9.isSoftRef((byte) -124)) {
+                    if (class348_sub42_sub9.getReferent(i + 67027) == null) {
+                        class348_sub42_sub9.unlink((byte) 103);
+                        class348_sub42_sub9.unlink(true);
                         anInt2311 += (class348_sub42_sub9.anInt9556);
                     }
-                } else if (++class348_sub42_sub9.aLong7057 > (long) i_4_) {
+                } else if (++class348_sub42_sub9.accessAge > (long) i_4_) {
                     ReferenceHolder class348_sub42_sub9_5_ = Component99.aClass345_1607.method2694(-1, class348_sub42_sub9);
-                    aClass356_2312.method3483((byte) 120, (class348_sub42_sub9.aLong4291), class348_sub42_sub9_5_);
+                    aClass356_2312.put((byte) 120, (class348_sub42_sub9.key), class348_sub42_sub9_5_);
                     Component317.method573(class348_sub42_sub9_5_, class348_sub42_sub9, (byte) 63);
-                    class348_sub42_sub9.method2715((byte) 70);
-                    class348_sub42_sub9.method3162(true);
+                    class348_sub42_sub9.unlink((byte) 70);
+                    class348_sub42_sub9.unlink(true);
                 }
             }
         }

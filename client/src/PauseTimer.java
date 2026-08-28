@@ -57,9 +57,9 @@ final class PauseTimer {
 
     static final void method362(int i) {
         anInt509++;
-        NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.method1995(4));
+        NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4));
         int i_3_ = -45 % ((i - -34) / 47);
-        for (/**/; class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.method1990((byte) 81)) {
+        for (/**/; class348_sub27 != null; class348_sub27 = (NodeSub27) HashNodeSub20.aClass262_9711.next((byte) 81)) {
             if (class348_sub27.anInt6893 > 0) class348_sub27.anInt6893--;
             if (class348_sub27.anInt6893 != 0) {
                 if (class348_sub27.anInt6894 > 0) class348_sub27.anInt6894--;
@@ -67,12 +67,12 @@ final class PauseTimer {
                     SceneManager.method1591(class348_sub27.anInt6905, 70, class348_sub27.anInt6904, -1, class348_sub27.anInt6907, class348_sub27.anInt6895, class348_sub27.anInt6896, class348_sub27.anInt6900, class348_sub27.anInt6899);
                     class348_sub27.anInt6894 = -1;
                     if ((class348_sub27.anInt6907 != class348_sub27.anInt6902) || class348_sub27.anInt6902 != -1) {
-                        if ((class348_sub27.anInt6907 == class348_sub27.anInt6902) && (class348_sub27.anInt6892 == class348_sub27.anInt6900) && (class348_sub27.anInt6895 == (class348_sub27.anInt6903))) class348_sub27.method2715((byte) 75);
-                    } else class348_sub27.method2715((byte) 86);
+                        if ((class348_sub27.anInt6907 == class348_sub27.anInt6902) && (class348_sub27.anInt6892 == class348_sub27.anInt6900) && (class348_sub27.anInt6895 == (class348_sub27.anInt6903))) class348_sub27.unlink((byte) 75);
+                    } else class348_sub27.unlink((byte) 86);
                 }
             } else if (class348_sub27.anInt6902 < 0 || (Component2.method195(class348_sub27.anInt6903, false, class348_sub27.anInt6902))) {
                 SceneManager.method1591(class348_sub27.anInt6905, 112, class348_sub27.anInt6904, -1, class348_sub27.anInt6902, class348_sub27.anInt6903, class348_sub27.anInt6896, class348_sub27.anInt6892, class348_sub27.anInt6899);
-                class348_sub27.method2715((byte) 49);
+                class348_sub27.unlink((byte) 49);
             }
         }
     }
@@ -82,7 +82,7 @@ final class PauseTimer {
     static final void method363(int i) {
         if (Component39.anInt2254 < 102) Component39.anInt2254 += 6;
         anInt512++;
-        if (Component221.anInt1794 != -1 && (Component100.aLong8694 < Component240.method599(-127))) {
+        if (Component221.anInt1794 != -1 && (Component100.aLong8694 < Component240.currentTimeMillis(-127))) {
             for (int i_4_ = Component221.anInt1794; i_4_ < Cp1252Decoder.aStringArray5223.length; i_4_++) {
                 if (Cp1252Decoder.aStringArray5223[i_4_].startsWith("pause")) {
                     int i_5_ = 5;
@@ -93,7 +93,7 @@ final class PauseTimer {
                     }
                     Applet_Sub1.method94("Pausing for " + i_5_ + " seconds...", 58);
                     Component221.anInt1794 = 1 + i_4_;
-                    Component100.aLong8694 = (long) (1000 * i_5_) + Component240.method599(-97);
+                    Component100.aLong8694 = (long) (1000 * i_5_) + Component240.currentTimeMillis(-97);
                     return;
                 } else {
                     Component126.aString4461 = Cp1252Decoder.aStringArray5223[i_4_];
@@ -257,7 +257,7 @@ final class PauseTimer {
     static final void method365(RenderableObject class318_sub1, NodeSub1[] class348_sub1s) {
         if (DisplayModeManagerContainer58.aBoolean10221) {
             int i = class318_sub1.method2384(class348_sub1s, 49);
-            JaclibLoader.aHa171.method3642(i, class348_sub1s);
+            JaclibLoader.toolkit.method3642(i, class348_sub1s);
         }
         if (Component9.aSArray4142 == ShaderSub1.aSArray5191) {
             boolean bool = false;
@@ -271,9 +271,9 @@ final class PauseTimer {
                 i = (class318_sub1.x >> Component149.anInt4459);
                 i_12_ = (class318_sub1.y >> Component149.anInt4459);
             }
-            JaclibLoader.aHa171.EA((NodeSub1Sub1.aSArray8801[0].method3986(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.method3547(i, i_12_), Component203.method2483(i, i_12_), HelveticaFont.method1457(i, i_12_));
+            JaclibLoader.toolkit.EA((NodeSub1Sub1.aSArray8801[0].method3986(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.method3547(i, i_12_), Component203.method2483(i, i_12_), HelveticaFont.method1457(i, i_12_));
         }
-        RenderableSub4 class318_sub4 = class318_sub1.method2386(1, JaclibLoader.aHa171);
+        RenderableSub4 class318_sub4 = class318_sub1.method2386(1, JaclibLoader.toolkit);
         if (class318_sub4 != null) {
             if (class318_sub1.aBoolean6391) {
                 RenderableSub3[] class318_sub3s = class318_sub4.aClass318_Sub3Array6414;

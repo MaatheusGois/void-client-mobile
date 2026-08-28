@@ -38,7 +38,7 @@ abstract class Component298
         anInt4639++;
         if (i == 10286) {
             Component184 class143 = Component98.method1766((byte) -85, (this.aClass369_4635.anInt4965), aClass45_4631);
-            aClass324_4637 = (NodeSub8.aHa6654.method3686(class143, Component170.method1523(this.aClass45_4632, (this.aClass369_4635.anInt4965)), true));
+            aClass324_4637 = (NodeSub8.toolkit.method3686(class143, Component170.method1523(this.aClass45_4632, (this.aClass369_4635.anInt4965)), true));
         }
     }
 
@@ -60,13 +60,13 @@ abstract class Component298
     static final void method181(boolean bool, Npc npc) {
         if (bool != true) method180(54);
         anInt4627++;
-        for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.method1995(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.method1990((byte) 78))) {
+        for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 78))) {
             if ((class348_sub9.aNpc_6691) == npc) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
                     PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                 }
-                class348_sub9.method2715((byte) 27);
+                class348_sub9.unlink((byte) 27);
                 break;
             }
         }
@@ -81,14 +81,14 @@ abstract class Component298
         int i_9_ = 100 * i_8_;
         if (anInt4630 != i_8_ || i_8_ == 0) {
             anInt4630 = i_8_;
-            aLong4640 = Component240.method599(-125);
+            aLong4640 = Component240.currentTimeMillis(-125);
         } else {
             int i_10_ = Component44.aClass311_897.method2315((byte) 121);
             if (i_8_ < i_10_) {
                 long l = aLong4640 - Component44.aClass311_897.method2323(0);
                 if (l > 0L) {
                     long l_11_ = (long) (i_10_ - i_8_) * (10000L * l / (long) i_8_);
-                    long l_12_ = (-aLong4640 + Component240.method599(-89)) * 10000L;
+                    long l_12_ = (-aLong4640 + Component240.currentTimeMillis(-89)) * 10000L;
                     if (l_11_ > l_12_) i_9_ = (int) ((long) (i_8_ * 100) + ((long) (i_10_ + -i_8_) * (l_12_ * 100L) / l_11_));
                     else i_9_ = i_10_ * 100;
                 }
@@ -105,7 +105,7 @@ abstract class Component298
             method178(i_13_, bool, (byte) -84, i_14_);
             method182(63, i_14_, i_13_, bool);
             String string = Component44.aClass311_897.method2318(i ^ 0x245b);
-            if (-aLong4640 + Component240.method599(-100) > 10000L) string += " (" + Component44.aClass311_897.method2324(i + 149).method525(-117) + ")";
+            if (-aLong4640 + Component240.currentTimeMillis(-100) > 10000L) string += " (" + Component44.aClass311_897.method2324(i + 149).method525(-117) + ")";
             aClass324_4637.drawTextCentred((byte) 115, (i_13_ + this.aClass369_4635.anInt4971 / 2), this.aClass369_4635.anInt4961, string, -1, (this.aClass369_4635.anInt4966 + 4 + (i_14_ - -(this.aClass369_4635.anInt4963 / 2))));
         }
     }

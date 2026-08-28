@@ -31,16 +31,16 @@ final class DisplayModeManagerContainer292
     final int method1305(byte i, boolean bool) {
         anInt5071++;
         if (i >= -124) method1308(-105, 89, -65, -52, (byte) 76, 37, -61, 73);
-        long l = Component240.method599(-79);
-        for (NodeSub14 class348_sub14 = (bool ? (NodeSub14) aClass356_5070.method3484(0) : (NodeSub14) aClass356_5070.method3482(0)); class348_sub14 != null; class348_sub14 = (NodeSub14) aClass356_5070.method3482(0)) {
+        long l = Component240.currentTimeMillis(-79);
+        for (NodeSub14 class348_sub14 = (bool ? (NodeSub14) aClass356_5070.first(0) : (NodeSub14) aClass356_5070.next(0)); class348_sub14 != null; class348_sub14 = (NodeSub14) aClass356_5070.next(0)) {
             if (l > (class348_sub14.aLong6762 & 0x3fffffffffffffffL)) {
                 if ((0x4000000000000000L & class348_sub14.aLong6762) != 0L) {
-                    int i_0_ = (int) class348_sub14.aLong4291;
+                    int i_0_ = (int) class348_sub14.key;
                     this.anIntArray5063[i_0_] = anIntArray5078[i_0_];
-                    class348_sub14.method2715((byte) 31);
+                    class348_sub14.unlink((byte) 31);
                     return i_0_;
                 }
-                class348_sub14.method2715((byte) 75);
+                class348_sub14.unlink((byte) 75);
             }
         }
         return -1;
@@ -50,11 +50,11 @@ final class DisplayModeManagerContainer292
         if (i == -78) {
             anInt5066++;
             this.anIntArray5063[i_2_] = i_1_;
-            NodeSub14 class348_sub14 = ((NodeSub14) aClass356_5070.method3480(i_2_, -6008));
+            NodeSub14 class348_sub14 = ((NodeSub14) aClass356_5070.get(i_2_, -6008));
             if (class348_sub14 == null) {
-                class348_sub14 = new NodeSub14(500L + Component240.method599(-122));
-                aClass356_5070.method3483((byte) 73, i_2_, class348_sub14);
-            } else class348_sub14.aLong6762 = Component240.method599(-88) - -500L;
+                class348_sub14 = new NodeSub14(500L + Component240.currentTimeMillis(-122));
+                aClass356_5070.put((byte) 73, i_2_, class348_sub14);
+            } else class348_sub14.aLong6762 = Component240.currentTimeMillis(-88) - -500L;
         }
     }
 
@@ -122,11 +122,11 @@ final class DisplayModeManagerContainer292
         anInt5073++;
         if (i != 42) anInt5065 = -16;
         anIntArray5078[i_25_] = i_24_;
-        NodeSub14 class348_sub14 = ((NodeSub14) aClass356_5070.method3480(i_25_, i + -6050));
+        NodeSub14 class348_sub14 = ((NodeSub14) aClass356_5070.get(i_25_, i + -6050));
         if (class348_sub14 == null) {
             class348_sub14 = new NodeSub14(4611686018427387905L);
-            aClass356_5070.method3483((byte) 19, i_25_, class348_sub14);
-        } else if (class348_sub14.aLong6762 != 4611686018427387905L) class348_sub14.aLong6762 = 0x4000000000000000L | 500L + Component240.method599(-108);
+            aClass356_5070.put((byte) 19, i_25_, class348_sub14);
+        } else if (class348_sub14.aLong6762 != 4611686018427387905L) class348_sub14.aLong6762 = 0x4000000000000000L | 500L + Component240.currentTimeMillis(-108);
     }
 
     final void method1314(byte i) {
@@ -188,15 +188,15 @@ final class DisplayModeManagerContainer292
         if (i != -65536) method1310(false);
         for (int i_38_ = 0; i_38_ < DisplayModeManagerContainer204.anInt1597; i_38_++) {
             int i_39_ = Component354.anIntArray224[i_38_];
-            Npc npc = (((NodeSub22) Component21.aClass356_3654.method3480(i_39_, -6008)).aNpc_6859);
+            Npc npc = (((NodeSub22) Component21.aClass356_3654.get(i_39_, -6008)).npc);
             int i_40_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             if ((0x10 & i_40_) != 0) i_40_ += Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(i ^ ~0xff00) << 8;
             if ((0x2 & i_40_) != 0) {
-                if (npc.aClass79_10505.method793(i ^ ~0xffff)) Component298.method181(true, npc);
+                if (npc.definition.method793(i ^ ~0xffff)) Component298.method181(true, npc);
                 npc.method2448((Component291.aClass278_2529.method2079(Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-1), -1)), -2);
-                npc.method2434((byte) 95, npc.aClass79_10505.anInt1399);
-                npc.anInt10310 = npc.aClass79_10505.anInt1329 << 3;
-                if (npc.aClass79_10505.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, (npc.plane), (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
+                npc.method2434((byte) 95, npc.definition.anInt1399);
+                npc.anInt10310 = npc.definition.anInt1329 << 3;
+                if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, (npc.plane), (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
             }
             if ((0x8 & i_40_) != 0) {
                 int[] is = new int[4];

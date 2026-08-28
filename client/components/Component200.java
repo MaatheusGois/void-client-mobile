@@ -33,7 +33,7 @@ final class Component200
         anInt3716++;
         if (i == -9) {
             Component372.anInt6043 <<= 2;
-            if (NodeSub8.aHa6654.method3670()) Component372.anInt6043 += 512;
+            if (NodeSub8.toolkit.method3670()) Component372.anInt6043 += 512;
             Component127.method1626(1, false);
         }
         Component372.anInt6043 = (int) (Component372.anInt6043 * Loader.CULLING_DISTANCE_MULTIPLIER);

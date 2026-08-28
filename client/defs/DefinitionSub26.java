@@ -71,7 +71,7 @@ final class DefinitionSub26
 
         ImageCacheStore.method2554((byte) -45);
         DefinitionSub22.method3111(111, i_15_);
-        int i_18_ = (-Component80.aClass348_Sub49_Sub2_3813.anInt7197 + DefinitionSub25.anInt9341) / 16;
+        int i_18_ = (-Component80.aClass348_Sub49_Sub2_3813.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_18_][4];
         for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
             for (int i_20_ = 0; i_20_ < 4; i_20_++)

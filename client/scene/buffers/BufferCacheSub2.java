@@ -133,7 +133,7 @@ final class BufferCacheSub2
                 for (int i_33_ = 1; i_33_ < this.anInt4590; i_33_++)
                     is[i][i_33_] = (byte) ((aByteArrayArray8273[i][1 + i_33_] >> 3) + (aByteArrayArray8273[i][-1 + i_33_] >> 2) + ((aByteArrayArray8273[i + 1][i_33_] >> 3) + ((aByteArrayArray8273[i - 1][i_33_] >> 2) + (aByteArrayArray8273[i][i_33_] >> 1))));
             }
-            aClass348_Sub20Array8282 = new NodeSub20[aClass356_8278.method3474(1)];
+            aClass348_Sub20Array8282 = new NodeSub20[aClass356_8278.size(1)];
             aClass356_8278.method3477(3, aClass348_Sub20Array8282);
             for (int i = 0; aClass348_Sub20Array8282.length > i; i++)
                 aClass348_Sub20Array8282[i].method2946(2147483647, anInt8284);
@@ -255,7 +255,7 @@ final class BufferCacheSub2
                                 i_75_ = (RunescapeInfo.anIntArray179[0xff80 & i_69_ | i_90_]);
                             }
                             Node class348 = null;
-                            if ((i_65_ & -1 + anInt8260) == 0 && (anInt8260 + -1 & i_66_) == 0) class348 = class356.method3480(l, -6008);
+                            if ((i_65_ & -1 + anInt8260) == 0 && (anInt8260 + -1 & i_66_) == 0) class348 = class356.get(l, -6008);
                             int i_91_;
                             if (class348 == null) {
                                 int i_92_;
@@ -319,11 +319,11 @@ final class BufferCacheSub2
                                 i_91_ = anInt8246++;
                                 is_63_[i_64_] = (short) i_91_;
                                 if (i_69_ != -1) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
-                                class356.method3483((byte) 114, l, new NodeSub29(is_63_[i_64_]));
+                                class356.put((byte) 114, l, new NodeSub29(is_63_[i_64_]));
                             } else {
                                 is_63_[i_64_] = ((NodeSub29) class348).aShort6911;
                                 i_91_ = 0xffff & is_63_[i_64_];
-                                if (i_69_ != -1 && ((class348_sub20s[i_91_].aLong4291) > class348_sub20s_38_[i_64_].aLong4291)) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
+                                if (i_69_ != -1 && ((class348_sub20s[i_91_].key) > class348_sub20s_38_[i_64_].key)) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
                             }
                             for (int i_98_ = 0; i_98_ < i_60_; i_98_++)
                                 class348_sub20s_35_[i_98_].method2949((byte) 97, i_91_, i_74_, i_75_, f_89_);
@@ -356,11 +356,11 @@ final class BufferCacheSub2
                             }
                             if (class348_sub20_108_ != null) {
                                 class348_sub20_108_.method2945(i_100_, (byte) 18, i_101_, i_103_);
-                                if (class348_sub20_110_ == null || ((class348_sub20_110_.aLong4291) > (class348_sub20_108_.aLong4291))) class348_sub20_110_ = class348_sub20_108_;
+                                if (class348_sub20_110_ == null || ((class348_sub20_110_.key) > (class348_sub20_108_.key))) class348_sub20_110_ = class348_sub20_108_;
                             }
                             if (class348_sub20_109_ != null) {
                                 class348_sub20_109_.method2945(i_100_, (byte) 18, i_101_, i_103_);
-                                if (class348_sub20_110_ == null || ((class348_sub20_109_.aLong4291) < (class348_sub20_110_.aLong4291))) class348_sub20_110_ = class348_sub20_109_;
+                                if (class348_sub20_110_ == null || ((class348_sub20_109_.key) < (class348_sub20_110_.key))) class348_sub20_110_ = class348_sub20_109_;
                             }
                             if (class348_sub20_110_ != null) {
                                 if (class348_sub20 != null) class348_sub20_110_.method2951(3, i_105_);
@@ -389,7 +389,7 @@ final class BufferCacheSub2
             long[] ls = new long[aClass348_Sub20Array8282.length];
             for (int i_112_ = 0; i_112_ < aClass348_Sub20Array8282.length; i_112_++) {
                 NodeSub20 class348_sub20 = aClass348_Sub20Array8282[i_112_];
-                ls[i_112_] = class348_sub20.aLong4291;
+                ls[i_112_] = class348_sub20.key;
                 class348_sub20.method2952(17795, anInt8246);
             }
             NewsFetcher.method2669(aClass348_Sub20Array8282, ls, -21);
@@ -570,8 +570,8 @@ final class BufferCacheSub2
                 this.aHa_Sub2_8272.method3796(16384);
             }
             this.aHa_Sub2_8272.method3794(this.aClass123_8276, aClass123_8274, -26411, this.aClass123_8277, this.aClass123_8275);
-            if (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.aByteArray7154.length < anInt8257 * 2) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Component182(anInt8257 * 2);
-            else this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.anInt7197 = 0;
+            if (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.payload.length < anInt8257 * 2) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Component182(anInt8257 * 2);
+            else this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.offset = 0;
             int i_158_ = 0;
             Component182 class348_sub49_sub1 = (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798);
             if (this.aHa_Sub2_8272.aBoolean7775) {
@@ -608,14 +608,14 @@ final class BufferCacheSub2
                 }
             }
             if (i_158_ > 0) {
-                Component261 class119_sub2 = new Component261(this.aHa_Sub2_8272, 5123, (class348_sub49_sub1.aByteArray7154), (class348_sub49_sub1.anInt7197));
+                Component261 class119_sub2 = new Component261(this.aHa_Sub2_8272, 5123, (class348_sub49_sub1.payload), (class348_sub49_sub1.offset));
                 this.aHa_Sub2_8272.method3759(i_158_, -128, 4, class119_sub2, 0);
             }
         }
     }
 
     static final void method4001(RenderableObject class318_sub1) {
-        JaclibLoader.aHa171.H(class318_sub1.x, (class318_sub1.anInt6382 + (class318_sub1.method2394(true) >> 1)), class318_sub1.y, HashNodeSub3.anIntArray9505);
+        JaclibLoader.toolkit.H(class318_sub1.x, (class318_sub1.anInt6382 + (class318_sub1.method2394(true) >> 1)), class318_sub1.y, HashNodeSub3.anIntArray9505);
         class318_sub1.anInt6386 = HashNodeSub3.anIntArray9505[0];
         class318_sub1.anInt6380 = HashNodeSub3.anIntArray9505[1];
         class318_sub1.anInt6389 = HashNodeSub3.anIntArray9505[2];
@@ -643,8 +643,8 @@ final class BufferCacheSub2
         if (i == 55) {
             if (DisplayModeManagerContainer152.aClass78_4538 != null) {
                 try {
-                    DisplayModeManagerContainer152.aClass78_4538.method789(0L, (byte) -120);
-                    DisplayModeManagerContainer152.aClass78_4538.method784(-89, is);
+                    DisplayModeManagerContainer152.aClass78_4538.seek(0L, (byte) -120);
+                    DisplayModeManagerContainer152.aClass78_4538.readFully(-89, is);
                     int i_170_;
                     for (i_170_ = 0; i_170_ < 24; i_170_++) {
                         if (is[i_170_] != 0) break;
@@ -667,7 +667,7 @@ final class BufferCacheSub2
     final void method3981(NodeSub1 class348_sub1, int[] is) {
         try {
             anInt8271++;
-            aClass262_8256.method1999(new NodeSub32((this.aHa_Sub2_8272), this, class348_sub1, is), -20180);
+            aClass262_8256.addTail(new NodeSub32((this.aHa_Sub2_8272), this, class348_sub1, is), -20180);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ed.L(" + (class348_sub1 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ')'));
         }
@@ -695,13 +695,13 @@ final class BufferCacheSub2
                 }
                 long l = ((long) i_184_ << 28 | ((long) i_185_ << 42 | (long) i_186_ << 48) | (long) (i_189_ << 14) | (long) i_188_);
                 Node class348;
-                for (class348 = aClass356_8278.method3480(l, -6008); class348 != null; class348 = aClass356_8278.method3476(true)) {
+                for (class348 = aClass356_8278.get(l, -6008); class348 != null; class348 = aClass356_8278.continueGet(true)) {
                     NodeSub20 class348_sub20 = (NodeSub20) class348;
                     if (i_188_ == class348_sub20.anInt6841 && (class348_sub20.aFloat6832 == (float) i_189_) && (class348_sub20.anInt6825 == i_184_) && (i_185_ == class348_sub20.anInt6833) && (class348_sub20.anInt6826 == i_186_)) break;
                 }
                 if (class348 == null) {
                     class348_sub20s[i_187_] = new NodeSub20(this, i_188_, i_189_, i_184_, i_185_, i_186_);
-                    aClass356_8278.method3483((byte) 99, l, class348_sub20s[i_187_]);
+                    aClass356_8278.put((byte) 99, l, class348_sub20s[i_187_]);
                 } else class348_sub20s[i_187_] = (NodeSub20) class348;
             }
             if (bool) aByteArrayArray8240[i][i_176_] = (byte) Component224.method2057((aByteArrayArray8240[i][i_176_]), 1);
@@ -724,7 +724,7 @@ final class BufferCacheSub2
             int i_197_ = i_192_ + i_192_ - -1;
             i_197_ *= i_197_;
             if (this.aHa_Sub2_8272.anIntArray7882.length < i_197_) this.aHa_Sub2_8272.anIntArray7882 = new int[i_197_];
-            if (anInt8257 * 2 > (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.aByteArray7154).length) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Component182(2 * anInt8257);
+            if (anInt8257 * 2 > (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.payload).length) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Component182(2 * anInt8257);
             int i_198_ = -i_192_ + i_194_;
             int i_199_ = i_198_;
             if (i_198_ < 0) i_198_ = 0;
@@ -762,7 +762,7 @@ final class BufferCacheSub2
                 this.aHa_Sub2_8272.method3729(8448, (byte) 98, 7681);
                 this.aHa_Sub2_8272.method3762(34166, 770, (byte) -87, 0);
                 this.aHa_Sub2_8272.method3775(false, 0, 770, 34167);
-                for (Node class348 = aClass262_8256.method1995(4); class348 != null; class348 = aClass262_8256.method1990((byte) 92)) {
+                for (Node class348 = aClass262_8256.first(4); class348 != null; class348 = aClass262_8256.next((byte) 92)) {
                     NodeSub32 class348_sub32 = (NodeSub32) class348;
                     class348_sub32.method3023(bools, 255, i_194_, i_196_, i_192_);
                 }

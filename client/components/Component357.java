@@ -34,7 +34,7 @@ final class Component357
         if (Component264.aClass348_Sub49_8698 == null) Component264.aClass348_Sub49_8698 = new Buffer(20000);
         Component264.aClass348_Sub49_8698.writeBytes(is.length, 0, is, 97);
         if (bool) {
-            Component385.method1294((byte) -113, (Component264.aClass348_Sub49_8698.aByteArray7154));
+            Component385.method1294((byte) -113, (Component264.aClass348_Sub49_8698.payload));
             Component304.aClass110_Sub1Array1146 = new Component362[Component241.anInt2956];
             int i_2_ = 0;
             for (int i_3_ = DisplayModeManagerContainer343.anInt8731; (Component284.anInt6151 >= i_3_); i_3_++) {
@@ -42,7 +42,7 @@ final class Component357
                 if (class110_sub1 != null) Component304.aClass110_Sub1Array1146[i_2_++] = class110_sub1;
             }
             Component387.aBoolean1899 = false;
-            Component49.aLong4683 = Component240.method599(-92);
+            Component49.aLong4683 = Component240.currentTimeMillis(-92);
             Component264.aClass348_Sub49_8698 = null;
         }
         if (i > -21) aBoolean2469 = true;

@@ -113,7 +113,7 @@ final class DisplayModeManagerContainer104
         if (i_5_ >= 10) {
             if (i_5_ > 60) i_5_ = 60;
         } else i_5_ = 10;
-        if (i >= -35) method2463(36, -58, null, 49, -2, 122);
+        if (i >= -35) createFrame(36, -58, null, 49, -2, 122);
         return i_5_;
     }
 
@@ -123,7 +123,7 @@ final class DisplayModeManagerContainer104
         return false;
     }
 
-    static final Frame method2463(int i, int i_6_, ReflectionInvoker class297, int i_7_, int i_8_, int i_9_) {
+    static final Frame createFrame(int i, int i_6_, ReflectionInvoker class297, int i_7_, int i_8_, int i_9_) {
         anInt10344++;
         if (!class297.method2247(-4)) return null;
         if (i_7_ == 0) {
@@ -140,11 +140,11 @@ final class DisplayModeManagerContainer104
         }
         Task class144 = class297.method2229(i_9_, i, i_7_, i_6_, (byte) -11);
         while (class144.anInt1997 == 0) SpriteAtlasShader.method2161((byte) 19, 10L);
-        Frame frame = (Frame) class144.anObject1998;
+        Frame frame = (Frame) class144.result;
         if (frame == null) return null;
         if (i_8_ != 14199) return null;
         if (class144.anInt1997 == 2) {
-            LoadingState.method527(frame, class297, false);
+            LoadingState.startLoadingTask(frame, class297, false);
             return null;
         }
         return frame;
@@ -185,10 +185,10 @@ final class DisplayModeManagerContainer104
                             LoadingManager.anInt2173 = 20;
                         }
                     }
-                    if (!Component10.aBoolean3811) break;
+                    if (!Component10.fpsOverlayEnabled) break;
                     int i_22_ = -5 + i_11_ + i_12_;
                     int i_23_ = -8 + i_13_ + i_14_;
-                    Applet_Sub1.aClass324_20.drawTextRightAligned("Fps:" + (DisplayModeManagerContainer348.anInt5891), i_23_, 16776960, i_22_, i + -116, -1);
+                    Applet_Sub1.aClass324_20.drawTextRightAligned("Fps:" + (DisplayModeManagerContainer348.fps), i_23_, 16776960, i_22_, i + -116, -1);
                     i_23_ -= 15;
                     Runtime runtime = Runtime.getRuntime();
                     int i_24_ = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);

@@ -30,9 +30,9 @@ final class HashNodeSub2
     }
 
     static final void method3171(GraphicsToolkit var_ha, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
-        JaclibLoader.aHa171 = var_ha;
+        JaclibLoader.toolkit = var_ha;
         Npc.anInt10503 = i;
-        DefinitionSub5.aBoolean9121 = (Npc.anInt10503 > 1 && JaclibLoader.aHa171.method3708());
+        DefinitionSub5.aBoolean9121 = (Npc.anInt10503 > 1 && JaclibLoader.toolkit.method3708());
         Component149.anInt4459 = i_0_;
         Component148.anInt3465 = 1 << Component149.anInt4459;
         DisplayModeManagerContainer64.anInt9037 = Component148.anInt3465 >> 1;
@@ -76,11 +76,11 @@ final class HashNodeSub2
         AudioMixer.aClass318_Sub1Array3226 = new RenderableObject[2];
         Component95.aClass318_Sub1Array1754 = new RenderableObject[2];
         Component71.aClass318_Sub1Array6066 = new RenderableObject[10000];
-        Component305.anInt9930 = 0;
+        Component305.opaqueOnscreenCount = 0;
         ReferenceTable.aClass318_Sub1Array3737 = new RenderableObject[5000];
-        HashNodeSub3.anInt9504 = 0;
+        HashNodeSub3.translucentOnscreenCount = 0;
         DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357 = new Component327[5000];
-        Component328.anInt1477 = 0;
+        Component328.dynamicOnscreenCount = 0;
         DisplayModeManagerContainer153.aBooleanArrayArray1572 = (new boolean
                 [(Component197.anInt10084 + Component197.anInt10084 + 1)]
                 [(Component197.anInt10084 + Component197.anInt10084 + 1)]);
@@ -96,10 +96,10 @@ final class HashNodeSub2
             Component2.aBooleanArrayArrayArray8361 = new boolean[i_1_][][];
             if (LoggedOutDefinition.aClass293Array9432 != null) Component92.method1978();
             LoggedOutDefinition.aClass293Array9432 = new Component176[Npc.anInt10503];
-            JaclibLoader.aHa171.method3631((LoggedOutDefinition.aClass293Array9432).length + 1);
-            JaclibLoader.aHa171.method3659(0);
+            JaclibLoader.toolkit.method3631((LoggedOutDefinition.aClass293Array9432).length + 1);
+            JaclibLoader.toolkit.method3659(0);
             for (int i_6_ = 0; i_6_ < LoggedOutDefinition.aClass293Array9432.length; i_6_++) {
-                LoggedOutDefinition.aClass293Array9432[i_6_] = new Component176(i_6_ + 1, JaclibLoader.aHa171);
+                LoggedOutDefinition.aClass293Array9432[i_6_] = new Component176(i_6_ + 1, JaclibLoader.toolkit);
                 new Thread(LoggedOutDefinition.aClass293Array9432[i_6_], "wr" + i_6_).start();
             }
             int i_7_;

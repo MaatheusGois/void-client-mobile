@@ -133,7 +133,7 @@ final class Component256
         if (i < 20) method1832(47);
         anInt6104++;
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-            DisplayModeManagerContainer173.aClass60_4254.method590(0);
+            DisplayModeManagerContainer173.aClass60_4254.clear(0);
         }
     }
 

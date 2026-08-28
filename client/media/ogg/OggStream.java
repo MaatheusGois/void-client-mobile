@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub23` (JODE-obfuscated).
- * Abstract Ogg audio-stream decoder (extends Node). Declares method2961(byte) and method2964(byte,OggPacket); concrete subclasses decode Ogg packets from various sources.
+ * Abstract Ogg audio-stream decoder (extends Node). Declares shutdown(byte) and handlePacket(byte,OggPacket); concrete subclasses decode Ogg packets from various sources.
  */
 
 import jagtheora.ogg.OggPacket;
@@ -41,7 +41,7 @@ abstract class OggStream extends Node {
         return 0;
     }
 
-    abstract void method2961(byte i);
+    abstract void shutdown(byte i);
 
     public static void method2962(int i) {
         aFloatArray6865 = null;
@@ -50,25 +50,25 @@ abstract class OggStream extends Node {
     }
 
     final void method2963(OggPacket oggpacket, int i) {
-        method2964((byte) -120, oggpacket);
+        handlePacket((byte) -120, oggpacket);
         if (i != 16384) aFloatArray6867 = null;
         anInt6863++;
         this.anInt6868++;
     }
 
-    abstract void method2964(byte i, OggPacket oggpacket);
+    abstract void handlePacket(byte i, OggPacket oggpacket);
 
     static final void method2965(String string, int i, boolean bool, int i_1_) {
         anInt6866++;
         Component38.method1406(true);
         if (i == 0) {
-            NodeSub8.aHa6654 = Component65.method958(true, 0, DefinitionSub4.aD9113, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+            NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.aD9113, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
             if (string != null) {
-                NodeSub8.aHa6654.GA(0);
+                NodeSub8.toolkit.GA(0);
                 Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.anInt235, 0, -117, Component65.aClass45_1627);
-                BitmapFont class324 = (NodeSub8.aHa6654.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.anInt235, 0), true));
+                BitmapFont class324 = (NodeSub8.toolkit.method3686(class143, Component170.method1519(Component158.aClass45_322, DisplayModeManagerContainer167.anInt235, 0), true));
                 Component211.method1170((byte) -89);
-                Component149.method3511(true, class324, class143, string, 2, NodeSub8.aHa6654);
+                Component149.method3511(true, class324, class143, string, 2, NodeSub8.toolkit);
             }
         } else {
             GraphicsToolkit var_ha = null;
@@ -81,7 +81,7 @@ abstract class OggStream extends Node {
                 Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
             }
             try {
-                NodeSub8.aHa6654 = Component65.method958(true, i, DefinitionSub4.aD9113, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+                NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.aD9113, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 if (string != null) {
                     var_ha.GA(0);
                     Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.anInt235, 0, -51, Component65.aClass45_1627);
@@ -89,7 +89,7 @@ abstract class OggStream extends Node {
                     Component211.method1170((byte) -26);
                     Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
                 }
-                if (NodeSub8.aHa6654.method3693()) {
+                if (NodeSub8.toolkit.method3693()) {
                     boolean bool_2_ = true;
                     try {
                         bool_2_ = (DefinitionSub20.aClass348_Sub4_9264.anInt6609) > 256;
@@ -97,9 +97,9 @@ abstract class OggStream extends Node {
                         /* empty */
                     }
                     NodeBase var_za;
-                    if (!bool_2_) var_za = NodeSub8.aHa6654.method3702(104857600);
-                    else var_za = NodeSub8.aHa6654.method3702(146800640);
-                    NodeSub8.aHa6654.method3651(var_za);
+                    if (!bool_2_) var_za = NodeSub8.toolkit.method3702(104857600);
+                    else var_za = NodeSub8.toolkit.method3702(146800640);
+                    NodeSub8.toolkit.method3651(var_za);
                 }
             } catch (Throwable throwable) {
                 int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
@@ -120,14 +120,14 @@ abstract class OggStream extends Node {
         Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1826(!bool, -142238264);
         Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), i);
         Buffer.method3354(i_1_ + -78);
-        NodeSub8.aHa6654.method3650(10000);
-        NodeSub8.aHa6654.X(32);
-        Component270.aClass101_2123 = NodeSub8.aHa6654.method3654();
-        Cp1252Decoder.aClass101_5209 = NodeSub8.aHa6654.method3654();
+        NodeSub8.toolkit.method3650(10000);
+        NodeSub8.toolkit.X(32);
+        Component270.aClass101_2123 = NodeSub8.toolkit.method3654();
+        Cp1252Decoder.aClass101_5209 = NodeSub8.toolkit.method3654();
         Component200.method2196((byte) -9);
-        NodeSub8.aHa6654.method3630(Component192.aClass348_Sub51_3959.aClass239_Sub2_7228.method1726(-32350) == 1);
-        if (NodeSub8.aHa6654.method3627()) DefinitionSub33.method3137(Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1771(-32350) == 1, (byte) -24);
-        Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.aHa6654, ParametricDefinition.anInt9109 >> 3);
+        NodeSub8.toolkit.method3630(Component192.aClass348_Sub51_3959.aClass239_Sub2_7228.method1726(-32350) == 1);
+        if (NodeSub8.toolkit.method3627()) DefinitionSub33.method3137(Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1771(-32350) == 1, (byte) -24);
+        Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
         DisplayModeManagerContainer154.method773(true);
         r.aBoolean9719 = false;
         NativeLibraryLoader.aClass57Array2974 = null;

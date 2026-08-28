@@ -54,7 +54,7 @@ final class Component245
     static final void method174(int i, int i_1_) {
         if (i_1_ != -30742) aClass141_117 = null;
         anInt121++;
-        Component9.aClass60_4139.method578(2, i);
+        Component9.aClass60_4139.processSoftEntries(2, i);
     }
 
     public Component245() {

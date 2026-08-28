@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer273
     }
 
     static final void method1134(int i) {
-        Buffer.method3379(2, 11);
+        Buffer.setClientState(2, 11);
         anInt5802++;
         if (i < 28) aClass144_5800 = null;
         Component281.method2282(-12648);
@@ -4114,15 +4114,15 @@ final class DisplayModeManagerContainer273
         Component120.anInt319 = (int) (Math.random() * 100D) - 50;
         ToolbarRefreshDefinition.method3089(-126);
         for (int k = 0; k < 2048; k++)
-            InterfaceRenderer.aPlayerArray5058[k] = null;
+            InterfaceRenderer.players[k] = null;
 
         Component324.anInt2057 = 0;
         NodeSub32.anInt6930 = 0;
-        Component21.aClass356_3654.method3481(0);
-        DefinitionSub17.aClass262_9240.method1996(112);
-        CacheNodeSub2.aClass262_10492.method1996(109);
+        Component21.aClass356_3654.clear(0);
+        DefinitionSub17.aClass262_9240.clear(112);
+        CacheNodeSub2.aClass262_10492.clear(109);
         Component241.aClass243_2957.method1876((byte) -45);
-        Component387.aClass356_1895.method3481(0);
+        Component387.aClass356_1895.clear(0);
         HashNodeSub20.aClass262_9711 = new NodeList();
         DisplayModeManagerContainer58.aClass170_10209.method1314((byte) 74);
         Component374.method2636(i + 69);
@@ -4140,9 +4140,9 @@ final class DisplayModeManagerContainer273
             if (!WaterShaderProgram.aBooleanArray6270[l]) DisplayModeManagerContainer123.anIntArray1303[l] = -1;
 
         if (r.anInt9721 != -1) DisplayModeManagerContainer194.method235(r.anInt9721, (byte) -105);
-        for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
-            if (!class348_sub41.method2712((byte) 4)) {
-                class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0);
+        for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.next(0)) {
+            if (!class348_sub41.isLinked((byte) 4)) {
+                class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0);
                 if (class348_sub41 == null) break;
             }
             Component162.method1118(true, false, class348_sub41, 2533);

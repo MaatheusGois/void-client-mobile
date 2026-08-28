@@ -84,7 +84,7 @@ final class DisplayModeManagerContainer173
                             RenderableSub9Sub2.method2519(class318_sub1_sub4, i, i_8_, i_9_, 1, 1);
                             if (class318_sub1_sub4_10_ != null && class318_sub1_sub4_10_.method2388(-125)) {
                                 RenderableSub9Sub2.method2519(class318_sub1_sub4_10_, i, i_8_, i_9_, 1, 1);
-                                class318_sub1_sub4_10_.method2380(JaclibLoader.aHa171, 0, false, class318_sub1_sub4, 0, (byte) -110, 0);
+                                class318_sub1_sub4_10_.method2380(JaclibLoader.toolkit, 0, false, class318_sub1_sub4, 0, (byte) -110, 0);
                                 class318_sub1_sub4_10_.method2392(true);
                             }
                             class318_sub1_sub4.method2392(true);

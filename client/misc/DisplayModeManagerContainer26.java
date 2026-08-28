@@ -69,7 +69,7 @@ final class DisplayModeManagerContainer26
 
     final void method819(byte i, int i_14_) {
         synchronized (aClass60_1449) {
-            aClass60_1449.method578(2, i_14_);
+            aClass60_1449.processSoftEntries(2, i_14_);
             if (i <= 8) method826(91, -94, 117, 24, 39, -100, null);
         }
         anInt1457++;
@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer26
         anInt1458++;
         Component189 class300;
         synchronized (aClass60_1449) {
-            class300 = (Component189) aClass60_1449.method583(i, 116);
+            class300 = (Component189) aClass60_1449.get(i, 116);
         }
         if (class300 != null) return class300;
         byte[] is;
@@ -89,20 +89,20 @@ final class DisplayModeManagerContainer26
         class300 = new Component189();
         if (is != null) class300.method2275(new Buffer(is), (byte) -123);
         synchronized (aClass60_1449) {
-            aClass60_1449.method582(class300, i, (byte) -106);
+            aClass60_1449.putOne(class300, i, (byte) -106);
         }
         return class300;
     }
 
     static final void method821(int i) {
-        Component9.aClass60_4139.method590(0);
+        Component9.aClass60_4139.clear(0);
         int i_16_ = -67 / ((i - 39) / 33);
         anInt1459++;
     }
 
     final void method822(byte i) {
         synchronized (aClass60_1449) {
-            aClass60_1449.method590(0);
+            aClass60_1449.clear(0);
         }
         if (i >= -13) method825(14);
         anInt1452++;

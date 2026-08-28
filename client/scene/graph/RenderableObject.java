@@ -45,9 +45,9 @@ abstract class RenderableObject extends Renderable {
             try {
                 if (i != -2) method2383(null, -63, null);
                 anInt6385++;
-                boolean bool = ((Exception_Sub1.aClass255_112.method1941(class46.anInt672, (byte) -74, class46.anInt812, class46.anInt781, ~0xffffff | class46.anInt809, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.aClass154_10536)))) == null);
+                boolean bool = ((Exception_Sub1.aClass255_112.method1941(class46.anInt672, (byte) -74, class46.anInt812, class46.anInt781, ~0xffffff | class46.anInt809, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
                 if (!bool) break;
-                Component305.aClass262_9931.method1999(new NodeSub7(class46.anInt812, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
+                Component305.aClass262_9931.addTail(new NodeSub7(class46.anInt812, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
                 Component111.method1916(-9343, class46);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.method2929(runtimeexception, ("ga.QA(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class46 != null ? "{...}" : "null") + ')'));

@@ -27,17 +27,17 @@ final class Component36
             else {
                 NodeSub28 class348_sub28 = new NodeSub28();
                 class348_sub28.anInterface19_6908 = interface19;
-                aClass262_3297.method1999(class348_sub28, -20180);
+                aClass262_3297.addTail(class348_sub28, -20180);
             }
         }
     }
 
     static final synchronized void method1948(byte i) {
         for (; ; ) {
-            NodeSub28 class348_sub28 = (NodeSub28) aClass262_3297.method1997(8);
+            NodeSub28 class348_sub28 = (NodeSub28) aClass262_3297.peekFirst(8);
             if (class348_sub28 == null) break;
             class348_sub28.anInterface19_6908.w(true);
-            class348_sub28.method2715((byte) 69);
+            class348_sub28.unlink((byte) 69);
         }
         if (i > -22) aBoolean3296 = false;
     }

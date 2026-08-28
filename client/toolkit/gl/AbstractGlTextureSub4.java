@@ -54,7 +54,7 @@ final class AbstractGlTextureSub4
         anInt8559++;
         int i_4_ = -43 / ((-65 - i) / 55);
         long l = i_3_ | (bool ? -2147483648 : 0);
-        return ((NodeSub13) Definition.aClass356_7041.method3480(l, -6008));
+        return ((NodeSub13) Definition.aClass356_7041.get(l, -6008));
     }
 
     static {

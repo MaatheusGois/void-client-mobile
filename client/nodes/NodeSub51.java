@@ -190,7 +190,7 @@ final class NodeSub51
         try {
             if (i == 925) {
                 anInt7266++;
-                if (class348_sub49 != null && (class348_sub49.aByteArray7154 != null)) {
+                if (class348_sub49 != null && (class348_sub49.payload != null)) {
                     int i_4_ = class348_sub49.readUnsignedByte(i + -670);
                     if (i_4_ >= 23) {
                         if (i_4_ > 24) method3423(true, 31286);

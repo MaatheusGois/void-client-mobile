@@ -158,7 +158,7 @@ final class DisplayModeManagerContainer124
                                         }
                                     }
                                     if (bool_54_) {
-                                        class318_sub4.method2373(false);
+                                        class318_sub4.unlink(false);
                                         Component350.method560(class318_sub4, i ^ 0x4b);
                                     }
                                 }
@@ -515,11 +515,11 @@ final class DisplayModeManagerContainer124
     static final Component80 method1636(int i, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_) {
         anInt2988++;
         long l = ((long) i_76_ * 76724863L ^ ((long) i * 32147369L ^ ((long) i_74_ * 986053L ^ ((long) i_75_ * 67481L ^ (long) i_77_ * 97549L ^ (long) i_79_ * 475427L))));
-        Component80 class299 = (Component80) Component121.aClass60_4543.method583(l, 90);
+        Component80 class299 = (Component80) Component121.aClass60_4543.get(l, 90);
         if (class299 != null) return class299;
         class299 = NodeCache.aHa1098.method3697(i_75_, i_77_, i_79_, i_74_, i, i_76_);
         if (i_78_ != -1) method1636(58, 63, -99, -89, -7, 18, 71);
-        Component121.aClass60_4543.method582(class299, l, (byte) -106);
+        Component121.aClass60_4543.putOne(class299, l, (byte) -106);
         return class299;
     }
 

@@ -160,9 +160,9 @@ final class FriendsIgnoreList {
         DisplayModeManagerContainer89.anInt8374++;
         ParticleSystem class348_sub47 = ParticleShader.method2148(NodeSub34.aClass351_6970, DisplayModeManagerContainer64.aClass77_9029, -109);
         HashNodeSub14.method3243(37, class348_sub47);
-        for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3482(0)) {
-            if (!class348_sub41.method2712((byte) 4)) {
-                class348_sub41 = (NodeSub41) Component15.aClass356_4915.method3484(0);
+        for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.next(0)) {
+            if (!class348_sub41.isLinked((byte) 4)) {
+                class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0);
                 if (class348_sub41 == null) break;
             }
             if (class348_sub41.anInt7053 == 0) Component162.method1118(true, bool, class348_sub41, 2533);
@@ -189,13 +189,13 @@ final class FriendsIgnoreList {
 
     static final void method2062(byte i) {
         if (Component335.aClass338Array2034 != null) {
-            for (int i_3_ = 0; i_3_ < RadixText.anInt6115; i_3_++)
+            for (int i_3_ = 0; i_3_ < RadixText.occluderCountA; i_3_++)
                 Component335.aClass338Array2034[i_3_] = null;
             Component335.aClass338Array2034 = null;
         }
         anInt3480++;
         if (DisplayModeManagerContainer104.aClass338Array10330 != null) {
-            for (int i_4_ = 0; i_4_ < Component325.anInt1200; i_4_++)
+            for (int i_4_ = 0; i_4_ < Component325.occluderCountB; i_4_++)
                 DisplayModeManagerContainer104.aClass338Array10330[i_4_] = null;
             DisplayModeManagerContainer104.aClass338Array10330 = null;
         }

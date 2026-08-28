@@ -58,7 +58,7 @@ final class HashNodeSub17
         for (int i_2_ = 0; i_2_ < aByteArrayArray9671.length; i_2_++) {
             byte[] is = aByteArrayArray9671[i_2_];
             Buffer class348_sub49 = new Buffer(is);
-            class348_sub49.anInt7197 = 1;
+            class348_sub49.offset = 1;
             int i_3_ = class348_sub49.readUnsignedShort(842397944);
             synchronized (MenuOpener.aClass45_4843) {
                 bool &= MenuOpener.aClass45_4843.method421(false, i_3_);
@@ -76,10 +76,10 @@ final class HashNodeSub17
         for (int i_5_ = 0; i_5_ < is.length; i_5_++) {
             byte[] is_6_ = aByteArrayArray9671[i_5_];
             Buffer class348_sub49 = new Buffer(is_6_);
-            class348_sub49.anInt7197 = 1;
+            class348_sub49.offset = 1;
             int i_7_ = class348_sub49.readUnsignedShort(842397944);//
             ObjectDeserializer class348_sub33 = null;
-            for (ObjectDeserializer class348_sub33_8_ = (ObjectDeserializer) class262.method1995(4); class348_sub33_8_ != null; class348_sub33_8_ = (ObjectDeserializer) class262.method1990((byte) 78)) {
+            for (ObjectDeserializer class348_sub33_8_ = (ObjectDeserializer) class262.first(4); class348_sub33_8_ != null; class348_sub33_8_ = (ObjectDeserializer) class262.next((byte) 78)) {
                 if (class348_sub33_8_.anInt6958 == i_7_) {
                     class348_sub33 = class348_sub33_8_;
                     break;
@@ -89,7 +89,7 @@ final class HashNodeSub17
                 synchronized (MenuOpener.aClass45_4843) {
                     class348_sub33 = new ObjectDeserializer(i_7_, MenuOpener.aClass45_4843.method415((byte) 73, i_7_));
                 }
-                class262.method1999(class348_sub33, -20180);
+                class262.addTail(class348_sub33, -20180);
             }
             this.aClass4Array9673[is[i_5_]] = new Component376(is_6_, class348_sub33);
         }
@@ -106,7 +106,7 @@ final class HashNodeSub17
 
     static final void method3270(byte i) {
         if (i <= 106) method3266(null, -91, null);
-        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 115)) {
+        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 115)) {
             if (Component66.method1796(69, class348_sub42_sub12.opcode)) DisplayModeManagerContainer89.method202(6, class348_sub42_sub12);
         }
         anInt9680++;

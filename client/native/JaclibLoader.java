@@ -12,7 +12,8 @@ final class JaclibLoader {
     static int[] anIntArray168 = {28, 35, 40, 44};
     static int anInt169 = -1;
     static int anInt170;
-    static GraphicsToolkit aHa171;
+    /** Shared GraphicsToolkit instance used by debug overlay / early init paths. */
+    static GraphicsToolkit toolkit;
 
     static final boolean method215(int i) {
         anInt170++;
@@ -24,6 +25,6 @@ final class JaclibLoader {
     public static void method216(boolean bool) {
         anIntArray168 = null;
         if (bool != false) method216(true);
-        aHa171 = null;
+        toolkit = null;
     }
 }

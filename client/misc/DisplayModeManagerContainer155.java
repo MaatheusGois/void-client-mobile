@@ -62,18 +62,18 @@ final class DisplayModeManagerContainer155
             int i_7_ = i_4_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 127);
             if (PauseHandler.aBoolean9535) {
                 int i_8_ = 0;
-                for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1011(-119)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.method1003((byte) 44))) {
+                for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-119)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 44))) {
                     int i_9_ = (31 + i_4_ + DefinitionGroup.anInt9532 + i_8_ * 16);
                     i_8_++;
                     if ((class348_sub42_sub13.anInt9615) == 1)
-                        RenderableSub2.method2494(i_4_ + DefinitionGroup.anInt9532, -256, i_9_, var_ha, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.aClass348_Sub42_1647.aClass348_Sub42_7063)), Component227.anInt1117, i_7_, -1, (byte) 124, Component251.anInt5819, DisplayModeManagerContainer136.anInt4717 - -i_3_, i_6_);
+                        RenderableSub2.method2494(i_4_ + DefinitionGroup.anInt9532, -256, i_9_, var_ha, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.sentinel.next)), Component227.anInt1117, i_7_, -1, (byte) 124, Component251.anInt5819, DisplayModeManagerContainer136.anInt4717 - -i_3_, i_6_);
                     else DisplayModeManagerContainer58.method2431(-1, i_9_, class348_sub42_sub13, i_6_, Component227.anInt1117, -256, i_7_, var_ha, DefinitionGroup.anInt9532 + i_4_, 126, DisplayModeManagerContainer136.anInt4717 - -i_3_, Component251.anInt5819);
                 }
                 if (Component359.aClass348_Sub42_Sub13_3152 != null) {
                     StaticElementRenderer.method2509(NodeSub1Sub1.anInt8806, MouseHandler.menuOriginY, var_ha, DisplayModeManagerContainer368.anInt5252, i_5_, true, DisplayModeManagerContainer249.anInt4669, -16777216);
                     i_8_ = 0;
                     NodeList.aClass324_3326.drawText(Component359.aClass348_Sub42_Sub13_3152.aString9617, i_5_, MouseHandler.menuOriginY - -14, 3 + DisplayModeManagerContainer368.anInt5252, -1, -126);
-                    for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Component359.aClass348_Sub42_Sub13_3152.aClass107_9621.method1011(-84)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) Component359.aClass348_Sub42_Sub13_3152.aClass107_9621.method1003((byte) 73))) {
+                    for (MenuEntry class348_sub42_sub12 = ((MenuEntry) Component359.aClass348_Sub42_Sub13_3152.aClass107_9621.first(-84)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) Component359.aClass348_Sub42_Sub13_3152.aClass107_9621.next((byte) 73))) {
                         int i_10_ = 31 + (MouseHandler.menuOriginY + i_8_ * 16);
                         i_8_++;
                         RenderableSub2.method2494(MouseHandler.menuOriginY, -256, i_10_, var_ha, class348_sub42_sub12, NodeSub1Sub1.anInt8806, i_7_, -1, (byte) 125, DisplayModeManagerContainer249.anInt4669, DisplayModeManagerContainer368.anInt5252, i_6_);
@@ -82,7 +82,7 @@ final class DisplayModeManagerContainer155
                 }
             } else {
                 int i_11_ = 0;
-                for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.method1995(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 55)) {
+                for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 55)) {
                     int i_12_ = 31 + (i_4_ + DefinitionGroup.anInt9532 - -((-i_11_ + -1 + DisplayModeManagerContainer306.menuEntryCount) * 16));
                     RenderableSub2.method2494(i_4_ + DefinitionGroup.anInt9532, -256, i_12_, var_ha, class348_sub42_sub12, Component227.anInt1117, i_7_, -1, (byte) 124, Component251.anInt5819, DisplayModeManagerContainer136.anInt4717 - -i_3_, i_6_);
                     i_11_++;

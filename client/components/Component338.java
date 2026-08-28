@@ -94,7 +94,7 @@ abstract class Component338
                                     for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
                                         int i_12_ = class348_sub49.readInt((byte) -126);
                                         is[i_11_] = new byte[i_12_];
-                                        class348_sub49.method3389(2147483647, 0, i_12_, is[i_11_]);
+                                        class348_sub49.readBytes(2147483647, 0, i_12_, is[i_11_]);
                                     }
                                 }
                                 class348_sub48.anIntArray7132[i_6_] = i_7_;
@@ -125,7 +125,7 @@ abstract class Component338
                         class348_sub48.anIntArray7131[i_6_] = -5;
                     }
                 }
-                NodeSub35.aClass262_6978.method1999(class348_sub48, -20180);
+                NodeSub35.aClass262_6978.addTail(class348_sub48, -20180);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("mr.E(" + i + ',' + (class348_sub49 != null ? "{...}" : "null") + ',' + (class297 != null ? "{...}" : "null") + ',' + i_5_ + ')'));

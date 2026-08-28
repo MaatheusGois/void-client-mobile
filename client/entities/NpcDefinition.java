@@ -147,35 +147,35 @@ final class NpcDefinition extends Node {
         anIntArray6793 = new int[128];
         Buffer class348_sub49 = new Buffer(is);
         int i;
-        for (i = 0; ((class348_sub49.aByteArray7154[i + class348_sub49.anInt7197]) != 0); i++) {
+        for (i = 0; ((class348_sub49.payload[i + class348_sub49.offset]) != 0); i++) {
             /* empty */
         }
         byte[] is_9_ = new byte[i];
         for (int i_10_ = 0; i > i_10_; i_10_++)
             is_9_[i_10_] = class348_sub49.readByte(-128);
-        class348_sub49.anInt7197++;
+        class348_sub49.offset++;
         i++;
-        int i_11_ = class348_sub49.anInt7197;
-        class348_sub49.anInt7197 += i;
+        int i_11_ = class348_sub49.offset;
+        class348_sub49.offset += i;
         int i_12_;
-        for (i_12_ = 0; ((class348_sub49.aByteArray7154[i_12_ + class348_sub49.anInt7197]) != 0); i_12_++) {
+        for (i_12_ = 0; ((class348_sub49.payload[i_12_ + class348_sub49.offset]) != 0); i_12_++) {
             /* empty */
         }
         byte[] is_13_ = new byte[i_12_];
         for (int i_14_ = 0; i_12_ > i_14_; i_14_++)
             is_13_[i_14_] = class348_sub49.readByte(-81);
         i_12_++;
-        class348_sub49.anInt7197++;
-        int i_15_ = class348_sub49.anInt7197;
-        class348_sub49.anInt7197 += i_12_;
+        class348_sub49.offset++;
+        int i_15_ = class348_sub49.offset;
+        class348_sub49.offset += i_12_;
         int i_16_;
-        for (i_16_ = 0; ((class348_sub49.aByteArray7154[class348_sub49.anInt7197 + i_16_]) != 0); i_16_++) {
+        for (i_16_ = 0; ((class348_sub49.payload[class348_sub49.offset + i_16_]) != 0); i_16_++) {
             /* empty */
         }
         byte[] is_17_ = new byte[i_16_];
         for (int i_18_ = 0; i_16_ > i_18_; i_18_++)
             is_17_[i_18_] = class348_sub49.readByte(-82);
-        class348_sub49.anInt7197++;
+        class348_sub49.offset++;
         byte[] is_19_ = new byte[++i_16_];
         int i_20_;
         if (i_16_ > 1) {
@@ -208,13 +208,13 @@ final class NpcDefinition extends Node {
         i_26_ = class348_sub49.readUnsignedByte(255);
         byte[] is_28_ = i_26_ > 0 ? new byte[2 * i_26_] : null;
         int i_29_;
-        for (i_29_ = 0; ((class348_sub49.aByteArray7154[class348_sub49.anInt7197 - -i_29_]) != 0); i_29_++) {
+        for (i_29_ = 0; ((class348_sub49.payload[class348_sub49.offset - -i_29_]) != 0); i_29_++) {
             /* empty */
         }
         byte[] is_30_ = new byte[i_29_];
         for (int i_31_ = 0; i_29_ > i_31_; i_31_++)
             is_30_[i_31_] = class348_sub49.readByte(-108);
-        class348_sub49.anInt7197++;
+        class348_sub49.offset++;
         i_29_++;
         int i_32_ = 0;
         for (int i_33_ = 0; i_33_ < 128; i_33_++) {
@@ -233,7 +233,7 @@ final class NpcDefinition extends Node {
             if (i_35_ == 0) {
                 if (i_36_ < is_30_.length) i_35_ = is_30_[i_36_++];
                 else i_35_ = -1;
-                i_37_ = class348_sub49.method3366((byte) 124);
+                i_37_ = class348_sub49.readVarInt((byte) 124);
             }
             this.aShortArray6795[i_38_] += GpsOverlay.method1166(32768, i_37_ + -1 << 14);
             i_35_--;
@@ -245,7 +245,7 @@ final class NpcDefinition extends Node {
         for (int i_40_ = 0; i_40_ < 128; i_40_++) {
             if (anIntArray6793[i_40_] != 0) {
                 if (i_35_ == 0) {
-                    i_39_ = -1 + (class348_sub49.aByteArray7154[i_11_++]);
+                    i_39_ = -1 + (class348_sub49.payload[i_11_++]);
                     if (i_36_ < is_9_.length) i_35_ = is_9_[i_36_++];
                     else i_35_ = -1;
                 }
@@ -261,7 +261,7 @@ final class NpcDefinition extends Node {
                 if (i_35_ == 0) {
                     if (i_36_ >= is_13_.length) i_35_ = -1;
                     else i_35_ = is_13_[i_36_++];
-                    i_41_ = 16 + (class348_sub49.aByteArray7154[i_15_++]) << 2;
+                    i_41_ = 16 + (class348_sub49.payload[i_15_++]) << 2;
                 }
                 i_35_--;
                 this.aByteArray6792[i_42_] = (byte) i_41_;

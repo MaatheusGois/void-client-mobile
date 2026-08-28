@@ -28,11 +28,11 @@ final class SceneManager {
             int i_8_ = i_7_;
             if (i_8_ < 3 && DisplayModeManagerContainer206.method802(i_5_, i, true)) i_8_++;
             if ((Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && !Component255.method536(i_5_, false, i, Component385.anInt2204, i_8_)) || Component335.aClass357ArrayArrayArray2029 == null) return;
-            Component103.aClass237_Sub1_4197.method1694((NodeSub45.aClass361Array7108[i_7_]), i_1_, i_7_, NodeSub8.aHa6654, i, i_5_, (byte) 106);
+            Component103.aClass237_Sub1_4197.method1694((NodeSub45.aClass361Array7108[i_7_]), i_1_, i_7_, NodeSub8.toolkit, i, i_5_, (byte) 106);
             if (i_3_ >= 0) {
                 int i_9_ = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350);
                 Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), 1);
-                Component103.aClass237_Sub1_4197.method1689(i, i_7_, i_3_, NodeSub8.aHa6654, i_8_, 50, i_4_, i_5_, i_2_, i_6_, (NodeSub45.aClass361Array7108[i_7_]));
+                Component103.aClass237_Sub1_4197.method1689(i, i_7_, i_3_, NodeSub8.toolkit, i_8_, 50, i_4_, i_5_, i_2_, i_6_, (NodeSub45.aClass361Array7108[i_7_]));
                 Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), i_9_);
             }
         }
@@ -86,7 +86,7 @@ final class SceneManager {
         anInt2857++;
         if (i_18_ < 51) aClass114_2860 = null;
         long l = var_ha.anInt4567 << 19 | (this.anInt2853 | i << 16 | (!bool ? 0 : 262144));
-        Component24 class105 = (Component24) this.aClass141_2851.aClass60_1976.method583(l, -87);
+        Component24 class105 = (Component24) this.aClass141_2851.aClass60_1976.get(l, -87);
         if (class105 != null) return class105;
         if (!this.aClass141_2851.aClass45_1965.method421(false, this.anInt2853)) return null;
         Component170 class207 = Component170.method1521(this.aClass141_2851.aClass45_1965, this.anInt2853, 0);
@@ -97,7 +97,7 @@ final class SceneManager {
                 class207.method1520();
         }
         class105 = var_ha.method3691(class207, true);
-        if (class105 != null) this.aClass141_2851.aClass60_1976.method582(class105, l, (byte) -101);
+        if (class105 != null) this.aClass141_2851.aClass60_1976.putOne(class105, l, (byte) -101);
         return class105;
     }
 

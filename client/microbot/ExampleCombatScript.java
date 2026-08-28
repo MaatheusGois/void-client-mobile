@@ -40,7 +40,7 @@ final class ExampleCombatScript {
     }
 
     /**
-     * Called once per {@link client#method114} while {@link #isRunning()}.
+     * Called once per {@link client#processGameTick} while {@link #isRunning()}.
      */
     void pulse() {
         if (!running || Component72.localPlayer == null) {
@@ -75,7 +75,7 @@ final class ExampleCombatScript {
 
         if (Rs2Npc.attack(target)) {
             attackCooldown = ATTACK_COOLDOWN_FRAMES;
-            String name = target.aClass79_10505 != null ? target.aClass79_10505.aString1372 : "?";
+            String name = target.definition != null ? target.definition.name : "?";
             Microbot.log("attack → " + name
                     + " idx=" + target.anInt10290
                     + " dist=" + Rs2Player.distanceTo(target));
@@ -88,17 +88,17 @@ final class ExampleCombatScript {
         int limit = Math.min(all.length, 4);
         for (int i = 0; i < limit; i++) {
             Npc n = all[i];
-            if (n == null || n.aClass79_10505 == null) {
+            if (n == null || n.definition == null) {
                 continue;
             }
-            DisplayModeManagerContainer206 def = n.aClass79_10505;
+            DisplayModeManagerContainer206 def = n.definition;
             if (def.anIntArray1377 != null) {
                 DisplayModeManagerContainer206 t = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (t != null) {
                     def = t;
                 }
             }
-            Microbot.log("npc '" + def.aString1372 + "' dist=" + Rs2Player.distanceTo(n));
+            Microbot.log("npc '" + def.name + "' dist=" + Rs2Player.distanceTo(n));
         }
     }
 }

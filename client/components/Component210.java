@@ -160,7 +160,7 @@ class Component210
     static final void method555(boolean bool, int i) {
         anInt5286++;
         if (i != Component126.aString4461.length()) {
-            CommandHandler.method812(Component126.aString4461, false, bool, (byte) -79);
+            CommandHandler.handleCommand(Component126.aString4461, false, bool, (byte) -79);
             if (!bool) {
                 Applet_Sub1.method94("--> " + Component126.aString4461, 110);
                 NodeSub38.anInt7006 = 0;

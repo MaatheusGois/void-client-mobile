@@ -140,7 +140,7 @@ abstract class DisplayModeManagerContainer58
         if (i_0_ != -1) aBoolean10238 = false;
         DisplayModeManagerContainer288.anInt8628 = i;
         anInt10272++;
-        Component142.aClass60_4417.method590(0);
+        Component142.aClass60_4417.clear(0);
     }
 
     abstract int method2421(byte i);
@@ -566,9 +566,9 @@ abstract class DisplayModeManagerContainer58
         Component2.aBooleanArrayArrayArray8361 = null;
         FriendsIgnoreList.method2062((byte) 89);
         if (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357 != null) {
-            for (int i = 0; i < Component328.anInt1477; i++)
+            for (int i = 0; i < Component328.dynamicOnscreenCount; i++)
                 DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i] = null;
-            Component328.anInt1477 = 0;
+            Component328.dynamicOnscreenCount = 0;
         }
         Node.aClass318_Sub1Array4293 = null;
         AudioMixer.aClass318_Sub1Array3226 = null;
@@ -576,12 +576,12 @@ abstract class DisplayModeManagerContainer58
         if (Component71.aClass318_Sub1Array6066 != null) {
             for (int i = 0; i < Component71.aClass318_Sub1Array6066.length; i++)
                 Component71.aClass318_Sub1Array6066[i] = null;
-            Component305.anInt9930 = 0;
+            Component305.opaqueOnscreenCount = 0;
         }
         if (ReferenceTable.aClass318_Sub1Array3737 != null) {
             for (int i = 0; i < ReferenceTable.aClass318_Sub1Array3737.length; i++)
                 ReferenceTable.aClass318_Sub1Array3737[i] = null;
-            HashNodeSub3.anInt9504 = 0;
+            HashNodeSub3.translucentOnscreenCount = 0;
         }
         if (Component329.aClass211Array5993 != null) {
             for (int i = 0; i < Component374.anInt4135; i++)
@@ -602,11 +602,11 @@ abstract class DisplayModeManagerContainer58
         Component175.aShortArrayArray5847 = null;
         if (LoggedOutDefinition.aClass293Array9432 != null) {
             Component92.method1978();
-            JaclibLoader.aHa171.method3631(1);
-            JaclibLoader.aHa171.method3659(0);
+            JaclibLoader.toolkit.method3631(1);
+            JaclibLoader.toolkit.method3659(0);
         }
         if (Component144.aClass315Array3982 != null) Component144.aClass315Array3982 = null;
-        JaclibLoader.aHa171 = null;
+        JaclibLoader.toolkit = null;
     }
 
     final void method2434(byte i, int i_86_) {

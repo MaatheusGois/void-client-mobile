@@ -47,7 +47,7 @@ final class NodeSub16Sub2
     private final synchronized HashNodeSub4 method2828(int i) {
         if (i != -23076) method2817(null, 71, 78);
         anInt8872++;
-        return (HashNodeSub4) aClass262_8861.method1995(i + 23080);
+        return (HashNodeSub4) aClass262_8861.first(i + 23080);
     }
 
     final NodeSub16 method2818() {
@@ -71,7 +71,7 @@ final class NodeSub16Sub2
         int i_1_ = -13 / ((-66 - i) / 49);
         HashNodeSub4 class348_sub42_sub4 = method2828(-23076);
         if (class348_sub42_sub4 != null) {
-            class348_sub42_sub4.method2715((byte) 71);
+            class348_sub42_sub4.unlink((byte) 71);
             anInt8888--;
             anInt8883 = 0;
             DefinitionSub10.aClass308_9180.method2305(class348_sub42_sub4.method3182(90), class348_sub42_sub4, -1);
@@ -92,7 +92,7 @@ final class NodeSub16Sub2
         if (!aBoolean8886) {
             if (method2828(-23076) == null) {
                 if (aBoolean8884) {
-                    this.method2715((byte) 23);
+                    this.unlink((byte) 23);
                     DefinitionSub10.aClass308_9180.method2303(true);
                 }
             } else {
@@ -140,10 +140,10 @@ final class NodeSub16Sub2
 
     final synchronized void method2835(HashNodeSub4 class348_sub42_sub4, int i) {
         for (/**/; anInt8888 >= 100; anInt8888--)
-            aClass262_8861.method1997(8);
+            aClass262_8861.peekFirst(8);
         if (i == 30700) {
             anInt8881++;
-            aClass262_8861.method1999(class348_sub42_sub4, -20180);
+            aClass262_8861.addTail(class348_sub42_sub4, -20180);
             anInt8888++;
         }
     }
@@ -163,7 +163,7 @@ final class NodeSub16Sub2
         anInt8868++;
         if (anInt8888 < 1) return -1.0;
         if (i != -21987) method2818();
-        HashNodeSub4 class348_sub42_sub4 = (HashNodeSub4) aClass262_8861.method1995(4);
+        HashNodeSub4 class348_sub42_sub4 = (HashNodeSub4) aClass262_8861.first(4);
         if (class348_sub42_sub4 == null) return -1.0;
         return ((double) -((float) (class348_sub42_sub4.aShortArrayArray9518[0]).length / (float) Component231.anInt339) + class348_sub42_sub4.aDouble9512);
     }
@@ -188,7 +188,7 @@ final class NodeSub16Sub2
                 HashNodeSub4 class348_sub42_sub4 = method2828(-23076);
                 if (class348_sub42_sub4 == null) {
                     if (aBoolean8884) {
-                        this.method2715((byte) 108);
+                        this.unlink((byte) 108);
                         DefinitionSub10.aClass308_9180.method2303(true);
                     }
                     break;

@@ -34,7 +34,7 @@ final class ParticleSystem extends Node {
                 Component203.anInt8780 = 0;
                 anInt7120++;
                 Component55.anInt3936 = 0;
-                long l_1_ = Component240.method599(-53);
+                long l_1_ = Component240.currentTimeMillis(-53);
                 RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1872(8);
                 if (i > 40) {
                     for (/**/; class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1878((byte) -64)) {
@@ -42,7 +42,7 @@ final class ParticleSystem extends Node {
                     }
                     if (!NodeSub16Sub2.aBoolean8874 || l % 100L != 0) break;
                     System.out.println("Particle system count: " + InflaterDecompressor.aClass243_2077.method1874(0) + ", running: " + Component203.anInt8780);
-                    System.out.println("Emitters: " + DisplayModeManagerContainer145.anInt1803 + " Particles: " + Component55.anInt3936 + ". Time taken: " + (-l_1_ + Component240.method599(-112)) + "ms");
+                    System.out.println("Emitters: " + DisplayModeManagerContainer145.anInt1803 + " Particles: " + Component55.anInt3936 + ". Time taken: " + (-l_1_ + Component240.currentTimeMillis(-112)) + "ms");
                 }
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.method2929(runtimeexception, ("wm.A(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + l + ')'));
@@ -64,14 +64,14 @@ final class ParticleSystem extends Node {
 
     static final void method3327(int i) {
         if (i == 1406) {
-            if (NodeSub8.aHa6654.method3694()) {
-                NodeSub8.aHa6654.method3701(DisplayModeManagerContainer50.gameCanvas);
+            if (NodeSub8.toolkit.method3694()) {
+                NodeSub8.toolkit.method3701(DisplayModeManagerContainer50.gameCanvas);
                 NodeSub22.method2959(-1);
                 if (!Component210.aBoolean5300) {
                     Dimension dimension = DisplayModeManagerContainer50.gameCanvas.getSize();
-                    NodeSub8.aHa6654.method3643(DisplayModeManagerContainer50.gameCanvas, dimension.width, dimension.height);
+                    NodeSub8.toolkit.method3643(DisplayModeManagerContainer50.gameCanvas, dimension.width, dimension.height);
                 } else DisplayModeManagerContainer77.method1108((byte) -99, DisplayModeManagerContainer50.gameCanvas);
-                NodeSub8.aHa6654.method3677(DisplayModeManagerContainer50.gameCanvas);
+                NodeSub8.toolkit.method3677(DisplayModeManagerContainer50.gameCanvas);
             } else SoftwareFallbackShader.method3553(false, (byte) 100, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350));
             anInt7123++;
             Component160.method3466(i + -1347);

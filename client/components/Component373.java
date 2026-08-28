@@ -20,14 +20,14 @@ final class Component373
         anInt457++;
         Component208 class117;
         synchronized (aClass60_460) {
-            class117 = (Component208) aClass60_460.method583(i, 111);
+            class117 = (Component208) aClass60_460.get(i, 111);
         }
         if (class117 != null) return class117;
         byte[] is = aClass45_458.method410(-1860, DisplayModeManagerContainer89.method200(-107, i), Sprite.method3013(i, bool));
         class117 = new Component208();
         if (is != null) class117.method1069(0, new Buffer(is));
         synchronized (aClass60_460) {
-            aClass60_460.method582(class117, i, (byte) -102);
+            aClass60_460.putOne(class117, i, (byte) -102);
         }
         return class117;
     }

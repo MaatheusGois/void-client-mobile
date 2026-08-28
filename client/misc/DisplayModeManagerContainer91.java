@@ -121,7 +121,7 @@ final class DisplayModeManagerContainer91
                                 }
                             }
                         }
-                        if (DebugPanicSub1.method2127(2, (Component72.localPlayer.aString10544)).equals(string_6_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3525.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
+                        if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_6_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3525.method2063(ObjectDeserializer.anInt6967, 544)), false, 4);
                         else {
                             Component298.anInt4628++;
                             ParticleSystem class348_sub47 = (ParticleShader.method2148(HashNodeSub19.aClass351_9687, DisplayModeManagerContainer64.aClass77_9029, -94));

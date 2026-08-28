@@ -50,7 +50,7 @@ final class ImageCacheStore {
         if (Component37.anInt3931 == 1 || Component37.anInt3931 == 3 || (Component37.anInt3931 != Component178.anInt1447 && (Component37.anInt3931 == 0 || Component178.anInt1447 == 0))) {
             NodeSub32.anInt6930 = 0;
             Component324.anInt2057 = 0;
-            Component21.aClass356_3654.method3481(0);
+            Component21.aClass356_3654.clear(0);
         }
         Component178.anInt1447 = Component37.anInt3931;
     }
@@ -120,10 +120,10 @@ final class ImageCacheStore {
             if (class348_sub24 == null) {
                 this.aBoolean4035 = true;
                 if (anInt4020 <= anInt4025) {
-                    ClientSystemInfo class348_sub24_7_ = (ClientSystemInfo) aClass262_4021.method1993(-126);
+                    ClientSystemInfo class348_sub24_7_ = (ClientSystemInfo) aClass262_4021.last(-126);
                     class348_sub24 = new ClientSystemInfo(i_6_, class348_sub24_7_.anInt6875);
                     aClass348_Sub24Array4033[class348_sub24_7_.anInt6872] = null;
-                    class348_sub24_7_.method2715((byte) 56);
+                    class348_sub24_7_.unlink((byte) 56);
                 } else {
                     class348_sub24 = new ClientSystemInfo(i_6_, anInt4025);
                     anInt4025++;
@@ -149,7 +149,7 @@ final class ImageCacheStore {
         }
         aClass348_Sub24Array4033 = null;
         anIntArrayArrayArray4029 = null;
-        aClass262_4021.method1996(99);
+        aClass262_4021.clear(99);
         aClass262_4021 = null;
     }
 

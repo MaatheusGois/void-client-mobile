@@ -22,7 +22,7 @@ final class Component127
 
     final StringDefinition method1625(int i, int i_0_) {
         anInt2963++;
-        StringDefinition class348_sub42_sub11 = (StringDefinition) aClass60_2960.method583(i_0_, -51);
+        StringDefinition class348_sub42_sub11 = (StringDefinition) aClass60_2960.get(i_0_, -51);
         if (class348_sub42_sub11 != null) return class348_sub42_sub11;
         byte[] is;
         if (i_0_ < 32768) is = aClass45_2961.method410(-1860, 0, i_0_);
@@ -31,7 +31,7 @@ final class Component127
         if (is != null) class348_sub42_sub11.method3221(117, new Buffer(is));
         if (i_0_ >= 32768) class348_sub42_sub11.method3224((byte) 104);
         if (i != 0) aClass45_2965 = null;
-        aClass60_2960.method582(class348_sub42_sub11, i_0_, (byte) -123);
+        aClass60_2960.putOne(class348_sub42_sub11, i_0_, (byte) -123);
         return class348_sub42_sub11;
     }
 
@@ -44,7 +44,7 @@ final class Component127
                 i_1_ <<= 1;
                 i_2_ = -i_1_;
             }
-            NodeSub8.aHa6654.f(i_2_, i_1_);
+            NodeSub8.toolkit.f(i_2_, i_1_);
         }
     }
 

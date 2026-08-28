@@ -19,7 +19,7 @@ final class NodeSub45Sub2
     int anInt9739;
     static int anInt9740;
 
-    final int method3310(int i) {
+    final int getEventType(int i) {
         anInt9731++;
         if (i < 50) this.anInt9739 = 69;
         return this.anInt9736;

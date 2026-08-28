@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class158` (JODE-obfuscated).
- * Heap-dump trigger helper. implements Interface12; method1247(File,boolean,boolean) obtains a HotSpotDiagnosticMXBean and calls dumpHeap (delegating to HeapDumper.method1142); logs 'HeapDump error:'.
+ * Heap-dump trigger helper. implements Interface12; dumpHeapToFile(File,boolean,boolean) obtains a HotSpotDiagnosticMXBean and calls dumpHeap (delegating to HeapDumper.ensureHotSpotDiagnostic); logs 'HeapDump error:'.
  */
 
 import com.sun.management.HotSpotDiagnosticMXBean;
@@ -33,8 +33,8 @@ final class HeapDumpHelper implements Interface12 {
     Component85 aClass221_4948;
     /*synthetic*/ static Class aClass4949;
 
-    static final void method1247(File file, boolean bool, boolean bool_0_) {
-        if (Component39.anObject2256 == null) HeapDumper.method1142((byte) 26);
+    static final void dumpHeapToFile(File file, boolean bool, boolean bool_0_) {
+        if (Component39.anObject2256 == null) HeapDumper.ensureHotSpotDiagnostic((byte) 26);
         anInt4939++;
         if (bool_0_ != false) aClass299_4938 = null;
         try {

@@ -29,7 +29,7 @@ final class ShaderSub2
     static final boolean method164(int i, int i_0_, byte i_1_, int i_2_) {
         anInt5195++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
-        if (Component241.anInt2946 < 100) return false;
+        if (Component241.occludedPixelCount < 100) return false;
         int i_3_ = Component160.anIntArrayArrayArray4356[i][i_0_][i_2_];
         if (i_3_ == -RandomAccessFileReader.anInt3049) return false;
         if (RandomAccessFileReader.anInt3049 == i_3_) return true;
@@ -38,7 +38,7 @@ final class ShaderSub2
         int i_5_ = i_2_ << Component149.anInt4459;
         if (i_1_ != -97) method163(-4);
         if ((ShaderProgramSub7.method2169(i_4_ - -1, i_4_ - (-Component148.anInt3465 - -1), 1 + i_5_, 1 + i_4_, -1 + (i_5_ - -Component148.anInt3465), ShaderSub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, 1 + i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), -1 + Component148.anInt3465 + i_5_, false)) && (ShaderProgramSub7.method2169(1 + i_4_, Component148.anInt3465 + (i_4_ + -1), i_5_ + 1, Component148.anInt3465 + (i_4_ - 1), i_5_ + Component148.anInt3465 - 1, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_ - -1, 1 + i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_ + 1), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), 1 + i_5_, false))) {
-            DisplayModeManagerContainer64.anInt9039++;
+            DisplayModeManagerContainer64.occludedGroundCount++;
             Component160.anIntArrayArrayArray4356[i][i_0_][i_2_] = RandomAccessFileReader.anInt3049;
             return true;
         }
@@ -54,14 +54,14 @@ final class ShaderSub2
             if (Component210.aBoolean5300) HashTable.method1010(false, true);
             else {
                 Component270.aClass101_2123.method891(i_10_, 0, 0);
-                NodeSub8.aHa6654.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
             }
-            if (!DisplayModeManagerContainer50.aBoolean3870) NodeSub8.aHa6654.da(i_9_, i_15_, i_11_, Component71.anIntArray6062);
-            else NodeSub8.aHa6654.HA(i_9_, i_15_, i_11_, Component72.anInt1906, Component71.anIntArray6062);
+            if (!DisplayModeManagerContainer50.aBoolean3870) NodeSub8.toolkit.da(i_9_, i_15_, i_11_, Component71.anIntArray6062);
+            else NodeSub8.toolkit.HA(i_9_, i_15_, i_11_, Component72.anInt1906, Component71.anIntArray6062);
             if (Component210.aBoolean5300) DebugPanicSub1.method2129((byte) 60);
             else {
                 Component270.aClass101_2123.method891(-i_10_, 0, 0);
-                NodeSub8.aHa6654.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
             }
         }
     }

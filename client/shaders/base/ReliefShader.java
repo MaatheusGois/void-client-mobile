@@ -130,11 +130,11 @@ final class ReliefShader {
         Component245.method174(50, -30742);
         Component97.method865(-8186, 5);
         Component382.method1323(5, 26603);
-        Component45.aClass60_4346.method578(i + -3, 5);
-        ShaderCompilerSub2.aClass60_6517.method578(2, 5);
-        NodeSub1Sub1.aClass60_8807.method578(i ^ 0x7, 5);
-        Component225.aClass60_463.method578(2, 5);
-        ClientScriptExecutor.aClass60_1174.method578(2, 5);
+        Component45.aClass60_4346.processSoftEntries(i + -3, 5);
+        ShaderCompilerSub2.aClass60_6517.processSoftEntries(2, 5);
+        NodeSub1Sub1.aClass60_8807.processSoftEntries(i ^ 0x7, 5);
+        Component225.aClass60_463.processSoftEntries(2, 5);
+        ClientScriptExecutor.aClass60_1174.processSoftEntries(2, 5);
     }
 
     static final NpcDefinition method1417(int i, CacheStore class45, int i_7_) {

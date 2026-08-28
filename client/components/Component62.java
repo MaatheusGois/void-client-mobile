@@ -22,12 +22,12 @@ final class Component62
     final void method1219(int i) {
         anInt2080++;
         synchronized (aClass60_2083) {
-            aClass60_2083.method590(0);
+            aClass60_2083.clear(0);
         }
         synchronized (this.aClass60_2089) {
             if (i != 7851) {
                 /* empty */
-            } else this.aClass60_2089.method590(i + -7851);
+            } else this.aClass60_2089.clear(i + -7851);
         }
     }
 
@@ -109,11 +109,11 @@ final class Component62
     final void method1224(int i, byte i_8_) {
         synchronized (aClass60_2083) {
             if (i_8_ > -95) method1225(-75, (byte) -61);
-            aClass60_2083.method578(2, i);
+            aClass60_2083.processSoftEntries(2, i);
         }
         anInt2079++;
         synchronized (this.aClass60_2089) {
-            this.aClass60_2089.method578(2, i);
+            this.aClass60_2089.processSoftEntries(2, i);
         }
     }
 
@@ -121,7 +121,7 @@ final class Component62
         anInt2085++;
         Component274 class42;
         synchronized (aClass60_2083) {
-            class42 = (Component274) aClass60_2083.method583(i, 91);
+            class42 = (Component274) aClass60_2083.get(i, 91);
         }
         if (class42 != null) return class42;
         if (i_9_ < 36) return null;
@@ -135,7 +135,7 @@ final class Component62
         if (is != null) class42.method379(new Buffer(is), 109);
         class42.method372(-25359);
         synchronized (aClass60_2083) {
-            aClass60_2083.method582(class42, i, (byte) -106);
+            aClass60_2083.putOne(class42, i, (byte) -106);
         }
         return class42;
     }

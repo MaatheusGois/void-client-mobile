@@ -13,7 +13,7 @@ import java.math.BigInteger;
 final class RSACipher implements Interface12 {
     static int anInt4894;
     static int anInt4895;
-    static BigInteger aBigInteger4896 = new BigInteger("10001", 16);
+    static BigInteger rsaPublicExponent = new BigInteger("10001", 16);
     static int anInt4897;
     static int anInt4898;
     int anInt4899;
@@ -57,7 +57,7 @@ final class RSACipher implements Interface12 {
         aClass351_4907 = null;
         aFrame4904 = null;
         if (i < -17) {
-            aBigInteger4896 = null;
+            rsaPublicExponent = null;
             anIntArray4906 = null;
             aClass138_4901 = null;
         }
@@ -71,7 +71,7 @@ final class RSACipher implements Interface12 {
         if (ShaderCompilerSub2.aClass56Array6515 == null) {
             ShaderCompilerSub2.aClass56Array6515 = LoadingState.method528(-91);
             RSARequest.aClass56_9660 = ShaderCompilerSub2.aClass56Array6515[0];
-            Component69.aLong3660 = Component240.method599(-119);
+            Component69.aLong3660 = Component240.currentTimeMillis(-119);
         }
         anInt4900++;
         if (Component44.aClass311_897 == null) DisplayModeManagerContainer88.method726(116);
@@ -79,8 +79,8 @@ final class RSACipher implements Interface12 {
         int i = LoadingManager.method1278(-28660);
         if (class56 == RSARequest.aClass56_9660) {
             DisplayModeManagerContainer190.aString5420 = RSARequest.aClass56_9660.aClass274_1012.method2063(ObjectDeserializer.anInt6967, 544);
-            if (RSARequest.aClass56_9660.aBoolean1016) Component111.anInt3236 = (i * ((RSARequest.aClass56_9660.anInt1021) + -(RSARequest.aClass56_9660.anInt1025)) / 100 + (RSARequest.aClass56_9660.anInt1025));
-            if (RSARequest.aClass56_9660.aBoolean1013) DisplayModeManagerContainer190.aString5420 += Component111.anInt3236 + "%";
+            if (RSARequest.aClass56_9660.isBlocking) Component111.anInt3236 = (i * ((RSARequest.aClass56_9660.currentProgress) + -(RSARequest.aClass56_9660.maxProgress)) / 100 + (RSARequest.aClass56_9660.maxProgress));
+            if (RSARequest.aClass56_9660.isSmooth) DisplayModeManagerContainer190.aString5420 += Component111.anInt3236 + "%";
             if (Loader.debug && Component111.anInt3236 != lastLoggedLoadPct
                     && (Component111.anInt3236 < 5 || Component111.anInt3236 % 5 == 0)) {
                 lastLoggedLoadPct = Component111.anInt3236;
@@ -89,12 +89,12 @@ final class RSACipher implements Interface12 {
             }
         } else if (RSARequest.aClass56_9660 == LoadingState.aClass56_1043) {
             Component44.aClass311_897 = null;
-            Buffer.method3379(2, 3);
+            Buffer.setClientState(2, 3);
         } else {
             DisplayModeManagerContainer190.aString5420 = class56.aClass274_1015.method2063(ObjectDeserializer.anInt6967, 544);
-            if (RSARequest.aClass56_9660.aBoolean1013) DisplayModeManagerContainer190.aString5420 += class56.anInt1021 + "%";
-            Component111.anInt3236 = class56.anInt1021;
-            if (RSARequest.aClass56_9660.aBoolean1016 || class56.aBoolean1016) Component69.aLong3660 = Component240.method599(-128);
+            if (RSARequest.aClass56_9660.isSmooth) DisplayModeManagerContainer190.aString5420 += class56.currentProgress + "%";
+            Component111.anInt3236 = class56.currentProgress;
+            if (RSARequest.aClass56_9660.isBlocking || class56.isBlocking) Component69.aLong3660 = Component240.currentTimeMillis(-128);
             if (Loader.debug) {
                 lastLoggedLoadPct = -1;
                 System.out.println("load stage " + class56.method525(-120)
@@ -125,7 +125,7 @@ final class RSACipher implements Interface12 {
     }
 
     static final int method494(int i, int i_6_) {
-        if (i <= 78) aBigInteger4896 = null;
+        if (i <= 78) rsaPublicExponent = null;
         anInt4898++;
         return 0x7f & i_6_;
     }

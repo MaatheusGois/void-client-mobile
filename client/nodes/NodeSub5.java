@@ -70,7 +70,7 @@ abstract class NodeSub5
                 if (i >= 82) {
                     if (++RequestProcessor.anInt2264 > 2000) {
                         if (DefinitionSub8.aClass238_9165 != null) {
-                            DefinitionSub8.aClass238_9165.method1700((byte) 36);
+                            DefinitionSub8.aClass238_9165.close((byte) 36);
                             DefinitionSub8.aClass238_9165 = null;
                         }
                         if (SpriteSub1.anInt8398 >= 2) {
@@ -90,25 +90,25 @@ abstract class NodeSub5
                     if (AbstractShaderSub2.anInt7297 == 2) {
                         if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 == 2) throw new IOException();
                         if (DisplayModeManagerContainer273.aClass144_5800.anInt1997 != 1) return;
-                        DefinitionSub8.aClass238_9165 = OggStreamReader.method2982(((Socket) (DisplayModeManagerContainer273.aClass144_5800.anObject1998)), (byte) 24, 7500);
+                        DefinitionSub8.aClass238_9165 = OggStreamReader.openSocketStream(((Socket) (DisplayModeManagerContainer273.aClass144_5800.result)), (byte) 24, 7500);
                         DisplayModeManagerContainer273.aClass144_5800 = null;
                         Component302.method1802(0);
                         AbstractShaderSub2.anInt7297 = 4;
                     }
                     if (AbstractShaderSub2.anInt7297 == 4) {
-                        if (DefinitionSub8.aClass238_9165.method1705(1, 104)) {
-                            DefinitionSub8.aClass238_9165.method1701(1, 0, (byte) -116, (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154));
-                            int i_11_ = 0xff & (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154[0]);
+                        if (DefinitionSub8.aClass238_9165.availableAtLeast(1, 104)) {
+                            DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -116, (Component80.aClass348_Sub49_Sub2_3813.payload));
+                            int i_11_ = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
                             Component48.anInt4337 = i_11_;
                             AbstractShaderSub2.anInt7297 = 0;
-                            DefinitionSub8.aClass238_9165.method1700((byte) 36);
+                            DefinitionSub8.aClass238_9165.close((byte) 36);
                             DefinitionSub8.aClass238_9165 = null;
                         }
                     }
                 }
             } catch (IOException ioexception) {
                 if (DefinitionSub8.aClass238_9165 != null) {
-                    DefinitionSub8.aClass238_9165.method1700((byte) 36);
+                    DefinitionSub8.aClass238_9165.close((byte) 36);
                     DefinitionSub8.aClass238_9165 = null;
                 }
                 if (SpriteSub1.anInt8398 < 2) {

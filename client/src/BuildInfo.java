@@ -65,19 +65,19 @@ final class BuildInfo {
             int i_18_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 15);
             if (i_18_ == 32767) break;
             boolean bool = false;
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_18_, -6008));
+            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_18_, -6008));
             if (class348_sub22 == null) {
                 Npc npc = new Npc();
                 npc.anInt10290 = i_18_;
                 class348_sub22 = new NodeSub22(npc);
-                Component21.aClass356_3654.method3483((byte) 57, i_18_, class348_sub22);
+                Component21.aClass356_3654.put((byte) 57, i_18_, class348_sub22);
                 bool = true;
                 DefinitionSub23.aClass348_Sub22Array9319[NodeSub32.anInt6930++] = class348_sub22;
             }
-            Npc npc = (class348_sub22.aNpc_6859);
+            Npc npc = (class348_sub22.npc);
             DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_18_;
             npc.anInt10306 = OggStreamReader.anInt9041;
-            if ((npc.aClass79_10505) != null && npc.aClass79_10505.method793(0)) Component298.method181(true, npc);
+            if ((npc.definition) != null && npc.definition.method793(0)) Component298.method181(true, npc);
             int i_19_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 2);
             int i_20_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
             int i_21_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 5);
@@ -88,11 +88,11 @@ final class BuildInfo {
             int i_24_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
             if (i_24_ == 1) Component354.anIntArray224[DisplayModeManagerContainer204.anInt1597++] = i_18_;
             npc.method2448((Component291.aClass278_2529.method2079(Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 14), -1)), i ^ 0x2b297815);
-            npc.method2434((byte) 111, npc.aClass79_10505.anInt1399);
-            npc.anInt10310 = (npc.aClass79_10505.anInt1329) << 3;
+            npc.method2434((byte) 111, npc.definition.anInt1399);
+            npc.anInt10310 = (npc.definition.anInt1329) << 3;
             if (bool) npc.method2435((byte) -108, i_23_, true);
             npc.method2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.method2436((byte) 50), i_19_);
-            if (npc.aClass79_10505.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
+            if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
         }
         if (i == -724138005) Component80.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
     }
@@ -153,18 +153,18 @@ final class BuildInfo {
                         for (int i_43_ = 0; i_43_ < strings.length; i_43_++) {
                             int i_44_ = i_42_ * i_43_ + 8;
                             var_ha.KA(i_35_ + i_44_, i_36_, i_42_ + i_35_ - (-i_44_ - -8), i_36_ + consoleH);
-                            Applet_Sub1.aClass324_20.drawText(AudioMixer.method1909((byte) 31, strings[i_43_]), -1, (-((-Component94.anInt3676 + i_41_) * Component342.anInt1188) + (-ImageProducerSprite.anInt9077 + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.anInt1993))))), i_35_ + i_44_, -16777216, -110);
+                            Applet_Sub1.aClass324_20.drawText(AudioMixer.method1909((byte) 31, strings[i_43_]), -1, (-((-Component94.anInt3676 + i_41_) * Component342.anInt1188) + (-ImageProducerSprite.anInt9077 + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.descent))))), i_35_ + i_44_, -16777216, -110);
                         }
                     }
                 }
                 Component49.aClass324_4684.drawTextRightAligned("Build: 634", consoleH + (i_36_ + -20), -1, (Component236.anInt4017 + i_35_ + -25), -121, -16777216);
                 var_ha.KA(i_35_, i_36_, i_35_ - -Component236.anInt4017, i_36_ - -consoleH);
                 var_ha.method3649((byte) -80, Component236.anInt4017, -ImageProducerSprite.anInt9077 + (consoleH + i_36_), -1, i_35_);
-                NodeList.aClass324_3326.drawText("--> " + AudioMixer.method1909((byte) 31, Component126.aString4461), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.anInt1993) - 1), 10 + i_35_, -16777216, -127);
+                NodeList.aClass324_3326.drawText("--> " + AudioMixer.method1909((byte) 31, Component126.aString4461), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
                 if (!Component143.aBoolean2329) break;
                 int i_45_ = -1;
                 if (OpenGlShader.clientCycle % 30 > 15) i_45_ = 16777215;
-                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.method1183(true, "--> " + (AudioMixer.method1909((byte) 31, Component126.aString4461).substring(0, NodeSub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.anInt1993 - 11), true);
+                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.method1909((byte) 31, Component126.aString4461).substring(0, NodeSub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.method2929(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
             }

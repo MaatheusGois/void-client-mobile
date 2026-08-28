@@ -99,9 +99,9 @@ final class MicrobotMenu {
         if (wantOp >= 2000) {
             wantOp -= 2000;
         }
-        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.method1995(4);
+        for (MenuEntry entry = (MenuEntry) DefinitionSub4.menuEntries.first(4);
              entry != null;
-             entry = (MenuEntry) DefinitionSub4.menuEntries.method1990((byte) 83)) {
+             entry = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {
             int op = entry.opcode;
             if (op >= 2000) {
                 op -= 2000;
@@ -125,7 +125,7 @@ final class MicrobotMenu {
 
     private static MenuEntry plant(NewMenuEntry t) {
         try {
-            DefinitionSub4.menuEntries.method1996(103);
+            DefinitionSub4.menuEntries.clear(103);
             DisplayModeManagerContainer306.menuEntryCount = 0;
             DisplayModeManagerContainer368.addMenuEntry(false, "", 0, (byte) -93, false, 0, -1, true,
                     1006, 0L, "Cancel", 0L, -1);

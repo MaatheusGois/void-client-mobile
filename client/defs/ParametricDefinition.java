@@ -46,7 +46,7 @@ final class ParametricDefinition extends Definition {
         anInt9105++;
         if (i_2_ < -127) {
             NodeSub13 class348_sub13 = AbstractGlTextureSub4.method1974((byte) -122, i, bool);
-            if (class348_sub13 != null) class348_sub13.method2715((byte) 97);
+            if (class348_sub13 != null) class348_sub13.unlink((byte) 97);
         }
     }
 

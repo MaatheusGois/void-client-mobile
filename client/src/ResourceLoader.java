@@ -39,10 +39,10 @@ final class ResourceLoader implements Runnable {
         if (aClass56_3916 == null) return 0;
         if (i < 103) aLong3917 = -58L;
         int i_0_ = aClass56_3916.method525(-118);
-        if (aClass56_3916.aBoolean1016 && (anInt3915 < aClass56_3916.anInt1021)) return 1 + anInt3915;
+        if (aClass56_3916.isBlocking && (anInt3915 < aClass56_3916.currentProgress)) return 1 + anInt3915;
         if (i_0_ < 0 || -1 + ShaderCompilerSub2.aClass56Array6515.length <= i_0_) return 100;
-        if (aClass56_3916.anInt1025 == anInt3915) return aClass56_3916.anInt1021;
-        return aClass56_3916.anInt1025;
+        if (aClass56_3916.maxProgress == anInt3915) return aClass56_3916.currentProgress;
+        return aClass56_3916.maxProgress;
     }
 
     final void method2316(LoadingState class56, String string, int i, long l, boolean bool) {
@@ -61,28 +61,28 @@ final class ResourceLoader implements Runnable {
     public final void run() {
         anInt3902++;
         while (!aBoolean3910) {
-            long l = Component240.method599(-61);
+            long l = Component240.currentTimeMillis(-61);
             try {
                 anInt3920++;
                     if (anInterface16_3907 instanceof InterfaceRenderer) anInterface16_3907.method58(aBoolean3908, -104);
                     else {
-                        long l_1_ = Component240.method599(-104);
-                        if (NodeSub8.aHa6654 != null && anInterface16_3919 != null && anInterface16_3919.method55((byte) -58) != 0 && (aLong3914 >= l_1_ - (long) anInterface16_3919.method55((byte) -58))) {
+                        long l_1_ = Component240.currentTimeMillis(-104);
+                        if (NodeSub8.toolkit != null && anInterface16_3919 != null && anInterface16_3919.method55((byte) -58) != 0 && (aLong3914 >= l_1_ - (long) anInterface16_3919.method55((byte) -58))) {
                             int i = (int) ((l_1_ + -aLong3914) * 255L / (long) anInterface16_3919.method55((byte) -58));
                             int i_2_ = -i + 255;
                             i_2_ = 0xffffff | i_2_ << 24;
                             i = 0xffffff | i << 24;
                             Component211.method1170((byte) -121);
-                            NodeSub8.aHa6654.GA(0);
-                            Component24 class105 = (NodeSub8.aHa6654.method3629(Component236.anInt4017, PacketReader.anInt10432, true));
-                            NodeSub8.aHa6654.method3681(class105, 0);
+                            NodeSub8.toolkit.GA(0);
+                            Component24 class105 = (NodeSub8.toolkit.method3629(Component236.anInt4017, PacketReader.anInt10432, true));
+                            NodeSub8.toolkit.method3681(class105, 0);
                             anInterface16_3919.method58(true, -126);
-                            NodeSub8.aHa6654.method3672();
+                            NodeSub8.toolkit.method3672();
                             class105.method964(0, 0, 0, i_2_, 1);
-                            NodeSub8.aHa6654.method3681(class105, 0);
-                            NodeSub8.aHa6654.GA(0);
+                            NodeSub8.toolkit.method3681(class105, 0);
+                            NodeSub8.toolkit.GA(0);
                             anInterface16_3907.method58(true, -114);
-                            NodeSub8.aHa6654.method3672();
+                            NodeSub8.toolkit.method3672();
                             class105.method964(0, 0, 0, i, 1);
                         } else {
                             if (anInterface16_3919 != null) {
@@ -92,12 +92,12 @@ final class ResourceLoader implements Runnable {
                             }
                             if (aBoolean3908) {
                                 Component211.method1170((byte) -64);
-                                if (NodeSub8.aHa6654 != null) NodeSub8.aHa6654.GA(0);
+                                if (NodeSub8.toolkit != null) NodeSub8.toolkit.GA(0);
                             }
-                            anInterface16_3907.method58((aBoolean3908 || (NodeSub8.aHa6654 != null && NodeSub8.aHa6654.method3655())), -90);
+                            anInterface16_3907.method58((aBoolean3908 || (NodeSub8.toolkit != null && NodeSub8.toolkit.method3655())), -90);
                         }
                         try {
-                            if (NodeSub8.aHa6654 != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.aHa6654.method3689((byte) 57);
+                            if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.toolkit.method3689((byte) 57);
                         } catch (Exception_Sub1 exception_sub1) {
                             ClientErrorReporter.method1242((exception_sub1.getMessage() + " (Recovered) " + DisplayModeManagerContainer206.aClient1367.method81((byte) 80)), exception_sub1, 15004);
                             SoftwareFallbackShader.method3553(true, (byte) 114, 0);
@@ -111,11 +111,11 @@ final class ResourceLoader implements Runnable {
                     container.getSize();
                     if (RSACipher.aFrame4904 == container) RSACipher.aFrame4904.getInsets();
                     aBoolean3908 = false;
-                    if (NodeSub8.aHa6654 != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.method525(-112) < LoadingState.aClass56_1041.method525(-127))) OpenGlShader.method3556(false);
+                    if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.method525(-112) < LoadingState.aClass56_1041.method525(-127))) OpenGlShader.method3556(false);
             } catch (Exception exception) {
                 continue;
             }
-            long l_3_ = Component240.method599(-73);
+            long l_3_ = Component240.currentTimeMillis(-73);
             int i = (int) (-l_3_ - -l + 20L);
             if (i > 0) SpriteAtlasShader.method2161((byte) -3, i);
         }
@@ -151,7 +151,7 @@ final class ResourceLoader implements Runnable {
         if (i != 10559) aClass46_3913 = null;
         anInterface16_3919 = anInterface16_3907;
         anInterface16_3907 = interface16;
-        aLong3914 = Component240.method599(-67);
+        aLong3914 = Component240.currentTimeMillis(-67);
     }
 
     final synchronized boolean method2322(int i) {

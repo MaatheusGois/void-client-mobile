@@ -9,7 +9,7 @@
  * Live cursor: {@link #getCursorX} = X, {@link #getCursorY} = Y (canvas pixels).
  * Button held: {@link #isLeftButtonDown} left, {@link #isMiddleButtonDown} middle, {@link #isRightButtonDown} right.
  * Queued events: {@link #popEvent} yields {@link NodeSub45}
- * ({@code method3310}: 0=left press, 1=middle, 2=right, 3/4/5=releases, 6=wheel).
+ * ({@code getEventType}: 0=left press, 1=middle, 2=right, 3/4/5=releases, 6=wheel).
  * Singleton used by the client: {@link AbstractGlTextureSub4#mouseHandler}.
  */
 abstract class MouseHandler {
@@ -33,13 +33,13 @@ abstract class MouseHandler {
 
     static final Component113 method3591(int i, int i_0_) {
         anInt4535++;
-        Component113 class181 = (Component113) Component298.aClass60_4636.method583(i, i_0_ + -128);
+        Component113 class181 = (Component113) Component298.aClass60_4636.get(i, i_0_ + -128);
         if (class181 != null) return class181;
         byte[] is = Component205.aClass45_5964.method410(-1860, i_0_, i);
         class181 = new Component113();
         if (is != null) class181.method1370(24, new Buffer(is));
         class181.method1371(4);
-        Component298.aClass60_4636.method582(class181, i, (byte) -103);
+        Component298.aClass60_4636.putOne(class181, i, (byte) -103);
         return class181;
     }
 

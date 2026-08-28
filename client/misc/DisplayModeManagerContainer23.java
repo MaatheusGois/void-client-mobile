@@ -15,7 +15,7 @@ final class DisplayModeManagerContainer23
 
     static final void method858(boolean bool, Player player) {
         anInt1526++;
-        SceneNode class348_sub9 = ((SceneNode) (HashNodeSub16Sub2.aClass356_10465.method3480(player.anInt10290, -6008)));
+        SceneNode class348_sub9 = ((SceneNode) (HashNodeSub16Sub2.aClass356_10465.get(player.anInt10290, -6008)));
         if (bool == true) {
             if (class348_sub9 == null) DisplayModeManagerContainer369.method1614(979190089, null, player.plane, (player.anIntArray10317[0]), (player.anIntArray10320[0]), player, null, 0);
             else class348_sub9.method2781((byte) 21);
@@ -41,7 +41,7 @@ final class DisplayModeManagerContainer23
                     }
                     Buffer class348_sub49 = new Buffer(NodeSub50.aByteArrayArray7212[i_1_]);
                     int i_4_ = 0;
-                    while (class348_sub49.anInt7197 < NodeSub50.aByteArrayArray7212[i_1_].length) {
+                    while (class348_sub49.offset < NodeSub50.aByteArrayArray7212[i_1_].length) {
                         if (i_4_ >= 511 || Component324.anInt2057 >= 1023) break;
                         int i_5_ = i_2_ | i_4_++ << 6;
                         int i_6_ = class348_sub49.readUnsignedShort(842397944);
@@ -51,19 +51,19 @@ final class DisplayModeManagerContainer23
                         int i_10_ = (i_8_ + (-NodeBaseSub2.regionTileX + (OggStreamReader.anIntArray9042[i_1_] >> 8) * 64));
                         int i_11_ = (-Component330.regionTileY + (64 * (0xff & (OggStreamReader.anIntArray9042[i_1_])) - -i_9_));
                         DisplayModeManagerContainer206 class79 = (Component291.aClass278_2529.method2079(class348_sub49.readUnsignedShort(842397944), -1));
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_5_, -6008));
+                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_5_, -6008));
                         if (class348_sub22 == null && (class79.aByte1325 & 0x1) > 0 && i_7_ == Component385.anInt2204 && i_10_ >= 0 && (AbstractShaderSub4.anInt7319 > i_10_ - -class79.anInt1399) && i_11_ >= 0 && (ParametricDefinition.anInt9109 > i_11_ + class79.anInt1399)) {
                             Npc npc = new Npc();
                             npc.anInt10290 = i_5_;
                             NodeSub22 class348_sub22_12_ = (new NodeSub22(npc));
-                            Component21.aClass356_3654.method3483((byte) 91, i_5_, class348_sub22_12_);
+                            Component21.aClass356_3654.put((byte) 91, i_5_, class348_sub22_12_);
                             DefinitionSub23.aClass348_Sub22Array9319[NodeSub32.anInt6930++] = class348_sub22_12_;
                             DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_5_;
                             npc.anInt10306 = OpenGlShader.clientCycle;
                             npc.method2448(class79, -2);
-                            npc.method2434((byte) 120, npc.aClass79_10505.anInt1399);
-                            npc.anInt10310 = (npc.aClass79_10505.anInt1329 << 3);
-                            npc.method2435((byte) -108, (npc.aClass79_10505.aByte1355 - -4 & ~0x631ffff8) << 11, true);
+                            npc.method2434((byte) 120, npc.definition.anInt1399);
+                            npc.anInt10310 = (npc.definition.anInt1329 << 3);
+                            npc.method2435((byte) -108, (npc.definition.aByte1355 - -4 & ~0x631ffff8) << 11, true);
                             npc.method2444(i_11_, true, i_10_, 123, npc.method2436((byte) 54), i_7_);
                         }
                     }

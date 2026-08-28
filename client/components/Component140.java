@@ -15,8 +15,8 @@ final class Component140
     static int anInt10444;
     static int anInt10445;
 
-    final Object method3205(int i) {
-        if (i != 65536) method3205(-30);
+    final Object getReferent(int i) {
+        if (i != 65536) getReferent(-30);
         anInt10441++;
         return anObject10440;
     }
@@ -30,7 +30,7 @@ final class Component140
         }
     }
 
-    final boolean method3206(byte i) {
+    final boolean isSoftRef(byte i) {
         int i_0_ = -50 / ((-63 - i) / 61);
         anInt10445++;
         return false;

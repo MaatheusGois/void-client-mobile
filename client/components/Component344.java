@@ -19,12 +19,12 @@ final class Component344
 
     final void method834(byte i) {
         synchronized (aClass60_1487) {
-            aClass60_1487.method590(0);
+            aClass60_1487.clear(0);
             if (i >= -43) method838(-67);
         }
         anInt1490++;
         synchronized (aClass60_1491) {
-            aClass60_1491.method590(0);
+            aClass60_1491.clear(0);
         }
     }
 
@@ -32,7 +32,7 @@ final class Component344
         anInt1483++;
         DisplayModeManagerContainer167 class17;
         synchronized (aClass60_1487) {
-            class17 = (DisplayModeManagerContainer167) aClass60_1487.method583(i, i_0_ + -68);
+            class17 = (DisplayModeManagerContainer167) aClass60_1487.get(i, i_0_ + -68);
         }
         if (i_0_ != 7) aClass60_1491 = null;
         if (class17 != null) return class17;
@@ -46,7 +46,7 @@ final class Component344
         if (is != null) class17.method267(new Buffer(is), false);
         class17.method270((byte) 124);
         synchronized (aClass60_1487) {
-            aClass60_1487.method582(class17, i, (byte) -126);
+            aClass60_1487.putOne(class17, i, (byte) -126);
         }
         return class17;
     }
@@ -54,10 +54,10 @@ final class Component344
     final void method836(int i, int i_1_) {
         anInt1485++;
         synchronized (aClass60_1487) {
-            aClass60_1487.method578(2, i);
+            aClass60_1487.processSoftEntries(2, i);
         }
         synchronized (aClass60_1491) {
-            aClass60_1491.method578(2, i);
+            aClass60_1491.processSoftEntries(2, i);
         }
         int i_2_ = -75 % ((i_1_ - 26) / 35);
     }
@@ -88,10 +88,10 @@ final class Component344
         HashNodeSub17 class348_sub42_sub17;
         synchronized (aClass60_1491) {
             if (i_5_ != 3) aClass60_1487 = null;
-            class348_sub42_sub17 = (HashNodeSub17) aClass60_1491.method583(i, -60);
+            class348_sub42_sub17 = (HashNodeSub17) aClass60_1491.get(i, -60);
             if (class348_sub42_sub17 == null) {
                 class348_sub42_sub17 = new HashNodeSub17(i);
-                aClass60_1491.method582(class348_sub42_sub17, i, (byte) -127);
+                aClass60_1491.putOne(class348_sub42_sub17, i, (byte) -127);
             }
             if (!class348_sub42_sub17.method3268(-122)) return null;
         }

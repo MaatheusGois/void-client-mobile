@@ -99,7 +99,7 @@ final class NsnDefinition
             HashNodeSub4.anInt9513 = 0;
             for (int i_13_ = 1; i_13_ < 2048; i_13_++) {
                 NodeSub5.aByteArray6624[i_13_] >>= 1;
-                Player player = InterfaceRenderer.aPlayerArray5058[i_13_];
+                Player player = InterfaceRenderer.players[i_13_];
                 if (player == null) DisplayModeManagerContainer136.anIntArray4709[HashNodeSub4.anInt9513++] = i_13_;
                 else ShaderProgramSub7.anIntArray6290[ShaderCompilerSub1.anInt6513++] = i_13_;
             }

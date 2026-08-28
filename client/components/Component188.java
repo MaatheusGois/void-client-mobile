@@ -55,7 +55,7 @@ final class Component188
             NodeSub36 class348_sub36 = new NodeSub36();
             class348_sub36.aClass46_6989 = class46;
             class348_sub36.anObjectArray6987 = class46.anObjectArray727;
-            NodeSub1Sub2.aClass262_8810.method1999(class348_sub36, -20180);
+            NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
         }
     }
 

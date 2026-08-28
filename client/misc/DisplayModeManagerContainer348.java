@@ -14,7 +14,7 @@ final class DisplayModeManagerContainer348
     static int anInt5888;
     static int anInt5889;
     static int anInt5890;
-    static int anInt5891 = 0;
+    static int fps = 0;
     static int anInt5892;
     static int anInt5893;
 
@@ -50,7 +50,7 @@ final class DisplayModeManagerContainer348
         anInt5893++;
         class348_sub49_sub2.startBitAccess(122);
         int i_3_ = StringDefinition.anInt9591;
-        Player player = (Component72.localPlayer = InterfaceRenderer.aPlayerArray5058[i_3_] = new Player());
+        Player player = (Component72.localPlayer = InterfaceRenderer.players[i_3_] = new Player());
         player.anInt10290 = i_3_;
         int i_4_ = class348_sub49_sub2.readBits((byte) -24, 30);
         if (i != 118) anInt5886 = 111;
@@ -98,7 +98,7 @@ final class DisplayModeManagerContainer348
     }
 
     final int method1714(int i, int i_13_) {
-        if (i != 3) anInt5891 = -34;
+        if (i != 3) fps = -34;
         anInt5884++;
         return 1;
     }

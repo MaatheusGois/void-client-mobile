@@ -4,26 +4,26 @@
 
 /**
  * RENAMED from `Class56` (JODE-obfuscated).
- * Loading/progress state. method525/method526 report progress; method527(Frame, ReflectionInvoker, boolean) spins up a loading Task and waits. Holds current/max (anInt1021/anInt1025) and flags (aBoolean1016/aBoolean1013).
+ * Loading/progress state. method525/getProgress report progress; startLoadingTask(Frame, ReflectionInvoker, boolean) spins up a loading Task and waits. Holds current/max (currentProgress/maxProgress) and flags (isBlocking/isSmooth).
  */
 
 import java.awt.*;
 
 final class LoadingState {
     FriendsIgnoreList aClass274_1012;
-    boolean aBoolean1013;
+    boolean isSmooth;
     static int anInt1014;
     FriendsIgnoreList aClass274_1015;
-    boolean aBoolean1016;
+    boolean isBlocking;
     private final int anInt1017;
     static LoadingState aClass56_1018 = new LoadingState(0, FriendsIgnoreList.aClass274_3499, FriendsIgnoreList.aClass274_3499, 0, 1);
     static int anInt1019;
     static int anInt1020;
-    int anInt1021;
+    int currentProgress;
     static int anInt1022;
     static LoadingState aClass56_1023 = new LoadingState(1, FriendsIgnoreList.aClass274_3499, 2);
     static LoadingState aClass56_1024 = new LoadingState(2, FriendsIgnoreList.aClass274_3499, FriendsIgnoreList.aClass274_3499, 2, 3);
-    int anInt1025;
+    int maxProgress;
     static LoadingState aClass56_1026 = new LoadingState(3, FriendsIgnoreList.aClass274_3499, 3);
     static LoadingState aClass56_1027 = new LoadingState(4, FriendsIgnoreList.aClass274_3499, FriendsIgnoreList.aClass274_3499, 3, 4);
     static LoadingState aClass56_1028 = new LoadingState(5, FriendsIgnoreList.aClass274_3499, 4);
@@ -60,7 +60,7 @@ final class LoadingState {
         throw new IllegalStateException();
     }
 
-    public static void method526(int i) {
+    public static void getProgress(int i) {
         aClass56_1040 = null;
         aClass56_1032 = null;
         aClass56_1042 = null;
@@ -87,7 +87,7 @@ final class LoadingState {
         }
     }
 
-    static final void method527(Frame frame, ReflectionInvoker class297, boolean bool) {
+    static final void startLoadingTask(Frame frame, ReflectionInvoker class297, boolean bool) {
         try {
             anInt1020++;
             for (; ; ) {
@@ -116,12 +116,12 @@ final class LoadingState {
     private LoadingState(int i, FriendsIgnoreList class274, FriendsIgnoreList class274_5_, int i_6_, int i_7_, boolean bool, boolean bool_8_) {
         try {
             this.aClass274_1012 = class274;
-            this.anInt1021 = i_7_;
+            this.currentProgress = i_7_;
             anInt1017 = i;
-            this.anInt1025 = i_6_;
+            this.maxProgress = i_6_;
             this.aClass274_1015 = class274_5_;
-            this.aBoolean1016 = bool_8_;
-            this.aBoolean1013 = bool;
+            this.isBlocking = bool_8_;
+            this.isSmooth = bool;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("jj.<init>(" + i + ',' + (class274 != null ? "{...}" : "null") + ',' + (class274_5_ != null ? "{...}" : "null") + ',' + i_6_ + ',' + i_7_ + ',' + bool + ',' + bool_8_ + ')'));
         }

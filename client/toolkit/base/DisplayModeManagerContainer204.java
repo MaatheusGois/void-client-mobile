@@ -143,7 +143,7 @@ abstract class DisplayModeManagerContainer204
                 Component362 class110_sub1 = Component304.aClass110_Sub1Array1146[ScreenModeManager.anInt2834];
                 if (class110_sub1 == null || class110_sub1.anInt5788 != -1) ScreenModeManager.anInt2834++;
                 else {
-                    if (Component218.aClass348_Sub26_2332 == null) Component218.aClass348_Sub26_2332 = (DisplayModeManagerContainer154.aClass169_1286.method1302(i ^ ~0x1967, class110_sub1.aString5794));
+                    if (Component218.aClass348_Sub26_2332 == null) Component218.aClass348_Sub26_2332 = (DisplayModeManagerContainer154.aClass169_1286.enqueue(i ^ ~0x1967, class110_sub1.aString5794));
                     int i_29_ = (Component218.aClass348_Sub26_2332.anInt6887);
                     if (i_29_ == -1) break;
                     class110_sub1.anInt5788 = i_29_;
