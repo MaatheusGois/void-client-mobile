@@ -31,6 +31,8 @@ public class Main extends UIApplicationDelegateAdapter {
         }
         window = new UIWindow(UIScreen.getMainScreen().getBounds());
         window.setBackgroundColor(UIColor.black());
+        // Keep screen from dimming / sleeping while the game is open
+        window.setIdleTimerDisabled(true);
         window.setRootViewController(new GameController());
         window.makeKeyAndVisible();
         return true;
