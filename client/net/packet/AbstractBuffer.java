@@ -17,7 +17,7 @@ abstract class AbstractBuffer {
 
     abstract byte[] getBytes(int i, int i_0_, int i_1_);
 
-    public static void method2690(int i) {
+    public static void clearStatics(int i) {
         aClass351_4266 = null;
         aClass351_4264 = null;
         aClass351_4262 = null;

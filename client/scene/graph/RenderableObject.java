@@ -48,7 +48,7 @@ abstract class RenderableObject extends Renderable {
                 boolean bool = ((Exception_Sub1.aClass255_112.method1941(class46.anInt672, (byte) -74, class46.anInt812, class46.anInt781, ~0xffffff | class46.anInt809, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
                 if (!bool) break;
                 Component305.aClass262_9931.addTail(new NodeSub7(class46.anInt812, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
-                Component111.method1916(-9343, class46);
+                Component111.markInterfaceDirty(-9343, class46);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("ga.QA(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class46 != null ? "{...}" : "null") + ')'));
             }
@@ -70,11 +70,11 @@ abstract class RenderableObject extends Renderable {
                                 [class42.anIntArray591.length]);
                         for (int i_9_ = 0; is.length / 2 > i_9_; i_9_++) {
                             int i_10_;
-                            if (DefinitionSub21.anInt9282 != 4) i_10_ = 0x3fff & (CacheNodeSub2.anInt10483 + (int) Component112.aFloat3938);
-                            else i_10_ = (int) Component112.aFloat3938 & 0x3fff;
+                            if (DefinitionSub21.cameraMode != 4) i_10_ = 0x3fff & (CacheNodeSub2.anInt10483 + (int) Component112.cameraYaw);
+                            else i_10_ = (int) Component112.cameraYaw & 0x3fff;
                             int i_11_ = DisplayModeManagerContainer88.anIntArray1207[i_10_];
                             int i_12_ = DisplayModeManagerContainer88.anIntArray1204[i_10_];
-                            if (DefinitionSub21.anInt9282 != 4) {
+                            if (DefinitionSub21.cameraMode != 4) {
                                 i_11_ = (i_11_ * 256 / (Component182.anInt9750 + 256));
                                 i_12_ = i_12_ * 256 / (256 + (Component182.anInt9750));
                             }

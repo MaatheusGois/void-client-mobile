@@ -158,7 +158,7 @@ class Buffer extends Node {
 
     final void writeShort(byte i, int i_12_) {
         anInt7145++;
-        if (i != 107) method3354(20);
+        if (i != 107) disposeActiveToolkit(20);
         this.payload[this.offset++] = (byte) (i_12_ >> 8);
         this.payload[this.offset++] = (byte) i_12_;
     }
@@ -297,7 +297,8 @@ class Buffer extends Node {
         this.payload[this.offset++] = (byte) (i >> 8);
     }
 
-    static final void method3354(int i) {
+    /** Dispose the active graphics toolkit and clear its display-mode peer. */
+    static final void disposeActiveToolkit(int i) {
         if (NodeSub34.aHa6968 != null) {
             NodeSub34.aHa6968.method3635((byte) -44);
             DefinitionSub9.aClass324_9173 = null;
@@ -498,10 +499,11 @@ class Buffer extends Node {
         return i_67_;
     }
 
-    public static void method3376(int i) {
+    /** Null shared statics for GC / shutdown. */
+    public static void clearStatics(int i) {
         aLongArray7206 = null;
         aClass223_7175 = null;
-        if (i != -2) method3376(-87);
+        if (i != -2) clearStatics(-87);
     }
 
     final String readString(byte i) {
@@ -681,7 +683,7 @@ class Buffer extends Node {
             this.offset = 0;
             byte[] is = new byte[i_86_];
             readBytes(2147483647, 0, i_86_, is);
-            if (i >= -33) method3354(-73);
+            if (i >= -33) disposeActiveToolkit(-73);
             BigInteger biginteger_87_ = new BigInteger(is);
             BigInteger biginteger_88_ = biginteger_87_.modPow(biginteger_85_, biginteger);
             byte[] is_89_ = biginteger_88_.toByteArray();

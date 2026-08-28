@@ -13,14 +13,15 @@ abstract class ReferenceHolder extends HashNode {
     static int[] anIntArray9558 = {3, 7, 15};
     Interface14 anInterface14_9559;
 
-    static final boolean method3203(int i, byte i_0_, int i_1_) {
+    /** True if flag word {@code i_1_} has bit 0x10000 set. */
+    static final boolean hasBit16(int i, byte i_0_, int i_1_) {
         anInt9557++;
         if (i_0_ < 109) return false;
         return (i_1_ & 0x10000) != 0;
     }
 
-    public static void method3204(int i) {
-        if (i > -64) method3203(-45, (byte) 72, -104);
+    public static void clearStatics(int i) {
+        if (i > -64) hasBit16(-45, (byte) 72, -104);
         anIntArray9558 = null;
     }
 

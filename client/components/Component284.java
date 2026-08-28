@@ -88,7 +88,7 @@ final class Component284
         Component205.anInt5973 = 0;
         Component193.anInt3253 = Component298.anInt4638;
         OpenGlShader.anInt7403 = 0;
-        DefinitionSub21.anInt9282 = 5;
+        DefinitionSub21.cameraMode = 5;
         NodeBaseSub1.anInt9775 = -1;
         Component102.anInt4803 = -1;
     }

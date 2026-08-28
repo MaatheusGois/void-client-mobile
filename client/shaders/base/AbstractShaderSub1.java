@@ -53,7 +53,7 @@ final class AbstractShaderSub1
                     if (class46.anInt747 < 0) class46.anInt747 = 0;
                     if ((class46.anInt791 - class46.anInt789) < class46.anInt755) class46.anInt755 = (class46.anInt791 - class46.anInt789);
                     if (class46.anInt755 < 0) class46.anInt755 = 0;
-                    if (class46.anInt774 == 0) Component111.method1913(bool_6_, -116, class46);
+                    if (class46.anInt774 == 0) Component111.layoutInterfaceTree(bool_6_, -116, class46);
                 }
             }
         }

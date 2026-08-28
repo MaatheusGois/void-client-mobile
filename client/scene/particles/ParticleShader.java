@@ -78,7 +78,7 @@ final class ParticleShader extends ShaderProgram {
             anInt6230++;
             ParticleSystem class348_sub47 = Component189.obtainParticleSystem((byte) -103);
             if (i >= -80) aCalendar6221 = null;
-            class348_sub47.anInt7122 = class351.anInt4323;
+            class348_sub47.anInt7122 = class351.size;
             class348_sub47.aClass351_7118 = class351;
             if (class348_sub47.anInt7122 != -1) {
                 if (class348_sub47.anInt7122 == -2) class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(10000);
@@ -89,9 +89,9 @@ final class ParticleShader extends ShaderProgram {
             class348_sub47.aClass348_Sub49_Sub2_7116.method3416(-17, class77);
 
             if (Loader.debug) {
-                System.out.println("Encode packet " + class348_sub47.aClass351_7118.method3456(200));
+                System.out.println("Encode packet " + class348_sub47.aClass351_7118.getOpcode(200));
             }
-            class348_sub47.aClass348_Sub49_Sub2_7116.method3408(class348_sub47.aClass351_7118.method3456(200), 18676);
+            class348_sub47.aClass348_Sub49_Sub2_7116.method3408(class348_sub47.aClass351_7118.getOpcode(200), 18676);
             class348_sub47.anInt7119 = 0;
             return class348_sub47;
         } catch (RuntimeException runtimeexception) {
@@ -386,7 +386,7 @@ final class ParticleShader extends ShaderProgram {
         anInt6214++;
         if (!Component214.aBoolean2130 && i <= -37) {
             Component214.aBoolean2130 = true;
-            Component275.aFloat2687 += (-Component275.aFloat2687 + 24.0F) / 2.0F;
+            Component275.cameraYawRate += (-Component275.cameraYawRate + 24.0F) / 2.0F;
             DummyClass.aBoolean10174 = true;
         }
     }

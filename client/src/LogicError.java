@@ -102,7 +102,7 @@ final class LogicError {
         anInt1461++;
         HashNodeSub3.method3179(0);
         NodeSub16Sub2.aLong8866 = 0L;
-        int i_24_ = MenuEntry.method3229(-82);
+        int i_24_ = MenuEntry.getWindowMode(-82);
         if (i_22_ == 102) {
             if (i == 3 || i_24_ == 3) bool = true;
             if (!NodeSub8.toolkit.method3695()) bool = true;

@@ -13,7 +13,8 @@ final class NodeSub27
     int anInt6895;
     int anInt6896;
     static Component114[] aClass302Array6897 = new Component114[8];
-    static float aFloat6898 = 0.0F;
+    /** Per-frame pitch delta applied in follow/orbit camera ticks. */
+    static float cameraPitchRate = 0.0F;
     int anInt6899;
     int anInt6900;
     static int anInt6901;

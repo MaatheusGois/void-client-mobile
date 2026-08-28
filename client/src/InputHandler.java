@@ -25,7 +25,8 @@ abstract class InputHandler {
 
     abstract void reset(int i);
 
-    static final short[][] method2699(int i, short[][] is, float[][] fs) {
+    /** Quantize {@code fs} into {@code is} as {@code (short)(fs * 16383)}. */
+    static final short[][] quantizeFloatsToShorts(int i, short[][] is, float[][] fs) {
         try {
             if (i != 16383) return null;
             for (int i_1_ = 0; fs.length > i_1_; i_1_++) {

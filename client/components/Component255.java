@@ -22,12 +22,12 @@ final class Component255
 
     static final int method532(int i, int i_0_, boolean bool, int i_1_) {
         anInt1061++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -120, i_0_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -120, i_0_, bool);
         if (class348_sub13 == null) return 0;
         if (i == -1) return 0;
         int i_2_ = 0;
-        for (int i_3_ = 0; (i_3_ < class348_sub13.anIntArray6758.length); i_3_++) {
-            if (class348_sub13.anIntArray6757[i_3_] == i) i_2_ += class348_sub13.anIntArray6758[i_3_];
+        for (int i_3_ = 0; (i_3_ < class348_sub13.amounts.length); i_3_++) {
+            if (class348_sub13.itemIds[i_3_] == i) i_2_ += class348_sub13.amounts[i_3_];
         }
         int i_4_ = 73 % ((i_1_ - -52) / 63);
         return i_2_;
@@ -82,7 +82,7 @@ final class Component255
         anInt1066++;
         if ((ObjectDeserializer.aByteArrayArrayArray6962[0][i_24_][i] & 0x2) != 0) return true;
         if ((0x10 & ObjectDeserializer.aByteArrayArrayArray6962[i_26_][i_24_][i]) != 0) return false;
-        return i_25_ == Component98.method1762(-55, i_26_, i, i_24_);
+        return i_25_ == Component98.getEffectivePlane(-55, i_26_, i, i_24_);
     }
 
     final ColoredTextBuilder method537(int i, int i_27_) {

@@ -33,7 +33,7 @@ final class Component380
     static final boolean method1113(int i, int i_0_, int i_1_) {
         anInt4995++;
         if (i_1_ >= -3) aClass45_4984 = null;
-        return (ReliefShader.method1412((byte) -35, i_0_, i) & (FriendsIgnoreList.method2058(i, i_0_, 72) | (i & 0x2000) != 0 | ReferenceHolder.method3203(i_0_, (byte) 114, i)));
+        return (ReliefShader.method1412((byte) -35, i_0_, i) & (FriendsIgnoreList.hasCollisionBlockFlags(i, i_0_, 72) | (i & 0x2000) != 0 | ReferenceHolder.hasBit16(i_0_, (byte) 114, i)));
     }
 
     public final long method52(byte i) {

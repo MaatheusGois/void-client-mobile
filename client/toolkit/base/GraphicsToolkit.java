@@ -321,10 +321,10 @@ abstract class GraphicsToolkit {
         try {
             anInt4576++;
             if (i_170_ == i_171_) return NodeSub5.method2753(true, i_168_, i_169_, canvas, var_d);
-            if (i_171_ == 2) return Component314.method2297(-6, i_168_, var_d, canvas, i_169_);
+            if (i_171_ == 2) return Component314.createOpenGLToolkit(-6, i_168_, var_d, canvas, i_169_);
             if (i_171_ == 1) return NodeList.method2000(3, i, canvas, var_d);
             if (i_171_ == 5) return ToolkitFactory.createOpenGlToolkit(canvas, var_d, class45, 25542, i);
-            if (i_171_ == 3) return ToolkitLoader.method870(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
+            if (i_171_ == 3) return ToolkitLoader.createD3DToolkit(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
             throw new IllegalArgumentException("UM");
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ha.TJ(" + i + ',' + i_168_ + ',' + i_169_ + ',' + (class45 != null ? "{...}" : "null") + ',' + i_170_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_171_ + ')'));

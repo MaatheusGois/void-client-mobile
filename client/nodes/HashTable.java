@@ -94,15 +94,15 @@ final class HashTable {
                     int i_4_;
                     int i_5_;
                     int i_6_;
-                    if (DefinitionSub21.anInt9282 == 4) {
+                    if (DefinitionSub21.cameraMode == 4) {
                         i_3_ = NodeSub7.anInt6652;
                         i_4_ = NodederUtil.anInt6633;
                         i_5_ = 4096;
-                        i_6_ = 0x3fff & (int) -Component112.aFloat3938;
+                        i_6_ = 0x3fff & (int) -Component112.cameraYaw;
                     } else {
                         i_5_ = 4096 - 16 * Component182.anInt9750;
                         i_3_ = (Component72.localPlayer.y);
-                        i_6_ = ((int) -Component112.aFloat3938 - -CacheNodeSub2.anInt10483 & 0x3fff);
+                        i_6_ = ((int) -Component112.cameraYaw - -CacheNodeSub2.anInt10483 & 0x3fff);
                         i_4_ = (Component72.localPlayer.x);
                     }
                     int i_7_ = 48 - (-(i_4_ / 128) - -(AbstractShaderSub4.anInt7319 * 2)) - -208;
@@ -214,7 +214,7 @@ final class HashTable {
                             }
                         }
                     }
-                    if (DefinitionSub21.anInt9282 != 4) {
+                    if (DefinitionSub21.cameraMode != 4) {
                         if (Component253.anInt3203 != 0) {
                             int i_40_ = (-(i_4_ / 128) + (Component253.anInt3203 * 4 + 2) - (-(2 * Component72.localPlayer.method2436((byte) 77)) - -2));
                             int i_41_ = (4 * Component263.anInt1548 - (-2 + i_3_ / 128) + (2 * (Component72.localPlayer.method2436((byte) 59) - 1)));

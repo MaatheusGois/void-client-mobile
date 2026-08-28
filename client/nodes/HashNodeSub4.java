@@ -46,7 +46,7 @@ final class HashNodeSub4
                                     class46.anInt730 -= class17.anInt238;
                                     if (class46.anInt730 < 0 || ((class17.anIntArray237).length <= class46.anInt730)) class46.anInt730 = -1;
                                 }
-                                Component111.method1916(-9343, class46);
+                                Component111.markInterfaceDirty(-9343, class46);
                             }
                             if (i_2_ != class46.anInt795) Component235.method2017((class46.anInt795), class17, 98);
                         }

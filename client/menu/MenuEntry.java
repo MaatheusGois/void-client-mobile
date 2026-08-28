@@ -91,21 +91,26 @@ final class MenuEntry extends HashNode {
     boolean aBoolean9611;
     static int[] anIntArray9612;
 
-    public static void method3228(int i) {
+    public static void clearStatics(int i) {
         anIntArray9612 = null;
         int i_0_ = 29 / ((31 - i) / 43);
         aClass356_9603 = null;
     }
 
-    static final int method3229(int i) {
+    /**
+     * Current window mode id: {@code 3}=fullscreen Frame, {@code 2}=FS available,
+     * {@code 1}=windowed / FS unavailable. Used by display-mode and error paths.
+     */
+    static final int getWindowMode(int i) {
         anInt9596++;
         if (Component225.aFrame476 != null) return 3;
         if (i >= -59) ignoreCount = 79;
-        if (!Cp1252Decoder.aBoolean5219) return 1;
+        if (!Cp1252Decoder.fullscreenAvailable) return 1;
         return 2;
     }
 
-    static final void method3230(int[] is, int[] is_1_, int i) {
+    /** Install (or clear) the size-bucketed {@code byte[][][]} pools used by buffer allocators. */
+    static final void initArrayPools(int[] is, int[] is_1_, int i) {
         try {
             anInt9606++;
             if (is == null || is_1_ == null) {
@@ -124,8 +129,12 @@ final class MenuEntry extends HashNode {
         }
     }
 
-    static final void method3231(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
-        if (i_7_ > -123) method3229(14);
+    /**
+     * Scripted/cutscene camera: aim at tile ({@code i_3_},{@code i}) with height offset,
+     * set {@link DefinitionSub21#cameraMode}=2, and compute pitch/yaw toward the target.
+     */
+    static final void setCutsceneCamera(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+        if (i_7_ > -123) getWindowMode(14);
         Component205.anInt5973 = i_5_;
         Component221.anInt1797 = i_4_;
         Component48.anInt4336 = i_3_;
@@ -146,7 +155,7 @@ final class MenuEntry extends HashNode {
             Component103.anInt4186 = 0;
             if (HashNodeSub19.anInt9701 > 3072) HashNodeSub19.anInt9701 = 3072;
         }
-        DefinitionSub21.anInt9282 = 2;
+        DefinitionSub21.cameraMode = 2;
         JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
     }
 

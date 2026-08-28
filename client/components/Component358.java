@@ -45,14 +45,14 @@ final class Component358
     static final int countEmptyInvSlots(byte i, int i_6_, boolean bool) {
         anInt3878++;
         if (bool) return 0;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -9, i_6_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -9, i_6_, bool);
         if (class348_sub13 == null) return (Component162.aClass271_8378.method2044(109, i_6_).anInt9542);
         int i_7_ = 0;
-        for (int i_8_ = 0; (i_8_ < class348_sub13.anIntArray6757.length); i_8_++) {
-            if (class348_sub13.anIntArray6757[i_8_] == -1) i_7_++;
+        for (int i_8_ = 0; (i_8_ < class348_sub13.itemIds.length); i_8_++) {
+            if (class348_sub13.itemIds[i_8_] == -1) i_7_++;
         }
         if (i != 35) countEmptyInvSlots((byte) -102, 43, true);
-        i_7_ += (Component162.aClass271_8378.method2044(82, i_6_).anInt9542 + -class348_sub13.anIntArray6757.length);
+        i_7_ += (Component162.aClass271_8378.method2044(82, i_6_).anInt9542 + -class348_sub13.itemIds.length);
         return i_7_;
     }
 }

@@ -31,10 +31,10 @@ final class ImageCacheStore {
     static final int method2552(boolean bool, int i, int i_0_, int i_1_) {
         if (i_1_ != -24667) method2554((byte) 95);
         anInt4023++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) 4, i, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) 4, i, bool);
         if (class348_sub13 == null) return -1;
-        if (i_0_ < 0 || i_0_ >= class348_sub13.anIntArray6757.length) return -1;
-        return class348_sub13.anIntArray6757[i_0_];
+        if (i_0_ < 0 || i_0_ >= class348_sub13.itemIds.length) return -1;
+        return class348_sub13.itemIds[i_0_];
     }
 
     final int[][][] getAllBuffers(int i) {

@@ -26,7 +26,8 @@ final class RSARequest extends HashNode {
     static BigInteger aBigInteger9657 = Loader.FILE_SERVER_RSA_MODULUS;
     static Component24 aClass105_9658;
     static Component24 aClass105_9659;
-    static LoadingState aClass56_9660;
+    /** Current boot/loading stage driven by {@link LoadingManager#pulseLoading}. */
+    static LoadingState currentLoadingState;
 
     final int method3245(boolean bool) {
         anInt9646++;
@@ -43,7 +44,7 @@ final class RSARequest extends HashNode {
 
     public static void method3247(int i) {
         if (i > -49) method3247(49);
-        aClass56_9660 = null;
+        currentLoadingState = null;
         aClass105_9658 = null;
         aClass105_9659 = null;
         aBigInteger9657 = null;

@@ -26,7 +26,7 @@ final class Component117
             if (!Cp1252Decoder.aBoolean5224) {
                 Cp1252Decoder.aBoolean5224 = true;
                 DummyClass.aBoolean10174 = true;
-                NodeSub27.aFloat6898 += (-12.0F - NodeSub27.aFloat6898) / 2.0F;
+                NodeSub27.cameraPitchRate += (-12.0F - NodeSub27.cameraPitchRate) / 2.0F;
             }
         }
     }

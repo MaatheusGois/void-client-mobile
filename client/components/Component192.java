@@ -29,7 +29,7 @@ final class Component192
         if (i <= -39) {
             anInt3958++;
             if (Component300.method2066((byte) 106)) {
-                if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.method249(2);
+                if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.initDevConsole(2);
                 Component39.anInt2254 = 0;
                 StringCache.aBoolean4328 = true;
             }

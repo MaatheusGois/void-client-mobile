@@ -25,7 +25,7 @@ final class DisplayModeManagerContainer322
     }
 
     static final void method2708(int i) {
-        Component111.method1916(-9343, Component156.aClass46_3701);
+        Component111.markInterfaceDirty(-9343, Component156.aClass46_3701);
         anInt4280++;
         RenderableObject.anInt6392++;
         if (!Cp1252Decoder.aBoolean5221 || !Component162.aBoolean8386) {

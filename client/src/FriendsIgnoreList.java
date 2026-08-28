@@ -81,13 +81,14 @@ final class FriendsIgnoreList {
     static FriendsIgnoreList aClass274_3546;
     static DisplayModeManagerContainer56 aClass190_3547;
 
-    static final boolean method2058(int i, int i_0_, int i_1_) {
-        if (i_1_ <= 28) method2059(108);
+    /** True if tile flags include walk-block / roof-style collision bits (0x18 or 0x220==544). */
+    static final boolean hasCollisionBlockFlags(int i, int i_0_, int i_1_) {
+        if (i_1_ <= 28) clearStatics(108);
         anInt3478++;
         return (0x18 & i) != 0 | (i & 0x220) == 544;
     }
 
-    public static void method2059(int i) {
+    public static void clearStatics(int i) {
         aClass274_3523 = null;
         aClass274_3530 = null;
         aClass274_3533 = null;
@@ -102,7 +103,7 @@ final class FriendsIgnoreList {
         aClass274_3515 = null;
         aClass274_3531 = null;
         aClass274_3543 = null;
-        if (i > -88) method2062((byte) -47);
+        if (i > -88) clearOccluders((byte) -47);
         aClass274_3542 = null;
         aClass274_3501 = null;
         aClass274_3519 = null;
@@ -155,8 +156,9 @@ final class FriendsIgnoreList {
         aClass274_3546 = null;
     }
 
-    static final void method2060(byte i, boolean bool) {
-        if (i > -4) method2059(-6);
+    /** Close open interface containers and clear the active top-level interface ref. */
+    static final void closeInterfaces(byte i, boolean bool) {
+        if (i > -4) clearStatics(-6);
         anInt3484++;
         DisplayModeManagerContainer89.anInt8374++;
         ParticleSystem class348_sub47 = ParticleShader.method2148(NodeSub34.aClass351_6970, DisplayModeManagerContainer64.aClass77_9029, -109);
@@ -169,12 +171,13 @@ final class FriendsIgnoreList {
             if (class348_sub41.anInt7053 == 0) Component162.method1118(true, bool, class348_sub41, 2533);
         }
         if (Component297.aClass46_4730 != null) {
-            Component111.method1916(-9343, Component297.aClass46_4730);
+            Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
             Component297.aClass46_4730 = null;
         }
     }
 
-    static final void method2061(int i) {
+    /** Drop cached HUD / minimap sprites. */
+    static final void clearHudSprites(int i) {
         RSARequest.aClass105_9658 = null;
         RSARequest.aClass105_9659 = null;
         RadixParser.aClass105_2309 = null;
@@ -188,7 +191,8 @@ final class FriendsIgnoreList {
         Component338.aClass105_1706 = null;
     }
 
-    static final void method2062(byte i) {
+    /** Free scene occluder arrays and reset occluder counts. */
+    static final void clearOccluders(byte i) {
         if (Component335.aClass338Array2034 != null) {
             for (int i_3_ = 0; i_3_ < RadixText.occluderCountA; i_3_++)
                 Component335.aClass338Array2034[i_3_] = null;
@@ -227,7 +231,7 @@ final class FriendsIgnoreList {
 
     /** @param i language index ({@link ObjectDeserializer#languageId}); {@code i_10_} must be 544. */
     final String getLocalized(int i, int i_10_) {
-        if (i_10_ != 544) method2061(126);
+        if (i_10_ != 544) clearHudSprites(126);
         anInt3479++;
         return localizedTexts[i];
     }

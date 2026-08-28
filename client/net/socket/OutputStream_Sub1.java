@@ -38,19 +38,19 @@ final class OutputStream_Sub1 extends OutputStream {
             i_2_ = Component333.anInt3643;
             Component72.anInt1906 = Component72.anInt1911;
             i_0_ = Component296.anInt4656;
-            if (DefinitionSub21.anInt9282 == 1) {
-                int i_4_ = (int) DisplayModeManagerContainer154.aFloat1287;
+            if (DefinitionSub21.cameraMode == 1) {
+                int i_4_ = (int) DisplayModeManagerContainer154.cameraPitch;
                 if (NodeSub35.anInt6979 >> 8 > i_4_) i_4_ = NodeSub35.anInt6979 >> 8;
                 if (Component113.aBooleanArray2374[4] && DisplayModeManagerContainer320.anIntArray3273[4] + 128 > i_4_) i_4_ = DisplayModeManagerContainer320.anIntArray3273[4] + 128;
-                int i_5_ = (int) Component112.aFloat3938 + Component195.anInt5016 & 0x3fff;
-                DisplayModeManagerContainer167.method268(i_4_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_5_, Component353.anInt2578, i_2_, -19360, DisplayModeManagerContainer273.anInt5799, (i_4_ >> 3) * 3 + 600 << 2);
-            } else if (DefinitionSub21.anInt9282 == 4) {
-                int i_6_ = (int) DisplayModeManagerContainer154.aFloat1287;
+                int i_5_ = (int) Component112.cameraYaw + Component195.anInt5016 & 0x3fff;
+                DisplayModeManagerContainer167.method268(i_4_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_5_, Component353.cameraFocusZ, i_2_, -19360, DisplayModeManagerContainer273.cameraFocusX, (i_4_ >> 3) * 3 + 600 << 2);
+            } else if (DefinitionSub21.cameraMode == 4) {
+                int i_6_ = (int) DisplayModeManagerContainer154.cameraPitch;
                 if (i_6_ < NodeSub35.anInt6979 >> 8) i_6_ = NodeSub35.anInt6979 >> 8;
                 if (Component113.aBooleanArray2374[4] && (i_6_ < DisplayModeManagerContainer320.anIntArray3273[4] + 128)) i_6_ = 128 + DisplayModeManagerContainer320.anIntArray3273[4];
-                int i_7_ = (int) Component112.aFloat3938 & 0x3fff;
-                DisplayModeManagerContainer167.method268(i_6_, -200 + Component300.method2064(NodederUtil.anInt6633, Component117.anInt4372, 11219, NodeSub7.anInt6652), i_7_, Component353.anInt2578, i_2_, -19360, DisplayModeManagerContainer273.anInt5799, 600 - -((i_6_ >> 3) * 3) << 2);
-            } else if (DefinitionSub21.anInt9282 == 5) DisplayModeManagerContainer259.method2035(i_2_, 0);
+                int i_7_ = (int) Component112.cameraYaw & 0x3fff;
+                DisplayModeManagerContainer167.method268(i_6_, -200 + Component300.method2064(NodederUtil.anInt6633, Component117.anInt4372, 11219, NodeSub7.anInt6652), i_7_, Component353.cameraFocusZ, i_2_, -19360, DisplayModeManagerContainer273.cameraFocusX, 600 - -((i_6_ >> 3) * 3) << 2);
+            } else if (DefinitionSub21.cameraMode == 5) DisplayModeManagerContainer259.method2035(i_2_, 0);
             int i_8_ = WaterSurfaceShader.anInt6246;
             int i_9_ = DisplayModeManagerContainer50.anInt3855;
             int i_10_ = Component317.anInt8685;

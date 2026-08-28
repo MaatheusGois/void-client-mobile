@@ -342,7 +342,7 @@ final class SpriteSub1
 
     static final boolean method989(int i, int i_92_, int i_93_) {
         anInt8401++;
-        if (ClientErrorReporter.method1241(i_93_, i, i_92_ ^ 0x1fe) | (0x10000 & i) != 0 || ParticleSystem.method3325(i, i_93_, true)) return true;
+        if (ClientErrorReporter.hasCollisionBlockFlags(i_93_, i, i_92_ ^ 0x1fe) | (0x10000 & i) != 0 || ParticleSystem.method3325(i, i_93_, true)) return true;
         if (i_92_ != -385) return false;
         return (i_93_ & 0x37) == 0 && Component224.method2056(i, 120, i_93_);
     }

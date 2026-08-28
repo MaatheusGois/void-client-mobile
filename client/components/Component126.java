@@ -37,7 +37,7 @@ final class Component126
 
     static final void method3515(int i) {
         int i_2_ = 52 / ((33 - i) / 40);
-        Definition.aClass356_7041.clear(0);
+        Definition.containers.clear(0);
         anInt4464++;
     }
 

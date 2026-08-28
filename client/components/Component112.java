@@ -7,7 +7,8 @@ abstract class Component112
  * RENAMED from `Class314` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static float aFloat3938 = 0.0F;
+    /** Camera yaw in 0..16384 units (wraps in {@code clampCameraAngles}). */
+    static float cameraYaw = 0.0F;
     static int anInt3939;
     static int anInt3940;
     static int anInt3941;

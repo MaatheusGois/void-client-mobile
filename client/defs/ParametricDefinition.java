@@ -45,7 +45,7 @@ final class ParametricDefinition extends Definition {
     static final void method3054(boolean bool, int i, int i_2_) {
         anInt9105++;
         if (i_2_ < -127) {
-            NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -122, i, bool);
+            NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -122, i, bool);
             if (class348_sub13 != null) class348_sub13.unlink((byte) 97);
         }
     }

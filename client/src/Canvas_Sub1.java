@@ -17,29 +17,33 @@ final class Canvas_Sub1 extends Canvas {
     static int anInt69;
     static int anInt70;
 
-    static final void method119(int i, long l) {
+    /**
+     * Lerp camera focus toward the local player and apply yaw/pitch rates (follow mode).
+     * Snaps if focus is more than 2000 units away; {@code l} is elapsed ms.
+     */
+    static final void updateFollowCamera(int i, long l) {
         try {
             anInt66++;
-            int i_0_ = (Component120.anInt319 + Component72.localPlayer.x);
-            int i_1_ = (Component92.anInt3310 + Component72.localPlayer.y);
-            if (-i_0_ + DisplayModeManagerContainer273.anInt5799 < -2000 || -i_0_ + DisplayModeManagerContainer273.anInt5799 > 2000 || Component353.anInt2578 - i_1_ < -2000 || -i_1_ + Component353.anInt2578 > 2000) {
-                Component353.anInt2578 = i_1_;
-                DisplayModeManagerContainer273.anInt5799 = i_0_;
+            int i_0_ = (Component120.cameraShakeX + Component72.localPlayer.x);
+            int i_1_ = (Component92.cameraShakeZ + Component72.localPlayer.y);
+            if (-i_0_ + DisplayModeManagerContainer273.cameraFocusX < -2000 || -i_0_ + DisplayModeManagerContainer273.cameraFocusX > 2000 || Component353.cameraFocusZ - i_1_ < -2000 || -i_1_ + Component353.cameraFocusZ > 2000) {
+                Component353.cameraFocusZ = i_1_;
+                DisplayModeManagerContainer273.cameraFocusX = i_0_;
             }
-            if (DisplayModeManagerContainer273.anInt5799 != i_0_) {
-                int i_2_ = i_0_ - DisplayModeManagerContainer273.anInt5799;
+            if (DisplayModeManagerContainer273.cameraFocusX != i_0_) {
+                int i_2_ = i_0_ - DisplayModeManagerContainer273.cameraFocusX;
                 int i_3_ = (int) ((long) i_2_ * l / 320L);
                 if (i_2_ <= 0) {
                     if (i_3_ == 0) i_3_ = -1;
                     else if (i_3_ < i_2_) i_3_ = i_2_;
                 } else if (i_3_ == 0) i_3_ = 1;
                 else if (i_3_ > i_2_) i_3_ = i_2_;
-                DisplayModeManagerContainer273.anInt5799 += i_3_;
+                DisplayModeManagerContainer273.cameraFocusX += i_3_;
             }
             if (i == -1) {
-                Component112.aFloat3938 += Component275.aFloat2687 * (float) l / 6.0F;
-                if (i_1_ != Component353.anInt2578) {
-                    int i_4_ = i_1_ - Component353.anInt2578;
+                Component112.cameraYaw += Component275.cameraYawRate * (float) l / 6.0F;
+                if (i_1_ != Component353.cameraFocusZ) {
+                    int i_4_ = i_1_ - Component353.cameraFocusZ;
                     int i_5_ = (int) ((long) i_4_ * l / 320L);
                     if (i_4_ > 0) {
                         if (i_5_ != 0) {
@@ -48,10 +52,10 @@ final class Canvas_Sub1 extends Canvas {
                     } else if (i_5_ != 0) {
                         if (i_5_ < i_4_) i_5_ = i_4_;
                     } else i_5_ = -1;
-                    Component353.anInt2578 += i_5_;
+                    Component353.cameraFocusZ += i_5_;
                 }
-                DisplayModeManagerContainer154.aFloat1287 += NodeSub27.aFloat6898 * (float) l / 6.0F;
-                DisplayModeManagerContainer199.method1725(262144);
+                DisplayModeManagerContainer154.cameraPitch += NodeSub27.cameraPitchRate * (float) l / 6.0F;
+                DisplayModeManagerContainer199.clampCameraAngles(262144);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, "vg.A(" + i + ',' + l + ')');
@@ -63,36 +67,41 @@ final class Canvas_Sub1 extends Canvas {
         aComponent64.update(graphics);
     }
 
-    public static void method120(boolean bool) {
+    /** Null shared statics for GC / shutdown. */
+    public static void clearStatics(boolean bool) {
         anIntArray60 = null;
         if (bool != false) anIntArray60 = null;
     }
 
-    static final void method121(int i, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_) {
+    /**
+     * Set one inventory/container slot: id {@code i}, optional high-bit key when {@code bool},
+     * slot {@code i_7_}, amount {@code i_8_}, itemId {@code i_9_}. Used by UPDATE_INV packets.
+     */
+    static final void setContainerSlot(int i, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_) {
         if (i_6_ != -364570972) anInt70 = -4;
         anInt68++;
         long l = i | (!bool ? 0 : -2147483648);
-        NodeSub13 class348_sub13 = ((NodeSub13) Definition.aClass356_7041.get(l, -6008));
+        NodeSub13 class348_sub13 = ((NodeSub13) Definition.containers.get(l, -6008));
         if (class348_sub13 == null) {
             class348_sub13 = new NodeSub13();
-            Definition.aClass356_7041.put((byte) 109, l, class348_sub13);
+            Definition.containers.put((byte) 109, l, class348_sub13);
         }
-        if (class348_sub13.anIntArray6757.length <= i_7_) {
+        if (class348_sub13.itemIds.length <= i_7_) {
             int[] is = new int[1 + i_7_];
             int[] is_10_ = new int[1 + i_7_];
-            for (int i_11_ = 0; (class348_sub13.anIntArray6757.length > i_11_); i_11_++) {
-                is[i_11_] = class348_sub13.anIntArray6757[i_11_];
-                is_10_[i_11_] = class348_sub13.anIntArray6758[i_11_];
+            for (int i_11_ = 0; (class348_sub13.itemIds.length > i_11_); i_11_++) {
+                is[i_11_] = class348_sub13.itemIds[i_11_];
+                is_10_[i_11_] = class348_sub13.amounts[i_11_];
             }
-            for (int i_12_ = class348_sub13.anIntArray6757.length; i_12_ < i_7_; i_12_++) {
+            for (int i_12_ = class348_sub13.itemIds.length; i_12_ < i_7_; i_12_++) {
                 is[i_12_] = -1;
                 is_10_[i_12_] = 0;
             }
-            class348_sub13.anIntArray6757 = is;
-            class348_sub13.anIntArray6758 = is_10_;
+            class348_sub13.itemIds = is;
+            class348_sub13.amounts = is_10_;
         }
-        class348_sub13.anIntArray6757[i_7_] = i_9_;
-        class348_sub13.anIntArray6758[i_7_] = i_8_;
+        class348_sub13.itemIds[i_7_] = i_9_;
+        class348_sub13.amounts[i_7_] = i_8_;
     }
 
     public final void paint(Graphics graphics) {
@@ -100,7 +109,11 @@ final class Canvas_Sub1 extends Canvas {
         anInt65++;
     }
 
-    static final DisplayModeManagerContainer370 method122(int i, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_, GraphicsToolkit var_ha) {
+    /**
+     * Load (or reuse) a model from the model cache by archive id {@code i_16_}, then apply
+     * optional rotations/height ({@code i_15_}/{@code i_13_}/{@code i_14_}/{@code i}).
+     */
+    static final DisplayModeManagerContainer370 getCachedModel(int i, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_, GraphicsToolkit var_ha) {
         anInt62++;
         if (i_17_ != -35) anInt70 = 10;
         long l = i_16_;
@@ -121,7 +134,11 @@ final class Canvas_Sub1 extends Canvas {
         return class64;
     }
 
-    static final void method123(int i) {
+    /**
+     * Prefetch region landscape/loc archives, then build the scene graph when all groups are ready.
+     * Called while entering the game world ({@code clientState} map-load path).
+     */
+    static final void loadAndBuildScene(int i) {
         anInt63++;
         Component156.method2193(false, (byte) -125);
         DisplayModeManagerContainer259.anInt3441 = 0;
@@ -219,8 +236,8 @@ final class Canvas_Sub1 extends Canvas {
                 i_27_ = (int) (Loader.RENDER_DISTANCE_MULTIPLIER * i_27_);
                 HashNodeSub2.method3171(NodeSub8.toolkit, Component25.anInt6012, 9, 4, AbstractShaderSub4.anInt7319, ParametricDefinition.anInt9109, i_27_, bool_25_, NodeSub8.toolkit.method3704() > 0);
                 NodeSub32.method3018(Component171.anInt10096);
-                if (Component171.anInt10096 != 0) NodeSub48.method3328(Component49.aClass324_4684);
-                else NodeSub48.method3328(null);
+                if (Component171.anInt10096 != 0) NodeSub48.setDebugOverlayFont(Component49.aClass324_4684);
+                else NodeSub48.setDebugOverlayFont(null);
                 for (int i_28_ = 0; i_28_ < 4; i_28_++)
                     NodeSub45.aClass361Array7108[i_28_].method3500(i ^ 0x2bc);
                 RSACipher.method491((byte) -86);

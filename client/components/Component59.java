@@ -16,7 +16,7 @@ final class Component59
             Component113.aBooleanArray2374[i_0_] = false;
         anInt1870++;
         JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
-        DefinitionSub21.anInt9282 = 1;
+        DefinitionSub21.cameraMode = 1;
         NodeBaseSub1.anInt9775 = -1;
         Component205.anInt5973 = 0;
         Component102.anInt4803 = -1;

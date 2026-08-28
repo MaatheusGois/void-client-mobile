@@ -46,7 +46,7 @@ final class Component329
 
     static final void method1779(byte i) {
         anInt5985++;
-        NamedInteger.method3517(73);
+        NamedInteger.clearCaches(73);
         NodeList.aClass190ArrayArray3335 = null;
         NodeCache.aHa1098 = null;
         if (i <= 89) anInt5994 = -75;

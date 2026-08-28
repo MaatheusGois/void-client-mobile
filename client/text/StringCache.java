@@ -4,22 +4,25 @@
 
 /**
  * RENAMED from `Class351` (JODE-obfuscated).
- * String-keyed cache. Backed by a NodeCache (aClass60_4327 = new NodeCache(3000000,200)); method3455(String,int) looks up by name. Used by CacheStore and many systems.
+ * String-keyed cache. Backed by a NodeCache (aClass60_4327 = new NodeCache(3000000,200)); isOnIgnoreList(String,int) looks up by name. Used by CacheStore and many systems.
  */
 
 import java.awt.*;
 
 final class StringCache {
     static int anInt4322;
-    int anInt4323;
+    /** Secondary constructor value (often payload/group size). */
+    int size;
     static int anInt4324;
     static int anInt4325;
-    private int anInt4326;
+    /** Primary id (packet opcode / cache key). */
+    private int opcode;
     static NodeCache aClass60_4327 = new NodeCache(3000000, 200);
     static boolean aBoolean4328 = false;
     static Font aFont4329;
 
-    static final boolean method3455(String string, int i) {
+    /** True if {@code string} matches an ignore-list display name (current or previous). */
+    static final boolean isOnIgnoreList(String string, int i) {
         anInt4324++;
         if (string == null) return false;
         for (int i_0_ = 0; (i_0_ < MenuEntry.ignoreCount); i_0_++) {
@@ -35,20 +38,21 @@ final class StringCache {
         throw new IllegalStateException();
     }
 
-    final int method3456(int i) {
+    /** Packet / cache opcode id assigned at construction ({@code new StringCache(opcode, size)}). */
+    final int getOpcode(int i) {
         anInt4322++;
-        if (i != 200) anInt4326 = -78;
-        return anInt4326;
+        if (i != 200) opcode = -78;
+        return opcode;
     }
 
-    public static void method3457(boolean bool) {
+    public static void clearStatics(boolean bool) {
         aFont4329 = null;
         aClass60_4327 = null;
-        if (bool != true) method3455(null, -16);
+        if (bool != true) isOnIgnoreList(null, -16);
     }
 
     StringCache(int i, int i_1_) {
-        anInt4326 = i;
-        this.anInt4323 = i_1_;
+        opcode = i;
+        this.size = i_1_;
     }
 }

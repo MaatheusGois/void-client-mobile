@@ -95,9 +95,9 @@ final class DefinitionSub6
 
     static final int method3063(boolean bool) {
         anInt9132++;
-        int i = RSARequest.aClass56_9660.getStageId(-125);
+        int i = RSARequest.currentLoadingState.getStageId(-125);
         if (bool != false) anIntArray9135 = null;
-        if (i < ShaderCompilerSub2.aClass56Array6515.length + -1) RSARequest.aClass56_9660 = ShaderCompilerSub2.aClass56Array6515[1 + i];
+        if (i < ShaderCompilerSub2.aClass56Array6515.length + -1) RSARequest.currentLoadingState = ShaderCompilerSub2.aClass56Array6515[1 + i];
         return 100;
     }
 }

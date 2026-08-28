@@ -19,15 +19,16 @@ final class CookieBuilder {
     static int[] anIntArray619 = {0, 1, 2, 2, 1, 1, 2, 3, 1, 3, 3, 4, 2, 0, 4};
     static int anInt620;
 
-    public static void method380(int i) {
+    public static void clearStatics(int i) {
         aClass351_618 = null;
         anIntArray619 = null;
         if (i == 0) aClass45_611 = null;
     }
 
-    static final BrowserDetector method381(byte i) {
+    /** Factory for the browser/UA detector used by HTTP news/cookie helpers. */
+    static final BrowserDetector createBrowserDetector(byte i) {
         anInt616++;
-        if (i != 68) method381((byte) -42);
+        if (i != 68) createBrowserDetector((byte) -42);
         return Component183.method1059((byte) 95, 1);
     }
 
@@ -35,7 +36,7 @@ final class CookieBuilder {
     static final void setSettingsCookie(String string, boolean bool) {
         anInt613++;
         Component205.settingsCookie = string;
-        if (bool != true) method381((byte) -48);
+        if (bool != true) createBrowserDetector((byte) -48);
         if (ToolkitFactory.anApplet1530 != null) {
             try {
                 String string_0_ = ToolkitFactory.anApplet1530.getParameter("cookieprefix");

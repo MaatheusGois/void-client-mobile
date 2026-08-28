@@ -63,7 +63,7 @@ final class Component240
                 DisplayModeManagerContainer32.method447((byte) -59);
             }
         } else {
-            HeapDumper.method1140(120);
+            HeapDumper.resetGraphicsPreferences(120);
             i_3_ = 4;
         }
         if (i_1_ != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350)) {

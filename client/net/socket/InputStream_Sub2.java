@@ -63,7 +63,7 @@ final class InputStream_Sub2 extends InputStream {
                 if (i_19_ >= 0 && i_20_ >= 0 && i_19_ < AbstractShaderSub4.anInt7319 && (i_20_ < ParametricDefinition.anInt9109)) {
                     int i_28_ = 1 + i_23_;
                     if (((Component72.localPlayer.anIntArray10320[0]) >= i_19_ + -i_28_) && i_28_ + i_19_ >= (Component72.localPlayer.anIntArray10320[0]) && ((Component72.localPlayer.anIntArray10317[0]) >= -i_28_ + i_20_) && i_20_ + i_28_ >= (Component72.localPlayer.anIntArray10317[0]))
-                        Component98.method1760(i_21_, i_26_, false, ((i_20_ << 8) + (((GradientPreset.anInt9200) << 24) + ((i_19_ << 16) - -i_23_))), (byte) -98, i_24_, i_27_, i_25_);
+                        Component98.queueAreaSound(i_21_, i_26_, false, ((i_20_ << 8) + (((GradientPreset.anInt9200) << 24) + ((i_19_ << 16) - -i_23_))), (byte) -98, i_24_, i_27_, i_25_);
                 }
             } else if (class74 == NodeSub35.aClass74_6977) {
                 int i_29_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
@@ -84,7 +84,7 @@ final class InputStream_Sub2 extends InputStream {
                 if (i_32_ >= 0 && i_33_ >= 0 && i_32_ < AbstractShaderSub4.anInt7319 && i_33_ < ParametricDefinition.anInt9109) {
                     int i_41_ = i_36_ + 1;
                     if ((Component72.localPlayer.anIntArray10320[0]) >= i_32_ - i_41_ && (Component72.localPlayer.anIntArray10320[0]) <= i_41_ + i_32_ && ((Component72.localPlayer.anIntArray10317[0]) >= -i_41_ + i_33_) && (i_33_ - -i_41_ >= (Component72.localPlayer.anIntArray10317[0])))
-                        NameFormatter.method358(i_37_, (i_36_ + (i_33_ << 8) + ((GradientPreset.anInt9200 << 24) + (i_32_ << 16))), i_38_, i_39_, i_40_, i_34_, -29494);
+                        NameFormatter.queueSoundEffect(i_37_, (i_36_ + (i_33_ << 8) + ((GradientPreset.anInt9200 << 24) + (i_32_ << 16))), i_38_, i_39_, i_40_, i_34_, -29494);
                 }
             } else if (DisplayModeManagerContainer232.aClass74_4689 == class74) {
                 int i_42_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);

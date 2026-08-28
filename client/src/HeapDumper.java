@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class133` (JODE-obfuscated).
- * JVM heap-dump / diagnostics utility. Obtains a HotSpotDiagnosticMXBean via ManagementFactory.newPlatformMXBeanProxy and exposes heap-dump control (method1139/method1140).
+ * JVM heap-dump / diagnostics utility. Obtains a HotSpotDiagnosticMXBean via ManagementFactory.newPlatformMXBeanProxy and exposes heap-dump control (clearStatics/resetGraphicsPreferences).
  */
 
 import com.sun.management.HotSpotDiagnosticMXBean;
@@ -22,7 +22,7 @@ final class HeapDumper {
     /*synthetic*/ static Class aClass1919;
     /*synthetic*/ static Class aClass1920;
 
-    public static void method1139(int i) {
+    public static void clearStatics(int i) {
         if (i == 2767) {
             aByteArrayArray1918 = null;
             aClass114_1917 = null;
@@ -30,7 +30,8 @@ final class HeapDumper {
         }
     }
 
-    static final void method1140(int i) {
+    /** Force safe default graphics prefs (safe mode) and mark prefs dirty. */
+    static final void resetGraphicsPreferences(int i) {
         anInt1916++;
         Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7255), 1);
         Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261), 1);
@@ -61,7 +62,11 @@ final class HeapDumper {
         }
     }
 
-    static final void method1141(DisplayModeManagerContainer207 class348_sub49_sub2, int i, int i_0_, int i_1_, Player player) {
+    /**
+     * Decode a player appearance/update mask from {@code class348_sub49_sub2} into {@code player}
+     * (anim, hitsplats, chat, force-move, etc.).
+     */
+    static final void decodePlayerUpdate(DisplayModeManagerContainer207 class348_sub49_sub2, int i, int i_0_, int i_1_, Player player) {
         do {
             try {
                 anInt1912++;

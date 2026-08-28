@@ -9,7 +9,8 @@ final class Component275
  */ {
     static int anInt2685;
     static StringCache aClass351_2686;
-    static float aFloat2687 = 0.0F;
+    /** Per-frame yaw delta applied in follow/orbit camera ticks. */
+    static float cameraYawRate = 0.0F;
     static int anInt2688;
     static int anInt2689;
     static int anInt2690;

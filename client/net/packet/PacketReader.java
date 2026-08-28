@@ -27,7 +27,7 @@ final class PacketReader extends CacheNode {
         int i_2_ = 18 / ((i_1_ - 30) / 42);
         if (!HuffmanDecoder.method2224(i, (byte) -118, i_0_)) return false;
         if (RadixText.method1833((byte) -118, i, i_0_) | (0x9000 & i) != 0 | Component179.method2985(-31735, i_0_, i)) return true;
-        return ((0x37 & i_0_) == 0 & ((0x2000 & i) != 0 | FriendsIgnoreList.method2058(i, i_0_, 88) | ReferenceHolder.method3203(i_0_, (byte) 127, i)));
+        return ((0x37 & i_0_) == 0 & ((0x2000 & i) != 0 | FriendsIgnoreList.hasCollisionBlockFlags(i, i_0_, 88) | ReferenceHolder.hasBit16(i_0_, (byte) 127, i)));
     }
 
     PacketReader(Object object, int i) {
@@ -60,7 +60,7 @@ final class PacketReader extends CacheNode {
                 NodeSub50.anInt7213 = 0;
             }
             Component83.aBoolean1661 = true;
-            Component183[] class114s = DisplayModeManagerContainer288.method248(-11271);
+            Component183[] class114s = DisplayModeManagerContainer288.allPacketTypes(-11271);
             int i = Component80.aClass348_Sub49_Sub2_3813.method3407(15295);
             if (i < 0 || i >= class114s.length) throw new IOException("invo:" + i + " ip:" + (Component80.aClass348_Sub49_Sub2_3813.offset));
             NodeSub3.aClass114_6584 = class114s[i];
@@ -155,11 +155,11 @@ final class PacketReader extends CacheNode {
                 Component15.aClass356_4915.put((byte) 102, i, class348_sub41);
             }
             DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_9_);
-            if (class46 != null) Component111.method1916(-9343, class46);
+            if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
             class46 = BitmapFont.method2570(1512932720, i);
             if (class46 != null) {
-                Component111.method1916(-9343, class46);
-                Component111.method1913(true, -123, class46);
+                Component111.markInterfaceDirty(-9343, class46);
+                Component111.layoutInterfaceTree(true, -123, class46);
             }
             if (r.anInt9721 != -1) Component205.method1775((byte) -8, r.anInt9721, 1);
             NodeSub3.aClass114_6584 = null;
@@ -230,7 +230,7 @@ final class PacketReader extends CacheNode {
                 }
                 if (i <= 1) {
                     if ((ParametricDefinition.aBoolean9103 && !HeapDumper.aBoolean1915) || Component308.aBoolean5233) bool_20_ = true;
-                    else if (StringCache.method3455(string_16_, 28280)) bool_20_ = true;
+                    else if (StringCache.isOnIgnoreList(string_16_, 28280)) bool_20_ = true;
                 }
             } while (false);
             if (!bool_20_ && AudioMixer.anInt3227 == 0) {
@@ -330,7 +330,7 @@ final class PacketReader extends CacheNode {
                     i_34_ = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
                 }
                 int i_35_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-78);
-                Canvas_Sub1.method121(i, -364570972, bool_31_, i_33_, i_34_, i_35_ - 1);
+                Canvas_Sub1.setContainerSlot(i, -364570972, bool_31_, i_33_, i_34_, i_35_ - 1);
             }
             HelveticaFont.anIntArray2633[GpsOverlay.bitwiseAnd(31, KeyStoreLoader.anInt1631++)] = i;
             NodeSub3.aClass114_6584 = null;
@@ -702,7 +702,7 @@ final class PacketReader extends CacheNode {
             boolean bool_83_ = false;
             if (i <= 1) {
                 if (ParametricDefinition.aBoolean9103 && !HeapDumper.aBoolean1915 || Component308.aBoolean5233) bool_83_ = true;
-                else if (i <= 1 && StringCache.method3455(string_82_, 28280)) bool_83_ = true;
+                else if (i <= 1 && StringCache.isOnIgnoreList(string_82_, 28280)) bool_83_ = true;
             }
             if (!bool_83_ && AudioMixer.anInt3227 == 0) {
                 String string_84_ = (Component317.escapeAngleBrackets((DefinitionSub32.method3136((byte) 64, Component80.aClass348_Sub49_Sub2_3813)), 23034));
@@ -765,7 +765,7 @@ final class PacketReader extends CacheNode {
             NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i, -6008));
             if (class348_sub41 != null) Component162.method1118(true, false, class348_sub41, 2533);
             if (Component297.aClass46_4730 != null) {
-                Component111.method1916(-9343, Component297.aClass46_4730);
+                Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
                 Component297.aClass46_4730 = null;
             }
             NodeSub3.aClass114_6584 = null;
@@ -806,7 +806,7 @@ final class PacketReader extends CacheNode {
                 boolean bool_94_ = false;
                 if (i_92_ <= 1) {
                     if (!bool_93_ && ((ParametricDefinition.aBoolean9103 && !HeapDumper.aBoolean1915) || Component308.aBoolean5233)) bool_94_ = true;
-                    else if (StringCache.method3455(player.username, 28280)) bool_94_ = true;
+                    else if (StringCache.isOnIgnoreList(player.username, 28280)) bool_94_ = true;
                 }
                 if (!bool_94_ && AudioMixer.anInt3227 == 0) {
                     int i_95_ = -1;
@@ -853,7 +853,7 @@ final class PacketReader extends CacheNode {
                 }
                 if (i <= 1) {
                     if ((ParametricDefinition.aBoolean9103 && !HeapDumper.aBoolean1915) || Component308.aBoolean5233) bool_101_ = true;
-                    else if (StringCache.method3455(string_98_, 28280)) bool_101_ = true;
+                    else if (StringCache.isOnIgnoreList(string_98_, 28280)) bool_101_ = true;
                 }
             } while (false);
             if (!bool_101_ && AudioMixer.anInt3227 == 0) {
@@ -879,7 +879,7 @@ final class PacketReader extends CacheNode {
             int i_106_ = (Component80.aClass348_Sub49_Sub2_3813.readShortLittle(!bool) << 2);
             int i_107_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
             Component141.method2397((byte) -125);
-            MenuEntry.method3231(i_104_, i, i_106_, i_107_, i_105_, -127);
+            MenuEntry.setCutsceneCamera(i_104_, i, i_106_, i_107_, i_105_, -127);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -965,7 +965,7 @@ final class PacketReader extends CacheNode {
                         break while_219_;
                     }
                 }
-                if (i <= 1 && StringCache.method3455(string_114_, 28280)) bool_119_ = true;
+                if (i <= 1 && StringCache.isOnIgnoreList(string_114_, 28280)) bool_119_ = true;
             } while (false);
             if (!bool_119_ && AudioMixer.anInt3227 == 0) {
                 Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_118_;
@@ -1122,7 +1122,7 @@ final class PacketReader extends CacheNode {
             if (i == 99) Applet_Sub1.printConsole(string_142_, -93);
             else if (i == 98) Applet_Sub1.set(string_142_);
             else {
-                if (!string_141_.equals("") && StringCache.method3455(string_141_, 28280)) {
+                if (!string_141_.equals("") && StringCache.isOnIgnoreList(string_141_, 28280)) {
                     NodeSub3.aClass114_6584 = null;
                     return true;
                 }
@@ -1272,7 +1272,7 @@ final class PacketReader extends CacheNode {
             byte[] is = new byte[DefinitionSub25.anInt9341];
             Component80.aClass348_Sub49_Sub2_3813.method3409(DefinitionSub25.anInt9341, is, 0, -32769);
             String string = WaterShaderSub8.decodeCp1252(is, 0, DefinitionSub25.anInt9341, 0);
-            BrowserDetector.method1360(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1, true, 99);
+            BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1, true, 99);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -1352,7 +1352,7 @@ final class PacketReader extends CacheNode {
                         break while_220_;
                     }
                 }
-                if (i <= 1 && StringCache.method3455(string_175_, 28280)) bool_179_ = true;
+                if (i <= 1 && StringCache.isOnIgnoreList(string_175_, 28280)) bool_179_ = true;
             } while (false);
             if (!bool_179_ && AudioMixer.anInt3227 == 0) {
                 Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_178_;
@@ -1632,7 +1632,7 @@ final class PacketReader extends CacheNode {
                     i_224_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
                     if (i_224_ == 255) i_224_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
                 }
-                Canvas_Sub1.method121(i, -364570972, bool_221_, i_222_, i_224_, -1 + i_223_);
+                Canvas_Sub1.setContainerSlot(i, -364570972, bool_221_, i_222_, i_224_, -1 + i_223_);
             }
             HelveticaFont.anIntArray2633[GpsOverlay.bitwiseAnd(31, KeyStoreLoader.anInt1631++)] = i;
             NodeSub3.aClass114_6584 = null;
@@ -1670,7 +1670,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             int i_229_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             boolean bool_230_ = false;
-            if (i <= 1 && StringCache.method3455(string_228_, 28280)) bool_230_ = true;
+            if (i <= 1 && StringCache.isOnIgnoreList(string_228_, 28280)) bool_230_ = true;
             if (!bool_230_ && AudioMixer.anInt3227 == 0) {
                 String string_231_ = (Component31.aClass355_5900.method3471(i_229_, (byte) -108).method3216(Component80.aClass348_Sub49_Sub2_3813, (byte) 93));
                 if (i == 2) DisplayModeManagerContainer174.method2477("<img=1>" + string_228_, string_231_, (byte) -127, i_229_, "<img=1>" + string, null, 25, 0, string);

@@ -199,7 +199,7 @@ final class DisplayModeManagerContainer1
                             if (i_17_ != -1) {
                                 int i_22_ = 0;
                                 ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
-                                for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.method1240(75)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.method1243((byte) 74))) {
+                                for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(75)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 74))) {
                                     if (i_17_ == i_22_) {
                                         if (class348_sub42_sub13.anInt9615 > 1) DisplayModeManagerContainer153.method881(class348_sub42_sub13, i_16_, true, i_18_);
                                         break;
@@ -228,7 +228,7 @@ final class DisplayModeManagerContainer1
                     if (i_25_ != -1) {
                         int i_29_ = 0;
                         ClientErrorReporter class156 = new ClientErrorReporter(Component359.aClass348_Sub42_Sub13_3152.aClass107_9621);
-                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.method1240(98)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.method1243((byte) 122))) {
+                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.firstHashNode(98)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.nextHashNode((byte) 122))) {
                             if (i_29_ == i_25_) {
                                 ColoredTextBuilder.processMenuAction((byte) 126, class348_sub42_sub12, i_24_, i_23_);
                                 break;
@@ -258,7 +258,7 @@ final class DisplayModeManagerContainer1
                         if (i_30_ != -1) {
                             int i_34_ = 0;
                             ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
-                            for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.method1240(18)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.method1243((byte) 55))) {
+                            for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(18)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 55))) {
                                 if (i_34_ == i_30_) {
                                     ColoredTextBuilder.processMenuAction((byte) 122, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.sentinel.next)), i_24_, i_23_);
                                     ShaderProgramSub2.method2146((byte) 118);

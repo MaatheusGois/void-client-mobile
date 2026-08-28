@@ -71,7 +71,7 @@ final class LibraryCreditsText extends Component339 {
         if (WaterShaderSub8.anInt7365 == 0) {
             Component119.aClass267_3401.method2025(new DisplayModeManagerContainer74("jaclib"), false);
             if (Component119.aClass267_3401.method2027(119).method31(28) != 100) return 1;
-            if (!((DisplayModeManagerContainer74) Component119.aClass267_3401.method2027(71)).method2313(124)) DisplayModeManagerContainer206.aClient1367.method97(i + 24);
+            if (!((DisplayModeManagerContainer74) Component119.aClass267_3401.method2027(71)).method2313(124)) DisplayModeManagerContainer206.aClient1367.tryLoadJaclib(i + 24);
             WaterShaderSub8.anInt7365 = 1;
         }
         if (WaterShaderSub8.anInt7365 == 1) {
@@ -131,8 +131,8 @@ final class LibraryCreditsText extends Component339 {
             if (i_13_ < 100) bool = false;
         }
         if (bool) {
-            if (!((DisplayModeManagerContainer74) Component119.aClass267_3404.method2027(92)).method2313(102)) DisplayModeManagerContainer206.aClient1367.method83(true);
-            if (!((DisplayModeManagerContainer74) Component119.aClass267_3407.method2027(i ^ ~0x64)).method2313(103)) PauseTimer.aBoolean510 = DisplayModeManagerContainer206.aClient1367.method100(i ^ ~0x12);
+            if (!((DisplayModeManagerContainer74) Component119.aClass267_3404.method2027(92)).method2313(102)) DisplayModeManagerContainer206.aClient1367.tryLoadJagmisc(true);
+            if (!((DisplayModeManagerContainer74) Component119.aClass267_3407.method2027(i ^ ~0x64)).method2313(103)) PauseTimer.aBoolean510 = DisplayModeManagerContainer206.aClient1367.tryLoadJagtheora(i ^ ~0x12);
             Component380.aClass267Array4987 = null;
         }
         i_9_ -= DefinitionSub24.anInt9327;

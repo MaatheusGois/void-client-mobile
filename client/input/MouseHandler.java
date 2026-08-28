@@ -31,7 +31,11 @@ abstract class MouseHandler {
     /** Right mouse button currently held. */
     abstract boolean isRightButtonDown(byte i);
 
-    static final Component113 method3591(int i, int i_0_) {
+    /**
+     * Load {@link Component113} config id {@code i} from archive {@code i_0_} (LRU-cached).
+     * Used by floor/static-element renderers.
+     */
+    static final Component113 getOrLoadConfig(int i, int i_0_) {
         anInt4535++;
         Component113 class181 = (Component113) Component298.aClass60_4636.get(i, i_0_ + -128);
         if (class181 != null) return class181;

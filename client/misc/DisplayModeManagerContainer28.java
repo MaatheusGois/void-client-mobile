@@ -39,14 +39,14 @@ abstract class DisplayModeManagerContainer28
         anInt8726++;
         i_1_ <<= 3;
         i_2_ <<= 3;
-        if (DefinitionSub21.anInt9282 == 2) {
+        if (DefinitionSub21.cameraMode == 2) {
             Component298.anInt4638 = i_1_;
             Component103.anInt4186 = i_2_;
             HashNodeSub19.anInt9701 = i;
         }
-        Component112.aFloat3938 = (float) i_1_;
-        DisplayModeManagerContainer154.aFloat1287 = (float) i;
-        DisplayModeManagerContainer199.method1725(262144);
+        Component112.cameraYaw = (float) i_1_;
+        DisplayModeManagerContainer154.cameraPitch = (float) i;
+        DisplayModeManagerContainer199.clampCameraAngles(262144);
         DummyClass.aBoolean10174 = true;
     }
 

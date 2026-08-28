@@ -60,7 +60,7 @@ final class HashNodeSub10
     }
 
     static final void method3211(byte i) {
-        DisplayModeManagerContainer206.aClient1367.method83(true);
+        DisplayModeManagerContainer206.aClient1367.tryLoadJagmisc(true);
         anInt9569++;
         NodeSub3.method2739(0);
         Component156.anInt3699 = 0;

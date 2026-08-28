@@ -20,7 +20,7 @@ final class Component230
 
     final void method455(int i, int i_0_, int i_1_) {
         anInt5256++;
-        if (i_1_ >= -98) method472(-91, null);
+        if (i_1_ >= -98) decodeMapElement(-91, null);
     }
 
     final void method457(int i, int i_2_, int i_3_) {
@@ -50,7 +50,8 @@ final class Component230
         anInt5259 = i_10_;
     }
 
-    static final HeapDumpHelper method472(int i, Buffer class348_sub49) {
+    /** Decode a world-map label/element record from {@code class348_sub49}. */
+    static final HeapDumpHelper decodeMapElement(int i, Buffer class348_sub49) {
         anInt5263++;
         String string = class348_sub49.readString((byte) 90);
         Component85 class221 = HeapDumpHelper.method1248(127)[class348_sub49.readUnsignedByte(i ^ ~0x6c6e)];

@@ -17,7 +17,8 @@ final class Cp1252Decoder extends Component47 {
     static int anInt5216;
     static StringCache aClass351_5217;
     static int anInt5218;
-    static boolean aBoolean5219 = true;
+    /** True when the OS reported at least two display modes (fullscreen path allowed). */
+    static boolean fullscreenAvailable = true;
     static int anInt5220;
     static boolean aBoolean5221 = false;
     private final int anInt5222;

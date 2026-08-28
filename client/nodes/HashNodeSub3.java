@@ -89,9 +89,9 @@ final class HashNodeSub3
         if (!CacheNode.method3196(Component49.clientState, -114) && !CacheFileStore.isReconnectState(Component49.clientState, -103)) {
             int i_12_ = ((Component72.localPlayer.anIntArray10320[0]) >> 3);
             int i_13_ = ((Component72.localPlayer.anIntArray10317[0]) >> 3);
-            if (i_12_ < 0 || AbstractShaderSub4.anInt7319 >> 3 <= i_12_ || i_13_ < 0 || (ParametricDefinition.anInt9109 >> 3 <= i_13_)) KeyFocusHandler.method2703(0, AbstractShaderSub4.anInt7319 >> 4, (ParametricDefinition.anInt9109 >> 4), (byte) -13);
-            else KeyFocusHandler.method2703(5000, i_12_, i_13_, (byte) -13);
-        } else KeyFocusHandler.method2703(5000, WaterSurfaceShader.anInt6246 >> 12, Component317.anInt8685 >> 12, (byte) -13);
+            if (i_12_ < 0 || AbstractShaderSub4.anInt7319 >> 3 <= i_12_ || i_13_ < 0 || (ParametricDefinition.anInt9109 >> 3 <= i_13_)) KeyFocusHandler.setClientVarp(0, AbstractShaderSub4.anInt7319 >> 4, (ParametricDefinition.anInt9109 >> 4), (byte) -13);
+            else KeyFocusHandler.setClientVarp(5000, i_12_, i_13_, (byte) -13);
+        } else KeyFocusHandler.setClientVarp(5000, WaterSurfaceShader.anInt6246 >> 12, Component317.anInt8685 >> 12, (byte) -13);
         anInt9509++;
         DefinitionSub32.method3134(-1);
         Component179.method2988(true);

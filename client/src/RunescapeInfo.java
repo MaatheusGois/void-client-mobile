@@ -31,15 +31,15 @@ final class RunescapeInfo {
     static Component344 aClass87_191;
     NodeSub10 aClass348_Sub10_192;
 
-    static final String method217(byte i) {
+    static final String getMenuTipOption(byte i) {
         anInt175++;
         if (Component364.aBoolean8335 || Component192.menuTip == null) return "";
         if (i < 51) return null;
         return (Component192.menuTip.option);
     }
 
-    public static void method218(byte i) {
-        if (i < 101) method218((byte) -85);
+    public static void clearStatics(byte i) {
+        if (i < 101) clearStatics((byte) -85);
         anIntArray187 = null;
         anIntArray179 = null;
         RUNESCAPE = null;
@@ -47,15 +47,15 @@ final class RunescapeInfo {
         anIntArrayArray174 = null;
     }
 
-    static final boolean method219(int i, boolean bool, int i_0_) {
+    static final boolean hasOverlayFlag(int i, boolean bool, int i_0_) {
         if (bool != false) return false;
         anInt190++;
         return (i & 0x800) != 0 | DisplayModeManagerContainer347.method2077(-106, i_0_, i) || PacketReader.method3200(i, i_0_, (byte) 88);
     }
 
-    final boolean method220(byte i) {
+    final boolean isPositionalSound(byte i) {
         anInt181++;
-        if (i >= -12) method218((byte) 101);
+        if (i >= -12) clearStatics((byte) 101);
         return this.aByte180 == 2 || this.aByte180 == 3;
     }
 

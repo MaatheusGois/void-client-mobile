@@ -114,7 +114,8 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    final void method92(int i) {
+    /** Bootstrap hosts, client prefs, colour tables, and cache workers for this game type. */
+    final void initializeClient(int i) {
         if (DisplayModeManagerContainer254.aBoolean2151) Component127.anInt2964 = 64;
         anInt5177++;
         Frame frame = new Frame("Jagex");
@@ -123,7 +124,7 @@ public final class client extends Applet_Sub1 {
         OpenGlShader.method3556(false);
         DisplayModeManagerContainer271.aClass112_520 = new DisplayModeManagerContainer67(OggUrlStream.aClass297_8992);
         HardwareProbe.aClass248_6601 = new Component253();
-        MenuEntry.method3230(new int[]{20, 260}, new int[]{1000, 100}, 0);
+        MenuEntry.initArrayPools(new int[]{20, 260}, new int[]{1000, 100}, 0);
         if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) Component17.aByteArrayArray3882 = new byte[50][];
         Component192.aClass348_Sub51_3959 = DisplayModeManagerContainer288.method247(24916);
         if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE) MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
@@ -200,7 +201,7 @@ public final class client extends Applet_Sub1 {
         Component275.method1497(16384);
         Component92.method1979((byte) 125);
         RSARequest.method3247(-74);
-        FriendsIgnoreList.method2059(i ^ ~0x1f);
+        FriendsIgnoreList.clearStatics(i ^ ~0x1f);
         JaclibLoader.clearStatics(false);
         Component119.method2026(23377);
         Component82.method328(i ^ 0x6c);
@@ -210,7 +211,7 @@ public final class client extends Applet_Sub1 {
         Node.method2713(0);
         HashTable.method1004((byte) 16);
         LruCache.method3478(false);
-        Applet_Sub1.method98(i + 32609);
+        Applet_Sub1.clearStatics(i + 32609);
         Component41.method1860((byte) -89);
         BuildType.method1641((byte) 85);
         DisplayModeManagerContainer204.method906(-31777);
@@ -242,7 +243,7 @@ public final class client extends Applet_Sub1 {
         Component361.method305((byte) 79);
         Component144.method2545(true);
         Component304.method698(i + -106);
-        CommandHandler.method811((byte) -123);
+        CommandHandler.clearStatics((byte) -123);
         Component293.method1975((byte) -15);
         Component276.method1441((byte) 18);
         Component46.method1585(-1);
@@ -265,7 +266,7 @@ public final class client extends Applet_Sub1 {
         Component150.method1627((byte) 116);
         Component248.method284((byte) 51);
         Component285.method501(1);
-        Buffer.method3376(i ^ ~0x6d);
+        Buffer.clearStatics(i ^ ~0x6d);
         ParticleSystem.method3323(-44);
         DisplayModeManagerContainer58.method2429(-123);
         Component186.method3487(-65);
@@ -340,9 +341,9 @@ public final class client extends Applet_Sub1 {
         RenderableObject.method2389(1);
         BrowserUrlOpener.method2871(-65);
         ImageTagText.method1276(i + -199);
-        RunescapeInfo.method218((byte) 119);
+        RunescapeInfo.clearStatics((byte) 119);
         ClientScriptExecutor.method713();
-        StringCache.method3457(true);
+        StringCache.clearStatics(true);
         Component224.method2055(1);
         Component179.method2990((byte) 125);
         Component326.method523(119);
@@ -351,7 +352,7 @@ public final class client extends Applet_Sub1 {
         NodeSub16Sub2.method2830(i ^ 0x6c);
         Component126.method3516(124);
         Component279.method255(6725);
-        Component120.method287(51);
+        Component120.clearStatics(51);
         LoadingState.getProgress(85);
         Component226.method2657((byte) 124);
         Component110.method261((byte) -120);
@@ -366,7 +367,7 @@ public final class client extends Applet_Sub1 {
         ResourceLoader.method2317((byte) 79);
         Component281.method2281(1);
         Component211.method1169(false);
-        Component218.method1351(1);
+        Component218.clearStatics(1);
         AssetCacheLoader.method306(true);
         AudioMixer.method1910(0);
         Component221.method1081((byte) 121);
@@ -381,7 +382,7 @@ public final class client extends Applet_Sub1 {
         Component241.method1619((byte) 108);
         DisplayModeManagerContainer91.method316((byte) -94);
         ReferenceTable.clearStatics((byte) 63);
-        InflaterDecompressor.method1216((byte) -97);
+        InflaterDecompressor.clearStatics((byte) -97);
         DisplayModeManagerContainer165.method2286(114);
         Component79.method2645(i + -16777324);
         Component37.method2331(true);
@@ -389,7 +390,7 @@ public final class client extends Applet_Sub1 {
         FontGlyphCache.method2562();
         Component325.method722(13569);
         Component357.method1386(true);
-        CookieBuilder.method380(0);
+        CookieBuilder.clearStatics(0);
         NodeSub36.method3029(126);
         HashNodeSub19.method3278(1);
         Component39.method1298(-1);
@@ -407,7 +408,7 @@ public final class client extends Applet_Sub1 {
         Component30.method1126(32);
         DisplayModeManagerContainer173.method2682(i ^ 0x29);
         DisplayModeManagerContainer133.method1267((byte) 85);
-        ObjectDeserializer.method3024(-100);
+        ObjectDeserializer.clearStatics(-100);
         Component376.method177();
         Component303.method1609((byte) -121);
         Component143.method1349((byte) -121);
@@ -437,7 +438,7 @@ public final class client extends Applet_Sub1 {
         Component156.method2191(0);
         Component177.method1236((byte) -110);
         Component33.method1463((byte) 25);
-        RenderableSub6.method2506((byte) -46);
+        RenderableSub6.clearStatics((byte) -46);
         DisplayModeManagerContainer104.method2469(true);
         Component9.method2640(true);
         Component181.method869(3);
@@ -449,8 +450,8 @@ public final class client extends Applet_Sub1 {
         ShaderLinker.method2492(1);
         Component141.method2398((byte) -83);
         VideoAdDisplay.method1889(255);
-        KeyFocusHandler.method2705(i + 14537);
-        BasicMouseHandler.method3609((byte) 48);
+        KeyFocusHandler.clearStatics(i + 14537);
+        BasicMouseHandler.clearStatics((byte) 48);
         DisplayModeManagerContainer369.method1612((byte) -9);
         DisplayModeManagerContainer260.method2180((byte) -72);
         Component195.method1447(i ^ 0x20);
@@ -470,21 +471,21 @@ public final class client extends Applet_Sub1 {
         OggStream.method2962(-31055);
         Component52.method1944(1);
         Component103.method2662(4);
-        Canvas_Sub1.method120(false);
+        Canvas_Sub1.clearStatics(false);
         Component352.method387(67);
         SocketConnector.clearStatics(1);
-        IOException_Sub1.method130(i + -100);
+        IOException_Sub1.clearStatics(i + -100);
         Component374.method2637(i + -108);
         Component55.method2333(false);
         DisplayModeManagerContainer310.method296((byte) -99);
         Component223.method176(-1);
         Component192.clearStatics(true);
-        AbstractBuffer.method2690(-124);
+        AbstractBuffer.clearStatics(-124);
         Component187.method1551();
         DisplayModeManagerContainer172.method370(true);
         PacketReader.method3202((byte) 79);
         Component163.method1886(4908);
-        ReferenceHolder.method3204(-112);
+        ReferenceHolder.clearStatics(-112);
         DefinitionSub8.method3068(i + 13607);
         Component212.method2400((byte) 3);
         Component349.method2415(61);
@@ -505,7 +506,7 @@ public final class client extends Applet_Sub1 {
         AudioLineSub2.clearNativeAudio();
         DebugOverlay.clear(25365);
         OggStreamReader.method2981(false);
-        HeapDumper.method1139(2767);
+        HeapDumper.clearStatics(2767);
         Definition.method3040(true);
         DisplayModeManagerContainer74.method2310((byte) 69);
         Component102.method2202(-17902);
@@ -531,7 +532,7 @@ public final class client extends Applet_Sub1 {
         HashNodeSub20.method3280(-109);
         RenderableSub9Sub2.method2518(137);
         StaticElementRenderer.method2508(i ^ 0x7f93);
-        ClientErrorReporter.method1239(30114);
+        ClientErrorReporter.clearStatics(30114);
         RenderableSub2.method2495((byte) 113);
         Component300.method2065(31913);
         DisplayModeManagerContainer213.method548(10);
@@ -565,7 +566,7 @@ public final class client extends Applet_Sub1 {
         Component342.method719((byte) 72);
         Component209.method2042((byte) -67);
         MatrixSub2.method925(i + -6105);
-        Component111.method1912(8549);
+        Component111.clearStatics(8549);
         Component267.method1632(-11);
         DisplayModeManagerContainer356.method2268(-24054);
         Component75.method1329(4);
@@ -689,7 +690,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer271.method367(-15833);
         FriendLoginMessage.method2517((byte) 4);
         HashNodeSub18.method3274(true);
-        PauseHandler.method3190(false);
+        PauseHandler.clearStatics(false);
         NodeSub45.method3314(5);
         ColorTagNode.method2810((byte) 79);
         Component48.method3458(i + 2564);
@@ -700,7 +701,7 @@ public final class client extends Applet_Sub1 {
         HashNodeSub4.method3181((byte) 2);
         NodeSub7.method2773(0);
         NodeSub12.method2798(122);
-        MenuEntry.method3228(75);
+        MenuEntry.clearStatics(75);
         NodeSub11.method2796((byte) 104);
         Component222.method1525((byte) 4);
         OutputStream_Sub1.method133((byte) -41);
@@ -920,7 +921,7 @@ public final class client extends Applet_Sub1 {
                 Component19.aString8605 = null;
                 client var_client = new client();
                 DisplayModeManagerContainer206.aClient1367 = var_client;
-                var_client.method96(Component53.currentBuildType.getId(0) + 32, 1024, false, 634, 37, (PacketReader.currentGameType.domain), 23499, 768);
+                var_client.startFromFrame(Component53.currentBuildType.getId(0) + 32, 1024, false, 634, 37, (PacketReader.currentGameType.domain), 23499, 768);
                 RSACipher.aFrame4904.setLocation(40, 40);
             } catch (Exception exception) {
                 ClientErrorReporter.reportError(null, exception, 15004);
@@ -931,7 +932,8 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    final void method99(byte i) {
+    /** Logic tick: call {@code processGameTick}, optionally catching toolkit-safe-mode failures. */
+    final void pulseGame(byte i) {
         if (i != 93) anIntArray5176 = null;
         anInt5183++;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
@@ -947,7 +949,7 @@ public final class client extends Applet_Sub1 {
 
     public final void init() {
         anInt5180++;
-        if (this.method89(48)) {
+        if (this.validateHost(48)) {
             MenuOpener.aClass161_4839 = new DisplayModeManagerContainer254();
             MenuOpener.aClass161_4839.anInt2143 = Integer.parseInt(this.getParameter("worldid"));
             DisplayModeManagerContainer320.aClass161_3285 = new DisplayModeManagerContainer254();
@@ -1036,7 +1038,7 @@ public final class client extends Applet_Sub1 {
                 GlToolkitSub2.anInt7666 = 480;
             }
             DisplayModeManagerContainer206.aClient1367 = this;
-            this.method95(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
+            this.startFromApplet(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
         }
     }
 
@@ -1190,11 +1192,11 @@ public final class client extends Applet_Sub1 {
                                             i_58_ -= (class46.anInt709) / 2;
                                             i_59_ -= (class46.anInt789) / 2;
                                             int i_61_;
-                                            if (DefinitionSub21.anInt9282 == 4) i_61_ = ((int) (Component112.aFloat3938) & 0x3fff);
-                                            else i_61_ = (((int) (Component112.aFloat3938) + CacheNodeSub2.anInt10483) & 0x3fff);
+                                            if (DefinitionSub21.cameraMode == 4) i_61_ = ((int) (Component112.cameraYaw) & 0x3fff);
+                                            else i_61_ = (((int) (Component112.cameraYaw) + CacheNodeSub2.anInt10483) & 0x3fff);
                                             int i_62_ = (DisplayModeManagerContainer88.anIntArray1207[i_61_]);
                                             int i_63_ = (DisplayModeManagerContainer88.anIntArray1204[i_61_]);
-                                            if (DefinitionSub21.anInt9282 != 4) {
+                                            if (DefinitionSub21.cameraMode != 4) {
                                                 i_62_ = (i_62_ * ((Component182.anInt9750) + 256)) >> 8;
                                                 i_63_ = (i_63_ * ((Component182.anInt9750) + 256)) >> 8;
                                             }
@@ -1202,7 +1204,7 @@ public final class client extends Applet_Sub1 {
                                             int i_65_ = ((i_59_ * i_63_ - i_58_ * i_62_) >> 14);
                                             int i_66_;
                                             int i_67_;
-                                            if (DefinitionSub21.anInt9282 == 4) {
+                                            if (DefinitionSub21.cameraMode == 4) {
                                                 i_66_ = (NodederUtil.anInt6633 >> 9) + (i_64_ >> 2);
                                                 i_67_ = (NodeSub7.anInt6652 >> 9) - (i_65_ >> 2);
                                             } else {
@@ -1571,7 +1573,8 @@ public final class client extends Applet_Sub1 {
         return class46.aBoolean813;
     }
 
-    final void method93(int i) {
+    /** Draw tick: call the present path ({@code method116}), optionally with safe-mode recovery. */
+    final void pulseDrawFrame(int i) {
         if (i != -11018) closeResources(9);
         anInt5186++;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
@@ -1659,7 +1662,7 @@ public final class client extends Applet_Sub1 {
             }
         }
         if (Component241.anInt2955 == 0 && AbstractShaderSub2.anInt7297 == 0) {
-            if (DefinitionSub21.anInt9282 == 2) Component19.method241((byte) 127);
+            if (DefinitionSub21.cameraMode == 2) Component19.method241((byte) 127);
             else NodeSub21.method2954((byte) -127);
             if (WaterSurfaceShader.anInt6246 >> 9 < 14 || (WaterSurfaceShader.anInt6246 >> 9 >= -14 + AbstractShaderSub4.anInt7319) || (Component317.anInt8685 >> 9 < 14) || (ParametricDefinition.anInt9109 + -14 <= Component317.anInt8685 >> 9))
                 DisplayModeManagerContainer204.method893((byte) -49);
@@ -1794,7 +1797,7 @@ public final class client extends Applet_Sub1 {
             if (GpsOverlay.method1167(Component49.clientState, (byte) -51)) {
                 RSACipher.method493(true);
                 Component97.method867(true);
-            } else if (Component212.method2402(Component49.clientState, (byte) -120)) Canvas_Sub1.method123(0);
+            } else if (Component212.method2402(Component49.clientState, (byte) -120)) Canvas_Sub1.loadAndBuildScene(0);
             if (i < 32) aClass262_5185 = null;
             if (CacheNode.method3196(Component49.clientState, -74) && !Component212.method2402(Component49.clientState, (byte) -55)) {
                 method113((byte) 112);
@@ -1892,7 +1895,8 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    final synchronized void method87(byte i) {
+    /** Prefer stealing Loader's canvas via reflection; otherwise recreate via {@link Applet_Sub1#recreateGameCanvas}. */
+    final synchronized void recreateGameCanvas(byte i) {
         if (i > -11) aClass262_5185 = null;
         anInt5173++;
         if (ToolkitFactory.anApplet1530 != null && DisplayModeManagerContainer50.gameCanvas == null && !OggUrlStream.aClass297_8992.useDirectDraw) {
@@ -1908,7 +1912,7 @@ public final class client extends Applet_Sub1 {
                 }
             }
         }
-        super.method87((byte) -28);
+        super.recreateGameCanvas((byte) -28);
     }
 
     private final void method116(boolean bool) {
@@ -1919,7 +1923,7 @@ public final class client extends Applet_Sub1 {
             boolean bool_118_ = WaterShaderProgram.method2163(!bool);
             if (bool_118_ && DisplayModeManagerContainer238.aBoolean1236 && Definition.aClass279_7042 != null) Definition.aClass279_7042.method2087(-115);
             if (Component92.method1977((byte) -79, Component49.clientState)) {
-                if ((NodeSub16Sub2.aLong8866 != 0) && Component240.currentTimeMillis(-98) > NodeSub16Sub2.aLong8866) LogicError.method830(MenuEntry.method3229(-128), Component236.anInt4005, (byte) 102, false, DefinitionSub25.anInt9335);
+                if ((NodeSub16Sub2.aLong8866 != 0) && Component240.currentTimeMillis(-98) > NodeSub16Sub2.aLong8866) LogicError.method830(MenuEntry.getWindowMode(-128), Component236.anInt4005, (byte) 102, false, DefinitionSub25.anInt9335);
                 else if (!NodeSub8.toolkit.method3655() && DisplayModeManagerContainer351.aBoolean2674) ParticleSystem.method3327(1406);
             }
             if (Component225.aFrame476 == null) {
@@ -1952,7 +1956,7 @@ public final class client extends Applet_Sub1 {
                 Component297.aBoolean4726 = false;
             }
             if (bool_120_) Component211.method1170((byte) -116);
-            if ((NodeSub8.toolkit != null && NodeSub8.toolkit.method3655()) || MenuEntry.method3229(-91) != 1) Component160.method3466(-77);
+            if ((NodeSub8.toolkit != null && NodeSub8.toolkit.method3655()) || MenuEntry.getWindowMode(-91) != 1) Component160.method3466(-77);
             if (GpsOverlay.method1167(Component49.clientState, (byte) -113)) DisplayModeManagerContainer292.method1309(bool_120_, 117);
             else if (!Component69.method2114(Component49.clientState, bool)) {
                 if (!CacheNode.method3197(Component49.clientState, (byte) 56)) {
@@ -1969,13 +1973,13 @@ public final class client extends Applet_Sub1 {
                     } else if (Component49.clientState != 10) {
                         if (Component49.clientState == 13)
                             Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3497.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>" + (FriendsIgnoreList.aClass274_3498.getLocalized(ObjectDeserializer.languageId, 544))), 2, NodeSub8.toolkit);
-                    } else Component114.method2284((byte) -43, l);
-                } else Component98.method1761(85);
+                    } else Component114.pulseCameraAndHud((byte) -43, l);
+                } else Component98.redrawHud(85);
                 // States 3/5/6 below: while logging in, show "Please wait..." instead of
                 // the idle title UI (otherwise auto-login looks frozen for several seconds).
             } else if (Component241.anInt2955 != 0 || Component49.clientState == 5 || Component49.clientState == 6) {
                 Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3514.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
-            } else Component98.method1761(85);
+            } else Component98.redrawHud(85);
             if (GlToolkitSub3.anInt8045 == 3) {
                 for (int i = 0; NodeSub38.anInt7008 > i; i++) {
                     Rectangle rectangle = Component166.aRectangleArray2371[i];
@@ -1987,7 +1991,7 @@ public final class client extends Applet_Sub1 {
             if (HashNodeSub16Sub2.method3263(bool)) BuildInfo.method207(NodeSub8.toolkit, (byte) 124);
             // Microbot HUD — after console so it stays on top of game, under console if open.
             if (Loader.microbotEnabled) MicrobotPanel.draw(NodeSub8.toolkit);
-            if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.method3229(-85) == 1 && !bool_120_) {
+            if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.getWindowMode(-85) == 1 && !bool_120_) {
                 int i = 0;
                 for (int i_121_ = 0; (NodeSub38.anInt7008 > i_121_); i_121_++) {
                     if (DisplayModeManagerContainer259.aBooleanArray3438[i_121_]) {
@@ -2074,7 +2078,7 @@ public final class client extends Applet_Sub1 {
             if (i < 40) aClass262_5185 = null;
             if (Component72.localPlayer != null)
                 string += ("2)" + Component117.anInt4372 + "," + (NodeBaseSub2.regionTileX + (Component72.localPlayer.anIntArray10320[0])) + "," + (Component330.regionTileY + (Component72.localPlayer.anIntArray10317[0])) + "|");
-            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.method3229(-65) + "|6)" + Component236.anInt4017 + "," + PacketReader.anInt10432 + "|");
+            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.anInt4017 + "," + PacketReader.anInt10432 + "|");
             string += "7)" + Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) + "|";
             string += "8)" + Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) + "|";
             string += "9)" + Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1800(-32350) + "|";

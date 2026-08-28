@@ -92,15 +92,15 @@ final class DisplayModeManagerContainer259
         anInt3445++;
         int i_5_ = OpenGlShader.clientCycle - Component182.anInt9751;
         if (i_5_ >= 100) {
-            DefinitionSub21.anInt9282 = 1;
+            DefinitionSub21.cameraMode = 1;
             JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
         } else {
-            int i_6_ = (int) DisplayModeManagerContainer154.aFloat1287;
+            int i_6_ = (int) DisplayModeManagerContainer154.cameraPitch;
             if (i_6_ < NodeSub35.anInt6979 >> 8) i_6_ = NodeSub35.anInt6979 >> 8;
             if (Component113.aBooleanArray2374[4] && DisplayModeManagerContainer320.anIntArray3273[4] - -128 > i_6_) i_6_ = DisplayModeManagerContainer320.anIntArray3273[4] + 128;
-            int i_7_ = 0x3fff & (int) Component112.aFloat3938 + Component195.anInt5016;
+            int i_7_ = 0x3fff & (int) Component112.cameraYaw + Component195.anInt5016;
             if (i_4_ != 0) method2031(-117, null);
-            DisplayModeManagerContainer167.method268(i_6_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_7_, Component353.anInt2578, i, -19360, DisplayModeManagerContainer273.anInt5799, 3 * (i_6_ >> 3) + 600 << 2);
+            DisplayModeManagerContainer167.method268(i_6_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_7_, Component353.cameraFocusZ, i, -19360, DisplayModeManagerContainer273.cameraFocusX, 3 * (i_6_ >> 3) + 600 << 2);
             float f = (-((float) ((100 + -i_5_) * (100 - i_5_) * (-i_5_ + 100)) / 1000000.0F) + 1.0F);
             WaterSurfaceShader.anInt6246 = (int) ((float) Component29.anInt10047 + f * (float) (-Component29.anInt10047 + WaterSurfaceShader.anInt6246));
             DisplayModeManagerContainer50.anInt3855 = (int) ((float) (-DisplayModeManagerContainer89.anInt8368 + DisplayModeManagerContainer50.anInt3855) * f + (float) DisplayModeManagerContainer89.anInt8368);

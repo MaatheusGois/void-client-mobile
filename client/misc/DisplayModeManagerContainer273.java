@@ -23,7 +23,7 @@ final class DisplayModeManagerContainer273
     }
 
     public static void method1133(int i) {
-        if (i <= 38) anInt5799 = 61;
+        if (i <= 38) cameraFocusX = 61;
         aClass144_5800 = null;
     }
 
@@ -4107,11 +4107,11 @@ final class DisplayModeManagerContainer273
         r.aBoolean9722 = false;
         NpcDefinition.method2928(true);
         CacheNodeSub2.anInt10483 = -60 + (int) (Math.random() * 120D);
-        Component92.anInt3310 = -55 + (int) (Math.random() * 110D);
-        Component112.aFloat3938 = 0x3fff & -80 + (int) (160D * Math.random());
+        Component92.cameraShakeZ = -55 + (int) (Math.random() * 110D);
+        Component112.cameraYaw = 0x3fff & -80 + (int) (160D * Math.random());
         Component182.anInt9750 = (int) (30D * Math.random()) + -20;
         Component195.anInt5016 = (int) (80D * Math.random()) - 40;
-        Component120.anInt319 = (int) (Math.random() * 100D) - 50;
+        Component120.cameraShakeX = (int) (Math.random() * 100D) - 50;
         ToolbarRefreshDefinition.method3089(-126);
         for (int k = 0; k < 2048; k++)
             InterfaceRenderer.players[k] = null;
@@ -4190,7 +4190,8 @@ final class DisplayModeManagerContainer273
     static int anInt5796;
     static int anInt5797;
     static int anInt5798;
-    static int anInt5799;
+    /** Camera focus world X (lerped toward player/orbit target). */
+    static int cameraFocusX;
     static Task aClass144_5800;
     Component255[] aClass58Array5801;
     static int anInt5802;

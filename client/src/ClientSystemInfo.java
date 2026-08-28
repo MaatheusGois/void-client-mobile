@@ -38,7 +38,7 @@ final class ClientSystemInfo extends Node {
                     ParticleSystem class348_sub47 = ParticleShader.method2148(Component211.aClass351_1961, (DisplayModeManagerContainer64.aClass77_9029), -92);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
                     int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                    ObjectDeserializer.method3025((byte) 121, (class348_sub47.aClass348_Sub49_Sub2_7116));
+                    ObjectDeserializer.writeReflectionCheckResults((byte) 121, (class348_sub47.aClass348_Sub49_Sub2_7116));
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(113, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) + -i_1_);
                     HashNodeSub14.method3243(119, class348_sub47);
                 }
@@ -146,8 +146,8 @@ final class ClientSystemInfo extends Node {
                     DummyClass.aBoolean10174 = false;
                     Component335.anInt2035 = 20;
                     ParticleSystem class348_sub47 = ParticleShader.method2148(Component337.aClass351_3648, (DisplayModeManagerContainer64.aClass77_9029), i + -11549);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(i ^ 0x3c4d, (int) Component112.aFloat3938 >> 3);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) DisplayModeManagerContainer154.aFloat1287 >> 3);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(i ^ 0x3c4d, (int) Component112.cameraYaw >> 3);
+                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) DisplayModeManagerContainer154.cameraPitch >> 3);
                     HashNodeSub14.method3243(-31, class348_sub47);
                 }
                 if (DisplayModeManagerContainer322.aBoolean4278 != Component143.aBoolean2329) {
@@ -169,12 +169,12 @@ final class ClientSystemInfo extends Node {
                     r.aBoolean9719 = true;
                 }
                 if (Component335.aClass357ArrayArrayArray2029 != null) {
-                    if (DefinitionSub21.anInt9282 == 2) Component19.method241((byte) 127);
-                    else if (DefinitionSub21.anInt9282 == 3) NodeSub21.method2954((byte) -4);
+                    if (DefinitionSub21.cameraMode == 2) Component19.method241((byte) 127);
+                    else if (DefinitionSub21.cameraMode == 3) NodeSub21.method2954((byte) -4);
                 }
-                if (!Component214.aBoolean2130) Component275.aFloat2687 /= 2.0F;
+                if (!Component214.aBoolean2130) Component275.cameraYawRate /= 2.0F;
                 else Component214.aBoolean2130 = false;
-                if (!Cp1252Decoder.aBoolean5224) NodeSub27.aFloat6898 /= 2.0F;
+                if (!Cp1252Decoder.aBoolean5224) NodeSub27.cameraPitchRate /= 2.0F;
                 else Cp1252Decoder.aBoolean5224 = false;
                 NodeSub35.method3027((byte) 33);
                 if (Component49.clientState == 10) {
@@ -205,7 +205,7 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
                                 if (!class348_sub42_sub15.aString9654.equals(class46.aString792)) {
                                     class46.aString792 = class348_sub42_sub15.aString9654;
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 4) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
@@ -216,7 +216,7 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt753 = i_19_;
                                     class46.anInt770 = i_18_;
                                     class46.anInt779 = i_20_;
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 5) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(i ^ 0x5a2da9d8, i_17_);
@@ -227,7 +227,7 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt730 = 1;
                                     DisplayModeManagerContainer167 class17 = ((class46.anInt699 == -1) ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
                                     if (class17 != null) Component235.method2017((class46.anInt795), class17, 30);
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 6) {
                                 int i_21_ = (class348_sub42_sub15.anInt9652);
@@ -238,14 +238,14 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
                                 if (class46.anInt749 != i_25_) {
                                     class46.anInt749 = i_25_;
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 7) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
                                 boolean bool = (class348_sub42_sub15.anInt9652 == 1);
                                 if (!class46.aBoolean813 == bool) {
                                     class46.aBoolean813 = bool;
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 8) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
@@ -258,14 +258,14 @@ final class ClientSystemInfo extends Node {
                                             if ((class46.anInt842) > 0) class46.anInt716 = (32 * class46.anInt716 / (class46.anInt842));
                                         } else class46.anInt716 = ((class46.anInt716) * 32 / (class46.anInt796));
                                     }
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 9) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
                                 if ((class348_sub42_sub15.anInt9652 != class46.anInt812) || (class348_sub42_sub15.anInt9651 != class46.anInt781)) {
                                     class46.anInt781 = class348_sub42_sub15.anInt9651;
                                     class46.anInt812 = class348_sub42_sub15.anInt9652;
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 10) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_17_);
@@ -273,7 +273,7 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt786 = (class348_sub42_sub15.anInt9651);
                                     class46.anInt808 = (class348_sub42_sub15.anInt9652);
                                     class46.anInt717 = (class348_sub42_sub15.anInt9650);
-                                    Component111.method1916(-9343, class46);
+                                    Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 11) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.method2570(1512932720, i_17_));
@@ -281,7 +281,7 @@ final class ClientSystemInfo extends Node {
                                 class46.anInt750 = class46.anInt739 = (class348_sub42_sub15.anInt9651);
                                 class46.aByte681 = (byte) 0;
                                 class46.anInt800 = class46.anInt788 = (class348_sub42_sub15.anInt9652);
-                                Component111.method1916(-9343, class46);
+                                Component111.markInterfaceDirty(-9343, class46);
                             } else if (i_16_ == 12) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.method2570(1512932720, i_17_));
                                 int i_26_ = (class348_sub42_sub15.anInt9652);
@@ -290,7 +290,7 @@ final class ClientSystemInfo extends Node {
                                     if (i_26_ < 0) i_26_ = 0;
                                     if (i_26_ != (class46.anInt755)) {
                                         class46.anInt755 = i_26_;
-                                        Component111.method1916(-9343, class46);
+                                        Component111.markInterfaceDirty(-9343, class46);
                                     }
                                 }
                             } else if (i_16_ == 14) {
@@ -316,7 +316,7 @@ final class ClientSystemInfo extends Node {
                         if (ResourceLoader.aClass46_3913 != null) {
                             Component83.anInt1656++;
                             if (Component83.anInt1656 >= 15) {
-                                Component111.method1916(-9343, ResourceLoader.aClass46_3913);
+                                Component111.markInterfaceDirty(-9343, ResourceLoader.aClass46_3913);
                                 ResourceLoader.aClass46_3913 = null;
                             }
                         }
@@ -399,14 +399,14 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer332.anInt4999 = 0;
                                 int i_32_ = (int) (8.0 * Math.random());
                                 if ((0x4 & i_32_) == 4) Component195.anInt5016 += DisplayModeManagerContainer165.anInt3844;
-                                if ((i_32_ & 0x1) == 1) Component120.anInt319 += Component203.anInt8775;
-                                if ((0x2 & i_32_) == 2) Component92.anInt3310 += AbstractBuffer.anInt4263;
+                                if ((i_32_ & 0x1) == 1) Component120.cameraShakeX += Component203.anInt8775;
+                                if ((0x2 & i_32_) == 2) Component92.cameraShakeZ += AbstractBuffer.anInt4263;
                             }
-                            if (Component120.anInt319 < -50) Component203.anInt8775 = 2;
-                            if (Component120.anInt319 > 50) Component203.anInt8775 = -2;
-                            if (Component92.anInt3310 < -55) AbstractBuffer.anInt4263 = 2;
+                            if (Component120.cameraShakeX < -50) Component203.anInt8775 = 2;
+                            if (Component120.cameraShakeX > 50) Component203.anInt8775 = -2;
+                            if (Component92.cameraShakeZ < -55) AbstractBuffer.anInt4263 = 2;
                             if (Component195.anInt5016 < -40) DisplayModeManagerContainer165.anInt3844 = 1;
-                            if (Component92.anInt3310 > 55) AbstractBuffer.anInt4263 = -2;
+                            if (Component92.cameraShakeZ > 55) AbstractBuffer.anInt4263 = -2;
                             DebugPanic.anInt4753++;
                             if (Component195.anInt5016 > 40) DisplayModeManagerContainer165.anInt3844 = -1;
                             if (DebugPanic.anInt4753 > 500) {

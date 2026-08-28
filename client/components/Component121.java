@@ -23,7 +23,7 @@ final class Component121
             int i_2_ = class348_sub49_sub2.readUnsignedByte(255);
             if ((i_2_ & 0x40) != 0) i_2_ += class348_sub49_sub2.readUnsignedByte(255) << 8;
             if ((i_2_ & 0x4000) != 0) i_2_ += class348_sub49_sub2.readUnsignedByte(255) << 16;
-            HeapDumper.method1141(class348_sub49_sub2, i_1_, i_2_, 123, player);
+            HeapDumper.decodePlayerUpdate(class348_sub49_sub2, i_1_, i_2_, 123, player);
         }
         anInt4541++;
     }

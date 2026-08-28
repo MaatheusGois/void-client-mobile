@@ -70,41 +70,41 @@ final class RSACipher implements Interface12 {
     static final void method493(boolean bool) {
         if (ShaderCompilerSub2.aClass56Array6515 == null) {
             ShaderCompilerSub2.aClass56Array6515 = LoadingState.allStages(-91);
-            RSARequest.aClass56_9660 = ShaderCompilerSub2.aClass56Array6515[0];
+            RSARequest.currentLoadingState = ShaderCompilerSub2.aClass56Array6515[0];
             Component69.aLong3660 = Component240.currentTimeMillis(-119);
         }
         anInt4900++;
         if (Component44.aClass311_897 == null) DisplayModeManagerContainer88.method726(116);
-        LoadingState class56 = RSARequest.aClass56_9660;
-        int i = LoadingManager.method1278(-28660);
-        if (class56 == RSARequest.aClass56_9660) {
-            DisplayModeManagerContainer190.aString5420 = RSARequest.aClass56_9660.aClass274_1012.getLocalized(ObjectDeserializer.languageId, 544);
-            if (RSARequest.aClass56_9660.isBlocking) Component111.anInt3236 = (i * ((RSARequest.aClass56_9660.currentProgress) + -(RSARequest.aClass56_9660.maxProgress)) / 100 + (RSARequest.aClass56_9660.maxProgress));
-            if (RSARequest.aClass56_9660.isSmooth) DisplayModeManagerContainer190.aString5420 += Component111.anInt3236 + "%";
+        LoadingState class56 = RSARequest.currentLoadingState;
+        int i = LoadingManager.pulseLoading(-28660);
+        if (class56 == RSARequest.currentLoadingState) {
+            DisplayModeManagerContainer190.aString5420 = RSARequest.currentLoadingState.aClass274_1012.getLocalized(ObjectDeserializer.languageId, 544);
+            if (RSARequest.currentLoadingState.isBlocking) Component111.anInt3236 = (i * ((RSARequest.currentLoadingState.currentProgress) + -(RSARequest.currentLoadingState.maxProgress)) / 100 + (RSARequest.currentLoadingState.maxProgress));
+            if (RSARequest.currentLoadingState.isSmooth) DisplayModeManagerContainer190.aString5420 += Component111.anInt3236 + "%";
             if (Loader.debug && Component111.anInt3236 != lastLoggedLoadPct
                     && (Component111.anInt3236 < 5 || Component111.anInt3236 % 5 == 0)) {
                 lastLoggedLoadPct = Component111.anInt3236;
                 System.out.println("load " + DisplayModeManagerContainer190.aString5420
-                        + " stage=" + RSARequest.aClass56_9660.getStageId(-120));
+                        + " stage=" + RSARequest.currentLoadingState.getStageId(-120));
             }
-        } else if (RSARequest.aClass56_9660 == LoadingState.aClass56_1043) {
+        } else if (RSARequest.currentLoadingState == LoadingState.aClass56_1043) {
             Component44.aClass311_897 = null;
             Buffer.setClientState(2, 3);
         } else {
             DisplayModeManagerContainer190.aString5420 = class56.aClass274_1015.getLocalized(ObjectDeserializer.languageId, 544);
-            if (RSARequest.aClass56_9660.isSmooth) DisplayModeManagerContainer190.aString5420 += class56.currentProgress + "%";
+            if (RSARequest.currentLoadingState.isSmooth) DisplayModeManagerContainer190.aString5420 += class56.currentProgress + "%";
             Component111.anInt3236 = class56.currentProgress;
-            if (RSARequest.aClass56_9660.isBlocking || class56.isBlocking) Component69.aLong3660 = Component240.currentTimeMillis(-128);
+            if (RSARequest.currentLoadingState.isBlocking || class56.isBlocking) Component69.aLong3660 = Component240.currentTimeMillis(-128);
             if (Loader.debug) {
                 lastLoggedLoadPct = -1;
                 System.out.println("load stage " + class56.getStageId(-120)
-                        + "->" + RSARequest.aClass56_9660.getStageId(-120)
+                        + "->" + RSARequest.currentLoadingState.getStageId(-120)
                         + " " + DisplayModeManagerContainer190.aString5420);
             }
         }
         if (bool == true) {
             if (Component44.aClass311_897 != null) {
-                Component44.aClass311_897.method2316((RSARequest.aClass56_9660), DisplayModeManagerContainer190.aString5420, Component111.anInt3236, Component69.aLong3660, false);
+                Component44.aClass311_897.method2316((RSARequest.currentLoadingState), DisplayModeManagerContainer190.aString5420, Component111.anInt3236, Component69.aLong3660, false);
                 if (Component280.anInterface16Array2447 != null) {
                     for (int i_5_ = Component121.anInt4544 - -1; (Component280.anInterface16Array2447.length > i_5_); i_5_++) {
                         if (Component280.anInterface16Array2447[i_5_].method60(-19079) >= 100 && Component121.anInt4544 == -1 + i_5_ && Component49.clientState >= 1 && Component44.aClass311_897.method2322(0)) {

@@ -16,11 +16,12 @@ final class Component111
     static int anInt3235;
     static int anInt3236;
 
-    public static void method1912(int i) {
+    public static void clearStatics(int i) {
         if (i == 8549) aClass351_3232 = null;
     }
 
-    static final void method1913(boolean bool, int i, DisplayModeManagerContainer57 class46) {
+    /** Recursively layout/resize {@code class46} and its children / nested interface. */
+    static final void layoutInterfaceTree(boolean bool, int i, DisplayModeManagerContainer57 class46) {
         anInt3235++;
         int i_0_ = -40 % ((-35 - i) / 51);
         int i_1_ = (class46.anInt698 == 0 ? class46.anInt709 : class46.anInt698);
@@ -31,9 +32,9 @@ final class Component111
         if (class348_sub41 != null) Component272.method1728(i_2_, -1, (class348_sub41.anInt7050), bool, i_1_);
     }
 
-    static final int method1914(int i, int i_3_) {
+    static final int lowByte(int i, int i_3_) {
         anInt3231++;
-        if (i != -23590) method1913(false, -115, null);
+        if (i != -23590) layoutInterfaceTree(false, -115, null);
         return i_3_ & 0xff;
     }
 
@@ -42,16 +43,17 @@ final class Component111
         throw new IllegalStateException();
     }
 
-    static final boolean method1915(byte i, int i_4_) {
+    static final boolean isOrthogonalWallType(byte i, int i_4_) {
         if (i != 4) return false;
         anInt3233++;
         return i_4_ != 1 && i_4_ != 7;
     }
 
-    static final void method1916(int i, DisplayModeManagerContainer57 class46) {
+    /** Mark the interface component dirty for redraw this client cycle. */
+    static final void markInterfaceDirty(int i, DisplayModeManagerContainer57 class46) {
         anInt3229++;
         if (class46.anInt794 == Component255.anInt1064) InflaterDecompressor.aBooleanArray2076[class46.anInt760] = true;
-        if (i != -9343) method1914(-107, 120);
+        if (i != -9343) lowByte(-107, 120);
     }
 
     public Component111() {

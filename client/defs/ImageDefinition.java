@@ -265,7 +265,7 @@ final class ImageDefinition extends Definition {
                                     } else if (class46.anInt774 == 4) {
                                         BitmapFont class324 = class46.method426((NodeSub8.toolkit), (byte) 68);
                                         if (class324 == null) {
-                                            if (HashNodeSub13.aBoolean9616) Component111.method1916(-9343, class46);
+                                            if (HashNodeSub13.aBoolean9616) Component111.markInterfaceDirty(-9343, class46);
                                         } else {
                                             int i_50_ = class46.anInt749;
                                             String string = (class46.aString792);
@@ -314,7 +314,7 @@ final class ImageDefinition extends Definition {
                                             } else if ((class46.anInt806) == -1) class105 = (class46.method443(NodeSub8.toolkit, (byte) -57));
                                             else class105 = (Component264.method2263(NodeSub8.toolkit, 0, (class46.anInt806)));
                                             if (class105 == null) {
-                                                if (HashNodeSub13.aBoolean9616) Component111.method1916(-9343, class46);
+                                                if (HashNodeSub13.aBoolean9616) Component111.markInterfaceDirty(-9343, class46);
                                             } else {
                                                 int i_53_ = class105.method966();
                                                 int i_54_ = class105.method980();
@@ -358,7 +358,7 @@ final class ImageDefinition extends Definition {
                                                 Component101 class154 = (!(class46.aBoolean720) ? null : (Component72.localPlayer.appearance));
                                                 class64 = (class213.method1559(class154, class17, NodeSub8.toolkit, 2048, (class46.anInt841), 1, (class46.anInt795), (byte) 88, (class46.anInt730)));
                                                 if (class64 != null) i_60_ = (-class64.fa() >> 1);
-                                                else Component111.method1916(-9343, class46);
+                                                else Component111.markInterfaceDirty(-9343, class46);
                                             }
                                         } else if ((class46.anInt770) == 5) {
                                             int i_61_ = class46.anInt753;
@@ -369,7 +369,7 @@ final class ImageDefinition extends Definition {
                                                     class64 = (player.appearance.method1226((DisplayModeManagerContainer58.aClass170_10209), null, null, true, (Exception_Sub1.aClass255_112), 0, class17, class46.anInt730, true, -1, null, 2048, (DefinitionSub25.aClass150_9342), class46.anInt841, (NodeSub8.toolkit), (Component291.aClass278_2529), (RunescapeInfo.aClass87_191), 0, class46.anInt795, 0, (DisplayModeManagerContainer282.aClass261_5558)));
                                             }
                                         } else if ((class46.anInt770) == 8 || (class46.anInt770) == 9) {
-                                            NodeSub13 class348_sub13 = (AbstractGlTextureSub4.getImageCacheNode((byte) -123, (class46.anInt753), false));
+                                            NodeSub13 class348_sub13 = (AbstractGlTextureSub4.getContainerNode((byte) -123, (class46.anInt753), false));
                                             DisplayModeManagerContainer167 class17 = ((class46.anInt699) == -1 ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
                                             if (class348_sub13 != null) {
                                                 Component101 class154 = ((class46.aBoolean720) ? (Component72.localPlayer.appearance) : null);
@@ -377,11 +377,11 @@ final class ImageDefinition extends Definition {
                                             }
                                         } else if (class46.anInt699 == -1) {
                                             class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, -1, 0, (Exception_Sub1.aClass255_112), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), null, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), -1));
-                                            if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.method1916(-9343, class46);
+                                            if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.markInterfaceDirty(-9343, class46);
                                         } else {
                                             DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7));
                                             class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, (class46.anInt795), (class46.anInt841), (Exception_Sub1.aClass255_112), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), class17, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), (class46.anInt730)));
-                                            if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.method1916(-9343, class46);
+                                            if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.markInterfaceDirty(-9343, class46);
                                         }
                                         if (class64 != null) {
                                             int i_62_;

@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub33` (JODE-obfuscated).
- * Serialized game-data reader. method3025(byte,DisplayModeManagerContainer207) reads records via ObjectInputStream over a ByteArrayInputStream; extends Node.
+ * Serialized game-data reader. writeReflectionCheckResults(byte,DisplayModeManagerContainer207) reads records via ObjectInputStream over a ByteArrayInputStream; extends Node.
  */
 
 import java.io.ByteArrayInputStream;
@@ -31,13 +31,17 @@ final class ObjectDeserializer extends Node {
     /** UI language index into {@link Component185#languageNames} (applet {@code lang}). */
     static int languageId = 0;
 
-    public static void method3024(int i) {
+    public static void clearStatics(int i) {
         gzipDecompressor = null;
         if (i >= -74) languageId = 12;
         aByteArrayArrayArray6962 = null;
     }
 
-    static final void method3025(byte i, DisplayModeManagerContainer207 class348_sub49_sub2) {
+    /**
+     * Run pending reflection checks (field get/set, method invoke/modifiers) and write
+     * typed results into the outgoing packet buffer.
+     */
+    static final void writeReflectionCheckResults(byte i, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt6961++;
         NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.first(4);
         if (class348_sub48 != null) {

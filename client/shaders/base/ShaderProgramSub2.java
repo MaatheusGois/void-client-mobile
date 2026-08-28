@@ -49,7 +49,7 @@ final class ShaderProgramSub2
         anInt6210++;
         Component63.anInt4494++;
         ParticleSystem class348_sub47 = ParticleShader.method2148(Component210.aClass351_5288, DisplayModeManagerContainer64.aClass77_9029, -124);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, MenuEntry.method3229(-96));
+        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, MenuEntry.getWindowMode(-96));
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component236.anInt4017);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, PacketReader.anInt10432);
         if (i != -24498) friendFormerNames = null;

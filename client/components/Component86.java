@@ -40,7 +40,7 @@ final class Component86
             interface18_impl3 = aHa_Sub3_4526.method3891(fs, i_1_, i_1_, Component83.aClass304_1662, -109, class12.aByte205 != 0);
         } else {
             int[] is;
-            if (class12.anInt200 == 2 || !Component111.method1915((byte) 4, class12.aByte213)) is = aD4528.method6(-21540, i_1_, 0.7F, i_0_, false, i_1_);
+            if (class12.anInt200 == 2 || !Component111.isOrthogonalWallType((byte) 4, class12.aByte213)) is = aD4528.method6(-21540, i_1_, 0.7F, i_0_, false, i_1_);
             else is = aD4528.method5(true, i_0_, 0.7F, i_1_, i_1_, 83);
             interface18_impl3 = aHa_Sub3_4526.method3839(i_1_, i_1_, -15137, class12.aByte205 != 0, is);
         }

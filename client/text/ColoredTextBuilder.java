@@ -426,7 +426,7 @@ final class ColoredTextBuilder {
                             if (i_77_ == 1) {
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, -1);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, -1);
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) Component112.aFloat3938);
+                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) Component112.cameraYaw);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 57);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, CacheNodeSub2.anInt10483);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component182.anInt9750);
@@ -679,7 +679,7 @@ final class ColoredTextBuilder {
                     if (i_76_ == 16 && Component297.aClass46_4730 == null) {
                         ImageDefinition.method3065(i_75_, false, i_74_);
                         Component297.aClass46_4730 = NodeSub22.method2957(i_74_, (byte) -54, i_75_);
-                        Component111.method1916(-9343, Component297.aClass46_4730);
+                        Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
                     }
                     if (i_76_ == 8) {
                         Player player = (InterfaceRenderer.players[i_77_]);
@@ -961,7 +961,7 @@ final class ColoredTextBuilder {
                             }
                             if (r.aBoolean9722) DisplayModeManagerContainer196.method2678(-2049);
                             if (ResourceLoader.aClass46_3913 == null || Component83.anInt1656 != 0) break;
-                            Component111.method1916(-9343, ResourceLoader.aClass46_3913);
+                            Component111.markInterfaceDirty(-9343, ResourceLoader.aClass46_3913);
                         }
                     }
                 }

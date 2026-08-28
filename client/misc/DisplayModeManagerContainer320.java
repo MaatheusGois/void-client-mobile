@@ -236,7 +236,7 @@ final class DisplayModeManagerContainer320
         if (class213 != null) return class213;
         byte[] is;
         synchronized (aClass45_3267) {
-            is = aClass45_3267.getFile(-1860, Component285.method500(7, i_13_), Component111.method1914(-23590, i_13_));
+            is = aClass45_3267.getFile(-1860, Component285.method500(7, i_13_), Component111.lowByte(-23590, i_13_));
         }
         class213 = new NumberFormatter();
         class213.aClass255_2761 = this;

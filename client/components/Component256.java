@@ -27,7 +27,7 @@ final class Component256
         anInt6100++;
         if (i != 3) aBoolean6110 = false;
         if (!this.aClass348_Sub51_3136.method3428((byte) -89).method1460(-38)) return 3;
-        if (i_0_ == 3 && !Applet_Sub1.method86("jagdx", i ^ 0x3)) return 3;
+        if (i_0_ == 3 && !Applet_Sub1.isNativeLibraryCached("jagdx", i ^ 0x3)) return 3;
         return 2;
     }
 

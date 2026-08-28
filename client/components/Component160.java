@@ -103,7 +103,7 @@ final class Component160
             class258_sub3 = new GlTexture(aHa_Sub2_4355, 3553, 34842, i_5_, i_5_, class12.aByte205 != 0, fs, 6408);
         } else {
             int[] is;
-            if (class12.anInt200 == 2 || !Component111.method1915((byte) 4, class12.aByte213)) is = aD4359.method6(-21540, i_5_, 0.7F, i, false, i_5_);
+            if (class12.anInt200 == 2 || !Component111.isOrthogonalWallType((byte) 4, class12.aByte213)) is = aD4359.method6(-21540, i_5_, 0.7F, i, false, i_5_);
             else is = aD4359.method5(true, i, 0.7F, i_5_, i_5_, i_4_ + -196);
             class258_sub3 = new GlTexture(aHa_Sub2_4355, 3553, 6408, i_5_, i_5_, class12.aByte205 != 0, is, 0, 0, false);
         }

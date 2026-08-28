@@ -33,8 +33,12 @@ final class InflaterDecompressor {
         return is_1_;
     }
 
-    static final void method1215(byte i) {
-        if (i != 3) method1217(-39, null);
+    /**
+     * After a login/world failure path: force clientState toward title (3) or reconnect (5)
+     * depending on the current state (video player / disconnect hooks call this).
+     */
+    static final void returnFromLoginFailure(byte i) {
+        if (i != 3) disposeSceneEntities(-39, null);
         anInt2078++;
         if (Component49.clientState != 9) {
             if (Component49.clientState == 5 || Component49.clientState == 6) Buffer.setClientState(2, 3);
@@ -42,14 +46,15 @@ final class InflaterDecompressor {
         } else Buffer.setClientState(2, 5);
     }
 
-    public static void method1216(byte i) {
+    public static void clearStatics(byte i) {
         if (i != -97) aFloatArray2075 = null;
         aClass243_2077 = null;
         aBooleanArray2076 = null;
         aFloatArray2075 = null;
     }
 
-    static final void method1217(int i, Component186[][][] class357s) {
+    /** Walk the tile grid and dispose {@link Interface10} entities (GPU/native resources). */
+    static final void disposeSceneEntities(int i, Component186[][][] class357s) {
         anInt2070++;
         for (int i_2_ = i; i_2_ < class357s.length; i_2_++) {
             Component186[][] class357s_3_ = class357s[i_2_];
@@ -79,7 +84,7 @@ final class InflaterDecompressor {
     /** Inflate GZIP payload from {@code class348_sub49} into {@code is}. */
     final void inflateGzip(byte[] is, int i, Buffer class348_sub49) {
         try {
-            if (i != 29123) method1217(-91, null);
+            if (i != 29123) disposeSceneEntities(-91, null);
             anInt2073++;
             if ((class348_sub49.payload[class348_sub49.offset]) != 31 || (class348_sub49.payload[1 + class348_sub49.offset]) != -117) throw new RuntimeException("Invalid GZIP header!");
             if (inflater == null) inflater = new Inflater(true);

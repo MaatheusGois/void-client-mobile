@@ -38,7 +38,7 @@ final class Component30
     final Component113 method1125(byte i) {
         anInt1873++;
         if (i != 59) this.anInt1880 = -51;
-        return MouseHandler.method3591(anInt1886, i ^ 0x3b);
+        return MouseHandler.getOrLoadConfig(anInt1886, i ^ 0x3b);
     }
 
     public static void method1126(int i) {

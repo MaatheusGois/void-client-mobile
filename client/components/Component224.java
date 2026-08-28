@@ -25,7 +25,7 @@ final class Component224
         anInt5168++;
         if (!Component334.method1193(i_1_, i, true)) return false;
         if (DisplayModeManagerContainer145.method1087(12644, i_1_, i) | (i & 0xb000) != 0 | DisplayModeManagerContainer347.method2075(i, -128, i_1_)) return true;
-        return ((ClientErrorReporter.method1241(i_1_, i, -128) | Component175.method1722(i, i_1_, (byte) 92)) & (0x37 & i_1_) == 0);
+        return ((ClientErrorReporter.hasCollisionBlockFlags(i_1_, i, -128) | Component175.method1722(i, i_1_, (byte) 92)) & (0x37 & i_1_) == 0);
     }
 
     /** {@code i | i_2_}. */

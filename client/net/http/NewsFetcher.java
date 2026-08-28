@@ -37,7 +37,7 @@ final class NewsFetcher implements Runnable {
         try {
             BufferedReader bufferedreader = new BufferedReader(new InputStreamReader((DataInputStream) (aClass144_4201.result)));
             String string = bufferedreader.readLine();
-            BrowserDetector class179 = CookieBuilder.method381((byte) 68);
+            BrowserDetector class179 = CookieBuilder.createBrowserDetector((byte) 68);
             for (/**/; string != null; string = bufferedreader.readLine())
                 class179.add(-1, string);
             String[] strings = class179.toArray(63);
@@ -128,7 +128,7 @@ final class NewsFetcher implements Runnable {
             Component182.anInt9747 = class46.anInt824;
             if (i_14_ != 21) method2665(-99, (byte) -106, 10, -37, 26, -123);
             Component90.anInt2046 = class46.anInt830;
-            Component111.method1916(-9343, class46);
+            Component111.markInterfaceDirty(-9343, class46);
         }
     }
 

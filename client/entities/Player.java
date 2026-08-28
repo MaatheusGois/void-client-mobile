@@ -242,7 +242,7 @@ final class Player extends DisplayModeManagerContainer58 {
                     int i_36_ = i * i + i_34_ * i_34_;
                     if (i_36_ >= 262144 && i_32_ >= i_36_) {
                         int i_37_ = 0x3fff & (int) (Math.atan2(i, i_34_) * 2607.5945876176133);
-                        DisplayModeManagerContainer370 class64_38_ = (Canvas_Sub1.method122(this.anInt10252, this.anInt10302, this.anInt10208, i_37_, i_35_, (byte) -35, var_ha));
+                        DisplayModeManagerContainer370 class64_38_ = (Canvas_Sub1.getCachedModel(this.anInt10252, this.anInt10302, this.anInt10208, i_37_, i_35_, (byte) -35, var_ha));
                         if (class64_38_ == null) break;
                         var_ha.C(false);
                         class64_38_.method615(class101, null, 0);
@@ -264,7 +264,7 @@ final class Player extends DisplayModeManagerContainer58 {
                 int i_44_ = i_43_ * i_43_ + i_39_ * i_39_;
                 if (i_44_ >= 262144 && i_44_ <= i_42_) {
                     int i_45_ = ((int) (2607.5945876176133 * Math.atan2(i_39_, i_43_)) & 0x3fff);
-                    DisplayModeManagerContainer370 class64_46_ = (Canvas_Sub1.method122(this.anInt10252, this.anInt10302, this.anInt10208, i_45_, i_41_, (byte) -35, var_ha));
+                    DisplayModeManagerContainer370 class64_46_ = (Canvas_Sub1.getCachedModel(this.anInt10252, this.anInt10302, this.anInt10208, i_45_, i_41_, (byte) -35, var_ha));
                     if (class64_46_ == null) break;
                     var_ha.C(false);
                     class64_46_.method608(class101, null, i_40_, 0);

@@ -13,7 +13,8 @@ final class Component353
     static int anInt2575;
     Interface5_Impl2 anInterface5_Impl2_2576;
     boolean aBoolean2577;
-    static int anInt2578;
+    /** Camera focus world Z (lerped toward player/orbit target). */
+    static int cameraFocusZ;
     static short[] aShortArray2579;
     static int anInt2580;
     static int anInt2581 = 0;

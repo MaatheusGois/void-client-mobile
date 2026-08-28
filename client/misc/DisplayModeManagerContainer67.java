@@ -105,7 +105,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                     if (i_9_ != -1) {
                         int i_13_ = 0;
                         ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
-                        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.method1240(110)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.method1243((byte) 77))) {
+                        for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(110)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 77))) {
                             if (i_9_ == i_13_++) return ((MenuEntry) class348_sub42_sub13.aClass107_9621.sentinel.next).priority;
                         }
                     }
@@ -123,7 +123,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                     if (i_4_ != -1) {
                         int i_8_ = 0;
                         ClientErrorReporter class156 = new ClientErrorReporter(Component359.aClass348_Sub42_Sub13_3152.aClass107_9621);
-                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.method1240(9)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.method1243((byte) 90))) {
+                        for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.firstHashNode(9)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.nextHashNode((byte) 90))) {
                             if (i_8_++ == i_4_) return (class348_sub42_sub12.priority);
                         }
                     }

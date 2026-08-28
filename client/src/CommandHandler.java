@@ -20,14 +20,15 @@ final class CommandHandler {
     static int anInt1438;
     int anInt1439;
 
-    public static void method811(byte i) {
+    /** Null shared statics for GC / shutdown. */
+    public static void clearStatics(byte i) {
         if (i > -109) anInt1435 = 69;
         aClass45_1434 = null;
     }
 
     static final void handleCommand(String string, boolean bool, boolean bool_0_, byte i) {
             try {
-                if (i != -79) method814((byte) -79, 126L);
+                if (i != -79) updateOrbitCamera((byte) -79, 126L);
                 anInt1437++;
                 try {
                     if (Component49.clientState != 10 && (string.equalsIgnoreCase("commands") || string.equalsIgnoreCase("help"))) {
@@ -183,7 +184,7 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("wm1")) {
                             LogicError.method830(1, -1, (byte) 102, false, -1);
-                            if (MenuEntry.method3229(-61) == 1) {
+                            if (MenuEntry.getWindowMode(-61) == 1) {
                                 Applet_Sub1.printConsole("wm1 succeeded", -65);
                                 return;
                             } else Applet_Sub1.printConsole("wm1 failed", i ^ ~0x17);
@@ -191,7 +192,7 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("wm2")) {
                             LogicError.method830(2, -1, (byte) 102, false, -1);
-                            if (MenuEntry.method3229(-119) == 2) Applet_Sub1.printConsole("wm2 succeeded", -109);
+                            if (MenuEntry.getWindowMode(-119) == 2) Applet_Sub1.printConsole("wm2 succeeded", -109);
                             else {
                                 Applet_Sub1.printConsole("wm2 failed", i + 154);
                                 return;
@@ -200,7 +201,7 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("wm3")) {
                             LogicError.method830(3, 1024, (byte) 102, false, 768);
-                            if (MenuEntry.method3229(i ^ 0x3d) == 3) Applet_Sub1.printConsole("wm3 succeeded", 111);
+                            if (MenuEntry.getWindowMode(i ^ 0x3d) == 3) Applet_Sub1.printConsole("wm3 succeeded", 111);
                             else {
                                 Applet_Sub1.printConsole("wm3 failed", 83);
                                 return;
@@ -657,19 +658,24 @@ final class CommandHandler {
             }
     }
 
-    static final Component269 method813(int i, int i_25_, int i_26_) {
+    /** Floor decoration ({@code aClass318_Sub1_Sub4_4403}) on tile (level,x,z), or null. */
+    static final Component269 getFloorDecoration(int i, int i_25_, int i_26_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_25_][i_26_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub4_4403;
     }
 
-    static final void method814(byte i, long l) {
+    /**
+     * Orbit/free camera tick: lerp focus toward orbit target and apply yaw/pitch rates.
+     * Used when {@link DefinitionSub21#cameraMode} == 4.
+     */
+    static final void updateOrbitCamera(byte i, long l) {
         try {
             anInt1438++;
             int i_27_ = NodederUtil.anInt6633;
             if (i > 106) {
-                if (DisplayModeManagerContainer273.anInt5799 != i_27_) {
-                    int i_28_ = i_27_ - DisplayModeManagerContainer273.anInt5799;
+                if (DisplayModeManagerContainer273.cameraFocusX != i_27_) {
+                    int i_28_ = i_27_ - DisplayModeManagerContainer273.cameraFocusX;
                     int i_29_ = (int) ((long) i_28_ * l / 320L);
                     if (i_28_ <= 0) {
                         if (i_29_ != 0) {
@@ -677,13 +683,13 @@ final class CommandHandler {
                         } else i_29_ = -1;
                     } else if (i_29_ == 0) i_29_ = 1;
                     else if (i_28_ < i_29_) i_29_ = i_28_;
-                    DisplayModeManagerContainer273.anInt5799 += i_29_;
+                    DisplayModeManagerContainer273.cameraFocusX += i_29_;
                 }
                 int i_30_ = NodeSub7.anInt6652;
-                DisplayModeManagerContainer154.aFloat1287 += NodeSub27.aFloat6898 * (float) l / 40.0F * 8.0F;
-                Component112.aFloat3938 += Component275.aFloat2687 * (float) l / 40.0F * 8.0F;
-                if (Component353.anInt2578 != i_30_) {
-                    int i_31_ = -Component353.anInt2578 + i_30_;
+                DisplayModeManagerContainer154.cameraPitch += NodeSub27.cameraPitchRate * (float) l / 40.0F * 8.0F;
+                Component112.cameraYaw += Component275.cameraYawRate * (float) l / 40.0F * 8.0F;
+                if (Component353.cameraFocusZ != i_30_) {
+                    int i_31_ = -Component353.cameraFocusZ + i_30_;
                     int i_32_ = (int) (l * (long) i_31_ / 320L);
                     if (i_31_ <= 0) {
                         if (i_32_ == 0) i_32_ = -1;
@@ -691,9 +697,9 @@ final class CommandHandler {
                     } else if (i_32_ != 0) {
                         if (i_31_ < i_32_) i_32_ = i_31_;
                     } else i_32_ = 1;
-                    Component353.anInt2578 += i_32_;
+                    Component353.cameraFocusZ += i_32_;
                 }
-                DisplayModeManagerContainer199.method1725(262144);
+                DisplayModeManagerContainer199.clampCameraAngles(262144);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, "lba.A(" + i + ',' + l + ')');

@@ -12,7 +12,8 @@ final class IOException_Sub1 extends IOException {
     static Component183 aClass114_90 = new Component183(42, -1);
     static int[] anIntArray91 = new int[8];
 
-    static final void method129(int i, int i_0_, long[] ls, int i_1_, int[] is) {
+    /** Quick-sort {@code ls[i..i_1_]} and mirror swaps into parallel {@code is}. */
+    static final void quickSortParallel(int i, int i_0_, long[] ls, int i_1_, int[] is) {
         do {
             try {
                 anInt89++;
@@ -40,11 +41,11 @@ final class IOException_Sub1 extends IOException {
                     ls[i_3_] = l;
                     is[i_1_] = is[i_3_];
                     is[i_3_] = i_4_;
-                    method129(i, -126, ls, -1 + i_3_, is);
-                    method129(1 + i_3_, -81, ls, i_1_, is);
+                    quickSortParallel(i, -126, ls, -1 + i_3_, is);
+                    quickSortParallel(1 + i_3_, -81, ls, i_1_, is);
                 }
                 if (i_0_ < -72) break;
-                method130(99);
+                clearStatics(99);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("gv.A(" + i + ',' + i_0_ + ',' + (ls != null ? "{...}" : "null") + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
             }
@@ -52,7 +53,7 @@ final class IOException_Sub1 extends IOException {
         } while (false);
     }
 
-    public static void method130(int i) {
+    public static void clearStatics(int i) {
         if (i == 8) {
             anIntArray91 = null;
             aClass114_90 = null;
@@ -66,7 +67,7 @@ final class IOException_Sub1 extends IOException {
         Component193.audioThreadPriority = i;
         Component231.sampleRate = i_10_;
         Component21.stereo = bool;
-        if (bool_9_ != true) method130(-125);
+        if (bool_9_ != true) clearStatics(-125);
     }
 
     IOException_Sub1(String string) {

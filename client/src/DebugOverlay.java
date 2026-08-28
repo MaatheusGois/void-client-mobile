@@ -35,7 +35,7 @@ final class DebugOverlay {
     static final void drawStats() {
         int i = 10;
         int i_1_ = 30;
-        if (NodeSub18.anInt6818 != 0 && Component149.aClass324_4456 != null) {
+        if (NodeSub18.anInt6818 != 0 && Component149.debugOverlayFont != null) {
             JaclibLoader.toolkit.K(DefinitionSub10.anIntArray9183);
             for (int i_2_ = 0; i_2_ < DisplayModeManagerContainer167.anIntArray256.length; i_2_++)
                 JaclibLoader.toolkit.method3660((DisplayModeManagerContainer167.anIntArray256[i_2_] + Component35.anIntArray4271[i_2_]), -256, (DefinitionSub10.anIntArray9183[3] - DefinitionSub10.anIntArray9183[1]), DefinitionSub10.anIntArray9183[1], true);
@@ -55,12 +55,12 @@ final class DebugOverlay {
                     JaclibLoader.toolkit.method3645(DisplayModeManagerContainer249.anIntArray4670[1], DisplayModeManagerContainer249.anIntArray4670[0], anIntArray3169[0], -8003, i_4_, anIntArray3169[1]);
                 }
             }
-            Component149.aClass324_4456.drawText(("Dynamic: " + Component328.dynamicOnscreenCount + "/" + 5000), -256, i_1_ + 45, i, -16777216, -120);
-            Component149.aClass324_4456.drawText(("Total Opaque Onscreen: " + Component305.opaqueOnscreenCount + "/" + 10000), -256, i_1_ + 60, i, -16777216, -124);
-            Component149.aClass324_4456.drawText(("Total Trans Onscreen: " + HashNodeSub3.translucentOnscreenCount + "/" + 5000), -256, i_1_ + 75, i, -16777216, -111);
-            Component149.aClass324_4456.drawText(("Occluders: " + (RadixText.occluderCountA + Component325.occluderCountB) + " Active: " + (HashNodeSub10.activeOccluderCount)), -256, i_1_ + 90, i, -16777216, -111);
-            Component149.aClass324_4456.drawText(("Occluded: Ground:" + DisplayModeManagerContainer64.occludedGroundCount + " Walls: " + Component274.occludedWallCount + " CPs: " + DefinitionSub4.occludedCpCount + " Pixels: " + Component241.occludedPixelCount), -256, i_1_ + 105, i, -16777216, -115);
-            Component149.aClass324_4456.drawText(("Occlude Calc Took: " + (WaterShaderProgram.occludeCalcNanos / 1000L) + "us"), -256, i_1_ + 120, i, -16777216, -123);
+            Component149.debugOverlayFont.drawText(("Dynamic: " + Component328.dynamicOnscreenCount + "/" + 5000), -256, i_1_ + 45, i, -16777216, -120);
+            Component149.debugOverlayFont.drawText(("Total Opaque Onscreen: " + Component305.opaqueOnscreenCount + "/" + 10000), -256, i_1_ + 60, i, -16777216, -124);
+            Component149.debugOverlayFont.drawText(("Total Trans Onscreen: " + HashNodeSub3.translucentOnscreenCount + "/" + 5000), -256, i_1_ + 75, i, -16777216, -111);
+            Component149.debugOverlayFont.drawText(("Occluders: " + (RadixText.occluderCountA + Component325.occluderCountB) + " Active: " + (HashNodeSub10.activeOccluderCount)), -256, i_1_ + 90, i, -16777216, -111);
+            Component149.debugOverlayFont.drawText(("Occluded: Ground:" + DisplayModeManagerContainer64.occludedGroundCount + " Walls: " + Component274.occludedWallCount + " CPs: " + DefinitionSub4.occludedCpCount + " Pixels: " + Component241.occludedPixelCount), -256, i_1_ + 105, i, -16777216, -115);
+            Component149.debugOverlayFont.drawText(("Occlude Calc Took: " + (WaterShaderProgram.occludeCalcNanos / 1000L) + "us"), -256, i_1_ + 120, i, -16777216, -123);
             if (NodeSub18.anInt6818 == 2 && DisplayModeManagerContainer194.anIntArray5091 != null) {
                 for (int i_5_ = 0; i_5_ < DisplayModeManagerContainer194.anIntArray5091.length; i_5_++) {
                     float f = (float) DisplayModeManagerContainer194.anIntArray5091[i_5_];

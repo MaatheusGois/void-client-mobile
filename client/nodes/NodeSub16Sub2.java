@@ -80,7 +80,7 @@ final class NodeSub16Sub2
 
     static final void method2832(int[] is, long[] ls, int i) {
         try {
-            IOException_Sub1.method129(i, i + -107, ls, ls.length - 1, is);
+            IOException_Sub1.quickSortParallel(i, i + -107, ls, ls.length - 1, is);
             anInt8882++;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("iha.I(" + (is != null ? "{...}" : "null") + ',' + (ls != null ? "{...}" : "null") + ',' + i + ')'));

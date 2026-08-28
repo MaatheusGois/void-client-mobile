@@ -26,8 +26,9 @@ final class Component98
         super(i, class348_sub51);
     }
 
-    static final void method1760(int i, int i_0_, boolean bool, int i_1_, byte i_2_, int i_3_, int i_4_, int i_5_) {
-        if (i_2_ > -85) method1762(-14, 70, 13, -100);
+    /** Enqueue an area/world ambient sound when the matching SFX preference is enabled. */
+    static final void queueAreaSound(int i, int i_0_, boolean bool, int i_1_, byte i_2_, int i_3_, int i_4_, int i_5_) {
+        if (i_2_ > -85) getEffectivePlane(-14, 70, 13, -100);
         anInt5940++;
         if ((bool ? Component192.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && Component335.anInt2021 < 50 && i != -1)
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
@@ -39,7 +40,8 @@ final class Component98
         if (this.anInt3138 < 0 || this.anInt3138 > 4) this.anInt3138 = method1710(20014);
     }
 
-    static final void method1761(int i) {
+    /** Present HUD overlays (no camera tick): particles, root interface, menu tip priority. */
+    static final void redrawHud(int i) {
         anInt5935++;
         ParticleSystem.method3324(NodeSub8.toolkit, (byte) 105, OpenGlShader.clientCycle);
         if (i != 85) anInt5943 = -99;
@@ -69,7 +71,8 @@ final class Component98
         int i_9_ = -17 / ((82 - i) / 35);
     }
 
-    static final int method1762(int i, int i_10_, int i_11_, int i_12_) {
+    /** Effective render plane for tile (x,z), accounting for bridge/underlay flags. */
+    static final int getEffectivePlane(int i, int i_10_, int i_11_, int i_12_) {
         int i_13_ = 56 / ((i - 74) / 43);
         anInt5947++;
         if ((0x8 & ObjectDeserializer.aByteArrayArrayArray6962[i_10_][i_12_][i_11_]) != 0) return 0;

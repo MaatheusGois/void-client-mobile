@@ -50,7 +50,7 @@ final class DisplayModeManagerContainer220
         if (var_aa != null) {
             NodeSub8.toolkit.KA(i_1_, i, class46.anInt709 + i_1_, i - -class46.anInt789);
             if (Component293.anInt3306 >= 3) NodeSub8.toolkit.A(-16777216, var_aa, i_1_, i);
-            else DisplayModeManagerContainer206.aClass105_1365.method976(((float) class46.anInt709 / 2.0F + (float) i_1_), (float) i + (float) class46.anInt789 / 2.0F, 4096, (0x3fff & (int) -Component112.aFloat3938) << 2, var_aa, i_1_, i);
+            else DisplayModeManagerContainer206.aClass105_1365.method976(((float) class46.anInt709 / 2.0F + (float) i_1_), (float) i + (float) class46.anInt789 / 2.0F, 4096, (0x3fff & (int) -Component112.cameraYaw) << 2, var_aa, i_1_, i);
             if (i_0_ != -98) method271(88, null, (byte) 15, 71);
         }
     }

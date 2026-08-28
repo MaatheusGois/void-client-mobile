@@ -124,7 +124,8 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
         anInt6540++;
     }
 
-    static final void method2703(int i, int i_6_, int i_7_, byte i_8_) {
+    /** Set client varp slot ({@code i_6_},{@code i_7_}) to {@code i} (or default if null). */
+    static final void setClientVarp(int i, int i_6_, int i_7_, byte i_8_) {
         anInt6536++;
         DisplayModeManagerContainer56 class190 = NodeList.aClass190ArrayArray3335[i_6_][i_7_];
         if (i_8_ == -13) DisplayModeManagerContainer254.method1260(false, i, (class190 == null ? FriendsIgnoreList.aClass190_3547 : class190));
@@ -187,14 +188,14 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
         enqueueKeyEvent(0, 128, '\0', -1);
     }
 
-    public static void method2705(int i) {
+    public static void clearStatics(int i) {
         aClass114_6528 = null;
-        if (i != 14645) method2705(1);
+        if (i != 14645) clearStatics(1);
     }
 
     private final void attachListeners(Component component, int i) {
         detachListeners((byte) -104);
-        if (i != 2) method2705(-19);
+        if (i != 2) clearStatics(-19);
         anInt6535++;
         target = component;
         Method method = ReflectionInvoker.aMethod3783;

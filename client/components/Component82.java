@@ -63,7 +63,7 @@ final class Component82
         anInt442++;
         if (!Cp1252Decoder.aBoolean5224) {
             DummyClass.aBoolean10174 = true;
-            NodeSub27.aFloat6898 += (12.0F - NodeSub27.aFloat6898) / 2.0F;
+            NodeSub27.cameraPitchRate += (12.0F - NodeSub27.cameraPitchRate) / 2.0F;
             Cp1252Decoder.aBoolean5224 = true;
             if (i != 68) aClass113_430 = null;
         }

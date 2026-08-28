@@ -51,11 +51,15 @@ final class AbstractGlTextureSub4
     }
 
     /** Lookup decoded image node by id ({@code bool} selects high bit in key). */
-    static final NodeSub13 getImageCacheNode(byte i, int i_3_, boolean bool) {
+    /**
+     * Lookup inventory/container node by id (high bit set when {@code bool}).
+     * Despite living under GL textures historically, this backs UPDATE_INV / item containers.
+     */
+    static final NodeSub13 getContainerNode(byte i, int i_3_, boolean bool) {
         anInt8559++;
         int i_4_ = -43 / ((-65 - i) / 55);
         long l = i_3_ | (bool ? -2147483648 : 0);
-        return ((NodeSub13) Definition.aClass356_7041.get(l, -6008));
+        return ((NodeSub13) Definition.containers.get(l, -6008));
     }
 
     static {

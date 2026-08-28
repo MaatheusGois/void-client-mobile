@@ -19,20 +19,22 @@ final class Component114
     int anInt3840;
     static int anInt3841;
 
-    static final void method2283(boolean bool, int i, int i_0_, int i_1_, boolean bool_2_) {
+    /** Select/filter a world-list entry and clear the pending world request. */
+    static final void selectWorldListEntry(boolean bool, int i, int i_0_, int i_1_, boolean bool_2_) {
         Component99.method950(i_0_, 0, Component304.aClass110_Sub1Array1146.length + -1, bool, (byte) 56, i_1_, bool_2_);
         anInt3836++;
         ScreenModeManager.anInt2834 = i;
         Component218.aClass348_Sub26_2332 = null;
     }
 
-    static final void method2284(byte i, long l) {
+    /** Per-frame: update follow/orbit camera, particles, and HUD dirty flags. */
+    static final void pulseCameraAndHud(byte i, long l) {
         try {
             anInt3841++;
             if (Component335.aClass357ArrayArrayArray2029 != null) {
-                if (DefinitionSub21.anInt9282 != 1 && DefinitionSub21.anInt9282 != 5) {
-                    if (DefinitionSub21.anInt9282 == 4) CommandHandler.method814((byte) 125, l);
-                } else Canvas_Sub1.method119(-1, l);
+                if (DefinitionSub21.cameraMode != 1 && DefinitionSub21.cameraMode != 5) {
+                    if (DefinitionSub21.cameraMode == 4) CommandHandler.updateOrbitCamera((byte) 125, l);
+                } else Canvas_Sub1.updateFollowCamera(-1, l);
             }
             ParticleSystem.method3324(NodeSub8.toolkit, (byte) 83, OpenGlShader.clientCycle);
             if (r.anInt9721 != -1) DisplayModeManagerContainer216.method769(r.anInt9721, (byte) 118);

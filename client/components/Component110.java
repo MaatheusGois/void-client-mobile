@@ -61,7 +61,7 @@ final class Component110
         if (i != 0) aClass148_231 = null;
         if (!Component214.aBoolean2130) {
             Component214.aBoolean2130 = true;
-            Component275.aFloat2687 += (-Component275.aFloat2687 + -24.0F) / 2.0F;
+            Component275.cameraYawRate += (-Component275.cameraYawRate + -24.0F) / 2.0F;
             DummyClass.aBoolean10174 = true;
         }
     }

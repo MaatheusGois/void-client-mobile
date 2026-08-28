@@ -23,7 +23,8 @@ abstract class Definition extends Node {
     static int anInt7038;
     static int anInt7039;
     static int anInt7040;
-    static LruCache aClass356_7041 = new LruCache(32);
+    /** Inventory/container table keyed by id (high bit = secondary bank-style list). */
+    static LruCache containers = new LruCache(32);
     static AudioLine aClass279_7042;
     static int anInt7043;
     static int anInt7044;
@@ -81,7 +82,7 @@ abstract class Definition extends Node {
     public static void method3040(boolean bool) {
         aClass279_7042 = null;
         if (bool != true) method3036(null, -43);
-        aClass356_7041 = null;
+        containers = null;
     }
 
     static final void method3041(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {

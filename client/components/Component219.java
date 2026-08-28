@@ -253,7 +253,7 @@ final class Component219
                 }
             } else {
                 i_6_ = 4;
-                HeapDumper.method1140(58);
+                HeapDumper.resetGraphicsPreferences(58);
             }
         }
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) != 0) {

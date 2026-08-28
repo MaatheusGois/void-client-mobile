@@ -312,11 +312,11 @@ final class LoginPrefs {
             }
             if (first != null && !user.equals(first.aString792)) {
                 first.aString792 = user;
-                Component111.method1916(-9343, first);
+                Component111.markInterfaceDirty(-9343, first);
             }
             if (second != null && !pass.equals(second.aString792)) {
                 second.aString792 = pass;
-                Component111.method1916(-9343, second);
+                Component111.markInterfaceDirty(-9343, second);
             }
         } catch (Throwable ignored) {
         }

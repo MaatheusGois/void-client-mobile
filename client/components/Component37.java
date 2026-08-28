@@ -72,7 +72,7 @@ final class Component37
             }
             Component126.method3515(i + 36);
             JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
-            DefinitionSub21.anInt9282 = 1;
+            DefinitionSub21.cameraMode = 1;
             Buffer.setClientState(2, 10);
             for (int i_2_ = 0; i_2_ < 100; i_2_++)
                 InflaterDecompressor.aBooleanArray2076[i_2_] = true;

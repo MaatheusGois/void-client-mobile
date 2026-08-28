@@ -11,7 +11,8 @@ import java.awt.*;
 import java.lang.reflect.Method;
 
 final class ToolkitLoader {
-    static final GraphicsToolkit method870(int i, int i_0_, d var_d, CacheStore class45, Canvas canvas) {
+    /** Reflectively construct a Direct3D toolkit via {@code D3DToolkit.createToolkit} (desktop only). */
+    static final GraphicsToolkit createD3DToolkit(int i, int i_0_, d var_d, CacheStore class45, Canvas canvas) {
         if (i_0_ != 18993) return null;
         GraphicsToolkit var_ha;
         try {

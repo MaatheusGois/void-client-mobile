@@ -121,7 +121,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt16++;
     }
 
-    final boolean method83(boolean bool) {
+    /** Load the {@code jagmisc} native (timing / system helpers). */
+    final boolean tryLoadJagmisc(boolean bool) {
         if (bool != true) getDocumentBase();
         anInt5++;
         return DefinitionSub19.tryLoadNativeLibrary(-30282, "jagmisc");
@@ -132,7 +133,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         ToolbarRefreshDefinition.aBoolean9229 = false;
     }
 
-    private final void method84(int i) {
+    /** One logic-frame sample: record timestamp ring, sync focus flag, then {@link #pulseGame}. */
+    private final void pulseLogicFrame(int i) {
         anInt8++;
         long l = Component240.currentTimeMillis(i + -88);
         long l_1_ = ShaderCompilerSub2Sub1.aLongArray8800[Component283.anInt4613];
@@ -144,7 +146,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         synchronized (this) {
             Component143.aBoolean2329 = ToolbarRefreshDefinition.aBoolean9229;
         }
-        method99((byte) 93);
+        pulseGame((byte) 93);
         if (i != -1) aBoolean27 = true;
     }
 
@@ -153,7 +155,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         paint(graphics);
     }
 
-    static final void method85(int i, CacheStore class45) {
+    /** Bind the cache store jagmisc uses for optional native-backed IO. */
+    static final void setJagmiscCacheStore(int i, CacheStore class45) {
         anInt32++;
         Component76.aClass45_8601 = class45;
         if (i != 0) anInt37 = 101;
@@ -171,7 +174,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         return super.getDocumentBase();
     }
 
-    static final boolean method86(String string, int i) {
+    /** True if {@code string} (e.g. {@code jagdx}) was already extracted/cached this session. */
+    static final boolean isNativeLibraryCached(String string, int i) {
         anInt13++;
         if (i != 0) return true;
         return Component300.aHashtable3548.containsKey(string);
@@ -181,7 +185,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt12++;
     }
 
-    synchronized void method87(byte i) {
+    /** Tear down and recreate {@link DisplayModeManagerContainer50#gameCanvas} on the current host container. */
+    synchronized void recreateGameCanvas(byte i) {
         if (i > -11) paint(null);
         if (DisplayModeManagerContainer50.gameCanvas != null) {
             DisplayModeManagerContainer50.gameCanvas.removeFocusListener(this);
@@ -229,7 +234,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
     }
 
-    private final void method88(int i) {
+    /** Sample frame timestamps into the FPS ring and update {@code DisplayModeManagerContainer348.fps}. */
+    private final void updateFpsCounter(int i) {
         anInt2++;
         long l = Component240.currentTimeMillis(-119);
         long l_2_ = Buffer.aLongArray7206[InflaterDecompressor.anInt2071];
@@ -249,7 +255,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 DisplayModeManagerContainer50.gameCanvas.setLocation((insets.left - -NodeSub48.anInt7129), (insets.top + DisplayModeManagerContainer147.anInt4167));
             } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
         }
-        method93(-11018);
+        pulseDrawFrame(-11018);
         if (i > -107) shutdown(true, true);
     }
 
@@ -267,7 +273,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt33++;
     }
 
-    final boolean method89(int i) {
+    /** Host allow-list check (currently always true; original jagex.com/127.0.0.1 checks remain commented). */
+    final boolean validateHost(int i) {
         anInt40++;
         return true;
         /*if (i <= 19) return true;
@@ -409,14 +416,14 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                 }
                 ShaderSub3.method168((byte) 103);
                 Component162.method1119(false);
-                method87((byte) -97);
-                method92(28740);
+                recreateGameCanvas((byte) -97);
+                initializeClient(28740);
                 NodeSub8.aClass241_6660 = Component267.method1631(false);
                 while (Component22.aLong1739 == 0L || (Component240.currentTimeMillis(-124) < Component22.aLong1739)) {
                     MatrixSub2.anInt5744 = NodeSub8.aClass241_6660.method1861(0, DisplayModeManagerContainer306.aLong4783);
                     for (int i = 0; MatrixSub2.anInt5744 > i; i++)
-                        method84(-1);
-                    method88(-119);
+                        pulseLogicFrame(-1);
+                    updateFpsCounter(-119);
                     DummyClass.pulseAwtQueue((byte) -42, DisplayModeManagerContainer50.gameCanvas, (OggUrlStream.aClass297_8992));
                 }
             } catch (Throwable throwable) {
@@ -428,9 +435,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         } while (false);
     }
 
-    abstract void method92(int i);
+    /** One-shot client bootstrap (prefs, hosts, palettes). Implemented by {@code client}. */
+    abstract void initializeClient(int i);
 
-    abstract void method93(int i);
+    /** Draw/present pulse; implemented by {@code client} (safe-mode catch around the real draw path). */
+    abstract void pulseDrawFrame(int i);
 
     static final void set(String string) {
         Component126.aString4461 = string;
@@ -440,7 +449,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     /** Append timestamped line(s) to the client console (and optional log stream). */
     static final void printConsole(String string, int i) {
         anInt6++;
-        if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.method249(2);
+        if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.initDevConsole(2);
         ParticleShader.aCalendar6221.setTime(new Date(Component240.currentTimeMillis(-102)));
         int i_8_ = ParticleShader.aCalendar6221.get(11);
         int i_9_ = ParticleShader.aCalendar6221.get(12);
@@ -466,7 +475,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         int i_14_ = 85 / ((i - -1) / 52);
     }
 
-    final void method95(int i, int i_15_, int i_16_, int i_17_, int i_18_, String string, int i_19_) {
+    /** Boot as an embedded applet: size the canvas and start the game thread via {@link ReflectionInvoker}. */
+    final void startFromApplet(int i, int i_15_, int i_16_, int i_17_, int i_18_, String string, int i_19_) {
         anInt25++;
         try {
             if (DefinitionSub9.anApplet_Sub1_9169 == null) {
@@ -492,7 +502,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         }
     }
 
-    final void method96(int i, int i_20_, boolean bool, int i_21_, int i_22_, String string, int i_23_, int i_24_) {
+    /** Boot as a standalone {@link Frame} titled {@code Jagex}; used by desktop {@code Loader}. */
+    final void startFromFrame(int i, int i_20_, boolean bool, int i_21_, int i_22_, String string, int i_23_, int i_24_) {
         try {
             if (i_23_ != 23499) return;
             SocketConnector.anInt3473 = Component236.anInt4017 = i_20_;
@@ -523,16 +534,17 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt14++;
     }
 
-    final boolean method97(int i) {
-        if (i != -1) method88(-104);
+    /** Load the {@code jaclib} native. */
+    final boolean tryLoadJaclib(int i) {
+        if (i != -1) updateFpsCounter(-104);
         anInt4++;
         return DefinitionSub19.tryLoadNativeLibrary(-30282, "jaclib");
     }
 
-    public static void method98(int i) {
+    public static void clearStatics(int i) {
         anIntArray38 = null;
         aClass324_20 = null;
-        if (i != 32717) method86(null, 65);
+        if (i != 32717) isNativeLibraryCached(null, 65);
     }
 
     public final void start() {
@@ -540,9 +552,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         if (this == DefinitionSub9.anApplet_Sub1_9169 && !AssetCacheLoader.shuttingDown) Component22.aLong1739 = 0L;
     }
 
-    abstract void method99(byte i);
+    /** Per-logic-tick game pulse; implemented by {@code client} → {@code processGameTick}. */
+    abstract void pulseGame(byte i);
 
-    final boolean method100(int i) {
+    /** Load the {@code jagtheora} native (video ads). */
+    final boolean tryLoadJagtheora(int i) {
         anInt10++;
         if (i != 10) return true;
         return DefinitionSub19.tryLoadNativeLibrary(-30282, "jagtheora");

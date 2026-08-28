@@ -79,8 +79,8 @@ final class Component201
     static final void method2271(int i) {
         anInt8710++;
         if (!Component326.aBoolean5265) {
-            InflaterDecompressor.method1217(0, Component304.aClass357ArrayArrayArray1148);
-            if (ImageProducerSprite.aClass357ArrayArrayArray9082 != null) InflaterDecompressor.method1217(0, (ImageProducerSprite.aClass357ArrayArrayArray9082));
+            InflaterDecompressor.disposeSceneEntities(0, Component304.aClass357ArrayArrayArray1148);
+            if (ImageProducerSprite.aClass357ArrayArrayArray9082 != null) InflaterDecompressor.disposeSceneEntities(0, (ImageProducerSprite.aClass357ArrayArrayArray9082));
             Component326.aBoolean5265 = true;
         }
     }

@@ -19,8 +19,9 @@ final class NamedInteger {
         throw new IllegalStateException();
     }
 
-    static final void method3517(int i) {
-        if (i <= 35) method3517(98);
+    /** Clear the NamedInteger-related LRU used by channel/world-list helpers. */
+    static final void clearCaches(int i) {
+        if (i <= 35) clearCaches(98);
         anInt4468++;
         Component121.aClass60_4543.clear(0);
     }

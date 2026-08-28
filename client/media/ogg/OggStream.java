@@ -119,7 +119,7 @@ abstract class OggStream extends Node {
         }
         Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1826(!bool, -142238264);
         Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), i);
-        Buffer.method3354(i_1_ + -78);
+        Buffer.disposeActiveToolkit(i_1_ + -78);
         NodeSub8.toolkit.method3650(10000);
         NodeSub8.toolkit.X(32);
         Component270.aClass101_2123 = NodeSub8.toolkit.method3654();

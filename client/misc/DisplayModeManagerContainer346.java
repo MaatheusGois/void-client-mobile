@@ -37,15 +37,15 @@ final class DisplayModeManagerContainer346
             anInt2064++;
             if (class105 != null) {
                 int i_6_;
-                if (DefinitionSub21.anInt9282 != 4)
-                    i_6_ = (0x3fff & (int) Component112.aFloat3938 - -CacheNodeSub2.anInt10483);
-                else i_6_ = 0x3fff & (int) Component112.aFloat3938;
+                if (DefinitionSub21.cameraMode != 4)
+                    i_6_ = (0x3fff & (int) Component112.cameraYaw - -CacheNodeSub2.anInt10483);
+                else i_6_ = 0x3fff & (int) Component112.cameraYaw;
                 int i_7_ = 10 + Math.max(class46.anInt709 / 2, class46.anInt789 / i_4_);
                 int i_8_ = i_5_ * i_5_ - -(i_3_ * i_3_);
                 if (i_7_ * i_7_ >= i_8_) {
                     int i_9_ = DisplayModeManagerContainer88.anIntArray1207[i_6_];
                     int i_10_ = DisplayModeManagerContainer88.anIntArray1204[i_6_];
-                    if (DefinitionSub21.anInt9282 != 4) {
+                    if (DefinitionSub21.cameraMode != 4) {
                         i_10_ = 256 * i_10_ / (Component182.anInt9750 - -256);
                         i_9_ = i_9_ * 256 / (Component182.anInt9750 - -256);
                     }

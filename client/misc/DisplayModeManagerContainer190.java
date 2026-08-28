@@ -576,7 +576,7 @@ final class DisplayModeManagerContainer190
                 if (aClass290_5460 == null || aClass290_5460.method2197((byte) -66)) aFloatArray5476 = aFloatArray5506 = null;
                 else aBoolean5402 = true;
             }
-            if (aShortArray5423 != null && !RunescapeInfo.method219(anInt5463, false, anInt5472)) {
+            if (aShortArray5423 != null && !RunescapeInfo.hasOverlayFlag(anInt5463, false, anInt5472)) {
                 if (aClass290_5482 != null && !aClass290_5482.method2197((byte) -125)) aBoolean5402 = true;
                 else aShortArray5423 = null;
             }
@@ -1003,7 +1003,7 @@ final class DisplayModeManagerContainer190
                 class64_sub2_154_.aClass290_5482.anInterface5_Impl1_3711 = aClass290_5482.anInterface5_Impl1_3711;
             } else if (HuffmanDecoder.method2224(i, (byte) 117, anInt5472)) class64_sub2_154_.aClass290_5482 = aClass290_5482;
             else class64_sub2_154_.aClass290_5482 = null;
-            if (FriendsIgnoreList.method2058(i, anInt5472, 116)) {
+            if (FriendsIgnoreList.hasCollisionBlockFlags(i, anInt5472, 116)) {
                 if (class64_sub2_153_.aShortArray5493 == null || (anInt5475 > class64_sub2_153_.aShortArray5493.length)) {
                     int i_164_ = anInt5475;
                     class64_sub2_154_.aShortArray5436 = class64_sub2_153_.aShortArray5436 = new short[i_164_];

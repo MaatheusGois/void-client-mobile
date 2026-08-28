@@ -7,7 +7,8 @@ final class Component149
  * RENAMED from `Class362` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static BitmapFont aClass324_4456;
+    /** Font for debug overlay lines (Dynamic/Occluders/…); set via {@code setDebugOverlayFont}. */
+    static BitmapFont debugOverlayFont;
     static int anInt4457;
     static int anInt4458 = -1;
     static int anInt4459;
@@ -15,7 +16,7 @@ final class Component149
 
     static final void method3511(boolean bool, BitmapFont class324, Component184 class143, String string, int i, GraphicsToolkit var_ha) {
         try {
-            if (i != 2) aClass324_4456 = null;
+            if (i != 2) debugOverlayFont = null;
             anInt4457++;
             boolean bool_0_ = !DisplayModeManagerContainer61.aBoolean3763 || Component135.method3490(true);
             if (bool_0_) {
@@ -83,6 +84,6 @@ final class Component149
     public static void method3512(int i) {
         aClass183_4460 = null;
         if (i != 4) anInt4458 = 96;
-        aClass324_4456 = null;
+        debugOverlayFont = null;
     }
 }

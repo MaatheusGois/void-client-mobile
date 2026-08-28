@@ -10,7 +10,8 @@ final class Component92
     static Component183 aClass114_3307 = new Component183(56, 2);
     static int anInt3308;
     static CacheStore aClass45_3309;
-    static int anInt3310;
+    /** Camera shake offset on world Z/Y (±55); applied when following the local player. */
+    static int cameraShakeZ;
     static int[] anIntArray3311;
     static int anInt3312 = 0;
 
@@ -34,7 +35,7 @@ final class Component92
     }
 
     static {
-        anInt3310 = 0;
+        cameraShakeZ = 0;
         anIntArray3311 = new int[1];
     }
 }

@@ -27,7 +27,7 @@ final class DisplayModeManagerContainer123
         anInt1297++;
         if (i_1_ != 65536) method780(-106, -24, 57);
         boolean bool = ((i & 0x37) != 0 ? Component380.method1113(i_0_, i, -7) : PacketReader.method3200(i_0_, i, (byte) 111));
-        return bool | (FriendsIgnoreList.method2058(i_0_, i, i_1_ ^ 0x1003d) | (0x10000 & i_0_) != 0);
+        return bool | (FriendsIgnoreList.hasCollisionBlockFlags(i_0_, i, i_1_ ^ 0x1003d) | (0x10000 & i_0_) != 0);
     }
 
     private DisplayModeManagerContainer123() {

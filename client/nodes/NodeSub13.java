@@ -2,16 +2,19 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class NodeSub13
 /**
- * RENAMED from `Class348_Sub13` (JODE-obfuscated).
- * Evidence: subclass of Node (hierarchy)
- */ extends Node {
+ * Inventory/container contents node (item id + amount per slot).
+ * Stored in {@link Definition#containers}; keyed by container id (high bit = secondary list).
+ * RENAMED from {@code Class348_Sub13} (JODE-obfuscated).
+ */
+final class NodeSub13 extends Node {
     static int anInt6754;
     static int anInt6755;
     static int anInt6756;
-    int[] anIntArray6757 = {-1};
-    int[] anIntArray6758 = new int[1];
+    /** Item ids per slot (-1 = empty). */
+    int[] itemIds = {-1};
+    /** Stack amounts per slot (parallel to {@link #itemIds}). */
+    int[] amounts = new int[1];
     static boolean aBoolean6759 = true;
 
     static final void method2801(int i, int i_0_, int i_1_, int i_2_, int i_3_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i_4_) {
@@ -33,7 +36,7 @@ final class NodeSub13
                 l = l >>> 8 ^ ls[(int) ((l ^ (long) (is_6_[i_8_] >> 8)) & 0xffL)];
                 l = (ls[(int) (((long) is_6_[i_8_] ^ l) & 0xffL)] ^ l >>> 8);
             }
-            if (i_7_ != -74) this.anIntArray6757 = null;
+            if (i_7_ != -74) this.itemIds = null;
             if (is != null) {
                 for (int i_9_ = 0; i_9_ < 5; i_9_++)
                     l = l >>> 8 ^ ls[(int) ((l ^ (long) is[i_9_]) & 0xffL)];
@@ -52,12 +55,12 @@ final class NodeSub13
             int i_15_ = i_13_;
             Component241 class225 = null;
             if (i != -1) class225 = DisplayModeManagerContainer282.aClass261_5558.get(i, 32);
-            int[] is = this.anIntArray6757;
+            int[] is = this.itemIds;
             if (class225 != null && class225.anIntArray2906 != null) {
                 is = new int[class225.anIntArray2906.length];
                 for (int i_16_ = 0; (i_16_ < class225.anIntArray2906.length); i_16_++) {
                     int i_17_ = class225.anIntArray2906[i_16_];
-                    if (i_17_ >= 0 && i_17_ < this.anIntArray6757.length) is[i_16_] = this.anIntArray6757[i_17_];
+                    if (i_17_ >= 0 && i_17_ < this.itemIds.length) is[i_16_] = this.itemIds[i_17_];
                     else is[i_16_] = -1;
                 }
             }

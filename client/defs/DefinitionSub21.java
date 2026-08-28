@@ -24,7 +24,11 @@ final class DefinitionSub21
     private int anInt9279 = 12288;
     static int anInt9280;
     private int anInt9281;
-    static int anInt9282;
+    /**
+     * Camera mode: 1=follow, 2/3=scripted, 4=orbit/free, 5=cutscene-style.
+     * Selects which camera update tick runs each frame.
+     */
+    static int cameraMode;
     static long[] aLongArray9283;
 
     final int[] getMonochromeOutput(int i, int i_0_) {

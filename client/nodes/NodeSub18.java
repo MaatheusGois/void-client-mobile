@@ -87,7 +87,7 @@ final class NodeSub18
                 Component17.aByteArrayArray3882[i_6_] = null;
             Component162.anInt8388 = 0;
         }
-        NamedInteger.method3517(83);
+        NamedInteger.clearCaches(83);
         Component192.clearSoftCache(-1);
         Component256.method1828(87);
         if (i > 53) {
@@ -96,7 +96,7 @@ final class NodeSub18
             ClientScriptExecutor.aClass60_1174.clear(0);
             NodeSub8.toolkit.method3663();
             TcpSocketStream.method1707(26469);
-            Buffer.method3354(-52);
+            Buffer.disposeActiveToolkit(-52);
             NodeSub29.aClass45_6909.clearUnpacked((byte) -124);
             DisplayModeManagerContainer51.aClass45_2490.clearUnpacked((byte) -119);
             Component181.aClass45_1541.clearUnpacked((byte) 37);

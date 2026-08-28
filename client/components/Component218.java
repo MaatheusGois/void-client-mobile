@@ -13,7 +13,7 @@ final class Component218
     static ParticleSystem[] aClass348_Sub47Array2334 = new ParticleSystem[300];
     static Component183 aClass114_2335;
 
-    public static void method1351(int i) {
+    public static void clearStatics(int i) {
         aClass114_2331 = null;
         aClass348_Sub26_2332 = null;
         aClass114_2335 = null;

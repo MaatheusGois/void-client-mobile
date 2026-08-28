@@ -51,7 +51,8 @@ abstract class SocketConnector {
 
     abstract Socket connect(int i) throws IOException;
 
-    static final void method2051(int i, int i_0_, Component85 class221, DisplayModeManagerContainer196 class341, int i_1_, int i_2_, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
+    /** Open/focus the world-map UI with the given centre, zoom, and element filters. */
+    static final void openWorldMap(int i, int i_0_, Component85 class221, DisplayModeManagerContainer196 class341, int i_1_, int i_2_, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         try {
             Component181.aClass221_1542 = class221;
             Component272.anInt5871 = i_7_;

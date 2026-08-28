@@ -81,12 +81,12 @@ final class DisplayModeManagerContainer105
             boolean bool = false;
             if (class10.aClass348_Sub16_Sub5_176 == null) {
                 class10.anInt188--;
-                if (class10.anInt188 >= (!class10.method220((byte) -66) ? -10 : -1500)) {
+                if (class10.anInt188 >= (!class10.isPositionalSound((byte) -66) ? -10 : -1500)) {
                     if (class10.aByte180 == 1 && class10.aClass317_183 == null) {
                         class10.aClass317_183 = Component277.method2372(Component30.aClass45_1878, class10.anInt185, 0);
                         if (class10.aClass317_183 == null) continue;
                         class10.anInt188 += class10.aClass317_183.method2370();
-                    } else if (class10.method220((byte) -39) && ((class10.aClass348_Sub10_192 == null) || (class10.aClass348_Sub19_Sub1_189) == null)) {
+                    } else if (class10.isPositionalSound((byte) -39) && ((class10.aClass348_Sub10_192 == null) || (class10.aClass348_Sub19_Sub1_189) == null)) {
                         if (class10.aClass348_Sub10_192 == null) class10.aClass348_Sub10_192 = NodeSub10.method2793((Component323.aClass45_5878), (class10.anInt185));
                         if (class10.aClass348_Sub10_192 == null) continue;
                         if (class10.aClass348_Sub19_Sub1_189 == null) {
@@ -133,7 +133,7 @@ final class DisplayModeManagerContainer105
                         if (i_6_ > 0) {
                             NodeSub19Sub1 class348_sub19_sub1 = null;
                             if (class10.aByte180 != 1) {
-                                if (class10.method220((byte) -112)) class348_sub19_sub1 = (class10.aClass348_Sub19_Sub1_189);
+                                if (class10.isPositionalSound((byte) -112)) class348_sub19_sub1 = (class10.aClass348_Sub19_Sub1_189);
                             } else class348_sub19_sub1 = class10.aClass317_183.method2369().method2944(DisplayModeInfo.aClass163_1050);
                             NodeSub16Sub5 class348_sub16_sub5 = (class10.aClass348_Sub16_Sub5_176 = (NodeSub16Sub5.method2911(class348_sub19_sub1, class10.anInt173, i_6_, i_5_)));
                             class348_sub16_sub5.method2917(-1 + class10.anInt177);

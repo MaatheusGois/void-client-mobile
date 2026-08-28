@@ -72,7 +72,7 @@ final class Component188
                 WaterSurfaceShader.anInt6246 = 256 + NodeSub35.anInt6981 * 512;
                 DisplayModeManagerContainer50.anInt3855 = (Component300.method2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685) + -HashNodeSub4.anInt9515);
             }
-            DefinitionSub21.anInt9282 = 2;
+            DefinitionSub21.cameraMode = 2;
             JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
         }
     }

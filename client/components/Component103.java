@@ -34,13 +34,13 @@ final class Component103
         Component15.aClass356_4915.put((byte) 109, i_0_, class348_sub41);
         NodeSub7.method2772(i, (byte) 110);
         DisplayModeManagerContainer57 class46 = BitmapFont.method2570(i_2_ + 1512932718, i_0_);
-        if (class46 != null) Component111.method1916(-9343, class46);
+        if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
         if (Component297.aClass46_4730 != null) {
-            Component111.method1916(-9343, Component297.aClass46_4730);
+            Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
             Component297.aClass46_4730 = null;
         }
         HashNodeSub17.method3270((byte) 120);
-        if (class46 != null) Component111.method1913(!bool, i_2_ + -104, class46);
+        if (class46 != null) Component111.layoutInterfaceTree(!bool, i_2_ + -104, class46);
         if (!bool) ClientScriptExecutor.runInterfaceScripts(i);
         if (!bool && r.anInt9721 != -1) Component205.method1775((byte) -8, r.anInt9721, 1);
         return class348_sub41;

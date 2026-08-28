@@ -588,7 +588,7 @@ abstract class GlToolkitSub3
             if (Component335.aClass357ArrayArrayArray2029 == null) return;
             if (i_41_ == 0) {
                 Interface10 interface10 = (Interface10) CacheNodeSub2.method3297(i_40_, i_37_, i);
-                Interface10 interface10_42_ = (Interface10) CommandHandler.method813(i_40_, i_37_, i);
+                Interface10 interface10_42_ = (Interface10) CommandHandler.getFloorDecoration(i_40_, i_37_, i);
                 if (interface10 != null && i_36_ != 2) {
                     if (interface10 instanceof Component171) ((Component171) interface10).aClass235_10115.method1671(262144, i_35_);
                     else SceneManager.method1591(i_37_, 89, i_41_, i_35_, interface10.method42(-76), i_36_, i, i_38_, i_40_);

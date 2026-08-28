@@ -152,7 +152,7 @@ final class OpenGlShader extends AbstractShader {
                         SocketConnector.anInt3473 -= insets.left - -insets.right;
                         NodeSub22.anInt6857 -= insets.bottom + insets.top;
                     }
-                    if (MenuEntry.method3229(-86) == 1) {
+                    if (MenuEntry.getWindowMode(-86) == 1) {
                         DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
                         GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
                         Component236.anInt4017 = SocketConnector.anInt3473;

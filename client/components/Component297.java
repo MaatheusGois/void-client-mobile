@@ -30,7 +30,7 @@ final class Component297
         anInt4727++;
         int i_2_;
         if (i > 12000) {
-            HeapDumper.method1140(73);
+            HeapDumper.resetGraphicsPreferences(73);
             i_2_ = 4;
         } else if (i > 5000) {
             DisplayModeManagerContainer32.method447((byte) -59);

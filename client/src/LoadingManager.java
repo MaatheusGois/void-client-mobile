@@ -24,7 +24,11 @@ final class LoadingManager {
         DefinitionSub9.aClass60_9171.clear(0);
     }
 
-    static final int method1278(int i) {
+    /**
+     * Advance the boot {@link LoadingState} machine and return a 0–100 progress hint for the splash bar.
+     * Called each frame from the RSA/login bootstrap path until the title is ready.
+     */
+    static final int pulseLoading(int i) {
         if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(i + -3690) == 0) {
             for (int i_0_ = 0; (i_0_ < HashNodeSub19.anInt9699); i_0_++) {
                 if (DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 31) == 115 || DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 71) == 83) {
@@ -35,7 +39,7 @@ final class LoadingManager {
             }
         }
         anInt2174++;
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1018) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1018) {
             Runtime runtime = Runtime.getRuntime();
             int i_1_ = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);
             long l = Component240.currentTimeMillis(i + 28559);
@@ -48,7 +52,7 @@ final class LoadingManager {
                 return 0;
             }
         }
-        if (LoadingState.aClass56_1023 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1023 == RSARequest.currentLoadingState) {
             if (Component143.aClass340_2327 == null) Component143.aClass340_2327 = new CacheFileStore(HardwareProbe.aClass248_6601, DisplayModeManagerContainer271.aClass112_520, RSACipher.rsaPublicExponent, RSARequest.aBigInteger9657);
             if (!Component143.aClass340_2327.isReady(7)) return 0;
             OggStream.method2965(null, 0, true, 0);
@@ -58,7 +62,7 @@ final class LoadingManager {
             DefinitionSub17Sub1.aClass45_10426 = Component14.method3571(false, 33, (byte) -23, 1);
             Component65.aClass45_1627 = Component14.method3571(false, 13, (byte) -23, 1);
         }
-        if (LoadingState.aClass56_1024 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1024 == RSARequest.currentLoadingState) {
             boolean bool = DefinitionSub17Sub1.aClass45_10426.prefetchMandatory(89);
             int i_2_ = Component354.aClass314_Sub1Array223[33].getReferenceTableProgress(1);
             i_2_ = i_2_ + Component354.aClass314_Sub1Array223[!ShaderProgramSub7.aBoolean6289 ? 32 : 34].getReferenceTableProgress(1);
@@ -79,13 +83,13 @@ final class LoadingManager {
                     Component280.anInterface16Array2447[i_4_] = new Component195(Component134.aClass111_5813.method1043(is[i_4_], (byte) 102), class106);
             }
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1026) HashNodeSub3.method3178(Component65.aClass45_1627, -81, Component364.method184(1084489728), ShaderProgramSub7.aClass45_6277);
-        if (LoadingState.aClass56_1027 == RSARequest.aClass56_9660) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1026) HashNodeSub3.method3178(Component65.aClass45_1627, -81, Component364.method184(1084489728), ShaderProgramSub7.aClass45_6277);
+        if (LoadingState.aClass56_1027 == RSARequest.currentLoadingState) {
             int i_5_ = NodeSub50.method3420(0);
             int i_6_ = HashNodeSub16.method3256(2);
             if (i_6_ > i_5_) return 100 * i_5_ / i_6_;
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1028) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1028) {
             if (Component280.anInterface16Array2447 != null && (Component280.anInterface16Array2447.length > 0)) {
                 if (Component280.anInterface16Array2447[0].method60(-19079) < 100) return 0;
                 if (Component280.anInterface16Array2447.length > 1 && Component134.aClass111_5813.method1044(86) && (Component280.anInterface16Array2447[1].method60(i + 9581) < 100)) return 0;
@@ -94,11 +98,11 @@ final class LoadingManager {
             Component27.method3568(NodeSub8.toolkit, 4);
             Buffer.setClientState(2, 1);
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1029) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1029) {
             for (int i_7_ = 0; i_7_ < 4; i_7_++)
                 NodeSub45.aClass361Array7108[i_7_] = SpriteSub1.method988(ParametricDefinition.anInt9109, 1, AbstractShaderSub4.anInt7319);
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1030) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1030) {
             Component158.aClass45_322 = Component14.method3571(false, 8, (byte) -23, 1);
             NodeSub29.aClass45_6909 = Component14.method3571(false, 0, (byte) -23, 1);
             DisplayModeManagerContainer51.aClass45_2490 = Component14.method3571(false, 1, (byte) -23, 1);
@@ -132,7 +136,7 @@ final class LoadingManager {
             Component257.aClass45_4796 = Component14.method3571(true, 31, (byte) -23, 1);
             Component334.aClass45_2015 = Component14.method3571(true, 36, (byte) -23, 2);
         }
-        if (LoadingState.aClass56_1031 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1031 == RSARequest.currentLoadingState) {
             int i_8_ = 0;
             for (int i_9_ = 0; i_9_ < 37; i_9_++) {
                 if (Component354.aClass314_Sub1Array223[i_9_] != null) i_8_ += (Component354.aClass314_Sub1Array223[i_9_].getReferenceTableProgress(i + 28661) * DisplayModeManagerContainer345.anIntArray164[i_9_] / 100);
@@ -144,20 +148,20 @@ final class LoadingManager {
             SpriteAtlasShader.method2159((byte) -109, Component158.aClass45_322);
             HashNodeSub3.method3178(Component65.aClass45_1627, -124, Component364.method184(i ^ ~0x40a46ff3), Component158.aClass45_322);
         }
-        if (LoadingState.aClass56_1032 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1032 == RSARequest.currentLoadingState) {
             if (Component35.anInt4270 == -1) Component35.anInt4270 = Component54.aClass45_8667.getGroupId("scape main", 0);
             CacheNodeSub1.method3290(56);
             Buffer.setClientState(2, 2);
         }
-        if (LoadingState.aClass56_1033 == RSARequest.aClass56_9660) ComponentDownloader.method323(Component380.aClass45_4984, OggUrlStream.aClass297_8992, (byte) 95);
-        if (LoadingState.aClass56_1034 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1033 == RSARequest.currentLoadingState) ComponentDownloader.method323(Component380.aClass45_4984, OggUrlStream.aClass297_8992, (byte) 95);
+        if (LoadingState.aClass56_1034 == RSARequest.currentLoadingState) {
             int i_10_ = LibraryCreditsText.method1770((byte) -25);
             if (i_10_ < 100) return i_10_;
             Component309.method2013(WaterShaderSub8.aClass45_7362.getSingletonFile((byte) 73, 1), (byte) 112);
             RuntimeException_Sub1.method4012(WaterShaderSub8.aClass45_7362.getSingletonFile((byte) 73, 3), (byte) -111);
         }
         if (i != -28660) return 2;
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1035) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1035) {
             if (Sprite.anInt6923 != -1 && !ShaderSub3.aClass45_5207.isFileReady(-10499, Sprite.anInt6923, 0)) return 99;
             DefinitionSub4.aD9113 = new Component283(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
             MatrixSub3.aClass326_5764 = new Component311(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
@@ -186,7 +190,7 @@ final class LoadingManager {
             Component267.aClass194_2981 = new Component276(PacketReader.currentGameType, ObjectDeserializer.languageId, BrowserUrlOpener.aClass45_8926);
             Component209.aClass217_3453 = new Component46(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             Component304.method699(Component65.aClass45_1627, (byte) -100, NodeSub35.aClass45_6980, Component158.aClass45_322, ShaderSub3.aClass45_5207);
-            Applet_Sub1.method85(0, NodeList.aClass45_3323);
+            Applet_Sub1.setJagmiscCacheStore(0, NodeList.aClass45_3323);
             Component33.aClass226_2639 = new Component127(ObjectDeserializer.languageId, Component387.aClass45_1897, CommandHandler.aClass45_1434);
             Component31.aClass355_5900 = new Component117(ObjectDeserializer.languageId, Component387.aClass45_1897, CommandHandler.aClass45_1434, new DisplayModeManagerContainer332());
             Component324.method1202(0);
@@ -205,14 +209,14 @@ final class LoadingManager {
             NodeSub8.aClass241_6660 = Component267.method1631(false);
             DefinitionSub20.aClass348_Sub4_9264 = new HardwareProbe(true, OggUrlStream.aClass297_8992);
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1037) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1037) {
             int i_11_ = (NodeSub22.method2958(22388, Component158.aClass45_322) + DisplayModeManagerContainer207.method3405(2012104999, true));
             int i_12_ = (Component383.method2188(-30477) - -HashNodeSub16.method3256(2));
             if (i_11_ < i_12_) return i_11_ * 100 / i_12_;
         }
-        if (LoadingState.aClass56_1038 == RSARequest.aClass56_9660)
+        if (LoadingState.aClass56_1038 == RSARequest.currentLoadingState)
             DisplayModeManagerContainer229.method752(NodeSub32.aClass45_6950, Component267.aClass268_2979, Component149.aClass183_4460, GradientPreset.aClass263_9195, DisplayModeManagerContainer64.aClass153_9031, Component245.aClass141_117, DisplayModeManagerContainer58.aClass170_10209);
-        if (LoadingState.aClass56_1039 == RSARequest.aClass56_9660) {
+        if (LoadingState.aClass56_1039 == RSARequest.currentLoadingState) {
             // TODO make cache edit to extend these or change id's
             DisplayModeManagerContainer123.anIntArray1303 = (new int[Component329.aClass259_5995.anInt3305 + 1000]);
             WaterShaderProgram.aBooleanArray6270 = (new boolean[Component329.aClass259_5995.anInt3305 + 1000]);
@@ -242,7 +246,7 @@ final class LoadingManager {
             CacheNodeSub2.aClass45_10480.discardMode = 2;
             SeekableFile.aClass45_1322.discardMode = 2;
         }
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1040) {
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1040) {
             if (!Component233.method2547(DebugPanic.anInt4737, (byte) 84)) return 0;
             boolean bool = true;
             for (int i_14_ = 0; i_14_ < (DefinitionSub33.aClass46ArrayArray9427[DebugPanic.anInt4737]).length; i_14_++) {
@@ -251,8 +255,8 @@ final class LoadingManager {
             }
             if (!bool) return 0;
         }
-        if (LoadingState.aClass56_1041 == RSARequest.aClass56_9660) CacheNode.method3198(true, (byte) -45);
-        if (RSARequest.aClass56_9660 == LoadingState.aClass56_1042) {
+        if (LoadingState.aClass56_1041 == RSARequest.currentLoadingState) CacheNode.method3198(true, (byte) -45);
+        if (RSARequest.currentLoadingState == LoadingState.aClass56_1042) {
             Component44.aClass311_897.method2319((byte) -56);
             try {
                 NodeSub32.aThread6946.join();
@@ -286,7 +290,8 @@ final class LoadingManager {
         return DefinitionSub6.method3063(false);
     }
 
-    static final String method1279(boolean bool, int i, String[] strings, int i_15_) {
+    /** Concatenate {@code i} strings starting at {@code i_15_} (null → {@code "null"}). CS2 string join. */
+    static final String concatStrings(boolean bool, int i, String[] strings, int i_15_) {
         try {
             anInt2172++;
             if (i == 0) return "";

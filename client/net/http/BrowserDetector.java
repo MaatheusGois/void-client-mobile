@@ -58,13 +58,14 @@ final class BrowserDetector {
         return i_2_;
     }
 
-    static final int method1359(boolean bool, int i) {
+    static final int unpackHighBits(boolean bool, int i) {
         anInt2368++;
         if (bool != true) anInt2361 = -32;
         return i >>> 10;
     }
 
-    static final void method1360(String string, ReflectionInvoker class297, boolean bool, boolean bool_3_, int i) {
+    /** Open {@code string} in an external browser (IE6/Firefox applet-param aware). */
+    static final void openBrowserUrl(String string, ReflectionInvoker class297, boolean bool, boolean bool_3_, int i) {
         try {
             anInt2369++;
             if (bool_3_) {

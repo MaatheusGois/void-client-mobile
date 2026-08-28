@@ -230,7 +230,7 @@ final class BasicMouseHandler extends MouseHandler implements MouseListener, Mou
         if (mouseevent.isPopupTrigger()) mouseevent.consume();
     }
 
-    public static void method3609(byte i) {
+    public static void clearStatics(byte i) {
         int i_14_ = 49 % ((i - -35) / 41);
         aClass283Array7446 = null;
     }

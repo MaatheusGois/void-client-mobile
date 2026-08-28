@@ -10,10 +10,11 @@ final class Component120
     static Component183 aClass114_316 = new Component183(95, 10);
     static int anInt317;
     static Component183 aClass114_318 = new Component183(19, -2);
-    static int anInt319 = 0;
+    /** Camera shake offset on world X (±50); applied when following the local player. */
+    static int cameraShakeX = 0;
     static int anInt320 = 0;
 
-    public static void method287(int i) {
+    public static void clearStatics(int i) {
         if (i == 51) {
             aClass114_316 = null;
             aClass114_318 = null;

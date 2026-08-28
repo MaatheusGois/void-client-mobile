@@ -564,7 +564,7 @@ abstract class DisplayModeManagerContainer58
         Component382.anIntArray2272 = null;
         Component95.aBooleanArrayArrayArray1751 = null;
         Component2.aBooleanArrayArrayArray8361 = null;
-        FriendsIgnoreList.method2062((byte) 89);
+        FriendsIgnoreList.clearOccluders((byte) 89);
         if (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357 != null) {
             for (int i = 0; i < Component328.dynamicOnscreenCount; i++)
                 DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i] = null;

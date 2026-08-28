@@ -17,7 +17,8 @@ final class DisplayModeManagerContainer154
     static int anInt1284;
     static int anInt1285;
     static RequestProcessor aClass169_1286;
-    static float aFloat1287 = 1024.0F;
+    /** Camera pitch; clamped by {@code clampCameraAngles} (typically 1024..3072/4096). */
+    static float cameraPitch = 1024.0F;
     static int anInt1288;
 
     static final boolean method771(int i, byte i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int[] is, int i_5_) {

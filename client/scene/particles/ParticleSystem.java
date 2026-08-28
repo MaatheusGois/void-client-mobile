@@ -54,7 +54,7 @@ final class ParticleSystem extends Node {
     static final boolean method3325(int i, int i_2_, boolean bool) {
         if (bool != true) return false;
         anInt7121++;
-        return (((0x2000 & i) != 0 | ClientErrorReporter.method1241(i_2_, i, -118) | Component175.method1722(i, i_2_, (byte) 94)) & ShaderSub3.method166((byte) 105, i_2_, i));
+        return (((0x2000 & i) != 0 | ClientErrorReporter.hasCollisionBlockFlags(i_2_, i, -118) | Component175.method1722(i, i_2_, (byte) 94)) & ShaderSub3.method166((byte) 105, i_2_, i));
     }
 
     final void method3326(byte i) {

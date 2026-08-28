@@ -142,7 +142,7 @@ final class OggUrlStream extends OggStream {
             aDSPState8993.read(fs[0].length);
             anInt9001 += fs[0].length;
             HashNodeSub4 class348_sub42_sub4 = aClass348_Sub16_Sub2_8995.method2838(fs[0].length, aDouble9005, 1401320384);
-            InputHandler.method2699(16383, (class348_sub42_sub4.aShortArrayArray9518), fs);
+            InputHandler.quantizeFloatsToShorts(16383, (class348_sub42_sub4.aShortArrayArray9518), fs);
             for (int i_8_ = 0; i_8_ < aVorbisInfo9006.channels; i_8_++)
                 class348_sub42_sub4.aShortArrayArray9518[i_8_] = aClass163_8994.method1268(-56, (class348_sub42_sub4.aShortArrayArray9518[i_8_]));
             aClass348_Sub16_Sub2_8995.method2835(class348_sub42_sub4, 30700);

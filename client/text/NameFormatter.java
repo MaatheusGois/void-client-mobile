@@ -49,7 +49,11 @@ final class NameFormatter {
         }
     }
 
-    static final void method358(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
+    /**
+     * Enqueue a world sound effect (id {@code i_7_}, volume {@code i}, coords/delay params)
+     * when SFX prefs are on and the active queue is under 50 entries.
+     */
+    static final void queueSoundEffect(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         if (i_8_ != -29494) anInt496 = 32;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350) != 0 && i != 0 && Component335.anInt2021 < 50 && i_7_ != -1) GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo((byte) 1, i_7_, i, i_4_, i_5_, i_3_, i_6_, null);
         anInt490++;

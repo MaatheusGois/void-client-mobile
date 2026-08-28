@@ -60,7 +60,7 @@ final class Component176
                     if (class318_sub1.aBoolean6387) class318_sub1.method2387(JaclibLoader.toolkit, -127);
                     else {
                         PauseTimer.method365(class318_sub1, aClass348_Sub1Array3748);
-                        if (Component149.aClass324_4456 != null) Component149.aClass324_4456.drawText(aClass315_3743.aString3953, -256, class318_sub1.anInt6380, class318_sub1.anInt6386, -16777216, -114);
+                        if (Component149.debugOverlayFont != null) Component149.debugOverlayFont.drawText(aClass315_3743.aString3953, -256, class318_sub1.anInt6380, class318_sub1.anInt6386, -16777216, -114);
                     }
                 } else {
                     int i = ((RenderableSub2) class318).anInt6394;

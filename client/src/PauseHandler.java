@@ -61,7 +61,8 @@ final class PauseHandler extends HashNode {
         this.aClass318_Sub1_Sub3_Sub4_9538 = class318_sub1_sub3_sub4;
     }
 
-    public static void method3190(boolean bool) {
+    /** Null shared statics for GC / shutdown. */
+    public static void clearStatics(boolean bool) {
         if (bool != false) aBoolean9535 = true;
         aClass144_9536 = null;
     }

@@ -83,11 +83,11 @@ final class DisplayModeManagerContainer260
                 if (i_18_ > i_19_ * i_19_) {
                     i_19_ -= 10;
                     int i_20_;
-                    if (DefinitionSub21.anInt9282 == 4) i_20_ = (int) Component112.aFloat3938 & 0x3fff;
-                    else i_20_ = 0x3fff & ((int) Component112.aFloat3938 + CacheNodeSub2.anInt10483);
+                    if (DefinitionSub21.cameraMode == 4) i_20_ = (int) Component112.cameraYaw & 0x3fff;
+                    else i_20_ = 0x3fff & ((int) Component112.cameraYaw + CacheNodeSub2.anInt10483);
                     int i_21_ = DisplayModeManagerContainer88.anIntArray1207[i_20_];
                     int i_22_ = DisplayModeManagerContainer88.anIntArray1204[i_20_];
-                    if (DefinitionSub21.anInt9282 != 4) {
+                    if (DefinitionSub21.cameraMode != 4) {
                         i_22_ = i_22_ * 256 / (Component182.anInt9750 - -256);
                         i_21_ = 256 * i_21_ / (Component182.anInt9750 - -256);
                     }
@@ -119,7 +119,7 @@ final class DisplayModeManagerContainer260
             if (class223 == DefinitionSub21.aClass223_9274) return Component383.method2189(class348_sub49, 86);
             if (class223 == Component55.aClass223_3934) return Component298.method179(16533, class348_sub49);
             if (Component316.aClass223_2489 == class223) return NodeSub46.method3322(0, class348_sub49);
-            if (class223 == RadixParser.aClass223_2307) return Component230.method472(-27794, class348_sub49);
+            if (class223 == RadixParser.aClass223_2307) return Component230.decodeMapElement(-27794, class348_sub49);
             if (Component90.aClass223_2045 == class223) return ShaderCompilerSub2.method2612(class348_sub49, true);
             if (Component38.aClass223_2507 == class223) return DebugPanicSub1.method2128(-1730, class348_sub49);
             return null;

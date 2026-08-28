@@ -27,15 +27,15 @@ final class Component128
     static final int method592(boolean bool, byte i, boolean bool_0_, int i_1_, int i_2_) {
         anInt1105++;
         if (i != -128) return -20;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) -1, i_1_, bool_0_);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -1, i_1_, bool_0_);
         if (class348_sub13 == null) return 0;
         int i_3_ = 0;
-        for (int i_4_ = 0; (class348_sub13.anIntArray6757.length > i_4_); i_4_++) {
-            if (class348_sub13.anIntArray6757[i_4_] >= 0 && (Exception_Sub1.aClass255_112.anInt3271 > class348_sub13.anIntArray6757[i_4_])) {
-                NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(-127, (class348_sub13.anIntArray6757[i_4_])));
+        for (int i_4_ = 0; (class348_sub13.itemIds.length > i_4_); i_4_++) {
+            if (class348_sub13.itemIds[i_4_] >= 0 && (Exception_Sub1.aClass255_112.anInt3271 > class348_sub13.itemIds[i_4_])) {
+                NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(-127, (class348_sub13.itemIds[i_4_])));
                 int i_5_ = class213.method1567((MatrixSub3.aClass326_5764.method2600(i_2_, 28364).anInt3256), 107, i_2_);
                 if (!bool) i_3_ += i_5_;
-                else i_3_ += i_5_ * (class348_sub13.anIntArray6758[i_4_]);
+                else i_3_ += i_5_ * (class348_sub13.amounts[i_4_]);
             }
         }
         return i_3_;

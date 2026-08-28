@@ -60,10 +60,10 @@ final class Component49
     static final int method1854(int i, int i_5_, boolean bool, int i_6_) {
         if (i < 45) method1852(83, 33, 101, -55);
         anInt4681++;
-        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getImageCacheNode((byte) 37, i_5_, bool);
+        NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) 37, i_5_, bool);
         if (class348_sub13 == null) return 0;
-        if (i_6_ < 0 || i_6_ >= class348_sub13.anIntArray6758.length) return 0;
-        return class348_sub13.anIntArray6758[i_6_];
+        if (i_6_ < 0 || i_6_ >= class348_sub13.amounts.length) return 0;
+        return class348_sub13.amounts[i_6_];
     }
 
     public final void method7(int i) {

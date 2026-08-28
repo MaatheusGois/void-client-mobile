@@ -64,7 +64,7 @@ final class Component276
         if (class146 != null) return class146;
         byte[] is;
         synchronized (aClass45_2597) {
-            is = aClass45_2597.getFile(i_4_ ^ 0x743, BrowserDetector.method1359(true, i), NodeSub14.method2806(false, i));
+            is = aClass45_2597.getFile(i_4_ ^ 0x743, BrowserDetector.unpackHighBits(true, i), NodeSub14.method2806(false, i));
         }
         class146 = new Component334();
         if (i_4_ != -1) return null;

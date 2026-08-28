@@ -903,7 +903,7 @@ final class DisplayModeManagerContainer282
                 class64_sub3_211_.aClass123_5610.aByte1812 = aClass123_5610.aByte1812;
             } else if (Component334.method1193(anInt5556, i, true)) class64_sub3_211_.aClass123_5610 = aClass123_5610;
             else class64_sub3_211_.aClass123_5610 = null;
-            if (ClientErrorReporter.method1241(anInt5556, i, -119)) {
+            if (ClientErrorReporter.hasCollisionBlockFlags(anInt5556, i, -119)) {
                 if (class64_sub3_213_.aShortArray5564 != null && class64_sub3_213_.aShortArray5564.length >= anInt5529) {
                     class64_sub3_211_.aShortArray5564 = class64_sub3_213_.aShortArray5564;
                     class64_sub3_211_.aShortArray5583 = class64_sub3_213_.aShortArray5583;
@@ -1004,7 +1004,7 @@ final class DisplayModeManagerContainer282
                 if (bool_214_) class64_sub3_211_.aByte5581 |= 0x10;
                 class64_sub3_211_.aClass270_5575 = class64_sub3_213_.aClass270_5575;
                 class64_sub3_211_.aClass270_5575.anInterface8_3463 = aClass270_5575.anInterface8_3463;
-            } else if (!ClientErrorReporter.method1238(i, anInt5556, -93)) class64_sub3_211_.aClass270_5575 = null;
+            } else if (!ClientErrorReporter.hasRoofFlag(i, anInt5556, -93)) class64_sub3_211_.aClass270_5575 = null;
             else class64_sub3_211_.aClass270_5575 = aClass270_5575;
             if (GameType.method1637(anInt5556, 32768, i)) {
                 if (class64_sub3_213_.aShortArray5601 == null || class64_sub3_213_.aShortArray5601.length < anInt5632) {
@@ -2876,7 +2876,7 @@ final class DisplayModeManagerContainer282
                 if (CacheIndexReader.hasFlag0x800(i_697_, (byte) 78, i)) aClass123_5620 = new Component132(null, 5126, 2, 0);
                 if (ShaderSub3.method166((byte) 69, i_697_, i)) aClass123_5563 = new Component132(null, 5126, 3, 0);
                 if (Component334.method1193(i_697_, i, true)) aClass123_5610 = new Component132(null, 5121, 4, 0);
-                if (ClientErrorReporter.method1238(i, i_697_, -31)) aClass270_5575 = new Component148();
+                if (ClientErrorReporter.hasRoofFlag(i, i_697_, -31)) aClass270_5575 = new Component148();
                 d var_d = var_ha_Sub2.aD4579;
                 anIntArray5528 = new int[class124.anInt1821 + 1];
                 int[] is = new int[class124.anInt1817];

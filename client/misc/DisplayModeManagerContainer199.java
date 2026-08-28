@@ -43,7 +43,11 @@ final class DisplayModeManagerContainer199
         if (i != -4) aClass105Array5857 = null;
     }
 
-    static final void method1725(int i) {
+    /**
+     * Clamp camera pitch to the allowed range and wrap yaw into 0..16384.
+     * Also samples nearby terrain height for camera collision adjustments.
+     */
+    static final void clampCameraAngles(int i) {
         anInt5855++;
         int i_1_ = 1024;
         int i_2_ = 3072;
@@ -51,17 +55,17 @@ final class DisplayModeManagerContainer199
             i_2_ = 4096;
             if (Component182.aBoolean9746) i_1_ = 2048;
         }
-        if (DisplayModeManagerContainer154.aFloat1287 < (float) i_1_) DisplayModeManagerContainer154.aFloat1287 = (float) i_1_;
-        if (DisplayModeManagerContainer154.aFloat1287 > (float) i_2_) DisplayModeManagerContainer154.aFloat1287 = (float) i_2_;
-        for (/**/; Component112.aFloat3938 >= 16384.0F; Component112.aFloat3938 -= 16384.0F) {
+        if (DisplayModeManagerContainer154.cameraPitch < (float) i_1_) DisplayModeManagerContainer154.cameraPitch = (float) i_1_;
+        if (DisplayModeManagerContainer154.cameraPitch > (float) i_2_) DisplayModeManagerContainer154.cameraPitch = (float) i_2_;
+        for (/**/; Component112.cameraYaw >= 16384.0F; Component112.cameraYaw -= 16384.0F) {
             /* empty */
         }
-        for (/**/; Component112.aFloat3938 < 0.0F; Component112.aFloat3938 += 16384.0F) {
+        for (/**/; Component112.cameraYaw < 0.0F; Component112.cameraYaw += 16384.0F) {
             /* empty */
         }
-        int i_3_ = DisplayModeManagerContainer273.anInt5799 >> 9;
-        int i_4_ = Component353.anInt2578 >> 9;
-        int i_5_ = Component300.method2064(DisplayModeManagerContainer273.anInt5799, Component117.anInt4372, 11219, Component353.anInt2578);
+        int i_3_ = DisplayModeManagerContainer273.cameraFocusX >> 9;
+        int i_4_ = Component353.cameraFocusZ >> 9;
+        int i_5_ = Component300.method2064(DisplayModeManagerContainer273.cameraFocusX, Component117.anInt4372, 11219, Component353.cameraFocusZ);
         int i_6_ = 0;
         if (i_3_ > 3 && i_4_ > 3 && -4 + AbstractShaderSub4.anInt7319 > i_3_ && ParametricDefinition.anInt9109 - 4 > i_4_) {
             for (int i_7_ = i_3_ - 4; i_3_ - -4 >= i_7_; i_7_++) {

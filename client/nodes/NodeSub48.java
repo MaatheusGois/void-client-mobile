@@ -19,8 +19,9 @@ final class NodeSub48
     Task[] aClass144Array7135;
     int[] anIntArray7136;
 
-    static final void method3328(BitmapFont class324) {
-        Component149.aClass324_4456 = class324;
+    /** Install (or clear) the bitmap font used by the FPS/occluder debug overlay. */
+    static final void setDebugOverlayFont(BitmapFont class324) {
+        Component149.debugOverlayFont = class324;
     }
 
     public NodeSub48() {

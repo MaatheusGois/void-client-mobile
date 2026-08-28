@@ -75,8 +75,8 @@ final class ScreenModeManager {
                     DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.anInt7129 + insets.left), (insets.top - -DisplayModeManagerContainer147.anInt4167));
                 } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
             }
-            // Must match method3229 (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
-            Cp1252Decoder.aBoolean5219 = i_2_ >= 2;
+            // Must match getWindowMode (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
+            Cp1252Decoder.fullscreenAvailable = i_2_ >= 2;
             if (r.anInt9721 != -1) Component339.method1713(true, 520);
             if (DefinitionSub8.aClass238_9165 != null && NativeLibLoader.isPostLoginState(true, Component49.clientState)) ShaderProgramSub2.method2145(-24498);
             for (int i_5_ = 0; i_5_ < 100; i_5_++)

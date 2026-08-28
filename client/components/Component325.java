@@ -66,7 +66,7 @@ final class Component325
     static final boolean method723(int i, int i_2_, byte i_3_) {
         anInt1196++;
         if (i_3_ >= -66) return true;
-        return (Component219.method2352(113, i_2_, i) & ClientErrorReporter.method1238(i, i_2_, -29));
+        return (Component219.method2352(113, i_2_, i) & ClientErrorReporter.hasRoofFlag(i, i_2_, -29));
     }
 
     static final boolean method724(int i, int i_4_, int i_5_) {

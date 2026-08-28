@@ -17,10 +17,10 @@ final class RenderableSub6
     DisplayModeManagerContainer58 aClass318_Sub1_Sub3_Sub3_6431;
     static int[] anIntArray6432;
 
-    public static void method2506(byte i) {
+    public static void clearStatics(byte i) {
         aShortArray6428 = null;
         anIntArray6432 = null;
-        if (i != -46) method2506((byte) -93);
+        if (i != -46) clearStatics((byte) -93);
         aClass114_6424 = null;
     }
 }

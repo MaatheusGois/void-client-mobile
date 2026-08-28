@@ -69,7 +69,7 @@ final class DisplayModeManagerContainer196
             Component281.anInt3829 = -1;
             r.aBoolean9722 = false;
             Component149.anInt4458 = -1;
-            if (class46 != null) Component111.method1916(-9343, class46);
+            if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
         }
     }
 
@@ -101,7 +101,7 @@ final class DisplayModeManagerContainer196
                 DisplayModeManagerContainer5.aClass76_1208.method775((byte) 69);
                 DisplayModeManagerContainer58.method2433();
                 Component308.method464(i + -9865);
-                FriendsIgnoreList.method2061(-127);
+                FriendsIgnoreList.clearHudSprites(-127);
                 Component126.method3513(-113);
                 Component329.method1779((byte) 124);
                 if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2295((byte) 96);

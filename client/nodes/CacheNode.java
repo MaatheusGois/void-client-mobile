@@ -77,7 +77,7 @@ abstract class CacheNode extends HashNode {
         Component72.localPlayer.y = 512 * ParametricDefinition.anInt9109 / 2;
         Component72.localPlayer.anIntArray10317[0] = ParametricDefinition.anInt9109 / 2;
         WaterSurfaceShader.anInt6246 = Component317.anInt8685 = 0;
-        if (DefinitionSub21.anInt9282 == 2) {
+        if (DefinitionSub21.cameraMode == 2) {
             WaterSurfaceShader.anInt6246 = NodeSub35.anInt6981 << 9;
             Component317.anInt8685 = Component300.anInt3550 << 9;
         } else NodeSub21.method2954((byte) 62);

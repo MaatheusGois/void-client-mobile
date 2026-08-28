@@ -187,13 +187,13 @@ final class NodeSub41
                     NodeSub35.anInt6981 -= i_20_;
                     Component317.anInt8685 -= 512 * i_21_;
                     if ((AbstractShaderSub4.anInt7319 < Math.abs(i_20_)) || Math.abs(i_21_) > ParametricDefinition.anInt9109) DisplayModeManagerContainer154.method773(true);
-                } else if (DefinitionSub21.anInt9282 == 4) {
+                } else if (DefinitionSub21.cameraMode == 4) {
                     NodeSub7.anInt6652 -= i_21_ * 512;
-                    DisplayModeManagerContainer273.anInt5799 -= i_20_ * 512;
-                    Component353.anInt2578 -= 512 * i_21_;
+                    DisplayModeManagerContainer273.cameraFocusX -= i_20_ * 512;
+                    Component353.cameraFocusZ -= 512 * i_21_;
                     NodederUtil.anInt6633 -= i_20_ * 512;
                 } else {
-                    DefinitionSub21.anInt9282 = 1;
+                    DefinitionSub21.cameraMode = 1;
                     JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
                 }
                 DefinitionSub39.method3153(0);

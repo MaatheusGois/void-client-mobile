@@ -91,8 +91,8 @@ final class StringDefinition extends HashNode {
                 int i_10_ = (Component72.localPlayer.x);
                 int i_11_ = (Component72.localPlayer.y);
                 if (i >= 100) {
-                    if (DefinitionSub21.anInt9282 == 1 || JaclibLoader.anInt167 != -1) {
-                        if (DefinitionSub21.anInt9282 != 1) {
+                    if (DefinitionSub21.cameraMode == 1 || JaclibLoader.anInt167 != -1) {
+                        if (DefinitionSub21.cameraMode != 1) {
                             i_11_ = ShaderLinker.anInt10163;
                             i_10_ = JaclibLoader.anInt167;
                         }
