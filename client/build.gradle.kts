@@ -18,14 +18,9 @@ java {
     sourceSets {
         main {
             // All roots stay in the Java *unnamed* (default) package — a named package
-            // cannot reference the 634 Class* types. Extra dirs mirror client domains:
-            //   src        — RS634 deob core (+ toolkit short names)
-            //   fonts      — BitmapFont + software/GL/jaclib backends
-            //   input      — MouseHandler / AWT mouse
-            //   menu       — MenuEntry / DefaultClickSwapper
-            //   void       — host extras (LoginPrefs, MobileKeyboard)
-            //   microbot   — bot runtime / HUD / mouse backends
-            //   rs2        — Rs2* scripting API (used by microbot)
+            // cannot reference the 634 types. Nested dirs (toolkit/gl, …) are EACH a
+            // separate srcDir so the directory name is not treated as a package.
+            // See client/microbot/README.md for the domain map.
             java.srcDirs(
                 "src",
                 "fonts",
@@ -34,6 +29,35 @@ java {
                 "void",
                 "microbot",
                 "rs2",
+                "toolkit/base",
+                "toolkit/gl",
+                "toolkit/software",
+                "toolkit/d3d",
+                "shaders/base",
+                "shaders/gl",
+                "shaders/d3d",
+                "sprites",
+                "scene/graph",
+                "scene/particles",
+                "scene/buffers",
+                "entities",
+                "nodes",
+                "defs",
+                "cache",
+                "net/socket",
+                "net/crypto",
+                "net/http",
+                "net/packet",
+                "media/audio",
+                "media/ogg",
+                "media/video",
+                "script",
+                "ifaces",
+                "native",
+                "text",
+                "display",
+                "components",
+                "misc",
             )
             resources.srcDirs("resources")
         }

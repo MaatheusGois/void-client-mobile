@@ -55,3 +55,14 @@ Total de pacotes: 40
 ## Como ler
 
 Cada documento lista **classe por classe, função por função** com declaração, campos, métodos, subsistema e relações. Nomes ofuscados têm papel inferido.
+
+## Layout de pastas do client (Gradle source roots)
+
+Os `.java` do 634 ficam no **default package**; pastas aninhadas são só organização.
+Cada folha abaixo é um `srcDir` (ver `client/build.gradle.kts`):
+
+`src`, `fonts`, `input`, `menu`, `void`, `microbot`, `rs2`,
+`toolkit/{base,gl,software,d3d}`, `shaders/{base,gl,d3d}`, `sprites`,
+`scene/{graph,particles,buffers}`, `entities`, `nodes`, `defs`, `cache`,
+`net/{socket,crypto,http,packet}`, `media/{audio,ogg,video}`,
+`script`, `ifaces`, `native`, `text`, `display`, `components`, `misc`.

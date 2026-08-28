@@ -11,19 +11,48 @@ Gradle source root for clarity.
 
 ## Client source roots
 
-Domain folders next to the 634 core — same relationships as in the original client
-(fonts / input / menu subsystems), plus Void host extras and the automation layer:
+Nested folders on disk; **each leaf that holds `.java` is its own Gradle `srcDir`**
+so the path is never treated as a package name.
 
 | Dir | Contents |
 |-----|----------|
-| `src` | RS634 deob core + toolkit short names (`ha`, …) |
+| `src` | Bootstrap / host loop (`Loader`, `client`, `Applet_*`, loading, debug) |
 | `fonts` | `BitmapFont` + software / OpenGL / jaclib backends |
 | `input` | `MouseHandler`, `AwtMouseHandler`, `BasicMouseHandler` |
-| `menu` | `MenuEntry`, `DefaultClickSwapper` |
+| `menu` | `MenuEntry`, `DefaultClickSwapper`, `MenuOpener` |
 | `void` | `LoginPrefs`, `MobileKeyboard` |
 | `microbot` | bot runtime / panel / mouse backends |
 | `rs2` | `Rs2*` scripting API (used by microbot) |
+| `toolkit/base` | `ha`, `ha_Sub3`, `ToolkitFactory`, matrix helpers |
+| `toolkit/gl` | `oa`, `ha_Sub2`, `Gl*`, `AbstractGlTexture*` |
+| `toolkit/software` | `ha_Sub1` |
+| `toolkit/d3d` | `D3DToolkit`, `dxVertexLayout`, peers |
+| `shaders/base` | `aa*`, `AbstractShader*`, `ShaderProgram*`, compilers |
+| `shaders/gl` | OpenGL / water shaders |
+| `shaders/d3d` | `D3DShader` |
+| `sprites` | `Sprite*` + `Component24` tree |
+| `scene/graph` | `Renderable*`, `SceneManager`, overlays |
+| `scene/particles` | `Particle*` |
+| `scene/buffers` | `s*`, `t` heightmap / buffer-cache |
+| `entities` | `Player`, `Npc`, shared parents |
+| `nodes` | `Node*`, `HashNode*`, `HashTable` |
+| `defs` | `Definition*`, `*Definition` |
+| `cache` | `Cache*`, LRU, seekable file, inflate |
+| `net/socket` | streams, connectors, request processor |
+| `net/crypto` | RSA |
+| `net/http` | browser / news / cookies |
+| `net/packet` | `Buffer`, `PacketReader`, abstract buffers |
+| `media/audio` | audio lines / mixer |
+| `media/ogg` | Ogg streams |
+| `media/video` | Theora / video ads |
+| `script` | `ClientScriptExecutor` |
+| `ifaces` | `Interface1`–`21` + impls |
+| `native` | `za*` / `ya` / `r*` JNI peers + loaders |
+| `text` | text builders / formatters |
+| `display` | `DisplayModeManager`, `ScreenModeManager` |
+| `components` | opaque `Component*` staging |
+| `misc` | unclassified `DisplayModeManagerContainer*` |
 
 Wired from:
-- `client/build.gradle.kts` → `java.srcDirs(...)` lists every root above
-- Android / iOS `prepareClientSources` merges all trees into `generated/client`
+- `client/build.gradle.kts` → `java.srcDirs(...)` lists every leaf above
+- Android / iOS `prepareClientSources` flattens `client/**/*.java` into `generated/client`

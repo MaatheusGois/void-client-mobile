@@ -33,16 +33,17 @@ android {
 }
 
 val prepareClientSources by tasks.registering(Copy::class) {
-    // Flat merge into generated/client (all default package). Folder roots are
-    // organizational only — see client/build.gradle.kts.
+    // Flat merge into generated/client (all default package). Nested domain folders
+    // under client/ are organizational only — each .java must land at the dest root.
     val clientDir = rootProject.projectDir.resolve("../client")
-    from(clientDir.resolve("src"))
-    from(clientDir.resolve("fonts"))
-    from(clientDir.resolve("input"))
-    from(clientDir.resolve("menu"))
-    from(clientDir.resolve("void"))
-    from(clientDir.resolve("microbot"))
-    from(clientDir.resolve("rs2"))
+    from(clientDir) {
+        include("**/*.java")
+        exclude("build/**")
+        eachFile {
+            path = name
+        }
+        includeEmptyDirs = false
+    }
     into(layout.buildDirectory.dir("generated/client"))
     filter { line ->
         line
