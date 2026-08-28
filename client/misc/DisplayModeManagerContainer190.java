@@ -28,7 +28,7 @@ final class DisplayModeManagerContainer190
     private short[] aShortArray5416;
     static int anInt5417;
     private int anInt5418;
-    private final ha_Sub3 aHa_Sub3_5419;
+    private final GlToolkitSub3 aHa_Sub3_5419;
     static String aString5420;
     static int anInt5421;
     static int anInt5422;
@@ -152,7 +152,7 @@ final class DisplayModeManagerContainer190
                     float f_2_ = (0.3333333F * (float) ((anIntArray5429[class353.anInt4339]) + (anIntArray5429[class353.anInt4344]) + (anIntArray5429[class353.anInt4349])));
                     float f_3_ = (f_2_ * HashNodeSub4.aFloat9516 + (JagTheoraDecoder.aFloat1010 * f + f_1_ * Component252.aFloat10199) + Component35.aFloat4268);
                     float f_4_ = (NodeSub12.aFloat6752 + (RenderableSub6.aFloat6430 * f_2_ + (NodeSub20.aFloat6835 * f + f_1_ * Component200.aFloat3710)));
-                    float f_5_ = Component49.aFloat4673 + (Component45.aFloat4338 * f_1_ + f * ShaderCompilerSub3.aFloat6523 + f_2_ * ha.aFloat4582);
+                    float f_5_ = Component49.aFloat4673 + (Component45.aFloat4338 * f_1_ + f * ShaderCompilerSub3.aFloat6523 + f_2_ * GraphicsToolkit.aFloat4582);
                     float f_6_ = ((float) (1.0 / Math.sqrt(f_5_ * f_5_ + (f_4_ * f_4_ + f_3_ * f_3_))) * (float) class353.anInt4347);
                     MatrixSub2 class101_sub2 = aHa_Sub3_5419.method3934(-96);
                     class101_sub2.method936(class334.anInt4151, 0, (class353.aShort4340 * class334.anInt4162) >> 7, (-(f_3_ * f_6_) + ((float) class334.anInt4158 + f_3_)), -(f_6_ * f_5_) + f_5_, ((float) class334.anInt4154 + f_4_ - f_4_ * f_6_), (class334.anInt4165 * class353.aShort4341) >> 7);
@@ -271,7 +271,7 @@ final class DisplayModeManagerContainer190
         return bool_11_;
     }
 
-    final int na() {
+    final int ShaderImpl() {
         anInt5523++;
         if (!aBoolean5477) method675(0);
         return anInt5510;
@@ -322,7 +322,7 @@ final class DisplayModeManagerContainer190
         DefinitionSub4.menuEntries.method1996(115);
         MenuEntry.aClass356_9603.method3481(0);
         Component237.aClass107_3022.method1009(2110355138);
-        ha_Sub2.method3743((byte) 6, ImageDefinition.aMenuEntry_9144);
+        GlToolkitSub2.method3743((byte) 6, ImageDefinition.aMenuEntry_9144);
     }
 
     final void VA(int i) {
@@ -347,7 +347,7 @@ final class DisplayModeManagerContainer190
         }
     }
 
-    final r ba(r var_r) {
+    final r BufferedToolkit(r var_r) {
         try {
             anInt5513++;
             if (anInt5475 == 0) return null;
@@ -372,9 +372,9 @@ final class DisplayModeManagerContainer190
             }
             int i_27_ = 1 + (i_24_ - i);
             int i_28_ = 1 + -i_25_ + i_26_;
-            r_Sub1 var_r_Sub1 = (r_Sub1) var_r;
-            r_Sub1 var_r_Sub1_29_;
-            if (var_r_Sub1 == null || !var_r_Sub1.method3291(i_27_, i_28_, (byte) -59)) var_r_Sub1_29_ = new r_Sub1(aHa_Sub3_5419, i_27_, i_28_);
+            CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
+            CacheNodeSub1 var_r_Sub1_29_;
+            if (var_r_Sub1 == null || !var_r_Sub1.method3291(i_27_, i_28_, (byte) -59)) var_r_Sub1_29_ = new CacheNodeSub1(aHa_Sub3_5419, i_27_, i_28_);
             else {
                 var_r_Sub1_29_ = var_r_Sub1;
                 var_r_Sub1_29_.method3289(108);
@@ -387,7 +387,7 @@ final class DisplayModeManagerContainer190
         }
     }
 
-    final void wa() {
+    final void Interface4Impl() {
         anInt5484++;
         for (int i = 0; anInt5497 > i; i++) {
             anIntArray5511[i] = anIntArray5511[i] + 7 >> 4;
@@ -414,7 +414,7 @@ final class DisplayModeManagerContainer190
             HashNodeSub4.aFloat9516 = ((class101_sub2_34_.aFloat5704 * class101_sub2.aFloat5716) + ((class101_sub2.aFloat5704 * class101_sub2_34_.aFloat5711) + (class101_sub2.aFloat5732 * class101_sub2_34_.aFloat5700)));
             ShaderCompilerSub3.aFloat6523 = ((class101_sub2.aFloat5736 * class101_sub2_34_.aFloat5716) + ((class101_sub2_34_.aFloat5691 * class101_sub2.aFloat5708) + (class101_sub2.aFloat5711 * class101_sub2_34_.aFloat5736)));
             Component200.aFloat3710 = ((class101_sub2.aFloat5722 * class101_sub2_34_.aFloat5722) + (class101_sub2_34_.aFloat5708 * class101_sub2.aFloat5700) + (class101_sub2_34_.aFloat5732 * class101_sub2.aFloat5691));
-            ha.aFloat4582 = ((class101_sub2.aFloat5704 * class101_sub2_34_.aFloat5736) + (class101_sub2_34_.aFloat5691 * class101_sub2.aFloat5732) + (class101_sub2.aFloat5716 * class101_sub2_34_.aFloat5716));
+            GraphicsToolkit.aFloat4582 = ((class101_sub2.aFloat5704 * class101_sub2_34_.aFloat5736) + (class101_sub2_34_.aFloat5691 * class101_sub2.aFloat5732) + (class101_sub2.aFloat5716 * class101_sub2_34_.aFloat5716));
             Component252.aFloat10199 = ((class101_sub2.aFloat5691 * class101_sub2_34_.aFloat5704) + ((class101_sub2_34_.aFloat5711 * class101_sub2.aFloat5700) + (class101_sub2_34_.aFloat5700 * class101_sub2.aFloat5722)));
             NodeSub20.aFloat6835 = ((class101_sub2_34_.aFloat5732 * class101_sub2.aFloat5736) + ((class101_sub2.aFloat5711 * class101_sub2_34_.aFloat5708) + (class101_sub2.aFloat5708 * class101_sub2_34_.aFloat5722)));
             JagTheoraDecoder.aFloat1010 = ((class101_sub2_34_.aFloat5704 * class101_sub2.aFloat5736) + ((class101_sub2_34_.aFloat5700 * class101_sub2.aFloat5708) + (class101_sub2.aFloat5711 * class101_sub2_34_.aFloat5711)));
@@ -441,38 +441,38 @@ final class DisplayModeManagerContainer190
             int i_52_ = -(i_46_ << i_30_) + i_49_;
             int i_53_ = (i_44_ << i_30_) + i_47_;
             int i_54_ = i_48_ + (i_45_ << i_30_);
-            s_Sub2.anIntArray8269[0] = i_50_;
+            BufferCacheSub2.anIntArray8269[0] = i_50_;
             int i_55_ = (i_46_ << i_30_) + i_49_;
             MenuEntry.anIntArray9612[0] = i_51_;
-            s_Sub2.anIntArray8269[1] = i_53_;
+            BufferCacheSub2.anIntArray8269[1] = i_53_;
             Component126.anIntArray4463[0] = i_52_;
             MenuEntry.anIntArray9612[1] = i_51_;
             Component126.anIntArray4463[1] = i_52_;
-            s_Sub2.anIntArray8269[2] = i_50_;
+            BufferCacheSub2.anIntArray8269[2] = i_50_;
             MenuEntry.anIntArray9612[2] = i_54_;
             Component126.anIntArray4463[2] = i_52_;
-            s_Sub2.anIntArray8269[3] = i_53_;
+            BufferCacheSub2.anIntArray8269[3] = i_53_;
             MenuEntry.anIntArray9612[3] = i_54_;
             Component126.anIntArray4463[3] = i_52_;
-            s_Sub2.anIntArray8269[4] = i_50_;
+            BufferCacheSub2.anIntArray8269[4] = i_50_;
             MenuEntry.anIntArray9612[4] = i_51_;
             Component126.anIntArray4463[4] = i_55_;
-            s_Sub2.anIntArray8269[5] = i_53_;
+            BufferCacheSub2.anIntArray8269[5] = i_53_;
             MenuEntry.anIntArray9612[5] = i_51_;
             Component126.anIntArray4463[5] = i_55_;
-            s_Sub2.anIntArray8269[6] = i_50_;
+            BufferCacheSub2.anIntArray8269[6] = i_50_;
             MenuEntry.anIntArray9612[6] = i_54_;
-            s_Sub2.anIntArray8269[7] = i_53_;
+            BufferCacheSub2.anIntArray8269[7] = i_53_;
             Component126.anIntArray4463[6] = i_55_;
             MenuEntry.anIntArray9612[7] = i_54_;
             Component126.anIntArray4463[7] = i_55_;
             for (int i_56_ = 0; i_56_ < 8; i_56_++) {
-                float f_57_ = (float) s_Sub2.anIntArray8269[i_56_];
+                float f_57_ = (float) BufferCacheSub2.anIntArray8269[i_56_];
                 float f_58_ = (float) Component126.anIntArray4463[i_56_];
                 float f_59_ = (float) MenuEntry.anIntArray9612[i_56_];
                 float f_60_ = (f_57_ * NodeSub20.aFloat6835 + f_59_ * Component200.aFloat3710 + RenderableSub6.aFloat6430 * f_58_ + f_35_);
                 float f_61_ = (JagTheoraDecoder.aFloat1010 * f_57_ + f_59_ * Component252.aFloat10199 + f_58_ * HashNodeSub4.aFloat9516 + f);
-                float f_62_ = f_36_ + (f_58_ * ha.aFloat4582 + (Component45.aFloat4338 * f_59_ + ShaderCompilerSub3.aFloat6523 * f_57_));
+                float f_62_ = f_36_ + (f_58_ * GraphicsToolkit.aFloat4582 + (Component45.aFloat4338 * f_59_ + ShaderCompilerSub3.aFloat6523 * f_57_));
                 if (f_62_ >= (float) aHa_Sub3_5419.anInt8095) {
                     if (i_31_ > 0) f_62_ = (float) i_31_;
                     float f_63_ = (f_61_ * (float) i_42_ / f_62_ + (float) aHa_Sub3_5419.anInt8094);
@@ -494,7 +494,7 @@ final class DisplayModeManagerContainer190
                     float f_66_ = (float) anIntArray5429[i_65_];
                     float f_67_ = (float) anIntArray5519[i_65_];
                     float f_68_ = (float) anIntArray5511[i_65_];
-                    float f_69_ = (ha.aFloat4582 * f_66_ + (f_68_ * ShaderCompilerSub3.aFloat6523 + Component45.aFloat4338 * f_67_) + f_36_);
+                    float f_69_ = (GraphicsToolkit.aFloat4582 * f_66_ + (f_68_ * ShaderCompilerSub3.aFloat6523 + Component45.aFloat4338 * f_67_) + f_36_);
                     float f_70_ = f + (Component252.aFloat10199 * f_67_ + JagTheoraDecoder.aFloat1010 * f_68_ + f_66_ * HashNodeSub4.aFloat9516);
                     float f_71_ = (RenderableSub6.aFloat6430 * f_66_ + (f_68_ * NodeSub20.aFloat6835 + Component200.aFloat3710 * f_67_) + f_35_);
                     if (f_69_ >= (float) aHa_Sub3_5419.anInt8095) {
@@ -803,7 +803,7 @@ final class DisplayModeManagerContainer190
         aBoolean5477 = false;
     }
 
-    private final void method665(int i, r_Sub1 var_r_Sub1) {
+    private final void method665(int i, CacheNodeSub1 var_r_Sub1) {
         try {
             if (anInt5475 > Component141.anIntArray9949.length) {
                 DisplayModeManagerContainer204.anIntArray1593 = new int[anInt5475];
@@ -1273,21 +1273,21 @@ final class DisplayModeManagerContainer190
                                 RenderableSub6.aFloat6430 = (((class101_sub2.aFloat5708) * (class101_sub2_180_.aFloat5704)) + ((class101_sub2.aFloat5722) * class101_sub2_180_.aFloat5732) + ((class101_sub2.aFloat5732) * class101_sub2_180_.aFloat5716));
                                 ShaderCompilerSub3.aFloat6523 = (((class101_sub2_180_.aFloat5736) * (class101_sub2.aFloat5716)) + (((class101_sub2.aFloat5691) * class101_sub2_180_.aFloat5708) + ((class101_sub2.aFloat5736) * (class101_sub2_180_.aFloat5711))));
                                 NodeSub20.aFloat6835 = (((class101_sub2_180_.aFloat5711) * (class101_sub2.aFloat5708)) + ((class101_sub2_180_.aFloat5708) * (class101_sub2.aFloat5722)) + ((class101_sub2.aFloat5732) * class101_sub2_180_.aFloat5736));
-                                ha.aFloat4582 = (((class101_sub2.aFloat5736) * (class101_sub2_180_.aFloat5704)) + ((class101_sub2.aFloat5691) * class101_sub2_180_.aFloat5732) + ((class101_sub2_180_.aFloat5716) * (class101_sub2.aFloat5716)));
+                                GraphicsToolkit.aFloat4582 = (((class101_sub2.aFloat5736) * (class101_sub2_180_.aFloat5704)) + ((class101_sub2.aFloat5691) * class101_sub2_180_.aFloat5732) + ((class101_sub2_180_.aFloat5716) * (class101_sub2.aFloat5716)));
                             }
                             if (class318_sub3 != null) {
                                 int i_192_ = anInt5467 + anInt5507 >> 1;
                                 int i_193_ = anInt5418 + anInt5443 >> 1;
                                 int i_194_ = (int) (Component35.aFloat4268 + ((float) i_192_ * JagTheoraDecoder.aFloat1010) + ((Component252.aFloat10199) * (float) anInt5461) + ((float) i_193_ * (HashNodeSub4.aFloat9516)));
                                 int i_195_ = (int) (NodeSub12.aFloat6752 + (NodeSub20.aFloat6835 * (float) i_192_) + ((float) anInt5461 * Component200.aFloat3710) + (RenderableSub6.aFloat6430 * (float) i_193_));
-                                int i_196_ = (int) (((float) anInt5461 * Component45.aFloat4338) + ((ShaderCompilerSub3.aFloat6523 * (float) i_192_) + Component49.aFloat4673) + (float) i_193_ * ha.aFloat4582);
+                                int i_196_ = (int) (((float) anInt5461 * Component45.aFloat4338) + ((ShaderCompilerSub3.aFloat6523 * (float) i_192_) + Component49.aFloat4673) + (float) i_193_ * GraphicsToolkit.aFloat4582);
                                 int i_197_ = (int) (((float) anInt5509 * (Component252.aFloat10199)) + (Component35.aFloat4268 + (JagTheoraDecoder.aFloat1010 * (float) i_192_)) + (HashNodeSub4.aFloat9516 * (float) i_193_));
                                 int i_198_ = (int) ((RenderableSub6.aFloat6430 * (float) i_193_) + (NodeSub12.aFloat6752 + (NodeSub20.aFloat6835 * (float) i_192_) + (Component200.aFloat3710 * (float) anInt5509)));
                                 class318_sub3.anInt6402 = ((i_195_ * aHa_Sub3_5419.anInt8134 / i) + aHa_Sub3_5419.anInt8130);
                                 class318_sub3.anInt6405 = (aHa_Sub3_5419.anInt8094 - -(i_194_ * (aHa_Sub3_5419.anInt8129) / i));
                                 class318_sub3.anInt6404 = (aHa_Sub3_5419.anInt8130 - -(aHa_Sub3_5419.anInt8134 * i_198_ / i));
                                 class318_sub3.anInt6406 = ((i_197_ * aHa_Sub3_5419.anInt8129 / i) + aHa_Sub3_5419.anInt8094);
-                                int i_199_ = (int) (ha.aFloat4582 * (float) i_193_ + (((float) anInt5509 * Component45.aFloat4338) + ((ShaderCompilerSub3.aFloat6523 * (float) i_192_) + Component49.aFloat4673)));
+                                int i_199_ = (int) (GraphicsToolkit.aFloat4582 * (float) i_193_ + (((float) anInt5509 * Component45.aFloat4338) + ((ShaderCompilerSub3.aFloat6523 * (float) i_192_) + Component49.aFloat4673)));
                                 if (i_196_ >= aHa_Sub3_5419.anInt8095 || (aHa_Sub3_5419.anInt8095 <= i_199_)) {
                                     class318_sub3.anInt6403 = (aHa_Sub3_5419.anInt8094 + (((anInt5510 + i_194_) * (aHa_Sub3_5419.anInt8129) / i) + -class318_sub3.anInt6405));
                                     class318_sub3.aBoolean6401 = true;
@@ -1713,7 +1713,7 @@ final class DisplayModeManagerContainer190
                                 JagTheoraDecoder.aFloat1010 = (((class101_sub2.aFloat5704) * (class101_sub2_307_.aFloat5736)) + (((class101_sub2.aFloat5700) * class101_sub2_307_.aFloat5708) + ((class101_sub2.aFloat5711) * (class101_sub2_307_.aFloat5711))));
                                 HashNodeSub4.aFloat9516 = (((class101_sub2.aFloat5711) * (class101_sub2_307_.aFloat5704)) + ((class101_sub2_307_.aFloat5732) * (class101_sub2.aFloat5700)) + ((class101_sub2.aFloat5704) * class101_sub2_307_.aFloat5716));
                                 NodeSub20.aFloat6835 = (((class101_sub2.aFloat5708) * (class101_sub2_307_.aFloat5711)) + ((class101_sub2.aFloat5722) * class101_sub2_307_.aFloat5708) + ((class101_sub2.aFloat5732) * class101_sub2_307_.aFloat5736));
-                                ha.aFloat4582 = (((class101_sub2_307_.aFloat5716) * (class101_sub2.aFloat5716)) + ((class101_sub2_307_.aFloat5704 * (class101_sub2.aFloat5736)) + (class101_sub2_307_.aFloat5732 * (class101_sub2.aFloat5691))));
+                                GraphicsToolkit.aFloat4582 = (((class101_sub2_307_.aFloat5716) * (class101_sub2.aFloat5716)) + ((class101_sub2_307_.aFloat5704 * (class101_sub2.aFloat5736)) + (class101_sub2_307_.aFloat5732 * (class101_sub2.aFloat5691))));
                             }
                             if (class318_sub3 != null) {
                                 boolean bool = false;
@@ -1722,7 +1722,7 @@ final class DisplayModeManagerContainer190
                                 int i_321_ = anInt5418 + anInt5443 >> 1;
                                 int i_322_ = (int) (((float) anInt5461 * (Component252.aFloat10199)) + (Component35.aFloat4268 + (JagTheoraDecoder.aFloat1010 * (float) i_320_)) + (HashNodeSub4.aFloat9516 * (float) i_321_));
                                 int i_323_ = (int) ((RenderableSub6.aFloat6430 * (float) i_321_) + (((float) i_320_ * NodeSub20.aFloat6835) + NodeSub12.aFloat6752 + (Component200.aFloat3710 * (float) anInt5461)));
-                                int i_324_ = (int) (Component49.aFloat4673 + ((float) i_320_ * ShaderCompilerSub3.aFloat6523) + ((float) anInt5461 * Component45.aFloat4338) + (float) i_321_ * ha.aFloat4582);
+                                int i_324_ = (int) (Component49.aFloat4673 + ((float) i_320_ * ShaderCompilerSub3.aFloat6523) + ((float) anInt5461 * Component45.aFloat4338) + (float) i_321_ * GraphicsToolkit.aFloat4582);
                                 if (aHa_Sub3_5419.anInt8095 > i_324_) bool = true;
                                 else {
                                     class318_sub3.anInt6402 = (aHa_Sub3_5419.anInt8130 - -(i_323_ * (aHa_Sub3_5419.anInt8134) / i_324_));
@@ -1730,7 +1730,7 @@ final class DisplayModeManagerContainer190
                                 }
                                 int i_325_ = (int) ((Component252.aFloat10199) * (float) anInt5509 + (Component35.aFloat4268 + (JagTheoraDecoder.aFloat1010 * (float) i_320_)) + ((float) i_321_ * (HashNodeSub4.aFloat9516)));
                                 int i_326_ = (int) ((Component200.aFloat3710 * (float) anInt5509) + (NodeSub12.aFloat6752 + ((float) i_320_ * (NodeSub20.aFloat6835))) + ((float) i_321_ * RenderableSub6.aFloat6430));
-                                int i_327_ = (int) (((float) anInt5509 * Component45.aFloat4338) + (Component49.aFloat4673 + ((float) i_320_ * ShaderCompilerSub3.aFloat6523)) + ha.aFloat4582 * (float) i_321_);
+                                int i_327_ = (int) (((float) anInt5509 * Component45.aFloat4338) + (Component49.aFloat4673 + ((float) i_320_ * ShaderCompilerSub3.aFloat6523)) + GraphicsToolkit.aFloat4582 * (float) i_321_);
                                 if (aHa_Sub3_5419.anInt8095 > i_327_) bool = true;
                                 else {
                                     class318_sub3.anInt6406 = (aHa_Sub3_5419.anInt8094 + (i_325_ * (aHa_Sub3_5419.anInt8129) / i_327_));
@@ -1806,7 +1806,7 @@ final class DisplayModeManagerContainer190
         return true;
     }
 
-    DisplayModeManagerContainer190(ha_Sub3 var_ha_Sub3, DisplayModeManagerContainer77 class124, int i, int i_334_, int i_335_, int i_336_) {
+    DisplayModeManagerContainer190(GlToolkitSub3 var_ha_Sub3, DisplayModeManagerContainer77 class124, int i, int i_334_, int i_335_, int i_336_) {
         this(var_ha_Sub3, i, i_336_, true, false);
         do {
             try {
@@ -2315,7 +2315,7 @@ final class DisplayModeManagerContainer190
     }
 
     private final void method672(int i) {
-        if (i != 416776206) wa();
+        if (i != 416776206) Interface4Impl();
         anInt5441++;
         if (anInt5516 != 0) {
             if (method660(i ^ ~0x18d78060) && method666(-128)) {
@@ -2651,7 +2651,7 @@ final class DisplayModeManagerContainer190
         aBoolean5477 = false;
     }
 
-    final void aa(short i, short i_570_) {
+    final void Shader(short i, short i_570_) {
         anInt5403++;
         d var_d = aHa_Sub3_5419.aD4579;
         for (int i_571_ = 0; anInt5478 > i_571_; i_571_++) {
@@ -3188,7 +3188,7 @@ final class DisplayModeManagerContainer190
         }
     }
 
-    DisplayModeManagerContainer190(ha_Sub3 var_ha_Sub3, int i, int i_764_, boolean bool, boolean bool_765_) {
+    DisplayModeManagerContainer190(GlToolkitSub3 var_ha_Sub3, int i, int i_764_, boolean bool, boolean bool_765_) {
         aBoolean5428 = false;
         aBoolean5477 = false;
         anInt5478 = 0;

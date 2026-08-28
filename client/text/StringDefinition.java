@@ -109,7 +109,7 @@ final class StringDefinition extends HashNode {
                             if (i_15_ <= i_13_) i_17_ = -i_15_ + i_13_;
                             else i_17_ = i_15_ + -i_13_;
                             if (i_16_ == 0 && i_17_ == 0 || -AbstractShaderSub4.anInt7319 >= i_16_ || (AbstractShaderSub4.anInt7319 <= i_16_) || i_17_ <= -ParametricDefinition.anInt9109 || ParametricDefinition.anInt9109 <= i_17_)
-                                ClientErrorReporter.method1242(("RC: " + i_12_ + "," + i_13_ + " " + i_14_ + "," + i_15_ + " " + za_Sub2.regionTileX + "," + Component330.regionTileY), null, 15004);
+                                ClientErrorReporter.method1242(("RC: " + i_12_ + "," + i_13_ + " " + i_14_ + "," + i_15_ + " " + NodeBaseSub2.regionTileX + "," + Component330.regionTileY), null, 15004);
                             else if (i_16_ <= i_17_) {
                                 int i_18_ = i_16_ * 65536 / i_17_;
                                 int i_19_ = 32768;

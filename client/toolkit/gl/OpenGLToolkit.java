@@ -1,17 +1,17 @@
-/* oa - Decompiled by JODE
+/* OpenGLToolkit - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 /**
- * RENAMED from `oa` (JODE-obfuscated).
- * OpenGL rendering toolkit. extends ha (ha) and implements Interface19; the concrete OpenGL backend that rasterizes models/textures via JOGL/GL calls.
+ * RENAMED from `OpenGLToolkit` (JODE-obfuscated).
+ * OpenGL rendering toolkit. extends GraphicsToolkit (GraphicsToolkit) and implements Interface19; the concrete OpenGL backend that rasterizes models/textures via JOGL/GL calls.
  */
 
 import java.awt.*;
 import java.lang.reflect.Method;
 
-final class oa extends ha implements Interface19 {
-    private ya aYa5121;
+final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
+    private NativeHandle aYa5121;
     private static final int[] anIntArray5122 = new int[Math.max(Math.max(104, 20), 24573)];
     long nativeid = 0L;
     private final NodeList aClass262_5123;
@@ -51,14 +51,14 @@ final class oa extends ha implements Interface19 {
         return null;
     }
 
-    final void method3651(za var_za) {
-        aYa5121 = (ya) var_za;
+    final void method3651(NodeBase var_za) {
+        aYa5121 = (NativeHandle) var_za;
         va(var_za);
     }
 
     public final native void w(boolean bool);
 
-    final native void A(int i, aa var_aa, int i_11_, int i_12_);
+    final native void A(int i, Shader var_aa, int i_11_, int i_12_);
 
     final native void fillRect(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_);
 
@@ -137,7 +137,7 @@ final class oa extends ha implements Interface19 {
         return new n(this, aYa5121, class143, class207s, null);
     }
 
-    private final native void wa(int i, int i_62_, int i_63_, int i_64_, int i_65_, int i_66_);
+    private final native void Interface4Impl(int i, int i_62_, int i_63_, int i_64_, int i_65_, int i_66_);
 
     final boolean method3644() {
         return true;
@@ -200,8 +200,8 @@ final class oa extends ha implements Interface19 {
 
     final native void DA(int i, int i_89_, int i_90_, int i_91_);
 
-    final za method3702(int i) {
-        ya var_ya = new ya(this, i);
+    final NodeBase method3702(int i) {
+        NativeHandle var_ya = new NativeHandle(this, i);
         aClass262_5123.method1999(var_ya, -20180);
         return var_ya;
     }
@@ -219,7 +219,7 @@ final class oa extends ha implements Interface19 {
         return i_93_ & i_94_ ^ i_94_;
     }
 
-    final native void xa(float f);
+    final native void DualToolkit(float f);
 
     final void method3701(Canvas canvas) {
         if (aP5137.aCanvas5147 == canvas) method3677(null);
@@ -230,7 +230,7 @@ final class oa extends ha implements Interface19 {
         }
     }
 
-    final void method3636(int i, int i_95_, int i_96_, int i_97_, int i_98_, int i_99_, aa var_aa, int i_100_, int i_101_) {
+    final void method3636(int i, int i_95_, int i_96_, int i_97_, int i_98_, int i_99_, Shader var_aa, int i_100_, int i_101_) {
         Z(i, i_95_, i_96_, i_97_, i_98_, i_99_, var_aa, i_100_, i_101_);
     }
 
@@ -265,7 +265,7 @@ final class oa extends ha implements Interface19 {
             aYa5121 = null;
             aClass101_5131 = null;
             aClass356_5126.method3481(0);
-            for (ya var_ya = (ya) aClass262_5123.method1995(4); var_ya != null; var_ya = (ya) aClass262_5123.method1990((byte) 36))
+            for (NativeHandle var_ya = (NativeHandle) aClass262_5123.method1995(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.method1990((byte) 36))
                 var_ya.ga();
             aClass262_5123.method1996(117);
             FA();
@@ -304,7 +304,7 @@ final class oa extends ha implements Interface19 {
         return new j(this, i, i_116_);
     }
 
-    final native void ya();
+    final native void NativeHandle();
 
     final native int I();
 
@@ -315,7 +315,7 @@ final class oa extends ha implements Interface19 {
     final void method3646(int i) {
         Component36.method1948((byte) -71);
         d(i);
-        for (ya var_ya = (ya) aClass262_5123.method1995(4); var_ya != null; var_ya = (ya) aClass262_5123.method1990((byte) 40))
+        for (NativeHandle var_ya = (NativeHandle) aClass262_5123.method1995(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.method1990((byte) 40))
             var_ya.r();
     }
 
@@ -368,7 +368,7 @@ final class oa extends ha implements Interface19 {
 
     final native int r(int i, int i_147_, int i_148_, int i_149_, int i_150_, int i_151_, int i_152_);
 
-    private final native void va(za var_za);
+    private final native void va(NodeBase var_za);
 
     final void method3643(Canvas canvas, int i, int i_153_) {
         p var_p = (p) aClass356_5126.method3480(canvas.hashCode(), -6008);
@@ -411,9 +411,9 @@ final class oa extends ha implements Interface19 {
         N(i, anIntArray5130, aFloatArray5138);
     }
 
-    final native void za(int i, int i_160_, int i_161_, int i_162_, int i_163_);
+    final native void NodeBase(int i, int i_160_, int i_161_, int i_162_, int i_163_);
 
-    final native int[] na(int i, int i_164_, int i_165_, int i_166_);
+    final native int[] ShaderImpl(int i, int i_164_, int i_165_, int i_166_);
 
     final void method3647(boolean bool) {
         /* empty */
@@ -443,7 +443,7 @@ final class oa extends ha implements Interface19 {
     }
 
     final DisplayModeManagerContainer204 method3654() {
-        return new ja();
+        return new OpenGLMatrix();
     }
 
     final void method3678(int i) {
@@ -460,7 +460,7 @@ final class oa extends ha implements Interface19 {
         /* empty */
     }
 
-    public oa(Canvas canvas, d var_d, int i, int i_177_) {
+    public OpenGLToolkit(Canvas canvas, d var_d, int i, int i_177_) {
         super(var_d);
         aClass262_5123 = new NodeList();
         anInt5127 = 4096;
@@ -475,8 +475,8 @@ final class oa extends ha implements Interface19 {
                 MA(aD4579, 0, 0);
                 Component54.method566(false, true, (byte) 23);
                 aBoolean5142 = true;
-                aClass101_5131 = new ja();
-                method3638(new ja());
+                aClass101_5131 = new OpenGLMatrix();
+                method3638(new OpenGLMatrix());
                 method3631(1);
                 method3659(0);
                 if (canvas == null) break;
@@ -506,18 +506,18 @@ final class oa extends ha implements Interface19 {
     final native void ZA(int i, float f, float f_186_, float f_187_, float f_188_, float f_189_);
 
     final Interface4 method3634(Interface3 interface3, Interface13 interface13) {
-        return new wa(this, (j) interface3, (xa) interface13);
+        return new Interface4Impl(this, (j) interface3, (DualToolkit) interface13);
     }
 
     final void method3687(Interface4 interface4) {
-        wa var_wa = (wa) interface4;
+        Interface4Impl var_wa = (Interface4Impl) interface4;
         n(var_wa.aJ4732.nativeid, var_wa.aXa4733.nativeid);
     }
 
     final native void da(int i, int i_190_, int i_191_, int[] is);
 
-    final aa method3661(int i, int i_192_, int[] is, int[] is_193_) {
-        return new na(this, aYa5121, i, i_192_, is, is_193_);
+    final Shader method3661(int i, int i_192_, int[] is, int[] is_193_) {
+        return new ShaderImpl(this, aYa5121, i, i_192_, is, is_193_);
     }
 
     final DisplayModeManagerContainer204 method3640() {
@@ -525,15 +525,15 @@ final class oa extends ha implements Interface19 {
     }
 
     final void method3709(int i, int i_194_, int i_195_, int i_196_, int i_197_, int i_198_) {
-        wa(i, i_194_, i_195_, i_196_, i_197_, i_198_);
+        Interface4Impl(i, i_194_, i_195_, i_196_, i_197_, i_198_);
     }
 
-    private final native void Z(int i, int i_199_, int i_200_, int i_201_, int i_202_, int i_203_, aa var_aa, int i_204_, int i_205_);
+    private final native void Z(int i, int i_199_, int i_200_, int i_201_, int i_202_, int i_203_, Shader var_aa, int i_204_, int i_205_);
 
     final native void C(boolean bool);
 
     final Interface13 method3624(int i, int i_206_) {
-        return new xa(i, i_206_);
+        return new DualToolkit(i, i_206_);
     }
 
     final boolean method3639() {
@@ -559,20 +559,20 @@ final class oa extends ha implements Interface19 {
     }
 
     private final Object OA() {//
-        return new ba(this);
+        return new BufferedToolkit(this);
     }
 
     final boolean method3655() {
         return true;
     }
 
-    final void method3703(int i, int i_212_, int i_213_, int i_214_, int i_215_, int i_216_, aa var_aa, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_) {
+    final void method3703(int i, int i_212_, int i_213_, int i_214_, int i_215_, int i_216_, Shader var_aa, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_) {
         /* empty */
     }
 
     final void method3638(DisplayModeManagerContainer204 class101) {
         aClass101_5125 = class101;
-        ma(((ja) class101).nativeid);
+        ma(((OpenGLMatrix) class101).nativeid);
     }
 
     final void method3672() {

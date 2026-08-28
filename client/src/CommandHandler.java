@@ -285,8 +285,8 @@ final class CommandHandler {
                         if (string.startsWith("rect_debug")) {
                             if (string.length() < 10) Applet_Sub1.method94("Invalid rect_debug value", -94);
                             else {
-                                ha_Sub3.anInt8045 = NodeSub41.method3156(true, string.substring(10).trim());
-                                Applet_Sub1.method94(("rect_debug=" + ha_Sub3.anInt8045), -124);
+                                GlToolkitSub3.anInt8045 = NodeSub41.method3156(true, string.substring(10).trim());
+                                Applet_Sub1.method94(("rect_debug=" + GlToolkitSub3.anInt8045), -124);
                                 return;
                             }
                             return;
@@ -339,7 +339,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("getheight")) {
-                            Applet_Sub1.method94(("Height: " + (aa_Sub1.aSArray5191[(Component72.localPlayer.plane)].method3982((byte) -86, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.x) >> 9))), i ^ 0x1);
+                            Applet_Sub1.method94(("Height: " + (ShaderSub1.aSArray5191[(Component72.localPlayer.plane)].method3982((byte) -86, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.x) >> 9))), i ^ 0x1);
                             return;
                         }
                         if (string.equalsIgnoreCase("resetminimap")) {
@@ -373,8 +373,8 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("getcamerapos")) {
-                            Applet_Sub1.method94(("Pos: " + (Component72.localPlayer.plane) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -za_Sub2.regionTileX) >> 6) + "," + ((Component317.anInt8685 >> 9) + Component330.regionTileY >> 6) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -za_Sub2.regionTileX) & 0x3f) + "," + ((Component317.anInt8685 >> 9) - -Component330.regionTileY & 0x3f) + " Height: " + ((Component300.method2064(WaterSurfaceShader.anInt6246, (Component72.localPlayer.plane), 11219, Component317.anInt8685)) - DisplayModeManagerContainer50.anInt3855)), 126);
-                            Applet_Sub1.method94(("Look: " + (Component72.localPlayer.plane) + "," + (Component48.anInt4336 - -za_Sub2.regionTileX >> 6) + "," + (Component330.regionTileY + Component337.anInt3647 >> 6) + "," + (0x3f & Component48.anInt4336 - -za_Sub2.regionTileX) + "," + (0x3f & Component337.anInt3647 - -Component330.regionTileY) + " Height: " + ((Component300.method2064(Component48.anInt4336, (Component72.localPlayer.plane), 11219, Component337.anInt3647)) - Component221.anInt1797)), -90);
+                            Applet_Sub1.method94(("Pos: " + (Component72.localPlayer.plane) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) >> 6) + "," + ((Component317.anInt8685 >> 9) + Component330.regionTileY >> 6) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) & 0x3f) + "," + ((Component317.anInt8685 >> 9) - -Component330.regionTileY & 0x3f) + " Height: " + ((Component300.method2064(WaterSurfaceShader.anInt6246, (Component72.localPlayer.plane), 11219, Component317.anInt8685)) - DisplayModeManagerContainer50.anInt3855)), 126);
+                            Applet_Sub1.method94(("Look: " + (Component72.localPlayer.plane) + "," + (Component48.anInt4336 - -NodeBaseSub2.regionTileX >> 6) + "," + (Component330.regionTileY + Component337.anInt3647 >> 6) + "," + (0x3f & Component48.anInt4336 - -NodeBaseSub2.regionTileX) + "," + (0x3f & Component337.anInt3647 - -Component330.regionTileY) + " Height: " + ((Component300.method2064(Component48.anInt4336, (Component72.localPlayer.plane), 11219, Component337.anInt3647)) - Component221.anInt1797)), -90);
                             return;
                         }
                         if (string.equals("renderprofile") || string.equals("rp")) {

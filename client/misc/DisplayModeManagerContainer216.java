@@ -20,7 +20,7 @@ final class DisplayModeManagerContainer216
         Component186 class357 = NodeSub46.method3321(i, i_1_, i_2_);
         if (class357 != null) {
             class357.aClass318_Sub1_Sub1_4402 = class318_sub1_sub1;
-            int i_3_ = aa_Sub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
+            int i_3_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
             if (class318_sub1_sub1.method2376(-93)) {
                 if (class318_sub1_sub1.method2377((byte) 122)) {
                     class318_sub1_sub1.aClass318_Sub1_6379 = AudioMixer.aClass318_Sub1Array3226[i_3_];

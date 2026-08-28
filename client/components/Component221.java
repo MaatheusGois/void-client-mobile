@@ -41,7 +41,7 @@ final class Component221
         return 0;
     }
 
-    static final void method1083(ha var_ha, int i, byte i_2_, int i_3_, int i_4_, int i_5_) {
+    static final void method1083(GraphicsToolkit var_ha, int i, byte i_2_, int i_3_, int i_4_, int i_5_) {
         anInt1798++;
         Component158.aHa326 = var_ha;
         Component44.aClass101_905 = Component158.aHa326.method3654();

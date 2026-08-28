@@ -47,7 +47,7 @@ final class DisplayModeManagerContainer104
     static int anInt10363;
     static int anInt10364;
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10352++;
         DisplayModeManagerContainer370 class64 = method2465(var_ha, anInt10355, (anInt10334 == 0 ? 0 : 5) | 0x800, (byte) -82);
         if (class64 == null) return null;
@@ -85,7 +85,7 @@ final class DisplayModeManagerContainer104
         }
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_0_, byte i_1_, int i_2_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_0_, byte i_1_, int i_2_) {
         try {
             anInt10347++;
             if (i_1_ > -106) this.aBoolean10345 = false;
@@ -150,7 +150,7 @@ final class DisplayModeManagerContainer104
         return frame;
     }
 
-    static final void method2464(byte i, int i_11_, int i_12_, int i_13_, ha var_ha, int i_14_, d var_d) {
+    static final void method2464(byte i, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, int i_14_, d var_d) {
         do {
             try {
                 anInt10357++;
@@ -204,7 +204,7 @@ final class DisplayModeManagerContainer104
         } while (false);
     }
 
-    private final DisplayModeManagerContainer370 method2465(ha var_ha, int i, int i_26_, byte i_27_) {
+    private final DisplayModeManagerContainer370 method2465(GraphicsToolkit var_ha, int i, int i_26_, byte i_27_) {
         anInt10353++;
         if (i_27_ != -82) return null;
         Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 122, i);
@@ -227,7 +227,7 @@ final class DisplayModeManagerContainer104
         return aBoolean10338;
     }
 
-    private final void method2467(DisplayModeManagerContainer370 class64, ha var_ha, int i, DisplayModeManagerContainer204 class101) {
+    private final void method2467(DisplayModeManagerContainer370 class64, GraphicsToolkit var_ha, int i, DisplayModeManagerContainer204 class101) {
         do {
             try {
                 class64.method620(class101);
@@ -253,7 +253,7 @@ final class DisplayModeManagerContainer104
         return anInt10356;
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (i != 7) method2387(null, -106);
         anInt10363++;
         return null;
@@ -265,7 +265,7 @@ final class DisplayModeManagerContainer104
         return false;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         if (i >= -125) anInt10331 = 38;
         anInt10354++;
         DisplayModeManagerContainer370 class64 = method2465(var_ha, anInt10355, 0, (byte) -82);
@@ -276,7 +276,7 @@ final class DisplayModeManagerContainer104
         }
     }
 
-    final boolean method2391(ha var_ha, int i, int i_29_, int i_30_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_29_, int i_30_) {
         anInt10346++;
         if (i_30_ != 0) return false;
         return false;

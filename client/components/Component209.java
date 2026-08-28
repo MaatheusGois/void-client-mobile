@@ -14,7 +14,7 @@ final class Component209
     private Interface18_Impl3[] anInterface18_Impl3Array3454;
     Interface18_Impl1 anInterface18_Impl1_3455 = null;
     static int anInt3456;
-    private final ha_Sub3 aHa_Sub3_3457;
+    private final GlToolkitSub3 aHa_Sub3_3457;
     boolean aBoolean3458;
     Interface18_Impl3[] anInterface18_Impl3Array3459;
     static int anInt3460;
@@ -77,7 +77,7 @@ final class Component209
         if (i == -67) aClass217_3453 = null;
     }
 
-    Component209(ha_Sub3 var_ha_Sub3) {
+    Component209(GlToolkitSub3 var_ha_Sub3) {
         anInterface18_Impl3Array3454 = null;
         this.anInterface18_Impl3Array3459 = null;
         aHa_Sub3_3457 = var_ha_Sub3;

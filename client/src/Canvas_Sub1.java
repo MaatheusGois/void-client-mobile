@@ -100,14 +100,14 @@ final class Canvas_Sub1 extends Canvas {
         anInt65++;
     }
 
-    static final DisplayModeManagerContainer370 method122(int i, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_, ha var_ha) {
+    static final DisplayModeManagerContainer370 method122(int i, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_, GraphicsToolkit var_ha) {
         anInt62++;
         if (i_17_ != -35) anInt70 = 10;
         long l = i_16_;
         DisplayModeManagerContainer370 class64 = (DisplayModeManagerContainer370) Component279.aClass60_225.method583(l, 81);
         int i_18_ = 2055;
         if (class64 == null) {
-            DisplayModeManagerContainer77 class124 = Component189.method2277(0, aa_Sub3.aClass45_5207, i_16_, -1);
+            DisplayModeManagerContainer77 class124 = Component189.method2277(0, ShaderSub3.aClass45_5207, i_16_, -1);
             if (class124 == null) return null;
             if (class124.anInt1830 < 13) class124.method1092(2, 105);
             class64 = var_ha.method3625(class124, i_18_, Component382.anInt2275, 64, 768);
@@ -127,8 +127,8 @@ final class Canvas_Sub1 extends Canvas {
         DisplayModeManagerContainer259.anInt3441 = 0;
         boolean bool = true;
         for (int i_19_ = 0; DisplayModeManagerContainer322.aByteArrayArray4281.length > i_19_; i_19_++) {
-            if (aa_Sub1.anIntArray5192[i_19_] != -1 && DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] == null) {
-                DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] = SoftwareFallbackShader.aClass45_7382.method410(-1860, aa_Sub1.anIntArray5192[i_19_], 0);
+            if (ShaderSub1.anIntArray5192[i_19_] != -1 && DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] == null) {
+                DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] = SoftwareFallbackShader.aClass45_7382.method410(-1860, ShaderSub1.anIntArray5192[i_19_], 0);
                 if (DisplayModeManagerContainer322.aByteArrayArray4281[i_19_] == null) {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
@@ -163,15 +163,15 @@ final class Canvas_Sub1 extends Canvas {
                 }
             }
         }
-        if (r_Sub2.aClass252_10488 == null) {
+        if (CacheNodeSub2.aClass252_10488 == null) {
             if (Request.aClass348_Sub42_Sub14_6885 != null && (NodeSub32.aClass45_6950.method400(-18308, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))) {
                 if (NodeSub32.aClass45_6950.method413(100, (Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"))
-                    r_Sub2.aClass252_10488 = Component358.method2300(NodeSub32.aClass45_6950, ((Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"), Component387.aBoolean1900, (byte) -91);
+                    CacheNodeSub2.aClass252_10488 = Component358.method2300(NodeSub32.aClass45_6950, ((Request.aClass348_Sub42_Sub14_6885.aString9625) + "_staticelements"), Component387.aBoolean1900, (byte) -91);
                 else {
                     bool = false;
                     DisplayModeManagerContainer259.anInt3441++;
                 }
-            } else r_Sub2.aClass252_10488 = new Component278(0);
+            } else CacheNodeSub2.aClass252_10488 = new Component278(0);
         }
         if (bool) {
             bool = true;
@@ -179,7 +179,7 @@ final class Canvas_Sub1 extends Canvas {
             for (int i_20_ = 0; i_20_ < DisplayModeManagerContainer322.aByteArrayArray4281.length; i_20_++) {
                 byte[] is = WorldNameText.aByteArrayArray8642[i_20_];
                 if (is != null) {
-                    int i_21_ = 64 * (OggStreamReader.anIntArray9042[i_20_] >> 8) - za_Sub2.regionTileX;
+                    int i_21_ = 64 * (OggStreamReader.anIntArray9042[i_20_] >> 8) - NodeBaseSub2.regionTileX;
                     int i_22_ = 64 * (OggStreamReader.anIntArray9042[i_20_] & 0xff) - Component330.regionTileY;
                     if (Component37.anInt3931 != 0) {
                         i_22_ = 10;
@@ -189,7 +189,7 @@ final class Canvas_Sub1 extends Canvas {
                 }
                 is = OggUrlStream.aByteArrayArray8996[i_20_];
                 if (is != null) {
-                    int i_23_ = 64 * (OggStreamReader.anIntArray9042[i_20_] >> 8) - za_Sub2.regionTileX;
+                    int i_23_ = 64 * (OggStreamReader.anIntArray9042[i_20_] >> 8) - NodeBaseSub2.regionTileX;
                     int i_24_ = 64 * (OggStreamReader.anIntArray9042[i_20_] & 0xff) + -Component330.regionTileY;
                     if (Component37.anInt3931 != 0) {
                         i_24_ = 10;
@@ -225,7 +225,7 @@ final class Canvas_Sub1 extends Canvas {
                     NodeSub45.aClass361Array7108[i_28_].method3500(i ^ 0x2bc);
                 RSACipher.method491((byte) -86);
                 MatrixSub2.method921((byte) 99, false);
-                ha_Sub3.method3936(i + i);
+                GlToolkitSub3.method3936(i + i);
                 Component293.aClass305_3304 = null;
                 Component326.aBoolean5265 = false;
                 Component381.method3570(false);
@@ -309,8 +309,8 @@ final class Canvas_Sub1 extends Canvas {
                     HashNodeSub14.method3243(-122, class348_sub47);
                 }
                 if (Component37.anInt3931 == 0) {
-                    int i_33_ = ((ha.anInt4581 + -(AbstractShaderSub4.anInt7319 >> 4)) / 8);
-                    int i_34_ = ((ha.anInt4581 - -(AbstractShaderSub4.anInt7319 >> 4)) / 8);
+                    int i_33_ = ((GraphicsToolkit.anInt4581 + -(AbstractShaderSub4.anInt7319 >> 4)) / 8);
+                    int i_34_ = ((GraphicsToolkit.anInt4581 - -(AbstractShaderSub4.anInt7319 >> 4)) / 8);
                     int i_35_ = ((DisplayModeManagerContainer363.anInt4095 + -(ParametricDefinition.anInt9109 >> 4)) / 8);
                     int i_36_ = (((ParametricDefinition.anInt9109 >> 4) + DisplayModeManagerContainer363.anInt4095) / 8);
                     for (int i_37_ = i_33_ - 1; i_37_ <= i_34_ - -1; i_37_++) {

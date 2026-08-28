@@ -33,7 +33,7 @@ final class NodeSub46
         aClass114_7113 = null;
     }
 
-    static final void method3319(ha var_ha, byte i) {
+    static final void method3319(GraphicsToolkit var_ha, byte i) {
         if (i > -108) method3321(19, 60, 108);
         anInt7114++;
         if (((Component72.localPlayer.plane) != NativeLibLoader.anInt4155) && Component335.aClass357ArrayArrayArray2029 != null) {

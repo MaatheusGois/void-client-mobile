@@ -113,7 +113,7 @@ final class PacketReader extends CacheNode {
                         Component44.aStringArray932[i_7_] = string;
                         DisplayModeManagerContainer145.aStringArray1808[i_7_] = string_4_;
                         DefinitionSub21.aStringArray9275[i_7_] = string_5_;
-                        aa_Sub2.aStringArray5197[i_7_] = string_6_;
+                        ShaderSub2.aStringArray5197[i_7_] = string_6_;
                         break;
                     }
                 }
@@ -121,7 +121,7 @@ final class PacketReader extends CacheNode {
                 Component44.aStringArray932[MenuEntry.anInt9604] = string;
                 DisplayModeManagerContainer145.aStringArray1808[MenuEntry.anInt9604] = string_4_;
                 DefinitionSub21.aStringArray9275[(MenuEntry.anInt9604)] = string_5_;
-                aa_Sub2.aStringArray5197[MenuEntry.anInt9604] = string_6_;
+                ShaderSub2.aStringArray5197[MenuEntry.anInt9604] = string_6_;
                 AbstractShaderSub3.aBooleanArray7304[MenuEntry.anInt9604] = GpsOverlay.method1166(i, 2) == 2;
                 MenuEntry.anInt9604++;
             }
@@ -496,7 +496,7 @@ final class PacketReader extends CacheNode {
                 }
             } else {
                 int i_60_ = (i_40_ & 0x33705717) >> 28;
-                int i_61_ = -za_Sub2.regionTileX + ((0xffff4fe & i_40_) >> 14);
+                int i_61_ = -NodeBaseSub2.regionTileX + ((0xffff4fe & i_40_) >> 14);
                 int i_62_ = -Component330.regionTileY + (0x3fff & i_40_);
                 if (i_61_ >= 0 && i_62_ >= 0 && AbstractShaderSub4.anInt7319 > i_61_ && ParametricDefinition.anInt9109 > i_62_) {
                     int i_63_ = 256 + 512 * i_61_;
@@ -504,7 +504,7 @@ final class PacketReader extends CacheNode {
                     int i_65_ = i_60_;
                     if (i_65_ < 3 && DisplayModeManagerContainer206.method802(i_62_, i_61_, true)) i_65_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_38_, i_39_, OpenGlShader.clientCycle, i_60_, i_65_, i_63_, -i_37_ + Component300.method2064(i_63_, i_60_, 11219, i_64_), i_64_, i_61_, i_61_, i_62_, i_62_, i_42_));
-                    r_Sub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
+                    CacheNodeSub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }
             }
             NodeSub3.aClass114_6584 = null;
@@ -627,7 +627,7 @@ final class PacketReader extends CacheNode {
                     }
                     class302.anInt3840 = 2;
                     class302.anInt3838 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
-                    class302.anInt3835 += (Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944) + -za_Sub2.regionTileX << 9);
+                    class302.anInt3835 += (Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944) + -NodeBaseSub2.regionTileX << 9);
                     class302.anInt3832 += (Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944) - Component330.regionTileY << 9);
                     class302.anInt3839 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255) << 2;
                     class302.anInt3837 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
@@ -985,7 +985,7 @@ final class PacketReader extends CacheNode {
                 ShaderLinker.anInt10163 = -1;
             } else {
                 int i_122_ = 0x3fff & i >> 14;
-                i_122_ -= za_Sub2.regionTileX;
+                i_122_ -= NodeBaseSub2.regionTileX;
                 int i_123_ = 0x3fff & i;
                 i_123_ -= Component330.regionTileY;
                 if (i_122_ >= 0) {
@@ -1023,9 +1023,9 @@ final class PacketReader extends CacheNode {
             int i_130_ = (0x36079814 & i_129_) >> 28;
             int i_131_ = i_129_ >> 14 & 0x3fff;
             int i_132_ = 0x3fff & i_129_;
-            i_131_ -= za_Sub2.regionTileX;
+            i_131_ -= NodeBaseSub2.regionTileX;
             i_132_ -= Component330.regionTileY;
-            ha_Sub3.method3824(i_132_, i, i_126_, i_131_, i_127_, 102, i_130_, i_128_);
+            GlToolkitSub3.method3824(i_132_, i, i_126_, i_131_, i_127_, 102, i_130_, i_128_);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -1083,8 +1083,8 @@ final class PacketReader extends CacheNode {
                 DisplayModeManagerContainer145.aStringArray1808[i] = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 112);
                 if (DisplayModeManagerContainer145.aStringArray1808[i].equals("")) DisplayModeManagerContainer145.aStringArray1808[i] = Component44.aStringArray932[i];
                 DefinitionSub21.aStringArray9275[i] = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 84);
-                aa_Sub2.aStringArray5197[i] = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -111);
-                if (aa_Sub2.aStringArray5197[i].equals("")) aa_Sub2.aStringArray5197[i] = DefinitionSub21.aStringArray9275[i];
+                ShaderSub2.aStringArray5197[i] = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -111);
+                if (ShaderSub2.aStringArray5197[i].equals("")) ShaderSub2.aStringArray5197[i] = DefinitionSub21.aStringArray9275[i];
                 AbstractShaderSub3.aBooleanArray7304[i] = false;
             }
             Component380.anInt4985 = ResourceLoader.anInt3918;
@@ -1189,7 +1189,7 @@ final class PacketReader extends CacheNode {
                 for (int i_154_ = 0; (i_154_ < DefinitionSub30.anInt9383); i_154_++) {
                     if (!bool_149_) {
                         if (string.equals(Component178.aStringArray1441[i_154_])) {
-                            if (i != ha.anIntArray4578[i_154_]) {
+                            if (i != GraphicsToolkit.anIntArray4578[i_154_]) {
                                 boolean bool_155_ = true;
                                 for (RenderableSub9Sub1 class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1872(8)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((RenderableSub9Sub1) HashNodeSub14.aClass243_9642.method1878((byte) 124))) {
                                     if (class318_sub9_sub1.aString8783.equals(string)) {
@@ -1205,7 +1205,7 @@ final class PacketReader extends CacheNode {
                                     }
                                 }
                                 if (bool_155_) HashNodeSub14.aClass243_9642.method1869(-95, new RenderableSub9Sub1(string, i));
-                                ha.anIntArray4578[i_154_] = i;
+                                GraphicsToolkit.anIntArray4578[i_154_] = i;
                             }
                             ShaderProgramSub2.aStringArray6205[i_154_] = string_150_;
                             DebugPanic.aStringArray4744[i_154_] = string_152_;
@@ -1224,7 +1224,7 @@ final class PacketReader extends CacheNode {
                 if (string != null && DefinitionSub30.anInt9383 < 200) {
                     Component178.aStringArray1441[DefinitionSub30.anInt9383] = string;
                     ShaderProgramSub2.aStringArray6205[(DefinitionSub30.anInt9383)] = string_150_;
-                    ha.anIntArray4578[DefinitionSub30.anInt9383] = i;
+                    GraphicsToolkit.anIntArray4578[DefinitionSub30.anInt9383] = i;
                     DebugPanic.aStringArray4744[DefinitionSub30.anInt9383] = string_152_;
                     Component16.anIntArray2280[DefinitionSub30.anInt9383] = i_151_;
                     DisplayModeManagerContainer145.aBooleanArray1806[DefinitionSub30.anInt9383] = bool_153_;
@@ -1239,10 +1239,10 @@ final class PacketReader extends CacheNode {
                 i--;
                 bool_156_ = true;
                 for (int i_157_ = 0; i > i_157_; i_157_++) {
-                    if (((Component223.aClass161_125.anInt2143 != ha.anIntArray4578[i_157_]) && (ha.anIntArray4578[i_157_ - -1] == Component223.aClass161_125.anInt2143)) || (ha.anIntArray4578[i_157_] == 0 && (ha.anIntArray4578[1 + i_157_] != 0))) {
-                        int i_158_ = ha.anIntArray4578[i_157_];
-                        ha.anIntArray4578[i_157_] = ha.anIntArray4578[1 + i_157_];
-                        ha.anIntArray4578[i_157_ - -1] = i_158_;
+                    if (((Component223.aClass161_125.anInt2143 != GraphicsToolkit.anIntArray4578[i_157_]) && (GraphicsToolkit.anIntArray4578[i_157_ - -1] == Component223.aClass161_125.anInt2143)) || (GraphicsToolkit.anIntArray4578[i_157_] == 0 && (GraphicsToolkit.anIntArray4578[1 + i_157_] != 0))) {
+                        int i_158_ = GraphicsToolkit.anIntArray4578[i_157_];
+                        GraphicsToolkit.anIntArray4578[i_157_] = GraphicsToolkit.anIntArray4578[1 + i_157_];
+                        GraphicsToolkit.anIntArray4578[i_157_ - -1] = i_158_;
                         String string = DebugPanic.aStringArray4744[i_157_];
                         DebugPanic.aStringArray4744[i_157_] = DebugPanic.aStringArray4744[1 + i_157_];
                         DebugPanic.aStringArray4744[1 + i_157_] = string;
@@ -1413,7 +1413,7 @@ final class PacketReader extends CacheNode {
             for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.method3484(0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
                 int i = (int) ((class348_sub37.aLong4291 >> 28) & 0x3L);
                 int i_188_ = (int) (class348_sub37.aLong4291 & 0x3fffL);
-                int i_189_ = i_188_ + -za_Sub2.regionTileX;
+                int i_189_ = i_188_ + -NodeBaseSub2.regionTileX;
                 int i_190_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
                 int i_191_ = -Component330.regionTileY + i_190_;
                 if (i == GradientPreset.anInt9200 && DisplayModeManagerContainer347.anInt3581 <= i_189_ && 8 + DisplayModeManagerContainer347.anInt3581 > i_189_ && DisplayModeManagerContainer306.anInt4786 <= i_191_ && DisplayModeManagerContainer306.anInt4786 - -8 > i_191_) {
@@ -1499,7 +1499,7 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (NodeSub1Sub2.aClass114_8817 == NodeSub3.aClass114_6584) {
-            za.anInt7276 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 69);
+            NodeBase.anInt7276 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 69);
             Component200.anInt3713 = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -82);
             NodeSub3.aClass114_6584 = null;
             return true;

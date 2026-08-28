@@ -84,7 +84,7 @@ final class DisplayModeManagerContainer292
     static final void method1308(int i, int i_14_, int i_15_, int i_16_, byte i_17_, int i_18_, int i_19_, int i_20_) {
         anInt5072++;
         if (Component27.anInt4960 <= i_15_ && i_19_ <= Component22.anInt1745 && i_14_ >= Component72.anInt1910 && PauseTimer.anInt513 >= i_20_) Component272.method1730(i_16_, i_20_, i_14_, i_19_, i, i_18_, -128, i_15_);
-        else s_Sub3.method4004(i_20_, i_19_, i_14_, i, i_18_, -80, i_15_, i_16_);
+        else BufferCacheSub3.method4004(i_20_, i_19_, i_14_, i, i_18_, -80, i_15_, i_16_);
         if (i_17_ > -113) aClass237_Sub1_5067 = null;
     }
 
@@ -99,7 +99,7 @@ final class DisplayModeManagerContainer292
         if (bool == true) aClass237_Sub1_5067 = null;
     }
 
-    static final void method1311(int i, ha var_ha) {
+    static final void method1311(int i, GraphicsToolkit var_ha) {
         HelveticaFont.aClass352Array2636 = new Component48[NodeSub1.anIntArray6547.length];
         anInt5064++;
         if (i != 5139) anInt5065 = 62;

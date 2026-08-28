@@ -403,7 +403,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                         /* empty */
                     }
                 }
-                aa_Sub3.method168((byte) 103);
+                ShaderSub3.method168((byte) 103);
                 Component162.method1119(false);
                 method87((byte) -97);
                 method92(28740);

@@ -66,7 +66,7 @@ final class NodeSub14
         }
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(i + Component330.regionTileY, (byte) 3);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByteAdd((byte) 78, !Component280.aClass346_2449.method2696(82, -124) ? 0 : 1);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(-124, za_Sub2.regionTileX + i_2_);
+        class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(-124, NodeBaseSub2.regionTileX + i_2_);
         Component253.anInt3203 = i_2_;
         if (i_3_ >= -88) aClass351_6764 = null;
         Component263.anInt1548 = i;
@@ -75,7 +75,7 @@ final class NodeSub14
         return class348_sub47;
     }
 
-    static final boolean method2808(int i, ha var_ha, boolean bool) {
+    static final boolean method2808(int i, GraphicsToolkit var_ha, boolean bool) {
         try {
             anInt6763++;
             int i_5_ = (-104 + AbstractShaderSub4.anInt7319) / 2;
@@ -175,7 +175,7 @@ final class NodeSub14
                             if (Component255.method536(i_38_, !bool, i_37_, i, i_39_)) {
                                 Interface10 interface10 = ((Interface10) BrowserUrlOpener.method2878(i_39_, i_37_, i_38_));
                                 if (interface10 == null) interface10 = ((Interface10) (DisplayModeManagerContainer249.method1353(i_39_, i_37_, i_38_, (aClass6767 != null ? aClass6767 : (aClass6767 = Interface10.class)))));
-                                if (interface10 == null) interface10 = ((Interface10) r_Sub2.method3297(i_39_, i_37_, i_38_));
+                                if (interface10 == null) interface10 = ((Interface10) CacheNodeSub2.method3297(i_39_, i_37_, i_38_));
                                 if (interface10 == null) interface10 = ((Interface10) (DefinitionSub32.method3135(i_39_, i_37_, i_38_)));
                                 if (interface10 != null) {
                                     Component44 class51 = (GradientPreset.aClass263_9195.method2005(0, interface10.method42(-99)));
@@ -220,17 +220,17 @@ final class NodeSub14
                         }
                     }
                 }
-                if (r_Sub2.aClass252_10488 != null) {
+                if (CacheNodeSub2.aClass252_10488 != null) {
                     Component181.aClass45_1541.anInt634 = 1;
                     DisplayModeManagerContainer64.aClass153_9031.method1220((byte) 116, 64, 1024);
-                    for (int i_51_ = 0; i_51_ < r_Sub2.aClass252_10488.anInt3241; i_51_++) {
-                        int i_52_ = (r_Sub2.aClass252_10488.anIntArray3238[i_51_]);
+                    for (int i_51_ = 0; i_51_ < CacheNodeSub2.aClass252_10488.anInt3241; i_51_++) {
+                        int i_52_ = (CacheNodeSub2.aClass252_10488.anIntArray3238[i_51_]);
                         if ((Component72.localPlayer.plane) == i_52_ >> 28) {
-                            int i_53_ = ((i_52_ >> 14 & 0x3fff) - za_Sub2.regionTileX);
+                            int i_53_ = ((i_52_ >> 14 & 0x3fff) - NodeBaseSub2.regionTileX);
                             int i_54_ = (i_52_ & 0x3fff) + -Component330.regionTileY;
                             if (i_53_ >= 0 && i_53_ < AbstractShaderSub4.anInt7319 && i_54_ >= 0 && (ParametricDefinition.anInt9109 > i_54_)) Component289.aClass262_10125.method1999(new NodeSub35(i_51_), -20180);
                             else {
-                                Component274 class42 = (DisplayModeManagerContainer64.aClass153_9031.method1225((r_Sub2.aClass252_10488.anIntArray3239[i_51_]), (byte) 120));
+                                Component274 class42 = (DisplayModeManagerContainer64.aClass153_9031.method1225((CacheNodeSub2.aClass252_10488.anIntArray3239[i_51_]), (byte) 120));
                                 if (class42.anIntArray591 != null && (i_53_ + class42.anInt595 >= 0) && (AbstractShaderSub4.anInt7319 > class42.anInt603 + i_53_) && i_54_ + class42.anInt570 >= 0 && (ParametricDefinition.anInt9109 > (i_54_ - -class42.anInt607)))
                                     Component289.aClass262_10125.method1999(new NodeSub35(i_51_), -20180);
                             }

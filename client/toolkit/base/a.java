@@ -18,7 +18,7 @@ final class a
     Runnable aRunnable5112;
     private final i anI5113;
     private final i anI5114;
-    private final oa anOa5115;
+    private final OpenGLToolkit anOa5115;
     private final i anI5116;
 
     final void method142(s var_s, int i, int i_0_) {
@@ -28,7 +28,7 @@ final class a
     private final native boolean R(long l, long l_1_, int i, int i_2_, long l_3_, boolean bool);
 
     final boolean method143(DisplayModeManagerContainer370 class64, int i, int i_4_, DisplayModeManagerContainer204 class101, boolean bool, int i_5_) {
-        return n(this.nativeid, ((i) class64).nativeid, i, i_4_, ((ja) class101).nativeid, bool, i_5_);
+        return n(this.nativeid, ((i) class64).nativeid, i, i_4_, ((OpenGLMatrix) class101).nativeid, bool, i_5_);
     }
 
     final void method144(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer370 class64_6_, int i, int i_7_, int i_8_, boolean bool) {
@@ -46,13 +46,13 @@ final class a
     }
 
     final void method145(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i) {
-        UA(this.nativeid, ((i) class64).nativeid, ((ja) class101).nativeid, is, i);
+        UA(this.nativeid, ((i) class64).nativeid, ((OpenGLMatrix) class101).nativeid, is, i);
     }
 
     private final native boolean n(long l, long l_11_, int i, int i_12_, long l_13_, boolean bool, int i_14_);
 
     final boolean method146(DisplayModeManagerContainer370 class64, int i, int i_15_, DisplayModeManagerContainer204 class101, boolean bool) {
-        return R(this.nativeid, ((i) class64).nativeid, i, i_15_, ((ja) class101).nativeid, bool);
+        return R(this.nativeid, ((i) class64).nativeid, i, i_15_, ((OpenGLMatrix) class101).nativeid, bool);
     }
 
     final void method147(s var_s, int i, int i_16_, int i_17_) {
@@ -68,15 +68,15 @@ final class a
     }
 
     final void method149(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i, int i_24_) {
-        f(this.nativeid, ((i) class64).nativeid, ((ja) class101).nativeid, is, i, i_24_);
+        f(this.nativeid, ((i) class64).nativeid, ((OpenGLMatrix) class101).nativeid, is, i, i_24_);
     }
 
-    private final native void na(long l, ha var_ha, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_);
+    private final native void ShaderImpl(long l, GraphicsToolkit var_ha, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_);
 
-    private final native void O(long l, ha var_ha, int[] is, int[] is_31_, int[] is_32_, short[] is_33_, int i);
+    private final native void O(long l, GraphicsToolkit var_ha, int[] is, int[] is_31_, int[] is_32_, short[] is_33_, int i);
 
-    final void method150(ha var_ha, int i, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_) {
-        na(this.nativeid, var_ha, i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_);
+    final void method150(GraphicsToolkit var_ha, int i, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_) {
+        ShaderImpl(this.nativeid, var_ha, i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_);
     }
 
     private final native void f(long l, long l_40_, long l_41_, int[] is, int i, int i_42_);
@@ -84,7 +84,7 @@ final class a
     private final native void r(long l, long l_43_, long l_44_, int i, int i_45_, int i_46_, boolean bool);
 
     final void method151(DisplayModeManagerContainer370 class64, int[] is, DisplayModeManagerContainer204 class101) {
-        e(this.nativeid, ((i) class64).nativeid, is, ((ja) class101).nativeid);
+        e(this.nativeid, ((i) class64).nativeid, is, ((OpenGLMatrix) class101).nativeid);
     }
 
     final DisplayModeManagerContainer370 method152(i var_i, byte i, int i_47_, boolean bool) {
@@ -131,11 +131,11 @@ final class a
 
     private final native void UA(long l, long l_62_, long l_63_, int[] is, int i);
 
-    final void method155(ha var_ha, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i) {
+    final void method155(GraphicsToolkit var_ha, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i) {
         O(this.nativeid, var_ha, is, is_64_, is_65_, is_66_, i);
     }
 
-    private final native void HA(long l, ha var_ha, int i, int i_67_);
+    private final native void HA(long l, GraphicsToolkit var_ha, int i, int i_67_);
 
     final void method156() {
         this.aRunnable5112 = null;
@@ -146,7 +146,7 @@ final class a
         M(this.nativeid);
     }
 
-    a(oa var_oa, int i, int i_68_) {
+    a(OpenGLToolkit var_oa, int i, int i_68_) {
         anOa5115 = var_oa;
         anI5106 = new i(anOa5115);
         anI5111 = new i(anOa5115);

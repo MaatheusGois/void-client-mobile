@@ -52,7 +52,7 @@ final class Component102
             SocketConnector.method2049(106);
             return true;
         } catch (Exception exception) {
-            String string = ("T2 - " + (NodeSub3.aClass114_6584 != null ? NodeSub3.aClass114_6584.method1058((byte) 119) : -1) + "," + (Component339.aClass114_3145 != null ? Component339.aClass114_3145.method1058((byte) 119) : -1) + "," + (DefinitionSub36.aClass114_9456 == null ? -1 : DefinitionSub36.aClass114_9456.method1058((byte) 113)) + " - " + DefinitionSub25.anInt9341 + "," + ((Component72.localPlayer.anIntArray10320[0]) + za_Sub2.regionTileX) + "," + (Component330.regionTileY - -(Component72.localPlayer.anIntArray10317[0])) + " - ");
+            String string = ("T2 - " + (NodeSub3.aClass114_6584 != null ? NodeSub3.aClass114_6584.method1058((byte) 119) : -1) + "," + (Component339.aClass114_3145 != null ? Component339.aClass114_3145.method1058((byte) 119) : -1) + "," + (DefinitionSub36.aClass114_9456 == null ? -1 : DefinitionSub36.aClass114_9456.method1058((byte) 113)) + " - " + DefinitionSub25.anInt9341 + "," + ((Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX) + "," + (Component330.regionTileY - -(Component72.localPlayer.anIntArray10317[0])) + " - ");
             for (int i_2_ = 0; DefinitionSub25.anInt9341 > i_2_ && i_2_ < 50; i_2_++)
                 string += (Component80.aClass348_Sub49_Sub2_3813.aByteArray7154[i_2_]) + ",";
             ClientErrorReporter.method1242(string, exception, 15004);

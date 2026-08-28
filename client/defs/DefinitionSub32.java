@@ -19,7 +19,7 @@ final class DefinitionSub32
     private static short[] aShortArray9423 = {6798, 8741, 25238, 4626, 4550};
     static short[][] aShortArrayArray9424 = {aShortArray9423, aShortArray9421, aShortArray9422};
 
-    static final GlRectangleTexture method3132(int[] is, int i, int i_0_, int i_1_, int i_2_, ha_Sub2 var_ha_Sub2, boolean bool, byte i_3_) {
+    static final GlRectangleTexture method3132(int[] is, int i, int i_0_, int i_1_, int i_2_, GlToolkitSub2 var_ha_Sub2, boolean bool, byte i_3_) {
         try {
             if (i_3_ != 12) method3134(9);
             anInt9418++;

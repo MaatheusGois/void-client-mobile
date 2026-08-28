@@ -9,7 +9,7 @@ final class NodeSub32
  */ extends Node {
     private final Component132 aClass123_6927;
     private float[][] aFloatArrayArray6928;
-    private final s_Sub2 aS_Sub2_6929;
+    private final BufferCacheSub2 aS_Sub2_6929;
     static int anInt6930 = 0;
     static int anInt6931;
     private LruCache aClass356_6932;
@@ -31,7 +31,7 @@ final class NodeSub32
     private final int anInt6948;
     private float[][] aFloatArrayArray6949;
     static CacheStore aClass45_6950;
-    private final ha_Sub2 aHa_Sub2_6951;
+    private final GlToolkitSub2 aHa_Sub2_6951;
     private final Interface2 anInterface2_6952;
     private Component182 aClass348_Sub49_Sub1_6953;
 
@@ -182,7 +182,7 @@ final class NodeSub32
         }
     }
 
-    NodeSub32(ha_Sub2 var_ha_Sub2, s_Sub2 var_s_Sub2, NodeSub1 class348_sub1, int[] is) {
+    NodeSub32(GlToolkitSub2 var_ha_Sub2, BufferCacheSub2 var_s_Sub2, NodeSub1 class348_sub1, int[] is) {
         try {
             aS_Sub2_6929 = var_s_Sub2;
             aHa_Sub2_6951 = var_ha_Sub2;

@@ -25,7 +25,7 @@ final class Rs2Walker {
         if (!Microbot.isLoggedIn()) {
             return false;
         }
-        int localX = absX - za_Sub2.regionTileX;
+        int localX = absX - NodeBaseSub2.regionTileX;
         int localY = absY - Component330.regionTileY;
         if (localX < 0 || localY < 0 || localX >= AbstractShaderSub4.anInt7319 || localY >= ParametricDefinition.anInt9109) {
             Microbot.log("walkTo out of scene: " + absX + "," + absY);
@@ -43,6 +43,6 @@ final class Rs2Walker {
     }
 
     static boolean walkToLocal(int localX, int localY) {
-        return walkTo(localX + za_Sub2.regionTileX, localY + Component330.regionTileY);
+        return walkTo(localX + NodeBaseSub2.regionTileX, localY + Component330.regionTileY);
     }
 }

@@ -126,7 +126,7 @@ final class Component272
         return 1;
     }
 
-    static final Component48 method1734(int i, ha var_ha, byte i_25_, boolean bool) {
+    static final Component48 method1734(int i, GraphicsToolkit var_ha, byte i_25_, boolean bool) {
         try {
             anInt5859++;
             if (i == -1) return null;

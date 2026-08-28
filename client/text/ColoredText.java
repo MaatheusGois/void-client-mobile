@@ -73,7 +73,7 @@ final class ColoredText extends Component339 {
         return 3;
     }
 
-    static final void method1823(ha var_ha, int i, int i_4_, byte i_5_) {
+    static final void method1823(GraphicsToolkit var_ha, int i, int i_4_, byte i_5_) {
         anInt6088++;
         int i_6_ = 56 % ((68 - i_5_) / 58);
         if (i >= 0 && i_4_ >= 0 && DisplayModeManagerContainer220.anInt282 != 0 && DisplayModeManagerContainer50.anInt3861 != 0) {
@@ -258,7 +258,7 @@ final class ColoredText extends Component339 {
                             }
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Component252) {
-                            int i_55_ = za_Sub2.regionTileX + i_33_;
+                            int i_55_ = NodeBaseSub2.regionTileX + i_33_;
                             int i_56_ = i_32_ - -Component330.regionTileY;
                             NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.method3480((class318_sub4.aClass318_Sub1_6410.plane) << 28 | i_56_ << 14 | i_55_, -6008)));
                             if (class348_sub37 != null) {
@@ -333,7 +333,7 @@ final class ColoredText extends Component339 {
                                             }
                                         }
                                     }
-                                    int x = i_33_ + za_Sub2.regionTileX;
+                                    int x = i_33_ + NodeBaseSub2.regionTileX;
                                     int y = i_32_ + Component330.regionTileY;
                                     DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=00ffff>" + class51.aString884 + Loader.getDebug(class51.anInt941, x, y, class318_sub4.aClass318_Sub1_6410.plane)), i_32_, (byte) -120, false, i_33_, -1, true, 1001, interface10.hashCode(), (FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544)), class51.anInt941, CookieManager.anInt6299);
                                     anInt6094++;

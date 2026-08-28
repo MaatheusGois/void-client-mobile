@@ -1,4 +1,4 @@
-/* ha_Sub3 - Decompiled by JODE
+/* GlToolkitSub3 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -13,11 +13,11 @@ import java.lang.reflect.Method;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-abstract class ha_Sub3
+abstract class GlToolkitSub3
 /**
- * RENAMED from `ha_Sub3` (JODE-obfuscated).
- * Evidence: extends ha (ha)
- */ extends ha {
+ * RENAMED from `GlToolkitSub3` (JODE-obfuscated).
+ * Evidence: extends GraphicsToolkit (GraphicsToolkit)
+ */ extends GraphicsToolkit {
     static int anInt7884;
     static int anInt7885;
     static int anInt7886;
@@ -368,10 +368,10 @@ abstract class ha_Sub3
         }
     }
 
-    final void method3651(za var_za) {
+    final void method3651(NodeBase var_za) {
         try {
             anInt8005++;
-            this.aNativeHeap7891 = ((za_Sub2) var_za).aNativeHeap9782;
+            this.aNativeHeap7891 = ((NodeBaseSub2) var_za).aNativeHeap9782;
             this.aNativeHeapBuffer7974 = this.aNativeHeap7891.a(32768, false);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, "wga.PF(" + (var_za != null ? "{...}" : "null") + ')');
@@ -542,7 +542,7 @@ abstract class ha_Sub3
         anInt7938++;
     }
 
-    final aa method3661(int i, int i_31_, int[] is, int[] is_32_) {
+    final Shader method3661(int i, int i_31_, int[] is, int[] is_32_) {
         try {
             anInt7957++;
             return RenderableSub4.method2501(i_31_, this, is, (byte) -42, is_32_, i);
@@ -587,7 +587,7 @@ abstract class ha_Sub3
         if (i_37_ >= 0 && i >= 0 && -1 + AbstractShaderSub4.anInt7319 > i_37_ && (i < -1 + ParametricDefinition.anInt9109)) {
             if (Component335.aClass357ArrayArrayArray2029 == null) return;
             if (i_41_ == 0) {
-                Interface10 interface10 = (Interface10) r_Sub2.method3297(i_40_, i_37_, i);
+                Interface10 interface10 = (Interface10) CacheNodeSub2.method3297(i_40_, i_37_, i);
                 Interface10 interface10_42_ = (Interface10) CommandHandler.method813(i_40_, i_37_, i);
                 if (interface10 != null && i_36_ != 2) {
                     if (interface10 instanceof Component171) ((Component171) interface10).aClass235_10115.method1671(262144, i_35_);
@@ -659,7 +659,7 @@ abstract class ha_Sub3
         anInt8065++;
         if (!aBoolean8176) {
             for (Node class348 = aClass262_7927.method1995(4); class348 != null; class348 = aClass262_7927.method1990((byte) 102))
-                ((za_Sub2) class348).method3445(-9503);
+                ((NodeBaseSub2) class348).method3445(-9503);
             Enumeration enumeration = aHashtable8014.keys();
             while (enumeration.hasMoreElements()) {
                 Canvas canvas = (Canvas) enumeration.nextElement();
@@ -1066,10 +1066,10 @@ abstract class ha_Sub3
         return this.aClass101_Sub2_8080;
     }
 
-    final void A(int i, aa var_aa, int i_85_, int i_86_) {
+    final void A(int i, Shader var_aa, int i_85_, int i_86_) {
         try {
             anInt7940++;
-            aa_Sub2 var_aa_Sub2 = (aa_Sub2) var_aa;
+            ShaderSub2 var_aa_Sub2 = (ShaderSub2) var_aa;
             Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
             method3864(81);
             method3850((byte) -47, interface18_impl3);
@@ -1264,7 +1264,7 @@ abstract class ha_Sub3
         if (bool_103_ != true) this.anInt8095 = 22;
     }
 
-    final void method3703(int i, int i_104_, int i_105_, int i_106_, int i_107_, int i_108_, aa var_aa, int i_109_, int i_110_, int i_111_, int i_112_, int i_113_) {
+    final void method3703(int i, int i_104_, int i_105_, int i_106_, int i_107_, int i_108_, Shader var_aa, int i_109_, int i_110_, int i_111_, int i_112_, int i_113_) {
         try {
             anInt7914++;
         } catch (RuntimeException runtimeexception) {
@@ -1328,7 +1328,7 @@ abstract class ha_Sub3
     final s method3648(int i, int i_122_, int[][] is, int[][] is_123_, int i_124_, int i_125_, int i_126_) {
         try {
             anInt8011++;
-            return new s_Sub3(this, i_125_, i_126_, i, i_122_, is, is_123_, i_124_);
+            return new BufferCacheSub3(this, i_125_, i_126_, i, i_122_, is, is_123_, i_124_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("wga.VE(" + i + ',' + i_122_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_123_ != null ? "{...}" : "null") + ',' + i_124_ + ',' + i_125_ + ',' + i_126_ + ')'));
         }
@@ -1417,7 +1417,7 @@ abstract class ha_Sub3
         }
     }
 
-    final void za(int i, int i_134_, int i_135_, int i_136_, int i_137_) {
+    final void NodeBase(int i, int i_134_, int i_135_, int i_136_, int i_137_) {
         anInt8026++;
         method3903(false);
         method3894(-28186, i_136_);
@@ -1533,7 +1533,7 @@ abstract class ha_Sub3
 
     abstract void method3883(int i);
 
-    final void xa(float f) {
+    final void DualToolkit(float f) {
         if (this.aFloat8093 != f) {
             this.aFloat8093 = f;
             this.aNativeInterface7924.setAmbient(f);
@@ -1995,7 +1995,7 @@ abstract class ha_Sub3
         }
     }
 
-    final void method3636(int i, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_, aa var_aa, int i_222_, int i_223_) {
+    final void method3636(int i, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_, Shader var_aa, int i_222_, int i_223_) {
         try {
             anInt7918++;
         } catch (RuntimeException runtimeexception) {
@@ -2385,7 +2385,7 @@ abstract class ha_Sub3
         }
         this.aClass348_Sub1Array8132 = new NodeSub1[-2 + this.anInt8138];
         this.anInterface18_8147 = method3861(1, (byte) -84, 1, Component342.aClass68_1183, Component83.aClass304_1662);
-        method3651(new za_Sub2(262144));
+        method3651(new NodeBaseSub2(262144));
         this.aClass130_8204 = method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078})}));
         this.aClass130_8202 = method3812(i ^ 0x1a, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4076})}));
         this.aClass130_8208 = method3812(0, (new Component255[]{new Component255(ColoredTextBuilder.aClass325_4073), new Component255(ColoredTextBuilder.aClass325_4076), new Component255(ColoredTextBuilder.aClass325_4078), new Component255(ColoredTextBuilder.aClass325_4075)}));
@@ -2552,9 +2552,9 @@ abstract class ha_Sub3
         return false;
     }
 
-    final za method3702(int i) {
+    final NodeBase method3702(int i) {
         anInt8049++;
-        za_Sub2 var_za_Sub2 = new za_Sub2(i);
+        NodeBaseSub2 var_za_Sub2 = new NodeBaseSub2(i);
         aClass262_7927.method1999(var_za_Sub2, -20180);
         return var_za_Sub2;
     }
@@ -2611,7 +2611,7 @@ abstract class ha_Sub3
         return true;
     }
 
-    ha_Sub3(Canvas canvas, Object object, d var_d, CacheStore class45, int i, int i_289_) {
+    GlToolkitSub3(Canvas canvas, Object object, d var_d, CacheStore class45, int i, int i_289_) {
         super(var_d);
         this.aFloat8089 = 3584.0F;
         this.anInt8095 = 50;

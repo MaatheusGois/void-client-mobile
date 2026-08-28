@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-/** Software ({@link ha_Sub1}) bitmap-font backend (variant). */
+/** Software ({@link GlToolkitSub1}) bitmap-font backend (variant). */
 final class SoftwareBitmapFont3 extends BitmapFont {
     private final int[] anIntArray6503;
     private final byte[][] aByteArrayArray6504;
     private final int[] anIntArray6505;
-    private ha_Sub1 aHa_Sub1_6506;
+    private GlToolkitSub1 aHa_Sub1_6506;
     private final int[] anIntArray6507;
     private final int[] anIntArray6508;
 
-    SoftwareBitmapFont3(ha_Sub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_0_) {
+    SoftwareBitmapFont3(GlToolkitSub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_0_) {
         super(var_ha_Sub1, class143);
         aHa_Sub1_6506 = var_ha_Sub1;
         aHa_Sub1_6506 = var_ha_Sub1;
@@ -33,8 +33,8 @@ final class SoftwareBitmapFont3 extends BitmapFont {
         }
     }
 
-    private final void method2594(byte[] is, int[] is_4_, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, aa var_aa, int i_14_, int i_15_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    private final void method2594(byte[] is, int[] is_4_, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, Shader var_aa, int i_14_, int i_15_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_16_ = var_aa_Sub3.anIntArray5201;
         int[] is_17_ = var_aa_Sub3.anIntArray5202;
         int i_18_ = i_11_ - aHa_Sub1_6506.anInt7496;
@@ -101,7 +101,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
         }
     }
 
-    final void method2578(char c, int i, int i_44_, int i_45_, boolean bool, aa var_aa, int i_46_, int i_47_) {
+    final void method2578(char c, int i, int i_44_, int i_45_, boolean bool, Shader var_aa, int i_46_, int i_47_) {
         if (var_aa == null) fa(c, i, i_44_, i_45_, bool);
         else {
             i += anIntArray6507[c];

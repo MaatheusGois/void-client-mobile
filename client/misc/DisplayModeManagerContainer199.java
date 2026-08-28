@@ -70,8 +70,8 @@ final class DisplayModeManagerContainer199
                     if (i_9_ < 3 && DisplayModeManagerContainer206.method802(i_8_, i_7_, true)) i_9_++;
                     int i_10_ = 0;
                     if ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104) != null && (Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_]) != null) i_10_ = 8 * ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_][i_7_][i_8_]) & 0xff) << 2;
-                    if (aa_Sub1.aSArray5191 != null && aa_Sub1.aSArray5191[i_9_] != null) {
-                        int i_11_ = (i_5_ + i_10_ + -aa_Sub1.aSArray5191[i_9_].method3982((byte) -86, i_8_, i_7_));
+                    if (ShaderSub1.aSArray5191 != null && ShaderSub1.aSArray5191[i_9_] != null) {
+                        int i_11_ = (i_5_ + i_10_ + -ShaderSub1.aSArray5191[i_9_].method3982((byte) -86, i_8_, i_7_));
                         if (i_6_ < i_11_) i_6_ = i_11_;
                     }
                 }

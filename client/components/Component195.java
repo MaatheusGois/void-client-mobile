@@ -14,7 +14,7 @@ final class Component195
     static int[] anIntArray5007 = new int[4];
     static int anInt5008;
     static int anInt5009;
-    private ha aHa5010;
+    private GraphicsToolkit aHa5010;
     private boolean aBoolean5011;
     private final Interface1[] anInterface1Array5012;
     static boolean aBoolean5013 = false;

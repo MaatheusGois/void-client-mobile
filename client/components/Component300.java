@@ -18,14 +18,14 @@ final class Component300
 
     static final int method2064(int i, int i_0_, int i_1_, int i_2_) {
         anInt3549++;
-        if (aa_Sub1.aSArray5191 == null) return 0;
+        if (ShaderSub1.aSArray5191 == null) return 0;
         int i_3_ = i >> 9;
         int i_4_ = i_2_ >> 9;
         if (i_3_ < 0 || i_4_ < 0 || i_3_ > -1 + AbstractShaderSub4.anInt7319 || (i_4_ > ParametricDefinition.anInt9109 + -1)) return 0;
         int i_5_ = i_0_;
         if (i_5_ < 3 && (ObjectDeserializer.aByteArrayArrayArray6962[1][i_3_][i_4_] & 0x2) != 0) i_5_++;
         if (i_1_ != 11219) aHashtable3548 = null;
-        return aa_Sub1.aSArray5191[i_5_].method3986(i, i_2_, (byte) -113);
+        return ShaderSub1.aSArray5191[i_5_].method3986(i, i_2_, (byte) -113);
     }
 
     public static void method2065(int i) {

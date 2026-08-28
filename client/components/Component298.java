@@ -101,7 +101,7 @@ abstract class Component298
         if (i == -49) {
             anInt4634++;
             int i_13_ = ((this.aClass369_4635.aClass221_4968.method1607(DisplayModeManagerContainer23.anInt1524, this.aClass369_4635.anInt4971, (byte) -123)) + this.aClass369_4635.anInt4970);
-            int i_14_ = ((this.aClass369_4635.aClass341_4973.method2679(ha_Sub2.anInt7666, this.aClass369_4635.anInt4963, i ^ ~0x60b)) + this.aClass369_4635.anInt4959);
+            int i_14_ = ((this.aClass369_4635.aClass341_4973.method2679(GlToolkitSub2.anInt7666, this.aClass369_4635.anInt4963, i ^ ~0x60b)) + this.aClass369_4635.anInt4959);
             method178(i_13_, bool, (byte) -84, i_14_);
             method182(63, i_14_, i_13_, bool);
             String string = Component44.aClass311_897.method2318(i ^ 0x245b);

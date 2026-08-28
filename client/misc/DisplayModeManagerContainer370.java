@@ -154,7 +154,7 @@ abstract class DisplayModeManagerContainer370
                         if (class4_47_.aClass348_Sub33_134 != class348_sub33) class4_47_ = null;
                     }
                     method602(i_44_, class348_sub33, -18, false, i_46_, class4_47_, i_40_, is, null, class4, i_41_, bool);
-                    wa();
+                    Interface4Impl();
                     method621();
                 } else method621();
             }
@@ -202,7 +202,7 @@ abstract class DisplayModeManagerContainer370
         RadixParser.method1333(Component353.aShortArray2579, i + 26073, strings);
     }
 
-    abstract void wa();
+    abstract void Interface4Impl();
 
     abstract void I(int i, int[] is, int i_59_, int i_60_, int i_61_, boolean bool, int i_62_, int[] is_63_);
 
@@ -285,7 +285,7 @@ abstract class DisplayModeManagerContainer370
                     }
                 }
                 if (i_74_ != -8700) anIntArray1127 = null;
-                wa();
+                Interface4Impl();
                 method621();
             } else method621();
         }
@@ -327,7 +327,7 @@ abstract class DisplayModeManagerContainer370
                         if (class348_sub33 != class4_89_.aClass348_Sub33_134) class4_89_ = null;
                     }
                     method602(i_84_, class348_sub33, 121, bool, i_83_, class4_89_, i_88_, null, null, class4, 65535, bool_86_);
-                    wa();
+                    Interface4Impl();
                     method621();
                 } else method621();
             }
@@ -368,7 +368,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void method624(int i, int i_98_, int i_99_, int i_100_);
 
-    abstract int na();
+    abstract int ShaderImpl();
 
     final void method625(HashNodeSub17 class348_sub42_sub17, int i, byte i_101_, int i_102_, HashNodeSub17 class348_sub42_sub17_103_, int i_104_, int i_105_, int i_106_, HashNodeSub17 class348_sub42_sub17_107_, boolean bool, int i_108_, HashNodeSub17 class348_sub42_sub17_109_, int i_110_, boolean[] bools, int i_111_) {
         try {
@@ -395,7 +395,7 @@ abstract class DisplayModeManagerContainer370
                         }
                         method605(0, new int[0], 0, 0, 0, 0, bool);
                         method602(0, class4_113_.aClass348_Sub33_134, 122, true, i_102_, class4_114_, i_110_, null, bools, class4_113_, 65535, bool);
-                        wa();
+                        Interface4Impl();
                         method621();
                     } else method621();
                 }
@@ -514,7 +514,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract boolean method628(int i, int i_159_, DisplayModeManagerContainer204 class101, boolean bool, int i_160_);
 
-    abstract void aa(short i, short i_161_);
+    abstract void Shader(short i, short i_161_);
 
-    abstract r ba(r var_r);
+    abstract r BufferedToolkit(r var_r);
 }

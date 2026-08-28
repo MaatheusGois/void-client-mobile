@@ -7,11 +7,11 @@ final class i
  * RENAMED from `i` (JODE-obfuscated).
  * Evidence: extends Class64 (Sprite base); implements Interface19; 37 native GL methods
  */ extends DisplayModeManagerContainer370 implements Interface19 {
-    private final oa anOa5117;
+    private final OpenGLToolkit anOa5117;
     DisplayModeManagerContainer173[] aClass342Array5118;
     long nativeid;
     Component30[] aClass129Array5119;
-    private final ya aYa5120;
+    private final NativeHandle aYa5120;
 
     final native void C(int i);
 
@@ -37,7 +37,7 @@ final class i
         anOa5117.method3973().method144(this, class64, i, i_5_, i_6_, bool);
     }
 
-    final native void aa(short i, short i_7_);
+    final native void Shader(short i, short i_7_);
 
     final boolean method623(int i, int i_8_, DisplayModeManagerContainer204 class101, boolean bool, int i_9_, int i_10_) {
         return anOa5117.method3973().method143(this, i, i_8_, class101, bool, i_10_);
@@ -49,21 +49,21 @@ final class i
         return this.aClass129Array5119;
     }
 
-    final native void wa();
+    final native void Interface4Impl();
 
     final native void P(int i, int i_11_, int i_12_, int i_13_);
 
     final void method608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_14_) {
         if (class318_sub3 == null) anOa5117.method3973().method149(this, class101, null, i, i_14_);
         else {
-            oa.anIntArray5132[5] = 0;
-            anOa5117.method3973().method149(this, class101, oa.anIntArray5132, i, i_14_);
-            class318_sub3.anInt6405 = oa.anIntArray5132[0];
-            class318_sub3.anInt6402 = oa.anIntArray5132[1];
-            class318_sub3.anInt6406 = oa.anIntArray5132[2];
-            class318_sub3.anInt6404 = oa.anIntArray5132[3];
-            class318_sub3.anInt6403 = oa.anIntArray5132[4];
-            class318_sub3.aBoolean6401 = oa.anIntArray5132[5] != 0;
+            OpenGLToolkit.anIntArray5132[5] = 0;
+            anOa5117.method3973().method149(this, class101, OpenGLToolkit.anIntArray5132, i, i_14_);
+            class318_sub3.anInt6405 = OpenGLToolkit.anIntArray5132[0];
+            class318_sub3.anInt6402 = OpenGLToolkit.anIntArray5132[1];
+            class318_sub3.anInt6406 = OpenGLToolkit.anIntArray5132[2];
+            class318_sub3.anInt6404 = OpenGLToolkit.anIntArray5132[3];
+            class318_sub3.anInt6403 = OpenGLToolkit.anIntArray5132[4];
+            class318_sub3.aBoolean6401 = OpenGLToolkit.anIntArray5132[5] != 0;
         }
     }
 
@@ -94,7 +94,7 @@ final class i
         return anOa5117.method3973().method152(this, i, i_21_, bool);
     }
 
-    final native int na();
+    final native int ShaderImpl();
 
     final native int HA();
 
@@ -116,7 +116,7 @@ final class i
 
     final native int ma();
 
-    private final native void R(oa var_oa, ya var_ya, int i, int i_31_, int[] is, int[] is_32_, int[] is_33_, int[] is_34_, short[] is_35_, int i_36_, short[] is_37_, short[] is_38_, short[] is_39_, byte[] is_40_, byte[] is_41_, byte[] is_42_, byte[] is_43_, short[] is_44_, short[] is_45_, int[] is_46_, byte i_47_, short[] is_48_, int i_49_, byte[] is_50_, short[] is_51_, short[] is_52_, short[] is_53_, int[] is_54_, int[] is_55_, int[] is_56_, byte[] is_57_, byte[] is_58_, int[] is_59_, int[] is_60_, int[] is_61_, int[] is_62_, int i_63_, int i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int[] is_69_);
+    private final native void R(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_31_, int[] is, int[] is_32_, int[] is_33_, int[] is_34_, short[] is_35_, int i_36_, short[] is_37_, short[] is_38_, short[] is_39_, byte[] is_40_, byte[] is_41_, byte[] is_42_, byte[] is_43_, short[] is_44_, short[] is_45_, int[] is_46_, byte i_47_, short[] is_48_, int i_49_, byte[] is_50_, short[] is_51_, short[] is_52_, short[] is_53_, int[] is_54_, int[] is_55_, int[] is_56_, byte[] is_57_, byte[] is_58_, int[] is_59_, int[] is_60_, int[] is_61_, int[] is_62_, int i_63_, int i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int[] is_69_);
 
     final native void FA(int i);
 
@@ -133,7 +133,7 @@ final class i
     final native int WA();
 
     final void method610(DisplayModeManagerContainer204 class101, int i, boolean bool) {
-        A(((ja) class101).nativeid, i, bool);
+        A(((OpenGLMatrix) class101).nativeid, i, bool);
     }
 
     final void method622() {
@@ -154,34 +154,34 @@ final class i
     final void method615(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
         if (class318_sub3 == null) anOa5117.method3973().method145(this, class101, null, i);
         else {
-            oa.anIntArray5132[5] = 0;
-            anOa5117.method3973().method145(this, class101, oa.anIntArray5132, i);
-            class318_sub3.anInt6405 = oa.anIntArray5132[0];
-            class318_sub3.anInt6402 = oa.anIntArray5132[1];
-            class318_sub3.anInt6406 = oa.anIntArray5132[2];
-            class318_sub3.anInt6404 = oa.anIntArray5132[3];
-            class318_sub3.anInt6403 = oa.anIntArray5132[4];
-            class318_sub3.aBoolean6401 = oa.anIntArray5132[5] != 0;
+            OpenGLToolkit.anIntArray5132[5] = 0;
+            anOa5117.method3973().method145(this, class101, OpenGLToolkit.anIntArray5132, i);
+            class318_sub3.anInt6405 = OpenGLToolkit.anIntArray5132[0];
+            class318_sub3.anInt6402 = OpenGLToolkit.anIntArray5132[1];
+            class318_sub3.anInt6406 = OpenGLToolkit.anIntArray5132[2];
+            class318_sub3.anInt6404 = OpenGLToolkit.anIntArray5132[3];
+            class318_sub3.anInt6403 = OpenGLToolkit.anIntArray5132[4];
+            class318_sub3.aBoolean6401 = OpenGLToolkit.anIntArray5132[5] != 0;
         }
     }
 
     final native boolean r();
 
     final void method620(DisplayModeManagerContainer204 class101) {
-        method693(oa.anIntArray5140, class101);
+        method693(OpenGLToolkit.anIntArray5140, class101);
         int i = 0;
         if (this.aClass129Array5119 != null) {
             for (int i_74_ = 0; i_74_ < this.aClass129Array5119.length; i_74_++) {
                 Component30 class129 = this.aClass129Array5119[i_74_];
-                class129.anInt1882 = oa.anIntArray5140[i++];
-                class129.anInt1891 = oa.anIntArray5140[i++];
-                class129.anInt1889 = oa.anIntArray5140[i++];
-                class129.anInt1883 = oa.anIntArray5140[i++];
-                class129.anInt1890 = oa.anIntArray5140[i++];
-                class129.anInt1880 = oa.anIntArray5140[i++];
-                class129.anInt1876 = oa.anIntArray5140[i++];
-                class129.anInt1874 = oa.anIntArray5140[i++];
-                class129.anInt1884 = oa.anIntArray5140[i++];
+                class129.anInt1882 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1891 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1889 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1883 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1890 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1880 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1876 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1874 = OpenGLToolkit.anIntArray5140[i++];
+                class129.anInt1884 = OpenGLToolkit.anIntArray5140[i++];
             }
         }
         if (this.aClass342Array5118 != null) {
@@ -191,9 +191,9 @@ final class i
                 if (class342.aClass342_4248 != null) class342_76_ = class342.aClass342_4248;
                 if (class342.aClass101_4252 != null) class342.aClass101_4252.method898(class101);
                 else class342.aClass101_4252 = class101.method907();
-                class342_76_.anInt4238 = oa.anIntArray5140[i++];
-                class342_76_.anInt4239 = oa.anIntArray5140[i++];
-                class342_76_.anInt4240 = oa.anIntArray5140[i++];
+                class342_76_.anInt4238 = OpenGLToolkit.anIntArray5140[i++];
+                class342_76_.anInt4239 = OpenGLToolkit.anIntArray5140[i++];
+                class342_76_.anInt4240 = OpenGLToolkit.anIntArray5140[i++];
             }
         }
     }
@@ -212,7 +212,7 @@ final class i
 
     final native void H(int i, int i_77_, int i_78_);
 
-    i(oa var_oa, ya var_ya, DisplayModeManagerContainer77 class124, int i, int i_79_, int i_80_, int i_81_) {
+    i(OpenGLToolkit var_oa, NativeHandle var_ya, DisplayModeManagerContainer77 class124, int i, int i_79_, int i_80_, int i_81_) {
         anOa5117 = var_oa;
         aYa5120 = var_ya;
         this.aClass129Array5119 = class124.aClass129Array1846;
@@ -251,14 +251,14 @@ final class i
 
     private final native void A(long l, int i, boolean bool);
 
-    final native r ba(r var_r);
+    final native r BufferedToolkit(r var_r);
 
-    private final native void oa(oa var_oa);
+    private final native void OpenGLToolkit(OpenGLToolkit var_oa);
 
-    i(oa var_oa) {
+    i(OpenGLToolkit var_oa) {
         anOa5117 = var_oa;
         aYa5120 = null;
-        oa(var_oa);
+        OpenGLToolkit(var_oa);
     }
 
     final native int RA();

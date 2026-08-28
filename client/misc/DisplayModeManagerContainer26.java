@@ -137,7 +137,7 @@ final class DisplayModeManagerContainer26
         if (i > -73) anIntArray1450 = null;
     }
 
-    static final void method826(int i, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, ha var_ha) {
+    static final void method826(int i, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, GraphicsToolkit var_ha) {
         if ((RadixParser.aClass105_2309 == null || RSARequest.aClass105_9658 == null || RSARequest.aClass105_9659 == null) && Component158.aClass45_322.method421(false, DisplayModeManagerContainer58.anInt10257) && Component158.aClass45_322.method421(false, Component55.anInt3937) && Component158.aClass45_322.method421(false, DisplayModeManagerContainer206.anInt1387)) {
             Component170 class207 = Component170.method1521(Component158.aClass45_322, Component55.anInt3937, 0);
             RSARequest.aClass105_9658 = var_ha.method3691(class207, true);

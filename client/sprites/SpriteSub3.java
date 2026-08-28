@@ -17,7 +17,7 @@ abstract class SpriteSub3
     static int anInt8457;
     static int anInt8458;
     private static int anInt8459;
-    ha_Sub1 aHa_Sub1_8460;
+    GlToolkitSub1 aHa_Sub1_8460;
     int anInt8461;
     private int[] anIntArray8462;
     static int anInt8463;
@@ -71,10 +71,10 @@ abstract class SpriteSub3
         this.aHa_Sub1_8460.KA(anIntArray8462[0], anIntArray8462[1], anIntArray8462[2], anIntArray8462[3]);
     }
 
-    final void method983(float f, float f_17_, float f_18_, float f_19_, float f_20_, float f_21_, int i, aa var_aa, int i_22_, int i_23_) {
+    final void method983(float f, float f_17_, float f_18_, float f_19_, float f_20_, float f_21_, int i, Shader var_aa, int i_22_, int i_23_) {
         if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
         if (method997(f, f_17_, f_18_, f_19_, f_20_, f_21_)) {
-            aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+            ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             method995(var_aa_Sub3.anIntArray5201, var_aa_Sub3.anIntArray5202, anInt8473 - i_22_, -i_23_ - (anInt8468 - anInt8466));
         }
     }
@@ -141,7 +141,7 @@ abstract class SpriteSub3
         return (this.anInt8464 + this.anInt8470 + this.anInt8456);
     }
 
-    SpriteSub3(ha_Sub1 var_ha_Sub1, int i, int i_55_) {
+    SpriteSub3(GlToolkitSub1 var_ha_Sub1, int i, int i_55_) {
         this.aHa_Sub1_8460 = var_ha_Sub1;
         this.anInt8471 = i;
         this.anInt8470 = i_55_;
@@ -151,7 +151,7 @@ abstract class SpriteSub3
         return (this.anInt8461 + this.anInt8471 + this.anInt8454);
     }
 
-    abstract void method963(int i, int i_56_, aa var_aa, int i_57_, int i_58_);
+    abstract void method963(int i, int i_56_, Shader var_aa, int i_57_, int i_58_);
 
     private final boolean method997(float f, float f_59_, float f_60_, float f_61_, float f_62_, float f_63_) {
         int i = (this.anInt8461 + this.anInt8471 + this.anInt8454);

@@ -11,7 +11,7 @@ final class Component265
     private int anInt1578;
     static SeekableFile[] aClass78Array1579 = new SeekableFile[37];
     static int anInt1580;
-    private final ha_Sub2 aHa_Sub2_1581;
+    private final GlToolkitSub2 aHa_Sub2_1581;
     private Component178 aClass83_1582;
     static int[] anIntArray1583 = new int[14];
     private int anInt1584 = 0;
@@ -97,7 +97,7 @@ final class Component265
         return aClass286Array1588[i_8_].method2137(-112);
     }
 
-    Component265(ha_Sub2 var_ha_Sub2) {
+    Component265(GlToolkitSub2 var_ha_Sub2) {
         anInt1578 = 0;
         anInt1592 = 0;
         aHa_Sub2_1581 = var_ha_Sub2;

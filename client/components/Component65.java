@@ -17,13 +17,13 @@ final class Component65
     private final int anInt1613;
     static int anInt1614;
     static int anInt1615;
-    private final ha_Sub2 aHa_Sub2_1616;
+    private final GlToolkitSub2 aHa_Sub2_1616;
     byte[] aByteArray1617;
     private final int anInt1618;
     static int anInt1619;
     static Component85 aClass221_1620 = new Component85();
     static int anInt1621;
-    private final s_Sub2 aS_Sub2_1622;
+    private final BufferCacheSub2 aS_Sub2_1622;
     private Component228[][] aClass232ArrayArray1623;
     int anInt1624;
     private final int anInt1625;
@@ -35,7 +35,7 @@ final class Component65
 
     final void method951(r var_r, int i, int i_0_, int i_1_) {
         anInt1619++;
-        r_Sub2 var_r_Sub2 = (r_Sub2) var_r;
+        CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i += var_r_Sub2.anInt10489 - -1;
         i_0_ += var_r_Sub2.anInt10484 + 1;
         int i_2_ = this.anInt1624 * i_0_ + i;
@@ -101,7 +101,7 @@ final class Component65
 
     final boolean method954(int i, byte i_23_, int i_24_, r var_r) {
         anInt1630++;
-        r_Sub2 var_r_Sub2 = (r_Sub2) var_r;
+        CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i_24_ += 1 + var_r_Sub2.anInt10484;
         if (i_23_ != 88) aClass232ArrayArray1623 = null;
         i += 1 + var_r_Sub2.anInt10489;
@@ -236,7 +236,7 @@ final class Component65
         }
     }
 
-    static final ha method958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, CacheStore class45) {
+    static final GraphicsToolkit method958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, CacheStore class45) {
         try {
             if (bool != true) aClass221_1620 = null;
             anInt1610++;
@@ -247,7 +247,7 @@ final class Component65
                 i_63_ = dimension.height;
                 i_62_ = dimension.width;
             }
-            return ha.method3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
+            return GraphicsToolkit.method3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
@@ -255,7 +255,7 @@ final class Component65
 
     final void method959(int i, int i_64_, byte i_65_, r var_r) {
         anInt1621++;
-        r_Sub2 var_r_Sub2 = (r_Sub2) var_r;
+        CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i_64_ += 1 + var_r_Sub2.anInt10484;
         i += 1 + var_r_Sub2.anInt10489;
         int i_66_ = this.anInt1624 * i_64_ + i;
@@ -305,7 +305,7 @@ final class Component65
         DisplayModeManagerContainer77.aClass45_1848 = null;
     }
 
-    Component65(ha_Sub2 var_ha_Sub2, s_Sub2 var_s_Sub2) {
+    Component65(GlToolkitSub2 var_ha_Sub2, BufferCacheSub2 var_s_Sub2) {
         try {
             aHa_Sub2_1616 = var_ha_Sub2;
             aS_Sub2_1622 = var_s_Sub2;

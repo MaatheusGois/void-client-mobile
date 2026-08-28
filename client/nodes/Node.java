@@ -37,7 +37,7 @@ class Node {
         return 3;
     }
 
-    static final DisplayModeManagerContainer370 method2711(int i, int i_3_, DisplayModeManagerContainer370 class64, int i_4_, boolean bool, int i_5_, int i_6_, int i_7_, int i_8_, ha var_ha, int i_9_, int i_10_, int i_11_, DisplayModeManagerContainer167 class17) {
+    static final DisplayModeManagerContainer370 method2711(int i, int i_3_, DisplayModeManagerContainer370 class64, int i_4_, boolean bool, int i_5_, int i_6_, int i_7_, int i_8_, GraphicsToolkit var_ha, int i_9_, int i_10_, int i_11_, DisplayModeManagerContainer167 class17) {
         try {
             anInt4298++;
             if (class64 == null) return null;

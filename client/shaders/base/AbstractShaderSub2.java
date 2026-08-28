@@ -29,7 +29,7 @@ final class AbstractShaderSub2
             class318_sub1_sub2.anInt6382 = i_2_;
             class318_sub1_sub2.y = (i_1_ << Component149.anInt4459) + DisplayModeManagerContainer64.anInt9037;
             class357.aClass318_Sub1_Sub2_4408 = class318_sub1_sub2;
-            int i_3_ = aa_Sub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
+            int i_3_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
             if (class318_sub1_sub2.method2376(-52)) {
                 if (class318_sub1_sub2.method2377((byte) 122)) {
                     class318_sub1_sub2.aClass318_Sub1_6379 = AudioMixer.aClass318_Sub1Array3226[i_3_];
@@ -66,7 +66,7 @@ final class AbstractShaderSub2
             aClass377_7296 = class377;
             aClass269_7294 = class269;
             if (class45 == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
-            else aClass193_7293 = za_Sub2.method3442(34336, class45.method391("gl", "transparent_water", -29832), aClass377_7296, 4);
+            else aClass193_7293 = NodeBaseSub2.method3442(34336, class45.method391("gl", "transparent_water", -29832), aClass377_7296, 4);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
@@ -131,12 +131,12 @@ final class AbstractShaderSub2
                             Component44.aStringArray932[i_10_] = Component44.aStringArray932[i_10_ + 1];
                             DisplayModeManagerContainer145.aStringArray1808[i_10_] = DisplayModeManagerContainer145.aStringArray1808[1 + i_10_];
                             DefinitionSub21.aStringArray9275[i_10_] = (DefinitionSub21.aStringArray9275[1 + i_10_]);
-                            aa_Sub2.aStringArray5197[i_10_] = aa_Sub2.aStringArray5197[1 + i_10_];
+                            ShaderSub2.aStringArray5197[i_10_] = ShaderSub2.aStringArray5197[1 + i_10_];
                             AbstractShaderSub3.aBooleanArray7304[i_10_] = AbstractShaderSub3.aBooleanArray7304[i_10_ - -1];
                         }
                         DebugPanicSub1.anInt8493++;
                         Component380.anInt4985 = ResourceLoader.anInt3918;
-                        ParticleSystem class348_sub47 = ParticleShader.method2148(ha.aClass351_4571, (DisplayModeManagerContainer64.aClass77_9029), -123);
+                        ParticleSystem class348_sub47 = ParticleShader.method2148(GraphicsToolkit.aClass351_4571, (DisplayModeManagerContainer64.aClass77_9029), -123);
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                         HashNodeSub14.method3243(118, class348_sub47);

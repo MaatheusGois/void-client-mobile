@@ -104,7 +104,7 @@ final class NodeSub18
             Component30.aClass45_1878.method412((byte) -116);
             SoftwareFallbackShader.aClass45_7382.method412((byte) -110);
             Component54.aClass45_8667.method412((byte) 64);
-            aa_Sub3.aClass45_5207.method412((byte) 120);
+            ShaderSub3.aClass45_5207.method412((byte) 120);
             Component158.aClass45_322.method412((byte) 98);
             Component14.aClass45_8589.method412((byte) 43);
             Component110.aClass45_233.method412((byte) 20);
@@ -117,7 +117,7 @@ final class NodeSub18
             VideoAdDisplay.aClass45_3183.method412((byte) -116);
             Component43.aClass45_4975.method412((byte) 28);
             RadixParser.aClass45_2306.method412((byte) -115);
-            r_Sub2.aClass45_10480.method412((byte) 22);
+            CacheNodeSub2.aClass45_10480.method412((byte) 22);
             SeekableFile.aClass45_1322.method412((byte) 36);
             BrowserUrlOpener.aClass45_8926.method412((byte) -114);
             NodeSub32.aClass45_6950.method412((byte) 36);

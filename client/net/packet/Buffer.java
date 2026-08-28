@@ -549,7 +549,7 @@ class Buffer extends Node {
                 Component97.aClass45_1538.anInt634 = 2;
                 Component43.aClass45_4975.anInt634 = 2;
                 RadixParser.aClass45_2306.anInt634 = 2;
-                r_Sub2.aClass45_10480.anInt634 = 2;
+                CacheNodeSub2.aClass45_10480.anInt634 = 2;
                 SeekableFile.aClass45_1322.anInt634 = 2;
             }
             if (Component212.method2402(i_71_, (byte) -119)) {
@@ -564,7 +564,7 @@ class Buffer extends Node {
                 Component97.aClass45_1538.anInt634 = 1;
                 Component43.aClass45_4975.anInt634 = 1;
                 RadixParser.aClass45_2306.anInt634 = 1;
-                r_Sub2.aClass45_10480.anInt634 = 1;
+                CacheNodeSub2.aClass45_10480.anInt634 = 1;
                 SeekableFile.aClass45_1322.anInt634 = 1;
             }
             if (i_71_ == 11 || i_71_ == 3) ToolbarRefreshDefinition.method3088(9);

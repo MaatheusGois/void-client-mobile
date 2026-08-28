@@ -21,7 +21,7 @@ final class Component270
         class348_sub49_sub2.writeInt((byte) 93, Component30.aClass45_1878.method389(-104));
         class348_sub49_sub2.writeInt((byte) 90, SoftwareFallbackShader.aClass45_7382.method389(-122));
         class348_sub49_sub2.writeInt((byte) 92, Component54.aClass45_8667.method389(9));
-        class348_sub49_sub2.writeInt((byte) 90, aa_Sub3.aClass45_5207.method389(120));
+        class348_sub49_sub2.writeInt((byte) 90, ShaderSub3.aClass45_5207.method389(120));
         class348_sub49_sub2.writeInt((byte) 99, Component158.aClass45_322.method389(64));
         class348_sub49_sub2.writeInt((byte) 90, Component14.aClass45_8589.method389(-123));
         class348_sub49_sub2.writeInt((byte) 115, Component110.aClass45_233.method389(-113));
@@ -34,7 +34,7 @@ final class Component270
         class348_sub49_sub2.writeInt((byte) 93, VideoAdDisplay.aClass45_3183.method389(28));
         class348_sub49_sub2.writeInt((byte) 115, Component43.aClass45_4975.method389(-96));
         class348_sub49_sub2.writeInt((byte) 102, RadixParser.aClass45_2306.method389(98));
-        class348_sub49_sub2.writeInt((byte) 97, r_Sub2.aClass45_10480.method389(114));
+        class348_sub49_sub2.writeInt((byte) 97, CacheNodeSub2.aClass45_10480.method389(114));
         class348_sub49_sub2.writeInt((byte) 123, SeekableFile.aClass45_1322.method389(-104));
         class348_sub49_sub2.writeInt((byte) 97, BrowserUrlOpener.aClass45_8926.method389(-96));
         class348_sub49_sub2.writeInt((byte) 111, NodeSub32.aClass45_6950.method389(109));

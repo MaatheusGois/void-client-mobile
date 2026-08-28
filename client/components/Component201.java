@@ -17,7 +17,7 @@ final class Component201
     private final int anInt8715;
     private final int anInt8716;
     private final int anInt8717;
-    private final ha_Sub3 aHa_Sub3_8718;
+    private final GlToolkitSub3 aHa_Sub3_8718;
     private Interface18_Impl2 anInterface18_Impl2_8719;
     static int anInt8720;
 
@@ -48,7 +48,7 @@ final class Component201
         return anInterface18_Impl2_8719;
     }
 
-    static final void method2270(int i, int i_4_, ha var_ha, String string, boolean bool, int i_5_, int i_6_, int i_7_) {
+    static final void method2270(int i, int i_4_, GraphicsToolkit var_ha, String string, boolean bool, int i_5_, int i_6_, int i_7_) {
         try {
             if (OutputStream_Sub2.aClass105_106 == null || Component221.aClass105_1800 == null) {
                 if (Component158.aClass45_322.method421(false, DisplayModeManagerContainer155.anInt2996) && Component158.aClass45_322.method421(false, ToolbarRefreshDefinition.anInt9231)) {
@@ -90,7 +90,7 @@ final class Component201
         anIntArray8712 = null;
     }
 
-    Component201(ha_Sub3 var_ha_Sub3, int i, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_) {
+    Component201(GlToolkitSub3 var_ha_Sub3, int i, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_) {
         anInt8715 = i_11_;
         anInt8708 = i_13_;
         anInt8716 = i;

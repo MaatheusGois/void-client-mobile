@@ -54,7 +54,7 @@ abstract class Component203
         return Component15.method1110((this.y >> Component149.anInt4459), this.method2394(true), this.aByte6376, (byte) -79, (this.x >> Component149.anInt4459));
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_2_, byte i_3_, int i_4_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_2_, byte i_3_, int i_4_) {
         try {
             anInt8768++;
             if (i_3_ >= -106) method2384(null, 52);

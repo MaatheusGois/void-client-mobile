@@ -37,13 +37,13 @@ final class Component171
         return (this.aClass235_10115.anInt3079);
     }
 
-    public final void method44(int i, ha var_ha) {
+    public final void method44(int i, GraphicsToolkit var_ha) {
         this.aClass235_10115.method1667((byte) 116, var_ha);
         if (i != 836) method2379(42);
         anInt10099++;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10113++;
         if (i >= -125) method2386(111, null);
         DisplayModeManagerContainer370 class64 = this.aClass235_10115.method1668(true, true, -128, 262144, var_ha);
@@ -62,7 +62,7 @@ final class Component171
         return this.aClass235_10115.method1663(109);
     }
 
-    final boolean method2391(ha var_ha, int i, int i_3_, int i_4_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_3_, int i_4_) {
         anInt10101++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10115.method1668(false, false, -127, 131072, var_ha);
         if (class64 == null) return false;
@@ -79,7 +79,7 @@ final class Component171
         return false;
     }
 
-    Component171(ha var_ha, Component44 class51, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_) {
+    Component171(GraphicsToolkit var_ha, Component44 class51, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_) {
         super(i_6_, i_7_, i_8_, i, i_5_, Component181.method868(i_9_, i_10_, false));
         try {
             this.aClass235_10115 = new Component366(var_ha, class51, i_9_, i_10_, this.plane, i_5_, this, bool, i_11_);
@@ -107,13 +107,13 @@ final class Component171
         return (this.aClass235_10115.anInt3063);
     }
 
-    public final void method43(ha var_ha, int i) {
+    public final void method43(GraphicsToolkit var_ha, int i) {
         anInt10110++;
         this.aClass235_10115.method1674(-1, var_ha);
         if (i != -14218) aBoolean10114 = true;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10111++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10115.method1668(false, true, i ^ ~0x7f, 2048, var_ha);
         if (class64 == null) return null;
@@ -136,7 +136,7 @@ final class Component171
         return class318_sub4;
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         anInt10109++;
         if (i != 7) return null;
         return aClass30_10116;
@@ -171,7 +171,7 @@ final class Component171
         return aBoolean10095;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_14_, byte i_15_, int i_16_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_14_, byte i_15_, int i_16_) {
         try {
             anInt10112++;
             if (i_15_ < -106) throw new IllegalStateException();

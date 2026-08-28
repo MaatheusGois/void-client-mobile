@@ -49,7 +49,7 @@ final class AbstractShaderSub3
         if (i != -103) method3527(-78, null, -100);
     }
 
-    AbstractShaderSub3(ha_Sub3 var_ha_Sub3) {
+    AbstractShaderSub3(GlToolkitSub3 var_ha_Sub3) {
         super(var_ha_Sub3);
     }
 

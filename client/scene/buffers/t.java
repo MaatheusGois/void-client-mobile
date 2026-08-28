@@ -9,7 +9,7 @@ final class t
  */ extends s implements Interface19 {
     long nativeid;
     private final NodeList aClass262_5149 = new NodeList();
-    private final oa anOa5150;
+    private final OpenGLToolkit anOa5150;
     private int anInt5151 = -1;
 
     final void method3984(int i, int i_0_, int i_1_, boolean[][] bools, boolean bool, int i_2_, int i_3_) {
@@ -30,7 +30,7 @@ final class t
         }
     }
 
-    final native void wa(r var_r, int i, int i_9_, int i_10_, int i_11_, boolean bool);
+    final native void Interface4Impl(r var_r, int i, int i_9_, int i_10_, int i_11_, boolean bool);
 
     final void method3979(int i, int i_12_) {
         if (anInt5151 < 0) anOa5150.method3973().method142(this, i, i_12_);
@@ -107,7 +107,7 @@ final class t
 
     final native void ka(int i, int i_48_, int i_49_);
 
-    t(oa var_oa, ya var_ya, int i, int i_50_, int[][] is, int[][] is_51_, int i_52_, int i_53_, int i_54_) {
+    t(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_50_, int[][] is, int[][] is_51_, int i_52_, int i_53_, int i_54_) {
         super(i, i_50_, i_52_, is);
         anOa5150 = var_oa;
         ga(anOa5150, var_ya, i, i_50_, this.anIntArrayArray4584, is_51_, i_52_, i_53_, i_54_);
@@ -145,7 +145,7 @@ final class t
         if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
-    private final native void ga(oa var_oa, ya var_ya, int i, int i_72_, int[][] is, int[][] is_73_, int i_74_, int i_75_, int i_76_);
+    private final native void ga(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_72_, int[][] is, int[][] is_73_, int i_74_, int i_75_, int i_76_);
 
     final native void U(int i, int i_77_, int[] is, int[] is_78_, int[] is_79_, int[] is_80_, int[] is_81_, int[] is_82_, int[] is_83_, int[] is_84_, int i_85_, int i_86_, int i_87_, boolean bool);
 

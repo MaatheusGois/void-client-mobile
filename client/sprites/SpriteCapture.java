@@ -1722,12 +1722,12 @@ final class SpriteCapture extends SpriteSub3 {
         throw new IllegalStateException("Can't capture alpha into a java_sprite_24");
     }
 
-    SpriteCapture(ha_Sub1 var_ha_Sub1, int i, int i_743_) {
+    SpriteCapture(GlToolkitSub1 var_ha_Sub1, int i, int i_743_) {
         super(var_ha_Sub1, i, i_743_);
         this.anIntArray9933 = new int[i * i_743_];
     }
 
-    SpriteCapture(ha_Sub1 var_ha_Sub1, int[] is, int i, int i_744_, int i_745_, int i_746_, boolean bool) {
+    SpriteCapture(GlToolkitSub1 var_ha_Sub1, int[] is, int i, int i_744_, int i_745_, int i_746_, boolean bool) {
         super(var_ha_Sub1, i_745_, i_746_);
         if (bool) this.anIntArray9933 = new int[i_745_ * i_746_];
         else this.anIntArray9933 = is;
@@ -1743,7 +1743,7 @@ final class SpriteCapture extends SpriteSub3 {
         }
     }
 
-    SpriteCapture(ha_Sub1 var_ha_Sub1, int[] is, int i, int i_751_) {
+    SpriteCapture(GlToolkitSub1 var_ha_Sub1, int[] is, int i, int i_751_) {
         super(var_ha_Sub1, i, i_751_);
         this.anIntArray9933 = is;
     }
@@ -2153,7 +2153,7 @@ final class SpriteCapture extends SpriteSub3 {
         }
     }
 
-    final void method963(int i, int i_857_, aa var_aa, int i_858_, int i_859_) {
+    final void method963(int i, int i_857_, Shader var_aa, int i_858_, int i_859_) {
         if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
         i += this.anInt8461;
         i_857_ += this.anInt8464;
@@ -2188,7 +2188,7 @@ final class SpriteCapture extends SpriteSub3 {
             i_864_ += i_869_;
         }
         if (i_862_ > 0 && i_863_ > 0) {
-            aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+            ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             int[] is = var_aa_Sub3.anIntArray5201;
             int[] is_870_ = var_aa_Sub3.anIntArray5202;
             int[] is_871_ = (this.aHa_Sub1_8460.anIntArray7483);

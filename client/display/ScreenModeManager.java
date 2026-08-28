@@ -54,7 +54,7 @@ final class ScreenModeManager {
             if (i_2_ == 1) {
                 // Fill the container instead of centering a fixed 765x503 canvas.
                 DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                ha_Sub2.anInt7666 = NodeSub22.anInt6857;
+                GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
                 Component236.anInt4017 = SocketConnector.anInt3473;
                 PacketReader.anInt10432 = NodeSub22.anInt6857;
                 NodeSub48.anInt7129 = 0;

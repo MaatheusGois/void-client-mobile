@@ -16,13 +16,13 @@ final class p
     Canvas aCanvas5147;
     int anInt5148;
 
-    private final native void sa(oa var_oa, Canvas canvas, int i, int i_0_);
+    private final native void sa(OpenGLToolkit var_oa, Canvas canvas, int i, int i_0_);
 
     public final native void w(boolean bool);
 
     private final native void H(int i, int i_1_, int i_2_, int i_3_);
 
-    private final native void oa(Canvas canvas, int i, int i_4_);
+    private final native void OpenGLToolkit(Canvas canvas, int i, int i_4_);
 
     private final void method3432(Exception exception) {
         if (!aBoolean5144) {
@@ -50,7 +50,7 @@ final class p
         if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
-    p(oa var_oa, Canvas canvas, int i, int i_11_) {
+    p(OpenGLToolkit var_oa, Canvas canvas, int i, int i_11_) {
         this.aCanvas5147 = canvas;
         this.anInt5145 = i;
         this.anInt5148 = i_11_;
@@ -74,7 +74,7 @@ final class p
     final void method3435(Canvas canvas, int i, int i_15_) {
         this.anInt5145 = i;
         this.anInt5148 = i_15_;
-        oa(canvas, i, i_15_);
+        OpenGLToolkit(canvas, i, i_15_);
     }
 
     final void method3436() {

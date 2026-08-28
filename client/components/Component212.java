@@ -47,7 +47,7 @@ final class Component212
         anIntArray9981 = null;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_0_, byte i_1_, int i_2_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_0_, byte i_1_, int i_2_) {
         do {
             try {
                 anInt9970++;
@@ -70,7 +70,7 @@ final class Component212
         return aClass64_9993.ma();
     }
 
-    public final void method43(ha var_ha, int i) {
+    public final void method43(GraphicsToolkit var_ha, int i) {
         anInt9995++;
         if (i != -14218) method2404(null, -47, 49);
         Object object = null;
@@ -85,7 +85,7 @@ final class Component212
         if (var_r != null) RequestProcessor.method1301(var_r, this.aByte6376, this.x, this.y, null);
     }
 
-    private final Component245 method2401(ha var_ha, int i, boolean bool, int i_4_) {
+    private final Component245 method2401(GraphicsToolkit var_ha, int i, boolean bool, int i_4_) {
         anInt9985++;
         if (i_4_ != 22) method2404(null, -21, -25);
         Component44 class51 = GradientPreset.aClass263_9195.method2005(0, aShort9991 & 0xffff);
@@ -122,7 +122,7 @@ final class Component212
         return aShort9991 & 0xffff;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt9990++;
         if (aClass64_9993 == null) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -200,7 +200,7 @@ final class Component212
         return aClass64_9993.F();
     }
 
-    public final void method44(int i, ha var_ha) {
+    public final void method44(int i, GraphicsToolkit var_ha) {
         anInt9986++;
         Object object = null;
         r var_r;
@@ -215,7 +215,7 @@ final class Component212
         if (i != 836) aShort9991 = (short) 86;
     }
 
-    final boolean method2391(ha var_ha, int i, int i_16_, int i_17_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_16_, int i_17_) {
         if (i_17_ != 0) anInt9997 = -51;
         anInt9996++;
         DisplayModeManagerContainer370 class64 = method2404(var_ha, 69, 131072);
@@ -228,7 +228,7 @@ final class Component212
         return false;
     }
 
-    private final DisplayModeManagerContainer370 method2404(ha var_ha, int i, int i_18_) {
+    private final DisplayModeManagerContainer370 method2404(GraphicsToolkit var_ha, int i, int i_18_) {
         anInt9984++;
         int i_19_ = 65 / ((-34 - i) / 53);
         if (aClass64_9993 != null && var_ha.method3667(aClass64_9993.ua(), i_18_) == 0) return aClass64_9993;
@@ -237,7 +237,7 @@ final class Component212
         return null;
     }
 
-    Component212(ha var_ha, Component44 class51, int i, int i_20_, int i_21_, int i_22_, int i_23_, boolean bool, int i_24_, boolean bool_25_) {
+    Component212(GraphicsToolkit var_ha, Component44 class51, int i, int i_20_, int i_21_, int i_22_, int i_23_, boolean bool, int i_24_, boolean bool_25_) {
         super(i_21_, i_22_, i_23_, i, i_20_, class51.anInt930);
         do {
             try {
@@ -264,14 +264,14 @@ final class Component212
         } while (false);
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (aClass30_9999 == null) aClass30_9999 = (OggUrlStream.method2967(this.x, method2404(var_ha, 86, 0), this.y, this.anInt6382, i ^ 0x5));
         if (i != 7) return null;
         anInt9998++;
         return aClass30_9999;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         if (i >= -125) aBoolean9983 = false;
         anInt9987++;
     }

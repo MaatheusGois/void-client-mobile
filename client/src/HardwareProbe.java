@@ -94,7 +94,7 @@ final class HardwareProbe extends Node {
     static final int method2749(int i) {
         if (i != -1) method2749(20);
         anInt6593++;
-        return za_Sub1.anInt9774;
+        return NodeBaseSub1.anInt9774;
     }
 
     public HardwareProbe() {

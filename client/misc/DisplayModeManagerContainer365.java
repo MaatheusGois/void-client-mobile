@@ -26,7 +26,7 @@ final class DisplayModeManagerContainer365
     private int anInt1231;
     int anInt1232;
 
-    private final boolean method730(ha var_ha, DisplayModeManagerContainer365 class72_0_) {
+    private final boolean method730(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_0_) {
         if (aClass105_1221 == null) {
             if (anInt1230 == 0) {
                 if (MatrixSub1.aD5684.method4(-7953, anInt1224)) {
@@ -46,7 +46,7 @@ final class DisplayModeManagerContainer365
         anIntArray1226 = null;
     }
 
-    private static final void method732(ha var_ha) {
+    private static final void method732(GraphicsToolkit var_ha) {
         if (aClass105_1228 == null) {
             int[] is = new int[16384];
             int[] is_1_ = new int[16384];
@@ -118,12 +118,12 @@ final class DisplayModeManagerContainer365
         aClass105_1221 = null;
     }
 
-    private final void method735(ha var_ha, DisplayModeManagerContainer365 class72_19_) {
+    private final void method735(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_19_) {
         method738(var_ha);
         method732(var_ha);
         var_ha.K(anIntArray1226);
         var_ha.KA(0, 0, anInt1220, anInt1220);
-        var_ha.ya();
+        var_ha.NativeHandle();
         var_ha.fillRect(0, 0, anInt1220, anInt1220, ~0xffffff | anInt1222, 0);
         int i = 0;
         int i_20_ = 0;
@@ -154,8 +154,8 @@ final class DisplayModeManagerContainer365
             i = i_27_;
         }
         DisplayModeManagerContainer370 class64 = aClass64_1227.method614((byte) 0, 51200, true);
-        class64.aa((short) 0, (short) anInt1224);
-        var_ha.xa(1.0F);
+        class64.Shader((short) 0, (short) anInt1224);
+        var_ha.DualToolkit(1.0F);
         var_ha.ZA(16777215, 1.0F, 1.0F, (float) i, (float) i_20_, (float) i_21_);
         int i_28_ = 1024 * anInt1220 / (class64.RA() - class64.V());
         if (anInt1222 != 0) i_28_ = i_28_ * 13 / 16;
@@ -168,18 +168,18 @@ final class DisplayModeManagerContainer365
         int i_30_ = (anInt1220 - i_29_) / 2;
         aClass105_1215.method970(i_30_, i_30_, i_29_, i_29_, 0, ~0xffffff | anInt1222, 1);
         aClass105_1221 = var_ha.method3683(0, 0, anInt1220, anInt1220, true);
-        var_ha.ya();
+        var_ha.NativeHandle();
         var_ha.fillRect(0, 0, anInt1220, anInt1220, 0, 0);
         aClass105_1228.method970(0, 0, anInt1220, anInt1220, 1, 0, 0);
         aClass105_1221.method968(0, 0, 0);
         var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);
     }
 
-    final boolean method736(ha var_ha, DisplayModeManagerContainer365 class72_31_) {
+    final boolean method736(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_31_) {
         return aClass105_1221 != null || method730(var_ha, class72_31_);
     }
 
-    final void method737(ha var_ha, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
+    final void method737(GraphicsToolkit var_ha, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
         if (aClass105_1221 != null) {
             int i_37_ = anInt1231 - i_35_ & 0x3fff;
             int i_38_ = anInt1219 - i_36_ & 0x3fff;
@@ -191,7 +191,7 @@ final class DisplayModeManagerContainer365
         }
     }
 
-    private static final void method738(ha var_ha) {
+    private static final void method738(GraphicsToolkit var_ha) {
         if (aClass64_1227 == null) {
             DisplayModeManagerContainer77 class124 = new DisplayModeManagerContainer77(580, 1104, 1);
             class124.method1105(109, (byte) 0, (byte) 0, (short) 0, (short) 1024, (byte) 0, (short) 0, (short) 32767, (short) 1024, (short) 1024);
@@ -247,7 +247,7 @@ final class DisplayModeManagerContainer365
         anInt1230 = i;
     }
 
-    private final void method740(ha var_ha, DisplayModeManagerContainer365 class72_60_) {
+    private final void method740(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_60_) {
         DisplayModeManagerContainer77 class124 = Component189.method2277(0, Component92.aClass45_3309, anInt1224, -1);
         if (class124 != null) {
             var_ha.K(anIntArray1226);
@@ -283,7 +283,7 @@ final class DisplayModeManagerContainer365
                 i_62_ = i_62_ * i_69_ - i * i_68_ >> 14;
                 i = i_70_;
             }
-            var_ha.xa(1.0F);
+            var_ha.DualToolkit(1.0F);
             var_ha.ZA(16777215, 1.0F, 1.0F, (float) i, (float) i_61_, (float) i_62_);
             DisplayModeManagerContainer370 class64 = var_ha.method3625(class124, 2048, 0, 64, 768);
             int i_71_ = class64.RA() - class64.V();

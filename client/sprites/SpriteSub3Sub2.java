@@ -1200,7 +1200,7 @@ final class SpriteSub3Sub2
         }
     }
 
-    SpriteSub3Sub2(ha_Sub1 var_ha_Sub1, byte[] is, int[] is_416_, int i, int i_417_) {
+    SpriteSub3Sub2(GlToolkitSub1 var_ha_Sub1, byte[] is, int[] is_416_, int i, int i_417_) {
         super(var_ha_Sub1, i, i_417_);
         aByteArray9934 = is;
         anIntArray9935 = is_416_;
@@ -2624,7 +2624,7 @@ final class SpriteSub3Sub2
         }
     }
 
-    final void method963(int i, int i_1070_, aa var_aa, int i_1071_, int i_1072_) {
+    final void method963(int i, int i_1070_, Shader var_aa, int i_1071_, int i_1072_) {
         if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
         i += this.anInt8461;
         i_1070_ += this.anInt8464;
@@ -2659,7 +2659,7 @@ final class SpriteSub3Sub2
             i_1077_ += i_1082_;
         }
         if (i_1075_ > 0 && i_1076_ > 0) {
-            aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+            ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             int[] is = var_aa_Sub3.anIntArray5201;
             int[] is_1083_ = var_aa_Sub3.anIntArray5202;
             int[] is_1084_ = (this.aHa_Sub1_8460.anIntArray7483);

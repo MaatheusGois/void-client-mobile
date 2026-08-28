@@ -1,14 +1,14 @@
-/* za_Sub1 - Decompiled by JODE
+/* NodeBaseSub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import jaclib.memory.heap.NativeHeap;
 
-final class za_Sub1
+final class NodeBaseSub1
 /**
- * RENAMED from `za_Sub1` (JODE-obfuscated).
- * Evidence: extends za (za)
- */ extends za {
+ * RENAMED from `NodeBaseSub1` (JODE-obfuscated).
+ * Evidence: extends NodeBase (NodeBase)
+ */ extends NodeBase {
     NativeHeap aNativeHeap9770;
     static int anInt9771;
     static int anInt9772;
@@ -24,7 +24,7 @@ final class za_Sub1
         return Component210.anInt5283;
     }
 
-    za_Sub1(int i) {
+    NodeBaseSub1(int i) {
         this.aNativeHeap9770 = new NativeHeap(i);
     }
 

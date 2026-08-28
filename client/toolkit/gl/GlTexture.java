@@ -27,7 +27,7 @@ class GlTexture extends AbstractGlTexture {
     static int anInt8550 = 0;
     int anInt8551;
 
-    GlTexture(ha_Sub2 var_ha_Sub2, int i, int i_0_, int i_1_, int i_2_) {
+    GlTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_0_, int i_1_, int i_2_) {
         super(var_ha_Sub2, i, i_0_, i_1_ * i_2_, false);
         anInt8545 = -1;
         this.anInt8547 = i_1_;
@@ -45,7 +45,7 @@ class GlTexture extends AbstractGlTexture {
         anInt8545 = i_5_;
     }
 
-    GlTexture(ha_Sub2 var_ha_Sub2, int i, int i_6_, int i_7_, int i_8_, boolean bool, float[] fs, int i_9_) {
+    GlTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_6_, int i_7_, int i_8_, boolean bool, float[] fs, int i_9_) {
         super(var_ha_Sub2, i, i_6_, i_8_ * i_7_, bool);
         anInt8545 = -1;
         try {
@@ -85,7 +85,7 @@ class GlTexture extends AbstractGlTexture {
         if (i_12_ > -65) this.anInt8547 = 101;
     }
 
-    GlTexture(ha_Sub2 var_ha_Sub2, int i, int i_21_, int i_22_, int i_23_, boolean bool, int[] is, int i_24_, int i_25_, boolean bool_26_) {
+    GlTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_21_, int i_22_, int i_23_, boolean bool, int[] is, int i_24_, int i_25_, boolean bool_26_) {
         super(var_ha_Sub2, i, i_21_, i_23_ * i_22_, bool);
         anInt8545 = -1;
         try {
@@ -117,7 +117,7 @@ class GlTexture extends AbstractGlTexture {
         }
     }
 
-    GlTexture(ha_Sub2 var_ha_Sub2, int i, int i_32_, int i_33_, int i_34_, boolean bool, byte[] is, int i_35_, boolean bool_36_) {
+    GlTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_32_, int i_33_, int i_34_, boolean bool, byte[] is, int i_35_, boolean bool_36_) {
         super(var_ha_Sub2, i, i_32_, i_33_ * i_34_, bool);
         anInt8545 = -1;
         try {
@@ -175,7 +175,7 @@ class GlTexture extends AbstractGlTexture {
     }
 
     static final void method1968() {
-        za.method3437(1, Component291.anInt2524);
+        NodeBase.method3437(1, Component291.anInt2524);
     }
 
     public final void method37(int i) {
@@ -234,7 +234,7 @@ class GlTexture extends AbstractGlTexture {
         int i_76_ = -17 % ((46 - i_66_) / 59);
     }
 
-    GlTexture(ha_Sub2 var_ha_Sub2, int i, int i_77_, int i_78_, int i_79_, int i_80_) {
+    GlTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_77_, int i_78_, int i_79_, int i_80_) {
         super(var_ha_Sub2, i, 6407, i_80_ * i_79_, false);
         anInt8545 = -1;
         this.anInt8547 = i_79_;

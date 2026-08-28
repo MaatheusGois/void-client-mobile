@@ -28,7 +28,7 @@ class Component27
         int i_0_ = 105 % ((-15 - i) / 36);
     }
 
-    static final void method3568(ha var_ha, int i) {
+    static final void method3568(GraphicsToolkit var_ha, int i) {
         anInt4964++;
         Component49.aClass324_4684 = DisplayModeManagerContainer194.method232(var_ha, (byte) -53, true, LoadingState.anInt1044);
         AbstractGlTextureSub1.aClass143_8527 = Component137.method1151(-25411, var_ha, LoadingState.anInt1044);

@@ -28,7 +28,7 @@ abstract class DisplayModeManagerContainer204
     static final void method893(byte i) {
         DefinitionSub22.method3111(91, Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1743(-32350));
         anInt1595++;
-        int i_4_ = ((WaterSurfaceShader.anInt6246 >> 12) - -(za_Sub2.regionTileX >> 3));
+        int i_4_ = ((WaterSurfaceShader.anInt6246 >> 12) - -(NodeBaseSub2.regionTileX >> 3));
         int i_5_ = ((Component330.regionTileY >> 3) + (Component317.anInt8685 >> 12));
         Component117.anInt4372 = Component72.localPlayer.plane = (byte) 0;
         Component72.localPlayer.method2449(8, 8, (byte) 118);
@@ -37,7 +37,7 @@ abstract class DisplayModeManagerContainer204
         ImageCacheStore.anIntArray4031 = new int[i_6_];
         NodeSub50.aByteArrayArray7212 = new byte[i_6_][];
         Component31.anIntArrayArray5894 = new int[i_6_][4];
-        aa_Sub1.anIntArray5192 = new int[i_6_];
+        ShaderSub1.anIntArray5192 = new int[i_6_];
         WorldNameText.aByteArrayArray8642 = new byte[i_6_][];
         OggStreamReader.anIntArray9042 = new int[i_6_];
         r.anIntArray9724 = new int[i_6_];
@@ -51,13 +51,13 @@ abstract class DisplayModeManagerContainer204
             for (int i_8_ = (-(ParametricDefinition.anInt9109 >> 4) + i_5_) / 8; ((i_5_ + (ParametricDefinition.anInt9109 >> 4)) / 8 >= i_8_); i_8_++) {
                 int i_9_ = i_8_ + (i_7_ << 8);
                 OggStreamReader.anIntArray9042[i_6_] = i_9_;
-                aa_Sub1.anIntArray5192[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_7_ + "_" + i_8_, i + 49);
+                ShaderSub1.anIntArray5192[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_7_ + "_" + i_8_, i + 49);
                 Applet_Sub1.anIntArray38[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_7_ + "_" + i_8_, 0);
                 ImageCacheStore.anIntArray4031[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("n" + i_7_ + "_" + i_8_, 0);
                 DisplayModeManagerContainer61.anIntArray3759[i_6_] = SoftwareFallbackShader.aClass45_7382.method417("um" + i_7_ + "_" + i_8_, 0);
                 r.anIntArray9724[i_6_] = (SoftwareFallbackShader.aClass45_7382.method417("ul" + i_7_ + "_" + i_8_, NodeSub21.method2955(i, -49)));
                 if (ImageCacheStore.anIntArray4031[i_6_] == -1) {
-                    aa_Sub1.anIntArray5192[i_6_] = -1;
+                    ShaderSub1.anIntArray5192[i_6_] = -1;
                     Applet_Sub1.anIntArray38[i_6_] = -1;
                     DisplayModeManagerContainer61.anIntArray3759[i_6_] = -1;
                     r.anIntArray9724[i_6_] = -1;
@@ -67,7 +67,7 @@ abstract class DisplayModeManagerContainer204
         }
         for (int i_10_ = i_6_; ImageCacheStore.anIntArray4031.length > i_10_; i_10_++) {
             ImageCacheStore.anIntArray4031[i_10_] = -1;
-            aa_Sub1.anIntArray5192[i_10_] = -1;
+            ShaderSub1.anIntArray5192[i_10_] = -1;
             Applet_Sub1.anIntArray38[i_10_] = -1;
             DisplayModeManagerContainer61.anIntArray3759[i_10_] = -1;
             r.anIntArray9724[i_10_] = -1;
@@ -113,7 +113,7 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method903(int i, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_);
 
-    static final GlRectangleTexture method904(int i, ha_Sub2 var_ha_Sub2, int i_24_, int i_25_, int i_26_) {
+    static final GlRectangleTexture method904(int i, GlToolkitSub2 var_ha_Sub2, int i_24_, int i_25_, int i_26_) {
         try {
             anInt1594++;
             if (i <= 42) method906(123);

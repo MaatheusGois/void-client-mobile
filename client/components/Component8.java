@@ -8,7 +8,7 @@ final class Component8
  * Evidence: root class; no distinctive extends/strings
  */ {
     int anInt1665;
-    private final ha_Sub1 aHa_Sub1_1666;
+    private final GlToolkitSub1 aHa_Sub1_1666;
     boolean aBoolean1667 = false;
     int anInt1668;
     boolean aBoolean1669;
@@ -4441,7 +4441,7 @@ final class Component8
         return this.anIntArray1676[0] % anInt1678;
     }
 
-    Component8(ha_Sub1 var_ha_Sub1, Component385 class167) {
+    Component8(GlToolkitSub1 var_ha_Sub1, Component385 class167) {
         this.aBoolean1669 = true;
         this.aBoolean1671 = false;
         aBoolean1680 = false;

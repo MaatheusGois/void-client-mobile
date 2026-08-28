@@ -57,7 +57,7 @@ final class Component349
         return this.aClass64_10028.fa();
     }
 
-    public final void method44(int i, ha var_ha) {
+    public final void method44(int i, GraphicsToolkit var_ha) {
         anInt10008++;
         Object object = null;
         r var_r;
@@ -72,7 +72,7 @@ final class Component349
         if (var_r != null) Component387.method1130(var_r, this.aByte6376, this.x, this.y, null);
     }
 
-    Component349(ha var_ha, Component44 class51, int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool_10_) {
+    Component349(GraphicsToolkit var_ha, Component44 class51, int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool_10_) {
         super(i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, class51.anInt895 == 1, SceneNode.method2782(i_9_, i_8_, 0));
         do {
             try {
@@ -112,7 +112,7 @@ final class Component349
         return aBoolean10003;
     }
 
-    final boolean method2391(ha var_ha, int i, int i_12_, int i_13_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_12_, int i_13_) {
         anInt10005++;
         if (i_13_ != 0) return false;
         DisplayModeManagerContainer370 class64 = method2414(-1, var_ha, 131072);
@@ -125,7 +125,7 @@ final class Component349
         return false;
     }
 
-    private final DisplayModeManagerContainer370 method2414(int i, ha var_ha, int i_14_) {
+    private final DisplayModeManagerContainer370 method2414(int i, GraphicsToolkit var_ha, int i_14_) {
         if (i != -1) method2392(false);
         anInt10004++;
         if (this.aClass64_10028 != null && var_ha.method3667(this.aClass64_10028.ua(), i_14_) == 0) return this.aClass64_10028;
@@ -134,7 +134,7 @@ final class Component349
         return class2.aClass64_119;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10033++;
         if (i > -125) aShort10032 = (short) -95;
     }
@@ -147,7 +147,7 @@ final class Component349
     final int method2416(int i) {
         if (i != 15) aByte10015 = (byte) 66;
         anInt10009++;
-        if (this.aClass64_10028 != null) return this.aClass64_10028.na() / 4;
+        if (this.aClass64_10028 != null) return this.aClass64_10028.ShaderImpl() / 4;
         return 15;
     }
 
@@ -163,7 +163,7 @@ final class Component349
         return aByte10015;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_16_, byte i_17_, int i_18_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_16_, byte i_17_, int i_18_) {
         do {
             try {
                 anInt10034++;
@@ -196,14 +196,14 @@ final class Component349
         if (this.aClass64_10028 != null) this.aClass64_10028.s(~0x10000 & this.aClass64_10028.ua());
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (aClass30_10025 == null) aClass30_10025 = (OggUrlStream.method2967(this.x, method2414(i + -8, var_ha, 0), this.y, this.anInt6382, 2));
         if (i != 7) return null;
         anInt10013++;
         return aClass30_10025;
     }
 
-    private final Component245 method2417(int i, ha var_ha, int i_20_, boolean bool) {
+    private final Component245 method2417(int i, GraphicsToolkit var_ha, int i_20_, boolean bool) {
         anInt10007++;
         Component44 class51 = GradientPreset.aClass263_9195.method2005(i, 0xffff & aShort10032);
         s var_s;
@@ -235,7 +235,7 @@ final class Component349
         return false;
     }
 
-    public final void method43(ha var_ha, int i) {
+    public final void method43(GraphicsToolkit var_ha, int i) {
         if (i != -14218) aBoolean10019 = false;
         anInt10016++;
         Object object = null;
@@ -272,7 +272,7 @@ final class Component349
         return aByte10024;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10031++;
         if (this.aClass64_10028 == null) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();

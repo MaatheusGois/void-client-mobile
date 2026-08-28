@@ -180,7 +180,7 @@ final class DisplayModeManagerContainer57
     int anInt841;
     int anInt842;
 
-    static final void method424(int i, int i_0_, ha var_ha, int i_1_, int i_2_, int i_3_, int i_4_, byte[][][] is, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
+    static final void method424(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, int i_3_, int i_4_, byte[][][] is, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         try {
             anInt768++;
             if (i_7_ != i_1_ && i_3_ != 0) {
@@ -203,9 +203,9 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final aa method425(ha var_ha, byte i) {
+    final Shader method425(GraphicsToolkit var_ha, byte i) {
         anInt767++;
-        aa var_aa = (aa) ColoredText.aClass60_6096.method583(this.anInt830, 119);
+        Shader var_aa = (Shader) ColoredText.aClass60_6096.method583(this.anInt830, 119);
         if (var_aa != null) return var_aa;
         Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
         if (class207 == null) return null;
@@ -237,7 +237,7 @@ final class DisplayModeManagerContainer57
         return var_aa;
     }
 
-    final BitmapFont method426(ha var_ha, byte i) {
+    final BitmapFont method426(GraphicsToolkit var_ha, byte i) {
         anInt827++;
         BitmapFont class324 = DisplayModeManagerContainer194.method232(var_ha, (byte) -53, false, this.anInt702);
         if (i != 68) method436(-71, -56, -125);
@@ -299,7 +299,7 @@ final class DisplayModeManagerContainer57
         return class348_sub50.aString7211;
     }
 
-    final DisplayModeManagerContainer370 method430(Component324 class150, Component344 class87, int i, ha var_ha, int i_21_, int i_22_, DisplayModeManagerContainer320 class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
+    final DisplayModeManagerContainer370 method430(Component324 class150, Component344 class87, int i, GraphicsToolkit var_ha, int i_21_, int i_22_, DisplayModeManagerContainer320 class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
         try {
             anInt684++;
             HashNodeSub13.aBoolean9616 = false;
@@ -667,7 +667,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final void method437(int i, DisplayModeManagerContainer370 class64, ha var_ha, int i_63_, DisplayModeManagerContainer204 class101) {
+    final void method437(int i, DisplayModeManagerContainer370 class64, GraphicsToolkit var_ha, int i_63_, DisplayModeManagerContainer204 class101) {
         do {
             try {
                 if (i != -20154) method438(15, -50, null);
@@ -742,7 +742,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final Component24 method443(ha var_ha, byte i) {
+    final Component24 method443(GraphicsToolkit var_ha, byte i) {
         anInt819++;
         HashNodeSub13.aBoolean9616 = false;
         long l = (((long) this.anInt809 << 40) + (((this.aBoolean790 ? 1L : 0L) << 38) + (((long) this.anInt672 << 36) + ((this.aBoolean745 ? 1L : 0L) << 35))) + ((long) this.anInt756 + ((!this.aBoolean735 ? 0L : 1L) << 39)));

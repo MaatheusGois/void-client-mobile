@@ -129,7 +129,7 @@ final class Component44
         return class348_sub50.aString7211;
     }
 
-    final Component245 method476(ha var_ha, s var_s, int i, int i_4_, int i_5_, boolean bool, s var_s_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
+    final Component245 method476(GraphicsToolkit var_ha, s var_s, int i, int i_4_, int i_5_, boolean bool, s var_s_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
         try {
             if (Component65.method955(22311, i)) i = 4;
             anInt938++;
@@ -156,7 +156,7 @@ final class Component44
                 class64 = method477(i_9_, var_ha, i, i_10_ ^ ~0xec, i_12_);
                 if (class64 == null) return null;
                 if (i == 10 && i_9_ > 3) class64.a(2048);
-                if (bool) var_r = class64.ba(null);
+                if (bool) var_r = class64.BufferedToolkit(null);
                 class64.s(i_11_);
                 class2 = new Component245();
                 class2.aClass64_119 = class64;
@@ -167,7 +167,7 @@ final class Component44
             } else {
                 class64 = class2.aClass64_119;
                 var_r = class2.aR118;
-                if (bool && var_r == null) var_r = class2.aR118 = class64.ba(null);
+                if (bool && var_r == null) var_r = class2.aR118 = class64.BufferedToolkit(null);
             }
             if (i_10_ != 128) method477(-4, null, 72, 42, -33);
             boolean bool_13_ = (aByte886 != 0 && (var_s_6_ != null || var_s != null));
@@ -186,7 +186,7 @@ final class Component44
         }
     }
 
-    private final DisplayModeManagerContainer370 method477(int i, ha var_ha, int i_15_, int i_16_, int i_17_) {
+    private final DisplayModeManagerContainer370 method477(int i, GraphicsToolkit var_ha, int i_15_, int i_16_, int i_17_) {
         anInt958++;
         int i_18_ = anInt949 - -64;
         int i_19_ = 850 + anInt880;
@@ -266,7 +266,7 @@ final class Component44
         }
         if (aShortArray919 != null) {
             for (int i_29_ = 0; i_29_ < aShortArray919.length; i_29_++)
-                class64_27_.aa(aShortArray919[i_29_], aShortArray892[i_29_]);
+                class64_27_.Shader(aShortArray919[i_29_], aShortArray892[i_29_]);
         }
         if (aByte922 != 0) class64_27_.method624(aByte944, aByte952, aByte879, 0xff & aByte922);
         if (anInt928 != 128 || anInt935 != 128 || anInt882 != 128) class64_27_.O(anInt928, anInt935, anInt882);
@@ -535,7 +535,7 @@ final class Component44
         if (i_38_ >= -93) aByteArray885 = null;
     }
 
-    final DisplayModeManagerContainer370 method483(int i, int i_63_, int i_64_, int i_65_, ha var_ha, int i_66_, int i_67_, byte i_68_, s var_s, int i_69_, int i_70_, int i_71_, DisplayModeManagerContainer167 class17, s var_s_72_) {
+    final DisplayModeManagerContainer370 method483(int i, int i_63_, int i_64_, int i_65_, GraphicsToolkit var_ha, int i_66_, int i_67_, byte i_68_, s var_s, int i_69_, int i_70_, int i_71_, DisplayModeManagerContainer167 class17, s var_s_72_) {
         try {
             if (Component65.method955(22311, i_64_)) i_64_ = 4;
             anInt910++;

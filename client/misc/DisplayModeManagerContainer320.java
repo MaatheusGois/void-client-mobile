@@ -58,7 +58,7 @@ final class DisplayModeManagerContainer320
         aClass161_3285 = null;
     }
 
-    final Component24 method1932(ha var_ha, int i, int i_0_, BitmapFont class324, Component101 class154, int i_1_, boolean bool, byte i_2_, ha var_ha_3_, int i_4_, boolean bool_5_, int i_6_) {
+    final Component24 method1932(GraphicsToolkit var_ha, int i, int i_0_, BitmapFont class324, Component101 class154, int i_1_, boolean bool, byte i_2_, GraphicsToolkit var_ha_3_, int i_4_, boolean bool_5_, int i_6_) {
         try {
             anInt3266++;
             Component24 class105 = method1941(i_6_, (byte) -74, i_4_, i_0_, i, i_1_, var_ha_3_, class154);
@@ -94,7 +94,7 @@ final class DisplayModeManagerContainer320
         }
     }
 
-    static final void method1933(CacheStore class45, ha var_ha, boolean bool) {
+    static final void method1933(CacheStore class45, GraphicsToolkit var_ha, boolean bool) {
         try {
             anInt3279++;
             Component170[] class207s = Component170.method1519(class45, NodeSub22.anInt6862, 0);
@@ -109,7 +109,7 @@ final class DisplayModeManagerContainer320
             DisplayModeManagerContainer199.aClass105Array5857 = new Component24[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 DisplayModeManagerContainer199.aClass105Array5857[i] = var_ha.method3691(class207s[i], true);
-            class207s = Component170.method1519(class45, ha.anInt4562, 0);
+            class207s = Component170.method1519(class45, GraphicsToolkit.anInt4562, 0);
             Component141.aClass105Array9959 = new Component24[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 Component141.aClass105Array9959[i] = var_ha.method3691(class207s[i], true);
@@ -170,7 +170,7 @@ final class DisplayModeManagerContainer320
             anInt3270++;
             if (class64 != null) {
                 if (bool != false) method1929((byte) 106);
-                class30.method320(class64.EA(), class64.fa(), (byte) -4, i_11_, class64.na(), i, class64.V(), class64.G(), class64.HA(), i_10_, class64.RA());
+                class30.method320(class64.EA(), class64.fa(), (byte) -4, i_11_, class64.ShaderImpl(), i, class64.V(), class64.G(), class64.HA(), i_10_, class64.RA());
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ub.H(" + i + ',' + i_10_ + ',' + (class30 != null ? "{...}" : "null") + ',' + (class64 != null ? "{...}" : "null") + ',' + bool + ',' + i_11_ + ')'));
@@ -271,7 +271,7 @@ final class DisplayModeManagerContainer320
         return class213;
     }
 
-    final Component24 method1941(int i, byte i_15_, int i_16_, int i_17_, int i_18_, int i_19_, ha var_ha, Component101 class154) {
+    final Component24 method1941(int i, byte i_15_, int i_16_, int i_17_, int i_18_, int i_19_, GraphicsToolkit var_ha, Component101 class154) {
         try {
             aClass126_3289.anInt4992 = i_16_;
             aClass126_3289.anInt4989 = i_17_;

@@ -30,7 +30,7 @@ final class Component333
     private RenderableSub9Sub2[][] aClass318_Sub9_Sub2ArrayArray3642;
     static int anInt3643 = 0;
 
-    private final void method2098(ha_Sub3 var_ha_Sub3, int i, int i_0_) {
+    private final void method2098(GlToolkitSub3 var_ha_Sub3, int i, int i_0_) {
         anInt3629++;
         Component210.aFloat5299 = var_ha_Sub3.aFloat8093;
         int i_1_ = 75 % ((2 - i) / 34);
@@ -41,21 +41,21 @@ final class Component333
         var_ha_Sub3.method3942(5);
     }
 
-    private final void method2099(int i, ha_Sub3 var_ha_Sub3) {
+    private final void method2099(int i, GlToolkitSub3 var_ha_Sub3) {
         anInt3628++;
         var_ha_Sub3.method3946(i + -26358, true);
         var_ha_Sub3.method3865(true, 54);
         if (i != 26326) anIntArray3631 = null;
-        if (Component210.aFloat5299 != var_ha_Sub3.aFloat8093) var_ha_Sub3.xa(Component210.aFloat5299);
+        if (Component210.aFloat5299 != var_ha_Sub3.aFloat8093) var_ha_Sub3.DualToolkit(Component210.aFloat5299);
     }
 
-    final void method2100(byte i, ha_Sub3 var_ha_Sub3) {
+    final void method2100(byte i, GlToolkitSub3 var_ha_Sub3) {
         anInterface5_Impl1_3638.method20(786336, (byte) 123, 24);
         int i_2_ = -125 / ((i - 65) / 49);
         anInt3625++;
     }
 
-    final void method2101(ha_Sub3 var_ha_Sub3, Component122 class98, int i, int i_3_) {
+    final void method2101(GlToolkitSub3 var_ha_Sub3, Component122 class98, int i, int i_3_) {
         try {
             anInt3633++;
             if (var_ha_Sub3.aClass101_Sub2_8080 != null) {
@@ -121,8 +121,8 @@ final class Component333
                             }
                         }
                         var_ha_Sub3.method3814(false, false, i_15_ >= 0 ? i_15_ : -1, (byte) 117);
-                        if (bool && (Component210.aFloat5299 != var_ha_Sub3.aFloat8093)) var_ha_Sub3.xa(Component210.aFloat5299);
-                        else if (var_ha_Sub3.aFloat8093 != 1.0F) var_ha_Sub3.xa(1.0F);
+                        if (bool && (Component210.aFloat5299 != var_ha_Sub3.aFloat8093)) var_ha_Sub3.DualToolkit(Component210.aFloat5299);
+                        else if (var_ha_Sub3.aFloat8093 != 1.0F) var_ha_Sub3.DualToolkit(1.0F);
                         method2102(false, var_ha_Sub3, i_12_);
                     }
                 } catch (Exception exception) {
@@ -135,7 +135,7 @@ final class Component333
         }
     }
 
-    private final void method2102(boolean bool, ha_Sub3 var_ha_Sub3, int i) {
+    private final void method2102(boolean bool, GlToolkitSub3 var_ha_Sub3, int i) {
         anInt3640++;
         if (bool != false) method2098(null, 21, -85);
         int i_20_ = 0;
@@ -351,7 +351,7 @@ final class Component333
         }
     }
 
-    private final void method2103(byte i, ha_Sub3 var_ha_Sub3) {
+    private final void method2103(byte i, GlToolkitSub3 var_ha_Sub3) {
         if (i != -33) aClass318_Sub9_Sub2ArrayArray3642 = null;
         anInt3639++;
         Component210.aFloat5299 = var_ha_Sub3.aFloat8093;
@@ -372,7 +372,7 @@ final class Component333
         anInterface5_Impl1_3638.method21(23315);
     }
 
-    Component333(ha_Sub3 var_ha_Sub3) {
+    Component333(GlToolkitSub3 var_ha_Sub3) {
         anInt3626 = 0;
         aClass318_Sub9_Sub2ArrayArray3632 = new RenderableSub9Sub2[1600][64];
         anIntArray3631 = new int[8191];

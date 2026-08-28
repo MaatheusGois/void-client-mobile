@@ -29,7 +29,7 @@ final class Component43
             if (i != -73) anInt4976 = 105;
             int i_3_ = 0;
             if (Component210.aBoolean5300) {
-                i_2_ = s_Sub3.method4008((byte) -128);
+                i_2_ = BufferCacheSub3.method4008((byte) -128);
                 i_3_ = Component110.method260(false);
             }
             Component280.method1373(r.anInt9721, i_2_, i_2_, Component236.anInt4017 + i_2_, i_1_, i_0_, -1391, i_0_ + i_2_, PacketReader.anInt10432 + i_3_, i_3_, i_3_ + i_1_, i_3_);

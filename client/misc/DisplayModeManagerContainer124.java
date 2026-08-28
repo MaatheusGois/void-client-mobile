@@ -183,13 +183,13 @@ final class DisplayModeManagerContainer124
                                 ImageTagText.method1274(PacketReader.aClass76_10436);
                                 if (i_51_ > 0) {
                                     Component158.aHa326.KA(0, i_49_, (GpiLogger.anInt8854), i_51_ + i_49_);
-                                    Component158.aHa326.ya();
+                                    Component158.aHa326.NativeHandle();
                                     Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
                                     AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
                                 }
                                 if (i_46_ > 0) {
                                     Component158.aHa326.KA(i_44_, i_53_, i_44_ - -i_46_, i_53_ + i_52_);
-                                    Component158.aHa326.ya();
+                                    Component158.aHa326.NativeHandle();
                                     Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
                                     AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
                                 }
@@ -231,7 +231,7 @@ final class DisplayModeManagerContainer124
                         HashNodeSub4.aDouble9517 = 0.0;
                         if (Buffer.anInt7207 == 0) Component158.aHa326.method3687(DisplayModeManagerContainer167.anInterface4_252);
                         Component158.aHa326.la();
-                        Component158.aHa326.ya();
+                        Component158.aHa326.NativeHandle();
                         Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
                         Component44.aClass101_905.method903(SpriteSub1.anInt8422, Component336.anInt403, NodeSub21.anInt6849, Component381.anInt8583, DisplayModeManagerContainer61.anInt3760, DisplayModeManagerContainer91.anInt396);
                         Component158.aHa326.method3638(Component44.aClass101_905);
@@ -264,7 +264,7 @@ final class DisplayModeManagerContainer124
                     if (Buffer.anInt7207 == 0 || Buffer.anInt7207 == 2) {
                         if (Buffer.anInt7207 == 2) {
                             Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
-                            Component158.aHa326.ya();
+                            Component158.aHa326.NativeHandle();
                         }
                         Component321.anInt2590 = i_20_;
                         Component30.anInt1879 = i_21_;

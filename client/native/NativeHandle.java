@@ -1,26 +1,26 @@
-/* ya - Decompiled by JODE
+/* NativeHandle - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 /**
- * ya — wrapper JNI para handle nativo (antigo `ya`).
+ * NativeHandle — wrapper JNI para handle nativo (antigo `NativeHandle`).
  * <p>
- * Estende {@code za} (abstração de recurso nativo) e expõe um ponteiro
+ * Estende {@code NodeBase} (abstração de recurso nativo) e expõe um ponteiro
  * {@code nativeid} gerenciado em C++. Cada instância corresponde a um
- * objeto nativo alocado via {@code aa(oa, int)} e liberado em
+ * objeto nativo alocado via {@code Shader(OpenGLToolkit, int)} e liberado em
  * {@code finalize()} → {@code Component36.method1947}. Os métodos nativos
  * curtos {@code w}, {@code ga}, {@code r} são delegações diretas para
- * o lado nativo (render/áudio/input dependendo do subtipo {@code oa}).
+ * o lado nativo (render/áudio/input dependendo do subtipo {@code OpenGLToolkit}).
  * <p>
- * Renomeado de `ya` (nome ofuscado) para `ya` com base em:
+ * Renomeado de `NativeHandle` (nome ofuscado) para `NativeHandle` com base em:
  * campo {@code long nativeid} + métodos {@code native} + {@code finalize}
  * que libera o handle.
  */
 /**
- * RENAMED from `ya` (JODE-obfuscated).
+ * RENAMED from `NativeHandle` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */
-final class ya extends za implements Interface19 {
+final class NativeHandle extends NodeBase implements Interface19 {
     /** Ponteiro opaco para o objeto nativo (0 = não alocado/liberado). */
     long nativeid;
 
@@ -36,12 +36,12 @@ final class ya extends za implements Interface19 {
     }
 
     /** Aloca o objeto nativo associado a {@code var_oa} com tipo {@code i}. */
-    private final native void aa(oa var_oa, int i);
+    private final native void Shader(OpenGLToolkit var_oa, int i);
 
     /** Reseta/libera recurso nativo sem destruir o wrapper Java. */
     final native void r();
 
-    ya(oa var_oa, int i) {
-        aa(var_oa, i);
+    NativeHandle(OpenGLToolkit var_oa, int i) {
+        Shader(var_oa, i);
     }
 }

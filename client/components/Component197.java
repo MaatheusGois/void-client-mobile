@@ -41,7 +41,7 @@ final class Component197
     static int anInt10093;
     private r aR10094;
 
-    Component197(ha var_ha, Component44 class51, int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_, int i_5_, boolean bool_6_) {
+    Component197(GraphicsToolkit var_ha, Component44 class51, int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_, int i_5_, boolean bool_6_) {
         super(i_1_, i_2_, i_3_, i, i_0_, ShaderProgramSub9.method2175(i_5_, (byte) -34, i_4_));
         do {
             try {
@@ -81,7 +81,7 @@ final class Component197
         if (i != -12031) method38(-122);
     }
 
-    final boolean method2391(ha var_ha, int i, int i_9_, int i_10_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_9_, int i_10_) {
         anInt10070++;
         DisplayModeManagerContainer370 class64 = method2482(var_ha, (byte) 126, 131072);
         if (i_10_ != 0) method41(-96);
@@ -94,7 +94,7 @@ final class Component197
         return false;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         if (i > -125) method42(115);
         anInt10067++;
     }
@@ -112,7 +112,7 @@ final class Component197
         if (this.aClass64_10071 != null) this.aClass64_10071.s(this.aClass64_10071.ua() & ~0x10000);
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         anInt10075++;
         if (aClass30_10082 == null) aClass30_10082 = (OggUrlStream.method2967(this.x, method2482(var_ha, (byte) 117, 0), this.y, this.anInt6382, i + -5));
         if (i != 7) aBoolean10066 = false;
@@ -138,7 +138,7 @@ final class Component197
         return aBoolean10064;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_11_, byte i_12_, int i_13_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_11_, byte i_12_, int i_13_) {
         try {
             if (i_12_ > -106) method2388(-102);
             if (class318_sub1 instanceof Component197) {
@@ -154,7 +154,7 @@ final class Component197
         }
     }
 
-    public final void method44(int i, ha var_ha) {
+    public final void method44(int i, GraphicsToolkit var_ha) {
         anInt10092++;
         Object object = null;
         r var_r;
@@ -169,7 +169,7 @@ final class Component197
         if (i != 836) aR10094 = null;
     }
 
-    private final Component245 method2481(boolean bool, int i, int i_15_, ha var_ha) {
+    private final Component245 method2481(boolean bool, int i, int i_15_, GraphicsToolkit var_ha) {
         if (i_15_ != -4) aClass30_10082 = null;
         anInt10086++;
         Component44 class51 = GradientPreset.aClass263_9195.method2005(0, aShort10081 & 0xffff);
@@ -186,7 +186,7 @@ final class Component197
         return class51.method476(var_ha, var_s, aByte10079, i, this.x, bool, var_s_16_, this.anInt6382, this.y, aByte10062, i_15_ + 132);
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10069++;
         if (this.aClass64_10071 == null) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -197,7 +197,7 @@ final class Component197
         return class318_sub4;
     }
 
-    private final DisplayModeManagerContainer370 method2482(ha var_ha, byte i, int i_17_) {
+    private final DisplayModeManagerContainer370 method2482(GraphicsToolkit var_ha, byte i, int i_17_) {
         if (i <= 113) method2387(null, -99);
         anInt10072++;
         if (this.aClass64_10071 != null && var_ha.method3667(this.aClass64_10071.ua(), i_17_) == 0) return this.aClass64_10071;
@@ -235,7 +235,7 @@ final class Component197
         return true;
     }
 
-    public final void method43(ha var_ha, int i) {
+    public final void method43(GraphicsToolkit var_ha, int i) {
         if (i != -14218) aClass30_10082 = null;
         anInt10068++;
         Object object = null;

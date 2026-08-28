@@ -8,7 +8,7 @@ final class Component382
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt2267;
-    private final ha_Sub2 aHa_Sub2_2268;
+    private final GlToolkitSub2 aHa_Sub2_2268;
     static short aShort2269 = 32767;
     int anInt2270;
     static int anInt2271;
@@ -102,7 +102,7 @@ final class Component382
                     i_6_++;
                 }
                 r.aBooleanArray9718[i] = true;
-                aa_Sub1.aSArray5191[i_3_].method3981(class348_sub1, is);
+                ShaderSub1.aSArray5191[i_3_].method3981(class348_sub1, is);
             }
         }
     }
@@ -116,7 +116,7 @@ final class Component382
     static final int method1321(byte i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
         int i_37_ = 4 / ((-51 - i) / 63);
         anInt2273++;
-        if (aa_Sub1.aSArray5191 == null) return 0;
+        if (ShaderSub1.aSArray5191 == null) return 0;
         if (i_35_ < 3) {
             int i_38_ = i_32_ >> 9;
             int i_39_ = i_33_ >> 9;
@@ -135,7 +135,7 @@ final class Component382
             }
             if (bool) i_35_++;
         }
-        return aa_Sub1.aSArray5191[i_35_].method3986(i_32_, i_33_, (byte) 22);
+        return ShaderSub1.aSArray5191[i_35_].method3986(i_32_, i_33_, (byte) 22);
     }
 
     public static void method1322(byte i) {
@@ -149,7 +149,7 @@ final class Component382
         if (i_44_ == 26603) anInt2271++;
     }
 
-    Component382(ha_Sub2 var_ha_Sub2, int i, int i_45_) {
+    Component382(GlToolkitSub2 var_ha_Sub2, int i, int i_45_) {
         aHa_Sub2_2268 = var_ha_Sub2;
         this.anInt2270 = i_45_;
     }

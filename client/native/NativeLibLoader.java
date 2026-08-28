@@ -47,12 +47,12 @@ final class NativeLibLoader {
         return new NativeLibLoader(this.anInt4156, this.anInt4165, this.anInt4162, this.anInt4158, this.anInt4154, this.anInt4151);
     }
 
-    static final void method2650(Component184 class143, int i, aa var_aa, int i_1_, int i_2_, String string, int i_3_, BitmapFont class324, int i_4_, DisplayModeManagerContainer57 class46, int i_5_, int i_6_) {
+    static final void method2650(Component184 class143, int i, Shader var_aa, int i_1_, int i_2_, String string, int i_3_, BitmapFont class324, int i_4_, DisplayModeManagerContainer57 class46, int i_5_, int i_6_) {
         try {
             anInt4153++;
             int i_7_;
             if (DefinitionSub21.anInt9282 == 4) i_7_ = (int) Component112.aFloat3938 & 0x3fff;
-            else i_7_ = 0x3fff & r_Sub2.anInt10483 + (int) Component112.aFloat3938;
+            else i_7_ = 0x3fff & CacheNodeSub2.anInt10483 + (int) Component112.aFloat3938;
             int i_8_ = (Math.max(class46.anInt709 / 2, class46.anInt789 / 2) + 10);
             int i_9_ = i_5_ * i_5_ - -(i_1_ * i_1_);
             if (i_9_ <= i_8_ * i_8_) {

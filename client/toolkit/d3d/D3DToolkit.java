@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class378` (JODE-obfuscated).
- * Direct3D (DirectX) toolkit implementation. Extends the ha_Sub3 toolkit base; provides the native createToolkit(Canvas, d, CacheStore, int, int) entry point referenced by the toolkit bootstrap, and carries Direct3D-specific native peers.
+ * Direct3D (DirectX) toolkit implementation. Extends the GlToolkitSub3 toolkit base; provides the native createToolkit(Canvas, d, CacheStore, int, int) entry point referenced by the toolkit bootstrap, and carries Direct3D-specific native peers.
  */
 
 import jaclib.peer.hb;
@@ -12,7 +12,7 @@ import jagdx.*;
 
 import java.awt.*;
 
-public final class D3DToolkit extends ha_Sub3 {
+public final class D3DToolkit extends GlToolkitSub3 {
     private final boolean[] aBooleanArray9784;
     private int anInt9785 = 0;
     private boolean[] aBooleanArray9786;
@@ -76,7 +76,7 @@ public final class D3DToolkit extends ha_Sub3 {
         }
     }
 
-    final int[] na(int i, int i_4_, int i_5_, int i_6_) {
+    final int[] ShaderImpl(int i, int i_4_, int i_5_, int i_6_) {
         int[] is = null;
         IDirect3DSurface idirect3dsurface = this.anIDirect3DDevice9810.c(0);
         IDirect3DSurface idirect3dsurface_7_ = this.anIDirect3DDevice9810.a(i_5_, i_6_, 21, 0, 0, true);
@@ -111,7 +111,7 @@ public final class D3DToolkit extends ha_Sub3 {
         if (Component11.aClass21_3572 == class21) return 1;
         if (class21 == VideoAdDisplay.aClass21_3181) return 4;
         if (HashNodeSub16.aClass21_9661 == class21) return 6;
-        if (class21 == s_Sub3.aClass21_8320) return 5;
+        if (class21 == BufferCacheSub3.aClass21_8320) return 5;
         throw new IllegalArgumentException("");
     }
 
@@ -224,7 +224,7 @@ public final class D3DToolkit extends ha_Sub3 {
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 11, i_18_);
     }
 
-    static final ha createToolkit(Canvas canvas, d var_d, CacheStore class45, Integer integer) {
+    static final GraphicsToolkit createToolkit(Canvas canvas, d var_d, CacheStore class45, Integer integer) {
         D3DToolkit class378 = null;
         D3DToolkit class378_19_;
         try {
@@ -739,7 +739,7 @@ public final class D3DToolkit extends ha_Sub3 {
     final void method3871(Component22 class113, int i) {
         int i_68_ = i;
         if (Component82.aClass113_430 == class113) i_68_ = 65536;
-        else if (za_Sub1.aClass113_9773 == class113) i_68_ = 131072;
+        else if (NodeBaseSub1.aClass113_9773 == class113) i_68_ = 131072;
         else if (class113 == DisplayModeManagerContainer1.aClass113_3314) i_68_ = 196608;
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 11, this.anInt8175 | i_68_);
     }
@@ -905,7 +905,7 @@ public final class D3DToolkit extends ha_Sub3 {
         this.anIDirect3DDevice9810.SetStreamSource(i_89_, class366.anIDirect3DVertexBuffer8511, 0, class366.method3519(3545));
     }
 
-    final void ya() {
+    final void NativeHandle() {
         method3946(-32, true);
         this.anIDirect3DDevice9810.Clear(2, 0, 1.0F, 0);
     }

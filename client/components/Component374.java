@@ -40,7 +40,7 @@ final class Component374
         int i_5_ = -114 % ((i - 22) / 33);
         anInt4137++;
         Component265.aClass356_1585.method3481(0);
-        s_Sub2.aClass107_8241.method1009(2110355138);
+        BufferCacheSub2.aClass107_8241.method1009(2110355138);
         AbstractShaderSub4.aClass107_7325.method1009(2110355138);
     }
 

@@ -40,7 +40,7 @@ final class ShaderProgramSub7
                         for (int i_2_ = i; i_2_ < DefinitionSub30.anInt9383; i_2_++) {
                             Component178.aStringArray1441[i_2_] = Component178.aStringArray1441[i_2_ - -1];
                             ShaderProgramSub2.aStringArray6205[i_2_] = ShaderProgramSub2.aStringArray6205[1 + i_2_];
-                            ha.anIntArray4578[i_2_] = ha.anIntArray4578[i_2_ - -1];
+                            GraphicsToolkit.anIntArray4578[i_2_] = GraphicsToolkit.anIntArray4578[i_2_ - -1];
                             DebugPanic.aStringArray4744[i_2_] = DebugPanic.aStringArray4744[1 + i_2_];
                             Component16.anIntArray2280[i_2_] = Component16.anIntArray2280[i_2_ - -1];
                             DisplayModeManagerContainer145.aBooleanArray1806[i_2_] = DisplayModeManagerContainer145.aBooleanArray1806[1 + i_2_];
@@ -151,7 +151,7 @@ final class ShaderProgramSub7
         aClass61_6284.method591(i + 21404);
     }
 
-    ShaderProgramSub7(ha_Sub2 var_ha_Sub2, Component178 class83) {
+    ShaderProgramSub7(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
         super(var_ha_Sub2);
         try {
             aClass83_6278 = class83;

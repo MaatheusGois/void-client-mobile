@@ -1,12 +1,12 @@
-/* s_Sub3 - Decompiled by JODE
+/* BufferCacheSub3 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import jaclib.memory.Stream;
 
-final class s_Sub3
+final class BufferCacheSub3
 /**
- * RENAMED from `s_Sub3` (JODE-obfuscated).
+ * RENAMED from `BufferCacheSub3` (JODE-obfuscated).
  * Evidence: extends s (s)
  */ extends s {
     private final NodeList aClass262_8286;
@@ -45,7 +45,7 @@ final class s_Sub3
     static int anInt8319;
     static Component158 aClass21_8320 = new Component158();
     int[][][] anIntArrayArrayArray8321;
-    ha_Sub3 aHa_Sub3_8322;
+    GlToolkitSub3 aHa_Sub3_8322;
     private float[][] aFloatArrayArray8323;
     Component387 aClass130_8324;
     private LruCache aClass356_8325;
@@ -62,12 +62,12 @@ final class s_Sub3
         anInt8290++;
         if ((aByteArrayArray8317[i][i_0_] & 0x1) == 0) return null;
         int i_1_ = (this.anInt4592 >> this.aHa_Sub3_8322.anInt8107);
-        r_Sub1 var_r_Sub1 = (r_Sub1) var_r;
-        r_Sub1 var_r_Sub1_2_;
+        CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
+        CacheNodeSub1 var_r_Sub1_2_;
         if (var_r_Sub1 != null && var_r_Sub1.method3291(i_1_, i_1_, (byte) -59)) {
             var_r_Sub1_2_ = var_r_Sub1;
             var_r_Sub1_2_.method3289(11);
-        } else var_r_Sub1_2_ = new r_Sub1(this.aHa_Sub3_8322, i_1_, i_1_);
+        } else var_r_Sub1_2_ = new CacheNodeSub1(this.aHa_Sub3_8322, i_1_, i_1_);
         var_r_Sub1_2_.method3286(i_1_, -97, i_1_, 0, 0);
         method4005(var_r_Sub1_2_, i_0_, i, 21722);
         return var_r_Sub1_2_;
@@ -97,7 +97,7 @@ final class s_Sub3
         }
     }
 
-    private final void method4005(r_Sub1 var_r_Sub1, int i, int i_21_, int i_22_) {
+    private final void method4005(CacheNodeSub1 var_r_Sub1, int i, int i_21_, int i_22_) {
         anInt8310++;
         if (i_22_ != 21722) fa(16, 8, null);
         int[] is = this.anIntArrayArrayArray8321[i_21_][i];
@@ -123,7 +123,7 @@ final class s_Sub3
         }
     }
 
-    final void wa(r var_r, int i, int i_33_, int i_34_, int i_35_, boolean bool) {
+    final void Interface4Impl(r var_r, int i, int i_33_, int i_34_, int i_35_, boolean bool) {
         anInt8315++;
         if (aClass330_8307 != null && var_r != null) {
             int i_36_ = (i + -(i_33_ * (this.aHa_Sub3_8322.anInt8133) >> 8) >> this.aHa_Sub3_8322.anInt8107);
@@ -449,7 +449,7 @@ final class s_Sub3
         anInt8318++;
     }
 
-    s_Sub3(ha_Sub3 var_ha_Sub3, int i, int i_139_, int i_140_, int i_141_, int[][] is, int[][] is_142_, int i_143_) {
+    BufferCacheSub3(GlToolkitSub3 var_ha_Sub3, int i, int i_139_, int i_140_, int i_141_, int[][] is, int[][] is_142_, int i_143_) {
         super(i_140_, i_141_, i_143_, is);
         aClass262_8286 = new NodeList();
         do {

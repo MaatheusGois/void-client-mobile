@@ -21,7 +21,7 @@ final class LoggedOutDefinition
         int i_1_ = 40 / ((i - 19) / 63);
         anInt9435++;
         if (i_0_ == 16711935) return -1;
-        return aa.method160(27076, i_0_);
+        return Shader.method160(27076, i_0_);
     }
 
     static final void method3141(boolean bool, byte i) {
@@ -44,8 +44,8 @@ final class LoggedOutDefinition
         DefinitionSub17Sub1.method3093(i + 79);
         MatrixSub2.method921((byte) 99, true);
         Component330.regionTileY = 0;
-        za_Sub2.regionTileX = 0;
-        ha.anInt4581 = 0;
+        NodeBaseSub2.regionTileX = 0;
+        GraphicsToolkit.anInt4581 = 0;
         DisplayModeManagerContainer363.anInt4095 = 0;
         Component178.anInt1447 = Component37.anInt3931 = 0;
         for (int i_3_ = 0; (i_3_ < NodeSub27.aClass302Array6897.length); i_3_++)

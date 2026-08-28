@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class323` (JODE-obfuscated).
- * Font glyph texture cache. method2559(ha,Font,FontMetrics,char,...) rasterizes a glyph into a texture (aClass105Array4042[i]=var_ha.method3662(...)); method2561 renders cached glyphs for a String.
+ * Font glyph texture cache. method2559(GraphicsToolkit,Font,FontMetrics,char,...) rasterizes a glyph into a texture (aClass105Array4042[i]=var_ha.method3662(...)); method2561 renders cached glyphs for a String.
  */
 
 import java.awt.*;
@@ -20,7 +20,7 @@ final class FontGlyphCache {
     private static int[] anIntArray4043 = new int[256];
     private final int[] anIntArray4044 = new int[4];
 
-    private final void method2559(ha var_ha, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+    private final void method2559(GraphicsToolkit var_ha, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
         int i_0_ = fontmetrics.charWidth(c);
         int i_1_ = i_0_;
         if (bool) {
@@ -75,7 +75,7 @@ final class FontGlyphCache {
         return anInt4041;
     }
 
-    private final void method2561(ha var_ha, String string, int[] is, int i, int i_10_, int i_11_, boolean bool) {
+    private final void method2561(GraphicsToolkit var_ha, String string, int[] is, int i, int i_10_, int i_11_, boolean bool) {
         if (i_11_ == 0) bool = false;
         i_11_ |= ~0xffffff;
         for (int i_12_ = 0; i_12_ < string.length(); i_12_++) {
@@ -90,7 +90,7 @@ final class FontGlyphCache {
         anIntArray4043 = null;
     }
 
-    final void method2563(ha var_ha, String string, int i, int i_14_, int i_15_, boolean bool) {
+    final void method2563(GraphicsToolkit var_ha, String string, int i, int i_14_, int i_15_, boolean bool) {
         int i_16_ = method2564(string) / 2;
         var_ha.K(anIntArray4044);
         if (i - i_16_ <= anIntArray4044[2] && i + i_16_ >= anIntArray4044[0] && i_14_ - anInt4041 <= anIntArray4044[3] && i_14_ + anInt4040 >= anIntArray4044[1]) method2561(var_ha, string, anIntArray4044, i - i_16_, i_14_, i_15_, bool);
@@ -109,7 +109,7 @@ final class FontGlyphCache {
         return anInt4040 - 1;
     }
 
-    FontGlyphCache(ha var_ha, int i, boolean bool, Component component) {
+    FontGlyphCache(GraphicsToolkit var_ha, int i, boolean bool, Component component) {
         aBoolean4037 = false;
         aClass105Array4042 = new Component24[256];
         anIntArray4039 = new int[256];

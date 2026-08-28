@@ -27,7 +27,7 @@ final class SoftwareFallbackShader extends AbstractShader {
 
     static final void method3553(boolean bool, byte i, int i_1_) {
         if (i <= 98) method3553(true, (byte) 34, 120);
-        // Toolkit 1 = OpenGL (ha_Sub2), 2 = SW3D (libsw3d). Both break JAWT on macOS.
+        // Toolkit 1 = OpenGL (GlToolkitSub2), 2 = SW3D (libsw3d). Both break JAWT on macOS.
         if ((i_1_ == 1 || i_1_ == 2) && Loader.isMacOs()) {
             Component85.aBoolean2881 = true;
             Component301.aBoolean4117 = true;
@@ -98,7 +98,7 @@ final class SoftwareFallbackShader extends AbstractShader {
         }
     }
 
-    SoftwareFallbackShader(ha_Sub3 var_ha_Sub3) {
+    SoftwareFallbackShader(GlToolkitSub3 var_ha_Sub3) {
         super(var_ha_Sub3);
     }
 }

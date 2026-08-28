@@ -29,7 +29,7 @@ final class ImageCache {
         anInt2558++;
         if (anInt2559 != anInt2565) throw new RuntimeException("Can only retrieve a full image cache");
         for (int i_0_ = 0; anInt2559 > i_0_; i_0_++)
-            aClass348_Sub6Array2563[i_0_] = aa_Sub3.aClass348_Sub6_5206;
+            aClass348_Sub6Array2563[i_0_] = ShaderSub3.aClass348_Sub6_5206;
         if (i != 16) method1427((byte) -42);
         return anIntArrayArray2564;
     }
@@ -59,7 +59,7 @@ final class ImageCache {
                     class105 = NodeSub8.aHa6654.method3691(class207s[0], true);
                     NodeSub1Sub1.aClass60_8807.method582(class105, i_9_, (byte) -115);
                 }
-                aa_Sub2.method165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.method2436((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
+                ShaderSub2.method165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.method2436((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
                 int i_10_ = i_7_ + (Component71.anIntArray6062[0] + -18);
                 int i_11_ = -54 + (Component71.anIntArray6062[1] + i_4_) - 16;
                 i_10_ += i / 4 * 18;
@@ -103,7 +103,7 @@ final class ImageCache {
         anInt2566++;
         if (anInt2559 == anInt2565) {
             this.aBoolean2570 = aClass348_Sub6Array2563[i_14_] == null;
-            aClass348_Sub6Array2563[i_14_] = aa_Sub3.aClass348_Sub6_5206;
+            aClass348_Sub6Array2563[i_14_] = ShaderSub3.aClass348_Sub6_5206;
             return anIntArrayArray2564[i_14_];
         }
         if (anInt2559 != 1) {

@@ -154,7 +154,7 @@ final class OpenGlShader extends AbstractShader {
                     }
                     if (MenuEntry.method3229(-86) == 1) {
                         DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                        ha_Sub2.anInt7666 = NodeSub22.anInt6857;
+                        GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
                         Component236.anInt4017 = SocketConnector.anInt3473;
                         PacketReader.anInt10432 = NodeSub22.anInt6857;
                         NodeSub48.anInt7129 = 0;
@@ -187,10 +187,10 @@ final class OpenGlShader extends AbstractShader {
         super(class377);
         try {
             if (class45 != null && class377.aBoolean9923) {
-                aClass193_7395 = za_Sub2.method3442(34336, class45.method391("gl", "uw_ground_unlit", -29832), class377, 4);
-                aClass193_7392 = za_Sub2.method3442(34336, class45.method391("gl", "uw_ground_lit", -29832), class377, 4);
-                aClass193_7404 = za_Sub2.method3442(34336, class45.method391("gl", "uw_model_unlit", -29832), class377, 4);
-                aClass193_7407 = za_Sub2.method3442(34336, class45.method391("gl", "uw_model_lit", -29832), class377, 4);
+                aClass193_7395 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_ground_unlit", -29832), class377, 4);
+                aClass193_7392 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_ground_lit", -29832), class377, 4);
+                aClass193_7404 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_model_unlit", -29832), class377, 4);
+                aClass193_7407 = NodeBaseSub2.method3442(34336, class45.method391("gl", "uw_model_lit", -29832), class377, 4);
                 if (aClass193_7395 != null & aClass193_7392 != null & aClass193_7404 != null & aClass193_7407 != null) {
                     anInterface18_Impl3_7390 = this.aHa_Sub3_4479.method3839(1, 2, -15137, false, (new int[]{0, -1}));
                     anInterface18_Impl3_7390.method66(false, false, 25688);

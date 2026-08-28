@@ -108,7 +108,7 @@ final class WaterShaderSub8
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
     }
 
-    WaterShaderSub8(ha_Sub3 var_ha_Sub3, Component209 class269) {
+    WaterShaderSub8(GlToolkitSub3 var_ha_Sub3, Component209 class269) {
         super(var_ha_Sub3);
         try {
             aClass269_7353 = class269;

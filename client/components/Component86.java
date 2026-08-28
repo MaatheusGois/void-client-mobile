@@ -7,7 +7,7 @@ final class Component86
  * RENAMED from `Class372` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    private final ha_Sub3 aHa_Sub3_4526;
+    private final GlToolkitSub3 aHa_Sub3_4526;
     static int anInt4527;
     private final d aD4528;
     static int anInt4529;
@@ -49,7 +49,7 @@ final class Component86
         return interface18_impl3;
     }
 
-    Component86(ha_Sub3 var_ha_Sub3, d var_d) {
+    Component86(GlToolkitSub3 var_ha_Sub3, d var_d) {
         try {
             aHa_Sub3_4526 = var_ha_Sub3;
             aD4528 = var_d;

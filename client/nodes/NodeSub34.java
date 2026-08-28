@@ -7,7 +7,7 @@ final class NodeSub34
  * RENAMED from `Class348_Sub34` (JODE-obfuscated).
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
-    static ha aHa6968;
+    static GraphicsToolkit aHa6968;
     static int anInt6969;
     static StringCache aClass351_6970;
     int anInt6971;

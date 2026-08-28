@@ -15,11 +15,11 @@ final class Component314
     static int anInt3875;
     static int anInt3876;
 
-    static final ha method2297(int i, int i_0_, d var_d, Canvas canvas, int i_1_) {
+    static final GraphicsToolkit method2297(int i, int i_0_, d var_d, Canvas canvas, int i_1_) {
         try {
             if (i != -6) method2297(23, -44, null, null, -57);
             anInt3875++;
-            return new oa(canvas, var_d, i_1_, i_0_);
+            return new OpenGLToolkit(canvas, var_d, i_1_, i_0_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("ws.C(" + i + ',' + i_0_ + ',' + (var_d != null ? "{...}" : "null") + ',' + (canvas != null ? "{...}" : "null") + ',' + i_1_ + ')'));
         }

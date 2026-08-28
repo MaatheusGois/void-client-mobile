@@ -12,7 +12,7 @@ final class JaclibLoader {
     static int[] anIntArray168 = {28, 35, 40, 44};
     static int anInt169 = -1;
     static int anInt170;
-    static ha aHa171;
+    static GraphicsToolkit aHa171;
 
     static final boolean method215(int i) {
         anInt170++;

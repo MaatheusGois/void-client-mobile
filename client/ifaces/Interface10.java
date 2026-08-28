@@ -13,7 +13,7 @@ interface Interface10 {
 
     int method42(int i);
 
-    void method43(ha var_ha, int i);
+    void method43(GraphicsToolkit var_ha, int i);
 
-    void method44(int i, ha var_ha);
+    void method44(int i, GraphicsToolkit var_ha);
 }

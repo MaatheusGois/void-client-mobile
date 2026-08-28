@@ -55,7 +55,7 @@ final class RSARequest extends HashNode {
         return (int) this.aLong4291;
     }
 
-    static final Component359 method3249(int i, int i_0_, ha_Sub2 var_ha_Sub2, String string) {
+    static final Component359 method3249(int i, int i_0_, GlToolkitSub2 var_ha_Sub2, String string) {
         try {
             anInt9656++;
             int i_1_ = -89 / ((29 - i_0_) / 47);
@@ -95,7 +95,7 @@ final class RSARequest extends HashNode {
     final void method3251(int i) {
         anInt9648++;
         this.aLong7057 = (~0x7fffffffffffffffL & this.aLong7057 | Component240.method599(-120) + 500L);
-        s_Sub2.aClass107_8241.method1005(true, this);
+        BufferCacheSub2.aClass107_8241.method1005(true, this);
         if (i != -16058) aClass105_9658 = null;
     }
 }

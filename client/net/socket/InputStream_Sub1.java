@@ -28,11 +28,11 @@ final class InputStream_Sub1 extends InputStream {
         anInt72++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
         if (Component241.anInt2946 < 100) return false;
-        if (!aa_Sub2.method164(i_1_, i_0_, (byte) -97, i)) return false;
+        if (!ShaderSub2.method164(i_1_, i_0_, (byte) -97, i)) return false;
         int i_3_ = i_0_ << Component149.anInt4459;
         int i_4_ = i << Component149.anInt4459;
         if (i_2_ != 120) return false;
-        int i_5_ = -1 + aa_Sub1.aSArray5191[i_1_].method3982((byte) -86, i, i_0_);
+        int i_5_ = -1 + ShaderSub1.aSArray5191[i_1_].method3982((byte) -86, i, i_0_);
         int i_6_ = i_5_ + class318_sub1_sub4.method2394(true);
         if (class318_sub1_sub4.aShort8759 == 1) {
             if (!ShaderProgramSub7.method2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
@@ -97,7 +97,7 @@ final class InputStream_Sub1 extends InputStream {
         NodeSub18.method2938((byte) 98);
         Component205.method1772(28);
         System.gc();
-        NodeSub8.aHa6654.ya();
+        NodeSub8.aHa6654.NativeHandle();
     }
 
     static {

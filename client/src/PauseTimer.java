@@ -192,7 +192,7 @@ final class PauseTimer {
                                 else if (i_7_ != 104 || (Component92.anInt3312 >= (ArbShaderProgram.aStringArray6200).length)) {
                                     if (i_7_ == 105 && Component92.anInt3312 > 0) {
                                         Component92.anInt3312--;
-                                        aa.method159(-615751774);
+                                        Shader.method159(-615751774);
                                         NodeSub38.anInt7006 = Component126.aString4461.length();
                                     } else if (Npc.method2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
                                         Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006)) + DefinitionGroup.anInterface6Array9534[i_6_].method28((byte) 23) + (Component126.aString4461.substring(NodeSub38.anInt7006)));
@@ -200,7 +200,7 @@ final class PauseTimer {
                                     }
                                 } else {
                                     Component92.anInt3312++;
-                                    aa.method159(-615751774);
+                                    Shader.method159(-615751774);
                                     NodeSub38.anInt7006 = Component126.aString4461.length();
                                 }
                             } else {
@@ -259,7 +259,7 @@ final class PauseTimer {
             int i = class318_sub1.method2384(class348_sub1s, 49);
             JaclibLoader.aHa171.method3642(i, class348_sub1s);
         }
-        if (Component9.aSArray4142 == aa_Sub1.aSArray5191) {
+        if (Component9.aSArray4142 == ShaderSub1.aSArray5191) {
             boolean bool = false;
             boolean bool_11_ = false;
             int i;

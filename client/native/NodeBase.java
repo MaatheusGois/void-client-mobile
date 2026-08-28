@@ -1,10 +1,10 @@
-/* za - Decompiled by JODE
+/* NodeBase - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class za
+abstract class NodeBase
 /**
- * RENAMED from `za` (JODE-obfuscated).
+ * RENAMED from `NodeBase` (JODE-obfuscated).
  * Evidence: abstract; extends Node
  */ extends Node {
     static Component161 aClass138_7274 = new Component161(10, 2, 2, 0);
@@ -43,7 +43,7 @@ abstract class za
         if (i > 39) aClass138_7274 = null;
     }
 
-    public za() {
+    public NodeBase() {
         /* empty */
     }
 }

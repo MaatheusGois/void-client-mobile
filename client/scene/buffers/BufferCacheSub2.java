@@ -1,4 +1,4 @@
-/* s_Sub2 - Decompiled by JODE
+/* BufferCacheSub2 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -7,9 +7,9 @@ import jaggl.OpenGL;
 
 import java.io.IOException;
 
-final class s_Sub2
+final class BufferCacheSub2
 /**
- * RENAMED from `s_Sub2` (JODE-obfuscated).
+ * RENAMED from `BufferCacheSub2` (JODE-obfuscated).
  * Evidence: extends s (s)
  */ extends s {
     int[][][] anIntArrayArrayArray8234;
@@ -50,7 +50,7 @@ final class s_Sub2
     static int[] anIntArray8269;
     static int anInt8270 = -1;
     static int anInt8271;
-    ha_Sub2 aHa_Sub2_8272;
+    GlToolkitSub2 aHa_Sub2_8272;
     private byte[][] aByteArrayArray8273;
     private Component132 aClass123_8274;
     Component132 aClass123_8275;
@@ -65,7 +65,7 @@ final class s_Sub2
     private int anInt8284;
     private float[][] aFloatArrayArray8285;
 
-    final void wa(r var_r, int i, int i_0_, int i_1_, int i_2_, boolean bool) {
+    final void Interface4Impl(r var_r, int i, int i_0_, int i_1_, int i_2_, boolean bool) {
         anInt8251++;
         if (aClass104_8266 != null && var_r != null) {
             int i_3_ = (i - ((this.aHa_Sub2_8272.anInt7772 * i_0_) >> 8) >> this.aHa_Sub2_8272.anInt7731);
@@ -407,7 +407,7 @@ final class s_Sub2
         this.anIntArrayArrayArray8268 = this.anIntArrayArrayArray8234 = null;
     }
 
-    private final void method3998(byte i, int i_113_, int i_114_, r_Sub2 var_r_Sub2) {
+    private final void method3998(byte i, int i_113_, int i_114_, CacheNodeSub2 var_r_Sub2) {
         anInt8254++;
         int[] is = this.anIntArrayArrayArray8268[i_113_][i_114_];
         if (i != -82) method3981(null, null);
@@ -448,7 +448,7 @@ final class s_Sub2
         }
     }
 
-    s_Sub2(ha_Sub2 var_ha_Sub2, int i, int i_133_, int i_134_, int i_135_, int[][] is, int[][] is_136_, int i_137_) {
+    BufferCacheSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_133_, int i_134_, int i_135_, int[][] is, int[][] is_136_, int i_137_) {
         super(i_134_, i_135_, i_137_, is);
         do {
             try {
@@ -625,9 +625,9 @@ final class s_Sub2
         anInt8259++;
         if ((0x1 & aByteArrayArray8240[i][i_167_]) == 0) return null;
         int i_168_ = (this.anInt4592 >> this.aHa_Sub2_8272.anInt7731);
-        r_Sub2 var_r_Sub2 = (r_Sub2) var_r;
-        r_Sub2 var_r_Sub2_169_;
-        if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) 104, i_168_, i_168_)) var_r_Sub2_169_ = new r_Sub2(this.aHa_Sub2_8272, i_168_, i_168_);
+        CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
+        CacheNodeSub2 var_r_Sub2_169_;
+        if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) 104, i_168_, i_168_)) var_r_Sub2_169_ = new CacheNodeSub2(this.aHa_Sub2_8272, i_168_, i_168_);
         else {
             var_r_Sub2_169_ = var_r_Sub2;
             var_r_Sub2_169_.method3293((byte) 0);

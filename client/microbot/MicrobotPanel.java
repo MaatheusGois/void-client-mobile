@@ -1,7 +1,7 @@
 /**
  * Microbot mini HUD — canvas overlay (not an RS {@link DisplayModeManagerContainer57} iface, not Swing).
  * <p>
- * <b>Draw:</b> {@link ha#fillRect} for the translucent box + {@link BitmapFont#drawText}
+ * <b>Draw:</b> {@link GraphicsToolkit#fillRect} for the translucent box + {@link BitmapFont#drawText}
  * for left-aligned labels (same stack as the developer console / FPS overlay).
  * Wired from {@code client} after the console draw so the panel sits on top of the
  * game world.
@@ -77,7 +77,7 @@ final class MicrobotPanel {
      *
      * @param renderer active toolkit ({@link NodeSub8#aHa6654})
      */
-    static void draw(ha renderer) {
+    static void draw(GraphicsToolkit renderer) {
         if (!isVisible() || renderer == null) {
             return;
         }
@@ -90,7 +90,7 @@ final class MicrobotPanel {
                 return;
             }
             int h = height();
-            // aa(x, y, width, height, argb, mode) — filled rect.
+            // Shader(x, y, width, height, argb, mode) — filled rect.
             renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
             renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
 

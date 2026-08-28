@@ -56,7 +56,7 @@ final class DisplayModeManagerContainer56
         return (this.anInt2540 == class190_4_.anInt2540) && (this.aFloat2547 == class190_4_.aFloat2547) && (class190_4_.aFloat2544 == this.aFloat2544) && (this.aFloat2536 == class190_4_.aFloat2536) && (class190_4_.aFloat2542 == this.aFloat2542) && (class190_4_.aFloat2545 == this.aFloat2545) && (class190_4_.aFloat2551 == this.aFloat2551) && (class190_4_.anInt2549 == this.anInt2549) && (class190_4_.anInt2546 == this.anInt2546) && (class190_4_.aClass299_2541 == this.aClass299_2541);
     }
 
-    static final boolean method1425(byte i, Component274 class42, NodeSub21 class348_sub21, int i_5_, ha var_ha, int i_6_) {
+    static final boolean method1425(byte i, Component274 class42, NodeSub21 class348_sub21, int i_5_, GraphicsToolkit var_ha, int i_6_) {
         try {
             anInt2537++;
             int i_7_ = 2147483647;
@@ -101,13 +101,13 @@ final class DisplayModeManagerContainer56
             if (class42.aString597 != null) {
                 class323 = DisplayModeManagerContainer341.method1782(class42.anInt576, 10144);
                 if (class323 != null) {
-                    i_15_ = (AbstractGlTextureSub1.aClass143_8527.method1188(class42.aString597, null, ha_Sub3.aStringArray8019, (byte) 87, null));
+                    i_15_ = (AbstractGlTextureSub1.aClass143_8527.method1188(class42.aString597, null, GlToolkitSub3.aStringArray8019, (byte) 87, null));
                     i_17_ = (class348_sub21.anInt6855 - (class42.anInt568 * (DisplayModeManagerContainer229.anInt1268 + -DisplayModeManagerContainer229.anInt1262) / (DisplayModeManagerContainer229.anInt1277 - DisplayModeManagerContainer229.anInt1257)));
                     i_16_ = (class348_sub21.anInt6853 + ((-DisplayModeManagerContainer229.anInt1272 + DisplayModeManagerContainer229.anInt1276) * class42.anInt566 / (DisplayModeManagerContainer229.anInt1265 + -DisplayModeManagerContainer229.anInt1274)));
                     if (class105 == null) i_17_ -= i_15_ * class323.method2560() / 2;
                     else i_17_ -= ((class105.method980() >> 1) - -(i_15_ * class323.method2565()));
                     for (int i_23_ = 0; i_15_ > i_23_; i_23_++) {
-                        String string = ha_Sub3.aStringArray8019[i_23_];
+                        String string = GlToolkitSub3.aStringArray8019[i_23_];
                         if (i_23_ < -1 + i_15_) string = string.substring(0, -4 + string.length());
                         int i_24_ = class323.method2564(string);
                         if (i_18_ < i_24_) i_18_ = i_24_;

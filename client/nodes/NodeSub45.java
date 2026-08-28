@@ -24,7 +24,7 @@ abstract class NodeSub45
         NodeSub44.anInt7101 = 0;
         Component53.anInt194 = Component148.anInt3465;
         DisplayModeManagerContainer104.aClass338Array10330 = new Component103[2000];
-        ha_Sub2.anInt7714 = Component148.anInt3465;
+        GlToolkitSub2.anInt7714 = Component148.anInt3465;
         Cp1252Decoder.aBoolean5226 = false;
         Component335.aClass338Array2034 = new Component103[500];
         Component325.anInt1200 = 0;
@@ -33,7 +33,7 @@ abstract class NodeSub45
         if (i > -113) aClass304_7103 = null;
         HashNodeSub10.anInt9577 = 0;
         HashNodeSub19.aClass338Array9700 = new Component103[(int) (500 * Loader.RENDER_DISTANCE_MULTIPLIER)];
-        DefinitionSub23.aBoolean9307 = !(JaclibLoader.aHa171 instanceof oa);
+        DefinitionSub23.aBoolean9307 = !(JaclibLoader.aHa171 instanceof OpenGLToolkit);
     }
 
     public NodeSub45() {
@@ -47,7 +47,7 @@ abstract class NodeSub45
     abstract long method3312(byte i);
 
     static final void method3313(int i, s var_s) {
-        aa_Sub1.aSArray5191[i] = var_s;
+        ShaderSub1.aSArray5191[i] = var_s;
     }
 
     public static void method3314(int i) {

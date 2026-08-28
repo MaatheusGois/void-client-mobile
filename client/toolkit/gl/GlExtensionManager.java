@@ -12,7 +12,7 @@ import jaggl.OpenGL;
 
 import java.awt.*;
 
-final class GlExtensionManager extends ha_Sub3 {
+final class GlExtensionManager extends GlToolkitSub3 {
     static int anInt9812;
     static int anInt9813;
     static int anInt9814;
@@ -296,7 +296,7 @@ final class GlExtensionManager extends ha_Sub3 {
         OpenGL.glMatrixMode(5888);
     }
 
-    final void ya() {
+    final void NativeHandle() {
         anInt9839++;
         this.method3946(-32, true);
         OpenGL.glClear(256);
@@ -494,7 +494,7 @@ final class GlExtensionManager extends ha_Sub3 {
         anInt9879++;
         if (this.aBoolean8148 && this.aBoolean8123 && this.anInt8091 >= 0) OpenGL.glEnable(2912);
         else OpenGL.glDisable(2912);
-        if (i > -30) ya();
+        if (i > -30) NativeHandle();
     }
 
     final Interface4 method3634(Interface3 interface3, Interface13 interface13) {
@@ -751,7 +751,7 @@ final class GlExtensionManager extends ha_Sub3 {
             } else if (HashNodeSub16.aClass21_9661 == class21) {
                 i_44_ = 6;
                 i_45_ = 2 + i;
-            } else if (class21 == s_Sub3.aClass21_8320) {
+            } else if (class21 == BufferCacheSub3.aClass21_8320) {
                 i_45_ = 2 + i;
                 i_44_ = 5;
             } else {
@@ -839,7 +839,7 @@ final class GlExtensionManager extends ha_Sub3 {
             } else if (class21 == HashNodeSub16.aClass21_9661) {
                 i_52_ = 6;
                 i_51_ = 2 + i;
-            } else if (s_Sub3.aClass21_8320 == class21) {
+            } else if (BufferCacheSub3.aClass21_8320 == class21) {
                 i_51_ = 2 + i;
                 i_52_ = 5;
             } else {
@@ -1206,7 +1206,7 @@ final class GlExtensionManager extends ha_Sub3 {
         return 0.0F;
     }
 
-    final int[] na(int i, int i_90_, int i_91_, int i_92_) {
+    final int[] ShaderImpl(int i, int i_90_, int i_91_, int i_92_) {
         anInt9820++;
         int[] is = new int[i_92_ * i_91_];
         for (int i_93_ = 0; i_93_ < i_92_; i_93_++)

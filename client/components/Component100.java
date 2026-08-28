@@ -14,7 +14,7 @@ final class Component100
     private final int anInt8690;
     private final int anInt8691;
     static int anInt8692;
-    private final ha_Sub2 aHa_Sub2_8693;
+    private final GlToolkitSub2 aHa_Sub2_8693;
     static long aLong8694;
     private final int anInt8695;
     static float aFloat8696;
@@ -70,7 +70,7 @@ final class Component100
         } while (false);
     }
 
-    Component100(ha_Sub2 var_ha_Sub2, int i, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
+    Component100(GlToolkitSub2 var_ha_Sub2, int i, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
         anInt8691 = i_9_;
         anInt8690 = i_10_;
         anInt8697 = i_12_;

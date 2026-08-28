@@ -17,7 +17,7 @@ final class Component297
     static volatile boolean aBoolean4726 = true;
     static int anInt4727;
     static boolean aBoolean4728 = false;
-    private final ha_Sub1 aHa_Sub1_4729;
+    private final GlToolkitSub1 aHa_Sub1_4729;
     static DisplayModeManagerContainer57 aClass46_4730 = null;
     int[] anIntArray4731;
 
@@ -60,7 +60,7 @@ final class Component297
         NumberFormatter.method1568(this.anIntArray4731, i_9_, i, i_13_, bool_14_ ? this.aFloatArray4719 : null, !bool ? null : (aHa_Sub1_4729.aClass348_Sub31_7469.anIntArray6916), i_10_, 113, i_11_, this.anInt4725, (aHa_Sub1_4729.aClass348_Sub31_7469.anInt6917), i_12_, bool_14_ ? aHa_Sub1_4729.aFloatArray7502 : null);
     }
 
-    Component297(ha_Sub1 var_ha_Sub1, Component24 class105, Component43 class216) {
+    Component297(GlToolkitSub1 var_ha_Sub1, Component24 class105, Component43 class216) {
         do {
             try {
                 aHa_Sub1_4729 = var_ha_Sub1;

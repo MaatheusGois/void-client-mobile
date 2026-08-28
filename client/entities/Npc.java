@@ -44,7 +44,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         return (this.aClass79_10505.aBoolean1396);
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
         try {
             if (i_7_ > -106) this.aClass79_10505 = null;
             anInt10513++;
@@ -60,7 +60,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         throw new IllegalStateException();
     }
 
-    final boolean method2391(ha var_ha, int i, int i_9_, int i_10_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_9_, int i_10_) {
         anInt10514++;
         if (this.aClass79_10505 == null || !method2447(97, 131072, var_ha)) return false;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -131,7 +131,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         this.aByteArray10321[0] = (byte) i_15_;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10501++;
         if (this.aClass79_10505 == null || !method2447(i + 114, 2048, var_ha)) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -247,7 +247,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         }
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (i != 7) this.anInt10512 = 102;
         anInt10493++;
         return null;
@@ -286,7 +286,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         return (this.aClass79_10505.anInt1390);
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10509++;
         if (this.aClass79_10505 != null && (this.aBoolean10318 || method2447(123, 0, var_ha))) {
             if (i > -125) method2391(null, -2, -103, 34);
@@ -308,7 +308,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         return (c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 
-    private final boolean method2447(int i, int i_34_, ha var_ha) {
+    private final boolean method2447(int i, int i_34_, GraphicsToolkit var_ha) {
         if (i <= 84) this.aClass79_10505 = null;
         anInt10494++;
         int i_35_ = i_34_;

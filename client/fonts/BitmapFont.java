@@ -23,7 +23,7 @@ abstract class BitmapFont {
     static int anInt4045;
     static int anInt4046;
     static int anInt4047;
-    private ha aHa4048;
+    private GraphicsToolkit aHa4048;
     static int anInt4049;
     static int anInt4050;
     static int anInt4051;
@@ -136,7 +136,7 @@ abstract class BitmapFont {
         }
     }
 
-    final int method2568(int[] is, int i, byte i_21_, aa var_aa, int i_22_, Component24[] class105s, int i_23_, int i_24_, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
+    final int method2568(int[] is, int i, byte i_21_, Shader var_aa, int i_22_, Component24[] class105s, int i_23_, int i_24_, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
         try {
             anInt4054++;
             if (string == null) return 0;
@@ -347,7 +347,7 @@ abstract class BitmapFont {
         }
     }
 
-    abstract void method2578(char c, int i, int i_81_, int i_82_, boolean bool, aa var_aa, int i_83_, int i_84_);
+    abstract void method2578(char c, int i, int i_81_, int i_82_, boolean bool, Shader var_aa, int i_83_, int i_84_);
 
     private final void method2579(int i, int i_85_, int i_86_) {
         DefinitionSub2.anInt9101 = -1;
@@ -424,7 +424,7 @@ abstract class BitmapFont {
         }
     }
 
-    private final void method2583(int i, int i_103_, int i_104_, Component24[] class105s, aa var_aa, String string, int[] is, int i_105_, int i_106_) {
+    private final void method2583(int i, int i_103_, int i_104_, Component24[] class105s, Shader var_aa, String string, int[] is, int i_105_, int i_106_) {
         try {
             i_103_ -= aClass143_4063.anInt1992;
             anInt4061++;
@@ -497,7 +497,7 @@ abstract class BitmapFont {
         }
     }
 
-    BitmapFont(ha var_ha, Component184 class143) {
+    BitmapFont(GraphicsToolkit var_ha, Component184 class143) {
         try {
             aClass143_4063 = class143;
             aHa4048 = var_ha;
@@ -506,7 +506,7 @@ abstract class BitmapFont {
         }
     }
 
-    final int method2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, aa var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
+    final int method2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, Shader var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
         try {
             if (bool != false) method2570(-23, 41);
             anInt4057++;

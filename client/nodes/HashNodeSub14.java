@@ -87,7 +87,7 @@ final class HashNodeSub14
         }
     }
 
-    static final void method3241(int i, byte i_7_, ha var_ha) {
+    static final void method3241(int i, byte i_7_, GraphicsToolkit var_ha) {
         anInt9637++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) HashNodeSub10.anInt9577 = 0;
         else {

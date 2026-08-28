@@ -4,14 +4,14 @@
 
 import jaggl.OpenGL;
 
-/** OpenGL ({@link ha_Sub2} / jaggl) bitmap-font backend. */
+/** OpenGL ({@link GlToolkitSub2} / jaggl) bitmap-font backend. */
 final class OpenGLBitmapFont extends BitmapFont {
-    private final ha_Sub2 aHa_Sub2_6509;
+    private final GlToolkitSub2 aHa_Sub2_6509;
     private final Component128 aClass61_6510;
     private final GlRectangleTexture aClass258_Sub3_Sub1_6511;
     private final boolean aBoolean6512;
 
-    OpenGLBitmapFont(ha_Sub2 var_ha_Sub2, Component184 class143, Component170[] class207s, boolean bool) {
+    OpenGLBitmapFont(GlToolkitSub2 var_ha_Sub2, Component184 class143, Component170[] class207s, boolean bool) {
         super(var_ha_Sub2, class143);
         aHa_Sub2_6509 = var_ha_Sub2;
         int i = 0;
@@ -115,8 +115,8 @@ final class OpenGLBitmapFont extends BitmapFont {
         }
     }
 
-    final void method2578(char c, int i, int i_42_, int i_43_, boolean bool, aa var_aa, int i_44_, int i_45_) {
-        aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
+    final void method2578(char c, int i, int i_42_, int i_43_, boolean bool, Shader var_aa, int i_44_, int i_45_) {
+        ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
         aHa_Sub2_6509.method3735(9473);
         aHa_Sub2_6509.method3771((byte) -109, aClass258_Sub3_Sub1_6511);

@@ -90,7 +90,7 @@ final class LibraryCreditsText extends Component339 {
             Component119.aClass267_3412.method2025(new Component102(VideoAdDisplay.aClass45_3183), false);
             Component119.aClass267_3413.method2025(new Component102(Component43.aClass45_4975), false);
             Component119.aClass267_3414.method2025(new Component102(RadixParser.aClass45_2306), false);
-            Component119.aClass267_3415.method2025(new Component102(r_Sub2.aClass45_10480), false);
+            Component119.aClass267_3415.method2025(new Component102(CacheNodeSub2.aClass45_10480), false);
             Component119.aClass267_3416.method2025(new Component102(SeekableFile.aClass45_1322), false);
             Component119.aClass267_3417.method2025(new Component102(BrowserUrlOpener.aClass45_8926), false);
             Component119.aClass267_3418.method2025(new Component102(Component387.aClass45_1897), false);

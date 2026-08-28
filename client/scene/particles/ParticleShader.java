@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class286_Sub3` (JODE-obfuscated).
- * Particle rendering shader program (extends renamed ShaderProgram). Constructs ParticleSystem instances (method2148) and drives particle draw state on the ha_Sub2 toolkit.
+ * Particle rendering shader program (extends renamed ShaderProgram). Constructs ParticleSystem instances (method2148) and drives particle draw state on the GlToolkitSub2 toolkit.
  */
 
 import jaggl.OpenGL;
@@ -99,7 +99,7 @@ final class ParticleShader extends ShaderProgram {
         }
     }
 
-    ParticleShader(ha_Sub2 var_ha_Sub2, Component178 class83) {
+    ParticleShader(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
         super(var_ha_Sub2);
         do {
             try {
@@ -224,7 +224,7 @@ final class ParticleShader extends ShaderProgram {
                 }
                 if (!bool) {
                     String[] strings = class79.aStringArray1349;
-                    if (za_Sub2.aBoolean9783) strings = Component188.method1847(strings, 0);
+                    if (NodeBaseSub2.aBoolean9783) strings = Component188.method1847(strings, 0);
                     String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.anInt1344);
                     String attack = FriendsIgnoreList.aClass274_3506.method2063(ObjectDeserializer.anInt6967, 544);
                     if (strings != null) {
@@ -276,7 +276,7 @@ final class ParticleShader extends ShaderProgram {
                     }
                 }
                 Component275.anInt2690++;
-                int npcX = (npc.x >> 9) + za_Sub2.regionTileX - npc.aClass79_10505.anInt1399 + 1;
+                int npcX = (npc.x >> 9) + NodeBaseSub2.regionTileX - npc.aClass79_10505.anInt1399 + 1;
                 int npcY = (npc.y >> 9) + Component330.regionTileY - npc.aClass79_10505.anInt1399 + 1;
                 DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.method2063(ObjectDeserializer.anInt6967, 544), npc.anInt10290, CookieManager.anInt6299);
                 // Last options: "Default click" cascade (Pickpocket → left-click, etc.)

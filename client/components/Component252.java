@@ -45,7 +45,7 @@ final class Component252
         return i_0_;
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (i != 7) method2386(-74, null);
         anInt10182++;
         return null;
@@ -63,12 +63,12 @@ final class Component252
         return -10;
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10198++;
         if (i > -125) this.anInt10196 = 71;
     }
 
-    final boolean method2391(ha var_ha, int i, int i_7_, int i_8_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_7_, int i_8_) {
         anInt10188++;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         class101.method894(this.x, -10 + this.anInt6382, this.y);
@@ -94,7 +94,7 @@ final class Component252
         if (bool != false) method2407(true);
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         if (i != 1) method2386(60, null);
         anInt10179++;
         Component3 class148 = Component195.method1449(this.plane, (this.x >> Component149.anInt4459), (this.y >> Component149.anInt4459));
@@ -112,7 +112,7 @@ final class Component252
             boolean bool = false;
             boolean bool_12_ = false;
             boolean bool_13_ = false;
-            s var_s = aa_Sub1.aSArray5191[this.aByte6376];
+            s var_s = ShaderSub1.aSArray5191[this.aByte6376];
             int i_14_ = anInt10184 << 1;
             int i_15_ = i_14_;
             int i_16_ = -i_14_ / 2;

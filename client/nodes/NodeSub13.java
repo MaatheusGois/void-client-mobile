@@ -17,7 +17,7 @@ final class NodeSub13
     static final void method2801(int i, int i_0_, int i_1_, int i_2_, int i_3_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i_4_) {
         int i_5_ = 1 / ((i_4_ - 6) / 48);
         anInt6754++;
-        aa_Sub2.method165(class318_sub1_sub3_sub3.plane, i_2_, i, i_3_, class318_sub1_sub3_sub3.x, 0, class318_sub1_sub3_sub3.y, (byte) 110, i_0_, i_1_);
+        ShaderSub2.method165(class318_sub1_sub3_sub3.plane, i_2_, i, i_3_, class318_sub1_sub3_sub3.x, 0, class318_sub1_sub3_sub3.y, (byte) 110, i_0_, i_1_);
     }
 
     private final long method2802(int[] is, int i, boolean bool, int[] is_6_, byte i_7_) {
@@ -45,7 +45,7 @@ final class NodeSub13
         }
     }
 
-    final DisplayModeManagerContainer370 method2803(DisplayModeManagerContainer167 class17, Component101 class154, int i, int i_10_, int i_11_, int i_12_, int i_13_, ha var_ha, boolean bool, int i_14_) {
+    final DisplayModeManagerContainer370 method2803(DisplayModeManagerContainer167 class17, Component101 class154, int i, int i_10_, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, boolean bool, int i_14_) {
         try {
             anInt6756++;
             DisplayModeManagerContainer370 class64 = null;

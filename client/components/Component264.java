@@ -18,7 +18,7 @@ final class Component264
     static int anInt8704;
     static int anInt8705;
     static StringCache aClass351_8706 = new StringCache(79, 3);
-    private ha_Sub2 aHa_Sub2_8707;
+    private GlToolkitSub2 aHa_Sub2_8707;
 
     final boolean method2261(GlFramebufferTexture class258_sub2, float f, int i, GlFramebufferTexture class258_sub2_0_) {
         try {
@@ -193,7 +193,7 @@ final class Component264
         return aClass258_Sub2_8701.anInt8538;
     }
 
-    static final Component24 method2263(ha var_ha, int i, int i_4_) {
+    static final Component24 method2263(GraphicsToolkit var_ha, int i, int i_4_) {
         anInt8705++;
         ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.method3480(i_4_, -6008));
         if (class348_sub15 != null) {
@@ -218,7 +218,7 @@ final class Component264
         aClass351_8706 = null;
     }
 
-    Component264(ha_Sub2 var_ha_Sub2, int i) {
+    Component264(GlToolkitSub2 var_ha_Sub2, int i) {
         aHa_Sub2_8707 = var_ha_Sub2;
         aClass258_Sub2_8701 = new GlFramebufferTexture(var_ha_Sub2, 6408, i);
     }

@@ -95,7 +95,7 @@ final class Component231
         if (i >= -40) method295(-6, -74, -119, null, -35, null, 125, 67, -102);
     }
 
-    static final void method294(ha var_ha, int i) {
+    static final void method294(GraphicsToolkit var_ha, int i) {
         anInt328++;
         if (Component305.aClass262_9931.method1998(i) != 0) {
             if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 0) {

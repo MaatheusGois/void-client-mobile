@@ -17,7 +17,7 @@ final class Component59
         anInt1870++;
         JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
         DefinitionSub21.anInt9282 = 1;
-        za_Sub1.anInt9775 = -1;
+        NodeBaseSub1.anInt9775 = -1;
         Component205.anInt5973 = 0;
         Component102.anInt4803 = -1;
         OpenGlShader.anInt7403 = 0;

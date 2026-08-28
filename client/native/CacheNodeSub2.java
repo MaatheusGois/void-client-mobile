@@ -1,10 +1,10 @@
-/* r_Sub2 - Decompiled by JODE
+/* CacheNodeSub2 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class r_Sub2
+final class CacheNodeSub2
 /**
- * RENAMED from `r_Sub2` (JODE-obfuscated).
+ * RENAMED from `CacheNodeSub2` (JODE-obfuscated).
  * Evidence: extends r (r)
  */ extends r {
     static CacheStore aClass45_10480;
@@ -347,7 +347,7 @@ final class r_Sub2
         return i_16_ * i_17_ <= this.aByteArray10486.length;
     }
 
-    r_Sub2(ha_Sub2 var_ha_Sub2, int i, int i_19_) {
+    CacheNodeSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_19_) {
         this.aByteArray10486 = new byte[i * i_19_];
     }
 

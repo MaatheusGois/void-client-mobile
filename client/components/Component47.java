@@ -26,7 +26,7 @@ abstract class Component47
         aString863 = null;
     }
 
-    static final Component382 method459(int i, ha_Sub2 var_ha_Sub2, String string, boolean bool) {
+    static final Component382 method459(int i, GlToolkitSub2 var_ha_Sub2, String string, boolean bool) {
         try {
             anInt861++;
             int i_6_ = OpenGL.glGenProgramARB();

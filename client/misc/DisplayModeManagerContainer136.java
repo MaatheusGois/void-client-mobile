@@ -42,7 +42,7 @@ final class DisplayModeManagerContainer136
         if (i_1_ != -9894) method12((byte) -37);
     }
 
-    DisplayModeManagerContainer136(ha_Sub2 var_ha_Sub2, int i, byte[] is, int i_2_, boolean bool) {
+    DisplayModeManagerContainer136(GlToolkitSub2 var_ha_Sub2, int i, byte[] is, int i_2_, boolean bool) {
         super(var_ha_Sub2, 34962, is, i_2_, bool);
         try {
             anInt4708 = i;
@@ -51,7 +51,7 @@ final class DisplayModeManagerContainer136
         }
     }
 
-    DisplayModeManagerContainer136(ha_Sub2 var_ha_Sub2, int i, Buffer buffer, int i_3_, boolean bool) {
+    DisplayModeManagerContainer136(GlToolkitSub2 var_ha_Sub2, int i, Buffer buffer, int i_3_, boolean bool) {
         super(var_ha_Sub2, 34962, buffer, i_3_, bool);
         try {
             anInt4708 = i;
@@ -60,12 +60,12 @@ final class DisplayModeManagerContainer136
         }
     }
 
-    static final void method1153(ha var_ha, int i) {
+    static final void method1153(GraphicsToolkit var_ha, int i) {
         anInt4713++;
         int i_4_ = 0;
         int i_5_ = 0;
         if (Component210.aBoolean5300) {
-            i_4_ = s_Sub3.method4008((byte) -122);
+            i_4_ = BufferCacheSub3.method4008((byte) -122);
             i_5_ = Component110.method260(false);
         }
         int i_6_ = i_4_ + anInt4717;

@@ -20,7 +20,7 @@ final class HashNodeSub17
     static StringCache aClass351_9679 = new StringCache(27, 7);
     static int anInt9680;
 
-    static final int method3266(ha var_ha, int i, Component11 class277) {
+    static final int method3266(GraphicsToolkit var_ha, int i, Component11 class277) {
         try {
             anInt9674++;
             if (class277.anInt3569 == -1) {

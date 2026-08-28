@@ -43,7 +43,7 @@ final class RenderableSub10
         aBooleanArray6477 = null;
     }
 
-    final void method2528(ha var_ha) {
+    final void method2528(GraphicsToolkit var_ha) {
         this.aClass98_6481.aClass88_1569.method845((byte) 89);
         for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.method1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.method1878((byte) 126))
             class318_sub7.method2511(true, var_ha, aLong6471);
@@ -82,7 +82,7 @@ final class RenderableSub10
         this.aBoolean6482 = bool;
     }
 
-    private final void method2532(ha var_ha, Component30[] class129s, boolean bool) {
+    private final void method2532(GraphicsToolkit var_ha, Component30[] class129s, boolean bool) {
         for (int i = 0; i < 32; i++)
             aBooleanArray6474[i] = false;
         while_110_:
@@ -125,7 +125,7 @@ final class RenderableSub10
         aBoolean6473 = true;
     }
 
-    final boolean method2535(ha var_ha, long l) {
+    final boolean method2535(GraphicsToolkit var_ha, long l) {
         if (aLong6472 != aLong6471) method2534();
         else method2537();
         if (l - aLong6472 > 750L) {
@@ -146,7 +146,7 @@ final class RenderableSub10
         return true;
     }
 
-    final void method2536(ha var_ha, long l, Component30[] class129s, DisplayModeManagerContainer173[] class342s, boolean bool) {
+    final void method2536(GraphicsToolkit var_ha, long l, Component30[] class129s, DisplayModeManagerContainer173[] class342s, boolean bool) {
         if (!this.aBoolean6470) {
             method2532(var_ha, class129s, bool);
             method2538(class342s, bool);

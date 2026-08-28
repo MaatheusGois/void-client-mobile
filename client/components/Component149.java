@@ -13,7 +13,7 @@ final class Component149
     static int anInt4459;
     static Component191 aClass183_4460;
 
-    static final void method3511(boolean bool, BitmapFont class324, Component184 class143, String string, int i, ha var_ha) {
+    static final void method3511(boolean bool, BitmapFont class324, Component184 class143, String string, int i, GraphicsToolkit var_ha) {
         try {
             if (i != 2) aClass324_4456 = null;
             anInt4457++;
@@ -31,9 +31,9 @@ final class Component149
                     if (i_2_ < Component209.anInt3451) i_2_ = Component209.anInt3451;
                     if (i_1_ < Component156.anInt3704) i_1_ = Component156.anInt3704;
                     int i_5_ = (Component181.aClass221_1542.method1607(DisplayModeManagerContainer23.anInt1524, i_1_, (byte) -107) - -Component200.anInt3712);
-                    int i_6_ = (Component139.aClass341_6128.method2679(ha_Sub2.anInt7666, i_2_, 1595) + Component272.anInt5871);
+                    int i_6_ = (Component139.aClass341_6128.method2679(GlToolkitSub2.anInt7666, i_2_, 1595) + Component272.anInt5871);
                     if (Component210.aBoolean5300) {
-                        i_5_ += s_Sub3.method4008((byte) -124);
+                        i_5_ += BufferCacheSub3.method4008((byte) -124);
                         i_6_ += Component110.method260(false);
                     }
                     var_ha.method3691(DisplayModeManagerContainer67.aClass207_1727, false).method965((PrimitiveTypeDefinition.aClass207_9090.anInt2702) + i_5_, (PrimitiveTypeDefinition.aClass207_9090.anInt2696) + i_6_, -(2 * (PrimitiveTypeDefinition.aClass207_9090.anInt2702)) + i_1_, -((PrimitiveTypeDefinition.aClass207_9090.anInt2696) * 2) + i_2_, 1, 0, 0);

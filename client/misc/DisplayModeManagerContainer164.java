@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer164
     static int anInt5350;
     private int anInt5351;
     private short aShort5352;
-    private final ha_Sub1 aHa_Sub1_5353;
+    private final GlToolkitSub1 aHa_Sub1_5353;
     private int anInt5354;
     private int[] anIntArray5355;
     private int[] anIntArray5356;
@@ -1119,7 +1119,7 @@ final class DisplayModeManagerContainer164
         }
     }
 
-    final void wa() {
+    final void Interface4Impl() {
         if (aBoolean5372) {
             for (int i = 0; i < anInt5340; i++) {
                 anIntArray5356[i] = anIntArray5356[i] + 7 >> 4;
@@ -1536,12 +1536,12 @@ final class DisplayModeManagerContainer164
         }
     }
 
-    final int na() {
+    final int ShaderImpl() {
         if (!aBoolean5323) method655();
         return aShort5324;
     }
 
-    final r ba(r var_r) {
+    final r BufferedToolkit(r var_r) {
         return null;
     }
 
@@ -2097,7 +2097,7 @@ final class DisplayModeManagerContainer164
         }
     }
 
-    final void aa(short i, short i_582_) {
+    final void Shader(short i, short i_582_) {
         if (aShortArray5388 != null) {
             if (!aBoolean5391 && i_582_ >= 0) {
                 Component319 class12 = aHa_Sub1_5353.aD4579.method3(i_582_ & 0xffff, -6662);
@@ -2933,7 +2933,7 @@ final class DisplayModeManagerContainer164
         }
     }
 
-    DisplayModeManagerContainer164(ha_Sub1 var_ha_Sub1) {
+    DisplayModeManagerContainer164(GlToolkitSub1 var_ha_Sub1) {
         anInt5354 = 0;
         aBoolean5369 = false;
         anInt5351 = 0;
@@ -2944,7 +2944,7 @@ final class DisplayModeManagerContainer164
         aHa_Sub1_5353 = var_ha_Sub1;
     }
 
-    DisplayModeManagerContainer164(ha_Sub1 var_ha_Sub1, DisplayModeManagerContainer77 class124, int i, int i_785_, int i_786_, int i_787_) {
+    DisplayModeManagerContainer164(GlToolkitSub1 var_ha_Sub1, DisplayModeManagerContainer77 class124, int i, int i_785_, int i_786_, int i_787_) {
         anInt5354 = 0;
         aBoolean5369 = false;
         anInt5351 = 0;

@@ -11,7 +11,7 @@ abstract class ShaderProgram {
     static int anInt3681;
     static int anInt3682;
     static NodeSub2 aClass348_Sub2_3683;
-    ha_Sub2 aHa_Sub2_3684;
+    GlToolkitSub2 aHa_Sub2_3684;
 
     abstract void method2133(int i);
 
@@ -41,7 +41,7 @@ abstract class ShaderProgram {
 
     abstract void method2140(AbstractGlTexture class258, byte i, int i_5_);
 
-    ShaderProgram(ha_Sub2 var_ha_Sub2) {
+    ShaderProgram(GlToolkitSub2 var_ha_Sub2) {
         this.aHa_Sub2_3684 = var_ha_Sub2;
     }
 }

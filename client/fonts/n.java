@@ -9,9 +9,9 @@ final class n
  */ extends BitmapFont implements Interface19 {
     long nativeid;
 
-    private final native void S(oa var_oa, ya var_ya, byte[][] is, int[] is_0_, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_);
+    private final native void S(OpenGLToolkit var_oa, NativeHandle var_ya, byte[][] is, int[] is_0_, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_);
 
-    n(oa var_oa, ya var_ya, Component184 class143, Component170[] class207s, Component24[] class105s) {
+    n(OpenGLToolkit var_oa, NativeHandle var_ya, Component184 class143, Component170[] class207s, Component24[] class105s) {
         super(var_oa, class143);
         byte[][] is = new byte[class207s.length][];
         int[] is_5_ = new int[class207s.length];
@@ -36,9 +36,9 @@ final class n
 
     final native void fa(char c, int i, int i_9_, int i_10_, boolean bool);
 
-    private final native void PA(char c, int i, int i_11_, int i_12_, boolean bool, aa var_aa, int i_13_, int i_14_);
+    private final native void PA(char c, int i, int i_11_, int i_12_, boolean bool, Shader var_aa, int i_13_, int i_14_);
 
-    final void method2578(char c, int i, int i_15_, int i_16_, boolean bool, aa var_aa, int i_17_, int i_18_) {
+    final void method2578(char c, int i, int i_15_, int i_16_, boolean bool, Shader var_aa, int i_17_, int i_18_) {
         PA(c, i, i_15_, i_16_, bool, var_aa, i_17_, i_18_);
     }
 }

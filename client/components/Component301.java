@@ -11,12 +11,12 @@ final class Component301
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt4110;
-    private final ha_Sub3 aHa_Sub3_4111;
+    private final GlToolkitSub3 aHa_Sub3_4111;
     byte[] aByteArray4112;
     int anInt4113;
     static int anInt4114;
     static int anInt4115;
-    private final s_Sub3 aS_Sub3_4116;
+    private final BufferCacheSub3 aS_Sub3_4116;
     static boolean aBoolean4117 = false;
     private final int anInt4118;
     static int anInt4119;
@@ -31,7 +31,7 @@ final class Component301
 
     final boolean method2628(int i, byte i_0_, r var_r, int i_1_) {
         anInt4119++;
-        r_Sub1 var_r_Sub1 = (r_Sub1) var_r;
+        CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         int i_2_ = 13 % ((i_0_ - -21) / 45);
         i_1_ += var_r_Sub1.anInt10474 + 1;
         i += var_r_Sub1.anInt10468 - -1;
@@ -69,7 +69,7 @@ final class Component301
 
     final void method2629(int i, r var_r, int i_12_, int i_13_) {
         anInt4114++;
-        r_Sub1 var_r_Sub1 = (r_Sub1) var_r;
+        CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         i_13_ += 1 + var_r_Sub1.anInt10468;
         i += i_12_ + var_r_Sub1.anInt10474;
         int i_14_ = i * this.anInt4113 + i_13_;
@@ -217,7 +217,7 @@ final class Component301
 
     final void method2633(int i, int i_50_, r var_r, int i_51_) {
         anInt4120++;
-        r_Sub1 var_r_Sub1 = (r_Sub1) var_r;
+        CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         i_51_ += var_r_Sub1.anInt10474 + 1;
         i_50_ += 1 + var_r_Sub1.anInt10468;
         if (i != 287) method2634(-49, -3, 16, -9, -115);
@@ -275,7 +275,7 @@ final class Component301
         }
     }
 
-    Component301(ha_Sub3 var_ha_Sub3, s_Sub3 var_s_Sub3) {
+    Component301(GlToolkitSub3 var_ha_Sub3, BufferCacheSub3 var_s_Sub3) {
         try {
             aHa_Sub3_4111 = var_ha_Sub3;
             aS_Sub3_4116 = var_s_Sub3;

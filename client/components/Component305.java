@@ -28,7 +28,7 @@ final class Component305
         if (i_2_ <= 21) aClass207Array9929 = null;
         anInt9928++;
         int i_5_ = this.aClass105_8350.method966();
-        int i_6_ = (((DummyClass) this.aClass369_4635).anInt10177 * aa_Sub2.method163(512) / 10 % i_5_);
+        int i_6_ = (((DummyClass) this.aClass369_4635).anInt10177 * ShaderSub2.method163(512) / 10 % i_5_);
         this.aClass105_8350.method972(i_3_ - (i_5_ - i_6_), i, -i_6_ + (i_4_ - -i_5_), i_1_);
     }
 }

@@ -46,12 +46,12 @@ final class DisplayModeManagerContainer155
         if (i != 85) aClass297_2993 = null;
     }
 
-    static final void method1642(byte i, ha var_ha) {
+    static final void method1642(byte i, GraphicsToolkit var_ha) {
         anInt2997++;
         int i_3_ = 0;
         int i_4_ = 0;
         if (Component210.aBoolean5300) {
-            i_3_ = s_Sub3.method4008((byte) -124);
+            i_3_ = BufferCacheSub3.method4008((byte) -124);
             i_4_ = Component110.method260(false);
         }
         int i_5_ = -10660793;

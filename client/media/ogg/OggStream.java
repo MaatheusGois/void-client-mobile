@@ -71,7 +71,7 @@ abstract class OggStream extends Node {
                 Component149.method3511(true, class324, class143, string, 2, NodeSub8.aHa6654);
             }
         } else {
-            ha var_ha = null;
+            GraphicsToolkit var_ha = null;
             if (string != null) {
                 var_ha = Component65.method958(true, 0, DefinitionSub4.aD9113, 0, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 var_ha.GA(0);
@@ -96,7 +96,7 @@ abstract class OggStream extends Node {
                     } catch (Throwable throwable) {
                         /* empty */
                     }
-                    za var_za;
+                    NodeBase var_za;
                     if (!bool_2_) var_za = NodeSub8.aHa6654.method3702(104857600);
                     else var_za = NodeSub8.aHa6654.method3702(146800640);
                     NodeSub8.aHa6654.method3651(var_za);

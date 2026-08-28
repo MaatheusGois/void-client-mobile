@@ -40,7 +40,7 @@ final class OggUrlStream extends OggStream {
         anInt8991++;
         if (i_2_ != 2) aByteArrayArray8996 = null;
         if (class64 == null) return null;
-        ComponentDownloader class30 = new ComponentDownloader(i, i_1_, i_0_, class64.na(), class64.V(), class64.RA(), class64.fa(), class64.EA(), class64.HA(), class64.G());
+        ComponentDownloader class30 = new ComponentDownloader(i, i_1_, i_0_, class64.ShaderImpl(), class64.V(), class64.RA(), class64.fa(), class64.EA(), class64.HA(), class64.G());
         return class30;
     }
 

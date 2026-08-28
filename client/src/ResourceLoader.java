@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class311` (JODE-obfuscated).
- * Resource-loading thread (implements Runnable). Loads anInterface16_3907 (InterfaceRenderer etc.) and reports progress through a LoadingState (aClass56_3916) and the ha.
+ * Resource-loading thread (implements Runnable). Loads anInterface16_3907 (InterfaceRenderer etc.) and reports progress through a LoadingState (aClass56_3916) and the GraphicsToolkit.
  */
 
 final class ResourceLoader implements Runnable {

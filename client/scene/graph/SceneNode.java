@@ -117,7 +117,7 @@ final class SceneNode extends Node {
                         }
                         if (i_8_ == 4) {
                             Component330.anInt1514++;
-                            ParticleSystem class348_sub47 = ParticleShader.method2148((aa_Sub3.aClass351_5204), (DisplayModeManagerContainer64.aClass77_9029), -82);
+                            ParticleSystem class348_sub47 = ParticleShader.method2148((ShaderSub3.aClass351_5204), (DisplayModeManagerContainer64.aClass77_9029), -82);
                             Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
                             HashNodeSub14.method3243(116, class348_sub47);
                         }

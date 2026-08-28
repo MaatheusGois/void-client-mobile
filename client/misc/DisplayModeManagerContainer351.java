@@ -30,7 +30,7 @@ final class DisplayModeManagerContainer351
 
     static final void method1479(int i, byte i_1_, int i_2_, int i_3_) {
         anInt2675++;
-        int i_4_ = i_2_ - -za_Sub2.regionTileX;
+        int i_4_ = i_2_ - -NodeBaseSub2.regionTileX;
         int i_5_ = Component330.regionTileY + i;
         if (Component335.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && AbstractShaderSub4.anInt7319 > i_2_ && ParametricDefinition.anInt9109 > i && (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Component72.localPlayer.plane))) {
             long l = i_5_ << 14 | i_3_ << 28 | i_4_;
@@ -41,7 +41,7 @@ final class DisplayModeManagerContainer351
                 if (class348_sub34 == null) Component21.method2110(i_3_, i_2_, i);
                 else {
                     Component252 class318_sub1_sub2_sub1 = ((Component252) Component21.method2110(i_3_, i_2_, i));
-                    if (class318_sub1_sub2_sub1 == null) class318_sub1_sub2_sub1 = (new Component252(i_2_ << 9, aa_Sub1.aSArray5191[i_3_].method3982((byte) -86, i, i_2_), i << 9, i_3_, i_3_));
+                    if (class318_sub1_sub2_sub1 == null) class318_sub1_sub2_sub1 = (new Component252(i_2_ << 9, ShaderSub1.aSArray5191[i_3_].method3982((byte) -86, i, i_2_), i << 9, i_3_, i_3_));
                     else class318_sub1_sub2_sub1.anInt10189 = class318_sub1_sub2_sub1.anInt10180 = -1;
                     class318_sub1_sub2_sub1.anInt10181 = class348_sub34.anInt6973;
                     if (i_1_ >= -112) aBoolean2674 = true;

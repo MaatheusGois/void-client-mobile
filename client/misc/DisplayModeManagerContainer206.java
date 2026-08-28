@@ -346,7 +346,7 @@ final class DisplayModeManagerContainer206
         }
     }
 
-    final DisplayModeManagerContainer370 method800(int i, Component280[] class182s, Component344 class87, boolean bool, DisplayModeManagerContainer167 class17, int i_34_, DisplayModeManagerContainer1 class261, int i_35_, DisplayModeManagerContainer167 class17_36_, Interface17 interface17, ha var_ha, int i_37_, int[] is, int i_38_, int i_39_, int i_40_, int i_41_) {
+    final DisplayModeManagerContainer370 method800(int i, Component280[] class182s, Component344 class87, boolean bool, DisplayModeManagerContainer167 class17, int i_34_, DisplayModeManagerContainer1 class261, int i_35_, DisplayModeManagerContainer167 class17_36_, Interface17 interface17, GraphicsToolkit var_ha, int i_37_, int[] is, int i_38_, int i_39_, int i_40_, int i_41_) {
         try {
             anInt1341++;
             if (this.anIntArray1377 != null) {
@@ -536,7 +536,7 @@ final class DisplayModeManagerContainer206
                 }
                 if (aShortArray1393 != null) {
                     for (int i_81_ = 0; aShortArray1393.length > i_81_; i_81_++)
-                        class64.aa(aShortArray1393[i_81_], aShortArray1391[i_81_]);
+                        class64.Shader(aShortArray1393[i_81_], aShortArray1391[i_81_]);
                 }
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_43_);
@@ -616,7 +616,7 @@ final class DisplayModeManagerContainer206
         return (ObjectDeserializer.aByteArrayArrayArray6962[1][i_93_][i] & 0x2) != 0;
     }
 
-    final DisplayModeManagerContainer370 method803(Interface17 interface17, ha var_ha, int i, int i_94_, DisplayModeManagerContainer167 class17, Component344 class87, int i_95_, int i_96_, int i_97_) {
+    final DisplayModeManagerContainer370 method803(Interface17 interface17, GraphicsToolkit var_ha, int i, int i_94_, DisplayModeManagerContainer167 class17, Component344 class87, int i_95_, int i_96_, int i_97_) {
         try {
             anInt1389++;
             if (this.anIntArray1377 != null) {
@@ -665,7 +665,7 @@ final class DisplayModeManagerContainer206
                 }
                 if (aShortArray1393 != null) {
                     for (int i_105_ = 0; aShortArray1393.length > i_105_; i_105_++)
-                        class64.aa(aShortArray1393[i_105_], aShortArray1391[i_105_]);
+                        class64.Shader(aShortArray1393[i_105_], aShortArray1391[i_105_]);
                 }
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_99_);

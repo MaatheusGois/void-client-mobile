@@ -26,7 +26,7 @@ final class DisplayModeManagerContainer332
                 Component208 class117 = NodeSub7.aClass33_6653.method337(true, is[0]);
                 return class117.method1074((int) l, 91);
             }
-            if (Component40.aClass138_6321 == class138 || za.aClass138_7274 == class138) {
+            if (Component40.aClass138_6321 == class138 || NodeBase.aClass138_7274 == class138) {
                 NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(i + -99, (int) l);
                 return class213.aString2795;
             }

@@ -25,7 +25,7 @@ final class Component2
         if (Component21.anInt3655 != 1) {
             if (Component21.anInt3655 == 2) {
                 if (!Component210.aBoolean5300) DisplayModeManagerContainer42.method2291((byte) -127, i, i_0_);
-                else DisplayModeManagerContainer42.method2291((byte) -122, i + s_Sub3.method4008((byte) -128), Component110.method260(!bool) + i_0_);
+                else DisplayModeManagerContainer42.method2291((byte) -122, i + BufferCacheSub3.method4008((byte) -128), Component110.method260(!bool) + i_0_);
             }
         } else ColoredTextBuilder.processMenuAction((byte) 101, Component161.aMenuEntry_1946, i_0_, i);
         anInt8354++;

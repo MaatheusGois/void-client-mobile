@@ -157,7 +157,7 @@ final class WaterShaderProgram extends ShaderProgram {
         }
     }
 
-    WaterShaderProgram(ha_Sub2 var_ha_Sub2, Component178 class83) {
+    WaterShaderProgram(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
         super(var_ha_Sub2);
         aBoolean6266 = false;
         do {

@@ -7,7 +7,7 @@ final class Component385
  * RENAMED from `Class167` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    private final ha_Sub1 aHa_Sub1_2191;
+    private final GlToolkitSub1 aHa_Sub1_2191;
     int anInt2192;
     static int anInt2193;
     static int anInt2194;
@@ -174,7 +174,7 @@ final class Component385
         }
     }
 
-    Component385(ha_Sub1 var_ha_Sub1) {
+    Component385(GlToolkitSub1 var_ha_Sub1) {
         this.anInt2192 = 0;
         this.anInt2197 = 0;
         this.anInt2205 = 0;

@@ -1,14 +1,14 @@
-/* ha_Sub1 - Decompiled by JODE
+/* GlToolkitSub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import java.awt.*;
 
-final class ha_Sub1
+final class GlToolkitSub1
 /**
- * RENAMED from `ha_Sub1` (JODE-obfuscated).
- * Evidence: extends ha (ha)
- */ extends ha {
+ * RENAMED from `GlToolkitSub1` (JODE-obfuscated).
+ * Evidence: extends GraphicsToolkit (GraphicsToolkit)
+ */ extends GraphicsToolkit {
     private int anInt7465;
     private int anInt7466;
     private LruCache aClass356_7467;
@@ -67,7 +67,7 @@ final class ha_Sub1
         fillRect(0, 0, this.anInt7477, anInt7486, i, 0);
     }
 
-    final int[] na(int i, int i_0_, int i_1_, int i_2_) {
+    final int[] ShaderImpl(int i, int i_0_, int i_1_, int i_2_) {
         int[] is = new int[i_1_ * i_2_];
         int i_3_ = 0;
         for (int i_4_ = 0; i_4_ < i_2_; i_4_++) {
@@ -92,8 +92,8 @@ final class ha_Sub1
         }
     }
 
-    final void method3703(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, aa var_aa, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    final void method3703(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, Shader var_aa, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is = var_aa_Sub3.anIntArray5201;
         int[] is_22_ = var_aa_Sub3.anIntArray5202;
         int i_23_ = (Math.max(this.anInt7476, i_18_));
@@ -239,8 +239,8 @@ final class ha_Sub1
         } else throw new IllegalArgumentException();
     }
 
-    final aa method3661(int i, int i_63_, int[] is, int[] is_64_) {
-        return new aa_Sub3(i, i_63_, is, is_64_);
+    final Shader method3661(int i, int i_63_, int[] is, int[] is_64_) {
+        return new ShaderSub3(i, i_63_, is, is_64_);
     }
 
     final void method3685(Component122 class98, int i) {
@@ -313,7 +313,7 @@ final class ha_Sub1
         /* empty */
     }
 
-    final void xa(float f) {
+    final void DualToolkit(float f) {
         this.anInt7500 = (int) (f * 65535.0F);
     }
 
@@ -327,7 +327,7 @@ final class ha_Sub1
         }
     }
 
-    final void method3651(za var_za) {
+    final void method3651(NodeBase var_za) {
         /* empty */
     }
 
@@ -499,8 +499,8 @@ final class ha_Sub1
         this.aClass101_Sub1_7492 = (MatrixSub1) class101;
     }
 
-    final void A(int i, aa var_aa, int i_145_, int i_146_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    final void A(int i, Shader var_aa, int i_145_, int i_146_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is = var_aa_Sub3.anIntArray5201;
         int[] is_147_ = var_aa_Sub3.anIntArray5202;
         int i_148_;
@@ -588,7 +588,7 @@ final class ha_Sub1
         return (new int[]{this.anInt7510, this.anInt7504, this.anInt7491, this.anInt7497});
     }
 
-    final void ya() {
+    final void NativeHandle() {
         if (this.anInt7496 == 0 && this.anInt7507 == this.anInt7477 && this.anInt7476 == 0 && this.anInt7503 == anInt7486) {
             int i = this.aFloatArray7511.length;
             int i_176_ = i - (i & 0x7);
@@ -983,8 +983,8 @@ final class ha_Sub1
         class167.aBoolean2202 = bool;
     }
 
-    final void method3636(int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, aa var_aa, int i_290_, int i_291_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    final void method3636(int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, Shader var_aa, int i_290_, int i_291_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is = var_aa_Sub3.anIntArray5201;
         int[] is_292_ = var_aa_Sub3.anIntArray5202;
         int i_293_ = (Math.max(this.anInt7476, i_291_));
@@ -1223,7 +1223,7 @@ final class ha_Sub1
         return this.aClass101_Sub1_7492;
     }
 
-    ha_Sub1(Canvas canvas, d var_d, int i, int i_355_) {
+    GlToolkitSub1(Canvas canvas, d var_d, int i, int i_355_) {
         this(var_d);
         try {
             method3643(canvas, i, i_355_);
@@ -1252,7 +1252,7 @@ final class ha_Sub1
     }
 
     final s method3648(int i, int i_357_, int[][] is, int[][] is_358_, int i_359_, int i_360_, int i_361_) {
-        return new s_Sub1(this, i_360_, i_361_, i, i_357_, is, is_358_, i_359_);
+        return new BufferCacheSub1(this, i_360_, i_361_, i, i_357_, is, is_358_, i_359_);
     }
 
     final void H(int i, int i_362_, int i_363_, int[] is) {
@@ -1774,7 +1774,7 @@ final class ha_Sub1
         return null;
     }
 
-    final void za(int i, int i_526_, int i_527_, int i_528_, int i_529_) {
+    final void NodeBase(int i, int i_526_, int i_527_, int i_528_, int i_529_) {
         if (i_527_ < 0) i_527_ = -i_527_;
         int i_530_ = i_526_ - i_527_;
         if (i_530_ < this.anInt7476) i_530_ = this.anInt7476;
@@ -1991,7 +1991,7 @@ final class ha_Sub1
         return this.aD4579.method4(-7953, i);
     }
 
-    private ha_Sub1(d var_d) {
+    private GlToolkitSub1(d var_d) {
         super(var_d);
         aClass356_7467 = new LruCache(4);
         this.anInt7474 = 45823;
@@ -2037,7 +2037,7 @@ final class ha_Sub1
         is[3] = this.anInt7503;
     }
 
-    final za method3702(int i) {
+    final NodeBase method3702(int i) {
         return null;
     }
 

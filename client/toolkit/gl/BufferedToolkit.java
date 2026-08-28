@@ -1,15 +1,15 @@
-/* ba - Decompiled by JODE
+/* BufferedToolkit - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class ba
+final class BufferedToolkit
 /**
- * RENAMED from `ba` (JODE-obfuscated).
+ * RENAMED from `BufferedToolkit` (JODE-obfuscated).
  * Evidence: extends r (r); implements Interface19; 1 native method
  */ extends r implements Interface19 {
     long nativeid;
 
-    ba(oa var_oa) {
+    BufferedToolkit(OpenGLToolkit var_oa) {
         /* empty */
     }
 

@@ -105,7 +105,7 @@ final class MenuOpener extends Component137 implements Interface8 {
         return 0L;
     }
 
-    MenuOpener(ha_Sub2 var_ha_Sub2, int i, byte[] is, int i_8_, boolean bool) {
+    MenuOpener(GlToolkitSub2 var_ha_Sub2, int i, byte[] is, int i_8_, boolean bool) {
         super(var_ha_Sub2, 34963, is, i_8_, bool);
         try {
             anInt4837 = i;

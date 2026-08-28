@@ -81,7 +81,7 @@ final class DisplayModeManagerContainer282
     private boolean aBoolean5595 = false;
     private Component377[] aClass48Array5596;
     static int anInt5597;
-    private final ha_Sub2 aHa_Sub2_5598;
+    private final GlToolkitSub2 aHa_Sub2_5598;
     static int anInt5599;
     static String aString5600 = "";
     private short[] aShortArray5601;
@@ -663,7 +663,7 @@ final class DisplayModeManagerContainer282
         aBoolean5527 = false;
     }
 
-    final r ba(r var_r) {
+    final r BufferedToolkit(r var_r) {
         try {
             anInt5562++;
             if (anInt5529 == 0) return null;
@@ -688,9 +688,9 @@ final class DisplayModeManagerContainer282
             }
             int i_168_ = i_165_ - i - -1;
             int i_169_ = -i_166_ + i_167_ - -1;
-            r_Sub2 var_r_Sub2 = (r_Sub2) var_r;
-            r_Sub2 var_r_Sub2_170_;
-            if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) -47, i_169_, i_168_)) var_r_Sub2_170_ = new r_Sub2(aHa_Sub2_5598, i_168_, i_169_);
+            CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
+            CacheNodeSub2 var_r_Sub2_170_;
+            if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) -47, i_169_, i_168_)) var_r_Sub2_170_ = new CacheNodeSub2(aHa_Sub2_5598, i_168_, i_169_);
             else {
                 var_r_Sub2_170_ = var_r_Sub2;
                 var_r_Sub2_170_.method3293((byte) 0);
@@ -712,7 +712,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final int na() {
+    final int ShaderImpl() {
         if (!aBoolean5527) method692((byte) -123);
         anInt5578++;
         return aShort5634;
@@ -738,7 +738,7 @@ final class DisplayModeManagerContainer282
         aBoolean5527 = false;
     }
 
-    private final void method685(byte i, r_Sub2 var_r_Sub2) {
+    private final void method685(byte i, CacheNodeSub2 var_r_Sub2) {
         try {
             if (aHa_Sub2_5598.anIntArray7880.length < anInt5529) {
                 aHa_Sub2_5598.anIntArray7883 = new int[anInt5529];
@@ -953,7 +953,7 @@ final class DisplayModeManagerContainer282
                 class64_sub3_211_.aClass123_5563 = class64_sub3_213_.aClass123_5563;
                 class64_sub3_211_.aClass123_5563.anInterface2_1811 = aClass123_5563.anInterface2_1811;
                 class64_sub3_211_.aClass123_5563.aByte1812 = aClass123_5563.aByte1812;
-            } else if (!aa_Sub3.method166((byte) 108, anInt5556, i)) class64_sub3_211_.aClass123_5563 = null;
+            } else if (!ShaderSub3.method166((byte) 108, anInt5556, i)) class64_sub3_211_.aClass123_5563 = null;
             else class64_sub3_211_.aClass123_5563 = aClass123_5563;
             if (ShaderProgramSub9.method2174((byte) 121, i, anInt5556)) {
                 if (class64_sub3_213_.aFloatArray5552 != null && (class64_sub3_213_.aFloatArray5552.length >= anInt5632)) {
@@ -1061,7 +1061,7 @@ final class DisplayModeManagerContainer282
         if (aClass123_5563 != null) aClass123_5563.anInterface2_1811 = null;
     }
 
-    final void wa() {
+    final void Interface4Impl() {
         for (int i = 0; i < anInt5642; i++) {
             anIntArray5543[i] = 7 + anIntArray5543[i] >> 4;
             anIntArray5593[i] = 7 + anIntArray5593[i] >> 4;
@@ -1176,7 +1176,7 @@ final class DisplayModeManagerContainer282
             anIntArray5644[i] <<= 4;
         }
         Component85.anInt2880 = 0;
-        za.anInt7275 = 0;
+        NodeBase.anInt7275 = 0;
         Component113.anInt2398 = 0;
         return true;
     }
@@ -1261,7 +1261,7 @@ final class DisplayModeManagerContainer282
         class348_sub42_sub15.method3251(-16058);
     }
 
-    final void aa(short i, short i_284_) {
+    final void Shader(short i, short i_284_) {
         anInt5590++;
         d var_d = aHa_Sub2_5598.aD4579;
         for (int i_285_ = 0; i_285_ < anInt5632; i_285_++) {
@@ -1718,7 +1718,7 @@ final class DisplayModeManagerContainer282
                         anIntArray5543 = null;
                     } else aBoolean5555 = true;
                 }
-                if (anIntArray5593 != null && !s_Sub2.method3999(anInt5556, anInt5648, 458752)) {
+                if (anIntArray5593 != null && !BufferCacheSub2.method3999(anInt5556, anInt5648, 458752)) {
                     if (aClass123_5605 != null && (aClass123_5605.anInterface2_1811 == null)) aBoolean5555 = true;
                     else {
                         if (!aBoolean5527) method692((byte) -123);
@@ -1878,14 +1878,14 @@ final class DisplayModeManagerContainer282
                 Component113.anInt2398 = 0;
                 int i_391_ = 0;
                 Component85.anInt2880 = 0;
-                za.anInt7275 = 0;
+                NodeBase.anInt7275 = 0;
                 for (int i_392_ = 0; i_392_ < i_390_; i_392_++) {
                     int i_393_ = is[i_392_];
                     if (i_393_ < anIntArrayArray5539.length) {
                         int[] is_394_ = anIntArrayArray5539[i_393_];
                         for (int i_395_ = 0; (i_395_ < is_394_.length); i_395_++) {
                             int i_396_ = is_394_[i_395_];
-                            za.anInt7275 += anIntArray5543[i_396_];
+                            NodeBase.anInt7275 += anIntArray5543[i_396_];
                             Component85.anInt2880 += anIntArray5593[i_396_];
                             i_391_++;
                             Component113.anInt2398 += anIntArray5644[i_396_];
@@ -1895,10 +1895,10 @@ final class DisplayModeManagerContainer282
                 if (i_391_ <= 0) {
                     Component85.anInt2880 = i_387_;
                     Component113.anInt2398 = i_388_;
-                    za.anInt7275 = i_386_;
+                    NodeBase.anInt7275 = i_386_;
                 } else {
                     Component85.anInt2880 = i_387_ + Component85.anInt2880 / i_391_;
-                    za.anInt7275 = za.anInt7275 / i_391_ + i_386_;
+                    NodeBase.anInt7275 = NodeBase.anInt7275 / i_391_ + i_386_;
                     Component113.anInt2398 = i_388_ + Component113.anInt2398 / i_391_;
                 }
             } else if (i == 1) {
@@ -1925,7 +1925,7 @@ final class DisplayModeManagerContainer282
                         if ((0x1 & i_389_) == 0) {
                             for (int i_416_ = 0; (is_404_.length > i_416_); i_416_++) {
                                 int i_417_ = is_404_[i_416_];
-                                anIntArray5543[i_417_] -= za.anInt7275;
+                                anIntArray5543[i_417_] -= NodeBase.anInt7275;
                                 anIntArray5593[i_417_] -= Component85.anInt2880;
                                 anIntArray5644[i_417_] -= Component113.anInt2398;
                                 if (i_388_ != 0) {
@@ -1949,14 +1949,14 @@ final class DisplayModeManagerContainer282
                                     anIntArray5644[i_417_] = (16383 + (anIntArray5644[i_417_] * i_425_ - (anIntArray5543[i_417_] * i_424_))) >> 14;
                                     anIntArray5543[i_417_] = i_426_;
                                 }
-                                anIntArray5543[i_417_] += za.anInt7275;
+                                anIntArray5543[i_417_] += NodeBase.anInt7275;
                                 anIntArray5593[i_417_] += Component85.anInt2880;
                                 anIntArray5644[i_417_] += Component113.anInt2398;
                             }
                         } else {
                             for (int i_405_ = 0; is_404_.length > i_405_; i_405_++) {
                                 int i_406_ = is_404_[i_405_];
-                                anIntArray5543[i_406_] -= za.anInt7275;
+                                anIntArray5543[i_406_] -= NodeBase.anInt7275;
                                 anIntArray5593[i_406_] -= Component85.anInt2880;
                                 anIntArray5644[i_406_] -= Component113.anInt2398;
                                 if (i_386_ != 0) {
@@ -1980,7 +1980,7 @@ final class DisplayModeManagerContainer282
                                     anIntArray5644[i_406_] = (anIntArray5644[i_406_] * i_414_ + (-(i_413_ * anIntArray5543[i_406_]) - -16383)) >> 14;
                                     anIntArray5543[i_406_] = i_415_;
                                 }
-                                anIntArray5543[i_406_] += za.anInt7275;
+                                anIntArray5543[i_406_] += NodeBase.anInt7275;
                                 anIntArray5593[i_406_] += Component85.anInt2880;
                                 anIntArray5644[i_406_] += Component113.anInt2398;
                             }
@@ -2034,13 +2034,13 @@ final class DisplayModeManagerContainer282
                         int[] is_447_ = anIntArrayArray5539[i_446_];
                         for (int i_448_ = 0; i_448_ < is_447_.length; i_448_++) {
                             int i_449_ = is_447_[i_448_];
-                            anIntArray5543[i_449_] -= za.anInt7275;
+                            anIntArray5543[i_449_] -= NodeBase.anInt7275;
                             anIntArray5593[i_449_] -= Component85.anInt2880;
                             anIntArray5644[i_449_] -= Component113.anInt2398;
                             anIntArray5543[i_449_] = i_386_ * anIntArray5543[i_449_] >> 7;
                             anIntArray5593[i_449_] = anIntArray5593[i_449_] * i_387_ >> 7;
                             anIntArray5644[i_449_] = anIntArray5644[i_449_] * i_388_ >> 7;
-                            anIntArray5543[i_449_] += za.anInt7275;
+                            anIntArray5543[i_449_] += NodeBase.anInt7275;
                             anIntArray5593[i_449_] += Component85.anInt2880;
                             anIntArray5644[i_449_] += Component113.anInt2398;
                         }
@@ -2164,12 +2164,12 @@ final class DisplayModeManagerContainer282
     final void P(int i, int i_479_, int i_480_, int i_481_) {
         anInt5567++;
         if (i == 0) {
-            za.anInt7275 = 0;
+            NodeBase.anInt7275 = 0;
             Component113.anInt2398 = 0;
             Component85.anInt2880 = 0;
             int i_482_ = 0;
             for (int i_483_ = 0; i_483_ < anInt5557; i_483_++) {
-                za.anInt7275 += anIntArray5543[i_483_];
+                NodeBase.anInt7275 += anIntArray5543[i_483_];
                 Component85.anInt2880 += anIntArray5593[i_483_];
                 i_482_++;
                 Component113.anInt2398 += anIntArray5644[i_483_];
@@ -2177,10 +2177,10 @@ final class DisplayModeManagerContainer282
             if (i_482_ <= 0) {
                 Component85.anInt2880 = i_480_;
                 Component113.anInt2398 = i_481_;
-                za.anInt7275 = i_479_;
+                NodeBase.anInt7275 = i_479_;
             } else {
                 Component85.anInt2880 = Component85.anInt2880 / i_482_ - -i_480_;
-                za.anInt7275 = i_479_ + za.anInt7275 / i_482_;
+                NodeBase.anInt7275 = i_479_ + NodeBase.anInt7275 / i_482_;
                 Component113.anInt2398 = Component113.anInt2398 / i_482_ + i_481_;
             }
         } else if (i == 1) {
@@ -2191,7 +2191,7 @@ final class DisplayModeManagerContainer282
             }
         } else if (i == 2) {
             for (int i_485_ = 0; i_485_ < anInt5557; i_485_++) {
-                anIntArray5543[i_485_] -= za.anInt7275;
+                anIntArray5543[i_485_] -= NodeBase.anInt7275;
                 anIntArray5593[i_485_] -= Component85.anInt2880;
                 anIntArray5644[i_485_] -= Component113.anInt2398;
                 if (i_481_ != 0) {
@@ -2215,19 +2215,19 @@ final class DisplayModeManagerContainer282
                     anIntArray5644[i_485_] = (16383 + (-(anIntArray5543[i_485_] * i_492_) + i_493_ * anIntArray5644[i_485_]) >> 14);
                     anIntArray5543[i_485_] = i_494_;
                 }
-                anIntArray5543[i_485_] += za.anInt7275;
+                anIntArray5543[i_485_] += NodeBase.anInt7275;
                 anIntArray5593[i_485_] += Component85.anInt2880;
                 anIntArray5644[i_485_] += Component113.anInt2398;
             }
         } else if (i == 3) {
             for (int i_495_ = 0; i_495_ < anInt5557; i_495_++) {
-                anIntArray5543[i_495_] -= za.anInt7275;
+                anIntArray5543[i_495_] -= NodeBase.anInt7275;
                 anIntArray5593[i_495_] -= Component85.anInt2880;
                 anIntArray5644[i_495_] -= Component113.anInt2398;
                 anIntArray5543[i_495_] = i_479_ * anIntArray5543[i_495_] / 128;
                 anIntArray5593[i_495_] = i_480_ * anIntArray5593[i_495_] / 128;
                 anIntArray5644[i_495_] = anIntArray5644[i_495_] * i_481_ / 128;
-                anIntArray5543[i_495_] += za.anInt7275;
+                anIntArray5543[i_495_] += NodeBase.anInt7275;
                 anIntArray5593[i_495_] += Component85.anInt2880;
                 anIntArray5644[i_495_] += Component113.anInt2398;
             }
@@ -2359,7 +2359,7 @@ final class DisplayModeManagerContainer282
                 i_512_ <<= 4;
                 i_510_ <<= 4;
                 int i_516_ = 0;
-                za.anInt7275 = 0;
+                NodeBase.anInt7275 = 0;
                 Component85.anInt2880 = 0;
                 Component113.anInt2398 = 0;
                 for (int i_517_ = 0; i_515_ > i_517_; i_517_++) {
@@ -2369,7 +2369,7 @@ final class DisplayModeManagerContainer282
                         for (int i_520_ = 0; i_520_ < is_519_.length; i_520_++) {
                             int i_521_ = is_519_[i_520_];
                             if (aShortArray5608 == null || (i_513_ & aShortArray5608[i_521_]) != 0) {
-                                za.anInt7275 += anIntArray5543[i_521_];
+                                NodeBase.anInt7275 += anIntArray5543[i_521_];
                                 Component85.anInt2880 += anIntArray5593[i_521_];
                                 i_516_++;
                                 Component113.anInt2398 += anIntArray5644[i_521_];
@@ -2378,11 +2378,11 @@ final class DisplayModeManagerContainer282
                     }
                 }
                 if (i_516_ <= 0) {
-                    za.anInt7275 = i_510_;
+                    NodeBase.anInt7275 = i_510_;
                     Component113.anInt2398 = i_512_;
                     Component85.anInt2880 = i_511_;
                 } else {
-                    za.anInt7275 = i_510_ + za.anInt7275 / i_516_;
+                    NodeBase.anInt7275 = i_510_ + NodeBase.anInt7275 / i_516_;
                     Component85.anInt2880 = Component85.anInt2880 / i_516_ - -i_511_;
                     Component113.anInt2398 = i_512_ + Component113.anInt2398 / i_516_;
                     HashNodeSub16Sub1.aBoolean10450 = true;
@@ -2422,7 +2422,7 @@ final class DisplayModeManagerContainer282
                             for (int i_533_ = 0; is_532_.length > i_533_; i_533_++) {
                                 int i_534_ = is_532_[i_533_];
                                 if (aShortArray5608 == null || ((i_513_ & aShortArray5608[i_534_]) != 0)) {
-                                    anIntArray5543[i_534_] -= za.anInt7275;
+                                    anIntArray5543[i_534_] -= NodeBase.anInt7275;
                                     anIntArray5593[i_534_] -= Component85.anInt2880;
                                     anIntArray5644[i_534_] -= Component113.anInt2398;
                                     if (i_512_ != 0) {
@@ -2446,7 +2446,7 @@ final class DisplayModeManagerContainer282
                                         anIntArray5644[i_534_] = ((16383 + ((anIntArray5644[i_534_] * i_542_) + -(anIntArray5543[i_534_] * i_541_))) >> 14);
                                         anIntArray5543[i_534_] = i_543_;
                                     }
-                                    anIntArray5543[i_534_] += za.anInt7275;
+                                    anIntArray5543[i_534_] += NodeBase.anInt7275;
                                     anIntArray5593[i_534_] += Component85.anInt2880;
                                     anIntArray5644[i_534_] += Component113.anInt2398;
                                 }
@@ -2503,13 +2503,13 @@ final class DisplayModeManagerContainer282
                     int i_566_ = is_514_[13] << 4;
                     int i_567_ = is_514_[14] << 4;
                     if (HashNodeSub16Sub1.aBoolean10450) {
-                        int i_568_ = ((za.anInt7275 * is_514_[0] - -(is_514_[3] * Component85.anInt2880) - -(is_514_[6] * Component113.anInt2398) - -8192) >> 14);
-                        int i_569_ = ((is_514_[1] * za.anInt7275 - -(Component85.anInt2880 * is_514_[4]) - (-(is_514_[7] * Component113.anInt2398) - 8192)) >> 14);
+                        int i_568_ = ((NodeBase.anInt7275 * is_514_[0] - -(is_514_[3] * Component85.anInt2880) - -(is_514_[6] * Component113.anInt2398) - -8192) >> 14);
+                        int i_569_ = ((is_514_[1] * NodeBase.anInt7275 - -(Component85.anInt2880 * is_514_[4]) - (-(is_514_[7] * Component113.anInt2398) - 8192)) >> 14);
                         i_568_ += i_565_;
                         i_569_ += i_566_;
-                        int i_570_ = (8192 + (Component113.anInt2398 * is_514_[8] + is_514_[2] * za.anInt7275 + is_514_[5] * Component85.anInt2880) >> 14);
+                        int i_570_ = (8192 + (Component113.anInt2398 * is_514_[8] + is_514_[2] * NodeBase.anInt7275 + is_514_[5] * Component85.anInt2880) >> 14);
                         i_570_ += i_567_;
-                        za.anInt7275 = i_568_;
+                        NodeBase.anInt7275 = i_568_;
                         Component85.anInt2880 = i_569_;
                         Component113.anInt2398 = i_570_;
                         HashNodeSub16Sub1.aBoolean10450 = false;
@@ -2532,10 +2532,10 @@ final class DisplayModeManagerContainer282
                     is_571_[0] = (8192 + (i_575_ * i_579_ + i_576_ * i_574_) >> 14);
                     is_571_[7] = (8192 + i_574_ * i_578_ + i_577_ * i_575_ >> 14);
                     is_571_[2] = i_575_ * i_572_ - -8192 >> 14;
-                    int i_580_ = ((is_571_[1] * -Component85.anInt2880 + -za.anInt7275 * is_571_[0] - (-(-Component113.anInt2398 * is_571_[2]) + -8192)) >> 14);
-                    int i_581_ = ((-za.anInt7275 * is_571_[3] + is_571_[4] * -Component85.anInt2880 - -(is_571_[5] * -Component113.anInt2398) + 8192) >> 14);
-                    int i_582_ = ((-Component113.anInt2398 * is_571_[8] + (is_571_[6] * -za.anInt7275 - -(is_571_[7] * -Component85.anInt2880)) - -8192) >> 14);
-                    int i_583_ = i_580_ - -za.anInt7275;
+                    int i_580_ = ((is_571_[1] * -Component85.anInt2880 + -NodeBase.anInt7275 * is_571_[0] - (-(-Component113.anInt2398 * is_571_[2]) + -8192)) >> 14);
+                    int i_581_ = ((-NodeBase.anInt7275 * is_571_[3] + is_571_[4] * -Component85.anInt2880 - -(is_571_[5] * -Component113.anInt2398) + 8192) >> 14);
+                    int i_582_ = ((-Component113.anInt2398 * is_571_[8] + (is_571_[6] * -NodeBase.anInt7275 - -(is_571_[7] * -Component85.anInt2880)) - -8192) >> 14);
+                    int i_583_ = i_580_ - -NodeBase.anInt7275;
                     int i_584_ = i_581_ - -Component85.anInt2880;
                     int i_585_ = Component113.anInt2398 + i_582_;
                     int[] is_586_ = new int[9];
@@ -2598,13 +2598,13 @@ final class DisplayModeManagerContainer282
                             for (int i_651_ = 0; (i_651_ < is_650_.length); i_651_++) {
                                 int i_652_ = is_650_[i_651_];
                                 if (aShortArray5608 == null || ((i_513_ & aShortArray5608[i_652_]) != 0)) {
-                                    anIntArray5543[i_652_] -= za.anInt7275;
+                                    anIntArray5543[i_652_] -= NodeBase.anInt7275;
                                     anIntArray5593[i_652_] -= Component85.anInt2880;
                                     anIntArray5644[i_652_] -= Component113.anInt2398;
                                     anIntArray5543[i_652_] = (anIntArray5543[i_652_] * i_510_ >> 7);
                                     anIntArray5593[i_652_] = (anIntArray5593[i_652_] * i_511_ >> 7);
                                     anIntArray5644[i_652_] = (i_512_ * anIntArray5644[i_652_] >> 7);
-                                    anIntArray5543[i_652_] += za.anInt7275;
+                                    anIntArray5543[i_652_] += NodeBase.anInt7275;
                                     anIntArray5593[i_652_] += Component85.anInt2880;
                                     anIntArray5644[i_652_] += Component113.anInt2398;
                                 }
@@ -2619,24 +2619,24 @@ final class DisplayModeManagerContainer282
                     int i_614_ = is_514_[13] << 4;
                     int i_615_ = is_514_[14] << 4;
                     if (HashNodeSub16Sub1.aBoolean10450) {
-                        int i_616_ = (8192 + (za.anInt7275 * is_514_[0] - -(Component85.anInt2880 * is_514_[3]) - -(is_514_[6] * Component113.anInt2398)) >> 14);
-                        int i_617_ = (8192 + (is_514_[7] * Component113.anInt2398 + (Component85.anInt2880 * is_514_[4] + is_514_[1] * za.anInt7275)) >> 14);
+                        int i_616_ = (8192 + (NodeBase.anInt7275 * is_514_[0] - -(Component85.anInt2880 * is_514_[3]) - -(is_514_[6] * Component113.anInt2398)) >> 14);
+                        int i_617_ = (8192 + (is_514_[7] * Component113.anInt2398 + (Component85.anInt2880 * is_514_[4] + is_514_[1] * NodeBase.anInt7275)) >> 14);
                         i_617_ += i_614_;
-                        int i_618_ = ((is_514_[5] * Component85.anInt2880 + za.anInt7275 * is_514_[2] + is_514_[8] * Component113.anInt2398 - -8192) >> 14);
+                        int i_618_ = ((is_514_[5] * Component85.anInt2880 + NodeBase.anInt7275 * is_514_[2] + is_514_[8] * Component113.anInt2398 - -8192) >> 14);
                         i_616_ += i_613_;
                         Component85.anInt2880 = i_617_;
                         i_618_ += i_615_;
-                        za.anInt7275 = i_616_;
+                        NodeBase.anInt7275 = i_616_;
                         HashNodeSub16Sub1.aBoolean10450 = false;
                         Component113.anInt2398 = i_618_;
                     }
                     int i_619_ = i_510_ << 15 >> 7;
                     int i_620_ = i_511_ << 15 >> 7;
                     int i_621_ = i_512_ << 15 >> 7;
-                    int i_622_ = -za.anInt7275 * i_619_ + 8192 >> 14;
+                    int i_622_ = -NodeBase.anInt7275 * i_619_ + 8192 >> 14;
                     int i_623_ = i_620_ * -Component85.anInt2880 + 8192 >> 14;
                     int i_624_ = -Component113.anInt2398 * i_621_ - -8192 >> 14;
-                    int i_625_ = i_622_ + za.anInt7275;
+                    int i_625_ = i_622_ + NodeBase.anInt7275;
                     int i_626_ = i_623_ - -Component85.anInt2880;
                     int i_627_ = Component113.anInt2398 + i_624_;
                     int[] is_628_ = new int[9];
@@ -2841,7 +2841,7 @@ final class DisplayModeManagerContainer282
         return aShort5591;
     }
 
-    DisplayModeManagerContainer282(ha_Sub2 var_ha_Sub2) {
+    DisplayModeManagerContainer282(GlToolkitSub2 var_ha_Sub2) {
         aBoolean5527 = false;
         anInt5529 = 0;
         anInt5632 = 0;
@@ -2860,7 +2860,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    DisplayModeManagerContainer282(ha_Sub2 var_ha_Sub2, DisplayModeManagerContainer77 class124, int i, int i_695_, int i_696_, int i_697_) {
+    DisplayModeManagerContainer282(GlToolkitSub2 var_ha_Sub2, DisplayModeManagerContainer77 class124, int i, int i_695_, int i_696_, int i_697_) {
         aBoolean5527 = false;
         anInt5529 = 0;
         anInt5632 = 0;
@@ -2874,7 +2874,7 @@ final class DisplayModeManagerContainer282
                 aHa_Sub2_5598 = var_ha_Sub2;
                 if (DisplayModeManagerContainer370.method616(2, i, i_697_)) aClass123_5605 = new Component132(null, 5126, 3, 0);
                 if (CacheIndexReader.method1163(i_697_, (byte) 78, i)) aClass123_5620 = new Component132(null, 5126, 2, 0);
-                if (aa_Sub3.method166((byte) 69, i_697_, i)) aClass123_5563 = new Component132(null, 5126, 3, 0);
+                if (ShaderSub3.method166((byte) 69, i_697_, i)) aClass123_5563 = new Component132(null, 5126, 3, 0);
                 if (Component334.method1193(i_697_, i, true)) aClass123_5610 = new Component132(null, 5121, 4, 0);
                 if (ClientErrorReporter.method1238(i, i_697_, -31)) aClass270_5575 = new Component148();
                 d var_d = var_ha_Sub2.aD4579;

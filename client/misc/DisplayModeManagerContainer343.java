@@ -50,7 +50,7 @@ abstract class DisplayModeManagerContainer343
         if (i > -51) return false;
         anInt8733++;
         Component3 class148 = Component195.method1449(this.plane, (this.x >> Component149.anInt4459), (this.y >> Component149.anInt4459));
-        if (class148 == null || !class148.aClass318_Sub1_Sub3_2040.aBoolean8741) return aa_Sub2.method164(this.plane, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
+        if (class148 == null || !class148.aClass318_Sub1_Sub3_2040.aBoolean8741) return ShaderSub2.method164(this.plane, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
         return (Component15.method1110(this.y >> Component149.anInt4459, class148.aClass318_Sub1_Sub3_2040.method2394(true) + this.method2394(true), this.plane, (byte) -79, this.x >> Component149.anInt4459));
     }
 
@@ -84,7 +84,7 @@ abstract class DisplayModeManagerContainer343
         return false;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_3_, byte i_4_, int i_5_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_3_, byte i_4_, int i_5_) {
         try {
             if (i_4_ > -106) method2405(-8);
             anInt8736++;

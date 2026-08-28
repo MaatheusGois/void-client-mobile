@@ -15,7 +15,7 @@ final class GlRectangleTexture extends GlTexture {
     boolean aBoolean9941;
     static int anInt9942;
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_0_, int i_1_, int i_2_) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_0_, int i_1_, int i_2_) {
         super(var_ha_Sub2, i, i_0_, i_1_, i_2_);
         if (this.anInt4849 == 34037) {
             this.aFloat9938 = (float) i_2_;
@@ -29,7 +29,7 @@ final class GlRectangleTexture extends GlTexture {
         this.anInt9939 = i_2_;
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_3_, int i_4_, int i_5_, int i_6_) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_3_, int i_4_, int i_5_, int i_6_) {
         super(var_ha_Sub2, 3553, i, i_5_, i_6_);
         this.aFloat9937 = (float) i_3_ / (float) i_5_;
         this.anInt9939 = i_4_;
@@ -39,7 +39,7 @@ final class GlRectangleTexture extends GlTexture {
         this.method1965(false, false, 10243);
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_7_, int i_8_, int i_9_, int i_10_, boolean bool) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_7_, int i_8_, int i_9_, int i_10_, boolean bool) {
         super(var_ha_Sub2, i, i_7_, i_8_, i_9_, i_10_);
         this.anInt9940 = i_9_;
         if (this.anInt4849 == 34037) {
@@ -74,7 +74,7 @@ final class GlRectangleTexture extends GlTexture {
         } else Buffer.method3379(2, 11);
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool) {
         super(var_ha_Sub2, 3553, i, i_12_, i_15_, i_16_);
         this.anInt9940 = i_13_;
         this.aFloat9938 = (float) i_14_ / (float) i_16_;
@@ -84,7 +84,7 @@ final class GlRectangleTexture extends GlTexture {
         this.method1965(false, false, 10243);
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_17_, int i_18_, int i_19_, int i_20_, byte[] is, int i_21_) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_17_, int i_18_, int i_19_, int i_20_, byte[] is, int i_21_) {
         super(var_ha_Sub2, 3553, i, i_19_, i_20_);
         try {
             this.anInt9940 = i_17_;
@@ -99,7 +99,7 @@ final class GlRectangleTexture extends GlTexture {
         }
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_22_, int i_23_, boolean bool, int[] is, int i_24_, int i_25_) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_22_, int i_23_, boolean bool, int[] is, int i_24_, int i_25_) {
         super(var_ha_Sub2, i, 6408, i_22_, i_23_, bool, is, i_24_, i_25_, true);
         try {
             if (this.anInt4849 == 34037) {
@@ -117,7 +117,7 @@ final class GlRectangleTexture extends GlTexture {
         }
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_26_, int i_27_, int i_28_, int[] is) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_26_, int i_27_, int i_28_, int[] is) {
         super(var_ha_Sub2, 3553, 6408, i_27_, i_28_);
         try {
             this.anInt9940 = i;
@@ -132,7 +132,7 @@ final class GlRectangleTexture extends GlTexture {
         }
     }
 
-    GlRectangleTexture(ha_Sub2 var_ha_Sub2, int i, int i_29_, int i_30_, int i_31_, boolean bool, byte[] is, int i_32_) {
+    GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_29_, int i_30_, int i_31_, boolean bool, byte[] is, int i_32_) {
         super(var_ha_Sub2, i, i_29_, i_30_, i_31_, bool, is, i_32_, true);
         try {
             this.anInt9940 = i_30_;

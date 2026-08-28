@@ -117,13 +117,13 @@ final class Component366
         }
     }
 
-    final void method1667(byte i, ha var_ha) {
+    final void method1667(byte i, GraphicsToolkit var_ha) {
         anInt3061++;
         method1668(true, true, i + -244, 262144, var_ha);
         if (i != 116) this.anInt3063 = 99;
     }
 
-    final DisplayModeManagerContainer370 method1668(boolean bool, boolean bool_3_, int i, int i_4_, ha var_ha) {
+    final DisplayModeManagerContainer370 method1668(boolean bool, boolean bool_3_, int i, int i_4_, GraphicsToolkit var_ha) {
         anInt3082++;
         Component44 class51 = GradientPreset.aClass263_9195.method2005(0, this.anInt3063);
         if (class51.anIntArray945 != null) class51 = class51.method480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47);
@@ -153,9 +153,9 @@ final class Component366
             anInt3073 = -1;
         }
         if (i > -126) return null;
-        s var_s = aa_Sub1.aSArray5191[aByte3067];
+        s var_s = ShaderSub1.aSArray5191[aByte3067];
         s var_s_5_;
-        if (!aBoolean3069) var_s_5_ = aByte3067 >= 3 ? null : aa_Sub1.aSArray5191[1 + aByte3067];
+        if (!aBoolean3069) var_s_5_ = aByte3067 >= 3 ? null : ShaderSub1.aSArray5191[1 + aByte3067];
         else var_s_5_ = NodeSub1Sub1.aSArray8801[0];
         DisplayModeManagerContainer370 class64 = null;
         if (aClass17_3057 == null) {
@@ -192,7 +192,7 @@ final class Component366
             } else {
                 if (bool_3_) {
                     if (aBooleanArray3072 == null) aBooleanArray3072 = new boolean[4];
-                    aR3071 = class64.ba(aR3071);
+                    aR3071 = class64.BufferedToolkit(aR3071);
                     Component387.method1130(aR3071, aByte3067, (aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), aBooleanArray3072);
                     anInt3073 = anInt3084;
                     anInt3056 = class51.anInt941;
@@ -212,7 +212,7 @@ final class Component366
         return ((0xff & i_6_ >> 24) + "." + ((i_6_ & 0xffb428) >> 16) + "." + (i_6_ >> 8 & 0xff) + "." + (i_6_ & 0xff));
     }
 
-    final void method1670(int i, DisplayModeManagerContainer204 class101, int i_7_, ha var_ha, int i_8_, DisplayModeManagerContainer370 class64, boolean bool, byte i_9_, int i_10_) {
+    final void method1670(int i, DisplayModeManagerContainer204 class101, int i_7_, GraphicsToolkit var_ha, int i_8_, DisplayModeManagerContainer370 class64, boolean bool, byte i_9_, int i_10_) {
         do {
             try {
                 anInt3058++;
@@ -305,7 +305,7 @@ final class Component366
         if (i >= -19) method1669(-110, -13);
     }
 
-    Component366(ha var_ha, Component44 class51, int i, int i_15_, int i_16_, int i_17_, RenderableObject class318_sub1, boolean bool, int i_18_) {
+    Component366(GraphicsToolkit var_ha, Component44 class51, int i, int i_15_, int i_16_, int i_17_, RenderableObject class318_sub1, boolean bool, int i_18_) {
         anInt3055 = 0;
         aBoolean3064 = false;
         anInt3053 = -1;
@@ -328,7 +328,7 @@ final class Component366
         }
     }
 
-    final void method1674(int i, ha var_ha) {
+    final void method1674(int i, GraphicsToolkit var_ha) {
         if (i != -1) aBoolean3064 = false;
         if (aR3071 != null) {
             RequestProcessor.method1301(aR3071, aByte3067, (aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), aBooleanArray3072);

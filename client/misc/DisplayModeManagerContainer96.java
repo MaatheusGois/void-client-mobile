@@ -19,7 +19,7 @@ final class DisplayModeManagerContainer96
     static int anInt4704;
     static int anInt4705;
 
-    DisplayModeManagerContainer96(ha_Sub2 var_ha_Sub2, int i, byte[] is, int i_0_) {
+    DisplayModeManagerContainer96(GlToolkitSub2 var_ha_Sub2, int i, byte[] is, int i_0_) {
         super(var_ha_Sub2, is, i_0_);
         try {
             anInt4697 = i;
@@ -28,7 +28,7 @@ final class DisplayModeManagerContainer96
         }
     }
 
-    DisplayModeManagerContainer96(ha_Sub2 var_ha_Sub2, int i, Buffer buffer) {
+    DisplayModeManagerContainer96(GlToolkitSub2 var_ha_Sub2, int i, Buffer buffer) {
         super(var_ha_Sub2, buffer);
         try {
             anInt4697 = i;
@@ -43,7 +43,7 @@ final class DisplayModeManagerContainer96
         return this.aBuffer1792.getAddress();
     }
 
-    static final void method1077(ha var_ha, byte i) {
+    static final void method1077(GraphicsToolkit var_ha, byte i) {
         anInt4700++;
         if ((DisplayModeManagerContainer306.menuEntryCount >= 2 || r.aBoolean9722) && Component156.aClass46_3701 == null) {
             if (i >= -71) method1077(null, (byte) -41);

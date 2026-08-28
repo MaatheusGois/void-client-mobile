@@ -1,14 +1,14 @@
-/* aa_Sub3 - Decompiled by JODE
+/* ShaderSub3 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import java.lang.reflect.Method;
 
-final class aa_Sub3
+final class ShaderSub3
 /**
- * RENAMED from `aa_Sub3` (JODE-obfuscated).
- * Evidence: extends aa (aa)
- */ extends aa {
+ * RENAMED from `ShaderSub3` (JODE-obfuscated).
+ * Evidence: extends Shader (Shader)
+ */ extends Shader {
     static StringCache aClass351_5200 = new StringCache(13, 2);
     int[] anIntArray5201;
     int[] anIntArray5202;
@@ -55,7 +55,7 @@ final class aa_Sub3
         anInt5205++;
     }
 
-    aa_Sub3(int i, int i_3_, int[] is, int[] is_4_) {
+    ShaderSub3(int i, int i_3_, int[] is, int[] is_4_) {
         try {
             this.anIntArray5201 = is;
             this.anIntArray5202 = is_4_;

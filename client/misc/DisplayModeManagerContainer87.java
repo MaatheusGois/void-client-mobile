@@ -38,7 +38,7 @@ class DisplayModeManagerContainer87
     int anInt3130;
     static int anInt3131;
 
-    private final void method1675(int i, int i_0_, byte[][] is, int i_1_, byte[][] is_2_, int i_3_, Component11 class277, Component231 class22, boolean[] bools, int i_4_, byte[][] is_5_, int i_6_, int i_7_, ha var_ha) {
+    private final void method1675(int i, int i_0_, byte[][] is, int i_1_, byte[][] is_2_, int i_3_, Component11 class277, Component231 class22, boolean[] bools, int i_4_, byte[][] is_5_, int i_6_, int i_7_, GraphicsToolkit var_ha) {
         do {
             try {
                 anInt3112++;
@@ -269,7 +269,7 @@ class DisplayModeManagerContainer87
         } while (false);
     }
 
-    private final void method1676(s var_s, s var_s_64_, int i, s var_s_65_, int[][] is, ha var_ha, int i_66_) {
+    private final void method1676(s var_s, s var_s_64_, int i, s var_s_65_, int[][] is, GraphicsToolkit var_ha, int i_66_) {
         try {
             anInt3102++;
             byte[][] is_67_ = aByteArrayArrayArray3126[i_66_];
@@ -792,7 +792,7 @@ class DisplayModeManagerContainer87
         }
     }
 
-    final void method1680(s var_s, byte i, s var_s_179_, ha var_ha) {
+    final void method1680(s var_s, byte i, s var_s_179_, GraphicsToolkit var_ha) {
         try {
             anInt3131++;
             int[][] is = (new int[this.anInt3117]
@@ -867,8 +867,8 @@ class DisplayModeManagerContainer87
                             }
                         }
                     }
-                    if (!IOException_Sub1.aBoolean86) method1683(var_ha, i_180_ != 0 ? null : var_s, i_180_, (byte) 127, is, aa_Sub1.aSArray5191[i_180_], i_180_ != 0 ? null : var_s_179_);
-                    else method1676(i_180_ != 0 ? null : var_s, aa_Sub1.aSArray5191[i_180_], -26833, i_180_ == 0 ? var_s_179_ : null, is, var_ha, i_180_);
+                    if (!IOException_Sub1.aBoolean86) method1683(var_ha, i_180_ != 0 ? null : var_s, i_180_, (byte) 127, is, ShaderSub1.aSArray5191[i_180_], i_180_ != 0 ? null : var_s_179_);
+                    else method1676(i_180_ != 0 ? null : var_s, ShaderSub1.aSArray5191[i_180_], -26833, i_180_ == 0 ? var_s_179_ : null, is, var_ha, i_180_);
                     aByteArrayArrayArray3113[i_180_] = null;
                     aByteArrayArrayArray3123[i_180_] = null;
                     aByteArrayArrayArray3126[i_180_] = null;
@@ -879,7 +879,7 @@ class DisplayModeManagerContainer87
                     if (DisplayModeManagerContainer51.aBoolean2492) Component382.method1320();
                 }
                 for (int i_196_ = 0; (this.anInt3130 > i_196_); i_196_++)
-                    aa_Sub1.aSArray5191[i_196_].YA();
+                    ShaderSub1.aSArray5191[i_196_].YA();
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("sr.L(" + (var_s != null ? "{...}" : "null") + ',' + i + ',' + (var_s_179_ != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ')'));
@@ -968,7 +968,7 @@ class DisplayModeManagerContainer87
         if (i_215_ != 1115212770) this.aByteArrayArrayArray3104 = null;
     }
 
-    private final void method1683(ha var_ha, s var_s, int i, byte i_223_, int[][] is, s var_s_224_, s var_s_225_) {
+    private final void method1683(GraphicsToolkit var_ha, s var_s, int i, byte i_223_, int[][] is, s var_s_224_, s var_s_225_) {
         do {
             try {
                 anInt3111++;
@@ -1204,7 +1204,7 @@ class DisplayModeManagerContainer87
         }
     }
 
-    final void method1685(ha var_ha, int[][][] is, int i, TeleportHandler[] class361s) {
+    final void method1685(GraphicsToolkit var_ha, int[][][] is, int i, TeleportHandler[] class361s) {
         try {
             anInt3118++;
             if (i != 21407) method1680(null, (byte) -116, null, null);

@@ -17,7 +17,7 @@ final class NodeSub38
     private final NodeSub1 aClass348_Sub1_7004;
     private float[][] aFloatArrayArray7005;
     static int anInt7006 = 0;
-    private final ha_Sub3 aHa_Sub3_7007;
+    private final GlToolkitSub3 aHa_Sub3_7007;
     static int anInt7008 = 0;
     static int anInt7009;
     private final int anInt7010;
@@ -29,7 +29,7 @@ final class NodeSub38
     private float[][] aFloatArrayArray7016;
     private final int anInt7017;
     private int anInt7018;
-    private final s_Sub3 aS_Sub3_7019;
+    private final BufferCacheSub3 aS_Sub3_7019;
     private final Interface5_Impl1 anInterface5_Impl1_7020;
     private Stream aStream7021;
     private Stream aStream7022;
@@ -172,7 +172,7 @@ final class NodeSub38
         if (i != 1) method3035(-34);
     }
 
-    NodeSub38(ha_Sub3 var_ha_Sub3, s_Sub3 var_s_Sub3, NodeSub1 class348_sub1, int[] is) {
+    NodeSub38(GlToolkitSub3 var_ha_Sub3, BufferCacheSub3 var_s_Sub3, NodeSub1 class348_sub1, int[] is) {
         try {
             aHa_Sub3_7007 = var_ha_Sub3;
             aS_Sub3_7019 = var_s_Sub3;

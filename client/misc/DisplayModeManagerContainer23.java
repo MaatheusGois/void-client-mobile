@@ -48,7 +48,7 @@ final class DisplayModeManagerContainer23
                         int i_7_ = i_6_ >> 14;
                         int i_8_ = 0x3f & i_6_ >> 7;
                         int i_9_ = i_6_ & 0x3f;
-                        int i_10_ = (i_8_ + (-za_Sub2.regionTileX + (OggStreamReader.anIntArray9042[i_1_] >> 8) * 64));
+                        int i_10_ = (i_8_ + (-NodeBaseSub2.regionTileX + (OggStreamReader.anIntArray9042[i_1_] >> 8) * 64));
                         int i_11_ = (-Component330.regionTileY + (64 * (0xff & (OggStreamReader.anIntArray9042[i_1_])) - -i_9_));
                         DisplayModeManagerContainer206 class79 = (Component291.aClass278_2529.method2079(class348_sub49.readUnsignedShort(842397944), -1));
                         NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.method3480(i_5_, -6008));

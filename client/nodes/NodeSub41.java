@@ -75,20 +75,20 @@ final class NodeSub41
 
     static final void method3157(int i, byte i_15_, int i_16_, int i_17_, boolean bool) {
         anInt7049++;
-        if (bool || i_16_ != ha.anInt4581 || DisplayModeManagerContainer363.anInt4095 != i || (Component117.anInt4372 != Component385.anInt2204 && Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 1)) {
-            ha.anInt4581 = i_16_;
+        if (bool || i_16_ != GraphicsToolkit.anInt4581 || DisplayModeManagerContainer363.anInt4095 != i || (Component117.anInt4372 != Component385.anInt2204 && Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 1)) {
+            GraphicsToolkit.anInt4581 = i_16_;
             DisplayModeManagerContainer363.anInt4095 = i;
             Component385.anInt2204 = Component117.anInt4372;
             if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) Component385.anInt2204 = 0;
             Buffer.method3379(2, i_17_);
             Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.method2063(ObjectDeserializer.anInt6967, 544), 2, NodeSub8.aHa6654);
-            int i_18_ = za_Sub2.regionTileX;
+            int i_18_ = NodeBaseSub2.regionTileX;
             int i_19_ = Component330.regionTileY;
-            za_Sub2.regionTileX = (-(AbstractShaderSub4.anInt7319 >> 4) + ha.anInt4581) * 8;
+            NodeBaseSub2.regionTileX = (-(AbstractShaderSub4.anInt7319 >> 4) + GraphicsToolkit.anInt4581) * 8;
             Component330.regionTileY = 8 * (DisplayModeManagerContainer363.anInt4095 - (ParametricDefinition.anInt9109 >> 4));
-            Request.aClass348_Sub42_Sub14_6885 = DisplayModeManagerContainer229.method766(ha.anInt4581 * 8, DisplayModeManagerContainer363.anInt4095 * 8);
-            r_Sub2.aClass252_10488 = null;
-            int i_20_ = za_Sub2.regionTileX - i_18_;
+            Request.aClass348_Sub42_Sub14_6885 = DisplayModeManagerContainer229.method766(GraphicsToolkit.anInt4581 * 8, DisplayModeManagerContainer363.anInt4095 * 8);
+            CacheNodeSub2.aClass252_10488 = null;
+            int i_20_ = NodeBaseSub2.regionTileX - i_18_;
             int i_21_ = -i_19_ + Component330.regionTileY;
             if (i_17_ == 11) {
                 for (int i_22_ = 0; NodeSub32.anInt6930 > i_22_; i_22_++) {
@@ -167,7 +167,7 @@ final class NodeSub41
                 if (Component37.anInt3931 != 4) {
                     for (NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3484(0)); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
                         int i_33_ = (int) (0x3fffL & class348_sub37.aLong4291);
-                        int i_34_ = -za_Sub2.regionTileX + i_33_;
+                        int i_34_ = -NodeBaseSub2.regionTileX + i_33_;
                         int i_35_ = (int) (0x3fffL & (class348_sub37.aLong4291 >> 14));
                         int i_36_ = i_35_ + -Component330.regionTileY;
                         if (i_34_ < 0 || i_36_ < 0 || (i_34_ >= AbstractShaderSub4.anInt7319) || i_36_ >= ParametricDefinition.anInt9109) class348_sub37.method2715((byte) 37);
@@ -197,7 +197,7 @@ final class NodeSub41
                 }
                 DefinitionSub39.method3153(0);
                 Component308.method464(-1);
-                r_Sub2.aClass262_10492.method1996(107);
+                CacheNodeSub2.aClass262_10492.method1996(107);
                 DefinitionSub17.aClass262_9240.method1996(103);
                 Component241.aClass243_2957.method1876((byte) -45);
                 AudioMixer.method1911((byte) 99);
@@ -233,9 +233,9 @@ final class NodeSub41
         return is_41_;
     }
 
-    static final void method3159(int i, int i_42_, boolean bool, int i_43_, int i_44_, int i_45_, ha var_ha, int i_46_, int i_47_) {
+    static final void method3159(int i, int i_42_, boolean bool, int i_43_, int i_44_, int i_45_, GraphicsToolkit var_ha, int i_46_, int i_47_) {
         anInt7051++;
-        Interface10 interface10 = (Interface10) r_Sub2.method3297(i_43_, i_45_, i_44_);
+        Interface10 interface10 = (Interface10) CacheNodeSub2.method3297(i_43_, i_45_, i_44_);
         if (interface10 != null) {
             Component44 class51 = GradientPreset.aClass263_9195.method2005(0, interface10.method42(-124));
             int i_48_ = 0x3 & interface10.method41(-32228);

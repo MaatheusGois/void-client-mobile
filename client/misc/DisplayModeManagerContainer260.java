@@ -69,7 +69,7 @@ final class DisplayModeManagerContainer260
         if (i > -70) anInt3695 = 92;
     }
 
-    static final void method2181(long l, int i, int i_13_, int i_14_, int i_15_, DisplayModeManagerContainer57 class46, int i_16_, int i_17_, aa var_aa) {
+    static final void method2181(long l, int i, int i_13_, int i_14_, int i_15_, DisplayModeManagerContainer57 class46, int i_16_, int i_17_, Shader var_aa) {
         try {
             anInt3686++;
             int i_18_ = i_14_ * i_14_ + i_16_ * i_16_;
@@ -80,7 +80,7 @@ final class DisplayModeManagerContainer260
                     i_19_ -= 10;
                     int i_20_;
                     if (DefinitionSub21.anInt9282 == 4) i_20_ = (int) Component112.aFloat3938 & 0x3fff;
-                    else i_20_ = 0x3fff & ((int) Component112.aFloat3938 + r_Sub2.anInt10483);
+                    else i_20_ = 0x3fff & ((int) Component112.aFloat3938 + CacheNodeSub2.anInt10483);
                     int i_21_ = DisplayModeManagerContainer88.anIntArray1207[i_20_];
                     int i_22_ = DisplayModeManagerContainer88.anIntArray1204[i_20_];
                     if (DefinitionSub21.anInt9282 != 4) {

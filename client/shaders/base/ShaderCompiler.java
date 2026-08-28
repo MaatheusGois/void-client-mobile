@@ -3,7 +3,7 @@
  */
 /**
  * RENAMED from `Class328` (JODE-obfuscated).
- * aa compiler. Reports 'aa compile failed:' on GLSL/ARB shader compilation errors and coordinates with GlExtensionManager (GL extension availability).
+ * Shader compiler. Reports 'aa compile failed:' on GLSL/ARB shader compilation errors and coordinates with GlExtensionManager (GL extension availability).
  */
 
 import jaggl.OpenGL;

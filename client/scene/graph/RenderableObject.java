@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class318_Sub1` (JODE-obfuscated).
- * Primary renderable object. Declares abstract render (method2380(ha, ...)) and bounds/visibility checks (method2376-2379, method2381 -> ComponentDownloader) using the ha (ha).
+ * Primary renderable object. Declares abstract render (method2380(GraphicsToolkit, ...)) and bounds/visibility checks (method2376-2379, method2381 -> ComponentDownloader) using the GraphicsToolkit (GraphicsToolkit).
  */
 
 abstract class RenderableObject extends Renderable {
@@ -34,13 +34,13 @@ abstract class RenderableObject extends Renderable {
 
     abstract int method2379(int i);
 
-    abstract void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1_0_, int i_1_, byte i_2_, int i_3_);
+    abstract void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1_0_, int i_1_, byte i_2_, int i_3_);
 
-    abstract ComponentDownloader method2381(ha var_ha, int i);
+    abstract ComponentDownloader method2381(GraphicsToolkit var_ha, int i);
 
     abstract boolean method2382(byte i);
 
-    static final void method2383(ha var_ha, int i, DisplayModeManagerContainer57 class46) {
+    static final void method2383(GraphicsToolkit var_ha, int i, DisplayModeManagerContainer57 class46) {
         do {
             try {
                 if (i != -2) method2383(null, -63, null);
@@ -58,7 +58,7 @@ abstract class RenderableObject extends Renderable {
 
     abstract int method2384(NodeSub1[] class348_sub1s, int i);
 
-    static final void method2385(DisplayModeManagerContainer57 class46, int i, aa var_aa, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, ha var_ha) {
+    static final void method2385(DisplayModeManagerContainer57 class46, int i, Shader var_aa, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, GraphicsToolkit var_ha) {
         do {
             try {
                 anInt6390++;
@@ -70,7 +70,7 @@ abstract class RenderableObject extends Renderable {
                                 [class42.anIntArray591.length]);
                         for (int i_9_ = 0; is.length / 2 > i_9_; i_9_++) {
                             int i_10_;
-                            if (DefinitionSub21.anInt9282 != 4) i_10_ = 0x3fff & (r_Sub2.anInt10483 + (int) Component112.aFloat3938);
+                            if (DefinitionSub21.anInt9282 != 4) i_10_ = 0x3fff & (CacheNodeSub2.anInt10483 + (int) Component112.aFloat3938);
                             else i_10_ = (int) Component112.aFloat3938 & 0x3fff;
                             int i_11_ = DisplayModeManagerContainer88.anIntArray1207[i_10_];
                             int i_12_ = DisplayModeManagerContainer88.anIntArray1204[i_10_];
@@ -154,9 +154,9 @@ abstract class RenderableObject extends Renderable {
         } while (false);
     }
 
-    abstract RenderableSub4 method2386(int i, ha var_ha);
+    abstract RenderableSub4 method2386(int i, GraphicsToolkit var_ha);
 
-    abstract void method2387(ha var_ha, int i);
+    abstract void method2387(GraphicsToolkit var_ha, int i);
 
     abstract boolean method2388(int i);
 
@@ -181,7 +181,7 @@ abstract class RenderableObject extends Renderable {
         return i_33_;
     }
 
-    abstract boolean method2391(ha var_ha, int i, int i_36_, int i_37_);
+    abstract boolean method2391(GraphicsToolkit var_ha, int i, int i_36_, int i_37_);
 
     abstract void method2392(boolean bool);
 

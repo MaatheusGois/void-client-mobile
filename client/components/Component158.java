@@ -12,7 +12,7 @@ final class Component158
     static DisplayModeManagerContainer57 aClass46_323 = null;
     static int anInt324;
     static int anInt325 = -50;
-    static ha aHa326;
+    static GraphicsToolkit aHa326;
     static int anInt327;
 
     public final String toString() {

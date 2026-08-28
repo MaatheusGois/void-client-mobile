@@ -26,7 +26,7 @@ final class Component101
     static int anInt2106;
     static int anInt2107;
 
-    final DisplayModeManagerContainer370 method1226(Interface17 interface17, DisplayModeManagerContainer167 class17, Component280[] class182s, boolean bool, DisplayModeManagerContainer320 class255, int i, DisplayModeManagerContainer167 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Component324 class150, int i_5_, ha var_ha, DisplayModeManagerContainer347 class278, Component344 class87, int i_6_, int i_7_, int i_8_, DisplayModeManagerContainer1 class261) {
+    final DisplayModeManagerContainer370 method1226(Interface17 interface17, DisplayModeManagerContainer167 class17, Component280[] class182s, boolean bool, DisplayModeManagerContainer320 class255, int i, DisplayModeManagerContainer167 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Component324 class150, int i_5_, GraphicsToolkit var_ha, DisplayModeManagerContainer347 class278, Component344 class87, int i_6_, int i_7_, int i_8_, DisplayModeManagerContainer1 class261) {
         try {
             anInt2097++;
             if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method800(i, class182s, class87, !bool_2_, class17, i_8_, class261, i_7_, class17_0_, interface17, var_ha, i_3_, is, i_1_, i_6_, i_4_, i_5_));
@@ -328,7 +328,7 @@ final class Component101
         method1234(-78);
     }
 
-    final DisplayModeManagerContainer370 method1230(DisplayModeManagerContainer320 class255, int i, Component344 class87, Component324 class150, Interface17 interface17, DisplayModeManagerContainer347 class278, int i_66_, int i_67_, int i_68_, DisplayModeManagerContainer167 class17, int i_69_, ha var_ha) {
+    final DisplayModeManagerContainer370 method1230(DisplayModeManagerContainer320 class255, int i, Component344 class87, Component324 class150, Interface17 interface17, DisplayModeManagerContainer347 class278, int i_66_, int i_67_, int i_68_, DisplayModeManagerContainer167 class17, int i_69_, GraphicsToolkit var_ha) {
         try {
             anInt2107++;
             if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method803(interface17, var_ha, i_69_, i_67_, class17, class87, i_66_, 121, i_68_));
@@ -429,7 +429,7 @@ final class Component101
         }
     }
 
-    final DisplayModeManagerContainer370 method1232(int i, int i_91_, int i_92_, int i_93_, Component344 class87, Component324 class150, int i_94_, int i_95_, int i_96_, ha var_ha, int i_97_, DisplayModeManagerContainer167 class17) {
+    final DisplayModeManagerContainer370 method1232(int i, int i_91_, int i_92_, int i_93_, Component344 class87, Component324 class150, int i_94_, int i_95_, int i_96_, GraphicsToolkit var_ha, int i_97_, DisplayModeManagerContainer167 class17) {
         try {
             anInt2106++;
             int i_98_ = i_91_;

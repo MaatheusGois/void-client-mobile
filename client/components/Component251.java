@@ -21,7 +21,7 @@ final class Component251
     static int anInt5826;
     /*synthetic*/ static Class aClass5827;
 
-    final void method1689(int i, int i_0_, int i_1_, ha var_ha, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, TeleportHandler class361) {
+    final void method1689(int i, int i_0_, int i_1_, GraphicsToolkit var_ha, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, TeleportHandler class361) {
         try {
             anInt5823++;
             if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(i_3_ ^ ~0x7e6f) != 0 || Component255.method536(i_5_, false, i, Component385.anInt2204, i_2_)) {
@@ -56,7 +56,7 @@ final class Component251
                         i_12_ = (1 + i_8_ >> 1) + i_5_;
                         i_13_ = (i_8_ >> 1) + i_5_;
                     }
-                    s var_s = aa_Sub1.aSArray5191[i_2_];
+                    s var_s = ShaderSub1.aSArray5191[i_2_];
                     int i_14_ = ((var_s.method3982((byte) -86, i_13_, i_10_) + var_s.method3982((byte) -86, i_13_, i_11_) - (-var_s.method3982((byte) -86, i_12_, i_10_) - var_s.method3982((byte) -86, i_12_, i_11_))) >> 2);
                     int i_15_ = (i << 9) - -(i_9_ << 8);
                     int i_16_ = (i_8_ << 8) + (i_5_ << 9);
@@ -238,7 +238,7 @@ final class Component251
                             Component352.method388(i_0_, i, i_5_, class318_sub1_sub5, null);
                         } else if (i_4_ == 5) {
                             int i_27_ = 65;
-                            Interface10 interface10 = ((Interface10) r_Sub2.method3297(i_0_, i, i_5_));
+                            Interface10 interface10 = ((Interface10) CacheNodeSub2.method3297(i_0_, i, i_5_));
                             if (interface10 != null) i_27_ = 1 + (GradientPreset.aClass263_9195.method2005(0, interface10.method42(-93)).anInt883);
                             Component203 class318_sub1_sub5;
                             if (bool_17_) {
@@ -249,7 +249,7 @@ final class Component251
                             Component352.method388(i_0_, i, i_5_, class318_sub1_sub5, null);
                         } else if (i_4_ == 6) {
                             int i_28_ = 33;
-                            Interface10 interface10 = ((Interface10) r_Sub2.method3297(i_0_, i, i_5_));
+                            Interface10 interface10 = ((Interface10) CacheNodeSub2.method3297(i_0_, i, i_5_));
                             if (interface10 != null) i_28_ = 1 + (GradientPreset.aClass263_9195.method2005(0, interface10.method42(-117)).anInt883) / 2;
                             Component203 class318_sub1_sub5;
                             if (bool_17_) {
@@ -270,7 +270,7 @@ final class Component251
                         } else if (i_4_ == 8) {
                             int i_30_ = 2 + i_7_ & 0x3;
                             int i_31_ = 33;
-                            Interface10 interface10 = ((Interface10) r_Sub2.method3297(i_0_, i, i_5_));
+                            Interface10 interface10 = ((Interface10) CacheNodeSub2.method3297(i_0_, i, i_5_));
                             if (interface10 != null) i_31_ = (GradientPreset.aClass263_9195.method2005(i_3_ + -50, interface10.method42(-122)).anInt883) / 2 + 1;
                             Component203 class318_sub1_sub5;
                             Component203 class318_sub1_sub5_32_;
@@ -300,7 +300,7 @@ final class Component251
     private final Interface10 method1690(int i, int i_35_, int i_36_, int i_37_, int i_38_) {
         anInt5822++;
         Interface10 interface10 = null;
-        if (i == 0) interface10 = (Interface10) r_Sub2.method3297(i_37_, i_36_, i_35_);
+        if (i == 0) interface10 = (Interface10) CacheNodeSub2.method3297(i_37_, i_36_, i_35_);
         if (i == 1) interface10 = (Interface10) DefinitionSub32.method3135(i_37_, i_36_, i_35_);
         if (i == 2) interface10 = ((Interface10) DisplayModeManagerContainer249.method1353(i_37_, i_36_, i_35_, (aClass5827 != null ? aClass5827 : (aClass5827 = Interface10.class))));
         if (i_38_ != 30987) method1698(-120);
@@ -308,7 +308,7 @@ final class Component251
         return interface10;
     }
 
-    final void method1691(int i, ha var_ha, Buffer class348_sub49, int[] is, int i_39_, byte i_40_) {
+    final void method1691(int i, GraphicsToolkit var_ha, Buffer class348_sub49, int[] is, int i_39_, byte i_40_) {
         do {
             try {
                 anInt5818++;
@@ -450,7 +450,7 @@ final class Component251
         } while (false);
     }
 
-    final void method1692(int i, int i_73_, byte[] is, int i_74_, int i_75_, ha var_ha, int i_76_, int i_77_, int i_78_, TeleportHandler[] class361s, int i_79_) {
+    final void method1692(int i, int i_73_, byte[] is, int i_74_, int i_75_, GraphicsToolkit var_ha, int i_76_, int i_77_, int i_78_, TeleportHandler[] class361s, int i_79_) {
         try {
             anInt5826++;
             if (i_78_ != 7) method1693('\uffb8', -54);
@@ -500,7 +500,7 @@ final class Component251
         return c == 8364 || c == 338 || c == 8212 || c == 339 || c == 376;
     }
 
-    final void method1694(TeleportHandler class361, int i, int i_93_, ha var_ha, int i_94_, int i_95_, byte i_96_) {
+    final void method1694(TeleportHandler class361, int i, int i_93_, GraphicsToolkit var_ha, int i_94_, int i_95_, byte i_96_) {
         while_77_:
         do {
             do {
@@ -553,7 +553,7 @@ final class Component251
         } while (false);
     }
 
-    final void method1695(byte[] is, TeleportHandler[] class361s, int i, ha var_ha, int i_99_, int i_100_) {
+    final void method1695(byte[] is, TeleportHandler[] class361s, int i, GraphicsToolkit var_ha, int i_99_, int i_100_) {
         try {
             anInt5820++;
             if (i_100_ == 1359) {
@@ -597,7 +597,7 @@ final class Component251
         super(i, i_114_, i_115_, bool, Component267.aClass268_2979, Component149.aClass183_4460);
     }
 
-    final void method1696(Buffer class348_sub49, boolean bool, int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, ha var_ha, int[] is, int i_121_) {
+    final void method1696(Buffer class348_sub49, boolean bool, int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, GraphicsToolkit var_ha, int[] is, int i_121_) {
         do {
             try {
                 anInt5825++;
@@ -713,7 +713,7 @@ final class Component251
         } while (false);
     }
 
-    final void method1697(boolean bool, ha var_ha, int i) {
+    final void method1697(boolean bool, GraphicsToolkit var_ha, int i) {
         try {
             DisplayModeManagerContainer173.method2686();
             anInt5816++;

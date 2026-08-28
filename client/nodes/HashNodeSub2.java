@@ -12,7 +12,7 @@ final class HashNodeSub2
     static int anInt8561;
     private int anInt8562 = -1;
     private int anInt8563 = -1;
-    private final ha_Sub2 aHa_Sub2_8564;
+    private final GlToolkitSub2 aHa_Sub2_8564;
     int anInt8565;
     static int anInt8566;
     private final int anInt8567;
@@ -29,7 +29,7 @@ final class HashNodeSub2
         super.finalize();
     }
 
-    static final void method3171(ha var_ha, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
+    static final void method3171(GraphicsToolkit var_ha, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
         JaclibLoader.aHa171 = var_ha;
         Npc.anInt10503 = i;
         DefinitionSub5.aBoolean9121 = (Npc.anInt10503 > 1 && JaclibLoader.aHa171.method3708());
@@ -145,7 +145,7 @@ final class HashNodeSub2
         anInt8563 = -1;
     }
 
-    HashNodeSub2(ha_Sub2 var_ha_Sub2, int i, int i_11_, int i_12_) {
+    HashNodeSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_11_, int i_12_) {
         try {
             this.anInt8572 = i_11_;
             aHa_Sub2_8564 = var_ha_Sub2;
@@ -161,7 +161,7 @@ final class HashNodeSub2
         }
     }
 
-    HashNodeSub2(ha_Sub2 var_ha_Sub2, int i, int i_13_, int i_14_, int i_15_) {
+    HashNodeSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_13_, int i_14_, int i_15_) {
         try {
             this.anInt8572 = i_13_;
             anInt8567 = i;

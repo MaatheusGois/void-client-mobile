@@ -23,7 +23,7 @@ final class AbstractGlTextureSub4
         if (i == -3022) anInt8554++;
     }
 
-    AbstractGlTextureSub4(ha_Sub2 var_ha_Sub2, int i, int i_0_, byte[] is, int i_1_) {
+    AbstractGlTextureSub4(GlToolkitSub2 var_ha_Sub2, int i, int i_0_, byte[] is, int i_1_) {
         super(var_ha_Sub2, 3552, i, i_0_, false);
         try {
             anInt8556 = i_0_;

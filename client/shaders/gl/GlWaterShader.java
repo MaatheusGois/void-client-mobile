@@ -318,7 +318,7 @@ final class GlWaterShader extends NodeSub5 {
         return false;
     }
 
-    GlWaterShader(ha_Sub2 var_ha_Sub2) {
+    GlWaterShader(GlToolkitSub2 var_ha_Sub2) {
         super(var_ha_Sub2);
     }
 }

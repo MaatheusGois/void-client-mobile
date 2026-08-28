@@ -407,7 +407,7 @@ abstract class DisplayModeManagerContainer58
         } while (false);
     }
 
-    static final void method2431(int i, int i_56_, HashNodeSub13 class348_sub42_sub13, int i_57_, int i_58_, int i_59_, int i_60_, ha var_ha, int i_61_, int i_62_, int i_63_, int i_64_) {
+    static final void method2431(int i, int i_56_, HashNodeSub13 class348_sub42_sub13, int i_57_, int i_58_, int i_59_, int i_60_, GraphicsToolkit var_ha, int i_61_, int i_62_, int i_63_, int i_64_) {
         try {
             if (i_62_ < 111) aShortArrayArray10246 = null;
             if (i_63_ < i_57_ && i_57_ < i_58_ + i_63_ && i_60_ > i_56_ - 13 && i_60_ < 3 + i_56_) i = i_59_;
@@ -419,7 +419,7 @@ abstract class DisplayModeManagerContainer58
         }
     }
 
-    final void method2432(ha var_ha, int i, DisplayModeManagerContainer204 class101, boolean bool, DisplayModeManagerContainer370[] class64s) {
+    final void method2432(GraphicsToolkit var_ha, int i, DisplayModeManagerContainer204 class101, boolean bool, DisplayModeManagerContainer370[] class64s) {
         do {
             try {
                 if (i == -15074) {
@@ -558,7 +558,7 @@ abstract class DisplayModeManagerContainer58
         ImageProducerSprite.aClass357ArrayArrayArray9082 = null;
         Component9.aSArray4142 = null;
         Component335.aClass357ArrayArrayArray2029 = null;
-        aa_Sub1.aSArray5191 = null;
+        ShaderSub1.aSArray5191 = null;
         DisplayModeManagerContainer153.aBooleanArrayArray1572 = null;
         NodeSub8.aBooleanArrayArray6656 = null;
         Component382.anIntArray2272 = null;

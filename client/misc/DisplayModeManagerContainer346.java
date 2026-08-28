@@ -32,13 +32,13 @@ final class DisplayModeManagerContainer346
         return i_1_ == 0 || i_1_ == 2;
     }
 
-    static final void method1211(int i, Component24 class105, int i_2_, DisplayModeManagerContainer57 class46, aa var_aa, int i_3_, int i_4_, int i_5_) {
+    static final void method1211(int i, Component24 class105, int i_2_, DisplayModeManagerContainer57 class46, Shader var_aa, int i_3_, int i_4_, int i_5_) {
         try {
             anInt2064++;
             if (class105 != null) {
                 int i_6_;
                 if (DefinitionSub21.anInt9282 != 4)
-                    i_6_ = (0x3fff & (int) Component112.aFloat3938 - -r_Sub2.anInt10483);
+                    i_6_ = (0x3fff & (int) Component112.aFloat3938 - -CacheNodeSub2.anInt10483);
                 else i_6_ = 0x3fff & (int) Component112.aFloat3938;
                 int i_7_ = 10 + Math.max(class46.anInt709 / 2, class46.anInt789 / i_4_);
                 int i_8_ = i_5_ * i_5_ - -(i_3_ * i_3_);

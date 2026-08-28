@@ -9,12 +9,12 @@ final class SpriteSub3Sub3
  */ extends SpriteSub3 {
     int[] anIntArray9936;
 
-    SpriteSub3Sub3(ha_Sub1 var_ha_Sub1, int[] is, int i, int i_0_) {
+    SpriteSub3Sub3(GlToolkitSub1 var_ha_Sub1, int[] is, int i, int i_0_) {
         super(var_ha_Sub1, i, i_0_);
         this.anIntArray9936 = is;
     }
 
-    SpriteSub3Sub3(ha_Sub1 var_ha_Sub1, int[] is, int i, int i_1_, int i_2_, int i_3_, boolean bool) {
+    SpriteSub3Sub3(GlToolkitSub1 var_ha_Sub1, int[] is, int i, int i_1_, int i_2_, int i_3_, boolean bool) {
         super(var_ha_Sub1, i_2_, i_3_);
         if (bool) this.anIntArray9936 = new int[i_2_ * i_3_];
         else this.anIntArray9936 = is;
@@ -760,7 +760,7 @@ final class SpriteSub3Sub3
         }
     }
 
-    final void method963(int i, int i_265_, aa var_aa, int i_266_, int i_267_) {
+    final void method963(int i, int i_265_, Shader var_aa, int i_266_, int i_267_) {
         if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
         i += this.anInt8461;
         i_265_ += this.anInt8464;
@@ -795,7 +795,7 @@ final class SpriteSub3Sub3
             i_272_ += i_277_;
         }
         if (i_270_ > 0 && i_271_ > 0) {
-            aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+            ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             int[] is = var_aa_Sub3.anIntArray5201;
             int[] is_278_ = var_aa_Sub3.anIntArray5202;
             int[] is_279_ = (this.aHa_Sub1_8460.anIntArray7483);
@@ -1198,7 +1198,7 @@ final class SpriteSub3Sub3
         }
     }
 
-    SpriteSub3Sub3(ha_Sub1 var_ha_Sub1, int i, int i_443_) {
+    SpriteSub3Sub3(GlToolkitSub1 var_ha_Sub1, int i, int i_443_) {
         super(var_ha_Sub1, i, i_443_);
         this.anIntArray9936 = new int[i * i_443_];
     }

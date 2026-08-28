@@ -81,7 +81,7 @@ final class Component134
         aClass111_5813 = null;
     }
 
-    static final GlRectangleTexture method1401(ha_Sub2 var_ha_Sub2, int i, int i_37_, int i_38_, int i_39_, int i_40_) {
+    static final GlRectangleTexture method1401(GlToolkitSub2 var_ha_Sub2, int i, int i_37_, int i_38_, int i_39_, int i_40_) {
         anInt5809++;
         if (i_37_ != 34037) aClass341_5808 = null;
         if (var_ha_Sub2.aBoolean7793 || Component353.method1436(-20, i_38_) && Component353.method1436(-119, i_40_)) return new GlRectangleTexture(var_ha_Sub2, 3553, i, i_39_, i_38_, i_40_, true);

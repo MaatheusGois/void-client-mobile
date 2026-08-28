@@ -82,10 +82,10 @@ final class HashTable {
         if (i < 49) anInt1651 = 10;
     }
 
-    static final void method1007(DisplayModeManagerContainer57 class46, ha var_ha, int i, int i_1_, int i_2_) {
+    static final void method1007(DisplayModeManagerContainer57 class46, GraphicsToolkit var_ha, int i, int i_1_, int i_2_) {
         try {
             anInt1648++;
-            aa var_aa = class46.method425(var_ha, (byte) 40);
+            Shader var_aa = class46.method425(var_ha, (byte) 40);
             if (var_aa != null) {
                 if (i_2_ != 22960) anIntArray1650 = null;
                 var_ha.KA(i, i_1_, i + class46.anInt709, class46.anInt789 + i_1_);
@@ -102,7 +102,7 @@ final class HashTable {
                     } else {
                         i_5_ = 4096 - 16 * Component182.anInt9750;
                         i_3_ = (Component72.localPlayer.y);
-                        i_6_ = ((int) -Component112.aFloat3938 - -r_Sub2.anInt10483 & 0x3fff);
+                        i_6_ = ((int) -Component112.aFloat3938 - -CacheNodeSub2.anInt10483 & 0x3fff);
                         i_4_ = (Component72.localPlayer.x);
                     }
                     int i_7_ = 48 - (-(i_4_ / 128) - -(AbstractShaderSub4.anInt7319 * 2)) - -208;
@@ -110,11 +110,11 @@ final class HashTable {
                     Component83.aClass105_1664.method967(((float) class46.anInt709 / 2.0F + (float) i), ((float) class46.anInt789 / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
                     for (NodeSub35 class348_sub35 = (NodeSub35) Component289.aClass262_10125.method1995(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (NodeSub35) Component289.aClass262_10125.method1990((byte) 92)) {
                         int i_9_ = class348_sub35.anInt6976;
-                        int i_10_ = (-za_Sub2.regionTileX + ((0xfffe5b0 & (r_Sub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
-                        int i_11_ = (-Component330.regionTileY + (0x3fff & (r_Sub2.aClass252_10488.anIntArray3238[i_9_])));
+                        int i_10_ = (-NodeBaseSub2.regionTileX + ((0xfffe5b0 & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
+                        int i_11_ = (-Component330.regionTileY + (0x3fff & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])));
                         int i_12_ = -(i_4_ / 128) + 2 + 4 * i_10_;
                         int i_13_ = 2 + (4 * i_11_ - i_3_ / 128);
-                        RenderableObject.method2385(class46, i_1_, var_aa, (r_Sub2.aClass252_10488.anIntArray3239[i_9_]), i_12_, i, (byte) -94, i_13_, var_ha);
+                        RenderableObject.method2385(class46, i_1_, var_aa, (CacheNodeSub2.aClass252_10488.anIntArray3239[i_9_]), i_12_, i, (byte) -94, i_13_, var_ha);
                     }
                     for (int i_14_ = 0; (DefinitionSub38.anInt9479 > i_14_); i_14_++) {
                         int i_15_ = (ColorTagNode.anIntArray6770[i_14_] * 4 - -2 - i_4_ / 128);
@@ -129,7 +129,7 @@ final class HashTable {
                     for (NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.method3484(i_2_ ^ 0x59b0); class348_sub37 != null; class348_sub37 = ((NodeSub37) Component387.aClass356_1895.method3482(0))) {
                         int i_17_ = (int) (0x3L & (class348_sub37.aLong4291) >> 28);
                         if (NativeLibLoader.anInt4155 == i_17_) {
-                            int i_18_ = (-za_Sub2.regionTileX + (int) ((class348_sub37.aLong4291) & 0x3fffL));
+                            int i_18_ = (-NodeBaseSub2.regionTileX + (int) ((class348_sub37.aLong4291) & 0x3fffL));
                             int i_19_ = (-Component330.regionTileY + (int) ((class348_sub37.aLong4291) >> 14 & 0x3fffL));
                             int i_20_ = -(i_4_ / 128) + (2 + i_18_ * 4);
                             int i_21_ = -(i_3_ / 128) + (2 + i_19_ * 4);
@@ -161,7 +161,7 @@ final class HashTable {
                             int i_28_ = (-(i_3_ / 128) + (player.y) / 128);
                             boolean bool = false;
                             for (int i_29_ = 0; (DefinitionSub30.anInt9383 > i_29_); i_29_++) {
-                                if ((player.aString10544.equals(Component178.aStringArray1441[i_29_])) && (ha.anIntArray4578[i_29_] != 0)) {
+                                if ((player.aString10544.equals(Component178.aStringArray1441[i_29_])) && (GraphicsToolkit.anIntArray4578[i_29_] != 0)) {
                                     bool = true;
                                     break;
                                 }

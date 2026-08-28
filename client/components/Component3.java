@@ -31,11 +31,11 @@ final class Component3
 
     final void method1199(byte i) {
         anInt2043++;
-        if (i == -106 && ha_Sub2.anInt7722 < 500) {
+        if (i == -106 && GlToolkitSub2.anInt7722 < 500) {
             this.aClass318_Sub1_Sub3_2040 = null;
             this.aClass148_2038 = Component110.aClass148_231;
             Component110.aClass148_231 = this;
-            ha_Sub2.anInt7722++;
+            GlToolkitSub2.anInt7722++;
         }
     }
 }

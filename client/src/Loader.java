@@ -69,7 +69,7 @@ public class Loader extends Applet {
 
     /**
      * Native SW3D / jaggl toolkits are unsafe on modern macOS JAWT (Finalize crash
-     * or noisy RuntimeException during Auto Setup probes). Force software ha.
+     * or noisy RuntimeException during Auto Setup probes). Force software GraphicsToolkit.
      */
     static void disableSw3dOnMacOs() {
         try {
@@ -78,7 +78,7 @@ public class Loader extends Applet {
                 return;
             }
             Component85.aBoolean2881 = true; // skip SW3D (toolkit 2) in method2478
-            Component301.aBoolean4117 = true; // skip OpenGL (toolkit 1) probe — ha_Sub2 JAWT fail
+            Component301.aBoolean4117 = true; // skip OpenGL (toolkit 1) probe — GlToolkitSub2 JAWT fail
             System.out.println("void-osrs: native toolkits disabled on macOS (use software)");
         } catch (Throwable ignored) {
         }

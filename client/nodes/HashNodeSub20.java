@@ -38,7 +38,7 @@ final class HashNodeSub20
         int i_0_ = 112 / ((i - 16) / 57);
     }
 
-    static final void method3281(byte i, ha var_ha) {
+    static final void method3281(byte i, GraphicsToolkit var_ha) {
         if (Component364.aBoolean8335) DisplayModeManagerContainer165.method2288(false, var_ha);
         else DisplayModeManagerContainer96.method1077(var_ha, (byte) -123);
         anInt9709++;
@@ -67,7 +67,7 @@ final class HashNodeSub20
     }
 
     static final void method3283(int i) {
-        if (OggUrlStream.aClass297_8992.aBoolean3777 && (aa_Sub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.method2972((aa_Sub2.aClass161_5199.aString2147), (aa_Sub2.aClass161_5199.anInt2143), -54);
+        if (OggUrlStream.aClass297_8992.aBoolean3777 && (ShaderSub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.method2972((ShaderSub2.aClass161_5199.aString2147), (ShaderSub2.aClass161_5199.anInt2143), -54);
         anInt9713++;
         int i_7_ = 9 / ((i - 60) / 50);
     }

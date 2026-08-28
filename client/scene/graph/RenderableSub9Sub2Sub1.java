@@ -34,7 +34,7 @@ final class RenderableSub9Sub2Sub1
         this.aClass318_Sub7_10419.aClass243_6433.method1869(-98, this);
     }
 
-    final void method2522(ha var_ha, long l) {
+    final void method2522(GraphicsToolkit var_ha, long l) {
         int i = this.anInt8791 >> 12 + Component149.anInt4459;
         int i_0_ = this.anInt8789 >> 12 + Component149.anInt4459;
         int i_1_ = this.anInt8796 >> 12;
@@ -42,7 +42,7 @@ final class RenderableSub9Sub2Sub1
         else {
             RenderableSub10 class318_sub10 = (this.aClass318_Sub7_10419.aClass318_Sub10_6439);
             Component113 class181 = (this.aClass318_Sub7_10419.aClass181_6441);
-            s[] var_ses = aa_Sub1.aSArray5191;
+            s[] var_ses = ShaderSub1.aSArray5191;
             int i_2_ = class318_sub10.anInt6483;
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[class318_sub10.anInt6483][i][i_0_]);
             if (class357 != null) i_2_ = class357.aByte4399;

@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class318_Sub1_Sub5_Sub2` (JODE-obfuscated).
- * aa linker. Links compiled GLSL/ARB shader stages (Component203 subclass implementing Interface10); throws 'aa linking failed:' on link errors.
+ * Shader linker. Links compiled GLSL/ARB shader stages (Component203 subclass implementing Interface10); throws 'aa linking failed:' on link errors.
  */
 
 import jaggl.OpenGL;
@@ -36,7 +36,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
     static int anInt10171;
     static int[] anIntArray10172 = new int[3];
 
-    public final void method43(ha var_ha, int i) {
+    public final void method43(GraphicsToolkit var_ha, int i) {
         anInt10151++;
         this.aClass235_10155.method1674(i + 14217, var_ha);
         if (i != -14218) method40(127);
@@ -60,7 +60,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return this.aClass235_10155.method1665(i + 18445);
     }
 
-    public final void method44(int i, ha var_ha) {
+    public final void method44(int i, GraphicsToolkit var_ha) {
         if (i == 836) {
             this.aClass235_10155.method1667((byte) 116, var_ha);
             anInt10165++;
@@ -73,7 +73,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return (this.aClass235_10155.anInt3063);
     }
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         if (i >= -125) aBoolean10148 = false;
         anInt10154++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10155.method1668(false, true, -127, 262144, var_ha);
@@ -98,7 +98,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return false;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10159++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10155.method1668(false, true, -127, 2048, var_ha);
         if (class64 == null) return null;
@@ -121,7 +121,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return class318_sub4;
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         anInt10169++;
         if (i != 7) return null;
         return aClass30_10150;
@@ -140,7 +140,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         anIntArray10172 = null;
     }
 
-    ShaderLinker(ha var_ha, Component44 class51, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
+    ShaderLinker(GraphicsToolkit var_ha, Component44 class51, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
         super(i_6_, i_7_, i_8_, i, i_5_, i_9_, i_10_);
         try {
             this.aClass235_10155 = new Component366(var_ha, class51, i_11_, i_12_, this.plane, i_5_, this, bool, i_13_);
@@ -150,7 +150,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         }
     }
 
-    final boolean method2391(ha var_ha, int i, int i_14_, int i_15_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_14_, int i_15_) {
         anInt10152++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10155.method1668(false, false, -128, 131072, var_ha);
         if (class64 == null) return false;
@@ -161,7 +161,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return class64.method628(i_14_, i, class101, false, 0);
     }
 
-    static final Component244 method2493(ha_Sub2 var_ha_Sub2, int i, Component359[] class242s) {
+    static final Component244 method2493(GlToolkitSub2 var_ha_Sub2, int i, Component359[] class242s) {
         try {
             anInt10167++;
             for (int i_16_ = 0; i_16_ < class242s.length; i_16_++) {

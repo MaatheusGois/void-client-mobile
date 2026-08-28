@@ -49,7 +49,7 @@ final class DefinitionSub30
             return class348_sub42_sub15;
         }
         do {
-            class348_sub42_sub15 = (RSARequest) s_Sub2.aClass107_8241.method1011(-87);
+            class348_sub42_sub15 = (RSARequest) BufferCacheSub2.aClass107_8241.method1011(-87);
             if (class348_sub42_sub15 == null) return null;
             if (Component240.method599(-59) < class348_sub42_sub15.method3250((byte) -51)) return null;
             class348_sub42_sub15.method2715((byte) 113);

@@ -1,15 +1,15 @@
-/* za_Sub2 - Decompiled by JODE
+/* NodeBaseSub2 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import jaclib.memory.heap.NativeHeap;
 import jaggl.OpenGL;
 
-final class za_Sub2
+final class NodeBaseSub2
 /**
- * RENAMED from `za_Sub2` (JODE-obfuscated).
- * Evidence: extends za (za)
- */ extends za {
+ * RENAMED from `NodeBaseSub2` (JODE-obfuscated).
+ * Evidence: extends NodeBase (NodeBase)
+ */ extends NodeBase {
     static int anInt9777;
     static int anInt9778;
     static int anInt9779;
@@ -98,7 +98,7 @@ final class za_Sub2
         anInt9777++;
     }
 
-    za_Sub2(int i) {
+    NodeBaseSub2(int i) {
         this.aNativeHeap9782 = new NativeHeap(i);
     }
 

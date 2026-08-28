@@ -9,7 +9,7 @@ final class h
  */ extends BitmapFont implements Interface19 {
     long nativeid;
 
-    h(oa var_oa, ya var_ya, Component184 class143, Component170[] class207s, Component24[] class105s) {
+    h(OpenGLToolkit var_oa, NativeHandle var_ya, Component184 class143, Component170[] class207s, Component24[] class105s) {
         super(var_oa, class143);
         byte[][] is = new byte[class207s.length][];
         int[] is_0_ = new int[class207s.length];
@@ -34,11 +34,11 @@ final class h
 
     final native void fa(char c, int i, int i_4_, int i_5_, boolean bool);
 
-    final void method2578(char c, int i, int i_6_, int i_7_, boolean bool, aa var_aa, int i_8_, int i_9_) {
+    final void method2578(char c, int i, int i_6_, int i_7_, boolean bool, Shader var_aa, int i_8_, int i_9_) {
         NA(c, i, i_6_, i_7_, bool, var_aa, i_8_, i_9_);
     }
 
-    private final native void NA(char c, int i, int i_10_, int i_11_, boolean bool, aa var_aa, int i_12_, int i_13_);
+    private final native void NA(char c, int i, int i_10_, int i_11_, boolean bool, Shader var_aa, int i_12_, int i_13_);
 
-    private final native void JA(oa var_oa, ya var_ya, byte[][] is, int[] is_14_, int[] is_15_, int[] is_16_, int[] is_17_);
+    private final native void JA(OpenGLToolkit var_oa, NativeHandle var_ya, byte[][] is, int[] is_14_, int[] is_15_, int[] is_16_, int[] is_17_);
 }

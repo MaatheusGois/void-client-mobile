@@ -22,7 +22,7 @@ final class NodeCache {
     static int anInt1095;
     static int anInt1096;
     static int anInt1097;
-    static ha aHa1098;
+    static GraphicsToolkit aHa1098;
     static int anInt1099;
     private final LruCache aClass356_1100;
     static int anInt1101;

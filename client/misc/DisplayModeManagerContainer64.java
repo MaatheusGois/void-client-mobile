@@ -55,7 +55,7 @@ final class DisplayModeManagerContainer64
         aClass187_9036 = null;
     }
 
-    final Component24 method2975(ha var_ha, int i) {
+    final Component24 method2975(GraphicsToolkit var_ha, int i) {
         anInt9026++;
         if (aFrame9024 == null) return null;
         if (!aBoolean9014 && aClass105_9020 != null) return aClass105_9020;

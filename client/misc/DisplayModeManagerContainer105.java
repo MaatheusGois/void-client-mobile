@@ -28,7 +28,7 @@ final class DisplayModeManagerContainer105
     static int anInt4880;
     static int anInt4881;
     private int anInt4882;
-    private final ha_Sub2 aHa_Sub2_4883;
+    private final GlToolkitSub2 aHa_Sub2_4883;
     private int anInt4884;
     static int anInt4885;
     private int anInt4886;
@@ -159,7 +159,7 @@ final class DisplayModeManagerContainer105
             Component246.aClass348_Sub16_Sub3_2718 = null;
         } else if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1 && !Component385.method1296(true)) {
             Renderable.anInt3973++;
-            ParticleSystem class348_sub47 = ParticleShader.method2148(ha_Sub2.aClass351_7554, DisplayModeManagerContainer64.aClass77_9029, -107);
+            ParticleSystem class348_sub47 = ParticleShader.method2148(GlToolkitSub2.aClass351_7554, DisplayModeManagerContainer64.aClass77_9029, -107);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 118, Component119.anInt3428);
             HashNodeSub14.method3243(-54, class348_sub47);
             Component119.anInt3428 = -1;
@@ -279,7 +279,7 @@ final class DisplayModeManagerContainer105
         super.finalize();
     }
 
-    DisplayModeManagerContainer105(ha_Sub2 var_ha_Sub2) {
+    DisplayModeManagerContainer105(GlToolkitSub2 var_ha_Sub2) {
         anInt4872 = 0;
         anInt4873 = -1;
         if (!var_ha_Sub2.aBoolean7820) throw new IllegalStateException("");

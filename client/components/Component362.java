@@ -91,7 +91,7 @@ final class Component362
 
     static final void method1042(byte i) {
         anInt5792++;
-        DisplayModeManagerContainer249.anInt4666 = Component328.anInt1482 = Component150.anInt2968 = za_Sub1.anInt9776 = 0;
+        DisplayModeManagerContainer249.anInt4666 = Component328.anInt1482 = Component150.anInt2968 = NodeBaseSub1.anInt9776 = 0;
         int i_10_ = 58 % ((i - -66) / 39);
     }
 }

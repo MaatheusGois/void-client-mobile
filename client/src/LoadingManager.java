@@ -107,7 +107,7 @@ final class LoadingManager {
             Component30.aClass45_1878 = Component14.method3571(false, 4, (byte) -23, 1);
             SoftwareFallbackShader.aClass45_7382 = Component14.method3571(true, 5, (byte) -23, 1);
             Component54.aClass45_8667 = Component14.method3571(true, 6, (byte) -23, 1);
-            aa_Sub3.aClass45_5207 = Component14.method3571(false, 7, (byte) -23, 1);
+            ShaderSub3.aClass45_5207 = Component14.method3571(false, 7, (byte) -23, 1);
             Component14.aClass45_8589 = Component14.method3571(false, 9, (byte) -23, 1);
             Component110.aClass45_233 = Component14.method3571(false, 10, (byte) -23, 1);
             DisplayModeManagerContainer64.aClass45_9033 = Component14.method3571(false, 11, (byte) -23, 1);
@@ -118,7 +118,7 @@ final class LoadingManager {
             VideoAdDisplay.aClass45_3183 = Component14.method3571(false, 17, (byte) -23, 1);
             Component43.aClass45_4975 = Component14.method3571(false, 18, (byte) -23, 1);
             RadixParser.aClass45_2306 = Component14.method3571(false, 19, (byte) -23, 1);
-            r_Sub2.aClass45_10480 = Component14.method3571(false, 20, (byte) -23, 1);
+            CacheNodeSub2.aClass45_10480 = Component14.method3571(false, 20, (byte) -23, 1);
             SeekableFile.aClass45_1322 = Component14.method3571(false, 21, (byte) -23, 1);
             BrowserUrlOpener.aClass45_8926 = Component14.method3571(false, 22, (byte) -23, 1);
             NodeSub32.aClass45_6950 = Component14.method3571(true, 23, (byte) -23, 1);
@@ -146,7 +146,7 @@ final class LoadingManager {
         }
         if (LoadingState.aClass56_1032 == RSARequest.aClass56_9660) {
             if (Component35.anInt4270 == -1) Component35.anInt4270 = Component54.aClass45_8667.method417("scape main", 0);
-            r_Sub1.method3290(56);
+            CacheNodeSub1.method3290(56);
             Buffer.method3379(2, 2);
         }
         if (LoadingState.aClass56_1033 == RSARequest.aClass56_9660) ComponentDownloader.method323(Component380.aClass45_4984, OggUrlStream.aClass297_8992, (byte) 95);
@@ -158,7 +158,7 @@ final class LoadingManager {
         }
         if (i != -28660) return 2;
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1035) {
-            if (Sprite.anInt6923 != -1 && !aa_Sub3.aClass45_5207.method420(-10499, Sprite.anInt6923, 0)) return 99;
+            if (Sprite.anInt6923 != -1 && !ShaderSub3.aClass45_5207.method420(-10499, Sprite.anInt6923, 0)) return 99;
             DefinitionSub4.aD9113 = new Component283(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
             MatrixSub3.aClass326_5764 = new Component311(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             DisplayModeManagerContainer282.aClass261_5558 = new DisplayModeManagerContainer1(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
@@ -167,25 +167,25 @@ final class LoadingManager {
             Component267.aClass268_2979 = new DisplayModeManagerContainer259(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             Component149.aClass183_4460 = new Component191(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             DisplayModeManagerContainer306.aClass219_4782 = new Component386(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            DefinitionSub25.aClass150_9342 = new Component324(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, aa_Sub3.aClass45_5207);
+            DefinitionSub25.aClass150_9342 = new Component324(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, ShaderSub3.aClass45_5207);
             Component162.aClass271_8378 = new DisplayModeManagerContainer130(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             NodeSub1.aClass185_6559 = new Component316(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            GradientPreset.aClass263_9195 = new Component309(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component97.aClass45_1538, aa_Sub3.aClass45_5207);
+            GradientPreset.aClass263_9195 = new Component309(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component97.aClass45_1538, ShaderSub3.aClass45_5207);
             DisplayModeManagerContainer64.aClass153_9031 = new Component62(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
             Component245.aClass141_117 = new Component258(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541, Component158.aClass45_322);
-            Component291.aClass278_2529 = new DisplayModeManagerContainer347(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component43.aClass45_4975, aa_Sub3.aClass45_5207);
-            Exception_Sub1.aClass255_112 = new DisplayModeManagerContainer320(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, aa_Sub3.aClass45_5207);
+            Component291.aClass278_2529 = new DisplayModeManagerContainer347(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, Component43.aClass45_4975, ShaderSub3.aClass45_5207);
+            Exception_Sub1.aClass255_112 = new DisplayModeManagerContainer320(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, ShaderSub3.aClass45_5207);
             DisplayModeManagerContainer64.aClass187_9036 = new Component38(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            RunescapeInfo.aClass87_191 = new Component344(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, r_Sub2.aClass45_10480, NodeSub29.aClass45_6909, DisplayModeManagerContainer51.aClass45_2490);
+            RunescapeInfo.aClass87_191 = new Component344(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, CacheNodeSub2.aClass45_10480, NodeSub29.aClass45_6909, DisplayModeManagerContainer51.aClass45_2490);
             ComponentDownloader.aClass84_413 = new DisplayModeManagerContainer26(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             Component132.aClass25_1813 = new Component361(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            NsnDefinition.aClass319_9245 = new Component144(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, SeekableFile.aClass45_1322, aa_Sub3.aClass45_5207);
+            NsnDefinition.aClass319_9245 = new Component144(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, SeekableFile.aClass45_1322, ShaderSub3.aClass45_5207);
             Component257.aClass65_4787 = new Component304(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             GnpPositionLogger.aClass82_1523 = new CommandHandler(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             Component329.aClass259_5995 = new Component293(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
             Component267.aClass194_2981 = new Component276(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, BrowserUrlOpener.aClass45_8926);
             Component209.aClass217_3453 = new Component46(PacketReader.aClass230_10434, ObjectDeserializer.anInt6967, Component181.aClass45_1541);
-            Component304.method699(Component65.aClass45_1627, (byte) -100, NodeSub35.aClass45_6980, Component158.aClass45_322, aa_Sub3.aClass45_5207);
+            Component304.method699(Component65.aClass45_1627, (byte) -100, NodeSub35.aClass45_6980, Component158.aClass45_322, ShaderSub3.aClass45_5207);
             Applet_Sub1.method85(0, NodeList.aClass45_3323);
             Component33.aClass226_2639 = new Component127(ObjectDeserializer.anInt6967, Component387.aClass45_1897, CommandHandler.aClass45_1434);
             Component31.aClass355_5900 = new Component117(ObjectDeserializer.anInt6967, Component387.aClass45_1897, CommandHandler.aClass45_1434, new DisplayModeManagerContainer332());
@@ -194,9 +194,9 @@ final class LoadingManager {
             DisplayModeManagerContainer58.aClass170_10209 = new DisplayModeManagerContainer292();
             Definition.method3038(-1);
             RuntimeException_Sub1.method4011(i + 29684, Component339.aClass45_3146);
-            NodeSub29.method3004(aa_Sub3.aClass45_5207, false, DefinitionSub4.aD9113);
+            NodeSub29.method3004(ShaderSub3.aClass45_5207, false, DefinitionSub4.aD9113);
             HuffmanDecoder class296 = new HuffmanDecoder(Component110.aClass45_233.method391("huffman", "", -29832));
-            ha_Sub3.method3896(class296, (byte) 13);
+            GlToolkitSub3.method3896(class296, (byte) 13);
             try {
                 jagmisc.init();
             } catch (Throwable throwable) {
@@ -239,7 +239,7 @@ final class LoadingManager {
             Component97.aClass45_1538.anInt634 = 2;
             Component43.aClass45_4975.anInt634 = 2;
             RadixParser.aClass45_2306.anInt634 = 2;
-            r_Sub2.aClass45_10480.anInt634 = 2;
+            CacheNodeSub2.aClass45_10480.anInt634 = 2;
             SeekableFile.aClass45_1322.anInt634 = 2;
         }
         if (RSARequest.aClass56_9660 == LoadingState.aClass56_1040) {
@@ -265,7 +265,7 @@ final class LoadingManager {
             Component280.anInterface16Array2447 = null;
             NodeSub32.aThread6946 = null;
             ShaderProgramSub7.aClass45_6277 = null;
-            ha_Sub3.method3886(i + 28556);
+            GlToolkitSub3.method3886(i + 28556);
             DisplayModeManagerContainer64.aBoolean9038 = Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1;
             Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
             if (DisplayModeManagerContainer64.aBoolean9038) Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);

@@ -1,10 +1,10 @@
-/* s_Sub1 - Decompiled by JODE
+/* BufferCacheSub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class s_Sub1
+final class BufferCacheSub1
 /**
- * RENAMED from `s_Sub1` (JODE-obfuscated).
+ * RENAMED from `BufferCacheSub1` (JODE-obfuscated).
  * Evidence: extends s (s)
  */ extends s {
     private float aFloat8212;
@@ -12,7 +12,7 @@ final class s_Sub1
     private float aFloat8214;
     private Component180[][] aClass102ArrayArray8215;
     private float aFloat8216;
-    private final ha_Sub1 aHa_Sub1_8217;
+    private final GlToolkitSub1 aHa_Sub1_8217;
     private float aFloat8218;
     private Component250[][] aClass198ArrayArray8219;
     private byte[][] aByteArrayArray8220;
@@ -1027,7 +1027,7 @@ final class s_Sub1
         else if (aClass198ArrayArray8219 != null) method3995(i, i_255_, class167.aBoolean2195, class167, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
     }
 
-    final void wa(r var_r, int i, int i_257_, int i_258_, int i_259_, boolean bool) {
+    final void Interface4Impl(r var_r, int i, int i_257_, int i_258_, int i_259_, boolean bool) {
         /* empty */
     }
 
@@ -1393,7 +1393,7 @@ final class s_Sub1
         Component8 class109 = class167.aClass109_2220;
         class109.anInt1674 = 0;
         class109.aBoolean1671 = true;
-        aHa_Sub1_8217.ya();
+        aHa_Sub1_8217.NativeHandle();
         if (aClass266ArrayArray8230 != null || aClass198ArrayArray8219 != null) method3993(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
         else if (aClass102ArrayArray8215 != null) method3996(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
     }
@@ -1573,7 +1573,7 @@ final class s_Sub1
         return i == 9;
     }
 
-    s_Sub1(ha_Sub1 var_ha_Sub1, int i, int i_485_, int i_486_, int i_487_, int[][] is, int[][] is_488_, int i_489_) {
+    BufferCacheSub1(GlToolkitSub1 var_ha_Sub1, int i, int i_485_, int i_486_, int i_487_, int[][] is, int[][] is_488_, int i_489_) {
         super(i_486_, i_487_, i_489_, is);
         aHa_Sub1_8217 = var_ha_Sub1;
         anInt8223 = i_485_;

@@ -74,7 +74,7 @@ final class CookieManager extends ShaderProgram {
         }
     }
 
-    CookieManager(ha_Sub2 var_ha_Sub2) {
+    CookieManager(GlToolkitSub2 var_ha_Sub2) {
         super(var_ha_Sub2);
         if (var_ha_Sub2.aBoolean7863) {
             aClass61_6302 = new Component128(var_ha_Sub2, 2);

@@ -90,7 +90,7 @@ final class Component274
         return i_2_ >= anInt587 && i_2_ <= anInt586;
     }
 
-    final Component24 method374(boolean bool, ha var_ha, byte i) {
+    final Component24 method374(boolean bool, GraphicsToolkit var_ha, byte i) {
         anInt579++;
         int i_3_ = bool ? this.anInt605 : this.anInt578;
         if (i != 127) return null;
@@ -106,7 +106,7 @@ final class Component274
         return class105;
     }
 
-    final Component24 method375(ha var_ha, boolean bool) {
+    final Component24 method375(GraphicsToolkit var_ha, boolean bool) {
         anInt563++;
         if (bool != false) method375(null, true);
         Component24 class105 = (Component24) (this.aClass153_593.aClass60_2089.method583(anInt598 | 0x20000 | var_ha.anInt4567 << 29, -75));

@@ -58,7 +58,7 @@ final class Component357
         if (Component335.aClass357ArrayArrayArray2029 != null) {
             if (i >= -38) method1384(-77, 22, 77);
             Interface10 interface10 = null;
-            if (class348_sub27.anInt6904 == 0) interface10 = ((Interface10) r_Sub2.method3297((class348_sub27.anInt6899), (class348_sub27.anInt6905), (class348_sub27.anInt6896)));
+            if (class348_sub27.anInt6904 == 0) interface10 = ((Interface10) CacheNodeSub2.method3297((class348_sub27.anInt6899), (class348_sub27.anInt6905), (class348_sub27.anInt6896)));
             if (class348_sub27.anInt6904 == 1) interface10 = ((Interface10) (DefinitionSub32.method3135(class348_sub27.anInt6899, class348_sub27.anInt6905, class348_sub27.anInt6896)));
             if (class348_sub27.anInt6904 == 2) interface10 = ((Interface10) (DisplayModeManagerContainer249.method1353(class348_sub27.anInt6899, class348_sub27.anInt6905, class348_sub27.anInt6896, (aClass2478 != null ? aClass2478 : (aClass2478 = Interface10.class)))));
             if (class348_sub27.anInt6904 == 3) interface10 = ((Interface10) (BrowserUrlOpener.method2878(class348_sub27.anInt6899, class348_sub27.anInt6905, class348_sub27.anInt6896)));

@@ -123,7 +123,7 @@ final class BuildInfo {
         return i_31_ + (((i & 0xff00) * i_34_ & 0xff0000 | ~0xff00ff & (0xff00ff & i) * i_34_) >>> 8);
     }
 
-    static final void method207(ha var_ha, byte i) {
+    static final void method207(GraphicsToolkit var_ha, byte i) {
         do {
             try {
                 anInt153++;
@@ -131,7 +131,7 @@ final class BuildInfo {
                 int i_36_ = 0;
                 if (i < 113) aClass227_151 = null;
                 if (Component210.aBoolean5300) {
-                    i_35_ = s_Sub3.method4008((byte) -127);
+                    i_35_ = BufferCacheSub3.method4008((byte) -127);
                     i_36_ = Component110.method260(false);
                 }
                 // Purple developer console band: half height on mobile only.

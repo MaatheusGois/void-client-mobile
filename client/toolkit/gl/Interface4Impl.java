@@ -1,14 +1,14 @@
-/* wa - Decompiled by JODE
+/* Interface4Impl - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class wa
+final class Interface4Impl
 /**
- * RENAMED from `wa` (JODE-obfuscated).
+ * RENAMED from `Interface4Impl` (JODE-obfuscated).
  * Evidence: implements Interface4; 2 native methods
  */ implements Interface4 {
     j aJ4732;
-    xa aXa4733;
+    DualToolkit aXa4733;
     private long aLong4734 = 0L;
 
     public final void method14(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
@@ -23,7 +23,7 @@ final class wa
         X(aLong4734, this.aJ4732.nativeid, this.aXa4733.nativeid, i, i_22_, i_23_, i_24_, i_25_, i_26_, bool, bool_27_);
     }
 
-    wa(oa var_oa, j var_j, xa var_xa) {
+    Interface4Impl(OpenGLToolkit var_oa, j var_j, DualToolkit var_xa) {
         aLong4734 = var_oa.nativeid;
         this.aJ4732 = var_j;
         this.aXa4733 = var_xa;

@@ -16,7 +16,7 @@ final class RenderableSub2
     static int anInt6399;
     static Component335[] aClass147Array6400 = new Component335[100];
 
-    static final void method2494(int i, int i_0_, int i_1_, ha var_ha, MenuEntry class348_sub42_sub12, int i_2_, int i_3_, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_) {
+    static final void method2494(int i, int i_0_, int i_1_, GraphicsToolkit var_ha, MenuEntry class348_sub42_sub12, int i_2_, int i_3_, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_) {
         do {
             try {
                 anInt6397++;
@@ -100,7 +100,7 @@ final class RenderableSub2
         }
     }
 
-    static final void method2498(Component103 class338, ha var_ha, byte i, int i_18_) {
+    static final void method2498(Component103 class338, GraphicsToolkit var_ha, byte i, int i_18_) {
         try {
             anInt6395++;
             if (i > -101) anIntArray6393 = null;
@@ -173,7 +173,7 @@ final class RenderableSub2
                 }
             } else if (class338.aByte4192 == 4) {
                 float f = (float) (-Component228.anInt3006 + class338.anIntArray4191[0]);
-                if (!(f <= (float) ha_Sub2.anInt7714)) {
+                if (!(f <= (float) GlToolkitSub2.anInt7714)) {
                     int i_29_ = (Component197.anInt10084 + -DebugPanicSub2.anInt8502 + class338.aShort4193);
                     if (i_29_ >= 0) {
                         if ((Component197.anInt10084 + Component197.anInt10084) < i_29_) return;
@@ -211,10 +211,10 @@ final class RenderableSub2
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
         if (Component241.anInt2946 < 100) return false;
         if (i_38_ == i_40_ && i_36_ == i_35_) {
-            if (!aa_Sub2.method164(i, i_38_, (byte) -97, i_36_)) return false;
+            if (!ShaderSub2.method164(i, i_38_, (byte) -97, i_36_)) return false;
             int i_41_ = i_38_ << Component149.anInt4459;
             int i_42_ = i_36_ << Component149.anInt4459;
-            if (Component221.method1084(i_37_, Component148.anInt3465, i_42_, i_41_, aa_Sub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465, 18507)) {
+            if (Component221.method1084(i_37_, Component148.anInt3465, i_42_, i_41_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465, 18507)) {
                 DefinitionSub4.anInt9112++;
                 return true;
             }
@@ -228,7 +228,7 @@ final class RenderableSub2
         }
         int i_45_ = (i_38_ << Component149.anInt4459) + 1;
         int i_46_ = (i_36_ << Component149.anInt4459) + 2;
-        if (!Component221.method1084(i_37_, (1 + -i_38_ + i_40_) * Component148.anInt3465, i_46_, i_45_, aa_Sub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465 * (i_35_ + -i_36_ + 1), 18507)) return false;
+        if (!Component221.method1084(i_37_, (1 + -i_38_ + i_40_) * Component148.anInt3465, i_46_, i_45_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465 * (i_35_ + -i_36_ + 1), 18507)) return false;
         DefinitionSub4.anInt9112++;
         return true;
     }

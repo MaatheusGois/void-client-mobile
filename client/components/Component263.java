@@ -27,7 +27,7 @@ final class Component263
     private int anInt1558 = -1;
     private final int anInt1559;
     private final Component301 aClass330_1560;
-    private final ha_Sub3 aHa_Sub3_1561;
+    private final GlToolkitSub3 aHa_Sub3_1561;
     boolean aBoolean1562 = true;
     int anInt1563;
 
@@ -46,14 +46,14 @@ final class Component263
         if (i_0_ != 1) method873(47, 5, null, 1);
     }
 
-    static final void method873(int i, int i_6_, ha var_ha, int i_7_) {
+    static final void method873(int i, int i_6_, GraphicsToolkit var_ha, int i_7_) {
         NodeCache.aHa1098 = var_ha;
         NodeList.aClass190ArrayArray3335 = new DisplayModeManagerContainer56[i][i_7_];
         if (i_6_ == 21719) {
             anInt1549++;
             if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = DisplayModeManagerContainer124.method1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
             FriendsIgnoreList.aClass190_3547 = new DisplayModeManagerContainer56();
-            ha_Sub3.method3936(0);
+            GlToolkitSub3.method3936(0);
         }
     }
 
@@ -146,7 +146,7 @@ final class Component263
         }
     }
 
-    Component263(ha_Sub3 var_ha_Sub3, Component301 class330, s_Sub3 var_s_Sub3, int i, int i_24_, int i_25_, int i_26_, int i_27_) {
+    Component263(GlToolkitSub3 var_ha_Sub3, Component301 class330, BufferCacheSub3 var_s_Sub3, int i, int i_24_, int i_25_, int i_26_, int i_27_) {
         try {
             aHa_Sub3_1561 = var_ha_Sub3;
             anInt1544 = i_26_;

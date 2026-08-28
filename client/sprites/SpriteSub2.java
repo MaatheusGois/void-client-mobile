@@ -15,7 +15,7 @@ final class SpriteSub2
     private boolean aBoolean8427;
     static int anInt8428;
     private int anInt8429 = 0;
-    private final ha_Sub2 aHa_Sub2_8430;
+    private final GlToolkitSub2 aHa_Sub2_8430;
     private GlRectangleTexture aClass258_Sub3_Sub1_8431;
     private int anInt8432 = 0;
     static int anInt8433;
@@ -132,9 +132,9 @@ final class SpriteSub2
         aClass258_Sub3_Sub1_8434.method1967(i, i_28_, i_30_, i_26_, i_29_, (byte) -120, i_27_);
     }
 
-    final void method963(int i, int i_31_, aa var_aa, int i_32_, int i_33_) {
+    final void method963(int i, int i_31_, Shader var_aa, int i_32_, int i_33_) {
         anInt8424++;
-        aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
+        ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
         aClass258_Sub3_Sub1_8434.method1957(9728, false);
         aHa_Sub2_8430.method3792(75);
@@ -198,9 +198,9 @@ final class SpriteSub2
         }
     }
 
-    final void method983(float f, float f_44_, float f_45_, float f_46_, float f_47_, float f_48_, int i, aa var_aa, int i_49_, int i_50_) {
+    final void method983(float f, float f_44_, float f_45_, float f_46_, float f_47_, float f_48_, int i, Shader var_aa, int i_49_, int i_50_) {
         anInt8448++;
-        GlRectangleTexture class258_sub3_sub1 = ((aa_Sub1) var_aa).aClass258_Sub3_Sub1_5193;
+        GlRectangleTexture class258_sub3_sub1 = ((ShaderSub1) var_aa).aClass258_Sub3_Sub1_5193;
         if (aBoolean8427) {
             float f_51_ = (float) method966();
             float f_52_ = (float) method980();
@@ -507,7 +507,7 @@ final class SpriteSub2
         }
     }
 
-    SpriteSub2(ha_Sub2 var_ha_Sub2, int i, int i_105_, boolean bool) {
+    SpriteSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_105_, boolean bool) {
         aBoolean8427 = false;
         anInt8446 = 0;
         anInt8447 = 0;
@@ -516,7 +516,7 @@ final class SpriteSub2
         aClass258_Sub3_Sub1_8434 = DisplayModeManagerContainer204.method904(81, var_ha_Sub2, bool ? 6408 : 6407, i, i_105_);
     }
 
-    SpriteSub2(ha_Sub2 var_ha_Sub2, int i, int i_106_, int i_107_, int i_108_) {
+    SpriteSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_106_, int i_107_, int i_108_) {
         aBoolean8427 = false;
         anInt8446 = 0;
         anInt8447 = 0;
@@ -525,7 +525,7 @@ final class SpriteSub2
         aClass258_Sub3_Sub1_8434 = Component134.method1401(var_ha_Sub2, i, 34037, i_107_, i_106_, i_108_);
     }
 
-    SpriteSub2(ha_Sub2 var_ha_Sub2, int i, int i_109_, int[] is, int i_110_, int i_111_) {
+    SpriteSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_109_, int[] is, int i_110_, int i_111_) {
         aBoolean8427 = false;
         anInt8446 = 0;
         anInt8447 = 0;

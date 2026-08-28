@@ -55,7 +55,7 @@ final class ClientSystemInfo extends Node {
                 if (class348_sub45 != null || (Component117.aLong4367 < -2000L + Component240.method599(-97))) {
                     ParticleSystem class348_sub47 = null;
                     int i_2_ = 0;
-                    for (NodeSub45 class348_sub45_3_ = ((NodeSub45) r_Sub1.aClass262_10479.method1995(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) r_Sub1.aClass262_10479.method1990((byte) 79)) {
+                    for (NodeSub45 class348_sub45_3_ = ((NodeSub45) CacheNodeSub1.aClass262_10479.method1995(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) CacheNodeSub1.aClass262_10479.method1990((byte) 79)) {
                         if (class348_sub47 != null && (class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197 - i_2_ >= 240)) break;
                         class348_sub45_3_.method2715((byte) 107);
                         int i_4_ = class348_sub45_3_.method3311(-15);
@@ -66,15 +66,15 @@ final class ClientSystemInfo extends Node {
                         if (i_5_ >= -1) {
                             if (i_5_ > 65534) i_5_ = 65534;
                         } else i_5_ = -1;
-                        if (s_Sub2.anInt8270 != i_5_ || i_4_ != ImageCacheStore.anInt4032) {
+                        if (BufferCacheSub2.anInt8270 != i_5_ || i_4_ != ImageCacheStore.anInt4032) {
                             if (class348_sub47 == null) {
                                 TeleportHandler.anInt4450++;
                                 class348_sub47 = (ParticleShader.method2148(StringDefinition.aClass351_9590, DisplayModeManagerContainer64.aClass77_9029, -94));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
                                 i_2_ = class348_sub47.aClass348_Sub49_Sub2_7116.anInt7197;
                             }
-                            int i_6_ = -s_Sub2.anInt8270 + i_5_;
-                            s_Sub2.anInt8270 = i_5_;
+                            int i_6_ = -BufferCacheSub2.anInt8270 + i_5_;
+                            BufferCacheSub2.anInt8270 = i_5_;
                             int i_7_ = i_4_ - ImageCacheStore.anInt4032;
                             ImageCacheStore.anInt4032 = i_4_;
                             int i_8_ = (int) ((class348_sub45_3_.method3312((byte) -107) + -Component117.aLong4367) / 20L);
@@ -337,7 +337,7 @@ final class ClientSystemInfo extends Node {
                         }
                         if (DisplayModeManagerContainer87.aBoolean3103) {
                             Component122.anInt1568++;
-                            ParticleSystem class348_sub47 = ParticleShader.method2148((ha_Sub2.aClass351_7715), (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
+                            ParticleSystem class348_sub47 = ParticleShader.method2148((GlToolkitSub2.aClass351_7715), (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 117, (InputStream_Sub2.anInt85 << 14 | (DefinitionSub26.anInt9349 << 28) | DisplayModeManagerContainer206.anInt1404));
                             HashNodeSub14.method3243(30, class348_sub47);
                             DisplayModeManagerContainer87.aBoolean3103 = false;
@@ -379,7 +379,7 @@ final class ClientSystemInfo extends Node {
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
                             } else i_30_ = 0;
-                            TeleportHandler.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + za_Sub2.regionTileX);
+                            TeleportHandler.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
                         }
                         DisplayModeManagerContainer1.method1987(-120);
                         int i_31_ = 0;
@@ -413,11 +413,11 @@ final class ClientSystemInfo extends Node {
                                 DebugPanic.anInt4753 = 0;
                                 int i_33_ = (int) (Math.random() * 8.0);
                                 if ((i_33_ & 0x2) == 2) Component182.anInt9750 += HashNodeSub14.anInt9645;
-                                if ((i_33_ & 0x1) == 1) r_Sub2.anInt10483 += Component140.anInt10443;
+                                if ((i_33_ & 0x1) == 1) CacheNodeSub2.anInt10483 += Component140.anInt10443;
                             }
-                            if (r_Sub2.anInt10483 < -60) Component140.anInt10443 = 2;
+                            if (CacheNodeSub2.anInt10483 < -60) Component140.anInt10443 = 2;
                             if (Component182.anInt9750 < -20) HashNodeSub14.anInt9645 = 1;
-                            if (r_Sub2.anInt10483 > 60) Component140.anInt10443 = -2;
+                            if (CacheNodeSub2.anInt10483 > 60) Component140.anInt10443 = -2;
                             if (Component182.anInt9750 > 10) HashNodeSub14.anInt9645 = -1;
                             Component53.anInt193++;
                             if (Component53.anInt193 > 50) {

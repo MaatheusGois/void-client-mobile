@@ -16,7 +16,7 @@ final class RenderableSub4
     static int anInt6413;
     RenderableSub3[] aClass318_Sub3Array6414;
 
-    static final aa_Sub2 method2501(int i, ha_Sub3 var_ha_Sub3, int[] is, byte i_0_, int[] is_1_, int i_2_) {
+    static final ShaderSub2 method2501(int i, GlToolkitSub3 var_ha_Sub3, int[] is, byte i_0_, int[] is_1_, int i_2_) {
         try {
             if (i_0_ >= -32) method2502(null, -18);
             anInt6412++;
@@ -27,7 +27,7 @@ final class RenderableSub4
                     for (int i_6_ = 0; is_1_[i_4_] > i_6_; i_6_++)
                         is_3_[i_5_++] = (byte) -1;
                 }
-                return new aa_Sub2(var_ha_Sub3, i_2_, i, is_3_);
+                return new ShaderSub2(var_ha_Sub3, i_2_, i, is_3_);
             }
             int[] is_7_ = new int[i * i_2_];
             for (int i_8_ = 0; i > i_8_; i_8_++) {
@@ -35,7 +35,7 @@ final class RenderableSub4
                 for (int i_10_ = 0; i_10_ < is_1_[i_8_]; i_10_++)
                     is_7_[i_9_++] = -16777216;
             }
-            return new aa_Sub2(var_ha_Sub3, i_2_, i, is_7_);
+            return new ShaderSub2(var_ha_Sub3, i_2_, i, is_7_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("jda.A(" + i + ',' + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (is != null ? "{...}" : "null") + ',' + i_0_ + ',' + (is_1_ != null ? "{...}" : "null") + ',' + i_2_ + ')'));
         }
@@ -107,7 +107,7 @@ final class RenderableSub4
         return false;
     }
 
-    final boolean method2504(int i, int i_32_, ha var_ha, int i_33_) {
+    final boolean method2504(int i, int i_32_, GraphicsToolkit var_ha, int i_33_) {
         if (i_33_ >= -37) method2502(null, -82);
         anInt6407++;
         int i_34_ = this.aClass318_Sub1_6410.method2393(-117);

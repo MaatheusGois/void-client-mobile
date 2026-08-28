@@ -218,11 +218,11 @@ final class NodeList {
         class348.aClass348_4294.aClass348_4295 = class348;
     }
 
-    static final ha method2000(int i, int i_23_, Canvas canvas, d var_d) {
+    static final GraphicsToolkit method2000(int i, int i_23_, Canvas canvas, d var_d) {
         try {
             anInt3324++;
             if (i != 3) method1992(null, -40, 69, -1);
-            return new ha_Sub2(canvas, var_d, i_23_);
+            return new GlToolkitSub2(canvas, var_d, i_23_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("uh.D(" + i + ',' + i_23_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }

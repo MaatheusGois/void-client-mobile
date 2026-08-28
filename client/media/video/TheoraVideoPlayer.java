@@ -47,12 +47,12 @@ final class TheoraVideoPlayer {
     static final void method842(boolean bool) {
         anInt1501++;
         Component161.aClass46Array1942 = null;
-        if (Component210.aBoolean5300 && MenuEntry.method3229(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, za_Sub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
+        if (Component210.aBoolean5300 && MenuEntry.method3229(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
         int i = 0;
         if (bool != false) method847(null, -110);
         int i_1_ = 0;
         if (Component210.aBoolean5300) {
-            i = s_Sub3.method4008((byte) -124);
+            i = BufferCacheSub3.method4008((byte) -124);
             i_1_ = Component110.method260(false);
         }
         Component146.method1252(i_1_, r.anInt9721, i_1_, -1, i, i + Component236.anInt4017, i_1_ - -PacketReader.anInt10432, (byte) 116, i);
@@ -149,7 +149,7 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeShort((byte) 107, Component236.anInt4017);
                         class348_sub49_sub2.writeShort((byte) 107, PacketReader.anInt10432);
                         class348_sub49_sub2.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
-                        s_Sub2.method4002(class348_sub49_sub2, (byte) 55);
+                        BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
                         class348_sub49_sub2.writeString((byte) -5, Component205.aString5966);
                         class348_sub49_sub2.writeInt((byte) 120, Connection.anInt2670);
                         Buffer class348_sub49_8_ = Component192.aClass348_Sub51_3959.method3427(24);
@@ -177,7 +177,7 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeString((byte) -5, DisplayModeManagerContainer282.aString5600);
                         class348_sub49_sub2.writeByte(false, PacketReader.aClass230_10434.anInt2987);
                         class348_sub49_sub2.writeByte(false, ObjectDeserializer.anInt6967);
-                        s_Sub2.method4002(class348_sub49_sub2, (byte) 55);
+                        BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
                         class348_sub49_sub2.writeString((byte) -5, Component205.aString5966);
                         class348_sub49_sub2.writeInt((byte) 106, Connection.anInt2670);
                         Component270.method1244(92, class348_sub49_sub2);
@@ -304,16 +304,16 @@ final class TheoraVideoPlayer {
                             DisplayModeManagerContainer273.anInt5797 = class348_sub49_sub2.readUnsignedShort(842397944);
                             NodederUtil.anInt6632 = class348_sub49_sub2.readUnsignedShort(842397944);
                             Component200.aBoolean3706 = class348_sub49_sub2.readUnsignedByte(255) == 1;
-                            Component72.localPlayer.aString10544 = Component72.localPlayer.aString10537 = s_Sub2.aString8265 = class348_sub49_sub2.method3371(-13487);
+                            Component72.localPlayer.aString10544 = Component72.localPlayer.aString10537 = BufferCacheSub2.aString8265 = class348_sub49_sub2.method3371(-13487);
                             Applet_Sub1.anInt37 = class348_sub49_sub2.readUnsignedByte(255);
                             NodeSub1.anInt6551 = class348_sub49_sub2.readInt((byte) -126);
-                            aa_Sub2.aClass161_5199 = new DisplayModeManagerContainer254();
-                            aa_Sub2.aClass161_5199.anInt2143 = class348_sub49_sub2.readUnsignedShort(842397944);
-                            if (aa_Sub2.aClass161_5199.anInt2143 == 65535) aa_Sub2.aClass161_5199.anInt2143 = -1;
-                            aa_Sub2.aClass161_5199.aString2147 = class348_sub49_sub2.method3371(-13487);
+                            ShaderSub2.aClass161_5199 = new DisplayModeManagerContainer254();
+                            ShaderSub2.aClass161_5199.anInt2143 = class348_sub49_sub2.readUnsignedShort(842397944);
+                            if (ShaderSub2.aClass161_5199.anInt2143 == 65535) ShaderSub2.aClass161_5199.anInt2143 = -1;
+                            ShaderSub2.aClass161_5199.aString2147 = class348_sub49_sub2.method3371(-13487);
                             if (Component326.aClass364_5271 != DisplayModeManagerContainer345.aClass364_165) {
-                                aa_Sub2.aClass161_5199.anInt2138 = (50000 + (aa_Sub2.aClass161_5199.anInt2143));
-                                aa_Sub2.aClass161_5199.anInt2148 = (40000 + (aa_Sub2.aClass161_5199.anInt2143));
+                                ShaderSub2.aClass161_5199.anInt2138 = (50000 + (ShaderSub2.aClass161_5199.anInt2143));
+                                ShaderSub2.aClass161_5199.anInt2148 = (40000 + (ShaderSub2.aClass161_5199.anInt2143));
                             }
                             if (DisplayModeManagerContainer345.aClass364_165 != DisplayModeManagerContainer154.aClass364_1279 && ((Component223.aClass161_125.method1264((byte) 94, MenuOpener.aClass161_4839)) || (Component223.aClass161_125.method1264((byte) 112, (DefinitionSub35.aClass161_9443))))) HashNodeSub20.method3283(114);
                         }
@@ -378,7 +378,7 @@ final class TheoraVideoPlayer {
                             WorldNameText.method254(2, (byte) -124);
                             DisplayModeManagerContainer273.method1135(0);
                             DisplayModeManagerContainer348.method1741(Component80.aClass348_Sub49_Sub2_3813, (byte) 118);
-                            ha.anInt4581 = -1;
+                            GraphicsToolkit.anInt4581 = -1;
                             if (NodeSub3.aClass114_6584 != Component248.aClass114_304) DefinitionSub26.method3120(-92);
                             else Component330.method853((byte) 99);
                             if (i_13_ != Component80.aClass348_Sub49_Sub2_3813.anInt7197) throw new RuntimeException("lswp pos:" + (Component80.aClass348_Sub49_Sub2_3813.anInt7197) + " psize:" + i_13_);

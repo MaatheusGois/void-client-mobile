@@ -45,7 +45,7 @@ final class DisplayModeManagerContainer165
         return new Component15(i_1_, class221, class341, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, bool);
     }
 
-    static final void method2288(boolean bool, ha var_ha) {
+    static final void method2288(boolean bool, GraphicsToolkit var_ha) {
         anInt3845++;
         if (!DisplayModeManagerContainer5.aBoolean1211) DisplayModeManagerContainer155.method1642((byte) 108, var_ha);
         else DisplayModeManagerContainer136.method1153(var_ha, 16);

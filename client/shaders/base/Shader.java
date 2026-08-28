@@ -1,11 +1,11 @@
-/* aa - Decompiled by JODE
+/* Shader - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class aa
+abstract class Shader
 /**
- * RENAMED from `aa` (JODE-obfuscated).
- * Evidence: abstract base class; references aa; parent of aa_Sub1/2/3
+ * RENAMED from `Shader` (JODE-obfuscated).
+ * Evidence: abstract base class; references Shader; parent of ShaderSub1/2/3
  */ {
     static int anInt113;
     static Task aClass144_114;
@@ -30,7 +30,7 @@ abstract class aa
         anInt115++;
     }
 
-    public aa() {
+    public Shader() {
         /* empty */
     }
 

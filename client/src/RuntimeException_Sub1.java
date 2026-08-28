@@ -16,7 +16,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
     static boolean aBoolean4604;
     static int anInt4605;
 
-    static final aa_Sub1 method4009(int i, int[] is, int[] is_0_, int i_1_, ha_Sub2 var_ha_Sub2, int i_2_) {
+    static final ShaderSub1 method4009(int i, int[] is, int[] is_0_, int i_1_, GlToolkitSub2 var_ha_Sub2, int i_2_) {
         try {
             anInt4597++;
             byte[] is_3_ = new byte[i * i_2_];
@@ -25,7 +25,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
                 for (int i_6_ = 0; i_6_ < is_0_[i_4_]; i_6_++)
                     is_3_[i_5_++] = (byte) -1;
             }
-            return new aa_Sub1(var_ha_Sub2, i, i_2_, is_3_);
+            return new ShaderSub1(var_ha_Sub2, i, i_2_, is_3_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("kg.C(" + i + ',' + (is != null ? "{...}" : "null") + ',' + (is_0_ != null ? "{...}" : "null") + ',' + i_1_ + ',' + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i_2_ + ')'));
         }

@@ -94,7 +94,7 @@ final class Component315
         }
     }
 
-    static final void method1877(ha var_ha, int i) {
+    static final void method1877(GraphicsToolkit var_ha, int i) {
         anInt3164++;
         if (i >= -20) method1877(null, -112);
         for (RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1872(8); class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1878((byte) 124)) {
@@ -117,10 +117,10 @@ final class Component315
     static final void method1879(boolean bool) {
         if (bool) {
             Component335.aClass357ArrayArrayArray2029 = ImageProducerSprite.aClass357ArrayArrayArray9082;
-            aa_Sub1.aSArray5191 = Component9.aSArray4142;
+            ShaderSub1.aSArray5191 = Component9.aSArray4142;
         } else {
             Component335.aClass357ArrayArrayArray2029 = Component304.aClass357ArrayArrayArray1148;
-            aa_Sub1.aSArray5191 = NodeSub1Sub1.aSArray8801;
+            ShaderSub1.aSArray5191 = NodeSub1Sub1.aSArray8801;
         }
         Component291.anInt2524 = Component335.aClass357ArrayArrayArray2029.length;
     }

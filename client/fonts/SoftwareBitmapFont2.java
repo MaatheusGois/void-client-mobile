@@ -2,12 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-/** Software ({@link ha_Sub1}) bitmap-font backend (variant). */
+/** Software ({@link GlToolkitSub1}) bitmap-font backend (variant). */
 final class SoftwareBitmapFont2 extends BitmapFont {
     private final int[] anIntArray6496;
     private final int[] anIntArray6497;
     private final int[] anIntArray6498;
-    private ha_Sub1 aHa_Sub1_6499;
+    private GlToolkitSub1 aHa_Sub1_6499;
     private final int[] anIntArray6500;
     private final int[] anIntArray6501;
     private final byte[][] aByteArrayArray6502;
@@ -61,8 +61,8 @@ final class SoftwareBitmapFont2 extends BitmapFont {
         }
     }
 
-    private final void method2592(byte[] is, int[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, aa var_aa, int i_34_, int i_35_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    private final void method2592(byte[] is, int[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, Shader var_aa, int i_34_, int i_35_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_36_ = var_aa_Sub3.anIntArray5201;
         int[] is_37_ = var_aa_Sub3.anIntArray5202;
         int i_38_ = i_31_ - aHa_Sub1_6499.anInt7496;
@@ -108,7 +108,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
         }
     }
 
-    SoftwareBitmapFont2(ha_Sub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_49_) {
+    SoftwareBitmapFont2(GlToolkitSub1 var_ha_Sub1, Component184 class143, Component170[] class207s, int[] is, int[] is_49_) {
         super(var_ha_Sub1, class143);
         aHa_Sub1_6499 = var_ha_Sub1;
         aHa_Sub1_6499 = var_ha_Sub1;
@@ -125,7 +125,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
         anIntArray6496 = class207s[0].anIntArray2697;
     }
 
-    final void method2578(char c, int i, int i_50_, int i_51_, boolean bool, aa var_aa, int i_52_, int i_53_) {
+    final void method2578(char c, int i, int i_50_, int i_51_, boolean bool, Shader var_aa, int i_52_, int i_53_) {
         if (var_aa == null) fa(c, i, i_50_, i_51_, bool);
         else {
             i += anIntArray6498[c];
@@ -206,8 +206,8 @@ final class SoftwareBitmapFont2 extends BitmapFont {
         }
     }
 
-    private final void method2593(byte[] is, int[] is_76_, int[] is_77_, int i, int i_78_, int i_79_, int i_80_, int i_81_, int i_82_, int i_83_, int i_84_, int i_85_, int i_86_, aa var_aa, int i_87_, int i_88_) {
-        aa_Sub3 var_aa_Sub3 = (aa_Sub3) var_aa;
+    private final void method2593(byte[] is, int[] is_76_, int[] is_77_, int i, int i_78_, int i_79_, int i_80_, int i_81_, int i_82_, int i_83_, int i_84_, int i_85_, int i_86_, Shader var_aa, int i_87_, int i_88_) {
+        ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_89_ = var_aa_Sub3.anIntArray5201;
         int[] is_90_ = var_aa_Sub3.anIntArray5202;
         int i_91_ = i_84_ - aHa_Sub1_6499.anInt7496;

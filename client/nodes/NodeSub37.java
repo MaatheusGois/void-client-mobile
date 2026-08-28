@@ -12,7 +12,7 @@ final class NodeSub37
     NodeList aClass262_6998 = new NodeList();
     static int anInt6999;
 
-    static final void method3030(int i, ha_Sub2 var_ha_Sub2) {
+    static final void method3030(int i, GlToolkitSub2 var_ha_Sub2) {
         anInt6999++;
         if (Component244.anObject4177 == null) {
             DisplayModeManagerContainer34 class59_sub1_sub2 = new DisplayModeManagerContainer34();

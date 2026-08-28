@@ -52,7 +52,7 @@ final class Component330
         ImageCacheStore.anIntArray4031 = null;
         Applet_Sub1.anIntArray38 = new int[i_7_];
         r.anIntArray9724 = new int[i_7_];
-        aa_Sub1.anIntArray5192 = new int[i_7_];
+        ShaderSub1.anIntArray5192 = new int[i_7_];
         OggStreamReader.anIntArray9042 = new int[i_7_];
         DisplayModeManagerContainer61.anIntArray3759 = new int[i_7_];
         NodeSub50.aByteArrayArray7212 = null;
@@ -79,7 +79,7 @@ final class Component330
                             OggStreamReader.anIntArray9042[i_7_] = i_16_;
                             int i_18_ = 0xff & i_16_ >> 8;
                             int i_19_ = 0xff & i_16_;
-                            aa_Sub1.anIntArray5192[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("m" + i_18_ + "_" + i_19_, NodeSub21.method2955(i, 99)));
+                            ShaderSub1.anIntArray5192[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("m" + i_18_ + "_" + i_19_, NodeSub21.method2955(i, 99)));
                             Applet_Sub1.anIntArray38[i_7_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_18_ + "_" + i_19_, 0);
                             DisplayModeManagerContainer61.anIntArray3759[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("um" + i_18_ + "_" + i_19_, 0));
                             r.anIntArray9724[i_7_] = (SoftwareFallbackShader.aClass45_7382.method417("ul" + i_18_ + "_" + i_19_, 0));

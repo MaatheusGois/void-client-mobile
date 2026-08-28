@@ -46,7 +46,7 @@ final class InputStream_Sub2 extends InputStream {
                     int i_17_ = GradientPreset.anInt9200;
                     if (i_17_ < 3 && DisplayModeManagerContainer206.method802(i_10_, i_9_, true)) i_17_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_11_, i_13_, OpenGlShader.clientCycle, GradientPreset.anInt9200, i_17_, i_15_, Component300.method2064(i_15_, GradientPreset.anInt9200, 11219, i_16_) + -i_12_, i_16_, i_9_, i_9_, i_10_, i_10_, i_14_));
-                    r_Sub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
+                    CacheNodeSub2.aClass262_10492.method1999(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }
             } else if (class74 == GnpPositionLogger.aClass74_1519) {
                 int i_18_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
@@ -96,7 +96,7 @@ final class InputStream_Sub2 extends InputStream {
                 int i_47_ = i_46_ >> 2;
                 int i_48_ = i_46_ & 0x3;
                 int i_49_ = Component129.anIntArray487[i_47_];
-                ha_Sub3.method3824(i_45_, i_42_, i_47_, i_44_, i_48_, 115, GradientPreset.anInt9200, i_49_);
+                GlToolkitSub3.method3824(i_45_, i_42_, i_47_, i_44_, i_48_, 115, GradientPreset.anInt9200, i_49_);
             } else if (class74 == ArbShaderProgram.aClass74_6201) {
                 int i_50_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
                 int i_51_ = (i_50_ >> 4 & 0xf) + DisplayModeManagerContainer347.anInt3581 * 2;
@@ -154,7 +154,7 @@ final class InputStream_Sub2 extends InputStream {
                 int i_71_ = DisplayModeManagerContainer306.anInt4786 + (i_70_ & 0x7);
                 int i_72_ = Component330.regionTileY + i_71_;
                 int i_73_ = DisplayModeManagerContainer347.anInt3581 + (i_70_ >> 4 & 0x7);
-                int i_74_ = za_Sub2.regionTileX + i_73_;
+                int i_74_ = NodeBaseSub2.regionTileX + i_73_;
                 NodeSub37 class348_sub37 = ((NodeSub37) (Component387.aClass356_1895.method3480(i_72_ << 14 | GradientPreset.anInt9200 << 28 | i_74_, -6008)));
                 if (class348_sub37 != null) {
                     for (NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1995(4)); class348_sub34 != null; class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.method1990((byte) 49))) {
@@ -173,7 +173,7 @@ final class InputStream_Sub2 extends InputStream {
                 int i_78_ = DisplayModeManagerContainer306.anInt4786 - -(0x7 & i_77_);
                 int i_79_ = i_78_ + Component330.regionTileY;
                 int i_80_ = DisplayModeManagerContainer347.anInt3581 - -((i_77_ & 0x79) >> 4);
-                int i_81_ = za_Sub2.regionTileX - -i_80_;
+                int i_81_ = NodeBaseSub2.regionTileX - -i_80_;
                 boolean bool = (i_80_ >= 0 && i_78_ >= 0 && AbstractShaderSub4.anInt7319 > i_80_ && ParametricDefinition.anInt9109 > i_78_);
                 if (bool || Component21.method2112(124, Component37.anInt3931)) {
                     Component48.method3459(new NodeSub34(i_76_, i_75_), GradientPreset.anInt9200, i_79_, i_81_, -2);
@@ -195,7 +195,7 @@ final class InputStream_Sub2 extends InputStream {
                     int i_90_ = DisplayModeManagerContainer306.anInt4786 + (0x7 & i_89_);
                     int i_91_ = i_90_ + Component330.regionTileY;
                     int i_92_ = (DisplayModeManagerContainer347.anInt3581 - -((i_89_ & 0x7a) >> 4));
-                    int i_93_ = za_Sub2.regionTileX + i_92_;
+                    int i_93_ = NodeBaseSub2.regionTileX + i_92_;
                     int i_94_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                     int i_95_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(i + 842397936);
                     int i_96_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
@@ -219,7 +219,7 @@ final class InputStream_Sub2 extends InputStream {
                     int i_99_ = (0x7 & i_98_) + DisplayModeManagerContainer306.anInt4786;
                     int i_100_ = Component330.regionTileY + i_99_;
                     int i_101_ = DisplayModeManagerContainer347.anInt3581 - -((i_98_ & 0x7b) >> 4);
-                    int i_102_ = za_Sub2.regionTileX + i_101_;
+                    int i_102_ = NodeBaseSub2.regionTileX + i_101_;
                     int i_103_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-25);
                     int i_104_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(123);
                     if (i_104_ != StringDefinition.anInt9591) {

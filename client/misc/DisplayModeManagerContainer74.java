@@ -105,7 +105,7 @@ final class DisplayModeManagerContainer74
         int i_13_ = 126 / ((i - -54) / 38);
     }
 
-    static final void method2312(int i, int i_14_, NodeList class262, int i_15_, ha var_ha) {
+    static final void method2312(int i, int i_14_, NodeList class262, int i_15_, GraphicsToolkit var_ha) {
         do {
             try {
                 anInt4811++;

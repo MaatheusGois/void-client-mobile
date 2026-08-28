@@ -101,7 +101,7 @@ final class WaterSurfaceShader extends ShaderProgram {
         anInt6239++;
     }
 
-    WaterSurfaceShader(ha_Sub2 var_ha_Sub2, Component178 class83) {
+    WaterSurfaceShader(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
         super(var_ha_Sub2);
         aBoolean6233 = false;
         do {

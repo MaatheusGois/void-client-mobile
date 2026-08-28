@@ -234,7 +234,7 @@ final class NumberFormatter {
         return class124;
     }
 
-    final DisplayModeManagerContainer370 method1559(Component101 class154, DisplayModeManagerContainer167 class17, ha var_ha, int i, int i_20_, int i_21_, int i_22_, byte i_23_, int i_24_) {
+    final DisplayModeManagerContainer370 method1559(Component101 class154, DisplayModeManagerContainer167 class17, GraphicsToolkit var_ha, int i, int i_20_, int i_21_, int i_22_, byte i_23_, int i_24_) {
         try {
             anInt2813++;
             if (this.anIntArray2762 != null && i_21_ > 1) {
@@ -272,7 +272,7 @@ final class NumberFormatter {
                 }
                 if (aShortArray2785 != null) {
                     for (int i_30_ = 0; aShortArray2785.length > i_30_; i_30_++)
-                        class64.aa(aShortArray2785[i_30_], aShortArray2801[i_30_]);
+                        class64.Shader(aShortArray2785[i_30_], aShortArray2801[i_30_]);
                 }
                 if (class154 != null) {
                     for (int i_31_ = 0; i_31_ < 5; i_31_++) {
@@ -320,7 +320,7 @@ final class NumberFormatter {
         }
     }
 
-    final int[] method1562(int i, boolean bool, int i_37_, ha var_ha, ha var_ha_38_, BitmapFont class324, Component101 class154, int i_39_, byte i_40_, int i_41_) {
+    final int[] method1562(int i, boolean bool, int i_37_, GraphicsToolkit var_ha, GraphicsToolkit var_ha_38_, BitmapFont class324, Component101 class154, int i_39_, byte i_40_, int i_41_) {
         try {
             anInt2806++;
             DisplayModeManagerContainer77 class124 = Component189.method2277(0, (this.aClass255_2761.aClass45_3268), anInt2756, i_40_ ^ 0x65);
@@ -371,7 +371,7 @@ final class NumberFormatter {
             DisplayModeManagerContainer204 class101 = var_ha_38_.method3654();
             class101.method910();
             var_ha_38_.method3638(class101);
-            var_ha_38_.xa(1.0F);
+            var_ha_38_.DualToolkit(1.0F);
             var_ha_38_.ZA(16777215, 1.0F, 1.0F, -50.0F, -10.0F, -50.0F);
             DisplayModeManagerContainer204 class101_49_ = var_ha_38_.method3705();
             class101_49_.method902(-this.anInt2810 << 3);
@@ -381,12 +381,12 @@ final class NumberFormatter {
             int i_50_ = var_ha_38_.i();
             int i_51_ = var_ha_38_.XA();
             var_ha_38_.f(50, 2147483647);
-            var_ha_38_.ya();
+            var_ha_38_.NativeHandle();
             var_ha_38_.la();
             var_ha_38_.fillRect(0, 0, 36, 32, 0, 0);
             class64.method615(class101_49_, null, 1);
             var_ha_38_.f(i_50_, i_51_);
-            int[] is = var_ha_38_.na(0, 0, 36, 32);
+            int[] is = var_ha_38_.ShaderImpl(0, 0, 36, 32);
             if (i_40_ != -102) method1554(false, 37);
             if (i_41_ >= 1) {
                 is = method1572(-16777214, -1, is);
@@ -398,7 +398,7 @@ final class NumberFormatter {
                 if (this.anInt2812 != -1) class105.method974(0, 0);
             } else class105.method974(0, 0);
             if (i_39_ == 1 || (i_39_ == 2 && (this.anInt2820 == 1 || i != 1) && i != -1)) class324.drawText(method1557(i, i_40_ + -11517), -256, 9, 0, -16777215, i_40_ + -15);
-            is = var_ha_38_.na(0, 0, 36, 32);
+            is = var_ha_38_.ShaderImpl(0, 0, 36, 32);
             for (int i_52_ = 0; i_52_ < is.length; i_52_++) {
                 if ((0xffffff & is[i_52_]) != 0) is[i_52_] = Component224.method2057(is[i_52_], -16777216);
                 else is[i_52_] = 0;

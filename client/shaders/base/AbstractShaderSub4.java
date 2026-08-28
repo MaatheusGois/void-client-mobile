@@ -26,7 +26,7 @@ final class AbstractShaderSub4
     static Component183 aClass114_7324 = new Component183(96, 8);
     static HashTable aClass107_7325 = new HashTable();
 
-    AbstractShaderSub4(ha_Sub3 var_ha_Sub3) {
+    AbstractShaderSub4(GlToolkitSub3 var_ha_Sub3) {
         super(var_ha_Sub3);
         if (var_ha_Sub3.aBoolean8101) {
             aBoolean7311 = var_ha_Sub3.anInt8090 < 3;
@@ -221,7 +221,7 @@ final class AbstractShaderSub4
                 }
             }
             if (bool_25_) {
-                int i_35_ = aa_Sub1.aSArray5191[1 + Component117.anInt4372].method3982((byte) -86, i_22_, i_19_);
+                int i_35_ = ShaderSub1.aSArray5191[1 + Component117.anInt4372].method3982((byte) -86, i_22_, i_19_);
                 if (i_35_ > DisplayModeManagerContainer363.anIntArray4097[i_15_]) DisplayModeManagerContainer363.anIntArray4097[i_15_] = i_35_;
                 int i_36_ = i_19_ << 9;
                 if (i_36_ < ClientErrorReporter.anIntArray2117[i_15_]) ClientErrorReporter.anIntArray2117[i_15_] = i_36_;

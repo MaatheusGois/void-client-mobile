@@ -1,12 +1,12 @@
-/* aa_Sub2 - Decompiled by JODE
+/* ShaderSub2 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class aa_Sub2
+final class ShaderSub2
 /**
- * RENAMED from `aa_Sub2` (JODE-obfuscated).
- * Evidence: extends aa (aa)
- */ extends aa {
+ * RENAMED from `ShaderSub2` (JODE-obfuscated).
+ * Evidence: extends Shader (Shader)
+ */ extends Shader {
     static int anInt5194;
     static int anInt5195;
     Interface18_Impl3 anInterface18_Impl3_5196;
@@ -33,11 +33,11 @@ final class aa_Sub2
         int i_3_ = Component160.anIntArrayArrayArray4356[i][i_0_][i_2_];
         if (i_3_ == -RandomAccessFileReader.anInt3049) return false;
         if (RandomAccessFileReader.anInt3049 == i_3_) return true;
-        if (Component9.aSArray4142 == aa_Sub1.aSArray5191) return false;
+        if (Component9.aSArray4142 == ShaderSub1.aSArray5191) return false;
         int i_4_ = i_0_ << Component149.anInt4459;
         int i_5_ = i_2_ << Component149.anInt4459;
         if (i_1_ != -97) method163(-4);
-        if ((ShaderProgramSub7.method2169(i_4_ - -1, i_4_ - (-Component148.anInt3465 - -1), 1 + i_5_, 1 + i_4_, -1 + (i_5_ - -Component148.anInt3465), aa_Sub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, i_0_), aa_Sub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, 1 + i_0_), aa_Sub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), -1 + Component148.anInt3465 + i_5_, false)) && (ShaderProgramSub7.method2169(1 + i_4_, Component148.anInt3465 + (i_4_ + -1), i_5_ + 1, Component148.anInt3465 + (i_4_ - 1), i_5_ + Component148.anInt3465 - 1, aa_Sub1.aSArray5191[i].method3982((byte) -86, i_2_ - -1, 1 + i_0_), aa_Sub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_ + 1), aa_Sub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), 1 + i_5_, false))) {
+        if ((ShaderProgramSub7.method2169(i_4_ - -1, i_4_ - (-Component148.anInt3465 - -1), 1 + i_5_, 1 + i_4_, -1 + (i_5_ - -Component148.anInt3465), ShaderSub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, 1 + i_2_, 1 + i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), -1 + Component148.anInt3465 + i_5_, false)) && (ShaderProgramSub7.method2169(1 + i_4_, Component148.anInt3465 + (i_4_ + -1), i_5_ + 1, Component148.anInt3465 + (i_4_ - 1), i_5_ + Component148.anInt3465 - 1, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_ - -1, 1 + i_0_), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_ + 1), ShaderSub1.aSArray5191[i].method3982((byte) -86, i_2_, i_0_), 1 + i_5_, false))) {
             DisplayModeManagerContainer64.anInt9039++;
             Component160.anIntArrayArrayArray4356[i][i_0_][i_2_] = RandomAccessFileReader.anInt3049;
             return true;
@@ -66,7 +66,7 @@ final class aa_Sub2
         }
     }
 
-    aa_Sub2(ha_Sub3 var_ha_Sub3, int i, int i_16_, byte[] is) {
+    ShaderSub2(GlToolkitSub3 var_ha_Sub3, int i, int i_16_, byte[] is) {
         try {
             this.anInterface18_Impl3_5196 = var_ha_Sub3.method3944(is, i, DefinitionSub38.aClass304_9471, 2, false, i_16_);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);
@@ -75,7 +75,7 @@ final class aa_Sub2
         }
     }
 
-    aa_Sub2(ha_Sub3 var_ha_Sub3, int i, int i_17_, int[] is) {
+    ShaderSub2(GlToolkitSub3 var_ha_Sub3, int i, int i_17_, int[] is) {
         try {
             this.anInterface18_Impl3_5196 = var_ha_Sub3.method3839(i_17_, i, -15137, false, is);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);

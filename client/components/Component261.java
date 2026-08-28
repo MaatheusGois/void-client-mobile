@@ -58,7 +58,7 @@ final class Component261
         if (i_5_ < 18) anInt4827 = -41;
     }
 
-    Component261(ha_Sub2 var_ha_Sub2, int i, byte[] is, int i_7_) {
+    Component261(GlToolkitSub2 var_ha_Sub2, int i, byte[] is, int i_7_) {
         super(var_ha_Sub2, is, i_7_);
         try {
             anInt4827 = i;

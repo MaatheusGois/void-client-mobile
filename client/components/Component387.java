@@ -54,7 +54,7 @@ abstract class Component387
 
     static final boolean method1130(r var_r, int i, int i_1_, int i_2_, boolean[] bools) {
         boolean bool = false;
-        if (aa_Sub1.aSArray5191 != Component9.aSArray4142) {
+        if (ShaderSub1.aSArray5191 != Component9.aSArray4142) {
             int i_3_ = NodeSub1Sub1.aSArray8801[i].method3986(i_1_, i_2_, (byte) -109);
             int i_4_ = 0;
             for (/**/; i_4_ <= i; i_4_++) {

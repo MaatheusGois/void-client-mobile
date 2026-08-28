@@ -36,7 +36,7 @@ final class Component63
     private int anInt4512;
     Component144 aClass319_4513;
 
-    final DisplayModeManagerContainer370 method3558(int i, int i_0_, ha var_ha, int i_1_, int i_2_, Component344 class87, int i_3_) {
+    final DisplayModeManagerContainer370 method3558(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, Component344 class87, int i_3_) {
         try {
             if (i_2_ != 3172) aShortArray4504 = null;
             anInt4505++;
@@ -73,7 +73,7 @@ final class Component63
         return class46.aStringArray833[i];
     }
 
-    final DisplayModeManagerContainer370 method3562(int i, ha var_ha, int i_5_, int i_6_, int i_7_, Component344 class87, byte i_8_) {
+    final DisplayModeManagerContainer370 method3562(int i, GraphicsToolkit var_ha, int i_5_, int i_6_, int i_7_, Component344 class87, byte i_8_) {
         try {
             if (i_8_ <= 24) return null;
             anInt4511++;
@@ -142,7 +142,7 @@ final class Component63
         }
     }
 
-    final DisplayModeManagerContainer370 method3565(int i, int i_16_, int i_17_, int i_18_, boolean bool, ha var_ha, int i_19_, int i_20_, int i_21_, Component344 class87, s var_s, int i_22_, s var_s_23_) {
+    final DisplayModeManagerContainer370 method3565(int i, int i_16_, int i_17_, int i_18_, boolean bool, GraphicsToolkit var_ha, int i_19_, int i_20_, int i_21_, Component344 class87, s var_s, int i_22_, s var_s_23_) {
         try {
             anInt4496++;
             if (i_21_ != -129) method3566(null, 36, -84, null, 43, null, 2, (byte) 54, null, -17, true, -42, (byte) 95, -81);
@@ -162,7 +162,7 @@ final class Component63
         anInt4512 = 0;
     }
 
-    private final DisplayModeManagerContainer370 method3566(ha var_ha, int i, int i_24_, s var_s, int i_25_, Component344 class87, int i_26_, byte i_27_, s var_s_28_, int i_29_, boolean bool, int i_30_, byte i_31_, int i_32_) {
+    private final DisplayModeManagerContainer370 method3566(GraphicsToolkit var_ha, int i, int i_24_, s var_s, int i_25_, Component344 class87, int i_26_, byte i_27_, s var_s_28_, int i_29_, boolean bool, int i_30_, byte i_31_, int i_32_) {
         try {
             anInt4491++;
             int i_33_ = i_24_;
@@ -191,7 +191,7 @@ final class Component63
                 }
                 if (aShortArray4499 != null) {
                     for (int i_36_ = 0; (aShortArray4499.length > i_36_); i_36_++)
-                        class64.aa(aShortArray4499[i_36_], aShortArray4504[i_36_]);
+                        class64.Shader(aShortArray4499[i_36_], aShortArray4504[i_36_]);
                 }
                 class64.s(i_33_);
                 synchronized (this.aClass319_4513.aClass60_3990) {

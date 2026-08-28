@@ -34,7 +34,7 @@ final class DisplayModeManagerContainer322
             int i_0_ = 0;
             int i_1_ = 0;
             if (Component210.aBoolean5300) {
-                i_0_ = s_Sub3.method4008((byte) -124);
+                i_0_ = BufferCacheSub3.method4008((byte) -124);
                 i_1_ = Component110.method260(false);
             }
             int i_2_ = i_0_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true);
@@ -50,7 +50,7 @@ final class DisplayModeManagerContainer322
                 int i_5_ = (-DisplayModeManagerContainer172.anInt558 + (i_3_ + Component374.aClass46_4130.anInt755));
                 if (AbstractGlTextureSub4.mouseHandler.isAnyButtonDown(94)) {
                     if (Component156.aClass46_3701.anInt703 < RenderableObject.anInt6392) {
-                        int i_6_ = i_2_ + -ha_Sub3.anInt8001;
+                        int i_6_ = i_2_ + -GlToolkitSub3.anInt8001;
                         int i_7_ = -DefinitionSub13.anInt9203 + i_3_;
                         if (Component156.aClass46_3701.anInt729 < i_6_ || (-Component156.aClass46_3701.anInt729 > i_6_) || (i_7_ > Component156.aClass46_3701.anInt729) || i_7_ < -Component156.aClass46_3701.anInt729) Component189.aBoolean3819 = true;
                     }
@@ -75,8 +75,8 @@ final class DisplayModeManagerContainer322
                             ClientScriptExecutor.method705(class348_sub36);
                         }
                         if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.method108(Component156.aClass46_3701) != null)) Component245.method173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
-                    } else if ((Component203.anInt8770 == 1 || Component203.method2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, (ha_Sub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));
-                    else if (MatrixSub1.method913((byte) 127)) Component2.method191(true, (ha_Sub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 + (DefinitionSub13.anInt9203)));
+                    } else if ((Component203.anInt8770 == 1 || Component203.method2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));
+                    else if (MatrixSub1.method913((byte) 127)) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 + (DefinitionSub13.anInt9203)));
                     Component156.aClass46_3701 = null;
                 }
             }

@@ -4,12 +4,12 @@
 
 /**
  * RENAMED from `Class367` (JODE-obfuscated).
- * Abstract GPU shader/program base. Holds a ha_Sub3 toolkit reference (aHa_Sub3_4479) and declares abstract shader lifecycle methods (method3520/method3521); concrete GL and D3D variants implement it.
+ * Abstract GPU shader/program base. Holds a GlToolkitSub3 toolkit reference (aHa_Sub3_4479) and declares abstract shader lifecycle methods (method3520/method3521); concrete GL and D3D variants implement it.
  */
 
 abstract class AbstractShader {
     static int anInt4478;
-    ha_Sub3 aHa_Sub3_4479;
+    GlToolkitSub3 aHa_Sub3_4479;
     static int anInt4480;
     static int anInt4481;
     static int anInt4482;
@@ -31,7 +31,7 @@ abstract class AbstractShader {
         anInt4482++;
     }
 
-    AbstractShader(ha_Sub3 var_ha_Sub3) {
+    AbstractShader(GlToolkitSub3 var_ha_Sub3) {
         this.aHa_Sub3_4479 = var_ha_Sub3;
     }
 

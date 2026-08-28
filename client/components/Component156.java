@@ -28,7 +28,7 @@ final class Component156
     static final void method2192(byte i) {
         AudioMixer.anInt3227 = 0;
         anInt3702++;
-        int i_0_ = (((Component72.localPlayer.x) >> 9) - -za_Sub2.regionTileX);
+        int i_0_ = (((Component72.localPlayer.x) >> 9) - -NodeBaseSub2.regionTileX);
         int i_1_ = (Component330.regionTileY + (Component72.localPlayer.y >> 9));
         if (i != 80) method2192((byte) -34);
         if (i_0_ >= 3053 && i_0_ <= 3156 && i_1_ >= 3056 && i_1_ <= 3136) AudioMixer.anInt3227 = 1;

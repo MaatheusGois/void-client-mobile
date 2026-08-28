@@ -11,7 +11,7 @@ abstract class NodeSub5
  * RENAMED from `Class348_Sub5` (JODE-obfuscated).
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
-    ha_Sub2 aHa_Sub2_6618;
+    GlToolkitSub2 aHa_Sub2_6618;
     static int anInt6619;
     static int anInt6620;
     boolean aBoolean6621;
@@ -37,11 +37,11 @@ abstract class NodeSub5
         return null;
     }
 
-    static final ha method2753(boolean bool, int i, int i_4_, Canvas canvas, d var_d) {
+    static final GraphicsToolkit method2753(boolean bool, int i, int i_4_, Canvas canvas, d var_d) {
         try {
             anInt6628++;
             if (bool != true) aByteArray6624 = null;
-            return new ha_Sub1(canvas, var_d, i_4_, i);
+            return new GlToolkitSub1(canvas, var_d, i_4_, i);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("fba.M(" + bool + ',' + i + ',' + i_4_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }
@@ -152,7 +152,7 @@ abstract class NodeSub5
 
     abstract void method2763(byte i);
 
-    NodeSub5(ha_Sub2 var_ha_Sub2) {
+    NodeSub5(GlToolkitSub2 var_ha_Sub2) {
         this.aHa_Sub2_6618 = var_ha_Sub2;
     }
 

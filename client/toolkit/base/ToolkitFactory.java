@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class93` (JODE-obfuscated).
- * ha factory. method862(Canvas, d, CacheStore, int, int) builds and returns the global ha (ha); method861 tears it down. Called at client startup.
+ * GraphicsToolkit factory. method862(Canvas, d, CacheStore, int, int) builds and returns the global GraphicsToolkit (GraphicsToolkit); method861 tears it down. Called at client startup.
  */
 
 import jaggl.OpenGL;
@@ -26,7 +26,7 @@ final class ToolkitFactory {
         anApplet1530 = null;
     }
 
-    static final ha method862(Canvas canvas, d var_d, CacheStore class45, int i, int i_1_) {
+    static final GraphicsToolkit method862(Canvas canvas, d var_d, CacheStore class45, int i, int i_1_) {
         try {
             anInt1532++;
             if (!JaclibLoader.method215(27165)) throw new RuntimeException("");

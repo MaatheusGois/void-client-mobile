@@ -21,7 +21,7 @@ final class Component55
         DisplayModeManagerContainer104.anInt10340++;
         if (i != 0) method2333(true);
         anInt3933++;
-        ParticleSystem class348_sub47 = ParticleShader.method2148(aa_Sub3.aClass351_5200, DisplayModeManagerContainer64.aClass77_9029, i ^ ~0x53);
+        ParticleSystem class348_sub47 = ParticleShader.method2148(ShaderSub3.aClass351_5200, DisplayModeManagerContainer64.aClass77_9029, i ^ ~0x53);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, DisplayModeManagerContainer136.anInt4718);
         HashNodeSub14.method3243(118, class348_sub47);
     }

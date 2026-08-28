@@ -79,7 +79,7 @@ final class DefinitionSub26
         }
         OggUrlStream.aByteArrayArray8996 = new byte[i_18_][];
         Component30.aByteArrayArray1887 = new byte[i_18_][];
-        aa_Sub1.anIntArray5192 = new int[i_18_];
+        ShaderSub1.anIntArray5192 = new int[i_18_];
         WorldNameText.aByteArrayArray8642 = new byte[i_18_][];
         Applet_Sub1.anIntArray38 = new int[i_18_];
         NodeSub50.aByteArrayArray7212 = null;
@@ -93,7 +93,7 @@ final class DefinitionSub26
         for (int i_21_ = (-(AbstractShaderSub4.anInt7319 >> 4) + i_17_) / 8; i_21_ <= (i_17_ + (AbstractShaderSub4.anInt7319 >> 4)) / 8; i_21_++) {
             for (int i_22_ = (i_16_ - (ParametricDefinition.anInt9109 >> 4)) / 8; (i_22_ <= ((ParametricDefinition.anInt9109 >> 4) + i_16_) / 8); i_22_++) {
                 OggStreamReader.anIntArray9042[i_18_] = i_22_ + (i_21_ << 8);
-                aa_Sub1.anIntArray5192[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_21_ + "_" + i_22_, 0);
+                ShaderSub1.anIntArray5192[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("m" + i_21_ + "_" + i_22_, 0);
                 Applet_Sub1.anIntArray38[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("l" + i_21_ + "_" + i_22_, 0);
                 DisplayModeManagerContainer61.anIntArray3759[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("um" + i_21_ + "_" + i_22_, 0);
                 r.anIntArray9724[i_18_] = SoftwareFallbackShader.aClass45_7382.method417("ul" + i_21_ + "_" + i_22_, 0);

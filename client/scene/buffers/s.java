@@ -34,7 +34,7 @@ abstract class s
         }
     }
 
-    abstract void wa(r var_r, int i, int i_15_, int i_16_, int i_17_, boolean bool);
+    abstract void Interface4Impl(r var_r, int i, int i_15_, int i_16_, int i_17_, boolean bool);
 
     abstract void ka(int i, int i_18_, int i_19_);
 

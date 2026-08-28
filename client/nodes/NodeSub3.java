@@ -13,7 +13,7 @@ final class NodeSub3
  * RENAMED from `Class348_Sub3` (JODE-obfuscated).
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
-    private final s_Sub3 aS_Sub3_6566;
+    private final BufferCacheSub3 aS_Sub3_6566;
     int anInt6567;
     static int anInt6568;
     int anInt6569;
@@ -37,7 +37,7 @@ final class NodeSub3
     static int anInt6587;
     static int anInt6588;
     int anInt6589 = 0;
-    private final ha_Sub3 aHa_Sub3_6590;
+    private final GlToolkitSub3 aHa_Sub3_6590;
 
     final void method2736(byte i, int i_0_) {
         if (i != -57) method2736((byte) 25, -39);
@@ -213,7 +213,7 @@ final class NodeSub3
         aStream6574.f(-1);
     }
 
-    NodeSub3(s_Sub3 var_s_Sub3, int i, int i_43_, int i_44_, int i_45_, int i_46_) {
+    NodeSub3(BufferCacheSub3 var_s_Sub3, int i, int i_43_, int i_44_, int i_45_, int i_46_) {
         aS_Sub3_6566 = var_s_Sub3;
         this.anInt6569 = i_46_;
         this.aFloat6582 = (float) i_43_;

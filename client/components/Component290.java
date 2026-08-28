@@ -98,7 +98,7 @@ final class Component290
         if (i_5_ != 8) method1284(-59);
         int i_8_ = ToolkitFactory.anInt1534;
         if (Component210.aBoolean5300) {
-            i_7_ += s_Sub3.method4008((byte) -126);
+            i_7_ += BufferCacheSub3.method4008((byte) -126);
             i_8_ += Component110.method260(false);
         }
         if (Component20.anInt6048 == 1) {

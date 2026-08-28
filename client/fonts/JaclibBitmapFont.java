@@ -5,18 +5,18 @@
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 
-/** Jaclib / toolkit-3 ({@link ha_Sub3}) bitmap-font backend. */
+/** Jaclib / toolkit-3 ({@link GlToolkitSub3}) bitmap-font backend. */
 final class JaclibBitmapFont extends BitmapFont {
     private final Interface18_Impl3 anInterface18_Impl3_6492;
     private final boolean aBoolean6493;
-    private final ha_Sub3 aHa_Sub3_6494;
+    private final GlToolkitSub3 aHa_Sub3_6494;
     private final Interface5_Impl1 anInterface5_Impl1_6495;
 
-    final void method2578(char c, int i, int i_0_, int i_1_, boolean bool, aa var_aa, int i_2_, int i_3_) {
+    final void method2578(char c, int i, int i_0_, int i_1_, boolean bool, Shader var_aa, int i_2_, int i_3_) {
         /* empty */
     }
 
-    JaclibBitmapFont(ha_Sub3 var_ha_Sub3, Component184 class143, Component170[] class207s, boolean bool) {
+    JaclibBitmapFont(GlToolkitSub3 var_ha_Sub3, Component184 class143, Component170[] class207s, boolean bool) {
         super(var_ha_Sub3, class143);
         aHa_Sub3_6494 = var_ha_Sub3;
         int i = 0;

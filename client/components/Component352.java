@@ -90,7 +90,7 @@ final class Component352
         if (class357 != null) {
             class357.aClass318_Sub1_Sub5_4395 = class318_sub1_sub5;
             class357.aClass318_Sub1_Sub5_4407 = class318_sub1_sub5_20_;
-            int i_21_ = aa_Sub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
+            int i_21_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
             if (class318_sub1_sub5.method2376(-62)) {
                 if (class318_sub1_sub5.method2377((byte) 122)) {
                     class318_sub1_sub5.aClass318_Sub1_6379 = AudioMixer.aClass318_Sub1Array3226[i_21_];

@@ -10,7 +10,7 @@
 import jaggl.OpenGL;
 
 final class ReliefShader {
-    private final ha_Sub2 aHa_Sub2_2511;
+    private final GlToolkitSub2 aHa_Sub2_2511;
     static StringCache aClass351_2512;
     private Component244 aClass337_2513;
     static boolean aBoolean2514 = false;
@@ -145,7 +145,7 @@ final class ReliefShader {
         return new NpcDefinition(is);
     }
 
-    ReliefShader(ha_Sub2 var_ha_Sub2) {
+    ReliefShader(GlToolkitSub2 var_ha_Sub2) {
         aHa_Sub2_2511 = var_ha_Sub2;
     }
 

@@ -40,7 +40,7 @@ final class ShaderProgramSub2
         } while (false);
     }
 
-    ShaderProgramSub2(ha_Sub2 var_ha_Sub2) {
+    ShaderProgramSub2(GlToolkitSub2 var_ha_Sub2) {
         super(var_ha_Sub2);
     }
 

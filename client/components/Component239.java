@@ -146,7 +146,7 @@ final class Component239
             class148 = Component110.aClass148_231;
             Component110.aClass148_231 = Component110.aClass148_231.aClass148_2038;
             class148.aClass148_2038 = null;
-            ha_Sub2.anInt7722--;
+            GlToolkitSub2.anInt7722--;
         } else class148 = new Component3();
         class148.aClass318_Sub1_Sub3_2040 = class318_sub1_sub3;
         return class148;

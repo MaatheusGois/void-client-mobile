@@ -70,7 +70,7 @@ final class DisplayModeManagerContainer389
     static final boolean method245(int i, int i_2_, int i_3_, byte i_4_) {
         if (i_4_ < 38) return false;
         anInt8619++;
-        Interface10 interface10 = (Interface10) r_Sub2.method3297(i, i_2_, i_3_);
+        Interface10 interface10 = (Interface10) CacheNodeSub2.method3297(i, i_2_, i_3_);
         boolean bool = true;
         if (interface10 != null) bool &= JagTheoraDecoder.method520(interface10, -1);
         interface10 = ((Interface10) DisplayModeManagerContainer249.method1353(i, i_2_, i_3_, (aClass8623 != null ? aClass8623 : (aClass8623 = Interface10.class))));

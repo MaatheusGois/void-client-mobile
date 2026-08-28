@@ -1,10 +1,10 @@
-/* xa - Decompiled by JODE
+/* DualToolkit - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class xa
+final class DualToolkit
 /**
- * RENAMED from `xa` (JODE-obfuscated).
+ * RENAMED from `DualToolkit` (JODE-obfuscated).
  * Evidence: implements Interface13, Interface19; 2 native methods
  */ implements Interface13, Interface19 {
     long nativeid = 0L;
@@ -21,7 +21,7 @@ final class xa
         if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
-    xa(int i, int i_1_) {
+    DualToolkit(int i, int i_1_) {
         r(i, i_1_);
     }
 }

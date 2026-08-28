@@ -9,7 +9,7 @@ final class Component359
  */ {
     static int anInt3151;
     static HashNodeSub13 aClass348_Sub42_Sub13_3152 = null;
-    private final ha_Sub2 aHa_Sub2_3153;
+    private final GlToolkitSub2 aHa_Sub2_3153;
     static int anInt3154;
     static int anInt3155;
     long aLong3156;
@@ -49,7 +49,7 @@ final class Component359
         if (!bool) Component237.aClass107_3022.method1005(true, class348_sub42_sub13);
     }
 
-    Component359(ha_Sub2 var_ha_Sub2, long l, int i) {
+    Component359(GlToolkitSub2 var_ha_Sub2, long l, int i) {
         try {
             aHa_Sub2_3153 = var_ha_Sub2;
             this.aLong3156 = l;

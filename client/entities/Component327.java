@@ -98,7 +98,7 @@ abstract class Component327
 
     static final int method2411(Component22 class113, int i) {
         anInt8742++;
-        if (class113 == za_Sub1.aClass113_9773) return 9216;
+        if (class113 == NodeBaseSub1.aClass113_9773) return 9216;
         if (class113 == Component82.aClass113_430) return 34065;
         if (DisplayModeManagerContainer1.aClass113_3314 == class113) return 34066;
         if (i != 25602) method2413(-121, null);

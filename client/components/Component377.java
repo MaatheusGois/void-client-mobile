@@ -45,7 +45,7 @@ final class Component377
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeLong(Component283.aLong4615, (byte) 104);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, ObjectDeserializer.anInt6967);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, (PacketReader.aClass230_10434.anInt2987));
-                s_Sub2.method4002((class348_sub47.aClass348_Sub49_Sub2_7116), (byte) 55);
+                BufferCacheSub2.method4002((class348_sub47.aClass348_Sub49_Sub2_7116), (byte) 55);
                 String string_5_ = Component19.aString8605;
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string_5_ == null ? 0 : 1);
                 if (string_5_ != null) class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_5_);

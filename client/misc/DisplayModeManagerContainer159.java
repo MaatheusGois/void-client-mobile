@@ -47,7 +47,7 @@ final class DisplayModeManagerContainer159
             int i_5_ = i_4_ >> 28;
             int i_6_ = (0x3fcd8e & i_4_) >> 14;
             int i_7_ = 0xff & i_4_;
-            int i_8_ = -za_Sub2.regionTileX + i_2_ + (i_6_ << 6);
+            int i_8_ = -NodeBaseSub2.regionTileX + i_2_ + (i_6_ << 6);
             player.aBoolean10554 = class359.aBoolean4426;
             int i_9_ = -Component330.regionTileY + i_3_ + (i_7_ << 6);
             player.aByteArray10321[0] = Component293.aByteArray3300[i];
@@ -125,7 +125,7 @@ final class DisplayModeManagerContainer159
         if (i >= -84) anIntArray2744 = null;
     }
 
-    private final void method1541(int i, ha var_ha, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_) {
+    private final void method1541(int i, GraphicsToolkit var_ha, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_) {
         anInt2736++;
         if (i_35_ == 3) this.aClass348_Sub1_2745 = var_ha.method3690(i_34_, i, i_33_, i_37_, i_36_, 1.0F);
     }
@@ -350,7 +350,7 @@ final class DisplayModeManagerContainer159
         method1542(32402);
     }
 
-    DisplayModeManagerContainer159(ha var_ha, Buffer class348_sub49, int i) {
+    DisplayModeManagerContainer159(GraphicsToolkit var_ha, Buffer class348_sub49, int i) {
         try {
             if (ReferenceTable.anIntArray3726 == null) Component258.method1177((byte) 122);
             this.anInt2731 = class348_sub49.readUnsignedByte(255);

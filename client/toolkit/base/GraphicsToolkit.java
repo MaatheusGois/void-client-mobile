@@ -1,16 +1,16 @@
-/* ha - Decompiled by JODE
+/* GraphicsToolkit - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 /**
- * RENAMED from `ha` (JODE-obfuscated).
- * Abstract rendering toolkit. Base interface for all graphics backends (OpenGL/D3D/software). Declares the abstract draw/rasterize/texture methods implemented by concrete toolkits such as oa.
+ * RENAMED from `GraphicsToolkit` (JODE-obfuscated).
+ * Abstract rendering toolkit. Base interface for all graphics backends (OpenGL/D3D/software). Declares the abstract draw/rasterize/texture methods implemented by concrete toolkits such as OpenGLToolkit.
  */
 
 import java.awt.*;
 import java.util.Random;
 
-abstract class ha {
+abstract class GraphicsToolkit {
     static int anInt4561;
     static int anInt4562;
     static int anInt4563;
@@ -65,11 +65,11 @@ abstract class ha {
 
     abstract void X(int i);
 
-    abstract void xa(float f);
+    abstract void DualToolkit(float f);
 
     abstract void method3633();
 
-    abstract void ya();
+    abstract void NativeHandle();
 
     abstract Interface4 method3634(Interface3 interface3, Interface13 interface13);
 
@@ -80,13 +80,13 @@ abstract class ha {
         method3652();
     }
 
-    abstract void method3636(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, aa var_aa, int i_21_, int i_22_);
+    abstract void method3636(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, Shader var_aa, int i_21_, int i_22_);
 
     abstract Component6 c();//c
 
     abstract void method3638(DisplayModeManagerContainer204 class101);
 
-    abstract int[] na(int i, int i_23_, int i_24_, int i_25_);
+    abstract int[] ShaderImpl(int i, int i_23_, int i_24_, int i_25_);
 
     abstract int r(int i, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_);
 
@@ -129,13 +129,13 @@ abstract class ha {
 
     abstract void method3650(int i);
 
-    abstract void method3651(za var_za);
+    abstract void method3651(NodeBase var_za);
 
     abstract void P(int i, int i_55_, int i_56_, int i_57_, int i_58_);
 
     abstract void method3652();
 
-    abstract void za(int i, int i_59_, int i_60_, int i_61_, int i_62_);
+    abstract void NodeBase(int i, int i_59_, int i_60_, int i_61_, int i_62_);
 
     abstract void method3653(Component80 class299);
 
@@ -149,7 +149,7 @@ abstract class ha {
 
     final void method3656(byte i, int i_68_, int i_69_, int i_70_, int i_71_) {
         anInt4580++;
-        za(i_70_, i_71_, i_69_, i_68_, 1);
+        NodeBase(i_70_, i_71_, i_69_, i_68_, 1);
         if (i >= -97) aFloat4582 = 0.37843478F;
     }
 
@@ -175,7 +175,7 @@ abstract class ha {
         P(i, i_81_, i_80_, i_79_, 1);
     }
 
-    abstract aa method3661(int i, int i_82_, int[] is, int[] is_83_);
+    abstract Shader method3661(int i, int i_82_, int[] is, int[] is_83_);
 
     final Component24 method3662(int i, int[] is, byte i_84_, int i_85_, int i_86_, int i_87_) {
         anInt4565++;
@@ -304,7 +304,7 @@ abstract class ha {
 
     abstract Component24 method3691(Component170 class207, boolean bool);
 
-    static final synchronized ha method3692(int i, int i_168_, int i_169_, CacheStore class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
+    static final synchronized GraphicsToolkit method3692(int i, int i_168_, int i_169_, CacheStore class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
         try {
             anInt4576++;
             if (i_170_ == i_171_) return NodeSub5.method2753(true, i_168_, i_169_, canvas, var_d);
@@ -341,13 +341,13 @@ abstract class ha {
 
     abstract void method3700(float f, float f_180_, float f_181_);
 
-    abstract void A(int i, aa var_aa, int i_182_, int i_183_);
+    abstract void A(int i, Shader var_aa, int i_182_, int i_183_);
 
     abstract void method3701(Canvas canvas);
 
-    abstract za method3702(int i);
+    abstract NodeBase method3702(int i);
 
-    abstract void method3703(int i, int i_184_, int i_185_, int i_186_, int i_187_, int i_188_, aa var_aa, int i_189_, int i_190_, int i_191_, int i_192_, int i_193_);
+    abstract void method3703(int i, int i_184_, int i_185_, int i_186_, int i_187_, int i_188_, Shader var_aa, int i_189_, int i_190_, int i_191_, int i_192_, int i_193_);
 
     abstract int method3704();
 
@@ -383,7 +383,7 @@ abstract class ha {
 
     abstract Component24 method3711(int[] is, int i, int i_212_, int i_213_, int i_214_, boolean bool);
 
-    ha(d var_d) {
+    GraphicsToolkit(d var_d) {
         this.aD4579 = var_d;
         int i = -1;
         for (int i_215_ = 0; i_215_ < 8; i_215_++) {

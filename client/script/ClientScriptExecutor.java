@@ -104,18 +104,18 @@ final class ClientScriptExecutor {
     private static final void method704(int i, boolean bool) {
         if (i < 5100) {
             if (i == 5000) {
-                anIntArray1149[anInt1173++] = za.anInt7276;
+                anIntArray1149[anInt1173++] = NodeBase.anInt7276;
                 return;
             }
             if (i == 5001) {
                 anInt1173 -= 3;
-                za.anInt7276 = anIntArray1149[anInt1173];
+                NodeBase.anInt7276 = anIntArray1149[anInt1173];
                 DisplayModeManagerContainer115.aClass227_1055 = PauseTimer.method360((byte) -57, anIntArray1149[anInt1173 + 1]);
                 if (DisplayModeManagerContainer115.aClass227_1055 == null) DisplayModeManagerContainer115.aClass227_1055 = Component265.aClass227_1591;
                 Component200.anInt3713 = anIntArray1149[anInt1173 + 2];
                 anInt1156++;
                 ParticleSystem class348_sub47 = ParticleShader.method2148(NodeSub14.aClass351_6766, (DisplayModeManagerContainer64.aClass77_9029), -111);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, za.anInt7276);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, NodeBase.anInt7276);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, DisplayModeManagerContainer115.aClass227_1055.anInt2970);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component200.anInt3713);
                 HashNodeSub14.method3243(-77, class348_sub47);
@@ -886,7 +886,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5401) {
                 anInt1173 -= 2;
-                RenderableSub6.aShortArray6428[anIntArray1149[anInt1173]] = (short) aa.method160(27076, anIntArray1149[anInt1173 + 1]);
+                RenderableSub6.aShortArray6428[anIntArray1149[anInt1173]] = (short) Shader.method160(27076, anIntArray1149[anInt1173 + 1]);
                 Exception_Sub1.aClass255_112.method1930(-21804);
                 Exception_Sub1.aClass255_112.method1936(-71);
                 Component291.aClass278_2529.method2074(-118);
@@ -1066,7 +1066,7 @@ final class ClientScriptExecutor {
                 int i_125_ = anIntArray1149[anInt1173 + 1];
                 int i_126_ = anIntArray1149[anInt1173 + 2];
                 int i_127_ = anIntArray1149[anInt1173 + 3];
-                Component188.method1844(i_126_, ((i_124_ >> 14 & 0x3fff) - za_Sub2.regionTileX), false, i_125_ << 2, false, i_127_, ((i_124_ & 0x3fff) - Component330.regionTileY));
+                Component188.method1844(i_126_, ((i_124_ >> 14 & 0x3fff) - NodeBaseSub2.regionTileX), false, i_125_ << 2, false, i_127_, ((i_124_ & 0x3fff) - Component330.regionTileY));
                 return;
             }
             if (i == 5501) {
@@ -1075,16 +1075,16 @@ final class ClientScriptExecutor {
                 int i_129_ = anIntArray1149[anInt1173 + 1];
                 int i_130_ = anIntArray1149[anInt1173 + 2];
                 int i_131_ = anIntArray1149[anInt1173 + 3];
-                MenuEntry.method3231(((i_128_ & 0x3fff) - Component330.regionTileY), ((i_128_ >> 14 & 0x3fff) - za_Sub2.regionTileX), i_129_ << 2, i_131_, i_130_, -128);
+                MenuEntry.method3231(((i_128_ & 0x3fff) - Component330.regionTileY), ((i_128_ >> 14 & 0x3fff) - NodeBaseSub2.regionTileX), i_129_ << 2, i_131_, i_130_, -128);
                 return;
             }
             if (i == 5502) {
                 anInt1173 -= 6;
                 int i_132_ = anIntArray1149[anInt1173];
                 if (i_132_ >= 2) throw new RuntimeException();
-                za_Sub1.anInt9775 = i_132_;
+                NodeBaseSub1.anInt9775 = i_132_;
                 int i_133_ = anIntArray1149[anInt1173 + 1];
-                if (i_133_ + 1 >= (PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775]).length >> 1) throw new RuntimeException();
+                if (i_133_ + 1 >= (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775]).length >> 1) throw new RuntimeException();
                 NumberFormatter.anInt2798 = i_133_;
                 Component208.anInt1780 = 0;
                 Component195.anInt5019 = anIntArray1149[anInt1173 + 2];
@@ -1136,7 +1136,7 @@ final class ClientScriptExecutor {
                 int i_136_ = anIntArray1149[--anInt1173];
                 int i_137_ = i_136_ >> 14 & 0x3fff;
                 int i_138_ = i_136_ & 0x3fff;
-                i_137_ -= za_Sub2.regionTileX;
+                i_137_ -= NodeBaseSub2.regionTileX;
                 if (i_137_ < 0) i_137_ = 0;
                 else if (i_137_ >= AbstractShaderSub4.anInt7319) i_137_ = AbstractShaderSub4.anInt7319;
                 i_138_ -= Component330.regionTileY;
@@ -1165,7 +1165,7 @@ final class ClientScriptExecutor {
                 if (i_139_ == -1) {
                     int i_140_ = i_139_ >> 14 & 0x3fff;
                     int i_141_ = i_139_ & 0x3fff;
-                    i_140_ -= za_Sub2.regionTileX;
+                    i_140_ -= NodeBaseSub2.regionTileX;
                     if (i_140_ < 0) i_140_ = 0;
                     else if (i_140_ >= AbstractShaderSub4.anInt7319) i_140_ = AbstractShaderSub4.anInt7319;
                     i_141_ -= Component330.regionTileY;
@@ -3833,7 +3833,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 3308) {
                     int i_327_ = (Component72.localPlayer.plane);
-                    int i_328_ = (((Component72.localPlayer.x) >> 9) + za_Sub2.regionTileX);
+                    int i_328_ = (((Component72.localPlayer.x) >> 9) + NodeBaseSub2.regionTileX);
                     int i_329_ = (((Component72.localPlayer.y) >> 9) + Component330.regionTileY);
                     anIntArray1149[anInt1173++] = (i_327_ << 28) + (i_328_ << 14) + i_329_;
                     return;
@@ -4105,7 +4105,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 3602) {
                     int i_360_ = anIntArray1149[--anInt1173];
-                    if (Component15.anInt4930 == 2 && i_360_ < DefinitionSub30.anInt9383) anIntArray1149[anInt1173++] = ha.anIntArray4578[i_360_];
+                    if (Component15.anInt4930 == 2 && i_360_ < DefinitionSub30.anInt9383) anIntArray1149[anInt1173++] = GraphicsToolkit.anIntArray4578[i_360_];
                     else {
                         anIntArray1149[anInt1173++] = 0;
                         return;
@@ -4293,7 +4293,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 3629) {
-                    anIntArray1149[anInt1173++] = ha.anInt4583;
+                    anIntArray1149[anInt1173++] = GraphicsToolkit.anInt4583;
                     return;
                 }
                 if (i == 3630) {

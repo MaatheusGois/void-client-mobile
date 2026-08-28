@@ -200,7 +200,7 @@ abstract class DisplayModeManagerContainer213
         if (i != 10) aClass114_1068 = null;
     }
 
-    static final void method549(byte i, NodeSub21 class348_sub21, ha var_ha, Component274 class42) {
+    static final void method549(byte i, NodeSub21 class348_sub21, GraphicsToolkit var_ha, Component274 class42) {
         try {
             anInt1080++;
             Component24 class105 = class42.method375(var_ha, false);
@@ -214,9 +214,9 @@ abstract class DisplayModeManagerContainer213
                 int i_61_ = 0;
                 int i_62_ = 0;
                 if (class42.aString597 != null) {
-                    i_60_ = (AbstractGlTextureSub1.aClass143_8527.method1188(class42.aString597, null, ha_Sub3.aStringArray8019, (byte) 87, null));
+                    i_60_ = (AbstractGlTextureSub1.aClass143_8527.method1188(class42.aString597, null, GlToolkitSub3.aStringArray8019, (byte) 87, null));
                     for (int i_63_ = 0; i_60_ > i_63_; i_63_++) {
-                        String string = ha_Sub3.aStringArray8019[i_63_];
+                        String string = GlToolkitSub3.aStringArray8019[i_63_];
                         if (i_60_ + -1 > i_63_) string = string.substring(0, string.length() - 4);
                         int i_64_ = DisplayModeManagerContainer271.aClass323_521.method2564(string);
                         if (i_61_ < i_64_) i_61_ = i_64_;
@@ -256,7 +256,7 @@ abstract class DisplayModeManagerContainer213
                     if (class42.anInt602 != 0) var_ha.method3675(-i_68_ + i_70_, (byte) -125, i_68_, i_69_, i_71_ - i_69_, class42.anInt602);
                     if (class42.anInt604 != 0) var_ha.method3668(-i_68_ + i_70_, i_69_, class42.anInt604, i_68_, -i_69_ + i_71_, 67);
                     for (int i_72_ = 0; i_60_ > i_72_; i_72_++) {
-                        String string = ha_Sub3.aStringArray8019[i_72_];
+                        String string = GlToolkitSub3.aStringArray8019[i_72_];
                         if (i_72_ < i_60_ + -1) string = string.substring(0, -4 + string.length());
                         DisplayModeManagerContainer271.aClass323_521.method2563(var_ha, string, i_65_, i_66_, (class42.anInt580), true);
                         i_66_ += DisplayModeManagerContainer271.aClass323_521.method2565();

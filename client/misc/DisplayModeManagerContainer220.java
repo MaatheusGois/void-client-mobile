@@ -29,7 +29,7 @@ final class DisplayModeManagerContainer220
     private int anInt287 = 0;
     static int anInt288;
     private boolean aBoolean289;
-    private final ha_Sub2 aHa_Sub2_290;
+    private final GlToolkitSub2 aHa_Sub2_290;
     static int anInt291;
     private final NodeList aClass262_292;
     private boolean aBoolean293;
@@ -46,7 +46,7 @@ final class DisplayModeManagerContainer220
 
     static final void method271(int i, DisplayModeManagerContainer57 class46, byte i_0_, int i_1_) {
         anInt278++;
-        aa var_aa = class46.method425(NodeSub8.aHa6654, (byte) 19);
+        Shader var_aa = class46.method425(NodeSub8.aHa6654, (byte) 19);
         if (var_aa != null) {
             NodeSub8.aHa6654.KA(i_1_, i, class46.anInt709 + i_1_, i - -class46.anInt789);
             if (Component293.anInt3306 >= 3) NodeSub8.aHa6654.A(-16777216, var_aa, i_1_, i);
@@ -318,7 +318,7 @@ final class DisplayModeManagerContainer220
         if (i_20_ != i_19_) aBoolean294 = aBoolean297 = true;
     }
 
-    static final void method282(int i, ha var_ha, int i_21_, byte i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
+    static final void method282(int i, GraphicsToolkit var_ha, int i_21_, byte i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
         anInt274++;
         Component158.aHa326 = var_ha;
         Component44.aClass101_905 = Component158.aHa326.method3654();
@@ -336,7 +336,7 @@ final class DisplayModeManagerContainer220
         LogicError.method828((byte) 38, i_25_, i_21_);
     }
 
-    DisplayModeManagerContainer220(ha_Sub2 var_ha_Sub2) {
+    DisplayModeManagerContainer220(GlToolkitSub2 var_ha_Sub2) {
         anInt286 = 1;
         aClass262_292 = new NodeList();
         aBoolean293 = true;

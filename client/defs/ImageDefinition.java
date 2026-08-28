@@ -74,7 +74,7 @@ final class ImageDefinition extends Definition {
                             int i_26_ = 0;
                             int i_27_ = 0;
                             if (Component210.aBoolean5300) {
-                                i_26_ = s_Sub3.method4008((byte) -124);
+                                i_26_ = BufferCacheSub3.method4008((byte) -124);
                                 i_27_ = Component110.method260(bool_15_);
                             }
                             int i_28_ = class46.anInt696;
@@ -218,7 +218,7 @@ final class ImageDefinition extends Definition {
                                                 Component49.aClass324_4684.drawTextRightAligned(string, i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 12;
                                                 if (Loader.showCoordinates) {
-                                                    int playerX = (Component72.localPlayer.x >> 9) + za_Sub2.regionTileX;
+                                                    int playerX = (Component72.localPlayer.x >> 9) + NodeBaseSub2.regionTileX;
                                                     int playerY = (Component72.localPlayer.y >> 9) + Component330.regionTileY;
                                                     Component49.aClass324_4684.drawTextRightAligned("Coordinates: " + playerX + ", " + playerY + ", " + Component72.localPlayer.plane, i_38_, -256, i_37_, -127, -1);
                                                     i_38_ += 12;
@@ -233,7 +233,7 @@ final class ImageDefinition extends Definition {
                                             if (ReliefShader.aBoolean2514) {
                                                 Component49.aClass324_4684.drawTextRightAligned(("Polys: " + NodeSub8.aHa6654.I() + " Models: " + NodeSub8.aHa6654.M()), i_38_, -256, i_37_, -127, -1);
                                                 i_38_ += 12;
-                                                Component49.aClass324_4684.drawTextRightAligned(("Ls: " + DisplayModeManagerContainer249.anInt4666 + " La: " + Component328.anInt1482 + " NPC: " + Component150.anInt2968 + " Pl: " + za_Sub1.anInt9776), i_38_, -256, i_37_, -122, -1);
+                                                Component49.aClass324_4684.drawTextRightAligned(("Ls: " + DisplayModeManagerContainer249.anInt4666 + " La: " + Component328.anInt1482 + " NPC: " + Component150.anInt2968 + " Pl: " + NodeBaseSub1.anInt9776), i_38_, -256, i_37_, -122, -1);
                                                 Component362.method1042((byte) -123);
                                                 i_38_ += 12;
                                             }
@@ -251,7 +251,7 @@ final class ImageDefinition extends Definition {
                                     if ((class46.anInt765 == Component86.anInt4532) && NodeSub8.aHa6654.method3666()) NodeSub8.aHa6654.method3698();
                                     NodeSub8.aHa6654.KA(i, i_12_, i_14_, i_17_);
                                 }
-                                if (Component143.aBooleanArray2326[i_23_] || ha_Sub3.anInt8045 > 1) {
+                                if (Component143.aBooleanArray2326[i_23_] || GlToolkitSub3.anInt8045 > 1) {
                                     if (class46.anInt774 == 3) {
                                         if (i_28_ == 0) {
                                             if (class46.aBoolean810) NodeSub8.aHa6654.fillRect(i_24_, i_25_, (class46.anInt709), (class46.anInt789), (class46.anInt749), 0);
@@ -399,7 +399,7 @@ final class ImageDefinition extends Definition {
                                             Component270.aClass101_2123.method910();
                                             NodeSub8.aHa6654.method3638(Component270.aClass101_2123);
                                             NodeSub8.aHa6654.DA(i_64_, i_65_, i_62_, i_63_);
-                                            NodeSub8.aHa6654.ya();
+                                            NodeSub8.aHa6654.NativeHandle();
                                             if (class46.aBoolean754) NodeSub8.aHa6654.C(false);
                                             if (class46.aBoolean784) {
                                                 Cp1252Decoder.aClass101_5209.method899(class46.anInt757);

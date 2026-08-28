@@ -39,7 +39,7 @@ final class Component84
     }
 
     static final boolean method850(Component327 class318_sub1_sub3, boolean bool) {
-        boolean bool_13_ = aa_Sub1.aSArray5191 == Component9.aSArray4142;
+        boolean bool_13_ = ShaderSub1.aSArray5191 == Component9.aSArray4142;
         int i = 0;
         short i_14_ = 0;
         byte i_15_ = 0;
@@ -81,7 +81,7 @@ final class Component84
         }
         if (bool) DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[Component328.anInt1477++] = class318_sub1_sub3;
         else {
-            int i_22_ = aa_Sub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
+            int i_22_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;
             if (class318_sub1_sub3.method2376(-118)) {
                 if (class318_sub1_sub3.method2377((byte) 122)) {
                     class318_sub1_sub3.aClass318_Sub1_6379 = AudioMixer.aClass318_Sub1Array3226[i_22_];

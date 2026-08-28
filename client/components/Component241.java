@@ -66,7 +66,7 @@ final class Component241
     static Component315 aClass243_2957;
     int anInt2958;
 
-    final DisplayModeManagerContainer204[] method1618(ha var_ha, int i) {
+    final DisplayModeManagerContainer204[] method1618(GraphicsToolkit var_ha, int i) {
         anInt2952++;
         if (aClass101Array2925 != null && var_ha.anInt4567 == anInt2942) return aClass101Array2925;
         if (this.anIntArrayArray2939 == null) return null;

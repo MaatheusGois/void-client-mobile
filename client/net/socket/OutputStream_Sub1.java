@@ -84,7 +84,7 @@ final class OutputStream_Sub1 extends OutputStream {
                 if (Component72.anInt1906 != Component121.anInt4545) NodeSub16Sub2.aBoolean8870 = true;
                 Component121.anInt4545 = Component72.anInt1906;
             } else {
-                NodeSub8.aHa6654.ya();
+                NodeSub8.aHa6654.NativeHandle();
                 int i_15_ = Component38.anInt2500;
                 if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2293(Component316.anInt2481 << 3, NodeSub8.aHa6654, (byte) -72, i_1_, i_0_, i_3_, Component298.anInt4638, HashNodeSub19.anInt9701, i_15_, i_2_);
                 else NodeSub8.aHa6654.GA(i_15_);
@@ -105,7 +105,7 @@ final class OutputStream_Sub1 extends OutputStream {
                 Component381.method3570(false);
                 if (Component49.clientState == 10) {
                     Component248.method283(-127, i_0_, 256, i_2_, i_1_, i_3_, 256);
-                    ha_Sub2.method3802(i_3_, i_2_, 2, i_1_, i_0_, 256, 256);
+                    GlToolkitSub2.method3802(i_3_, i_2_, 2, i_1_, i_0_, 256, 256);
                     Component212.method2403(i_1_, 256, i_3_, i_0_, 19206, i_2_, 256);
                     Component290.method1289(i_2_, i_0_, i_3_, 8, i_1_);
                 }

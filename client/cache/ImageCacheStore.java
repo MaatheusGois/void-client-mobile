@@ -101,7 +101,7 @@ final class ImageCacheStore {
             class318_sub1_sub3_sub3.method2427(54);
         }
         int i_5_ = NodeSub8.method2774((byte) 108, class318_sub1_sub3_sub3);
-        za_Sub2.method3443(true, class318_sub1_sub3_sub3);
+        NodeBaseSub2.method3443(true, class318_sub1_sub3_sub3);
         DisplayModeManagerContainer5.method729(i_3_, i_5_, (byte) 67, class318_sub1_sub3_sub3, i_4_);
         Component140.method3208(class318_sub1_sub3_sub3, i_3_, -98);
         DisplayModeManagerContainer124.method1635(-69, class318_sub1_sub3_sub3);

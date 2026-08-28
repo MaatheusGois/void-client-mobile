@@ -156,7 +156,7 @@ abstract class DisplayModeManagerContainer194
         return i_21_;
     }
 
-    static final BitmapFont method232(ha var_ha, byte i, boolean bool, int i_22_) {
+    static final BitmapFont method232(GraphicsToolkit var_ha, byte i, boolean bool, int i_22_) {
         if (i != -53) method237(true);
         anInt5094++;
         Component48 class352 = Component272.method1734(i_22_, var_ha, (byte) 55, bool);

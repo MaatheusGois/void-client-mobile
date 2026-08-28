@@ -199,7 +199,7 @@ final class LoginPrefs {
      * Mirrors CS2 opcode 7000 (Auto Setup button): benchmark toolkits, apply best,
      * refresh display, persist prefs.
      * <p>
-     * On macOS, skip the native toolkit probe (JAWT crash / ha_Sub2 fail) — software
+     * On macOS, skip the native toolkit probe (JAWT crash / GlToolkitSub2 fail) — software
      * renderer stays; caller still dismisses the dialog via {@link #closeModalOverlays()}.
      */
     private static void runGraphicsAutoSetup() {

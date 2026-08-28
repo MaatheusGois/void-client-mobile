@@ -1,12 +1,12 @@
-/* aa_Sub1 - Decompiled by JODE
+/* ShaderSub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class aa_Sub1
+final class ShaderSub1
 /**
- * RENAMED from `aa_Sub1` (JODE-obfuscated).
- * Evidence: extends aa (aa)
- */ extends aa {
+ * RENAMED from `ShaderSub1` (JODE-obfuscated).
+ * Evidence: extends Shader (Shader)
+ */ extends Shader {
     static s[] aSArray5191;
     static int[] anIntArray5192;
     GlRectangleTexture aClass258_Sub3_Sub1_5193;
@@ -17,7 +17,7 @@ final class aa_Sub1
         anIntArray5192 = null;
     }
 
-    aa_Sub1(ha_Sub2 var_ha_Sub2, int i, int i_1_, byte[] is) {
+    ShaderSub1(GlToolkitSub2 var_ha_Sub2, int i, int i_1_, byte[] is) {
         try {
             this.aClass258_Sub3_Sub1_5193 = Component307.method3583(false, is, 6406, i_1_, var_ha_Sub2, -119, 6406, i);
             this.aClass258_Sub3_Sub1_5193.method1965(false, false, 10243);

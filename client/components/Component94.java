@@ -35,7 +35,7 @@ final class Component94
 
     static final int method2116(int i) {
         anInt3665++;
-        ha var_ha = NodeSub8.aHa6654;
+        GraphicsToolkit var_ha = NodeSub8.aHa6654;
         boolean bool = false;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(i + -5766) != 0) {
             Canvas canvas = new Canvas();

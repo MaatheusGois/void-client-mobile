@@ -38,7 +38,7 @@ final class DisplayModeManagerContainer173
         }
     }
 
-    static final void method2683(FontGlyphCache class323, NodeSub21 class348_sub21, int i, int i_0_, int i_1_, ha var_ha, int i_2_, int i_3_, Component274 class42) {
+    static final void method2683(FontGlyphCache class323, NodeSub21 class348_sub21, int i, int i_0_, int i_1_, GraphicsToolkit var_ha, int i_2_, int i_3_, Component274 class42) {
         try {
             if (i_0_ == 64) {
                 anInt4242++;
@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer173
                 int i_6_ = class42.anInt580;
                 if (class348_sub21.aBoolean6848 && class42.anInt567 != -1) i_6_ = class42.anInt567;
                 for (int i_7_ = 0; i_1_ > i_7_; i_7_++) {
-                    String string = ha_Sub3.aStringArray8019[i_7_];
+                    String string = GlToolkitSub3.aStringArray8019[i_7_];
                     if (-1 + i_1_ > i_7_) string = string.substring(0, -4 + string.length());
                     class323.method2563(var_ha, string, i, i_2_, i_6_, true);
                     i_2_ += class323.method2565();

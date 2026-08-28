@@ -10,7 +10,7 @@ final class Component160
     static int anInt4352;
     static int anInt4353;
     static int anInt4354;
-    private final ha_Sub2 aHa_Sub2_4355;
+    private final GlToolkitSub2 aHa_Sub2_4355;
     static int[][][] anIntArrayArrayArray4356;
     static int anInt4357;
     static int anInt4358;
@@ -125,7 +125,7 @@ final class Component160
         }
     }
 
-    Component160(ha_Sub2 var_ha_Sub2, d var_d) {
+    Component160(GlToolkitSub2 var_ha_Sub2, d var_d) {
         try {
             aHa_Sub2_4355 = var_ha_Sub2;
             aD4359 = var_d;

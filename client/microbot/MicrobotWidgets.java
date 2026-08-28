@@ -38,7 +38,7 @@ final class MicrobotWidgets {
         if (p == null) {
             return -1;
         }
-        return p.anIntArray10320[0] + za_Sub2.regionTileX;
+        return p.anIntArray10320[0] + NodeBaseSub2.regionTileX;
     }
 
     static int localAbsY() {

@@ -31,7 +31,7 @@ final class NodeSub22
         if (class45.method421(false, anInt6862)) i_2_++;
         if (class45.method421(false, KeyStoreLoader.anInt1639)) i_2_++;
         if (class45.method421(false, BasicMouseHandler.anInt7429)) i_2_++;
-        if (class45.method421(false, ha.anInt4562)) i_2_++;
+        if (class45.method421(false, GraphicsToolkit.anInt4562)) i_2_++;
         if (class45.method421(false, CommandHandler.anInt1435)) i_2_++;
         if (class45.method421(false, Component95.anInt1756)) i_2_++;
         if (class45.method421(false, ReferenceTable.anInt3739)) i_2_++;

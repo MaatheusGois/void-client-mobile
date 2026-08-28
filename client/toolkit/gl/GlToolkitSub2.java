@@ -1,4 +1,4 @@
-/* ha_Sub2 - Decompiled by JODE
+/* GlToolkitSub2 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
@@ -11,11 +11,11 @@ import java.awt.*;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-final class ha_Sub2
+final class GlToolkitSub2
 /**
- * RENAMED from `ha_Sub2` (JODE-obfuscated).
- * Evidence: extends ha (ha)
- */ extends ha {
+ * RENAMED from `GlToolkitSub2` (JODE-obfuscated).
+ * Evidence: extends GraphicsToolkit (GraphicsToolkit)
+ */ extends GraphicsToolkit {
     static int anInt7514;
     static int anInt7515;
     static int anInt7516;
@@ -534,10 +534,10 @@ final class ha_Sub2
         return anInt7814;
     }
 
-    final void method3636(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, aa var_aa, int i_25_, int i_26_) {
+    final void method3636(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Shader var_aa, int i_25_, int i_26_) {
         try {
             anInt7727++;
-            aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
+            ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
             method3792(110);
             method3771((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
@@ -1038,7 +1038,7 @@ final class ha_Sub2
         anInt7646++;
     }
 
-    ha_Sub2(Canvas canvas, d var_d, int i) {
+    GlToolkitSub2(Canvas canvas, d var_d, int i) {
         super(var_d);
         aClass233_7711 = new Component237();
         aClass101_Sub3_7725 = new MatrixSub3();
@@ -1295,7 +1295,7 @@ final class ha_Sub2
         aClass354_7723.method3463((byte) -110);
     }
 
-    final void xa(float f) {
+    final void DualToolkit(float f) {
         if (this.aFloat7768 != f) {
             this.aFloat7768 = f;
             method3787(-105);
@@ -1569,7 +1569,7 @@ final class ha_Sub2
         return true;
     }
 
-    final void za(int i, int i_140_, int i_141_, int i_142_, int i_143_) {
+    final void NodeBase(int i, int i_140_, int i_141_, int i_142_, int i_143_) {
         if (i_141_ < 0) i_141_ = -i_141_;
         anInt7728++;
         if (anInt7868 <= i + i_141_ && anInt7855 >= -i_141_ + i && anInt7773 <= i_140_ + i_141_ && i_140_ + -i_141_ <= anInt7787) {
@@ -1624,7 +1624,7 @@ final class ha_Sub2
 
     final void method3652() {
         for (Node class348 = aClass262_7732.method1995(4); class348 != null; class348 = aClass262_7732.method1990((byte) 55))
-            ((za_Sub1) class348).method3440(-82);
+            ((NodeBaseSub1) class348).method3440(-82);
         anInt7563++;
         if (aClass18_7720 != null) aClass18_7720.method279((byte) -126);
         if (anOpenGL7664 != null) {
@@ -1836,9 +1836,9 @@ final class ha_Sub2
         this.aFloat7830 = (float) (anInt7787 + -this.anInt7810);
     }
 
-    final za method3702(int i) {
+    final NodeBase method3702(int i) {
         anInt7538++;
-        za_Sub1 var_za_Sub1 = new za_Sub1(i);
+        NodeBaseSub1 var_za_Sub1 = new NodeBaseSub1(i);
         aClass262_7732.method1999(var_za_Sub1, -20180);
         return var_za_Sub1;
     }
@@ -1846,7 +1846,7 @@ final class ha_Sub2
     final s method3648(int i, int i_178_, int[][] is, int[][] is_179_, int i_180_, int i_181_, int i_182_) {
         try {
             anInt7600++;
-            return new s_Sub2(this, i_181_, i_182_, i, i_178_, is, is_179_, i_180_);
+            return new BufferCacheSub2(this, i_181_, i_182_, i, i_178_, is, is_179_, i_180_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("qo.VE(" + i + ',' + i_178_ + ',' + (is != null ? "{...}" : "null") + ',' + (is_179_ != null ? "{...}" : "null") + ',' + i_180_ + ',' + i_181_ + ',' + i_182_ + ')'));
         }
@@ -1928,11 +1928,11 @@ final class ha_Sub2
         return i_183_;
     }
 
-    final void method3703(int i, int i_186_, int i_187_, int i_188_, int i_189_, int i_190_, aa var_aa, int i_191_, int i_192_, int i_193_, int i_194_, int i_195_) {
+    final void method3703(int i, int i_186_, int i_187_, int i_188_, int i_189_, int i_190_, Shader var_aa, int i_191_, int i_192_, int i_193_, int i_194_, int i_195_) {
         try {
             anInt7618++;
             if (i_187_ != i || i_188_ != i_186_) {
-                aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
+                ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
                 GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
                 method3792(90);
                 method3771((byte) -122, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
@@ -2006,7 +2006,7 @@ final class ha_Sub2
         this.anInt7733 = 1 << this.anInt7731;
     }
 
-    final aa method3661(int i, int i_210_, int[] is, int[] is_211_) {
+    final Shader method3661(int i, int i_210_, int[] is, int[] is_211_) {
         try {
             anInt7589++;
             return RuntimeException_Sub1.method4009(i, is, is_211_, 0, this, i_210_);
@@ -2025,10 +2025,10 @@ final class ha_Sub2
         }
     }
 
-    final void method3651(za var_za) {
+    final void method3651(NodeBase var_za) {
         do {
             try {
-                this.aNativeHeap7730 = ((za_Sub1) var_za).aNativeHeap9770;
+                this.aNativeHeap7730 = ((NodeBaseSub1) var_za).aNativeHeap9770;
                 anInt7573++;
                 if (anInterface2_7797 != null) break;
                 Component182 class348_sub49_sub1 = new Component182(80);
@@ -2086,10 +2086,10 @@ final class ha_Sub2
         } while (false);
     }
 
-    final void A(int i, aa var_aa, int i_212_, int i_213_) {
+    final void A(int i, Shader var_aa, int i_212_, int i_213_) {
         try {
             anInt7695++;
-            aa_Sub1 var_aa_Sub1 = (aa_Sub1) var_aa;
+            ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
             method3792(119);
             method3771((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
@@ -2716,7 +2716,7 @@ final class ha_Sub2
         return this.anInt7826;
     }
 
-    final void ya() {
+    final void NativeHandle() {
         anInt7534++;
         method3748(0, true);
         OpenGL.glClear(256);
@@ -2936,7 +2936,7 @@ final class ha_Sub2
             if ((class318_sub1_sub3_sub3.anInt10285 >= 0) && (((class318_sub1_sub3_sub3.anInt10301) == DisplayModeManagerContainer341.anInt6006) || ((Component72.localPlayer.plane) == class318_sub1_sub3_sub3.plane))) {
                 NodeSub13.method2801(class318_sub1_sub3_sub3.method2426(200), i_318_ >> 1, i_320_, i_319_, i_315_ >> 1, class318_sub1_sub3_sub3, (byte) 100);
                 if (Component71.anIntArray6062[0] >= 0) {
-                    if ((class318_sub1_sub3_sub3.aString10292) != null && (i_321_ <= i_322_ || za.anInt7276 == 0 || za.anInt7276 == 3 || (za.anInt7276 == 1 && (NodeSub11.method2797(((Player) class318_sub1_sub3_sub3).aString10544, (byte) -63)))) && TheoraVideoPlayer.anInt1497 < DisplayModeManagerContainer74.anInt4814) {
+                    if ((class318_sub1_sub3_sub3.aString10292) != null && (i_321_ <= i_322_ || NodeBase.anInt7276 == 0 || NodeBase.anInt7276 == 3 || (NodeBase.anInt7276 == 1 && (NodeSub11.method2797(((Player) class318_sub1_sub3_sub3).aString10544, (byte) -63)))) && TheoraVideoPlayer.anInt1497 < DisplayModeManagerContainer74.anInt4814) {
                         DisplayModeManagerContainer74.anIntArray4819[TheoraVideoPlayer.anInt1497] = ((Component27.aClass143_4962.method1183(true, class318_sub1_sub3_sub3.aString10292)) / 2);
                         DisplayModeManagerContainer74.anIntArray4822[TheoraVideoPlayer.anInt1497] = Component71.anIntArray6062[0];
                         DisplayModeManagerContainer74.anIntArray4813[TheoraVideoPlayer.anInt1497] = Component71.anIntArray6062[1];
@@ -3645,7 +3645,7 @@ final class ha_Sub2
         OpenGL.glTexEnvfv(8960, 8705, InputStream_Sub2.aFloatArray84, 0);
     }
 
-    final int[] na(int i, int i_474_, int i_475_, int i_476_) {
+    final int[] ShaderImpl(int i, int i_474_, int i_475_, int i_476_) {
         anInt7622++;
         int[] is = new int[i_475_ * i_476_];
         for (int i_477_ = 0; i_476_ > i_477_; i_477_++)

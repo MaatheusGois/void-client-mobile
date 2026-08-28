@@ -35,7 +35,7 @@ final class SpriteAtlasShader extends ShaderProgram {
             Component236.anInt4017 = SocketConnector.anInt3473;
             PacketReader.anInt10432 = NodeSub22.anInt6857;
             DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-            ha_Sub2.anInt7666 = NodeSub22.anInt6857;
+            GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
         }
     }
 
@@ -93,7 +93,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         this.aHa_Sub2_3684.method3738(-15039, 0);
     }
 
-    SpriteAtlasShader(ha_Sub2 var_ha_Sub2, Component178 class83) {
+    SpriteAtlasShader(GlToolkitSub2 var_ha_Sub2, Component178 class83) {
         super(var_ha_Sub2);
         try {
             aClass83_6259 = class83;
@@ -127,7 +127,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         anInt6258++;
         KeyStoreLoader.anInt1639 = class45.method417("hitbar_default", 0);
         BasicMouseHandler.anInt7429 = class45.method417("timerbar_default", 0);
-        ha.anInt4562 = class45.method417("headicons_pk", 0);
+        GraphicsToolkit.anInt4562 = class45.method417("headicons_pk", 0);
         CommandHandler.anInt1435 = class45.method417("headicons_prayer", 0);
         Component95.anInt1756 = class45.method417("hint_headicons", 0);
         ReferenceTable.anInt3739 = class45.method417("hint_mapmarkers", 0);

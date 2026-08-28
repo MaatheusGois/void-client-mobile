@@ -24,7 +24,7 @@ final class SpriteSub1
     static int anInt8404;
     static int anInt8405;
     static int anInt8406;
-    private final ha_Sub3 aHa_Sub3_8407;
+    private final GlToolkitSub3 aHa_Sub3_8407;
     private final boolean aBoolean8408;
     static int anInt8409;
     private final boolean aBoolean8410;
@@ -266,11 +266,11 @@ final class SpriteSub1
         aHa_Sub3_8407.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
-    final void method983(float f, float f_66_, float f_67_, float f_68_, float f_69_, float f_70_, int i, aa var_aa, int i_71_, int i_72_) {
+    final void method983(float f, float f_66_, float f_67_, float f_68_, float f_69_, float f_70_, int i, Shader var_aa, int i_71_, int i_72_) {
         anInt8390++;
         MatrixSub2 class101_sub2 = aHa_Sub3_8407.method3934(-121);
         MatrixSub2 class101_sub2_73_ = aHa_Sub3_8407.method3820(false);
-        aa_Sub2 var_aa_Sub2 = (aa_Sub2) var_aa;
+        ShaderSub2 var_aa_Sub2 = (ShaderSub2) var_aa;
         Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
         anInterface18_Impl3_8403.method64(((aBoolean8410 || aBoolean8408 || (0x1 & i) == 0) ? DisplayModeManagerContainer105.aClass209_4874 : DisplayModeManagerContainer5.aClass209_1212), -22095);
         aHa_Sub3_8407.method3864(101);
@@ -309,7 +309,7 @@ final class SpriteSub1
 
     final void method968(int i, int i_77_, int i_78_) {
         anInt8406++;
-        int[] is = aHa_Sub3_8407.na(i, i_77_, anInt8411, anInt8417);
+        int[] is = aHa_Sub3_8407.ShaderImpl(i, i_77_, anInt8411, anInt8417);
         int[] is_79_ = new int[anInt8417 * anInt8411];
         anInterface18_Impl3_8403.method65(0, is_79_, anInt8411, 0, anInt8417, (byte) 112, 0);
         if (i_78_ == 0) {
@@ -416,7 +416,7 @@ final class SpriteSub1
 
     final void method979(int i, int i_107_, int i_108_, int i_109_, int i_110_, int i_111_) {
         anInt8392++;
-        int[] is = aHa_Sub3_8407.na(i_110_, i_111_, i_108_, i_109_);
+        int[] is = aHa_Sub3_8407.ShaderImpl(i_110_, i_111_, i_108_, i_109_);
         if (is != null) {
             for (int i_112_ = 0; i_112_ < is.length; i_112_++)
                 is[i_112_] = Component224.method2057(is[i_112_], -16777216);
@@ -424,9 +424,9 @@ final class SpriteSub1
         }
     }
 
-    final void method963(int i, int i_113_, aa var_aa, int i_114_, int i_115_) {
+    final void method963(int i, int i_113_, Shader var_aa, int i_114_, int i_115_) {
         anInt8414++;
-        aa_Sub2 var_aa_Sub2 = (aa_Sub2) var_aa;
+        ShaderSub2 var_aa_Sub2 = (ShaderSub2) var_aa;
         i_113_ += anInt8419;
         i += anInt8400;
         Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
@@ -459,7 +459,7 @@ final class SpriteSub1
         aHa_Sub3_8407.method3879(-8629);
     }
 
-    SpriteSub1(ha_Sub3 var_ha_Sub3, int i, int i_118_, boolean bool) {
+    SpriteSub1(GlToolkitSub3 var_ha_Sub3, int i, int i_118_, boolean bool) {
         aBoolean8418 = false;
         anInt8400 = 0;
         anInt8417 = i_118_;
@@ -473,7 +473,7 @@ final class SpriteSub1
         aBoolean8391 = !aBoolean8408 && anInterface18_Impl3_8403.method73(119);
     }
 
-    SpriteSub1(ha_Sub3 var_ha_Sub3, int i, int i_119_, int[] is, int i_120_, int i_121_) {
+    SpriteSub1(GlToolkitSub3 var_ha_Sub3, int i, int i_119_, int[] is, int i_120_, int i_121_) {
         aBoolean8418 = false;
         anInt8400 = 0;
         try {

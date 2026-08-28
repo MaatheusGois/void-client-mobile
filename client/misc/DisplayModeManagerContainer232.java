@@ -35,7 +35,7 @@ final class DisplayModeManagerContainer232
         if (i != -49) method2022(null, 101);
         if (bool) {
             int i_0_ = (Math.max(Component236.anInt4017, DisplayModeManagerContainer23.anInt1524));
-            int i_1_ = (Math.max(PacketReader.anInt10432, ha_Sub2.anInt7666));
+            int i_1_ = (Math.max(PacketReader.anInt10432, GlToolkitSub2.anInt7666));
             // Stretch title/login background to the full viewport (same full-bleed
             // feel as in-game). Cover/fit left letterboxing or cropped art.
             aClass105_4688.method973(0, 0, i_0_, i_1_);

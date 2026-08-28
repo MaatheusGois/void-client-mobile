@@ -17,7 +17,7 @@ final class NodeSub20
     static int anInt6828;
     static int anInt6829;
     static int[] anIntArray6830 = {16, 32, 64, 128};
-    private ha_Sub2 aHa_Sub2_6831;
+    private GlToolkitSub2 aHa_Sub2_6831;
     float aFloat6832;
     int anInt6833;
     static int anInt6834;
@@ -25,7 +25,7 @@ final class NodeSub20
     static int anInt6836;
     static int anInt6837;
     static int anInt6838;
-    private final s_Sub2 aS_Sub2_6839;
+    private final BufferCacheSub2 aS_Sub2_6839;
     private NativeHeapBuffer aNativeHeapBuffer6840;
     int anInt6841;
     private final int[] anIntArray6842;
@@ -202,7 +202,7 @@ final class NodeSub20
         } else Buffer.method3379(2, 8);
     }
 
-    NodeSub20(s_Sub2 var_s_Sub2, int i, int i_38_, int i_39_, int i_40_, int i_41_) {
+    NodeSub20(BufferCacheSub2 var_s_Sub2, int i, int i_38_, int i_39_, int i_40_, int i_41_) {
         aS_Sub2_6839 = var_s_Sub2;
         anIntArray6842 = new int[(aS_Sub2_6839.anInt4587 * aS_Sub2_6839.anInt4590)];
         this.anInt6825 = i_39_;

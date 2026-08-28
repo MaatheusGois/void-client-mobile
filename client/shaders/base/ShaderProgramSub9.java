@@ -153,7 +153,7 @@ final class ShaderProgramSub9
         int i_9_ = 96 / ((i - -60) / 38);
     }
 
-    ShaderProgramSub9(ha_Sub2 var_ha_Sub2) {
+    ShaderProgramSub9(GlToolkitSub2 var_ha_Sub2) {
         super(var_ha_Sub2);
         if (var_ha_Sub2.aBoolean7863) {
             aBoolean6308 = var_ha_Sub2.anInt7795 < 3;
@@ -213,7 +213,7 @@ final class ShaderProgramSub9
             else {
                 if (StringDefinition.anInt9591 == i_22_) throw new RuntimeException("s:lr");
                 Component135 class359 = (NpcDefinition.aClass359Array6802[i_22_] = new Component135());
-                class359.anInt4420 = ((Component330.regionTileY - -(player.anIntArray10317[0]) >> 6) + ((player.anIntArray10320[0] + za_Sub2.regionTileX) >> 6 << 14) + ((player.plane) << 28));
+                class359.anInt4420 = ((Component330.regionTileY - -(player.anIntArray10317[0]) >> 6) + ((player.anIntArray10320[0] + NodeBaseSub2.regionTileX) >> 6 << 14) + ((player.plane) << 28));
                 if (player.anInt10524 != -1) class359.anInt4423 = player.anInt10524;
                 else class359.anInt4423 = player.aClass264_10217.method2019((byte) -91);
                 class359.aBoolean4426 = player.aBoolean10554;
@@ -330,7 +330,7 @@ final class ShaderProgramSub9
                 int i_38_ = i_37_ >> 28;
                 int i_39_ = 0x3fff & i_37_ >> 14;
                 int i_40_ = 0x3fff & i_37_;
-                int i_41_ = ((i_39_ + ((player.anIntArray10320[0]) + za_Sub2.regionTileX) & 0x3fff) - za_Sub2.regionTileX);
+                int i_41_ = ((i_39_ + ((player.anIntArray10320[0]) + NodeBaseSub2.regionTileX) & 0x3fff) - NodeBaseSub2.regionTileX);
                 int i_42_ = (-Component330.regionTileY + (0x3fff & (i_40_ + Component330.regionTileY + (player.anIntArray10317[0]))));
                 if (bool) {
                     player.aBoolean10539 = true;

@@ -70,7 +70,7 @@ final class StaticElementRenderer extends Renderable {
         aClass351_6443 = null;
     }
 
-    static final void method2509(int i, int i_0_, ha var_ha, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_) {
+    static final void method2509(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_) {
         anInt6438++;
         if (bool != true) anInt6451 = -14;
         var_ha.method3675(i, (byte) -125, i_1_, i_0_, i_3_, i_2_);
@@ -96,7 +96,7 @@ final class StaticElementRenderer extends Renderable {
         }
     }
 
-    final void method2511(boolean bool, ha var_ha, long l) {
+    final void method2511(boolean bool, GraphicsToolkit var_ha, long l) {
         try {
             anInt6437++;
             if (bool != true) this.aClass243_6433 = null;
@@ -107,7 +107,7 @@ final class StaticElementRenderer extends Renderable {
         }
     }
 
-    static final void method2512(d var_d, ha var_ha, int i) {
+    static final void method2512(d var_d, GraphicsToolkit var_ha, int i) {
         try {
             anInt6440++;
             if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243 != null) {
@@ -127,7 +127,7 @@ final class StaticElementRenderer extends Renderable {
                     int[] is = new int[3];
                     int i_7_ = -1;
                     int i_8_ = -1;
-                    if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.method3236(is, (za_Sub2.regionTileX - -((Component72.localPlayer.x) >> 9)), ((Component72.localPlayer.y) >> 9) + Component330.regionTileY, (Component72.localPlayer.plane), (byte) -28)) {
+                    if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.method3236(is, (NodeBaseSub2.regionTileX - -((Component72.localPlayer.x) >> 9)), ((Component72.localPlayer.y) >> 9) + Component330.regionTileY, (Component72.localPlayer.plane), (byte) -28)) {
                         i_7_ = -DisplayModeManagerContainer229.anInt1266 + is[1];
                         i_8_ = -DisplayModeManagerContainer229.anInt1263 + is[2];
                     }
@@ -242,7 +242,7 @@ final class StaticElementRenderer extends Renderable {
         }
     }
 
-    final void method2513(ha var_ha, int i, long l, int i_9_, boolean bool) {
+    final void method2513(GraphicsToolkit var_ha, int i, long l, int i_9_, boolean bool) {
         do {
             try {
                 if (!this.aBoolean6446) {
@@ -393,7 +393,7 @@ final class StaticElementRenderer extends Renderable {
         } while (false);
     }
 
-    StaticElementRenderer(ha var_ha, Component30 class129, RenderableSub10 class318_sub10, long l) {
+    StaticElementRenderer(GraphicsToolkit var_ha, Component30 class129, RenderableSub10 class318_sub10, long l) {
         this.aClass284_6444 = new Component94();
         aClass284_6449 = new Component94();
         aBoolean6453 = false;

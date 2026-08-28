@@ -59,7 +59,7 @@ final class DisplayModeManagerContainer174
     private double aDouble10414;
     static int anInt10415;
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10379++;
         DisplayModeManagerContainer370 class64 = method2476(0, var_ha, (byte) 127);
         if (class64 != null) {
@@ -96,7 +96,7 @@ final class DisplayModeManagerContainer174
         } else aDouble10409 = ((double) i_0_ - aDouble10384) / d;
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
         try {
             if (i_7_ > -106) method2474((byte) 11);
             anInt10415++;
@@ -123,7 +123,7 @@ final class DisplayModeManagerContainer174
         return false;
     }
 
-    private final void method2473(DisplayModeManagerContainer204 class101, DisplayModeManagerContainer370 class64, ha var_ha, int i) {
+    private final void method2473(DisplayModeManagerContainer204 class101, DisplayModeManagerContainer370 class64, GraphicsToolkit var_ha, int i) {
         do {
             try {
                 anInt10406++;
@@ -205,13 +205,13 @@ final class DisplayModeManagerContainer174
         }
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (i != 7) aBoolean10407 = true;
         anInt10376++;
         return null;
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10397++;
         DisplayModeManagerContainer370 class64 = method2476(2048, var_ha, (byte) 127);
         if (class64 == null) return null;
@@ -234,7 +234,7 @@ final class DisplayModeManagerContainer174
         return class318_sub4;
     }
 
-    final boolean method2391(ha var_ha, int i, int i_19_, int i_20_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_19_, int i_20_) {
         if (i_20_ != 0) return true;
         anInt10380++;
         return false;
@@ -316,7 +316,7 @@ final class DisplayModeManagerContainer174
         anInt10370++;
     }
 
-    private final DisplayModeManagerContainer370 method2476(int i, ha var_ha, byte i_36_) {
+    private final DisplayModeManagerContainer370 method2476(int i, GraphicsToolkit var_ha, byte i_36_) {
         anInt10377++;
         Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 75, anInt10391);
         if (i_36_ < 126) aClass318_Sub10_10378 = null;
@@ -333,7 +333,7 @@ final class DisplayModeManagerContainer174
             else class147.method1196(i_41_, i_42_, string_43_, string, string_40_, -18691, i_38_, string_39_, string_37_);
             RenderableSub2.aClass147Array6400[0] = class147;
             HashNodeSub3.anInt9501 = ResourceLoader.anInt3918;
-            if (i <= -109) za_Sub1.anInt9774++;
+            if (i <= -109) NodeBaseSub1.anInt9774++;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.method2929(runtimeexception, ("to.K(" + (string != null ? "{...}" : "null") + ',' + (string_37_ != null ? "{...}" : "null") + ',' + i + ',' + i_38_ + ',' + (string_39_ != null ? "{...}" : "null") + ',' + (string_40_ != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + (string_43_ != null ? "{...}" : "null") + ')'));
         }

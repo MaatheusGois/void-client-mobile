@@ -199,7 +199,7 @@ final class TeleportHandler {
         return false;
     }
 
-    static final void method3498(int i, ha var_ha, int i_39_, int i_40_, boolean bool, int i_41_) {
+    static final void method3498(int i, GraphicsToolkit var_ha, int i_39_, int i_40_, boolean bool, int i_41_) {
         do {
             try {
                 anInt4442++;

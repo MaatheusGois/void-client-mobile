@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class218` (JODE-obfuscated).
- * Scene/world manager. Holds the master NodeList of scene nodes (aClass262_2859) and builds the 3D scene (method1591) using the ha and tile data.
+ * Scene/world manager. Holds the master NodeList of scene nodes (aClass262_2859) and builds the 3D scene (method1591) using the GraphicsToolkit and tile data.
  */
 
 final class SceneManager {
@@ -82,7 +82,7 @@ final class SceneManager {
         }
     }
 
-    final Component24 method1596(int i, boolean bool, int i_18_, ha var_ha) {
+    final Component24 method1596(int i, boolean bool, int i_18_, GraphicsToolkit var_ha) {
         anInt2857++;
         if (i_18_ < 51) aClass114_2860 = null;
         long l = var_ha.anInt4567 << 19 | (this.anInt2853 | i << 16 | (!bool ? 0 : 262144));

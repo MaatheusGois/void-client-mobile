@@ -31,7 +31,7 @@ final class DisplayModeManagerContainer50
     static boolean aBoolean3870 = false;
     private final DisplayModeManagerContainer365 aClass72_3871;
 
-    final boolean method2292(int i, ha var_ha, int i_0_) {
+    final boolean method2292(int i, GraphicsToolkit var_ha, int i_0_) {
         if (anInt3859 != i_0_) {
             anInt3859 = i_0_;
             int i_1_ = PrimitiveTypeDefinition.method3051(i_0_, 4096);
@@ -70,7 +70,7 @@ final class DisplayModeManagerContainer50
         return bool;
     }
 
-    final void method2293(int i, ha var_ha, byte i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
+    final void method2293(int i, GraphicsToolkit var_ha, byte i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
         i_10_ = 0x3fff & i + i_10_;
         anInt3860++;
         if (anInt3858 != -1 && anInt3863 != 0) {
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer50
         if (i < -46) {
             for (int i_22_ = 0; i_22_ < 100; i_22_++)
                 RenderableSub2.aClass147Array6400[i_22_] = null;
-            za_Sub1.anInt9774 = 0;
+            NodeBaseSub1.anInt9774 = 0;
         }
     }
 

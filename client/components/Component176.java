@@ -11,7 +11,7 @@ final class Component176
     private Component168 aClass315_3743;
     private volatile boolean aBoolean3744;
     private volatile boolean aBoolean3745;
-    private final ha aHa3746;
+    private final GraphicsToolkit aHa3746;
     private final int[] anIntArray3747;
     private final NodeSub1[] aClass348_Sub1Array3748 = new NodeSub1[8];
     private final int anInt3749;
@@ -65,7 +65,7 @@ final class Component176
                 } else {
                     int i = ((RenderableSub2) class318).anInt6394;
                     if (i >= 1 && i <= 4) {
-                        s var_s = aa_Sub1.aSArray5191[i - 1];
+                        s var_s = ShaderSub1.aSArray5191[i - 1];
                         for (int i_0_ = 0; i_0_ < (Component197.anInt10084 + Component197.anInt10084); i_0_++) {
                             for (int i_1_ = 0; i_1_ < (Component197.anInt10084 + Component197.anInt10084); i_1_++) {
                                 if (Component95.aBooleanArrayArrayArray1751[i - 1][i_0_][i_1_]) {
@@ -112,7 +112,7 @@ final class Component176
         return aClass315_3743 == null || (!aBoolean3744 && aClass315_3743.method2360(70));
     }
 
-    Component176(int i, ha var_ha) {
+    Component176(int i, GraphicsToolkit var_ha) {
         anIntArray3747 = new int[3];
         aBoolean3750 = true;
         aBoolean3745 = true;

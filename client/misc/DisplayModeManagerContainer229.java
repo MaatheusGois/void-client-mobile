@@ -49,7 +49,7 @@ class DisplayModeManagerContainer229
     static int anInt1276;
     static int anInt1277;
 
-    static final void method745(ha var_ha, NodeSub21 class348_sub21, Component274 class42) {
+    static final void method745(GraphicsToolkit var_ha, NodeSub21 class348_sub21, Component274 class42) {
         if (class42.anIntArray591 != null) {
             int[] is = new int[class42.anIntArray591.length];
             for (int i = 0; i < is.length / 2; i++) {
@@ -131,12 +131,12 @@ class DisplayModeManagerContainer229
         aClass243ArrayArrayArray1269 = null;
     }
 
-    private static final void method747(ha var_ha, NodeSub21 class348_sub21, int i, int i_15_, int i_16_, int i_17_) {
+    private static final void method747(GraphicsToolkit var_ha, NodeSub21 class348_sub21, int i, int i_15_, int i_16_, int i_17_) {
         class348_sub21.anInt6853 = (anInt1272 + (i_16_ + i * (class348_sub21.anInt6852 - anInt1274) >> 16));
         class348_sub21.anInt6855 = (anInt1268 - (i_17_ + i_15_ * (class348_sub21.anInt6851 - anInt1257) >> 16));
     }
 
-    static final void method748(ha var_ha) {
+    static final void method748(GraphicsToolkit var_ha) {
         int i = anInt1265 - anInt1274;
         int i_18_ = anInt1277 - anInt1257;
         int i_19_ = (anInt1276 - anInt1272 << 16) / i;
@@ -157,7 +157,7 @@ class DisplayModeManagerContainer229
         anIntArray1260 = null;
     }
 
-    private static final void method750(ha var_ha, Buffer class348_sub49, int i, int i_21_, int i_22_, int i_23_, int[] is, int[] is_24_) {
+    private static final void method750(GraphicsToolkit var_ha, Buffer class348_sub49, int i, int i_21_, int i_22_, int i_23_, int[] is, int[] is_24_) {
         int i_25_ = class348_sub49.readUnsignedByte(255);
         if ((i_25_ & 0x1) == 0) {
             boolean bool = (i_25_ & 0x2) == 0;
@@ -329,7 +329,7 @@ class DisplayModeManagerContainer229
         aClass348_Sub42_Sub14_1243 = (HashNodeSub14) aClass356_1241.method3480(i, -6008);
     }
 
-    private static final void method755(ha var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
+    private static final void method755(GraphicsToolkit var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
         if (bool || i_60_ != 0 || i_61_ > 0) {
             if (i_61_ == 0) var_ha.fillRect(i, i_57_, i_58_, i_59_, i_60_, 0);
             else {
@@ -397,7 +397,7 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final void method756(ha var_ha, int i, int i_75_) {
+    static final void method756(GraphicsToolkit var_ha, int i, int i_75_) {
         Buffer class348_sub49 = (new Buffer(aClass45_1237.method391((aClass348_Sub42_Sub14_1243.aString9625), "area", -29832)));
         int i_76_ = class348_sub49.readUnsignedByte(255);
         int[] is = new int[i_76_];
@@ -469,7 +469,7 @@ class DisplayModeManagerContainer229
         return ((HashNodeSub14) aClass356_1241.method3480(i, -6008));
     }
 
-    static final NodeList method758(ha var_ha) {
+    static final NodeList method758(GraphicsToolkit var_ha) {
         int i = anInt1265 - anInt1274;
         int i_102_ = anInt1277 - anInt1257;
         int i_103_ = (anInt1276 - anInt1272 << 16) / i;
@@ -527,13 +527,13 @@ class DisplayModeManagerContainer229
         }
     }
 
-    private static final NodeList method762(ha var_ha, int i, int i_115_, int i_116_, int i_117_) {
+    private static final NodeList method762(GraphicsToolkit var_ha, int i, int i_115_, int i_116_, int i_117_) {
         for (NodeSub21 class348_sub21 = (NodeSub21) aClass262_1254.method1995(4); class348_sub21 != null; class348_sub21 = (NodeSub21) aClass262_1254.method1990((byte) 74))
             method747(var_ha, class348_sub21, i, i_115_, i_116_, i_117_);
         return aClass262_1254;
     }
 
-    private static final void method763(ha var_ha, int i, int i_118_, int i_119_, int i_120_, short[] is, byte[] is_121_) {
+    private static final void method763(GraphicsToolkit var_ha, int i, int i_118_, int i_119_, int i_120_, short[] is, byte[] is_121_) {
         if (is != null) {
             for (int i_122_ = 0; i_122_ < is.length; i_122_++) {
                 Component44 class51 = aClass263_1245.method2005(0, is[i_122_] & 0xffff);
@@ -570,7 +570,7 @@ class DisplayModeManagerContainer229
             anIntArray1260[i_130_ + 1] = method759(var_d, i_130_, i, i_129_);
     }
 
-    private static final void method765(ha var_ha, int i, int i_131_, int i_132_, int i_133_) {
+    private static final void method765(GraphicsToolkit var_ha, int i, int i_131_, int i_132_, int i_133_) {
         int i_134_ = anInt1265 - anInt1274;
         int i_135_ = anInt1277 - anInt1257;
         if (anInt1265 < anInt1259) i_134_++;

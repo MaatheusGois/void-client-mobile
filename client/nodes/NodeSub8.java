@@ -9,7 +9,7 @@ final class NodeSub8
  * RENAMED from `Class348_Sub8` (JODE-obfuscated).
  * Evidence: subclass of Node (hierarchy)
  */ extends Node {
-    static ha aHa6654;
+    static GraphicsToolkit aHa6654;
     static int[] anIntArray6655;
     static boolean[][] aBooleanArrayArray6656;
     byte[] aByteArray6657;
@@ -51,7 +51,7 @@ final class NodeSub8
         } else if (class318_sub1_sub3_sub3 instanceof Npc) {
             Npc npc = (Npc) class318_sub1_sub3_sub3;
             if ((npc.anInt10499) != -1 && ((npc.anInt10319) == 0 || npc.anInt10326 > 0)) {
-                int i_3_ = (-((-za_Sub2.regionTileX + npc.anInt10499 - za_Sub2.regionTileX) * 256) + (npc.x));
+                int i_3_ = (-((-NodeBaseSub2.regionTileX + npc.anInt10499 - NodeBaseSub2.regionTileX) * 256) + (npc.x));
                 int i_4_ = (npc.y - 256 * (npc.anInt10512 + (-Component330.regionTileY + -Component330.regionTileY)));
                 if (i_3_ != 0 || i_4_ != 0) npc.method2440((byte) 49, 0x3fff & (int) (Math.atan2(i_3_, i_4_) * 2607.5945876176133));
                 npc.anInt10499 = -1;

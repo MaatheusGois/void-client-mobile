@@ -1,17 +1,17 @@
-/* ja - Decompiled by JODE
+/* OpenGLMatrix - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class ja
+final class OpenGLMatrix
 /**
- * RENAMED from `ja` (JODE-obfuscated).
+ * RENAMED from `OpenGLMatrix` (JODE-obfuscated).
  * Evidence: extends Class101 (Matrix); implements Interface19; 17 native methods
  */ extends DisplayModeManagerContainer204 implements Interface19 {
     long nativeid;
 
     private final native void la();
 
-    private final native void za(long l, int i);
+    private final native void NodeBase(long l, int i);
 
     private final native void AA(long l, boolean bool);
 
@@ -44,7 +44,7 @@ final class ja
     private final native void w(long l, int[] is);
 
     final void method908(int i) {
-        za(this.nativeid, i);
+        NodeBase(this.nativeid, i);
     }
 
     private final native void XA(long l, int i, int i_5_, int i_6_, int[] is);
@@ -78,7 +78,7 @@ final class ja
     private final native void J(long l, int i);
 
     final void method898(DisplayModeManagerContainer204 class101) {
-        l(this.nativeid, ((ja) class101).nativeid);
+        l(this.nativeid, ((OpenGLMatrix) class101).nativeid);
     }
 
     private final native void b(long l, int i, int i_18_, int i_19_, int[] is);
@@ -100,7 +100,7 @@ final class ja
     }
 
     final DisplayModeManagerContainer204 method907() {
-        ja var_ja_29_ = new ja();
+        OpenGLMatrix var_ja_29_ = new OpenGLMatrix();
         var_ja_29_.method898(this);
         return var_ja_29_;
     }
@@ -109,7 +109,7 @@ final class ja
         t(this.nativeid, i);
     }
 
-    ja() {
+    OpenGLMatrix() {
         la();
     }
 

@@ -17,7 +17,7 @@ final class NodeSub35
 
     static final void method3027(byte i) {
         anInt6975++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && Component117.anInt4372 != Component385.anInt2204) NodeSub41.method3157(DisplayModeManagerContainer363.anInt4095, (byte) 123, ha.anInt4581, 11, false);
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && Component117.anInt4372 != Component385.anInt2204) NodeSub41.method3157(DisplayModeManagerContainer363.anInt4095, (byte) 123, GraphicsToolkit.anInt4581, 11, false);
         else {
             NodeSub46.method3319(NodeSub8.aHa6654, (byte) -121);
             if (i != 33) method3028(-79);

@@ -19,7 +19,7 @@ abstract class DisplayModeManagerContainer28
     final boolean method2382(byte i) {
         if (i > -51) aClass351_8724 = null;
         anInt8723++;
-        return aa_Sub2.method164(this.aByte6376, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
+        return ShaderSub2.method164(this.aByte6376, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
     }
 
     final int method2384(NodeSub1[] class348_sub1s, int i) {

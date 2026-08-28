@@ -63,7 +63,7 @@ final class Player extends DisplayModeManagerContainer58 {
     static int[] anIntArray10566;
     static int anInt10567 = -1;
 
-    final void method2387(ha var_ha, int i) {
+    final void method2387(GraphicsToolkit var_ha, int i) {
         anInt10533++;
         if (this.aClass154_10536 != null && (this.aBoolean10318 || method2459(0, var_ha, -123))) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -111,7 +111,7 @@ final class Player extends DisplayModeManagerContainer58 {
         this.anIntArray10317[0] = i_5_;
     }
 
-    final boolean method2391(ha var_ha, int i, int i_7_, int i_8_) {
+    final boolean method2391(GraphicsToolkit var_ha, int i, int i_7_, int i_8_) {
         anInt10562++;
         if (this.aClass154_10536 == null || !method2459(131072, var_ha, 113)) return false;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -178,7 +178,7 @@ final class Player extends DisplayModeManagerContainer58 {
         anInt10520 = class348_sub49.readUnsignedShort(842397944);
         this.aString10537 = class348_sub49.readString((byte) -47);
         this.aString10544 = this.aString10537;
-        if (this == Component72.localPlayer) s_Sub2.aString8265 = this.aString10537;
+        if (this == Component72.localPlayer) BufferCacheSub2.aString8265 = this.aString10537;
         this.anInt10516 = class348_sub49.readUnsignedByte(i ^ 0xab);
         if (i != 84) anInt10520 = 87;
         if (bool_12_) {
@@ -234,7 +234,7 @@ final class Player extends DisplayModeManagerContainer58 {
         }
     }
 
-    private final void method2453(int i, ha var_ha, int i_32_, DisplayModeManagerContainer370 class64, int i_33_, int i_34_, DisplayModeManagerContainer204 class101, int i_35_) {
+    private final void method2453(int i, GraphicsToolkit var_ha, int i_32_, DisplayModeManagerContainer370 class64, int i_33_, int i_34_, DisplayModeManagerContainer204 class101, int i_35_) {
         do {
             try {
                 anInt10548++;
@@ -256,7 +256,7 @@ final class Player extends DisplayModeManagerContainer58 {
         } while (false);
     }
 
-    private final void method2454(int i, int i_39_, int i_40_, int i_41_, DisplayModeManagerContainer370 class64, int i_42_, DisplayModeManagerContainer204 class101, ha var_ha, int i_43_) {
+    private final void method2454(int i, int i_39_, int i_40_, int i_41_, DisplayModeManagerContainer370 class64, int i_42_, DisplayModeManagerContainer204 class101, GraphicsToolkit var_ha, int i_43_) {
         do {
             try {
                 if (i != 6253) this.aString10544 = null;
@@ -277,7 +277,7 @@ final class Player extends DisplayModeManagerContainer58 {
         } while (false);
     }
 
-    final ComponentDownloader method2381(ha var_ha, int i) {
+    final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
         if (i != 7) this.aString10544 = null;
         anInt10518++;
         return null;
@@ -289,7 +289,7 @@ final class Player extends DisplayModeManagerContainer58 {
         throw new IllegalStateException();
     }
 
-    final void method2380(ha var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_47_, byte i_48_, int i_49_) {
+    final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_47_, byte i_48_, int i_49_) {
         try {
             if (i_48_ >= -106) anInt10520 = 116;
             anInt10545++;
@@ -323,7 +323,7 @@ final class Player extends DisplayModeManagerContainer58 {
         } else method2449(i, i_52_, (byte) 112);
     }
 
-    final RenderableSub4 method2386(int i, ha var_ha) {
+    final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10527++;
         if (this.aClass154_10536 == null || !method2459(2048, var_ha, -95)) return null;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -469,7 +469,7 @@ final class Player extends DisplayModeManagerContainer58 {
         aHashtable10565 = null;
     }
 
-    private final boolean method2459(int i, ha var_ha, int i_69_) {
+    private final boolean method2459(int i, GraphicsToolkit var_ha, int i_69_) {
         anInt10525++;
         int i_70_ = i;
         Component241 class225 = this.method2422((byte) 72);

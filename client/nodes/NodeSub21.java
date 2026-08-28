@@ -20,7 +20,7 @@ final class NodeSub21
 
     static final void method2954(byte i) {
         anInt6856++;
-        if (za_Sub1.anInt9775 != -1 && Component102.anInt4803 != -1) {
+        if (NodeBaseSub1.anInt9775 != -1 && Component102.anInt4803 != -1) {
             int i_0_ = ((Component208.anInt1780 * (Component374.anInt4133 + -Component195.anInt5019) >> 16) + Component195.anInt5019);
             Component208.anInt1780 += i_0_;
             if (Component208.anInt1780 < 65535) {
@@ -35,16 +35,16 @@ final class NodeSub21
             float[] fs = new float[3];
             int i_1_ = 2 * NumberFormatter.anInt2798;
             for (int i_2_ = 0; i_2_ < 3; i_2_++) {
-                int i_3_ = 3 * (PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_][i_2_]);
-                int i_4_ = ((PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][1 + i_1_][i_2_]) * 3);
-                int i_5_ = 3 * ((PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][2 + i_1_][i_2_]) + ((PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][2 + i_1_][i_2_]) + -(PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_ - -3][i_2_])));
-                int i_6_ = (PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_][i_2_]);
+                int i_3_ = 3 * (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_][i_2_]);
+                int i_4_ = ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][1 + i_1_][i_2_]) * 3);
+                int i_5_ = 3 * ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][2 + i_1_][i_2_]) + ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][2 + i_1_][i_2_]) + -(PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_ - -3][i_2_])));
+                int i_6_ = (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_][i_2_]);
                 int i_7_ = i_4_ - i_3_;
                 int i_8_ = -(2 * i_4_) + i_3_ - -i_5_;
-                int i_9_ = -i_6_ + ((PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_ - -2][i_2_]) + i_4_) + -i_5_;
+                int i_9_ = -i_6_ + ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_ - -2][i_2_]) + i_4_) + -i_5_;
                 fs[i_2_] = (float) i_6_ + f * ((float) i_7_ + f * (f * (float) i_9_ + (float) i_8_));
             }
-            WaterSurfaceShader.anInt6246 = (int) fs[0] - 512 * za_Sub2.regionTileX;
+            WaterSurfaceShader.anInt6246 = (int) fs[0] - 512 * NodeBaseSub2.regionTileX;
             DisplayModeManagerContainer50.anInt3855 = -1 * (int) fs[1];
             Component317.anInt8685 = (int) fs[2] + -(Component330.regionTileY * 512);
             float[] fs_10_ = new float[3];
@@ -66,7 +66,7 @@ final class NodeSub21
             double d = Math.sqrt(f_21_ * f_21_ + f_23_ * f_23_);
             HashNodeSub19.anInt9701 = 0x3fff & (int) (2607.5945876176133 * Math.atan2(f_22_, d));
             Component298.anInt4638 = 0x3fff & (int) (2607.5945876176133 * -Math.atan2(f_21_, f_23_));
-            Component103.anInt4186 = ((PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_][3]) + (((-(PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][i_1_][3]) + (PlayerState.anIntArrayArrayArray7079[za_Sub1.anInt9775][2 + i_1_][3])) * Component208.anInt1780) >> 16));
+            Component103.anInt4186 = ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_][3]) + (((-(PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_][3]) + (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][2 + i_1_][3])) * Component208.anInt1780) >> 16));
         }
     }
 

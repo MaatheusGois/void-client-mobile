@@ -232,7 +232,7 @@ final class InterfaceRenderer implements Interface16 {
                         Image image = DisplayModeManagerContainer50.gameCanvas.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
                         int i_32_ = image.getWidth(null);
                         Graphics graphics_33_ = image.getGraphics();
-                        int i_34_ = anInt5042 * aa_Sub2.method163(512) / 10 % i_24_;
+                        int i_34_ = anInt5042 * ShaderSub2.method163(512) / 10 % i_24_;
                         for (int i_35_ = -i_24_ + i_34_; i_35_ < i_32_; i_35_ += i_24_)
                             graphics_33_.drawImage(anImage5047, i_35_, 0, null);
                         graphics_28_.drawImage(image, 0, i_22_, null);

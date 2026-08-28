@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class245` (JODE-obfuscated).
- * On-screen debug/diagnostics overlay. Draws render-stats text via ha ('Total Opaque Onscreen', 'Occluders', 'Occluded', 'Occlude Calc Took'); also provides Renderable scene-graph linking (method1883).
+ * On-screen debug/diagnostics overlay. Draws render-stats text via GraphicsToolkit ('Total Opaque Onscreen', 'Occluders', 'Occluded', 'Occlude Calc Took'); also provides Renderable scene-graph linking (method1883).
  */
 
 final class DebugOverlay {

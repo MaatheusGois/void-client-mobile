@@ -24,7 +24,7 @@ final class StringCache {
         if (string == null) return false;
         for (int i_0_ = 0; (i_0_ < MenuEntry.anInt9604); i_0_++) {
             if (string.equalsIgnoreCase(DisplayModeManagerContainer145.aStringArray1808[i_0_])) return true;
-            if (string.equalsIgnoreCase(aa_Sub2.aStringArray5197[i_0_])) return true;
+            if (string.equalsIgnoreCase(ShaderSub2.aStringArray5197[i_0_])) return true;
         }
         if (i != 28280) aBoolean4328 = false;
         return false;
