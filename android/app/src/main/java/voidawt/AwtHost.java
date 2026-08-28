@@ -113,15 +113,15 @@ public final class AwtHost {
     private static void syncClientViewport(int width, int height) {
         try {
             setStaticInt("DisplayModeManagerContainer23", "anInt1524", width);
-            setStaticInt("ha_Sub2", "anInt7666", height);
+            setStaticInt("GlToolkitSub2", "anInt7666", height);
             setStaticInt("Component236", "anInt4017", width);
             setStaticInt("PacketReader", "anInt10432", height);
             setStaticInt("SocketConnector", "anInt3473", width);
             setStaticInt("NodeSub22", "anInt6857", height);
             setStaticInt("NodeSub48", "anInt7129", 0);
             setStaticInt("DisplayModeManagerContainer147", "anInt4167", 0);
-            // FS / resizable semantics (method3229 uses Component225.aFrame476 for mode 3).
-            setStaticBoolean("Cp1252Decoder", "aBoolean5219", true);
+            // getWindowMode: true → mode 2 (resizable / FS available); aFrame476 → mode 3.
+            setStaticBoolean("Cp1252Decoder", "fullscreenAvailable", true);
         } catch (Throwable ignored) {
         }
     }
@@ -256,27 +256,31 @@ public final class AwtHost {
         target.dispatchWheel(e);
     }
 
-    /** Orbit camera by view-pixel deltas (two-finger pan). Positive dx = look right. */
+    /**
+     * Orbit camera by view-pixel deltas (one-finger drag / right stick).
+     * Writes {@code Component112.cameraYaw} / {@code DisplayModeManagerContainer154.cameraPitch}
+     * then clamps via {@code DisplayModeManagerContainer199.clampCameraAngles}.
+     * Positive dx = look right; positive dy = look down.
+     */
     public static void injectCameraOrbit(float dx, float dy) {
         if (dx == 0f && dy == 0f) {
             return;
         }
         try {
-            // yaw (Component112.aFloat3938), pitch (DisplayModeManagerContainer154.aFloat1287) — default-package client fields
             float yawScale = 8f;
             float pitchScale = 4f;
             Class<?> yawCl = Class.forName("Component112");
-            java.lang.reflect.Field yawF = yawCl.getDeclaredField("aFloat3938");
+            java.lang.reflect.Field yawF = yawCl.getDeclaredField("cameraYaw");
             yawF.setAccessible(true);
             yawF.setFloat(null, yawF.getFloat(null) + dx * yawScale);
 
             Class<?> pitchCl = Class.forName("DisplayModeManagerContainer154");
-            java.lang.reflect.Field pitchF = pitchCl.getDeclaredField("aFloat1287");
+            java.lang.reflect.Field pitchF = pitchCl.getDeclaredField("cameraPitch");
             pitchF.setAccessible(true);
             pitchF.setFloat(null, pitchF.getFloat(null) + dy * pitchScale);
 
             Class.forName("DisplayModeManagerContainer199")
-                    .getDeclaredMethod("method1725", int.class)
+                    .getDeclaredMethod("clampCameraAngles", int.class)
                     .invoke(null, 262144);
         } catch (Throwable ignored) {
         }
@@ -311,17 +315,17 @@ public final class AwtHost {
 
     /**
      * Open/close developer console without injecting {@code `} (avoids console text / IME races).
-     * Mirrors {@code Component192.method2363} / {@code AbstractShaderSub4.method3543}.
+     * Mirrors {@code Component192.openDevConsole} / {@code AbstractShaderSub4.closeDevConsole}.
      */
     public static void setDevConsoleOpen(boolean open) {
         try {
             if (open) {
                 Class.forName("Component192")
-                        .getDeclaredMethod("method2363", int.class)
+                        .getDeclaredMethod("openDevConsole", int.class)
                         .invoke(null, -84);
             } else {
                 Class.forName("AbstractShaderSub4")
-                        .getDeclaredMethod("method3543", byte.class)
+                        .getDeclaredMethod("closeDevConsole", byte.class)
                         .invoke(null, (byte) -89);
             }
         } catch (Throwable t) {

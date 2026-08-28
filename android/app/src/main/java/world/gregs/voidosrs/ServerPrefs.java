@@ -150,12 +150,12 @@ public final class ServerPrefs {
     }
 
     /**
-     * {@code Component49.anInt4674} — client game state.
+     * {@code Component49.clientState} — client game state.
      * Splash ≈ 0–2, title/login/lobby ≈ 3–9 / 12, in-world = 10, fatal connect = 14.
      */
     public static int gameState() {
         try {
-            java.lang.reflect.Field f = Class.forName("Component49").getDeclaredField("anInt4674");
+            java.lang.reflect.Field f = Class.forName("Component49").getDeclaredField("clientState");
             f.setAccessible(true);
             return f.getInt(null);
         } catch (Throwable ignored) {
@@ -184,7 +184,7 @@ public final class ServerPrefs {
             if (js5 == null) {
                 return 0;
             }
-            java.lang.reflect.Field c = js5.getClass().getDeclaredField("anInt3213");
+            java.lang.reflect.Field c = js5.getClass().getDeclaredField("errorCount");
             c.setAccessible(true);
             return c.getInt(js5);
         } catch (Throwable ignored) {
