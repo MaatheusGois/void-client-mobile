@@ -88,7 +88,7 @@ final class HashTable {
             Shader var_aa = class46.method425(var_ha, (byte) 40);
             if (var_aa != null) {
                 if (i_2_ != 22960) anIntArray1650 = null;
-                var_ha.KA(i, i_1_, i + class46.anInt709, class46.anInt789 + i_1_);
+                var_ha.KA(i, i_1_, i + class46.width, class46.height + i_1_);
                 if (Component293.anInt3306 != 2 && Component293.anInt3306 != 5 && Component83.aClass105_1664 != null) {
                     int i_3_;
                     int i_4_;
@@ -107,7 +107,7 @@ final class HashTable {
                     }
                     int i_7_ = 48 - (-(i_4_ / 128) - -(AbstractShaderSub4.anInt7319 * 2)) - -208;
                     int i_8_ = (208 - (ParametricDefinition.anInt9109 * 2 - 48) + 4 * ParametricDefinition.anInt9109 - i_3_ / 128);
-                    Component83.aClass105_1664.method967(((float) class46.anInt709 / 2.0F + (float) i), ((float) class46.anInt789 / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
+                    Component83.aClass105_1664.method967(((float) class46.width / 2.0F + (float) i), ((float) class46.height / 2.0F + (float) i_1_), (float) i_7_, (float) i_8_, i_5_, i_6_ << 2, var_aa, i, i_1_);
                     for (NodeSub35 class348_sub35 = (NodeSub35) Component289.aClass262_10125.first(i_2_ ^ 0x59b4); class348_sub35 != null; class348_sub35 = (NodeSub35) Component289.aClass262_10125.next((byte) 92)) {
                         int i_9_ = class348_sub35.intValue;
                         int i_10_ = (-NodeBaseSub2.regionTileX + ((0xfffe5b0 & (CacheNodeSub2.aClass252_10488.anIntArray3238[i_9_])) >> 14));
@@ -220,7 +220,7 @@ final class HashTable {
                             int i_41_ = (4 * Component263.anInt1548 - (-2 + i_3_ / 128) + (2 * (Component72.localPlayer.method2436((byte) 59) - 1)));
                             DisplayModeManagerContainer346.method1211(i_1_, (Component361.aClass105Array367[(!NodeSub13.aBoolean6759 ? 0 : 1)]), i, class46, var_aa, i_41_, 2, i_40_);
                         }
-                        if (!Component72.localPlayer.aBoolean10551) var_ha.method3675(3, (byte) -125, -1 + (i - -((class46.anInt709) / 2)), -1 + ((class46.anInt789) / 2 + i_1_), 3, -1);
+                        if (!Component72.localPlayer.aBoolean10551) var_ha.method3675(3, (byte) -125, -1 + (i - -((class46.width) / 2)), -1 + ((class46.height) / 2 + i_1_), 3, -1);
                     }
                 } else var_ha.A(-16777216, var_aa, i, i_1_);
             }

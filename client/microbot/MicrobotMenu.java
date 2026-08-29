@@ -71,7 +71,7 @@ final class MicrobotMenu {
         }
     }
 
-    /** Build a menu row matching {@link DisplayModeManagerContainer368#method466} field layout. */
+    /** Build a menu row matching {@link DisplayModeManagerContainer368#addMenuEntry} field layout. */
     static MenuEntry buildEntry(NewMenuEntry t) {
         return new MenuEntry(
                 t.getOption(),

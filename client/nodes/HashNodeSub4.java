@@ -23,13 +23,13 @@ final class HashNodeSub4
             for (int i_1_ = 0; i_1_ < class46s.length; i_1_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_1_];
                 if (class46 != null && i == class46.anInt834 && !client.method111(class46)) {
-                    if (class46.anInt774 == 0) {
-                        method3180(class46.anInt830, class46s, 24235);
-                        if (class46.aClass46Array798 != null) method3180(class46.anInt830, class46.aClass46Array798, i_0_);
-                        NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.anInt830, -6008)));
+                    if (class46.type == 0) {
+                        method3180(class46.packedId, class46s, 24235);
+                        if (class46.children != null) method3180(class46.packedId, class46.children, i_0_);
+                        NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.packedId, -6008)));
                         if (class348_sub41 != null) DisplayModeManagerContainer216.method769(class348_sub41.anInt7050, (byte) 116);
                     }
-                    if (class46.anInt774 == 6 && class46.anInt699 != -1) {
+                    if (class46.type == 6 && class46.anInt699 != -1) {
                         DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(class46.anInt699, 7);
                         if (class17 != null) {
                             class46.anInt841 += NodeSub51.anInt7267;

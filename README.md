@@ -22,7 +22,7 @@ Long-press (right-click) an NPC, object, inventory item, or bank item → **Defa
 
 ### Mobile controls extras
 - Soft keyboard on login / chat fields; chat lift above the IME
-- DualShock / Xbox / MFi: left stick moves a cursor, ✕ left-click, ○ right-click, L1/L2 zoom, right stick camera (Android + iOS)
+- DualShock / Xbox / MFi: left stick moves a cursor, ✕ left-click, ○ right-click, L2/R2 zoom, right stick camera, L1/□/△/… aliases (desktop JVM + Android + iOS)
 
 ---
 
@@ -56,6 +56,18 @@ make android              # installDebug + adb reverse + launch
 make android-log
 make android-server SERVER_IP=192.168.1.10   # setprop + relaunch
 ```
+
+### Prebuilt APK
+
+Want to sideload without building? A debug APK is checked in at [`resources/app-debug.apk`](resources/app-debug.apk).
+
+```bash
+make android-apk          # rebuild: assembleDebug + copy to resources/
+adb install -r resources/app-debug.apk
+adb shell am start -n world.gregs.voidosrs.android/.MainActivity
+```
+
+Not seeing it? Run `make android-apk` to generate it (needs JDK 17+ and Android SDK).
 
 ### Server IP
 

@@ -36,7 +36,7 @@ final class Component272
 
     static final void method1728(int i, int i_2_, int i_3_, boolean bool, int i_4_) {
         anInt5860++;
-        if (Component233.method2547(i_3_, (byte) 84)) AbstractShaderSub1.method3534(false, i_2_, i_4_, bool, i, (DefinitionSub33.aClass46ArrayArray9427[i_3_]));
+        if (Component233.method2547(i_3_, (byte) 84)) AbstractShaderSub1.method3534(false, i_2_, i_4_, bool, i, (DefinitionSub33.openInterfaces[i_3_]));
     }
 
     Component272(NodeSub51 class348_sub51) {

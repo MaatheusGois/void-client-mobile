@@ -24,11 +24,11 @@ final class Component111
     static final void layoutInterfaceTree(boolean bool, int i, DisplayModeManagerContainer57 class46) {
         anInt3235++;
         int i_0_ = -40 % ((-35 - i) / 51);
-        int i_1_ = (class46.anInt698 == 0 ? class46.anInt709 : class46.anInt698);
-        int i_2_ = (class46.anInt791 != 0 ? class46.anInt791 : class46.anInt789);
-        AbstractShaderSub1.method3534(false, class46.anInt830, i_1_, bool, i_2_, (DefinitionSub33.aClass46ArrayArray9427[(class46.anInt830 >> 16)]));
-        if (class46.aClass46Array798 != null) AbstractShaderSub1.method3534(false, class46.anInt830, i_1_, bool, i_2_, class46.aClass46Array798);
-        NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(class46.anInt830, -6008));
+        int i_1_ = (class46.anInt698 == 0 ? class46.width : class46.anInt698);
+        int i_2_ = (class46.anInt791 != 0 ? class46.anInt791 : class46.height);
+        AbstractShaderSub1.method3534(false, class46.packedId, i_1_, bool, i_2_, (DefinitionSub33.openInterfaces[(class46.packedId >> 16)]));
+        if (class46.children != null) AbstractShaderSub1.method3534(false, class46.packedId, i_1_, bool, i_2_, class46.children);
+        NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(class46.packedId, -6008));
         if (class348_sub41 != null) Component272.method1728(i_2_, -1, (class348_sub41.anInt7050), bool, i_1_);
     }
 

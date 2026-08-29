@@ -62,15 +62,19 @@ final class Component63
         aClass114_4500 = null;
     }
 
-    static final String method3561(int i, DisplayModeManagerContainer57 class46, boolean bool) {
+    /**
+     * Option label for slot {@code i} on {@code class46} ({@link DisplayModeManagerContainer57#optionLabels}).
+     * Returns {@code null} when the slot is empty / disabled; debug builds may return {@code Hidden-N}.
+     */
+    static final String getComponentOption(int i, DisplayModeManagerContainer57 class46, boolean bool) {
         anInt4495++;
         if (bool != true) method3560(68);
         if (!client.method105(class46).method3301(i, !bool) && class46.anObjectArray741 == null) return null;
-        if (class46.aStringArray833 == null || (i >= class46.aStringArray833.length) || class46.aStringArray833[i] == null || class46.aStringArray833[i].trim().length() == 0) {
+        if (class46.optionLabels == null || (i >= class46.optionLabels.length) || class46.optionLabels[i] == null || class46.optionLabels[i].trim().length() == 0) {
             if (DisplayModeManagerContainer356.aBoolean6327) return "Hidden-" + i;
             return null;
         }
-        return class46.aStringArray833[i];
+        return class46.optionLabels[i];
     }
 
     final DisplayModeManagerContainer370 method3562(int i, GraphicsToolkit var_ha, int i_5_, int i_6_, int i_7_, Component344 class87, byte i_8_) {

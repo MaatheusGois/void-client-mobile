@@ -49,11 +49,11 @@ final class AbstractShaderSub1
                 if (class46 != null && i == class46.anInt834) {
                     Component188.method1843(i_5_, -326, class46, bool_6_, i_7_);
                     Component19.method239((byte) 115, i_5_, i_7_, class46);
-                    if ((-class46.anInt709 + class46.anInt698) < class46.anInt747) class46.anInt747 = (class46.anInt698 - class46.anInt709);
+                    if ((-class46.width + class46.anInt698) < class46.anInt747) class46.anInt747 = (class46.anInt698 - class46.width);
                     if (class46.anInt747 < 0) class46.anInt747 = 0;
-                    if ((class46.anInt791 - class46.anInt789) < class46.anInt755) class46.anInt755 = (class46.anInt791 - class46.anInt789);
+                    if ((class46.anInt791 - class46.height) < class46.anInt755) class46.anInt755 = (class46.anInt791 - class46.height);
                     if (class46.anInt755 < 0) class46.anInt755 = 0;
-                    if (class46.anInt774 == 0) Component111.layoutInterfaceTree(bool_6_, -116, class46);
+                    if (class46.type == 0) Component111.layoutInterfaceTree(bool_6_, -116, class46);
                 }
             }
         }

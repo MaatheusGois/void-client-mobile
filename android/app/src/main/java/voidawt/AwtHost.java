@@ -257,6 +257,38 @@ public final class AwtHost {
     }
 
     /**
+     * Tell the client a DualShock / Xbox / MFi pad is connected so menus show
+     * {@code Learn alias} rows ({@code JoystickAlias.padConnected}).
+     */
+    public static void setPadConnected(boolean connected) {
+        try {
+            setStaticBoolean("JoystickAlias", "padConnected", connected);
+        } catch (Throwable ignored) {
+        }
+    }
+
+    /**
+     * Forward a pad button press into {@link JoystickAlias#onPadButton} for
+     * learn-mode binding or firing a saved Eat/Drink/Prayer/Summon alias.
+     *
+     * @param buttonId Android {@code KeyEvent.KEYCODE_BUTTON_*} (shared with iOS)
+     * @param label    chat-friendly name (△, L1, …)
+     * @return true when the client consumed the press
+     */
+    public static boolean notifyPadButton(int buttonId, String label) {
+        try {
+            java.lang.reflect.Method m = Class.forName("JoystickAlias")
+                    .getDeclaredMethod("onPadButton", int.class, String.class);
+            m.setAccessible(true);
+            Object hit = m.invoke(null, Integer.valueOf(buttonId), label);
+            return hit instanceof Boolean && ((Boolean) hit).booleanValue();
+        } catch (Throwable t) {
+            System.out.println("void-osrs notifyPadButton failed: " + t);
+            return false;
+        }
+    }
+
+    /**
      * Orbit camera by view-pixel deltas (two-finger pan / gamepad right stick).
      * Writes {@code Component112.cameraYaw} / {@code DisplayModeManagerContainer154.cameraPitch}
      * then clamps via {@code DisplayModeManagerContainer199.clampCameraAngles}.

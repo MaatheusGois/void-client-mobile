@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer96
             if (NodeSub36.aClass46_6990 != null) {
                 BitmapFont class324 = NodeSub36.aClass46_6990.method426(var_ha, (byte) 68);
                 if (class324 == null) class324 = NodeList.aClass324_3326;
-                class324.method2585(Component143.anIntArray2330, NodeSub36.aClass46_6990.anInt709, DisplayModeManagerContainer196.aClass105Array4234, NodeSub36.aClass46_6990.anInt700, NodeSub36.aClass46_6990.anInt749, NodeSub36.aClass46_6990.anInt789, NodeSub36.aClass46_6990.anInt809, OutputStream_Sub1.aRandom93, NodeSub36.aClass46_6990.anInt762, Component299.anInt451, LruCache.anInt4383, -33, Component9.anInt4141, string, Component195.anIntArray5007);
+                class324.method2585(Component143.anIntArray2330, NodeSub36.aClass46_6990.width, DisplayModeManagerContainer196.aClass105Array4234, NodeSub36.aClass46_6990.anInt700, NodeSub36.aClass46_6990.colour, NodeSub36.aClass46_6990.height, NodeSub36.aClass46_6990.anInt809, OutputStream_Sub1.aRandom93, NodeSub36.aClass46_6990.anInt762, Component299.anInt451, LruCache.anInt4383, -33, Component9.anInt4141, string, Component195.anIntArray5007);
                 Component354.method226(Component195.anIntArray5007[0], Component195.anIntArray5007[2], Component195.anIntArray5007[1], 0, Component195.anIntArray5007[3]);
             } else if (Component158.aClass46_323 != null && (PacketReader.currentGameType == RunescapeInfo.RUNESCAPE)) {
                 int i_1_ = (NodeList.aClass324_3326.method2571(-1, LruCache.anInt4383, Component143.anIntArray2330, string, 16777215, 0, DisplayModeManagerContainer196.aClass105Array4234, 16 + TcpSocketStream.anInt5832, 4 + Component247.anInt4911, OutputStream_Sub1.aRandom93));

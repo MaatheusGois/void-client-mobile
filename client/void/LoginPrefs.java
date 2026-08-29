@@ -273,13 +273,13 @@ final class LoginPrefs {
     private static void fillLoginFields(String user, String pass) {
         try {
             int root = r.anInt9721;
-            if (root < 0 || DefinitionSub33.aClass46ArrayArray9427 == null) {
+            if (root < 0 || DefinitionSub33.openInterfaces == null) {
                 return;
             }
-            if (root >= DefinitionSub33.aClass46ArrayArray9427.length) {
+            if (root >= DefinitionSub33.openInterfaces.length) {
                 return;
             }
-            DisplayModeManagerContainer57[] all = DefinitionSub33.aClass46ArrayArray9427[root];
+            DisplayModeManagerContainer57[] all = DefinitionSub33.openInterfaces[root];
             if (all == null) {
                 return;
             }
@@ -289,17 +289,17 @@ final class LoginPrefs {
             int secondId = Integer.MAX_VALUE;
             for (int i = 0; i < all.length; i++) {
                 DisplayModeManagerContainer57 c = all[i];
-                if (c == null || c.anInt774 != 4) {
+                if (c == null || c.type != 4) {
                     continue;
                 }
-                int h = c.anInt789;
+                int h = c.height;
                 if (h <= 0 || h > 48) {
                     continue;
                 }
                 if (c.anObjectArray822 == null && c.anObjectArray763 == null) {
                     continue;
                 }
-                int id = c.anInt830 & 0xffff;
+                int id = c.packedId & 0xffff;
                 if (id < firstId) {
                     second = first;
                     secondId = firstId;
@@ -310,12 +310,12 @@ final class LoginPrefs {
                     secondId = id;
                 }
             }
-            if (first != null && !user.equals(first.aString792)) {
-                first.aString792 = user;
+            if (first != null && !user.equals(first.textContent)) {
+                first.textContent = user;
                 Component111.markInterfaceDirty(-9343, first);
             }
-            if (second != null && !pass.equals(second.aString792)) {
-                second.aString792 = pass;
+            if (second != null && !pass.equals(second.textContent)) {
+                second.textContent = pass;
                 Component111.markInterfaceDirty(-9343, second);
             }
         } catch (Throwable ignored) {

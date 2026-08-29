@@ -69,7 +69,7 @@ final class Component304
             anInt1147++;
             Component327.aClass45_8755 = class45_5_;
             Component267.aClass45_2978 = class45_4_;
-            DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
+            DefinitionSub33.openInterfaces = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
             ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.getGroupCapacity(-1)];
             int i_7_ = -72 % ((35 - i) / 41);
         } catch (RuntimeException runtimeexception) {

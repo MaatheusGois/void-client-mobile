@@ -42,6 +42,8 @@ public class Loader extends Applet {
     public static void main(String[] args) {
         // libsw3d.dylib + modern macOS JAWT: Finalizer crashes in canvas::~canvas.
         disableSw3dOnMacOs();
+        // DualShock / Xbox → virtual mouse + JoystickAlias (desktop-only class).
+        startDesktopGamepad();
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             switch (arg) {
@@ -65,6 +67,20 @@ public class Loader extends Applet {
         }
         Loader l = new Loader();
         l.doFrame();
+    }
+
+    /**
+     * Desktop-only — {@code DesktopGamepad} is excluded from Android/iOS source copy
+     * (real {@code java.awt} wheel ctor ≠ voidawt). Reflection keeps mobile Loader compiling.
+     */
+    static void startDesktopGamepad() {
+        try {
+            Class.forName("DesktopGamepad").getDeclaredMethod("startIfDesktop").invoke(null);
+        } catch (ClassNotFoundException ignored) {
+            // Mobile hosts: class not on classpath / not generated.
+        } catch (Throwable t) {
+            System.out.println("void-osrs: desktop gamepad start failed: " + t);
+        }
     }
 
     /**

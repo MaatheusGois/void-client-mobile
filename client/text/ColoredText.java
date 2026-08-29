@@ -149,7 +149,7 @@ final class ColoredText extends Component339 {
                         Component48.anInt4334++;
                         DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Component323.aString5882, 0L, Component79.anInt4144);
                     } else {
-                        DisplayModeManagerContainer57 class46 = NodeSub22.method2957(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
+                        DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
                         if (class46 == null) DisplayModeManagerContainer196.method2678(-2049);
                         else DisplayModeManagerContainer368.addMenuEntry(false, " ->", i_14_, (byte) -101, true, i_13_, -1, true, 15, i_13_ << 0 | i_14_, DisplayModeManagerContainer332.aString5001, 0L, (Component182.anInt9747));
                     }

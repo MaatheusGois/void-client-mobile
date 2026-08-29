@@ -158,15 +158,16 @@ final class DisplayModeManagerContainer295
         }
     }
 
-    static final String method1753(int i, DisplayModeManagerContainer57 class46) {
+    /** "Use" / target-verb string for {@code class46} ({@link DisplayModeManagerContainer57#useOption}). */
+    static final String getUseOption(int i, DisplayModeManagerContainer57 class46) {
         anInt5924++;
         if (client.method105(class46).method3307(116) == 0) return null;
-        if (class46.aString780 == null || class46.aString780.trim().length() == 0) {
+        if (class46.useOption == null || class46.useOption.trim().length() == 0) {
             if (DisplayModeManagerContainer356.aBoolean6327) return "Hidden-use";
             return null;
         }
         if (i != 0) return null;
-        return class46.aString780;
+        return class46.useOption;
     }
 
     final void method1716(boolean bool) {

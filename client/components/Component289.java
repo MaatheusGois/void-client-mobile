@@ -53,7 +53,7 @@ final class Component289
         if (Component192.menuTip == null) return 0;
         if (i >= -11) return -42;
         int i_1_ = (Component192.menuTip.opcode);
-        if (Component66.method1796(80, i_1_)) return 1;
+        if (Component66.isInterfaceItemOpcode(80, i_1_)) return 1;
         if (Component3.method1197(-12081, i_1_)) return 2;
         if (Component71.method1813(8806, i_1_)) return 3;
         if (WaterShaderSub8.method3549(i_1_, (byte) 126)) return 4;

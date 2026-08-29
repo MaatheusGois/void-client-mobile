@@ -43,7 +43,7 @@ final class ImageCache {
     }
 
     static final void method1429(String string, int i) {
-        ShaderProgramSub2.method2144("", i, (byte) -125, 0, string, "", "");
+        ShaderProgramSub2.addChatMessage("", i, (byte) -125, 0, string, "", "");
         anInt2560++;
     }
 

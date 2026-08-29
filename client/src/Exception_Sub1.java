@@ -23,7 +23,7 @@ final class Exception_Sub1 extends Exception {
         anInt109++;
         int i_0_ = 98 / ((i - -14) / 41);
         DisplayModeManagerContainer57 class46_1_ = client.method108(class46);
-        if (class46_1_ == null) class46_1_ = class46.aClass46_782;
+        if (class46_1_ == null) class46_1_ = class46.parent;
         return class46_1_;
     }
 }

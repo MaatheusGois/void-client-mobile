@@ -235,7 +235,7 @@ abstract class DisplayModeManagerContainer194
         anInt5087++;
         if (i != -1 && ImageTagText.aBooleanArray2162[i]) {
             Component267.aClass45_2978.clearUnpackedGroup(i, -120);
-            DefinitionSub33.aClass46ArrayArray9427[i] = null;
+            DefinitionSub33.openInterfaces[i] = null;
             Component14.aClass46ArrayArray8584[i] = null;
             if (i_46_ <= -94) ImageTagText.aBooleanArray2162[i] = false;
         }

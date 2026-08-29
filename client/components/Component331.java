@@ -86,8 +86,8 @@ final class Component331
             i_15_ = PacketReader.anInt10432;
             i_16_ = Component236.anInt4017;
         } else {
-            i_15_ = class46_14_.anInt789;
-            i_16_ = class46_14_.anInt709;
+            i_15_ = class46_14_.height;
+            i_16_ = class46_14_.width;
         }
         Component188.method1843(i_16_, -326, class46, false, i_15_);
         Component19.method239((byte) -114, i_16_, i_15_, class46);

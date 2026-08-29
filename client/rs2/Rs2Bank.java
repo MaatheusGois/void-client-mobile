@@ -40,10 +40,10 @@ final class Rs2Bank {
     static boolean withdraw(int itemId, String action) {
         DisplayModeManagerContainer57[] slots = bankSlots();
         for (int i = 0; i < slots.length; i++) {
-            if (slots[i] != null && slots[i].anInt812 == itemId) {
+            if (slots[i] != null && slots[i].itemId == itemId) {
                 NewMenuEntry entry = new NewMenuEntry(action != null ? action : "Withdraw-1",
-                        slots[i].aString752 != null ? slots[i].aString752 : "",
-                        Rs2Widget.OPCODE_CC_OP, 1L, slots[i].anInt704, slots[i].anInt830, itemId);
+                        slots[i].text != null ? slots[i].text : "",
+                        Rs2Widget.OPCODE_CC_OP, 1L, slots[i].childIndex, slots[i].packedId, itemId);
                 Microbot.doInvoke(entry);
                 return true;
             }
@@ -73,14 +73,14 @@ final class Rs2Bank {
 
     static DisplayModeManagerContainer57[] bankSlots() {
         java.util.ArrayList list = new java.util.ArrayList();
-        if (DefinitionSub33.aClass46ArrayArray9427 == null) {
+        if (DefinitionSub33.openInterfaces == null) {
             return new DisplayModeManagerContainer57[0];
         }
         // Prefer configured bank group, else largest item grid that isn't inventory-sized (28)
         collect(MicrobotWidgets.BANK_GROUP, list);
         if (list.size() < 20) {
             list.clear();
-            DisplayModeManagerContainer57[][] roots = DefinitionSub33.aClass46ArrayArray9427;
+            DisplayModeManagerContainer57[][] roots = DefinitionSub33.openInterfaces;
             int best = 0;
             java.util.ArrayList bestList = new java.util.ArrayList();
             for (int g = 0; g < roots.length; g++) {
@@ -97,13 +97,13 @@ final class Rs2Bank {
     }
 
     private static void collect(int group, java.util.ArrayList list) {
-        if (DefinitionSub33.aClass46ArrayArray9427 == null) {
+        if (DefinitionSub33.openInterfaces == null) {
             return;
         }
-        if (group < 0 || group >= DefinitionSub33.aClass46ArrayArray9427.length) {
+        if (group < 0 || group >= DefinitionSub33.openInterfaces.length) {
             return;
         }
-        DisplayModeManagerContainer57[] all = DefinitionSub33.aClass46ArrayArray9427[group];
+        DisplayModeManagerContainer57[] all = DefinitionSub33.openInterfaces[group];
         if (all == null) {
             return;
         }
@@ -116,12 +116,12 @@ final class Rs2Bank {
         if (c == null) {
             return;
         }
-        if (c.anInt812 > 0) {
+        if (c.itemId > 0) {
             list.add(c);
         }
-        if (c.aClass46Array798 != null) {
-            for (int i = 0; i < c.aClass46Array798.length; i++) {
-                walk(c.aClass46Array798[i], list);
+        if (c.children != null) {
+            for (int i = 0; i < c.children.length; i++) {
+                walk(c.children[i], list);
             }
         }
     }

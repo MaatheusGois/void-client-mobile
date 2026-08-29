@@ -249,9 +249,9 @@ final class LoadingManager {
         if (RSARequest.currentLoadingState == LoadingState.aClass56_1040) {
             if (!Component233.method2547(DebugPanic.anInt4737, (byte) 84)) return 0;
             boolean bool = true;
-            for (int i_14_ = 0; i_14_ < (DefinitionSub33.aClass46ArrayArray9427[DebugPanic.anInt4737]).length; i_14_++) {
-                DisplayModeManagerContainer57 class46 = (DefinitionSub33.aClass46ArrayArray9427[DebugPanic.anInt4737][i_14_]);
-                if (class46.anInt774 == 5 && class46.anInt756 != -1 && !Component158.aClass45_322.isFileReady(-10499, (class46.anInt756), 0)) bool = false;
+            for (int i_14_ = 0; i_14_ < (DefinitionSub33.openInterfaces[DebugPanic.anInt4737]).length; i_14_++) {
+                DisplayModeManagerContainer57 class46 = (DefinitionSub33.openInterfaces[DebugPanic.anInt4737][i_14_]);
+                if (class46.type == 5 && class46.anInt756 != -1 && !Component158.aClass45_322.isFileReady(-10499, (class46.anInt756), 0)) bool = false;
             }
             if (!bool) return 0;
         }

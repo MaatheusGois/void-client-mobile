@@ -18,7 +18,7 @@ final class MicrobotWidgets {
 
     static DisplayModeManagerContainer57 get(int packedId) {
         try {
-            return BitmapFont.method2570(1512932720, packedId);
+            return BitmapFont.getComponent(1512932720, packedId);
         } catch (Throwable t) {
             return null;
         }
@@ -26,7 +26,7 @@ final class MicrobotWidgets {
 
     static DisplayModeManagerContainer57 getChild(int packedParent, int child) {
         try {
-            return NodeSub22.method2957(child, (byte) -54, packedParent);
+            return NodeSub22.getChildComponent(child, (byte) -54, packedParent);
         } catch (Throwable t) {
             return null;
         }

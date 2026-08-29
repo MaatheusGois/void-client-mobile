@@ -43,9 +43,9 @@ final class DisplayModeManagerContainer322
             i_2_ -= RenderableSub4.anInt6411;
             if (i_2_ < DefinitionSub37.anInt9461) i_2_ = DefinitionSub37.anInt9461;
             if (i == -30206) {
-                if (i_2_ - -Component156.aClass46_3701.anInt709 > (DefinitionSub37.anInt9461 - -Component374.aClass46_4130.anInt709)) i_2_ = (Component374.aClass46_4130.anInt709 + (DefinitionSub37.anInt9461 + -Component156.aClass46_3701.anInt709));
+                if (i_2_ - -Component156.aClass46_3701.width > (DefinitionSub37.anInt9461 - -Component374.aClass46_4130.width)) i_2_ = (Component374.aClass46_4130.width + (DefinitionSub37.anInt9461 + -Component156.aClass46_3701.width));
                 if (i_3_ < DisplayModeManagerContainer172.anInt558) i_3_ = DisplayModeManagerContainer172.anInt558;
-                if (Component156.aClass46_3701.anInt789 + i_3_ > (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.anInt789)) i_3_ = (-Component156.aClass46_3701.anInt789 + (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.anInt789));
+                if (Component156.aClass46_3701.height + i_3_ > (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.height)) i_3_ = (-Component156.aClass46_3701.height + (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.height));
                 int i_4_ = (-DefinitionSub37.anInt9461 + (i_2_ - -Component374.aClass46_4130.anInt747));
                 int i_5_ = (-DisplayModeManagerContainer172.anInt558 + (i_3_ + Component374.aClass46_4130.anInt755));
                 if (AbstractGlTextureSub4.mouseHandler.isAnyButtonDown(94)) {

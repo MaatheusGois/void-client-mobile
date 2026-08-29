@@ -85,6 +85,6 @@ final class Component205
 
     static final void method1775(byte i, int i_4_, int i_5_) {
         anInt5967++;
-        if (i == -8 && Component233.method2547(i_4_, (byte) 84)) DefinitionSub19.method3097((DefinitionSub33.aClass46ArrayArray9427[i_4_]), i_5_, 119);
+        if (i == -8 && Component233.method2547(i_4_, (byte) 84)) DefinitionSub19.method3097((DefinitionSub33.openInterfaces[i_4_]), i_5_, 119);
     }
 }

@@ -49,6 +49,8 @@ tasks.register('prepareClientSources', Copy) {
     from(fileTree('../client') {
         include '**/*.java'
         exclude 'build/**'
+        // Real java.awt MouseWheelEvent ≠ voidawt — desktop-only poller.
+        exclude '**/DesktopGamepad.java'
     }) {
         eachFile { details ->
             details.path = details.name

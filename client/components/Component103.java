@@ -33,7 +33,7 @@ final class Component103
         class348_sub41.anInt7053 = i_1_;
         Component15.aClass356_4915.put((byte) 109, i_0_, class348_sub41);
         NodeSub7.method2772(i, (byte) 110);
-        DisplayModeManagerContainer57 class46 = BitmapFont.method2570(i_2_ + 1512932718, i_0_);
+        DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(i_2_ + 1512932718, i_0_);
         if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
         if (Component297.aClass46_4730 != null) {
             Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);

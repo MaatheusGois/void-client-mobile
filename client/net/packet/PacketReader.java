@@ -154,9 +154,9 @@ final class PacketReader extends CacheNode {
                 class348_sub41.unlink((byte) 32);
                 Component15.aClass356_4915.put((byte) 102, i, class348_sub41);
             }
-            DisplayModeManagerContainer57 class46 = BitmapFont.method2570(1512932720, i_9_);
+            DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, i_9_);
             if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
-            class46 = BitmapFont.method2570(1512932720, i);
+            class46 = BitmapFont.getComponent(1512932720, i);
             if (class46 != null) {
                 Component111.markInterfaceDirty(-9343, class46);
                 Component111.layoutInterfaceTree(true, -123, class46);
@@ -1126,7 +1126,7 @@ final class PacketReader extends CacheNode {
                     NodeSub3.aClass114_6584 = null;
                     return true;
                 }
-                ShaderProgramSub2.method2144(string_141_, i, (byte) -92, i_139_, string_142_, string, string);
+                ShaderProgramSub2.addChatMessage(string_141_, i, (byte) -92, i_139_, string_142_, string, string);
             }
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1163,7 +1163,7 @@ final class PacketReader extends CacheNode {
                 NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.get(l, -6008));
                 NodeSub44 class348_sub44_148_;
                 if (class348_sub44 == null) {
-                    if (i_147_ == -1) class348_sub44_148_ = (new NodeSub44(BitmapFont.method2570(1512932720, i).aClass348_Sub44_748.anInt7098, i_144_));
+                    if (i_147_ == -1) class348_sub44_148_ = (new NodeSub44(BitmapFont.getComponent(1512932720, i).aClass348_Sub44_748.anInt7098, i_144_));
                     else class348_sub44_148_ = new NodeSub44(0, i_144_);
                 } else {
                     class348_sub44_148_ = new NodeSub44((class348_sub44.anInt7098), i_144_);
@@ -1393,10 +1393,10 @@ final class PacketReader extends CacheNode {
             int i_184_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_185_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             Component141.method2397((byte) -125);
-            if (DefinitionSub33.aClass46ArrayArray9427[i] != null) {
+            if (DefinitionSub33.openInterfaces[i] != null) {
                 for (int i_186_ = i_184_; i_185_ > i_186_; i_186_++) {
                     int i_187_ = Component80.aClass348_Sub49_Sub2_3813.readMedium(-1);
-                    if ((DefinitionSub33.aClass46ArrayArray9427[i]).length > i_186_ && (DefinitionSub33.aClass46ArrayArray9427[i][i_186_]) != null) DefinitionSub33.aClass46ArrayArray9427[i][i_186_].anInt732 = i_187_;
+                    if ((DefinitionSub33.openInterfaces[i]).length > i_186_ && (DefinitionSub33.openInterfaces[i][i_186_]) != null) DefinitionSub33.openInterfaces[i][i_186_].anInt732 = i_187_;
                 }
             }
             NodeSub3.aClass114_6584 = null;
@@ -1466,7 +1466,7 @@ final class PacketReader extends CacheNode {
         if (GradientPreset.aClass114_9197 == NodeSub3.aClass114_6584) {
             String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -43);
             String string_198_ = Component317.escapeAngleBrackets((DefinitionSub32.method3136((byte) 64, (Component80.aClass348_Sub49_Sub2_3813))), 23034);
-            ShaderProgramSub2.method2144(string, 6, (byte) -101, 0, string_198_, string, string);
+            ShaderProgramSub2.addChatMessage(string, 6, (byte) -101, 0, string_198_, string, string);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
@@ -1565,7 +1565,7 @@ final class PacketReader extends CacheNode {
                 if (class348_sub44 != null) {
                     class348_sub44_212_ = new NodeSub44(i_210_, (class348_sub44.anInt7093));
                     class348_sub44.unlink((byte) 80);
-                } else if (i_211_ == -1) class348_sub44_212_ = (new NodeSub44(i_210_, BitmapFont.method2570(1512932720, i_209_).aClass348_Sub44_748.anInt7093));
+                } else if (i_211_ == -1) class348_sub44_212_ = (new NodeSub44(i_210_, BitmapFont.getComponent(1512932720, i_209_).aClass348_Sub44_748.anInt7093));
                 else class348_sub44_212_ = new NodeSub44(i_210_, -1);
                 Component127.aClass356_2959.put((byte) 114, l, class348_sub44_212_);
             }

@@ -65,7 +65,7 @@ final class DisplayModeManagerContainer153
 
     static final void method882(byte i) {
         if (i != 11) method882((byte) -62);
-        DefinitionSub33.aClass46ArrayArray9427 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
+        DefinitionSub33.openInterfaces = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
         anInt1573++;
         Component14.aClass46ArrayArray8584 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
         ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.getGroupCapacity(-1)];

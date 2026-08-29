@@ -101,19 +101,19 @@ final class DefaultClickSwapper {
     /**
      * Inject Default rows for an inventory / bank item component.
      * Options come from the widget strings already used to build the menu
-     * ({@link Component63#method3561}) — covers Wear/Drop and bank Withdraw-*.
+     * ({@link Component63#getComponentOption}) — covers Wear/Drop and bank Withdraw-*.
      */
     static void injectItemMenu(DisplayModeManagerContainer57 component) {
-        if (component == null || component.anInt812 <= 0) {
+        if (component == null || component.itemId <= 0) {
             return;
         }
         ensureLoaded();
-        int itemId = component.anInt812;
+        int itemId = component.itemId;
         String current = itemDefaults.get(Integer.valueOf(itemId));
         // Collect unique option labels from the same slots the menu builder uses.
         java.util.LinkedHashSet unique = new java.util.LinkedHashSet();
         for (int i = 0; i <= 9; i++) {
-            String opt = Component63.method3561(i, component, true);
+            String opt = Component63.getComponentOption(i, component, true);
             if (opt == null || opt.length() == 0) {
                 continue;
             }
@@ -125,7 +125,7 @@ final class DefaultClickSwapper {
             }
             unique.add(opt);
         }
-        String use = DisplayModeManagerContainer295.method1753(0, component);
+        String use = DisplayModeManagerContainer295.getUseOption(0, component);
         if (use != null && use.length() > 0 && !isSkippedItemOption(use)) {
             unique.add(use);
         }
@@ -219,7 +219,7 @@ final class DefaultClickSwapper {
                 int objectId = (int) (entry.identifier >>> 32);
                 wanted = objectDefaults.get(Integer.valueOf(objectId));
             } else if (isItemOpcode(opcode)) {
-                // itemId = item id (class46.anInt812) for CC_OP / Use rows
+                // itemId = item id (class46.itemId) for CC_OP / Use rows
                 int itemId = entry.itemId;
                 if (itemId > 0) {
                     wanted = itemDefaults.get(Integer.valueOf(itemId));
@@ -312,7 +312,7 @@ final class DefaultClickSwapper {
         }
         map.put(Integer.valueOf(id), actionName);
         save();
-        ShaderProgramSub2.method2144("", 5, (byte) -100, 0,
+        ShaderProgramSub2.addChatMessage("", 5, (byte) -100, 0,
                 COL_ACCENT + "Default left-click set to '" + actionName + "'." + COL_END, "", "");
         System.out.println("void-osrs default-click " + kind + "=" + id + " → " + actionName);
     }
@@ -321,7 +321,7 @@ final class DefaultClickSwapper {
         ensureLoaded();
         map.remove(Integer.valueOf(id));
         save();
-        ShaderProgramSub2.method2144("", 5, (byte) -100, 0,
+        ShaderProgramSub2.addChatMessage("", 5, (byte) -100, 0,
                 COL_ACCENT + "Default left-click reset." + COL_END, "", "");
         System.out.println("void-osrs default-click " + kind + "=" + id + " reset");
     }

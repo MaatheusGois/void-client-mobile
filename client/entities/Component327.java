@@ -63,19 +63,19 @@ abstract class Component327
         if (!Component364.aBoolean8335) return false;
         int i_7_ = i_6_ >> 16;
         int i_8_ = i_6_ & 0xffff;
-        if (DefinitionSub33.aClass46ArrayArray9427[i_7_] == null || DefinitionSub33.aClass46ArrayArray9427[i_7_][i_8_] == null) return false;
-        DisplayModeManagerContainer57 class46 = DefinitionSub33.aClass46ArrayArray9427[i_7_][i_8_];
-        if (i_5_ == -1 && class46.anInt774 == 0) {
+        if (DefinitionSub33.openInterfaces[i_7_] == null || DefinitionSub33.openInterfaces[i_7_][i_8_] == null) return false;
+        DisplayModeManagerContainer57 class46 = DefinitionSub33.openInterfaces[i_7_][i_8_];
+        if (i_5_ == -1 && class46.type == 0) {
             for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 56)) {
                 if (class348_sub42_sub12.opcode == 6 || class348_sub42_sub12.opcode == 1011 || (class348_sub42_sub12.opcode == 13) || (class348_sub42_sub12.opcode == 18) || (class348_sub42_sub12.opcode == 16)) {
-                    for (DisplayModeManagerContainer57 class46_9_ = BitmapFont.method2570(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = DisplayModeManagerContainer87.method1687(class46_9_, 3)) {
-                        if (class46_9_.anInt830 == class46.anInt830) return true;
+                    for (DisplayModeManagerContainer57 class46_9_ = BitmapFont.getComponent(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = DisplayModeManagerContainer87.method1687(class46_9_, 3)) {
+                        if (class46_9_.packedId == class46.packedId) return true;
                     }
                 }
             }
         } else {
             for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 93)) {
-                if ((class348_sub42_sub12.param0 == i_5_) && (class348_sub42_sub12.param1 == class46.anInt830) && ((class348_sub42_sub12.opcode) == 6 || (class348_sub42_sub12.opcode) == 1011 || (class348_sub42_sub12.opcode) == 13 || (class348_sub42_sub12.opcode) == 18 || (class348_sub42_sub12.opcode) == 16))
+                if ((class348_sub42_sub12.param0 == i_5_) && (class348_sub42_sub12.param1 == class46.packedId) && ((class348_sub42_sub12.opcode) == 6 || (class348_sub42_sub12.opcode) == 1011 || (class348_sub42_sub12.opcode) == 13 || (class348_sub42_sub12.opcode) == 18 || (class348_sub42_sub12.opcode) == 16))
                     return true;
             }
         }

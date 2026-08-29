@@ -22,7 +22,7 @@ final class Component177
         if (r.aBoolean9722) {
             HuffmanDecoder.anInt3775++;
             if (class46.anObjectArray679 != null) {
-                DisplayModeManagerContainer57 class46_0_ = NodeSub22.method2957(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
+                DisplayModeManagerContainer57 class46_0_ = NodeSub22.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
                 if (class46_0_ != null) {
                     NodeSub36 class348_sub36 = new NodeSub36();
                     class348_sub36.aClass46_6989 = class46;
@@ -32,12 +32,12 @@ final class Component177
                 }
             }
             ParticleSystem class348_sub47 = ParticleShader.method2148(AbstractBuffer.aClass351_4266, DisplayModeManagerContainer64.aClass77_9029, -120);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 100, class46.anInt830);
+            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 100, class46.packedId);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeIntInverseMiddle(Component90.anInt2046, -4086);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(-123, JaclibLoader.anInt169);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component281.anInt3829);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(92, class46.anInt704);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, class46.anInt812);
+            class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(92, class46.childIndex);
+            class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, class46.itemId);
             HashNodeSub14.method3243(-89, class348_sub47);
         }
     }

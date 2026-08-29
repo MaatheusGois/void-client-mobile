@@ -103,9 +103,9 @@ final class HeapDumper {
                         player.aString10292 = class348_sub49_sub2.readString((byte) 110);
                         if (player.aString10292.charAt(0) == '~') {
                             player.aString10292 = player.aString10292.substring(1);
-                            ShaderProgramSub2.method2144(player.getName(false, -70), 2, (byte) -116, 0, player.aString10292, player.method2456(true, 255), player.displayName);
+                            ShaderProgramSub2.addChatMessage(player.getName(false, -70), 2, (byte) -116, 0, player.aString10292, player.method2456(true, 255), player.displayName);
                         } else if (Component72.localPlayer == player)
-                            ShaderProgramSub2.method2144(player.getName(false, -88), 2, (byte) -102, 0, (player.aString10292), player.method2456(true, 255), (player.displayName));
+                            ShaderProgramSub2.addChatMessage(player.getName(false, -88), 2, (byte) -102, 0, (player.aString10292), player.method2456(true, 255), (player.displayName));
                         player.anInt10264 = 150;
                         player.anInt10234 = 0;
                         player.anInt10201 = 0;

@@ -38,7 +38,7 @@ final class DisplayModeManagerContainer368
 
     /**
      * Appends one {@link MenuEntry} to {@link DefinitionSub4#menuEntries}
-     * (via {@link OpenGLToolkit#method3743}) and bumps {@link DisplayModeManagerContainer306#menuEntryCount}.
+     * (via {@link GlToolkitSub2#appendMenuEntry}) and bumps {@link DisplayModeManagerContainer306#menuEntryCount}.
      * <p>
      * Arg map → {@link MenuEntry} fields: {@code string_6_=option},
      * {@code string=target}, {@code i_5_=opcode}, {@code l_7_=identifier},
@@ -52,7 +52,7 @@ final class DisplayModeManagerContainer368
                 i_8_ = i_8_ != -1 ? i_8_ : Component149.anInt4458;
                 if (i_0_ >= -65) method469((byte) 19);
                 MenuEntry class348_sub42_sub12 = new MenuEntry(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
-                GlToolkitSub2.method3743((byte) 6, class348_sub42_sub12);
+                GlToolkitSub2.appendMenuEntry((byte) 6, class348_sub42_sub12);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("hc.B(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + bool_1_ + ',' + i_2_ + ',' + i_3_ + ',' + bool_4_ + ',' + i_5_ + ',' + l + ',' + (string_6_ != null ? "{...}" : "null") + ',' + l_7_ + ',' + i_8_ + ')'));

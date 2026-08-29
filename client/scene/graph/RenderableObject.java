@@ -45,9 +45,9 @@ abstract class RenderableObject extends Renderable {
             try {
                 if (i != -2) method2383(null, -63, null);
                 anInt6385++;
-                boolean bool = ((Exception_Sub1.itemDefinitions.method1941(class46.anInt672, (byte) -74, class46.anInt812, class46.anInt781, ~0xffffff | class46.anInt809, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
+                boolean bool = ((Exception_Sub1.itemDefinitions.method1941(class46.anInt672, (byte) -74, class46.itemId, class46.anInt781, ~0xffffff | class46.anInt809, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
                 if (!bool) break;
-                Component305.aClass262_9931.addTail(new NodeSub7(class46.anInt812, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
+                Component305.aClass262_9931.addTail(new NodeSub7(class46.itemId, class46.anInt781, class46.anInt672, (~0xffffff | class46.anInt809), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
                 Component111.markInterfaceDirty(-9343, class46);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("ga.QA(" + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class46 != null ? "{...}" : "null") + ')'));
@@ -78,8 +78,8 @@ abstract class RenderableObject extends Renderable {
                                 i_11_ = (i_11_ * 256 / (Component182.anInt9750 + 256));
                                 i_12_ = i_12_ * 256 / (256 + (Component182.anInt9750));
                             }
-                            is[i_9_ * 2] = (((i_11_ * (((class42.anIntArray591[i_9_ * 2 - -1]) * 4) + i_8_) + (i_5_ - -(4 * (class42.anIntArray591[2 * i_9_]))) * i_12_) >> 14) + (i_6_ - -(class46.anInt709 / 2)));
-                            is[i_9_ * 2 - -1] = (-((((class42.anIntArray591[1 + i_9_ * 2]) * 4 + i_8_) * i_12_ - (i_5_ - -((class42.anIntArray591[i_9_ * 2]) * 4)) * i_11_) >> 14) + i + class46.anInt789 / 2);
+                            is[i_9_ * 2] = (((i_11_ * (((class42.anIntArray591[i_9_ * 2 - -1]) * 4) + i_8_) + (i_5_ - -(4 * (class42.anIntArray591[2 * i_9_]))) * i_12_) >> 14) + (i_6_ - -(class46.width / 2)));
+                            is[i_9_ * 2 - -1] = (-((((class42.anIntArray591[1 + i_9_ * 2]) * 4 + i_8_) * i_12_ - (i_5_ - -((class42.anIntArray591[i_9_ * 2]) * 4)) * i_11_) >> 14) + i + class46.height / 2);
                         }
                         Component68.method2619(var_ha, is, class42.anInt582, class46.anIntArray677, class46.anIntArray772);
                         if (class42.anInt584 > 0) {

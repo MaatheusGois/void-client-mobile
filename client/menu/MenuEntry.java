@@ -6,8 +6,8 @@
  * lives in {@link Component192#menuTip}. Left-click or menu pick runs
  * {@link ColoredTextBuilder#processMenuAction}, which turns the opcode into a game packet.
  * <p>
- * Custom Void opcodes in the 1900-range (DefaultClickSwapper, Microbot toggle)
- * are intercepted client-side and never sent.
+ * Custom Void opcodes in the 1900-range (DefaultClickSwapper, JoystickAlias,
+ * Microbot toggle) are intercepted client-side and never sent.
  * <p>
  * Microbot plants synthetic rows with real game opcodes, then calls
  * {@link ColoredTextBuilder#processMenuAction} on the client thread.
@@ -34,7 +34,7 @@ final class MenuEntry extends HashNode {
     static int anInt9598;
 
     /**
-     * Item id on interface / inventory rows ({@link DisplayModeManagerContainer57#anInt812}), or
+     * Item id on interface / inventory rows ({@link DisplayModeManagerContainer57#itemId}), or
      * {@code -1} for world entities.
      */
     int itemId;
@@ -52,7 +52,7 @@ final class MenuEntry extends HashNode {
 
     /**
      * First action param — local tile X for walk / object, component child for
-     * interface ops ({@link DisplayModeManagerContainer57#anInt704}).
+     * interface ops ({@link DisplayModeManagerContainer57#childIndex}).
      */
     int param0;
 
@@ -70,14 +70,14 @@ final class MenuEntry extends HashNode {
 
     /**
      * Second action param — local tile Y for walk / object, packed interface id
-     * for CC_OP ({@link DisplayModeManagerContainer57#anInt830}).
+     * for CC_OP ({@link DisplayModeManagerContainer57#packedId}).
      */
     int param1;
 
     /**
      * Menu opcode. Stock game values (Attack=25/20/…, Walk=19, object 3/4/9/…).
      * Values {@code >= 2000} are shift-variants ({@code opcode - 2000} before send).
-     * Void client-only ops live in 1900–1907.
+     * Void client-only ops live in 1900–1911 (DefaultClick, Microbot, JoystickAlias).
      */
     int opcode;
 

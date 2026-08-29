@@ -662,7 +662,12 @@ final class GlToolkitSub2
         if (i != 3) anInt7799 = -50;
     }
 
-    static final void method3743(byte i, MenuEntry class348_sub42_sub12) {
+    /**
+     * Link {@code class348_sub42_sub12} into {@link DefinitionSub4#menuEntries} and bump
+     * {@link DisplayModeManagerContainer306#menuEntryCount}. Groups rows that share a target
+     * string under {@link HashNodeSub13} for submenu collapsing.
+     */
+    static final void appendMenuEntry(byte i, MenuEntry class348_sub42_sub12) {
         do {
             try {
                 anInt7686++;

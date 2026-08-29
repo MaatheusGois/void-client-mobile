@@ -27,7 +27,20 @@ final class ShaderProgramSub2
         }
     }
 
-    static final void method2144(String string, int i, byte i_0_, int i_1_, String string_2_, String string_3_, String string_4_) {
+    /**
+     * Push a line into the game chatbox (type 5 = filterable game message).
+     * Used by Void overlays ({@link JoystickAlias}, {@link DefaultClickSwapper}) and
+     * stock packets / friend login tips.
+     *
+     * @param string   optional speaker / channel prefix (often empty)
+     * @param i        chat type (5 = game)
+     * @param i_0_     opaque anti-deob byte
+     * @param i_1_     world / filter id (0 for local tips)
+     * @param string_2_ message body
+     * @param string_3_ optional clan / display fragment
+     * @param string_4_ optional second name fragment
+     */
+    static final void addChatMessage(String string, int i, byte i_0_, int i_1_, String string_2_, String string_3_, String string_4_) {
         do {
             try {
                 DisplayModeManagerContainer174.method2477(string, string_2_, (byte) -110, -1, string_3_, null, i, i_1_, string_4_);

@@ -4,8 +4,11 @@
 
 final class DisplayModeManagerContainer57
 /**
- * RENAMED from `Class46` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * Interface / HUD component (widget). Holds layout, scripts, and — for inventory
+ * slots — {@link #itemId}, {@link #optionLabels}, and packed interface ids used
+ * when building right-click menus via {@link Component66#buildComponentMenu}.
+ * <p>
+ * RENAMED from {@code Class46} (JODE-obfuscated).
  */ {
     Object[] anObjectArray671;
     int anInt672;
@@ -40,16 +43,20 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray701;
     int anInt702 = -1;
     int anInt703;
-    int anInt704;
+    /** Child / slot index within the parent interface (menu {@code param0}). */
+    int childIndex;
     int anInt705;
-    int[] anIntArray706;
+    /** Per-option tip priorities parallel to {@link #optionLabels} (higher = preferred left-click). */
+    int[] optionPriorities;
     int[] anIntArray707;
     Object[] anObjectArray708;
-    int anInt709;
+    /** Layout width in pixels (decoded + CS2 if_setsize). */
+    int width;
     int anInt710;
     private LruCache aClass356_711;
     static int anInt712;
-    int anInt713;
+    /** Tip priority for the Use / target option ({@link #useOption}). */
+    int usePriority;
     Object[] anObjectArray714;
     int anInt715;
     int anInt716;
@@ -85,10 +92,15 @@ final class DisplayModeManagerContainer57
     byte[] aByteArray746;
     int anInt747;
     NodeSub44 aClass348_Sub44_748;
-    int anInt749;
+    /**
+     * RGB (and sometimes ARGB) colour for rect fill, text, line, and graphic tint.
+     * Drawn by {@link ImageDefinition} for types 3/4/5/9.
+     */
+    int colour;
     int anInt750;
     Object[] anObjectArray751;
-    String aString752;
+    /** Widget display / menu target text (item name, button label, …). */
+    String text;
     int anInt753;
     boolean aBoolean754;
     int anInt755;
@@ -110,31 +122,56 @@ final class DisplayModeManagerContainer57
     int[] anIntArray771;
     int[] anIntArray772;
     int anInt773;
-    int anInt774;
+    /**
+     * Interface component type (low 7 bits; bit 0x80 in the stream means an
+     * optional debug name follows).
+     * <ul>
+     *   <li>0 — layer / scroll panel (has {@link #children})</li>
+     *   <li>2 — inventory-style (full-clip draw path)</li>
+     *   <li>3 — rectangle ({@link #filled} + {@link #colour})</li>
+     *   <li>4 — text ({@link #textContent})</li>
+     *   <li>5 — graphic / item sprite</li>
+     *   <li>6 — 3D model</li>
+     *   <li>9 — line</li>
+     * </ul>
+     * Used by {@link JoystickAlias} dumps and {@link ImageDefinition} draw switch.
+     */
+    int type;
     int anInt775;
     boolean aBoolean776;
     Object[] anObjectArray777;
     byte aByte778;
     int anInt779;
-    String aString780;
+    /** "Use" / target-verb label (menu opcode 13). */
+    String useOption;
     int anInt781;
-    DisplayModeManagerContainer57 aClass46_782;
+    /** Parent widget in the interface tree ({@code null} for root components). */
+    DisplayModeManagerContainer57 parent;
     static int anInt783;
     boolean aBoolean784;
     Object[] anObjectArray785;
     int anInt786;
     int anInt787;
     int anInt788;
-    int anInt789;
+    /** Layout height in pixels (decoded + CS2 if_setsize). */
+    int height;
     boolean aBoolean790;
     int anInt791;
-    String aString792;
+    /**
+     * Drawn string for type-4 text components (and item-name override when
+     * {@link #itemId} is set). Distinct from {@link #text} (menu target / tip name).
+     */
+    String textContent;
     boolean aBoolean793;
     int anInt794;
     int anInt795;
     int anInt796;
     int anInt797;
-    DisplayModeManagerContainer57[] aClass46Array798;
+    /**
+     * Nested child components of this panel (layer / scroll / inventory grid).
+     * Walked by layout, redraw, and helpers like {@link Rs2Widget#findByText}.
+     */
+    DisplayModeManagerContainer57[] children;
     int anInt799;
     int anInt800;
     int[] anIntArray801;
@@ -146,13 +183,20 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray807;
     int anInt808;
     int anInt809;
-    boolean aBoolean810;
+    /** Type-3 rectangle: {@code true} = filled, {@code false} = outline. */
+    boolean filled;
     Object[] anObjectArray811;
-    int anInt812;
-    boolean aBoolean813;
+    /** Inventory / bank item def id held by this component ({@code -1} / {@code 0} = empty). */
+    int itemId;
+    /**
+     * When {@code true}, the component is hidden (CS2 if_sethide / if_gethide bit 0x1).
+     * {@link Rs2Widget#isVisible} returns false while this is set.
+     */
+    boolean hidden;
     int anInt814;
     Object[] anObjectArray815;
-    String aString816;
+    /** Opcode-16 button label (Continue / custom); null → localized default. */
+    String continueOption;
     byte aByte817;
     int[] anIntArray818;
     static int anInt819;
@@ -166,10 +210,12 @@ final class DisplayModeManagerContainer57
     static int anInt827;
     int anInt828;
     static int anInt829;
-    int anInt830;
+    /** Packed interface id ({@code group << 16 | child}) — menu {@code param1}. */
+    int packedId;
     int[] anIntArray831;
     byte[] aByteArray832;
-    String[] aStringArray833;
+    /** Right-click option labels (Wear, Drop, Eat, …) indexed 0..n. */
+    String[] optionLabels;
     int anInt834;
     int anInt835;
     Object[] anObjectArray836;
@@ -205,7 +251,7 @@ final class DisplayModeManagerContainer57
 
     final Shader method425(GraphicsToolkit var_ha, byte i) {
         anInt767++;
-        Shader var_aa = (Shader) ColoredText.aClass60_6096.get(this.anInt830, 119);
+        Shader var_aa = (Shader) ColoredText.aClass60_6096.get(this.packedId, 119);
         if (var_aa != null) return var_aa;
         Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
         if (class207 == null) return null;
@@ -231,9 +277,9 @@ final class DisplayModeManagerContainer57
             this.anIntArray677[(class207.anInt2700 + i_12_)] = class207.anInt2703 + i_13_;
             this.anIntArray772[(i_12_ + class207.anInt2700)] = i_15_ + -i_13_;
         }
-        if (i < 0) method433(null, false);
+        if (i < 0) decode(null, false);
         var_aa = var_ha.method3661(i_10_, i_11_, this.anIntArray677, this.anIntArray772);
-        ColoredText.aClass60_6096.putOne(var_aa, this.anInt830, (byte) -104);
+        ColoredText.aClass60_6096.putOne(var_aa, this.packedId, (byte) -104);
         return var_aa;
     }
 
@@ -380,17 +426,17 @@ final class DisplayModeManagerContainer57
 
     final void method431(int i, int i_29_, byte i_30_) {
         anInt712++;
-        if (this.anIntArray706 == null || (i >= this.anIntArray706.length)) {
+        if (this.optionPriorities == null || (i >= this.optionPriorities.length)) {
             int[] is = new int[1 + i];
-            if (this.anIntArray706 != null) {
-                for (int i_31_ = 0; (i_31_ < this.anIntArray706.length); i_31_++)
-                    is[i_31_] = this.anIntArray706[i_31_];
-                for (int i_32_ = this.anIntArray706.length; i > i_32_; i_32_++)
+            if (this.optionPriorities != null) {
+                for (int i_31_ = 0; (i_31_ < this.optionPriorities.length); i_31_++)
+                    is[i_31_] = this.optionPriorities[i_31_];
+                for (int i_32_ = this.optionPriorities.length; i > i_32_; i_32_++)
                     is[i_32_] = -1;
             }
-            this.anIntArray706 = is;
+            this.optionPriorities = is;
         }
-        this.anIntArray706[i] = i_29_;
+        this.optionPriorities[i] = i_29_;
         if (i_30_ > -18) this.anInt779 = 13;
     }
 
@@ -410,13 +456,17 @@ final class DisplayModeManagerContainer57
         return objects;
     }
 
-    final void method433(Buffer class348_sub49, boolean bool) {
+    /**
+     * Decode this widget from an IF archive buffer (type, layout, scripts, …).
+     * Branch on {@link #type} for type-specific payload (text / graphic / model / …).
+     */
+    final void decode(Buffer class348_sub49, boolean bool) {
         anInt743++;
         int i = class348_sub49.readUnsignedByte(255);
         if (i == 255) i = -1;
-        this.anInt774 = class348_sub49.readUnsignedByte(255);
-        if ((0x80 & this.anInt774) != 0) {
-            this.anInt774 &= 0x7f;
+        this.type = class348_sub49.readUnsignedByte(255);
+        if ((0x80 & this.type) != 0) {
+            this.type &= 0x7f;
             this.aString721 = class348_sub49.readString((byte) -72);
         }
         this.anInt765 = class348_sub49.readUnsignedShort(842397944);
@@ -430,16 +480,16 @@ final class DisplayModeManagerContainer57
         this.aByte681 = class348_sub49.readByte(-108);
         this.anInt834 = class348_sub49.readUnsignedShort(842397944);
         if (this.anInt834 == 65535) this.anInt834 = -1;
-        else this.anInt834 = ((~0xffff & this.anInt830) + this.anInt834);
+        else this.anInt834 = ((~0xffff & this.packedId) + this.anInt834);
         int i_36_ = class348_sub49.readUnsignedByte(255);
         if (i >= 0) this.aBoolean776 = (0x2 & i_36_) != 0;
-        this.aBoolean813 = (0x1 & i_36_) != 0;
-        if (this.anInt774 == 0) {
+        this.hidden = (0x1 & i_36_) != 0;
+        if (this.type == 0) {
             this.anInt698 = class348_sub49.readUnsignedShort(842397944);
             this.anInt791 = class348_sub49.readUnsignedShort(842397944);
             if (i < 0) this.aBoolean776 = class348_sub49.readUnsignedByte(255) == 1;
         }
-        if (this.anInt774 == 5) {
+        if (this.type == 5) {
             this.anInt756 = class348_sub49.readInt((byte) -126);
             this.anInt828 = class348_sub49.readUnsignedShort(842397944);
             int i_37_ = class348_sub49.readUnsignedByte(255);
@@ -450,9 +500,9 @@ final class DisplayModeManagerContainer57
             this.anInt809 = class348_sub49.readInt((byte) -126);
             this.aBoolean790 = class348_sub49.readUnsignedByte(255) == 1;
             this.aBoolean735 = class348_sub49.readUnsignedByte(255) == 1;
-            this.anInt749 = class348_sub49.readInt((byte) -126);
+            this.colour = class348_sub49.readInt((byte) -126);
         }
-        if (this.anInt774 == 6) {
+        if (this.type == 6) {
             this.anInt770 = 1;
             this.anInt753 = class348_sub49.readUnsignedShort(842397944);
             if (this.anInt753 == 65535) this.anInt753 = -1;
@@ -482,26 +532,26 @@ final class DisplayModeManagerContainer57
             if (this.aByte778 != 0) this.anInt796 = class348_sub49.readUnsignedShort(842397944);
             if (this.aByte724 != 0) this.anInt826 = class348_sub49.readUnsignedShort(842397944);
         }
-        if (this.anInt774 == 4) {
+        if (this.type == 4) {
             this.anInt702 = class348_sub49.readUnsignedShort(842397944);
             if (this.anInt702 == 65535) this.anInt702 = -1;
-            this.aString792 = class348_sub49.readString((byte) 111);
+            this.textContent = class348_sub49.readString((byte) 111);
             this.anInt673 = class348_sub49.readUnsignedByte(255);
             this.anInt762 = class348_sub49.readUnsignedByte(255);
             this.anInt700 = class348_sub49.readUnsignedByte(255);
             this.aBoolean769 = class348_sub49.readUnsignedByte(255) == 1;
-            this.anInt749 = class348_sub49.readInt((byte) -126);
+            this.colour = class348_sub49.readInt((byte) -126);
             this.anInt696 = class348_sub49.readUnsignedByte(255);
             if (i >= 0) this.anInt773 = class348_sub49.readUnsignedByte(255);
         }
-        if (this.anInt774 == 3) {
-            this.anInt749 = class348_sub49.readInt((byte) -126);
-            this.aBoolean810 = class348_sub49.readUnsignedByte(255) == 1;
+        if (this.type == 3) {
+            this.colour = class348_sub49.readInt((byte) -126);
+            this.filled = class348_sub49.readUnsignedByte(255) == 1;
             this.anInt696 = class348_sub49.readUnsignedByte(255);
         }
-        if (this.anInt774 == 9) {
+        if (this.type == 9) {
             this.anInt690 = class348_sub49.readUnsignedByte(255);
-            this.anInt749 = class348_sub49.readInt((byte) -126);
+            this.colour = class348_sub49.readInt((byte) -126);
             this.aBoolean744 = class348_sub49.readUnsignedByte(255) == 1;
         }
         int i_40_ = class348_sub49.readMedium(-1);
@@ -523,32 +573,32 @@ final class DisplayModeManagerContainer57
                 this.aByteArray832[i_42_] = i_44_;
             }
         }
-        this.aString752 = class348_sub49.readString((byte) 82);
+        this.text = class348_sub49.readString((byte) 82);
         int i_45_ = class348_sub49.readUnsignedByte(255);
         int i_46_ = 0xf & i_45_;
         if (i_46_ > 0) {
-            this.aStringArray833 = new String[i_46_];
+            this.optionLabels = new String[i_46_];
             for (int i_47_ = 0; i_47_ < i_46_; i_47_++)
-                this.aStringArray833[i_47_] = class348_sub49.readString((byte) -68);
+                this.optionLabels[i_47_] = class348_sub49.readString((byte) -68);
         }
         int i_48_ = i_45_ >> 4;
         if (i_48_ > 0) {
             int i_49_ = class348_sub49.readUnsignedByte(255);
-            this.anIntArray706 = new int[1 + i_49_];
-            for (int i_50_ = 0; i_50_ < this.anIntArray706.length; i_50_++)
-                this.anIntArray706[i_50_] = -1;
-            this.anIntArray706[i_49_] = class348_sub49.readUnsignedShort(842397944);
+            this.optionPriorities = new int[1 + i_49_];
+            for (int i_50_ = 0; i_50_ < this.optionPriorities.length; i_50_++)
+                this.optionPriorities[i_50_] = -1;
+            this.optionPriorities[i_49_] = class348_sub49.readUnsignedShort(842397944);
         }
         if (i_48_ > 1) {
             int i_51_ = class348_sub49.readUnsignedByte(255);
-            this.anIntArray706[i_51_] = class348_sub49.readUnsignedShort(842397944);
+            this.optionPriorities[i_51_] = class348_sub49.readUnsignedShort(842397944);
         }
-        this.aString816 = class348_sub49.readString((byte) 95);
-        if (this.aString816.equals("")) this.aString816 = null;
+        this.continueOption = class348_sub49.readString((byte) 95);
+        if (this.continueOption.equals("")) this.continueOption = null;
         this.anInt729 = class348_sub49.readUnsignedByte(255);
         this.anInt703 = class348_sub49.readUnsignedByte(255);
         this.anInt797 = class348_sub49.readUnsignedByte(255);
-        this.aString780 = class348_sub49.readString((byte) -87);
+        this.useOption = class348_sub49.readString((byte) -87);
         int i_52_ = -1;
         if (DefinitionSub5.method3060(i_40_, bool) != 0) {
             i_52_ = class348_sub49.readUnsignedShort(842397944);
@@ -686,17 +736,17 @@ final class DisplayModeManagerContainer57
     }
 
     final void method438(int i, int i_64_, String string) {
-        if (this.aStringArray833 == null || i >= this.aStringArray833.length) {
+        if (this.optionLabels == null || i >= this.optionLabels.length) {
             String[] strings = new String[i + 1];
-            if (this.aStringArray833 != null) {
-                for (int i_65_ = 0; (this.aStringArray833.length > i_65_); i_65_++)
-                    strings[i_65_] = this.aStringArray833[i_65_];
+            if (this.optionLabels != null) {
+                for (int i_65_ = 0; (this.optionLabels.length > i_65_); i_65_++)
+                    strings[i_65_] = this.optionLabels[i_65_];
             }
-            this.aStringArray833 = strings;
+            this.optionLabels = strings;
         }
         if (i_64_ > 77) {
             anInt766++;
-            this.aStringArray833[i] = string;
+            this.optionLabels[i] = string;
         }
     }
 
@@ -792,10 +842,10 @@ final class DisplayModeManagerContainer57
         this.anInt690 = 1;
         this.anInt716 = 100;
         this.anInt757 = 0;
-        this.anInt704 = -1;
+        this.childIndex = -1;
         this.anInt750 = 0;
         this.anInt675 = 0;
-        this.anInt749 = 0;
+        this.colour = 0;
         this.anInt756 = -1;
         this.anInt710 = 1;
         this.anInt738 = 0;
@@ -809,13 +859,13 @@ final class DisplayModeManagerContainer57
         this.anInt699 = -1;
         this.aBoolean769 = false;
         this.aBoolean720 = false;
-        this.anInt713 = -1;
+        this.usePriority = -1;
         this.anInt739 = 0;
         this.anInt729 = 0;
         this.anInt728 = 0;
         this.anInt797 = InputStream_Sub1.anInt78;
         this.anInt779 = -1;
-        this.anInt709 = 0;
+        this.width = 0;
         this.anInt775 = 1;
         this.anInt719 = -1;
         this.aBoolean793 = false;
@@ -832,9 +882,9 @@ final class DisplayModeManagerContainer57
         this.anInt800 = 0;
         this.anInt770 = 1;
         this.aByte778 = (byte) 0;
-        this.aBoolean810 = false;
+        this.filled = false;
         this.aByte724 = (byte) 0;
-        this.aClass46_782 = null;
+        this.parent = null;
         this.anInt773 = 0;
         this.anInt794 = -1;
         this.anInt725 = 0;
@@ -842,27 +892,27 @@ final class DisplayModeManagerContainer57
         this.aBoolean737 = false;
         this.anInt703 = 0;
         this.anInt828 = 0;
-        this.aString752 = "";
+        this.text = "";
         this.aBoolean745 = false;
         this.anInt698 = 0;
-        this.aString792 = "";
+        this.textContent = "";
         this.anInt814 = 0;
         this.anInt781 = 0;
-        this.aBoolean813 = false;
+        this.hidden = false;
         this.anInt824 = -1;
-        this.anInt830 = -1;
+        this.packedId = -1;
         this.aByte681 = (byte) 0;
         this.anInt809 = 0;
         this.anInt834 = -1;
         this.anInt762 = 0;
-        this.anInt789 = 0;
-        this.aString780 = "";
+        this.height = 0;
+        this.useOption = "";
         this.aBoolean744 = false;
         this.anInt826 = 0;
         this.anInt787 = 0;
         this.anInt705 = -1;
         this.anInt795 = 0;
-        this.anInt812 = -1;
+        this.itemId = -1;
         this.anInt717 = 0;
         this.anInt806 = -1;
         this.anInt842 = 0;

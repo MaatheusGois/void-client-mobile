@@ -16,14 +16,14 @@ final class Rs2Widget {
     }
 
     static boolean isVisible(DisplayModeManagerContainer57 w) {
-        return w != null && !w.aBoolean813;
+        return w != null && !w.hidden;
     }
 
     static DisplayModeManagerContainer57 findByText(String text) {
-        if (text == null || DefinitionSub33.aClass46ArrayArray9427 == null) {
+        if (text == null || DefinitionSub33.openInterfaces == null) {
             return null;
         }
-        DisplayModeManagerContainer57[][] roots = DefinitionSub33.aClass46ArrayArray9427;
+        DisplayModeManagerContainer57[][] roots = DefinitionSub33.openInterfaces;
         for (int g = 0; g < roots.length; g++) {
             DisplayModeManagerContainer57[] all = roots[g];
             if (all == null) {
@@ -34,11 +34,11 @@ final class Rs2Widget {
                 if (c == null) {
                     continue;
                 }
-                if (c.aString752 != null && c.aString752.toLowerCase().indexOf(text.toLowerCase()) >= 0) {
+                if (c.text != null && c.text.toLowerCase().indexOf(text.toLowerCase()) >= 0) {
                     return c;
                 }
-                if (c.aClass46Array798 != null) {
-                    DisplayModeManagerContainer57 nested = findInChildren(c.aClass46Array798, text);
+                if (c.children != null) {
+                    DisplayModeManagerContainer57 nested = findInChildren(c.children, text);
                     if (nested != null) {
                         return nested;
                     }
@@ -57,11 +57,11 @@ final class Rs2Widget {
             if (c == null) {
                 continue;
             }
-            if (c.aString752 != null && c.aString752.toLowerCase().indexOf(text.toLowerCase()) >= 0) {
+            if (c.text != null && c.text.toLowerCase().indexOf(text.toLowerCase()) >= 0) {
                 return c;
             }
-            if (c.aClass46Array798 != null) {
-                DisplayModeManagerContainer57 nested = findInChildren(c.aClass46Array798, text);
+            if (c.children != null) {
+                DisplayModeManagerContainer57 nested = findInChildren(c.children, text);
                 if (nested != null) {
                     return nested;
                 }
@@ -77,13 +77,13 @@ final class Rs2Widget {
         if (component == null || option == null) {
             return false;
         }
-        int packed = (component.anInt704 << 0) | component.anInt830;
-        NewMenuEntry entry = new NewMenuEntry(option, component.aString752 != null ? component.aString752 : "",
-                OPCODE_CC_OP, 1L, component.anInt704, component.anInt830, component.anInt812);
+        int packed = (component.childIndex << 0) | component.packedId;
+        NewMenuEntry entry = new NewMenuEntry(option, component.text != null ? component.text : "",
+                OPCODE_CC_OP, 1L, component.childIndex, component.packedId, component.itemId);
         // identifier for item rows is often 1+slot — anInt9605 from method466 uses 1+i
         entry.setIdentifier(1L);
-        entry.setParam0(component.anInt704);
-        entry.setParam1(component.anInt830);
+        entry.setParam0(component.childIndex);
+        entry.setParam1(component.packedId);
         Microbot.doInvoke(entry);
         return true;
     }

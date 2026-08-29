@@ -18,6 +18,7 @@ IOS_ARCH    ?= arm64
 	desktop desktop-jar desktop-run \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
+	android-apk \
 	ios ios-sim ios-build ios-relaunch ios-device ios-clean
 
 help:
@@ -33,6 +34,7 @@ help:
 	@echo "  make android          installDebug + reverse + launch"
 	@echo "  make android-install  :app:installDebug"
 	@echo "  make android-build    :app:assembleDebug"
+	@echo "  make android-apk      assembleDebug + copy app-debug.apk to resources/"
 	@echo "  make android-reverse  adb reverse :$(GAME_PORT)"
 	@echo "  make android-run      force-stop + reverse + start"
 	@echo "  make android-stop     force-stop"
@@ -55,19 +57,35 @@ check-java17:
 
 # ── desktop ──────────────────────────────────────────────────────────────────
 
-desktop:
-	./gradlew :client:run
+DESKTOP_JAR := client/build/libs/void-client-1.2.0.jar
+DESKTOP_ADDR := $(if $(SERVER_IP),$(SERVER_IP),127.0.0.1)
 
-desktop-jar:
-	./gradlew :client:shadowJar
+desktop: check-java17
+	JAVA_HOME="$(JAVA_17)" PATH="$(JAVA_17)/bin:$$PATH" ./gradlew :client:run
 
+desktop-jar: check-java17
+	JAVA_HOME="$(JAVA_17)" PATH="$(JAVA_17)/bin:$$PATH" ./gradlew :client:shadowJar
+
+# Rebuild jar, kill any prior desktop client, then launch with --address.
 desktop-run: desktop-jar
-	java -jar client/build/libs/void-client-1.2.0.jar --address $(if $(SERVER_IP),$(SERVER_IP),127.0.0.1)
+	@pkill -f 'void-client-1\.2\.0\.jar' 2>/dev/null || true
+	@sleep 1
+	"$(JAVA_17)/bin/java" -jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR)
 
 # ── android ──────────────────────────────────────────────────────────────────
 
 android-build:
 	cd $(ANDROID) && ./gradlew :app:assembleDebug
+
+# Build the debug APK and copy it to resources/ at the repo root.
+# Output: resources/app-debug.apk
+ANDROID_APK_SRC := $(ANDROID)/app/build/outputs/apk/debug/app-debug.apk
+ANDROID_APK_DST := resources/app-debug.apk
+
+android-apk: android-build
+	@mkdir -p resources
+	@cp $(ANDROID_APK_SRC) $(ANDROID_APK_DST)
+	@echo "APK -> $(ANDROID_APK_DST)"
 
 android-install:
 	cd $(ANDROID) && ./gradlew :app:installDebug

@@ -51,6 +51,8 @@ EXPECTED: list[tuple[str, str, str]] = [
     ("field", "Component49", "clientState"),
     ("field", "HardwareProbe", "aClass248_6601"),
     ("field", "Component253", "errorCount"),
+    ("field", "JoystickAlias", "padConnected"),
+    ("method", "JoystickAlias", "onPadButton"),
 ]
 
 # Old names that must not appear as reflection string literals anymore.

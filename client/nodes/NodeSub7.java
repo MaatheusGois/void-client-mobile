@@ -24,7 +24,7 @@ final class NodeSub7
     static final void method2772(int i, byte i_0_) {
         anInt6641++;
         if (Component233.method2547(i, (byte) 84) && i_0_ > 105) {
-            DisplayModeManagerContainer57[] class46s = DefinitionSub33.aClass46ArrayArray9427[i];
+            DisplayModeManagerContainer57[] class46s = DefinitionSub33.openInterfaces[i];
             for (int i_1_ = 0; i_1_ < class46s.length; i_1_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_1_];
                 if (class46 != null) {

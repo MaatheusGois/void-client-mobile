@@ -13,7 +13,7 @@ final class DisplayModeManagerContainer216
 
     static final void method769(int i, byte i_0_) {
         anInt5653++;
-        if (i_0_ > 109 && Component233.method2547(i, (byte) 84)) HashNodeSub4.method3180(-1, (DefinitionSub33.aClass46ArrayArray9427[i]), 24235);
+        if (i_0_ > 109 && Component233.method2547(i, (byte) 84)) HashNodeSub4.method3180(-1, (DefinitionSub33.openInterfaces[i]), 24235);
     }
 
     static final void method770(int i, int i_1_, int i_2_, DisplayModeManagerContainer28 class318_sub1_sub1) {

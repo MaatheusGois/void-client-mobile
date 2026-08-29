@@ -122,12 +122,12 @@ final class NewsFetcher implements Runnable {
             Component149.anInt4458 = class46.anInt695;
             Component163.anInt3176 = i;
             PauseTimer.anInt500 = i_13_;
-            Component281.anInt3829 = class46.anInt812;
+            Component281.anInt3829 = class46.itemId;
             r.aBoolean9722 = true;
-            JaclibLoader.anInt169 = class46.anInt704;
+            JaclibLoader.anInt169 = class46.childIndex;
             Component182.anInt9747 = class46.anInt824;
             if (i_14_ != 21) method2665(-99, (byte) -106, 10, -37, 26, -123);
-            Component90.anInt2046 = class46.anInt830;
+            Component90.anInt2046 = class46.packedId;
             Component111.markInterfaceDirty(-9343, class46);
         }
     }

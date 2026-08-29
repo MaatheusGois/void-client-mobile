@@ -107,7 +107,7 @@ final class HashNodeSub17
     static final void method3270(byte i) {
         if (i <= 106) method3266(null, -91, null);
         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 115)) {
-            if (Component66.method1796(69, class348_sub42_sub12.opcode)) DisplayModeManagerContainer89.method202(6, class348_sub42_sub12);
+            if (Component66.isInterfaceItemOpcode(69, class348_sub42_sub12.opcode)) DisplayModeManagerContainer89.method202(6, class348_sub42_sub12);
         }
         anInt9680++;
     }

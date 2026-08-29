@@ -204,16 +204,22 @@ abstract class BitmapFont {
         }
     }
 
-    static final DisplayModeManagerContainer57 method2570(int i, int i_45_) {
+    /**
+     * Look up a root interface component by packed id
+     * ({@code (interfaceId << 16) | componentId}).
+     * Lives on {@link BitmapFont} for historical/obfuscation reasons — not font-related.
+     * Opaque first arg must be {@code 1512932720}.
+     */
+    static final DisplayModeManagerContainer57 getComponent(int i, int i_45_) {
         anInt4055++;
         if (i != 1512932720) return null;
         int i_46_ = i_45_ >> 16;
         int i_47_ = i_45_ & 0xffff;
-        if (DefinitionSub33.aClass46ArrayArray9427[i_46_] == null || (DefinitionSub33.aClass46ArrayArray9427[i_46_][i_47_] == null)) {
+        if (DefinitionSub33.openInterfaces[i_46_] == null || (DefinitionSub33.openInterfaces[i_46_][i_47_] == null)) {
             boolean bool = Component233.method2547(i_46_, (byte) 84);
             if (!bool) return null;
         }
-        return DefinitionSub33.aClass46ArrayArray9427[i_46_][i_47_];
+        return DefinitionSub33.openInterfaces[i_46_][i_47_];
     }
 
     final int method2571(int i, int i_48_, int[] is, String string, int i_49_, int i_50_, Component24[] class105s, int i_51_, int i_52_, Random random) {
@@ -508,7 +514,7 @@ abstract class BitmapFont {
 
     final int method2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, Shader var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
         try {
-            if (bool != false) method2570(-23, 41);
+            if (bool != false) getComponent(-23, 41);
             anInt4057++;
             return method2568(is, i_118_, (byte) 97, var_aa, i_120_, class105s, i_116_, i_119_, i_122_, i_117_, string, i_121_, i_123_, i_124_, i_115_, 0, i);
         } catch (RuntimeException runtimeexception) {

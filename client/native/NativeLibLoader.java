@@ -60,7 +60,7 @@ final class NativeLibLoader {
             int i_7_;
             if (DefinitionSub21.cameraMode == 4) i_7_ = (int) Component112.cameraYaw & 0x3fff;
             else i_7_ = 0x3fff & CacheNodeSub2.anInt10483 + (int) Component112.cameraYaw;
-            int i_8_ = (Math.max(class46.anInt709 / 2, class46.anInt789 / 2) + 10);
+            int i_8_ = (Math.max(class46.width / 2, class46.height / 2) + 10);
             int i_9_ = i_5_ * i_5_ - -(i_1_ * i_1_);
             if (i_9_ <= i_8_ * i_8_) {
                 int i_10_ = DisplayModeManagerContainer88.anIntArray1207[i_7_];
@@ -74,8 +74,8 @@ final class NativeLibLoader {
                 int i_14_ = class143.method1187(string, false, 100, null);
                 int i_15_ = class143.method1185(null, 0, 0, i_6_, string);
                 i_12_ -= i_14_ / 2;
-                if (-class46.anInt709 <= i_12_ && class46.anInt709 >= i_12_ && (i_13_ >= -class46.anInt789) && class46.anInt789 >= i_13_)
-                    class324.method2584(null, 0, 0, null, i, 0, 50, var_aa, (-i_4_ + (i_3_ + (class46.anInt789 / 2 + (-i_13_ - i_15_)))), i_2_, i_3_, i_14_, (class46.anInt709 / 2 + (i_2_ + i_12_)), false, 1, string);
+                if (-class46.width <= i_12_ && class46.width >= i_12_ && (i_13_ >= -class46.height) && class46.height >= i_13_)
+                    class324.method2584(null, 0, 0, null, i, 0, 50, var_aa, (-i_4_ + (i_3_ + (class46.height / 2 + (-i_13_ - i_15_)))), i_2_, i_3_, i_14_, (class46.width / 2 + (i_2_ + i_12_)), false, 1, string);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("dk.H(" + (class143 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class324 != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ')'));

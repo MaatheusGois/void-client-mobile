@@ -21,9 +21,9 @@ final class DefinitionSub19
             for (int i_1_ = 0; class46s.length > i_1_; i_1_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_1_];
                 if (class46 != null) {
-                    if (class46.anInt774 == 0) {
-                        if (class46.aClass46Array798 != null) method3097(class46.aClass46Array798, i, 125);
-                        NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.anInt830, -6008)));
+                    if (class46.type == 0) {
+                        if (class46.children != null) method3097(class46.children, i, 125);
+                        NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.packedId, -6008)));
                         if (class348_sub41 != null) Component205.method1775((byte) -8, (class348_sub41.anInt7050), i);
                     }
                     if (i == 0 && class46.anObjectArray840 != null) {
@@ -33,9 +33,9 @@ final class DefinitionSub19
                         ClientScriptExecutor.method705(class348_sub36);
                     }
                     if (i == 1 && class46.anObjectArray701 != null) {
-                        if (class46.anInt704 >= 0) {
-                            DisplayModeManagerContainer57 class46_2_ = BitmapFont.method2570(1512932720, (class46.anInt830));
-                            if (class46_2_ == null || (class46_2_.aClass46Array798 == null) || (class46.anInt704 >= (class46_2_.aClass46Array798).length) || class46 != (class46_2_.aClass46Array798[class46.anInt704])) continue;
+                        if (class46.childIndex >= 0) {
+                            DisplayModeManagerContainer57 class46_2_ = BitmapFont.getComponent(1512932720, (class46.packedId));
+                            if (class46_2_ == null || (class46_2_.children == null) || (class46.childIndex >= (class46_2_.children).length) || class46 != (class46_2_.children[class46.childIndex])) continue;
                         }
                         NodeSub36 class348_sub36 = new NodeSub36();
                         class348_sub36.aClass46_6989 = class46;

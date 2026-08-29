@@ -86,7 +86,7 @@ final class SceneNode extends Node {
         do {
             try {
                 anInt6669++;
-                DisplayModeManagerContainer57 class46 = NodeSub22.method2957(i, (byte) -54, i_9_);
+                DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i, (byte) -54, i_9_);
                 if (class46 != null) {
                     if (class46.anObjectArray741 != null) {
                         NodeSub36 class348_sub36 = new NodeSub36();
@@ -100,62 +100,62 @@ final class SceneNode extends Node {
                         if (i_8_ == 1) {
                             Component162.anInt8380++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((DisplayModeManagerContainer91.aClass351_398), (DisplayModeManagerContainer64.aClass77_9029), -93);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(118, class348_sub47);
                         }
                         if (i_8_ == 2) {
                             InputStream_Sub1.anInt71++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((Component33.aClass351_2638), (DisplayModeManagerContainer64.aClass77_9029), -98);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(126, class348_sub47);
                         }
                         if (i_8_ == 3) {
                             Component156.anInt3703++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((WaterSurfaceShader.aClass351_6244), (DisplayModeManagerContainer64.aClass77_9029), -93);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(-80, class348_sub47);
                         }
                         if (i_8_ == 4) {
                             Component330.anInt1514++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((ShaderSub3.aClass351_5204), (DisplayModeManagerContainer64.aClass77_9029), -82);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(116, class348_sub47);
                         }
                         int i_10_ = -80 / ((64 - i_7_) / 43);
                         if (i_8_ == 5) {
                             MatrixSub2.anInt5714++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((Cp1252Decoder.aClass351_5217), (DisplayModeManagerContainer64.aClass77_9029), -94);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(123, class348_sub47);
                         }
                         if (i_8_ == 6) {
                             Component49.anInt4680++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((Component303.aClass351_2892), (DisplayModeManagerContainer64.aClass77_9029), -100);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(-4, class348_sub47);
                         }
                         if (i_8_ == 7) {
                             Component374.anInt4134++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((Component142.aClass351_4418), (DisplayModeManagerContainer64.aClass77_9029), -84);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(118, class348_sub47);
                         }
                         if (i_8_ == 8) {
                             DisplayModeManagerContainer67.anInt1726++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((Component315.aClass351_3165), (DisplayModeManagerContainer64.aClass77_9029), -117);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(-96, class348_sub47);
                         }
                         if (i_8_ == 9) {
                             NewsFetcher.anInt4198++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((ResourceLoader.aClass351_3898), (DisplayModeManagerContainer64.aClass77_9029), -107);
-                            Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(119, class348_sub47);
                         }
                         if (i_8_ != 10) break;
                         Component17.anInt3886++;
                         ParticleSystem class348_sub47 = ParticleShader.method2148(Component337.aClass351_3644, (DisplayModeManagerContainer64.aClass77_9029), -120);
-                        Component121.method3614(i_9_, i, class46.anInt812, class348_sub47, -19692);
+                        Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                         HashNodeSub14.method3243(117, class348_sub47);
                     }
                 }

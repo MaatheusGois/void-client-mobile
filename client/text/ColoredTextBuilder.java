@@ -407,6 +407,11 @@ final class ColoredTextBuilder {
                         ShaderProgramSub2.method2146((byte) 84);
                         break;
                     }
+                    // Client-only joystick Learn alias — do not send a game packet.
+                    if (JoystickAlias.handleMenuAction(class348_sub42_sub12)) {
+                        ShaderProgramSub2.method2146((byte) 84);
+                        break;
+                    }
                     // Client-only Microbot toggle — do not send a game packet.
                     if (MicrobotRuntime.handleMenuAction(class348_sub42_sub12)) {
                         ShaderProgramSub2.method2146((byte) 84);
@@ -509,7 +514,7 @@ final class ColoredTextBuilder {
                         HashNodeSub18.method3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 6) {
-                        DisplayModeManagerContainer57 class46 = NodeSub22.method2957(i_74_, (byte) -54, i_75_);
+                        DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
                         if (class46 != null) Component177.method1237((byte) 71, class46);
                     }
                     if (i_76_ == 5) {
@@ -678,7 +683,7 @@ final class ColoredTextBuilder {
                     }
                     if (i_76_ == 16 && Component297.aClass46_4730 == null) {
                         ImageDefinition.method3065(i_75_, false, i_74_);
-                        Component297.aClass46_4730 = NodeSub22.method2957(i_74_, (byte) -54, i_75_);
+                        Component297.aClass46_4730 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
                         Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
                     }
                     if (i_76_ == 8) {
@@ -873,13 +878,13 @@ final class ColoredTextBuilder {
                         }
                         if (i_76_ == 18 || i_76_ == 1011) SceneNode.method2780(i_74_, (class348_sub42_sub12.target), (byte) 5, i_77_, i_75_);
                         if (i_76_ == 13) {
-                            DisplayModeManagerContainer57 class46 = NodeSub22.method2957(i_74_, (byte) -54, i_75_);
+                            DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
                             if (class46 != null) {
                                 DisplayModeManagerContainer196.method2678(-2049);
                                 NodeSub44 class348_sub44 = client.method105(class46);
                                 NewsFetcher.method2666(class348_sub44.anInt7093, class348_sub44.method3307(14), class46, (byte) 21);
-                                DisplayModeManagerContainer332.aString5001 = DisplayModeManagerContainer295.method1753(0, class46);
-                                DisplayModeManagerContainer332.aString5000 = (class46.aString752 + "<col=ffffff>");
+                                DisplayModeManagerContainer332.aString5001 = DisplayModeManagerContainer295.getUseOption(0, class46);
+                                DisplayModeManagerContainer332.aString5000 = (class46.text + "<col=ffffff>");
                                 if (DisplayModeManagerContainer332.aString5001 == null) DisplayModeManagerContainer332.aString5001 = "Null";
                             }
                         } else {

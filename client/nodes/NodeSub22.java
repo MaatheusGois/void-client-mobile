@@ -6,8 +6,8 @@ import java.awt.*;
 
 final class NodeSub22
 /**
- * RENAMED from `Class348_Sub22` (JODE-obfuscated).
- * Evidence: subclass of Node (hierarchy)
+ * NPC list node ({@link #npc}) plus static interface helpers.
+ * RENAMED from {@code Class348_Sub22} (JODE-obfuscated).
  */ extends Node {
     static int anInt6857;
     static int anInt6858;
@@ -16,13 +16,19 @@ final class NodeSub22
     static int anInt6861;
     static int anInt6862;
 
-    static final DisplayModeManagerContainer57 method2957(int i, byte i_0_, int i_1_) {
+    /**
+     * Resolve a component: packed parent id + optional child index.
+     * {@code childIndex == -1} → the parent itself; otherwise {@code parent.children[childIndex]}.
+     * Opaque middle arg must be {@code (byte) -54}.
+     * Used by prayer alias fire ({@link JoystickAlias}) and Microbot widget lookup.
+     */
+    static final DisplayModeManagerContainer57 getChildComponent(int i, byte i_0_, int i_1_) {
         anInt6858++;
-        DisplayModeManagerContainer57 class46 = BitmapFont.method2570(i_0_ + 1512932774, i_1_);
+        DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(i_0_ + 1512932774, i_1_);
         if (i_0_ != -54) method2958(-23, null);
         if (i == -1) return class46;
-        if (class46 == null || class46.aClass46Array798 == null || (i >= class46.aClass46Array798.length)) return null;
-        return class46.aClass46Array798[i];
+        if (class46 == null || class46.children == null || (i >= class46.children.length)) return null;
+        return class46.children[i];
     }
 
     static final int method2958(int i, CacheStore class45) {

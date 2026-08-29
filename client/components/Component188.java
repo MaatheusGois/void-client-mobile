@@ -28,30 +28,30 @@ final class Component188
     static final void method1843(int i, int i_8_, DisplayModeManagerContainer57 class46, boolean bool, int i_9_) {
         anInt6135++;
         if (i_8_ != -326) method1844(32, -33, false, 1, false, 64, -83);
-        int i_10_ = class46.anInt709;
-        int i_11_ = class46.anInt789;
-        if (class46.aByte778 == 0) class46.anInt709 = class46.anInt842;
+        int i_10_ = class46.width;
+        int i_11_ = class46.height;
+        if (class46.aByte778 == 0) class46.width = class46.anInt842;
         else if (class46.aByte778 != 1) {
-            if (class46.aByte778 == 2) class46.anInt709 = class46.anInt842 * i >> 14;
-        } else class46.anInt709 = -class46.anInt842 + i;
+            if (class46.aByte778 == 2) class46.width = class46.anInt842 * i >> 14;
+        } else class46.width = -class46.anInt842 + i;
         if (class46.aByte724 != 0) {
             if (class46.aByte724 != 1) {
-                if (class46.aByte724 == 2) class46.anInt789 = class46.anInt728 * i_9_ >> 14;
-            } else class46.anInt789 = i_9_ - class46.anInt728;
-        } else class46.anInt789 = class46.anInt728;
-        if (class46.aByte778 == 4) class46.anInt709 = (class46.anInt789 * class46.anInt710 / class46.anInt775);
-        if (class46.aByte724 == 4) class46.anInt789 = (class46.anInt775 * class46.anInt709 / class46.anInt710);
-        if (DisplayModeManagerContainer356.aBoolean6327 && (client.method105(class46).anInt7098 != 0 || class46.anInt774 == 0)) {
-            if (class46.anInt789 < 5 && class46.anInt709 < 5) {
-                class46.anInt789 = 5;
-                class46.anInt709 = 5;
+                if (class46.aByte724 == 2) class46.height = class46.anInt728 * i_9_ >> 14;
+            } else class46.height = i_9_ - class46.anInt728;
+        } else class46.height = class46.anInt728;
+        if (class46.aByte778 == 4) class46.width = (class46.height * class46.anInt710 / class46.anInt775);
+        if (class46.aByte724 == 4) class46.height = (class46.anInt775 * class46.width / class46.anInt710);
+        if (DisplayModeManagerContainer356.aBoolean6327 && (client.method105(class46).anInt7098 != 0 || class46.type == 0)) {
+            if (class46.height < 5 && class46.width < 5) {
+                class46.height = 5;
+                class46.width = 5;
             } else {
-                if (class46.anInt789 <= 0) class46.anInt789 = 5;
-                if (class46.anInt709 <= 0) class46.anInt709 = 5;
+                if (class46.height <= 0) class46.height = 5;
+                if (class46.width <= 0) class46.width = 5;
             }
         }
         if (Component98.anInt5943 == class46.anInt765) NodeSub1.aClass46_6561 = class46;
-        if (bool && class46.anObjectArray727 != null && (i_10_ != class46.anInt709 || (i_11_ != class46.anInt789))) {
+        if (bool && class46.anObjectArray727 != null && (i_10_ != class46.width || (i_11_ != class46.height))) {
             NodeSub36 class348_sub36 = new NodeSub36();
             class348_sub36.aClass46_6989 = class46;
             class348_sub36.anObjectArray6987 = class46.anObjectArray727;

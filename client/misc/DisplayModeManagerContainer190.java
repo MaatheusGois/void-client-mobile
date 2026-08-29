@@ -322,7 +322,7 @@ final class DisplayModeManagerContainer190
         DefinitionSub4.menuEntries.clear(115);
         MenuEntry.aClass356_9603.clear(0);
         Component237.aClass107_3022.clear(2110355138);
-        GlToolkitSub2.method3743((byte) 6, ImageDefinition.aMenuEntry_9144);
+        GlToolkitSub2.appendMenuEntry((byte) 6, ImageDefinition.aMenuEntry_9144);
     }
 
     final void VA(int i) {

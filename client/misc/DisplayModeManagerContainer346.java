@@ -40,7 +40,7 @@ final class DisplayModeManagerContainer346
                 if (DefinitionSub21.cameraMode != 4)
                     i_6_ = (0x3fff & (int) Component112.cameraYaw - -CacheNodeSub2.anInt10483);
                 else i_6_ = 0x3fff & (int) Component112.cameraYaw;
-                int i_7_ = 10 + Math.max(class46.anInt709 / 2, class46.anInt789 / i_4_);
+                int i_7_ = 10 + Math.max(class46.width / 2, class46.height / i_4_);
                 int i_8_ = i_5_ * i_5_ - -(i_3_ * i_3_);
                 if (i_7_ * i_7_ >= i_8_) {
                     int i_9_ = DisplayModeManagerContainer88.anIntArray1207[i_6_];
@@ -51,7 +51,7 @@ final class DisplayModeManagerContainer346
                     }
                     int i_11_ = i_5_ * i_10_ + i_3_ * i_9_ >> 14;
                     int i_12_ = i_3_ * i_10_ + -(i_9_ * i_5_) >> 14;
-                    class105.method963((i_11_ + (class46.anInt709 / 2 + (i_2_ + -(class105.method966() / 2)))), (i - -(class46.anInt789 / 2) + (-i_12_ + -(class105.method980() / 2))), var_aa, i_2_, i);
+                    class105.method963((i_11_ + (class46.width / 2 + (i_2_ + -(class105.method966() / 2)))), (i - -(class46.height / 2) + (-i_12_ + -(class105.method980() / 2))), var_aa, i_2_, i);
                 }
             }
         } catch (RuntimeException runtimeexception) {

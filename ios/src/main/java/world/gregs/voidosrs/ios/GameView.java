@@ -42,7 +42,7 @@ import voidawt.event.MouseEvent;
  * {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
  *
  * <p>DualShock / Xbox / MFi (via {@link GCController}): left stick moves a drawn
- * cursor, ✕ left-click, ○ right-click, L1/L2 zoom, right stick camera orbit —
+ * cursor, ✕ left-click, ○ right-click, L2/R2 zoom, right stick camera orbit —
  * same mapping as Android {@code MainActivity.GameView} pad path.
  *
  * <p>Window resize (Stage Manager / split): the image view stretches immediately;
@@ -121,7 +121,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private float stickRX;
     private float stickRY;
     private float triggerL2;
-    private boolean l1Held;
+    private float triggerR2;
     private boolean padLeftDown;
     private boolean padRightDown;
     private boolean padTickRunning;
@@ -241,9 +241,28 @@ public class GameView extends UIView implements AwtHost.Presenter {
         pad.getRightThumbstick().setValueChangedHandler(null);
         pad.getButtonA().setPressedChangedHandler(null);
         pad.getButtonB().setPressedChangedHandler(null);
+        pad.getButtonX().setPressedChangedHandler(null);
+        pad.getButtonY().setPressedChangedHandler(null);
         pad.getLeftShoulder().setPressedChangedHandler(null);
+        pad.getRightShoulder().setPressedChangedHandler(null);
         pad.getLeftTrigger().setValueChangedHandler(null);
         pad.getLeftTrigger().setPressedChangedHandler(null);
+        pad.getRightTrigger().setValueChangedHandler(null);
+        pad.getRightTrigger().setPressedChangedHandler(null);
+        // D-pad / sticks / Options may be null on older pads — clear safely.
+        clearButton(pad.getDpad() != null ? pad.getDpad().getUp() : null);
+        clearButton(pad.getDpad() != null ? pad.getDpad().getDown() : null);
+        clearButton(pad.getDpad() != null ? pad.getDpad().getLeft() : null);
+        clearButton(pad.getDpad() != null ? pad.getDpad().getRight() : null);
+        clearButton(pad.getLeftThumbstickButton());
+        clearButton(pad.getRightThumbstickButton());
+        clearButton(pad.getButtonMenu());
+    }
+
+    private static void clearButton(GCControllerButtonInput input) {
+        if (input != null) {
+            input.setPressedChangedHandler(null);
+        }
     }
 
     private void bindPadHandlers(final GCExtendedGamepad pad) {
@@ -278,20 +297,22 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         onPadClick(false, pressed != null && pressed.booleanValue());
                     }
                 });
-        // L1 → zoom out while held
-        pad.getLeftShoulder().setPressedChangedHandler(
-                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
-                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
-                        l1Held = pressed != null && pressed.booleanValue();
-                        if (l1Held) {
-                            ensureCursor();
-                            int[] xy = mapCursor();
-                            AwtHost.injectWheel(xy[0], xy[1], 1);
-                            lastPadZoomAt = System.currentTimeMillis();
-                            startPadTick();
-                        }
-                    }
-                });
+        // Square / Triangle / L1 / R1 / L3 / R3 / D-pad → learn alias or fire binding
+        // Labels are ASCII — RS bitmap font cannot draw ↑↓ / □△ (shows '?').
+        bindAliasButton(pad.getButtonX(), 99, "Square");
+        bindAliasButton(pad.getButtonY(), 100, "Triangle");
+        bindAliasButton(pad.getLeftShoulder(), 102, "L1");
+        bindAliasButton(pad.getRightShoulder(), 103, "R1");
+        bindAliasButton(pad.getLeftThumbstickButton(), 106, "L3");
+        bindAliasButton(pad.getRightThumbstickButton(), 107, "R3");
+        if (pad.getDpad() != null) {
+            bindAliasButton(pad.getDpad().getUp(), 19, "Up");
+            bindAliasButton(pad.getDpad().getDown(), 20, "Down");
+            bindAliasButton(pad.getDpad().getLeft(), 21, "Left");
+            bindAliasButton(pad.getDpad().getRight(), 22, "Right");
+        }
+        // Options / Menu → world map (Android KEYCODE_BUTTON_START = 108)
+        bindAliasButton(pad.getButtonMenu(), 108, "Options");
         // L2 analog → zoom in (also treat digital press)
         pad.getLeftTrigger().setValueChangedHandler(
                 new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
@@ -309,6 +330,40 @@ public class GameView extends UIView implements AwtHost.Presenter {
                             AwtHost.injectWheel(xy[0], xy[1], -1);
                             lastPadZoomAt = System.currentTimeMillis();
                             startPadTick();
+                        }
+                    }
+                });
+        // R2 analog → zoom out (replaced L1)
+        pad.getRightTrigger().setValueChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        triggerR2 = value != null ? value.floatValue() : 0f;
+                        startPadTick();
+                    }
+                });
+        pad.getRightTrigger().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        if (pressed != null && pressed.booleanValue()) {
+                            ensureCursor();
+                            int[] xy = mapCursor();
+                            AwtHost.injectWheel(xy[0], xy[1], 1);
+                            lastPadZoomAt = System.currentTimeMillis();
+                            startPadTick();
+                        }
+                    }
+                });
+    }
+
+    private void bindAliasButton(GCControllerButtonInput input, final int buttonId, final String label) {
+        if (input == null) {
+            return;
+        }
+        input.setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        if (pressed != null && pressed.booleanValue()) {
+                            AwtHost.notifyPadButton(buttonId, label);
                         }
                     }
                 });
@@ -345,6 +400,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
         padActive = true;
         ensureCursor();
         startPadTick();
+        AwtHost.setPadConnected(true);
         redrawCursor();
     }
 
@@ -369,10 +425,11 @@ public class GameView extends UIView implements AwtHost.Presenter {
         stickRX = 0f;
         stickRY = 0f;
         triggerL2 = 0f;
-        l1Held = false;
+        triggerR2 = 0f;
         padLeftDown = false;
         padRightDown = false;
         stopPadTick();
+        AwtHost.setPadConnected(false);
         redrawCursor();
     }
 
@@ -440,7 +497,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
                 || Math.abs(stickRX) > PAD_DEADZONE
                 || Math.abs(stickRY) > PAD_DEADZONE
                 || triggerL2 > PAD_TRIGGER_THRESHOLD
-                || l1Held;
+                || triggerR2 > PAD_TRIGGER_THRESHOLD;
     }
 
     private float dead(float v) {
@@ -479,8 +536,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
             moved = true;
         }
 
+        // Zoom on the "2" triggers only: L2 in, R2 out.
         boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD;
-        boolean zoomOut = l1Held;
+        boolean zoomOut = triggerR2 > PAD_TRIGGER_THRESHOLD;
         long now = System.currentTimeMillis();
         if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
             int[] xy = mapCursor();

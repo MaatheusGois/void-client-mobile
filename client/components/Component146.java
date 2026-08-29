@@ -40,7 +40,7 @@ final class Component146
             if (loginShift > 0 && i_2_ == 744) {
                 drawY -= loginShift;
             }
-            if (Component14.aClass46ArrayArray8584[i_2_] == null) ImageDefinition.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (DefinitionSub33.aClass46ArrayArray9427[i_2_]), -1, i_7_);
+            if (Component14.aClass46ArrayArray8584[i_2_] == null) ImageDefinition.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (DefinitionSub33.openInterfaces[i_2_]), -1, i_7_);
             else ImageDefinition.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Component14.aClass46ArrayArray8584[i_2_]), -1, i_7_);
             if (i_8_ <= 58) anInt2127 = -84;
             if (Component210.gameCanvasAttached) {

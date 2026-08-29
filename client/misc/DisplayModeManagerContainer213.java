@@ -133,7 +133,7 @@ abstract class DisplayModeManagerContainer213
 
     static final void method544(String string, boolean bool, int i) {
         anInt1075++;
-        ShaderProgramSub2.method2144("", i, (byte) -96, 0, string, "", "");
+        ShaderProgramSub2.addChatMessage("", i, (byte) -96, 0, string, "", "");
         if (bool != false) method547(null, -103);
     }
 

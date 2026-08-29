@@ -48,9 +48,9 @@ final class DisplayModeManagerContainer220
         anInt278++;
         Shader var_aa = class46.method425(NodeSub8.toolkit, (byte) 19);
         if (var_aa != null) {
-            NodeSub8.toolkit.KA(i_1_, i, class46.anInt709 + i_1_, i - -class46.anInt789);
+            NodeSub8.toolkit.KA(i_1_, i, class46.width + i_1_, i - -class46.height);
             if (Component293.anInt3306 >= 3) NodeSub8.toolkit.A(-16777216, var_aa, i_1_, i);
-            else NpcComposition.aClass105_1365.method976(((float) class46.anInt709 / 2.0F + (float) i_1_), (float) i + (float) class46.anInt789 / 2.0F, 4096, (0x3fff & (int) -Component112.cameraYaw) << 2, var_aa, i_1_, i);
+            else NpcComposition.aClass105_1365.method976(((float) class46.width / 2.0F + (float) i_1_), (float) i + (float) class46.height / 2.0F, 4096, (0x3fff & (int) -Component112.cameraYaw) << 2, var_aa, i_1_, i);
             if (i_0_ != -98) method271(88, null, (byte) 15, 71);
         }
     }
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer220
 
     static final void method273(DisplayModeManagerContainer57 class46, int i) {
         anInt288++;
-        if (class46.anInt774 == 5 && class46.anInt812 != -1) RenderableObject.method2383(NodeSub8.toolkit, -2, class46);
+        if (class46.type == 5 && class46.itemId != -1) RenderableObject.method2383(NodeSub8.toolkit, -2, class46);
         if (i != -2835) method273(null, 44);
     }
 

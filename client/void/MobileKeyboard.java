@@ -33,18 +33,18 @@ final class MobileKeyboard {
         }
         boolean keyListener = component.anObjectArray822 != null;
         boolean mouseDown = component.anObjectArray763 != null;
-        int type = component.anInt774;
-        String text = component.aString792;
+        int type = component.type;
+        String text = component.textContent;
         if (text != null && text.length() > 48) {
             text = text.substring(0, 48);
         }
         int gameState = Component49.clientState;
-        System.out.println("void-osrs ifPress id=" + component.anInt830
+        System.out.println("void-osrs ifPress id=" + component.packedId
                 + " type=" + type
                 + " keyListener=" + keyListener
                 + " mouseDown=" + mouseDown
                 + " state=" + gameState
-                + " size=" + component.anInt709 + "x" + component.anInt789
+                + " size=" + component.width + "x" + component.height
                 + " xy=" + screenX + "," + screenY
                 + " text=[" + text + "]");
 
@@ -54,22 +54,22 @@ final class MobileKeyboard {
             return;
         }
         focusY = screenY;
-        focusH = component.anInt789;
+        focusH = component.height;
         if (keyListener) {
-            requestShow("keyListener id=" + component.anInt830);
+            requestShow("keyListener id=" + component.packedId);
             return;
         }
         if (mouseDown && isLoginState(gameState)) {
-            requestShow("loginText id=" + component.anInt830 + " state=" + gameState);
+            requestShow("loginText id=" + component.packedId + " state=" + gameState);
         }
     }
 
     /** Single-line text widget suitable for soft-keyboard focus. */
     private static boolean isTextInput(DisplayModeManagerContainer57 c) {
-        if (c.anInt774 != 4 || isFullscreen(c)) {
+        if (c.type != 4 || isFullscreen(c)) {
             return false;
         }
-        int h = c.anInt789;
+        int h = c.height;
         return h > 0 && h <= 48;
     }
 
@@ -88,7 +88,7 @@ final class MobileKeyboard {
         if (shift <= 0 || c == null || isLoginState(Component49.clientState)) {
             return 0;
         }
-        DisplayModeManagerContainer57 parent = c.aClass46_782;
+        DisplayModeManagerContainer57 parent = c.parent;
         if (parent != null && !isFullscreen(parent)) {
             return 0;
         }
@@ -101,9 +101,9 @@ final class MobileKeyboard {
             lastLoggedShift = lift;
             System.out.println("void-osrs chatLift shift=" + lift
                     + " kb=" + shift
-                    + " id=" + c.anInt830
+                    + " id=" + c.packedId
                     + " xy=" + screenX + "," + screenY
-                    + " size=" + c.anInt709 + "x" + c.anInt789
+                    + " size=" + c.width + "x" + c.height
                     + " state=" + Component49.clientState);
         }
         return lift;
@@ -147,7 +147,7 @@ final class MobileKeyboard {
 
     /** Keep 744 hit-testing aligned with {@link #loginLayerShift()} draw offset. */
     static int loginHitShift(DisplayModeManagerContainer57 c) {
-        if (c == null || (c.anInt830 >>> 16) != 744) {
+        if (c == null || (c.packedId >>> 16) != 744) {
             return 0;
         }
         return loginLayerShift();
@@ -159,8 +159,8 @@ final class MobileKeyboard {
         if (isFullscreen(c)) {
             return false;
         }
-        int h = c.anInt789;
-        int w = c.anInt709;
+        int h = c.height;
+        int w = c.width;
         if (h > sh * 45 / 100 || h < 40) {
             return false;
         }
@@ -170,7 +170,7 @@ final class MobileKeyboard {
         if (screenY + h < sh * 70 / 100) {
             return false;
         }
-        int iface = c.anInt830 >>> 16;
+        int iface = c.packedId >>> 16;
         if (iface == 137) {
             return true;
         }
@@ -180,7 +180,7 @@ final class MobileKeyboard {
     private static boolean isFullscreen(DisplayModeManagerContainer57 c) {
         int sw = Math.max(1, DisplayModeManagerContainer23.anInt1524);
         int sh = Math.max(1, GlToolkitSub2.anInt7666);
-        return c.anInt709 >= sw - 8 && c.anInt789 >= sh - 8;
+        return c.width >= sw - 8 && c.height >= sh - 8;
     }
 
     /** Title / login / lobby — not the in-game world (state 10). */

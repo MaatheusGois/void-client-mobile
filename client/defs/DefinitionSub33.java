@@ -9,7 +9,12 @@ final class DefinitionSub33
  */ extends Definition {
     static int anInt9425;
     static int anInt9426;
-    static DisplayModeManagerContainer57[][] aClass46ArrayArray9427;
+    /**
+     * Open interface roots indexed by interface group id.
+     * {@code openInterfaces[group][child]} — used by menu builders, CS2,
+     * {@link Rs2Widget}, and joystick world-map lookup.
+     */
+    static DisplayModeManagerContainer57[][] openInterfaces;
     static int anInt9428;
     static int anInt9429;
     static int anInt9430;
@@ -28,14 +33,14 @@ final class DefinitionSub33
     }
 
     public static void method3138(byte i) {
-        aClass46ArrayArray9427 = null;
+        openInterfaces = null;
         int i_1_ = 93 % ((-58 - i) / 55);
     }
 
     final int[][] getColourOutput(int i, int i_2_) {
         anInt9429++;
         int[][] is = this.imageCacheStore.getPixels(-97, i);
-        if (i_2_ != -1564599039) aClass46ArrayArray9427 = null;
+        if (i_2_ != -1564599039) openInterfaces = null;
         if (this.imageCacheStore.cacheMiss) {
             int[] is_3_ = is[0];
             int[] is_4_ = is[1];
@@ -53,7 +58,7 @@ final class DefinitionSub33
 
     final int[] getMonochromeOutput(int i, int i_8_) {
         anInt9428++;
-        if (i_8_ != 255) aClass46ArrayArray9427 = null;
+        if (i_8_ != 255) openInterfaces = null;
         int[] is = this.imageCache.getPixels(0, i);
         if (this.imageCache.cacheMiss) {
             for (int i_9_ = 0; (i_9_ < DefinitionSub6.anInt9139); i_9_++) {
@@ -66,7 +71,7 @@ final class DefinitionSub33
     }
 
     final void method3049(Buffer class348_sub49, int i, int i_11_) {
-        if (i_11_ != 31015) aClass46ArrayArray9427 = null;
+        if (i_11_ != 31015) openInterfaces = null;
         anInt9430++;
         if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
     }

@@ -12,6 +12,9 @@ repositories {
 
 dependencies {
     implementation(files("../libs/clientlibs.jar"))
+    // Desktop DualShock / Xbox / etc. → virtual mouse + JoystickAlias (SDL via Jamepad).
+    // Mobile hosts use Android InputDevice / iOS GCController instead — not on their CP.
+    implementation("com.badlogicgames.jamepad:jamepad:2.26.5.0")
 }
 
 java {
@@ -77,7 +80,11 @@ application {
 tasks.shadowJar {
     archiveBaseName.set("void-client")
     archiveClassifier.set("")
-    minimize()
+    // Keep jamepad + jnigen natives / gamecontrollerdb — minimize would strip the .dylib/.so.
+    minimize {
+        exclude(dependency("com.badlogicgames.jamepad:jamepad:.*"))
+        exclude(dependency("com.badlogicgames.gdx:gdx-jnigen-loader:.*"))
+    }
 }
 
 // Must be a 32-bit jre - ideally with jlink

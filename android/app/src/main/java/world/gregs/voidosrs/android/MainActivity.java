@@ -1127,7 +1127,8 @@ public class MainActivity extends Activity {
         private float stickRX;
         private float stickRY;
         private float triggerL2;
-        private boolean l1Held;
+        private float triggerR2;
+        private boolean r2DigitalHeld;
         private boolean l2DigitalHeld;
         private boolean padLeftDown;
         private boolean padRightDown;
@@ -1245,6 +1246,7 @@ public class MainActivity extends Activity {
             }
             ensureCursor();
             startPadTick();
+            AwtHost.setPadConnected(true);
             redraw();
         }
 
@@ -1268,11 +1270,13 @@ public class MainActivity extends Activity {
             stickRX = 0f;
             stickRY = 0f;
             triggerL2 = 0f;
-            l1Held = false;
+            triggerR2 = 0f;
+            r2DigitalHeld = false;
             l2DigitalHeld = false;
             padLeftDown = false;
             padRightDown = false;
             stopPadTick();
+            AwtHost.setPadConnected(false);
             redraw();
         }
 
@@ -1327,8 +1331,9 @@ public class MainActivity extends Activity {
                     || Math.abs(stickRX) > PAD_DEADZONE
                     || Math.abs(stickRY) > PAD_DEADZONE
                     || triggerL2 > PAD_TRIGGER_THRESHOLD
+                    || triggerR2 > PAD_TRIGGER_THRESHOLD
                     || l2DigitalHeld
-                    || l1Held;
+                    || r2DigitalHeld;
         }
 
         private float dead(float v) {
@@ -1364,8 +1369,9 @@ public class MainActivity extends Activity {
                 moved = true;
             }
 
+            // Zoom on the "2" triggers only: L2 in, R2 out (L1 freed for aliases).
             boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD || l2DigitalHeld;
-            boolean zoomOut = l1Held;
+            boolean zoomOut = triggerR2 > PAD_TRIGGER_THRESHOLD || r2DigitalHeld;
             long now = System.currentTimeMillis();
             if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
                 int[] xy = map(cursorVx, cursorVy);
@@ -1400,17 +1406,23 @@ public class MainActivity extends Activity {
                 return false;
             }
             int code = event.getKeyCode();
-            // Ignore repeats for clicks; L1 held is tracked via down/up.
+            // Ignore repeats for held zoom / D-pad spam while learning.
             if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() > 0) {
-                if (code == KeyEvent.KEYCODE_BUTTON_L1) {
-                    return true;
-                }
-                if (code == KeyEvent.KEYCODE_BUTTON_L2) {
+                if (code == KeyEvent.KEYCODE_BUTTON_L2
+                        || code == KeyEvent.KEYCODE_BUTTON_R2
+                        || code == KeyEvent.KEYCODE_DPAD_UP
+                        || code == KeyEvent.KEYCODE_DPAD_DOWN
+                        || code == KeyEvent.KEYCODE_DPAD_LEFT
+                        || code == KeyEvent.KEYCODE_DPAD_RIGHT) {
                     return true;
                 }
                 return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
             }
-            if (code < KeyEvent.KEYCODE_BUTTON_A || code > KeyEvent.KEYCODE_BUTTON_MODE) {
+            boolean dpad = code == KeyEvent.KEYCODE_DPAD_UP
+                    || code == KeyEvent.KEYCODE_DPAD_DOWN
+                    || code == KeyEvent.KEYCODE_DPAD_LEFT
+                    || code == KeyEvent.KEYCODE_DPAD_RIGHT;
+            if ((code < KeyEvent.KEYCODE_BUTTON_A || code > KeyEvent.KEYCODE_BUTTON_MODE) && !dpad) {
                 // Still accept if source is gamepad for unknown codes
                 if (!isGamepad(event)) {
                     return false;
@@ -1444,14 +1456,6 @@ public class MainActivity extends Activity {
                         AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
                     }
                     return true;
-                case KeyEvent.KEYCODE_BUTTON_L1: // zoom out
-                    l1Held = down;
-                    if (down) {
-                        AwtHost.injectWheel(xy[0], xy[1], 1);
-                        lastPadZoomAt = System.currentTimeMillis();
-                        startPadTick();
-                    }
-                    return true;
                 case KeyEvent.KEYCODE_BUTTON_L2: // zoom in (digital)
                     l2DigitalHeld = down;
                     if (down) {
@@ -1460,8 +1464,54 @@ public class MainActivity extends Activity {
                         startPadTick();
                     }
                     return true;
+                case KeyEvent.KEYCODE_BUTTON_R2: // zoom out (digital)
+                    r2DigitalHeld = down;
+                    if (down) {
+                        AwtHost.injectWheel(xy[0], xy[1], 1);
+                        lastPadZoomAt = System.currentTimeMillis();
+                        startPadTick();
+                    }
+                    return true;
                 default:
-                    return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
+                    // L1 / □ / △ / R1 / L3 / R3 / D-pad / Options → alias or map
+                    if (down && AwtHost.notifyPadButton(code, padButtonLabel(code))) {
+                        return true;
+                    }
+                    return dpad
+                            || (code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE);
+            }
+        }
+
+        /** DualShock-ish labels matching {@code JoystickAlias.buttonLabel}.
+         * ASCII only — RS bitmap font has no ↑↓←→ / □△ glyphs (they render as '?'). */
+        private static String padButtonLabel(int code) {
+            switch (code) {
+                case KeyEvent.KEYCODE_BUTTON_X:
+                    return "Square";
+                case KeyEvent.KEYCODE_BUTTON_Y:
+                    return "Triangle";
+                case KeyEvent.KEYCODE_BUTTON_L1:
+                    return "L1";
+                case KeyEvent.KEYCODE_BUTTON_R1:
+                    return "R1";
+                case KeyEvent.KEYCODE_BUTTON_THUMBL:
+                    return "L3";
+                case KeyEvent.KEYCODE_BUTTON_THUMBR:
+                    return "R3";
+                case KeyEvent.KEYCODE_BUTTON_START:
+                    return "Options";
+                case KeyEvent.KEYCODE_BUTTON_SELECT:
+                    return "Share";
+                case KeyEvent.KEYCODE_DPAD_UP:
+                    return "Up";
+                case KeyEvent.KEYCODE_DPAD_DOWN:
+                    return "Down";
+                case KeyEvent.KEYCODE_DPAD_LEFT:
+                    return "Left";
+                case KeyEvent.KEYCODE_DPAD_RIGHT:
+                    return "Right";
+                default:
+                    return "Btn" + code;
             }
         }
 
@@ -1501,6 +1551,10 @@ public class MainActivity extends Activity {
             float lTrigger = axis(event, MotionEvent.AXIS_LTRIGGER);
             float brake = axis(event, MotionEvent.AXIS_BRAKE);
             triggerL2 = Math.max(lTrigger, brake);
+
+            float rTrigger = axis(event, MotionEvent.AXIS_RTRIGGER);
+            float gas = axis(event, MotionEvent.AXIS_GAS);
+            triggerR2 = Math.max(rTrigger, gas);
 
             startPadTick();
             return true;

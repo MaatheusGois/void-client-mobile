@@ -23,15 +23,15 @@ final class Component233
             ImageTagText.aBooleanArray2162[i] = true;
             return true;
         }
-        if (DefinitionSub33.aClass46ArrayArray9427[i] == null) DefinitionSub33.aClass46ArrayArray9427[i] = new DisplayModeManagerContainer57[i_1_];
+        if (DefinitionSub33.openInterfaces[i] == null) DefinitionSub33.openInterfaces[i] = new DisplayModeManagerContainer57[i_1_];
         for (int i_2_ = 0; i_1_ > i_2_; i_2_++) {
-            if (DefinitionSub33.aClass46ArrayArray9427[i][i_2_] == null) {
+            if (DefinitionSub33.openInterfaces[i][i_2_] == null) {
                 byte[] is = Component267.aClass45_2978.getFile(i_0_ ^ ~0x717, i, i_2_);
                 if (is != null) {
-                    DisplayModeManagerContainer57 class46 = (DefinitionSub33.aClass46ArrayArray9427[i][i_2_] = new DisplayModeManagerContainer57());
-                    class46.anInt830 = i_2_ + (i << 16);
+                    DisplayModeManagerContainer57 class46 = (DefinitionSub33.openInterfaces[i][i_2_] = new DisplayModeManagerContainer57());
+                    class46.packedId = i_2_ + (i << 16);
                     if (is[0] != -1) throw new IllegalStateException("if1");
-                    class46.method433(new Buffer(is), true);
+                    class46.decode(new Buffer(is), true);
                 }
             }
         }

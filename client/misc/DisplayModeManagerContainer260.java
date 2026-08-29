@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer260
             int i_18_ = i_14_ * i_14_ + i_16_ * i_16_;
             if (l >= (long) i_18_) {
                 if (i_13_ > -49) method2178(null, -119, null, 58);
-                int i_19_ = Math.min(class46.anInt709 / 2, class46.anInt789 / 2);
+                int i_19_ = Math.min(class46.width / 2, class46.height / 2);
                 if (i_18_ > i_19_ * i_19_) {
                     i_19_ -= 10;
                     int i_20_;
@@ -96,7 +96,7 @@ final class DisplayModeManagerContainer260
                     double d = Math.atan2(i_23_, i_24_);
                     int i_25_ = (int) ((double) i_19_ * Math.sin(d));
                     int i_26_ = (int) (Math.cos(d) * (double) i_19_);
-                    Component33.aClass105Array2640[i_17_].method981(((float) class46.anInt709 / 2.0F + (float) i_15_ + (float) i_25_), ((float) i + (float) class46.anInt789 / 2.0F - (float) i_26_), 4096, (int) (65535.0 * (-d / 6.283185307179586)));
+                    Component33.aClass105Array2640[i_17_].method981(((float) class46.width / 2.0F + (float) i_15_ + (float) i_25_), ((float) i + (float) class46.height / 2.0F - (float) i_26_), 4096, (int) (65535.0 * (-d / 6.283185307179586)));
                 } else DisplayModeManagerContainer346.method1211(i, Component210.aClass105Array5294[i_17_], i_15_, class46, var_aa, i_14_, 2, i_16_);
             }
         } catch (RuntimeException runtimeexception) {

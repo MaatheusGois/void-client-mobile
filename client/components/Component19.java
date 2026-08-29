@@ -51,28 +51,28 @@ final class Component19
     static final void method239(byte i, int i_3_, int i_4_, DisplayModeManagerContainer57 class46) {
         anInt8610++;
         if (class46.aByte817 != 0) {
-            if (class46.aByte817 == 1) class46.anInt800 = ((-class46.anInt709 + i_3_) / 2 + class46.anInt788);
+            if (class46.aByte817 == 1) class46.anInt800 = ((-class46.width + i_3_) / 2 + class46.anInt788);
             else if (class46.aByte817 != 2) {
                 if (class46.aByte817 != 3) {
-                    if (class46.aByte817 != 4) class46.anInt800 = (-class46.anInt709 + i_3_ + -(i_3_ * class46.anInt788 >> 14));
-                    else class46.anInt800 = ((-class46.anInt709 + i_3_) / 2 - -(i_3_ * class46.anInt788 >> 14));
+                    if (class46.aByte817 != 4) class46.anInt800 = (-class46.width + i_3_ + -(i_3_ * class46.anInt788 >> 14));
+                    else class46.anInt800 = ((-class46.width + i_3_) / 2 - -(i_3_ * class46.anInt788 >> 14));
                 } else class46.anInt800 = i_3_ * class46.anInt788 >> 14;
-            } else class46.anInt800 = (-class46.anInt788 + (-class46.anInt709 + i_3_));
+            } else class46.anInt800 = (-class46.anInt788 + (-class46.width + i_3_));
         } else class46.anInt800 = class46.anInt788;
         int i_5_ = 83 % ((i - 50) / 50);
         if (class46.aByte681 != 0) {
-            if (class46.aByte681 == 1) class46.anInt750 = ((i_4_ + -class46.anInt789) / 2 - -class46.anInt739);
-            else if (class46.aByte681 == 2) class46.anInt750 = (i_4_ - class46.anInt789 - class46.anInt739);
+            if (class46.aByte681 == 1) class46.anInt750 = ((i_4_ + -class46.height) / 2 - -class46.anInt739);
+            else if (class46.aByte681 == 2) class46.anInt750 = (i_4_ - class46.height - class46.anInt739);
             else if (class46.aByte681 != 3) {
-                if (class46.aByte681 != 4) class46.anInt750 = (-(i_4_ * class46.anInt739 >> 14) + (i_4_ + -class46.anInt789));
-                else class46.anInt750 = ((i_4_ * class46.anInt739 >> 14) + (-class46.anInt789 + i_4_) / 2);
+                if (class46.aByte681 != 4) class46.anInt750 = (-(i_4_ * class46.anInt739 >> 14) + (i_4_ + -class46.height));
+                else class46.anInt750 = ((i_4_ * class46.anInt739 >> 14) + (-class46.height + i_4_) / 2);
             } else class46.anInt750 = class46.anInt739 * i_4_ >> 14;
         } else class46.anInt750 = class46.anInt739;
-        if (DisplayModeManagerContainer356.aBoolean6327 && (client.method105(class46).anInt7098 != 0 || class46.anInt774 == 0)) {
+        if (DisplayModeManagerContainer356.aBoolean6327 && (client.method105(class46).anInt7098 != 0 || class46.type == 0)) {
             if (class46.anInt750 < 0) class46.anInt750 = 0;
-            else if (i_4_ < (class46.anInt789 + class46.anInt750)) class46.anInt750 = i_4_ - class46.anInt789;
+            else if (i_4_ < (class46.height + class46.anInt750)) class46.anInt750 = i_4_ - class46.height;
             if (class46.anInt800 >= 0) {
-                if (i_3_ < (class46.anInt800 - -class46.anInt709)) class46.anInt800 = i_3_ + -class46.anInt709;
+                if (i_3_ < (class46.anInt800 - -class46.width)) class46.anInt800 = i_3_ + -class46.width;
             } else class46.anInt800 = 0;
         }
     }

@@ -39,6 +39,8 @@ val prepareClientSources by tasks.registering(Copy::class) {
     from(clientDir) {
         include("**/*.java")
         exclude("build/**")
+        // Real java.awt MouseWheelEvent ≠ voidawt — desktop-only poller.
+        exclude("**/DesktopGamepad.java")
         eachFile {
             path = name
         }
