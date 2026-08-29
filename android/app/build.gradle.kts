@@ -32,7 +32,10 @@ android {
     }
 }
 
-val prepareClientSources by tasks.registering(Copy::class) {
+// Sync (not Copy): flattens client/ into generated/client and deletes orphans left
+// by renames (Class262→NodeList, …). Plain Copy left 700+ stale .java files, so
+// javac mixed old call sites with new types and assembleDebug never refreshed the APK.
+val prepareClientSources by tasks.registering(Sync::class) {
     // Flat merge into generated/client (all default package). Nested domain folders
     // under client/ are organizational only — each .java must land at the dest root.
     val clientDir = rootProject.projectDir.resolve("../client")

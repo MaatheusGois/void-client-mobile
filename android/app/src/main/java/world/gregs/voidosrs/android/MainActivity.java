@@ -1483,8 +1483,9 @@ public class MainActivity extends Activity {
         }
 
         /** DualShock-ish labels matching {@code JoystickAlias.buttonLabel}.
-         * ASCII only — RS bitmap font has no ↑↓←→ / □△ glyphs (they render as '?'). */
-        private static String padButtonLabel(int code) {
+         * ASCII only — RS bitmap font has no ↑↓←→ / □△ glyphs (they render as '?').
+         * Non-static: GameView is an inner class (Java forbids static methods here). */
+        private String padButtonLabel(int code) {
             switch (code) {
                 case KeyEvent.KEYCODE_BUTTON_X:
                     return "Square";

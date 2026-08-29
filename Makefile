@@ -79,13 +79,15 @@ android-build:
 
 # Build the debug APK and copy it to resources/ at the repo root.
 # Output: resources/app-debug.apk
+# Fails if assembleDebug did not refresh the APK (stale copy from a prior success).
 ANDROID_APK_SRC := $(ANDROID)/app/build/outputs/apk/debug/app-debug.apk
 ANDROID_APK_DST := resources/app-debug.apk
 
 android-apk: android-build
+	@test -f $(ANDROID_APK_SRC) || (echo "missing $(ANDROID_APK_SRC) — assembleDebug failed"; exit 1)
 	@mkdir -p resources
-	@cp $(ANDROID_APK_SRC) $(ANDROID_APK_DST)
-	@echo "APK -> $(ANDROID_APK_DST)"
+	@cp -f $(ANDROID_APK_SRC) $(ANDROID_APK_DST)
+	@echo "APK -> $(ANDROID_APK_DST) ($$(stat -f '%Sm' -t '%Y-%m-%d %H:%M:%S' $(ANDROID_APK_DST)))"
 
 android-install:
 	cd $(ANDROID) && ./gradlew :app:installDebug
