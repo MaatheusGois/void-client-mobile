@@ -42,8 +42,6 @@ public class Loader extends Applet {
     public static void main(String[] args) {
         // libsw3d.dylib + modern macOS JAWT: Finalizer crashes in canvas::~canvas.
         disableSw3dOnMacOs();
-        // DualShock / Xbox → virtual mouse + JoystickAlias (desktop-only class).
-        startDesktopGamepad();
         for (int i = 0; i < args.length; i++) {
             String arg = args[i];
             switch (arg) {
@@ -65,8 +63,35 @@ public class Loader extends Applet {
                     break;
             }
         }
+        // First launch only — blocks until the user accepts (persisted under user.home).
+        if (!showAffiliationDisclaimerIfNeeded()) {
+            return;
+        }
         Loader l = new Loader();
         l.doFrame();
+    }
+
+    /**
+     * Desktop-only Swing modal via {@code DesktopAffiliationDisclaimer} (excluded from
+     * mobile source copy — voidswing has no JOptionPane). Reflection keeps Android/iOS Loader compiling.
+     */
+    static boolean showAffiliationDisclaimerIfNeeded() {
+        try {
+            Object ok = Class.forName("DesktopAffiliationDisclaimer")
+                    .getDeclaredMethod("showIfNeeded")
+                    .invoke(null);
+            return ok instanceof Boolean && ((Boolean) ok).booleanValue();
+        } catch (ClassNotFoundException ignored) {
+            // Mobile hosts show the disclaimer in MainActivity / GameController.
+            return true;
+        } catch (Throwable t) {
+            System.out.println("void-osrs: disclaimer dialog failed: " + t);
+            try {
+                AffiliationDisclaimer.markAccepted();
+            } catch (Throwable ignored) {
+            }
+            return true;
+        }
     }
 
     /**
@@ -122,6 +147,9 @@ public class Loader extends Applet {
     public void doFrame() {
         setParms();
         openFrame();
+        // After the JFrame is up — SDL/GameController sees already-paired DualShock/Xbox
+        // more reliably once AWT/AppKit is running (macOS).
+        startDesktopGamepad();
         startClient();
     }
 

@@ -40,12 +40,14 @@ import android.media.AudioManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
 
 import voidawt.AwtHost;
 import voidawt.event.MouseEvent;
+import world.gregs.voidosrs.AffiliationDisclaimer;
 import world.gregs.voidosrs.ServerPrefs;
 
 public class MainActivity extends Activity {
@@ -204,10 +206,53 @@ public class MainActivity extends Activity {
             }
         };
         game.requestFocus();
+        maybeShowDisclaimerThenContinue();
+        pollLoginButton();
+    }
+
+    /**
+     * First launch only: scrollable non-affiliation disclaimer before server picker / client boot.
+     * Acceptance is persisted in {@code user.home/void-disclaimer.txt}.
+     */
+    private void maybeShowDisclaimerThenContinue() {
+        if (AffiliationDisclaimer.isAccepted()) {
+            continueAfterDisclaimer();
+            return;
+        }
+        TextView msg = new TextView(this);
+        msg.setText(AffiliationDisclaimer.BODY);
+        msg.setTextSize(13);
+        msg.setTextColor(CREAM);
+        msg.setPadding(48, 24, 48, 24);
+        msg.setLineSpacing(0f, 1.15f);
+        ScrollView scroll = new ScrollView(this);
+        scroll.addView(msg);
+        new AlertDialog.Builder(this)
+                .setTitle(AffiliationDisclaimer.TITLE)
+                .setView(scroll)
+                .setCancelable(false)
+                .setPositiveButton(AffiliationDisclaimer.ACCEPT_LABEL, (d, w) -> {
+                    AffiliationDisclaimer.markAccepted();
+                    continueAfterDisclaimer();
+                })
+                .show();
+    }
+
+    /** Resume normal boot after disclaimer is accepted (or was already). */
+    private void continueAfterDisclaimer() {
         if (resolveBootHost() == null) {
             showServerOverlay(false);
         }
-        pollLoginButton();
+        if (game != null) {
+            int w = game.getWidth();
+            int h = game.getHeight();
+            if (w <= 0 || h <= 0) {
+                int[] win = windowSizePx();
+                w = win[0];
+                h = win[1];
+            }
+            startClientIfReady(w, h);
+        }
     }
 
     @Override
@@ -1043,6 +1088,9 @@ public class MainActivity extends Activity {
         if (clientStarted || width <= 0 || height <= 0) {
             return;
         }
+        if (!AffiliationDisclaimer.isAccepted()) {
+            return;
+        }
         final String server = resolveBootHost();
         if (server == null) {
             return;
@@ -1381,9 +1429,9 @@ public class MainActivity extends Activity {
                 moved = true;
             }
 
-            // Zoom on the "2" triggers only: L2 in, R2 out (L1 freed for aliases).
-            boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD || l2DigitalHeld;
-            boolean zoomOut = triggerR2 > PAD_TRIGGER_THRESHOLD || r2DigitalHeld;
+            // Zoom on the "2" triggers only: R2 in, L2 out (L1 freed for aliases).
+            boolean zoomIn = triggerR2 > PAD_TRIGGER_THRESHOLD || r2DigitalHeld;
+            boolean zoomOut = triggerL2 > PAD_TRIGGER_THRESHOLD || l2DigitalHeld;
             long now = System.currentTimeMillis();
             if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
                 int[] xy = map(cursorVx, cursorVy);
@@ -1488,18 +1536,18 @@ public class MainActivity extends Activity {
                         AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
                     }
                     return true;
-                case KeyEvent.KEYCODE_BUTTON_L2: // zoom in (digital)
+                case KeyEvent.KEYCODE_BUTTON_L2: // zoom out (digital)
                     l2DigitalHeld = down;
                     if (down) {
-                        AwtHost.injectWheel(xy[0], xy[1], -1);
+                        AwtHost.injectWheel(xy[0], xy[1], 1);
                         lastPadZoomAt = System.currentTimeMillis();
                         startPadTick();
                     }
                     return true;
-                case KeyEvent.KEYCODE_BUTTON_R2: // zoom out (digital)
+                case KeyEvent.KEYCODE_BUTTON_R2: // zoom in (digital)
                     r2DigitalHeld = down;
                     if (down) {
-                        AwtHost.injectWheel(xy[0], xy[1], 1);
+                        AwtHost.injectWheel(xy[0], xy[1], -1);
                         lastPadZoomAt = System.currentTimeMillis();
                         startPadTick();
                     }

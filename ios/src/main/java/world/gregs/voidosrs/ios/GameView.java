@@ -316,7 +316,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
         }
         // Options / Menu → world map (Android KEYCODE_BUTTON_START = 108)
         bindAliasButton(pad.getButtonMenu(), 108, "Options");
-        // L2 analog → zoom in (also treat digital press)
+        // L2 analog → zoom out (also treat digital press)
         pad.getLeftTrigger().setValueChangedHandler(
                 new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
                     public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
@@ -330,13 +330,13 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         if (pressed != null && pressed.booleanValue()) {
                             ensureCursor();
                             int[] xy = mapCursor();
-                            AwtHost.injectWheel(xy[0], xy[1], -1);
+                            AwtHost.injectWheel(xy[0], xy[1], 1);
                             lastPadZoomAt = System.currentTimeMillis();
                             startPadTick();
                         }
                     }
                 });
-        // R2 analog → zoom out (replaced L1)
+        // R2 analog → zoom in
         pad.getRightTrigger().setValueChangedHandler(
                 new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
                     public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
@@ -350,7 +350,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         if (pressed != null && pressed.booleanValue()) {
                             ensureCursor();
                             int[] xy = mapCursor();
-                            AwtHost.injectWheel(xy[0], xy[1], 1);
+                            AwtHost.injectWheel(xy[0], xy[1], -1);
                             lastPadZoomAt = System.currentTimeMillis();
                             startPadTick();
                         }
@@ -539,9 +539,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
             moved = true;
         }
 
-        // Zoom on the "2" triggers only: L2 in, R2 out.
-        boolean zoomIn = triggerL2 > PAD_TRIGGER_THRESHOLD;
-        boolean zoomOut = triggerR2 > PAD_TRIGGER_THRESHOLD;
+        // Zoom on the "2" triggers only: R2 in, L2 out.
+        boolean zoomIn = triggerR2 > PAD_TRIGGER_THRESHOLD;
+        boolean zoomOut = triggerL2 > PAD_TRIGGER_THRESHOLD;
         long now = System.currentTimeMillis();
         if ((zoomIn || zoomOut) && now - lastPadZoomAt >= PAD_ZOOM_INTERVAL_MS) {
             int[] xy = mapCursor();

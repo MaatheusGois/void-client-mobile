@@ -34,6 +34,7 @@ import org.robovm.apple.uikit.UITextFieldViewMode;
 import org.robovm.apple.uikit.UITextField;
 import org.robovm.apple.uikit.UITextFieldDelegateAdapter;
 import org.robovm.apple.uikit.UITextSpellCheckingType;
+import org.robovm.apple.uikit.UITextView;
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 import org.robovm.apple.uikit.UIWindow;
@@ -46,6 +47,7 @@ import java.util.concurrent.TimeUnit;
 
 import voidawt.AwtHost;
 import voidawt.event.KeyEvent;
+import world.gregs.voidosrs.AffiliationDisclaimer;
 import world.gregs.voidosrs.ServerPrefs;
 
 public class GameController extends UIViewController {
@@ -67,6 +69,11 @@ public class GameController extends UIViewController {
     private UIButton[] historyBtns;
     private UILabel serverRecent;
     private boolean loginPollScheduled;
+    private UIView disclaimerOverlay;
+    private UIView disclaimerCard;
+    private UILabel disclaimerTitle;
+    private UITextView disclaimerBody;
+    private UIButton disclaimerAccept;
     private NSObject keyboardFrameObserver;
     private NSObject keyboardDidShowObserver;
     private NSObject keyboardWillHideObserver;
@@ -154,11 +161,10 @@ public class GameController extends UIViewController {
         });
         root.addSubview(changeServerBtn);
         buildServerOverlay(root);
+        buildDisclaimerOverlay(root);
 
         setView(root);
-        if (resolveBootHost() == null) {
-            showServerOverlay(false);
-        }
+        maybeShowDisclaimerThenContinue();
         scheduleLoginPoll();
         AwtHost.softKeyboardListener = new AwtHost.SoftKeyboardListener() {
             public void showSoftKeyboard(final String reason) {
@@ -224,6 +230,7 @@ public class GameController extends UIViewController {
         ime.setFrame(new CGRect(0, bounds.getHeight() - 1, 1, 1));
         keyboardBall.setFrame(new CGRect(20, 20, 40, 40));
         layoutServerUi(bounds);
+        layoutDisclaimerUi(bounds);
     }
 
     /**
@@ -422,6 +429,100 @@ public class GameController extends UIViewController {
             b.getLayer().setBorderColor(new UIColor(1, 1, 1, 0.06).getCGColor());
             b.getLayer().setBorderWidth(1);
         }
+    }
+
+    /**
+     * First launch only: scrollable non-affiliation disclaimer before server picker / client boot.
+     * Acceptance is persisted in {@code user.home/void-disclaimer.txt}.
+     */
+    private void maybeShowDisclaimerThenContinue() {
+        if (AffiliationDisclaimer.isAccepted()) {
+            continueAfterDisclaimer();
+            return;
+        }
+        if (disclaimerOverlay != null) {
+            disclaimerOverlay.setHidden(false);
+            getView().bringSubviewToFront(disclaimerOverlay);
+            layoutDisclaimerUi(getView().getBounds());
+        }
+    }
+
+    private void continueAfterDisclaimer() {
+        if (disclaimerOverlay != null) {
+            disclaimerOverlay.setHidden(true);
+        }
+        if (resolveBootHost() == null) {
+            showServerOverlay(false);
+        }
+        startClientIfReady(game.viewWidth(), game.viewHeight());
+    }
+
+    private void buildDisclaimerOverlay(UIView root) {
+        disclaimerOverlay = new UIView();
+        disclaimerOverlay.setBackgroundColor(new UIColor(0.02, 0.01, 0.01, 0.78));
+        disclaimerOverlay.setHidden(true);
+        disclaimerOverlay.setUserInteractionEnabled(true);
+
+        disclaimerCard = new UIView();
+        disclaimerCard.setBackgroundColor(new UIColor(0.07, 0.06, 0.05, 0.97));
+        disclaimerCard.getLayer().setCornerRadius(16);
+        disclaimerCard.getLayer().setBorderWidth(1);
+        disclaimerCard.getLayer().setBorderColor(new UIColor(0.83, 0.66, 0.28, 0.7).getCGColor());
+        disclaimerCard.getLayer().setMasksToBounds(true);
+
+        disclaimerTitle = new UILabel();
+        disclaimerTitle.setText(AffiliationDisclaimer.TITLE);
+        disclaimerTitle.setTextColor(new UIColor(0.97, 0.95, 0.88, 1));
+        disclaimerTitle.setFont(UIFont.getBoldSystemFont(20));
+        disclaimerTitle.setTextAlignment(NSTextAlignment.Left);
+        disclaimerTitle.setNumberOfLines(2);
+        disclaimerTitle.setLineBreakMode(NSLineBreakMode.WordWrapping);
+
+        disclaimerBody = new UITextView(new CGRect(0, 0, 1, 1));
+        disclaimerBody.setText(AffiliationDisclaimer.BODY);
+        disclaimerBody.setEditable(false);
+        disclaimerBody.setSelectable(false);
+        disclaimerBody.setTextColor(new UIColor(0.90, 0.88, 0.82, 1));
+        disclaimerBody.setBackgroundColor(UIColor.clear());
+        disclaimerBody.setFont(UIFont.getSystemFont(13));
+        disclaimerBody.setTextAlignment(NSTextAlignment.Left);
+
+        disclaimerAccept = pillButton(AffiliationDisclaimer.ACCEPT_LABEL);
+        disclaimerAccept.setBackgroundColor(gold());
+        disclaimerAccept.setTitleColor(new UIColor(0.10, 0.08, 0.04, 1), UIControlState.Normal);
+        disclaimerAccept.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+            public void onTouchUpInside(UIControl control, UIEvent event) {
+                AffiliationDisclaimer.markAccepted();
+                continueAfterDisclaimer();
+            }
+        });
+
+        disclaimerCard.addSubview(disclaimerTitle);
+        disclaimerCard.addSubview(disclaimerBody);
+        disclaimerCard.addSubview(disclaimerAccept);
+        disclaimerOverlay.addSubview(disclaimerCard);
+        root.addSubview(disclaimerOverlay);
+    }
+
+    private void layoutDisclaimerUi(CGRect bounds) {
+        if (disclaimerOverlay == null) {
+            return;
+        }
+        double w = bounds.getWidth();
+        double h = bounds.getHeight();
+        disclaimerOverlay.setFrame(bounds);
+        double pad = 18;
+        double cardW = Math.min(520, w - 40);
+        double cardH = Math.min(h - 40, Math.max(280, h * 0.86));
+        double cardX = (w - cardW) / 2;
+        double cardY = Math.max(12, (h - cardH) / 2);
+        disclaimerCard.setFrame(new CGRect(cardX, cardY, cardW, cardH));
+        disclaimerTitle.setFrame(new CGRect(pad, 16, cardW - pad * 2, 44));
+        double btnH = 44;
+        double bodyTop = 68;
+        double bodyH = cardH - bodyTop - btnH - 28;
+        disclaimerBody.setFrame(new CGRect(pad - 4, bodyTop, cardW - pad * 2 + 8, bodyH));
+        disclaimerAccept.setFrame(new CGRect(pad, cardH - btnH - 16, cardW - pad * 2, btnH));
     }
 
     private void buildServerOverlay(UIView root) {
@@ -730,6 +831,9 @@ public class GameController extends UIViewController {
 
     private void startClientIfReady(int width, int height) {
         if (clientStarted || width <= 0 || height <= 0) {
+            return;
+        }
+        if (!AffiliationDisclaimer.isAccepted()) {
             return;
         }
         final String server = resolveBootHost();

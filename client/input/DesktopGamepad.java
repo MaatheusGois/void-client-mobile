@@ -2,6 +2,7 @@ import java.awt.Canvas;
 import java.awt.Component;
 import java.awt.Point;
 import java.awt.Robot;
+import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.lang.reflect.Constructor;
@@ -48,11 +49,16 @@ final class DesktopGamepad {
     private static final float PAD_TRIGGER_THRESHOLD = 0.35f;
     private static final long PAD_ZOOM_INTERVAL_MS = 90L;
     private static final long TICK_MS = 16L;
+    /** Force SDL reopen when a pad is already paired but missed at init/hotplug. */
+    private static final long RECONNECT_INTERVAL_MS = 1000L;
 
     private static volatile boolean started;
 
     private final Object manager;
     private final Method getState;
+    private final Method getNumControllers;
+    private final Method getControllerIndex;
+    private final Method reconnectController;
     private final DesktopAwtMouse mouse = new DesktopAwtMouse();
     /** Lazily created — macOS may deny Accessibility for {@link Robot}. */
     private Robot robot;
@@ -66,17 +72,26 @@ final class DesktopGamepad {
     private boolean leftDown;
     private boolean rightDown;
     private long lastZoomAt;
+    private long lastReconnectAt;
+    private long lastScanLogAt;
 
-    private DesktopGamepad(Object manager, Method getState) {
+    private DesktopGamepad(Object manager, Method getState, Method getNumControllers,
+            Method getControllerIndex, Method reconnectController) {
         this.manager = manager;
         this.getState = getState;
+        this.getNumControllers = getNumControllers;
+        this.getControllerIndex = getControllerIndex;
+        this.reconnectController = reconnectController;
     }
 
     /**
      * Start the poller once on desktop JVM. Safe to call repeatedly; ignored on
      * Android/iOS (they already feed {@link JoystickAlias} via AwtHost).
+     * <p>
+     * Prefer calling after the Swing frame is visible — on macOS, SDL/GameController
+     * enumeration is more reliable once NSApplication/AWT is up.
      */
-    static void startIfDesktop() {
+    static synchronized void startIfDesktop() {
         if (started) {
             return;
         }
@@ -84,12 +99,18 @@ final class DesktopGamepad {
             return;
         }
         try {
+            // Touch AWT toolkit before SDL so macOS AppKit is alive for GCController.
+            Toolkit.getDefaultToolkit();
             Class<?> mgrCl = Class.forName("com.studiohartman.jamepad.ControllerManager");
+            Class<?> idxCl = Class.forName("com.studiohartman.jamepad.ControllerIndex");
             Constructor<?> ctor = mgrCl.getConstructor();
             Object mgr = ctor.newInstance();
             mgrCl.getMethod("initSDLGamepad").invoke(mgr);
             Method getState = mgrCl.getMethod("getState", int.class);
-            DesktopGamepad pad = new DesktopGamepad(mgr, getState);
+            Method getNum = mgrCl.getMethod("getNumControllers");
+            Method getIdx = mgrCl.getMethod("getControllerIndex", int.class);
+            Method reconnect = idxCl.getMethod("reconnectController");
+            DesktopGamepad pad = new DesktopGamepad(mgr, getState, getNum, getIdx, reconnect);
             started = true;
             Thread t = new Thread(new Runnable() {
                 public void run() {
@@ -134,27 +155,24 @@ final class DesktopGamepad {
     private void tick() throws Exception {
         Object state = getState.invoke(manager, Integer.valueOf(padIndex));
         if (!bool(state, "isConnected")) {
-            Object found = null;
-            int foundIdx = -1;
-            for (int i = 0; i < 4; i++) {
-                Object s = getState.invoke(manager, Integer.valueOf(i));
-                if (bool(s, "isConnected")) {
-                    found = s;
-                    foundIdx = i;
-                    break;
-                }
+            Object found = findConnectedState();
+            if (found == null) {
+                // Already-paired pads are often missed if SDL inits before the device
+                // wakes, or if the connect event is dropped — force reopen periodically.
+                forceReconnectIfDue();
+                found = findConnectedState();
             }
             if (found == null) {
                 if (padActive) {
                     deactivate();
                 }
+                logScanIfDue();
                 return;
             }
-            padIndex = foundIdx;
             state = found;
         }
         if (!padActive) {
-            activate();
+            activate(state);
         }
         ensureCursor();
 
@@ -186,8 +204,9 @@ final class DesktopGamepad {
         }
 
         long now = System.currentTimeMillis();
-        boolean zoomIn = l2 > PAD_TRIGGER_THRESHOLD;
-        boolean zoomOut = r2 > PAD_TRIGGER_THRESHOLD;
+        // R2 zoom in, L2 zoom out (matches mobile hosts).
+        boolean zoomIn = r2 > PAD_TRIGGER_THRESHOLD;
+        boolean zoomOut = l2 > PAD_TRIGGER_THRESHOLD;
         if ((zoomIn || zoomOut) && now - lastZoomAt >= PAD_ZOOM_INTERVAL_MS) {
             int mx = (int) cursorX;
             int my = (int) cursorY;
@@ -240,6 +259,46 @@ final class DesktopGamepad {
         fireAliasEdge(state, "backJustPressed", KEYCODE_BUTTON_SELECT, "Share");
     }
 
+    private Object findConnectedState() throws Exception {
+        for (int i = 0; i < 4; i++) {
+            Object s = getState.invoke(manager, Integer.valueOf(i));
+            if (bool(s, "isConnected")) {
+                padIndex = i;
+                return s;
+            }
+        }
+        return null;
+    }
+
+    private void forceReconnectIfDue() {
+        long now = System.currentTimeMillis();
+        if (now - lastReconnectAt < RECONNECT_INTERVAL_MS) {
+            return;
+        }
+        lastReconnectAt = now;
+        try {
+            for (int i = 0; i < 4; i++) {
+                Object idx = getControllerIndex.invoke(manager, Integer.valueOf(i));
+                reconnectController.invoke(idx);
+            }
+        } catch (Throwable t) {
+            System.out.println("void-osrs: desktop pad reconnect: " + t.getMessage());
+        }
+    }
+
+    private void logScanIfDue() {
+        long now = System.currentTimeMillis();
+        if (now - lastScanLogAt < 5000L) {
+            return;
+        }
+        lastScanLogAt = now;
+        try {
+            int n = ((Integer) getNumControllers.invoke(manager)).intValue();
+            System.out.println("void-osrs: desktop pad scanning (sdl num=" + n + ")");
+        } catch (Throwable ignored) {
+        }
+    }
+
     private void fireAliasEdge(Object state, String justField, int code, String label)
             throws Exception {
         if (bool(state, justField)) {
@@ -247,12 +306,21 @@ final class DesktopGamepad {
         }
     }
 
-    private void activate() {
+    private void activate(Object state) {
         padActive = true;
         JoystickAlias.padConnected = true;
         ensureCursor();
         syncOsPointer();
-        System.out.println("void-osrs: desktop pad connected");
+        String type = "?";
+        try {
+            Field f = state.getClass().getField("controllerType");
+            Object v = f.get(state);
+            if (v != null) {
+                type = v.toString();
+            }
+        } catch (Throwable ignored) {
+        }
+        System.out.println("void-osrs: desktop pad connected (" + type + " idx=" + padIndex + ")");
     }
 
     private void deactivate() {
@@ -315,27 +383,43 @@ final class DesktopGamepad {
     }
 
     private void dispatchDrag(int x, int y, int button) {
-        Canvas canvas = DisplayModeManagerContainer50.gameCanvas;
+        final Canvas canvas = DisplayModeManagerContainer50.gameCanvas;
         if (canvas == null) {
             return;
         }
         int modifiers = button == MouseEvent.BUTTON1
                 ? MouseEvent.BUTTON1_DOWN_MASK
                 : MouseEvent.BUTTON3_DOWN_MASK | MouseEvent.META_DOWN_MASK;
-        MouseEvent e = new MouseEvent(canvas, MouseEvent.MOUSE_DRAGGED,
+        final MouseEvent e = new MouseEvent(canvas, MouseEvent.MOUSE_DRAGGED,
                 System.currentTimeMillis(), modifiers, x, y, 0, false, button);
-        canvas.dispatchEvent(e);
+        if (java.awt.EventQueue.isDispatchThread()) {
+            canvas.dispatchEvent(e);
+        } else {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    canvas.dispatchEvent(e);
+                }
+            });
+        }
     }
 
     private static void injectWheel(int x, int y, int rotation) {
-        Component target = DisplayModeManagerContainer50.gameCanvas;
+        final Component target = DisplayModeManagerContainer50.gameCanvas;
         if (target == null) {
             return;
         }
-        MouseWheelEvent e = new MouseWheelEvent(target, MouseEvent.MOUSE_WHEEL,
+        final MouseWheelEvent e = new MouseWheelEvent(target, MouseEvent.MOUSE_WHEEL,
                 System.currentTimeMillis(), 0, x, y, 0, false,
                 MouseWheelEvent.WHEEL_UNIT_SCROLL, 1, rotation);
-        target.dispatchEvent(e);
+        if (java.awt.EventQueue.isDispatchThread()) {
+            target.dispatchEvent(e);
+        } else {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    target.dispatchEvent(e);
+                }
+            });
+        }
     }
 
     /** Same orbit math as mobile {@code AwtHost.injectCameraOrbit}. */

@@ -1,10 +1,12 @@
 import java.awt.Canvas;
+import java.awt.EventQueue;
 import java.awt.event.MouseEvent;
 
 /**
  * Desktop VirtualMouse backend — synthesizes AWT mouse events on the game canvas.
  * Temporarily clears focusable when the canvas is not the focus owner so Jagex
  * MOUSE_PRESSED handlers do not steal OS keyboard focus (Microbot upstream trick).
+ * Events are posted to the EDT so pad/bot threads stay thread-safe with AWT.
  */
 final class DesktopAwtMouse implements MicrobotMouseBackend {
 
@@ -52,9 +54,17 @@ final class DesktopAwtMouse implements MicrobotMouseBackend {
         } else if (button == MouseEvent.BUTTON3) {
             modifiers = MouseEvent.BUTTON3_DOWN_MASK | MouseEvent.META_DOWN_MASK;
         }
-        MouseEvent event = new MouseEvent(canvas, id, System.currentTimeMillis(), modifiers, x, y, clickCount,
+        final MouseEvent event = new MouseEvent(canvas, id, System.currentTimeMillis(), modifiers, x, y, clickCount,
                 button == MouseEvent.BUTTON3, button);
-        dispatchWithoutFocusGrab(canvas, event);
+        if (EventQueue.isDispatchThread()) {
+            dispatchWithoutFocusGrab(canvas, event);
+        } else {
+            EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    dispatchWithoutFocusGrab(canvas, event);
+                }
+            });
+        }
     }
 
     private static void dispatchWithoutFocusGrab(Canvas canvas, MouseEvent event) {

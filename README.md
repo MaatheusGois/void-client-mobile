@@ -1,5 +1,26 @@
 # Void Client
 
+> [!WARNING]
+> **Non-Affiliation Disclaimer**
+>
+> Void is a non-commercial, non-profit, community-run preservation project.
+>
+> **Trademarks** — "RuneScape", "Jagex", and all related names, characters, artwork, music, and game terminology are trademarks or copyrights of Jagex Ltd. or their respective owners. Any use here is descriptive and nominative — we are not the rights holders and we make no claim to that ownership.
+>
+> **We are not affiliated** — Void has not been endorsed, authorised, licensed, sponsored, or officially communicated with by Jagex Ltd., its parents, subsidiaries, or staff. Any opinions expressed here are those of the contributors, not of Jagex.
+>
+> **No money changes hands** — This project is free in every direction: $0 to play, $0 to host, $0 to develop. We do not sell membership, in-game currency, items, accounts, services, advertising, or merchandise. We do not solicit donations to operate the game. There is no "premium" tier and there never will be.
+>
+> **This is not a place to play current RuneScape** — You cannot access official RuneScape servers, character data, the Grand Exchange, or any other live Jagex service from this client. To play the official game, use Jagex's official channels.
+>
+> **Original implementation** — The server software is independently written from scratch in our own codebase, based on publicly available research, screenshots, and community knowledge.
+>
+> **Preservation framing** — The knowledge-base articles, screenshots, and news archives published with this project are reproductions of historical RuneScape website content, hosted for educational and archival purposes consistent with the principles of digital preservation. We make no commercial use of this material.
+>
+> **Use at your own risk** — This client is provided "as-is", without warranty of any kind. Never reuse a password between this client and any other service — including the official RuneScape account. We are volunteers, not a security-audited operator.
+>
+> **Rights-holder contact** — If you are a rights holder and believe any content in this project infringes your rights, contact the project maintainers. We respond promptly and remove specifically identified material on receipt of a good-faith request, without requiring formal legal process.
+
 Deobfuscated 634 (2010-12-14) client — desktop JVM, plus Android and iOS ports of the same software renderer.
 
 Architecture / maintenance: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
@@ -22,7 +43,7 @@ Long-press (right-click) an NPC, object, inventory item, or bank item → **Defa
 
 ### Mobile controls extras
 - Soft keyboard on login / chat fields; chat lift above the IME
-- DualShock / Xbox / MFi: left stick moves a cursor, ✕ left-click, ○ right-click, L2/R2 zoom, right stick camera, L1/□/△/… aliases (desktop JVM + Android + iOS)
+- DualShock / Xbox / MFi: left stick moves a cursor, ✕ left-click, ○ right-click, R2 zoom in / L2 zoom out, right stick camera, L1/□/△/… aliases (desktop JVM + Android + iOS)
 
 ---
 
@@ -44,6 +65,8 @@ make desktop-jar          # shadow jar
 make desktop-run SERVER_IP=192.168.1.10
 # or: java -jar client/build/libs/void-client-1.2.0.jar --address 192.168.1.10
 ```
+
+**Limitation (gamepad):** connect the DualShock / Xbox / etc. **before** launching the desktop client. Hotplug after start is unreliable on macOS (SDL may see the pad as disconnected until restart).
 
 ---
 

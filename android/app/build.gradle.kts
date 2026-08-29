@@ -44,6 +44,7 @@ val prepareClientSources by tasks.registering(Sync::class) {
         exclude("build/**")
         // Real java.awt MouseWheelEvent ≠ voidawt — desktop-only poller.
         exclude("**/DesktopGamepad.java")
+        exclude("**/DesktopAffiliationDisclaimer.java")
         eachFile {
             path = name
         }
