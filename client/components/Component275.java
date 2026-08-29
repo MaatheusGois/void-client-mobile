@@ -15,7 +15,7 @@ final class Component275
     static int anInt2689;
     static int anInt2690;
     static StringCache aClass351_2691;
-    static NodeSub44 aClass348_Sub44_2692;
+    static ComponentSettings defaultSettings;
     static Component183 aClass114_2693;
     static int[] anIntArray2694;
 
@@ -120,7 +120,7 @@ final class Component275
 
     public static void method1497(int i) {
         anIntArray2694 = null;
-        aClass348_Sub44_2692 = null;
+        defaultSettings = null;
         aClass351_2691 = null;
         aClass114_2693 = null;
         if (i != 16384) method1496(-23, 118, -17, -52, 33, 108, 2);
@@ -130,7 +130,7 @@ final class Component275
     static {
         aClass351_2686 = new StringCache(41, -1);
         aClass351_2691 = new StringCache(46, 2);
-        aClass348_Sub44_2692 = new NodeSub44(0, -1);
+        defaultSettings = new ComponentSettings(0, -1);
         anIntArray2694 = new int[4096];
         aClass114_2693 = new Component183(94, -1);
     }

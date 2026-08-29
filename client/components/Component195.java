@@ -35,7 +35,7 @@ final class Component195
 
     static final void method1448(int i) {
         anInt5003++;
-        if (i <= -55) ImageDefinition.aMenuEntry_9144 = new MenuEntry((FriendsIgnoreList.aClass274_3487.getLocalized(ObjectDeserializer.languageId, 544)), "", Component149.anInt4458, 1004, -1, 0L, 0, 0, true, false, 0L, true);
+        if (i <= -55) ImageDefinition.aMenuEntry_9144 = new MenuEntry((FriendsIgnoreList.aClass274_3487.getLocalized(ObjectDeserializer.languageId, 544)), "", Component149.widgetCursorId, 1004, -1, 0L, 0, 0, true, false, 0L, true);
     }
 
     public final void method57(int i) {

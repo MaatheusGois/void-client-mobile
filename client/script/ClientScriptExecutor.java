@@ -55,8 +55,8 @@ final class ClientScriptExecutor {
                 int i_1_ = 0;
                 int i_2_ = 0;
                 if (Component39.aClass46_2249 != null) {
-                    i_1_ = Component39.aClass46_2249.anInt800;
-                    i_2_ = Component39.aClass46_2249.anInt750;
+                    i_1_ = Component39.aClass46_2249.absoluteX;
+                    i_2_ = Component39.aClass46_2249.absoluteY;
                 }
                 anIntArray1164[0] = AbstractGlTextureSub4.mouseHandler.getCursorX(true) - i_1_;
                 anIntArray1164[1] = (AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 80) - i_2_);
@@ -1005,7 +1005,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5426) {
                 anInt1173 -= 2;
-                HashNodeSub16Sub1.anInt10447 = anIntArray1149[anInt1173];
+                HashNodeSub16Sub1.defaultCursorId = anIntArray1149[anInt1173];
                 PauseTimer.anInt506 = anIntArray1149[anInt1173 + 1];
                 return;
             }
@@ -1487,7 +1487,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6028) {
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub22_7253), anIntArray1149[--anInt1173] != 0 ? 1 : 0);
+                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.customCursorSetting), anIntArray1149[--anInt1173] != 0 ? 1 : 0);
                 DisplayModeManagerContainer389.method243(37);
                 return;
             }
@@ -1671,7 +1671,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6128) {
-                anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.aClass239_Sub22_7253.method1815(-32350) == 1 ? 1 : 0);
+                anIntArray1149[anInt1173++] = (Component192.aClass348_Sub51_3959.customCursorSetting.getValue(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6129) {
@@ -1991,7 +1991,7 @@ final class ClientScriptExecutor {
                     int i_176_ = anIntArray1149[--anInt1173];
                     if (DefinitionSub33.openInterfaces[i_176_] == null) aStringArray1152[anInt1170++] = "";
                     else {
-                        String string = (DefinitionSub33.openInterfaces[i_176_][0].aString721);
+                        String string = (DefinitionSub33.openInterfaces[i_176_][0].debugName);
                         if (string == null) aStringArray1152[anInt1170++] = "";
                         else {
                             aStringArray1152[anInt1170++] = string.substring(0, string.indexOf(':'));
@@ -2016,7 +2016,7 @@ final class ClientScriptExecutor {
                     int i_179_ = anIntArray1149[anInt1173 + 1];
                     if (DefinitionSub33.openInterfaces[i_178_] == null) aStringArray1152[anInt1170++] = "";
                     else {
-                        String string = (DefinitionSub33.openInterfaces[i_178_][i_179_].aString721);
+                        String string = (DefinitionSub33.openInterfaces[i_178_][i_179_].debugName);
                         if (string == null) aStringArray1152[anInt1170++] = "";
                         else {
                             aStringArray1152[anInt1170++] = string;
@@ -2123,10 +2123,10 @@ final class ClientScriptExecutor {
                     int i_212_ = anIntArray1149[anInt1173];
                     int i_213_ = anIntArray1149[anInt1173 + 1];
                     int i_214_ = anIntArray1149[anInt1173 + 2];
-                    DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_214_, (byte) -54, i_212_ << 16 | i_213_);
+                    DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_214_, (byte) -54, i_212_ << 16 | i_213_);
                     DisplayModeManagerContainer196.method2678(-2049);
-                    NodeSub44 class348_sub44 = client.method105(class46);
-                    NewsFetcher.method2666((class348_sub44.anInt7093), class348_sub44.method3307(100), class46, (byte) 21);
+                    ComponentSettings class348_sub44 = client.getComponentSettings(class46);
+                    NewsFetcher.method2666((class348_sub44.anInt7093), class348_sub44.getClickMask(100), class46, (byte) 21);
                     return;
                 }
             } else if (i < 6900) {
@@ -2620,7 +2620,7 @@ final class ClientScriptExecutor {
                 if (i_249_ > 0 && (class46.children[i_249_ - 1] == null)) throw new RuntimeException("Gap at:" + (i_249_ - 1));
                 DisplayModeManagerContainer57 class46_251_ = new DisplayModeManagerContainer57();
                 class46_251_.type = i_248_;
-                class46_251_.anInt834 = class46_251_.packedId = class46.packedId;
+                class46_251_.parentId = class46_251_.packedId = class46.packedId;
                 class46_251_.childIndex = i_249_;
                 class46.children[i_249_] = class46_251_;
                 if (bool) aClass46_1169 = class46_251_;
@@ -2649,7 +2649,7 @@ final class ClientScriptExecutor {
                 anInt1173 -= 2;
                 int i_253_ = anIntArray1149[anInt1173];
                 int i_254_ = anIntArray1149[anInt1173 + 1];
-                DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_254_, (byte) -54, i_253_);
+                DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_254_, (byte) -54, i_253_);
                 if (class46 == null || i_254_ == -1) {
                     anIntArray1149[anInt1173++] = 0;
                     return;
@@ -2741,16 +2741,16 @@ final class ClientScriptExecutor {
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             if (i == 1000) {
                 anInt1173 -= 4;
-                class46.anInt788 = anIntArray1149[anInt1173];
-                class46.anInt739 = anIntArray1149[anInt1173 + 1];
+                class46.relativeX = anIntArray1149[anInt1173];
+                class46.relativeY = anIntArray1149[anInt1173 + 1];
                 int i_267_ = anIntArray1149[anInt1173 + 2];
                 if (i_267_ < 0) i_267_ = 0;
                 else if (i_267_ > 5) i_267_ = 5;
                 int i_268_ = anIntArray1149[anInt1173 + 3];
                 if (i_268_ < 0) i_268_ = 0;
                 else if (i_268_ > 5) i_268_ = 5;
-                class46.aByte817 = (byte) i_267_;
-                class46.aByte681 = (byte) i_268_;
+                class46.xMode = (byte) i_267_;
+                class46.yMode = (byte) i_268_;
                 Component111.markInterfaceDirty(-9343, class46);
                 Component331.method1048(class46, 50);
                 if (class46.childIndex == -1) Component272.method1733((byte) -78, class46.packedId);
@@ -2758,8 +2758,8 @@ final class ClientScriptExecutor {
             }
             if (i == 1001) {
                 anInt1173 -= 4;
-                class46.anInt842 = anIntArray1149[anInt1173];
-                class46.anInt728 = anIntArray1149[anInt1173 + 1];
+                class46.baseWidth = anIntArray1149[anInt1173];
+                class46.baseHeight = anIntArray1149[anInt1173 + 1];
                 class46.anInt796 = 0;
                 class46.anInt826 = 0;
                 int i_269_ = anIntArray1149[anInt1173 + 2];
@@ -2768,8 +2768,8 @@ final class ClientScriptExecutor {
                 int i_270_ = anIntArray1149[anInt1173 + 3];
                 if (i_270_ < 0) i_270_ = 0;
                 else if (i_270_ > 4) i_270_ = 4;
-                class46.aByte778 = (byte) i_269_;
-                class46.aByte724 = (byte) i_270_;
+                class46.widthMode = (byte) i_269_;
+                class46.heightMode = (byte) i_270_;
                 Component111.markInterfaceDirty(-9343, class46);
                 Component331.method1048(class46, 62);
                 if (class46.type == 0) Component111.layoutInterfaceTree(false, 36, class46);
@@ -2805,12 +2805,12 @@ final class ClientScriptExecutor {
             } else class46 = bool ? aClass46_1169 : aClass46_1150;
             if (i == 1100) {
                 anInt1173 -= 2;
-                class46.anInt747 = anIntArray1149[anInt1173];
-                if (class46.anInt747 > (class46.anInt698 - class46.width)) class46.anInt747 = (class46.anInt698 - class46.width);
-                if (class46.anInt747 < 0) class46.anInt747 = 0;
-                class46.anInt755 = anIntArray1149[anInt1173 + 1];
-                if (class46.anInt755 > (class46.anInt791 - class46.height)) class46.anInt755 = (class46.anInt791 - class46.height);
-                if (class46.anInt755 < 0) class46.anInt755 = 0;
+                class46.scrollX = anIntArray1149[anInt1173];
+                if (class46.scrollX > (class46.scrollWidth - class46.width)) class46.scrollX = (class46.scrollWidth - class46.width);
+                if (class46.scrollX < 0) class46.scrollX = 0;
+                class46.scrollY = anIntArray1149[anInt1173 + 1];
+                if (class46.scrollY > (class46.scrollHeight - class46.height)) class46.scrollY = (class46.scrollHeight - class46.height);
+                if (class46.scrollY < 0) class46.scrollY = 0;
                 Component111.markInterfaceDirty(-9343, class46);
                 if (class46.childIndex == -1) ShaderCompilerSub3.method2615(-91, class46.packedId);
                 return;
@@ -2827,31 +2827,31 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 1103) {
-                class46.anInt696 = anIntArray1149[--anInt1173];
+                class46.opacity = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1104) {
-                class46.anInt690 = anIntArray1149[--anInt1173];
+                class46.lineWidth = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1105) {
                 int i_272_ = anIntArray1149[--anInt1173];
-                if (class46.anInt756 != i_272_) {
-                    class46.anInt756 = i_272_;
+                if (class46.spriteId != i_272_) {
+                    class46.spriteId = i_272_;
                     Component111.markInterfaceDirty(-9343, class46);
                 }
                 if (class46.childIndex == -1) DisplayModeManagerContainer351.method1477(class46.packedId, 14);
                 return;
             }
             if (i == 1106) {
-                class46.anInt828 = anIntArray1149[--anInt1173];
+                class46.spriteAngle = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1107) {
-                class46.aBoolean697 = anIntArray1149[--anInt1173] == 1;
+                class46.spriteTiling = anIntArray1149[--anInt1173] == 1;
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
@@ -2906,31 +2906,31 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 1113) {
-                class46.anInt702 = anIntArray1149[--anInt1173];
+                class46.fontId = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 if (class46.childIndex == -1) DisplayModeManagerContainer74.method2311((byte) -109, class46.packedId);
                 return;
             }
             if (i == 1114) {
                 anInt1173 -= 3;
-                class46.anInt762 = anIntArray1149[anInt1173];
-                class46.anInt700 = anIntArray1149[anInt1173 + 1];
-                class46.anInt673 = anIntArray1149[anInt1173 + 2];
+                class46.xTextAlign = anIntArray1149[anInt1173];
+                class46.yTextAlign = anIntArray1149[anInt1173 + 1];
+                class46.lineHeight = anIntArray1149[anInt1173 + 2];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1115) {
-                class46.aBoolean769 = anIntArray1149[--anInt1173] == 1;
+                class46.textShadowed = anIntArray1149[--anInt1173] == 1;
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1116) {
-                class46.anInt672 = anIntArray1149[--anInt1173];
+                class46.outline = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
             if (i == 1117) {
-                class46.anInt809 = anIntArray1149[--anInt1173];
+                class46.shadowColour = anIntArray1149[--anInt1173];
                 Component111.markInterfaceDirty(-9343, class46);
                 return;
             }
@@ -2946,8 +2946,8 @@ final class ClientScriptExecutor {
             }
             if (i == 1120) {
                 anInt1173 -= 2;
-                class46.anInt698 = anIntArray1149[anInt1173];
-                class46.anInt791 = anIntArray1149[anInt1173 + 1];
+                class46.scrollWidth = anIntArray1149[anInt1173];
+                class46.scrollHeight = anIntArray1149[anInt1173 + 1];
                 Component111.markInterfaceDirty(-9343, class46);
                 if (class46.type == 0) Component111.layoutInterfaceTree(false, 62, class46);
                 return;
@@ -3036,7 +3036,7 @@ final class ClientScriptExecutor {
                     class46.itemId = -1;
                 } else {
                     class46.itemId = i_279_;
-                    class46.anInt781 = i_280_;
+                    class46.itemAmount = i_280_;
                     class46.aBoolean720 = i == 1208 || i == 1209;
                     ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(74, i_279_);
                     class46.anInt757 = class213.anInt2787;
@@ -3050,7 +3050,7 @@ final class ClientScriptExecutor {
                     else class46.anInt678 = 2;
                     if (class46.anInt796 > 0) class46.anInt716 = (class46.anInt716 * 32 / class46.anInt796);
                     else {
-                        if (class46.anInt842 > 0) class46.anInt716 = (class46.anInt716 * 32 / class46.anInt842);
+                        if (class46.baseWidth > 0) class46.anInt716 = (class46.anInt716 * 32 / class46.baseWidth);
                         return;
                     }
                     return;
@@ -3134,7 +3134,7 @@ final class ClientScriptExecutor {
                 int i_283_ = anIntArray1149[anInt1173 + 1];
                 if (i_282_ == -1 && i_283_ == -1) class46.parent = null;
                 else {
-                    class46.parent = NodeSub22.getChildComponent(i_283_, (byte) -54, i_282_);
+                    class46.parent = NpcNode.getChildComponent(i_283_, (byte) -54, i_282_);
                     return;
                 }
                 return;
@@ -3264,7 +3264,7 @@ final class ClientScriptExecutor {
                         class46.anObjectArray777 = objects;
                         class46.anIntArray686 = is;
                     } else if (i == 1408) class46.anObjectArray764 = objects;
-                    else if (i == 1409) class46.anObjectArray741 = objects;
+                    else if (i == 1409) class46.optionScripts = objects;
                     else if (i == 1410) class46.anObjectArray692 = objects;
                     else if (i == 1411) class46.anObjectArray785 = objects;
                     else if (i == 1412) class46.anObjectArray839 = objects;
@@ -3301,11 +3301,11 @@ final class ClientScriptExecutor {
             if (i < 1600) {
                 DisplayModeManagerContainer57 class46 = bool ? aClass46_1169 : aClass46_1150;
                 if (i == 1500) {
-                    anIntArray1149[anInt1173++] = class46.anInt800;
+                    anIntArray1149[anInt1173++] = class46.absoluteX;
                     return;
                 }
                 if (i == 1501) {
-                    anIntArray1149[anInt1173++] = class46.anInt750;
+                    anIntArray1149[anInt1173++] = class46.absoluteY;
                     return;
                 }
                 if (i == 1502) {
@@ -3321,7 +3321,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 1505) {
-                    anIntArray1149[anInt1173++] = class46.anInt834;
+                    anIntArray1149[anInt1173++] = class46.parentId;
                     return;
                 }
                 if (i == 1506) {
@@ -3332,11 +3332,11 @@ final class ClientScriptExecutor {
             } else if (i < 1700) {
                 DisplayModeManagerContainer57 class46 = bool ? aClass46_1169 : aClass46_1150;
                 if (i == 1600) {
-                    anIntArray1149[anInt1173++] = class46.anInt747;
+                    anIntArray1149[anInt1173++] = class46.scrollX;
                     return;
                 }
                 if (i == 1601) {
-                    anIntArray1149[anInt1173++] = class46.anInt755;
+                    anIntArray1149[anInt1173++] = class46.scrollY;
                     return;
                 }
                 if (i == 1602) {
@@ -3344,11 +3344,11 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 1603) {
-                    anIntArray1149[anInt1173++] = class46.anInt698;
+                    anIntArray1149[anInt1173++] = class46.scrollWidth;
                     return;
                 }
                 if (i == 1604) {
-                    anIntArray1149[anInt1173++] = class46.anInt791;
+                    anIntArray1149[anInt1173++] = class46.scrollHeight;
                     return;
                 }
                 if (i == 1605) {
@@ -3368,7 +3368,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 1609) {
-                    anIntArray1149[anInt1173++] = class46.anInt696;
+                    anIntArray1149[anInt1173++] = class46.opacity;
                     return;
                 }
                 if (i == 1610) {
@@ -3380,7 +3380,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 1612) {
-                    anIntArray1149[anInt1173++] = class46.anInt756;
+                    anIntArray1149[anInt1173++] = class46.spriteId;
                     return;
                 }
                 if (i == 1613) {
@@ -3394,7 +3394,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 1614) {
-                    anIntArray1149[anInt1173++] = class46.anInt828;
+                    anIntArray1149[anInt1173++] = class46.spriteAngle;
                     return;
                 }
                 if (i == 2614) {
@@ -3411,7 +3411,7 @@ final class ClientScriptExecutor {
                     if (class46.itemId == -1) {
                         anIntArray1149[anInt1173++] = 0;
                         return;
-                    } else anIntArray1149[anInt1173++] = class46.anInt781;
+                    } else anIntArray1149[anInt1173++] = class46.itemAmount;
                     return;
                 }
                 if (i == 1702) {
@@ -3421,7 +3421,7 @@ final class ClientScriptExecutor {
             } else if (i < 1900) {
                 DisplayModeManagerContainer57 class46 = bool ? aClass46_1169 : aClass46_1150;
                 if (i == 1800) {
-                    anIntArray1149[anInt1173++] = client.method105(class46).method3307(83);
+                    anIntArray1149[anInt1173++] = client.getComponentSettings(class46).getClickMask(83);
                     return;
                 }
                 if (i == 1801) {
@@ -3463,11 +3463,11 @@ final class ClientScriptExecutor {
             } else if (i < 2600) {
                 DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2500) {
-                    anIntArray1149[anInt1173++] = class46.anInt800;
+                    anIntArray1149[anInt1173++] = class46.absoluteX;
                     return;
                 }
                 if (i == 2501) {
-                    anIntArray1149[anInt1173++] = class46.anInt750;
+                    anIntArray1149[anInt1173++] = class46.absoluteY;
                     return;
                 }
                 if (i == 2502) {
@@ -3483,7 +3483,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 2505) {
-                    anIntArray1149[anInt1173++] = class46.anInt834;
+                    anIntArray1149[anInt1173++] = class46.parentId;
                     return;
                 }
                 if (i == 1506) {
@@ -3494,11 +3494,11 @@ final class ClientScriptExecutor {
             } else if (i < 2700) {
                 DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2600) {
-                    anIntArray1149[anInt1173++] = class46.anInt747;
+                    anIntArray1149[anInt1173++] = class46.scrollX;
                     return;
                 }
                 if (i == 2601) {
-                    anIntArray1149[anInt1173++] = class46.anInt755;
+                    anIntArray1149[anInt1173++] = class46.scrollY;
                     return;
                 }
                 if (i == 2602) {
@@ -3506,11 +3506,11 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 2603) {
-                    anIntArray1149[anInt1173++] = class46.anInt698;
+                    anIntArray1149[anInt1173++] = class46.scrollWidth;
                     return;
                 }
                 if (i == 2604) {
-                    anIntArray1149[anInt1173++] = class46.anInt791;
+                    anIntArray1149[anInt1173++] = class46.scrollHeight;
                     return;
                 }
                 if (i == 2605) {
@@ -3530,7 +3530,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 2609) {
-                    anIntArray1149[anInt1173++] = class46.anInt696;
+                    anIntArray1149[anInt1173++] = class46.opacity;
                     return;
                 }
                 if (i == 2610) {
@@ -3542,11 +3542,11 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 2612) {
-                    anIntArray1149[anInt1173++] = class46.anInt756;
+                    anIntArray1149[anInt1173++] = class46.spriteId;
                     return;
                 }
                 if (i == 2613) {
-                    anIntArray1149[anInt1173++] = class46.anInt828;
+                    anIntArray1149[anInt1173++] = class46.spriteAngle;
                     return;
                 }
                 if (i == 2614) {
@@ -3564,7 +3564,7 @@ final class ClientScriptExecutor {
                     if (class46.itemId == -1) {
                         anIntArray1149[anInt1173++] = 0;
                         return;
-                    } else anIntArray1149[anInt1173++] = class46.anInt781;
+                    } else anIntArray1149[anInt1173++] = class46.itemAmount;
                     return;
                 }
                 if (i == 2702) {
@@ -3607,7 +3607,7 @@ final class ClientScriptExecutor {
             } else if (i < 2900) {
                 DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, anIntArray1149[--anInt1173]);
                 if (i == 2800) {
-                    anIntArray1149[anInt1173++] = client.method105(class46).method3307(11);
+                    anIntArray1149[anInt1173++] = client.getComponentSettings(class46).getClickMask(11);
                     return;
                 }
                 if (i == 2801) {
@@ -4016,7 +4016,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 3347) {
-                    anIntArray1149[anInt1173++] = Component244.anInt4179;
+                    anIntArray1149[anInt1173++] = Component244.currentCursorId;
                     return;
                 }
                 if (i == 3349) {

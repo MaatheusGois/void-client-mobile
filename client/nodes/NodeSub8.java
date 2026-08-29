@@ -34,7 +34,7 @@ final class NodeSub8
             if (class318_sub1_sub3_sub3.anInt10275 >= 32768) {
                 if ((class318_sub1_sub3_sub3.anInt10275) >= 32768) class318_sub1_sub3_sub3_0_ = (InterfaceRenderer.players[class318_sub1_sub3_sub3.anInt10275 + -32768]);
             } else {
-                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class318_sub1_sub3_sub3.anInt10275, -6008)));
+                NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(class318_sub1_sub3_sub3.anInt10275, -6008)));
                 if (class348_sub22 != null) class318_sub1_sub3_sub3_0_ = (class348_sub22.npc);
             }
             if (class318_sub1_sub3_sub3_0_ != null) {

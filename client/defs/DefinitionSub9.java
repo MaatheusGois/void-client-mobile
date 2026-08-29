@@ -65,7 +65,7 @@ final class DefinitionSub9
             int[] is_8_ = this.method3048(i - -1 & DisplayModeManagerContainer356.anInt6325, 633706337, 0);
             for (int i_9_ = 0; DefinitionSub6.anInt9139 > i_9_; i_9_++) {
                 int i_10_ = anInt9167 * (-is_6_[i_9_] + is_8_[i_9_]);
-                int i_11_ = (anInt9167 * (-is_7_[Component287.anInt6076 & -1 + i_9_] + is_7_[Component287.anInt6076 & i_9_ - -1]));
+                int i_11_ = (anInt9167 * (-is_7_[CustomCursorSetting.anInt6076 & -1 + i_9_] + is_7_[CustomCursorSetting.anInt6076 & i_9_ - -1]));
                 int i_12_ = i_11_ >> 12;
                 int i_13_ = i_10_ >> 12;
                 int i_14_ = i_12_ * i_12_ >> 12;

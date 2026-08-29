@@ -255,15 +255,15 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt757 = class348_sub42_sub15.anInt9652;
                                     if (class46.itemId != -1) {
                                         if (class46.anInt796 <= 0) {
-                                            if ((class46.anInt842) > 0) class46.anInt716 = (32 * class46.anInt716 / (class46.anInt842));
+                                            if ((class46.baseWidth) > 0) class46.anInt716 = (32 * class46.anInt716 / (class46.baseWidth));
                                         } else class46.anInt716 = ((class46.anInt716) * 32 / (class46.anInt796));
                                     }
                                     Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 9) {
                                 DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, i_17_);
-                                if ((class348_sub42_sub15.anInt9652 != class46.itemId) || (class348_sub42_sub15.anInt9651 != class46.anInt781)) {
-                                    class46.anInt781 = class348_sub42_sub15.anInt9651;
+                                if ((class348_sub42_sub15.anInt9652 != class46.itemId) || (class348_sub42_sub15.anInt9651 != class46.itemAmount)) {
+                                    class46.itemAmount = class348_sub42_sub15.anInt9651;
                                     class46.itemId = class348_sub42_sub15.anInt9652;
                                     Component111.markInterfaceDirty(-9343, class46);
                                 }
@@ -277,32 +277,32 @@ final class ClientSystemInfo extends Node {
                                 }
                             } else if (i_16_ == 11) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.getComponent(1512932720, i_17_));
-                                class46.aByte817 = (byte) 0;
-                                class46.anInt750 = class46.anInt739 = (class348_sub42_sub15.anInt9651);
-                                class46.aByte681 = (byte) 0;
-                                class46.anInt800 = class46.anInt788 = (class348_sub42_sub15.anInt9652);
+                                class46.xMode = (byte) 0;
+                                class46.absoluteY = class46.relativeY = (class348_sub42_sub15.anInt9651);
+                                class46.yMode = (byte) 0;
+                                class46.absoluteX = class46.relativeX = (class348_sub42_sub15.anInt9652);
                                 Component111.markInterfaceDirty(-9343, class46);
                             } else if (i_16_ == 12) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.getComponent(1512932720, i_17_));
                                 int i_26_ = (class348_sub42_sub15.anInt9652);
                                 if (class46 != null && (class46.type) == 0) {
-                                    if ((-(class46.height) + (class46.anInt791)) < i_26_) i_26_ = ((class46.anInt791) - (class46.height));
+                                    if ((-(class46.height) + (class46.scrollHeight)) < i_26_) i_26_ = ((class46.scrollHeight) - (class46.height));
                                     if (i_26_ < 0) i_26_ = 0;
-                                    if (i_26_ != (class46.anInt755)) {
-                                        class46.anInt755 = i_26_;
+                                    if (i_26_ != (class46.scrollY)) {
+                                        class46.scrollY = i_26_;
                                         Component111.markInterfaceDirty(-9343, class46);
                                     }
                                 }
                             } else if (i_16_ == 14) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.getComponent(1512932720, i_17_));
-                                class46.anInt756 = (class348_sub42_sub15.anInt9652);
+                                class46.spriteId = (class348_sub42_sub15.anInt9652);
                             } else if (i_16_ == 15) {
                                 Component263.anInt1548 = (class348_sub42_sub15.anInt9651);
                                 Component253.anInt3203 = (class348_sub42_sub15.anInt9652);
                                 NodeSub13.aBoolean6759 = true;
                             } else if (i_16_ == 16) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.getComponent(1512932720, i_17_));
-                                class46.anInt702 = (class348_sub42_sub15.anInt9652);
+                                class46.fontId = (class348_sub42_sub15.anInt9652);
                             } else if (i_16_ == 17) {
                                 DisplayModeManagerContainer57 class46 = (BitmapFont.getComponent(1512932720, i_17_));
                                 class46.anInt806 = (class348_sub42_sub15.anInt9652);
@@ -326,7 +326,7 @@ final class ClientSystemInfo extends Node {
                         Component162.aBoolean8386 = false;
                         Component2.method198(null, false, -1, -1);
                         Component143.method1343(-1, null, 1, -1);
-                        if (!r.aBoolean9722) Component149.anInt4458 = -1;
+                        if (!r.aBoolean9722) Component149.widgetCursorId = -1;
                         Component233.overGameScreen = false;
                         Component43.method1583((byte) -73);
                         ResourceLoader.anInt3918++;
@@ -347,7 +347,7 @@ final class ClientSystemInfo extends Node {
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.childIndex >= 0) {
-                                DisplayModeManagerContainer57 class46_27_ = BitmapFont.getComponent(1512932720, (class46.anInt834));
+                                DisplayModeManagerContainer57 class46_27_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_27_ == null || (class46_27_.children) == null || ((class46_27_.children).length <= class46.childIndex) || (class46 != (class46_27_.children[class46.childIndex]))) continue;
                             }
                             ClientScriptExecutor.method705(class348_sub36);
@@ -357,7 +357,7 @@ final class ClientSystemInfo extends Node {
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.childIndex >= 0) {
-                                DisplayModeManagerContainer57 class46_28_ = BitmapFont.getComponent(1512932720, (class46.anInt834));
+                                DisplayModeManagerContainer57 class46_28_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_28_ == null || (class46_28_.children) == null || (class46.childIndex >= (class46_28_.children).length) || ((class46_28_.children[class46.childIndex]) != class46)) continue;
                             }
                             ClientScriptExecutor.method705(class348_sub36);
@@ -367,7 +367,7 @@ final class ClientSystemInfo extends Node {
                             if (class348_sub36 == null) break;
                             DisplayModeManagerContainer57 class46 = (class348_sub36.aClass46_6989);
                             if (class46.childIndex >= 0) {
-                                DisplayModeManagerContainer57 class46_29_ = BitmapFont.getComponent(1512932720, (class46.anInt834));
+                                DisplayModeManagerContainer57 class46_29_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_29_ == null || (class46_29_.children) == null || (class46.childIndex >= (class46_29_.children).length) || ((class46_29_.children[class46.childIndex]) != class46)) continue;
                             }
                             ClientScriptExecutor.method705(class348_sub36);

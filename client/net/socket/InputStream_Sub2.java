@@ -135,7 +135,7 @@ final class InputStream_Sub2 extends InputStream {
                             else class318_sub1_sub3_sub3 = (Component72.localPlayer);
                         } else {
                             int i_68_ = i_58_ + -1;
-                            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_68_, -6008));
+                            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_68_, -6008));
                             if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.npc);
                         }
                         if (class318_sub1_sub3_sub3 != null) {

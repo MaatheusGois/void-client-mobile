@@ -89,7 +89,7 @@ final class DefinitionSub38
         if (bool != true) method3150(false);
         for (/**/; Component324.anInt2057 > i; i++) {
             int i_14_ = DisplayModeManagerContainer238.anIntArray1233[i];
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_14_, -6008));
+            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_14_, -6008));
             if (class348_sub22 != null) {
                 Npc npc = (class348_sub22.npc);
                 ImageCacheStore.method2556(false, npc.definition.anInt1399, npc);

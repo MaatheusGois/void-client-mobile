@@ -2931,7 +2931,7 @@ final class GlToolkitSub2
             DisplayModeManagerContainer58 class318_sub1_sub3_sub3;
             if (i_321_ > i_322_) class318_sub1_sub3_sub3 = (InterfaceRenderer.players[is[i_322_]]);
             else {
-                class318_sub1_sub3_sub3 = (((NodeSub22) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_322_ + -i_321_], i_316_ ^ ~0x1775)).npc);
+                class318_sub1_sub3_sub3 = (((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_322_ + -i_321_], i_316_ ^ ~0x1775)).npc);
                 class79 = ((Npc) class318_sub1_sub3_sub3).definition;
                 if (class79.anIntArray1377 != null) {
                     class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), i_316_ + -3);
@@ -3358,11 +3358,11 @@ final class GlToolkitSub2
         for (int i_433_ = 0; i_433_ < CacheStore.anInt669; i_433_++) {
             int i_434_ = AbstractGlTextureSub4.anIntArray8557[i_433_];
             DisplayModeManagerContainer58 class318_sub1_sub3_sub3;
-            if (i_434_ >= 2048) class318_sub1_sub3_sub3 = (((NodeSub22) Component21.aClass356_3654.get(-2048 + i_434_, -6008)).npc);
+            if (i_434_ >= 2048) class318_sub1_sub3_sub3 = (((NpcNode) Component21.aClass356_3654.get(-2048 + i_434_, -6008)).npc);
             else class318_sub1_sub3_sub3 = InterfaceRenderer.players[i_434_];
             int i_435_ = DisplayModeManagerContainer259.anIntArray3432[i_433_];
             DisplayModeManagerContainer58 class318_sub1_sub3_sub3_436_;
-            if (i_435_ >= 2048) class318_sub1_sub3_sub3_436_ = (((NodeSub22) Component21.aClass356_3654.get(-2048 + i_435_, -6008)).npc);
+            if (i_435_ >= 2048) class318_sub1_sub3_sub3_436_ = (((NpcNode) Component21.aClass356_3654.get(-2048 + i_435_, -6008)).npc);
             else class318_sub1_sub3_sub3_436_ = InterfaceRenderer.players[i_435_];
             ImageCache.method1430(--class318_sub1_sub3_sub3.anInt10261, (byte) 119, i_320_, i_315_, i, i_319_, i_318_, i_317_, class318_sub1_sub3_sub3_436_, class318_sub1_sub3_sub3);
         }

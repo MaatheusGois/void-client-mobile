@@ -33,7 +33,7 @@ final class DefinitionSub6
                 int i_5_ = anInt9133 * is_2_[i_3_] >> 12;
                 int i_6_ = Component296.anIntArray4654[i_4_] * i_5_ >> 12;
                 int i_7_ = Component366.anIntArray3068[i_4_] * i_5_ >> 12;
-                int i_8_ = i_3_ - -(i_6_ >> 12) & Component287.anInt6076;
+                int i_8_ = i_3_ - -(i_6_ >> 12) & CustomCursorSetting.anInt6076;
                 int i_9_ = i - -(i_7_ >> 12) & DisplayModeManagerContainer356.anInt6325;
                 int[] is_10_ = this.method3048(i_9_, 633706337, 0);
                 is[i_3_] = is_10_[i_8_];
@@ -82,7 +82,7 @@ final class DefinitionSub6
                 int i_21_ = anInt9133 * is_15_[i_19_] >> 12;
                 int i_22_ = i_21_ * Component296.anIntArray4654[i_20_] >> 12;
                 int i_23_ = i_21_ * Component366.anIntArray3068[i_20_] >> 12;
-                int i_24_ = i_19_ + (i_22_ >> 12) & Component287.anInt6076;
+                int i_24_ = i_19_ + (i_22_ >> 12) & CustomCursorSetting.anInt6076;
                 int i_25_ = (i_23_ >> 12) + i & DisplayModeManagerContainer356.anInt6325;
                 int[][] is_26_ = this.method3039((byte) -57, i_25_, 0);
                 is_16_[i_19_] = is_26_[0][i_24_];

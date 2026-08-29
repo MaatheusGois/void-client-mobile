@@ -87,7 +87,7 @@ final class Component265
     static final int getOptionPriority(byte i, int i_7_, DisplayModeManagerContainer57 class46) {
         anInt1580++;
         if (i != 57) method886(7);
-        if (!client.method105(class46).method3301(i_7_, false) && class46.anObjectArray741 == null) return -1;
+        if (!client.getComponentSettings(class46).hasOption(i_7_, false) && class46.optionScripts == null) return -1;
         if (class46.optionPriorities != null && i_7_ < class46.optionPriorities.length) return class46.optionPriorities[i_7_];
         return -1;
     }

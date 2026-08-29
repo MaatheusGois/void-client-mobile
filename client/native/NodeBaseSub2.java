@@ -60,7 +60,7 @@ final class NodeBaseSub2
                         int i_10_ = i_8_ & 0x3fff;
                         i_6_ = (-256 - (i_10_ - Component330.regionTileY) * 512 + (class318_sub1_sub3_sub3.y));
                     } else if ((0x8000 & i_3_) == 0) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_3_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_3_, -6008));
                         if (class348_sub22 == null) {
                             class318_sub1_sub3_sub3.method2423(-96, i, -1);
                             continue;

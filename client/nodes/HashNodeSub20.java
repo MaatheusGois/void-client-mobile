@@ -49,7 +49,7 @@ final class HashNodeSub20
         NodeSub51.anInt7244 = i_6_;
         WorldNameText.anInt8633 = i_5_;
         Component54.anInt8668 = i_2_;
-        NodeSub44.anInt7092 = i;
+        ComponentSettings.anInt7092 = i;
         Component337.anInt3650 = i_4_;
         CookieBuilder.anInt620 = i_1_;
         if (i_3_ != 0) method3281((byte) 92, null);

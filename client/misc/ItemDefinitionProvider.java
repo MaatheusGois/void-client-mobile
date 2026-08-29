@@ -100,7 +100,7 @@ final class ItemDefinitionProvider
     static final void method1933(CacheStore class45, GraphicsToolkit var_ha, boolean bool) {
         try {
             anInt3279++;
-            Component170[] class207s = Component170.method1519(class45, NodeSub22.anInt6862, 0);
+            Component170[] class207s = Component170.method1519(class45, NpcNode.anInt6862, 0);
             RequestProcessor.aClass105Array2260 = new Component24[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 RequestProcessor.aClass105Array2260[i] = var_ha.method3691(class207s[i], true);

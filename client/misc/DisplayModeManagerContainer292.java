@@ -188,7 +188,7 @@ final class DisplayModeManagerContainer292
         if (i != -65536) method1310(false);
         for (int i_38_ = 0; i_38_ < DisplayModeManagerContainer204.anInt1597; i_38_++) {
             int i_39_ = Component354.anIntArray224[i_38_];
-            Npc npc = (((NodeSub22) Component21.aClass356_3654.get(i_39_, -6008)).npc);
+            Npc npc = (((NpcNode) Component21.aClass356_3654.get(i_39_, -6008)).npc);
             int i_40_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             if ((0x10 & i_40_) != 0) i_40_ += Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(i ^ ~0xff00) << 8;
             if ((0x2 & i_40_) != 0) {

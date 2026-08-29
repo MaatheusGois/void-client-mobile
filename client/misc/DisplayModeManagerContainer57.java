@@ -8,11 +8,18 @@ final class DisplayModeManagerContainer57
  * slots — {@link #itemId}, {@link #optionLabels}, and packed interface ids used
  * when building right-click menus via {@link Component66#buildComponentMenu}.
  * <p>
+ * Prayer-book icons often share one parent {@link #packedId}; distinguish them with
+ * {@link #childIndex} via {@link NpcNode#getChildComponent}. Minimap quick-prayer
+ * orb (group 749 on current build) exposes {@code Turn quick prayers on} /
+ * {@code Turn prayers off} + {@code Select quick prayers}.
+ * <p>
  * RENAMED from {@code Class46} (JODE-obfuscated).
  */ {
     Object[] anObjectArray671;
-    int anInt672;
-    int anInt673 = 0;
+    /** Type-5 item sprite outline thickness (passed to itemDefs.method1941). */
+    int outline;
+    /** Type-4 text vertical line spacing (pixels); also wraps via font metrics. */
+    int lineHeight = 0;
     int anInt674;
     int anInt675;
     boolean aBoolean676;
@@ -20,7 +27,11 @@ final class DisplayModeManagerContainer57
     int anInt678 = 2;
     Object[] anObjectArray679;
     Object[] anObjectArray680;
-    byte aByte681;
+    /**
+     * Y position mode for {@link #relativeY} → {@link #absoluteY} (see {@link Component19}).
+     * 0 absolute, 1 centre, 2 from-bottom, 3/4 proportional (14-bit).
+     */
+    byte yMode;
     boolean aBoolean682;
     Object[] anObjectArray683;
     static int anInt684;
@@ -29,19 +40,31 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray687;
     int anInt688 = 0;
     boolean aBoolean689;
-    int anInt690;
+    /** Type-9 line thickness in pixels. */
+    int lineWidth;
     static int anInt691;
     Object[] anObjectArray692;
     int anInt693;
     static int anInt694;
     int anInt695;
-    int anInt696 = 0;
-    boolean aBoolean697;
-    int anInt698;
+    /**
+     * Draw opacity 0..255 (0 = fully opaque). Combined into ARGB by
+     * {@link ImageDefinition} as {@code (255 - opacity) << 24}.
+     */
+    int opacity = 0;
+    /** Type-5: tile the sprite across the component bounds when true. */
+    boolean spriteTiling;
+    /**
+     * Scrollable content width (type-0 layers). {@code 0} → use {@link #width}.
+     * CS2 if_setscrollsize / scroll clamps use this.
+     */
+    int scrollWidth;
     int anInt699;
-    int anInt700;
+    /** Type-4 vertical text alignment passed to {@link BitmapFont#method2568}. */
+    int yTextAlign;
     Object[] anObjectArray701;
-    int anInt702 = -1;
+    /** Type-4 bitmap font archive id ({@code 65535} → {@code -1}). */
+    int fontId = -1;
     int anInt703;
     /** Child / slot index within the parent interface (menu {@code param0}). */
     int childIndex;
@@ -64,14 +87,23 @@ final class DisplayModeManagerContainer57
     static int anInt718;
     int anInt719;
     boolean aBoolean720;
-    String aString721;
+    /**
+     * Optional IF-archive debug name (decoded when type stream has bit 0x80).
+     * Used by {@link JoystickAlias} label dumps alongside {@link #text}/{@link #textContent}.
+     */
+    String debugName;
     static int anInt722;
     int anInt723;
-    byte aByte724;
+    /**
+     * Height size mode for {@link #baseHeight} → {@link #height} (see {@link Component188}).
+     * 0 absolute, 2 proportional (14-bit of parent), else parent-minus.
+     */
+    byte heightMode;
     int anInt725;
     int anInt726;
     Object[] anObjectArray727;
-    int anInt728;
+    /** Decoded height before mode/parent resolve (CS2 if_setsize writes here too). */
+    int baseHeight;
     int anInt729;
     int anInt730;
     int[] anIntArray731;
@@ -82,42 +114,63 @@ final class DisplayModeManagerContainer57
     static int anInt736;
     boolean aBoolean737;
     int anInt738;
-    int anInt739;
+    /** Relative Y offset; combined with {@link #yMode} into {@link #absoluteY}. */
+    int relativeY;
     RenderableSub10 aClass318_Sub10_740;
-    Object[] anObjectArray741;
+    /**
+     * CS2 hooks for option clicks. When non-null,
+     * {@link Component63#getComponentOption} still returns labels even if
+     * {@link ComponentSettings#hasOption} is false (disabled-looking slots).
+     */
+    Object[] optionScripts;
     Object[] anObjectArray742;
     static int anInt743;
     boolean aBoolean744;
     boolean aBoolean745;
     byte[] aByteArray746;
-    int anInt747;
-    NodeSub44 aClass348_Sub44_748;
+    /** Horizontal scroll offset for type-0 layers (children drawn at {@code x - scrollX}). */
+    int scrollX;
+    /**
+     * Default {@link ComponentSettings} from the IF archive entry.
+     * Runtime overrides: {@code Component127.aClass356_2959} via
+     * {@link client#getComponentSettings}.
+     */
+    ComponentSettings settings;
     /**
      * RGB (and sometimes ARGB) colour for rect fill, text, line, and graphic tint.
      * Drawn by {@link ImageDefinition} for types 3/4/5/9.
      */
     int colour;
-    int anInt750;
+    /** Absolute on-screen Y after {@link Component19} position resolve. */
+    int absoluteY;
     Object[] anObjectArray751;
     /** Widget display / menu target text (item name, button label, …). */
     String text;
     int anInt753;
     boolean aBoolean754;
-    int anInt755;
-    int anInt756;
+    /** Vertical scroll offset for type-0 layers (children drawn at {@code y - scrollY}). */
+    int scrollY;
+    /** Type-5 graphic / sprite archive id. */
+    int spriteId;
     int anInt757;
     static int anInt758;
     int anInt759;
     int anInt760;
     Object[] anObjectArray761;
-    int anInt762;
+    /** Type-4 horizontal text alignment passed to {@link BitmapFont#method2568}. */
+    int xTextAlign;
     Object[] anObjectArray763;
     Object[] anObjectArray764;
-    int anInt765;
+    /**
+     * Special content type id — compared against constants for world-map, FPS overlay,
+     * compass, etc. in {@link ImageDefinition} before the normal type switch.
+     */
+    int contentType;
     static int anInt766;
     static int anInt767;
     static int anInt768;
-    boolean aBoolean769;
+    /** Type-4: draw a drop shadow behind {@link #textContent}. */
+    boolean textShadowed;
     int anInt770;
     int[] anIntArray771;
     int[] anIntArray772;
@@ -140,11 +193,16 @@ final class DisplayModeManagerContainer57
     int anInt775;
     boolean aBoolean776;
     Object[] anObjectArray777;
-    byte aByte778;
+    /**
+     * Width size mode for {@link #baseWidth} → {@link #width} (see {@link Component188}).
+     * 0 absolute, 2 proportional (14-bit of parent), 4 aspect-from-height, else parent-minus.
+     */
+    byte widthMode;
     int anInt779;
     /** "Use" / target-verb label (menu opcode 13). */
     String useOption;
-    int anInt781;
+    /** Stack size for {@link #itemId} (drawn as {@code xN} when &gt; 1). */
+    int itemAmount;
     /** Parent widget in the interface tree ({@code null} for root components). */
     DisplayModeManagerContainer57 parent;
     static int anInt783;
@@ -152,11 +210,15 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray785;
     int anInt786;
     int anInt787;
-    int anInt788;
+    /** Relative X offset; combined with {@link #xMode} into {@link #absoluteX}. */
+    int relativeX;
     /** Layout height in pixels (decoded + CS2 if_setsize). */
     int height;
     boolean aBoolean790;
-    int anInt791;
+    /**
+     * Scrollable content height (type-0 layers). {@code 0} → use {@link #height}.
+     */
+    int scrollHeight;
     /**
      * Drawn string for type-4 text components (and item-name override when
      * {@link #itemId} is set). Distinct from {@link #text} (menu target / tip name).
@@ -173,7 +235,8 @@ final class DisplayModeManagerContainer57
      */
     DisplayModeManagerContainer57[] children;
     int anInt799;
-    int anInt800;
+    /** Absolute on-screen X after {@link Component19} position resolve. */
+    int absoluteX;
     int[] anIntArray801;
     static int anInt802;
     Object[] anObjectArray803;
@@ -182,7 +245,8 @@ final class DisplayModeManagerContainer57
     int anInt806;
     Object[] anObjectArray807;
     int anInt808;
-    int anInt809;
+    /** Type-5 item sprite shadow / outline colour (OR'd with {@code ~0xffffff}). */
+    int shadowColour;
     /** Type-3 rectangle: {@code true} = filled, {@code false} = outline. */
     boolean filled;
     Object[] anObjectArray811;
@@ -197,7 +261,11 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray815;
     /** Opcode-16 button label (Continue / custom); null → localized default. */
     String continueOption;
-    byte aByte817;
+    /**
+     * X position mode for {@link #relativeX} → {@link #absoluteX} (see {@link Component19}).
+     * 0 absolute, 1 centre, 2 from-right, 3/4 proportional (14-bit).
+     */
+    byte xMode;
     int[] anIntArray818;
     static int anInt819;
     Object[] anObjectArray820;
@@ -208,7 +276,8 @@ final class DisplayModeManagerContainer57
     static int anInt825;
     int anInt826;
     static int anInt827;
-    int anInt828;
+    /** Type-5 sprite rotation angle (0 = upright; used by method981/method977). */
+    int spriteAngle;
     static int anInt829;
     /** Packed interface id ({@code group << 16 | child}) — menu {@code param1}. */
     int packedId;
@@ -216,7 +285,11 @@ final class DisplayModeManagerContainer57
     byte[] aByteArray832;
     /** Right-click option labels (Wear, Drop, Eat, …) indexed 0..n. */
     String[] optionLabels;
-    int anInt834;
+    /**
+     * Parent packed id from the IF stream ({@code 65535} → {@code -1}, else OR'd with
+     * this component's high {@link #packedId} bits). Links {@link #parent} at load.
+     */
+    int parentId;
     int anInt835;
     Object[] anObjectArray836;
     static int anInt837;
@@ -224,7 +297,8 @@ final class DisplayModeManagerContainer57
     Object[] anObjectArray839;
     Object[] anObjectArray840;
     int anInt841;
-    int anInt842;
+    /** Decoded width before mode/parent resolve (CS2 if_setsize writes here too). */
+    int baseWidth;
 
     static final void method424(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, int i_3_, int i_4_, byte[][][] is, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         try {
@@ -253,7 +327,7 @@ final class DisplayModeManagerContainer57
         anInt767++;
         Shader var_aa = (Shader) ColoredText.aClass60_6096.get(this.packedId, 119);
         if (var_aa != null) return var_aa;
-        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
+        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.spriteId, 0);
         if (class207 == null) return null;
         int i_10_ = (class207.anInt2703 + (class207.anInt2702 + class207.anInt2698));
         int i_11_ = (class207.anInt2700 + (class207.anInt2696 + class207.anInt2701));
@@ -285,7 +359,7 @@ final class DisplayModeManagerContainer57
 
     final BitmapFont method426(GraphicsToolkit var_ha, byte i) {
         anInt827++;
-        BitmapFont class324 = DisplayModeManagerContainer194.method232(var_ha, (byte) -53, false, this.anInt702);
+        BitmapFont class324 = DisplayModeManagerContainer194.method232(var_ha, (byte) -53, false, this.fontId);
         if (i != 68) method436(-71, -56, -125);
         HashNodeSub13.aBoolean9616 = class324 == null;
         return class324;
@@ -311,7 +385,7 @@ final class DisplayModeManagerContainer57
         ComponentDownloader.aClass84_413.method816(false);
         Component132.aClass25_1813.method302(-797644856);
         NodeSub1.aClass185_6559.method1390(23);
-        Component339.aClass166_3147.method1283(1);
+        Component339.cursorDefinitions.method1283(1);
         Component257.aClass65_4787.method694(-1007);
         DisplayModeManagerContainer306.aClass219_4782.method1598(111);
         Component374.method2638(-4631);
@@ -330,7 +404,7 @@ final class DisplayModeManagerContainer57
     final int method428(int i, int i_18_, int i_19_) {
         anInt736++;
         if (aClass356_711 == null) return i;
-        if (i_19_ >= -124) this.anInt700 = 46;
+        if (i_19_ >= -124) this.yTextAlign = 46;
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_711.get(i_18_, -6008);
         if (class348_sub35 == null) return i;
         return class348_sub35.intValue;
@@ -467,37 +541,37 @@ final class DisplayModeManagerContainer57
         this.type = class348_sub49.readUnsignedByte(255);
         if ((0x80 & this.type) != 0) {
             this.type &= 0x7f;
-            this.aString721 = class348_sub49.readString((byte) -72);
+            this.debugName = class348_sub49.readString((byte) -72);
         }
-        this.anInt765 = class348_sub49.readUnsignedShort(842397944);
-        this.anInt788 = class348_sub49.readShort(13638);
-        this.anInt739 = class348_sub49.readShort(13638);
-        this.anInt842 = class348_sub49.readUnsignedShort(842397944);
-        this.anInt728 = class348_sub49.readUnsignedShort(842397944);
-        this.aByte778 = class348_sub49.readByte(-96);
-        this.aByte724 = class348_sub49.readByte(-87);
-        this.aByte817 = class348_sub49.readByte(-86);
-        this.aByte681 = class348_sub49.readByte(-108);
-        this.anInt834 = class348_sub49.readUnsignedShort(842397944);
-        if (this.anInt834 == 65535) this.anInt834 = -1;
-        else this.anInt834 = ((~0xffff & this.packedId) + this.anInt834);
+        this.contentType = class348_sub49.readUnsignedShort(842397944);
+        this.relativeX = class348_sub49.readShort(13638);
+        this.relativeY = class348_sub49.readShort(13638);
+        this.baseWidth = class348_sub49.readUnsignedShort(842397944);
+        this.baseHeight = class348_sub49.readUnsignedShort(842397944);
+        this.widthMode = class348_sub49.readByte(-96);
+        this.heightMode = class348_sub49.readByte(-87);
+        this.xMode = class348_sub49.readByte(-86);
+        this.yMode = class348_sub49.readByte(-108);
+        this.parentId = class348_sub49.readUnsignedShort(842397944);
+        if (this.parentId == 65535) this.parentId = -1;
+        else this.parentId = ((~0xffff & this.packedId) + this.parentId);
         int i_36_ = class348_sub49.readUnsignedByte(255);
         if (i >= 0) this.aBoolean776 = (0x2 & i_36_) != 0;
         this.hidden = (0x1 & i_36_) != 0;
         if (this.type == 0) {
-            this.anInt698 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt791 = class348_sub49.readUnsignedShort(842397944);
+            this.scrollWidth = class348_sub49.readUnsignedShort(842397944);
+            this.scrollHeight = class348_sub49.readUnsignedShort(842397944);
             if (i < 0) this.aBoolean776 = class348_sub49.readUnsignedByte(255) == 1;
         }
         if (this.type == 5) {
-            this.anInt756 = class348_sub49.readInt((byte) -126);
-            this.anInt828 = class348_sub49.readUnsignedShort(842397944);
+            this.spriteId = class348_sub49.readInt((byte) -126);
+            this.spriteAngle = class348_sub49.readUnsignedShort(842397944);
             int i_37_ = class348_sub49.readUnsignedByte(255);
-            this.aBoolean697 = (i_37_ & 0x1) != 0;
+            this.spriteTiling = (i_37_ & 0x1) != 0;
             this.aBoolean745 = (0x2 & i_37_) != 0;
-            this.anInt696 = class348_sub49.readUnsignedByte(255);
-            this.anInt672 = class348_sub49.readUnsignedByte(255);
-            this.anInt809 = class348_sub49.readInt((byte) -126);
+            this.opacity = class348_sub49.readUnsignedByte(255);
+            this.outline = class348_sub49.readUnsignedByte(255);
+            this.shadowColour = class348_sub49.readInt((byte) -126);
             this.aBoolean790 = class348_sub49.readUnsignedByte(255) == 1;
             this.aBoolean735 = class348_sub49.readUnsignedByte(255) == 1;
             this.colour = class348_sub49.readInt((byte) -126);
@@ -529,28 +603,28 @@ final class DisplayModeManagerContainer57
             }
             this.anInt699 = class348_sub49.readUnsignedShort(842397944);
             if (this.anInt699 == 65535) this.anInt699 = -1;
-            if (this.aByte778 != 0) this.anInt796 = class348_sub49.readUnsignedShort(842397944);
-            if (this.aByte724 != 0) this.anInt826 = class348_sub49.readUnsignedShort(842397944);
+            if (this.widthMode != 0) this.anInt796 = class348_sub49.readUnsignedShort(842397944);
+            if (this.heightMode != 0) this.anInt826 = class348_sub49.readUnsignedShort(842397944);
         }
         if (this.type == 4) {
-            this.anInt702 = class348_sub49.readUnsignedShort(842397944);
-            if (this.anInt702 == 65535) this.anInt702 = -1;
+            this.fontId = class348_sub49.readUnsignedShort(842397944);
+            if (this.fontId == 65535) this.fontId = -1;
             this.textContent = class348_sub49.readString((byte) 111);
-            this.anInt673 = class348_sub49.readUnsignedByte(255);
-            this.anInt762 = class348_sub49.readUnsignedByte(255);
-            this.anInt700 = class348_sub49.readUnsignedByte(255);
-            this.aBoolean769 = class348_sub49.readUnsignedByte(255) == 1;
+            this.lineHeight = class348_sub49.readUnsignedByte(255);
+            this.xTextAlign = class348_sub49.readUnsignedByte(255);
+            this.yTextAlign = class348_sub49.readUnsignedByte(255);
+            this.textShadowed = class348_sub49.readUnsignedByte(255) == 1;
             this.colour = class348_sub49.readInt((byte) -126);
-            this.anInt696 = class348_sub49.readUnsignedByte(255);
+            this.opacity = class348_sub49.readUnsignedByte(255);
             if (i >= 0) this.anInt773 = class348_sub49.readUnsignedByte(255);
         }
         if (this.type == 3) {
             this.colour = class348_sub49.readInt((byte) -126);
             this.filled = class348_sub49.readUnsignedByte(255) == 1;
-            this.anInt696 = class348_sub49.readUnsignedByte(255);
+            this.opacity = class348_sub49.readUnsignedByte(255);
         }
         if (this.type == 9) {
-            this.anInt690 = class348_sub49.readUnsignedByte(255);
+            this.lineWidth = class348_sub49.readUnsignedByte(255);
             this.colour = class348_sub49.readInt((byte) -126);
             this.aBoolean744 = class348_sub49.readUnsignedByte(255) == 1;
         }
@@ -612,7 +686,7 @@ final class DisplayModeManagerContainer57
             this.anInt719 = class348_sub49.readUnsignedShort(842397944);
             if (this.anInt719 == 65535) this.anInt719 = -1;
         }
-        this.aClass348_Sub44_748 = new NodeSub44(i_40_, i_52_);
+        this.settings = new ComponentSettings(i_40_, i_52_);
         if (i >= 0) {
             int i_53_ = class348_sub49.readUnsignedByte(255);
             for (int i_54_ = 0; i_53_ > i_54_; i_54_++) {
@@ -636,7 +710,7 @@ final class DisplayModeManagerContainer57
         this.anObjectArray751 = method432(class348_sub49, -1);
         this.anObjectArray671 = method432(class348_sub49, -1);
         this.anObjectArray764 = method432(class348_sub49, -1);
-        this.anObjectArray741 = method432(class348_sub49, -1);
+        this.optionScripts = method432(class348_sub49, -1);
         if (i >= 0) this.anObjectArray679 = method432(class348_sub49, -1);
         this.anObjectArray839 = method432(class348_sub49, -1);
         this.anObjectArray763 = method432(class348_sub49, -1);
@@ -663,7 +737,7 @@ final class DisplayModeManagerContainer57
         this.anObjectArray839 = null;
         this.anObjectArray763 = null;
         this.anIntArray831 = null;
-        this.anObjectArray741 = null;
+        this.optionScripts = null;
         this.anObjectArray764 = null;
         this.anObjectArray836 = null;
         this.anObjectArray701 = null;
@@ -752,7 +826,7 @@ final class DisplayModeManagerContainer57
 
     final void method439(int i, int i_66_, String string) {
         anInt758++;
-        if (i != 0) this.anInt756 = -106;
+        if (i != 0) this.spriteId = -106;
         if (aClass356_711 == null) {
             aClass356_711 = new LruCache(16);
             aClass356_711.put((byte) 86, i_66_, new NodeSub50(string));
@@ -795,22 +869,22 @@ final class DisplayModeManagerContainer57
     final Component24 method443(GraphicsToolkit var_ha, byte i) {
         anInt819++;
         HashNodeSub13.aBoolean9616 = false;
-        long l = (((long) this.anInt809 << 40) + (((this.aBoolean790 ? 1L : 0L) << 38) + (((long) this.anInt672 << 36) + ((this.aBoolean745 ? 1L : 0L) << 35))) + ((long) this.anInt756 + ((!this.aBoolean735 ? 0L : 1L) << 39)));
+        long l = (((long) this.shadowColour << 40) + (((this.aBoolean790 ? 1L : 0L) << 38) + (((long) this.outline << 36) + ((this.aBoolean745 ? 1L : 0L) << 35))) + ((long) this.spriteId + ((!this.aBoolean735 ? 0L : 1L) << 39)));
         Component24 class105 = (Component24) StringCache.aClass60_4327.get(l, -71);
         if (i > -27) method434(true);
         if (class105 != null) return class105;
-        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.anInt756, 0);
+        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.spriteId, 0);
         if (class207 == null) {
             HashNodeSub13.aBoolean9616 = true;
             return null;
         }
         if (this.aBoolean790) class207.method1514();
         if (this.aBoolean735) class207.method1518();
-        if (this.anInt672 > 0) class207.method1513(this.anInt672);
-        else if (this.anInt809 != 0) class207.method1513(1);
-        if (this.anInt672 >= 1) class207.method1515(1);
-        if (this.anInt672 >= 2) class207.method1515(16777215);
-        if (this.anInt809 != 0) class207.method1511(~0xffffff | this.anInt809);
+        if (this.outline > 0) class207.method1513(this.outline);
+        else if (this.shadowColour != 0) class207.method1513(1);
+        if (this.outline >= 1) class207.method1515(1);
+        if (this.outline >= 2) class207.method1515(16777215);
+        if (this.shadowColour != 0) class207.method1511(~0xffffff | this.shadowColour);
         class105 = var_ha.method3691(class207, true);
         StringCache.aClass60_4327.put(31902, class105, l, (class105.method971() * class105.method969() * 4));
         return class105;
@@ -835,55 +909,55 @@ final class DisplayModeManagerContainer57
 
     public DisplayModeManagerContainer57() {
         this.anInt695 = -1;
-        this.anInt700 = 0;
+        this.yTextAlign = 0;
         this.aBoolean676 = false;
         this.anInt726 = -1;
         this.aBoolean682 = false;
-        this.anInt690 = 1;
+        this.lineWidth = 1;
         this.anInt716 = 100;
         this.anInt757 = 0;
         this.childIndex = -1;
-        this.anInt750 = 0;
+        this.absoluteY = 0;
         this.anInt675 = 0;
         this.colour = 0;
-        this.anInt756 = -1;
+        this.spriteId = -1;
         this.anInt710 = 1;
         this.anInt738 = 0;
-        this.anInt672 = 0;
+        this.outline = 0;
         this.anInt730 = 1;
         this.aBoolean754 = false;
-        this.anInt747 = 0;
+        this.scrollX = 0;
         this.anInt723 = 0;
         this.aBoolean776 = false;
-        this.anInt788 = 0;
+        this.relativeX = 0;
         this.anInt699 = -1;
-        this.aBoolean769 = false;
+        this.textShadowed = false;
         this.aBoolean720 = false;
         this.usePriority = -1;
-        this.anInt739 = 0;
+        this.relativeY = 0;
         this.anInt729 = 0;
-        this.anInt728 = 0;
+        this.baseHeight = 0;
         this.anInt797 = InputStream_Sub1.anInt78;
         this.anInt779 = -1;
         this.width = 0;
         this.anInt775 = 1;
         this.anInt719 = -1;
         this.aBoolean793 = false;
-        this.anInt791 = 0;
+        this.scrollHeight = 0;
         this.anInt715 = 0;
         this.aBoolean689 = false;
-        this.aBoolean697 = false;
+        this.spriteTiling = false;
         this.anInt808 = 0;
-        this.anInt765 = 0;
-        this.anInt755 = 0;
-        this.aClass348_Sub44_748 = Component275.aClass348_Sub44_2692;
+        this.contentType = 0;
+        this.scrollY = 0;
+        this.settings = Component275.defaultSettings;
         this.anInt786 = 0;
         this.anInt760 = -1;
-        this.anInt800 = 0;
+        this.absoluteX = 0;
         this.anInt770 = 1;
-        this.aByte778 = (byte) 0;
+        this.widthMode = (byte) 0;
         this.filled = false;
-        this.aByte724 = (byte) 0;
+        this.heightMode = (byte) 0;
         this.parent = null;
         this.anInt773 = 0;
         this.anInt794 = -1;
@@ -891,20 +965,20 @@ final class DisplayModeManagerContainer57
         this.anInt799 = 0;
         this.aBoolean737 = false;
         this.anInt703 = 0;
-        this.anInt828 = 0;
+        this.spriteAngle = 0;
         this.text = "";
         this.aBoolean745 = false;
-        this.anInt698 = 0;
+        this.scrollWidth = 0;
         this.textContent = "";
         this.anInt814 = 0;
-        this.anInt781 = 0;
+        this.itemAmount = 0;
         this.hidden = false;
         this.anInt824 = -1;
         this.packedId = -1;
-        this.aByte681 = (byte) 0;
-        this.anInt809 = 0;
-        this.anInt834 = -1;
-        this.anInt762 = 0;
+        this.yMode = (byte) 0;
+        this.shadowColour = 0;
+        this.parentId = -1;
+        this.xTextAlign = 0;
         this.height = 0;
         this.useOption = "";
         this.aBoolean744 = false;
@@ -915,10 +989,10 @@ final class DisplayModeManagerContainer57
         this.itemId = -1;
         this.anInt717 = 0;
         this.anInt806 = -1;
-        this.anInt842 = 0;
+        this.baseWidth = 0;
         this.anInt796 = 0;
         this.anInt841 = 0;
-        this.aByte817 = (byte) 0;
+        this.xMode = (byte) 0;
     }
 
     static {

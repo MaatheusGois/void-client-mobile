@@ -10,7 +10,11 @@ final class Component149
     /** Font for debug overlay lines (Dynamic/Occluders/…); set via {@code setDebugOverlayFont}. */
     static BitmapFont debugOverlayFont;
     static int anInt4457;
-    static int anInt4458 = -1;
+    /**
+     * Cursor def id from the hovered interface component ({@code anInt719}),
+     * or {@code -1}. Second fallback in the draw-loop cursor resolve chain.
+     */
+    static int widgetCursorId = -1;
     static int anInt4459;
     static Component191 aClass183_4460;
 
@@ -83,7 +87,7 @@ final class Component149
 
     public static void method3512(int i) {
         aClass183_4460 = null;
-        if (i != 4) anInt4458 = 96;
+        if (i != 4) widgetCursorId = 96;
         debugOverlayFont = null;
     }
 }

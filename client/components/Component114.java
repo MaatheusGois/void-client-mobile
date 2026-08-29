@@ -52,10 +52,10 @@ final class Component114
             }
             NodeSub8.toolkit.la();
             HashNodeSub20.method3281((byte) 46, NodeSub8.toolkit);
-            int i_4_ = DisplayModeManagerContainer67.getHoveredMenuPriority(3112);
-            if (i_4_ == -1) i_4_ = Component149.anInt4458;
-            if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.anInt10447;
-            Component373.method338(0, i_4_);
+            int i_4_ = DisplayModeManagerContainer67.getTipCursorId(3112);
+            if (i_4_ == -1) i_4_ = Component149.widgetCursorId;
+            if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.defaultCursorId;
+            Component373.applyCustomCursor(0, i_4_);
             if (i == -43) {
                 int i_5_ = (Component72.localPlayer.method2436((byte) 103) << 8);
                 DisplayModeManagerContainer147.method2655(98, Component72.localPlayer.plane, NodeSub51.anInt7267, i_5_ + (Component72.localPlayer.y), (Component72.localPlayer.x - -i_5_));

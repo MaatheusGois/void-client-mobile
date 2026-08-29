@@ -119,7 +119,7 @@ final class NewsFetcher implements Runnable {
                 class348_sub36.aClass46_6989 = class46;
                 ClientScriptExecutor.method705(class348_sub36);
             }
-            Component149.anInt4458 = class46.anInt695;
+            Component149.widgetCursorId = class46.anInt695;
             Component163.anInt3176 = i;
             PauseTimer.anInt500 = i_13_;
             Component281.anInt3829 = class46.itemId;

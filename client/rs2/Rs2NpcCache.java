@@ -27,7 +27,7 @@ final class Rs2NpcCache {
         count = 0;
         for (int i = 0; i < Component324.anInt2057; i++) {
             try {
-                NodeSub22 node = (NodeSub22) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i], -6008);
+                NpcNode node = (NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i], -6008);
                 if (node == null || node.npc == null) {
                     continue;
                 }

@@ -32,22 +32,35 @@ final class Component373
         return class117;
     }
 
-    static final void method338(int i, int i_0_) {
-        if (i == Component192.aClass348_Sub51_3959.aClass239_Sub22_7253.method1815(-32350)) i_0_ = -1;
+    /**
+     * Install / clear the OS custom cursor for the current tip.
+     * <p>
+     * {@code i_0_} is a {@link CursorDefinition} id from
+     * {@link DisplayModeManagerContainer67#getTipCursorId} →
+     * {@link Component149#widgetCursorId} → {@link HashNodeSub16Sub1#defaultCursorId}.
+     * When {@link NodeSub51#customCursorSetting} is {@code 0} (or {@code i_0_} is a
+     * Void tip-sort sentinel ≥ {@code 0x7ffffffe}), clears to the system pointer.
+     * Tracks the live id in {@link Component244#currentCursorId}.
+     */
+    static final void applyCustomCursor(int i, int i_0_) {
+        if (i == Component192.aClass348_Sub51_3959.customCursorSetting.getValue(-32350)) i_0_ = -1;
         anInt456++;
-        if (i_0_ != Component244.anInt4179) {
+        // Sentinel tip-sort values (DefaultClick / Microbot) are not valid cursor defs —
+        // fall back so the pointer does not stick on the default left-click sprite.
+        if (i_0_ >= 0x7ffffffe) i_0_ = -1;
+        if (i_0_ != Component244.currentCursorId) {
             if (i_0_ != -1) {
-                Component303 class222 = Component339.aClass166_3147.method1287((byte) -104, i_0_);
-                Component170 class207 = class222.method1610((byte) 71);
+                CursorDefinition class222 = Component339.cursorDefinitions.get((byte) -104, i_0_);
+                Component170 class207 = class222.getSprite((byte) 71);
                 if (class207 == null) i_0_ = -1;
                 else {
-                    OggUrlStream.aClass297_8992.setCustomCursor(class207.method1522(), class207.method1516(), 17, new Point(class222.anInt2883, class222.anInt2890), DisplayModeManagerContainer50.gameCanvas, class207.method1510());
-                    Component244.anInt4179 = i_0_;
+                    OggUrlStream.aClass297_8992.setCustomCursor(class207.method1522(), class207.method1516(), 17, new Point(class222.hotspotX, class222.hotspotY), DisplayModeManagerContainer50.gameCanvas, class207.method1510());
+                    Component244.currentCursorId = i_0_;
                 }
             }
-            if (i_0_ == -1 && Component244.anInt4179 != -1) {
+            if (i_0_ == -1 && Component244.currentCursorId != -1) {
                 OggUrlStream.aClass297_8992.setCustomCursor(-1, null, i + 17, new Point(), (DisplayModeManagerContainer50.gameCanvas), -1);
-                Component244.anInt4179 = -1;
+                Component244.currentCursorId = -1;
             }
         }
     }

@@ -1,13 +1,19 @@
-/* NodeSub22 - Decompiled by JODE
+/* NpcNode - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import java.awt.*;
 
-final class NodeSub22
+final class NpcNode
 /**
- * NPC list node ({@link #npc}) plus static interface helpers.
- * RENAMED from {@code Class348_Sub22} (JODE-obfuscated).
+ * NPC list hash-table entry ({@link #npc}) plus static interface helpers.
+ * <p>
+ * {@link #getChildComponent} is the official CC_OP path for
+ * {@code parent.children[childIndex]} given a packed parent id — used by
+ * prayer-book aliases (icons share one {@code packedId}; {@code childIndex}
+ * is unique) and {@link MicrobotWidgets}.
+ * <p>
+ * RENAMED from {@code Class348_Sub22} / {@code NodeSub22}.
  */ extends Node {
     static int anInt6857;
     static int anInt6858;
@@ -19,16 +25,16 @@ final class NodeSub22
     /**
      * Resolve a component: packed parent id + optional child index.
      * {@code childIndex == -1} → the parent itself; otherwise {@code parent.children[childIndex]}.
-     * Opaque middle arg must be {@code (byte) -54}.
-     * Used by prayer alias fire ({@link JoystickAlias}) and Microbot widget lookup.
+     * Opaque middle arg must be {@code (byte) -54} (checksum / anti-tamper).
+     * Evidence: prayer-book fire + Microbot; same lookup CC_OP uses for menus.
      */
-    static final DisplayModeManagerContainer57 getChildComponent(int i, byte i_0_, int i_1_) {
+    static final DisplayModeManagerContainer57 getChildComponent(int childIndex, byte opaque, int packedParentId) {
         anInt6858++;
-        DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(i_0_ + 1512932774, i_1_);
-        if (i_0_ != -54) method2958(-23, null);
-        if (i == -1) return class46;
-        if (class46 == null || class46.children == null || (i >= class46.children.length)) return null;
-        return class46.children[i];
+        DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(opaque + 1512932774, packedParentId);
+        if (opaque != -54) method2958(-23, null);
+        if (childIndex == -1) return class46;
+        if (class46 == null || class46.children == null || (childIndex >= class46.children.length)) return null;
+        return class46.children[childIndex];
     }
 
     static final int method2958(int i, CacheStore class45) {
@@ -60,12 +66,12 @@ final class NodeSub22
         AbstractGlTextureSub4.mouseHandler.destroy(0);
         NpcComposition.aClient1367.recreateGameCanvas((byte) -49);
         DisplayModeManagerContainer50.gameCanvas.setBackground(Color.black);
-        Component244.anInt4179 = i;
+        Component244.currentCursorId = i;
         Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) 84);
         AbstractGlTextureSub4.mouseHandler = NodeSub18.createMouseHandler(DisplayModeManagerContainer50.gameCanvas, 0, true);
     }
 
-    NodeSub22(Npc npc) {
+    NpcNode(Npc npc) {
         this.npc = npc;
     }
 }

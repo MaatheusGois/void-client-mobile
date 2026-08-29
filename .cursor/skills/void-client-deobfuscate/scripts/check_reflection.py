@@ -37,7 +37,7 @@ EXPECTED: list[tuple[str, str, str]] = [
     ("field", "Component236", "anInt4017"),
     ("field", "PacketReader", "anInt10432"),
     ("field", "SocketConnector", "anInt3473"),
-    ("field", "NodeSub22", "anInt6857"),
+    ("field", "NpcNode", "anInt6857"),
     ("field", "NodeSub48", "anInt7129"),
     ("field", "DisplayModeManagerContainer147", "anInt4167"),
     ("field", "Cp1252Decoder", "fullscreenAvailable"),
@@ -67,6 +67,7 @@ STALE_STRINGS = (
     "method1725",
     "method2363",
     "method3543",
+    "NodeSub22",
 )
 
 SET_INT = re.compile(r'setStaticInt\(\s*"([^"]+)"\s*,\s*"([^"]+)"')

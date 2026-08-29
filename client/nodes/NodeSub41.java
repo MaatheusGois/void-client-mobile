@@ -93,7 +93,7 @@ final class NodeSub41
             int i_21_ = -i_19_ + Component330.regionTileY;
             if (i_17_ == 11) {
                 for (int i_22_ = 0; NodeSub32.anInt6930 > i_22_; i_22_++) {
-                    NodeSub22 class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_22_];
+                    NpcNode class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_22_];
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.npc);
                         for (int i_23_ = 0; i_23_ < 10; i_23_++) {
@@ -110,7 +110,7 @@ final class NodeSub41
                 int i_25_ = AbstractShaderSub4.anInt7319 * 512 - 512;
                 int i_26_ = 512 * (-1 + ParametricDefinition.anInt9109);
                 for (int i_27_ = 0; (NodeSub32.anInt6930 > i_27_); i_27_++) {
-                    NodeSub22 class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_27_];
+                    NpcNode class348_sub22 = DefinitionSub23.aClass348_Sub22Array9319[i_27_];
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.npc);
                         npc.y -= 512 * i_21_;

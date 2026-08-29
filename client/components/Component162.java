@@ -38,7 +38,7 @@ final class Component162
         if (i == 2533) {
             class348_sub41.unlink((byte) 35);
             if (bool) DisplayModeManagerContainer194.method235(i_3_, (byte) -116);
-            Component290.method1288(i ^ ~0x9e2, i_3_);
+            CursorDefinitionCache.method1288(i ^ ~0x9e2, i_3_);
             DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, i_4_);
             if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
             HashNodeSub17.method3270((byte) 119);

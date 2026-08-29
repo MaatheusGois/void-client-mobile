@@ -361,7 +361,7 @@ final class PacketReader extends CacheNode {
             if (i_40_ >> 30 == 0) {
                 if (i_40_ >> 29 != 0) {
                     int i_44_ = i_40_ & 0xffff;
-                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_44_, -6008));
+                    NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_44_, -6008));
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.npc);
                         if (i_38_ == 65535) i_38_ = -1;
@@ -744,7 +744,7 @@ final class PacketReader extends CacheNode {
             NodeSub3.aClass114_6584 = null;
             return true;
         }
-        if (Component287.aClass114_6075 == NodeSub3.aClass114_6584) {
+        if (CustomCursorSetting.aClass114_6075 == NodeSub3.aClass114_6584) {
             Component141.method2397((byte) -127);
             Component284.method1851((byte) 125);
             NodeSub3.aClass114_6584 = null;
@@ -1092,7 +1092,7 @@ final class PacketReader extends CacheNode {
             NodeSub3.aClass114_6584 = null;
             return true;
         }
-        if (NodeSub3.aClass114_6584 == Component290.aClass114_2183) {
+        if (NodeSub3.aClass114_6584 == CursorDefinitionCache.aClass114_2183) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-121);
             if (i == 65535) i = -1;
             String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 103);
@@ -1160,13 +1160,13 @@ final class PacketReader extends CacheNode {
             if (i_146_ == 65535) i_146_ = -1;
             for (int i_147_ = i_146_; i_145_ >= i_147_; i_147_++) {
                 long l = ((long) i << 32) - -(long) i_147_;
-                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.get(l, -6008));
-                NodeSub44 class348_sub44_148_;
+                ComponentSettings class348_sub44 = ((ComponentSettings) Component127.aClass356_2959.get(l, -6008));
+                ComponentSettings class348_sub44_148_;
                 if (class348_sub44 == null) {
-                    if (i_147_ == -1) class348_sub44_148_ = (new NodeSub44(BitmapFont.getComponent(1512932720, i).aClass348_Sub44_748.anInt7098, i_144_));
-                    else class348_sub44_148_ = new NodeSub44(0, i_144_);
+                    if (i_147_ == -1) class348_sub44_148_ = (new ComponentSettings(BitmapFont.getComponent(1512932720, i).settings.optionFlags, i_144_));
+                    else class348_sub44_148_ = new ComponentSettings(0, i_144_);
                 } else {
-                    class348_sub44_148_ = new NodeSub44((class348_sub44.anInt7098), i_144_);
+                    class348_sub44_148_ = new ComponentSettings((class348_sub44.optionFlags), i_144_);
                     class348_sub44.unlink((byte) 91);
                 }
                 Component127.aClass356_2959.put((byte) 125, l, class348_sub44_148_);
@@ -1435,7 +1435,7 @@ final class PacketReader extends CacheNode {
             for (int i_192_ = 0; i_192_ < 4; i_192_++)
                 is[i_192_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_193_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_193_, -6008));
+            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_193_, -6008));
             if (class348_sub22 != null) NpcDefinition.method2931(i, (byte) 110, is, (class348_sub22.npc));
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1560,13 +1560,13 @@ final class PacketReader extends CacheNode {
             Component141.method2397((byte) -127);
             for (int i_211_ = i_208_; i_211_ <= i; i_211_++) {
                 long l = (long) i_211_ + ((long) i_209_ << 32);
-                NodeSub44 class348_sub44 = ((NodeSub44) Component127.aClass356_2959.get(l, -6008));
-                NodeSub44 class348_sub44_212_;
+                ComponentSettings class348_sub44 = ((ComponentSettings) Component127.aClass356_2959.get(l, -6008));
+                ComponentSettings class348_sub44_212_;
                 if (class348_sub44 != null) {
-                    class348_sub44_212_ = new NodeSub44(i_210_, (class348_sub44.anInt7093));
+                    class348_sub44_212_ = new ComponentSettings(i_210_, (class348_sub44.anInt7093));
                     class348_sub44.unlink((byte) 80);
-                } else if (i_211_ == -1) class348_sub44_212_ = (new NodeSub44(i_210_, BitmapFont.getComponent(1512932720, i_209_).aClass348_Sub44_748.anInt7093));
-                else class348_sub44_212_ = new NodeSub44(i_210_, -1);
+                } else if (i_211_ == -1) class348_sub44_212_ = (new ComponentSettings(i_210_, BitmapFont.getComponent(1512932720, i_209_).settings.anInt7093));
+                else class348_sub44_212_ = new ComponentSettings(i_210_, -1);
                 Component127.aClass356_2959.put((byte) 114, l, class348_sub44_212_);
             }
             NodeSub3.aClass114_6584 = null;

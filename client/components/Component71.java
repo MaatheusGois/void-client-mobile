@@ -52,7 +52,7 @@ final class Component71
             int i_15_ = Component148.anInt3465 + i_14_;
             int i_16_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, i_2_, i);
             int i_17_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, 1 + i_2_, i - -1);
-            InterfaceRenderer.aClass338Array5060[NodeSub44.anInt7101++] = new Component103(i_5_, i_4_, i_12_, i_13_, i_13_, i_12_, i_16_, i_17_, -i_1_ + i_17_, -i_1_ + i_16_, i_14_, i_15_, i_15_, i_14_);
+            InterfaceRenderer.aClass338Array5060[ComponentSettings.anInt7101++] = new Component103(i_5_, i_4_, i_12_, i_13_, i_13_, i_12_, i_16_, i_17_, -i_1_ + i_17_, -i_1_ + i_16_, i_14_, i_15_, i_15_, i_14_);
         } else {
             int i_6_ = Component148.anInt3465 + (i << Component149.anInt4459);
             int i_7_ = -Component148.anInt3465 + i_6_;
@@ -60,7 +60,7 @@ final class Component71
             int i_9_ = i_8_ + Component148.anInt3465;
             int i_10_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, i_2_, i + 1);
             int i_11_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, 1 + i_2_, i);
-            InterfaceRenderer.aClass338Array5060[NodeSub44.anInt7101++] = new Component103(i_5_, i_4_, i_6_, i_7_, i_7_, i_6_, i_10_, i_11_, -i_1_ + i_11_, i_10_ - i_1_, i_8_, i_9_, i_9_, i_8_);
+            InterfaceRenderer.aClass338Array5060[ComponentSettings.anInt7101++] = new Component103(i_5_, i_4_, i_6_, i_7_, i_7_, i_6_, i_10_, i_11_, -i_1_ + i_11_, i_10_ - i_1_, i_8_, i_9_, i_9_, i_8_);
         }
         if (i_3_ != -1) method1811(31, null, 115, null);
         anInt6067++;

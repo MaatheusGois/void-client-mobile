@@ -468,7 +468,7 @@ final class ColoredTextBuilder {
                         ToolkitFactory.anInt1534 = i_72_;
                         AssetCacheLoader.anInt385 = i_73_;
                         Node.anInt4292 = 0;
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
                             NpcComposition class79 = (npc.definition);
@@ -514,7 +514,7 @@ final class ColoredTextBuilder {
                         HashNodeSub18.method3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 6) {
-                        DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
+                        DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
                         if (class46 != null) Component177.method1237((byte) 71, class46);
                     }
                     if (i_76_ == 5) {
@@ -532,7 +532,7 @@ final class ColoredTextBuilder {
                         HashNodeSub18.method3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 46) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Node.anInt4292 = 0;
                             Component38.anInt2499++;
@@ -577,7 +577,7 @@ final class ColoredTextBuilder {
                         DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 93);
                     }
                     if (i_76_ == 30) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Node.anInt4292 = 0;
                             ToolkitFactory.anInt1534 = i_72_;
@@ -683,7 +683,7 @@ final class ColoredTextBuilder {
                     }
                     if (i_76_ == 16 && Component297.aClass46_4730 == null) {
                         ImageDefinition.method3065(i_75_, false, i_74_);
-                        Component297.aClass46_4730 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
+                        Component297.aClass46_4730 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
                         Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
                     }
                     if (i_76_ == 8) {
@@ -731,7 +731,7 @@ final class ColoredTextBuilder {
                         Component10.method2252(true, i_74_, i_75_, (byte) -91, 1, 0, 1, -4, 0);
                     }
                     if (i_76_ == 60) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Component200.anInt3707++;
                             Node.anInt4292 = 0;
@@ -822,7 +822,7 @@ final class ColoredTextBuilder {
                         DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 63);
                     }
                     if (i_76_ == 20) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Component20.anInt6048 = 2;
                             AssetCacheLoader.anInt385 = i_73_;
@@ -878,11 +878,11 @@ final class ColoredTextBuilder {
                         }
                         if (i_76_ == 18 || i_76_ == 1011) SceneNode.method2780(i_74_, (class348_sub42_sub12.target), (byte) 5, i_77_, i_75_);
                         if (i_76_ == 13) {
-                            DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i_74_, (byte) -54, i_75_);
+                            DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
                             if (class46 != null) {
                                 DisplayModeManagerContainer196.method2678(-2049);
-                                NodeSub44 class348_sub44 = client.method105(class46);
-                                NewsFetcher.method2666(class348_sub44.anInt7093, class348_sub44.method3307(14), class46, (byte) 21);
+                                ComponentSettings class348_sub44 = client.getComponentSettings(class46);
+                                NewsFetcher.method2666(class348_sub44.anInt7093, class348_sub44.getClickMask(14), class46, (byte) 21);
                                 DisplayModeManagerContainer332.aString5001 = DisplayModeManagerContainer295.getUseOption(0, class46);
                                 DisplayModeManagerContainer332.aString5000 = (class46.text + "<col=ffffff>");
                                 if (DisplayModeManagerContainer332.aString5001 == null) DisplayModeManagerContainer332.aString5001 = "Null";
@@ -890,7 +890,7 @@ final class ColoredTextBuilder {
                         } else {
                             if (i_76_ == 1009 || i_76_ == 1012 || i_76_ == 1002 || i_76_ == 1003 || i_76_ == 1006) Component304.method696(i_76_, i_74_, i_77_, -1007);
                             if (i_76_ == 25) {
-                                NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                                NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                                 if (class348_sub22 != null) {
                                     Component20.anInt6048 = 2;
                                     ToolkitFactory.anInt1534 = i_72_;
@@ -935,7 +935,7 @@ final class ColoredTextBuilder {
                                 DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 24);
                             }
                             if (i_76_ == 44) {
-                                NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
+                                NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                                 if (class348_sub22 != null) {
                                     Npc npc = (class348_sub22.npc);
                                     ToolkitFactory.anInt1534 = i_72_;

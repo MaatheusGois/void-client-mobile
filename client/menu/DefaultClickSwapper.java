@@ -31,6 +31,11 @@ final class DefaultClickSwapper {
      */
     private static final int[] ITEM_OPCODES = {18, 1011, 13};
 
+    /**
+     * Legacy tip-sort sentinel — <b>do not write into {@link MenuEntry#cursorId}</b>.
+     * That field is the Jagex cursor-sprite definition id (see {@link Component373#applyCustomCursor}).
+     * Tip forcing uses {@link Component192#menuTip} assignment instead.
+     */
     static final int PRIORITY_PREFERRED = 0x7ffffffe;
 
     private static final String FILE_NAME = "default-click.properties";
@@ -232,7 +237,8 @@ final class DefaultClickSwapper {
         if (preferred == null) {
             return null;
         }
-        preferred.priority = PRIORITY_PREFERRED;
+        // Keep preferred.cursorId intact — it is the cursor sprite id, not a sort key.
+        // Tip is forced via Component192.menuTip in updateMenuTip.
         DefinitionSub4.menuEntries.addTail(preferred, -20180);
         int prefOp = preferred.opcode >= 2000 ? preferred.opcode - 2000 : preferred.opcode;
         // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
@@ -344,7 +350,7 @@ final class DefaultClickSwapper {
             if (entry.opcode < 2000) {
                 entry.opcode += 2000;
             }
-            entry.priority = 0;
+            // Do not touch entry.cursorId — it is the cursor sprite id.
         }
     }
 
@@ -376,7 +382,7 @@ final class DefaultClickSwapper {
     }
 
     private static NpcComposition compositionForNpcEntry(MenuEntry entry) {
-        NodeSub22 node = (NodeSub22) Component21.aClass356_3654.get((int) entry.identifier, -6008);
+        NpcNode node = (NpcNode) Component21.aClass356_3654.get((int) entry.identifier, -6008);
         if (node == null) {
             return null;
         }

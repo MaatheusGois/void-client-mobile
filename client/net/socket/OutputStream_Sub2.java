@@ -56,7 +56,7 @@ final class OutputStream_Sub2 extends OutputStream {
         if (!Component3.method1197(-12081, (class348_sub42_sub12.opcode))) {
             if (class348_sub42_sub12.itemId == -1) {
                 if (WaterShaderSub8.method3549(class348_sub42_sub12.opcode, (byte) -44)) {
-                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) class348_sub42_sub12.identifier, -6008)));
+                    NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get((int) class348_sub42_sub12.identifier, -6008)));
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.npc);
                         NpcComposition class79 = (npc.definition);

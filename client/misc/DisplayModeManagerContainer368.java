@@ -42,14 +42,14 @@ final class DisplayModeManagerContainer368
      * <p>
      * Arg map → {@link MenuEntry} fields: {@code string_6_=option},
      * {@code string=target}, {@code i_5_=opcode}, {@code l_7_=identifier},
-     * {@code i_2_=param0}, {@code i=param1}, {@code i_3_=itemId}, {@code i_8_=priority},
-     * {@code l=groupKey}.
+     * {@code i_2_=param0}, {@code i=param1}, {@code i_3_=itemId}, {@code i_8_=cursorId}
+     * ({@code -1} → {@link Component149#widgetCursorId}), {@code l=groupKey}.
      */
     static final void addMenuEntry(boolean bool, String string, int i, byte i_0_, boolean bool_1_, int i_2_, int i_3_, boolean bool_4_, int i_5_, long l, String string_6_, long l_7_, int i_8_) {
         try {
             anInt5238++;
             if (!Component364.aBoolean8335 && DisplayModeManagerContainer306.menuEntryCount < 500) {
-                i_8_ = i_8_ != -1 ? i_8_ : Component149.anInt4458;
+                i_8_ = i_8_ != -1 ? i_8_ : Component149.widgetCursorId;
                 if (i_0_ >= -65) method469((byte) 19);
                 MenuEntry class348_sub42_sub12 = new MenuEntry(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
                 GlToolkitSub2.appendMenuEntry((byte) 6, class348_sub42_sub12);

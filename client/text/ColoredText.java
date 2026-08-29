@@ -102,7 +102,7 @@ final class ColoredText extends Component339 {
                 i_10_ = DisplayModeManagerContainer220.anInt282;
                 var_ha.KA(Component247.anInt4911, TcpSocketStream.anInt5832, DisplayModeManagerContainer220.anInt282, DisplayModeManagerContainer50.anInt3861);
                 class101 = var_ha.method3654();
-                class101.method903(WorldNameText.anInt8633, Component54.anInt8668, CookieBuilder.anInt620, NodeSub44.anInt7092, Component337.anInt3650, NodeSub51.anInt7244);
+                class101.method903(WorldNameText.anInt8633, Component54.anInt8668, CookieBuilder.anInt620, ComponentSettings.anInt7092, Component337.anInt3650, NodeSub51.anInt7244);
                 var_ha.method3638(class101);
                 i_12_ = i_4_;
                 i_11_ = i;
@@ -149,7 +149,7 @@ final class ColoredText extends Component339 {
                         Component48.anInt4334++;
                         DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Component323.aString5882, 0L, Component79.anInt4144);
                     } else {
-                        DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
+                        DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
                         if (class46 == null) DisplayModeManagerContainer196.method2678(-2049);
                         else DisplayModeManagerContainer368.addMenuEntry(false, " ->", i_14_, (byte) -101, true, i_13_, -1, true, 15, i_13_ << 0 | i_14_, DisplayModeManagerContainer332.aString5001, 0L, (Component182.anInt9747));
                     }
@@ -187,7 +187,7 @@ final class ColoredText extends Component339 {
                                 int i_35_ = (player.x - (-1 + player.method2436((byte) 82) << 8));
                                 int i_36_ = (player.y + -(-1 + player.method2436((byte) 105) << 8));
                                 for (int i_37_ = 0; (Component324.anInt2057 > i_37_); i_37_++) {
-                                    NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_37_], -6008)));
+                                    NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_37_], -6008)));
                                     if (class348_sub22 != null) {
                                         Npc npc = (class348_sub22.npc);
                                         if ((OpenGlShader.clientCycle != (npc.anInt10215)) && (npc.aBoolean10309)) {
@@ -225,7 +225,7 @@ final class ColoredText extends Component339 {
                                     int i_45_ = ((npc.x) - ((-1 + npc.definition.anInt1399) << 8));
                                     int i_46_ = ((npc.y) - (npc.definition.anInt1399 - 1 << 8));
                                     for (int i_47_ = 0; i_47_ < Component324.anInt2057; i_47_++) {
-                                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_47_], -6008)));
+                                        NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_47_], -6008)));
                                         if (class348_sub22 != null) {
                                             Npc npc_48_ = (class348_sub22.npc);
                                             if (((npc_48_.anInt10215) != OpenGlShader.clientCycle) && (npc != npc_48_) && (npc_48_.aBoolean10309)) {
@@ -312,7 +312,6 @@ final class ColoredText extends Component339 {
                                 }
                                 if (class318_sub4.aClass318_Sub1_6410.plane == (Component72.localPlayer.plane)) {
                                     String[] strings = class51.aStringArray913;
-                                    String preferred = DefaultClickSwapper.getPreferredObjectAction(class51.anInt941);
                                     if (strings != null) {
                                         for (int i_61_ = 4; i_61_ >= 0; i_61_--) {
                                             if (strings[i_61_] != null) {
@@ -325,9 +324,6 @@ final class ColoredText extends Component339 {
                                                 if (i_61_ == 4) i_62_ = 1007;
                                                 if ((class51.anInt950) == i_61_) i_63_ = (class51.anInt869);
                                                 if (i_61_ == (class51.anInt951)) i_63_ = (class51.anInt877);
-                                                if (preferred != null && strings[i_61_].equalsIgnoreCase(preferred)) {
-                                                    i_63_ = DefaultClickSwapper.PRIORITY_PREFERRED;
-                                                }
                                                 DisplayModeManagerContainer368.addMenuEntry(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (DefinitionSub21.method3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
                                                 Component178.anInt1445++;
                                             }

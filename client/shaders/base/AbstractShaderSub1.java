@@ -46,13 +46,13 @@ final class AbstractShaderSub1
         if (bool == false) {
             for (int i_8_ = 0; i_8_ < class46s.length; i_8_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_8_];
-                if (class46 != null && i == class46.anInt834) {
+                if (class46 != null && i == class46.parentId) {
                     Component188.method1843(i_5_, -326, class46, bool_6_, i_7_);
                     Component19.method239((byte) 115, i_5_, i_7_, class46);
-                    if ((-class46.width + class46.anInt698) < class46.anInt747) class46.anInt747 = (class46.anInt698 - class46.width);
-                    if (class46.anInt747 < 0) class46.anInt747 = 0;
-                    if ((class46.anInt791 - class46.height) < class46.anInt755) class46.anInt755 = (class46.anInt791 - class46.height);
-                    if (class46.anInt755 < 0) class46.anInt755 = 0;
+                    if ((-class46.width + class46.scrollWidth) < class46.scrollX) class46.scrollX = (class46.scrollWidth - class46.width);
+                    if (class46.scrollX < 0) class46.scrollX = 0;
+                    if ((class46.scrollHeight - class46.height) < class46.scrollY) class46.scrollY = (class46.scrollHeight - class46.height);
+                    if (class46.scrollY < 0) class46.scrollY = 0;
                     if (class46.type == 0) Component111.layoutInterfaceTree(bool_6_, -116, class46);
                 }
             }

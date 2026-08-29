@@ -166,7 +166,7 @@ final class LoadingManager {
             DefinitionSub4.aD9113 = new Component283(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
             MatrixSub3.aClass326_5764 = new Component311(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             DisplayModeManagerContainer282.aClass261_5558 = new DisplayModeManagerContainer1(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
-            Component339.aClass166_3147 = new Component290(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
+            Component339.cursorDefinitions = new CursorDefinitionCache(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
             NodeSub7.aClass33_6653 = new Component373(PacketReader.currentGameType, ObjectDeserializer.languageId, VideoAdDisplay.aClass45_3183);
             Component267.aClass268_2979 = new DisplayModeManagerContainer259(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             Component149.aClass183_4460 = new Component191(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
@@ -210,7 +210,7 @@ final class LoadingManager {
             DefinitionSub20.aClass348_Sub4_9264 = new HardwareProbe(true, OggUrlStream.aClass297_8992);
         }
         if (RSARequest.currentLoadingState == LoadingState.aClass56_1037) {
-            int i_11_ = (NodeSub22.method2958(22388, Component158.aClass45_322) + DisplayModeManagerContainer207.method3405(2012104999, true));
+            int i_11_ = (NpcNode.method2958(22388, Component158.aClass45_322) + DisplayModeManagerContainer207.method3405(2012104999, true));
             int i_12_ = (Component383.method2188(-30477) - -HashNodeSub16.method3256(2));
             if (i_11_ < i_12_) return i_11_ * 100 / i_12_;
         }
@@ -251,7 +251,7 @@ final class LoadingManager {
             boolean bool = true;
             for (int i_14_ = 0; i_14_ < (DefinitionSub33.openInterfaces[DebugPanic.anInt4737]).length; i_14_++) {
                 DisplayModeManagerContainer57 class46 = (DefinitionSub33.openInterfaces[DebugPanic.anInt4737][i_14_]);
-                if (class46.type == 5 && class46.anInt756 != -1 && !Component158.aClass45_322.isFileReady(-10499, (class46.anInt756), 0)) bool = false;
+                if (class46.type == 5 && class46.spriteId != -1 && !Component158.aClass45_322.isFileReady(-10499, (class46.spriteId), 0)) bool = false;
             }
             if (!bool) return 0;
         }

@@ -117,7 +117,7 @@ public final class AwtHost {
             setStaticInt("Component236", "anInt4017", width);
             setStaticInt("PacketReader", "anInt10432", height);
             setStaticInt("SocketConnector", "anInt3473", width);
-            setStaticInt("NodeSub22", "anInt6857", height);
+            setStaticInt("NpcNode", "anInt6857", height);
             setStaticInt("NodeSub48", "anInt7129", 0);
             setStaticInt("DisplayModeManagerContainer147", "anInt4167", 0);
             // getWindowMode: true → mode 2 (resizable / FS available); aFrame476 → mode 3.

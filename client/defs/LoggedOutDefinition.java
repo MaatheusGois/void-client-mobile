@@ -121,7 +121,7 @@ final class LoggedOutDefinition
             int[] is_13_ = is[2];
             for (int i_14_ = 0; DefinitionSub6.anInt9139 > i_14_; i_14_++) {
                 int i_15_ = (-is_8_[i_14_] + is_10_[i_14_]) * anInt9438;
-                int i_16_ = (anInt9438 * (is_9_[1 + i_14_ & Component287.anInt6076] - is_9_[Component287.anInt6076 & -1 + i_14_]));
+                int i_16_ = (anInt9438 * (is_9_[1 + i_14_ & CustomCursorSetting.anInt6076] - is_9_[CustomCursorSetting.anInt6076 & -1 + i_14_]));
                 int i_17_ = i_16_ >> 12;
                 int i_18_ = i_15_ >> 12;
                 int i_19_ = i_17_ * i_17_ >> 12;

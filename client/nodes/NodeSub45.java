@@ -30,7 +30,7 @@ abstract class NodeSub45 extends Node {
         Component160.anIntArrayArrayArray4356 = (new int[Component291.anInt2524][1 + StaticElementRenderer.anInt6451]
                 [1 + NodeSub41.anInt7054]);
         anInt7104++;
-        NodeSub44.anInt7101 = 0;
+        ComponentSettings.anInt7101 = 0;
         Component53.anInt194 = Component148.anInt3465;
         DisplayModeManagerContainer104.aClass338Array10330 = new Component103[2000];
         GlToolkitSub2.anInt7714 = Component148.anInt3465;

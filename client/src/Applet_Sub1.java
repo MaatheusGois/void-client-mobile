@@ -229,7 +229,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             Component297.aBoolean4726 = true;
             if (AbstractShaderSub4.aBoolean7320 && -NodeSub12.aLong6748 + Component240.currentTimeMillis(-57) > 1000) {
                 Rectangle rectangle = graphics.getClipBounds();
-                if (rectangle == null || (rectangle.width >= SocketConnector.anInt3473 && (NodeSub22.anInt6857 <= rectangle.height))) DisplayModeManagerContainer351.aBoolean2674 = true;
+                if (rectangle == null || (rectangle.width >= SocketConnector.anInt3473 && (NpcNode.anInt6857 <= rectangle.height))) DisplayModeManagerContainer351.aBoolean2674 = true;
             }
         }
     }
@@ -481,7 +481,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         try {
             if (DefinitionSub9.anApplet_Sub1_9169 == null) {
                 NodeSub48.anInt7129 = 0;
-                NodeSub22.anInt6857 = PacketReader.anInt10432 = i_16_;
+                NpcNode.anInt6857 = PacketReader.anInt10432 = i_16_;
                 SocketConnector.anInt3473 = Component236.anInt4017 = i;
                 DisplayModeManagerContainer147.anInt4167 = 0;
                 NodeSub1Sub3.anInt8818 = i_15_;
@@ -507,7 +507,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         try {
             if (i_23_ != 23499) return;
             SocketConnector.anInt3473 = Component236.anInt4017 = i_20_;
-            NodeSub22.anInt6857 = PacketReader.anInt10432 = i_24_;
+            NpcNode.anInt6857 = PacketReader.anInt10432 = i_24_;
             DefinitionSub9.anApplet_Sub1_9169 = this;
             DisplayModeManagerContainer147.anInt4167 = 0;
             NodeSub48.anInt7129 = 0;
@@ -520,7 +520,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             RSACipher.aFrame4904.setVisible(true);
             RSACipher.aFrame4904.toFront();
             Insets insets = RSACipher.aFrame4904.getInsets();
-            RSACipher.aFrame4904.setSize(insets.right + (insets.left + SocketConnector.anInt3473), (insets.bottom + (NodeSub22.anInt6857 + insets.top)));
+            RSACipher.aFrame4904.setSize(insets.right + (insets.left + SocketConnector.anInt3473), (insets.bottom + (NpcNode.anInt6857 + insets.top)));
             BuildType.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i, string, i_22_, true);
             Task class144 = OggUrlStream.aClass297_8992.startThread(this, i_23_ + -33739, 1);
             while (class144.status == 0) SpriteAtlasShader.sleep((byte) 21, 10L);

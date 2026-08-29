@@ -75,7 +75,7 @@ final class NodeSub18
         ComponentDownloader.aClass84_413.method822((byte) -120);
         Component132.aClass25_1813.method300((byte) -123);
         NodeSub1.aClass185_6559.method1393((byte) -13);
-        Component339.aClass166_3147.method1290(-8);
+        Component339.cursorDefinitions.method1290(-8);
         Component257.aClass65_4787.method695(true);
         DisplayModeManagerContainer306.aClass219_4782.method1602(0);
         Component76.method3573(-15326);
@@ -164,7 +164,7 @@ final class NodeSub18
 
     static final void method2942(DisplayModeManagerContainer57 class46, byte i) {
         anInt6805++;
-        if (class46.anInt765 == Component283.anInt4610) {
+        if (class46.contentType == Component283.anInt4610) {
             if (Component72.localPlayer.username == null) {
                 class46.anInt779 = 0;
                 class46.anInt753 = 0;

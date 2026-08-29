@@ -115,7 +115,7 @@ final class HashNodeSub14
                 RenderableSub2.method2498(Component335.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
             for (int i_9_ = 0; i_9_ < Component325.occluderCountB; i_9_++)
                 RenderableSub2.method2498((DisplayModeManagerContainer104.aClass338Array10330[i_9_]), var_ha, (byte) -127, i);
-            for (int i_10_ = 0; i_10_ < NodeSub44.anInt7101; i_10_++)
+            for (int i_10_ = 0; i_10_ < ComponentSettings.anInt7101; i_10_++)
                 RenderableSub2.method2498(InterfaceRenderer.aClass338Array5060[i_10_], var_ha, (byte) -128, i);
             Component241.occludedPixelCount = 0;
             if (HashNodeSub10.activeOccluderCount > 0) {

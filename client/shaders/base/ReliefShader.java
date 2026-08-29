@@ -122,7 +122,7 @@ final class ReliefShader {
         ComponentDownloader.aClass84_413.method819((byte) 74, 5);
         Component132.aClass25_1813.method299(5, 16);
         NodeSub1.aClass185_6559.method1392(88, 5);
-        Component339.aClass166_3147.method1285(i, 8);
+        Component339.cursorDefinitions.method1285(i, 8);
         Component257.aClass65_4787.method697(5, 26);
         DisplayModeManagerContainer306.aClass219_4782.method1603(5, -66);
         Component263.method876(5, 0);

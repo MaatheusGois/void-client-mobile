@@ -7,9 +7,6 @@
  */
 final class MicrobotMenu {
 
-    /** Priority so tip wins over Attack / Examine. */
-    private static final int PRIORITY_FORCE = 0x7fffffff;
-
     private MicrobotMenu() {
     }
 
@@ -30,7 +27,7 @@ final class MicrobotMenu {
         if (match == null) {
             return null;
         }
-        match.priority = PRIORITY_FORCE;
+        // Keep match.cursorId (cursor sprite id). Tip wins via menuTip assignment.
         Component192.menuTip = match;
         MenuOpener.menuTipSecondary = match;
         return match;
@@ -73,10 +70,11 @@ final class MicrobotMenu {
 
     /** Build a menu row matching {@link DisplayModeManagerContainer368#addMenuEntry} field layout. */
     static MenuEntry buildEntry(NewMenuEntry t) {
+        // cursorId -1 → addMenuEntry falls back to widget cursor id (Component149.widgetCursorId)
         return new MenuEntry(
                 t.getOption(),
                 t.getTarget(),
-                PRIORITY_FORCE,
+                -1,
                 t.getOpcode(),
                 t.getItemId(),
                 t.getIdentifier(),
@@ -131,7 +129,7 @@ final class MicrobotMenu {
                     1006, 0L, "Cancel", 0L, -1);
             DisplayModeManagerContainer368.addMenuEntry(false, t.getTarget(), t.getParam1(), (byte) -93, false,
                     t.getParam0(), t.getItemId(), true, t.getOpcode(), t.getIdentifier(),
-                    t.getOption(), t.getIdentifier(), PRIORITY_FORCE);
+                    t.getOption(), t.getIdentifier(), -1);
             return findMatching(t);
         } catch (Throwable ex) {
             System.out.println("microbot plant menu failed: " + ex.getMessage());

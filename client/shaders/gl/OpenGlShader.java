@@ -146,17 +146,17 @@ final class OpenGlShader extends AbstractShader {
                     else if (ToolkitFactory.anApplet1530 == null) container = DefinitionSub9.anApplet_Sub1_9169;
                     else container = ToolkitFactory.anApplet1530;
                     SocketConnector.anInt3473 = container.getSize().width;
-                    NodeSub22.anInt6857 = container.getSize().height;
+                    NpcNode.anInt6857 = container.getSize().height;
                     if (RSACipher.aFrame4904 == container) {
                         Insets insets = RSACipher.aFrame4904.getInsets();
                         SocketConnector.anInt3473 -= insets.left - -insets.right;
-                        NodeSub22.anInt6857 -= insets.bottom + insets.top;
+                        NpcNode.anInt6857 -= insets.bottom + insets.top;
                     }
                     if (MenuEntry.getWindowMode(-86) == 1) {
                         DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                        GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
+                        GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
                         Component236.anInt4017 = SocketConnector.anInt3473;
-                        PacketReader.anInt10432 = NodeSub22.anInt6857;
+                        PacketReader.anInt10432 = NpcNode.anInt6857;
                         NodeSub48.anInt7129 = 0;
                         DisplayModeManagerContainer147.anInt4167 = 0;
                     } else SpriteAtlasShader.method2158((byte) 56);

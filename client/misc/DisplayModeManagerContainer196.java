@@ -59,7 +59,7 @@ final class DisplayModeManagerContainer196
         if (i != -2049) anIntArrayArray4233 = null;
         anInt4229++;
         if (r.aBoolean9722) {
-            DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
+            DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
             if (class46 != null && class46.anObjectArray680 != null) {
                 NodeSub36 class348_sub36 = new NodeSub36();
                 class348_sub36.aClass46_6989 = class46;
@@ -68,7 +68,7 @@ final class DisplayModeManagerContainer196
             }
             Component281.anInt3829 = -1;
             r.aBoolean9722 = false;
-            Component149.anInt4458 = -1;
+            Component149.widgetCursorId = -1;
             if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
         }
     }

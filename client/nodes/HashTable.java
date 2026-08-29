@@ -137,7 +137,7 @@ final class HashTable {
                         }
                     }
                     for (int i_22_ = 0; (i_22_ < Component324.anInt2057); i_22_++) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_22_], -6008)));
+                        NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_22_], -6008)));
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
                             if (npc.method2445((byte) -126) && ((npc.plane) == (Component72.localPlayer.plane))) {
@@ -189,7 +189,7 @@ final class HashTable {
                         Component114 class302 = class302s[i_33_];
                         if (class302 != null && (class302.anInt3840 != 0) && OpenGlShader.clientCycle % 20 < 10) {
                             if (class302.anInt3840 == 1) {
-                                NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
+                                NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
                                 if (class348_sub22 != null) {
                                     Npc npc = (class348_sub22.npc);
                                     int i_34_ = (-(i_4_ / 128) + (npc.x) / 128);

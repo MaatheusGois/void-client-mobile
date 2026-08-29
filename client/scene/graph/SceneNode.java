@@ -86,17 +86,17 @@ final class SceneNode extends Node {
         do {
             try {
                 anInt6669++;
-                DisplayModeManagerContainer57 class46 = NodeSub22.getChildComponent(i, (byte) -54, i_9_);
+                DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i, (byte) -54, i_9_);
                 if (class46 != null) {
-                    if (class46.anObjectArray741 != null) {
+                    if (class46.optionScripts != null) {
                         NodeSub36 class348_sub36 = new NodeSub36();
                         class348_sub36.aClass46_6989 = class46;
                         class348_sub36.aString6994 = string;
-                        class348_sub36.anObjectArray6987 = class46.anObjectArray741;
+                        class348_sub36.anObjectArray6987 = class46.optionScripts;
                         class348_sub36.anInt6986 = i_8_;
                         ClientScriptExecutor.method705(class348_sub36);
                     }
-                    if (Component49.clientState == 10 && client.method105(class46).method3301(-1 + i_8_, false)) {
+                    if (Component49.clientState == 10 && client.getComponentSettings(class46).hasOption(-1 + i_8_, false)) {
                         if (i_8_ == 1) {
                             Component162.anInt8380++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((DisplayModeManagerContainer91.aClass351_398), (DisplayModeManagerContainer64.aClass77_9029), -93);
@@ -130,7 +130,7 @@ final class SceneNode extends Node {
                         }
                         if (i_8_ == 6) {
                             Component49.anInt4680++;
-                            ParticleSystem class348_sub47 = ParticleShader.method2148((Component303.aClass351_2892), (DisplayModeManagerContainer64.aClass77_9029), -100);
+                            ParticleSystem class348_sub47 = ParticleShader.method2148((CursorDefinition.aClass351_2892), (DisplayModeManagerContainer64.aClass77_9029), -100);
                             Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.method3243(-4, class348_sub47);
                         }

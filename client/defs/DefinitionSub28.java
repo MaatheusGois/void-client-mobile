@@ -120,7 +120,7 @@ final class DefinitionSub28
                     int i_23_ = i_10_ <= i_8_ ? -1 : 1;
                     for (int i_24_ = i_7_; i_24_ < i_9_; i_24_++) {
                         int i_25_ = (i_24_ - i_7_) * i_21_ + (i_22_ + 1024);
-                        int i_26_ = Component287.anInt6076 & i_24_;
+                        int i_26_ = CustomCursorSetting.anInt6076 & i_24_;
                         int i_27_ = i_17_ & DisplayModeManagerContainer356.anInt6325;
                         if (bool) is_4_[i_27_][i_26_] = i_25_;
                         else is_4_[i_26_][i_27_] = i_25_;

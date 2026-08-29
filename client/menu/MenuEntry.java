@@ -82,10 +82,13 @@ final class MenuEntry extends HashNode {
     int opcode;
 
     /**
-     * Sort / tip priority — higher wins left-click tip. Microbot / DefaultClick
-     * force near {@code Integer.MAX_VALUE}.
+     * Cursor sprite definition id for the hover tip ({@link Component373#applyCustomCursor}
+     * via {@link DisplayModeManagerContainer67#getTipCursorId}).
+     * Stock Jagex also uses higher values as a soft left-click tip weight when
+     * picking from the list — Void DefaultClick / Microbot must <b>not</b> overwrite
+     * this with a sentinel, or the pointer sticks on the default left-click cursor.
      */
-    int priority;
+    int cursorId;
 
     boolean aBoolean9610;
     boolean aBoolean9611;
@@ -162,14 +165,14 @@ final class MenuEntry extends HashNode {
     /**
      * @param option   menu option label
      * @param target   coloured target name
-     * @param priority tip sort weight
+     * @param cursorId cursor sprite definition id
      * @param opcode   menu opcode (see field docs)
      * @param itemId   item id or -1
      * @param identifier entity/action id (see field docs)
      * @param param0   first param (tile X / child)
      * @param param1   second param (tile Y / iface)
      */
-    MenuEntry(String option, String target, int priority, int opcode, int itemId, long identifier, int param0, int param1, boolean bool, boolean bool_20_, long groupKey, boolean bool_22_) {
+    MenuEntry(String option, String target, int cursorId, int opcode, int itemId, long identifier, int param0, int param1, boolean bool, boolean bool_20_, long groupKey, boolean bool_22_) {
         try {
             this.param1 = param1;
             this.opcode = opcode;
@@ -180,11 +183,11 @@ final class MenuEntry extends HashNode {
             this.target = target;
             this.aBoolean9611 = bool_22_;
             this.option = option;
-            this.priority = priority;
+            this.cursorId = cursorId;
             this.groupKey = groupKey;
             this.param0 = param0;
         } catch (RuntimeException runtimeexception) {
-            throw NpcDefinition.wrapThrowable(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + priority + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
+            throw NpcDefinition.wrapThrowable(runtimeexception, ("db.<init>(" + (option != null ? "{...}" : "null") + ',' + (target != null ? "{...}" : "null") + ',' + cursorId + ',' + opcode + ',' + itemId + ',' + identifier + ',' + param0 + ',' + param1 + ',' + bool + ',' + bool_20_ + ',' + groupKey + ',' + bool_22_ + ')'));
         }
     }
 

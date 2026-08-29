@@ -46,8 +46,8 @@ final class DisplayModeManagerContainer322
                 if (i_2_ - -Component156.aClass46_3701.width > (DefinitionSub37.anInt9461 - -Component374.aClass46_4130.width)) i_2_ = (Component374.aClass46_4130.width + (DefinitionSub37.anInt9461 + -Component156.aClass46_3701.width));
                 if (i_3_ < DisplayModeManagerContainer172.anInt558) i_3_ = DisplayModeManagerContainer172.anInt558;
                 if (Component156.aClass46_3701.height + i_3_ > (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.height)) i_3_ = (-Component156.aClass46_3701.height + (DisplayModeManagerContainer172.anInt558 - -Component374.aClass46_4130.height));
-                int i_4_ = (-DefinitionSub37.anInt9461 + (i_2_ - -Component374.aClass46_4130.anInt747));
-                int i_5_ = (-DisplayModeManagerContainer172.anInt558 + (i_3_ + Component374.aClass46_4130.anInt755));
+                int i_4_ = (-DefinitionSub37.anInt9461 + (i_2_ - -Component374.aClass46_4130.scrollX));
+                int i_5_ = (-DisplayModeManagerContainer172.anInt558 + (i_3_ + Component374.aClass46_4130.scrollY));
                 if (AbstractGlTextureSub4.mouseHandler.isAnyButtonDown(94)) {
                     if (Component156.aClass46_3701.anInt703 < RenderableObject.anInt6392) {
                         int i_6_ = i_2_ + -GlToolkitSub3.anInt8001;
@@ -74,7 +74,7 @@ final class DisplayModeManagerContainer322
                             class348_sub36.aClass46_6989 = Component156.aClass46_3701;
                             ClientScriptExecutor.method705(class348_sub36);
                         }
-                        if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.method108(Component156.aClass46_3701) != null)) Component245.method173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
+                        if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.getAncestorComponent(Component156.aClass46_3701) != null)) Component245.method173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
                     } else if ((Component203.anInt8770 == 1 || Component203.method2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));
                     else if (MatrixSub1.method913((byte) 127)) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 + (DefinitionSub13.anInt9203)));
                     Component156.aClass46_3701 = null;

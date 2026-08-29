@@ -51,11 +51,11 @@ final class DisplayModeManagerContainer23
                         int i_10_ = (i_8_ + (-NodeBaseSub2.regionTileX + (OggStreamReader.anIntArray9042[i_1_] >> 8) * 64));
                         int i_11_ = (-Component330.regionTileY + (64 * (0xff & (OggStreamReader.anIntArray9042[i_1_])) - -i_9_));
                         NpcComposition class79 = (Component291.aClass278_2529.method2079(class348_sub49.readUnsignedShort(842397944), -1));
-                        NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_5_, -6008));
+                        NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_5_, -6008));
                         if (class348_sub22 == null && (class79.aByte1325 & 0x1) > 0 && i_7_ == Component385.anInt2204 && i_10_ >= 0 && (AbstractShaderSub4.anInt7319 > i_10_ - -class79.anInt1399) && i_11_ >= 0 && (ParametricDefinition.anInt9109 > i_11_ + class79.anInt1399)) {
                             Npc npc = new Npc();
                             npc.anInt10290 = i_5_;
-                            NodeSub22 class348_sub22_12_ = (new NodeSub22(npc));
+                            NpcNode class348_sub22_12_ = (new NpcNode(npc));
                             Component21.aClass356_3654.put((byte) 91, i_5_, class348_sub22_12_);
                             DefinitionSub23.aClass348_Sub22Array9319[NodeSub32.anInt6930++] = class348_sub22_12_;
                             DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_5_;

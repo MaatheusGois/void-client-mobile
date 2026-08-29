@@ -47,7 +47,8 @@ final class NodeSub51
     Component329 aClass239_Sub14_7250;
     Component256 aClass239_Sub25_7251;
     static int anInt7252;
-    Component287 aClass239_Sub22_7253;
+    /** Custom-cursor on/off preference (0=off, 1=on). CS2 6028 / 6128. */
+    CustomCursorSetting customCursorSetting;
     DisplayModeManagerContainer295 aClass239_Sub8_7254;
     Component139 aClass239_Sub27_7255;
     Component379 aClass239_Sub9_7256;
@@ -120,7 +121,7 @@ final class NodeSub51
                 if (i_0_ >= 8) class348_sub49.readUnsignedByte(255);
                 if (i_0_ >= 9) this.aClass239_Sub6_7226 = new Component31(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
                 if (i_0_ >= 10) this.aClass239_Sub12_7243 = new Component205(class348_sub49.readUnsignedByte(255), this);
-                if (i_0_ >= 11) this.aClass239_Sub22_7253 = new Component287(class348_sub49.readUnsignedByte(255), this);
+                if (i_0_ >= 11) this.customCursorSetting = new CustomCursorSetting(class348_sub49.readUnsignedByte(255), this);
                 if (i_0_ >= 12) this.aClass239_Sub13_7236 = new Component266(class348_sub49.readUnsignedByte(255), this);
                 if (i_0_ >= 13) this.aClass239_Sub9_7256 = new Component379(class348_sub49.readUnsignedByte(255), this);
                 if (i_0_ >= 14) this.aClass239_Sub25_7251 = new Component256(class348_sub49.readUnsignedByte(255), this);
@@ -173,7 +174,7 @@ final class NodeSub51
         if (bool || this.aClass239_Sub18_7259 == null) this.aClass239_Sub18_7259 = new Component302(this);
         if (bool || this.aClass239_Sub8_7227 == null) this.aClass239_Sub8_7227 = new DisplayModeManagerContainer295(this);
         if (bool || this.aClass239_Sub8_7254 == null) this.aClass239_Sub8_7254 = new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.method1751(-32350), this);
-        if (bool || this.aClass239_Sub22_7253 == null) this.aClass239_Sub22_7253 = new Component287(this);
+        if (bool || this.customCursorSetting == null) this.customCursorSetting = new CustomCursorSetting(this);
         if (bool || this.aClass239_Sub29_7229 == null) this.aClass239_Sub29_7229 = new Component284(this);
         if (bool || this.aClass239_Sub17_7263 == null) this.aClass239_Sub17_7263 = new Component66(this);
         if (bool || this.aClass239_Sub19_7257 == null) this.aClass239_Sub19_7257 = new Component372(this);
@@ -222,7 +223,7 @@ final class NodeSub51
                             this.aClass239_Sub18_7259 = new Component302(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub8_7227 = new DisplayModeManagerContainer295(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub8_7254 = (new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.method1751(i + -33275), this));
-                            this.aClass239_Sub22_7253 = new Component287(class348_sub49.readUnsignedByte(255), this);
+                            this.customCursorSetting = new CustomCursorSetting(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub29_7229 = new Component284(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub17_7263 = new Component66(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub19_7257 = new Component372(class348_sub49.readUnsignedByte(255), this);
@@ -304,7 +305,7 @@ final class NodeSub51
         class348_sub49.writeByte(false, this.aClass239_Sub27_7255.method1840(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub18_7259.method1800(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub8_7227.method1751(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub22_7253.method1815(-32350));
+        class348_sub49.writeByte(false, this.customCursorSetting.getValue(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub29_7229.method1848(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub17_7263.method1798(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub19_7257.method1805(-32350));

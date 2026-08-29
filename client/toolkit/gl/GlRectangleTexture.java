@@ -57,7 +57,7 @@ final class GlRectangleTexture extends GlTexture {
         anInt9942++;
         Component350.method556(false);
         DisplayModeManagerContainer196.method2681(9864);
-        NodeSub22.method2959(-1);
+        NpcNode.method2959(-1);
         OggStream.method2965(string, i_11_, bool, 0);
         ClientSystemInfo.method2994(2);
         DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);

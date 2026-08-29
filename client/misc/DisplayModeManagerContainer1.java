@@ -119,17 +119,17 @@ final class DisplayModeManagerContainer1
         int i_12_ = 81 % ((i - -70) / 35);
         anInt3313++;
         if (!Component364.aBoolean8335) PauseHandler.aBoolean9535 = ((Component9.anInt4143 != -1 && DisplayModeManagerContainer306.menuEntryCount >= Component9.anInt4143) || (PacketReader.anInt10432 < 16 * DisplayModeManagerContainer306.menuEntryCount - -(!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26)));
-        Component290.aClass262_2187.clear(103);
+        CursorDefinitionCache.aClass262_2187.clear(103);
         DefinitionSub38.aClass262_9478.clear(104);
         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {
             int i_13_ = class348_sub42_sub12.opcode;
             if (i_13_ < 1000) {
                 class348_sub42_sub12.unlink((byte) 97);
                 if (i_13_ == 15 || i_13_ == 2 || i_13_ == 30 || i_13_ == 49 || i_13_ == 51 || i_13_ == 50 || i_13_ == 6) DefinitionSub38.aClass262_9478.addTail(class348_sub42_sub12, -20180);
-                else Component290.aClass262_2187.addTail(class348_sub42_sub12, -20180);
+                else CursorDefinitionCache.aClass262_2187.addTail(class348_sub42_sub12, -20180);
             }
         }
-        Component290.aClass262_2187.transferFrom(DefinitionSub4.menuEntries, (byte) -115);
+        CursorDefinitionCache.aClass262_2187.transferFrom(DefinitionSub4.menuEntries, (byte) -115);
         DefinitionSub38.aClass262_9478.transferFrom(DefinitionSub4.menuEntries, (byte) -115);
         MenuEntry swapped = DefaultClickSwapper.applySwaps();
         // Microbot menu-inject: force tip to targetMenu when a script is clicking.

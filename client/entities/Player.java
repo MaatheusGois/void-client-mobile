@@ -361,7 +361,7 @@ final class Player extends DisplayModeManagerContainer58 {
                 Component114 class302 = NodeSub27.aClass302Array6897[i_56_];
                 if (class302 != null && class302.anInt3834 != -1) {
                     if (class302.anInt3840 == 1) {
-                        NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
+                        NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(class302.anInt3833, -6008)));
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
                             int i_57_ = (-(Component72.localPlayer.x) + npc.x);

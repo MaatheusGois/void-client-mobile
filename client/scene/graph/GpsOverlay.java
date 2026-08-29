@@ -30,7 +30,7 @@ final class GpsOverlay {
             Component324.anInt2057 = 0;
             for (int i_2_ = 0; i_2_ < i_0_; i_2_++) {
                 int i_3_ = DisplayModeManagerContainer238.anIntArray1233[i_2_];
-                Npc npc = (((NodeSub22) Component21.aClass356_3654.get(i_3_, -6008)).npc);
+                Npc npc = (((NpcNode) Component21.aClass356_3654.get(i_3_, -6008)).npc);
                 int i_4_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
                 if (i_4_ == 0) {
                     DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_3_;

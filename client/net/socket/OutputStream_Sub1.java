@@ -107,7 +107,7 @@ final class OutputStream_Sub1 extends OutputStream {
                     Component248.method283(-127, i_0_, 256, i_2_, i_1_, i_3_, 256);
                     GlToolkitSub2.method3802(i_3_, i_2_, 2, i_1_, i_0_, 256, 256);
                     Component212.method2403(i_1_, 256, i_3_, i_0_, 19206, i_2_, 256);
-                    Component290.method1289(i_2_, i_0_, i_3_, 8, i_1_);
+                    CursorDefinitionCache.method1289(i_2_, i_0_, i_3_, 8, i_1_);
                 }
                 StringDefinition.method3223();
                 WaterSurfaceShader.anInt6246 = i_8_;

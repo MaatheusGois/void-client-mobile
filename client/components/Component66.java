@@ -104,7 +104,7 @@ final class Component66
         String preferredItem = DefaultClickSwapper.getPreferredItemAction(class46.itemId);
         if (r.aBoolean9722) {
             Component355 class254 = (Component163.anInt3176 != -1 ? MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364) : null);
-            if (client.method105(class46).method3303(1) && (PauseTimer.anInt500 & 0x20) != 0 && (class254 == null || (class46.method428(class254.anInt3256, Component163.anInt3176, -128) != class254.anInt3256))) {
+            if (client.getComponentSettings(class46).canBeTargeted(1) && (PauseTimer.anInt500 & 0x20) != 0 && (class254 == null || (class46.method428(class254.anInt3256, Component163.anInt3176, -128) != class254.anInt3256))) {
                 Component82.anInt436++;
                 DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> " + class46.text) + Loader.getDebug(class46.packedId >> 16, class46.packedId & 0xffff), class46.packedId, (byte) -90, false, class46.childIndex, class46.itemId, true, 6, class46.packedId | (class46.childIndex << 0), DisplayModeManagerContainer332.aString5001, 0L, Component182.anInt9747);
             }
@@ -113,11 +113,11 @@ final class Component66
         for (int i_13_ = 9; i_13_ >= 5; i_13_--) {
             String string = Component63.getComponentOption(i_13_, class46, true);
             if (string != null) {
+                // Keep stock option priority (cursor sprite id). Tip force is in applySwaps.
                 int prio = Component265.getOptionPriority((byte) 57, i_13_, class46);
                 // Preferred must use opcode 18 — 1011 makes left-click open the menu.
                 int opcode = 1011;
                 if (preferredItem != null && preferredItem.equalsIgnoreCase(string)) {
-                    prio = DefaultClickSwapper.PRIORITY_PREFERRED;
                     opcode = 18;
                 }
                 DisplayModeManagerContainer368.addMenuEntry(false, class46.text + Loader.getDebug(class46.packedId >> 16, class46.packedId & 0xffff), class46.packedId, (byte) -122, false, class46.childIndex, class46.itemId, true, opcode, (class46.childIndex << 0) | class46.packedId, string, 1 + i_13_, prio);
@@ -127,9 +127,6 @@ final class Component66
         String string = DisplayModeManagerContainer295.getUseOption(0, class46);
         if (string != null) {
             int usePrio = class46.usePriority;
-            if (preferredItem != null && preferredItem.equalsIgnoreCase(string)) {
-                usePrio = DefaultClickSwapper.PRIORITY_PREFERRED;
-            }
             DisplayModeManagerContainer368.addMenuEntry(false, class46.text + Loader.getDebug(class46.packedId >> 16, class46.packedId & 0xffff), class46.packedId, (byte) -83, false, class46.childIndex, class46.itemId, true, 13, (class46.childIndex << 0) | class46.packedId, string, 0L, usePrio);
             DisplayModeManagerContainer109.anInt2340++;
         }
@@ -138,14 +135,11 @@ final class Component66
             String string_15_ = Component63.getComponentOption(i_14_, class46, true);
             if (string_15_ != null) {
                 int prio = Component265.getOptionPriority((byte) 57, i_14_, class46);
-                if (preferredItem != null && preferredItem.equalsIgnoreCase(string_15_)) {
-                    prio = DefaultClickSwapper.PRIORITY_PREFERRED;
-                }
                 DisplayModeManagerContainer368.addMenuEntry(false, class46.text, class46.packedId, (byte) -67, false, class46.childIndex, class46.itemId, true, 18, (class46.childIndex << 0) | class46.packedId, string_15_, 1 + i_14_, prio);
                 DisplayModeManagerContainer147.anInt4169++;
             }
         }
-        if (client.method105(class46).method3305(0)) {
+        if (client.getComponentSettings(class46).hasContinue(0)) {
             if (class46.continueOption != null) DisplayModeManagerContainer368.addMenuEntry(false, "", class46.packedId, (byte) -118, false, class46.childIndex, class46.itemId, true, 16, (class46.childIndex << 0) | class46.packedId, class46.continueOption, 0L, -1);
             else DisplayModeManagerContainer368.addMenuEntry(false, "", class46.packedId, (byte) -79, false, class46.childIndex, class46.itemId, true, 16, class46.childIndex << 0 | class46.packedId, FriendsIgnoreList.aClass274_3492.getLocalized(ObjectDeserializer.languageId, 544), 0L, -1);
             RSARequest.anInt9655++;

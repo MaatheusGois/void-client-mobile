@@ -80,14 +80,14 @@ final class DisplayModeManagerContainer67 implements Runnable {
     }
 
     /**
-     * Returns the menu-entry priority under the mouse cursor, or -1 if none.
+     * Returns the tip / hovered menu-row cursor sprite id, or -1 if none.
      * (Unrelated to disk IO — parked in this deob class.)
      */
-    static final int getHoveredMenuPriority(int i) {
+    static final int getTipCursorId(int i) {
         anInt1728++;
         if (i != 3112) clearStatics((byte) 121);
         if (Component156.aClass46_3701 == null) {
-            if (!Component364.aBoolean8335 && Component192.menuTip != null) return (Component192.menuTip.priority);
+            if (!Component364.aBoolean8335 && Component192.menuTip != null) return (Component192.menuTip.cursorId);
             int i_2_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
             int i_3_ = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 81);
             if (PauseHandler.aBoolean9535) {
@@ -106,7 +106,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                         int i_13_ = 0;
                         ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
                         for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(110)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 77))) {
-                            if (i_9_ == i_13_++) return ((MenuEntry) class348_sub42_sub13.aClass107_9621.sentinel.next).priority;
+                            if (i_9_ == i_13_++) return ((MenuEntry) class348_sub42_sub13.aClass107_9621.sentinel.next).cursorId;
                         }
                     }
                 } else if (Component359.aClass348_Sub42_Sub13_3152 != null && DisplayModeManagerContainer368.anInt5252 < i_2_ && (NodeSub1Sub1.anInt8806 + DisplayModeManagerContainer368.anInt5252) > i_2_) {
@@ -124,7 +124,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                         int i_8_ = 0;
                         ClientErrorReporter class156 = new ClientErrorReporter(Component359.aClass348_Sub42_Sub13_3152.aClass107_9621);
                         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class156.firstHashNode(9)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class156.nextHashNode((byte) 90))) {
-                            if (i_8_++ == i_4_) return (class348_sub42_sub12.priority);
+                            if (i_8_++ == i_4_) return (class348_sub42_sub12.cursorId);
                         }
                     }
                 }
@@ -143,7 +143,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                     int i_18_ = 0;
                     Component37 class312 = new Component37(DefinitionSub4.menuEntries);
                     for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.method2329(i + -3102))) {
-                        if (i_14_ == i_18_++) return (class348_sub42_sub12.priority);
+                        if (i_14_ == i_18_++) return (class348_sub42_sub12.cursorId);
                     }
                 }
             }

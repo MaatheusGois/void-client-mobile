@@ -42,7 +42,7 @@ final class NodeSub27
     static final Component161[] method3002(byte i) {
         if (i != -97) aClass302Array6897 = null;
         anInt6901++;
-        return (new Component161[]{RandomAccessFileReader.aClass138_3044, Component40.aClass138_6321, BitmapFont.aClass138_4062, Component303.aClass138_2885, DefinitionGroup.aClass138_9530, Component182.aClass138_9748, ColoredTextBuilder.aClass138_4082, AbstractGlTextureSub4.aClass138_8553, NodeBase.aClass138_7274, DisplayModeManagerContainer5.aClass138_1213, RSACipher.aClass138_4901, Component252.aClass138_10194, NodeBaseSub2.aClass138_9781, GlExtensionManager.aClass138_9860});
+        return (new Component161[]{RandomAccessFileReader.aClass138_3044, Component40.aClass138_6321, BitmapFont.aClass138_4062, CursorDefinition.aClass138_2885, DefinitionGroup.aClass138_9530, Component182.aClass138_9748, ColoredTextBuilder.aClass138_4082, AbstractGlTextureSub4.aClass138_8553, NodeBase.aClass138_7274, DisplayModeManagerContainer5.aClass138_1213, RSACipher.aClass138_4901, Component252.aClass138_10194, NodeBaseSub2.aClass138_9781, GlExtensionManager.aClass138_9860});
     }
 
     public NodeSub27() {

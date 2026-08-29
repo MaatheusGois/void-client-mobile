@@ -26,7 +26,7 @@ final class MicrobotWidgets {
 
     static DisplayModeManagerContainer57 getChild(int packedParent, int child) {
         try {
-            return NodeSub22.getChildComponent(child, (byte) -54, packedParent);
+            return NpcNode.getChildComponent(child, (byte) -54, packedParent);
         } catch (Throwable t) {
             return null;
         }

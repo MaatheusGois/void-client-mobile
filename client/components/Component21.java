@@ -26,7 +26,7 @@ final class Component21
             } else if ((class318_sub1_sub3_sub5.anInt10411) <= OpenGlShader.clientCycle) {
                 class318_sub1_sub3_sub5.method2474((byte) 121);
                 if ((class318_sub1_sub3_sub5.anInt10412) > 0) {
-                    NodeSub22 class348_sub22 = ((NodeSub22) (aClass356_3654.get(-1 + class318_sub1_sub3_sub5.anInt10412, -6008)));
+                    NpcNode class348_sub22 = ((NpcNode) (aClass356_3654.get(-1 + class318_sub1_sub3_sub5.anInt10412, -6008)));
                     if (class348_sub22 != null) {
                         Npc npc = (class348_sub22.npc);
                         if ((npc.x) >= 0 && (AbstractShaderSub4.anInt7319 * 512 > npc.x) && (npc.y) >= 0 && (512 * ParametricDefinition.anInt9109 > npc.y))

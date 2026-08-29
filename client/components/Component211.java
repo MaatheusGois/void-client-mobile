@@ -37,7 +37,7 @@ final class Component211
             int i_2_ = DisplayModeManagerContainer147.anInt4167;
             if (i > -25) method1172((byte) -22, -1);
             int i_3_ = -i_1_ + -Component236.anInt4017 + SocketConnector.anInt3473;
-            int i_4_ = -i_2_ + (NodeSub22.anInt6857 + -PacketReader.anInt10432);
+            int i_4_ = -i_2_ + (NpcNode.anInt6857 + -PacketReader.anInt10432);
             do {
                 if (i_1_ > 0 || i_3_ > 0 || i_2_ > 0 || i_4_ > 0) {
                     try {
@@ -55,11 +55,11 @@ final class Component211
                         }
                         Graphics graphics = container.getGraphics();
                         graphics.setColor(Color.black);
-                        if (i_1_ > 0) graphics.fillRect(i_5_, i_6_, i_1_, NodeSub22.anInt6857);
+                        if (i_1_ > 0) graphics.fillRect(i_5_, i_6_, i_1_, NpcNode.anInt6857);
                         if (i_2_ > 0) graphics.fillRect(i_5_, i_6_, SocketConnector.anInt3473, i_2_);
-                        if (i_3_ > 0) graphics.fillRect((-i_3_ + SocketConnector.anInt3473 + i_5_), i_6_, i_3_, NodeSub22.anInt6857);
+                        if (i_3_ > 0) graphics.fillRect((-i_3_ + SocketConnector.anInt3473 + i_5_), i_6_, i_3_, NpcNode.anInt6857);
                         if (i_4_ <= 0) break;
-                        graphics.fillRect(i_5_, NodeSub22.anInt6857 + (i_6_ - i_4_), SocketConnector.anInt3473, i_4_);
+                        graphics.fillRect(i_5_, NpcNode.anInt6857 + (i_6_ - i_4_), SocketConnector.anInt3473, i_4_);
                     } catch (Exception exception) {
                         break;
                     }

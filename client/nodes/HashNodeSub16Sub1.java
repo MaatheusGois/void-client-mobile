@@ -12,7 +12,11 @@ final class HashNodeSub16Sub1
  * length on the last block; {@link #blockPosition} tracks progress within
  * the current 512-byte window (resets at 512).
  */ extends HashNodeSub16 {
-    static int anInt10447 = -1;
+    /**
+     * Script / default cursor def id (CS2 opcode 5426). Last fallback when tip
+     * and widget cursor ids are {@code -1}. Parked on this JS5 node class.
+     */
+    static int defaultCursorId = -1;
     static int anInt10448;
     /** Unused bytes at end of last block (payload length = buffer.length - padding). */
     byte padding;

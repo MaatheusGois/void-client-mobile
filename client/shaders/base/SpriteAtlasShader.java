@@ -33,9 +33,9 @@ final class SpriteAtlasShader extends ShaderProgram {
             DisplayModeManagerContainer147.anInt4167 = 0;
             NodeSub48.anInt7129 = 0;
             Component236.anInt4017 = SocketConnector.anInt3473;
-            PacketReader.anInt10432 = NodeSub22.anInt6857;
+            PacketReader.anInt10432 = NpcNode.anInt6857;
             DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-            GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
+            GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
         }
     }
 
@@ -123,7 +123,7 @@ final class SpriteAtlasShader extends ShaderProgram {
     }
 
     static final void method2159(byte i, CacheStore class45) {
-        NodeSub22.anInt6862 = class45.getGroupId("hitmarks", 0);
+        NpcNode.anInt6862 = class45.getGroupId("hitmarks", 0);
         anInt6258++;
         KeyStoreLoader.anInt1639 = class45.getGroupId("hitbar_default", 0);
         BasicMouseHandler.anInt7429 = class45.getGroupId("timerbar_default", 0);

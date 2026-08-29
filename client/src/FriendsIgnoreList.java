@@ -205,7 +205,7 @@ final class FriendsIgnoreList {
             DisplayModeManagerContainer104.aClass338Array10330 = null;
         }
         if (InterfaceRenderer.aClass338Array5060 != null) {
-            for (int i_5_ = 0; i_5_ < NodeSub44.anInt7101; i_5_++)
+            for (int i_5_ = 0; i_5_ < ComponentSettings.anInt7101; i_5_++)
                 InterfaceRenderer.aClass338Array5060[i_5_] = null;
             InterfaceRenderer.aClass338Array5060 = null;
         }

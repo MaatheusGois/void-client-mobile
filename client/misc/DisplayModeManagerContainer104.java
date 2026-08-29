@@ -161,9 +161,9 @@ final class DisplayModeManagerContainer104
                     int i_16_ = i_12_ / 2 + i_11_;
                     int i_17_ = i_14_ - -(i_13_ / 2) - 18 - i_15_;
                     var_ha.fillRect(i_11_, i_14_, i_12_, i_13_, -16777216, 0);
-                    var_ha.method3628(-152 + i_16_, i_17_, 304, 34, DefinitionSub8.aColorArray9163[Component303.anInt2884].getRGB(), 0);
-                    var_ha.fillRect(i_16_ - 150, 2 + i_17_, Node.anInt4290 * 3, 30, Component137.aColorArray1928[Component303.anInt2884].getRGB(), 0);
-                    NodeList.aClass324_3326.drawTextCentred((byte) -116, i_16_, DisplayModeManagerContainer368.aColorArray5242[Component303.anInt2884].getRGB(), FriendsIgnoreList.aClass274_3501.getLocalized(ObjectDeserializer.languageId, i + 551), -1, i_15_ + i_17_);
+                    var_ha.method3628(-152 + i_16_, i_17_, 304, 34, DefinitionSub8.aColorArray9163[CursorDefinition.anInt2884].getRGB(), 0);
+                    var_ha.fillRect(i_16_ - 150, 2 + i_17_, Node.anInt4290 * 3, 30, Component137.aColorArray1928[CursorDefinition.anInt2884].getRGB(), 0);
+                    NodeList.aClass324_3326.drawTextCentred((byte) -116, i_16_, DisplayModeManagerContainer368.aColorArray5242[CursorDefinition.anInt2884].getRGB(), FriendsIgnoreList.aClass274_3501.getLocalized(ObjectDeserializer.languageId, i + 551), -1, i_15_ + i_17_);
                 } else {
                     int i_18_ = (NodeSub36.anInt6992 + -(int) ((float) i_12_ / DisplayModeManagerContainer229.aFloat1247));
                     int i_19_ = ((int) ((float) i_13_ / DisplayModeManagerContainer229.aFloat1247) + DebugOverlay.anInt3170);

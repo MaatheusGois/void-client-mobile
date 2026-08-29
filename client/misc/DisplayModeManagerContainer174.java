@@ -167,7 +167,7 @@ final class DisplayModeManagerContainer174
                     else class318_sub1_sub3_sub3 = (InterfaceRenderer.players[i_9_]);
                 } else {
                     int i_10_ = -1 + anInt10387;
-                    NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_10_, -6008));
+                    NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_10_, -6008));
                     if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.npc);
                 }
                 if (class318_sub1_sub3_sub3 != null) {

@@ -13,7 +13,11 @@ final class Component244
     static int anInt4176;
     static Object anObject4177;
     long aLong4178;
-    static int anInt4179 = -1;
+    /**
+     * Currently installed custom cursor def id, or {@code -1} for system pointer.
+     * Written by {@link Component373#applyCustomCursor}; reset on canvas recreate.
+     */
+    static int currentCursorId = -1;
     static int anInt4180;
 
     public static void method2658(boolean bool) {

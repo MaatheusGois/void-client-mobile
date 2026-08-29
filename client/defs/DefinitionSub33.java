@@ -122,6 +122,6 @@ final class DefinitionSub33
             Component221.anInt1796 = i_12_;
         }
         AbstractBuffer.anInt4265 &= DisplayModeManagerContainer356.anInt6325;
-        Component221.anInt1796 &= Component287.anInt6076;
+        Component221.anInt1796 &= CustomCursorSetting.anInt6076;
     }
 }

@@ -32,7 +32,7 @@ final class GnpPositionLogger {
         boolean bool = false;
         for (int i_2_ = 0; i_2_ < Component142.anInt4411; i_2_++) {
             int i_3_ = Component305.anIntArray9932[i_2_];
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_3_, -6008));
+            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_3_, -6008));
             Npc npc = (class348_sub22.npc);
             if (Component364.aBoolean8335 && HashNodeSub1.method3169(i_3_, 0)) ShaderProgramSub2.method2146((byte) 84);
             if (OggStreamReader.anInt9041 != (npc.anInt10306)) {

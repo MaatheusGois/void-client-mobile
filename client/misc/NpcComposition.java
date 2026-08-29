@@ -325,7 +325,7 @@ final class NpcComposition {
             RenderableSub6.anIntArray6432 = new int[i_29_];
             for (int i_31_ = 0; i_31_ < i_29_; i_31_++)
                 RenderableSub6.anIntArray6432[i_31_] = (i_31_ << 12) / i_29_;
-            Component287.anInt6076 = i_29_ + -1;
+            CustomCursorSetting.anInt6076 = i_29_ + -1;
             DefinitionSub6.anInt9139 = i_29_;
             Component253.anInt3201 = 32 * i_29_;
         }

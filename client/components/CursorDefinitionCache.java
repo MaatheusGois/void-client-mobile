@@ -1,26 +1,37 @@
-/* Component290 - Decompiled by JODE
+/* CursorDefinitionCache - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 import java.io.File;
 
-final class Component290
+final class CursorDefinitionCache
 /**
- * RENAMED from `Class166` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * Cache of {@link CursorDefinition} rows (archive group 33) plus soft-cached
+ * cursor sprites. Constructed during loading ({@link LoadingManager}); exposed
+ * as {@link Component339#cursorDefinitions}.
+ * <p>
+ * RENAMED from {@code Class166} / {@code Component290}. Evidence: {@code getFile(..., 33, id)}
+ * and sole use from {@link Component373#applyCustomCursor}.
+ * <p>
+ * Note: several unrelated static helpers ({@link #method1288}, click ripples, …)
+ * are still parked on this type from the deob dump.
  */ {
     static int anInt2178;
     static int anInt2179;
+    /** Sprite archive for cursor images ({@link CursorDefinition#getSprite}). */
     CacheStore aClass45_2180;
     static int anInt2181;
     static int anInt2182;
     static Component183 aClass114_2183 = new Component183(0, -1);
     static int anInt2184;
+    /** Soft cache of decoded {@link CursorDefinition} by id. */
     private final NodeCache aClass60_2185 = new NodeCache(64);
     static int anInt2186;
     static NodeList aClass262_2187 = new NodeList();
+    /** Definition archive (group 33). */
     private final CacheStore aClass45_2188;
     static int anInt2189;
+    /** Soft cache of cursor {@link Component170} sprites by sprite id. */
     NodeCache aClass60_2190 = new NodeCache(2);
 
     final void method1283(int i) {
@@ -64,11 +75,15 @@ final class Component290
         } while (false);
     }
 
-    final Component303 method1287(byte i, int i_1_) {
+    /**
+     * Load / soft-cache cursor definition {@code i_1_} from archive group 33.
+     * Missing files yield an empty def (no sprite → caller clears custom cursor).
+     */
+    final CursorDefinition get(byte i, int i_1_) {
         anInt2182++;
-        Component303 class222;
+        CursorDefinition class222;
         synchronized (aClass60_2185) {
-            class222 = (Component303) aClass60_2185.get(i_1_, i ^ ~0x1d);
+            class222 = (CursorDefinition) aClass60_2185.get(i_1_, i ^ ~0x1d);
         }
         if (class222 != null) return class222;
         if (i != -104) this.aClass60_2190 = null;
@@ -76,9 +91,9 @@ final class Component290
         synchronized (aClass45_2188) {
             is = aClass45_2188.getFile(-1860, 33, i_1_);
         }
-        class222 = new Component303();
-        class222.aClass166_2886 = this;
-        if (is != null) class222.method1611(new Buffer(is), false);
+        class222 = new CursorDefinition();
+        class222.cache = this;
+        if (is != null) class222.decode(new Buffer(is), false);
         synchronized (aClass60_2185) {
             aClass60_2185.putOne(class222, i_1_, (byte) -116);
         }
@@ -125,7 +140,7 @@ final class Component290
         }
     }
 
-    Component290(GameType class230, int i, CacheStore class45, CacheStore class45_9_) {
+    CursorDefinitionCache(GameType class230, int i, CacheStore class45, CacheStore class45_9_) {
         try {
             aClass45_2188 = class45;
             this.aClass45_2180 = class45_9_;

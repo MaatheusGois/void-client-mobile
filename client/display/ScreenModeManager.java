@@ -37,26 +37,26 @@ final class ScreenModeManager {
         else {
             java.awt.Container container;
             if (Component225.aFrame476 != null) {
-                NodeSub22.anInt6857 = i_3_;
+                NpcNode.anInt6857 = i_3_;
                 SocketConnector.anInt3473 = i_0_;
                 container = Component225.aFrame476;
             } else if (RSACipher.aFrame4904 == null) {
                 if (ToolkitFactory.anApplet1530 == null) container = DefinitionSub9.anApplet_Sub1_9169;
                 else container = ToolkitFactory.anApplet1530;
                 SocketConnector.anInt3473 = container.getSize().width;
-                NodeSub22.anInt6857 = container.getSize().height;
+                NpcNode.anInt6857 = container.getSize().height;
             } else {
                 Insets insets = RSACipher.aFrame4904.getInsets();
                 SocketConnector.anInt3473 = RSACipher.aFrame4904.getSize().width + (-insets.left + -insets.right);
-                NodeSub22.anInt6857 = RSACipher.aFrame4904.getSize().height - (insets.top - -insets.bottom);
+                NpcNode.anInt6857 = RSACipher.aFrame4904.getSize().height - (insets.top - -insets.bottom);
                 container = RSACipher.aFrame4904;
             }
             if (i_2_ == 1) {
                 // Fill the container instead of centering a fixed 765x503 canvas.
                 DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                GlToolkitSub2.anInt7666 = NodeSub22.anInt6857;
+                GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
                 Component236.anInt4017 = SocketConnector.anInt3473;
-                PacketReader.anInt10432 = NodeSub22.anInt6857;
+                PacketReader.anInt10432 = NpcNode.anInt6857;
                 NodeSub48.anInt7129 = 0;
                 DisplayModeManagerContainer147.anInt4167 = 0;
             } else SpriteAtlasShader.method2158((byte) 56);

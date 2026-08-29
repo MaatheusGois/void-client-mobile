@@ -66,7 +66,7 @@ final class ParticleSystem extends Node {
         if (i == 1406) {
             if (NodeSub8.toolkit.method3694()) {
                 NodeSub8.toolkit.method3701(DisplayModeManagerContainer50.gameCanvas);
-                NodeSub22.method2959(-1);
+                NpcNode.method2959(-1);
                 if (!Component210.gameCanvasAttached) {
                     Dimension dimension = DisplayModeManagerContainer50.gameCanvas.getSize();
                     NodeSub8.toolkit.method3643(DisplayModeManagerContainer50.gameCanvas, dimension.width, dimension.height);

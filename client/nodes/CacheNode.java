@@ -69,8 +69,8 @@ abstract class CacheNode extends HashNode {
         DisplayModeManagerContainer369.aBoolean2895 = false;
         DisplayModeManagerContainer282.username = DisplayModeManagerContainer51.password = "";
         Component195.method1448(-56);
-        Component149.anInt4458 = -1;
-        Component373.method338(i + 45, HashNodeSub16Sub1.anInt10447);
+        Component149.widgetCursorId = -1;
+        Component373.applyCustomCursor(i + 45, HashNodeSub16Sub1.defaultCursorId);
         Component72.localPlayer = new Player();
         Component72.localPlayer.x = 512 * AbstractShaderSub4.anInt7319 / 2;
         Component72.localPlayer.anIntArray10320[0] = AbstractShaderSub4.anInt7319 / 2;

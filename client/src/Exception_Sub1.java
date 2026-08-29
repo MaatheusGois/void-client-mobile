@@ -22,7 +22,7 @@ final class Exception_Sub1 extends Exception {
     static final DisplayModeManagerContainer57 method141(DisplayModeManagerContainer57 class46, byte i) {
         anInt109++;
         int i_0_ = 98 / ((i - -14) / 41);
-        DisplayModeManagerContainer57 class46_1_ = client.method108(class46);
+        DisplayModeManagerContainer57 class46_1_ = client.getAncestorComponent(class46);
         if (class46_1_ == null) class46_1_ = class46.parent;
         return class46_1_;
     }

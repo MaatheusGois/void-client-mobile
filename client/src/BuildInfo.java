@@ -66,11 +66,11 @@ final class BuildInfo {
             int i_18_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 15);
             if (i_18_ == 32767) break;
             boolean bool = false;
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_18_, -6008));
+            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_18_, -6008));
             if (class348_sub22 == null) {
                 Npc npc = new Npc();
                 npc.anInt10290 = i_18_;
-                class348_sub22 = new NodeSub22(npc);
+                class348_sub22 = new NpcNode(npc);
                 Component21.aClass356_3654.put((byte) 57, i_18_, class348_sub22);
                 bool = true;
                 DefinitionSub23.aClass348_Sub22Array9319[NodeSub32.anInt6930++] = class348_sub22;

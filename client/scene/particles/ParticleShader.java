@@ -251,14 +251,12 @@ final class ParticleShader extends ShaderProgram {
                                 if (class79.anInt1335 == i) i_17_ = class79.anInt1371;
                                 if (i == 4) i_16_ = 60;
                                 if (i == class79.anInt1385) i_17_ = class79.anInt1338;
-                                if (preferred != null && strings[i].equalsIgnoreCase(preferred)) {
-                                    i_17_ = 0x7ffffffe; // saved default wins left-click
-                                } else if (isAttack) {
+                                // Keep i_17_ as cursor sprite id. Tip force is via menuTip / applySwaps.
+                                if (isAttack) {
                                     i_17_ = class79.attackMenuPriority;
                                     // Swap active → bury Attack like the level-deprioritize path.
                                     if (preferred != null) {
                                         i_16_ += 2000;
-                                        i_17_ = 0;
                                     }
                                 }
                                 Component267.anInt2976++;

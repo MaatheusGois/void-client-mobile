@@ -4,8 +4,15 @@
 
 final class Component63
 /**
- * RENAMED from `Class368` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * Ground-item / loc model helper, plus static
+ * {@link #getComponentOption} used by every interface menu builder.
+ * <p>
+ * {@link #getComponentOption} returns null when
+ * {@link ComponentSettings#hasOption} is false <em>and</em>
+ * {@link DisplayModeManagerContainer57#optionScripts} is null — joystick dumps
+ * therefore fall back to raw {@code optionLabels} for disabled slots.
+ * <p>
+ * RENAMED from {@code Class368} (JODE-obfuscated).
  */ {
     static int anInt4486;
     boolean aBoolean4487;
@@ -69,7 +76,7 @@ final class Component63
     static final String getComponentOption(int i, DisplayModeManagerContainer57 class46, boolean bool) {
         anInt4495++;
         if (bool != true) method3560(68);
-        if (!client.method105(class46).method3301(i, !bool) && class46.anObjectArray741 == null) return null;
+        if (!client.getComponentSettings(class46).hasOption(i, !bool) && class46.optionScripts == null) return null;
         if (class46.optionLabels == null || (i >= class46.optionLabels.length) || class46.optionLabels[i] == null || class46.optionLabels[i].trim().length() == 0) {
             if (DisplayModeManagerContainer356.aBoolean6327) return "Hidden-" + i;
             return null;

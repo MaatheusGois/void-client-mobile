@@ -14,9 +14,20 @@ import java.util.Properties;
  * learn mode; the next learnable pad button is persisted and announced in chat as
  * {@code Eat Shark is bound to Triangle}.
  * <p>
+ * <b>Widget evidence (desktop dump):</b>
+ * <ul>
+ *   <li>Quick-prayer orb {@code packedId=49086465}: {@code Turn quick prayers on}
+ *       / {@code Turn prayers off} (active state drops "quick") +
+ *       {@code Select quick prayers} (setup — never learn/fire).</li>
+ *   <li>Prayer-book icons share {@code packedId=17760264}; bind {@link #Binding#childIndex}
+ *       and resolve with {@link NpcNode#getChildComponent}.</li>
+ *   <li>Pad callbacks are off-thread — queue {@link #pendingFire} and drain in
+ *       {@link #clientTick} or CC_OP freezes the UI.</li>
+ *   <li>Chat labels must be ASCII (RS bitmap font has no ↑↓ / □△ — they render as '?').</li>
+ * </ul>
  * Hosts (Android / iOS / desktop {@code DesktopGamepad}) set {@link #padConnected}
  * and forward button presses via {@link #onPadButton(int, String)}. Zoom stays on
- * L2/R2 — those codes are never aliased. ✕/○ keep left/right click.
+ * L2/R2 — those codes are never aliased. Cross/Circle keep left/right click.
  */
 final class JoystickAlias {
 
@@ -437,7 +448,7 @@ final class JoystickAlias {
         if (c == null) {
             return "";
         }
-        String[] candidates = new String[] { c.text, c.aString721, c.textContent, c.continueOption };
+        String[] candidates = new String[] { c.text, c.debugName, c.textContent, c.continueOption };
         for (int i = 0; i < candidates.length; i++) {
             if (candidates[i] == null) {
                 continue;
@@ -1079,12 +1090,12 @@ final class JoystickAlias {
 
     /**
      * Resolve a prayer-book icon. Children of a layer share the parent's
-     * {@code packedId}; {@link NodeSub22#getChildComponent} looks up {@code children[childIndex]}.
+     * {@code packedId}; {@link NpcNode#getChildComponent} looks up {@code children[childIndex]}.
      */
     private static DisplayModeManagerContainer57 findPrayerComponent(int packedId, int childIndex) {
         if (childIndex >= 0 && packedId != 0) {
             try {
-                DisplayModeManagerContainer57 via = NodeSub22.getChildComponent(childIndex, (byte) -54, packedId);
+                DisplayModeManagerContainer57 via = NpcNode.getChildComponent(childIndex, (byte) -54, packedId);
                 if (via != null) {
                     return via;
                 }

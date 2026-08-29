@@ -21,7 +21,8 @@ abstract class Component339
     static byte[] sectorBuffer = new byte[520];
     static Component183 aClass114_3145;
     static CacheStore aClass45_3146;
-    static Component290 aClass166_3147;
+    /** Global cursor-def cache (archive 33); set in {@link LoadingManager}. */
+    static CursorDefinitionCache cursorDefinitions;
 
     /** All {@link BuildType}s: LIVE, RC, WIP. */
     static final BuildType[] values(int i) {
@@ -58,7 +59,7 @@ abstract class Component339
         aClass45_3146 = null;
         aClass114_3135 = null;
         sectorBuffer = null;
-        aClass166_3147 = null;
+        cursorDefinitions = null;
         if (i < 13) values(-99);
     }
 

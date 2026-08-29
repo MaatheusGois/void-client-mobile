@@ -47,7 +47,7 @@ final class TheoraVideoPlayer {
     static final void method842(boolean bool) {
         anInt1501++;
         Component161.aClass46Array1942 = null;
-        if (Component210.gameCanvasAttached && MenuEntry.getWindowMode(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
+        if (Component210.gameCanvasAttached && MenuEntry.getWindowMode(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, ComponentSettings.method3306((byte) -111), 0);
         int i = 0;
         if (bool != false) printClientError(null, -110);
         int i_1_ = 0;

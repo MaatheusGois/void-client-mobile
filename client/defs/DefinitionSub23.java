@@ -22,7 +22,7 @@ final class DefinitionSub23
     static int anInt9316;
     private int anInt9317;
     private int anInt9318;
-    static NodeSub22[] aClass348_Sub22Array9319 = new NodeSub22[1024];
+    static NpcNode[] aClass348_Sub22Array9319 = new NpcNode[1024];
     private int anInt9320;
     static int anInt9321;
     private int anInt9322;
@@ -132,12 +132,12 @@ final class DefinitionSub23
                         if (anInt9312 == 0) {
                             for (int i_23_ = 0; i_23_ < i_16_; i_23_++) {
                                 int i_24_ = i_6_ * i_23_ / i_16_;
-                                is_21_[GpsOverlay.bitwiseAnd(i_23_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, i_3_ - (-i_5_ + (i_23_ - -1))))] = i_22_ * i_24_ >> 12;
+                                is_21_[GpsOverlay.bitwiseAnd(i_23_ + i_3_, (CustomCursorSetting.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, i_3_ - (-i_5_ + (i_23_ - -1))))] = i_22_ * i_24_ >> 12;
                             }
                         } else {
                             for (int i_25_ = 0; i_16_ > i_25_; i_25_++) {
                                 int i_26_ = i_6_ * i_25_ / i_16_;
-                                is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_25_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(i_3_ - -i_5_ + (-i_25_ - 1), Component287.anInt6076))] = Math.min(i_26_, i_22_);
+                                is_21_[GpsOverlay.bitwiseAnd((CustomCursorSetting.anInt6076), i_25_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(i_3_ - -i_5_ + (-i_25_ - 1), CustomCursorSetting.anInt6076))] = Math.min(i_26_, i_22_);
                             }
                         }
                         if (DefinitionSub6.anInt9139 >= i_19_ + i_18_) Component313.method1579(is_21_, i_18_, i_19_, i_22_);
@@ -153,12 +153,12 @@ final class DefinitionSub23
                             if (anInt9312 == 0) {
                                 for (int i_30_ = 0; i_16_ > i_30_; i_30_++) {
                                     int i_31_ = i_6_ * i_30_ / i_16_;
-                                    is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_30_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -1 + i_5_ + i_3_ - i_30_))] = i_31_ * i_29_ >> 12;
+                                    is_21_[GpsOverlay.bitwiseAnd((CustomCursorSetting.anInt6076), i_30_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, -1 + i_5_ + i_3_ - i_30_))] = i_31_ * i_29_ >> 12;
                                 }
                             } else {
                                 for (int i_32_ = 0; (i_16_ > i_32_); i_32_++) {
                                     int i_33_ = i_32_ * i_6_ / i_16_;
-                                    is_21_[GpsOverlay.bitwiseAnd((Component287.anInt6076), i_3_ + i_32_)] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -i_32_ + i_5_ + (i_3_ + -1)))] = Math.min(i_29_, i_33_);
+                                    is_21_[GpsOverlay.bitwiseAnd((CustomCursorSetting.anInt6076), i_3_ + i_32_)] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, -i_32_ + i_5_ + (i_3_ + -1)))] = Math.min(i_29_, i_33_);
                                 }
                             }
                             if (i_19_ + i_18_ <= DefinitionSub6.anInt9139) Component313.method1579(is_21_, i_18_, i_19_, i_29_);
@@ -169,7 +169,7 @@ final class DefinitionSub23
                             }
                         } else {
                             for (int i_35_ = 0; i_35_ < i_16_; i_35_++)
-                                is_21_[GpsOverlay.bitwiseAnd(i_35_ + i_3_, (Component287.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(Component287.anInt6076, -i_35_ + (i_3_ - (-i_5_ + 1))))] = i_6_ * i_35_ / i_16_;
+                                is_21_[GpsOverlay.bitwiseAnd(i_35_ + i_3_, (CustomCursorSetting.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, -i_35_ + (i_3_ - (-i_5_ + 1))))] = i_6_ * i_35_ / i_16_;
                             if (DefinitionSub6.anInt9139 >= i_18_ - -i_19_) Component313.method1579(is_21_, i_18_, i_19_, i_6_);
                             else {
                                 int i_36_ = -i_18_ + DefinitionSub6.anInt9139;

@@ -268,7 +268,7 @@ final class InterfaceRenderer implements Interface16 {
 
     private final void method2219(int i) {
         anInt5031++;
-        HelveticaFont.method1455(Component44.aClass311_897.method2320((byte) 78), Component137.aColorArray1928[Component303.anInt2884], Component44.aClass311_897.method2318(-9324), (DefinitionSub8.aColorArray9163[Component303.anInt2884]), (byte) -100, DisplayModeManagerContainer368.aColorArray5242[Component303.anInt2884]);
+        HelveticaFont.method1455(Component44.aClass311_897.method2320((byte) 78), Component137.aColorArray1928[CursorDefinition.anInt2884], Component44.aClass311_897.method2318(-9324), (DefinitionSub8.aColorArray9163[CursorDefinition.anInt2884]), (byte) -100, DisplayModeManagerContainer368.aColorArray5242[CursorDefinition.anInt2884]);
         if (i != 33) method55((byte) 1);
     }
 

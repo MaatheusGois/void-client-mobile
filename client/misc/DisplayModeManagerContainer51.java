@@ -39,7 +39,7 @@ abstract class DisplayModeManagerContainer51
         }
         for (int i_2_ = i; i_2_ < Component324.anInt2057; i_2_++) {
             long l = DisplayModeManagerContainer238.anIntArray1233[i_2_];
-            NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(l, -6008));
+            NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(l, -6008));
             if (class348_sub22 != null) {
                 Npc npc = (class348_sub22.npc);
                 if ((npc.anInt10264) > 0) {

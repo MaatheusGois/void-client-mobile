@@ -22,7 +22,7 @@ final class Component177
         if (r.aBoolean9722) {
             HuffmanDecoder.anInt3775++;
             if (class46.anObjectArray679 != null) {
-                DisplayModeManagerContainer57 class46_0_ = NodeSub22.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
+                DisplayModeManagerContainer57 class46_0_ = NpcNode.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
                 if (class46_0_ != null) {
                     NodeSub36 class348_sub36 = new NodeSub36();
                     class348_sub36.aClass46_6989 = class46;

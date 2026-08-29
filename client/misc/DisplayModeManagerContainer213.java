@@ -189,7 +189,7 @@ abstract class DisplayModeManagerContainer213
                 }
                 return -1;
             }
-            Component290.method1286(file, 64, string);
+            CursorDefinitionCache.method1286(file, 64, string);
             return 100;
         }
         return -1;

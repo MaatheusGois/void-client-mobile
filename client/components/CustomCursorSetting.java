@@ -1,20 +1,32 @@
-/* Component287 - Decompiled by JODE
+/* CustomCursorSetting - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class Component287
 /**
- * RENAMED from `Class239_Sub22` (JODE-obfuscated).
- * Evidence: subclass of Component339 (hierarchy)
- */ extends Component339 {
+ * Client preference: custom (Jagex) cursors on/off.
+ * <p>
+ * Value {@code 0} = use OS pointer only; {@code 1} = allow archive-33 cursors.
+ * {@link Component373#applyCustomCursor} compares the first arg against
+ * {@link #getValue} — when equal, forces cursor id {@code -1} (clear custom).
+ * Draw-loop callers pass {@code 0}, so {@code getValue()==0} disables customs.
+ * <p>
+ * CS2: write opcode 6028, read opcode 6128. Stored on
+ * {@link NodeSub51#customCursorSetting}. Default from {@link #method1710} is {@code 1}.
+ * <p>
+ * RENAMED from {@code Class239_Sub22} / {@code Component287}. Note: static
+ * {@link #anInt6076} is an unrelated bit-mask parked on this class.
+ */
+final class CustomCursorSetting extends Component339 {
     static int anInt6070;
     static int anInt6071;
     static int anInt6072;
     static int anInt6073;
     static int anInt6074;
     static Component183 aClass114_6075 = new Component183(89, 0);
+    /** Unrelated bit-mask constant parked here (noise / FFT helpers). */
     static int anInt6076;
 
+    /** Default when unset / invalid: custom cursors enabled. */
     final int method1710(int i) {
         anInt6072++;
         if (i != 20014) return 63;
@@ -33,17 +45,18 @@ final class Component287
         int i_1_ = 126 / ((82 - i) / 35);
     }
 
-    Component287(NodeSub51 class348_sub51) {
+    CustomCursorSetting(NodeSub51 class348_sub51) {
         super(class348_sub51);
     }
 
-    final int method1815(int i) {
+    /** {@code 0}=custom cursors off, {@code 1}=on. */
+    final int getValue(int i) {
         if (i != -32350) method1816(84);
         anInt6071++;
         return this.anInt3138;
     }
 
-    Component287(int i, NodeSub51 class348_sub51) {
+    CustomCursorSetting(int i, NodeSub51 class348_sub51) {
         super(class348_sub51);
     }
 
