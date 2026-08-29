@@ -59,15 +59,20 @@ make android-server SERVER_IP=192.168.1.10   # setprop + relaunch
 
 ### Prebuilt APK
 
-Want to sideload without building? A debug APK is checked in at [`resources/app-debug.apk`](resources/app-debug.apk).
+Don't want to build? Just sideload the APK shipped in this repo — no Android SDK needed:
+
+1. Download [`resources/app-debug.apk`](resources/app-debug.apk) onto your device
+2. Open it on the device and allow "Install from unknown sources" when prompted
+3. Launch **Void OSRS** from your app drawer
+
+Or via `adb` from a computer with the device plugged in:
 
 ```bash
-make android-apk          # rebuild: assembleDebug + copy to resources/
 adb install -r resources/app-debug.apk
 adb shell am start -n world.gregs.voidosrs.android/.MainActivity
 ```
 
-Not seeing it? Run `make android-apk` to generate it (needs JDK 17+ and Android SDK).
+Want to rebuild it? `make android-apk` runs `assembleDebug` and copies the output to `resources/`.
 
 ### Server IP
 
