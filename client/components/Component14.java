@@ -10,7 +10,8 @@ final class Component14
     static DisplayModeManagerContainer57[][] aClass46ArrayArray8584;
     int anInt8585;
     static int anInt8586;
-    static int anInt8587 = 0;
+    /** Filled count of {@link ArbShaderProgram#consoleLines} (0 = empty console). */
+    static int consoleLineCount = 0;
     static int anInt8588;
     static CacheStore aClass45_8589;
     static Component183 aClass114_8590 = new Component183(58, 2);

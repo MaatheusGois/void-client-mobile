@@ -27,7 +27,12 @@ final class ArbShaderProgram extends ShaderProgram {
     private boolean aBoolean6197;
     private final boolean aBoolean6198;
     private Component382 aClass171_6199;
-    static String[] aStringArray6200;
+    /**
+     * Developer-console history ring (newest at index 0). Lines are
+     * {@code "HH:MM:SS: text"}; command echoes use {@code --> cmd}.
+     * Size fixed at init ({@link DisplayModeManagerContainer288#initDevConsole}).
+     */
+    static String[] consoleLines;
     static DisplayModeManagerContainer238 aClass74_6201 = new DisplayModeManagerContainer238(9, 19);
     static int anInt6202;
 
@@ -51,7 +56,7 @@ final class ArbShaderProgram extends ShaderProgram {
     }
 
     public static void method2142(byte i) {
-        aStringArray6200 = null;
+        consoleLines = null;
         int i_1_ = 19 % ((i - -67) / 59);
         aClass74_6201 = null;
         anIntArray6189 = null;

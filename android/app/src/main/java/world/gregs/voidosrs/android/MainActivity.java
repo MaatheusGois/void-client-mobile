@@ -1089,8 +1089,6 @@ public class MainActivity extends Activity {
         private boolean longPressFired;
         /** Fired once while 4+ fingers are down; reset when all fingers lift. */
         private boolean fourFingerConsoleFired;
-        /** Show soft keyboard after the open gesture fully ends (fingers up). */
-        private boolean pendingConsoleKeyboard;
         private int multiTouchMaxCount;
         /** After a 2-finger gesture, ignore leftover single-finger UP/MOVE until a fresh DOWN. */
         private boolean ignoreSingleFinger;
@@ -1100,16 +1098,19 @@ public class MainActivity extends Activity {
         private int downY;
         private float lastPinchDist = -1f;
         private float pinchAccum;
-        private float lastOrbitX;
-        private float lastOrbitY;
+        /** Midpoint of the last two-finger sample (camera pan). */
+        private float lastPanX;
+        private float lastPanY;
+        private boolean panTracked;
         private int frameW = AwtHost.GAME_WIDTH;
         private int frameH = AwtHost.GAME_HEIGHT;
         private static final float PINCH_PX_PER_NOTCH = 28f;
         /**
          * Hold still within this → long-press right-click.
-         * Move past this before timeout → one-finger camera orbit.
+         * Move past this before timeout → left-button mouse drag (map, items, …).
+         * Two-finger pan → camera orbit; pinch → zoom; pad right stick also orbits.
          */
-        private static final float LONG_PRESS_CANCEL_SLOP = 100f;
+        private static final float LONG_PRESS_CANCEL_SLOP = 28f;
         private final Handler touchHandler = new Handler(Looper.getMainLooper());
         // DualShock / gamepad → virtual mouse
         private static final float PAD_DEADZONE = 0.15f;
@@ -1516,6 +1517,10 @@ public class MainActivity extends Activity {
 
             if (action == MotionEvent.ACTION_POINTER_DOWN && count >= 2) {
                 cancelLongPressWatch();
+                // Second finger: abort any in-progress left drag so BUTTON1 isn't stuck.
+                if (dragging) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON1, 1);
+                }
                 down = false;
                 dragging = false;
                 longPressFired = false;
@@ -1527,6 +1532,10 @@ public class MainActivity extends Activity {
                 multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
                 lastPinchDist = spacing(event);
                 pinchAccum = 0f;
+                float[] mid = midpoint(event);
+                lastPanX = mid[0];
+                lastPanY = mid[1];
+                panTracked = true;
                 // IME covers the view — dismiss so a 4-finger close can finish.
                 if (keyboardOpen || isImeVisible()) {
                     hideKeyboard();
@@ -1539,6 +1548,13 @@ public class MainActivity extends Activity {
                 if (action == MotionEvent.ACTION_MOVE && count >= 2) {
                     multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
                     maybeFourFingerConsole();
+                    float[] mid = midpoint(event);
+                    if (panTracked) {
+                        AwtHost.injectCameraOrbit(mid[0] - lastPanX, mid[1] - lastPanY);
+                    }
+                    lastPanX = mid[0];
+                    lastPanY = mid[1];
+                    panTracked = true;
                     float dist = spacing(event);
                     if (lastPinchDist > 0f) {
                         pinchAccum += dist - lastPinchDist;
@@ -1565,9 +1581,14 @@ public class MainActivity extends Activity {
                         longPressFired = false;
                         lastPinchDist = -1f;
                         pinchAccum = 0f;
+                        panTracked = false;
                         finishFourFingerGesture();
                     } else {
                         lastPinchDist = spacingAfterPointerUp(event);
+                        float[] mid = midpointAfterPointerUp(event);
+                        lastPanX = mid[0];
+                        lastPanY = mid[1];
+                        panTracked = true;
                     }
                     return true;
                 }
@@ -1576,6 +1597,7 @@ public class MainActivity extends Activity {
                     ignoreSingleFinger = false;
                     lastPinchDist = -1f;
                     pinchAccum = 0f;
+                    panTracked = false;
                     down = false;
                     dragging = false;
                     longPressFired = false;
@@ -1609,8 +1631,6 @@ public class MainActivity extends Activity {
                 longPressFired = false;
                 downVx = event.getX();
                 downVy = event.getY();
-                lastOrbitX = downVx;
-                lastOrbitY = downVy;
                 downX = x;
                 downY = y;
                 cancelLongPressWatch();
@@ -1620,19 +1640,15 @@ public class MainActivity extends Activity {
             } else if (action == MotionEvent.ACTION_MOVE && down && !longPressFired) {
                 float moved = Math.max(Math.abs(event.getX() - downVx), Math.abs(event.getY() - downVy));
                 if (!dragging && moved > LONG_PRESS_CANCEL_SLOP) {
+                    // Finger slid → left-button drag (same path as pad ✕ held + stick).
                     dragging = true;
                     cancelLongPressWatch();
-                    lastOrbitX = event.getX();
-                    lastOrbitY = event.getY();
-                    Log.i("void-osrs", "orbit START moved=" + moved);
-                }
-                if (dragging) {
-                    // One-finger drag → camera orbit (was two-finger pan).
-                    float dx = event.getX() - lastOrbitX;
-                    float dy = event.getY() - lastOrbitY;
-                    AwtHost.injectCameraOrbit(dx, dy);
-                    lastOrbitX = event.getX();
-                    lastOrbitY = event.getY();
+                    Log.i("void-osrs", "drag START moved=" + moved);
+                    AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, downX, downY, 0, 0);
+                    AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
+                    AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, x, y, MouseEvent.BUTTON1, 0);
+                } else if (dragging) {
+                    AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, x, y, MouseEvent.BUTTON1, 0);
                 }
             } else if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
                 cancelLongPressWatch();
@@ -1641,8 +1657,8 @@ public class MainActivity extends Activity {
                 } else if (longPressFired) {
                     Log.i("void-osrs", "longPress UP after right-click");
                 } else if (dragging) {
-                    // camera orbit — no mouse click
-                    Log.i("void-osrs", "orbit END");
+                    Log.i("void-osrs", "drag END @ " + x + "," + y);
+                    AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, x, y, MouseEvent.BUTTON1, 1);
                 } else if (action == MotionEvent.ACTION_UP) {
                     Log.i("void-osrs", "tap left-click @ " + downX + "," + downY
                             + " frac=" + String.format(java.util.Locale.US, "%.3f,%.3f",
@@ -1650,11 +1666,15 @@ public class MainActivity extends Activity {
                                 downY / (float) Math.max(1, frameH))
                             + " frame=" + frameW + "x" + frameH);
                     AwtHost.injectLeftClick(downX, downY);
+                    // IME only from the --> write strip. History taps re-run in the client
+                    // and must not raise/hide the keyboard.
                     if (AwtHost.isDevConsoleOpen()) {
-                        if (isImeVisible() || keyboardOpen) {
-                            hideKeyboard();
-                        } else {
-                            showKeyboard();
+                        if (AwtHost.isConsolePromptTap(downX, downY)) {
+                            if (isImeVisible() || keyboardOpen) {
+                                hideKeyboard();
+                            } else {
+                                showKeyboard();
+                            }
                         }
                     } else if (isImeVisible() || keyboardOpen) {
                         hideKeyboard();
@@ -1680,24 +1700,16 @@ public class MainActivity extends Activity {
             Log.i("void-osrs", "4-finger tap → developer console (wasOpen=" + wasOpen + ")");
             if (wasOpen) {
                 AwtHost.setDevConsoleOpen(false);
-                pendingConsoleKeyboard = false;
                 hideKeyboard();
             } else {
+                // Open console only — do not raise IME/chat. Tap later toggles keyboard if needed.
                 AwtHost.setDevConsoleOpen(true);
-                // Don't show IME until fingers lift — otherwise the gesture aborts.
-                pendingConsoleKeyboard = true;
             }
         }
 
         private void finishFourFingerGesture() {
             fourFingerConsoleFired = false;
             multiTouchMaxCount = 0;
-            if (pendingConsoleKeyboard) {
-                pendingConsoleKeyboard = false;
-                if (AwtHost.isDevConsoleOpen()) {
-                    showKeyboard();
-                }
-            }
         }
 
         private float spacing(MotionEvent e) {

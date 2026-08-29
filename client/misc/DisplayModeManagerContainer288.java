@@ -75,11 +75,11 @@ final class DisplayModeManagerContainer288
     /** Allocate console line buffer and print the developer-console banner. */
     static final void initDevConsole(int i) {
         anInt8627++;
-        ArbShaderProgram.aStringArray6200 = new String[500];
-        ImageProducerSprite.anInt9077 = 2 + (Component27.aClass143_4962.descent + Component27.aClass143_4962.maxAscent);
-        Component342.anInt1188 = (Component163.aClass143_3179.maxAscent - (-Component163.aClass143_3179.descent - i));
-        for (int i_4_ = 0; (i_4_ < ArbShaderProgram.aStringArray6200.length); i_4_++)
-            ArbShaderProgram.aStringArray6200[i_4_] = "";
+        ArbShaderProgram.consoleLines = new String[500];
+        ImageProducerSprite.consolePromptHeight = 2 + (Component27.aClass143_4962.descent + Component27.aClass143_4962.maxAscent);
+        Component342.consoleLineHeight = (Component163.aClass143_3179.maxAscent - (-Component163.aClass143_3179.descent - i));
+        for (int i_4_ = 0; (i_4_ < ArbShaderProgram.consoleLines.length); i_4_++)
+            ArbShaderProgram.consoleLines[i_4_] = "";
         Applet_Sub1.printConsole(FriendsIgnoreList.aClass274_3483.getLocalized(ObjectDeserializer.languageId, 544), 67);
     }
 }

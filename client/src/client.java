@@ -1119,7 +1119,7 @@ public final class client extends Applet_Sub1 {
                         NodeSub45 class348_sub45 = ((NodeSub45) Component327.aClass262_8744.first(4));
                         if (class348_sub45 != null && class348_sub45.getEventType(109) == 0 && (class348_sub45.getX((byte) -128) + i_51_ >= i_45_) && class348_sub45.getY(33) + i_52_ >= i_46_ && (class348_sub45.getX((byte) -127) + i_51_ < i_47_) && class348_sub45.getY(8) + i_52_ < i_48_)
                             bool_54_ = true;
-                        if (class46.aByteArray746 != null && !HashNodeSub16Sub2.method3263(true)) {
+                        if (class46.aByteArray746 != null && !HashNodeSub16Sub2.isDevConsoleOpen(true)) {
                             for (int i_55_ = 0; (i_55_ < class46.aByteArray746.length); i_55_++) {
                                 if (!Component280.aClass346_2449.isKeyDown(class46.aByteArray746[i_55_], -122)) {
                                     if (class46.anIntArray801 != null) class46.anIntArray801[i_55_] = 0;
@@ -1767,7 +1767,7 @@ public final class client extends Applet_Sub1 {
                             DefinitionGroup.anInterface6Array9534[HashNodeSub19.anInt9699] = interface6;
                             HashNodeSub19.anInt9699++;
                         }
-                    } else if (!HashNodeSub16Sub2.method3263(true)) Component192.openDevConsole(-84);
+                    } else if (!HashNodeSub16Sub2.isDevConsoleOpen(true)) Component192.openDevConsole(-84);
                     else AbstractShaderSub4.closeDevConsole((byte) -89);
                 } else if (i_109_ == 0 && Component193.anInt3246 < 75) {
                     Component17.anInterface6Array3884[Component193.anInt3246] = interface6;
@@ -1791,9 +1791,11 @@ public final class client extends Applet_Sub1 {
                     }
                 } else CacheNodeSub1.aClass262_10479.addTail(class348_sub45, -20180);
             }
-            // Consume panel clicks before menu/walk handlers see them.
+            // Consume overlay clicks before menu/walk/iface handlers see them.
             if (Loader.microbotEnabled) MicrobotPanel.pollInput();
-            if (HashNodeSub16Sub2.method3263(true)) PauseTimer.method363(125);
+            // Purple console band: eat presses so they don't click-through to the game.
+            BuildInfo.pollConsoleInput();
+            if (HashNodeSub16Sub2.isDevConsoleOpen(true)) PauseTimer.processDevConsoleInput(125);
             if (GpsOverlay.method1167(Component49.clientState, (byte) -51)) {
                 RSACipher.method493(true);
                 Component97.method867(true);
@@ -1988,7 +1990,7 @@ public final class client extends Applet_Sub1 {
                     else NodeSub8.toolkit.method3668(rectangle.width, rectangle.y, -65536, rectangle.x, rectangle.height, 40);
                 }
             }
-            if (HashNodeSub16Sub2.method3263(bool)) BuildInfo.method207(NodeSub8.toolkit, (byte) 124);
+            if (HashNodeSub16Sub2.isDevConsoleOpen(bool)) BuildInfo.drawDevConsole(NodeSub8.toolkit, (byte) 124);
             // Microbot HUD — after console so it stays on top of game, under console if open.
             if (Loader.microbotEnabled) MicrobotPanel.draw(NodeSub8.toolkit);
             if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.getWindowMode(-85) == 1 && !bool_120_) {

@@ -31,12 +31,15 @@ import voidawt.event.MouseEvent;
 
 /**
  * iOS game surface: blits each {@link AwtHost} frame into an {@link UIImageView}
- * and maps multitouch to AWT mouse / wheel / camera orbit (same gestures as Android).
+ * and maps multitouch to AWT mouse / wheel (same gestures as Android).
  *
- * <p>Tap → left click, long-press → right click, drag → orbit, pinch → zoom,
- * 4-finger tap → developer console. Soft keyboard open is owned by
- * {@link GameController} / {@code MobileKeyboard}; this view dismisses IME on
- * tap-outside while {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
+ * <p>Tap → left click, long-press (hold still) → right click,
+ * one-finger drag → left-button mouse drag (map, items, …),
+ * two-finger pan → camera orbit, pinch → zoom,
+ * 4-finger tap → developer console (no auto IME; tap later toggles keyboard).
+ * Soft keyboard open for chat/login is owned by {@link GameController} /
+ * {@code MobileKeyboard}; this view dismisses IME on tap-outside while
+ * {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
  *
  * <p>DualShock / Xbox / MFi (via {@link GCController}): left stick moves a drawn
  * cursor, ✕ left-click, ○ right-click, L1/L2 zoom, right stick camera orbit —
@@ -53,9 +56,10 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private static final float CURSOR_HOT_Y = 6f;
     /**
      * Hold still within this → long-press right-click.
-     * Move past this before timeout → one-finger camera orbit.
+     * Move past this before timeout → left-button mouse drag (map, items, …).
+     * Two-finger pan → camera orbit; pinch → zoom; pad right stick also orbits.
      */
-    private static final float TOUCH_SLOP = 100f;
+    private static final float TOUCH_SLOP = 28f;
     /** DualShock / gamepad → virtual mouse (mirrors Android constants). */
     private static final float PAD_DEADZONE = 0.15f;
     private static final float PAD_CURSOR_SPEED = 14f;
@@ -73,7 +77,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private boolean longPressFired;
     /** Fired once while 4+ fingers are down; reset when all fingers lift. */
     private boolean fourFingerConsoleFired;
-    private boolean pendingConsoleKeyboard;
     private int multiTouchMaxCount;
     private boolean ignoreSingleFinger;
     private float downVx;
@@ -82,8 +85,10 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private int downY;
     private float lastPinchDist = -1f;
     private float pinchAccum;
-    private float lastOrbitX;
-    private float lastOrbitY;
+    /** Midpoint of the last two-finger sample (camera pan). */
+    private float lastPanX;
+    private float lastPanY;
+    private boolean panTracked;
     private int frameW = AwtHost.GAME_WIDTH;
     private int frameH = AwtHost.GAME_HEIGHT;
     private CGPoint lastTouchPoint = new CGPoint(0, 0);
@@ -616,23 +621,16 @@ public class GameView extends UIView implements AwtHost.Presenter {
         System.out.println("void-osrs 4-finger tap → developer console (wasOpen=" + wasOpen + ")");
         if (wasOpen) {
             AwtHost.setDevConsoleOpen(false);
-            pendingConsoleKeyboard = false;
             AwtHost.requestHideSoftKeyboard("dev-console-close");
         } else {
+            // Open console only — do not raise IME/chat. Tap later toggles keyboard if needed.
             AwtHost.setDevConsoleOpen(true);
-            pendingConsoleKeyboard = true;
         }
     }
 
     private void finishFourFingerGesture() {
         fourFingerConsoleFired = false;
         multiTouchMaxCount = 0;
-        if (pendingConsoleKeyboard) {
-            pendingConsoleKeyboard = false;
-            if (AwtHost.isDevConsoleOpen()) {
-                AwtHost.requestSoftKeyboard("dev-console-open");
-            }
-        }
     }
 
     @Override
@@ -641,6 +639,10 @@ public class GameView extends UIView implements AwtHost.Presenter {
         int count = active.size();
         if (count >= 2) {
             cancelLongPress();
+            // Second finger: abort any in-progress left drag so BUTTON1 isn't stuck.
+            if (dragging) {
+                AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, downX, downY, MouseEvent.BUTTON1, 1);
+            }
             down = false;
             dragging = false;
             longPressFired = false;
@@ -652,6 +654,10 @@ public class GameView extends UIView implements AwtHost.Presenter {
             multiTouchMaxCount = Math.max(multiTouchMaxCount, count);
             lastPinchDist = spacing();
             pinchAccum = 0f;
+            CGPoint mid = midpoint();
+            lastPanX = (float) mid.getX();
+            lastPanY = (float) mid.getY();
+            panTracked = true;
             AwtHost.requestHideSoftKeyboard("multi-touch");
             maybeFourFingerConsole();
             return;
@@ -666,8 +672,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
         longPressFired = false;
         downVx = (float) p.getX();
         downVy = (float) p.getY();
-        lastOrbitX = downVx;
-        lastOrbitY = downVy;
         downX = xy[0];
         downY = xy[1];
         scheduleLongPress();
@@ -680,16 +684,25 @@ public class GameView extends UIView implements AwtHost.Presenter {
             multiTouchMaxCount = Math.max(multiTouchMaxCount, active.size());
             maybeFourFingerConsole();
             if (active.size() >= 2) {
+                CGPoint mid = midpoint();
+                float mx = (float) mid.getX();
+                float my = (float) mid.getY();
+                if (panTracked) {
+                    AwtHost.injectCameraOrbit(mx - lastPanX, my - lastPanY);
+                }
+                lastPanX = mx;
+                lastPanY = my;
+                panTracked = true;
                 float dist = spacing();
                 if (lastPinchDist > 0f) {
                     pinchAccum += dist - lastPinchDist;
                     while (pinchAccum >= PINCH_PX_PER_NOTCH) {
-                        int[] midGame = map(midpoint());
+                        int[] midGame = map(mid);
                         AwtHost.injectWheel(midGame[0], midGame[1], -1);
                         pinchAccum -= PINCH_PX_PER_NOTCH;
                     }
                     while (pinchAccum <= -PINCH_PX_PER_NOTCH) {
-                        int[] midGame = map(midpoint());
+                        int[] midGame = map(mid);
                         AwtHost.injectWheel(midGame[0], midGame[1], 1);
                         pinchAccum += PINCH_PX_PER_NOTCH;
                     }
@@ -702,19 +715,17 @@ public class GameView extends UIView implements AwtHost.Presenter {
             return;
         }
         CGPoint p = firstPoint();
+        int[] xy = map(p);
         float moved = Math.max(Math.abs((float) p.getX() - downVx), Math.abs((float) p.getY() - downVy));
         if (!dragging && moved > TOUCH_SLOP) {
+            // Finger slid → left-button drag (same path as pad ✕ held + stick).
             dragging = true;
             cancelLongPress();
-            lastOrbitX = (float) p.getX();
-            lastOrbitY = (float) p.getY();
-        }
-        if (dragging) {
-            float dx = (float) p.getX() - lastOrbitX;
-            float dy = (float) p.getY() - lastOrbitY;
-            AwtHost.injectCameraOrbit(dx, dy);
-            lastOrbitX = (float) p.getX();
-            lastOrbitY = (float) p.getY();
+            AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, downX, downY, 0, 0);
+            AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, downX, downY, MouseEvent.BUTTON1, 1);
+            AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
+        } else if (dragging) {
+            AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
         }
     }
 
@@ -739,10 +750,15 @@ public class GameView extends UIView implements AwtHost.Presenter {
                 longPressFired = false;
                 lastPinchDist = -1f;
                 pinchAccum = 0f;
+                panTracked = false;
                 cancelLongPress();
                 finishFourFingerGesture();
             } else {
                 lastPinchDist = spacing();
+                CGPoint mid = midpoint();
+                lastPanX = (float) mid.getX();
+                lastPanY = (float) mid.getY();
+                panTracked = true;
             }
             return;
         }
@@ -762,7 +778,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
         } else if (longPressFired) {
             // right-click already injected
         } else if (dragging) {
-            // one-finger camera orbit — no mouse click
+            CGPoint p = firstPoint();
+            int[] xy = map(p);
+            AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
         } else if (!cancelled) {
             System.out.println("void-osrs tap left-click @ " + downX + "," + downY
                     + " frac=" + String.format(java.util.Locale.US, "%.3f,%.3f",
@@ -770,10 +788,12 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         downY / (float) Math.max(1, frameH))
                     + " frame=" + frameW + "x" + frameH);
             AwtHost.injectLeftClick(downX, downY);
-            // Match Android: dismiss on any tap while IME is up. Text-field taps
-            // re-open via MobileKeyboard.onInterfacePress after the click is processed.
+            // IME only from the --> write strip. History taps re-run in the client
+            // and must not raise/hide the keyboard.
             if (AwtHost.isDevConsoleOpen()) {
-                AwtHost.requestToggleSoftKeyboard("dev-console-tap");
+                if (AwtHost.isConsolePromptTap(downX, downY)) {
+                    AwtHost.requestToggleSoftKeyboard("dev-console-prompt");
+                }
             } else if (AwtHost.SOFT_KEYBOARD_OPEN) {
                 AwtHost.requestHideSoftKeyboard("tap-dismiss");
             }

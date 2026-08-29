@@ -29,9 +29,9 @@ Do **not** use `make ios` for a physical iPad (Simulator only).
 
 ## iOS iPad
 
-The script: checks arm64 JDK 17 → `launchIOSDevice` with signing → **`devicectl install` + `launch`**.
+The script: checks arm64 JDK 17 → **`robovmInstall`** (flat signed bundle in `build/robovm/`) → **always** re-wrap into a fresh `Void.app` → **`devicectl install` + `launch`**.
 
-RoboVM always prints `AppLauncher failed ... NumberFormatException: 18446744071562067970` after **BUILD SUCCESSFUL**. That is success. The script still installs `ios/build/robovm.tmp/Void.app`.
+Do **not** reuse a previous `Void.app` — `robovmInstall` writes beside it; keeping the old wrap installs a stale binary. Do **not** use `launchIOSDevice` (AppLauncher `--console` hangs).
 
 Defaults (override with env):
 

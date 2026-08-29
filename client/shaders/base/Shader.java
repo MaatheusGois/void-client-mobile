@@ -19,13 +19,13 @@ abstract class Shader
     static final void method159(int i) {
         if (Component92.anInt3312 > 0) {
             int i_1_ = 0;
-            for (int i_2_ = 0; ArbShaderProgram.aStringArray6200.length > i_2_; i_2_++) {
-                if (ArbShaderProgram.aStringArray6200[i_2_].indexOf("--> ") != -1 && ++i_1_ == Component92.anInt3312) {
-                    Component126.aString4461 = (ArbShaderProgram.aStringArray6200[i_2_].substring(2 + ArbShaderProgram.aStringArray6200[i_2_].indexOf(">")));
+            for (int i_2_ = 0; ArbShaderProgram.consoleLines.length > i_2_; i_2_++) {
+                if (ArbShaderProgram.consoleLines[i_2_].indexOf("--> ") != -1 && ++i_1_ == Component92.anInt3312) {
+                    Component126.consoleInput = (ArbShaderProgram.consoleLines[i_2_].substring(2 + ArbShaderProgram.consoleLines[i_2_].indexOf(">")));
                     break;
                 }
             }
-        } else Component126.aString4461 = "";
+        } else Component126.consoleInput = "";
         if (i != -615751774) aClass144_114 = null;
         anInt115++;
     }

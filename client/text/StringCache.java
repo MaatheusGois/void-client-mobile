@@ -18,7 +18,11 @@ final class StringCache {
     /** Primary id (packet opcode / cache key). */
     private int opcode;
     static NodeCache aClass60_4327 = new NodeCache(3000000, 200);
-    static boolean aBoolean4328 = false;
+    /**
+     * Developer console (purple band) open. Toggled by {@code `} / 4-finger tap;
+     * read reflectively by {@code voidawt.AwtHost.isDevConsoleOpen}.
+     */
+    static boolean devConsoleOpen = false;
     static Font aFont4329;
 
     /** True if {@code string} matches an ignore-list display name (current or previous). */
@@ -29,7 +33,7 @@ final class StringCache {
             if (string.equalsIgnoreCase(DisplayModeManagerContainer145.ignoreDisplayNames[i_0_])) return true;
             if (string.equalsIgnoreCase(ShaderSub2.ignoreLastDisplayNames[i_0_])) return true;
         }
-        if (i != 28280) aBoolean4328 = false;
+        if (i != 28280) devConsoleOpen = false;
         return false;
     }
 

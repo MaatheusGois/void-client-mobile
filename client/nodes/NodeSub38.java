@@ -16,7 +16,8 @@ final class NodeSub38
     static int anInt7003;
     private final NodeSub1 aClass348_Sub1_7004;
     private float[][] aFloatArrayArray7005;
-    static int anInt7006 = 0;
+    /** Caret index into {@link Component126#consoleInput} (0 = before first char). */
+    static int consoleCursor = 0;
     private final GlToolkitSub3 aHa_Sub3_7007;
     static int anInt7008 = 0;
     static int anInt7009;

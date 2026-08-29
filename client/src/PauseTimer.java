@@ -32,7 +32,7 @@ final class PauseTimer {
 
     static final Component150 method360(byte i, int i_0_) {
         anInt505++;
-        if (i != -57) method363(97);
+        if (i != -57) processDevConsoleInput(97);
         Component150[] class227s = TheoraVideoPlayer.method841(i + -70);
         for (int i_1_ = 0; class227s.length > i_1_; i_1_++) {
             Component150 class227 = class227s[i_1_];
@@ -42,7 +42,7 @@ final class PauseTimer {
     }
 
     private final void method361(int i, Buffer class348_sub49, int i_2_) {
-        if (i != -6617) method363(95);
+        if (i != -6617) processDevConsoleInput(95);
         anInt497++;
         if (i_2_ == 1) this.anInt501 = class348_sub49.readUnsignedShort(842397944);
         else if (i_2_ == 2) this.aBoolean507 = true;
@@ -79,8 +79,14 @@ final class PauseTimer {
 
     private static int HISTORY_INDEX = -1;
 
-    static final void method363(int i) {
-        if (Component39.anInt2254 < 102) Component39.anInt2254 += 6;
+    /**
+     * Keyboard / wheel input while the developer console is open.
+     * Handles history recall (up/down), Enter submit, caret edits, clipboard,
+     * and mouse-wheel scroll of {@link Component94#consoleScroll}.
+     * Called from the game loop only when {@link StringCache#devConsoleOpen}.
+     */
+    static final void processDevConsoleInput(int i) {
+        if (Component39.consoleFadeAlpha < 102) Component39.consoleFadeAlpha += 6;
         anInt512++;
         if (Component221.anInt1794 != -1 && (Component100.aLong8694 < Component240.currentTimeMillis(-127))) {
             for (int i_4_ = Component221.anInt1794; i_4_ < Cp1252Decoder.aStringArray5223.length; i_4_++) {
@@ -96,17 +102,17 @@ final class PauseTimer {
                     Component100.aLong8694 = (long) (1000 * i_5_) + Component240.currentTimeMillis(-97);
                     return;
                 } else {
-                    Component126.aString4461 = Cp1252Decoder.aStringArray5223[i_4_];
+                    Component126.consoleInput = Cp1252Decoder.aStringArray5223[i_4_];
                     Component210.submitConsoleLine(false, 0);
                 }
             }
             Component221.anInt1794 = -1;
         }
         if (Component122.anInt1565 != 0) {
-            Component94.anInt3676 -= Component122.anInt1565 * 5;
-            if (Component94.anInt3676 >= Component14.anInt8587) Component94.anInt3676 = -1 + Component14.anInt8587;
+            Component94.consoleScroll -= Component122.anInt1565 * 5;
+            if (Component94.consoleScroll >= Component14.consoleLineCount) Component94.consoleScroll = -1 + Component14.consoleLineCount;
             Component122.anInt1565 = 0;
-            if (Component94.anInt3676 < 0) Component94.anInt3676 = 0;
+            if (Component94.consoleScroll < 0) Component94.consoleScroll = 0;
         }
         if (i >= 124) {
             for (int i_6_ = 0; (HashNodeSub19.anInt9699 > i_6_); i_6_++) {
@@ -115,11 +121,11 @@ final class PauseTimer {
                 char c = interface6.getKeyChar((byte) 46);
                 int i_8_ = interface6.getModifiers(-7616);
                 if (i_7_ == 98) {
-                    for (int index = HISTORY_INDEX; index < ArbShaderProgram.aStringArray6200.length; index++) {
+                    for (int index = HISTORY_INDEX; index < ArbShaderProgram.consoleLines.length; index++) {
                         if (index == -1) {
                             continue;
                         }
-                        String line = ArbShaderProgram.aStringArray6200[index];
+                        String line = ArbShaderProgram.consoleLines[index];
                         if (line.isEmpty()) {
                             continue;
                         }
@@ -127,8 +133,8 @@ final class PauseTimer {
                         if (parts.length == 2 && parts[1].startsWith("-->")) {
                             if (index > HISTORY_INDEX) {
                                 HISTORY_INDEX = index;
-                                Component126.aString4461 = parts[1].substring(4);
-                                NodeSub38.anInt7006 = Component126.aString4461.length();
+                                Component126.consoleInput = parts[1].substring(4);
+                                NodeSub38.consoleCursor = Component126.consoleInput.length();
                                 break;
                             }
                         }
@@ -136,22 +142,22 @@ final class PauseTimer {
                 } else if (i_7_ == 99) {
                     boolean found = false;
                     for (int index = HISTORY_INDEX - 1; index >= 0; index--) {
-                        String line = ArbShaderProgram.aStringArray6200[index];
+                        String line = ArbShaderProgram.consoleLines[index];
                         if (line.isEmpty()) {
                             continue;
                         }
                         String[] parts = line.split(": ");
                         if (parts.length == 2 && parts[1].startsWith("-->")) {
                             HISTORY_INDEX = index;
-                            Component126.aString4461 = parts[1].substring(4);
-                            NodeSub38.anInt7006 = Component126.aString4461.length();
+                            Component126.consoleInput = parts[1].substring(4);
+                            NodeSub38.consoleCursor = Component126.consoleInput.length();
                             found = true;
                             break;
                         }
                     }
                     if (!found) {
-                        Component126.aString4461 = "";
-                        NodeSub38.anInt7006 = 0;
+                        Component126.consoleInput = "";
+                        NodeSub38.consoleCursor = 0;
                     }
                 } else if (i_7_ == 84) {
                     Component210.submitConsoleLine(false, 0);
@@ -160,65 +166,65 @@ final class PauseTimer {
                     if (i_7_ == 66 && (0x4 & i_8_) != 0) {
                         if (DefinitionSub27.aClipboard9357 != null) {
                             String string = "";
-                            for (int i_9_ = -1 + (ArbShaderProgram.aStringArray6200).length; i_9_ >= 0; i_9_--) {
-                                if ((ArbShaderProgram.aStringArray6200[i_9_] != null) && ArbShaderProgram.aStringArray6200[i_9_].length() > 0) string += (ArbShaderProgram.aStringArray6200[i_9_]) + '\n';
+                            for (int i_9_ = -1 + (ArbShaderProgram.consoleLines).length; i_9_ >= 0; i_9_--) {
+                                if ((ArbShaderProgram.consoleLines[i_9_] != null) && ArbShaderProgram.consoleLines[i_9_].length() > 0) string += (ArbShaderProgram.consoleLines[i_9_]) + '\n';
                             }
                             DefinitionSub27.aClipboard9357.setContents(new StringSelection(string), null);
                         }
                     } else if (i_7_ != 67 || (0x4 & i_8_) == 0) {
-                        if (i_7_ != 85 || NodeSub38.anInt7006 <= 0) {
-                            if (i_7_ == 101 && (NodeSub38.anInt7006 < Component126.aString4461.length())){
+                        if (i_7_ != 85 || NodeSub38.consoleCursor <= 0) {
+                            if (i_7_ == 101 && (NodeSub38.consoleCursor < Component126.consoleInput.length())){
                                 if ((0x4 & i_8_) == 0) {
-                                    Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006)) + (Component126.aString4461.substring(NodeSub38.anInt7006 - -1)));
+                                    Component126.consoleInput = ((Component126.consoleInput.substring(0, NodeSub38.consoleCursor)) + (Component126.consoleInput.substring(NodeSub38.consoleCursor - -1)));
                                 } else {
-                                    int index = Component126.aString4461.indexOf(' ', NodeSub38.anInt7006 + 1);
+                                    int index = Component126.consoleInput.indexOf(' ', NodeSub38.consoleCursor + 1);
                                     if (index == -1) {
-                                        index = Component126.aString4461.length();
+                                        index = Component126.consoleInput.length();
                                     }
-                                    Component126.aString4461 = Component126.aString4461.substring(0, NodeSub38.anInt7006) + Component126.aString4461.substring(index);
+                                    Component126.consoleInput = Component126.consoleInput.substring(0, NodeSub38.consoleCursor) + Component126.consoleInput.substring(index);
                                 }
                             }
-                            else if (i_7_ != 96 || NodeSub38.anInt7006 <= 0) {
-                                if (i_7_ == 97 && (Component126.aString4461.length() > NodeSub38.anInt7006)){
+                            else if (i_7_ != 96 || NodeSub38.consoleCursor <= 0) {
+                                if (i_7_ == 97 && (Component126.consoleInput.length() > NodeSub38.consoleCursor)){
                                     if ((0x4 & i_8_) == 0) {
-                                        NodeSub38.anInt7006++;
+                                        NodeSub38.consoleCursor++;
                                     } else {
-                                        int result = Component126.aString4461.indexOf(' ', Math.min(NodeSub38.anInt7006 + 1, Component126.aString4461.length() - 1));
-                                        NodeSub38.anInt7006 = result == -1 ? Component126.aString4461.length() : result + 1;
+                                        int result = Component126.consoleInput.indexOf(' ', Math.min(NodeSub38.consoleCursor + 1, Component126.consoleInput.length() - 1));
+                                        NodeSub38.consoleCursor = result == -1 ? Component126.consoleInput.length() : result + 1;
                                     }
                                 }
-                                else if (i_7_ == 102) NodeSub38.anInt7006 = 0;
-                                else if (i_7_ == 103) NodeSub38.anInt7006 = Component126.aString4461.length();
-                                else if (i_7_ != 104 || (Component92.anInt3312 >= (ArbShaderProgram.aStringArray6200).length)) {
+                                else if (i_7_ == 102) NodeSub38.consoleCursor = 0;
+                                else if (i_7_ == 103) NodeSub38.consoleCursor = Component126.consoleInput.length();
+                                else if (i_7_ != 104 || (Component92.anInt3312 >= (ArbShaderProgram.consoleLines).length)) {
                                     if (i_7_ == 105 && Component92.anInt3312 > 0) {
                                         Component92.anInt3312--;
                                         Shader.method159(-615751774);
-                                        NodeSub38.anInt7006 = Component126.aString4461.length();
+                                        NodeSub38.consoleCursor = Component126.consoleInput.length();
                                     } else if (Npc.method2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
-                                        Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006)) + DefinitionGroup.anInterface6Array9534[i_6_].getKeyChar((byte) 23) + (Component126.aString4461.substring(NodeSub38.anInt7006)));
-                                        NodeSub38.anInt7006++;
+                                        Component126.consoleInput = ((Component126.consoleInput.substring(0, NodeSub38.consoleCursor)) + DefinitionGroup.anInterface6Array9534[i_6_].getKeyChar((byte) 23) + (Component126.consoleInput.substring(NodeSub38.consoleCursor)));
+                                        NodeSub38.consoleCursor++;
                                     }
                                 } else {
                                     Component92.anInt3312++;
                                     Shader.method159(-615751774);
-                                    NodeSub38.anInt7006 = Component126.aString4461.length();
+                                    NodeSub38.consoleCursor = Component126.consoleInput.length();
                                 }
                             } else {
                                 if ((0x4 & i_8_) == 0) {
-                                    NodeSub38.anInt7006--;
+                                    NodeSub38.consoleCursor--;
                                 } else {
-                                    NodeSub38.anInt7006 = Math.max(Component126.aString4461.lastIndexOf(' ', NodeSub38.anInt7006 - 2) + 1, 0);
+                                    NodeSub38.consoleCursor = Math.max(Component126.consoleInput.lastIndexOf(' ', NodeSub38.consoleCursor - 2) + 1, 0);
                                 }
                             }
                         } else {
                             if ((0x4 & i_8_) == 0) {
-                                Component126.aString4461 = ((Component126.aString4461.substring(0, NodeSub38.anInt7006 - 1)) + Component126.aString4461.substring(NodeSub38.anInt7006));
-                                NodeSub38.anInt7006--;
+                                Component126.consoleInput = ((Component126.consoleInput.substring(0, NodeSub38.consoleCursor - 1)) + Component126.consoleInput.substring(NodeSub38.consoleCursor));
+                                NodeSub38.consoleCursor--;
                             } else {
-                                int index = Component126.aString4461.trim().lastIndexOf(' ', NodeSub38.anInt7006);
+                                int index = Component126.consoleInput.trim().lastIndexOf(' ', NodeSub38.consoleCursor);
                                 index++;
-                                Component126.aString4461 = Component126.aString4461.substring(0, index);
-                                NodeSub38.anInt7006 = index;
+                                Component126.consoleInput = Component126.consoleInput.substring(0, index);
+                                NodeSub38.consoleCursor = index;
                             }
                         }
                     } else if (DefinitionSub27.aClipboard9357 != null) {

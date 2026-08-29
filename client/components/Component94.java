@@ -21,7 +21,12 @@ final class Component94
     int anInt3673;
     static int anInt3674;
     int anInt3675;
-    static int anInt3676 = 0;
+    /**
+     * First visible line index into {@link ArbShaderProgram#consoleLines}.
+     * 0 = newest at bottom (near prompt); higher = scrolled into older history.
+     * Wheel ({@link PauseTimer#processDevConsoleInput}) and one-finger drag adjust this.
+     */
+    static int consoleScroll = 0;
     static int[][] anIntArrayArray3677 = {{2, 4, 6, 0}, {0, 2, 4, 6}, {0, 2, 4}, {4, 0, 2}, {2, 4, 0}, {0, 2, 4}, {6, 0, 1, 2, 4, 5}, {0, 4, 7, 6}, {4, 7, 6, 0}, {0, 8, 6, 2, 9, 4}, {2, 9, 4, 0, 8, 6}, {2, 11, 4, 6, 10, 0}, {2, 4, 6, 0}};
     int anInt3678;
     int anInt3679;
@@ -61,7 +66,7 @@ final class Component94
     static final Component163 method2118(byte i) {
         anInt3674++;
         try {
-            if (i != -42) anInt3676 = -23;
+            if (i != -42) consoleScroll = -23;
             return new Component215();
         } catch (Throwable throwable) {
             return null;

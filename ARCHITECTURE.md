@@ -307,8 +307,6 @@ cd void-client && make ios-device
 
 `gradle.properties` already sets `robovm.arch=arm64` and the device name. Give the daemon **8GB** (`org.gradle.jvmargs=-Xmx8g`). First AOT is slow; later runs reuse `~/.robovm/cache`.
 
-RoboVM may print `AppLauncher failed … NumberFormatException: 18446744071562067970` after **BUILD SUCCESSFUL** — that is still success; the device script installs `ios/build/robovm.tmp/Void.app` via `devicectl`.
-
 If `launchIPhoneSimulator` signs the `.app` but SpringBoard crashes, reboot the sim and:
 
 ```bash
@@ -323,6 +321,8 @@ Stock 2.3.25 cannot AOT this client:
 1. **`forceLinkClasses`**: a lone `**` pulled the world and hung Soot on invokedynamic. Current `ios/robovm.xml` uses `*` plus explicit Jagex / `voidawt` / SSL provider patterns so reflection still finds `Class373_Sub1`, etc.
 2. **Invokedynamic transformer**: the client is Java 8 (no bootstrap methods). The plugin’s indy pass is a no-op in the patched jar.
 3. **Soot `Typing.minimize`**: obfuscated methods (e.g. `Class66`, `Class237_Sub1`) explode the typing worklist (`O(n²)` ancestor checks). The patched plugin **returns immediately** from `soot.jimple.toolkits.typing.fast.Typing.minimize`. Without that, AOT never finishes.
+4. **`DeviceCtl` JSON overflow**: `devicectl` emits unsigned 64-bit ints (e.g. `cpuType.subtype` = `18446744071562067970`) that `json-simple` cannot parse as `Long`. Patched `DeviceCtl` quotes those literals before parsing. Source + reapply: `ios/tools/patches/` (`apply-devicectl-json-fix.sh`).
+5. **Device deploy uses `robovmInstall`**: `ios-device.sh` deletes any prior `Void.app`, builds a signed flat bundle in `build/robovm/`, re-wraps into a fresh `Void.app`, then `devicectl` installs/launches. Reusing an old wrap installs a stale binary. Avoid `launchIOSDevice` (`--console` hangs).
 
 The fat jar is `ios/tools/robovm-gradle-plugin-2.3.25-patched.jar` (`build.gradle` `classpath files(...)`). Do not swap back to Maven `com.mobidevelop.robovm:robovm-gradle-plugin` without re-applying those patches.
 

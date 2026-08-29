@@ -4,7 +4,8 @@
 
 /**
  * RENAMED from `Class6` (JODE-obfuscated).
- * Build/version info. Holds the client build number ('Build: 634') and the AwtHost reference; reports version to the server and debug overlays.
+ * Build/version info ('Build: 634') plus the developer-console overlay:
+ * {@link #drawDevConsole}, {@link #pollConsoleInput}, {@link #consoleBandHeight}.
  */
 
 final class BuildInfo {
@@ -123,7 +124,315 @@ final class BuildInfo {
         return i_31_ + (((i & 0xff00) * i_34_ & 0xff0000 | ~0xff00ff & (0xff00ff & i) * i_34_) >>> 8);
     }
 
-    static final void method207(GraphicsToolkit var_ha, byte i) {
+    /**
+     * Pixel height of the purple developer-console band.
+     * <ul>
+     *   <li>Desktop: fixed 350.</li>
+     *   <li>Mobile, IME closed: compact 175.</li>
+     *   <li>Mobile, IME open: fills from window top down to just above the keyboard
+     *       so the prompt stays visible while typing commands.</li>
+     * </ul>
+     */
+    static int consoleBandHeight() {
+        int compact = isMobile() ? 175 : 350;
+        if (!isMobile() || !StringCache.devConsoleOpen) {
+            return compact;
+        }
+        int cover = MobileKeyboard.imeCoverCanvasPx();
+        if (cover <= 0) {
+            return compact;
+        }
+        int canvasH = PacketReader.anInt10432;
+        if (canvasH <= 0) {
+            canvasH = GlToolkitSub2.anInt7666;
+        }
+        // Bottom of purple sits 20px above the keyboard top.
+        int filled = canvasH - cover - 30;
+        if (filled < compact) {
+            return compact;
+        }
+        if (filled > canvasH - 8) {
+            filled = canvasH - 8;
+        }
+        return filled;
+    }
+
+    /**
+     * Last height actually drawn for the purple band.
+     * <p>
+     * Mobile hosts hide the IME on console tap <b>before</b> the game loop drains
+     * the injected click ({@code KEYBOARD_INSET_PX → 0}). Without this sticky height,
+     * {@link #consoleBandHeight()} snaps back to compact and the lower (expanded)
+     * region stops consuming presses — walk / iface clicks pass through the purple.
+     */
+    private static int lastDrawnConsoleH;
+
+    /**
+     * Hit-test height: at least the last drawn band, so a tap that dismisses the
+     * keyboard still lands inside the purple that was on screen when the finger went down.
+     */
+    private static int consoleHitHeight() {
+        int h = consoleBandHeight();
+        if (lastDrawnConsoleH > h) {
+            h = lastDrawnConsoleH;
+        }
+        return h;
+    }
+
+    /**
+     * Cursor currently over the open console band — refreshed by {@link #pollConsoleInput()}.
+     * Used by {@link DisplayModeManagerContainer1#updateMenuTip} to suppress walk / menus.
+     */
+    private static boolean consoleMouseOver;
+
+    /** Finger/mouse gesture started on the purple band (press → drag or tap). */
+    private static boolean consoleGestureActive;
+    /** Canvas Y where the gesture began (tap hit-test uses this, not release Y). */
+    private static int consoleGestureStartY;
+    /** {@link Component94#consoleScroll} at gesture start — drag scrolls relative to this. */
+    private static int consoleGestureStartScroll;
+    /** True once movement exceeds {@link #CONSOLE_TAP_SLOP_PX} — tap will not re-run a command. */
+    private static boolean consoleGestureDragged;
+    /** {@link OpenGlShader#clientCycle} after last re-run — debounce double-taps. */
+    private static int consoleRerunCycle;
+
+    /** Pixels of movement before a press is treated as scroll instead of a tap. */
+    private static final int CONSOLE_TAP_SLOP_PX = 28;
+    /** Extra vertical gap between history cells (hit + draw spacing). */
+    private static final int CONSOLE_CELL_GAP = 10;
+    /**
+     * Minimum height of the {@code -->} write strip (keyboard open zone).
+     * Larger than the font metrics so the soft-keyboard tap target is easy on mobile.
+     */
+    private static final int CONSOLE_PROMPT_MIN_H = 56;
+    /** Ignore a second re-run within this many client cycles (~0.5s at 50fps). */
+    private static final int CONSOLE_RERUN_DEBOUNCE = 25;
+
+    /** {@code true} when the console is open and the cursor is over its band this frame. */
+    static boolean isMouseOverConsole() {
+        return consoleMouseOver && StringCache.devConsoleOpen;
+    }
+
+    /** Row pitch for history cells: font line height + gap (avoids fat-finger double hits). */
+    private static int consoleCellPitch() {
+        int lineH = Component342.consoleLineHeight;
+        if (lineH < 1) {
+            lineH = 16;
+        }
+        return lineH + CONSOLE_CELL_GAP;
+    }
+
+    /**
+     * Prompt strip height: separator → bottom of purple.
+     * Floored at {@link #CONSOLE_PROMPT_MIN_H} so the keyboard tap target stays large.
+     */
+    private static int consolePromptStripH() {
+        int promptH = ImageProducerSprite.consolePromptHeight;
+        if (promptH < 1) {
+            promptH = Component342.consoleLineHeight + 4;
+        }
+        if (promptH < CONSOLE_PROMPT_MIN_H) {
+            promptH = CONSOLE_PROMPT_MIN_H;
+        }
+        return promptH;
+    }
+
+    /**
+     * Hit-test in canvas coordinates (same space as
+     * {@link MouseHandler#getCursorX} / {@link MouseHandler#getCursorY}).
+     * Console is always anchored at the top of the game canvas.
+     */
+    static boolean consoleContains(int x, int y) {
+        if (!StringCache.devConsoleOpen) {
+            return false;
+        }
+        return x >= 0 && x < Component236.anInt4017
+                && y >= 0 && y < consoleHitHeight();
+    }
+
+    /**
+     * True only on the {@code -->} write strip (bottom of the purple band).
+     * Mobile hosts open/toggle the soft keyboard <b>only</b> here — history taps
+     * must re-run commands without raising the IME.
+     * <p>
+     * Public: looked up by reflection from {@code voidawt.AwtHost}.
+     */
+    public static boolean isConsolePromptTap(int x, int y) {
+        if (!StringCache.devConsoleOpen) {
+            return false;
+        }
+        if (x < 0 || x >= Component236.anInt4017) {
+            return false;
+        }
+        // Drawn band height (not sticky) so history never counts as prompt.
+        int h = consoleBandHeight();
+        int promptH = consolePromptStripH();
+        return y >= h - promptH && y < h;
+    }
+
+    /** Clamp console history scroll index (same bounds as {@link PauseTimer#processDevConsoleInput}). */
+    private static void setConsoleScroll(int scroll) {
+        int max = Component14.consoleLineCount - 1;
+        if (max < 0) {
+            max = 0;
+        }
+        if (scroll < 0) {
+            scroll = 0;
+        } else if (scroll > max) {
+            scroll = max;
+        }
+        Component94.consoleScroll = scroll;
+    }
+
+    /** Extract {@code cmd} from a {@code "HH:MM:SS: --> cmd"} history line, or null. */
+    private static String commandFromHistoryLine(String line) {
+        if (line == null) {
+            return null;
+        }
+        int arrow = line.indexOf("--> ");
+        if (arrow < 0) {
+            arrow = line.indexOf("-->");
+            if (arrow < 0) {
+                return null;
+            }
+            String cmd = line.substring(arrow + 3).trim();
+            return cmd.length() == 0 ? null : cmd;
+        }
+        String cmd = line.substring(arrow + 4).trim();
+        return cmd.length() == 0 ? null : cmd;
+    }
+
+    /**
+     * Full-width cell hit-test for a {@code -->} history line, then re-submit.
+     * Cells use {@link #consoleCellPitch()} (line + gap); the gap is a dead zone so
+     * adjacent commands are harder to double-fire. Prompt strip is ignored.
+     * Geometry matches {@link #drawDevConsole} (drawn band height, not sticky hit height).
+     */
+    private static void tryRerunCommandAt(int y) {
+        if (ArbShaderProgram.consoleLines == null || Component14.consoleLineCount <= 0) {
+            return;
+        }
+        if (OpenGlShader.clientCycle - consoleRerunCycle < CONSOLE_RERUN_DEBOUNCE
+                && OpenGlShader.clientCycle >= consoleRerunCycle) {
+            return;
+        }
+        int lineH = Component342.consoleLineHeight;
+        if (lineH < 1) {
+            return;
+        }
+        int pitch = consoleCellPitch();
+        int consoleH = consoleBandHeight();
+        int promptH = consolePromptStripH();
+        int historyBottom = consoleH - promptH;
+        if (y < 0 || y >= historyBottom) {
+            return;
+        }
+        // Bottom-up cells matching draw: vis 0 = newest, just above the prompt.
+        int fromBottom = historyBottom - 1 - y;
+        int vis = fromBottom / pitch;
+        int within = fromBottom % pitch;
+        // Dead zone = top CONSOLE_CELL_GAP of each cell (padding between rows).
+        if (within >= lineH) {
+            return;
+        }
+        int lineIndex = Component94.consoleScroll + vis;
+        if (lineIndex < 0 || lineIndex >= Component14.consoleLineCount) {
+            return;
+        }
+        String cmd = commandFromHistoryLine(ArbShaderProgram.consoleLines[lineIndex]);
+        if (cmd == null) {
+            return;
+        }
+        Component126.consoleInput = cmd;
+        NodeSub38.consoleCursor = cmd.length();
+        Component210.submitConsoleLine(false, 0);
+        consoleRerunCycle = OpenGlShader.clientCycle;
+    }
+
+    /**
+     * Consume mouse presses that land on the purple console band so they do not
+     * reach walk / tip menus / interface click handlers underneath.
+     * <p>
+     * Also handles mobile-friendly interaction:
+     * <ul>
+     *   <li>One-finger drag scrolls history ({@link Component94#consoleScroll}).</li>
+     *   <li>Tap on a {@code --> } history cell re-submits that command (no IME).</li>
+     * </ul>
+     * Same pattern as {@link MicrobotPanel#pollInput}: unlink from
+     * {@link Component327#aClass262_8744} after mouse drain, before
+     * {@link DisplayModeManagerContainer1#updateMenuTip}. Event types 0/1/2 =
+     * left/middle/right press ({@link Component307#method3584}).
+     */
+    static void pollConsoleInput() {
+        consoleMouseOver = false;
+        if (!StringCache.devConsoleOpen || AbstractGlTextureSub4.mouseHandler == null) {
+            consoleGestureActive = false;
+            lastDrawnConsoleH = 0;
+            return;
+        }
+        try {
+            int mx = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
+            int my = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 100);
+            consoleMouseOver = consoleContains(mx, my);
+
+            Node node = Component327.aClass262_8744.first(4);
+            while (node != null) {
+                Node next = Component327.aClass262_8744.next((byte) 79);
+                if (node instanceof NodeSub45) {
+                    NodeSub45 click = (NodeSub45) node;
+                    int type = click.getEventType(86);
+                    // 0=left, 1=middle, 2=right press — releases/wheel stay elsewhere.
+                    if (type == 0 || type == 1 || type == 2) {
+                        int cx = click.getX((byte) -128);
+                        int cy = click.getY(33);
+                        if (consoleContains(cx, cy)) {
+                            if (type == 0) {
+                                // Start tap-or-drag gesture on left press.
+                                consoleGestureActive = true;
+                                consoleGestureStartY = cy;
+                                consoleGestureStartScroll = Component94.consoleScroll;
+                                consoleGestureDragged = false;
+                            }
+                            click.unlink((byte) 97);
+                        }
+                    }
+                }
+                node = next;
+            }
+
+            if (consoleGestureActive) {
+                if (AbstractGlTextureSub4.mouseHandler.isLeftButtonDown(-91)) {
+                    int dy = my - consoleGestureStartY;
+                    if (dy < 0) {
+                        dy = -dy;
+                    }
+                    if (dy > CONSOLE_TAP_SLOP_PX) {
+                        consoleGestureDragged = true;
+                    }
+                    int pitch = consoleCellPitch();
+                    // Finger up (my decreases) → older lines (higher scroll index).
+                    setConsoleScroll(consoleGestureStartScroll
+                            + (consoleGestureStartY - my) / pitch);
+                } else {
+                    // Release / injectLeftClick same-frame: short tap re-runs a --> cell.
+                    // Does not open the keyboard — that is prompt-only on the native host.
+                    if (!consoleGestureDragged) {
+                        tryRerunCommandAt(consoleGestureStartY);
+                    }
+                    consoleGestureActive = false;
+                }
+            }
+        } catch (Throwable t) {
+            consoleGestureActive = false;
+            System.out.println("dev-console input: " + t.getMessage());
+        }
+    }
+
+    /**
+     * Draw the purple developer-console overlay (history + prompt + caret).
+     * Band height from {@link #consoleBandHeight()}; scroll from {@link Component94#consoleScroll}.
+     */
+    static final void drawDevConsole(GraphicsToolkit var_ha, byte i) {
         do {
             try {
                 anInt153++;
@@ -134,37 +443,44 @@ final class BuildInfo {
                     i_35_ = BufferCacheSub3.method4008((byte) -127);
                     i_36_ = Component110.method260(false);
                 }
-                // Purple developer console band: half height on mobile only.
-                final int consoleH = BuildInfo.isMobile() ? 175 : 350;
+                // Purple band: compact by default; expands to IME top when keyboard is up.
+                final int consoleH = consoleBandHeight();
+                lastDrawnConsoleH = consoleH;
                 final int scrollTrack = consoleH - 8;
+                final int cellPitch = consoleCellPitch();
+                final int promptH = consolePromptStripH();
                 var_ha.KA(i_35_, i_36_, Component236.anInt4017 + i_35_, i_36_ + consoleH);
-                var_ha.fillRect(i_35_, i_36_, Component236.anInt4017, consoleH, 0x332277 | Component39.anInt2254 << 24, 1);
+                var_ha.fillRect(i_35_, i_36_, Component236.anInt4017, consoleH, 0x332277 | Component39.consoleFadeAlpha << 24, 1);
                 Component103.method2663(-5590, i_35_, Component236.anInt4017 + i_35_, i_36_, i_36_ + consoleH);
-                int i_37_ = consoleH / Component342.anInt1188;
-                if (Component14.anInt8587 > 0) {
-                    int i_38_ = scrollTrack + -Component342.anInt1188;
-                    int i_39_ = (i_37_ * i_38_ / (-1 + (i_37_ - -Component14.anInt8587)));
+                int i_37_ = (consoleH - promptH) / cellPitch;
+                if (i_37_ < 1) {
+                    i_37_ = 1;
+                }
+                if (Component14.consoleLineCount > 0) {
+                    int i_38_ = scrollTrack + -cellPitch;
+                    int i_39_ = (i_37_ * i_38_ / (-1 + (i_37_ - -Component14.consoleLineCount)));
                     int i_40_ = 4;
-                    if (Component14.anInt8587 > 1) i_40_ += ((Component14.anInt8587 + (-1 + -Component94.anInt3676)) * (i_38_ - i_39_) / (Component14.anInt8587 + -1));
-                    var_ha.fillRect(-16 + (Component236.anInt4017 + i_35_), i_36_ + i_40_, 12, i_39_, 0x332277 | Component39.anInt2254 << 24, 2);
-                    for (int i_41_ = Component94.anInt3676; ((i_41_ < i_37_ + Component94.anInt3676) && Component14.anInt8587 > i_41_); i_41_++) {
-                        String[] strings = (DefinitionSub23.splitByChar('\010', true, ArbShaderProgram.aStringArray6200[i_41_]));
+                    if (Component14.consoleLineCount > 1) i_40_ += ((Component14.consoleLineCount + (-1 + -Component94.consoleScroll)) * (i_38_ - i_39_) / (Component14.consoleLineCount + -1));
+                    var_ha.fillRect(-16 + (Component236.anInt4017 + i_35_), i_36_ + i_40_, 12, i_39_, 0x332277 | Component39.consoleFadeAlpha << 24, 2);
+                    for (int i_41_ = Component94.consoleScroll; ((i_41_ < i_37_ + Component94.consoleScroll) && Component14.consoleLineCount > i_41_); i_41_++) {
+                        String[] strings = (DefinitionSub23.splitByChar('\010', true, ArbShaderProgram.consoleLines[i_41_]));
                         int i_42_ = (-16 + Component236.anInt4017 + -8) / strings.length;
                         for (int i_43_ = 0; i_43_ < strings.length; i_43_++) {
                             int i_44_ = i_42_ * i_43_ + 8;
                             var_ha.KA(i_35_ + i_44_, i_36_, i_42_ + i_35_ - (-i_44_ - -8), i_36_ + consoleH);
-                            Applet_Sub1.aClass324_20.drawText(AudioMixer.redactConsoleLine((byte) 31, strings[i_43_]), -1, (-((-Component94.anInt3676 + i_41_) * Component342.anInt1188) + (-ImageProducerSprite.anInt9077 + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.descent))))), i_35_ + i_44_, -16777216, -110);
+                            // Same bottom-up cell pitch as tryRerunCommandAt (line + gap).
+                            Applet_Sub1.aClass324_20.drawText(AudioMixer.redactConsoleLine((byte) 31, strings[i_43_]), -1, (-((-Component94.consoleScroll + i_41_) * cellPitch) + (-promptH + i_36_ - (-consoleH - (-2 + -(Component163.aClass143_3179.descent))))), i_35_ + i_44_, -16777216, -110);
                         }
                     }
                 }
                 Component49.aClass324_4684.drawTextRightAligned("Build: 634", consoleH + (i_36_ + -20), -1, (Component236.anInt4017 + i_35_ + -25), -121, -16777216);
                 var_ha.KA(i_35_, i_36_, i_35_ - -Component236.anInt4017, i_36_ - -consoleH);
-                var_ha.method3649((byte) -80, Component236.anInt4017, -ImageProducerSprite.anInt9077 + (consoleH + i_36_), -1, i_35_);
-                NodeList.aClass324_3326.drawText("--> " + AudioMixer.redactConsoleLine((byte) 31, Component126.aString4461), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
+                var_ha.method3649((byte) -80, Component236.anInt4017, -promptH + (consoleH + i_36_), -1, i_35_);
+                NodeList.aClass324_3326.drawText("--> " + AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
                 if (!Component143.aBoolean2329) break;
                 int i_45_ = -1;
                 if (OpenGlShader.clientCycle % 30 > 15) i_45_ = 16777215;
-                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.redactConsoleLine((byte) 31, Component126.aString4461).substring(0, NodeSub38.anInt7006))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
+                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput).substring(0, NodeSub38.consoleCursor))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
             }

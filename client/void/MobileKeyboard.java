@@ -80,6 +80,10 @@ final class MobileKeyboard {
      * 137 inside an unmoved clip makes the chat draw off-clip and vanish.
      */
     static int liftPx(DisplayModeManagerContainer57 c, int screenX, int screenY) {
+        // Dev console sits at the top — never shove chat up while it's open.
+        if (StringCache.devConsoleOpen) {
+            return 0;
+        }
         int shift = shiftY();
         if (shift <= 0 || c == null || isLoginState(Component49.clientState)) {
             return 0;
@@ -194,6 +198,40 @@ final class MobileKeyboard {
             }
         }
         return iosHost;
+    }
+
+    /**
+     * How many canvas pixels the soft keyboard covers from the bottom.
+     * Unlike {@link #shiftY()}, this is <b>not</b> capped — used to size the
+     * purple developer console so its bottom sits just above the IME.
+     */
+    static int imeCoverCanvasPx() {
+        int px = insetPx;
+        int vh = viewH;
+        try {
+            Class<?> host = Class.forName("voidawt.AwtHost");
+            px = host.getField("KEYBOARD_INSET_PX").getInt(null);
+            int hostH = host.getField("VIEW_HEIGHT_PX").getInt(null);
+            if (hostH > 1) {
+                vh = hostH;
+            }
+        } catch (Throwable ignored) {
+        }
+        if (px <= 0 || vh < 32) {
+            return 0;
+        }
+        int canvasH = PacketReader.anInt10432;
+        if (canvasH <= 0) {
+            canvasH = GlToolkitSub2.anInt7666;
+        }
+        if (canvasH <= 0) {
+            return 0;
+        }
+        int cover = px * canvasH / vh;
+        if (cover > canvasH - 8) {
+            cover = canvasH - 8;
+        }
+        return cover;
     }
 
     private static int shiftY() {

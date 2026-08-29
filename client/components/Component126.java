@@ -5,9 +5,10 @@
 final class Component126
 /**
  * RENAMED from `Class363` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * Holds the developer-console prompt buffer ({@link #consoleInput}).
  */ {
-    static String aString4461 = "";
+    /** Current text in the developer-console prompt (before Enter). */
+    static String consoleInput = "";
     static int anInt4462;
     static int[] anIntArray4463 = new int[8];
     static int anInt4464;
@@ -42,7 +43,7 @@ final class Component126
     }
 
     public static void method3516(int i) {
-        aString4461 = null;
+        consoleInput = null;
         if (i <= 123) anIntArray4463 = null;
         anIntArray4463 = null;
     }

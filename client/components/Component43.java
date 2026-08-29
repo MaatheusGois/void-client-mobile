@@ -25,6 +25,10 @@ final class Component43
                 i_0_ = class348_sub45.getX((byte) -128);
                 i_1_ = class348_sub45.getY(58);
             }
+            // Purple console is drawn over ifaces — don't build tips / fire clicks under it.
+            if (BuildInfo.consoleContains(i_0_, i_1_)) {
+                return;
+            }
             int i_2_ = 0;
             if (i != -73) anInt4976 = 105;
             int i_3_ = 0;

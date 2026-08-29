@@ -23,7 +23,11 @@ final class ImageProducerSprite extends Sprite implements ImageProducer {
     static int anInt9074;
     private Image anImage9075;
     static int anInt9076;
-    static int anInt9077;
+    /**
+     * Vertical space reserved for the console prompt row at the bottom of the purple band
+     * (separator + {@code -->} line). History is drawn above {@code consoleH - consolePromptHeight}.
+     */
+    static int consolePromptHeight;
     private ColorModel aColorModel9078;
     static int anInt9079;
     static int anInt9080;

@@ -21,10 +21,11 @@ final class HashNodeSub16Sub2
     static int anInt10464;
     static LruCache aClass356_10465 = new LruCache(16);
 
-    static final boolean method3263(boolean bool) {
+    /** {@code true} when the purple developer console is open ({@link StringCache#devConsoleOpen}). */
+    static final boolean isDevConsoleOpen(boolean bool) {
         if (bool != true) return false;
         anInt10459++;
-        return StringCache.aBoolean4328;
+        return StringCache.devConsoleOpen;
     }
 
     public static void method3264(byte i) {

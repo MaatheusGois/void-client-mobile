@@ -13,7 +13,12 @@ final class Component39
     static int anInt2251;
     static FontGlyphCache aClass323_2252;
     static int anInt2253;
-    static int anInt2254 = 0;
+    /**
+     * Developer-console purple overlay fade (0 → ~102).
+     * Reset on open ({@link Component192#openDevConsole}); ramps in
+     * {@link PauseTimer#processDevConsoleInput}; packed into fill alpha as {@code << 24}.
+     */
+    static int consoleFadeAlpha = 0;
     static Component183 aClass114_2255;
     static volatile Object anObject2256;
 

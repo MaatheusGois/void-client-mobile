@@ -257,7 +257,7 @@ public final class AwtHost {
     }
 
     /**
-     * Orbit camera by view-pixel deltas (one-finger drag / right stick).
+     * Orbit camera by view-pixel deltas (two-finger pan / gamepad right stick).
      * Writes {@code Component112.cameraYaw} / {@code DisplayModeManagerContainer154.cameraPitch}
      * then clamps via {@code DisplayModeManagerContainer199.clampCameraAngles}.
      * Positive dx = look right; positive dy = look down.
@@ -302,12 +302,28 @@ public final class AwtHost {
         injectKey(KeyEvent.KEY_RELEASED, '`', '`');
     }
 
-    /** {@code StringCache.aBoolean4328} — developer console visible. */
+    /** {@code StringCache.devConsoleOpen} — developer console visible. */
     public static boolean isDevConsoleOpen() {
         try {
-            java.lang.reflect.Field f = Class.forName("StringCache").getDeclaredField("aBoolean4328");
+            java.lang.reflect.Field f = Class.forName("StringCache").getDeclaredField("devConsoleOpen");
             f.setAccessible(true);
             return f.getBoolean(null);
+        } catch (Throwable ignored) {
+            return false;
+        }
+    }
+
+    /**
+     * {@code BuildInfo.isConsolePromptTap} — tap on the {@code -->} strip (not history).
+     * History taps must not dismiss the IME or the inset→0 race lets the click fall through.
+     */
+    public static boolean isConsolePromptTap(int canvasX, int canvasY) {
+        try {
+            java.lang.reflect.Method m = Class.forName("BuildInfo")
+                    .getDeclaredMethod("isConsolePromptTap", int.class, int.class);
+            m.setAccessible(true);
+            Object r = m.invoke(null, Integer.valueOf(canvasX), Integer.valueOf(canvasY));
+            return Boolean.TRUE.equals(r);
         } catch (Throwable ignored) {
             return false;
         }

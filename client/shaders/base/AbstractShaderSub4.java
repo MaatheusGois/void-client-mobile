@@ -301,7 +301,7 @@ final class AbstractShaderSub4
     static final void closeDevConsole(byte i) {
         anInt7309++;
         if (i == -89) {
-            StringCache.aBoolean4328 = false;
+            StringCache.devConsoleOpen = false;
             Component160.method3466(i + 6);
         }
     }

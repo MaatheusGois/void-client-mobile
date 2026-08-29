@@ -40,8 +40,8 @@ final class CommandHandler {
                         return;
                     }
                     if (string.equalsIgnoreCase("cls")) {
-                        Component94.anInt3676 = 0;
-                        Component14.anInt8587 = 0;
+                        Component94.consoleScroll = 0;
+                        Component14.consoleLineCount = 0;
                         return;
                     }
                     if (string.equalsIgnoreCase("displayfps")) {

@@ -159,17 +159,17 @@ class Component210
     }
 
     /**
-     * Submits {@link Component126#aString4461} to {@link CommandHandler#handleCommand}
+     * Submits {@link Component126#consoleInput} to {@link CommandHandler#handleCommand}
      * (console enter). When {@code bool} is false, echoes {@code --> ...} and clears the line.
      */
     static final void submitConsoleLine(boolean bool, int i) {
         anInt5286++;
-        if (i != Component126.aString4461.length()) {
-            CommandHandler.handleCommand(Component126.aString4461, false, bool, (byte) -79);
+        if (i != Component126.consoleInput.length()) {
+            CommandHandler.handleCommand(Component126.consoleInput, false, bool, (byte) -79);
             if (!bool) {
-                Applet_Sub1.printConsole("--> " + Component126.aString4461, 110);
-                NodeSub38.anInt7006 = 0;
-                Component126.aString4461 = "";
+                Applet_Sub1.printConsole("--> " + Component126.consoleInput, 110);
+                NodeSub38.consoleCursor = 0;
+                Component126.consoleInput = "";
                 Component92.anInt3312 = 0;
             }
         }

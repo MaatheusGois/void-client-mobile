@@ -47,12 +47,12 @@ final class PauseHandler extends HashNode {
                         Component100.aLong8694 = (long) (i_5_ * 1000) + Component240.currentTimeMillis(-104);
                         break;
                     }
-                    Component126.aString4461 = strings[i_4_];
+                    Component126.consoleInput = strings[i_4_];
                     Component210.submitConsoleLine(false, 0);
                 }
             } else {
-                Component126.aString4461 += strings[0];
-                NodeSub38.anInt7006 += strings[0].length();
+                Component126.consoleInput += strings[0];
+                NodeSub38.consoleCursor += strings[0].length();
             }
         }
     }

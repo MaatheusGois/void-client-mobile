@@ -442,14 +442,14 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     abstract void pulseDrawFrame(int i);
 
     static final void set(String string) {
-        Component126.aString4461 = string;
-        NodeSub38.anInt7006 = string.length();
+        Component126.consoleInput = string;
+        NodeSub38.consoleCursor = string.length();
     }
 
     /** Append timestamped line(s) to the client console (and optional log stream). */
     static final void printConsole(String string, int i) {
         anInt6++;
-        if (ArbShaderProgram.aStringArray6200 == null) DisplayModeManagerContainer288.initDevConsole(2);
+        if (ArbShaderProgram.consoleLines == null) DisplayModeManagerContainer288.initDevConsole(2);
         ParticleShader.aCalendar6221.setTime(new Date(Component240.currentTimeMillis(-102)));
         int i_8_ = ParticleShader.aCalendar6221.get(11);
         int i_9_ = ParticleShader.aCalendar6221.get(12);
@@ -457,19 +457,19 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         String string_11_ = (Integer.toString(i_8_ / 10) + i_8_ % 10 + ":" + i_9_ / 10 + i_9_ % 10 + ":" + i_10_ / 10 + i_10_ % 10);
         String[] strings = DefinitionSub23.splitByChar('\n', true, string);
         for (int i_12_ = 0; i_12_ < strings.length; i_12_++) {
-            for (int i_13_ = Component14.anInt8587; i_13_ > 0; i_13_--)
-                ArbShaderProgram.aStringArray6200[i_13_] = ArbShaderProgram.aStringArray6200[-1 + i_13_];
-            ArbShaderProgram.aStringArray6200[0] = string_11_ + ": " + strings[i_12_];
+            for (int i_13_ = Component14.consoleLineCount; i_13_ > 0; i_13_--)
+                ArbShaderProgram.consoleLines[i_13_] = ArbShaderProgram.consoleLines[-1 + i_13_];
+            ArbShaderProgram.consoleLines[0] = string_11_ + ": " + strings[i_12_];
             if (Component40.consoleLogStream != null) {
                 try {
-                    Component40.consoleLogStream.write(ClientSystemInfo.encodeCp1252(((ArbShaderProgram.aStringArray6200[0]) + "\n"), (byte) -20));
+                    Component40.consoleLogStream.write(ClientSystemInfo.encodeCp1252(((ArbShaderProgram.consoleLines[0]) + "\n"), (byte) -20));
                 } catch (java.io.IOException ioexception) {
                     /* empty */
                 }
             }
-            if (-1 + ArbShaderProgram.aStringArray6200.length > Component14.anInt8587) {
-                Component14.anInt8587++;
-                if (Component94.anInt3676 > 0) Component94.anInt3676++;
+            if (-1 + ArbShaderProgram.consoleLines.length > Component14.consoleLineCount) {
+                Component14.consoleLineCount++;
+                if (Component94.consoleScroll > 0) Component94.consoleScroll++;
             }
         }
         int i_14_ = 85 / ((i - -1) / 52);
