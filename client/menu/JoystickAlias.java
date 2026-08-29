@@ -28,6 +28,15 @@ import java.util.Properties;
  * Hosts (Android / iOS / desktop {@code DesktopGamepad}) set {@link #padConnected}
  * and forward button presses via {@link #onPadButton(int, String)}. Zoom stays on
  * L2/R2 — those codes are never aliased. Cross/Circle keep left/right click.
+ * <p>
+ * <b>D-pad Learn (ids 19–22 = Android {@code KEYCODE_DPAD_*}):</b>
+ * <ul>
+ *   <li>Desktop: Jamepad {@code dpad*JustPressed} → {@link #onPadButton}.</li>
+ *   <li>iOS: {@code GCExtendedGamepad.getDpad()} discrete buttons → same ids.</li>
+ *   <li>Android: many DualShock pads only emit {@code AXIS_HAT_X/Y} (no KeyEvent).
+ *       {@code MainActivity.updateHatDpad} edge-triggers Learn; KeyEvents also work
+ *       when the OEM delivers {@code KEYCODE_DPAD_*}.</li>
+ * </ul>
  */
 final class JoystickAlias {
 
@@ -1413,27 +1422,35 @@ final class JoystickAlias {
 
     /**
      * Buttons that may be aliased.
-     * Allowed: L1/R1, L3/R3, D-pad, □/△.
+     * Allowed: L1/R1, L3/R3, D-pad (19–22), □/△.
      * Reserved: ✕/○ (click), L2/R2 (zoom), Options/Start (world map).
+     * <p>
+     * D-pad ids match Android {@code KeyEvent.KEYCODE_DPAD_*} so a binding learned
+     * on phone fires on desktop/iOS and vice versa. Hosts must deliver these ids —
+     * Android hat axes are translated in {@code MainActivity}, not here.
      */
     static boolean isLearnable(int buttonId) {
         switch (buttonId) {
-            case 99: // □
-            case 100: // △
+            case 99: // □ KEYCODE_BUTTON_X
+            case 100: // △ KEYCODE_BUTTON_Y
             case 102: // L1
             case 103: // R1
             case 106: // L3
             case 107: // R3
-            case 19: // DPAD_UP
-            case 20: // DPAD_DOWN
-            case 21: // DPAD_LEFT
-            case 22: // DPAD_RIGHT
+            case 19: // KEYCODE_DPAD_UP
+            case 20: // KEYCODE_DPAD_DOWN
+            case 21: // KEYCODE_DPAD_LEFT
+            case 22: // KEYCODE_DPAD_RIGHT
                 return true;
             default:
                 return false;
         }
     }
 
+    /**
+     * ASCII chat / Learn label for a pad button id.
+     * Must stay ASCII — RS bitmap font has no ↑↓←→ / □△ (they render as '?').
+     */
     static String buttonLabel(int buttonId) {
         switch (buttonId) {
             case 96:

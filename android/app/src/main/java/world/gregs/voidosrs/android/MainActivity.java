@@ -1134,6 +1134,14 @@ public class MainActivity extends Activity {
         private boolean padRightDown;
         private boolean padTickRunning;
         private long lastPadZoomAt;
+        /** Hat D-pad held state — many DualShock pads only report AXIS_HAT_*, not KEYCODE_DPAD_*. */
+        private boolean hatUp;
+        private boolean hatDown;
+        private boolean hatLeft;
+        private boolean hatRight;
+        /** Debounce hat + KeyEvent double-delivery of the same D-pad direction. */
+        private int lastDpadNotifyCode = -1;
+        private long lastDpadNotifyAt;
         private InputManager inputManager;
         private final InputManager.InputDeviceListener padDeviceListener =
                 new InputManager.InputDeviceListener() {
@@ -1275,6 +1283,10 @@ public class MainActivity extends Activity {
             l2DigitalHeld = false;
             padLeftDown = false;
             padRightDown = false;
+            hatUp = false;
+            hatDown = false;
+            hatLeft = false;
+            hatRight = false;
             stopPadTick();
             AwtHost.setPadConnected(false);
             redraw();
@@ -1391,37 +1403,57 @@ public class MainActivity extends Activity {
             return needsPadTick();
         }
 
+        private boolean isDpadCode(int code) {
+            return code == KeyEvent.KEYCODE_DPAD_UP
+                    || code == KeyEvent.KEYCODE_DPAD_DOWN
+                    || code == KeyEvent.KEYCODE_DPAD_LEFT
+                    || code == KeyEvent.KEYCODE_DPAD_RIGHT;
+        }
+
         private boolean isGamepad(KeyEvent event) {
             int src = event.getSource();
             if ((src & InputDevice.SOURCE_GAMEPAD) == InputDevice.SOURCE_GAMEPAD
-                    || (src & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK) {
+                    || (src & InputDevice.SOURCE_JOYSTICK) == InputDevice.SOURCE_JOYSTICK
+                    || (src & InputDevice.SOURCE_DPAD) == InputDevice.SOURCE_DPAD) {
                 return true;
             }
             int code = event.getKeyCode();
-            return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
+            return isDpadCode(code)
+                    || (code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE);
+        }
+
+        /**
+         * Forward Learn/alias button press. D-pad may arrive as KeyEvent and hat axis —
+         * ignore a second delivery of the same direction within a short window.
+         */
+        private boolean notifyAliasButton(int code, String label) {
+            if (isDpadCode(code)) {
+                long now = System.currentTimeMillis();
+                if (code == lastDpadNotifyCode && now - lastDpadNotifyAt < 100L) {
+                    return true;
+                }
+                lastDpadNotifyCode = code;
+                lastDpadNotifyAt = now;
+            }
+            return AwtHost.notifyPadButton(code, label);
         }
 
         boolean handlePadKey(KeyEvent event) {
-            if (!isGamepad(event) && event.getKeyCode() < KeyEvent.KEYCODE_BUTTON_A) {
+            int code = event.getKeyCode();
+            boolean dpad = isDpadCode(code);
+            // D-pad KeyEvents often lack SOURCE_GAMEPAD (SOURCE_DPAD / keyboard only).
+            if (!isGamepad(event) && !dpad && code < KeyEvent.KEYCODE_BUTTON_A) {
                 return false;
             }
-            int code = event.getKeyCode();
             // Ignore repeats for held zoom / D-pad spam while learning.
             if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() > 0) {
                 if (code == KeyEvent.KEYCODE_BUTTON_L2
                         || code == KeyEvent.KEYCODE_BUTTON_R2
-                        || code == KeyEvent.KEYCODE_DPAD_UP
-                        || code == KeyEvent.KEYCODE_DPAD_DOWN
-                        || code == KeyEvent.KEYCODE_DPAD_LEFT
-                        || code == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                        || dpad) {
                     return true;
                 }
                 return code >= KeyEvent.KEYCODE_BUTTON_A && code <= KeyEvent.KEYCODE_BUTTON_MODE;
             }
-            boolean dpad = code == KeyEvent.KEYCODE_DPAD_UP
-                    || code == KeyEvent.KEYCODE_DPAD_DOWN
-                    || code == KeyEvent.KEYCODE_DPAD_LEFT
-                    || code == KeyEvent.KEYCODE_DPAD_RIGHT;
             if ((code < KeyEvent.KEYCODE_BUTTON_A || code > KeyEvent.KEYCODE_BUTTON_MODE) && !dpad) {
                 // Still accept if source is gamepad for unknown codes
                 if (!isGamepad(event)) {
@@ -1474,7 +1506,7 @@ public class MainActivity extends Activity {
                     return true;
                 default:
                     // L1 / □ / △ / R1 / L3 / R3 / D-pad / Options → alias or map
-                    if (down && AwtHost.notifyPadButton(code, padButtonLabel(code))) {
+                    if (down && notifyAliasButton(code, padButtonLabel(code))) {
                         return true;
                     }
                     return dpad
@@ -1557,8 +1589,39 @@ public class MainActivity extends Activity {
             float gas = axis(event, MotionEvent.AXIS_GAS);
             triggerR2 = Math.max(rTrigger, gas);
 
+            // DualShock / many HID pads: D-pad is only AXIS_HAT_X/Y (no KEYCODE_DPAD_*).
+            // Desktop Jamepad and iOS GCController already surface dpad as buttons for Learn.
+            updateHatDpad(axis(event, MotionEvent.AXIS_HAT_X), axis(event, MotionEvent.AXIS_HAT_Y));
+
             startPadTick();
             return true;
+        }
+
+        /**
+         * Edge-trigger Learn/alias from hat switch. Threshold 0.5 covers digital (±1)
+         * and slightly noisy analog hats.
+         */
+        private void updateHatDpad(float hatX, float hatY) {
+            boolean up = hatY < -0.5f;
+            boolean down = hatY > 0.5f;
+            boolean left = hatX < -0.5f;
+            boolean right = hatX > 0.5f;
+            if (up && !hatUp) {
+                notifyAliasButton(KeyEvent.KEYCODE_DPAD_UP, "Up");
+            }
+            if (down && !hatDown) {
+                notifyAliasButton(KeyEvent.KEYCODE_DPAD_DOWN, "Down");
+            }
+            if (left && !hatLeft) {
+                notifyAliasButton(KeyEvent.KEYCODE_DPAD_LEFT, "Left");
+            }
+            if (right && !hatRight) {
+                notifyAliasButton(KeyEvent.KEYCODE_DPAD_RIGHT, "Right");
+            }
+            hatUp = up;
+            hatDown = down;
+            hatLeft = left;
+            hatRight = right;
         }
 
         private float axis(MotionEvent e, int axis) {

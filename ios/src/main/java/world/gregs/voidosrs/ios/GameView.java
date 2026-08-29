@@ -297,8 +297,11 @@ public class GameView extends UIView implements AwtHost.Presenter {
                         onPadClick(false, pressed != null && pressed.booleanValue());
                     }
                 });
-        // Square / Triangle / L1 / R1 / L3 / R3 / D-pad → learn alias or fire binding
+        // Square / Triangle / L1 / R1 / L3 / R3 / D-pad → learn alias or fire binding.
         // Labels are ASCII — RS bitmap font cannot draw ↑↓ / □△ (shows '?').
+        // D-pad: GameController already exposes discrete buttons with Android
+        // KEYCODE_DPAD_* ids (19–22). No hat-axis bridge needed (unlike Android
+        // DualShock AXIS_HAT_* → MainActivity.updateHatDpad).
         bindAliasButton(pad.getButtonX(), 99, "Square");
         bindAliasButton(pad.getButtonY(), 100, "Triangle");
         bindAliasButton(pad.getLeftShoulder(), 102, "L1");

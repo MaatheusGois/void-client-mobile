@@ -205,9 +205,14 @@ public final class AwtHost {
     /**
      * Forward a pad button press into {@code JoystickAlias.onPadButton} for
      * learn-mode binding or firing a saved Eat/Drink/Prayer/Summon alias.
+     * <p>
+     * D-pad Learn uses Android {@code KEYCODE_DPAD_*} ids (19–22). iOS
+     * {@code GCExtendedGamepad.getDpad()} already delivers discrete presses —
+     * no hat-axis translation (Android DualShock needs {@code AXIS_HAT_*} →
+     * {@code MainActivity.updateHatDpad}).
      *
-     * @param buttonId Android {@code KeyEvent.KEYCODE_BUTTON_*} (shared with iOS)
-     * @param label    chat-friendly name (△, L1, …)
+     * @param buttonId Android {@code KeyEvent.KEYCODE_*} (BUTTON_* or DPAD_*; shared ids)
+     * @param label    chat-friendly ASCII name (Up, L1, Square, …)
      * @return true when the client consumed the press
      */
     public static boolean notifyPadButton(int buttonId, String label) {

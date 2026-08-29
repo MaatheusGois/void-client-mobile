@@ -16,8 +16,10 @@ import java.lang.reflect.Method;
  * dependency). Started from {@link Loader#main}; no-ops on mobile hosts that already
  * own the pad ({@code voidawt.AwtHost}).
  * <p>
- * Button ids are Android {@code KeyEvent.KEYCODE_BUTTON_*} so aliases saved on phone
- * work on desktop and vice versa.
+ * Button ids are Android {@code KeyEvent.KEYCODE_*} (including {@code KEYCODE_DPAD_*}
+ * 19–22) so aliases saved on phone work on desktop and vice versa. SDL/Jamepad
+ * already surfaces hat D-pad as {@code dpad*JustPressed}; Android must map
+ * {@code AXIS_HAT_*} itself (see {@code MainActivity.updateHatDpad}).
  * <p>
  * Unlike mobile (which blits a software cursor), desktop moves the real OS pointer
  * with {@link Robot} so Jagex custom AWT cursors stay visible at the pad position.
