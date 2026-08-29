@@ -1,14 +1,18 @@
 package voidawt;
 
-import org.robovm.apple.coregraphics.CGAffineTransform;
 import org.robovm.apple.coregraphics.CGBitmapContext;
 import org.robovm.apple.coregraphics.CGColorSpace;
+import org.robovm.apple.coregraphics.CGImage;
 import org.robovm.apple.coregraphics.CGImageAlphaInfo;
+import org.robovm.apple.coregraphics.CGPoint;
 import org.robovm.apple.coregraphics.CGRect;
+import org.robovm.apple.coregraphics.CGSize;
 import org.robovm.apple.coretext.CTLine;
 import org.robovm.apple.foundation.NSAttributedString;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIFont;
+import org.robovm.apple.uikit.UIGraphics;
+import org.robovm.apple.uikit.UIImage;
 
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
@@ -98,16 +102,16 @@ public class Graphics {
     }
 
     /**
-     * Rasterize {@code str} with CoreText into a tight glyph bitmap, then blit
-     * non-empty pixels into the ARGB target.
+     * Rasterize {@code str} via UIKit ({@link UIGraphics}) into a tight glyph
+     * bitmap, then blit non-empty pixels into the ARGB target.
      * <p>
      * AWT {@code drawString(x,y)} treats {@code y} as the <em>baseline</em>.
-     * We flip the CGBitmapContext CTM so CoreText's +y-up matches the buffer's
-     * top-left layout — without that flip the splash text renders upside-down.
-     * Android does the equivalent with {@code Paint}/{@code Canvas.drawText}.
+     * Raw {@code CGBitmapContext}+{@code CTLine} CTM/text-matrix combos kept
+     * producing upside-down or empty glyphs on device; {@code UIGraphics} already
+     * sets a UIKit-flipped context so {@link NSAttributedString#draw(CGPoint)}
+     * comes out upright.
      * <p>
-     * Callers: splash progress ({@code HelveticaFont}), and {@code FontGlyphCache} glyph bake
-     * (black fill + white string + {@code PixelGrabber}).
+     * Callers: splash ({@code HelveticaFont}), glyph bake ({@code FontGlyphCache}).
      */
     public void drawString(String str, int x, int y) {
         if (str == null || str.length() == 0) {
@@ -127,26 +131,29 @@ public class Graphics {
         int pad = 2;
         int bw = Math.max(1, (int) Math.ceil(width) + pad * 2);
         int bh = Math.max(1, (int) Math.ceil(ascent + descent) + pad * 2);
-        byte[] rgba = new byte[bw * bh * 4];
-        CGColorSpace space = CGColorSpace.createDeviceRGB();
-        CGBitmapContext ctx = CGBitmapContext.create(
-                rgba, bw, bh, 8, bw * 4L, space, CGImageAlphaInfo.PremultipliedLast);
-        if (ctx == null) {
-            return;
+
+        // opaque=false keeps clear alpha; scale=1 → 1 bitmap px per point.
+        UIGraphics.beginImageContext(new CGSize(bw, bh), false, 1.0);
+        byte[] rgba;
+        try {
+            // UIKit point = top-left of the line bounding box (not AWT baseline).
+            attributed.draw(new CGPoint(pad, pad));
+            UIImage image = UIGraphics.getImageFromCurrentImageContext();
+            if (image == null) {
+                return;
+            }
+            rgba = extractRgba(image, bw, bh);
+            if (rgba == null) {
+                return;
+            }
+        } finally {
+            UIGraphics.endImageContext();
         }
-        ctx.clearRect(new CGRect(0, 0, bw, bh));
-        // Top-left bitmap ↔ CoreText +y-up: flip CTM, identity text matrix, baseline at pad+descent.
-        ctx.translateCTM(0, bh);
-        ctx.scaleCTM(1, -1);
-        ctx.setTextMatrix(CGAffineTransform.Identity());
-        ctx.setTextPosition(pad, pad + descent);
-        line.draw(ctx);
 
         int[] dst = target.peekArgb();
         int tw = target.getWidth();
         int th = target.getHeight();
         int dx0 = x - pad;
-        // AWT baseline at y → top of glyph box is roughly y - ascent.
         int dy0 = y - (int) Math.ceil(ascent) - pad;
         for (int row = 0; row < bh; row++) {
             int dy = dy0 + row;
@@ -168,10 +175,31 @@ public class Graphics {
                 int r = rgba[o] & 0xff;
                 int g = rgba[o + 1] & 0xff;
                 int b = rgba[o + 2] & 0xff;
-                // PremultipliedLast RGBA → ARGB; skip fully transparent (keeps black under glyphs).
                 dst[dyOff + dx] = (a << 24) | (r << 16) | (g << 8) | b;
             }
         }
+    }
+
+    /**
+     * Copy UIImage → PremultipliedLast RGBA, keeping alpha (unlike
+     * {@code ArgbBridge.copy}, which forces opaque and would paint black over the splash).
+     */
+    private static byte[] extractRgba(UIImage image, int w, int h) {
+        CGImage cg = image.getCGImage();
+        if (cg == null) {
+            return null;
+        }
+        byte[] rgba = new byte[w * h * 4];
+        CGColorSpace space = CGColorSpace.createDeviceRGB();
+        CGBitmapContext ctx = CGBitmapContext.create(
+                rgba, w, h, 8, w * 4L, space, CGImageAlphaInfo.PremultipliedLast);
+        if (ctx == null) {
+            return null;
+        }
+        // Same path as ArgbBridge.copy: drawImage into default context → top-row-first buffer.
+        ctx.clearRect(new CGRect(0, 0, w, h));
+        ctx.drawImage(new CGRect(0, 0, w, h), cg);
+        return rgba;
     }
 
     public boolean drawImage(Image img, int x, int y, ImageObserver observer) {
