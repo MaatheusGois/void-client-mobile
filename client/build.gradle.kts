@@ -80,7 +80,8 @@ application {
 tasks.shadowJar {
     archiveBaseName.set("void-client")
     archiveClassifier.set("")
-    // Keep jamepad + jnigen natives / gamecontrollerdb — minimize would strip the .dylib/.so.
+    // Keep jamepad + jnigen natives — minimize would strip the .dylib/.so.
+    // gamecontrollerdb.txt is shipped from client/resources/ (jamepad jar omits it).
     minimize {
         exclude(dependency("com.badlogicgames.jamepad:jamepad:.*"))
         exclude(dependency("com.badlogicgames.gdx:gdx-jnigen-loader:.*"))
