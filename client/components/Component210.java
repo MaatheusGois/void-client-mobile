@@ -161,18 +161,99 @@ class Component210
     /**
      * Submits {@link Component126#consoleInput} to {@link CommandHandler#handleCommand}
      * (console enter). When {@code bool} is false, echoes {@code --> ...} and clears the line.
+     * <p>
+     * {@code item <id> ...} echoes with the item name appended for readability
+     * ({@code item 12345 1 (Abyssal whip)}); the string sent to the server stays undecorated.
      */
     static final void submitConsoleLine(boolean bool, int i) {
         anInt5286++;
         if (i != Component126.consoleInput.length()) {
-            CommandHandler.handleCommand(Component126.consoleInput, false, bool, (byte) -79);
+            // Strip any prior "(name)" decoration (e.g. history up-arrow / re-run) before send.
+            String raw = stripItemConsoleEcho(Component126.consoleInput);
+            CommandHandler.handleCommand(raw, false, bool, (byte) -79);
             if (!bool) {
-                Applet_Sub1.printConsole("--> " + Component126.consoleInput, 110);
+                Applet_Sub1.printConsole("--> " + decorateItemConsoleEcho(raw), 110);
                 NodeSub38.consoleCursor = 0;
                 Component126.consoleInput = "";
                 Component92.anInt3312 = 0;
             }
         }
+    }
+
+    /**
+     * True when {@code s} is an {@code item} admin command ({@code item} / {@code item ...}).
+     */
+    private static boolean isItemCommand(String s) {
+        if (s == null) {
+            return false;
+        }
+        String t = s.trim();
+        if (t.length() < 4 || !t.regionMatches(true, 0, "item", 0, 4)) {
+            return false;
+        }
+        return t.length() == 4 || t.charAt(4) == ' ';
+    }
+
+    /**
+     * Appends {@code (itemName)} to {@code item <id> ...} for console history display.
+     * Leaves non-item lines and already-decorated lines unchanged.
+     */
+    static String decorateItemConsoleEcho(String cmd) {
+        if (cmd == null) {
+            return null;
+        }
+        String trimmed = cmd.trim();
+        if (trimmed.length() == 0) {
+            return cmd;
+        }
+        // Already decorated: "item 12345 1 (Name)"
+        int open = trimmed.lastIndexOf(" (");
+        if (open > 0 && trimmed.charAt(trimmed.length() - 1) == ')'
+                && isItemCommand(trimmed.substring(0, open))) {
+            return cmd;
+        }
+        if (!isItemCommand(trimmed)) {
+            return cmd;
+        }
+        String[] parts = trimmed.split("\\s+");
+        if (parts.length < 2) {
+            return cmd;
+        }
+        int id;
+        try {
+            id = Integer.parseInt(parts[1]);
+        } catch (NumberFormatException e) {
+            return cmd;
+        }
+        if (Exception_Sub1.aClass255_112 == null) {
+            return cmd;
+        }
+        NumberFormatter def = Exception_Sub1.aClass255_112.method1940(0, id);
+        if (def == null || def.aString2795 == null || def.aString2795.length() == 0
+                || "null".equals(def.aString2795)) {
+            return cmd;
+        }
+        return trimmed + " (" + def.aString2795 + ")";
+    }
+
+    /**
+     * Removes a trailing {@code (itemName)} decoration from an {@code item ...} console line
+     * so history recall / re-run still sends a clean admin command to the server.
+     */
+    static String stripItemConsoleEcho(String cmd) {
+        if (cmd == null) {
+            return null;
+        }
+        String trimmed = cmd.trim();
+        int open = trimmed.lastIndexOf(" (");
+        if (open <= 0 || trimmed.charAt(trimmed.length() - 1) != ')') {
+            return cmd;
+        }
+        String before = trimmed.substring(0, open);
+        if (!isItemCommand(before)) {
+            return cmd;
+        }
+        return before;
     }
 
     final void method541(int i) {

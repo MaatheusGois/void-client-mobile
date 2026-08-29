@@ -133,7 +133,8 @@ final class PauseTimer {
                         if (parts.length == 2 && parts[1].startsWith("-->")) {
                             if (index > HISTORY_INDEX) {
                                 HISTORY_INDEX = index;
-                                Component126.consoleInput = parts[1].substring(4);
+                                // Strip item "(name)" decoration so the prompt stays editable/sendable.
+                                Component126.consoleInput = Component210.stripItemConsoleEcho(parts[1].substring(4));
                                 NodeSub38.consoleCursor = Component126.consoleInput.length();
                                 break;
                             }
@@ -149,7 +150,8 @@ final class PauseTimer {
                         String[] parts = line.split(": ");
                         if (parts.length == 2 && parts[1].startsWith("-->")) {
                             HISTORY_INDEX = index;
-                            Component126.consoleInput = parts[1].substring(4);
+                            // Strip item "(name)" decoration so the prompt stays editable/sendable.
+                            Component126.consoleInput = Component210.stripItemConsoleEcho(parts[1].substring(4));
                             NodeSub38.consoleCursor = Component126.consoleInput.length();
                             found = true;
                             break;

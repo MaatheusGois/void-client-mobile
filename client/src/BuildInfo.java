@@ -284,7 +284,10 @@ final class BuildInfo {
         Component94.consoleScroll = scroll;
     }
 
-    /** Extract {@code cmd} from a {@code "HH:MM:SS: --> cmd"} history line, or null. */
+    /**
+     * Extract {@code cmd} from a {@code "HH:MM:SS: --> cmd"} history line, or null.
+     * Strips {@code item ... (name)} display decoration so re-run sends a clean command.
+     */
     private static String commandFromHistoryLine(String line) {
         if (line == null) {
             return null;
@@ -296,10 +299,16 @@ final class BuildInfo {
                 return null;
             }
             String cmd = line.substring(arrow + 3).trim();
-            return cmd.length() == 0 ? null : cmd;
+            if (cmd.length() == 0) {
+                return null;
+            }
+            return Component210.stripItemConsoleEcho(cmd);
         }
         String cmd = line.substring(arrow + 4).trim();
-        return cmd.length() == 0 ? null : cmd;
+        if (cmd.length() == 0) {
+            return null;
+        }
+        return Component210.stripItemConsoleEcho(cmd);
     }
 
     /**
