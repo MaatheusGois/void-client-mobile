@@ -26,7 +26,7 @@ final class SceneManager {
         anInt2855++;
         if (i >= 1 && i_5_ >= 1 && -2 + AbstractShaderSub4.anInt7319 >= i && i_5_ <= -2 + ParametricDefinition.anInt9109) {
             int i_8_ = i_7_;
-            if (i_8_ < 3 && DisplayModeManagerContainer206.method802(i_5_, i, true)) i_8_++;
+            if (i_8_ < 3 && NpcComposition.method802(i_5_, i, true)) i_8_++;
             if ((Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && !Component255.method536(i_5_, false, i, Component385.anInt2204, i_8_)) || Component335.aClass357ArrayArrayArray2029 == null) return;
             Component103.aClass237_Sub1_4197.method1694((NodeSub45.aClass361Array7108[i_7_]), i_1_, i_7_, NodeSub8.toolkit, i, i_5_, (byte) 106);
             if (i_3_ >= 0) {

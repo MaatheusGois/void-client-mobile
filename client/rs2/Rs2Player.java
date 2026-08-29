@@ -47,7 +47,7 @@ final class Rs2Player {
 
     static int getCombatLevel() {
         Player p = getLocal();
-        return p != null ? p.anInt10516 : 0;
+        return p != null ? p.combatLevel : 0;
     }
 
     static int getWorldX() {

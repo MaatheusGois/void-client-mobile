@@ -320,7 +320,7 @@ final class ShaderProgramSub9
                     player.aBoolean10539 = true;
                 } else player.method2455(i_36_, -26443, (Component293.aByteArray3300[i_22_]), i_35_);
                 player.plane = player.aByte6376 = (byte) (0x3 & (player.plane) + i_32_);
-                if (DisplayModeManagerContainer206.method802(i_36_, i_35_, true)) player.aByte6376++;
+                if (NpcComposition.method802(i_36_, i_35_, true)) player.aByte6376++;
                 if (StringDefinition.anInt9591 == i_22_) {
                     if ((player.plane) != Component117.anInt4372) NodeSub16Sub2.aBoolean8870 = true;
                     Component117.anInt4372 = (player.plane);
@@ -338,7 +338,7 @@ final class ShaderProgramSub9
                     player.anInt10549 = i_41_;
                 } else player.method2455(i_42_, -26443, (Component293.aByteArray3300[i_22_]), i_41_);
                 player.plane = player.aByte6376 = (byte) ((player.plane) + i_38_ & 0x3);
-                if (DisplayModeManagerContainer206.method802(i_42_, i_41_, true)) player.aByte6376++;
+                if (NpcComposition.method802(i_42_, i_41_, true)) player.aByte6376++;
                 if (StringDefinition.anInt9591 == i_22_) Component117.anInt4372 = (player.plane);
             }
         }

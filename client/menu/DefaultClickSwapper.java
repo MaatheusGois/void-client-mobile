@@ -70,16 +70,16 @@ final class DefaultClickSwapper {
         return itemDefaults.get(Integer.valueOf(itemId));
     }
 
-    static void injectNpcMenu(Npc npc, DisplayModeManagerContainer206 composition) {
+    static void injectNpcMenu(Npc npc, NpcComposition composition) {
         if (npc == null || composition == null) {
             return;
         }
         ensureLoaded();
-        String[] actions = composition.aStringArray1349;
+        String[] actions = composition.actions;
         if (actions == null) {
             return;
         }
-        int compositionId = composition.anInt1344;
+        int compositionId = composition.id;
         String current = npcDefaults.get(Integer.valueOf(compositionId));
         injectActionRows(actions, current, OPCODE_SET_NPC, OPCODE_RESET_NPC, compositionId);
     }
@@ -211,9 +211,9 @@ final class DefaultClickSwapper {
             }
             String wanted = null;
             if (isNpcOpcode(opcode)) {
-                DisplayModeManagerContainer206 composition = compositionForNpcEntry(entry);
+                NpcComposition composition = compositionForNpcEntry(entry);
                 if (composition != null) {
-                    wanted = npcDefaults.get(Integer.valueOf(composition.anInt1344));
+                    wanted = npcDefaults.get(Integer.valueOf(composition.id));
                 }
             } else if (isObjectOpcode(opcode)) {
                 int objectId = (int) (entry.identifier >>> 32);
@@ -375,7 +375,7 @@ final class DefaultClickSwapper {
         return false;
     }
 
-    private static DisplayModeManagerContainer206 compositionForNpcEntry(MenuEntry entry) {
+    private static NpcComposition compositionForNpcEntry(MenuEntry entry) {
         NodeSub22 node = (NodeSub22) Component21.aClass356_3654.get((int) entry.identifier, -6008);
         if (node == null) {
             return null;
@@ -384,7 +384,7 @@ final class DefaultClickSwapper {
         if (npc == null) {
             return null;
         }
-        DisplayModeManagerContainer206 composition = npc.definition;
+        NpcComposition composition = npc.definition;
         if (composition != null && composition.anIntArray1377 != null) {
             composition = composition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
         }

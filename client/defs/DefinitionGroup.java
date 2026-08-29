@@ -32,7 +32,7 @@ final class DefinitionGroup extends HashNode {
             for (int i_2_ = 0; aClass348_Sub40Array9520.length > i_2_; i_2_++)
                 aClass348_Sub40Array9520[i_2_].initImageCache(i, i_0_, -256);
             HashNodeSub13.method3232(d, (byte) -122);
-            DisplayModeManagerContainer206.method797(i_0_, i, (byte) 114);
+            NpcComposition.method797(i_0_, i, (byte) 114);
             int[] is = new int[i * i_0_];
             int i_3_ = 0;
             for (int i_4_ = 0; i_0_ > i_4_; i_4_++) {
@@ -118,7 +118,7 @@ final class DefinitionGroup extends HashNode {
             for (int i_24_ = 0; aClass348_Sub40Array9520.length > i_24_; i_24_++)
                 aClass348_Sub40Array9520[i_24_].initImageCache(i, i_23_, i_21_ + -256);
             HashNodeSub13.method3232(d, (byte) -89);
-            DisplayModeManagerContainer206.method797(i_23_, i, (byte) 122);
+            NpcComposition.method797(i_23_, i, (byte) 122);
             int[] is = new int[i_23_ * i];
             int i_25_;
             int i_26_;
@@ -184,7 +184,7 @@ final class DefinitionGroup extends HashNode {
             if (i_42_ >= -1) method3183(null, -60, 98, false, -0.11623531533038078, null, (byte) -72);
             for (int i_43_ = 0; aClass348_Sub40Array9520.length > i_43_; i_43_++)
                 aClass348_Sub40Array9520[i_43_].initImageCache(i, i_41_, -256);
-            DisplayModeManagerContainer206.method797(i_41_, i, (byte) 115);
+            NpcComposition.method797(i_41_, i, (byte) 115);
             float[] fs = new float[4 * i * i_41_];
             int i_44_ = 0;
             for (int i_45_ = 0; i_41_ > i_45_; i_45_++) {

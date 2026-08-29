@@ -78,13 +78,13 @@ final class MicrobotRuntime {
      * Inject lilac toggle row on attackable NPC menus:
      * {@code Microbot: Combat} when off, {@code Stop Combat} when on.
      */
-    static void injectNpcMenu(Npc npc, DisplayModeManagerContainer206 composition) {
+    static void injectNpcMenu(Npc npc, NpcComposition composition) {
         if (!Loader.microbotEnabled || npc == null || composition == null) {
             return;
         }
         try {
             String attack = FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
-            String[] actions = composition.aStringArray1349;
+            String[] actions = composition.actions;
             boolean hasAttack = false;
             if (actions != null) {
                 for (int i = 0; i < actions.length && i < 5; i++) {

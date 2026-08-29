@@ -10,7 +10,8 @@ import java.util.Hashtable;
  * Evidence: JODE header recorded original obfuscated name
  */
 final class Player extends DisplayModeManagerContainer58 {
-    int anInt10516;
+    /** Combat level from the appearance / player-info packet (unsigned byte). */
+    int combatLevel;
     boolean aBoolean10517 = false;
     static int anInt10518;
     int anInt10519;
@@ -179,11 +180,11 @@ final class Player extends DisplayModeManagerContainer58 {
         this.displayName = class348_sub49.readString((byte) -47);
         this.username = this.displayName;
         if (this == Component72.localPlayer) BufferCacheSub2.aString8265 = this.displayName;
-        this.anInt10516 = class348_sub49.readUnsignedByte(i ^ 0xab);
+        this.combatLevel = class348_sub49.readUnsignedByte(i ^ 0xab);
         if (i != 84) anInt10520 = 87;
         if (bool_12_) {
             this.anInt10564 = class348_sub49.readUnsignedShort(842397944);
-            this.anInt10557 = this.anInt10516;
+            this.anInt10557 = this.combatLevel;
             if (this.anInt10564 == 65535) this.anInt10564 = -1;
             this.anInt10561 = -1;
         } else {
@@ -646,7 +647,7 @@ final class Player extends DisplayModeManagerContainer58 {
     }
 
     public Player() {
-        this.anInt10516 = 0;
+        this.combatLevel = 0;
         this.anInt10535 = -1;
         this.aBoolean10521 = false;
         this.anInt10526 = -1;

@@ -100,19 +100,19 @@ final class DisplayModeManagerContainer347
         }
     }
 
-    final DisplayModeManagerContainer206 method2079(int i, int i_6_) {
+    final NpcComposition method2079(int i, int i_6_) {
         anInt3586++;
-        DisplayModeManagerContainer206 class79;
+        NpcComposition class79;
         synchronized (aClass60_3577) {
-            class79 = (DisplayModeManagerContainer206) aClass60_3577.get(i, -104);
+            class79 = (NpcComposition) aClass60_3577.get(i, -104);
         }
         if (class79 != null) return class79;
         byte[] is;
         synchronized (aClass45_3585) {
             is = aClass45_3585.getFile(i_6_ + -1859, Component95.method1060(i, (byte) 69), Component193.method1920(127, i));
         }
-        class79 = new DisplayModeManagerContainer206();
-        class79.anInt1344 = i;
+        class79 = new NpcComposition();
+        class79.id = i;
         class79.aClass278_1348 = this;
         if (is != null) class79.method798(111, new Buffer(is));
         class79.method799(-117);

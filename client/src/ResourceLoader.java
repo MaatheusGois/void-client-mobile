@@ -100,7 +100,7 @@ final class ResourceLoader implements Runnable {
                         try {
                             if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.toolkit.method3689((byte) 57);
                         } catch (Exception_Sub1 exception_sub1) {
-                            ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + DisplayModeManagerContainer206.aClient1367.method81((byte) 80)), exception_sub1, 15004);
+                            ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + NpcComposition.aClient1367.method81((byte) 80)), exception_sub1, 15004);
                             SoftwareFallbackShader.method3553(true, (byte) 114, 0);
                         }
                     }

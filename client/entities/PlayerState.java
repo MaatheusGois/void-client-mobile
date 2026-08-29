@@ -48,18 +48,18 @@ final class PlayerState extends Node {
                 if (player.anInt10564 == 0) {
                     boolean bool_0_ = true;
                     if ((Component72.localPlayer.anInt10561) != -1 && player.anInt10561 != -1) {
-                        int i_1_ = (Math.max(player.anInt10516, (Component72.localPlayer.anInt10516)));
+                        int i_1_ = (Math.max(player.combatLevel, (Component72.localPlayer.combatLevel)));
                         int i_2_ = (Math.min((Component72.localPlayer.anInt10561), player.anInt10561));
                         int i_3_ = 5 - (-(10 * i_1_ / 100) + -i_2_);
-                        int i_4_ = (-player.anInt10516 + (Component72.localPlayer.anInt10516));
+                        int i_4_ = (-player.combatLevel + (Component72.localPlayer.combatLevel));
                         if (i_4_ < 0) i_4_ = -i_4_;
                         if (i_3_ < i_4_) bool_0_ = false;
                     }
                     String string_5_ = ((WorldNameText.STELLARDAWN == PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544));
-                    if (player.anInt10516 >= player.anInt10557)
-                        string = (player.method2456(true, 255) + (!bool_0_ ? "<col=ffffff>" : (WorldNameText.method250((Component72.localPlayer.anInt10516), true, (player.anInt10516)))) + " (" + string_5_ + player.anInt10516 + ")");
+                    if (player.combatLevel >= player.anInt10557)
+                        string = (player.method2456(true, 255) + (!bool_0_ ? "<col=ffffff>" : (WorldNameText.method250((Component72.localPlayer.combatLevel), true, (player.combatLevel)))) + " (" + string_5_ + player.combatLevel + ")");
                     else
-                        string = (player.method2456(true, 255) + (bool_0_ ? (WorldNameText.method250((Component72.localPlayer.anInt10516), true, (player.anInt10516))) : "<col=ffffff>") + " (" + string_5_ + player.anInt10516 + "+" + (-player.anInt10516 + player.anInt10557) + ")");
+                        string = (player.method2456(true, 255) + (bool_0_ ? (WorldNameText.method250((Component72.localPlayer.combatLevel), true, (player.combatLevel))) : "<col=ffffff>") + " (" + string_5_ + player.combatLevel + "+" + (-player.combatLevel + player.anInt10557) + ")");
                 } else if (player.anInt10564 == -1) string = player.method2456(true, 255);
                 else string = (player.method2456(true, 255) + " (" + FriendsIgnoreList.aClass274_3512.getLocalized(ObjectDeserializer.languageId, 544) + player.anInt10564 + ")");
                 if (r.aBoolean9722 && !bool && (0x8 & PauseTimer.anInt500) != 0) {
@@ -75,7 +75,7 @@ final class PlayerState extends Node {
                             if ((PacketReader.currentGameType != RunescapeInfo.RUNESCAPE) || !(Component252.aStringArray10195[i_6_].equalsIgnoreCase(FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544)))) {
                                 if (DisplayModeManagerContainer5.aBooleanArray1214[i_6_]) i_7_ = (short) 2000;
                             } else {
-                                if ((Component72.localPlayer.anInt10516) < (player.anInt10516)) i_7_ = (short) 2000;
+                                if ((Component72.localPlayer.combatLevel) < (player.combatLevel)) i_7_ = (short) 2000;
                                 if ((Component72.localPlayer.anInt10542) != 0 && (player.anInt10542) != 0) {
                                     if ((player.anInt10542) != (Component72.localPlayer.anInt10542)) i_7_ = (short) 0;
                                     else i_7_ = (short) 2000;

@@ -148,7 +148,7 @@ final class ItemDefinitionProvider
             Component22.aClass105Array1744 = new Component24[class207s.length];
             for (int i = 0; class207s.length > i; i++)
                 Component22.aClass105Array1744[i] = var_ha.method3691(class207s[i], true);
-            DisplayModeManagerContainer206.aClass105_1365 = var_ha.method3691(Component170.method1521(class45, RSACipher.anInt4895, 0), bool);
+            NpcComposition.aClass105_1365 = var_ha.method3691(Component170.method1521(class45, RSACipher.anInt4895, 0), bool);
             ColoredText.aClass105_6097 = var_ha.method3691(Component170.method1521(class45, (Component134.anInt5814), 0), true);
             class207s = Component170.method1519(class45, DisplayModeManagerContainer89.anInt8370, 0);
             Component33.aClass105Array2640 = new Component24[class207s.length];

@@ -52,7 +52,7 @@ final class NodeSub22
         Component280.aClass346_2449.reset(14174);
         anInt6860++;
         AbstractGlTextureSub4.mouseHandler.destroy(0);
-        DisplayModeManagerContainer206.aClient1367.recreateGameCanvas((byte) -49);
+        NpcComposition.aClient1367.recreateGameCanvas((byte) -49);
         DisplayModeManagerContainer50.gameCanvas.setBackground(Color.black);
         Component244.anInt4179 = i;
         Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) 84);

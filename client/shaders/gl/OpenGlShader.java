@@ -139,7 +139,7 @@ final class OpenGlShader extends AbstractShader {
     static final void method3556(boolean bool) {
         anInt7405++;
         if (bool == false) {
-            synchronized (DisplayModeManagerContainer206.aClient1367) {
+            synchronized (NpcComposition.aClient1367) {
                 if (Component225.aFrame476 == null) {
                     Container container;
                     if (RSACipher.aFrame4904 != null) container = RSACipher.aFrame4904;

@@ -524,7 +524,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equals("errormessage")) {
-                            Applet_Sub1.printConsole(DisplayModeManagerContainer206.aClient1367.method81((byte) 102), 102);
+                            Applet_Sub1.printConsole(NpcComposition.aClient1367.method81((byte) 102), 102);
                             return;
                         }
                         if (string.equals("heapdump")) {

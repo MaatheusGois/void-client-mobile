@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer369
             if (class51 == null) {
                 if (npc != null) {
                     class348_sub9.aNpc_6691 = npc;
-                    DisplayModeManagerContainer206 class79 = (npc.definition);
+                    NpcComposition class79 = (npc.definition);
                     if (class79.anIntArray1377 != null) {
                         class348_sub9.aBoolean6684 = true;
                         class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), i ^ ~0x3a5d4149);

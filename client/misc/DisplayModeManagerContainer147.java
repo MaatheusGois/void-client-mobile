@@ -26,7 +26,7 @@ final class DisplayModeManagerContainer147
                 i_4_ = 3;
             if (class348_sub9.anInt6675 != i_4_) {
                 int i_5_ = DisplayModeManagerContainer345.method214((class348_sub9.aNpc_6691), -1);
-                DisplayModeManagerContainer206 class79 = (class348_sub9.aNpc_6691.definition);
+                NpcComposition class79 = (class348_sub9.aNpc_6691.definition);
                 if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                 if (class79 == null || i_5_ == -1) {
                     class348_sub9.anInt6675 = i_4_;

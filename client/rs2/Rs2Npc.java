@@ -1,6 +1,6 @@
 /**
  * NPC query + interact (menu-inject Attack / action).
- * Attack opcode slot 0 = 25 (see {@link ParticleShader#method2150}).
+ * Attack opcode slot 0 = 25 (see {@link ParticleShader#addNpcMenuOptions}).
  */
 final class Rs2Npc {
 
@@ -49,7 +49,7 @@ final class Rs2Npc {
             if (n == null || n.definition == null) {
                 continue;
             }
-            DisplayModeManagerContainer206 def = n.definition;
+            NpcComposition def = n.definition;
             if (def.anIntArray1377 != null) {
                 def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (def == null) {
@@ -72,7 +72,7 @@ final class Rs2Npc {
         if (npc == null || action == null) {
             return false;
         }
-        DisplayModeManagerContainer206 def = npc.definition;
+        NpcComposition def = npc.definition;
         if (def == null) {
             return false;
         }
@@ -109,8 +109,8 @@ final class Rs2Npc {
         }
     }
 
-    private static boolean hasAction(DisplayModeManagerContainer206 def, String action) {
-        String[] actions = def.aStringArray1349;
+    private static boolean hasAction(NpcComposition def, String action) {
+        String[] actions = def.actions;
         if (actions == null) {
             return false;
         }
@@ -122,8 +122,8 @@ final class Rs2Npc {
         return false;
     }
 
-    private static int opcodeForAction(DisplayModeManagerContainer206 def, String action) {
-        String[] actions = def.aStringArray1349;
+    private static int opcodeForAction(NpcComposition def, String action) {
+        String[] actions = def.actions;
         if (actions == null) {
             return -1;
         }

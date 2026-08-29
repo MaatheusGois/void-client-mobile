@@ -1,12 +1,15 @@
-/* DisplayModeManagerContainer206 - Decompiled by JODE
+/* NpcComposition - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer206
 /**
- * RENAMED from `Class79` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
+ * Cache NPC composition (was {@code Class79} / {@code DisplayModeManagerContainer206}).
+ * <p>
+ * Loaded from the NPC archive; attached to live entities as {@link Npc#definition}.
+ * Menu building ({@link ParticleShader#addNpcMenuOptions}) reads {@link #actions},
+ * {@link #combatLevel}, {@link #attackOptionMode}, and {@link #attackMenuPriority}.
+ */
+final class NpcComposition {
     byte aByte1325;
     static int anInt1326;
     int anInt1327;
@@ -26,12 +29,14 @@ final class DisplayModeManagerContainer206
     static int anInt1341;
     int[] anIntArray1342;
     int anInt1343;
-    int anInt1344;
+    /** Cache / composition id (key into the NPC definition table). */
+    int id;
     boolean aBoolean1345;
     private int anInt1346;
     byte aByte1347;
     DisplayModeManagerContainer347 aClass278_1348;
-    String[] aStringArray1349;
+    /** Right-click options (slots 0..4); "Attack" is special-cased by {@link #attackOptionMode}. */
+    String[] actions;
     short aShort1350 = 0;
     static int anInt1351;
     private short[] aShortArray1352;
@@ -43,7 +48,8 @@ final class DisplayModeManagerContainer206
     private int anInt1358;
     static int anInt1359 = 0;
     private byte aByte1360;
-    int anInt1361;
+    /** NPC combat level shown in the menu tip; {@code -1}/{@code 0} hides the level suffix. */
+    int combatLevel;
     boolean aBoolean1362;
     int anInt1363;
     int anInt1364;
@@ -66,7 +72,14 @@ final class DisplayModeManagerContainer206
     boolean aBoolean1381;
     int anInt1382;
     int anInt1383;
-    byte aByte1384;
+    /**
+     * How Attack is injected into the context menu:
+     * {@code 0} = Attack with other actions (no level-demote path);
+     * {@code 1} = Attack on a separate path so stock clients can +2000 the opcode
+     * when local combat &lt; NPC combat; {@code -1} = unset (post-decode: 1 for
+     * RuneScape game type, else 0).
+     */
+    byte attackOptionMode;
     int anInt1385;
     private LruCache aClass356_1386;
     static int anInt1387;
@@ -78,12 +91,14 @@ final class DisplayModeManagerContainer206
     private short[] aShortArray1393;
     static int anInt1394;
     int anInt1395;
-    boolean aBoolean1396;
+    /** When false, {@link ParticleShader#addNpcMenuOptions} skips this NPC entirely. */
+    boolean interactive;
     boolean aBoolean1397;
     private int anInt1398;
     int anInt1399;
     static int anInt1400;
-    int anInt1401;
+    /** Menu priority for the Attack row (higher = preferred left-click tip). */
+    int attackMenuPriority;
     private int[] anIntArray1402;
     static int anInt1403;
     static int anInt1404;
@@ -97,14 +112,14 @@ final class DisplayModeManagerContainer206
         }
         for (int i_0_ = i; this.anIntArray1377.length > i_0_; i_0_++) {
             if (this.anIntArray1377[i_0_] != -1) {
-                DisplayModeManagerContainer206 class79_1_ = (this.aClass278_1348.method2079(this.anIntArray1377[i_0_], -1));
+                NpcComposition class79_1_ = (this.aClass278_1348.method2079(this.anIntArray1377[i_0_], -1));
                 if (class79_1_.anInt1343 != -1 || class79_1_.anInt1364 != -1 || class79_1_.anInt1327 != -1) return true;
             }
         }
         return false;
     }
 
-    final DisplayModeManagerContainer206 method794(Interface17 interface17, int i) {
+    final NpcComposition method794(Interface17 interface17, int i) {
         anInt1394++;
         int i_2_ = i;
         if (anInt1368 == -1) {
@@ -182,7 +197,7 @@ final class DisplayModeManagerContainer206
                                                 if ((this.anIntArray1377[i_13_]) == 65535) this.anIntArray1377[i_13_] = -1;
                                             }
                                             this.anIntArray1377[1 + i_12_] = i_11_;
-                                        } else if (i == 107) this.aBoolean1396 = false;
+                                        } else if (i == 107) this.interactive = false;
                                         else if (i != 109) {
                                             if (i == 111) this.aBoolean1369 = false;
                                             else if (i == 113) {
@@ -233,14 +248,14 @@ final class DisplayModeManagerContainer206
                                                                         else if (i == 142) this.anInt1383 = class348_sub49.readUnsignedShort(842397944);
                                                                         else if (i != 143) {
                                                                             if (i >= 150 && i < 155) {
-                                                                                this.aStringArray1349[-150 + i] = class348_sub49.readString((byte) -73);
-                                                                                if (!this.aClass278_1348.aBoolean3583) this.aStringArray1349[i + -150] = null;
+                                                                                this.actions[-150 + i] = class348_sub49.readString((byte) -73);
+                                                                                if (!this.aClass278_1348.aBoolean3583) this.actions[i + -150] = null;
                                                                             } else if (i == 155) {
                                                                                 aByte1376 = class348_sub49.readByte(i_4_ ^ ~0x16);
                                                                                 aByte1360 = class348_sub49.readByte(-113);
                                                                                 aByte1330 = class348_sub49.readByte(-112);
                                                                                 aByte1405 = class348_sub49.readByte(-87);
-                                                                            } else if (i == 158) this.aByte1384 = (byte) 1;
+                                                                            } else if (i == 158) this.attackOptionMode = (byte) 1;
                                                                             else if (i != 159) {
                                                                                 if (i == 160) {
                                                                                     int i_21_ = class348_sub49.readUnsignedByte(255);
@@ -270,12 +285,12 @@ final class DisplayModeManagerContainer206
                                                                                         }
                                                                                     } else this.anInt1337 = class348_sub49.readUnsignedByte(255);
                                                                                 } else this.anInt1333 = class348_sub49.readUnsignedByte(i_4_ + 128);
-                                                                            } else this.aByte1384 = (byte) 0;
+                                                                            } else this.attackOptionMode = (byte) 0;
                                                                         } else this.aBoolean1381 = true;
                                                                     } else this.anInt1356 = class348_sub49.readUnsignedByte(i_4_ + 128);
                                                                 } else this.anInt1382 = class348_sub49.readUnsignedShort(i_4_ + 842397817);
                                                             } else this.anInt1336 = class348_sub49.readUnsignedShort(842397944);
-                                                        } else this.anInt1401 = class348_sub49.readUnsignedShort(842397944);
+                                                        } else this.attackMenuPriority = class348_sub49.readUnsignedShort(842397944);
                                                     } else class348_sub49.readUnsignedByte(255);
                                                 } else this.anInt1390 = (class348_sub49.readUnsignedShort(i_4_ ^ 0x3235f887));
                                             } else this.aByte1325 = (class348_sub49.readByte(i_4_ + -245));
@@ -283,9 +298,9 @@ final class DisplayModeManagerContainer206
                                     } else anInt1398 = class348_sub49.readByte(-123);
                                 } else anInt1358 = (class348_sub49.readUnsignedShort(i_4_ + 842397817));
                             } else anInt1346 = class348_sub49.readUnsignedShort(842397944);
-                        } else this.anInt1361 = class348_sub49.readUnsignedShort(842397944);
+                        } else this.combatLevel = class348_sub49.readUnsignedShort(842397944);
                     } else this.aBoolean1397 = false;
-                } else this.aStringArray1349[-30 + i] = class348_sub49.readString((byte) 124);
+                } else this.actions[-30 + i] = class348_sub49.readString((byte) 124);
             } else this.anInt1399 = class348_sub49.readUnsignedByte(i_4_ + 128);
         } else this.name = class348_sub49.readString((byte) 122);
         anInt1357++;
@@ -340,9 +355,9 @@ final class DisplayModeManagerContainer206
         if (anIntArray1402 == null) anIntArray1402 = new int[0];
         if (i >= -75) aByte1376 = (byte) 102;
         anInt1334++;
-        if (this.aByte1384 == -1) {
-            if (RunescapeInfo.RUNESCAPE == this.aClass278_1348.aClass230_3578) this.aByte1384 = (byte) 1;
-            else this.aByte1384 = (byte) 0;
+        if (this.attackOptionMode == -1) {
+            if (RunescapeInfo.RUNESCAPE == this.aClass278_1348.aClass230_3578) this.attackOptionMode = (byte) 1;
+            else this.attackOptionMode = (byte) 0;
         }
     }
 
@@ -350,7 +365,7 @@ final class DisplayModeManagerContainer206
         try {
             anInt1341++;
             if (this.anIntArray1377 != null) {
-                DisplayModeManagerContainer206 class79_42_ = method794(interface17, -1);
+                NpcComposition class79_42_ = method794(interface17, -1);
                 if (class79_42_ == null) return null;
                 return class79_42_.method800(i, class182s, class87, false, class17, i_34_, class261, i_35_, class17_36_, interface17, var_ha, i_37_, is, i_38_, i_39_, i_40_, i_41_);
             }
@@ -470,7 +485,7 @@ final class DisplayModeManagerContainer206
                 if (bool_47_) i_43_ |= 0x200;
                 if (bool_48_) i_43_ |= 0x400;
             }
-            long l = var_ha.anInt4567 << 16 | this.anInt1344;
+            long l = var_ha.anInt4567 << 16 | this.id;
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass278_1348.aClass60_3590) {
                 class64 = (DisplayModeManagerContainer370) this.aClass278_1348.aClass60_3590.get(l, 80);
@@ -541,7 +556,7 @@ final class DisplayModeManagerContainer206
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_43_);
                 synchronized (this.aClass278_1348.aClass60_3590) {
-                    this.aClass278_1348.aClass60_3590.putOne(class64, this.anInt1344 | var_ha.anInt4567 << 16, (byte) -125);
+                    this.aClass278_1348.aClass60_3590.putOne(class64, this.id | var_ha.anInt4567 << 16, (byte) -125);
                 }
             }
             DisplayModeManagerContainer370 class64_82_ = class64.method614((byte) 4, i_43_, true);
@@ -620,7 +635,7 @@ final class DisplayModeManagerContainer206
         try {
             anInt1389++;
             if (this.anIntArray1377 != null) {
-                DisplayModeManagerContainer206 class79_98_ = method794(interface17, -1);
+                NpcComposition class79_98_ = method794(interface17, -1);
                 if (class79_98_ == null) return null;
                 return class79_98_.method803(interface17, var_ha, i, i_94_, class17, class87, i_95_, 104, i_97_);
             }
@@ -630,7 +645,7 @@ final class DisplayModeManagerContainer206
             if (class17 != null && i_95_ != -1) i_99_ |= class17.method263(i_94_, 97, i_95_, true);
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass278_1348.aClass60_3592) {
-                class64 = ((DisplayModeManagerContainer370) (this.aClass278_1348.aClass60_3592.get(var_ha.anInt4567 << 16 | this.anInt1344, 64)));
+                class64 = ((DisplayModeManagerContainer370) (this.aClass278_1348.aClass60_3592.get(var_ha.anInt4567 << 16 | this.id, 64)));
             }
             if (class64 == null || i_99_ != (class64.ua() & i_99_)) {
                 if (class64 != null) i_99_ |= class64.ua();
@@ -670,7 +685,7 @@ final class DisplayModeManagerContainer206
                 if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_99_);
                 synchronized (this.aClass278_1348.aClass60_3592) {
-                    this.aClass278_1348.aClass60_3592.putOne(class64, var_ha.anInt4567 << 16 | this.anInt1344, (byte) -96);
+                    this.aClass278_1348.aClass60_3592.putOne(class64, var_ha.anInt4567 << 16 | this.id, (byte) -96);
                 }
             }
             if (class17 != null && i_95_ != -1) class64 = class17.method269(-9, class64, i_94_, i, i_99_, i_95_);
@@ -696,7 +711,7 @@ final class DisplayModeManagerContainer206
         return class348_sub35.intValue;
     }
 
-    public DisplayModeManagerContainer206() {
+    public NpcComposition() {
         anInt1346 = 128;
         this.anInt1335 = -1;
         this.anInt1337 = 0;
@@ -711,12 +726,12 @@ final class DisplayModeManagerContainer206
         this.anInt1338 = -1;
         this.anInt1363 = 256;
         this.aShort1339 = (short) 0;
-        this.aStringArray1349 = new String[5];
+        this.actions = new String[5];
         anInt1358 = 128;
         this.aByte1353 = (byte) -96;
         this.aBoolean1362 = false;
         this.anInt1343 = -1;
-        this.aByte1384 = (byte) -1;
+        this.attackOptionMode = (byte) -1;
         this.aBoolean1381 = false;
         this.anInt1383 = -1;
         this.name = "null";
@@ -732,15 +747,15 @@ final class DisplayModeManagerContainer206
         this.anInt1392 = 0;
         this.anInt1364 = -1;
         this.anInt1327 = -1;
-        this.anInt1361 = -1;
+        this.combatLevel = -1;
         this.anInt1329 = 32;
         aByte1405 = (byte) 0;
         this.anInt1385 = -1;
         this.anInt1395 = -1;
         this.aBoolean1369 = true;
         this.anInt1399 = 1;
-        this.anInt1401 = -1;
-        this.aBoolean1396 = true;
+        this.attackMenuPriority = -1;
+        this.interactive = true;
         this.aBoolean1397 = true;
         anInt1406 = 0;
     }

@@ -466,12 +466,12 @@ final class ColoredTextBuilder {
                         NodeSub22 class348_sub22 = ((NodeSub22) Component21.aClass356_3654.get(i_77_, -6008));
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
-                            DisplayModeManagerContainer206 class79 = (npc.definition);
+                            NpcComposition class79 = (npc.definition);
                             if (class79.anIntArray1377 != null) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
                             if (class79 != null) {
                                 Component314.anInt3874++;
                                 ParticleSystem class348_sub47 = (ParticleShader.method2148(StaticElementRenderer.aClass351_6443, DisplayModeManagerContainer64.aClass77_9029, -111));
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, class79.anInt1344);
+                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, class79.id);
                                 HashNodeSub14.method3243(-99, class348_sub47);
                             }
                         }

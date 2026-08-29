@@ -34,7 +34,7 @@ final class Component266
         if (i == -3) {
             if (class318_sub1_sub3_sub3 instanceof Npc) {
                 Npc npc = (Npc) class318_sub1_sub3_sub3;
-                if (npc.definition != null) ParticleShader.method2150(((Component72.localPlayer.plane) != (npc.plane)), false, npc);
+                if (npc.definition != null) ParticleShader.addNpcMenuOptions(((Component72.localPlayer.plane) != (npc.plane)), false, npc);
             } else if (class318_sub1_sub3_sub3 instanceof Player) {
                 Player player = ((Player) class318_sub1_sub3_sub3);
                 PlayerState.method3298((byte) 105, ((player.plane) != (Component72.localPlayer.plane)), player);

@@ -91,9 +91,9 @@ final class ExampleCombatScript {
             if (n == null || n.definition == null) {
                 continue;
             }
-            DisplayModeManagerContainer206 def = n.definition;
+            NpcComposition def = n.definition;
             if (def.anIntArray1377 != null) {
-                DisplayModeManagerContainer206 t = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+                NpcComposition t = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (t != null) {
                     def = t;
                 }

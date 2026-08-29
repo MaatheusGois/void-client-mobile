@@ -19,7 +19,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     static int anInt10502;
     static int anInt10503;
     static int anInt10504;
-    DisplayModeManagerContainer206 definition;
+    NpcComposition definition;
     static int anInt10506;
     static int anInt10507;
     static int anInt10508;
@@ -41,7 +41,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     private final boolean method2442(int i) {
         if (i != 1810797122) this.anInt10499 = -103;
         anInt10510++;
-        return (this.definition.aBoolean1396);
+        return (this.definition.interactive);
     }
 
     final void method2380(GraphicsToolkit var_ha, int i, boolean bool, RenderableObject class318_sub1, int i_6_, byte i_7_, int i_8_) {
@@ -144,7 +144,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         } else this.anInt10274 -= (float) this.anInt10274 / 10.0F;
         class101.method891(this.x, (-this.anInt10274 + this.anInt6382 + -20), this.y);
         Component241 class225 = this.method2422((byte) 72);
-        DisplayModeManagerContainer206 class79 = (this.definition.anIntArray1377 != null ? this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.definition);
+        NpcComposition class79 = (this.definition.anIntArray1377 != null ? this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.definition);
         this.aBoolean10324 = false;
         RenderableSub4 class318_sub4 = null;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
@@ -189,7 +189,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     final int method2421(byte i) {
         anInt10495++;
         if ((this.definition.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+            NpcComposition class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1366 != -1) return class79.anInt1366;
         }
         if (i < 113) method2448(null, 88);
@@ -206,7 +206,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     final void method2444(int i, boolean bool, int i_26_, int i_27_, int i_28_, int i_29_) {
         this.plane = this.aByte6376 = (byte) i_29_;
         anInt10515++;
-        if (DisplayModeManagerContainer206.method802(i, i_26_, true)) this.aByte6376++;
+        if (NpcComposition.method802(i, i_26_, true)) this.aByte6376++;
         if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
             this.anIntArray10236 = null;
             this.anInt10286 = -1;
@@ -263,7 +263,7 @@ final class Npc extends DisplayModeManagerContainer58 {
     final int method2425(int i) {
         anInt10496++;
         if ((this.definition.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+            NpcComposition class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1336 != -1) return class79.anInt1336;
         }
         if (i != -1) this.anInt10499 = -69;
@@ -279,7 +279,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         anInt10504++;
         if (i != 200) return 115;
         if ((this.definition.anIntArray1377) != null) {
-            DisplayModeManagerContainer206 class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+            NpcComposition class79 = this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (class79 != null && class79.anInt1390 != -1) return class79.anInt1390;
         }
         if ((this.definition.anInt1390) == -1) return super.method2426(200);
@@ -432,7 +432,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         return true;
     }
 
-    final void method2448(DisplayModeManagerContainer206 class79, int i) {
+    final void method2448(NpcComposition class79, int i) {
         anInt10511++;
         this.definition = class79;
         if (i != -2) this.anInt10512 = 69;

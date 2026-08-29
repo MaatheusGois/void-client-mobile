@@ -234,8 +234,8 @@ final class PacketReader extends CacheNode {
                 }
             } while (false);
             if (!bool_20_ && AudioMixer.anInt3227 == 0) {
-                Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_19_;
-                DisplayModeManagerContainer206.anInt1359 = (1 + DisplayModeManagerContainer206.anInt1359) % 100;
+                Component186.aLongArray4410[NpcComposition.anInt1359] = l_19_;
+                NpcComposition.anInt1359 = (1 + NpcComposition.anInt1359) % 100;
                 String string_22_ = (Component317.escapeAngleBrackets((DefinitionSub32.method3136((byte) 64, Component80.aClass348_Sub49_Sub2_3813)), 23034));
                 if (i == 2 || i == 3) DisplayModeManagerContainer174.method2477("<img=1>" + string_16_, string_22_, (byte) -126, -1, "<img=1>" + string, Component25.method1788((byte) -76, l), 9, 0, string);
                 else if (i != 1) DisplayModeManagerContainer174.method2477(string_16_, string_22_, (byte) -125, -1, string, Component25.method1788((byte) -83, l), 9, 0, string);
@@ -503,7 +503,7 @@ final class PacketReader extends CacheNode {
                     int i_63_ = 256 + 512 * i_61_;
                     int i_64_ = 512 * i_62_ + 256;
                     int i_65_ = i_60_;
-                    if (i_65_ < 3 && DisplayModeManagerContainer206.method802(i_62_, i_61_, true)) i_65_++;
+                    if (i_65_ < 3 && NpcComposition.method802(i_62_, i_61_, true)) i_65_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_38_, i_39_, OpenGlShader.clientCycle, i_60_, i_65_, i_63_, -i_37_ + Component300.method2064(i_63_, i_60_, 11219, i_64_), i_64_, i_61_, i_61_, i_62_, i_62_, i_42_));
                     CacheNodeSub2.aClass262_10492.addTail(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }
@@ -857,8 +857,8 @@ final class PacketReader extends CacheNode {
                 }
             } while (false);
             if (!bool_101_ && AudioMixer.anInt3227 == 0) {
-                Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_100_;
-                DisplayModeManagerContainer206.anInt1359 = (1 + DisplayModeManagerContainer206.anInt1359) % 100;
+                Component186.aLongArray4410[NpcComposition.anInt1359] = l_100_;
+                NpcComposition.anInt1359 = (1 + NpcComposition.anInt1359) % 100;
                 String string_103_ = (Component317.escapeAngleBrackets((DefinitionSub32.method3136((byte) 64, Component80.aClass348_Sub49_Sub2_3813)), 23034));
                 if (i == 2) DisplayModeManagerContainer174.method2477("<img=1>" + string_98_, string_103_, (byte) -127, -1, "<img=1>" + string, null, 7, 0, string);
                 else if (i == 1) DisplayModeManagerContainer174.method2477("<img=0>" + string_98_, string_103_, (byte) -115, -1, "<img=0>" + string, null, 7, 0, string);
@@ -968,8 +968,8 @@ final class PacketReader extends CacheNode {
                 if (i <= 1 && StringCache.isOnIgnoreList(string_114_, 28280)) bool_119_ = true;
             } while (false);
             if (!bool_119_ && AudioMixer.anInt3227 == 0) {
-                Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_118_;
-                DisplayModeManagerContainer206.anInt1359 = (DisplayModeManagerContainer206.anInt1359 + 1) % 100;
+                Component186.aLongArray4410[NpcComposition.anInt1359] = l_118_;
+                NpcComposition.anInt1359 = (NpcComposition.anInt1359 + 1) % 100;
                 String string_121_ = (Component31.aClass355_5900.method3471(i_117_, (byte) -106).method3216(Component80.aClass348_Sub49_Sub2_3813, (byte) 42));
                 if (i == 2) DisplayModeManagerContainer174.method2477("<img=1>" + string_114_, string_121_, (byte) -120, i_117_, "<img=1>" + string, Component25.method1788((byte) 87, l), 20, 0, string);
                 else if (i != 1) DisplayModeManagerContainer174.method2477(string_114_, string_121_, (byte) -111, i_117_, string, Component25.method1788((byte) 80, l), 20, 0, string);
@@ -1355,8 +1355,8 @@ final class PacketReader extends CacheNode {
                 if (i <= 1 && StringCache.isOnIgnoreList(string_175_, 28280)) bool_179_ = true;
             } while (false);
             if (!bool_179_ && AudioMixer.anInt3227 == 0) {
-                Component186.aLongArray4410[DisplayModeManagerContainer206.anInt1359] = l_178_;
-                DisplayModeManagerContainer206.anInt1359 = (DisplayModeManagerContainer206.anInt1359 - -1) % 100;
+                Component186.aLongArray4410[NpcComposition.anInt1359] = l_178_;
+                NpcComposition.anInt1359 = (NpcComposition.anInt1359 - -1) % 100;
                 String string_181_ = (Component31.aClass355_5900.method3471(i_177_, (byte) -93).method3216(Component80.aClass348_Sub49_Sub2_3813, (byte) 62));
                 if (i == 2) DisplayModeManagerContainer174.method2477("<img=1>" + string_175_, string_181_, (byte) -110, i_177_, "<img=1>" + string, null, 18, 0, string);
                 else if (i == 1) DisplayModeManagerContainer174.method2477("<img=0>" + string_175_, string_181_, (byte) -112, i_177_, "<img=0>" + string, null, 18, 0, string);

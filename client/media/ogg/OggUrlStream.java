@@ -93,7 +93,7 @@ final class OggUrlStream extends OggStream {
         if (Component205.settingsCookie != null) string_5_ = "/p=" + Component205.settingsCookie;
         String string_6_ = ("http://" + string + string_4_ + "/l=" + ObjectDeserializer.languageId + "/a=" + Connection.affiliateId + string_5_ + "/j" + (!Component156.aBoolean3697 ? "0" : "1") + ",o" + (NodeSub37.aBoolean6997 ? "1" : "0") + ",a2");
         try {
-            DisplayModeManagerContainer206.aClient1367.getAppletContext().showDocument(new URL(string_6_), "_self");
+            NpcComposition.aClient1367.getAppletContext().showDocument(new URL(string_6_), "_self");
             if (i_3_ >= -17) aClass297_8992 = null;
         } catch (Exception exception) {
             return false;

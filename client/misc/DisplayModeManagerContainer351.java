@@ -70,7 +70,7 @@ final class DisplayModeManagerContainer351
                     class318_sub1_sub2_sub1.x = i_2_ << 9;
                     class318_sub1_sub2_sub1.anInt6382 = i_8_;
                     class318_sub1_sub2_sub1.aByte6376 = (byte) i_3_;
-                    if (DisplayModeManagerContainer206.method802(i, i_2_, true)) class318_sub1_sub2_sub1.aByte6376++;
+                    if (NpcComposition.method802(i, i_2_, true)) class318_sub1_sub2_sub1.aByte6376++;
                     AbstractShaderSub2.method3536(i_3_, i_2_, i, i_8_, class318_sub1_sub2_sub1);
                 }
             }

@@ -62,7 +62,7 @@ final class DisplayModeManagerContainer348
         player.anIntArray10317[0] = i_7_ + -Component330.regionTileY;
         player.y = (((player.anIntArray10317[0]) << 9) - -(player.method2436((byte) 85) << 8));
         Component117.anInt4372 = player.plane = player.aByte6376 = i_5_;
-        if (DisplayModeManagerContainer206.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
+        if (NpcComposition.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
         if (Component101.aClass348_Sub49Array2105[i_3_] != null) player.method2452((byte) 84, (Component101.aClass348_Sub49Array2105[i_3_]));
         ShaderCompilerSub1.anInt6513 = 0;
         ShaderProgramSub7.anIntArray6290[ShaderCompilerSub1.anInt6513++] = i_3_;

@@ -185,7 +185,7 @@ final class SceneNode extends Node {
                     int i_12_ = (DisplayModeManagerContainer345.method214((this.aNpc_6691), -1));
                     if (i_12_ != i_11_) {
                         this.anInt6685 = i_12_;
-                        DisplayModeManagerContainer206 class79 = (this.aNpc_6691.definition);
+                        NpcComposition class79 = (this.aNpc_6691.definition);
                         if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                         if (class79 == null) {
                             this.anInt6677 = this.anInt6694 = 0;

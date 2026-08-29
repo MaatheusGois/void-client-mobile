@@ -141,9 +141,9 @@ final class HashTable {
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
                             if (npc.method2445((byte) -126) && ((npc.plane) == (Component72.localPlayer.plane))) {
-                                DisplayModeManagerContainer206 class79 = (npc.definition);
+                                NpcComposition class79 = (npc.definition);
                                 if (class79 != null && (class79.anIntArray1377 != null)) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
-                                if (class79 != null && class79.aBoolean1397 && class79.aBoolean1396) {
+                                if (class79 != null && class79.aBoolean1397 && class79.interactive) {
                                     int i_23_ = (-(i_4_ / 128) + (npc.x) / 128);
                                     int i_24_ = ((npc.y) / 128 + -(i_3_ / 128));
                                     if (class79.anInt1383 != -1) RenderableObject.method2385(class46, i_1_, var_aa, class79.anInt1383, i_23_, i, (byte) -73, i_24_, var_ha);

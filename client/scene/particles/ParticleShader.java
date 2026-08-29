@@ -201,19 +201,30 @@ final class ParticleShader extends ShaderProgram {
         anInt6229++;
     }
 
-    static final void method2150(boolean bool, boolean bool_14_, Npc npc) {
+    /**
+     * Builds right-click / left-click tip rows for {@code npc} (Attack, Talk-to, Examine, …).
+     * <p>
+     * When {@link NpcComposition#attackOptionMode} is {@code 1}, Attack is added on a
+     * separate path that stock clients use to demote (+2000 opcode) if the local
+     * player's {@link Player#combatLevel} is below the NPC's. That demote is currently
+     * commented out — no combat-level attack preferences in this client yet.
+     *
+     * @param bool     true when NPC is on a different plane than the local player
+     * @param bool_14_ examine-only / reduced menu flag
+     */
+    static final void addNpcMenuOptions(boolean bool, boolean bool_14_, Npc npc) {
         anInt6226++;
         if (DisplayModeManagerContainer306.menuEntryCount < 400) {
-            DisplayModeManagerContainer206 class79 = (npc.definition);
+            NpcComposition class79 = (npc.definition);
             if (class79.anIntArray1377 != null) {
                 class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                 if (class79 == null) return;
             }
-            if (class79.aBoolean1396) {
+            if (class79.interactive) {
                 String string = class79.name;
-                if (class79.anInt1361 != 0) {
+                if (class79.combatLevel != 0) {
                     String string_15_ = ((WorldNameText.STELLARDAWN != PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544));
-                    string += ((WorldNameText.method250((Component72.localPlayer.anInt10516), true, class79.anInt1361)) + " (" + string_15_ + class79.anInt1361 + ")");
+                    string += ((WorldNameText.method250((Component72.localPlayer.combatLevel), true, class79.combatLevel)) + " (" + string_15_ + class79.combatLevel + ")");
                 }
                 if (r.aBoolean9722 && !bool) {
                     Component355 class254 = (Component163.anInt3176 == -1 ? null : MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364));
@@ -223,13 +234,13 @@ final class ParticleShader extends ShaderProgram {
                     }
                 }
                 if (!bool) {
-                    String[] strings = class79.aStringArray1349;
+                    String[] strings = class79.actions;
                     if (NodeBaseSub2.aBoolean9783) strings = Component188.method1847(strings, 0);
-                    String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.anInt1344);
+                    String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.id);
                     String attack = FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
                     if (strings != null) {
                         for (int i = 4; i >= 0; i--) {
-                            if (strings[i] != null && (class79.aByte1384 == 0 || !(strings[i].equalsIgnoreCase(attack)))) {
+                            if (strings[i] != null && (class79.attackOptionMode == 0 || !(strings[i].equalsIgnoreCase(attack)))) {
                                 boolean isAttack = strings[i].equalsIgnoreCase(attack);
                                 int i_16_ = 0;
                                 if (i == 0) i_16_ = 25;
@@ -243,7 +254,7 @@ final class ParticleShader extends ShaderProgram {
                                 if (preferred != null && strings[i].equalsIgnoreCase(preferred)) {
                                     i_17_ = 0x7ffffffe; // saved default wins left-click
                                 } else if (isAttack) {
-                                    i_17_ = class79.anInt1401;
+                                    i_17_ = class79.attackMenuPriority;
                                     // Swap active → bury Attack like the level-deprioritize path.
                                     if (preferred != null) {
                                         i_16_ += 2000;
@@ -255,12 +266,15 @@ final class ParticleShader extends ShaderProgram {
                             }
                         }
                     }
-                    if (class79.aByte1384 == 1 && strings != null) {
+                    if (class79.attackOptionMode == 1 && strings != null) {
                         for (int i = 4; i >= 0; i--) {
                             if (strings[i] != null && (strings[i].equalsIgnoreCase(attack))) {
                                 // Always deprioritize Attack when a left-click swap is active.
                                 short i_18_ = (short) (preferred != null ? 2000 : 0);
-                                if (preferred == null && (Component72.localPlayer.anInt10516) < class79.anInt1361) i_18_ = (short) 2000;
+                                // Stock: demote Attack when local combat level < NPC combat level
+                                // so left-click skips stronger mobs. Disabled for now — the client
+                                // does not expose combat-level attack preferences yet.
+                                // if (preferred == null && (Component72.localPlayer.combatLevel) < class79.combatLevel) i_18_ = (short) 2000;
                                 short i_19_ = 0;
                                 if (i == 0) i_19_ = (short) 25;
                                 if (i == 1) i_19_ = (short) 20;
@@ -269,7 +283,7 @@ final class ParticleShader extends ShaderProgram {
                                 if (i == 4) i_19_ = (short) 60;
                                 if (i_19_ != 0) i_19_ += i_18_;
                                 Component63.anInt4510++;
-                                int attackPri = preferred != null ? 0 : class79.anInt1401;
+                                int attackPri = preferred != null ? 0 : class79.attackMenuPriority;
                                 DisplayModeManagerContainer368.addMenuEntry(false, "<col=ffff00>" + string, 0, (byte) -101, false, 0, -1, true, i_19_, npc.anInt10290, strings[i], npc.anInt10290, attackPri);
                             }
                         }
@@ -278,7 +292,7 @@ final class ParticleShader extends ShaderProgram {
                 Component275.anInt2690++;
                 int npcX = (npc.x >> 9) + NodeBaseSub2.regionTileX - npc.definition.anInt1399 + 1;
                 int npcY = (npc.y >> 9) + Component330.regionTileY - npc.definition.anInt1399 + 1;
-                DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.anInt1344, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544), npc.anInt10290, CookieManager.anInt6299);
+                DisplayModeManagerContainer368.addMenuEntry(bool, "<col=ffff00>" + string + Loader.getDebug(class79.id, npcX, npcY, npc.plane), 0, (byte) -105, bool_14_, 0, -1, true, 1008, npc.anInt10290, FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544), npc.anInt10290, CookieManager.anInt6299);
                 // Last options: "Default click" cascade (Pickpocket → left-click, etc.)
                 if (!bool) {
                     DefaultClickSwapper.injectNpcMenu(npc, class79);

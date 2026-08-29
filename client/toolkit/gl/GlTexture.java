@@ -193,11 +193,11 @@ class GlTexture extends AbstractGlTexture {
         for (; ; ) {
             try {
                 Image image = Toolkit.getDefaultToolkit().createImage(is);
-                MediaTracker mediatracker = new MediaTracker(DisplayModeManagerContainer206.aClient1367);
+                MediaTracker mediatracker = new MediaTracker(NpcComposition.aClient1367);
                 mediatracker.addImage(image, 0);
                 mediatracker.waitForAll();
-                int i_58_ = image.getWidth(DisplayModeManagerContainer206.aClient1367);
-                int i_59_ = image.getHeight(DisplayModeManagerContainer206.aClient1367);
+                int i_58_ = image.getWidth(NpcComposition.aClient1367);
+                int i_59_ = image.getHeight(NpcComposition.aClient1367);
                 if (mediatracker.isErrorAny() || i_58_ < 0 || i_59_ < 0) throw new RuntimeException("");
                 int[] is_60_ = new int[i_59_ * i_58_];
                 PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_58_, i_59_, is_60_, 0, i_58_);

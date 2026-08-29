@@ -194,7 +194,7 @@ final class ColoredText extends Component339 {
                                             int i_38_ = ((npc.x) - ((npc.definition.anInt1399) + -1 << 8));
                                             int i_39_ = (-((-1 + (npc.definition.anInt1399)) << 8) + (npc.y));
                                             if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.method2436((byte) 68))) >= (npc.definition.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.method2436((byte) 97))) >= (npc.definition.anInt1399))) {
-                                                ParticleShader.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc);
+                                                ParticleShader.addNpcMenuOptions(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc);
                                                 npc.anInt10215 = OpenGlShader.clientCycle;
                                             }
                                         }
@@ -232,7 +232,7 @@ final class ColoredText extends Component339 {
                                                 int i_49_ = (-((npc_48_.definition.anInt1399) - 1 << 8) + (npc_48_.x));
                                                 int i_50_ = ((npc_48_.y) + -((npc_48_.definition.anInt1399) - 1 << 8));
                                                 if (i_49_ >= i_45_ && ((npc_48_.definition.anInt1399) <= ((npc.definition.anInt1399) - (-i_45_ + i_49_ >> 9))) && (i_46_ <= i_50_) && ((npc_48_.definition.anInt1399) <= ((npc.definition.anInt1399) + -(i_50_ + -i_46_ >> 9)))) {
-                                                    ParticleShader.method2150(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc_48_);
+                                                    ParticleShader.addNpcMenuOptions(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc_48_);
                                                     npc_48_.anInt10215 = (OpenGlShader.clientCycle);
                                                 }
                                             }
@@ -253,7 +253,7 @@ final class ColoredText extends Component339 {
                                     }
                                 }
                                 if (OpenGlShader.clientCycle == npc.anInt10215) continue;
-                                ParticleShader.method2150((class318_sub4.aClass318_Sub1_6410.plane != (Component72.localPlayer.plane)), false, npc);
+                                ParticleShader.addNpcMenuOptions((class318_sub4.aClass318_Sub1_6410.plane != (Component72.localPlayer.plane)), false, npc);
                                 npc.anInt10215 = OpenGlShader.clientCycle;
                             }
                         }

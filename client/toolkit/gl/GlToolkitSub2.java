@@ -2922,7 +2922,7 @@ final class GlToolkitSub2
         TheoraVideoPlayer.anInt1497 = 0;
         int[] is = ShaderProgramSub7.anIntArray6290;
         for (int i_322_ = 0; (i_322_ < Component324.anInt2057 + i_321_); i_322_++) {
-            DisplayModeManagerContainer206 class79 = null;
+            NpcComposition class79 = null;
             DisplayModeManagerContainer58 class318_sub1_sub3_sub3;
             if (i_321_ > i_322_) class318_sub1_sub3_sub3 = (InterfaceRenderer.players[is[i_322_]]);
             else {

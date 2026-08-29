@@ -164,7 +164,7 @@ public final class client extends Applet_Sub1 {
         }
         Component223.aClass161_125 = MenuOpener.aClass161_4839;
         try {
-            DefinitionSub27.aClipboard9357 = DisplayModeManagerContainer206.aClient1367.getToolkit().getSystemClipboard();
+            DefinitionSub27.aClipboard9357 = NpcComposition.aClient1367.getToolkit().getSystemClipboard();
         } catch (Exception exception) {
             /* empty */
         }
@@ -303,7 +303,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer77.method1096(i ^ 0x11);
         Component245.method171((byte) 72);
         s.method3988(i + -182);
-        DisplayModeManagerContainer206.method804(-3752);
+        NpcComposition.method804(-3752);
         ItemDefinition.method1564(104);
         BitmapFont.method2572((byte) 23);
         RandomAccessFileReader.clearStatics((byte) -71);
@@ -920,7 +920,7 @@ public final class client extends Applet_Sub1 {
                 GraphicsToolkit.anInt4583 = 0;
                 Component19.aString8605 = null;
                 client var_client = new client();
-                DisplayModeManagerContainer206.aClient1367 = var_client;
+                NpcComposition.aClient1367 = var_client;
                 var_client.startFromFrame(Component53.currentBuildType.getId(0) + 32, 1024, false, 634, 37, (PacketReader.currentGameType.domain), 23499, 768);
                 RSACipher.aFrame4904.setLocation(40, 40);
             } catch (Exception exception) {
@@ -1037,7 +1037,7 @@ public final class client extends Applet_Sub1 {
                 DisplayModeManagerContainer23.anInt1524 = 640;
                 GlToolkitSub2.anInt7666 = 480;
             }
-            DisplayModeManagerContainer206.aClient1367 = this;
+            NpcComposition.aClient1367 = this;
             this.startFromApplet(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
         }
     }
@@ -1244,7 +1244,7 @@ public final class client extends Applet_Sub1 {
                                                 DisplayModeManagerContainer87.aBoolean3103 = true;
                                                 DefinitionSub26.anInt9349 = is[0];
                                                 InputStream_Sub2.anInt85 = is[1];
-                                                DisplayModeManagerContainer206.anInt1404 = is[2];
+                                                NpcComposition.anInt1404 = is[2];
                                             }
                                             HashNode.anInt7059 = 1;
                                             NpcDefinition.aBoolean6788 = false;

@@ -67,7 +67,7 @@ final class DisplayModeManagerContainer172
         NodeSub12.aClass105Array6742 = null;
         Component49.aClass105Array4679 = null;
         if (i != -29776) method370(true);
-        DisplayModeManagerContainer206.aClass105_1365 = null;
+        NpcComposition.aClass105_1365 = null;
         Component361.aClass105Array367 = null;
         Component379.aClass105Array5933 = null;
         Component33.aClass105Array2640 = null;

@@ -29,7 +29,7 @@ final class RenderableSub2
                             NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) (class348_sub42_sub12.identifier), -6008)));
                             if (class348_sub22 != null) {
                                 Npc npc = (class348_sub22.npc);
-                                DisplayModeManagerContainer206 class79 = (npc.definition);
+                                NpcComposition class79 = (npc.definition);
                                 if (class79.anIntArray1377 != null) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
                                 if (class79 != null) is = class79.anIntArray1342;
                             }

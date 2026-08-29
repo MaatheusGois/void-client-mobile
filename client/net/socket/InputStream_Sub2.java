@@ -44,7 +44,7 @@ final class InputStream_Sub2 extends InputStream {
                     int i_15_ = 512 * i_9_ - -256;
                     int i_16_ = 256 + 512 * i_10_;
                     int i_17_ = GradientPreset.anInt9200;
-                    if (i_17_ < 3 && DisplayModeManagerContainer206.method802(i_10_, i_9_, true)) i_17_++;
+                    if (i_17_ < 3 && NpcComposition.method802(i_10_, i_9_, true)) i_17_++;
                     DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (new DisplayModeManagerContainer104(i_11_, i_13_, OpenGlShader.clientCycle, GradientPreset.anInt9200, i_17_, i_15_, Component300.method2064(i_15_, GradientPreset.anInt9200, 11219, i_16_) + -i_12_, i_16_, i_9_, i_9_, i_10_, i_10_, i_14_));
                     CacheNodeSub2.aClass262_10492.addTail(new PauseHandler(class318_sub1_sub3_sub4), -20180);
                 }

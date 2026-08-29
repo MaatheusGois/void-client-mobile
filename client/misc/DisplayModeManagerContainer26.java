@@ -138,13 +138,13 @@ final class DisplayModeManagerContainer26
     }
 
     static final void method826(int i, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, GraphicsToolkit var_ha) {
-        if ((RadixParser.aClass105_2309 == null || RSARequest.aClass105_9658 == null || RSARequest.aClass105_9659 == null) && Component158.aClass45_322.isSingletonFileReady(false, DisplayModeManagerContainer58.anInt10257) && Component158.aClass45_322.isSingletonFileReady(false, Component55.anInt3937) && Component158.aClass45_322.isSingletonFileReady(false, DisplayModeManagerContainer206.anInt1387)) {
+        if ((RadixParser.aClass105_2309 == null || RSARequest.aClass105_9658 == null || RSARequest.aClass105_9659 == null) && Component158.aClass45_322.isSingletonFileReady(false, DisplayModeManagerContainer58.anInt10257) && Component158.aClass45_322.isSingletonFileReady(false, Component55.anInt3937) && Component158.aClass45_322.isSingletonFileReady(false, NpcComposition.anInt1387)) {
             Component170 class207 = Component170.method1521(Component158.aClass45_322, Component55.anInt3937, 0);
             RSARequest.aClass105_9658 = var_ha.method3691(class207, true);
             class207.method1518();
             DisplayModeManagerContainer74.aClass105_4808 = var_ha.method3691(class207, true);
             RadixParser.aClass105_2309 = (var_ha.method3691(Component170.method1521(Component158.aClass45_322, DisplayModeManagerContainer58.anInt10257, 0), true));
-            Component170 class207_29_ = Component170.method1521(Component158.aClass45_322, DisplayModeManagerContainer206.anInt1387, 0);
+            Component170 class207_29_ = Component170.method1521(Component158.aClass45_322, NpcComposition.anInt1387, 0);
             RSARequest.aClass105_9659 = var_ha.method3691(class207_29_, true);
             class207_29_.method1518();
             Component338.aClass105_1706 = var_ha.method3691(class207_29_, true);

@@ -338,7 +338,7 @@ final class ClientSystemInfo extends Node {
                         if (DisplayModeManagerContainer87.aBoolean3103) {
                             Component122.anInt1568++;
                             ParticleSystem class348_sub47 = ParticleShader.method2148((GlToolkitSub2.aClass351_7715), (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 117, (InputStream_Sub2.anInt85 << 14 | (DefinitionSub26.anInt9349 << 28) | DisplayModeManagerContainer206.anInt1404));
+                            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 117, (InputStream_Sub2.anInt85 << 14 | (DefinitionSub26.anInt9349 << 28) | NpcComposition.anInt1404));
                             HashNodeSub14.method3243(30, class348_sub47);
                             DisplayModeManagerContainer87.aBoolean3103 = false;
                         }

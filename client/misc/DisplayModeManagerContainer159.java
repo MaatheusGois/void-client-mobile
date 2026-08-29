@@ -52,7 +52,7 @@ final class DisplayModeManagerContainer159
             int i_9_ = -Component330.regionTileY + i_3_ + (i_7_ << 6);
             player.aByteArray10321[0] = Component293.aByteArray3300[i];
             player.plane = player.aByte6376 = (byte) i_5_;
-            if (DisplayModeManagerContainer206.method802(i_9_, i_8_, true)) player.aByte6376++;
+            if (NpcComposition.method802(i_9_, i_8_, true)) player.aByte6376++;
             player.method2449(i_9_, i_8_, (byte) 102);
             player.aBoolean10539 = false;
             NpcDefinition.aClass359Array6802[i] = null;

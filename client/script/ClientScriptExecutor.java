@@ -984,14 +984,14 @@ final class ClientScriptExecutor {
                 ToolbarRefreshDefinition.anInt9231 = anIntArray1149[anInt1173 + 5];
                 DisplayModeManagerContainer58.anInt10257 = anIntArray1149[anInt1173 + 6];
                 Component55.anInt3937 = anIntArray1149[anInt1173 + 7];
-                DisplayModeManagerContainer206.anInt1387 = anIntArray1149[anInt1173 + 8];
+                NpcComposition.anInt1387 = anIntArray1149[anInt1173 + 8];
                 StringDefinition.anInt9586 = anIntArray1149[anInt1173 + 9];
                 Component2.anInt8363 = anIntArray1149[anInt1173 + 10];
                 Component158.aClass45_322.isSingletonFileReady(false, BuildType.anInt2996);
                 Component158.aClass45_322.isSingletonFileReady(false, ToolbarRefreshDefinition.anInt9231);
                 Component158.aClass45_322.isSingletonFileReady(false, DisplayModeManagerContainer58.anInt10257);
                 Component158.aClass45_322.isSingletonFileReady(false, Component55.anInt3937);
-                Component158.aClass45_322.isSingletonFileReady(false, DisplayModeManagerContainer206.anInt1387);
+                Component158.aClass45_322.isSingletonFileReady(false, NpcComposition.anInt1387);
                 RSARequest.aClass105_9659 = Component338.aClass105_1706 = RadixParser.aClass105_2309 = null;
                 OutputStream_Sub2.aClass105_106 = Component221.aClass105_1800 = NodeSub5.aClass105_6627 = null;
                 RSARequest.aClass105_9658 = DisplayModeManagerContainer74.aClass105_4808 = null;
@@ -3925,7 +3925,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 3326) {
-                    anIntArray1149[anInt1173++] = (Component72.localPlayer.anInt10516);
+                    anIntArray1149[anInt1173++] = (Component72.localPlayer.combatLevel);
                     return;
                 }
                 if (i == 3327) {

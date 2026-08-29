@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer345
 
     static final int method214(Npc npc, int i) {
         anInt163++;
-        DisplayModeManagerContainer206 class79 = (npc.definition);
+        NpcComposition class79 = (npc.definition);
         if (class79.anIntArray1377 != null) {
             class79 = class79.method794(DisplayModeManagerContainer58.aClass170_10209, i);
             if (class79 == null) return -1;
