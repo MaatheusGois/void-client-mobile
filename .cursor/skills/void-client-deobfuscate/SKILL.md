@@ -154,3 +154,4 @@ Physical iPad: skill **`run-mobile-device`** → `bash .cursor/skills/run-mobile
 - Assuming desktop compile proves mobile input/viewport still works (reflection fails silently)
 - Committing unprompted
 - Marking “deob complete” while `count_methods.py` still shows thousands
+- If the member is looked up by **string reflection** in `voidawt.AwtHost` or `ServerPrefs`, update those strings in the same change (failures are swallowed — camera/viewport/server-picker die silently). Gate: `python3 .cursor/skills/void-client-deobfuscate/scripts/check_reflection.py`.
