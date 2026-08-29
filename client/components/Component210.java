@@ -228,12 +228,18 @@ class Component210
         if (Exception_Sub1.aClass255_112 == null) {
             return cmd;
         }
-        NumberFormatter def = Exception_Sub1.aClass255_112.method1940(0, id);
-        if (def == null || def.aString2795 == null || def.aString2795.length() == 0
-                || "null".equals(def.aString2795)) {
+        try {
+            // First arg is obfuscator junk — must keep (junk-13)/59 != 0 or method1940 divides by zero.
+            NumberFormatter def = Exception_Sub1.aClass255_112.method1940(90, id);
+            if (def == null || def.aString2795 == null || def.aString2795.length() == 0
+                    || "null".equals(def.aString2795)) {
+                return cmd;
+            }
+            return trimmed + " (" + def.aString2795 + ")";
+        } catch (RuntimeException e) {
+            // Never block console submit on a bad/missing item def.
             return cmd;
         }
-        return trimmed + " (" + def.aString2795 + ")";
     }
 
     /**

@@ -108,10 +108,11 @@ final class PauseTimer {
             }
             Component221.anInt1794 = -1;
         }
-        if (Component122.anInt1565 != 0) {
-            Component94.consoleScroll -= Component122.anInt1565 * 5;
+        // Wheel toward user (positive) → newer lines (lower consoleScroll); away → older.
+        if (Component122.mouseWheelDelta != 0) {
+            Component94.consoleScroll -= Component122.mouseWheelDelta * 5;
             if (Component94.consoleScroll >= Component14.consoleLineCount) Component94.consoleScroll = -1 + Component14.consoleLineCount;
-            Component122.anInt1565 = 0;
+            Component122.mouseWheelDelta = 0;
             if (Component94.consoleScroll < 0) Component94.consoleScroll = 0;
         }
         if (i >= 124) {

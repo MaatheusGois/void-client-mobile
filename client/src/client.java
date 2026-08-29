@@ -1152,11 +1152,11 @@ public final class client extends Applet_Sub1 {
                             DisplayModeManagerContainer172.anInt558 = i_44_;
                         }
                         if (class46.aBoolean682 || class46.anInt765 != 0) {
-                            if (bool && Component122.anInt1565 != 0 && (class46.anObjectArray803 != null)) {
+                            if (bool && Component122.mouseWheelDelta != 0 && (class46.anObjectArray803 != null)) {
                                 NodeSub36 class348_sub36 = new NodeSub36();
                                 class348_sub36.aBoolean6993 = true;
                                 class348_sub36.aClass46_6989 = class46;
-                                class348_sub36.anInt6995 = Component122.anInt1565;
+                                class348_sub36.anInt6995 = Component122.mouseWheelDelta;
                                 class348_sub36.anObjectArray6987 = class46.anObjectArray803;
                                 NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                                 Component233.overGameScreen = false;
@@ -1774,7 +1774,7 @@ public final class client extends Applet_Sub1 {
                     Component193.anInt3246++;
                 }
             }
-            Component122.anInt1565 = 0;
+            Component122.mouseWheelDelta = 0;
             Component233.scrollWheelDiff = 0;
             for (NodeSub45 class348_sub45 = AbstractGlTextureSub4.mouseHandler.popEvent(0); class348_sub45 != null; class348_sub45 = AbstractGlTextureSub4.mouseHandler.popEvent(0)) {
                 int i_111_ = class348_sub45.getEventType(86);
@@ -1785,9 +1785,10 @@ public final class client extends Applet_Sub1 {
                             if (Component327.aClass262_8744.size(0) > 10) Component327.aClass262_8744.peekFirst(8);
                         }
                     } else {
-                        int anInt1565 = class348_sub45.getClickCount(0);
-                        Component233.scrollWheelDiff = anInt1565;
-                        Component122.anInt1565 += anInt1565;
+                        // Event type 6 = mouse wheel; notches feed UI scroll + console + plane.
+                        int notches = class348_sub45.getClickCount(0);
+                        Component233.scrollWheelDiff = notches;
+                        Component122.mouseWheelDelta += notches;
                     }
                 } else CacheNodeSub1.aClass262_10479.addTail(class348_sub45, -20180);
             }

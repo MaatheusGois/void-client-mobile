@@ -8,7 +8,14 @@ final class Component122
  * Evidence: root class; no distinctive extends/strings
  */ {
     static BrowserUrlOpener aClass348_Sub16_Sub3_1564;
-    static int anInt1565;
+    /**
+     * Frame-accumulated mouse-wheel notches (event type 6 / {@code getClickCount}).
+     * Positive ≈ wheel toward user. Reset each input drain in {@code client}.
+     * Consumers: interface scroll scripts, console history ({@link PauseTimer}),
+     * Ctrl+Shift plane change ({@link ClientSystemInfo}). Sibling per-event value:
+     * {@link Component233#scrollWheelDiff}.
+     */
+    static int mouseWheelDelta;
     static int[][] anIntArrayArray1566 = {{0, 2, 4, 6}, {6, 0, 2, 3, 5, 3}, {6, 0, 2, 4}, {2, 5, 6, 1}, {0, 2, 6}, {6, 0, 2}, {5, 6, 0, 1, 2, 4}, {7, 7, 1, 2, 4, 6}, {2, 4, 4, 7}, {6, 6, 4, 0, 1, 1, 3, 3}, {0, 2, 2, 6, 6, 4}, {0, 2, 2, 3, 7, 0, 4, 3}, {0, 2, 4, 6}};
     static int anInt1567;
     static int anInt1568;
@@ -46,6 +53,6 @@ final class Component122
     }
 
     static {
-        anInt1565 = 0;
+        mouseWheelDelta = 0;
     }
 }

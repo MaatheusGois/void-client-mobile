@@ -204,7 +204,7 @@ final class BuildInfo {
      * Minimum height of the {@code -->} write strip (keyboard open zone).
      * Larger than the font metrics so the soft-keyboard tap target is easy on mobile.
      */
-    private static final int CONSOLE_PROMPT_MIN_H = 56;
+    private static final int CONSOLE_PROMPT_MIN_H = 30;
     /** Ignore a second re-run within this many client cycles (~0.5s at 50fps). */
     private static final int CONSOLE_RERUN_DEBOUNCE = 25;
 
@@ -419,9 +419,12 @@ final class BuildInfo {
                         consoleGestureDragged = true;
                     }
                     int pitch = consoleCellPitch();
-                    // Finger up (my decreases) → older lines (higher scroll index).
+                    // Natural mobile scroll (content follows finger): finger down → older
+                    // history (higher consoleScroll). Opposite of the old inverted sign.
+                    // Wheel path: PauseTimer uses mouseWheelDelta the other way around
+                    // (positive notches → lower scroll) — same end UX as “scroll down”.
                     setConsoleScroll(consoleGestureStartScroll
-                            + (consoleGestureStartY - my) / pitch);
+                            + (my - consoleGestureStartY) / pitch);
                 } else {
                     // Release / injectLeftClick same-frame: short tap re-runs a --> cell.
                     // Does not open the keyboard — that is prompt-only on the native host.

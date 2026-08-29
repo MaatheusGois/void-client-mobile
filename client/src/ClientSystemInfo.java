@@ -374,8 +374,9 @@ final class ClientSystemInfo extends Node {
                         }
                         if (Component39.aClass46_2249 == null) HashNode.anInt7059 = 0;
                         if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
-                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, i ^ ~0x2cd5) && Component280.aClass346_2449.isKeyDown(81, -121) && Component122.anInt1565 != 0) {
-                            int i_30_ = ((Component72.localPlayer.plane) - Component122.anInt1565);
+                        // Ctrl+Shift + wheel: change local plane (debug teleport height).
+                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, i ^ ~0x2cd5) && Component280.aClass346_2449.isKeyDown(81, -121) && Component122.mouseWheelDelta != 0) {
+                            int i_30_ = ((Component72.localPlayer.plane) - Component122.mouseWheelDelta);
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
                             } else i_30_ = 0;
