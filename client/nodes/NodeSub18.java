@@ -62,7 +62,7 @@ final class NodeSub18
         DefinitionSub25.aClass150_9342.method1206((byte) -37);
         GradientPreset.aClass263_9195.method2012(-23828);
         Component291.aClass278_2529.method2078(-6080);
-        Exception_Sub1.aClass255_112.method1939(-110);
+        Exception_Sub1.itemDefinitions.method1939(-110);
         RunescapeInfo.aClass87_191.method834((byte) -116);
         NsnDefinition.aClass319_9245.method2546(60);
         Component267.aClass194_2981.method1445(64);

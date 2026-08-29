@@ -84,7 +84,7 @@ final class ColoredText extends Component339 {
             int i_10_;
             int i_11_;
             int i_12_;
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 HashTable.method1010(false, false);
                 class101 = var_ha.method3640();
                 int[] is = var_ha.Y();
@@ -155,13 +155,13 @@ final class ColoredText extends Component339 {
                     }
                 }
             }
-            if (Component210.aBoolean5300) DebugPanicSub1.method2129((byte) 86);
-            for (int i_27_ = 0; (i_27_ < (!Component210.aBoolean5300 ? 1 : 2)); i_27_++) {
+            if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 86);
+            for (int i_27_ = 0; (i_27_ < (!Component210.gameCanvasAttached ? 1 : 2)); i_27_++) {
                 boolean bool = i_27_ == 0;
                 DisplayModeManagerContainer154 class76 = (bool ? DisplayModeManagerContainer5.aClass76_1208 : PacketReader.aClass76_10436);
                 int i_28_ = i;
                 int i_29_ = i_4_;
-                if (Component210.aBoolean5300) {
+                if (Component210.gameCanvasAttached) {
                     HashTable.method1010(false, bool);
                     i_28_ += Component221.method1082(-92, bool);
                     i_29_ += OggStream.method2960(bool, -48);
@@ -265,12 +265,12 @@ final class ColoredText extends Component339 {
                                 int i_57_ = 0;
                                 NodeSub34 class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.last(-92));
                                 while (class348_sub34 != null) {
-                                    NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(79, (class348_sub34.anInt6973)));
+                                    ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(79, (class348_sub34.anInt6973)));
                                     if (r.aBoolean9722 && ((Component72.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) {
                                         Component355 class254 = (Component163.anInt3176 != -1 ? (MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364)) : null);
                                         if ((PauseTimer.anInt500 & 0x1) != 0 && (class254 == null || ((class254.anInt3256) != (class213.method1567((class254.anInt3256), 29, Component163.anInt3176))))) {
                                             Component263.anInt1555++;
-                                            DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=ff9040>" + (class213.aString2795)), i_32_, (byte) -76, false, i_33_, -1, true, 49, i_57_, DisplayModeManagerContainer332.aString5001, class348_sub34.anInt6973, (Component182.anInt9747));
+                                            DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=ff9040>" + (class213.itemName)), i_32_, (byte) -76, false, i_33_, -1, true, 49, i_57_, DisplayModeManagerContainer332.aString5001, class348_sub34.anInt6973, (Component182.anInt9747));
                                         }
                                     }
                                     if (class318_sub4.aClass318_Sub1_6410.plane == (Component72.localPlayer.plane)) {
@@ -286,13 +286,13 @@ final class ColoredText extends Component339 {
                                                 if (i_58_ == (class213.anInt2752)) i_60_ = class213.anInt2759;
                                                 if (i_58_ == 4) i_59_ = 5;
                                                 if ((class213.anInt2764) == i_58_) i_60_ = class213.anInt2830;
-                                                DisplayModeManagerContainer368.addMenuEntry(false, ("<col=ff9040>" + (class213.aString2795)), i_32_, (byte) -119, false, i_33_, -1, true, i_59_, i_57_, strings[i_58_], class348_sub34.anInt6973, i_60_);
+                                                DisplayModeManagerContainer368.addMenuEntry(false, ("<col=ff9040>" + (class213.itemName)), i_32_, (byte) -119, false, i_33_, -1, true, i_59_, i_57_, strings[i_58_], class348_sub34.anInt6973, i_60_);
                                                 CacheNode.anInt9548++;
                                             }
                                         }
                                     }
                                     ObjectDeserializer.anInt6956++;
-                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.aString2795) + Loader.getDebug(class213.anInt2769), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544)), class348_sub34.anInt6973, CookieManager.anInt6299);
+                                    DisplayModeManagerContainer368.addMenuEntry(((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), ("<col=ff9040>" + class213.itemName) + Loader.getDebug(class213.itemId), i_32_, (byte) -122, false, i_33_, -1, true, 1010, i_57_, (FriendsIgnoreList.aClass274_3505.getLocalized(ObjectDeserializer.languageId, 544)), class348_sub34.anInt6973, CookieManager.anInt6299);
                                     class348_sub34 = ((NodeSub34) class348_sub37.aClass262_6998.previous(-127));
                                     i_57_++;
                                 }
@@ -343,7 +343,7 @@ final class ColoredText extends Component339 {
                         }
                     }
                 }
-                if (Component210.aBoolean5300) DebugPanicSub1.method2129((byte) 86);
+                if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 86);
             }
             Component127.method1626(1, false);
         }

@@ -47,11 +47,11 @@ final class TheoraVideoPlayer {
     static final void method842(boolean bool) {
         anInt1501++;
         Component161.aClass46Array1942 = null;
-        if (Component210.aBoolean5300 && MenuEntry.getWindowMode(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
+        if (Component210.gameCanvasAttached && MenuEntry.getWindowMode(-82) != 1) OutputStream_Sub1.method132(106, (Component49.clientState == 3) || Component49.clientState == 7, NodeBaseSub1.method3439(107), 0, NodeSub44.method3306((byte) -111), 0);
         int i = 0;
         if (bool != false) printClientError(null, -110);
         int i_1_ = 0;
-        if (Component210.aBoolean5300) {
+        if (Component210.gameCanvasAttached) {
             i = BufferCacheSub3.method4008((byte) -124);
             i_1_ = Component110.method260(false);
         }
@@ -80,7 +80,7 @@ final class TheoraVideoPlayer {
                         WorldNameText.method254(-5, (byte) -111);
                         return;
                     }
-                    if (Component205.anInt5969 != 2) DisplayModeManagerContainer320.aClass161_3285.method1259(0);
+                    if (Component205.anInt5969 != 2) ItemDefinitionProvider.aClass161_3285.method1259(0);
                     else Component223.aClass161_125.method1259(0);
                     Component212.anInt9971++;
                     Component241.anInt2955 = 1;
@@ -88,7 +88,7 @@ final class TheoraVideoPlayer {
                 }
                 if (Component241.anInt2955 == 1) {
                     if (Component205.anInt5969 == 2 && !Loader.splitPorts) DisplayModeManagerContainer273.aClass144_5800 = (Component223.aClass161_125.method1262(OggUrlStream.aClass297_8992, (byte) 36));
-                    else DisplayModeManagerContainer273.aClass144_5800 = (DisplayModeManagerContainer320.aClass161_3285.method1262(OggUrlStream.aClass297_8992, (byte) 36));
+                    else DisplayModeManagerContainer273.aClass144_5800 = (ItemDefinitionProvider.aClass161_3285.method1262(OggUrlStream.aClass297_8992, (byte) 36));
                     Component241.anInt2955 = 2;
                 }
                 if (Component241.anInt2955 == 2) {
@@ -282,7 +282,7 @@ final class TheoraVideoPlayer {
                             DisplayModeManagerContainer310.anInt359 = class348_sub49_sub2.readSignedMedium((byte) 125);
                             Component387.aBoolean1900 = class348_sub49_sub2.readUnsignedByte(255) == 1;
                             GradientPreset.aClass263_9195.method2004(Component387.aBoolean1900, (byte) 25);
-                            Exception_Sub1.aClass255_112.method1934((byte) 11, Component387.aBoolean1900);
+                            Exception_Sub1.itemDefinitions.method1934((byte) 11, Component387.aBoolean1900);
                             Component291.aClass278_2529.method2072((byte) 88, Component387.aBoolean1900);
                         } else {
                             if (!DefinitionSub8.aClass238_9165.availableAtLeast(DisplayModeManagerContainer154.anInt1288, 107)) return;
@@ -417,7 +417,7 @@ final class TheoraVideoPlayer {
                     WorldNameText.method254(-4, (byte) -87);
                     InflaterDecompressor.returnFromLoginFailure((byte) 3);
                 } else {
-                    if (Component205.anInt5969 != 2) DisplayModeManagerContainer320.aClass161_3285.method1259(0);
+                    if (Component205.anInt5969 != 2) ItemDefinitionProvider.aClass161_3285.method1259(0);
                     else Component223.aClass161_125.method1259(0);
                     Component212.anInt9971++;
                     Component53.anInt197 = 0;

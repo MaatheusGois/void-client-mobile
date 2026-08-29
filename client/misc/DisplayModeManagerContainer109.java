@@ -64,9 +64,9 @@ final class DisplayModeManagerContainer109
             int i_6_ = 0;
             int i_7_ = 0;
             if (bool_3_ != true) aClass29_2352 = null;
-            for (/**/; i_7_ < Exception_Sub1.aClass255_112.anInt3271; i_7_++) {
-                NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(-74, i_7_);
-                if ((!bool_1_ || class213.aBoolean2755) && class213.anInt2833 == -1 && class213.anInt2812 == -1 && class213.anInt2799 == 0 && class213.aString2795.toLowerCase().indexOf(string_2_) != -1) {
+            for (/**/; i_7_ < Exception_Sub1.itemDefinitions.itemCount; i_7_++) {
+                ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-74, i_7_);
+                if ((!bool_1_ || class213.aBoolean2755) && class213.anInt2833 == -1 && class213.anInt2812 == -1 && class213.anInt2799 == 0 && class213.itemName.toLowerCase().indexOf(string_2_) != -1) {
                     if (i_0_ != -1) {
                         if (bool) {
                             if (!string.equals(class213.method1561(string_5_, i_0_, -1511086397))) continue;
@@ -91,7 +91,7 @@ final class DisplayModeManagerContainer109
             Component3.anInt2037 = 0;
             String[] strings = new String[DisplayModeManagerContainer154.anInt1285];
             for (int i_10_ = 0; DisplayModeManagerContainer154.anInt1285 > i_10_; i_10_++)
-                strings[i_10_] = Exception_Sub1.aClass255_112.method1940(123, is[i_10_]).aString2795;
+                strings[i_10_] = Exception_Sub1.itemDefinitions.getItemDefinition(123, is[i_10_]).itemName;
             RadixParser.method1333(Component353.aShortArray2579, 26073, strings);
             RadixParser.aClass45_2306.clearUnpacked((byte) 116);
             RadixParser.aClass45_2306.discardMode = 2;

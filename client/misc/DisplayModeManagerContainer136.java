@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer136
         anInt4713++;
         int i_4_ = 0;
         int i_5_ = 0;
-        if (Component210.aBoolean5300) {
+        if (Component210.gameCanvasAttached) {
             i_4_ = BufferCacheSub3.method4008((byte) -122);
             i_5_ = Component110.method260(false);
         }

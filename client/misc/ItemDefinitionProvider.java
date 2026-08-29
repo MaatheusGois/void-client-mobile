@@ -1,11 +1,13 @@
-/* DisplayModeManagerContainer320 - Decompiled by JODE
+/* ItemDefinitionProvider - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer320
+final class ItemDefinitionProvider
 /**
- * RENAMED from `Class255` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * RENAMED from {@code Class255} / {@code DisplayModeManagerContainer320}.
+ * Loads and caches {@link ItemDefinition} from the item JS5 archive.
+ * Global instance: {@link Exception_Sub1#itemDefinitions}.
+ * Also parks a static sprite-atlas warm-up ({@link #method1933}) used at login.
  */ {
     static Component183 aClass114_3265;
     static int anInt3266;
@@ -13,7 +15,8 @@ final class DisplayModeManagerContainer320
     CacheStore aClass45_3268;
     private boolean aBoolean3269;
     static int anInt3270;
-    int anInt3271;
+    /** Highest item id + 1 (archive file count). */
+    int itemCount;
     static int anInt3272;
     static int[] anIntArray3273 = new int[5];
     static int anInt3274;
@@ -63,13 +66,13 @@ final class DisplayModeManagerContainer320
             anInt3266++;
             Component24 class105 = method1941(i_6_, (byte) -74, i_4_, i_0_, i, i_1_, var_ha_3_, class154);
             if (class105 != null) return class105;
-            NumberFormatter class213 = method1940(90, i_4_);
+            ItemDefinition class213 = getItemDefinition(90, i_4_);
             if (i_0_ > 1 && class213.anIntArray2762 != null) {
                 int i_7_ = -1;
                 for (int i_8_ = 0; i_8_ < 10; i_8_++) {
                     if ((class213.anIntArray2831[i_8_] <= i_0_) && class213.anIntArray2831[i_8_] != 0) i_7_ = class213.anIntArray2762[i_8_];
                 }
-                if (i_7_ != -1) class213 = method1940(127, i_7_);
+                if (i_7_ != -1) class213 = getItemDefinition(127, i_7_);
             }
             if (i_2_ != 83) method1935(-83, -37, null, null, false, -49);
             int[] is = class213.method1562(i_0_, bool_5_, i, var_ha_3_, var_ha, class324, class154, i_1_, (byte) -102, i_6_);
@@ -227,29 +230,33 @@ final class DisplayModeManagerContainer320
         }
     }
 
-    final NumberFormatter method1940(int i, int i_13_) {
+    /**
+     * Lookup / decode item def by id (junk first arg — must keep {@code (junk-13)/59 != 0}
+     * or the obfuscator divide-by-zero fires).
+     */
+    final ItemDefinition getItemDefinition(int i, int i_13_) {
         anInt3283++;
-        NumberFormatter class213;
+        ItemDefinition class213;
         synchronized (aClass60_3278) {
-            class213 = (NumberFormatter) aClass60_3278.get(i_13_, 90);
+            class213 = (ItemDefinition) aClass60_3278.get(i_13_, 90);
         }
         if (class213 != null) return class213;
         byte[] is;
         synchronized (aClass45_3267) {
             is = aClass45_3267.getFile(-1860, Component285.method500(7, i_13_), Component111.lowByte(-23590, i_13_));
         }
-        class213 = new NumberFormatter();
+        class213 = new ItemDefinition();
         class213.aClass255_2761 = this;
-        class213.anInt2769 = i_13_;
+        class213.itemId = i_13_;
         class213.aStringArray2811 = new String[]{null, null, FriendsIgnoreList.aClass274_3490.getLocalized(this.anInt3286, 544), null, null};
         class213.aStringArray2763 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.getLocalized(this.anInt3286, 544)});
         if (is != null) class213.method1569(768, new Buffer(is));
         class213.method1563((byte) 92);
         int i_14_ = 4 / ((i - 13) / 59);
-        if (class213.anInt2833 != -1) class213.method1570(1, method1940(90, class213.anInt2758), method1940(101, class213.anInt2833));
-        if (class213.anInt2812 != -1) class213.method1556(method1940(-58, class213.anInt2778), (byte) -29, method1940(-82, class213.anInt2812));
+        if (class213.anInt2833 != -1) class213.method1570(1, getItemDefinition(90, class213.anInt2758), getItemDefinition(101, class213.anInt2833));
+        if (class213.anInt2812 != -1) class213.method1556(getItemDefinition(-58, class213.anInt2778), (byte) -29, getItemDefinition(-82, class213.anInt2812));
         if (!aBoolean3269 && class213.aBoolean2783) {
-            class213.aString2795 = FriendsIgnoreList.aClass274_3488.getLocalized(this.anInt3286, 544);
+            class213.itemName = FriendsIgnoreList.aClass274_3488.getLocalized(this.anInt3286, 544);
             class213.anInt2827 = 0;
             class213.aStringArray2811 = aStringArray3290;
             class213.aStringArray2763 = aStringArray3293;
@@ -297,7 +304,7 @@ final class DisplayModeManagerContainer320
         }
     }
 
-    DisplayModeManagerContainer320(GameType class230, int i, boolean bool, Component311 class326, CacheStore class45, CacheStore class45_22_) {
+    ItemDefinitionProvider(GameType class230, int i, boolean bool, Component311 class326, CacheStore class45, CacheStore class45_22_) {
         try {
             aBoolean3269 = bool;
             aClass326_3292 = class326;
@@ -306,8 +313,8 @@ final class DisplayModeManagerContainer320
             aClass45_3267 = class45;
             if (aClass45_3267 != null) {
                 int i_23_ = -1 + aClass45_3267.getGroupCapacity(-1);
-                this.anInt3271 = aClass45_3267.getFileCount(0, i_23_) + i_23_ * 256;
-            } else this.anInt3271 = 0;
+                this.itemCount = aClass45_3267.getFileCount(0, i_23_) + i_23_ * 256;
+            } else this.itemCount = 0;
             aStringArray3290 = (new String[]{null, null, FriendsIgnoreList.aClass274_3490.getLocalized(this.anInt3286, 544), null, null});
             aStringArray3293 = (new String[]{null, null, null, null, FriendsIgnoreList.aClass274_3491.getLocalized(this.anInt3286, 544)});
         } catch (RuntimeException runtimeexception) {

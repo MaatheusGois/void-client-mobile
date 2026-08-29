@@ -55,7 +55,7 @@ final class DisplayModeManagerContainer96
                 string = Component192.formatMenuEntry((byte) -52, class348_sub42_sub12);
                 int[] is = null;
                 if (!Component3.method1197(-12081, class348_sub42_sub12.opcode)) {
-                    if (class348_sub42_sub12.itemId != -1) is = Exception_Sub1.aClass255_112.method1940(98, (class348_sub42_sub12.itemId)).anIntArray2772;
+                    if (class348_sub42_sub12.itemId != -1) is = Exception_Sub1.itemDefinitions.getItemDefinition(98, (class348_sub42_sub12.itemId)).anIntArray2772;
                     else if (WaterShaderSub8.method3549((class348_sub42_sub12.opcode), (byte) 107)) {
                         NodeSub22 class348_sub22 = ((NodeSub22) (Component21.aClass356_3654.get((int) class348_sub42_sub12.identifier, -6008)));
                         if (class348_sub22 != null) {
@@ -72,7 +72,7 @@ final class DisplayModeManagerContainer96
                         if (class51.anIntArray945 != null) class51 = class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47);
                         if (class51 != null) is = class51.anIntArray917;
                     }
-                } else is = (Exception_Sub1.aClass255_112.method1940(-73, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
+                } else is = (Exception_Sub1.itemDefinitions.getItemDefinition(-73, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
                 if (is != null) string += ImageTagText.method1273(is, true);
             } else string = Component192.formatMenuEntry((byte) 125, Component192.menuTip);
             if (DisplayModeManagerContainer306.menuEntryCount > 2) string += ("<col=ffffff> / " + (DisplayModeManagerContainer306.menuEntryCount - 2) + FriendsIgnoreList.aClass274_3508.getLocalized(ObjectDeserializer.languageId, 544));

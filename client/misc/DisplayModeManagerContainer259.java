@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer259
         } else {
             int i_6_ = (int) DisplayModeManagerContainer154.cameraPitch;
             if (i_6_ < NodeSub35.anInt6979 >> 8) i_6_ = NodeSub35.anInt6979 >> 8;
-            if (Component113.aBooleanArray2374[4] && DisplayModeManagerContainer320.anIntArray3273[4] - -128 > i_6_) i_6_ = DisplayModeManagerContainer320.anIntArray3273[4] + 128;
+            if (Component113.aBooleanArray2374[4] && ItemDefinitionProvider.anIntArray3273[4] - -128 > i_6_) i_6_ = ItemDefinitionProvider.anIntArray3273[4] + 128;
             int i_7_ = 0x3fff & (int) Component112.cameraYaw + Component195.anInt5016;
             if (i_4_ != 0) method2031(-117, null);
             DisplayModeManagerContainer167.method268(i_6_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_7_, Component353.cameraFocusZ, i, -19360, DisplayModeManagerContainer273.cameraFocusX, 3 * (i_6_ >> 3) + 600 << 2);

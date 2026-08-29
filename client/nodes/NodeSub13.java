@@ -110,12 +110,12 @@ final class NodeSub13 extends Node {
                 int i_28_ = i_15_;
                 boolean bool_29_ = false;
                 for (int i_30_ = 0; is.length > i_30_; i_30_++) {
-                    if (is[i_30_] != -1 && !Exception_Sub1.aClass255_112.method1940(-91, is[i_30_]).method1565(bool, -1)) bool_29_ = true;
+                    if (is[i_30_] != -1 && !Exception_Sub1.itemDefinitions.getItemDefinition(-91, is[i_30_]).method1565(bool, -1)) bool_29_ = true;
                 }
                 if (bool_29_) return null;
                 DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[is.length];
                 for (int i_31_ = 0; i_31_ < is.length; i_31_++) {
-                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.aClass255_112.method1940(NodeSub21.bitwiseXor(i_14_, -112), is[i_31_]).method1558(bool, false);
+                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.itemDefinitions.getItemDefinition(NodeSub21.bitwiseXor(i_14_, -112), is[i_31_]).method1558(bool, false);
                 }
                 if (class225 != null && class225.anIntArrayArray2939 != null) {
                     for (int i_32_ = 0; (class225.anIntArrayArray2939.length > i_32_); i_32_++) {

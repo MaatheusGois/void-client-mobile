@@ -53,7 +53,7 @@ final class BuildType {
         anInt2997++;
         int i_3_ = 0;
         int i_4_ = 0;
-        if (Component210.aBoolean5300) {
+        if (Component210.gameCanvasAttached) {
             i_3_ = BufferCacheSub3.method4008((byte) -124);
             i_4_ = Component110.method260(false);
         }

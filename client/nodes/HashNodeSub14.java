@@ -92,7 +92,7 @@ final class HashNodeSub14
         anInt9637++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) HashNodeSub10.activeOccluderCount = 0;
         else {
-            if (DefinitionSub26.aBoolean9352) NumberFormatter.aLong2789 = Component230.aClass47_5262.method446(1);
+            if (DefinitionSub26.aBoolean9352) ItemDefinition.aLong2789 = Component230.aClass47_5262.method446(1);
             Component274.occludedWallCount = 0;
             DisplayModeManagerContainer64.occludedGroundCount = 0;
             DefinitionSub4.occludedCpCount = 0;
@@ -141,7 +141,7 @@ final class HashNodeSub14
                 }
                 Component360.anInt4319 = 2;
             }
-            if (DefinitionSub26.aBoolean9352) WaterShaderProgram.occludeCalcNanos = (Component230.aClass47_5262.method446(1) + -NumberFormatter.aLong2789);
+            if (DefinitionSub26.aBoolean9352) WaterShaderProgram.occludeCalcNanos = (Component230.aClass47_5262.method446(1) + -ItemDefinition.aLong2789);
         }
     }
 

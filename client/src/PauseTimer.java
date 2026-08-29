@@ -198,9 +198,9 @@ final class PauseTimer {
                                 }
                                 else if (i_7_ == 102) NodeSub38.consoleCursor = 0;
                                 else if (i_7_ == 103) NodeSub38.consoleCursor = Component126.consoleInput.length();
-                                else if (i_7_ != 104 || (Component92.anInt3312 >= (ArbShaderProgram.consoleLines).length)) {
-                                    if (i_7_ == 105 && Component92.anInt3312 > 0) {
-                                        Component92.anInt3312--;
+                                else if (i_7_ != 104 || (Component92.consoleHistoryDepth >= (ArbShaderProgram.consoleLines).length)) {
+                                    if (i_7_ == 105 && Component92.consoleHistoryDepth > 0) {
+                                        Component92.consoleHistoryDepth--;
                                         Shader.method159(-615751774);
                                         NodeSub38.consoleCursor = Component126.consoleInput.length();
                                     } else if (Npc.method2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
@@ -208,7 +208,7 @@ final class PauseTimer {
                                         NodeSub38.consoleCursor++;
                                     }
                                 } else {
-                                    Component92.anInt3312++;
+                                    Component92.consoleHistoryDepth++;
                                     Shader.method159(-615751774);
                                     NodeSub38.consoleCursor = Component126.consoleInput.length();
                                 }

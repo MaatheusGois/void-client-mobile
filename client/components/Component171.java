@@ -131,7 +131,7 @@ final class Component171
             else var_ha.method3684(class98);
         }
         aBoolean10095 = class64.F() || (this.aClass235_10115.aClass318_Sub10_3081) != null;
-        if (aClass30_10116 != null) DisplayModeManagerContainer320.method1935(this.y, this.anInt6382, aClass30_10116, class64, false, this.x);
+        if (aClass30_10116 != null) ItemDefinitionProvider.method1935(this.y, this.anInt6382, aClass30_10116, class64, false, this.x);
         else aClass30_10116 = (OggUrlStream.method2967(this.x, class64, this.y, this.anInt6382, 2));
         return class318_sub4;
     }

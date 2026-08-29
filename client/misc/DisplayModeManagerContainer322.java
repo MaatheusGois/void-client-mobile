@@ -33,7 +33,7 @@ final class DisplayModeManagerContainer322
         } else {
             int i_0_ = 0;
             int i_1_ = 0;
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 i_0_ = BufferCacheSub3.method4008((byte) -124);
                 i_1_ = Component110.method260(false);
             }

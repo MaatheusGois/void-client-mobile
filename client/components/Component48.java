@@ -30,11 +30,11 @@ final class Component48
             Component387.aClass356_1895.put((byte) 50, l, class348_sub37);
             class348_sub37.aClass262_6998.addTail(class348_sub34, -20180);
         } else {
-            NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(i_2_ ^ ~0x72, (class348_sub34.anInt6973));
+            ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(i_2_ ^ ~0x72, (class348_sub34.anInt6973));
             int i_3_ = class213.anInt2819;
             if (i_2_ == (~class213.anInt2820)) i_3_ *= 1 + class348_sub34.anInt6971;
             for (NodeSub34 class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.first(i_2_ + 6); class348_sub34_4_ != null; class348_sub34_4_ = (NodeSub34) class348_sub37.aClass262_6998.next((byte) 34)) {
-                class213 = (Exception_Sub1.aClass255_112.method1940(104, class348_sub34_4_.anInt6973));
+                class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(104, class348_sub34_4_.anInt6973));
                 int i_5_ = class213.anInt2819;
                 if (class213.anInt2820 == 1) i_5_ *= class348_sub34_4_.anInt6971 - -1;
                 if (i_3_ > i_5_) {

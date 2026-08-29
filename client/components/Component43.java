@@ -32,7 +32,7 @@ final class Component43
             int i_2_ = 0;
             if (i != -73) anInt4976 = 105;
             int i_3_ = 0;
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 i_2_ = BufferCacheSub3.method4008((byte) -128);
                 i_3_ = Component110.method260(false);
             }

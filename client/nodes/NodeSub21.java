@@ -33,7 +33,7 @@ final class NodeSub21
             }
             float f = (float) Component208.anInt1780 / 65535.0F;
             float[] fs = new float[3];
-            int i_1_ = 2 * NumberFormatter.anInt2798;
+            int i_1_ = 2 * ItemDefinition.anInt2798;
             for (int i_2_ = 0; i_2_ < 3; i_2_++) {
                 int i_3_ = 3 * (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][i_1_][i_2_]);
                 int i_4_ = ((PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775][1 + i_1_][i_2_]) * 3);

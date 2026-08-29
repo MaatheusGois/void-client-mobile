@@ -170,7 +170,7 @@ final class HashNodeSub3
         if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, DisplayModeManagerContainer50.gameCanvas);
         if (NodeSub8.toolkit != null) Component200.method2196((byte) -9);
         DisplayModeManagerContainer50.aBoolean3870 = i != Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
-        Component210.aBoolean5300 = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false);
+        Component210.gameCanvasAttached = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false);
     }
 
     static {

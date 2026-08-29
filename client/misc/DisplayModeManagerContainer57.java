@@ -252,7 +252,7 @@ final class DisplayModeManagerContainer57
         DefinitionSub25.aClass150_9342.method1204(0);
         GradientPreset.aClass263_9195.method2006(88);
         Component291.aClass278_2529.method2080(127);
-        Exception_Sub1.aClass255_112.method1938(126);
+        Exception_Sub1.itemDefinitions.method1938(126);
         RunescapeInfo.aClass87_191.method838(7);
         NsnDefinition.aClass319_9245.method2542(-101);
         Component267.aClass194_2981.method1443(83);
@@ -299,7 +299,7 @@ final class DisplayModeManagerContainer57
         return class348_sub50.stringValue;
     }
 
-    final DisplayModeManagerContainer370 method430(Component324 class150, Component344 class87, int i, GraphicsToolkit var_ha, int i_21_, int i_22_, DisplayModeManagerContainer320 class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
+    final DisplayModeManagerContainer370 method430(Component324 class150, Component344 class87, int i, GraphicsToolkit var_ha, int i_21_, int i_22_, ItemDefinitionProvider class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
         try {
             anInt684++;
             HashNodeSub13.aBoolean9616 = false;
@@ -344,7 +344,7 @@ final class DisplayModeManagerContainer57
                 return class64;
             }
             if (this.anInt770 == 4) {
-                NumberFormatter class213 = class255.method1940(i_23_ + -365, this.anInt753);
+                ItemDefinition class213 = class255.getItemDefinition(i_23_ + -365, this.anInt753);
                 DisplayModeManagerContainer370 class64 = class213.method1559(class154, class17, var_ha, i, i_22_, 10, i_21_, (byte) 88, i_24_);
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;

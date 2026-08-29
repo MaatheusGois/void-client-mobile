@@ -62,7 +62,7 @@ final class GlRectangleTexture extends GlTexture {
         ClientSystemInfo.method2994(2);
         DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
         Component27.method3568(NodeSub8.toolkit, 4);
-        DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
+        ItemDefinitionProvider.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
         FriendsIgnoreList.clearHudSprites(-128);
         DisplayModeManagerContainer204.method901(Component22.aClass105Array1744, 515880227);
         Component160.method3466(i ^ ~0x4f);

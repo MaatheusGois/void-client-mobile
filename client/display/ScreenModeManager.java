@@ -68,7 +68,7 @@ final class ScreenModeManager {
             if (bool) ParticleSystem.method3327(1406);
             else {
                 DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
-                if (!Component210.aBoolean5300) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, (PacketReader.anInt10432));
+                if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, (PacketReader.anInt10432));
                 else s.method3980(86, DisplayModeManagerContainer50.gameCanvas);
                 if (RSACipher.aFrame4904 == container) {
                     Insets insets = RSACipher.aFrame4904.getInsets();

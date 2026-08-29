@@ -21,10 +21,10 @@ final class Component324
 
     static final void method1202(int i) {
         anInt2052++;
-        int[] is = new int[Exception_Sub1.aClass255_112.anInt3271];
+        int[] is = new int[Exception_Sub1.itemDefinitions.itemCount];
         int i_0_ = i;
-        for (int i_1_ = 0; Exception_Sub1.aClass255_112.anInt3271 > i_1_; i_1_++) {
-            NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(-104, i_1_);
+        for (int i_1_ = 0; Exception_Sub1.itemDefinitions.itemCount > i_1_; i_1_++) {
+            ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-104, i_1_);
             if (class213.anInt2815 >= 0 || class213.anInt2788 >= 0) is[i_0_++] = i_1_;
         }
         Component361.anIntArray369 = new int[i_0_];

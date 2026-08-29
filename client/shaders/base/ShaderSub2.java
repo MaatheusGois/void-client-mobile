@@ -52,14 +52,14 @@ final class ShaderSub2
         if (i_9_ < 512 || i_11_ < 512 || (-2 + AbstractShaderSub4.anInt7319) * 512 < i_9_ || (-2 + ParametricDefinition.anInt9109) * 512 < i_11_) Component71.anIntArray6062[0] = Component71.anIntArray6062[1] = -1;
         else if (i_12_ >= 22) {
             int i_15_ = Component300.method2064(i_9_, i, 11219, i_11_) - i_7_;
-            if (Component210.aBoolean5300) HashTable.method1010(false, true);
+            if (Component210.gameCanvasAttached) HashTable.method1010(false, true);
             else {
                 Component270.aClass101_2123.method891(i_10_, 0, 0);
                 NodeSub8.toolkit.method3638(Component270.aClass101_2123);
             }
             if (!DisplayModeManagerContainer50.aBoolean3870) NodeSub8.toolkit.da(i_9_, i_15_, i_11_, Component71.anIntArray6062);
             else NodeSub8.toolkit.HA(i_9_, i_15_, i_11_, Component72.anInt1906, Component71.anIntArray6062);
-            if (Component210.aBoolean5300) DebugPanicSub1.method2129((byte) 60);
+            if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 60);
             else {
                 Component270.aClass101_2123.method891(-i_10_, 0, 0);
                 NodeSub8.toolkit.method3638(Component270.aClass101_2123);

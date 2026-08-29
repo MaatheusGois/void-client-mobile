@@ -41,13 +41,13 @@ final class OutputStream_Sub1 extends OutputStream {
             if (DefinitionSub21.cameraMode == 1) {
                 int i_4_ = (int) DisplayModeManagerContainer154.cameraPitch;
                 if (NodeSub35.anInt6979 >> 8 > i_4_) i_4_ = NodeSub35.anInt6979 >> 8;
-                if (Component113.aBooleanArray2374[4] && DisplayModeManagerContainer320.anIntArray3273[4] + 128 > i_4_) i_4_ = DisplayModeManagerContainer320.anIntArray3273[4] + 128;
+                if (Component113.aBooleanArray2374[4] && ItemDefinitionProvider.anIntArray3273[4] + 128 > i_4_) i_4_ = ItemDefinitionProvider.anIntArray3273[4] + 128;
                 int i_5_ = (int) Component112.cameraYaw + Component195.anInt5016 & 0x3fff;
                 DisplayModeManagerContainer167.method268(i_4_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_5_, Component353.cameraFocusZ, i_2_, -19360, DisplayModeManagerContainer273.cameraFocusX, (i_4_ >> 3) * 3 + 600 << 2);
             } else if (DefinitionSub21.cameraMode == 4) {
                 int i_6_ = (int) DisplayModeManagerContainer154.cameraPitch;
                 if (i_6_ < NodeSub35.anInt6979 >> 8) i_6_ = NodeSub35.anInt6979 >> 8;
-                if (Component113.aBooleanArray2374[4] && (i_6_ < DisplayModeManagerContainer320.anIntArray3273[4] + 128)) i_6_ = 128 + DisplayModeManagerContainer320.anIntArray3273[4];
+                if (Component113.aBooleanArray2374[4] && (i_6_ < ItemDefinitionProvider.anIntArray3273[4] + 128)) i_6_ = 128 + ItemDefinitionProvider.anIntArray3273[4];
                 int i_7_ = (int) Component112.cameraYaw & 0x3fff;
                 DisplayModeManagerContainer167.method268(i_6_, -200 + Component300.method2064(NodederUtil.anInt6633, Component117.anInt4372, 11219, NodeSub7.anInt6652), i_7_, Component353.cameraFocusZ, i_2_, -19360, DisplayModeManagerContainer273.cameraFocusX, 600 - -((i_6_ >> 3) * 3) << 2);
             } else if (DefinitionSub21.cameraMode == 5) DisplayModeManagerContainer259.method2035(i_2_, 0);
@@ -58,7 +58,7 @@ final class OutputStream_Sub1 extends OutputStream {
             int i_12_ = Component298.anInt4638;
             for (int i_13_ = 0; i_13_ < 5; i_13_++) {
                 if (Component113.aBooleanArray2374[i_13_]) {
-                    int i_14_ = (int) ((Math.random() * (double) ((Component300.anIntArray3552[i_13_] * 2) - -1)) - (double) Component300.anIntArray3552[i_13_] + (Math.sin((double) (Component212.anIntArray9981[i_13_]) * ((double) (Component103.anIntArray4196[i_13_]) / 100.0)) * (double) (DisplayModeManagerContainer320.anIntArray3273[i_13_])));
+                    int i_14_ = (int) ((Math.random() * (double) ((Component300.anIntArray3552[i_13_] * 2) - -1)) - (double) Component300.anIntArray3552[i_13_] + (Math.sin((double) (Component212.anIntArray9981[i_13_]) * ((double) (Component103.anIntArray4196[i_13_]) / 100.0)) * (double) (ItemDefinitionProvider.anIntArray3273[i_13_])));
                     if (i_13_ == 4) {
                         HashNodeSub19.anInt9701 += i_14_;
                         if (HashNodeSub19.anInt9701 >= 1024) {
@@ -79,7 +79,7 @@ final class OutputStream_Sub1 extends OutputStream {
             HashNodeSub3.method3175((byte) -107);
             NodeSub8.toolkit.KA(i_1_, i_3_, i_1_ - -i_0_, i_3_ + i_2_);
             Component127.method1626(1, true);
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 MatrixSub3.method941(124, Component38.anInt2500);
                 if (Component72.anInt1906 != Component121.anInt4545) NodeSub16Sub2.aBoolean8870 = true;
                 Component121.anInt4545 = Component72.anInt1906;
@@ -97,7 +97,7 @@ final class OutputStream_Sub1 extends OutputStream {
                 ComponentDownloader.method319(Component263.anInt1550 << 1, Component263.anInt1550 << 1, (byte) -18, i_1_ + i_0_ / 2, i_3_ + i_2_ / 2);
                 HashNodeSub20.method3282(0x3fff & -(HashNodeSub19.anInt9701), Component317.anInt8685, DisplayModeManagerContainer50.anInt3855, 0, -Component298.anInt4638 & 0x3fff, WaterSurfaceShader.anInt6246, -Component103.anInt4186 & 0x3fff);
                 byte i_16_ = (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264.method1778(-32350) != 2 ? (byte) 1 : (byte) DisplayModeManagerContainer341.anInt6006);
-                if (Component210.aBoolean5300) {
+                if (Component210.gameCanvasAttached) {
                     Component158.method289(-15902, 0x3fff & -Component298.anInt4638, -Component103.anInt4186 & 0x3fff, (-HashNodeSub19.anInt9701 & 0x3fff));
                     GameType.method1634(DisplayModeManagerContainer370.anIntArray1127, -2, Component156.aByteArrayArrayArray3700, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.plane) - -1, DisplayModeManagerContainer363.anIntArray4097, WaterSurfaceShader.anInt6246, Component317.anInt8685, Component192.aClass348_Sub51_3959.aClass239_Sub1_7246.method1720(-32350) == 0, DisplayModeManagerContainer50.anInt3855, (Component72.localPlayer.x) >> 9, ClientErrorReporter.anIntArray2117, DefinitionSub19.anIntArray9259, i_16_, LoadingState.anIntArray1045, OpenGlShader.clientCycle, true, Component72.anInt1906);
                 } else

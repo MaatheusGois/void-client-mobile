@@ -889,8 +889,8 @@ final class ClientScriptExecutor {
             if (i == 5401) {
                 anInt1173 -= 2;
                 RenderableSub6.aShortArray6428[anIntArray1149[anInt1173]] = (short) Shader.method160(27076, anIntArray1149[anInt1173 + 1]);
-                Exception_Sub1.aClass255_112.method1930(-21804);
-                Exception_Sub1.aClass255_112.method1936(-71);
+                Exception_Sub1.itemDefinitions.method1930(-21804);
+                Exception_Sub1.itemDefinitions.method1936(-71);
                 Component291.aClass278_2529.method2074(-118);
                 Component160.method3466(125);
                 return;
@@ -1087,7 +1087,7 @@ final class ClientScriptExecutor {
                 NodeBaseSub1.anInt9775 = i_132_;
                 int i_133_ = anIntArray1149[anInt1173 + 1];
                 if (i_133_ + 1 >= (PlayerState.anIntArrayArrayArray7079[NodeBaseSub1.anInt9775]).length >> 1) throw new RuntimeException();
-                NumberFormatter.anInt2798 = i_133_;
+                ItemDefinition.anInt2798 = i_133_;
                 Component208.anInt1780 = 0;
                 Component195.anInt5019 = anIntArray1149[anInt1173 + 2];
                 Component374.anInt4133 = anIntArray1149[anInt1173 + 3];
@@ -2728,7 +2728,7 @@ final class ClientScriptExecutor {
                 int i_265_ = anIntArray1149[anInt1173];
                 int i_266_ = anIntArray1149[anInt1173 + 1];
                 if ((Component72.localPlayer.appearance) != null) {
-                    Component72.localPlayer.appearance.method1227((byte) 42, i_265_, i_266_, Exception_Sub1.aClass255_112);
+                    Component72.localPlayer.appearance.method1227((byte) 42, i_265_, i_266_, Exception_Sub1.itemDefinitions);
                     return;
                 }
                 return;
@@ -3038,7 +3038,7 @@ final class ClientScriptExecutor {
                     class46.anInt812 = i_279_;
                     class46.anInt781 = i_280_;
                     class46.aBoolean720 = i == 1208 || i == 1209;
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(74, i_279_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(74, i_279_);
                     class46.anInt757 = class213.anInt2787;
                     class46.anInt675 = class213.anInt2781;
                     class46.anInt717 = class213.anInt2810;
@@ -4718,14 +4718,14 @@ final class ClientScriptExecutor {
             } else if (i < 4300) {
                 if (i == 4200) {
                     int i_456_ = anIntArray1149[--anInt1173];
-                    aStringArray1152[anInt1170++] = (Exception_Sub1.aClass255_112.method1940(-52, i_456_).aString2795) + Loader.getDebug(i_456_);
+                    aStringArray1152[anInt1170++] = (Exception_Sub1.itemDefinitions.getItemDefinition(-52, i_456_).itemName) + Loader.getDebug(i_456_);
                     return;
                 }
                 if (i == 4201) {
                     anInt1173 -= 2;
                     int i_457_ = anIntArray1149[anInt1173];
                     int i_458_ = anIntArray1149[anInt1173 + 1];
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(-79, i_457_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-79, i_457_);
                     if (i_458_ >= 1 && i_458_ <= 5 && (class213.aStringArray2811[i_458_ - 1] != null)) aStringArray1152[anInt1170++] = (class213.aStringArray2811[i_458_ - 1]);
                     else {
                         aStringArray1152[anInt1170++] = "";
@@ -4737,7 +4737,7 @@ final class ClientScriptExecutor {
                     anInt1173 -= 2;
                     int i_459_ = anIntArray1149[anInt1173];
                     int i_460_ = anIntArray1149[anInt1173 + 1];
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(112, i_459_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(112, i_459_);
                     if (i_460_ >= 1 && i_460_ <= 5 && (class213.aStringArray2763[i_460_ - 1] != null)) aStringArray1152[anInt1170++] = (class213.aStringArray2763[i_460_ - 1]);
                     else {
                         aStringArray1152[anInt1170++] = "";
@@ -4747,17 +4747,17 @@ final class ClientScriptExecutor {
                 }
                 if (i == 4203) {
                     int i_461_ = anIntArray1149[--anInt1173];
-                    anIntArray1149[anInt1173++] = Exception_Sub1.aClass255_112.method1940(-52, i_461_).anInt2819;
+                    anIntArray1149[anInt1173++] = Exception_Sub1.itemDefinitions.getItemDefinition(-52, i_461_).anInt2819;
                     return;
                 }
                 if (i == 4204) {
                     int i_462_ = anIntArray1149[--anInt1173];
-                    anIntArray1149[anInt1173++] = (Exception_Sub1.aClass255_112.method1940(82, i_462_).anInt2820 == 1) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = (Exception_Sub1.itemDefinitions.getItemDefinition(82, i_462_).anInt2820 == 1) ? 1 : 0;
                     return;
                 }
                 if (i == 4205) {
                     int i_463_ = anIntArray1149[--anInt1173];
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(80, i_463_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(80, i_463_);
                     if (class213.anInt2833 == -1 && class213.anInt2758 >= 0) anIntArray1149[anInt1173++] = class213.anInt2758;
                     else {
                         anIntArray1149[anInt1173++] = i_463_;
@@ -4767,7 +4767,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 4206) {
                     int i_464_ = anIntArray1149[--anInt1173];
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(-56, i_464_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-56, i_464_);
                     if (class213.anInt2833 >= 0 && class213.anInt2758 >= 0) anIntArray1149[anInt1173++] = class213.anInt2758;
                     else {
                         anIntArray1149[anInt1173++] = i_464_;
@@ -4777,7 +4777,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 4207) {
                     int i_465_ = anIntArray1149[--anInt1173];
-                    anIntArray1149[anInt1173++] = (Exception_Sub1.aClass255_112.method1940(87, i_465_).aBoolean2783) ? 1 : 0;
+                    anIntArray1149[anInt1173++] = (Exception_Sub1.itemDefinitions.getItemDefinition(87, i_465_).aBoolean2783) ? 1 : 0;
                     return;
                 }
                 if (i == 4208) {
@@ -4785,9 +4785,9 @@ final class ClientScriptExecutor {
                     int i_466_ = anIntArray1149[anInt1173];
                     int i_467_ = anIntArray1149[anInt1173 + 1];
                     Component355 class254 = MatrixSub3.aClass326_5764.method2600(i_467_, 28364);
-                    if (class254.method1925(false)) aStringArray1152[anInt1170++] = (Exception_Sub1.aClass255_112.method1940(-96, i_466_).method1561(class254.aString3258, i_467_, -1511086397));
+                    if (class254.method1925(false)) aStringArray1152[anInt1170++] = (Exception_Sub1.itemDefinitions.getItemDefinition(-96, i_466_).method1561(class254.aString3258, i_467_, -1511086397));
                     else {
-                        anIntArray1149[anInt1173++] = (Exception_Sub1.aClass255_112.method1940(-82, i_466_).method1567(class254.anInt3256, -106, i_467_));
+                        anIntArray1149[anInt1173++] = (Exception_Sub1.itemDefinitions.getItemDefinition(-82, i_466_).method1567(class254.anInt3256, -106, i_467_));
                         return;
                     }
                     return;
@@ -4796,7 +4796,7 @@ final class ClientScriptExecutor {
                     anInt1173 -= 2;
                     int i_468_ = anIntArray1149[anInt1173];
                     int i_469_ = anIntArray1149[anInt1173 + 1] - 1;
-                    NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(108, i_468_);
+                    ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(108, i_468_);
                     if (class213.anInt2766 == i_469_) anIntArray1149[anInt1173++] = class213.anInt2818;
                     else {
                         if (class213.anInt2774 == i_469_) anIntArray1149[anInt1173++] = class213.anInt2817;
@@ -4829,7 +4829,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 4213) {
                     int i_471_ = anIntArray1149[--anInt1173];
-                    anIntArray1149[anInt1173++] = Exception_Sub1.aClass255_112.method1940(-115, i_471_).anInt2802;
+                    anIntArray1149[anInt1173++] = Exception_Sub1.itemDefinitions.getItemDefinition(-115, i_471_).anInt2802;
                     return;
                 }
                 if (i == 4214) {

@@ -41,8 +41,8 @@ final class RenderableSub2
                             if (class51.anIntArray945 != null) class51 = (class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47));
                             if (class51 != null) is = class51.anIntArray917;
                         }
-                    } else is = Exception_Sub1.aClass255_112.method1940(113, (class348_sub42_sub12.itemId)).anIntArray2772;
-                } else is = (Exception_Sub1.aClass255_112.method1940(-67, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
+                    } else is = Exception_Sub1.itemDefinitions.getItemDefinition(113, (class348_sub42_sub12.itemId)).anIntArray2772;
+                } else is = (Exception_Sub1.itemDefinitions.getItemDefinition(-67, (int) (class348_sub42_sub12.identifier)).anIntArray2772);
                 String string = Component192.formatMenuEntry((byte) 125, class348_sub42_sub12);
                 if (is != null) string += ImageTagText.method1273(is, true);
                 NodeList.aClass324_3326.method2567(i_1_, string, (byte) 116, i_4_, 0, i_7_ - -3, DisplayModeManagerContainer196.aClass105Array4234, Component143.anIntArray2330);

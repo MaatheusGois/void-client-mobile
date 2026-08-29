@@ -31,8 +31,8 @@ final class Component128
         if (class348_sub13 == null) return 0;
         int i_3_ = 0;
         for (int i_4_ = 0; (class348_sub13.itemIds.length > i_4_); i_4_++) {
-            if (class348_sub13.itemIds[i_4_] >= 0 && (Exception_Sub1.aClass255_112.anInt3271 > class348_sub13.itemIds[i_4_])) {
-                NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(-127, (class348_sub13.itemIds[i_4_])));
+            if (class348_sub13.itemIds[i_4_] >= 0 && (Exception_Sub1.itemDefinitions.itemCount > class348_sub13.itemIds[i_4_])) {
+                ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(-127, (class348_sub13.itemIds[i_4_])));
                 int i_5_ = class213.method1567((MatrixSub3.aClass326_5764.method2600(i_2_, 28364).anInt3256), 107, i_2_);
                 if (!bool) i_3_ += i_5_;
                 else i_3_ += i_5_ * (class348_sub13.amounts[i_4_]);

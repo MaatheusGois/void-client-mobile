@@ -73,7 +73,7 @@ final class ImageDefinition extends Definition {
                             int i_25_ = i_20_;
                             int i_26_ = 0;
                             int i_27_ = 0;
-                            if (Component210.aBoolean5300) {
+                            if (Component210.gameCanvasAttached) {
                                 i_26_ = BufferCacheSub3.method4008((byte) -124);
                                 i_27_ = Component110.method260(bool_15_);
                             }
@@ -125,7 +125,7 @@ final class ImageDefinition extends Definition {
                                 if (class46.anInt765 != 0) {
                                     if ((Component98.anInt5943 == class46.anInt765) || (class46.anInt765 == Component37.anInt3932)) {
                                         Component2.method198(class46, false, i_25_, i_24_);
-                                        if (!Component210.aBoolean5300) {
+                                        if (!Component210.gameCanvasAttached) {
                                             OutputStream_Sub1.method132(124, (Component37.anInt3932 == (class46.anInt765)), class46.anInt709, i_24_, class46.anInt789, i_25_);
                                             NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                         }
@@ -138,7 +138,7 @@ final class ImageDefinition extends Definition {
                                             HashTable.method1007(class46, (NodeSub8.toolkit), i_24_, i_25_, 22960);
                                             DisplayModeManagerContainer259.aBooleanArray3438[i_23_] = true;
                                             NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
-                                            if (Component210.aBoolean5300) {
+                                            if (Component210.gameCanvasAttached) {
                                                 if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                                 else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                             }
@@ -150,7 +150,7 @@ final class ImageDefinition extends Definition {
                                             DisplayModeManagerContainer220.method271(i_25_, class46, (byte) -98, i_24_);
                                             DisplayModeManagerContainer259.aBooleanArray3438[i_23_] = true;
                                             NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
-                                            if (Component210.aBoolean5300) {
+                                            if (Component210.gameCanvasAttached) {
                                                 if (!bool) Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                                 else Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             }
@@ -173,7 +173,7 @@ final class ImageDefinition extends Definition {
                                         if (Component10.fpsOverlayEnabled || ReliefShader.aBoolean2514) {
                                             int i_37_ = (class46.anInt709 + i_24_);
                                             int i_38_ = 15 + i_25_;
-                                            if (Component210.aBoolean5300) {
+                                            if (Component210.gameCanvasAttached) {
                                                 if (!bool) Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                                 else Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             }
@@ -258,7 +258,7 @@ final class ImageDefinition extends Definition {
                                             else NodeSub8.toolkit.method3628(i_24_, i_25_, (class46.anInt709), (class46.anInt789), (class46.anInt749), 0);
                                         } else if (!class46.aBoolean810) NodeSub8.toolkit.method3628(i_24_, i_25_, class46.anInt709, class46.anInt789, (0xffffff & class46.anInt749 | (-(i_28_ & 0xff) + 255 << 24)), 1);
                                         else NodeSub8.toolkit.fillRect(i_24_, i_25_, class46.anInt709, class46.anInt789, (0xffffff & class46.anInt749 | (-(0xff & i_28_) + 255 << 24)), 1);
-                                        if (Component210.aBoolean5300) {
+                                        if (Component210.gameCanvasAttached) {
                                             if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                         }
@@ -270,8 +270,8 @@ final class ImageDefinition extends Definition {
                                             int i_50_ = class46.anInt749;
                                             String string = (class46.aString792);
                                             if (class46.anInt812 != -1) {
-                                                NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(-67, (class46.anInt812)));
-                                                string = (class213.aString2795);
+                                                ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(-67, (class46.anInt812)));
+                                                string = (class213.itemName);
                                                 if (string == null) string = "null";
                                                 if (((class213.anInt2820) == 1 || (class46.anInt781) != 1) && (class46.anInt781) != -1) string = ("<col=ff9040>" + string + "</col> x" + (NameFormatter.formatQuantity(-127, (class46.anInt781))));
                                             }
@@ -288,7 +288,7 @@ final class ImageDefinition extends Definition {
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                             if (string.trim().length() > 0) {
                                                 if (Component29.aBoolean10046) {
-                                                    if (Component210.aBoolean5300) {
+                                                    if (Component210.gameCanvasAttached) {
                                                         if (!bool) Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                                         else Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                                     }
@@ -296,7 +296,7 @@ final class ImageDefinition extends Definition {
                                                     Component184 class143 = (Component137.method1151(-25411, (NodeSub8.toolkit), (class46.anInt702)));
                                                     int i_51_ = (class143.method1187(string, bool_15_, class46.anInt709, (Component22.aClass105Array1744)));
                                                     int i_52_ = (class143.method1185((Component22.aClass105Array1744), 0, class46.anInt673, class46.anInt709, string));
-                                                    if (Component210.aBoolean5300) {
+                                                    if (Component210.gameCanvasAttached) {
                                                         if (!bool) Component285.method503(i_25_ + i_52_, i_24_, (byte) -74, (i_24_ - -i_51_), i_25_);
                                                         else Component103.method2663(-5590, i_24_, i_51_ + i_24_, i_25_, (i_25_ + i_52_));
                                                     }
@@ -310,7 +310,7 @@ final class ImageDefinition extends Definition {
                                             Component24 class105;
                                             if (class46.anInt812 != -1) {
                                                 Component101 class154 = ((class46.aBoolean720) ? (Component72.localPlayer.appearance) : null);
-                                                class105 = (Exception_Sub1.aClass255_112.method1941((class46.anInt672), (byte) -74, (class46.anInt812), (class46.anInt781), (~0xffffff | (class46.anInt809)), (class46.anInt678), NodeSub8.toolkit, class154));
+                                                class105 = (Exception_Sub1.itemDefinitions.method1941((class46.anInt672), (byte) -74, (class46.anInt812), (class46.anInt781), (~0xffffff | (class46.anInt809)), (class46.anInt678), NodeSub8.toolkit, class154));
                                             } else if ((class46.anInt806) == -1) class105 = (class46.method443(NodeSub8.toolkit, (byte) -57));
                                             else class105 = (Component264.method2263(NodeSub8.toolkit, 0, (class46.anInt806)));
                                             if (class105 == null) {
@@ -342,7 +342,7 @@ final class ImageDefinition extends Definition {
                                                 else class105.method970(i_24_, i_25_, (class46.anInt709), (class46.anInt789), 0, i_55_, 1);
                                             }
                                         }
-                                        if (Component210.aBoolean5300) {
+                                        if (Component210.gameCanvasAttached) {
                                             if (!bool) Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                             else Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                         }
@@ -351,7 +351,7 @@ final class ImageDefinition extends Definition {
                                         DisplayModeManagerContainer370 class64 = null;
                                         int i_60_ = 0;
                                         if (class46.anInt812 != -1) {
-                                            NumberFormatter class213 = (Exception_Sub1.aClass255_112.method1940(103, (class46.anInt812)));
+                                            ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(103, (class46.anInt812)));
                                             if (class213 != null) {
                                                 class213 = (class213.method1560((class46.anInt781), (byte) 97));
                                                 DisplayModeManagerContainer167 class17 = ((class46.anInt699) == -1 ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
@@ -366,7 +366,7 @@ final class ImageDefinition extends Definition {
                                                 Player player = (InterfaceRenderer.players[i_61_]);
                                                 DisplayModeManagerContainer167 class17 = ((class46.anInt699) == -1 ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
                                                 if ((player != null) && ((i_61_ == (StringDefinition.anInt9591)) || ((class46.anInt779) == (Component349.method2418((player.username), (byte) -50)))))
-                                                    class64 = (player.appearance.method1226((DisplayModeManagerContainer58.aClass170_10209), null, null, true, (Exception_Sub1.aClass255_112), 0, class17, class46.anInt730, true, -1, null, 2048, (DefinitionSub25.aClass150_9342), class46.anInt841, (NodeSub8.toolkit), (Component291.aClass278_2529), (RunescapeInfo.aClass87_191), 0, class46.anInt795, 0, (DisplayModeManagerContainer282.aClass261_5558)));
+                                                    class64 = (player.appearance.method1226((DisplayModeManagerContainer58.aClass170_10209), null, null, true, (Exception_Sub1.itemDefinitions), 0, class17, class46.anInt730, true, -1, null, 2048, (DefinitionSub25.aClass150_9342), class46.anInt841, (NodeSub8.toolkit), (Component291.aClass278_2529), (RunescapeInfo.aClass87_191), 0, class46.anInt795, 0, (DisplayModeManagerContainer282.aClass261_5558)));
                                             }
                                         } else if ((class46.anInt770) == 8 || (class46.anInt770) == 9) {
                                             NodeSub13 class348_sub13 = (AbstractGlTextureSub4.getContainerNode((byte) -123, (class46.anInt753), false));
@@ -376,11 +376,11 @@ final class ImageDefinition extends Definition {
                                                 class64 = (class348_sub13.method2803(class17, class154, (class46.anInt779), (class46.anInt795), (class46.anInt841), (class46.anInt730), 2048, NodeSub8.toolkit, (class46.anInt770) == 9, -1));
                                             }
                                         } else if (class46.anInt699 == -1) {
-                                            class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, -1, 0, (Exception_Sub1.aClass255_112), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), null, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), -1));
+                                            class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, -1, 0, (Exception_Sub1.itemDefinitions), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), null, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), -1));
                                             if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.markInterfaceDirty(-9343, class46);
                                         } else {
                                             DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7));
-                                            class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, (class46.anInt795), (class46.anInt841), (Exception_Sub1.aClass255_112), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), class17, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), (class46.anInt730)));
+                                            class64 = (class46.method430((DefinitionSub25.aClass150_9342), RunescapeInfo.aClass87_191, 2048, NodeSub8.toolkit, (class46.anInt795), (class46.anInt841), (Exception_Sub1.itemDefinitions), (DisplayModeManagerContainer58.aClass170_10209), 255, (Component72.localPlayer.appearance), class17, (DisplayModeManagerContainer282.aClass261_5558), (Component291.aClass278_2529), (class46.anInt730)));
                                             if (class64 == null && (HashNodeSub13.aBoolean9616)) Component111.markInterfaceDirty(-9343, class46);
                                         }
                                         if (class64 != null) {
@@ -429,7 +429,7 @@ final class ImageDefinition extends Definition {
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                             if (class46.aBoolean754) NodeSub8.toolkit.C(true);
                                         }
-                                        if (Component210.aBoolean5300) {
+                                        if (Component210.gameCanvasAttached) {
                                             if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                         }
@@ -451,7 +451,7 @@ final class ImageDefinition extends Definition {
                                         }
                                         if (class46.anInt690 != 1) NodeSub8.toolkit.method3688(i_69_, i_68_, i_70_, i_71_, class46.anInt749, class46.anInt690, 0);
                                         else NodeSub8.toolkit.method3709(i_69_, i_68_, i_70_, i_71_, class46.anInt749, 0);
-                                        if (Component210.aBoolean5300) {
+                                        if (Component210.gameCanvasAttached) {
                                             if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);
                                         }

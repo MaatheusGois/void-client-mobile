@@ -178,7 +178,7 @@ final class LoadingManager {
             DisplayModeManagerContainer64.aClass153_9031 = new Component62(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
             Component245.aClass141_117 = new Component258(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
             Component291.aClass278_2529 = new DisplayModeManagerContainer347(PacketReader.currentGameType, ObjectDeserializer.languageId, true, Component43.aClass45_4975, ShaderSub3.aClass45_5207);
-            Exception_Sub1.aClass255_112 = new DisplayModeManagerContainer320(PacketReader.currentGameType, ObjectDeserializer.languageId, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, ShaderSub3.aClass45_5207);
+            Exception_Sub1.itemDefinitions = new ItemDefinitionProvider(PacketReader.currentGameType, ObjectDeserializer.languageId, true, MatrixSub3.aClass326_5764, RadixParser.aClass45_2306, ShaderSub3.aClass45_5207);
             DisplayModeManagerContainer64.aClass187_9036 = new Component38(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             RunescapeInfo.aClass87_191 = new Component344(PacketReader.currentGameType, ObjectDeserializer.languageId, CacheNodeSub2.aClass45_10480, NodeSub29.aClass45_6909, DisplayModeManagerContainer51.aClass45_2490);
             ComponentDownloader.aClass84_413 = new DisplayModeManagerContainer26(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
@@ -284,7 +284,7 @@ final class LoadingManager {
             LogicError.method830(3, 800, (byte) 102, false, 600);
             DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
             Component27.method3568(NodeSub8.toolkit, i ^ ~0x6ff7);
-            DisplayModeManagerContainer320.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
+            ItemDefinitionProvider.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
             DisplayModeManagerContainer204.method901(Component22.aClass105Array1744, 515880227);
         }
         return DefinitionSub6.method3063(false);

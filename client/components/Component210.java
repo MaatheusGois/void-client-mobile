@@ -6,8 +6,13 @@ import jaggl.OpenGL;
 
 class Component210
 /**
- * RENAMED from `Class59_Sub1` (JODE-obfuscated).
- * Evidence: subclass of DisplayModeManagerContainer213 (hierarchy)
+ * RENAMED from {@code Class59_Sub1}. OpenGL mipmap / noise texture helper
+ * ({@link DisplayModeManagerContainer213} subclass) — <b>and</b> hosts static
+ * developer-console helpers that JODE parked here:
+ * {@link #submitConsoleLine}, {@link #decorateItemConsoleEcho}, {@link #stripItemConsoleEcho}.
+ * <p>
+ * {@link #gameCanvasAttached} mirrors the graphics pref that binds the game canvas
+ * to the toolkit (alternate present path when true).
  */ extends DisplayModeManagerContainer213 {
     static int anInt5277;
     private final int anInt5278;
@@ -32,7 +37,11 @@ class Component210
     static ReflectionInvoker aClass297_5297;
     private final int anInt5298;
     static float aFloat5299;
-    static boolean aBoolean5300 = false;
+    /**
+     * True when the active graphics preference has attached {@code gameCanvas} to the
+     * toolkit ({@code HashNodeSub3} sync). Gates toolkit present vs software blit paths.
+     */
+    static boolean gameCanvasAttached = false;
 
     void method550(int i, byte i_0_, byte i_1_) {
         if (i_1_ != 14) submitConsoleLine(true, -38);
@@ -160,22 +169,34 @@ class Component210
 
     /**
      * Submits {@link Component126#consoleInput} to {@link CommandHandler#handleCommand}
-     * (console enter). When {@code bool} is false, echoes {@code --> ...} and clears the line.
+     * (console enter). When {@code silent} is false, echoes {@code --> ...} and clears the line.
      * <p>
      * {@code item <id> ...} echoes with the item name appended for readability
      * ({@code item 12345 1 (Abyssal whip)}); the string sent to the server stays undecorated.
+     * <p>
+     * On mobile, hides the soft keyboard after a real submit so the purple band shrinks
+     * back to compact height and the inventory / world underneath are visible again
+     * (history re-run used to leave the IME up and cover the whole game view).
+     *
+     * @param silent when {@code true}, run the command without echoing / clearing the prompt
+     *               (e.g. console key path that peeks without Enter).
+     * @param lengthGuard must differ from {@link Component126#consoleInput}{@
+     *                    (obfuscator junk — callers pass {@code 0}).
      */
-    static final void submitConsoleLine(boolean bool, int i) {
+    static final void submitConsoleLine(boolean silent, int lengthGuard) {
         anInt5286++;
-        if (i != Component126.consoleInput.length()) {
+        if (lengthGuard != Component126.consoleInput.length()) {
             // Strip any prior "(name)" decoration (e.g. history up-arrow / re-run) before send.
             String raw = stripItemConsoleEcho(Component126.consoleInput);
-            CommandHandler.handleCommand(raw, false, bool, (byte) -79);
-            if (!bool) {
+            CommandHandler.handleCommand(raw, false, silent, (byte) -79);
+            if (!silent) {
                 Applet_Sub1.printConsole("--> " + decorateItemConsoleEcho(raw), 110);
                 NodeSub38.consoleCursor = 0;
                 Component126.consoleInput = "";
-                Component92.anInt3312 = 0;
+                Component92.consoleHistoryDepth = 0;
+                // History taps deliberately skip host IME toggle; still drop the keyboard
+                // here so spawn commands (item/tele/…) are not hidden under the expanded band.
+                MobileKeyboard.requestHide("console-submit");
             }
         }
     }
@@ -195,6 +216,54 @@ class Component210
     }
 
     /**
+     * End index (exclusive) of {@code item <id> [amount]} in a trimmed item command,
+     * or {@code -1} if the id is missing. Ignores a trailing {@code (name)} decoration
+     * so names with nested parens (e.g. {@code Overload (4)}) do not confuse strip/decorate.
+     */
+    private static int itemCommandArgsEnd(String trimmed) {
+        if (!isItemCommand(trimmed)) {
+            return -1;
+        }
+        int i = 4; // after "item"
+        int n = trimmed.length();
+        while (i < n && trimmed.charAt(i) == ' ') {
+            i++;
+        }
+        if (i >= n) {
+            return -1;
+        }
+        // item-id (non-space token)
+        while (i < n && trimmed.charAt(i) != ' ') {
+            i++;
+        }
+        int afterId = i;
+        while (i < n && trimmed.charAt(i) == ' ') {
+            i++;
+        }
+        // optional item-amount (digits only — decoration starts with '(')
+        if (i < n && trimmed.charAt(i) >= '0' && trimmed.charAt(i) <= '9') {
+            while (i < n && trimmed.charAt(i) >= '0' && trimmed.charAt(i) <= '9') {
+                i++;
+            }
+            return i;
+        }
+        return afterId;
+    }
+
+    /**
+     * True when {@code trimmed} is {@code item <id> [amount] (…)} display decoration
+     * (name may itself contain parentheses).
+     */
+    private static boolean hasItemConsoleDecoration(String trimmed) {
+        int end = itemCommandArgsEnd(trimmed);
+        if (end < 0) {
+            return false;
+        }
+        String rest = trimmed.substring(end).trim();
+        return rest.length() >= 2 && rest.charAt(0) == '(' && rest.charAt(rest.length() - 1) == ')';
+    }
+
+    /**
      * Appends {@code (itemName)} to {@code item <id> ...} for console history display.
      * Leaves non-item lines and already-decorated lines unchanged.
      */
@@ -206,16 +275,19 @@ class Component210
         if (trimmed.length() == 0) {
             return cmd;
         }
-        // Already decorated: "item 12345 1 (Name)"
-        int open = trimmed.lastIndexOf(" (");
-        if (open > 0 && trimmed.charAt(trimmed.length() - 1) == ')'
-                && isItemCommand(trimmed.substring(0, open))) {
-            return cmd;
-        }
         if (!isItemCommand(trimmed)) {
             return cmd;
         }
-        String[] parts = trimmed.split("\\s+");
+        // Already decorated: "item 12345 1 (Name)" / "item 15332 (Overload (4))"
+        if (hasItemConsoleDecoration(trimmed)) {
+            return cmd;
+        }
+        int argsEnd = itemCommandArgsEnd(trimmed);
+        if (argsEnd < 0) {
+            return cmd;
+        }
+        String args = trimmed.substring(0, argsEnd).trim();
+        String[] parts = args.split("\\s+");
         if (parts.length < 2) {
             return cmd;
         }
@@ -225,17 +297,17 @@ class Component210
         } catch (NumberFormatException e) {
             return cmd;
         }
-        if (Exception_Sub1.aClass255_112 == null) {
+        if (Exception_Sub1.itemDefinitions == null) {
             return cmd;
         }
         try {
-            // First arg is obfuscator junk — must keep (junk-13)/59 != 0 or method1940 divides by zero.
-            NumberFormatter def = Exception_Sub1.aClass255_112.method1940(90, id);
-            if (def == null || def.aString2795 == null || def.aString2795.length() == 0
-                    || "null".equals(def.aString2795)) {
+            // First arg is obfuscator junk — must keep (junk-13)/59 != 0 or getItemDefinition divides by zero.
+            ItemDefinition def = Exception_Sub1.itemDefinitions.getItemDefinition(90, id);
+            if (def == null || def.itemName == null || def.itemName.length() == 0
+                    || "null".equals(def.itemName)) {
                 return cmd;
             }
-            return trimmed + " (" + def.aString2795 + ")";
+            return args + " (" + def.itemName + ")";
         } catch (RuntimeException e) {
             // Never block console submit on a bad/missing item def.
             return cmd;
@@ -245,21 +317,18 @@ class Component210
     /**
      * Removes a trailing {@code (itemName)} decoration from an {@code item ...} console line
      * so history recall / re-run still sends a clean admin command to the server.
+     * Names with nested parens (e.g. {@code Overload (4)}) must not truncate mid-name.
      */
     static String stripItemConsoleEcho(String cmd) {
         if (cmd == null) {
             return null;
         }
         String trimmed = cmd.trim();
-        int open = trimmed.lastIndexOf(" (");
-        if (open <= 0 || trimmed.charAt(trimmed.length() - 1) != ')') {
+        if (!hasItemConsoleDecoration(trimmed)) {
             return cmd;
         }
-        String before = trimmed.substring(0, open);
-        if (!isItemCommand(before)) {
-            return cmd;
-        }
-        return before;
+        int end = itemCommandArgsEnd(trimmed);
+        return trimmed.substring(0, end).trim();
     }
 
     final void method541(int i) {

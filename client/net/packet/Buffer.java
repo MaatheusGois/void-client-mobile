@@ -531,9 +531,9 @@ class Buffer extends Node {
                 if (OggStreamReader.aString9043 != null) MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -81);
                 else Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             }
-            if (i_71_ != 13 && NumberFormatter.aClass238_2773 != null) {
-                NumberFormatter.aClass238_2773.close((byte) 36);
-                NumberFormatter.aClass238_2773 = null;
+            if (i_71_ != 13 && ItemDefinition.aClass238_2773 != null) {
+                ItemDefinition.aClass238_2773.close((byte) 36);
+                ItemDefinition.aClass238_2773 = null;
             }
             if (i_71_ == 3) CacheNode.method3198((DebugPanic.anInt4737 != r.anInt9721), (byte) -45);
             if (i_71_ == 7) HashTable.method1006((r.anInt9721 != Component285.anInt970), (byte) 102);

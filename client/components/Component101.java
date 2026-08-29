@@ -26,7 +26,7 @@ final class Component101
     static int anInt2106;
     static int anInt2107;
 
-    final DisplayModeManagerContainer370 method1226(Interface17 interface17, DisplayModeManagerContainer167 class17, Component280[] class182s, boolean bool, DisplayModeManagerContainer320 class255, int i, DisplayModeManagerContainer167 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Component324 class150, int i_5_, GraphicsToolkit var_ha, DisplayModeManagerContainer347 class278, Component344 class87, int i_6_, int i_7_, int i_8_, DisplayModeManagerContainer1 class261) {
+    final DisplayModeManagerContainer370 method1226(Interface17 interface17, DisplayModeManagerContainer167 class17, Component280[] class182s, boolean bool, ItemDefinitionProvider class255, int i, DisplayModeManagerContainer167 class17_0_, int i_1_, boolean bool_2_, int i_3_, int[] is, int i_4_, Component324 class150, int i_5_, GraphicsToolkit var_ha, DisplayModeManagerContainer347 class278, Component344 class87, int i_6_, int i_7_, int i_8_, DisplayModeManagerContainer1 class261) {
         try {
             anInt2097++;
             if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method800(i, class182s, class87, !bool_2_, class17, i_8_, class261, i_7_, class17_0_, interface17, var_ha, i_3_, is, i_1_, i_6_, i_4_, i_5_));
@@ -176,7 +176,7 @@ final class Component101
                     int i_39_ = is_10_[i_38_];
                     if ((0x40000000 & i_39_) == 0) {
                         if ((~0x7fffffff & i_39_) != 0 && !class150.method1203((byte) 33, i_39_ & 0x3fffffff).method348((byte) 34)) bool_37_ = true;
-                    } else if (!class255.method1940(94, 0x3fffffff & i_39_).method1565(this.aBoolean2100, -1)) bool_37_ = true;
+                    } else if (!class255.getItemDefinition(94, 0x3fffffff & i_39_).method1565(this.aBoolean2100, -1)) bool_37_ = true;
                 }
                 if (bool_37_) {
                     if (aLong2094 != -1) {
@@ -195,7 +195,7 @@ final class Component101
                                 if (class124 != null) class124s[i_40_] = class124;
                             }
                         } else {
-                            DisplayModeManagerContainer77 class124 = (class255.method1940(104, i_41_ & 0x3fffffff).method1558(this.aBoolean2100, !bool_2_));
+                            DisplayModeManagerContainer77 class124 = (class255.getItemDefinition(104, i_41_ & 0x3fffffff).method1558(this.aBoolean2100, !bool_2_));
                             if (class124 != null) class124s[i_40_] = class124;
                         }
                     }
@@ -291,12 +291,12 @@ final class Component101
         }
     }
 
-    final void method1227(byte i, int i_61_, int i_62_, DisplayModeManagerContainer320 class255) {
+    final void method1227(byte i, int i_61_, int i_62_, ItemDefinitionProvider class255) {
         try {
             if (i == 42) {
                 anInt2099++;
                 if (i_62_ == -1) anIntArray2092[i_61_] = 0;
-                else if (class255.method1940(-125, i_62_) != null) {
+                else if (class255.getItemDefinition(-125, i_62_) != null) {
                     anIntArray2092[i_61_] = Component224.bitwiseOr(1073741824, i_62_);
                     method1234(-100);
                 }
@@ -328,7 +328,7 @@ final class Component101
         method1234(-78);
     }
 
-    final DisplayModeManagerContainer370 method1230(DisplayModeManagerContainer320 class255, int i, Component344 class87, Component324 class150, Interface17 interface17, DisplayModeManagerContainer347 class278, int i_66_, int i_67_, int i_68_, DisplayModeManagerContainer167 class17, int i_69_, GraphicsToolkit var_ha) {
+    final DisplayModeManagerContainer370 method1230(ItemDefinitionProvider class255, int i, Component344 class87, Component324 class150, Interface17 interface17, DisplayModeManagerContainer347 class278, int i_66_, int i_67_, int i_68_, DisplayModeManagerContainer167 class17, int i_69_, GraphicsToolkit var_ha) {
         try {
             anInt2107++;
             if (this.anInt2093 != -1) return (class278.method2079(this.anInt2093, -1).method803(interface17, var_ha, i_69_, i_67_, class17, class87, i_66_, 121, i_68_));
@@ -381,7 +381,7 @@ final class Component101
                 for (int i_81_ = 0; i_81_ < 12; i_81_++) {
                     int i_82_ = anIntArray2092[i_81_];
                     if ((i_82_ & 0x40000000) != 0) {
-                        if (!class255.method1940(i ^ 0x17f6eb2c, 0x3fffffff & i_82_).method1555((byte) 97, this.aBoolean2100)) bool = true;
+                        if (!class255.getItemDefinition(i ^ 0x17f6eb2c, 0x3fffffff & i_82_).method1555((byte) 97, this.aBoolean2100)) bool = true;
                     } else if ((~0x7fffffff & i_82_) != 0 && !class150.method1203((byte) 33, i_82_ & 0x3fffffff).method342((byte) 110)) bool = true;
                 }
                 if (bool) return null;
@@ -395,7 +395,7 @@ final class Component101
                             if (class124 != null) class124s[i_83_++] = class124;
                         }
                     } else {
-                        DisplayModeManagerContainer77 class124 = (class255.method1940(-107, i_85_ & 0x3fffffff).method1554(this.aBoolean2100, -14));
+                        DisplayModeManagerContainer77 class124 = (class255.getItemDefinition(-107, i_85_ & 0x3fffffff).method1554(this.aBoolean2100, -14));
                         if (class124 != null) class124s[i_83_++] = class124;
                     }
                 }

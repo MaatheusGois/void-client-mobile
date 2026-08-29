@@ -117,7 +117,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         }
         aBoolean10148 = class64.F() || (this.aClass235_10155.aClass318_Sub10_3081) != null;
         if (aClass30_10150 == null) aClass30_10150 = (OggUrlStream.method2967(this.x, class64, this.y, this.anInt6382, 2));
-        else DisplayModeManagerContainer320.method1935(this.y, this.anInt6382, aClass30_10150, class64, false, this.x);
+        else ItemDefinitionProvider.method1935(this.y, this.anInt6382, aClass30_10150, class64, false, this.x);
         return class318_sub4;
     }
 

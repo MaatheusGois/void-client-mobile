@@ -370,7 +370,7 @@ final class CommandHandler {
                         if (string.startsWith("cachespace")) {
                             Applet_Sub1.printConsole(("I(s): " + StringCache.aClass60_4327.getRemaining(-18529) + "/" + StringCache.aClass60_4327.getCapacity(-4)), -101);
                             Applet_Sub1.printConsole(("I(m): " + Component142.aClass60_4417.getRemaining(-18529) + "/" + Component142.aClass60_4417.getCapacity(i ^ 0x4d)), 127);
-                            Applet_Sub1.printConsole(("O(s): " + Exception_Sub1.aClass255_112.aClass175_3288.method1350((byte) 126) + "/" + Exception_Sub1.aClass255_112.aClass175_3288.method1339(100)), i + 203);
+                            Applet_Sub1.printConsole(("O(s): " + Exception_Sub1.itemDefinitions.aClass175_3288.method1350((byte) 126) + "/" + Exception_Sub1.itemDefinitions.aClass175_3288.method1339(100)), i + 203);
                             return;
                         }
                         if (string.equalsIgnoreCase("getcamerapos")) {

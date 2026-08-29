@@ -38,7 +38,7 @@ abstract class SocketConnector {
         if (i > 49) {
             if (Component49.clientState == 7) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
             else {
-                NumberFormatter.aClass238_2773 = DefinitionSub8.aClass238_9165;
+                ItemDefinition.aClass238_2773 = DefinitionSub8.aClass238_9165;
                 DefinitionSub8.aClass238_9165 = null;
                 Buffer.setClientState(2, 13);
             }

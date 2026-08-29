@@ -167,7 +167,7 @@ final class OpenGlShader extends AbstractShader {
                     }
                     DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
                     if (NodeSub8.toolkit != null) {
-                        if (Component210.aBoolean5300) s.method3980(120, DisplayModeManagerContainer50.gameCanvas);
+                        if (Component210.gameCanvasAttached) s.method3980(120, DisplayModeManagerContainer50.gameCanvas);
                         else NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, PacketReader.anInt10432);
                     }
                     if (RSACipher.aFrame4904 == container) {

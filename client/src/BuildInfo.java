@@ -451,7 +451,7 @@ final class BuildInfo {
                 int i_35_ = 0;
                 int i_36_ = 0;
                 if (i < 113) aClass227_151 = null;
-                if (Component210.aBoolean5300) {
+                if (Component210.gameCanvasAttached) {
                     i_35_ = BufferCacheSub3.method4008((byte) -127);
                     i_36_ = Component110.method260(false);
                 }

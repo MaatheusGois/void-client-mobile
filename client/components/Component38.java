@@ -44,7 +44,7 @@ final class Component38
         if (bool == true) {
             Component223.method175((byte) -6);
             anInt2505++;
-            Component210.aBoolean5300 = false;
+            Component210.gameCanvasAttached = false;
         }
     }
 

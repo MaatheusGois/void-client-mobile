@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer196
         if (i == 9864) {
             anInt4230++;
             if (NodeSub8.toolkit != null) {
-                if (Component210.aBoolean5300) Component38.method1406(true);
+                if (Component210.gameCanvasAttached) Component38.method1406(true);
                 DisplayModeManagerContainer5.aClass76_1208.method775((byte) 69);
                 DisplayModeManagerContainer58.method2433();
                 Component308.method464(i + -9865);

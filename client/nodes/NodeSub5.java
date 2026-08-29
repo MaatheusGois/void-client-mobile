@@ -78,13 +78,13 @@ abstract class NodeSub5
                             Component48.anInt4337 = -5;
                             return;
                         }
-                        DisplayModeManagerContainer320.aClass161_3285.method1259(0);
+                        ItemDefinitionProvider.aClass161_3285.method1259(0);
                         AbstractShaderSub2.anInt7297 = 1;
                         RequestProcessor.anInt2264 = 0;
                         SpriteSub1.anInt8398++;
                     }
                     if (AbstractShaderSub2.anInt7297 == 1) {
-                        DisplayModeManagerContainer273.aClass144_5800 = (DisplayModeManagerContainer320.aClass161_3285.method1262(OggUrlStream.aClass297_8992, (byte) 36));
+                        DisplayModeManagerContainer273.aClass144_5800 = (ItemDefinitionProvider.aClass161_3285.method1262(OggUrlStream.aClass297_8992, (byte) 36));
                         AbstractShaderSub2.anInt7297 = 2;
                     }
                     if (AbstractShaderSub2.anInt7297 == 2) {
@@ -112,7 +112,7 @@ abstract class NodeSub5
                     DefinitionSub8.aClass238_9165 = null;
                 }
                 if (SpriteSub1.anInt8398 < 2) {
-                    DisplayModeManagerContainer320.aClass161_3285.method1259(0);
+                    ItemDefinitionProvider.aClass161_3285.method1259(0);
                     RequestProcessor.anInt2264 = 0;
                     SpriteSub1.anInt8398++;
                     AbstractShaderSub2.anInt7297 = 1;

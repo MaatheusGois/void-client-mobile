@@ -27,7 +27,7 @@ final class Component146
             int i_13_ = 0;
             int i_14_ = 0;
             int i_15_ = 0;
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 i_11_ = Component112.anInt3941;
                 i_15_ = HashNodeSub16Sub2.anInt10463;
                 i_13_ = Component112.anInt3939;
@@ -43,7 +43,7 @@ final class Component146
             if (Component14.aClass46ArrayArray8584[i_2_] == null) ImageDefinition.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (DefinitionSub33.aClass46ArrayArray9427[i_2_]), -1, i_7_);
             else ImageDefinition.method3064(i_9_, drawY, i_4_ < 0, i_5_, i_3_, i_4_, i_6_, false, (Component14.aClass46ArrayArray8584[i_2_]), -1, i_7_);
             if (i_8_ <= 58) anInt2127 = -84;
-            if (Component210.aBoolean5300) {
+            if (Component210.gameCanvasAttached) {
                 if (i_4_ >= 0 && HashNodeSub16Sub2.anInt10463 == 2) Component103.method2663(-5590, Component112.anInt3941, Component112.anInt3939, Component339.anInt3142, NodeSub3.anInt6585);
                 HashNodeSub16Sub2.anInt10463 = i_15_;
                 Component112.anInt3939 = i_13_;

@@ -13,7 +13,8 @@ final class Component92
     /** Camera shake offset on world Z/Y (±55); applied when following the local player. */
     static int cameraShakeZ;
     static int[] anIntArray3311;
-    static int anInt3312 = 0;
+    /** How many {@code -->} history steps above the newest line (console up/down recall). */
+    static int consoleHistoryDepth = 0;
 
     static final boolean method1977(byte i, int i_0_) {
         if (i != -79) return false;

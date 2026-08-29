@@ -71,8 +71,8 @@ final class OutputStream_Sub2 extends OutputStream {
                     if (class51.anIntArray945 != null) class51 = class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47);
                     if (class51 != null) is = class51.anIntArray917;
                 }
-            } else is = (Exception_Sub1.aClass255_112.method1940(-76, class348_sub42_sub12.itemId).anIntArray2772);
-        } else is = (Exception_Sub1.aClass255_112.method1940(-115, (int) class348_sub42_sub12.identifier).anIntArray2772);
+            } else is = (Exception_Sub1.itemDefinitions.getItemDefinition(-76, class348_sub42_sub12.itemId).anIntArray2772);
+        } else is = (Exception_Sub1.itemDefinitions.getItemDefinition(-115, (int) class348_sub42_sub12.identifier).anIntArray2772);
         if (is != null) string += ImageTagText.method1273(is, true);
         int i = Component27.aClass143_4962.method1186(string, DisplayModeManagerContainer196.aClass105Array4234, bool);
         if (class348_sub42_sub12.aBoolean9597) i += ColoredText.aClass105_6097.method971() + 4;

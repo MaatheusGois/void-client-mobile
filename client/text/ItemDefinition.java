@@ -1,13 +1,15 @@
-/* NumberFormatter - Decompiled by JODE
+/* ItemDefinition - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
 /**
- * RENAMED from `Class213` (JODE-obfuscated).
- * Number formatter. Formats integers with thousands separators (i/1000 + FriendsIgnoreList unit suffix) for display in the UI.
+ * RENAMED from {@code Class213} / misnamed {@code NumberFormatter}.
+ * Cache item definition (name, inventory options, note links, models, params).
+ * Loaded by {@link ItemDefinitionProvider#getItemDefinition}; console {@code item}
+ * echo uses {@link #itemName}. Some unrelated static helpers are still parked here.
  */
 
-final class NumberFormatter {
+final class ItemDefinition {
     static int anInt2751;
     int anInt2752 = -1;
     private int anInt2753;
@@ -18,7 +20,8 @@ final class NumberFormatter {
     int anInt2758;
     int anInt2759;
     private int anInt2760;
-    DisplayModeManagerContainer320 aClass255_2761;
+    /** Owning provider that decoded this def (back-pointer for model caches). */
+    ItemDefinitionProvider aClass255_2761;
     int[] anIntArray2762;
     String[] aStringArray2763;
     int anInt2764;
@@ -26,7 +29,8 @@ final class NumberFormatter {
     int anInt2766;
     private int anInt2767;
     static int anInt2768;
-    int anInt2769;
+    /** Item archive id this def was loaded for. */
+    int itemId;
     private int anInt2770 = -1;
     private short[] aShortArray2771;
     int[] anIntArray2772;
@@ -52,7 +56,8 @@ final class NumberFormatter {
     private int anInt2792;
     static int anInt2793;
     private int anInt2794;
-    String aString2795;
+    /** Display name (menus, examine, console {@code item … (name)} echo). */
+    String itemName;
     static int anInt2796;
     private int anInt2797;
     static int anInt2798 = 0;
@@ -136,7 +141,7 @@ final class NumberFormatter {
         return bool_8_;
     }
 
-    final void method1556(NumberFormatter class213_9_, byte i, NumberFormatter class213_10_) {
+    final void method1556(ItemDefinition class213_9_, byte i, ItemDefinition class213_10_) {
         try {
             anInt2808 = class213_9_.anInt2808;
             this.anInt2779 = class213_10_.anInt2779;
@@ -148,7 +153,7 @@ final class NumberFormatter {
             anInt2797 = class213_9_.anInt2797;
             aByteArray2821 = class213_9_.aByteArray2821;
             aShortArray2771 = class213_9_.aShortArray2771;
-            this.aString2795 = class213_9_.aString2795;
+            this.itemName = class213_9_.itemName;
             anInt2756 = class213_10_.anInt2756;
             anInt2770 = class213_9_.anInt2770;
             aShortArray2777 = class213_9_.aShortArray2777;
@@ -242,14 +247,14 @@ final class NumberFormatter {
                 for (int i_26_ = 0; i_26_ < 10; i_26_++) {
                     if (i_21_ >= this.anIntArray2831[i_26_] && this.anIntArray2831[i_26_] != 0) i_25_ = this.anIntArray2762[i_26_];
                 }
-                if (i_25_ != -1) return (this.aClass255_2761.method1940(103, i_25_).method1559(class154, class17, var_ha, i, i_20_, 1, i_22_, (byte) 88, i_24_));
+                if (i_25_ != -1) return (this.aClass255_2761.getItemDefinition(103, i_25_).method1559(class154, class17, var_ha, i, i_20_, 1, i_22_, (byte) 88, i_24_));
             }
-            if (i_23_ != 88) this.aString2795 = null;
+            if (i_23_ != 88) this.itemName = null;
             int i_27_ = i;
             if (class17 != null) i_27_ |= class17.method263(i_24_, 105, i_22_, true);
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass255_2761.aClass60_3287) {
-                class64 = (DisplayModeManagerContainer370) (this.aClass255_2761.aClass60_3287.get(var_ha.anInt4567 << 29 | this.anInt2769, 69));
+                class64 = (DisplayModeManagerContainer370) (this.aClass255_2761.aClass60_3287.get(var_ha.anInt4567 << 29 | this.itemId, 69));
             }
             if (class64 == null || var_ha.method3667(class64.ua(), i_27_) != 0) {
                 if (class64 != null) i_27_ = var_ha.bitwiseOr(i_27_, class64.ua());
@@ -283,7 +288,7 @@ final class NumberFormatter {
                 }
                 class64.s(i_27_);
                 synchronized (this.aClass255_2761.aClass60_3287) {
-                    this.aClass255_2761.aClass60_3287.putOne(class64, var_ha.anInt4567 << 29 | this.anInt2769, (byte) -111);
+                    this.aClass255_2761.aClass60_3287.putOne(class64, var_ha.anInt4567 << 29 | this.itemId, (byte) -111);
                 }
             }
             if (class17 != null) class64 = class17.method269(116, class64, i_24_, i_20_, i_27_, i_22_);
@@ -294,7 +299,7 @@ final class NumberFormatter {
         }
     }
 
-    final NumberFormatter method1560(int i, byte i_33_) {
+    final ItemDefinition method1560(int i, byte i_33_) {
         if (i_33_ != 97) this.anIntArray2762 = null;
         anInt2768++;
         if (this.anIntArray2762 != null && i > 1) {
@@ -302,7 +307,7 @@ final class NumberFormatter {
             for (int i_35_ = 0; i_35_ < 10; i_35_++) {
                 if (i >= this.anIntArray2831[i_35_] && this.anIntArray2831[i_35_] != 0) i_34_ = this.anIntArray2762[i_35_];
             }
-            if (i_34_ != -1) return this.aClass255_2761.method1940(95, i_34_);
+            if (i_34_ != -1) return this.aClass255_2761.getItemDefinition(95, i_34_);
         }
         return this;
     }
@@ -562,7 +567,7 @@ final class NumberFormatter {
                             } else this.aStringArray2811[-30 + i_57_] = class348_sub49.readString((byte) 98);
                         } else this.anInt2819 = class348_sub49.readInt((byte) -126);
                     } else this.anInt2820 = 1;
-                } else this.aString2795 = class348_sub49.readString((byte) -42);
+                } else this.itemName = class348_sub49.readString((byte) -42);
             } else anInt2756 = class348_sub49.readUnsignedShort(i + 842397940);
             anInt2754++;
         } catch (RuntimeException runtimeexception) {
@@ -631,7 +636,7 @@ final class NumberFormatter {
         }
     }
 
-    final void method1570(int i, NumberFormatter class213_94_, NumberFormatter class213_95_) {
+    final void method1570(int i, ItemDefinition class213_94_, ItemDefinition class213_95_) {
         try {
             aShortArray2771 = class213_95_.aShortArray2771;
             aShortArray2785 = class213_95_.aShortArray2785;
@@ -648,7 +653,7 @@ final class NumberFormatter {
             this.anInt2820 = i;
             aShortArray2777 = class213_95_.aShortArray2777;
             this.anInt2825 = class213_95_.anInt2825;
-            this.aString2795 = class213_94_.aString2795;
+            this.itemName = class213_94_.itemName;
             anInt2756 = class213_95_.anInt2756;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("rq.F(" + i + ',' + (class213_94_ != null ? "{...}" : "null") + ',' + (class213_95_ != null ? "{...}" : "null") + ')'));
@@ -670,13 +675,13 @@ final class NumberFormatter {
         }
     }
 
-    public NumberFormatter() {
+    public ItemDefinition() {
         this.anInt2766 = -1;
         anInt2775 = -1;
         anInt2765 = 128;
         this.anInt2778 = -1;
         this.anInt2758 = -1;
-        this.aString2795 = "null";
+        this.itemName = "null";
         anInt2794 = 128;
         this.anInt2799 = 0;
         this.anInt2788 = -1;

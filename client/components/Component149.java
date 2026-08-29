@@ -33,7 +33,7 @@ final class Component149
                     if (i_1_ < Component156.anInt3704) i_1_ = Component156.anInt3704;
                     int i_5_ = (Component181.aClass221_1542.method1607(DisplayModeManagerContainer23.anInt1524, i_1_, (byte) -107) - -Component200.anInt3712);
                     int i_6_ = (Component139.aClass341_6128.getAlignedOffset(GlToolkitSub2.anInt7666, i_2_, 1595) + Component272.anInt5871);
-                    if (Component210.aBoolean5300) {
+                    if (Component210.gameCanvasAttached) {
                         i_5_ += BufferCacheSub3.method4008((byte) -124);
                         i_6_ += Component110.method260(false);
                     }
@@ -69,7 +69,7 @@ final class Component149
                 }
                 if (bool) {
                     try {
-                        if (!Component210.aBoolean5300) var_ha.method3689((byte) 118);
+                        if (!Component210.gameCanvasAttached) var_ha.method3689((byte) 118);
                         else CacheStore.method395(i + 79);
                     } catch (Exception_Sub1 exception_sub1) {
                         /* empty */

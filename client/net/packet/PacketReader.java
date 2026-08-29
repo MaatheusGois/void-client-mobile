@@ -265,7 +265,7 @@ final class PacketReader extends CacheNode {
             Component141.method2397((byte) -127);
             Component113.aBooleanArray2374[i_23_] = true;
             Component300.anIntArray3552[i_23_] = i;
-            DisplayModeManagerContainer320.anIntArray3273[i_23_] = i_25_;
+            ItemDefinitionProvider.anIntArray3273[i_23_] = i_25_;
             Component103.anIntArray4196[i_23_] = i_26_;
             Component212.anIntArray9981[i_23_] = i_24_;
             NodeSub3.aClass114_6584 = null;
@@ -310,7 +310,7 @@ final class PacketReader extends CacheNode {
             int i_29_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             Component141.method2397((byte) -128);
             DisplayModeManagerContainer88.method727((byte) -63, i_29_, i, i_28_);
-            NumberFormatter class213 = Exception_Sub1.aClass255_112.method1940(-126, i);
+            ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-126, i);
             DisplayModeManagerContainer145.method1085(class213.anInt2825, class213.anInt2787, (byte) -59, class213.anInt2781, i_28_);
             Component225.method350(class213.anInt2779, class213.anInt2826, 125, i_28_, class213.anInt2810);
             NodeSub3.aClass114_6584 = null;
@@ -909,12 +909,12 @@ final class PacketReader extends CacheNode {
             NodeSub3.aClass114_6584 = null;
             return true;
         }
-        if (DisplayModeManagerContainer320.aClass114_3265 == NodeSub3.aClass114_6584) {
+        if (ItemDefinitionProvider.aClass114_3265 == NodeSub3.aClass114_6584) {
             DisplayModeManagerContainer347.anInt3581 = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480) << 3);
             GradientPreset.anInt9200 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 98);
             DisplayModeManagerContainer306.anInt4786 = (Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697) << 3);
             while ((Component80.aClass348_Sub49_Sub2_3813.offset) < DefinitionSub25.anInt9341) {
-                DisplayModeManagerContainer238 class74 = (DisplayModeManagerContainer320.method1929((byte) -19)[Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255)]);
+                DisplayModeManagerContainer238 class74 = (ItemDefinitionProvider.method1929((byte) -19)[Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255)]);
                 InputStream_Sub2.method128(class74, (byte) 8);
             }
             NodeSub3.aClass114_6584 = null;

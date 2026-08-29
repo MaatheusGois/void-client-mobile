@@ -131,20 +131,20 @@ public final class client extends Applet_Sub1 {
         else if (Component168.method2354(DisplayModeManagerContainer345.aClass364_165, i ^ ~0x7044)) {
             MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
             MenuOpener.aClass161_4839.anInt2148 = 40000 - -MenuOpener.aClass161_4839.anInt2143;
-            DisplayModeManagerContainer320.aClass161_3285.anInt2148 = DisplayModeManagerContainer320.aClass161_3285.anInt2143 + 40000;
+            ItemDefinitionProvider.aClass161_3285.anInt2148 = ItemDefinitionProvider.aClass161_3285.anInt2143 + 40000;
             MenuOpener.aClass161_4839.anInt2138 = 50000 - -MenuOpener.aClass161_4839.anInt2143;
             DefinitionSub35.aClass161_9443.anInt2148 = (DefinitionSub35.aClass161_9443.anInt2143 + 40000);
-            DisplayModeManagerContainer320.aClass161_3285.anInt2138 = 50000 - -DisplayModeManagerContainer320.aClass161_3285.anInt2143;
+            ItemDefinitionProvider.aClass161_3285.anInt2138 = 50000 - -ItemDefinitionProvider.aClass161_3285.anInt2143;
             DefinitionSub35.aClass161_9443.anInt2138 = (DefinitionSub35.aClass161_9443.anInt2143 + 50000);
         } else if (DisplayModeManagerContainer154.LOCAL == DisplayModeManagerContainer345.aClass364_165) {
             MenuOpener.aClass161_4839.aString2147 = "127.0.0.1";
-            DisplayModeManagerContainer320.aClass161_3285.aString2147 = "127.0.0.1";
+            ItemDefinitionProvider.aClass161_3285.aString2147 = "127.0.0.1";
             MenuOpener.aClass161_4839.anInt2148 = (40000 + MenuOpener.aClass161_4839.anInt2143);
             DefinitionSub35.aClass161_9443.aString2147 = "127.0.0.1";
-            DisplayModeManagerContainer320.aClass161_3285.anInt2148 = 40000 - -DisplayModeManagerContainer320.aClass161_3285.anInt2143;
+            ItemDefinitionProvider.aClass161_3285.anInt2148 = 40000 - -ItemDefinitionProvider.aClass161_3285.anInt2143;
             DefinitionSub35.aClass161_9443.anInt2148 = 40000 - -DefinitionSub35.aClass161_9443.anInt2143;
             MenuOpener.aClass161_4839.anInt2138 = (MenuOpener.aClass161_4839.anInt2143 + 50000);
-            DisplayModeManagerContainer320.aClass161_3285.anInt2138 = DisplayModeManagerContainer320.aClass161_3285.anInt2143 + 50000;
+            ItemDefinitionProvider.aClass161_3285.anInt2138 = ItemDefinitionProvider.aClass161_3285.anInt2143 + 50000;
             DefinitionSub35.aClass161_9443.anInt2138 = 50000 - -DefinitionSub35.aClass161_9443.anInt2143;
         }
         RenderableSub6.aShortArray6428 = Request.aShortArray6889 = HashNodeSub3.aShortArray9502 = Component226.aShortArray4172 = new short[256];
@@ -237,7 +237,7 @@ public final class client extends Applet_Sub1 {
         Component316.method1395((byte) 82);
         Component309.method2011((byte) -71);
         Component258.method1179((byte) -124);
-        DisplayModeManagerContainer320.method1931(true);
+        ItemDefinitionProvider.method1931(true);
         Component38.method1407((byte) 124);
         DisplayModeManagerContainer26.method825(i + -204);
         Component361.method305((byte) 79);
@@ -304,7 +304,7 @@ public final class client extends Applet_Sub1 {
         Component245.method171((byte) 72);
         s.method3988(i + -182);
         DisplayModeManagerContainer206.method804(-3752);
-        NumberFormatter.method1564(104);
+        ItemDefinition.method1564(104);
         BitmapFont.method2572((byte) 23);
         RandomAccessFileReader.clearStatics((byte) -71);
         HelveticaFont.method1461((byte) 112);
@@ -881,8 +881,8 @@ public final class client extends Applet_Sub1 {
                 if (strings.length != 6) JagTheoraDecoder.method518("Argument count", (byte) 44);
                 MenuOpener.aClass161_4839 = new DisplayModeManagerContainer254();
                 MenuOpener.aClass161_4839.anInt2143 = Integer.parseInt(strings[0]);
-                DisplayModeManagerContainer320.aClass161_3285 = new DisplayModeManagerContainer254();
-                DisplayModeManagerContainer320.aClass161_3285.anInt2143 = Integer.parseInt(strings[1]);
+                ItemDefinitionProvider.aClass161_3285 = new DisplayModeManagerContainer254();
+                ItemDefinitionProvider.aClass161_3285.anInt2143 = Integer.parseInt(strings[1]);
                 DefinitionSub35.aClass161_9443 = new DisplayModeManagerContainer254();
                 DefinitionSub35.aClass161_9443.anInt2143 = Integer.parseInt(strings[2]);
                 DisplayModeManagerContainer345.aClass364_165 = DisplayModeManagerContainer154.LOCAL;
@@ -952,9 +952,9 @@ public final class client extends Applet_Sub1 {
         if (this.validateHost(48)) {
             MenuOpener.aClass161_4839 = new DisplayModeManagerContainer254();
             MenuOpener.aClass161_4839.anInt2143 = Integer.parseInt(this.getParameter("worldid"));
-            DisplayModeManagerContainer320.aClass161_3285 = new DisplayModeManagerContainer254();
-            DisplayModeManagerContainer320.aClass161_3285.anInt2143 = Integer.parseInt(this.getParameter("lobbyid"));
-            DisplayModeManagerContainer320.aClass161_3285.aString2147 = this.getParameter("lobbyaddress");
+            ItemDefinitionProvider.aClass161_3285 = new DisplayModeManagerContainer254();
+            ItemDefinitionProvider.aClass161_3285.anInt2143 = Integer.parseInt(this.getParameter("lobbyid"));
+            ItemDefinitionProvider.aClass161_3285.aString2147 = this.getParameter("lobbyaddress");
             DefinitionSub35.aClass161_9443 = new DisplayModeManagerContainer254();
             DefinitionSub35.aClass161_9443.anInt2143 = Integer.parseInt(this.getParameter("demoid"));
             DefinitionSub35.aClass161_9443.aString2147 = this.getParameter("demoaddress");
@@ -1077,7 +1077,7 @@ public final class client extends Applet_Sub1 {
                 } else if (!method111(class46)) {
                     int i_51_ = 0;
                     int i_52_ = 0;
-                    if (Component210.aBoolean5300) {
+                    if (Component210.gameCanvasAttached) {
                         i_51_ = BufferCacheSub3.method4008((byte) -128);
                         i_52_ = Component110.method260(false);
                     }
@@ -2003,7 +2003,7 @@ public final class client extends Applet_Sub1 {
                     }
                 }
                 try {
-                    if (!Component210.aBoolean5300) NodeSub8.toolkit.method3657(DisplayModeManagerContainer56.aRectangleArray2554, i, 66);
+                    if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3657(DisplayModeManagerContainer56.aRectangleArray2554, i, 66);
                     else Component211.method1168(i, 0, DisplayModeManagerContainer56.aRectangleArray2554);
                 } catch (Exception_Sub1 exception_sub1) {
                     /* empty */
@@ -2012,7 +2012,7 @@ public final class client extends Applet_Sub1 {
                 for (int i = 0; NodeSub38.anInt7008 > i; i++)
                     DisplayModeManagerContainer259.aBooleanArray3438[i] = false;
                 try {
-                    if (Component210.aBoolean5300) CacheStore.method395(107);
+                    if (Component210.gameCanvasAttached) CacheStore.method395(107);
                     else NodeSub8.toolkit.method3689((byte) 104);
                 } catch (Exception_Sub1 exception_sub1) {
                     ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + method81((byte) 79)), exception_sub1, 15004);

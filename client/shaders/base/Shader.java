@@ -17,10 +17,10 @@ abstract class Shader
     }
 
     static final void method159(int i) {
-        if (Component92.anInt3312 > 0) {
+        if (Component92.consoleHistoryDepth > 0) {
             int i_1_ = 0;
             for (int i_2_ = 0; ArbShaderProgram.consoleLines.length > i_2_; i_2_++) {
-                if (ArbShaderProgram.consoleLines[i_2_].indexOf("--> ") != -1 && ++i_1_ == Component92.anInt3312) {
+                if (ArbShaderProgram.consoleLines[i_2_].indexOf("--> ") != -1 && ++i_1_ == Component92.consoleHistoryDepth) {
                     Component126.consoleInput = (ArbShaderProgram.consoleLines[i_2_].substring(2 + ArbShaderProgram.consoleLines[i_2_].indexOf(">")));
                     break;
                 }

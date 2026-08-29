@@ -164,7 +164,7 @@ final class Player extends DisplayModeManagerContainer58 {
                 if (i_18_ >= 32768) {
                     i_18_ = Component361.anIntArray369[-32768 + i_18_];
                     is[i_15_] = Component224.bitwiseOr(1073741824, i_18_);
-                    int i_19_ = (Exception_Sub1.aClass255_112.method1940(-111, i_18_).anInt2827);
+                    int i_19_ = (Exception_Sub1.itemDefinitions.getItemDefinition(-111, i_18_).anInt2827);
                     if (i_19_ != 0) this.anInt10542 = i_19_;
                 } else is[i_15_] = Component224.bitwiseOr(-256 + i_18_, -2147483648);
             }
@@ -219,7 +219,7 @@ final class Player extends DisplayModeManagerContainer58 {
         if ((StringDefinition.anInt9591 == this.anInt10290) && is_30_ != null) {
             for (int i_31_ = 0; i_31_ < is_20_.length; i_31_++) {
                 if (is_20_[i_31_] != is_30_[i_31_]) {
-                    Exception_Sub1.aClass255_112.method1936(72);
+                    Exception_Sub1.itemDefinitions.method1936(72);
                     break;
                 }
             }
@@ -481,7 +481,7 @@ final class Player extends DisplayModeManagerContainer58 {
         int i_74_ = this.aClass264_10217.method2019((byte) -106);
         boolean bool = (this.aByte10279 != 0 && (this.anInt10248 <= OpenGlShader.clientCycle) && (OpenGlShader.clientCycle < this.anInt10250));
         if (bool) i |= 0x80000;
-        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.appearance.method1226(DisplayModeManagerContainer58.aClass170_10209, class17_71_, this.aClass182Array10308, true, Exception_Sub1.aClass255_112, i_74_, class17, this.anInt10244, true, this.anInt10312, this.anIntArray10296, i, DefinitionSub25.aClass150_9342, this.anInt10232, var_ha, Component291.aClass278_2529, RunescapeInfo.aClass87_191, this.anInt10245, this.anInt10267, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558)));
+        DisplayModeManagerContainer370 class64 = (this.aClass64Array10323[0] = (this.appearance.method1226(DisplayModeManagerContainer58.aClass170_10209, class17_71_, this.aClass182Array10308, true, Exception_Sub1.itemDefinitions, i_74_, class17, this.anInt10244, true, this.anInt10312, this.anIntArray10296, i, DefinitionSub25.aClass150_9342, this.anInt10232, var_ha, Component291.aClass278_2529, RunescapeInfo.aClass87_191, this.anInt10245, this.anInt10267, this.anInt10203, DisplayModeManagerContainer282.aClass261_5558)));
         int i_75_ = Component102.method2201(2121);
         if (Component127.anInt2964 < 96 && i_75_ > 50) Component201.method2271(31268);
         int i_76_ = 3 % ((63 - i_69_) / 47);
