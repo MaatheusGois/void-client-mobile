@@ -190,7 +190,7 @@ final class DisplayModeManagerContainer167
         i_29_ = this.anIntArray237[i_29_];
         HashNodeSub17 class348_sub42_sub17 = this.aClass87_251.method839(i_29_ >> 16, 3);
         i_29_ &= 0xffff;
-        if (class348_sub42_sub17 == null) return class64.method614(i_28_, i_32_, true);
+        if (class348_sub42_sub17 == null) return class64.createRenderPass(i_28_, i_32_, true);
         HashNodeSub17 class348_sub42_sub17_34_ = null;
         if ((this.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_27_ != -1 && this.anIntArray237.length > i_27_) {
             i_27_ = this.anIntArray237[i_27_];
@@ -208,7 +208,7 @@ final class DisplayModeManagerContainer167
         }
         i_32_ |= 0x20;
         if (i_31_ != 663780816) this.anInt261 = -72;
-        DisplayModeManagerContainer370 class64_35_ = class64.method614(i_28_, i_32_, true);
+        DisplayModeManagerContainer370 class64_35_ = class64.createRenderPass(i_28_, i_32_, true);
         class64_35_.method617(i_29_, i_33_, class348_sub42_sub17_34_, i, class348_sub42_sub17, false, this.aBoolean242, i_27_, i_30_ + -1);
         return class64_35_;
     }
@@ -259,7 +259,7 @@ final class DisplayModeManagerContainer167
         int i_55_ = this.anIntArray237[i_53_];
         HashNodeSub17 class348_sub42_sub17 = this.aClass87_251.method839(i_55_ >> 16, 3);
         i_55_ &= 0xffff;
-        if (class348_sub42_sub17 == null) return class64.method614((byte) 1, i_52_, true);
+        if (class348_sub42_sub17 == null) return class64.createRenderPass((byte) 1, i_52_, true);
         HashNodeSub17 class348_sub42_sub17_56_ = null;
         if ((this.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_50_ != -1 && this.anIntArray237.length > i_50_) {
             i_50_ = this.anIntArray237[i_50_];
@@ -306,7 +306,7 @@ final class DisplayModeManagerContainer167
             if (class348_sub42_sub17_58_.method3267((byte) -109, i_60_)) i_52_ |= 0x400;
         }
         i_52_ |= 0x20;
-        DisplayModeManagerContainer370 class64_61_ = class64.method614((byte) 1, i_52_, true);
+        DisplayModeManagerContainer370 class64_61_ = class64.createRenderPass((byte) 1, i_52_, true);
         int i_62_ = -33 / ((49 - i) / 45);
         class64_61_.method617(i_55_, i_54_, class348_sub42_sub17_56_, 0, class348_sub42_sub17, false, this.aBoolean242, i_50_, -1 + i_51_);
         if (class348_sub42_sub17_57_ != null) class64_61_.method617(i_59_, i_54_, class348_sub42_sub17_58_, 0, class348_sub42_sub17_57_, false, this.aBoolean242, i_60_, -1 + i_51_);

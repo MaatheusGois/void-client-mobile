@@ -72,8 +72,8 @@ final class Npc extends DisplayModeManagerContainer58 {
             if (this.aClass64Array10323[i_12_] != null) {
                 boolean bool_13_ = (this.definition.anInt1337 > 0 || (this.definition.anInt1333 != -1 ? this.definition.anInt1333 == 1 : this.definition.anInt1399 == 1));
                 boolean bool_14_;
-                if (DisplayModeManagerContainer50.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].method623(i_9_, i, class101, bool_13_, this.definition.anInt1337, Component72.anInt1906));
-                else bool_14_ = (this.aClass64Array10323[i_12_].method628(i_9_, i, class101, bool_13_, this.definition.anInt1337));
+                if (DisplayModeManagerContainer50.aBoolean3870) bool_14_ = (this.aClass64Array10323[i_12_].isInFrustumExt(i_9_, i, class101, bool_13_, this.definition.anInt1337, Component72.anInt1906));
+                else bool_14_ = (this.aClass64Array10323[i_12_].isInFrustumExtended(i_9_, i, class101, bool_13_, this.definition.anInt1337));
                 if (bool_14_) {
                     bool = true;
                     break;
@@ -332,7 +332,7 @@ final class Npc extends DisplayModeManagerContainer58 {
             if (this.anInt10208 != 0) this.aClass64Array10323[0].VA(this.anInt10208);
             if (this.anInt10252 != 0) this.aClass64Array10323[0].H(0, this.anInt10252, 0);
         } else this.method2424(i_39_, this.getSize((byte) 78) << 9, 0, this.getSize((byte) 108) << 9, (byte) 92, 0);
-        if (bool) class64.method624(this.aByte10255, this.aByte10206, this.aByte10270, (0xff & this.aByte10279));
+        if (bool) class64.animateColors(this.aByte10255, this.aByte10206, this.aByte10270, (0xff & this.aByte10279));
         if (this.anInt10269 == -1 || this.anInt10240 == -1) this.aClass64Array10323[1] = null;
         else {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 56, this.anInt10269));

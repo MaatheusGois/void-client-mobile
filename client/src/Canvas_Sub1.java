@@ -126,7 +126,7 @@ final class Canvas_Sub1 extends Canvas {
             class64 = var_ha.method3625(class124, i_18_, Component382.anInt2275, 64, 768);
             Component279.aClass60_225.putOne(class64, l, (byte) -122);
         }
-        class64 = class64.method614((byte) 2, i_18_, true);
+        class64 = class64.createRenderPass((byte) 2, i_18_, true);
         if (i_15_ != 0) class64.a(i_15_);
         if (i_13_ != 0) class64.FA(i_13_);
         if (i_14_ != 0) class64.VA(i_14_);

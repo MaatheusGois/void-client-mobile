@@ -267,7 +267,7 @@ final class DisplayModeManagerContainer190
                 } else bool_11_ = false;
             } else bool_11_ = false;
         }
-        if (i >= -70) method623(-91, -89, null, false, 4, -45);
+        if (i >= -70) isInFrustumExt(-91, -89, null, false, 4, -45);
         return bool_11_;
     }
 
@@ -338,7 +338,7 @@ final class DisplayModeManagerContainer190
         aBoolean5477 = false;
     }
 
-    final boolean method628(int i, int i_22_, DisplayModeManagerContainer204 class101, boolean bool, int i_23_) {
+    final boolean isInFrustumExtended(int i, int i_22_, DisplayModeManagerContainer204 class101, boolean bool, int i_23_) {
         try {
             anInt5414++;
             return method662(i, i_23_, -1, 127, i_22_, bool, class101);
@@ -580,7 +580,7 @@ final class DisplayModeManagerContainer190
                 if (aClass290_5482 != null && !aClass290_5482.method2197((byte) -125)) aBoolean5402 = true;
                 else aShortArray5423 = null;
             }
-            if (i != 262144) method623(-95, 94, null, true, 116, 62);
+            if (i != 262144) isInFrustumExt(-95, 94, null, true, 116, 62);
             if (aShortArray5508 != null && !Component39.method1299(i + 131072, anInt5463, anInt5472)) {
                 if ((aClass192_5485 == null || aClass192_5485.method1437((byte) -100)) && (aClass290_5482 == null || aClass290_5482.method2197((byte) -56))) aShortArray5508 = aShortArray5495 = aShortArray5512 = null;
                 else aBoolean5402 = true;
@@ -2346,7 +2346,7 @@ final class DisplayModeManagerContainer190
         }
     }
 
-    final boolean method623(int i, int i_478_, DisplayModeManagerContainer204 class101, boolean bool, int i_479_, int i_480_) {
+    final boolean isInFrustumExt(int i, int i_478_, DisplayModeManagerContainer204 class101, boolean bool, int i_479_, int i_480_) {
         try {
             anInt5517++;
             return method662(i, i_479_, i_480_, 126, i_478_, bool, class101);
@@ -2523,7 +2523,7 @@ final class DisplayModeManagerContainer190
         method670(-119);
     }
 
-    final DisplayModeManagerContainer370 method614(byte i, int i_531_, boolean bool) {
+    final DisplayModeManagerContainer370 createRenderPass(byte i, int i_531_, boolean bool) {
         anInt5426++;
         DisplayModeManagerContainer190 class64_sub2_532_;
         DisplayModeManagerContainer190 class64_sub2_533_;
@@ -2608,11 +2608,11 @@ final class DisplayModeManagerContainer190
         return aBoolean5428;
     }
 
-    final void method621() {
+    final void releaseRenderLock() {
         anInt5451++;
     }
 
-    final void method624(int i, int i_560_, int i_561_, int i_562_) {
+    final void animateColors(int i, int i_560_, int i_561_, int i_562_) {
         anInt5522++;
         for (int i_563_ = 0; anInt5478 > i_563_; i_563_++) {
             int i_564_ = 0xffff & aShortArray5486[i_563_];

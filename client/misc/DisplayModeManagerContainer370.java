@@ -155,8 +155,8 @@ abstract class DisplayModeManagerContainer370
                     }
                     method602(i_44_, class348_sub33, -18, false, i_46_, class4_47_, i_40_, is, null, class4, i_41_, bool);
                     Interface4Impl();
-                    method621();
-                } else method621();
+                    releaseRenderLock();
+                } else releaseRenderLock();
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.QB(" + i + ',' + i_40_ + ',' + (is != null ? "{...}" : "null") + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_44_ + ',' + (class348_sub42_sub17_45_ != null ? "{...}" : "null") + ',' + bool + ',' + i_46_ + ')'));
@@ -286,8 +286,8 @@ abstract class DisplayModeManagerContainer370
                 }
                 if (i_74_ != -8700) anIntArray1127 = null;
                 Interface4Impl();
-                method621();
-            } else method621();
+                releaseRenderLock();
+            } else releaseRenderLock();
         }
     }
 
@@ -303,7 +303,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void v();
 
-    abstract DisplayModeManagerContainer370 method614(byte i, int i_80_, boolean bool);
+    abstract DisplayModeManagerContainer370 createRenderPass(byte i, int i_80_, boolean bool);
 
     abstract void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i);
 
@@ -328,8 +328,8 @@ abstract class DisplayModeManagerContainer370
                     }
                     method602(i_84_, class348_sub33, 121, bool, i_83_, class4_89_, i_88_, null, null, class4, 65535, bool_86_);
                     Interface4Impl();
-                    method621();
-                } else method621();
+                    releaseRenderLock();
+                } else releaseRenderLock();
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ka.BC(" + i + ',' + i_83_ + ',' + (class348_sub42_sub17 != null ? "{...}" : "null") + ',' + i_84_ + ',' + ((class348_sub42_sub17_85_ != null) ? "{...}" : "null") + ',' + bool + ',' + bool_86_ + ',' + i_87_ + ',' + i_88_ + ')'));
@@ -352,13 +352,13 @@ abstract class DisplayModeManagerContainer370
 
     abstract void transformVertices(DisplayModeManagerContainer204 class101);
 
-    abstract void method621();
+    abstract void releaseRenderLock();
 
     abstract void acquireRenderLock();
 
     abstract void k(int i);
 
-    abstract boolean method623(int i, int i_92_, DisplayModeManagerContainer204 class101, boolean bool, int i_93_, int i_94_);
+    abstract boolean isInFrustumExt(int i, int i_92_, DisplayModeManagerContainer204 class101, boolean bool, int i_93_, int i_94_);
 
     abstract void P(int i, int i_95_, int i_96_, int i_97_);
 
@@ -366,7 +366,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void VA(int i);
 
-    abstract void method624(int i, int i_98_, int i_99_, int i_100_);
+    abstract void animateColors(int i, int i_98_, int i_99_, int i_100_);
 
     abstract int ShaderImpl();
 
@@ -396,8 +396,8 @@ abstract class DisplayModeManagerContainer370
                         method605(0, new int[0], 0, 0, 0, 0, bool);
                         method602(0, class4_113_.aClass348_Sub33_134, 122, true, i_102_, class4_114_, i_110_, null, bools, class4_113_, 65535, bool);
                         Interface4Impl();
-                        method621();
-                    } else method621();
+                        releaseRenderLock();
+                    } else releaseRenderLock();
                 }
             }
         } catch (RuntimeException runtimeexception) {
@@ -512,7 +512,7 @@ abstract class DisplayModeManagerContainer370
         /* empty */
     }
 
-    abstract boolean method628(int i, int i_159_, DisplayModeManagerContainer204 class101, boolean bool, int i_160_);
+    abstract boolean isInFrustumExtended(int i, int i_159_, DisplayModeManagerContainer204 class101, boolean bool, int i_160_);
 
     abstract void Shader(short i, short i_161_);
 

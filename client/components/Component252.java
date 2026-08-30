@@ -74,16 +74,16 @@ final class Component252
         class101.method894(this.x, -10 + this.anInt6382, this.y);
         ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(i_8_ ^ 0x6b, this.anInt10181));
         DisplayModeManagerContainer370 class64 = class213.method1559(null, null, var_ha, 131072, 0, this.anInt10185, 0, (byte) 88, -1);
-        if (class64 != null && (DisplayModeManagerContainer50.aBoolean3870 ? class64.method623(i_7_, i, class101, true, class213.anInt2784, Component72.anInt1906) : class64.method628(i_7_, i, class101, true, class213.anInt2784))) return true;
+        if (class64 != null && (DisplayModeManagerContainer50.aBoolean3870 ? class64.isInFrustumExt(i_7_, i, class101, true, class213.anInt2784, Component72.anInt1906) : class64.isInFrustumExtended(i_7_, i, class101, true, class213.anInt2784))) return true;
         if ((~this.anInt10189) != i_8_) {
             ItemDefinition class213_9_ = (Exception_Sub1.itemDefinitions.getItemDefinition(-88, this.anInt10189));
             class64 = class213_9_.method1559(null, null, var_ha, 131072, 0, (this.anInt10190), 0, (byte) 88, -1);
-            if (class64 != null && (DisplayModeManagerContainer50.aBoolean3870 ? class64.method623(i_7_, i, class101, true, class213_9_.anInt2784, Component72.anInt1906) : class64.method628(i_7_, i, class101, true, class213_9_.anInt2784))) return true;
+            if (class64 != null && (DisplayModeManagerContainer50.aBoolean3870 ? class64.isInFrustumExt(i_7_, i, class101, true, class213_9_.anInt2784, Component72.anInt1906) : class64.isInFrustumExtended(i_7_, i, class101, true, class213_9_.anInt2784))) return true;
         }
         if (this.anInt10180 != -1) {
             ItemDefinition class213_10_ = (Exception_Sub1.itemDefinitions.getItemDefinition(-99, this.anInt10180));
             class64 = class213_10_.method1559(null, null, var_ha, 131072, 0, (this.anInt10186), 0, (byte) 88, -1);
-            return class64 != null && (!DisplayModeManagerContainer50.aBoolean3870 ? class64.method628(i_7_, i, class101, true, class213_10_.anInt2784) : class64.method623(i_7_, i, class101, true, class213_10_.anInt2784, Component72.anInt1906));
+            return class64 != null && (!DisplayModeManagerContainer50.aBoolean3870 ? class64.isInFrustumExtended(i_7_, i, class101, true, class213_10_.anInt2784) : class64.isInFrustumExt(i_7_, i, class101, true, class213_10_.anInt2784, Component72.anInt1906));
         }
         return false;
     }

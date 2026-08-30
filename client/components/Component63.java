@@ -210,7 +210,7 @@ final class Component63
                 }
             }
             if (i_31_ != -68) return null;
-            DisplayModeManagerContainer370 class64_37_ = (class17 != null ? class17.method266(class64, 0, i_32_, i_27_, i, i_26_, 663780816, i_33_) : class64.method614(i_27_, i_33_, true));
+            DisplayModeManagerContainer370 class64_37_ = (class17 != null ? class17.method266(class64, 0, i_32_, i_27_, i, i_26_, 663780816, i_33_) : class64.createRenderPass(i_27_, i_33_, true));
             if (anInt4498 != 128 || anInt4492 != 128) class64_37_.O(anInt4498, anInt4492, anInt4498);
             if (anInt4508 != 0) {
                 if (anInt4508 == 90) class64_37_.a(4096);

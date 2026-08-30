@@ -222,8 +222,8 @@ final class Component212
         if (class64 != null) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(this.x, this.anInt6382, this.y);
-            if (DisplayModeManagerContainer50.aBoolean3870) return class64.method623(i_16_, i, class101, false, 0, Component72.anInt1906);
-            return class64.method628(i_16_, i, class101, false, 0);
+            if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_16_, i, class101, false, 0, Component72.anInt1906);
+            return class64.isInFrustumExtended(i_16_, i, class101, false, 0);
         }
         return false;
     }
@@ -256,7 +256,7 @@ final class Component212
                 aClass64_9993 = class2.aClass64_119;
                 aR9976 = class2.aR118;
                 if (!aBoolean9989) break;
-                aClass64_9993 = aClass64_9993.method614((byte) 0, i_26_, false);
+                aClass64_9993 = aClass64_9993.createRenderPass((byte) 0, i_26_, false);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("uo.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + i_24_ + ',' + bool_25_ + ')'));
             }

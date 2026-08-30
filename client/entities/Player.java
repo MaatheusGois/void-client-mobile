@@ -121,7 +121,7 @@ final class Player extends DisplayModeManagerContainer58 {
         class101.method891(this.x, this.anInt6382, this.y);
         boolean bool = false;
         for (int i_10_ = 0; (this.aClass64Array10323.length > i_10_); i_10_++) {
-            if ((this.aClass64Array10323[i_10_] != null) && (DisplayModeManagerContainer50.aBoolean3870 ? (this.aClass64Array10323[i_10_].method623(i_7_, i, class101, true, 0, Component72.anInt1906)) : this.aClass64Array10323[i_10_].method628(i_7_, i, class101, true, 0))) {
+            if ((this.aClass64Array10323[i_10_] != null) && (DisplayModeManagerContainer50.aBoolean3870 ? (this.aClass64Array10323[i_10_].isInFrustumExt(i_7_, i, class101, true, 0, Component72.anInt1906)) : this.aClass64Array10323[i_10_].isInFrustumExtended(i_7_, i, class101, true, 0))) {
                 bool = true;
                 break;
             }
@@ -512,7 +512,7 @@ final class Player extends DisplayModeManagerContainer58 {
             if (this.anInt10208 != 0) class64.VA(this.anInt10208);
             if (this.anInt10252 != 0) class64.H(0, this.anInt10252, 0);
         } else this.method2424(i_74_, getSize((byte) 124) << 9, 0, getSize((byte) 58) << 9, (byte) 65, 0);
-        if (bool) class64.method624(this.aByte10255, this.aByte10206, this.aByte10270, (this.aByte10279 & 0xff));
+        if (bool) class64.animateColors(this.aByte10255, this.aByte10206, this.aByte10270, (this.aByte10279 & 0xff));
         if (!this.aBoolean10521 && this.anInt10269 != -1 && this.anInt10240 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 76, this.anInt10269));
             boolean bool_78_ = (class368.aByte4488 == 3 && (i_72_ != 0 || i_73_ != 0));

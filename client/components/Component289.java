@@ -109,8 +109,8 @@ final class Component289
         if (class64 != null) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(this.x, this.anInt6382, this.y);
-            if (DisplayModeManagerContainer50.aBoolean3870) return class64.method623(i_2_, i, class101, false, 0, Component72.anInt1906);
-            return class64.method628(i_2_, i, class101, false, 0);
+            if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_2_, i, class101, false, 0, Component72.anInt1906);
+            return class64.isInFrustumExtended(i_2_, i, class101, false, 0);
         }
         return false;
     }

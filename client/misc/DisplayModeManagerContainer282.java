@@ -149,7 +149,7 @@ final class DisplayModeManagerContainer282
         aBoolean5527 = false;
     }
 
-    final DisplayModeManagerContainer370 method614(byte i, int i_4_, boolean bool) {
+    final DisplayModeManagerContainer370 createRenderPass(byte i, int i_4_, boolean bool) {
         anInt5615++;
         DisplayModeManagerContainer282 class64_sub3_5_;
         DisplayModeManagerContainer282 class64_sub3_6_;
@@ -226,7 +226,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final boolean method628(int i, int i_14_, DisplayModeManagerContainer204 class101, boolean bool, int i_15_) {
+    final boolean isInFrustumExtended(int i, int i_14_, DisplayModeManagerContainer204 class101, boolean bool, int i_15_) {
         try {
             anInt5533++;
             return method684(bool, 1566382404, -1, i_14_, i_15_, i, class101);
@@ -441,7 +441,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final boolean method623(int i, int i_87_, DisplayModeManagerContainer204 class101, boolean bool, int i_88_, int i_89_) {
+    final boolean isInFrustumExt(int i, int i_87_, DisplayModeManagerContainer204 class101, boolean bool, int i_88_, int i_89_) {
         try {
             anInt5633++;
             return method684(bool, 1566382404, i_89_, i_87_, i_88_, i, class101);
@@ -567,7 +567,7 @@ final class DisplayModeManagerContainer282
             ModelStore.anIntArray4623[0] = i_130_;
             IOException_Sub1.anIntArray91[1] = i_129_;
             RenderableSub2.anIntArray6393[2] = i_128_;
-            if (i != 1566382404) method621();
+            if (i != 1566382404) releaseRenderLock();
             ModelStore.anIntArray4623[1] = i_130_;
             IOException_Sub1.anIntArray91[2] = i_132_;
             ModelStore.anIntArray4623[2] = i_130_;
@@ -779,7 +779,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final void method624(int i, int i_195_, int i_196_, int i_197_) {
+    final void animateColors(int i, int i_195_, int i_196_, int i_197_) {
         anInt5534++;
         for (int i_198_ = 0; anInt5632 > i_198_; i_198_++) {
             int i_199_ = 0xffff & aShortArray5580[i_198_];
@@ -1782,7 +1782,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final void method621() {
+    final void releaseRenderLock() {
         anInt5606++;
     }
 

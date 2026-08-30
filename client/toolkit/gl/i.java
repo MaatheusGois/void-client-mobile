@@ -39,7 +39,7 @@ final class i
 
     final native void Shader(short i, short i_7_);
 
-    final boolean method623(int i, int i_8_, DisplayModeManagerContainer204 class101, boolean bool, int i_9_, int i_10_) {
+    final boolean isInFrustumExt(int i, int i_8_, DisplayModeManagerContainer204 class101, boolean bool, int i_9_, int i_10_) {
         return anOa5117.method3973().method143(this, i, i_8_, class101, bool, i_10_);
     }
 
@@ -75,7 +75,7 @@ final class i
         return true;
     }
 
-    final void method621() {
+    final void releaseRenderLock() {
         if (anOa5117.anInt5141 > 1) {
             synchronized (this) {
                 this.aBoolean1124 = false;
@@ -86,11 +86,11 @@ final class i
 
     final native void VA(int i);
 
-    final boolean method628(int i, int i_19_, DisplayModeManagerContainer204 class101, boolean bool, int i_20_) {
+    final boolean isInFrustumExtended(int i, int i_19_, DisplayModeManagerContainer204 class101, boolean bool, int i_20_) {
         return anOa5117.method3973().method146(this, i, i_19_, class101, bool);
     }
 
-    final DisplayModeManagerContainer370 method614(byte i, int i_21_, boolean bool) {
+    final DisplayModeManagerContainer370 createRenderPass(byte i, int i_21_, boolean bool) {
         return anOa5117.method3973().method152(this, i, i_21_, bool);
     }
 
@@ -120,7 +120,7 @@ final class i
 
     final native void FA(int i);
 
-    final void method624(int i, int i_70_, int i_71_, int i_72_) {
+    final void animateColors(int i, int i_70_, int i_71_, int i_72_) {
         /* empty */
     }
 

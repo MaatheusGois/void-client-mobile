@@ -109,11 +109,11 @@ class Node {
                 i_5_ &= 0xffff;
             }
             if (class348_sub42_sub17 == null) {
-                class64_13_ = class64_13_.method614((byte) 3, i_12_, true);
+                class64_13_ = class64_13_.createRenderPass((byte) 3, i_12_, true);
                 class64_13_.O(-i_31_ + i_32_ >> 1, 128, -i_33_ + i_34_ >> 1);
                 class64_13_.H(i_32_ + i_31_ >> 1, 0, i_34_ + i_33_ >> 1);
             } else {
-                class64_13_ = class64_13_.method614((byte) 3, i_12_, true);
+                class64_13_ = class64_13_.createRenderPass((byte) 3, i_12_, true);
                 class64_13_.O(-i_31_ + i_32_ >> 1, 128, i_34_ - i_33_ >> 1);
                 class64_13_.H(i_32_ + i_31_ >> 1, 0, i_34_ + i_33_ >> 1);
                 class64_13_.method611(i_5_, -8700, class348_sub42_sub17);

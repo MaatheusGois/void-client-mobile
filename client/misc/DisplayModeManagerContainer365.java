@@ -153,7 +153,7 @@ final class DisplayModeManagerContainer365
             i_21_ = i_21_ * i_26_ - i * i_25_ >> 14;
             i = i_27_;
         }
-        DisplayModeManagerContainer370 class64 = aClass64_1227.method614((byte) 0, 51200, true);
+        DisplayModeManagerContainer370 class64 = aClass64_1227.createRenderPass((byte) 0, 51200, true);
         class64.Shader((short) 0, (short) anInt1224);
         var_ha.DualToolkit(1.0F);
         var_ha.ZA(16777215, 1.0F, 1.0F, (float) i, (float) i_20_, (float) i_21_);

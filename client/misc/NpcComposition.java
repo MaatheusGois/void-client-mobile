@@ -553,13 +553,13 @@ final class NpcComposition {
                     for (int i_81_ = 0; aShortArray1393.length > i_81_; i_81_++)
                         class64.Shader(aShortArray1393[i_81_], aShortArray1391[i_81_]);
                 }
-                if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
+                if (aByte1405 != 0) class64.animateColors(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_43_);
                 synchronized (this.aClass278_1348.aClass60_3590) {
                     this.aClass278_1348.aClass60_3590.putOne(class64, this.id | var_ha.anInt4567 << 16, (byte) -125);
                 }
             }
-            DisplayModeManagerContainer370 class64_82_ = class64.method614((byte) 4, i_43_, true);
+            DisplayModeManagerContainer370 class64_82_ = class64.createRenderPass((byte) 4, i_43_, true);
             boolean bool_83_ = false;
             if (is != null) {
                 for (int i_84_ = 0; i_84_ < 12; i_84_++) {
@@ -682,7 +682,7 @@ final class NpcComposition {
                     for (int i_105_ = 0; aShortArray1393.length > i_105_; i_105_++)
                         class64.Shader(aShortArray1393[i_105_], aShortArray1391[i_105_]);
                 }
-                if (aByte1405 != 0) class64.method624(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
+                if (aByte1405 != 0) class64.animateColors(aByte1376, aByte1360, aByte1330, aByte1405 & 0xff);
                 class64.s(i_99_);
                 synchronized (this.aClass278_1348.aClass60_3592) {
                     this.aClass278_1348.aClass60_3592.putOne(class64, var_ha.anInt4567 << 16 | this.id, (byte) -96);

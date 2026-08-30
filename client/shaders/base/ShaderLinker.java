@@ -157,8 +157,8 @@ final class ShaderLinker extends Component203 implements Interface10 {
         if (i_15_ != 0) return true;
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         class101.method894((this.aShort8781 + this.x), this.anInt6382, (this.aShort8769 + this.y));
-        if (DisplayModeManagerContainer50.aBoolean3870) return class64.method623(i_14_, i, class101, false, 0, Component72.anInt1906);
-        return class64.method628(i_14_, i, class101, false, 0);
+        if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_14_, i, class101, false, 0, Component72.anInt1906);
+        return class64.isInFrustumExtended(i_14_, i, class101, false, 0);
     }
 
     /** Link ARB program from compiled stages; logs {@code aa linking failed:} on error. */

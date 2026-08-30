@@ -91,7 +91,7 @@ final class Component349
                 this.aClass64_10028 = class2.aClass64_119;
                 aR10036 = class2.aR118;
                 if (!aBoolean10019) break;
-                this.aClass64_10028 = this.aClass64_10028.method614((byte) 0, i_11_, false);
+                this.aClass64_10028 = this.aClass64_10028.createRenderPass((byte) 0, i_11_, false);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("dm.<init>(" + (var_ha != null ? "{...}" : "null") + ',' + (class51 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + bool + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + bool_10_ + ')'));
             }
@@ -119,8 +119,8 @@ final class Component349
         if (class64 != null) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(this.x, this.anInt6382, this.y);
-            if (DisplayModeManagerContainer50.aBoolean3870) return class64.method623(i_12_, i, class101, false, 0, Component72.anInt1906);
-            return class64.method628(i_12_, i, class101, false, 0);
+            if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_12_, i, class101, false, 0, Component72.anInt1906);
+            return class64.isInFrustumExtended(i_12_, i, class101, false, 0);
         }
         return false;
     }

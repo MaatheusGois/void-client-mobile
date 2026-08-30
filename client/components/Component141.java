@@ -152,8 +152,8 @@ final class Component141
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         if (i_14_ != 0) return true;
         class101.method894(this.x, this.anInt6382, this.y);
-        if (DisplayModeManagerContainer50.aBoolean3870) return class64.method623(i_13_, i, class101, false, 0, Component72.anInt1906);
-        return class64.method628(i_13_, i, class101, false, 0);
+        if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_13_, i, class101, false, 0, Component72.anInt1906);
+        return class64.isInFrustumExtended(i_13_, i, class101, false, 0);
     }
 
     static final void method2399(String string, int i) {

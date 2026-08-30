@@ -174,11 +174,11 @@ final class Component44
             boolean bool_13_ = (aByte886 != 0 && (var_s_6_ != null || var_s != null));
             boolean bool_14_ = (anInt893 != 0 || anInt954 != 0 || anInt890 != 0);
             if (bool_13_ || bool_14_) {
-                class64 = class64.method614((byte) 0, i_11_, true);
+                class64 = class64.createRenderPass((byte) 0, i_11_, true);
                 if (bool_13_) class64.p(aByte886, anInt915, var_s_6_, var_s, i_5_, i_7_, i_8_);
                 if (bool_14_) class64.H(anInt893, anInt954, anInt890);
                 class64.s(i_4_);
-            } else class64 = class64.method614((byte) 0, i_4_, true);
+            } else class64 = class64.createRenderPass((byte) 0, i_4_, true);
             HashNode.aClass2_7058.aClass64_119 = class64;
             HashNode.aClass2_7058.aR118 = var_r;
             return HashNode.aClass2_7058;
@@ -246,7 +246,7 @@ final class Component44
                 }
             }
         }
-        DisplayModeManagerContainer370 class64_27_ = class64.method614((byte) 0, i_17_, true);
+        DisplayModeManagerContainer370 class64_27_ = class64.createRenderPass((byte) 0, i_17_, true);
         if (i_18_ != class64.WA()) class64_27_.C(i_18_);
         if (class64.da() != i_19_) class64_27_.LA(i_19_);
         if (bool) class64_27_.v();
@@ -269,7 +269,7 @@ final class Component44
             for (int i_29_ = 0; i_29_ < aShortArray919.length; i_29_++)
                 class64_27_.Shader(aShortArray919[i_29_], aShortArray892[i_29_]);
         }
-        if (aByte922 != 0) class64_27_.method624(aByte944, aByte952, aByte879, 0xff & aByte922);
+        if (aByte922 != 0) class64_27_.animateColors(aByte944, aByte952, aByte879, 0xff & aByte922);
         if (anInt928 != 128 || anInt935 != 128 || anInt882 != 128) class64_27_.O(anInt928, anInt935, anInt882);
         if (anInt900 != 0 || anInt873 != 0 || anInt946 != 0) class64_27_.H(anInt900, anInt873, anInt946);
         class64_27_.s(i_20_);
@@ -570,7 +570,7 @@ final class Component44
             }
             if (i_64_ == 10 && i_66_ > 3) {
                 if (!bool) {
-                    class64 = class64.method614((byte) 3, i_67_, true);
+                    class64 = class64.createRenderPass((byte) 3, i_67_, true);
                     bool = true;
                 }
                 class64.a(2048);
@@ -578,14 +578,14 @@ final class Component44
             if (aByte886 != 0) {
                 if (!bool) {
                     bool = true;
-                    class64 = class64.method614((byte) 3, i_67_, true);
+                    class64 = class64.createRenderPass((byte) 3, i_67_, true);
                 }
                 class64.p(aByte886, anInt915, var_s_72_, var_s, i_71_, i_65_, i_69_);
             }
             if (anInt893 != 0 || anInt954 != 0 || anInt890 != 0) {
                 if (!bool) {
                     bool = true;
-                    class64 = class64.method614((byte) 3, i_67_, true);
+                    class64 = class64.createRenderPass((byte) 3, i_67_, true);
                 }
                 class64.H(anInt893, anInt954, anInt890);
             }

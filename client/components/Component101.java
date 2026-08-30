@@ -238,7 +238,7 @@ final class Component101
                     }
                 }
             }
-            DisplayModeManagerContainer370 class64_51_ = class64.method614((byte) 4, i_9_, bool_2_);
+            DisplayModeManagerContainer370 class64_51_ = class64.createRenderPass((byte) 4, i_9_, bool_2_);
             boolean bool_52_ = false;
             if (is != null) {
                 for (int i_53_ = 0; i_53_ < 12; i_53_++) {
@@ -413,7 +413,7 @@ final class Component101
                 }
             }
             if (class17 == null) return class64;
-            DisplayModeManagerContainer370 class64_88_ = class64.method614((byte) 4, i_70_, true);
+            DisplayModeManagerContainer370 class64_88_ = class64.createRenderPass((byte) 4, i_70_, true);
             class64_88_ = class17.method269(123, class64, i_67_, i_69_, i_68_, i_66_);
             return class64_88_;
         } catch (RuntimeException runtimeexception) {
@@ -503,7 +503,7 @@ final class Component101
             }
             if (class17 == null) return class64;
             if (i_94_ != -15331) return null;
-            class64 = class64.method614((byte) 4, i_98_, true);
+            class64 = class64.createRenderPass((byte) 4, i_98_, true);
             class64 = class17.method269(-32, class64, i, i_96_, i_91_, i_97_);
             return class64;
         } catch (RuntimeException runtimeexception) {

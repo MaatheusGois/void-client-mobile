@@ -147,7 +147,7 @@ final class NodeSub13 extends Node {
                 }
             }
             if (class17 == null || class348_sub42_sub17 == null) return class64;
-            DisplayModeManagerContainer370 class64_41_ = class64.method614((byte) 1, i_15_, true);
+            DisplayModeManagerContainer370 class64_41_ = class64.createRenderPass((byte) 1, i_15_, true);
             class64_41_.method617(i_22_, i_24_, class348_sub42_sub17_25_, 0, class348_sub42_sub17, false, class17.aBoolean242, i_23_, i_11_ + i_14_);
             return class64_41_;
         } catch (RuntimeException runtimeexception) {
