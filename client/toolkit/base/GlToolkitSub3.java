@@ -1014,7 +1014,7 @@ abstract class GlToolkitSub3
 
     /**
      * Sets the texture-environment / combine mode for unit {@code i_76_} to
-     * {@code class70} (e.g. replace vs disable). Thin wrapper over {@code getSwapInterval}.
+     * {@code class70} (e.g. replace vs disable).
      */
     final void setTextureCombineMode(byte i, int i_76_, DisplayModeManagerContainer88 class70) {
         try {
