@@ -1810,6 +1810,7 @@ public final class client extends Applet_Sub1 {
             }
             // Consume overlay clicks before menu/walk/iface handlers see them.
             if (Loader.microbotEnabled) MicrobotPanel.pollInput();
+            SceneEditorUi.pollInput();
             // Purple console band: eat presses so they don't click-through to the game.
             BuildInfo.pollConsoleInput();
             if (HashNodeSub16Sub2.isDevConsoleOpen(true)) PauseTimer.processDevConsoleInput(125);
@@ -2012,6 +2013,7 @@ public final class client extends Applet_Sub1 {
             if (HashNodeSub16Sub2.isDevConsoleOpen(bool)) BuildInfo.drawDevConsole(NodeSub8.toolkit, (byte) 124);
             // Microbot HUD — after console so it stays on top of game, under console if open.
             if (Loader.microbotEnabled) MicrobotPanel.draw(NodeSub8.toolkit);
+            SceneEditorUi.draw(NodeSub8.toolkit);
             if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.getWindowMode(-85) == 1 && !bool_120_) {
                 int i = 0;
                 for (int i_121_ = 0; (NodeSub38.anInt7008 > i_121_); i_121_++) {
