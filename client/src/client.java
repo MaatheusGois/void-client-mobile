@@ -483,7 +483,7 @@ public final class client extends Applet_Sub1 {
         AbstractBuffer.clearStatics(-124);
         Component187.method1551();
         DisplayModeManagerContainer172.method370(true);
-        PacketReader.method3202((byte) 79);
+        PacketReader.softDisconnect((byte) 79);
         Component163.method1886(4908);
         ReferenceHolder.clearStatics(-112);
         DefinitionSub8.method3068(i + 13607);

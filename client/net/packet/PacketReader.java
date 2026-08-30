@@ -22,7 +22,7 @@ final class PacketReader extends CacheNode {
     static DisplayModeManagerContainer238 aClass74_10437 = new DisplayModeManagerContainer238(0, 3);
     static int anInt10438;
 
-    static final boolean method3200(int i, int i_0_, byte i_1_) {
+    static final boolean isPacketAllowed(int i, int i_0_, byte i_1_) {
         anInt10433++;
         int i_2_ = 18 / ((i_1_ - 30) / 42);
         if (!HuffmanDecoder.method2224(i, (byte) -118, i_0_)) return false;
@@ -36,12 +36,12 @@ final class PacketReader extends CacheNode {
     }
 
     final boolean isSoft(int i) {
-        if (i != -4) method3202((byte) -58);
+        if (i != -4) softDisconnect((byte) -58);
         anInt10438++;
         return false;
     }
 
-    static final boolean method3201(boolean bool) throws IOException {
+    static final boolean readNextPacket(boolean bool) throws IOException {
         anInt10430++;
         if (DefinitionSub8.aClass238_9165 == null) return false;
         if (NodeSub3.aClass114_6584 == null) {
@@ -1747,7 +1747,7 @@ final class PacketReader extends CacheNode {
         return true;
     }
 
-    public static void method3202(byte i) {
+    public static void softDisconnect(byte i) {
         currentGameType = null;
         if (i > 38) {
             aLongArrayArrayArray10431 = null;

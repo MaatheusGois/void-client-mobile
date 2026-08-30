@@ -74,7 +74,7 @@ final class DefinitionSub29
     static final boolean method3124(int i, byte i_13_, int i_14_) {
         anInt9371++;
         if (i_13_ > -55) method3124(-76, (byte) -110, -59);
-        return (i_14_ & 0x40000) != 0 | Component179.method2985(-31735, i, i_14_) || PacketReader.method3200(i_14_, i, (byte) -120);
+        return (i_14_ & 0x40000) != 0 | Component179.method2985(-31735, i, i_14_) || PacketReader.isPacketAllowed(i_14_, i, (byte) -120);
     }
 
     final void method3049(Buffer class348_sub49, int i, int i_15_) {

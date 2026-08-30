@@ -996,7 +996,7 @@ final class DisplayModeManagerContainer190
                 for (int i_163_ = 0; i_163_ < anInt5478; i_163_++)
                     class64_sub2_154_.aByteArray5515[i_163_] = aByteArray5515[i_163_];
             } else class64_sub2_154_.aByteArray5515 = aByteArray5515;
-            if (PacketReader.method3200(i, anInt5472, (byte) -75)) {
+            if (PacketReader.isPacketAllowed(i, anInt5472, (byte) -75)) {
                 class64_sub2_154_.aClass290_5482 = class64_sub2_153_.aClass290_5482;
                 class64_sub2_154_.aClass290_5482.aBoolean3709 = true;
                 class64_sub2_154_.aClass290_5482.aBoolean3714 = aClass290_5482.aBoolean3714;
@@ -1777,7 +1777,7 @@ final class DisplayModeManagerContainer190
         anInt5445++;
         if (aClass290_5520 != null) aClass290_5520.aBoolean3709 = Component235.method2015(i, anInt5472, 7);
         if (aClass290_5460 != null) aClass290_5460.aBoolean3709 = Component191.method1379(4, anInt5472, i);
-        if (aClass290_5482 != null) aClass290_5482.aBoolean3709 = PacketReader.method3200(i, anInt5472, (byte) 73);
+        if (aClass290_5482 != null) aClass290_5482.aBoolean3709 = PacketReader.isPacketAllowed(i, anInt5472, (byte) 73);
         if (aClass290_5424 != null) aClass290_5424.aBoolean3709 = Component380.method1113(i, anInt5472, -10);
         anInt5463 = i;
         aBoolean5402 = true;
@@ -3204,7 +3204,7 @@ final class DisplayModeManagerContainer190
             aHa_Sub3_5419 = var_ha_Sub3;
             if (bool || DisplayModeManagerContainer254.method1258(anInt5463, -9301, anInt5472)) aClass290_5520 = new Component200(Component235.method2015(anInt5463, anInt5472, 7));
             if (bool || RadixText.method1837(anInt5472, 102, anInt5463)) aClass290_5460 = new Component200(Component191.method1379(4, anInt5472, anInt5463));
-            if (bool || HuffmanDecoder.method2224(anInt5463, (byte) 110, anInt5472)) aClass290_5482 = new Component200(PacketReader.method3200(anInt5463, anInt5472, (byte) -82));
+            if (bool || HuffmanDecoder.method2224(anInt5463, (byte) 110, anInt5472)) aClass290_5482 = new Component200(PacketReader.isPacketAllowed(anInt5463, anInt5472, (byte) -82));
             if (bool || ReliefShader.method1412((byte) -35, anInt5472, anInt5463)) aClass290_5424 = new Component200(Component380.method1113(anInt5463, anInt5472, -21));
             if (bool || Component63.method3563(anInt5463, (byte) 56, anInt5472)) aClass192_5485 = new Component353(SceneNode.method2783(anInt5472, (byte) -97, anInt5463));
         } catch (RuntimeException runtimeexception) {

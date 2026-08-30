@@ -47,7 +47,7 @@ final class Component102
         int i_1_ = 11 % ((12 - i) / 53);
         anInt4802++;
         try {
-            return PacketReader.method3201(true);
+            return PacketReader.readNextPacket(true);
         } catch (java.io.IOException ioexception) {
             SocketConnector.forceLogout(106);
             return true;

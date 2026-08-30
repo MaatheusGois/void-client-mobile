@@ -43,7 +43,7 @@ final class DisplayModeManagerContainer348
     static final boolean method1740(int i, int i_2_, boolean bool) {
         if (bool != false) return true;
         anInt5890++;
-        return RadixText.method1833((byte) -128, i_2_, i) || PacketReader.method3200(i_2_, i, (byte) 96);
+        return RadixText.method1833((byte) -128, i_2_, i) || PacketReader.isPacketAllowed(i_2_, i, (byte) 96);
     }
 
     static final void method1741(DisplayModeManagerContainer207 class348_sub49_sub2, byte i) {
