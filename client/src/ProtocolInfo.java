@@ -32,26 +32,32 @@ public final class ProtocolInfo {
         if (selected == REVISION_634 || selected == REVISION_667) {
             return selected;
         }
-        String property = readProperty(REVISION_PROPERTY);
-        if (property != null) {
-            try {
-                int parsed = Integer.parseInt(property);
-                if (parsed == REVISION_634 || parsed == REVISION_667) {
-                    selectedRevision = parsed;
-                    return parsed;
-                }
-            } catch (NumberFormatException ignored) {
-                // Fall through to the safe legacy profile.
+        synchronized (ProtocolInfo.class) {
+            selected = selectedRevision;
+            if (selected == REVISION_634 || selected == REVISION_667) {
+                return selected;
             }
-            warn("unsupported " + REVISION_PROPERTY + "='" + property
-                    + "'; using " + DEFAULT_REVISION);
+            String property = readProperty(REVISION_PROPERTY);
+            if (property != null) {
+                try {
+                    int parsed = Integer.parseInt(property);
+                    if (parsed == REVISION_634 || parsed == REVISION_667) {
+                        selectedRevision = parsed;
+                        return parsed;
+                    }
+                } catch (NumberFormatException ignored) {
+                    // Fall through to the safe legacy profile.
+                }
+                warn("unsupported " + REVISION_PROPERTY + "='" + property
+                        + "'; using " + DEFAULT_REVISION);
+            }
+            selectedRevision = DEFAULT_REVISION;
+            return DEFAULT_REVISION;
         }
-        selectedRevision = DEFAULT_REVISION;
-        return DEFAULT_REVISION;
     }
 
     /** Selects a revision from a launcher argument before the applet is created. */
-    public static void selectRevision(int revision) {
+    public static synchronized void selectRevision(int revision) {
         if (revision != REVISION_634 && revision != REVISION_667) {
             throw new IllegalArgumentException("Unsupported protocol revision: " + revision);
         }
@@ -86,8 +92,19 @@ public final class ProtocolInfo {
         if (base == null || base.length() == 0) {
             base = "runescape";
         }
-        if (base.endsWith("-" + REVISION_634) || base.endsWith("-" + REVISION_667)) {
-            base = base.substring(0, base.lastIndexOf('-'));
+        int suffix = base.lastIndexOf('-');
+        if (suffix >= 0 && suffix + 1 < base.length()) {
+            boolean numeric = true;
+            for (int i = suffix + 1; i < base.length(); i++) {
+                char c = base.charAt(i);
+                if (c < '0' || c > '9') {
+                    numeric = false;
+                    break;
+                }
+            }
+            if (numeric) {
+                base = base.substring(0, suffix);
+            }
         }
         return base + "-" + revision();
     }

@@ -1139,7 +1139,6 @@ public class GameController extends GCEventViewController {
             System.out.println("void-osrs boot wait server");
             return;
         }
-        ServerPrefs.applyClientProperties();
         final int port = ServerPrefs.gamePort();
         clientStarted = true;
         System.out.println("void-osrs boot start server=" + server + ":" + port
