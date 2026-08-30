@@ -22,4 +22,18 @@ public class EventQueue {
         events.addLast(event);
         notifyAll();
     }
+
+    /**
+     * java.awt.EventQueue static API used by desktop Microbot mouse.
+     * On mobile VoidAwtHostMouse is preferred; these shims keep DesktopAwtMouse compiling.
+     */
+    public static boolean isDispatchThread() {
+        return true;
+    }
+
+    public static void invokeLater(Runnable r) {
+        if (r != null) {
+            r.run();
+        }
+    }
 }

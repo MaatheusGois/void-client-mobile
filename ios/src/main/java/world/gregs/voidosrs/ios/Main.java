@@ -8,7 +8,9 @@ import org.robovm.apple.uikit.UIApplication;
 import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
 import org.robovm.apple.uikit.UIApplicationLaunchOptions;
 import org.robovm.apple.uikit.UIColor;
+import org.robovm.apple.uikit.UIDevice;
 import org.robovm.apple.uikit.UIScreen;
+import org.robovm.apple.uikit.UIUserInterfaceIdiom;
 import org.robovm.apple.uikit.UIWindow;
 
 public class Main extends UIApplicationDelegateAdapter {
@@ -17,6 +19,14 @@ public class Main extends UIApplicationDelegateAdapter {
     @Override
     public boolean didFinishLaunching(UIApplication application, UIApplicationLaunchOptions launchOptions) {
         System.setProperty("java.net.preferIPv4Stack", "true");
+        // Flavor / runtime marker for shared host code.
+        if ("tvos".equalsIgnoreCase(System.getProperty("void.platform", ""))
+                || UIDevice.getCurrentDevice().getUserInterfaceIdiom() == UIUserInterfaceIdiom.TV) {
+            System.setProperty("void.platform", "tvos");
+            // Cap software framebuffer — native 1920×1080 kills splash UIGraphics
+            // on device (looks like a black screen). ScaleToFill stretches up.
+            voidawt.AwtHost.LOGICAL_MAX_EDGE = 960;
+        }
         // Activate Playback early so AudioQueue (voidsound) is not muted / silent
         // until the first line opens on the mixer thread.
         // MixWithOthers: exclusive Playback interrupts PiP / other apps even when

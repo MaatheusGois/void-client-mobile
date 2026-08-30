@@ -35,6 +35,9 @@ https://github.com/user-attachments/assets/379d17f0-9077-4746-84fc-c9c4796f1507
 
 ## What's new
 
+### Apple TV
+tvOS build (`make tvos-sim` / `make tvos-device`): DualShock + Siri Remote, LAN server picker, layered App Icon, and Top Shelf wallpaper on the Home Screen. Details in the [Apple TV](#apple-tv-tvos) section below.
+
 ### Auto-login
 Credentials are saved on login (`~/void-login.txt`). On the next cold start the title screen restores them and connects once graphics Auto Setup is ready. “Exit to login” stays on the title — auto-login does not loop.
 
@@ -115,13 +118,14 @@ More: [android/README.md](android/README.md).
 
 ---
 
-## iOS
+## iOS (iPad)
 
 Needs Xcode and an **arm64** JDK 17 (`os.arch=aarch64`). Default path: `~/.jdks/jdk-17.0.20.1+1` (override with `JAVA_17=…`).
 
 ```bash
 make ios                  # Simulator → 127.0.0.1:43594
 make ios-relaunch         # after SpringBoard crash
+make ios-device            # physical iPad (sign + devicectl)
 ```
 
 ### Server IP
@@ -136,3 +140,59 @@ make ios-relaunch         # after SpringBoard crash
 Same as Android. Soft keyboard opens on text-field taps.
 
 More: [ios/README.md](ios/README.md).
+
+---
+
+## Apple TV (tvOS)
+
+Same RoboVM host as iPad, built against **AppleTVOS.sdk** (`-Pvoid.platform=tvos`). Bundle id: `world.gregs.voidosrs.tvos`.
+
+```bash
+make tvos / make tvos-sim   # Apple TV Simulator (simctl; no signing)
+make tvos-device            # physical Apple TV (sign + inject icons + install + launch)
+make tvos-clean             # clean ios/ module
+```
+
+Requires the **patched** RoboVM plugin (`ios/tools/robovm-gradle-plugin-2.3.25-patched.jar`). After regenerating the jar:
+
+```bash
+python3 ios/tools/patches/apply_tvos_robovm_patch.py
+```
+
+### Server IP
+
+| Setup | Default |
+|-------|---------|
+| Simulator | `127.0.0.1` |
+| Physical Apple TV | LAN IP of the Mac running the game server (`:43594`) — pick in-app **Server**, or set `void.server` before boot |
+
+There is no `adb reverse` on tvOS; the TV and the Mac must share a LAN (or VPN) path to the game process.
+
+### Controls
+
+- **DualShock / Xbox / MFi**: left stick = cursor, ✕ left-click, ○ right-click, L2/R2 zoom, right stick camera (same mapping as iPad/Android).
+- **Siri Remote**: touch-surface swipe = cursor, firm click = left-click, Play/Pause = right-click (`GCMicroGamepad`).
+- **Login / chat**: near-invisible `UITextField` + system keyboard (focus-friendly). Gameplay disables UIKit focus steal so the pad/remote keep the drawn cursor.
+
+### Home Screen (App Icon + Top Shelf)
+
+tvOS brandassets live under:
+
+`ios/data/Assets.xcassets/App Icon & Top Shelf Image.brandassets/`
+
+| Asset | Role | Sizes (1x / 2x) |
+|-------|------|-----------------|
+| App Icon - Large / Small | Home row icon (layered stack) | 1280×768 / 400×240 |
+| Top Shelf Image | Focused-app wallpaper | 1920×720 / 3840×1440 |
+| Top Shelf Image Wide | Wide Top Shelf | 2320×720 / 4640×1440 |
+
+Source art for regeneration:
+
+- Icon: `ios/assets-src/Icon-tv-source.png`
+- Top Shelf wallpaper: `ios/assets-src/topshelf-lumbridge-battle.png`
+
+RoboVM’s `actool` always targets `iphoneos`, so `tvos-device.sh` runs `inject-tvos-icons.sh` after the `.app` is assembled: compiles brandassets for `appletvos`, copies `Assets.car`, merges `CFBundleIcons` + `TVTopShelfImage` into `Info.plist`, then re-signs.
+
+Focus the Void tile on the Apple TV Home Screen to see the Top Shelf background. If an old image sticks, leave and re-focus the icon (tvOS caches Top Shelf).
+
+More: [ios/README.md](ios/README.md), [ARCHITECTURE.md](ARCHITECTURE.md).

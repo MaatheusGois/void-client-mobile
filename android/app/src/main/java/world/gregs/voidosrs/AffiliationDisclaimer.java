@@ -2,14 +2,20 @@ package world.gregs.voidosrs;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.OutputStreamWriter;
+import java.nio.charset.Charset;
 
 /**
  * Non-affiliation disclaimer shown once before the game starts (desktop + Android + iOS).
  * <p>
  * Persistence: {@code user.home/void-disclaimer.txt} containing {@code accepted}.
  * After the user dismisses the modal, it never shows again on that install.
+ * <p>
+ * On tvOS, RoboVM {@code FileWriter}/{@code File.isFile} can fail to round-trip
+ * immediately after write (device log: {@code ok=false} → client never boots,
+ * black screen + cursor only). Session flag gates boot even when disk persist fails.
  * <p>
  * No URLs / deep links — plain text only (user request).
  */
@@ -50,6 +56,9 @@ public final class AffiliationDisclaimer {
     /** Button label — accepting persists and never shows again. */
     public static final String ACCEPT_LABEL = "Don't show this again";
 
+    /** Process-local accept — survives failed disk persist (tvOS RoboVM). */
+    private static volatile boolean acceptedThisSession;
+
     private AffiliationDisclaimer() {
     }
 
@@ -59,17 +68,24 @@ public final class AffiliationDisclaimer {
         return new File(home, "void-disclaimer.txt");
     }
 
-    /** True after the user has dismissed the first-run modal on this install. */
+    /** True after the user has dismissed the first-run modal on this install / session. */
     public static boolean isAccepted() {
+        if (acceptedThisSession) {
+            return true;
+        }
         File f = file();
-        if (!f.isFile()) {
+        if (!f.exists() || !f.canRead()) {
             return false;
         }
         BufferedReader in = null;
         try {
             in = new BufferedReader(new FileReader(f));
             String line = in.readLine();
-            return line != null && line.trim().equalsIgnoreCase("accepted");
+            boolean ok = line != null && line.trim().equalsIgnoreCase("accepted");
+            if (ok) {
+                acceptedThisSession = true;
+            }
+            return ok;
         } catch (Throwable ignored) {
             return false;
         } finally {
@@ -82,23 +98,40 @@ public final class AffiliationDisclaimer {
         }
     }
 
-    /** Persist acceptance so the modal never appears again. */
+    /**
+     * Persist acceptance so the modal never appears again.
+     * Always sets the session flag first so boot can proceed even if disk IO fails.
+     */
     public static void markAccepted() {
-        FileWriter w = null;
+        acceptedThisSession = true;
+        FileOutputStream fos = null;
+        OutputStreamWriter w = null;
         try {
             File f = file();
             File parent = f.getParentFile();
-            if (parent != null) {
+            if (parent != null && !parent.exists()) {
                 parent.mkdirs();
             }
-            w = new FileWriter(f);
+            fos = new FileOutputStream(f);
+            w = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
             w.write("accepted\n");
+            w.flush();
+            fos.getFD().sync();
+            System.out.println("void-osrs disclaimer wrote path=" + f.getAbsolutePath()
+                    + " exists=" + f.exists() + " len=" + f.length());
         } catch (Throwable t) {
+            System.out.println("void-osrs disclaimer write fail: " + t
+                    + " path=" + file().getAbsolutePath());
             t.printStackTrace();
         } finally {
             if (w != null) {
                 try {
                     w.close();
+                } catch (Throwable ignored) {
+                }
+            } else if (fos != null) {
+                try {
+                    fos.close();
                 } catch (Throwable ignored) {
                 }
             }

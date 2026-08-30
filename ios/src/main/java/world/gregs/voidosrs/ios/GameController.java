@@ -6,6 +6,7 @@ import org.robovm.apple.dispatch.DispatchQueue;
 import org.robovm.apple.foundation.NSArray;
 import org.robovm.apple.foundation.NSObject;
 import org.robovm.apple.foundation.NSRange;
+import org.robovm.apple.foundation.NSSet;
 import org.robovm.apple.foundation.NSURL;
 import org.robovm.apple.uikit.NSLineBreakMode;
 import org.robovm.apple.uikit.NSTextAlignment;
@@ -35,14 +36,18 @@ import org.robovm.apple.uikit.UITextField;
 import org.robovm.apple.uikit.UITextFieldDelegateAdapter;
 import org.robovm.apple.uikit.UITextSpellCheckingType;
 import org.robovm.apple.uikit.UITextView;
+import org.robovm.apple.uikit.UIPress;
+import org.robovm.apple.uikit.UIPressType;
+import org.robovm.apple.uikit.UIPressesEvent;
 import org.robovm.apple.uikit.UIView;
-import org.robovm.apple.uikit.UIViewController;
 import org.robovm.apple.uikit.UIWindow;
 import org.robovm.objc.block.VoidBlock1;
 import org.robovm.apple.foundation.NSFileManager;
 import org.robovm.apple.foundation.NSSearchPathDirectory;
 import org.robovm.apple.foundation.NSSearchPathDomainMask;
+import org.robovm.apple.gamecontroller.GCEventViewController;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import voidawt.AwtHost;
@@ -50,7 +55,16 @@ import voidawt.event.KeyEvent;
 import world.gregs.voidosrs.AffiliationDisclaimer;
 import world.gregs.voidosrs.ServerPrefs;
 
-public class GameController extends UIViewController {
+/**
+ * Root host VC. On Apple TV this is a {@link GCEventViewController} so the
+ * Siri Remote can be read via {@link org.robovm.apple.gamecontroller.GCMicroGamepad}
+ * during gameplay ({@code controllerUserInteractionEnabled=false}) and handed
+ * back to UIKit focus for Server / alerts ({@code =true}).
+ * <p>
+ * See Apple “Controlling Input on tvOS”: without {@link GCEventViewController},
+ * UIKit consumes remote presses and the game sees ghost selects / broken cursor.
+ */
+public class GameController extends GCEventViewController {
     private GameView game;
     private UITextField ime;
     private UIButton keyboardBall;
@@ -77,6 +91,11 @@ public class GameController extends UIViewController {
     private NSObject keyboardFrameObserver;
     private NSObject keyboardDidShowObserver;
     private NSObject keyboardWillHideObserver;
+    /** Apple TV: unused — system UITextField keyboard instead of custom OSK. */
+    private OnScreenKeyboard osk;
+    private boolean oskForServer;
+    /** Gate disclaimer / boot so we present after the VC is on-screen (tvOS alerts need this). */
+    private boolean bootPrompted;
 
     @Override
     public void loadView() {
@@ -153,18 +172,36 @@ public class GameController extends UIViewController {
 
         changeServerBtn = pillButton("Server");
         changeServerBtn.setHidden(true);
-        changeServerBtn.setUserInteractionEnabled(true);
-        changeServerBtn.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            public void onTouchUpInside(UIControl control, UIEvent event) {
-                showServerOverlay(false);
-            }
-        });
+        // tvOS: custom game cursor + GCController Select. If this UIButton stays
+        // focusable, every A/click fires primaryAction (opens Server) no matter
+        // where the drawn cursor is. Disable UIKit interaction; open via cursor hit-test.
+        if (TvHost.isTvOS()) {
+            changeServerBtn.setUserInteractionEnabled(false);
+            game.setHudClickHandler(new GameView.HudClickHandler() {
+                public boolean onHudClick(float viewX, float viewY) {
+                    return tryOpenServerAt(viewX, viewY);
+                }
+            });
+        } else {
+            changeServerBtn.setUserInteractionEnabled(true);
+            changeServerBtn.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+                public void onTouchUpInside(UIControl control, UIEvent event) {
+                    showServerOverlay(false);
+                }
+            });
+            changeServerBtn.addOnPrimaryActionTriggeredListener(new UIControl.OnPrimaryActionTriggeredListener() {
+                public void onPrimaryActionTriggered(UIControl control) {
+                    showServerOverlay(false);
+                }
+            });
+        }
         root.addSubview(changeServerBtn);
         buildServerOverlay(root);
         buildDisclaimerOverlay(root);
+        // tvOS: system keyboard via UITextField (no custom OnScreenKeyboard).
 
         setView(root);
-        maybeShowDisclaimerThenContinue();
+        // Disclaimer / boot runs from viewDidAppear — presentViewController fails from loadView.
         scheduleLoginPoll();
         AwtHost.softKeyboardListener = new AwtHost.SoftKeyboardListener() {
             public void showSoftKeyboard(final String reason) {
@@ -223,12 +260,84 @@ public class GameController extends UIViewController {
     }
 
     @Override
+    public void viewDidAppear(boolean animated) {
+        super.viewDidAppear(animated);
+        if (!bootPrompted) {
+            bootPrompted = true;
+            maybeShowDisclaimerThenContinue();
+        }
+        syncRemoteRouting();
+    }
+
+    /**
+     * Apple TV input routing (Siri Remote).
+     * <ul>
+     *   <li>{@code false} — gameplay: events go to {@code GCMicroGamepad} only
+     *       (swipe = dpad, Play/Pause = click).</li>
+     *   <li>{@code true} — UIKit focus for Server overlay / system alerts.</li>
+     * </ul>
+     */
+    private void syncRemoteRouting() {
+        if (!TvHost.isTvOS()) {
+            return;
+        }
+        boolean uiKit = false;
+        if (serverOverlay != null && !serverOverlay.isHidden()) {
+            uiKit = true;
+        }
+        if (disclaimerOverlay != null && !disclaimerOverlay.isHidden()) {
+            uiKit = true;
+        }
+        if (getPresentedViewController() != null) {
+            uiKit = true;
+        }
+        setControllerUserInteractionEnabled(uiKit);
+        System.out.println("void-osrs remote routing uikit=" + uiKit);
+    }
+
+    /**
+     * While gameplay owns the remote ({@code controllerUserInteractionEnabled=false}),
+     * swallow UIKit Select/arrow presses so a touchpad click cannot also fire focus
+     * actions (extra “clicks” while swiping).
+     */
+    @Override
+    public void pressesBegan(NSSet<UIPress> presses, UIPressesEvent event) {
+        if (TvHost.isTvOS() && !isControllerUserInteractionEnabled()) {
+            return;
+        }
+        super.pressesBegan(presses, event);
+    }
+
+    @Override
+    public void pressesEnded(NSSet<UIPress> presses, UIPressesEvent event) {
+        if (TvHost.isTvOS() && !isControllerUserInteractionEnabled()) {
+            return;
+        }
+        super.pressesEnded(presses, event);
+    }
+
+    @Override
+    public void pressesCancelled(NSSet<UIPress> presses, UIPressesEvent event) {
+        if (TvHost.isTvOS() && !isControllerUserInteractionEnabled()) {
+            return;
+        }
+        super.pressesCancelled(presses, event);
+    }
+
+    @Override
     public void viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews();
         CGRect bounds = getView().getBounds();
         game.setFrame(bounds);
         ime.setFrame(new CGRect(0, bounds.getHeight() - 1, 1, 1));
         keyboardBall.setFrame(new CGRect(20, 20, 40, 40));
+        if (osk != null) {
+            double oskH = Math.min(320, bounds.getHeight() * 0.45);
+            osk.setFrame(new CGRect(0, bounds.getHeight() - oskH, bounds.getWidth(), oskH));
+            if (!osk.isHidden()) {
+                getView().bringSubviewToFront(osk);
+            }
+        }
         layoutServerUi(bounds);
         layoutDisclaimerUi(bounds);
     }
@@ -249,6 +358,10 @@ public class GameController extends UIViewController {
 
     private void showKeyboard() {
         if (serverOverlay != null && !serverOverlay.isHidden()) {
+            // Server overlay owns focus — type into serverField, not the hidden IME.
+            serverField.becomeFirstResponder();
+            keyboardOpen = true;
+            AwtHost.SOFT_KEYBOARD_OPEN = true;
             return;
         }
         keyboardOpen = true;
@@ -259,16 +372,28 @@ public class GameController extends UIViewController {
         syncingText = true;
         ime.setText(typedBuffer);
         syncingText = false;
+        // iOS soft IME + tvOS system keyboard (same UITextField path).
+        ime.setHidden(false);
+        ime.setAlpha(TvHost.isTvOS() ? 0.01 : 0);
+        ime.setUserInteractionEnabled(true);
         ime.becomeFirstResponder();
     }
 
     private void hideKeyboard() {
         keyboardOpen = false;
         AwtHost.SOFT_KEYBOARD_OPEN = false;
+        oskForServer = false;
         if (keyboardBall != null) {
             keyboardBall.setAlpha(1);
         }
+        if (osk != null) {
+            osk.setHidden(true);
+        }
+        serverField.resignFirstResponder();
         ime.resignFirstResponder();
+        if (TvHost.isTvOS()) {
+            ime.setHidden(true);
+        }
         clearKeyboardInset();
     }
 
@@ -384,7 +509,7 @@ public class GameController extends UIViewController {
     }
 
     private UIButton styleButton(String title, boolean primary) {
-        UIButton b = new UIButton(UIButtonType.Custom);
+        UIButton b = new UIButton(TvHost.isTvOS() ? UIButtonType.System : UIButtonType.Custom);
         b.setTitle(title, UIControlState.Normal);
         b.getTitleLabel().setFont(UIFont.getBoldSystemFont(15));
         b.getLayer().setCornerRadius(10);
@@ -400,6 +525,20 @@ public class GameController extends UIViewController {
             b.getLayer().setBorderColor(new UIColor(0.83, 0.66, 0.28, 0.45).getCGColor());
         }
         return b;
+    }
+
+    /** Touch (iOS) + primary action (tvOS Siri Remote select). */
+    private static void bindClick(UIButton b, final Runnable action) {
+        b.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+            public void onTouchUpInside(UIControl control, UIEvent event) {
+                action.run();
+            }
+        });
+        b.addOnPrimaryActionTriggeredListener(new UIControl.OnPrimaryActionTriggeredListener() {
+            public void onPrimaryActionTriggered(UIControl control) {
+                action.run();
+            }
+        });
     }
 
     private UIButton historyRowButton() {
@@ -432,29 +571,127 @@ public class GameController extends UIViewController {
     }
 
     /**
-     * First launch only: scrollable non-affiliation disclaimer before server picker / client boot.
+     * First launch only: non-affiliation disclaimer before server picker / client boot.
      * Acceptance is persisted in {@code user.home/void-disclaimer.txt}.
+     * <p>
+     * On tvOS the custom overlay is hard to focus with the Siri Remote (looks like a black
+     * screen with only the game cursor). Use a native {@link UIAlertController} instead.
      */
     private void maybeShowDisclaimerThenContinue() {
         if (AffiliationDisclaimer.isAccepted()) {
+            System.out.println("void-osrs boot disclaimer=already-accepted");
             continueAfterDisclaimer();
             return;
         }
+        if (TvHost.isTvOS()) {
+            System.out.println("void-osrs boot disclaimer=tv-alert");
+            showTvDisclaimerAlert();
+            return;
+        }
         if (disclaimerOverlay != null) {
+            System.out.println("void-osrs boot disclaimer=overlay");
             disclaimerOverlay.setHidden(false);
             getView().bringSubviewToFront(disclaimerOverlay);
             layoutDisclaimerUi(getView().getBounds());
         }
     }
 
+    /** Native Accept/Decline — focusable with Siri Remote / game controller. */
+    private void showTvDisclaimerAlert() {
+        // Short message: full BODY is long for a TV alert; full text stays on iPad overlay.
+        String msg = "Void is a non-commercial preservation project. Not affiliated with Jagex. "
+                + "Free to play/host/develop. Not official RuneScape. Use at your own risk.";
+        UIAlertController alert = new UIAlertController(
+                AffiliationDisclaimer.TITLE, msg, UIAlertControllerStyle.Alert);
+        UIAlertAction accept = new UIAlertAction(
+                AffiliationDisclaimer.ACCEPT_LABEL,
+                UIAlertActionStyle.Default,
+                new VoidBlock1<UIAlertAction>() {
+                    public void invoke(UIAlertAction action) {
+                        AffiliationDisclaimer.markAccepted();
+                        System.out.println("void-osrs boot disclaimer=accepted ok="
+                                + AffiliationDisclaimer.isAccepted()
+                                + " home=" + System.getProperty("user.home"));
+                        continueAfterDisclaimer();
+                        syncRemoteRouting();
+                    }
+                });
+        alert.addAction(new UIAlertAction("Decline", UIAlertActionStyle.Cancel, new VoidBlock1<UIAlertAction>() {
+            public void invoke(UIAlertAction action) {
+                syncRemoteRouting();
+            }
+        }));
+        alert.addAction(accept);
+        alert.setPreferredAction(accept);
+        presentViewController(alert, true, new Runnable() {
+            public void run() {
+                syncRemoteRouting();
+            }
+        });
+    }
+
     private void continueAfterDisclaimer() {
         if (disclaimerOverlay != null) {
             disclaimerOverlay.setHidden(true);
         }
-        if (resolveBootHost() == null) {
-            showServerOverlay(false);
+        String host = resolveBootHost();
+        System.out.println("void-osrs boot continue host=" + host
+                + " size=" + game.viewWidth() + "x" + game.viewHeight());
+        if (host == null) {
+            // Seed LAN default so first TV boot can start without typing; Change Server still works.
+            if (TvHost.isTvOS()) {
+                String hint = ServerPrefs.normalize(defaultHostHint());
+                if (hint != null) {
+                    ServerPrefs.save(hint);
+                    System.out.println("void-osrs boot seeded-server=" + hint);
+                }
+            }
+            if (resolveBootHost() == null) {
+                showServerOverlay(false);
+            }
         }
         startClientIfReady(game.viewWidth(), game.viewHeight());
+        setNeedsFocusUpdate();
+        syncRemoteRouting();
+    }
+
+    /** Prefer text field / Connect when server overlay is up (tvOS focus + system keyboard). */
+    @Override
+    public UIView getPreferredFocusedView() {
+        if (serverOverlay != null && !serverOverlay.isHidden()) {
+            if (serverField != null) {
+                return serverField;
+            }
+            if (serverConnect != null) {
+                return serverConnect;
+            }
+        }
+        if (disclaimerOverlay != null && !disclaimerOverlay.isHidden() && disclaimerAccept != null) {
+            return disclaimerAccept;
+        }
+        // Gameplay: keep focus on the game surface so the Server chip cannot steal Select.
+        if (TvHost.isTvOS() && game != null) {
+            return game;
+        }
+        return super.getPreferredFocusedView();
+    }
+
+    /**
+     * tvOS cursor hit-test for the non-interactive Server chip (sibling of {@link #game}).
+     * Game fills the root bounds, so view coords match the button frame.
+     */
+    private boolean tryOpenServerAt(float viewX, float viewY) {
+        if (changeServerBtn == null || changeServerBtn.isHidden()) {
+            return false;
+        }
+        CGRect f = changeServerBtn.getFrame();
+        if (viewX < f.getX() || viewX >= f.getX() + f.getWidth()
+                || viewY < f.getY() || viewY >= f.getY() + f.getHeight()) {
+            return false;
+        }
+        System.out.println("void-osrs hud Server click @ " + (int) viewX + "," + (int) viewY);
+        showServerOverlay(false);
+        return true;
     }
 
     private void buildDisclaimerOverlay(UIView root) {
@@ -490,8 +727,8 @@ public class GameController extends UIViewController {
         disclaimerAccept = pillButton(AffiliationDisclaimer.ACCEPT_LABEL);
         disclaimerAccept.setBackgroundColor(gold());
         disclaimerAccept.setTitleColor(new UIColor(0.10, 0.08, 0.04, 1), UIControlState.Normal);
-        disclaimerAccept.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            public void onTouchUpInside(UIControl control, UIEvent event) {
+        bindClick(disclaimerAccept, new Runnable() {
+            public void run() {
                 AffiliationDisclaimer.markAccepted();
                 continueAfterDisclaimer();
             }
@@ -587,15 +824,15 @@ public class GameController extends UIViewController {
         serverRecent.setHidden(true);
 
         serverConnect = styleButton("Connect", true);
-        serverConnect.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            public void onTouchUpInside(UIControl control, UIEvent event) {
+        bindClick(serverConnect, new Runnable() {
+            public void run() {
                 applyServerFromOverlay();
             }
         });
 
         serverCancel = styleButton("Cancel", false);
-        serverCancel.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            public void onTouchUpInside(UIControl control, UIEvent event) {
+        bindClick(serverCancel, new Runnable() {
+            public void run() {
                 hideServerOverlay();
             }
         });
@@ -609,8 +846,8 @@ public class GameController extends UIViewController {
             final int idx = i;
             UIButton chip = historyRowButton();
             chip.setHidden(true);
-            chip.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-                public void onTouchUpInside(UIControl control, UIEvent event) {
+            bindClick(chip, new Runnable() {
+                public void run() {
                     String t = historyBtns[idx].getTitle(UIControlState.Normal);
                     if (t != null) {
                         t = t.trim();
@@ -719,15 +956,20 @@ public class GameController extends UIViewController {
         serverOverlay.setHidden(false);
         changeServerBtn.setHidden(true);
         hideKeyboard();
-        serverField.becomeFirstResponder();
         layoutServerUi(getView().getBounds());
         getView().bringSubviewToFront(serverOverlay);
+        // Native tvOS / iOS keyboard for the host field.
+        serverField.setUserInteractionEnabled(true);
+        serverField.becomeFirstResponder();
+        setNeedsFocusUpdate();
+        syncRemoteRouting();
     }
 
     private void hideServerOverlay() {
         serverField.resignFirstResponder();
         serverOverlay.setHidden(true);
         getView().sendSubviewToBack(serverOverlay);
+        syncRemoteRouting();
     }
 
     private void applyServerFromOverlay() {
@@ -808,9 +1050,13 @@ public class GameController extends UIViewController {
                     return;
                 }
                 if (changeServerBtn != null) {
+                    boolean wasHidden = changeServerBtn.isHidden();
                     changeServerBtn.setHidden(!show);
                     if (show) {
                         getView().bringSubviewToFront(changeServerBtn);
+                    }
+                    if (TvHost.isTvOS() && wasHidden != changeServerBtn.isHidden()) {
+                        setNeedsFocusUpdate();
                     }
                 }
                 pollLoginButton();
@@ -818,29 +1064,83 @@ public class GameController extends UIViewController {
         });
     }
 
+    /**
+     * Point {@code user.home} at a writable sandbox dir for {@code void-*.txt}.
+     * tvOS device was hitting {@code EPERM} on the Documents URL path from
+     * {@link NSFileManager#getURLsForDirectory} — try {@code $HOME/Documents},
+     * then Caches, and verify with a probe write.
+     */
     private static void setUserHome() {
+        java.util.ArrayList<File> candidates = new java.util.ArrayList<File>();
+        try {
+            String envHome = System.getenv("HOME");
+            if (envHome != null && envHome.length() > 0) {
+                candidates.add(new File(envHome, "Documents"));
+                candidates.add(new File(envHome, "Library/Caches"));
+                candidates.add(new File(envHome));
+            }
+        } catch (Throwable ignored) {
+        }
         try {
             NSArray<NSURL> urls = NSFileManager.getDefaultManager().getURLsForDirectory(
                     NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask);
             if (urls != null && urls.size() > 0) {
-                System.setProperty("user.home", urls.get(0).getPath());
+                candidates.add(new File(urls.get(0).getPath()));
             }
         } catch (Throwable ignored) {
         }
+        try {
+            NSArray<NSURL> urls = NSFileManager.getDefaultManager().getURLsForDirectory(
+                    NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask);
+            if (urls != null && urls.size() > 0) {
+                candidates.add(new File(urls.get(0).getPath()));
+            }
+        } catch (Throwable ignored) {
+        }
+        for (int i = 0; i < candidates.size(); i++) {
+            File dir = candidates.get(i);
+            if (dir == null) {
+                continue;
+            }
+            try {
+                if (!dir.exists() && !dir.mkdirs()) {
+                    continue;
+                }
+                File probe = new File(dir, ".void-write-probe");
+                java.io.FileOutputStream fos = new java.io.FileOutputStream(probe);
+                fos.write(1);
+                fos.close();
+                //noinspection ResultOfMethodCallIgnored
+                probe.delete();
+                System.setProperty("user.home", dir.getAbsolutePath());
+                System.out.println("void-osrs user.home=" + dir.getAbsolutePath() + " (writable)");
+                return;
+            } catch (Throwable t) {
+                System.out.println("void-osrs user.home skip " + dir + ": " + t);
+            }
+        }
+        System.out.println("void-osrs user.home FALLBACK keep=" + System.getProperty("user.home"));
     }
 
     private void startClientIfReady(int width, int height) {
-        if (clientStarted || width <= 0 || height <= 0) {
+        if (clientStarted) {
+            return;
+        }
+        if (width <= 0 || height <= 0) {
+            System.out.println("void-osrs boot wait size=" + width + "x" + height);
             return;
         }
         if (!AffiliationDisclaimer.isAccepted()) {
+            System.out.println("void-osrs boot wait disclaimer");
             return;
         }
         final String server = resolveBootHost();
         if (server == null) {
+            System.out.println("void-osrs boot wait server");
             return;
         }
         clientStarted = true;
+        System.out.println("void-osrs boot start server=" + server + " size=" + width + "x" + height);
         AwtHost.setDisplaySize(width, height);
         AwtHost.presenter = game;
         new Thread(new Runnable() {

@@ -10,6 +10,7 @@ import org.robovm.apple.gamecontroller.GCController;
 import org.robovm.apple.gamecontroller.GCControllerButtonInput;
 import org.robovm.apple.gamecontroller.GCControllerDirectionPad;
 import org.robovm.apple.gamecontroller.GCExtendedGamepad;
+import org.robovm.apple.gamecontroller.GCMicroGamepad;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIImage;
@@ -41,7 +42,12 @@ import voidawt.event.MouseEvent;
  * {@code MobileKeyboard}; this view dismisses IME on tap-outside while
  * {@link AwtHost#SOFT_KEYBOARD_OPEN} is true.
  *
- * <p>DualShock / Xbox / MFi (via {@link GCController}): left stick moves a drawn
+ * <p>Apple TV <b>Siri Remote</b> ({@link GCMicroGamepad} — Apple “Controlling Input on tvOS”):
+ * touch-surface swipe → analog dpad (cursor), firm click on touchpad → {@code buttonA}
+ * (left click), Play/Pause → {@code buttonX} (right click). Requires the host VC to be a
+ * {@code GCEventViewController} with {@code controllerUserInteractionEnabled=false}
+ * during gameplay so UIKit does not steal Select / swipes.
+ * DualShock / Xbox / MFi ({@link GCController}): left stick moves a drawn
  * cursor, ✕ left-click, ○ right-click, L2/R2 zoom, right stick camera orbit —
  * same mapping as Android {@code MainActivity.GameView} pad path.
  *
@@ -70,6 +76,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     private final UIImageView imageView;
     private final UIImageView cursorView;
+    /** Strong ref so RoboVM GC cannot drop the frame while UIImageView displays it. */
+    private UIImage lastFrame;
+    private int presentCount;
     private final Map<Long, CGPoint> active = new LinkedHashMap<Long, CGPoint>();
     private boolean down;
     private boolean multiTouch;
@@ -130,11 +139,44 @@ public class GameView extends UIView implements AwtHost.Presenter {
     private int padTickGeneration;
     private NSObject padConnectObserver;
     private NSObject padDisconnectObserver;
+    /**
+     * Siri Remote ({@link GCMicroGamepad}) bound.
+     * <p>
+     * Force-click on the touchpad ({@code buttonA}): short = left, hold ≥450ms = right.
+     * Soft contact during dpad swipes is ignored. Play/Pause remains the same mapping
+     * as backup.
+     */
+    private boolean padIsMicro;
+    private long lastSiriSteerAt;
+    /** Play/Pause hold tracking for right-click (long press). */
+    private long siriXDownAt;
+    private boolean siriXDown;
+    private static final long SIRI_X_RIGHT_CLICK_MS = 450L;
+    /** Touchpad force-click ({@code buttonA}) → left / hold-right, swipe-filtered. */
+    private boolean siriADown;
+    private boolean siriACancelled;
+    private float siriAPeak;
+    private long siriADownAt;
+    /** Bumped to cancel a deferred force-click after swipe-start A pulses. */
+    private int siriAClickGeneration;
+    /** Min analog pressure to treat A as a firm click (soft swipe contact is often lower). */
+    private static final float SIRI_FORCE_MIN = 0.40f;
+    /** After A-up, wait this long so a following dpad swipe can cancel the click. */
+    private static final long SIRI_A_CLICK_DELAY_MS = 80L;
+    /** Ignore A if the touchpad steered within this window (before/during/after). */
+    private static final long SIRI_STEER_GRACE_MS = 180L;
 
     public GameView(CGRect frame) {
         super(frame);
-        setMultipleTouchEnabled(true);
-        setUserInteractionEnabled(true);
+        // Apple TV has no touch screen — ignore multitouch; Siri Remote is GC-only.
+        if (TvHost.isTvOS()) {
+            setMultipleTouchEnabled(false);
+            // Keep interaction for focus/GCEventViewController; touches* are no-ops.
+            setUserInteractionEnabled(true);
+        } else {
+            setMultipleTouchEnabled(true);
+            setUserInteractionEnabled(true);
+        }
         setBackgroundColor(UIColor.black());
         imageView = new UIImageView(getBounds());
         imageView.setContentMode(UIViewContentMode.ScaleToFill);
@@ -151,6 +193,35 @@ public class GameView extends UIView implements AwtHost.Presenter {
         cursorView.setHidden(true);
         addSubview(cursorView);
         startPadListening();
+        if (TvHost.isTvOS()) {
+            // Always show a cursor on Apple TV — no touch surface for gameplay.
+            ensureCursor();
+            setPadCursor(cursorVx, cursorVy, true);
+        }
+    }
+
+    /**
+     * Optional HUD hit-test ahead of AWT mouse inject (tvOS Server chip, …).
+     * {@code viewX}/{@code viewY} are in this view’s bounds (same as the cursor).
+     */
+    public interface HudClickHandler {
+        /** @return true if the click was consumed (skip game inject) */
+        boolean onHudClick(float viewX, float viewY);
+    }
+
+    private HudClickHandler hudClickHandler;
+
+    public void setHudClickHandler(HudClickHandler handler) {
+        this.hudClickHandler = handler;
+    }
+
+    /**
+     * Hold tvOS focus on the game surface so overlay chips cannot steal Select.
+     * Gameplay input still comes from {@link GCController}, not UIKit focus.
+     */
+    @Override
+    public boolean canBecomeFocused() {
+        return TvHost.isTvOS() || super.canBecomeFocused();
     }
 
     /**
@@ -163,7 +234,12 @@ public class GameView extends UIView implements AwtHost.Presenter {
                     public void invoke(GCController controller) {
                         System.out.println("void-osrs pad connect vendor="
                                 + (controller != null ? controller.getVendorName() : null));
-                        attachPad(controller);
+                        try {
+                            attachPad(controller);
+                        } catch (Throwable t) {
+                            System.out.println("void-osrs pad attach failed: " + t);
+                            t.printStackTrace();
+                        }
                     }
                 });
         padDisconnectObserver = GCController.Notifications.observeDidDisconnect(
@@ -186,13 +262,36 @@ public class GameView extends UIView implements AwtHost.Presenter {
         });
         NSArray<GCController> already = GCController.getControllers();
         if (already != null) {
-            long n = already.size();
-            for (int i = 0; i < n; i++) {
-                attachPad(already.get(i));
-                if (padActive) {
-                    break;
+            // tvOS: bind Siri Remote (micro) first — that's the primary input.
+            if (TvHost.isTvOS()) {
+                long n = already.size();
+                for (int i = 0; i < n; i++) {
+                    GCController c = already.get(i);
+                    if (c != null && hasMicro(c)) {
+                        attachPad(c);
+                        if (padActive) {
+                            break;
+                        }
+                    }
                 }
             }
+            if (!padActive) {
+                long n = already.size();
+                for (int i = 0; i < n; i++) {
+                    attachPad(already.get(i));
+                    if (padActive) {
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    private static boolean hasMicro(GCController c) {
+        try {
+            return c.getMicroGamepad() != null;
+        } catch (Throwable ignored) {
+            return false;
         }
     }
 
@@ -204,8 +303,19 @@ public class GameView extends UIView implements AwtHost.Presenter {
         long n = list.size();
         for (int i = 0; i < n; i++) {
             GCController c = list.get(i);
-            if (c != null && c.getExtendedGamepad() != null) {
-                return true;
+            if (c != null) {
+                try {
+                    if (c.getExtendedGamepad() != null) {
+                        return true;
+                    }
+                } catch (Throwable ignored) {
+                }
+                try {
+                    if (c.getMicroGamepad() != null) {
+                        return true;
+                    }
+                } catch (Throwable ignored) {
+                }
             }
         }
         return false;
@@ -215,8 +325,22 @@ public class GameView extends UIView implements AwtHost.Presenter {
         if (controller == null) {
             return;
         }
-        GCExtendedGamepad pad = controller.getExtendedGamepad();
-        if (pad == null) {
+        // Profiles: getMicroGamepad()/getExtendedGamepad() can ClassCastException on
+        // RoboVM when the native profile doesn't match — catch per call.
+        GCExtendedGamepad extended = null;
+        GCMicroGamepad micro = null;
+        try {
+            micro = controller.getMicroGamepad();
+        } catch (Throwable ignored) {
+        }
+        try {
+            extended = controller.getExtendedGamepad();
+        } catch (Throwable ignored) {
+        }
+        // Apple TV: Siri Remote = GCMicroGamepad. Prefer it over an extended pad
+        // that may also be connected (user is on the Remote).
+        boolean useMicro = micro != null && (TvHost.isTvOS() || extended == null);
+        if (!useMicro && extended == null) {
             return;
         }
         // Prefer the newly connected pad; rebind handlers every time.
@@ -225,7 +349,27 @@ public class GameView extends UIView implements AwtHost.Presenter {
         }
         padController = controller;
         controller.setHandlerQueue(DispatchQueue.getMainQueue());
-        bindPadHandlers(pad);
+        // Menu on Siri Remote: stay in-app (GCEventViewController + pause handler)
+        // instead of bouncing to the tvOS Home Screen while gameplay owns input.
+        try {
+            controller.setControllerPausedHandler(new VoidBlock1<GCController>() {
+                public void invoke(GCController c) {
+                    System.out.println("void-osrs siri Menu (pause handler)");
+                }
+            });
+        } catch (Throwable ignored) {
+        }
+        if (useMicro) {
+            padIsMicro = true;
+            bindMicroPadHandlers(micro);
+            System.out.println("void-osrs pad profile=SiriRemote/micro vendor="
+                    + controller.getVendorName());
+        } else {
+            padIsMicro = false;
+            bindPadHandlers(extended);
+            System.out.println("void-osrs pad profile=extended vendor="
+                    + controller.getVendorName());
+        }
         activatePad();
     }
 
@@ -233,30 +377,214 @@ public class GameView extends UIView implements AwtHost.Presenter {
         if (controller == null) {
             return;
         }
-        GCExtendedGamepad pad = controller.getExtendedGamepad();
-        if (pad == null) {
+        try {
+            GCExtendedGamepad pad = controller.getExtendedGamepad();
+            if (pad != null) {
+                pad.getLeftThumbstick().setValueChangedHandler(null);
+                pad.getRightThumbstick().setValueChangedHandler(null);
+                pad.getButtonA().setPressedChangedHandler(null);
+                pad.getButtonB().setPressedChangedHandler(null);
+                pad.getButtonX().setPressedChangedHandler(null);
+                pad.getButtonY().setPressedChangedHandler(null);
+                pad.getLeftShoulder().setPressedChangedHandler(null);
+                pad.getRightShoulder().setPressedChangedHandler(null);
+                pad.getLeftTrigger().setValueChangedHandler(null);
+                pad.getLeftTrigger().setPressedChangedHandler(null);
+                pad.getRightTrigger().setValueChangedHandler(null);
+                pad.getRightTrigger().setPressedChangedHandler(null);
+                clearButton(pad.getDpad() != null ? pad.getDpad().getUp() : null);
+                clearButton(pad.getDpad() != null ? pad.getDpad().getDown() : null);
+                clearButton(pad.getDpad() != null ? pad.getDpad().getLeft() : null);
+                clearButton(pad.getDpad() != null ? pad.getDpad().getRight() : null);
+                clearButton(pad.getLeftThumbstickButton());
+                clearButton(pad.getRightThumbstickButton());
+                clearButton(pad.getButtonMenu());
+            }
+        } catch (Throwable ignored) {
+        }
+        try {
+            GCMicroGamepad micro = controller.getMicroGamepad();
+            if (micro != null) {
+                if (micro.getDpad() != null) {
+                    micro.getDpad().setValueChangedHandler(null);
+                }
+                if (micro.getButtonA() != null) {
+                    micro.getButtonA().setValueChangedHandler(null);
+                    micro.getButtonA().setPressedChangedHandler(null);
+                }
+                clearButton(micro.getButtonX());
+                clearButton(micro.getButtonMenu());
+            }
+        } catch (Throwable ignored) {
+        }
+    }
+
+    /**
+     * Siri Remote ({@link GCMicroGamepad}):
+     * <ul>
+     *   <li>Touch surface swipe → {@code dpad} → move cursor (never a mouse button)</li>
+     *   <li>Force-click touchpad ({@code buttonA}) → short = left; hold ≥450ms = right</li>
+     *   <li>Play/Pause → short = left click; hold ≥450ms = right click</li>
+     *   <li>Menu → {@code controllerPausedHandler}</li>
+     * </ul>
+     */
+    private void bindMicroPadHandlers(final GCMicroGamepad pad) {
+        pad.setReportsAbsoluteDpadValues(false);
+        try {
+            pad.setAllowsRotation(false);
+        } catch (Throwable ignored) {
+        }
+        if (pad.getDpad() != null) {
+            pad.getDpad().setValueChangedHandler(
+                    new VoidBlock3<GCControllerDirectionPad, Float, Float>() {
+                        public void invoke(GCControllerDirectionPad dpad, Float x, Float y) {
+                            stickLX = x != null ? x.floatValue() : 0f;
+                            stickLY = y != null ? -y.floatValue() : 0f;
+                            if (Math.abs(stickLX) > PAD_DEADZONE || Math.abs(stickLY) > PAD_DEADZONE) {
+                                lastSiriSteerAt = System.currentTimeMillis();
+                                // Swipe kills any in-flight force-click (A-down or deferred).
+                                siriACancelled = true;
+                                siriAClickGeneration++;
+                                if (padLeftDown) {
+                                    forceReleaseLeft("siri-steer");
+                                }
+                            }
+                            startPadTick();
+                        }
+                    });
+        }
+        // Force-click: valueChanged gives pressure; click only on clean A-up (no swipe).
+        pad.getButtonA().setValueChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        onSiriForceClick(
+                                pressed != null && pressed.booleanValue(),
+                                value != null ? value.floatValue() : 0f);
+                    }
+                });
+        // Play/Pause: backup left / hold-right on the Siri Remote.
+        pad.getButtonX().setPressedChangedHandler(
+                new VoidBlock3<GCControllerButtonInput, Float, Boolean>() {
+                    public void invoke(GCControllerButtonInput button, Float value, Boolean pressed) {
+                        onSiriPlayPause(pressed != null && pressed.booleanValue());
+                    }
+                });
+        System.out.println("void-osrs siri map: swipe=move force-click=left (hold=right) Play/Pause=same");
+    }
+
+    private boolean siriSteeringRecently() {
+        long now = System.currentTimeMillis();
+        return Math.abs(stickLX) > PAD_DEADZONE
+                || Math.abs(stickLY) > PAD_DEADZONE
+                || (now - lastSiriSteerAt) < SIRI_STEER_GRACE_MS;
+    }
+
+    /**
+     * Touchpad force-click ({@code buttonA}): short = left, hold ≥450ms = right.
+     * Soft contact during swipes also asserts A on real remotes, so we only fire
+     * after A-up when pressure looked firm and no dpad motion happened around it.
+     */
+    private void onSiriForceClick(boolean pressed, float value) {
+        long now = System.currentTimeMillis();
+        if (pressed) {
+            if (!siriADown) {
+                siriADown = true;
+                siriADownAt = now;
+                siriAPeak = value;
+                siriACancelled = siriSteeringRecently();
+                siriAClickGeneration++; // cancel any prior deferred click
+                if (siriACancelled) {
+                    System.out.println("void-osrs siri A down ignored (steering) v=" + value);
+                }
+            } else {
+                if (value > siriAPeak) {
+                    siriAPeak = value;
+                }
+                if (siriSteeringRecently()) {
+                    siriACancelled = true;
+                }
+            }
             return;
         }
-        pad.getLeftThumbstick().setValueChangedHandler(null);
-        pad.getRightThumbstick().setValueChangedHandler(null);
-        pad.getButtonA().setPressedChangedHandler(null);
-        pad.getButtonB().setPressedChangedHandler(null);
-        pad.getButtonX().setPressedChangedHandler(null);
-        pad.getButtonY().setPressedChangedHandler(null);
-        pad.getLeftShoulder().setPressedChangedHandler(null);
-        pad.getRightShoulder().setPressedChangedHandler(null);
-        pad.getLeftTrigger().setValueChangedHandler(null);
-        pad.getLeftTrigger().setPressedChangedHandler(null);
-        pad.getRightTrigger().setValueChangedHandler(null);
-        pad.getRightTrigger().setPressedChangedHandler(null);
-        // D-pad / sticks / Options may be null on older pads — clear safely.
-        clearButton(pad.getDpad() != null ? pad.getDpad().getUp() : null);
-        clearButton(pad.getDpad() != null ? pad.getDpad().getDown() : null);
-        clearButton(pad.getDpad() != null ? pad.getDpad().getLeft() : null);
-        clearButton(pad.getDpad() != null ? pad.getDpad().getRight() : null);
-        clearButton(pad.getLeftThumbstickButton());
-        clearButton(pad.getRightThumbstickButton());
-        clearButton(pad.getButtonMenu());
+        if (!siriADown) {
+            return;
+        }
+        siriADown = false;
+        if (siriSteeringRecently()) {
+            siriACancelled = true;
+        }
+        final float peak = siriAPeak;
+        final long held = now - siriADownAt;
+        final boolean right = held >= SIRI_X_RIGHT_CLICK_MS;
+        siriAPeak = 0f;
+        if (siriACancelled || peak < SIRI_FORCE_MIN) {
+            System.out.println("void-osrs siri A cancel peak=" + peak
+                    + " cancelled=" + siriACancelled + " held=" + held + "ms");
+            return;
+        }
+        // Defer: swipe-start often pulses A before dpad moves — give steer a beat to cancel.
+        final int gen = ++siriAClickGeneration;
+        DispatchQueue.getMainQueue().after(SIRI_A_CLICK_DELAY_MS, TimeUnit.MILLISECONDS, new Runnable() {
+            public void run() {
+                if (gen != siriAClickGeneration) {
+                    return;
+                }
+                if (siriSteeringRecently()) {
+                    System.out.println("void-osrs siri A deferred cancel (steer) peak=" + peak);
+                    return;
+                }
+                fireSiriClick("force", peak, right, held);
+            }
+        });
+    }
+
+    private void fireSiriClick(String reason, float peak, boolean right, long heldMs) {
+        ensureCursor();
+        if (!right && hudClickHandler != null
+                && hudClickHandler.onHudClick(cursorVx, cursorVy)) {
+            redrawCursor();
+            return;
+        }
+        int[] xy = mapCursor();
+        System.out.println("void-osrs siri " + reason + " " + (right ? "right" : "left")
+                + "-click @" + xy[0] + "," + xy[1] + " peak=" + peak + " held=" + heldMs + "ms");
+        int button = right ? MouseEvent.BUTTON3 : MouseEvent.BUTTON1;
+        AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
+        AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], button, 1);
+        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], button, 1);
+        AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], button, 1);
+        redrawCursor();
+    }
+
+    /**
+     * Siri Remote Play/Pause: short = left click, long-press = right click.
+     */
+    private void onSiriPlayPause(boolean pressed) {
+        ensureCursor();
+        long now = System.currentTimeMillis();
+        if (pressed) {
+            siriXDown = true;
+            siriXDownAt = now;
+            redrawCursor();
+            return;
+        }
+        if (!siriXDown) {
+            return;
+        }
+        siriXDown = false;
+        long held = now - siriXDownAt;
+        boolean right = held >= SIRI_X_RIGHT_CLICK_MS;
+        fireSiriClick("Play/Pause", 1f, right, held);
+    }
+
+    private void forceReleaseLeft(String reason) {
+        if (!padLeftDown) {
+            return;
+        }
+        padLeftDown = false;
+        int[] xy = mapCursor();
+        AwtHost.injectMouse(MouseEvent.MOUSE_RELEASED, xy[0], xy[1], MouseEvent.BUTTON1, 1);
+        System.out.println("void-osrs force left-up (" + reason + ")");
     }
 
     private static void clearButton(GCControllerButtonInput input) {
@@ -374,6 +702,18 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     private void onPadClick(boolean left, boolean pressed) {
         ensureCursor();
+        // UIKit HUD overlays (tvOS Server chip) sit above the framebuffer — consume
+        // before AWT inject so a real touchpad click on the chip opens prefs.
+        if (left && pressed && hudClickHandler != null
+                && hudClickHandler.onHudClick(cursorVx, cursorVy)) {
+            redrawCursor();
+            return;
+        }
+        injectPadButton(left, pressed);
+        redrawCursor();
+    }
+
+    private void injectPadButton(boolean left, boolean pressed) {
         int[] xy = mapCursor();
         if (left) {
             if (pressed) {
@@ -387,7 +727,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
         } else {
             if (pressed) {
                 padRightDown = true;
-                System.out.println("void-osrs pad ○ right-press @ " + xy[0] + "," + xy[1]);
+                System.out.println("void-osrs siri Play/Pause right-press @ " + xy[0] + "," + xy[1]);
                 AwtHost.injectMouse(MouseEvent.MOUSE_MOVED, xy[0], xy[1], 0, 0);
                 AwtHost.injectMouse(MouseEvent.MOUSE_PRESSED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
             } else if (padRightDown) {
@@ -396,7 +736,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
                 AwtHost.injectMouse(MouseEvent.MOUSE_CLICKED, xy[0], xy[1], MouseEvent.BUTTON3, 1);
             }
         }
-        redrawCursor();
     }
 
     private void activatePad() {
@@ -431,6 +770,8 @@ public class GameView extends UIView implements AwtHost.Presenter {
         triggerR2 = 0f;
         padLeftDown = false;
         padRightDown = false;
+        padIsMicro = false;
+        siriXDown = false;
         stopPadTick();
         AwtHost.setPadConnected(false);
         redrawCursor();
@@ -453,7 +794,16 @@ public class GameView extends UIView implements AwtHost.Presenter {
     }
 
     private void redrawCursor() {
-        setPadCursor(cursorVx, cursorVy, padActive);
+        setPadCursor(cursorVx, cursorVy, padActive || TvHost.isTvOS());
+    }
+
+    public void setPadCursor(float x, float y, boolean visible) {
+        cursorView.setHidden(!visible);
+        if (!visible) {
+            return;
+        }
+        cursorView.setFrame(new CGRect(x - CURSOR_HOT_X, y - CURSOR_HOT_Y, CURSOR_SIZE, CURSOR_SIZE));
+        bringSubviewToFront(cursorView);
     }
 
     private void stopPadTick() {
@@ -523,8 +873,12 @@ public class GameView extends UIView implements AwtHost.Presenter {
             float h = Math.max(1f, (float) getBounds().getHeight());
             cursorVx = Math.max(0f, Math.min(w - 1f, cursorVx + lx * PAD_CURSOR_SPEED));
             cursorVy = Math.max(0f, Math.min(h - 1f, cursorVy + ly * PAD_CURSOR_SPEED));
+            if (padIsMicro) {
+                lastSiriSteerAt = System.currentTimeMillis();
+            }
             int[] xy = mapCursor();
-            if (padLeftDown) {
+            // Siri path: never hold left button from touchpad; only Play/Pause clicks.
+            if (padLeftDown && !padIsMicro) {
                 AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON1, 0);
             } else if (padRightDown) {
                 AwtHost.injectMouse(MouseEvent.MOUSE_DRAGGED, xy[0], xy[1], MouseEvent.BUTTON3, 0);
@@ -561,15 +915,6 @@ public class GameView extends UIView implements AwtHost.Presenter {
         return needsPadTick();
     }
 
-    public void setPadCursor(float x, float y, boolean visible) {
-        cursorView.setHidden(!visible);
-        if (!visible) {
-            return;
-        }
-        cursorView.setFrame(new CGRect(x - CURSOR_HOT_X, y - CURSOR_HOT_Y, CURSOR_SIZE, CURSOR_SIZE));
-        bringSubviewToFront(cursorView);
-    }
-
     public void setSizeListener(Runnable listener) {
         this.sizeListener = listener;
     }
@@ -588,7 +933,7 @@ public class GameView extends UIView implements AwtHost.Presenter {
         if (cursorVx >= 0f) {
             cursorVx = Math.min(cursorVx, w - 1);
             cursorVy = Math.min(cursorVy, h - 1);
-            if (padActive) {
+            if (padActive || TvHost.isTvOS()) {
                 redrawCursor();
             }
         }
@@ -649,7 +994,25 @@ public class GameView extends UIView implements AwtHost.Presenter {
     public void present(int[] argb, int width, int height) {
         frameW = width;
         frameH = height;
-        imageView.setImage(ArgbBridge.toImage(argb, width, height));
+        UIImage img = ArgbBridge.toImage(argb, width, height);
+        if (img == null) {
+            System.out.println("void-osrs present null frame " + width + "x" + height);
+            return;
+        }
+        lastFrame = img;
+        imageView.setImage(img);
+        presentCount++;
+        if (presentCount <= 3 || (presentCount % 120) == 0) {
+            int sample = 0;
+            int n = Math.min(argb.length, width * height);
+            for (int i = 0; i < n; i += 64) {
+                if ((argb[i] & 0x00ffffff) != 0) {
+                    sample++;
+                }
+            }
+            System.out.println("void-osrs present #" + presentCount
+                    + " " + width + "x" + height + " lit~" + sample);
+        }
     }
 
     private void scheduleLongPress() {
@@ -696,6 +1059,12 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     @Override
     public void touchesBegan(NSSet<UITouch> touches, UIEvent event) {
+        // Apple TV: Siri Remote must not go through the iPad multitouch→mouse path.
+        // Focused GameView can receive synthesized touches for trackpad swipes, which
+        // became left-clicks / drags no matter what GCMicroGamepad did with buttonA.
+        if (TvHost.isTvOS()) {
+            return;
+        }
         updateActive(touches, false);
         int count = active.size();
         if (count >= 2) {
@@ -740,6 +1109,9 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     @Override
     public void touchesMoved(NSSet<UITouch> touches, UIEvent event) {
+        if (TvHost.isTvOS()) {
+            return;
+        }
         updateActive(touches, false);
         if (multiTouch) {
             multiTouchMaxCount = Math.max(multiTouchMaxCount, active.size());
@@ -792,11 +1164,17 @@ public class GameView extends UIView implements AwtHost.Presenter {
 
     @Override
     public void touchesEnded(NSSet<UITouch> touches, UIEvent event) {
+        if (TvHost.isTvOS()) {
+            return;
+        }
         finishTouches(touches, false);
     }
 
     @Override
     public void touchesCancelled(NSSet<UITouch> touches, UIEvent event) {
+        if (TvHost.isTvOS()) {
+            return;
+        }
         finishTouches(touches, true);
     }
 

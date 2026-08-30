@@ -1,8 +1,8 @@
-# Void mobile architecture (Android + iOS)
+# Void mobile architecture (Android + iOS / tvOS)
 
-The desktop client is a decompiled **RuneScape 634** Java applet (`client/src`). Android and iOS run that **same Java**, with a software renderer and a thin native host. OpenGL / DirectX / jaggl natives are stubbed so the toolkit falls back to the CPU pixel buffer.
+The desktop client is a decompiled **RuneScape 634** Java applet (`client/src`). Android, iPad, and Apple TV run that **same Java**, with a software renderer and a thin native host. OpenGL / DirectX / jaggl natives are stubbed so the toolkit falls back to the CPU pixel buffer.
 
-Both phones talk to the Void game process on **TCP 43594** (JS5 + login). Start `:game:run` on the Mac before launching either app.
+All mobile hosts talk to the Void game process on **TCP 43594** (JS5 + login). Start `:game:run` on the Mac before launching the app.
 
 ```
                     ┌─────────────────────────────────────────┐
@@ -31,9 +31,12 @@ Both phones talk to the Void game process on **TCP 43594** (JS5 + login). Start 
 | `client/src` | Canonical 634 sources. Keep using `java.awt` here. |
 | `android/` | Android Gradle app. Owns **shared** `voidawt`, JNI stubs, `MainActivity`. |
 | `android/scripts/gen_stubs.py` | Regenerates `jagdx` / `jaggl` / `jaclib` / `jagtheora` / `jagex3` stubs from `refs/2011scape-client`. |
-| `ios/` | MobiVM/RoboVM 2.3.25 project. Copies Android Java, overlays iOS-only files. |
-| `ios/src/main/java` | iOS host + iOS `voidawt` that cannot compile on Android (`Graphics`, `Font`, `Toolkit`, `AwtHost`). |
-| `ios/tools/robovm-gradle-plugin-2.3.25-patched.jar` | Required compiler plugin (see [RoboVM patches](#robovm-patches)). |
+| `ios/` | MobiVM/RoboVM 2.3.25 project. Copies Android Java, overlays iOS/tvOS-only files. |
+| `ios/src/main/java` | iOS/tvOS host + `voidawt` that cannot compile on Android (`Graphics`, `Font`, `Toolkit`, `AwtHost`). |
+| `ios/robovm-tvos.xml` / `Info-tvos.plist.xml` | Apple TV flavor (`-Pvoid.platform=tvos`, bundle `world.gregs.voidosrs.tvos`). |
+| `ios/data/Assets.xcassets/App Icon & Top Shelf Image.brandassets/` | tvOS layered App Icon + Top Shelf wallpaper (injected post-build). |
+| `ios/assets-src/` | Canonical icon / Top Shelf source PNGs for regeneration. |
+| `ios/tools/robovm-gradle-plugin-2.3.25-patched.jar` | Required compiler plugin (see [RoboVM patches](#robovm-patches)); includes AppleTVOS SDK selection. |
 
 Do **not** edit `android/app/build/generated` or `ios/build/generated`. They are rewrite output.
 
@@ -280,7 +283,7 @@ CS2 compares requested window mode to `Class348_Sub42_Sub12.method3229()`. Lying
 
 5. **Gradle JDK transform flake** (`IllegalArgumentException: …/jdkImage`): `./gradlew --stop` and delete the bad `~/.gradle/caches/.../transforms/...` entry, retry.
 
-### 8. iOS host
+### 8. iOS / tvOS host
 
 RoboVM **AOT-compiles Java 8** to an arm64 Simulator/device binary (MobiVM 2.3.25).
 
@@ -293,6 +296,15 @@ RoboVM **AOT-compiles Java 8** to an arm64 Simulator/device binary (MobiVM 2.3.2
 - Landscape only; cache under Documents (`user.home`).
 - Simulator: `iosSkipSigning = true`. Physical iPad: signing + `devicectl` (see below).
 
+**tvOS flavor** (`make tvos-device` / `tvos-sim`):
+
+- Same Java host; `TvHost.isTvOS()` gates focus / HUD / remote behavior.
+- Config: `robovm-tvos.xml`, `Info-tvos.plist.xml`, bundle `world.gregs.voidosrs.tvos`, `UIDeviceFamily` 3.
+- Input: DualShock/`GCController` + Siri Remote `GCMicroGamepad`; gameplay keeps `controllerUserInteractionEnabled=false` so UIKit does not steal Select.
+- **App Icon + Top Shelf**: brandassets under `Assets.xcassets/App Icon & Top Shelf Image.brandassets/` (layered icon + 1920×720 / 2320×720 wallpaper). RoboVM actool is iPhone-only, so `inject-tvos-icons.sh` recompiles for `appletvos`, drops `Assets.car` into the `.app`, merges `CFBundleIcons` / `TVTopShelfImage`, then the device script re-signs.
+- Source art: `ios/assets-src/Icon-tv-source.png`, `ios/assets-src/topshelf-lumbridge-battle.png`.
+- No USB reverse — Apple TV reaches the game server over LAN.
+
 **JDK must be arm64** (`uname` / `os.arch = aarch64`). An x86_64 Homebrew JDK makes RoboVM look for `x86_64-simulator` and fail on modern iOS runtimes.
 
 ```bash
@@ -302,6 +314,9 @@ cd void-client && make ios
 
 # Physical iPad (sign + install + launch)
 cd void-client && make ios-device
+# Physical Apple TV (AppleTVOS.sdk + sign + Top Shelf inject + install + launch)
+cd void-client && make tvos-device
+# or: bash .cursor/skills/run-mobile-device/scripts/tvos-device.sh
 # or: bash .cursor/skills/run-mobile-device/scripts/ios-device.sh
 ```
 
@@ -322,7 +337,8 @@ Stock 2.3.25 cannot AOT this client:
 2. **Invokedynamic transformer**: the client is Java 8 (no bootstrap methods). The plugin’s indy pass is a no-op in the patched jar.
 3. **Soot `Typing.minimize`**: obfuscated methods (e.g. `Class66`, `Class237_Sub1`) explode the typing worklist (`O(n²)` ancestor checks). The patched plugin **returns immediately** from `soot.jimple.toolkits.typing.fast.Typing.minimize`. Without that, AOT never finishes.
 4. **`DeviceCtl` JSON overflow**: `devicectl` emits unsigned 64-bit ints (e.g. `cpuType.subtype` = `18446744071562067970`) that `json-simple` cannot parse as `Long`. Patched `DeviceCtl` quotes those literals before parsing. Source + reapply: `ios/tools/patches/` (`apply-devicectl-json-fix.sh`).
-5. **Device deploy uses `robovmInstall`**: `ios-device.sh` deletes any prior `Void.app`, builds a signed flat bundle in `build/robovm/`, re-wraps into a fresh `Void.app`, then `devicectl` installs/launches. Reusing an old wrap installs a stale binary. Avoid `launchIOSDevice` (`--console` hangs).
+5. **Device deploy uses `robovmInstall`**: `ios-device.sh` / `tvos-device.sh` delete any prior `Void.app`, build a signed flat bundle in `build/robovm/`, re-wrap into a fresh `Void.app`, then `devicectl` installs/launches. Reusing an old wrap installs a stale binary. Avoid `launchIOSDevice` (`--console` hangs).
+6. **AppleTVOS SDK selection**: patched `IOSTarget` / `SDK` honor `-Drobovm.iosPlatform=AppleTVOS` (and simulator `TVOSSIMULATOR`). Re-apply with `python3 ios/tools/patches/apply_tvos_robovm_patch.py` after regenerating the jar.
 
 The fat jar is `ios/tools/robovm-gradle-plugin-2.3.25-patched.jar` (`build.gradle` `classpath files(...)`). Do not swap back to Maven `com.mobidevelop.robovm:robovm-gradle-plugin` without re-applying those patches.
 
@@ -368,6 +384,7 @@ The fat jar is `ios/tools/robovm-gradle-plugin-2.3.25-patched.jar` (`build.gradl
 | Fix chatbox behind keyboard | `MobileKeyboard.liftPx` + `setKeyboardInset` (not canvas pan) |
 | Fix server IP / probe | `ServerPrefs` + host picker / `pickReachableServer` |
 | Deploy physical iPad | `make ios-device` / `run-mobile-device` iOS script |
+| Deploy physical Apple TV | `make tvos-device` / `run-mobile-device` tvOS script |
 | Deploy Android USB | `run-mobile-device` Android script / `make android` |
 | Fix frame not showing | `Graphics`/`Canvas` present + host `Presenter` |
 | Fix letterbox after resume / IME | Android `AwtHost` pin FS size + present crop |

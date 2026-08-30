@@ -19,6 +19,12 @@ import java.util.ArrayList;
 public final class ServerPrefs {
     public static final int MAX_HISTORY = 5;
 
+    /**
+     * Process-local newest host — tvOS RoboVM can hit {@code EPERM} writing under
+     * {@code user.home}; boot still needs a host after Accept / seed.
+     */
+    private static volatile String sessionHost;
+
     private ServerPrefs() {
     }
 
@@ -30,17 +36,23 @@ public final class ServerPrefs {
 
     /** Most recently used host, or {@code null} if none saved. */
     public static String load() {
+        if (sessionHost != null) {
+            return sessionHost;
+        }
         String[] all = loadAll();
         return all.length > 0 ? all[0] : null;
     }
 
     /** History newest-first, already normalized and de-duplicated. */
     public static String[] loadAll() {
-        File f = file();
-        if (!f.isFile()) {
-            return new String[0];
-        }
         ArrayList<String> out = new ArrayList<String>();
+        if (sessionHost != null) {
+            out.add(sessionHost);
+        }
+        File f = file();
+        if (!f.exists() || !f.canRead()) {
+            return out.toArray(new String[out.size()]);
+        }
         BufferedReader in = null;
         try {
             in = new BufferedReader(new FileReader(f));
@@ -69,19 +81,36 @@ public final class ServerPrefs {
         if (n == null) {
             return;
         }
+        sessionHost = n;
         ArrayList<String> out = new ArrayList<String>();
         out.add(n);
-        String[] old = loadAll();
-        for (int i = 0; i < old.length && out.size() < MAX_HISTORY; i++) {
-            if (!n.equals(old[i])) {
-                out.add(old[i]);
+        // Disk history only (avoid duplicating sessionHost via loadAll).
+        File f = file();
+        if (f.exists() && f.canRead()) {
+            BufferedReader in = null;
+            try {
+                in = new BufferedReader(new FileReader(f));
+                String line;
+                while ((line = in.readLine()) != null && out.size() < MAX_HISTORY) {
+                    String old = normalize(line);
+                    if (old != null && !n.equals(old) && !out.contains(old)) {
+                        out.add(old);
+                    }
+                }
+            } catch (Throwable ignored) {
+            } finally {
+                if (in != null) {
+                    try {
+                        in.close();
+                    } catch (Throwable ignored) {
+                    }
+                }
             }
         }
         FileWriter w = null;
         try {
-            File f = file();
             File parent = f.getParentFile();
-            if (parent != null) {
+            if (parent != null && !parent.exists()) {
                 parent.mkdirs();
             }
             w = new FileWriter(f);
@@ -89,7 +118,9 @@ public final class ServerPrefs {
                 w.write(out.get(i));
                 w.write('\n');
             }
+            w.flush();
         } catch (Throwable t) {
+            System.out.println("void-osrs ServerPrefs.save fail: " + t + " path=" + f.getAbsolutePath());
             t.printStackTrace();
         } finally {
             if (w != null) {

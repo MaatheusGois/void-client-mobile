@@ -1,14 +1,10 @@
 package world.gregs.voidosrs.ios;
 
 import org.robovm.apple.coregraphics.CGBitmapContext;
-import org.robovm.apple.coregraphics.CGBitmapInfo;
-import org.robovm.apple.coregraphics.CGColorRenderingIntent;
 import org.robovm.apple.coregraphics.CGColorSpace;
-import org.robovm.apple.coregraphics.CGDataProvider;
 import org.robovm.apple.coregraphics.CGImage;
 import org.robovm.apple.coregraphics.CGImageAlphaInfo;
 import org.robovm.apple.coregraphics.CGRect;
-import org.robovm.apple.foundation.NSData;
 import org.robovm.apple.uikit.UIImage;
 
 /**
@@ -17,6 +13,9 @@ import org.robovm.apple.uikit.UIImage;
  * {@link #toImage} is the present path ({@code AwtHost} → {@code GameView}).
  * {@link #copy} decodes PNGs for {@code voidawt.Toolkit} into the same ARGB layout
  * the 634 client expects.
+ * <p>
+ * Prefer {@link CGBitmapContext} over {@code NSData}+{@code CGDataProvider}: the
+ * provider path races RoboVM GC on device (black frames) while Simulator still looks fine.
  */
 public final class ArgbBridge {
     private ArgbBridge() {
@@ -27,6 +26,9 @@ public final class ArgbBridge {
      * renderer’s “clear” blacks don’t punch holes through the UIImageView.
      */
     public static UIImage toImage(int[] argb, int w, int h) {
+        if (argb == null || w <= 0 || h <= 0) {
+            return null;
+        }
         byte[] rgba = new byte[w * h * 4];
         int n = Math.min(argb.length, w * h);
         for (int i = 0; i < n; i++) {
@@ -35,17 +37,24 @@ public final class ArgbBridge {
             if (a == 0) {
                 a = 0xff;
             }
-            rgba[i * 4] = (byte) ((p >> 16) & 0xff);
-            rgba[i * 4 + 1] = (byte) ((p >> 8) & 0xff);
-            rgba[i * 4 + 2] = (byte) (p & 0xff);
-            rgba[i * 4 + 3] = (byte) a;
+            int r = (p >> 16) & 0xff;
+            int g = (p >> 8) & 0xff;
+            int b = p & 0xff;
+            // PremultipliedLast — same layout as {@link #copy}.
+            int o = i * 4;
+            rgba[o] = (byte) ((r * a) / 255);
+            rgba[o + 1] = (byte) ((g * a) / 255);
+            rgba[o + 2] = (byte) ((b * a) / 255);
+            rgba[o + 3] = (byte) a;
         }
-        NSData data = new NSData(rgba);
-        CGDataProvider provider = CGDataProvider.create(data);
         CGColorSpace space = CGColorSpace.createDeviceRGB();
-        CGBitmapInfo info = new CGBitmapInfo(CGImageAlphaInfo.Last.value() | CGBitmapInfo.ByteOrder32Big.value());
-        CGImage cg = CGImage.create(w, h, 8, 32, w * 4L, space, info, provider, null, false, CGColorRenderingIntent.Default);
-        return new UIImage(cg);
+        CGBitmapContext ctx = CGBitmapContext.create(
+                rgba, w, h, 8, w * 4L, space, CGImageAlphaInfo.PremultipliedLast);
+        if (ctx == null) {
+            return null;
+        }
+        CGImage cg = ctx.toImage();
+        return cg == null ? null : new UIImage(cg);
     }
 
     /** {@link UIImage} / PNG decode → opaque ARGB ints for {@code Toolkit.createImage}. */

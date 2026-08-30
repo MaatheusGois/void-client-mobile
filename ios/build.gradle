@@ -95,9 +95,26 @@ tasks.named('compileJava') {
     options.encoding = 'UTF-8'
 }
 
+// void.platform=ios (default) | tvos — Apple TV uses AppleTVOS.sdk via patched RoboVM.
+def voidPlatform = (findProperty('void.platform') ?: 'ios').toString()
+def isTvOS = voidPlatform.equalsIgnoreCase('tvos')
+if (isTvOS) {
+    // Must be set before any RoboVM task resolves SDKs (same Gradle JVM).
+    System.setProperty('robovm.iosPlatform', 'AppleTVOS')
+    // Runtime TvHost.isTvOS() also checks this when idiom isn't available yet.
+    System.setProperty('void.platform', 'tvos')
+    System.out.println('void-osrs: RoboVM platform=AppleTVOS (tvOS flavor)')
+}
+
 robovm {
     // Simulator can skip signing; device needs a development identity + profile.
     iosSkipSigning = (findProperty('robovm.iosSkipSigning') ?: 'true').toString().toBoolean()
+    if (isTvOS) {
+        // Absolute paths — RoboVM resolves relative configFile against JVM CWD
+        // (Gradle daemon home), not the project dir.
+        configFile = file('robovm-tvos.xml').absolutePath
+        propertiesFile = file('robovm-tvos.properties').absolutePath
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {

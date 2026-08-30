@@ -1,0 +1,177 @@
+# Concrete findings (session discovery)
+
+This file is the live **research log** — concrete evidence discovered during
+the deobfuscation discovery pass. Use it as the input for lote planning.
+
+Last updated: 2026-08-29 (this session).
+
+---
+
+## 1. lote 50 — `method3` island (CONFIRMED)
+
+**Interface:** `client/toolkit/base/d.java` (single-letter JODE name — deep obfuscation)
+**Implementer:** `client/components/Component283.java` (formerly `Class244`)
+**Field type on the toolkit:** `aD####` (e.g. `aD4579`, `aD5684`)
+
+**Method map (the interface has 6 methods, all in low-numbered `method1`–`method6`):**
+
+| Interface method | Signature | Returns | Inferred name | Evidence |
+|---|---|---|---|---|
+| `method1` | `(int, float, boolean, int, int, int)` | `float[]` | `getVertices` | pattern `0.7F` = scale, returns vertex array |
+| `method2` | `(boolean)` | `int` | `getModelCount` | returns `anInt4625` (constructor-loaded count) |
+| `method3` | `(int id, int magic)` | `Component319` | `getModel` | 67 call-sites, all `id & 0xffff`, magic arg always `-6662` |
+| `method4` | `(int, int)` | `boolean` | `isModelLoaded` | gate check before fetching model |
+| `method5` | `(boolean, int, float, int, int, int)` | `int[]` | `getTriangles` | texture/material lookup |
+| `method6` | `(int, int, float, int, boolean, int)` | `int[]` | `getIndices` | vertex index list |
+
+**Component319 (formerly `Class12`)** is the **Model / Renderable** struct.
+Fields `aBoolean207` (loaded), `aBoolean209` (visible?), etc.
+
+**Reflection:** zero — `method3` family is not touched by `AwtHost` or `ServerPrefs`. Safe rename without host sync.
+
+**Suggested full rename (one lote):**
+- `d` → `ModelProvider`
+- `Component283` → `ModelStore` (or keep `ModelProviderImpl`)
+- `Component319` → `Model`
+- `aD####` → `modelProvider`
+- `method1`–`method6` as above
+
+**Lote size:** ~80 method refs + ~15 field refs + 1 class rename.
+
+---
+
+## 2. lote 51 — CS2 interpreter stacks (CONFIRMED)
+
+`ClientScriptExecutor.java` (formerly `Class66`) is the **CS2 (clientscript)
+interpreter** with three stacks. The `anInt1170`/`anInt1173`/`anInt1154`
+cluster is the **stack-machine state** of the interpreter.
+
+| Field | Stack it points into | Inferred name | Refs |
+|---|---|---|---:|
+| `anIntArray1149` (int[1000]) | int stack (data) | `intStack` | — |
+| `aStringArray1152` (String[1000]) | string stack (data) | `stringStack` | — |
+| `aClass184Array1168` (Component357[]) | call frames | `callFrames` | — |
+| **`anInt1173`** | `intStack` | **`intStackPointer`** | **1 238** |
+| **`anInt1170`** | `stringStack` | **`stringStackPointer`** | **208** |
+| **`anInt1154`** | `callFrames` | **`callFramePointer`** | (low refs, but load-bearing) |
+
+**Evidence:** line 4920 `anInt1173 = 0;` at the start of `execute()` (reset
+all three). Lines 4907, 4909, 4933, 4943: textbook `anIntArray1149[anInt1173++]`
+(push) and `anInt1173 -= 2` (pop 2) patterns.
+
+**Reflection:** zero. Safe to rename.
+
+**Lote size:** ~1 240 + 200 + small = ~1 450 ref renames. Single file.
+
+**Bonus:** in the same lote, also rename the stack arrays:
+`anIntArray1149` → `intStack`, `aStringArray1152` → `stringStack`,
+`aClass184Array1168` → `callFrames`, and the dispatcher fields
+(`aStringArray1155`, `aStringArray1176`, `anIntArray1175`).
+
+---
+
+## 3. Top method#### resolved (5 of top-6)
+
+| Token | Defining class | Inferred name | Evidence |
+|---|---|---|---|
+| `method3429` (149 refs) | `NodeSub51` (Preferences) | `applyPreferences` | calls `method1718` (rebuild) + `method3426` (commit) |
+| `method3771` (104 refs) | `GlToolkitSub2` | `setTextureUnit` | `glEnable/glDisable/glBindTexture` body, takes `AbstractGlTexture` |
+| `method2436` (104 refs) | `DisplayModeManagerContainer58` (2 defs) | `getSkillLevel` | returns `anInt10280`; magic `anInt10207 == -32768` = level base |
+| `method3243` (103 refs) | `HashNodeSub14` | `registerParticle` | adds `ParticleSystem` to `aClass262_9201` list |
+| `method2148` (100 refs) | `ParticleShader` | `createParticleSystem` | factory: `obtainParticleSystem` + packet encoding, logs "Encode packet" |
+
+**Reflection:** zero for all five. All safe renames.
+
+---
+
+## 4. `SpriteSub3` family — rasterizer (NEW ISLAND)
+
+`client/sprites/SpriteSub3.java` (formerly `Class105_Sub3`) extends
+`Component24` (Sprite base). **This is the CPU rasterizer for sprites** —
+the biggest hot path in 2D rendering.
+
+| Field | Inferred name | Evidence |
+|---|---|---|
+| `anInt8477` (319 refs) | `spriteAlpha` | `i_35_ >>> 24` (extract alpha from ARGB), `== 255` (opaque gate) |
+| `anInt8471` (235 refs) | `spriteWidth` | instance field set from `i` arg; used in stride calc |
+| `anInt8450`, `anInt8481` | `scanlineStart*` | `(f - f) * 4096F * anInt8470 / f` (fixed-point) |
+| `anInt8451`, `anInt8453` | `scanlineAdvance*` | `+= anInt8453` in pixel-stepping loops |
+| `aHa_Sub1_8460` | `toolkit` | `GlToolkitSub1` reference |
+
+The whole **84xx range** is `SpriteSub3`'s fields. The **sub-files**
+(`SpriteSub3Sub2`, `SpriteSub3Sub3`, `SpriteCapture`) inherit them all.
+~200+ anInt tokens can be renamed in a single targeted lote, with high
+confidence because the role is well-known (rasterizer scanline state).
+
+**Reflection:** none directly. (Note: `GlToolkitSub2.anInt7666` is
+reflective and is the toolkit's canvasHeight, not a SpriteSub3 field.)
+
+---
+
+## 5. Reflection bridge — 10 fields still obfuscated
+
+The reflection gate currently tracks 25 members. **10 are still in
+`anInt####` form** — these are the display-state mirrors that the mobile
+host writes when the canvas resizes (via `ScreenModeManager`).
+
+| Field | Role | Suggested name | Refs |
+|---|---|---|---:|
+| `SocketConnector.anInt3473` | **source** — canvas width | `canvasWidth` | low (just a holder) |
+| `NpcNode.anInt6857` | **source** — canvas height | `canvasHeight` | low |
+| `Component236.anInt4017` | mirror → `SocketConnector.anInt3473` | `canvasWidth` | low |
+| `DisplayModeManagerContainer147.anInt4167` | reset to 0 between draw calls | `spriteBatchReset` (?) | low |
+| `DisplayModeManagerContainer23.anInt1524` | init `= 765` → `= canvasWidth` | `defaultDrawDistance` (or `canvasWidth`) | low |
+| `DisplayModeManagerContainer295.anInt5911` | mirror → `canvasWidth` | `canvasWidth` | low |
+| `GlToolkitSub2.anInt7666` | mirror → `canvasHeight` | `canvasHeight` | low |
+| `InputHandler.anInt4276` | mirror → `canvasWidth` | `canvasWidth` | low |
+| `NodeSub48.anInt7129` | reset to 0 between frames | (per-frame reset) | low |
+| `PacketReader.anInt10432` | mirror → `canvasHeight` | `canvasHeight` | low |
+
+**Pattern:** `ScreenModeManager.applyMode()` writes `container.getSize().width`
+→ `SocketConnector.anInt3473`, and that cascades into all the other holders.
+`NpcNode.anInt6857` similarly from `height`. Then `OpenGlShader` /
+`SpriteAtlasShader` copy the values into per-frame fields that get reset.
+
+**Important:** when these get renamed, the **mobile host** (which currently
+sends the obfuscated string literals) must move to the new names. The
+reflection gate (`check_reflection.py`) will catch any miss.
+
+The `EXPECTED` table in the script will need updating as the renames land:
+replace `(field, "SocketConnector", "anInt3473")` with
+`(field, "SocketConnector", "canvasWidth")`, etc.
+
+---
+
+## 6. `Component192` — already half-named utility (RECORDED)
+
+`Component192.java` (formerly `Class316`) is the **menu/console/bezier
+utility** class. Header comment from prior lote already names:
+
+- `menuTip` (left-click tip)
+- `openDevConsole`
+- `drawBezier`
+- `formatMenuEntry`
+- `lookup` (open-addressed hash)
+- `clearStatics`, `clearSoftCache`
+
+The field `aClass348_Sub51_3959` is a `NodeSub51` (Preferences) reference —
+rename to `preferences`. `NodeSub51` itself (formerly `Class348_Sub51`)
+holds the 30+ `aClass239_SubN_NNNN` sub-preference fields.
+
+---
+
+## 7. Unresolved tokens (need more work)
+
+These remain TBD from the top-tokens list:
+
+- `method3494`, `method3493`, `method3738`, `method3850`, `method3850`
+  (high call-site counts, not yet investigated)
+- `method3400`, `method3399` (likely paired)
+- `anInt3138` (174 refs, 3xxx range — probably particle count or scan counter)
+- `anInt4592`, `anInt4588` (4xxx range, possibly NPC list / entity array)
+- `anInt9139`, `anInt8983` (9xxx range — usually widgets / interfaces)
+- `anInt1678` (124 refs, in `Component8` — read from `aHa_Sub1_8460.anInt7477`
+  which is the toolkit's **canvasWidth** constant; rename to `canvasWidth`)
+
+**Next session** can pick any of these. Recommended order based on fan-out:
+`anInt3138` → `anInt4592` → `method3493/3494` (likely paired).

@@ -13,13 +13,16 @@ ANDROID_ACT ?= $(ANDROID_PKG)/.MainActivity
 IOS_PKG     ?= world.gregs.voidosrs.ios
 IOS_DEVICE  ?= iPhone 17 Pro
 IOS_ARCH    ?= arm64
+TVOS_PKG    ?= world.gregs.voidosrs.tvos
+TVOS_DEVICE ?= Apple TV
 
 .PHONY: help \
 	desktop desktop-jar desktop-run \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
 	android-apk \
-	ios ios-sim ios-build ios-relaunch ios-device ios-clean
+	ios ios-sim ios-build ios-relaunch ios-device ios-clean \
+	tvos tvos-sim tvos-device tvos-clean
 
 help:
 	@echo "void-client"
@@ -48,6 +51,10 @@ help:
 	@echo "  make ios-relaunch     simctl install + launch"
 	@echo "  make ios-device       physical iPad (sign + devicectl)"
 	@echo "  make ios-clean        clean"
+	@echo "tvOS / Apple TV"
+	@echo "  make tvos / tvos-sim  Apple TV Simulator (build + simctl)"
+	@echo "  make tvos-device      physical Apple TV (sign + devicectl)"
+	@echo "  make tvos-clean       clean (same ios/ module)"
 
 check-java17:
 	@test -x "$(JAVA_17)/bin/java" || (echo "missing arm64 JDK 17 at JAVA_17=$(JAVA_17)"; exit 1)
@@ -133,6 +140,14 @@ ios-relaunch:
 
 ios-device:
 	bash .cursor/skills/run-mobile-device/scripts/ios-device.sh
+
+tvos tvos-sim: check-java17
+	bash .cursor/skills/run-mobile-device/scripts/tvos-sim.sh
+
+tvos-device:
+	bash .cursor/skills/run-mobile-device/scripts/tvos-device.sh
+
+tvos-clean: ios-clean
 
 ios-clean: check-java17
 	cd $(IOS) && JAVA_HOME="$(JAVA_17)" PATH="$(JAVA_17)/bin:$$PATH" ./gradlew --no-daemon clean
