@@ -14,6 +14,7 @@ import argparse
 import html
 import re
 import socketserver
+import struct
 from dataclasses import dataclass
 from pathlib import Path
 from string import Template
@@ -44,6 +45,16 @@ class Component:
     def field_count(self) -> int:
         """Approximate declarations for quick triage, not a Java parser."""
         return sum(1 for line in self.source.splitlines() if ";" in line and "(" not in line)
+
+
+@dataclass(frozen=True)
+class BufferView:
+    path: Path
+    data: bytes
+
+    @property
+    def name(self) -> str:
+        return self.path.name
 
 
 def components() -> dict[str, Component]:
@@ -85,6 +96,40 @@ def image_svg(component: Component) -> str:
 </style></svg>"""
 
 
+def buffer_svg(buffer: BufferView) -> str:
+    """Render a bounded hex/ASCII view without interpreting game cache formats."""
+    visible = buffer.data[:4096]
+    rows = []
+    for offset in range(0, len(visible), 16):
+        chunk = visible[offset:offset + 16]
+        hex_part = " ".join(f"{value:02x}" for value in chunk).ljust(47)
+        ascii_part = "".join(chr(value) if 32 <= value < 127 else "." for value in chunk)
+        rows.append(
+            f'<text x="32" y="{124 + len(rows) * 19}" class="code">'
+            f'<tspan class="number">{offset:04x}</tspan> {hex_part}  {html.escape(ascii_part)}</text>'
+        )
+    height = max(260, 124 + len(rows) * 19 + 34)
+    float_notes = []
+    if len(buffer.data) >= 4:
+        little = struct.unpack("<f", buffer.data[:4])[0]
+        big = struct.unpack(">f", buffer.data[:4])[0]
+        float_notes.append(f"first 4 bytes as float: LE {little:.6g} · BE {big:.6g}")
+    note = " · ".join(float_notes) or "fewer than 4 bytes; no float preview"
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="{height}" viewBox="0 0 1500 {height}">
+<rect width="100%" height="100%" fill="#101827"/>
+<rect width="100%" height="84" fill="#17243a"/>
+<text x="32" y="36" class="title">{html.escape(buffer.name)}</text>
+<text x="32" y="62" class="meta">{len(buffer.data)} bytes · showing {len(visible)} · {html.escape(note)}</text>
+<text x="32" y="98" class="hint">Void Component Lab · local buffer view · hex + ASCII</text>
+{"".join(rows)}
+<style>
+.title {{ font: 700 28px sans-serif; fill: #f8fafc }}
+.meta,.hint {{ font: 15px sans-serif; fill: #9fb2cc }}
+.code {{ font: 14px monospace; fill: #d8e2f0; white-space: pre }}
+.number {{ fill: #7186a5 }}
+</style></svg>"""
+
+
 PAGE = Template("""<!doctype html>
 <meta charset="utf-8">
 <title>Void Component Lab</title>
@@ -107,8 +152,9 @@ pre{padding:16px;overflow:auto;background:#101827;border:1px solid #293952;font:
 
 
 class Handler(BaseHTTPRequestHandler):
-    def __init__(self, request, client_address, server, catalog: dict[str, Component]):
+    def __init__(self, request, client_address, server, catalog: dict[str, Component], buffer: BufferView | None):
         self.catalog = catalog
+        self.buffer = buffer
         super().__init__(request, client_address, server)
 
     def reply(self, body: str, content_type: str = "text/html; charset=utf-8", status: int = 200) -> None:
@@ -125,6 +171,8 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/":
             selected = next(iter(self.catalog), None)
             self.show(selected)
+        elif path == "/buffer.svg":
+            self.buffer_card()
         elif path.startswith("/component/") and path.endswith(".svg"):
             self.svg(path[len("/component/"):-4])
         elif path.startswith("/component/"):
@@ -151,6 +199,8 @@ class Handler(BaseHTTPRequestHandler):
                        f'<p><a class="button" href="/component/{html.escape(component.name)}.svg">'
                        "Open image card</a> · right-click it to save for AI analysis</p>"
                        f"<pre>{html.escape(component.source)}</pre>")
+        if self.buffer is not None:
+            content += '<p><a class="button" href="/buffer.svg">Open local buffer card</a></p>'
         self.reply(PAGE.substitute(NAV=nav, CONTENT=content))
 
     def svg(self, name: str) -> None:
@@ -162,6 +212,12 @@ class Handler(BaseHTTPRequestHandler):
             self.reply("not found", "text/plain; charset=utf-8", 404)
         else:
             self.reply(image_svg(component), "image/svg+xml; charset=utf-8")
+
+    def buffer_card(self) -> None:
+        if self.buffer is None:
+            self.reply("no buffer supplied; use --buffer PATH", "text/plain; charset=utf-8", 404)
+        else:
+            self.reply(buffer_svg(self.buffer), "image/svg+xml; charset=utf-8")
 
     def log_message(self, *_: object) -> None:
         pass
@@ -178,13 +234,22 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Browse opaque client components and make AI-ready SVG cards.")
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--export-dir", type=Path, help="write one SVG card per component and exit")
+    parser.add_argument("--buffer", type=Path, help="read a local binary buffer and expose /buffer.svg")
+    parser.add_argument("--export-buffer", type=Path, help="write the buffer SVG card to this path and exit")
     args = parser.parse_args()
     catalog = components()
+    buffer = BufferView(args.buffer, args.buffer.read_bytes()) if args.buffer else None
     if args.export_dir:
         export_cards(catalog, args.export_dir)
         return
+    if args.export_buffer:
+        if buffer is None:
+            parser.error("--export-buffer requires --buffer")
+        args.export_buffer.write_text(buffer_svg(buffer), encoding="utf-8")
+        print(f"exported buffer card to {args.export_buffer}")
+        return
     def handler(request, address, server):
-        return Handler(request, address, server, catalog)
+        return Handler(request, address, server, catalog, buffer)
 
     with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as server:
         server.daemon_threads = True

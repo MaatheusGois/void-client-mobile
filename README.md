@@ -159,10 +159,14 @@ experiments cannot corrupt a live game session.
 ```bash
 make component-lab                         # open http://127.0.0.1:8765
 make component-lab-images OUT=/tmp/cards   # export one card per component
+python3 tools/component_lab.py --buffer /absolute/path/data.bin
 ```
 
 Select a class in the browser, inspect its source and open its image card.
-SVG files remain text-based and can be archived alongside deobfuscation notes.
+With `--buffer`, open `/buffer.svg` to inspect a local binary buffer as bounded
+hex/ASCII plus little-endian and big-endian float previews. SVG files remain
+text-based and can be archived alongside deobfuscation notes. The workflow is
+also available as the `void-client-component-lab` skill.
 
 ---
 
