@@ -29,7 +29,7 @@ final class WorldMapTeleport {
         }
         DisplayModeManagerContainer368.addMenuEntry(
                 false, type.aString565, y, (byte) -93, false, x, -1, true,
-                OPCODE_TELEPORT, plane, "Teleport", 0L, -1);
+                OPCODE_TELEPORT, (long) plane, "Teleport", 0L, -1);
     }
 
     static boolean handle(MenuEntry entry) {
