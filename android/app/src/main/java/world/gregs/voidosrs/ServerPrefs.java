@@ -45,7 +45,6 @@ public final class ServerPrefs {
      * mirror here avoids importing a default-package class into the host.
      */
     public static int gamePort() {
-        applyClientProperties();
         int fallback = LEGACY_PORT;
         try {
             if ("667".equals(System.getProperty("void.protocol"))) {

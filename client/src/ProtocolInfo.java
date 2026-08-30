@@ -93,18 +93,9 @@ public final class ProtocolInfo {
             base = "runescape";
         }
         int suffix = base.lastIndexOf('-');
-        if (suffix >= 0 && suffix + 1 < base.length()) {
-            boolean numeric = true;
-            for (int i = suffix + 1; i < base.length(); i++) {
-                char c = base.charAt(i);
-                if (c < '0' || c > '9') {
-                    numeric = false;
-                    break;
-                }
-            }
-            if (numeric) {
-                base = base.substring(0, suffix);
-            }
+        if (suffix >= 0 && (base.endsWith("-" + REVISION_634)
+                || base.endsWith("-" + REVISION_667))) {
+            base = base.substring(0, suffix);
         }
         return base + "-" + revision();
     }

@@ -69,6 +69,7 @@ public class Loader extends Applet {
                     break;
             }
         }
+        // A protocol flag may change the default endpoint; explicit --port always wins.
         if (!portWasProvided) {
             port = ProtocolInfo.port();
         }

@@ -1139,6 +1139,7 @@ public class MainActivity extends Activity {
         if (server == null) {
             return;
         }
+        ServerPrefs.applyClientProperties();
         final int port = configuredServerPort();
         clientStarted = true;
         AwtHost.setDisplaySize(width, height);
