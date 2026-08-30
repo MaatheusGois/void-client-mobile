@@ -2391,78 +2391,78 @@ final class ClientScriptExecutor {
             } else if (i < 7400) {
                 if (i == 7301) {
                     int i_226_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1714(3, i_226_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.getValue(3, i_226_);
                     return;
                 }
                 if (i == 7302) {
                     int i_227_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1714(3, i_227_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.getValue(3, i_227_);
                     return;
                 }
                 if (i == 7303) {
                     int i_228_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1714(3, i_228_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.getValue(3, i_228_);
                     return;
                 }
                 if (i == 7304) {
                     int i_229_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1714(3, i_229_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.getValue(3, i_229_);
                     return;
                 }
                 if (i == 7305) {
                     int i_230_ = intStack[--intStackPointer];
                     if (NodeSub8.toolkit.method3699()) {
-                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1714(3, i_230_);
+                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.getValue(3, i_230_);
                         return;
                     } else intStack[intStackPointer++] = 3;
                     return;
                 }
                 if (i == 7306) {
                     int i_231_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub15_7224.method1714(3, i_231_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub15_7224.getValue(3, i_231_);
                     return;
                 }
                 if (i == 7307) {
                     int i_232_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1714(3, i_232_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.getValue(3, i_232_);
                     return;
                 }
                 if (i == 7308) {
                     int i_233_ = intStack[--intStackPointer];
                     if (NodeSub8.toolkit.method3627()) {
-                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1714(3, i_233_);
+                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.getValue(3, i_233_);
                         return;
                     } else intStack[intStackPointer++] = 3;
                     return;
                 }
                 if (i == 7309) {
                     int i_234_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub9_7256.method1714(3, i_234_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub9_7256.getValue(3, i_234_);
                     return;
                 }
                 if (i == 7310) {
                     int i_235_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1714(3, i_235_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.getValue(3, i_235_);
                     return;
                 }
                 if (i == 7311) {
                     int i_236_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.method1714(3, i_236_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.getValue(3, i_236_);
                     return;
                 }
                 if (i == 7312) {
                     int i_237_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub16_7247.method1714(3, i_237_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub16_7247.getValue(3, i_237_);
                     return;
                 }
                 if (i == 7313) {
                     int i_238_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1714(3, i_238_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.getValue(3, i_238_);
                     return;
                 }
                 if (i == 7314) {
                     int i_239_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.method1714(3, i_239_);
+                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.getValue(3, i_239_);
                     return;
                 }
             }

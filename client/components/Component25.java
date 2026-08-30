@@ -49,18 +49,18 @@ final class Component25
         }
     }
 
-    final int method1714(int i, int i_5_) {
+    final int getValue(int i, int i_5_) {
         if (i != 3) anInt6012 = -22;
         anInt6014++;
         if (i_5_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(i ^ ~0x7e5e) == 1) return 1;
         return 2;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (bool != false) anInt6012 = 46;
         if (this.preferenceValue != 0 && this.preferences.aClass239_Sub9_7256.method1759(-32350) != 1) this.preferenceValue = 0;
         anInt6007++;
-        if (this.preferenceValue < 0 || this.preferenceValue > 1) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 1) this.preferenceValue = getDefaultValue(20014);
     }
 
     final int method1789(int i) {
@@ -73,7 +73,7 @@ final class Component25
         super(class348_sub51);
     }
 
-    final void method1712(int i, int i_6_) {
+    final void setValue(int i, int i_6_) {
         anInt6011++;
         int i_7_ = -19 / ((i - 82) / 35);
         this.preferenceValue = i_6_;
@@ -135,7 +135,7 @@ final class Component25
         } while (false);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) method1789(40);
         anInt6010++;
         return 1;

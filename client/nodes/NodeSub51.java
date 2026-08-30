@@ -268,7 +268,7 @@ final class NodeSub51
                 Field field = fields_5_[i_6_];
                 if ((aClass7273 != null ? aClass7273 : (aClass7273 = Component339.class)).isAssignableFrom(field.getType())) {
                     Component339 class239 = (Component339) field.get(this);
-                    class239.method1716(false);
+                    class239.validateValue(false);
                 }
             }
         } catch (IllegalAccessException illegalaccessexception) {
@@ -326,14 +326,14 @@ final class NodeSub51
     }
 
     /**
-     * Apply one preference option ({@code class239.method1718}) then commit
+     * Apply one preference option ({@code class239.applyValue}) then commit
      * ({@code method3426}). Called from UI / settings change paths.
      */
     final void applyPreference(byte i, Component339 class239, int i_7_) {
         try {
             anInt7239++;
             if (i != 74) method3425(-10);
-            class239.method1718(i_7_, 72);
+            class239.applyValue(i_7_, 72);
             method3426((byte) 36);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("dh.A(" + i + ',' + (class239 != null ? "{...}" : "null") + ',' + i_7_ + ')'));

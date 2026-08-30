@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer295
         }
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) method1749(null, null, false, 94, (byte) -39);
         anInt5914++;
         // Prefer fullscreen 800x600 on mobile (voidawt fakes exclusive FS).
@@ -124,13 +124,13 @@ final class DisplayModeManagerContainer295
         super(i, class348_sub51);
     }
 
-    final void method1712(int i, int i_7_) {
+    final void setValue(int i, int i_7_) {
         int i_8_ = -87 / ((i - 82) / 35);
         anInt5915++;
         this.preferenceValue = i_7_;
     }
 
-    final int method1714(int i, int i_9_) {
+    final int getValue(int i, int i_9_) {
         if (i != 3) canvasWidth = 95;
         anInt5923++;
         return 1;
@@ -170,9 +170,9 @@ final class DisplayModeManagerContainer295
         return class46.useOption;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5913++;
-        if (this.preferenceValue < 1 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 1 || this.preferenceValue > 3) this.preferenceValue = getDefaultValue(20014);
         if (bool != false) anIntArrayArray5921 = null;
     }
 

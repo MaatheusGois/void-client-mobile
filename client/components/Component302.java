@@ -30,7 +30,7 @@ final class Component302
         aClass251_6030 = null;
     }
 
-    final int method1714(int i, int i_1_) {
+    final int getValue(int i, int i_1_) {
         anInt6034++;
         if (i != 3) return -46;
         if (this.preferences.method3425(-62)) return 3;
@@ -38,7 +38,7 @@ final class Component302
         return 2;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) anIntArray6035 = null;
         anInt6029++;
         return 1;
@@ -50,11 +50,11 @@ final class Component302
         return this.preferenceValue;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt6036++;
         if (bool == false) {
             if (this.preferences.method3425(-94)) this.preferenceValue = 0;
-            if (this.preferenceValue < 0 && this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+            if (this.preferenceValue < 0 && this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
@@ -84,7 +84,7 @@ final class Component302
         anInt6038++;
     }
 
-    final void method1712(int i, int i_3_) {
+    final void setValue(int i, int i_3_) {
         this.preferenceValue = i_3_;
         anInt6032++;
         int i_4_ = 65 / ((82 - i) / 35);

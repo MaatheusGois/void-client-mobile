@@ -21,7 +21,7 @@ final class Component71
     static int anInt6068;
     static int anInt6069;
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6065++;
         if (i != 20014) return -81;
         return 1;
@@ -131,13 +131,13 @@ final class Component71
         }
     }
 
-    final void method1712(int i, int i_35_) {
+    final void setValue(int i, int i_35_) {
         this.preferenceValue = i_35_;
         anInt6059++;
         int i_36_ = -103 % ((i - 82) / 35);
     }
 
-    final int method1714(int i, int i_37_) {
+    final int getValue(int i, int i_37_) {
         if (i != 3) return 91;
         anInt6064++;
         if (this.preferences.method3425(i ^ ~0x4b)) return 3;
@@ -148,11 +148,11 @@ final class Component71
         super(class348_sub51);
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (this.preferences.method3425(-112)) this.preferenceValue = 0;
         anInt6057++;
         if (bool != false) aClass318_Sub1Array6066 = null;
-        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = getDefaultValue(20014);
     }
 
     Component71(int i, NodeSub51 class348_sub51) {

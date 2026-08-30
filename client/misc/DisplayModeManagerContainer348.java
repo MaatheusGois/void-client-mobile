@@ -18,13 +18,13 @@ final class DisplayModeManagerContainer348
     static int anInt5892;
     static int anInt5893;
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5892++;
         if (i != 20014) return 98;
         return 1;
     }
 
-    final void method1712(int i, int i_0_) {
+    final void setValue(int i, int i_0_) {
         this.preferenceValue = i_0_;
         int i_1_ = 57 / ((i - 82) / 35);
         anInt5887++;
@@ -97,15 +97,15 @@ final class DisplayModeManagerContainer348
         return (OutputStream_Sub1.aClass110_Sub1Array97[i + -DisplayModeManagerContainer343.anInt8731]);
     }
 
-    final int method1714(int i, int i_13_) {
+    final int getValue(int i, int i_13_) {
         if (i != 3) fps = -34;
         anInt5884++;
         return 1;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5888++;
-        if (bool != false) method1710(-110);
-        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
+        if (bool != false) getDefaultValue(-110);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = getDefaultValue(20014);
     }
 }

@@ -19,7 +19,7 @@ final class Component284
     static int anInt6153;
 
     final int method1848(int i) {
-        if (i != -32350) method1714(100, 29);
+        if (i != -32350) getValue(100, 29);
         anInt6145++;
         return this.preferenceValue;
     }
@@ -28,9 +28,9 @@ final class Component284
         super(class348_sub51);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6153++;
-        if (i != 20014) method1716(true);
+        if (i != 20014) validateValue(true);
         return 0;
     }
 
@@ -38,7 +38,7 @@ final class Component284
         super(i, class348_sub51);
     }
 
-    final void method1712(int i, int i_0_) {
+    final void setValue(int i, int i_0_) {
         int i_1_ = -10 / ((i - 82) / 35);
         this.preferenceValue = i_0_;
         anInt6148++;
@@ -68,7 +68,7 @@ final class Component284
         return i >>> 8;
     }
 
-    final int method1714(int i, int i_10_) {
+    final int getValue(int i, int i_10_) {
         anInt6146++;
         if (i != 3) aBoolean6147 = false;
         return 1;
@@ -93,8 +93,8 @@ final class Component284
         Component102.anInt4803 = -1;
     }
 
-    final void method1716(boolean bool) {
-        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = method1710(20014);
+    final void validateValue(boolean bool) {
+        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = getDefaultValue(20014);
         anInt6150++;
         if (bool != false) anInt6151 = 62;
     }

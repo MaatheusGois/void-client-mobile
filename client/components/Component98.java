@@ -34,10 +34,10 @@ final class Component98
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5941++;
-        if (bool != false) method1712(-34, -61);
-        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = method1710(20014);
+        if (bool != false) setValue(-34, -61);
+        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = getDefaultValue(20014);
     }
 
     /** Present HUD overlays (no camera tick): particles, root interface, menu tip priority. */
@@ -65,7 +65,7 @@ final class Component98
         NodeSub51.anInt7267 = 0;
     }
 
-    final void method1712(int i, int i_8_) {
+    final void setValue(int i, int i_8_) {
         anInt5939++;
         this.preferenceValue = i_8_;
         int i_9_ = -17 / ((82 - i) / 35);
@@ -91,9 +91,9 @@ final class Component98
         return this.preferenceValue;
     }
 
-    final int method1714(int i, int i_14_) {
+    final int getValue(int i, int i_14_) {
         anInt5936++;
-        if (i != 3) method1710(-95);
+        if (i != 3) getDefaultValue(-95);
         return 1;
     }
 
@@ -131,7 +131,7 @@ final class Component98
         return new Component184(is);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) return 118;
         anInt5937++;
         return 3;

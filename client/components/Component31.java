@@ -18,8 +18,8 @@ final class Component31
     static int[] anIntArray5902 = new int[128];
     static int anInt5903;
 
-    final int method1710(int i) {
-        if (i != 20014) method1712(-15, 91);
+    final int getDefaultValue(int i) {
+        if (i != 20014) setValue(-15, 91);
         anInt5898++;
         return 0;
     }
@@ -37,17 +37,17 @@ final class Component31
         return i_0_ >= 96;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5897++;
         int i = this.preferences.method3428((byte) -105).method1458(-23688);
         if (i < 96) this.preferenceValue = 0;
         if (bool != false) aClass355_5900 = null;
         if (this.preferenceValue > 1 && i < 128) this.preferenceValue = 1;
         if (this.preferenceValue > 2 && i < 192) this.preferenceValue = 2;
-        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = getDefaultValue(20014);
     }
 
-    final int method1714(int i, int i_1_) {
+    final int getValue(int i, int i_1_) {
         anInt5899++;
         int i_2_ = this.preferences.method3428((byte) -104).method1458(i ^ ~0x5c84);
         if (i_2_ < 96) return 3;
@@ -56,7 +56,7 @@ final class Component31
         return 1;
     }
 
-    final void method1712(int i, int i_3_) {
+    final void setValue(int i, int i_3_) {
         int i_4_ = -32 / ((82 - i) / 35);
         anInt5901++;
         this.preferenceValue = i_3_;

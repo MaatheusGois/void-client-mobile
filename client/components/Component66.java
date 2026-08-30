@@ -57,13 +57,13 @@ final class Component66
         return new String(cs, 0, i_2_);
     }
 
-    final int method1714(int i, int i_7_) {
+    final int getValue(int i, int i_7_) {
         anInt6023++;
         if (i != 3) return 49;
         return 1;
     }
 
-    final void method1712(int i, int i_8_) {
+    final void setValue(int i, int i_8_) {
         int i_9_ = -117 % ((82 - i) / 35);
         this.preferenceValue = i_8_;
         anInt6025++;
@@ -75,9 +75,9 @@ final class Component66
         anIntArray6021 = null;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (bool != false) method1793(null, 50, -30, -126);
-        if (this.preferenceValue < 0 && this.preferenceValue > 4) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 && this.preferenceValue > 4) this.preferenceValue = getDefaultValue(20014);
         anInt6024++;
     }
 
@@ -166,7 +166,7 @@ final class Component66
         return this.preferenceValue;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) aClass273_6018 = null;
         anInt6027++;
         if (this.preferences.method3428((byte) -96).method1462(-113) > 1) return 4;

@@ -15,20 +15,20 @@ final class DisplayModeManagerContainer199
     static int anInt5856;
     static Component24[] aClass105Array5857;
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         anInt5851++;
         if (i != 3) return -26;
         return 3;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5854++;
-        this.preferenceValue = method1710(20014);
+        this.preferenceValue = getDefaultValue(20014);
         if (bool != false) aClass105Array5857 = null;
     }
 
-    final int method1710(int i) {
-        if (i != 20014) method1716(true);
+    final int getDefaultValue(int i) {
+        if (i != 20014) validateValue(true);
         anInt5853++;
         if (!this.preferences.method3425(-76)) return 0;
         return 1;
@@ -88,7 +88,7 @@ final class DisplayModeManagerContainer199
         else if (NodeSub35.anInt6979 > i_12_) NodeSub35.anInt6979 += (-NodeSub35.anInt6979 + i_12_) / 80;
     }
 
-    final void method1712(int i, int i_13_) {
+    final void setValue(int i, int i_13_) {
         int i_14_ = 87 / ((82 - i) / 35);
         this.preferenceValue = i_13_;
         anInt5852++;

@@ -17,13 +17,13 @@ final class Component20
     static int anInt6055;
     static Component183 aClass114_6056 = new Component183(26, 11);
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) return -9;
         anInt6055++;
         return 0;
     }
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         anInt6051++;
         if (!Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
         if (i != 3) method1807((byte) 64);
@@ -35,7 +35,7 @@ final class Component20
     }
 
     final boolean method1806(int i) {
-        if (i < 85) method1714(-53, -119);
+        if (i < 85) getValue(-53, -119);
         anInt6049++;
         return Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
     }
@@ -56,16 +56,16 @@ final class Component20
         return this.preferenceValue;
     }
 
-    final void method1712(int i, int i_1_) {
+    final void setValue(int i, int i_1_) {
         int i_2_ = 38 / ((82 - i) / 35);
         anInt6052++;
         this.preferenceValue = i_1_;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt6050++;
-        if (bool != false) method1714(-51, -128);
+        if (bool != false) getValue(-51, -128);
         if (this.preferences.aClass239_Sub25_7271.method1830((byte) -123) && !Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 0;
-        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 }

@@ -22,11 +22,11 @@ final class Component266
         return this.preferenceValue;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (this.preferences.method3422(674) == WorldNameText.STELLARDAWN) this.preferenceValue = 2;
         if (bool == false) {
             anInt5974++;
-            if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+            if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
@@ -43,7 +43,7 @@ final class Component266
         }
     }
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         if (i != 3) return 3;
         anInt5979++;
         return 1;
@@ -53,13 +53,13 @@ final class Component266
         super(i, class348_sub51);
     }
 
-    final void method1712(int i, int i_1_) {
+    final void setValue(int i, int i_1_) {
         anInt5977++;
         this.preferenceValue = i_1_;
         int i_2_ = -54 / ((82 - i) / 35);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5975++;
         if (i != 20014) return 70;
         return 1;

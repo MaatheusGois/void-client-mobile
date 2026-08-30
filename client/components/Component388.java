@@ -15,7 +15,7 @@ final class Component388
     static int anInt6082;
     static int anInt6083;
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6077++;
         if (i != 20014) return -71;
         if (!this.preferences.method3425(-109)) {
@@ -29,11 +29,11 @@ final class Component388
         super(i, class348_sub51);
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (bool == false) {
             if (this.preferences.method3425(-68)) this.preferenceValue = 2;
             anInt6079++;
-            if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+            if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
@@ -49,8 +49,8 @@ final class Component388
         return this.preferenceValue;
     }
 
-    final int method1714(int i, int i_0_) {
-        if (i != 3) method1716(true);
+    final int getValue(int i, int i_0_) {
+        if (i != 3) validateValue(true);
         anInt6080++;
         if (this.preferences.method3425(-109)) return 3;
         return 1;
@@ -64,7 +64,7 @@ final class Component388
         return new Component184(is);
     }
 
-    final void method1712(int i, int i_3_) {
+    final void setValue(int i, int i_3_) {
         anInt6083++;
         this.preferenceValue = i_3_;
         int i_4_ = 7 % ((82 - i) / 35);

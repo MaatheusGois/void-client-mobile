@@ -15,7 +15,7 @@ final class Component60
     static int anInt5909 = -1;
     static int anInt5910;
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         anInt5905++;
         if (this.preferences.method3425(-93)) return 3;
         if (this.preferences.aClass239_Sub24_7235.method1820(i ^ ~0x7e5e) == 0) return 3;
@@ -31,15 +31,15 @@ final class Component60
         super(class348_sub51);
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (this.preferences.method3425(-82)) this.preferenceValue = 0;
         anInt5904++;
         if (this.preferences.aClass239_Sub24_7235.method1820(-32350) == 0) this.preferenceValue = 0;
-        if (bool != false) method1712(-60, 72);
-        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+        if (bool != false) setValue(-60, 72);
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 
-    final void method1712(int i, int i_1_) {
+    final void setValue(int i, int i_1_) {
         anInt5906++;
         int i_2_ = -93 % ((82 - i) / 35);
         this.preferenceValue = i_1_;
@@ -59,7 +59,7 @@ final class Component60
         return this.preferenceValue;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5907++;
         if (i != 20014) anInt5909 = 100;
         return 2;

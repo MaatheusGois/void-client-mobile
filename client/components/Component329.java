@@ -30,10 +30,10 @@ final class Component329
         return this.preferenceValue;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (this.preferences.aClass239_Sub3_7222.method1735(bool) && this.preferenceValue == 2) this.preferenceValue = 1;
         anInt5988++;
-        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 
     Component329(int i, NodeSub51 class348_sub51) {
@@ -110,19 +110,19 @@ final class Component329
         }
     }
 
-    final void method1712(int i, int i_8_) {
+    final void setValue(int i, int i_8_) {
         this.preferenceValue = i_8_;
         anInt5987++;
         int i_9_ = -73 / ((82 - i) / 35);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5982++;
         if (i != 20014) aClass211Array5993 = null;
         return 2;
     }
 
-    final int method1714(int i, int i_10_) {
+    final int getValue(int i, int i_10_) {
         if (i != 3) return 23;
         anInt5986++;
         return 1;

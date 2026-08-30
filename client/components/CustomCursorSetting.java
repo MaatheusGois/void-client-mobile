@@ -11,7 +11,7 @@
  * Draw-loop callers pass {@code 0}, so {@code getValue()==0} disables customs.
  * <p>
  * CS2: write opcode 6028, read opcode 6128. Stored on
- * {@link NodeSub51#customCursorSetting}. Default from {@link #method1710} is {@code 1}.
+ * {@link NodeSub51#customCursorSetting}. Default from {@link #getDefaultValue} is {@code 1}.
  * <p>
  * RENAMED from {@code Class239_Sub22} / {@code Component287}. Note: static
  * {@link #anInt6076} is an unrelated bit-mask parked on this class.
@@ -27,19 +27,19 @@ final class CustomCursorSetting extends Component339 {
     static int anInt6076;
 
     /** Default when unset / invalid: custom cursors enabled. */
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6072++;
         if (i != 20014) return 63;
         return 1;
     }
 
-    final void method1716(boolean bool) {
-        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
+    final void validateValue(boolean bool) {
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = getDefaultValue(20014);
         anInt6070++;
         if (bool != false) anInt6076 = 59;
     }
 
-    final void method1712(int i, int i_0_) {
+    final void setValue(int i, int i_0_) {
         anInt6074++;
         this.preferenceValue = i_0_;
         int i_1_ = 126 / ((82 - i) / 35);
@@ -65,7 +65,7 @@ final class CustomCursorSetting extends Component339 {
         if (i != 1) aClass114_6075 = null;
     }
 
-    final int method1714(int i, int i_2_) {
+    final int getValue(int i, int i_2_) {
         anInt6073++;
         if (i != 3) anInt6076 = -121;
         return 1;
