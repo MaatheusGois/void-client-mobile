@@ -10,19 +10,19 @@ final class DisplayModeManagerContainer273
  * Evidence: subclass of Component387 (hierarchy)
  */ extends Component387 {
 
-    static final void method1131(int i) {
+    static final void decodedOperation1131(int i) {
         int j = 64 / ((11 - i) / 54);
         anInt5795++;
-        NodeCache.aHa1098.L(Component38.anInt2500, Component192.preferences.aClass239_Sub16_7247.method1789(-32350) != 1 ? -1 : Component129.anInt486 - -256 << 2, 0);
+        NodeCache.aHa1098.L(Component38.anInt2500, Component192.preferences.aClass239_Sub16_7247.decodedOperation1789(-32350) != 1 ? -1 : Component129.anInt486 - -256 << 2, 0);
     }
 
-    static final boolean method1132(int i, int j, int k) {
+    static final boolean decodedOperation1132(int i, int j, int k) {
         if (i != 1673) return true;
         anInt5796++;
-        return CacheNode.method3194(k, j, (byte) 124) || Component191.method1379(4, j, k);
+        return CacheNode.decodedOperation3194(k, j, (byte) 124) || Component191.decodedOperation1379(4, j, k);
     }
 
-    public static void method1133(int i) {
+    public static void decodedOperation1133(int i) {
         if (i <= 38) cameraFocusX = 61;
         aClass144_5800 = null;
     }
@@ -31,18 +31,18 @@ final class DisplayModeManagerContainer273
         aClass58Array5801 = aclass58;
     }
 
-    static final void method1134(int i) {
+    static final void decodedOperation1134(int i) {
         Buffer.setClientState(2, 11);
         anInt5802++;
         if (i < 28) aClass144_5800 = null;
-        Component281.method2282(-12648);
+        Component281.decodedOperation2282(-12648);
         BuildInfo.maybeGc();
     }
 
-    static final void method1135(int i) {
+    static final void decodedOperation1135(int i) {
         Component181.aClass45_1541.discardMode = 1;
         anInt5798++;
-        HashNodeSub10.method3211((byte) -119);
+        HashNodeSub10.decodedOperation3211((byte) -119);
         MatrixSub2.anInt5740 = 0;
         Component241.anInt2933 = 0;
         GlToolkitSub2.anInt7661 = 0;
@@ -4100,19 +4100,19 @@ final class DisplayModeManagerContainer273
         DefinitionSub6.anInt9138 = 0;
         DisplayModeManagerContainer322.aBoolean4278 = true;
         Component143.aBoolean2329 = true;
-        Component269.method2480(~i);
+        Component269.decodedOperation2480(~i);
         for (int j = 0; NodeSub27.aClass302Array6897.length > j; j++)
             NodeSub27.aClass302Array6897[j] = null;
 
         r.aBoolean9722 = false;
-        NpcDefinition.method2928(true);
+        NpcDefinition.decodedOperation2928(true);
         CacheNodeSub2.anInt10483 = -60 + (int) (Math.random() * 120D);
         Component92.cameraShakeZ = -55 + (int) (Math.random() * 110D);
         Component112.cameraYaw = 0x3fff & -80 + (int) (160D * Math.random());
         Component182.anInt9750 = (int) (30D * Math.random()) + -20;
         Component195.anInt5016 = (int) (80D * Math.random()) - 40;
         Component120.cameraShakeX = (int) (Math.random() * 100D) - 50;
-        ToolbarRefreshDefinition.method3089(-126);
+        ToolbarRefreshDefinition.decodedOperation3089(-126);
         for (int k = 0; k < 2048; k++)
             InterfaceRenderer.players[k] = null;
 
@@ -4121,11 +4121,11 @@ final class DisplayModeManagerContainer273
         Component21.aClass356_3654.clear(0);
         DefinitionSub17.aClass262_9240.clear(112);
         CacheNodeSub2.aClass262_10492.clear(109);
-        Component241.aClass243_2957.method1876((byte) -45);
+        Component241.aClass243_2957.decodedOperation1876((byte) -45);
         Component387.aClass356_1895.clear(0);
         HashNodeSub20.aClass262_9711 = new NodeList();
-        DisplayModeManagerContainer58.aClass170_10209.method1314((byte) 74);
-        Component374.method2636(i + 69);
+        DisplayModeManagerContainer58.aClass170_10209.decodedOperation1314((byte) 74);
+        Component374.decodedOperation2636(i + 69);
         Component205.anInt5973 = 0;
         Component300.anInt3550 = 0;
         Component337.anInt3647 = 0;
@@ -4139,18 +4139,18 @@ final class DisplayModeManagerContainer273
         for (int l = 0; l < DisplayModeManagerContainer123.anIntArray1303.length; l++)
             if (!WaterShaderProgram.aBooleanArray6270[l]) DisplayModeManagerContainer123.anIntArray1303[l] = -1;
 
-        if (r.anInt9721 != -1) DisplayModeManagerContainer194.method235(r.anInt9721, (byte) -105);
+        if (r.anInt9721 != -1) DisplayModeManagerContainer194.decodedOperation235(r.anInt9721, (byte) -105);
         for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.next(0)) {
             if (!class348_sub41.isLinked((byte) 4)) {
                 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0);
                 if (class348_sub41 == null) break;
             }
-            Component162.method1118(true, false, class348_sub41, 2533);
+            Component162.decodedOperation1118(true, false, class348_sub41, 2533);
         }
 
         r.anInt9721 = -1;
         Component15.aClass356_4915 = new LruCache(8);
-        DisplayModeManagerContainer153.method882((byte) 11);
+        DisplayModeManagerContainer153.decodedOperation882((byte) 11);
         Component297.aClass46_4730 = null;
         for (int i1 = 0; i1 < 8; i1++) {
             Component252.aStringArray10195[i1] = null;
@@ -4158,7 +4158,7 @@ final class DisplayModeManagerContainer273
             Canvas_Sub1.anIntArray60[i1] = -1;
         }
 
-        Component126.method3515(-45);
+        Component126.decodedOperation3515(-45);
         TcpSocketStream.aBoolean5840 = true;
         for (int j1 = 0; j1 < 100; j1++)
             InflaterDecompressor.aBooleanArray2076[j1] = true;
@@ -4172,15 +4172,15 @@ final class DisplayModeManagerContainer273
             DisplayModeManagerContainer51.anIntArray2497[l1] = 0;
         }
 
-        DisplayModeManagerContainer154.method773(true);
+        DisplayModeManagerContainer154.decodedOperation773(true);
         DummyClass.aBoolean10174 = true;
         RenderableSub6.aShortArray6428 = Request.aShortArray6889 = HashNodeSub3.aShortArray9502 = Component226.aShortArray4172 = new short[256];
         Component323.aString5882 = FriendsIgnoreList.aClass274_3509.getLocalized(ObjectDeserializer.languageId, 544);
-        Component192.preferences.applyPreference((byte) 74, Component192.preferences.aClass239_Sub14_7264, Component192.preferences.aClass239_Sub14_7250.method1778(i + -32350));
-        Component192.preferences.applyPreference((byte) 74, Component192.preferences.aClass239_Sub27_7261, Component192.preferences.aClass239_Sub27_7255.method1840(-32350));
+        Component192.preferences.applyPreference((byte) 74, Component192.preferences.aClass239_Sub14_7264, Component192.preferences.aClass239_Sub14_7250.decodedOperation1778(i + -32350));
+        Component192.preferences.applyPreference((byte) 74, Component192.preferences.aClass239_Sub27_7261, Component192.preferences.aClass239_Sub27_7255.decodedOperation1840(-32350));
         DisplayModeManagerContainer136.anInt4718 = 0;
-        DefinitionSub39.method3153(0);
-        ShaderProgramSub2.method2145(-24498);
+        DefinitionSub39.decodedOperation3153(0);
+        ShaderProgramSub2.decodedOperation2145(-24498);
         MatrixSub2.aLong5745 = 0L;
         Component323.aClass348_Sub26_5881 = null;
         Component181.aClass45_1541.discardMode = 2;

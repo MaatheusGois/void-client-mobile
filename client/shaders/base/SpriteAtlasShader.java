@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class286_Sub5` (JODE-obfuscated).
- * Sprite-atlas sampling shader (ShaderProgram subclass). Binds named sprite atlases (headicons_prayer, timerbar_default, hint_mapmarkers, hint_headicons) via method2159(CacheStore).
+ * Sprite-atlas sampling shader (ShaderProgram subclass). Binds named sprite atlases (headicons_prayer, timerbar_default, hint_mapmarkers, hint_headicons) via decodedOperation2159(CacheStore).
  */
 
 import jaggl.OpenGL;
@@ -26,7 +26,7 @@ final class SpriteAtlasShader extends ShaderProgram {
     static int[] anIntArray6260 = new int[1];
     static int anInt6261;
 
-    static final void method2158(byte i) {
+    static final void decodedOperation2158(byte i) {
         anInt6256++;
         if (i == 56) {
             // Always fill the container (no letterboxed max-size caps).
@@ -122,7 +122,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         }
     }
 
-    static final void method2159(byte i, CacheStore class45) {
+    static final void decodedOperation2159(byte i, CacheStore class45) {
         NpcNode.anInt6862 = class45.getGroupId("hitmarks", 0);
         anInt6258++;
         KeyStoreLoader.anInt1639 = class45.getGroupId("hitbar_default", 0);
@@ -154,7 +154,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         if (bool_11_ != false) anInt6248 = -68;
     }
 
-    public static void method2160(int i) {
+    public static void decodedOperation2160(int i) {
         if (i == 0) {
             modelProvider = null;
             anIntArray6260 = null;

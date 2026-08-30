@@ -24,15 +24,15 @@ final class DefinitionGroup extends HashNode {
     static StringCache aClass351_9533;
     static Interface6[] anInterface6Array9534 = new Interface6[128];
 
-    final int[] method3183(d var_d, int i, int i_0_, boolean bool, double d, CacheStore class45, byte i_1_) {
+    final int[] decodedOperation3183(d var_d, int i, int i_0_, boolean bool, double d, CacheStore class45, byte i_1_) {
         try {
             anInt9522++;
             SpriteAtlasShader.modelProvider = var_d;
             Node.aClass45_4286 = class45;
             for (int i_2_ = 0; aClass348_Sub40Array9520.length > i_2_; i_2_++)
                 aClass348_Sub40Array9520[i_2_].initImageCache(i, i_0_, -256);
-            HashNodeSub13.method3232(d, (byte) -122);
-            NpcComposition.method797(i_0_, i, (byte) 114);
+            HashNodeSub13.decodedOperation3232(d, (byte) -122);
+            NpcComposition.decodedOperation797(i_0_, i, (byte) 114);
             int[] is = new int[i * i_0_];
             int i_3_ = 0;
             for (int i_4_ = 0; i_0_ > i_4_; i_4_++) {
@@ -87,7 +87,7 @@ final class DefinitionGroup extends HashNode {
         }
     }
 
-    final boolean method3184(d var_d, CacheStore class45, int i) {
+    final boolean decodedOperation3184(d var_d, CacheStore class45, int i) {
         try {
             anInt9529++;
             if (MatrixSub2.anInt5713 < 0) {
@@ -110,15 +110,15 @@ final class DefinitionGroup extends HashNode {
         }
     }
 
-    final int[] method3185(int i, d var_d, int i_21_, boolean bool, double d, boolean bool_22_, CacheStore class45, int i_23_) {
+    final int[] decodedOperation3185(int i, d var_d, int i_21_, boolean bool, double d, boolean bool_22_, CacheStore class45, int i_23_) {
         try {
             SpriteAtlasShader.modelProvider = var_d;
             Node.aClass45_4286 = class45;
             anInt9526++;
             for (int i_24_ = 0; aClass348_Sub40Array9520.length > i_24_; i_24_++)
                 aClass348_Sub40Array9520[i_24_].initImageCache(i, i_23_, i_21_ + -256);
-            HashNodeSub13.method3232(d, (byte) -89);
-            NpcComposition.method797(i_23_, i, (byte) 122);
+            HashNodeSub13.decodedOperation3232(d, (byte) -89);
+            NpcComposition.decodedOperation797(i_23_, i, (byte) 122);
             int[] is = new int[i_23_ * i];
             int i_25_;
             int i_26_;
@@ -176,15 +176,15 @@ final class DefinitionGroup extends HashNode {
         }
     }
 
-    final float[] method3186(int i, d var_d, boolean bool, int i_41_, CacheStore class45, int i_42_) {
+    final float[] decodedOperation3186(int i, d var_d, boolean bool, int i_41_, CacheStore class45, int i_42_) {
         try {
             anInt9525++;
             Node.aClass45_4286 = class45;
             SpriteAtlasShader.modelProvider = var_d;
-            if (i_42_ >= -1) method3183(null, -60, 98, false, -0.11623531533038078, null, (byte) -72);
+            if (i_42_ >= -1) decodedOperation3183(null, -60, 98, false, -0.11623531533038078, null, (byte) -72);
             for (int i_43_ = 0; aClass348_Sub40Array9520.length > i_43_; i_43_++)
                 aClass348_Sub40Array9520[i_43_].initImageCache(i, i_41_, -256);
-            NpcComposition.method797(i_41_, i, (byte) 115);
+            NpcComposition.decodedOperation797(i_41_, i, (byte) 115);
             float[] fs = new float[4 * i * i_41_];
             int i_44_ = 0;
             for (int i_45_ = 0; i_41_ > i_45_; i_45_++) {
@@ -230,7 +230,7 @@ final class DefinitionGroup extends HashNode {
         }
     }
 
-    public static void method3187(byte i) {
+    public static void decodedOperation3187(byte i) {
         anInterface6Array9534 = null;
         int i_55_ = 19 % ((76 - i) / 39);
         aClass351_9533 = null;
@@ -256,7 +256,7 @@ final class DefinitionGroup extends HashNode {
         int[][] is = new int[i][];
         aClass348_Sub40Array9520 = new Definition[i];
         for (int i_58_ = 0; i_58_ < i; i_58_++) {
-            Definition class348_sub40 = NodeSub37.method3031(125, class348_sub49);
+            Definition class348_sub40 = NodeSub37.decodedOperation3031(125, class348_sub49);
             if (class348_sub40.method3037(-121) >= 0) i_56_++;
             if (class348_sub40.getOutputColourType(-1) >= 0) i_57_++;
             int i_59_ = (class348_sub40.aClass348_Sub40Array7031).length;

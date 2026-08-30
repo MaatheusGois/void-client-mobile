@@ -24,14 +24,14 @@ final class Component45
     boolean aBoolean4350;
     static int anInt4351;
 
-    static final void method3460(int i, int i_0_, int i_1_, int i_2_, int i_3_, int[] is, int i_4_, int i_5_) {
+    static final void decodedOperation3460(int i, int i_0_, int i_1_, int i_2_, int i_3_, int[] is, int i_4_, int i_5_) {
         anInt4345++;
-        if (i_3_ > 0 && !Component353.method1436(-86, i_3_)) throw new IllegalArgumentException("");
-        if (i_1_ > 0 && !Component353.method1436(88, i_1_)) throw new IllegalArgumentException("");
+        if (i_3_ > 0 && !Component353.decodedOperation1436(-86, i_3_)) throw new IllegalArgumentException("");
+        if (i_1_ > 0 && !Component353.decodedOperation1436(88, i_1_)) throw new IllegalArgumentException("");
         if (i_4_ != 32993) throw new IllegalArgumentException("");
         int i_6_ = 0;
         int i_7_ = Math.min(i_1_, i_3_);
-        if (i_5_ >= -54) method3462(106);
+        if (i_5_ >= -54) decodedOperation3462(106);
         int i_8_ = i_3_ >> 1;
         int i_9_ = i_1_ >> 1;
         int[] is_10_ = is;
@@ -121,7 +121,7 @@ final class Component45
         } while (false);
     }
 
-    public static void method3462(int i) {
+    public static void decodedOperation3462(int i) {
         aClass60_4346 = null;
         if (i != -30094) method3461(-108, null, -26, null, 42);
     }

@@ -19,7 +19,7 @@ final class Component25
     static int anInt6016;
     static int anInt6017;
 
-    static final String method1788(byte i, long l) {
+    static final String decodedOperation1788(byte i, long l) {
         try {
             anInt6016++;
             if (l <= 0L || l >= 6582952005840035281L) return null;
@@ -52,18 +52,18 @@ final class Component25
     final int getValue(int i, int i_5_) {
         if (i != 3) anInt6012 = -22;
         anInt6014++;
-        if (i_5_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(i ^ ~0x7e5e) == 1) return 1;
+        if (i_5_ == 0 || this.preferences.aClass239_Sub9_7256.decodedOperation1759(i ^ ~0x7e5e) == 1) return 1;
         return 2;
     }
 
     final void validateValue(boolean bool) {
         if (bool != false) anInt6012 = 46;
-        if (this.preferenceValue != 0 && this.preferences.aClass239_Sub9_7256.method1759(-32350) != 1) this.preferenceValue = 0;
+        if (this.preferenceValue != 0 && this.preferences.aClass239_Sub9_7256.decodedOperation1759(-32350) != 1) this.preferenceValue = 0;
         anInt6007++;
         if (this.preferenceValue < 0 || this.preferenceValue > 1) this.preferenceValue = getDefaultValue(20014);
     }
 
-    final int method1789(int i) {
+    final int decodedOperation1789(int i) {
         if (i != -32350) anInt6008 = 32;
         anInt6017++;
         return this.preferenceValue;
@@ -79,7 +79,7 @@ final class Component25
         this.preferenceValue = i_6_;
     }
 
-    final boolean method1790(int i) {
+    final boolean decodedOperation1790(int i) {
         if (i < 85) anInt6012 = -109;
         anInt6015++;
         return true;
@@ -89,7 +89,7 @@ final class Component25
         super(i, class348_sub51);
     }
 
-    static final void method1791(int i, int[] is, int i_8_, Player player) {
+    static final void decodedOperation1791(int i, int[] is, int i_8_, Player player) {
         do {
             try {
                 anInt6009++;
@@ -110,13 +110,13 @@ final class Component25
                             player.anInt10294 = 0;
                             player.anInt10218 = i_8_;
                             player.anInt10244 = 1;
-                            if (!player.aBoolean10309) DisplayModeManagerContainer260.method2178(player, player.anInt10267, class17, i ^ ~0x5df4);
+                            if (!player.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(player, player.anInt10267, class17, i ^ ~0x5df4);
                         }
                         if (i_10_ == 2) player.anInt10294 = 0;
                     }
                 }
                 boolean bool = true;
-                if (i != 23946) method1791(126, null, -73, null);
+                if (i != 23946) decodedOperation1791(126, null, -73, null);
                 for (int i_11_ = 0; is.length > i_11_; i_11_++) {
                     if (is[i_11_] != -1) bool = false;
                     if (player.anIntArray10236 == null || (player.anIntArray10236[i_11_]) == -1 || (RunescapeInfo.aClass87_191.getSequence((player.anIntArray10236[i_11_]), 7).anInt239 <= (RunescapeInfo.aClass87_191.getSequence(is[i_11_], i ^ 0x5d8d).anInt239))) {
@@ -136,12 +136,12 @@ final class Component25
     }
 
     final int getDefaultValue(int i) {
-        if (i != 20014) method1789(40);
+        if (i != 20014) decodedOperation1789(40);
         anInt6010++;
         return 1;
     }
 
-    static final void method1792(int i, int i_12_, int i_13_, int i_14_, byte i_15_, int i_16_) {
+    static final void decodedOperation1792(int i, int i_12_, int i_13_, int i_14_, byte i_15_, int i_16_) {
         anInt6013++;
         int i_17_ = LogicError.clamp(PauseTimer.anInt513, i, Component72.anInt1910, -90);
         int i_18_ = LogicError.clamp(PauseTimer.anInt513, i_13_, Component72.anInt1910, -94);

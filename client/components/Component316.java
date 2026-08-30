@@ -19,7 +19,7 @@ final class Component316
     static char[] aCharArray2488 = {' ', '\u00a0', '_', '-', '\u00e0', '\u00e1', '\u00e2', '\u00e4', '\u00e3', '\u00c0', '\u00c1', '\u00c2', '\u00c4', '\u00c3', '\u00e8', '\u00e9', '\u00ea', '\u00eb', '\u00c8', '\u00c9', '\u00ca', '\u00cb', '\u00ed', '\u00ee', '\u00ef', '\u00cd', '\u00ce', '\u00cf', '\u00f2', '\u00f3', '\u00f4', '\u00f6', '\u00f5', '\u00d2', '\u00d3', '\u00d4', '\u00d6', '\u00d5', '\u00f9', '\u00fa', '\u00fb', '\u00fc', '\u00d9', '\u00da', '\u00db', '\u00dc', '\u00e7', '\u00c7', '\u00ff', '\u0178', '\u00f1', '\u00d1', '\u00df'};
     static DisplayModeManagerContainer369 aClass223_2489;
 
-    final void method1390(int i) {
+    final void decodedOperation1390(int i) {
         synchronized (aClass60_2479) {
             int i_0_ = 25 / ((i - 69) / 33);
             aClass60_2479.purgeSoftReferences(-98);
@@ -27,7 +27,7 @@ final class Component316
         anInt2486++;
     }
 
-    final Component193 method1391(byte i, int i_1_) {
+    final Component193 decodedOperation1391(byte i, int i_1_) {
         anInt2485++;
         Component193 class253;
         synchronized (aClass60_2479) {
@@ -40,21 +40,21 @@ final class Component316
         }
         class253 = new Component193();
         int i_2_ = 50 / ((i - -63) / 56);
-        if (is != null) class253.method1921((byte) -69, new Buffer(is));
+        if (is != null) class253.decodedOperation1921((byte) -69, new Buffer(is));
         synchronized (aClass60_2479) {
             aClass60_2479.putOne(class253, i_1_, (byte) -108);
         }
         return class253;
     }
 
-    final void method1392(int i, int i_3_) {
+    final void decodedOperation1392(int i, int i_3_) {
         synchronized (aClass60_2479) {
             aClass60_2479.processSoftEntries(2, i_3_);
         }
         if (i >= 12) anInt2484++;
     }
 
-    final void method1393(byte i) {
+    final void decodedOperation1393(byte i) {
         synchronized (aClass60_2479) {
             aClass60_2479.clear(0);
             int i_4_ = -89 % ((42 - i) / 50);
@@ -62,7 +62,7 @@ final class Component316
         anInt2487++;
     }
 
-    static final void method1394(int i, int i_5_, int i_6_) {
+    static final void decodedOperation1394(int i, int i_5_, int i_6_) {
         boolean bool = (Component335.aClass357ArrayArrayArray2029[0][i_5_][i_6_] != null && Component335.aClass357ArrayArrayArray2029[0][i_5_][i_6_].aClass357_4400 != null);
         for (int i_7_ = i; i_7_ >= 0; i_7_--) {
             if (Component335.aClass357ArrayArrayArray2029[i_7_][i_5_][i_6_] == null) {
@@ -81,11 +81,11 @@ final class Component316
         }
     }
 
-    public static void method1395(byte i) {
+    public static void decodedOperation1395(byte i) {
         aClass114_2483 = null;
         aCharArray2488 = null;
         aClass223_2489 = null;
-        if (i != 82) method1394(120, -36, -100);
+        if (i != 82) decodedOperation1394(120, -36, -100);
     }
 
     static {

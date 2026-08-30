@@ -68,7 +68,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final void method3707(Rectangle[] rectangles, int i, int i_18_, int i_19_) throws Exception_Sub1 {
         if (aP5137 == null) throw new IllegalStateException("off");
-        aP5137.method3434(rectangles, i, i_18_, i_19_);
+        aP5137.decodedOperation3434(rectangles, i, i_18_, i_19_);
     }
 
     final boolean method3708() {
@@ -77,7 +77,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final void renderModelEx(Component122 class98, int i) {
         method3975(class98, false);
-        method3973().method155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.method840(0));
+        method3973().decodedOperation155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.decodedOperation840(0));
     }
 
     final void draw3DTriangle(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_) {
@@ -88,7 +88,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         /* empty */
     }
 
-    final Component24 method3691(Component170 class207, boolean bool) {
+    final Component24 decodedOperation3691(Component170 class207, boolean bool) {
         j var_j = new j(this, class207.anIntArray2697, class207.aByteArray2699, class207.aByteArray2695, 0, class207.anInt2702, class207.anInt2702, class207.anInt2696);
         var_j.method985(class207.anInt2703, class207.anInt2700, class207.anInt2698, class207.anInt2701);
         return var_j;
@@ -111,7 +111,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     private final void g() {//
         System.gc();
         System.runFinalization();
-        Component36.method1948((byte) -33);
+        Component36.decodedOperation1948((byte) -33);
     }
 
     final native void b(int i, int i_55_, int i_56_, int i_57_, double d);
@@ -152,7 +152,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     private final native void t(p var_p);
 
-    final DisplayModeManagerContainer204 method3705() {
+    final DisplayModeManagerContainer204 decodedOperation3705() {
         return aClass101_5131;
     }
 
@@ -175,7 +175,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         int i_68_ = 0;
         int i_69_ = 0;
         int i_70_ = 0;
-        for (RenderableSub9Sub2 class318_sub9_sub2 = ((RenderableSub9Sub2) class98.aClass88_1569.method848(8)); class318_sub9_sub2 != null; class318_sub9_sub2 = ((RenderableSub9Sub2) class98.aClass88_1569.method846((byte) -79))) {
+        for (RenderableSub9Sub2 class318_sub9_sub2 = ((RenderableSub9Sub2) class98.aClass88_1569.decodedOperation848(8)); class318_sub9_sub2 != null; class318_sub9_sub2 = ((RenderableSub9Sub2) class98.aClass88_1569.decodedOperation846((byte) -79))) {
             anIntArray5136[i++] = class318_sub9_sub2.anInt8791;
             anIntArray5136[i++] = class318_sub9_sub2.anInt8796;
             anIntArray5136[i++] = class318_sub9_sub2.anInt8789;
@@ -187,7 +187,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     }
 
     final void resetTextureState(int i) {
-        anAArray5143[i].method154();
+        anAArray5143[i].decodedOperation154();
     }
 
     final void method3632(int[] is) {
@@ -226,7 +226,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
         if (var_p != null) {
             var_p.unlink((byte) 110);
-            var_p.method3436();
+            var_p.decodedOperation3436();
         }
     }
 
@@ -236,7 +236,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     protected final synchronized void finalize() {
         this.method3635((byte) -45);
-        if (this.nativeid != 0L) Component36.method1947(0, this);
+        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
     }
 
     private final native void d(int i);
@@ -246,9 +246,9 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     private final native void n(long l, long l_102_);
 
     final void renderModel(Component122 class98) {
-        if (class98.aClass88_1569.method840(0) != 0) {
+        if (class98.aClass88_1569.decodedOperation840(0) != 0) {
             method3975(class98, false);
-            method3973().method155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.method840(0));
+            method3973().decodedOperation155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.decodedOperation840(0));
         }
     }
 
@@ -270,18 +270,18 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             aClass262_5123.clear(117);
             FA();
             if (aBoolean5142) {
-                CookieManager.method2173(true, -110, false);
+                CookieManager.decodedOperation2173(true, -110, false);
                 aBoolean5142 = false;
             }
             g();
-            Component36.method1946(-108);
+            Component36.decodedOperation1946(-108);
             aBoolean5124 = true;
         }
     }
 
     final void method3669(Canvas canvas, int i, int i_108_) {
         p var_p = (p) aClass356_5126.get(canvas.hashCode(), -6008);
-        var_p.method3435(canvas, i, i_108_);
+        var_p.decodedOperation3435(canvas, i, i_108_);
         if (canvas != null && canvas == aP5137.aCanvas5147) method3677(canvas);
     }
 
@@ -313,7 +313,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     final native void KA(int i, int i_118_, int i_119_, int i_120_);
 
     final void method3646(int i) {
-        Component36.method1948((byte) -71);
+        Component36.decodedOperation1948((byte) -71);
         d(i);
         for (NativeHandle var_ya = (NativeHandle) aClass262_5123.first(4); var_ya != null; var_ya = (NativeHandle) aClass262_5123.next((byte) 40))
             var_ya.r();
@@ -330,7 +330,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     final native void pa();
 
     final void setLineWidth(int i, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_) {
-        method3973().method150(this, i, i_125_, i_126_, i_127_, i_128_, i_129_, i_130_);
+        method3973().decodedOperation150(this, i, i_125_, i_126_, i_127_, i_128_, i_129_, i_130_);
     }
 
     final native void GA(int i);
@@ -376,7 +376,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             canvas.setIgnoreRepaint(true);
             var_p = new p(this, canvas, i, i_153_);
             aClass356_5126.put((byte) 36, canvas.hashCode(), var_p);
-        } else if (var_p.anInt5145 != i || var_p.anInt5148 != i_153_) var_p.method3435(canvas, i, i_153_);
+        } else if (var_p.anInt5145 != i || var_p.anInt5148 != i_153_) var_p.decodedOperation3435(canvas, i, i_153_);
     }
 
     final Component80 method3706(Component80 class299, Component80 class299_154_, float f, Component80 class299_155_) {
@@ -391,7 +391,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final void swapBuffers(int i, int i_156_) throws Exception_Sub1 {
         if (aP5137 == null) throw new IllegalStateException("off");
-        aP5137.method3433(i, i_156_);
+        aP5137.decodedOperation3433(i, i_156_);
     }
 
     final Interface3 method3665(int i, int i_157_) {
@@ -401,12 +401,12 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     final void method3642(int i, NodeSub1[] class348_sub1s) {
         int i_158_ = 0;
         for (int i_159_ = 0; i_159_ < i; i_159_++) {
-            anIntArray5130[i_158_++] = class348_sub1s[i_159_].method2724(-1);
-            anIntArray5130[i_158_++] = class348_sub1s[i_159_].method2722(123);
-            anIntArray5130[i_158_++] = class348_sub1s[i_159_].method2717((byte) 103);
-            anIntArray5130[i_158_++] = class348_sub1s[i_159_].method2723(-1);
-            aFloatArray5138[i_159_] = class348_sub1s[i_159_].method2721(-65);
-            anIntArray5130[i_158_++] = class348_sub1s[i_159_].method2720(-1);
+            anIntArray5130[i_158_++] = class348_sub1s[i_159_].decodedOperation2724(-1);
+            anIntArray5130[i_158_++] = class348_sub1s[i_159_].decodedOperation2722(123);
+            anIntArray5130[i_158_++] = class348_sub1s[i_159_].decodedOperation2717((byte) 103);
+            anIntArray5130[i_158_++] = class348_sub1s[i_159_].decodedOperation2723(-1);
+            aFloatArray5138[i_159_] = class348_sub1s[i_159_].decodedOperation2721(-65);
+            anIntArray5130[i_158_++] = class348_sub1s[i_159_].decodedOperation2720(-1);
         }
         N(i, anIntArray5130, aFloatArray5138);
     }
@@ -447,7 +447,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     }
 
     final void method3678(int i) {
-        anAArray5143[i].method156();
+        anAArray5143[i].decodedOperation156();
     }
 
     final native void EA(int i, int i_171_, int i_172_, int i_173_);
@@ -471,9 +471,9 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
             try {
 
                 if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "sw3d")) throw new RuntimeException("");
-                Component36.method1949((byte) -128);
+                Component36.decodedOperation1949((byte) -128);
                 MA(modelProvider, 0, 0);
-                Component54.method566(false, true, (byte) 23);
+                Component54.decodedOperation566(false, true, (byte) 23);
                 aBoolean5142 = true;
                 aClass101_5131 = new OpenGLMatrix();
                 loadModelviewMatrix(new OpenGLMatrix());

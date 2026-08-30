@@ -16,12 +16,12 @@ final class Component48
     static int anInt4336;
     static int anInt4337 = -2;
 
-    public static void method3458(int i) {
-        if (i != 2672) method3459(null, -32, 14, -44, 95);
+    public static void decodedOperation3458(int i) {
+        if (i != 2672) decodedOperation3459(null, -32, 14, -44, 95);
         aClass114_4331 = null;
     }
 
-    static final void method3459(NodeSub34 class348_sub34, int i, int i_0_, int i_1_, int i_2_) {
+    static final void decodedOperation3459(NodeSub34 class348_sub34, int i, int i_0_, int i_1_, int i_2_) {
         anInt4330++;
         long l = i_0_ << 14 | i << 28 | i_1_;
         NodeSub37 class348_sub37 = (NodeSub37) Component387.aClass356_1895.get(l, -6008);
@@ -38,7 +38,7 @@ final class Component48
                 int i_5_ = class213.anInt2819;
                 if (class213.anInt2820 == 1) i_5_ *= class348_sub34_4_.anInt6971 - -1;
                 if (i_3_ > i_5_) {
-                    HashNodeSub16Sub2.method3265(i_2_ ^ 0x6c, class348_sub34, class348_sub34_4_);
+                    HashNodeSub16Sub2.decodedOperation3265(i_2_ ^ 0x6c, class348_sub34, class348_sub34_4_);
                     return;
                 }
             }

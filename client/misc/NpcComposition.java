@@ -105,21 +105,21 @@ final class NpcComposition {
     private byte aByte1405;
     private int anInt1406;
 
-    final boolean method793(int i) {
+    final boolean decodedOperation793(int i) {
         anInt1403++;
         if (this.anIntArray1377 == null) {
             return this.anInt1343 != -1 || this.anInt1364 != -1 || this.anInt1327 != -1;
         }
         for (int i_0_ = i; this.anIntArray1377.length > i_0_; i_0_++) {
             if (this.anIntArray1377[i_0_] != -1) {
-                NpcComposition class79_1_ = (this.aClass278_1348.method2079(this.anIntArray1377[i_0_], -1));
+                NpcComposition class79_1_ = (this.aClass278_1348.decodedOperation2079(this.anIntArray1377[i_0_], -1));
                 if (class79_1_.anInt1343 != -1 || class79_1_.anInt1364 != -1 || class79_1_.anInt1327 != -1) return true;
             }
         }
         return false;
     }
 
-    final NpcComposition method794(Interface17 interface17, int i) {
+    final NpcComposition decodedOperation794(Interface17 interface17, int i) {
         anInt1394++;
         int i_2_ = i;
         if (anInt1368 == -1) {
@@ -128,9 +128,9 @@ final class NpcComposition {
         if (i_2_ < 0 || (-1 + this.anIntArray1377.length <= i_2_) || this.anIntArray1377[i_2_] == -1) {
             int i_3_ = (this.anIntArray1377[this.anIntArray1377.length - 1]);
             if (i_3_ == -1) return null;
-            return this.aClass278_1348.method2079(i_3_, i);
+            return this.aClass278_1348.decodedOperation2079(i_3_, i);
         }
-        return this.aClass278_1348.method2079(this.anIntArray1377[i_2_], -1);
+        return this.aClass278_1348.decodedOperation2079(this.anIntArray1377[i_2_], -1);
     }
 
     private final void method795(Buffer class348_sub49, int i, int i_4_) {
@@ -306,7 +306,7 @@ final class NpcComposition {
         anInt1357++;
     }
 
-    final boolean method796(Interface17 interface17, int i) {
+    final boolean decodedOperation796(Interface17 interface17, int i) {
         anInt1351++;
         if (this.anIntArray1377 == null) return true;
         int i_27_ = -1;
@@ -319,7 +319,7 @@ final class NpcComposition {
         return i == 18627;
     }
 
-    static final void method797(int i, int i_29_, byte i_30_) {
+    static final void decodedOperation797(int i, int i_29_, byte i_30_) {
         anInt1379++;
         if (DefinitionSub6.anInt9139 != i_29_) {
             RenderableSub6.anIntArray6432 = new int[i_29_];
@@ -341,17 +341,17 @@ final class NpcComposition {
         }
     }
 
-    final void method798(int i, Buffer class348_sub49) {
+    final void decodedOperation798(int i, Buffer class348_sub49) {
         for (; ; ) {
             int i_33_ = class348_sub49.readUnsignedByte(255);
             if (i_33_ == 0) break;
             method795(class348_sub49, i_33_, 127);
         }
         anInt1400++;
-        if (i <= 35) method798(-16, null);
+        if (i <= 35) decodedOperation798(-16, null);
     }
 
-    final void method799(int i) {
+    final void decodedOperation799(int i) {
         if (anIntArray1402 == null) anIntArray1402 = new int[0];
         if (i >= -75) aByte1376 = (byte) 102;
         anInt1334++;
@@ -361,13 +361,13 @@ final class NpcComposition {
         }
     }
 
-    final DisplayModeManagerContainer370 method800(int i, Component280[] class182s, Component344 class87, boolean bool, DisplayModeManagerContainer167 class17, int i_34_, DisplayModeManagerContainer1 class261, int i_35_, DisplayModeManagerContainer167 class17_36_, Interface17 interface17, GraphicsToolkit var_ha, int i_37_, int[] is, int i_38_, int i_39_, int i_40_, int i_41_) {
+    final DisplayModeManagerContainer370 decodedOperation800(int i, Component280[] class182s, Component344 class87, boolean bool, DisplayModeManagerContainer167 class17, int i_34_, DisplayModeManagerContainer1 class261, int i_35_, DisplayModeManagerContainer167 class17_36_, Interface17 interface17, GraphicsToolkit var_ha, int i_37_, int[] is, int i_38_, int i_39_, int i_40_, int i_41_) {
         try {
             anInt1341++;
             if (this.anIntArray1377 != null) {
-                NpcComposition class79_42_ = method794(interface17, -1);
+                NpcComposition class79_42_ = decodedOperation794(interface17, -1);
                 if (class79_42_ == null) return null;
-                return class79_42_.method800(i, class182s, class87, false, class17, i_34_, class261, i_35_, class17_36_, interface17, var_ha, i_37_, is, i_38_, i_39_, i_40_, i_41_);
+                return class79_42_.decodedOperation800(i, class182s, class87, false, class17, i_34_, class261, i_35_, class17_36_, interface17, var_ha, i_37_, is, i_38_, i_39_, i_40_, i_41_);
             }
             int i_43_ = i_40_;
             if (anInt1358 != 128) i_43_ |= 0x2;
@@ -388,26 +388,26 @@ final class NpcComposition {
                         int i_52_ = class182s[i_50_].anInt2451;
                         int i_53_ = class182s[i_50_].anInt2455;
                         int i_54_ = class17_51_.anIntArray237[i_52_];
-                        Component349.aClass348_Sub42_Sub17Array10010[i_50_] = class87.method839(i_54_ >>> 16, 3);
+                        Component349.aClass348_Sub42_Sub17Array10010[i_50_] = class87.decodedOperation839(i_54_ >>> 16, 3);
                         i_54_ &= 0xffff;
                         Component330.anIntArray1518[i_50_] = i_54_;
                         if ((Component349.aClass348_Sub42_Sub17Array10010[i_50_]) != null) {
-                            bool_46_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].method3272(i_54_, 0);
-                            bool_45_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].method3271(i_54_, 14);
-                            bool_48_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].method3267((byte) -92, i_54_);
+                            bool_46_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].decodedOperation3272(i_54_, 0);
+                            bool_45_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].decodedOperation3271(i_54_, 14);
+                            bool_48_ |= Component349.aClass348_Sub42_Sub17Array10010[i_50_].decodedOperation3267((byte) -92, i_54_);
                             bool_47_ |= class17_51_.aBoolean242;
                         }
                         if ((class17_51_.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_53_ != -1 && i_53_ < (class17_51_.anIntArray237).length) {
                             Component179.anIntArray9050[i_50_] = class17_51_.anIntArray267[i_52_];
                             VideoAdPlayer.anIntArray4648[i_50_] = class182s[i_50_].anInt2456;
                             int i_55_ = class17_51_.anIntArray237[i_53_];
-                            HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_] = class87.method839(i_55_ >>> 16, 3);
+                            HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_] = class87.decodedOperation839(i_55_ >>> 16, 3);
                             i_55_ &= 0xffff;
                             Component191.anIntArray2466[i_50_] = i_55_;
                             if ((HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_]) != null) {
-                                bool_46_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].method3272(i_55_, 0);
-                                bool_45_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].method3271(i_55_, 14);
-                                bool_48_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].method3267((byte) -99, i_55_);
+                                bool_46_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].decodedOperation3272(i_55_, 0);
+                                bool_45_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].decodedOperation3271(i_55_, 14);
+                                bool_48_ |= HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_50_].decodedOperation3267((byte) -99, i_55_);
                             }
                         } else {
                             Component179.anIntArray9050[i_50_] = 0;
@@ -434,11 +434,11 @@ final class NpcComposition {
                     i_56_ = class17_36_.anIntArray237[i_35_];
                     int i_65_ = i_56_ >>> 16;
                     i_56_ &= 0xffff;
-                    class348_sub42_sub17 = class87.method839(i_65_, 3);
+                    class348_sub42_sub17 = class87.decodedOperation839(i_65_, 3);
                     if (class348_sub42_sub17 != null) {
-                        bool_46_ |= class348_sub42_sub17.method3272(i_56_, 0);
-                        bool_45_ |= class348_sub42_sub17.method3271(i_56_, 14);
-                        bool_48_ |= class348_sub42_sub17.method3267((byte) -125, i_56_);
+                        bool_46_ |= class348_sub42_sub17.decodedOperation3272(i_56_, 0);
+                        bool_45_ |= class348_sub42_sub17.decodedOperation3271(i_56_, 14);
+                        bool_48_ |= class348_sub42_sub17.decodedOperation3267((byte) -125, i_56_);
                         bool_47_ |= class17_36_.aBoolean242;
                     }
                     if ((class17_36_.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_38_ != -1 && (class17_36_.anIntArray237.length > i_38_)) {
@@ -446,24 +446,24 @@ final class NpcComposition {
                         i_58_ = class17_36_.anIntArray267[i_35_];
                         int i_66_ = i_57_ >>> 16;
                         if (i_65_ == i_66_) class348_sub42_sub17_59_ = class348_sub42_sub17;
-                        else class348_sub42_sub17_59_ = class87.method839(i_66_, 3);
+                        else class348_sub42_sub17_59_ = class87.decodedOperation839(i_66_, 3);
                         i_57_ &= 0xffff;
                         if (class348_sub42_sub17_59_ != null) {
-                            bool_46_ |= class348_sub42_sub17_59_.method3272(i_57_, 0);
-                            bool_45_ |= class348_sub42_sub17_59_.method3271(i_57_, 14);
-                            bool_48_ |= class348_sub42_sub17_59_.method3267((byte) -122, i_57_);
+                            bool_46_ |= class348_sub42_sub17_59_.decodedOperation3272(i_57_, 0);
+                            bool_45_ |= class348_sub42_sub17_59_.decodedOperation3271(i_57_, 14);
+                            bool_48_ |= class348_sub42_sub17_59_.decodedOperation3267((byte) -122, i_57_);
                         }
                     }
                 }
                 if (class17 != null) {
                     i_60_ = class17.anIntArray237[i_39_];
                     int i_67_ = i_60_ >>> 16;
-                    class348_sub42_sub17_63_ = class87.method839(i_67_, 3);
+                    class348_sub42_sub17_63_ = class87.decodedOperation839(i_67_, 3);
                     i_60_ &= 0xffff;
                     if (class348_sub42_sub17_63_ != null) {
-                        bool_46_ |= class348_sub42_sub17_63_.method3272(i_60_, 0);
-                        bool_45_ |= class348_sub42_sub17_63_.method3271(i_60_, 14);
-                        bool_48_ |= class348_sub42_sub17_63_.method3267((byte) -102, i_60_);
+                        bool_46_ |= class348_sub42_sub17_63_.decodedOperation3272(i_60_, 0);
+                        bool_45_ |= class348_sub42_sub17_63_.decodedOperation3271(i_60_, 14);
+                        bool_48_ |= class348_sub42_sub17_63_.decodedOperation3267((byte) -102, i_60_);
                         bool_47_ |= class17.aBoolean242;
                     }
                     if ((class17.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_37_ != -1 && class17.anIntArray237.length > i_37_) {
@@ -471,12 +471,12 @@ final class NpcComposition {
                         i_61_ = class17.anIntArray237[i_37_];
                         int i_68_ = i_61_ >>> 16;
                         if (i_68_ == i_67_) class348_sub42_sub17_64_ = class348_sub42_sub17_63_;
-                        else class348_sub42_sub17_64_ = class87.method839(i_68_, 3);
+                        else class348_sub42_sub17_64_ = class87.decodedOperation839(i_68_, 3);
                         i_61_ &= 0xffff;
                         if (class348_sub42_sub17_64_ != null) {
-                            bool_46_ |= class348_sub42_sub17_64_.method3272(i_61_, 0);
-                            bool_45_ |= class348_sub42_sub17_64_.method3271(i_61_, 14);
-                            bool_48_ |= class348_sub42_sub17_64_.method3267((byte) -104, i_61_);
+                            bool_46_ |= class348_sub42_sub17_64_.decodedOperation3272(i_61_, 0);
+                            bool_45_ |= class348_sub42_sub17_64_.decodedOperation3271(i_61_, 14);
+                            bool_48_ |= class348_sub42_sub17_64_.decodedOperation3267((byte) -104, i_61_);
                         }
                     }
                 }
@@ -509,8 +509,8 @@ final class NpcComposition {
                             class124s[i_72_] = Component189.loadFromCache(0, (this.aClass278_1348.aClass45_3576), anIntArray1402[i_72_], -1);
                         }
                         if (class124s[i_72_] != null) {
-                            if (class124s[i_72_].anInt1830 < 13) class124s[i_72_].method1092(2, 115);
-                            if (anIntArrayArray1388 != null && anIntArrayArray1388[i_72_] != null) class124s[i_72_].method1099((byte) 44, anIntArrayArray1388[i_72_][2], anIntArrayArray1388[i_72_][0], anIntArrayArray1388[i_72_][1]);
+                            if (class124s[i_72_].anInt1830 < 13) class124s[i_72_].decodedOperation1092(2, 115);
+                            if (anIntArrayArray1388 != null && anIntArrayArray1388[i_72_] != null) class124s[i_72_].decodedOperation1099((byte) 44, anIntArrayArray1388[i_72_][2], anIntArrayArray1388[i_72_][0], anIntArrayArray1388[i_72_][1]);
                         }
                     }
                 }
@@ -531,8 +531,8 @@ final class NpcComposition {
                                 i_77_ = ((class225.anIntArrayArray2939[i_73_][3]) << 3);
                                 i_74_ = (class225.anIntArrayArray2939[i_73_][0]);
                             }
-                            if (i_77_ != 0 || i_78_ != 0 || i_79_ != 0) class124s[i_73_].method1107(6875, i_78_, i_79_, i_77_);
-                            if (i_74_ != 0 || i_75_ != 0 || i_76_ != 0) class124s[i_73_].method1099((byte) 93, i_76_, i_74_, i_75_);
+                            if (i_77_ != 0 || i_78_ != 0 || i_79_ != 0) class124s[i_73_].decodedOperation1107(6875, i_78_, i_79_, i_77_);
+                            if (i_74_ != 0 || i_75_ != 0 || i_76_ != 0) class124s[i_73_].decodedOperation1099((byte) 93, i_76_, i_74_, i_75_);
                         }
                     }
                 }
@@ -568,7 +568,7 @@ final class NpcComposition {
             }
             if (!bool_44_ && !bool_83_) return class64_82_;
             DisplayModeManagerContainer204[] class101s = null;
-            if (class225 != null) class101s = class225.method1618(var_ha, 0);
+            if (class225 != null) class101s = class225.decodedOperation1618(var_ha, 0);
             if (bool_83_ && class101s != null) {
                 for (int i_85_ = 0; i_85_ < 12; i_85_++) {
                     if (class101s[i_85_] != null) class64_82_.clipVertices(class101s[i_85_], 1 << i_85_, true);
@@ -578,7 +578,7 @@ final class NpcComposition {
             int i_87_ = 1;
             while (i_86_ < i_49_) {
                 if ((Component349.aClass348_Sub42_Sub17Array10010[i_86_]) != null)
-                    class64_82_.method603((byte) -55, -1 + VideoAdPlayer.anIntArray4648[i_86_], null, i_87_, Component330.anIntArray1518[i_86_], Component191.anIntArray2466[i_86_], (HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_86_]), 0, (Component349.aClass348_Sub42_Sub17Array10010[i_86_]), (ImageTagText.aClass17Array2169[i_86_].aBoolean242), Component179.anIntArray9050[i_86_]);
+                    class64_82_.decodedOperation603((byte) -55, -1 + VideoAdPlayer.anIntArray4648[i_86_], null, i_87_, Component330.anIntArray1518[i_86_], Component191.anIntArray2466[i_86_], (HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_86_]), 0, (Component349.aClass348_Sub42_Sub17Array10010[i_86_]), (ImageTagText.aClass17Array2169[i_86_].aBoolean242), Component179.anIntArray9050[i_86_]);
                 i_86_++;
                 i_87_ <<= 1;
             }
@@ -599,9 +599,9 @@ final class NpcComposition {
                 }
             }
             if (class348_sub42_sub17 != null && class348_sub42_sub17_63_ != null)
-                class64_82_.method625(class348_sub42_sub17_59_, i_58_, (byte) 122, i_62_, class348_sub42_sub17_63_, i_56_, i_60_, -1 + i_41_, class348_sub42_sub17, (class17_36_.aBoolean242 | class17.aBoolean242), i_57_, class348_sub42_sub17_64_, -1 + i_34_, class17_36_.aBooleanArray263, i_61_);
-            else if (class348_sub42_sub17 != null) class64_82_.method617(i_56_, i_58_, class348_sub42_sub17_59_, 0, class348_sub42_sub17, bool, class17_36_.aBoolean242, i_57_, i_41_ + -1);
-            else if (class348_sub42_sub17_63_ != null) class64_82_.method617(i_60_, i_62_, class348_sub42_sub17_64_, 0, class348_sub42_sub17_63_, false, class17.aBoolean242, i_61_, i_34_ - 1);
+                class64_82_.decodedOperation625(class348_sub42_sub17_59_, i_58_, (byte) 122, i_62_, class348_sub42_sub17_63_, i_56_, i_60_, -1 + i_41_, class348_sub42_sub17, (class17_36_.aBoolean242 | class17.aBoolean242), i_57_, class348_sub42_sub17_64_, -1 + i_34_, class17_36_.aBooleanArray263, i_61_);
+            else if (class348_sub42_sub17 != null) class64_82_.decodedOperation617(i_56_, i_58_, class348_sub42_sub17_59_, 0, class348_sub42_sub17, bool, class17_36_.aBoolean242, i_57_, i_41_ + -1);
+            else if (class348_sub42_sub17_63_ != null) class64_82_.decodedOperation617(i_60_, i_62_, class348_sub42_sub17_64_, 0, class348_sub42_sub17_63_, false, class17.aBoolean242, i_61_, i_34_ - 1);
             for (int i_91_ = 0; i_49_ > i_91_; i_91_++) {
                 Component349.aClass348_Sub42_Sub17Array10010[i_91_] = null;
                 HashNodeSub17.aClass348_Sub42_Sub17Array9672[i_91_] = null;
@@ -615,34 +615,34 @@ final class NpcComposition {
         }
     }
 
-    final String method801(byte i, int i_92_, String string) {
+    final String decodedOperation801(byte i, int i_92_, String string) {
         anInt1378++;
         if (aClass356_1386 == null) return string;
-        if (i != 17) method801((byte) -115, -68, null);
+        if (i != 17) decodedOperation801((byte) -115, -68, null);
         NodeSub50 class348_sub50 = ((NodeSub50) aClass356_1386.get(i_92_, i + -6025));
         if (class348_sub50 == null) return string;
         return class348_sub50.stringValue;
     }
 
-    static final boolean method802(int i, int i_93_, boolean bool) {
+    static final boolean decodedOperation802(int i, int i_93_, boolean bool) {
         if (bool != true) return false;
         anInt1332++;
         if (i_93_ < 0 || i < 0 || i_93_ >= ObjectDeserializer.aByteArrayArrayArray6962[1].length || i >= ObjectDeserializer.aByteArrayArrayArray6962[1][i_93_].length) return false;
         return (ObjectDeserializer.aByteArrayArrayArray6962[1][i_93_][i] & 0x2) != 0;
     }
 
-    final DisplayModeManagerContainer370 method803(Interface17 interface17, GraphicsToolkit var_ha, int i, int i_94_, DisplayModeManagerContainer167 class17, Component344 class87, int i_95_, int i_96_, int i_97_) {
+    final DisplayModeManagerContainer370 decodedOperation803(Interface17 interface17, GraphicsToolkit var_ha, int i, int i_94_, DisplayModeManagerContainer167 class17, Component344 class87, int i_95_, int i_96_, int i_97_) {
         try {
             anInt1389++;
             if (this.anIntArray1377 != null) {
-                NpcComposition class79_98_ = method794(interface17, -1);
+                NpcComposition class79_98_ = decodedOperation794(interface17, -1);
                 if (class79_98_ == null) return null;
-                return class79_98_.method803(interface17, var_ha, i, i_94_, class17, class87, i_95_, 104, i_97_);
+                return class79_98_.decodedOperation803(interface17, var_ha, i, i_94_, class17, class87, i_95_, 104, i_97_);
             }
-            if (i_96_ <= 98) method796(null, -10);
+            if (i_96_ <= 98) decodedOperation796(null, -10);
             if (anIntArray1380 == null) return null;
             int i_99_ = i_97_;
-            if (class17 != null && i_95_ != -1) i_99_ |= class17.method263(i_94_, 97, i_95_, true);
+            if (class17 != null && i_95_ != -1) i_99_ |= class17.decodedOperation263(i_94_, 97, i_95_, true);
             DisplayModeManagerContainer370 class64;
             synchronized (this.aClass278_1348.aClass60_3592) {
                 class64 = ((DisplayModeManagerContainer370) (this.aClass278_1348.aClass60_3592.get(var_ha.anInt4567 << 16 | this.id, 64)));
@@ -663,7 +663,7 @@ final class NpcComposition {
                         class124s[i_102_] = Component189.loadFromCache(0, (this.aClass278_1348.aClass45_3576), anIntArray1380[i_102_], -1);
                 }
                 for (int i_103_ = 0; (i_103_ < anIntArray1380.length); i_103_++) {
-                    if (class124s[i_103_] != null && class124s[i_103_].anInt1830 < 13) class124s[i_103_].method1092(2, 66);
+                    if (class124s[i_103_] != null && class124s[i_103_].anInt1830 < 13) class124s[i_103_].decodedOperation1092(2, 66);
                 }
                 DisplayModeManagerContainer77 class124;
                 if (class124s.length == 1) class124 = class124s[0];
@@ -688,7 +688,7 @@ final class NpcComposition {
                     this.aClass278_1348.aClass60_3592.putOne(class64, var_ha.anInt4567 << 16 | this.id, (byte) -96);
                 }
             }
-            if (class17 != null && i_95_ != -1) class64 = class17.method269(-9, class64, i_94_, i, i_99_, i_95_);
+            if (class17 != null && i_95_ != -1) class64 = class17.decodedOperation269(-9, class64, i_94_, i, i_99_, i_95_);
             class64.s(i_97_);
             return class64;
         } catch (RuntimeException runtimeexception) {
@@ -696,16 +696,16 @@ final class NpcComposition {
         }
     }
 
-    public static void method804(int i) {
+    public static void decodedOperation804(int i) {
         aClass105_1365 = null;
         aClient1367 = null;
         if (i != -3752) anInt1387 = 14;
     }
 
-    final int method805(int i, int i_106_, int i_107_) {
+    final int decodedOperation805(int i, int i_106_, int i_107_) {
         anInt1326++;
         if (aClass356_1386 == null) return i;
-        if (i_107_ <= 12) method805(46, 116, 126);
+        if (i_107_ <= 12) decodedOperation805(46, 116, 126);
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_1386.get(i_106_, -6008);
         if (class348_sub35 == null) return i;
         return class348_sub35.intValue;

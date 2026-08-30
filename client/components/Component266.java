@@ -16,28 +16,28 @@ final class Component266
     static int anInt5980 = 0;
     static int anInt5981;
 
-    final int method1776(int i) {
+    final int decodedOperation1776(int i) {
         if (i != -32350) anInt5980 = 42;
         anInt5978++;
         return this.preferenceValue;
     }
 
     final void validateValue(boolean bool) {
-        if (this.preferences.method3422(674) == WorldNameText.STELLARDAWN) this.preferenceValue = 2;
+        if (this.preferences.decodedOperation3422(674) == WorldNameText.STELLARDAWN) this.preferenceValue = 2;
         if (bool == false) {
             anInt5974++;
             if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
-    static final void method1777(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void decodedOperation1777(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         if (i == -3) {
             if (class318_sub1_sub3_sub3 instanceof Npc) {
                 Npc npc = (Npc) class318_sub1_sub3_sub3;
                 if (npc.definition != null) ParticleShader.addNpcMenuOptions(((Component72.localPlayer.plane) != (npc.plane)), false, npc);
             } else if (class318_sub1_sub3_sub3 instanceof Player) {
                 Player player = ((Player) class318_sub1_sub3_sub3);
-                PlayerState.method3298((byte) 105, ((player.plane) != (Component72.localPlayer.plane)), player);
+                PlayerState.decodedOperation3298((byte) 105, ((player.plane) != (Component72.localPlayer.plane)), player);
             }
             anInt5981++;
         }

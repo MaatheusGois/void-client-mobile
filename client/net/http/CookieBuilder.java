@@ -29,7 +29,7 @@ final class CookieBuilder {
     static final BrowserDetector createBrowserDetector(byte i) {
         anInt616++;
         if (i != 68) createBrowserDetector((byte) -42);
-        return Component183.method1059((byte) 95, 1);
+        return Component183.decodedOperation1059((byte) 95, 1);
     }
 
     /** Write {@code settings=} cookie via {@code document.cookie} (empty clears). */
@@ -51,11 +51,11 @@ final class CookieBuilder {
         }
     }
 
-    static final void method383(int i) {
+    static final void decodedOperation383(int i) {
         for (int i_3_ = i; AudioMixer.anInt3225 > i_3_; i_3_++) {
-            int i_4_ = (Component360.method3452(ShaderProgram.anInt3682 + i_3_, (byte) -15, AudioMixer.anInt3225) * Component82.anInt425);
+            int i_4_ = (Component360.decodedOperation3452(ShaderProgram.anInt3682 + i_3_, (byte) -15, AudioMixer.anInt3225) * Component82.anInt425);
             for (int i_5_ = 0; Component82.anInt425 > i_5_; i_5_++) {
-                int i_6_ = (Component360.method3452(i_5_ - -ColoredText.anInt6095, (byte) -15, Component82.anInt425) + i_4_);
+                int i_6_ = (Component360.decodedOperation3452(i_5_ - -ColoredText.anInt6095, (byte) -15, Component82.anInt425) + i_4_);
                 if (Component72.anIntArray1909[i_6_] == Component212.anInt9997) DisplayModeManagerContainer23.anInterface4Array1525[i_6_].method14(0, 0, Component255.anInt1067, AbstractBuffer.anInt4267, i_5_ * Component255.anInt1067, AbstractBuffer.anInt4267 * i_3_, true, true);
             }
         }

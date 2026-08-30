@@ -27,9 +27,9 @@ final class Component15
     int anInt4929;
     static int anInt4930 = 0;
 
-    public static void method1109(byte i) {
+    public static void decodedOperation1109(byte i) {
         helveticaGlyphs11 = null;
-        if (i != -22) method1111(127, -73, -7, -77, -85, 79);
+        if (i != -22) decodedOperation1111(127, -73, -7, -77, -85, 79);
         aClass356_4915 = null;
     }
 
@@ -39,22 +39,22 @@ final class Component15
         return MatrixSub1.aClass223_5689;
     }
 
-    static final boolean method1110(int i, int i_0_, int i_1_, byte i_2_, int i_3_) {
+    static final boolean decodedOperation1110(int i, int i_0_, int i_1_, byte i_2_, int i_3_) {
         anInt4916++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
         if (Component241.occludedPixelCount < 100) return false;
-        if (!ShaderSub2.method164(i_1_, i_3_, (byte) -97, i)) return false;
+        if (!ShaderSub2.decodedOperation164(i_1_, i_3_, (byte) -97, i)) return false;
         int i_4_ = i_3_ << Component149.anInt4459;
         int i_5_ = i << Component149.anInt4459;
         if (i_2_ != -79) anInt4919 = 64;
-        if (Component221.method1084(i_0_, Component148.anInt3465, i_5_, i_4_, ShaderSub1.aSArray5191[i_1_].getHeight((byte) -86, i, i_3_), Component148.anInt3465, 18507)) {
+        if (Component221.decodedOperation1084(i_0_, Component148.anInt3465, i_5_, i_4_, ShaderSub1.aSArray5191[i_1_].getHeight((byte) -86, i, i_3_), Component148.anInt3465, 18507)) {
             DefinitionSub4.occludedCpCount++;
             return true;
         }
         return false;
     }
 
-    static final void method1111(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
+    static final void decodedOperation1111(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
         for (int i_11_ = i_9_; i >= i_11_; i_11_++)
             MenuOpener.fillInts(-27, i_7_, DisplayModeManagerContainer167.anIntArrayArray255[i_11_], i_8_, i_10_);
         if (i_6_ != 0) anInt4930 = 29;

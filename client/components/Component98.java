@@ -30,7 +30,7 @@ final class Component98
     static final void queueAreaSound(int i, int i_0_, boolean bool, int i_1_, byte i_2_, int i_3_, int i_4_, int i_5_) {
         if (i_2_ > -85) getEffectivePlane(-14, 70, 13, -100);
         anInt5940++;
-        if ((bool ? Component192.preferences.aClass239_Sub26_7215.method1838(-32350) : Component192.preferences.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && Component335.anInt2021 < 50 && i != -1)
+        if ((bool ? Component192.preferences.aClass239_Sub26_7215.decodedOperation1838(-32350) : Component192.preferences.aClass239_Sub26_7272.decodedOperation1838(-32350)) != 0 && i_3_ != 0 && Component335.anInt2021 < 50 && i != -1)
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
     }
 
@@ -43,9 +43,9 @@ final class Component98
     /** Present HUD overlays (no camera tick): particles, root interface, menu tip priority. */
     static final void redrawHud(int i) {
         anInt5935++;
-        ParticleSystem.method3324(NodeSub8.toolkit, (byte) 105, OpenGlShader.clientCycle);
+        ParticleSystem.decodedOperation3324(NodeSub8.toolkit, (byte) 105, OpenGlShader.clientCycle);
         if (i != 85) anInt5943 = -99;
-        if (r.anInt9721 != -1) DisplayModeManagerContainer216.method769(r.anInt9721, (byte) 118);
+        if (r.anInt9721 != -1) DisplayModeManagerContainer216.decodedOperation769(r.anInt9721, (byte) 118);
         for (int i_6_ = 0; NodeSub38.anInt7008 > i_6_; i_6_++) {
             if (InflaterDecompressor.aBooleanArray2076[i_6_]) DisplayModeManagerContainer259.aBooleanArray3438[i_6_] = true;
             Component143.aBooleanArray2326[i_6_] = InflaterDecompressor.aBooleanArray2076[i_6_];
@@ -54,10 +54,10 @@ final class Component98
         Component255.anInt1064 = OpenGlShader.clientCycle;
         if (r.anInt9721 != -1) {
             NodeSub38.anInt7008 = 0;
-            TheoraVideoPlayer.method842(false);
+            TheoraVideoPlayer.decodedOperation842(false);
         }
         NodeSub8.toolkit.la();
-        HashNodeSub20.method3281((byte) 77, NodeSub8.toolkit);
+        HashNodeSub20.decodedOperation3281((byte) 77, NodeSub8.toolkit);
         int i_7_ = DisplayModeManagerContainer67.getTipCursorId(3112);
         if (i_7_ == -1) i_7_ = Component149.widgetCursorId;
         if (i_7_ == -1) i_7_ = HashNodeSub16Sub1.defaultCursorId;
@@ -80,14 +80,14 @@ final class Component98
         return i_10_;
     }
 
-    public static void method1763(int i) {
+    public static void decodedOperation1763(int i) {
         aClass351_5938 = null;
-        if (i != -15596) method1763(-92);
+        if (i != -15596) decodedOperation1763(-92);
     }
 
-    final int method1764(int i) {
+    final int decodedOperation1764(int i) {
         anInt5942++;
-        if (i != -32350) method1763(18);
+        if (i != -32350) decodedOperation1763(18);
         return this.preferenceValue;
     }
 
@@ -97,7 +97,7 @@ final class Component98
         return 1;
     }
 
-    static final char method1765(char c, int i, int i_15_) {
+    static final char decodedOperation1765(char c, int i, int i_15_) {
         anInt5946++;
         if (c >= 192 && c <= 255) {
             if (c >= 192 && c <= 198) return 'A';
@@ -123,7 +123,7 @@ final class Component98
         return c;
     }
 
-    static final Component184 method1766(byte i, int i_16_, CacheStore class45) {
+    static final Component184 decodedOperation1766(byte i, int i_16_, CacheStore class45) {
         anInt5944++;
         if (i >= -24) return null;
         byte[] is = class45.getSingletonFile((byte) 73, i_16_);

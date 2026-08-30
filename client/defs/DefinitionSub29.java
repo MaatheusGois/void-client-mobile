@@ -71,20 +71,20 @@ final class DefinitionSub29
         anIntArray9375 = null;
     }
 
-    static final boolean method3124(int i, byte i_13_, int i_14_) {
+    static final boolean decodedOperation3124(int i, byte i_13_, int i_14_) {
         anInt9371++;
-        if (i_13_ > -55) method3124(-76, (byte) -110, -59);
-        return (i_14_ & 0x40000) != 0 | Component179.method2985(-31735, i, i_14_) || PacketReader.isPacketAllowed(i_14_, i, (byte) -120);
+        if (i_13_ > -55) decodedOperation3124(-76, (byte) -110, -59);
+        return (i_14_ & 0x40000) != 0 | Component179.decodedOperation2985(-31735, i, i_14_) || PacketReader.isPacketAllowed(i_14_, i, (byte) -120);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_15_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_15_) {
         if (i_15_ == 31015) {
             if (i == 0) anInt9380 = class348_sub49.readUnsignedShort(842397944);
             anInt9376++;
         }
     }
 
-    static final boolean method3125(int i, int i_16_, int i_17_, int i_18_, int i_19_, byte i_20_, int i_21_, int i_22_, int i_23_, int i_24_) {
+    static final boolean decodedOperation3125(int i, int i_16_, int i_17_, int i_18_, int i_19_, byte i_20_, int i_21_, int i_22_, int i_23_, int i_24_) {
         anInt9377++;
         if (i_16_ > 2000 || i_21_ > 2000 || i_24_ > 2000 || i_23_ > 2000 || i_17_ > 2000 || i > 2000) return false;
         if (i_16_ < -2000 || i_21_ < -2000 || i_24_ < -2000 || i_23_ < -2000 || i_17_ < -2000 || i < -2000) return false;
@@ -150,14 +150,14 @@ final class DefinitionSub29
                         i_16_ -= i_24_;
                         i_24_ *= Component314.anInt3872;
                         while (--i_16_ >= 0) {
-                            if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, 1 + (i >> 12), (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                            if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, 1 + (i >> 12), (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                             i_24_ += Component314.anInt3872;
                             i += i_34_;
                             i_17_ += i_33_;
                             i_18_ += i_37_;
                         }
                         while (--i_21_ >= 0) {
-                            if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, 1 + (i_23_ >> 12), -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                            if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, 1 + (i_23_ >> 12), -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                             i_24_ += Component314.anInt3872;
                             i_23_ += i_32_;
                             i_18_ += i_37_;
@@ -169,14 +169,14 @@ final class DefinitionSub29
                     i_16_ -= i_24_;
                     i_24_ *= Component314.anInt3872;
                     while (--i_16_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) + 1, -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) + 1, -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                         i_18_ += i_37_;
                         i_17_ += i_33_;
                         i_24_ += Component314.anInt3872;
                         i += i_34_;
                     }
                     while (--i_21_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) - -1, (i_23_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) - -1, (i_23_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                         i_18_ += i_37_;
                         i_17_ += i_33_;
                         i_24_ += Component314.anInt3872;
@@ -201,14 +201,14 @@ final class DefinitionSub29
                     i_21_ -= i_24_;
                     i_24_ *= Component314.anInt3872;
                     while (--i_21_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, (i_23_ >> 12) - -1, (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, (i_23_ >> 12) - -1, (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                         i_18_ += i_37_;
                         i_24_ += Component314.anInt3872;
                         i_23_ += i_33_;
                         i += i_34_;
                     }
                     while (--i_16_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) - -1, (i >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, (i_17_ >> 12) - -1, (i >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                         i += i_34_;
                         i_17_ += i_32_;
                         i_18_ += i_37_;
@@ -220,14 +220,14 @@ final class DefinitionSub29
                 i_21_ -= i_24_;
                 i_24_ = Component314.anInt3872 * i_24_;
                 while (--i_21_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, 1 + (i >> 12), -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, 1 + (i >> 12), -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                     i += i_34_;
                     i_24_ += Component314.anInt3872;
                     i_23_ += i_33_;
                     i_18_ += i_37_;
                 }
                 while (--i_16_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_18_, 0, (i >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_18_, 0, (i >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_24_)) return false;
                     i_18_ += i_37_;
                     i_17_ += i_32_;
                     i_24_ += Component314.anInt3872;
@@ -257,14 +257,14 @@ final class DefinitionSub29
                     i_16_ -= i_21_;
                     i_21_ = Component314.anInt3872 * i_21_;
                     while (--i_16_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i >> 12) - -1, (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i >> 12) - -1, (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                         i_17_ += i_33_;
                         i_19_ += i_37_;
                         i_21_ += Component314.anInt3872;
                         i += i_32_;
                     }
                     while (--i_24_ >= 0) {
-                        if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                        if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                         i_19_ += i_37_;
                         i_21_ += Component314.anInt3872;
                         i_17_ += i_33_;
@@ -276,14 +276,14 @@ final class DefinitionSub29
                 i_16_ -= i_21_;
                 i_21_ = Component314.anInt3872 * i_21_;
                 while (--i_16_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, 1 + (i_17_ >> 12), (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, 1 + (i_17_ >> 12), (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                     i_21_ += Component314.anInt3872;
                     i_17_ += i_33_;
                     i_19_ += i_37_;
                     i += i_32_;
                 }
                 while (--i_24_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, 1 + (i_17_ >> 12), (i_23_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, 1 + (i_17_ >> 12), (i_23_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                     i_17_ += i_33_;
                     i_23_ += i_34_;
                     i_19_ += i_37_;
@@ -308,14 +308,14 @@ final class DefinitionSub29
                 i_24_ -= i_21_;
                 i_21_ = Component314.anInt3872 * i_21_;
                 while (--i_24_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i_17_ >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i_17_ >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                     i_23_ += i_32_;
                     i_19_ += i_37_;
                     i_21_ += Component314.anInt3872;
                     i_17_ += i_33_;
                 }
                 while (--i_16_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                     i_23_ += i_32_;
                     i += i_34_;
                     i_19_ += i_37_;
@@ -327,14 +327,14 @@ final class DefinitionSub29
             i_24_ -= i_21_;
             i_21_ = Component314.anInt3872 * i_21_;
             while (--i_24_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, (i_17_ >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                 i_17_ += i_33_;
                 i_23_ += i_32_;
                 i_21_ += Component314.anInt3872;
                 i_19_ += i_37_;
             }
             while (--i_16_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_19_, 0, (i_23_ >> 12) - -1, -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_21_)) return false;
                 i_19_ += i_37_;
                 i_21_ += Component314.anInt3872;
                 i_23_ += i_32_;
@@ -364,14 +364,14 @@ final class DefinitionSub29
                 i_21_ -= i_16_;
                 i_16_ *= Component314.anInt3872;
                 while (--i_21_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, 1 + (i_23_ >> 12), -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, 1 + (i_23_ >> 12), -1 + (i >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                     i_22_ += i_37_;
                     i_16_ += Component314.anInt3872;
                     i_23_ += i_32_;
                     i += i_34_;
                 }
                 while (--i_24_ >= 0) {
-                    if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, 1 + (i_17_ >> 12), (i >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                    if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, 1 + (i_17_ >> 12), (i >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                     i_17_ += i_33_;
                     i += i_34_;
                     i_22_ += i_37_;
@@ -383,14 +383,14 @@ final class DefinitionSub29
             i_21_ -= i_16_;
             i_16_ *= Component314.anInt3872;
             while (--i_21_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, 1 + (i >> 12), (i_23_ >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, 1 + (i >> 12), (i_23_ >> 12) + -1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                 i_16_ += Component314.anInt3872;
                 i_22_ += i_37_;
                 i += i_34_;
                 i_23_ += i_32_;
             }
             while (--i_24_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, (i >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, (i >> 12) - -1, -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                 i_17_ += i_33_;
                 i_16_ += Component314.anInt3872;
                 i_22_ += i_37_;
@@ -415,14 +415,14 @@ final class DefinitionSub29
             i_24_ -= i_16_;
             i_16_ = Component314.anInt3872 * i_16_;
             while (--i_24_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, 1 + (i_17_ >> 12), -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, 1 + (i_17_ >> 12), -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                 i_17_ += i_34_;
                 i_23_ += i_32_;
                 i_22_ += i_37_;
                 i_16_ += Component314.anInt3872;
             }
             while (--i_21_ >= 0) {
-                if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, (i >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+                if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, (i >> 12) - -1, -1 + (i_23_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
                 i_23_ += i_32_;
                 i_22_ += i_37_;
                 i += i_33_;
@@ -434,14 +434,14 @@ final class DefinitionSub29
         i_24_ -= i_16_;
         i_16_ *= Component314.anInt3872;
         while (--i_24_ >= 0) {
-            if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, 1 + (i_23_ >> 12), -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+            if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, 1 + (i_23_ >> 12), -1 + (i_17_ >> 12), DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
             i_16_ += Component314.anInt3872;
             i_23_ += i_32_;
             i_22_ += i_37_;
             i_17_ += i_34_;
         }
         while (--i_21_ >= 0) {
-            if (!DisplayModeManagerContainer154.method771(i_36_, (byte) -25, i_22_, 0, (i_23_ >> 12) - -1, (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
+            if (!DisplayModeManagerContainer154.decodedOperation771(i_36_, (byte) -25, i_22_, 0, (i_23_ >> 12) - -1, (i >> 12) - 1, DisplayModeManagerContainer194.anIntArray5091, i_16_)) return false;
             i_16_ += Component314.anInt3872;
             i += i_33_;
             i_22_ += i_37_;

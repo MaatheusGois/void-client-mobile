@@ -27,7 +27,7 @@ final class OggStreamReader extends OggStream {
         anInt9046++;
     }
 
-    public static void method2981(boolean bool) {
+    public static void decodedOperation2981(boolean bool) {
         anIntArray9042 = null;
         if (bool != false) anInt9041 = -95;
         aString9043 = null;

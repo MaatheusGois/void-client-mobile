@@ -16,10 +16,10 @@ final class DefinitionSub17Sub1
     }
 
     final int[][] getColourOutput(int i, int i_0_) {
-        if (i_0_ != -1564599039) method3093(54);
+        if (i_0_ != -1564599039) decodedOperation3093(54);
         anInt10425++;
         int[][] is = this.imageCacheStore.getPixels(-93, i);
-        if (this.imageCacheStore.cacheMiss && this.method3090(true)) {
+        if (this.imageCacheStore.cacheMiss && this.decodedOperation3090(true)) {
             int[] is_1_ = is[0];
             int[] is_2_ = is[1];
             int[] is_3_ = is[2];
@@ -34,15 +34,15 @@ final class DefinitionSub17Sub1
         return is;
     }
 
-    public static void method3092(int i) {
+    public static void decodedOperation3092(int i) {
         if (i != -1) aClass45_10426 = null;
         aClass45_10426 = null;
     }
 
-    static final void method3093(int i) {
+    static final void decodedOperation3093(int i) {
         if (i > 85) {
             anInt10427++;
-            NodeSub5.method2755(-1, 255, -1);
+            NodeSub5.decodedOperation2755(-1, 255, -1);
         }
     }
 }

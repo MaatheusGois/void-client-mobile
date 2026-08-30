@@ -23,7 +23,7 @@ final class ColoredTextBuilder {
     static ColoredTextBuilder aClass325_4078 = new ColoredTextBuilder(4, 2, Component342.aClass68_1187);
     static ColoredTextBuilder aClass325_4079 = new ColoredTextBuilder(5, 3, Component342.aClass68_1187);
     static ColoredTextBuilder aClass325_4080 = new ColoredTextBuilder(6, 4, Component342.aClass68_1187);
-    static int anInt4081 = Component80.method2253(16, 119);
+    static int anInt4081 = Component80.decodedOperation2253(16, 119);
     static Component161 aClass138_4082 = new Component161(8, 0, 4, 1);
 
     public final String toString() {
@@ -31,7 +31,7 @@ final class ColoredTextBuilder {
         throw new IllegalStateException();
     }
 
-    static final byte[][][] method2596(int i, int i_0_) {
+    static final byte[][][] decodedOperation2596(int i, int i_0_) {
         anInt4068++;
         byte[][][] is = new byte[8][4][];
         int i_1_ = i;
@@ -330,7 +330,7 @@ final class ColoredTextBuilder {
         return is;
     }
 
-    public static void method2597(int i) {
+    public static void decodedOperation2597(int i) {
         aClass325_4073 = null;
         aClass325_4080 = null;
         aClass325_4078 = null;
@@ -343,7 +343,7 @@ final class ColoredTextBuilder {
         }
     }
 
-    static final ColoredTextBuilder method2598(int i, int i_69_) {
+    static final ColoredTextBuilder decodedOperation2598(int i, int i_69_) {
         anInt4074++;
         int i_70_ = -44 / ((-47 - i_69_) / 45);
         int i_71_ = i;
@@ -404,22 +404,22 @@ final class ColoredTextBuilder {
                 if (class348_sub42_sub12 != null && (class348_sub42_sub12 != (DefinitionSub4.menuEntries.sentinel))) {
                     // Client-only Default click config — do not send a game packet.
                     if (DefaultClickSwapper.handleMenuAction(class348_sub42_sub12)) {
-                        ShaderProgramSub2.method2146((byte) 84);
+                        ShaderProgramSub2.decodedOperation2146((byte) 84);
                         break;
                     }
                     // Client-only joystick Learn alias — do not send a game packet.
                     if (JoystickAlias.handleMenuAction(class348_sub42_sub12)) {
-                        ShaderProgramSub2.method2146((byte) 84);
+                        ShaderProgramSub2.decodedOperation2146((byte) 84);
                         break;
                     }
                     // Client-only Microbot toggle — do not send a game packet.
                     if (MicrobotRuntime.handleMenuAction(class348_sub42_sub12)) {
-                        ShaderProgramSub2.method2146((byte) 84);
+                        ShaderProgramSub2.decodedOperation2146((byte) 84);
                         break;
                     }
                     // Client-only world-map teleport — do not send a game packet.
                     if (WorldMapTeleport.handle(class348_sub42_sub12)) {
-                        ShaderProgramSub2.method2146((byte) 84);
+                        ShaderProgramSub2.decodedOperation2146((byte) 84);
                         break;
                     }
                     // Clear Microbot targetMenu after any real (or attempted) menu consume.
@@ -432,7 +432,7 @@ final class ColoredTextBuilder {
                     long l = (class348_sub42_sub12.identifier);
                     if (i_76_ == 19) {
                         if (Component353.anInt2581 <= 0 || !Component280.aClass346_2449.isKeyDown(82, -125) || !Component280.aClass346_2449.isKeyDown(81, -126)) {
-                            ParticleSystem class348_sub47 = NodeSub14.method2807(i_75_, i_74_, (byte) -110, i_77_);
+                            ParticleSystem class348_sub47 = NodeSub14.decodedOperation2807(i_75_, i_74_, (byte) -110, i_77_);
                             if (i_77_ == 1) {
                                 class348_sub47.particleBuffer.writeByte(false, -1);
                                 class348_sub47.particleBuffer.writeByte(false, -1);
@@ -451,8 +451,8 @@ final class ColoredTextBuilder {
                                 Component20.anInt6048 = 1;
                             }
                             HashNodeSub14.enqueueOutboundPacket(123, class348_sub47);
-                            Component10.method2252(true, i_74_, i_75_, (byte) -120, 1, 0, 1, -4, 0);
-                        } else CollisionMap.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), i_74_ + NodeBaseSub2.regionTileX);
+                            Component10.decodedOperation2252(true, i_74_, i_75_, (byte) -120, 1, 0, 1, -4, 0);
+                        } else CollisionMap.decodedOperation3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), i_74_ + NodeBaseSub2.regionTileX);
                     }
                     if (i_76_ == 4) {
                         ToolkitFactory.anInt1534 = i_72_;
@@ -466,7 +466,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeByteSubtract((byte) 117, (!Component280.aClass346_2449.isKeyDown(82, -122) ? 0 : 1));
                         class348_sub47.particleBuffer.writeShortAddLittle(4325, 0x7fffffff & (int) (l >>> 32));
                         HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
-                        DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 51);
+                        DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 51);
                     }
                     if (i_76_ == 1008) {
                         Component20.anInt6048 = 2;
@@ -477,7 +477,7 @@ final class ColoredTextBuilder {
                         if (class348_sub22 != null) {
                             Npc npc = (class348_sub22.npc);
                             NpcComposition class79 = (npc.definition);
-                            if (class79.anIntArray1377 != null) class79 = (class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1));
+                            if (class79.anIntArray1377 != null) class79 = (class79.decodedOperation794((DisplayModeManagerContainer58.aClass170_10209), -1));
                             if (class79 != null) {
                                 Component314.anInt3874++;
                                 ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(StaticElementRenderer.aClass351_6443, DisplayModeManagerContainer64.aClass77_9029, -111));
@@ -498,7 +498,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShortAdd(81, i_77_);
                             class348_sub47.particleBuffer.writeByte(false, (!Component280.aClass346_2449.isKeyDown(82, -126) ? 0 : 1));
                             HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -89, player.getSize((byte) 106), 0, player.getSize((byte) 43), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -89, player.getSize((byte) 106), 0, player.getSize((byte) 43), -2, 0);
                         }
                     }
                     if (i_76_ == 49) {
@@ -516,11 +516,11 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShortAdd(90, Component281.anInt3829);
                         class348_sub47.particleBuffer.writeIntMiddle(Component90.anInt2046, (byte) 44);
                         HashNodeSub14.enqueueOutboundPacket(120, class348_sub47);
-                        HashNodeSub18.method3275(1, i_75_, i_74_);
+                        HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 6) {
                         DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
-                        if (class46 != null) Component177.method1237((byte) 71, class46);
+                        if (class46 != null) Component177.decodedOperation1237((byte) 71, class46);
                     }
                     if (i_76_ == 5) {
                         Node.anInt4292 = 0;
@@ -534,7 +534,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeByteInverse((byte) -44, (!Component280.aClass346_2449.isKeyDown(82, -122) ? 0 : 1));
                         class348_sub47.particleBuffer.writeShortAdd(97, i_77_);
                         HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
-                        HashNodeSub18.method3275(1, i_75_, i_74_);
+                        HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 46) {
                         NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
@@ -549,7 +549,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShortLittle(i_77_, (byte) 3);
                             class348_sub47.particleBuffer.writeByteAdd((byte) 124, (Component280.aClass346_2449.isKeyDown(82, -121) ? 1 : 0));
                             HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
-                            Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -100, npc.getSize((byte) 68), 0, npc.getSize((byte) 106), -2, 0);
+                            Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -100, npc.getSize((byte) 68), 0, npc.getSize((byte) 106), -2, 0);
                         }
                     }
                     if (i_76_ == 11) {
@@ -564,7 +564,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShortAddLittle(4325, i_77_);
                             class348_sub47.particleBuffer.writeByteInverse((byte) -108, (Component280.aClass346_2449.isKeyDown(82, -124) ? 1 : 0));
                             HashNodeSub14.enqueueOutboundPacket(119, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -128, player.getSize((byte) 53), 0, player.getSize((byte) 110), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -128, player.getSize((byte) 53), 0, player.getSize((byte) 110), -2, 0);
                         }
                     }
                     if (i_76_ == 59) {
@@ -579,7 +579,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShortAdd(-104, NodeBaseSub2.regionTileX + i_74_);
                         class348_sub47.particleBuffer.writeShortLittle(Component330.regionTileY + i_75_, (byte) 3);
                         HashNodeSub14.enqueueOutboundPacket(119, class348_sub47);
-                        DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 93);
+                        DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 93);
                     }
                     if (i_76_ == 30) {
                         NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
@@ -597,11 +597,11 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByteAdd((byte) -89, (!Component280.aClass346_2449.isKeyDown(82, -127) ? 0 : 1));
                             class348_sub47.particleBuffer.writeShortAdd(-116, Component281.anInt3829);
                             HashNodeSub14.enqueueOutboundPacket(122, class348_sub47);
-                            Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -107, npc.getSize((byte) 88), 0, npc.getSize((byte) 108), -2, 0);
+                            Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -107, npc.getSize((byte) 88), 0, npc.getSize((byte) 108), -2, 0);
                         }
                     }
                     if (i_76_ == 12) {
-                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, -127) && Component280.aClass346_2449.isKeyDown(81, -126)) CollisionMap.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), NodeBaseSub2.regionTileX - -i_74_);
+                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, -127) && Component280.aClass346_2449.isKeyDown(81, -126)) CollisionMap.decodedOperation3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), NodeBaseSub2.regionTileX - -i_74_);
                         else {
                             ToolkitFactory.anInt1534 = i_72_;
                             AssetCacheLoader.anInt385 = i_73_;
@@ -639,7 +639,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeIntInverseMiddle(Component90.anInt2046, -4086);
                             class348_sub47.particleBuffer.writeByteInverse((byte) -89, (Component280.aClass346_2449.isKeyDown(82, -127) ? 1 : 0));
                             HashNodeSub14.enqueueOutboundPacket(-33, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -88, player.getSize((byte) 44), 0, player.getSize((byte) 110), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -88, player.getSize((byte) 44), 0, player.getSize((byte) 110), -2, 0);
                         }
                     }
                     if (i_76_ == 45) {
@@ -654,7 +654,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByteSubtract((byte) -125, (Component280.aClass346_2449.isKeyDown(82, -126) ? 1 : 0));
                             class348_sub47.particleBuffer.writeShortLittle(i_77_, (byte) 3);
                             HashNodeSub14.enqueueOutboundPacket(30, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -91, player.getSize((byte) 70), 0, player.getSize((byte) 125), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -91, player.getSize((byte) 70), 0, player.getSize((byte) 125), -2, 0);
                         }
                     }
                     if (i_76_ == 1007) {
@@ -669,7 +669,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShortAddLittle(4325, NodeBaseSub2.regionTileX + i_74_);
                         class348_sub47.particleBuffer.writeShortAdd(68, 0x7fffffff & (int) (l >>> 32));
                         HashNodeSub14.enqueueOutboundPacket(-68, class348_sub47);
-                        DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 25);
+                        DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 25);
                     }
                     if (i_76_ == 23) {
                         Player player = (InterfaceRenderer.players[i_77_]);
@@ -683,11 +683,11 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShort((byte) 107, i_77_);
                             class348_sub47.particleBuffer.writeByteAdd((byte) 60, (!Component280.aClass346_2449.isKeyDown(82, -121) ? 0 : 1));
                             HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -106, player.getSize((byte) 45), 0, player.getSize((byte) 63), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -106, player.getSize((byte) 45), 0, player.getSize((byte) 63), -2, 0);
                         }
                     }
                     if (i_76_ == 16 && Component297.aClass46_4730 == null) {
-                        ImageDefinition.method3065(i_75_, false, i_74_);
+                        ImageDefinition.decodedOperation3065(i_75_, false, i_74_);
                         Component297.aClass46_4730 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
                         Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);
                     }
@@ -703,7 +703,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByte(false, (!Component280.aClass346_2449.isKeyDown(82, -128) ? 0 : 1));
                             class348_sub47.particleBuffer.writeShortAdd(-99, i_77_);
                             HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -106, player.getSize((byte) 100), 0, player.getSize((byte) 99), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -106, player.getSize((byte) 100), 0, player.getSize((byte) 99), -2, 0);
                         }
                     }
                     if (i_76_ == 21) {
@@ -718,7 +718,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShort((byte) 107, i_75_ + Component330.regionTileY);
                         class348_sub47.particleBuffer.writeByteSubtract((byte) 120, (!Component280.aClass346_2449.isKeyDown(82, -123) ? 0 : 1));
                         HashNodeSub14.enqueueOutboundPacket(120, class348_sub47);
-                        HashNodeSub18.method3275(1, i_75_, i_74_);
+                        HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 15) {
                         Component20.anInt6048 = 1;
@@ -733,7 +733,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeInt((byte) 127, Component90.anInt2046);
                         class348_sub47.particleBuffer.writeShortAdd(-84, Component330.regionTileY + i_75_);
                         HashNodeSub14.enqueueOutboundPacket(-62, class348_sub47);
-                        Component10.method2252(true, i_74_, i_75_, (byte) -91, 1, 0, 1, -4, 0);
+                        Component10.decodedOperation2252(true, i_74_, i_75_, (byte) -91, 1, 0, 1, -4, 0);
                     }
                     if (i_76_ == 60) {
                         NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
@@ -748,7 +748,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShort((byte) 107, i_77_);
                             class348_sub47.particleBuffer.writeByteInverse((byte) -67, (Component280.aClass346_2449.isKeyDown(82, -122) ? 1 : 0));
                             HashNodeSub14.enqueueOutboundPacket(119, class348_sub47);
-                            Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -111, npc.getSize((byte) 65), 0, npc.getSize((byte) 42), -2, 0);
+                            Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -111, npc.getSize((byte) 65), 0, npc.getSize((byte) 42), -2, 0);
                         }
                     }
                     if (i_76_ == 2) {
@@ -766,7 +766,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShortLittle(JaclibLoader.anInt169, (byte) 3);
                         class348_sub47.particleBuffer.writeShortLittle((int) (l >>> 32) & 0x7fffffff, (byte) 3);
                         HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
-                        DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 4);
+                        DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 4);
                     }
                     if (i_76_ == 58) {
                         Player player = (InterfaceRenderer.players[i_77_]);
@@ -780,7 +780,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByte(false, (!Component280.aClass346_2449.isKeyDown(82, -121) ? 0 : 1));
                             class348_sub47.particleBuffer.writeShortAdd(52, i_77_);
                             HashNodeSub14.enqueueOutboundPacket(-127, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -93, player.getSize((byte) 119), 0, player.getSize((byte) 54), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -93, player.getSize((byte) 119), 0, player.getSize((byte) 54), -2, 0);
                         }
                     }
                     if (i_76_ == 17) {
@@ -795,7 +795,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByte(false, (!Component280.aClass346_2449.isKeyDown(82, -126) ? 0 : 1));
                             class348_sub47.particleBuffer.writeShort((byte) 107, i_77_);
                             HashNodeSub14.enqueueOutboundPacket(121, class348_sub47);
-                            Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -123, player.getSize((byte) 96), 0, player.getSize((byte) 97), -2, 0);
+                            Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -123, player.getSize((byte) 96), 0, player.getSize((byte) 97), -2, 0);
                         }
                     }
                     if (i_76_ == 47) {
@@ -810,7 +810,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeByte(false, (!Component280.aClass346_2449.isKeyDown(82, -128) ? 0 : 1));
                         class348_sub47.particleBuffer.writeShortAddLittle(4325, i_75_ - -Component330.regionTileY);
                         HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
-                        HashNodeSub18.method3275(1, i_75_, i_74_);
+                        HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                     }
                     if (i_76_ == 3) {
                         DisplayModeManagerContainer346.anInt2065++;
@@ -824,7 +824,7 @@ final class ColoredTextBuilder {
                         class348_sub47.particleBuffer.writeShortLittle(i_75_ + Component330.regionTileY, (byte) 3);
                         class348_sub47.particleBuffer.writeShort((byte) 107, 0x7fffffff & (int) (l >>> 32));
                         HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
-                        DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 63);
+                        DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 63);
                     }
                     if (i_76_ == 20) {
                         NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
@@ -839,7 +839,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShortAddLittle(4325, i_77_);
                             class348_sub47.particleBuffer.writeByteAdd((byte) -119, (!Component280.aClass346_2449.isKeyDown(82, -123) ? 0 : 1));
                             HashNodeSub14.enqueueOutboundPacket(-85, class348_sub47);
-                            Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -121, npc.getSize((byte) 99), 0, npc.getSize((byte) 99), -2, 0);
+                            Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -121, npc.getSize((byte) 99), 0, npc.getSize((byte) 99), -2, 0);
                         }
                     }
                     if (i > 97) {
@@ -865,7 +865,7 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeShortLittle(Component330.regionTileY + i_75_, (byte) 3);
                             class348_sub47.particleBuffer.writeShort((byte) 107, i_77_);
                             HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
-                            HashNodeSub18.method3275(1, i_75_, i_74_);
+                            HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                         }
                         if (i_76_ == 50) {
                             AssetCacheLoader.anInt385 = i_73_;
@@ -881,19 +881,19 @@ final class ColoredTextBuilder {
                             class348_sub47.particleBuffer.writeByteInverse((byte) -29, (Component280.aClass346_2449.isKeyDown(82, -121) ? 1 : 0));
                             HashNodeSub14.enqueueOutboundPacket(-40, class348_sub47);
                         }
-                        if (i_76_ == 18 || i_76_ == 1011) SceneNode.method2780(i_74_, (class348_sub42_sub12.target), (byte) 5, i_77_, i_75_);
+                        if (i_76_ == 18 || i_76_ == 1011) SceneNode.decodedOperation2780(i_74_, (class348_sub42_sub12.target), (byte) 5, i_77_, i_75_);
                         if (i_76_ == 13) {
                             DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(i_74_, (byte) -54, i_75_);
                             if (class46 != null) {
-                                DisplayModeManagerContainer196.method2678(-2049);
+                                DisplayModeManagerContainer196.decodedOperation2678(-2049);
                                 ComponentSettings class348_sub44 = client.getComponentSettings(class46);
-                                NewsFetcher.method2666(class348_sub44.anInt7093, class348_sub44.getClickMask(14), class46, (byte) 21);
+                                NewsFetcher.decodedOperation2666(class348_sub44.anInt7093, class348_sub44.getClickMask(14), class46, (byte) 21);
                                 DisplayModeManagerContainer332.aString5001 = DisplayModeManagerContainer295.getUseOption(0, class46);
                                 DisplayModeManagerContainer332.aString5000 = (class46.text + "<col=ffffff>");
                                 if (DisplayModeManagerContainer332.aString5001 == null) DisplayModeManagerContainer332.aString5001 = "Null";
                             }
                         } else {
-                            if (i_76_ == 1009 || i_76_ == 1012 || i_76_ == 1002 || i_76_ == 1003 || i_76_ == 1006) Component304.method696(i_76_, i_74_, i_77_, -1007);
+                            if (i_76_ == 1009 || i_76_ == 1012 || i_76_ == 1002 || i_76_ == 1003 || i_76_ == 1006) Component304.decodedOperation696(i_76_, i_74_, i_77_, -1007);
                             if (i_76_ == 25) {
                                 NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
                                 if (class348_sub22 != null) {
@@ -907,7 +907,7 @@ final class ColoredTextBuilder {
                                     class348_sub47.particleBuffer.writeByte(false, !Component280.aClass346_2449.isKeyDown(82, -125) ? 0 : 1);
                                     class348_sub47.particleBuffer.writeShortLittle(i_77_, (byte) 3);
                                     HashNodeSub14.enqueueOutboundPacket(-37, class348_sub47);
-                                    Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -85, npc.getSize((byte) 124), 0, npc.getSize((byte) 84), -2, 0);
+                                    Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -85, npc.getSize((byte) 124), 0, npc.getSize((byte) 84), -2, 0);
                                 }
                             }
                             if (i_76_ == 57) {
@@ -922,7 +922,7 @@ final class ColoredTextBuilder {
                                     class348_sub47.particleBuffer.writeShortAdd(-88, i_77_);
                                     class348_sub47.particleBuffer.writeByteAdd((byte) -111, Component280.aClass346_2449.isKeyDown(82, -127) ? 1 : 0);
                                     HashNodeSub14.enqueueOutboundPacket(125, class348_sub47);
-                                    Component10.method2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -98, player.getSize((byte) 83), 0, player.getSize((byte) 91), -2, 0);
+                                    Component10.decodedOperation2252(true, (player.anIntArray10320[0]), (player.anIntArray10317[0]), (byte) -98, player.getSize((byte) 83), 0, player.getSize((byte) 91), -2, 0);
                                 }
                             }
                             if (i_76_ == 9) {
@@ -937,7 +937,7 @@ final class ColoredTextBuilder {
                                 class348_sub47.particleBuffer.writeShortLittle(i_74_ - -NodeBaseSub2.regionTileX, (byte) 3);
                                 class348_sub47.particleBuffer.writeByteAdd((byte) -91, (!Component280.aClass346_2449.isKeyDown(82, -127) ? 0 : 1));
                                 HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
-                                DisplayModeManagerContainer74.method2307(i_75_, l, i_74_, 24);
+                                DisplayModeManagerContainer74.decodedOperation2307(i_75_, l, i_74_, 24);
                             }
                             if (i_76_ == 44) {
                                 NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_77_, -6008));
@@ -952,7 +952,7 @@ final class ColoredTextBuilder {
                                     class348_sub47.particleBuffer.writeShort((byte) 107, i_77_);
                                     class348_sub47.particleBuffer.writeByte(false, Component280.aClass346_2449.isKeyDown(82, -124) ? 1 : 0);
                                     HashNodeSub14.enqueueOutboundPacket(-25, class348_sub47);
-                                    Component10.method2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -107, npc.getSize((byte) 104), 0, npc.getSize((byte) 50), -2, 0);
+                                    Component10.decodedOperation2252(true, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), (byte) -107, npc.getSize((byte) 104), 0, npc.getSize((byte) 50), -2, 0);
                                 }
                             }
                             if (i_76_ == 10) {
@@ -967,9 +967,9 @@ final class ColoredTextBuilder {
                                 class348_sub47.particleBuffer.writeShortLittle(NodeBaseSub2.regionTileX + i_74_, (byte) 3);
                                 class348_sub47.particleBuffer.writeByteInverse((byte) -70, (!Component280.aClass346_2449.isKeyDown(82, -128) ? 0 : 1));
                                 HashNodeSub14.enqueueOutboundPacket(-22, class348_sub47);
-                                HashNodeSub18.method3275(1, i_75_, i_74_);
+                                HashNodeSub18.decodedOperation3275(1, i_75_, i_74_);
                             }
-                            if (r.aBoolean9722) DisplayModeManagerContainer196.method2678(-2049);
+                            if (r.aBoolean9722) DisplayModeManagerContainer196.decodedOperation2678(-2049);
                             if (ResourceLoader.aClass46_3913 == null || Component83.anInt1656 != 0) break;
                             Component111.markInterfaceDirty(-9343, ResourceLoader.aClass46_3913);
                         }

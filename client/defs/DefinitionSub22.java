@@ -48,7 +48,7 @@ final class DefinitionSub22
         for (int i_2_ = 0; i_2_ < anInt9301; i_2_++) {
             if (i_2_ > 0) {
                 int i_3_ = anInt9300;
-                int i_4_ = ((DisplayModeManagerContainer77.method1097((byte) 90, 4096, random) - 2048) * anInt9305 >> 12);
+                int i_4_ = ((DisplayModeManagerContainer77.decodedOperation1097((byte) 90, 4096, random) - 2048) * anInt9305 >> 12);
                 i_3_ += i_4_ * i_1_ >> 12;
                 anIntArray9297[i_2_] = i_3_ + anIntArray9297[-1 + i_2_];
             }
@@ -56,11 +56,11 @@ final class DefinitionSub22
             for (int i_5_ = 0; anInt9299 > i_5_; i_5_++) {
                 if (i_5_ > 0) {
                     int i_6_ = anInt9291;
-                    int i_7_ = ((DisplayModeManagerContainer77.method1097((byte) 117, 4096, random) - 2048) * anInt9302 >> 12);
+                    int i_7_ = ((DisplayModeManagerContainer77.decodedOperation1097((byte) 117, 4096, random) - 2048) * anInt9302 >> 12);
                     i_6_ += i_0_ * i_7_ >> 12;
                     anIntArrayArray9287[i_2_][i_5_] = anIntArrayArray9287[i_2_][i_5_ + -1] + i_6_;
                 }
-                anIntArrayArray9286[i_2_][i_5_] = (anInt9284 <= 0 ? 4096 : (-DisplayModeManagerContainer77.method1097((byte) 124, anInt9284, random) + 4096));
+                anIntArrayArray9286[i_2_][i_5_] = (anInt9284 <= 0 ? 4096 : (-DisplayModeManagerContainer77.decodedOperation1097((byte) 124, anInt9284, random) + 4096));
             }
             anIntArrayArray9287[i_2_][anInt9299] = 4096;
         }
@@ -75,16 +75,16 @@ final class DefinitionSub22
         anInt9301 = 8;
     }
 
-    public static void method3110(int i) {
+    public static void decodedOperation3110(int i) {
         aClass351_9304 = null;
         aClass304_9303 = null;
         if (i != -1633784916) aClass304_9303 = null;
         aClass114_9285 = null;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_8_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_8_) {
         anInt9292++;
-        if (i_8_ != 31015) method3111(106, 16);
+        if (i_8_ != 31015) decodedOperation3111(106, 16);
         int i_9_ = i;
         while_189_:
         do {
@@ -179,18 +179,18 @@ final class DefinitionSub22
                     if (anInt9298 + i_21_ >= i_19_ || i_19_ >= -anInt9298 + i_22_) is[i_16_] = 0;
                     else is[i_16_] = anIntArrayArray9286[i_13_][i_20_];
                 }
-            } else Component313.method1579(is, 0, DefinitionSub6.anInt9139, 0);
+            } else Component313.decodedOperation1579(is, 0, DefinitionSub6.anInt9139, 0);
         }
-        if (i_10_ != 255) method3110(44);
+        if (i_10_ != 255) decodedOperation3110(44);
         return is;
     }
 
-    static final void method3111(int i, int i_23_) {
+    static final void decodedOperation3111(int i, int i_23_) {
         anInt9290++;
         if (i_23_ != ColorTagNode.anInt6769) {
             if (i < 18) aClass304_9303 = null;
             AbstractShaderSub4.anInt7319 = ParametricDefinition.anInt9109 = DisplayModeManagerContainer306.anIntArray4780[i_23_];
-            Component200.method2196((byte) -9);
+            Component200.decodedOperation2196((byte) -9);
             Component240.anIntArrayArrayArray1116 = (new int[4][AbstractShaderSub4.anInt7319 >> 3]
                     [ParametricDefinition.anInt9109 >> 3]);
             DisplayModeManagerContainer295.anIntArrayArray5921 = (new int[AbstractShaderSub4.anInt7319]
@@ -198,17 +198,17 @@ final class DefinitionSub22
             HashNodeSub17.anIntArrayArray9678 = (new int[AbstractShaderSub4.anInt7319]
                     [ParametricDefinition.anInt9109]);
             for (int i_24_ = 0; i_24_ < 4; i_24_++)
-                NodeSub45.aClass361Array7108[i_24_] = SpriteSub1.method988(ParametricDefinition.anInt9109, 1, AbstractShaderSub4.anInt7319);
+                NodeSub45.aClass361Array7108[i_24_] = SpriteSub1.decodedOperation988(ParametricDefinition.anInt9109, 1, AbstractShaderSub4.anInt7319);
             Component156.aByteArrayArrayArray3700 = (new byte[4][AbstractShaderSub4.anInt7319]
                     [ParametricDefinition.anInt9109]);
-            Component339.method1717(19278, ParametricDefinition.anInt9109, AbstractShaderSub4.anInt7319, 4);
-            Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
+            Component339.decodedOperation1717(19278, ParametricDefinition.anInt9109, AbstractShaderSub4.anInt7319, 4);
+            Component263.decodedOperation873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
             ColorTagNode.anInt6769 = i_23_;
         }
     }
 
     final void postDecode(int i) {
-        if (i <= 108) method3111(-110, -119);
+        if (i <= 108) decodedOperation3111(-110, -119);
         anInt9295++;
         method3109((byte) -125);
     }

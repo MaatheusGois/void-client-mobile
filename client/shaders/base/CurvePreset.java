@@ -20,7 +20,7 @@ final class CurvePreset extends Definition {
     private int[] anIntArray9214;
     private short[] aShortArray9215 = new short[257];
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         if (i == 0) {
             anInt9211 = class348_sub49.readUnsignedByte(i_0_ + -30760);
             anIntArrayArray9210 = new int[class348_sub49.readUnsignedByte(255)][2];
@@ -46,10 +46,10 @@ final class CurvePreset extends Definition {
                         }
                         int[] is = anIntArrayArray9210[i_4_ - 1];
                         int[] is_5_ = anIntArrayArray9210[i_4_];
-                        int i_6_ = method3083(-2 + i_4_, (byte) -120)[1];
+                        int i_6_ = decodedOperation3083(-2 + i_4_, (byte) -120)[1];
                         int i_7_ = is[1];
                         int i_8_ = is_5_[1];
-                        int i_9_ = method3083(1 + i_4_, (byte) 81)[1];
+                        int i_9_ = decodedOperation3083(1 + i_4_, (byte) 81)[1];
                         int i_10_ = ((-is[0] + i_3_ << 12) / (is_5_[0] + -is[0]));
                         int i_11_ = i_10_ * i_10_ >> 12;
                         int i_12_ = i_7_ + -i_8_ + (i_9_ + -i_6_);
@@ -113,7 +113,7 @@ final class CurvePreset extends Definition {
         int[] is = this.imageCache.getPixels(0, i);
         if (i_33_ != 255) anIntArray9214 = null;
         if (this.imageCache.cacheMiss) {
-            int[] is_34_ = this.method3048(i, 633706337, 0);
+            int[] is_34_ = this.decodedOperation3048(i, 633706337, 0);
             for (int i_35_ = 0; i_35_ < DefinitionSub6.anInt9139; i_35_++) {
                 int i_36_ = is_34_[i_35_] >> 4;
                 if (i_36_ < 0) i_36_ = 0;
@@ -124,7 +124,7 @@ final class CurvePreset extends Definition {
         return is;
     }
 
-    private final void method3082(byte i) {
+    private final void decodedOperation3082(byte i) {
         anInt9206++;
         int[] is = anIntArrayArray9210[0];
         int[] is_37_ = anIntArrayArray9210[1];
@@ -140,12 +140,12 @@ final class CurvePreset extends Definition {
         if (i <= 108) anIntArrayArray9210 = null;
         anInt9209++;
         if (anIntArrayArray9210.length < 2) throw new RuntimeException("Curve operation requires at least two markers");
-        if (anInt9211 == 2) method3082((byte) 73);
-        Component7.method1605(26188);
+        if (anInt9211 == 2) decodedOperation3082((byte) 73);
+        Component7.decodedOperation1605(26188);
         method3081(-1);
     }
 
-    private final int[] method3083(int i, byte i_40_) {
+    private final int[] decodedOperation3083(int i, byte i_40_) {
         anInt9212++;
         if (i < 0) return anIntArray9214;
         int i_41_ = -48 % ((i_40_ - 13) / 56);

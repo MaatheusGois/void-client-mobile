@@ -34,11 +34,11 @@ abstract class s {
 
     abstract void method3979(int i, int i_14_);
 
-    static final void method3980(int i, Canvas canvas) {
+    static final void decodedOperation3980(int i, Canvas canvas) {
         if (i > 85) {
             anInt4586++;
             Dimension dimension = canvas.getSize();
-            LogicError.method828((byte) 38, dimension.height, dimension.width);
+            LogicError.decodedOperation828((byte) 38, dimension.height, dimension.width);
             if (Buffer.anInt7207 != 1) Component158.aHa326.method3669(canvas, Component210.anInt5283, HashTable.anInt1651);
             else Component158.aHa326.method3669(canvas, GpiLogger.anInt8854, Component25.anInt6008);
         }
@@ -61,9 +61,9 @@ abstract class s {
 
     abstract void method3984(int i, int i_25_, int i_26_, boolean[][] bools, boolean bool, int i_27_, int i_28_);
 
-    static final Component335 method3985(int i, int i_29_) {
+    static final Component335 decodedOperation3985(int i, int i_29_) {
         anInt4591++;
-        if (i != -101) method3980(-117, null);
+        if (i != -101) decodedOperation3980(-117, null);
         if (i_29_ < 0 || i_29_ >= 100) return null;
         return RenderableSub2.aClass147Array6400[i_29_];
     }
@@ -89,7 +89,7 @@ abstract class s {
 
     abstract void U(int i, int i_45_, int[] is, int[] is_46_, int[] is_47_, int[] is_48_, int[] is_49_, int[] is_50_, int[] is_51_, int[] is_52_, int i_53_, int i_54_, int i_55_, boolean bool);
 
-    public static void method3988(int i) {
+    public static void decodedOperation3988(int i) {
         int i_56_ = 49 / ((15 - i) / 40);
         aClass45_4585 = null;
     }

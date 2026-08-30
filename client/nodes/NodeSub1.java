@@ -29,53 +29,53 @@ abstract class NodeSub1
 
     abstract void method2716(int i, float f);
 
-    final int method2717(byte i) {
-        if (i <= 69) method2719(74);
+    final int decodedOperation2717(byte i) {
+        if (i <= 69) decodedOperation2719(74);
         anInt6549++;
         return this.anInt6553;
     }
 
-    static final void method2718(int i) {
-        if (i >= -95) method2719(90);
+    static final void decodedOperation2718(int i) {
+        if (i >= -95) decodedOperation2719(90);
         anInt6560++;
         if (Component266.anInt5976 != -1) {
-            DisplayModeManagerContainer310.method298(false, -1, -1, Component266.anInt5976, -67);
+            DisplayModeManagerContainer310.decodedOperation298(false, -1, -1, Component266.anInt5976, -67);
             Component266.anInt5976 = -1;
         }
     }
 
-    public static void method2719(int i) {
-        if (i != 11339) method2719(87);
+    public static void decodedOperation2719(int i) {
+        if (i != 11339) decodedOperation2719(87);
         aClass46_6561 = null;
         anIntArray6547 = null;
         aClass185_6559 = null;
     }
 
-    final int method2720(int i) {
+    final int decodedOperation2720(int i) {
         if (i != -1) this.anInt6562 = -97;
         anInt6552++;
         return anInt6545;
     }
 
-    final float method2721(int i) {
+    final float decodedOperation2721(int i) {
         if (i >= -7) return 0.08188432F;
         anInt6557++;
         return this.aFloat6550;
     }
 
-    final int method2722(int i) {
+    final int decodedOperation2722(int i) {
         if (i <= 119) return -23;
         anInt6556++;
         return this.anInt6548;
     }
 
-    final int method2723(int i) {
+    final int decodedOperation2723(int i) {
         if (i != -1) return -46;
         anInt6546++;
         return anInt6554;
     }
 
-    final int method2724(int i) {
+    final int decodedOperation2724(int i) {
         if (i != -1) method2725(53, (byte) -84, -7, -12);
         anInt6563++;
         return this.anInt6562;

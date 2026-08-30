@@ -10,30 +10,30 @@ final class NodeSub2
     byte[] aByteArray6564;
     LruCache aClass356_6565;
 
-    final void method2733() {
+    final void decodedOperation2733() {
         if (this.aClass356_6565 == null) {
             this.aClass356_6565 = new LruCache(16);
             int[] is = new int[16];
             int[] is_0_ = new int[16];
             is[9] = is_0_[9] = 128;
             Component198 class204 = new Component198(this.aByteArray6564);
-            int i = class204.method1483();
+            int i = class204.decodedOperation1483();
             for (int i_1_ = 0; i_1_ < i; i_1_++) {
-                class204.method1492(i_1_);
+                class204.decodedOperation1492(i_1_);
                 class204.method1485(i_1_);
-                class204.method1486(i_1_);
+                class204.decodedOperation1486(i_1_);
             }
             while_123_:
             for (; ; ) {
-                int i_2_ = class204.method1490();
+                int i_2_ = class204.decodedOperation1490();
                 int i_3_ = class204.anIntArray2681[i_2_];
                 while (class204.anIntArray2681[i_2_] == i_3_) {
-                    class204.method1492(i_2_);
-                    int i_4_ = class204.method1494(i_2_);
+                    class204.decodedOperation1492(i_2_);
+                    int i_4_ = class204.decodedOperation1494(i_2_);
                     if (i_4_ == 1) {
-                        class204.method1495();
-                        class204.method1486(i_2_);
-                        if (!class204.method1480()) break;
+                        class204.decodedOperation1495();
+                        class204.decodedOperation1486(i_2_);
+                        if (!class204.decodedOperation1480()) break;
                         break while_123_;
                     }
                     int i_5_ = i_4_ & 0xf0;
@@ -64,19 +64,19 @@ final class NodeSub2
                         }
                     }
                     class204.method1485(i_2_);
-                    class204.method1486(i_2_);
+                    class204.decodedOperation1486(i_2_);
                 }
             }
         }
     }
 
-    static final NodeSub2 method2734(CacheStore class45, int i, int i_15_) {
+    static final NodeSub2 decodedOperation2734(CacheStore class45, int i, int i_15_) {
         byte[] is = class45.getFile(-1860, i, i_15_);
         if (is == null) return null;
         return new NodeSub2(new Buffer(is));
     }
 
-    final void method2735() {
+    final void decodedOperation2735() {
         this.aClass356_6565 = null;
     }
 

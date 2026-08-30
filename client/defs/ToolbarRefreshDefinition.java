@@ -18,7 +18,7 @@ final class ToolbarRefreshDefinition
     static int[] anIntArray9230 = {0, -1, 0, 1};
     static int anInt9231;
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         if (i_0_ != 31015) anInt9226 = -83;
         int i_1_ = i;
         do {
@@ -32,14 +32,14 @@ final class ToolbarRefreshDefinition
     }
 
     final int[][] getColourOutput(int i, int i_2_) {
-        if (i_2_ != -1564599039) method3089(-88);
+        if (i_2_ != -1564599039) decodedOperation3089(-88);
         anInt9223++;
         int[][] is = this.imageCacheStore.getPixels(i_2_ ^ 0x5d41e2a7, i);
         while_168_:
         do {
             if (this.imageCacheStore.cacheMiss) {
-                int[][] is_3_ = this.method3039((byte) -51, i, 0);
-                int[][] is_4_ = this.method3039((byte) -66, i, 1);
+                int[][] is_3_ = this.decodedOperation3039((byte) -51, i, 0);
+                int[][] is_4_ = this.decodedOperation3039((byte) -66, i, 1);
                 int[] is_5_ = is[0];
                 int[] is_6_ = is[1];
                 int[] is_7_ = is[2];
@@ -218,10 +218,10 @@ final class ToolbarRefreshDefinition
         return is;
     }
 
-    public static void method3087(boolean bool) {
+    public static void decodedOperation3087(boolean bool) {
         anIntArray9230 = null;
         aClass114_9225 = null;
-        if (bool != false) method3089(-42);
+        if (bool != false) decodedOperation3089(-42);
     }
 
     public ToolbarRefreshDefinition() {
@@ -235,8 +235,8 @@ final class ToolbarRefreshDefinition
         while_178_:
         do {
             if (this.imageCache.cacheMiss) {
-                int[] is_52_ = this.method3048(i, 633706337, 0);
-                int[] is_53_ = this.method3048(i, 633706337, 1);
+                int[] is_52_ = this.decodedOperation3048(i, 633706337, 0);
+                int[] is_53_ = this.decodedOperation3048(i, 633706337, 1);
                 int i_54_ = anInt9226;
                 while_177_:
                 do {
@@ -354,7 +354,7 @@ final class ToolbarRefreshDefinition
         return is;
     }
 
-    static final void method3088(int i) {
+    static final void decodedOperation3088(int i) {
         anInt9228++;
         if (DisplayModeManagerContainer154.LOCAL != DisplayModeManagerContainer345.aClass364_165 && i == 9) {
             try {
@@ -365,7 +365,7 @@ final class ToolbarRefreshDefinition
         }
     }
 
-    static final void method3089(int i) {
+    static final void decodedOperation3089(int i) {
         Component253.anInt3203 = -1;
         Component263.anInt1548 = -1;
         NativeLibLoader.anInt4155 = -1;

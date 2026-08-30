@@ -29,7 +29,7 @@ final class HashNodeSub2
         super.finalize();
     }
 
-    static final void method3171(GraphicsToolkit var_ha, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
+    static final void decodedOperation3171(GraphicsToolkit var_ha, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_) {
         JaclibLoader.toolkit = var_ha;
         Npc.anInt10503 = i;
         DefinitionSub5.aBoolean9121 = (Npc.anInt10503 > 1 && JaclibLoader.toolkit.method3708());
@@ -41,8 +41,8 @@ final class HashNodeSub2
         StaticElementRenderer.anInt6451 = i_2_;
         NodeSub41.anInt7054 = i_3_;
         Component197.anInt10084 = i_4_;
-        Component230.aClass47_5262 = GpiLogger.method2826(15);
-        NodeSub45.method3309(-124);
+        Component230.aClass47_5262 = GpiLogger.decodedOperation2826(15);
+        NodeSub45.decodedOperation3309(-124);
         Component304.aClass357ArrayArrayArray1148 = (new Component186[i_1_][StaticElementRenderer.anInt6451]
                 [NodeSub41.anInt7054]);
         NodeSub1Sub1.aSArray8801 = new s[i_1_];
@@ -71,7 +71,7 @@ final class HashNodeSub2
             r.aBooleanArray9718 = null;
             Component374.anInt4135 = 0;
         }
-        Component315.method1879(false);
+        Component315.decodedOperation1879(false);
         Node.aClass318_Sub1Array4293 = new RenderableObject[2];
         AudioMixer.aClass318_Sub1Array3226 = new RenderableObject[2];
         Component95.aClass318_Sub1Array1754 = new RenderableObject[2];
@@ -94,7 +94,7 @@ final class HashNodeSub2
                     [(Component197.anInt10084 + Component197.anInt10084 + 1)]
                     [(Component197.anInt10084 + Component197.anInt10084 + 1)]);
             Component2.aBooleanArrayArrayArray8361 = new boolean[i_1_][][];
-            if (LoggedOutDefinition.aClass293Array9432 != null) Component92.method1978();
+            if (LoggedOutDefinition.aClass293Array9432 != null) Component92.decodedOperation1978();
             LoggedOutDefinition.aClass293Array9432 = new Component176[Npc.anInt10503];
             JaclibLoader.toolkit.setTextureUnitCount((LoggedOutDefinition.aClass293Array9432).length + 1);
             JaclibLoader.toolkit.resetTextureState(0);
@@ -127,10 +127,10 @@ final class HashNodeSub2
             aHa_Sub2_8564.clearBuffers(anInt8569, anInt8571, -101);
             anInt8569 = 0;
         }
-        if (i != 4) method3171(null, 57, 49, -22, 43, -43, -45, true, true);
+        if (i != 4) decodedOperation3171(null, 57, 49, -22, 43, -43, -45, true, true);
     }
 
-    final void method3173(int i, int i_9_, int i_10_) {
+    final void decodedOperation3173(int i, int i_9_, int i_10_) {
         OpenGL.glFramebufferRenderbufferEXT(i_10_, i_9_, i, anInt8569);
         anInt8568++;
         anInt8562 = i_10_;

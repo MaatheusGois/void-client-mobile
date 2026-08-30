@@ -45,7 +45,7 @@ final class DisplayModeManagerContainer64
     static boolean aBoolean9038 = false;
     static int occludedGroundCount;
 
-    public static void method2974(int i) {
+    public static void decodedOperation2974(int i) {
         aClass351_9034 = null;
         if (i != 1) aClass229_9011 = null;
         aClass45_9033 = null;
@@ -55,7 +55,7 @@ final class DisplayModeManagerContainer64
         aClass187_9036 = null;
     }
 
-    final Component24 method2975(GraphicsToolkit var_ha, int i) {
+    final Component24 decodedOperation2975(GraphicsToolkit var_ha, int i) {
         anInt9026++;
         if (aFrame9024 == null) return null;
         if (!aBoolean9014 && aClass105_9020 != null) return aClass105_9020;
@@ -77,7 +77,7 @@ final class DisplayModeManagerContainer64
             aDecoderContext9032.a();
             aDecoderContext9032 = null;
         }
-        if (i != 13) method2979(115);
+        if (i != 13) decodedOperation2979(115);
         if (aGranulePos9019 != null) {
             aGranulePos9019.a();
             aGranulePos9019 = null;
@@ -87,13 +87,13 @@ final class DisplayModeManagerContainer64
         aSetupInfo9035.a();
     }
 
-    final boolean method2976(int i) {
+    final boolean decodedOperation2976(int i) {
         anInt9012++;
         if (i != -1) aTheoraInfo9007 = null;
         return aBoolean9016;
     }
 
-    final float method2977(int i) {
+    final float decodedOperation2977(int i) {
         anInt9022++;
         if (!aBoolean9016 || aTheoraInfo9007.b()) return 0.0F;
         if (i != 0) anInt9027 = -65;
@@ -111,15 +111,15 @@ final class DisplayModeManagerContainer64
         if (i_0_ > -127) aClass105_9020 = null;
     }
 
-    final long method2979(int i) {
+    final long decodedOperation2979(int i) {
         anInt9025++;
         if (i != 30) method2978(-126, (byte) -43);
         return aLong9018;
     }
 
-    final double method2980(byte i) {
+    final double decodedOperation2980(byte i) {
         anInt9013++;
-        if (i != 100) method2974(102);
+        if (i != 100) decodedOperation2974(102);
         return aDouble9015;
     }
 

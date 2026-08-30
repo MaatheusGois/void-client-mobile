@@ -28,16 +28,16 @@ abstract class NodeSub5
 
     abstract boolean method2751(boolean bool);
 
-    static final Component161 method2752(int i, int i_2_) {
+    static final Component161 decodedOperation2752(int i, int i_2_) {
         anInt6625++;
-        Component161[] class138s = NodeSub27.method3002((byte) -97);
+        Component161[] class138s = NodeSub27.decodedOperation3002((byte) -97);
         for (int i_3_ = i_2_; class138s.length > i_3_; i_3_++) {
             if (i == class138s[i_3_].anInt1941) return class138s[i_3_];
         }
         return null;
     }
 
-    static final GraphicsToolkit method2753(boolean bool, int i, int i_4_, Canvas canvas, d var_d) {
+    static final GraphicsToolkit decodedOperation2753(boolean bool, int i, int i_4_, Canvas canvas, d var_d) {
         try {
             anInt6628++;
             if (bool != true) aByteArray6624 = null;
@@ -49,7 +49,7 @@ abstract class NodeSub5
 
     abstract void method2754(int i, byte i_5_, int i_6_);
 
-    static final void method2755(int i, int i_7_, int i_8_) {
+    static final void decodedOperation2755(int i, int i_7_, int i_8_) {
         anInt6629++;
         if ((~PlayerState.anInt7068) != i) {
             if (i_8_ >= 0) AbstractShaderSub3.anIntArray7299[i_8_] = i_7_;
@@ -63,7 +63,7 @@ abstract class NodeSub5
 
     abstract void method2756(byte i, int i_10_);
 
-    static final void method2757(int i) {
+    static final void decodedOperation2757(int i) {
         anInt6620++;
         if (AbstractShaderSub2.anInt7297 != 0) {
             try {
@@ -78,13 +78,13 @@ abstract class NodeSub5
                             Component48.anInt4337 = -5;
                             return;
                         }
-                        ItemDefinitionProvider.aClass161_3285.method1259(0);
+                        ItemDefinitionProvider.aClass161_3285.decodedOperation1259(0);
                         AbstractShaderSub2.anInt7297 = 1;
                         RequestProcessor.anInt2264 = 0;
                         SpriteSub1.anInt8398++;
                     }
                     if (AbstractShaderSub2.anInt7297 == 1) {
-                        DisplayModeManagerContainer273.aClass144_5800 = (ItemDefinitionProvider.aClass161_3285.method1262(OggUrlStream.aClass297_8992, (byte) 36));
+                        DisplayModeManagerContainer273.aClass144_5800 = (ItemDefinitionProvider.aClass161_3285.decodedOperation1262(OggUrlStream.aClass297_8992, (byte) 36));
                         AbstractShaderSub2.anInt7297 = 2;
                     }
                     if (AbstractShaderSub2.anInt7297 == 2) {
@@ -92,7 +92,7 @@ abstract class NodeSub5
                         if (DisplayModeManagerContainer273.aClass144_5800.status != 1) return;
                         DefinitionSub8.aClass238_9165 = OggStreamReader.openSocketStream(((Socket) (DisplayModeManagerContainer273.aClass144_5800.result)), (byte) 24, 7500);
                         DisplayModeManagerContainer273.aClass144_5800 = null;
-                        Component302.method1802(0);
+                        Component302.decodedOperation1802(0);
                         AbstractShaderSub2.anInt7297 = 4;
                     }
                     if (AbstractShaderSub2.anInt7297 == 4) {
@@ -112,7 +112,7 @@ abstract class NodeSub5
                     DefinitionSub8.aClass238_9165 = null;
                 }
                 if (SpriteSub1.anInt8398 < 2) {
-                    ItemDefinitionProvider.aClass161_3285.method1259(0);
+                    ItemDefinitionProvider.aClass161_3285.decodedOperation1259(0);
                     RequestProcessor.anInt2264 = 0;
                     SpriteSub1.anInt8398++;
                     AbstractShaderSub2.anInt7297 = 1;
@@ -126,13 +126,13 @@ abstract class NodeSub5
 
     abstract boolean method2758(int i);
 
-    final boolean method2759(int i) {
+    final boolean decodedOperation2759(int i) {
         if (i != 1) return true;
         anInt6626++;
         return false;
     }
 
-    final boolean method2760(byte i) {
+    final boolean decodedOperation2760(byte i) {
         if (i != 1) method2763((byte) 37);
         anInt6619++;
         return this.aBoolean6621;
@@ -140,11 +140,11 @@ abstract class NodeSub5
 
     int method2761(boolean bool) {
         anInt6622++;
-        if (bool != true) method2757(-63);
+        if (bool != true) decodedOperation2757(-63);
         return 0;
     }
 
-    public static void method2762(int i) {
+    public static void decodedOperation2762(int i) {
         aByteArray6624 = null;
         aClass105_6627 = null;
         int i_12_ = -23 % ((i - -24) / 47);
@@ -156,7 +156,7 @@ abstract class NodeSub5
         this.aHa_Sub2_6618 = var_ha_Sub2;
     }
 
-    final int method2764(int i) {
+    final int decodedOperation2764(int i) {
         if (i != 1) aByteArray6624 = null;
         anInt6623++;
         return 1;

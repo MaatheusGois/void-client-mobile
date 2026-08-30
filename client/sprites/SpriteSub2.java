@@ -36,7 +36,7 @@ final class SpriteSub2
     static int anInt8448;
     private int anInt8449;
 
-    static final char method990(char c, byte i) {
+    static final char decodedOperation990(char c, byte i) {
         anInt8444++;
         if (c == 198) return 'E';
         if (c == 230) return 'e';
@@ -50,8 +50,8 @@ final class SpriteSub2
     final void method962(float f, float f_0_, float f_1_, float f_2_, float f_3_, float f_4_, int i, int i_5_, int i_6_, int i_7_) {
         anInt8435++;
         if (aBoolean8427) {
-            float f_8_ = (float) method966();
-            float f_9_ = (float) method980();
+            float f_8_ = (float) decodedOperation966();
+            float f_9_ = (float) decodedOperation980();
             float f_10_ = (f_1_ - f) / f_8_;
             float f_11_ = (f_2_ - f_0_) / f_8_;
             float f_12_ = (-f + f_3_) / f_9_;
@@ -73,7 +73,7 @@ final class SpriteSub2
         }
         float f_22_ = f_1_ - f + f_3_;
         float f_23_ = -f_0_ + f_4_ + f_2_;
-        aClass258_Sub3_Sub1_8434.method1957(9728, (i_7_ & 0x1) != 0);
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, (i_7_ & 0x1) != 0);
         aHa_Sub2_8430.bindTexture(59);
         aHa_Sub2_8430.bindTexture((byte) -93, aClass258_Sub3_Sub1_8434);
         aHa_Sub2_8430.setBlendMode(i_6_, 1);
@@ -91,7 +91,7 @@ final class SpriteSub2
         OpenGL.glEnd();
     }
 
-    final int method969() {
+    final int decodedOperation969() {
         anInt8439++;
         return aClass258_Sub3_Sub1_8434.anInt9939;
     }
@@ -104,7 +104,7 @@ final class SpriteSub2
         OpenGL.glPixelTransferf(3353, 0.499F);
         OpenGL.glPixelTransferf(3354, 0.5F);
         OpenGL.glPixelTransferf(3355, 0.499F);
-        aClass258_Sub3_Sub1_8431 = Component134.method1401(aHa_Sub2_8430, i, 34037, aClass258_Sub3_Sub1_8434.anInt9940, i_24_, aClass258_Sub3_Sub1_8434.anInt9939);
+        aClass258_Sub3_Sub1_8431 = Component134.decodedOperation1401(aHa_Sub2_8430, i, 34037, aClass258_Sub3_Sub1_8434.anInt9940, i_24_, aClass258_Sub3_Sub1_8434.anInt9939);
         anInt8429 = i_25_;
         OpenGL.glPixelTransferf(3348, 1.0F);
         OpenGL.glPixelTransferf(3349, 0.0F);
@@ -122,21 +122,21 @@ final class SpriteSub2
         is[2] = anInt8449;
     }
 
-    final int method980() {
+    final int decodedOperation980() {
         anInt8433++;
         return (anInt8446 + aClass258_Sub3_Sub1_8434.anInt9939 + anInt8432);
     }
 
     final void method979(int i, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_) {
         anInt8436++;
-        aClass258_Sub3_Sub1_8434.method1967(i, i_28_, i_30_, i_26_, i_29_, (byte) -120, i_27_);
+        aClass258_Sub3_Sub1_8434.decodedOperation1967(i, i_28_, i_30_, i_26_, i_29_, (byte) -120, i_27_);
     }
 
     final void method963(int i, int i_31_, Shader var_aa, int i_32_, int i_33_) {
         anInt8424++;
         ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
-        aClass258_Sub3_Sub1_8434.method1957(9728, false);
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, false);
         aHa_Sub2_8430.bindTexture(75);
         aHa_Sub2_8430.bindTexture((byte) -99, aClass258_Sub3_Sub1_8434);
         aHa_Sub2_8430.setTextureEnvMode(0, 1);
@@ -202,8 +202,8 @@ final class SpriteSub2
         anInt8448++;
         GlRectangleTexture class258_sub3_sub1 = ((ShaderSub1) var_aa).aClass258_Sub3_Sub1_5193;
         if (aBoolean8427) {
-            float f_51_ = (float) method966();
-            float f_52_ = (float) method980();
+            float f_51_ = (float) decodedOperation966();
+            float f_52_ = (float) decodedOperation980();
             float f_53_ = (-f + f_45_) / f_51_;
             float f_54_ = (-f_44_ + f_46_) / f_51_;
             float f_55_ = (-f + f_47_) / f_52_;
@@ -224,7 +224,7 @@ final class SpriteSub2
             f_48_ = f_60_ + f_48_ + f_64_;
         }
         float f_65_ = -f + f_45_ + f_47_;
-        aClass258_Sub3_Sub1_8434.method1957(9728, (0x1 & i) != 0);
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, (0x1 & i) != 0);
         float f_66_ = f_48_ - f_44_ + f_46_;
         aHa_Sub2_8430.bindTexture(106);
         aHa_Sub2_8430.bindTexture((byte) -123, aClass258_Sub3_Sub1_8434);
@@ -257,13 +257,13 @@ final class SpriteSub2
         aHa_Sub2_8430.glActiveTexture(-15039, 0);
     }
 
-    final int method966() {
+    final int decodedOperation966() {
         anInt8440++;
         return (anInt8447 + aClass258_Sub3_Sub1_8434.anInt9940 - -anInt8449);
     }
 
-    final void method964(int i, int i_69_, int i_70_, int i_71_, int i_72_) {
-        aClass258_Sub3_Sub1_8434.method1957(9728, false);
+    final void decodedOperation964(int i, int i_69_, int i_70_, int i_71_, int i_72_) {
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, false);
         anInt8425++;
         aHa_Sub2_8430.bindTexture(121);
         aHa_Sub2_8430.setBlendMode(i_72_, 1);
@@ -285,7 +285,7 @@ final class SpriteSub2
             OpenGL.glEnd();
         } else {
             method992(i_70_, 3);
-            aClass258_Sub3_Sub1_8431.method1957(9728, false);
+            aClass258_Sub3_Sub1_8431.decodedOperation1957(9728, false);
             OpenGL.glBegin(7);
             OpenGL.glMultiTexCoord2f(33985, 0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
             OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
@@ -308,9 +308,9 @@ final class SpriteSub2
         aHa_Sub2_8430.glActiveTexture(-15039, 1);
         anInt8441++;
         aHa_Sub2_8430.bindTexture((byte) -82, aClass258_Sub3_Sub1_8434);
-        aHa_Sub2_8430.glTexEnvi(aHa_Sub2_8430.method3781((byte) 17, i), (byte) -61, 7681);
+        aHa_Sub2_8430.glTexEnvi(aHa_Sub2_8430.decodedOperation3781((byte) 17, i), (byte) -61, 7681);
         aHa_Sub2_8430.glTexEnvCombine(34167, 768, (byte) -87, 1);
-        if (i_73_ != 3) method964(46, -15, -58, 122, 11);
+        if (i_73_ != 3) decodedOperation964(46, -15, -58, 122, 11);
         aHa_Sub2_8430.glTexEnvCombineMode(false, 0, 770, 34168);
         aHa_Sub2_8430.glActiveTexture(-15039, 0);
         aHa_Sub2_8430.bindTexture((byte) -108, aClass258_Sub3_Sub1_8431);
@@ -328,7 +328,7 @@ final class SpriteSub2
         anInt8442++;
         int i_80_ = i_75_ + i;
         int i_81_ = i_76_ + i_74_;
-        aClass258_Sub3_Sub1_8434.method1957(9728, false);
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, false);
         aHa_Sub2_8430.bindTexture(54);
         aHa_Sub2_8430.bindTexture((byte) -88, aClass258_Sub3_Sub1_8434);
         aHa_Sub2_8430.setBlendMode(i_79_, 1);
@@ -350,8 +350,8 @@ final class SpriteSub2
         } else {
             OpenGL.glPushMatrix();
             OpenGL.glTranslatef((float) anInt8447, (float) anInt8446, 0.0F);
-            int i_83_ = method966();
-            int i_84_ = method980();
+            int i_83_ = decodedOperation966();
+            int i_84_ = decodedOperation980();
             int i_85_ = i_74_ - -(aClass258_Sub3_Sub1_8434.anInt9939);
             OpenGL.glBegin(7);
             int i_86_ = i_74_;
@@ -415,20 +415,20 @@ final class SpriteSub2
         }
     }
 
-    final int method971() {
+    final int decodedOperation971() {
         anInt8437++;
         return aClass258_Sub3_Sub1_8434.anInt9940;
     }
 
     final void method982(int i, int i_92_, int i_93_, int i_94_, int i_95_, int i_96_, int i_97_, int i_98_) {
         anInt8443++;
-        aClass258_Sub3_Sub1_8434.method1957(9728, (0x1 & i_98_) != 0);
+        aClass258_Sub3_Sub1_8434.decodedOperation1957(9728, (0x1 & i_98_) != 0);
         aHa_Sub2_8430.bindTexture(103);
         aHa_Sub2_8430.setBlendMode(i_97_, 1);
         OpenGL.glColor4ub((byte) (i_96_ >> 16), (byte) (i_96_ >> 8), (byte) i_96_, (byte) (i_96_ >> 24));
         if (aBoolean8427) {
-            float f = (float) i_93_ / (float) method966();
-            float f_99_ = (float) i_94_ / (float) method980();
+            float f = (float) i_93_ / (float) decodedOperation966();
+            float f_99_ = (float) i_94_ / (float) decodedOperation980();
             float f_100_ = (float) i + f * (float) anInt8447;
             float f_101_ = (float) anInt8446 * f_99_ + (float) i_92_;
             float f_102_ = f_100_ + f * (float) aClass258_Sub3_Sub1_8434.anInt9940;
@@ -448,7 +448,7 @@ final class SpriteSub2
                 OpenGL.glEnd();
             } else {
                 method992(i_95_, 3);
-                aClass258_Sub3_Sub1_8431.method1957(9728, true);
+                aClass258_Sub3_Sub1_8431.decodedOperation1957(9728, true);
                 OpenGL.glBegin(7);
                 OpenGL.glMultiTexCoord2f(33985, 0.0F, (aClass258_Sub3_Sub1_8434.aFloat9938));
                 OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
@@ -480,7 +480,7 @@ final class SpriteSub2
             OpenGL.glEnd();
         } else {
             method992(i_95_, 3);
-            aClass258_Sub3_Sub1_8431.method1957(9728, true);
+            aClass258_Sub3_Sub1_8431.decodedOperation1957(9728, true);
             OpenGL.glBegin(7);
             OpenGL.glMultiTexCoord2f(33985, 0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
             OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
@@ -499,7 +499,7 @@ final class SpriteSub2
         }
     }
 
-    static long method993(long l, long l_104_) {
+    static long decodedOperation993(long l, long l_104_) {
         try {
             return l ^ l_104_;
         } catch (RuntimeException runtimeexception) {
@@ -513,7 +513,7 @@ final class SpriteSub2
         anInt8447 = 0;
         anInt8449 = 0;
         aHa_Sub2_8430 = var_ha_Sub2;
-        aClass258_Sub3_Sub1_8434 = DisplayModeManagerContainer204.method904(81, var_ha_Sub2, bool ? 6408 : 6407, i, i_105_);
+        aClass258_Sub3_Sub1_8434 = DisplayModeManagerContainer204.decodedOperation904(81, var_ha_Sub2, bool ? 6408 : 6407, i, i_105_);
     }
 
     SpriteSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_106_, int i_107_, int i_108_) {
@@ -522,7 +522,7 @@ final class SpriteSub2
         anInt8447 = 0;
         anInt8449 = 0;
         aHa_Sub2_8430 = var_ha_Sub2;
-        aClass258_Sub3_Sub1_8434 = Component134.method1401(var_ha_Sub2, i, 34037, i_107_, i_106_, i_108_);
+        aClass258_Sub3_Sub1_8434 = Component134.decodedOperation1401(var_ha_Sub2, i, 34037, i_107_, i_106_, i_108_);
     }
 
     SpriteSub2(GlToolkitSub2 var_ha_Sub2, int i, int i_109_, int[] is, int i_110_, int i_111_) {
@@ -532,7 +532,7 @@ final class SpriteSub2
         anInt8449 = 0;
         try {
             aHa_Sub2_8430 = var_ha_Sub2;
-            aClass258_Sub3_Sub1_8434 = DefinitionSub32.method3132(is, i_110_, i_111_, i_109_, i, var_ha_Sub2, false, (byte) 12);
+            aClass258_Sub3_Sub1_8434 = DefinitionSub32.decodedOperation3132(is, i_110_, i_111_, i_109_, i, var_ha_Sub2, false, (byte) 12);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("nda.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_109_ + ',' + (is != null ? "{...}" : "null") + ',' + i_110_ + ',' + i_111_ + ')'));
         }

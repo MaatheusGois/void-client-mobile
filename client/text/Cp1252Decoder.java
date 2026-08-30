@@ -34,11 +34,11 @@ final class Cp1252Decoder extends Component47 {
         int i_3_ = i * anInt5213 >> 12;
         int i_4_ = anInt5212 * i_0_ >> 12;
         int i_5_ = i_0_ * anInt5222 >> 12;
-        DisplayModeManagerContainer356.method2267(10499, i_5_, i_2_, this.anInt865, this.anInt864, this.anInt862, i_4_, i_3_);
+        DisplayModeManagerContainer356.decodedOperation2267(10499, i_5_, i_2_, this.anInt865, this.anInt864, this.anInt862, i_4_, i_3_);
     }
 
-    public static void method460(int i) {
-        if (i != 2) method460(-52);
+    public static void decodedOperation460(int i) {
+        if (i != 2) decodedOperation460(-52);
         aClass101_5209 = null;
         aBooleanArrayArray5225 = null;
         aStringArray5223 = null;
@@ -55,7 +55,7 @@ final class Cp1252Decoder extends Component47 {
 
     final void method457(int i, int i_12_, int i_13_) {
         anInt5211++;
-        if (i_13_ >= -29) method460(-42);
+        if (i_13_ >= -29) decodedOperation460(-42);
     }
 
     final void method456(int i, int i_14_, int i_15_) {
@@ -65,7 +65,7 @@ final class Cp1252Decoder extends Component47 {
         int i_17_ = anInt5213 * i_14_ >> 12;
         int i_18_ = anInt5212 * i_15_ >> 12;
         int i_19_ = i_15_ * anInt5222 >> 12;
-        GraphicsToolkit.method3641(i_18_, i_19_, (byte) -75, this.anInt864, i_17_, i_16_);
+        GraphicsToolkit.decodedOperation3641(i_18_, i_19_, (byte) -75, this.anInt864, i_17_, i_16_);
     }
 
     static final byte[] unwrapBytes(boolean bool, Object object, int i) {
@@ -84,7 +84,7 @@ final class Cp1252Decoder extends Component47 {
         throw new IllegalArgumentException();
     }
 
-    static final char method462(byte i, int i_20_) {
+    static final char decodedOperation462(byte i, int i_20_) {
         anInt5216++;
         int i_21_ = 0xff & i;
         if (i_21_ == 0) throw new IllegalArgumentException("Non cp1252 character 0x" + Integer.toString(i_21_, 16) + " provided");
@@ -93,11 +93,11 @@ final class Cp1252Decoder extends Component47 {
             if (i_22_ == 0) i_22_ = 63;
             i_21_ = i_22_;
         }
-        if (i_20_ != -128) method463(null, false);
+        if (i_20_ != -128) decodedOperation463(null, false);
         return (char) i_21_;
     }
 
-    static final int[] method463(ParticleSystem class348_sub47, boolean bool) {
+    static final int[] decodedOperation463(ParticleSystem class348_sub47, boolean bool) {
         anInt5210++;
         Buffer class348_sub49 = new Buffer(518);
         int[] is = new int[4];

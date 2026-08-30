@@ -44,15 +44,15 @@ final class Component68
         }
     }
 
-    static final void method2619(GraphicsToolkit var_ha, int[] is, int i, int[] is_9_, int[] is_10_) {
+    static final void decodedOperation2619(GraphicsToolkit var_ha, int[] is, int i, int[] is_9_, int[] is_10_) {
         method2623(var_ha, is, 0, is.length, i, is_9_, is_10_);
     }
 
-    static final void method2620(GraphicsToolkit var_ha, int[] is, int i) {
+    static final void decodedOperation2620(GraphicsToolkit var_ha, int[] is, int i) {
         method2623(var_ha, is, 0, is.length, i, null, null);
     }
 
-    public static void method2621() {
+    public static void decodedOperation2621() {
         anIntArray4107 = null;
     }
 
@@ -91,7 +91,7 @@ final class Component68
         method2624();
         method2622(is, i, i_19_);
         method2618(is_23_[1]);
-        while (method2627(is_23_[3])) {
+        while (decodedOperation2627(is_23_[3])) {
             int i_24_ = anInt4106;
             int i_25_ = anInt4108;
             int i_26_ = anInt4103;
@@ -161,7 +161,7 @@ final class Component68
         }
     }
 
-    private static final boolean method2627(int i) {
+    private static final boolean decodedOperation2627(int i) {
         int i_40_ = anInt4102;
         int i_41_ = anInt4109;
         int i_42_ = anInt4103;

@@ -528,28 +528,28 @@ class Buffer extends Node {
         anInt7201++;
         if (i_71_ != Component49.clientState) {
             if (i_71_ == 13) {
-                if (OggStreamReader.aString9043 != null) MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -81);
-                else Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
+                if (OggStreamReader.aString9043 != null) MenuOpener.decodedOperation1157(RuntimeException_Sub1.anInt4596, (byte) -81);
+                else Component193.decodedOperation1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             }
             if (i_71_ != 13 && ItemDefinition.aClass238_2773 != null) {
                 ItemDefinition.aClass238_2773.close((byte) 36);
                 ItemDefinition.aClass238_2773 = null;
             }
-            if (i_71_ == 3) CacheNode.method3198((DebugPanic.anInt4737 != r.anInt9721), (byte) -45);
-            if (i_71_ == 7) HashTable.method1006((r.anInt9721 != Component285.anInt970), (byte) 102);
+            if (i_71_ == 3) CacheNode.decodedOperation3198((DebugPanic.anInt4737 != r.anInt9721), (byte) -45);
+            if (i_71_ == 7) HashTable.decodedOperation1006((r.anInt9721 != Component285.anInt970), (byte) 102);
             if (i_71_ == 5) {
-                if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -124);
-                else Component280.method1372(-1);
+                if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.decodedOperation1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -124);
+                else Component280.decodedOperation1372(-1);
             } else if (i_71_ != 6) {
                 if (i_71_ == 9) {
-                    if (OggStreamReader.aString9043 != null) MenuOpener.method1157((RuntimeException_Sub1.anInt4596), (byte) -120);
-                    else Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
+                    if (OggStreamReader.aString9043 != null) MenuOpener.decodedOperation1157((RuntimeException_Sub1.anInt4596), (byte) -120);
+                    else Component193.decodedOperation1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
                 } else if (i_71_ == 12) {
-                    if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.method1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -98);
-                    else Component280.method1372(-1);
+                    if (OggStreamReader.aString9043 == null) DisplayModeManagerContainer346.decodedOperation1213(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password, -98);
+                    else Component280.decodedOperation1372(-1);
                 }
-            } else if (OggStreamReader.aString9043 == null) Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
-            else MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -99);
+            } else if (OggStreamReader.aString9043 == null) Component193.decodedOperation1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
+            else MenuOpener.decodedOperation1157(RuntimeException_Sub1.anInt4596, (byte) -99);
             if (Component212.isValidType(Component49.clientState, (byte) -78)) {
                 Component181.aClass45_1541.discardMode = 2;
                 VideoAdDisplay.aClass45_3183.discardMode = 2;
@@ -565,7 +565,7 @@ class Buffer extends Node {
                 NodeSub46.anInt7115 = 1;
                 Component101.anInt2101 = 0;
                 DisplayModeManagerContainer259.anInt3441 = 0;
-                HashNodeSub3.method3177(-111, true);
+                HashNodeSub3.decodedOperation3177(-111, true);
                 Component181.aClass45_1541.discardMode = 1;
                 VideoAdDisplay.aClass45_3183.discardMode = 1;
                 Component97.aClass45_1538.discardMode = 1;
@@ -574,15 +574,15 @@ class Buffer extends Node {
                 CacheNodeSub2.aClass45_10480.discardMode = 1;
                 SeekableFile.aClass45_1322.discardMode = 1;
             }
-            if (i_71_ == 11 || i_71_ == 3) ToolbarRefreshDefinition.method3088(9);
-            boolean bool = (i == i_71_ || CacheNode.method3196(i_71_, i ^ ~0x58) || CacheFileStore.isReconnectState(i_71_, -100));
-            boolean bool_72_ = (Component49.clientState == 2 || CacheNode.method3196(Component49.clientState, -110) || CacheFileStore.isReconnectState(Component49.clientState, -128));
+            if (i_71_ == 11 || i_71_ == 3) ToolbarRefreshDefinition.decodedOperation3088(9);
+            boolean bool = (i == i_71_ || CacheNode.decodedOperation3196(i_71_, i ^ ~0x58) || CacheFileStore.isReconnectState(i_71_, -100));
+            boolean bool_72_ = (Component49.clientState == 2 || CacheNode.decodedOperation3196(Component49.clientState, -110) || CacheFileStore.isReconnectState(Component49.clientState, -128));
             if (bool != bool_72_) {
                 if (bool) {
                     Component119.anInt3428 = Component35.anInt4270;
-                    if (Component192.preferences.aClass239_Sub26_7245.method1838(-32350) != 0) {
-                        Component168.method2355(Component192.preferences.aClass239_Sub26_7245.method1838(-32350), (byte) 50, false, Component54.aClass45_8667, Component35.anInt4270, 0, 2);
-                        DefinitionSub17Sub1.method3093(i ^ 0x66);
+                    if (Component192.preferences.aClass239_Sub26_7245.decodedOperation1838(-32350) != 0) {
+                        Component168.decodedOperation2355(Component192.preferences.aClass239_Sub26_7245.decodedOperation1838(-32350), (byte) 50, false, Component54.aClass45_8667, Component35.anInt4270, 0, 2);
+                        DefinitionSub17Sub1.decodedOperation3093(i ^ 0x66);
                     } else Sprite.resetMusic(2, 22684);
                     HardwareProbe.aClass248_6601.writeLoginState(-117, false);
                 } else {

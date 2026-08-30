@@ -14,7 +14,7 @@ abstract class Component35
     static Component183 aClass114_4272 = new Component183(67, 3);
     static NodeCache aClass60_4273 = new NodeCache(128, 4);
 
-    public static void method2693(int i) {
+    public static void decodedOperation2693(int i) {
         if (i != 3) aClass114_4269 = null;
         aClass114_4272 = null;
         anIntArray4271 = null;

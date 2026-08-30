@@ -18,7 +18,7 @@ final class Component321
     static Connection aClass202_2589;
     static int anInt2590;
 
-    static final AudioLine method1439(int i, ReflectionInvoker class297, Component component, int i_0_, int i_1_) {
+    static final AudioLine decodedOperation1439(int i, ReflectionInvoker class297, Component component, int i_0_, int i_1_) {
         try {
             anInt2583++;
             if (Component231.sampleRate == 0) throw new IllegalStateException();
@@ -41,7 +41,7 @@ final class Component321
                     if ((Component191.aClass250_2462.lines[i_0_]) != null) throw new IllegalArgumentException();
                     Component191.aClass250_2462.lines[i_0_] = class279;
                 }
-                if (i_1_ != 7) method1440(107);
+                if (i_1_ != 7) decodedOperation1440(107);
                 return class279;
             } catch (Throwable throwable) {
                 try {
@@ -72,7 +72,7 @@ final class Component321
 
     protected final void finalize() throws Throwable {
         anInt2588++;
-        aClass377_2585.method3971(16386, this.anInt2584);
+        aClass377_2585.decodedOperation3971(16386, this.anInt2584);
         super.finalize();
     }
 
@@ -81,7 +81,7 @@ final class Component321
         this.anInt2584 = i_3_;
     }
 
-    public static void method1440(int i) {
+    public static void decodedOperation1440(int i) {
         aClass202_2589 = null;
         int i_4_ = -79 / ((i - -45) / 46);
         aClass351_2587 = null;

@@ -20,14 +20,14 @@ final class Component244
     static int currentCursorId = -1;
     static int anInt4180;
 
-    public static void method2658(boolean bool) {
+    public static void decodedOperation2658(boolean bool) {
         aFloatArrayArray4174 = null;
         anObject4177 = null;
         if (bool != true) aFloatArrayArray4174 = null;
     }
 
     protected final void finalize() throws Throwable {
-        aHa_Sub2_4173.method3769(this.aLong4178, false);
+        aHa_Sub2_4173.decodedOperation3769(this.aLong4178, false);
         anInt4175++;
         super.finalize();
     }
@@ -41,16 +41,16 @@ final class Component244
         }
     }
 
-    static final boolean method2659(byte i, int i_0_, int i_1_) {
+    static final boolean decodedOperation2659(byte i, int i_0_, int i_1_) {
         int i_2_ = 24 % ((i - 76) / 42);
         anInt4176++;
-        return (0x70000 & i_0_) != 0 | Node.method2709(i_1_, i_0_, -1) || Component118.method2187(i_0_, -84, i_1_);
+        return (0x70000 & i_0_) != 0 | Node.decodedOperation2709(i_1_, i_0_, -1) || Component118.decodedOperation2187(i_0_, -84, i_1_);
     }
 
-    static final Component383 method2660(byte i, Buffer class348_sub49) {
+    static final Component383 decodedOperation2660(byte i, Buffer class348_sub49) {
         anInt4180++;
         if (i != 26) return null;
-        Component118 class288 = Component383.method2189(class348_sub49, i + 59);
+        Component118 class288 = Component383.decodedOperation2189(class348_sub49, i + 59);
         int i_3_ = class348_sub49.readSignedMedium((byte) 125);
         return new Component383(class288.anInt4958, class288.aClass221_4955, class288.aClass341_4952, class288.anInt4950, class288.anInt4951, i_3_);
     }

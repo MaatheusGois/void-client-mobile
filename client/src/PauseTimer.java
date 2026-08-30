@@ -30,10 +30,10 @@ final class PauseTimer {
     static int anInt512;
     static int anInt513 = 100;
 
-    static final Component150 method360(byte i, int i_0_) {
+    static final Component150 decodedOperation360(byte i, int i_0_) {
         anInt505++;
         if (i != -57) processDevConsoleInput(97);
-        Component150[] class227s = TheoraVideoPlayer.method841(i + -70);
+        Component150[] class227s = TheoraVideoPlayer.decodedOperation841(i + -70);
         for (int i_1_ = 0; class227s.length > i_1_; i_1_++) {
             Component150 class227 = class227s[i_1_];
             if (class227.anInt2970 == i_0_) return class227;
@@ -55,7 +55,7 @@ final class PauseTimer {
         else if (i_2_ == 6) this.anInt503 = class348_sub49.readMedium(-1);
     }
 
-    static final void method362(int i) {
+    static final void decodedOperation362(int i) {
         anInt509++;
         NodeSub27 class348_sub27 = ((NodeSub27) HashNodeSub20.aClass262_9711.first(4));
         int i_3_ = -45 % ((i - -34) / 47);
@@ -63,15 +63,15 @@ final class PauseTimer {
             if (class348_sub27.anInt6893 > 0) class348_sub27.anInt6893--;
             if (class348_sub27.anInt6893 != 0) {
                 if (class348_sub27.anInt6894 > 0) class348_sub27.anInt6894--;
-                if (class348_sub27.anInt6894 == 0 && class348_sub27.anInt6905 >= 1 && class348_sub27.anInt6896 >= 1 && (class348_sub27.anInt6905 <= -2 + AbstractShaderSub4.anInt7319) && (class348_sub27.anInt6896 <= -2 + ParametricDefinition.anInt9109) && (class348_sub27.anInt6907 < 0 || (Component2.method195(class348_sub27.anInt6895, false, class348_sub27.anInt6907)))) {
-                    SceneManager.method1591(class348_sub27.anInt6905, 70, class348_sub27.anInt6904, -1, class348_sub27.anInt6907, class348_sub27.anInt6895, class348_sub27.anInt6896, class348_sub27.anInt6900, class348_sub27.anInt6899);
+                if (class348_sub27.anInt6894 == 0 && class348_sub27.anInt6905 >= 1 && class348_sub27.anInt6896 >= 1 && (class348_sub27.anInt6905 <= -2 + AbstractShaderSub4.anInt7319) && (class348_sub27.anInt6896 <= -2 + ParametricDefinition.anInt9109) && (class348_sub27.anInt6907 < 0 || (Component2.decodedOperation195(class348_sub27.anInt6895, false, class348_sub27.anInt6907)))) {
+                    SceneManager.decodedOperation1591(class348_sub27.anInt6905, 70, class348_sub27.anInt6904, -1, class348_sub27.anInt6907, class348_sub27.anInt6895, class348_sub27.anInt6896, class348_sub27.anInt6900, class348_sub27.anInt6899);
                     class348_sub27.anInt6894 = -1;
                     if ((class348_sub27.anInt6907 != class348_sub27.anInt6902) || class348_sub27.anInt6902 != -1) {
                         if ((class348_sub27.anInt6907 == class348_sub27.anInt6902) && (class348_sub27.anInt6892 == class348_sub27.anInt6900) && (class348_sub27.anInt6895 == (class348_sub27.anInt6903))) class348_sub27.unlink((byte) 75);
                     } else class348_sub27.unlink((byte) 86);
                 }
-            } else if (class348_sub27.anInt6902 < 0 || (Component2.method195(class348_sub27.anInt6903, false, class348_sub27.anInt6902))) {
-                SceneManager.method1591(class348_sub27.anInt6905, 112, class348_sub27.anInt6904, -1, class348_sub27.anInt6902, class348_sub27.anInt6903, class348_sub27.anInt6896, class348_sub27.anInt6892, class348_sub27.anInt6899);
+            } else if (class348_sub27.anInt6902 < 0 || (Component2.decodedOperation195(class348_sub27.anInt6903, false, class348_sub27.anInt6902))) {
+                SceneManager.decodedOperation1591(class348_sub27.anInt6905, 112, class348_sub27.anInt6904, -1, class348_sub27.anInt6902, class348_sub27.anInt6903, class348_sub27.anInt6896, class348_sub27.anInt6892, class348_sub27.anInt6899);
                 class348_sub27.unlink((byte) 49);
             }
         }
@@ -201,15 +201,15 @@ final class PauseTimer {
                                 else if (i_7_ != 104 || (Component92.consoleHistoryDepth >= (ArbShaderProgram.consoleLines).length)) {
                                     if (i_7_ == 105 && Component92.consoleHistoryDepth > 0) {
                                         Component92.consoleHistoryDepth--;
-                                        Shader.method159(-615751774);
+                                        Shader.decodedOperation159(-615751774);
                                         NodeSub38.consoleCursor = Component126.consoleInput.length();
-                                    } else if (Npc.method2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
+                                    } else if (Npc.decodedOperation2446(c, (byte) 105) || c == 92 || c == 47 || c == 46 || c == 58 || c == 44 || c == 32 || c == 95 || c == 45 || c == 43 || c == 91 || c == 93) {
                                         Component126.consoleInput = ((Component126.consoleInput.substring(0, NodeSub38.consoleCursor)) + DefinitionGroup.anInterface6Array9534[i_6_].getKeyChar((byte) 23) + (Component126.consoleInput.substring(NodeSub38.consoleCursor)));
                                         NodeSub38.consoleCursor++;
                                     }
                                 } else {
                                     Component92.consoleHistoryDepth++;
-                                    Shader.method159(-615751774);
+                                    Shader.decodedOperation159(-615751774);
                                     NodeSub38.consoleCursor = Component126.consoleInput.length();
                                 }
                             } else {
@@ -248,11 +248,11 @@ final class PauseTimer {
             }
             HashNodeSub19.anInt9699 = 0;
             Component193.anInt3246 = 0;
-            Component160.method3466(89);
+            Component160.decodedOperation3466(89);
         }
     }
 
-    final void method364(Buffer class348_sub49, byte i) {
+    final void decodedOperation364(Buffer class348_sub49, byte i) {
         anInt511++;
         if (i >= 22) {
             for (; ; ) {
@@ -263,7 +263,7 @@ final class PauseTimer {
         }
     }
 
-    static final void method365(RenderableObject class318_sub1, NodeSub1[] class348_sub1s) {
+    static final void decodedOperation365(RenderableObject class318_sub1, NodeSub1[] class348_sub1s) {
         if (DisplayModeManagerContainer58.aBoolean10221) {
             int i = class318_sub1.method2384(class348_sub1s, 49);
             JaclibLoader.toolkit.method3642(i, class348_sub1s);
@@ -280,7 +280,7 @@ final class PauseTimer {
                 i = (class318_sub1.x >> Component149.anInt4459);
                 i_12_ = (class318_sub1.y >> Component149.anInt4459);
             }
-            JaclibLoader.toolkit.EA((NodeSub1Sub1.aSArray8801[0].getInterpolatedHeight(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.method3547(i, i_12_), Component203.method2483(i, i_12_), HelveticaFont.method1457(i, i_12_));
+            JaclibLoader.toolkit.EA((NodeSub1Sub1.aSArray8801[0].getInterpolatedHeight(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.decodedOperation3547(i, i_12_), Component203.decodedOperation2483(i, i_12_), HelveticaFont.decodedOperation1457(i, i_12_));
         }
         RenderableSub4 class318_sub4 = class318_sub1.method2386(1, JaclibLoader.toolkit);
         if (class318_sub4 != null) {
@@ -288,17 +288,17 @@ final class PauseTimer {
                 RenderableSub3[] class318_sub3s = class318_sub4.aClass318_Sub3Array6414;
                 for (int i = 0; i < class318_sub3s.length; i++) {
                     RenderableSub3 class318_sub3 = class318_sub3s[i];
-                    if (class318_sub3.aBoolean6401) Component103.method2663(-5590, (class318_sub3.anInt6405 - class318_sub3.anInt6403), (class318_sub3.anInt6406 + class318_sub3.anInt6403), (class318_sub3.anInt6402 - class318_sub3.anInt6403), (class318_sub3.anInt6404 + class318_sub3.anInt6403));
+                    if (class318_sub3.aBoolean6401) Component103.decodedOperation2663(-5590, (class318_sub3.anInt6405 - class318_sub3.anInt6403), (class318_sub3.anInt6406 + class318_sub3.anInt6403), (class318_sub3.anInt6402 - class318_sub3.anInt6403), (class318_sub3.anInt6404 + class318_sub3.anInt6403));
                 }
             }
             if (class318_sub4.aBoolean6409) {
                 class318_sub4.aClass318_Sub1_6410 = class318_sub1;
                 if (DefinitionSub5.aBoolean9121) {
                     synchronized (DisplayModeManagerContainer5.aClass76_1208) {
-                        DisplayModeManagerContainer5.aClass76_1208.method774(class318_sub4, 18802);
+                        DisplayModeManagerContainer5.aClass76_1208.decodedOperation774(class318_sub4, 18802);
                     }
-                } else DisplayModeManagerContainer5.aClass76_1208.method774(class318_sub4, 18802);
-            } else Component350.method560(class318_sub4, 18);
+                } else DisplayModeManagerContainer5.aClass76_1208.decodedOperation774(class318_sub4, 18802);
+            } else Component350.decodedOperation560(class318_sub4, 18);
         }
     }
 

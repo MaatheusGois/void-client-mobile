@@ -18,7 +18,7 @@ final class NodeSub21
     int anInt6855;
     static int anInt6856;
 
-    static final void method2954(byte i) {
+    static final void decodedOperation2954(byte i) {
         anInt6856++;
         if (NodeBaseSub1.anInt9775 != -1 && Component102.anInt4803 != -1) {
             int i_0_ = ((Component208.anInt1780 * (Component374.anInt4133 + -Component195.anInt5019) >> 16) + Component195.anInt5019);
@@ -75,9 +75,9 @@ final class NodeSub21
         return i ^ i_24_;
     }
 
-    public static void method2956(byte i) {
+    public static void decodedOperation2956(byte i) {
         aString6854 = null;
-        if (i != 53) method2954((byte) -100);
+        if (i != 53) decodedOperation2954((byte) -100);
     }
 
     NodeSub21(int i) {

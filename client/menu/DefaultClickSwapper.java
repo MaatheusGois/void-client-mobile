@@ -242,7 +242,7 @@ final class DefaultClickSwapper {
         DefinitionSub4.menuEntries.addTail(preferred, -20180);
         int prefOp = preferred.opcode >= 2000 ? preferred.opcode - 2000 : preferred.opcode;
         // Opcode 1011 = high CC_OP: client treats tip-1011 as "open menu" on left-click
-        // (Component203.method2485). Same packet path as 18 — rewrite so tap executes.
+        // (Component203.decodedOperation2485). Same packet path as 18 — rewrite so tap executes.
         if (prefOp == 1011) {
             preferred.opcode = preferred.opcode >= 2000 ? 2018 : 18;
             prefOp = 18;
@@ -392,7 +392,7 @@ final class DefaultClickSwapper {
         }
         NpcComposition composition = npc.definition;
         if (composition != null && composition.anIntArray1377 != null) {
-            composition = composition.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+            composition = composition.decodedOperation794(DisplayModeManagerContainer58.aClass170_10209, -1);
         }
         return composition;
     }

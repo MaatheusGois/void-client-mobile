@@ -103,18 +103,18 @@ final class NodeSub51
                 this.aClass239_Sub5_7240 = new DisplayModeManagerContainer348(class348_sub49.readUnsignedByte(255), this);
                 this.aClass239_Sub26_7272 = new RadixText(class348_sub49.readUnsignedByte(i + -30624), this);
                 if (i_0_ >= 20) this.aClass239_Sub26_7215 = new RadixText(class348_sub49.readUnsignedByte(255), this);
-                else this.aClass239_Sub26_7215 = new RadixText(this.aClass239_Sub26_7272.method1838(-32350), this);
+                else this.aClass239_Sub26_7215 = new RadixText(this.aClass239_Sub26_7272.decodedOperation1838(-32350), this);
                 this.aClass239_Sub26_7260 = new RadixText(class348_sub49.readUnsignedByte(255), this);
                 this.aClass239_Sub26_7234 = new RadixText(class348_sub49.readUnsignedByte(255), this);
                 if (i_0_ >= 21) this.aClass239_Sub26_7245 = new RadixText(class348_sub49.readUnsignedByte(255), this);
-                else this.aClass239_Sub26_7245 = new RadixText(this.aClass239_Sub26_7260.method1838(-32350), this);
+                else this.aClass239_Sub26_7245 = new RadixText(this.aClass239_Sub26_7260.decodedOperation1838(-32350), this);
                 if (i_0_ >= 1) {
                     class348_sub49.readUnsignedShort(842397944);
                     class348_sub49.readUnsignedShort(842397944);
                 }
                 if (i_0_ >= 3 && i_0_ < 6) class348_sub49.readUnsignedByte(255);
                 if (i_0_ >= 4) this.aClass239_Sub15_7224 = new DisplayModeManagerContainer341(class348_sub49.readUnsignedByte(255), this);
-                if (i != 30879) method3428((byte) -10);
+                if (i != 30879) decodedOperation3428((byte) -10);
                 class348_sub49.readInt((byte) -126);
                 if (i_0_ >= 6) this.aClass239_Sub8_7227 = new DisplayModeManagerContainer295(class348_sub49.readUnsignedByte(i ^ 0x7860), this);
                 if (i_0_ >= 7) this.aClass239_Sub11_7265 = new LibraryCreditsText(class348_sub49.readUnsignedByte(255), this);
@@ -138,16 +138,16 @@ final class NodeSub51
         } while (false);
     }
 
-    final GameType method3422(int i) {
+    final GameType decodedOperation3422(int i) {
         anInt7258++;
-        if (i != 674) method3425(45);
+        if (i != 674) decodedOperation3425(45);
         return aClass230_7269;
     }
 
     private final void method3423(boolean bool, int i) {
         if (bool || this.aClass239_Sub20_7216 == null) this.aClass239_Sub20_7216 = new Component20(this);
         anInt7242++;
-        if (bool || this.aClass239_Sub20_7248 == null) this.aClass239_Sub20_7248 = new Component20(this.aClass239_Sub20_7216.method1808(i + -63636), this);
+        if (bool || this.aClass239_Sub20_7248 == null) this.aClass239_Sub20_7248 = new Component20(this.aClass239_Sub20_7216.decodedOperation1808(i + -63636), this);
         if (bool || this.aClass239_Sub12_7243 == null) this.aClass239_Sub12_7243 = new Component205(this);
         if (bool || this.aClass239_Sub10_7232 == null) this.aClass239_Sub10_7232 = new Component98(this);
         if (bool || this.aClass239_Sub6_7226 == null) this.aClass239_Sub6_7226 = new Component31(this);
@@ -162,7 +162,7 @@ final class NodeSub51
         if (bool || this.aClass239_Sub3_7222 == null) this.aClass239_Sub3_7222 = new Component272(this);
         if (bool || this.aClass239_Sub15_7224 == null) this.aClass239_Sub15_7224 = new DisplayModeManagerContainer341(this);
         if (bool || this.aClass239_Sub14_7250 == null) this.aClass239_Sub14_7250 = new Component329(this);
-        if (bool || this.aClass239_Sub14_7264 == null) this.aClass239_Sub14_7264 = new Component329(this.aClass239_Sub14_7250.method1778(-32350), this);
+        if (bool || this.aClass239_Sub14_7264 == null) this.aClass239_Sub14_7264 = new Component329(this.aClass239_Sub14_7250.decodedOperation1778(-32350), this);
         if (bool || this.aClass239_Sub23_7231 == null) this.aClass239_Sub23_7231 = new Component388(this);
         if (bool || this.aClass239_Sub21_7270 == null) this.aClass239_Sub21_7270 = new Component71(this);
         if (bool || this.aClass239_Sub2_7228 == null) this.aClass239_Sub2_7228 = new DisplayModeManagerContainer199(this);
@@ -170,10 +170,10 @@ final class NodeSub51
         if (bool || this.aClass239_Sub25_7251 == null) this.aClass239_Sub25_7251 = new Component256(this);
         if (bool || this.aClass239_Sub25_7271 == null) this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.getPreferenceValue(-32350), this);
         if (bool || this.aClass239_Sub27_7255 == null) this.aClass239_Sub27_7255 = new Component139(this);
-        if (bool || this.aClass239_Sub27_7261 == null) this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.method1840(-32350), this);
+        if (bool || this.aClass239_Sub27_7261 == null) this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.decodedOperation1840(-32350), this);
         if (bool || this.aClass239_Sub18_7259 == null) this.aClass239_Sub18_7259 = new Component302(this);
         if (bool || this.aClass239_Sub8_7227 == null) this.aClass239_Sub8_7227 = new DisplayModeManagerContainer295(this);
-        if (bool || this.aClass239_Sub8_7254 == null) this.aClass239_Sub8_7254 = new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.method1751(-32350), this);
+        if (bool || this.aClass239_Sub8_7254 == null) this.aClass239_Sub8_7254 = new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.decodedOperation1751(-32350), this);
         if (bool || this.customCursorSetting == null) this.customCursorSetting = new CustomCursorSetting(this);
         if (bool || this.aClass239_Sub29_7229 == null) this.aClass239_Sub29_7229 = new Component284(this);
         if (bool || this.aClass239_Sub17_7263 == null) this.aClass239_Sub17_7263 = new Component66(this);
@@ -197,7 +197,7 @@ final class NodeSub51
                         if (i_4_ > 24) method3423(true, 31286);
                         else {
                             this.aClass239_Sub20_7216 = new Component20(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub20_7248 = new Component20((this.aClass239_Sub20_7216.method1808(i ^ ~0x7dc0)), this);
+                            this.aClass239_Sub20_7248 = new Component20((this.aClass239_Sub20_7216.decodedOperation1808(i ^ ~0x7dc0)), this);
                             this.aClass239_Sub12_7243 = new Component205(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub10_7232 = new Component98(class348_sub49.readUnsignedByte(i + -670), this);
                             this.aClass239_Sub6_7226 = new Component31(class348_sub49.readUnsignedByte(i + -670), this);
@@ -211,7 +211,7 @@ final class NodeSub51
                             if (i_4_ >= 24) this.aClass239_Sub3_7222 = new Component272(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub15_7224 = new DisplayModeManagerContainer341(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub14_7250 = new Component329(class348_sub49.readUnsignedByte(i + -670), this);
-                            this.aClass239_Sub14_7264 = new Component329(this.aClass239_Sub14_7250.method1778(-32350), this);
+                            this.aClass239_Sub14_7264 = new Component329(this.aClass239_Sub14_7250.decodedOperation1778(-32350), this);
                             this.aClass239_Sub23_7231 = new Component388(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub21_7270 = new Component71(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub2_7228 = new DisplayModeManagerContainer199(class348_sub49.readUnsignedByte(255), this);
@@ -219,10 +219,10 @@ final class NodeSub51
                             this.aClass239_Sub25_7251 = new Component256(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.getPreferenceValue(-32350), this);
                             this.aClass239_Sub27_7255 = new Component139(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.method1840(-32350), this);
+                            this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.decodedOperation1840(-32350), this);
                             this.aClass239_Sub18_7259 = new Component302(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub8_7227 = new DisplayModeManagerContainer295(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub8_7254 = (new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.method1751(i + -33275), this));
+                            this.aClass239_Sub8_7254 = (new DisplayModeManagerContainer295(this.aClass239_Sub8_7227.decodedOperation1751(i + -33275), this));
                             this.customCursorSetting = new CustomCursorSetting(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub29_7229 = new Component284(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub17_7263 = new Component66(class348_sub49.readUnsignedByte(255), this);
@@ -252,10 +252,10 @@ final class NodeSub51
         }
     }
 
-    final boolean method3425(int i) {
+    final boolean decodedOperation3425(int i) {
         if (i > -61) method3424(21, null);
         anInt7217++;
-        return this.aClass239_Sub25_7271.method1830((byte) -120) && (this.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) && aClass199_7221.method1458(-23688) < 96;
+        return this.aClass239_Sub25_7271.decodedOperation1830((byte) -120) && (this.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) && aClass199_7221.decodedOperation1458(-23688) < 96;
     }
 
     private final void method3426(byte i) {
@@ -279,49 +279,49 @@ final class NodeSub51
         }
     }
 
-    final Buffer method3427(int i) {
+    final Buffer decodedOperation3427(int i) {
         anInt7237++;
-        Buffer class348_sub49 = new Buffer(Component338.method1032(i ^ ~0x18));
+        Buffer class348_sub49 = new Buffer(Component338.decodedOperation1032(i ^ ~0x18));
         class348_sub49.writeByte(false, i);
-        class348_sub49.writeByte(false, this.aClass239_Sub20_7216.method1808(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub12_7243.method1771(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub10_7232.method1764(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub6_7226.method1743(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub1_7246.method1720(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub16_7247.method1789(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub9_7256.method1759(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub4_7220.method1737(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub13_7236.method1776(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub28_7230.method1845(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub7_7238.method1748(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub3_7222.method1727(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub15_7224.method1784(i + -32374));
-        class348_sub49.writeByte(false, this.aClass239_Sub14_7250.method1778(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub23_7231.method1818(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub21_7270.method1812(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub2_7228.method1726(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub24_7235.method1820(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub20_7216.decodedOperation1808(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub12_7243.decodedOperation1771(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub10_7232.decodedOperation1764(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub6_7226.decodedOperation1743(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub1_7246.decodedOperation1720(i ^ ~0x7e45));
+        class348_sub49.writeByte(false, this.aClass239_Sub16_7247.decodedOperation1789(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub9_7256.decodedOperation1759(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub4_7220.decodedOperation1737(i + -32374));
+        class348_sub49.writeByte(false, this.aClass239_Sub13_7236.decodedOperation1776(i + -32374));
+        class348_sub49.writeByte(false, this.aClass239_Sub28_7230.decodedOperation1845(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub7_7238.decodedOperation1748(i ^ ~0x7e45));
+        class348_sub49.writeByte(false, this.aClass239_Sub3_7222.decodedOperation1727(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub15_7224.decodedOperation1784(i + -32374));
+        class348_sub49.writeByte(false, this.aClass239_Sub14_7250.decodedOperation1778(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub23_7231.decodedOperation1818(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub21_7270.decodedOperation1812(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub2_7228.decodedOperation1726(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub24_7235.decodedOperation1820(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub25_7251.getPreferenceValue(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub27_7255.method1840(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub18_7259.method1800(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub8_7227.method1751(i + -32374));
+        class348_sub49.writeByte(false, this.aClass239_Sub27_7255.decodedOperation1840(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub18_7259.decodedOperation1800(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub8_7227.decodedOperation1751(i + -32374));
         class348_sub49.writeByte(false, this.customCursorSetting.getValue(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub29_7229.method1848(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub17_7263.method1798(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub19_7257.method1805(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub11_7265.method1768(i ^ ~0x7e45));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7272.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7234.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7215.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7260.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub26_7245.method1838(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub5_7240.method1739(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub29_7229.decodedOperation1848(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub17_7263.decodedOperation1798(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub19_7257.decodedOperation1805(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub11_7265.decodedOperation1768(i ^ ~0x7e45));
+        class348_sub49.writeByte(false, this.aClass239_Sub26_7272.decodedOperation1838(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub26_7234.decodedOperation1838(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub26_7215.decodedOperation1838(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub26_7260.decodedOperation1838(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub26_7245.decodedOperation1838(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub5_7240.decodedOperation1739(-32350));
         return class348_sub49;
     }
 
-    final HelveticaFont method3428(byte i) {
+    final HelveticaFont decodedOperation3428(byte i) {
         anInt7225++;
-        if (i >= -73) method3430(false);
+        if (i >= -73) decodedOperation3430(false);
         return aClass199_7221;
     }
 
@@ -332,7 +332,7 @@ final class NodeSub51
     final void applyPreference(byte i, Component339 class239, int i_7_) {
         try {
             anInt7239++;
-            if (i != 74) method3425(-10);
+            if (i != 74) decodedOperation3425(-10);
             class239.applyValue(i_7_, 72);
             method3426((byte) 36);
         } catch (RuntimeException runtimeexception) {
@@ -340,7 +340,7 @@ final class NodeSub51
         }
     }
 
-    public static void method3430(boolean bool) {
+    public static void decodedOperation3430(boolean bool) {
         if (bool != false) aShortArrayArray7223 = null;
         aClass318_Sub10Array7249 = null;
         aShortArrayArray7218 = null;

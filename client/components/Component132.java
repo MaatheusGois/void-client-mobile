@@ -14,8 +14,8 @@ final class Component132
     byte aByte1814;
     static CacheStore aClass45_1815;
 
-    public static void method1091(int i) {
-        if (i != -9341) method1091(-16);
+    public static void decodedOperation1091(int i) {
+        if (i != -9341) decodedOperation1091(-16);
         aClass45_1815 = null;
         aClass25_1813 = null;
     }

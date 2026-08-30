@@ -29,7 +29,7 @@ final class DisplayModeManagerContainer368
     static int anInt5253;
     static int anInt5254;
 
-    static final void method465(int i) {
+    static final void decodedOperation465(int i) {
         if (i != -1636518164) anInt5252 = -40;
         HeapDumpHelper.aClass356_4934.clear(0);
         anInt5251++;
@@ -50,7 +50,7 @@ final class DisplayModeManagerContainer368
             anInt5238++;
             if (!Component364.aBoolean8335 && DisplayModeManagerContainer306.menuEntryCount < 500) {
                 i_8_ = i_8_ != -1 ? i_8_ : Component149.widgetCursorId;
-                if (i_0_ >= -65) method469((byte) 19);
+                if (i_0_ >= -65) decodedOperation469((byte) 19);
                 MenuEntry class348_sub42_sub12 = new MenuEntry(string_6_, string, i_8_, i_5_, i_3_, l_7_, i_2_, i, bool_4_, bool, l, bool_1_);
                 GlToolkitSub2.appendMenuEntry((byte) 6, class348_sub42_sub12);
             }
@@ -59,11 +59,11 @@ final class DisplayModeManagerContainer368
         }
     }
 
-    static final void method467(int i, int i_9_, int i_10_) {
+    static final void decodedOperation467(int i, int i_9_, int i_10_) {
         if (i_9_ == -18075) {
             anInt5248++;
-            RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 1);
-            class348_sub42_sub15.method3246(-25490);
+            RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, 1);
+            class348_sub42_sub15.decodedOperation3246(-25490);
             class348_sub42_sub15.anInt9652 = i_10_;
         }
     }
@@ -86,7 +86,7 @@ final class DisplayModeManagerContainer368
         int i_20_ = i_12_ * anInt5243 >> 12;
         if (i_13_ > -29) anInt5252 = -91;
         int i_21_ = anInt5249 * i >> 12;
-        AbstractShaderSub3.method3540(i_15_, i_17_, this.anInt865, i_21_, i_16_, i_14_, i_18_, i_19_, i_20_, true);
+        AbstractShaderSub3.decodedOperation3540(i_15_, i_17_, this.anInt865, i_21_, i_16_, i_14_, i_18_, i_19_, i_20_, true);
     }
 
     DisplayModeManagerContainer368(int i, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_) {
@@ -106,23 +106,23 @@ final class DisplayModeManagerContainer368
         if (i < 87) anInt5247 = 18;
     }
 
-    public static void method469(byte i) {
+    public static void decodedOperation469(byte i) {
         int i_33_ = -24 / ((i - -12) / 41);
         aColorArray5242 = null;
         anIntArray5241 = null;
     }
 
-    static final short[] method470(short[] is, byte i) {
+    static final short[] decodedOperation470(short[] is, byte i) {
         anInt5253++;
         if (is == null) return null;
         short[] is_34_ = new short[is.length];
         Component313.arraycopyShorts(is, 0, is_34_, 0, is.length);
-        if (i >= -103) method470(null, (byte) -35);
+        if (i >= -103) decodedOperation470(null, (byte) -35);
         return is_34_;
     }
 
     final void method455(int i, int i_35_, int i_36_) {
         anInt5240++;
-        if (i_36_ >= -98) method470(null, (byte) -17);
+        if (i_36_ >= -98) decodedOperation470(null, (byte) -17);
     }
 }

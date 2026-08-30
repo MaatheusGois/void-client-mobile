@@ -9,9 +9,9 @@ abstract class NodeSub30
  */ extends Node {
     int anInt6912;
 
-    abstract int method3005(NodeSub16Sub4 class348_sub16_sub4);
+    abstract int decodedOperation3005(NodeSub16Sub4 class348_sub16_sub4);
 
-    abstract void method3006();
+    abstract void decodedOperation3006();
 
     public NodeSub30() {
         /* empty */

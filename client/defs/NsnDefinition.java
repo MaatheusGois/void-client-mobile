@@ -17,7 +17,7 @@ final class NsnDefinition
     static int anInt9251;
     private int anInt9252;
 
-    static final void method3094(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
+    static final void decodedOperation3094(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt9247++;
         int i_0_ = 0;
         class348_sub49_sub2.startBitAccess(-87);
@@ -30,10 +30,10 @@ final class NsnDefinition
                 } else {
                     int i_3_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_3_ == 0) {
-                        i_0_ = Component327.method2413(1, class348_sub49_sub2);
+                        i_0_ = Component327.decodedOperation2413(1, class348_sub49_sub2);
                         NodeSub5.aByteArray6624[i_2_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_2_]), 2);
                     } else {
-                        ShaderProgramSub9.method2177(1, i_2_, class348_sub49_sub2);
+                        ShaderProgramSub9.decodedOperation2177(1, i_2_, class348_sub49_sub2);
                     }
                 }
             }
@@ -50,9 +50,9 @@ final class NsnDefinition
                 } else {
                     int i_6_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_6_ == 0) {
-                        i_0_ = Component327.method2413(1, class348_sub49_sub2);
+                        i_0_ = Component327.decodedOperation2413(1, class348_sub49_sub2);
                         NodeSub5.aByteArray6624[i_5_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_5_]), 2);
-                    } else ShaderProgramSub9.method2177(i ^ ~0x53e4, i_5_, class348_sub49_sub2);
+                    } else ShaderProgramSub9.decodedOperation2177(i ^ ~0x53e4, i_5_, class348_sub49_sub2);
                 }
             }
         }
@@ -68,9 +68,9 @@ final class NsnDefinition
                 } else {
                     int i_9_ = class348_sub49_sub2.readBits((byte) -24, 1);
                     if (i_9_ == 0) {
-                        i_0_ = Component327.method2413(i + 21479, class348_sub49_sub2);
+                        i_0_ = Component327.decodedOperation2413(i + 21479, class348_sub49_sub2);
                         NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
-                    } else if (DisplayModeManagerContainer159.method1538(i_8_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
+                    } else if (DisplayModeManagerContainer159.decodedOperation1538(i_8_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_8_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_8_]), 2);
                 }
             }
         }
@@ -87,9 +87,9 @@ final class NsnDefinition
                     } else {
                         int i_12_ = class348_sub49_sub2.readBits((byte) -24, 1);
                         if (i_12_ == 0) {
-                            i_0_ = Component327.method2413(1, class348_sub49_sub2);
+                            i_0_ = Component327.decodedOperation2413(1, class348_sub49_sub2);
                             NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
-                        } else if (DisplayModeManagerContainer159.method1538(i_11_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
+                        } else if (DisplayModeManagerContainer159.decodedOperation1538(i_11_, (byte) 105, class348_sub49_sub2)) NodeSub5.aByteArray6624[i_11_] = (byte) Component224.bitwiseOr((NodeSub5.aByteArray6624[i_11_]), 2);
                     }
                 }
             }
@@ -136,13 +136,13 @@ final class NsnDefinition
         if (i >= -54) anInt9250 = -42;
     }
 
-    public static void method3096(int i) {
+    public static void decodedOperation3096(int i) {
         anIntArray9249 = null;
         aClass319_9245 = null;
         if (i != 32462) aClass319_9245 = null;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_20_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_20_) {
         int i_21_ = i;
         if (i_21_ == 0) method3095(-124, class348_sub49.readMedium(-1));
         anInt9251++;

@@ -36,17 +36,17 @@ final class NodeSub38
     private Stream aStream7022;
     private final int anInt7023;
 
-    final void method3032(int i, int i_0_, boolean[][] bools, boolean bool, int i_1_) {
+    final void decodedOperation3032(int i, int i_0_, boolean[][] bools, boolean bool, int i_1_) {
         anInt7012++;
         if (anInterface5_Impl2_7002 != null) {
-            if (bool != false) method3032(-50, -122, null, true, 25);
+            if (bool != false) decodedOperation3032(-50, -122, null, true, 25);
             if (anInt7023 <= i_0_ + i_1_ && -i_0_ + i_1_ <= anInt7017 && anInt7014 <= i - -i_0_ && -i_0_ + i <= anInt7010) {
                 for (int i_2_ = anInt7014; anInt7010 >= i_2_; i_2_++) {
                     for (int i_3_ = anInt7023; anInt7017 >= i_3_; i_3_++) {
                         int i_4_ = -i_1_ + i_3_;
                         int i_5_ = -i + i_2_;
                         if (-i_0_ < i_4_ && i_4_ < i_0_ && i_5_ > -i_0_ && i_0_ > i_5_ && bools[i_4_ - -i_0_][i_0_ + i_5_]) {
-                            aHa_Sub3_7007.isExtensionSupported((byte) (int) (255.0F * aClass348_Sub1_7004.method2721(-37)), -112);
+                            aHa_Sub3_7007.isExtensionSupported((byte) (int) (255.0F * aClass348_Sub1_7004.decodedOperation2721(-37)), -112);
                             aHa_Sub3_7007.waitNative(-123, anInterface5_Impl1_7020, 0);
                             aHa_Sub3_7007.drawArraysInstanced(0, (aHa_Sub3_7007.aClass130_8202));
                             aHa_Sub3_7007.showCursor(VideoAdDisplay.aClass21_3181, anInt7018 / 3, anInterface5_Impl2_7002, 0, 0, anInt7013, 116);
@@ -116,15 +116,15 @@ final class NodeSub38
             f = aFloatArrayArray7001[1 + i_11_][i];
             f_17_ = aFloatArrayArray7005[i_11_ + 1][i];
         }
-        float f_26_ = (float) (-i_12_ + aClass348_Sub1_7004.method2724(-1));
-        float f_27_ = (float) (aClass348_Sub1_7004.method2722(126) - i_14_);
-        float f_28_ = (float) (-i_13_ + aClass348_Sub1_7004.method2717((byte) 102));
+        float f_26_ = (float) (-i_12_ + aClass348_Sub1_7004.decodedOperation2724(-1));
+        float f_27_ = (float) (aClass348_Sub1_7004.decodedOperation2722(126) - i_14_);
+        float f_28_ = (float) (-i_13_ + aClass348_Sub1_7004.decodedOperation2717((byte) 102));
         float f_29_ = (float) Math.sqrt(f_28_ * f_28_ + (f_26_ * f_26_ + f_27_ * f_27_));
         float f_30_ = 1.0F / f_29_;
         f_26_ *= f_30_;
         f_27_ *= f_30_;
         f_28_ *= f_30_;
-        float f_31_ = f_29_ / (float) aClass348_Sub1_7004.method2723(-1);
+        float f_31_ = f_29_ / (float) aClass348_Sub1_7004.decodedOperation2723(-1);
         if (i_7_ == -29343) {
             float f_32_ = -(f_31_ * f_31_) + 1.0F;
             if (f_32_ < 0.0F) f_32_ = 0.0F;
@@ -132,7 +132,7 @@ final class NodeSub38
             if (f_33_ < 0.0F) f_33_ = 0.0F;
             float f_34_ = f_32_ * f_33_ * 2.0F;
             if (f_34_ > 1.0F) f_34_ = 1.0F;
-            int i_35_ = aClass348_Sub1_7004.method2720(-1);
+            int i_35_ = aClass348_Sub1_7004.decodedOperation2720(-1);
             int i_36_ = (int) (f_34_ * (float) (0xff & i_35_ >> 16));
             if (i_36_ > 255) i_36_ = 255;
             int i_37_ = (int) (f_34_ * (float) ((0xff76 & i_35_) >> 8));
@@ -168,9 +168,9 @@ final class NodeSub38
         if (i_39_ == 49) anInt7000++;
     }
 
-    public static void method3035(int i) {
+    public static void decodedOperation3035(int i) {
         aClass114_7015 = null;
-        if (i != 1) method3035(-34);
+        if (i != 1) decodedOperation3035(-34);
     }
 
     NodeSub38(GlToolkitSub3 var_ha_Sub3, BufferCacheSub3 var_s_Sub3, NodeSub1 class348_sub1, int[] is) {
@@ -178,11 +178,11 @@ final class NodeSub38
             aHa_Sub3_7007 = var_ha_Sub3;
             aS_Sub3_7019 = var_s_Sub3;
             aClass348_Sub1_7004 = class348_sub1;
-            int i = (aClass348_Sub1_7004.method2723(-1) + -(var_s_Sub3.tileSize >> 1));
-            anInt7023 = (-i + aClass348_Sub1_7004.method2724(-1) >> var_s_Sub3.tileSizeBits);
-            anInt7017 = (aClass348_Sub1_7004.method2724(-1) + i >> var_s_Sub3.tileSizeBits);
-            anInt7014 = (-i + aClass348_Sub1_7004.method2717((byte) 124) >> var_s_Sub3.tileSizeBits);
-            anInt7010 = (aClass348_Sub1_7004.method2717((byte) 72) + i >> var_s_Sub3.tileSizeBits);
+            int i = (aClass348_Sub1_7004.decodedOperation2723(-1) + -(var_s_Sub3.tileSize >> 1));
+            anInt7023 = (-i + aClass348_Sub1_7004.decodedOperation2724(-1) >> var_s_Sub3.tileSizeBits);
+            anInt7017 = (aClass348_Sub1_7004.decodedOperation2724(-1) + i >> var_s_Sub3.tileSizeBits);
+            anInt7014 = (-i + aClass348_Sub1_7004.decodedOperation2717((byte) 124) >> var_s_Sub3.tileSizeBits);
+            anInt7010 = (aClass348_Sub1_7004.decodedOperation2717((byte) 72) + i >> var_s_Sub3.tileSizeBits);
             int i_40_ = anInt7017 - anInt7023 - -1;
             int i_41_ = 1 + -anInt7014 + anInt7010;
             aFloatArrayArray7005 = new float[1 + i_40_][i_41_ - -1];

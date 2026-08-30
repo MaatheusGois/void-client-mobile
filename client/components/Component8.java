@@ -124,15 +124,15 @@ final class Component8
         }
     }
 
-    final int method1017() {
+    final int decodedOperation1017() {
         return this.anIntArray1676[0] / anInt1678;
     }
 
-    final void method1018(float f, float f_41_, float f_42_, float f_43_, float f_44_, float f_45_, float f_46_, float f_47_, float f_48_, int i) {
+    final void decodedOperation1018(float f, float f_41_, float f_42_, float f_43_, float f_44_, float f_45_, float f_46_, float f_47_, float f_48_, int i) {
         if (aBoolean1675) {
-            aHa_Sub1_1666.method3645((int) f, (int) f_43_, (int) f_44_, -8003, i, (int) f_41_);
-            aHa_Sub1_1666.method3645((int) f_41_, (int) f_44_, (int) f_45_, -8003, i, (int) f_42_);
-            aHa_Sub1_1666.method3645((int) f_42_, (int) f_45_, (int) f_43_, -8003, i, (int) f);
+            aHa_Sub1_1666.decodedOperation3645((int) f, (int) f_43_, (int) f_44_, -8003, i, (int) f_41_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_41_, (int) f_44_, (int) f_45_, -8003, i, (int) f_42_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_42_, (int) f_45_, (int) f_43_, -8003, i, (int) f);
         } else {
             float f_49_ = f_44_ - f_43_;
             float f_50_ = f_41_ - f;
@@ -693,35 +693,35 @@ final class Component8
         }
     }
 
-    final void method1020(float f, float f_88_, float f_89_, float f_90_, float f_91_, float f_92_, float f_93_, float f_94_, float f_95_, float f_96_, float f_97_, float f_98_, float f_99_, float f_100_, float f_101_, int i, int i_102_, int i_103_, int i_104_, int i_105_, int i_106_, int i_107_, int i_108_, float f_109_, int i_110_, float f_111_, int i_112_, float f_113_) {
+    final void decodedOperation1020(float f, float f_88_, float f_89_, float f_90_, float f_91_, float f_92_, float f_93_, float f_94_, float f_95_, float f_96_, float f_97_, float f_98_, float f_99_, float f_100_, float f_101_, int i, int i_102_, int i_103_, int i_104_, int i_105_, int i_106_, int i_107_, int i_108_, float f_109_, int i_110_, float f_111_, int i_112_, float f_113_) {
         if (i_108_ != anInt1697) {
-            anIntArray1698 = aHa_Sub1_1666.method3718(i_108_);
+            anIntArray1698 = aHa_Sub1_1666.decodedOperation3718(i_108_);
             if (anIntArray1698 == null) {
                 method1027((float) (int) f, (float) (int) f_88_, (float) (int) f_89_, (float) (int) f_90_, (float) (int) f_91_, (float) (int) f_92_, (float) (int) f_93_, (float) (int) f_94_, (float) (int) f_95_, BuildInfo.blendArgb(i, i_104_ | i_105_ << 24, 255), BuildInfo.blendArgb(i_102_, i_104_ | i_106_ << 24, 255), BuildInfo.blendArgb(i_103_, i_104_ | i_107_ << 24, 255));
                 return;
             }
-            anInt1693 = (aHa_Sub1_1666.method3727(i_108_) ? 64 : aHa_Sub1_1666.anInt7501);
+            anInt1693 = (aHa_Sub1_1666.decodedOperation3727(i_108_) ? 64 : aHa_Sub1_1666.anInt7501);
             anInt1690 = anInt1693 - 1;
-            anInt1683 = aHa_Sub1_1666.method3726(i_108_);
+            anInt1683 = aHa_Sub1_1666.decodedOperation3726(i_108_);
         }
         aFloat1681 = f_109_;
         if (i_110_ != anInt1689) {
-            anIntArray1685 = aHa_Sub1_1666.method3718(i_110_);
+            anIntArray1685 = aHa_Sub1_1666.decodedOperation3718(i_110_);
             if (anIntArray1685 == null) {
                 method1027((float) (int) f, (float) (int) f_88_, (float) (int) f_89_, (float) (int) f_90_, (float) (int) f_91_, (float) (int) f_92_, (float) (int) f_93_, (float) (int) f_94_, (float) (int) f_95_, BuildInfo.blendArgb(i, i_104_ | i_105_ << 24, 255), BuildInfo.blendArgb(i_102_, i_104_ | i_106_ << 24, 255), BuildInfo.blendArgb(i_103_, i_104_ | i_107_ << 24, 255));
                 return;
             }
-            anInt1691 = (aHa_Sub1_1666.method3727(i_110_) ? 64 : aHa_Sub1_1666.anInt7501);
+            anInt1691 = (aHa_Sub1_1666.decodedOperation3727(i_110_) ? 64 : aHa_Sub1_1666.anInt7501);
             anInt1686 = anInt1691 - 1;
         }
         aFloat1684 = f_111_;
         if (i_112_ != anInt1687) {
-            anIntArray1692 = aHa_Sub1_1666.method3718(i_112_);
+            anIntArray1692 = aHa_Sub1_1666.decodedOperation3718(i_112_);
             if (anIntArray1692 == null) {
                 method1027((float) (int) f, (float) (int) f_88_, (float) (int) f_89_, (float) (int) f_90_, (float) (int) f_91_, (float) (int) f_92_, (float) (int) f_93_, (float) (int) f_94_, (float) (int) f_95_, BuildInfo.blendArgb(i, i_104_ | i_105_ << 24, 255), BuildInfo.blendArgb(i_102_, i_104_ | i_106_ << 24, 255), BuildInfo.blendArgb(i_103_, i_104_ | i_107_ << 24, 255));
                 return;
             }
-            anInt1695 = (aHa_Sub1_1666.method3727(i_112_) ? 64 : aHa_Sub1_1666.anInt7501);
+            anInt1695 = (aHa_Sub1_1666.decodedOperation3727(i_112_) ? 64 : aHa_Sub1_1666.anInt7501);
             anInt1688 = anInt1695 - 1;
         }
         aFloat1682 = f_113_;
@@ -2403,11 +2403,11 @@ final class Component8
         }
     }
 
-    final void method1022(float f, float f_314_, float f_315_, float f_316_, float f_317_, float f_318_, float f_319_, float f_320_, float f_321_, float f_322_, float f_323_, float f_324_) {
+    final void decodedOperation1022(float f, float f_314_, float f_315_, float f_316_, float f_317_, float f_318_, float f_319_, float f_320_, float f_321_, float f_322_, float f_323_, float f_324_) {
         if (aBoolean1675) {
-            aHa_Sub1_1666.method3645((int) f, (int) f_316_, (int) f_317_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f_314_);
-            aHa_Sub1_1666.method3645((int) f_314_, (int) f_317_, (int) f_318_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f_315_);
-            aHa_Sub1_1666.method3645((int) f_315_, (int) f_318_, (int) f_316_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f);
+            aHa_Sub1_1666.decodedOperation3645((int) f, (int) f_316_, (int) f_317_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f_314_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_314_, (int) f_317_, (int) f_318_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f_315_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_315_, (int) f_318_, (int) f_316_, -8003, Component380.anIntArray4983[(int) f_322_], (int) f);
         } else {
             float f_325_ = f_317_ - f_316_;
             float f_326_ = f_314_ - f;
@@ -2783,21 +2783,21 @@ final class Component8
         }
     }
 
-    final void method1023(boolean bool) {
+    final void decodedOperation1023(boolean bool) {
         aBoolean1675 = bool;
     }
 
-    final void method1024(float f, float f_341_, float f_342_, float f_343_, float f_344_, float f_345_, float f_346_, float f_347_, float f_348_, float f_349_, float f_350_, float f_351_, float f_352_, float f_353_, float f_354_, int i, int i_355_, int i_356_, int i_357_, int i_358_, int i_359_, int i_360_, int i_361_) {
+    final void decodedOperation1024(float f, float f_341_, float f_342_, float f_343_, float f_344_, float f_345_, float f_346_, float f_347_, float f_348_, float f_349_, float f_350_, float f_351_, float f_352_, float f_353_, float f_354_, int i, int i_355_, int i_356_, int i_357_, int i_358_, int i_359_, int i_360_, int i_361_) {
         if (i_361_ != anInt1697) {
-            anIntArray1698 = aHa_Sub1_1666.method3719(i_361_);
+            anIntArray1698 = aHa_Sub1_1666.decodedOperation3719(i_361_);
             if (anIntArray1698 == null) {
                 method1027((float) (int) f, (float) (int) f_341_, (float) (int) f_342_, (float) (int) f_343_, (float) (int) f_344_, (float) (int) f_345_, (float) (int) f_346_, (float) (int) f_347_, (float) (int) f_348_, BuildInfo.blendArgb(i, i_357_ | i_358_ << 24, 255), BuildInfo.blendArgb(i_355_, i_357_ | i_359_ << 24, 255), BuildInfo.blendArgb(i_356_, i_357_ | i_360_ << 24, 255));
                 return;
             }
-            anInt1693 = (aHa_Sub1_1666.method3727(i_361_) ? 64 : aHa_Sub1_1666.anInt7501);
+            anInt1693 = (aHa_Sub1_1666.decodedOperation3727(i_361_) ? 64 : aHa_Sub1_1666.anInt7501);
             anInt1690 = anInt1693 - 1;
-            anInt1683 = aHa_Sub1_1666.method3726(i_361_);
-            aBoolean1694 = aHa_Sub1_1666.method3714(i_361_);
+            anInt1683 = aHa_Sub1_1666.decodedOperation3726(i_361_);
+            aBoolean1694 = aHa_Sub1_1666.decodedOperation3714(i_361_);
         }
         anInt1696 = i_357_;
         float f_362_ = (float) (i >> 24 & 0xff);
@@ -3985,9 +3985,9 @@ final class Component8
 
     final void method1027(float f, float f_469_, float f_470_, float f_471_, float f_472_, float f_473_, float f_474_, float f_475_, float f_476_, int i, int i_477_, int i_478_) {
         if (aBoolean1675) {
-            aHa_Sub1_1666.method3645((int) f, (int) f_471_, (int) f_472_, -8003, ~0xffffff | i, (int) f_469_);
-            aHa_Sub1_1666.method3645((int) f_469_, (int) f_472_, (int) f_473_, -8003, ~0xffffff | i, (int) f_470_);
-            aHa_Sub1_1666.method3645((int) f_470_, (int) f_473_, (int) f_471_, -8003, ~0xffffff | i, (int) f);
+            aHa_Sub1_1666.decodedOperation3645((int) f, (int) f_471_, (int) f_472_, -8003, ~0xffffff | i, (int) f_469_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_469_, (int) f_472_, (int) f_473_, -8003, ~0xffffff | i, (int) f_470_);
+            aHa_Sub1_1666.decodedOperation3645((int) f_470_, (int) f_473_, (int) f_471_, -8003, ~0xffffff | i, (int) f);
         } else {
             float f_479_ = f_472_ - f_471_;
             float f_480_ = f_469_ - f;
@@ -4437,7 +4437,7 @@ final class Component8
         }
     }
 
-    final int method1028() {
+    final int decodedOperation1028() {
         return this.anIntArray1676[0] % anInt1678;
     }
 

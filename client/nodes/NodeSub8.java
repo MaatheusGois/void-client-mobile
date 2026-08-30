@@ -25,7 +25,7 @@ final class NodeSub8
     static int[] anIntArray6666;
     static int anInt6667;
 
-    static final int method2774(byte i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final int decodedOperation2774(byte i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt6667++;
         if (i != 108) anApplet6662 = null;
         if (class318_sub1_sub3_sub3.anInt10310 == 0) return 0;
@@ -40,13 +40,13 @@ final class NodeSub8
             if (class318_sub1_sub3_sub3_0_ != null) {
                 int i_1_ = (class318_sub1_sub3_sub3.x + -(class318_sub1_sub3_sub3_0_.x));
                 int i_2_ = (class318_sub1_sub3_sub3.y + -(class318_sub1_sub3_sub3_0_.y));
-                if (i_1_ != 0 || i_2_ != 0) class318_sub1_sub3_sub3.method2440((byte) 49, 0x3fff & (int) (Math.atan2(i_1_, i_2_) * 2607.5945876176133));
+                if (i_1_ != 0 || i_2_ != 0) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 0x3fff & (int) (Math.atan2(i_1_, i_2_) * 2607.5945876176133));
             }
         }
         if (class318_sub1_sub3_sub3 instanceof Player) {
             Player player = (Player) class318_sub1_sub3_sub3;
             if ((player.anInt10524) != -1 && ((player.anInt10319) == 0 || player.anInt10326 > 0)) {
-                player.method2440((byte) 49, player.anInt10524);
+                player.decodedOperation2440((byte) 49, player.anInt10524);
                 player.anInt10524 = -1;
             }
         } else if (class318_sub1_sub3_sub3 instanceof Npc) {
@@ -54,21 +54,21 @@ final class NodeSub8
             if ((npc.anInt10499) != -1 && ((npc.anInt10319) == 0 || npc.anInt10326 > 0)) {
                 int i_3_ = (-((-NodeBaseSub2.regionTileX + npc.anInt10499 - NodeBaseSub2.regionTileX) * 256) + (npc.x));
                 int i_4_ = (npc.y - 256 * (npc.anInt10512 + (-Component330.regionTileY + -Component330.regionTileY)));
-                if (i_3_ != 0 || i_4_ != 0) npc.method2440((byte) 49, 0x3fff & (int) (Math.atan2(i_3_, i_4_) * 2607.5945876176133));
+                if (i_3_ != 0 || i_4_ != 0) npc.decodedOperation2440((byte) 49, 0x3fff & (int) (Math.atan2(i_3_, i_4_) * 2607.5945876176133));
                 npc.anInt10499 = -1;
             }
         }
         return class318_sub1_sub3_sub3.getModelHeight(i + -106);
     }
 
-    public static void method2775(byte i) {
+    public static void decodedOperation2775(byte i) {
         aShortArray6658 = null;
         toolkit = null;
         aShortArray6665 = null;
         anIntArray6666 = null;
         aShortArray6663 = null;
         anIntArray6655 = null;
-        if (i > -123) method2776((byte) -65, -91);
+        if (i > -123) decodedOperation2776((byte) -65, -91);
         aClass241_6660 = null;
         aBooleanArrayArray6656 = null;
         anApplet6662 = null;
@@ -80,10 +80,10 @@ final class NodeSub8
         this.aByteArray6657 = is;
     }
 
-    static final NamedInteger method2776(byte i, int i_5_) {
+    static final NamedInteger decodedOperation2776(byte i, int i_5_) {
         anInt6659++;
         if (i > -35) aBooleanArrayArray6656 = null;
-        NamedInteger[] class364s = DefinitionSub28.method3122((byte) 91);
+        NamedInteger[] class364s = DefinitionSub28.decodedOperation3122((byte) 91);
         for (int i_6_ = 0; class364s.length > i_6_; i_6_++) {
             NamedInteger class364 = class364s[i_6_];
             if (class364.value == i_5_) return class364;
@@ -91,7 +91,7 @@ final class NodeSub8
         return null;
     }
 
-    static long method2777(long l, long l_7_) {
+    static long decodedOperation2777(long l, long l_7_) {
         try {
             return l & l_7_;
         } catch (RuntimeException runtimeexception) {

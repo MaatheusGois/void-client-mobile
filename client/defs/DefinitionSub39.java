@@ -17,11 +17,11 @@ final class DefinitionSub39
 
     private final void method3151(int[][] is, byte i) {
         anInt9487++;
-        if (i != -27) method3152(86);
+        if (i != -27) decodedOperation3152(86);
         int i_0_ = DefinitionSub6.anInt9139;
         int i_1_ = ShaderProgramSub2.anInt6212;
-        Model.method224((byte) -40, is);
-        NodeSub27.method3000(CustomCursorSetting.anInt6076, 0, DisplayModeManagerContainer356.anInt6325, 0, i ^ 0x28);
+        Model.decodedOperation224((byte) -40, is);
+        NodeSub27.decodedOperation3000(CustomCursorSetting.anInt6076, 0, DisplayModeManagerContainer356.anInt6325, 0, i ^ 0x28);
         if (aClass50Array9481 != null) {
             for (int i_2_ = 0; aClass50Array9481.length > i_2_; i_2_++) {
                 Component47 class50 = aClass50Array9481[i_2_];
@@ -35,20 +35,20 @@ final class DefinitionSub39
         }
     }
 
-    public static void method3152(int i) {
+    public static void decodedOperation3152(int i) {
         aClass70_9485 = null;
-        if (i != 255) method3152(-42);
+        if (i != 255) decodedOperation3152(-42);
     }
 
     final int[] getMonochromeOutput(int i, int i_5_) {
         anInt9486++;
         int[] is = this.imageCache.getPixels(i_5_ + -255, i);
         if (this.imageCache.cacheMiss) method3151(this.imageCache.getAllBuffers((byte) 16), (byte) -27);
-        if (i_5_ != 255) method3049(null, 66, -50);
+        if (i_5_ != 255) decodedOperation3049(null, 66, -50);
         return is;
     }
 
-    static final void method3153(int i) {
+    static final void decodedOperation3153(int i) {
         anInt9482++;
         for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.first(-49)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) Component237.aClass107_3022.next((byte) 51))) {
             if (class348_sub42_sub13.anInt9615 > 1) {
@@ -65,7 +65,7 @@ final class DefinitionSub39
         Component364.aBoolean8335 = false;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_6_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_6_) {
         if (i_6_ != 31015) aClass70_9485 = null;
         if (i == 0) {
             aClass50Array9481 = new Component47[class348_sub49.readUnsignedByte(255)];
@@ -77,7 +77,7 @@ final class DefinitionSub39
                 do {
                     do {
                         if (i_9_ == 0) {
-                            aClass50Array9481[i_7_] = Component280.method1374(107, class348_sub49);
+                            aClass50Array9481[i_7_] = Component280.decodedOperation1374(107, class348_sub49);
                             continue while_216_;
                         } else if (i_9_ != 1) {
                             if (i_9_ != 2) {
@@ -85,13 +85,13 @@ final class DefinitionSub39
                             } else break;
                             break while_214_;
                         }
-                        aClass50Array9481[i_7_] = (OggUrlStream.method2970(NodeSub21.bitwiseXor(i_6_, 31013), class348_sub49));
+                        aClass50Array9481[i_7_] = (OggUrlStream.decodedOperation2970(NodeSub21.bitwiseXor(i_6_, 31013), class348_sub49));
                         continue while_216_;
                     } while (false);
-                    aClass50Array9481[i_7_] = (Definition.method3036(class348_sub49, NodeSub21.bitwiseXor(i_6_, -31102)));
+                    aClass50Array9481[i_7_] = (Definition.decodedOperation3036(class348_sub49, NodeSub21.bitwiseXor(i_6_, -31102)));
                     continue while_216_;
                 } while (false);
-                aClass50Array9481[i_7_] = DisplayModeManagerContainer232.method2022(class348_sub49, 0);
+                aClass50Array9481[i_7_] = DisplayModeManagerContainer232.decodedOperation2022(class348_sub49, 0);
             }
         } else if (i == 1) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         anInt9484++;

@@ -13,7 +13,7 @@ final class Component183
     int anInt1749;
     static int anInt1750;
 
-    final int method1058(byte i) {
+    final int decodedOperation1058(byte i) {
         if (i <= 108) anInt1747 = 110;
         anInt1746++;
         return anInt1747;
@@ -29,9 +29,9 @@ final class Component183
         anInt1747 = i;
     }
 
-    static final BrowserDetector method1059(byte i, int i_1_) {
+    static final BrowserDetector decodedOperation1059(byte i, int i_1_) {
         anInt1748++;
-        if (i != 95) method1059((byte) 120, -75);
+        if (i != 95) decodedOperation1059((byte) 120, -75);
         BrowserDetector class179 = new BrowserDetector(i_1_, false);
         return class179;
     }

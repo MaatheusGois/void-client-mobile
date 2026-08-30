@@ -13,13 +13,13 @@ final class Component55
     static int anInt3936 = 0;
     static int anInt3937;
 
-    public static void method2333(boolean bool) {
+    public static void decodedOperation2333(boolean bool) {
         if (bool == false) aClass223_3934 = null;
     }
 
-    static final void method2334(int i) {
+    static final void decodedOperation2334(int i) {
         DisplayModeManagerContainer104.anInt10340++;
-        if (i != 0) method2333(true);
+        if (i != 0) decodedOperation2333(true);
         anInt3933++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(ShaderSub3.aClass351_5200, DisplayModeManagerContainer64.aClass77_9029, i ^ ~0x53);
         class348_sub47.particleBuffer.writeShort((byte) 107, DisplayModeManagerContainer136.anInt4718);

@@ -434,7 +434,7 @@ final class SpriteSub3Sub2
     }
 
     final void method982(int i, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_, int i_165_) {
-        if (this.toolkit.method3716()) throw new IllegalStateException();
+        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
         if (i_160_ > 0 && i_161_ > 0) {
             int i_166_ = 0;
             int i_167_ = 0;
@@ -2625,7 +2625,7 @@ final class SpriteSub3Sub2
     }
 
     final void method963(int i, int i_1070_, Shader var_aa, int i_1071_, int i_1072_) {
-        if (this.toolkit.method3716()) throw new IllegalStateException();
+        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
         i += this.anInt8461;
         i_1070_ += this.anInt8464;
         int i_1073_ = 0;
@@ -2707,8 +2707,8 @@ final class SpriteSub3Sub2
         }
     }
 
-    final void method964(int i, int i_1096_, int i_1097_, int i_1098_, int i_1099_) {
-        if (this.toolkit.method3716()) throw new IllegalStateException();
+    final void decodedOperation964(int i, int i_1096_, int i_1097_, int i_1098_, int i_1099_) {
+        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
         int i_1100_ = this.toolkit.anInt7477;
         i += this.anInt8461;
         i_1096_ += this.anInt8464;

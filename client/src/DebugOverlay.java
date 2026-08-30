@@ -38,7 +38,7 @@ final class DebugOverlay {
         if (NodeSub18.anInt6818 != 0 && Component149.debugOverlayFont != null) {
             JaclibLoader.toolkit.K(DefinitionSub10.anIntArray9183);
             for (int i_2_ = 0; i_2_ < DisplayModeManagerContainer167.anIntArray256.length; i_2_++)
-                JaclibLoader.toolkit.method3660((DisplayModeManagerContainer167.anIntArray256[i_2_] + Component35.anIntArray4271[i_2_]), -256, (DefinitionSub10.anIntArray9183[3] - DefinitionSub10.anIntArray9183[1]), DefinitionSub10.anIntArray9183[1], true);
+                JaclibLoader.toolkit.decodedOperation3660((DisplayModeManagerContainer167.anIntArray256[i_2_] + Component35.anIntArray4271[i_2_]), -256, (DefinitionSub10.anIntArray9183[3] - DefinitionSub10.anIntArray9183[1]), DefinitionSub10.anIntArray9183[1], true);
             for (int i_3_ = 0; i_3_ < HashNodeSub10.activeOccluderCount; i_3_++) {
                 Component103 class338 = HashNodeSub19.aClass338Array9700[i_3_];
                 JaclibLoader.toolkit.H(class338.anIntArray4187[0], class338.anIntArray4191[0], class338.anIntArray4184[0], DisplayModeManagerContainer249.anIntArray4670);
@@ -48,11 +48,11 @@ final class DebugOverlay {
                 if (DisplayModeManagerContainer249.anIntArray4670[2] != -1 && Component354.anIntArray222[2] != -1 && anIntArray3169[2] != -1 && DisplayModeManagerContainer153.anIntArray1574[2] != -1) {
                     int i_4_ = -65536;
                     if (class338.aByte4192 == 4) i_4_ = -16776961;
-                    JaclibLoader.toolkit.method3645(DisplayModeManagerContainer249.anIntArray4670[1], DisplayModeManagerContainer249.anIntArray4670[0], Component354.anIntArray222[0], -8003, i_4_, Component354.anIntArray222[1]);
-                    JaclibLoader.toolkit.method3645(Component354.anIntArray222[1], Component354.anIntArray222[0], anIntArray3169[0], -8003, i_4_, anIntArray3169[1]);
-                    JaclibLoader.toolkit.method3645(anIntArray3169[1], anIntArray3169[0], DisplayModeManagerContainer153.anIntArray1574[0], -8003, i_4_, DisplayModeManagerContainer153.anIntArray1574[1]);
-                    JaclibLoader.toolkit.method3645(DisplayModeManagerContainer153.anIntArray1574[1], DisplayModeManagerContainer153.anIntArray1574[0], DisplayModeManagerContainer249.anIntArray4670[0], -8003, i_4_, DisplayModeManagerContainer249.anIntArray4670[1]);
-                    JaclibLoader.toolkit.method3645(DisplayModeManagerContainer249.anIntArray4670[1], DisplayModeManagerContainer249.anIntArray4670[0], anIntArray3169[0], -8003, i_4_, anIntArray3169[1]);
+                    JaclibLoader.toolkit.decodedOperation3645(DisplayModeManagerContainer249.anIntArray4670[1], DisplayModeManagerContainer249.anIntArray4670[0], Component354.anIntArray222[0], -8003, i_4_, Component354.anIntArray222[1]);
+                    JaclibLoader.toolkit.decodedOperation3645(Component354.anIntArray222[1], Component354.anIntArray222[0], anIntArray3169[0], -8003, i_4_, anIntArray3169[1]);
+                    JaclibLoader.toolkit.decodedOperation3645(anIntArray3169[1], anIntArray3169[0], DisplayModeManagerContainer153.anIntArray1574[0], -8003, i_4_, DisplayModeManagerContainer153.anIntArray1574[1]);
+                    JaclibLoader.toolkit.decodedOperation3645(DisplayModeManagerContainer153.anIntArray1574[1], DisplayModeManagerContainer153.anIntArray1574[0], DisplayModeManagerContainer249.anIntArray4670[0], -8003, i_4_, DisplayModeManagerContainer249.anIntArray4670[1]);
+                    JaclibLoader.toolkit.decodedOperation3645(DisplayModeManagerContainer249.anIntArray4670[1], DisplayModeManagerContainer249.anIntArray4670[0], anIntArray3169[0], -8003, i_4_, anIntArray3169[1]);
                 }
             }
             Component149.debugOverlayFont.drawText(("Dynamic: " + Component328.dynamicOnscreenCount + "/" + 5000), -256, i_1_ + 45, i, -16777216, -120);
@@ -71,8 +71,8 @@ final class DebugOverlay {
                     int i_6_ = (int) f;
                     DisplayModeManagerContainer194.anIntArray5091[i_5_] = i_6_ | i_6_ << 8 | i_6_ << 16 | ~0xffffff;
                 }
-                Component24 class105 = JaclibLoader.toolkit.method3662(Component314.anInt3872, DisplayModeManagerContainer194.anIntArray5091, (byte) 94, 0, Component314.anInt3872, Component328.anInt1480);
-                class105.method964(i, 170, 1, 0, 0);
+                Component24 class105 = JaclibLoader.toolkit.decodedOperation3662(Component314.anInt3872, DisplayModeManagerContainer194.anIntArray5091, (byte) 94, 0, Component314.anInt3872, Component328.anInt1480);
+                class105.decodedOperation964(i, 170, 1, 0, 0);
             }
         }
     }

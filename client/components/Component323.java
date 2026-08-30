@@ -21,10 +21,10 @@ final class Component323
     static Component183 aClass114_5883;
 
     final void validateValue(boolean bool) {
-        if (bool != false) method1736(-57);
+        if (bool != false) decodedOperation1736(-57);
         anInt5880++;
-        if (this.preferences.method3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
-        else if (this.preferences.method3425(-95)) this.preferenceValue = 0;
+        if (this.preferences.decodedOperation3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
+        else if (this.preferences.decodedOperation3425(-95)) this.preferenceValue = 0;
         if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = getDefaultValue(20014);
     }
 
@@ -34,11 +34,11 @@ final class Component323
         this.preferenceValue = i_0_;
     }
 
-    final boolean method1736(int i) {
+    final boolean decodedOperation1736(int i) {
         anInt5873++;
-        if (this.preferences.method3425(-80)) return false;
+        if (this.preferences.decodedOperation3425(-80)) return false;
         if (i < 85) validateValue(true);
-        return this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE;
+        return this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE;
     }
 
     Component323(NodeSub51 class348_sub51) {
@@ -51,7 +51,7 @@ final class Component323
         return 1;
     }
 
-    final int method1737(int i) {
+    final int decodedOperation1737(int i) {
         if (i != -32350) validateValue(true);
         anInt5875++;
         return this.preferenceValue;
@@ -60,16 +60,16 @@ final class Component323
     final int getValue(int i, int i_2_) {
         if (i != 3) aString5882 = null;
         anInt5872++;
-        if (this.preferences.method3425(-63)) return 3;
-        if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) return 1;
+        if (this.preferences.decodedOperation3425(-63)) return 3;
+        if (this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE) return 1;
         return 3;
     }
 
-    public static void method1738(int i) {
+    public static void decodedOperation1738(int i) {
         aClass45_5878 = null;
         aFloatArray5874 = null;
         aString5882 = null;
-        if (i != 21921) method1738(11);
+        if (i != 21921) decodedOperation1738(11);
         aFloatArray5876 = null;
         aClass348_Sub26_5881 = null;
         aClass114_5883 = null;

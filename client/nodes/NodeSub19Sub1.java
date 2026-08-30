@@ -13,13 +13,13 @@ final class NodeSub19Sub1
     boolean aBoolean8987;
     int anInt8988;
 
-    final NodeSub19Sub1 method2944(ImageTagText class163) {
-        this.aByteArray8984 = class163.method1272(this.aByteArray8984, 1);
-        this.anInt8988 = class163.method1270(this.anInt8988, (byte) -85);
-        if (this.anInt8986 == this.anInt8985) this.anInt8986 = this.anInt8985 = class163.method1275(-114, this.anInt8986);
+    final NodeSub19Sub1 decodedOperation2944(ImageTagText class163) {
+        this.aByteArray8984 = class163.decodedOperation1272(this.aByteArray8984, 1);
+        this.anInt8988 = class163.decodedOperation1270(this.anInt8988, (byte) -85);
+        if (this.anInt8986 == this.anInt8985) this.anInt8986 = this.anInt8985 = class163.decodedOperation1275(-114, this.anInt8986);
         else {
-            this.anInt8986 = class163.method1275(-83, this.anInt8986);
-            this.anInt8985 = class163.method1275(-80, this.anInt8985);
+            this.anInt8986 = class163.decodedOperation1275(-83, this.anInt8986);
+            this.anInt8985 = class163.decodedOperation1275(-80, this.anInt8985);
             if (this.anInt8986 == this.anInt8985) this.anInt8986--;
         }
         return this;

@@ -26,7 +26,7 @@ final class NodeSub16Sub5
     final synchronized void method2888(int i, int i_0_, int i_1_) {
         if (i == 0) method2926(i_0_, i_1_);
         else {
-            int i_2_ = method2904(i_0_, i_1_);
+            int i_2_ = decodedOperation2904(i_0_, i_1_);
             int i_3_ = decibelsToAmplitude(i_0_, i_1_);
             if (anInt8970 == i_2_ && anInt8974 == i_3_) anInt8972 = 0;
             else {
@@ -74,7 +74,7 @@ final class NodeSub16Sub5
         return Math.min(i, 255);
     }
 
-    private static final int method2893(int i, byte[] is, int[] is_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2893(int i, byte[] is, int[] is_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, NodeSub16Sub5 class348_sub16_sub5) {
         i_7_ >>= 8;
         i_15_ >>= 8;
         i_9_ <<= 2;
@@ -122,7 +122,7 @@ final class NodeSub16Sub5
         return i_8_ >> 1;
     }
 
-    private static final int method2894(int i, int i_16_, byte[] is, int[] is_17_, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, NodeSub16Sub5 class348_sub16_sub5, int i_25_, int i_26_) {
+    private static final int decodedOperation2894(int i, int i_16_, byte[] is, int[] is_17_, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, NodeSub16Sub5 class348_sub16_sub5, int i_25_, int i_26_) {
         if (i_25_ == 0 || (i_22_ = i_19_ + (i_24_ + 256 - i_18_ + i_25_) / i_25_) > i_23_) i_22_ = i_23_;
         i_19_ <<= 1;
         i_22_ <<= 1;
@@ -147,7 +147,7 @@ final class NodeSub16Sub5
         return i_19_ >> 1;
     }
 
-    final boolean method2895() {
+    final boolean decodedOperation2895() {
         return anInt8972 != 0;
     }
 
@@ -159,7 +159,7 @@ final class NodeSub16Sub5
         }
     }
 
-    private static final int method2897(int i, byte[] is, int[] is_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, int i_34_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2897(int i, byte[] is, int[] is_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, int i_34_, NodeSub16Sub5 class348_sub16_sub5) {
         i_28_ >>= 8;
         i_34_ >>= 8;
         i_30_ <<= 2;
@@ -192,13 +192,13 @@ final class NodeSub16Sub5
         return i_29_ >> 1;
     }
 
-    private final boolean method2898() {
+    private final boolean decodedOperation2898() {
         int i = anInt8969;
         int i_35_;
         int i_36_;
         if (i == -2147483648) i = i_35_ = i_36_ = 0;
         else {
-            i_35_ = method2904(i, anInt8977);
+            i_35_ = decodedOperation2904(i, anInt8977);
             i_36_ = decibelsToAmplitude(i, anInt8977);
         }
         if (anInt8976 != i || anInt8970 != i_35_ || anInt8974 != i_36_) {
@@ -235,7 +235,7 @@ final class NodeSub16Sub5
         return false;
     }
 
-    private static final int method2899(int i, int i_37_, byte[] is, int[] is_38_, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_, NodeSub16Sub5 class348_sub16_sub5, int i_48_, int i_49_) {
+    private static final int decodedOperation2899(int i, int i_37_, byte[] is, int[] is_38_, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_, NodeSub16Sub5 class348_sub16_sub5, int i_48_, int i_49_) {
         class348_sub16_sub5.anInt8976 -= class348_sub16_sub5.anInt8973 * i_40_;
         if (i_48_ == 0 || (i_45_ = i_40_ + (i_47_ - i_39_ + i_48_ - 257) / i_48_) > i_46_) i_45_ = i_46_;
         i_40_ <<= 1;
@@ -270,7 +270,7 @@ final class NodeSub16Sub5
         return i_40_;
     }
 
-    private static final int method2900(int i, byte[] is, int[] is_50_, int i_51_, int i_52_, int i_53_, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2900(int i, byte[] is, int[] is_50_, int i_51_, int i_52_, int i_53_, int i_54_, int i_55_, int i_56_, int i_57_, int i_58_, int i_59_, NodeSub16Sub5 class348_sub16_sub5) {
         i_51_ >>= 8;
         i_59_ >>= 8;
         i_53_ <<= 2;
@@ -318,12 +318,12 @@ final class NodeSub16Sub5
         return i_52_ >> 1;
     }
 
-    final synchronized void method2901(int i) {
+    final synchronized void decodedOperation2901(int i) {
         if (anInt8979 < 0) anInt8979 = -i;
         else anInt8979 = i;
     }
 
-    final synchronized void method2902(int i) {
+    final synchronized void decodedOperation2902(int i) {
         if (i == 0) {
             method2923(0);
             this.unlink((byte) 93);
@@ -348,7 +348,7 @@ final class NodeSub16Sub5
         }
     }
 
-    private static final int method2903(int i, int i_61_, byte[] is, int[] is_62_, int i_63_, int i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, NodeSub16Sub5 class348_sub16_sub5, int i_70_, int i_71_) {
+    private static final int decodedOperation2903(int i, int i_61_, byte[] is, int[] is_62_, int i_63_, int i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, NodeSub16Sub5 class348_sub16_sub5, int i_70_, int i_71_) {
         class348_sub16_sub5.anInt8970 -= class348_sub16_sub5.anInt8971 * i_64_;
         class348_sub16_sub5.anInt8974 -= class348_sub16_sub5.anInt8978 * i_64_;
         if (i_70_ == 0 || (i_67_ = i_64_ + (i_69_ - i_63_ + i_70_ - 257) / i_70_) > i_68_) i_67_ = i_68_;
@@ -379,7 +379,7 @@ final class NodeSub16Sub5
         return 1;
     }
 
-    private static final int method2904(int i, int i_72_) {
+    private static final int decodedOperation2904(int i, int i_72_) {
         if (i_72_ < 0) return i;
         return (int) (((double) i * Math.sqrt((double) (16384 - i_72_) * 1.220703125E-4)) + 0.5);
     }
@@ -402,7 +402,7 @@ final class NodeSub16Sub5
         return i_74_;
     }
 
-    final synchronized int method2906() {
+    final synchronized int decodedOperation2906() {
         if (anInt8969 == -2147483648) return 0;
         return anInt8969;
     }
@@ -426,7 +426,7 @@ final class NodeSub16Sub5
         return i_82_;
     }
 
-    private static final int method2908(byte[] is, int[] is_89_, int i, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, int i_95_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2908(byte[] is, int[] is_89_, int i, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, int i_95_, NodeSub16Sub5 class348_sub16_sub5) {
         i >>= 8;
         i_95_ >>= 8;
         i_91_ <<= 2;
@@ -455,11 +455,11 @@ final class NodeSub16Sub5
         return i_90_;
     }
 
-    final synchronized void method2909(int i) {
-        method2926(method2906(), i);
+    final synchronized void decodedOperation2909(int i) {
+        method2926(decodedOperation2906(), i);
     }
 
-    private static final int method2910(int i, byte[] is, int[] is_96_, int i_97_, int i_98_, int i_99_, int i_100_, int i_101_, int i_102_, int i_103_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2910(int i, byte[] is, int[] is_96_, int i_97_, int i_98_, int i_99_, int i_100_, int i_101_, int i_102_, int i_103_, NodeSub16Sub5 class348_sub16_sub5) {
         i_97_ >>= 8;
         i_103_ >>= 8;
         i_99_ <<= 2;
@@ -497,7 +497,7 @@ final class NodeSub16Sub5
         return new NodeSub16Sub5(class348_sub19_sub1, i, i_104_, i_105_);
     }
 
-    private static final int method2912(int i, int i_106_, byte[] is, int[] is_107_, int i_108_, int i_109_, int i_110_, int i_111_, int i_112_, int i_113_, int i_114_, NodeSub16Sub5 class348_sub16_sub5, int i_115_, int i_116_) {
+    private static final int decodedOperation2912(int i, int i_106_, byte[] is, int[] is_107_, int i_108_, int i_109_, int i_110_, int i_111_, int i_112_, int i_113_, int i_114_, NodeSub16Sub5 class348_sub16_sub5, int i_115_, int i_116_) {
         class348_sub16_sub5.anInt8970 -= class348_sub16_sub5.anInt8971 * i_109_;
         class348_sub16_sub5.anInt8974 -= class348_sub16_sub5.anInt8978 * i_109_;
         if (i_115_ == 0 || ((i_112_ = i_109_ + (i_114_ + 256 - i_108_ + i_115_) / i_115_) > i_113_)) i_112_ = i_113_;
@@ -523,7 +523,7 @@ final class NodeSub16Sub5
         return i_109_;
     }
 
-    private static final int method2913(byte[] is, int[] is_117_, int i, int i_118_, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, NodeSub16Sub5 class348_sub16_sub5) {
+    private static final int decodedOperation2913(byte[] is, int[] is_117_, int i, int i_118_, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, NodeSub16Sub5 class348_sub16_sub5) {
         i >>= 8;
         i_123_ >>= 8;
         i_119_ <<= 2;
@@ -552,12 +552,12 @@ final class NodeSub16Sub5
         return i_118_;
     }
 
-    final synchronized int method2914() {
+    final synchronized int decodedOperation2914() {
         if (anInt8979 < 0) return -anInt8979;
         return anInt8979;
     }
 
-    final synchronized void method2915(int i) {
+    final synchronized void decodedOperation2915(int i) {
         method2926(i << 6, getSample());
     }
 
@@ -569,13 +569,13 @@ final class NodeSub16Sub5
         method2888(i, i_124_, getSample());
     }
 
-    final synchronized void method2917(int i) {
+    final synchronized void decodedOperation2917(int i) {
         anInt8980 = i;
     }
 
     private final void resetPhase() {
         anInt8976 = anInt8969;
-        anInt8970 = method2904(anInt8969, anInt8977);
+        anInt8970 = decodedOperation2904(anInt8969, anInt8977);
         anInt8974 = decibelsToAmplitude(anInt8969, anInt8977);
     }
 
@@ -585,23 +585,23 @@ final class NodeSub16Sub5
             if (i_128_ > i_126_) i_128_ = i_126_;
             anInt8972 += i;
             if (anInt8979 == 256 && (anInt8983 & 0xff) == 0) {
-                if (Component21.stereo) i = method2893(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_128_, i_125_, this);
-                else i = method2913(((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8976, anInt8973, 0, i_128_, i_125_, this);
-            } else if (Component21.stereo) i = method2899(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_128_, i_125_, this, anInt8979, i_127_);
-            else i = method2903(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, anInt8973, 0, i_128_, i_125_, this, anInt8979, i_127_);
+                if (Component21.stereo) i = decodedOperation2893(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_128_, i_125_, this);
+                else i = decodedOperation2913(((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8976, anInt8973, 0, i_128_, i_125_, this);
+            } else if (Component21.stereo) i = decodedOperation2899(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_128_, i_125_, this, anInt8979, i_127_);
+            else i = decodedOperation2903(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, anInt8973, 0, i_128_, i_125_, this, anInt8979, i_127_);
             anInt8972 -= i;
             if (anInt8972 != 0) return i;
-            if (method2898()) return i_126_;
+            if (decodedOperation2898()) return i_126_;
         }
         if (anInt8979 == 256 && (anInt8983 & 0xff) == 0) {
-            if (Component21.stereo) return method2910(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, 0, i_126_, i_125_, this);
+            if (Component21.stereo) return decodedOperation2910(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, 0, i_126_, i_125_, this);
             return method2905((((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, 0, i_126_, i_125_, this);
         }
-        if (Component21.stereo) return method2922(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, 0, i_126_, i_125_, this, anInt8979, i_127_);
+        if (Component21.stereo) return decodedOperation2922(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, 0, i_126_, i_125_, this, anInt8979, i_127_);
         return method2925(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, 0, i_126_, i_125_, this, anInt8979, i_127_);
     }
 
-    private static final int method2920(int i, int i_129_, byte[] is, int[] is_130_, int i_131_, int i_132_, int i_133_, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, NodeSub16Sub5 class348_sub16_sub5, int i_140_, int i_141_) {
+    private static final int decodedOperation2920(int i, int i_129_, byte[] is, int[] is_130_, int i_131_, int i_132_, int i_133_, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, NodeSub16Sub5 class348_sub16_sub5, int i_140_, int i_141_) {
         class348_sub16_sub5.anInt8976 -= class348_sub16_sub5.anInt8973 * i_132_;
         if (i_140_ == 0 || ((i_137_ = i_132_ + (i_139_ + 256 - i_131_ + i_140_) / i_140_) > i_138_)) i_137_ = i_138_;
         i_132_ <<= 1;
@@ -653,7 +653,7 @@ final class NodeSub16Sub5
         return i_143_;
     }
 
-    private static final int method2922(int i, int i_148_, byte[] is, int[] is_149_, int i_150_, int i_151_, int i_152_, int i_153_, int i_154_, int i_155_, int i_156_, NodeSub16Sub5 class348_sub16_sub5, int i_157_, int i_158_) {
+    private static final int decodedOperation2922(int i, int i_148_, byte[] is, int[] is_149_, int i_150_, int i_151_, int i_152_, int i_153_, int i_154_, int i_155_, int i_156_, NodeSub16Sub5 class348_sub16_sub5, int i_157_, int i_158_) {
         if (i_157_ == 0 || ((i_154_ = i_151_ + (i_156_ - i_150_ + i_157_ - 257) / i_157_) > i_155_)) i_154_ = i_155_;
         i_151_ <<= 1;
         i_154_ <<= 1;
@@ -811,7 +811,7 @@ final class NodeSub16Sub5
         }
     }
 
-    final synchronized void method2924(int i) {
+    final synchronized void decodedOperation2924(int i) {
         int i_167_ = ((((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984).length << 8);
         if (i < -1) i = -1;
         if (i > i_167_) i = i_167_;
@@ -982,19 +982,19 @@ final class NodeSub16Sub5
             if (i_190_ > i_188_) i_190_ = i_188_;
             anInt8972 += i;
             if (anInt8979 == -256 && (anInt8983 & 0xff) == 0) {
-                if (Component21.stereo) i = method2900(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_190_, i_187_, this);
-                else i = method2908(((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8976, anInt8973, 0, i_190_, i_187_, this);
-            } else if (Component21.stereo) i = method2920(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_190_, i_187_, this, anInt8979, i_189_);
-            else i = method2912(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, anInt8973, 0, i_190_, i_187_, this, anInt8979, i_189_);
+                if (Component21.stereo) i = decodedOperation2900(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_190_, i_187_, this);
+                else i = decodedOperation2908(((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8976, anInt8973, 0, i_190_, i_187_, this);
+            } else if (Component21.stereo) i = decodedOperation2920(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, anInt8971, anInt8978, 0, i_190_, i_187_, this, anInt8979, i_189_);
+            else i = decodedOperation2912(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, anInt8973, 0, i_190_, i_187_, this, anInt8979, i_189_);
             anInt8972 -= i;
             if (anInt8972 != 0) return i;
-            if (method2898()) return i_188_;
+            if (decodedOperation2898()) return i_188_;
         }
         if (anInt8979 == -256 && (anInt8983 & 0xff) == 0) {
-            if (Component21.stereo) return method2897(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, 0, i_188_, i_187_, this);
+            if (Component21.stereo) return decodedOperation2897(0, ((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984, is, anInt8983, i, anInt8970, anInt8974, 0, i_188_, i_187_, this);
             return method2921((((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, 0, i_188_, i_187_, this);
         }
-        if (Component21.stereo) return method2894(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, 0, i_188_, i_187_, this, anInt8979, i_189_);
+        if (Component21.stereo) return decodedOperation2894(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8970, anInt8974, 0, i_188_, i_187_, this, anInt8979, i_189_);
         return method2907(0, 0, (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984), is, anInt8983, i, anInt8976, 0, i_188_, i_187_, this, anInt8979, i_189_);
     }
 }

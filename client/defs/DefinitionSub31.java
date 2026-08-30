@@ -32,8 +32,8 @@ final class DefinitionSub31
             int[][] is_3_;
             if (i_2_ > 0) {
                 int i_4_ = i % i_2_;
-                is_3_ = this.method3039((byte) -86, ShaderProgramSub2.anInt6212 * i_4_ / i_2_, 0);
-            } else is_3_ = this.method3039((byte) 105, 0, 0);
+                is_3_ = this.decodedOperation3039((byte) -86, ShaderProgramSub2.anInt6212 * i_4_ / i_2_, 0);
+            } else is_3_ = this.decodedOperation3039((byte) 105, 0, 0);
             int[] is_5_ = is_3_[0];
             int[] is_6_ = is_3_[1];
             int[] is_7_ = is_3_[2];
@@ -55,7 +55,7 @@ final class DefinitionSub31
         return is;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_14_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_14_) {
         if (i_14_ == 31015) {
             int i_15_ = i;
             do {
@@ -69,8 +69,8 @@ final class DefinitionSub31
         }
     }
 
-    static final boolean method3131(byte i, String string) {
-        if (i != 50) method3131((byte) -33, null);
+    static final boolean decodedOperation3131(byte i, String string) {
+        if (i != 50) decodedOperation3131((byte) -33, null);
         anInt9404++;
         return Player.aHashtable10565.containsKey(string);
     }
@@ -85,8 +85,8 @@ final class DefinitionSub31
             int[] is_19_;
             if (i_18_ > 0) {
                 int i_20_ = i % i_18_;
-                is_19_ = this.method3048(i_20_ * ShaderProgramSub2.anInt6212 / i_18_, 633706337, 0);
-            } else is_19_ = this.method3048(0, 633706337, 0);
+                is_19_ = this.decodedOperation3048(i_20_ * ShaderProgramSub2.anInt6212 / i_18_, 633706337, 0);
+            } else is_19_ = this.decodedOperation3048(0, 633706337, 0);
             for (int i_21_ = 0; DefinitionSub6.anInt9139 > i_21_; i_21_++) {
                 if (i_17_ <= 0) is[i_21_] = is_19_[0];
                 else {

@@ -15,7 +15,7 @@ final class Component139
     static int anInt6132;
     static int anInt6133;
 
-    static final void method1839(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
+    static final void decodedOperation1839(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
         anInt6129++;
         int i_5_ = 0;
         int i_6_ = i_0_;
@@ -70,14 +70,14 @@ final class Component139
         }
     }
 
-    final int method1840(int i) {
+    final int decodedOperation1840(int i) {
         anInt6127++;
         if (i != -32350) aClass341_6128 = null;
         return this.preferenceValue;
     }
 
-    public static void method1841(int i) {
-        if (i != 16878) method1839(-83, -10, 27, 111, 41, 109);
+    public static void decodedOperation1841(int i) {
+        if (i != 16878) decodedOperation1839(-83, -10, 27, 111, 41, 109);
         aClass341_6128 = null;
     }
 
@@ -104,7 +104,7 @@ final class Component139
     final int getDefaultValue(int i) {
         anInt6133++;
         if (i != 20014) validateValue(true);
-        if ((this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) && this.preferences.method3425(-111)) return 0;
+        if ((this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE) && this.preferences.decodedOperation3425(-111)) return 0;
         return 1;
     }
 

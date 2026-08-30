@@ -17,7 +17,7 @@ abstract class Component40
 
     abstract GlFramebufferTexture method2256(byte i);
 
-    static final int method2257(int i, int i_0_, byte i_1_) {
+    static final int decodedOperation2257(int i, int i_0_, byte i_1_) {
         anInt6322++;
         double d = Math.log(i) / Math.log(2.0);
         double d_2_ = Math.log(i_0_) / Math.log(2.0);
@@ -26,12 +26,12 @@ abstract class Component40
         return (int) (0.5 + Math.pow(2.0, d_4_));
     }
 
-    public static void method2258(byte i) {
+    public static void decodedOperation2258(byte i) {
         aClass138_6321 = null;
         if (i < -119) consoleLogStream = null;
     }
 
-    static final boolean method2259(int i, int i_5_, int i_6_) {
+    static final boolean decodedOperation2259(int i, int i_5_, int i_6_) {
         anInt6320++;
         if (i != 0) aClass138_6321 = null;
         return (0x34 & i_6_) != 0;

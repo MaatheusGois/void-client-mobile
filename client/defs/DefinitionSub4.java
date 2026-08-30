@@ -18,12 +18,12 @@ final class DefinitionSub4
         anInt9115++;
         if (i_0_ != 255) menuEntries = null;
         int[] is = this.imageCache.getPixels(0, i);
-        if (this.imageCache.cacheMiss) Component313.method1579(is, 0, DefinitionSub6.anInt9139, Component302.anIntArray6035[i]);
+        if (this.imageCache.cacheMiss) Component313.decodedOperation1579(is, 0, DefinitionSub6.anInt9139, Component302.anIntArray6035[i]);
         return is;
     }
 
-    public static void method3057(byte i) {
-        if (i > -32) method3058(-76, 25, -12);
+    public static void decodedOperation3057(byte i) {
+        if (i > -32) decodedOperation3058(-76, 25, -12);
         aClass101_9114 = null;
         menuEntries = null;
         modelProvider = null;
@@ -33,11 +33,11 @@ final class DefinitionSub4
         super(0, true);
     }
 
-    static final void method3058(int i, int i_1_, int i_2_) {
+    static final void decodedOperation3058(int i, int i_1_, int i_2_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_1_][i_2_];
         if (class357 != null) {
-            Component191.method1376(class357.aClass318_Sub1_Sub4_4406);
-            Component191.method1376(class357.aClass318_Sub1_Sub4_4403);
+            Component191.decodedOperation1376(class357.aClass318_Sub1_Sub4_4406);
+            Component191.decodedOperation1376(class357.aClass318_Sub1_Sub4_4403);
             if (class357.aClass318_Sub1_Sub4_4406 != null) class357.aClass318_Sub1_Sub4_4406 = null;
             if (class357.aClass318_Sub1_Sub4_4403 != null) class357.aClass318_Sub1_Sub4_4403 = null;
         }

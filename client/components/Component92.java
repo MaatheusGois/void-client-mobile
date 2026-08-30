@@ -16,22 +16,22 @@ final class Component92
     /** How many {@code -->} history steps above the newest line (console up/down recall). */
     static int consoleHistoryDepth = 0;
 
-    static final boolean method1977(byte i, int i_0_) {
+    static final boolean decodedOperation1977(byte i, int i_0_) {
         if (i != -79) return false;
         anInt3308++;
         return i_0_ == 3 || i_0_ == 7 || i_0_ == 10;
     }
 
-    static final void method1978() {
+    static final void decodedOperation1978() {
         for (int i = 0; i < LoggedOutDefinition.aClass293Array9432.length; i++)
-            LoggedOutDefinition.aClass293Array9432[i].method2205();
+            LoggedOutDefinition.aClass293Array9432[i].decodedOperation2205();
         LoggedOutDefinition.aClass293Array9432 = null;
     }
 
-    public static void method1979(byte i) {
+    public static void decodedOperation1979(byte i) {
         aClass45_3309 = null;
         anIntArray3311 = null;
-        if (i < 105) method1978();
+        if (i < 105) decodedOperation1978();
         aClass114_3307 = null;
     }
 

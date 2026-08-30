@@ -53,7 +53,7 @@ final class CursorDefinition {
         anInt2888++;
         Component170 class207 = (Component170) this.cache.aClass60_2190.get(spriteId, -70);
         if (class207 != null) return class207;
-        class207 = Component170.method1521(this.cache.aClass45_2180, spriteId, 0);
+        class207 = Component170.decodedOperation1521(this.cache.aClass45_2180, spriteId, 0);
         if (i < 49) clearStatics((byte) 93);
         if (class207 != null) this.cache.aClass60_2190.putOne(class207, spriteId, (byte) -120);
         return class207;

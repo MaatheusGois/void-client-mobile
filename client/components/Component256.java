@@ -26,7 +26,7 @@ final class Component256
     final int getValue(int i, int i_0_) {
         anInt6100++;
         if (i != 3) aBoolean6110 = false;
-        if (!this.preferences.method3428((byte) -89).method1460(-38)) return 3;
+        if (!this.preferences.decodedOperation3428((byte) -89).decodedOperation1460(-38)) return 3;
         if (i_0_ == 3 && !Applet_Sub1.isNativeLibraryCached("jagdx", i ^ 0x3)) return 3;
         return 2;
     }
@@ -38,22 +38,22 @@ final class Component256
         this.aBoolean6113 = false;
     }
 
-    static final void method1825(int i, int i_3_, int i_4_) {
+    static final void decodedOperation1825(int i, int i_3_, int i_4_) {
         anInt6102++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(0, (byte) 105, 15);
-        class348_sub42_sub15.method3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(0, (byte) 105, 15);
+        class348_sub42_sub15.decodedOperation3246(-25490);
         class348_sub42_sub15.anInt9652 = i_4_;
         class348_sub42_sub15.anInt9651 = i_3_;
-        if (i < 57) method1828(5);
+        if (i < 57) decodedOperation1828(5);
     }
 
-    final void method1826(boolean bool, int i) {
+    final void decodedOperation1826(boolean bool, int i) {
         aBoolean6110 = bool;
         anInt6109++;
-        if (i != -142238264) method1828(20);
+        if (i != -142238264) decodedOperation1828(20);
     }
 
-    static final void method1827(int i) {
+    static final void decodedOperation1827(int i) {
         anInt6112++;
         if (Component380.anIntArray4983 == null) Component380.anIntArray4983 = new int[65536];
         else return;
@@ -117,7 +117,7 @@ final class Component256
         this.aBoolean6113 = true;
         anInt6101++;
         if (i != 20014) aBoolean6110 = false;
-        if (!this.preferences.method3428((byte) -113).method1460(i + -20083)) return 0;
+        if (!this.preferences.decodedOperation3428((byte) -113).decodedOperation1460(i + -20083)) return 0;
         return 2;
     }
 
@@ -129,8 +129,8 @@ final class Component256
         super(class348_sub51);
     }
 
-    static final void method1828(int i) {
-        if (i < 20) method1832(47);
+    static final void decodedOperation1828(int i) {
+        if (i < 20) decodedOperation1832(47);
         anInt6104++;
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
             DisplayModeManagerContainer173.aClass60_4254.clear(0);
@@ -139,7 +139,7 @@ final class Component256
 
     final void validateValue(boolean bool) {
         anInt6108++;
-        if (!this.preferences.method3428((byte) -106).method1460(-33)) this.preferenceValue = 0;
+        if (!this.preferences.decodedOperation3428((byte) -106).decodedOperation1460(-33)) this.preferenceValue = 0;
         if (bool != false) getPreferenceValue(31);
         if (this.preferenceValue < 0 || this.preferenceValue > 5) this.preferenceValue = getDefaultValue(20014);
     }
@@ -151,20 +151,20 @@ final class Component256
         return this.preferenceValue;
     }
 
-    final boolean method1830(byte i) {
+    final boolean decodedOperation1830(byte i) {
         anInt6099++;
         if (i >= -93) aBoolean6110 = false;
         return aBoolean6110;
     }
 
-    final boolean method1831(int i) {
+    final boolean decodedOperation1831(int i) {
         anInt6105++;
         if (i < 85) return true;
-        return this.preferences.method3428((byte) -124).method1460(-59);
+        return this.preferences.decodedOperation3428((byte) -124).decodedOperation1460(-59);
     }
 
-    public static void method1832(int i) {
-        if (i != 1) method1828(33);
+    public static void decodedOperation1832(int i) {
+        if (i != 1) decodedOperation1828(33);
         aClass318_Sub9_Sub2_Sub1Array6103 = null;
     }
 }

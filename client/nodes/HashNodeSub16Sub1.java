@@ -38,24 +38,24 @@ final class HashNodeSub16Sub1
         return (this.buffer.payload);
     }
 
-    static final void method3260(int i) {
+    static final void decodedOperation3260(int i) {
         for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0)) {
-            if (class348_sub15.aClass55_Sub1_6768.method510((byte) -125)) DisplayModeManagerContainer282.getColorTag((byte) 70, (class348_sub15.anInt6773));
+            if (class348_sub15.aClass55_Sub1_6768.decodedOperation510((byte) -125)) DisplayModeManagerContainer282.getColorTag((byte) 70, (class348_sub15.anInt6773));
             else {
                 class348_sub15.aClass55_Sub1_6768.method522((byte) -91);
                 try {
-                    class348_sub15.aClass55_Sub1_6768.method517(-2);
+                    class348_sub15.aClass55_Sub1_6768.decodedOperation517(-2);
                 } catch (Exception exception) {
                     ClientErrorReporter.reportError("TV: " + class348_sub15.anInt6773, exception, 15004);
                     DisplayModeManagerContainer282.getColorTag((byte) 15, (class348_sub15.anInt6773));
                 }
                 if (!class348_sub15.aBoolean6783 && !class348_sub15.aBoolean6781) {
-                    OggUrlStream class348_sub23_sub1 = class348_sub15.aClass55_Sub1_6768.method512(0);
+                    OggUrlStream class348_sub23_sub1 = class348_sub15.aClass55_Sub1_6768.decodedOperation512(0);
                     if (class348_sub23_sub1 != null) {
-                        NodeSub16Sub2 class348_sub16_sub2 = class348_sub23_sub1.method2971(-61);
+                        NodeSub16Sub2 class348_sub16_sub2 = class348_sub23_sub1.decodedOperation2971(-61);
                         if (class348_sub16_sub2 != null) {
-                            class348_sub16_sub2.method2827(-17708, (class348_sub15.anInt6782));
-                            PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub2);
+                            class348_sub16_sub2.decodedOperation2827(-17708, (class348_sub15.anInt6782));
+                            PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2883(class348_sub16_sub2);
                             class348_sub15.aBoolean6783 = true;
                         }
                     }

@@ -27,7 +27,7 @@ final class HashNodeSub10
     static int activeOccluderCount = 0;
     static int anInt9578;
 
-    final void method3209(boolean bool) {
+    final void decodedOperation3209(boolean bool) {
         if (bool != false) activeOccluderCount = 26;
         anInt9563++;
         if (this.anIntArray9566 != null) {
@@ -36,7 +36,7 @@ final class HashNodeSub10
         }
     }
 
-    final void method3210(byte i, int[] is, Buffer class348_sub49) {
+    final void decodedOperation3210(byte i, int[] is, Buffer class348_sub49) {
         while_221_:
         do {
             try {
@@ -47,7 +47,7 @@ final class HashNodeSub10
                     for (; ; ) {
                         if (anIntArray9574.length <= i_1_) break while_221_;
                         if (i_1_ >= is.length) break;
-                        int i_2_ = method3212(0, i_1_).anInt1945;
+                        int i_2_ = decodedOperation3212(0, i_1_).anInt1945;
                         if (i_2_ > 0) class348_sub49.writeLongVar(i_2_, is[i_1_], (byte) 116);
                         i_1_++;
                     }
@@ -59,10 +59,10 @@ final class HashNodeSub10
         } while (false);
     }
 
-    static final void method3211(byte i) {
+    static final void decodedOperation3211(byte i) {
         NpcComposition.aClient1367.tryLoadJagmisc(true);
         anInt9569++;
-        NodeSub3.method2739(0);
+        NodeSub3.decodedOperation2739(0);
         Component156.anInt3699 = 0;
         DefinitionSub36.aClass114_9456 = null;
         NodeSub50.anInt7213 = 0;
@@ -70,7 +70,7 @@ final class HashNodeSub10
         Component80.packetBuffer.offset = 0;
         int i_3_ = -122 % ((i - 13) / 45);
         SocketStream.aClass114_3133 = null;
-        DisplayModeManagerContainer50.method2296(-99);
+        DisplayModeManagerContainer50.decodedOperation2296(-99);
         DefinitionSub30.friendCount = 0;
         Component47.aString863 = null;
         NameFormatter.anInt496 = 0;
@@ -78,16 +78,16 @@ final class HashNodeSub10
         Component15.anInt4930 = 0;
     }
 
-    final Component161 method3212(int i, int i_4_) {
+    final Component161 decodedOperation3212(int i, int i_4_) {
         anInt9561++;
         if (i != 0) anIntArray9572 = null;
         if (anIntArray9574 == null || i_4_ < 0 || anIntArray9574.length < i_4_) return null;
-        return NodeSub5.method2752(anIntArray9574[i_4_], 0);
+        return NodeSub5.decodedOperation2752(anIntArray9574[i_4_], 0);
     }
 
-    final int method3213(int i, int i_5_, boolean bool) {
+    final int decodedOperation3213(int i, int i_5_, boolean bool) {
         anInt9576++;
-        if (bool != true) method3213(41, 104, true);
+        if (bool != true) decodedOperation3213(41, 104, true);
         if (anIntArray9574 == null || i_5_ < 0 || i_5_ > anIntArray9574.length) return -1;
         if (anIntArrayArray9565[i_5_] == null || i < 0 || (i > anIntArrayArray9565[i_5_].length)) return -1;
         return anIntArrayArray9565[i_5_][i];
@@ -107,7 +107,7 @@ final class HashNodeSub10
                     anIntArray9574 = new int[i_9_];
                     for (int i_10_ = 0; i_9_ > i_10_; i_10_++) {
                         int i_11_ = class348_sub49.readUnsignedShort(842397944);
-                        Component161 class138 = NodeSub5.method2752(i_11_, i_6_ + -60);
+                        Component161 class138 = NodeSub5.decodedOperation2752(i_11_, i_6_ + -60);
                         if (class138 != null) {
                             anIntArray9574[i_10_] = i_11_;
                             anIntArrayArray9565[i_10_] = new int[class138.anInt1944];
@@ -125,44 +125,44 @@ final class HashNodeSub10
         /* empty */
     }
 
-    final int method3215(byte i) {
+    final int decodedOperation3215(byte i) {
         anInt9570++;
         if (i > -32) this.anIntArray9566 = null;
         if (anIntArray9574 == null) return 0;
         return anIntArray9574.length;
     }
 
-    final String method3216(Buffer class348_sub49, byte i) {
+    final String decodedOperation3216(Buffer class348_sub49, byte i) {
         anInt9578++;
-        if (i < 33) method3219(-91);
+        if (i < 33) decodedOperation3219(-91);
         StringBuffer stringbuffer = new StringBuffer(80);
         if (anIntArray9574 != null) {
             for (int i_13_ = 0; i_13_ < anIntArray9574.length; i_13_++) {
                 stringbuffer.append(aStringArray9564[i_13_]);
-                stringbuffer.append(this.aClass355_9567.method3472((class348_sub49.readLongVar((NodeSub5.method2752(anIntArray9574[i_13_], 0).anInt1943), 3060)), anIntArrayArray9565[i_13_], -1, method3212(0, i_13_)));
+                stringbuffer.append(this.aClass355_9567.decodedOperation3472((class348_sub49.readLongVar((NodeSub5.decodedOperation2752(anIntArray9574[i_13_], 0).anInt1943), 3060)), anIntArrayArray9565[i_13_], -1, decodedOperation3212(0, i_13_)));
             }
         }
         stringbuffer.append(aStringArray9564[aStringArray9564.length + -1]);
         return stringbuffer.toString();
     }
 
-    public static void method3217(byte i) {
-        if (i != 61) method3211((byte) -95);
+    public static void decodedOperation3217(byte i) {
+        if (i != 61) decodedOperation3211((byte) -95);
         aClass299_9571 = null;
         anIntArray9572 = null;
     }
 
-    final void method3218(Buffer class348_sub49, int i) {
+    final void decodedOperation3218(Buffer class348_sub49, int i) {
         anInt9568++;
         for (; ; ) {
             int i_14_ = class348_sub49.readUnsignedByte(i ^ 0xff);
             if (i_14_ == 0) break;
             method3214(i_14_, class348_sub49, 60);
         }
-        if (i != 0) method3217((byte) -66);
+        if (i != 0) decodedOperation3217((byte) -66);
     }
 
-    final String method3219(int i) {
+    final String decodedOperation3219(int i) {
         anInt9573++;
         if (i < 66) aStringArray9564 = null;
         StringBuffer stringbuffer = new StringBuffer(80);

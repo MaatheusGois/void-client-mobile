@@ -13,7 +13,7 @@ final class j
 
     private final native void P(long l, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_);
 
-    final void method964(int i, int i_6_, int i_7_, int i_8_, int i_9_) {
+    final void decodedOperation964(int i, int i_6_, int i_7_, int i_8_, int i_9_) {
         W(this.nativeid, i, i_6_, i_7_, i_8_, i_9_);
     }
 
@@ -37,7 +37,7 @@ final class j
         R(this.nativeid, bool);
     }
 
-    final int method980() {
+    final int decodedOperation980() {
         return JA(this.nativeid);
     }
 
@@ -57,7 +57,7 @@ final class j
         UA(this.nativeid, f, f_39_, f_40_, f_41_, f_42_, f_43_, i, ((ShaderImpl) var_aa).nativeid, i_44_, i_45_);
     }
 
-    final int method969() {
+    final int decodedOperation969() {
         return I(this.nativeid);
     }
 
@@ -69,7 +69,7 @@ final class j
         RA(this.nativeid, i, i_50_, i_51_, i_52_, i_53_, i_54_, i_55_, i_56_);
     }
 
-    final int method971() {
+    final int decodedOperation971() {
         return M(this.nativeid);
     }
 
@@ -102,7 +102,7 @@ final class j
     private final native int I(long l);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.method1947(0, this);
+        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
     }
 
     private final native void ua(OpenGLToolkit var_oa, int[] is, int i, int i_91_, int i_92_, int i_93_, boolean bool);
@@ -117,7 +117,7 @@ final class j
         P(this.nativeid, i, i_102_, i_103_, i_104_, i_105_, i_106_, i_107_);
     }
 
-    final int method966() {
+    final int decodedOperation966() {
         return Interface4Impl(this.nativeid);
     }
 

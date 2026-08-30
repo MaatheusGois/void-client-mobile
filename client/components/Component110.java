@@ -13,7 +13,7 @@ final class Component110
     static CacheStore aClass45_233;
     static int anInt234;
 
-    static final void method258(int i, int i_0_) {
+    static final void decodedOperation258(int i, int i_0_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[0][i][i_0_];
         for (int i_1_ = 0; i_1_ < 3; i_1_++) {
             Component186 class357_2_ = (Component335.aClass357ArrayArrayArray2029[i_1_][i][i_0_] = Component335.aClass357ArrayArrayArray2029[i_1_ + 1][i][i_0_]);
@@ -37,26 +37,26 @@ final class Component110
         Component335.aClass357ArrayArrayArray2029[3][i][i_0_] = null;
     }
 
-    static final void method259(int i, int i_3_, boolean bool, String string, int i_4_) {
+    static final void decodedOperation259(int i, int i_3_, boolean bool, String string, int i_4_) {
         anInt230++;
-        DisplayModeManagerContainer109.method1356(false, null, i, i_4_, bool, string, true);
+        DisplayModeManagerContainer109.decodedOperation1356(false, null, i, i_4_, bool, string, true);
         int i_5_ = -1 / ((i_3_ - -33) / 63);
     }
 
-    static final int method260(boolean bool) {
+    static final int decodedOperation260(boolean bool) {
         if (bool != false) aClass45_233 = null;
         anInt232++;
         if (Buffer.anInt7207 == 1) return DefinitionSub8.anInt9157;
         return 0;
     }
 
-    public static void method261(byte i) {
+    public static void decodedOperation261(byte i) {
         aClass45_233 = null;
         aClass148_231 = null;
-        if (i != -120) method262(-23);
+        if (i != -120) decodedOperation262(-23);
     }
 
-    static final void method262(int i) {
+    static final void decodedOperation262(int i) {
         anInt234++;
         if (i != 0) aClass148_231 = null;
         if (!Component214.aBoolean2130) {

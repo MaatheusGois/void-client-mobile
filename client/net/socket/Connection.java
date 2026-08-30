@@ -60,7 +60,7 @@ final class Connection implements Runnable {
         }
     }
 
-    static final void method1469(int i) {
+    static final void decodedOperation1469(int i) {
         anInt2662++;
         ShaderProgram.anInt3682 = 0;
         ColoredText.anInt6095 = 0;
@@ -98,7 +98,7 @@ final class Connection implements Runnable {
         }
     }
 
-    public static void method1471(byte i) {
+    public static void decodedOperation1471(byte i) {
         if (i >= 80) {
             aClass60_2671 = null;
             aClass114_2665 = null;
@@ -183,10 +183,10 @@ final class Connection implements Runnable {
         }
     }
 
-    static final boolean method1475(byte i, int i_12_, int i_13_) {
+    static final boolean decodedOperation1475(byte i, int i_12_, int i_13_) {
         anInt2653++;
-        if (i > -95) method1469(-48);
-        return (ShaderProgramSub9.method2174((byte) -115, i_13_, i_12_) & CacheIndexReader.hasFlag0x800(i_12_, (byte) -72, i_13_));
+        if (i > -95) decodedOperation1469(-48);
+        return (ShaderProgramSub9.decodedOperation2174((byte) -115, i_13_, i_12_) & CacheIndexReader.hasFlag0x800(i_12_, (byte) -72, i_13_));
     }
 
     protected final void finalize() {

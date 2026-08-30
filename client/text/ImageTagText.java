@@ -22,7 +22,7 @@ final class ImageTagText {
     static int anInt2170;
     static int anInt2171;
 
-    final short[] method1268(int i, short[] is) {
+    final short[] decodedOperation1268(int i, short[] is) {
         anInt2171++;
         int i_0_ = 14 % ((i - 48) / 33);
         if (anIntArrayArray2163 != null) {
@@ -52,29 +52,29 @@ final class ImageTagText {
         return is;
     }
 
-    static final HashNodeSub14 method1269(int i) {
+    static final HashNodeSub14 decodedOperation1269(int i) {
         if (i != -17096) return null;
         anInt2168++;
         return DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243;
     }
 
-    final int method1270(int i, byte i_12_) {
+    final int decodedOperation1270(int i, byte i_12_) {
         if (i_12_ != -85) return 59;
         anInt2160++;
         if (anIntArrayArray2163 != null) i = (int) ((long) i * (long) anInt2159 / (long) anInt2164);
         return i;
     }
 
-    static final void method1271(int i) {
+    static final void decodedOperation1271(int i) {
         anInt2166++;
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
             DisplayModeManagerContainer173.aClass60_4254.purgeSoftReferences(-86);
-            if (i != 0) method1276(25);
+            if (i != 0) decodedOperation1276(25);
         }
     }
 
-    final byte[] method1272(byte[] is, int i) {
-        if (i != 1) method1276(71);
+    final byte[] decodedOperation1272(byte[] is, int i) {
+        if (i != 1) decodedOperation1276(71);
         anInt2167++;
         if (anIntArrayArray2163 != null) {
             int i_13_ = ((int) ((long) anInt2159 * (long) is.length / (long) anInt2164) + 14);
@@ -103,18 +103,18 @@ final class ImageTagText {
         return is;
     }
 
-    static final String method1273(int[] is, boolean bool) {
+    static final String decodedOperation1273(int[] is, boolean bool) {
         anInt2161++;
         StringBuffer stringbuffer = new StringBuffer();
         int i = Component175.anInt5850;
         for (int i_24_ = 0; is.length > i_24_; i_24_++) {
-            Component236 class321 = DisplayModeManagerContainer64.aClass187_9036.method1408(-12637, is[i_24_]);
+            Component236 class321 = DisplayModeManagerContainer64.aClass187_9036.decodedOperation1408(-12637, is[i_24_]);
             if (class321.anInt4000 != -1) {
                 Component24 class105 = ((Component24) Component225.aClass60_463.get(class321.anInt4000, -74));
                 if (class105 == null) {
-                    Component170 class207 = Component170.method1521(Component158.aClass45_322, class321.anInt4000, 0);
+                    Component170 class207 = Component170.decodedOperation1521(Component158.aClass45_322, class321.anInt4000, 0);
                     if (class207 != null) {
-                        class105 = NodeSub8.toolkit.method3691(class207, true);
+                        class105 = NodeSub8.toolkit.decodedOperation3691(class207, true);
                         Component225.aClass60_463.putOne(class105, class321.anInt4000, (byte) -127);
                     }
                 }
@@ -129,11 +129,11 @@ final class ImageTagText {
         return stringbuffer.toString();
     }
 
-    static final void method1274(DisplayModeManagerContainer154 class76) {
+    static final void decodedOperation1274(DisplayModeManagerContainer154 class76) {
         DisplayModeManagerContainer5.aClass76_1208 = class76;
     }
 
-    final int method1275(int i, int i_25_) {
+    final int decodedOperation1275(int i, int i_25_) {
         int i_26_ = 26 % ((i - -29) / 32);
         anInt2170++;
         if (anIntArrayArray2163 != null) i_25_ = ((int) ((long) i_25_ * (long) anInt2159 / (long) anInt2164) + 6);
@@ -142,7 +142,7 @@ final class ImageTagText {
 
     ImageTagText(int i, int i_27_) {
         if (i != i_27_) {
-            int i_28_ = NodeSub1Sub1.method2726(-21806, i, i_27_);
+            int i_28_ = NodeSub1Sub1.decodedOperation2726(-21806, i, i_27_);
             i /= i_28_;
             i_27_ /= i_28_;
             anIntArrayArray2163 = new int[i][14];
@@ -167,7 +167,7 @@ final class ImageTagText {
         }
     }
 
-    public static void method1276(int i) {
+    public static void decodedOperation1276(int i) {
         int i_35_ = 101 % ((i - -20) / 49);
         aClass17Array2169 = null;
         anIntArrayArray2165 = null;

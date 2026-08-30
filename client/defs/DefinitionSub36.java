@@ -19,7 +19,7 @@ final class DefinitionSub36
         super(0, true);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9450++;
         if (i_0_ != 31015) anInt9451 = -15;
         int i_1_ = i;
@@ -41,12 +41,12 @@ final class DefinitionSub36
     }
 
     final void postDecode(int i) {
-        Component7.method1605(26188);
-        if (i <= 108) method3145(-17);
+        Component7.decodedOperation1605(26188);
+        if (i <= 108) decodedOperation3145(-17);
         anInt9452++;
     }
 
-    public static void method3145(int i) {
+    public static void decodedOperation3145(int i) {
         if (i != 0) aClass114_9456 = null;
         aClass114_9456 = null;
     }

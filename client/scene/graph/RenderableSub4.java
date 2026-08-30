@@ -16,9 +16,9 @@ final class RenderableSub4
     static int anInt6413;
     RenderableSub3[] aClass318_Sub3Array6414;
 
-    static final ShaderSub2 method2501(int i, GlToolkitSub3 var_ha_Sub3, int[] is, byte i_0_, int[] is_1_, int i_2_) {
+    static final ShaderSub2 decodedOperation2501(int i, GlToolkitSub3 var_ha_Sub3, int[] is, byte i_0_, int[] is_1_, int i_2_) {
         try {
-            if (i_0_ >= -32) method2502(null, -18);
+            if (i_0_ >= -32) decodedOperation2502(null, -18);
             anInt6412++;
             if (var_ha_Sub3.validateProgram(Component342.aClass68_1183, DefinitionSub38.aClass304_9471, (byte) 125)) {
                 byte[] is_3_ = new byte[i * i_2_];
@@ -41,7 +41,7 @@ final class RenderableSub4
         }
     }
 
-    static final HashNodeSub19 method2502(byte[] is, int i) {
+    static final HashNodeSub19 decodedOperation2502(byte[] is, int i) {
         if (i >= -76) return null;
         anInt6413++;
         HashNodeSub19 class348_sub42_sub19 = new HashNodeSub19();
@@ -86,14 +86,14 @@ final class RenderableSub4
         return class348_sub42_sub19;
     }
 
-    static final boolean method2503(int i, int i_21_, int i_22_, byte[] is, int i_23_, int i_24_, int i_25_) {
+    static final boolean decodedOperation2503(int i, int i_21_, int i_22_, byte[] is, int i_23_, int i_24_, int i_25_) {
         anInt6408++;
         int i_26_ = i_23_ % i_22_;
         int i_27_;
         if (i_26_ != 0) i_27_ = i_22_ - i_26_;
         else i_27_ = 0;
         int i_28_ = -((-1 + (i_22_ + i_25_)) / i_22_);
-        if (i_24_ != -16259) method2501(-113, null, null, (byte) 40, null, -110);
+        if (i_24_ != -16259) decodedOperation2501(-113, null, null, (byte) 40, null, -110);
         int i_29_ = -((i_22_ + i_23_ + -1) / i_22_);
         for (int i_30_ = i_28_; i_30_ < 0; i_30_++) {
             for (int i_31_ = i_29_; i_31_ < 0; i_31_++) {
@@ -107,14 +107,14 @@ final class RenderableSub4
         return false;
     }
 
-    final boolean method2504(int i, int i_32_, GraphicsToolkit var_ha, int i_33_) {
-        if (i_33_ >= -37) method2502(null, -82);
+    final boolean decodedOperation2504(int i, int i_32_, GraphicsToolkit var_ha, int i_33_) {
+        if (i_33_ >= -37) decodedOperation2502(null, -82);
         anInt6407++;
         int i_34_ = this.aClass318_Sub1_6410.method2393(-117);
         if (this.aClass318_Sub3Array6414 != null) {
             for (int i_35_ = 0; this.aClass318_Sub3Array6414.length > i_35_; i_35_++) {
                 this.aClass318_Sub3Array6414[i_35_].anInt6403 <<= i_34_;
-                if (this.aClass318_Sub3Array6414[i_35_].method2500(i_32_, i) && this.aClass318_Sub1_6410.method2391(var_ha, i, i_32_, 0)) {
+                if (this.aClass318_Sub3Array6414[i_35_].decodedOperation2500(i_32_, i) && this.aClass318_Sub1_6410.method2391(var_ha, i, i_32_, 0)) {
                     this.aClass318_Sub3Array6414[i_35_].anInt6403 >>= i_34_;
                     return true;
                 }

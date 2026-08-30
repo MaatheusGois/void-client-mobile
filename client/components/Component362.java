@@ -17,13 +17,13 @@ final class Component362
     static int anInt5793;
     String aString5794;
 
-    final Component69 method1038(boolean bool) {
-        if (bool != false) method1040(-125);
+    final Component69 decodedOperation1038(boolean bool) {
+        if (bool != false) decodedOperation1040(-125);
         anInt5789++;
         return BasicMouseHandler.aClass283Array7446[this.anInt1711];
     }
 
-    static final String method1039(String string, boolean bool) {
+    static final String decodedOperation1039(String string, boolean bool) {
         anInt5793++;
         StringBuffer stringbuffer = new StringBuffer();
         int i = string.length();
@@ -53,7 +53,7 @@ final class Component362
                         continue;
                     }
                 } else i_3_ += 10 + (i_1_ - 97);
-                if (i_3_ != 0 && Component272.method1732((byte) i_3_, -129)) stringbuffer.append(Cp1252Decoder.method462((byte) i_3_, -128));
+                if (i_3_ != 0 && Component272.decodedOperation1732((byte) i_3_, -129)) stringbuffer.append(Cp1252Decoder.decodedOperation462((byte) i_3_, -128));
                 i_0_ += 2;
             } else if (c != 43) stringbuffer.append(c);
             else stringbuffer.append(' ');
@@ -61,11 +61,11 @@ final class Component362
         return stringbuffer.toString();
     }
 
-    public static void method1040(int i) {
+    public static void decodedOperation1040(int i) {
         if (i == 512) aFloatArray5791 = null;
     }
 
-    static final void method1041(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void decodedOperation1041(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt5790++;
         boolean bool = false;
         if ((OpenGlShader.clientCycle != class318_sub1_sub3_sub3.anInt10300) && class318_sub1_sub3_sub3.anInt10286 != -1 && class318_sub1_sub3_sub3.anInt10218 == 0) {
@@ -83,13 +83,13 @@ final class Component362
             class318_sub1_sub3_sub3.y = (i_7_ * (-i_5_ + i_4_) - -(i_5_ * i_9_)) / i_4_;
         }
         class318_sub1_sub3_sub3.anInt10326 = 0;
-        if ((~class318_sub1_sub3_sub3.anInt10231) == i) class318_sub1_sub3_sub3.method2435((byte) -108, 8192, false);
-        if (class318_sub1_sub3_sub3.anInt10231 == 1) class318_sub1_sub3_sub3.method2435((byte) -108, 12288, false);
-        if (class318_sub1_sub3_sub3.anInt10231 == 2) class318_sub1_sub3_sub3.method2435((byte) -108, 0, false);
-        if (class318_sub1_sub3_sub3.anInt10231 == 3) class318_sub1_sub3_sub3.method2435((byte) -108, 4096, false);
+        if ((~class318_sub1_sub3_sub3.anInt10231) == i) class318_sub1_sub3_sub3.decodedOperation2435((byte) -108, 8192, false);
+        if (class318_sub1_sub3_sub3.anInt10231 == 1) class318_sub1_sub3_sub3.decodedOperation2435((byte) -108, 12288, false);
+        if (class318_sub1_sub3_sub3.anInt10231 == 2) class318_sub1_sub3_sub3.decodedOperation2435((byte) -108, 0, false);
+        if (class318_sub1_sub3_sub3.anInt10231 == 3) class318_sub1_sub3_sub3.decodedOperation2435((byte) -108, 4096, false);
     }
 
-    static final void method1042(byte i) {
+    static final void decodedOperation1042(byte i) {
         anInt5792++;
         DisplayModeManagerContainer249.anInt4666 = Component328.anInt1482 = Component150.anInt2968 = NodeBaseSub1.anInt9776 = 0;
         int i_10_ = 58 % ((i - -66) / 39);

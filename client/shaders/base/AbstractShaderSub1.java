@@ -17,7 +17,7 @@ final class AbstractShaderSub1
     static int anInt7284;
     static int anInt7285;
 
-    static final int[] method3533(byte i, int i_0_, int i_1_, int i_2_, float f, int i_3_, boolean bool, int i_4_) {
+    static final int[] decodedOperation3533(byte i, int i_0_, int i_1_, int i_2_, float f, int i_3_, boolean bool, int i_4_) {
         anInt7281++;
         int[] is = new int[i_0_];
         DefinitionSub8 class348_sub40_sub8 = new DefinitionSub8();
@@ -28,9 +28,9 @@ final class AbstractShaderSub1
         class348_sub40_sub8.anInt9158 = i_2_;
         class348_sub40_sub8.anInt9156 = i_3_;
         class348_sub40_sub8.postDecode(110);
-        NpcComposition.method797(1, i_0_, (byte) 115);
-        class348_sub40_sub8.method3069(0, is, (byte) 115);
-        if (i < 89) method3535(72, -40);
+        NpcComposition.decodedOperation797(1, i_0_, (byte) 115);
+        class348_sub40_sub8.decodedOperation3069(0, is, (byte) 115);
+        if (i < 89) decodedOperation3535(72, -40);
         return is;
     }
 
@@ -41,14 +41,14 @@ final class AbstractShaderSub1
         }
     }
 
-    static final void method3534(boolean bool, int i, int i_5_, boolean bool_6_, int i_7_, DisplayModeManagerContainer57[] class46s) {
+    static final void decodedOperation3534(boolean bool, int i, int i_5_, boolean bool_6_, int i_7_, DisplayModeManagerContainer57[] class46s) {
         anInt7279++;
         if (bool == false) {
             for (int i_8_ = 0; i_8_ < class46s.length; i_8_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_8_];
                 if (class46 != null && i == class46.parentId) {
-                    Component188.method1843(i_5_, -326, class46, bool_6_, i_7_);
-                    Component19.method239((byte) 115, i_5_, i_7_, class46);
+                    Component188.decodedOperation1843(i_5_, -326, class46, bool_6_, i_7_);
+                    Component19.decodedOperation239((byte) 115, i_5_, i_7_, class46);
                     if ((-class46.width + class46.scrollWidth) < class46.scrollX) class46.scrollX = (class46.scrollWidth - class46.width);
                     if (class46.scrollX < 0) class46.scrollX = 0;
                     if ((class46.scrollHeight - class46.height) < class46.scrollY) class46.scrollY = (class46.scrollHeight - class46.height);
@@ -64,7 +64,7 @@ final class AbstractShaderSub1
         if (i != 10756) method3525(-42, false);
     }
 
-    static final void method3535(int i, int i_11_) {
+    static final void decodedOperation3535(int i, int i_11_) {
         Component382.anInt2275 = i;
         anInt7282++;
         Component279.aClass60_225.clear(i_11_);

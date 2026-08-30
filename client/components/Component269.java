@@ -30,19 +30,19 @@ abstract class Component269
         if (i_1_ == DebugPanicSub2.anInt8502) i_3_ += 3;
         else if (i_1_ < DebugPanicSub2.anInt8502) i_3_ += 6;
         int i_4_ = RenderableSub9Sub2.anIntArray8797[i_3_];
-        if ((this.aShort8759 & i_4_) != 0) return this.method2390(class348_sub1s, i_0_, -2, i_1_);
-        if (this.aShort8759 == 1 && i_0_ > 0) return this.method2390(class348_sub1s, -1 + i_0_, -2, i_1_);
-        if (this.aShort8759 == 4 && i_0_ <= StaticElementRenderer.anInt6451) return this.method2390(class348_sub1s, 1 + i_0_, -2, i_1_);
-        if (this.aShort8759 == 8 && i_1_ > 0) return this.method2390(class348_sub1s, i_0_, -2, -1 + i_1_);
-        if (this.aShort8759 == 2 && i_1_ <= NodeSub41.anInt7054) return this.method2390(class348_sub1s, i_0_, -2, i_1_ + 1);
-        if (this.aShort8759 == 16 && i_0_ > 0 && i_1_ <= NodeSub41.anInt7054) return this.method2390(class348_sub1s, -1 + i_0_, -2, i_1_ + 1);
-        if (this.aShort8759 == 32 && StaticElementRenderer.anInt6451 >= i_0_ && NodeSub41.anInt7054 >= i_1_) return this.method2390(class348_sub1s, i_0_ + 1, -2, i_1_ + 1);
-        if (this.aShort8759 == 128 && i_0_ > 0 && i_1_ > 0) return this.method2390(class348_sub1s, i_0_ - 1, -2, i_1_ - 1);
-        if (this.aShort8759 == 64 && i_0_ <= StaticElementRenderer.anInt6451 && i_1_ > 0) return this.method2390(class348_sub1s, 1 + i_0_, -2, -1 + i_1_);
+        if ((this.aShort8759 & i_4_) != 0) return this.decodedOperation2390(class348_sub1s, i_0_, -2, i_1_);
+        if (this.aShort8759 == 1 && i_0_ > 0) return this.decodedOperation2390(class348_sub1s, -1 + i_0_, -2, i_1_);
+        if (this.aShort8759 == 4 && i_0_ <= StaticElementRenderer.anInt6451) return this.decodedOperation2390(class348_sub1s, 1 + i_0_, -2, i_1_);
+        if (this.aShort8759 == 8 && i_1_ > 0) return this.decodedOperation2390(class348_sub1s, i_0_, -2, -1 + i_1_);
+        if (this.aShort8759 == 2 && i_1_ <= NodeSub41.anInt7054) return this.decodedOperation2390(class348_sub1s, i_0_, -2, i_1_ + 1);
+        if (this.aShort8759 == 16 && i_0_ > 0 && i_1_ <= NodeSub41.anInt7054) return this.decodedOperation2390(class348_sub1s, -1 + i_0_, -2, i_1_ + 1);
+        if (this.aShort8759 == 32 && StaticElementRenderer.anInt6451 >= i_0_ && NodeSub41.anInt7054 >= i_1_) return this.decodedOperation2390(class348_sub1s, i_0_ + 1, -2, i_1_ + 1);
+        if (this.aShort8759 == 128 && i_0_ > 0 && i_1_ > 0) return this.decodedOperation2390(class348_sub1s, i_0_ - 1, -2, i_1_ - 1);
+        if (this.aShort8759 == 64 && i_0_ <= StaticElementRenderer.anInt6451 && i_1_ > 0) return this.decodedOperation2390(class348_sub1s, 1 + i_0_, -2, -1 + i_1_);
         throw new RuntimeException("");
     }
 
-    static final int method2478(int i) {
+    static final int decodedOperation2478(int i) {
         if (i != 1000) return -103;
         anInt8763++;
         boolean bool = false;
@@ -58,13 +58,13 @@ abstract class Component269
         if (Component85.aBoolean2881) bool = false;
         if (Component301.aBoolean4117) bool_5_ = false;
         if (NodeSub1.aBoolean6558) bool_6_ = false;
-        if (!bool && !bool_5_ && !bool_6_) return Component219.method2348(-8454);
+        if (!bool && !bool_5_ && !bool_6_) return Component219.decodedOperation2348(-8454);
         int i_7_ = -1;
         int i_8_ = -1;
         int i_9_ = -1;
         if (bool) {
             try {
-                i_7_ = Component329.method1781(2, -126, 1000);
+                i_7_ = Component329.decodedOperation1781(2, -126, 1000);
             } catch (Exception exception) {
                 /* empty */
             }
@@ -72,7 +72,7 @@ abstract class Component269
         do {
             if (bool_6_) {
                 try {
-                    i_9_ = Component329.method1781(3, -70, 1000);
+                    i_9_ = Component329.decodedOperation1781(3, -70, 1000);
                     if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i + -33350) == 3) {
                         Component6 class365 = NodeSub8.toolkit.c();
                         long l = (0xffffffffffffL & class365.aLong4471);
@@ -90,26 +90,26 @@ abstract class Component269
         } while (false);
         if (bool_5_) {
             try {
-                i_8_ = Component329.method1781(1, i ^ ~0x3ab, 1000);
+                i_8_ = Component329.decodedOperation1781(1, i ^ ~0x3ab, 1000);
             } catch (Exception exception) {
                 /* empty */
             }
         }
-        if (i_7_ == -1 && i_8_ == -1 && i_9_ == -1) return Component219.method2348(i + -9454);
+        if (i_7_ == -1 && i_8_ == -1 && i_9_ == -1) return Component219.decodedOperation2348(i + -9454);
         i_9_ *= 1.1F;
         i_8_ *= 1.1F;
-        if (i_7_ > i_9_ && i_8_ < i_7_) return Component297.method454(i_7_, (byte) -116);
-        if (i_9_ <= i_8_) return Component240.method600((byte) -59, 1, i_8_);
-        return Component240.method600((byte) -80, 3, i_9_);
+        if (i_7_ > i_9_ && i_8_ < i_7_) return Component297.decodedOperation454(i_7_, (byte) -116);
+        if (i_9_ <= i_8_) return Component240.decodedOperation600((byte) -59, 1, i_8_);
+        return Component240.decodedOperation600((byte) -80, 3, i_9_);
     }
 
     final boolean method2382(byte i) {
         if (i >= -51) return false;
         anInt8760++;
-        return InputStream_Sub1.method125((this.y >> Component149.anInt4459), (this.x >> Component149.anInt4459), this.aByte6376, this, (byte) 120);
+        return InputStream_Sub1.decodedOperation125((this.y >> Component149.anInt4459), (this.x >> Component149.anInt4459), this.aByte6376, this, (byte) 120);
     }
 
-    public static void method2479(int i) {
+    public static void decodedOperation2479(int i) {
         if (i == 19424) {
             aBigInteger8762 = null;
             aClass279_8764 = null;
@@ -131,7 +131,7 @@ abstract class Component269
         return (DisplayModeManagerContainer153.aBooleanArrayArray1572[(-Component256.anInt6111 + (this.x >> Component149.anInt4459) + Component197.anInt10084)][(Component197.anInt10084 + -DebugPanicSub2.anInt8502 + (this.y >> Component149.anInt4459))]);
     }
 
-    static final void method2480(int i) {
+    static final void decodedOperation2480(int i) {
         if (i == -1) {
             anInt8761++;
             NodeSub35.aClass262_6978 = new NodeList();

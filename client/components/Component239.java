@@ -41,7 +41,7 @@ final class Component239 implements Runnable {
         }
     }
 
-    static final void method3616(int i) {
+    static final void decodedOperation3616(int i) {
         anInt4549++;
         if (Component280.anInterface16Array2447 != null) {
             Interface16[] interface16s = Component280.anInterface16Array2447;
@@ -88,7 +88,7 @@ final class Component239 implements Runnable {
         }
     }
 
-    final int method3617(int i, int i_2_, int i_3_, byte[] is) throws IOException {
+    final int decodedOperation3617(int i, int i_2_, int i_3_, byte[] is) throws IOException {
         anInt4555++;
         if (i < 0 || i_2_ < 0 || is.length < i_2_ + i) throw new IOException();
         synchronized (this) {
@@ -138,7 +138,7 @@ final class Component239 implements Runnable {
         thread.start();
     }
 
-    static final Component3 method3620(Component327 class318_sub1_sub3, int i) {
+    static final Component3 decodedOperation3620(Component327 class318_sub1_sub3, int i) {
         if (i < 9) anInt4559 = -27;
         anInt4547++;
         Component3 class148;

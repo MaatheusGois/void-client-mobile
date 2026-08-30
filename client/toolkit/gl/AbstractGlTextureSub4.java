@@ -31,20 +31,20 @@ final class AbstractGlTextureSub4
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glTexImage1Dub(this.anInt4849, 0, this.anInt4858, anInt8556, 0, i_1_, 5121, is, 0);
             OpenGL.glPixelStorei(3317, 4);
-            this.method1957(9728, true);
+            this.decodedOperation1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("wha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + (is != null ? "{...}" : "null") + ',' + i_1_ + ')'));
         }
     }
 
-    final void method1972(byte i, boolean bool) {
+    final void decodedOperation1972(byte i, boolean bool) {
         this.aHa_Sub2_4851.bindTexture((byte) -114, this);
         int i_2_ = 59 / ((-49 - i) / 40);
         anInt8555++;
         OpenGL.glTexParameteri(this.anInt4849, 10242, !bool ? 33071 : 10497);
     }
 
-    public static void method1973(int i) {
+    public static void decodedOperation1973(int i) {
         aClass138_8553 = null;
         mouseHandler = null;
         if (i == 24885) anIntArray8557 = null;

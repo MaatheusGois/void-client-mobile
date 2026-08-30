@@ -28,9 +28,9 @@ final class HashNodeSub16Sub2
         return StringCache.devConsoleOpen;
     }
 
-    public static void method3264(byte i) {
+    public static void decodedOperation3264(byte i) {
         aClass356_10465 = null;
-        if (i != -24) method3265(-70, null, null);
+        if (i != -24) decodedOperation3265(-70, null, null);
     }
 
     final int getProgressPercent(int i) {
@@ -40,7 +40,7 @@ final class HashNodeSub16Sub2
         return 100;
     }
 
-    static final void method3265(int i, Node class348, Node class348_0_) {
+    static final void decodedOperation3265(int i, Node class348, Node class348_0_) {
         try {
             if (class348.previous != null) class348.unlink((byte) 27);
             int i_1_ = -109 % ((6 - i) / 43);

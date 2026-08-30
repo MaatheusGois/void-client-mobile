@@ -38,7 +38,7 @@ final class Component384
 
     final long method1858(int i) {
         if (i >= -60) anInt6156 = 64;
-        aLong6158 += method1863(56);
+        aLong6158 += decodedOperation1863(56);
         if (aLong6158 < aLong6154) return (aLong6154 - aLong6158) / 1000000L;
         return 0L;
     }
@@ -49,7 +49,7 @@ final class Component384
         if (i < 88) aLong6158 = -33L;
     }
 
-    private final long method1863(int i) {
+    private final long decodedOperation1863(int i) {
         long l = Component240.currentTimeMillis(-56) * 1000000L;
         long l_1_ = l + -aLong6155;
         aLong6155 = l;

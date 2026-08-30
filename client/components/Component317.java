@@ -19,7 +19,7 @@ final class Component317
     static int[] anIntArray8684;
     static int anInt8685;
 
-    static final void method569(byte i, Buffer class348_sub49) {
+    static final void decodedOperation569(byte i, Buffer class348_sub49) {
         anInt8675++;
         int i_0_ = class348_sub49.readSmart(-128);
         BasicMouseHandler.aClass283Array7446 = new Component69[i_0_];
@@ -43,11 +43,11 @@ final class Component317
         }
         Component364.anInt8349 = class348_sub49.readInt((byte) -126);
         Component195.aBoolean5013 = true;
-        if (i > -110) method569((byte) -34, null);
+        if (i > -110) decodedOperation569((byte) -34, null);
     }
 
-    public static void method570(int i) {
-        if (i < 51) method570(-85);
+    public static void decodedOperation570(int i) {
+        if (i < 51) decodedOperation570(-85);
         aClass114_8683 = null;
         anIntArray8684 = null;
         aClass356_8679 = null;
@@ -57,11 +57,11 @@ final class Component317
         super(12, 5, 16, 2, 2, 0.45F);
     }
 
-    final byte[] method571(int i, byte i_4_, int i_5_, int i_6_) {
+    final byte[] decodedOperation571(int i, byte i_4_, int i_5_, int i_6_) {
         aByteArray8681 = new byte[i_5_ * (i_6_ * (i * 2))];
         int i_7_ = -82 % ((i_4_ - 70) / 37);
         anInt8678++;
-        this.method542(i, i_6_, 0, i_5_);
+        this.decodedOperation542(i, i_6_, 0, i_5_);
         return aByteArray8681;
     }
 
@@ -71,7 +71,7 @@ final class Component317
         int i_10_ = 2 * i_8_;
         aByteArray8681[i_10_++] = i_9_;
         aByteArray8681[i_10_] = i_9_;
-        if (i <= 79) method574(-29, -37, 73, null, true, (byte) -64, 2, -112, 50, null, -65, null, -92, 30, -5);
+        if (i <= 79) decodedOperation574(-29, -37, 73, null, true, (byte) -64, 2, -112, 50, null, -65, null, -92, 30, -5);
     }
 
     /** Escape {@code <}/{@code >} as {@code <lt>}/{@code <gt>} for safe display. */
@@ -95,7 +95,7 @@ final class Component317
         return stringbuffer.toString();
     }
 
-    static final void method573(HashNode class348_sub42, HashNode class348_sub42_15_, byte i) {
+    static final void decodedOperation573(HashNode class348_sub42, HashNode class348_sub42_15_, byte i) {
         try {
             if (class348_sub42.previous != null) class348_sub42.unlink(true);
             anInt8680++;
@@ -109,7 +109,7 @@ final class Component317
         }
     }
 
-    static final int method574(int i, int i_16_, int i_17_, int[] is, boolean bool, byte i_18_, int i_19_, int i_20_, int i_21_, int[] is_22_, int i_23_, CollisionMap class361, int i_24_, int i_25_, int i_26_) {
+    static final int decodedOperation574(int i, int i_16_, int i_17_, int[] is, boolean bool, byte i_18_, int i_19_, int i_20_, int i_21_, int[] is_22_, int i_23_, CollisionMap class361, int i_24_, int i_25_, int i_26_) {
         try {
             for (int i_27_ = 0; i_27_ < 128; i_27_++) {
                 for (int i_28_ = 0; i_28_ < 128; i_28_++) {
@@ -120,9 +120,9 @@ final class Component317
             anInt8676++;
             boolean bool_29_;
             if (i_16_ != 1) {
-                if (i_16_ == 2) bool_29_ = Component309.method2007(i_19_, -125, i_23_, class361, i, i_21_, i_24_, i_17_, i_25_, i_20_, i_26_);
-                else bool_29_ = Component291.method1420(i_24_, i_26_, -73, i_21_, i_17_, i, i_20_, i_25_, i_16_, class361, i_19_, i_23_);
-            } else bool_29_ = Component364.method187(i, i_23_, i_21_, i_26_, i_25_, i_24_, class361, i_19_, i_17_, i_20_, 1109655552);
+                if (i_16_ == 2) bool_29_ = Component309.decodedOperation2007(i_19_, -125, i_23_, class361, i, i_21_, i_24_, i_17_, i_25_, i_20_, i_26_);
+                else bool_29_ = Component291.decodedOperation1420(i_24_, i_26_, -73, i_21_, i_17_, i, i_20_, i_25_, i_16_, class361, i_19_, i_23_);
+            } else bool_29_ = Component364.decodedOperation187(i, i_23_, i_21_, i_26_, i_25_, i_24_, class361, i_19_, i_17_, i_20_, 1109655552);
             int i_30_ = i_20_ - 64;
             int i_31_ = i_21_ + -64;
             int i_32_ = DefinitionSub30.anInt9388;

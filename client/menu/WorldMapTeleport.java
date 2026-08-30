@@ -10,7 +10,7 @@
  *
  * Both paths store absolute tile X/Y/plane on the {@link MenuEntry} and fire
  * the same console {@code tele} command as Ctrl+click on the map
- * ({@link CollisionMap#method3502}). Privilege gate: {@link Component353#anInt2581} &gt; 0.
+ * ({@link CollisionMap#decodedOperation3502}). Privilege gate: {@link Component353#anInt2581} &gt; 0.
  * <p>
  * Opcode must stay &lt; 2000 — {@code processMenuAction} / client-only handlers
  * strip 2000 for shift-click, so values like 4900 never match.
@@ -48,12 +48,12 @@ final class WorldMapTeleport {
                 / (double) DisplayModeManagerContainer229.aFloat1247);
         int absX = NodeSub36.anInt6992 + mapDx + DisplayModeManagerContainer229.anInt1266;
         int absY = DebugOverlay.anInt3170 + mapDy + DisplayModeManagerContainer229.anInt1263;
-        HashNodeSub14 area = ImageTagText.method1269(-17096);
+        HashNodeSub14 area = ImageTagText.decodedOperation1269(-17096);
         if (area == null) {
             return;
         }
         int[] tile = new int[3];
-        if (!area.method3239(true, absY, absX, tile)) {
+        if (!area.decodedOperation3239(true, absY, absX, tile)) {
             return;
         }
         // tile[0]=plane, tile[1]=X, tile[2]=Y
@@ -105,7 +105,7 @@ final class WorldMapTeleport {
         if (opcode != OPCODE_TELEPORT) {
             return false;
         }
-        CollisionMap.method3502(entry.param1, 2, (int) entry.identifier, entry.param0);
+        CollisionMap.decodedOperation3502(entry.param1, 2, (int) entry.identifier, entry.param0);
         return true;
     }
 

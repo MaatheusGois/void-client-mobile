@@ -19,21 +19,21 @@ final class ShaderSub3
     static CacheStore aClass45_5207;
     /*synthetic*/ static Class aClass5208;
 
-    static final boolean method166(byte i, int i_0_, int i_1_) {
-        if (i < 5) method166((byte) -119, -93, 73);
+    static final boolean decodedOperation166(byte i, int i_0_, int i_1_) {
+        if (i < 5) decodedOperation166((byte) -119, -93, 73);
         anInt5203++;
         return (i_1_ & 0x800) != 0 && (i_0_ & 0x37) != 0;
     }
 
-    public static void method167(int i) {
-        if (i != 19612) method167(-70);
+    public static void decodedOperation167(int i) {
+        if (i != 19612) decodedOperation167(-70);
         aClass351_5200 = null;
         aClass351_5204 = null;
         aClass348_Sub6_5206 = null;
         aClass45_5207 = null;
     }
 
-    static final void method168(byte i) {
+    static final void decodedOperation168(byte i) {
         do {
             if (!OggUrlStream.aClass297_8992.useDirectDraw) {
                 try {

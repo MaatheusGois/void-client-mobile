@@ -21,7 +21,7 @@ final class Component17
     private final int anInt3890;
     private int anInt3891;
 
-    final HashNode method2302(long l, byte i) {
+    final HashNode decodedOperation2302(long l, byte i) {
         try {
             if (i > -25) aClass107_3889 = null;
             anInt3885++;
@@ -33,9 +33,9 @@ final class Component17
         }
     }
 
-    final void method2303(boolean bool) {
+    final void decodedOperation2303(boolean bool) {
         anInt3879++;
-        if (bool != true) method2305(-121L, null, -1);
+        if (bool != true) decodedOperation2305(-121L, null, -1);
         aClass107_3889.clear(2110355138);
         aClass356_3888.clear(0);
         aClass348_Sub42_3887 = new HashNode();
@@ -61,7 +61,7 @@ final class Component17
         } while (false);
     }
 
-    final void method2305(long l, HashNode class348_sub42, int i) {
+    final void decodedOperation2305(long l, HashNode class348_sub42, int i) {
         try {
             anInt3881++;
             if ((~anInt3891) == i) {
@@ -81,8 +81,8 @@ final class Component17
         }
     }
 
-    public static void method2306(byte i) {
-        if (i != -90) method2306((byte) -74);
+    public static void decodedOperation2306(byte i) {
+        if (i != -90) decodedOperation2306((byte) -74);
         anIntArray3883 = null;
         anInterface6Array3884 = null;
         aByteArrayArray3882 = null;

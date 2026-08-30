@@ -174,7 +174,7 @@ final class JaclibBitmapFont extends BitmapFont {
             aHa_Sub3_6494.uniformMatrix4fv(-28186, i_50_);
         } else aHa_Sub3_6494.texStorage3D(ShaderCompilerSub3.aClass229_6519, 126, ShaderCompilerSub3.aClass229_6519);
         MatrixSub2 class101_sub2 = aHa_Sub3_6494.getClipboard(-99);
-        class101_sub2.method894(i, i_49_, 0);
+        class101_sub2.decodedOperation894(i, i_49_, 0);
         aHa_Sub3_6494.setDrawable(0);
         aHa_Sub3_6494.waitNative(54, anInterface5_Impl1_6495, 0);
         aHa_Sub3_6494.drawArraysInstanced(0, aHa_Sub3_6494.aClass130_8204);

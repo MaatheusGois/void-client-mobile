@@ -35,7 +35,7 @@ final class PlayerState extends Node {
     int anInt7089;
     int anInt7090;
 
-    static final void method3298(byte i, boolean bool, Player player) {
+    static final void decodedOperation3298(byte i, boolean bool, Player player) {
         anInt7073++;
         if (DisplayModeManagerContainer306.menuEntryCount < 400) {
             if (Component72.localPlayer == player) {
@@ -57,11 +57,11 @@ final class PlayerState extends Node {
                     }
                     String string_5_ = ((WorldNameText.STELLARDAWN == PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544));
                     if (player.combatLevel >= player.anInt10557)
-                        string = (player.method2456(true, 255) + (!bool_0_ ? "<col=ffffff>" : (WorldNameText.method250((Component72.localPlayer.combatLevel), true, (player.combatLevel)))) + " (" + string_5_ + player.combatLevel + ")");
+                        string = (player.decodedOperation2456(true, 255) + (!bool_0_ ? "<col=ffffff>" : (WorldNameText.decodedOperation250((Component72.localPlayer.combatLevel), true, (player.combatLevel)))) + " (" + string_5_ + player.combatLevel + ")");
                     else
-                        string = (player.method2456(true, 255) + (bool_0_ ? (WorldNameText.method250((Component72.localPlayer.combatLevel), true, (player.combatLevel))) : "<col=ffffff>") + " (" + string_5_ + player.combatLevel + "+" + (-player.combatLevel + player.anInt10557) + ")");
-                } else if (player.anInt10564 == -1) string = player.method2456(true, 255);
-                else string = (player.method2456(true, 255) + " (" + FriendsIgnoreList.aClass274_3512.getLocalized(ObjectDeserializer.languageId, 544) + player.anInt10564 + ")");
+                        string = (player.decodedOperation2456(true, 255) + (bool_0_ ? (WorldNameText.decodedOperation250((Component72.localPlayer.combatLevel), true, (player.combatLevel))) : "<col=ffffff>") + " (" + string_5_ + player.combatLevel + "+" + (-player.combatLevel + player.anInt10557) + ")");
+                } else if (player.anInt10564 == -1) string = player.decodedOperation2456(true, 255);
+                else string = (player.decodedOperation2456(true, 255) + " (" + FriendsIgnoreList.aClass274_3512.getLocalized(ObjectDeserializer.languageId, 544) + player.anInt10564 + ")");
                 if (r.aBoolean9722 && !bool && (0x8 & PauseTimer.anInt500) != 0) {
                     DisplayModeManagerContainer368.addMenuEntry(false, DisplayModeManagerContainer332.aString5000 + " -> <col=ffffff>" + string, 0, (byte) -109, false, 0, -1, true, 51, player.anInt10290, DisplayModeManagerContainer332.aString5001, player.anInt10290, Component182.anInt9747);
                     DisplayModeManagerContainer196.anInt4228++;
@@ -100,7 +100,7 @@ final class PlayerState extends Node {
         }
     }
 
-    final void method3299(byte i) {
+    final void decodedOperation3299(byte i) {
         anInt7078++;
         this.aClass348_Sub16_Sub5_7081 = null;
         this.aClass348_Sub19_Sub1_7077 = null;
@@ -109,10 +109,10 @@ final class PlayerState extends Node {
         this.aClass348_Sub17_7085 = null;
     }
 
-    public static void method3300(int i) {
+    public static void decodedOperation3300(int i) {
         anIntArrayArrayArray7079 = null;
         aClass348_Sub16_Sub4_7065 = null;
-        if (i != 0) method3300(-61);
+        if (i != 0) decodedOperation3300(-61);
     }
 
     static {

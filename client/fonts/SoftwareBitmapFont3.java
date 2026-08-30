@@ -33,7 +33,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
         }
     }
 
-    private final void method2594(byte[] is, int[] is_4_, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, Shader var_aa, int i_14_, int i_15_) {
+    private final void decodedOperation2594(byte[] is, int[] is_4_, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, Shader var_aa, int i_14_, int i_15_) {
         ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_16_ = var_aa_Sub3.anIntArray5201;
         int[] is_17_ = var_aa_Sub3.anIntArray5202;
@@ -85,7 +85,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
         }
     }
 
-    private final void method2595(byte[] is, int[] is_32_, int i, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_) {
+    private final void decodedOperation2595(byte[] is, int[] is_32_, int i, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_) {
         for (int i_39_ = -i_36_; i_39_ < 0; i_39_++) {
             for (int i_40_ = -i_35_; i_40_ < 0; i_40_++) {
                 int i_41_ = is[i_33_++] & 0xff;
@@ -136,7 +136,7 @@ final class SoftwareBitmapFont3 extends BitmapFont {
                 i_53_ += i_57_;
                 i_52_ += i_57_;
             }
-            if (i_48_ > 0 && i_49_ > 0) method2594(aByteArrayArray6504[c], aHa_Sub1_6506.anIntArray7483, i_45_, i_54_, i_51_, i_48_, i_49_, i_52_, i_53_, i, i_44_, anIntArray6503[c], var_aa, i_46_, i_47_);
+            if (i_48_ > 0 && i_49_ > 0) decodedOperation2594(aByteArrayArray6504[c], aHa_Sub1_6506.anIntArray7483, i_45_, i_54_, i_51_, i_48_, i_49_, i_52_, i_53_, i, i_44_, anIntArray6503[c], var_aa, i_46_, i_47_);
         }
     }
 
@@ -173,6 +173,6 @@ final class SoftwareBitmapFont3 extends BitmapFont {
             i_65_ += i_69_;
             i_64_ += i_69_;
         }
-        if (i_60_ > 0 && i_61_ > 0) method2595(aByteArrayArray6504[c], aHa_Sub1_6506.anIntArray7483, i_59_, i_66_, i_63_, i_60_, i_61_, i_64_, i_65_);
+        if (i_60_ > 0 && i_61_ > 0) decodedOperation2595(aByteArrayArray6504[c], aHa_Sub1_6506.anIntArray7483, i_59_, i_66_, i_63_, i_60_, i_61_, i_64_, i_65_);
     }
 }

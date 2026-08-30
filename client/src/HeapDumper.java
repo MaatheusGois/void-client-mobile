@@ -53,11 +53,11 @@ final class HeapDumper {
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub15_7224), 2);
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), 0);
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub12_7243), 0);
-            DisplayModeManagerContainer87.method1686(-127);
+            DisplayModeManagerContainer87.decodedOperation1686(-127);
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub23_7231), 0);
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 4);
-            Definition.method3038(-1);
-            DisplayModeManagerContainer154.method773(true);
+            Definition.decodedOperation3038(-1);
+            DisplayModeManagerContainer154.decodedOperation773(true);
             RuntimeException_Sub1.aBoolean4604 = true;
         }
     }
@@ -103,9 +103,9 @@ final class HeapDumper {
                         player.aString10292 = class348_sub49_sub2.readString((byte) 110);
                         if (player.aString10292.charAt(0) == '~') {
                             player.aString10292 = player.aString10292.substring(1);
-                            ShaderProgramSub2.addChatMessage(player.getName(false, -70), 2, (byte) -116, 0, player.aString10292, player.method2456(true, 255), player.displayName);
+                            ShaderProgramSub2.addChatMessage(player.getName(false, -70), 2, (byte) -116, 0, player.aString10292, player.decodedOperation2456(true, 255), player.displayName);
                         } else if (Component72.localPlayer == player)
-                            ShaderProgramSub2.addChatMessage(player.getName(false, -88), 2, (byte) -102, 0, (player.aString10292), player.method2456(true, 255), (player.displayName));
+                            ShaderProgramSub2.addChatMessage(player.getName(false, -88), 2, (byte) -102, 0, (player.aString10292), player.decodedOperation2456(true, 255), (player.displayName));
                         player.anInt10264 = 150;
                         player.anInt10234 = 0;
                         player.anInt10201 = 0;
@@ -127,14 +127,14 @@ final class HeapDumper {
                                 else i_14_ = -1;
                                 int i_16_ = class348_sub49_sub2.readSmart(-123);
                                 int i_17_ = class348_sub49_sub2.readByteAdd((byte) -98);
-                                player.method2438(i_13_, OpenGlShader.clientCycle, i_14_, i_15_, i_12_, i_16_, i_17_, (byte) 102);
+                                player.decodedOperation2438(i_13_, OpenGlShader.clientCycle, i_14_, i_15_, i_12_, i_16_, i_17_, (byte) 102);
                             }
                         }
                     }
                     if ((i_0_ & 0x2) != 0) {
                         player.anInt10524 = class348_sub49_sub2.readUnsignedShort(842397944);
                         if (player.anInt10319 == 0) {
-                            player.method2440((byte) 49, player.anInt10524);
+                            player.decodedOperation2440((byte) 49, player.anInt10524);
                             player.anInt10524 = -1;
                         }
                     }
@@ -153,7 +153,7 @@ final class HeapDumper {
                             is_19_[i_21_] = class348_sub49_sub2.readByteInverse((byte) 21);
                             is_20_[i_21_] = class348_sub49_sub2.readUnsignedShort(842397944);
                         }
-                        Component385.method1297((byte) -116, player, is_20_, is, is_19_);
+                        Component385.decodedOperation1297((byte) -116, player, is_20_, is, is_19_);
                     }
                     if ((0x2000 & i_0_) != 0) {
                         player.anInt10293 = class348_sub49_sub2.readByte(-121);
@@ -186,7 +186,7 @@ final class HeapDumper {
                         int i_26_ = i_25_ & 0x7;
                         int i_27_ = 0xf & i_25_ >> 3;
                         if (i_27_ == 15) i_27_ = -1;
-                        player.method2437(i_26_, i_23_, -1012294866, i_27_, true, i_24_);
+                        player.decodedOperation2437(i_26_, i_23_, -1012294866, i_27_, true, i_24_);
                     }
                     if ((i_0_ & 0x40000) != 0) {
                         player.aByte10255 = class348_sub49_sub2.readByteInverse(-622951480);
@@ -207,7 +207,7 @@ final class HeapDumper {
                         int i_31_ = i_30_ & 0x7;
                         int i_32_ = (0x78 & i_30_) >> 3;
                         if (i_32_ == 15) i_32_ = -1;
-                        player.method2437(i_31_, i_28_, -1012294866, i_32_, false, i_29_);
+                        player.decodedOperation2437(i_31_, i_28_, -1012294866, i_32_, false, i_29_);
                     }
                     if ((0x8 & i_0_) != 0) {
                         int[] is = new int[4];
@@ -216,7 +216,7 @@ final class HeapDumper {
                             if (is[i_33_] == 65535) is[i_33_] = -1;
                         }
                         int i_34_ = class348_sub49_sub2.readByteAdd((byte) -101);
-                        Component25.method1791(23946, is, i_34_, player);
+                        Component25.decodedOperation1791(23946, is, i_34_, player);
                     }
                     if ((i_0_ & 0x10) != 0) {
                         int i_35_ = class348_sub49_sub2.readUnsignedByte(255);
@@ -232,8 +232,8 @@ final class HeapDumper {
                         byte i_36_;
                         if (i_2_ != -1) i_36_ = i_2_;
                         else i_36_ = Component293.aByteArray3300[i];
-                        Component140.method3208(player, i_36_, -21);
-                        player.method2455(player.anInt10531, -26443, i_36_, player.anInt10549);
+                        Component140.decodedOperation3208(player, i_36_, -21);
+                        player.decodedOperation2455(player.anInt10531, -26443, i_36_, player.anInt10549);
                     } else player.setMovementState(player.anInt10531, player.anInt10549, (byte) 84);
                 }
             } catch (RuntimeException runtimeexception) {

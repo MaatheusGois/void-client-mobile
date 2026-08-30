@@ -93,7 +93,7 @@ final class ExampleCombatScript {
             }
             NpcComposition def = n.definition;
             if (def.anIntArray1377 != null) {
-                NpcComposition t = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
+                NpcComposition t = def.decodedOperation794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (t != null) {
                     def = t;
                 }

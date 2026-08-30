@@ -25,8 +25,8 @@ final class DefinitionSub26
         int i_0_ = 37 / ((28 - i) / 61);
     }
 
-    static final boolean method3119(int i, int i_1_, int i_2_) {
-        if (i_1_ <= 39) method3119(-106, 118, -21);
+    static final boolean decodedOperation3119(int i, int i_1_, int i_2_) {
+        if (i_1_ <= 39) decodedOperation3119(-106, 118, -21);
         anInt9355++;
         return (i & 0xc580) != 0;
     }
@@ -36,7 +36,7 @@ final class DefinitionSub26
         anInt9353++;
         int[][] is = this.imageCacheStore.getPixels(i_3_ + 1564598957, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_4_ = this.method3039((byte) -60, i, 0);
+            int[][] is_4_ = this.decodedOperation3039((byte) -60, i, 0);
             int[] is_5_ = is_4_[0];
             int[] is_6_ = is_4_[1];
             int[] is_7_ = is_4_[2];
@@ -61,7 +61,7 @@ final class DefinitionSub26
         return is;
     }
 
-    static final void method3120(int i) {
+    static final void decodedOperation3120(int i) {
         Component37.anInt3931 = 0;
         anInt9345++;
         int i_15_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -118);
@@ -69,8 +69,8 @@ final class DefinitionSub26
         int i_17_ = Component80.packetBuffer.readShortLittle(false);
         boolean bool = (Component80.packetBuffer.readByteInverse((byte) 21) == 1);
 
-        ImageCacheStore.method2554((byte) -45);
-        DefinitionSub22.method3111(111, i_15_);
+        ImageCacheStore.decodedOperation2554((byte) -45);
+        DefinitionSub22.decodedOperation3111(111, i_15_);
         int i_18_ = (-Component80.packetBuffer.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_18_][4];
         for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
@@ -100,10 +100,10 @@ final class DefinitionSub26
                 i_18_++;
             }
         }
-        NodeSub41.method3157(i_16_, (byte) 123, i_17_, 11, bool);
+        NodeSub41.decodedOperation3157(i_16_, (byte) 123, i_17_, 11, bool);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_23_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_23_) {
         do {
             try {
                 int i_24_ = i;

@@ -65,35 +65,35 @@ final class Component385
     DisplayModeManagerContainer164 aClass64_Sub1_2246;
     int[] anIntArray2247;
 
-    final void method1291(int i, Runnable runnable) {
+    final void decodedOperation1291(int i, Runnable runnable) {
         if (i == 10000) {
             this.aRunnable2198 = runnable;
             anInt2193++;
         }
     }
 
-    final void method1292(int i) {
+    final void decodedOperation1292(int i) {
         if (i == 64) {
             anInt2194++;
             this.aClass109_2220 = new Component8(aHa_Sub1_2191, this);
         }
     }
 
-    public static void method1293(int i) {
+    public static void decodedOperation1293(int i) {
         aClass114_2196 = null;
         aClass45_2208 = null;
         aClass229_2207 = null;
         if (i != 1) method1295(null, -117, -102);
     }
 
-    static final boolean method1294(byte i, byte[] is) {
+    static final boolean decodedOperation1294(byte i, byte[] is) {
         anInt2199++;
         Buffer class348_sub49 = new Buffer(is);
-        if (i > -98) method1294((byte) 73, null);
+        if (i > -98) decodedOperation1294((byte) 73, null);
         int i_0_ = class348_sub49.readUnsignedByte(255);
         if (i_0_ != 2) return false;
         boolean bool = class348_sub49.readUnsignedByte(255) == 1;
-        if (bool) Component317.method569((byte) -123, class348_sub49);
+        if (bool) Component317.decodedOperation569((byte) -123, class348_sub49);
         PauseHandler.readWorldPopulations((byte) -67, class348_sub49);
         return true;
     }
@@ -120,14 +120,14 @@ final class Component385
         }
     }
 
-    static final boolean method1296(boolean bool) {
-        if (bool != true) method1297((byte) 88, null, null, null, null);
+    static final boolean decodedOperation1296(boolean bool) {
+        if (bool != true) decodedOperation1297((byte) 88, null, null, null, null);
         anInt2200++;
         if (PlayerState.anInt7068 != 0) return true;
         return Component122.aClass348_Sub16_Sub3_1564.isOutputReady(120);
     }
 
-    static final void method1297(byte i, Player player, int[] is, int[] is_7_, int[] is_8_) {
+    static final void decodedOperation1297(byte i, Player player, int[] is, int[] is_7_, int[] is_8_) {
         try {
             anInt2206++;
             if (i > -96) aFloat2203 = 0.6824298F;
@@ -150,7 +150,7 @@ final class Component385
                                         class182.anInt2456 = 0;
                                         class182.anInt2451 = 0;
                                         class182.anInt2445 = 0;
-                                        if (!player.aBoolean10309) DisplayModeManagerContainer260.method2178(player, 0, class17, -54);
+                                        if (!player.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(player, 0, class17, -54);
                                     } else if (i_14_ == 2) class182.anInt2445 = 0;
                                 } else if (class17.anInt239 >= RunescapeInfo.aClass87_191.getSequence((class182.anInt2454), 7).anInt239) class182 = player.aClass182Array10308[i_13_] = null;
                             }
@@ -162,7 +162,7 @@ final class Component385
                                 class182.anInt2456 = 0;
                                 class182.anInt2454 = i_10_;
                                 class182.anInt2451 = 0;
-                                if (!player.aBoolean10309) DisplayModeManagerContainer260.method2178(player, 0, class17, -123);
+                                if (!player.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(player, 0, class17, -123);
                             }
                         } else player.aClass182Array10308[i_13_] = null;
                     }

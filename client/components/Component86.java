@@ -15,18 +15,18 @@ final class Component86
     private final NodeCache aClass60_4531 = new NodeCache(256);
     static int anInt4532 = 1407;
 
-    final void method3585(int i) {
+    final void decodedOperation3585(int i) {
         anInt4530++;
         if (i == 7271) aClass60_4531.clear(0);
     }
 
-    final void method3586(int i) {
+    final void decodedOperation3586(int i) {
         aClass60_4531.processSoftEntries(2, 5);
-        if (i != -16130) method3586(-94);
+        if (i != -16130) decodedOperation3586(-94);
         anInt4527++;
     }
 
-    final Interface18_Impl3 method3587(byte i, int i_0_) {
+    final Interface18_Impl3 decodedOperation3587(byte i, int i_0_) {
         anInt4529++;
         Object object = aClass60_4531.get(i_0_, 107);
         if (object != null) return (Interface18_Impl3) object;

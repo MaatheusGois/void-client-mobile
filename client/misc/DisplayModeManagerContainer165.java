@@ -13,7 +13,7 @@ final class DisplayModeManagerContainer165
     static int anInt3845;
     static int anInt3846;
 
-    static final void method2285(boolean bool, byte i, int i_0_) {
+    static final void decodedOperation2285(boolean bool, byte i, int i_0_) {
         if (i > -61) aClass114_3842 = null;
         anInt3843++;
         if (bool) {
@@ -23,16 +23,16 @@ final class DisplayModeManagerContainer165
         } else ClientScriptExecutor.runScript(Component258.aClass273_1966, i_0_, -1);
     }
 
-    public static void method2286(int i) {
+    public static void decodedOperation2286(int i) {
         aClass114_3842 = null;
         if (i != 114) anInt3844 = 87;
     }
 
-    static final Component15 method2287(Buffer class348_sub49, byte i) {
+    static final Component15 decodedOperation2287(Buffer class348_sub49, byte i) {
         anInt3846++;
         int i_1_ = class348_sub49.readUnsignedByte(255);
-        Component85 class221 = HeapDumpHelper.method1248(87)[class348_sub49.readUnsignedByte(255)];
-        DisplayModeManagerContainer196 class341 = Component240.method596(20000)[class348_sub49.readUnsignedByte(255)];
+        Component85 class221 = HeapDumpHelper.decodedOperation1248(87)[class348_sub49.readUnsignedByte(255)];
+        DisplayModeManagerContainer196 class341 = Component240.decodedOperation596(20000)[class348_sub49.readUnsignedByte(255)];
         int i_2_ = class348_sub49.readShort(13638);
         int i_3_ = class348_sub49.readShort(13638);
         int i_4_ = class348_sub49.readUnsignedShort(842397944);
@@ -45,10 +45,10 @@ final class DisplayModeManagerContainer165
         return new Component15(i_1_, class221, class341, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, bool);
     }
 
-    static final void method2288(boolean bool, GraphicsToolkit var_ha) {
+    static final void decodedOperation2288(boolean bool, GraphicsToolkit var_ha) {
         anInt3845++;
-        if (!DisplayModeManagerContainer5.aBoolean1211) BuildType.method1642((byte) 108, var_ha);
-        else DisplayModeManagerContainer136.method1153(var_ha, 16);
+        if (!DisplayModeManagerContainer5.aBoolean1211) BuildType.decodedOperation1642((byte) 108, var_ha);
+        else DisplayModeManagerContainer136.decodedOperation1153(var_ha, 16);
         if (bool != false) anInt3844 = -97;
     }
 

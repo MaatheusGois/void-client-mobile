@@ -31,23 +31,23 @@ final class NodeSub18
     static int anInt6822;
     /*synthetic*/ static Class aClass6823;
 
-    final boolean method2934(int i, int i_0_, int i_1_) {
+    final boolean decodedOperation2934(int i, int i_0_, int i_1_) {
         anInt6822++;
         if (i != 3589) createMouseHandler(null, 70, false);
         return i_0_ >= anInt6820 && i_0_ <= anInt6806 && i_1_ >= anInt6811 && anInt6810 >= i_1_;
     }
 
-    final boolean method2935(int i, int i_2_, int i_3_, boolean bool) {
+    final boolean decodedOperation2935(int i, int i_2_, int i_3_, boolean bool) {
         anInt6821++;
         if (bool != true) anInt6811 = -84;
         return i_3_ == anInt6815 && i_2_ >= anInt6820 && anInt6806 >= i_2_ && i >= anInt6811 && anInt6810 >= i;
     }
 
-    public static void method2936(byte i) {
+    public static void decodedOperation2936(byte i) {
         if (i == -25) aClass351_6814 = null;
     }
 
-    final void method2937(int i, int i_4_, int i_5_, int[] is) {
+    final void decodedOperation2937(int i, int i_4_, int i_5_, int[] is) {
         anInt6816++;
         is[0] = anInt6815;
         is[1] = -this.anInt6809 - -anInt6820 + i;
@@ -55,33 +55,33 @@ final class NodeSub18
         if (i_5_ != -3069) anInt6810 = -14;
     }
 
-    static final void method2938(byte i) {
+    static final void decodedOperation2938(byte i) {
         anInt6804++;
-        Component267.aClass268_2979.method2037(10205);
-        Component149.aClass183_4460.method1381(true);
-        DefinitionSub25.aClass150_9342.method1206((byte) -37);
+        Component267.aClass268_2979.decodedOperation2037(10205);
+        Component149.aClass183_4460.decodedOperation1381(true);
+        DefinitionSub25.aClass150_9342.decodedOperation1206((byte) -37);
         GradientPreset.aClass263_9195.method2012(-23828);
         Component291.aClass278_2529.method2078(-6080);
         Exception_Sub1.itemDefinitions.method1939(-110);
-        RunescapeInfo.aClass87_191.method834((byte) -116);
-        NsnDefinition.aClass319_9245.method2546(60);
-        Component267.aClass194_2981.method1445(64);
-        Component209.aClass217_3453.method1589((byte) 127);
+        RunescapeInfo.aClass87_191.decodedOperation834((byte) -116);
+        NsnDefinition.aClass319_9245.decodedOperation2546(60);
+        Component267.aClass194_2981.decodedOperation1445(64);
+        Component209.aClass217_3453.decodedOperation1589((byte) 127);
         DisplayModeManagerContainer282.aClass261_5558.clearCache(0);
-        Component245.aClass141_117.method1175((byte) 125);
-        DisplayModeManagerContainer64.aClass153_9031.method1219(7851);
-        DisplayModeManagerContainer64.aClass187_9036.method1404((byte) -82);
-        MatrixSub3.aClass326_5764.method2601((byte) -44);
-        ComponentDownloader.aClass84_413.method822((byte) -120);
-        Component132.aClass25_1813.method300((byte) -123);
-        NodeSub1.aClass185_6559.method1393((byte) -13);
-        Component339.cursorDefinitions.method1290(-8);
-        Component257.aClass65_4787.method695(true);
-        DisplayModeManagerContainer306.aClass219_4782.method1602(0);
-        Component76.method3573(-15326);
+        Component245.aClass141_117.decodedOperation1175((byte) 125);
+        DisplayModeManagerContainer64.aClass153_9031.decodedOperation1219(7851);
+        DisplayModeManagerContainer64.aClass187_9036.decodedOperation1404((byte) -82);
+        MatrixSub3.aClass326_5764.decodedOperation2601((byte) -44);
+        ComponentDownloader.aClass84_413.decodedOperation822((byte) -120);
+        Component132.aClass25_1813.decodedOperation300((byte) -123);
+        NodeSub1.aClass185_6559.decodedOperation1393((byte) -13);
+        Component339.cursorDefinitions.decodedOperation1290(-8);
+        Component257.aClass65_4787.decodedOperation695(true);
+        DisplayModeManagerContainer306.aClass219_4782.decodedOperation1602(0);
+        Component76.decodedOperation3573(-15326);
         LoadingManager.clearDefinitionCaches((byte) 62);
-        DisplayModeManagerContainer26.method821(-126);
-        Renderable.method2375(16127);
+        DisplayModeManagerContainer26.decodedOperation821(-126);
+        Renderable.decodedOperation2375(16127);
         if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
             for (int i_6_ = 0; Component17.aByteArrayArray3882.length > i_6_; i_6_++)
                 Component17.aByteArrayArray3882[i_6_] = null;
@@ -89,13 +89,13 @@ final class NodeSub18
         }
         NamedInteger.clearCaches(83);
         Component192.clearSoftCache(-1);
-        Component256.method1828(87);
+        Component256.decodedOperation1828(87);
         if (i > 53) {
-            DisplayModeManagerContainer310.method297(false);
-            Component134.method1402(1);
+            DisplayModeManagerContainer310.decodedOperation297(false);
+            Component134.decodedOperation1402(1);
             ClientScriptExecutor.aClass60_1174.clear(0);
             NodeSub8.toolkit.method3663();
-            TcpSocketStream.method1707(26469);
+            TcpSocketStream.decodedOperation1707(26469);
             Buffer.disposeActiveToolkit(-52);
             NodeSub29.aClass45_6909.clearUnpacked((byte) -124);
             DisplayModeManagerContainer51.aClass45_2490.clearUnpacked((byte) -119);
@@ -137,13 +137,13 @@ final class NodeSub18
         }
     }
 
-    final boolean method2939(int i, int i_7_, int i_8_) {
+    final boolean decodedOperation2939(int i, int i_7_, int i_8_) {
         anInt6807++;
         if (i_7_ != 2) return true;
         return this.anInt6809 <= i && this.anInt6819 >= i && (i_8_ >= this.anInt6812) && this.anInt6813 >= i_8_;
     }
 
-    final void method2940(int i, boolean bool, int[] is, int i_9_) {
+    final void decodedOperation2940(int i, boolean bool, int[] is, int i_9_) {
         anInt6817++;
         is[0] = 0;
         is[2] = i + -anInt6811 + this.anInt6812;
@@ -162,7 +162,7 @@ final class NodeSub18
         }
     }
 
-    static final void method2942(DisplayModeManagerContainer57 class46, byte i) {
+    static final void decodedOperation2942(DisplayModeManagerContainer57 class46, byte i) {
         anInt6805++;
         if (class46.contentType == ModelStore.anInt4610) {
             if (Component72.localPlayer.username == null) {
@@ -173,13 +173,13 @@ final class NodeSub18
                 class46.anInt675 = 0x7ff & (int) (256.0 * Math.sin((double) (OpenGlShader.clientCycle) / 40.0));
                 class46.anInt770 = 5;
                 class46.anInt753 = StringDefinition.anInt9591;
-                class46.anInt779 = (Component349.method2418((Component72.localPlayer.username), (byte) -41));
+                class46.anInt779 = (Component349.decodedOperation2418((Component72.localPlayer.username), (byte) -41));
                 class46.anInt699 = Component72.localPlayer.anInt10268;
                 class46.anInt841 = 0;
                 class46.anInt730 = Component72.localPlayer.anInt10312;
                 class46.anInt795 = Component72.localPlayer.anInt10245;
                 DisplayModeManagerContainer167 class17 = (class46.anInt699 != -1 ? RunescapeInfo.aClass87_191.getSequence(class46.anInt699, 7) : null);
-                if (class17 != null) Component235.method2017(class46.anInt795, class17, 50);
+                if (class17 != null) Component235.decodedOperation2017(class46.anInt795, class17, 50);
             }
         } else {
             int i_10_ = -14 % ((27 - i) / 59);

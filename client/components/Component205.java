@@ -26,11 +26,11 @@ final class Component205
     final int getValue(int i, int i_0_) {
         anInt5972++;
         if (i != 3) return 121;
-        if (!Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
+        if (!Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
         return 1;
     }
 
-    final int method1771(int i) {
+    final int decodedOperation1771(int i) {
         anInt5960++;
         if (i != -32350) getValue(80, -99);
         return this.preferenceValue;
@@ -42,7 +42,7 @@ final class Component205
         anInt5963++;
     }
 
-    static final void method1772(int i) {
+    static final void decodedOperation1772(int i) {
         anInt5968++;
         ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0);
         if (i <= 4) settingsCookie = null;
@@ -50,7 +50,7 @@ final class Component205
             DisplayModeManagerContainer282.getColorTag((byte) 108, (class348_sub15.anInt6773));
     }
 
-    public static void method1773(byte i) {
+    public static void decodedOperation1773(byte i) {
         int i_3_ = -86 / ((i - 13) / 45);
         settingsCookie = null;
         aClass45_5964 = null;
@@ -63,7 +63,7 @@ final class Component205
     final void validateValue(boolean bool) {
         if (bool != false) validateValue(false);
         anInt5962++;
-        if (this.preferences.aClass239_Sub25_7271.method1830((byte) -119) && !Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 0;
+        if (this.preferences.aClass239_Sub25_7271.decodedOperation1830((byte) -119) && !Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 0;
         if (this.preferenceValue < 0 || this.preferenceValue > 1) this.preferenceValue = getDefaultValue(20014);
     }
 
@@ -71,10 +71,10 @@ final class Component205
         super(i, class348_sub51);
     }
 
-    final boolean method1774(int i) {
-        if (i < 85) method1773((byte) 116);
+    final boolean decodedOperation1774(int i) {
+        if (i < 85) decodedOperation1773((byte) 116);
         anInt5961++;
-        return Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
+        return Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
     }
 
     final int getDefaultValue(int i) {
@@ -83,8 +83,8 @@ final class Component205
         return 0;
     }
 
-    static final void method1775(byte i, int i_4_, int i_5_) {
+    static final void decodedOperation1775(byte i, int i_4_, int i_5_) {
         anInt5967++;
-        if (i == -8 && Component233.method2547(i_4_, (byte) 84)) DefinitionSub19.method3097((DefinitionSub33.openInterfaces[i_4_]), i_5_, 119);
+        if (i == -8 && Component233.decodedOperation2547(i_4_, (byte) 84)) DefinitionSub19.decodedOperation3097((DefinitionSub33.openInterfaces[i_4_]), i_5_, 119);
     }
 }

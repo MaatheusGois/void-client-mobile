@@ -97,7 +97,7 @@ final class Component376
         }
     }
 
-    public static void method177() {
+    public static void decodedOperation177() {
         aShortArray141 = null;
         aShortArray127 = null;
         aShortArray133 = null;

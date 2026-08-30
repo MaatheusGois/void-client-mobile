@@ -17,11 +17,11 @@ final class LoggedOutDefinition
     private int anInt9438 = 4096;
     private boolean aBoolean9439 = true;
 
-    static final int method3140(int i, int i_0_) {
+    static final int decodedOperation3140(int i, int i_0_) {
         int i_1_ = 40 / ((i - 19) / 63);
         anInt9435++;
         if (i_0_ == 16711935) return -1;
-        return Shader.method160(27076, i_0_);
+        return Shader.decodedOperation160(27076, i_0_);
     }
 
     /**
@@ -35,18 +35,18 @@ final class LoggedOutDefinition
         }
         anInt9437++;
         Component241.anInt2955 = 0;
-        NodeSub18.method2938((byte) 87);
-        DisplayModeManagerContainer58.method2433();
+        NodeSub18.decodedOperation2938((byte) 87);
+        DisplayModeManagerContainer58.decodedOperation2433();
         if (i != 11) anIntArray9436 = null;
         for (int i_2_ = 0; i_2_ < 4; i_2_++)
-            NodeSub45.aClass361Array7108[i_2_].method3500(700);
-        HashNodeSub3.method3177(-50, false);
+            NodeSub45.aClass361Array7108[i_2_].decodedOperation3500(700);
+        HashNodeSub3.decodedOperation3177(-50, false);
         BuildInfo.maybeGc();
         Sprite.resetMusic(2, 22684);
         DisplayModeManagerContainer238.aBoolean1236 = false;
         Component119.anInt3428 = -1;
-        DefinitionSub17Sub1.method3093(i + 79);
-        MatrixSub2.method921((byte) 99, true);
+        DefinitionSub17Sub1.decodedOperation3093(i + 79);
+        MatrixSub2.decodedOperation921((byte) 99, true);
         Component330.regionTileY = 0;
         NodeBaseSub2.regionTileX = 0;
         GraphicsToolkit.anInt4581 = 0;
@@ -54,18 +54,18 @@ final class LoggedOutDefinition
         Component178.anInt1447 = Component37.anInt3931 = 0;
         for (int i_3_ = 0; (i_3_ < NodeSub27.aClass302Array6897.length); i_3_++)
             NodeSub27.aClass302Array6897[i_3_] = null;
-        HashNode.method3163((byte) -114);
+        HashNode.decodedOperation3163((byte) -114);
         for (int i_4_ = 0; i_4_ < 2048; i_4_++)
             InterfaceRenderer.players[i_4_] = null;
         Component324.anInt2057 = 0;
         Component21.aClass356_3654.clear(i ^ 0xb);
         NodeSub32.anInt6930 = 0;
         Component387.aClass356_1895.clear(0);
-        Component59.method1122(0);
+        Component59.decodedOperation1122(0);
         DisplayModeManagerContainer136.anInt4718 = 0;
-        DisplayModeManagerContainer58.aClass170_10209.method1314((byte) -107);
-        Component281.method2282(-12648);
-        DisplayModeManagerContainer368.method465(i + -1636518175);
+        DisplayModeManagerContainer58.aClass170_10209.decodedOperation1314((byte) -107);
+        Component281.decodedOperation2282(-12648);
+        DisplayModeManagerContainer368.decodedOperation465(i + -1636518175);
         MatrixSub2.aLong5745 = 0L;
         Component323.aClass348_Sub26_5881 = null;
         if (bool) Buffer.setClientState(2, 12);
@@ -79,10 +79,10 @@ final class LoggedOutDefinition
         }
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_5_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_5_) {
         do {
             try {
-                if (i_5_ != 31015) method3140(-77, 55);
+                if (i_5_ != 31015) decodedOperation3140(-77, 55);
                 anInt9433++;
                 int i_6_ = i;
                 if (i_6_ == 0) {
@@ -101,7 +101,7 @@ final class LoggedOutDefinition
         super(1, false);
     }
 
-    public static void method3142(int i) {
+    public static void decodedOperation3142(int i) {
         anIntArray9431 = null;
         anIntArray9436 = null;
         if (i != 0) aClass293Array9432 = null;
@@ -111,11 +111,11 @@ final class LoggedOutDefinition
     final int[][] getColourOutput(int i, int i_7_) {
         anInt9434++;
         int[][] is = this.imageCacheStore.getPixels(-111, i);
-        if (i_7_ != -1564599039) method3140(72, -13);
+        if (i_7_ != -1564599039) decodedOperation3140(72, -13);
         if (this.imageCacheStore.cacheMiss) {
-            int[] is_8_ = this.method3048(-1 + i & DisplayModeManagerContainer356.anInt6325, 633706337, 0);
-            int[] is_9_ = this.method3048(i, i_7_ + -2096661920, 0);
-            int[] is_10_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & 1 + i, 633706337, 0);
+            int[] is_8_ = this.decodedOperation3048(-1 + i & DisplayModeManagerContainer356.anInt6325, 633706337, 0);
+            int[] is_9_ = this.decodedOperation3048(i, i_7_ + -2096661920, 0);
+            int[] is_10_ = this.decodedOperation3048(DisplayModeManagerContainer356.anInt6325 & 1 + i, 633706337, 0);
             int[] is_11_ = is[0];
             int[] is_12_ = is[1];
             int[] is_13_ = is[2];

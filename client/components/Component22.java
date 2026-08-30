@@ -24,7 +24,7 @@ final class Component22
         throw new IllegalStateException();
     }
 
-    static final int method1056(int i, int i_0_, char c) {
+    static final int decodedOperation1056(int i, int i_0_, char c) {
         if (i_0_ != 30316) return 27;
         anInt1740++;
         int i_1_ = c << 4;
@@ -35,9 +35,9 @@ final class Component22
         return i_1_;
     }
 
-    public static void method1057(boolean bool) {
+    public static void decodedOperation1057(boolean bool) {
         aClass45_1743 = null;
         aClass105Array1744 = null;
-        if (bool != true) method1056(110, -57, '\uffd1');
+        if (bool != true) decodedOperation1056(110, -57, '\uffd1');
     }
 }

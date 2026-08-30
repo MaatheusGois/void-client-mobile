@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class258` (JODE-obfuscated).
- * Abstract OpenGL texture base. implements Interface9; wraps the GL toolkit (aHa_Sub2_4851) and defines texture lifecycle (method1950/1951/1954/1956). Parent of GlTexture and other GL texture impls.
+ * Abstract OpenGL texture base. implements Interface9; wraps the GL toolkit (aHa_Sub2_4851) and defines texture lifecycle (decodedOperation1950/1951/1954/1956). Parent of GlTexture and other GL texture impls.
  */
 
 import jaggl.OpenGL;
@@ -28,11 +28,11 @@ abstract class AbstractGlTexture implements Interface9 {
     static int anInt4862;
     static int anInt4863;
 
-    final boolean method1950(int i) {
+    final boolean decodedOperation1950(int i) {
         anInt4852++;
         int i_0_ = 22 / ((i - -31) / 50);
         if (this.aHa_Sub2_4851.aBoolean7820) {
-            int i_1_ = method1951(-120);
+            int i_1_ = decodedOperation1951(-120);
             this.aHa_Sub2_4851.bindTexture((byte) -102, this);
             OpenGL.glGenerateMipmapEXT(this.anInt4849);
             aBoolean4860 = true;
@@ -43,7 +43,7 @@ abstract class AbstractGlTexture implements Interface9 {
         return false;
     }
 
-    private final int method1951(int i) {
+    private final int decodedOperation1951(int i) {
         anInt4861++;
         if (i >= -96) anInt4847 = -92;
         int i_2_ = (this.aHa_Sub2_4851.createSurface(this.anInt4858, 2) * anInt4847);
@@ -54,13 +54,13 @@ abstract class AbstractGlTexture implements Interface9 {
     final void method1952(int i) {
         anInt4863++;
         if (this.anInt4859 > 0) {
-            this.aHa_Sub2_4851.method3737((this.anInt4859), (byte) 121, method1951(i + 19838));
+            this.aHa_Sub2_4851.decodedOperation3737((this.anInt4859), (byte) 121, decodedOperation1951(i + 19838));
             this.anInt4859 = 0;
         }
         if (i != -19948) this.anInt4859 = -40;
     }
 
-    final int method1953(int i) {
+    final int decodedOperation1953(int i) {
         anInt4853++;
         if (i < 29) method1956(true);
         return this.anInt4859;
@@ -70,13 +70,13 @@ abstract class AbstractGlTexture implements Interface9 {
         anInt4854++;
         if (i_3_ < 17) aBoolean4856 = true;
         this.aHa_Sub2_4851.anInt7748 -= i;
-        this.aHa_Sub2_4851.anInt7748 += method1951(-106);
+        this.aHa_Sub2_4851.anInt7748 += decodedOperation1951(-106);
     }
 
-    final void method1955(boolean bool, byte i) {
-        if (i != -123) method1953(50);
+    final void decodedOperation1955(boolean bool, byte i) {
+        if (i != -123) decodedOperation1953(50);
         if (aBoolean4860 == !bool) {
-            int i_4_ = method1951(-119);
+            int i_4_ = decodedOperation1951(-119);
             aBoolean4860 = true;
             method1956(true);
             method1954(i_4_, 115);
@@ -97,7 +97,7 @@ abstract class AbstractGlTexture implements Interface9 {
         }
     }
 
-    final void method1957(int i, boolean bool) {
+    final void decodedOperation1957(int i, boolean bool) {
         if (!aBoolean4856 == bool) {
             aBoolean4856 = bool;
             method1956(true);

@@ -14,9 +14,9 @@ final class Component84
     long aLong1510;
     static int anInt1511;
 
-    static final void method849(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+    static final void decodedOperation849(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         anInt1511++;
-        if (i_4_ <= 80) method851(-7);
+        if (i_4_ <= 80) decodedOperation851(-7);
         int i_6_ = i_0_ + i;
         int i_7_ = -i + i_3_;
         for (int i_8_ = i_0_; i_8_ < i_6_; i_8_++)
@@ -34,11 +34,11 @@ final class Component84
 
     protected final void finalize() throws Throwable {
         anInt1509++;
-        aClass377_1506.method3966(this.aLong1510, 34192);
+        aClass377_1506.decodedOperation3966(this.aLong1510, 34192);
         super.finalize();
     }
 
-    static final boolean method850(Component327 class318_sub1_sub3, boolean bool) {
+    static final boolean decodedOperation850(Component327 class318_sub1_sub3, boolean bool) {
         boolean bool_13_ = ShaderSub1.aSArray5191 == Component9.aSArray4142;
         int i = 0;
         short i_14_ = 0;
@@ -48,9 +48,9 @@ final class Component84
         short i_16_ = 0;
         for (int i_17_ = class318_sub1_sub3.aShort8743; i_17_ <= class318_sub1_sub3.aShort8751; i_17_++) {
             for (int i_18_ = class318_sub1_sub3.aShort8750; i_18_ <= class318_sub1_sub3.aShort8747; i_18_++) {
-                Component186 class357 = NodeSub46.method3321(class318_sub1_sub3.plane, i_17_, i_18_);
+                Component186 class357 = NodeSub46.decodedOperation3321(class318_sub1_sub3.plane, i_17_, i_18_);
                 if (class357 != null) {
-                    Component3 class148 = Component239.method3620(class318_sub1_sub3, 118);
+                    Component3 class148 = Component239.decodedOperation3620(class318_sub1_sub3, 118);
                     Component3 class148_19_ = class357.aClass148_4396;
                     if (class148_19_ == null) class357.aClass148_4396 = class148;
                     else {
@@ -100,7 +100,7 @@ final class Component84
         return true;
     }
 
-    public static void method851(int i) {
+    public static void decodedOperation851(int i) {
         if (i == 1) anIntArray1508 = null;
     }
 

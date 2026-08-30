@@ -24,15 +24,15 @@ final class Component335
     static int anInt2035 = 0;
     static int anInt2036;
 
-    public static void method1195(byte i) {
-        if (i < 73) method1195((byte) 61);
+    public static void decodedOperation1195(byte i) {
+        if (i < 73) decodedOperation1195((byte) 61);
         aClass357ArrayArrayArray2029 = null;
         aClass338Array2034 = null;
     }
 
     Component335(int i, int i_0_, String string, String string_1_, String string_2_, String string_3_, int i_4_, String string_5_) {
         try {
-            this.anInt2031 = Component327.method2408((byte) 53);
+            this.anInt2031 = Component327.decodedOperation2408((byte) 53);
             this.aString2028 = string_5_;
             this.anInt2032 = i;
             this.aString2033 = string_1_;
@@ -47,9 +47,9 @@ final class Component335
         }
     }
 
-    final void method1196(int i, int i_6_, String string, String string_7_, String string_8_, int i_9_, int i_10_, String string_11_, String string_12_) {
+    final void decodedOperation1196(int i, int i_6_, String string, String string_7_, String string_8_, int i_9_, int i_10_, String string_11_, String string_12_) {
         try {
-            this.anInt2031 = Component327.method2408((byte) -91);
+            this.anInt2031 = Component327.decodedOperation2408((byte) -91);
             anInt2036++;
             this.aString2033 = string_7_;
             this.aString2024 = string_11_;

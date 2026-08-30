@@ -38,7 +38,7 @@ final class Component171
     }
 
     public final void method44(int i, GraphicsToolkit var_ha) {
-        this.aClass235_10115.method1667((byte) 116, var_ha);
+        this.aClass235_10115.decodedOperation1667((byte) 116, var_ha);
         if (i != 836) method2379(42);
         anInt10099++;
     }
@@ -50,24 +50,24 @@ final class Component171
         if (class64 != null) {
             int i_1_ = this.x >> 9;
             int i_2_ = this.y >> 9;
-            DisplayModeManagerContainer204 class101 = var_ha.method3705();
-            class101.method894(this.x, this.anInt6382, this.y);
-            this.aClass235_10115.method1670(i_1_, class101, i_2_, var_ha, i_1_, class64, false, (byte) -73, i_2_);
+            DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+            class101.decodedOperation894(this.x, this.anInt6382, this.y);
+            this.aClass235_10115.decodedOperation1670(i_1_, class101, i_2_, var_ha, i_1_, class64, false, (byte) -73, i_2_);
         }
     }
 
     final int method2394(boolean bool) {
         if (bool != true) method2381(null, -82);
         anInt10107++;
-        return this.aClass235_10115.method1663(109);
+        return this.aClass235_10115.decodedOperation1663(109);
     }
 
     final boolean method2391(GraphicsToolkit var_ha, int i, int i_3_, int i_4_) {
         anInt10101++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10115.method1668(false, false, -127, 131072, var_ha);
         if (class64 == null) return false;
-        DisplayModeManagerContainer204 class101 = var_ha.method3705();
-        class101.method894(this.x, this.anInt6382, this.y);
+        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+        class101.decodedOperation894(this.x, this.anInt6382, this.y);
         if (i_4_ != 0) return true;
         if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_3_, i, class101, false, 0, Component72.anInt1906);
         return class64.isInFrustumExtended(i_3_, i, class101, false, 0);
@@ -80,7 +80,7 @@ final class Component171
     }
 
     Component171(GraphicsToolkit var_ha, Component44 class51, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_) {
-        super(i_6_, i_7_, i_8_, i, i_5_, Component181.method868(i_9_, i_10_, false));
+        super(i_6_, i_7_, i_8_, i, i_5_, Component181.decodedOperation868(i_9_, i_10_, false));
         try {
             this.aClass235_10115 = new Component366(var_ha, class51, i_9_, i_10_, this.plane, i_5_, this, bool, i_11_);
             aBoolean10114 = class51.anInt874 != 0 && !bool;
@@ -92,16 +92,16 @@ final class Component171
     final int method2379(int i) {
         anInt10097++;
         if (i != -25675) aBoolean10114 = false;
-        return this.aClass235_10115.method1664(-71);
+        return this.aClass235_10115.decodedOperation1664(-71);
     }
 
-    public final boolean method38(int i) {
+    public final boolean decodedOperation38(int i) {
         anInt10117++;
         if (i != -18443) aBoolean10095 = true;
-        return this.aClass235_10115.method1665(2);
+        return this.aClass235_10115.decodedOperation1665(2);
     }
 
-    public final int method42(int i) {
+    public final int decodedOperation42(int i) {
         if (i > -62) aClass30_10116 = null;
         anInt10098++;
         return (this.aClass235_10115.anInt3063);
@@ -117,22 +117,22 @@ final class Component171
         anInt10111++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10115.method1668(false, true, i ^ ~0x7f, 2048, var_ha);
         if (class64 == null) return null;
-        DisplayModeManagerContainer204 class101 = var_ha.method3705();
-        class101.method894(this.x, this.anInt6382, this.y);
-        RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10114, false);
+        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+        class101.decodedOperation894(this.x, this.anInt6382, this.y);
+        RenderableSub4 class318_sub4 = OutputStream_Sub2.decodedOperation136(i, aBoolean10114, false);
         int i_12_ = this.x >> 9;
         int i_13_ = this.y >> 9;
-        this.aClass235_10115.method1670(i_12_, class101, i_13_, var_ha, i_12_, class64, true, (byte) -73, i_13_);
+        this.aClass235_10115.decodedOperation1670(i_12_, class101, i_13_, var_ha, i_12_, class64, true, (byte) -73, i_13_);
         if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
-        else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
+        else class64.decodedOperation608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if ((this.aClass235_10115.aClass318_Sub10_3081) != null) {
-            Component122 class98 = this.aClass235_10115.aClass318_Sub10_3081.method2525();
+            Component122 class98 = this.aClass235_10115.aClass318_Sub10_3081.decodedOperation2525();
             if (DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModelEx(class98, Component72.anInt1906);
             else var_ha.renderModel(class98);
         }
         aBoolean10095 = class64.F() || (this.aClass235_10115.aClass318_Sub10_3081) != null;
-        if (aClass30_10116 != null) ItemDefinitionProvider.method1935(this.y, this.anInt6382, aClass30_10116, class64, false, this.x);
-        else aClass30_10116 = (OggUrlStream.method2967(this.x, class64, this.y, this.anInt6382, 2));
+        if (aClass30_10116 != null) ItemDefinitionProvider.decodedOperation1935(this.y, this.anInt6382, aClass30_10116, class64, false, this.x);
+        else aClass30_10116 = (OggUrlStream.decodedOperation2967(this.x, class64, this.y, this.anInt6382, 2));
         return class318_sub4;
     }
 
@@ -153,7 +153,7 @@ final class Component171
         anInt10102++;
     }
 
-    final boolean method2388(int i) {
+    final boolean decodedOperation2388(int i) {
         if (i >= -65) return true;
         anInt10106++;
         return false;

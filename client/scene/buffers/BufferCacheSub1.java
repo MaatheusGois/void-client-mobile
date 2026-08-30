@@ -44,12 +44,12 @@ final class BufferCacheSub1
         if (is != null && is.length != 0) {
             for (int i_12_ = 0; i_12_ < is_4_.length; i_12_++) {
                 if (is_4_[i_12_] == -1) is_4_[i_12_] = 0;
-                else is_4_[i_12_] = ((Component380.anIntArray4983[Component361.method303(is_4_[i_12_], 30) & 0xffff]) << 8) | 0xff;
+                else is_4_[i_12_] = ((Component380.anIntArray4983[Component361.decodedOperation303(is_4_[i_12_], 30) & 0xffff]) << 8) | 0xff;
             }
             if (is_5_ != null) {
                 for (int i_13_ = 0; i_13_ < is_5_.length; i_13_++) {
                     if (is_5_[i_13_] == -1) is_5_[i_13_] = 0;
-                    else is_5_[i_13_] = ((Component380.anIntArray4983[Component361.method303(is_5_[i_13_], 30) & 0xffff]) << 8) | 0xff;
+                    else is_5_[i_13_] = ((Component380.anIntArray4983[Component361.decodedOperation303(is_5_[i_13_], 30) & 0xffff]) << 8) | 0xff;
                 }
             }
             if (bool_11_) {
@@ -98,8 +98,8 @@ final class BufferCacheSub1
                             }
                         }
                         int i_25_ = -16777216;
-                        if (is_6_[i_14_] != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(is_6_[i_14_], -6662).aByte213)) i_25_ = -1694498816;
-                        class198.anIntArray2623[i_14_] = (i_25_ | Component10.method2250(method3991((is_4_[i_14_] >> 8), i_18_), 118, i_23_, i_8_));
+                        if (is_6_[i_14_] != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(is_6_[i_14_], -6662).aByte213)) i_25_ = -1694498816;
+                        class198.anIntArray2623[i_14_] = (i_25_ | Component10.decodedOperation2250(decodedOperation3991((is_4_[i_14_] >> 8), i_18_), 118, i_23_, i_8_));
                         if (is_5_ != null) class198.aByteArray2617[i_14_] = (byte) i_18_;
                     }
                     class198.aShortArray2616[i_14_] = (short) is_6_[i_14_];
@@ -185,28 +185,28 @@ final class BufferCacheSub1
                             if (i_38_ < 0) i_38_ = 0;
                             else if (i_38_ > 255) i_38_ = 255;
                         } else i_38_ = 0;
-                        class266.anInt3389 = (Component10.method2250(method3991(is_4_[i_29_] >> 8, (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_])), 88, i_38_, i_8_));
+                        class266.anInt3389 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_29_] >> 8, (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_])), 88, i_38_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3389 |= (255 - (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) << 25);
                         if (is_3_ != null && i_9_ != 0) {
                             i_38_ = 255 * is_3_[i_30_] / i_9_;
                             if (i_38_ < 0) i_38_ = 0;
                             else if (i_38_ > 255) i_38_ = 255;
                         } else i_38_ = 0;
-                        class266.anInt3387 = (Component10.method2250(method3991(is_4_[i_30_] >> 8, (aByteArrayArray8220[i + 1][i_0_] - (aByteArrayArray8232[i + 1][i_0_]))), 97, i_38_, i_8_));
+                        class266.anInt3387 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_30_] >> 8, (aByteArrayArray8220[i + 1][i_0_] - (aByteArrayArray8232[i + 1][i_0_]))), 97, i_38_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3387 |= (255 - (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) << 25);
                         if (is_3_ != null && i_9_ != 0) {
                             i_38_ = 255 * is_3_[i_31_] / i_9_;
                             if (i_38_ < 0) i_38_ = 0;
                             else if (i_38_ > 255) i_38_ = 255;
                         } else i_38_ = 0;
-                        class266.anInt3380 = (Component10.method2250(method3991(is_4_[i_31_] >> 8, ((aByteArrayArray8220[i + 1][i_0_ + 1]) - (aByteArrayArray8232[i + 1][i_0_ + 1]))), 103, i_38_, i_8_));
+                        class266.anInt3380 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_31_] >> 8, ((aByteArrayArray8220[i + 1][i_0_ + 1]) - (aByteArrayArray8232[i + 1][i_0_ + 1]))), 103, i_38_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3380 |= 255 - (aByteArrayArray8220[i + 1][i_0_ + 1] - (aByteArrayArray8232[i + 1][i_0_ + 1])) << 25;
                         if (is_3_ != null && i_9_ != 0) {
                             i_38_ = 255 * is_3_[i_32_] / i_9_;
                             if (i_38_ < 0) i_38_ = 0;
                             else if (i_38_ > 255) i_38_ = 255;
                         } else i_38_ = 0;
-                        class266.anInt3381 = (Component10.method2250(method3991(is_4_[i_32_] >> 8, (aByteArrayArray8220[i][i_0_ + 1] - (aByteArrayArray8232[i][i_0_ + 1]))), 42, i_38_, i_8_));
+                        class266.anInt3381 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_32_] >> 8, (aByteArrayArray8220[i][i_0_ + 1] - (aByteArrayArray8232[i][i_0_ + 1]))), 42, i_38_, i_8_));
                         class266.aShort3379 = (short) i_37_;
                     } else {
                         int i_39_;
@@ -215,28 +215,28 @@ final class BufferCacheSub1
                             if (i_39_ < 0) i_39_ = 0;
                             else if (i_39_ > 255) i_39_ = 255;
                         } else i_39_ = 0;
-                        class266.anInt3389 = (Component10.method2250(method3991(is_4_[i_29_] >> 8, (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_])), 68, i_39_, i_8_));
+                        class266.anInt3389 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_29_] >> 8, (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_])), 68, i_39_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3389 |= (255 - (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) << 25);
                         if (is_3_ != null && i_9_ != 0) {
                             i_39_ = 255 * is_3_[i_30_] / i_9_;
                             if (i_39_ < 0) i_39_ = 0;
                             else if (i_39_ > 255) i_39_ = 255;
                         } else i_39_ = 0;
-                        class266.anInt3387 = (Component10.method2250(method3991(is_4_[i_30_] >> 8, (aByteArrayArray8220[i + 1][i_0_] - (aByteArrayArray8232[i + 1][i_0_]))), 112, i_39_, i_8_));
+                        class266.anInt3387 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_30_] >> 8, (aByteArrayArray8220[i + 1][i_0_] - (aByteArrayArray8232[i + 1][i_0_]))), 112, i_39_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3387 |= (255 - (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) << 25);
                         if (is_3_ != null && i_9_ != 0) {
                             i_39_ = 255 * is_3_[i_31_] / i_9_;
                             if (i_39_ < 0) i_39_ = 0;
                             else if (i_39_ > 255) i_39_ = 255;
                         } else i_39_ = 0;
-                        class266.anInt3380 = (Component10.method2250(method3991(is_4_[i_31_] >> 8, ((aByteArrayArray8220[i + 1][i_0_ + 1]) - (aByteArrayArray8232[i + 1][i_0_ + 1]))), 62, i_39_, i_8_));
+                        class266.anInt3380 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_31_] >> 8, ((aByteArrayArray8220[i + 1][i_0_ + 1]) - (aByteArrayArray8232[i + 1][i_0_ + 1]))), 62, i_39_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3380 |= 255 - (aByteArrayArray8220[i + 1][i_0_ + 1] - (aByteArrayArray8232[i + 1][i_0_ + 1])) << 25;
                         if (is_3_ != null && i_9_ != 0) {
                             i_39_ = 255 * is_3_[i_32_] / i_9_;
                             if (i_39_ < 0) i_39_ = 0;
                             else if (i_39_ > 255) i_39_ = 255;
                         } else i_39_ = 0;
-                        class266.anInt3381 = (Component10.method2250(method3991(is_4_[i_32_] >> 8, (aByteArrayArray8220[i][i_0_ + 1] - (aByteArrayArray8232[i][i_0_ + 1]))), 84, i_39_, i_8_));
+                        class266.anInt3381 = (Component10.decodedOperation2250(decodedOperation3991(is_4_[i_32_] >> 8, (aByteArrayArray8220[i][i_0_ + 1] - (aByteArrayArray8232[i][i_0_ + 1]))), 84, i_39_, i_8_));
                         if (class266.anInt3388 != 0) class266.anInt3381 |= (255 - (aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]) << 25);
                         class266.aShort3379 = (short) -1;
                     }
@@ -289,7 +289,7 @@ final class BufferCacheSub1
                                     else if (i_49_ > 255) i_49_ = 255;
                                 }
                             }
-                            class145.anIntArray2001[i_40_] = Component10.method2250(method3991((is_4_[i_40_] >> 8), i_44_), 40, i_49_, i_8_);
+                            class145.anIntArray2001[i_40_] = Component10.decodedOperation2250(decodedOperation3991((is_4_[i_40_] >> 8), i_44_), 40, i_49_, i_8_);
                             if (is_5_ != null) class145.anIntArray2001[i_40_] |= i_44_ << 25;
                         }
                     }
@@ -325,11 +325,11 @@ final class BufferCacheSub1
                             } else {
                                 if (bool_57_) {
                                     i_59_ = is_6_[i_54_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_54_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_54_] = (Component380.anIntArray4983[(Component361.decodedOperation303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                     i_59_ = is_6_[i_55_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_55_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_55_] = (Component380.anIntArray4983[(Component361.decodedOperation303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                     i_59_ = is_6_[i_56_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_56_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_56_] = (Component380.anIntArray4983[(Component361.decodedOperation303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                 }
                                 class145.aShortArray2008[i_53_] = (short) -1;
                             }
@@ -395,7 +395,7 @@ final class BufferCacheSub1
                     Model class12 = aHa_Sub1_8217.modelProvider.getModel(i_90_, -6662);
                     if (!class12.aBoolean209) {
                         bool_87_ = true;
-                        if (method3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class236.aByte3100 |= 0x4;
+                        if (decodedOperation3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class236.aByte3100 |= 0x4;
                     }
                 }
             }
@@ -410,10 +410,10 @@ final class BufferCacheSub1
             }
             for (int i_91_ = 0; i_91_ < i_79_; i_91_++) {
                 if (is_67_[i_91_] >= 0 || is_68_ != null && is_68_[i_91_] >= 0) {
-                    if (is_67_[i_91_] >= 0) class236.anIntArray3093[class236.aShort3099] = Component361.method303(is_67_[i_91_], 30);
+                    if (is_67_[i_91_] >= 0) class236.anIntArray3093[class236.aShort3099] = Component361.decodedOperation303(is_67_[i_91_], 30);
                     else class236.anIntArray3093[class236.aShort3099] = -1;
                     if (is_68_ != null) {
-                        if (is_68_[i_91_] != -1) class236.anIntArray3092[class236.aShort3099] = Component361.method303(is_68_[i_91_], 30);
+                        if (is_68_[i_91_] != -1) class236.anIntArray3092[class236.aShort3099] = Component361.decodedOperation303(is_68_[i_91_], 30);
                         else class236.anIntArray3092[class236.aShort3099] = -1;
                     }
                     class236.aShortArray3091[class236.aShort3099] = (short) is_64_[i_91_];
@@ -434,7 +434,7 @@ final class BufferCacheSub1
             int i_92_ = is_67_[0];
             int i_93_ = is_69_[0];
             if (is_68_ != null) {
-                class102.anInt1600 = ReferenceTable.clampHslLightness(0, (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]), Component361.method303(is_68_[0], 30));
+                class102.anInt1600 = ReferenceTable.clampHslLightness(0, (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]), Component361.decodedOperation303(is_68_[0], 30));
                 if (i_92_ == -1) class102.aByte1606 |= 0x2;
             }
             if ((this.heights[i][i_60_] == this.heights[i + 1][i_60_]) && (this.heights[i][i_60_] == this.heights[i + 1][i_60_ + 1]) && (this.heights[i][i_60_] == this.heights[i][i_60_ + 1])) class102.aByte1606 |= 0x1;
@@ -446,9 +446,9 @@ final class BufferCacheSub1
                 class102.aShort1602 = (short) (aByteArrayArray8220[i + 1][i_60_ + 1] - aByteArrayArray8232[i + 1][i_60_ + 1]);
                 class102.aShort1604 = (short) (aByteArrayArray8220[i][i_60_ + 1] - aByteArrayArray8232[i][i_60_ + 1]);
                 class102.aShort1605 = (short) i_93_;
-                if (method3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class102.aByte1606 |= 0x4;
+                if (decodedOperation3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class102.aByte1606 |= 0x4;
             } else {
-                short i_94_ = Component361.method303(i_92_, 30);
+                short i_94_ = Component361.decodedOperation303(i_92_, 30);
                 class102.aShort1601 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i][i_60_]) - (aByteArrayArray8232[i][i_60_])), i_94_);
                 class102.aShort1603 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i + 1][i_60_]) - (aByteArrayArray8232[i + 1][i_60_])), i_94_);
                 class102.aShort1602 = (short) ReferenceTable.clampHslLightness(0, ((aByteArrayArray8220[i + 1][i_60_ + 1]) - (aByteArrayArray8232[i + 1][i_60_ + 1])), i_94_);
@@ -489,7 +489,7 @@ final class BufferCacheSub1
         if (aByteArrayArray8232[i][i_103_] < i_104_) aByteArrayArray8232[i][i_103_] = (byte) i_104_;
     }
 
-    private final void method3990(int i, int i_105_, boolean bool, Component385 class167, Component8 class109, int[] is, int[] is_106_, int[] is_107_, int[] is_108_, int i_109_) {
+    private final void decodedOperation3990(int i, int i_105_, boolean bool, Component385 class167, Component8 class109, int[] is, int[] is_106_, int[] is_107_, int[] is_108_, int i_109_) {
         Component157 class266 = aClass266ArrayArray8230[i][i_105_];
         if (class266 == null) {
             Component70 class145 = aClass145ArrayArray8225[i][i_105_];
@@ -574,10 +574,10 @@ final class BufferCacheSub1
                             if (i_243_ < 765) {
                                 if (i_243_ > 0) {
                                     if (((class145.anIntArray2001[i_234_]) & 0xffffff) != 0)
-                                        class109.method1027((float) i_240_, (float) i_241_, (float) i_242_, (float) i_237_, (float) i_238_, (float) i_239_, (float) is_107_[i_234_], (float) is_107_[i_235_], (float) is_107_[i_236_], (Component10.method2250((class145.anIntArray2001[i_234_]), 117, is_108_[i_234_], (class167.anInt2192))), (Component10.method2250((class145.anIntArray2001[i_235_]), 60, is_108_[i_235_], (class167.anInt2192))), (Component10.method2250((class145.anIntArray2001[i_236_]), 95, is_108_[i_236_], (class167.anInt2192))));
+                                        class109.method1027((float) i_240_, (float) i_241_, (float) i_242_, (float) i_237_, (float) i_238_, (float) i_239_, (float) is_107_[i_234_], (float) is_107_[i_235_], (float) is_107_[i_236_], (Component10.decodedOperation2250((class145.anIntArray2001[i_234_]), 117, is_108_[i_234_], (class167.anInt2192))), (Component10.decodedOperation2250((class145.anIntArray2001[i_235_]), 60, is_108_[i_235_], (class167.anInt2192))), (Component10.decodedOperation2250((class145.anIntArray2001[i_236_]), 95, is_108_[i_236_], (class167.anInt2192))));
                                 } else if (((class145.anIntArray2001[i_234_]) & 0xffffff) != 0)
                                     class109.method1027((float) i_240_, (float) i_241_, (float) i_242_, (float) i_237_, (float) i_238_, (float) i_239_, (float) is_107_[i_234_], (float) is_107_[i_235_], (float) is_107_[i_236_], (class145.anIntArray2001[i_234_]), (class145.anIntArray2001[i_235_]), (class145.anIntArray2001[i_236_]));
-                            } else class109.method1018((float) i_240_, (float) i_241_, (float) i_242_, (float) i_237_, (float) i_238_, (float) i_239_, (float) is_107_[i_234_], (float) is_107_[i_235_], (float) is_107_[i_236_], (class167.anInt2192));
+                            } else class109.decodedOperation1018((float) i_240_, (float) i_241_, (float) i_242_, (float) i_237_, (float) i_238_, (float) i_239_, (float) is_107_[i_234_], (float) is_107_[i_235_], (float) is_107_[i_236_], (class167.anInt2192));
                         }
                     }
                 } else if (anInt8228 == -1) {
@@ -599,23 +599,23 @@ final class BufferCacheSub1
                                 if (i_215_ > 0) {
                                     if (i_216_ != -1) {
                                         int i_217_ = -16777216;
-                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) i_217_ = -1694498816;
-                                        class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_208_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_208_]) / (float) (this.tileSize)), (i_217_ | ((class145.anIntArray2001[i_206_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_207_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_208_]) & 0xffffff)), (class167.anInt2192), is_108_[i_206_], is_108_[i_207_], is_108_[i_208_], i_216_);
+                                        if (i_216_ != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) i_217_ = -1694498816;
+                                        class109.decodedOperation1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_208_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_208_]) / (float) (this.tileSize)), (i_217_ | ((class145.anIntArray2001[i_206_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_207_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_208_]) & 0xffffff)), (class167.anInt2192), is_108_[i_206_], is_108_[i_207_], is_108_[i_208_], i_216_);
                                     } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
-                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                        if (i_216_ != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (BuildInfo.blendArgb((class145.anIntArray2001[i_206_]), (is_108_[i_206_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.blendArgb((class145.anIntArray2001[i_207_]), (is_108_[i_207_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.blendArgb((class145.anIntArray2001[i_208_]), (is_108_[i_208_] << 24 | (class167.anInt2192)), 255)));
                                         class109.anInt1674 = 0;
                                     }
                                 } else if (i_216_ != -1) {
                                     int i_218_ = -16777216;
-                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) i_218_ = -1694498816;
-                                    class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_208_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_208_]) / (float) this.tileSize), i_218_ | (class145.anIntArray2001[i_206_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_207_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_208_]) & 0xffffff, 0, 0, 0, 0, i_216_);
+                                    if (i_216_ != -1 && (decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) i_218_ = -1694498816;
+                                    class109.decodedOperation1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_208_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_208_]) / (float) this.tileSize), i_218_ | (class145.anIntArray2001[i_206_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_207_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_208_]) & 0xffffff, 0, 0, 0, 0, i_216_);
                                 } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
-                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) class109.anInt1674 = -1694498816;
+                                    if (i_216_ != -1 && (decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (class145.anIntArray2001[i_206_]), (class145.anIntArray2001[i_207_]), (class145.anIntArray2001[i_208_]));
                                     class109.anInt1674 = 0;
                                 }
-                            } else class109.method1018((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], class167.anInt2192);
+                            } else class109.decodedOperation1018((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], class167.anInt2192);
                         }
                     }
                 } else {
@@ -634,28 +634,28 @@ final class BufferCacheSub1
                             class109.aBoolean1671 = (i_223_ < 0 || i_224_ < 0 || i_225_ < 0 || (i_223_ > class109.anInt1679) || (i_224_ > class109.anInt1679) || (i_225_ > class109.anInt1679));
                             short i_230_ = (class145.aShortArray2008[i_219_]);
                             if (i_229_ < 765) {
-                                if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                if (i_230_ != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                 if (i_229_ > 0) {
                                     if (i_230_ != -1) {
                                         int i_231_ = -16777216;
-                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) i_231_ = -1694498816;
-                                        class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_222_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_222_]) / (float) (this.tileSize)), (i_231_ | ((class145.anIntArray2001[i_220_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_221_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_222_]) & 0xffffff)), (class167.anInt2192), is_108_[i_220_], is_108_[i_221_], is_108_[i_222_], i_230_);
+                                        if (i_230_ != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) i_231_ = -1694498816;
+                                        class109.decodedOperation1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_222_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_222_]) / (float) (this.tileSize)), (i_231_ | ((class145.anIntArray2001[i_220_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_221_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_222_]) & 0xffffff)), (class167.anInt2192), is_108_[i_220_], is_108_[i_221_], is_108_[i_222_], i_230_);
                                     } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
-                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                        if (i_230_ != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (BuildInfo.blendArgb((class145.anIntArray2001[i_220_]), (is_108_[i_220_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.blendArgb((class145.anIntArray2001[i_221_]), (is_108_[i_221_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.blendArgb((class145.anIntArray2001[i_222_]), (is_108_[i_222_] << 24 | (class167.anInt2192)), 255)));
                                         class109.anInt1674 = 0;
                                     }
                                 } else if (i_230_ != -1) {
                                     int i_232_ = -16777216;
-                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) i_232_ = -1694498816;
-                                    class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_222_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_222_]) / (float) this.tileSize), i_232_ | (class145.anIntArray2001[i_220_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_221_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_222_]) & 0xffffff, 0, 0, 0, 0, i_230_);
+                                    if (i_230_ != -1 && (decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) i_232_ = -1694498816;
+                                    class109.decodedOperation1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_222_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_222_]) / (float) this.tileSize), i_232_ | (class145.anIntArray2001[i_220_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_221_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_222_]) & 0xffffff, 0, 0, 0, 0, i_230_);
                                 } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
-                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) class109.anInt1674 = -1694498816;
+                                    if (i_230_ != -1 && (decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (class145.anIntArray2001[i_220_]), (class145.anIntArray2001[i_221_]), (class145.anIntArray2001[i_222_]));
                                     class109.anInt1674 = 0;
                                 }
                                 class109.anInt1674 = 0;
-                            } else class109.method1018((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], class167.anInt2192);
+                            } else class109.decodedOperation1018((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], class167.anInt2192);
                         }
                     }
                 }
@@ -870,7 +870,7 @@ final class BufferCacheSub1
                     i_128_ = (class109.anInt1668 + (int) (f_149_ * (float) (aHa_Sub1_8217.anInt7497) / (float) anInt8228));
                 }
             }
-            boolean bool_176_ = (class266.aShort3379 != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(class266.aShort3379, -6662).aByte213));
+            boolean bool_176_ = (class266.aShort3379 != -1 && decodedOperation3997(aHa_Sub1_8217.modelProvider.getModel(class266.aShort3379, -6662).aByte213));
             if (anInt8228 == -1) {
                 int i_177_ = i_115_ + i_116_ + i_117_;
                 if (((i_125_ - i_127_) * (i_124_ - i_128_) - (i_126_ - i_128_) * (i_123_ - i_127_)) > 0) {
@@ -880,7 +880,7 @@ final class BufferCacheSub1
                             if (class266.aShort3379 >= 0) {
                                 int i_178_ = -16777216;
                                 if (bool_176_) i_178_ = -1694498816;
-                                class109.method1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_178_ | (class266.anInt3380) & 0xffffff, i_178_ | (class266.anInt3381) & 0xffffff, i_178_ | (class266.anInt3387) & 0xffffff, class167.anInt2192, i_116_, i_117_, i_115_, class266.aShort3379);
+                                class109.decodedOperation1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_178_ | (class266.anInt3380) & 0xffffff, i_178_ | (class266.anInt3381) & 0xffffff, i_178_ | (class266.anInt3387) & 0xffffff, class167.anInt2192, i_116_, i_117_, i_115_, class266.aShort3379);
                             } else {
                                 if (bool_176_) class109.anInt1674 = 100;
                                 class109.method1027((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (BuildInfo.blendArgb(class266.anInt3380, (i_116_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3381, (i_117_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3387, (i_115_ << 24 | class167.anInt2192), 255)));
@@ -889,13 +889,13 @@ final class BufferCacheSub1
                         } else if (class266.aShort3379 >= 0) {
                             int i_179_ = -16777216;
                             if (bool_176_) i_179_ = -1694498816;
-                            class109.method1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_179_ | (class266.anInt3380 & 0xffffff), i_179_ | (class266.anInt3381 & 0xffffff), i_179_ | (class266.anInt3387 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
+                            class109.decodedOperation1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_179_ | (class266.anInt3380 & 0xffffff), i_179_ | (class266.anInt3381 & 0xffffff), i_179_ | (class266.anInt3387 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
                         } else {
                             if (bool_176_) class109.anInt1674 = 100;
                             class109.method1027((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, class266.anInt3380, class266.anInt3381, class266.anInt3387);
                             class109.anInt1674 = 0;
                         }
-                    } else class109.method1018((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (class167.anInt2192));
+                    } else class109.decodedOperation1018((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (class167.anInt2192));
                 }
                 i_177_ = i_114_ + i_115_ + i_117_;
                 if (((i_121_ - i_123_) * (i_128_ - i_124_) - (i_122_ - i_124_) * (i_127_ - i_123_)) > 0) {
@@ -906,7 +906,7 @@ final class BufferCacheSub1
                             if (class266.aShort3379 >= 0) {
                                 int i_180_ = -16777216;
                                 if (bool_176_) i_180_ = -1694498816;
-                                class109.method1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_180_ | (class266.anInt3389) & 0xffffff, i_180_ | (class266.anInt3387) & 0xffffff, i_180_ | (class266.anInt3381) & 0xffffff, class167.anInt2192, i_114_, i_115_, i_117_, class266.aShort3379);
+                                class109.decodedOperation1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_180_ | (class266.anInt3389) & 0xffffff, i_180_ | (class266.anInt3387) & 0xffffff, i_180_ | (class266.anInt3381) & 0xffffff, class167.anInt2192, i_114_, i_115_, i_117_, class266.aShort3379);
                             } else {
                                 if (bool_176_) class109.anInt1674 = 100;
                                 class109.method1027((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (BuildInfo.blendArgb(class266.anInt3389, (i_114_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3387, (i_115_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3381, (i_117_ << 24 | class167.anInt2192), 255)));
@@ -915,13 +915,13 @@ final class BufferCacheSub1
                         } else if (class266.aShort3379 >= 0) {
                             int i_181_ = -16777216;
                             if (bool_176_) i_181_ = -1694498816;
-                            class109.method1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_181_ | (class266.anInt3389 & 0xffffff), i_181_ | (class266.anInt3387 & 0xffffff), i_181_ | (class266.anInt3381 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
+                            class109.decodedOperation1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_181_ | (class266.anInt3389 & 0xffffff), i_181_ | (class266.anInt3387 & 0xffffff), i_181_ | (class266.anInt3381 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
                         } else {
                             if (bool_176_) class109.anInt1674 = 100;
                             class109.method1027((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, class266.anInt3389, class266.anInt3387, class266.anInt3381);
                             class109.anInt1674 = 0;
                         }
-                    } else class109.method1018((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (class167.anInt2192));
+                    } else class109.decodedOperation1018((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (class167.anInt2192));
                 }
             } else {
                 int i_182_ = i_115_ + i_116_ + i_117_;
@@ -933,7 +933,7 @@ final class BufferCacheSub1
                             if (class266.aShort3379 >= 0) {
                                 int i_183_ = -16777216;
                                 if (bool_176_) i_183_ = -1694498816;
-                                class109.method1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_183_ | (class266.anInt3380) & 0xffffff, i_183_ | (class266.anInt3381) & 0xffffff, i_183_ | (class266.anInt3387) & 0xffffff, class167.anInt2192, i_116_, i_117_, i_115_, class266.aShort3379);
+                                class109.decodedOperation1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_183_ | (class266.anInt3380) & 0xffffff, i_183_ | (class266.anInt3381) & 0xffffff, i_183_ | (class266.anInt3387) & 0xffffff, class167.anInt2192, i_116_, i_117_, i_115_, class266.aShort3379);
                             } else {
                                 if (bool_176_) class109.anInt1674 = 100;
                                 class109.method1027((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (BuildInfo.blendArgb(class266.anInt3380, (i_116_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3381, (i_117_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3387, (i_115_ << 24 | class167.anInt2192), 255)));
@@ -942,13 +942,13 @@ final class BufferCacheSub1
                         } else if (class266.aShort3379 >= 0) {
                             int i_184_ = -16777216;
                             if (bool_176_) i_184_ = -1694498816;
-                            class109.method1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_184_ | (class266.anInt3380 & 0xffffff), i_184_ | (class266.anInt3381 & 0xffffff), i_184_ | (class266.anInt3387 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
+                            class109.decodedOperation1024((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, f_119_, f_120_, f_118_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_184_ | (class266.anInt3380 & 0xffffff), i_184_ | (class266.anInt3381 & 0xffffff), i_184_ | (class266.anInt3387 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
                         } else {
                             if (bool_176_) class109.anInt1674 = 100;
                             class109.method1027((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, class266.anInt3380, class266.anInt3381, class266.anInt3387);
                             class109.anInt1674 = 0;
                         }
-                    } else class109.method1018((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (class167.anInt2192));
+                    } else class109.decodedOperation1018((float) i_126_, (float) i_128_, (float) i_124_, (float) i_125_, (float) i_127_, (float) i_123_, (float) (int) f_119_, (float) (int) f_120_, (float) (int) f_118_, (class167.anInt2192));
                 }
                 i_182_ = i_114_ + i_115_ + i_117_;
                 if (((i_121_ - i_123_) * (i_128_ - i_124_) - (i_122_ - i_124_) * (i_127_ - i_123_)) > 0) {
@@ -959,7 +959,7 @@ final class BufferCacheSub1
                             if (class266.aShort3379 >= 0) {
                                 int i_185_ = -16777216;
                                 if (bool_176_) i_185_ = -1694498816;
-                                class109.method1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_185_ | (class266.anInt3389) & 0xffffff, i_185_ | (class266.anInt3387) & 0xffffff, i_185_ | (class266.anInt3381) & 0xffffff, class167.anInt2192, i_114_, i_115_, i_117_, class266.aShort3379);
+                                class109.decodedOperation1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_185_ | (class266.anInt3389) & 0xffffff, i_185_ | (class266.anInt3387) & 0xffffff, i_185_ | (class266.anInt3381) & 0xffffff, class167.anInt2192, i_114_, i_115_, i_117_, class266.aShort3379);
                             } else {
                                 if (bool_176_) class109.anInt1674 = 100;
                                 class109.method1027((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (BuildInfo.blendArgb(class266.anInt3389, (i_114_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3387, (i_115_ << 24 | class167.anInt2192), 255)), (BuildInfo.blendArgb(class266.anInt3381, (i_117_ << 24 | class167.anInt2192), 255)));
@@ -968,19 +968,19 @@ final class BufferCacheSub1
                         } else if (class266.aShort3379 >= 0) {
                             int i_186_ = -16777216;
                             if (bool_176_) i_186_ = -1694498816;
-                            class109.method1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_186_ | (class266.anInt3389 & 0xffffff), i_186_ | (class266.anInt3387 & 0xffffff), i_186_ | (class266.anInt3381 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
+                            class109.decodedOperation1024((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, f, f_118_, f_120_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_186_ | (class266.anInt3389 & 0xffffff), i_186_ | (class266.anInt3387 & 0xffffff), i_186_ | (class266.anInt3381 & 0xffffff), 0, 0, 0, 0, class266.aShort3379);
                         } else {
                             if (bool_176_) class109.anInt1674 = 100;
                             class109.method1027((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, class266.anInt3389, class266.anInt3387, class266.anInt3381);
                             class109.anInt1674 = 0;
                         }
-                    } else class109.method1018((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (class167.anInt2192));
+                    } else class109.decodedOperation1018((float) i_122_, (float) i_124_, (float) i_128_, (float) i_121_, (float) i_123_, (float) i_127_, (float) (int) f, (float) (int) f_118_, (float) (int) f_120_, (class167.anInt2192));
                 }
             }
         }
     }
 
-    private static final int method3991(int i, int i_244_) {
+    private static final int decodedOperation3991(int i, int i_244_) {
         int i_245_ = (i & 0xff0000) * i_244_ >> 23;
         if (i_245_ < 2) i_245_ = 2;
         else if (i_245_ > 253) i_245_ = 253;
@@ -1020,18 +1020,18 @@ final class BufferCacheSub1
     }
 
     private final void method3992(int i, int i_255_, int i_256_) {
-        Component385 class167 = aHa_Sub1_8217.method3724(Thread.currentThread());
+        Component385 class167 = aHa_Sub1_8217.decodedOperation3724(Thread.currentThread());
         class167.aClass109_2220.anInt1674 = 0;
-        if (aClass266ArrayArray8230 != null) method3990(i, i_255_, class167.aBoolean2195, class167, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
-        else if (aClass102ArrayArray8215 != null) method3994(i, i_255_, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
-        else if (aClass198ArrayArray8219 != null) method3995(i, i_255_, class167.aBoolean2195, class167, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
+        if (aClass266ArrayArray8230 != null) decodedOperation3990(i, i_255_, class167.aBoolean2195, class167, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
+        else if (aClass102ArrayArray8215 != null) decodedOperation3994(i, i_255_, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
+        else if (aClass198ArrayArray8219 != null) decodedOperation3995(i, i_255_, class167.aBoolean2195, class167, class167.aClass109_2220, class167.anIntArray2212, class167.anIntArray2228, class167.anIntArray2217, class167.anIntArray2232, i_256_);
     }
 
     final void Interface4Impl(r var_r, int i, int i_257_, int i_258_, int i_259_, boolean bool) {
         /* empty */
     }
 
-    private final void method3993(int i, int i_260_, int i_261_, int i_262_, int i_263_, int i_264_, int i_265_, boolean[][] bools, Component385 class167, Component8 class109, int[] is, int[] is_266_) {
+    private final void decodedOperation3993(int i, int i_260_, int i_261_, int i_262_, int i_263_, int i_264_, int i_265_, boolean[][] bools, Component385 class167, Component8 class109, int[] is, int[] is_266_) {
         int i_267_ = (i_265_ - i_263_) * i_261_ / 256;
         int i_268_ = i_261_ >> 8;
         boolean bool = class167.aBoolean2202;
@@ -1047,9 +1047,9 @@ final class BufferCacheSub1
                         if (aClass266ArrayArray8230[i_271_][i_272_] != null) {
                             Component157 class266 = aClass266ArrayArray8230[i_271_][i_272_];
                             if (class266.aShort3379 != -1 && (class266.aByte3386 & 0x2) == 0 && class266.anInt3388 == 0) {
-                                int i_273_ = aHa_Sub1_8217.method3722(class266.aShort3379);
-                                class109.method1022((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3380), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_));
-                                class109.method1022((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3389), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_));
+                                int i_273_ = aHa_Sub1_8217.decodedOperation3722(class266.aShort3379);
+                                class109.decodedOperation1022((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3380), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_));
+                                class109.decodedOperation1022((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, (class266.anInt3389), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3387), i_273_), (float) ReferenceTable.clampHslLightness(0, (class266.anInt3381), i_273_));
                             } else if (class266.anInt3388 == 0) {
                                 class109.method1027((float) (i_270_ - i_268_), (float) (i_270_ - i_268_), (float) i_270_, (float) (i_269_ + i_268_), (float) i_269_, (float) (i_269_ + i_268_), 100.0F, 100.0F, 100.0F, class266.anInt3380, class266.anInt3381, class266.anInt3387);
                                 class109.method1027((float) i_270_, (float) i_270_, (float) (i_270_ - i_268_), (float) i_269_, (float) (i_269_ + i_268_), (float) i_269_, 100.0F, 100.0F, 100.0F, class266.anInt3389, class266.anInt3387, class266.anInt3381);
@@ -1078,8 +1078,8 @@ final class BufferCacheSub1
                                     int i_286_ = (class145.anIntArray2011[i_276_]);
                                     class109.method1027((float) i_283_, (float) i_284_, (float) i_285_, (float) i_280_, (float) i_281_, (float) i_282_, 100.0F, 100.0F, 100.0F, BuildInfo.blendArgb(i_286_, (-16777216 - ((class145.anIntArray2001[i_277_]) & ~0xffffff)), 255), BuildInfo.blendArgb(i_286_, (-16777216 - ((class145.anIntArray2001[i_278_]) & ~0xffffff)), 255), BuildInfo.blendArgb(i_286_, (-16777216 - ((class145.anIntArray2001[i_279_]) & ~0xffffff)), 255));
                                 } else if ((class145.aShortArray2008) != null && ((class145.aShortArray2008[i_276_]) != -1)) {
-                                    int i_287_ = (aHa_Sub1_8217.method3722(class145.aShortArray2008[i_276_]));
-                                    class109.method1022((float) i_283_, (float) i_284_, (float) i_285_, (float) i_280_, (float) i_281_, (float) i_282_, 100.0F, 100.0F, 100.0F, (float) i_287_, (float) i_287_, (float) i_287_);
+                                    int i_287_ = (aHa_Sub1_8217.decodedOperation3722(class145.aShortArray2008[i_276_]));
+                                    class109.decodedOperation1022((float) i_283_, (float) i_284_, (float) i_285_, (float) i_280_, (float) i_281_, (float) i_282_, 100.0F, 100.0F, 100.0F, (float) i_287_, (float) i_287_, (float) i_287_);
                                 } else class109.method1027((float) i_283_, (float) i_284_, (float) i_285_, (float) i_280_, (float) i_281_, (float) i_282_, 100.0F, 100.0F, 100.0F, (class145.anIntArray2001[i_277_]), (class145.anIntArray2001[i_278_]), (class145.anIntArray2001[i_279_]));
                             }
                         }
@@ -1115,7 +1115,7 @@ final class BufferCacheSub1
         aHa_Sub1_8217.C(bool);
     }
 
-    private final void method3994(int i, int i_300_, Component8 class109, int[] is, int[] is_301_, int[] is_302_, int[] is_303_, int i_304_) {
+    private final void decodedOperation3994(int i, int i_300_, Component8 class109, int[] is, int[] is_301_, int[] is_302_, int[] is_303_, int i_304_) {
         Component180 class102 = aClass102ArrayArray8215[i][i_300_];
         if (class102 == null) {
             Component4 class236 = aClass236ArrayArray8222[i][i_300_];
@@ -1166,7 +1166,7 @@ final class BufferCacheSub1
                             int i_406_ = class236.anIntArray3093[i_396_];
                             if (i_406_ != -1) {
                                 class109.aBoolean1671 = (i_400_ < 0 || i_401_ < 0 || i_402_ < 0 || (i_400_ > class109.anInt1679) || (i_401_ > class109.anInt1679) || (i_402_ > class109.anInt1679));
-                                class109.method1022((float) i_403_, (float) i_404_, (float) i_405_, (float) i_400_, (float) i_401_, (float) i_402_, (float) is_302_[i_397_], (float) is_302_[i_398_], (float) is_302_[i_399_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_397_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_398_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_399_]), i_406_)));
+                                class109.decodedOperation1022((float) i_403_, (float) i_404_, (float) i_405_, (float) i_400_, (float) i_401_, (float) i_402_, (float) is_302_[i_397_], (float) is_302_[i_398_], (float) is_302_[i_399_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_397_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_398_]), i_406_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_399_]), i_406_)));
                             }
                         }
                     }
@@ -1187,9 +1187,9 @@ final class BufferCacheSub1
                             if (i_382_ == -1) {
                                 int i_383_ = (class236.anIntArray3093[i_372_]);
                                 if (i_383_ != -1)
-                                    class109.method1022((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_373_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_374_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_375_]), i_383_)));
+                                    class109.decodedOperation1022((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_373_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_374_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_375_]), i_383_)));
                             } else
-                                class109.method1024((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], ((float) (class236.aShortArray3096[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_375_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_375_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_373_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_374_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_375_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_382_);
+                                class109.decodedOperation1024((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], ((float) (class236.aShortArray3096[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_375_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_375_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_373_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_374_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_375_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_382_);
                         }
                     }
                 } else {
@@ -1209,9 +1209,9 @@ final class BufferCacheSub1
                             if (i_394_ == -1) {
                                 int i_395_ = (class236.anIntArray3093[i_384_]);
                                 if (i_395_ != -1)
-                                    class109.method1022((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_385_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_386_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_387_]), i_395_)));
+                                    class109.decodedOperation1022((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_385_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_386_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_387_]), i_395_)));
                             } else
-                                class109.method1024((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], ((float) (class236.aShortArray3096[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_387_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_387_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_385_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_386_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_387_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_394_);
+                                class109.decodedOperation1024((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], ((float) (class236.aShortArray3096[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_387_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_387_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_385_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_386_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_387_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_394_);
                         }
                     }
                 }
@@ -1350,31 +1350,31 @@ final class BufferCacheSub1
                 if (((i_316_ - i_318_) * (i_315_ - i_319_) - (i_317_ - i_319_) * (i_314_ - i_318_)) > 0) {
                     class109.aBoolean1671 = (i_316_ < 0 || i_318_ < 0 || i_314_ < 0 || i_316_ > class109.anInt1679 || i_318_ > class109.anInt1679 || i_314_ > class109.anInt1679);
                     if (class102.aShort1605 >= 0)
-                        class109.method1024((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, f_310_, f_311_, f_309_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1602 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
+                        class109.decodedOperation1024((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, f_310_, f_311_, f_309_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1602 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
                     else
-                        class109.method1022((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, (float) (int) f_310_, (float) (int) f_311_, (float) (int) f_309_, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
+                        class109.decodedOperation1022((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, (float) (int) f_310_, (float) (int) f_311_, (float) (int) f_309_, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
                 }
                 if (((i_312_ - i_314_) * (i_319_ - i_315_) - (i_313_ - i_315_) * (i_318_ - i_314_)) > 0) {
                     class109.aBoolean1671 = (i_312_ < 0 || i_314_ < 0 || i_318_ < 0 || i_312_ > class109.anInt1679 || i_314_ > class109.anInt1679 || i_318_ > class109.anInt1679);
                     if (class102.aShort1605 >= 0)
-                        class109.method1024((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, f, f_309_, f_311_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1601 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
+                        class109.decodedOperation1024((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, f, f_309_, f_311_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1601 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
                     else
-                        class109.method1022((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, (float) (int) f, (float) (int) f_309_, (float) (int) f_311_, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
+                        class109.decodedOperation1022((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, (float) (int) f, (float) (int) f_309_, (float) (int) f_311_, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
                 }
             } else {
                 if (((i_316_ - i_318_) * (i_315_ - i_319_) - (i_317_ - i_319_) * (i_314_ - i_318_)) > 0) {
                     class109.aBoolean1671 = (i_316_ < 0 || i_318_ < 0 || i_314_ < 0 || i_316_ > class109.anInt1679 || i_318_ > class109.anInt1679 || i_314_ > class109.anInt1679);
                     if (class102.aShort1605 >= 0)
-                        class109.method1024((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, f_310_, f_311_, f_309_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1602 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
+                        class109.decodedOperation1024((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, f_310_, f_311_, f_309_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1602 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
                     else
-                        class109.method1022((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, (float) (int) f_310_, (float) (int) f_311_, (float) (int) f_309_, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
+                        class109.decodedOperation1022((float) i_317_, (float) i_319_, (float) i_315_, (float) i_316_, (float) i_318_, (float) i_314_, (float) (int) f_310_, (float) (int) f_311_, (float) (int) f_309_, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
                 }
                 if (((i_312_ - i_314_) * (i_319_ - i_315_) - (i_313_ - i_315_) * (i_318_ - i_314_)) > 0) {
                     class109.aBoolean1671 = (i_312_ < 0 || i_314_ < 0 || i_318_ < 0 || i_312_ > class109.anInt1679 || i_314_ > class109.anInt1679 || i_318_ > class109.anInt1679);
                     if (class102.aShort1605 >= 0)
-                        class109.method1024((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, f, f_309_, f_311_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1601 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
+                        class109.decodedOperation1024((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, f, f_309_, f_311_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, (~0xffffff | (Component380.anIntArray4983[(class102.aShort1601 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1603 & 0xffff)]) & 0xffffff), (~0xffffff | (Component380.anIntArray4983[(class102.aShort1604 & 0xffff)]) & 0xffffff), 0, 0, 0, 0, class102.aShort1605);
                     else
-                        class109.method1022((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, (float) (int) f, (float) (int) f_309_, (float) (int) f_311_, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
+                        class109.decodedOperation1022((float) i_313_, (float) i_315_, (float) i_319_, (float) i_312_, (float) i_314_, (float) i_318_, (float) (int) f, (float) (int) f_309_, (float) (int) f_311_, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
                 }
             }
         }
@@ -1389,16 +1389,16 @@ final class BufferCacheSub1
     }
 
     final void method3987(int i, int i_411_, int i_412_, int i_413_, int i_414_, int i_415_, int i_416_, boolean[][] bools) {
-        Component385 class167 = aHa_Sub1_8217.method3724(Thread.currentThread());
+        Component385 class167 = aHa_Sub1_8217.decodedOperation3724(Thread.currentThread());
         Component8 class109 = class167.aClass109_2220;
         class109.anInt1674 = 0;
         class109.aBoolean1671 = true;
         aHa_Sub1_8217.NativeHandle();
-        if (aClass266ArrayArray8230 != null || aClass198ArrayArray8219 != null) method3993(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
-        else if (aClass102ArrayArray8215 != null) method3996(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
+        if (aClass266ArrayArray8230 != null || aClass198ArrayArray8219 != null) decodedOperation3993(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
+        else if (aClass102ArrayArray8215 != null) decodedOperation3996(i, i_411_, i_412_, i_413_, i_414_, i_415_, i_416_, bools, class167, class109, class167.anIntArray2212, class167.anIntArray2228);
     }
 
-    private final void method3995(int i, int i_417_, boolean bool, Component385 class167, Component8 class109, int[] is, int[] is_418_, int[] is_419_, int[] is_420_, int i_421_) {
+    private final void decodedOperation3995(int i, int i_417_, boolean bool, Component385 class167, Component8 class109, int[] is, int[] is_418_, int[] is_419_, int[] is_420_, int i_421_) {
         Component250 class198 = aClass198ArrayArray8219[i][i_417_];
         if (i_421_ == 0 || (i_421_ & 0x2) == 0) {
             if (class198 != null) {
@@ -1478,11 +1478,11 @@ final class BufferCacheSub1
                             int i_451_ = i_417_ << this.tileSizeBits;
                             if ((class198.anIntArray2623[i_441_] & 0xffffff) != 0) {
                                 if (((class198.aShortArray2616[i_441_]) == (class198.aShortArray2616[i_442_])) && ((class198.aShortArray2616[i_441_]) == (class198.aShortArray2616[i_443_])) && ((class198.aShortArray2614[i_441_]) == (class198.aShortArray2614[i_442_])) && ((class198.aShortArray2614[i_441_]) == (class198.aShortArray2614[i_443_])))
-                                    class109.method1024((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], ((float) (i_450_ + (class198.aShortArray2622[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_450_ + (class198.aShortArray2622[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_450_ + (class198.aShortArray2622[i_443_])) / (float) (class198.aShortArray2614[i_443_])), ((float) (i_451_ + (class198.aShortArray2613[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_451_ + (class198.aShortArray2613[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_451_ + (class198.aShortArray2613[i_443_])) / (float) (class198.aShortArray2614[i_443_])), (class198.anIntArray2623[i_441_]), (class198.anIntArray2623[i_442_]), (class198.anIntArray2623[i_443_]), class167.anInt2192, is_420_[i_441_], is_420_[i_442_], is_420_[i_443_], (class198.aShortArray2616[i_441_]));
+                                    class109.decodedOperation1024((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], ((float) (i_450_ + (class198.aShortArray2622[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_450_ + (class198.aShortArray2622[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_450_ + (class198.aShortArray2622[i_443_])) / (float) (class198.aShortArray2614[i_443_])), ((float) (i_451_ + (class198.aShortArray2613[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_451_ + (class198.aShortArray2613[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_451_ + (class198.aShortArray2613[i_443_])) / (float) (class198.aShortArray2614[i_443_])), (class198.anIntArray2623[i_441_]), (class198.anIntArray2623[i_442_]), (class198.anIntArray2623[i_443_]), class167.anInt2192, is_420_[i_441_], is_420_[i_442_], is_420_[i_443_], (class198.aShortArray2616[i_441_]));
                                 else
-                                    class109.method1020((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], (float) (i_450_ + (class198.aShortArray2622[i_441_])) / f, (float) (i_450_ + (class198.aShortArray2622[i_442_])) / f, (float) (i_450_ + (class198.aShortArray2622[i_443_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_441_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_442_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_443_])) / f, (class198.anIntArray2623[i_441_]), (class198.anIntArray2623[i_442_]), (class198.anIntArray2623[i_443_]), class167.anInt2192, is_420_[i_441_], is_420_[i_442_], is_420_[i_443_], (class198.aShortArray2616[i_441_]), f / (float) (class198.aShortArray2614[i_441_]), (class198.aShortArray2616[i_442_]), f / (float) (class198.aShortArray2614[i_442_]), (class198.aShortArray2616[i_443_]), f / (float) (class198.aShortArray2614[i_443_]));
+                                    class109.decodedOperation1020((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], (float) (i_450_ + (class198.aShortArray2622[i_441_])) / f, (float) (i_450_ + (class198.aShortArray2622[i_442_])) / f, (float) (i_450_ + (class198.aShortArray2622[i_443_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_441_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_442_])) / f, (float) (i_451_ + (class198.aShortArray2613[i_443_])) / f, (class198.anIntArray2623[i_441_]), (class198.anIntArray2623[i_442_]), (class198.anIntArray2623[i_443_]), class167.anInt2192, is_420_[i_441_], is_420_[i_442_], is_420_[i_443_], (class198.aShortArray2616[i_441_]), f / (float) (class198.aShortArray2614[i_441_]), (class198.aShortArray2616[i_442_]), f / (float) (class198.aShortArray2614[i_442_]), (class198.aShortArray2616[i_443_]), f / (float) (class198.aShortArray2614[i_443_]));
                             }
-                        } else class109.method1018((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], (class167.anInt2192));
+                        } else class109.decodedOperation1018((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], (class167.anInt2192));
                     }
                 }
             }
@@ -1493,7 +1493,7 @@ final class BufferCacheSub1
         method3992(i, i_452_, 0);
     }
 
-    private final void method3996(int i, int i_453_, int i_454_, int i_455_, int i_456_, int i_457_, int i_458_, boolean[][] bools, Component385 class167, Component8 class109, int[] is, int[] is_459_) {
+    private final void decodedOperation3996(int i, int i_453_, int i_454_, int i_455_, int i_456_, int i_457_, int i_458_, boolean[][] bools, Component385 class167, Component8 class109, int[] is, int[] is_459_) {
         int i_460_ = (i_458_ - i_456_) * i_454_ / 256;
         int i_461_ = i_454_ >> 8;
         boolean bool = class167.aBoolean2202;
@@ -1508,16 +1508,16 @@ final class BufferCacheSub1
                     if (aClass102ArrayArray8215[i_464_][i_465_] != null) {
                         Component180 class102 = aClass102ArrayArray8215[i_464_][i_465_];
                         if (class102.aShort1605 != -1 && (class102.aByte1606 & 0x2) == 0 && class102.anInt1600 == -1) {
-                            int i_466_ = aHa_Sub1_8217.method3722(class102.aShort1605);
-                            class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1602) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_));
-                            class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1601) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_));
+                            int i_466_ = aHa_Sub1_8217.decodedOperation3722(class102.aShort1605);
+                            class109.decodedOperation1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1602) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_));
+                            class109.decodedOperation1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1601) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1603) & 0xffff), i_466_), (float) ReferenceTable.clampHslLightness(0, ((class102.aShort1604) & 0xffff), i_466_));
                         } else if (class102.anInt1600 == -1) {
-                            class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
-                            class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
+                            class109.decodedOperation1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) (class102.aShort1602 & 0xffff), (float) (class102.aShort1604 & 0xffff), (float) (class102.aShort1603 & 0xffff));
+                            class109.decodedOperation1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) (class102.aShort1601 & 0xffff), (float) (class102.aShort1603 & 0xffff), (float) (class102.aShort1604 & 0xffff));
                         } else {
                             int i_467_ = class102.anInt1600;
-                            class109.method1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) i_467_, (float) i_467_, (float) i_467_);
-                            class109.method1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) i_467_, (float) i_467_, (float) i_467_);
+                            class109.decodedOperation1022((float) (i_463_ - i_461_), (float) (i_463_ - i_461_), (float) i_463_, (float) (i_462_ + i_461_), (float) i_462_, (float) (i_462_ + i_461_), 100.0F, 100.0F, 100.0F, (float) i_467_, (float) i_467_, (float) i_467_);
+                            class109.decodedOperation1022((float) i_463_, (float) i_463_, (float) (i_463_ - i_461_), (float) i_462_, (float) (i_462_ + i_461_), (float) i_462_, 100.0F, 100.0F, 100.0F, (float) i_467_, (float) i_467_, (float) i_467_);
                         }
                     } else if (aClass236ArrayArray8222[i_464_][i_465_] != null) {
                         Component4 class236 = aClass236ArrayArray8222[i_464_][i_465_];
@@ -1537,13 +1537,13 @@ final class BufferCacheSub1
                             int i_478_ = is_459_[i_472_];
                             if (class236.anIntArray3092 != null && (class236.anIntArray3092[i_469_]) != -1) {
                                 int i_479_ = (class236.anIntArray3092[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_479_)));
+                                class109.decodedOperation1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_479_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_479_)));
                             } else if ((class236.aShortArray3095 != null) && (class236.aShortArray3095[i_469_]) != -1) {
-                                int i_480_ = aHa_Sub1_8217.method3722(class236.aShortArray3095[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_480_)));
+                                int i_480_ = aHa_Sub1_8217.decodedOperation3722(class236.aShortArray3095[i_469_]);
+                                class109.decodedOperation1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_480_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_480_)));
                             } else {
                                 int i_481_ = (class236.anIntArray3093[i_469_]);
-                                class109.method1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_481_)));
+                                class109.decodedOperation1022((float) i_476_, (float) i_477_, (float) i_478_, (float) i_473_, (float) i_474_, (float) i_475_, 100.0F, 100.0F, 100.0F, (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_470_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_471_]), i_481_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_472_]), i_481_)));
                             }
                         }
                     }
@@ -1566,7 +1566,7 @@ final class BufferCacheSub1
         /* empty */
     }
 
-    private final boolean method3997(int i) {
+    private final boolean decodedOperation3997(int i) {
         if ((anInt8223 & 0x8) == 0) return false;
         if (i == 4) return true;
         if (i == 8) return true;

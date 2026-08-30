@@ -23,7 +23,7 @@ final class HashNodeSub7
         /* empty */
     }
 
-    final void method3192(byte i, Buffer class348_sub49) {
+    final void decodedOperation3192(byte i, Buffer class348_sub49) {
         for (; ; ) {
             int i_2_ = class348_sub49.readUnsignedByte(i + 239);
             if (i_2_ == 0) break;

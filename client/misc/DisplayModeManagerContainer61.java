@@ -22,7 +22,7 @@ final class DisplayModeManagerContainer61
     static boolean aBoolean3763;
     static int anInt3764;
 
-    static final int method2220(int i, int i_0_, int i_1_, byte i_2_) {
+    static final int decodedOperation2220(int i, int i_0_, int i_1_, byte i_2_) {
         anInt3757++;
         if (i_2_ != 71) return -122;
         i_0_ &= 0x3;
@@ -32,26 +32,26 @@ final class DisplayModeManagerContainer61
         return 7 + -i;
     }
 
-    static final void method2221(Player player, int i) {
+    static final void decodedOperation2221(Player player, int i) {
         anInt3752++;
         if (i != -28482) aClass348_Sub42_Sub17Array3753 = null;
         SceneNode class348_sub9 = ((SceneNode) (HashNodeSub16Sub2.aClass356_10465.get(player.anInt10290, -6008)));
         if (class348_sub9 != null) {
             if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
-                PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                 class348_sub9.aClass348_Sub16_Sub5_6676 = null;
             }
             class348_sub9.unlink((byte) 82);
         }
     }
 
-    static final void method2222(int i, byte i_3_) {
+    static final void decodedOperation2222(int i, byte i_3_) {
         anInt3755++;
         DisplayModeManagerContainer306.aLong4783 = 1000000000L / (long) i;
-        if (i_3_ != -124) method2223(-83);
+        if (i_3_ != -124) decodedOperation2223(-83);
     }
 
-    public static void method2223(int i) {
+    public static void decodedOperation2223(int i) {
         aClass348_Sub42_Sub17Array3753 = null;
         anIntArray3759 = null;
         aClass114_3751 = null;

@@ -20,14 +20,14 @@ final class Component116
     private final int[] anIntArray2729;
     private final int[][] anIntArrayArray2730;
 
-    final void method1530(float[] fs, int i) {
+    final void decodedOperation1530(float[] fs, int i) {
         int i_0_ = anIntArray2726.length;
         int i_1_ = anIntArray2724[anInt2722 - 1];
         aBooleanArray2727[0] = aBooleanArray2727[1] = true;
         for (int i_2_ = 2; i_2_ < i_0_; i_2_++) {
-            int i_3_ = method1537(anIntArray2721, i_2_);
-            int i_4_ = method1532(anIntArray2721, i_2_);
-            int i_5_ = method1533(anIntArray2721[i_3_], anIntArray2728[i_3_], anIntArray2721[i_4_], anIntArray2728[i_4_], anIntArray2721[i_2_]);
+            int i_3_ = decodedOperation1537(anIntArray2721, i_2_);
+            int i_4_ = decodedOperation1532(anIntArray2721, i_2_);
+            int i_5_ = decodedOperation1533(anIntArray2721[i_3_], anIntArray2728[i_3_], anIntArray2721[i_4_], anIntArray2728[i_4_], anIntArray2721[i_2_]);
             int i_6_ = anIntArray2728[i_2_];
             int i_7_ = i_1_ - i_5_;
             int i_8_ = i_5_;
@@ -81,7 +81,7 @@ final class Component116
         }
     }
 
-    private static final int method1532(int[] is, int i) {
+    private static final int decodedOperation1532(int[] is, int i) {
         int i_28_ = is[i];
         int i_29_ = -1;
         int i_30_ = 2147483647;
@@ -95,7 +95,7 @@ final class Component116
         return i_29_;
     }
 
-    private final int method1533(int i, int i_33_, int i_34_, int i_35_, int i_36_) {
+    private final int decodedOperation1533(int i, int i_33_, int i_34_, int i_35_, int i_36_) {
         int i_37_ = i_35_ - i_33_;
         int i_38_ = i_34_ - i;
         int i_39_ = i_37_ < 0 ? -i_37_ : i_37_;
@@ -105,14 +105,14 @@ final class Component116
         return i_33_ + i_41_;
     }
 
-    final boolean method1534() {
+    final boolean decodedOperation1534() {
         boolean bool = NodeSub10.method2788() != 0;
         if (!bool) return false;
         int i = anIntArray2726.length;
         for (int i_42_ = 0; i_42_ < i; i_42_++)
             anIntArray2721[i_42_] = anIntArray2726[i_42_];
         int i_43_ = anIntArray2724[anInt2722 - 1];
-        int i_44_ = Component80.method2253(i_43_ - 1, -17);
+        int i_44_ = Component80.decodedOperation2253(i_43_ - 1, -17);
         anIntArray2728[0] = NodeSub10.readBits(i_44_);
         anIntArray2728[1] = NodeSub10.readBits(i_44_);
         int i_45_ = 2;
@@ -122,11 +122,11 @@ final class Component116
             int i_49_ = anIntArray2729[i_47_];
             int i_50_ = (1 << i_49_) - 1;
             int i_51_ = 0;
-            if (i_49_ > 0) i_51_ = NodeSub10.aClass370Array6718[anIntArray2723[i_47_]].method3581();
+            if (i_49_ > 0) i_51_ = NodeSub10.aClass370Array6718[anIntArray2723[i_47_]].decodedOperation3581();
             for (int i_52_ = 0; i_52_ < i_48_; i_52_++) {
                 int i_53_ = anIntArrayArray2730[i_47_][i_51_ & i_50_];
                 i_51_ >>>= i_49_;
-                anIntArray2728[i_45_++] = (i_53_ >= 0 ? NodeSub10.aClass370Array6718[i_53_].method3581() : 0);
+                anIntArray2728[i_45_++] = (i_53_ >= 0 ? NodeSub10.aClass370Array6718[i_53_].decodedOperation3581() : 0);
             }
         }
         return true;
@@ -158,7 +158,7 @@ final class Component116
         }
     }
 
-    public static void method1536() {
+    public static void decodedOperation1536() {
         anIntArray2724 = null;
         aFloatArray2719 = null;
         anIntArray2721 = null;
@@ -166,7 +166,7 @@ final class Component116
         aBooleanArray2727 = null;
     }
 
-    private static final int method1537(int[] is, int i) {
+    private static final int decodedOperation1537(int[] is, int i) {
         int i_60_ = is[i];
         int i_61_ = -1;
         int i_62_ = -2147483648;

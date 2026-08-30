@@ -20,7 +20,7 @@ final class Component264
     static StringCache aClass351_8706 = new StringCache(79, 3);
     private GlToolkitSub2 aHa_Sub2_8707;
 
-    final boolean method2261(GlFramebufferTexture class258_sub2, float f, int i, GlFramebufferTexture class258_sub2_0_) {
+    final boolean decodedOperation2261(GlFramebufferTexture class258_sub2, float f, int i, GlFramebufferTexture class258_sub2_0_) {
         try {
             anInt8703++;
             boolean bool = true;
@@ -50,9 +50,9 @@ final class Component264
             aHa_Sub2_8707.popTexture(i ^ ~0xfffe, class206);
             for (int i_1_ = 0; i_1_ < 6; i_1_++) {
                 int i_2_ = 34069 + i_1_;
-                class206.method1498(0, i + -65591, i_2_, aClass258_Sub2_8701);
-                class206.method1503(0, (byte) 3);
-                if (class206.method1507(-116)) {
+                class206.decodedOperation1498(0, i + -65591, i_2_, aClass258_Sub2_8701);
+                class206.decodedOperation1503(0, (byte) 3);
+                if (class206.decodedOperation1507(-116)) {
                     OpenGL.glBegin(7);
                     int i_3_ = i_2_;
                     while_101_:
@@ -164,7 +164,7 @@ final class Component264
                     break;
                 }
             }
-            class206.method1500(2983, 0);
+            class206.decodedOperation1500(2983, 0);
             aHa_Sub2_8707.pushTexture(-422613672, class206);
             aHa_Sub2_8707.glActiveTexture(i + -80573, 1);
             if (i != 65534) return true;
@@ -174,7 +174,7 @@ final class Component264
             aHa_Sub2_8707.bindTexture((byte) -88, null);
             OpenGL.glPopAttrib();
             aHa_Sub2_8707.KA(NodederUtil.anIntArray6635[0], NodederUtil.anIntArray6635[1], NodederUtil.anIntArray6635[2], NodederUtil.anIntArray6635[3]);
-            if (bool && !aHa_Sub2_8707.aBoolean7847) aClass258_Sub2_8701.method1950(69);
+            if (bool && !aHa_Sub2_8707.aBoolean7847) aClass258_Sub2_8701.decodedOperation1950(69);
             return bool;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qda.L(" + (class258_sub2 != null ? "{...}" : "null") + ',' + f + ',' + i + ',' + (class258_sub2_0_ != null ? "{...}" : "null") + ')'));
@@ -187,32 +187,32 @@ final class Component264
         return aClass258_Sub2_8701;
     }
 
-    final int method2262(int i) {
+    final int decodedOperation2262(int i) {
         if (i != 65534) aHa_Sub2_8707 = null;
         anInt8699++;
         return aClass258_Sub2_8701.anInt8538;
     }
 
-    static final Component24 method2263(GraphicsToolkit var_ha, int i, int i_4_) {
+    static final Component24 decodedOperation2263(GraphicsToolkit var_ha, int i, int i_4_) {
         anInt8705++;
         ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.get(i_4_, -6008));
         if (class348_sub15 != null) {
-            DisplayModeManagerContainer64 class348_sub23_sub2 = class348_sub15.aClass55_Sub1_6768.method506(false);
+            DisplayModeManagerContainer64 class348_sub23_sub2 = class348_sub15.aClass55_Sub1_6768.decodedOperation506(false);
             class348_sub15.aBoolean6772 = true;
-            if (class348_sub23_sub2 != null) return class348_sub23_sub2.method2975(var_ha, 0);
+            if (class348_sub23_sub2 != null) return class348_sub23_sub2.decodedOperation2975(var_ha, 0);
         }
         if (i != 0) aClass351_8706 = null;
         return null;
     }
 
-    static final void method2264(boolean bool) {
+    static final void decodedOperation2264(boolean bool) {
         if (bool != false) aClass348_Sub49_8698 = null;
         anInt8704++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(0, (byte) 105, 15);
-        class348_sub42_sub15.method3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(0, (byte) 105, 15);
+        class348_sub42_sub15.decodedOperation3251(-16058);
     }
 
-    public static void method2265(int i) {
+    public static void decodedOperation2265(int i) {
         aClass348_Sub49_8698 = null;
         if (i != -10794) aClass351_8706 = null;
         aClass351_8706 = null;

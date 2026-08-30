@@ -36,7 +36,7 @@ final class GlRectangleTexture extends GlTexture {
         this.anInt9940 = i_3_;
         this.aFloat9938 = (float) i_4_ / (float) i_6_;
         this.aBoolean9941 = false;
-        this.method1965(false, false, 10243);
+        this.decodedOperation1965(false, false, 10243);
     }
 
     GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_7_, int i_8_, int i_9_, int i_10_, boolean bool) {
@@ -53,24 +53,24 @@ final class GlRectangleTexture extends GlTexture {
         this.anInt9939 = i_10_;
     }
 
-    static final void method1971(int i, String string, boolean bool, int i_11_) {
+    static final void decodedOperation1971(int i, String string, boolean bool, int i_11_) {
         anInt9942++;
-        Component350.method556(false);
-        DisplayModeManagerContainer196.method2681(9864);
-        NpcNode.method2959(-1);
+        Component350.decodedOperation556(false);
+        DisplayModeManagerContainer196.decodedOperation2681(9864);
+        NpcNode.decodedOperation2959(-1);
         OggStream.method2965(string, i_11_, bool, 0);
-        ClientSystemInfo.method2994(2);
-        DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
-        Component27.method3568(NodeSub8.toolkit, 4);
-        ItemDefinitionProvider.method1933(Component158.aClass45_322, NodeSub8.toolkit, true);
+        ClientSystemInfo.decodedOperation2994(2);
+        DisplayModeManagerContainer292.decodedOperation1311(5139, NodeSub8.toolkit);
+        Component27.decodedOperation3568(NodeSub8.toolkit, 4);
+        ItemDefinitionProvider.decodedOperation1933(Component158.aClass45_322, NodeSub8.toolkit, true);
         FriendsIgnoreList.clearHudSprites(-128);
-        DisplayModeManagerContainer204.method901(Component22.aClass105Array1744, 515880227);
-        Component160.method3466(i ^ ~0x4f);
-        Definition.method3038(-1);
+        DisplayModeManagerContainer204.decodedOperation901(Component22.aClass105Array1744, 515880227);
+        Component160.decodedOperation3466(i ^ ~0x4f);
+        Definition.decodedOperation3038(-1);
         if (Component49.clientState == 3) Buffer.setClientState(2, 4);
         else if (Component49.clientState == 7) Buffer.setClientState(2, 8);
         else if (Component49.clientState != 10) {
-            if (Component49.clientState == 1 || Component49.clientState == 2) Component239.method3616(12639);
+            if (Component49.clientState == 1 || Component49.clientState == 2) Component239.decodedOperation3616(12639);
         } else Buffer.setClientState(2, 11);
     }
 
@@ -81,7 +81,7 @@ final class GlRectangleTexture extends GlTexture {
         this.aFloat9937 = (float) i_13_ / (float) i_15_;
         this.anInt9939 = i_14_;
         this.aBoolean9941 = false;
-        this.method1965(false, false, 10243);
+        this.decodedOperation1965(false, false, 10243);
     }
 
     GlRectangleTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_17_, int i_18_, int i_19_, int i_20_, byte[] is, int i_21_) {
@@ -89,11 +89,11 @@ final class GlRectangleTexture extends GlTexture {
         try {
             this.anInt9940 = i_17_;
             this.anInt9939 = i_18_;
-            this.method1970(0, 0, i_17_, true, 0, i_18_, i_21_, 127, is, 0);
+            this.decodedOperation1970(0, 0, i_17_, true, 0, i_18_, i_21_, 127, is, 0);
             this.aFloat9938 = (float) i_18_ / (float) i_20_;
             this.aFloat9937 = (float) i_17_ / (float) i_19_;
             this.aBoolean9941 = false;
-            this.method1965(false, false, 10243);
+            this.decodedOperation1965(false, false, 10243);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + i_18_ + ',' + i_19_ + ',' + i_20_ + ',' + (is != null ? "{...}" : "null") + ',' + i_21_ + ')'));
         }
@@ -122,11 +122,11 @@ final class GlRectangleTexture extends GlTexture {
         try {
             this.anInt9940 = i;
             this.anInt9939 = i_26_;
-            this.method1964(true, i_26_, 0, is, 0, (byte) -73, i, 0, 0);
+            this.decodedOperation1964(true, i_26_, 0, is, 0, (byte) -73, i, 0, 0);
             this.aFloat9937 = (float) i / (float) i_27_;
             this.aFloat9938 = (float) i_26_ / (float) i_28_;
             this.aBoolean9941 = false;
-            this.method1965(false, false, 10243);
+            this.decodedOperation1965(false, false, 10243);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("eba.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_26_ + ',' + i_27_ + ',' + i_28_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }

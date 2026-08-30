@@ -19,7 +19,7 @@ final class ClientSystemInfo extends Node {
     static String aString6877;
     static int[] anIntArray6878;
 
-    static final void method2991(int i) {
+    static final void decodedOperation2991(int i) {
         if (Component156.anInt3699 > 1) {
             DefinitionSub23.anInt9313 = ResourceLoader.anInt3918;
             Component156.anInt3699--;
@@ -31,10 +31,10 @@ final class ClientSystemInfo extends Node {
         } else {
             if (!Component364.aBoolean8335) DisplayModeManagerContainer190.resetNodeStates((byte) 95);
             for (int i_0_ = 0; i_0_ < 100; i_0_++) {
-                if (!Component102.method2203((byte) -52)) break;
+                if (!Component102.decodedOperation2203((byte) -52)) break;
             }
             if (Component49.clientState == 10) {
-                while (ShaderProgram.method2138(i ^ 0x2ca2)) {
+                while (ShaderProgram.decodedOperation2138(i ^ 0x2ca2)) {
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component211.aClass351_1961, (DisplayModeManagerContainer64.aClass77_9029), -92);
                     class348_sub47.particleBuffer.writeByte(false, 0);
                     int i_1_ = (class348_sub47.particleBuffer.offset);
@@ -162,38 +162,38 @@ final class ClientSystemInfo extends Node {
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component182.aClass351_9743), (DisplayModeManagerContainer64.aClass77_9029), -113);
                     class348_sub47.particleBuffer.writeByte(false, 0);
                     int i_14_ = (class348_sub47.particleBuffer.offset);
-                    Buffer class348_sub49 = Component192.preferences.method3427(i ^ 0x2cb0);
+                    Buffer class348_sub49 = Component192.preferences.decodedOperation3427(i ^ 0x2cb0);
                     class348_sub47.particleBuffer.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 82);
                     class348_sub47.particleBuffer.writeLengthByte(96, (class348_sub47.particleBuffer.offset) + -i_14_);
                     HashNodeSub14.enqueueOutboundPacket(i + -11473, class348_sub47);
                     r.aBoolean9719 = true;
                 }
                 if (Component335.aClass357ArrayArrayArray2029 != null) {
-                    if (DefinitionSub21.cameraMode == 2) Component19.method241((byte) 127);
-                    else if (DefinitionSub21.cameraMode == 3) NodeSub21.method2954((byte) -4);
+                    if (DefinitionSub21.cameraMode == 2) Component19.decodedOperation241((byte) 127);
+                    else if (DefinitionSub21.cameraMode == 3) NodeSub21.decodedOperation2954((byte) -4);
                 }
                 if (!Component214.aBoolean2130) Component275.cameraYawRate /= 2.0F;
                 else Component214.aBoolean2130 = false;
                 if (!Cp1252Decoder.aBoolean5224) NodeSub27.cameraPitchRate /= 2.0F;
                 else Cp1252Decoder.aBoolean5224 = false;
-                NodeSub35.method3027((byte) 33);
+                NodeSub35.decodedOperation3027((byte) 33);
                 if (Component49.clientState == 10) {
-                    HashNodeSub3.method3175((byte) 55);
-                    PauseTimer.method362(i + -11335);
-                    DisplayModeManagerContainer105.method1501(-123);
+                    HashNodeSub3.decodedOperation3175((byte) 55);
+                    PauseTimer.decodedOperation362(i + -11335);
+                    DisplayModeManagerContainer105.decodedOperation1501(-123);
                     NodeSub50.anInt7213++;
                     if (NodeSub50.anInt7213 > 750) SocketConnector.forceLogout(83);
                     else {
-                        Component225.method349(i + -6692);
-                        DefinitionSub38.method3150(true);
-                        DisplayModeManagerContainer51.method1397(0);
-                        for (int i_15_ = DisplayModeManagerContainer58.aClass170_10209.method1305((byte) -126, true); i_15_ != -1; i_15_ = DisplayModeManagerContainer58.aClass170_10209.method1305((byte) -128, false)) {
-                            LibraryCreditsText.method1767(true, i_15_);
+                        Component225.decodedOperation349(i + -6692);
+                        DefinitionSub38.decodedOperation3150(true);
+                        DisplayModeManagerContainer51.decodedOperation1397(0);
+                        for (int i_15_ = DisplayModeManagerContainer58.aClass170_10209.decodedOperation1305((byte) -126, true); i_15_ != -1; i_15_ = DisplayModeManagerContainer58.aClass170_10209.decodedOperation1305((byte) -128, false)) {
+                            LibraryCreditsText.decodedOperation1767(true, i_15_);
                             DisplayModeManagerContainer363.anIntArray4096[GpsOverlay.bitwiseAnd(31, DisplayModeManagerContainer260.anInt3695++)] = i_15_;
                         }
                         for (RSARequest class348_sub42_sub15 = DefinitionSub30.method3127(2681); class348_sub42_sub15 != null; class348_sub42_sub15 = DefinitionSub30.method3127(2681)) {
-                            int i_16_ = class348_sub42_sub15.method3245(true);
-                            int i_17_ = class348_sub42_sub15.method3248(1);
+                            int i_16_ = class348_sub42_sub15.decodedOperation3245(true);
+                            int i_17_ = class348_sub42_sub15.decodedOperation3248(1);
                             if (i_16_ == 1) {
                                 DisplayModeManagerContainer123.anIntArray1303[i_17_] = class348_sub42_sub15.anInt9652;
                                 Component357.aBoolean2469 |= WaterShaderProgram.aBooleanArray6270[i_17_];
@@ -226,7 +226,7 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt841 = 0;
                                     class46.anInt730 = 1;
                                     DisplayModeManagerContainer167 class17 = ((class46.anInt699 == -1) ? null : (RunescapeInfo.aClass87_191.getSequence((class46.anInt699), 7)));
-                                    if (class17 != null) Component235.method2017((class46.anInt795), class17, 30);
+                                    if (class17 != null) Component235.decodedOperation2017((class46.anInt795), class17, 30);
                                     Component111.markInterfaceDirty(-9343, class46);
                                 }
                             } else if (i_16_ == 6) {
@@ -324,11 +324,11 @@ final class ClientSystemInfo extends Node {
                         Cp1252Decoder.aBoolean5221 = false;
                         Component39.aClass46_2249 = null;
                         Component162.aBoolean8386 = false;
-                        Component2.method198(null, false, -1, -1);
-                        Component143.method1343(-1, null, 1, -1);
+                        Component2.decodedOperation198(null, false, -1, -1);
+                        Component143.decodedOperation1343(-1, null, 1, -1);
                         if (!r.aBoolean9722) Component149.widgetCursorId = -1;
                         Component233.overGameScreen = false;
-                        Component43.method1583((byte) -73);
+                        Component43.decodedOperation1583((byte) -73);
                         ResourceLoader.anInt3918++;
                         if (Component233.overGameScreen && Component233.scrollWheelDiff != 0 && !StringCache.devConsoleOpen) {
                             if (Component353.anInt2581 <= 0 || !Component280.aClass346_2449.isKeyDown(82, -125) || !Component280.aClass346_2449.isKeyDown(81, -126)) {
@@ -373,14 +373,14 @@ final class ClientSystemInfo extends Node {
                             ClientScriptExecutor.runHook(class348_sub36);
                         }
                         if (Component39.aClass46_2249 == null) HashNode.anInt7059 = 0;
-                        if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
+                        if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.decodedOperation2708(-30206);
                         // Ctrl+Shift + wheel: change local plane (debug teleport height).
                         if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, i ^ ~0x2cd5) && Component280.aClass346_2449.isKeyDown(81, -121) && Component122.mouseWheelDelta != 0) {
                             int i_30_ = ((Component72.localPlayer.plane) - Component122.mouseWheelDelta);
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
                             } else i_30_ = 0;
-                            CollisionMap.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
+                            CollisionMap.decodedOperation3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
                         }
                         DisplayModeManagerContainer1.updateMenuTip(-120);
                         int i_31_ = 0;
@@ -388,7 +388,7 @@ final class ClientSystemInfo extends Node {
                             for (/**/; i_31_ < 5; i_31_++)
                                 Component212.anIntArray9981[i_31_]++;
                             if (Component357.aBoolean2469 && (-60000L + Component240.currentTimeMillis(-84) > Component225.aLong482)) DisplayModeManagerContainer343.saveClientPreferences(i + -11313);
-                            for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1872(i + -11424)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1878((byte) -105))) {
+                            for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.decodedOperation1872(i + -11424)); class318_sub9_sub1 != null; class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.decodedOperation1878((byte) -105))) {
                                 if ((Component240.currentTimeMillis(i ^ ~0x2ce9) / 1000L + -5L) > (long) class318_sub9_sub1.timestampSeconds) {
                                     if (class318_sub9_sub1.worldId > 0) ShaderProgramSub2.addChatMessage("", 5, (byte) -128, 0, (class318_sub9_sub1.username + (FriendsIgnoreList.aClass274_3502.getLocalized(ObjectDeserializer.languageId, 544))), "", "");
                                     if (class318_sub9_sub1.worldId == 0) ShaderProgramSub2.addChatMessage("", 5, (byte) -105, 0, (class318_sub9_sub1.username + (FriendsIgnoreList.aClass274_3503.getLocalized(ObjectDeserializer.languageId, 544))), "", "");
@@ -427,11 +427,11 @@ final class ClientSystemInfo extends Node {
                                 HashNodeSub14.enqueueOutboundPacket(i ^ ~0x2cc0, class348_sub47);
                             }
                             if (Component284.aBoolean6147) {
-                                Component55.method2334(0);
+                                Component55.decodedOperation2334(0);
                                 Component284.aBoolean6147 = false;
                             }
                             try {
-                                Component302.method1802(0);
+                                Component302.decodedOperation1802(0);
                             } catch (java.io.IOException ioexception) {
                                 SocketConnector.forceLogout(93);
                             }
@@ -448,7 +448,7 @@ final class ClientSystemInfo extends Node {
             anInt6873++;
             int i_34_ = string.length();
             byte[] is = new byte[i_34_];
-            if (i != -20) method2991(-54);
+            if (i != -20) decodedOperation2991(-54);
             for (int i_35_ = 0; i_35_ < i_34_; i_35_++) {
                 int i_36_ = string.charAt(i_35_);
                 if (i_36_ > 0 && i_36_ < 128 || i_36_ >= 160 && i_36_ <= 255) is[i_35_] = (byte) i_36_;
@@ -501,14 +501,14 @@ final class ClientSystemInfo extends Node {
         }
     }
 
-    public static void method2993(byte i) {
+    public static void decodedOperation2993(byte i) {
         anIntArray6878 = null;
         aString6876 = null;
         aString6877 = null;
         int i_37_ = 31 % ((3 - i) / 37);
     }
 
-    static final void method2994(int i) {
+    static final void decodedOperation2994(int i) {
         anInt6871++;
         if (i == 2) HelveticaFont.aClass352Array2636 = null;
     }

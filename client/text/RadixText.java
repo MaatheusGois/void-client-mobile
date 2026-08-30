@@ -22,8 +22,8 @@ final class RadixText extends Component339 {
     static int anInt6125;
     static int anInt6126;
 
-    static final boolean method1833(byte i, int i_0_, int i_1_) {
-        if (i > -111) method1834(null, (byte) -87);
+    static final boolean decodedOperation1833(byte i, int i_0_, int i_1_) {
+        if (i > -111) decodedOperation1834(null, (byte) -87);
         anInt6126++;
         return (i_0_ & 0x84080) != 0;
     }
@@ -34,7 +34,7 @@ final class RadixText extends Component339 {
         return 127;
     }
 
-    static final void method1834(DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i) {
+    static final void decodedOperation1834(DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i) {
         anInt6125++;
         int i_2_ = (class318_sub1_sub3_sub3.anInt10239 - OpenGlShader.clientCycle);
         if (i < 0) {
@@ -43,10 +43,10 @@ final class RadixText extends Component339 {
             class318_sub1_sub3_sub3.anInt10326 = 0;
             class318_sub1_sub3_sub3.y += ((i_4_ + -class318_sub1_sub3_sub3.y) / i_2_);
             class318_sub1_sub3_sub3.x += ((i_3_ + -class318_sub1_sub3_sub3.x) / i_2_);
-            if (class318_sub1_sub3_sub3.anInt10231 == 0) class318_sub1_sub3_sub3.method2440((byte) 49, 8192);
-            if (class318_sub1_sub3_sub3.anInt10231 == 1) class318_sub1_sub3_sub3.method2440((byte) 49, 12288);
-            if (class318_sub1_sub3_sub3.anInt10231 == 2) class318_sub1_sub3_sub3.method2440((byte) 49, 0);
-            if (class318_sub1_sub3_sub3.anInt10231 == 3) class318_sub1_sub3_sub3.method2440((byte) 49, 4096);
+            if (class318_sub1_sub3_sub3.anInt10231 == 0) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 8192);
+            if (class318_sub1_sub3_sub3.anInt10231 == 1) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 12288);
+            if (class318_sub1_sub3_sub3.anInt10231 == 2) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 0);
+            if (class318_sub1_sub3_sub3.anInt10231 == 3) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 4096);
         }
     }
 
@@ -57,12 +57,12 @@ final class RadixText extends Component339 {
     }
 
     final int getValue(int i, int i_5_) {
-        if (i != 3) method1834(null, (byte) 50);
+        if (i != 3) decodedOperation1834(null, (byte) 50);
         anInt6124++;
         return 1;
     }
 
-    public static void method1835(int i) {
+    public static void decodedOperation1835(int i) {
         aClass54Array6114 = null;
         aClass114_6121 = null;
         if (i != -28594) occluderCountA = -7;
@@ -79,7 +79,7 @@ final class RadixText extends Component339 {
         boolean bool_7_ = false;
         boolean bool_8_ = false;
         int i_9_ = 0;
-        if (i != -123) method1837(-93, 121, 38);
+        if (i != -123) decodedOperation1837(-93, 121, 38);
         int i_10_ = string.length();
         for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
             int i_12_ = string.charAt(i_11_);
@@ -105,7 +105,7 @@ final class RadixText extends Component339 {
         return i_9_;
     }
 
-    static final boolean method1837(int i, int i_14_, int i_15_) {
+    static final boolean decodedOperation1837(int i, int i_14_, int i_15_) {
         if (i_14_ < 41) aClass114_6121 = null;
         anInt6122++;
         return (i_15_ & 0x800) != 0;
@@ -121,7 +121,7 @@ final class RadixText extends Component339 {
         super(class348_sub51);
     }
 
-    final int method1838(int i) {
+    final int decodedOperation1838(int i) {
         if (i != -32350) parseIntRadix(89, 103, false, null);
         anInt6123++;
         return this.preferenceValue;

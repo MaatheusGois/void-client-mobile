@@ -49,12 +49,12 @@ final class NodeSub11 extends Node implements Interface6 {
         return this.when;
     }
 
-    public static void method2796(byte i) {
+    public static void decodedOperation2796(byte i) {
         aClass45_4770 = null;
-        if (i != 104) method2796((byte) -6);
+        if (i != 104) decodedOperation2796((byte) -6);
     }
 
-    static final boolean method2797(String string, byte i) {
+    static final boolean decodedOperation2797(String string, byte i) {
         anInt4763++;
         if (string == null) return false;
         for (int i_1_ = 0; (i_1_ < DefinitionSub30.friendCount); i_1_++) {

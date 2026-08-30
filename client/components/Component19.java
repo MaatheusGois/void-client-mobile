@@ -27,7 +27,7 @@ final class Component19
 
     public final float method71(byte i, float f) {
         anInt8606++;
-        if (i >= -24) method242(false);
+        if (i >= -24) decodedOperation242(false);
         return f / (float) anInt8604;
     }
 
@@ -37,7 +37,7 @@ final class Component19
             anInt8612 = i;
             anInt8604 = i_0_;
             this.aClass377_5082.setActiveTexture((byte) 79, this);
-            if (bool && i_2_ == 0 && i_1_ == 0) this.method233(i, i_0_, is, this.anInt5093, 255);
+            if (bool && i_2_ == 0 && i_1_ == 0) this.decodedOperation233(i, i_0_, is, this.anInt5093, 255);
             else {
                 OpenGL.glPixelStorei(3314, i_2_);
                 OpenGL.glTexImage2Di(this.anInt5093, 0, 6408, anInt8612, anInt8604, 0, 32993, this.aClass377_5082.anInt9918, is, 4 * i_1_);
@@ -48,7 +48,7 @@ final class Component19
         }
     }
 
-    static final void method239(byte i, int i_3_, int i_4_, DisplayModeManagerContainer57 class46) {
+    static final void decodedOperation239(byte i, int i_3_, int i_4_, DisplayModeManagerContainer57 class46) {
         anInt8610++;
         if (class46.xMode != 0) {
             if (class46.xMode == 1) class46.absoluteX = ((-class46.width + i_3_) / 2 + class46.relativeX);
@@ -86,9 +86,9 @@ final class Component19
             OpenGL.glPixelStorei(3317, 1);
             if (!bool || i_8_ != 0 || i_7_ != 0) {
                 OpenGL.glPixelStorei(3314, i_8_);
-                OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(109), i, i_6_, 0, (ParametricDefinition.method3055(121, this.aClass304_5084)), 5121, is, i_7_);
+                OpenGL.glTexImage2Dub(this.anInt5093, 0, this.decodedOperation228(109), i, i_6_, 0, (ParametricDefinition.decodedOperation3055(121, this.aClass304_5084)), 5121, is, i_7_);
                 OpenGL.glPixelStorei(3314, 0);
-            } else this.method230(7365, i, is, i_6_, this.anInt5093);
+            } else this.decodedOperation230(7365, i, is, i_6_, this.anInt5093);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ',' + i_8_ + ')'));
@@ -101,28 +101,28 @@ final class Component19
         return f / (float) anInt8612;
     }
 
-    final void method240(int i, byte i_9_, float[] fs, DisplayModeManagerContainer42 class304, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_) {
+    final void decodedOperation240(int i, byte i_9_, float[] fs, DisplayModeManagerContainer42 class304, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_) {
         try {
             int i_15_ = 108 / ((-45 - i_9_) / 49);
             anInt8614++;
             this.aClass377_5082.setActiveTexture((byte) -106, this);
             OpenGL.glPixelStorei(3314, i);
-            OpenGL.glTexSubImage2Df(this.anInt5093, 0, i_12_, i_10_, i_13_, i_14_, ParametricDefinition.method3055(106, class304), 5121, fs, i_11_);
+            OpenGL.glTexSubImage2Df(this.anInt5093, 0, i_12_, i_10_, i_13_, i_14_, ParametricDefinition.decodedOperation3055(106, class304), 5121, fs, i_11_);
             OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.CA(" + i + ',' + i_9_ + ',' + (fs != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + i_14_ + ')'));
         }
     }
 
-    static final void method241(byte i) {
+    static final void decodedOperation241(byte i) {
         anInt8617++;
         int i_16_ = NodeSub35.anInt6981 * 512 + 256;
         int i_17_ = 512 * Component300.anInt3550 + 256;
-        int i_18_ = (Component300.method2064(i_16_, Component117.anInt4372, 11219, i_17_) + -HashNodeSub4.anInt9515);
+        int i_18_ = (Component300.decodedOperation2064(i_16_, Component117.anInt4372, 11219, i_17_) + -HashNodeSub4.anInt9515);
         if (GlFramebufferTexture.anInt8537 >= 100) {
             Component317.anInt8685 = 256 + 512 * Component300.anInt3550;
             WaterSurfaceShader.anInt6246 = NodeSub35.anInt6981 * 512 + 256;
-            DisplayModeManagerContainer50.anInt3855 = (Component300.method2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685) + -HashNodeSub4.anInt9515);
+            DisplayModeManagerContainer50.anInt3855 = (Component300.decodedOperation2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685) + -HashNodeSub4.anInt9515);
         } else {
             if (WaterSurfaceShader.anInt6246 < i_16_) {
                 WaterSurfaceShader.anInt6246 += (DefinitionSub31.anInt9406 + (GlFramebufferTexture.anInt8537 * (i_16_ + -WaterSurfaceShader.anInt6246) / 1000));
@@ -151,7 +151,7 @@ final class Component19
         }
         i_17_ = 256 + Component337.anInt3647 * 512;
         i_16_ = 256 + 512 * Component48.anInt4336;
-        i_18_ = (Component300.method2064(i_16_, Component117.anInt4372, 11219, i_17_) - Component221.anInt1797);
+        i_18_ = (Component300.decodedOperation2064(i_16_, Component117.anInt4372, 11219, i_17_) - Component221.anInt1797);
         int i_19_ = -WaterSurfaceShader.anInt6246 + i_16_;
         int i_20_ = -DisplayModeManagerContainer50.anInt3855 + i_18_;
         int i_21_ = -Component317.anInt8685 + i_17_;
@@ -194,7 +194,7 @@ final class Component19
             this.aClass377_5082.setActiveTexture((byte) -24, this);
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glPixelStorei(3314, i_29_);
-            OpenGL.glTexSubImage2Dub(this.anInt5093, 0, i_32_, i, i_31_, i_30_, ParametricDefinition.method3055(103, class304), 5121, is, i_27_);
+            OpenGL.glTexSubImage2Dub(this.anInt5093, 0, i_32_, i, i_31_, i_30_, ParametricDefinition.decodedOperation3055(103, class304), 5121, is, i_27_);
             if (i_28_ >= -4) anInt8612 = 33;
             OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
@@ -210,7 +210,7 @@ final class Component19
         OpenGL.glGetTexImagei(this.anInt5093, 0, 32993, 5121, is_38_, 0);
         if (i_36_ == 112) {
             for (int i_39_ = 0; i_35_ > i_39_; i_39_++)
-                Component313.method1578(is_38_, ((-i_39_ + i_35_ + (-1 + i_34_)) * anInt8612), is, i_33_ * i_39_ + i_37_, i_33_);
+                Component313.decodedOperation1578(is_38_, ((-i_39_ + i_35_ + (-1 + i_34_)) * anInt8612), is, i_33_ * i_39_ + i_37_, i_33_);
         }
     }
 
@@ -231,7 +231,7 @@ final class Component19
         return i >= 84;
     }
 
-    public static void method242(boolean bool) {
+    public static void decodedOperation242(boolean bool) {
         if (bool == true) aString8605 = null;
     }
 
@@ -250,7 +250,7 @@ final class Component19
             anInt8612 = i;
             anInt8604 = i_47_;
             this.aClass377_5082.setActiveTexture((byte) 110, this);
-            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(113), i, i_47_, 0, ParametricDefinition.method3055(113, this.aClass304_5084), Component387.method1128(-112, this.aClass68_5088), null, 0);
+            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.decodedOperation228(113), i, i_47_, 0, ParametricDefinition.decodedOperation3055(113, this.aClass304_5084), Component387.decodedOperation1128(-112, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_47_ + ')'));
         }
@@ -272,9 +272,9 @@ final class Component19
             this.aClass377_5082.setActiveTexture((byte) -67, this);
             if (bool || i_51_ != 0 || i_50_ != 0) {
                 OpenGL.glPixelStorei(3314, i_51_);
-                OpenGL.glTexImage2Df(this.anInt5093, 0, this.method228(111), i, i_49_, 0, (ParametricDefinition.method3055(106, this.aClass304_5084)), 5126, fs, 4 * i_50_);
+                OpenGL.glTexImage2Df(this.anInt5093, 0, this.decodedOperation228(111), i, i_49_, 0, (ParametricDefinition.decodedOperation3055(106, this.aClass304_5084)), 5126, fs, 4 * i_50_);
                 OpenGL.glPixelStorei(3314, 0);
-            } else this.method238(this.anInt5093, 1, i, fs, i_49_);
+            } else this.decodedOperation238(this.anInt5093, 1, i, fs, i_49_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_49_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_50_ + ',' + i_51_ + ')'));
         }

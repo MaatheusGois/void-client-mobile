@@ -31,7 +31,7 @@ final class DisplayModeManagerContainer56
     static Rectangle[] aRectangleArray2554 = new Rectangle[100];
     static float aFloat2555;
 
-    static final boolean method1422(int i, int i_0_, int i_1_, int i_2_) {
+    static final boolean decodedOperation1422(int i, int i_0_, int i_1_, int i_2_) {
         anInt2550++;
         DefinitionSub4.aClass101_9114.method897(i_1_, i, i_0_, ShaderLinker.anIntArray10172);
         int i_3_ = ShaderLinker.anIntArray10172[2];
@@ -43,20 +43,20 @@ final class DisplayModeManagerContainer56
         return true;
     }
 
-    final void method1423(int i, Buffer class348_sub49) {
+    final void decodedOperation1423(int i, Buffer class348_sub49) {
         anInt2553++;
         this.aFloat2545 = (float) (class348_sub49.readUnsignedByte(255) * 8) / 255.0F;
         this.aFloat2542 = (float) (8 * class348_sub49.readUnsignedByte(i + 247)) / 255.0F;
         this.aFloat2551 = (float) (i * class348_sub49.readUnsignedByte(i + 247)) / 255.0F;
     }
 
-    final boolean method1424(DisplayModeManagerContainer56 class190_4_, byte i) {
+    final boolean decodedOperation1424(DisplayModeManagerContainer56 class190_4_, byte i) {
         anInt2543++;
         if (i != 84) return false;
         return (this.anInt2540 == class190_4_.anInt2540) && (this.aFloat2547 == class190_4_.aFloat2547) && (class190_4_.aFloat2544 == this.aFloat2544) && (this.aFloat2536 == class190_4_.aFloat2536) && (class190_4_.aFloat2542 == this.aFloat2542) && (class190_4_.aFloat2545 == this.aFloat2545) && (class190_4_.aFloat2551 == this.aFloat2551) && (class190_4_.anInt2549 == this.anInt2549) && (class190_4_.anInt2546 == this.anInt2546) && (class190_4_.aClass299_2541 == this.aClass299_2541);
     }
 
-    static final boolean method1425(byte i, Component274 class42, NodeSub21 class348_sub21, int i_5_, GraphicsToolkit var_ha, int i_6_) {
+    static final boolean decodedOperation1425(byte i, Component274 class42, NodeSub21 class348_sub21, int i_5_, GraphicsToolkit var_ha, int i_6_) {
         try {
             anInt2537++;
             int i_7_ = 2147483647;
@@ -76,16 +76,16 @@ final class DisplayModeManagerContainer56
             int i_13_ = 0;
             int i_14_ = 0;
             if (class42.anInt578 != -1) {
-                if (class348_sub21.aBoolean6848 && class42.anInt605 != -1) class105 = class42.method374(true, var_ha, (byte) 127);
-                else class105 = class42.method374(false, var_ha, (byte) 127);
+                if (class348_sub21.aBoolean6848 && class42.anInt605 != -1) class105 = class42.decodedOperation374(true, var_ha, (byte) 127);
+                else class105 = class42.decodedOperation374(false, var_ha, (byte) 127);
                 if (class105 != null) {
-                    i_11_ = (class348_sub21.anInt6853 + -(class105.method966() - -1 >> 1));
-                    i_12_ = (class348_sub21.anInt6853 + (1 + class105.method966() >> 1));
+                    i_11_ = (class348_sub21.anInt6853 + -(class105.decodedOperation966() - -1 >> 1));
+                    i_12_ = (class348_sub21.anInt6853 + (1 + class105.decodedOperation966() >> 1));
                     if (i_11_ < i_7_) i_7_ = i_11_;
                     if (i_12_ > i_8_) i_8_ = i_12_;
-                    i_13_ = (class348_sub21.anInt6855 - (class105.method980() - -1 >> 1));
+                    i_13_ = (class348_sub21.anInt6855 - (class105.decodedOperation980() - -1 >> 1));
                     if (i_13_ < i_9_) i_9_ = i_13_;
-                    i_14_ = (class348_sub21.anInt6855 + (1 + class105.method980() >> 1));
+                    i_14_ = (class348_sub21.anInt6855 + (1 + class105.decodedOperation980() >> 1));
                     if (i_14_ > i_10_) i_10_ = i_14_;
                 }
             }
@@ -105,7 +105,7 @@ final class DisplayModeManagerContainer56
                     i_17_ = (class348_sub21.anInt6855 - (class42.anInt568 * (DisplayModeManagerContainer229.anInt1268 + -DisplayModeManagerContainer229.anInt1262) / (DisplayModeManagerContainer229.anInt1277 - DisplayModeManagerContainer229.anInt1257)));
                     i_16_ = (class348_sub21.anInt6853 + ((-DisplayModeManagerContainer229.anInt1272 + DisplayModeManagerContainer229.anInt1276) * class42.anInt566 / (DisplayModeManagerContainer229.anInt1265 + -DisplayModeManagerContainer229.anInt1274)));
                     if (class105 == null) i_17_ -= i_15_ * class323.getBaselineAscent() / 2;
-                    else i_17_ -= ((class105.method980() >> 1) - -(i_15_ * class323.getLineHeight()));
+                    else i_17_ -= ((class105.decodedOperation980() >> 1) - -(i_15_ * class323.getLineHeight()));
                     for (int i_23_ = 0; i_15_ > i_23_; i_23_++) {
                         String string = GlToolkitSub3.aStringArray8019[i_23_];
                         if (i_23_ < -1 + i_15_) string = string.substring(0, -4 + string.length());
@@ -130,15 +130,15 @@ final class DisplayModeManagerContainer56
                     if (LoadingManager.anInt2173 <= 50) i_25_ = 2 * LoadingManager.anInt2173;
                     else i_25_ = -(LoadingManager.anInt2173 * 2) + 200;
                     int i_26_ = 0xffff00 | i_25_ << 24;
-                    var_ha.method3656((byte) -105, i_26_, class105.method971() / 2 - -7, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
-                    var_ha.method3656((byte) -120, i_26_, class105.method971() / 2 - -5, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
-                    var_ha.method3656((byte) -126, i_26_, 3 + class105.method971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
-                    var_ha.method3656((byte) -112, i_26_, 1 + class105.method971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
-                    var_ha.method3656((byte) -123, i_26_, class105.method971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
+                    var_ha.decodedOperation3656((byte) -105, i_26_, class105.decodedOperation971() / 2 - -7, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
+                    var_ha.decodedOperation3656((byte) -120, i_26_, class105.decodedOperation971() / 2 - -5, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
+                    var_ha.decodedOperation3656((byte) -126, i_26_, 3 + class105.decodedOperation971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
+                    var_ha.decodedOperation3656((byte) -112, i_26_, 1 + class105.decodedOperation971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
+                    var_ha.decodedOperation3656((byte) -123, i_26_, class105.decodedOperation971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
                 }
-                class105.drawAt((class348_sub21.anInt6853 + -(class105.method966() >> 1)), (class348_sub21.anInt6855 + -(class105.method980() >> 1)));
+                class105.drawAt((class348_sub21.anInt6853 + -(class105.decodedOperation966() >> 1)), (class348_sub21.anInt6855 + -(class105.decodedOperation980() >> 1)));
             }
-            if (class42.aString597 != null && class323 != null) DisplayModeManagerContainer173.method2683(class323, class348_sub21, i_16_, 64, i_15_, var_ha, i_17_, i_18_, class42);
+            if (class42.aString597 != null && class323 != null) DisplayModeManagerContainer173.decodedOperation2683(class323, class348_sub21, i_16_, 64, i_15_, var_ha, i_17_, i_18_, class42);
             if (class42.anInt578 != -1 || class42.aString597 != null) {
                 NodeSub12 class348_sub12 = new NodeSub12(class348_sub21);
                 class348_sub12.anInt6746 = i_13_;
@@ -157,7 +157,7 @@ final class DisplayModeManagerContainer56
         }
     }
 
-    public static void method1426(int i) {
+    public static void decodedOperation1426(int i) {
         aClass351_2539 = null;
         aRectangleArray2554 = null;
         anIntArray2552 = null;
@@ -179,7 +179,7 @@ final class DisplayModeManagerContainer56
 
     DisplayModeManagerContainer56(Buffer class348_sub49) {
         int i = class348_sub49.readUnsignedByte(255);
-        if (Component192.preferences.aClass239_Sub28_7230.method1845(-32350) != 1 || NodeCache.aHa1098.method3704() <= 0) {
+        if (Component192.preferences.aClass239_Sub28_7230.decodedOperation1845(-32350) != 1 || NodeCache.aHa1098.method3704() <= 0) {
             if ((0x1 & i) != 0) class348_sub49.readInt((byte) -126);
             if ((0x2 & i) != 0) class348_sub49.readUnsignedShort(842397944);
             if ((i & 0x4) != 0) class348_sub49.readUnsignedShort(842397944);
@@ -218,7 +218,7 @@ final class DisplayModeManagerContainer56
             int i_30_ = class348_sub49.readUnsignedShort(842397944);
             int i_31_ = class348_sub49.readUnsignedShort(842397944);
             int i_32_ = class348_sub49.readUnsignedShort(842397944);
-            this.aClass299_2541 = GameType.method1636(i_31_, i_30_, i_27_, i_32_, i_28_, -1, i_29_);
+            this.aClass299_2541 = GameType.decodedOperation1636(i_31_, i_30_, i_27_, i_32_, i_28_, -1, i_29_);
         } else this.aClass299_2541 = HashNodeSub10.aClass299_9571;
     }
 }

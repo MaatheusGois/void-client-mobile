@@ -7,16 +7,16 @@ final class Component99
  * RENAMED from `Class103` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static Component35 aClass345_1607 = Component350.method558(96);
+    static Component35 aClass345_1607 = Component350.decodedOperation558(96);
     static int anInt1608;
     static int anInt1609;
 
-    public static void method948(boolean bool) {
+    public static void decodedOperation948(boolean bool) {
         aClass345_1607 = null;
         if (bool != false) aClass345_1607 = null;
     }
 
-    static final boolean method949(int i, int i_0_, int i_1_, byte i_2_, int i_3_, int i_4_) {
+    static final boolean decodedOperation949(int i, int i_0_, int i_1_, byte i_2_, int i_3_, int i_4_) {
         if (i_2_ < 117) aClass345_1607 = null;
         anInt1609++;
         for (int i_5_ = i_3_; i_0_ >= i_5_; i_5_++) {
@@ -36,7 +36,7 @@ final class Component99
             Component304.aClass110_Sub1Array1146[i_13_] = Component304.aClass110_Sub1Array1146[i_8_];
             Component304.aClass110_Sub1Array1146[i_8_] = class110_sub1;
             for (int i_15_ = i_7_; i_15_ < i_8_; i_15_++) {
-                if (Component230.method473((byte) -122, i_10_, class110_sub1, i, bool_11_, bool, (Component304.aClass110_Sub1Array1146[i_15_])) <= 0) {
+                if (Component230.decodedOperation473((byte) -122, i_10_, class110_sub1, i, bool_11_, bool, (Component304.aClass110_Sub1Array1146[i_15_])) <= 0) {
                     Component362 class110_sub1_16_ = Component304.aClass110_Sub1Array1146[i_15_];
                     Component304.aClass110_Sub1Array1146[i_15_] = Component304.aClass110_Sub1Array1146[i_14_];
                     Component304.aClass110_Sub1Array1146[i_14_++] = class110_sub1_16_;

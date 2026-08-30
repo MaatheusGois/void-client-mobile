@@ -18,7 +18,7 @@ final class Component257
     static int anInt4795;
     static CacheStore aClass45_4796;
 
-    public static void method1159(byte i) {
+    public static void decodedOperation1159(byte i) {
         aShortArrayArray4791 = null;
         aClass65_4787 = null;
         if (i >= 36) aClass45_4796 = null;
@@ -35,7 +35,7 @@ final class Component257
 
     public final Component325 method32(int i) {
         anInt4794++;
-        if (i != -15004) method1159((byte) -110);
+        if (i != -15004) decodedOperation1159((byte) -110);
         return Component325.aClass69_1198;
     }
 

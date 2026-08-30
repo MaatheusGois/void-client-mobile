@@ -30,7 +30,7 @@ final class DisplayModeManagerContainer152
         }
     }
 
-    public static void method3611(boolean bool) {
+    public static void decodedOperation3611(boolean bool) {
         if (bool != true) aClass74_4537 = null;
         aClass74_4537 = null;
         aClass78_4538 = null;

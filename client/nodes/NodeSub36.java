@@ -22,7 +22,7 @@ final class NodeSub36
     String aString6994;
     int anInt6995;
 
-    public static void method3029(int i) {
+    public static void decodedOperation3029(int i) {
         aClass46_6990 = null;
         int i_0_ = 28 % ((i - -45) / 39);
     }

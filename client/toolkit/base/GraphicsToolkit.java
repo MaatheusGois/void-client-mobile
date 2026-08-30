@@ -109,12 +109,12 @@ abstract class GraphicsToolkit {
 
     abstract DisplayModeManagerContainer204 method3640();
 
-    static final void method3641(int i, int i_35_, byte i_36_, int i_37_, int i_38_, int i_39_) {
+    static final void decodedOperation3641(int i, int i_35_, byte i_36_, int i_37_, int i_38_, int i_39_) {
         anInt4575++;
         if (i_36_ != -75) anInt4581 = 73;
-        if (i_35_ == i_38_) Component296.method1116(i, i_37_, i_39_, i_38_, (byte) -99);
-        else if (Component27.anInt4960 <= i_39_ + -i_38_ && Component22.anInt1745 >= i_39_ - -i_38_ && -i_35_ + i >= Component72.anInt1910 && PauseTimer.anInt513 >= i + i_35_) JagTheoraDecoder.method515(i_37_, i_39_, i, i_35_, i_38_, -122);
-        else Component139.method1839(i_39_, i_35_, i, i_36_ ^ 0x4a, i_37_, i_38_);
+        if (i_35_ == i_38_) Component296.decodedOperation1116(i, i_37_, i_39_, i_38_, (byte) -99);
+        else if (Component27.anInt4960 <= i_39_ + -i_38_ && Component22.anInt1745 >= i_39_ - -i_38_ && -i_35_ + i >= Component72.anInt1910 && PauseTimer.anInt513 >= i + i_35_) JagTheoraDecoder.decodedOperation515(i_37_, i_39_, i, i_35_, i_38_, -122);
+        else Component139.decodedOperation1839(i_39_, i_35_, i, i_36_ ^ 0x4a, i_37_, i_38_);
     }
 
     abstract void method3642(int i, NodeSub1[] class348_sub1s);
@@ -123,7 +123,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean method3644();
 
-    final void method3645(int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_) {
+    final void decodedOperation3645(int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_) {
         anInt4563++;
         drawColoredRect(i_41_, i, i_42_, i_45_, i_44_, 1);
         if (i_43_ != -8003) method3665(75, 67);
@@ -135,7 +135,7 @@ abstract class GraphicsToolkit {
 
     abstract s method3648(int i, int i_46_, int[][] is, int[][] is_47_, int i_48_, int i_49_, int i_50_);
 
-    final void method3649(byte i, int i_51_, int i_52_, int i_53_, int i_54_) {
+    final void decodedOperation3649(byte i, int i_51_, int i_52_, int i_53_, int i_54_) {
         anInt4569++;
         if (i < -67) U(i_54_, i_52_, i_51_, i_53_, 1);
     }
@@ -160,7 +160,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean method3655();
 
-    final void method3656(byte i, int i_68_, int i_69_, int i_70_, int i_71_) {
+    final void decodedOperation3656(byte i, int i_68_, int i_69_, int i_70_, int i_71_) {
         anInt4580++;
         NodeBase(i_70_, i_71_, i_69_, i_68_, 1);
         if (i >= -97) aFloat4582 = 0.37843478F;
@@ -168,7 +168,7 @@ abstract class GraphicsToolkit {
 
     abstract void L(int i, int i_72_, int i_73_);
 
-    final void method3657(Rectangle[] rectangles, int i, int i_74_) throws Exception_Sub1 {
+    final void decodedOperation3657(Rectangle[] rectangles, int i, int i_74_) throws Exception_Sub1 {
         method3707(rectangles, i, 0, 0);
         anInt4568++;
         if (i_74_ <= 41) this.anInt4567 = 54;
@@ -182,7 +182,7 @@ abstract class GraphicsToolkit {
 
     abstract void resetTextureState(int i);
 
-    final void method3660(int i, int i_79_, int i_80_, int i_81_, boolean bool) {
+    final void decodedOperation3660(int i, int i_79_, int i_80_, int i_81_, boolean bool) {
         if (bool != true) H(-122, 91, -22, null);
         anInt4570++;
         P(i, i_81_, i_80_, i_79_, 1);
@@ -190,7 +190,7 @@ abstract class GraphicsToolkit {
 
     abstract Shader method3661(int i, int i_82_, int[] is, int[] is_83_);
 
-    final Component24 method3662(int i, int[] is, byte i_84_, int i_85_, int i_86_, int i_87_) {
+    final Component24 decodedOperation3662(int i, int[] is, byte i_84_, int i_85_, int i_86_, int i_87_) {
         anInt4565++;
         if (i_84_ != 94) return null;
         return method3711(is, i_85_, i_86_, i, i_87_, true);
@@ -198,10 +198,10 @@ abstract class GraphicsToolkit {
 
     abstract void method3663();
 
-    static final byte[] method3664(int i, int i_88_) {
+    static final byte[] decodedOperation3664(int i, int i_88_) {
         anInt4564++;
         if (i_88_ <= 21) anInt4583 = 60;
-        HashNodeSub3 class348_sub42_sub3 = ((HashNodeSub3) NodeSub1Sub2.aClass308_8815.method2302(i, (byte) -120));
+        HashNodeSub3 class348_sub42_sub3 = ((HashNodeSub3) NodeSub1Sub2.aClass308_8815.decodedOperation2302(i, (byte) -120));
         if (class348_sub42_sub3 == null) {
             byte[] is = new byte[512];
             Random random = new Random(i);
@@ -209,13 +209,13 @@ abstract class GraphicsToolkit {
                 is[i_89_] = (byte) i_89_;
             for (int i_90_ = 0; i_90_ < 255; i_90_++) {
                 int i_91_ = -i_90_ + 255;
-                int i_92_ = DisplayModeManagerContainer77.method1097((byte) 95, i_91_, random);
+                int i_92_ = DisplayModeManagerContainer77.decodedOperation1097((byte) 95, i_91_, random);
                 byte i_93_ = is[i_92_];
                 is[i_92_] = is[i_91_];
                 is[i_91_] = is[511 + -i_90_] = i_93_;
             }
             class348_sub42_sub3 = new HashNodeSub3(is);
-            NodeSub1Sub2.aClass308_8815.method2305(i, class348_sub42_sub3, -1);
+            NodeSub1Sub2.aClass308_8815.decodedOperation2305(i, class348_sub42_sub3, -1);
         }
         return class348_sub42_sub3.aByteArray9499;
     }
@@ -232,7 +232,7 @@ abstract class GraphicsToolkit {
 
     abstract void Q(int i, int i_98_, int i_99_, int i_100_, int i_101_, int i_102_, byte[] is, int i_103_, int i_104_);
 
-    final void method3668(int i, int i_105_, int i_106_, int i_107_, int i_108_, int i_109_) {
+    final void decodedOperation3668(int i, int i_105_, int i_106_, int i_107_, int i_108_, int i_109_) {
         anInt4574++;
         if (i_109_ >= 21) fillRect3D(i_107_, i_105_, i, i_108_, i_106_, 1);
     }
@@ -253,7 +253,7 @@ abstract class GraphicsToolkit {
 
     abstract void EA(int i, int i_122_, int i_123_, int i_124_);
 
-    final void method3675(int i, byte i_125_, int i_126_, int i_127_, int i_128_, int i_129_) {
+    final void decodedOperation3675(int i, byte i_125_, int i_126_, int i_127_, int i_128_, int i_129_) {
         if (i_125_ == -125) {
             fillRect2D(i_126_, i_127_, i, i_128_, i_129_, 1);
             anInt4566++;
@@ -268,14 +268,14 @@ abstract class GraphicsToolkit {
 
     abstract int bitwiseOr(int i, int i_142_);
 
-    public static void method3680(int i) {
+    public static void decodedOperation3680(int i) {
         if (i != -24016) friendWorldIds = null;
         friendWorldIds = null;
         aClass351_4571 = null;
     }
 
-    final void method3681(Component24 class105, int i) {
-        method3687(method3634(class105, method3624(class105.method971(), class105.method969())));
+    final void decodedOperation3681(Component24 class105, int i) {
+        method3687(method3634(class105, method3624(class105.decodedOperation971(), class105.decodedOperation969())));
         anInt4561++;
         if (i != 0) DA(-75, -67, 18, -116);
     }
@@ -308,21 +308,21 @@ abstract class GraphicsToolkit {
 
     abstract void setLineWidth(int i, int i_158_, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_);
 
-    final void method3689(byte i) throws Exception_Sub1 {
+    final void decodedOperation3689(byte i) throws Exception_Sub1 {
         swapBuffers(0, 0);
         if (i >= 53) anInt4572++;
     }
 
     abstract NodeSub1 method3690(int i, int i_164_, int i_165_, int i_166_, int i_167_, float f);
 
-    abstract Component24 method3691(Component170 class207, boolean bool);
+    abstract Component24 decodedOperation3691(Component170 class207, boolean bool);
 
-    static final synchronized GraphicsToolkit method3692(int i, int i_168_, int i_169_, CacheStore class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
+    static final synchronized GraphicsToolkit decodedOperation3692(int i, int i_168_, int i_169_, CacheStore class45, int i_170_, d var_d, Canvas canvas, int i_171_) {
         try {
             anInt4576++;
-            if (i_170_ == i_171_) return NodeSub5.method2753(true, i_168_, i_169_, canvas, var_d);
+            if (i_170_ == i_171_) return NodeSub5.decodedOperation2753(true, i_168_, i_169_, canvas, var_d);
             if (i_171_ == 2) return Component314.createOpenGLToolkit(-6, i_168_, var_d, canvas, i_169_);
-            if (i_171_ == 1) return NodeList.method2000(3, i, canvas, var_d);
+            if (i_171_ == 1) return NodeList.decodedOperation2000(3, i, canvas, var_d);
             if (i_171_ == 5) return ToolkitFactory.createOpenGlToolkit(canvas, var_d, class45, 25542, i);
             if (i_171_ == 3) return ToolkitLoader.createD3DToolkit(i, i_170_ ^ 0x4a31, var_d, class45, canvas);
             throw new IllegalArgumentException("UM");
@@ -364,7 +364,7 @@ abstract class GraphicsToolkit {
 
     abstract int method3704();
 
-    abstract DisplayModeManagerContainer204 method3705();
+    abstract DisplayModeManagerContainer204 decodedOperation3705();
 
     abstract int XA();
 

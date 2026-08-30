@@ -25,7 +25,7 @@ final class Component195
     static int anInt5018;
     static int anInt5019;
 
-    public static void method1447(int i) {
+    public static void decodedOperation1447(int i) {
         if (i == 76) {
             anIntArray5007 = null;
             aClass297_5017 = null;
@@ -33,7 +33,7 @@ final class Component195
         }
     }
 
-    static final void method1448(int i) {
+    static final void decodedOperation1448(int i) {
         anInt5003++;
         if (i <= -55) ImageDefinition.aMenuEntry_9144 = new MenuEntry((FriendsIgnoreList.aClass274_3487.getLocalized(ObjectDeserializer.languageId, 544)), "", Component149.widgetCursorId, 1004, -1, 0L, 0, 0, true, false, 0L, true);
     }
@@ -61,7 +61,7 @@ final class Component195
             Interface1 interface1 = interface1s[i_1_];
             if (interface1 != null) interface1.method9((byte) -49, bool || aBoolean5011);
         }
-        if (i > -69) method1447(-38);
+        if (i > -69) decodedOperation1447(-38);
         aBoolean5011 = false;
     }
 
@@ -76,7 +76,7 @@ final class Component195
         return aClass287_5006.anInt3687;
     }
 
-    static final Component3 method1449(int i, int i_2_, int i_3_) {
+    static final Component3 decodedOperation1449(int i, int i_2_, int i_3_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
         if (class357 == null) return null;
         return class357.aClass148_4396;
@@ -85,7 +85,7 @@ final class Component195
     public final boolean method56(byte i, long l) {
         try {
             anInt5005++;
-            if (i < 30) method1449(-81, 10, -115);
+            if (i < 30) decodedOperation1449(-81, 10, -115);
             return l - -(long) aClass287_5006.anInt3690 <= Component240.currentTimeMillis(-97);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, "qt.I(" + i + ',' + l + ')');

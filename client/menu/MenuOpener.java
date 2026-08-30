@@ -23,7 +23,7 @@ final class MenuOpener extends Component137 implements Interface8 {
     private static char[] aCharArray4845 = new char[64];
     /**
      * Secondary tip used for shift-click / "open menu" (opcode 1011) checks
-     * ({@link Component203#method2485}). Usually mirrors {@link Component192#menuTip}.
+     * ({@link Component203#decodedOperation2485}). Usually mirrors {@link Component192#menuTip}.
      */
     static MenuEntry menuTipSecondary;
 
@@ -41,13 +41,13 @@ final class MenuOpener extends Component137 implements Interface8 {
 
     public final void method35(byte[] is, int i, int i_0_, int i_1_) {
         if (i_0_ > 18) {
-            this.method1150(is, 0, i_1_);
+            this.decodedOperation1150(is, 0, i_1_);
             anInt4833++;
             anInt4837 = i;
         }
     }
 
-    public static void method1155(byte i) {
+    public static void decodedOperation1155(byte i) {
         aClass251_4835 = null;
         aClass161_4839 = null;
         int i_2_ = -29 / ((i - -49) / 43);
@@ -82,21 +82,21 @@ final class MenuOpener extends Component137 implements Interface8 {
         }
     }
 
-    static final void method1157(int i, byte i_7_) {
+    static final void decodedOperation1157(int i, byte i_7_) {
         if (i_7_ < -77) {
             Component205.anInt5969 = 2;
             anInt4834++;
             RuntimeException_Sub1.anInt4596 = i;
             long l = 0L;
             if (OggStreamReader.aString9043 == null) {
-                WorldNameText.method254(35, (byte) -87);
+                WorldNameText.decodedOperation254(35, (byte) -87);
                 return;
             } else {
-                Buffer class348_sub49 = (new Buffer(Component122.method878((Component362.method1039(OggStreamReader.aString9043, true)), -126)));
+                Buffer class348_sub49 = (new Buffer(Component122.decodedOperation878((Component362.decodedOperation1039(OggStreamReader.aString9043, true)), -126)));
                 l = class348_sub49.readLong(-456577760);
                 ObjectDeserializer.userHash = class348_sub49.readLong(-456577760);
             }
-            Component72.method1138(DisplayModeManagerContainer91.method313(l, -95), true, "", (byte) 79);
+            Component72.decodedOperation1138(DisplayModeManagerContainer91.decodedOperation313(l, -95), true, "", (byte) 79);
         }
     }
 
@@ -115,7 +115,7 @@ final class MenuOpener extends Component137 implements Interface8 {
         }
     }
 
-    static final boolean method1158(int i, int i_9_, int i_10_) {
+    static final boolean decodedOperation1158(int i, int i_9_, int i_10_) {
         if (i_9_ != -1) aClass161_4839 = null;
         anInt4844++;
         return (i_10_ & 0x180) != 0;

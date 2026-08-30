@@ -22,8 +22,8 @@ final class AbstractShaderSub2
     private GlExtensionManager aClass377_7296;
     static int anInt7297 = 0;
 
-    static final void method3536(int i, int i_0_, int i_1_, int i_2_, DisplayModeManagerContainer343 class318_sub1_sub2) {
-        Component186 class357 = NodeSub46.method3321(i, i_0_, i_1_);
+    static final void decodedOperation3536(int i, int i_0_, int i_1_, int i_2_, DisplayModeManagerContainer343 class318_sub1_sub2) {
+        Component186 class357 = NodeSub46.decodedOperation3321(i, i_0_, i_1_);
         if (class357 != null) {
             class318_sub1_sub2.x = (i_0_ << Component149.anInt4459) + DisplayModeManagerContainer64.anInt9037;
             class318_sub1_sub2.anInt6382 = i_2_;
@@ -65,8 +65,8 @@ final class AbstractShaderSub2
         try {
             aClass377_7296 = class377;
             aClass269_7294 = class269;
-            if (class45 == null || !aClass269_7294.method2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
-            else aClass193_7293 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "transparent_water", -29832), aClass377_7296, 4);
+            if (class45 == null || !aClass269_7294.decodedOperation2039(100) || !aClass377_7296.aBoolean9923) aClass193_7293 = null;
+            else aClass193_7293 = NodeBaseSub2.decodedOperation3442(34336, class45.getFile("gl", "transparent_water", -29832), aClass377_7296, 4);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ov.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
@@ -119,13 +119,13 @@ final class AbstractShaderSub2
         anInt7291++;
         if (string != null) {
             if (string.startsWith("*")) string = string.substring(1);
-            String string_8_ = DebugPanicSub1.method2127(2, string);
+            String string_8_ = DebugPanicSub1.decodedOperation2127(2, string);
             if (string_8_ != null) {
-                if (bool != true) method3536(9, 65, -72, 107, null);
+                if (bool != true) decodedOperation3536(9, 65, -72, 107, null);
                 for (int i = 0; (MenuEntry.ignoreCount > i); i++) {
                     String string_9_ = Component44.ignoreNames[i];
                     if (string_9_.startsWith("*")) string_9_ = string_9_.substring(1);
-                    string_9_ = DebugPanicSub1.method2127(2, string_9_);
+                    string_9_ = DebugPanicSub1.decodedOperation2127(2, string_9_);
                     if (string_9_ != null && string_9_.equals(string_8_)) {
                         MenuEntry.ignoreCount--;
                         for (int i_10_ = i; MenuEntry.ignoreCount > i_10_; i_10_++) {
@@ -138,7 +138,7 @@ final class AbstractShaderSub2
                         DebugPanicSub1.anInt8493++;
                         Component380.anInt4985 = ResourceLoader.anInt3918;
                         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(GraphicsToolkit.aClass351_4571, (DisplayModeManagerContainer64.aClass77_9029), -123);
-                        class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
+                        class348_sub47.particleBuffer.writeByte(false, Component31.decodedOperation1745(string, -65));
                         class348_sub47.particleBuffer.writeString((byte) -5, string);
                         HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
                         break;

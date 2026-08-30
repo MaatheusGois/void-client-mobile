@@ -44,7 +44,7 @@ final class OpenGlShader extends AbstractShader {
     static Component299 aClass32_7415 = new Component299(8);
 
     final void method3528(int i) {
-        if (i <= 45) method3557(true);
+        if (i <= 45) decodedOperation3557(true);
         anInt7401++;
         int i_0_ = this.aHa_Sub3_4479.setWindowSize(102);
         MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.uniform2f((byte) 98);
@@ -52,7 +52,7 @@ final class OpenGlShader extends AbstractShader {
         else OpenGL.glBindProgramARB(34336, (i_0_ == 2147483647 ? aClass193_7392.anInt2584 : aClass193_7407.anInt2584));
         OpenGL.glEnable(34336);
         aBoolean7406 = true;
-        class101_sub2.method919(0.0F, aFloatArray7413, -1.0F, 0.0F, (float) i_0_, (byte) -120);
+        class101_sub2.decodedOperation919(0.0F, aFloatArray7413, -1.0F, 0.0F, (float) i_0_, (byte) -120);
         OpenGL.glProgramLocalParameter4fARB(34336, 1, aFloatArray7413[0], aFloatArray7413[1], aFloatArray7413[2], aFloatArray7413[3]);
         method3522(-16252);
     }
@@ -126,7 +126,7 @@ final class OpenGlShader extends AbstractShader {
         anInt7412++;
     }
 
-    static final void method3555(CacheStore class45, int i, boolean bool, long l, int i_7_, int i_8_, int i_9_) {
+    static final void decodedOperation3555(CacheStore class45, int i, boolean bool, long l, int i_7_, int i_8_, int i_9_) {
         try {
             anInt7410++;
             Component100.method2260(i_9_, i_8_, l, 0, bool, class45, (byte) 126, i_7_);
@@ -136,7 +136,7 @@ final class OpenGlShader extends AbstractShader {
         }
     }
 
-    static final void method3556(boolean bool) {
+    static final void decodedOperation3556(boolean bool) {
         anInt7405++;
         if (bool == false) {
             synchronized (NpcComposition.aClient1367) {
@@ -159,7 +159,7 @@ final class OpenGlShader extends AbstractShader {
                         PacketReader.canvasHeight = NpcNode.canvasHeight;
                         NodeSub48.perFrameReset = 0;
                         DisplayModeManagerContainer147.perDrawReset = 0;
-                    } else SpriteAtlasShader.method2158((byte) 56);
+                    } else SpriteAtlasShader.decodedOperation2158((byte) 56);
                     if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                         if (Component236.canvasWidth < 1024 && PacketReader.canvasHeight < 768) {
                             /* empty */
@@ -167,15 +167,15 @@ final class OpenGlShader extends AbstractShader {
                     }
                     DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, (PacketReader.canvasHeight));
                     if (NodeSub8.toolkit != null) {
-                        if (Component210.gameCanvasAttached) s.method3980(120, DisplayModeManagerContainer50.gameCanvas);
+                        if (Component210.gameCanvasAttached) s.decodedOperation3980(120, DisplayModeManagerContainer50.gameCanvas);
                         else NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.canvasWidth, PacketReader.canvasHeight);
                     }
                     if (RSACipher.aFrame4904 == container) {
                         Insets insets = RSACipher.aFrame4904.getInsets();
                         DisplayModeManagerContainer50.gameCanvas.setLocation(insets.left - -NodeSub48.perFrameReset, DisplayModeManagerContainer147.perDrawReset + insets.top);
                     } else DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.perFrameReset), DisplayModeManagerContainer147.perDrawReset);
-                    if (r.anInt9721 != -1) Component339.method1713(true, 520);
-                    Component211.method1170((byte) -78);
+                    if (r.anInt9721 != -1) Component339.decodedOperation1713(true, 520);
+                    Component211.decodedOperation1170((byte) -78);
                 } else {
                     /* empty */
                 }
@@ -187,10 +187,10 @@ final class OpenGlShader extends AbstractShader {
         super(class377);
         try {
             if (class45 != null && class377.aBoolean9923) {
-                aClass193_7395 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_ground_unlit", -29832), class377, 4);
-                aClass193_7392 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_ground_lit", -29832), class377, 4);
-                aClass193_7404 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_unlit", -29832), class377, 4);
-                aClass193_7407 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_lit", -29832), class377, 4);
+                aClass193_7395 = NodeBaseSub2.decodedOperation3442(34336, class45.getFile("gl", "uw_ground_unlit", -29832), class377, 4);
+                aClass193_7392 = NodeBaseSub2.decodedOperation3442(34336, class45.getFile("gl", "uw_ground_lit", -29832), class377, 4);
+                aClass193_7404 = NodeBaseSub2.decodedOperation3442(34336, class45.getFile("gl", "uw_model_unlit", -29832), class377, 4);
+                aClass193_7407 = NodeBaseSub2.decodedOperation3442(34336, class45.getFile("gl", "uw_model_lit", -29832), class377, 4);
                 if (aClass193_7395 != null & aClass193_7392 != null & aClass193_7404 != null & aClass193_7407 != null) {
                     anInterface18_Impl3_7390 = this.aHa_Sub3_4479.deleteRenderbuffer(1, 2, -15137, false, (new int[]{0, -1}));
                     anInterface18_Impl3_7390.method66(false, false, 25688);
@@ -202,7 +202,7 @@ final class OpenGlShader extends AbstractShader {
         }
     }
 
-    public static void method3557(boolean bool) {
+    public static void decodedOperation3557(boolean bool) {
         anIntArray7397 = null;
         aClass32_7415 = null;
         if (bool == true) {

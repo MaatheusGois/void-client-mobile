@@ -93,12 +93,12 @@ final class ParticleShader extends ShaderProgram {
                 else if (class348_sub47.anInt7122 <= 98) class348_sub47.particleBuffer = new DisplayModeManagerContainer207(100);
                 else class348_sub47.particleBuffer = new DisplayModeManagerContainer207(260);
             } else class348_sub47.particleBuffer = new DisplayModeManagerContainer207(260);
-            class348_sub47.particleBuffer.method3416(-17, class77);
+            class348_sub47.particleBuffer.decodedOperation3416(-17, class77);
 
             if (Loader.debug) {
                 System.out.println("Encode packet " + class348_sub47.aClass351_7118.getOpcode(200));
             }
-            class348_sub47.particleBuffer.method3408(class348_sub47.aClass351_7118.getOpcode(200), 18676);
+            class348_sub47.particleBuffer.decodedOperation3408(class348_sub47.aClass351_7118.getOpcode(200), 18676);
             class348_sub47.anInt7119 = 0;
             return class348_sub47;
         } catch (RuntimeException runtimeexception) {
@@ -112,10 +112,10 @@ final class ParticleShader extends ShaderProgram {
             try {
                 aClass83_6227 = class83;
                 if (!this.aHa_Sub2_3684.aBoolean7841 || (this.aHa_Sub2_3684.anInt7795 < 2)) break;
-                aClass171_6220 = (Component47.method459(34336, this.aHa_Sub2_3684, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", false));
+                aClass171_6220 = (Component47.decodedOperation459(34336, this.aHa_Sub2_3684, "!!ARBvp1.0\nOPTION  ARB_position_invariant;\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nATTRIB  iTexCoord    = vertex.texcoord[0];\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   texMatrix[4]  = { state.matrix.texture[0] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, viewPos, worldPos, texCoord;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nMOV   oFogCoord.x, -viewPos.z;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nDP4   texCoord.x, texMatrix[0], iTexCoord;\nDP4   texCoord.y, texMatrix[1], iTexCoord;\nADD   oTexCoord0.xy, texCoord, noise;\nMOV   oTexCoord0.z, 0;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, texCoord, 0.125;\nMOV   oTexCoord1.zw, time.xxxw;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, iColour.w;\nEND", false));
                 if (aClass171_6220 != null) {
-                    int[][] is = DisplayModeManagerContainer207.method3413(4, 3, 64, 4, 256, true, 0, 0.4F, false);
-                    int[][] is_5_ = DisplayModeManagerContainer207.method3413(4, 3, 64, 4, 256, true, 8, 0.4F, false);
+                    int[][] is = DisplayModeManagerContainer207.decodedOperation3413(4, 3, 64, 4, 256, true, 0, 0.4F, false);
+                    int[][] is_5_ = DisplayModeManagerContainer207.decodedOperation3413(4, 3, 64, 4, 256, true, 8, 0.4F, false);
                     aFloatArray6218 = new float[32768];
                     int i = 0;
                     for (int i_6_ = 0; i_6_ < 256; i_6_++) {
@@ -186,7 +186,7 @@ final class ParticleShader extends ShaderProgram {
             this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             OpenGL.glMatrixMode(5890);
             if (bool_11_ == false) {
-                OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.method940(1), 0);
+                OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.decodedOperation940(1), 0);
                 OpenGL.glMatrixMode(5888);
                 this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
                 if (this.aHa_Sub2_3684.anInt7735 != anInt6219) {
@@ -224,25 +224,25 @@ final class ParticleShader extends ShaderProgram {
         if (DisplayModeManagerContainer306.menuEntryCount < 400) {
             NpcComposition class79 = (npc.definition);
             if (class79.anIntArray1377 != null) {
-                class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
+                class79 = class79.decodedOperation794((DisplayModeManagerContainer58.aClass170_10209), -1);
                 if (class79 == null) return;
             }
             if (class79.interactive) {
                 String string = class79.name;
                 if (class79.combatLevel != 0) {
                     String string_15_ = ((WorldNameText.STELLARDAWN != PacketReader.currentGameType) ? FriendsIgnoreList.aClass274_3511.getLocalized(ObjectDeserializer.languageId, 544) : FriendsIgnoreList.aClass274_3513.getLocalized(ObjectDeserializer.languageId, 544));
-                    string += ((WorldNameText.method250((Component72.localPlayer.combatLevel), true, class79.combatLevel)) + " (" + string_15_ + class79.combatLevel + ")");
+                    string += ((WorldNameText.decodedOperation250((Component72.localPlayer.combatLevel), true, class79.combatLevel)) + " (" + string_15_ + class79.combatLevel + ")");
                 }
                 if (r.aBoolean9722 && !bool) {
-                    Component355 class254 = (Component163.anInt3176 == -1 ? null : MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364));
-                    if ((PauseTimer.anInt500 & 0x2) != 0 && (class254 == null || (class79.method805((class254.anInt3256), Component163.anInt3176, 61) != class254.anInt3256))) {
+                    Component355 class254 = (Component163.anInt3176 == -1 ? null : MatrixSub3.aClass326_5764.decodedOperation2600(Component163.anInt3176, 28364));
+                    if ((PauseTimer.anInt500 & 0x2) != 0 && (class254 == null || (class79.decodedOperation805((class254.anInt3256), Component163.anInt3176, 61) != class254.anInt3256))) {
                         DisplayModeManagerContainer368.addMenuEntry(false, DisplayModeManagerContainer332.aString5000 + " -> <col=ffff00>" + string, 0, (byte) -81, false, 0, -1, true, 30, npc.anInt10290, DisplayModeManagerContainer332.aString5001, npc.anInt10290, Component182.anInt9747);
                         Component321.anInt2586++;
                     }
                 }
                 if (!bool) {
                     String[] strings = class79.actions;
-                    if (NodeBaseSub2.aBoolean9783) strings = Component188.method1847(strings, 0);
+                    if (NodeBaseSub2.aBoolean9783) strings = Component188.decodedOperation1847(strings, 0);
                     String preferred = DefaultClickSwapper.getPreferredNpcAction(class79.id);
                     String attack = FriendsIgnoreList.aClass274_3506.getLocalized(ObjectDeserializer.languageId, 544);
                     if (strings != null) {
@@ -307,13 +307,13 @@ final class ParticleShader extends ShaderProgram {
         }
     }
 
-    public static void method2151(int i) {
+    public static void decodedOperation2151(int i) {
         anIntArray6228 = null;
         if (i > -72) createOutboundPacket(null, null, 77);
         aCalendar6221 = null;
     }
 
-    static final void method2152(boolean bool) {
+    static final void decodedOperation2152(boolean bool) {
         for (int i = 0; i < Component325.occluderCountB; i++)
             DisplayModeManagerContainer104.aClass338Array10330[i] = null;
         anInt6223++;
@@ -401,7 +401,7 @@ final class ParticleShader extends ShaderProgram {
         Cp1252Decoder.aBoolean5226 = true;
     }
 
-    static final void method2153(int i) {
+    static final void decodedOperation2153(int i) {
         anInt6214++;
         if (!Component214.aBoolean2130 && i <= -37) {
             Component214.aBoolean2130 = true;

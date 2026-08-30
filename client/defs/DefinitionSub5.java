@@ -25,12 +25,12 @@ final class DefinitionSub5
     private int anInt9129;
     static StringCache aClass351_9130 = new StringCache(1, -1);
 
-    public static void method3059(int i) {
+    public static void decodedOperation3059(int i) {
         aClass351_9130 = null;
-        if (i >= -111) method3059(-83);
+        if (i >= -111) decodedOperation3059(-83);
     }
 
-    static final int method3060(int i, boolean bool) {
+    static final int decodedOperation3060(int i, boolean bool) {
         anInt9128++;
         if (bool != true) aClass351_9130 = null;
         return 0x7f & i >> 11;
@@ -43,7 +43,7 @@ final class DefinitionSub5
             aShortArray9116 = new short[512];
             if (anInt9125 > 0) {
                 for (int i = 0; i < 512; i++)
-                    aShortArray9116[i] = (short) DisplayModeManagerContainer77.method1097((byte) 81, anInt9125, random);
+                    aShortArray9116[i] = (short) DisplayModeManagerContainer77.decodedOperation1097((byte) 81, anInt9125, random);
             }
         }
     }
@@ -58,7 +58,7 @@ final class DefinitionSub5
 
     final void postDecode(int i) {
         if (i > 108) {
-            aByteArray9119 = GraphicsToolkit.method3664(anInt9122, 124);
+            aByteArray9119 = GraphicsToolkit.decodedOperation3664(anInt9122, 124);
             anInt9126++;
             method3061(true);
         }
@@ -181,7 +181,7 @@ final class DefinitionSub5
         return is;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_17_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_17_) {
         if (i_17_ == 31015) {
             int i_18_ = i;
             while_145_:

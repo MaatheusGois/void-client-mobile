@@ -16,7 +16,7 @@ final class Component161
     static MenuEntry aMenuEntry_1946;
     static int anInt1947;
 
-    public static void method1164(byte i) {
+    public static void decodedOperation1164(byte i) {
         if (i <= -42) {
             aClass45_1940 = null;
             aMenuEntry_1946 = null;

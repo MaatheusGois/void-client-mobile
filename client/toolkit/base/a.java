@@ -21,17 +21,17 @@ final class a
     private final OpenGLToolkit anOa5115;
     private final i anI5116;
 
-    final void method142(s var_s, int i, int i_0_) {
+    final void decodedOperation142(s var_s, int i, int i_0_) {
         H(this.nativeid, ((t) var_s).nativeid, i, i_0_);
     }
 
     private final native boolean R(long l, long l_1_, int i, int i_2_, long l_3_, boolean bool);
 
-    final boolean method143(DisplayModeManagerContainer370 class64, int i, int i_4_, DisplayModeManagerContainer204 class101, boolean bool, int i_5_) {
+    final boolean decodedOperation143(DisplayModeManagerContainer370 class64, int i, int i_4_, DisplayModeManagerContainer204 class101, boolean bool, int i_5_) {
         return n(this.nativeid, ((i) class64).nativeid, i, i_4_, ((OpenGLMatrix) class101).nativeid, bool, i_5_);
     }
 
-    final void method144(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer370 class64_6_, int i, int i_7_, int i_8_, boolean bool) {
+    final void decodedOperation144(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer370 class64_6_, int i, int i_7_, int i_8_, boolean bool) {
         r(this.nativeid, ((i) class64).nativeid, ((i) class64_6_).nativeid, i, i_7_, i_8_, bool);
     }
 
@@ -42,20 +42,20 @@ final class a
     private final native void W(long l);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.method1947(0, this);
+        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
     }
 
-    final void method145(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i) {
+    final void decodedOperation145(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i) {
         UA(this.nativeid, ((i) class64).nativeid, ((OpenGLMatrix) class101).nativeid, is, i);
     }
 
     private final native boolean n(long l, long l_11_, int i, int i_12_, long l_13_, boolean bool, int i_14_);
 
-    final boolean method146(DisplayModeManagerContainer370 class64, int i, int i_15_, DisplayModeManagerContainer204 class101, boolean bool) {
+    final boolean decodedOperation146(DisplayModeManagerContainer370 class64, int i, int i_15_, DisplayModeManagerContainer204 class101, boolean bool) {
         return R(this.nativeid, ((i) class64).nativeid, i, i_15_, ((OpenGLMatrix) class101).nativeid, bool);
     }
 
-    final void method147(s var_s, int i, int i_16_, int i_17_) {
+    final void decodedOperation147(s var_s, int i, int i_16_, int i_17_) {
         Z(this.nativeid, ((t) var_s).nativeid, i, i_16_, i_17_);
     }
 
@@ -63,11 +63,11 @@ final class a
         E(this.nativeid, bool);
     }
 
-    final void method148(s var_s, int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, boolean[][] bools) {
+    final void decodedOperation148(s var_s, int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, boolean[][] bools) {
         ta(this.nativeid, ((t) var_s).nativeid, i, i_18_, i_19_, i_20_, i_21_, i_22_, i_23_, bools);
     }
 
-    final void method149(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i, int i_24_) {
+    final void decodedOperation149(DisplayModeManagerContainer370 class64, DisplayModeManagerContainer204 class101, int[] is, int i, int i_24_) {
         f(this.nativeid, ((i) class64).nativeid, ((OpenGLMatrix) class101).nativeid, is, i, i_24_);
     }
 
@@ -75,7 +75,7 @@ final class a
 
     private final native void O(long l, GraphicsToolkit var_ha, int[] is, int[] is_31_, int[] is_32_, short[] is_33_, int i);
 
-    final void method150(GraphicsToolkit var_ha, int i, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_) {
+    final void decodedOperation150(GraphicsToolkit var_ha, int i, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_) {
         ShaderImpl(this.nativeid, var_ha, i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_);
     }
 
@@ -83,11 +83,11 @@ final class a
 
     private final native void r(long l, long l_43_, long l_44_, int i, int i_45_, int i_46_, boolean bool);
 
-    final void method151(DisplayModeManagerContainer370 class64, int[] is, DisplayModeManagerContainer204 class101) {
+    final void decodedOperation151(DisplayModeManagerContainer370 class64, int[] is, DisplayModeManagerContainer204 class101) {
         e(this.nativeid, ((i) class64).nativeid, is, ((OpenGLMatrix) class101).nativeid);
     }
 
-    final DisplayModeManagerContainer370 method152(i var_i, byte i, int i_47_, boolean bool) {
+    final DisplayModeManagerContainer370 decodedOperation152(i var_i, byte i, int i_47_, boolean bool) {
         i var_i_48_;
         i var_i_49_;
         if (i == 1) {
@@ -120,7 +120,7 @@ final class a
         W(this.nativeid);
     }
 
-    final void method154() {
+    final void decodedOperation154() {
         this.aRunnable5112 = Thread.currentThread();
         method157();
     }
@@ -131,13 +131,13 @@ final class a
 
     private final native void UA(long l, long l_62_, long l_63_, int[] is, int i);
 
-    final void method155(GraphicsToolkit var_ha, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i) {
+    final void decodedOperation155(GraphicsToolkit var_ha, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i) {
         O(this.nativeid, var_ha, is, is_64_, is_65_, is_66_, i);
     }
 
     private final native void HA(long l, GraphicsToolkit var_ha, int i, int i_67_);
 
-    final void method156() {
+    final void decodedOperation156() {
         this.aRunnable5112 = null;
         method153();
     }

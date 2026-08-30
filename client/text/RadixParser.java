@@ -66,7 +66,7 @@ final class RadixParser {
         return bool_2_;
     }
 
-    static final void method1333(short[] is, int i, String[] strings) {
+    static final void decodedOperation1333(short[] is, int i, String[] strings) {
         try {
             if (i != 26073) aClass105_2309 = null;
             anInt2295++;
@@ -76,9 +76,9 @@ final class RadixParser {
         }
     }
 
-    public static void method1334(byte i) {
+    public static void decodedOperation1334(byte i) {
         aClass223_2307 = null;
-        if (i != -110) method1333(null, -51, null);
+        if (i != -110) decodedOperation1333(null, -51, null);
         aClass114_2305 = null;
         aClass105_2309 = null;
         aClass45_2306 = null;
@@ -103,7 +103,7 @@ final class RadixParser {
         if (i_8_ >= -124) this.aLong2301 = 65L;
     }
 
-    final void method1336(int i, Buffer class348_sub49) {
+    final void decodedOperation1336(int i, Buffer class348_sub49) {
         for (; ; ) {
             int i_9_ = class348_sub49.readUnsignedByte(255);
             if (i_9_ == 0) break;
@@ -113,7 +113,7 @@ final class RadixParser {
         if (i <= 36) this.anInt2296 = 8;
     }
 
-    final void method1337(int i) {
+    final void decodedOperation1337(int i) {
         anInt2300++;
         this.anInt2298 = DisplayModeManagerContainer88.anIntArray1204[anInt2302 << 3];
         long l = this.anInt2291;

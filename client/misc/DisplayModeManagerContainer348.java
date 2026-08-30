@@ -30,7 +30,7 @@ final class DisplayModeManagerContainer348
         anInt5887++;
     }
 
-    final int method1739(int i) {
+    final int decodedOperation1739(int i) {
         anInt5889++;
         if (i != -32350) anInt5886 = -17;
         return this.preferenceValue;
@@ -40,13 +40,13 @@ final class DisplayModeManagerContainer348
         super(class348_sub51);
     }
 
-    static final boolean method1740(int i, int i_2_, boolean bool) {
+    static final boolean decodedOperation1740(int i, int i_2_, boolean bool) {
         if (bool != false) return true;
         anInt5890++;
-        return RadixText.method1833((byte) -128, i_2_, i) || PacketReader.isPacketAllowed(i_2_, i, (byte) 96);
+        return RadixText.decodedOperation1833((byte) -128, i_2_, i) || PacketReader.isPacketAllowed(i_2_, i, (byte) 96);
     }
 
-    static final void method1741(DisplayModeManagerContainer207 class348_sub49_sub2, byte i) {
+    static final void decodedOperation1741(DisplayModeManagerContainer207 class348_sub49_sub2, byte i) {
         anInt5893++;
         class348_sub49_sub2.startBitAccess(122);
         int i_3_ = StringDefinition.anInt9591;
@@ -62,7 +62,7 @@ final class DisplayModeManagerContainer348
         player.anIntArray10317[0] = i_7_ + -Component330.regionTileY;
         player.y = (((player.anIntArray10317[0]) << 9) - -(player.getSize((byte) 85) << 8));
         Component117.anInt4372 = player.plane = player.aByte6376 = i_5_;
-        if (NpcComposition.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
+        if (NpcComposition.decodedOperation802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
         if (Component101.aClass348_Sub49Array2105[i_3_] != null) player.readUpdateMask((byte) 84, (Component101.aClass348_Sub49Array2105[i_3_]));
         ShaderCompilerSub1.anInt6513 = 0;
         ShaderProgramSub7.anIntArray6290[ShaderCompilerSub1.anInt6513++] = i_3_;
@@ -90,8 +90,8 @@ final class DisplayModeManagerContainer348
         super(i, class348_sub51);
     }
 
-    static final Component362 method1742(boolean bool, int i) {
-        if (bool != false) method1740(35, -126, false);
+    static final Component362 decodedOperation1742(boolean bool, int i) {
+        if (bool != false) decodedOperation1740(35, -126, false);
         anInt5885++;
         if (!Component195.aBoolean5013 || DisplayModeManagerContainer343.anInt8731 > i || Component284.anInt6151 < i) return null;
         return (OutputStream_Sub1.aClass110_Sub1Array97[i + -DisplayModeManagerContainer343.anInt8731]);

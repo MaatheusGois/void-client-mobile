@@ -231,24 +231,24 @@ final class Component219
         return (Component192.menuTip.target);
     }
 
-    static final int method2348(int i) {
+    static final int decodedOperation2348(int i) {
         anInt6353++;
-        if (i != -8454) method2352(44, -11, 126);
+        if (i != -8454) decodedOperation2352(44, -11, 126);
         int i_6_;
         if (Component127.anInt2964 < 96) {
-            GradientPreset.method3076(0, true);
+            GradientPreset.decodedOperation3076(0, true);
             i_6_ = 1;
         } else {
             int i_7_ = Component94.benchmarkToolkitMs(-26584);
             if (i_7_ > 100) {
                 if (i_7_ <= 500) {
                     i_6_ = 3;
-                    DisplayModeManagerContainer32.method447((byte) -59);
+                    DisplayModeManagerContainer32.decodedOperation447((byte) -59);
                 } else if (i_7_ <= 1000) {
                     i_6_ = 2;
-                    DisplayModeManagerContainer254.method1263(true);
+                    DisplayModeManagerContainer254.decodedOperation1263(true);
                 } else {
-                    GradientPreset.method3076(0, true);
+                    GradientPreset.decodedOperation3076(0, true);
                     i_6_ = 1;
                 }
             } else {
@@ -258,7 +258,7 @@ final class Component219
         }
         if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) != 0) {
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 0);
-            SoftwareFallbackShader.method3553(false, (byte) 120, 0);
+            SoftwareFallbackShader.decodedOperation3553(false, (byte) 120, 0);
         }
         DisplayModeManagerContainer389.savePreferences(37);
         return i_6_;
@@ -434,7 +434,7 @@ final class Component219
         return referenceTable;
     }
 
-    static final boolean method2352(int i, int i_20_, int i_21_) {
+    static final boolean decodedOperation2352(int i, int i_20_, int i_21_) {
         anInt6358++;
         int i_22_ = -38 / ((60 - i) / 40);
         return (0x10 & i_21_) != 0;

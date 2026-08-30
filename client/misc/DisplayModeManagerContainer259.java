@@ -29,7 +29,7 @@ final class DisplayModeManagerContainer259
     static int anInt3448;
     private static short[] aShortArray3449;
 
-    static final long method2031(int i, String string) {
+    static final long decodedOperation2031(int i, String string) {
         anInt3448++;
         long l = 0L;
         int i_0_ = string.length();
@@ -49,23 +49,23 @@ final class DisplayModeManagerContainer259
         return l;
     }
 
-    final void method2032(int i, int i_3_) {
+    final void decodedOperation2032(int i, int i_3_) {
         synchronized (aClass60_3433) {
             aClass60_3433.processSoftEntries(2, i);
-            if (i_3_ > -10) method2035(116, 38);
+            if (i_3_ > -10) decodedOperation2035(116, 38);
         }
         anInt3436++;
     }
 
-    final void method2033(byte i) {
+    final void decodedOperation2033(byte i) {
         anInt3434++;
         synchronized (aClass60_3433) {
-            if (i != 46) method2037(-66);
+            if (i != 46) decodedOperation2037(-66);
             aClass60_3433.purgeSoftReferences(-94);
         }
     }
 
-    final Component11 method2034(int i, boolean bool) {
+    final Component11 decodedOperation2034(int i, boolean bool) {
         if (bool != false) aShortArray3437 = null;
         anInt3431++;
         Component11 class277;
@@ -80,15 +80,15 @@ final class DisplayModeManagerContainer259
         class277 = new Component11();
         class277.anInt3573 = i;
         class277.aClass268_3562 = this;
-        if (is != null) class277.method2070(true, new Buffer(is));
-        class277.method2067(-4860);
+        if (is != null) class277.decodedOperation2070(true, new Buffer(is));
+        class277.decodedOperation2067(-4860);
         synchronized (aClass60_3433) {
             aClass60_3433.putOne(class277, i, (byte) -111);
         }
         return class277;
     }
 
-    static final void method2035(int i, int i_4_) {
+    static final void decodedOperation2035(int i, int i_4_) {
         anInt3445++;
         int i_5_ = OpenGlShader.clientCycle - Component182.anInt9751;
         if (i_5_ >= 100) {
@@ -99,8 +99,8 @@ final class DisplayModeManagerContainer259
             if (i_6_ < NodeSub35.anInt6979 >> 8) i_6_ = NodeSub35.anInt6979 >> 8;
             if (Component113.aBooleanArray2374[4] && ItemDefinitionProvider.anIntArray3273[4] - -128 > i_6_) i_6_ = ItemDefinitionProvider.anIntArray3273[4] + 128;
             int i_7_ = 0x3fff & (int) Component112.cameraYaw + Component195.anInt5016;
-            if (i_4_ != 0) method2031(-117, null);
-            DisplayModeManagerContainer167.method268(i_6_, -200 + (Component300.method2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_7_, Component353.cameraFocusZ, i, -19360, DisplayModeManagerContainer273.cameraFocusX, 3 * (i_6_ >> 3) + 600 << 2);
+            if (i_4_ != 0) decodedOperation2031(-117, null);
+            DisplayModeManagerContainer167.decodedOperation268(i_6_, -200 + (Component300.decodedOperation2064((Component72.localPlayer.x), Component117.anInt4372, 11219, (Component72.localPlayer.y))), i_7_, Component353.cameraFocusZ, i, -19360, DisplayModeManagerContainer273.cameraFocusX, 3 * (i_6_ >> 3) + 600 << 2);
             float f = (-((float) ((100 + -i_5_) * (100 - i_5_) * (-i_5_ + 100)) / 1000000.0F) + 1.0F);
             WaterSurfaceShader.anInt6246 = (int) ((float) Component29.anInt10047 + f * (float) (-Component29.anInt10047 + WaterSurfaceShader.anInt6246));
             DisplayModeManagerContainer50.anInt3855 = (int) ((float) (-DisplayModeManagerContainer89.anInt8368 + DisplayModeManagerContainer50.anInt3855) * f + (float) DisplayModeManagerContainer89.anInt8368);
@@ -115,30 +115,30 @@ final class DisplayModeManagerContainer259
         }
     }
 
-    public static void method2036(byte i) {
+    public static void decodedOperation2036(byte i) {
         aShortArrayArray3443 = null;
         aShortArray3437 = null;
-        if (i != 121) method2035(57, 35);
+        if (i != 121) decodedOperation2035(57, 35);
         aShortArray3449 = null;
         aShortArray3430 = null;
         anIntArray3432 = null;
         aBooleanArray3438 = null;
     }
 
-    final void method2037(int i) {
+    final void decodedOperation2037(int i) {
         synchronized (aClass60_3433) {
             aClass60_3433.clear(0);
         }
         anInt3440++;
     }
 
-    static final void method2038(int i) {
+    static final void decodedOperation2038(int i) {
         if (i <= -47) {
             for (int i_9_ = 0; i_9_ < Component335.anInt2021; i_9_++) {
                 RunescapeInfo class10 = GlFramebufferTexture.aClass10Array8531[i_9_];
                 if (class10.aByte180 == 3) {
                     if (class10.aClass348_Sub16_Sub5_176 == null) class10.anInt188 = -2147483648;
-                    else PlayerState.aClass348_Sub16_Sub4_7065.method2880(class10.aClass348_Sub16_Sub5_176);
+                    else PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class10.aClass348_Sub16_Sub5_176);
                 }
             }
             anInt3446++;

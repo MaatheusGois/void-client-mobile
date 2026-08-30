@@ -20,7 +20,7 @@ final class GameType {
     static int anInt2988;
     static int anInt2989;
 
-    static final void method1634(int[] is, int i, byte[][][] is_0_, int i_1_, int i_2_, int[] is_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int[] is_8_, int[] is_9_, byte i_10_, int[] is_11_, int i_12_, boolean bool_13_, int i_14_) {
+    static final void decodedOperation1634(int[] is, int i, byte[][][] is_0_, int i_1_, int i_2_, int[] is_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int[] is_8_, int[] is_9_, byte i_10_, int[] is_11_, int i_12_, boolean bool_13_, int i_14_) {
         do {
             try {
                 anInt2982++;
@@ -37,7 +37,7 @@ final class GameType {
                         i_21_ = (int) ((double) HashTable.anInt1651 * (double) i_19_ / (double) Component25.anInt6008);
                     }
                     if (!NodeSub16Sub2.aBoolean8870) {
-                        if (Buffer.anInt7207 == 1) CookieBuilder.method383(0);
+                        if (Buffer.anInt7207 == 1) CookieBuilder.decodedOperation383(0);
                         int i_22_ = -SpriteSub1.anInt8422 + i_4_;
                         int i_23_ = i_6_ + -Component336.anInt403;
                         int i_24_ = -NodeSub21.anInt6849 + i_5_;
@@ -133,7 +133,7 @@ final class GameType {
                                     }
                                 }
                                 Component315 class243 = (PacketReader.aClass76_10436.aClass243_1282);
-                                for (RenderableSub4 class318_sub4 = ((RenderableSub4) class243.method1872(8)); class318_sub4 != null; class318_sub4 = ((RenderableSub4) class243.method1878((byte) 122))) {
+                                for (RenderableSub4 class318_sub4 = ((RenderableSub4) class243.decodedOperation1872(8)); class318_sub4 != null; class318_sub4 = ((RenderableSub4) class243.decodedOperation1878((byte) 122))) {
                                     RenderableSub3[] class318_sub3s = (class318_sub4.aClass318_Sub3Array6414);
                                     boolean bool_54_ = true;
                                     for (int i_55_ = 0; class318_sub3s.length > i_55_; i_55_++) {
@@ -163,13 +163,13 @@ final class GameType {
                                     }
                                     if (bool_54_) {
                                         class318_sub4.unlink(false);
-                                        Component350.method560(class318_sub4, i ^ 0x4b);
+                                        Component350.decodedOperation560(class318_sub4, i ^ 0x4b);
                                     }
                                 }
                                 if (Buffer.anInt7207 == 0) Component158.aHa326.method3687(DisplayModeManagerContainer167.anInterface4_252);
                                 Component158.aHa326.F(-i_33_, -i_34_);
                                 Component158.aHa326.b(i_45_, i_48_, i_43_, i_50_, d_37_);
-                                r.method3284(true, (HashNodeSub4.aDouble9517 + d_37_));
+                                r.decodedOperation3284(true, (HashNodeSub4.aDouble9517 + d_37_));
                                 DisplayModeManagerContainer389.aDouble8621 = d_37_ + HashNodeSub4.aDouble9517;
                                 if (Buffer.anInt7207 == 1) {
                                     ShaderCompilerSub1Sub1.anInt8799 = (i_17_ + -NodeSub3.anInt6568 - i_34_);
@@ -184,21 +184,21 @@ final class GameType {
                                     OutputStream_Sub1.anInt95 = i_21_;
                                     Component158.aHa326.DA(Component247.anInt4910, (ShaderCompilerSub1Sub1.anInt8799), SpriteAtlasShader.anInt6255, (OutputStream_Sub1.anInt95));
                                 }
-                                ImageTagText.method1274(PacketReader.aClass76_10436);
+                                ImageTagText.decodedOperation1274(PacketReader.aClass76_10436);
                                 if (i_51_ > 0) {
                                     Component158.aHa326.KA(0, i_49_, (GpiLogger.anInt8854), i_51_ + i_49_);
                                     Component158.aHa326.NativeHandle();
                                     Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
-                                    AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
+                                    AbstractGlTextureSub1.decodedOperation1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
                                 }
                                 if (i_46_ > 0) {
                                     Component158.aHa326.KA(i_44_, i_53_, i_44_ - -i_46_, i_53_ + i_52_);
                                     Component158.aHa326.NativeHandle();
                                     Component158.aHa326.GA(DisplayModeManagerContainer123.anInt1290);
-                                    AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
+                                    AbstractGlTextureSub1.decodedOperation1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
                                 }
                                 Component158.aHa326.la();
-                                DisplayModeManagerContainer130.method2046();
+                                DisplayModeManagerContainer130.decodedOperation2046();
                                 if (Buffer.anInt7207 == 0) Component158.aHa326.method3672();
                                 NodeSub3.anInt6568 += i_34_;
                                 ShaderCompiler.anInt4100 += i_33_;
@@ -209,9 +209,9 @@ final class GameType {
                                     ColoredText.anInt6095 += i_35_;
                                     ShaderProgram.anInt3682 += i_36_;
                                     for (int i_65_ = 0; i_65_ < AudioMixer.anInt3225; i_65_++) {
-                                        int i_66_ = ((Component360.method3452(i_65_ - -ShaderProgram.anInt3682, (byte) -15, AudioMixer.anInt3225)) * Component82.anInt425);
+                                        int i_66_ = ((Component360.decodedOperation3452(i_65_ - -ShaderProgram.anInt3682, (byte) -15, AudioMixer.anInt3225)) * Component82.anInt425);
                                         for (int i_67_ = 0; (Component82.anInt425 > i_67_); i_67_++) {
-                                            int i_68_ = ((Component360.method3452(i_67_ + (ColoredText.anInt6095), (byte) -15, Component82.anInt425)) + i_66_);
+                                            int i_68_ = ((Component360.decodedOperation3452(i_67_ + (ColoredText.anInt6095), (byte) -15, Component82.anInt425)) + i_66_);
                                             boolean bool_69_ = (((i_38_ <= i_65_) && i_39_ + i_38_ > i_65_) || (i_65_ >= i_41_ && (i_65_ < i_41_ - -i_47_) && i_67_ >= i_40_ && (i_40_ - -i_42_ > i_67_)));
                                             DisplayModeManagerContainer23.anInterface4Array1525[i_68_].method15(Component255.anInt1067 * i_67_, i_65_ * AbstractBuffer.anInt4267, Component255.anInt1067, AbstractBuffer.anInt4267, 0, 0, bool_69_, true);
                                         }
@@ -253,17 +253,17 @@ final class GameType {
                             Component158.aHa326.DA(Component247.anInt4910, ShaderCompilerSub1Sub1.anInt8799, SpriteAtlasShader.anInt6255, OutputStream_Sub1.anInt95);
                         }
                         DisplayModeManagerContainer389.aDouble8621 = 0.0;
-                        PacketReader.aClass76_10436.method775((byte) 69);
-                        ImageTagText.method1274(PacketReader.aClass76_10436);
-                        AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
-                        DisplayModeManagerContainer130.method2046();
+                        PacketReader.aClass76_10436.decodedOperation775((byte) 69);
+                        ImageTagText.decodedOperation1274(PacketReader.aClass76_10436);
+                        AbstractGlTextureSub1.decodedOperation1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, 1, false);
+                        DisplayModeManagerContainer130.decodedOperation2046();
                         NodeSub16Sub2.aBoolean8870 = false;
                         if (Buffer.anInt7207 == 0) Component158.aHa326.method3672();
-                        if (Buffer.anInt7207 == 1) Connection.method1469(-117);
+                        if (Buffer.anInt7207 == 1) Connection.decodedOperation1469(-117);
                     }
                     if (Buffer.anInt7207 == 0) DisplayModeManagerContainer167.anInterface4_252.method14(NewsFetcher.anInt4211, DefinitionSub8.anInt9157, Component210.anInt5283, HashTable.anInt1651, 0, 0, true, true);
                     Component212.anInt9997++;
-                    r.method3284(true, HashNodeSub4.aDouble9517);
+                    r.decodedOperation3284(true, HashNodeSub4.aDouble9517);
                     Component289.aDouble10120 = HashNodeSub4.aDouble9517;
                     if (Buffer.anInt7207 == 0 || Buffer.anInt7207 == 2) {
                         if (Buffer.anInt7207 == 2) {
@@ -283,7 +283,7 @@ final class GameType {
                         Component158.aHa326.DA(Component97.anInt1537, RenderableSub5.anInt6417, Component321.anInt2590, Component30.anInt1879);
                         Component158.aHa326.KA(NewsFetcher.anInt4211, DefinitionSub8.anInt9157, (NewsFetcher.anInt4211 - -Component210.anInt5283), (HashTable.anInt1651 + DefinitionSub8.anInt9157));
                     }
-                    AbstractGlTextureSub1.method1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, Buffer.anInt7207 != 2 ? 2 : 0, Buffer.anInt7207 == 1);
+                    AbstractGlTextureSub1.decodedOperation1960(i_12_, i_4_, i_6_, i_5_, is_0_, is_3_, is_8_, is_9_, is_11_, is, i_2_, i_10_, i_7_, i_1_, bool, bool_13_, i_14_, Buffer.anInt7207 != 2 ? 2 : 0, Buffer.anInt7207 == 1);
                     Component158.aHa326.la();
                     Component158.aHa326.DA(i_16_, i_17_, i_18_, i_19_);
                     if (i == -2) break;
@@ -296,7 +296,7 @@ final class GameType {
         } while (false);
     }
 
-    static final void method1635(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void decodedOperation1635(int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         try {
             anInt2983++;
             do {
@@ -311,20 +311,20 @@ final class GameType {
                             class318_sub1_sub3_sub3.anInt10312++;
                             class318_sub1_sub3_sub3.anInt10245++;
                             class318_sub1_sub3_sub3.anInt10203 = 1;
-                            if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10245), class17, -58);
+                            if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10245), class17, -58);
                         }
                         if (class318_sub1_sub3_sub3.anInt10245 >= class17.anIntArray237.length) {
                             class318_sub1_sub3_sub3.anInt10245 = 0;
                             class318_sub1_sub3_sub3.anInt10203 = 0;
                             if (class318_sub1_sub3_sub3.aBoolean10213) {
-                                class318_sub1_sub3_sub3.anInt10268 = class318_sub1_sub3_sub3.getDefinition((byte) 72).method1621((byte) -16);
+                                class318_sub1_sub3_sub3.anInt10268 = class318_sub1_sub3_sub3.getDefinition((byte) 72).decodedOperation1621((byte) -16);
                                 if (class318_sub1_sub3_sub3.anInt10268 == -1) {
                                     class318_sub1_sub3_sub3.aBoolean10213 = false;
                                     break;
                                 }
                                 class17 = (RunescapeInfo.aClass87_191.getSequence(class318_sub1_sub3_sub3.anInt10268, 7));
                             }
-                            if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10245), class17, -23);
+                            if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10245), class17, -23);
                         }
                         class318_sub1_sub3_sub3.anInt10312 = class318_sub1_sub3_sub3.anInt10245 + 1;
                         if (class17.anIntArray237 == null) {
@@ -336,7 +336,7 @@ final class GameType {
             } while (false);
             do {
                 if ((class318_sub1_sub3_sub3.anInt10269) != -1 && (OpenGlShader.clientCycle >= (class318_sub1_sub3_sub3.anInt10225))) {
-                    Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 90, class318_sub1_sub3_sub3.anInt10269));
+                    Component63 class368 = (NsnDefinition.aClass319_9245.decodedOperation2543((byte) 90, class318_sub1_sub3_sub3.anInt10269));
                     int i_70_ = class368.anInt4503;
                     if (i_70_ != -1) {
                         DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_70_, 7);
@@ -354,13 +354,13 @@ final class GameType {
                         if (class17 != null && class17.anIntArray237 != null) {
                             if (class318_sub1_sub3_sub3.anInt10240 < 0) {
                                 class318_sub1_sub3_sub3.anInt10240 = 0;
-                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, 0, class17, -89);
+                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, 0, class17, -89);
                             }
                             class318_sub1_sub3_sub3.anInt10243++;
                             if ((class17.anIntArray237.length > class318_sub1_sub3_sub3.anInt10240) && ((class17.anIntArray267[class318_sub1_sub3_sub3.anInt10240]) < class318_sub1_sub3_sub3.anInt10243)) {
                                 class318_sub1_sub3_sub3.anInt10240++;
                                 class318_sub1_sub3_sub3.anInt10243 = 1;
-                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, class318_sub1_sub3_sub3.anInt10240, class17, -17);
+                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, class318_sub1_sub3_sub3.anInt10240, class17, -17);
                             }
                             if (class318_sub1_sub3_sub3.anInt10240 >= class17.anIntArray237.length) {
                                 if (class368.aBoolean4487) {
@@ -368,7 +368,7 @@ final class GameType {
                                     class318_sub1_sub3_sub3.anInt10240 -= class17.anInt238;
                                     if (class17.anInt244 <= (class318_sub1_sub3_sub3.anInt10305)) class318_sub1_sub3_sub3.anInt10269 = -1;
                                     else if ((class318_sub1_sub3_sub3.anInt10240) >= 0 && ((class17.anIntArray237).length > (class318_sub1_sub3_sub3.anInt10240))) {
-                                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10240), class17, -70);
+                                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10240), class17, -70);
                                     } else class318_sub1_sub3_sub3.anInt10269 = -1;
                                 } else class318_sub1_sub3_sub3.anInt10269 = -1;
                             }
@@ -386,7 +386,7 @@ final class GameType {
             } while (false);
             do {
                 if ((class318_sub1_sub3_sub3.anInt10291) != -1 && (class318_sub1_sub3_sub3.anInt10211 <= OpenGlShader.clientCycle)) {
-                    Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 93, class318_sub1_sub3_sub3.anInt10291));
+                    Component63 class368 = (NsnDefinition.aClass319_9245.decodedOperation2543((byte) 93, class318_sub1_sub3_sub3.anInt10291));
                     int i_71_ = class368.anInt4503;
                     if (i_71_ != -1) {
                         DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_71_, 7);
@@ -405,13 +405,13 @@ final class GameType {
                         else {
                             if (class318_sub1_sub3_sub3.anInt10224 < 0) {
                                 class318_sub1_sub3_sub3.anInt10224 = 0;
-                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, 0, class17, -70);
+                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, 0, class17, -70);
                             }
                             class318_sub1_sub3_sub3.anInt10273++;
                             if ((class17.anIntArray237.length > class318_sub1_sub3_sub3.anInt10224) && ((class17.anIntArray267[class318_sub1_sub3_sub3.anInt10224]) < class318_sub1_sub3_sub3.anInt10273)) {
                                 class318_sub1_sub3_sub3.anInt10224++;
                                 class318_sub1_sub3_sub3.anInt10273 = 1;
-                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, class318_sub1_sub3_sub3.anInt10224, class17, -114);
+                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, class318_sub1_sub3_sub3.anInt10224, class17, -114);
                             }
                             if (class17.anIntArray237.length <= class318_sub1_sub3_sub3.anInt10224) {
                                 if (class368.aBoolean4487) {
@@ -419,7 +419,7 @@ final class GameType {
                                     class318_sub1_sub3_sub3.anInt10224 -= class17.anInt238;
                                     if (class17.anInt244 <= (class318_sub1_sub3_sub3.anInt10265)) class318_sub1_sub3_sub3.anInt10291 = -1;
                                     else if ((class318_sub1_sub3_sub3.anInt10224) >= 0 && ((class318_sub1_sub3_sub3.anInt10224) < (class17.anIntArray237).length)) {
-                                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10224), class17, -92);
+                                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10224), class17, -92);
                                     } else class318_sub1_sub3_sub3.anInt10291 = -1;
                                 } else class318_sub1_sub3_sub3.anInt10291 = -1;
                             }
@@ -455,7 +455,7 @@ final class GameType {
                     if ((class17.anIntArray237.length > (class318_sub1_sub3_sub3.anInt10267)) && (class318_sub1_sub3_sub3.anInt10232 > (class17.anIntArray267[class318_sub1_sub3_sub3.anInt10267]))) {
                         class318_sub1_sub3_sub3.anInt10267++;
                         class318_sub1_sub3_sub3.anInt10232 = 1;
-                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10267), class17, -34);
+                        if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10267), class17, -34);
                     }
                     if (class17.anIntArray237.length <= (class318_sub1_sub3_sub3.anInt10267)) {
                         class318_sub1_sub3_sub3.anInt10267 -= class17.anInt238;
@@ -466,7 +466,7 @@ final class GameType {
                         } else if (class318_sub1_sub3_sub3.anInt10267 < 0 || (class318_sub1_sub3_sub3.anInt10267 >= (class17.anIntArray237).length)) {
                             class318_sub1_sub3_sub3.anIntArray10236 = null;
                             class318_sub1_sub3_sub3.anInt10286 = -1;
-                        } else if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10267), class17, -88);
+                        } else if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10267), class17, -88);
                     }
                     class318_sub1_sub3_sub3.anInt10244 = (class318_sub1_sub3_sub3.anInt10267) + 1;
                     if (class17.anIntArray237.length <= (class318_sub1_sub3_sub3.anInt10244)) {
@@ -490,14 +490,14 @@ final class GameType {
                             if ((class17.anIntArray237.length > class182.anInt2451) && (class182.anInt2456 > (class17.anIntArray267[class182.anInt2451]))) {
                                 class182.anInt2451++;
                                 class182.anInt2456 = 1;
-                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, class182.anInt2451, class17, -108);
+                                if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, class182.anInt2451, class17, -108);
                             }
                             if (class182.anInt2451 >= class17.anIntArray237.length) {
                                 class182.anInt2451 -= class17.anInt238;
                                 class182.anInt2445++;
                                 if (class17.anInt244 > class182.anInt2445) {
                                     if (class182.anInt2451 < 0 || ((class17.anIntArray237).length <= (class182.anInt2451))) class318_sub1_sub3_sub3.aClass182Array10308[i_73_] = null;
-                                    else if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, class182.anInt2451, class17, -46);
+                                    else if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(class318_sub1_sub3_sub3, class182.anInt2451, class17, -46);
                                 } else class318_sub1_sub3_sub3.aClass182Array10308[i_73_] = null;
                             }
                             class182.anInt2455 = 1 + class182.anInt2451;
@@ -516,13 +516,13 @@ final class GameType {
         }
     }
 
-    static final Component80 method1636(int i, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_) {
+    static final Component80 decodedOperation1636(int i, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_) {
         anInt2988++;
         long l = ((long) i_76_ * 76724863L ^ ((long) i * 32147369L ^ ((long) i_74_ * 986053L ^ ((long) i_75_ * 67481L ^ (long) i_77_ * 97549L ^ (long) i_79_ * 475427L))));
         Component80 class299 = (Component80) Component121.aClass60_4543.get(l, 90);
         if (class299 != null) return class299;
         class299 = NodeCache.aHa1098.method3697(i_75_, i_77_, i_79_, i_74_, i, i_76_);
-        if (i_78_ != -1) method1636(58, 63, -99, -89, -7, 18, 71);
+        if (i_78_ != -1) decodedOperation1636(58, 63, -99, -89, -7, 18, 71);
         Component121.aClass60_4543.putOne(class299, l, (byte) -106);
         return class299;
     }
@@ -542,7 +542,7 @@ final class GameType {
         }
     }
 
-    static final boolean method1637(int i, int i_80_, int i_81_) {
+    static final boolean decodedOperation1637(int i, int i_80_, int i_81_) {
         anInt2984++;
         if (i_80_ != 32768) return true;
         return (0x8000 & i_81_) != 0;

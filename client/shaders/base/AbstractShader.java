@@ -51,10 +51,10 @@ abstract class AbstractShader {
         anInt4481++;
     }
 
-    static final RenderableSub6 method3529(int i) {
+    static final RenderableSub6 decodedOperation3529(int i) {
         anInt4478++;
-        RenderableSub6 class318_sub6 = (RenderableSub6) Component240.aClass243_1114.method1875(60);
-        if (i != 32564) method3529(-38);
+        RenderableSub6 class318_sub6 = (RenderableSub6) Component240.aClass243_1114.decodedOperation1875(60);
+        if (i != 32564) decodedOperation3529(-38);
         if (class318_sub6 != null) {
             Component6.anInt4474--;
             return class318_sub6;

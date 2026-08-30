@@ -17,7 +17,7 @@ final class Component198
     int anInt2683;
     private int anInt2684;
 
-    final boolean method1480() {
+    final boolean decodedOperation1480() {
         int i = anIntArray2682.length;
         for (int i_0_ = 0; i_0_ < i; i_0_++) {
             if (anIntArray2682[i_0_] >= 0) return false;
@@ -77,11 +77,11 @@ final class Component198
         anIntArray2678 = new int[i];
     }
 
-    final int method1483() {
+    final int decodedOperation1483() {
         return anIntArray2682.length;
     }
 
-    final void method1484(long l) {
+    final void decodedOperation1484(long l) {
         aLong2680 = l;
         int i = anIntArray2682.length;
         for (int i_12_ = 0; i_12_ < i; i_12_++) {
@@ -98,11 +98,11 @@ final class Component198
         this.anIntArray2681[i] += i_13_;
     }
 
-    final void method1486(int i) {
+    final void decodedOperation1486(int i) {
         anIntArray2682[i] = aClass348_Sub49_2677.offset;
     }
 
-    final void method1487() {
+    final void decodedOperation1487() {
         aClass348_Sub49_2677.payload = null;
         anIntArray2679 = null;
         anIntArray2682 = null;
@@ -110,11 +110,11 @@ final class Component198
         anIntArray2678 = null;
     }
 
-    final long method1488(int i) {
+    final long decodedOperation1488(int i) {
         return aLong2680 + (long) i * (long) anInt2684;
     }
 
-    private final int method1489(int i) {
+    private final int decodedOperation1489(int i) {
         int i_14_ = (aClass348_Sub49_2677.payload[aClass348_Sub49_2677.offset]);
         if (i_14_ < 0) {
             i_14_ &= 0xff;
@@ -137,7 +137,7 @@ final class Component198
         return method1481(i, i_14_);
     }
 
-    final int method1490() {
+    final int decodedOperation1490() {
         int i = anIntArray2682.length;
         int i_17_ = -1;
         int i_18_ = 2147483647;
@@ -150,24 +150,24 @@ final class Component198
         return i_17_;
     }
 
-    final boolean method1491() {
+    final boolean decodedOperation1491() {
         return aClass348_Sub49_2677.payload != null;
     }
 
-    final void method1492(int i) {
+    final void decodedOperation1492(int i) {
         aClass348_Sub49_2677.offset = anIntArray2682[i];
     }
 
-    public static void method1493() {
+    public static void decodedOperation1493() {
         aByteArray2676 = null;
     }
 
-    final int method1494(int i) {
-        int i_20_ = method1489(i);
+    final int decodedOperation1494(int i) {
+        int i_20_ = decodedOperation1489(i);
         return i_20_;
     }
 
-    final void method1495() {
+    final void decodedOperation1495() {
         aClass348_Sub49_2677.offset = -1;
     }
 

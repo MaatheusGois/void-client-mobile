@@ -29,14 +29,14 @@ final class DisplayModeManagerContainer288
             anInt8629 = i_0_;
             this.aClass377_5082.setActiveTexture((byte) 86, this);
             OpenGL.glPixelStorei(3317, 1);
-            OpenGL.glTexImage3Dub(this.anInt5093, 0, this.method228(105), anInt8631, anInt8629, anInt8626, 0, ParametricDefinition.method3055(109, this.aClass304_5084), 5121, is, 0);
+            OpenGL.glTexImage3Dub(this.anInt5093, 0, this.decodedOperation228(105), anInt8631, anInt8629, anInt8626, 0, ParametricDefinition.decodedOperation3055(109, this.aClass304_5084), 5121, is, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qba.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
-    static final NodeSub51 method247(int i) {
+    static final NodeSub51 decodedOperation247(int i) {
         anInt8632++;
         RandomAccessFileReader class234 = null;
         NodeSub51 class348_sub51 = new NodeSub51(PacketReader.currentGameType, 0);

@@ -25,25 +25,25 @@ final class NodeSub46
                 /* empty */
             }
         }
-        if (i > -33) method3321(-73, 3, 6);
+        if (i > -33) decodedOperation3321(-73, 3, 6);
         anInt7110++;
         Component40.consoleLogStream = null;
     }
 
-    public static void method3318(byte i) {
-        if (i != -80) method3322(-26, null);
+    public static void decodedOperation3318(byte i) {
+        if (i != -80) decodedOperation3322(-26, null);
         aClass114_7113 = null;
     }
 
-    static final void method3319(GraphicsToolkit var_ha, byte i) {
-        if (i > -108) method3321(19, 60, 108);
+    static final void decodedOperation3319(GraphicsToolkit var_ha, byte i) {
+        if (i > -108) decodedOperation3321(19, 60, 108);
         anInt7114++;
         if (((Component72.localPlayer.plane) != NativeLibLoader.anInt4155) && Component335.aClass357ArrayArrayArray2029 != null) {
-            if (NodeSub14.method2808((Component72.localPlayer.plane), var_ha, true)) NativeLibLoader.anInt4155 = Component72.localPlayer.plane;
+            if (NodeSub14.decodedOperation2808((Component72.localPlayer.plane), var_ha, true)) NativeLibLoader.anInt4155 = Component72.localPlayer.plane;
         }
     }
 
-    static final void method3320(Component327 class318_sub1_sub3, boolean bool) {
+    static final void decodedOperation3320(Component327 class318_sub1_sub3, boolean bool) {
         for (int i = class318_sub1_sub3.aShort8743; i <= class318_sub1_sub3.aShort8751; i++) {
             for (int i_0_ = class318_sub1_sub3.aShort8750; i_0_ <= class318_sub1_sub3.aShort8747; i_0_++) {
                 Component186 class357 = (Component335.aClass357ArrayArrayArray2029[class318_sub1_sub3.plane][i][i_0_]);
@@ -54,7 +54,7 @@ final class NodeSub46
                         if (class148.aClass318_Sub1_Sub3_2040 == class318_sub1_sub3) {
                             if (class148_1_ != null) class148_1_.aClass148_2038 = class148.aClass148_2038;
                             else class357.aClass148_4396 = class148.aClass148_2038;
-                            class148.method1199((byte) -106);
+                            class148.decodedOperation1199((byte) -106);
                             break;
                         }
                         class148_1_ = class148;
@@ -62,21 +62,21 @@ final class NodeSub46
                 }
             }
         }
-        if (!bool) Component191.method1376(class318_sub1_sub3);
+        if (!bool) Component191.decodedOperation1376(class318_sub1_sub3);
     }
 
-    static final Component186 method3321(int i, int i_2_, int i_3_) {
+    static final Component186 decodedOperation3321(int i, int i_2_, int i_3_) {
         if (Component335.aClass357ArrayArrayArray2029[i][i_2_][i_3_] == null) {
             boolean bool = (Component335.aClass357ArrayArrayArray2029[0][i_2_][i_3_] != null && Component335.aClass357ArrayArrayArray2029[0][i_2_][i_3_].aClass357_4400 != null);
             if (bool && i >= Component291.anInt2524 - 1) return null;
-            Component316.method1394(i, i_2_, i_3_);
+            Component316.decodedOperation1394(i, i_2_, i_3_);
         }
         return Component335.aClass357ArrayArrayArray2029[i][i_2_][i_3_];
     }
 
-    static final Component76 method3322(int i, Buffer class348_sub49) {
+    static final Component76 decodedOperation3322(int i, Buffer class348_sub49) {
         anInt7109++;
-        Component27 class369 = NodeSub16Sub2.method2834((byte) -125, class348_sub49);
+        Component27 class369 = NodeSub16Sub2.decodedOperation2834((byte) -125, class348_sub49);
         int i_4_ = class348_sub49.readUnsignedShort(i ^ 0x3235f8f8);
         int i_5_ = class348_sub49.readUnsignedShort(842397944);
         if (i != 0) aClass114_7113 = null;

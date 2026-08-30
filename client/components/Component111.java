@@ -26,10 +26,10 @@ final class Component111
         int i_0_ = -40 % ((-35 - i) / 51);
         int i_1_ = (class46.scrollWidth == 0 ? class46.width : class46.scrollWidth);
         int i_2_ = (class46.scrollHeight != 0 ? class46.scrollHeight : class46.height);
-        AbstractShaderSub1.method3534(false, class46.packedId, i_1_, bool, i_2_, (DefinitionSub33.openInterfaces[(class46.packedId >> 16)]));
-        if (class46.children != null) AbstractShaderSub1.method3534(false, class46.packedId, i_1_, bool, i_2_, class46.children);
+        AbstractShaderSub1.decodedOperation3534(false, class46.packedId, i_1_, bool, i_2_, (DefinitionSub33.openInterfaces[(class46.packedId >> 16)]));
+        if (class46.children != null) AbstractShaderSub1.decodedOperation3534(false, class46.packedId, i_1_, bool, i_2_, class46.children);
         NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(class46.packedId, -6008));
-        if (class348_sub41 != null) Component272.method1728(i_2_, -1, (class348_sub41.anInt7050), bool, i_1_);
+        if (class348_sub41 != null) Component272.decodedOperation1728(i_2_, -1, (class348_sub41.anInt7050), bool, i_1_);
     }
 
     static final int lowByte(int i, int i_3_) {

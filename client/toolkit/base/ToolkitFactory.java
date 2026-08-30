@@ -44,7 +44,7 @@ final class ToolkitFactory {
         }
     }
 
-    static final byte[] method863(int i, byte i_2_, byte[] is) {
+    static final byte[] decodedOperation863(int i, byte i_2_, byte[] is) {
         if (i_2_ < 64) return null;
         anInt1529++;
         byte[] is_3_ = new byte[i];
@@ -52,7 +52,7 @@ final class ToolkitFactory {
         return is_3_;
     }
 
-    static final byte[] method864(int i, byte[] is, int i_4_, int i_5_) {
+    static final byte[] decodedOperation864(int i, byte[] is, int i_4_, int i_5_) {
         anInt1533++;
         if (i_5_ >= -30) aStringArray1531 = null;
         byte[] is_6_ = new byte[i_4_];

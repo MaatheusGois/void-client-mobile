@@ -73,7 +73,7 @@ final class MatrixSub2
         this.aFloat5704 = this.aFloat5729 = this.aFloat5732 = this.aFloat5710 = this.aFloat5736 = this.aFloat5691 = this.aFloat5724 = 0.0F;
     }
 
-    final void method914(float f, float f_0_, int i, float f_1_) {
+    final void decodedOperation914(float f, float f_0_, int i, float f_1_) {
         if (i == 0) {
             this.aFloat5724 *= f_0_;
             this.aFloat5729 *= f_1_;
@@ -91,7 +91,7 @@ final class MatrixSub2
         }
     }
 
-    final void method894(int i, int i_2_, int i_3_) {
+    final void decodedOperation894(int i, int i_2_, int i_3_) {
         this.aFloat5724 = (float) i_3_;
         this.aFloat5711 = this.aFloat5722 = this.aFloat5716 = 1.0F;
         this.aFloat5710 = (float) i_2_;
@@ -106,7 +106,7 @@ final class MatrixSub2
         anInt5696++;
     }
 
-    final float[] method915(float[] fs, int i) {
+    final float[] decodedOperation915(float[] fs, int i) {
         fs[7] = this.aFloat5710;
         anInt5726++;
         fs[5] = this.aFloat5722;
@@ -171,7 +171,7 @@ final class MatrixSub2
         is[1] = (int) (this.aFloat5700 * (float) i + this.aFloat5722 * (float) i_16_ + this.aFloat5691 * (float) i_17_);
     }
 
-    final void method916(float f, boolean bool, float f_18_, float f_19_) {
+    final void decodedOperation916(float f, boolean bool, float f_18_, float f_19_) {
         this.aFloat5710 = f;
         this.aFloat5724 = f_18_;
         this.aFloat5711 = this.aFloat5722 = this.aFloat5716 = 1.0F;
@@ -182,14 +182,14 @@ final class MatrixSub2
         }
     }
 
-    final void method891(int i, int i_20_, int i_21_) {
+    final void decodedOperation891(int i, int i_20_, int i_21_) {
         this.aFloat5729 += (float) i;
         this.aFloat5710 += (float) i_20_;
         anInt5707++;
         this.aFloat5724 += (float) i_21_;
     }
 
-    final void method917(DisplayModeManagerContainer204 class101, byte i) {
+    final void decodedOperation917(DisplayModeManagerContainer204 class101, byte i) {
         anInt5698++;
         MatrixSub2 class101_sub2_22_ = (MatrixSub2) class101;
         float f = this.aFloat5711;
@@ -215,7 +215,7 @@ final class MatrixSub2
         this.aFloat5724 = (class101_sub2_22_.aFloat5736 * f_28_ + class101_sub2_22_.aFloat5691 * f_29_ + (this.aFloat5724 * class101_sub2_22_.aFloat5716) + class101_sub2_22_.aFloat5724);
     }
 
-    final float[] method918(float[] fs, int i) {
+    final float[] decodedOperation918(float[] fs, int i) {
         fs[7] = 0.0F;
         fs[13] = this.aFloat5710;
         fs[14] = this.aFloat5724;
@@ -236,9 +236,9 @@ final class MatrixSub2
         return fs;
     }
 
-    final void method919(float f, float[] fs, float f_30_, float f_31_, float f_32_, byte i) {
+    final void decodedOperation919(float f, float[] fs, float f_30_, float f_31_, float f_32_, byte i) {
         anInt5727++;
-        if (i != -120) method921((byte) -93, false);
+        if (i != -120) decodedOperation921((byte) -93, false);
         fs[0] = (f_30_ * this.aFloat5700 + f_31_ * this.aFloat5711 + this.aFloat5704 * f);
         fs[1] = (this.aFloat5708 * f_31_ + f_30_ * this.aFloat5722 + this.aFloat5732 * f);
         float f_33_;
@@ -282,23 +282,23 @@ final class MatrixSub2
         this.aFloat5724 = f_39_ * f_43_ + f * this.aFloat5724;
     }
 
-    final void method920(float f, boolean bool, float f_44_, float f_45_) {
+    final void decodedOperation920(float f, boolean bool, float f_44_, float f_45_) {
         this.aFloat5724 += f_44_;
         anInt5717++;
         this.aFloat5729 += f_45_;
         this.aFloat5710 += f;
-        if (bool != false) method915(null, 69);
+        if (bool != false) decodedOperation915(null, 69);
     }
 
-    static final void method921(byte i, boolean bool) {
+    static final void decodedOperation921(byte i, boolean bool) {
         if (i == 99) {
             for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.first(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.next((byte) 120)) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                 }
                 if (class348_sub9.aClass348_Sub16_Sub5_6673 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6673);
+                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6673);
                     class348_sub9.aClass348_Sub16_Sub5_6673 = null;
                 }
                 class348_sub9.unlink((byte) 94);
@@ -307,14 +307,14 @@ final class MatrixSub2
             if (bool) {
                 for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 69))) {
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
-                        PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                        PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                         class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                     }
                     class348_sub9.unlink((byte) 66);
                 }
                 for (SceneNode class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.first(0); class348_sub9 != null; class348_sub9 = (SceneNode) HashNodeSub16Sub2.aClass356_10465.next(0)) {
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
-                        PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                        PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                         class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                     }
                     class348_sub9.unlink((byte) 112);
@@ -323,13 +323,13 @@ final class MatrixSub2
         }
     }
 
-    final float method922(byte i, float f, float f_46_, float f_47_) {
+    final float decodedOperation922(byte i, float f, float f_46_, float f_47_) {
         anInt5701++;
         if (i <= 63) this.aFloat5700 = -0.2392172F;
         return (this.aFloat5722 * f_47_ + f * this.aFloat5708 + f_46_ * this.aFloat5732 + this.aFloat5710);
     }
 
-    final void method923(float f, float f_48_, byte i, float f_49_, float[] fs) {
+    final void decodedOperation923(float f, float f_48_, byte i, float f_49_, float[] fs) {
         fs[2] = (f_49_ * this.aFloat5716 + (this.aFloat5691 * f_48_ + this.aFloat5736 * f));
         if (i > -23) method897(30, -104, -112, null);
         anInt5697++;
@@ -337,7 +337,7 @@ final class MatrixSub2
         fs[0] = (f_49_ * this.aFloat5704 + (this.aFloat5711 * f + f_48_ * this.aFloat5700));
     }
 
-    final float[] method924(int i, float[] fs) {
+    final float[] decodedOperation924(int i, float[] fs) {
         fs[2] = this.aFloat5704;
         fs[0] = this.aFloat5711;
         fs[6] = this.aFloat5732;
@@ -358,7 +358,7 @@ final class MatrixSub2
         return fs;
     }
 
-    public static void method925(int i) {
+    public static void decodedOperation925(int i) {
         if (i == -5997) {
             aClass351_5699 = null;
             aClass114_5742 = null;
@@ -383,7 +383,7 @@ final class MatrixSub2
         return class101_sub2_50_;
     }
 
-    final void method926(int i, DisplayModeManagerContainer204 class101) {
+    final void decodedOperation926(int i, DisplayModeManagerContainer204 class101) {
         anInt5737++;
         if (i != -15699) this.aFloat5722 = 0.6372093F;
         MatrixSub2 class101_sub2_51_ = (MatrixSub2) class101;
@@ -401,7 +401,7 @@ final class MatrixSub2
         this.aFloat5704 = class101_sub2_51_.aFloat5704;
     }
 
-    final void method927(DisplayModeManagerContainer204 class101, DisplayModeManagerContainer204 class101_52_) {
+    final void decodedOperation927(DisplayModeManagerContainer204 class101, DisplayModeManagerContainer204 class101_52_) {
         try {
             anInt5743++;
             MatrixSub2 class101_sub2_53_ = (MatrixSub2) class101;
@@ -423,7 +423,7 @@ final class MatrixSub2
         }
     }
 
-    final float[] method928(float[] fs, int i) {
+    final float[] decodedOperation928(float[] fs, int i) {
         fs[13] = 0.0F;
         fs[i] = this.aFloat5708;
         fs[5] = this.aFloat5722;
@@ -444,7 +444,7 @@ final class MatrixSub2
         return fs;
     }
 
-    final float method929(float f, float f_55_, byte i, float f_56_) {
+    final float decodedOperation929(float f, float f_55_, byte i, float f_56_) {
         anInt5720++;
         if (i != 45) this.aFloat5722 = 0.64777815F;
         return (f * this.aFloat5704 + (f_55_ * this.aFloat5700 + f_56_ * this.aFloat5711) + this.aFloat5729);
@@ -492,7 +492,7 @@ final class MatrixSub2
         is[2] = (int) ((float) i * this.aFloat5736 + this.aFloat5691 * (float) i_66_ + (float) i_67_ * this.aFloat5716);
     }
 
-    final float[] method930(int i, float[] fs) {
+    final float[] decodedOperation930(int i, float[] fs) {
         fs[7] = 0.0F;
         fs[14] = 0.0F;
         fs[8] = this.aFloat5736;
@@ -513,7 +513,7 @@ final class MatrixSub2
         return fs;
     }
 
-    final void method931(int i, DisplayModeManagerContainer204 class101) {
+    final void decodedOperation931(int i, DisplayModeManagerContainer204 class101) {
         anInt5730++;
         MatrixSub2 class101_sub2_68_ = (MatrixSub2) class101;
         this.aFloat5700 = class101_sub2_68_.aFloat5708;
@@ -567,7 +567,7 @@ final class MatrixSub2
         this.aFloat5711 = f_75_;
     }
 
-    final float method933(byte i, float f, float f_76_, float f_77_) {
+    final float decodedOperation933(byte i, float f, float f_76_, float f_77_) {
         if (i != -105) this.aFloat5724 = -0.26493254F;
         anInt5740++;
         return (this.aFloat5724 + (this.aFloat5736 * f + f_77_ * this.aFloat5691 + this.aFloat5716 * f_76_));
@@ -577,7 +577,7 @@ final class MatrixSub2
         method910();
     }
 
-    final void method934(byte i) {
+    final void decodedOperation934(byte i) {
         this.aFloat5710 = -this.aFloat5710;
         if (i == 64) {
             this.aFloat5691 = -this.aFloat5691;
@@ -608,7 +608,7 @@ final class MatrixSub2
         this.aFloat5708 = class101_sub2_78_.aFloat5708;
     }
 
-    final void method935(float f, float f_79_, float f_80_, float f_81_, float f_82_, float f_83_, float f_84_, float f_85_, float f_86_, int i) {
+    final void decodedOperation935(float f, float f_79_, float f_80_, float f_81_, float f_82_, float f_83_, float f_84_, float f_85_, float f_86_, int i) {
         anInt5718++;
         this.aFloat5708 = f_79_;
         this.aFloat5716 = f;
@@ -624,7 +624,7 @@ final class MatrixSub2
         this.aFloat5711 = f_86_;
     }
 
-    final void method936(int i, int i_87_, int i_88_, float f, float f_89_, float f_90_, int i_91_) {
+    final void decodedOperation936(int i, int i_87_, int i_88_, float f, float f_89_, float f_90_, int i_91_) {
         anInt5703++;
         if (i == i_87_) {
             this.aFloat5708 = this.aFloat5736 = this.aFloat5700 = this.aFloat5691 = this.aFloat5704 = this.aFloat5732 = 0.0F;

@@ -31,27 +31,27 @@ final class Component263
     boolean aBoolean1562 = true;
     int anInt1563;
 
-    final void method871(byte i) {
+    final void decodedOperation871(byte i) {
         anInt1552++;
-        if (i >= 77) method875(-126, anInterface5_Impl2_1551, this.anInt1563);
+        if (i >= 77) decodedOperation875(-126, anInterface5_Impl2_1551, this.anInt1563);
     }
 
-    static final void method872(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+    static final void decodedOperation872(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         anInt1554++;
         if (i_5_ >= Component27.anInt4960 && Component22.anInt1745 >= i_4_ && Component72.anInt1910 <= i_2_ && PauseTimer.anInt513 >= i_3_) {
-            if (i_1_ == 1) Component357.method1388(i_2_, i, i_0_ + 107, i_4_, i_5_, i_3_);
-            else Component84.method849(i_1_, i_2_, i_5_, i_4_, i_3_, 100, i);
-        } else if (i_1_ != 1) Component255.method535(i_5_, i_3_, i_1_, i_4_, i, i_2_, (byte) -106);
-        else DummyClass.method3575((byte) 103, i_4_, i, i_3_, i_2_, i_5_);
-        if (i_0_ != 1) method873(47, 5, null, 1);
+            if (i_1_ == 1) Component357.decodedOperation1388(i_2_, i, i_0_ + 107, i_4_, i_5_, i_3_);
+            else Component84.decodedOperation849(i_1_, i_2_, i_5_, i_4_, i_3_, 100, i);
+        } else if (i_1_ != 1) Component255.decodedOperation535(i_5_, i_3_, i_1_, i_4_, i, i_2_, (byte) -106);
+        else DummyClass.decodedOperation3575((byte) 103, i_4_, i, i_3_, i_2_, i_5_);
+        if (i_0_ != 1) decodedOperation873(47, 5, null, 1);
     }
 
-    static final void method873(int i, int i_6_, GraphicsToolkit var_ha, int i_7_) {
+    static final void decodedOperation873(int i, int i_6_, GraphicsToolkit var_ha, int i_7_) {
         NodeCache.aHa1098 = var_ha;
         NodeList.aClass190ArrayArray3335 = new DisplayModeManagerContainer56[i][i_7_];
         if (i_6_ == 21719) {
             anInt1549++;
-            if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = GameType.method1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
+            if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = GameType.decodedOperation1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
             FriendsIgnoreList.aClass190_3547 = new DisplayModeManagerContainer56();
             GlToolkitSub3.createCursor(0);
         }
@@ -125,7 +125,7 @@ final class Component263
         }
     }
 
-    final void method875(int i, Interface5_Impl2 interface5_impl2, int i_22_) {
+    final void decodedOperation875(int i, Interface5_Impl2 interface5_impl2, int i_22_) {
         if (i_22_ > 0) {
             method874(-12763);
             aHa_Sub3_1561.setActiveTexture((byte) 119, anInterface18_Impl3_1556);
@@ -135,14 +135,14 @@ final class Component263
         if (i > -47) this.anInt1563 = 75;
     }
 
-    static final void method876(int i, int i_23_) {
+    static final void decodedOperation876(int i, int i_23_) {
         anInt1557++;
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
             DisplayModeManagerContainer310.aClass60_355.processSoftEntries(2, i);
         }
         synchronized (Component387.aClass60_1894) {
             Component387.aClass60_1894.processSoftEntries(2, i);
-            if (i_23_ != 0) method876(51, 108);
+            if (i_23_ != 0) decodedOperation876(51, 108);
         }
     }
 

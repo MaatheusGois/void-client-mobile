@@ -21,12 +21,12 @@ abstract class Component47
 
     abstract void method457(int i, int i_4_, int i_5_);
 
-    public static void method458(int i) {
-        if (i != -14487) method459(-97, null, null, true);
+    public static void decodedOperation458(int i) {
+        if (i != -14487) decodedOperation459(-97, null, null, true);
         aString863 = null;
     }
 
-    static final Component382 method459(int i, GlToolkitSub2 var_ha_Sub2, String string, boolean bool) {
+    static final Component382 decodedOperation459(int i, GlToolkitSub2 var_ha_Sub2, String string, boolean bool) {
         try {
             anInt861++;
             int i_6_ = OpenGL.glGenProgramARB();

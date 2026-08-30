@@ -71,7 +71,7 @@ final class Component367
         }
     }
 
-    private static final int method3580(int i, int i_18_) {
+    private static final int decodedOperation3580(int i, int i_18_) {
         int i_19_;
         for (i_19_ = (int) Math.pow(i, 1.0 / (double) i_18_) + 1; Buffer.pow(i_18_, (byte) 64, i_19_) > i; i_19_--) {
             /* empty */
@@ -79,7 +79,7 @@ final class Component367
         return i_19_;
     }
 
-    final int method3581() {
+    final int decodedOperation3581() {
         int i;
         for (i = 0; anIntArray4519[i] >= 0; i = (NodeSub10.method2788() != 0 ? anIntArray4519[i] : i + 1)) {
             /* empty */
@@ -87,8 +87,8 @@ final class Component367
         return ~anIntArray4519[i];
     }
 
-    final float[] method3582() {
-        return aFloatArrayArray4515[method3581()];
+    final float[] decodedOperation3582() {
+        return aFloatArrayArray4515[decodedOperation3581()];
     }
 
     Component367() {
@@ -101,7 +101,7 @@ final class Component367
             int i = 0;
             int i_20_ = NodeSub10.readBits(5) + 1;
             while (i < anInt4518) {
-                int i_21_ = NodeSub10.readBits(Component80.method2253(anInt4518 - i, 126));
+                int i_21_ = NodeSub10.readBits(Component80.decodedOperation2253(anInt4518 - i, 126));
                 for (int i_22_ = 0; i_22_ < i_21_; i_22_++)
                     anIntArray4516[i++] = i_20_;
                 i_20_++;
@@ -116,12 +116,12 @@ final class Component367
         method3579();
         int i = NodeSub10.readBits(4);
         if (i > 0) {
-            float f = NodeSub10.method2786(NodeSub10.readBits(32));
-            float f_24_ = NodeSub10.method2786(NodeSub10.readBits(32));
+            float f = NodeSub10.decodedOperation2786(NodeSub10.readBits(32));
+            float f_24_ = NodeSub10.decodedOperation2786(NodeSub10.readBits(32));
             int i_25_ = NodeSub10.readBits(4) + 1;
             boolean bool_26_ = NodeSub10.method2788() != 0;
             int i_27_;
-            if (i == 1) i_27_ = method3580(anInt4518, this.anInt4514);
+            if (i == 1) i_27_ = decodedOperation3580(anInt4518, this.anInt4514);
             else i_27_ = anInt4518 * this.anInt4514;
             anIntArray4517 = new int[i_27_];
             for (int i_28_ = 0; i_28_ < i_27_; i_28_++)

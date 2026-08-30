@@ -32,8 +32,8 @@ final class Component326
         }
     }
 
-    public static void method523(int i) {
-        if (i <= 80) method524(-87, true, 104, 0);
+    public static void decodedOperation523(int i) {
+        if (i <= 80) decodedOperation524(-87, true, 104, 0);
         LIVE = null;
     }
 
@@ -45,14 +45,14 @@ final class Component326
         anInt5272 = i_1_;
     }
 
-    static final void method524(int i, boolean bool, int i_2_, int i_3_) {
+    static final void decodedOperation524(int i, boolean bool, int i_2_, int i_3_) {
         if (i_3_ > -108) aBoolean5265 = false;
         if (DisplayModeManagerContainer91.aClass356_389.get(i_2_, -6008) == null) {
             if (PauseTimer.aBoolean510) {
                 ColorTagNode class348_sub15 = new ColorTagNode(i_2_, new Component326(4096, (Component334.aClass45_2015), i_2_), i, bool);
                 class348_sub15.aClass55_Sub1_6768.method509(-92, Component185.languageNames[ObjectDeserializer.languageId]);
                 DisplayModeManagerContainer91.aClass356_389.put((byte) 35, i_2_, class348_sub15);
-            } else DisplayModeManagerContainer165.method2285(bool, (byte) -90, i_2_);
+            } else DisplayModeManagerContainer165.decodedOperation2285(bool, (byte) -90, i_2_);
         }
         anInt5268++;
     }

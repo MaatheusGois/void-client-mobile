@@ -47,7 +47,7 @@ final class OpenGLBitmapFont extends BitmapFont {
                     }
                 }
             }
-            aClass258_Sub3_Sub1_6511 = Component307.method3583(false, is, 6406, i_1_, var_ha_Sub2, -86, 6406, i_1_);
+            aClass258_Sub3_Sub1_6511 = Component307.decodedOperation3583(false, is, 6406, i_1_, var_ha_Sub2, -86, 6406, i_1_);
             aBoolean6512 = true;
         } else {
             int[] is = new int[i_1_ * i_1_];
@@ -81,10 +81,10 @@ final class OpenGLBitmapFont extends BitmapFont {
                     }
                 }
             }
-            aClass258_Sub3_Sub1_6511 = DefinitionSub32.method3132(is, 0, 0, i_1_, i_1_, var_ha_Sub2, false, (byte) 12);
+            aClass258_Sub3_Sub1_6511 = DefinitionSub32.decodedOperation3132(is, 0, 0, i_1_, i_1_, var_ha_Sub2, false, (byte) 12);
             aBoolean6512 = false;
         }
-        aClass258_Sub3_Sub1_6511.method1957(9728, false);
+        aClass258_Sub3_Sub1_6511.decodedOperation1957(9728, false);
         aClass61_6510 = new Component128(var_ha_Sub2, 256);
         float f = (aClass258_Sub3_Sub1_6511.aFloat9937 / (float) (aClass258_Sub3_Sub1_6511.anInt9940));
         float f_30_ = (aClass258_Sub3_Sub1_6511.aFloat9938 / (float) (aClass258_Sub3_Sub1_6511.anInt9939));
@@ -118,7 +118,7 @@ final class OpenGLBitmapFont extends BitmapFont {
     final void method2578(char c, int i, int i_42_, int i_43_, boolean bool, Shader var_aa, int i_44_, int i_45_) {
         ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
-        aHa_Sub2_6509.method3735(9473);
+        aHa_Sub2_6509.decodedOperation3735(9473);
         aHa_Sub2_6509.bindTexture((byte) -109, aClass258_Sub3_Sub1_6511);
         if (aBoolean6512 || bool) {
             aHa_Sub2_6509.glTexEnvi(7681, (byte) -38, 8448);
@@ -150,7 +150,7 @@ final class OpenGLBitmapFont extends BitmapFont {
     }
 
     final void fa(char c, int i, int i_47_, int i_48_, boolean bool) {
-        aHa_Sub2_6509.method3735(9473);
+        aHa_Sub2_6509.decodedOperation3735(9473);
         aHa_Sub2_6509.bindTexture((byte) -96, aClass258_Sub3_Sub1_6511);
         if (aBoolean6512 || bool) {
             aHa_Sub2_6509.glTexEnvi(7681, (byte) 117, 8448);

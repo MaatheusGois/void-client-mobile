@@ -43,7 +43,7 @@ final class Component63
     private int anInt4512;
     Component144 aClass319_4513;
 
-    final DisplayModeManagerContainer370 method3558(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, Component344 class87, int i_3_) {
+    final DisplayModeManagerContainer370 decodedOperation3558(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, Component344 class87, int i_3_) {
         try {
             if (i_2_ != 3172) aShortArray4504 = null;
             anInt4505++;
@@ -53,7 +53,7 @@ final class Component63
         }
     }
 
-    final void method3559(int i, Buffer class348_sub49) {
+    final void decodedOperation3559(int i, Buffer class348_sub49) {
         anInt4497++;
         if (i == 28105) {
             for (; ; ) {
@@ -64,8 +64,8 @@ final class Component63
         }
     }
 
-    public static void method3560(int i) {
-        if (i != -13) method3563(-34, (byte) 21, -111);
+    public static void decodedOperation3560(int i) {
+        if (i != -13) decodedOperation3563(-34, (byte) 21, -111);
         aClass114_4500 = null;
     }
 
@@ -75,7 +75,7 @@ final class Component63
      */
     static final String getComponentOption(int i, DisplayModeManagerContainer57 class46, boolean bool) {
         anInt4495++;
-        if (bool != true) method3560(68);
+        if (bool != true) decodedOperation3560(68);
         if (!client.getComponentSettings(class46).hasOption(i, !bool) && class46.optionScripts == null) return null;
         if (class46.optionLabels == null || (i >= class46.optionLabels.length) || class46.optionLabels[i] == null || class46.optionLabels[i].trim().length() == 0) {
             if (DisplayModeManagerContainer356.aBoolean6327) return "Hidden-" + i;
@@ -84,7 +84,7 @@ final class Component63
         return class46.optionLabels[i];
     }
 
-    final DisplayModeManagerContainer370 method3562(int i, GraphicsToolkit var_ha, int i_5_, int i_6_, int i_7_, Component344 class87, byte i_8_) {
+    final DisplayModeManagerContainer370 decodedOperation3562(int i, GraphicsToolkit var_ha, int i_5_, int i_6_, int i_7_, Component344 class87, byte i_8_) {
         try {
             if (i_8_ <= 24) return null;
             anInt4511++;
@@ -94,9 +94,9 @@ final class Component63
         }
     }
 
-    static final boolean method3563(int i, byte i_9_, int i_10_) {
+    static final boolean decodedOperation3563(int i, byte i_9_, int i_10_) {
         anInt4493++;
-        if (i_9_ != 56) method3563(-107, (byte) 118, 32);
+        if (i_9_ != 56) decodedOperation3563(-107, (byte) 118, 32);
         return (i & 0x800) != 0;
     }
 
@@ -153,7 +153,7 @@ final class Component63
         }
     }
 
-    final DisplayModeManagerContainer370 method3565(int i, int i_16_, int i_17_, int i_18_, boolean bool, GraphicsToolkit var_ha, int i_19_, int i_20_, int i_21_, Component344 class87, s var_s, int i_22_, s var_s_23_) {
+    final DisplayModeManagerContainer370 decodedOperation3565(int i, int i_16_, int i_17_, int i_18_, boolean bool, GraphicsToolkit var_ha, int i_19_, int i_20_, int i_21_, Component344 class87, s var_s, int i_22_, s var_s_23_) {
         try {
             anInt4496++;
             if (i_21_ != -129) method3566(null, 36, -84, null, 43, null, 2, (byte) 54, null, -17, true, -42, (byte) 95, -81);
@@ -179,7 +179,7 @@ final class Component63
             int i_33_ = i_24_;
             DisplayModeManagerContainer167 class17 = (this.anInt4503 != -1 && i != -1 ? class87.getSequence(this.anInt4503, 7) : null);
             bool = bool & this.aByte4488 != 0;
-            if (class17 != null) i_33_ |= class17.method263(i_32_, 110, i, false);
+            if (class17 != null) i_33_ |= class17.decodedOperation263(i_32_, 110, i, false);
             if (bool) i_33_ = i_33_ | (this.aByte4488 != 3 ? 2 : 7);
             if (anInt4492 != 128) i_33_ |= 0x2;
             if (anInt4498 != 128 || anInt4508 != 0) i_33_ |= 0x5;
@@ -194,7 +194,7 @@ final class Component63
                 if (aShortArray4499 != null) i_34_ |= 0x8000;
                 DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, (this.aClass319_4513.aClass45_3981), anInt4506, -1);
                 if (class124 == null) return null;
-                if (class124.anInt1830 < 13) class124.method1092(2, 114);
+                if (class124.anInt1830 < 13) class124.decodedOperation1092(2, 114);
                 class64 = var_ha.method3625(class124, i_34_, (this.aClass319_4513.anInt3991), 64 + anInt4489, anInt4512 - -850);
                 if (aShortArray4490 != null) {
                     for (int i_35_ = 0; (i_35_ < aShortArray4490.length); i_35_++)
@@ -210,7 +210,7 @@ final class Component63
                 }
             }
             if (i_31_ != -68) return null;
-            DisplayModeManagerContainer370 class64_37_ = (class17 != null ? class17.method266(class64, 0, i_32_, i_27_, i, i_26_, 663780816, i_33_) : class64.createRenderPass(i_27_, i_33_, true));
+            DisplayModeManagerContainer370 class64_37_ = (class17 != null ? class17.decodedOperation266(class64, 0, i_32_, i_27_, i, i_26_, 663780816, i_33_) : class64.createRenderPass(i_27_, i_33_, true));
             if (anInt4498 != 128 || anInt4492 != 128) class64_37_.O(anInt4498, anInt4492, anInt4498);
             if (anInt4508 != 0) {
                 if (anInt4508 == 90) class64_37_.a(4096);

@@ -25,7 +25,7 @@ final class HelveticaFont {
     static Component48[] aClass352Array2636;
     static int anInt2637;
 
-    static final void method1455(int i, Color color, String string, Color color_0_, byte i_1_, Color color_2_) {
+    static final void decodedOperation1455(int i, Color color, String string, Color color_0_, byte i_1_, Color color_2_) {
         try {
             anInt2627++;
             try {
@@ -87,37 +87,37 @@ final class HelveticaFont {
         }
     }
 
-    final boolean method1456(byte i) {
+    final boolean decodedOperation1456(byte i) {
         if (i < 49) return true;
         anInt2634++;
         return aBoolean2625;
     }
 
-    static final int method1457(int i, int i_8_) {
+    static final int decodedOperation1457(int i, int i_8_) {
         if (NodeSub1Sub2.aByteArrayArray8816 != null) return NodeSub1Sub2.aByteArrayArray8816[i][i_8_] & 0xff;
         return 0;
     }
 
-    final int method1458(int i) {
+    final int decodedOperation1458(int i) {
         if (i != -23688) return -22;
         anInt2628++;
         return anInt2635;
     }
 
-    static final void method1459(int i, int i_9_) {
+    static final void decodedOperation1459(int i, int i_9_) {
         anInt2637++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 10);
-        class348_sub42_sub15.method3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, 10);
+        class348_sub42_sub15.decodedOperation3251(-16058);
         if (i_9_ != 2) aClass352Array2636 = null;
     }
 
-    final boolean method1460(int i) {
+    final boolean decodedOperation1460(int i) {
         anInt2630++;
         if (i >= -27) anInt2626 = 107;
         return aBoolean2629;
     }
 
-    public static void method1461(byte i) {
+    public static void decodedOperation1461(byte i) {
         anIntArray2633 = null;
         if (i <= 77) anIntArray2633 = null;
         anIntArray2631 = null;
@@ -125,7 +125,7 @@ final class HelveticaFont {
         anIntArray2632 = null;
     }
 
-    final int method1462(int i) {
+    final int decodedOperation1462(int i) {
         int i_10_ = 23 % ((-4 - i) / 55);
         anInt2624++;
         return anInt2626;
@@ -140,7 +140,7 @@ final class HelveticaFont {
 
     static {
         for (int i = 0; i < 4096; i++)
-            anIntArray2631[i] = Component278.method1918(-3358, i);
+            anIntArray2631[i] = Component278.decodedOperation1918(-3358, i);
         anIntArray2632 = new int[32];
         anIntArray2633 = new int[32];
         aClass352Array2636 = null;

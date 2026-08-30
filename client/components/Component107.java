@@ -15,7 +15,7 @@ final class Component107
     private final int[] anIntArray4260;
     private final int anInt4261;
 
-    final void method2688(float[] fs, int i, boolean bool) {
+    final void decodedOperation2688(float[] fs, int i, boolean bool) {
         for (int i_0_ = 0; i_0_ < i; i_0_++)
             fs[i_0_] = 0.0F;
         if (!bool) {
@@ -27,7 +27,7 @@ final class Component107
                 int i_5_ = 0;
                 while (i_5_ < i_3_) {
                     if (i_4_ == 0) {
-                        int i_6_ = NodeSub10.aClass370Array6718[anInt4261].method3581();
+                        int i_6_ = NodeSub10.aClass370Array6718[anInt4261].decodedOperation3581();
                         for (int i_7_ = i_1_ - 1; i_7_ >= 0; i_7_--) {
                             if (i_5_ + i_7_ < i_3_) is[i_5_ + i_7_] = i_6_ % anInt4255;
                             i_6_ /= anInt4255;
@@ -42,14 +42,14 @@ final class Component107
                             if (anInt4257 == 0) {
                                 int i_12_ = (anInt4256 / class370.anInt4514);
                                 for (int i_13_ = 0; i_13_ < i_12_; i_13_++) {
-                                    float[] fs_14_ = class370.method3582();
+                                    float[] fs_14_ = class370.decodedOperation3582();
                                     for (int i_15_ = 0; (i_15_ < class370.anInt4514); i_15_++)
                                         fs[i_11_ + i_13_ + i_15_ * i_12_] += fs_14_[i_15_];
                                 }
                             } else {
                                 int i_16_ = 0;
                                 while (i_16_ < anInt4256) {
-                                    float[] fs_17_ = class370.method3582();
+                                    float[] fs_17_ = class370.decodedOperation3582();
                                     for (int i_18_ = 0; (i_18_ < class370.anInt4514); i_18_++) {
                                         fs[i_11_ + i_16_] += fs_17_[i_18_];
                                         i_16_++;

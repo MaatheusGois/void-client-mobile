@@ -38,16 +38,16 @@ final class Component143
                 break;
             }
         }
-        if (i != 7) method1340(-127, null);
+        if (i != 7) decodedOperation1340(-127, null);
     }
 
-    final int method1339(int i) {
+    final int decodedOperation1339(int i) {
         if (i != 100) return -3;
         anInt2310++;
         return anInt2324;
     }
 
-    final Object method1340(int i, Interface14 interface14) {
+    final Object decodedOperation1340(int i, Interface14 interface14) {
         anInt2313++;
         long l = interface14.method52((byte) 64);
         for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.get(l, -6008); class348_sub42_sub9 != null; class348_sub42_sub9 = (ReferenceHolder) aClass356_2312.continueGet(true)) {
@@ -108,15 +108,15 @@ final class Component143
         }
     }
 
-    static final void method1343(int i, DisplayModeManagerContainer57 class46, int i_1_, int i_2_) {
+    static final void decodedOperation1343(int i, DisplayModeManagerContainer57 class46, int i_1_, int i_2_) {
         Component299.anInt451 = i;
         NodeSub36.aClass46_6990 = class46;
         Component9.anInt4141 = i_2_;
         anInt2328++;
-        if (i_1_ != 1) method1349((byte) 119);
+        if (i_1_ != 1) decodedOperation1349((byte) 119);
     }
 
-    final void method1344(byte i) {
+    final void decodedOperation1344(byte i) {
         anInt2319++;
         for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.first(-87); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.next((byte) 69))) {
             if (class348_sub42_sub9.isSoftRef((byte) 5)) {
@@ -128,7 +128,7 @@ final class Component143
         if (i > -34) aBooleanArray2326 = null;
     }
 
-    final void method1345(byte i) {
+    final void decodedOperation1345(byte i) {
         aClass107_2316.clear(2110355138);
         anInt2325++;
         aClass356_2312.clear(0);
@@ -136,7 +136,7 @@ final class Component143
         anInt2311 = anInt2324;
     }
 
-    final void method1346(int i, int i_4_) {
+    final void decodedOperation1346(int i, int i_4_) {
         anInt2322++;
         if (Component99.aClass345_1607 != null) {
             for (ReferenceHolder class348_sub42_sub9 = (ReferenceHolder) aClass107_2316.first(-72); class348_sub42_sub9 != null; class348_sub42_sub9 = ((ReferenceHolder) aClass107_2316.next((byte) 59))) {
@@ -149,7 +149,7 @@ final class Component143
                 } else if (++class348_sub42_sub9.accessAge > (long) i_4_) {
                     ReferenceHolder class348_sub42_sub9_5_ = Component99.aClass345_1607.method2694(-1, class348_sub42_sub9);
                     aClass356_2312.put((byte) 120, (class348_sub42_sub9.key), class348_sub42_sub9_5_);
-                    Component317.method573(class348_sub42_sub9_5_, class348_sub42_sub9, (byte) 63);
+                    Component317.decodedOperation573(class348_sub42_sub9_5_, class348_sub42_sub9, (byte) 63);
                     class348_sub42_sub9.unlink((byte) 70);
                     class348_sub42_sub9.unlink(true);
                 }
@@ -158,7 +158,7 @@ final class Component143
         if (i != -1491) method1342(null, (byte) 51);
     }
 
-    static final float[] method1347(int i, int i_6_, float f, float f_7_, int i_8_, float f_9_, int i_10_, int i_11_) {
+    static final float[] decodedOperation1347(int i, int i_6_, float f, float f_7_, int i_8_, float f_9_, int i_10_, int i_11_) {
         anInt2323++;
         float[] fs = new float[9];
         float[] fs_12_ = new float[9];
@@ -219,7 +219,7 @@ final class Component143
         return fs_12_;
     }
 
-    final void method1348(int i, Object object, Interface14 interface14) {
+    final void decodedOperation1348(int i, Object object, Interface14 interface14) {
         do {
             try {
                 anInt2318++;
@@ -233,7 +233,7 @@ final class Component143
         } while (false);
     }
 
-    public static void method1349(byte i) {
+    public static void decodedOperation1349(byte i) {
         anIntArray2330 = null;
         aClass340_2327 = null;
         aBooleanArray2326 = null;
@@ -241,7 +241,7 @@ final class Component143
         if (i > -103) aBooleanArray2326 = null;
     }
 
-    final int method1350(byte i) {
+    final int decodedOperation1350(byte i) {
         int i_21_ = -9 % ((73 - i) / 53);
         anInt2320++;
         return anInt2311;

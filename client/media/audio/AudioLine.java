@@ -124,7 +124,7 @@ class AudioLine {
     private final void method2085(int i, NodeSub16 class348_sub16, int i_2_) {
         anInt3597++;
         int i_3_ = i_2_ >> 5;
-        if (i != -1846918107) method2088(true, null);
+        if (i != -1846918107) decodedOperation2088(true, null);
         NodeSub16 class348_sub16_4_ = aClass348_Sub16Array3621[i_3_];
         if (class348_sub16_4_ != null) class348_sub16_4_.aClass348_Sub16_6785 = class348_sub16;
         else aClass348_Sub16Array3619[i_3_] = class348_sub16;
@@ -135,7 +135,7 @@ class AudioLine {
     private final void method2086(int[] is, int i) {
         int i_5_ = i;
         if (Component21.stereo) i_5_ <<= 1;
-        Component313.method1573(is, 0, i_5_);
+        Component313.decodedOperation1573(is, 0, i_5_);
         anInt3615 -= i;
         if (aClass348_Sub16_3604 != null && anInt3615 <= 0) {
             anInt3615 += Component231.sampleRate >> 4;
@@ -207,7 +207,7 @@ class AudioLine {
         aLong3602 = Component240.currentTimeMillis(-102);
     }
 
-    final synchronized void method2087(int i) {
+    final synchronized void decodedOperation2087(int i) {
         aBoolean3623 = true;
         anInt3599++;
         try {
@@ -219,7 +219,7 @@ class AudioLine {
         }
     }
 
-    final synchronized void method2088(boolean bool, NodeSub16 class348_sub16) {
+    final synchronized void decodedOperation2088(boolean bool, NodeSub16 class348_sub16) {
         if (bool != false) method2085(0, null, 69);
         aClass348_Sub16_3604 = class348_sub16;
         anInt3600++;
@@ -230,11 +230,11 @@ class AudioLine {
         anInt3615 -= i;
         if (anInt3615 < 0) anInt3615 = 0;
         if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.skip(i);
-        if (i_19_ > -75) method2090(13, 6, true, (byte) 40, 67, -121, -107);
+        if (i_19_ > -75) decodedOperation2090(13, 6, true, (byte) 40, 67, -121, -107);
     }
 
-    static final void method2090(int i, int i_20_, boolean bool, byte i_21_, int i_22_, int i_23_, int i_24_) {
-        if ((bool ? Component192.preferences.aClass239_Sub26_7215.method1838(-32350) : Component192.preferences.aClass239_Sub26_7272.method1838(-32350)) != 0 && i != 0 && Component335.anInt2021 < 50 && i_24_ != -1)
+    static final void decodedOperation2090(int i, int i_20_, boolean bool, byte i_21_, int i_22_, int i_23_, int i_24_) {
+        if ((bool ? Component192.preferences.aClass239_Sub26_7215.decodedOperation1838(-32350) : Component192.preferences.aClass239_Sub26_7272.decodedOperation1838(-32350)) != 0 && i != 0 && Component335.anInt2021 < 50 && i_24_ != -1)
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i_24_, i, i_23_, i_22_, 0, i_20_, null);
         if (i_21_ == -35) anInt3608++;
     }
@@ -279,7 +279,7 @@ class AudioLine {
         }
     }
 
-    final synchronized void method2093(boolean bool) {
+    final synchronized void decodedOperation2093(boolean bool) {
         anInt3609++;
         if (Component191.aClass250_2462 != null) {
             boolean bool_35_ = true;

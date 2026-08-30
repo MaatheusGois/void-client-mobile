@@ -66,7 +66,7 @@ final class Component241
     static Component315 aClass243_2957;
     int anInt2958;
 
-    final DisplayModeManagerContainer204[] method1618(GraphicsToolkit var_ha, int i) {
+    final DisplayModeManagerContainer204[] decodedOperation1618(GraphicsToolkit var_ha, int i) {
         anInt2952++;
         if (aClass101Array2925 != null && var_ha.anInt4567 == anInt2942) return aClass101Array2925;
         if (this.anIntArrayArray2939 == null) return null;
@@ -91,30 +91,30 @@ final class Component241
                 if (i_6_ != 0) class101.method908(i_6_);
                 if (i_4_ != 0) class101.method900(i_4_);
                 if (i_5_ != 0) class101.method896(i_5_);
-                class101.method891(i_1_, i_2_, i_3_);
+                class101.decodedOperation891(i_1_, i_2_, i_3_);
             }
         }
         return aClass101Array2925;
     }
 
-    public static void method1619(byte i) {
+    public static void decodedOperation1619(byte i) {
         aClass225_2931 = null;
         aClass173_2944 = null;
         int i_7_ = 86 / ((i - 41) / 40);
         aClass243_2957 = null;
     }
 
-    final void method1620(Buffer class348_sub49, int i) {
+    final void decodedOperation1620(Buffer class348_sub49, int i) {
         for (; ; ) {
             int i_8_ = class348_sub49.readUnsignedByte(255);
             if (i_8_ == 0) break;
             method1622(class348_sub49, 48, i_8_);
         }
-        if (i >= -27) method1621((byte) 109);
+        if (i >= -27) decodedOperation1621((byte) 109);
         anInt2933++;
     }
 
-    final int method1621(byte i) {
+    final int decodedOperation1621(byte i) {
         anInt2921++;
         if (this.anInt2918 != -1) return this.anInt2918;
         if (this.anIntArray2915 != null) {
@@ -226,8 +226,8 @@ final class Component241
         if (i != 48) this.anInt2928 = -71;
     }
 
-    final boolean method1623(int i, int i_22_) {
-        if (i_22_ >= -32) method1618(null, 16);
+    final boolean decodedOperation1623(int i, int i_22_) {
+        if (i_22_ >= -32) decodedOperation1618(null, 16);
         anInt2902++;
         if (i == -1) return false;
         if (this.anInt2918 == i) return true;

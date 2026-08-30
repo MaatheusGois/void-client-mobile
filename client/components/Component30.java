@@ -29,19 +29,19 @@ final class Component30
     int anInt1892;
     static int anInt1893;
 
-    final Component30 method1124(int i, int i_0_, int i_1_, int i_2_) {
+    final Component30 decodedOperation1124(int i, int i_0_, int i_1_, int i_2_) {
         anInt1893++;
         if (i_0_ != -1) return null;
         return new Component30(anInt1886, i_2_, i, i_1_, this.aByte1875);
     }
 
-    final Component113 method1125(byte i) {
+    final Component113 decodedOperation1125(byte i) {
         anInt1873++;
         if (i != 59) this.anInt1880 = -51;
         return MouseHandler.getOrLoadConfig(anInt1886, i ^ 0x3b);
     }
 
-    public static void method1126(int i) {
+    public static void decodedOperation1126(int i) {
         if (i == 32) {
             aClass45_1878 = null;
             aByteArrayArray1887 = null;

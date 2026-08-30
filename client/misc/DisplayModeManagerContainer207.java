@@ -26,19 +26,19 @@ final class DisplayModeManagerContainer207
     static short[] aShortArray9768 = {11, 17, 45, 23, 48, 8, 57, 58};
     static int anInt9769;
 
-    final boolean method3404(int i) {
+    final boolean decodedOperation3404(int i) {
         anInt9758++;
         if (i != -1510) return true;
-        int i_0_ = (((this.payload[this.offset]) - aClass77_9756.method778((byte) 19)) & 0xff);
+        int i_0_ = (((this.payload[this.offset]) - aClass77_9756.decodedOperation778((byte) 19)) & 0xff);
         return i_0_ >= 128;
     }
 
-    static final int method3405(int i, boolean bool) {
+    static final int decodedOperation3405(int i, boolean bool) {
         anInt9765++;
         if (NodeSub1.anIntArray6547 == null) return 0;
         if (!bool && HelveticaFont.aClass352Array2636 != null) return NodeSub1.anIntArray6547.length * 2;
         int i_1_ = 0;
-        if (i != 2012104999) method3405(118, false);
+        if (i != 2012104999) decodedOperation3405(118, false);
         for (int i_2_ = 0; NodeSub1.anIntArray6547.length > i_2_; i_2_++) {
             int i_3_ = NodeSub1.anIntArray6547[i_2_];
             if (DisplayModeManagerContainer271.aClass45_518.isSingletonFileReady(false, i_3_)) i_1_++;
@@ -47,29 +47,29 @@ final class DisplayModeManagerContainer207
         return i_1_;
     }
 
-    final void method3406(int i, int[] is) {
+    final void decodedOperation3406(int i, int[] is) {
         anInt9755++;
         aClass77_9756 = new DisplayModeManagerContainer123(is);
         if (i > -41) anIntArray9757 = null;
     }
 
-    final int method3407(int i) {
+    final int decodedOperation3407(int i) {
         anInt9752++;
-        int i_4_ = (((this.payload[this.offset++]) - aClass77_9756.method781((byte) -67)) & 0xff);
+        int i_4_ = (((this.payload[this.offset++]) - aClass77_9756.decodedOperation781((byte) -67)) & 0xff);
         if (i_4_ < 128) return i_4_;
         if (i != 15295) anIntArray9757 = null;
-        return ((((this.payload[this.offset++]) - aClass77_9756.method781((byte) -62)) & 0xff) + (i_4_ + -128 << 8));
+        return ((((this.payload[this.offset++]) - aClass77_9756.decodedOperation781((byte) -62)) & 0xff) + (i_4_ + -128 << 8));
     }
 
-    final void method3408(int i, int i_5_) {
-        this.payload[this.offset++] = (byte) (i + aClass77_9756.method781((byte) -85));
+    final void decodedOperation3408(int i, int i_5_) {
+        this.payload[this.offset++] = (byte) (i + aClass77_9756.decodedOperation781((byte) -85));
         if (i_5_ == 18676) anInt9760++;
     }
 
-    final void method3409(int i, byte[] is, int i_6_, int i_7_) {
+    final void decodedOperation3409(int i, byte[] is, int i_6_, int i_7_) {
         if (i_7_ == -32769) {
             for (int i_8_ = 0; i_8_ < i; i_8_++)
-                is[i_6_ + i_8_] = (byte) ((this.payload[this.offset++]) + -aClass77_9756.method781((byte) -99));
+                is[i_6_ + i_8_] = (byte) ((this.payload[this.offset++]) + -aClass77_9756.decodedOperation781((byte) -99));
             anInt9762++;
         }
     }
@@ -90,10 +90,10 @@ final class DisplayModeManagerContainer207
         return i_12_;
     }
 
-    static final void method3411(int i, int i_13_, int i_14_) {
+    static final void decodedOperation3411(int i, int i_13_, int i_14_) {
         anInt9761++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_13_);//12
-        class348_sub42_sub15.method3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, i_13_);//12
+        class348_sub42_sub15.decodedOperation3246(-25490);
         class348_sub42_sub15.anInt9652 = i_14_;
     }
 
@@ -103,7 +103,7 @@ final class DisplayModeManagerContainer207
         if (bool != false) aShortArray9768 = null;
     }
 
-    static final int[][] method3413(int i, int i_15_, int i_16_, int i_17_, int i_18_, boolean bool, int i_19_, float f, boolean bool_20_) {
+    static final int[][] decodedOperation3413(int i, int i_15_, int i_16_, int i_17_, int i_18_, boolean bool, int i_19_, float f, boolean bool_20_) {
         anInt9764++;
         int[][] is = new int[i_18_][i_16_];
         DefinitionSub8 class348_sub40_sub8 = new DefinitionSub8();
@@ -113,25 +113,25 @@ final class DisplayModeManagerContainer207
         class348_sub40_sub8.anInt9164 = i;
         class348_sub40_sub8.aBoolean9160 = bool_20_;
         class348_sub40_sub8.postDecode(109);
-        NpcComposition.method797(i_18_, i_16_, (byte) 120);
+        NpcComposition.decodedOperation797(i_18_, i_16_, (byte) 120);
         if (bool != true) anIntArray9757 = null;
         for (int i_21_ = 0; i_21_ < i_18_; i_21_++)
-            class348_sub40_sub8.method3069(i_21_, is[i_21_], (byte) 99);
+            class348_sub40_sub8.decodedOperation3069(i_21_, is[i_21_], (byte) 99);
         return is;
     }
 
-    public static void method3414(int i) {
+    public static void decodedOperation3414(int i) {
         aShortArray9768 = null;
         if (i == 21515) anIntArray9757 = null;
     }
 
-    final int method3415(int i, int i_22_) {
-        if (i >= -58) method3405(50, true);
+    final int decodedOperation3415(int i, int i_22_) {
+        if (i >= -58) decodedOperation3405(50, true);
         anInt9769++;
         return -anInt9754 + i_22_ * 8;
     }
 
-    final void method3416(int i, DisplayModeManagerContainer123 class77) {
+    final void decodedOperation3416(int i, DisplayModeManagerContainer123 class77) {
         int i_23_ = -103 / ((i - 57) / 40);
         aClass77_9756 = class77;
         anInt9766++;

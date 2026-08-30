@@ -56,11 +56,11 @@ class Component210
         anInt5291++;
     }
 
-    static final void method551(int i, int i_2_, int i_3_, float[] fs, int i_4_, int i_5_, int i_6_) {
+    static final void decodedOperation551(int i, int i_2_, int i_3_, float[] fs, int i_4_, int i_5_, int i_6_) {
         anInt5277++;
-        if (i_4_ < i && !Component353.method1436(i_4_ + -23, i)) throw new IllegalArgumentException("");
-        if (i_5_ > 0 && !Component353.method1436(56, i_5_)) throw new IllegalArgumentException("");
-        int i_7_ = Component191.method1382(i_2_, -6409);
+        if (i_4_ < i && !Component353.decodedOperation1436(i_4_ + -23, i)) throw new IllegalArgumentException("");
+        if (i_5_ > 0 && !Component353.decodedOperation1436(56, i_5_)) throw new IllegalArgumentException("");
+        int i_7_ = Component191.decodedOperation1382(i_2_, -6409);
         int i_8_ = 0;
         int i_9_ = Math.min(i_5_, i);
         int i_10_ = i >> 1;
@@ -111,7 +111,7 @@ class Component210
         anInt5285 = anInt5279 = (int) (Math.pow(0.5, -f) * 4096.0);
     }
 
-    static final boolean method552(int i, int i_28_, byte i_29_, int i_30_, int i_31_, int i_32_, byte[] is) {
+    static final boolean decodedOperation552(int i, int i_28_, byte i_29_, int i_30_, int i_31_, int i_32_, byte[] is) {
         anInt5282++;
         int i_33_ = i_31_ % i_30_;
         int i_34_ = 39 / ((31 - i_29_) / 63);
@@ -153,7 +153,7 @@ class Component210
         }
     }
 
-    public static void method553(int i) {
+    public static void decodedOperation553(int i) {
         aClass105Array5294 = null;
         aClass351_5288 = null;
         if (i != 0) aClass297_5297 = null;
@@ -162,7 +162,7 @@ class Component210
 
     /** CRC32 over {@code is[0..i_42_)}. {@code i} must be 5126. */
     static final int crc32(int i, int i_42_, byte[] is) {
-        if (i != 5126) method553(52);
+        if (i != 5126) decodedOperation553(52);
         anInt5284++;
         return Component382.computeCrc32(i_42_, true, is, 0);
     }

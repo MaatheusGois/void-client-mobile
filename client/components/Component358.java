@@ -46,13 +46,13 @@ final class Component358
         anInt3878++;
         if (bool) return 0;
         NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -9, i_6_, bool);
-        if (class348_sub13 == null) return (Component162.aClass271_8378.method2044(109, i_6_).anInt9542);
+        if (class348_sub13 == null) return (Component162.aClass271_8378.decodedOperation2044(109, i_6_).anInt9542);
         int i_7_ = 0;
         for (int i_8_ = 0; (i_8_ < class348_sub13.itemIds.length); i_8_++) {
             if (class348_sub13.itemIds[i_8_] == -1) i_7_++;
         }
         if (i != 35) countEmptyInvSlots((byte) -102, 43, true);
-        i_7_ += (Component162.aClass271_8378.method2044(82, i_6_).anInt9542 + -class348_sub13.itemIds.length);
+        i_7_ += (Component162.aClass271_8378.decodedOperation2044(82, i_6_).anInt9542 + -class348_sub13.itemIds.length);
         return i_7_;
     }
 }

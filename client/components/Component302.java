@@ -24,7 +24,7 @@ final class Component302
         super(i, class348_sub51);
     }
 
-    public static void method1799(int i) {
+    public static void decodedOperation1799(int i) {
         int i_0_ = 51 / ((i - 33) / 40);
         anIntArray6035 = null;
         aClass251_6030 = null;
@@ -33,8 +33,8 @@ final class Component302
     final int getValue(int i, int i_1_) {
         anInt6034++;
         if (i != 3) return -46;
-        if (this.preferences.method3425(-62)) return 3;
-        if (i_1_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
+        if (this.preferences.decodedOperation3425(-62)) return 3;
+        if (i_1_ == 0 || this.preferences.aClass239_Sub9_7256.decodedOperation1759(-32350) == 1) return 1;
         return 2;
     }
 
@@ -44,7 +44,7 @@ final class Component302
         return 1;
     }
 
-    final int method1800(int i) {
+    final int decodedOperation1800(int i) {
         anInt6031++;
         if (i != -32350) anIntArray6035 = null;
         return this.preferenceValue;
@@ -53,18 +53,18 @@ final class Component302
     final void validateValue(boolean bool) {
         anInt6036++;
         if (bool == false) {
-            if (this.preferences.method3425(-94)) this.preferenceValue = 0;
+            if (this.preferences.decodedOperation3425(-94)) this.preferenceValue = 0;
             if (this.preferenceValue < 0 && this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
-    final boolean method1801(int i) {
-        if (i <= 85) method1800(90);
+    final boolean decodedOperation1801(int i) {
+        if (i <= 85) decodedOperation1800(90);
         anInt6037++;
-        return !this.preferences.method3425(-70);
+        return !this.preferences.decodedOperation3425(-70);
     }
 
-    static final void method1802(int i) throws IOException {
+    static final void decodedOperation1802(int i) throws IOException {
         if (DefinitionSub8.aClass238_9165 != null && NodeSub34.anInt6969 > 0) {
             int i_2_ = 0;
             for (; ; ) {
@@ -75,12 +75,12 @@ final class Component302
                 NodeSub34.anInt6969 -= class348_sub47.anInt7119;
                 class348_sub47.unlink((byte) 74);
                 class348_sub47.particleBuffer.release((byte) -69);
-                class348_sub47.method3326((byte) -45);
+                class348_sub47.decodedOperation3326((byte) -45);
             }
             Component53.anInt193 = 0;
             Component268.anInt1433 += i_2_;
         }
-        if (i != 0) method1799(58);
+        if (i != 0) decodedOperation1799(58);
         anInt6038++;
     }
 

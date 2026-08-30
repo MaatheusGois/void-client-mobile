@@ -29,13 +29,13 @@ class Renderable {
         }
     }
 
-    public static void method2374(byte i) {
+    public static void decodedOperation2374(byte i) {
         aClass304_3977 = null;
         int i_0_ = 108 / ((i - -83) / 41);
         aClass243Array3974 = null;
     }
 
-    static final void method2375(int i) {
+    static final void decodedOperation2375(int i) {
         anInt3972++;
         Connection.aClass60_2671.clear(0);
         if (i != 16127) anInt3971 = -113;

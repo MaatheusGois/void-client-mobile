@@ -79,7 +79,7 @@ final class ComponentSettings extends Node {
         return (0x1 & this.optionFlags) != 0;
     }
 
-    static final int method3306(byte i) {
+    static final int decodedOperation3306(byte i) {
         if (i >= -90) anInt7101 = -7;
         anInt7097++;
         if (Buffer.anInt7207 == 1) return Component25.anInt6008;
@@ -90,7 +90,7 @@ final class ComponentSettings extends Node {
     final int getClickMask(int i) {
         anInt7100++;
         if (i < 10) this.anInt7093 = -51;
-        return DefinitionSub5.method3060(this.optionFlags, true);
+        return DefinitionSub5.decodedOperation3060(this.optionFlags, true);
     }
 
     ComponentSettings(int i, int i_0_) {

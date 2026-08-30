@@ -44,8 +44,8 @@ final class ImageProducerSprite extends Sprite implements ImageProducer {
         }
     }
 
-    public static void method3016(int i) {
-        if (i != 65280) method3016(-19);
+    public static void decodedOperation3016(int i) {
+        if (i != 65280) decodedOperation3016(-19);
         anIntArray9069 = null;
         aClass357ArrayArrayArray9082 = null;
     }

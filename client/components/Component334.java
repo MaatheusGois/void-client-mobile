@@ -17,7 +17,7 @@ final class Component334
     int anInt2019;
     int anInt2020;
 
-    final void method1191(int i, Buffer class348_sub49) {
+    final void decodedOperation1191(int i, Buffer class348_sub49) {
         if (i == 2048) {
             anInt2018++;
             for (; ; ) {
@@ -30,7 +30,7 @@ final class Component334
 
     private final void method1192(int i, Buffer class348_sub49, byte i_1_) {
         anInt2014++;
-        if (i_1_ != 17) method1194(-80);
+        if (i_1_ != 17) decodedOperation1194(-80);
         if (i == 1) {
             this.anInt2019 = class348_sub49.readUnsignedShort(842397944);
             this.anInt2016 = class348_sub49.readUnsignedByte(255);
@@ -38,14 +38,14 @@ final class Component334
         }
     }
 
-    static final boolean method1193(int i, int i_2_, boolean bool) {
+    static final boolean decodedOperation1193(int i, int i_2_, boolean bool) {
         if (bool != true) return true;
         anInt2017++;
         return (i_2_ & 0x800) != 0;
     }
 
-    public static void method1194(int i) {
-        if (i != 10) method1193(91, -68, true);
+    public static void decodedOperation1194(int i) {
+        if (i != 10) decodedOperation1193(91, -68, true);
         aLongArray2013 = null;
         aClass45_2015 = null;
     }

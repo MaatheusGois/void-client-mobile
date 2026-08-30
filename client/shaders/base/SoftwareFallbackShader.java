@@ -25,8 +25,8 @@ final class SoftwareFallbackShader extends AbstractShader {
         this.aHa_Sub3_4479.swapInterval2(true, i);
     }
 
-    static final void method3553(boolean bool, byte i, int i_1_) {
-        if (i <= 98) method3553(true, (byte) 34, 120);
+    static final void decodedOperation3553(boolean bool, byte i, int i_1_) {
+        if (i <= 98) decodedOperation3553(true, (byte) 34, 120);
         // Toolkit 1 = OpenGL (GlToolkitSub2), 2 = SW3D (libsw3d). Both break JAWT on macOS.
         if ((i_1_ == 1 || i_1_ == 2) && Loader.isMacOs()) {
             Component85.aBoolean2881 = true;
@@ -34,7 +34,7 @@ final class SoftwareFallbackShader extends AbstractShader {
             System.out.println("void-osrs: toolkit " + i_1_ + " → software (macOS)");
             i_1_ = 0;
         }
-        GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544), bool, i_1_);
+        GlRectangleTexture.decodedOperation1971(-2, FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544), bool, i_1_);
         anInt7388++;
     }
 
@@ -51,14 +51,14 @@ final class SoftwareFallbackShader extends AbstractShader {
             this.aHa_Sub3_4479.getSwapInterval(true, false, 2, (DisplayModeManagerContainer343.aClass70_8737), false);
             this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
             MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.getUniformLocation(false);
-            class101_sub2.method926(i + -30891, this.aHa_Sub3_4479.genBuffers((byte) -44));
+            class101_sub2.decodedOperation926(i + -30891, this.aHa_Sub3_4479.genBuffers((byte) -44));
             this.aHa_Sub3_4479.deleteVertexArrays(i ^ ~0x3b47, DefinitionSub38.aClass251_9477);
             this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             aBoolean7385 = true;
         } else this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
     }
 
-    public static void method3554(int i) {
+    public static void decodedOperation3554(int i) {
         if (i != 1) aClass45_7382 = null;
         aClass45_7382 = null;
     }

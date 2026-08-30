@@ -20,7 +20,7 @@ final class RequestProcessor implements Runnable {
     static int anInt2262;
     static int anInt2263;
     static int anInt2264 = 0;
-    static int anInt2265 = Component80.method2253(1600, 124);
+    static int anInt2265 = Component80.decodedOperation2253(1600, 124);
     static int anInt2266;
 
     public final void run() {
@@ -50,14 +50,14 @@ final class RequestProcessor implements Runnable {
         }
     }
 
-    public static void method1300(byte i) {
+    public static void decodedOperation1300(byte i) {
         if (i < -127) {
             aClass105Array2260 = null;
             aClass19Array2261 = null;
         }
     }
 
-    static final void method1301(r var_r, int i, int i_0_, int i_1_, boolean[] bools) {
+    static final void decodedOperation1301(r var_r, int i, int i_0_, int i_1_, boolean[] bools) {
         if (ShaderSub1.aSArray5191 != Component9.aSArray4142) {
             int i_2_ = NodeSub1Sub1.aSArray8801[i].getInterpolatedHeight(i_0_, i_1_, (byte) -93);
             for (int i_3_ = 0; i_3_ <= i; i_3_++) {
@@ -84,7 +84,7 @@ final class RequestProcessor implements Runnable {
         return class348_sub26;
     }
 
-    final void method1303(byte i) {
+    final void decodedOperation1303(byte i) {
         anInt2257++;
         if (aThread2259 != null) {
             processQueue(1000, new Node());
@@ -99,7 +99,7 @@ final class RequestProcessor implements Runnable {
     }
 
     private final void processQueue(int i, Node class348) {
-        if (i != 1000) method1303((byte) 95);
+        if (i != 1000) decodedOperation1303((byte) 95);
         synchronized (aClass262_2258) {
             aClass262_2258.addTail(class348, -20180);
             aClass262_2258.notify();

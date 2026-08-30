@@ -21,27 +21,27 @@ abstract class HashNodeSub16
     boolean markedForDiscard;
     static int anInt9668;
 
-    public static void method3252(int i) {
+    public static void decodedOperation3252(int i) {
         aClass21_9661 = null;
         aString9665 = null;
         if (i != 353) aClass21_9661 = null;
     }
 
-    static final void method3253(int i, int i_0_, int i_1_, Class var_class) {
+    static final void decodedOperation3253(int i, int i_0_, int i_1_, Class var_class) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_0_][i_1_];
         if (class357 != null) {
             for (Component3 class148 = class357.aClass148_4396; class148 != null; class148 = class148.aClass148_2038) {
                 Component327 class318_sub1_sub3 = class148.aClass318_Sub1_Sub3_2040;
                 if (var_class.isAssignableFrom(class318_sub1_sub3.getClass()) && (class318_sub1_sub3.aShort8743 == i_0_) && (class318_sub1_sub3.aShort8750 == i_1_)) {
-                    NodeSub46.method3320(class318_sub1_sub3, false);
+                    NodeSub46.decodedOperation3320(class318_sub1_sub3, false);
                     break;
                 }
             }
         }
     }
 
-    static final void method3254(int i, int i_2_, int i_3_, Component269 class318_sub1_sub4, Component269 class318_sub1_sub4_4_) {
-        Component186 class357 = NodeSub46.method3321(i, i_2_, i_3_);
+    static final void decodedOperation3254(int i, int i_2_, int i_3_, Component269 class318_sub1_sub4, Component269 class318_sub1_sub4_4_) {
+        Component186 class357 = NodeSub46.decodedOperation3321(i, i_2_, i_3_);
         if (class357 != null) {
             class357.aClass318_Sub1_Sub4_4406 = class318_sub1_sub4;
             class357.aClass318_Sub1_Sub4_4403 = class318_sub1_sub4_4_;
@@ -134,7 +134,7 @@ abstract class HashNodeSub16
         }
     }
 
-    static final int method3256(int i) {
+    static final int decodedOperation3256(int i) {
         anInt9662++;
         if (NodeSub1.anIntArray6547 == null) return 0;
         if (i != 2) aClass21_9661 = null;
@@ -147,10 +147,10 @@ abstract class HashNodeSub16
         /* empty */
     }
 
-    static final float[] method3258(int i, int i_11_, float[] fs) {
+    static final float[] decodedOperation3258(int i, int i_11_, float[] fs) {
         anInt9668++;
         float[] fs_12_ = new float[i_11_];
-        Component313.method1574(fs, 0, fs_12_, i, i_11_);
+        Component313.decodedOperation1574(fs, 0, fs_12_, i, i_11_);
         return fs_12_;
     }
 

@@ -13,7 +13,7 @@ final class CursorDefinitionCache
  * RENAMED from {@code Class166} / {@code Component290}. Evidence: {@code getFile(..., 33, id)}
  * and sole use from {@link Component373#applyCustomCursor}.
  * <p>
- * Note: several unrelated static helpers ({@link #method1288}, click ripples, …)
+ * Note: several unrelated static helpers ({@link #decodedOperation1288}, click ripples, …)
  * are still parked on this type from the deob dump.
  */ {
     static int anInt2178;
@@ -34,7 +34,7 @@ final class CursorDefinitionCache
     /** Soft cache of cursor {@link Component170} sprites by sprite id. */
     NodeCache aClass60_2190 = new NodeCache(2);
 
-    final void method1283(int i) {
+    final void decodedOperation1283(int i) {
         synchronized (aClass60_2185) {
             aClass60_2185.purgeSoftReferences(-76);
         }
@@ -42,15 +42,15 @@ final class CursorDefinitionCache
         synchronized (this.aClass60_2190) {
             this.aClass60_2190.purgeSoftReferences(-110);
         }
-        if (i != 1) method1286(null, -124, null);
+        if (i != 1) decodedOperation1286(null, -124, null);
     }
 
-    public static void method1284(int i) {
+    public static void decodedOperation1284(int i) {
         aClass114_2183 = null;
         if (i == -21165) aClass262_2187 = null;
     }
 
-    final void method1285(int i, int i_0_) {
+    final void decodedOperation1285(int i, int i_0_) {
         anInt2189++;
         synchronized (aClass60_2185) {
             aClass60_2185.processSoftEntries(2, i);
@@ -61,7 +61,7 @@ final class CursorDefinitionCache
         }
     }
 
-    static final void method1286(File file, int i, String string) {
+    static final void decodedOperation1286(File file, int i, String string) {
         do {
             try {
                 anInt2181++;
@@ -100,36 +100,36 @@ final class CursorDefinitionCache
         return class222;
     }
 
-    static final void method1288(int i, int i_2_) {
+    static final void decodedOperation1288(int i, int i_2_) {
         anInt2186++;
         for (Node class348 = Component127.aClass356_2959.first(0); class348 != null; class348 = Component127.aClass356_2959.next(0)) {
             if ((class348.key >> 48 & 0xffffL) == (long) i_2_) class348.unlink((byte) 119);
         }
     }
 
-    static final void method1289(int i, int i_3_, int i_4_, int i_5_, int i_6_) {
+    static final void decodedOperation1289(int i, int i_3_, int i_4_, int i_5_, int i_6_) {
         anInt2179++;
         int i_7_ = AssetCacheLoader.anInt385;
-        if (i_5_ != 8) method1284(-59);
+        if (i_5_ != 8) decodedOperation1284(-59);
         int i_8_ = ToolkitFactory.anInt1534;
         if (Component210.gameCanvasAttached) {
-            i_7_ += BufferCacheSub3.method4008((byte) -126);
-            i_8_ += Component110.method260(false);
+            i_7_ += BufferCacheSub3.decodedOperation4008((byte) -126);
+            i_8_ += Component110.decodedOperation260(false);
         }
         if (Component20.anInt6048 == 1) {
             Component24 class105 = (DefinitionSub37.aClass105Array9467[Node.anInt4292 / 100]);
             class105.drawAt(i_7_ - 8, i_8_ + -8);
-            Component103.method2663(-5590, -8 + i_7_, -8 + (i_7_ - -class105.method966()), -8 + i_8_, class105.method980() + -8 + i_8_);
+            Component103.decodedOperation2663(-5590, -8 + i_7_, -8 + (i_7_ - -class105.decodedOperation966()), -8 + i_8_, class105.decodedOperation980() + -8 + i_8_);
         }
         if (Component20.anInt6048 == 2) {
             Component24 class105 = (DefinitionSub37.aClass105Array9467[Node.anInt4292 / 100 + 4]);
             class105.drawAt(i_7_ + -8, -8 + i_8_);
-            Component103.method2663(-5590, i_7_ - 8, class105.method966() + i_7_ + -8, -8 + i_8_, class105.method980() + -8 + i_8_);
+            Component103.decodedOperation2663(-5590, i_7_ - 8, class105.decodedOperation966() + i_7_ + -8, -8 + i_8_, class105.decodedOperation980() + -8 + i_8_);
         }
-        Component156.method2192((byte) 80);
+        Component156.decodedOperation2192((byte) 80);
     }
 
-    final void method1290(int i) {
+    final void decodedOperation1290(int i) {
         anInt2184++;
         synchronized (aClass60_2185) {
             aClass60_2185.clear(0);

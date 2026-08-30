@@ -44,26 +44,26 @@ final class DisplayModeManagerContainer220
     private int anInt302;
     private boolean aBoolean303;
 
-    static final void method271(int i, DisplayModeManagerContainer57 class46, byte i_0_, int i_1_) {
+    static final void decodedOperation271(int i, DisplayModeManagerContainer57 class46, byte i_0_, int i_1_) {
         anInt278++;
-        Shader var_aa = class46.method425(NodeSub8.toolkit, (byte) 19);
+        Shader var_aa = class46.decodedOperation425(NodeSub8.toolkit, (byte) 19);
         if (var_aa != null) {
             NodeSub8.toolkit.KA(i_1_, i, class46.width + i_1_, i - -class46.height);
             if (Component293.anInt3306 >= 3) NodeSub8.toolkit.A(-16777216, var_aa, i_1_, i);
-            else NpcComposition.aClass105_1365.method976(((float) class46.width / 2.0F + (float) i_1_), (float) i + (float) class46.height / 2.0F, 4096, (0x3fff & (int) -Component112.cameraYaw) << 2, var_aa, i_1_, i);
-            if (i_0_ != -98) method271(88, null, (byte) 15, 71);
+            else NpcComposition.aClass105_1365.decodedOperation976(((float) class46.width / 2.0F + (float) i_1_), (float) i + (float) class46.height / 2.0F, 4096, (0x3fff & (int) -Component112.cameraYaw) << 2, var_aa, i_1_, i);
+            if (i_0_ != -98) decodedOperation271(88, null, (byte) 15, 71);
         }
     }
 
-    final void method272(int i) {
+    final void decodedOperation272(int i) {
         anInt277++;
         if (aBoolean289) {
             if (aClass206_285 != null) {
                 aHa_Sub2_290.method3764(-17083, aClass206_285);
                 int i_2_ = 16384;
                 aHa_Sub2_290.method3751(aClass206_281, -115);
-                aClass206_285.method1505(0, 0);
-                aClass206_281.method1503(0, (byte) 3);
+                aClass206_285.decodedOperation1505(0, 0);
+                aClass206_281.decodedOperation1503(0, (byte) 3);
                 if (aBoolean303) i_2_ |= 0x100;
                 OpenGL.glBlitFramebufferEXT(0, 0, anInt286, anInt275, 0, 0, anInt286, anInt275, i_2_, 9728);
                 aHa_Sub2_290.popTextureUnit(8387, aClass206_285);
@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer220
             NodeSub5 class348_sub5;
             for (NodeSub5 class348_sub5_6_ = (NodeSub5) aClass262_292.first(4); class348_sub5_6_ != null; class348_sub5_6_ = class348_sub5) {
                 class348_sub5 = (NodeSub5) aClass262_292.next((byte) 113);
-                int i_7_ = class348_sub5_6_.method2764(1);
+                int i_7_ = class348_sub5_6_.decodedOperation2764(1);
                 for (int i_8_ = 0; i_8_ < i_7_; i_8_++) {
                     class348_sub5_6_.method2750(aClass258_Sub3_300, aClass258_Sub3Array295[i_4_], i_8_, (byte) 103);
                     if (class348_sub5 == null && i_8_ == i_7_ - 1) {
@@ -100,7 +100,7 @@ final class DisplayModeManagerContainer220
                         OpenGL.glVertex2i(anInt286 + anInt287, anInt276);
                         OpenGL.glEnd();
                     } else {
-                        aClass206_281.method1503(i_5_, (byte) 3);
+                        aClass206_281.decodedOperation1503(i_5_, (byte) 3);
                         OpenGL.glBegin(7);
                         OpenGL.glTexCoord2f(0.0F, (float) anInt275);
                         OpenGL.glMultiTexCoord2f(33985, 0.0F, 1.0F);
@@ -125,19 +125,19 @@ final class DisplayModeManagerContainer220
         }
     }
 
-    static final void method273(DisplayModeManagerContainer57 class46, int i) {
+    static final void decodedOperation273(DisplayModeManagerContainer57 class46, int i) {
         anInt288++;
-        if (class46.type == 5 && class46.itemId != -1) RenderableObject.method2383(NodeSub8.toolkit, -2, class46);
-        if (i != -2835) method273(null, 44);
+        if (class46.type == 5 && class46.itemId != -1) RenderableObject.decodedOperation2383(NodeSub8.toolkit, -2, class46);
+        if (i != -2835) decodedOperation273(null, 44);
     }
 
-    final boolean method274(NodeSub5 class348_sub5, boolean bool) {
+    final boolean decodedOperation274(NodeSub5 class348_sub5, boolean bool) {
         anInt273++;
         if (aClass206_284 != null) {
             if (class348_sub5.method2751(bool) || class348_sub5.method2758(85)) {
                 aClass262_292.addTail(class348_sub5, -20180);
                 method281((byte) -94);
-                if (method276(false)) {
+                if (decodedOperation276(false)) {
                     if (anInt286 != -1 && anInt275 != -1) class348_sub5.method2754(anInt275, (byte) 55, anInt286);
                     class348_sub5.aBoolean6621 = true;
                     return true;
@@ -149,7 +149,7 @@ final class DisplayModeManagerContainer220
         return false;
     }
 
-    final boolean method275(int i, int i_9_, int i_10_, int i_11_, int i_12_) {
+    final boolean decodedOperation275(int i, int i_9_, int i_10_, int i_11_, int i_12_) {
         if (i_12_ != -1) return true;
         anInt272++;
         if (aClass206_284 == null || aClass262_292.isEmpty((byte) 18)) return false;
@@ -162,19 +162,19 @@ final class DisplayModeManagerContainer220
             aBoolean293 = true;
             aBoolean294 = true;
         }
-        if (method276(false)) {
+        if (decodedOperation276(false)) {
             aBoolean289 = true;
             anInt276 = i_11_;
             anInt287 = i_9_;
             aHa_Sub2_290.popTexture(i_12_, aClass206_284);
-            aClass206_284.method1503(0, (byte) 3);
+            aClass206_284.decodedOperation1503(0, (byte) 3);
             aHa_Sub2_290.bindTextureNative(98, (-aHa_Sub2_290.anInt7641 + (anInt275 - -anInt276)), -anInt287);
             return true;
         }
         return false;
     }
 
-    private final boolean method276(boolean bool) {
+    private final boolean decodedOperation276(boolean bool) {
         if (aBoolean293) {
             if (aClass348_Sub42_Sub2_298 != null) {
                 aClass348_Sub42_Sub2_298.method3172(4);
@@ -216,28 +216,28 @@ final class DisplayModeManagerContainer220
         if (aBoolean294) {
             if (aClass206_285 == null) {
                 aHa_Sub2_290.popTexture(-1, aClass206_281);
-                aClass206_281.method1500(2983, 0);
-                aClass206_281.method1500(2983, 1);
-                aClass206_281.method1500(2983, 8);
-                aClass206_281.method1509(aClass258_Sub3Array295[0], 0, 0);
-                if (anInt302 > 1) aClass206_281.method1509(aClass258_Sub3Array295[1], 0, 1);
-                if (aBoolean303) aClass206_281.method1509(aClass258_Sub3_300, 0, 8);
-                else aClass206_281.method1508(8, aClass348_Sub42_Sub2_298, 114);
+                aClass206_281.decodedOperation1500(2983, 0);
+                aClass206_281.decodedOperation1500(2983, 1);
+                aClass206_281.decodedOperation1500(2983, 8);
+                aClass206_281.decodedOperation1509(aClass258_Sub3Array295[0], 0, 0);
+                if (anInt302 > 1) aClass206_281.decodedOperation1509(aClass258_Sub3Array295[1], 0, 1);
+                if (aBoolean303) aClass206_281.decodedOperation1509(aClass258_Sub3_300, 0, 8);
+                else aClass206_281.decodedOperation1508(8, aClass348_Sub42_Sub2_298, 114);
                 aHa_Sub2_290.pushTexture(-422613672, aClass206_281);
             } else {
                 aHa_Sub2_290.popTexture(-1, aClass206_281);
-                aClass206_281.method1500(2983, 0);
-                aClass206_281.method1500(2983, 1);
-                aClass206_281.method1500(2983, 8);
-                aClass206_281.method1509(aClass258_Sub3Array295[0], 0, 0);
-                if (anInt302 > 1) aClass206_281.method1509(aClass258_Sub3Array295[1], 0, 1);
-                if (aBoolean303) aClass206_281.method1509(aClass258_Sub3_300, 0, 8);
+                aClass206_281.decodedOperation1500(2983, 0);
+                aClass206_281.decodedOperation1500(2983, 1);
+                aClass206_281.decodedOperation1500(2983, 8);
+                aClass206_281.decodedOperation1509(aClass258_Sub3Array295[0], 0, 0);
+                if (anInt302 > 1) aClass206_281.decodedOperation1509(aClass258_Sub3Array295[1], 0, 1);
+                if (aBoolean303) aClass206_281.decodedOperation1509(aClass258_Sub3_300, 0, 8);
                 aHa_Sub2_290.pushTexture(-422613672, aClass206_281);
                 aHa_Sub2_290.popTexture(-1, aClass206_285);
-                aClass206_285.method1500(2983, 0);
-                aClass206_285.method1500(2983, 8);
-                aClass206_285.method1508(0, aClass348_Sub42_Sub2_296, -100);
-                aClass206_285.method1508(8, aClass348_Sub42_Sub2_298, -47);
+                aClass206_285.decodedOperation1500(2983, 0);
+                aClass206_285.decodedOperation1500(2983, 8);
+                aClass206_285.decodedOperation1508(0, aClass348_Sub42_Sub2_296, -100);
+                aClass206_285.decodedOperation1508(8, aClass348_Sub42_Sub2_298, -47);
                 aHa_Sub2_290.pushTexture(-422613672, aClass206_285);
             }
             aBoolean294 = false;
@@ -245,13 +245,13 @@ final class DisplayModeManagerContainer220
         }
         if (aBoolean299) {
             aHa_Sub2_290.popTexture(-1, aClass206_284);
-            aBoolean299 = !aClass206_284.method1507(118);
+            aBoolean299 = !aClass206_284.decodedOperation1507(118);
             aHa_Sub2_290.pushTexture(-422613672, aClass206_284);
         }
         return !aBoolean299;
     }
 
-    public static void method277(byte i) {
+    public static void decodedOperation277(byte i) {
         if (i >= 77) anIntArray279 = null;
     }
 
@@ -265,7 +265,7 @@ final class DisplayModeManagerContainer220
         }
     }
 
-    final void method279(byte i) {
+    final void decodedOperation279(byte i) {
         int i_13_ = 84 % ((-63 - i) / 56);
         aClass348_Sub42_Sub2_296 = null;
         anInt291++;
@@ -280,7 +280,7 @@ final class DisplayModeManagerContainer220
         anInt286 = anInt275 = 1;
     }
 
-    final boolean method280(int i) {
+    final boolean decodedOperation280(int i) {
         anInt270++;
         if (i != 1) anInt286 = -99;
         return aClass206_284 != null;
@@ -295,9 +295,9 @@ final class DisplayModeManagerContainer220
         int i_16_ = 50 / ((-34 - i) / 45);
         for (/**/; class348_sub5 != null; class348_sub5 = (NodeSub5) aClass262_292.next((byte) 67)) {
             int i_17_ = class348_sub5.method2761(true);
-            i_15_ += class348_sub5.method2764(1);
+            i_15_ += class348_sub5.decodedOperation2764(1);
             if (i_14_ < i_17_) i_14_ = i_17_;
-            bool |= class348_sub5.method2759(1);
+            bool |= class348_sub5.decodedOperation2759(1);
         }
         int i_18_;
         if (i_14_ != 2) {
@@ -318,7 +318,7 @@ final class DisplayModeManagerContainer220
         if (i_20_ != i_19_) aBoolean294 = aBoolean297 = true;
     }
 
-    static final void method282(int i, GraphicsToolkit var_ha, int i_21_, byte i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
+    static final void decodedOperation282(int i, GraphicsToolkit var_ha, int i_21_, byte i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
         anInt274++;
         Component158.aHa326 = var_ha;
         Component44.aClass101_905 = Component158.aHa326.method3654();
@@ -333,7 +333,7 @@ final class DisplayModeManagerContainer220
         DisplayModeManagerContainer167.anInterface4_252 = null;
         Buffer.anInt7207 = 1;
         Component205.anInt5965 = i;
-        LogicError.method828((byte) 38, i_25_, i_21_);
+        LogicError.decodedOperation828((byte) 38, i_25_, i_21_);
     }
 
     DisplayModeManagerContainer220(GlToolkitSub2 var_ha_Sub2) {

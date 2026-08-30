@@ -15,9 +15,9 @@ final class Component261
     static int anInt4831;
     static int anInt4832;
 
-    static final short[] method1078(short[] is, int i, int i_0_) {
+    static final short[] decodedOperation1078(short[] is, int i, int i_0_) {
         anInt4829++;
-        if (i_0_ < 87) method1078(null, 22, -24);
+        if (i_0_ < 87) decodedOperation1078(null, 22, -24);
         short[] is_1_ = new short[i];
         Component313.arraycopyShorts(is, 0, is_1_, 0, i);
         return is_1_;
@@ -35,7 +35,7 @@ final class Component261
         return this.aBuffer1792.getAddress();
     }
 
-    static final int method1079(int i, int i_2_, int i_3_, int i_4_) {
+    static final int decodedOperation1079(int i, int i_2_, int i_3_, int i_4_) {
         anInt4826++;
         if (i != 4095) return 14;
         i_2_ &= 0x3;
@@ -52,7 +52,7 @@ final class Component261
     }
 
     public final void method35(byte[] is, int i, int i_5_, int i_6_) {
-        this.method1076(is, i_6_);
+        this.decodedOperation1076(is, i_6_);
         anInt4828++;
         anInt4827 = i;
         if (i_5_ < 18) anInt4827 = -41;

@@ -23,7 +23,7 @@ final class NodederUtil extends Node {
     static int anInt6639;
     /*synthetic*/ static Class aClass6640;
 
-    public static void method2768(int i) {
+    public static void decodedOperation2768(int i) {
         anIntArray6631 = null;
         anIntArray6635 = null;
         if (i != 3) anInt6634 = 101;
@@ -62,7 +62,7 @@ final class NodederUtil extends Node {
         this.anInt6630 = i;
     }
 
-    static final void method2770(int i) {
+    static final void decodedOperation2770(int i) {
         anInt6638++;
         if (RunescapeInfo.anIntArray179 == null) RunescapeInfo.anIntArray179 = new int[65536];
         else return;

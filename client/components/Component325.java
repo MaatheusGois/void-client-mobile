@@ -20,7 +20,7 @@ final class Component325
     static Component75 aClass173_1201 = new Component75();
     static int anInt1202;
 
-    static final void method720(int i, int i_0_) {
+    static final void decodedOperation720(int i, int i_0_) {
         anInt1193++;
         Component39.anInt2251 = i;
         synchronized (Component387.aClass60_1894) {
@@ -32,7 +32,7 @@ final class Component325
         }
     }
 
-    static final void method721(HashNode class348_sub42, HashNode class348_sub42_1_, int i) {
+    static final void decodedOperation721(HashNode class348_sub42, HashNode class348_sub42_1_, int i) {
         do {
             try {
                 if (class348_sub42_1_.previous != null) class348_sub42_1_.unlink(true);
@@ -54,7 +54,7 @@ final class Component325
         /* empty */
     }
 
-    public static void method722(int i) {
+    public static void decodedOperation722(int i) {
         aClass69_1198 = null;
         if (i != 13569) aClass69_1199 = null;
         aClass69_1197 = null;
@@ -63,16 +63,16 @@ final class Component325
         aClass173_1201 = null;
     }
 
-    static final boolean method723(int i, int i_2_, byte i_3_) {
+    static final boolean decodedOperation723(int i, int i_2_, byte i_3_) {
         anInt1196++;
         if (i_3_ >= -66) return true;
-        return (Component219.method2352(113, i_2_, i) & ClientErrorReporter.hasRoofFlag(i, i_2_, -29));
+        return (Component219.decodedOperation2352(113, i_2_, i) & ClientErrorReporter.hasRoofFlag(i, i_2_, -29));
     }
 
-    static final boolean method724(int i, int i_4_, int i_5_) {
+    static final boolean decodedOperation724(int i, int i_4_, int i_5_) {
         anInt1191++;
-        if (i_5_ != 393216) method723(25, 30, (byte) -113);
-        return Component219.method2352(124, i_4_, i) | (0x60000 & i) != 0 || Component224.method2056(i, 90, i_4_) || method723(i, i_4_, (byte) -120);
+        if (i_5_ != 393216) decodedOperation723(25, 30, (byte) -113);
+        return Component219.decodedOperation2352(124, i_4_, i) | (0x60000 & i) != 0 || Component224.decodedOperation2056(i, 90, i_4_) || decodedOperation723(i, i_4_, (byte) -120);
     }
 
     public final String toString() {

@@ -42,11 +42,11 @@ final class Component372
         return 1;
     }
 
-    static final void method1803(int i, String string, int i_1_) {
+    static final void decodedOperation1803(int i, String string, int i_1_) {
         anInt6047++;
-        if (i_1_ != -32394) method1803(93, null, 106);
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 3);
-        class348_sub42_sub15.method3246(i_1_ ^ 0x1d18);
+        if (i_1_ != -32394) decodedOperation1803(93, null, 106);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, 3);
+        class348_sub42_sub15.decodedOperation3246(i_1_ ^ 0x1d18);
         class348_sub42_sub15.aString9654 = string;
     }
 
@@ -56,13 +56,13 @@ final class Component372
         int i_3_ = -25 / ((82 - i) / 35);
     }
 
-    static final void method1804(int i) {
-        HashNodeSub10.method3211((byte) 60);
+    static final void decodedOperation1804(int i) {
+        HashNodeSub10.decodedOperation3211((byte) 60);
         if (i != 8839) anInt6042 = 63;
         anInt6040++;
     }
 
-    final int method1805(int i) {
+    final int decodedOperation1805(int i) {
         if (i != -32350) return -40;
         anInt6044++;
         return this.preferenceValue;

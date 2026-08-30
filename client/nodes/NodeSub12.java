@@ -28,7 +28,7 @@ final class NodeSub12
     static float aFloat6752;
     int anInt6753;
 
-    public static void method2798(int i) {
+    public static void decodedOperation2798(int i) {
         aShortArrayArray6741 = null;
         aClass105Array6742 = null;
         aShortArrayArray6744 = null;
@@ -39,15 +39,15 @@ final class NodeSub12
         anIntArrayArray6740 = null;
     }
 
-    final boolean method2799(int i, int i_1_, int i_2_) {
+    final boolean decodedOperation2799(int i, int i_1_, int i_2_) {
         anInt6739++;
         if (i_1_ >= this.anInt6747 && this.anInt6750 >= i_1_ && i >= this.anInt6746 && (i <= this.anInt6735)) return true;
         if (this.anInt6745 <= i_1_ && this.anInt6737 >= i_1_ && this.anInt6753 <= i && this.anInt6738 >= i) return true;
-        if (i_2_ < 60) method2799(8, 24, -128);
+        if (i_2_ < 60) decodedOperation2799(8, 24, -128);
         return false;
     }
 
-    static final void method2800(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, byte i_10_, int i_11_) {
+    static final void decodedOperation2800(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, byte i_10_, int i_11_) {
         anInt6734++;
         if (i_10_ >= 118) {
             NodeSub27 class348_sub27 = null;
@@ -63,7 +63,7 @@ final class NodeSub12
                 class348_sub27.anInt6904 = i_7_;
                 class348_sub27.anInt6896 = i_4_;
                 class348_sub27.anInt6905 = i_11_;
-                if (i_11_ >= 0 && i_4_ >= 0 && AbstractShaderSub4.anInt7319 > i_11_ && ParametricDefinition.anInt9109 > i_4_) Component357.method1387(-69, class348_sub27);
+                if (i_11_ >= 0 && i_4_ >= 0 && AbstractShaderSub4.anInt7319 > i_11_ && ParametricDefinition.anInt9109 > i_4_) Component357.decodedOperation1387(-69, class348_sub27);
                 HashNodeSub20.aClass262_9711.addTail(class348_sub27, -20180);
             }
             class348_sub27.anInt6893 = i_5_;

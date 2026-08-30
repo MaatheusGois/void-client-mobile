@@ -11,7 +11,7 @@ abstract class NodeBase
     static int anInt7275;
     static int anInt7276 = 0;
 
-    static final void method3437(int i, int i_0_) {
+    static final void decodedOperation3437(int i, int i_0_) {
         r var_r = null;
         for (int i_1_ = i; i_1_ < i_0_; i_1_++) {
             s var_s = NodeSub1Sub1.aSArray8801[i_1_];
@@ -39,7 +39,7 @@ abstract class NodeBase
         }
     }
 
-    public static void method3438(byte i) {
+    public static void decodedOperation3438(byte i) {
         if (i > 39) aClass138_7274 = null;
     }
 

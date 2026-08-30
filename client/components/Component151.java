@@ -19,7 +19,7 @@ final class Component151
     short aShort1790;
     boolean aBoolean1791;
 
-    public static void method1075(byte i) {
+    public static void decodedOperation1075(byte i) {
         anIntArray1786 = null;
         if (i != 17) anIntArray1786 = null;
     }

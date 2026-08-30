@@ -20,14 +20,14 @@ class DefinitionSub17
     static boolean aBoolean9242;
     private int anInt9243 = -1;
 
-    final boolean method3090(boolean bool) {
+    final boolean decodedOperation3090(boolean bool) {
         anInt9235++;
         if (bool != true) return true;
         if (this.anIntArray9232 != null) return true;
         if (anInt9243 >= 0) {
-            Component170 class207 = (MatrixSub2.anInt5713 >= 0 ? Component170.method1521(Node.aClass45_4286, MatrixSub2.anInt5713, anInt9243) : Component170.method1512(Node.aClass45_4286, anInt9243));
-            class207.method1524();
-            this.anIntArray9232 = class207.method1516();
+            Component170 class207 = (MatrixSub2.anInt5713 >= 0 ? Component170.decodedOperation1521(Node.aClass45_4286, MatrixSub2.anInt5713, anInt9243) : Component170.decodedOperation1512(Node.aClass45_4286, anInt9243));
+            class207.decodedOperation1524();
+            this.anIntArray9232 = class207.decodedOperation1516();
             this.anInt9237 = class207.anInt2702;
             this.anInt9241 = class207.anInt2696;
             return true;
@@ -39,7 +39,7 @@ class DefinitionSub17
         super(0, false);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         if (i_0_ == 31015) {
             if (i == 0) anInt9243 = class348_sub49.readUnsignedShort(842397944);
             anInt9236++;
@@ -64,7 +64,7 @@ class DefinitionSub17
         anInt9239++;
         if (i_1_ != -1564599039) getColourOutput(8, -86);
         int[][] is = this.imageCacheStore.getPixels(-108, i);
-        if (this.imageCacheStore.cacheMiss && method3090(true)) {
+        if (this.imageCacheStore.cacheMiss && decodedOperation3090(true)) {
             int[] is_2_ = is[0];
             int[] is_3_ = is[1];
             int[] is_4_ = is[2];
@@ -89,9 +89,9 @@ class DefinitionSub17
         return is;
     }
 
-    public static void method3091(boolean bool) {
+    public static void decodedOperation3091(boolean bool) {
         aClass351_9234 = null;
         aClass262_9240 = null;
-        if (bool != true) method3091(false);
+        if (bool != true) decodedOperation3091(false);
     }
 }

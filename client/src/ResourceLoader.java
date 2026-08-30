@@ -35,7 +35,7 @@ final class ResourceLoader implements Runnable {
     private int pulseCount;
     private String aString3921;
 
-    final int method2315(byte i) {
+    final int decodedOperation2315(byte i) {
         anInt3909++;
         if (aClass56_3916 == null) return 0;
         if (i < 103) aLong3917 = -58L;
@@ -46,9 +46,9 @@ final class ResourceLoader implements Runnable {
         return aClass56_3916.maxProgress;
     }
 
-    final void method2316(LoadingState class56, String string, int i, long l, boolean bool) {
+    final void decodedOperation2316(LoadingState class56, String string, int i, long l, boolean bool) {
         try {
-            if (bool != false) method2318(9);
+            if (bool != false) decodedOperation2318(9);
             aString3921 = string;
             anInt3915 = i;
             anInt3897++;
@@ -73,18 +73,18 @@ final class ResourceLoader implements Runnable {
                             int i_2_ = -i + 255;
                             i_2_ = 0xffffff | i_2_ << 24;
                             i = 0xffffff | i << 24;
-                            Component211.method1170((byte) -121);
+                            Component211.decodedOperation1170((byte) -121);
                             NodeSub8.toolkit.GA(0);
                             Component24 class105 = (NodeSub8.toolkit.method3629(Component236.canvasWidth, PacketReader.canvasHeight, true));
-                            NodeSub8.toolkit.method3681(class105, 0);
+                            NodeSub8.toolkit.decodedOperation3681(class105, 0);
                             anInterface16_3919.method58(true, -126);
                             NodeSub8.toolkit.method3672();
-                            class105.method964(0, 0, 0, i_2_, 1);
-                            NodeSub8.toolkit.method3681(class105, 0);
+                            class105.decodedOperation964(0, 0, 0, i_2_, 1);
+                            NodeSub8.toolkit.decodedOperation3681(class105, 0);
                             NodeSub8.toolkit.GA(0);
                             anInterface16_3907.method58(true, -114);
                             NodeSub8.toolkit.method3672();
-                            class105.method964(0, 0, 0, i, 1);
+                            class105.decodedOperation964(0, 0, 0, i, 1);
                         } else {
                             if (anInterface16_3919 != null) {
                                 aBoolean3908 = true;
@@ -92,16 +92,16 @@ final class ResourceLoader implements Runnable {
                                 anInterface16_3919 = null;
                             }
                             if (aBoolean3908) {
-                                Component211.method1170((byte) -64);
+                                Component211.decodedOperation1170((byte) -64);
                                 if (NodeSub8.toolkit != null) NodeSub8.toolkit.GA(0);
                             }
                             anInterface16_3907.method58((aBoolean3908 || (NodeSub8.toolkit != null && NodeSub8.toolkit.method3655())), -90);
                         }
                         try {
-                            if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.toolkit.method3689((byte) 57);
+                            if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer)) NodeSub8.toolkit.decodedOperation3689((byte) 57);
                         } catch (Exception_Sub1 exception_sub1) {
                             ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + NpcComposition.aClient1367.method81((byte) 80)), exception_sub1, 15004);
-                            SoftwareFallbackShader.method3553(true, (byte) 114, 0);
+                            SoftwareFallbackShader.decodedOperation3553(true, (byte) 114, 0);
                         }
                     }
                     java.awt.Container container;
@@ -112,7 +112,7 @@ final class ResourceLoader implements Runnable {
                     container.getSize();
                     if (RSACipher.aFrame4904 == container) RSACipher.aFrame4904.getInsets();
                     aBoolean3908 = false;
-                    if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.getStageId(-112) < LoadingState.aClass56_1041.getStageId(-127))) OpenGlShader.method3556(false);
+                    if (NodeSub8.toolkit != null && !(anInterface16_3907 instanceof InterfaceRenderer) && (aClass56_3916.getStageId(-112) < LoadingState.aClass56_1041.getStageId(-127))) OpenGlShader.decodedOperation3556(false);
             } catch (Exception exception) {
                 continue;
             }
@@ -122,32 +122,32 @@ final class ResourceLoader implements Runnable {
         }
     }
 
-    public static void method2317(byte i) {
+    public static void decodedOperation2317(byte i) {
         if (i > 50) {
             aClass351_3898 = null;
             aClass46_3913 = null;
         }
     }
 
-    final String method2318(int i) {
-        if (i != -9324) method2320((byte) -47);
+    final String decodedOperation2318(int i) {
+        if (i != -9324) decodedOperation2320((byte) -47);
         anInt3903++;
         return aString3921;
     }
 
-    final void method2319(byte i) {
+    final void decodedOperation2319(byte i) {
         aBoolean3910 = true;
         if (i >= -37) aLong3914 = -36L;
         anInt3906++;
     }
 
-    final int method2320(byte i) {
+    final int decodedOperation2320(byte i) {
         anInt3901++;
         int i_4_ = -127 / ((29 - i) / 45);
         return anInt3915;
     }
 
-    final synchronized void method2321(int i, Interface16 interface16) {
+    final synchronized void decodedOperation2321(int i, Interface16 interface16) {
         anInt3911++;
         if (i != 10559) aClass46_3913 = null;
         anInterface16_3919 = anInterface16_3907;
@@ -155,19 +155,19 @@ final class ResourceLoader implements Runnable {
         aLong3914 = Component240.currentTimeMillis(-67);
     }
 
-    final synchronized boolean method2322(int i) {
+    final synchronized boolean decodedOperation2322(int i) {
         anInt3900++;
         if (i != 0) return false;
         return anInterface16_3907.method56((byte) 125, aLong3914);
     }
 
-    final long method2323(int i) {
+    final long decodedOperation2323(int i) {
         anInt3912++;
-        if (i != 0) method2318(14);
+        if (i != 0) decodedOperation2318(14);
         return aLong3917;
     }
 
-    final LoadingState method2324(int i) {
+    final LoadingState decodedOperation2324(int i) {
         anInt3904++;
         if (i <= 45) return null;
         return aClass56_3916;
@@ -180,8 +180,8 @@ final class ResourceLoader implements Runnable {
         return pulseCount;
     }
 
-    final void method2326(int i) {
-        if (i <= 39) method2315((byte) 28);
+    final void decodedOperation2326(int i) {
+        if (i <= 39) decodedOperation2315((byte) 28);
         anInt3905++;
         aBoolean3908 = true;
     }

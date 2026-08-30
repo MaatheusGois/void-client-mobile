@@ -18,7 +18,7 @@ final class AbstractGlTextureSub1
     private int anInt8528 = -1;
     int anInt8529;
 
-    final void method1958(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
+    final void decodedOperation1958(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         this.aHa_Sub2_4851.bindTexture((byte) -110, this);
         anInt8526++;
         OpenGL.glCopyTexSubImage3D(this.anInt4849, 0, i_2_, i_6_, i_4_, i_3_, i_0_, i_1_, i_5_);
@@ -30,7 +30,7 @@ final class AbstractGlTextureSub1
         anInt8524++;
         OpenGL.glFramebufferTexture3DEXT(anInt8528, anInt8525, this.anInt4849, 0, 0, 0);
         anInt8525 = -1;
-        if (i != -3022) method1960(112, -107, -46, -98, null, null, null, null, null, null, -114, (byte) 75, -105, 62, true, false, 110, -31, true);
+        if (i != -3022) decodedOperation1960(112, -107, -46, -98, null, null, null, null, null, null, -114, (byte) 75, -105, 62, true, false, 110, -31, true);
         anInt8528 = -1;
     }
 
@@ -44,18 +44,18 @@ final class AbstractGlTextureSub1
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glTexImage3Dub(this.anInt4849, 0, this.anInt4858, this.anInt8523, this.anInt8529, this.anInt8522, 0, i_10_, 5121, is, 0);
             OpenGL.glPixelStorei(3317, 4);
-            this.method1957(9728, true);
+            this.decodedOperation1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("gj.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_7_ + ',' + i_8_ + ',' + i_9_ + ',' + (is != null ? "{...}" : "null") + ',' + i_10_ + ')'));
         }
     }
 
-    public static void method1959(int i) {
+    public static void decodedOperation1959(int i) {
         int i_11_ = -121 / ((-52 - i) / 60);
         aClass143_8527 = null;
     }
 
-    static final void method1960(int i, int i_12_, int i_13_, int i_14_, byte[][][] is, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int[] is_19_, int i_20_, byte i_21_, int i_22_, int i_23_, boolean bool, boolean bool_24_, int i_25_, int i_26_, boolean bool_27_) {
+    static final void decodedOperation1960(int i, int i_12_, int i_13_, int i_14_, byte[][][] is, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int[] is_19_, int i_20_, byte i_21_, int i_22_, int i_23_, boolean bool, boolean bool_24_, int i_25_, int i_26_, boolean bool_27_) {
         Component234.aBoolean351 = true;
         DisplayModeManagerContainer58.aBoolean10221 = JaclibLoader.toolkit.method3704() > 0;
         DefinitionSub17.aBoolean9242 = bool_24_;
@@ -115,7 +115,7 @@ final class AbstractGlTextureSub1
                 DisplayModeManagerContainer34.anIntArray8666 = is_17_;
                 Component201.anIntArray8712 = is_18_;
                 client.anIntArray5176 = is_19_;
-                HashNodeSub14.method3241(i_20_, (byte) 39, JaclibLoader.toolkit);
+                HashNodeSub14.decodedOperation3241(i_20_, (byte) 39, JaclibLoader.toolkit);
             }
         } else {
             if (Component76.aBooleanArrayArray8596 == null) Component76.aBooleanArrayArray8596 = (new boolean
@@ -133,17 +133,17 @@ final class AbstractGlTextureSub1
             Component210.anInt5293 = NodeSub41.anInt7054;
             Component234.aBoolean351 = false;
         }
-        Component315.method1877(JaclibLoader.toolkit, -69);
+        Component315.decodedOperation1877(JaclibLoader.toolkit, -69);
         if (!DisplayModeManagerContainer5.aClass76_1208.aBoolean1283) {
             Component315 class243 = DisplayModeManagerContainer5.aClass76_1208.aClass243_1282;
-            for (RenderableSub4 class318_sub4 = (RenderableSub4) class243.method1872(8); class318_sub4 != null; class318_sub4 = (RenderableSub4) class243.method1878((byte) 125)) {
+            for (RenderableSub4 class318_sub4 = (RenderableSub4) class243.decodedOperation1872(8); class318_sub4 != null; class318_sub4 = (RenderableSub4) class243.decodedOperation1878((byte) 125)) {
                 class318_sub4.unlink(false);
-                Component350.method560(class318_sub4, 6);
+                Component350.decodedOperation560(class318_sub4, 6);
             }
         }
         if (DisplayModeManagerContainer58.aBoolean10221) {
             for (int i_42_ = 0; i_42_ < Component374.anInt4135; i_42_++)
-                Component329.aClass211Array5993[i_42_].method1544(8688, bool, i);
+                Component329.aClass211Array5993[i_42_].decodedOperation1544(8688, bool, i);
         }
         if (DefinitionSub5.aBoolean9121) {
             RSACipher.anIntArray4906 = JaclibLoader.toolkit.Y();
@@ -152,27 +152,27 @@ final class AbstractGlTextureSub1
             for (int i_44_ = 0; i_44_ < DisplayModeManagerContainer216.anInt5652 - 1; i_44_++)
                 DisplayModeManagerContainer167.anIntArray256[i_44_] = i_43_ * (i_44_ + 1) + Component35.anIntArray4271[i_44_];
             for (int i_45_ = 0; i_45_ < LoggedOutDefinition.aClass293Array9432.length; i_45_++)
-                LoggedOutDefinition.aClass293Array9432[i_45_].method2209();
+                LoggedOutDefinition.aClass293Array9432[i_45_].decodedOperation2209();
         }
         if (ImageProducerSprite.aClass357ArrayArrayArray9082 != null) {
-            if (DefinitionSub5.aBoolean9121) DebugPanicSub1.method2131(0);
-            Component315.method1879(true);
+            if (DefinitionSub5.aBoolean9121) DebugPanicSub1.decodedOperation2131(0);
+            Component315.decodedOperation1879(true);
             JaclibLoader.toolkit.ra(-1, 1583160, 40, 127);
             Component182.renderScene(true, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
-            if (DefinitionSub5.aBoolean9121) DisplayModeManagerContainer42.method2290();
+            if (DefinitionSub5.aBoolean9121) DisplayModeManagerContainer42.decodedOperation2290();
             JaclibLoader.toolkit.pa();
-            Component315.method1879(false);
+            Component315.decodedOperation1879(false);
         }
         Component182.renderScene(false, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
         if (DefinitionSub5.aBoolean9121) {
             for (int i_46_ = 0; i_46_ < Component291.anInt2524; i_46_++)
                 Component2.aBooleanArrayArrayArray8361[i_46_] = Component95.aBooleanArrayArrayArray1751[i_46_];
-            DebugPanicSub1.method2131(0);
+            DebugPanicSub1.decodedOperation2131(0);
             for (int i_47_ = 0; i_47_ < LoggedOutDefinition.aClass293Array9432.length; i_47_++)
-                LoggedOutDefinition.aClass293Array9432[i_47_].method2209();
+                LoggedOutDefinition.aClass293Array9432[i_47_].decodedOperation2209();
         }
         if (DefinitionSub5.aBoolean9121) {
-            DisplayModeManagerContainer42.method2290();
+            DisplayModeManagerContainer42.decodedOperation2290();
             for (int i_48_ = 0; i_48_ < Component291.anInt2524; i_48_++)
                 Component95.aBooleanArrayArrayArray1751[i_48_] = Component2.aBooleanArrayArrayArray8361[i_48_];
             if (Npc.anInt10503 == 2) {
@@ -194,7 +194,7 @@ final class AbstractGlTextureSub1
         this.anInt8529 = i_50_;
         this.anInt8522 = i_51_;
         this.aHa_Sub2_4851.bindTexture((byte) -123, this);
-        OpenGL.glTexImage3Dub(this.anInt4849, 0, this.anInt4858, this.anInt8523, this.anInt8529, this.anInt8522, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
-        this.method1957(9728, true);
+        OpenGL.glTexImage3Dub(this.anInt4849, 0, this.anInt4858, this.anInt8523, this.anInt8529, this.anInt8522, 0, SceneNode.decodedOperation2779(true, (this.anInt4858)), 5121, null, 0);
+        this.decodedOperation1957(9728, true);
     }
 }

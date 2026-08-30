@@ -16,7 +16,7 @@ final class Component192
     /**
      * Left-click / tip menu row — the action that fires when the user clicks
      * without opening the full menu. Set in {@link DisplayModeManagerContainer1#updateMenuTip};
-     * consumed by {@link Component272#method1731} → {@link ColoredTextBuilder#processMenuAction}.
+     * consumed by {@link Component272#decodedOperation1731} → {@link ColoredTextBuilder#processMenuAction}.
      * Microbot forces this to {@link Microbot#targetMenu} when injecting.
      */
     static MenuEntry menuTip;
@@ -28,7 +28,7 @@ final class Component192
     static final void openDevConsole(int i) {
         if (i <= -39) {
             anInt3958++;
-            if (Component300.method2066((byte) 106)) {
+            if (Component300.decodedOperation2066((byte) 106)) {
                 if (ArbShaderProgram.consoleLines == null) DisplayModeManagerContainer288.initDevConsole(2);
                 Component39.consoleFadeAlpha = 0;
                 StringCache.devConsoleOpen = true;
@@ -36,7 +36,7 @@ final class Component192
         }
     }
 
-    /** Plot a cubic Bezier segment (12.12 fixed) via {@link NewsFetcher#method2665}. */
+    /** Plot a cubic Bezier segment (12.12 fixed) via {@link NewsFetcher#decodedOperation2665}. */
     static final void drawBezier(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         if (i_7_ == 3) {
             if (i_3_ != i_1_ || i_2_ != i_6_ || i_5_ != i_0_ || i_8_ != i_4_) {
@@ -65,11 +65,11 @@ final class Component192
                     int i_31_ = i_22_ * i_23_;
                     int i_32_ = i_1_ - -(i_26_ - (-i_28_ + -i_30_) >> 12);
                     int i_33_ = i_6_ - -(i_29_ + (i_27_ - -i_31_) >> 12);
-                    NewsFetcher.method2665(i_9_, (byte) 109, i, i_10_, i_33_, i_32_);
+                    NewsFetcher.decodedOperation2665(i_9_, (byte) 109, i, i_10_, i_33_, i_32_);
                     i_9_ = i_32_;
                     i_10_ = i_33_;
                 }
-            } else NewsFetcher.method2665(i_1_, (byte) 73, i, i_6_, i_8_, i_5_);
+            } else NewsFetcher.decodedOperation2665(i_1_, (byte) 73, i, i_6_, i_8_, i_5_);
             anInt3964++;
         }
     }

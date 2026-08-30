@@ -19,10 +19,10 @@ final class Component344 {
     static int anInt1490;
     private NodeCache aClass60_1491 = new NodeCache(100);
 
-    final void method834(byte i) {
+    final void decodedOperation834(byte i) {
         synchronized (aClass60_1487) {
             aClass60_1487.clear(0);
-            if (i >= -43) method838(-67);
+            if (i >= -43) decodedOperation838(-67);
         }
         anInt1490++;
         synchronized (aClass60_1491) {
@@ -44,20 +44,20 @@ final class Component344 {
         if (class17 != null) return class17;
         byte[] is;
         synchronized (aClass45_1488) {
-            is = aClass45_1488.getFile(-1860, Component279.method256(i, (byte) 125), RSACipher.method494(i_0_ ^ 0x55, i));
+            is = aClass45_1488.getFile(-1860, Component279.decodedOperation256(i, (byte) 125), RSACipher.decodedOperation494(i_0_ ^ 0x55, i));
         }
         class17 = new DisplayModeManagerContainer167();
         class17.anInt269 = i;
         class17.aClass87_251 = this;
-        if (is != null) class17.method267(new Buffer(is), false);
-        class17.method270((byte) 124);
+        if (is != null) class17.decodedOperation267(new Buffer(is), false);
+        class17.decodedOperation270((byte) 124);
         synchronized (aClass60_1487) {
             aClass60_1487.putOne(class17, i, (byte) -126);
         }
         return class17;
     }
 
-    final void method836(int i, int i_1_) {
+    final void decodedOperation836(int i, int i_1_) {
         anInt1485++;
         synchronized (aClass60_1487) {
             aClass60_1487.processSoftEntries(2, i);
@@ -68,7 +68,7 @@ final class Component344 {
         int i_2_ = -75 % ((i_1_ - 26) / 35);
     }
 
-    static final int method837(int i, boolean bool, int i_3_, int i_4_) {
+    static final int decodedOperation837(int i, boolean bool, int i_3_, int i_4_) {
         i_4_ &= 0x3;
         anInt1486++;
         if (i_4_ == 0) return i_3_;
@@ -78,18 +78,18 @@ final class Component344 {
         return i;
     }
 
-    final void method838(int i) {
+    final void decodedOperation838(int i) {
         synchronized (aClass60_1487) {
             aClass60_1487.purgeSoftReferences(-121);
         }
-        if (i != 7) method838(-111);
+        if (i != 7) decodedOperation838(-111);
         anInt1489++;
         synchronized (aClass60_1491) {
             aClass60_1491.purgeSoftReferences(-127);
         }
     }
 
-    final HashNodeSub17 method839(int i, int i_5_) {
+    final HashNodeSub17 decodedOperation839(int i, int i_5_) {
         anInt1484++;
         HashNodeSub17 class348_sub42_sub17;
         synchronized (aClass60_1491) {
@@ -99,7 +99,7 @@ final class Component344 {
                 class348_sub42_sub17 = new HashNodeSub17(i);
                 aClass60_1491.putOne(class348_sub42_sub17, i, (byte) -127);
             }
-            if (!class348_sub42_sub17.method3268(-122)) return null;
+            if (!class348_sub42_sub17.decodedOperation3268(-122)) return null;
         }
         return class348_sub42_sub17;
     }
@@ -111,7 +111,7 @@ final class Component344 {
                 int i_8_ = aClass45_1488.getGroupCapacity(-1) + -1;
                 aClass45_1488.getFileCount(0, i_8_);
             }
-            Component339.method1711(7, class45_6_, 2, class45_7_);
+            Component339.decodedOperation1711(7, class45_6_, 2, class45_7_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("lfa.<init>(" + (class230 != null ? "{...}" : "null") + ',' + i + ',' + (class45 != null ? "{...}" : "null") + ',' + (class45_6_ != null ? "{...}" : "null") + ',' + (class45_7_ != null ? "{...}" : "null") + ')'));
         }

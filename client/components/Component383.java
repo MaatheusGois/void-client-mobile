@@ -22,18 +22,18 @@ final class Component383
         }
     }
 
-    static final int method2188(int i) {
+    static final int decodedOperation2188(int i) {
         anInt8578++;
         if (i != -30477) aFloatArray8575 = null;
         return 16;
     }
 
-    static final Component118 method2189(Buffer class348_sub49, int i) {
+    static final Component118 decodedOperation2189(Buffer class348_sub49, int i) {
         anInt8576++;
         int i_3_ = class348_sub49.readUnsignedShort(842397944);
-        Component85 class221 = HeapDumpHelper.method1248(48)[class348_sub49.readUnsignedByte(255)];
-        DisplayModeManagerContainer196 class341 = Component240.method596(20000)[class348_sub49.readUnsignedByte(255)];
-        if (i <= 27) method2189(null, -35);
+        Component85 class221 = HeapDumpHelper.decodedOperation1248(48)[class348_sub49.readUnsignedByte(255)];
+        DisplayModeManagerContainer196 class341 = Component240.decodedOperation596(20000)[class348_sub49.readUnsignedByte(255)];
+        if (i <= 27) decodedOperation2189(null, -35);
         int i_4_ = class348_sub49.readShort(13638);
         int i_5_ = class348_sub49.readShort(13638);
         return new Component118(i_3_, class221, class341, i_4_, i_5_);
@@ -41,11 +41,11 @@ final class Component383
 
     public final DisplayModeManagerContainer369 method51(byte i) {
         anInt8574++;
-        if (i <= 116) method2190(false);
+        if (i <= 116) decodedOperation2190(false);
         return DisplayModeManagerContainer332.aClass223_4997;
     }
 
-    public static void method2190(boolean bool) {
+    public static void decodedOperation2190(boolean bool) {
         if (bool != true) aFloatArray8575 = null;
         aFloatArray8575 = null;
     }

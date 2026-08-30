@@ -25,16 +25,16 @@ final class ShaderProgramSub7
     static int[] anIntArray6290 = new int[2048];
     static int anInt6291;
 
-    static final void method2165(boolean bool, String string) {
+    static final void decodedOperation2165(boolean bool, String string) {
         anInt6287++;
         if (string != null) {
             if (string.startsWith("*")) string = string.substring(1);
-            String string_0_ = DebugPanicSub1.method2127(2, string);
+            String string_0_ = DebugPanicSub1.decodedOperation2127(2, string);
             if (string_0_ != null) {
                 for (int i = 0; (DefinitionSub30.friendCount > i); i++) {
                     String string_1_ = Component178.friendNames[i];
                     if (string_1_.startsWith("*")) string_1_ = string_1_.substring(1);
-                    string_1_ = DebugPanicSub1.method2127(2, string_1_);
+                    string_1_ = DebugPanicSub1.decodedOperation2127(2, string_1_);
                     if (string_1_ != null && string_1_.equals(string_0_)) {
                         DefinitionSub30.friendCount--;
                         for (int i_2_ = i; i_2_ < DefinitionSub30.friendCount; i_2_++) {
@@ -48,7 +48,7 @@ final class ShaderProgramSub7
                         Component380.anInt4985 = ResourceLoader.anInt3918;
                         HashNodeSub7.anInt9540++;
                         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component186.aClass351_4394, (DisplayModeManagerContainer64.aClass77_9029), -99);
-                        class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
+                        class348_sub47.particleBuffer.writeByte(false, Component31.decodedOperation1745(string, -65));
                         class348_sub47.particleBuffer.writeString((byte) -5, string);
                         HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
                         break;
@@ -96,7 +96,7 @@ final class ShaderProgramSub7
             OpenGL.glLoadIdentity();
             OpenGL.glTexGenfv(8192, 9474, Component214.aFloatArray2131, 0);
             OpenGL.glPopMatrix();
-            this.aHa_Sub2_3684.method3744((float) this.aHa_Sub2_3684.anInt7782, 770, 0.5F);
+            this.aHa_Sub2_3684.decodedOperation3744((float) this.aHa_Sub2_3684.anInt7782, 770, 0.5F);
             this.aHa_Sub2_3684.bindTexture((byte) -99, aClass258_Sub4_6285);
             this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         }
@@ -110,7 +110,7 @@ final class ShaderProgramSub7
         }
     }
 
-    public static void method2166(int i) {
+    public static void decodedOperation2166(int i) {
         if (i == 6336) {
             aClass45_6277 = null;
             anIntArray6290 = null;
@@ -157,7 +157,7 @@ final class ShaderProgramSub7
             aClass83_6278 = class83;
             method2167(-21405);
             aClass258_Sub4_6285 = new AbstractGlTextureSub4(this.aHa_Sub2_3684, 6406, 2, new byte[]{0, -1}, 6406);
-            aClass258_Sub4_6285.method1972((byte) -91, false);
+            aClass258_Sub4_6285.decodedOperation1972((byte) -91, false);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tn.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (class83 != null ? "{...}" : "null") + ')'));
         }
@@ -169,11 +169,11 @@ final class ShaderProgramSub7
         return true;
     }
 
-    static final void method2168(int i, int i_7_, int i_8_) {
+    static final void decodedOperation2168(int i, int i_7_, int i_8_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_7_][i_8_];
         if (class357 != null) {
-            Component191.method1376(class357.aClass318_Sub1_Sub5_4395);
-            Component191.method1376(class357.aClass318_Sub1_Sub5_4407);
+            Component191.decodedOperation1376(class357.aClass318_Sub1_Sub5_4395);
+            Component191.decodedOperation1376(class357.aClass318_Sub1_Sub5_4407);
             if (class357.aClass318_Sub1_Sub5_4395 != null) class357.aClass318_Sub1_Sub5_4395 = null;
             if (class357.aClass318_Sub1_Sub5_4407 != null) class357.aClass318_Sub1_Sub5_4407 = null;
         }
@@ -185,7 +185,7 @@ final class ShaderProgramSub7
         if (this.aHa_Sub2_3684.anInt7782 > 0) {
             this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             this.aHa_Sub2_3684.bindTexture((byte) -115, null);
-            this.aHa_Sub2_3684.method3744(0.0F, 770, 1.0F);
+            this.aHa_Sub2_3684.decodedOperation3744(0.0F, 770, 1.0F);
             this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         }
         if (i > -75) aClass258_Sub4_6285 = null;
@@ -199,22 +199,22 @@ final class ShaderProgramSub7
         if (i < -89) anInt6280++;
     }
 
-    static final boolean method2169(int i, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, boolean bool) {
+    static final boolean decodedOperation2169(int i, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, boolean bool) {
         anInt6281++;
-        if (!DisplayModeManagerContainer56.method1422(i_16_, i_11_, i, -7596)) return false;
+        if (!DisplayModeManagerContainer56.decodedOperation1422(i_16_, i_11_, i, -7596)) return false;
         i_16_ = ShaderLinker.anIntArray10172[1];
         i = ShaderLinker.anIntArray10172[0];
         i_11_ = ShaderLinker.anIntArray10172[2];
-        if (!DisplayModeManagerContainer56.method1422(i_15_, i_17_, i_10_, -7596)) return false;
+        if (!DisplayModeManagerContainer56.decodedOperation1422(i_15_, i_17_, i_10_, -7596)) return false;
         i_10_ = ShaderLinker.anIntArray10172[0];
         i_17_ = ShaderLinker.anIntArray10172[2];
         i_15_ = ShaderLinker.anIntArray10172[1];
-        if (!DisplayModeManagerContainer56.method1422(i_14_, i_13_, i_12_, -7596)) return false;
+        if (!DisplayModeManagerContainer56.decodedOperation1422(i_14_, i_13_, i_12_, -7596)) return false;
         i_13_ = ShaderLinker.anIntArray10172[2];
         if (bool != false) return false;
         i_14_ = ShaderLinker.anIntArray10172[1];
         i_12_ = ShaderLinker.anIntArray10172[0];
-        return DefinitionSub29.method3125(i_12_, i_16_, i_10_, i_13_, i_17_, (byte) -76, i_15_, i_11_, i, i_14_);
+        return DefinitionSub29.decodedOperation3125(i_12_, i_16_, i_10_, i_13_, i_17_, (byte) -76, i_15_, i_11_, i, i_14_);
     }
 
     final void method2139(boolean bool, byte i) {

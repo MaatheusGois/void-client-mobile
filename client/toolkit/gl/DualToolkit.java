@@ -18,7 +18,7 @@ final class DualToolkit
     }
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.method1947(0, this);
+        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
     }
 
     DualToolkit(int i, int i_1_) {

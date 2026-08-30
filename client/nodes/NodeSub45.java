@@ -26,7 +26,7 @@ abstract class NodeSub45 extends Node {
     /** Event X in canvas pixels. */
     abstract int getX(byte i);
 
-    static final void method3309(int i) {
+    static final void decodedOperation3309(int i) {
         Component160.anIntArrayArrayArray4356 = (new int[Component291.anInt2524][1 + StaticElementRenderer.anInt6451]
                 [1 + NodeSub41.anInt7054]);
         anInt7104++;
@@ -58,13 +58,13 @@ abstract class NodeSub45 extends Node {
     /** Enqueue timestamp (client millis). */
     abstract long getWhen(byte i);
 
-    static final void method3313(int i, s var_s) {
+    static final void decodedOperation3313(int i, s var_s) {
         ShaderSub1.aSArray5191[i] = var_s;
     }
 
-    public static void method3314(int i) {
+    public static void decodedOperation3314(int i) {
         aClass114_7106 = null;
-        if (i != 5) method3313(-103, null);
+        if (i != 5) decodedOperation3313(-103, null);
         aClass114_7105 = null;
         aClass361Array7108 = null;
         aClass105Array7107 = null;

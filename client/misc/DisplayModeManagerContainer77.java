@@ -65,14 +65,14 @@ final class DisplayModeManagerContainer77
     int[] anIntArray1868;
     static int anInt1869;
 
-    final void method1092(int i, int i_0_) {
+    final void decodedOperation1092(int i, int i_0_) {
         anInt1819++;
         for (int i_1_ = 0; this.anInt1836 > i_1_; i_1_++) {
             this.anIntArray1841[i_1_] <<= i;
             this.anIntArray1847[i_1_] <<= i;
             this.anIntArray1852[i_1_] <<= i;
         }
-        if (i_0_ <= 39) method1107(40, -7, -80, -24);
+        if (i_0_ <= 39) decodedOperation1107(40, -7, -80, -24);
         if (this.anInt1818 > 0 && this.anIntArray1859 != null) {
             for (int i_2_ = 0; i_2_ < this.anIntArray1859.length; i_2_++) {
                 this.anIntArray1859[i_2_] <<= i;
@@ -82,7 +82,7 @@ final class DisplayModeManagerContainer77
         }
     }
 
-    final int[][] method1093(byte i) {
+    final int[][] decodedOperation1093(byte i) {
         anInt1854++;
         int[] is = new int[256];
         int i_3_ = 0;
@@ -106,7 +106,7 @@ final class DisplayModeManagerContainer77
         return is_6_;
     }
 
-    final int[][] method1094(byte i) {
+    final int[][] decodedOperation1094(byte i) {
         anInt1864++;
         int[] is = new int[256];
         int i_10_ = 0;
@@ -118,7 +118,7 @@ final class DisplayModeManagerContainer77
             }
         }
         int[][] is_13_ = new int[i_10_ - -1][];
-        if (i <= 13) method1102(-65, (byte) -8, (byte) 94, (short) -89, (byte) 6, (short) -117, 21, (byte) 21, -31);
+        if (i <= 13) decodedOperation1102(-65, (byte) -8, (byte) 94, (short) -89, (byte) 6, (short) -117, 21, (byte) 21, -31);
         for (int i_14_ = 0; i_10_ >= i_14_; i_14_++) {
             is_13_[i_14_] = new int[is[i_14_]];
             is[i_14_] = 0;
@@ -130,7 +130,7 @@ final class DisplayModeManagerContainer77
         return is_13_;
     }
 
-    final void method1095(short i, int i_17_, short i_18_) {
+    final void decodedOperation1095(short i, int i_17_, short i_18_) {
         anInt1869++;
         if (this.aShortArray1822 != null) {
             for (int i_19_ = i_17_; this.anInt1817 > i_19_; i_19_++) {
@@ -139,22 +139,22 @@ final class DisplayModeManagerContainer77
         }
     }
 
-    public static void method1096(int i) {
+    public static void decodedOperation1096(int i) {
         if (i >= 88) aClass45_1848 = null;
     }
 
-    static final int method1097(byte i, int i_20_, Random random) {
+    static final int decodedOperation1097(byte i, int i_20_, Random random) {
         anInt1861++;
         if (i_20_ <= 0) throw new IllegalArgumentException();
-        if (Component353.method1436(-19, i_20_)) return (int) ((long) i_20_ * (0xffffffffL & (long) random.nextInt()) >> 32);
+        if (Component353.decodedOperation1436(-19, i_20_)) return (int) ((long) i_20_ * (0xffffffffL & (long) random.nextInt()) >> 32);
         int i_21_ = -2147483648 + -(int) (4294967296L % (long) i_20_);
         if (i < 78) aClass45_1848 = null;
         int i_22_;
         do i_22_ = random.nextInt(); while (i_22_ >= i_21_);
-        return Component360.method3452(i_22_, (byte) -15, i_20_);
+        return Component360.decodedOperation3452(i_22_, (byte) -15, i_20_);
     }
 
-    final void method1098(short i, byte i_23_, short i_24_) {
+    final void decodedOperation1098(short i, byte i_23_, short i_24_) {
         if (i_23_ == 126) {
             for (int i_25_ = 0; i_25_ < this.anInt1817; i_25_++) {
                 if (i == this.aShortArray1862[i_25_]) this.aShortArray1862[i_25_] = i_24_;
@@ -163,7 +163,7 @@ final class DisplayModeManagerContainer77
         }
     }
 
-    final void method1099(byte i, int i_26_, int i_27_, int i_28_) {
+    final void decodedOperation1099(byte i, int i_26_, int i_27_, int i_28_) {
         int i_29_ = 0;
         int i_30_ = 19 % ((-40 - i) / 33);
         for (/**/; this.anInt1836 > i_29_; i_29_++) {
@@ -174,7 +174,7 @@ final class DisplayModeManagerContainer77
         anInt1840++;
     }
 
-    final int[][] method1100(boolean bool, int i) {
+    final int[][] decodedOperation1100(boolean bool, int i) {
         anInt1845++;
         int[] is = new int[256];
         int i_31_ = 0;
@@ -195,11 +195,11 @@ final class DisplayModeManagerContainer77
             int i_38_ = this.anIntArray1868[i_37_];
             if (i_38_ >= 0) is_35_[i_38_][is[i_38_]++] = i_37_;
         }
-        if (i > -14) method1098((short) 9, (byte) 80, (short) -118);
+        if (i > -14) decodedOperation1098((short) 9, (byte) 80, (short) -118);
         return is_35_;
     }
 
-    final int method1101(int i, int i_39_, int i_40_, int i_41_) {
+    final int decodedOperation1101(int i, int i_39_, int i_40_, int i_41_) {
         anInt1827++;
         int i_42_ = 0;
         int i_43_ = 120 / ((38 - i_41_) / 61);
@@ -213,7 +213,7 @@ final class DisplayModeManagerContainer77
         return this.anInt1836++;
     }
 
-    final int method1102(int i, byte i_44_, byte i_45_, short i_46_, byte i_47_, short i_48_, int i_49_, byte i_50_, int i_51_) {
+    final int decodedOperation1102(int i, byte i_44_, byte i_45_, short i_46_, byte i_47_, short i_48_, int i_49_, byte i_50_, int i_51_) {
         this.aShortArray1863[this.anInt1817] = (short) i;
         anInt1860++;
         this.aShortArray1835[this.anInt1817] = (short) i_49_;
@@ -426,7 +426,7 @@ final class DisplayModeManagerContainer77
         if (!bool_52_) this.aShortArray1822 = null;
     }
 
-    private final int method1104(DisplayModeManagerContainer77 class124_101_, int i, int i_102_, short i_103_) {
+    private final int decodedOperation1104(DisplayModeManagerContainer77 class124_101_, int i, int i_102_, short i_103_) {
         anInt1858++;
         int i_104_ = class124_101_.anIntArray1841[i_102_];
         int i_105_ = class124_101_.anIntArray1847[i_102_];
@@ -445,7 +445,7 @@ final class DisplayModeManagerContainer77
         return this.anInt1836++;
     }
 
-    final byte method1105(int i, byte i_108_, byte i_109_, short i_110_, short i_111_, byte i_112_, short i_113_, short i_114_, short i_115_, short i_116_) {
+    final byte decodedOperation1105(int i, byte i_108_, byte i_109_, short i_110_, short i_111_, byte i_112_, short i_113_, short i_114_, short i_115_, short i_116_) {
         anInt1838++;
         if (this.anInt1818 >= 255) throw new IllegalStateException();
         this.aByteArray1823[this.anInt1818] = (byte) 3;
@@ -462,7 +462,7 @@ final class DisplayModeManagerContainer77
         return (byte) this.anInt1818++;
     }
 
-    private final void method1106(byte[] is, byte i) {
+    private final void decodedOperation1106(byte[] is, byte i) {
         anInt1828++;
         Buffer class348_sub49 = new Buffer(is);
         Buffer class348_sub49_118_ = new Buffer(is);
@@ -792,7 +792,7 @@ final class DisplayModeManagerContainer77
         }
     }
 
-    final void method1107(int i, int i_199_, int i_200_, int i_201_) {
+    final void decodedOperation1107(int i, int i_199_, int i_200_, int i_201_) {
         if (i_200_ != 0) {
             int i_202_ = DisplayModeManagerContainer88.anIntArray1207[i_200_];
             int i_203_ = DisplayModeManagerContainer88.anIntArray1204[i_200_];
@@ -836,15 +836,15 @@ final class DisplayModeManagerContainer77
         this.aByte1851 = (byte) 0;
         this.anInt1821 = 0;
         this.anInt1818 = 0;
-        if (is[is.length + -1] == -1 && is[-2 + is.length] == -1) method1106(is, (byte) 93);
+        if (is[is.length + -1] == -1 && is[-2 + is.length] == -1) decodedOperation1106(is, (byte) 93);
         else method1103(1, is);
     }
 
-    static final void method1108(byte i, Canvas canvas) {
+    static final void decodedOperation1108(byte i, Canvas canvas) {
         anInt1850++;
         Dimension dimension = canvas.getSize();
-        if (i != -99) method1096(57);
-        LogicError.method828((byte) 38, dimension.height, dimension.width);
+        if (i != -99) decodedOperation1096(57);
+        LogicError.decodedOperation828((byte) 38, dimension.height, dimension.width);
         if (Buffer.anInt7207 != 1) Component158.aHa326.method3643(canvas, Component210.anInt5283, HashTable.anInt1651);
         else Component158.aHa326.method3643(canvas, GpiLogger.anInt8854, Component25.anInt6008);
     }
@@ -968,7 +968,7 @@ final class DisplayModeManagerContainer77
                 if (class124_228_.aClass162Array1832 != null) {
                     for (int i_229_ = 0; (class124_228_.aClass162Array1832.length > i_229_); i_229_++) {
                         DisplayModeManagerContainer133 class162 = (class124_228_.aClass162Array1832[i_229_]);
-                        this.aClass162Array1832[i_218_++] = class162.method1266(5, ((class162.anInt2155) - -(this.anInt1817)));
+                        this.aClass162Array1832[i_218_++] = class162.decodedOperation1266(5, ((class162.anInt2155) - -(this.anInt1817)));
                     }
                 }
                 for (int i_230_ = 0; class124_228_.anInt1817 > i_230_; i_230_++) {
@@ -986,26 +986,26 @@ final class DisplayModeManagerContainer77
                         if (class124_228_.anIntArray1824 == null) this.anIntArray1824[(this.anInt1817)] = -1;
                         else this.anIntArray1824[(this.anInt1817)] = (class124_228_.anIntArray1824[i_230_]);
                     }
-                    this.aShortArray1863[(this.anInt1817)] = (short) method1104(class124_228_, 0, (class124_228_.aShortArray1863[i_230_]), i_227_);
-                    this.aShortArray1835[(this.anInt1817)] = (short) method1104(class124_228_, 0, (class124_228_.aShortArray1835[i_230_]), i_227_);
-                    this.aShortArray1855[(this.anInt1817)] = (short) method1104(class124_228_, 0, (class124_228_.aShortArray1855[i_230_]), i_227_);
+                    this.aShortArray1863[(this.anInt1817)] = (short) decodedOperation1104(class124_228_, 0, (class124_228_.aShortArray1863[i_230_]), i_227_);
+                    this.aShortArray1835[(this.anInt1817)] = (short) decodedOperation1104(class124_228_, 0, (class124_228_.aShortArray1835[i_230_]), i_227_);
+                    this.aShortArray1855[(this.anInt1817)] = (short) decodedOperation1104(class124_228_, 0, (class124_228_.aShortArray1855[i_230_]), i_227_);
                     this.aShortArray1856[(this.anInt1817)] = i_227_;
                     this.aShortArray1862[(this.anInt1817)] = class124_228_.aShortArray1862[i_230_];
                     this.anInt1817++;
                 }
                 if (class124_228_.aClass129Array1846 != null) {
                     for (int i_231_ = 0; (class124_228_.aClass129Array1846.length > i_231_); i_231_++) {
-                        int i_232_ = method1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1881, i_227_);
-                        int i_233_ = method1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1877, i_227_);
-                        int i_234_ = method1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1892, i_227_);
-                        this.aClass129Array1846[i_216_] = class124_228_.aClass129Array1846[i_231_].method1124(i_233_, -1, i_234_, i_232_);
+                        int i_232_ = decodedOperation1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1881, i_227_);
+                        int i_233_ = decodedOperation1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1877, i_227_);
+                        int i_234_ = decodedOperation1104(class124_228_, 0, class124_228_.aClass129Array1846[i_231_].anInt1892, i_227_);
+                        this.aClass129Array1846[i_216_] = class124_228_.aClass129Array1846[i_231_].decodedOperation1124(i_233_, -1, i_234_, i_232_);
                         i_216_++;
                     }
                 }
                 if (class124_228_.aClass342Array1866 != null) {
                     for (int i_235_ = 0; (class124_228_.aClass342Array1866).length > i_235_; i_235_++) {
-                        int i_236_ = method1104(class124_228_, 0, class124_228_.aClass342Array1866[i_235_].anInt4244, i_227_);
-                        this.aClass342Array1866[i_217_] = class124_228_.aClass342Array1866[i_235_].method2687((byte) 94, i_236_);
+                        int i_236_ = decodedOperation1104(class124_228_, 0, class124_228_.aClass342Array1866[i_235_].anInt4244, i_227_);
+                        this.aClass342Array1866[i_217_] = class124_228_.aClass342Array1866[i_235_].decodedOperation2687((byte) 94, i_236_);
                         i_217_++;
                     }
                 }
@@ -1023,9 +1023,9 @@ final class DisplayModeManagerContainer77
                 for (int i_242_ = 0; (class124_240_.anInt1818 > i_242_); i_242_++) {
                     byte i_243_ = (this.aByteArray1823[(this.anInt1818)] = (class124_240_.aByteArray1823[i_242_]));
                     if (i_243_ == 0) {
-                        this.aShortArray1829[(this.anInt1818)] = (short) method1104(class124_240_, 0, (class124_240_.aShortArray1829[i_242_]), i_239_);
-                        this.aShortArray1849[(this.anInt1818)] = (short) method1104(class124_240_, 0, (class124_240_.aShortArray1849[i_242_]), i_239_);
-                        this.aShortArray1825[(this.anInt1818)] = (short) method1104(class124_240_, 0, (class124_240_.aShortArray1825[i_242_]), i_239_);
+                        this.aShortArray1829[(this.anInt1818)] = (short) decodedOperation1104(class124_240_, 0, (class124_240_.aShortArray1829[i_242_]), i_239_);
+                        this.aShortArray1849[(this.anInt1818)] = (short) decodedOperation1104(class124_240_, 0, (class124_240_.aShortArray1849[i_242_]), i_239_);
+                        this.aShortArray1825[(this.anInt1818)] = (short) decodedOperation1104(class124_240_, 0, (class124_240_.aShortArray1825[i_242_]), i_239_);
                     }
                     if (i_243_ >= 1 && i_243_ <= 3) {
                         this.aShortArray1829[(this.anInt1818)] = (class124_240_.aShortArray1829[i_242_]);

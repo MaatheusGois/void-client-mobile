@@ -30,13 +30,13 @@ final class NodeSub1Sub1
         }
     }
 
-    static final int method2726(int i, int i_7_, int i_8_) {
+    static final int decodedOperation2726(int i, int i_7_, int i_8_) {
         if (i_8_ > i_7_) {
             int i_9_ = i_7_;
             i_7_ = i_8_;
             i_8_ = i_9_;
         }
-        if (i != -21806) method2727((byte) -128, null, null);
+        if (i != -21806) decodedOperation2727((byte) -128, null, null);
         anInt8804++;
         int i_10_;
         for (/**/; i_8_ != 0; i_8_ = i_10_) {
@@ -46,7 +46,7 @@ final class NodeSub1Sub1
         return i_7_;
     }
 
-    static final void method2727(byte i, Component251 class237_sub1, byte[][] is) {
+    static final void decodedOperation2727(byte i, Component251 class237_sub1, byte[][] is) {
         try {
             anInt8802++;
             int[] is_11_ = {-1, 0, 0, 0, 0};
@@ -60,11 +60,11 @@ final class NodeSub1Sub1
                     int i_17_ = 0xff & OggStreamReader.anIntArray9042[i_14_];
                     int i_18_ = -NodeBaseSub2.regionTileX + i_16_ * 64;
                     int i_19_ = -Component330.regionTileY + i_17_ * 64;
-                    Component381.method3570(false);
-                    class237_sub1.method1681(class348_sub49, i_18_, NodeSub45.aClass361Array7108, Component330.regionTileY, NodeBaseSub2.regionTileX, i_19_, (byte) 110);
-                    class237_sub1.method1691(i_19_, NodeSub8.toolkit, class348_sub49, is_11_, i_18_, (byte) -126);
+                    Component381.decodedOperation3570(false);
+                    class237_sub1.decodedOperation1681(class348_sub49, i_18_, NodeSub45.aClass361Array7108, Component330.regionTileY, NodeBaseSub2.regionTileX, i_19_, (byte) 110);
+                    class237_sub1.decodedOperation1691(i_19_, NodeSub8.toolkit, class348_sub49, is_11_, i_18_, (byte) -126);
                     if (!class237_sub1.aBoolean3109 && i_16_ == GraphicsToolkit.anInt4581 / 8 && (i_17_ == DisplayModeManagerContainer363.anInt4095 / 8) && is_11_[0] != -1) {
-                        Component293.aClass305_3304 = ComponentDownloader.aClass84_413.method823(is_11_[2], is_11_[3], is_11_[1], -66, (Component132.aClass25_1813), is_11_[0]);
+                        Component293.aClass305_3304 = ComponentDownloader.aClass84_413.decodedOperation823(is_11_[2], is_11_[3], is_11_[1], -66, (Component132.aClass25_1813), is_11_[0]);
                         Component316.anInt2481 = is_11_[4];
                     }
                 }
@@ -74,8 +74,8 @@ final class NodeSub1Sub1
                 int i_22_ = (-Component330.regionTileY + ((0xff & OggStreamReader.anIntArray9042[i_20_]) * 64));
                 byte[] is_23_ = is[i_20_];
                 if (is_23_ == null && DisplayModeManagerContainer363.anInt4095 < 800) {
-                    Component381.method3570(false);
-                    class237_sub1.method1688(i_22_, 64, 64, 125, i_21_);
+                    Component381.decodedOperation3570(false);
+                    class237_sub1.decodedOperation1688(i_22_, 64, 64, 125, i_21_);
                 }
             }
         } catch (RuntimeException runtimeexception) {
@@ -83,7 +83,7 @@ final class NodeSub1Sub1
         }
     }
 
-    public static void method2728(byte i) {
+    public static void decodedOperation2728(byte i) {
         if (i != 9) aClass60_8807 = null;
         aClass60_8807 = null;
         aSArray8801 = null;

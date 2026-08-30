@@ -38,17 +38,17 @@ final class CookieManager extends ShaderProgram {
         }
     }
 
-    static final void method2170(int i, byte i_0_) {
+    static final void decodedOperation2170(int i, byte i_0_) {
         Component377.anInt859 = -1;
         anInt6300++;
-        if (i_0_ != 3) method2170(-109, (byte) 7);
+        if (i_0_ != 3) decodedOperation2170(-109, (byte) 7);
         DebugOverlay.anInt3170 = i;
         Component377.anInt859 = -1;
-        ColorTagNode.method2811(false);
+        ColorTagNode.decodedOperation2811(false);
     }
 
-    public static void method2171(int i) {
-        if (i != 0) method2172(-6);
+    public static void decodedOperation2171(int i) {
+        if (i != 0) decodedOperation2172(-6);
         anIntArray6296 = null;
     }
 
@@ -56,10 +56,10 @@ final class CookieManager extends ShaderProgram {
         anInt6303++;
         this.aHa_Sub2_3684.bindTexture((byte) -86, class258);
         this.aHa_Sub2_3684.setTextureEnvMode(0, i_1_);
-        if (i >= -89) method2172(12);
+        if (i >= -89) decodedOperation2172(12);
     }
 
-    static final void method2172(int i) {
+    static final void decodedOperation2172(int i) {
         int i_2_ = 27 / ((i - -12) / 57);
         anInt6295++;
         if (ToolkitFactory.anApplet1530 != null) {
@@ -119,7 +119,7 @@ final class CookieManager extends ShaderProgram {
         return true;
     }
 
-    static final void method2173(boolean bool, int i, boolean bool_6_) {
+    static final void decodedOperation2173(boolean bool, int i, boolean bool_6_) {
         int i_7_ = 111 % ((i - -62) / 38);
         anInt6292++;
         if (bool) {
@@ -133,15 +133,15 @@ final class CookieManager extends ShaderProgram {
     }
 
     final void method2134(boolean bool, boolean bool_8_) {
-        if (bool_8_ != false) method2171(85);
+        if (bool_8_ != false) decodedOperation2171(85);
         anInt6293++;
-        GlFramebufferTexture class258_sub2 = this.aHa_Sub2_3684.method3741(444720536);
+        GlFramebufferTexture class258_sub2 = this.aHa_Sub2_3684.decodedOperation3741(444720536);
         if (aClass61_6302 != null && class258_sub2 != null && bool) {
             aClass61_6302.callDisplayList('\0', 28666);
             this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             this.aHa_Sub2_3684.bindTexture((byte) -77, class258_sub2);
             OpenGL.glMatrixMode(5890);
-            OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.method945(true), 0);
+            OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.decodedOperation945(true), 0);
             OpenGL.glMatrixMode(5888);
             this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
             aBoolean6301 = true;

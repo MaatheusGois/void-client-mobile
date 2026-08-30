@@ -58,7 +58,7 @@ final class MicrobotRuntime {
         if (walkAssistX >= 0 && walkAssistTicks > 0) {
             walkAssistTicks--;
             try {
-                Component10.method2252(true, walkAssistX, walkAssistY, (byte) -120, 1, 0, 1, -4, 0);
+                Component10.decodedOperation2252(true, walkAssistX, walkAssistY, (byte) -120, 1, 0, 1, -4, 0);
             } catch (Throwable ignored) {
             }
             if (walkAssistTicks <= 0) {

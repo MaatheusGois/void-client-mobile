@@ -48,24 +48,24 @@ final class Component201
         return anInterface18_Impl2_8719;
     }
 
-    static final void method2270(int i, int i_4_, GraphicsToolkit var_ha, String string, boolean bool, int i_5_, int i_6_, int i_7_) {
+    static final void decodedOperation2270(int i, int i_4_, GraphicsToolkit var_ha, String string, boolean bool, int i_5_, int i_6_, int i_7_) {
         try {
             if (OutputStream_Sub2.aClass105_106 == null || Component221.aClass105_1800 == null) {
                 if (Component158.aClass45_322.isSingletonFileReady(false, BuildType.anInt2996) && Component158.aClass45_322.isSingletonFileReady(false, ToolbarRefreshDefinition.anInt9231)) {
-                    OutputStream_Sub2.aClass105_106 = (var_ha.method3691(Component170.method1521(Component158.aClass45_322, BuildType.anInt2996, 0), true));
-                    Component170 class207 = Component170.method1521(Component158.aClass45_322, ToolbarRefreshDefinition.anInt9231, 0);
-                    Component221.aClass105_1800 = var_ha.method3691(class207, true);
-                    class207.method1518();
-                    NodeSub5.aClass105_6627 = var_ha.method3691(class207, true);
+                    OutputStream_Sub2.aClass105_106 = (var_ha.decodedOperation3691(Component170.decodedOperation1521(Component158.aClass45_322, BuildType.anInt2996, 0), true));
+                    Component170 class207 = Component170.decodedOperation1521(Component158.aClass45_322, ToolbarRefreshDefinition.anInt9231, 0);
+                    Component221.aClass105_1800 = var_ha.decodedOperation3691(class207, true);
+                    class207.decodedOperation1518();
+                    NodeSub5.aClass105_6627 = var_ha.decodedOperation3691(class207, true);
                 } else var_ha.fillRect2D(i_4_, i_5_, i, i_7_, (255 + -Component44.anInt948 << 24 | Component235.anInt3376), 1);
             }
             anInt8709++;
             if (OutputStream_Sub2.aClass105_106 != null && Component221.aClass105_1800 != null) {
-                int i_8_ = ((i - 2 * Component221.aClass105_1800.method971()) / OutputStream_Sub2.aClass105_106.method971());
+                int i_8_ = ((i - 2 * Component221.aClass105_1800.decodedOperation971()) / OutputStream_Sub2.aClass105_106.decodedOperation971());
                 for (int i_9_ = 0; i_9_ < i_8_; i_9_++)
-                    OutputStream_Sub2.aClass105_106.drawAt((Component221.aClass105_1800.method971() + i_4_ + (OutputStream_Sub2.aClass105_106.method971() * i_9_)), i_5_);
+                    OutputStream_Sub2.aClass105_106.drawAt((Component221.aClass105_1800.decodedOperation971() + i_4_ + (OutputStream_Sub2.aClass105_106.decodedOperation971() * i_9_)), i_5_);
                 Component221.aClass105_1800.drawAt(i_4_, i_5_);
-                NodeSub5.aClass105_6627.drawAt((-NodeSub5.aClass105_6627.method971() + i_4_ - -i), i_5_);
+                NodeSub5.aClass105_6627.drawAt((-NodeSub5.aClass105_6627.decodedOperation971() + i_4_ - -i), i_5_);
             }
             if (bool == false) {
                 NodeList.aClass324_3326.drawText(string, (StringDefinition.anInt9586) | ~0xffffff, 14 + i_5_, 3 + i_4_, -1, -127);
@@ -76,7 +76,7 @@ final class Component201
         }
     }
 
-    static final void method2271(int i) {
+    static final void decodedOperation2271(int i) {
         anInt8710++;
         if (!Component326.aBoolean5265) {
             InflaterDecompressor.disposeSceneEntities(0, Component304.aClass357ArrayArrayArray1148);
@@ -85,8 +85,8 @@ final class Component201
         }
     }
 
-    public static void method2272(int i) {
-        if (i < 85) method2271(-124);
+    public static void decodedOperation2272(int i) {
+        if (i < 85) decodedOperation2271(-124);
         anIntArray8712 = null;
     }
 

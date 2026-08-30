@@ -64,16 +64,16 @@ final class BufferCacheSub3
         int i_1_ = (this.tileSize >> this.aHa_Sub3_8322.anInt8107);
         CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         CacheNodeSub1 var_r_Sub1_2_;
-        if (var_r_Sub1 != null && var_r_Sub1.method3291(i_1_, i_1_, (byte) -59)) {
+        if (var_r_Sub1 != null && var_r_Sub1.decodedOperation3291(i_1_, i_1_, (byte) -59)) {
             var_r_Sub1_2_ = var_r_Sub1;
-            var_r_Sub1_2_.method3289(11);
+            var_r_Sub1_2_.decodedOperation3289(11);
         } else var_r_Sub1_2_ = new CacheNodeSub1(this.aHa_Sub3_8322, i_1_, i_1_);
-        var_r_Sub1_2_.method3286(i_1_, -97, i_1_, 0, 0);
+        var_r_Sub1_2_.decodedOperation3286(i_1_, -97, i_1_, 0, 0);
         method4005(var_r_Sub1_2_, i_0_, i, 21722);
         return var_r_Sub1_2_;
     }
 
-    static final void method4004(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
+    static final void decodedOperation4004(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         anInt8292++;
         int i_10_ = LogicError.clamp(PauseTimer.anInt513, i_4_, Component72.anInt1910, -118);
         int i_11_ = LogicError.clamp(PauseTimer.anInt513, i, Component72.anInt1910, 72);
@@ -119,7 +119,7 @@ final class BufferCacheSub3
             int i_30_ = Component228.anIntArray3014[i_26_++];
             int i_31_ = ComponentDownloader.anIntArray407[i_26_];
             int i_32_ = Component228.anIntArray3014[i_26_++];
-            if ((-((-i_29_ + i_31_) * (i_30_ - i_28_)) + (i_27_ - i_29_) * (i_30_ - i_32_)) > 0) var_r_Sub1.method3287(i_28_, i_22_ + -21622, i_27_, i_29_, i_30_, i_32_, i_31_);
+            if ((-((-i_29_ + i_31_) * (i_30_ - i_28_)) + (i_27_ - i_29_) * (i_30_ - i_32_)) > 0) var_r_Sub1.decodedOperation3287(i_28_, i_22_ + -21622, i_27_, i_29_, i_30_, i_32_, i_31_);
         }
     }
 
@@ -128,7 +128,7 @@ final class BufferCacheSub3
         if (aClass330_8307 != null && var_r != null) {
             int i_36_ = (i + -(i_33_ * (this.aHa_Sub3_8322.anInt8133) >> 8) >> this.aHa_Sub3_8322.anInt8107);
             int i_37_ = (i_34_ - ((this.aHa_Sub3_8322.anInt8114) * i_33_ >> 8) >> this.aHa_Sub3_8322.anInt8107);
-            aClass330_8307.method2629(i_37_, var_r, 1, i_36_);
+            aClass330_8307.decodedOperation2629(i_37_, var_r, 1, i_36_);
         }
     }
 
@@ -141,11 +141,11 @@ final class BufferCacheSub3
         if (aClass330_8307 != null && var_r != null) {
             int i_42_ = (i + -((this.aHa_Sub3_8322.anInt8133 * i_39_) >> 8) >> this.aHa_Sub3_8322.anInt8107);
             int i_43_ = (-((this.aHa_Sub3_8322.anInt8114 * i_39_) >> 8) + i_40_ >> this.aHa_Sub3_8322.anInt8107);
-            aClass330_8307.method2633(287, i_42_, var_r, i_43_);
+            aClass330_8307.decodedOperation2633(287, i_42_, var_r, i_43_);
         }
     }
 
-    public static void method4006(int i) {
+    public static void decodedOperation4006(int i) {
         aClass21_8320 = null;
         if (i > -42) aClass21_8320 = null;
     }
@@ -159,9 +159,9 @@ final class BufferCacheSub3
                     is[i][i_44_] = (byte) ((aByteArrayArray8330[i][-1 + i_44_] >> 2) + (aByteArrayArray8330[1 + i][i_44_] >> 3) + ((aByteArrayArray8330[i + -1][i_44_] >> 2) + (aByteArrayArray8330[i][1 + i_44_] >> 3)) + (aByteArrayArray8330[i][i_44_] >> 1));
             }
             NodeSub3[] class348_sub3s = new NodeSub3[aClass356_8325.size(1)];
-            aClass356_8325.method3477(3, class348_sub3s);
+            aClass356_8325.decodedOperation3477(3, class348_sub3s);
             for (int i = 0; i < class348_sub3s.length; i++)
-                class348_sub3s[i].method2736((byte) -57, anInt8329);
+                class348_sub3s[i].decodedOperation2736((byte) -57, anInt8329);
             int i = 20;
             if (anIntArrayArrayArray8314 != null) i += 4;
             if ((this.anInt8294 & 0x7) != 0) i += 12;
@@ -170,7 +170,7 @@ final class BufferCacheSub3
             Stream stream = new Stream(nativeheapbuffer_45_);
             Stream stream_46_ = new Stream(nativeheapbuffer);
             NodeSub3[] class348_sub3s_47_ = new NodeSub3[anInt8329];
-            int i_48_ = PrimitiveTypeDefinition.method3051(anInt8329 / 4, 4096);
+            int i_48_ = PrimitiveTypeDefinition.decodedOperation3051(anInt8329 / 4, 4096);
             if (i_48_ < 1) i_48_ = 1;
             LruCache class356 = new LruCache(i_48_);
             NodeSub3[] class348_sub3s_49_ = new NodeSub3[anInt8331];
@@ -346,7 +346,7 @@ final class BufferCacheSub3
                                 if (i_83_ != -1 && (class348_sub3s_47_[i_105_].key > class348_sub3s_52_[i_78_].key)) class348_sub3s_47_[i_105_] = class348_sub3s_52_[i_78_];
                             }
                             for (int i_112_ = 0; i_74_ > i_112_; i_112_++)
-                                class348_sub3s_49_[i_112_].method2741(i_105_, f_103_, 1624, i_88_, i_89_);
+                                class348_sub3s_49_[i_112_].decodedOperation2741(i_105_, f_103_, 1624, i_88_, i_89_);
                             anInt8301++;
                         }
                     }
@@ -354,7 +354,7 @@ final class BufferCacheSub3
             }
             for (int i_113_ = 0; i_113_ < anInt8303; i_113_++) {
                 NodeSub3 class348_sub3 = class348_sub3s_47_[i_113_];
-                if (class348_sub3 != null) class348_sub3.method2744((byte) -125, i_113_);
+                if (class348_sub3 != null) class348_sub3.decodedOperation2744((byte) -125, i_113_);
             }
             for (int i_114_ = 0; this.tileWidth > i_114_; i_114_++) {
                 for (int i_115_ = 0; i_115_ < this.tileLength; i_115_++) {
@@ -372,21 +372,21 @@ final class BufferCacheSub3
                             NodeSub3 class348_sub3_124_ = null;
                             if (class348_sub3 != null) {
                                 class348_sub3_124_ = class348_sub3;
-                                class348_sub3.method2742(i_117_, i_115_, i_114_, (byte) -80);
+                                class348_sub3.decodedOperation2742(i_117_, i_115_, i_114_, (byte) -80);
                             }
                             if (class348_sub3_122_ != null) {
-                                class348_sub3_122_.method2742(i_117_, i_115_, i_114_, (byte) -69);
+                                class348_sub3_122_.decodedOperation2742(i_117_, i_115_, i_114_, (byte) -69);
                                 if (class348_sub3_124_ == null || ((class348_sub3_124_.key) > (class348_sub3_122_.key))) class348_sub3_124_ = class348_sub3_122_;
                             }
                             if (class348_sub3_123_ != null) {
-                                class348_sub3_123_.method2742(i_117_, i_115_, i_114_, (byte) -79);
+                                class348_sub3_123_.decodedOperation2742(i_117_, i_115_, i_114_, (byte) -79);
                                 if (class348_sub3_124_ == null || ((class348_sub3_124_.key) > (class348_sub3_123_.key))) class348_sub3_124_ = class348_sub3_123_;
                             }
                             if (class348_sub3_124_ != null) {
-                                if (class348_sub3 != null) class348_sub3_124_.method2744((byte) -113, i_119_);
-                                if (class348_sub3_122_ != null) class348_sub3_124_.method2744((byte) -111, i_120_);
-                                if (class348_sub3_123_ != null) class348_sub3_124_.method2744((byte) -116, i_121_);
-                                class348_sub3_124_.method2742(i_117_, i_115_, i_114_, (byte) -107);
+                                if (class348_sub3 != null) class348_sub3_124_.decodedOperation2744((byte) -113, i_119_);
+                                if (class348_sub3_122_ != null) class348_sub3_124_.decodedOperation2744((byte) -111, i_120_);
+                                if (class348_sub3_123_ != null) class348_sub3_124_.decodedOperation2744((byte) -116, i_121_);
+                                class348_sub3_124_.decodedOperation2742(i_117_, i_115_, i_114_, (byte) -107);
                             }
                             i_117_++;
                         }
@@ -414,10 +414,10 @@ final class BufferCacheSub3
                 NodeSub3 class348_sub3 = class348_sub3s[i_127_];
                 ls[i_127_] = class348_sub3.key;
                 aClass348_Sub3Array8328[i_127_] = class348_sub3;
-                class348_sub3.method2740(-84, anInt8303);
+                class348_sub3.decodedOperation2740(-84, anInt8303);
             }
-            NewsFetcher.method2669(aClass348_Sub3Array8328, ls, -101);
-            if (aClass330_8307 != null) aClass330_8307.method2632(128);
+            NewsFetcher.decodedOperation2669(aClass348_Sub3Array8328, ls, -101);
+            if (aClass330_8307 != null) aClass330_8307.decodedOperation2632(128);
         }
         anInt8298++;
         anIntArrayArrayArray8308 = null;
@@ -436,7 +436,7 @@ final class BufferCacheSub3
         if (aClass330_8307 == null || var_r == null) return false;
         int i_131_ = (-(this.aHa_Sub3_8322.anInt8133 * i_128_ >> 8) + i >> this.aHa_Sub3_8322.anInt8107);
         int i_132_ = (i_129_ + -((this.aHa_Sub3_8322.anInt8114 * i_128_) >> 8) >> this.aHa_Sub3_8322.anInt8107);
-        return aClass330_8307.method2628(i_131_, (byte) 69, var_r, i_132_);
+        return aClass330_8307.decodedOperation2628(i_131_, (byte) 69, var_r, i_132_);
     }
 
     final void ka(int i, int i_133_, int i_134_) {
@@ -533,9 +533,9 @@ final class BufferCacheSub3
                 this.aHa_Sub3_8322.disableShader(false, false, -1, (byte) 101);
                 this.aHa_Sub3_8322.waitNative(112, anInterface5_Impl1_8327, 0);
                 for (int i_164_ = 0; i_164_ < aClass348_Sub3Array8328.length; i_164_++)
-                    aClass348_Sub3Array8328[i_164_].method2737((byte) -30, ArbShaderProgram.anIntArray6189, NodeSub48.anInt7133);
+                    aClass348_Sub3Array8328[i_164_].decodedOperation2737((byte) -30, ArbShaderProgram.anIntArray6189, NodeSub48.anInt7133);
                 MatrixSub2 class101_sub2 = this.aHa_Sub3_8322.getClipboard(-97);
-                class101_sub2.method894(0, -1, 0);
+                class101_sub2.decodedOperation894(0, -1, 0);
                 this.aHa_Sub3_8322.setDrawable(0);
                 if (!aClass262_8286.isEmpty((byte) 18)) {
                     int i_165_ = this.aHa_Sub3_8322.anInt8144;
@@ -551,7 +551,7 @@ final class BufferCacheSub3
                     this.aHa_Sub3_8322.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
                     for (Node class348 = aClass262_8286.first(i_151_ + 5); class348 != null; class348 = aClass262_8286.next((byte) 106)) {
                         NodeSub38 class348_sub38 = (NodeSub38) class348;
-                        class348_sub38.method3032(i_149_, i_153_, bools, false, i);
+                        class348_sub38.decodedOperation3032(i_149_, i_153_, bools, false, i);
                     }
                     this.aHa_Sub3_8322.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
                     this.aHa_Sub3_8322.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
@@ -562,7 +562,7 @@ final class BufferCacheSub3
                     this.aHa_Sub3_8322.waitNative(-91, anInterface5_Impl1_8327, 0);
                     this.aHa_Sub3_8322.waitNative(-71, anInterface5_Impl1_8326, 1);
                     this.aHa_Sub3_8322.drawArraysInstanced(0, this.aClass130_8324);
-                    aClass330_8307.method2630(128, i_153_, i, bool, bools, i_149_);
+                    aClass330_8307.decodedOperation2630(128, i_153_, i, bool, bools, i_149_);
                 }
             }
             anInt8297++;
@@ -757,7 +757,7 @@ final class BufferCacheSub3
                 fs[9] = 0.0F;
                 fs[12] = -1.0F - (((float) (i_213_ * i_214_) / 128.0F - (float) (2 * i)) / (float) (this.aHa_Sub3_8322.anInt7931));
                 fs[1] = 0.0F;
-                class101_sub2.method935(0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0);
+                class101_sub2.decodedOperation935(0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0);
                 this.aHa_Sub3_8322.getAttribLocation(-4845);
                 this.aHa_Sub3_8322.setDrawable(0);
                 if ((0x7 & this.anInt8294) != 0) {
@@ -774,7 +774,7 @@ final class BufferCacheSub3
         }
     }
 
-    static final int method4008(byte i) {
+    static final int decodedOperation4008(byte i) {
         anInt8289++;
         if (i >= -121) aClass21_8320 = null;
         if (Buffer.anInt7207 == 1) return NewsFetcher.anInt4211;

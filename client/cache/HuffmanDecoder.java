@@ -21,7 +21,7 @@ final class HuffmanDecoder {
     private int[] decodeTree;
     static int anInt3775;
 
-    static final boolean method2224(int i, byte i_0_, int i_1_) {
+    static final boolean decodedOperation2224(int i, byte i_0_, int i_1_) {
         int i_2_ = 41 / ((59 - i_0_) / 37);
         anInt3765++;
         return (i & 0x800) != 0;
@@ -155,11 +155,11 @@ final class HuffmanDecoder {
         }
     }
 
-    static final void method2228(int i) {
+    static final void decodedOperation2228(int i) {
         if (i == 0) {
-            ScreenModeManager.method1582(7851);
+            ScreenModeManager.decodedOperation1582(7851);
             anInt3772++;
-            Component381.method3570(false);
+            Component381.decodedOperation3570(false);
         }
     }
 

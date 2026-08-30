@@ -32,42 +32,42 @@ final class HashNodeSub20
         this.anInt9707 = NodeSub8.anIntArray6666[i];
     }
 
-    public static void method3280(int i) {
+    public static void decodedOperation3280(int i) {
         aClass262_9711 = null;
         anIntArray9714 = null;
         int i_0_ = 112 / ((i - 16) / 57);
     }
 
-    static final void method3281(byte i, GraphicsToolkit var_ha) {
-        if (Component364.aBoolean8335) DisplayModeManagerContainer165.method2288(false, var_ha);
-        else DisplayModeManagerContainer96.method1077(var_ha, (byte) -123);
+    static final void decodedOperation3281(byte i, GraphicsToolkit var_ha) {
+        if (Component364.aBoolean8335) DisplayModeManagerContainer165.decodedOperation2288(false, var_ha);
+        else DisplayModeManagerContainer96.decodedOperation1077(var_ha, (byte) -123);
         anInt9709++;
-        if (i < 29) method3280(81);
+        if (i < 29) decodedOperation3280(81);
     }
 
-    static final void method3282(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
+    static final void decodedOperation3282(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         NodeSub51.anInt7244 = i_6_;
         WorldNameText.anInt8633 = i_5_;
         Component54.anInt8668 = i_2_;
         ComponentSettings.anInt7092 = i;
         Component337.anInt3650 = i_4_;
         CookieBuilder.anInt620 = i_1_;
-        if (i_3_ != 0) method3281((byte) 92, null);
+        if (i_3_ != 0) decodedOperation3281((byte) 92, null);
         anInt9703++;
     }
 
     HashNodeSub20(DisplayModeManagerContainer173 class342, RenderableSub10 class318_sub10) {
         try {
             this.aClass342_9702 = class342;
-            this.aClass174_9704 = this.aClass342_9702.method2685((byte) -13);
+            this.aClass174_9704 = this.aClass342_9702.decodedOperation2685((byte) -13);
             method3279(2);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("jo.<init>(" + (class342 != null ? "{...}" : "null") + ',' + (class318_sub10 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    static final void method3283(int i) {
-        if (OggUrlStream.aClass297_8992.signed && (ShaderSub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.method2972((ShaderSub2.aClass161_5199.aString2147), (ShaderSub2.aClass161_5199.anInt2143), -54);
+    static final void decodedOperation3283(int i) {
+        if (OggUrlStream.aClass297_8992.signed && (ShaderSub2.aClass161_5199.anInt2143 != -1)) OggUrlStream.decodedOperation2972((ShaderSub2.aClass161_5199.aString2147), (ShaderSub2.aClass161_5199.anInt2143), -54);
         anInt9713++;
         int i_7_ = 9 / ((i - 60) / 50);
     }

@@ -21,7 +21,7 @@ final class GradientPreset extends Definition {
     private final int[] anIntArray9199 = new int[257];
     static int anInt9200;
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         if (i == 0) {
             int i_1_ = class348_sub49.readUnsignedByte(255);
             if (i_1_ == 0) {
@@ -35,10 +35,10 @@ final class GradientPreset extends Definition {
             } else ensureDefaultGradient(i_1_, i_0_ + -31111);
         }
         anInt9190++;
-        if (i_0_ != 31015) method3077((byte) 100);
+        if (i_0_ != 31015) decodedOperation3077((byte) 100);
     }
 
-    static final void method3076(int i, boolean bool) {
+    static final void decodedOperation3076(int i, boolean bool) {
         anInt9198++;
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7255), 0);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7261), 0);
@@ -59,11 +59,11 @@ final class GradientPreset extends Definition {
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub15_7224), 0);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), i);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub12_7243), 0);
-        DisplayModeManagerContainer87.method1686(i ^ 0x6e);
+        DisplayModeManagerContainer87.decodedOperation1686(i ^ 0x6e);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub23_7231), 2);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 1);
-        Definition.method3038(-1);
-        DisplayModeManagerContainer154.method773(true);
+        Definition.decodedOperation3038(-1);
+        DisplayModeManagerContainer154.decodedOperation773(true);
         RuntimeException_Sub1.aBoolean4604 = true;
     }
 
@@ -71,7 +71,7 @@ final class GradientPreset extends Definition {
         anInt9192++;
         int[][] is = this.imageCacheStore.getPixels(i_3_ ^ 0x5d41e287, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[] is_4_ = this.method3048(i, 633706337, 0);
+            int[] is_4_ = this.decodedOperation3048(i, 633706337, 0);
             int[] is_5_ = is[0];
             int[] is_6_ = is[1];
             int[] is_7_ = is[2];
@@ -89,10 +89,10 @@ final class GradientPreset extends Definition {
         return is;
     }
 
-    public static void method3077(byte i) {
+    public static void decodedOperation3077(byte i) {
         aClass351_9189 = null;
         aClass114_9197 = null;
-        if (i != -98) method3077((byte) 27);
+        if (i != -98) decodedOperation3077((byte) 27);
         aClass263_9195 = null;
     }
 
@@ -328,7 +328,7 @@ final class GradientPreset extends Definition {
 
     private final void method3079(int i) {
         anInt9191++;
-        if (i != -29547) method3076(-28, false);
+        if (i != -29547) decodedOperation3076(-28, false);
         int i_12_ = anIntArrayArray9194.length;
         if (i_12_ > 0) {
             for (int i_13_ = 0; i_13_ < 257; i_13_++) {

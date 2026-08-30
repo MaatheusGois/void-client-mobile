@@ -18,7 +18,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
     static boolean aBoolean4604;
     static int anInt4605;
 
-    static final ShaderSub1 method4009(int i, int[] is, int[] is_0_, int i_1_, GlToolkitSub2 var_ha_Sub2, int i_2_) {
+    static final ShaderSub1 decodedOperation4009(int i, int[] is, int[] is_0_, int i_1_, GlToolkitSub2 var_ha_Sub2, int i_2_) {
         try {
             anInt4597++;
             byte[] is_3_ = new byte[i * i_2_];
@@ -46,9 +46,9 @@ final class RuntimeException_Sub1 extends RuntimeException {
         this.cause = throwable;
     }
 
-    static final void method4011(int i, CacheStore class45) {
+    static final void decodedOperation4011(int i, CacheStore class45) {
         anInt4598++;
-        if (i != 1024) method4012(null, (byte) 68);
+        if (i != 1024) decodedOperation4012(null, (byte) 68);
         client.anInt5171 = 0;
         NodeSub1Sub1.anInt8808 = 0;
         InflaterDecompressor.aClass243_2077 = new Component315();
@@ -57,10 +57,10 @@ final class RuntimeException_Sub1 extends RuntimeException {
         GlTexture.anInt8550 = 0;
         Component239.anInt4559 = 0;
         Component208.setEnumCacheStore(class45, (byte) -107);
-        Component245.method172(30284, class45);
+        Component245.decodedOperation172(30284, class45);
     }
 
-    static final void method4012(byte[] is, byte i) {
+    static final void decodedOperation4012(byte[] is, byte i) {
         anInt4605++;
         Buffer class348_sub49 = new Buffer(is);
         int i_7_ = -91 % ((i - -51) / 42);

@@ -31,10 +31,10 @@ public final class client extends Applet_Sub1 {
     /*synthetic*/ static Class aClass5189;
     public static int anInt5190;
 
-    private final void method101(byte i) {
+    private final void decodedOperation101(byte i) {
         anInt5179++;
         if (HardwareProbe.aClass248_6601.errorCount > LibraryCreditsText.anInt5959) {
-            Component223.aClass161_125.method1259(0);
+            Component223.aClass161_125.decodedOperation1259(0);
             DisplayModeManagerContainer196.anInt4235 = (HardwareProbe.aClass248_6601.errorCount * 50 + -50) * 5;
             if (DisplayModeManagerContainer196.anInt4235 > 3000) DisplayModeManagerContainer196.anInt4235 = 3000;
             if (HardwareProbe.aClass248_6601.errorCount >= 2 && HardwareProbe.aClass248_6601.disconnectCode == 6) {
@@ -47,7 +47,7 @@ public final class client extends Applet_Sub1 {
                 Component49.clientState = 14;
                 return;
             }
-            if (HardwareProbe.aClass248_6601.errorCount >= 4 && GpsOverlay.method1167(Component49.clientState, (byte) -81)) {
+            if (HardwareProbe.aClass248_6601.errorCount >= 4 && GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -81)) {
                 if (HardwareProbe.aClass248_6601.disconnectCode != 7 && HardwareProbe.aClass248_6601.disconnectCode != 9) {
                     if (HardwareProbe.aClass248_6601.disconnectCode <= 0) this.reportGameError(72, "js5io");
                     else if (Sprite.aString6926 == null) this.reportGameError(-116, "js5connect");
@@ -62,7 +62,7 @@ public final class client extends Applet_Sub1 {
         else {
             try {
                 if (DisplayModeManagerContainer32.anInt846 == 0) {
-                    Shader.aClass144_114 = Component223.aClass161_125.method1262((OggUrlStream.aClass297_8992), (byte) 36);
+                    Shader.aClass144_114 = Component223.aClass161_125.decodedOperation1262((OggUrlStream.aClass297_8992), (byte) 36);
                     DisplayModeManagerContainer32.anInt846++;
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 1) {
@@ -83,7 +83,7 @@ public final class client extends Applet_Sub1 {
                     CacheStore.aLong667 = Component240.currentTimeMillis(-70);
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 3) {
-                    if (GpsOverlay.method1167(Component49.clientState, (byte) -100) || Component321.aClass202_2589.available((byte) 83) > 0) {
+                    if (GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -100) || Component321.aClass202_2589.available((byte) 83) > 0) {
                         int i_0_ = Component321.aClass202_2589.read(0);
                         if (i_0_ != 0) {
                             onJs5Failure(i_0_, (byte) 111);
@@ -96,12 +96,12 @@ public final class client extends Applet_Sub1 {
                     }
                 }
                 if (DisplayModeManagerContainer32.anInt846 == 4) {
-                    boolean bool = (GpsOverlay.method1167(Component49.clientState, (byte) -100) || CacheNode.method3196(Component49.clientState, -87) || CacheFileStore.isReconnectState(Component49.clientState, -127));
-                    Component119[] class267s = Component119.method2029(105);
+                    boolean bool = (GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -100) || CacheNode.decodedOperation3196(Component49.clientState, -87) || CacheFileStore.isReconnectState(Component49.clientState, -127));
+                    Component119[] class267s = Component119.decodedOperation2029(105);
                     Buffer class348_sub49 = new Buffer(class267s.length * 4);
                     Component321.aClass202_2589.readFully(class348_sub49.payload, 0, (byte) -72, (class348_sub49.payload).length);
                     for (int i_1_ = 0; i_1_ < class267s.length; i_1_++)
-                        class267s[i_1_].method2030(1, class348_sub49.readInt((byte) -126));
+                        class267s[i_1_].decodedOperation2030(1, class348_sub49.readInt((byte) -126));
                     HardwareProbe.aClass248_6601.setConnection(false, !bool, Component321.aClass202_2589);
                     DisplayModeManagerContainer32.anInt846 = 0;
                     Shader.aClass144_114 = null;
@@ -121,14 +121,14 @@ public final class client extends Applet_Sub1 {
         Frame frame = new Frame("Jagex");
         frame.pack();
         frame.dispose();
-        OpenGlShader.method3556(false);
+        OpenGlShader.decodedOperation3556(false);
         DisplayModeManagerContainer271.aClass112_520 = new DisplayModeManagerContainer67(OggUrlStream.aClass297_8992);
         HardwareProbe.aClass248_6601 = new Component253();
         MenuEntry.initArrayPools(new int[]{20, 260}, new int[]{1000, 100}, 0);
         if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) Component17.aByteArrayArray3882 = new byte[50][];
-        Component192.preferences = DisplayModeManagerContainer288.method247(24916);
+        Component192.preferences = DisplayModeManagerContainer288.decodedOperation247(24916);
         if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE) MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
-        else if (Component168.method2354(DisplayModeManagerContainer345.aClass364_165, i ^ ~0x7044)) {
+        else if (Component168.decodedOperation2354(DisplayModeManagerContainer345.aClass364_165, i ^ ~0x7044)) {
             MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
             MenuOpener.aClass161_4839.anInt2148 = 40000 - -MenuOpener.aClass161_4839.anInt2143;
             ItemDefinitionProvider.aClass161_3285.anInt2148 = ItemDefinitionProvider.aClass161_3285.anInt2143 + 40000;
@@ -168,7 +168,7 @@ public final class client extends Applet_Sub1 {
         } catch (Exception exception) {
             /* empty */
         }
-        Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) -124);
+        Component280.aClass346_2449 = NodeSub3.decodedOperation2743(DisplayModeManagerContainer50.gameCanvas, (byte) -124);
         AbstractGlTextureSub4.mouseHandler = NodeSub18.createMouseHandler(DisplayModeManagerContainer50.gameCanvas, 0, true);
         try {
             if (OggUrlStream.aClass297_8992.cacheDat2 != null) {
@@ -198,539 +198,539 @@ public final class client extends Applet_Sub1 {
         int i_4_ = anInt5190;
         anInt5181++;
         method110(31);
-        Component275.method1497(16384);
-        Component92.method1979((byte) 125);
-        RSARequest.method3247(-74);
+        Component275.decodedOperation1497(16384);
+        Component92.decodedOperation1979((byte) 125);
+        RSARequest.decodedOperation3247(-74);
         FriendsIgnoreList.clearStatics(i ^ ~0x1f);
         JaclibLoader.clearStatics(false);
-        Component119.method2026(23377);
-        Component82.method328(i ^ 0x6c);
-        Component386.method1604(11868);
-        Component270.method1246(-83);
-        HashNode.method3161(0);
-        Node.method2713(0);
-        HashTable.method1004((byte) 16);
-        LruCache.method3478(false);
+        Component119.decodedOperation2026(23377);
+        Component82.decodedOperation328(i ^ 0x6c);
+        Component386.decodedOperation1604(11868);
+        Component270.decodedOperation1246(-83);
+        HashNode.decodedOperation3161(0);
+        Node.decodedOperation2713(0);
+        HashTable.decodedOperation1004((byte) 16);
+        LruCache.decodedOperation3478(false);
         Applet_Sub1.clearStatics(i + 32609);
-        Component41.method1860((byte) -89);
-        BuildType.method1641((byte) 85);
-        DisplayModeManagerContainer204.method906(-31777);
-        GraphicsToolkit.method3680(-24016);
-        NodeSub51.method3430(false);
-        HardwareProbe.method2748(-86);
-        DisplayModeManagerContainer292.method1310(true);
-        NodeList.method1994(-13722);
-        Connection.method1471((byte) 124);
+        Component41.decodedOperation1860((byte) -89);
+        BuildType.decodedOperation1641((byte) 85);
+        DisplayModeManagerContainer204.decodedOperation906(-31777);
+        GraphicsToolkit.decodedOperation3680(-24016);
+        NodeSub51.decodedOperation3430(false);
+        HardwareProbe.decodedOperation2748(-86);
+        DisplayModeManagerContainer292.decodedOperation1310(true);
+        NodeList.decodedOperation1994(-13722);
+        Connection.decodedOperation1471((byte) 124);
         Component253.clearStatics((byte) 119);
         DisplayModeManagerContainer67.clearStatics((byte) -124);
         CacheFileStore.clearStatics(0);
         Component219.clearStatics(i + -108);
         CacheStore.clearStatics((byte) 10);
-        SeekableFile.method786((byte) 0);
-        NodeCache.method584((byte) 116);
+        SeekableFile.decodedOperation786((byte) 0);
+        NodeCache.decodedOperation584((byte) 116);
         DisplayModeManagerContainer1.clearStatics(i ^ 0xe);
-        CursorDefinitionCache.method1284(-21165);
-        DisplayModeManagerContainer259.method2036((byte) 121);
-        Component191.method1378(14);
-        Component324.method1208(55);
-        DisplayModeManagerContainer130.method2045((byte) 62);
-        Component316.method1395((byte) 82);
-        Component309.method2011((byte) -71);
-        Component258.method1179((byte) -124);
-        ItemDefinitionProvider.method1931(true);
-        Component38.method1407((byte) 124);
-        DisplayModeManagerContainer26.method825(i + -204);
-        Component361.method305((byte) 79);
-        Component144.method2545(true);
-        Component304.method698(i + -106);
+        CursorDefinitionCache.decodedOperation1284(-21165);
+        DisplayModeManagerContainer259.decodedOperation2036((byte) 121);
+        Component191.decodedOperation1378(14);
+        Component324.decodedOperation1208(55);
+        DisplayModeManagerContainer130.decodedOperation2045((byte) 62);
+        Component316.decodedOperation1395((byte) 82);
+        Component309.decodedOperation2011((byte) -71);
+        Component258.decodedOperation1179((byte) -124);
+        ItemDefinitionProvider.decodedOperation1931(true);
+        Component38.decodedOperation1407((byte) 124);
+        DisplayModeManagerContainer26.decodedOperation825(i + -204);
+        Component361.decodedOperation305((byte) 79);
+        Component144.decodedOperation2545(true);
+        Component304.decodedOperation698(i + -106);
         CommandHandler.clearStatics((byte) -123);
-        Component293.method1975((byte) -15);
-        Component276.method1441((byte) 18);
-        Component46.method1585(-1);
-        Component127.method1624(28962);
-        Component117.method3473(12949);
-        SocketStream.method1704((byte) -95);
-        DisplayModeManagerContainer123.method782(1);
-        DisplayModeManagerContainer207.method3414(21515);
-        RequestProcessor.method1300((byte) -128);
-        Request.method2998((byte) -35);
-        CollisionMap.method3508(2);
-        Component251.method1698(1);
-        HashNodeSub14.method3237((byte) 42);
-        Component278.method1917(40960);
-        DisplayModeManagerContainer50.method2294(126);
-        Component315.method1873((byte) -120);
-        DisplayModeManagerContainer57.method442((byte) -84);
-        DisplayModeInfo.method530(14);
-        Player.method2458(true);
-        Component150.method1627((byte) 116);
-        Component248.method284((byte) 51);
-        Component285.method501(1);
+        Component293.decodedOperation1975((byte) -15);
+        Component276.decodedOperation1441((byte) 18);
+        Component46.decodedOperation1585(-1);
+        Component127.decodedOperation1624(28962);
+        Component117.decodedOperation3473(12949);
+        SocketStream.decodedOperation1704((byte) -95);
+        DisplayModeManagerContainer123.decodedOperation782(1);
+        DisplayModeManagerContainer207.decodedOperation3414(21515);
+        RequestProcessor.decodedOperation1300((byte) -128);
+        Request.decodedOperation2998((byte) -35);
+        CollisionMap.decodedOperation3508(2);
+        Component251.decodedOperation1698(1);
+        HashNodeSub14.decodedOperation3237((byte) 42);
+        Component278.decodedOperation1917(40960);
+        DisplayModeManagerContainer50.decodedOperation2294(126);
+        Component315.decodedOperation1873((byte) -120);
+        DisplayModeManagerContainer57.decodedOperation442((byte) -84);
+        DisplayModeInfo.decodedOperation530(14);
+        Player.decodedOperation2458(true);
+        Component150.decodedOperation1627((byte) 116);
+        Component248.decodedOperation284((byte) 51);
+        Component285.decodedOperation501(1);
         Buffer.clearStatics(i ^ ~0x6d);
-        ParticleSystem.method3323(-44);
+        ParticleSystem.decodedOperation3323(-44);
         DisplayModeManagerContainer58.clearStatic2(-123);
-        Component186.method3487(-65);
-        DisplayModeManagerContainer238.method744((byte) 115);
-        NodeSub27.method3001(0);
-        NodeSub34.method3026(true);
-        NodeSub41.method3155(i + -113);
-        CacheNode.method3199(i ^ 0x70);
-        Component97.method866(-14603);
+        Component186.decodedOperation3487(-65);
+        DisplayModeManagerContainer238.decodedOperation744((byte) 115);
+        NodeSub27.decodedOperation3001(0);
+        NodeSub34.decodedOperation3026(true);
+        NodeSub41.decodedOperation3155(i + -113);
+        CacheNode.decodedOperation3199(i ^ 0x70);
+        Component97.decodedOperation866(-14603);
         ToolkitFactory.clearStatics(-76);
-        Renderable.method2374((byte) -125);
-        Component268.method810(true);
-        Component240.method597((byte) -122);
+        Renderable.decodedOperation2374((byte) -125);
+        Component268.decodedOperation810(true);
+        Component240.decodedOperation597((byte) -122);
         DisplayModeManagerContainer145.clearStatics(true);
-        Component354.method225((byte) 57);
-        Component362.method1040(i + 404);
-        Component10.method2251(16711680);
-        DisplayModeManagerContainer254.method1261((byte) 108);
-        Component314.method2299((byte) -128);
+        Component354.decodedOperation225((byte) 57);
+        Component362.decodedOperation1040(i + 404);
+        Component10.decodedOperation2251(16711680);
+        DisplayModeManagerContainer254.decodedOperation1261((byte) 108);
+        Component314.decodedOperation2299((byte) -128);
         RuntimeException_Sub1.clearStatics(-3);
-        DisplayModeManagerContainer153.method883((byte) 66);
-        HashNodeSub16Sub2.method3264((byte) -24);
-        Component16.method1325(-128);
-        Component101.method1235((byte) 7);
-        HashNodeSub17.method3269(true);
-        DisplayModeManagerContainer167.method265(false);
-        Component280.method1375(5616);
-        DisplayModeManagerContainer370.method609((byte) -52);
-        Component129.method355(i + 4189);
-        DisplayModeManagerContainer56.method1426(25165);
-        Component80.method2254(i ^ ~0x39bf);
-        Component121.method3613(64);
-        Component44.method486(-123);
-        DisplayModeManagerContainer77.method1096(i ^ 0x11);
-        Component245.method171((byte) 72);
-        s.method3988(i + -182);
-        NpcComposition.method804(-3752);
-        ItemDefinition.method1564(104);
-        BitmapFont.method2572((byte) 23);
+        DisplayModeManagerContainer153.decodedOperation883((byte) 66);
+        HashNodeSub16Sub2.decodedOperation3264((byte) -24);
+        Component16.decodedOperation1325(-128);
+        Component101.decodedOperation1235((byte) 7);
+        HashNodeSub17.decodedOperation3269(true);
+        DisplayModeManagerContainer167.decodedOperation265(false);
+        Component280.decodedOperation1375(5616);
+        DisplayModeManagerContainer370.decodedOperation609((byte) -52);
+        Component129.decodedOperation355(i + 4189);
+        DisplayModeManagerContainer56.decodedOperation1426(25165);
+        Component80.decodedOperation2254(i ^ ~0x39bf);
+        Component121.decodedOperation3613(64);
+        Component44.decodedOperation486(-123);
+        DisplayModeManagerContainer77.decodedOperation1096(i ^ 0x11);
+        Component245.decodedOperation171((byte) 72);
+        s.decodedOperation3988(i + -182);
+        NpcComposition.decodedOperation804(-3752);
+        ItemDefinition.decodedOperation1564(104);
+        BitmapFont.decodedOperation2572((byte) 23);
         RandomAccessFileReader.clearStatics((byte) -71);
-        HelveticaFont.method1461((byte) 112);
-        Component20.method1807((byte) -121);
-        Component205.method1773((byte) 120);
-        Component98.method1763(-15596);
-        Component31.method1746(-15628);
-        Component175.method1723((byte) 119);
-        Component379.method1758(-16211);
-        Component323.method1738(i + 21813);
-        DisplayModeManagerContainer341.method1785(i ^ 0x64);
-        Component329.method1780(i + -48);
-        Component71.method1814((byte) -70);
-        DisplayModeManagerContainer199.method1724(-4);
-        ColoredText.method1822((byte) 110);
-        Component256.method1832(1);
-        Component139.method1841(16878);
-        Component302.method1799(124);
-        DisplayModeManagerContainer295.method1755(i + -107);
-        CustomCursorSetting.method1816(1);
-        Component66.method1794(63);
-        LibraryCreditsText.method1769(100);
-        RadixText.method1835(i + -28702);
-        Component339.method1715(103);
-        Component330.method852(6);
-        Component6.method3518(i ^ 0x34);
-        Exception_Sub1.method140((byte) -126);
-        Shader.method158((byte) -67);
-        NodeBase.method3438((byte) 59);
-        Component184.method1180((byte) -76);
-        Component122.method879(96);
-        NodeSub1.method2719(11339);
-        Component327.method2412(true);
-        RenderableObject.method2389(1);
-        BrowserUrlOpener.method2871(-65);
-        ImageTagText.method1276(i + -199);
+        HelveticaFont.decodedOperation1461((byte) 112);
+        Component20.decodedOperation1807((byte) -121);
+        Component205.decodedOperation1773((byte) 120);
+        Component98.decodedOperation1763(-15596);
+        Component31.decodedOperation1746(-15628);
+        Component175.decodedOperation1723((byte) 119);
+        Component379.decodedOperation1758(-16211);
+        Component323.decodedOperation1738(i + 21813);
+        DisplayModeManagerContainer341.decodedOperation1785(i ^ 0x64);
+        Component329.decodedOperation1780(i + -48);
+        Component71.decodedOperation1814((byte) -70);
+        DisplayModeManagerContainer199.decodedOperation1724(-4);
+        ColoredText.decodedOperation1822((byte) 110);
+        Component256.decodedOperation1832(1);
+        Component139.decodedOperation1841(16878);
+        Component302.decodedOperation1799(124);
+        DisplayModeManagerContainer295.decodedOperation1755(i + -107);
+        CustomCursorSetting.decodedOperation1816(1);
+        Component66.decodedOperation1794(63);
+        LibraryCreditsText.decodedOperation1769(100);
+        RadixText.decodedOperation1835(i + -28702);
+        Component339.decodedOperation1715(103);
+        Component330.decodedOperation852(6);
+        Component6.decodedOperation3518(i ^ 0x34);
+        Exception_Sub1.decodedOperation140((byte) -126);
+        Shader.decodedOperation158((byte) -67);
+        NodeBase.decodedOperation3438((byte) 59);
+        Component184.decodedOperation1180((byte) -76);
+        Component122.decodedOperation879(96);
+        NodeSub1.decodedOperation2719(11339);
+        Component327.decodedOperation2412(true);
+        RenderableObject.decodedOperation2389(1);
+        BrowserUrlOpener.decodedOperation2871(-65);
+        ImageTagText.decodedOperation1276(i + -199);
         RunescapeInfo.clearStatics((byte) 119);
         ClientScriptExecutor.shutdown();
         StringCache.clearStatics(true);
-        Component224.method2055(1);
-        Component179.method2990((byte) 125);
-        Component326.method523(119);
-        DisplayModeManagerContainer64.method2974(1);
-        OggUrlStream.method2968((byte) -116);
-        NodeSub16Sub2.method2830(i ^ 0x6c);
-        Component126.method3516(124);
-        Component279.method255(6725);
+        Component224.decodedOperation2055(1);
+        Component179.decodedOperation2990((byte) 125);
+        Component326.decodedOperation523(119);
+        DisplayModeManagerContainer64.decodedOperation2974(1);
+        OggUrlStream.decodedOperation2968((byte) -116);
+        NodeSub16Sub2.decodedOperation2830(i ^ 0x6c);
+        Component126.decodedOperation3516(124);
+        Component279.decodedOperation255(6725);
         Component120.clearStatics(51);
         LoadingState.getProgress(85);
-        Component226.method2657((byte) 124);
-        Component110.method261((byte) -120);
-        ModelStore.method1880(i + -221);
+        Component226.decodedOperation2657((byte) 124);
+        Component110.decodedOperation261((byte) -120);
+        ModelStore.decodedOperation1880(i + -221);
         HuffmanDecoder.clearStatics(i + -76);
-        Component286.method1136((byte) -98);
+        Component286.decodedOperation1136((byte) -98);
         KeyStoreLoader.clearStatics(21745);
-        DisplayModeManagerContainer332.method318(122);
-        Component331.method1047(1);
-        Component214.method1254((byte) 62);
+        DisplayModeManagerContainer332.decodedOperation318(122);
+        Component331.decodedOperation1047(1);
+        Component214.decodedOperation1254((byte) 62);
         DisplayModeManagerContainer229.clearWorld();
-        ResourceLoader.method2317((byte) 79);
-        Component281.method2281(1);
-        Component211.method1169(false);
+        ResourceLoader.decodedOperation2317((byte) 79);
+        Component281.decodedOperation2281(1);
+        Component211.decodedOperation1169(false);
         Component218.clearStatics(1);
-        AssetCacheLoader.method306(true);
-        AudioMixer.method1910(0);
-        Component221.method1081((byte) 121);
-        Component72.method1137(3);
-        DisplayModeManagerContainer196.method2677(i ^ 0x33);
-        Component90.method1200(false);
-        Component166.method1366((byte) -43);
-        DisplayModeManagerContainer154.method772((byte) -113);
-        ComponentDownloader.method322(1);
-        Component235.method2018(0);
-        RenderableSub10.method2527();
-        Component241.method1619((byte) 108);
-        DisplayModeManagerContainer91.method316((byte) -94);
+        AssetCacheLoader.decodedOperation306(true);
+        AudioMixer.decodedOperation1910(0);
+        Component221.decodedOperation1081((byte) 121);
+        Component72.decodedOperation1137(3);
+        DisplayModeManagerContainer196.decodedOperation2677(i ^ 0x33);
+        Component90.decodedOperation1200(false);
+        Component166.decodedOperation1366((byte) -43);
+        DisplayModeManagerContainer154.decodedOperation772((byte) -113);
+        ComponentDownloader.decodedOperation322(1);
+        Component235.decodedOperation2018(0);
+        RenderableSub10.decodedOperation2527();
+        Component241.decodedOperation1619((byte) 108);
+        DisplayModeManagerContainer91.decodedOperation316((byte) -94);
         ReferenceTable.clearStatics((byte) 63);
         InflaterDecompressor.clearStatics((byte) -97);
-        DisplayModeManagerContainer165.method2286(114);
-        Component79.method2645(i + -16777324);
-        Component37.method2331(true);
-        NodeSub21.method2956((byte) 53);
+        DisplayModeManagerContainer165.decodedOperation2286(114);
+        Component79.decodedOperation2645(i + -16777324);
+        Component37.decodedOperation2331(true);
+        NodeSub21.decodedOperation2956((byte) 53);
         FontGlyphCache.clearCharsetMap();
-        Component325.method722(13569);
-        Component357.method1386(true);
+        Component325.decodedOperation722(13569);
+        Component357.decodedOperation1386(true);
         CookieBuilder.clearStatics(0);
-        NodeSub36.method3029(126);
-        HashNodeSub19.method3278(1);
-        Component39.method1298(-1);
-        HashNodeSub16.method3252(353);
-        DisplayModeManagerContainer32.method445(i ^ 0x6e);
-        DisplayModeManagerContainer159.method1543(-4524);
-        DisplayModeManagerContainer28.method2395((byte) 50);
-        DisplayModeManagerContainer343.method2406(i ^ ~0x12);
-        Component269.method2479(i + 19316);
-        Component203.method2484(0);
-        Component3.method1198(1010);
-        r.method3285(88);
-        DisplayModeManagerContainer109.method1355(-108);
-        DisplayModeManagerContainer365.method731();
-        Component30.method1126(32);
-        DisplayModeManagerContainer173.method2682(i ^ 0x29);
-        DisplayModeManagerContainer133.method1267((byte) 85);
+        NodeSub36.decodedOperation3029(126);
+        HashNodeSub19.decodedOperation3278(1);
+        Component39.decodedOperation1298(-1);
+        HashNodeSub16.decodedOperation3252(353);
+        DisplayModeManagerContainer32.decodedOperation445(i ^ 0x6e);
+        DisplayModeManagerContainer159.decodedOperation1543(-4524);
+        DisplayModeManagerContainer28.decodedOperation2395((byte) 50);
+        DisplayModeManagerContainer343.decodedOperation2406(i ^ ~0x12);
+        Component269.decodedOperation2479(i + 19316);
+        Component203.decodedOperation2484(0);
+        Component3.decodedOperation1198(1010);
+        r.decodedOperation3285(88);
+        DisplayModeManagerContainer109.decodedOperation1355(-108);
+        DisplayModeManagerContainer365.decodedOperation731();
+        Component30.decodedOperation1126(32);
+        DisplayModeManagerContainer173.decodedOperation2682(i ^ 0x29);
+        DisplayModeManagerContainer133.decodedOperation1267((byte) 85);
         ObjectDeserializer.clearStatics(-100);
-        Component376.method177();
+        Component376.decodedOperation177();
         CursorDefinition.clearStatics((byte) -121);
-        Component143.method1349((byte) -121);
-        Component63.method3560(-13);
+        Component143.decodedOperation1349((byte) -121);
+        Component63.decodedOperation3560(-13);
         Component262.clearStatics((byte) 35);
-        Component83.method1013((byte) 114);
-        NodeSub10.method2785();
-        Component135.method3491(1);
-        NodeSub14.method2805((byte) 113);
-        Component11.method2071(-128);
-        Component231.method293((byte) -83);
-        Component225.method351(80);
-        Component334.method1194(10);
-        SceneManager.method1594(-1966608624);
-        Component355.method1926(-127);
-        Component236.method2549((byte) -85);
-        HashNodeSub1.method3165((byte) 44);
-        Component113.method1369((byte) 2);
-        RadixParser.method1334((byte) -110);
-        Component95.method1061(16711680);
-        Component17.method2306((byte) -90);
-        Component99.method948(false);
-        Component337.method2107((byte) 77);
-        Component21.method2111((byte) 68);
-        Component335.method1195((byte) 127);
-        GnpPositionLogger.method857(126);
-        Component156.method2191(0);
-        Component177.method1236((byte) -110);
-        Component33.method1463((byte) 25);
+        Component83.decodedOperation1013((byte) 114);
+        NodeSub10.decodedOperation2785();
+        Component135.decodedOperation3491(1);
+        NodeSub14.decodedOperation2805((byte) 113);
+        Component11.decodedOperation2071(-128);
+        Component231.decodedOperation293((byte) -83);
+        Component225.decodedOperation351(80);
+        Component334.decodedOperation1194(10);
+        SceneManager.decodedOperation1594(-1966608624);
+        Component355.decodedOperation1926(-127);
+        Component236.decodedOperation2549((byte) -85);
+        HashNodeSub1.decodedOperation3165((byte) 44);
+        Component113.decodedOperation1369((byte) 2);
+        RadixParser.decodedOperation1334((byte) -110);
+        Component95.decodedOperation1061(16711680);
+        Component17.decodedOperation2306((byte) -90);
+        Component99.decodedOperation948(false);
+        Component337.decodedOperation2107((byte) 77);
+        Component21.decodedOperation2111((byte) 68);
+        Component335.decodedOperation1195((byte) 127);
+        GnpPositionLogger.decodedOperation857(126);
+        Component156.decodedOperation2191(0);
+        Component177.decodedOperation1236((byte) -110);
+        Component33.decodedOperation1463((byte) 25);
         RenderableSub6.clearStatics((byte) -46);
-        DisplayModeManagerContainer104.method2469(true);
-        Component9.method2640(true);
-        Component181.method869(3);
-        DisplayModeManagerContainer363.method2604((byte) -102);
-        HashNodeSub10.method3217((byte) 61);
-        Component161.method1164((byte) -52);
-        Component252.method2407(false);
-        Component366.method1673(i ^ ~0x75);
-        ShaderLinker.method2492(1);
+        DisplayModeManagerContainer104.decodedOperation2469(true);
+        Component9.decodedOperation2640(true);
+        Component181.decodedOperation869(3);
+        DisplayModeManagerContainer363.decodedOperation2604((byte) -102);
+        HashNodeSub10.decodedOperation3217((byte) 61);
+        Component161.decodedOperation1164((byte) -52);
+        Component252.decodedOperation2407(false);
+        Component366.decodedOperation1673(i ^ ~0x75);
+        ShaderLinker.decodedOperation2492(1);
         Component141.clearStatic4((byte) -83);
-        VideoAdDisplay.method1889(255);
+        VideoAdDisplay.decodedOperation1889(255);
         KeyFocusHandler.clearStatics(i + 14537);
         BasicMouseHandler.clearStatics((byte) 48);
-        DisplayModeManagerContainer369.method1612((byte) -9);
-        DisplayModeManagerContainer260.method2180((byte) -72);
-        Component195.method1447(i ^ 0x20);
-        RSACipher.method492(i + -216);
-        Component76.method3574(i ^ 0x4c47);
-        Component15.method1109((byte) -22);
-        Component383.method2190(true);
-        Component14.method3572(1000000);
-        Component118.method2185(2);
-        HeapDumpHelper.method1249(true);
-        NewsFetcher.method2664(i ^ 0x6f);
-        DefinitionGroup.method3187((byte) -52);
+        DisplayModeManagerContainer369.decodedOperation1612((byte) -9);
+        DisplayModeManagerContainer260.decodedOperation2180((byte) -72);
+        Component195.decodedOperation1447(i ^ 0x20);
+        RSACipher.decodedOperation492(i + -216);
+        Component76.decodedOperation3574(i ^ 0x4c47);
+        Component15.decodedOperation1109((byte) -22);
+        Component383.decodedOperation2190(true);
+        Component14.decodedOperation3572(1000000);
+        Component118.decodedOperation2185(2);
+        HeapDumpHelper.decodedOperation1249(true);
+        NewsFetcher.decodedOperation2664(i ^ 0x6f);
+        DefinitionGroup.decodedOperation3187((byte) -52);
         Component208.clearStatics(-3);
-        Component291.method1421((byte) -85);
-        StringDefinition.method3220((byte) 102);
+        Component291.decodedOperation1421((byte) -85);
+        StringDefinition.decodedOperation3220((byte) 102);
         if (i != 108) anInt5171 = -60;
-        OggStream.method2962(-31055);
-        Component52.method1944(1);
-        Component103.method2662(4);
+        OggStream.decodedOperation2962(-31055);
+        Component52.decodedOperation1944(1);
+        Component103.decodedOperation2662(4);
         Canvas_Sub1.clearStatics(false);
         Component352.method387(67);
         SocketConnector.clearStatics(1);
         IOException_Sub1.clearStatics(i + -100);
-        Component374.method2637(i + -108);
-        Component55.method2333(false);
-        DisplayModeManagerContainer310.method296((byte) -99);
-        Component223.method176(-1);
+        Component374.decodedOperation2637(i + -108);
+        Component55.decodedOperation2333(false);
+        DisplayModeManagerContainer310.decodedOperation296((byte) -99);
+        Component223.decodedOperation176(-1);
         Component192.clearStatics(true);
         AbstractBuffer.clearStatics(-124);
-        Component187.method1551();
-        DisplayModeManagerContainer172.method370(true);
+        Component187.decodedOperation1551();
+        DisplayModeManagerContainer172.decodedOperation370(true);
         PacketReader.softDisconnect((byte) 79);
-        Component163.method1886(4908);
+        Component163.decodedOperation1886(4908);
         ReferenceHolder.clearStatics(-112);
-        DefinitionSub8.method3068(i + 13607);
+        DefinitionSub8.decodedOperation3068(i + 13607);
         Component212.clearStatic3((byte) 3);
         Component349.clearStatic(61);
-        DisplayModeManagerContainer23.method860((byte) 44);
-        Component289.method2490(4);
-        NodeSub18.method2936((byte) -25);
-        NodeSub35.method3028(-11677);
-        NodeSub50.method3418(114);
-        Component338.method1030(-24);
-        Component69.method2113((byte) 74);
-        PlayerState.method3300(0);
-        Component198.method1493();
-        GpiLogger.method2823(i + -108);
-        NpcDefinition.method2930((byte) -87);
-        Component202.method808();
-        Component116.method1536();
-        NodeSub8.method2775((byte) -127);
+        DisplayModeManagerContainer23.decodedOperation860((byte) 44);
+        Component289.decodedOperation2490(4);
+        NodeSub18.decodedOperation2936((byte) -25);
+        NodeSub35.decodedOperation3028(-11677);
+        NodeSub50.decodedOperation3418(114);
+        Component338.decodedOperation1030(-24);
+        Component69.decodedOperation2113((byte) 74);
+        PlayerState.decodedOperation3300(0);
+        Component198.decodedOperation1493();
+        GpiLogger.decodedOperation2823(i + -108);
+        NpcDefinition.decodedOperation2930((byte) -87);
+        Component202.decodedOperation808();
+        Component116.decodedOperation1536();
+        NodeSub8.decodedOperation2775((byte) -127);
         AudioLineSub2.clearNativeAudio();
         DebugOverlay.clear(25365);
-        OggStreamReader.method2981(false);
+        OggStreamReader.decodedOperation2981(false);
         HeapDumper.clearStatics(2767);
-        Definition.method3040(true);
-        DisplayModeManagerContainer74.method2310((byte) 69);
-        Component102.method2202(-17902);
-        DisplayModeManagerContainer306.method741((byte) -128);
-        Component257.method1159((byte) 112);
-        DisplayModeManagerContainer249.method1354((byte) -22);
-        Component49.method1853((byte) 48);
-        Component296.method1117(105);
-        Component162.method1120(1);
-        Component2.method193(i + -78);
-        Component298.method180(-19960);
-        Component27.method3567(i ^ ~0x24);
-        Component364.method189((byte) 121);
-        VideoAdPlayer.method716(1);
-        DisplayModeManagerContainer232.method2023((byte) -78);
-        Component305.method190((byte) 32);
-        DisplayModeManagerContainer61.method2223(i ^ 0x5);
-        DisplayModeManagerContainer5.method728(true);
-        Component68.method2621();
-        InterfaceRenderer.method2214(0);
-        Component59.method1123(-1);
-        DisplayModeManagerContainer152.method3611(true);
-        HashNodeSub20.method3280(-109);
-        RenderableSub9Sub2.method2518(137);
+        Definition.decodedOperation3040(true);
+        DisplayModeManagerContainer74.decodedOperation2310((byte) 69);
+        Component102.decodedOperation2202(-17902);
+        DisplayModeManagerContainer306.decodedOperation741((byte) -128);
+        Component257.decodedOperation1159((byte) 112);
+        DisplayModeManagerContainer249.decodedOperation1354((byte) -22);
+        Component49.decodedOperation1853((byte) 48);
+        Component296.decodedOperation1117(105);
+        Component162.decodedOperation1120(1);
+        Component2.decodedOperation193(i + -78);
+        Component298.decodedOperation180(-19960);
+        Component27.decodedOperation3567(i ^ ~0x24);
+        Component364.decodedOperation189((byte) 121);
+        VideoAdPlayer.decodedOperation716(1);
+        DisplayModeManagerContainer232.decodedOperation2023((byte) -78);
+        Component305.decodedOperation190((byte) 32);
+        DisplayModeManagerContainer61.decodedOperation2223(i ^ 0x5);
+        DisplayModeManagerContainer5.decodedOperation728(true);
+        Component68.decodedOperation2621();
+        InterfaceRenderer.decodedOperation2214(0);
+        Component59.decodedOperation1123(-1);
+        DisplayModeManagerContainer152.decodedOperation3611(true);
+        HashNodeSub20.decodedOperation3280(-109);
+        RenderableSub9Sub2.decodedOperation2518(137);
         StaticElementRenderer.method2508(i ^ 0x7f93);
         ClientErrorReporter.clearStatics(30114);
-        RenderableSub2.method2495((byte) 113);
-        Component300.method2065(31913);
-        DisplayModeManagerContainer213.method548(10);
-        ImageCacheStore.method2555((byte) 28);
-        ImageCache.method1431(0);
-        Component140.method3207((byte) -120);
-        Component35.method2693(3);
-        DefinitionSub15.method3085(0);
-        DefinitionSub17.method3091(true);
-        NodeSub46.method3318((byte) -80);
-        Sprite.method3010(-1316);
-        Component297.method453(-2001);
-        MatrixSub1.method911(0);
-        Component385.method1293(1);
-        GlToolkitSub2.method3736((byte) 100);
-        Component160.method3468(-1401);
-        Component265.method886(16);
-        DisplayModeManagerContainer220.method277((byte) 115);
-        GlWaterShader.method2765(2048);
-        Component237.method1653(i + 1489574628);
-        MatrixSub3.method938(47);
-        ReliefShader.method1411(true);
-        DisplayModeManagerContainer105.method1499(i + -235);
-        Component40.method2258((byte) -122);
+        RenderableSub2.decodedOperation2495((byte) 113);
+        Component300.decodedOperation2065(31913);
+        DisplayModeManagerContainer213.decodedOperation548(10);
+        ImageCacheStore.decodedOperation2555((byte) 28);
+        ImageCache.decodedOperation1431(0);
+        Component140.decodedOperation3207((byte) -120);
+        Component35.decodedOperation2693(3);
+        DefinitionSub15.decodedOperation3085(0);
+        DefinitionSub17.decodedOperation3091(true);
+        NodeSub46.decodedOperation3318((byte) -80);
+        Sprite.decodedOperation3010(-1316);
+        Component297.decodedOperation453(-2001);
+        MatrixSub1.decodedOperation911(0);
+        Component385.decodedOperation1293(1);
+        GlToolkitSub2.decodedOperation3736((byte) 100);
+        Component160.decodedOperation3468(-1401);
+        Component265.decodedOperation886(16);
+        DisplayModeManagerContainer220.decodedOperation277((byte) 115);
+        GlWaterShader.decodedOperation2765(2048);
+        Component237.decodedOperation1653(i + 1489574628);
+        MatrixSub3.decodedOperation938(47);
+        ReliefShader.decodedOperation1411(true);
+        DisplayModeManagerContainer105.decodedOperation1499(i + -235);
+        Component40.decodedOperation2258((byte) -122);
         DisplayModeManagerContainer282.clearStatic(i + -14);
-        Component132.method1091(-9341);
-        Component182.method3403(84);
-        GlFramebufferTexture.method1962(-1);
+        Component132.decodedOperation1091(-9341);
+        Component182.decodedOperation3403(84);
+        GlFramebufferTexture.decodedOperation1962(-1);
         GlToolkitSub3.getInternalFormat(113);
-        ColoredTextBuilder.method2597(-27327);
-        Component342.method719((byte) 72);
-        Component209.method2042((byte) -67);
-        MatrixSub2.method925(i + -6105);
+        ColoredTextBuilder.decodedOperation2597(-27327);
+        Component342.decodedOperation719((byte) 72);
+        Component209.decodedOperation2042((byte) -67);
+        MatrixSub2.decodedOperation925(i + -6105);
         Component111.clearStatics(8549);
-        Component267.method1632(-11);
-        DisplayModeManagerContainer356.method2268(-24054);
-        Component75.method1329(4);
-        Component333.method2104(88);
-        Component387.method1127(5125);
+        Component267.decodedOperation1632(-11);
+        DisplayModeManagerContainer356.decodedOperation2268(-24054);
+        Component75.decodedOperation1329(4);
+        Component333.decodedOperation2104(88);
+        Component387.decodedOperation1127(5125);
         DisplayModeManagerContainer190.clearString(126);
-        DisplayModeManagerContainer88.method725(16384);
-        Component22.method1057(true);
-        Component158.method288((byte) 119);
-        GlExtensionManager.method3968(15);
-        Component13.method3450();
-        NsnDefinition.method3096(i ^ 0x7ea2);
-        DefinitionSub19.method3099((byte) -121);
-        DefinitionSub4.method3057((byte) -54);
-        DefinitionSub22.method3110(-1633784916);
-        DefinitionSub37.method3148(true);
-        DefinitionSub38.method3149(104);
-        ToolbarRefreshDefinition.method3087(false);
-        ImageDefinition.method3066(-1);
-        GradientPreset.method3077((byte) -98);
+        DisplayModeManagerContainer88.decodedOperation725(16384);
+        Component22.decodedOperation1057(true);
+        Component158.decodedOperation288((byte) 119);
+        GlExtensionManager.decodedOperation3968(15);
+        Component13.decodedOperation3450();
+        NsnDefinition.decodedOperation3096(i ^ 0x7ea2);
+        DefinitionSub19.decodedOperation3099((byte) -121);
+        DefinitionSub4.decodedOperation3057((byte) -54);
+        DefinitionSub22.decodedOperation3110(-1633784916);
+        DefinitionSub37.decodedOperation3148(true);
+        DefinitionSub38.decodedOperation3149(104);
+        ToolbarRefreshDefinition.decodedOperation3087(false);
+        ImageDefinition.decodedOperation3066(-1);
+        GradientPreset.decodedOperation3077((byte) -98);
         DefinitionSub26.method3118((byte) 127);
-        DefinitionSub36.method3145(0);
-        DefinitionSub20.method3104(false);
-        DefinitionSub11.method3075(false);
-        DefinitionSub5.method3059(-120);
-        DefinitionSub2.method3053(4);
-        DefinitionSub17Sub1.method3092(-1);
-        DefinitionSub6.method3062(true);
-        DefinitionSub27.method3121((byte) 104);
-        DefinitionSub32.method3133((byte) -109);
-        DefinitionSub33.method3138((byte) -115);
-        DefinitionSub13.method3080((byte) 111);
-        PrimitiveTypeDefinition.method3050(true);
-        DefinitionSub24.method3115(-114);
-        DefinitionSub23.method3114((byte) -123);
-        DefinitionSub39.method3152(255);
-        DefinitionSub10.method3074(i ^ 0x6c);
-        DefinitionSub25.method3117(109);
-        DefinitionSub35.method3144((byte) 119);
-        LoggedOutDefinition.method3142(0);
-        DefinitionSub9.method3071((byte) 59);
-        DefinitionSub21.method3106((byte) 97);
-        DefinitionSub28.method3123(i + -108);
-        NodeSub25.method2996();
-        Component43.method1584((byte) -64);
-        ShaderSub3.method167(19612);
-        BuildInfo.method208((byte) 0);
-        ImageProducerSprite.method3016(65280);
-        NodeSub1Sub2.method2731((byte) -23);
-        Component53.method221(0);
-        Component228.method1645(121);
-        Component65.method953((byte) 9);
-        BufferCacheSub2.method4000(i ^ 0x216c);
-        Component244.method2658(true);
-        AbstractGlTextureSub1.method1959(-112);
-        NodeSub5.method2762(108);
-        ShaderProgram.method2135(0);
-        Component178.method815(false);
-        ArbShaderProgram.method2142((byte) -126);
-        Component151.method1075((byte) 17);
-        Component377.method448((byte) -16);
-        CacheNodeSub2.method3295(i + -109);
-        NodeBaseSub1.method3441(1);
-        ShaderSub1.method161(114);
-        NodeSub20.method2950(71);
-        Component382.method1322((byte) -28);
-        NodeSub1Sub1.method2728((byte) 9);
-        Component264.method2265(-10794);
-        MenuOpener.method1155((byte) -125);
-        Component137.method1149(99);
-        DisplayModeManagerContainer136.method1154((byte) 11);
-        ParticleShader.method2151(-86);
-        ShaderProgramSub7.method2166(i ^ 0x18ac);
-        AbstractGlTextureSub4.method1973(24885);
-        SpriteAtlasShader.method2160(0);
-        ShaderProgramSub2.method2147(i ^ ~0x6c);
-        CookieManager.method2171(i + -108);
-        WaterShaderProgram.method2164(true);
-        WaterSurfaceShader.method2156(77);
-        Component359.method1866(0);
+        DefinitionSub36.decodedOperation3145(0);
+        DefinitionSub20.decodedOperation3104(false);
+        DefinitionSub11.decodedOperation3075(false);
+        DefinitionSub5.decodedOperation3059(-120);
+        DefinitionSub2.decodedOperation3053(4);
+        DefinitionSub17Sub1.decodedOperation3092(-1);
+        DefinitionSub6.decodedOperation3062(true);
+        DefinitionSub27.decodedOperation3121((byte) 104);
+        DefinitionSub32.decodedOperation3133((byte) -109);
+        DefinitionSub33.decodedOperation3138((byte) -115);
+        DefinitionSub13.decodedOperation3080((byte) 111);
+        PrimitiveTypeDefinition.decodedOperation3050(true);
+        DefinitionSub24.decodedOperation3115(-114);
+        DefinitionSub23.decodedOperation3114((byte) -123);
+        DefinitionSub39.decodedOperation3152(255);
+        DefinitionSub10.decodedOperation3074(i ^ 0x6c);
+        DefinitionSub25.decodedOperation3117(109);
+        DefinitionSub35.decodedOperation3144((byte) 119);
+        LoggedOutDefinition.decodedOperation3142(0);
+        DefinitionSub9.decodedOperation3071((byte) 59);
+        DefinitionSub21.decodedOperation3106((byte) 97);
+        DefinitionSub28.decodedOperation3123(i + -108);
+        NodeSub25.decodedOperation2996();
+        Component43.decodedOperation1584((byte) -64);
+        ShaderSub3.decodedOperation167(19612);
+        BuildInfo.decodedOperation208((byte) 0);
+        ImageProducerSprite.decodedOperation3016(65280);
+        NodeSub1Sub2.decodedOperation2731((byte) -23);
+        Component53.decodedOperation221(0);
+        Component228.decodedOperation1645(121);
+        Component65.decodedOperation953((byte) 9);
+        BufferCacheSub2.decodedOperation4000(i ^ 0x216c);
+        Component244.decodedOperation2658(true);
+        AbstractGlTextureSub1.decodedOperation1959(-112);
+        NodeSub5.decodedOperation2762(108);
+        ShaderProgram.decodedOperation2135(0);
+        Component178.decodedOperation815(false);
+        ArbShaderProgram.decodedOperation2142((byte) -126);
+        Component151.decodedOperation1075((byte) 17);
+        Component377.decodedOperation448((byte) -16);
+        CacheNodeSub2.decodedOperation3295(i + -109);
+        NodeBaseSub1.decodedOperation3441(1);
+        ShaderSub1.decodedOperation161(114);
+        NodeSub20.decodedOperation2950(71);
+        Component382.decodedOperation1322((byte) -28);
+        NodeSub1Sub1.decodedOperation2728((byte) 9);
+        Component264.decodedOperation2265(-10794);
+        MenuOpener.decodedOperation1155((byte) -125);
+        Component137.decodedOperation1149(99);
+        DisplayModeManagerContainer136.decodedOperation1154((byte) 11);
+        ParticleShader.decodedOperation2151(-86);
+        ShaderProgramSub7.decodedOperation2166(i ^ 0x18ac);
+        AbstractGlTextureSub4.decodedOperation1973(24885);
+        SpriteAtlasShader.decodedOperation2160(0);
+        ShaderProgramSub2.decodedOperation2147(i ^ ~0x6c);
+        CookieManager.decodedOperation2171(i + -108);
+        WaterShaderProgram.decodedOperation2164(true);
+        WaterSurfaceShader.decodedOperation2156(77);
+        Component359.decodedOperation1866(0);
         NativeLibraryLoader.clearStatics((byte) 54);
-        Component246.method1529(true);
-        NodeBaseSub2.method3444(i + -198);
-        Component45.method3462(-30094);
-        NativeLibLoader.method2654(-6896);
-        CacheNodeSub1.method3288((byte) 74);
-        Component149.method3512(4);
-        Component134.method1400(i + -107);
-        ShaderSub2.method162((byte) -112);
-        BufferCacheSub3.method4006(-43);
-        NodeSub3.method2738((byte) 82);
-        Component301.method2631(127);
-        Component201.method2272(88);
-        AbstractShaderSub3.method3539((byte) -32);
-        AbstractShaderSub4.method3541((byte) 23);
-        WaterShaderSub8.method3550((byte) -122);
-        SoftwareFallbackShader.method3554(i + -107);
-        Component210.method553(0);
-        Component185.method564((byte) -54);
-        DisplayModeManagerContainer51.method1396(25);
-        Component217.method1907((byte) 49);
-        Component19.method242(true);
-        DisplayModeManagerContainer194.method237(false);
-        WorldNameText.method251((byte) 2);
-        OpenGlShader.method3557(true);
-        Component321.method1440(-127);
+        Component246.decodedOperation1529(true);
+        NodeBaseSub2.decodedOperation3444(i + -198);
+        Component45.decodedOperation3462(-30094);
+        NativeLibLoader.decodedOperation2654(-6896);
+        CacheNodeSub1.decodedOperation3288((byte) 74);
+        Component149.decodedOperation3512(4);
+        Component134.decodedOperation1400(i + -107);
+        ShaderSub2.decodedOperation162((byte) -112);
+        BufferCacheSub3.decodedOperation4006(-43);
+        NodeSub3.decodedOperation2738((byte) 82);
+        Component301.decodedOperation2631(127);
+        Component201.decodedOperation2272(88);
+        AbstractShaderSub3.decodedOperation3539((byte) -32);
+        AbstractShaderSub4.decodedOperation3541((byte) 23);
+        WaterShaderSub8.decodedOperation3550((byte) -122);
+        SoftwareFallbackShader.decodedOperation3554(i + -107);
+        Component210.decodedOperation553(0);
+        Component185.decodedOperation564((byte) -54);
+        DisplayModeManagerContainer51.decodedOperation1396(25);
+        Component217.decodedOperation1907((byte) 49);
+        Component19.decodedOperation242(true);
+        DisplayModeManagerContainer194.decodedOperation237(false);
+        WorldNameText.decodedOperation251((byte) 2);
+        OpenGlShader.decodedOperation3557(true);
+        Component321.decodedOperation1440(-127);
         AbstractShaderSub2.clearStatics(i ^ 0x864c);
-        WaterShader.method3552(i ^ 0x3b);
-        Component84.method851(i + -107);
-        DebugPanic.method2124(0);
-        DebugPanicSub2.method2132(-125);
-        DisplayModeManagerContainer273.method1133(96);
-        ShaderCompilerSub1.method2610(true);
-        ShaderCompilerSub1Sub1.method2611(-123);
-        ShaderCompilerSub3.method2617((byte) 93);
-        ShaderCompilerSub2Sub1.method2614(i ^ 0x4d);
-        ShaderCompilerSub2.method2613(-1);
-        NodeSub29.method3003(-4587);
-        NodeSub32.method3020((byte) -64);
-        NodeSub38.method3035(1);
+        WaterShader.decodedOperation3552(i ^ 0x3b);
+        Component84.decodedOperation851(i + -107);
+        DebugPanic.decodedOperation2124(0);
+        DebugPanicSub2.decodedOperation2132(-125);
+        DisplayModeManagerContainer273.decodedOperation1133(96);
+        ShaderCompilerSub1.decodedOperation2610(true);
+        ShaderCompilerSub1Sub1.decodedOperation2611(-123);
+        ShaderCompilerSub3.decodedOperation2617((byte) 93);
+        ShaderCompilerSub2Sub1.decodedOperation2614(i ^ 0x4d);
+        ShaderCompilerSub2.decodedOperation2613(-1);
+        NodeSub29.decodedOperation3003(-4587);
+        NodeSub32.decodedOperation3020((byte) -64);
+        NodeSub38.decodedOperation3035(1);
         DisplayModeManagerContainer271.method367(-15833);
-        FriendLoginMessage.method2517((byte) 4);
-        HashNodeSub18.method3274(true);
+        FriendLoginMessage.decodedOperation2517((byte) 4);
+        HashNodeSub18.decodedOperation3274(true);
         PauseHandler.clearStatics(false);
-        NodeSub45.method3314(5);
-        ColorTagNode.method2810((byte) 79);
-        Component48.method3458(i + 2564);
-        InputStream_Sub2.method127((byte) 118);
-        OutputStream_Sub2.method139(88);
-        Component380.method1112(1);
-        Component142.method3488(64);
-        HashNodeSub4.method3181((byte) 2);
-        NodeSub7.method2773(0);
-        NodeSub12.method2798(122);
+        NodeSub45.decodedOperation3314(5);
+        ColorTagNode.decodedOperation2810((byte) 79);
+        Component48.decodedOperation3458(i + 2564);
+        InputStream_Sub2.decodedOperation127((byte) 118);
+        OutputStream_Sub2.decodedOperation139(88);
+        Component380.decodedOperation1112(1);
+        Component142.decodedOperation3488(64);
+        HashNodeSub4.decodedOperation3181((byte) 2);
+        NodeSub7.decodedOperation2773(0);
+        NodeSub12.decodedOperation2798(122);
         MenuEntry.clearStatics(75);
-        NodeSub11.method2796((byte) 104);
-        Component222.method1525((byte) 4);
-        OutputStream_Sub1.method133((byte) -41);
-        InputStream_Sub1.method124(i ^ 0x6e);
-        Component94.method2117(0);
-        ClientSystemInfo.method2993((byte) 50);
-        NodederUtil.method2768(3);
-        HashNodeSub3.method3176(true);
-        DisplayModeManagerContainer322.method2707(false);
-        DisplayModeManagerContainer345.method213((byte) -106);
-        Component148.method2043(true);
-        Component317.method570(105);
-        Component353.method1438(-120);
-        Component227.method601((byte) -85);
-        DisplayModeManagerContainer346.method1209(i + -51);
-        Component47.method458(-14487);
-        Component230.method471(i ^ ~0x751c);
-        DisplayModeManagerContainer368.method469((byte) -62);
-        Cp1252Decoder.method460(i ^ 0x6e);
-        DisplayModeManagerContainer34.method561(120);
-        Component54.method568(true);
+        NodeSub11.decodedOperation2796((byte) 104);
+        Component222.decodedOperation1525((byte) 4);
+        OutputStream_Sub1.decodedOperation133((byte) -41);
+        InputStream_Sub1.decodedOperation124(i ^ 0x6e);
+        Component94.decodedOperation2117(0);
+        ClientSystemInfo.decodedOperation2993((byte) 50);
+        NodederUtil.decodedOperation2768(3);
+        HashNodeSub3.decodedOperation3176(true);
+        DisplayModeManagerContainer322.decodedOperation2707(false);
+        DisplayModeManagerContainer345.decodedOperation213((byte) -106);
+        Component148.decodedOperation2043(true);
+        Component317.decodedOperation570(105);
+        Component353.decodedOperation1438(-120);
+        Component227.decodedOperation601((byte) -85);
+        DisplayModeManagerContainer346.decodedOperation1209(i + -51);
+        Component47.decodedOperation458(-14487);
+        Component230.decodedOperation471(i ^ ~0x751c);
+        DisplayModeManagerContainer368.decodedOperation469((byte) -62);
+        Cp1252Decoder.decodedOperation460(i ^ 0x6e);
+        DisplayModeManagerContainer34.decodedOperation561(120);
+        Component54.decodedOperation568(true);
         if (Applet_Sub1.aBoolean41) anInt5190 = ++i_4_;
     }
 
     private final void method102(byte i) {
-        if (i != 61) method106();
+        if (i != 61) decodedOperation106();
         anInt5184++;
         boolean bool = HardwareProbe.aClass248_6601.process((byte) 99);
-        if (!bool) method101((byte) -112);
+        if (!bool) decodedOperation101((byte) -112);
     }
 
     /** Handle JS5 connection failure ({@code js5 fail code=}{@code i}). */
@@ -754,7 +754,7 @@ public final class client extends Applet_Sub1 {
     final void closeResources(int i) {
         if (Component357.aBoolean2469) DisplayModeManagerContainer343.saveClientPreferences(i + -110);
         anInt5170++;
-        Component350.method556(false);
+        Component350.decodedOperation556(false);
         if (NodeSub8.toolkit != null) NodeSub8.toolkit.method3635((byte) 89);
         if (Component225.aFrame476 != null) {
             LoadingState.startLoadingTask(Component225.aFrame476, OggUrlStream.aClass297_8992, false);
@@ -764,11 +764,11 @@ public final class client extends Applet_Sub1 {
             DefinitionSub8.aClass238_9165.close((byte) 36);
             DefinitionSub8.aClass238_9165 = null;
         }
-        DisplayModeManagerContainer133.method1265(16);
+        DisplayModeManagerContainer133.decodedOperation1265(16);
         HardwareProbe.aClass248_6601.closeConnection(i ^ ~0x44);
         DisplayModeManagerContainer271.aClass112_520.shutdown(true);
         if (DisplayModeManagerContainer154.aClass169_1286 != null) {
-            DisplayModeManagerContainer154.aClass169_1286.method1303((byte) 16);
+            DisplayModeManagerContainer154.aClass169_1286.decodedOperation1303((byte) 16);
             DisplayModeManagerContainer154.aClass169_1286 = null;
         }
         try {
@@ -783,7 +783,7 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    static final void method104(int i) {
+    static final void decodedOperation104(int i) {
         int i_7_ = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
         int i_8_ = BasicMouseHandler.aBoolean7444 ? i_7_ : i_7_ + Component324.anInt2057;
@@ -823,7 +823,7 @@ public final class client extends Applet_Sub1 {
                         int i_15_ = ((class318_sub1_sub3_sub3.y) - i_13_ >> 9);
                         int i_16_ = ((class318_sub1_sub3_sub3.x) + i_13_ >> 9);
                         int i_17_ = ((class318_sub1_sub3_sub3.y) + i_13_ >> 9);
-                        if (!Component99.method949(i_15_, i_16_, (class318_sub1_sub3_sub3.anInt10285), (byte) 124, i_14_, i_17_)) {
+                        if (!Component99.decodedOperation949(i_15_, i_16_, (class318_sub1_sub3_sub3.anInt10285), (byte) 124, i_14_, i_17_)) {
                             for (int i_18_ = i_14_; i_18_ <= i_16_; i_18_++) {
                                 for (int i_19_ = i_15_; i_19_ <= i_17_; i_19_++) {
                                     if (class318_sub1_sub3_sub3.anInt10285 == (HashNodeSub17.anIntArrayArray9678[i_18_][i_19_])) DisplayModeManagerContainer295.anIntArrayArray5921[i_18_][i_19_]--;
@@ -834,8 +834,8 @@ public final class client extends Applet_Sub1 {
                         }
                     }
                     class318_sub1_sub3_sub3.aBoolean10309 = false;
-                    class318_sub1_sub3_sub3.anInt6382 = Component300.method2064((class318_sub1_sub3_sub3.x), (class318_sub1_sub3_sub3.plane), 11219, (class318_sub1_sub3_sub3.y));
-                    Component84.method850(class318_sub1_sub3_sub3, true);
+                    class318_sub1_sub3_sub3.anInt6382 = Component300.decodedOperation2064((class318_sub1_sub3_sub3.x), (class318_sub1_sub3_sub3.plane), 11219, (class318_sub1_sub3_sub3.y));
+                    Component84.decodedOperation850(class318_sub1_sub3_sub3, true);
                 }
             }
         }
@@ -851,7 +851,7 @@ public final class client extends Applet_Sub1 {
         return class46.settings;
     }
 
-    static final void method106() {
+    static final void decodedOperation106() {
         CacheStore.anInt669 = 0;
         for (int i = 0; i < Component324.anInt2057; i++) {
             Npc npc = (((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i], -6008)).npc);
@@ -859,7 +859,7 @@ public final class client extends Applet_Sub1 {
                 int i_20_ = ((npc.getSize((byte) 119) - 1) * 256 + 252);
                 int i_21_ = (npc.x - i_20_) >> 9;
                 int i_22_ = (npc.y - i_20_) >> 9;
-                DisplayModeManagerContainer58 class318_sub1_sub3_sub3 = DisplayModeManagerContainer26.method817(252, i_21_, (npc.plane), i_22_);
+                DisplayModeManagerContainer58 class318_sub1_sub3_sub3 = DisplayModeManagerContainer26.decodedOperation817(252, i_21_, (npc.plane), i_22_);
                 if (class318_sub1_sub3_sub3 != null) {
                     int i_23_ = (class318_sub1_sub3_sub3.anInt10290);
                     if (class318_sub1_sub3_sub3 instanceof Npc) i_23_ += 2048;
@@ -882,7 +882,7 @@ public final class client extends Applet_Sub1 {
     public static final void main(String[] strings) {
         try {
             try {
-                if (strings.length != 6) JagTheoraDecoder.method518("Argument count", (byte) 44);
+                if (strings.length != 6) JagTheoraDecoder.decodedOperation518("Argument count", (byte) 44);
                 MenuOpener.aClass161_4839 = new DisplayModeManagerContainer254();
                 MenuOpener.aClass161_4839.anInt2143 = Integer.parseInt(strings[0]);
                 ItemDefinitionProvider.aClass161_3285 = new DisplayModeManagerContainer254();
@@ -893,13 +893,13 @@ public final class client extends Applet_Sub1 {
                 if (strings[3].equals("live")) Component53.currentBuildType = Component342.LIVE;
                 else if (!strings[3].equals("rc")) {
                     if (strings[3].equals("wip")) Component53.currentBuildType = Component118.WIP;
-                    else JagTheoraDecoder.method518("modewhat", (byte) 41);
+                    else JagTheoraDecoder.decodedOperation518("modewhat", (byte) 41);
                 } else Component53.currentBuildType = DefinitionSub20.RC;
                 ObjectDeserializer.languageId = DisplayModeManagerContainer91.languageIdFromName((byte) 103, strings[4]);
                 if (ObjectDeserializer.languageId == -1) {
                     if (!strings[4].equals("english")) {
                         if (strings[4].equals("german")) ObjectDeserializer.languageId = 1;
-                        else JagTheoraDecoder.method518("language", (byte) -128);
+                        else JagTheoraDecoder.decodedOperation518("language", (byte) -128);
                     } else ObjectDeserializer.languageId = 0;
                 }
                 NodeSub37.aBoolean6997 = false;
@@ -907,7 +907,7 @@ public final class client extends Applet_Sub1 {
                 if (!strings[5].equals("game0")) {
                     if (!strings[5].equals("game1")) {
                         if (!strings[5].equals("game2")) {
-                            if (!strings[5].equals("game3")) JagTheoraDecoder.method518("game", (byte) -124);
+                            if (!strings[5].equals("game3")) JagTheoraDecoder.decodedOperation518("game", (byte) -124);
                             else PacketReader.currentGameType = Component379.GAME4;
                         } else PacketReader.currentGameType = WaterShaderProgram.GAME3;
                     } else PacketReader.currentGameType = WorldNameText.STELLARDAWN;
@@ -946,7 +946,7 @@ public final class client extends Applet_Sub1 {
             } catch (Throwable throwable) {
                 ClientErrorReporter.reportError((throwable.getMessage() + " (Recovered) " + method81((byte) 115)), throwable, 15004);
                 GpsOverlay.aBoolean1952 = true;
-                SoftwareFallbackShader.method3553(false, (byte) 102, 0);
+                SoftwareFallbackShader.decodedOperation3553(false, (byte) 102, 0);
             }
         } else processGameTick(123);
         DialogueTts.pulse();
@@ -963,11 +963,11 @@ public final class client extends Applet_Sub1 {
             DefinitionSub35.aClass161_9443 = new DisplayModeManagerContainer254();
             DefinitionSub35.aClass161_9443.anInt2143 = Integer.parseInt(this.getParameter("demoid"));
             DefinitionSub35.aClass161_9443.aString2147 = this.getParameter("demoaddress");
-            DisplayModeManagerContainer345.aClass364_165 = (NodeSub8.method2776((byte) -93, Integer.parseInt(this.getParameter("modewhere"))));
+            DisplayModeManagerContainer345.aClass364_165 = (NodeSub8.decodedOperation2776((byte) -93, Integer.parseInt(this.getParameter("modewhere"))));
             if (DisplayModeManagerContainer154.LOCAL == DisplayModeManagerContainer345.aClass364_165) {
                 DisplayModeManagerContainer345.aClass364_165 = Component83.WTWIP;
             }
-            else if (!Component168.method2354(DisplayModeManagerContainer345.aClass364_165, -1) && Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
+            else if (!Component168.decodedOperation2354(DisplayModeManagerContainer345.aClass364_165, -1) && Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                 DisplayModeManagerContainer345.aClass364_165 = Component326.LIVE;
             }
             Component53.currentBuildType = (DisplayModeManagerContainer87.getById(-121, Integer.parseInt(this.getParameter("modewhat"))));
@@ -1078,15 +1078,15 @@ public final class client extends Applet_Sub1 {
                     i_48_ = Math.min(i_50_, i_35_);
                 }
                 if (class46.type != 0 && !class46.aBoolean682 && getComponentSettings(class46).optionFlags == 0 && class46 != Component374.aClass46_4130 && class46.contentType != Component200.anInt3717 && (class46.contentType != ParticleSystem.anInt7125)) {
-                    if (i_45_ < i_47_ && i_46_ < i_48_) DisplayModeManagerContainer220.method273(class46, -2835);
-                } else if (!method111(class46)) {
+                    if (i_45_ < i_47_ && i_46_ < i_48_) DisplayModeManagerContainer220.decodedOperation273(class46, -2835);
+                } else if (!decodedOperation111(class46)) {
                     int i_51_ = 0;
                     int i_52_ = 0;
                     if (Component210.gameCanvasAttached) {
-                        i_51_ = BufferCacheSub3.method4008((byte) -128);
-                        i_52_ = Component110.method260(false);
+                        i_51_ = BufferCacheSub3.decodedOperation4008((byte) -128);
+                        i_52_ = Component110.decodedOperation260(false);
                     }
-                    if (class46 == Component156.aClass46_3701 && Exception_Sub1.method141(Component156.aClass46_3701, (byte) 125) != null) {
+                    if (class46 == Component156.aClass46_3701 && Exception_Sub1.decodedOperation141(Component156.aClass46_3701, (byte) 125) != null) {
                         Cp1252Decoder.aBoolean5221 = true;
                         GlToolkitSub3.anInt8001 = i_43_;
                         DefinitionSub13.anInt9203 = i_44_;
@@ -1131,11 +1131,11 @@ public final class client extends Applet_Sub1 {
                                 } else if ((class46.anIntArray801 == null) || (OpenGlShader.clientCycle >= (class46.anIntArray801[i_55_]))) {
                                     byte i_56_ = (class46.aByteArray832[i_55_]);
                                     if (i_56_ == 0 || (((i_56_ & 0x8) == 0 || (!Component280.aClass346_2449.isKeyDown(86, -124) && !Component280.aClass346_2449.isKeyDown(82, -123) && !(Component280.aClass346_2449.isKeyDown(81, -122)))) && ((i_56_ & 0x2) == 0 || Component280.aClass346_2449.isKeyDown(86, -127)) && ((i_56_ & 0x1) == 0 || Component280.aClass346_2449.isKeyDown(82, -124)) && ((i_56_ & 0x4) == 0 || (Component280.aClass346_2449.isKeyDown(81, -126))))) {
-                                        if (i_55_ < 10) SceneNode.method2780(-1, "", (byte) 122, i_55_ + 1, class46.packedId);
+                                        if (i_55_ < 10) SceneNode.decodedOperation2780(-1, "", (byte) 122, i_55_ + 1, class46.packedId);
                                         else if (i_55_ == 10) {
-                                            DisplayModeManagerContainer196.method2678(-2049);
+                                            DisplayModeManagerContainer196.decodedOperation2678(-2049);
                                             ComponentSettings class348_sub44 = getComponentSettings(class46);
-                                            NewsFetcher.method2666(class348_sub44.anInt7093, class348_sub44.getClickMask(110), class46, (byte) 21);
+                                            NewsFetcher.decodedOperation2666(class348_sub44.anInt7093, class348_sub44.getClickMask(110), class46, (byte) 21);
                                             DisplayModeManagerContainer332.aString5001 = DisplayModeManagerContainer295.getUseOption(0, class46);
                                             if (DisplayModeManagerContainer332.aString5001 == null) DisplayModeManagerContainer332.aString5001 = "Null";
                                             DisplayModeManagerContainer332.aString5000 = ((class46.text) + "<col=ffffff>");
@@ -1149,7 +1149,7 @@ public final class client extends Applet_Sub1 {
                                 }
                             }
                         }
-                        if (bool_54_) Component265.method887(class46, (i_51_ + class348_sub45.getX((byte) -127) - i_43_), (i_52_ + class348_sub45.getY(-114) - i_44_), 2147483647);
+                        if (bool_54_) Component265.decodedOperation887(class46, (i_51_ + class348_sub45.getX((byte) -127) - i_43_), (i_52_ + class348_sub45.getY(-114) - i_44_), 2147483647);
                         if (Component156.aClass46_3701 != null && Component156.aClass46_3701 != class46 && bool && getComponentSettings(class46).hasHoverHighlight(17356)) DisplayModeManagerContainer104.aClass46_10336 = class46;
                         if (class46 == Component374.aClass46_4130) {
                             Component162.aBoolean8386 = true;
@@ -1174,14 +1174,14 @@ public final class client extends Applet_Sub1 {
                             if (class46.contentType != 0) {
                                 if ((class46.contentType == Component98.anInt5943) || (class46.contentType == Component37.anInt3932)) {
                                     NodeSub1.aClass46_6561 = class46;
-                                    if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2292(123, NodeSub8.toolkit, class46.height);
+                                    if (Component293.aClass305_3304 != null) Component293.aClass305_3304.decodedOperation2292(123, NodeSub8.toolkit, class46.height);
                                     if (class46.contentType == Component98.anInt5943) {
                                         if (!Component364.aBoolean8335 && i_40_ >= i_45_ && i_41_ >= i_46_ && i_40_ < i_47_ && i_41_ < i_48_) {
-                                            ColoredText.method1823(NodeSub8.toolkit, i_38_, i_39_, (byte) -50);
-                                            for (RenderableSub6 class318_sub6 = ((RenderableSub6) InputStream_Sub2.aClass243_83.method1872(8)); class318_sub6 != null; class318_sub6 = ((RenderableSub6) (InputStream_Sub2.aClass243_83.method1878((byte) -67)))) {
+                                            ColoredText.decodedOperation1823(NodeSub8.toolkit, i_38_, i_39_, (byte) -50);
+                                            for (RenderableSub6 class318_sub6 = ((RenderableSub6) InputStream_Sub2.aClass243_83.decodedOperation1872(8)); class318_sub6 != null; class318_sub6 = ((RenderableSub6) (InputStream_Sub2.aClass243_83.decodedOperation1878((byte) -67)))) {
                                                 if (i_40_ >= (class318_sub6.anInt6429) && (i_40_ < (class318_sub6.anInt6426)) && (i_41_ >= (class318_sub6.anInt6427)) && (i_41_ < (class318_sub6.anInt6425))) {
                                                     DisplayModeManagerContainer190.resetNodeStates((byte) 107);
-                                                    Component266.method1777(-3, (class318_sub6.aClass318_Sub1_Sub3_Sub3_6431));
+                                                    Component266.decodedOperation1777(-3, (class318_sub6.aClass318_Sub1_Sub3_Sub3_6431));
                                                 }
                                             }
                                         }
@@ -1189,7 +1189,7 @@ public final class client extends Applet_Sub1 {
                                     }
                                 }
                                 if (class46.contentType == Component200.anInt3717) {
-                                    if (class46.method425((NodeSub8.toolkit), (byte) 3) != null && (Component293.anInt3306 == 0 || Component293.anInt3306 == 3) && !Component364.aBoolean8335 && i_40_ >= i_45_ && i_41_ >= i_46_ && i_40_ < i_47_ && i_41_ < i_48_) {
+                                    if (class46.decodedOperation425((NodeSub8.toolkit), (byte) 3) != null && (Component293.anInt3306 == 0 || Component293.anInt3306 == 3) && !Component364.aBoolean8335 && i_40_ >= i_45_ && i_41_ >= i_46_ && i_40_ < i_47_ && i_41_ < i_48_) {
                                         int i_58_ = i_40_ - i_43_;
                                         int i_59_ = i_41_ - i_44_;
                                         int i_60_ = (class46.anIntArray677[i_59_]);
@@ -1220,7 +1220,7 @@ public final class client extends Applet_Sub1 {
                                             if (r.aBoolean9722 && ((PauseTimer.anInt500 & 0x40) != 0)) {
                                                 DisplayModeManagerContainer57 class46_69_ = (NpcNode.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046));
                                                 if (class46_69_ != null) DisplayModeManagerContainer368.addMenuEntry(false, " ->", i_67_, (byte) -109, true, i_66_, (class46.itemId), true, 15, ((class46.childIndex) << 0) | (class46.packedId), DisplayModeManagerContainer332.aString5001, 1L, (Component182.anInt9747));
-                                                else DisplayModeManagerContainer196.method2678(-2049);
+                                                else DisplayModeManagerContainer196.decodedOperation2678(-2049);
                                             } else {
                                                 if ((PacketReader.currentGameType) == (WorldNameText.STELLARDAWN)) DisplayModeManagerContainer368.addMenuEntry(false, "", i_67_, (byte) -116, true, i_66_, -1, true, 12, 0L, (FriendsIgnoreList.aClass274_3510.getLocalized((ObjectDeserializer.languageId), 544)), 1L, -1);
                                                 DisplayModeManagerContainer368.addMenuEntry(false, "", i_67_, (byte) -93, true, i_66_, -1, true, 19, 0L, Component323.aString5882, 1L, Component79.anInt4144);
@@ -1244,13 +1244,13 @@ public final class client extends Applet_Sub1 {
                                         int i_71_ = (int) -((double) (i_52_ + (class348_sub45.getY(-111)) - i_44_ - ((class46.height) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
                                         int i_72_ = (NodeSub36.anInt6992 + i_70_ + DisplayModeManagerContainer229.anInt1266);
                                         int i_73_ = (DebugOverlay.anInt3170 + i_71_ + DisplayModeManagerContainer229.anInt1263);
-                                        HashNodeSub14 class348_sub42_sub14 = ImageTagText.method1269(-17096);
+                                        HashNodeSub14 class348_sub42_sub14 = ImageTagText.decodedOperation1269(-17096);
                                         if (class348_sub42_sub14 != null) {
                                             int[] is = new int[3];
-                                            class348_sub42_sub14.method3239(true, i_73_, i_72_, is);
+                                            class348_sub42_sub14.decodedOperation3239(true, i_73_, i_72_, is);
                                             if (is != null) {
                                                 if (Component280.aClass346_2449.isKeyDown(82, -128) && (Component353.anInt2581 > 0)) {
-                                                    CollisionMap.method3502(is[2], 2, is[0], is[1]);
+                                                    CollisionMap.decodedOperation3502(is[2], 2, is[0], is[1]);
                                                     continue;
                                                 }
                                                 DisplayModeManagerContainer87.aBoolean3103 = true;
@@ -1272,23 +1272,23 @@ public final class client extends Applet_Sub1 {
                                         if (HashNode.anInt7059 == 2) {
                                             NpcDefinition.aBoolean6788 = true;
                                             DisplayModeManagerContainer282.clearPosition((byte) -59, (Component191.anInt2464 + (int) ((double) ((RenderableSub4.anInt6411) - (AbstractGlTextureSub4.mouseHandler.getCursorX(true))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))));
-                                            CookieManager.method2170((BufferCacheSub2.anInt8237 - (int) ((double) ((Component386.anInt2872) - (AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 83))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))), (byte) 3);
+                                            CookieManager.decodedOperation2170((BufferCacheSub2.anInt8237 - (int) ((double) ((Component386.anInt2872) - (AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 83))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))), (byte) 3);
                                         }
                                     } else {
                                         if (HashNode.anInt7059 > 0 && !NpcDefinition.aBoolean6788) {
-                                            if (((Component203.anInt8770 == 1) || Component203.method2485(-124)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, RenderableSub4.anInt6411, Component386.anInt2872);
-                                            else if (MatrixSub1.method913((byte) 117)) Component2.method191(true, RenderableSub4.anInt6411, Component386.anInt2872);
+                                            if (((Component203.anInt8770 == 1) || Component203.decodedOperation2485(-124)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.decodedOperation191(true, RenderableSub4.anInt6411, Component386.anInt2872);
+                                            else if (MatrixSub1.decodedOperation913((byte) 117)) Component2.decodedOperation191(true, RenderableSub4.anInt6411, Component386.anInt2872);
                                         }
                                         HashNode.anInt7059 = 0;
                                     }
                                     continue;
                                 }
                                 if (class46.contentType == SceneManager.anInt2861) {
-                                    if (bool_53_) DisplayModeManagerContainer196.method2676(class46.width, class46.height, (i_51_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true) - i_43_), (byte) 58, (i_52_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 111) - i_44_));
+                                    if (bool_53_) DisplayModeManagerContainer196.decodedOperation2676(class46.width, class46.height, (i_51_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true) - i_43_), (byte) 58, (i_52_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 111) - i_44_));
                                     continue;
                                 }
                                 if (class46.contentType == ParticleSystem.anInt7125) {
-                                    Component143.method1343(i_44_, class46, 1, i_43_);
+                                    Component143.decodedOperation1343(i_44_, class46, 1, i_43_);
                                     continue;
                                 }
                             }
@@ -1537,15 +1537,15 @@ public final class client extends Applet_Sub1 {
                                 NodeSub1Sub2.aClass262_8810.addTail(class348_sub36, -20180);
                             }
                         }
-                        if (class46.type == 5 && class46.anInt705 != -1) class46.method444(false, Component132.aClass25_1813, ComponentDownloader.aClass84_413).method2292(84, NodeSub8.toolkit, class46.height);
-                        DisplayModeManagerContainer220.method273(class46, -2835);
+                        if (class46.type == 5 && class46.anInt705 != -1) class46.decodedOperation444(false, Component132.aClass25_1813, ComponentDownloader.aClass84_413).decodedOperation2292(84, NodeSub8.toolkit, class46.height);
+                        DisplayModeManagerContainer220.decodedOperation273(class46, -2835);
                         if (class46.type == 0) {
                             method107(class46s, class46.packedId, i_45_, i_46_, i_47_, i_48_, i_43_ - class46.scrollX, i_44_ - class46.scrollY, i_38_, i_39_, i_40_, i_41_);
                             if (class46.children != null) method107(class46.children, class46.packedId, i_45_, i_46_, i_47_, i_48_, i_43_ - class46.scrollX, i_44_ - class46.scrollY, i_38_, i_39_, i_40_, i_41_);
                             NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.packedId, -6008)));
                             if (class348_sub41 != null) {
                                 if ((PacketReader.currentGameType == RunescapeInfo.RUNESCAPE) && (class348_sub41.anInt7053) == 0 && !Component364.aBoolean8335 && bool && !DisplayModeManagerContainer356.aBoolean6327) DisplayModeManagerContainer190.resetNodeStates((byte) 105);
-                                Component280.method1373(class348_sub41.anInt7050, i_43_, i_45_, i_47_, i_39_, i_38_, -1391, i_40_, i_48_, i_44_, i_41_, i_46_);
+                                Component280.decodedOperation1373(class348_sub41.anInt7050, i_43_, i_45_, i_47_, i_39_, i_38_, -1391, i_40_, i_48_, i_44_, i_41_, i_46_);
                             }
                         }
                     }
@@ -1568,7 +1568,7 @@ public final class client extends Applet_Sub1 {
         return class46;
     }
 
-    static final void method109() {
+    static final void decodedOperation109() {
         for (int i = 0; i < AbstractShaderSub4.anInt7319; i++) {
             int[] is = HashNodeSub17.anIntArrayArray9678[i];
             for (int i_91_ = 0; i_91_ < ParametricDefinition.anInt9109; i_91_++)
@@ -1581,7 +1581,7 @@ public final class client extends Applet_Sub1 {
         if (i == 31) anIntArray5176 = null;
     }
 
-    static final boolean method111(DisplayModeManagerContainer57 class46) {
+    static final boolean decodedOperation111(DisplayModeManagerContainer57 class46) {
         if (DisplayModeManagerContainer356.aBoolean6327) {
             if (getComponentSettings(class46).optionFlags != 0) return false;
             if (class46.type == 0) return false;
@@ -1599,12 +1599,12 @@ public final class client extends Applet_Sub1 {
             } catch (Throwable throwable) {
                 ClientErrorReporter.reportError((throwable.getMessage() + " (Recovered) " + method81((byte) 52)), throwable, 15004);
                 GpsOverlay.aBoolean1952 = true;
-                SoftwareFallbackShader.method3553(false, (byte) 123, 0);
+                SoftwareFallbackShader.decodedOperation3553(false, (byte) 123, 0);
             }
         } else method116(true);
     }
 
-    static final void method112() {
+    static final void decodedOperation112() {
         int i = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
         int i_92_ = BasicMouseHandler.aBoolean7444 ? i : i + Component324.anInt2057;
@@ -1617,8 +1617,8 @@ public final class client extends Applet_Sub1 {
                 if ((i_94_ & 0x1) == 0) {
                     if ((class318_sub1_sub3_sub3.x & 0x1ff) == 0 && (class318_sub1_sub3_sub3.y & 0x1ff) == 0) continue;
                 } else if ((class318_sub1_sub3_sub3.x & 0x1ff) == 256 && ((class318_sub1_sub3_sub3.y) & 0x1ff) == 256) continue;
-                class318_sub1_sub3_sub3.anInt6382 = (Component300.method2064(class318_sub1_sub3_sub3.x, class318_sub1_sub3_sub3.plane, 11219, class318_sub1_sub3_sub3.y));
-                Component84.method850(class318_sub1_sub3_sub3, true);
+                class318_sub1_sub3_sub3.anInt6382 = (Component300.decodedOperation2064(class318_sub1_sub3_sub3.x, class318_sub1_sub3_sub3.plane, 11219, class318_sub1_sub3_sub3.y));
+                Component84.decodedOperation850(class318_sub1_sub3_sub3, true);
             }
         }
     }
@@ -1631,14 +1631,14 @@ public final class client extends Applet_Sub1 {
             }
             if (!Component364.aBoolean8335) DisplayModeManagerContainer190.resetNodeStates((byte) 111);
             for (int i_95_ = 0; i_95_ < 100; i_95_++) {
-                if (!Component102.method2203((byte) -85)) break;
+                if (!Component102.decodedOperation2203((byte) -85)) break;
             }
         }
         anInt5174++;
         NodeSub51.anInt7267++;
-        Component2.method198(null, false, -1, -1);
-        Component143.method1343(-1, null, 1, -1);
-        Component43.method1583((byte) -73);
+        Component2.decodedOperation198(null, false, -1, -1);
+        Component143.decodedOperation1343(-1, null, 1, -1);
+        Component43.decodedOperation1583((byte) -73);
         ResourceLoader.anInt3918++;
         for (int i_96_ = 0; NodeSub32.anInt6930 > i_96_; i_96_++) {
             Npc npc = (DefinitionSub23.aClass348_Sub22Array9319[i_96_].npc);
@@ -1656,7 +1656,7 @@ public final class client extends Applet_Sub1 {
                             int i_102_ = i_100_ + (npc.anIntArray10317[0]);
                             if (i_102_ < 0) i_102_ = 0;
                             else if ((-i_98_ + ParametricDefinition.anInt9109 - 1) < i_102_) i_102_ = (-i_98_ + ParametricDefinition.anInt9109 - 1);
-                            int i_103_ = (Component317.method574(i_101_, i_98_, i_98_, DefinitionSub11.anIntArray9185, true, (byte) 120, -1, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), HashNodeSub14.anIntArray9626, i_102_, (NodeSub45.aClass361Array7108[(npc.plane)]), i_98_, 0, 0));
+                            int i_103_ = (Component317.decodedOperation574(i_101_, i_98_, i_98_, DefinitionSub11.anIntArray9185, true, (byte) 120, -1, (npc.anIntArray10320[0]), (npc.anIntArray10317[0]), HashNodeSub14.anIntArray9626, i_102_, (NodeSub45.aClass361Array7108[(npc.plane)]), i_98_, 0, 0));
                             if (i_103_ > 0) {
                                 if (i_103_ > 9) i_103_ = 9;
                                 for (int i_104_ = 0; i_103_ > i_104_; i_104_++) {
@@ -1668,20 +1668,20 @@ public final class client extends Applet_Sub1 {
                             }
                         }
                     }
-                    Component386.method1600(true, 0, npc);
-                    int i_105_ = (NodeSub8.method2774((byte) 108, npc));
-                    NodeBaseSub2.method3443(true, npc);
-                    DisplayModeManagerContainer5.method729(Component366.anInt3062, i_105_, (byte) 122, npc, Component162.anInt8387);
-                    Component140.method3208(npc, Component366.anInt3062, -84);
-                    GameType.method1635(-106, npc);
+                    Component386.decodedOperation1600(true, 0, npc);
+                    int i_105_ = (NodeSub8.decodedOperation2774((byte) 108, npc));
+                    NodeBaseSub2.decodedOperation3443(true, npc);
+                    DisplayModeManagerContainer5.decodedOperation729(Component366.anInt3062, i_105_, (byte) 122, npc, Component162.anInt8387);
+                    Component140.decodedOperation3208(npc, Component366.anInt3062, -84);
+                    GameType.decodedOperation1635(-106, npc);
                 }
             }
         }
         if (Component241.anInt2955 == 0 && AbstractShaderSub2.anInt7297 == 0) {
-            if (DefinitionSub21.cameraMode == 2) Component19.method241((byte) 127);
-            else NodeSub21.method2954((byte) -127);
+            if (DefinitionSub21.cameraMode == 2) Component19.decodedOperation241((byte) 127);
+            else NodeSub21.decodedOperation2954((byte) -127);
             if (WaterSurfaceShader.anInt6246 >> 9 < 14 || (WaterSurfaceShader.anInt6246 >> 9 >= -14 + AbstractShaderSub4.anInt7319) || (Component317.anInt8685 >> 9 < 14) || (ParametricDefinition.anInt9109 + -14 <= Component317.anInt8685 >> 9))
-                DisplayModeManagerContainer204.method893((byte) -49);
+                DisplayModeManagerContainer204.decodedOperation893((byte) -49);
         }
         if (i != 112) anInt5171 = 22;
         for (; ; ) {
@@ -1714,12 +1714,12 @@ public final class client extends Applet_Sub1 {
             }
             ClientScriptExecutor.runHook(class348_sub36);
         }
-        if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
-        if (OpenGlShader.clientCycle % 1500 == 0) ToolbarRefreshDefinition.method3088(9);
+        if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.decodedOperation2708(-30206);
+        if (OpenGlShader.clientCycle % 1500 == 0) ToolbarRefreshDefinition.decodedOperation3088(9);
         if (Component49.clientState == 7 && Component241.anInt2955 == 0) DisplayModeManagerContainer1.updateMenuTip(-124);
-        DisplayModeManagerContainer204.method909(3553);
+        DisplayModeManagerContainer204.decodedOperation909(3553);
         if (Component357.aBoolean2469 && (Component225.aLong482 < Component240.currentTimeMillis(-107) + -60000L)) DisplayModeManagerContainer343.saveClientPreferences(41);
-        for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1872(8)); class318_sub9_sub1 != null; class318_sub9_sub1 = (FriendLoginMessage) HashNodeSub14.friendLoginMessages.method1878((byte) -43)) {
+        for (FriendLoginMessage class318_sub9_sub1 = ((FriendLoginMessage) HashNodeSub14.friendLoginMessages.decodedOperation1872(8)); class318_sub9_sub1 != null; class318_sub9_sub1 = (FriendLoginMessage) HashNodeSub14.friendLoginMessages.decodedOperation1878((byte) -43)) {
             if ((long) class318_sub9_sub1.timestampSeconds < -5L + Component240.currentTimeMillis(-80) / 1000L) {
                 if (class318_sub9_sub1.worldId > 0) ShaderProgramSub2.addChatMessage("", 5, (byte) -91, 0, (class318_sub9_sub1.username + FriendsIgnoreList.aClass274_3502.getLocalized(ObjectDeserializer.languageId, 544)), "", "");
                 if (class318_sub9_sub1.worldId == 0) ShaderProgramSub2.addChatMessage("", 5, (byte) -105, 0, (class318_sub9_sub1.username + FriendsIgnoreList.aClass274_3503.getLocalized((ObjectDeserializer.languageId), i ^ 0x250)), "", "");
@@ -1737,7 +1737,7 @@ public final class client extends Applet_Sub1 {
                         HashNodeSub14.enqueueOutboundPacket(-49, class348_sub47);
                     }
                     try {
-                        Component302.method1802(0);
+                        Component302.decodedOperation1802(0);
                     } catch (java.io.IOException ioexception) {
                         LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                         break;
@@ -1766,19 +1766,19 @@ public final class client extends Applet_Sub1 {
             }
             method102((byte) 61);
             if (Component143.aClass340_2327 != null) Component143.aClass340_2327.reload(0);
-            HuffmanDecoder.method2228(0);
-            HashNodeSub16Sub1.method3260(66);
+            HuffmanDecoder.decodedOperation2228(0);
+            HashNodeSub16Sub1.decodedOperation3260(66);
             Component280.aClass346_2449.sync(67);
             AbstractGlTextureSub4.mouseHandler.syncEvents(0);
             if (NodeSub8.toolkit != null) NodeSub8.toolkit.method3646((int) Component240.currentTimeMillis(-74));
-            DisplayModeManagerContainer292.method1315(93);
+            DisplayModeManagerContainer292.decodedOperation1315(93);
             Component193.anInt3246 = 0;
             HashNodeSub19.anInt9699 = 0;
             for (Interface6 interface6 = Component280.aClass346_2449.popKeyEvent(0); interface6 != null; interface6 = Component280.aClass346_2449.popKeyEvent(0)) {
                 int i_109_ = interface6.getEventType(26276);
                 if (i_109_ == 2 || i_109_ == 3) {
                     int i_110_ = interface6.getKeyChar((byte) 96);
-                    if (!Component300.method2066((byte) 116) || (i_110_ != 96 && i_110_ != 167 && i_110_ != 178)) {
+                    if (!Component300.decodedOperation2066((byte) 116) || (i_110_ != 96 && i_110_ != 167 && i_110_ != 178)) {
                         if (HashNodeSub19.anInt9699 < 128) {
                             DefinitionGroup.anInterface6Array9534[HashNodeSub19.anInt9699] = interface6;
                             HashNodeSub19.anInt9699++;
@@ -1796,7 +1796,7 @@ public final class client extends Applet_Sub1 {
                 int i_111_ = class348_sub45.getEventType(86);
                 if (i_111_ != -1) {
                     if (i_111_ != 6) {
-                        if (Component307.method3584(i_111_, 1)) {
+                        if (Component307.decodedOperation3584(i_111_, 1)) {
                             Component327.aClass262_8744.addTail(class348_sub45, -20180);
                             if (Component327.aClass262_8744.size(0) > 10) Component327.aClass262_8744.peekFirst(8);
                         }
@@ -1813,27 +1813,27 @@ public final class client extends Applet_Sub1 {
             // Purple console band: eat presses so they don't click-through to the game.
             BuildInfo.pollConsoleInput();
             if (HashNodeSub16Sub2.isDevConsoleOpen(true)) PauseTimer.processDevConsoleInput(125);
-            if (GpsOverlay.method1167(Component49.clientState, (byte) -51)) {
-                RSACipher.method493(true);
-                Component97.method867(true);
+            if (GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -51)) {
+                RSACipher.decodedOperation493(true);
+                Component97.decodedOperation867(true);
             } else if (Component212.isValidType(Component49.clientState, (byte) -120)) Canvas_Sub1.loadAndBuildScene(0);
             if (i < 32) aClass262_5185 = null;
-            if (CacheNode.method3196(Component49.clientState, -74) && !Component212.isValidType(Component49.clientState, (byte) -55)) {
+            if (CacheNode.decodedOperation3196(Component49.clientState, -74) && !Component212.isValidType(Component49.clientState, (byte) -55)) {
                 method113((byte) 112);
-                NodeSub5.method2757(110);
-                TheoraVideoPlayer.method843((byte) 102);
+                NodeSub5.decodedOperation2757(110);
+                TheoraVideoPlayer.decodedOperation843((byte) 102);
             } else if (!CacheFileStore.isReconnectState(Component49.clientState, -123) || Component212.isValidType(Component49.clientState, (byte) -115)) {
-                if (Component49.clientState == 12) TheoraVideoPlayer.method843((byte) 113);
-                else if (NativeLibLoader.isPostLoginState(true, Component49.clientState) && !Component212.isValidType(Component49.clientState, (byte) -86)) ClientSystemInfo.method2991(11432);
+                if (Component49.clientState == 12) TheoraVideoPlayer.decodedOperation843((byte) 113);
+                else if (NativeLibLoader.isPostLoginState(true, Component49.clientState) && !Component212.isValidType(Component49.clientState, (byte) -86)) ClientSystemInfo.decodedOperation2991(11432);
                 else if (Component49.clientState == 13) {
-                    TheoraVideoPlayer.method843((byte) -75);
+                    TheoraVideoPlayer.decodedOperation843((byte) -75);
                     if (NodederUtil.anInt6634 != -3 && NodederUtil.anInt6634 != 2 && NodederUtil.anInt6634 != 15) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
                 }
             } else {
                 method113((byte) 112);
-                TheoraVideoPlayer.method843((byte) 67);
+                TheoraVideoPlayer.decodedOperation843((byte) 67);
             }
-            Component231.method294(NodeSub8.toolkit, 0);
+            Component231.decodedOperation294(NodeSub8.toolkit, 0);
             Component327.aClass262_8744.peekFirst(8);
             // Microbot: refresh caches + pending menu inject (after input drain / menu tip).
             MicrobotRuntime.tick();
@@ -1842,14 +1842,14 @@ public final class client extends Applet_Sub1 {
         }
     }
 
-    static final void method115() {
+    static final void decodedOperation115() {
         int i = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
-        int i_112_ = Component192.preferences.aClass239_Sub13_7236.method1776(-32350);
+        int i_112_ = Component192.preferences.aClass239_Sub13_7236.decodedOperation1776(-32350);
         boolean bool = i_112_ == 1 && i > 200 || i_112_ == 0 && i > 50;
         for (int i_113_ = 0; i_113_ < i; i_113_++) {
             Player player = InterfaceRenderer.players[is[i_113_]];
-            if (!player.method2457((byte) -90)) player.anInt10285 = -1;
+            if (!player.decodedOperation2457((byte) -90)) player.anInt10285 = -1;
             else if (player.aBoolean10551) player.anInt10285 = -1;
             else {
                 player.method2409((byte) -126);
@@ -1876,7 +1876,7 @@ public final class client extends Applet_Sub1 {
         }
         for (int i_115_ = 0; i_115_ < Component324.anInt2057; i_115_++) {
             Npc npc = (((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_115_], -6008)).npc);
-            if (!npc.method2445((byte) -4) || !(npc.definition.method796(DisplayModeManagerContainer58.aClass170_10209, 18627))) npc.anInt10285 = -1;
+            if (!npc.decodedOperation2445((byte) -4) || !(npc.definition.decodedOperation796(DisplayModeManagerContainer58.aClass170_10209, 18627))) npc.anInt10285 = -1;
             else {
                 npc.method2409((byte) -118);
                 if ((npc.aShort8743) < 0 || (npc.aShort8750) < 0 || (npc.aShort8751) >= AbstractShaderSub4.anInt7319 || (npc.aShort8747) >= ParametricDefinition.anInt9109)
@@ -1939,13 +1939,13 @@ public final class client extends Applet_Sub1 {
     private final void method116(boolean bool) {
         anInt5172++;
         if (Component49.clientState != 14) {
-            long l = (Component41.method1857((byte) -45) / 1000000L + -HashNodeSub2.aLong8573);
-            HashNodeSub2.aLong8573 = Component41.method1857((byte) -45) / 1000000L;
-            boolean bool_118_ = WaterShaderProgram.method2163(!bool);
-            if (bool_118_ && DisplayModeManagerContainer238.aBoolean1236 && Definition.aClass279_7042 != null) Definition.aClass279_7042.method2087(-115);
-            if (Component92.method1977((byte) -79, Component49.clientState)) {
-                if ((NodeSub16Sub2.aLong8866 != 0) && Component240.currentTimeMillis(-98) > NodeSub16Sub2.aLong8866) LogicError.method830(MenuEntry.getWindowMode(-128), Component236.anInt4005, (byte) 102, false, DefinitionSub25.anInt9335);
-                else if (!NodeSub8.toolkit.method3655() && DisplayModeManagerContainer351.aBoolean2674) ParticleSystem.method3327(1406);
+            long l = (Component41.decodedOperation1857((byte) -45) / 1000000L + -HashNodeSub2.aLong8573);
+            HashNodeSub2.aLong8573 = Component41.decodedOperation1857((byte) -45) / 1000000L;
+            boolean bool_118_ = WaterShaderProgram.decodedOperation2163(!bool);
+            if (bool_118_ && DisplayModeManagerContainer238.aBoolean1236 && Definition.aClass279_7042 != null) Definition.aClass279_7042.decodedOperation2087(-115);
+            if (Component92.decodedOperation1977((byte) -79, Component49.clientState)) {
+                if ((NodeSub16Sub2.aLong8866 != 0) && Component240.currentTimeMillis(-98) > NodeSub16Sub2.aLong8866) LogicError.decodedOperation830(MenuEntry.getWindowMode(-128), Component236.anInt4005, (byte) 102, false, DefinitionSub25.anInt9335);
+                else if (!NodeSub8.toolkit.method3655() && DisplayModeManagerContainer351.aBoolean2674) ParticleSystem.decodedOperation3327(1406);
             }
             if (Component225.aFrame476 == null) {
                 java.awt.Container container;
@@ -1961,7 +1961,7 @@ public final class client extends Applet_Sub1 {
                     i_119_ -= insets.top - -insets.bottom;
                 }
                 if (i != SocketConnector.canvasWidth || i_119_ != NpcNode.canvasHeight || RuntimeException_Sub1.aBoolean4604) {
-                    if (NodeSub8.toolkit == null || NodeSub8.toolkit.method3695()) OpenGlShader.method3556(false);
+                    if (NodeSub8.toolkit == null || NodeSub8.toolkit.method3695()) OpenGlShader.decodedOperation3556(false);
                     else {
                         NpcNode.canvasHeight = i_119_;
                         SocketConnector.canvasWidth = i;
@@ -1970,49 +1970,49 @@ public final class client extends Applet_Sub1 {
                     RuntimeException_Sub1.aBoolean4604 = false;
                 }
             }
-            if (Component225.aFrame476 != null && !Component143.aBoolean2329 && Component92.method1977((byte) -79, Component49.clientState)) LogicError.method830(Component192.preferences.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+            if (Component225.aFrame476 != null && !Component143.aBoolean2329 && Component92.decodedOperation1977((byte) -79, Component49.clientState)) LogicError.decodedOperation830(Component192.preferences.aClass239_Sub8_7227.decodedOperation1751(-32350), -1, (byte) 102, false, -1);
             boolean bool_120_ = false;
             if (Component297.aBoolean4726) {
                 bool_120_ = true;
                 Component297.aBoolean4726 = false;
             }
-            if (bool_120_) Component211.method1170((byte) -116);
-            if ((NodeSub8.toolkit != null && NodeSub8.toolkit.method3655()) || MenuEntry.getWindowMode(-91) != 1) Component160.method3466(-77);
-            if (GpsOverlay.method1167(Component49.clientState, (byte) -113)) DisplayModeManagerContainer292.method1309(bool_120_, 117);
-            else if (!Component69.method2114(Component49.clientState, bool)) {
-                if (!CacheNode.method3197(Component49.clientState, (byte) 56)) {
+            if (bool_120_) Component211.decodedOperation1170((byte) -116);
+            if ((NodeSub8.toolkit != null && NodeSub8.toolkit.method3655()) || MenuEntry.getWindowMode(-91) != 1) Component160.decodedOperation3466(-77);
+            if (GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -113)) DisplayModeManagerContainer292.decodedOperation1309(bool_120_, 117);
+            else if (!Component69.decodedOperation2114(Component49.clientState, bool)) {
+                if (!CacheNode.decodedOperation3197(Component49.clientState, (byte) 56)) {
                     if (Component212.isValidType(Component49.clientState, (byte) -78)) {
                         if (Component129.anInt489 == 1) {
                             if (DisplayModeManagerContainer259.anInt3441 > NodeSub46.anInt7115) NodeSub46.anInt7115 = DisplayModeManagerContainer259.anInt3441;
                             int i = ((-DisplayModeManagerContainer259.anInt3441 + NodeSub46.anInt7115) * 50 / NodeSub46.anInt7115);
-                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
+                            Component149.decodedOperation3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
                         } else if (Component129.anInt489 == 2) {
                             if (Component82.anInt443 < Component101.anInt2101) Component82.anInt443 = Component101.anInt2101;
                             int i = (((Component82.anInt443 - Component101.anInt2101) * 50 / Component82.anInt443) + 50);
-                            Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
-                        } else Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
+                            Component149.decodedOperation3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>(" + i + "%)", 2, NodeSub8.toolkit);
+                        } else Component149.decodedOperation3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
                     } else if (Component49.clientState != 10) {
                         if (Component49.clientState == 13)
-                            Component149.method3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3497.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>" + (FriendsIgnoreList.aClass274_3498.getLocalized(ObjectDeserializer.languageId, 544))), 2, NodeSub8.toolkit);
+                            Component149.decodedOperation3511(false, Applet_Sub1.aClass324_20, Component163.aClass143_3179, ((FriendsIgnoreList.aClass274_3497.getLocalized(ObjectDeserializer.languageId, 544)) + "<br>" + (FriendsIgnoreList.aClass274_3498.getLocalized(ObjectDeserializer.languageId, 544))), 2, NodeSub8.toolkit);
                     } else Component114.pulseCameraAndHud((byte) -43, l);
                 } else Component98.redrawHud(85);
                 // States 3/5/6 below: while logging in, show "Please wait..." instead of
                 // the idle title UI (otherwise auto-login looks frozen for several seconds).
             } else if (Component241.anInt2955 != 0 || Component49.clientState == 5 || Component49.clientState == 6) {
-                Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3514.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
+                Component149.decodedOperation3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, (FriendsIgnoreList.aClass274_3514.getLocalized(ObjectDeserializer.languageId, 544)), 2, NodeSub8.toolkit);
             } else Component98.redrawHud(85);
             if (GlToolkitSub3.anInt8045 == 3) {
                 for (int i = 0; NodeSub38.anInt7008 > i; i++) {
                     Rectangle rectangle = Component166.aRectangleArray2371[i];
-                    if (Component143.aBooleanArray2326[i]) NodeSub8.toolkit.method3668(rectangle.width, rectangle.y, -65281, rectangle.x, rectangle.height, 46);
-                    else if (!DisplayModeManagerContainer259.aBooleanArray3438[i]) NodeSub8.toolkit.method3668(rectangle.width, rectangle.y, -16711936, rectangle.x, rectangle.height, 66);
-                    else NodeSub8.toolkit.method3668(rectangle.width, rectangle.y, -65536, rectangle.x, rectangle.height, 40);
+                    if (Component143.aBooleanArray2326[i]) NodeSub8.toolkit.decodedOperation3668(rectangle.width, rectangle.y, -65281, rectangle.x, rectangle.height, 46);
+                    else if (!DisplayModeManagerContainer259.aBooleanArray3438[i]) NodeSub8.toolkit.decodedOperation3668(rectangle.width, rectangle.y, -16711936, rectangle.x, rectangle.height, 66);
+                    else NodeSub8.toolkit.decodedOperation3668(rectangle.width, rectangle.y, -65536, rectangle.x, rectangle.height, 40);
                 }
             }
             if (HashNodeSub16Sub2.isDevConsoleOpen(bool)) BuildInfo.drawDevConsole(NodeSub8.toolkit, (byte) 124);
             // Microbot HUD — after console so it stays on top of game, under console if open.
             if (Loader.microbotEnabled) MicrobotPanel.draw(NodeSub8.toolkit);
-            if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.method1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.getWindowMode(-85) == 1 && !bool_120_) {
+            if (OggUrlStream.aClass297_8992.useDirectDraw && Component92.decodedOperation1977((byte) -79, Component49.clientState) && GlToolkitSub3.anInt8045 == 0 && MenuEntry.getWindowMode(-85) == 1 && !bool_120_) {
                 int i = 0;
                 for (int i_121_ = 0; (NodeSub38.anInt7008 > i_121_); i_121_++) {
                     if (DisplayModeManagerContainer259.aBooleanArray3438[i_121_]) {
@@ -2021,39 +2021,39 @@ public final class client extends Applet_Sub1 {
                     }
                 }
                 try {
-                    if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3657(DisplayModeManagerContainer56.aRectangleArray2554, i, 66);
-                    else Component211.method1168(i, 0, DisplayModeManagerContainer56.aRectangleArray2554);
+                    if (!Component210.gameCanvasAttached) NodeSub8.toolkit.decodedOperation3657(DisplayModeManagerContainer56.aRectangleArray2554, i, 66);
+                    else Component211.decodedOperation1168(i, 0, DisplayModeManagerContainer56.aRectangleArray2554);
                 } catch (Exception_Sub1 exception_sub1) {
                     /* empty */
                 }
-            } else if (!GpsOverlay.method1167(Component49.clientState, (byte) -59)) {
+            } else if (!GpsOverlay.decodedOperation1167(Component49.clientState, (byte) -59)) {
                 for (int i = 0; NodeSub38.anInt7008 > i; i++)
                     DisplayModeManagerContainer259.aBooleanArray3438[i] = false;
                 try {
-                    if (Component210.gameCanvasAttached) CacheStore.method395(107);
-                    else NodeSub8.toolkit.method3689((byte) 104);
+                    if (Component210.gameCanvasAttached) CacheStore.decodedOperation395(107);
+                    else NodeSub8.toolkit.decodedOperation3689((byte) 104);
                 } catch (Exception_Sub1 exception_sub1) {
                     ClientErrorReporter.reportError((exception_sub1.getMessage() + " (Recovered) " + method81((byte) 79)), exception_sub1, 15004);
-                    SoftwareFallbackShader.method3553(false, (byte) 113, 0);
+                    SoftwareFallbackShader.decodedOperation3553(false, (byte) 113, 0);
                 }
             }
-            Component240.method598(9013);
-            int i = Component192.preferences.aClass239_Sub17_7263.method1798(-32350);
+            Component240.decodedOperation598(9013);
+            int i = Component192.preferences.aClass239_Sub17_7263.decodedOperation1798(-32350);
             if (i == 0) SpriteAtlasShader.sleep((byte) -127, 15L);
             else if (i != 1) {
                 if (i != 2) {
                     if (i == 3) SpriteAtlasShader.sleep((byte) -102, 2L);
                 } else SpriteAtlasShader.sleep((byte) -97, 5L);
             } else SpriteAtlasShader.sleep((byte) -104, 10L);
-            if (Component144.aBoolean3988) ReliefShader.method1416(5);
-            if (Component192.preferences.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
+            if (Component144.aBoolean3988) ReliefShader.decodedOperation1416(5);
+            if (Component192.preferences.aClass239_Sub11_7265.decodedOperation1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub11_7265), 0);
                 DisplayModeManagerContainer389.savePreferences(37);
             }
         }
     }
 
-    static final void method117(int i) {
+    static final void decodedOperation117(int i) {
         int i_122_ = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
         for (int i_123_ = 0; i_123_ < i_122_ + Component324.anInt2057; i_123_++) {
@@ -2099,13 +2099,13 @@ public final class client extends Applet_Sub1 {
             if (i < 40) aClass262_5185 = null;
             if (Component72.localPlayer != null)
                 string += ("2)" + Component117.anInt4372 + "," + (NodeBaseSub2.regionTileX + (Component72.localPlayer.anIntArray10320[0])) + "," + (Component330.regionTileY + (Component72.localPlayer.anIntArray10317[0])) + "|");
-            string += ("3)" + Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) + "|4)" + Component192.preferences.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
-            string += "7)" + Component192.preferences.aClass239_Sub28_7230.method1845(-32350) + "|";
-            string += "8)" + Component192.preferences.aClass239_Sub7_7238.method1748(-32350) + "|";
-            string += "9)" + Component192.preferences.aClass239_Sub18_7259.method1800(-32350) + "|";
-            string += "10)" + Component192.preferences.aClass239_Sub24_7235.method1820(-32350) + "|";
-            string += "11)" + Component192.preferences.aClass239_Sub12_7243.method1771(-32350) + "|";
-            string += "12)" + Component192.preferences.aClass239_Sub27_7261.method1840(-32350) + "|";
+            string += ("3)" + Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) + "|4)" + Component192.preferences.aClass239_Sub20_7216.decodedOperation1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
+            string += "7)" + Component192.preferences.aClass239_Sub28_7230.decodedOperation1845(-32350) + "|";
+            string += "8)" + Component192.preferences.aClass239_Sub7_7238.decodedOperation1748(-32350) + "|";
+            string += "9)" + Component192.preferences.aClass239_Sub18_7259.decodedOperation1800(-32350) + "|";
+            string += "10)" + Component192.preferences.aClass239_Sub24_7235.decodedOperation1820(-32350) + "|";
+            string += "11)" + Component192.preferences.aClass239_Sub12_7243.decodedOperation1771(-32350) + "|";
+            string += "12)" + Component192.preferences.aClass239_Sub27_7261.decodedOperation1840(-32350) + "|";
             string += "13)" + Component127.anInt2964 + "|";
             string += "14)" + Component49.clientState;
             if (DefinitionSub20.aClass348_Sub4_9264 != null) string += "|15)" + (DefinitionSub20.aClass348_Sub4_9264.anInt6609);

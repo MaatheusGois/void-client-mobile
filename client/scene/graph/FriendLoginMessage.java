@@ -27,7 +27,7 @@ final class FriendLoginMessage extends RenderableSub9 {
             DisplayModeInfo[] class57s = Component248.getDisplayModes((byte) -107, OggUrlStream.aClass297_8992);
             DisplayModeInfo[] class57s_0_ = new DisplayModeInfo[class57s.length];
             int i_1_ = 0;
-            int i_2_ = Component192.preferences.aClass239_Sub23_7231.method1818(-32350);
+            int i_2_ = Component192.preferences.aClass239_Sub23_7231.decodedOperation1818(-32350);
             while_108_:
             for (int i_3_ = 0; class57s.length > i_3_; i_3_++) {
                 DisplayModeInfo class57 = class57s[i_3_];
@@ -50,12 +50,12 @@ final class FriendLoginMessage extends RenderableSub9 {
                 DisplayModeInfo class57 = NativeLibraryLoader.cachedDisplayModes[i_6_];
                 is[i_6_] = (class57.width * class57.height);
             }
-            DisplayModeManagerContainer271.method366(NativeLibraryLoader.cachedDisplayModes, (byte) -123, is);
+            DisplayModeManagerContainer271.decodedOperation366(NativeLibraryLoader.cachedDisplayModes, (byte) -123, is);
         }
         return NativeLibraryLoader.cachedDisplayModes;
     }
 
-    static final RSARequest method2516(int i, byte i_7_, int i_8_) {
+    static final RSARequest decodedOperation2516(int i, byte i_7_, int i_8_) {
         anInt8788++;
         RSARequest class348_sub42_sub15 = ((RSARequest) Component265.aClass356_1585.get(((long) i_8_ << 32 | (long) i), i_7_ ^ ~0x171e));
         if (i_7_ != 105) aFloat8784 = 0.99212307F;
@@ -66,7 +66,7 @@ final class FriendLoginMessage extends RenderableSub9 {
         return class348_sub42_sub15;
     }
 
-    public static void method2517(byte i) {
+    public static void decodedOperation2517(byte i) {
         if (i != 4) anIntArray8785 = null;
         anIntArray8785 = null;
     }

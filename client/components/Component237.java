@@ -31,12 +31,12 @@ final class Component237
     private int anInt3034;
     private final int[] anIntArray3035;
 
-    private final void method1649(GlToolkitSub2 var_ha_Sub2, int i, int i_0_) {
+    private final void decodedOperation1649(GlToolkitSub2 var_ha_Sub2, int i, int i_0_) {
         anInt3019++;
         Component328.aFloat1478 = var_ha_Sub2.aFloat7768;
         if (i_0_ != 24484) method1655(null, -66, 67);
         var_ha_Sub2.deleteTexture((byte) -119, (float) i);
-        var_ha_Sub2.method3760(i_0_ + -24483);
+        var_ha_Sub2.decodedOperation3760(i_0_ + -24483);
         OpenGL.glDisable(16384);
         OpenGL.glDisable(16385);
         var_ha_Sub2.drawSprite(0, false);
@@ -52,11 +52,11 @@ final class Component237
         if (Component328.aFloat1478 != var_ha_Sub2.aFloat7768) var_ha_Sub2.DualToolkit(Component328.aFloat1478);
     }
 
-    final void method1651(GlToolkitSub2 var_ha_Sub2, byte i, int i_1_, Component122 class98) {
+    final void decodedOperation1651(GlToolkitSub2 var_ha_Sub2, byte i, int i_1_, Component122 class98) {
         try {
             anInt3017++;
             if (var_ha_Sub2.aClass101_Sub3_7760 != null) {
-                if (i_1_ >= 0) method1649(var_ha_Sub2, i_1_, 24484);
+                if (i_1_ >= 0) decodedOperation1649(var_ha_Sub2, i_1_, 24484);
                 else method1652(false, var_ha_Sub2);
                 float f = (var_ha_Sub2.aClass101_Sub3_7760.aFloat5756);
                 float f_2_ = (var_ha_Sub2.aClass101_Sub3_7760.aFloat5754);
@@ -77,7 +77,7 @@ final class Component237
                     int i_10_ = i_7_ - i_6_;
                     int i_11_;
                     if (2 + i_10_ > 1600) {
-                        i_11_ = 1 - -Component80.method2253(i_10_, -86) - anInt3026;
+                        i_11_ = 1 - -Component80.decodedOperation2253(i_10_, -86) - anInt3026;
                         i_10_ = (i_10_ >> i_11_) + 2;
                     } else {
                         i_10_ += 2;
@@ -145,16 +145,16 @@ final class Component237
         OpenGL.glNormal3f(0.0F, -1.0F, 0.0F);
     }
 
-    public static void method1653(int i) {
+    public static void decodedOperation1653(int i) {
         aClass107_3022 = null;
         aFloatArray3015 = null;
         if (i != 1489574736) aClass107_3022 = null;
     }
 
-    final void method1654(int i, GlToolkitSub2 var_ha_Sub2) {
+    final void decodedOperation1654(int i, GlToolkitSub2 var_ha_Sub2) {
         if (i == 643267468) {
             anInt3023++;
-            anInterface2_3027 = var_ha_Sub2.method3731(2, true, 24, null, 196584);
+            anInterface2_3027 = var_ha_Sub2.decodedOperation3731(2, true, 24, null, 196584);
             aClass123_3025 = new Component132(anInterface2_3027, 5126, 2, 0);
             aClass123_3029 = new Component132(anInterface2_3027, 5126, 3, 8);
             aClass123_3028 = new Component132(anInterface2_3027, 5121, 4, 20);
@@ -402,7 +402,7 @@ final class Component237
 
     Component237() {
         aClass348_Sub49_Sub1_3020 = new Component182(786336);
-        anInt3026 = Component80.method2253(1600, 124);
+        anInt3026 = Component80.decodedOperation2253(1600, 124);
         anIntArray3032 = new int[8191];
         aClass318_Sub9_Sub2ArrayArray3031 = new RenderableSub9Sub2[1600][64];
         anIntArray3033 = new int[1600];

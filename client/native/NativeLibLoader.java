@@ -54,7 +54,7 @@ final class NativeLibLoader {
         return new NativeLibLoader(this.anInt4156, this.anInt4165, this.anInt4162, this.anInt4158, this.anInt4154, this.anInt4151);
     }
 
-    static final void method2650(Component184 class143, int i, Shader var_aa, int i_1_, int i_2_, String string, int i_3_, BitmapFont class324, int i_4_, DisplayModeManagerContainer57 class46, int i_5_, int i_6_) {
+    static final void decodedOperation2650(Component184 class143, int i, Shader var_aa, int i_1_, int i_2_, String string, int i_3_, BitmapFont class324, int i_4_, DisplayModeManagerContainer57 class46, int i_5_, int i_6_) {
         try {
             anInt4153++;
             int i_7_;
@@ -71,11 +71,11 @@ final class NativeLibLoader {
                 }
                 int i_12_ = i_10_ * i_1_ + i_5_ * i_11_ >> 14;
                 int i_13_ = -(i_5_ * i_10_) + i_11_ * i_1_ >> 14;
-                int i_14_ = class143.method1187(string, false, 100, null);
-                int i_15_ = class143.method1185(null, 0, 0, i_6_, string);
+                int i_14_ = class143.decodedOperation1187(string, false, 100, null);
+                int i_15_ = class143.decodedOperation1185(null, 0, 0, i_6_, string);
                 i_12_ -= i_14_ / 2;
                 if (-class46.width <= i_12_ && class46.width >= i_12_ && (i_13_ >= -class46.height) && class46.height >= i_13_)
-                    class324.method2584(null, 0, 0, null, i, 0, 50, var_aa, (-i_4_ + (i_3_ + (class46.height / 2 + (-i_13_ - i_15_)))), i_2_, i_3_, i_14_, (class46.width / 2 + (i_2_ + i_12_)), false, 1, string);
+                    class324.decodedOperation2584(null, 0, 0, null, i, 0, 50, var_aa, (-i_4_ + (i_3_ + (class46.height / 2 + (-i_13_ - i_15_)))), i_2_, i_3_, i_14_, (class46.width / 2 + (i_2_ + i_12_)), false, 1, string);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("dk.H(" + (class143 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_1_ + ',' + i_2_ + ',' + (string != null ? "{...}" : "null") + ',' + i_3_ + ',' + (class324 != null ? "{...}" : "null") + ',' + i_4_ + ',' + (class46 != null ? "{...}" : "null") + ',' + i_5_ + ',' + i_6_ + ')'));
@@ -87,7 +87,7 @@ final class NativeLibLoader {
      * {@code .dll} / {@code lib*.so} / {@code lib*.dylib}. Returns null if OS unknown.
      */
     static final String toNativeLibraryFileName(String string, int i) {
-        if (i != 3) method2650(null, -94, null, 2, -110, null, -7, null, -71, null, -47, 104);
+        if (i != 3) decodedOperation2650(null, -94, null, 2, -110, null, -7, null, -71, null, -47, 104);
         anInt4160++;
         if (!ClientSystemInfo.aString6877.startsWith("win")) {
             if (ClientSystemInfo.aString6877.startsWith("linux")) return "lib" + string + ".so";
@@ -118,7 +118,7 @@ final class NativeLibLoader {
         return i == 10 || i == 11 || i == 12;
     }
 
-    public static void method2654(int i) {
+    public static void decodedOperation2654(int i) {
         if (i != -6896) anInt4155 = -7;
         anIntArray4152 = null;
     }

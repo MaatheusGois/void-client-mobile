@@ -33,7 +33,7 @@ final class Component65
     static int anInt1629;
     static int anInt1630;
 
-    final void method951(r var_r, int i, int i_0_, int i_1_) {
+    final void decodedOperation951(r var_r, int i, int i_0_, int i_1_) {
         anInt1619++;
         CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i += var_r_Sub2.anInt10489 - -1;
@@ -72,7 +72,7 @@ final class Component65
         }
         int i_12_ = 101 / ((-30 - i_1_) / 62);
         if (i_5_ > 0 && i_4_ > 0) {
-            Component253.method1895(i_3_, this.aByteArray1617, i_4_, i_2_, i_6_, i_7_, var_r_Sub2.aByteArray10486, i_5_, (byte) 121);
+            Component253.decodedOperation1895(i_3_, this.aByteArray1617, i_4_, i_2_, i_6_, i_7_, var_r_Sub2.aByteArray10486, i_5_, (byte) 121);
             method952(i_4_, i_5_, i, -1, i_0_);
         }
     }
@@ -92,14 +92,14 @@ final class Component65
         }
     }
 
-    public static void method953(byte i) {
+    public static void decodedOperation953(byte i) {
         anIntArray1626 = null;
         aClass45_1627 = null;
         aClass221_1620 = null;
         if (i != 9) aClass221_1620 = null;
     }
 
-    final boolean method954(int i, byte i_23_, int i_24_, r var_r) {
+    final boolean decodedOperation954(int i, byte i_23_, int i_24_, r var_r) {
         anInt1630++;
         CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i_24_ += 1 + var_r_Sub2.anInt10484;
@@ -134,16 +134,16 @@ final class Component65
         if (i_27_ <= 0 || i_26_ <= 0) return false;
         int i_33_ = 8;
         i_28_ += (-1 + i_33_) * this.anInt1624;
-        return Component210.method552(i_28_, i_26_, (byte) 112, i_33_, i_27_, i_25_, this.aByteArray1617);
+        return Component210.decodedOperation552(i_28_, i_26_, (byte) 112, i_33_, i_27_, i_25_, this.aByteArray1617);
     }
 
-    static final boolean method955(int i, int i_34_) {
+    static final boolean decodedOperation955(int i, int i_34_) {
         if (i != 22311) aClass221_1620 = null;
         anInt1615++;
         return i_34_ >= 4 && i_34_ <= 8;
     }
 
-    final void method956(boolean bool, int i, boolean[][] bools, int i_35_, int i_36_, int i_37_) {
+    final void decodedOperation956(boolean bool, int i, boolean[][] bools, int i_35_, int i_36_, int i_37_) {
         aHa_Sub2_1616.setLightingEnabled(false, 114);
         int i_38_ = 80 / ((i - 15) / 60);
         anInt1614++;
@@ -169,7 +169,7 @@ final class Component65
                                     OpenGL.glScalef(f, f, 1.0F);
                                     OpenGL.glTranslatef((float) -i_54_ / f, (float) -i_51_ / f, 1.0F);
                                     OpenGL.glMatrixMode(5888);
-                                    aClass232ArrayArray1623[i_54_][i_51_].method1644((byte) -121);
+                                    aClass232ArrayArray1623[i_54_][i_51_].decodedOperation1644((byte) -121);
                                     break while_43_;
                                 }
                             }
@@ -217,7 +217,7 @@ final class Component65
                         OpenGL.glScalef(f, f, 1.0F);
                         OpenGL.glTranslatef((float) -i_42_ / f, (float) -i_39_ / f, 1.0F);
                         OpenGL.glMatrixMode(5888);
-                        aClass232ArrayArray1623[i_42_][i_39_].method1643((class348_sub49_sub1.payload), 5123, i_43_, (byte) 70);
+                        aClass232ArrayArray1623[i_42_][i_39_].decodedOperation1643((class348_sub49_sub1.payload), 5123, i_43_, (byte) 70);
                     }
                 }
             }
@@ -227,7 +227,7 @@ final class Component65
         OpenGL.glMatrixMode(5888);
     }
 
-    final void method957(int i) {
+    final void decodedOperation957(int i) {
         anInt1628++;
         aClass232ArrayArray1623 = new Component228[anInt1618][anInt1625];
         for (int i_59_ = i; i_59_ < anInt1625; i_59_++) {
@@ -236,7 +236,7 @@ final class Component65
         }
     }
 
-    static final GraphicsToolkit method958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, CacheStore class45) {
+    static final GraphicsToolkit decodedOperation958(boolean bool, int i, d var_d, int i_61_, Canvas canvas, CacheStore class45) {
         try {
             if (bool != true) aClass221_1620 = null;
             anInt1610++;
@@ -247,13 +247,13 @@ final class Component65
                 i_63_ = dimension.height;
                 i_62_ = dimension.width;
             }
-            return GraphicsToolkit.method3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
+            return GraphicsToolkit.decodedOperation3692(i_61_, i_63_, i_62_, class45, 0, var_d, canvas, i);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("mha.E(" + bool + ',' + i + ',' + (var_d != null ? "{...}" : "null") + ',' + i_61_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    final void method959(int i, int i_64_, byte i_65_, r var_r) {
+    final void decodedOperation959(int i, int i_64_, byte i_65_, r var_r) {
         anInt1621++;
         CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         i_64_ += 1 + var_r_Sub2.anInt10484;
@@ -262,7 +262,7 @@ final class Component65
         int i_67_ = 0;
         int i_68_ = var_r_Sub2.anInt10487;
         int i_69_ = var_r_Sub2.anInt10482;
-        if (i_65_ < 67) method957(-40);
+        if (i_65_ < 67) decodedOperation957(-40);
         int i_70_ = this.anInt1624 - i_69_;
         if (i_64_ <= 0) {
             int i_71_ = -i_64_ + 1;
@@ -292,13 +292,13 @@ final class Component65
             i_70_ += i_75_;
         }
         if (i_69_ > 0 && i_68_ > 0) {
-            Component231.method295(i_72_, i_67_, 256, var_r_Sub2.aByteArray10486, i_69_, this.aByteArray1617, i_68_, i_66_, i_70_);
+            Component231.decodedOperation295(i_72_, i_67_, 256, var_r_Sub2.aByteArray10486, i_69_, this.aByteArray1617, i_68_, i_66_, i_70_);
             method952(i_68_, i_69_, i, -1, i_64_);
         }
     }
 
-    static final void method960(int i) {
-        Component122.aClass348_Sub16_Sub3_1564.method2877(-128);
+    static final void decodedOperation960(int i) {
+        Component122.aClass348_Sub16_Sub3_1564.decodedOperation2877(-128);
         anInt1611++;
         DebugPanic.aClass348_Sub16_Sub3_4743 = null;
         PlayerState.anInt7068 = i;

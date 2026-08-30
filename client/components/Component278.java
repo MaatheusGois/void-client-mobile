@@ -15,13 +15,13 @@ final class Component278
     static float aFloat3242;
     static int anInt3243;
 
-    public static void method1917(int i) {
+    public static void decodedOperation1917(int i) {
         if (i != 40960) aClass114_3240 = null;
         aClass351_3237 = null;
         aClass114_3240 = null;
     }
 
-    static final int method1918(int i, int i_0_) {
+    static final int decodedOperation1918(int i, int i_0_) {
         if (i != -3358) return 126;
         anInt3243++;
         int i_1_ = i_0_ * (i_0_ * i_0_ >> 12) >> 12;

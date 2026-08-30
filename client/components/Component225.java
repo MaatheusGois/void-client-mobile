@@ -31,7 +31,7 @@ final class Component225
     static int anInt481;
     static long aLong482 = -1L;
 
-    final DisplayModeManagerContainer77 method341(int i) {
+    final DisplayModeManagerContainer77 decodedOperation341(int i) {
         anInt468++;
         if (anIntArray472 == null) return null;
         DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[anIntArray472.length];
@@ -40,37 +40,37 @@ final class Component225
                 class124s[i_0_] = Component189.loadFromCache(0, (this.aClass150_475.aClass45_2054), anIntArray472[i_0_], -1);
         }
         for (int i_1_ = 0; anIntArray472.length > i_1_; i_1_++) {
-            if (class124s[i_1_].anInt1830 < 13) class124s[i_1_].method1092(2, 113);
+            if (class124s[i_1_].anInt1830 < 13) class124s[i_1_].decodedOperation1092(2, 113);
         }
         DisplayModeManagerContainer77 class124;
         if (class124s.length != 1) class124 = new DisplayModeManagerContainer77(class124s, class124s.length);
         else class124 = class124s[0];
         if (class124 == null) return null;
-        if (i < 53) method341(-22);
+        if (i < 53) decodedOperation341(-22);
         if (aShortArray474 != null) {
             for (int i_2_ = 0; i_2_ < aShortArray474.length; i_2_++)
-                class124.method1098(aShortArray474[i_2_], (byte) 126, aShortArray480[i_2_]);
+                class124.decodedOperation1098(aShortArray474[i_2_], (byte) 126, aShortArray480[i_2_]);
         }
         if (aShortArray465 != null) {
             for (int i_3_ = 0; i_3_ < aShortArray465.length; i_3_++)
-                class124.method1095(aShortArray465[i_3_], 0, aShortArray477[i_3_]);
+                class124.decodedOperation1095(aShortArray465[i_3_], 0, aShortArray477[i_3_]);
         }
         return class124;
     }
 
-    final boolean method342(byte i) {
+    final boolean decodedOperation342(byte i) {
         anInt470++;
         boolean bool = true;
         synchronized (this.aClass150_475.aClass45_2054) {
             for (int i_4_ = 0; i_4_ < 5; i_4_++) {
                 if (anIntArray464[i_4_] != -1 && !this.aClass150_475.aClass45_2054.isFileReady(-10499, anIntArray464[i_4_], 0)) bool = false;
             }
-            if (i <= 87) method351(96);
+            if (i <= 87) decodedOperation351(96);
         }
         return bool;
     }
 
-    final DisplayModeManagerContainer77 method343(byte i) {
+    final DisplayModeManagerContainer77 decodedOperation343(byte i) {
         anInt471++;
         DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[5];
         int i_5_ = 0;
@@ -80,17 +80,17 @@ final class Component225
             }
         }
         for (int i_7_ = 0; i_7_ < 5; i_7_++) {
-            if (class124s[i_7_] != null && class124s[i_7_].anInt1830 < 13) class124s[i_7_].method1092(2, 99);
+            if (class124s[i_7_] != null && class124s[i_7_].anInt1830 < 13) class124s[i_7_].decodedOperation1092(2, 99);
         }
         if (i > -27) return null;
         DisplayModeManagerContainer77 class124 = new DisplayModeManagerContainer77(class124s, i_5_);
         if (aShortArray474 != null) {
             for (int i_8_ = 0; aShortArray474.length > i_8_; i_8_++)
-                class124.method1098(aShortArray474[i_8_], (byte) 126, aShortArray480[i_8_]);
+                class124.decodedOperation1098(aShortArray474[i_8_], (byte) 126, aShortArray480[i_8_]);
         }
         if (aShortArray465 != null) {
             for (int i_9_ = 0; aShortArray465.length > i_9_; i_9_++)
-                class124.method1095(aShortArray465[i_9_], 0, aShortArray477[i_9_]);
+                class124.decodedOperation1095(aShortArray465[i_9_], 0, aShortArray477[i_9_]);
         }
         return class124;
     }
@@ -126,14 +126,14 @@ final class Component225
         if (i_10_ != -65) aLong482 = -90L;
     }
 
-    static final void method345(int i, byte i_17_) {
+    static final void decodedOperation345(int i, byte i_17_) {
         anInt469++;
         if (PlayerState.anInt7068 == 0) Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, i);
         else Component255.anInt1059 = i;
-        if (i_17_ > -26) method349(-111);
+        if (i_17_ > -26) decodedOperation349(-111);
     }
 
-    final void method346(int i, Buffer class348_sub49) {
+    final void decodedOperation346(int i, Buffer class348_sub49) {
         anInt467++;
         for (; ; ) {
             int i_18_ = class348_sub49.readUnsignedByte(255);
@@ -181,9 +181,9 @@ final class Component225
         } while (false);
     }
 
-    final boolean method348(byte i) {
+    final boolean decodedOperation348(byte i) {
         anInt478++;
-        if (i != 34) method348((byte) -15);
+        if (i != 34) decodedOperation348((byte) -15);
         if (anIntArray472 == null) return true;
         boolean bool = true;
         synchronized (this.aClass150_475.aClass45_2054) {
@@ -194,21 +194,21 @@ final class Component225
         return bool;
     }
 
-    static final void method349(int i) {
+    static final void decodedOperation349(int i) {
         anInt462++;
         int i_32_ = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
         for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
             Player player = InterfaceRenderer.players[is[i_33_]];
-            if (player != null) ImageCacheStore.method2556(false, player.getSize((byte) 60), player);
+            if (player != null) ImageCacheStore.decodedOperation2556(false, player.getSize((byte) 60), player);
         }
         if (i != 4740) method347(null, null, 79, -21, 64);
     }
 
-    static final void method350(int i, int i_34_, int i_35_, int i_36_, int i_37_) {
+    static final void decodedOperation350(int i, int i_34_, int i_35_, int i_36_, int i_37_) {
         anInt466++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_36_, (byte) 105, 10);
-        class348_sub42_sub15.method3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_36_, (byte) 105, 10);
+        class348_sub42_sub15.decodedOperation3246(-25490);
         class348_sub42_sub15.anInt9651 = i_34_;
         int i_38_ = 112 % ((i_35_ - 76) / 44);
         class348_sub42_sub15.anInt9650 = i_37_;
@@ -219,7 +219,7 @@ final class Component225
         /* empty */
     }
 
-    public static void method351(int i) {
+    public static void decodedOperation351(int i) {
         aClass60_463 = null;
         int i_39_ = 90 / ((i - 19) / 43);
         aFrame476 = null;

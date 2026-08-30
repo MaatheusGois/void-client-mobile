@@ -53,7 +53,7 @@ abstract class BitmapFont {
                 int i_7_ = string.length();
                 int i_8_ = 0;
                 for (/**/; i_7_ > i_8_; i_8_++) {
-                    char c = (char) (Component160.method3464(string.charAt(i_8_), false) & 0xff);
+                    char c = (char) (Component160.decodedOperation3464(string.charAt(i_8_), false) & 0xff);
                     if (c == 60) i_4_ = i_8_;
                     else {
                         if (c == 62 && i_4_ != -1) {
@@ -79,14 +79,14 @@ abstract class BitmapFont {
                                                     i_6_++;
                                                     int i_12_ = (NodeSub41.parseInt(true, (string_9_.substring(4))));
                                                     Component24 class105 = class105s[i_12_];
-                                                    int i_13_ = (is_0_ == null ? class105.method980() : is_0_[i_12_]);
-                                                    class105.method964(i + i_10_, (-i_13_ + (metrics.ascent) + (i_2_ - -i_11_)), 1, 0, 1);
-                                                    i += class105s[i_12_].method966();
+                                                    int i_13_ = (is_0_ == null ? class105.decodedOperation980() : is_0_[i_12_]);
+                                                    class105.decodedOperation964(i + i_10_, (-i_13_ + (metrics.ascent) + (i_2_ - -i_11_)), 1, 0, 1);
+                                                    i += class105s[i_12_].decodedOperation966();
                                                     i_5_ = -1;
                                                 } catch (Exception exception) {
                                                     /* empty */
                                                 }
-                                            } else method2573((byte) -92, string_9_);
+                                            } else decodedOperation2573((byte) -92, string_9_);
                                             continue;
                                         }
                                     } else c = '\u20ac';
@@ -111,8 +111,8 @@ abstract class BitmapFont {
                             }
                             i_6_++;
                             int i_16_ = metrics.charWidth((byte) -48, c);
-                            if (Player.anInt10567 != -1) toolkit.method3649((byte) -103, i_16_, i_2_ - -(int) ((double) (metrics.ascent) * 0.7), Player.anInt10567, i);
-                            if (DefinitionSub2.anInt9101 != -1) toolkit.method3649((byte) -96, i_16_, (metrics.ascent) + i_2_, (DefinitionSub2.anInt9101), i);
+                            if (Player.anInt10567 != -1) toolkit.decodedOperation3649((byte) -103, i_16_, i_2_ - -(int) ((double) (metrics.ascent) * 0.7), Player.anInt10567, i);
+                            if (DefinitionSub2.anInt9101 != -1) toolkit.decodedOperation3649((byte) -96, i_16_, (metrics.ascent) + i_2_, (DefinitionSub2.anInt9101), i);
                             i_5_ = c;
                             i += i_16_;
                         }
@@ -124,7 +124,7 @@ abstract class BitmapFont {
         }
     }
 
-    final void method2567(int i, String string, byte i_17_, int i_18_, int i_19_, int i_20_, Component24[] class105s, int[] is) {
+    final void decodedOperation2567(int i, String string, byte i_17_, int i_18_, int i_19_, int i_20_, Component24[] class105s, int[] is) {
         try {
             anInt4056++;
             if (i_17_ > 114 && string != null) {
@@ -151,7 +151,7 @@ abstract class BitmapFont {
                 if (i_31_ <= 0) i_31_ = 1;
             }
             if (i_31_ > 0 && i_31_ <= i_34_) {
-                ClientErrorReporter.aStringArray2113[i_31_ - 1] = metrics.method1181(class105s, i_25_, (ClientErrorReporter.aStringArray2113[i_31_ - 1]), (byte) 55);
+                ClientErrorReporter.aStringArray2113[i_31_ - 1] = metrics.decodedOperation1181(class105s, i_25_, (ClientErrorReporter.aStringArray2113[i_31_ - 1]), (byte) 55);
                 i_34_ = i_31_;
             }
             if (i_26_ == 3 && i_34_ == 1) i_26_ = 1;
@@ -197,7 +197,7 @@ abstract class BitmapFont {
      */
     final void drawTextRightAligned(String string, int y, int colour, int rightX, int unused, int shadow) {
         anInt4052++;
-        if (unused >= -119) method2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
+        if (unused >= -119) decodedOperation2571(-128, -30, null, null, -107, -80, null, -6, -122, null);
         if (string != null) {
             method2579(shadow, 122, colour);
             method2583(0, y, 0, null, null, string, null, 25625, -metrics.stringWidth(true, string) + rightX);
@@ -216,13 +216,13 @@ abstract class BitmapFont {
         int i_46_ = i_45_ >> 16;
         int i_47_ = i_45_ & 0xffff;
         if (DefinitionSub33.openInterfaces[i_46_] == null || (DefinitionSub33.openInterfaces[i_46_][i_47_] == null)) {
-            boolean bool = Component233.method2547(i_46_, (byte) 84);
+            boolean bool = Component233.decodedOperation2547(i_46_, (byte) 84);
             if (!bool) return null;
         }
         return DefinitionSub33.openInterfaces[i_46_][i_47_];
     }
 
-    final int method2571(int i, int i_48_, int[] is, String string, int i_49_, int i_50_, Component24[] class105s, int i_51_, int i_52_, Random random) {
+    final int decodedOperation2571(int i, int i_48_, int[] is, String string, int i_49_, int i_50_, Component24[] class105s, int i_51_, int i_52_, Random random) {
         try {
             anInt4047++;
             if (string == null) return 0;
@@ -244,18 +244,18 @@ abstract class BitmapFont {
         }
     }
 
-    public static void method2572(byte i) {
+    public static void decodedOperation2572(byte i) {
         aClass138_4062 = null;
         if (i != 23) aClass138_4062 = null;
     }
 
-    private final void method2573(byte i, String string) {
+    private final void decodedOperation2573(byte i, String string) {
         anInt4046++;
         try {
             if (i <= -78) {
-                if (string.startsWith("col=")) HashNodeSub1.anInt9492 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.method450(-20188, string.substring(4), 16) & 0xffffff);
+                if (string.startsWith("col=")) HashNodeSub1.anInt9492 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.decodedOperation450(-20188, string.substring(4), 16) & 0xffffff);
                 else if (string.equals("/col")) HashNodeSub1.anInt9492 = (HashNodeSub1.anInt9492 & ~0xffffff | 0xffffff & Component134.anInt5807);
-                if (string.startsWith("argb=")) HashNodeSub1.anInt9492 = Component377.method450(-20188, string.substring(5), 16);
+                if (string.startsWith("argb=")) HashNodeSub1.anInt9492 = Component377.decodedOperation450(-20188, string.substring(5), 16);
                 else if (!string.equals("/argb")) {
                     if (!string.startsWith("str=")) {
                         if (string.equals("str")) Player.anInt10567 = (HashNodeSub1.anInt9492 & ~0xffffff | 0x800000);
@@ -264,7 +264,7 @@ abstract class BitmapFont {
                                 if (!string.equals("u")) {
                                     if (!string.equals("/u")) {
                                         if (!string.equalsIgnoreCase("shad=-1")) {
-                                            if (string.startsWith("shad=")) Component120.anInt320 = ((~0xffffff & (HashNodeSub1.anInt9492)) | (Component377.method450(-20188, string.substring(5), 16)));
+                                            if (string.startsWith("shad=")) Component120.anInt320 = ((~0xffffff & (HashNodeSub1.anInt9492)) | (Component377.decodedOperation450(-20188, string.substring(5), 16)));
                                             else if (string.equals("shad")) Component120.anInt320 = (~0xffffff & (HashNodeSub1.anInt9492));
                                             else if (!string.equals("/shad")) {
                                                 if (string.equals("br")) method2579((DisplayModeManagerContainer346.anInt2061), 117, (Component134.anInt5807));
@@ -272,9 +272,9 @@ abstract class BitmapFont {
                                         } else Component120.anInt320 = 0;
                                     } else DefinitionSub2.anInt9101 = -1;
                                 } else DefinitionSub2.anInt9101 = (HashNodeSub1.anInt9492 & ~0xffffff);
-                            } else DefinitionSub2.anInt9101 = ((HashNodeSub1.anInt9492 & ~0xffffff) | Component377.method450(-20188, string.substring(2), 16));
+                            } else DefinitionSub2.anInt9101 = ((HashNodeSub1.anInt9492 & ~0xffffff) | Component377.decodedOperation450(-20188, string.substring(2), 16));
                         } else Player.anInt10567 = -1;
-                    } else Player.anInt10567 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.method450(-20188, string.substring(4), 16));
+                    } else Player.anInt10567 = (HashNodeSub1.anInt9492 & ~0xffffff | Component377.decodedOperation450(-20188, string.substring(4), 16));
                 } else HashNodeSub1.anInt9492 = Component134.anInt5807;
             }
         } catch (Exception exception) {
@@ -282,7 +282,7 @@ abstract class BitmapFont {
         }
     }
 
-    final void method2574(int i, int i_58_, String string, int i_59_, int i_60_, int i_61_, boolean bool) {
+    final void decodedOperation2574(int i, int i_58_, String string, int i_59_, int i_60_, int i_61_, boolean bool) {
         anInt4059++;
         if (string != null) {
             method2579(i_60_, 108, i);
@@ -338,7 +338,7 @@ abstract class BitmapFont {
         }
     }
 
-    final void method2577(int i, int i_73_, String string, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_) {
+    final void decodedOperation2577(int i, int i_73_, String string, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_) {
         anInt4051++;
         if (string != null) {
             method2579(i_75_, -104, i_74_);
@@ -381,7 +381,7 @@ abstract class BitmapFont {
         if (i_89_ > 0) Component286.anInt1902 = (-metrics.stringWidth(true, string) + i_88_ << 8) / i_89_;
     }
 
-    final void method2581(String string, int i, int i_92_, int i_93_, byte i_94_, int i_95_, int i_96_) {
+    final void decodedOperation2581(String string, int i, int i_92_, int i_93_, byte i_94_, int i_95_, int i_96_) {
         anInt4049++;
         if (string != null) {
             method2579(i_95_, 117, i);
@@ -397,7 +397,7 @@ abstract class BitmapFont {
         }
     }
 
-    static final Component84 method2582(GlExtensionManager class377, DisplayModeManagerContainer271[] class39s, int i) {
+    static final Component84 decodedOperation2582(GlExtensionManager class377, DisplayModeManagerContainer271[] class39s, int i) {
         try {
             anInt4065++;
             if (i != -2113) aClass138_4062 = null;
@@ -440,7 +440,7 @@ abstract class BitmapFont {
             if (i_105_ == 25625) {
                 int i_110_ = 0;
                 for (/**/; i_110_ < i_109_; i_110_++) {
-                    char c = (char) (Component160.method3464(string.charAt(i_110_), false) & 0xff);
+                    char c = (char) (Component160.decodedOperation3464(string.charAt(i_110_), false) & 0xff);
                     if (c == 60) i_107_ = i_110_;
                     else {
                         if (c == 62 && i_107_ != -1) {
@@ -459,15 +459,15 @@ abstract class BitmapFont {
                                                 try {
                                                     int i_112_ = (NodeSub41.parseInt(true, (string_111_.substring(4))));
                                                     Component24 class105 = class105s[i_112_];
-                                                    int i_113_ = (is == null ? class105.method980() : is[i_112_]);
-                                                    if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.method964(i_106_, (-i_113_ + (metrics.ascent) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
-                                                    else class105.method964(i_106_, ((metrics.ascent) + (i_103_ - i_113_)), 1, 0, 1);
+                                                    int i_113_ = (is == null ? class105.decodedOperation980() : is[i_112_]);
+                                                    if (((HashNodeSub1.anInt9492) & ~0xffffff) != -16777216) class105.decodedOperation964(i_106_, (-i_113_ + (metrics.ascent) + i_103_), 0, (0xffffff | (~0xffffff & (HashNodeSub1.anInt9492))), 1);
+                                                    else class105.decodedOperation964(i_106_, ((metrics.ascent) + (i_103_ - i_113_)), 1, 0, 1);
                                                     i_108_ = -1;
-                                                    i_106_ += class105s[i_112_].method966();
+                                                    i_106_ += class105s[i_112_].decodedOperation966();
                                                 } catch (Exception exception) {
                                                     /* empty */
                                                 }
-                                            } else method2573((byte) -118, string_111_);
+                                            } else decodedOperation2573((byte) -118, string_111_);
                                             continue;
                                         }
                                     } else c = '\u20ac';
@@ -490,8 +490,8 @@ abstract class BitmapFont {
                                 AbstractGlTexture.anInt4848 &= 0xff;
                             }
                             int i_114_ = metrics.charWidth((byte) -48, c);
-                            if (Player.anInt10567 != -1) toolkit.method3649((byte) -119, i_114_, (int) ((double) metrics.ascent * 0.7) + i_103_, Player.anInt10567, i_106_);
-                            if (DefinitionSub2.anInt9101 != -1) toolkit.method3649((byte) -114, i_114_, (metrics.ascent) + (i_103_ + 1), (DefinitionSub2.anInt9101), i_106_);
+                            if (Player.anInt10567 != -1) toolkit.decodedOperation3649((byte) -119, i_114_, (int) ((double) metrics.ascent * 0.7) + i_103_, Player.anInt10567, i_106_);
+                            if (DefinitionSub2.anInt9101 != -1) toolkit.decodedOperation3649((byte) -114, i_114_, (metrics.ascent) + (i_103_ + 1), (DefinitionSub2.anInt9101), i_106_);
                             i_106_ += i_114_;
                             i_108_ = c;
                         }
@@ -512,7 +512,7 @@ abstract class BitmapFont {
         }
     }
 
-    final int method2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, Shader var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
+    final int decodedOperation2584(int[] is, int i, int i_115_, Component24[] class105s, int i_116_, int i_117_, int i_118_, Shader var_aa, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, boolean bool, int i_124_, String string) {
         try {
             if (bool != false) getComponent(-23, 41);
             anInt4057++;
@@ -522,7 +522,7 @@ abstract class BitmapFont {
         }
     }
 
-    final int method2585(int[] is, int i, Component24[] class105s, int i_125_, int i_126_, int i_127_, int i_128_, Random random, int i_129_, int i_130_, int i_131_, int i_132_, int i_133_, String string, int[] is_134_) {
+    final int decodedOperation2585(int[] is, int i, Component24[] class105s, int i_125_, int i_126_, int i_127_, int i_128_, Random random, int i_129_, int i_130_, int i_131_, int i_132_, int i_133_, String string, int[] is_134_) {
         try {
             anInt4050++;
             if (string == null) return 0;

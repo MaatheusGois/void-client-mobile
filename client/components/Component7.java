@@ -11,7 +11,7 @@ final class Component7
     static int anInt2877;
     static int anInt2878;
 
-    static final void method1605(int i) {
+    static final void decodedOperation1605(int i) {
         if (Component366.anIntArray3068 == null || Component296.anIntArray4654 == null) {
             Component296.anIntArray4654 = new int[256];
             Component366.anIntArray3068 = new int[256];
@@ -22,10 +22,10 @@ final class Component7
             }
         }
         anInt2878++;
-        if (i != 26188) method1606(-76, 98, 86);
+        if (i != 26188) decodedOperation1606(-76, 98, 86);
     }
 
-    static final byte method1606(int i, int i_1_, int i_2_) {
+    static final byte decodedOperation1606(int i, int i_1_, int i_2_) {
         anInt2876++;
         if (i_2_ != 9) return (byte) 0;
         if (i_1_ != -27939) return (byte) -50;

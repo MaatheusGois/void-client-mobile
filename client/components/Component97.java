@@ -12,17 +12,17 @@ final class Component97
     static int anInt1537;
     static CacheStore aClass45_1538;
 
-    static final void method865(int i, int i_0_) {
+    static final void decodedOperation865(int i, int i_0_) {
         anInt1536++;
-        if (i != -8186) method866(-99);
+        if (i != -8186) decodedOperation866(-99);
         Component279.aClass60_225.processSoftEntries(2, i_0_);
     }
 
-    public static void method866(int i) {
+    public static void decodedOperation866(int i) {
         if (i == -14603) aClass45_1538 = null;
     }
 
-    static final void method867(boolean bool) {
+    static final void decodedOperation867(boolean bool) {
         NodeSub8.aClass241_6660.method1856((byte) 106);
         if (bool != true) aClass45_1538 = null;
         anInt1535++;

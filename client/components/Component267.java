@@ -14,7 +14,7 @@ final class Component267
     static int anInt2980;
     static Component276 aClass194_2981;
 
-    static final Component41 method1631(boolean bool) {
+    static final Component41 decodedOperation1631(boolean bool) {
         anInt2980++;
         if (bool != false) aClass194_2981 = null;
         try {
@@ -28,7 +28,7 @@ final class Component267
         }
     }
 
-    public static void method1632(int i) {
+    public static void decodedOperation1632(int i) {
         aClass45_2978 = null;
         int i_1_ = -20 / ((-87 - i) / 34);
         aClass194_2981 = null;
@@ -39,8 +39,8 @@ final class Component267
         /* empty */
     }
 
-    static final boolean method1633(boolean bool, int i, int i_2_) {
-        if (bool != false) method1633(false, 85, -80);
+    static final boolean decodedOperation1633(boolean bool, int i, int i_2_) {
+        if (bool != false) decodedOperation1633(false, 85, -80);
         anInt2977++;
         return (0x400 & i) != 0;
     }

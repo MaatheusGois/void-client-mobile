@@ -12,7 +12,7 @@ final class DisplayModeManagerContainer130
     private final CacheStore aClass45_3468;
     static int anInt3469;
 
-    final HashNodeSub7 method2044(int i, int i_0_) {
+    final HashNodeSub7 decodedOperation2044(int i, int i_0_) {
         anInt3469++;
         HashNodeSub7 class348_sub42_sub7;
         synchronized (aClass60_3466) {
@@ -24,20 +24,20 @@ final class DisplayModeManagerContainer130
             is = aClass45_3468.getFile(-1860, 5, i_0_);
         }
         class348_sub42_sub7 = new HashNodeSub7();
-        if (i < 78) method2046();
-        if (is != null) class348_sub42_sub7.method3192((byte) 16, new Buffer(is));
+        if (i < 78) decodedOperation2046();
+        if (is != null) class348_sub42_sub7.decodedOperation3192((byte) 16, new Buffer(is));
         synchronized (aClass60_3466) {
             aClass60_3466.putOne(class348_sub42_sub7, i_0_, (byte) -93);
         }
         return class348_sub42_sub7;
     }
 
-    public static void method2045(byte i) {
+    public static void decodedOperation2045(byte i) {
         aClass114_3467 = null;
-        if (i != 62) method2046();
+        if (i != 62) decodedOperation2046();
     }
 
-    static final void method2046() {
+    static final void decodedOperation2046() {
         DisplayModeManagerContainer5.aClass76_1208 = DisplayModeManagerContainer5.aClass76_1210;
     }
 

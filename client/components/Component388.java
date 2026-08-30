@@ -18,8 +18,8 @@ final class Component388
     final int getDefaultValue(int i) {
         anInt6077++;
         if (i != 20014) return -71;
-        if (!this.preferences.method3425(-109)) {
-            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -107) && WorldNameText.method252(this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350), 5126)) return 1;
+        if (!this.preferences.decodedOperation3425(-109)) {
+            if (this.preferences.aClass239_Sub25_7271.decodedOperation1830((byte) -107) && WorldNameText.decodedOperation252(this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350), 5126)) return 1;
             return 0;
         }
         return 2;
@@ -31,19 +31,19 @@ final class Component388
 
     final void validateValue(boolean bool) {
         if (bool == false) {
-            if (this.preferences.method3425(-68)) this.preferenceValue = 2;
+            if (this.preferences.decodedOperation3425(-68)) this.preferenceValue = 2;
             anInt6079++;
             if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
         }
     }
 
-    final boolean method1817(int i) {
+    final boolean decodedOperation1817(int i) {
         if (i < 85) return false;
         anInt6078++;
-        return !this.preferences.method3425(-108);
+        return !this.preferences.decodedOperation3425(-108);
     }
 
-    final int method1818(int i) {
+    final int decodedOperation1818(int i) {
         if (i != -32350) return 29;
         anInt6082++;
         return this.preferenceValue;
@@ -52,14 +52,14 @@ final class Component388
     final int getValue(int i, int i_0_) {
         if (i != 3) validateValue(true);
         anInt6080++;
-        if (this.preferences.method3425(-109)) return 3;
+        if (this.preferences.decodedOperation3425(-109)) return 3;
         return 1;
     }
 
-    static final Component184 method1819(int i, int i_1_, int i_2_, CacheStore class45) {
+    static final Component184 decodedOperation1819(int i, int i_1_, int i_2_, CacheStore class45) {
         anInt6081++;
         byte[] is = class45.getFile(-1860, i, i_1_);
-        if (i_2_ >= -31) method1819(65, -4, -97, null);
+        if (i_2_ >= -31) decodedOperation1819(65, -4, -97, null);
         if (is == null) return null;
         return new Component184(is);
     }

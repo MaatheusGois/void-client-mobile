@@ -24,7 +24,7 @@ class Component76
         return Component316.aClass223_2489;
     }
 
-    static final void method3573(int i) {
+    static final void decodedOperation3573(int i) {
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
             DisplayModeManagerContainer310.aClass60_355.clear(0);
         }
@@ -32,7 +32,7 @@ class Component76
         synchronized (Component387.aClass60_1894) {
             Component387.aClass60_1894.clear(0);
         }
-        if (i != -15326) method3573(-67);
+        if (i != -15326) decodedOperation3573(-67);
     }
 
     Component76(Component85 class221, DisplayModeManagerContainer196 class341, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
@@ -49,7 +49,7 @@ class Component76
         }
     }
 
-    public static void method3574(int i) {
+    public static void decodedOperation3574(int i) {
         if (i == 19499) {
             aBooleanArrayArray8596 = null;
             aClass45_8601 = null;

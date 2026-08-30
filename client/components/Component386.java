@@ -22,24 +22,24 @@ final class Component386
     static int anInt2874;
     private final NodeCache aClass60_2875 = new NodeCache(64);
 
-    final void method1598(int i) {
+    final void decodedOperation1598(int i) {
         anInt2863++;
         synchronized (aClass60_2875) {
             aClass60_2875.purgeSoftReferences(-103);
         }
         synchronized (this.aClass60_2862) {
-            if (i <= 42) method1598(36);
+            if (i <= 42) decodedOperation1598(36);
             this.aClass60_2862.purgeSoftReferences(-126);
         }
     }
 
-    static final boolean method1599(byte i, int i_0_, int i_1_) {
+    static final boolean decodedOperation1599(byte i, int i_0_, int i_1_) {
         anInt2869++;
         if (i > -65) return false;
         return (i_0_ & 0xc580) != 0;
     }
 
-    static final void method1600(boolean bool, int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void decodedOperation1600(boolean bool, int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt2867++;
         Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
         if (class318_sub1_sub3_sub3.anInt10319 == 0) {
@@ -63,7 +63,7 @@ final class Component386
                 }
             }
             if (class318_sub1_sub3_sub3.anInt10269 != -1 && (class318_sub1_sub3_sub3.anInt10225) <= OpenGlShader.clientCycle) {
-                Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 118, (class318_sub1_sub3_sub3.anInt10269)));
+                Component63 class368 = (NsnDefinition.aClass319_9245.decodedOperation2543((byte) 118, (class318_sub1_sub3_sub3.anInt10269)));
                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
                     DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7);
                     if ((class318_sub1_sub3_sub3.anInt10322) > 0 && class17.anInt262 == 0) {
@@ -81,7 +81,7 @@ final class Component386
                 }
             }
             if (class318_sub1_sub3_sub3.anInt10269 != -1 && ((class318_sub1_sub3_sub3.anInt10225) <= OpenGlShader.clientCycle)) {
-                Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 98, (class318_sub1_sub3_sub3.anInt10269)));
+                Component63 class368 = (NsnDefinition.aClass319_9245.decodedOperation2543((byte) 98, (class318_sub1_sub3_sub3.anInt10269)));
                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
                     DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence((class368.anInt4503), i ^ 0x7);
                     if ((class318_sub1_sub3_sub3.anInt10322) > 0 && class17.anInt262 == 0) {
@@ -104,21 +104,21 @@ final class Component386
             int i_5_ = (512 * (class318_sub1_sub3_sub3.anIntArray10317[-1 + class318_sub1_sub3_sub3.anInt10319]) - -(class318_sub1_sub3_sub3.getSize((byte) 72) * 256));
             if (i_2_ >= i_4_) {
                 if (i_4_ < i_2_) {
-                    if (i_5_ > i_3_) class318_sub1_sub3_sub3.method2440((byte) 49, 6144);
-                    else if (i_5_ < i_3_) class318_sub1_sub3_sub3.method2440((byte) 49, 2048);
-                    else class318_sub1_sub3_sub3.method2440((byte) 49, 4096);
+                    if (i_5_ > i_3_) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 6144);
+                    else if (i_5_ < i_3_) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 2048);
+                    else class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 4096);
                 } else if (i_5_ <= i_3_) {
-                    if (i_3_ > i_5_) class318_sub1_sub3_sub3.method2440((byte) 49, 0);
-                } else class318_sub1_sub3_sub3.method2440((byte) 49, 8192);
+                    if (i_3_ > i_5_) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 0);
+                } else class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 8192);
             } else if (i_3_ >= i_5_) {
-                if (i_5_ < i_3_) class318_sub1_sub3_sub3.method2440((byte) 49, 14336);
-                else class318_sub1_sub3_sub3.method2440((byte) 49, 12288);
-            } else class318_sub1_sub3_sub3.method2440((byte) 49, 10240);
+                if (i_5_ < i_3_) class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 14336);
+                else class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 12288);
+            } else class318_sub1_sub3_sub3.decodedOperation2440((byte) 49, 10240);
             byte i_6_ = (class318_sub1_sub3_sub3.aByteArray10321[-1 + (class318_sub1_sub3_sub3.anInt10319)]);
             if (!bool && (i_4_ - i_2_ > 1024 || i_4_ + -i_2_ < -1024 || -i_3_ + i_5_ > 1024 || i_5_ + -i_3_ < -1024)) {
                 class318_sub1_sub3_sub3.y = i_5_;
                 class318_sub1_sub3_sub3.x = i_4_;
-                class318_sub1_sub3_sub3.method2435((byte) -108, (class318_sub1_sub3_sub3.anInt10282), false);
+                class318_sub1_sub3_sub3.decodedOperation2435((byte) -108, (class318_sub1_sub3_sub3.anInt10282), false);
                 Component366.anInt3062 = -1;
                 class318_sub1_sub3_sub3.anInt10319--;
                 if ((class318_sub1_sub3_sub3.anInt10322) > 0) class318_sub1_sub3_sub3.anInt10322--;
@@ -203,7 +203,7 @@ final class Component386
         }
     }
 
-    final Component82 method1601(int i, int i_15_) {
+    final Component82 decodedOperation1601(int i, int i_15_) {
         anInt2874++;
         Component82 class31;
         synchronized (aClass60_2875) {
@@ -216,14 +216,14 @@ final class Component386
         }
         class31 = new Component82();
         class31.aClass219_438 = this;
-        if (is != null) class31.method332(i ^ ~0x55, new Buffer(is));
+        if (is != null) class31.decodedOperation332(i ^ ~0x55, new Buffer(is));
         synchronized (aClass60_2875) {
             aClass60_2875.putOne(class31, i_15_, (byte) -109);
         }
         return class31;
     }
 
-    final void method1602(int i) {
+    final void decodedOperation1602(int i) {
         synchronized (aClass60_2875) {
             aClass60_2875.clear(i);
         }
@@ -233,7 +233,7 @@ final class Component386
         }
     }
 
-    final void method1603(int i, int i_16_) {
+    final void decodedOperation1603(int i, int i_16_) {
         anInt2870++;
         synchronized (aClass60_2875) {
             aClass60_2875.processSoftEntries(2, i);
@@ -244,7 +244,7 @@ final class Component386
         }
     }
 
-    public static void method1604(int i) {
+    public static void decodedOperation1604(int i) {
         aClass196_2864 = null;
         aClass223_2868 = null;
         if (i != 11868) anInt2872 = -94;

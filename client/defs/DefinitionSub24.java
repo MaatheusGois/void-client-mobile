@@ -33,7 +33,7 @@ final class DefinitionSub24
                         break;
                     }
                 }
-                Component313.method1579(is, 0, DefinitionSub6.anInt9139, i_7_);
+                Component313.decodedOperation1579(is, 0, DefinitionSub6.anInt9139, i_7_);
             } else {
                 for (int i_2_ = 0; i_2_ < DefinitionSub6.anInt9139; i_2_++) {
                     int i_3_ = 0;
@@ -69,12 +69,12 @@ final class DefinitionSub24
     }
 
     final void postDecode(int i) {
-        if (i < 108) method3049(null, -68, -1);
+        if (i < 108) decodedOperation3049(null, -68, -1);
         anInt9330++;
         method3116((byte) -111);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_9_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_9_) {
         anInt9331++;
         int i_10_ = i;
         while_198_:
@@ -92,10 +92,10 @@ final class DefinitionSub24
             } while (false);
             anInt9325 = class348_sub49.readUnsignedByte(i_9_ ^ 0x79d8);
         } while (false);
-        if (i_9_ != 31015) method3049(null, 38, 1);
+        if (i_9_ != 31015) decodedOperation3049(null, 38, 1);
     }
 
-    public static void method3115(int i) {
+    public static void decodedOperation3115(int i) {
         if (i <= -72) aClass114_9324 = null;
     }
 

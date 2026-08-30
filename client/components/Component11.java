@@ -26,13 +26,13 @@ final class Component11
     int anInt3574;
     int anInt3575;
 
-    final void method2067(int i) {
+    final void decodedOperation2067(int i) {
         this.anInt3564 = (this.anInt3564 << 8 | this.anInt3573);
-        if (i != -4860) method2067(-102);
+        if (i != -4860) decodedOperation2067(-102);
         anInt3571++;
     }
 
-    static long method2068(long l, long l_0_) {
+    static long decodedOperation2068(long l, long l_0_) {
         try {
             return l | l_0_;
         } catch (RuntimeException runtimeexception) {
@@ -61,13 +61,13 @@ final class Component11
                                 } else this.anInt3558 = (class348_sub49.readUnsignedByte(255) << 2);
                             } else this.anInt3559 = class348_sub49.readMedium(-1);
                         } else this.aBoolean3560 = true;
-                    } else this.anInt3569 = (LoggedOutDefinition.method3140(-67, class348_sub49.readMedium(-1)));
+                    } else this.anInt3569 = (LoggedOutDefinition.decodedOperation3140(-67, class348_sub49.readMedium(-1)));
                 } else this.aBoolean3561 = false;
-            } else this.anInt3563 = LoggedOutDefinition.method3140(-57, class348_sub49.readMedium(-1));
+            } else this.anInt3563 = LoggedOutDefinition.decodedOperation3140(-57, class348_sub49.readMedium(-1));
         }
     }
 
-    final void method2070(boolean bool, Buffer class348_sub49) {
+    final void decodedOperation2070(boolean bool, Buffer class348_sub49) {
         if (bool != true) this.aBoolean3561 = false;
         for (; ; ) {
             int i = class348_sub49.readUnsignedByte(255);
@@ -77,7 +77,7 @@ final class Component11
         anInt3565++;
     }
 
-    public static void method2071(int i) {
+    public static void decodedOperation2071(int i) {
         aClass21_3572 = null;
         aClass137_3568 = null;
         if (i > -126) aClass21_3572 = null;

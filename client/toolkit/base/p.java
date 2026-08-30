@@ -34,7 +34,7 @@ final class p
 
     private final native void K(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_);
 
-    final void method3433(int i, int i_10_) {
+    final void decodedOperation3433(int i, int i_10_) {
         try {
             synchronized (this.aCanvas5147.getTreeLock()) {
                 Dimension dimension = this.aCanvas5147.getSize();
@@ -47,7 +47,7 @@ final class p
     }
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.method1947(0, this);
+        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
     }
 
     p(OpenGLToolkit var_oa, Canvas canvas, int i, int i_11_) {
@@ -57,7 +57,7 @@ final class p
         sa(var_oa, this.aCanvas5147, i, i_11_);
     }
 
-    final void method3434(Rectangle[] rectangles, int i, int i_12_, int i_13_) {
+    final void decodedOperation3434(Rectangle[] rectangles, int i, int i_12_, int i_13_) {
         try {
             synchronized (this.aCanvas5147.getTreeLock()) {
                 for (int i_14_ = 0; i_14_ < i; i_14_++) {
@@ -71,13 +71,13 @@ final class p
         }
     }
 
-    final void method3435(Canvas canvas, int i, int i_15_) {
+    final void decodedOperation3435(Canvas canvas, int i, int i_15_) {
         this.anInt5145 = i;
         this.anInt5148 = i_15_;
         OpenGLToolkit(canvas, i, i_15_);
     }
 
-    final void method3436() {
+    final void decodedOperation3436() {
         w(true);
         this.nativeid = 0L;
         this.aCanvas5147 = null;

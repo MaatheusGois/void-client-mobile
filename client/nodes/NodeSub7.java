@@ -21,9 +21,9 @@ final class NodeSub7
     static int anInt6652 = 0;
     static Component373 aClass33_6653;
 
-    static final void method2772(int i, byte i_0_) {
+    static final void decodedOperation2772(int i, byte i_0_) {
         anInt6641++;
-        if (Component233.method2547(i, (byte) 84) && i_0_ > 105) {
+        if (Component233.decodedOperation2547(i, (byte) 84) && i_0_ > 105) {
             DisplayModeManagerContainer57[] class46s = DefinitionSub33.openInterfaces[i];
             for (int i_1_ = 0; i_1_ < class46s.length; i_1_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_1_];
@@ -36,7 +36,7 @@ final class NodeSub7
         }
     }
 
-    public static void method2773(int i) {
+    public static void decodedOperation2773(int i) {
         aClass207_6643 = null;
         aClass229_6644 = null;
         if (i == 0) aClass33_6653 = null;

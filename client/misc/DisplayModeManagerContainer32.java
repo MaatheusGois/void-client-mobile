@@ -16,13 +16,13 @@ abstract class DisplayModeManagerContainer32
         /* empty */
     }
 
-    public static void method445(int i) {
+    public static void decodedOperation445(int i) {
         if (i == 2) aClass114_843 = null;
     }
 
     abstract long method446(int i);
 
-    static final void method447(byte i) {
+    static final void decodedOperation447(byte i) {
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7255), 1);
         anInt844++;
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7261), 1);
@@ -43,12 +43,12 @@ abstract class DisplayModeManagerContainer32
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub15_7224), 1);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), 0);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub12_7243), 0);
-        DisplayModeManagerContainer87.method1686(-126);
+        DisplayModeManagerContainer87.decodedOperation1686(-126);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub23_7231), 1);
         if (i == -59) {
             Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 3);
-            Definition.method3038(i ^ 0x3a);
-            DisplayModeManagerContainer154.method773(true);
+            Definition.decodedOperation3038(i ^ 0x3a);
+            DisplayModeManagerContainer154.decodedOperation773(true);
             RuntimeException_Sub1.aBoolean4604 = true;
         }
     }

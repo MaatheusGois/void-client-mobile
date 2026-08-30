@@ -21,7 +21,7 @@ final class Component371
     private int anInt8514;
 
     public final int method16(boolean bool) {
-        if (bool) method3519(-55);
+        if (bool) decodedOperation3519(-55);
         return anInt8508;
     }
 
@@ -79,7 +79,7 @@ final class Component371
         return false;
     }
 
-    final int method3519(int i) {
+    final int decodedOperation3519(int i) {
         if (i != 3545) method21(-87);
         return aByte8513;
     }

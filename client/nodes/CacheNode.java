@@ -22,15 +22,15 @@ abstract class CacheNode extends HashNode {
 
     abstract Object getValue(int i);
 
-    static final boolean method3194(int i, int i_0_, byte i_1_) {
+    static final boolean decodedOperation3194(int i, int i_0_, byte i_1_) {
         anInt9551++;
-        if (i_1_ <= 118) method3196(122, -41);
+        if (i_1_ <= 118) decodedOperation3196(122, -41);
         return false;
     }
 
     abstract boolean isSoft(int i);
 
-    static final boolean method3196(int i, int i_2_) {
+    static final boolean decodedOperation3196(int i, int i_2_) {
         if (i_2_ >= -39) return false;
         anInt9546++;
         return i == 3 || i == 4 || i == 5 || i == 6;
@@ -40,35 +40,35 @@ abstract class CacheNode extends HashNode {
         this.weight = i;
     }
 
-    static final boolean method3197(int i, byte i_3_) {
+    static final boolean decodedOperation3197(int i, byte i_3_) {
         anInt9549++;
         if (i_3_ != 56) aClass114_9552 = null;
         return i == 7 || i == 9;
     }
 
-    static final void method3198(boolean bool, byte i) {
+    static final void decodedOperation3198(boolean bool, byte i) {
         anInt9547++;
         if (i != -45) aShort9555 = (short) -74;
         if (bool) {
-            if (r.anInt9721 != -1) DisplayModeManagerContainer194.method235(r.anInt9721, (byte) -113);
+            if (r.anInt9721 != -1) DisplayModeManagerContainer194.decodedOperation235(r.anInt9721, (byte) -113);
             for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = ((NodeSub41) Component15.aClass356_4915.next(0))) {
                 if (!class348_sub41.isLinked((byte) 4)) {
                     class348_sub41 = ((NodeSub41) Component15.aClass356_4915.first(i ^ ~0x2c));
                     if (class348_sub41 == null) break;
                 }
-                Component162.method1118(true, false, class348_sub41, 2533);
+                Component162.decodedOperation1118(true, false, class348_sub41, 2533);
             }
             r.anInt9721 = -1;
             Component15.aClass356_4915 = new LruCache(8);
-            DisplayModeManagerContainer153.method882((byte) 11);
+            DisplayModeManagerContainer153.decodedOperation882((byte) 11);
             r.anInt9721 = DebugPanic.anInt4737;
-            Component339.method1713(false, 520);
-            Component160.method3466(100);
+            Component339.decodedOperation1713(false, 520);
+            Component160.decodedOperation3466(100);
             ClientScriptExecutor.runInterfaceScripts(r.anInt9721);
         }
         DisplayModeManagerContainer369.aBoolean2895 = false;
         DisplayModeManagerContainer282.username = DisplayModeManagerContainer51.password = "";
-        Component195.method1448(-56);
+        Component195.decodedOperation1448(-56);
         Component149.widgetCursorId = -1;
         Component373.applyCustomCursor(i + 45, HashNodeSub16Sub1.defaultCursorId);
         Component72.localPlayer = new Player();
@@ -80,13 +80,13 @@ abstract class CacheNode extends HashNode {
         if (DefinitionSub21.cameraMode == 2) {
             WaterSurfaceShader.anInt6246 = NodeSub35.anInt6981 << 9;
             Component317.anInt8685 = Component300.anInt3550 << 9;
-        } else NodeSub21.method2954((byte) 62);
-        DisplayModeManagerContainer154.method773(true);
+        } else NodeSub21.decodedOperation2954((byte) 62);
+        DisplayModeManagerContainer154.decodedOperation773(true);
     }
 
-    public static void method3199(int i) {
+    public static void decodedOperation3199(int i) {
         aClass114_9550 = null;
-        if (i < 17) method3196(60, -85);
+        if (i < 17) decodedOperation3196(60, -85);
         aClass114_9552 = null;
         aClass351_9553 = null;
         aString9554 = null;

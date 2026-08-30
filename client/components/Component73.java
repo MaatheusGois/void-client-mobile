@@ -15,7 +15,7 @@ final class Component73
     private final long[] aLongArray6171;
 
     final long method1858(int i) {
-        aLong6166 += method1865(10);
+        aLong6166 += decodedOperation1865(10);
         if (i > -60) aLong6169 = 17L;
         if (aLong6167 > aLong6166) return (-aLong6166 + aLong6167) / 1000000L;
         return 0L;
@@ -27,7 +27,7 @@ final class Component73
         if (aLong6166 < aLong6167) aLong6166 += aLong6167 + -aLong6166;
     }
 
-    private final long method1865(int i) {
+    private final long decodedOperation1865(int i) {
         long l = System.nanoTime();
         long l_0_ = -aLong6169 + l;
         if (i != 10) return -56L;

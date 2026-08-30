@@ -142,7 +142,7 @@ final class DisplayModeManagerContainer67 implements Runnable {
                 if (i_14_ != -1) {
                     int i_18_ = 0;
                     Component37 class312 = new Component37(DefinitionSub4.menuEntries);
-                    for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.method2329(i + -3102))) {
+                    for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.decodedOperation2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.decodedOperation2329(i + -3102))) {
                         if (i_14_ == i_18_++) return (class348_sub42_sub12.cursorId);
                     }
                 }

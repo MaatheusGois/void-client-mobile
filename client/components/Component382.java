@@ -32,19 +32,19 @@ final class Component382
         return i_1_;
     }
 
-    static final void method1320() {
+    static final void decodedOperation1320() {
         for (int i = 0; i < Component374.anInt4135; i++) {
             if (!r.aBooleanArray9718[i]) {
                 DisplayModeManagerContainer159 class211 = Component329.aClass211Array5993[i];
                 NodeSub1 class348_sub1 = class211.aClass348_Sub1_2745;
                 int i_3_ = class211.anInt2731;
-                int i_4_ = (class348_sub1.method2723(-1) - DisplayModeManagerContainer64.anInt9037);
+                int i_4_ = (class348_sub1.decodedOperation2723(-1) - DisplayModeManagerContainer64.anInt9037);
                 int i_5_ = 1 + (2 * i_4_ >> Component149.anInt4459);
                 int i_6_ = 0;
                 int[] is = new int[i_5_ * i_5_];
-                int i_7_ = (class348_sub1.method2724(-1) - i_4_ >> Component149.anInt4459);
-                int i_8_ = (class348_sub1.method2717((byte) 79) - i_4_ >> Component149.anInt4459);
-                int i_9_ = (class348_sub1.method2717((byte) 113) + i_4_ >> Component149.anInt4459);
+                int i_7_ = (class348_sub1.decodedOperation2724(-1) - i_4_ >> Component149.anInt4459);
+                int i_8_ = (class348_sub1.decodedOperation2717((byte) 79) - i_4_ >> Component149.anInt4459);
+                int i_9_ = (class348_sub1.decodedOperation2717((byte) 113) + i_4_ >> Component149.anInt4459);
                 if (i_8_ < 0) {
                     i_6_ -= i_8_;
                     i_8_ = 0;
@@ -63,7 +63,7 @@ final class Component382
                     if (i_15_ >= StaticElementRenderer.anInt6451) i_15_ = StaticElementRenderer.anInt6451 - 1;
                     for (int i_16_ = i_14_; i_16_ <= i_15_; i_16_++) {
                         int i_17_ = 1;
-                        Component327 class318_sub1_sub3 = (DisplayModeManagerContainer249.method1353(i_3_, i_16_, i_10_, (aClass2276 != null ? aClass2276 : (aClass2276 = Component327.class))));
+                        Component327 class318_sub1_sub3 = (DisplayModeManagerContainer249.decodedOperation1353(i_3_, i_16_, i_10_, (aClass2276 != null ? aClass2276 : (aClass2276 = Component327.class))));
                         if (class318_sub1_sub3 != null && (class318_sub1_sub3.aByte8745) != 0) {
                             if ((class318_sub1_sub3.aByte8745) == 1) {
                                 boolean bool = i_16_ - 1 >= i_14_;
@@ -112,12 +112,12 @@ final class Component382
     }
 
     protected final void finalize() throws Throwable {
-        aHa_Sub2_2268.method3765((byte) 65, this.anInt2270);
+        aHa_Sub2_2268.decodedOperation3765((byte) 65, this.anInt2270);
         anInt2274++;
         super.finalize();
     }
 
-    static final int method1321(byte i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
+    static final int decodedOperation1321(byte i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
         int i_37_ = 4 / ((-51 - i) / 63);
         anInt2273++;
         if (ShaderSub1.aSArray5191 == null) return 0;
@@ -142,11 +142,11 @@ final class Component382
         return ShaderSub1.aSArray5191[i_35_].getInterpolatedHeight(i_32_, i_33_, (byte) 22);
     }
 
-    public static void method1322(byte i) {
+    public static void decodedOperation1322(byte i) {
         if (i == -28) anIntArray2272 = null;
     }
 
-    static final void method1323(int i, int i_44_) {
+    static final void decodedOperation1323(int i, int i_44_) {
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
             DisplayModeManagerContainer173.aClass60_4254.processSoftEntries(2, i);
         }

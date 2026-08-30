@@ -45,7 +45,7 @@ final class DisplayModeManagerContainer172
     int[] anIntArray557;
     static int anInt558 = -1;
 
-    static final void method368(int i, int i_0_, boolean bool, int i_1_, CacheStore class45, int i_2_, int i_3_) {
+    static final void decodedOperation368(int i, int i_0_, boolean bool, int i_1_, CacheStore class45, int i_2_, int i_3_) {
         if (i_0_ != 18002) anInt558 = 41;
         anInt551++;
         if (i_3_ > 0) {
@@ -58,15 +58,15 @@ final class DisplayModeManagerContainer172
             Component255.anInt1059 = i;
             Component329.anInt5994 = (Component122.aClass348_Sub16_Sub3_1564.getActiveVoices((byte) 103) / i_3_);
             if (Component329.anInt5994 < 1) Component329.anInt5994 = 1;
-        } else NodeSub1Sub3.method2732(i_2_, i_1_, bool, 123, class45, i);
+        } else NodeSub1Sub3.decodedOperation2732(i_2_, i_1_, bool, 123, class45, i);
     }
 
-    static final void method369(int i) {
+    static final void decodedOperation369(int i) {
         NodeSub45.aClass105Array7107 = null;
         DisplayModeManagerContainer199.aClass105Array5857 = null;
         NodeSub12.aClass105Array6742 = null;
         Component49.aClass105Array4679 = null;
-        if (i != -29776) method370(true);
+        if (i != -29776) decodedOperation370(true);
         NpcComposition.aClass105_1365 = null;
         Component361.aClass105Array367 = null;
         Component379.aClass105Array5933 = null;
@@ -84,12 +84,12 @@ final class DisplayModeManagerContainer172
         anInt542++;
     }
 
-    public static void method370(boolean bool) {
+    public static void decodedOperation370(boolean bool) {
         if (bool != true) anIntArray543 = null;
         anIntArray543 = null;
     }
 
-    static final boolean method371(int i, int i_4_, int i_5_) {
+    static final boolean decodedOperation371(int i, int i_4_, int i_5_) {
         if (i_4_ != 256) return true;
         anInt547++;
         return (i & 0x180) != 0;

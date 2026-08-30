@@ -49,7 +49,7 @@ abstract class DisplayModeManagerContainer194
         OpenGL.glBindTexture(this.anInt5093, anInt5096);
     }
 
-    final int method228(int i) {
+    final int decodedOperation228(int i) {
         anInt5085++;
         if (Component342.aClass68_1183 != this.aClass68_5088) {
             if (Component342.aClass68_1186 == this.aClass68_5088) {
@@ -82,7 +82,7 @@ abstract class DisplayModeManagerContainer194
                 } else return 6406;
             } else return 6408;
         } else return 6407;
-        if (i <= 104) method238(-54, 105, 2, null, 120);
+        if (i <= 104) decodedOperation238(-54, 105, 2, null, 120);
         throw new IllegalStateException();
     }
 
@@ -96,13 +96,13 @@ abstract class DisplayModeManagerContainer194
             OpenGL.glTexParameteri(this.anInt5093, 10241, !aBoolean5099 ? 9728 : 9984);
             OpenGL.glTexParameteri(this.anInt5093, 10240, 9728);
         }
-        if (bool != true) method232(null, (byte) 106, true, 70);
+        if (bool != true) decodedOperation232(null, (byte) 106, true, 70);
     }
 
-    final void method230(int i, int i_2_, byte[] is, int i_3_, int i_4_) {
+    final void decodedOperation230(int i, int i_2_, byte[] is, int i_3_, int i_4_) {
         anInt5100++;
-        if (i_2_ > 0 && !Component353.method1436(66, i_2_)) throw new IllegalArgumentException("");
-        if (i_3_ > 0 && !Component353.method1436(i ^ 0x1cb6, i_3_)) throw new IllegalArgumentException("");
+        if (i_2_ > 0 && !Component353.decodedOperation1436(66, i_2_)) throw new IllegalArgumentException("");
+        if (i_3_ > 0 && !Component353.decodedOperation1436(i ^ 0x1cb6, i_3_)) throw new IllegalArgumentException("");
         int i_5_ = this.aClass304_5084.anInt3850;
         int i_6_ = 0;
         int i_7_ = Math.min(i_2_, i_3_);
@@ -112,7 +112,7 @@ abstract class DisplayModeManagerContainer194
         byte[] is_10_ = is;
         byte[] is_11_ = new byte[i_9_ * (i_8_ * i_5_)];
         for (; ; ) {
-            OpenGL.glTexImage2Dub(i_4_, i_6_, method228(108), i_2_, i_3_, 0, ParametricDefinition.method3055(i + -7265, this.aClass304_5084), 5121, is_10_, 0);
+            OpenGL.glTexImage2Dub(i_4_, i_6_, decodedOperation228(108), i_2_, i_3_, 0, ParametricDefinition.decodedOperation3055(i + -7265, this.aClass304_5084), 5121, is_10_, 0);
             if (i_7_ <= 1) break;
             int i_12_ = i_2_ * i_5_;
             for (int i_13_ = 0; i_5_ > i_13_; i_13_++) {
@@ -148,26 +148,26 @@ abstract class DisplayModeManagerContainer194
         }
     }
 
-    private final int method231(int i) {
+    private final int decodedOperation231(int i) {
         anInt5095++;
         int i_21_ = (anInt5090 * (this.aClass68_5088.anInt1178 * this.aClass304_5084.anInt3850));
-        if (i >= -105) method232(null, (byte) 118, true, 16);
+        if (i >= -105) decodedOperation232(null, (byte) 118, true, 16);
         if (aBoolean5099) return 4 * i_21_ / 3;
         return i_21_;
     }
 
-    static final BitmapFont method232(GraphicsToolkit var_ha, byte i, boolean bool, int i_22_) {
-        if (i != -53) method237(true);
+    static final BitmapFont decodedOperation232(GraphicsToolkit var_ha, byte i, boolean bool, int i_22_) {
+        if (i != -53) decodedOperation237(true);
         anInt5094++;
-        Component48 class352 = Component272.method1734(i_22_, var_ha, (byte) 55, bool);
+        Component48 class352 = Component272.decodedOperation1734(i_22_, var_ha, (byte) 55, bool);
         if (class352 == null) return null;
         return class352.aClass324_4332;
     }
 
-    final void method233(int i, int i_23_, int[] is, int i_24_, int i_25_) {
+    final void decodedOperation233(int i, int i_23_, int[] is, int i_24_, int i_25_) {
         anInt5092++;
-        if (i > 0 && !Component353.method1436(-43, i)) throw new IllegalArgumentException("");
-        if (i_23_ > 0 && !Component353.method1436(i_25_ ^ ~0xd2, i_23_)) throw new IllegalArgumentException("");
+        if (i > 0 && !Component353.decodedOperation1436(-43, i)) throw new IllegalArgumentException("");
+        if (i_23_ > 0 && !Component353.decodedOperation1436(i_25_ ^ ~0xd2, i_23_)) throw new IllegalArgumentException("");
         if (Component83.aClass304_1662 != this.aClass304_5084) throw new IllegalArgumentException("");
         int i_26_ = 0;
         int i_27_ = Math.min(i, i_23_);
@@ -177,7 +177,7 @@ abstract class DisplayModeManagerContainer194
         int[] is_31_ = new int[i_29_ * i_28_];
         if (i_25_ != 255) aBoolean5099 = true;
         for (; ; ) {
-            OpenGL.glTexImage2Di(i_24_, i_26_, method228(112), i, i_23_, 0, 32993, (this.aClass377_5082.anInt9918), is_30_, 0);
+            OpenGL.glTexImage2Di(i_24_, i_26_, decodedOperation228(112), i, i_23_, 0, 32993, (this.aClass377_5082.anInt9918), is_30_, 0);
             if (i_27_ <= 1) break;
             int i_32_ = 0;
             int i_33_ = 0;
@@ -224,14 +224,14 @@ abstract class DisplayModeManagerContainer194
     private final void method234(int i) {
         if (i == 1617553025) {
             if (anInt5096 > 0) {
-                this.aClass377_5082.method3967(method231(-109), (byte) 59, anInt5096);
+                this.aClass377_5082.decodedOperation3967(decodedOperation231(-109), (byte) 59, anInt5096);
                 anInt5096 = 0;
             }
             anInt5097++;
         }
     }
 
-    static final void method235(int i, byte i_46_) {
+    static final void decodedOperation235(int i, byte i_46_) {
         anInt5087++;
         if (i != -1 && ImageTagText.aBooleanArray2162[i]) {
             Component267.aClass45_2978.clearUnpackedGroup(i, -120);
@@ -244,11 +244,11 @@ abstract class DisplayModeManagerContainer194
     private final void method236(int i, byte i_47_) {
         anInt5098++;
         this.aClass377_5082.anInt8062 -= i;
-        this.aClass377_5082.anInt8062 += method231(-119);
+        this.aClass377_5082.anInt8062 += decodedOperation231(-119);
         if (i_47_ >= -124) aBoolean5099 = false;
     }
 
-    public static void method237(boolean bool) {
+    public static void decodedOperation237(boolean bool) {
         if (bool != false) aLong5089 = -54L;
         anIntArray5091 = null;
     }
@@ -262,20 +262,20 @@ abstract class DisplayModeManagerContainer194
         }
     }
 
-    final void method238(int i, int i_48_, int i_49_, float[] fs, int i_50_) {
+    final void decodedOperation238(int i, int i_48_, int i_49_, float[] fs, int i_50_) {
         anInt5102++;
-        if (i_49_ > 0 && !Component353.method1436(100, i_49_)) throw new IllegalArgumentException("");
-        if (i_50_ > 0 && !Component353.method1436(i_48_ + 109, i_50_)) throw new IllegalArgumentException("");
+        if (i_49_ > 0 && !Component353.decodedOperation1436(100, i_49_)) throw new IllegalArgumentException("");
+        if (i_50_ > 0 && !Component353.decodedOperation1436(i_48_ + 109, i_50_)) throw new IllegalArgumentException("");
         int i_51_ = this.aClass304_5084.anInt3850;
         int i_52_ = 0;
-        if (i_48_ != 1) method228(107);
+        if (i_48_ != 1) decodedOperation228(107);
         int i_53_ = Math.min(i_50_, i_49_);
         int i_54_ = i_49_ >> 1;
         int i_55_ = i_50_ >> 1;
         float[] fs_56_ = fs;
         float[] fs_57_ = new float[i_54_ * (i_55_ * i_51_)];
         for (; ; ) {
-            OpenGL.glTexImage2Df(i, i_52_, method228(123), i_49_, i_50_, 0, (ParametricDefinition.method3055(124, this.aClass304_5084)), 5126, fs_56_, 0);
+            OpenGL.glTexImage2Df(i, i_52_, decodedOperation228(123), i_49_, i_50_, 0, (ParametricDefinition.decodedOperation3055(124, this.aClass304_5084)), 5126, fs_56_, 0);
             if (i_53_ <= 1) break;
             int i_58_ = i_49_ * i_51_;
             for (int i_59_ = 0; i_51_ > i_59_; i_59_++) {

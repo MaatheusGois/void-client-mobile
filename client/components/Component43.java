@@ -15,7 +15,7 @@ final class Component43
     static int anInt4979;
     float[] aFloatArray4980;
 
-    static final void method1583(byte i) {
+    static final void decodedOperation1583(byte i) {
         anInt4977++;
         if (r.anInt9721 != -1) {
             int i_0_ = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
@@ -33,16 +33,16 @@ final class Component43
             if (i != -73) anInt4976 = 105;
             int i_3_ = 0;
             if (Component210.gameCanvasAttached) {
-                i_2_ = BufferCacheSub3.method4008((byte) -128);
-                i_3_ = Component110.method260(false);
+                i_2_ = BufferCacheSub3.decodedOperation4008((byte) -128);
+                i_3_ = Component110.decodedOperation260(false);
             }
-            Component280.method1373(r.anInt9721, i_2_, i_2_, Component236.canvasWidth + i_2_, i_1_, i_0_, -1391, i_0_ + i_2_, PacketReader.canvasHeight + i_3_, i_3_, i_3_ + i_1_, i_3_);
-            if (Component39.aClass46_2249 != null) NativeLibraryLoader.method1630(0, i_3_ + i_1_, i_2_ + i_0_);
+            Component280.decodedOperation1373(r.anInt9721, i_2_, i_2_, Component236.canvasWidth + i_2_, i_1_, i_0_, -1391, i_0_ + i_2_, PacketReader.canvasHeight + i_3_, i_3_, i_3_ + i_1_, i_3_);
+            if (Component39.aClass46_2249 != null) NativeLibraryLoader.decodedOperation1630(0, i_3_ + i_1_, i_2_ + i_0_);
         }
     }
 
-    public static void method1584(byte i) {
-        if (i != -64) method1584((byte) -48);
+    public static void decodedOperation1584(byte i) {
+        if (i != -64) decodedOperation1584((byte) -48);
         aClass45_4975 = null;
     }
 

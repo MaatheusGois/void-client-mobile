@@ -30,10 +30,10 @@ final class NodeSub45Sub2 extends NodeSub45 {
         return this.eventType;
     }
 
-    static final void method3316(int i, int i_0_) {
+    static final void decodedOperation3316(int i, int i_0_) {
         anInt9732++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 3);
-        if (i > 108) class348_sub42_sub15.method3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_0_, (byte) 105, 3);
+        if (i > 108) class348_sub42_sub15.decodedOperation3251(-16058);
     }
 
     final int getY(int i) {

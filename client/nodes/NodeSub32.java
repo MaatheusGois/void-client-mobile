@@ -35,7 +35,7 @@ final class NodeSub32
     private final Interface2 anInterface2_6952;
     private Component182 aClass348_Sub49_Sub1_6953;
 
-    static final void method3018(int i) {
+    static final void decodedOperation3018(int i) {
         NodeSub18.anInt6818 = i;
     }
 
@@ -97,15 +97,15 @@ final class NodeSub32
             f_10_ = aFloatArrayArray6928[i_0_][i_1_];
             f_11_ = aFloatArrayArray6947[i_0_][i_1_];
         }
-        float f_20_ = (float) (aClass348_Sub1_6937.method2724(-1) + -i_6_);
-        float f_21_ = (float) (aClass348_Sub1_6937.method2722(120) + -i_8_);
-        float f_22_ = (float) (aClass348_Sub1_6937.method2717((byte) 107) + -i_7_);
+        float f_20_ = (float) (aClass348_Sub1_6937.decodedOperation2724(-1) + -i_6_);
+        float f_21_ = (float) (aClass348_Sub1_6937.decodedOperation2722(120) + -i_8_);
+        float f_22_ = (float) (aClass348_Sub1_6937.decodedOperation2717((byte) 107) + -i_7_);
         float f_23_ = (float) Math.sqrt(f_21_ * f_21_ + f_20_ * f_20_ + f_22_ * f_22_);
         float f_24_ = 1.0F / f_23_;
         f_22_ *= f_24_;
         f_20_ *= f_24_;
         f_21_ *= f_24_;
-        float f_25_ = f_23_ / (float) aClass348_Sub1_6937.method2723(-1);
+        float f_25_ = f_23_ / (float) aClass348_Sub1_6937.decodedOperation2723(-1);
         float f_26_ = -(f_25_ * f_25_) + 1.0F;
         if (f_26_ < 0.0F) f_26_ = 0.0F;
         float f_27_ = f_22_ * f_10_ + (f_21_ * f_11_ + f * f_20_);
@@ -113,7 +113,7 @@ final class NodeSub32
         float f_28_ = 2.0F * (f_26_ * f_27_);
         if (f_28_ > 1.0F) f_28_ = 1.0F;
         int i_29_ = -108 % ((42 - i_4_) / 50);
-        int i_30_ = aClass348_Sub1_6937.method2720(-1);
+        int i_30_ = aClass348_Sub1_6937.decodedOperation2720(-1);
         int i_31_ = (int) ((float) ((i_30_ & 0xff081b) >> 16) * f_28_);
         if (i_31_ > 255) i_31_ = 255;
         int i_32_ = (int) ((float) (0xff & i_30_ >> 8) * f_28_);
@@ -136,14 +136,14 @@ final class NodeSub32
         method3022((byte) -46, i_9_);
     }
 
-    public static void method3020(byte i) {
+    public static void decodedOperation3020(byte i) {
         if (i == -64) {
             aClass45_6950 = null;
             aThread6946 = null;
         }
     }
 
-    static final int method3021(byte i, Component267 class229) {
+    static final int decodedOperation3021(byte i, Component267 class229) {
         anInt6931++;
         if (class229 != ShaderCompilerSub3.aClass229_6519) {
             if (Component385.aClass229_2207 == class229) return 8448;
@@ -151,7 +151,7 @@ final class NodeSub32
             if (DisplayModeManagerContainer64.aClass229_9011 == class229) return 260;
             if (class229 == NodeSub7.aClass229_6644) return 34023;
         } else return 7681;
-        if (i != 32) method3021((byte) -21, null);
+        if (i != 32) decodedOperation3021((byte) -21, null);
         throw new IllegalArgumentException();
     }
 
@@ -163,7 +163,7 @@ final class NodeSub32
         }
     }
 
-    final void method3023(boolean[][] bools, int i, int i_35_, int i_36_, int i_37_) {
+    final void decodedOperation3023(boolean[][] bools, int i, int i_35_, int i_36_, int i_37_) {
         anInt6941++;
         if (anInterface8_6945 != null && i_37_ + i_35_ >= anInt6935 && anInt6942 >= i_35_ + -i_37_ && i_36_ + i_37_ >= anInt6948 && i_36_ + -i_37_ <= anInt6944) {
             for (int i_38_ = anInt6948; i_38_ <= anInt6944; i_38_++) {
@@ -171,7 +171,7 @@ final class NodeSub32
                     int i_40_ = i_39_ - i_35_;
                     int i_41_ = -i_36_ + i_38_;
                     if (i_40_ > -i_37_ && i_37_ > i_40_ && i_41_ > -i_37_ && i_37_ > i_41_ && bools[i_40_ + i_37_][i_37_ + i_41_]) {
-                        aHa_Sub2_6951.glSetTextureEnvColor(((int) (255.0F * aClass348_Sub1_6937.method2721(-66)) << 24), i + -136);
+                        aHa_Sub2_6951.glSetTextureEnvColor(((int) (255.0F * aClass348_Sub1_6937.decodedOperation2721(-66)) << 24), i + -136);
                         aHa_Sub2_6951.glSetVertexPointer(aClass123_6927, aClass123_6943, i + -26666, null, null);
                         aHa_Sub2_6951.glDrawElements(anInt6934, -128, 4, anInterface8_6945, 0);
                         return;
@@ -187,11 +187,11 @@ final class NodeSub32
             aS_Sub2_6929 = var_s_Sub2;
             aHa_Sub2_6951 = var_ha_Sub2;
             aClass348_Sub1_6937 = class348_sub1;
-            int i = (aClass348_Sub1_6937.method2723(-1) + -(var_s_Sub2.tileSize >> 1));
-            anInt6935 = (aClass348_Sub1_6937.method2724(-1) + -i >> var_s_Sub2.tileSizeBits);
-            anInt6942 = (aClass348_Sub1_6937.method2724(-1) - -i >> var_s_Sub2.tileSizeBits);
-            anInt6948 = (-i + aClass348_Sub1_6937.method2717((byte) 85) >> var_s_Sub2.tileSizeBits);
-            anInt6944 = (aClass348_Sub1_6937.method2717((byte) 99) + i >> var_s_Sub2.tileSizeBits);
+            int i = (aClass348_Sub1_6937.decodedOperation2723(-1) + -(var_s_Sub2.tileSize >> 1));
+            anInt6935 = (aClass348_Sub1_6937.decodedOperation2724(-1) + -i >> var_s_Sub2.tileSizeBits);
+            anInt6942 = (aClass348_Sub1_6937.decodedOperation2724(-1) - -i >> var_s_Sub2.tileSizeBits);
+            anInt6948 = (-i + aClass348_Sub1_6937.decodedOperation2717((byte) 85) >> var_s_Sub2.tileSizeBits);
+            anInt6944 = (aClass348_Sub1_6937.decodedOperation2717((byte) 99) + i >> var_s_Sub2.tileSizeBits);
             int i_42_ = anInt6942 + -anInt6935 - -1;
             int i_43_ = 1 + -anInt6948 + anInt6944;
             aFloatArrayArray6928 = new float[i_42_ - -1][i_43_ + 1];
@@ -287,8 +287,8 @@ final class NodeSub32
                     } else i_50_ += anInt6942 - anInt6935;
                     i_56_++;
                 }
-                anInterface8_6945 = (aHa_Sub2_6951.method3733(5123, -49, aClass348_Sub49_6936.offset, aClass348_Sub49_6936.payload, false));
-                anInterface2_6952 = aHa_Sub2_6951.method3731(2, false, 16, (aClass348_Sub49_Sub1_6953.payload), (aClass348_Sub49_Sub1_6953.offset));
+                anInterface8_6945 = (aHa_Sub2_6951.decodedOperation3733(5123, -49, aClass348_Sub49_6936.offset, aClass348_Sub49_6936.payload, false));
+                anInterface2_6952 = aHa_Sub2_6951.decodedOperation3731(2, false, 16, (aClass348_Sub49_Sub1_6953.payload), (aClass348_Sub49_Sub1_6953.offset));
                 aClass123_6927 = new Component132(anInterface2_6952, 5126, 3, 0);
                 aClass123_6943 = new Component132(anInterface2_6952, 5121, 4, 12);
             } else {

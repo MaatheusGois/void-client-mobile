@@ -168,7 +168,7 @@ final class FriendsIgnoreList {
                 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0);
                 if (class348_sub41 == null) break;
             }
-            if (class348_sub41.anInt7053 == 0) Component162.method1118(true, bool, class348_sub41, 2533);
+            if (class348_sub41.anInt7053 == 0) Component162.decodedOperation1118(true, bool, class348_sub41, 2533);
         }
         if (Component297.aClass46_4730 != null) {
             Component111.markInterfaceDirty(-9343, Component297.aClass46_4730);

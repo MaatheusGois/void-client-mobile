@@ -20,9 +20,9 @@ final class DisplayModeManagerContainer34
         super(8, 5, 8, 8, 2, 0.1F, 0.55F, 3.0F);
     }
 
-    public static void method561(int i) {
+    public static void decodedOperation561(int i) {
         aClass74_8662 = null;
-        if (i != 120) method561(-85);
+        if (i != 120) decodedOperation561(-85);
         anIntArray8666 = null;
         anIntArray8663 = null;
         aClass273_8664 = null;
@@ -36,11 +36,11 @@ final class DisplayModeManagerContainer34
         if (i_1_ == 14) aByteArray8660[i_2_] = (byte) (i_3_ * 3 >> 5);
     }
 
-    final byte[] method562(int i, int i_4_, byte i_5_, int i_6_) {
+    final byte[] decodedOperation562(int i, int i_4_, byte i_5_, int i_6_) {
         aByteArray8660 = new byte[2 * i_6_ * (i_4_ * i)];
         if (i_5_ <= 85) aClass273_8664 = null;
         anInt8661++;
-        this.method542(i_4_, i, 0, i_6_);
+        this.decodedOperation542(i_4_, i, 0, i_6_);
         return aByteArray8660;
     }
 

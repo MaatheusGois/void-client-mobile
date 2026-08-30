@@ -53,13 +53,13 @@ abstract class DisplayModeManagerContainer343
     final boolean method2382(byte i) {
         if (i > -51) return false;
         anInt8733++;
-        Component3 class148 = Component195.method1449(this.plane, (this.x >> Component149.anInt4459), (this.y >> Component149.anInt4459));
-        if (class148 == null || !class148.aClass318_Sub1_Sub3_2040.aBoolean8741) return ShaderSub2.method164(this.plane, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
-        return (Component15.method1110(this.y >> Component149.anInt4459, class148.aClass318_Sub1_Sub3_2040.method2394(true) + this.method2394(true), this.plane, (byte) -79, this.x >> Component149.anInt4459));
+        Component3 class148 = Component195.decodedOperation1449(this.plane, (this.x >> Component149.anInt4459), (this.y >> Component149.anInt4459));
+        if (class148 == null || !class148.aClass318_Sub1_Sub3_2040.aBoolean8741) return ShaderSub2.decodedOperation164(this.plane, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
+        return (Component15.decodedOperation1110(this.y >> Component149.anInt4459, class148.aClass318_Sub1_Sub3_2040.method2394(true) + this.method2394(true), this.plane, (byte) -79, this.x >> Component149.anInt4459));
     }
 
     final boolean method2378(int i) {
-        if (i != 0) method2406(79);
+        if (i != 0) decodedOperation2406(79);
         anInt8734++;
         return (DisplayModeManagerContainer153.aBooleanArrayArray1572[(Component197.anInt10084 + -Component256.anInt6111 + (this.x >> Component149.anInt4459))][(Component197.anInt10084 + (-DebugPanicSub2.anInt8502 + (this.y >> Component149.anInt4459)))]);
     }
@@ -70,7 +70,7 @@ abstract class DisplayModeManagerContainer343
         throw new IllegalStateException();
     }
 
-    public static void method2406(int i) {
+    public static void decodedOperation2406(int i) {
         if (i > -126) anInt8731 = 118;
         aClass60_8732 = null;
         aClass70_8737 = null;
@@ -79,10 +79,10 @@ abstract class DisplayModeManagerContainer343
     final int method2384(NodeSub1[] class348_sub1s, int i) {
         anInt8735++;
         int i_2_ = -79 % ((-14 - i) / 61);
-        return this.method2390(class348_sub1s, (this.x >> Component149.anInt4459), -2, (this.y >> Component149.anInt4459));
+        return this.decodedOperation2390(class348_sub1s, (this.x >> Component149.anInt4459), -2, (this.y >> Component149.anInt4459));
     }
 
-    final boolean method2388(int i) {
+    final boolean decodedOperation2388(int i) {
         if (i > -65) anInt8731 = -84;
         anInt8738++;
         return false;

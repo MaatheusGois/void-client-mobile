@@ -32,8 +32,8 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     static int anInt8650;
     static int anInt8651;
 
-    static final String method250(int i, boolean bool, int i_0_) {
-        if (bool != true) method251((byte) 96);
+    static final String decodedOperation250(int i, boolean bool, int i_0_) {
+        if (bool != true) decodedOperation251((byte) 96);
         anInt8641++;
         int i_1_ = -i_0_ + i;
         if (i_1_ < -9) return "<col=ff0000>";
@@ -53,8 +53,8 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         return anInt8634;
     }
 
-    public static void method251(byte i) {
-        if (i != 2) method250(-45, false, -102);
+    public static void decodedOperation251(byte i) {
+        if (i != 2) decodedOperation250(-45, false, -102);
         helveticaGlyphs12 = null;
         STELLARDAWN = null;
         aByteArrayArray8642 = null;
@@ -82,7 +82,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             this.aClass377_5082.setActiveTexture((byte) -127, this);
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glPixelStorei(3314, i_8_);
-            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(126), i, i_6_, 0, (ParametricDefinition.method3055(111, this.aClass304_5084)), 5121, is, i_7_);
+            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.decodedOperation228(126), i, i_6_, 0, (ParametricDefinition.decodedOperation3055(111, this.aClass304_5084)), 5121, is, i_7_);
             OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
@@ -91,7 +91,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     }
 
     public final void method66(boolean bool, boolean bool_9_, int i) {
-        if (i != 25688) method254(-82, (byte) -35);
+        if (i != 25688) decodedOperation254(-82, (byte) -35);
         anInt8639++;
     }
 
@@ -101,19 +101,19 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             anInt8634 = i_10_;
             anInt8640 = i;
             this.aClass377_5082.setActiveTexture((byte) 115, this);
-            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(109), i, i_10_, 0, ParametricDefinition.method3055(105, this.aClass304_5084), Component387.method1128(-54, this.aClass68_5088), null, 0);
+            OpenGL.glTexImage2Dub(this.anInt5093, 0, this.decodedOperation228(109), i, i_10_, 0, ParametricDefinition.decodedOperation3055(105, this.aClass304_5084), Component387.decodedOperation1128(-54, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_10_ + ')'));
         }
     }
 
-    static final boolean method252(int i, int i_11_) {
+    static final boolean decodedOperation252(int i, int i_11_) {
         anInt8636++;
         if (i_11_ != 5126) aByteArrayArray8642 = null;
         return i == 0 || i == 2;
     }
 
-    static final void method253(int i, int i_12_, int i_13_, int i_14_, int i_15_) {
+    static final void decodedOperation253(int i, int i_12_, int i_13_, int i_14_, int i_15_) {
         anInt8648++;
         if (i_13_ != -648) helveticaGlyphs12 = null;
         int i_16_ = 0;
@@ -151,7 +151,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         this.aClass377_5082.setActiveTexture((byte) -34, this);
         OpenGL.glGetTexImagei(this.anInt5093, 0, 32993, 5121, is_31_, 0);
         for (int i_32_ = 0; i_28_ > i_32_; i_32_++)
-            Component313.method1578(is_31_, anInt8640 * (i_28_ + -1 + (i_27_ + -i_32_)), is, i_32_ * i_26_ + i_30_, i_26_);
+            Component313.decodedOperation1578(is_31_, anInt8640 * (i_28_ + -1 + (i_27_ + -i_32_)), is, i_32_ * i_26_ + i_30_, i_26_);
     }
 
     public final float method67(float f, int i) {
@@ -167,7 +167,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             anInt8634 = i_33_;
             this.aClass377_5082.setActiveTexture((byte) -45, this);
             OpenGL.glPixelStorei(3314, i_35_);
-            OpenGL.glTexImage2Df(this.anInt5093, 0, this.method228(107), i, i_33_, 0, (ParametricDefinition.method3055(126, this.aClass304_5084)), 5126, fs, i_34_ * 4);
+            OpenGL.glTexImage2Df(this.anInt5093, 0, this.decodedOperation228(107), i, i_33_, 0, (ParametricDefinition.decodedOperation3055(126, this.aClass304_5084)), 5126, fs, i_34_ * 4);
             OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + i + ',' + i_33_ + ',' + (fs != null ? "{...}" : "null") + ',' + i_34_ + ',' + i_35_ + ')'));
@@ -208,9 +208,9 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
             anInt8647++;
             if (i_44_ == 0) i_44_ = i_46_;
             OpenGL.glPixelStorei(3317, 1);
-            if (i_43_ >= -4) method250(74, false, -106);
+            if (i_43_ >= -4) decodedOperation250(74, false, -106);
             if (i_46_ != i_44_) OpenGL.glPixelStorei(3314, i_44_);
-            OpenGL.glTexSubImage2Dub(this.anInt5093, 0, i_47_, i, i_46_, i_45_, ParametricDefinition.method3055(120, class304), 5121, is, i_42_);
+            OpenGL.glTexSubImage2Dub(this.anInt5093, 0, i_47_, i, i_46_, i_45_, ParametricDefinition.decodedOperation3055(120, class304), 5121, is, i_42_);
             if (i_46_ != i_44_) OpenGL.glPixelStorei(3314, 0);
             OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeexception) {
@@ -218,8 +218,8 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         }
     }
 
-    static final void method254(int i, byte i_48_) {
-        if (i_48_ > -79) method252(127, 53);
+    static final void decodedOperation254(int i, byte i_48_) {
+        if (i_48_ > -79) decodedOperation252(127, 53);
         if (Loader.skipLobby) {
             NodederUtil.anInt6634 = i;
             HashTable.anInt1645 = i;

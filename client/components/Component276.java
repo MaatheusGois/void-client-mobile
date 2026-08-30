@@ -16,12 +16,12 @@ final class Component276
     private final CacheStore aClass45_2597;
     static int anInt2598;
 
-    public static void method1441(byte i) {
+    public static void decodedOperation1441(byte i) {
         aClass279_2596 = null;
         if (i != 18) aClass279_2596 = null;
     }
 
-    final void method1442(int i, byte i_0_) {
+    final void decodedOperation1442(int i, byte i_0_) {
         anInt2598++;
         synchronized (aClass60_2594) {
             if (i_0_ != 1) aClass60_2594 = null;
@@ -29,7 +29,7 @@ final class Component276
         }
     }
 
-    final void method1443(int i) {
+    final void decodedOperation1443(int i) {
         anInt2595++;
         int i_1_ = 14 % ((-39 - i) / 51);
         synchronized (aClass60_2594) {
@@ -37,7 +37,7 @@ final class Component276
         }
     }
 
-    final void method1444(int i, int i_2_) {
+    final void decodedOperation1444(int i, int i_2_) {
         int i_3_ = -6 % ((67 - i_2_) / 47);
         anInt2591++;
         synchronized (aClass60_2594) {
@@ -46,7 +46,7 @@ final class Component276
         }
     }
 
-    final void method1445(int i) {
+    final void decodedOperation1445(int i) {
         anInt2592++;
         if (i == 64) {
             synchronized (aClass60_2594) {
@@ -55,7 +55,7 @@ final class Component276
         }
     }
 
-    final Component334 method1446(int i, int i_4_) {
+    final Component334 decodedOperation1446(int i, int i_4_) {
         anInt2593++;
         Component334 class146;
         synchronized (aClass60_2594) {
@@ -64,11 +64,11 @@ final class Component276
         if (class146 != null) return class146;
         byte[] is;
         synchronized (aClass45_2597) {
-            is = aClass45_2597.getFile(i_4_ ^ 0x743, BrowserDetector.unpackHighBits(true, i), NodeSub14.method2806(false, i));
+            is = aClass45_2597.getFile(i_4_ ^ 0x743, BrowserDetector.unpackHighBits(true, i), NodeSub14.decodedOperation2806(false, i));
         }
         class146 = new Component334();
         if (i_4_ != -1) return null;
-        if (is != null) class146.method1191(i_4_ ^ ~0x800, new Buffer(is));
+        if (is != null) class146.decodedOperation1191(i_4_ ^ ~0x800, new Buffer(is));
         synchronized (aClass60_2594) {
             aClass60_2594.putOne(class146, i, (byte) -105);
         }

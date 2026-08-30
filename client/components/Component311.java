@@ -15,7 +15,7 @@ final class Component311
     static int anInt4088;
     static int anInt4089;
 
-    final Component355 method2600(int i, int i_0_) {
+    final Component355 decodedOperation2600(int i, int i_0_) {
         anInt4084++;
         Component355 class254;
         synchronized (aClass60_4087) {
@@ -28,14 +28,14 @@ final class Component311
             is = aClass45_4085.getFile(-1860, 11, i);
         }
         class254 = new Component355();
-        if (is != null) class254.method1924(new Buffer(is), (byte) -127);
+        if (is != null) class254.decodedOperation1924(new Buffer(is), (byte) -127);
         synchronized (aClass60_4087) {
             aClass60_4087.putOne(class254, i, (byte) -114);
         }
         return class254;
     }
 
-    final void method2601(byte i) {
+    final void decodedOperation2601(byte i) {
         synchronized (aClass60_4087) {
             aClass60_4087.clear(0);
             int i_1_ = -46 / ((i - 3) / 47);
@@ -43,7 +43,7 @@ final class Component311
         anInt4088++;
     }
 
-    final void method2602(int i) {
+    final void decodedOperation2602(int i) {
         anInt4089++;
         synchronized (aClass60_4087) {
             aClass60_4087.purgeSoftReferences(-91);
@@ -51,7 +51,7 @@ final class Component311
         }
     }
 
-    final void method2603(int i, int i_2_) {
+    final void decodedOperation2603(int i, int i_2_) {
         synchronized (aClass60_4087) {
             if (i_2_ != 11) return;
             aClass60_4087.processSoftEntries(2, i);

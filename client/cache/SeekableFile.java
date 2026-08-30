@@ -107,7 +107,7 @@ final class SeekableFile {
         return fileReader.getFile(i ^ ~0x2198);
     }
 
-    public static void method786(byte i) {
+    public static void decodedOperation786(byte i) {
         if (i != 0) aClass45_1322 = null;
         aClass45_1322 = null;
     }

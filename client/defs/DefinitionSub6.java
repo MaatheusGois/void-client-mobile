@@ -24,10 +24,10 @@ final class DefinitionSub6
     final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9137++;
         int[] is = this.imageCache.getPixels(0, i);
-        if (i_0_ != 255) method3049(null, -123, 82);
+        if (i_0_ != 255) decodedOperation3049(null, -123, 82);
         if (this.imageCache.cacheMiss) {
-            int[] is_1_ = this.method3048(i, i_0_ + 633706082, 1);
-            int[] is_2_ = this.method3048(i, i_0_ ^ 0x25c5979e, 2);
+            int[] is_1_ = this.decodedOperation3048(i, i_0_ + 633706082, 1);
+            int[] is_2_ = this.decodedOperation3048(i, i_0_ ^ 0x25c5979e, 2);
             for (int i_3_ = 0; i_3_ < anInt9139; i_3_++) {
                 int i_4_ = 0xff & is_1_[i_3_] >> 4;
                 int i_5_ = anInt9133 * is_2_[i_3_] >> 12;
@@ -35,20 +35,20 @@ final class DefinitionSub6
                 int i_7_ = Component366.anIntArray3068[i_4_] * i_5_ >> 12;
                 int i_8_ = i_3_ - -(i_6_ >> 12) & CustomCursorSetting.anInt6076;
                 int i_9_ = i - -(i_7_ >> 12) & DisplayModeManagerContainer356.anInt6325;
-                int[] is_10_ = this.method3048(i_9_, 633706337, 0);
+                int[] is_10_ = this.decodedOperation3048(i_9_, 633706337, 0);
                 is[i_3_] = is_10_[i_8_];
             }
         }
         return is;
     }
 
-    public static void method3062(boolean bool) {
+    public static void decodedOperation3062(boolean bool) {
         if (bool != true) aByteArrayArrayArray9134 = null;
         anIntArray9135 = null;
         aByteArrayArrayArray9134 = null;
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_11_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_11_) {
         int i_12_ = i;
         do {
             if (i_12_ == 0) {
@@ -57,12 +57,12 @@ final class DefinitionSub6
             } else if (i_12_ != 1) break;
             this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         } while (false);
-        if (i_11_ != 31015) method3062(false);
+        if (i_11_ != 31015) decodedOperation3062(false);
         anInt9138++;
     }
 
     final void postDecode(int i) {
-        Component7.method1605(26188);
+        Component7.decodedOperation1605(26188);
         anInt9136++;
         if (i < 108) anInt9139 = 126;
     }
@@ -72,8 +72,8 @@ final class DefinitionSub6
         int[][] is = this.imageCacheStore.getPixels(i_13_ ^ 0x5d41e284, i);
         if (i_13_ != -1564599039) aByteArrayArrayArray9134 = null;
         if (this.imageCacheStore.cacheMiss) {
-            int[] is_14_ = this.method3048(i, 633706337, 1);
-            int[] is_15_ = this.method3048(i, 633706337, 2);
+            int[] is_14_ = this.decodedOperation3048(i, 633706337, 1);
+            int[] is_15_ = this.decodedOperation3048(i, 633706337, 2);
             int[] is_16_ = is[0];
             int[] is_17_ = is[1];
             int[] is_18_ = is[2];
@@ -84,7 +84,7 @@ final class DefinitionSub6
                 int i_23_ = i_21_ * Component366.anIntArray3068[i_20_] >> 12;
                 int i_24_ = i_19_ + (i_22_ >> 12) & CustomCursorSetting.anInt6076;
                 int i_25_ = (i_23_ >> 12) + i & DisplayModeManagerContainer356.anInt6325;
-                int[][] is_26_ = this.method3039((byte) -57, i_25_, 0);
+                int[][] is_26_ = this.decodedOperation3039((byte) -57, i_25_, 0);
                 is_16_[i_19_] = is_26_[0][i_24_];
                 is_17_[i_19_] = is_26_[1][i_24_];
                 is_18_[i_19_] = is_26_[2][i_24_];
@@ -93,7 +93,7 @@ final class DefinitionSub6
         return is;
     }
 
-    static final int method3063(boolean bool) {
+    static final int decodedOperation3063(boolean bool) {
         anInt9132++;
         int i = RSARequest.currentLoadingState.getStageId(-125);
         if (bool != false) anIntArray9135 = null;

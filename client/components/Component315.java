@@ -20,7 +20,7 @@ final class Component315
     private Renderable aClass318_3167;
     static int anInt3168;
 
-    final void method1869(int i, Renderable class318) {
+    final void decodedOperation1869(int i, Renderable class318) {
         if (class318.previous != null) class318.unlink(false);
         anInt3158++;
         class318.previous = aClass318_3166.previous;
@@ -30,7 +30,7 @@ final class Component315
         class318.next.previous = class318;
     }
 
-    final Renderable method1870(int i) {
+    final Renderable decodedOperation1870(int i) {
         if (i > -103) aClass318_3167 = null;
         anInt3162++;
         Renderable class318 = aClass318_3166.previous;
@@ -42,16 +42,16 @@ final class Component315
         return class318;
     }
 
-    final boolean method1871(byte i) {
+    final boolean decodedOperation1871(byte i) {
         anInt3157++;
-        if (i <= 98) method1879(true);
+        if (i <= 98) decodedOperation1879(true);
         return aClass318_3166 == aClass318_3166.next;
     }
 
-    final Renderable method1872(int i) {
+    final Renderable decodedOperation1872(int i) {
         anInt3163++;
         Renderable class318 = aClass318_3166.next;
-        if (i != 8) method1878((byte) 126);
+        if (i != 8) decodedOperation1878((byte) 126);
         if (class318 == aClass318_3166) {
             aClass318_3167 = null;
             return null;
@@ -60,12 +60,12 @@ final class Component315
         return class318;
     }
 
-    public static void method1873(byte i) {
+    public static void decodedOperation1873(byte i) {
         if (i > -111) aClass351_3165 = null;
         aClass351_3165 = null;
     }
 
-    final int method1874(int i) {
+    final int decodedOperation1874(int i) {
         anInt3161++;
         int i_0_ = i;
         for (Renderable class318 = aClass318_3166.next; aClass318_3166 != class318; class318 = class318.next)
@@ -73,16 +73,16 @@ final class Component315
         return i_0_;
     }
 
-    final Renderable method1875(int i) {
+    final Renderable decodedOperation1875(int i) {
         anInt3160++;
         Renderable class318 = aClass318_3166.next;
         if (class318 == aClass318_3166) return null;
         class318.unlink(false);
-        if (i != 60) method1878((byte) 16);
+        if (i != 60) decodedOperation1878((byte) 16);
         return class318;
     }
 
-    final void method1876(byte i) {
+    final void decodedOperation1876(byte i) {
         if (i == -45) {
             anInt3168++;
             for (; ; ) {
@@ -94,15 +94,15 @@ final class Component315
         }
     }
 
-    static final void method1877(GraphicsToolkit var_ha, int i) {
+    static final void decodedOperation1877(GraphicsToolkit var_ha, int i) {
         anInt3164++;
-        if (i >= -20) method1877(null, -112);
-        for (RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1872(8); class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1878((byte) 124)) {
-            if (class318_sub10.aBoolean6482) class318_sub10.method2528(var_ha);
+        if (i >= -20) decodedOperation1877(null, -112);
+        for (RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.decodedOperation1872(8); class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.decodedOperation1878((byte) 124)) {
+            if (class318_sub10.aBoolean6482) class318_sub10.decodedOperation2528(var_ha);
         }
     }
 
-    final Renderable method1878(byte i) {
+    final Renderable decodedOperation1878(byte i) {
         anInt3159++;
         Renderable class318 = aClass318_3167;
         int i_1_ = -59 % ((67 - i) / 55);
@@ -114,7 +114,7 @@ final class Component315
         return class318;
     }
 
-    static final void method1879(boolean bool) {
+    static final void decodedOperation1879(boolean bool) {
         if (bool) {
             Component335.aClass357ArrayArrayArray2029 = ImageProducerSprite.aClass357ArrayArrayArray9082;
             ShaderSub1.aSArray5191 = Component9.aSArray4142;

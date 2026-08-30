@@ -130,7 +130,7 @@ final class BrowserDetector {
         if (i != -1) doubleCapacity = true;
     }
 
-    static final void method1365(int i, byte i_11_, Buffer class348_sub49) {
+    static final void decodedOperation1365(int i, byte i_11_, Buffer class348_sub49) {
         if (i_11_ > -113) anInt2361 = -64;
         if (DisplayModeManagerContainer152.aClass78_4538 != null) {
             try {

@@ -35,7 +35,7 @@ final class Component82
     static int anInt445;
     static int anInt446;
 
-    final Component24 method324(GraphicsToolkit var_ha, boolean bool) {
+    final Component24 decodedOperation324(GraphicsToolkit var_ha, boolean bool) {
         anInt440++;
         if (bool != true) return null;
         if (anInt429 < 0) return null;
@@ -47,7 +47,7 @@ final class Component82
         return class105;
     }
 
-    final Component24 method325(GraphicsToolkit var_ha, int i) {
+    final Component24 decodedOperation325(GraphicsToolkit var_ha, int i) {
         anInt428++;
         if (anInt439 < 0) return null;
         Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt439, -59);
@@ -59,7 +59,7 @@ final class Component82
         return class105;
     }
 
-    static final void method326(byte i) {
+    static final void decodedOperation326(byte i) {
         anInt442++;
         if (!Cp1252Decoder.aBoolean5224) {
             DummyClass.aBoolean10174 = true;
@@ -69,7 +69,7 @@ final class Component82
         }
     }
 
-    final Component24 method327(GraphicsToolkit var_ha, byte i) {
+    final Component24 decodedOperation327(GraphicsToolkit var_ha, byte i) {
         anInt432++;
         if (anInt421 < 0) return null;
         Component24 class105 = (Component24) this.aClass219_438.aClass60_2862.get(anInt421, 118);
@@ -81,7 +81,7 @@ final class Component82
         return class105;
     }
 
-    public static void method328(int i) {
+    public static void decodedOperation328(int i) {
         if (i != 0) anInt425 = -128;
         aClass113_430 = null;
     }
@@ -108,7 +108,7 @@ final class Component82
                 } else anInt429 = class348_sub49.readUnsignedShort(842397944);
             } else this.anInt444 = class348_sub49.readMedium(-1);
         } else this.anInt435 = class348_sub49.readUnsignedShort(842397944);
-        if (i != -2) method333(-112, 38);
+        if (i != -2) decodedOperation333(-112, 38);
         anInt437++;
     }
 
@@ -116,25 +116,25 @@ final class Component82
         anInt446++;
         CacheStore class45 = this.aClass219_438.aClass45_2873;
         if (anInt421 >= 0 && this.aClass219_438.aClass60_2862.get(anInt421, 121) == null && class45.isSingletonFileReady(false, anInt421)) {
-            Component170 class207 = Component170.method1512(class45, anInt421);
-            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt421, (byte) -112);
+            Component170 class207 = Component170.decodedOperation1512(class45, anInt421);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.decodedOperation3691(class207, true), anInt421, (byte) -112);
         }
         if (anInt433 >= 0 && this.aClass219_438.aClass60_2862.get(anInt433, -99) == null && class45.isSingletonFileReady(false, anInt433)) {
-            Component170 class207 = Component170.method1512(class45, anInt433);
-            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt433, (byte) -128);
+            Component170 class207 = Component170.decodedOperation1512(class45, anInt433);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.decodedOperation3691(class207, true), anInt433, (byte) -128);
         }
         if (anInt429 >= 0 && this.aClass219_438.aClass60_2862.get(anInt429, 86) == null && class45.isSingletonFileReady(false, anInt429)) {
-            Component170 class207 = Component170.method1512(class45, anInt429);
-            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt429, (byte) -108);
+            Component170 class207 = Component170.decodedOperation1512(class45, anInt429);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.decodedOperation3691(class207, true), anInt429, (byte) -108);
         }
         if (i > -7) this.anInt434 = -14;
         if (anInt439 >= 0 && this.aClass219_438.aClass60_2862.get(anInt439, -83) == null && class45.isSingletonFileReady(false, anInt439)) {
-            Component170 class207 = Component170.method1512(class45, anInt439);
-            this.aClass219_438.aClass60_2862.putOne(var_ha.method3691(class207, true), anInt439, (byte) -101);
+            Component170 class207 = Component170.decodedOperation1512(class45, anInt439);
+            this.aClass219_438.aClass60_2862.putOne(var_ha.decodedOperation3691(class207, true), anInt439, (byte) -101);
         }
     }
 
-    final Component24 method331(GraphicsToolkit var_ha, byte i) {
+    final Component24 decodedOperation331(GraphicsToolkit var_ha, byte i) {
         anInt441++;
         if (anInt433 < 0) return null;
         int i_2_ = -84 % ((i - 32) / 35);
@@ -146,8 +146,8 @@ final class Component82
         return class105;
     }
 
-    final void method332(int i, Buffer class348_sub49) {
-        if (i > -119) method333(119, -71);
+    final void decodedOperation332(int i, Buffer class348_sub49) {
+        if (i > -119) decodedOperation333(119, -71);
         for (; ; ) {
             int i_3_ = class348_sub49.readUnsignedByte(255);
             if (i_3_ == 0) break;
@@ -156,14 +156,14 @@ final class Component82
         anInt427++;
     }
 
-    final String method333(int i, int i_4_) {
+    final String decodedOperation333(int i, int i_4_) {
         anInt445++;
         String string = aString423;
         if (i_4_ != 0) return null;
         for (; ; ) {
             int i_5_ = string.indexOf("%1");
             if (i_5_ < 0) break;
-            string = (string.substring(0, i_5_) + Component211.method1171(i, 55, false) + string.substring(i_5_ - -2));
+            string = (string.substring(0, i_5_) + Component211.decodedOperation1171(i, 55, false) + string.substring(i_5_ - -2));
         }
         return string;
     }

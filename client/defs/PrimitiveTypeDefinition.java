@@ -23,13 +23,13 @@ final class PrimitiveTypeDefinition
         super(1, false);
     }
 
-    public static void method3050(boolean bool) {
+    public static void decodedOperation3050(boolean bool) {
         aClass351_9089 = null;
         aClass207_9090 = null;
-        if (bool != true) method3050(true);
+        if (bool != true) decodedOperation3050(true);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9087++;
         if (i_0_ != 31015) anInt9094 = 115;
         int i_1_ = i;
@@ -68,7 +68,7 @@ final class PrimitiveTypeDefinition
         } while (false);
     }
 
-    static final int method3051(int i, int i_3_) {
+    static final int decodedOperation3051(int i, int i_3_) {
         if (i_3_ != 4096) return -68;
         anInt9085++;
         int i_4_ = i >>> 1;
@@ -85,7 +85,7 @@ final class PrimitiveTypeDefinition
         anInt9093++;
         int[][] is = this.imageCacheStore.getPixels(-127, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_6_ = this.method3039((byte) 62, i, 0);
+            int[][] is_6_ = this.decodedOperation3039((byte) 62, i, 0);
             int[] is_7_ = is_6_[0];
             int[] is_8_ = is_6_[1];
             int[] is_9_ = is_6_[2];
@@ -128,7 +128,7 @@ final class PrimitiveTypeDefinition
         return is;
     }
 
-    static final Class method3052(int i, String string) throws ClassNotFoundException {
+    static final Class decodedOperation3052(int i, String string) throws ClassNotFoundException {
         if (i != 11012) aClass351_9089 = null;
         anInt9088++;
         if (string.equals("B")) return Byte.TYPE;

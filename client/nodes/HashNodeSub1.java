@@ -18,14 +18,14 @@ final class HashNodeSub1
     static int anInt9496;
     static int anInt9497;
 
-    public static void method3165(byte i) {
+    public static void decodedOperation3165(byte i) {
         if (i > 39) {
             aFloatArray9491 = null;
             aBooleanArrayArray9495 = null;
         }
     }
 
-    final int method3166(int i, int i_0_, byte i_1_) {
+    final int decodedOperation3166(int i, int i_0_, byte i_1_) {
         anInt9490++;
         if (aClass356_9494 == null) return i_0_;
         NodeSub35 class348_sub35 = (NodeSub35) aClass356_9494.get(i, -6008);
@@ -55,33 +55,33 @@ final class HashNodeSub1
         }
     }
 
-    final void method3168(Buffer class348_sub49, byte i) {
+    final void decodedOperation3168(Buffer class348_sub49, byte i) {
         for (; ; ) {
             int i_7_ = class348_sub49.readUnsignedByte(255);
             if (i_7_ == 0) break;
             method3167(i_7_, class348_sub49, (byte) -86);
         }
         anInt9497++;
-        if (i >= -59) method3169(-56, -67);
+        if (i >= -59) decodedOperation3169(-56, -67);
     }
 
     public HashNodeSub1() {
         /* empty */
     }
 
-    static final boolean method3169(int i, int i_8_) {
+    static final boolean decodedOperation3169(int i, int i_8_) {
         if (i_8_ != 0) return true;
         anInt9496++;
         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 99)) {
-            if (WaterShaderSub8.method3549(class348_sub42_sub12.opcode, (byte) -28) && (long) i == (class348_sub42_sub12.identifier)) return true;
+            if (WaterShaderSub8.decodedOperation3549(class348_sub42_sub12.opcode, (byte) -28) && (long) i == (class348_sub42_sub12.identifier)) return true;
         }
         return false;
     }
 
-    final String method3170(int i, String string, int i_9_) {
+    final String decodedOperation3170(int i, String string, int i_9_) {
         anInt9493++;
         if (aClass356_9494 == null) return string;
-        if (i != -250) method3165((byte) 0);
+        if (i != -250) decodedOperation3165((byte) 0);
         NodeSub50 class348_sub50 = (NodeSub50) aClass356_9494.get(i_9_, -6008);
         if (class348_sub50 == null) return string;
         return class348_sub50.stringValue;

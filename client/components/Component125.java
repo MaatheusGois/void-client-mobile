@@ -12,7 +12,7 @@ class Component125
     Buffer aBuffer1792;
     private final GlToolkitSub2 aHa_Sub2_1793;
 
-    final void method1076(byte[] is, int i) {
+    final void decodedOperation1076(byte[] is, int i) {
         if (this.aBuffer1792 == null || this.aBuffer1792.getSize() < i) this.aBuffer1792 = aHa_Sub2_1793.aNativeHeap7730.a(i, false);
         this.aBuffer1792.a(is, 0, 0, i);
     }

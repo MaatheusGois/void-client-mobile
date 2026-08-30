@@ -66,19 +66,19 @@ final class StaticElementRenderer extends Renderable {
     }
 
     public static void method2508(int i) {
-        if (i != 32767) method2512(null, null, 5);
+        if (i != 32767) decodedOperation2512(null, null, 5);
         aClass351_6443 = null;
     }
 
-    static final void method2509(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_) {
+    static final void decodedOperation2509(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_) {
         anInt6438++;
         if (bool != true) anInt6451 = -14;
-        var_ha.method3675(i, (byte) -125, i_1_, i_0_, i_3_, i_2_);
-        var_ha.method3675(i - 2, (byte) -125, 1 + i_1_, 1 + i_0_, 16, i_4_);
-        var_ha.method3668(-2 + i, 18 + i_0_, i_4_, 1 + i_1_, -19 + i_3_, 115);
+        var_ha.decodedOperation3675(i, (byte) -125, i_1_, i_0_, i_3_, i_2_);
+        var_ha.decodedOperation3675(i - 2, (byte) -125, 1 + i_1_, 1 + i_0_, 16, i_4_);
+        var_ha.decodedOperation3668(-2 + i, 18 + i_0_, i_4_, 1 + i_1_, -19 + i_3_, 115);
     }
 
-    static final boolean method2510(CacheStore class45, BrowserUrlOpener class348_sub16_sub3, CacheStore class45_5_, boolean bool, AudioLine class279, CacheStore class45_6_) {
+    static final boolean decodedOperation2510(CacheStore class45, BrowserUrlOpener class348_sub16_sub3, CacheStore class45_5_, boolean bool, AudioLine class279, CacheStore class45_6_) {
         try {
             Component269.aClass279_8764 = class279;
             Component122.aClass348_Sub16_Sub3_1564 = class348_sub16_sub3;
@@ -96,18 +96,18 @@ final class StaticElementRenderer extends Renderable {
         }
     }
 
-    final void method2511(boolean bool, GraphicsToolkit var_ha, long l) {
+    final void decodedOperation2511(boolean bool, GraphicsToolkit var_ha, long l) {
         try {
             anInt6437++;
             if (bool != true) this.aClass243_6433 = null;
-            for (RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = ((RenderableSub9Sub2Sub1) this.aClass243_6433.method1872(8)); class318_sub9_sub2_sub1 != null; class318_sub9_sub2_sub1 = (RenderableSub9Sub2Sub1) this.aClass243_6433.method1878((byte) 126))
-                class318_sub9_sub2_sub1.method2522(var_ha, l);
+            for (RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = ((RenderableSub9Sub2Sub1) this.aClass243_6433.decodedOperation1872(8)); class318_sub9_sub2_sub1 != null; class318_sub9_sub2_sub1 = (RenderableSub9Sub2Sub1) this.aClass243_6433.decodedOperation1878((byte) 126))
+                class318_sub9_sub2_sub1.decodedOperation2522(var_ha, l);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("rba.F(" + bool + ',' + (var_ha != null ? "{...}" : "null") + ',' + l + ')'));
         }
     }
 
-    static final void method2512(d var_d, GraphicsToolkit var_ha, int i) {
+    static final void decodedOperation2512(d var_d, GraphicsToolkit var_ha, int i) {
         try {
             anInt6440++;
             if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243 != null) {
@@ -116,7 +116,7 @@ final class StaticElementRenderer extends Renderable {
                         Node.anInt4290 = (NodeSub32.aClass45_6950.getNamedGroupLoadPercent((DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625), 0)) / 10;
                         return;
                     }
-                    InputStream_Sub1.method126(-16203);
+                    InputStream_Sub1.decodedOperation126(-16203);
                     Node.anInt4290 = 10;
                 }
                 if (Node.anInt4290 == 10) {
@@ -127,17 +127,17 @@ final class StaticElementRenderer extends Renderable {
                     int[] is = new int[3];
                     int i_7_ = -1;
                     int i_8_ = -1;
-                    if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.method3236(is, (NodeBaseSub2.regionTileX - -((Component72.localPlayer.x) >> 9)), ((Component72.localPlayer.y) >> 9) + Component330.regionTileY, (Component72.localPlayer.plane), (byte) -28)) {
+                    if (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.decodedOperation3236(is, (NodeBaseSub2.regionTileX - -((Component72.localPlayer.x) >> 9)), ((Component72.localPlayer.y) >> 9) + Component330.regionTileY, (Component72.localPlayer.plane), (byte) -28)) {
                         i_7_ = -DisplayModeManagerContainer229.anInt1266 + is[1];
                         i_8_ = -DisplayModeManagerContainer229.anInt1263 + is[2];
                     }
                     if (TheoraVideoPlayer.aBoolean1500 || i_7_ < 0 || DisplayModeManagerContainer229.anInt1259 <= i_7_ || i_8_ < 0 || DisplayModeManagerContainer229.anInt1267 <= i_8_) {
                         if (Component60.anInt5909 == -1 || NewsFetcher.anInt4202 == -1) {
-                            DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.method3242(is, 123, 0x3fff & (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.anInt9640), (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.anInt9640) >> 14 & 0x3fff);
+                            DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.decodedOperation3242(is, 123, 0x3fff & (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.anInt9640), (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.anInt9640) >> 14 & 0x3fff);
                             DebugOverlay.anInt3170 = is[2] - DisplayModeManagerContainer229.anInt1263;
                             NodeSub36.anInt6992 = is[1] - DisplayModeManagerContainer229.anInt1266;
                         } else {
-                            DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.method3242(is, 88, NewsFetcher.anInt4202, Component60.anInt5909);
+                            DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.decodedOperation3242(is, 88, NewsFetcher.anInt4202, Component60.anInt5909);
                             Component60.anInt5909 = NewsFetcher.anInt4202 = -1;
                             if (is != null) {
                                 NodeSub36.anInt6992 = -DisplayModeManagerContainer229.anInt1266 + is[1];
@@ -161,8 +161,8 @@ final class StaticElementRenderer extends Renderable {
                         } else DisplayModeManagerContainer229.aFloat1249 = DisplayModeManagerContainer229.aFloat1247 = 4.0F;
                     } else DisplayModeManagerContainer229.aFloat1249 = DisplayModeManagerContainer229.aFloat1247 = 3.0F;
                     DisplayModeManagerContainer229.anInt1255 = (int) DisplayModeManagerContainer229.aFloat1247 >> 1;
-                    DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.method2596(DisplayModeManagerContainer229.anInt1255, 12871);
-                    ColorTagNode.method2811(false);
+                    DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.decodedOperation2596(DisplayModeManagerContainer229.anInt1255, 12871);
+                    ColorTagNode.decodedOperation2811(false);
                     DisplayModeManagerContainer229.allocateTileBuffers();
                     Component156.aClass262_3705 = new NodeList();
                     DisplayModeManagerContainer229.anInt1250 += (int) (Math.random() * 5.0) + -2;
@@ -172,17 +172,17 @@ final class StaticElementRenderer extends Renderable {
                     if (DisplayModeManagerContainer229.anInt1253 < -16) DisplayModeManagerContainer229.anInt1253 = -16;
                     if (DisplayModeManagerContainer229.anInt1253 > 16) DisplayModeManagerContainer229.anInt1253 = 16;
                     DisplayModeManagerContainer229.buildModelCounts(var_d, (DisplayModeManagerContainer229.anInt1250 >> 2 << 10), DisplayModeManagerContainer229.anInt1253 >> 1);
-                    DisplayModeManagerContainer229.aClass153_1238.method1220((byte) 73, 256, 1024);
-                    DisplayModeManagerContainer229.aClass141_1242.method1178(256, 1, 256);
-                    DisplayModeManagerContainer229.aClass263_1245.method2014(4096, true);
-                    Component267.aClass194_2981.method1444(256, 123);
+                    DisplayModeManagerContainer229.aClass153_1238.decodedOperation1220((byte) 73, 256, 1024);
+                    DisplayModeManagerContainer229.aClass141_1242.decodedOperation1178(256, 1, 256);
+                    DisplayModeManagerContainer229.aClass263_1245.decodedOperation2014(4096, true);
+                    Component267.aClass194_2981.decodedOperation1444(256, 123);
                     Node.anInt4290 = 20;
                 } else if (Node.anInt4290 == 20) {
-                    Component156.method2193(true, (byte) -123);
+                    Component156.decodedOperation2193(true, (byte) -123);
                     DisplayModeManagerContainer229.loadArea(var_ha, DisplayModeManagerContainer229.anInt1250, DisplayModeManagerContainer229.anInt1253);
                     Node.anInt4290 = 60;
-                    Component156.method2193(true, (byte) -122);
-                    Component97.method867(true);
+                    Component156.decodedOperation2193(true, (byte) -122);
+                    Component97.decodedOperation867(true);
                 } else if (i <= -43) {
                     if (Node.anInt4290 == 60) {
                         if (DisplayModeManagerContainer229.aClass45_1237.hasGroup(-18308, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) {
@@ -191,50 +191,50 @@ final class StaticElementRenderer extends Renderable {
                         } else DisplayModeManagerContainer229.aClass252_1246 = new Component278(0);
                         DisplayModeManagerContainer229.processOverlay();
                         Node.anInt4290 = 70;
-                        Component156.method2193(true, (byte) -127);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -127);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 70) {
                         // Bake world-map Helvetica ladders (11→30pt). Uses AWT drawString;
                         // iOS voidawt must use UIGraphics or labels bake garbled.
                         Component15.helveticaGlyphs11 = new FontGlyphCache(var_ha, 11, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 73;
-                        Component156.method2193(true, (byte) -123);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -123);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 73) {
                         WorldNameText.helveticaGlyphs12 = new FontGlyphCache(var_ha, 12, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 76;
-                        Component156.method2193(true, (byte) -125);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -125);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 76) {
                         DisplayModeManagerContainer271.helveticaGlyphs14 = new FontGlyphCache(var_ha, 14, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 79;
-                        Component156.method2193(true, (byte) -123);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -123);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 79) {
                         Component39.helveticaGlyphs17 = new FontGlyphCache(var_ha, 17, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 82;
-                        Component156.method2193(true, (byte) -124);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -124);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 82) {
                         Component218.helveticaGlyphs19 = new FontGlyphCache(var_ha, 19, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 85;
-                        Component156.method2193(true, (byte) -128);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -128);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 85) {
                         DebugPanic.helveticaGlyphs22 = new FontGlyphCache(var_ha, 22, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 88;
-                        Component156.method2193(true, (byte) -124);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -124);
+                        Component97.decodedOperation867(true);
                     } else if (Node.anInt4290 == 88) {
                         NodeSub3.helveticaGlyphs26 = new FontGlyphCache(var_ha, 26, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 91;
-                        Component156.method2193(true, (byte) -125);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -125);
+                        Component97.decodedOperation867(true);
                     } else {
                         Component49.helveticaGlyphs30 = new FontGlyphCache(var_ha, 30, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 100;
-                        Component156.method2193(true, (byte) -119);
-                        Component97.method867(true);
+                        Component156.decodedOperation2193(true, (byte) -119);
+                        Component97.decodedOperation867(true);
                         System.gc();
                     }
                 }
@@ -244,7 +244,7 @@ final class StaticElementRenderer extends Renderable {
         }
     }
 
-    final void method2513(GraphicsToolkit var_ha, int i, long l, int i_9_, boolean bool) {
+    final void decodedOperation2513(GraphicsToolkit var_ha, int i, long l, int i_9_, boolean bool) {
         do {
             try {
                 if (!this.aBoolean6446) {
@@ -358,12 +358,12 @@ final class StaticElementRenderer extends Renderable {
                             } else {
                                 RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = (Component256.aClass318_Sub9_Sub2_Sub1Array6103[NodeSub1Sub1.anInt8808]);
                                 NodeSub1Sub1.anInt8808 = 0x3ff & 1 + NodeSub1Sub1.anInt8808;
-                                class318_sub9_sub2_sub1.method2523(this, i_46_, i_47_, i_48_, i_25_, i_26_, i_27_, i_49_, i_50_, i_52_, i_51_, i_53_, (this.aClass181_6441.aBoolean2435), (this.aClass181_6441.aBoolean2430));
+                                class318_sub9_sub2_sub1.decodedOperation2523(this, i_46_, i_47_, i_48_, i_25_, i_26_, i_27_, i_49_, i_50_, i_52_, i_51_, i_53_, (this.aClass181_6441.aBoolean2435), (this.aClass181_6441.aBoolean2430));
                             }
                         }
                     }
                 }
-                if (!this.aClass284_6444.method2115(aClass284_6449, true)) {
+                if (!this.aClass284_6444.decodedOperation2115(aClass284_6449, true)) {
                     Component94 class284 = aClass284_6449;
                     aClass284_6449 = this.aClass284_6444;
                     this.aClass284_6444 = class284;
@@ -381,8 +381,8 @@ final class StaticElementRenderer extends Renderable {
                     this.aClass284_6444.anInt3668 = (this.aClass129_6436.anInt1883);
                 }
                 this.anInt6447 = 0;
-                for (RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = (RenderableSub9Sub2Sub1) this.aClass243_6433.method1872(i_9_ + 5); class318_sub9_sub2_sub1 != null; class318_sub9_sub2_sub1 = ((RenderableSub9Sub2Sub1) this.aClass243_6433.method1878((byte) 122))) {
-                    class318_sub9_sub2_sub1.method2524(l, i);
+                for (RenderableSub9Sub2Sub1 class318_sub9_sub2_sub1 = (RenderableSub9Sub2Sub1) this.aClass243_6433.decodedOperation1872(i_9_ + 5); class318_sub9_sub2_sub1 != null; class318_sub9_sub2_sub1 = ((RenderableSub9Sub2Sub1) this.aClass243_6433.decodedOperation1878((byte) 122))) {
+                    class318_sub9_sub2_sub1.decodedOperation2524(l, i);
                     this.anInt6447++;
                 }
                 Component55.anInt3936 += this.anInt6447;
@@ -403,7 +403,7 @@ final class StaticElementRenderer extends Renderable {
             aLong6435 = l;
             this.aClass129_6436 = class129;
             this.aClass318_Sub10_6439 = class318_sub10;
-            this.aClass181_6441 = this.aClass129_6436.method1125((byte) 59);
+            this.aClass181_6441 = this.aClass129_6436.decodedOperation1125((byte) 59);
             if (!var_ha.method3644() && (this.aClass181_6441.anInt2387) != -1) this.aClass181_6441 = MouseHandler.getOrLoadConfig((this.aClass181_6441.anInt2387), 0);
             this.aClass243_6433 = new Component315();
             anInt6434 += 64.0 * Math.random();

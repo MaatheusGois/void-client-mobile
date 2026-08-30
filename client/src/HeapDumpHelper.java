@@ -52,14 +52,14 @@ final class HeapDumpHelper implements Interface12 {
         return RadixParser.aClass223_2307;
     }
 
-    static final Component85[] method1248(int i) {
+    static final Component85[] decodedOperation1248(int i) {
         anInt4933++;
         if (i < 11) aClass299_4938 = null;
         return (new Component85[]{Component364.aClass221_8344, Component65.aClass221_1620, DisplayModeManagerContainer369.aClass221_2893});
     }
 
-    public static void method1249(boolean bool) {
-        if (bool != true) method1248(-21);
+    public static void decodedOperation1249(boolean bool) {
+        if (bool != true) decodedOperation1248(-21);
         aClass356_4934 = null;
         aClass299_4938 = null;
     }

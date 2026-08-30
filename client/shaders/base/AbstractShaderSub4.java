@@ -80,7 +80,7 @@ final class AbstractShaderSub4
         return true;
     }
 
-    public static void method3541(byte i) {
+    public static void decodedOperation3541(byte i) {
         aClass114_7323 = null;
         aClass114_7324 = null;
         aClass107_7325 = null;
@@ -150,7 +150,7 @@ final class AbstractShaderSub4
         this.aHa_Sub3_4479.texStorage3D(Component385.aClass229_2207, i + 13, Component385.aClass229_2207);
     }
 
-    static final boolean method3542(int i, Component186[][][] class357s, int i_13_, int i_14_, int i_15_, boolean bool) {
+    static final boolean decodedOperation3542(int i, Component186[][][] class357s, int i_13_, int i_14_, int i_15_, boolean bool) {
         anInt7310++;
         byte i_16_ = bool ? (byte) 1 : (byte) (DisplayModeManagerContainer341.anInt6006 & 0xff);
         if (i_16_ == Component156.aByteArrayArrayArray3700[Component117.anInt4372][i_13_][i]) return false;
@@ -177,14 +177,14 @@ final class AbstractShaderSub4
                     if (class357s[i_26_] != null && (0x8 & (ObjectDeserializer.aByteArrayArrayArray6962[i_26_][i_19_][i_22_])) == 0) {
                         if (bool_24_ && class357s[i_26_][i_19_][i_22_] != null) {
                             if ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4406) != null) {
-                                int i_27_ = Component135.method3492(i_20_, 226);
+                                int i_27_ = Component135.decodedOperation3492(i_20_, 226);
                                 if (((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4406.aShort8759) == i_27_) || ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403) != null && (i_27_ == (class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403.aShort8759)))) continue;
                                 if (i_21_ != 0) {
-                                    int i_28_ = Component135.method3492(i_21_, 226);
+                                    int i_28_ = Component135.decodedOperation3492(i_21_, 226);
                                     if (((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4406.aShort8759) == i_28_) || ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403) != null && ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403.aShort8759) == i_28_))) continue;
                                 }
                                 if (i_23_ != 0) {
-                                    int i_29_ = Component135.method3492(i_23_, 226);
+                                    int i_29_ = Component135.decodedOperation3492(i_23_, 226);
                                     if ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4406.aShort8759) == i_29_ || ((class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403) != null && (i_29_ == (class357s[i_26_][i_19_][i_22_].aClass318_Sub1_Sub4_4403.aShort8759)))) continue;
                                 }
                             }
@@ -302,7 +302,7 @@ final class AbstractShaderSub4
         anInt7309++;
         if (i == -89) {
             StringCache.devConsoleOpen = false;
-            Component160.method3466(i + 6);
+            Component160.decodedOperation3466(i + 6);
         }
     }
 
@@ -323,7 +323,7 @@ final class AbstractShaderSub4
 
     final void method3521(boolean bool, byte i) {
         this.aHa_Sub3_4479.texStorage3D((ShaderCompilerSub3.aClass229_6519), 126, Component385.aClass229_2207);
-        if (i != -103) method3542(74, null, 65, 65, -77, true);
+        if (i != -103) decodedOperation3542(74, null, 65, 65, -77, true);
         anInt7308++;
     }
 

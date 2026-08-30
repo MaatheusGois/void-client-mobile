@@ -43,7 +43,7 @@ final class ShaderProgramSub2
     static final void addChatMessage(String string, int i, byte i_0_, int i_1_, String string_2_, String string_3_, String string_4_) {
         do {
             try {
-                DisplayModeManagerContainer174.method2477(string, string_2_, (byte) -110, -1, string_3_, null, i, i_1_, string_4_);
+                DisplayModeManagerContainer174.decodedOperation2477(string, string_2_, (byte) -110, -1, string_3_, null, i, i_1_, string_4_);
                 anInt6203++;
                 if (i_0_ < -86) break;
                 friendFormerNames = null;
@@ -58,7 +58,7 @@ final class ShaderProgramSub2
         super(var_ha_Sub2);
     }
 
-    static final void method2145(int i) {
+    static final void decodedOperation2145(int i) {
         anInt6210++;
         Component63.anInt4494++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component210.aClass351_5288, DisplayModeManagerContainer64.aClass77_9029, -124);
@@ -66,7 +66,7 @@ final class ShaderProgramSub2
         class348_sub47.particleBuffer.writeShort((byte) 107, Component236.canvasWidth);
         class348_sub47.particleBuffer.writeShort((byte) 107, PacketReader.canvasHeight);
         if (i != -24498) friendFormerNames = null;
-        class348_sub47.particleBuffer.writeByte(false, Component192.preferences.aClass239_Sub20_7248.method1808(-32350));
+        class348_sub47.particleBuffer.writeByte(false, Component192.preferences.aClass239_Sub20_7248.decodedOperation1808(-32350));
         HashNodeSub14.enqueueOutboundPacket(-101, class348_sub47);
     }
 
@@ -77,12 +77,12 @@ final class ShaderProgramSub2
         this.aHa_Sub2_3684.setTextureEnvMode(0, i_5_);
     }
 
-    static final void method2146(byte i) {
+    static final void decodedOperation2146(byte i) {
         int i_6_ = 34 % ((i - 32) / 38);
         anInt6213++;
-        HashNodeSub19.method3277((byte) -48);
+        HashNodeSub19.decodedOperation3277((byte) -48);
         Component364.aBoolean8335 = false;
-        Component354.method226(DisplayModeManagerContainer136.anInt4717, Component227.anInt1117, DefinitionGroup.anInt9532, 0, Component251.anInt5819);
+        Component354.decodedOperation226(DisplayModeManagerContainer136.anInt4717, Component227.anInt1117, DefinitionGroup.anInt9532, 0, Component251.anInt5819);
     }
 
     final void method2136(int i, int i_7_, byte i_8_) {
@@ -96,7 +96,7 @@ final class ShaderProgramSub2
         return true;
     }
 
-    public static void method2147(int i) {
+    public static void decodedOperation2147(int i) {
         if (i != -1) anInt6212 = -79;
         friendFormerNames = null;
     }

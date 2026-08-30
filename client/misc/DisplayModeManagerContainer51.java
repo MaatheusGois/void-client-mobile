@@ -16,7 +16,7 @@ abstract class DisplayModeManagerContainer51
     static String password;
     static int[] anIntArray2497;
 
-    public static void method1396(int i) {
+    public static void decodedOperation1396(int i) {
         aClass45_2490 = null;
         aClass74_2491 = null;
         aStringArray2494 = null;
@@ -26,7 +26,7 @@ abstract class DisplayModeManagerContainer51
         if (i != 25) aClass351_2495 = null;
     }
 
-    static final void method1397(int i) {
+    static final void decodedOperation1397(int i) {
         anInt2493++;
         int i_0_ = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;

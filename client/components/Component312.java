@@ -14,12 +14,12 @@ final class Component312
     private IDirect3DSurface anIDirect3DSurface964;
     private IDirect3DSurface anIDirect3DSurface965;
 
-    final int method495(byte i, int i_0_) {
+    final int decodedOperation495(byte i, int i_0_) {
         if (i != 91) anIDirect3DSurface964 = null;
         return anIDirect3DSwapChain963.Present(i_0_);
     }
 
-    final void method496(byte i) {
+    final void decodedOperation496(byte i) {
         if (null != anIDirect3DSurface965) {
             anIDirect3DSurface965.a(9275);
             anIDirect3DSurface965 = null;
@@ -43,7 +43,7 @@ final class Component312
         }
     }
 
-    final boolean method498(int i) {
+    final boolean decodedOperation498(int i) {
         int i_2_ = -21 / ((7 - i) / 51);
         return null != anIDirect3DSwapChain963;
     }

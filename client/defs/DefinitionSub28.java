@@ -22,22 +22,22 @@ final class DefinitionSub28
 
     final void postDecode(int i) {
         anInt9363++;
-        Component7.method1605(26188);
-        if (i < 108) method3122((byte) -111);
+        Component7.decodedOperation1605(26188);
+        if (i < 108) decodedOperation3122((byte) -111);
     }
 
-    static final NamedInteger[] method3122(byte i) {
+    static final NamedInteger[] decodedOperation3122(byte i) {
         if (i < 86) aClass45_9365 = null;
         anInt9361++;
         return (new NamedInteger[]{Component326.LIVE, WaterShaderSub8.WTRC, AssetCacheLoader.WTQA, Component83.WTWIP, DisplayModeManagerContainer154.LOCAL, DisplayModeManagerContainer173.WTI});
     }
 
-    public static void method3123(int i) {
+    public static void decodedOperation3123(int i) {
         aClass45_9365 = null;
-        if (i != 0) method3122((byte) -98);
+        if (i != 0) decodedOperation3122((byte) -98);
     }
 
-    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9370++;
         if (i_0_ != 31015) anInt9364 = -29;
         int i_1_ = i;
@@ -82,10 +82,10 @@ final class DefinitionSub28
             int[][] is_4_ = this.imageCache.getAllBuffers((byte) 16);
             Random random = new Random(anInt9367);
             for (int i_5_ = 0; anInt9362 > i_5_; i_5_++) {
-                int i_6_ = (anInt9364 > 0 ? anInt9369 + DisplayModeManagerContainer77.method1097((byte) 92, anInt9364, random) + -i_3_ : anInt9369);
+                int i_6_ = (anInt9364 > 0 ? anInt9369 + DisplayModeManagerContainer77.decodedOperation1097((byte) 92, anInt9364, random) + -i_3_ : anInt9369);
                 i_6_ = i_6_ >> 4 & 0xff;
-                int i_7_ = DisplayModeManagerContainer77.method1097((byte) 81, DefinitionSub6.anInt9139, random);
-                int i_8_ = DisplayModeManagerContainer77.method1097((byte) 123, ShaderProgramSub2.anInt6212, random);
+                int i_7_ = DisplayModeManagerContainer77.decodedOperation1097((byte) 81, DefinitionSub6.anInt9139, random);
+                int i_8_ = DisplayModeManagerContainer77.decodedOperation1097((byte) 123, ShaderProgramSub2.anInt6212, random);
                 int i_9_ = i_7_ - -(anInt9368 * Component296.anIntArray4654[i_6_] >> 12);
                 int i_10_ = ((Component366.anIntArray3068[i_6_] * anInt9368 >> 12) + i_8_);
                 int i_11_ = -i_8_ + i_10_;
@@ -115,7 +115,7 @@ final class DefinitionSub28
                     int i_19_ = -i_8_ + i_10_;
                     int i_20_ = -i_18_ / 2;
                     int i_21_ = 2048 / i_18_;
-                    int i_22_ = 1024 - (DisplayModeManagerContainer77.method1097((byte) 90, 4096, random) >> 2);
+                    int i_22_ = 1024 - (DisplayModeManagerContainer77.decodedOperation1097((byte) 90, 4096, random) >> 2);
                     if (i_19_ < 0) i_19_ = -i_19_;
                     int i_23_ = i_10_ <= i_8_ ? -1 : 1;
                     for (int i_24_ = i_7_; i_24_ < i_9_; i_24_++) {

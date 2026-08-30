@@ -21,28 +21,28 @@ final class ReliefShader {
     static int anInt2519;
     static int anInt2520;
 
-    public static void method1411(boolean bool) {
-        if (bool != true) method1416(121);
+    public static void decodedOperation1411(boolean bool) {
+        if (bool != true) decodedOperation1416(121);
         aClass351_2512 = null;
     }
 
-    static final boolean method1412(byte i, int i_0_, int i_1_) {
-        if (i != -35) method1411(true);
+    static final boolean decodedOperation1412(byte i, int i_0_, int i_1_) {
+        if (i != -35) decodedOperation1411(true);
         anInt2519++;
         return (i_1_ & 0x800) != 0 && (0x37 & i_0_) != 0;
     }
 
-    final boolean method1413(AbstractGlTextureSub1 class258_sub1, AbstractGlTextureSub1 class258_sub1_2_, int i, float f) {
+    final boolean decodedOperation1413(AbstractGlTextureSub1 class258_sub1, AbstractGlTextureSub1 class258_sub1_2_, int i, float f) {
         try {
             anInt2517++;
-            if (!method1414(35632)) return false;
+            if (!decodedOperation1414(35632)) return false;
             DisplayModeManagerContainer105 class206 = aHa_Sub2_2511.aClass206_7778;
             int i_3_ = 30 % ((-55 - i) / 59);
             HashNodeSub2 class348_sub42_sub2 = new HashNodeSub2(aHa_Sub2_2511, 6408, (class258_sub1.anInt8523), (class258_sub1.anInt8529));
             aHa_Sub2_2511.popTexture(-1, class206);
             boolean bool = false;
-            class206.method1508(0, class348_sub42_sub2, -12);
-            if (class206.method1507(117)) {
+            class206.decodedOperation1508(0, class348_sub42_sub2, -12);
+            if (class206.decodedOperation1507(117)) {
                 OpenGL.glPushMatrix();
                 OpenGL.glLoadIdentity();
                 OpenGL.glMatrixMode(5889);
@@ -68,7 +68,7 @@ final class ReliefShader {
                     OpenGL.glTexCoord3f(0.0F, 1.0F, f_5_);
                     OpenGL.glVertex2f(0.0F, 1.0F);
                     OpenGL.glEnd();
-                    class258_sub1.method1958(-26823, 0, class258_sub1.anInt8523, 0, 0, i_4_, class258_sub1.anInt8529, 0);
+                    class258_sub1.decodedOperation1958(-26823, 0, class258_sub1.anInt8523, 0, 0, i_4_, class258_sub1.anInt8529, 0);
                 }
                 OpenGL.glUseProgramObjectARB(0L);
                 OpenGL.glPopAttrib();
@@ -77,7 +77,7 @@ final class ReliefShader {
                 OpenGL.glPopMatrix();
                 bool = true;
             }
-            class206.method1500(2983, 0);
+            class206.decodedOperation1500(2983, 0);
             aHa_Sub2_2511.pushTexture(-422613672, class206);
             return bool;
         } catch (RuntimeException runtimeexception) {
@@ -85,51 +85,51 @@ final class ReliefShader {
         }
     }
 
-    final boolean method1414(int i) {
+    final boolean decodedOperation1414(int i) {
         if (aHa_Sub2_2511.aBoolean7820 && aHa_Sub2_2511.aBoolean7783 && aClass337_2513 == null) {
-            Component359 class242 = (RSARequest.method3249(35632, 121, aHa_Sub2_2511, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n"));
+            Component359 class242 = (RSARequest.decodedOperation3249(35632, 121, aHa_Sub2_2511, "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n"));
             if (class242 != null) aClass337_2513 = ShaderLinker.linkProgram(aHa_Sub2_2511, i + -35633, (new Component359[]{class242}));
         }
         anInt2518++;
-        if (i != 35632) method1413(null, null, 102, 0.17865802F);
+        if (i != 35632) decodedOperation1413(null, null, 102, 0.17865802F);
         return aClass337_2513 != null;
     }
 
-    static final void method1415(int i, int i_6_) {
+    static final void decodedOperation1415(int i, int i_6_) {
         anInt2520++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 17);
-        if (i_6_ < 106) method1417(-62, null, -125);
-        class348_sub42_sub15.method3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, 17);
+        if (i_6_ < 106) decodedOperation1417(-62, null, -125);
+        class348_sub42_sub15.decodedOperation3251(-16058);
     }
 
-    static final void method1416(int i) {
-        Component267.aClass268_2979.method2032(5, -101);
+    static final void decodedOperation1416(int i) {
+        Component267.aClass268_2979.decodedOperation2032(5, -101);
         anInt2515++;
-        Component149.aClass183_4460.method1383(i ^ 0x804c, 5);
-        DefinitionSub25.aClass150_9342.method1207(-17452, 5);
-        GradientPreset.aClass263_9195.method2010(5, i + -6);
-        Component291.aClass278_2529.method2076(5, true);
-        Exception_Sub1.itemDefinitions.method1937(5, false);
-        RunescapeInfo.aClass87_191.method836(5, 93);
-        NsnDefinition.aClass319_9245.method2544(5, (byte) -41);
-        Component267.aClass194_2981.method1442(5, (byte) 1);
-        Component209.aClass217_3453.method1587(5, i ^ 0xeab);
+        Component149.aClass183_4460.decodedOperation1383(i ^ 0x804c, 5);
+        DefinitionSub25.aClass150_9342.decodedOperation1207(-17452, 5);
+        GradientPreset.aClass263_9195.decodedOperation2010(5, i + -6);
+        Component291.aClass278_2529.decodedOperation2076(5, true);
+        Exception_Sub1.itemDefinitions.decodedOperation1937(5, false);
+        RunescapeInfo.aClass87_191.decodedOperation836(5, 93);
+        NsnDefinition.aClass319_9245.decodedOperation2544(5, (byte) -41);
+        Component267.aClass194_2981.decodedOperation1442(5, (byte) 1);
+        Component209.aClass217_3453.decodedOperation1587(5, i ^ 0xeab);
         DisplayModeManagerContainer282.aClass261_5558.processSoftEntries((byte) 119, 5);
-        DisplayModeManagerContainer64.aClass153_9031.method1224(5, (byte) -98);
-        Component245.aClass141_117.method1176(5, (byte) 52);
-        MatrixSub3.aClass326_5764.method2603(5, 11);
-        DisplayModeManagerContainer64.aClass187_9036.method1409(5, -20721);
-        ComponentDownloader.aClass84_413.method819((byte) 74, 5);
-        Component132.aClass25_1813.method299(5, 16);
-        NodeSub1.aClass185_6559.method1392(88, 5);
-        Component339.cursorDefinitions.method1285(i, 8);
-        Component257.aClass65_4787.method697(5, 26);
-        DisplayModeManagerContainer306.aClass219_4782.method1603(5, -66);
-        Component263.method876(5, 0);
-        DisplayModeManagerContainer213.method545(50, -1);
-        Component245.method174(50, -30742);
-        Component97.method865(-8186, 5);
-        Component382.method1323(5, 26603);
+        DisplayModeManagerContainer64.aClass153_9031.decodedOperation1224(5, (byte) -98);
+        Component245.aClass141_117.decodedOperation1176(5, (byte) 52);
+        MatrixSub3.aClass326_5764.decodedOperation2603(5, 11);
+        DisplayModeManagerContainer64.aClass187_9036.decodedOperation1409(5, -20721);
+        ComponentDownloader.aClass84_413.decodedOperation819((byte) 74, 5);
+        Component132.aClass25_1813.decodedOperation299(5, 16);
+        NodeSub1.aClass185_6559.decodedOperation1392(88, 5);
+        Component339.cursorDefinitions.decodedOperation1285(i, 8);
+        Component257.aClass65_4787.decodedOperation697(5, 26);
+        DisplayModeManagerContainer306.aClass219_4782.decodedOperation1603(5, -66);
+        Component263.decodedOperation876(5, 0);
+        DisplayModeManagerContainer213.decodedOperation545(50, -1);
+        Component245.decodedOperation174(50, -30742);
+        Component97.decodedOperation865(-8186, 5);
+        Component382.decodedOperation1323(5, 26603);
         Component45.aClass60_4346.processSoftEntries(i + -3, 5);
         ShaderCompilerSub2.aClass60_6517.processSoftEntries(2, 5);
         NodeSub1Sub1.aClass60_8807.processSoftEntries(i ^ 0x7, 5);
@@ -137,7 +137,7 @@ final class ReliefShader {
         ClientScriptExecutor.aClass60_1174.processSoftEntries(2, 5);
     }
 
-    static final NpcDefinition method1417(int i, CacheStore class45, int i_7_) {
+    static final NpcDefinition decodedOperation1417(int i, CacheStore class45, int i_7_) {
         anInt2516++;
         if (i != 0) aBoolean2514 = true;
         byte[] is = class45.getSingletonFile((byte) 73, i_7_);

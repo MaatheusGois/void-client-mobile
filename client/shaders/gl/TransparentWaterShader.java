@@ -42,7 +42,7 @@ final class TransparentWaterShader extends AbstractShader {
         super(class378);
         aClass269_7339 = class269;
         aClass378_7340 = class378;
-        if (null == class45 || !aClass269_7339.method2039(123) || (257 > (aClass378_7340.aD3DCAPS9791.VertexShaderVersion & 0xffff))) anIDirect3DVertexShader7341 = null;
+        if (null == class45 || !aClass269_7339.decodedOperation2039(123) || (257 > (aClass378_7340.aD3DCAPS9791.VertexShaderVersion & 0xffff))) anIDirect3DVertexShader7341 = null;
         else anIDirect3DVertexShader7341 = aClass378_7340.anIDirect3DDevice9810.b(class45.getFile("dx", "transparent_water", -29832));
     }
 
@@ -50,14 +50,14 @@ final class TransparentWaterShader extends AbstractShader {
         if (anIDirect3DVertexShader7341 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = aClass378_7340.maximizeWindow(-22036);
-            idirect3ddevice.a(0, class101_sub2.method924(i ^ 0x7, aFloatArray7338));
+            idirect3ddevice.a(0, class101_sub2.decodedOperation924(i ^ 0x7, aFloatArray7338));
         }
         if (i != 12) aClass378_7340 = null;
     }
 
     final void method3520(byte i) {
         if (i == 87) {
-            aClass378_7340.method3957(null, (byte) -89);
+            aClass378_7340.decodedOperation3957(null, (byte) -89);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DebugPanicSub2.aClass70_8503);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
@@ -77,7 +77,7 @@ final class TransparentWaterShader extends AbstractShader {
         if (anIDirect3DVertexShader7341 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.clear(5);
-            class101_sub2.method915(aFloatArray7338, i ^ 0x28b8);
+            class101_sub2.decodedOperation915(aFloatArray7338, i ^ 0x28b8);
             aFloatArray7338[0] *= 0.25F;
             aFloatArray7338[2] *= 0.25F;
             aFloatArray7338[3] *= 0.25F;
@@ -100,7 +100,7 @@ final class TransparentWaterShader extends AbstractShader {
         if (null != anIDirect3DVertexShader7341) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = aClass378_7340.maximizeWindow(-22036);
-            idirect3ddevice.a(0, class101_sub2.method924(11, aFloatArray7338));
+            idirect3ddevice.a(0, class101_sub2.decodedOperation924(11, aFloatArray7338));
         }
         if (bool) method3524(46);
     }
@@ -126,7 +126,7 @@ final class TransparentWaterShader extends AbstractShader {
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.getSwapInterval(false, false, 2, DebugPanicSub2.aClass70_8503, true);
         this.aHa_Sub3_4479.genVertexArrays(9, false);
-        aClass378_7340.method3957(anIDirect3DVertexShader7341, (byte) -89);
+        aClass378_7340.decodedOperation3957(anIDirect3DVertexShader7341, (byte) -89);
         method3523((byte) 12);
         method3532(10425);
         method3524(-14775);

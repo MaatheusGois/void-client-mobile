@@ -16,7 +16,7 @@ final class Component18
     private final long[] aLongArray6164;
     private int anInt6165;
 
-    private final long method1864(int i) {
+    private final long decodedOperation1864(int i) {
         long l = jagmisc.nanoTime();
         long l_0_ = l + -aLong6162;
         aLong6162 = l;
@@ -26,14 +26,14 @@ final class Component18
             anInt6163 = (1 + anInt6163) % 10;
         }
         long l_1_ = 0L;
-        if (i != 10) method1864(107);
+        if (i != 10) decodedOperation1864(107);
         for (int i_2_ = 1; i_2_ <= anInt6165; i_2_++)
             l_1_ += aLongArray6164[(10 + (anInt6163 + -i_2_)) % 10];
         return l_1_ / (long) anInt6165;
     }
 
     final long method1858(int i) {
-        aLong6161 += method1864(10);
+        aLong6161 += decodedOperation1864(10);
         if (i > -60) return -8L;
         if (aLong6161 < aLong6160) return (-aLong6161 + aLong6160) / 1000000L;
         return 0L;

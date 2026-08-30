@@ -24,7 +24,7 @@ final class BuildInfo {
     static int anInt155;
     byte aByte156;
 
-    static final void method203(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    static final void decodedOperation203(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         anInt149++;
         int i_4_ = 0;
         if (i > -92) aClass227_151 = null;
@@ -60,9 +60,9 @@ final class BuildInfo {
         }
     }
 
-    static final void method204(int i) {
+    static final void decodedOperation204(int i) {
         anInt155++;
-        while (Component80.packetBuffer.method3415(-62, DefinitionSub25.anInt9341) >= 15) {
+        while (Component80.packetBuffer.decodedOperation3415(-62, DefinitionSub25.anInt9341) >= 15) {
             int i_18_ = Component80.packetBuffer.readBits((byte) -24, 15);
             if (i_18_ == 32767) break;
             boolean bool = false;
@@ -78,7 +78,7 @@ final class BuildInfo {
             Npc npc = (class348_sub22.npc);
             DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_18_;
             npc.anInt10306 = OggStreamReader.anInt9041;
-            if ((npc.definition) != null && npc.definition.method793(0)) Component298.method181(true, npc);
+            if ((npc.definition) != null && npc.definition.decodedOperation793(0)) Component298.decodedOperation181(true, npc);
             int i_19_ = Component80.packetBuffer.readBits((byte) -24, 2);
             int i_20_ = Component80.packetBuffer.readBits((byte) -24, 1);
             int i_21_ = Component80.packetBuffer.readBits((byte) -24, 5);
@@ -88,17 +88,17 @@ final class BuildInfo {
             int i_23_ = 0x3d01 & 4 + Component80.packetBuffer.readBits((byte) -24, 3) << 11;
             int i_24_ = Component80.packetBuffer.readBits((byte) -24, 1);
             if (i_24_ == 1) Component354.anIntArray224[DisplayModeManagerContainer204.anInt1597++] = i_18_;
-            npc.method2448((Component291.aClass278_2529.method2079(Component80.packetBuffer.readBits((byte) -24, 14), -1)), i ^ 0x2b297815);
-            npc.method2434((byte) 111, npc.definition.anInt1399);
+            npc.decodedOperation2448((Component291.aClass278_2529.decodedOperation2079(Component80.packetBuffer.readBits((byte) -24, 14), -1)), i ^ 0x2b297815);
+            npc.decodedOperation2434((byte) 111, npc.definition.anInt1399);
             npc.anInt10310 = (npc.definition.anInt1329) << 3;
-            if (bool) npc.method2435((byte) -108, i_23_, true);
-            npc.method2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.getSize((byte) 50), i_19_);
-            if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
+            if (bool) npc.decodedOperation2435((byte) -108, i_23_, true);
+            npc.decodedOperation2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.getSize((byte) 50), i_19_);
+            if (npc.definition.decodedOperation793(0)) DisplayModeManagerContainer369.decodedOperation1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
         }
         if (i == -724138005) Component80.packetBuffer.stopBitAccess(false);
     }
 
-    static final void method205(int i, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_) {
+    static final void decodedOperation205(int i, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_) {
         try {
             anInt147++;
             RenderableSub5 class318_sub5 = new RenderableSub5();
@@ -110,7 +110,7 @@ final class BuildInfo {
             class318_sub5.aString6416 = string;
             class318_sub5.anInt6415 = i_26_;
             class318_sub5.anInt6420 = i_27_;
-            Component241.aClass243_2957.method1869(-103, class318_sub5);
+            Component241.aClass243_2957.decodedOperation1869(-103, class318_sub5);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("go.F(" + i + ',' + i_25_ + ',' + i_26_ + ',' + (string != null ? "{...}" : "null") + ',' + i_27_ + ',' + i_28_ + ',' + i_29_ + ',' + i_30_ + ')'));
         }
@@ -371,7 +371,7 @@ final class BuildInfo {
      * Same pattern as {@link MicrobotPanel#pollInput}: unlink from
      * {@link Component327#aClass262_8744} after mouse drain, before
      * {@link DisplayModeManagerContainer1#updateMenuTip}. Event types 0/1/2 =
-     * left/middle/right press ({@link Component307#method3584}).
+     * left/middle/right press ({@link Component307#decodedOperation3584}).
      */
     static void pollConsoleInput() {
         consoleMouseOver = false;
@@ -453,8 +453,8 @@ final class BuildInfo {
                 int i_36_ = 0;
                 if (i < 113) aClass227_151 = null;
                 if (Component210.gameCanvasAttached) {
-                    i_35_ = BufferCacheSub3.method4008((byte) -127);
-                    i_36_ = Component110.method260(false);
+                    i_35_ = BufferCacheSub3.decodedOperation4008((byte) -127);
+                    i_36_ = Component110.decodedOperation260(false);
                 }
                 // Purple band: compact by default; expands to IME top when keyboard is up.
                 final int consoleH = consoleBandHeight();
@@ -464,7 +464,7 @@ final class BuildInfo {
                 final int promptH = consolePromptStripH();
                 var_ha.KA(i_35_, i_36_, Component236.canvasWidth + i_35_, i_36_ + consoleH);
                 var_ha.fillRect2D(i_35_, i_36_, Component236.canvasWidth, consoleH, 0x332277 | Component39.consoleFadeAlpha << 24, 1);
-                Component103.method2663(-5590, i_35_, Component236.canvasWidth + i_35_, i_36_, i_36_ + consoleH);
+                Component103.decodedOperation2663(-5590, i_35_, Component236.canvasWidth + i_35_, i_36_, i_36_ + consoleH);
                 int i_37_ = (consoleH - promptH) / cellPitch;
                 if (i_37_ < 1) {
                     i_37_ = 1;
@@ -488,12 +488,12 @@ final class BuildInfo {
                 }
                 Component49.aClass324_4684.drawTextRightAligned("Build: 634", consoleH + (i_36_ + -20), -1, (Component236.canvasWidth + i_35_ + -25), -121, -16777216);
                 var_ha.KA(i_35_, i_36_, i_35_ - -Component236.canvasWidth, i_36_ - -consoleH);
-                var_ha.method3649((byte) -80, Component236.canvasWidth, -promptH + (consoleH + i_36_), -1, i_35_);
+                var_ha.decodedOperation3649((byte) -80, Component236.canvasWidth, -promptH + (consoleH + i_36_), -1, i_35_);
                 NodeList.aClass324_3326.drawText("--> " + AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
                 if (!Component143.aBoolean2329) break;
                 int i_45_ = -1;
                 if (OpenGlShader.clientCycle % 30 > 15) i_45_ = 16777215;
-                var_ha.method3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput).substring(0, NodeSub38.consoleCursor))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
+                var_ha.decodedOperation3660(10 + (i_35_ - -(Component27.aClass143_4962.stringWidth(true, "--> " + (AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput).substring(0, NodeSub38.consoleCursor))))), i_45_, 12, consoleH + (i_36_ + -Component27.aClass143_4962.descent - 11), true);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("go.B(" + (var_ha != null ? "{...}" : "null") + ',' + i + ')'));
             }
@@ -501,8 +501,8 @@ final class BuildInfo {
         } while (false);
     }
 
-    public static void method208(byte i) {
-        if (i != 0) method204(29);
+    public static void decodedOperation208(byte i) {
+        if (i != 0) decodedOperation204(29);
         aClass227_151 = null;
     }
 

@@ -45,7 +45,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
     final int method2394(boolean bool) {
         anInt10157++;
         if (bool != true) aBoolean10153 = false;
-        return this.aClass235_10155.method1663(101);
+        return this.aClass235_10155.decodedOperation1663(101);
     }
 
     public final int method41(int i) {
@@ -54,20 +54,20 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return (this.aClass235_10155.anInt3052);
     }
 
-    public final boolean method38(int i) {
+    public final boolean decodedOperation38(int i) {
         anInt10162++;
         if (i != -18443) aBoolean10148 = false;
-        return this.aClass235_10155.method1665(i + 18445);
+        return this.aClass235_10155.decodedOperation1665(i + 18445);
     }
 
     public final void method44(int i, GraphicsToolkit var_ha) {
         if (i == 836) {
-            this.aClass235_10155.method1667((byte) 116, var_ha);
+            this.aClass235_10155.decodedOperation1667((byte) 116, var_ha);
             anInt10165++;
         }
     }
 
-    public final int method42(int i) {
+    public final int decodedOperation42(int i) {
         anInt10171++;
         if (i > -62) return 40;
         return (this.aClass235_10155.anInt3063);
@@ -80,9 +80,9 @@ final class ShaderLinker extends Component203 implements Interface10 {
         if (class64 != null) {
             int i_0_ = this.x >> 9;
             int i_1_ = this.y >> 9;
-            DisplayModeManagerContainer204 class101 = var_ha.method3705();
-            class101.method894(this.x, this.anInt6382, this.y);
-            this.aClass235_10155.method1670(i_0_, class101, i_1_, var_ha, i_0_, class64, false, (byte) -73, i_1_);
+            DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+            class101.decodedOperation894(this.x, this.anInt6382, this.y);
+            this.aClass235_10155.decodedOperation1670(i_0_, class101, i_1_, var_ha, i_0_, class64, false, (byte) -73, i_1_);
         }
     }
 
@@ -102,22 +102,22 @@ final class ShaderLinker extends Component203 implements Interface10 {
         anInt10159++;
         DisplayModeManagerContainer370 class64 = this.aClass235_10155.method1668(false, true, -127, 2048, var_ha);
         if (class64 == null) return null;
-        DisplayModeManagerContainer204 class101 = var_ha.method3705();
-        class101.method894((this.x + this.aShort8781), this.anInt6382, (this.y + this.aShort8769));
-        RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10153, false);
+        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+        class101.decodedOperation894((this.x + this.aShort8781), this.anInt6382, (this.y + this.aShort8769));
+        RenderableSub4 class318_sub4 = OutputStream_Sub2.decodedOperation136(i, aBoolean10153, false);
         int i_3_ = this.x >> 9;
         int i_4_ = this.y >> 9;
-        this.aClass235_10155.method1670(i_3_, class101, i_4_, var_ha, i_3_, class64, true, (byte) -73, i_4_);
+        this.aClass235_10155.decodedOperation1670(i_3_, class101, i_4_, var_ha, i_3_, class64, true, (byte) -73, i_4_);
         if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
-        else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
+        else class64.decodedOperation608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if ((this.aClass235_10155.aClass318_Sub10_3081) != null) {
-            Component122 class98 = this.aClass235_10155.aClass318_Sub10_3081.method2525();
+            Component122 class98 = this.aClass235_10155.aClass318_Sub10_3081.decodedOperation2525();
             if (!DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModel(class98);
             else var_ha.renderModelEx(class98, Component72.anInt1906);
         }
         aBoolean10148 = class64.F() || (this.aClass235_10155.aClass318_Sub10_3081) != null;
-        if (aClass30_10150 == null) aClass30_10150 = (OggUrlStream.method2967(this.x, class64, this.y, this.anInt6382, 2));
-        else ItemDefinitionProvider.method1935(this.y, this.anInt6382, aClass30_10150, class64, false, this.x);
+        if (aClass30_10150 == null) aClass30_10150 = (OggUrlStream.decodedOperation2967(this.x, class64, this.y, this.anInt6382, 2));
+        else ItemDefinitionProvider.decodedOperation1935(this.y, this.anInt6382, aClass30_10150, class64, false, this.x);
         return class318_sub4;
     }
 
@@ -133,7 +133,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         return aBoolean10148;
     }
 
-    public static void method2492(int i) {
+    public static void decodedOperation2492(int i) {
         if (i != 1) anInt10163 = -36;
         aClass114_10149 = null;
         aClass114_10168 = null;
@@ -155,8 +155,8 @@ final class ShaderLinker extends Component203 implements Interface10 {
         DisplayModeManagerContainer370 class64 = this.aClass235_10155.method1668(false, false, -128, 131072, var_ha);
         if (class64 == null) return false;
         if (i_15_ != 0) return true;
-        DisplayModeManagerContainer204 class101 = var_ha.method3705();
-        class101.method894((this.aShort8781 + this.x), this.anInt6382, (this.aShort8769 + this.y));
+        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
+        class101.decodedOperation894((this.aShort8781 + this.x), this.anInt6382, (this.aShort8769 + this.y));
         if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_14_, i, class101, false, 0, Component72.anInt1906);
         return class64.isInFrustumExtended(i_14_, i, class101, false, 0);
     }
@@ -197,7 +197,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
     final int method2379(int i) {
         anInt10160++;
         if (i != -25675) aBoolean10153 = false;
-        return this.aClass235_10155.method1664(-119);
+        return this.aClass235_10155.decodedOperation1664(-119);
     }
 
     public final void method40(int i) {

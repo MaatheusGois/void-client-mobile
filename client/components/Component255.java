@@ -20,7 +20,7 @@ final class Component255
     static int anInt1066;
     static int anInt1067;
 
-    static final int method532(int i, int i_0_, boolean bool, int i_1_) {
+    static final int decodedOperation532(int i, int i_0_, boolean bool, int i_1_) {
         anInt1061++;
         NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -120, i_0_, bool);
         if (class348_sub13 == null) return 0;
@@ -39,17 +39,17 @@ final class Component255
         int i_5_ = 0 % ((28 - i) / 59);
     }
 
-    private final int method534(byte i, int i_6_) {
+    private final int decodedOperation534(byte i, int i_6_) {
         anInt1065++;
         if (i != 0) return -115;
         return (int) (aLong1057 >> ColoredTextBuilder.anInt4081 * i_6_) & 0xf;
     }
 
-    static final void method535(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, byte i_12_) {
+    static final void decodedOperation535(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, byte i_12_) {
         anInt1062++;
         int i_13_ = LogicError.clamp(PauseTimer.anInt513, i_11_, Component72.anInt1910, 111);
         int i_14_ = LogicError.clamp(PauseTimer.anInt513, i_7_, Component72.anInt1910, -104);
-        if (i_12_ >= -62) method535(80, -63, -10, 41, -65, 39, (byte) -89);
+        if (i_12_ >= -62) decodedOperation535(80, -63, -10, 41, -65, 39, (byte) -89);
         int i_15_ = LogicError.clamp(Component22.anInt1745, i, Component27.anInt4960, -79);
         int i_16_ = LogicError.clamp(Component22.anInt1745, i_9_, Component27.anInt4960, 92);
         int i_17_ = LogicError.clamp(PauseTimer.anInt513, i_11_ + i_8_, Component72.anInt1910, 32);
@@ -77,23 +77,23 @@ final class Component255
             method533(class325s[i], 92);
     }
 
-    static final boolean method536(int i, boolean bool, int i_24_, int i_25_, int i_26_) {
-        if (bool != false) method536(-65, true, 105, -126, 39);
+    static final boolean decodedOperation536(int i, boolean bool, int i_24_, int i_25_, int i_26_) {
+        if (bool != false) decodedOperation536(-65, true, 105, -126, 39);
         anInt1066++;
         if ((ObjectDeserializer.aByteArrayArrayArray6962[0][i_24_][i] & 0x2) != 0) return true;
         if ((0x10 & ObjectDeserializer.aByteArrayArrayArray6962[i_26_][i_24_][i]) != 0) return false;
         return i_25_ == Component98.getEffectivePlane(-55, i_26_, i, i_24_);
     }
 
-    final ColoredTextBuilder method537(int i, int i_27_) {
+    final ColoredTextBuilder decodedOperation537(int i, int i_27_) {
         anInt1060++;
         int i_28_ = 4 % ((-35 - i_27_) / 53);
-        return ColoredTextBuilder.method2598(method534((byte) 0, i), -109);
+        return ColoredTextBuilder.decodedOperation2598(decodedOperation534((byte) 0, i), -109);
     }
 
-    final int method538(byte i) {
+    final int decodedOperation538(byte i) {
         anInt1056++;
-        if (i >= -114) method538((byte) 105);
+        if (i >= -114) decodedOperation538((byte) 105);
         return anInt1058;
     }
 }

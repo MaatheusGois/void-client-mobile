@@ -24,7 +24,7 @@ final class Component128
         if (i != -1) beginDisplayList((byte) -56, 72);
     }
 
-    static final int method592(boolean bool, byte i, boolean bool_0_, int i_1_, int i_2_) {
+    static final int decodedOperation592(boolean bool, byte i, boolean bool_0_, int i_1_, int i_2_) {
         anInt1105++;
         if (i != -128) return -20;
         NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -1, i_1_, bool_0_);
@@ -33,7 +33,7 @@ final class Component128
         for (int i_4_ = 0; (class348_sub13.itemIds.length > i_4_); i_4_++) {
             if (class348_sub13.itemIds[i_4_] >= 0 && (Exception_Sub1.itemDefinitions.itemCount > class348_sub13.itemIds[i_4_])) {
                 ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(-127, (class348_sub13.itemIds[i_4_])));
-                int i_5_ = class213.method1567((MatrixSub3.aClass326_5764.method2600(i_2_, 28364).anInt3256), 107, i_2_);
+                int i_5_ = class213.decodedOperation1567((MatrixSub3.aClass326_5764.decodedOperation2600(i_2_, 28364).anInt3256), 107, i_2_);
                 if (!bool) i_3_ += i_5_;
                 else i_3_ += i_5_ * (class348_sub13.amounts[i_4_]);
             }

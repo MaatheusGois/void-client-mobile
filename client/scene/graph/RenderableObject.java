@@ -40,12 +40,12 @@ abstract class RenderableObject extends Renderable {
 
     abstract boolean method2382(byte i);
 
-    static final void method2383(GraphicsToolkit var_ha, int i, DisplayModeManagerContainer57 class46) {
+    static final void decodedOperation2383(GraphicsToolkit var_ha, int i, DisplayModeManagerContainer57 class46) {
         do {
             try {
-                if (i != -2) method2383(null, -63, null);
+                if (i != -2) decodedOperation2383(null, -63, null);
                 anInt6385++;
-                boolean bool = ((Exception_Sub1.itemDefinitions.method1941(class46.outline, (byte) -74, class46.itemId, class46.itemAmount, ~0xffffff | class46.shadowColour, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
+                boolean bool = ((Exception_Sub1.itemDefinitions.decodedOperation1941(class46.outline, (byte) -74, class46.itemId, class46.itemAmount, ~0xffffff | class46.shadowColour, class46.anInt678, var_ha, (!class46.aBoolean720 ? null : (Component72.localPlayer.appearance)))) == null);
                 if (!bool) break;
                 Component305.aClass262_9931.addTail(new NodeSub7(class46.itemId, class46.itemAmount, class46.outline, (~0xffffff | class46.shadowColour), class46.anInt678, class46.aBoolean720), i ^ 0x4ed2);
                 Component111.markInterfaceDirty(-9343, class46);
@@ -58,13 +58,13 @@ abstract class RenderableObject extends Renderable {
 
     abstract int method2384(NodeSub1[] class348_sub1s, int i);
 
-    static final void method2385(DisplayModeManagerContainer57 class46, int i, Shader var_aa, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, GraphicsToolkit var_ha) {
+    static final void decodedOperation2385(DisplayModeManagerContainer57 class46, int i, Shader var_aa, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, GraphicsToolkit var_ha) {
         do {
             try {
                 anInt6390++;
-                Component274 class42 = DisplayModeManagerContainer64.aClass153_9031.method1225(i_4_, (byte) 98);
+                Component274 class42 = DisplayModeManagerContainer64.aClass153_9031.decodedOperation1225(i_4_, (byte) 98);
                 if (i_7_ < -52) {
-                    if (class42 == null || !class42.aBoolean569 || !class42.method373((DisplayModeManagerContainer58.aClass170_10209), 69)) break;
+                    if (class42 == null || !class42.aBoolean569 || !class42.decodedOperation373((DisplayModeManagerContainer58.aClass170_10209), 69)) break;
                     if (class42.anIntArray591 != null) {
                         int[] is = (new int
                                 [class42.anIntArray591.length]);
@@ -81,7 +81,7 @@ abstract class RenderableObject extends Renderable {
                             is[i_9_ * 2] = (((i_11_ * (((class42.anIntArray591[i_9_ * 2 - -1]) * 4) + i_8_) + (i_5_ - -(4 * (class42.anIntArray591[2 * i_9_]))) * i_12_) >> 14) + (i_6_ - -(class46.width / 2)));
                             is[i_9_ * 2 - -1] = (-((((class42.anIntArray591[1 + i_9_ * 2]) * 4 + i_8_) * i_12_ - (i_5_ - -((class42.anIntArray591[i_9_ * 2]) * 4)) * i_11_) >> 14) + i + class46.height / 2);
                         }
-                        Component68.method2619(var_ha, is, class42.anInt582, class46.anIntArray677, class46.anIntArray772);
+                        Component68.decodedOperation2619(var_ha, is, class42.anInt582, class46.anIntArray677, class46.anIntArray772);
                         if (class42.anInt584 > 0) {
                             for (int i_13_ = 0; (i_13_ < -1 + is.length / 2); i_13_++) {
                                 int i_14_ = is[i_13_ * 2];
@@ -129,12 +129,12 @@ abstract class RenderableObject extends Renderable {
                     }
                     Component24 class105 = null;
                     if (class42.anInt578 != -1) {
-                        class105 = class42.method374(false, var_ha, (byte) 127);
-                        if (class105 != null) DisplayModeManagerContainer346.method1211(i, class105, i_6_, class46, var_aa, i_8_, 2, i_5_);
+                        class105 = class42.decodedOperation374(false, var_ha, (byte) 127);
+                        if (class105 != null) DisplayModeManagerContainer346.decodedOperation1211(i, class105, i_6_, class46, var_aa, i_8_, 2, i_5_);
                     }
                     if (class42.aString597 == null) break;
                     int i_29_ = 0;
-                    if (class105 != null) i_29_ = class105.method969();
+                    if (class105 != null) i_29_ = class105.decodedOperation969();
                     BitmapFont class324 = Component49.aClass324_4684;
                     Component184 class143 = AbstractGlTextureSub1.aClass143_8527;
                     if (class42.anInt576 == 1) {
@@ -145,7 +145,7 @@ abstract class RenderableObject extends Renderable {
                         class143 = Component27.aClass143_4962;
                         class324 = NodeList.aClass324_3326;
                     }
-                    NativeLibLoader.method2650(class143, class42.anInt580, var_aa, i_8_, i_6_, class42.aString597, i, class324, i_29_, class46, i_5_, 100);
+                    NativeLibLoader.decodedOperation2650(class143, class42.anInt580, var_aa, i_8_, i_6_, class42.aString597, i, class324, i_29_, class46, i_5_, 100);
                 }
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("ga.KA(" + (class46 != null ? "{...}" : "null") + ',' + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + (var_ha != null ? "{...}" : "null") + ')'));
@@ -158,14 +158,14 @@ abstract class RenderableObject extends Renderable {
 
     abstract void method2387(GraphicsToolkit var_ha, int i);
 
-    abstract boolean method2388(int i);
+    abstract boolean decodedOperation2388(int i);
 
-    public static void method2389(int i) {
+    public static void decodedOperation2389(int i) {
         aClass114_6383 = null;
         if (i != 1) aClass114_6383 = null;
     }
 
-    final int method2390(NodeSub1[] class348_sub1s, int i, int i_30_, int i_31_) {
+    final int decodedOperation2390(NodeSub1[] class348_sub1s, int i, int i_30_, int i_31_) {
         anInt6384++;
         if (i_30_ != -2) this.aByte6376 = (byte) 33;
         long l = (PacketReader.aLongArrayArrayArray10431[this.plane][i][i_31_]);
@@ -190,7 +190,7 @@ abstract class RenderableObject extends Renderable {
     }
 
     int method2393(int i) {
-        if (i >= -109) method2385(null, 23, null, -94, -53, 18, (byte) -3, 35, null);
+        if (i >= -109) decodedOperation2385(null, 23, null, -94, -53, 18, (byte) -3, 35, null);
         anInt6378++;
         return 0;
     }
