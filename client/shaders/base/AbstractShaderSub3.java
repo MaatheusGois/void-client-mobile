@@ -34,7 +34,7 @@ final class AbstractShaderSub3
 
     final void method3527(int i, Interface18 interface18, int i_1_) {
         if (i_1_ != -16776) aClass114_7301 = null;
-        this.aHa_Sub3_4479.method3850((byte) -105, interface18);
+        this.aHa_Sub3_4479.setActiveTexture((byte) -105, interface18);
         anInt7300++;
         this.aHa_Sub3_4479.method3923(true, i);
     }

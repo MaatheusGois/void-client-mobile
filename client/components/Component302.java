@@ -33,8 +33,8 @@ final class Component302
     final int method1714(int i, int i_1_) {
         anInt6034++;
         if (i != 3) return -46;
-        if (this.aClass348_Sub51_3136.method3425(-62)) return 3;
-        if (i_1_ == 0 || this.aClass348_Sub51_3136.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
+        if (this.preferences.method3425(-62)) return 3;
+        if (i_1_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
         return 2;
     }
 
@@ -47,21 +47,21 @@ final class Component302
     final int method1800(int i) {
         anInt6031++;
         if (i != -32350) anIntArray6035 = null;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final void method1716(boolean bool) {
         anInt6036++;
         if (bool == false) {
-            if (this.aClass348_Sub51_3136.method3425(-94)) this.anInt3138 = 0;
-            if (this.anInt3138 < 0 && this.anInt3138 > 2) this.anInt3138 = method1710(20014);
+            if (this.preferences.method3425(-94)) this.preferenceValue = 0;
+            if (this.preferenceValue < 0 && this.preferenceValue > 2) this.preferenceValue = method1710(20014);
         }
     }
 
     final boolean method1801(int i) {
         if (i <= 85) method1800(90);
         anInt6037++;
-        return !this.aClass348_Sub51_3136.method3425(-70);
+        return !this.preferences.method3425(-70);
     }
 
     static final void method1802(int i) throws IOException {
@@ -85,7 +85,7 @@ final class Component302
     }
 
     final void method1712(int i, int i_3_) {
-        this.anInt3138 = i_3_;
+        this.preferenceValue = i_3_;
         anInt6032++;
         int i_4_ = 65 / ((82 - i) / 35);
     }

@@ -65,7 +65,7 @@ final class Component66
 
     final void method1712(int i, int i_8_) {
         int i_9_ = -117 % ((82 - i) / 35);
-        this.anInt3138 = i_8_;
+        this.preferenceValue = i_8_;
         anInt6025++;
     }
 
@@ -77,7 +77,7 @@ final class Component66
 
     final void method1716(boolean bool) {
         if (bool != false) method1793(null, 50, -30, -126);
-        if (this.anInt3138 < 0 && this.anInt3138 > 4) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 && this.preferenceValue > 4) this.preferenceValue = method1710(20014);
         anInt6024++;
     }
 
@@ -163,13 +163,13 @@ final class Component66
     final int method1798(int i) {
         anInt6028++;
         if (i != -32350) return 61;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final int method1710(int i) {
         if (i != 20014) aClass273_6018 = null;
         anInt6027++;
-        if (this.aClass348_Sub51_3136.method3428((byte) -96).method1462(-113) > 1) return 4;
+        if (this.preferences.method3428((byte) -96).method1462(-113) > 1) return 4;
         return 2;
     }
 }

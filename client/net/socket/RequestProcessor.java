@@ -59,11 +59,11 @@ final class RequestProcessor implements Runnable {
 
     static final void method1301(r var_r, int i, int i_0_, int i_1_, boolean[] bools) {
         if (ShaderSub1.aSArray5191 != Component9.aSArray4142) {
-            int i_2_ = NodeSub1Sub1.aSArray8801[i].method3986(i_0_, i_1_, (byte) -93);
+            int i_2_ = NodeSub1Sub1.aSArray8801[i].getInterpolatedHeight(i_0_, i_1_, (byte) -93);
             for (int i_3_ = 0; i_3_ <= i; i_3_++) {
                 if (bools == null || bools[i_3_]) {
                     s var_s = NodeSub1Sub1.aSArray8801[i_3_];
-                    if (var_s != null) var_s.Interface4Impl(var_r, i_0_, i_2_ - var_s.method3986(i_0_, i_1_, (byte) -103), i_1_, 0, false);
+                    if (var_s != null) var_s.Interface4Impl(var_r, i_0_, i_2_ - var_s.getInterpolatedHeight(i_0_, i_1_, (byte) -103), i_1_, 0, false);
                 }
             }
         }

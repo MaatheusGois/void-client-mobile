@@ -2,16 +2,21 @@
  * Visit http://jode.sourceforge.net/
  */
 
-abstract class Component339
 /**
- * RENAMED from `Class239` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
+ * Base class for a single client preference option (RENAMED from `Class239`).
+ * Subclasses ({@code Component20}, {@code Component25}, …) clamp
+ * {@link #preferenceValue} to their legal range and read/write via
+ * {@link #method1710}/{@link #method1712}/{@link #method1716}.
+ * Held by {@link NodeSub51} (preferences root).
+ */
+abstract class Component339 {
     static int anInt3134;
     static Component183 aClass114_3135 = new Component183(108, 5);
-    NodeSub51 aClass348_Sub51_3136;
+    /** Owning preferences bag ({@link NodeSub51}). */
+    NodeSub51 preferences;
     static int anInt3137;
-    int anInt3138;
+    /** Current discrete option value (range depends on subclass). */
+    int preferenceValue;
     static int anInt3139;
     static int anInt3140;
     static int anInt3141;
@@ -66,8 +71,8 @@ abstract class Component339
     abstract void method1716(boolean bool);
 
     Component339(NodeSub51 class348_sub51) {
-        this.aClass348_Sub51_3136 = class348_sub51;
-        this.anInt3138 = method1710(20014);
+        this.preferences = class348_sub51;
+        this.preferenceValue = method1710(20014);
     }
 
     static final void method1717(int i, int i_4_, int i_5_, int i_6_) {
@@ -77,8 +82,8 @@ abstract class Component339
     }
 
     Component339(int i, NodeSub51 class348_sub51) {
-        this.aClass348_Sub51_3136 = class348_sub51;
-        this.anInt3138 = i;
+        this.preferences = class348_sub51;
+        this.preferenceValue = i;
     }
 
     final void method1718(int i, int i_7_) {

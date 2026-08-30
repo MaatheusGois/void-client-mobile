@@ -471,7 +471,7 @@ abstract class GlToolkitSub3
                 } else method3879(-8629);
                 method3875(i_23_, bool_20_, bool, i_25_, i_24_, -103);
                 if (aClass367_8143 == null) {
-                    method3850((byte) -86, interface18_impl3);
+                    setActiveTexture((byte) -86, interface18_impl3);
                     method3923(true, i_22_);
                 } else aClass367_8143.method3527(i_22_, interface18_impl3, -16776);
                 aBoolean8153 = this.aBoolean8160;
@@ -957,7 +957,7 @@ abstract class GlToolkitSub3
         method3903(false);
         anInt8017++;
         method3894(-28186, mode);
-        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(113, colour);
         this.aClass101_Sub2_8074.method932(1.0F, (float) height, (float) width, (byte) -22);
@@ -967,7 +967,7 @@ abstract class GlToolkitSub3
         method3933(-70);
         method3926((byte) 83, true);
         method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
-        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     private final void method3845(byte i) {
@@ -1012,7 +1012,11 @@ abstract class GlToolkitSub3
         return (this.aClass101_Sub2Array8131[this.anInt8175]);
     }
 
-    final void method3849(byte i, int i_76_, DisplayModeManagerContainer88 class70) {
+    /**
+     * Sets the texture-environment / combine mode for unit {@code i_76_} to
+     * {@code class70} (e.g. replace vs disable). Thin wrapper over {@code method3924}.
+     */
+    final void setTextureCombineMode(byte i, int i_76_, DisplayModeManagerContainer88 class70) {
         try {
             if (i != 47) this.aFloat8087 = -0.68323714F;
             anInt8036++;
@@ -1034,7 +1038,7 @@ abstract class GlToolkitSub3
         if (method3878((float) i_77_, 0, (float) i_78_ + f, 0.0F, f_82_ + (float) i_79_, 0.0F, (float) i)) {
             method3903(false);
             method3894(-28186, i_80_);
-            method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+            setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
             method3885(0, true, DefinitionSub39.aClass70_9485);
             method3817(112, i_81_);
             method3942(5);
@@ -1042,11 +1046,15 @@ abstract class GlToolkitSub3
             method3907(true);
             method3926((byte) 48, true);
             method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
-            method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         }
     }
 
-    final void method3850(byte i, Interface18 interface18) {
+    /**
+     * Binds {@code interface18} as the active texture on the current unit
+     * ({@code anInt8175}); clears the unit when {@code null}. Dirties tex state bit 0.
+     */
+    final void setActiveTexture(byte i, Interface18 interface18) {
         try {
             if (anInterface18Array8098[this.anInt8175] != interface18) {
                 anInterface18Array8098[this.anInt8175] = interface18;
@@ -1072,10 +1080,10 @@ abstract class GlToolkitSub3
             ShaderSub2 var_aa_Sub2 = (ShaderSub2) var_aa;
             Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
             method3864(81);
-            method3850((byte) -47, interface18_impl3);
+            setActiveTexture((byte) -47, interface18_impl3);
             method3817(99, 1);
             method3874(ShaderCompilerSub3.aClass229_6519, 114, ShaderCompilerSub3.aClass229_6519);
-            method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+            setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
             method3894(-28186, i);
             this.aClass101_Sub2_8074.method932(0.0F, (float) this.anInt7962, (float) this.anInt7931, (byte) -52);
             method3915(0);
@@ -1085,7 +1093,7 @@ abstract class GlToolkitSub3
             method3905((byte) 127);
             method3933(-127);
             method3879(-8629);
-            method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("wga.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_85_ + ',' + i_86_ + ')'));
         }
@@ -1421,7 +1429,7 @@ abstract class GlToolkitSub3
         anInt8026++;
         method3903(false);
         method3894(-28186, i_136_);
-        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(83, i_137_);
         this.aClass101_Sub2_8074.method932(1.0F, (float) i_135_, (float) i_135_, (byte) -75);
@@ -1433,7 +1441,7 @@ abstract class GlToolkitSub3
         method3899(256, 0, HashNodeSub16.aClass21_9661, true);
         method3926((byte) 41, true);
         method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
-        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     final int i() {
@@ -1800,7 +1808,7 @@ abstract class GlToolkitSub3
             method3946(-32, false);
             method3814(false, false, -2, (byte) 112);
             method3923(!bool, 1);
-            method3850((byte) -47, this.anInterface18_8147);
+            setActiveTexture((byte) -47, this.anInterface18_8147);
             anInt8100 = 1;
         }
         if (bool != false) EA(-102, -47, -121, -51);
@@ -2224,7 +2232,7 @@ abstract class GlToolkitSub3
         } else f = 1.0F;
         method3903(false);
         method3894(-28186, i_236_);
-        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(94, i_237_);
         method3942(5);
@@ -2271,7 +2279,7 @@ abstract class GlToolkitSub3
         }
         method3926((byte) 88, true);
         method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
-        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     final void pa() {
@@ -2469,7 +2477,7 @@ abstract class GlToolkitSub3
         float f = method3858(false);
         method3903(false);
         method3894(-28186, i_271_);
-        method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         method3885(0, true, DefinitionSub39.aClass70_9485);
         method3817(89, i_272_);
         this.aClass101_Sub2_8074.method932(1.0F, (float) (-1 + i_270_), (float) (i_269_ - 1), (byte) -33);
@@ -2479,7 +2487,7 @@ abstract class GlToolkitSub3
         method3860(GlWaterShader.aClass21_8832, 4, 8);
         method3926((byte) 104, true);
         method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
-        method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     final MatrixSub2 method3934(int i) {

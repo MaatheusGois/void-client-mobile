@@ -52,7 +52,7 @@ final class RadixText extends Component339 {
 
     final void method1716(boolean bool) {
         if (bool != false) occluderCountA = 87;
-        if (this.anInt3138 < 0 && this.anInt3138 > 127) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 && this.preferenceValue > 127) this.preferenceValue = method1710(20014);
         anInt6117++;
     }
 
@@ -114,7 +114,7 @@ final class RadixText extends Component339 {
     final void method1712(int i, int i_16_) {
         int i_17_ = 63 % ((i - 82) / 35);
         anInt6119++;
-        this.anInt3138 = i_16_;
+        this.preferenceValue = i_16_;
     }
 
     RadixText(NodeSub51 class348_sub51) {
@@ -124,7 +124,7 @@ final class RadixText extends Component339 {
     final int method1838(int i) {
         if (i != -32350) parseIntRadix(89, 103, false, null);
         anInt6123++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     static {

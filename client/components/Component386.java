@@ -48,7 +48,7 @@ final class Component386
             Component162.anInt8387 = 0;
         } else {
             if (i != (~(class318_sub1_sub3_sub3.anInt10286)) && (class318_sub1_sub3_sub3.anInt10218) == 0) {
-                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835((class318_sub1_sub3_sub3.anInt10286), i + 7));
+                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence((class318_sub1_sub3_sub3.anInt10286), i + 7));
                 if ((class318_sub1_sub3_sub3.anInt10322) > 0 && class17.anInt262 == 0) {
                     Component366.anInt3062 = -1;
                     Component162.anInt8387 = 0;
@@ -65,7 +65,7 @@ final class Component386
             if (class318_sub1_sub3_sub3.anInt10269 != -1 && (class318_sub1_sub3_sub3.anInt10225) <= OpenGlShader.clientCycle) {
                 Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 118, (class318_sub1_sub3_sub3.anInt10269)));
                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7);
                     if ((class318_sub1_sub3_sub3.anInt10322) > 0 && class17.anInt262 == 0) {
                         Component162.anInt8387 = 0;
                         class318_sub1_sub3_sub3.anInt10326++;
@@ -83,7 +83,7 @@ final class Component386
             if (class318_sub1_sub3_sub3.anInt10269 != -1 && ((class318_sub1_sub3_sub3.anInt10225) <= OpenGlShader.clientCycle)) {
                 Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 98, (class318_sub1_sub3_sub3.anInt10269)));
                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835((class368.anInt4503), i ^ 0x7);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence((class368.anInt4503), i ^ 0x7);
                     if ((class318_sub1_sub3_sub3.anInt10322) > 0 && class17.anInt262 == 0) {
                         Component162.anInt8387 = 0;
                         class318_sub1_sub3_sub3.anInt10326++;

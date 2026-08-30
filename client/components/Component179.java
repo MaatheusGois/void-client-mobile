@@ -124,7 +124,7 @@ final class Component179
     static final void method2988(boolean bool) {
         NodeCache.aHa1098.DualToolkit(((float) Component192.aClass348_Sub51_3959.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * Component214.aFloat2137);
         anInt9049++;
-        NodeCache.aHa1098.ZA(DisplayModeManagerContainer96.anInt4703, ModelStore.aFloat4626, TeleportHandler.aFloat4455, (float) (Component158.anInt325 << 2), (float) (Component349.anInt10023 << 2), (float) (Component169.anInt2601 << 2));
+        NodeCache.aHa1098.ZA(DisplayModeManagerContainer96.anInt4703, ModelStore.aFloat4626, CollisionMap.aFloat4455, (float) (Component158.anInt325 << 2), (float) (Component349.anInt10023 << 2), (float) (Component169.anInt2601 << 2));
         NodeCache.aHa1098.method3653(HeapDumpHelper.aClass299_4938);
         if (bool != true) anIntArray9050 = null;
     }

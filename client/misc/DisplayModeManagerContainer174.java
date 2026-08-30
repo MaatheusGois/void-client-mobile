@@ -299,7 +299,7 @@ final class DisplayModeManagerContainer174
         this.anInt10411 = i_27_;
         anInt10387 = i_31_;
         int i_35_ = (NsnDefinition.aClass319_9245.method2543((byte) 72, anInt10391).anInt4503);
-        if (i_35_ != -1) aClass17_10375 = RunescapeInfo.aClass87_191.method835(i_35_, 7);
+        if (i_35_ != -1) aClass17_10375 = RunescapeInfo.aClass87_191.getSequence(i_35_, 7);
         else aClass17_10375 = null;
     }
 

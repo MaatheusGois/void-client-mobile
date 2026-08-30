@@ -22,6 +22,7 @@ public final class AwtHost {
     }
 
     public static void speak(String text, boolean female) {
+        // DISABLED 2026-08-30 with DialogueTts.ENABLED=false — TTS froze the client.
         SpeechHandler handler = speechHandler;
         if (handler != null) handler.speak(text, female);
     }

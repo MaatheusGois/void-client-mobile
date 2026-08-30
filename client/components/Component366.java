@@ -100,7 +100,7 @@ final class Component366
             aClass64_3059 = null;
             if (aClass17_3057 != null && i_1_ == aClass17_3057.anInt269) {
                 if (aClass17_3057.anInt248 == 0) return;
-            } else aClass17_3057 = RunescapeInfo.aClass87_191.method835(i_1_, i + -62);
+            } else aClass17_3057 = RunescapeInfo.aClass87_191.getSequence(i_1_, i + -62);
             if (aClass17_3057.anIntArray237 == null) aClass17_3057 = null;
             else {
                 if (bool) {
@@ -161,7 +161,7 @@ final class Component366
         if (aClass17_3057 == null) {
             if (aClass64_3059 == null || i_4_ != (i_4_ & aClass64_3059.ua()) || (anInt3053 != class51.anInt941)) {
                 if (aClass64_3059 != null) i_4_ |= aClass64_3059.ua();
-                Component245 class2 = (class51.method476(var_ha, var_s_5_, (this.anInt3079 != 11 ? this.anInt3079 : 10), i_4_, aClass318_Sub1_3051.x, bool_3_, var_s, var_s.method3986((aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), (byte) -114), aClass318_Sub1_3051.y, (this.anInt3079 == 11 ? 4 + this.anInt3052 : this.anInt3052), 128));
+                Component245 class2 = (class51.method476(var_ha, var_s_5_, (this.anInt3079 != 11 ? this.anInt3079 : 10), i_4_, aClass318_Sub1_3051.x, bool_3_, var_s, var_s.getInterpolatedHeight((aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), (byte) -114), aClass318_Sub1_3051.y, (this.anInt3079 == 11 ? 4 + this.anInt3052 : this.anInt3052), 128));
                 if (class2 == null) {
                     anInt3055 = 0;
                     aBooleanArray3072 = null;
@@ -183,7 +183,7 @@ final class Component366
             } else class64 = aClass64_3059;
         } else {
             if (bool_3_) i_4_ |= 0x40000;
-            class64 = (class51.method483(anInt3083, anInt3054, (this.anInt3079 == 11 ? 10 : this.anInt3079), var_s.method3986((aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), (byte) -2), var_ha, (this.anInt3079 == 11 ? this.anInt3052 + 4 : this.anInt3052), i_4_, (byte) 76, var_s_5_, aClass318_Sub1_3051.y, anInt3084, aClass318_Sub1_3051.x, aClass17_3057, var_s));
+            class64 = (class51.method483(anInt3083, anInt3054, (this.anInt3079 == 11 ? 10 : this.anInt3079), var_s.getInterpolatedHeight((aClass318_Sub1_3051.x), (aClass318_Sub1_3051.y), (byte) -2), var_ha, (this.anInt3079 == 11 ? this.anInt3052 + 4 : this.anInt3052), i_4_, (byte) 76, var_s_5_, aClass318_Sub1_3051.y, anInt3084, aClass318_Sub1_3051.x, aClass17_3057, var_s));
             if (class64 == null) {
                 anInt3055 = 0;
                 aBooleanArray3072 = null;

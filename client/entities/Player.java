@@ -307,17 +307,17 @@ final class Player extends DisplayModeManagerContainer58 {
     final void method2455(int i, int i_50_, byte i_51_, int i_52_) {
         anInt10529++;
         if (i_50_ != -26443) advanceMovement((byte) -35, 9, 26, 87);
-        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
+        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7).anInt245 == 1) {
             this.anInt10286 = -1;
             this.anIntArray10236 = null;
         }
         if (this.anInt10269 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 59, this.anInt10269));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && RunescapeInfo.aClass87_191.method835((class368.anInt4503), i_50_ ^ ~0x674d).anInt245 == 1) this.anInt10269 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && RunescapeInfo.aClass87_191.getSequence((class368.anInt4503), i_50_ ^ ~0x674d).anInt245 == 1) this.anInt10269 = -1;
         }
         if (this.anInt10291 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 124, this.anInt10291));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
         }
         this.anInt10524 = -1;
         if (i_52_ >= 0 && AbstractShaderSub4.anInt7319 > i_52_ && i >= 0 && ParametricDefinition.anInt9109 > i) {
@@ -346,8 +346,8 @@ final class Player extends DisplayModeManagerContainer58 {
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1) {
             Component241 class225 = this.getDefinition((byte) 72);
             if (class225.aBoolean2913 && (this.appearance.anInt2093 == -1 || Component291.aClass278_2529.method2079(this.appearance.anInt2093, i + -2).aBoolean1369)) {
-                DisplayModeManagerContainer167 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (RunescapeInfo.aClass87_191.method835(this.anInt10286, 7)) : null);
-                DisplayModeManagerContainer167 class17_55_ = ((this.anInt10268 == -1 || this.aBoolean10521 || (this.aBoolean10213 && class17 != null)) ? null : (RunescapeInfo.aClass87_191.method835(this.anInt10268, 7)));
+                DisplayModeManagerContainer167 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7)) : null);
+                DisplayModeManagerContainer167 class17_55_ = ((this.anInt10268 == -1 || this.aBoolean10521 || (this.aBoolean10213 && class17 != null)) ? null : (RunescapeInfo.aClass87_191.getSequence(this.anInt10268, 7)));
                 DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_53_, this.aClass64Array10323[0], this.anInt10208, false, (class17_55_ == null ? this.anInt10267 : this.anInt10245), 0, 1, this.anInt10252, var_ha, 160, 0, 240, class17_55_ == null ? class17 : class17_55_));
                 if (class64 != null) {
                     class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, true, false));
@@ -482,8 +482,8 @@ final class Player extends DisplayModeManagerContainer58 {
         anInt10525++;
         int i_70_ = i;
         Component241 class225 = this.getDefinition((byte) 72);
-        DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
-        DisplayModeManagerContainer167 class17_71_ = ((this.anInt10268 != -1 && !this.aBoolean10521 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.method835(this.anInt10268, 7) : null);
+        DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7));
+        DisplayModeManagerContainer167 class17_71_ = ((this.anInt10268 != -1 && !this.aBoolean10521 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.getSequence(this.anInt10268, 7) : null);
         int i_72_ = class225.anInt2932;
         int i_73_ = class225.anInt2941;
         if (i_72_ != 0 || i_73_ != 0 || class225.anInt2950 != 0 || class225.anInt2926 != 0) i |= 0x7;

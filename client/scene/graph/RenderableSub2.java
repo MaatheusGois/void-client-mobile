@@ -214,7 +214,7 @@ final class RenderableSub2
             if (!ShaderSub2.method164(i, i_38_, (byte) -97, i_36_)) return false;
             int i_41_ = i_38_ << Component149.anInt4459;
             int i_42_ = i_36_ << Component149.anInt4459;
-            if (Component221.method1084(i_37_, Component148.anInt3465, i_42_, i_41_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465, 18507)) {
+            if (Component221.method1084(i_37_, Component148.anInt3465, i_42_, i_41_, ShaderSub1.aSArray5191[i].getHeight((byte) -86, i_36_, i_38_), Component148.anInt3465, 18507)) {
                 DefinitionSub4.occludedCpCount++;
                 return true;
             }
@@ -228,7 +228,7 @@ final class RenderableSub2
         }
         int i_45_ = (i_38_ << Component149.anInt4459) + 1;
         int i_46_ = (i_36_ << Component149.anInt4459) + 2;
-        if (!Component221.method1084(i_37_, (1 + -i_38_ + i_40_) * Component148.anInt3465, i_46_, i_45_, ShaderSub1.aSArray5191[i].method3982((byte) -86, i_36_, i_38_), Component148.anInt3465 * (i_35_ + -i_36_ + 1), 18507)) return false;
+        if (!Component221.method1084(i_37_, (1 + -i_38_ + i_40_) * Component148.anInt3465, i_46_, i_45_, ShaderSub1.aSArray5191[i].getHeight((byte) -86, i_36_, i_38_), Component148.anInt3465 * (i_35_ + -i_36_ + 1), 18507)) return false;
         DefinitionSub4.occludedCpCount++;
         return true;
     }

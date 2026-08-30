@@ -4,20 +4,30 @@
 
 import java.awt.*;
 
-abstract class s
 /**
- * RENAMED from `s` (JODE-obfuscated).
- * Evidence: abstract base; Hash/Cache/Buffer usage
- */ {
-    int[][] anIntArrayArray4584;
+ * Scene floor / heightmap plane (JODE single-letter name {@code s} — do not
+ * regex-rename; collisions with locals and string literals).
+ * <p>
+ * Tile grid is {@link #tileWidth}×{@link #tileLength}. World units per tile =
+ * {@link #tileSize} ({@code 1 <<} {@link #tileSizeBits}, usually 512 / 9).
+ * {@link #heights}[x][z] stores raw height; {@link #getInterpolatedHeight}
+ * bilinear-samples between four corners for sub-tile world coords.
+ */
+abstract class s {
+    /** Raw height samples per tile corner; indexed [tileX][tileZ]. */
+    int[][] heights;
     static CacheStore aClass45_4585;
     static int anInt4586;
-    int anInt4587;
-    int anInt4588;
+    /** Tile count along X. */
+    int tileWidth;
+    /** {@code log2(tileSize)} — shift world→tile and for fixed-point lerp. */
+    int tileSizeBits;
     static int anInt4589;
-    int anInt4590;
+    /** Tile count along Z. */
+    int tileLength;
     static int anInt4591;
-    int anInt4592;
+    /** World units per tile ({@code 1 << tileSizeBits}). */
+    int tileSize;
     static int anInt4593;
 
     abstract void method3978(int i, int i_0_, int[] is, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int[] is_7_, int[] is_8_, int[] is_9_, int[] is_10_, int i_11_, int i_12_, int i_13_, boolean bool);
@@ -40,10 +50,11 @@ abstract class s
 
     abstract void method3981(NodeSub1 class348_sub1, int[] is);
 
-    final int method3982(byte i, int i_20_, int i_21_) {
+    /** Returns the raw height sample at tile ({@code i_21_},{@code i_20_}). */
+    final int getHeight(byte i, int i_20_, int i_21_) {
         anInt4593++;
-        if (i != -86) this.anInt4590 = -59;
-        return this.anIntArrayArray4584[i_21_][i_20_];
+        if (i != -86) this.tileLength = -59;
+        return this.heights[i_21_][i_20_];
     }
 
     abstract void method3983(int i, int i_22_, int i_23_, boolean[][] bools, boolean bool, int i_24_);
@@ -57,17 +68,21 @@ abstract class s
         return RenderableSub2.aClass147Array6400[i_29_];
     }
 
-    final int method3986(int i, int i_30_, byte i_31_) {
+    /**
+     * Bilinear height at world ({@code i},{@code i_30_}): shift by
+     * {@link #tileSizeBits}, mask with {@link #tileSize}-1, lerp four corners.
+     */
+    final int getInterpolatedHeight(int i, int i_30_, byte i_31_) {
         anInt4589++;
-        int i_32_ = i >> this.anInt4588;
-        int i_33_ = i_30_ >> this.anInt4588;
-        if (i_32_ < 0 || i_33_ < 0 || i_32_ > -1 + this.anInt4587 || i_33_ > this.anInt4590 - 1) return 0;
+        int i_32_ = i >> this.tileSizeBits;
+        int i_33_ = i_30_ >> this.tileSizeBits;
+        if (i_32_ < 0 || i_33_ < 0 || i_32_ > -1 + this.tileWidth || i_33_ > this.tileLength - 1) return 0;
         int i_34_ = -78 % ((i_31_ - -53) / 36);
-        int i_35_ = i & this.anInt4592 + -1;
-        int i_36_ = i_30_ & this.anInt4592 - 1;
-        int i_37_ = ((((-i_35_ + this.anInt4592) * this.anIntArrayArray4584[i_32_][i_33_]) - -(this.anIntArrayArray4584[i_32_ - -1][i_33_] * i_35_)) >> this.anInt4588);
-        int i_38_ = ((i_35_ * this.anIntArrayArray4584[1 + i_32_][1 + i_33_] + ((this.anInt4592 - i_35_) * this.anIntArrayArray4584[i_32_][i_33_ + 1])) >> this.anInt4588);
-        return (i_36_ * i_38_ + (this.anInt4592 + -i_36_) * i_37_ >> this.anInt4588);
+        int i_35_ = i & this.tileSize + -1;
+        int i_36_ = i_30_ & this.tileSize - 1;
+        int i_37_ = ((((-i_35_ + this.tileSize) * this.heights[i_32_][i_33_]) - -(this.heights[i_32_ - -1][i_33_] * i_35_)) >> this.tileSizeBits);
+        int i_38_ = ((i_35_ * this.heights[1 + i_32_][1 + i_33_] + ((this.tileSize - i_35_) * this.heights[i_32_][i_33_ + 1])) >> this.tileSizeBits);
+        return (i_36_ * i_38_ + (this.tileSize + -i_36_) * i_37_ >> this.tileSizeBits);
     }
 
     abstract void method3987(int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, boolean[][] bools);
@@ -82,14 +97,14 @@ abstract class s
     abstract void CA(r var_r, int i, int i_57_, int i_58_, int i_59_, boolean bool);
 
     s(int i, int i_60_, int i_61_, int[][] is) {
-        this.anInt4587 = i;
-        this.anInt4590 = i_60_;
+        this.tileWidth = i;
+        this.tileLength = i_60_;
         int i_62_ = 0;
         for (/**/; i_61_ > 1; i_61_ >>= 1)
             i_62_++;
-        this.anInt4592 = 1 << i_62_;
-        this.anIntArrayArray4584 = is;
-        this.anInt4588 = i_62_;
+        this.tileSize = 1 << i_62_;
+        this.heights = is;
+        this.tileSizeBits = i_62_;
     }
 
     abstract boolean method3989(r var_r, int i, int i_63_, int i_64_, int i_65_, boolean bool);

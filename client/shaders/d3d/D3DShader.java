@@ -70,14 +70,14 @@ final class D3DShader extends AbstractShader {
     final void method3520(byte i) {
         if (i != 87) method3527(55, null, -69);
         this.aHa_Sub3_4479.method3897(1, -4382);
-        this.aHa_Sub3_4479.method3850((byte) 82, null);
+        this.aHa_Sub3_4479.setActiveTexture((byte) 82, null);
         this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, i + 25, Component385.aClass229_2207);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-        this.aHa_Sub3_4479.method3849((byte) 47, 2, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.method3897(0, i ^ ~0x114a);
         if (aBoolean7326) {
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
             this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
             aBoolean7326 = false;
         }
@@ -113,19 +113,19 @@ final class D3DShader extends AbstractShader {
     final void method3527(int i, Interface18 interface18, int i_3_) {
         if (interface18 == null) {
             if (!aBoolean7326) {
-                this.aHa_Sub3_4479.method3850((byte) -43, (this.aHa_Sub3_4479.anInterface18_8147));
+                this.aHa_Sub3_4479.setActiveTexture((byte) -43, (this.aHa_Sub3_4479.anInterface18_8147));
                 this.aHa_Sub3_4479.method3923(true, 1);
-                this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
+                this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
                 this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer343.aClass70_8737);
                 aBoolean7326 = true;
             }
         } else {
             if (aBoolean7326) {
-                this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+                this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
                 this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
                 aBoolean7326 = false;
             }
-            this.aHa_Sub3_4479.method3850((byte) -103, interface18);
+            this.aHa_Sub3_4479.setActiveTexture((byte) -103, interface18);
             this.aHa_Sub3_4479.method3923(true, i);
         }
         if (i_3_ != -16776) anIDirect3DVertexShader7332 = null;
@@ -148,10 +148,10 @@ final class D3DShader extends AbstractShader {
     final void method3525(int i, boolean bool) {
         aBoolean7336 = bool;
         this.aHa_Sub3_4479.method3897(1, -4382);
-        this.aHa_Sub3_4479.method3850((byte) 95, anInterface18_Impl3_7331);
+        this.aHa_Sub3_4479.setActiveTexture((byte) 95, anInterface18_Impl3_7331);
         if (i != 15192) method3520((byte) -41);
         this.aHa_Sub3_4479.method3874(ShaderCompilerSub3.aClass229_6519, 105, Component253.aClass229_3196);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.method3924(true, false, 2, DisplayModeManagerContainer173.aClass70_4247, false);
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer343.aClass70_8737);
         this.aHa_Sub3_4479.method3897(0, -4382);

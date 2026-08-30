@@ -109,7 +109,7 @@ final class Component317
         }
     }
 
-    static final int method574(int i, int i_16_, int i_17_, int[] is, boolean bool, byte i_18_, int i_19_, int i_20_, int i_21_, int[] is_22_, int i_23_, TeleportHandler class361, int i_24_, int i_25_, int i_26_) {
+    static final int method574(int i, int i_16_, int i_17_, int[] is, boolean bool, byte i_18_, int i_19_, int i_20_, int i_21_, int[] is_22_, int i_23_, CollisionMap class361, int i_24_, int i_25_, int i_26_) {
         try {
             for (int i_27_ = 0; i_27_ < 128; i_27_++) {
                 for (int i_28_ = 0; i_28_ < 128; i_28_++) {

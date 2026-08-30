@@ -108,17 +108,17 @@ final class Npc extends DisplayModeManagerContainer58 {
             i_17_--;
             i_18_++;
         }
-        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
+        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7).anInt245 == 1) {
             this.anInt10286 = -1;
             this.anIntArray10236 = null;
         }
         if (this.anInt10269 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 118, this.anInt10269));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
         }
         if (this.anInt10291 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 77, this.anInt10291));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
         }
         if ((~this.anInt10319) > i_16_) this.anInt10319++;
         for (int i_19_ = this.anInt10319; i_19_ > 0; i_19_--) {
@@ -148,8 +148,8 @@ final class Npc extends DisplayModeManagerContainer58 {
         this.aBoolean10324 = false;
         RenderableSub4 class318_sub4 = null;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
-            DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
-            DisplayModeManagerContainer167 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10268, 7));
+            DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7));
+            DisplayModeManagerContainer167 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10268, 7));
             DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.definition.aShort1339, this.definition.anInt1399, this.anInt10252, var_ha, 0xff & this.definition.aByte1353, this.definition.aShort1350 & 0xffff, this.definition.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));
             if (class64 != null) {
                 class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, method2442(1810797122), false));
@@ -207,17 +207,17 @@ final class Npc extends DisplayModeManagerContainer58 {
         this.plane = this.aByte6376 = (byte) i_29_;
         anInt10515++;
         if (NpcComposition.method802(i, i_26_, true)) this.aByte6376++;
-        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
+        if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7).anInt245 == 1) {
             this.anIntArray10236 = null;
             this.anInt10286 = -1;
         }
         if (this.anInt10269 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 117, this.anInt10269));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7).anInt245) == 1) this.anInt10269 = -1;
         }
         if (this.anInt10291 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 56, this.anInt10291));
-            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
+            if (class368.aBoolean4487 && class368.anInt4503 != -1 && (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7).anInt245) == 1) this.anInt10291 = -1;
         }
         if (!bool) {
             int i_30_ = i_26_ - this.anIntArray10320[0];
@@ -313,8 +313,8 @@ final class Npc extends DisplayModeManagerContainer58 {
         anInt10494++;
         int i_35_ = i_34_;
         Component241 class225 = this.getDefinition((byte) 72);
-        DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
-        DisplayModeManagerContainer167 class17_36_ = ((this.anInt10268 != -1 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.method835(this.anInt10268, 7) : null);
+        DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7));
+        DisplayModeManagerContainer167 class17_36_ = ((this.anInt10268 != -1 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.getSequence(this.anInt10268, 7) : null);
         int i_37_ = class225.anInt2932;
         int i_38_ = class225.anInt2941;
         if (i_37_ != 0 || i_38_ != 0 || class225.anInt2950 != 0 || class225.anInt2926 != 0) i_34_ |= 0x7;

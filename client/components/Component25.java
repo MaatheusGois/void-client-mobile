@@ -52,21 +52,21 @@ final class Component25
     final int method1714(int i, int i_5_) {
         if (i != 3) anInt6012 = -22;
         anInt6014++;
-        if (i_5_ == 0 || this.aClass348_Sub51_3136.aClass239_Sub9_7256.method1759(i ^ ~0x7e5e) == 1) return 1;
+        if (i_5_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(i ^ ~0x7e5e) == 1) return 1;
         return 2;
     }
 
     final void method1716(boolean bool) {
         if (bool != false) anInt6012 = 46;
-        if (this.anInt3138 != 0 && this.aClass348_Sub51_3136.aClass239_Sub9_7256.method1759(-32350) != 1) this.anInt3138 = 0;
+        if (this.preferenceValue != 0 && this.preferences.aClass239_Sub9_7256.method1759(-32350) != 1) this.preferenceValue = 0;
         anInt6007++;
-        if (this.anInt3138 < 0 || this.anInt3138 > 1) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 1) this.preferenceValue = method1710(20014);
     }
 
     final int method1789(int i) {
         if (i != -32350) anInt6008 = 32;
         anInt6017++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     Component25(NodeSub51 class348_sub51) {
@@ -76,7 +76,7 @@ final class Component25
     final void method1712(int i, int i_6_) {
         anInt6011++;
         int i_7_ = -19 / ((i - 82) / 35);
-        this.anInt3138 = i_6_;
+        this.preferenceValue = i_6_;
     }
 
     final boolean method1790(int i) {
@@ -102,7 +102,7 @@ final class Component25
                         }
                     }
                     if (bool && player.anInt10286 != -1) {
-                        DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(player.anInt10286, 7));
+                        DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(player.anInt10286, 7));
                         int i_10_ = class17.anInt248;
                         if (i_10_ == 1) {
                             player.anInt10232 = 0;
@@ -119,7 +119,7 @@ final class Component25
                 if (i != 23946) method1791(126, null, -73, null);
                 for (int i_11_ = 0; is.length > i_11_; i_11_++) {
                     if (is[i_11_] != -1) bool = false;
-                    if (player.anIntArray10236 == null || (player.anIntArray10236[i_11_]) == -1 || (RunescapeInfo.aClass87_191.method835((player.anIntArray10236[i_11_]), 7).anInt239 <= (RunescapeInfo.aClass87_191.method835(is[i_11_], i ^ 0x5d8d).anInt239))) {
+                    if (player.anIntArray10236 == null || (player.anIntArray10236[i_11_]) == -1 || (RunescapeInfo.aClass87_191.getSequence((player.anIntArray10236[i_11_]), 7).anInt239 <= (RunescapeInfo.aClass87_191.getSequence(is[i_11_], i ^ 0x5d8d).anInt239))) {
                         player.anInt10218 = i_8_;
                         player.anIntArray10236 = is;
                         break;

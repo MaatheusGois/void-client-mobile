@@ -280,7 +280,7 @@ final class PauseTimer {
                 i = (class318_sub1.x >> Component149.anInt4459);
                 i_12_ = (class318_sub1.y >> Component149.anInt4459);
             }
-            JaclibLoader.toolkit.EA((NodeSub1Sub1.aSArray8801[0].method3986(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.method3547(i, i_12_), Component203.method2483(i, i_12_), HelveticaFont.method1457(i, i_12_));
+            JaclibLoader.toolkit.EA((NodeSub1Sub1.aSArray8801[0].getInterpolatedHeight(class318_sub1.x, class318_sub1.y, (byte) -118)), WaterShaderSub8.method3547(i, i_12_), Component203.method2483(i, i_12_), HelveticaFont.method1457(i, i_12_));
         }
         RenderableSub4 class318_sub4 = class318_sub1.method2386(1, JaclibLoader.toolkit);
         if (class318_sub4 != null) {

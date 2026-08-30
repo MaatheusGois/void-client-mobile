@@ -87,7 +87,7 @@ abstract class DisplayModeManagerContainer194
     }
 
     private final void method229(boolean bool) {
-        this.aClass377_5082.method3850((byte) 107, this);
+        this.aClass377_5082.setActiveTexture((byte) 107, this);
         anInt5083++;
         if (aClass209_5101 == DisplayModeManagerContainer5.aClass209_1212) {
             OpenGL.glTexParameteri(this.anInt5093, 10241, !aBoolean5099 ? 9729 : 9987);

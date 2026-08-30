@@ -37,7 +37,7 @@ final class NodeSub20
     final void method2945(int i, byte i_0_, int i_1_, int i_2_) {
         anInt6845++;
         if (i_0_ != 18) this.anInt6825 = 85;
-        anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i] = Component224.bitwiseOr((anIntArray6842[i_1_ * aS_Sub2_6839.anInt4587 + i]), 1 << i_2_);
+        anIntArray6842[i_1_ * aS_Sub2_6839.tileWidth + i] = Component224.bitwiseOr((anIntArray6842[i_1_ * aS_Sub2_6839.tileWidth + i]), 1 << i_2_);
     }
 
     final void method2946(int i, int i_3_) {
@@ -204,7 +204,7 @@ final class NodeSub20
 
     NodeSub20(BufferCacheSub2 var_s_Sub2, int i, int i_38_, int i_39_, int i_40_, int i_41_) {
         aS_Sub2_6839 = var_s_Sub2;
-        anIntArray6842 = new int[(aS_Sub2_6839.anInt4587 * aS_Sub2_6839.anInt4590)];
+        anIntArray6842 = new int[(aS_Sub2_6839.tileWidth * aS_Sub2_6839.tileLength)];
         this.anInt6825 = i_39_;
         this.aFloat6832 = (float) i_38_;
         aHa_Sub2_6831 = aS_Sub2_6839.aHa_Sub2_8272;

@@ -26,14 +26,14 @@ final class Component379
     final void method1712(int i, int i_0_) {
         anInt5925++;
         int i_1_ = -123 % ((82 - i) / 35);
-        this.anInt3138 = i_0_;
+        this.preferenceValue = i_0_;
     }
 
     final boolean method1757(int i) {
         anInt5927++;
-        if (this.aClass348_Sub51_3136.method3425(-122)) return false;
+        if (this.preferences.method3425(-122)) return false;
         if (i < 85) method1759(117);
-        return this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE;
+        return this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE;
     }
 
     public static void method1758(int i) {
@@ -46,12 +46,12 @@ final class Component379
 
     final int method1714(int i, int i_2_) {
         anInt5926++;
-        if (this.aClass348_Sub51_3136.method3425(-114)) return 3;
-        if (this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) {
+        if (this.preferences.method3425(-114)) return 3;
+        if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) {
             if (i_2_ == 0) {
-                if (this.aClass348_Sub51_3136.aClass239_Sub16_7247.method1789(-32350) == 1) return 2;
-                if (this.aClass348_Sub51_3136.aClass239_Sub24_7235.method1820(i + -32353) == 1) return 2;
-                if (this.aClass348_Sub51_3136.aClass239_Sub18_7259.method1800(-32350) > 0) return 2;
+                if (this.preferences.aClass239_Sub16_7247.method1789(-32350) == 1) return 2;
+                if (this.preferences.aClass239_Sub24_7235.method1820(i + -32353) == 1) return 2;
+                if (this.preferences.aClass239_Sub18_7259.method1800(-32350) > 0) return 2;
             }
             return 1;
         }
@@ -62,15 +62,15 @@ final class Component379
     final void method1716(boolean bool) {
         anInt5931++;
         if (bool != false) aClass351_5929 = null;
-        if (this.aClass348_Sub51_3136.method3422(674) != RunescapeInfo.RUNESCAPE) this.anInt3138 = 1;
-        else if (this.aClass348_Sub51_3136.method3425(-125)) this.anInt3138 = 0;
-        if (this.anInt3138 != 0 && this.anInt3138 != 1) this.anInt3138 = method1710(20014);
+        if (this.preferences.method3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
+        else if (this.preferences.method3425(-125)) this.preferenceValue = 0;
+        if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = method1710(20014);
     }
 
     final int method1759(int i) {
         anInt5930++;
         if (i != -32350) method1714(-83, -18);
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     Component379(NodeSub51 class348_sub51) {

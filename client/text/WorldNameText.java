@@ -64,7 +64,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         try {
             anInt8640 = i;
             anInt8634 = i_3_;
-            this.aClass377_5082.method3850((byte) 76, this);
+            this.aClass377_5082.setActiveTexture((byte) 76, this);
             OpenGL.glPixelStorei(3314, i_5_);
             OpenGL.glTexImage2Di(this.anInt5093, 0, 6408, anInt8640, anInt8634, 0, 32993, (this.aClass377_5082.anInt9918), is, i_4_ * 4);
             OpenGL.glPixelStorei(3314, 0);
@@ -78,7 +78,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         try {
             anInt8634 = i_6_;
             anInt8640 = i;
-            this.aClass377_5082.method3850((byte) -127, this);
+            this.aClass377_5082.setActiveTexture((byte) -127, this);
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glPixelStorei(3314, i_8_);
             OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(126), i, i_6_, 0, (ParametricDefinition.method3055(111, this.aClass304_5084)), 5121, is, i_7_);
@@ -99,7 +99,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         try {
             anInt8634 = i_10_;
             anInt8640 = i;
-            this.aClass377_5082.method3850((byte) 115, this);
+            this.aClass377_5082.setActiveTexture((byte) 115, this);
             OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(109), i, i_10_, 0, ParametricDefinition.method3055(105, this.aClass304_5084), Component387.method1128(-54, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tw.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_10_ + ')'));
@@ -147,7 +147,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         anInt8645++;
         if (i_29_ != 112) anInt8634 = 49;
         int[] is_31_ = new int[anInt8634 * anInt8640];
-        this.aClass377_5082.method3850((byte) -34, this);
+        this.aClass377_5082.setActiveTexture((byte) -34, this);
         OpenGL.glGetTexImagei(this.anInt5093, 0, 32993, 5121, is_31_, 0);
         for (int i_32_ = 0; i_28_ > i_32_; i_32_++)
             Component313.method1578(is_31_, anInt8640 * (i_28_ + -1 + (i_27_ + -i_32_)), is, i_32_ * i_26_ + i_30_, i_26_);
@@ -164,7 +164,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
         try {
             anInt8640 = i;
             anInt8634 = i_33_;
-            this.aClass377_5082.method3850((byte) -45, this);
+            this.aClass377_5082.setActiveTexture((byte) -45, this);
             OpenGL.glPixelStorei(3314, i_35_);
             OpenGL.glTexImage2Df(this.anInt5093, 0, this.method228(107), i, i_33_, 0, (ParametricDefinition.method3055(126, this.aClass304_5084)), 5126, fs, i_34_ * 4);
             OpenGL.glPixelStorei(3314, 0);
@@ -192,7 +192,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     }
 
     public final void method68(int i, int i_36_, int[] is, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_) {
-        this.aClass377_5082.method3850((byte) 118, this);
+        this.aClass377_5082.setActiveTexture((byte) 118, this);
         anInt8650++;
         if (i == 0) i = i_39_;
         if (i_39_ != i) OpenGL.glPixelStorei(3314, i);
@@ -203,7 +203,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
 
     public final void method70(int i, int i_42_, byte i_43_, int i_44_, int i_45_, int i_46_, int i_47_, byte[] is, DisplayModeManagerContainer42 class304) {
         try {
-            this.aClass377_5082.method3850((byte) -39, this);
+            this.aClass377_5082.setActiveTexture((byte) -39, this);
             anInt8647++;
             if (i_44_ == 0) i_44_ = i_46_;
             OpenGL.glPixelStorei(3317, 1);

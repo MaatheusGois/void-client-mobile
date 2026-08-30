@@ -943,7 +943,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             this.method3866(false, true);
             this.method3890(false, (byte) 127);
             this.method3946(-32, false);
-            this.method3850((byte) 110, null);
+            this.setActiveTexture((byte) 110, null);
             this.method3814(false, false, -2, (byte) 42);
             this.method3923(true, 1);
             this.method3817(117, 0);

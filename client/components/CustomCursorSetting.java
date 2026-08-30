@@ -34,14 +34,14 @@ final class CustomCursorSetting extends Component339 {
     }
 
     final void method1716(boolean bool) {
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
         anInt6070++;
         if (bool != false) anInt6076 = 59;
     }
 
     final void method1712(int i, int i_0_) {
         anInt6074++;
-        this.anInt3138 = i_0_;
+        this.preferenceValue = i_0_;
         int i_1_ = 126 / ((82 - i) / 35);
     }
 
@@ -53,7 +53,7 @@ final class CustomCursorSetting extends Component339 {
     final int getValue(int i) {
         if (i != -32350) method1816(84);
         anInt6071++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     CustomCursorSetting(int i, NodeSub51 class348_sub51) {

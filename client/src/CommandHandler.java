@@ -340,7 +340,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("getheight")) {
-                            Applet_Sub1.printConsole(("Height: " + (ShaderSub1.aSArray5191[(Component72.localPlayer.plane)].method3982((byte) -86, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.x) >> 9))), i ^ 0x1);
+                            Applet_Sub1.printConsole(("Height: " + (ShaderSub1.aSArray5191[(Component72.localPlayer.plane)].getHeight((byte) -86, (Component72.localPlayer.y) >> 9, (Component72.localPlayer.x) >> 9))), i ^ 0x1);
                             return;
                         }
                         if (string.equalsIgnoreCase("resetminimap")) {

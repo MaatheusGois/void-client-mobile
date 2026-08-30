@@ -21,7 +21,7 @@ final class Component251
     static int anInt5826;
     /*synthetic*/ static Class aClass5827;
 
-    final void method1689(int i, int i_0_, int i_1_, GraphicsToolkit var_ha, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, TeleportHandler class361) {
+    final void method1689(int i, int i_0_, int i_1_, GraphicsToolkit var_ha, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, CollisionMap class361) {
         try {
             anInt5823++;
             if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(i_3_ ^ ~0x7e6f) != 0 || Component255.method536(i_5_, false, i, Component385.anInt2204, i_2_)) {
@@ -57,7 +57,7 @@ final class Component251
                         i_13_ = (i_8_ >> 1) + i_5_;
                     }
                     s var_s = ShaderSub1.aSArray5191[i_2_];
-                    int i_14_ = ((var_s.method3982((byte) -86, i_13_, i_10_) + var_s.method3982((byte) -86, i_13_, i_11_) - (-var_s.method3982((byte) -86, i_12_, i_10_) - var_s.method3982((byte) -86, i_12_, i_11_))) >> 2);
+                    int i_14_ = ((var_s.getHeight((byte) -86, i_13_, i_10_) + var_s.getHeight((byte) -86, i_13_, i_11_) - (-var_s.getHeight((byte) -86, i_12_, i_10_) - var_s.getHeight((byte) -86, i_12_, i_11_))) >> 2);
                     int i_15_ = (i << 9) - -(i_9_ << 8);
                     int i_16_ = (i_8_ << 8) + (i_5_ << 9);
                     boolean bool = (HashNodeSub3.aBoolean9498 && !this.aBoolean3109 && class51.aBoolean906);
@@ -98,7 +98,7 @@ final class Component251
                                     }
                                 }
                             }
-                            if ((class51.anInt920 != 0) && class361 != null) class361.method3505(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
+                            if ((class51.anInt920 != 0) && class361 != null) class361.flagSolid(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
                         } else if (i_4_ >= 12 && i_4_ <= 17 || (i_4_ >= 18 && i_4_ <= 21)) {
                             Component327 class318_sub1_sub3;
                             if (bool_17_) {
@@ -108,7 +108,7 @@ final class Component251
                             } else class318_sub1_sub3 = (new Component29(var_ha, class51, i_0_, i_2_, i_15_, i_14_, i_16_, this.aBoolean3109, i, i + (i_9_ - 1), i_5_, i_5_ - (-i_8_ - -1), i_4_, i_7_, i_6_));
                             Component84.method850(class318_sub1_sub3, false);
                             if (HashNodeSub3.aBoolean9498 && !this.aBoolean3109 && i_4_ >= 12 && i_4_ <= 17 && i_4_ != 13 && i_0_ > 0 && (class51.anInt955 != 0)) this.aByteArrayArrayArray3108[i_0_][i][i_5_] = (byte) (Component224.bitwiseOr((this.aByteArrayArrayArray3108[i_0_][i][i_5_]), 4));
-                            if ((class51.anInt920 != 0) && class361 != null) class361.method3505(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
+                            if ((class51.anInt920 != 0) && class361 != null) class361.flagSolid(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
                         } else if (i_4_ == 0) {
                             int i_22_ = class51.anInt955;
                             if (DefinitionSub10.aBoolean9184 && (class51.anInt955 == -1)) i_22_ = 1;
@@ -226,7 +226,7 @@ final class Component251
                                 else i_26_ = 16;
                                 Component71.method1810(i, 0, (class51.anInt909), i_5_, -1, i_0_, i_26_);
                             }
-                            if (class51.anInt920 != 0 && class361 != null) class361.method3505(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
+                            if (class51.anInt920 != 0 && class361 != null) class361.flagSolid(!(class51.aBoolean876), i_9_, i_5_, true, i, (class51.aBoolean896), i_8_);
                             if (class51.anInt883 != 64) Component49.method1852(i_0_, i, i_5_, (class51.anInt883));
                         } else if (i_4_ == 4) {
                             Component203 class318_sub1_sub5;
@@ -450,7 +450,7 @@ final class Component251
         } while (false);
     }
 
-    final void method1692(int i, int i_73_, byte[] is, int i_74_, int i_75_, GraphicsToolkit var_ha, int i_76_, int i_77_, int i_78_, TeleportHandler[] class361s, int i_79_) {
+    final void method1692(int i, int i_73_, byte[] is, int i_74_, int i_75_, GraphicsToolkit var_ha, int i_76_, int i_77_, int i_78_, CollisionMap[] class361s, int i_79_) {
         try {
             anInt5826++;
             if (i_78_ != 7) method1693('\uffb8', -54);
@@ -476,7 +476,7 @@ final class Component251
                         int i_90_ = Component217.method1908(0x7 & i_84_, i_85_ & 0x7, i_73_, true, class51.anInt926, class51.anInt961, i_89_) + i_77_;
                         int i_91_ = i_76_ + Component331.method1045(0x7 & i_85_, (class51.anInt926), i_89_, (class51.anInt961), i_84_ & 0x7, i_73_, (byte) 16);
                         if (i_90_ > 0 && i_91_ > 0 && i_90_ < -1 + this.anInt3117 && -1 + this.anInt3114 > i_91_) {
-                            TeleportHandler class361 = null;
+                            CollisionMap class361 = null;
                             if (!this.aBoolean3109) {
                                 int i_92_ = i_79_;
                                 if ((0x2 & (ObjectDeserializer.aByteArrayArrayArray6962[1][i_90_][i_91_])) == 2) i_92_--;
@@ -500,7 +500,7 @@ final class Component251
         return c == 8364 || c == 338 || c == 8212 || c == 339 || c == 376;
     }
 
-    final void method1694(TeleportHandler class361, int i, int i_93_, GraphicsToolkit var_ha, int i_94_, int i_95_, byte i_96_) {
+    final void method1694(CollisionMap class361, int i, int i_93_, GraphicsToolkit var_ha, int i_94_, int i_95_, byte i_96_) {
         while_77_:
         do {
             do {
@@ -516,7 +516,7 @@ final class Component251
                     if (interface10.method38(-18443)) interface10.method43(var_ha, -14218);
                     if (i == 0) {
                         DefinitionSub4.method3058(i_93_, i_94_, i_95_);
-                        if (class51.anInt920 != 0) class361.method3506((class51.aBoolean896), i_98_, i_94_, i_97_, i_95_, !(class51.aBoolean876), 29216);
+                        if (class51.anInt920 != 0) class361.unflagWall((class51.aBoolean896), i_98_, i_94_, i_97_, i_95_, !(class51.aBoolean876), 29216);
                         if (class51.anInt955 == 1) {
                             if (i_98_ == 0) {
                                 Component179.method2987(i_93_, 1, i_95_, -3951, i_94_);
@@ -553,7 +553,7 @@ final class Component251
         } while (false);
     }
 
-    final void method1695(byte[] is, TeleportHandler[] class361s, int i, GraphicsToolkit var_ha, int i_99_, int i_100_) {
+    final void method1695(byte[] is, CollisionMap[] class361s, int i, GraphicsToolkit var_ha, int i_99_, int i_100_) {
         try {
             anInt5820++;
             if (i_100_ == 1359) {
@@ -577,7 +577,7 @@ final class Component251
                         int i_111_ = i_99_ + i_106_;
                         int i_112_ = i + i_105_;
                         if (i_111_ > 0 && i_112_ > 0 && (i_111_ < this.anInt3117 - 1) && i_112_ < this.anInt3114 - 1) {
-                            TeleportHandler class361 = null;
+                            CollisionMap class361 = null;
                             if (!this.aBoolean3109) {
                                 int i_113_ = i_107_;
                                 if ((0x2 & (ObjectDeserializer.aByteArrayArrayArray6962[1][i_111_][i_112_])) == 2) i_113_--;

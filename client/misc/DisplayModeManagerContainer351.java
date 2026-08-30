@@ -41,7 +41,7 @@ final class DisplayModeManagerContainer351
                 if (class348_sub34 == null) Component21.method2110(i_3_, i_2_, i);
                 else {
                     Component252 class318_sub1_sub2_sub1 = ((Component252) Component21.method2110(i_3_, i_2_, i));
-                    if (class318_sub1_sub2_sub1 == null) class318_sub1_sub2_sub1 = (new Component252(i_2_ << 9, ShaderSub1.aSArray5191[i_3_].method3982((byte) -86, i, i_2_), i << 9, i_3_, i_3_));
+                    if (class318_sub1_sub2_sub1 == null) class318_sub1_sub2_sub1 = (new Component252(i_2_ << 9, ShaderSub1.aSArray5191[i_3_].getHeight((byte) -86, i, i_2_), i << 9, i_3_, i_3_));
                     else class318_sub1_sub2_sub1.anInt10189 = class318_sub1_sub2_sub1.anInt10180 = -1;
                     class318_sub1_sub2_sub1.anInt10181 = class348_sub34.anInt6973;
                     if (i_1_ >= -112) aBoolean2674 = true;

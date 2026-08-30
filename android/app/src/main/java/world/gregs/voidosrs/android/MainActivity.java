@@ -177,6 +177,9 @@ public class MainActivity extends Activity {
         hideSystemUi();
         requestAudioFocus();
         instance = this;
+        // DISABLED 2026-08-30 with DialogueTts.ENABLED=false: Android TextToSpeech + per-tick
+        // chatbox scan was freezing the client hard. Re-enable together with DialogueTts.
+        /*
         dialogueTts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -199,6 +202,7 @@ public class MainActivity extends Activity {
                 if (dialogueTts != null) dialogueTts.stop();
             }
         });
+        */
         installLogBridge();
         // On-screen debug HUD off — still mirrors to logcat via installLogBridge.
         // debugHud = buildDebugHud();

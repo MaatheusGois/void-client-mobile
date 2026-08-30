@@ -56,7 +56,7 @@ final class AbstractShaderSub2
             anInt7287++;
             OpenGL.glBindProgramARB(34336, aClass193_7293.anInt2584);
             OpenGL.glEnable(34336);
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
         }
     }
 
@@ -81,7 +81,7 @@ final class AbstractShaderSub2
     final void method3520(byte i) {
         anInt7295++;
         if (i == 87) {
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
             OpenGL.glBindProgramARB(34336, 0);
             OpenGL.glDisable(34820);
             OpenGL.glDisable(34336);
@@ -98,11 +98,11 @@ final class AbstractShaderSub2
         if (i == 10756) {
             if (aClass269_7294.aBoolean3458) {
                 float f = (float) ((this.aHa_Sub3_4479.anInt8146) % 4000) / 4000.0F;
-                this.aHa_Sub3_4479.method3850((byte) 79, aClass269_7294.anInterface18_Impl1_3452);
+                this.aHa_Sub3_4479.setActiveTexture((byte) 79, aClass269_7294.anInterface18_Impl1_3452);
                 OpenGL.glProgramLocalParameter4fARB(34336, 0, f, 0.0F, 0.0F, 1.0F);
             } else {
                 int i_7_ = (16 * (this.aHa_Sub3_4479.anInt8146 % 4000) / 4000);
-                this.aHa_Sub3_4479.method3850((byte) -118, (aClass269_7294.anInterface18_Impl3Array3459[i_7_]));
+                this.aHa_Sub3_4479.setActiveTexture((byte) -118, (aClass269_7294.anInterface18_Impl3Array3459[i_7_]));
                 OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0F, 0.0F, 0.0F, 1.0F);
             }
         }

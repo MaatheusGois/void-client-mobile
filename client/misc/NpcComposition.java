@@ -381,7 +381,7 @@ final class NpcComposition {
             for (int i_50_ = 0; i_50_ < i_49_; i_50_++) {
                 Component349.aClass348_Sub42_Sub17Array10010[i_50_] = null;
                 if (class182s[i_50_] != null) {
-                    DisplayModeManagerContainer167 class17_51_ = class87.method835((class182s[i_50_].anInt2454), 7);
+                    DisplayModeManagerContainer167 class17_51_ = class87.getSequence((class182s[i_50_].anInt2454), 7);
                     if (class17_51_.anIntArray237 != null) {
                         bool_44_ = true;
                         ImageTagText.aClass17Array2169[i_50_] = class17_51_;

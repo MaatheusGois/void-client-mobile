@@ -46,7 +46,7 @@ final class Component15
         int i_4_ = i_3_ << Component149.anInt4459;
         int i_5_ = i << Component149.anInt4459;
         if (i_2_ != -79) anInt4919 = 64;
-        if (Component221.method1084(i_0_, Component148.anInt3465, i_5_, i_4_, ShaderSub1.aSArray5191[i_1_].method3982((byte) -86, i, i_3_), Component148.anInt3465, 18507)) {
+        if (Component221.method1084(i_0_, Component148.anInt3465, i_5_, i_4_, ShaderSub1.aSArray5191[i_1_].getHeight((byte) -86, i, i_3_), Component148.anInt3465, 18507)) {
             DefinitionSub4.occludedCpCount++;
             return true;
         }

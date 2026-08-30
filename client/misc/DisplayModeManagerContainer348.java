@@ -25,7 +25,7 @@ final class DisplayModeManagerContainer348
     }
 
     final void method1712(int i, int i_0_) {
-        this.anInt3138 = i_0_;
+        this.preferenceValue = i_0_;
         int i_1_ = 57 / ((i - 82) / 35);
         anInt5887++;
     }
@@ -33,7 +33,7 @@ final class DisplayModeManagerContainer348
     final int method1739(int i) {
         anInt5889++;
         if (i != -32350) anInt5886 = -17;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     DisplayModeManagerContainer348(NodeSub51 class348_sub51) {
@@ -106,6 +106,6 @@ final class DisplayModeManagerContainer348
     final void method1716(boolean bool) {
         anInt5888++;
         if (bool != false) method1710(-110);
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
     }
 }

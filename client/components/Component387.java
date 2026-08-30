@@ -55,12 +55,12 @@ abstract class Component387
     static final boolean method1130(r var_r, int i, int i_1_, int i_2_, boolean[] bools) {
         boolean bool = false;
         if (ShaderSub1.aSArray5191 != Component9.aSArray4142) {
-            int i_3_ = NodeSub1Sub1.aSArray8801[i].method3986(i_1_, i_2_, (byte) -109);
+            int i_3_ = NodeSub1Sub1.aSArray8801[i].getInterpolatedHeight(i_1_, i_2_, (byte) -109);
             int i_4_ = 0;
             for (/**/; i_4_ <= i; i_4_++) {
                 s var_s = NodeSub1Sub1.aSArray8801[i_4_];
                 if (var_s != null) {
-                    int i_5_ = i_3_ - var_s.method3986(i_1_, i_2_, (byte) 72);
+                    int i_5_ = i_3_ - var_s.getInterpolatedHeight(i_1_, i_2_, (byte) 72);
                     if (bools != null) {
                         bools[i_4_] = var_s.method3989(var_r, i_1_, i_5_, i_2_, 0, false);
                         if (!bools[i_4_]) continue;

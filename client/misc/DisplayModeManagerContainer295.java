@@ -113,7 +113,7 @@ final class DisplayModeManagerContainer295
     final int method1751(int i) {
         anInt5917++;
         if (i != -32350) canvasWidth = 114;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     DisplayModeManagerContainer295(NodeSub51 class348_sub51) {
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer295
     final void method1712(int i, int i_7_) {
         int i_8_ = -87 / ((i - 82) / 35);
         anInt5915++;
-        this.anInt3138 = i_7_;
+        this.preferenceValue = i_7_;
     }
 
     final int method1714(int i, int i_9_) {
@@ -172,7 +172,7 @@ final class DisplayModeManagerContainer295
 
     final void method1716(boolean bool) {
         anInt5913++;
-        if (this.anInt3138 < 1 || this.anInt3138 > 3) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 1 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
         if (bool != false) anIntArrayArray5921 = null;
     }
 

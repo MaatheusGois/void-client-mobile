@@ -189,7 +189,7 @@ final class Component65
                     class348_sub49_sub1.offset = 0;
                     for (int i_46_ = i_40_; i_41_ > i_46_; i_46_++) {
                         if (-i_35_ <= -i_36_ + i_46_ && -i_36_ + i_46_ <= i_35_) {
-                            int i_47_ = i_44_ + i_46_ * aS_Sub2_1622.anInt4587;
+                            int i_47_ = i_44_ + i_46_ * aS_Sub2_1622.tileWidth;
                             for (int i_48_ = i_44_; i_45_ > i_48_; i_48_++) {
                                 if ((-i_35_ <= -i_37_ + i_48_) && -i_37_ + i_48_ <= i_35_ && (bools[i_35_ + i_48_ - i_37_][i_35_ + i_46_ + -i_36_])) {
                                     short[] is = (aS_Sub2_1622.aShortArrayArray8267[i_47_]);
@@ -309,12 +309,12 @@ final class Component65
         try {
             aHa_Sub2_1616 = var_ha_Sub2;
             aS_Sub2_1622 = var_s_Sub2;
-            this.anInt1624 = (aS_Sub2_1622.anInt4592 * aS_Sub2_1622.anInt4587 >> aHa_Sub2_1616.anInt7731) + 2;
-            anInt1612 = (aS_Sub2_1622.anInt4592 * aS_Sub2_1622.anInt4590 >> aHa_Sub2_1616.anInt7731) + 2;
-            anInt1613 = (-aS_Sub2_1622.anInt4588 + (7 + aHa_Sub2_1616.anInt7731));
+            this.anInt1624 = (aS_Sub2_1622.tileSize * aS_Sub2_1622.tileWidth >> aHa_Sub2_1616.anInt7731) + 2;
+            anInt1612 = (aS_Sub2_1622.tileSize * aS_Sub2_1622.tileLength >> aHa_Sub2_1616.anInt7731) + 2;
+            anInt1613 = (-aS_Sub2_1622.tileSizeBits + (7 + aHa_Sub2_1616.anInt7731));
             this.aByteArray1617 = new byte[this.anInt1624 * anInt1612];
-            anInt1618 = aS_Sub2_1622.anInt4587 >> anInt1613;
-            anInt1625 = aS_Sub2_1622.anInt4590 >> anInt1613;
+            anInt1618 = aS_Sub2_1622.tileWidth >> anInt1613;
+            anInt1625 = aS_Sub2_1622.tileLength >> anInt1613;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("mha.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_s_Sub2 != null ? "{...}" : "null") + ')'));
         }

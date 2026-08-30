@@ -46,16 +46,16 @@ final class RenderableSub9Sub2Sub1
             int i_2_ = class318_sub10.anInt6483;
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[class318_sub10.anInt6483][i][i_0_]);
             if (class357 != null) i_2_ = class357.aByte4399;
-            int i_3_ = var_ses[i_2_].method3982((byte) -86, i_0_, i);
+            int i_3_ = var_ses[i_2_].getHeight((byte) -86, i_0_, i);
             int i_4_;
-            if (i_2_ < Component291.anInt2524 - 1) i_4_ = var_ses[i_2_ + 1].method3982((byte) -86, i_0_, i);
+            if (i_2_ < Component291.anInt2524 - 1) i_4_ = var_ses[i_2_ + 1].getHeight((byte) -86, i_0_, i);
             else i_4_ = i_3_ - (8 << Component149.anInt4459);
             if (class181.aBoolean2397) {
                 if (class181.anInt2384 == -1 && i_1_ > i_3_) {
                     method2520();
                     return;
                 }
-                if (class181.anInt2384 >= 0 && i_1_ > var_ses[class181.anInt2384].method3982((byte) -86, i_0_, i)) {
+                if (class181.anInt2384 >= 0 && i_1_ > var_ses[class181.anInt2384].getHeight((byte) -86, i_0_, i)) {
                     method2520();
                     return;
                 }
@@ -63,17 +63,17 @@ final class RenderableSub9Sub2Sub1
                     method2520();
                     return;
                 }
-                if (class181.anInt2423 >= 0 && i_1_ < var_ses[class181.anInt2423 + 1].method3982((byte) -86, i_0_, i)) {
+                if (class181.anInt2423 >= 0 && i_1_ < var_ses[class181.anInt2423 + 1].getHeight((byte) -86, i_0_, i)) {
                     method2520();
                     return;
                 }
             }
             int i_5_;
-            for (i_5_ = Component291.anInt2524 - 1; (i_5_ > 0 && i_1_ > var_ses[i_5_].method3982((byte) -86, i_0_, i)); i_5_--) {
+            for (i_5_ = Component291.anInt2524 - 1; (i_5_ > 0 && i_1_ > var_ses[i_5_].getHeight((byte) -86, i_0_, i)); i_5_--) {
                 /* empty */
             }
-            if (class181.aBoolean2376 && i_5_ == 0 && i_1_ > var_ses[0].method3982((byte) -86, i_0_, i)) method2520();
-            else if (i_5_ == Component291.anInt2524 - 1 && (var_ses[i_5_].method3982((byte) -86, i_0_, i) - i_1_ > 8 << Component149.anInt4459)) method2520();
+            if (class181.aBoolean2376 && i_5_ == 0 && i_1_ > var_ses[0].getHeight((byte) -86, i_0_, i)) method2520();
+            else if (i_5_ == Component291.anInt2524 - 1 && (var_ses[i_5_].getHeight((byte) -86, i_0_, i) - i_1_ > 8 << Component149.anInt4459)) method2520();
             else {
                 class357 = Component335.aClass357ArrayArrayArray2029[i_5_][i][i_0_];
                 if (class357 == null) {

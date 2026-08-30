@@ -70,7 +70,7 @@ final class Component228
             int i_10_ = i << i_5_;
             int i_11_ = i_4_ << i_5_;
             for (int i_12_ = 0; i_8_ > i_12_; i_12_++) {
-                int i_13_ = var_s_Sub2.anInt4587 * (i_11_ - -i_12_) - -i_10_;
+                int i_13_ = var_s_Sub2.tileWidth * (i_11_ - -i_12_) - -i_10_;
                 for (int i_14_ = 0; i_14_ < i_8_; i_14_++) {
                     short[] is = var_s_Sub2.aShortArrayArray8267[i_13_++];
                     if (is != null) i_9_ += is.length;
@@ -82,7 +82,7 @@ final class Component228
                 Buffer class348_sub49 = new Buffer(i_9_ * 2);
                 if (aHa_Sub2_3000.aBoolean7775) {
                     for (int i_19_ = 0; i_8_ > i_19_; i_19_++) {
-                        int i_20_ = (i_10_ + (i_19_ + i_11_) * var_s_Sub2.anInt4587);
+                        int i_20_ = (i_10_ + (i_19_ + i_11_) * var_s_Sub2.tileWidth);
                         for (int i_21_ = 0; i_8_ > i_21_; i_21_++) {
                             short[] is = (var_s_Sub2.aShortArrayArray8267[i_20_++]);
                             if (is != null) {
@@ -93,7 +93,7 @@ final class Component228
                     }
                 } else {
                     for (int i_15_ = 0; i_8_ > i_15_; i_15_++) {
-                        int i_16_ = ((i_11_ - -i_15_) * var_s_Sub2.anInt4587 - -i_10_);
+                        int i_16_ = ((i_11_ - -i_15_) * var_s_Sub2.tileWidth - -i_10_);
                         for (int i_17_ = 0; i_8_ > i_17_; i_17_++) {
                             short[] is = (var_s_Sub2.aShortArrayArray8267[i_16_++]);
                             if (is != null) {

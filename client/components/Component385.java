@@ -138,7 +138,7 @@ final class Component385
                 for (int i_13_ = 0; i_11_ != 0 && i_13_ < (player.aClass182Array10308).length; i_11_ >>>= 1) {
                     if ((i_11_ & 0x1) != 0) {
                         if (i_10_ != -1) {
-                            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_10_, 7);
+                            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_10_, 7);
                             int i_14_ = class17.anInt248;
                             Component280 class182 = (player.aClass182Array10308[i_13_]);
                             if (class182 != null) {
@@ -152,7 +152,7 @@ final class Component385
                                         class182.anInt2445 = 0;
                                         if (!player.aBoolean10309) DisplayModeManagerContainer260.method2178(player, 0, class17, -54);
                                     } else if (i_14_ == 2) class182.anInt2445 = 0;
-                                } else if (class17.anInt239 >= RunescapeInfo.aClass87_191.method835((class182.anInt2454), 7).anInt239) class182 = player.aClass182Array10308[i_13_] = null;
+                                } else if (class17.anInt239 >= RunescapeInfo.aClass87_191.getSequence((class182.anInt2454), 7).anInt239) class182 = player.aClass182Array10308[i_13_] = null;
                             }
                             if (class182 == null) {
                                 class182 = player.aClass182Array10308[i_13_] = new Component280();

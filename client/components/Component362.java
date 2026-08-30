@@ -69,7 +69,7 @@ final class Component362
         anInt5790++;
         boolean bool = false;
         if ((OpenGlShader.clientCycle != class318_sub1_sub3_sub3.anInt10300) && class318_sub1_sub3_sub3.anInt10286 != -1 && class318_sub1_sub3_sub3.anInt10218 == 0) {
-            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835((class318_sub1_sub3_sub3.anInt10286), i + 8);
+            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence((class318_sub1_sub3_sub3.anInt10286), i + 8);
             if (class17.aBoolean241 || ((class17.anIntArray267[(class318_sub1_sub3_sub3.anInt10267)]) < 1 + (class318_sub1_sub3_sub3.anInt10232))) bool = true;
         } else bool = true;
         if (bool) {

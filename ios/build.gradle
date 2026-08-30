@@ -43,15 +43,18 @@ sourceSets {
     }
 }
 
-tasks.register('prepareClientSources', Copy) {
+tasks.register('prepareClientSources', Sync) {
     // Flat merge into generated/client (all default package). Nested domain folders
     // under client/ are organizational only — each .java must land at the dest root.
+    // Sync (not Copy) so excludes remove stale files (e.g. DeobProbe after desktop-only).
     from(fileTree('../client') {
         include '**/*.java'
         exclude 'build/**'
         // Real java.awt MouseWheelEvent ≠ voidawt — desktop-only poller.
         exclude '**/DesktopGamepad.java'
         exclude '**/DesktopAffiliationDisclaimer.java'
+        // Desktop-only deob NDJSON logger (lambdas / Function break RoboVM Soot AOT).
+        exclude '**/DeobProbe.java'
     }) {
         eachFile { details ->
             details.path = details.name

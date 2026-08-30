@@ -27,29 +27,29 @@ final class Component31
     final int method1743(int i) {
         anInt5896++;
         if (i != -32350) return -65;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final boolean method1744(int i) {
         if (i <= 85) method1743(-113);
         anInt5903++;
-        int i_0_ = this.aClass348_Sub51_3136.method3428((byte) -93).method1458(-23688);
+        int i_0_ = this.preferences.method3428((byte) -93).method1458(-23688);
         return i_0_ >= 96;
     }
 
     final void method1716(boolean bool) {
         anInt5897++;
-        int i = this.aClass348_Sub51_3136.method3428((byte) -105).method1458(-23688);
-        if (i < 96) this.anInt3138 = 0;
+        int i = this.preferences.method3428((byte) -105).method1458(-23688);
+        if (i < 96) this.preferenceValue = 0;
         if (bool != false) aClass355_5900 = null;
-        if (this.anInt3138 > 1 && i < 128) this.anInt3138 = 1;
-        if (this.anInt3138 > 2 && i < 192) this.anInt3138 = 2;
-        if (this.anInt3138 < 0 || this.anInt3138 > 3) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue > 1 && i < 128) this.preferenceValue = 1;
+        if (this.preferenceValue > 2 && i < 192) this.preferenceValue = 2;
+        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
     }
 
     final int method1714(int i, int i_1_) {
         anInt5899++;
-        int i_2_ = this.aClass348_Sub51_3136.method3428((byte) -104).method1458(i ^ ~0x5c84);
+        int i_2_ = this.preferences.method3428((byte) -104).method1458(i ^ ~0x5c84);
         if (i_2_ < 96) return 3;
         if (i_1_ > 1 && i_2_ < 128) return 3;
         if (i_1_ > i && i_2_ < 192) return 3;
@@ -59,7 +59,7 @@ final class Component31
     final void method1712(int i, int i_3_) {
         int i_4_ = -32 / ((82 - i) / 35);
         anInt5901++;
-        this.anInt3138 = i_3_;
+        this.preferenceValue = i_3_;
     }
 
     static final int method1745(String string, int i) {

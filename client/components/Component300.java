@@ -25,7 +25,7 @@ final class Component300
         int i_5_ = i_0_;
         if (i_5_ < 3 && (ObjectDeserializer.aByteArrayArrayArray6962[1][i_3_][i_4_] & 0x2) != 0) i_5_++;
         if (i_1_ != 11219) aHashtable3548 = null;
-        return ShaderSub1.aSArray5191[i_5_].method3986(i, i_2_, (byte) -113);
+        return ShaderSub1.aSArray5191[i_5_].getInterpolatedHeight(i, i_2_, (byte) -113);
     }
 
     public static void method2065(int i) {

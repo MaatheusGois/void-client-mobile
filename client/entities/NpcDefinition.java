@@ -65,7 +65,7 @@ final class NpcDefinition extends Node {
                         }
                     }
                     if (bool && npc.anInt10286 != -1) {
-                        DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(npc.anInt10286, 7));
+                        DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(npc.anInt10286, 7));
                         int i_3_ = class17.anInt248;
                         if (i_3_ == 1) {
                             npc.anInt10232 = 0;
@@ -81,7 +81,7 @@ final class NpcDefinition extends Node {
                 boolean bool = true;
                 for (int i_4_ = 0; is.length > i_4_; i_4_++) {
                     if (is[i_4_] != -1) bool = false;
-                    if (npc.anIntArray10236 == null || (npc.anIntArray10236[i_4_]) == -1 || (RunescapeInfo.aClass87_191.method835(is[i_4_], 7).anInt239 >= RunescapeInfo.aClass87_191.method835((npc.anIntArray10236[i_4_]), 7).anInt239)) {
+                    if (npc.anIntArray10236 == null || (npc.anIntArray10236[i_4_]) == -1 || (RunescapeInfo.aClass87_191.getSequence(is[i_4_], 7).anInt239 >= RunescapeInfo.aClass87_191.getSequence((npc.anIntArray10236[i_4_]), 7).anInt239)) {
                         npc.anInt10218 = i;
                         npc.anInt10322 = npc.anInt10319;
                         npc.anIntArray10236 = is;

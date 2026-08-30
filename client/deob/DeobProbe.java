@@ -85,16 +85,23 @@ final class DeobProbe {
         }
         enqueue(build("session", SESSION_ID, "session-start",
                 map("path", PATH, "java", System.getProperty("java.version"))));
-        Thread t = new Thread(DeobProbe::pump, "DeobProbe-writer");
+        // Anonymous Runnables — no lambdas/method-refs (RoboVM Soot cannot AOT invokedynamic).
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                pump();
+            }
+        }, "DeobProbe-writer");
         t.setDaemon(true);
         t.start();
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            drain();
-            if (dropped.get() > 0) {
-                System.err.println("DeobProbe: queue saturated — wrote "
-                        + enqueued.get() + " lines, dropped " + dropped.get()
-                        + " (probes fired faster than the writer drained; "
-                        + "lower the probe rate or call DeobProbe.flush()).");
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                drain();
+                if (dropped.get() > 0) {
+                    System.err.println("DeobProbe: queue saturated — wrote "
+                            + enqueued.get() + " lines, dropped " + dropped.get()
+                            + " (probes fired faster than the writer drained; "
+                            + "lower the probe rate or call DeobProbe.flush()).");
+                }
             }
         }, "DeobProbe-shutdown"));
     }
@@ -198,7 +205,11 @@ final class DeobProbe {
         AtomicLong c = counters.get(location);
         if (c == null) {
             synchronized (counters) {
-                c = counters.computeIfAbsent(location, k -> new AtomicLong(0));
+                c = counters.get(location);
+                if (c == null) {
+                    c = new AtomicLong(0);
+                    counters.put(location, c);
+                }
             }
         }
         long n = c.incrementAndGet();

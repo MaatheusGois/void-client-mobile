@@ -37,9 +37,9 @@ final class BufferCacheSub1
     final void U(int i, int i_0_, int[] is, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_, int[] is_5_, int[] is_6_, int[] is_7_, int i_8_, int i_9_, int i_10_, boolean bool) {
         boolean bool_11_ = (anInt8223 & 0x20) == 0;
         if (aClass266ArrayArray8230 == null && !bool_11_) {
-            aClass266ArrayArray8230 = new Component157[this.anInt4587][this.anInt4590];
-            aClass145ArrayArray8225 = new Component70[this.anInt4587][this.anInt4590];
-        } else if (aClass198ArrayArray8219 == null && bool_11_) aClass198ArrayArray8219 = new Component250[this.anInt4587][this.anInt4590];
+            aClass266ArrayArray8230 = new Component157[this.tileWidth][this.tileLength];
+            aClass145ArrayArray8225 = new Component70[this.tileWidth][this.tileLength];
+        } else if (aClass198ArrayArray8219 == null && bool_11_) aClass198ArrayArray8219 = new Component250[this.tileWidth][this.tileLength];
         else if (aClass102ArrayArray8215 != null) throw new IllegalStateException();
         if (is != null && is.length != 0) {
             for (int i_12_ = 0; i_12_ < is_4_.length; i_12_++) {
@@ -70,19 +70,19 @@ final class BufferCacheSub1
                     boolean bool_17_ = false;
                     int i_18_;
                     if (i_15_ == 0 && i_16_ == 0) i_18_ = (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]);
-                    else if (i_15_ == 0 && i_16_ == this.anInt4592) i_18_ = (aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]);
-                    else if (i_15_ == this.anInt4592 && i_16_ == this.anInt4592) i_18_ = (aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]);
-                    else if (i_15_ == this.anInt4592 && i_16_ == 0) i_18_ = (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]);
+                    else if (i_15_ == 0 && i_16_ == this.tileSize) i_18_ = (aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]);
+                    else if (i_15_ == this.tileSize && i_16_ == this.tileSize) i_18_ = (aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]);
+                    else if (i_15_ == this.tileSize && i_16_ == 0) i_18_ = (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]);
                     else {
-                        int i_19_ = (((aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) * (this.anInt4592 - i_15_)) + (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) * i_15_);
-                        int i_20_ = (((aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]) * (this.anInt4592 - i_15_)) + ((aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]) * i_15_));
-                        i_18_ = (i_19_ * (this.anInt4592 - i_16_) + i_20_ * i_16_) >> 2 * this.anInt4588;
+                        int i_19_ = (((aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) * (this.tileSize - i_15_)) + (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) * i_15_);
+                        int i_20_ = (((aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]) * (this.tileSize - i_15_)) + ((aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]) * i_15_));
+                        i_18_ = (i_19_ * (this.tileSize - i_16_) + i_20_ * i_16_) >> 2 * this.tileSizeBits;
                     }
-                    int i_21_ = (i << this.anInt4588) + i_15_;
-                    int i_22_ = (i_0_ << this.anInt4588) + i_16_;
+                    int i_21_ = (i << this.tileSizeBits) + i_15_;
+                    int i_22_ = (i_0_ << this.tileSizeBits) + i_16_;
                     class198.aShortArray2622[i_14_] = (short) i_15_;
                     class198.aShortArray2613[i_14_] = (short) i_16_;
-                    class198.aShortArray2618[i_14_] = (short) (this.method3986(i_21_, i_22_, (byte) 64) + (is_1_ != null ? is_1_[i_14_] : 0));
+                    class198.aShortArray2618[i_14_] = (short) (this.getInterpolatedHeight(i_21_, i_22_, (byte) 64) + (is_1_ != null ? is_1_[i_14_] : 0));
                     if (i_18_ < 0) i_18_ = 0;
                     if (is_4_[i_14_] == 0) {
                         class198.anIntArray2623[i_14_] = 0;
@@ -125,19 +125,19 @@ final class BufferCacheSub1
                                 break;
                             }
                             i_29_ = i_33_;
-                        } else if (is[i_33_] == this.anInt4592 && is_2_[i_33_] == 0) {
+                        } else if (is[i_33_] == this.tileSize && is_2_[i_33_] == 0) {
                             if (i_30_ != -1 && is_4_[i_30_] != is_4_[i_33_]) {
                                 bool_28_ = false;
                                 break;
                             }
                             i_30_ = i_33_;
-                        } else if (is[i_33_] == this.anInt4592 && is_2_[i_33_] == this.anInt4592) {
+                        } else if (is[i_33_] == this.tileSize && is_2_[i_33_] == this.tileSize) {
                             if (i_31_ != -1 && is_4_[i_31_] != is_4_[i_33_]) {
                                 bool_28_ = false;
                                 break;
                             }
                             i_31_ = i_33_;
-                        } else if (is[i_33_] == 0 && is_2_[i_33_] == this.anInt4592) {
+                        } else if (is[i_33_] == 0 && is_2_[i_33_] == this.tileSize) {
                             if (i_32_ != -1 && is_4_[i_32_] != is_4_[i_33_]) {
                                 bool_28_ = false;
                                 break;
@@ -157,11 +157,11 @@ final class BufferCacheSub1
                         }
                         if (bool_28_) {
                             for (int i_35_ = 1; i_35_ < 4; i_35_++) {
-                                if (is[i_35_] != is[0] && (is[i_35_] != is[0] + this.anInt4592) && (is[i_35_] != is[0] - this.anInt4592)) {
+                                if (is[i_35_] != is[0] && (is[i_35_] != is[0] + this.tileSize) && (is[i_35_] != is[0] - this.tileSize)) {
                                     bool_28_ = false;
                                     break;
                                 }
-                                if (is_2_[i_35_] != is_2_[0] && (is_2_[i_35_] != is_2_[0] + this.anInt4592) && (is_2_[i_35_] != is_2_[0] - this.anInt4592)) {
+                                if (is_2_[i_35_] != is_2_[0] && (is_2_[i_35_] != is_2_[0] + this.tileSize) && (is_2_[i_35_] != is_2_[0] - this.tileSize)) {
                                     bool_28_ = false;
                                     break;
                                 }
@@ -177,7 +177,7 @@ final class BufferCacheSub1
                         class266.anInt3388 = is_5_[0] >> 8;
                         if (i_36_ == 0) class266.aByte3386 |= 0x2;
                     } else if (i_36_ == 0) return;
-                    if ((this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i + 1][i_0_]) && (this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i + 1][i_0_ + 1]) && (this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i][i_0_ + 1])) class266.aByte3386 |= 0x1;
+                    if ((this.heights[i][i_0_] == this.heights[i + 1][i_0_]) && (this.heights[i][i_0_] == this.heights[i + 1][i_0_ + 1]) && (this.heights[i][i_0_] == this.heights[i][i_0_ + 1])) class266.aByte3386 |= 0x1;
                     if (i_37_ != -1 && (class266.aByte3386 & 0x2) == 0 && !(aHa_Sub1_8217.modelProvider.getModel(i_37_, -6662).aBoolean209)) {
                         int i_38_;
                         if (is_3_ != null && i_9_ != 0) {
@@ -262,19 +262,19 @@ final class BufferCacheSub1
                         boolean bool_43_ = false;
                         int i_44_;
                         if (i_41_ == 0 && i_42_ == 0) i_44_ = (aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]);
-                        else if (i_41_ == 0 && i_42_ == this.anInt4592) i_44_ = (aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]);
-                        else if (i_41_ == this.anInt4592 && i_42_ == this.anInt4592) i_44_ = (aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]);
-                        else if (i_41_ == this.anInt4592 && i_42_ == 0) i_44_ = (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]);
+                        else if (i_41_ == 0 && i_42_ == this.tileSize) i_44_ = (aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]);
+                        else if (i_41_ == this.tileSize && i_42_ == this.tileSize) i_44_ = (aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]);
+                        else if (i_41_ == this.tileSize && i_42_ == 0) i_44_ = (aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]);
                         else {
-                            int i_45_ = (((aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) * (this.anInt4592 - i_41_)) + ((aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) * i_41_));
-                            int i_46_ = (((aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]) * (this.anInt4592 - i_41_)) + ((aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]) * i_41_));
-                            i_44_ = ((i_45_ * (this.anInt4592 - i_42_) + i_46_ * i_42_) >> 2 * this.anInt4588);
+                            int i_45_ = (((aByteArrayArray8220[i][i_0_] - aByteArrayArray8232[i][i_0_]) * (this.tileSize - i_41_)) + ((aByteArrayArray8220[i + 1][i_0_] - aByteArrayArray8232[i + 1][i_0_]) * i_41_));
+                            int i_46_ = (((aByteArrayArray8220[i][i_0_ + 1] - aByteArrayArray8232[i][i_0_ + 1]) * (this.tileSize - i_41_)) + ((aByteArrayArray8220[i + 1][i_0_ + 1] - aByteArrayArray8232[i + 1][i_0_ + 1]) * i_41_));
+                            i_44_ = ((i_45_ * (this.tileSize - i_42_) + i_46_ * i_42_) >> 2 * this.tileSizeBits);
                         }
-                        int i_47_ = (i << this.anInt4588) + i_41_;
-                        int i_48_ = (i_0_ << this.anInt4588) + i_42_;
+                        int i_47_ = (i << this.tileSizeBits) + i_41_;
+                        int i_48_ = (i_0_ << this.tileSizeBits) + i_42_;
                         class145.aShortArray2009[i_40_] = (short) i_41_;
                         class145.aShortArray2002[i_40_] = (short) i_42_;
-                        class145.aShortArray2007[i_40_] = (short) (this.method3986(i_47_, i_48_, (byte) 126) + (is_1_ != null ? is_1_[i_40_] : 0));
+                        class145.aShortArray2007[i_40_] = (short) (this.getInterpolatedHeight(i_47_, i_48_, (byte) 126) + (is_1_ != null ? is_1_[i_40_] : 0));
                         if (i_44_ < 0) i_44_ = 0;
                         if (is_4_[i_40_] == 0) {
                             if (is_5_ != null) class145.anIntArray2001[i_40_] = i_44_ << 25;
@@ -343,8 +343,8 @@ final class BufferCacheSub1
 
     final void method3978(int i, int i_60_, int[] is, int[] is_61_, int[] is_62_, int[] is_63_, int[] is_64_, int[] is_65_, int[] is_66_, int[] is_67_, int[] is_68_, int[] is_69_, int[] is_70_, int i_71_, int i_72_, int i_73_, boolean bool) {
         if (aClass102ArrayArray8215 == null) {
-            aClass102ArrayArray8215 = new Component180[this.anInt4587][this.anInt4590];
-            aClass236ArrayArray8222 = new Component4[this.anInt4587][this.anInt4590];
+            aClass102ArrayArray8215 = new Component180[this.tileWidth][this.tileLength];
+            aClass236ArrayArray8222 = new Component4[this.tileWidth][this.tileLength];
         } else if (aClass266ArrayArray8230 != null || aClass198ArrayArray8219 != null) throw new IllegalStateException();
         boolean bool_74_ = false;
         if (is_67_.length == 2 && is_64_.length == 2 && (is_67_[0] == is_67_[1] || is_69_[0] != -1 && is_69_[0] == is_69_[1])) {
@@ -352,7 +352,7 @@ final class BufferCacheSub1
             for (int i_75_ = 1; i_75_ < 2; i_75_++) {
                 int i_76_ = is[is_64_[i_75_]];
                 int i_77_ = is_62_[is_64_[i_75_]];
-                if (i_76_ != 0 && i_76_ != this.anInt4592 || i_77_ != 0 && i_77_ != this.anInt4592) {
+                if (i_76_ != 0 && i_76_ != this.tileSize || i_77_ != 0 && i_77_ != this.tileSize) {
                     bool_74_ = false;
                     break;
                 }
@@ -371,19 +371,19 @@ final class BufferCacheSub1
                 int i_81_ = is[i_80_];
                 int i_82_ = is_62_[i_80_];
                 if (i_81_ == 0 && i_82_ == 0) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]);
-                else if (i_81_ == 0 && i_82_ == this.anInt4592) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i][i_60_ + 1] - aByteArrayArray8232[i][i_60_ + 1]);
-                else if (i_81_ == this.anInt4592 && i_82_ == this.anInt4592) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i + 1][i_60_ + 1] - aByteArrayArray8232[i + 1][i_60_ + 1]);
-                else if (i_81_ == this.anInt4592 && i_82_ == 0) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i + 1][i_60_] - aByteArrayArray8232[i + 1][i_60_]);
+                else if (i_81_ == 0 && i_82_ == this.tileSize) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i][i_60_ + 1] - aByteArrayArray8232[i][i_60_ + 1]);
+                else if (i_81_ == this.tileSize && i_82_ == this.tileSize) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i + 1][i_60_ + 1] - aByteArrayArray8232[i + 1][i_60_ + 1]);
+                else if (i_81_ == this.tileSize && i_82_ == 0) class236.aShortArray3088[i_80_] = (short) (aByteArrayArray8220[i + 1][i_60_] - aByteArrayArray8232[i + 1][i_60_]);
                 else {
-                    int i_83_ = (((aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]) * (this.anInt4592 - i_81_)) + (aByteArrayArray8220[i + 1][i_60_] - aByteArrayArray8232[i + 1][i_60_]) * i_81_);
-                    int i_84_ = (((aByteArrayArray8220[i][i_60_ + 1] - aByteArrayArray8232[i][i_60_ + 1]) * (this.anInt4592 - i_81_)) + ((aByteArrayArray8220[i + 1][i_60_ + 1] - aByteArrayArray8232[i + 1][i_60_ + 1]) * i_81_));
-                    class236.aShortArray3088[i_80_] = (short) ((i_83_ * (this.anInt4592 - i_82_) + i_84_ * i_82_) >> 2 * this.anInt4588);
+                    int i_83_ = (((aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]) * (this.tileSize - i_81_)) + (aByteArrayArray8220[i + 1][i_60_] - aByteArrayArray8232[i + 1][i_60_]) * i_81_);
+                    int i_84_ = (((aByteArrayArray8220[i][i_60_ + 1] - aByteArrayArray8232[i][i_60_ + 1]) * (this.tileSize - i_81_)) + ((aByteArrayArray8220[i + 1][i_60_ + 1] - aByteArrayArray8232[i + 1][i_60_ + 1]) * i_81_));
+                    class236.aShortArray3088[i_80_] = (short) ((i_83_ * (this.tileSize - i_82_) + i_84_ * i_82_) >> 2 * this.tileSizeBits);
                 }
-                int i_85_ = (i << this.anInt4588) + i_81_;
-                int i_86_ = (i_60_ << this.anInt4588) + i_82_;
+                int i_85_ = (i << this.tileSizeBits) + i_81_;
+                int i_86_ = (i_60_ << this.tileSizeBits) + i_82_;
                 class236.aShortArray3096[i_80_] = (short) i_81_;
                 class236.aShortArray3094[i_80_] = (short) i_82_;
-                class236.aShortArray3097[i_80_] = (short) (this.method3986(i_85_, i_86_, (byte) 67) + (is_61_ != null ? is_61_[i_80_] : 0));
+                class236.aShortArray3097[i_80_] = (short) (this.getInterpolatedHeight(i_85_, i_86_, (byte) 67) + (is_61_ != null ? is_61_[i_80_] : 0));
                 if (class236.aShortArray3088[i_80_] < 2) class236.aShortArray3088[i_80_] = (short) 2;
             }
             boolean bool_87_ = false;
@@ -437,7 +437,7 @@ final class BufferCacheSub1
                 class102.anInt1600 = ReferenceTable.clampHslLightness(0, (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]), Component361.method303(is_68_[0], 30));
                 if (i_92_ == -1) class102.aByte1606 |= 0x2;
             }
-            if ((this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_ + 1]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i][i_60_ + 1])) class102.aByte1606 |= 0x1;
+            if ((this.heights[i][i_60_] == this.heights[i + 1][i_60_]) && (this.heights[i][i_60_] == this.heights[i + 1][i_60_ + 1]) && (this.heights[i][i_60_] == this.heights[i][i_60_ + 1])) class102.aByte1606 |= 0x1;
             Model class12 = null;
             if (i_93_ != -1) class12 = aHa_Sub1_8217.modelProvider.getModel(i_93_, -6662);
             if (class12 != null && (class102.aByte1606 & 0x2) == 0 && !class12.aBoolean209) {
@@ -479,7 +479,7 @@ final class BufferCacheSub1
                 if (bools[i_99_][i_100_]) {
                     int i_101_ = i - i_96_ + i_99_;
                     int i_102_ = i_95_ - i_96_ + i_100_;
-                    if (i_101_ >= 0 && i_101_ < this.anInt4587 && i_102_ >= 0 && i_102_ < this.anInt4590) method3992(i_101_, i_102_, i_98_);
+                    if (i_101_ >= 0 && i_101_ < this.tileWidth && i_102_ >= 0 && i_102_ < this.tileLength) method3992(i_101_, i_102_, i_98_);
                 }
             }
         }
@@ -501,9 +501,9 @@ final class BufferCacheSub1
                 }
                 if (anInt8228 == -1) {
                     for (int i_187_ = 0; i_187_ < class145.aShort2003; i_187_++) {
-                        int i_188_ = (class145.aShortArray2009[i_187_] + (i << this.anInt4588));
+                        int i_188_ = (class145.aShortArray2009[i_187_] + (i << this.tileSizeBits));
                         int i_189_ = class145.aShortArray2007[i_187_];
-                        int i_190_ = (class145.aShortArray2002[i_187_] + (i_105_ << this.anInt4588));
+                        int i_190_ = (class145.aShortArray2002[i_187_] + (i_105_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_188_ + aFloat8227 * (float) i_189_ + aFloat8231 * (float) i_190_);
                         if (f <= (float) aHa_Sub1_8217.anInt7482) return;
                         is_108_[i_187_] = 0;
@@ -530,9 +530,9 @@ final class BufferCacheSub1
                     }
                 } else {
                     for (int i_196_ = 0; i_196_ < class145.aShort2003; i_196_++) {
-                        int i_197_ = (class145.aShortArray2009[i_196_] + (i << this.anInt4588));
+                        int i_197_ = (class145.aShortArray2009[i_196_] + (i << this.tileSizeBits));
                         int i_198_ = class145.aShortArray2007[i_196_];
-                        int i_199_ = (class145.aShortArray2002[i_196_] + (i_105_ << this.anInt4588));
+                        int i_199_ = (class145.aShortArray2002[i_196_] + (i_105_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_197_ + aFloat8227 * (float) i_198_ + aFloat8231 * (float) i_199_);
                         is_108_[i_196_] = 0;
                         if (bool) {
@@ -600,7 +600,7 @@ final class BufferCacheSub1
                                     if (i_216_ != -1) {
                                         int i_217_ = -16777216;
                                         if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) i_217_ = -1694498816;
-                                        class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_207_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_208_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_206_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_207_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_208_]) / (float) (this.anInt4592)), (i_217_ | ((class145.anIntArray2001[i_206_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_207_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_208_]) & 0xffffff)), (class167.anInt2192), is_108_[i_206_], is_108_[i_207_], is_108_[i_208_], i_216_);
+                                        class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_208_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_206_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_207_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_208_]) / (float) (this.tileSize)), (i_217_ | ((class145.anIntArray2001[i_206_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_207_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_208_]) & 0xffffff)), (class167.anInt2192), is_108_[i_206_], is_108_[i_207_], is_108_[i_208_], i_216_);
                                     } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
                                         if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (BuildInfo.method206((class145.anIntArray2001[i_206_]), (is_108_[i_206_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_207_]), (is_108_[i_207_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_208_]), (is_108_[i_208_] << 24 | (class167.anInt2192)), 255)));
@@ -609,7 +609,7 @@ final class BufferCacheSub1
                                 } else if (i_216_ != -1) {
                                     int i_218_ = -16777216;
                                     if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) i_218_ = -1694498816;
-                                    class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_207_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_208_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_206_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_207_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_208_]) / (float) this.anInt4592), i_218_ | (class145.anIntArray2001[i_206_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_207_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_208_]) & 0xffffff, 0, 0, 0, 0, i_216_);
+                                    class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_208_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_206_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_207_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_208_]) / (float) this.tileSize), i_218_ | (class145.anIntArray2001[i_206_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_207_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_208_]) & 0xffffff, 0, 0, 0, 0, i_216_);
                                 } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
                                     if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (class145.anIntArray2001[i_206_]), (class145.anIntArray2001[i_207_]), (class145.anIntArray2001[i_208_]));
@@ -639,7 +639,7 @@ final class BufferCacheSub1
                                     if (i_230_ != -1) {
                                         int i_231_ = -16777216;
                                         if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) i_231_ = -1694498816;
-                                        class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_221_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_222_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_220_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_221_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_222_]) / (float) (this.anInt4592)), (i_231_ | ((class145.anIntArray2001[i_220_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_221_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_222_]) & 0xffffff)), (class167.anInt2192), is_108_[i_220_], is_108_[i_221_], is_108_[i_222_], i_230_);
+                                        class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2009[i_222_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_220_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_221_]) / (float) (this.tileSize)), ((float) (class145.aShortArray2002[i_222_]) / (float) (this.tileSize)), (i_231_ | ((class145.anIntArray2001[i_220_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_221_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_222_]) & 0xffffff)), (class167.anInt2192), is_108_[i_220_], is_108_[i_221_], is_108_[i_222_], i_230_);
                                     } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
                                         if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (BuildInfo.method206((class145.anIntArray2001[i_220_]), (is_108_[i_220_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_221_]), (is_108_[i_221_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_222_]), (is_108_[i_222_] << 24 | (class167.anInt2192)), 255)));
@@ -648,7 +648,7 @@ final class BufferCacheSub1
                                 } else if (i_230_ != -1) {
                                     int i_232_ = -16777216;
                                     if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) i_232_ = -1694498816;
-                                    class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_221_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_222_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_220_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_221_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_222_]) / (float) this.anInt4592), i_232_ | (class145.anIntArray2001[i_220_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_221_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_222_]) & 0xffffff, 0, 0, 0, 0, i_230_);
+                                    class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2009[i_222_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_220_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_221_]) / (float) this.tileSize), ((float) (class145.aShortArray2002[i_222_]) / (float) this.tileSize), i_232_ | (class145.anIntArray2001[i_220_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_221_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_222_]) & 0xffffff, 0, 0, 0, 0, i_230_);
                                 } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
                                     if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (class145.anIntArray2001[i_220_]), (class145.anIntArray2001[i_221_]), (class145.anIntArray2001[i_222_]));
@@ -666,10 +666,10 @@ final class BufferCacheSub1
                     if ((i_109_ & 0x1) != 0) return;
                 } else if ((i_109_ & 0x2) != 0) return;
             }
-            int i_110_ = i * this.anInt4592;
-            int i_111_ = i_110_ + this.anInt4592;
-            int i_112_ = i_105_ * this.anInt4592;
-            int i_113_ = i_112_ + this.anInt4592;
+            int i_110_ = i * this.tileSize;
+            int i_111_ = i_110_ + this.tileSize;
+            int i_112_ = i_105_ * this.tileSize;
+            int i_113_ = i_112_ + this.tileSize;
             int i_114_ = 0;
             int i_115_ = 0;
             int i_116_ = 0;
@@ -687,10 +687,10 @@ final class BufferCacheSub1
             int i_127_;
             int i_128_;
             if ((class266.aByte3386 & 0x1) == 0 || bool) {
-                int i_150_ = this.anIntArrayArray4584[i][i_105_];
-                int i_151_ = this.anIntArrayArray4584[i + 1][i_105_];
-                int i_152_ = this.anIntArrayArray4584[i + 1][i_105_ + 1];
-                int i_153_ = this.anIntArrayArray4584[i][i_105_ + 1];
+                int i_150_ = this.heights[i][i_105_];
+                int i_151_ = this.heights[i + 1][i_105_];
+                int i_152_ = this.heights[i + 1][i_105_ + 1];
+                int i_153_ = this.heights[i][i_105_ + 1];
                 if (anInt8228 == -1) {
                     f = aFloat8218 + (aFloat8233 * (float) i_110_ + aFloat8227 * (float) i_150_ + aFloat8231 * (float) i_112_);
                     if (f <= (float) aHa_Sub1_8217.anInt7482) return;
@@ -793,7 +793,7 @@ final class BufferCacheSub1
                     i_128_ = (class109.anInt1668 + (int) (f_175_ * (float) (aHa_Sub1_8217.anInt7497) / (float) anInt8228));
                 }
             } else {
-                int i_129_ = this.anIntArrayArray4584[i][i_105_];
+                int i_129_ = this.heights[i][i_105_];
                 float f_130_ = aFloat8227 * (float) i_129_;
                 if (anInt8228 == -1) {
                     f = aFloat8218 + (aFloat8233 * (float) i_110_ + f_130_ + aFloat8231 * (float) i_112_);
@@ -1013,7 +1013,7 @@ final class BufferCacheSub1
                 if (bools[i_251_][i_252_]) {
                     int i_253_ = i - i_249_ + i_251_;
                     int i_254_ = i_248_ - i_249_ + i_252_;
-                    if (i_253_ >= 0 && i_253_ < this.anInt4587 && i_254_ >= 0 && i_254_ < this.anInt4590) method3992(i_253_, i_254_, i_250_);
+                    if (i_253_ >= 0 && i_253_ < this.tileWidth && i_254_ >= 0 && i_254_ < this.tileLength) method3992(i_253_, i_254_, i_250_);
                 }
             }
         }
@@ -1061,8 +1061,8 @@ final class BufferCacheSub1
                         } else if (aClass145ArrayArray8225[i_271_][i_272_] != null) {
                             Component70 class145 = aClass145ArrayArray8225[i_271_][i_272_];
                             for (int i_275_ = 0; i_275_ < class145.aShort2003; i_275_++) {
-                                is[i_275_] = i_269_ + ((class145.aShortArray2009[i_275_]) * i_268_ / this.anInt4592);
-                                is_266_[i_275_] = i_270_ - ((class145.aShortArray2002[i_275_]) * i_268_ / this.anInt4592);
+                                is[i_275_] = i_269_ + ((class145.aShortArray2009[i_275_]) * i_268_ / this.tileSize);
+                                is_266_[i_275_] = i_270_ - ((class145.aShortArray2002[i_275_]) * i_268_ / this.tileSize);
                             }
                             for (int i_276_ = 0; i_276_ < class145.aShort2010; i_276_++) {
                                 int i_277_ = i_276_ * 3;
@@ -1086,8 +1086,8 @@ final class BufferCacheSub1
                     } else if (aClass198ArrayArray8219[i_271_][i_272_] != null) {
                         Component250 class198 = aClass198ArrayArray8219[i_271_][i_272_];
                         for (int i_288_ = 0; i_288_ < class198.aShort2620; i_288_++) {
-                            is[i_288_] = i_269_ + ((class198.aShortArray2622[i_288_]) * i_268_ / this.anInt4592);
-                            is_266_[i_288_] = i_270_ - ((class198.aShortArray2613[i_288_]) * i_268_ / this.anInt4592);
+                            is[i_288_] = i_269_ + ((class198.aShortArray2622[i_288_]) * i_268_ / this.tileSize);
+                            is_266_[i_288_] = i_270_ - ((class198.aShortArray2613[i_288_]) * i_268_ / this.tileSize);
                         }
                         for (int i_289_ = 0; i_289_ < class198.aShort2619; i_289_++) {
                             int i_290_ = i_289_ * 3;
@@ -1127,9 +1127,9 @@ final class BufferCacheSub1
                 }
                 if (anInt8228 == -1) {
                     for (int i_360_ = 0; i_360_ < class236.aShort3089; i_360_++) {
-                        int i_361_ = (class236.aShortArray3096[i_360_] + (i << this.anInt4588));
+                        int i_361_ = (class236.aShortArray3096[i_360_] + (i << this.tileSizeBits));
                         short i_362_ = class236.aShortArray3097[i_360_];
-                        int i_363_ = (class236.aShortArray3094[i_360_] + (i_300_ << this.anInt4588));
+                        int i_363_ = (class236.aShortArray3094[i_360_] + (i_300_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_361_ + aFloat8227 * (float) i_362_ + aFloat8231 * (float) i_363_);
                         if (f <= (float) aHa_Sub1_8217.anInt7482) return;
                         float f_364_ = aFloat8213 + (aFloat8212 * (float) i_361_ + aFloat8216 * (float) i_362_ + aFloat8224 * (float) i_363_);
@@ -1140,9 +1140,9 @@ final class BufferCacheSub1
                     }
                 } else {
                     for (int i_366_ = 0; i_366_ < class236.aShort3089; i_366_++) {
-                        int i_367_ = (class236.aShortArray3096[i_366_] + (i << this.anInt4588));
+                        int i_367_ = (class236.aShortArray3096[i_366_] + (i << this.tileSizeBits));
                         short i_368_ = class236.aShortArray3097[i_366_];
-                        int i_369_ = (class236.aShortArray3094[i_366_] + (i_300_ << this.anInt4588));
+                        int i_369_ = (class236.aShortArray3094[i_366_] + (i_300_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_367_ + aFloat8227 * (float) i_368_ + aFloat8231 * (float) i_369_);
                         float f_370_ = aFloat8213 + (aFloat8212 * (float) i_367_ + aFloat8216 * (float) i_368_ + aFloat8224 * (float) i_369_);
                         float f_371_ = aFloat8226 + (aFloat8214 * (float) i_367_ + aFloat8221 * (float) i_368_ + aFloat8229 * (float) i_369_);
@@ -1189,7 +1189,7 @@ final class BufferCacheSub1
                                 if (i_383_ != -1)
                                     class109.method1022((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_373_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_374_]), i_383_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_375_]), i_383_)));
                             } else
-                                class109.method1024((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], ((float) (class236.aShortArray3096[i_373_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_374_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_375_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_373_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_374_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_375_]) / (float) this.anInt4592), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_373_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_374_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_375_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_382_);
+                                class109.method1024((float) i_379_, (float) i_380_, (float) i_381_, (float) i_376_, (float) i_377_, (float) i_378_, (float) is_302_[i_373_], (float) is_302_[i_374_], (float) is_302_[i_375_], ((float) (class236.aShortArray3096[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_375_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_373_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_374_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_375_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_373_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_374_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_375_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_382_);
                         }
                     }
                 } else {
@@ -1211,7 +1211,7 @@ final class BufferCacheSub1
                                 if (i_395_ != -1)
                                     class109.method1022((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_385_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_386_]), i_395_)), (float) (ReferenceTable.clampHslLightness(0, (class236.aShortArray3088[i_387_]), i_395_)));
                             } else
-                                class109.method1024((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], ((float) (class236.aShortArray3096[i_385_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_386_]) / (float) this.anInt4592), ((float) (class236.aShortArray3096[i_387_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_385_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_386_]) / (float) this.anInt4592), ((float) (class236.aShortArray3094[i_387_]) / (float) this.anInt4592), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_385_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_386_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_387_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_394_);
+                                class109.method1024((float) i_391_, (float) i_392_, (float) i_393_, (float) i_388_, (float) i_389_, (float) i_390_, (float) is_302_[i_385_], (float) is_302_[i_386_], (float) is_302_[i_387_], ((float) (class236.aShortArray3096[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3096[i_387_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_385_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_386_]) / (float) this.tileSize), ((float) (class236.aShortArray3094[i_387_]) / (float) this.tileSize), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_385_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_386_]) & 0xffff]) & 0xffffff), ~0xffffff | ((Component380.anIntArray4983[(class236.aShortArray3088[i_387_]) & 0xffff]) & 0xffffff), 0, 0, 0, 0, i_394_);
                         }
                     }
                 }
@@ -1222,10 +1222,10 @@ final class BufferCacheSub1
                     if ((i_304_ & 0x1) != 0) return;
                 } else if ((i_304_ & 0x2) != 0) return;
             }
-            int i_305_ = i * this.anInt4592;
-            int i_306_ = i_305_ + this.anInt4592;
-            int i_307_ = i_300_ * this.anInt4592;
-            int i_308_ = i_307_ + this.anInt4592;
+            int i_305_ = i * this.tileSize;
+            int i_306_ = i_305_ + this.tileSize;
+            int i_307_ = i_300_ * this.tileSize;
+            int i_308_ = i_307_ + this.tileSize;
             float f;
             float f_309_;
             float f_310_;
@@ -1239,10 +1239,10 @@ final class BufferCacheSub1
             int i_318_;
             int i_319_;
             if ((class102.aByte1606 & 0x1) == 0) {
-                int i_340_ = this.anIntArrayArray4584[i][i_300_];
-                int i_341_ = this.anIntArrayArray4584[i + 1][i_300_];
-                int i_342_ = this.anIntArrayArray4584[i + 1][i_300_ + 1];
-                int i_343_ = this.anIntArrayArray4584[i][i_300_ + 1];
+                int i_340_ = this.heights[i][i_300_];
+                int i_341_ = this.heights[i + 1][i_300_];
+                int i_342_ = this.heights[i + 1][i_300_ + 1];
+                int i_343_ = this.heights[i][i_300_ + 1];
                 if (anInt8228 == -1) {
                     f = aFloat8218 + (aFloat8233 * (float) i_305_ + aFloat8227 * (float) i_340_ + aFloat8231 * (float) i_307_);
                     if (f <= (float) aHa_Sub1_8217.anInt7482) return;
@@ -1291,7 +1291,7 @@ final class BufferCacheSub1
                     i_319_ = (class109.anInt1668 + (int) (f_359_ * (float) (aHa_Sub1_8217.anInt7497) / (float) anInt8228));
                 }
             } else {
-                int i_320_ = this.anIntArrayArray4584[i][i_300_];
+                int i_320_ = this.heights[i][i_300_];
                 float f_321_ = aFloat8227 * (float) i_320_;
                 if (anInt8228 == -1) {
                     f = aFloat8218 + (aFloat8233 * (float) i_305_ + f_321_ + aFloat8231 * (float) i_307_);
@@ -1404,9 +1404,9 @@ final class BufferCacheSub1
             if (class198 != null) {
                 if (anInt8228 == -1) {
                     for (int i_422_ = 0; i_422_ < class198.aShort2620; i_422_++) {
-                        int i_423_ = (class198.aShortArray2622[i_422_] + (i << this.anInt4588));
+                        int i_423_ = (class198.aShortArray2622[i_422_] + (i << this.tileSizeBits));
                         int i_424_ = class198.aShortArray2618[i_422_];
-                        int i_425_ = (class198.aShortArray2613[i_422_] + (i_417_ << this.anInt4588));
+                        int i_425_ = (class198.aShortArray2613[i_422_] + (i_417_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_423_ + aFloat8227 * (float) i_424_ + aFloat8231 * (float) i_425_);
                         if (f <= (float) aHa_Sub1_8217.anInt7482) return;
                         is_420_[i_422_] = 0;
@@ -1433,9 +1433,9 @@ final class BufferCacheSub1
                     }
                 } else {
                     for (int i_431_ = 0; i_431_ < class198.aShort2620; i_431_++) {
-                        int i_432_ = (class198.aShortArray2622[i_431_] + (i << this.anInt4588));
+                        int i_432_ = (class198.aShortArray2622[i_431_] + (i << this.tileSizeBits));
                         int i_433_ = class198.aShortArray2618[i_431_];
-                        int i_434_ = (class198.aShortArray2613[i_431_] + (i_417_ << this.anInt4588));
+                        int i_434_ = (class198.aShortArray2613[i_431_] + (i_417_ << this.tileSizeBits));
                         float f = aFloat8218 + (aFloat8233 * (float) i_432_ + aFloat8227 * (float) i_433_ + aFloat8231 * (float) i_434_);
                         is_420_[i_431_] = 0;
                         if (bool) {
@@ -1460,7 +1460,7 @@ final class BufferCacheSub1
                         is_419_[i_431_] = (int) f;
                     }
                 }
-                float f = (float) this.anInt4592;
+                float f = (float) this.tileSize;
                 for (int i_440_ = 0; i_440_ < class198.aShort2619; i_440_++) {
                     int i_441_ = i_440_ * 3;
                     int i_442_ = i_441_ + 1;
@@ -1474,8 +1474,8 @@ final class BufferCacheSub1
                     if (((i_444_ - i_445_) * (i_449_ - i_448_) - (i_447_ - i_448_) * (i_446_ - i_445_)) > 0) {
                         class109.aBoolean1671 = (i_444_ < 0 || i_445_ < 0 || i_446_ < 0 || i_444_ > class109.anInt1679 || i_445_ > class109.anInt1679 || i_446_ > class109.anInt1679);
                         if (is_420_[i_441_] + is_420_[i_442_] + is_420_[i_443_] < 765) {
-                            int i_450_ = i << this.anInt4588;
-                            int i_451_ = i_417_ << this.anInt4588;
+                            int i_450_ = i << this.tileSizeBits;
+                            int i_451_ = i_417_ << this.tileSizeBits;
                             if ((class198.anIntArray2623[i_441_] & 0xffffff) != 0) {
                                 if (((class198.aShortArray2616[i_441_]) == (class198.aShortArray2616[i_442_])) && ((class198.aShortArray2616[i_441_]) == (class198.aShortArray2616[i_443_])) && ((class198.aShortArray2614[i_441_]) == (class198.aShortArray2614[i_442_])) && ((class198.aShortArray2614[i_441_]) == (class198.aShortArray2614[i_443_])))
                                     class109.method1024((float) i_447_, (float) i_448_, (float) i_449_, (float) i_444_, (float) i_445_, (float) i_446_, (float) is_419_[i_441_], (float) is_419_[i_442_], (float) is_419_[i_443_], ((float) (i_450_ + (class198.aShortArray2622[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_450_ + (class198.aShortArray2622[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_450_ + (class198.aShortArray2622[i_443_])) / (float) (class198.aShortArray2614[i_443_])), ((float) (i_451_ + (class198.aShortArray2613[i_441_])) / (float) (class198.aShortArray2614[i_441_])), ((float) (i_451_ + (class198.aShortArray2613[i_442_])) / (float) (class198.aShortArray2614[i_442_])), ((float) (i_451_ + (class198.aShortArray2613[i_443_])) / (float) (class198.aShortArray2614[i_443_])), (class198.anIntArray2623[i_441_]), (class198.anIntArray2623[i_442_]), (class198.anIntArray2623[i_443_]), class167.anInt2192, is_420_[i_441_], is_420_[i_442_], is_420_[i_443_], (class198.aShortArray2616[i_441_]));
@@ -1522,8 +1522,8 @@ final class BufferCacheSub1
                     } else if (aClass236ArrayArray8222[i_464_][i_465_] != null) {
                         Component4 class236 = aClass236ArrayArray8222[i_464_][i_465_];
                         for (int i_468_ = 0; i_468_ < class236.aShort3089; i_468_++) {
-                            is[i_468_] = i_462_ + ((class236.aShortArray3096[i_468_]) * i_461_ / this.anInt4592);
-                            is_459_[i_468_] = i_463_ - ((class236.aShortArray3094[i_468_]) * i_461_ / this.anInt4592);
+                            is[i_468_] = i_462_ + ((class236.aShortArray3096[i_468_]) * i_461_ / this.tileSize);
+                            is_459_[i_468_] = i_463_ - ((class236.aShortArray3094[i_468_]) * i_461_ / this.tileSize);
                         }
                         for (int i_469_ = 0; i_469_ < class236.aShort3099; i_469_++) {
                             short i_470_ = (class236.aShortArray3091[i_469_]);

@@ -3,7 +3,7 @@
 This file is the live **research log** — concrete evidence discovered during
 the deobfuscation discovery pass. Use it as the input for lote planning.
 
-Last updated: 2026-08-30 (lote 59 executed; lote 51/54 marked done).
+Last updated: 2026-08-30 (lote 66 executed; lote 51/54/59/65 marked done).
 
 ---
 
@@ -233,19 +233,45 @@ named `renderScene`; the two call sites are unchanged in behavior.
 
 These remain TBD from the top-tokens list:
 
-- `method3494`, `method3493`, `method3738`, `method3850`, `method3849`
-  (high call-site counts, not yet investigated)
-- `method835` (69 refs; defining class and role still need confirmation)
-- `anInt3138` (174 refs, 3xxx range — probably particle count or scan counter)
-- `anInt4592`, `anInt4588` (4xxx range, possibly NPC list / entity array)
+- `method3738` (high call-site count, not yet investigated)
 - `anInt9139`, `anInt8983` (9xxx range — usually widgets / interfaces)
 
-**Next session** can pick any of these. Recommended order based on fan-out:
-`anInt3138` → `anInt4592` → `method3493/3494` (likely paired).
+**Resolved in lote 66:** `method3493/3494/3495/3505/3506`, `method3850/3849`,
+`method835`, `anInt3138`, `anInt4592/4588/4587/4590`, scene height helpers.
+
+**Next session** can pick: `method3738` → widget `anInt9139/8983` → more
+GlToolkitSub3 texture-unit state (`anInt8175`).
 
 ---
 
-## 9. lote 50 executed — interface name `d` DEFERRED (IMPORTANT)
+## 10. Lote 66 — scene floor + prefs + collision + GL texture (CONFIRMED, executed)
+
+| Old | New | Evidence |
+|---|---|---|
+| `s.anInt4587` | `tileWidth` | ctor arg; bounds in `getInterpolatedHeight` |
+| `s.anInt4590` | `tileLength` | ctor arg; Z extent |
+| `s.anInt4592` | `tileSize` | `1 << bits` (usually 512) |
+| `s.anInt4588` | `tileSizeBits` | world→tile shift / lerp shift |
+| `s.anIntArrayArray4584` | `heights` | bilinear height samples |
+| `method3982` | `getHeight` | returns `heights[x][z]` |
+| `method3986` | `getInterpolatedHeight` | four-corner lerp |
+| `Component339.anInt3138` | `preferenceValue` | option value clamped by subclasses |
+| `aClass348_Sub51_3136` | `preferences` | owning `NodeSub51` |
+| `TeleportHandler` | `CollisionMap` | clip bitfield grid (misnamed for `tele` string) |
+| `anIntArrayArray4438` | `collisionFlags` | OR/AND with wall bits `0x2c01xx` |
+| `method3493/3494` | `clear/setCollisionFlag` | `~bits` / OR into flags |
+| `method3495` | `reachedWall` | wall-reach walkability |
+| `method3505/3506` | `flagSolid` / `unflagWall` | rectangle solid / wall clear |
+| `method3850` | `setActiveTexture` | binds `Interface18` on unit `anInt8175` |
+| `method3849` | `setTextureCombineMode` | wraps `method3924` |
+| `method835` | `getSequence` | cache load of seq def |
+
+Reflection: none of these tokens. Class rename requires iOS `clean compileJava`
+(stale `ios/build/generated` still had `TeleportHandler`).
+
+---
+
+## 11. lote 50 executed — interface name `d` DEFERRED (IMPORTANT)
 
 lote 50 renamed `method1-6`→`getVertices/getModelCount/getModel/isModelLoaded/
 getTriangles/getIndices`, `aD####`→`modelProvider`, `Component319`→`Model`,

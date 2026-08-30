@@ -452,7 +452,7 @@ final class ColoredTextBuilder {
                             }
                             HashNodeSub14.enqueueOutboundPacket(123, class348_sub47);
                             Component10.method2252(true, i_74_, i_75_, (byte) -120, 1, 0, 1, -4, 0);
-                        } else TeleportHandler.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), i_74_ + NodeBaseSub2.regionTileX);
+                        } else CollisionMap.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), i_74_ + NodeBaseSub2.regionTileX);
                     }
                     if (i_76_ == 4) {
                         ToolkitFactory.anInt1534 = i_72_;
@@ -601,7 +601,7 @@ final class ColoredTextBuilder {
                         }
                     }
                     if (i_76_ == 12) {
-                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, -127) && Component280.aClass346_2449.isKeyDown(81, -126)) TeleportHandler.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), NodeBaseSub2.regionTileX - -i_74_);
+                        if (Component353.anInt2581 > 0 && Component280.aClass346_2449.isKeyDown(82, -127) && Component280.aClass346_2449.isKeyDown(81, -126)) CollisionMap.method3502(i_75_ + Component330.regionTileY, 2, (Component72.localPlayer.plane), NodeBaseSub2.regionTileX - -i_74_);
                         else {
                             ToolkitFactory.anInt1534 = i_72_;
                             AssetCacheLoader.anInt385 = i_73_;

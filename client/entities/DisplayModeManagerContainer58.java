@@ -664,7 +664,7 @@ abstract class DisplayModeManagerContainer58
             if (i_92_ == i_88_) {
                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 65, i_88_);
                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7);
                     int i_95_ = class17.anInt248;
                     if (i_95_ == 0) return;
                     if (i_95_ == 2) {
@@ -679,8 +679,8 @@ abstract class DisplayModeManagerContainer58
                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 109, i_88_);
                 Component63 class368_93_ = NsnDefinition.aClass319_9245.method2543((byte) 99, i_92_);
                 if (class368.anInt4503 != -1 && class368_93_.anInt4503 != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7);
-                    DisplayModeManagerContainer167 class17_94_ = RunescapeInfo.aClass87_191.method835((class368_93_.anInt4503), i_89_ ^ ~0x3c5664d6);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7);
+                    DisplayModeManagerContainer167 class17_94_ = RunescapeInfo.aClass87_191.getSequence((class368_93_.anInt4503), i_89_ ^ ~0x3c5664d6);
                     if (class17_94_.anInt239 > class17.anInt239) return;
                 }
             }
@@ -700,7 +700,7 @@ abstract class DisplayModeManagerContainer58
             if (this.anInt10291 != -1 && (this.anInt10211 == i_96_)) {
                 int i_97_ = (NsnDefinition.aClass319_9245.method2543((byte) 98, this.anInt10291).anInt4503);
                 if (i_97_ != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_97_, 7);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_97_, 7);
                     if (class17 != null && class17.anIntArray237 != null && !this.aBoolean10309) DisplayModeManagerContainer260.method2178(this, 0, class17, i_89_ + 1012294835);
                 }
             }
@@ -717,7 +717,7 @@ abstract class DisplayModeManagerContainer58
             if (this.anInt10269 != -1 && this.anInt10225 == i_96_) {
                 int i_98_ = (NsnDefinition.aClass319_9245.method2543((byte) 103, this.anInt10269).anInt4503);
                 if (i_98_ != -1) {
-                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_98_, 7);
+                    DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_98_, 7);
                     if (class17 != null && class17.anIntArray237 != null && !this.aBoolean10309) DisplayModeManagerContainer260.method2178(this, 0, class17, -128);
                 }
             }

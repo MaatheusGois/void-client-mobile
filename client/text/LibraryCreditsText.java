@@ -35,7 +35,7 @@ final class LibraryCreditsText extends Component339 {
     final int method1768(int i) {
         if (i != -32350) method1767(true, -55);
         anInt5958++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     public static void method1769(int i) {
@@ -53,7 +53,7 @@ final class LibraryCreditsText extends Component339 {
     final void method1716(boolean bool) {
         if (bool != false) method1716(false);
         anInt5954++;
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
     }
 
     LibraryCreditsText(int i, NodeSub51 class348_sub51) {
@@ -62,7 +62,7 @@ final class LibraryCreditsText extends Component339 {
 
     final void method1712(int i, int i_2_) {
         anInt5952++;
-        this.anInt3138 = i_2_;
+        this.preferenceValue = i_2_;
         int i_3_ = 98 / ((82 - i) / 35);
     }
 

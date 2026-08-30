@@ -167,10 +167,10 @@ final class JaclibBitmapFont extends BitmapFont {
 
     final void fa(char c, int i, int i_49_, int i_50_, boolean bool) {
         aHa_Sub3_6494.method3927(true);
-        aHa_Sub3_6494.method3850((byte) -41, anInterface18_Impl3_6492);
+        aHa_Sub3_6494.setActiveTexture((byte) -41, anInterface18_Impl3_6492);
         if (aBoolean6493 || bool) {
             aHa_Sub3_6494.method3874(Component385.aClass229_2207, 112, ShaderCompilerSub3.aClass229_6519);
-            aHa_Sub3_6494.method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+            aHa_Sub3_6494.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
             aHa_Sub3_6494.method3894(-28186, i_50_);
         } else aHa_Sub3_6494.method3874(ShaderCompilerSub3.aClass229_6519, 126, ShaderCompilerSub3.aClass229_6519);
         MatrixSub2 class101_sub2 = aHa_Sub3_6494.method3934(-99);
@@ -179,6 +179,6 @@ final class JaclibBitmapFont extends BitmapFont {
         aHa_Sub3_6494.method3925(54, anInterface5_Impl1_6495, 0);
         aHa_Sub3_6494.method3862(0, aHa_Sub3_6494.aClass130_8204);
         aHa_Sub3_6494.method3899(2, c * '\004', HashNodeSub16.aClass21_9661, true);
-        if (aBoolean6493 || bool) aHa_Sub3_6494.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        if (aBoolean6493 || bool) aHa_Sub3_6494.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 }

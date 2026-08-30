@@ -25,7 +25,7 @@ final class Component20
 
     final int method1714(int i, int i_0_) {
         anInt6051++;
-        if (!Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
+        if (!Node.method2714(7351, this.preferences.aClass239_Sub25_7271.method1829(-32350))) return 3;
         if (i != 3) method1807((byte) 64);
         return 1;
     }
@@ -37,7 +37,7 @@ final class Component20
     final boolean method1806(int i) {
         if (i < 85) method1714(-53, -119);
         anInt6049++;
-        return Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350));
+        return Node.method2714(7351, this.preferences.aClass239_Sub25_7271.method1829(-32350));
     }
 
     public static void method1807(byte i) {
@@ -53,19 +53,19 @@ final class Component20
     final int method1808(int i) {
         anInt6053++;
         if (i != -32350) anInt6048 = -97;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final void method1712(int i, int i_1_) {
         int i_2_ = 38 / ((82 - i) / 35);
         anInt6052++;
-        this.anInt3138 = i_1_;
+        this.preferenceValue = i_1_;
     }
 
     final void method1716(boolean bool) {
         anInt6050++;
         if (bool != false) method1714(-51, -128);
-        if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -123) && !Node.method2714(7351, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 0;
-        if (this.anInt3138 < 0 || this.anInt3138 > 2) this.anInt3138 = method1710(20014);
+        if (this.preferences.aClass239_Sub25_7271.method1830((byte) -123) && !Node.method2714(7351, this.preferences.aClass239_Sub25_7271.method1829(-32350))) this.preferenceValue = 0;
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
     }
 }

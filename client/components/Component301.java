@@ -160,7 +160,7 @@ final class Component301
                             int i_41_ = i_38_ + 1 << anInt4124;
                             for (int i_42_ = i_36_; i_42_ < i_37_; i_42_++) {
                                 if (-i_26_ + i_42_ >= -i_24_ && (i_42_ - i_26_ <= i_24_)) {
-                                    int i_43_ = (i_42_ * aS_Sub3_4116.anInt4587 - -i_40_);
+                                    int i_43_ = (i_42_ * aS_Sub3_4116.tileWidth - -i_40_);
                                     for (int i_44_ = i_40_; (i_44_ < i_41_); i_44_++) {
                                         if ((-i_25_ + i_44_ >= -i_24_) && i_24_ >= i_44_ - i_25_ && (bools[i_24_ + (i_44_ + -i_25_)][i_24_ + -i_26_ + i_42_])) {
                                             short[] is = (aS_Sub3_4116.aShortArrayArray8299[i_43_]);
@@ -279,12 +279,12 @@ final class Component301
         try {
             aHa_Sub3_4111 = var_ha_Sub3;
             aS_Sub3_4116 = var_s_Sub3;
-            this.anInt4113 = 2 + ((aS_Sub3_4116.anInt4587 * aS_Sub3_4116.anInt4592) >> aHa_Sub3_4111.anInt8107);
-            anInt4123 = (aS_Sub3_4116.anInt4592 * aS_Sub3_4116.anInt4590 >> aHa_Sub3_4111.anInt8107) + 2;
+            this.anInt4113 = 2 + ((aS_Sub3_4116.tileWidth * aS_Sub3_4116.tileSize) >> aHa_Sub3_4111.anInt8107);
+            anInt4123 = (aS_Sub3_4116.tileSize * aS_Sub3_4116.tileLength >> aHa_Sub3_4111.anInt8107) + 2;
             this.aByteArray4112 = new byte[this.anInt4113 * anInt4123];
-            anInt4124 = (-aS_Sub3_4116.anInt4588 + (7 + aHa_Sub3_4111.anInt8107));
-            anInt4121 = aS_Sub3_4116.anInt4587 >> anInt4124;
-            anInt4118 = aS_Sub3_4116.anInt4590 >> anInt4124;
+            anInt4124 = (-aS_Sub3_4116.tileSizeBits + (7 + aHa_Sub3_4111.anInt8107));
+            anInt4121 = aS_Sub3_4116.tileWidth >> anInt4124;
+            anInt4118 = aS_Sub3_4116.tileLength >> anInt4124;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("dg.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + (var_s_Sub3 != null ? "{...}" : "null") + ')'));
         }

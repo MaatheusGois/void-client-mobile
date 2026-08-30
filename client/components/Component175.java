@@ -30,7 +30,7 @@ final class Component175
     final int method1720(int i) {
         anInt5843++;
         if (i != -32350) method1714(82, -89);
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     static final void method1721(String string, byte i) {
@@ -62,7 +62,7 @@ final class Component175
     }
 
     final void method1716(boolean bool) {
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
         if (bool == false) anInt5846++;
     }
 
@@ -90,7 +90,7 @@ final class Component175
     final void method1712(int i, int i_9_) {
         int i_10_ = -57 / ((82 - i) / 35);
         anInt5844++;
-        this.anInt3138 = i_9_;
+        this.preferenceValue = i_9_;
     }
 
     Component175(int i, NodeSub51 class348_sub51) {

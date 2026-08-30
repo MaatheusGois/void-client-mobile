@@ -26,14 +26,14 @@ final class Component256
     final int method1714(int i, int i_0_) {
         anInt6100++;
         if (i != 3) aBoolean6110 = false;
-        if (!this.aClass348_Sub51_3136.method3428((byte) -89).method1460(-38)) return 3;
+        if (!this.preferences.method3428((byte) -89).method1460(-38)) return 3;
         if (i_0_ == 3 && !Applet_Sub1.isNativeLibraryCached("jagdx", i ^ 0x3)) return 3;
         return 2;
     }
 
     final void method1712(int i, int i_1_) {
         int i_2_ = -50 / ((i - 82) / 35);
-        this.anInt3138 = i_1_;
+        this.preferenceValue = i_1_;
         anInt6106++;
         this.aBoolean6113 = false;
     }
@@ -117,7 +117,7 @@ final class Component256
         this.aBoolean6113 = true;
         anInt6101++;
         if (i != 20014) aBoolean6110 = false;
-        if (!this.aClass348_Sub51_3136.method3428((byte) -113).method1460(i + -20083)) return 0;
+        if (!this.preferences.method3428((byte) -113).method1460(i + -20083)) return 0;
         return 2;
     }
 
@@ -139,15 +139,15 @@ final class Component256
 
     final void method1716(boolean bool) {
         anInt6108++;
-        if (!this.aClass348_Sub51_3136.method3428((byte) -106).method1460(-33)) this.anInt3138 = 0;
+        if (!this.preferences.method3428((byte) -106).method1460(-33)) this.preferenceValue = 0;
         if (bool != false) method1829(31);
-        if (this.anInt3138 < 0 || this.anInt3138 > 5) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 5) this.preferenceValue = method1710(20014);
     }
 
     final int method1829(int i) {
         anInt6107++;
         if (i != -32350) aBoolean6110 = false;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final boolean method1830(byte i) {
@@ -159,7 +159,7 @@ final class Component256
     final boolean method1831(int i) {
         anInt6105++;
         if (i < 85) return true;
-        return this.aClass348_Sub51_3136.method3428((byte) -124).method1460(-59);
+        return this.preferences.method3428((byte) -124).method1460(-59);
     }
 
     public static void method1832(int i) {

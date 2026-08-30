@@ -2901,7 +2901,7 @@ final class ClientScriptExecutor {
                     class46.anInt795 = 0;
                     class46.anInt730 = 1;
                     class46.anInt841 = 0;
-                    DisplayModeManagerContainer167 class17 = (class46.anInt699 == -1 ? null : RunescapeInfo.aClass87_191.method835(class46.anInt699, 7));
+                    DisplayModeManagerContainer167 class17 = (class46.anInt699 == -1 ? null : RunescapeInfo.aClass87_191.getSequence(class46.anInt699, 7));
                     if (class17 != null) Component235.method2017(class46.anInt795, class17, 46);
                     Component111.markInterfaceDirty(-9343, class46);
                 }

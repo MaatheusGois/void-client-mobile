@@ -61,9 +61,9 @@ final class NodeSub38
     private final void method3033(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         anInt7003++;
         long l = -1L;
-        int i_12_ = i_10_ + (i_6_ << aS_Sub3_7019.anInt4588);
-        int i_13_ = i_8_ - -(i_9_ << aS_Sub3_7019.anInt4588);
-        int i_14_ = aS_Sub3_7019.method3986(i_12_, i_13_, (byte) -127);
+        int i_12_ = i_10_ + (i_6_ << aS_Sub3_7019.tileSizeBits);
+        int i_13_ = i_8_ - -(i_9_ << aS_Sub3_7019.tileSizeBits);
+        int i_14_ = aS_Sub3_7019.getInterpolatedHeight(i_12_, i_13_, (byte) -127);
         if ((i_10_ & 0x7f) == 0 || (i_8_ & 0x7f) == 0) {
             l = ((long) i_13_ & 0xffffL) << 16 | (long) i_12_ & 0xffffL;
             Node class348 = aClass356_7011.get(l, i_7_ + 23335);
@@ -81,15 +81,15 @@ final class NodeSub38
             f_16_ = aFloatArrayArray7016[i_11_][i];
             f_17_ = aFloatArrayArray7005[i_11_][i];
             f = aFloatArrayArray7001[i_11_][i];
-        } else if (aS_Sub3_7019.anInt4592 != i_10_ || i_8_ != 0) {
-            if (aS_Sub3_7019.anInt4592 != i_10_ || (i_8_ != aS_Sub3_7019.anInt4592)) {
-                if (i_10_ == 0 && i_8_ == aS_Sub3_7019.anInt4592) {
+        } else if (aS_Sub3_7019.tileSize != i_10_ || i_8_ != 0) {
+            if (aS_Sub3_7019.tileSize != i_10_ || (i_8_ != aS_Sub3_7019.tileSize)) {
+                if (i_10_ == 0 && i_8_ == aS_Sub3_7019.tileSize) {
                     f = aFloatArrayArray7001[i_11_][i + 1];
                     f_16_ = aFloatArrayArray7016[i_11_][1 + i];
                     f_17_ = aFloatArrayArray7005[i_11_][i - -1];
                 } else {
-                    float f_18_ = (float) i_10_ / (float) aS_Sub3_7019.anInt4592;
-                    float f_19_ = (float) i_8_ / (float) aS_Sub3_7019.anInt4592;
+                    float f_18_ = (float) i_10_ / (float) aS_Sub3_7019.tileSize;
+                    float f_19_ = (float) i_8_ / (float) aS_Sub3_7019.tileSize;
                     float f_20_ = aFloatArrayArray7005[i_11_][i];
                     float f_21_ = aFloatArrayArray7016[i_11_][i];
                     float f_22_ = aFloatArrayArray7001[i_11_][i];
@@ -178,11 +178,11 @@ final class NodeSub38
             aHa_Sub3_7007 = var_ha_Sub3;
             aS_Sub3_7019 = var_s_Sub3;
             aClass348_Sub1_7004 = class348_sub1;
-            int i = (aClass348_Sub1_7004.method2723(-1) + -(var_s_Sub3.anInt4592 >> 1));
-            anInt7023 = (-i + aClass348_Sub1_7004.method2724(-1) >> var_s_Sub3.anInt4588);
-            anInt7017 = (aClass348_Sub1_7004.method2724(-1) + i >> var_s_Sub3.anInt4588);
-            anInt7014 = (-i + aClass348_Sub1_7004.method2717((byte) 124) >> var_s_Sub3.anInt4588);
-            anInt7010 = (aClass348_Sub1_7004.method2717((byte) 72) + i >> var_s_Sub3.anInt4588);
+            int i = (aClass348_Sub1_7004.method2723(-1) + -(var_s_Sub3.tileSize >> 1));
+            anInt7023 = (-i + aClass348_Sub1_7004.method2724(-1) >> var_s_Sub3.tileSizeBits);
+            anInt7017 = (aClass348_Sub1_7004.method2724(-1) + i >> var_s_Sub3.tileSizeBits);
+            anInt7014 = (-i + aClass348_Sub1_7004.method2717((byte) 124) >> var_s_Sub3.tileSizeBits);
+            anInt7010 = (aClass348_Sub1_7004.method2717((byte) 72) + i >> var_s_Sub3.tileSizeBits);
             int i_40_ = anInt7017 - anInt7023 - -1;
             int i_41_ = 1 + -anInt7014 + anInt7010;
             aFloatArrayArray7005 = new float[1 + i_40_][i_41_ - -1];
@@ -190,12 +190,12 @@ final class NodeSub38
             aFloatArrayArray7001 = new float[1 + i_40_][i_41_ - -1];
             for (int i_42_ = 0; i_42_ <= i_41_; i_42_++) {
                 int i_43_ = anInt7014 + i_42_;
-                if (i_43_ > 0 && (-1 + aS_Sub3_7019.anInt4590 > i_43_)) {
+                if (i_43_ > 0 && (-1 + aS_Sub3_7019.tileLength > i_43_)) {
                     for (int i_44_ = 0; i_44_ <= i_40_; i_44_++) {
                         int i_45_ = anInt7023 + i_44_;
-                        if (i_45_ > 0 && i_45_ < aS_Sub3_7019.anInt4587 + -1) {
-                            int i_46_ = (var_s_Sub3.method3982((byte) -86, i_43_, i_45_ + 1) - var_s_Sub3.method3982((byte) -86, i_43_, i_45_ + -1));
-                            int i_47_ = (var_s_Sub3.method3982((byte) -86, 1 + i_43_, i_45_) + -var_s_Sub3.method3982((byte) -86, i_43_ + -1, i_45_));
+                        if (i_45_ > 0 && i_45_ < aS_Sub3_7019.tileWidth + -1) {
+                            int i_46_ = (var_s_Sub3.getHeight((byte) -86, i_43_, i_45_ + 1) - var_s_Sub3.getHeight((byte) -86, i_43_, i_45_ + -1));
+                            int i_47_ = (var_s_Sub3.getHeight((byte) -86, 1 + i_43_, i_45_) + -var_s_Sub3.getHeight((byte) -86, i_43_ + -1, i_45_));
                             float f = (float) (1.0 / (Math.sqrt(i_47_ * i_47_ + (i_46_ * i_46_ - -65536))));
                             aFloatArrayArray7005[i_44_][i_42_] = (float) i_46_ * f;
                             aFloatArrayArray7016[i_44_][i_42_] = -256.0F * f;
@@ -206,9 +206,9 @@ final class NodeSub38
             }
             int i_48_ = 0;
             for (int i_49_ = anInt7014; anInt7010 >= i_49_; i_49_++) {
-                if (i_49_ >= 0 && var_s_Sub3.anInt4590 > i_49_) {
+                if (i_49_ >= 0 && var_s_Sub3.tileLength > i_49_) {
                     for (int i_50_ = anInt7023; anInt7017 >= i_50_; i_50_++) {
-                        if (i_50_ >= 0 && var_s_Sub3.anInt4587 > i_50_) {
+                        if (i_50_ >= 0 && var_s_Sub3.tileWidth > i_50_) {
                             int i_51_ = is[i_48_];
                             int[] is_52_ = (var_s_Sub3.anIntArrayArrayArray8296[i_50_][i_49_]);
                             if (is_52_ != null && i_51_ != 0) {
@@ -237,10 +237,10 @@ final class NodeSub38
                         i_48_ = 0;
                         int i_54_ = 0;
                         for (int i_55_ = anInt7014; anInt7010 >= i_55_; i_55_++) {
-                            if (i_55_ >= 0 && (i_55_ < var_s_Sub3.anInt4590)) {
+                            if (i_55_ >= 0 && (i_55_ < var_s_Sub3.tileLength)) {
                                 int i_56_ = 0;
                                 for (int i_57_ = anInt7023; anInt7017 >= i_57_; i_57_++) {
-                                    if (i_57_ >= 0 && (i_57_ < var_s_Sub3.anInt4587)) {
+                                    if (i_57_ >= 0 && (i_57_ < var_s_Sub3.tileWidth)) {
                                         int i_58_ = is[i_48_];
                                         int[] is_59_ = (var_s_Sub3.anIntArrayArrayArray8296[i_57_][i_55_]);
                                         if (is_59_ != null && i_58_ != 0) {
@@ -261,20 +261,20 @@ final class NodeSub38
                                                 }
                                             } else if (i_58_ == 3) {
                                                 method3033(i_54_, i_57_, -29343, 0, i_55_, 0, i_56_);
-                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.anInt4592), i_56_);
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, 0, i_56_);
+                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.tileSize), i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, 0, i_56_);
                                             } else if (i_58_ == 2) {
-                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.anInt4592), i_56_);
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, (var_s_Sub3.anInt4592), i_56_);
+                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.tileSize), i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, (var_s_Sub3.tileSize), i_56_);
                                                 method3033(i_54_, i_57_, -29343, 0, i_55_, 0, i_56_);
                                             } else if (i_58_ == 5) {
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, (var_s_Sub3.anInt4592), i_56_);
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, 0, i_56_);
-                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.anInt4592), i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, (var_s_Sub3.tileSize), i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, 0, i_56_);
+                                                method3033(i_54_, i_57_, -29343, 0, i_55_, (var_s_Sub3.tileSize), i_56_);
                                             } else if (i_58_ == 4) {
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, 0, i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, 0, i_56_);
                                                 method3033(i_54_, i_57_, -29343, 0, i_55_, 0, i_56_);
-                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.anInt4592), i_55_, (var_s_Sub3.anInt4592), i_56_);
+                                                method3033(i_54_, i_57_, -29343, (var_s_Sub3.tileSize), i_55_, (var_s_Sub3.tileSize), i_56_);
                                             }
                                         }
                                     }

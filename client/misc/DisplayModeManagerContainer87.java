@@ -347,9 +347,9 @@ class DisplayModeManagerContainer87
                                 int i_89_ = -i_87_ + i_85_;
                                 if (i_89_ < 0) i_89_ = -i_89_;
                                 if (i_89_ == i_88_) {
-                                    i_88_ = (var_s_64_.method3982((byte) -86, i_73_, i_71_) + -var_s_64_.method3982((byte) -86, i_74_, i_72_));
+                                    i_88_ = (var_s_64_.getHeight((byte) -86, i_73_, i_71_) + -var_s_64_.getHeight((byte) -86, i_74_, i_72_));
                                     if (i_88_ < 0) i_88_ = -i_88_;
-                                    i_89_ = (var_s_64_.method3982((byte) -86, i_73_, i_72_) - var_s_64_.method3982((byte) -86, i_74_, i_71_));
+                                    i_89_ = (var_s_64_.getHeight((byte) -86, i_73_, i_72_) - var_s_64_.getHeight((byte) -86, i_74_, i_71_));
                                     if (i_89_ < 0) i_89_ = -i_89_;
                                 }
                                 i_77_ = (i_89_ <= i_88_ ? 0 : 1);
@@ -522,19 +522,19 @@ class DisplayModeManagerContainer87
                                             if (is_111_ != null && (Component214.aBooleanArrayArray2133[i_76_][i_121_])) {
                                                 int i_127_ = (i_126_ + (i_71_ << 9));
                                                 int i_128_ = i_125_ + (i_73_ << 9);
-                                                is_111_[i_103_] = ((var_s.method3986(i_127_, i_128_, (byte) 124)) + -(var_s_64_.method3986(i_127_, i_128_, (byte) -118)));
+                                                is_111_[i_103_] = ((var_s.getInterpolatedHeight(i_127_, i_128_, (byte) 124)) + -(var_s_64_.getInterpolatedHeight(i_127_, i_128_, (byte) -118)));
                                             }
                                             if (is_112_ != null) {
                                                 if (var_s == null || (Component214.aBooleanArrayArray2133[i_76_][i_121_])) {
                                                     if (var_s_65_ != null && !(HashNodeSub1.aBooleanArrayArray9495[i_76_][i_121_])) {
                                                         int i_129_ = ((i_71_ << 9) - -i_126_);
                                                         int i_130_ = ((i_73_ << 9) + i_125_);
-                                                        is_112_[i_103_] = ((var_s_65_.method3986(i_129_, i_130_, (byte) -105)) + -(var_s_64_.method3986(i_129_, i_130_, (byte) -109)));
+                                                        is_112_[i_103_] = ((var_s_65_.getInterpolatedHeight(i_129_, i_130_, (byte) -105)) + -(var_s_64_.getInterpolatedHeight(i_129_, i_130_, (byte) -109)));
                                                     }
                                                 } else {
                                                     int i_131_ = ((i_71_ << 9) + i_126_);
                                                     int i_132_ = (i_125_ + (i_73_ << 9));
-                                                    is_112_[i_103_] = ((var_s_64_.method3986(i_131_, i_132_, (byte) -4)) - (var_s.method3986(i_131_, i_132_, (byte) 73)));
+                                                    is_112_[i_103_] = ((var_s_64_.getInterpolatedHeight(i_131_, i_132_, (byte) -4)) - (var_s.getInterpolatedHeight(i_131_, i_132_, (byte) 73)));
                                                 }
                                             }
                                             if (i_121_ < 8 && ((Component314.anIntArray3873[i_122_]) > (class277.anInt3564))) {
@@ -636,19 +636,19 @@ class DisplayModeManagerContainer87
                                             if (is_111_ != null && (Component214.aBooleanArrayArray2133[i_76_][i_141_])) {
                                                 int i_147_ = (i_146_ + (i_71_ << 9));
                                                 int i_148_ = ((i_73_ << 9) - -i_145_);
-                                                is_111_[i_103_] = ((var_s.method3986(i_147_, i_148_, (byte) -95)) - (var_s_64_.method3986(i_147_, i_148_, (byte) 69)));
+                                                is_111_[i_103_] = ((var_s.getInterpolatedHeight(i_147_, i_148_, (byte) -95)) - (var_s_64_.getInterpolatedHeight(i_147_, i_148_, (byte) 69)));
                                             }
                                             if (is_112_ != null) {
                                                 if (var_s == null || (Component214.aBooleanArrayArray2133[i_76_][i_141_])) {
                                                     if (var_s_65_ != null && !(HashNodeSub1.aBooleanArrayArray9495[i_76_][i_141_])) {
                                                         int i_149_ = ((i_71_ << 9) - -i_146_);
                                                         int i_150_ = (i_145_ + (i_73_ << 9));
-                                                        is_112_[i_103_] = ((var_s_65_.method3986(i_149_, i_150_, (byte) 92)) + -(var_s_64_.method3986(i_149_, i_150_, (byte) 127)));
+                                                        is_112_[i_103_] = ((var_s_65_.getInterpolatedHeight(i_149_, i_150_, (byte) 92)) + -(var_s_64_.getInterpolatedHeight(i_149_, i_150_, (byte) 127)));
                                                     }
                                                 } else {
                                                     int i_151_ = ((i_71_ << 9) + i_146_);
                                                     int i_152_ = (i_145_ + (i_73_ << 9));
-                                                    is_112_[i_103_] = ((var_s_64_.method3986(i_151_, i_152_, (byte) -102)) - (var_s.method3986(i_151_, i_152_, (byte) 106)));
+                                                    is_112_[i_103_] = ((var_s_64_.getInterpolatedHeight(i_151_, i_152_, (byte) -102)) - (var_s.getInterpolatedHeight(i_151_, i_152_, (byte) 106)));
                                                 }
                                             }
                                             if (i_141_ < 8 && (Component314.anIntArray3873[i_142_]) >= 0) {
@@ -708,10 +708,10 @@ class DisplayModeManagerContainer87
                                     }
                                     if (i_76_ != 0 && class22.aBoolean342) bool = true;
                                 }
-                                int i_155_ = var_s_64_.method3982((byte) -86, i_73_, i_71_);
-                                int i_156_ = var_s_64_.method3982((byte) -86, i_73_, i_72_);
-                                int i_157_ = var_s_64_.method3982((byte) -86, i_74_, i_72_);
-                                int i_158_ = var_s_64_.method3982((byte) -86, i_74_, i_71_);
+                                int i_155_ = var_s_64_.getHeight((byte) -86, i_73_, i_71_);
+                                int i_156_ = var_s_64_.getHeight((byte) -86, i_73_, i_72_);
+                                int i_157_ = var_s_64_.getHeight((byte) -86, i_74_, i_72_);
+                                int i_158_ = var_s_64_.getHeight((byte) -86, i_74_, i_71_);
                                 boolean bool_159_ = NpcComposition.method802(i_73_, i_71_, true);
                                 if (bool_159_ && i_66_ > 1 || (!bool_159_ && i_66_ > 0)) {
                                     boolean bool_160_ = true;
@@ -887,12 +887,12 @@ class DisplayModeManagerContainer87
         }
     }
 
-    final void method1681(Buffer class348_sub49, int i, TeleportHandler[] class361s, int i_197_, int i_198_, int i_199_, byte i_200_) {
+    final void method1681(Buffer class348_sub49, int i, CollisionMap[] class361s, int i_197_, int i_198_, int i_199_, byte i_200_) {
         try {
             anInt3107++;
             if (!this.aBoolean3109) {
                 for (int i_201_ = 0; i_201_ < 4; i_201_++) {
-                    TeleportHandler class361 = class361s[i_201_];
+                    CollisionMap class361 = class361s[i_201_];
                     for (int i_202_ = 0; i_202_ < 64; i_202_++) {
                         for (int i_203_ = 0; i_203_ < 64; i_203_++) {
                             int i_204_ = i_202_ + i;
@@ -1064,24 +1064,24 @@ class DisplayModeManagerContainer87
                                     if (is_250_ != null && (Component214.aBooleanArrayArray2133[i_228_][i_252_])) {
                                         int i_257_ = (is_248_[i_252_] + (i_226_ << 9));
                                         int i_258_ = ((i_227_ << 9) - -is_249_[i_252_]);
-                                        is_250_[i_252_] = (var_s.method3986(i_257_, i_258_, (byte) -101) + -(var_s_224_.method3986(i_257_, i_258_, (byte) -12)));
+                                        is_250_[i_252_] = (var_s.getInterpolatedHeight(i_257_, i_258_, (byte) -101) + -(var_s_224_.getInterpolatedHeight(i_257_, i_258_, (byte) -12)));
                                     }
                                     if (is_251_ != null) {
                                         if (var_s != null && !(Component214.aBooleanArrayArray2133[i_228_][i_252_])) {
                                             int i_259_ = (is_248_[i_252_] + (i_226_ << 9));
                                             int i_260_ = ((i_227_ << 9) + is_249_[i_252_]);
-                                            is_251_[i_252_] = ((var_s_224_.method3986(i_259_, i_260_, (byte) 87)) - (var_s.method3986(i_259_, i_260_, (byte) -90)));
+                                            is_251_[i_252_] = ((var_s_224_.getInterpolatedHeight(i_259_, i_260_, (byte) 87)) - (var_s.getInterpolatedHeight(i_259_, i_260_, (byte) -90)));
                                         } else if (var_s_225_ != null && !(HashNodeSub1.aBooleanArrayArray9495[i_228_][i_252_])) {
                                             int i_261_ = (is_248_[i_252_] + (i_226_ << 9));
                                             int i_262_ = (is_249_[i_252_] + (i_227_ << 9));
-                                            is_251_[i_252_] = ((var_s_225_.method3986(i_261_, i_262_, (byte) -128)) + -(var_s_224_.method3986(i_261_, i_262_, (byte) -1)));
+                                            is_251_[i_252_] = ((var_s_225_.getInterpolatedHeight(i_261_, i_262_, (byte) -128)) + -(var_s_224_.getInterpolatedHeight(i_261_, i_262_, (byte) -1)));
                                         }
                                     }
                                 }
-                                int i_263_ = var_s_224_.method3982((byte) -86, i_227_, i_226_);
-                                int i_264_ = var_s_224_.method3982((byte) -86, i_227_, 1 + i_226_);
-                                int i_265_ = var_s_224_.method3982((byte) -86, 1 + i_227_, i_226_ - -1);
-                                int i_266_ = var_s_224_.method3982((byte) -86, i_227_ + 1, i_226_);
+                                int i_263_ = var_s_224_.getHeight((byte) -86, i_227_, i_226_);
+                                int i_264_ = var_s_224_.getHeight((byte) -86, i_227_, 1 + i_226_);
+                                int i_265_ = var_s_224_.getHeight((byte) -86, 1 + i_227_, i_226_ - -1);
+                                int i_266_ = var_s_224_.getHeight((byte) -86, i_227_ + 1, i_226_);
                                 boolean bool_267_ = NpcComposition.method802(i_227_, i_226_, true);
                                 if (bool_267_ && i > 1 || !bool_267_ && i > 0) {
                                     boolean bool_268_ = true;
@@ -1113,14 +1113,14 @@ class DisplayModeManagerContainer87
         } while (false);
     }
 
-    final void method1684(int i, int i_272_, int i_273_, Buffer class348_sub49, int i_274_, int i_275_, int i_276_, TeleportHandler[] class361s, int i_277_, int i_278_) {
+    final void method1684(int i, int i_272_, int i_273_, Buffer class348_sub49, int i_274_, int i_275_, int i_276_, CollisionMap[] class361s, int i_277_, int i_278_) {
         try {
             if (i_273_ == -1) {
                 anInt3115++;
                 int i_279_ = 8 * (i_276_ & 0x7);
                 int i_280_ = 8 * (0x7 & i_274_);
                 if (!this.aBoolean3109) {
-                    TeleportHandler class361 = class361s[i_272_];
+                    CollisionMap class361 = class361s[i_272_];
                     for (int i_281_ = 0; i_281_ < 8; i_281_++) {
                         for (int i_282_ = 0; i_282_ < 8; i_282_++) {
                             int i_283_ = i + DisplayModeManagerContainer61.method2220(0x7 & i_282_, i_277_, 0x7 & i_281_, (byte) 71);
@@ -1205,7 +1205,7 @@ class DisplayModeManagerContainer87
         }
     }
 
-    final void method1685(GraphicsToolkit var_ha, int[][][] is, int i, TeleportHandler[] class361s) {
+    final void method1685(GraphicsToolkit var_ha, int[][][] is, int i, CollisionMap[] class361s) {
         try {
             anInt3118++;
             if (i != 21407) method1680(null, (byte) -116, null, null);

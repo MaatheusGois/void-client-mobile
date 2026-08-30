@@ -23,14 +23,14 @@ final class DisplayModeManagerContainer199
 
     final void method1716(boolean bool) {
         anInt5854++;
-        this.anInt3138 = method1710(20014);
+        this.preferenceValue = method1710(20014);
         if (bool != false) aClass105Array5857 = null;
     }
 
     final int method1710(int i) {
         if (i != 20014) method1716(true);
         anInt5853++;
-        if (!this.aClass348_Sub51_3136.method3425(-76)) return 0;
+        if (!this.preferences.method3425(-76)) return 0;
         return 1;
     }
 
@@ -75,7 +75,7 @@ final class DisplayModeManagerContainer199
                     int i_10_ = 0;
                     if ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104) != null && (Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_]) != null) i_10_ = 8 * ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_][i_7_][i_8_]) & 0xff) << 2;
                     if (ShaderSub1.aSArray5191 != null && ShaderSub1.aSArray5191[i_9_] != null) {
-                        int i_11_ = (i_5_ + i_10_ + -ShaderSub1.aSArray5191[i_9_].method3982((byte) -86, i_8_, i_7_));
+                        int i_11_ = (i_5_ + i_10_ + -ShaderSub1.aSArray5191[i_9_].getHeight((byte) -86, i_8_, i_7_));
                         if (i_6_ < i_11_) i_6_ = i_11_;
                     }
                 }
@@ -90,14 +90,14 @@ final class DisplayModeManagerContainer199
 
     final void method1712(int i, int i_13_) {
         int i_14_ = 87 / ((82 - i) / 35);
-        this.anInt3138 = i_13_;
+        this.preferenceValue = i_13_;
         anInt5852++;
     }
 
     final int method1726(int i) {
         anInt5856++;
         if (i != -32350) aClass105Array5857 = null;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     DisplayModeManagerContainer199(int i, NodeSub51 class348_sub51) {

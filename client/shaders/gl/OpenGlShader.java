@@ -66,14 +66,14 @@ final class OpenGlShader extends AbstractShader {
     final void method3520(byte i) {
         anInt7408++;
         this.aHa_Sub3_4479.method3897(1, -4382);
-        this.aHa_Sub3_4479.method3850((byte) -128, null);
+        this.aHa_Sub3_4479.setActiveTexture((byte) -128, null);
         this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 116, Component385.aClass229_2207);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-        this.aHa_Sub3_4479.method3849((byte) 47, 2, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.method3897(0, -4382);
         if (aBoolean7399) {
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
             this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
             aBoolean7399 = false;
         }
@@ -94,16 +94,16 @@ final class OpenGlShader extends AbstractShader {
     final void method3527(int i, Interface18 interface18, int i_3_) {
         if (interface18 != null) {
             if (aBoolean7399) {
-                this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+                this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
                 this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
                 aBoolean7399 = false;
             }
-            this.aHa_Sub3_4479.method3850((byte) -122, interface18);
+            this.aHa_Sub3_4479.setActiveTexture((byte) -122, interface18);
             this.aHa_Sub3_4479.method3923(true, i);
         } else if (!aBoolean7399) {
-            this.aHa_Sub3_4479.method3850((byte) 99, (this.aHa_Sub3_4479.anInterface18_8147));
+            this.aHa_Sub3_4479.setActiveTexture((byte) 99, (this.aHa_Sub3_4479.anInterface18_8147));
             this.aHa_Sub3_4479.method3923(true, 1);
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
             this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer343.aClass70_8737);
             aBoolean7399 = true;
         }
@@ -215,9 +215,9 @@ final class OpenGlShader extends AbstractShader {
         anInt7400++;
         aBoolean7411 = bool;
         this.aHa_Sub3_4479.method3897(1, i ^ ~0x2a45);
-        this.aHa_Sub3_4479.method3850((byte) -32, anInterface18_Impl3_7390);
+        this.aHa_Sub3_4479.setActiveTexture((byte) -32, anInterface18_Impl3_7390);
         this.aHa_Sub3_4479.method3874((ShaderCompilerSub3.aClass229_6519), 109, Component253.aClass229_3196);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         if (i == 15192) {
             this.aHa_Sub3_4479.method3924(true, false, 2, DisplayModeManagerContainer173.aClass70_4247, false);
             this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer343.aClass70_8737);

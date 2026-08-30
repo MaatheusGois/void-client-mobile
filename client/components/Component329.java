@@ -27,13 +27,13 @@ final class Component329
     final int method1778(int i) {
         if (i != -32350) aClass190_5990 = null;
         anInt5984++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final void method1716(boolean bool) {
-        if (this.aClass348_Sub51_3136.aClass239_Sub3_7222.method1735(bool) && this.anInt3138 == 2) this.anInt3138 = 1;
+        if (this.preferences.aClass239_Sub3_7222.method1735(bool) && this.preferenceValue == 2) this.preferenceValue = 1;
         anInt5988++;
-        if (this.anInt3138 < 0 || this.anInt3138 > 2) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
     }
 
     Component329(int i, NodeSub51 class348_sub51) {
@@ -111,7 +111,7 @@ final class Component329
     }
 
     final void method1712(int i, int i_8_) {
-        this.anInt3138 = i_8_;
+        this.preferenceValue = i_8_;
         anInt5987++;
         int i_9_ = -73 / ((82 - i) / 35);
     }

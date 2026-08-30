@@ -2,11 +2,13 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class Component344
 /**
- * RENAMED from `Class87` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
- */ {
+ * Sequence / animation definition cache (RENAMED from `Class87`).
+ * Loads {@link DisplayModeManagerContainer167} from JS5 via {@link #getSequence};
+ * soft caches live in {@code aClass60_1487} (defs) and {@code aClass60_1491}
+ * (derived {@link HashNodeSub17} entries).
+ */
+final class Component344 {
     static int anInt1483;
     static int anInt1484;
     static int anInt1485;
@@ -28,7 +30,11 @@ final class Component344
         }
     }
 
-    final DisplayModeManagerContainer167 method835(int i, int i_0_) {
+    /**
+     * Returns cached sequence def {@code i}, loading + decoding from
+     * {@link #aClass45_1488} on miss. Opaque {@code i_0_} must be {@code 7}.
+     */
+    final DisplayModeManagerContainer167 getSequence(int i, int i_0_) {
         anInt1483++;
         DisplayModeManagerContainer167 class17;
         synchronized (aClass60_1487) {

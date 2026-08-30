@@ -37,7 +37,7 @@ final class Component98
     final void method1716(boolean bool) {
         anInt5941++;
         if (bool != false) method1712(-34, -61);
-        if (this.anInt3138 < 0 || this.anInt3138 > 4) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = method1710(20014);
     }
 
     /** Present HUD overlays (no camera tick): particles, root interface, menu tip priority. */
@@ -67,7 +67,7 @@ final class Component98
 
     final void method1712(int i, int i_8_) {
         anInt5939++;
-        this.anInt3138 = i_8_;
+        this.preferenceValue = i_8_;
         int i_9_ = -17 / ((82 - i) / 35);
     }
 
@@ -88,7 +88,7 @@ final class Component98
     final int method1764(int i) {
         anInt5942++;
         if (i != -32350) method1763(18);
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final int method1714(int i, int i_14_) {

@@ -348,7 +348,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer105.anInt4871 = 0;
         RadixText.anInt6117 = 0;
         DisplayModeManagerContainer196.anInt4229 = 0;
-        TeleportHandler.anInt4447 = 0;
+        CollisionMap.anInt4447 = 0;
         Component189.anInt3818 = 0;
         Component255.anInt1056 = 0;
         DisplayModeManagerContainer282.anInt5532 = 0;
@@ -700,7 +700,7 @@ final class DisplayModeManagerContainer273
         GlToolkitSub2.anInt7545 = 0;
         DefinitionSub37.anInt9464 = 0;
         Component38.anInt2506 = 0;
-        TeleportHandler.anInt4436 = 0;
+        CollisionMap.anInt4436 = 0;
         DebugPanic.anInt4745 = 0;
         NodeSub1Sub3.anInt8819 = 0;
         DefinitionSub15.anInt9219 = 0;
@@ -886,7 +886,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer207.anInt9764 = 0;
         s.anInt4591 = 0;
         ShaderProgramSub2.anInt6204 = 0;
-        TeleportHandler.anInt4442 = 0;
+        CollisionMap.anInt4442 = 0;
         Component235.anInt3366 = 0;
         Buffer.anInt7204 = 0;
         Definition.anInt7044 = 0;
@@ -1452,7 +1452,7 @@ final class DisplayModeManagerContainer273
         MatrixSub2.anInt5698 = 0;
         Component168.anInt3952 = 0;
         DisplayModeManagerContainer194.anInt5095 = 0;
-        TeleportHandler.anInt4454 = 0;
+        CollisionMap.anInt4454 = 0;
         Component366.anInt3050 = 0;
         Shader.anInt113 = 0;
         Component9.anInt4140 = 0;
@@ -1510,7 +1510,7 @@ final class DisplayModeManagerContainer273
         DebugPanic.anInt4738 = 0;
         RSACipher.anInt4900 = 0;
         GlToolkitSub3.anInt8078 = 0;
-        TeleportHandler.anInt4444 = 0;
+        CollisionMap.anInt4444 = 0;
         DefinitionSub21.anInt9271 = 0;
         AssetCacheLoader.anInt373 = 0;
         GlToolkitSub2.anInt7526 = 0;
@@ -1542,7 +1542,7 @@ final class DisplayModeManagerContainer273
         Component185.anInt5310 = 0;
         DisplayModeManagerContainer271.anInt516 = 0;
         Component361.anInt362 = 0;
-        TeleportHandler.anInt4431 = 0;
+        CollisionMap.anInt4431 = 0;
         Component65.anInt1610 = 0;
         GlToolkitSub3.anInt8075 = 0;
         Component225.anInt473 = 0;
@@ -2276,7 +2276,7 @@ final class DisplayModeManagerContainer273
         Component197.anInt10080 = 0;
         Buffer.anInt7185 = 0;
         Component208.anInt1769 = 0;
-        TeleportHandler.anInt4439 = 0;
+        CollisionMap.anInt4439 = 0;
         Component302.anInt6033 = 0;
         RadixParser.anInt2295 = 0;
         Component330.anInt1514 = 0;
@@ -2482,7 +2482,7 @@ final class DisplayModeManagerContainer273
         Player.anInt10545 = 0;
         NodeSub1.anInt6563 = 0;
         BrowserUrlOpener.anInt8903 = 0;
-        TeleportHandler.anInt4434 = 0;
+        CollisionMap.anInt4434 = 0;
         ImageProducerSprite.anInt9074 = 0;
         Component200.anInt3715 = 0;
         DisplayModeManagerContainer88.anInt1206 = 0;
@@ -2500,7 +2500,7 @@ final class DisplayModeManagerContainer273
         NodeSub13.anInt6754 = 0;
         Component195.anInt5005 = 0;
         DisplayModeManagerContainer87.anInt3115 = 0;
-        TeleportHandler.anInt4432 = 0;
+        CollisionMap.anInt4432 = 0;
         Player.anInt10563 = 0;
         BrowserUrlOpener.anInt8908 = 0;
         WorldNameText.anInt8646 = 0;
@@ -2640,7 +2640,7 @@ final class DisplayModeManagerContainer273
         Component225.anInt478 = 0;
         s.anInt4586 = 0;
         ArbShaderProgram.anInt6186 = 0;
-        TeleportHandler.anInt4451 = 0;
+        CollisionMap.anInt4451 = 0;
         DisplayModeManagerContainer104.anInt10340 = 0;
         CursorDefinitionCache.anInt2178 = 0;
         GlExtensionManager.anInt9815 = 0;
@@ -2956,7 +2956,7 @@ final class DisplayModeManagerContainer273
         GlToolkitSub2.anInt7704 = 0;
         DisplayModeManagerContainer174.anInt10397 = 0;
         Component331.anInt1719 = 0;
-        TeleportHandler.anInt4435 = 0;
+        CollisionMap.anInt4435 = 0;
         WaterSurfaceShader.anInt6239 = 0;
         Component197.anInt10085 = 0;
         Component20.anInt6053 = 0;
@@ -3171,7 +3171,7 @@ final class DisplayModeManagerContainer273
         NodeSub1.anInt6557 = 0;
         ShaderProgramSub7.anInt6286 = 0;
         SpriteSub2.anInt8444 = 0;
-        TeleportHandler.anInt4448 = 0;
+        CollisionMap.anInt4448 = 0;
         FriendsIgnoreList.anInt3478 = 0;
         MouseHandler.anInt4535 = 0;
         Component302.anInt6029 = 0;
@@ -3268,7 +3268,7 @@ final class DisplayModeManagerContainer273
         RadixText.anInt6119 = 0;
         GlToolkitSub3.anInt7949 = 0;
         ModelStore.anInt4612 = 0;
-        TeleportHandler.anInt4446 = 0;
+        CollisionMap.anInt4446 = 0;
         LogicError.anInt1464 = 0;
         MatrixSub1.anInt5657 = 0;
         Component257.anInt4794 = 0;
@@ -3375,7 +3375,7 @@ final class DisplayModeManagerContainer273
         Component15.anInt4927 = 0;
         CacheStore.anInt650 = 0;
         GlToolkitSub3.anInt8029 = 0;
-        TeleportHandler.anInt4449 = 0;
+        CollisionMap.anInt4449 = 0;
         Component304.anInt1147 = 0;
         NodeSub5.anInt6623 = 0;
         DisplayModeManagerContainer196.anInt4230 = 0;
@@ -3518,7 +3518,7 @@ final class DisplayModeManagerContainer273
         BrowserUrlOpener.anInt8889 = 0;
         OutputStream_Sub1.anInt94 = 0;
         CurvePreset.anInt9212 = 0;
-        TeleportHandler.anInt4452 = 0;
+        CollisionMap.anInt4452 = 0;
         SpriteSub2.anInt8428 = 0;
         Component344.anInt1486 = 0;
         ClientScriptExecutor.anInt1167 = 0;
@@ -3621,7 +3621,7 @@ final class DisplayModeManagerContainer273
         ParametricDefinition.anInt9102 = 0;
         MatrixSub3.anInt5752 = 0;
         GlToolkitSub2.anInt7555 = 0;
-        TeleportHandler.anInt4440 = 0;
+        CollisionMap.anInt4440 = 0;
         Component188.anInt6135 = 0;
         WaterShader.anInt7368 = 0;
         ShaderCompilerSub2.anInt6518 = 0;
@@ -3780,7 +3780,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer282.anInt5548 = 0;
         Component237.anInt3018 = 0;
         Component276.anInt2591 = 0;
-        TeleportHandler.anInt4445 = 0;
+        CollisionMap.anInt4445 = 0;
         ImageProducerSprite.anInt9071 = 0;
         SocketConnector.anInt3472 = 0;
         Component38.anInt2504 = 0;
@@ -3944,7 +3944,7 @@ final class DisplayModeManagerContainer273
         Component274.anInt563 = 0;
         DisplayModeManagerContainer28.anInt8721 = 0;
         InputStream_Sub1.anInt74 = 0;
-        TeleportHandler.anInt4450 = 0;
+        CollisionMap.anInt4450 = 0;
         DisplayModeManagerContainer58.anInt10256 = 0;
         Component264.anInt8703 = 0;
         AudioLine.anInt3607 = 0;

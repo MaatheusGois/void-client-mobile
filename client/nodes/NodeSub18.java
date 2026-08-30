@@ -178,7 +178,7 @@ final class NodeSub18
                 class46.anInt841 = 0;
                 class46.anInt730 = Component72.localPlayer.anInt10312;
                 class46.anInt795 = Component72.localPlayer.anInt10245;
-                DisplayModeManagerContainer167 class17 = (class46.anInt699 != -1 ? RunescapeInfo.aClass87_191.method835(class46.anInt699, 7) : null);
+                DisplayModeManagerContainer167 class17 = (class46.anInt699 != -1 ? RunescapeInfo.aClass87_191.getSequence(class46.anInt699, 7) : null);
                 if (class17 != null) Component235.method2017(class46.anInt795, class17, 50);
             }
         } else {

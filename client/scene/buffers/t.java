@@ -24,7 +24,7 @@ final class t
                 if (bools[i_5_][i_6_]) {
                     int i_7_ = i - i_1_ + i_5_;
                     int i_8_ = i_0_ - i_1_ + i_6_;
-                    if (i_7_ >= 0 && i_7_ < this.anInt4587 && i_8_ >= 0 && i_8_ < this.anInt4590) method3979(i_7_, i_8_);
+                    if (i_7_ >= 0 && i_7_ < this.tileWidth && i_8_ >= 0 && i_8_ < this.tileLength) method3979(i_7_, i_8_);
                 }
             }
         }
@@ -110,7 +110,7 @@ final class t
     t(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_50_, int[][] is, int[][] is_51_, int i_52_, int i_53_, int i_54_) {
         super(i, i_50_, i_52_, is);
         anOa5150 = var_oa;
-        ga(anOa5150, var_ya, i, i_50_, this.anIntArrayArray4584, is_51_, i_52_, i_53_, i_54_);
+        ga(anOa5150, var_ya, i, i_50_, this.heights, is_51_, i_52_, i_53_, i_54_);
     }
 
     final boolean method3989(r var_r, int i, int i_55_, int i_56_, int i_57_, boolean bool) {
@@ -133,7 +133,7 @@ final class t
                 if (bools[i_67_][i_68_]) {
                     int i_69_ = i - i_64_ + i_67_;
                     int i_70_ = i_63_ - i_64_ + i_68_;
-                    if (i_69_ >= 0 && i_69_ < this.anInt4587 && i_70_ >= 0 && i_70_ < this.anInt4590) method3979(i_69_, i_70_);
+                    if (i_69_ >= 0 && i_69_ < this.tileWidth && i_70_ >= 0 && i_70_ < this.tileLength) method3979(i_69_, i_70_);
                 }
             }
         }

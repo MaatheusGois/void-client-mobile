@@ -71,8 +71,8 @@ final class Component176
                                 if (Component95.aBooleanArrayArrayArray1751[i - 1][i_0_][i_1_]) {
                                     int i_2_ = (Component256.anInt6111 - Component197.anInt10084 + i_0_);
                                     int i_3_ = (DebugPanicSub2.anInt8502 - Component197.anInt10084 + i_1_);
-                                    if (i_2_ >= 0 && i_2_ < var_s.anInt4587 && i_3_ >= 0 && i_3_ < var_s.anInt4590) {
-                                        JaclibLoader.toolkit.H(i_2_ << Component149.anInt4459, var_s.method3982((byte) -86, i_3_, i_2_), i_3_ << Component149.anInt4459, anIntArray3747);
+                                    if (i_2_ >= 0 && i_2_ < var_s.tileWidth && i_3_ >= 0 && i_3_ < var_s.tileLength) {
+                                        JaclibLoader.toolkit.H(i_2_ << Component149.anInt4459, var_s.getHeight((byte) -86, i_3_, i_2_), i_3_ << Component149.anInt4459, anIntArray3747);
                                         if (WaterSurfaceShader.method2154(anIntArray3747[0]) == anInt3749 - 1) var_s.method3979(i_2_, i_3_);
                                     }
                                 }

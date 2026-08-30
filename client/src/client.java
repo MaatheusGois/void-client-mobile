@@ -254,7 +254,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer207.method3414(21515);
         RequestProcessor.method1300((byte) -128);
         Request.method2998((byte) -35);
-        TeleportHandler.method3508(2);
+        CollisionMap.method3508(2);
         Component251.method1698(1);
         HashNodeSub14.method3237((byte) 42);
         Component278.method1917(40960);
@@ -1243,7 +1243,7 @@ public final class client extends Applet_Sub1 {
                                             class348_sub42_sub14.method3239(true, i_73_, i_72_, is);
                                             if (is != null) {
                                                 if (Component280.aClass346_2449.isKeyDown(82, -128) && (Component353.anInt2581 > 0)) {
-                                                    TeleportHandler.method3502(is[2], 2, is[0], is[1]);
+                                                    CollisionMap.method3502(is[2], 2, is[0], is[1]);
                                                     continue;
                                                 }
                                                 DisplayModeManagerContainer87.aBoolean3103 = true;

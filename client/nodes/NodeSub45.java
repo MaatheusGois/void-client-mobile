@@ -21,7 +21,7 @@ abstract class NodeSub45 extends Node {
     static Component183 aClass114_7105 = new Component183(101, 20);
     static Component183 aClass114_7106 = new Component183(36, -2);
     static Component24[] aClass105Array7107;
-    static TeleportHandler[] aClass361Array7108 = new TeleportHandler[4];
+    static CollisionMap[] aClass361Array7108 = new CollisionMap[4];
 
     /** Event X in canvas pixels. */
     abstract int getX(byte i);

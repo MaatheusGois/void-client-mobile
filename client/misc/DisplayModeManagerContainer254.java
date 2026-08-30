@@ -57,7 +57,7 @@ final class DisplayModeManagerContainer254
                 DebugOverlay.aFloat3172 = Component209.aFloat3462;
                 CacheStore.aFloat670 = NodeSub3.aFloat6586;
                 AbstractGlTextureSub4.aFloat8560 = Component98.aFloat5945;
-                Component163.aFloat3177 = TeleportHandler.aFloat4455;
+                Component163.aFloat3177 = CollisionMap.aFloat4455;
                 Component327.anInt8739 = DisplayModeManagerContainer96.anInt4703;
                 Component372.anInt6042 = Component129.anInt486;
             }

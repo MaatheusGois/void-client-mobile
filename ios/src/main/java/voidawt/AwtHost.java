@@ -1,10 +1,11 @@
 package voidawt;
 
 import org.robovm.apple.dispatch.DispatchQueue;
-import org.robovm.apple.avfoundation.AVSpeechSynthesizer;
-import org.robovm.apple.avfoundation.AVSpeechUtterance;
-import org.robovm.apple.avfoundation.AVSpeechSynthesisVoice;
-import org.robovm.apple.avfoundation.AVSpeechBoundary;
+// DISABLED 2026-08-30 with DialogueTts — OS TTS froze the client (see DialogueTts.ENABLED).
+// import org.robovm.apple.avfoundation.AVSpeechSynthesizer;
+// import org.robovm.apple.avfoundation.AVSpeechUtterance;
+// import org.robovm.apple.avfoundation.AVSpeechSynthesisVoice;
+// import org.robovm.apple.avfoundation.AVSpeechBoundary;
 
 import voidawt.event.FocusEvent;
 import voidawt.event.KeyEvent;
@@ -12,28 +13,36 @@ import voidawt.event.MouseEvent;
 import voidawt.event.MouseWheelEvent;
 
 public final class AwtHost {
-    private static final AVSpeechSynthesizer SPEECH = new AVSpeechSynthesizer();
+    // private static final AVSpeechSynthesizer SPEECH = new AVSpeechSynthesizer();
 
+    /**
+     * DISABLED 2026-08-30 with {@code DialogueTts.ENABLED=false}: OS TTS was freezing
+     * the client (main-queue AVSpeech + per-tick chatbox scan). No-op until re-enabled.
+     */
     public static void speak(final String text, final boolean female) {
+        // no-op — see DialogueTts.ENABLED
+        /*
         DispatchQueue.getMainQueue().async(new Runnable() {
             public void run() {
                 AVSpeechUtterance utterance = new AVSpeechUtterance(text);
                 AVSpeechSynthesisVoice voice = new AVSpeechSynthesisVoice("en-US");
                 utterance.setVoice(voice);
-                // iOS exposes gender on the voice metadata; pitch is a reliable
-                // fallback when only one en-US voice is installed.
                 utterance.setPitchMultiplier(female ? 1.15f : 0.85f);
                 SPEECH.enqueueSpeakUtterance(utterance);
             }
         });
+        */
     }
 
     public static void stopSpeech() {
+        // no-op — see DialogueTts.ENABLED
+        /*
         DispatchQueue.getMainQueue().async(new Runnable() {
             public void run() {
                 SPEECH.stopSpeaking(AVSpeechBoundary.Immediate);
             }
         });
+        */
     }
 
     /** Default matches fullscreen 800x600 (client boot / display prefs). */

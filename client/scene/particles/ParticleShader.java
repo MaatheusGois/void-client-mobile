@@ -343,18 +343,18 @@ final class ParticleShader extends ShaderProgram {
                             int i_28_ = i;
                             Component186 class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][i_25_ + -1]);
                             int i_30_;
-                            for (i_30_ = (NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, i_23_)); (i_25_ > 0 && class357_29_ != null && class357_29_.aShort4409 < 0 && (class357_29_.aShort4409 == class357.aShort4409) && (class357.aShort4401 == class357_29_.aShort4401) && ((NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, -1 + i_25_, i_23_)) == i_30_)); class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][i_25_ + -1])) {
-                                if (-1 + i_25_ > 0 && i_30_ != (NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_25_ + -2, i_23_))) break;
+                            for (i_30_ = (NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, i_23_)); (i_25_ > 0 && class357_29_ != null && class357_29_.aShort4409 < 0 && (class357_29_.aShort4409 == class357.aShort4409) && (class357.aShort4401 == class357_29_.aShort4401) && ((NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, -1 + i_25_, i_23_)) == i_30_)); class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][i_25_ + -1])) {
+                                if (-1 + i_25_ > 0 && i_30_ != (NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_25_ + -2, i_23_))) break;
                                 i_25_--;
                             }
-                            for (class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][1 + i_26_]); ((NodeSub41.anInt7054 > i_26_) && class357_29_ != null && class357_29_.aShort4409 < 0 && (class357_29_.aShort4409 == class357.aShort4409) && (class357.aShort4401 == class357_29_.aShort4401) && i_30_ == (NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_26_ - -1, i_23_))); class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][i_26_ + 1])) {
-                                if ((NodeSub41.anInt7054 > 1 + i_26_) && i_30_ != (NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_26_ + 2, i_23_))) break;
+                            for (class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][1 + i_26_]); ((NodeSub41.anInt7054 > i_26_) && class357_29_ != null && class357_29_.aShort4409 < 0 && (class357_29_.aShort4409 == class357.aShort4409) && (class357.aShort4401 == class357_29_.aShort4401) && i_30_ == (NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_26_ - -1, i_23_))); class357_29_ = (Component335.aClass357ArrayArrayArray2029[i][i_23_][i_26_ + 1])) {
+                                if ((NodeSub41.anInt7054 > 1 + i_26_) && i_30_ != (NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_26_ + 2, i_23_))) break;
                                 i_26_++;
                             }
                             int i_31_ = 1 + (-i_27_ + i_28_);
-                            int i_32_ = NodeSub1Sub1.aSArray8801[bool_24_ ? 1 + i_27_ : i_27_].method3982((byte) -86, i_25_, i_23_);
+                            int i_32_ = NodeSub1Sub1.aSArray8801[bool_24_ ? 1 + i_27_ : i_27_].getHeight((byte) -86, i_25_, i_23_);
                             int i_33_ = (class357.aShort4409 * i_31_ + i_32_);
-                            int i_34_ = (NodeSub1Sub1.aSArray8801[!bool_24_ ? i_27_ : i_27_ + 1].method3982((byte) -86, 1 + i_26_, i_23_));
+                            int i_34_ = (NodeSub1Sub1.aSArray8801[!bool_24_ ? i_27_ : i_27_ + 1].getHeight((byte) -86, 1 + i_26_, i_23_));
                             int i_35_ = (i_34_ - -(i_31_ * class357.aShort4409));
                             int i_36_ = i_23_ << Component149.anInt4459;
                             int i_37_ = i_25_ << Component149.anInt4459;
@@ -372,18 +372,18 @@ final class ParticleShader extends ShaderProgram {
                             int i_44_ = i;
                             Component186 class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][i_41_ - 1][i_22_]);
                             int i_46_;
-                            for (i_46_ = (NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, i_23_)); (i_41_ > 0 && class357_45_ != null && class357_45_.aShort4398 < 0 && (class357.aShort4398 == class357_45_.aShort4398) && (class357.aShort4397 == class357_45_.aShort4397) && ((NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, -1 + i_41_)) == i_46_)); class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][i_41_ - 1][i_22_])) {
-                                if (i_41_ + -1 > 0 && ((NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, -2 + i_41_)) != i_46_)) break;
+                            for (i_46_ = (NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, i_23_)); (i_41_ > 0 && class357_45_ != null && class357_45_.aShort4398 < 0 && (class357.aShort4398 == class357_45_.aShort4398) && (class357.aShort4397 == class357_45_.aShort4397) && ((NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, -1 + i_41_)) == i_46_)); class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][i_41_ - 1][i_22_])) {
+                                if (i_41_ + -1 > 0 && ((NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, -2 + i_41_)) != i_46_)) break;
                                 i_41_--;
                             }
-                            for (class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][i_42_ - -1][i_22_]); (i_42_ < StaticElementRenderer.anInt6451 && class357_45_ != null && class357_45_.aShort4398 < 0 && (class357.aShort4398 == class357_45_.aShort4398) && (class357_45_.aShort4397 == class357.aShort4397) && ((NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, i_42_ + 1)) == i_46_)); class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][1 + i_42_][i_22_])) {
-                                if (StaticElementRenderer.anInt6451 > i_42_ + 1 && ((NodeSub1Sub1.aSArray8801[i].method3982((byte) -86, i_22_, 2 + i_42_)) != i_46_)) break;
+                            for (class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][i_42_ - -1][i_22_]); (i_42_ < StaticElementRenderer.anInt6451 && class357_45_ != null && class357_45_.aShort4398 < 0 && (class357.aShort4398 == class357_45_.aShort4398) && (class357_45_.aShort4397 == class357.aShort4397) && ((NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, i_42_ + 1)) == i_46_)); class357_45_ = (Component335.aClass357ArrayArrayArray2029[i][1 + i_42_][i_22_])) {
+                                if (StaticElementRenderer.anInt6451 > i_42_ + 1 && ((NodeSub1Sub1.aSArray8801[i].getHeight((byte) -86, i_22_, 2 + i_42_)) != i_46_)) break;
                                 i_42_++;
                             }
                             int i_47_ = 1 + -i_43_ + i_44_;
-                            int i_48_ = NodeSub1Sub1.aSArray8801[!bool_24_ ? i_43_ : 1 + i_43_].method3982((byte) -86, i_22_, i_41_);
+                            int i_48_ = NodeSub1Sub1.aSArray8801[!bool_24_ ? i_43_ : 1 + i_43_].getHeight((byte) -86, i_22_, i_41_);
                             int i_49_ = (i_48_ - -(i_47_ * class357.aShort4398));
-                            int i_50_ = (NodeSub1Sub1.aSArray8801[!bool_24_ ? i_43_ : 1 + i_43_].method3982((byte) -86, i_22_, 1 + i_42_));
+                            int i_50_ = (NodeSub1Sub1.aSArray8801[!bool_24_ ? i_43_ : 1 + i_43_].getHeight((byte) -86, i_22_, 1 + i_42_));
                             int i_51_ = (class357.aShort4398 * i_47_ + i_50_);
                             int i_52_ = i_41_ << Component149.anInt4459;
                             int i_53_ = ((i_42_ << Component149.anInt4459) + Component148.anInt3465);

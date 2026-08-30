@@ -64,7 +64,7 @@ final class Component101
             for (int i_17_ = 0; i_16_ > i_17_; i_17_++) {
                 Component181.aClass348_Sub42_Sub17Array1543[i_17_] = null;
                 if (class182s[i_17_] != null) {
-                    DisplayModeManagerContainer167 class17_18_ = class87.method835((class182s[i_17_].anInt2454), 7);
+                    DisplayModeManagerContainer167 class17_18_ = class87.getSequence((class182s[i_17_].anInt2454), 7);
                     if (class17_18_.anIntArray237 != null) {
                         bool_15_ = true;
                         DisplayModeInfo.aClass17Array1048[i_17_] = class17_18_;

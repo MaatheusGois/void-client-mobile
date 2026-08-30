@@ -23,7 +23,7 @@ final class Component272
     static int anInt5871;
 
     final void method1712(int i, int i_0_) {
-        this.anInt3138 = i_0_;
+        this.preferenceValue = i_0_;
         anInt5862++;
         int i_1_ = -40 / ((i - 82) / 35);
     }
@@ -31,7 +31,7 @@ final class Component272
     final int method1727(int i) {
         if (i != -32350) anInt5871 = 39;
         anInt5869++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     static final void method1728(int i, int i_2_, int i_3_, boolean bool, int i_4_) {
@@ -100,12 +100,12 @@ final class Component272
     final void method1716(boolean bool) {
         anInt5864++;
         if (method1735(bool)) {
-            if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -94, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) this.anInt3138 = 1;
-            if (this.aClass348_Sub51_3136.aClass239_Sub8_7254.method1751(-32350) == 1) this.anInt3138 = 1;
+            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -94, this.preferences.aClass239_Sub25_7271.method1829(-32350))) this.preferenceValue = 1;
+            if (this.preferences.aClass239_Sub8_7254.method1751(-32350) == 1) this.preferenceValue = 1;
         }
-        if (this.anInt3138 == 3) this.anInt3138 = 2;
+        if (this.preferenceValue == 3) this.preferenceValue = 2;
         if (bool != false) method1716(true);
-        if (this.anInt3138 < 0 || this.anInt3138 > 3) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
     }
 
     static final void method1733(byte i, int i_23_) {
@@ -118,8 +118,8 @@ final class Component272
     final int method1714(int i, int i_24_) {
         anInt5866++;
         if (NodeCache.method576(i_24_, 29)) {
-            if (this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -113, this.aClass348_Sub51_3136.aClass239_Sub25_7271.method1829(-32350))) return 3;
-            if (this.aClass348_Sub51_3136.aClass239_Sub8_7254.method1751(-32350) == 1) return 3;
+            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -113, this.preferences.aClass239_Sub25_7271.method1829(-32350))) return 3;
+            if (this.preferences.aClass239_Sub8_7254.method1751(-32350) == 1) return 3;
         }
         if (i_24_ == i) return 3;
         if (NodeCache.method576(i_24_, i ^ 0x56)) return 2;
@@ -161,6 +161,6 @@ final class Component272
     final boolean method1735(boolean bool) {
         if (bool != false) anInt5871 = -86;
         anInt5858++;
-        return NodeCache.method576(this.anInt3138, 29);
+        return NodeCache.method576(this.preferenceValue, 29);
     }
 }

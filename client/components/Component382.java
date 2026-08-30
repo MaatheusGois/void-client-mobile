@@ -139,7 +139,7 @@ final class Component382
             }
             if (bool) i_35_++;
         }
-        return ShaderSub1.aSArray5191[i_35_].method3986(i_32_, i_33_, (byte) 22);
+        return ShaderSub1.aSArray5191[i_35_].getInterpolatedHeight(i_32_, i_33_, (byte) 22);
     }
 
     public static void method1322(byte i) {

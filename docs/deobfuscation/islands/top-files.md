@@ -12,7 +12,7 @@ clarity per unit of work.
 | 5 | `client/misc/DisplayModeManagerContainer190.java` | 263 | Display-mode FSM (Sub2) | no direct, but uses `GlToolkitSub2.anInt7666` |
 | 6 | `client/sprites/SpriteSub1.java` | 229 | Sprite rasterizer (Sub1) — distinct from `SpriteSub3` | no |
 | 7 | `client/misc/DisplayModeManagerContainer282.java` | 214 | Display-mode FSM (Sub3) | no direct |
-| 8 | `client/src/TeleportHandler.java` | 208 | `tele ` command → moves player | no |
+| 8 | `client/src/CollisionMap.java` | 208 | Scene collision / clip flag grid (was misnamed TeleportHandler) | no |
 | 9 | `client/net/packet/PacketReader.java` | 202 | Incoming server packet reader | yes — `anInt10432` (canvasHeight) |
 | 10 | `client/misc/DisplayModeManagerContainer164.java` | 187 | Display-mode FSM (Sub1) | no direct |
 | 11 | `client/toolkit/software/GlToolkitSub1.java` | 169 | Software (CPU) renderer fallback | no |
@@ -50,7 +50,7 @@ The top-15 splits into 5 clear buckets:
 
 ### Other (3 files)
 - **`ClientScriptExecutor`** — CS2 interpreter (lote 51 + 57).
-- **`TeleportHandler`** — `tele ` command.
+- **`CollisionMap`** — scene collision / clip flag grid (was misnamed TeleportHandler).
 - **`Component8`** — model container.
 - **`BrowserUrlOpener`** — URL launcher.
 

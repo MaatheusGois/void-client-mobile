@@ -92,8 +92,8 @@ final class AbstractGlTextureSub1
                     if (i_33_ >= 0 && i_34_ >= 0 && i_33_ < StaticElementRenderer.anInt6451 && i_34_ < NodeSub41.anInt7054) {
                         int i_35_ = i_33_ << Component149.anInt4459;
                         int i_36_ = i_34_ << Component149.anInt4459;
-                        int i_37_ = (NodeSub1Sub1.aSArray8801[NodeSub1Sub1.aSArray8801.length - 1].method3982((byte) -86, i_34_, i_33_) - (1000 << Component149.anInt4459 - 7));
-                        int i_38_ = (Component9.aSArray4142 != null ? (Component9.aSArray4142[0].method3982((byte) -86, i_34_, i_33_) + Component148.anInt3465) : (NodeSub1Sub1.aSArray8801[0].method3982((byte) -86, i_34_, i_33_) + Component148.anInt3465));
+                        int i_37_ = (NodeSub1Sub1.aSArray8801[NodeSub1Sub1.aSArray8801.length - 1].getHeight((byte) -86, i_34_, i_33_) - (1000 << Component149.anInt4459 - 7));
+                        int i_38_ = (Component9.aSArray4142 != null ? (Component9.aSArray4142[0].getHeight((byte) -86, i_34_, i_33_) + Component148.anInt3465) : (NodeSub1Sub1.aSArray8801[0].getHeight((byte) -86, i_34_, i_33_) + Component148.anInt3465));
                         i_31_ = (i_25_ >= 0 ? JaclibLoader.toolkit.r(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_, i_25_) : JaclibLoader.toolkit.JA(i_35_, i_37_, i_36_, i_35_, i_38_, i_36_));
                         NodeSub8.aBooleanArrayArray6656[i_29_][i_32_] = i_31_ == 0;
                     } else {

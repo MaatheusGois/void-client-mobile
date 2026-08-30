@@ -50,7 +50,7 @@ final class Component291
         }
     }
 
-    static final boolean method1420(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, TeleportHandler class361, int i_13_, int i_14_) {
+    static final boolean method1420(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, CollisionMap class361, int i_13_, int i_14_) {
         anInt2521++;
         int i_15_ = i_10_;
         int i_16_ = i_7_;
@@ -65,7 +65,7 @@ final class Component291
         OpenGlShader.anIntArray7397[i_21_] = i_15_;
         int i_22_ = 0;
         Component275.anIntArray2694[i_21_++] = i_16_;
-        int[][] is = class361.anIntArrayArray4438;
+        int[][] is = class361.collisionFlags;
         while_56_:
         while (i_22_ != i_21_) {
             i_16_ = Component275.anIntArray2694[i_22_];
@@ -73,8 +73,8 @@ final class Component291
             i_17_ = i_15_ + -i_19_;
             i_18_ = -i_20_ + i_16_;
             i_22_ = 0xfff & i_22_ - -1;
-            int i_23_ = i_15_ - class361.anInt4453;
-            int i_24_ = i_16_ - class361.anInt4441;
+            int i_23_ = i_15_ - class361.offsetX;
+            int i_24_ = i_16_ - class361.offsetY;
             int i_25_ = i_13_;
             while_48_:
             do {
@@ -122,7 +122,7 @@ final class Component291
                         }
                         break while_48_;
                     } while (false);
-                    if (class361.method3495(i_9_, i_16_, i_12_, i_5_, i_15_, i_14_, i_13_, -71)) {
+                    if (class361.reachedWall(i_9_, i_16_, i_12_, i_5_, i_15_, i_14_, i_13_, -71)) {
                         DefinitionSub30.anInt9388 = i_15_;
                         Component95.anInt1753 = i_16_;
                         return true;

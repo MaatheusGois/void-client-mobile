@@ -128,7 +128,7 @@ final class Component263
     final void method875(int i, Interface5_Impl2 interface5_impl2, int i_22_) {
         if (i_22_ > 0) {
             method874(-12763);
-            aHa_Sub3_1561.method3850((byte) 119, anInterface18_Impl3_1556);
+            aHa_Sub3_1561.setActiveTexture((byte) 119, anInterface18_Impl3_1556);
             aHa_Sub3_1561.method3938(VideoAdDisplay.aClass21_3181, i_22_, interface5_impl2, anInt1547, 0, -anInt1547 + (anInt1546 - -1), 47);
         }
         anInt1545++;
@@ -157,7 +157,7 @@ final class Component263
             int i_30_ = i << i_25_;
             int i_31_ = i_24_ << i_25_;
             for (int i_32_ = 0; i_28_ > i_32_; i_32_++) {
-                int i_33_ = i_30_ + (i_32_ + i_31_) * var_s_Sub3.anInt4587;
+                int i_33_ = i_30_ + (i_32_ + i_31_) * var_s_Sub3.tileWidth;
                 for (int i_34_ = 0; i_28_ > i_34_; i_34_++) {
                     short[] is = var_s_Sub3.aShortArrayArray8299[i_33_++];
                     if (is != null) i_29_ += is.length;
@@ -177,7 +177,7 @@ final class Component263
                         Stream stream = aHa_Sub3_1561.method3893(buffer, 9179);
                         if (Stream.c()) {
                             for (int i_41_ = 0; i_41_ < i_28_; i_41_++) {
-                                int i_42_ = (var_s_Sub3.anInt4587 * (i_41_ + i_31_) - -i_30_);
+                                int i_42_ = (var_s_Sub3.tileWidth * (i_41_ + i_31_) - -i_30_);
                                 for (int i_43_ = 0; (i_28_ > i_43_); i_43_++) {
                                     short[] is = (var_s_Sub3.aShortArrayArray8299[i_42_++]);
                                     if (is != null) {
@@ -192,7 +192,7 @@ final class Component263
                             }
                         } else {
                             for (int i_36_ = 0; i_36_ < i_28_; i_36_++) {
-                                int i_37_ = (var_s_Sub3.anInt4587 * (i_31_ - -i_36_) + i_30_);
+                                int i_37_ = (var_s_Sub3.tileWidth * (i_31_ - -i_36_) + i_30_);
                                 for (int i_38_ = 0; (i_38_ < i_28_); i_38_++) {
                                     short[] is = (var_s_Sub3.aShortArrayArray8299[i_37_++]);
                                     if (is != null) {

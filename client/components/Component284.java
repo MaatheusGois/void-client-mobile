@@ -21,7 +21,7 @@ final class Component284
     final int method1848(int i) {
         if (i != -32350) method1714(100, 29);
         anInt6145++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     Component284(NodeSub51 class348_sub51) {
@@ -40,7 +40,7 @@ final class Component284
 
     final void method1712(int i, int i_0_) {
         int i_1_ = -10 / ((i - 82) / 35);
-        this.anInt3138 = i_0_;
+        this.preferenceValue = i_0_;
         anInt6148++;
     }
 
@@ -94,7 +94,7 @@ final class Component284
     }
 
     final void method1716(boolean bool) {
-        if (this.anInt3138 < 0 || this.anInt3138 > 4) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 4) this.preferenceValue = method1710(20014);
         anInt6150++;
         if (bool != false) anInt6151 = 62;
     }

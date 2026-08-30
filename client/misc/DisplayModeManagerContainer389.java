@@ -18,7 +18,7 @@ final class DisplayModeManagerContainer389
     DisplayModeManagerContainer389(GlExtensionManager class377, int i, boolean bool, int[][] is) {
         super(class377, 34067, Component83.aClass304_1662, Component342.aClass68_1183, 6 * (i * i), bool);
         try {
-            this.aClass377_5082.method3850((byte) -109, this);
+            this.aClass377_5082.setActiveTexture((byte) -109, this);
             if (bool) {
                 for (int i_1_ = 0; i_1_ < 6; i_1_++)
                     this.method233(i, i, is[i_1_], i_1_ + 34069, 255);

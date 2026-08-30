@@ -28,11 +28,11 @@ final class TransparentWaterShader extends AbstractShader {
         IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
         if (aClass269_7339.aBoolean3458) {
             float f = ((float) ((this.aHa_Sub3_4479.anInt8146) % 4000) / 4000.0F);
-            this.aHa_Sub3_4479.method3850((byte) -52, aClass269_7339.anInterface18_Impl1_3452);
+            this.aHa_Sub3_4479.setActiveTexture((byte) -52, aClass269_7339.anInterface18_Impl1_3452);
             idirect3ddevice.a(11, f, 0.0F, 0.0F, 0.0F);
         } else {
             int i_3_ = 16 * ((this.aHa_Sub3_4479.anInt8146) % 4000) / 4000;
-            this.aHa_Sub3_4479.method3850((byte) 122, (aClass269_7339.anInterface18_Impl3Array3459[i_3_]));
+            this.aHa_Sub3_4479.setActiveTexture((byte) 122, (aClass269_7339.anInterface18_Impl3Array3459[i_3_]));
             idirect3ddevice.a(11, 0.0F, 0.0F, 0.0F, 0.0F);
         }
         if (i != 10756) aClass269_7339 = null;
@@ -58,9 +58,9 @@ final class TransparentWaterShader extends AbstractShader {
     final void method3520(byte i) {
         if (i == 87) {
             aClass378_7340.method3957(null, (byte) -89);
-            this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-            this.aHa_Sub3_4479.method3849((byte) 47, 1, DebugPanicSub2.aClass70_8503);
-            this.aHa_Sub3_4479.method3849((byte) 47, 2, DefinitionSub39.aClass70_9485);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DebugPanicSub2.aClass70_8503);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
             this.aHa_Sub3_4479.method3852(9, true);
         }
     }
@@ -122,8 +122,8 @@ final class TransparentWaterShader extends AbstractShader {
 
     final void method3525(int i, boolean bool) {
         if (i != 15192) method3531(true);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-        this.aHa_Sub3_4479.method3849((byte) 47, 1, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.method3924(false, false, 2, DebugPanicSub2.aClass70_8503, true);
         this.aHa_Sub3_4479.method3852(9, false);
         aClass378_7340.method3957(anIDirect3DVertexShader7341, (byte) -89);

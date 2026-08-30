@@ -25,10 +25,10 @@ abstract class NodeBase
                             for (int i_6_ = i_1_ - 1; i_6_ >= 0; i_6_--) {
                                 s var_s_7_ = NodeSub1Sub1.aSArray8801[i_6_];
                                 if (var_s_7_ != null) {
-                                    int i_8_ = (var_s.method3982((byte) -86, i_2_, i_3_) - var_s_7_.method3982((byte) -86, i_2_, i_3_));
-                                    int i_9_ = (var_s.method3982((byte) -86, i_2_, i_3_ + 1) - var_s_7_.method3982((byte) -86, i_2_, i_3_ + 1));
-                                    int i_10_ = (var_s.method3982((byte) -86, i_2_ + 1, i_3_ + 1) - var_s_7_.method3982((byte) -86, i_2_ + 1, i_3_ + 1));
-                                    int i_11_ = (var_s.method3982((byte) -86, i_2_ + 1, i_3_) - var_s_7_.method3982((byte) -86, i_2_ + 1, i_3_));
+                                    int i_8_ = (var_s.getHeight((byte) -86, i_2_, i_3_) - var_s_7_.getHeight((byte) -86, i_2_, i_3_));
+                                    int i_9_ = (var_s.getHeight((byte) -86, i_2_, i_3_ + 1) - var_s_7_.getHeight((byte) -86, i_2_, i_3_ + 1));
+                                    int i_10_ = (var_s.getHeight((byte) -86, i_2_ + 1, i_3_ + 1) - var_s_7_.getHeight((byte) -86, i_2_ + 1, i_3_ + 1));
+                                    int i_11_ = (var_s.getHeight((byte) -86, i_2_ + 1, i_3_) - var_s_7_.getHeight((byte) -86, i_2_ + 1, i_3_));
                                     var_s_7_.CA(var_r, i_4_, ((i_8_ + i_9_ + i_10_ + i_11_) / 4), i_5_, 0, false);
                                 }
                             }

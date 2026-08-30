@@ -52,7 +52,7 @@ final class Component372
 
     final void method1712(int i, int i_2_) {
         anInt6046++;
-        this.anInt3138 = i_2_;
+        this.preferenceValue = i_2_;
         int i_3_ = -25 / ((82 - i) / 35);
     }
 
@@ -65,6 +65,6 @@ final class Component372
     final int method1805(int i) {
         if (i != -32350) return -40;
         anInt6044++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 }

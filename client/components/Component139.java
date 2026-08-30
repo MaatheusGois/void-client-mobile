@@ -73,7 +73,7 @@ final class Component139
     final int method1840(int i) {
         anInt6127++;
         if (i != -32350) aClass341_6128 = null;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     public static void method1841(int i) {
@@ -82,7 +82,7 @@ final class Component139
     }
 
     final void method1712(int i, int i_26_) {
-        this.anInt3138 = i_26_;
+        this.preferenceValue = i_26_;
         anInt6132++;
         int i_27_ = 123 / ((82 - i) / 35);
     }
@@ -104,13 +104,13 @@ final class Component139
     final int method1710(int i) {
         anInt6133++;
         if (i != 20014) method1716(true);
-        if ((this.aClass348_Sub51_3136.method3422(674) == RunescapeInfo.RUNESCAPE) && this.aClass348_Sub51_3136.method3425(-111)) return 0;
+        if ((this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) && this.preferences.method3425(-111)) return 0;
         return 1;
     }
 
     final void method1716(boolean bool) {
         anInt6131++;
-        this.anInt3138 = method1710(20014);
+        this.preferenceValue = method1710(20014);
         if (bool != false) method1710(98);
     }
 }

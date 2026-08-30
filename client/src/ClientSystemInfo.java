@@ -68,7 +68,7 @@ final class ClientSystemInfo extends Node {
                         } else i_5_ = -1;
                         if (BufferCacheSub2.anInt8270 != i_5_ || i_4_ != ImageCacheStore.anInt4032) {
                             if (class348_sub47 == null) {
-                                TeleportHandler.anInt4450++;
+                                CollisionMap.anInt4450++;
                                 class348_sub47 = (ParticleShader.createOutboundPacket(StringDefinition.aClass351_9590, DisplayModeManagerContainer64.aClass77_9029, -94));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
                                 i_2_ = class348_sub47.aClass348_Sub49_Sub2_7116.offset;
@@ -225,7 +225,7 @@ final class ClientSystemInfo extends Node {
                                     class46.anInt795 = 0;
                                     class46.anInt841 = 0;
                                     class46.anInt730 = 1;
-                                    DisplayModeManagerContainer167 class17 = ((class46.anInt699 == -1) ? null : (RunescapeInfo.aClass87_191.method835((class46.anInt699), 7)));
+                                    DisplayModeManagerContainer167 class17 = ((class46.anInt699 == -1) ? null : (RunescapeInfo.aClass87_191.getSequence((class46.anInt699), 7)));
                                     if (class17 != null) Component235.method2017((class46.anInt795), class17, 30);
                                     Component111.markInterfaceDirty(-9343, class46);
                                 }
@@ -380,7 +380,7 @@ final class ClientSystemInfo extends Node {
                             if (i_30_ >= 0) {
                                 if (i_30_ > 3) i_30_ = 3;
                             } else i_30_ = 0;
-                            TeleportHandler.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
+                            CollisionMap.method3502((Component72.localPlayer.anIntArray10317[0]) + Component330.regionTileY, i ^ 0x2caa, i_30_, (Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX);
                         }
                         DisplayModeManagerContainer1.updateMenuTip(-120);
                         int i_31_ = 0;

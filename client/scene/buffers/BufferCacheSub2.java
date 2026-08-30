@@ -128,9 +128,9 @@ final class BufferCacheSub2
     final void YA() {
         if (anInt8284 <= 0) aClass104_8266 = null;
         else {
-            byte[][] is = new byte[1 + this.anInt4587][this.anInt4590 + 1];
-            for (int i = 1; i < this.anInt4587; i++) {
-                for (int i_33_ = 1; i_33_ < this.anInt4590; i_33_++)
+            byte[][] is = new byte[1 + this.tileWidth][this.tileLength + 1];
+            for (int i = 1; i < this.tileWidth; i++) {
+                for (int i_33_ = 1; i_33_ < this.tileLength; i_33_++)
                     is[i][i_33_] = (byte) ((aByteArrayArray8273[i][1 + i_33_] >> 3) + (aByteArrayArray8273[i][-1 + i_33_] >> 2) + ((aByteArrayArray8273[i + 1][i_33_] >> 3) + ((aByteArrayArray8273[i - 1][i_33_] >> 2) + (aByteArrayArray8273[i][i_33_] >> 1))));
             }
             aClass348_Sub20Array8282 = new NodeSub20[aClass356_8278.size(1)];
@@ -147,8 +147,8 @@ final class BufferCacheSub2
             if (i_34_ < 1) i_34_ = 1;
             LruCache class356 = new LruCache(i_34_);
             NodeSub20[] class348_sub20s_35_ = new NodeSub20[anInt8280];
-            for (int i_36_ = 0; this.anInt4587 > i_36_; i_36_++) {
-                for (int i_37_ = 0; (this.anInt4590 > i_37_); i_37_++) {
+            for (int i_36_ = 0; this.tileWidth > i_36_; i_36_++) {
+                for (int i_37_ = 0; (this.tileLength > i_37_); i_37_++) {
                     if (this.anIntArrayArrayArray8253[i_36_][i_37_] != null) {
                         NodeSub20[] class348_sub20s_38_ = aClass348_Sub20ArrayArrayArray8243[i_36_][i_37_];
                         int[] is_39_ = (this.anIntArrayArrayArray8268[i_36_][i_37_]);
@@ -183,10 +183,10 @@ final class BufferCacheSub2
                             }
                             class348_sub20s_35_[i_60_++] = class348_sub20;
                         }
-                        short[] is_63_ = (this.aShortArrayArray8267[this.anInt4587 * i_37_ + i_36_] = new short[is_42_.length]);
+                        short[] is_63_ = (this.aShortArrayArray8267[this.tileWidth * i_37_ + i_36_] = new short[is_42_.length]);
                         for (int i_64_ = 0; (is_42_.length > i_64_); i_64_++) {
-                            int i_65_ = ((i_36_ << this.anInt4588) + is_39_[i_64_]);
-                            int i_66_ = ((i_37_ << this.anInt4588) - -is_40_[i_64_]);
+                            int i_65_ = ((i_36_ << this.tileSizeBits) + is_39_[i_64_]);
+                            int i_66_ = ((i_37_ << this.tileSizeBits) - -is_40_[i_64_]);
                             int i_67_ = i_65_ >> anInt8264;
                             int i_68_ = i_66_ >> anInt8264;
                             int i_69_ = is_42_[i_64_];
@@ -201,16 +201,16 @@ final class BufferCacheSub2
                             float f_77_;
                             float f_78_;
                             if (i_72_ != 0 || i_73_ != 0) {
-                                if (i_72_ != 0 || i_73_ != this.anInt4592) {
-                                    if ((i_72_ != this.anInt4592) || i_73_ != this.anInt4592) {
-                                        if ((i_72_ == this.anInt4592) && i_73_ == 0) {
+                                if (i_72_ != 0 || i_73_ != this.tileSize) {
+                                    if ((i_72_ != this.tileSize) || i_73_ != this.tileSize) {
+                                        if ((i_72_ == this.tileSize) && i_73_ == 0) {
                                             f_76_ = f_54_;
                                             f_78_ = f_55_;
                                             f_77_ = f_53_;
                                             i_74_ -= i_59_;
                                         } else {
-                                            float f_79_ = ((float) i_72_ / (float) (this.anInt4592));
-                                            float f_80_ = ((float) i_73_ / (float) (this.anInt4592));
+                                            float f_79_ = ((float) i_72_ / (float) (this.tileSize));
+                                            float f_80_ = ((float) i_73_ / (float) (this.tileSize));
                                             float f_81_ = (-f + f_53_) * f_79_ + f;
                                             float f_82_ = ((f_54_ - f_45_) * f_79_ + f_45_);
                                             float f_83_ = (f_79_ * (-f_46_ + f_55_) + f_46_);
@@ -220,9 +220,9 @@ final class BufferCacheSub2
                                             f_76_ = f_82_ + ((f_85_ - f_82_) * f_80_);
                                             f_77_ = (f_80_ * (-f_81_ + f_84_) + f_81_);
                                             f_78_ = f_83_ + ((-f_83_ + f_86_) * f_80_);
-                                            int i_87_ = (((i_59_ + -i_56_) * i_72_ >> this.anInt4588) + i_56_);
-                                            int i_88_ = ((i_72_ * (-i_57_ + i_58_) >> this.anInt4588) + i_57_);
-                                            i_74_ -= i_87_ - -(((-i_87_ + i_88_) * i_73_) >> (this.anInt4588));
+                                            int i_87_ = (((i_59_ + -i_56_) * i_72_ >> this.tileSizeBits) + i_56_);
+                                            int i_88_ = ((i_72_ * (-i_57_ + i_58_) >> this.tileSizeBits) + i_57_);
+                                            i_74_ -= i_87_ - -(((-i_87_ + i_88_) * i_73_) >> (this.tileSizeBits));
                                         }
                                     } else {
                                         f_77_ = f_50_;
@@ -285,7 +285,7 @@ final class BufferCacheSub2
                                 } else i_92_ = i_75_;
                                 if (this.aHa_Sub2_8272.aBoolean7775) {
                                     stream.a((float) i_65_);
-                                    stream.a((float) (this.method3986(i_65_, i_66_, (byte) -121) + i_71_));
+                                    stream.a((float) (this.getInterpolatedHeight(i_65_, i_66_, (byte) -121) + i_71_));
                                     stream.a((float) i_66_);
                                     stream.f((byte) (i_92_ >> 16));
                                     stream.f((byte) (i_92_ >> 8));
@@ -301,7 +301,7 @@ final class BufferCacheSub2
                                     }
                                 } else {
                                     stream.b((float) i_65_);
-                                    stream.b((float) (this.method3986(i_65_, i_66_, (byte) -101) - -i_71_));
+                                    stream.b((float) (this.getInterpolatedHeight(i_65_, i_66_, (byte) -101) - -i_71_));
                                     stream.b((float) i_66_);
                                     stream.f((byte) (i_92_ >> 16));
                                     stream.f((byte) (i_92_ >> 8));
@@ -336,9 +336,9 @@ final class BufferCacheSub2
                 NodeSub20 class348_sub20 = class348_sub20s[i_99_];
                 if (class348_sub20 != null) class348_sub20.method2951(3, i_99_);
             }
-            for (int i_100_ = 0; this.anInt4587 > i_100_; i_100_++) {
-                for (int i_101_ = 0; i_101_ < this.anInt4590; i_101_++) {
-                    short[] is_102_ = (this.aShortArrayArray8267[i_101_ * this.anInt4587 + i_100_]);
+            for (int i_100_ = 0; this.tileWidth > i_100_; i_100_++) {
+                for (int i_101_ = 0; i_101_ < this.tileLength; i_101_++) {
+                    short[] is_102_ = (this.aShortArrayArray8267[i_101_ * this.tileWidth + i_100_]);
                     if (is_102_ != null) {
                         int i_103_ = 0;
                         int i_104_ = 0;
@@ -453,26 +453,26 @@ final class BufferCacheSub2
         do {
             try {
                 this.aHa_Sub2_8272 = var_ha_Sub2;
-                anInt8264 = this.anInt4588 + -2;
+                anInt8264 = this.tileSizeBits + -2;
                 anIntArrayArrayArray8245 = new int[i_134_][i_135_][];
                 aByteArrayArray8240 = new byte[i_134_][i_135_];
                 this.anIntArrayArrayArray8268 = new int[i_134_][i_135_][];
                 this.anIntArrayArrayArray8253 = new int[i_134_][i_135_][];
-                aFloatArrayArray8285 = (new float[1 + this.anInt4587]
-                        [this.anInt4590 + 1]);
+                aFloatArrayArray8285 = (new float[1 + this.tileWidth]
+                        [this.tileLength + 1]);
                 aClass348_Sub20ArrayArrayArray8243 = new NodeSub20[i_134_][i_135_][];
                 anIntArrayArrayArray8258 = new int[i_134_][i_135_][];
-                aFloatArrayArray8281 = (new float[1 + this.anInt4587]
-                        [1 + this.anInt4590]);
+                aFloatArrayArray8281 = (new float[1 + this.tileWidth]
+                        [1 + this.tileLength]);
                 aByteArrayArray8273 = new byte[1 + i_134_][i_135_ - -1];
                 this.aShortArrayArray8267 = new short[i_135_ * i_134_][];
                 anInt8260 = 1 << anInt8264;
                 this.anIntArrayArrayArray8234 = new int[i_134_][i_135_][];
-                aFloatArrayArray8283 = (new float[1 + this.anInt4587]
-                        [1 + this.anInt4590]);
+                aFloatArrayArray8283 = (new float[1 + this.tileWidth]
+                        [1 + this.tileLength]);
                 this.anInt8235 = i_133_;
-                for (int i_138_ = 1; this.anInt4590 > i_138_; i_138_++) {
-                    for (int i_139_ = 1; this.anInt4587 > i_139_; i_139_++) {
+                for (int i_138_ = 1; this.tileLength > i_138_; i_138_++) {
+                    for (int i_139_ = 1; this.tileWidth > i_139_; i_139_++) {
                         int i_140_ = (is_136_[1 + i_139_][i_138_] + -is_136_[-1 + i_139_][i_138_]);
                         int i_141_ = (is_136_[i_139_][1 + i_138_] + -is_136_[i_139_][i_138_ - 1]);
                         float f = (float) (1.0 / Math.sqrt(i_141_ * i_141_ + (i_137_ * i_137_ * 4) + (i_140_ * i_140_)));
@@ -528,12 +528,12 @@ final class BufferCacheSub2
             this.aHa_Sub2_8272.method3753(0, 1);
             this.aHa_Sub2_8272.glResetViewport(-2, -100);
             this.aHa_Sub2_8272.bindTexture((byte) -86, null);
-            DisplayModeManagerContainer306.aFloatArray4772[0] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7688) * ((float) this.anInt4592 * 128.0F)));
+            DisplayModeManagerContainer306.aFloatArray4772[0] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7688) * ((float) this.tileSize * 128.0F)));
             DisplayModeManagerContainer306.aFloatArray4772[8] = 0.0F;
             DisplayModeManagerContainer306.aFloatArray4772[13] = 1.0F - (((float) (i_157_ * i_153_) / 128.0F + (float) (i_152_ * 2)) / (float) (this.aHa_Sub2_8272.anInt7641));
             DisplayModeManagerContainer306.aFloatArray4772[7] = 0.0F;
             DisplayModeManagerContainer306.aFloatArray4772[6] = 0.0F;
-            DisplayModeManagerContainer306.aFloatArray4772[5] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7641) * ((float) this.anInt4592 * 128.0F)));
+            DisplayModeManagerContainer306.aFloatArray4772[5] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7641) * ((float) this.tileSize * 128.0F)));
             DisplayModeManagerContainer306.aFloatArray4772[1] = 0.0F;
             DisplayModeManagerContainer306.aFloatArray4772[4] = 0.0F;
             DisplayModeManagerContainer306.aFloatArray4772[14] = 0.0F;
@@ -576,7 +576,7 @@ final class BufferCacheSub2
             Component182 class348_sub49_sub1 = (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798);
             if (this.aHa_Sub2_8272.aBoolean7775) {
                 for (int i_159_ = i_155_; i_159_ < i_157_; i_159_++) {
-                    int i_160_ = i_159_ * this.anInt4587 + i_154_;
+                    int i_160_ = i_159_ * this.tileWidth + i_154_;
                     for (int i_161_ = i_154_; i_156_ > i_161_; i_161_++) {
                         if (bools[-i_154_ + i_161_][-i_155_ + i_159_]) {
                             short[] is = this.aShortArrayArray8267[i_160_];
@@ -592,7 +592,7 @@ final class BufferCacheSub2
                 }
             } else {
                 for (int i_163_ = i_155_; i_163_ < i_157_; i_163_++) {
-                    int i_164_ = i_154_ + i_163_ * this.anInt4587;
+                    int i_164_ = i_154_ + i_163_ * this.tileWidth;
                     for (int i_165_ = i_154_; i_156_ > i_165_; i_165_++) {
                         if (bools[i_165_ + -i_154_][i_163_ + -i_155_]) {
                             short[] is = this.aShortArrayArray8267[i_164_];
@@ -624,7 +624,7 @@ final class BufferCacheSub2
     final r fa(int i, int i_167_, r var_r) {
         anInt8259++;
         if ((0x1 & aByteArrayArray8240[i][i_167_]) == 0) return null;
-        int i_168_ = (this.anInt4592 >> this.aHa_Sub2_8272.anInt7731);
+        int i_168_ = (this.tileSize >> this.aHa_Sub2_8272.anInt7731);
         CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         CacheNodeSub2 var_r_Sub2_169_;
         if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) 104, i_168_, i_168_)) var_r_Sub2_169_ = new CacheNodeSub2(this.aHa_Sub2_8272, i_168_, i_168_);
@@ -676,9 +676,9 @@ final class BufferCacheSub2
     final void U(int i, int i_176_, int[] is, int[] is_177_, int[] is_178_, int[] is_179_, int[] is_180_, int[] is_181_, int[] is_182_, int[] is_183_, int i_184_, int i_185_, int i_186_, boolean bool) {
         try {
             anInt8261++;
-            if (is_177_ != null && anIntArrayArrayArray8258 == null) anIntArrayArrayArray8258 = new int[this.anInt4587][this.anInt4590][];
+            if (is_177_ != null && anIntArrayArrayArray8258 == null) anIntArrayArrayArray8258 = new int[this.tileWidth][this.tileLength][];
             d var_d = this.aHa_Sub2_8272.modelProvider;
-            if (is_179_ != null && anIntArrayArrayArray8252 == null) anIntArrayArrayArray8252 = new int[this.anInt4587][this.anInt4590][];
+            if (is_179_ != null && anIntArrayArrayArray8252 == null) anIntArrayArrayArray8252 = new int[this.tileWidth][this.tileLength][];
             this.anIntArrayArrayArray8268[i][i_176_] = is;
             this.anIntArrayArrayArray8234[i][i_176_] = is_178_;
             this.anIntArrayArrayArray8253[i][i_176_] = is_180_;
@@ -732,15 +732,15 @@ final class BufferCacheSub2
             int i_201_ = i_200_;
             if (i_200_ < 0) i_200_ = 0;
             int i_202_ = i_192_ + i_194_;
-            if (i_202_ > this.anInt4587 - 1) i_202_ = -1 + this.anInt4587;
+            if (i_202_ > this.tileWidth - 1) i_202_ = -1 + this.tileWidth;
             int i_203_ = i_196_ + i_192_;
-            if (-1 + this.anInt4590 < i_203_) i_203_ = this.anInt4590 + -1;
+            if (-1 + this.tileLength < i_203_) i_203_ = this.tileLength + -1;
             int i_204_ = 0;
             int[] is = this.aHa_Sub2_8272.anIntArray7882;
             for (int i_205_ = i_198_; i_202_ >= i_205_; i_205_++) {
                 boolean[] bools_206_ = bools[-i_199_ + i_205_];
                 for (int i_207_ = i_200_; i_203_ >= i_207_; i_207_++) {
-                    if (bools_206_[-i_201_ + i_207_]) is[i_204_++] = i_205_ + i_207_ * this.anInt4587;
+                    if (bools_206_[-i_201_ + i_207_]) is[i_204_++] = i_205_ + i_207_ * this.tileWidth;
                 }
             }
             if (i != -1) {

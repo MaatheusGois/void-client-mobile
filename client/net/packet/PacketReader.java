@@ -371,7 +371,7 @@ final class PacketReader extends CacheNode {
                             if (i_46_ == i_38_) {
                                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 55, i_38_);
                                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
-                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7));
+                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7));
                                     int i_47_ = class17.anInt248;
                                     if (i_47_ != 0 && i_47_ != 2) {
                                         if (i_47_ == 1) bool_45_ = true;
@@ -381,8 +381,8 @@ final class PacketReader extends CacheNode {
                                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 105, i_38_);
                                 Component63 class368_48_ = NsnDefinition.aClass319_9245.method2543((byte) 56, i_46_);
                                 if (class368.anInt4503 != -1 && (class368_48_.anInt4503 != -1)) {
-                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7));
-                                    DisplayModeManagerContainer167 class17_49_ = (RunescapeInfo.aClass87_191.method835((class368_48_.anInt4503), 7));
+                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7));
+                                    DisplayModeManagerContainer167 class17_49_ = (RunescapeInfo.aClass87_191.getSequence((class368_48_.anInt4503), 7));
                                     if (class17.anInt239 < class17_49_.anInt239) bool_45_ = false;
                                 }
                             }
@@ -401,7 +401,7 @@ final class PacketReader extends CacheNode {
                                 if (npc.anInt10291 != -1 && (OpenGlShader.clientCycle == (npc.anInt10211))) {
                                     int i_51_ = (NsnDefinition.aClass319_9245.method2543((byte) 103, (npc.anInt10291)).anInt4503);
                                     if (i_51_ != -1) {
-                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_51_, 7);
+                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_51_, 7);
                                         if (class17 != null && (class17.anIntArray237) != null && !(npc.aBoolean10309)) DisplayModeManagerContainer260.method2178(npc, 0, class17, -17);
                                     }
                                 }
@@ -418,7 +418,7 @@ final class PacketReader extends CacheNode {
                                 if (npc.anInt10269 != -1 && (OpenGlShader.clientCycle == (npc.anInt10225))) {
                                     int i_50_ = (NsnDefinition.aClass319_9245.method2543((byte) 87, (npc.anInt10269)).anInt4503);
                                     if (i_50_ != -1) {
-                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_50_, 7);
+                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_50_, 7);
                                         if (class17 != null && (class17.anIntArray237) != null && !(npc.aBoolean10309)) DisplayModeManagerContainer260.method2178(npc, 0, class17, -44);
                                     }
                                 }
@@ -438,7 +438,7 @@ final class PacketReader extends CacheNode {
                             if (i_38_ == i_54_) {
                                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 111, i_38_);
                                 if (class368.aBoolean4487 && class368.anInt4503 != -1) {
-                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7));
+                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7));
                                     int i_57_ = class17.anInt248;
                                     if (i_57_ != 0 && i_57_ != 2) {
                                         if (i_57_ == 1) bool_53_ = true;
@@ -448,8 +448,8 @@ final class PacketReader extends CacheNode {
                                 Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 105, i_38_);
                                 Component63 class368_55_ = NsnDefinition.aClass319_9245.method2543((byte) 118, i_54_);
                                 if (class368.anInt4503 != -1 && class368_55_.anInt4503 != -1) {
-                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(class368.anInt4503, 7));
-                                    DisplayModeManagerContainer167 class17_56_ = (RunescapeInfo.aClass87_191.method835((class368_55_.anInt4503), 7));
+                                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(class368.anInt4503, 7));
+                                    DisplayModeManagerContainer167 class17_56_ = (RunescapeInfo.aClass87_191.getSequence((class368_55_.anInt4503), 7));
                                     if (class17.anInt239 < class17_56_.anInt239) bool_53_ = false;
                                 }
                             }
@@ -469,7 +469,7 @@ final class PacketReader extends CacheNode {
                                 if ((player.anInt10291 != -1) && ((player.anInt10211) == OpenGlShader.clientCycle)) {
                                     int i_58_ = (NsnDefinition.aClass319_9245.method2543((byte) 45, (player.anInt10291)).anInt4503);
                                     if (i_58_ != -1) {
-                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_58_, 7);
+                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_58_, 7);
                                         if (class17 != null && (class17.anIntArray237) != null && !(player.aBoolean10309)) DisplayModeManagerContainer260.method2178(player, 0, class17, -120);
                                     }
                                 }
@@ -487,7 +487,7 @@ final class PacketReader extends CacheNode {
                                 if ((player.anInt10269 != -1) && (OpenGlShader.clientCycle == (player.anInt10225))) {
                                     int i_59_ = (NsnDefinition.aClass319_9245.method2543((byte) 81, (player.anInt10269)).anInt4503);
                                     if (i_59_ != -1) {
-                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_59_, 7);
+                                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_59_, 7);
                                         if (class17 != null && (class17.anIntArray237) != null && !(player.aBoolean10309)) DisplayModeManagerContainer260.method2178(player, 0, class17, -101);
                                     }
                                 }
@@ -673,7 +673,7 @@ final class PacketReader extends CacheNode {
             NodeSub3.aClass114_6584 = null;
             return true;
         }
-        if (NodeSub3.aClass114_6584 == TeleportHandler.aClass114_4433) {
+        if (NodeSub3.aClass114_6584 == CollisionMap.aClass114_4433) {
             DisplayModeManagerContainer58.aClass170_10209.method1314((byte) 80);
             DisplayModeManagerContainer260.anInt3695 += 32;
             NodeSub3.aClass114_6584 = null;

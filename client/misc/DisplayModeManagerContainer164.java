@@ -1554,32 +1554,32 @@ final class DisplayModeManagerContainer164
         int i_373_ = i_369_ + aShort5393;
         int i_374_ = i_371_ + aShort5352;
         int i_375_ = i_371_ + aShort5331;
-        if (i == 4 || (i_372_ >= 0 && (i_373_ + var_s.anInt4592 >> var_s.anInt4588 < var_s.anInt4587) && i_374_ >= 0 && (i_375_ + var_s.anInt4592 >> var_s.anInt4588 < var_s.anInt4590))) {
-            int[][] is = var_s.anIntArrayArray4584;
+        if (i == 4 || (i_372_ >= 0 && (i_373_ + var_s.tileSize >> var_s.tileSizeBits < var_s.tileWidth) && i_374_ >= 0 && (i_375_ + var_s.tileSize >> var_s.tileSizeBits < var_s.tileLength))) {
+            int[][] is = var_s.heights;
             int[][] is_376_ = null;
-            if (var_s_368_ != null) is_376_ = var_s_368_.anIntArrayArray4584;
+            if (var_s_368_ != null) is_376_ = var_s_368_.heights;
             if (i == 4 || i == 5) {
-                if (var_s_368_ == null || (i_372_ < 0 || ((i_373_ + var_s_368_.anInt4592 >> var_s_368_.anInt4588) >= var_s_368_.anInt4587) || i_374_ < 0 || ((i_375_ + var_s_368_.anInt4592 >> var_s_368_.anInt4588) >= var_s_368_.anInt4590))) return;
+                if (var_s_368_ == null || (i_372_ < 0 || ((i_373_ + var_s_368_.tileSize >> var_s_368_.tileSizeBits) >= var_s_368_.tileWidth) || i_374_ < 0 || ((i_375_ + var_s_368_.tileSize >> var_s_368_.tileSizeBits) >= var_s_368_.tileLength))) return;
             } else {
-                i_372_ >>= var_s.anInt4588;
-                i_373_ = (i_373_ + (var_s.anInt4592 - 1) >> var_s.anInt4588);
-                i_374_ >>= var_s.anInt4588;
-                i_375_ = (i_375_ + (var_s.anInt4592 - 1) >> var_s.anInt4588);
+                i_372_ >>= var_s.tileSizeBits;
+                i_373_ = (i_373_ + (var_s.tileSize - 1) >> var_s.tileSizeBits);
+                i_374_ >>= var_s.tileSizeBits;
+                i_375_ = (i_375_ + (var_s.tileSize - 1) >> var_s.tileSizeBits);
                 if (is[i_372_][i_374_] == i_370_ && is[i_373_][i_374_] == i_370_ && is[i_372_][i_375_] == i_370_ && is[i_373_][i_375_] == i_370_) return;
             }
             synchronized (this) {
                 if (i == 1) {
-                    int i_377_ = var_s.anInt4592 - 1;
+                    int i_377_ = var_s.tileSize - 1;
                     for (int i_378_ = 0; i_378_ < anInt5387; i_378_++) {
                         int i_379_ = vertexX[i_378_] + i_369_;
                         int i_380_ = vertexZ[i_378_] + i_371_;
                         int i_381_ = i_379_ & i_377_;
                         int i_382_ = i_380_ & i_377_;
-                        int i_383_ = i_379_ >> var_s.anInt4588;
-                        int i_384_ = i_380_ >> var_s.anInt4588;
-                        int i_385_ = ((is[i_383_][i_384_] * (var_s.anInt4592 - i_381_) + is[i_383_ + 1][i_384_] * i_381_) >> var_s.anInt4588);
-                        int i_386_ = ((is[i_383_][i_384_ + 1] * (var_s.anInt4592 - i_381_) + is[i_383_ + 1][i_384_ + 1] * i_381_) >> var_s.anInt4588);
-                        int i_387_ = (i_385_ * (var_s.anInt4592 - i_382_) + i_386_ * i_382_ >> var_s.anInt4588);
+                        int i_383_ = i_379_ >> var_s.tileSizeBits;
+                        int i_384_ = i_380_ >> var_s.tileSizeBits;
+                        int i_385_ = ((is[i_383_][i_384_] * (var_s.tileSize - i_381_) + is[i_383_ + 1][i_384_] * i_381_) >> var_s.tileSizeBits);
+                        int i_386_ = ((is[i_383_][i_384_ + 1] * (var_s.tileSize - i_381_) + is[i_383_ + 1][i_384_ + 1] * i_381_) >> var_s.tileSizeBits);
+                        int i_387_ = (i_385_ * (var_s.tileSize - i_382_) + i_386_ * i_382_ >> var_s.tileSizeBits);
                         vertexY[i_378_] = vertexY[i_378_] + i_387_ - i_370_;
                     }
                     for (int i_388_ = anInt5387; i_388_ < anInt5340; i_388_++) {
@@ -1587,17 +1587,17 @@ final class DisplayModeManagerContainer164
                         int i_390_ = vertexZ[i_388_] + i_371_;
                         int i_391_ = i_389_ & i_377_;
                         int i_392_ = i_390_ & i_377_;
-                        int i_393_ = i_389_ >> var_s.anInt4588;
-                        int i_394_ = i_390_ >> var_s.anInt4588;
+                        int i_393_ = i_389_ >> var_s.tileSizeBits;
+                        int i_394_ = i_390_ >> var_s.tileSizeBits;
                         if (i_393_ >= 0 && i_393_ < is.length - 1 && i_394_ >= 0 && i_394_ < is[0].length - 1) {
-                            int i_395_ = ((is[i_393_][i_394_] * (var_s.anInt4592 - i_391_) + is[i_393_ + 1][i_394_] * i_391_) >> var_s.anInt4588);
-                            int i_396_ = (((is[i_393_][i_394_ + 1] * (var_s.anInt4592 - i_391_)) + is[i_393_ + 1][i_394_ + 1] * i_391_) >> var_s.anInt4588);
-                            int i_397_ = (i_395_ * (var_s.anInt4592 - i_392_) + i_396_ * i_392_ >> var_s.anInt4588);
+                            int i_395_ = ((is[i_393_][i_394_] * (var_s.tileSize - i_391_) + is[i_393_ + 1][i_394_] * i_391_) >> var_s.tileSizeBits);
+                            int i_396_ = (((is[i_393_][i_394_ + 1] * (var_s.tileSize - i_391_)) + is[i_393_ + 1][i_394_ + 1] * i_391_) >> var_s.tileSizeBits);
+                            int i_397_ = (i_395_ * (var_s.tileSize - i_392_) + i_396_ * i_392_ >> var_s.tileSizeBits);
                             vertexY[i_388_] = vertexY[i_388_] + i_397_ - i_370_;
                         }
                     }
                 } else if (i == 2) {
-                    int i_398_ = var_s.anInt4592 - 1;
+                    int i_398_ = var_s.tileSize - 1;
                     for (int i_399_ = 0; i_399_ < anInt5387; i_399_++) {
                         int i_400_ = (vertexY[i_399_] << 16) / aShort5329;
                         if (i_400_ < i_367_) {
@@ -1605,11 +1605,11 @@ final class DisplayModeManagerContainer164
                             int i_402_ = vertexZ[i_399_] + i_371_;
                             int i_403_ = i_401_ & i_398_;
                             int i_404_ = i_402_ & i_398_;
-                            int i_405_ = i_401_ >> var_s.anInt4588;
-                            int i_406_ = i_402_ >> var_s.anInt4588;
-                            int i_407_ = ((is[i_405_][i_406_] * (var_s.anInt4592 - i_403_) + is[i_405_ + 1][i_406_] * i_403_) >> var_s.anInt4588);
-                            int i_408_ = (((is[i_405_][i_406_ + 1] * (var_s.anInt4592 - i_403_)) + is[i_405_ + 1][i_406_ + 1] * i_403_) >> var_s.anInt4588);
-                            int i_409_ = (i_407_ * (var_s.anInt4592 - i_404_) + i_408_ * i_404_ >> var_s.anInt4588);
+                            int i_405_ = i_401_ >> var_s.tileSizeBits;
+                            int i_406_ = i_402_ >> var_s.tileSizeBits;
+                            int i_407_ = ((is[i_405_][i_406_] * (var_s.tileSize - i_403_) + is[i_405_ + 1][i_406_] * i_403_) >> var_s.tileSizeBits);
+                            int i_408_ = (((is[i_405_][i_406_ + 1] * (var_s.tileSize - i_403_)) + is[i_405_ + 1][i_406_ + 1] * i_403_) >> var_s.tileSizeBits);
+                            int i_409_ = (i_407_ * (var_s.tileSize - i_404_) + i_408_ * i_404_ >> var_s.tileSizeBits);
                             vertexY[i_399_] = vertexY[i_399_] + ((i_409_ - i_370_) * (i_367_ - i_400_) / i_367_);
                         } else vertexY[i_399_] = vertexY[i_399_];
                     }
@@ -1620,12 +1620,12 @@ final class DisplayModeManagerContainer164
                             int i_413_ = vertexZ[i_410_] + i_371_;
                             int i_414_ = i_412_ & i_398_;
                             int i_415_ = i_413_ & i_398_;
-                            int i_416_ = i_412_ >> var_s.anInt4588;
-                            int i_417_ = i_413_ >> var_s.anInt4588;
-                            if (i_416_ >= 0 && i_416_ < var_s.anInt4587 - 1 && i_417_ >= 0 && i_417_ < var_s.anInt4590 - 1) {
-                                int i_418_ = (((is[i_416_][i_417_] * (var_s.anInt4592 - i_414_)) + is[i_416_ + 1][i_417_] * i_414_) >> var_s.anInt4588);
-                                int i_419_ = (((is[i_416_][i_417_ + 1] * (var_s.anInt4592 - i_414_)) + is[i_416_ + 1][i_417_ + 1] * i_414_) >> var_s.anInt4588);
-                                int i_420_ = (i_418_ * (var_s.anInt4592 - i_415_) + i_419_ * i_415_ >> var_s.anInt4588);
+                            int i_416_ = i_412_ >> var_s.tileSizeBits;
+                            int i_417_ = i_413_ >> var_s.tileSizeBits;
+                            if (i_416_ >= 0 && i_416_ < var_s.tileWidth - 1 && i_417_ >= 0 && i_417_ < var_s.tileLength - 1) {
+                                int i_418_ = (((is[i_416_][i_417_] * (var_s.tileSize - i_414_)) + is[i_416_ + 1][i_417_] * i_414_) >> var_s.tileSizeBits);
+                                int i_419_ = (((is[i_416_][i_417_ + 1] * (var_s.tileSize - i_414_)) + is[i_416_ + 1][i_417_ + 1] * i_414_) >> var_s.tileSizeBits);
+                                int i_420_ = (i_418_ * (var_s.tileSize - i_415_) + i_419_ * i_415_ >> var_s.tileSizeBits);
                                 vertexY[i_410_] = (vertexY[i_410_] + ((i_420_ - i_370_) * (i_367_ - i_411_) / i_367_));
                             }
                         } else vertexY[i_410_] = vertexY[i_410_];
@@ -1635,21 +1635,21 @@ final class DisplayModeManagerContainer164
                     int i_422_ = (i_367_ >> 8 & 0xff) * 4;
                     int i_423_ = (i_367_ >> 16 & 0xff) << 6;
                     int i_424_ = (i_367_ >> 24 & 0xff) << 6;
-                    if (i_369_ - (i_421_ >> 1) < 0 || (i_369_ + (i_421_ >> 1) + var_s.anInt4592 >= var_s.anInt4587 << var_s.anInt4588) || i_371_ - (i_422_ >> 1) < 0 || (i_371_ + (i_422_ >> 1) + var_s.anInt4592 >= var_s.anInt4590 << var_s.anInt4588)) return;
+                    if (i_369_ - (i_421_ >> 1) < 0 || (i_369_ + (i_421_ >> 1) + var_s.tileSize >= var_s.tileWidth << var_s.tileSizeBits) || i_371_ - (i_422_ >> 1) < 0 || (i_371_ + (i_422_ >> 1) + var_s.tileSize >= var_s.tileLength << var_s.tileSizeBits)) return;
                     this.method626(i_421_, 10947, i_424_, i_369_, i_422_, i_370_, i_423_, var_s, i_371_);
                 } else if (i == 4) {
-                    int i_425_ = var_s_368_.anInt4592 - 1;
+                    int i_425_ = var_s_368_.tileSize - 1;
                     int i_426_ = aShort5365 - aShort5329;
                     for (int i_427_ = 0; i_427_ < anInt5387; i_427_++) {
                         int i_428_ = vertexX[i_427_] + i_369_;
                         int i_429_ = vertexZ[i_427_] + i_371_;
                         int i_430_ = i_428_ & i_425_;
                         int i_431_ = i_429_ & i_425_;
-                        int i_432_ = i_428_ >> var_s_368_.anInt4588;
-                        int i_433_ = i_429_ >> var_s_368_.anInt4588;
-                        int i_434_ = (((is_376_[i_432_][i_433_] * (var_s_368_.anInt4592 - i_430_)) + is_376_[i_432_ + 1][i_433_] * i_430_) >> var_s_368_.anInt4588);
-                        int i_435_ = (((is_376_[i_432_][i_433_ + 1] * (var_s_368_.anInt4592 - i_430_)) + is_376_[i_432_ + 1][i_433_ + 1] * i_430_) >> var_s_368_.anInt4588);
-                        int i_436_ = (i_434_ * (var_s_368_.anInt4592 - i_431_) + i_435_ * i_431_ >> var_s_368_.anInt4588);
+                        int i_432_ = i_428_ >> var_s_368_.tileSizeBits;
+                        int i_433_ = i_429_ >> var_s_368_.tileSizeBits;
+                        int i_434_ = (((is_376_[i_432_][i_433_] * (var_s_368_.tileSize - i_430_)) + is_376_[i_432_ + 1][i_433_] * i_430_) >> var_s_368_.tileSizeBits);
+                        int i_435_ = (((is_376_[i_432_][i_433_ + 1] * (var_s_368_.tileSize - i_430_)) + is_376_[i_432_ + 1][i_433_ + 1] * i_430_) >> var_s_368_.tileSizeBits);
+                        int i_436_ = (i_434_ * (var_s_368_.tileSize - i_431_) + i_435_ * i_431_ >> var_s_368_.tileSizeBits);
                         vertexY[i_427_] = (vertexY[i_427_] + (i_436_ - i_370_) + i_426_);
                     }
                     for (int i_437_ = anInt5387; i_437_ < anInt5340; i_437_++) {
@@ -1657,31 +1657,31 @@ final class DisplayModeManagerContainer164
                         int i_439_ = vertexZ[i_437_] + i_371_;
                         int i_440_ = i_438_ & i_425_;
                         int i_441_ = i_439_ & i_425_;
-                        int i_442_ = i_438_ >> var_s_368_.anInt4588;
-                        int i_443_ = i_439_ >> var_s_368_.anInt4588;
-                        if (i_442_ >= 0 && i_442_ < var_s_368_.anInt4587 - 1 && i_443_ >= 0 && i_443_ < var_s_368_.anInt4590 - 1) {
-                            int i_444_ = (((is_376_[i_442_][i_443_] * (var_s_368_.anInt4592 - i_440_)) + is_376_[i_442_ + 1][i_443_] * i_440_) >> var_s_368_.anInt4588);
-                            int i_445_ = (((is_376_[i_442_][i_443_ + 1] * (var_s_368_.anInt4592 - i_440_)) + is_376_[i_442_ + 1][i_443_ + 1] * i_440_) >> var_s_368_.anInt4588);
-                            int i_446_ = (i_444_ * (var_s_368_.anInt4592 - i_441_) + i_445_ * i_441_ >> var_s_368_.anInt4588);
+                        int i_442_ = i_438_ >> var_s_368_.tileSizeBits;
+                        int i_443_ = i_439_ >> var_s_368_.tileSizeBits;
+                        if (i_442_ >= 0 && i_442_ < var_s_368_.tileWidth - 1 && i_443_ >= 0 && i_443_ < var_s_368_.tileLength - 1) {
+                            int i_444_ = (((is_376_[i_442_][i_443_] * (var_s_368_.tileSize - i_440_)) + is_376_[i_442_ + 1][i_443_] * i_440_) >> var_s_368_.tileSizeBits);
+                            int i_445_ = (((is_376_[i_442_][i_443_ + 1] * (var_s_368_.tileSize - i_440_)) + is_376_[i_442_ + 1][i_443_ + 1] * i_440_) >> var_s_368_.tileSizeBits);
+                            int i_446_ = (i_444_ * (var_s_368_.tileSize - i_441_) + i_445_ * i_441_ >> var_s_368_.tileSizeBits);
                             vertexY[i_437_] = (vertexY[i_437_] + (i_446_ - i_370_) + i_426_);
                         }
                     }
                 } else if (i == 5) {
-                    int i_447_ = var_s_368_.anInt4592 - 1;
+                    int i_447_ = var_s_368_.tileSize - 1;
                     int i_448_ = aShort5365 - aShort5329;
                     for (int i_449_ = 0; i_449_ < anInt5387; i_449_++) {
                         int i_450_ = vertexX[i_449_] + i_369_;
                         int i_451_ = vertexZ[i_449_] + i_371_;
                         int i_452_ = i_450_ & i_447_;
                         int i_453_ = i_451_ & i_447_;
-                        int i_454_ = i_450_ >> var_s.anInt4588;
-                        int i_455_ = i_451_ >> var_s.anInt4588;
-                        int i_456_ = ((is[i_454_][i_455_] * (var_s.anInt4592 - i_452_) + is[i_454_ + 1][i_455_] * i_452_) >> var_s.anInt4588);
-                        int i_457_ = ((is[i_454_][i_455_ + 1] * (var_s.anInt4592 - i_452_) + is[i_454_ + 1][i_455_ + 1] * i_452_) >> var_s.anInt4588);
-                        int i_458_ = (i_456_ * (var_s.anInt4592 - i_453_) + i_457_ * i_453_ >> var_s.anInt4588);
-                        i_456_ = (((is_376_[i_454_][i_455_] * (var_s_368_.anInt4592 - i_452_)) + is_376_[i_454_ + 1][i_455_] * i_452_) >> var_s_368_.anInt4588);
-                        i_457_ = (((is_376_[i_454_][i_455_ + 1] * (var_s_368_.anInt4592 - i_452_)) + is_376_[i_454_ + 1][i_455_ + 1] * i_452_) >> var_s_368_.anInt4588);
-                        int i_459_ = (i_456_ * (var_s_368_.anInt4592 - i_453_) + i_457_ * i_453_ >> var_s_368_.anInt4588);
+                        int i_454_ = i_450_ >> var_s.tileSizeBits;
+                        int i_455_ = i_451_ >> var_s.tileSizeBits;
+                        int i_456_ = ((is[i_454_][i_455_] * (var_s.tileSize - i_452_) + is[i_454_ + 1][i_455_] * i_452_) >> var_s.tileSizeBits);
+                        int i_457_ = ((is[i_454_][i_455_ + 1] * (var_s.tileSize - i_452_) + is[i_454_ + 1][i_455_ + 1] * i_452_) >> var_s.tileSizeBits);
+                        int i_458_ = (i_456_ * (var_s.tileSize - i_453_) + i_457_ * i_453_ >> var_s.tileSizeBits);
+                        i_456_ = (((is_376_[i_454_][i_455_] * (var_s_368_.tileSize - i_452_)) + is_376_[i_454_ + 1][i_455_] * i_452_) >> var_s_368_.tileSizeBits);
+                        i_457_ = (((is_376_[i_454_][i_455_ + 1] * (var_s_368_.tileSize - i_452_)) + is_376_[i_454_ + 1][i_455_ + 1] * i_452_) >> var_s_368_.tileSizeBits);
+                        int i_459_ = (i_456_ * (var_s_368_.tileSize - i_453_) + i_457_ * i_453_ >> var_s_368_.tileSizeBits);
                         int i_460_ = i_458_ - i_459_ - i_367_;
                         vertexY[i_449_] = ((vertexY[i_449_] << 8) / i_448_ * i_460_ >> 8) - (i_370_ - i_458_);
                     }
@@ -1690,15 +1690,15 @@ final class DisplayModeManagerContainer164
                         int i_463_ = vertexZ[i_461_] + i_371_;
                         int i_464_ = i_462_ & i_447_;
                         int i_465_ = i_463_ & i_447_;
-                        int i_466_ = i_462_ >> var_s.anInt4588;
-                        int i_467_ = i_463_ >> var_s.anInt4588;
-                        if (i_466_ >= 0 && i_466_ < var_s.anInt4587 - 1 && i_466_ < var_s_368_.anInt4587 - 1 && i_467_ >= 0 && i_467_ < var_s.anInt4590 - 1 && i_467_ < var_s_368_.anInt4590 - 1) {
-                            int i_468_ = ((is[i_466_][i_467_] * (var_s.anInt4592 - i_464_) + is[i_466_ + 1][i_467_] * i_464_) >> var_s.anInt4588);
-                            int i_469_ = (((is[i_466_][i_467_ + 1] * (var_s.anInt4592 - i_464_)) + is[i_466_ + 1][i_467_ + 1] * i_464_) >> var_s.anInt4588);
-                            int i_470_ = (i_468_ * (var_s.anInt4592 - i_465_) + i_469_ * i_465_ >> var_s.anInt4588);
-                            i_468_ = (((is_376_[i_466_][i_467_] * (var_s_368_.anInt4592 - i_464_)) + is_376_[i_466_ + 1][i_467_] * i_464_) >> var_s_368_.anInt4588);
-                            i_469_ = (((is_376_[i_466_][i_467_ + 1] * (var_s_368_.anInt4592 - i_464_)) + is_376_[i_466_ + 1][i_467_ + 1] * i_464_) >> var_s_368_.anInt4588);
-                            int i_471_ = (i_468_ * (var_s_368_.anInt4592 - i_465_) + i_469_ * i_465_ >> var_s_368_.anInt4588);
+                        int i_466_ = i_462_ >> var_s.tileSizeBits;
+                        int i_467_ = i_463_ >> var_s.tileSizeBits;
+                        if (i_466_ >= 0 && i_466_ < var_s.tileWidth - 1 && i_466_ < var_s_368_.tileWidth - 1 && i_467_ >= 0 && i_467_ < var_s.tileLength - 1 && i_467_ < var_s_368_.tileLength - 1) {
+                            int i_468_ = ((is[i_466_][i_467_] * (var_s.tileSize - i_464_) + is[i_466_ + 1][i_467_] * i_464_) >> var_s.tileSizeBits);
+                            int i_469_ = (((is[i_466_][i_467_ + 1] * (var_s.tileSize - i_464_)) + is[i_466_ + 1][i_467_ + 1] * i_464_) >> var_s.tileSizeBits);
+                            int i_470_ = (i_468_ * (var_s.tileSize - i_465_) + i_469_ * i_465_ >> var_s.tileSizeBits);
+                            i_468_ = (((is_376_[i_466_][i_467_] * (var_s_368_.tileSize - i_464_)) + is_376_[i_466_ + 1][i_467_] * i_464_) >> var_s_368_.tileSizeBits);
+                            i_469_ = (((is_376_[i_466_][i_467_ + 1] * (var_s_368_.tileSize - i_464_)) + is_376_[i_466_ + 1][i_467_ + 1] * i_464_) >> var_s_368_.tileSizeBits);
+                            int i_471_ = (i_468_ * (var_s_368_.tileSize - i_465_) + i_469_ * i_465_ >> var_s_368_.tileSizeBits);
                             int i_472_ = i_470_ - i_471_ - i_367_;
                             vertexY[i_461_] = (((vertexY[i_461_] << 8) / i_448_ * i_472_) >> 8) - (i_370_ - i_470_);
                         }

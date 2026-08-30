@@ -19,14 +19,14 @@ final class Component266
     final int method1776(int i) {
         if (i != -32350) anInt5980 = 42;
         anInt5978++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     final void method1716(boolean bool) {
-        if (this.aClass348_Sub51_3136.method3422(674) == WorldNameText.STELLARDAWN) this.anInt3138 = 2;
+        if (this.preferences.method3422(674) == WorldNameText.STELLARDAWN) this.preferenceValue = 2;
         if (bool == false) {
             anInt5974++;
-            if (this.anInt3138 < 0 || this.anInt3138 > 2) this.anInt3138 = method1710(20014);
+            if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
         }
     }
 
@@ -55,7 +55,7 @@ final class Component266
 
     final void method1712(int i, int i_1_) {
         anInt5977++;
-        this.anInt3138 = i_1_;
+        this.preferenceValue = i_1_;
         int i_2_ = -54 / ((82 - i) / 35);
     }
 

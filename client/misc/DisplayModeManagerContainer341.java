@@ -44,20 +44,20 @@ final class DisplayModeManagerContainer341
     final void method1716(boolean bool) {
         if (bool != false) method1783(115, -122, -59, 41, -49, 92);
         anInt5999++;
-        if (this.aClass348_Sub51_3136.method3428((byte) -84).method1458(-23688) < 96) this.anInt3138 = 0;
-        if (this.anInt3138 < 0 || this.anInt3138 > 2) this.anInt3138 = method1710(20014);
+        if (this.preferences.method3428((byte) -84).method1458(-23688) < 96) this.preferenceValue = 0;
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
     }
 
     final int method1714(int i, int i_1_) {
         anInt6005++;
         if (i != 3) method1784(99);
-        if (this.aClass348_Sub51_3136.method3428((byte) -85).method1458(-23688) < 96) return 3;
+        if (this.preferences.method3428((byte) -85).method1458(-23688) < 96) return 3;
         return 1;
     }
 
     DisplayModeManagerContainer341(int i, NodeSub51 class348_sub51) {
         super(i, class348_sub51);
-        Component380.method1114(this.anInt3138, -122);
+        Component380.method1114(this.preferenceValue, -122);
     }
 
     static final void method1783(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
@@ -119,27 +119,27 @@ final class DisplayModeManagerContainer341
 
     final void method1712(int i, int i_20_) {
         anInt6003++;
-        this.anInt3138 = i_20_;
+        this.preferenceValue = i_20_;
         int i_21_ = 33 % ((i - 82) / 35);
-        Component380.method1114(this.anInt3138, -122);
+        Component380.method1114(this.preferenceValue, -122);
     }
 
     final int method1710(int i) {
         anInt5996++;
         if (i != 20014) method1782(-76, -103);
-        if (this.aClass348_Sub51_3136.method3428((byte) -105).method1458(-23688) < 96) return 0;
+        if (this.preferences.method3428((byte) -105).method1458(-23688) < 96) return 0;
         return 2;
     }
 
     DisplayModeManagerContainer341(NodeSub51 class348_sub51) {
         super(class348_sub51);
-        Component380.method1114(this.anInt3138, -120);
+        Component380.method1114(this.preferenceValue, -120);
     }
 
     final int method1784(int i) {
         anInt6000++;
         if (i != -32350) return -82;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     public static void method1785(int i) {
@@ -150,7 +150,7 @@ final class DisplayModeManagerContainer341
     final boolean method1786(int i) {
         if (i < 85) method1784(-69);
         anInt6001++;
-        return this.aClass348_Sub51_3136.method3428((byte) -104).method1458(-23688) >= 96;
+        return this.preferences.method3428((byte) -104).method1458(-23688) >= 96;
     }
 
     static final void method1787(int i, int i_22_) {

@@ -45,6 +45,8 @@ val prepareClientSources by tasks.registering(Sync::class) {
         // Real java.awt MouseWheelEvent ≠ voidawt — desktop-only poller.
         exclude("**/DesktopGamepad.java")
         exclude("**/DesktopAffiliationDisclaimer.java")
+        // Desktop-only deob NDJSON logger (lambdas break RoboVM; keep off mobile).
+        exclude("**/DeobProbe.java")
         eachFile {
             path = name
         }

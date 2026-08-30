@@ -94,7 +94,7 @@ final class Component188
     final void method1716(boolean bool) {
         if (bool != false) method1847(null, 64);
         anInt6142++;
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
     }
 
     final int method1710(int i) {
@@ -106,7 +106,7 @@ final class Component188
     final int method1845(int i) {
         anInt6141++;
         if (i != -32350) return -127;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     static final boolean method1846(int i, int i_18_, int i_19_) {
@@ -128,6 +128,6 @@ final class Component188
     final void method1712(int i, int i_22_) {
         int i_23_ = -89 / ((82 - i) / 35);
         anInt6137++;
-        this.anInt3138 = i_22_;
+        this.preferenceValue = i_22_;
     }
 }

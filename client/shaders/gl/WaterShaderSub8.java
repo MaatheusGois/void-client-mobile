@@ -60,12 +60,12 @@ final class WaterShaderSub8
                 for (int i_13_ = 0; i_11_ != 0 && ((npc.aClass182Array10308).length > i_13_); i_13_++) {
                     if ((0x1 & i_11_) != 0) {
                         if (i_10_ != -1) {
-                            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_10_, i + 7394);
+                            DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_10_, i + 7394);
                             int i_14_ = class17.anInt248;
                             Component280 class182 = (npc.aClass182Array10308[i_13_]);
                             if (class182 != null) {
                                 if (i_10_ != class182.anInt2454) {
-                                    if (RunescapeInfo.aClass87_191.method835(class182.anInt2454, 7).anInt239 <= class17.anInt239) class182 = npc.aClass182Array10308[i_13_] = null;
+                                    if (RunescapeInfo.aClass87_191.getSequence(class182.anInt2454, 7).anInt239 <= class17.anInt239) class182 = npc.aClass182Array10308[i_13_] = null;
                                 } else if (i_14_ == 0) class182 = npc.aClass182Array10308[i_13_] = null;
                                 else if (i_14_ == 1) {
                                     class182.anInt2448 = i_12_;
@@ -102,10 +102,10 @@ final class WaterShaderSub8
         if (i != 87) method3549(-29, (byte) -5);
         anInt7364++;
         this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 120, Component385.aClass229_2207);
-        this.aHa_Sub3_4479.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.method3910((byte) -26, 1);
-        this.aHa_Sub3_4479.method3850((byte) 86, null);
+        this.aHa_Sub3_4479.setActiveTexture((byte) 86, null);
         this.aHa_Sub3_4479.method3897(0, -4382);
         this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
     }
@@ -132,16 +132,16 @@ final class WaterShaderSub8
         if (i != 10756) method3527(-26, null, 111);
         if ((0x80 & i_17_) == 0) {
             if ((0x1 & i_18_) != 1) {
-                if (aClass269_7353.aBoolean3458) this.aHa_Sub3_4479.method3850((byte) 108, aClass269_7353.anInterface18_Impl1_3452);
-                else this.aHa_Sub3_4479.method3850((byte) 126, (aClass269_7353.anInterface18_Impl3Array3459[0]));
+                if (aClass269_7353.aBoolean3458) this.aHa_Sub3_4479.setActiveTexture((byte) 108, aClass269_7353.anInterface18_Impl1_3452);
+                else this.aHa_Sub3_4479.setActiveTexture((byte) 126, (aClass269_7353.anInterface18_Impl3Array3459[0]));
             } else if (aClass269_7353.aBoolean3458) {
                 aFloat7350 = (float) ((this.aHa_Sub3_4479.anInt8146) % 4000) / 4000.0F;
-                this.aHa_Sub3_4479.method3850((byte) -112, aClass269_7353.anInterface18_Impl1_3452);
+                this.aHa_Sub3_4479.setActiveTexture((byte) -112, aClass269_7353.anInterface18_Impl1_3452);
             } else {
                 int i_19_ = (16 * (this.aHa_Sub3_4479.anInt8146 % 4000) / 4000);
-                this.aHa_Sub3_4479.method3850((byte) -114, (aClass269_7353.anInterface18_Impl3Array3459[i_19_]));
+                this.aHa_Sub3_4479.setActiveTexture((byte) -114, (aClass269_7353.anInterface18_Impl3Array3459[i_19_]));
             }
-        } else this.aHa_Sub3_4479.method3850((byte) 85, null);
+        } else this.aHa_Sub3_4479.setActiveTexture((byte) 85, null);
         this.aHa_Sub3_4479.method3897(0, -4382);
     }
 
@@ -194,7 +194,7 @@ final class WaterShaderSub8
     }
 
     final void method3527(int i, Interface18 interface18, int i_22_) {
-        this.aHa_Sub3_4479.method3850((byte) 103, interface18);
+        this.aHa_Sub3_4479.setActiveTexture((byte) 103, interface18);
         anInt7358++;
         if (i_22_ != -16776) method3520((byte) -127);
     }

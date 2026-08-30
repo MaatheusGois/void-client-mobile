@@ -36,7 +36,7 @@ final class Component19
         try {
             anInt8612 = i;
             anInt8604 = i_0_;
-            this.aClass377_5082.method3850((byte) 79, this);
+            this.aClass377_5082.setActiveTexture((byte) 79, this);
             if (bool && i_2_ == 0 && i_1_ == 0) this.method233(i, i_0_, is, this.anInt5093, 255);
             else {
                 OpenGL.glPixelStorei(3314, i_2_);
@@ -82,7 +82,7 @@ final class Component19
         try {
             anInt8612 = i;
             anInt8604 = i_6_;
-            this.aClass377_5082.method3850((byte) -102, this);
+            this.aClass377_5082.setActiveTexture((byte) -102, this);
             OpenGL.glPixelStorei(3317, 1);
             if (!bool || i_8_ != 0 || i_7_ != 0) {
                 OpenGL.glPixelStorei(3314, i_8_);
@@ -105,7 +105,7 @@ final class Component19
         try {
             int i_15_ = 108 / ((-45 - i_9_) / 49);
             anInt8614++;
-            this.aClass377_5082.method3850((byte) -106, this);
+            this.aClass377_5082.setActiveTexture((byte) -106, this);
             OpenGL.glPixelStorei(3314, i);
             OpenGL.glTexSubImage2Df(this.anInt5093, 0, i_12_, i_10_, i_13_, i_14_, ParametricDefinition.method3055(106, class304), 5121, fs, i_11_);
             OpenGL.glPixelStorei(3314, 0);
@@ -191,7 +191,7 @@ final class Component19
     public final void method70(int i, int i_27_, byte i_28_, int i_29_, int i_30_, int i_31_, int i_32_, byte[] is, DisplayModeManagerContainer42 class304) {
         try {
             anInt8608++;
-            this.aClass377_5082.method3850((byte) -24, this);
+            this.aClass377_5082.setActiveTexture((byte) -24, this);
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glPixelStorei(3314, i_29_);
             OpenGL.glTexSubImage2Dub(this.anInt5093, 0, i_32_, i, i_31_, i_30_, ParametricDefinition.method3055(103, class304), 5121, is, i_27_);
@@ -206,7 +206,7 @@ final class Component19
     public final void method65(int i, int[] is, int i_33_, int i_34_, int i_35_, byte i_36_, int i_37_) {
         anInt8613++;
         int[] is_38_ = new int[anInt8612 * anInt8604];
-        this.aClass377_5082.method3850((byte) -32, this);
+        this.aClass377_5082.setActiveTexture((byte) -32, this);
         OpenGL.glGetTexImagei(this.anInt5093, 0, 32993, 5121, is_38_, 0);
         if (i_36_ == 112) {
             for (int i_39_ = 0; i_35_ > i_39_; i_39_++)
@@ -236,7 +236,7 @@ final class Component19
     }
 
     public final void method68(int i, int i_41_, int[] is, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_) {
-        this.aClass377_5082.method3850((byte) -116, this);
+        this.aClass377_5082.setActiveTexture((byte) -116, this);
         if (i_41_ != 22809) aString8605 = null;
         anInt8616++;
         OpenGL.glPixelStorei(3314, i);
@@ -249,7 +249,7 @@ final class Component19
         try {
             anInt8612 = i;
             anInt8604 = i_47_;
-            this.aClass377_5082.method3850((byte) 110, this);
+            this.aClass377_5082.setActiveTexture((byte) 110, this);
             OpenGL.glTexImage2Dub(this.anInt5093, 0, this.method228(113), i, i_47_, 0, ParametricDefinition.method3055(113, this.aClass304_5084), Component387.method1128(-112, this.aClass68_5088), null, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bm.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class304 != null ? "{...}" : "null") + ',' + (class68 != null ? "{...}" : "null") + ',' + i + ',' + i_47_ + ')'));
@@ -257,7 +257,7 @@ final class Component19
     }
 
     public final void method66(boolean bool, boolean bool_48_, int i) {
-        this.aClass377_5082.method3850((byte) -29, this);
+        this.aClass377_5082.setActiveTexture((byte) -29, this);
         anInt8615++;
         OpenGL.glTexParameteri(this.anInt5093, 10242, !bool ? 33071 : 10497);
         OpenGL.glTexParameteri(this.anInt5093, 10243, !bool_48_ ? 33071 : 10497);
@@ -269,7 +269,7 @@ final class Component19
         try {
             anInt8612 = i;
             anInt8604 = i_49_;
-            this.aClass377_5082.method3850((byte) -67, this);
+            this.aClass377_5082.setActiveTexture((byte) -67, this);
             if (bool || i_51_ != 0 || i_50_ != 0) {
                 OpenGL.glPixelStorei(3314, i_51_);
                 OpenGL.glTexImage2Df(this.anInt5093, 0, this.method228(111), i, i_49_, 0, (ParametricDefinition.method3055(106, this.aClass304_5084)), 5126, fs, 4 * i_50_);

@@ -30,7 +30,7 @@ final class HashNodeSub4
                         if (class348_sub41 != null) DisplayModeManagerContainer216.method769(class348_sub41.anInt7050, (byte) 116);
                     }
                     if (class46.type == 6 && class46.anInt699 != -1) {
-                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(class46.anInt699, 7);
+                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(class46.anInt699, 7);
                         if (class17 != null) {
                             class46.anInt841 += NodeSub51.anInt7267;
                             int i_2_ = class46.anInt795;

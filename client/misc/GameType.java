@@ -301,7 +301,7 @@ final class GameType {
             anInt2983++;
             do {
                 if ((class318_sub1_sub3_sub3.anInt10268) != -1) {
-                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835(class318_sub1_sub3_sub3.anInt10268, 7));
+                    DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence(class318_sub1_sub3_sub3.anInt10268, 7));
                     if (class17 == null || class17.anIntArray237 == null) {
                         class318_sub1_sub3_sub3.aBoolean10213 = false;
                         class318_sub1_sub3_sub3.anInt10268 = -1;
@@ -322,7 +322,7 @@ final class GameType {
                                     class318_sub1_sub3_sub3.aBoolean10213 = false;
                                     break;
                                 }
-                                class17 = (RunescapeInfo.aClass87_191.method835(class318_sub1_sub3_sub3.anInt10268, 7));
+                                class17 = (RunescapeInfo.aClass87_191.getSequence(class318_sub1_sub3_sub3.anInt10268, 7));
                             }
                             if (!class318_sub1_sub3_sub3.aBoolean10309) DisplayModeManagerContainer260.method2178(class318_sub1_sub3_sub3, (class318_sub1_sub3_sub3.anInt10245), class17, -23);
                         }
@@ -339,7 +339,7 @@ final class GameType {
                     Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 90, class318_sub1_sub3_sub3.anInt10269));
                     int i_70_ = class368.anInt4503;
                     if (i_70_ != -1) {
-                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_70_, 7);
+                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_70_, 7);
                         if (class368.aBoolean4487) {
                             if (class17.anInt262 == 3) {
                                 if (class318_sub1_sub3_sub3.anInt10322 > 0 && (class318_sub1_sub3_sub3.anInt10239 <= OpenGlShader.clientCycle) && (OpenGlShader.clientCycle > (class318_sub1_sub3_sub3.anInt10300))) {
@@ -389,7 +389,7 @@ final class GameType {
                     Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 93, class318_sub1_sub3_sub3.anInt10291));
                     int i_71_ = class368.anInt4503;
                     if (i_71_ != -1) {
-                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835(i_71_, 7);
+                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence(i_71_, 7);
                         if (class368.aBoolean4487) {
                             if (class17.anInt262 != 3) {
                                 if (class17.anInt262 == 1 && class318_sub1_sub3_sub3.anInt10322 > 0 && (OpenGlShader.clientCycle >= (class318_sub1_sub3_sub3.anInt10239)) && (class318_sub1_sub3_sub3.anInt10300 < OpenGlShader.clientCycle)) {
@@ -437,7 +437,7 @@ final class GameType {
                 }
             } while (false);
             if ((class318_sub1_sub3_sub3.anInt10286 != -1) && (class318_sub1_sub3_sub3.anInt10218) <= 1) {
-                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835((class318_sub1_sub3_sub3.anInt10286), 7));
+                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence((class318_sub1_sub3_sub3.anInt10286), 7));
                 if (class17.anInt262 != 3) {
                     if (class17.anInt262 == 1 && class318_sub1_sub3_sub3.anInt10322 > 0 && (class318_sub1_sub3_sub3.anInt10239) <= OpenGlShader.clientCycle && (class318_sub1_sub3_sub3.anInt10300) < OpenGlShader.clientCycle) class318_sub1_sub3_sub3.anInt10218 = 2;
                 } else if ((class318_sub1_sub3_sub3.anInt10322) > 0 && (class318_sub1_sub3_sub3.anInt10239 <= OpenGlShader.clientCycle) && (OpenGlShader.clientCycle > class318_sub1_sub3_sub3.anInt10300)) {
@@ -446,7 +446,7 @@ final class GameType {
                 }
             }
             if ((class318_sub1_sub3_sub3.anInt10286 != -1) && (class318_sub1_sub3_sub3.anInt10218) == 0) {
-                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.method835((class318_sub1_sub3_sub3.anInt10286), 7));
+                DisplayModeManagerContainer167 class17 = (RunescapeInfo.aClass87_191.getSequence((class318_sub1_sub3_sub3.anInt10286), 7));
                 if (class17 == null || class17.anIntArray237 == null) {
                     class318_sub1_sub3_sub3.anInt10286 = -1;
                     class318_sub1_sub3_sub3.anIntArray10236 = null;
@@ -483,7 +483,7 @@ final class GameType {
                 if (class182 != null) {
                     if (class182.anInt2448 > 0) class182.anInt2448--;
                     else {
-                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.method835((class182.anInt2454), 7);
+                        DisplayModeManagerContainer167 class17 = RunescapeInfo.aClass87_191.getSequence((class182.anInt2454), 7);
                         if (class17 == null || class17.anIntArray237 == null) class318_sub1_sub3_sub3.aClass182Array10308[i_73_] = null;
                         else {
                             class182.anInt2456++;

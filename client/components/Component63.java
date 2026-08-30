@@ -177,7 +177,7 @@ final class Component63
         try {
             anInt4491++;
             int i_33_ = i_24_;
-            DisplayModeManagerContainer167 class17 = (this.anInt4503 != -1 && i != -1 ? class87.method835(this.anInt4503, 7) : null);
+            DisplayModeManagerContainer167 class17 = (this.anInt4503 != -1 && i != -1 ? class87.getSequence(this.anInt4503, 7) : null);
             bool = bool & this.aByte4488 != 0;
             if (class17 != null) i_33_ |= class17.method263(i_32_, 110, i, false);
             if (bool) i_33_ = i_33_ | (this.aByte4488 != 3 ? 2 : 7);

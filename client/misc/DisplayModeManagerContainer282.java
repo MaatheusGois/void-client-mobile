@@ -1202,43 +1202,43 @@ final class DisplayModeManagerContainer282
                 int i_262_ = i_258_ - -aShort5586;
                 int i_263_ = i_260_ - -aShort5617;
                 int i_264_ = aShort5646 + i_260_;
-                if ((i != 1 && i != 2 && i != 3 && i != 5) || (i_261_ >= 0 && (var_s.anInt4587 > (var_s.anInt4592 + i_262_ >> var_s.anInt4588)) && i_263_ >= 0 && (var_s.anInt4590 > (i_264_ - -var_s.anInt4592 >> var_s.anInt4588)))) {
+                if ((i != 1 && i != 2 && i != 3 && i != 5) || (i_261_ >= 0 && (var_s.tileWidth > (var_s.tileSize + i_262_ >> var_s.tileSizeBits)) && i_263_ >= 0 && (var_s.tileLength > (i_264_ - -var_s.tileSize >> var_s.tileSizeBits)))) {
                     if (i != 4 && i != 5) {
-                        i_261_ >>= var_s.anInt4588;
-                        i_262_ = (i_262_ - -var_s.anInt4592 - 1 >> var_s.anInt4588);
-                        i_263_ >>= var_s.anInt4588;
-                        i_264_ = (i_264_ + var_s.anInt4592 + -1 >> var_s.anInt4588);
-                        if (i_259_ == var_s.method3982((byte) -86, i_263_, i_261_) && i_259_ == var_s.method3982((byte) -86, i_263_, i_262_) && i_259_ == var_s.method3982((byte) -86, i_264_, i_261_) && (var_s.method3982((byte) -86, i_264_, i_262_) == i_259_)) break;
-                    } else if (var_s_257_ == null || (i_261_ < 0 || (((i_262_ - -var_s_257_.anInt4592) >> var_s_257_.anInt4588) >= var_s_257_.anInt4587) || i_263_ < 0 || (var_s_257_.anInt4590 <= (var_s_257_.anInt4592 + i_264_ >> var_s_257_.anInt4588)))) break;
+                        i_261_ >>= var_s.tileSizeBits;
+                        i_262_ = (i_262_ - -var_s.tileSize - 1 >> var_s.tileSizeBits);
+                        i_263_ >>= var_s.tileSizeBits;
+                        i_264_ = (i_264_ + var_s.tileSize + -1 >> var_s.tileSizeBits);
+                        if (i_259_ == var_s.getHeight((byte) -86, i_263_, i_261_) && i_259_ == var_s.getHeight((byte) -86, i_263_, i_262_) && i_259_ == var_s.getHeight((byte) -86, i_264_, i_261_) && (var_s.getHeight((byte) -86, i_264_, i_262_) == i_259_)) break;
+                    } else if (var_s_257_ == null || (i_261_ < 0 || (((i_262_ - -var_s_257_.tileSize) >> var_s_257_.tileSizeBits) >= var_s_257_.tileWidth) || i_263_ < 0 || (var_s_257_.tileLength <= (var_s_257_.tileSize + i_264_ >> var_s_257_.tileSizeBits)))) break;
                     if (i == 1) {
                         for (int i_265_ = 0; i_265_ < anInt5557; i_265_++)
-                            vertexY[i_265_] = (-i_259_ + vertexY[i_265_] + var_s.method3986((vertexX[i_265_] + i_258_), i_260_ + (vertexZ[i_265_]), (byte) -93));
+                            vertexY[i_265_] = (-i_259_ + vertexY[i_265_] + var_s.getInterpolatedHeight((vertexX[i_265_] + i_258_), i_260_ + (vertexZ[i_265_]), (byte) -93));
                     } else if (i == 2) {
                         int i_279_ = aShort5591;
                         if (i_279_ == 0) break;
                         for (int i_280_ = 0; anInt5557 > i_280_; i_280_++) {
                             int i_281_ = ((vertexY[i_280_] << 16) / i_279_);
-                            if (i_281_ < i_256_) vertexY[i_280_] = (vertexY[i_280_] - -((-i_259_ + (var_s.method3986((vertexX[i_280_] - -i_258_), (i_260_ + vertexZ[i_280_]), (byte) -94))) * (-i_281_ + i_256_) / i_256_));
+                            if (i_281_ < i_256_) vertexY[i_280_] = (vertexY[i_280_] - -((-i_259_ + (var_s.getInterpolatedHeight((vertexX[i_280_] - -i_258_), (i_260_ + vertexZ[i_280_]), (byte) -94))) * (-i_281_ + i_256_) / i_256_));
                         }
                     } else if (i == 3) {
                         int i_266_ = (0xff & i_256_) * 4;
                         int i_267_ = 4 * ((0xff0e & i_256_) >> 8);
                         int i_268_ = 0x3fc0 & i_256_ >> 16 << 6;
                         int i_269_ = (0xff & i_256_ >> 24) << 6;
-                        if (i_258_ + -(i_266_ >> 1) < 0 || (((i_266_ >> 1) + (i_258_ - -var_s.anInt4592)) >= (var_s.anInt4587 << var_s.anInt4588)) || -(i_267_ >> 1) + i_260_ < 0 || ((var_s.anInt4590 << var_s.anInt4588) <= ((i_267_ >> 1) + i_260_ + var_s.anInt4592)))
+                        if (i_258_ + -(i_266_ >> 1) < 0 || (((i_266_ >> 1) + (i_258_ - -var_s.tileSize)) >= (var_s.tileWidth << var_s.tileSizeBits)) || -(i_267_ >> 1) + i_260_ < 0 || ((var_s.tileLength << var_s.tileSizeBits) <= ((i_267_ >> 1) + i_260_ + var_s.tileSize)))
                             break;
                         this.method626(i_266_, 10947, i_269_, i_258_, i_267_, i_259_, i_268_, var_s, i_260_);
                     } else if (i == 4) {
                         int i_277_ = aShort5629 - aShort5591;
                         for (int i_278_ = 0; anInt5557 > i_278_; i_278_++)
-                            vertexY[i_278_] = (vertexY[i_278_] - (-(var_s_257_.method3986(vertexX[i_278_] + i_258_, vertexZ[i_278_] + i_260_, (byte) 71)) - -i_259_ - i_277_));
+                            vertexY[i_278_] = (vertexY[i_278_] - (-(var_s_257_.getInterpolatedHeight(vertexX[i_278_] + i_258_, vertexZ[i_278_] + i_260_, (byte) 71)) - -i_259_ - i_277_));
                     } else if (i == 5) {
                         int i_270_ = -aShort5591 + aShort5629;
                         for (int i_271_ = 0; anInt5557 > i_271_; i_271_++) {
                             int i_272_ = vertexX[i_271_] + i_258_;
                             int i_273_ = vertexZ[i_271_] + i_260_;
-                            int i_274_ = var_s.method3986(i_272_, i_273_, (byte) -100);
-                            int i_275_ = var_s_257_.method3986(i_272_, i_273_, (byte) 93);
+                            int i_274_ = var_s.getInterpolatedHeight(i_272_, i_273_, (byte) -100);
+                            int i_275_ = var_s_257_.getInterpolatedHeight(i_272_, i_273_, (byte) 93);
                             int i_276_ = -i_256_ + i_274_ + -i_275_;
                             vertexY[i_271_] = i_274_ + (-i_259_ + (((vertexY[i_271_] << 8) / i_270_ * i_276_) >> 8));
                         }

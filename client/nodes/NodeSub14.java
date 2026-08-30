@@ -144,12 +144,12 @@ final class NodeSub14
                         }
                     }
                     if (Component121.aBoolean4542) {
-                        TeleportHandler class361 = NodeSub45.aClass361Array7108[i];
+                        CollisionMap class361 = NodeSub45.aClass361Array7108[i];
                         for (int i_32_ = 0; i_32_ < RuntimeException_Sub1.anInt4600; i_32_++) {
                             for (int i_33_ = 0; (RuntimeException_Sub1.anInt4600 > i_33_); i_33_++) {
                                 int i_34_ = i_16_ + i_32_;
                                 int i_35_ = i_33_ + i_17_;
-                                int i_36_ = (class361.anIntArrayArray4438[(-class361.anInt4453 + i_34_)][(-class361.anInt4441 + i_35_)]);
+                                int i_36_ = (class361.collisionFlags[(-class361.offsetX + i_34_)][(-class361.offsetY + i_35_)]);
                                 if ((0x40240000 & i_36_) != 0) var_ha.method3675(4, (byte) -125, i_32_ * 4 + i_18_, -4 + (RuntimeException_Sub1.anInt4600 + -i_33_) * 4 + i_19_, 4, -1713569622);
                                 else if ((0x800000 & i_36_) == 0) {
                                     if ((i_36_ & 0x2000000) != 0) var_ha.method3660(3 + (i_18_ - -(i_32_ * 4)), -1713569622, 4, (-4 + (4 * (-i_33_ + (RuntimeException_Sub1.anInt4600)) + i_19_)), true);
@@ -198,9 +198,9 @@ final class NodeSub14
                                             int i_44_ = i_37_;
                                             int i_45_ = i_38_;
                                             if (bool_43_) {
-                                                int[][] is_46_ = (NodeSub45.aClass361Array7108[i_39_].anIntArrayArray4438);
-                                                int i_47_ = (NodeSub45.aClass361Array7108[i_39_].anInt4453);
-                                                int i_48_ = (NodeSub45.aClass361Array7108[i_39_].anInt4441);
+                                                int[][] is_46_ = (NodeSub45.aClass361Array7108[i_39_].collisionFlags);
+                                                int i_47_ = (NodeSub45.aClass361Array7108[i_39_].offsetX);
+                                                int i_48_ = (NodeSub45.aClass361Array7108[i_39_].offsetY);
                                                 for (int i_49_ = 0; i_49_ < 10; i_49_++) {
                                                     int i_50_ = (int) (Math.random() * 4.0);
                                                     if ((i_50_ == 0) && (i_44_ > i_5_) && i_37_ + -3 < i_44_ && ((0x2c0108 & (is_46_[(-i_47_ + (i_44_ - 1))][(-i_48_ + i_45_)])) == 0)) i_44_--;

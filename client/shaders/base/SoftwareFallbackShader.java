@@ -19,7 +19,7 @@ final class SoftwareFallbackShader extends AbstractShader {
     static int anInt7389;
 
     final void method3527(int i, Interface18 interface18, int i_0_) {
-        this.aHa_Sub3_4479.method3850((byte) 79, interface18);
+        this.aHa_Sub3_4479.setActiveTexture((byte) 79, interface18);
         if (i_0_ != -16776) aBoolean7385 = false;
         anInt7381++;
         this.aHa_Sub3_4479.method3923(true, i);
@@ -44,7 +44,7 @@ final class SoftwareFallbackShader extends AbstractShader {
         if (i != 15192) aBoolean7385 = false;
         if (interface18_impl2 != null && bool) {
             this.aHa_Sub3_4479.method3897(1, i + -19574);
-            this.aHa_Sub3_4479.method3850((byte) 96, interface18_impl2);
+            this.aHa_Sub3_4479.setActiveTexture((byte) 96, interface18_impl2);
             this.aHa_Sub3_4479.method3871(DisplayModeManagerContainer1.aClass113_3314, i + -15192);
             this.aHa_Sub3_4479.method3897(1, -4382);
             this.aHa_Sub3_4479.method3874(ShaderCompilerSub3.aClass229_6519, 104, Component253.aClass229_3196);
@@ -70,10 +70,10 @@ final class SoftwareFallbackShader extends AbstractShader {
             this.aHa_Sub3_4479.method3897(1, -4382);
             this.aHa_Sub3_4479.method3871(Component324.aClass113_2047, i ^ 0x57);
             this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 103, (Component385.aClass229_2207));
-            this.aHa_Sub3_4479.method3849((byte) 47, 2, DefinitionSub39.aClass70_9485);
+            this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
             this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
             this.aHa_Sub3_4479.method3879(-8629);
-            this.aHa_Sub3_4479.method3850((byte) -111, null);
+            this.aHa_Sub3_4479.setActiveTexture((byte) -111, null);
             this.aHa_Sub3_4479.method3897(0, -4382);
             aBoolean7385 = false;
         } else this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);

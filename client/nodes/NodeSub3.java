@@ -195,7 +195,7 @@ final class NodeSub3
 
     final void method2742(int i, int i_38_, int i_39_, byte i_40_) {
         anInt6570++;
-        anIntArray6573[i_38_ * aS_Sub3_6566.anInt4587 - -i_39_] = Component224.bitwiseOr((anIntArray6573[(i_38_ * aS_Sub3_6566.anInt4587 - -i_39_)]), 1 << i);
+        anIntArray6573[i_38_ * aS_Sub3_6566.tileWidth - -i_39_] = Component224.bitwiseOr((anIntArray6573[(i_38_ * aS_Sub3_6566.tileWidth - -i_39_)]), 1 << i);
         if (i_40_ > -65) aFloat6586 = -1.0413289F;
         this.anInt6589++;
     }
@@ -220,7 +220,7 @@ final class NodeSub3
         aHa_Sub3_6590 = aS_Sub3_6566.aHa_Sub3_8322;
         this.anInt6575 = i_45_;
         this.anInt6567 = i;
-        anIntArray6573 = new int[(aS_Sub3_6566.anInt4590 * aS_Sub3_6566.anInt4587)];
+        anIntArray6573 = new int[(aS_Sub3_6566.tileLength * aS_Sub3_6566.tileWidth)];
         this.anInt6571 = i_44_;
     }
 }

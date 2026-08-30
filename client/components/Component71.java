@@ -30,7 +30,7 @@ final class Component71
     final boolean method1809(int i) {
         anInt6063++;
         if (i < 85) method1813(11, 68);
-        return !this.aClass348_Sub51_3136.method3425(-104);
+        return !this.preferences.method3425(-104);
     }
 
     static final void method1810(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
@@ -50,16 +50,16 @@ final class Component71
             int i_13_ = Component148.anInt3465 + i_12_;
             int i_14_ = i_2_ << Component149.anInt4459;
             int i_15_ = Component148.anInt3465 + i_14_;
-            int i_16_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, i_2_, i);
-            int i_17_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, 1 + i_2_, i - -1);
+            int i_16_ = NodeSub1Sub1.aSArray8801[i_4_].getHeight((byte) -86, i_2_, i);
+            int i_17_ = NodeSub1Sub1.aSArray8801[i_4_].getHeight((byte) -86, 1 + i_2_, i - -1);
             InterfaceRenderer.aClass338Array5060[ComponentSettings.anInt7101++] = new Component103(i_5_, i_4_, i_12_, i_13_, i_13_, i_12_, i_16_, i_17_, -i_1_ + i_17_, -i_1_ + i_16_, i_14_, i_15_, i_15_, i_14_);
         } else {
             int i_6_ = Component148.anInt3465 + (i << Component149.anInt4459);
             int i_7_ = -Component148.anInt3465 + i_6_;
             int i_8_ = i_2_ << Component149.anInt4459;
             int i_9_ = i_8_ + Component148.anInt3465;
-            int i_10_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, i_2_, i + 1);
-            int i_11_ = NodeSub1Sub1.aSArray8801[i_4_].method3982((byte) -86, 1 + i_2_, i);
+            int i_10_ = NodeSub1Sub1.aSArray8801[i_4_].getHeight((byte) -86, i_2_, i + 1);
+            int i_11_ = NodeSub1Sub1.aSArray8801[i_4_].getHeight((byte) -86, 1 + i_2_, i);
             InterfaceRenderer.aClass338Array5060[ComponentSettings.anInt7101++] = new Component103(i_5_, i_4_, i_6_, i_7_, i_7_, i_6_, i_10_, i_11_, -i_1_ + i_11_, i_10_ - i_1_, i_8_, i_9_, i_9_, i_8_);
         }
         if (i_3_ != -1) method1811(31, null, 115, null);
@@ -132,7 +132,7 @@ final class Component71
     }
 
     final void method1712(int i, int i_35_) {
-        this.anInt3138 = i_35_;
+        this.preferenceValue = i_35_;
         anInt6059++;
         int i_36_ = -103 % ((i - 82) / 35);
     }
@@ -140,7 +140,7 @@ final class Component71
     final int method1714(int i, int i_37_) {
         if (i != 3) return 91;
         anInt6064++;
-        if (this.aClass348_Sub51_3136.method3425(i ^ ~0x4b)) return 3;
+        if (this.preferences.method3425(i ^ ~0x4b)) return 3;
         return 1;
     }
 
@@ -149,10 +149,10 @@ final class Component71
     }
 
     final void method1716(boolean bool) {
-        if (this.aClass348_Sub51_3136.method3425(-112)) this.anInt3138 = 0;
+        if (this.preferences.method3425(-112)) this.preferenceValue = 0;
         anInt6057++;
         if (bool != false) aClass318_Sub1Array6066 = null;
-        if (this.anInt3138 != 1 && this.anInt3138 != 0) this.anInt3138 = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
     }
 
     Component71(int i, NodeSub51 class348_sub51) {
@@ -162,7 +162,7 @@ final class Component71
     final int method1812(int i) {
         if (i != -32350) anIntArray6062 = null;
         anInt6068++;
-        return this.anInt3138;
+        return this.preferenceValue;
     }
 
     static final boolean method1813(int i, int i_38_) {

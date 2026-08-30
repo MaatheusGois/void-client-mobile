@@ -315,7 +315,7 @@ final class DisplayModeManagerContainer104
         int i_46_ = class368.anInt4503;
         if (i_46_ == -1) this.aBoolean10345 = true;
         else {
-            aClass17_10332 = RunescapeInfo.aClass87_191.method835(i_46_, 7);
+            aClass17_10332 = RunescapeInfo.aClass87_191.getSequence(i_46_, 7);
             this.aBoolean10345 = false;
         }
         if (this.anInt10349 == i_35_) DisplayModeManagerContainer260.method2178(this, anInt10335, aClass17_10332, -99);

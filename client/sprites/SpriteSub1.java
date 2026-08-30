@@ -80,16 +80,16 @@ final class SpriteSub1
         return anInt8417;
     }
 
-    static final TeleportHandler method988(int i, int i_10_, int i_11_) {
+    static final CollisionMap method988(int i, int i_10_, int i_11_) {
         anInt8415++;
-        TeleportHandler class361 = new TeleportHandler();
-        class361.anInt4437 = 6 + i_11_;
-        class361.anInt4453 = -1;
-        class361.anInt4443 = 5 + (i - -1);
+        CollisionMap class361 = new CollisionMap();
+        class361.width = 6 + i_11_;
+        class361.offsetX = -1;
+        class361.length = 5 + (i - -1);
         if (i_10_ != 1) return null;
-        class361.anInt4441 = -1;
-        class361.anIntArrayArray4438 = (new int[class361.anInt4437]
-                [class361.anInt4443]);
+        class361.offsetY = -1;
+        class361.collisionFlags = (new int[class361.width]
+                [class361.length]);
         class361.method3500(700);
         return class361;
     }
@@ -100,10 +100,10 @@ final class SpriteSub1
         MatrixSub2 class101_sub2_20_ = aHa_Sub3_8407.method3820(false);
         anInterface18_Impl3_8403.method64(((aBoolean8410 || aBoolean8408 || ((0x1 & i_19_) == 0)) ? DisplayModeManagerContainer105.aClass209_4874 : DisplayModeManagerContainer5.aClass209_1212), -22095);
         aHa_Sub3_8407.method3864(-5);
-        aHa_Sub3_8407.method3850((byte) 78, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) 78, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(81, i_18_);
         aHa_Sub3_8407.method3923(true, i);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DefinitionSub39.aClass70_9485);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3885(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3894(-28186, i_17_);
         if (aBoolean8418) {
@@ -135,7 +135,7 @@ final class SpriteSub1
         aHa_Sub3_8407.method3915(0);
         aHa_Sub3_8407.method3933(-44);
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
         aHa_Sub3_8407.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
@@ -145,10 +145,10 @@ final class SpriteSub1
         MatrixSub2 class101_sub2_41_ = aHa_Sub3_8407.method3820(false);
         anInterface18_Impl3_8403.method64(DisplayModeManagerContainer105.aClass209_4874, -22095);
         aHa_Sub3_8407.method3864(-20);
-        aHa_Sub3_8407.method3850((byte) -46, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) -46, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(98, i_40_);
         aHa_Sub3_8407.method3923(true, i_38_);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DefinitionSub39.aClass70_9485);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3885(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3894(-28186, i_39_);
         boolean bool = aBoolean8391 && anInt8419 == 0 && anInt8397 == 0;
@@ -262,7 +262,7 @@ final class SpriteSub1
             }
         }
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
         aHa_Sub3_8407.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
@@ -274,7 +274,7 @@ final class SpriteSub1
         Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
         anInterface18_Impl3_8403.method64(((aBoolean8410 || aBoolean8408 || (0x1 & i) == 0) ? DisplayModeManagerContainer105.aClass209_4874 : DisplayModeManagerContainer5.aClass209_1212), -22095);
         aHa_Sub3_8407.method3864(101);
-        aHa_Sub3_8407.method3850((byte) -102, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) -102, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(86, 1);
         aHa_Sub3_8407.method3923(true, 1);
         if (aBoolean8418) {
@@ -289,9 +289,9 @@ final class SpriteSub1
         class101_sub2_73_.method932(1.0F, anInterface18_Impl3_8403.method71((byte) -87, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 75), (byte) -60);
         aHa_Sub3_8407.method3853(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.method3897(1, -4382);
-        aHa_Sub3_8407.method3850((byte) -31, interface18_impl3);
+        aHa_Sub3_8407.setActiveTexture((byte) -31, interface18_impl3);
         aHa_Sub3_8407.method3874(Component385.aClass229_2207, 127, ShaderCompilerSub3.aClass229_6519);
-        aHa_Sub3_8407.method3849((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
         MatrixSub2 class101_sub2_76_ = aHa_Sub3_8407.method3820(false);
         class101_sub2_76_.method898(class101_sub2);
         class101_sub2_76_.method891(-i_71_, -i_72_, 0);
@@ -300,9 +300,9 @@ final class SpriteSub1
         aHa_Sub3_8407.method3915(0);
         aHa_Sub3_8407.method3933(-109);
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         aHa_Sub3_8407.method3874(Component385.aClass229_2207, 118, Component385.aClass229_2207);
-        aHa_Sub3_8407.method3850((byte) 98, null);
+        aHa_Sub3_8407.setActiveTexture((byte) 98, null);
         aHa_Sub3_8407.method3897(0, -4382);
         aHa_Sub3_8407.method3879(-8629);
     }
@@ -353,10 +353,10 @@ final class SpriteSub1
         MatrixSub2 class101_sub2_101_ = aHa_Sub3_8407.method3820(false);
         anInterface18_Impl3_8403.method64(((aBoolean8410 || aBoolean8408 || ((i_100_ & 0x1) == 0)) ? DisplayModeManagerContainer105.aClass209_4874 : DisplayModeManagerContainer5.aClass209_1212), -22095);
         aHa_Sub3_8407.method3864(81);
-        aHa_Sub3_8407.method3850((byte) 65, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) 65, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(58, i_99_);
         aHa_Sub3_8407.method3923(true, i_97_);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DefinitionSub39.aClass70_9485);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3885(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3894(-28186, i_98_);
         class101_sub2_101_.method932(1.0F, anInterface18_Impl3_8403.method71((byte) -44, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 101), (byte) -30);
@@ -372,7 +372,7 @@ final class SpriteSub1
         aHa_Sub3_8407.method3915(0);
         aHa_Sub3_8407.method3933(-118);
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
         aHa_Sub3_8407.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
@@ -392,10 +392,10 @@ final class SpriteSub1
         i_102_ += anInt8419;
         anInterface18_Impl3_8403.method64(DisplayModeManagerContainer105.aClass209_4874, -22095);
         aHa_Sub3_8407.method3864(-82);
-        aHa_Sub3_8407.method3850((byte) -67, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) -67, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(96, i_105_);
         aHa_Sub3_8407.method3923(true, i_103_);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DefinitionSub39.aClass70_9485);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3885(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.method3894(-28186, i_104_);
         class101_sub2.method932(0.0F, (float) anInt8417, (float) anInt8411, (byte) -44);
@@ -405,7 +405,7 @@ final class SpriteSub1
         aHa_Sub3_8407.method3915(0);
         aHa_Sub3_8407.method3933(-41);
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
         aHa_Sub3_8407.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
@@ -432,7 +432,7 @@ final class SpriteSub1
         Interface18_Impl3 interface18_impl3 = var_aa_Sub2.anInterface18_Impl3_5196;
         anInterface18_Impl3_8403.method64(DisplayModeManagerContainer105.aClass209_4874, -22095);
         aHa_Sub3_8407.method3864(-81);
-        aHa_Sub3_8407.method3850((byte) -35, anInterface18_Impl3_8403);
+        aHa_Sub3_8407.setActiveTexture((byte) -35, anInterface18_Impl3_8403);
         aHa_Sub3_8407.method3817(110, 1);
         aHa_Sub3_8407.method3923(true, 1);
         MatrixSub2 class101_sub2 = aHa_Sub3_8407.method3934(-120);
@@ -443,18 +443,18 @@ final class SpriteSub1
         class101_sub2_116_.method932(1.0F, anInterface18_Impl3_8403.method71((byte) -102, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 106), (byte) -33);
         aHa_Sub3_8407.method3853(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.method3897(1, -4382);
-        aHa_Sub3_8407.method3850((byte) 101, interface18_impl3);
+        aHa_Sub3_8407.setActiveTexture((byte) 101, interface18_impl3);
         aHa_Sub3_8407.method3874(Component385.aClass229_2207, 110, ShaderCompilerSub3.aClass229_6519);
-        aHa_Sub3_8407.method3849((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
         MatrixSub2 class101_sub2_117_ = aHa_Sub3_8407.method3820(false);
         class101_sub2_117_.method932(1.0F, interface18_impl3.method71((byte) -108, (float) anInt8417), interface18_impl3.method67((float) anInt8411, 95), (byte) -81);
         class101_sub2_117_.method920(interface18_impl3.method71((byte) -27, (float) (i_113_ + -i_115_)), false, 0.0F, interface18_impl3.method67((float) (i - i_114_), 122));
         aHa_Sub3_8407.method3853(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.method3933(-81);
         aHa_Sub3_8407.method3879(-8629);
-        aHa_Sub3_8407.method3849((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
+        aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         aHa_Sub3_8407.method3874(Component385.aClass229_2207, 127, Component385.aClass229_2207);
-        aHa_Sub3_8407.method3850((byte) -84, null);
+        aHa_Sub3_8407.setActiveTexture((byte) -84, null);
         aHa_Sub3_8407.method3897(0, -4382);
         aHa_Sub3_8407.method3879(-8629);
     }
