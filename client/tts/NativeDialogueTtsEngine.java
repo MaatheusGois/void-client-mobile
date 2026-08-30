@@ -15,7 +15,7 @@ public final class NativeDialogueTtsEngine implements DialogueTtsEngine {
         } catch (ClassNotFoundException ignored) {
             // Desktop JVM has no mobile AwtHost.
         } catch (Throwable t) {
-            System.out.println("void-tts: mobile bridge unavailable: " + t.getMessage());
+            System.out.println("void-tts: mobile bridge unavailable: " + t);
         }
         try {
             String voice = gender == VoiceGender.FEMALE ? "Samantha" : "Alex";
