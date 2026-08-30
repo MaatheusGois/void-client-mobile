@@ -21,8 +21,10 @@ final class SceneEditor {
     void setMode(Mode mode) { this.mode = mode == null ? Mode.GAME : mode; }
 
     SceneObject add(int objectId, int x, int y, int z, int plane) {
-        final SceneObject object = new SceneObject(nextId++, objectId, x, y, z, plane);
+        final long id = nextId;
+        final SceneObject object = new SceneObject(id, objectId, x, y, z, plane);
         change(new Runnable() { public void run() { scene.add(object); }});
+        nextId = id + 1;
         return object;
     }
     void remove(final long id) {
@@ -42,7 +44,14 @@ final class SceneEditor {
         change(new Runnable() { public void run() { SceneObject o = required(id); o.scale = scale; o.validate(); }});
     }
     void undo() { if (!undo.isEmpty()) { redo.push(scene); scene = undo.pop(); dirty = true; } }
-    void redo() { if (!redo.isEmpty()) { undo.push(scene); scene = redo.pop(); dirty = true; } }
+    void redo() {
+        if (!redo.isEmpty()) {
+            undo.push(scene);
+            while (undo.size() > HISTORY_LIMIT) undo.removeLast();
+            scene = redo.pop();
+            dirty = true;
+        }
+    }
     void save(String name) throws IOException { store.save(name, scene); dirty = false; }
     void load(String name) throws IOException { scene = store.load(name); undo.clear(); redo.clear(); dirty = false; }
     void autosave() throws IOException { store.autosave(scene); }

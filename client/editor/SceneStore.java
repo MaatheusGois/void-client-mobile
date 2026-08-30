@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 
 /** Atomic JSON persistence for local editor scenes; it never touches the JS5 cache. */
 final class SceneStore {
-    private static final Pattern NUMBER = Pattern.compile("\"%s\"\\s*:\\s*(-?\\d+(?:\\.\\d+)?)");
-    private static final Pattern STRING = Pattern.compile("\"%s\"\\s*:\\s*\"((?:\\\\.|[^\"\\\\])*)\"");
+    private static final String NUMBER = "\"%s\"\\s*:\\s*(-?\\d+(?:\\.\\d+)?)";
+    private static final String STRING = "\"%s\"\\s*:\\s*\"((?:\\\\.|[^\"\\\\])*)\"";
     private final File directory;
 
     SceneStore() {
@@ -126,7 +126,7 @@ final class SceneStore {
     private static int integer(String s, String key) { return (int) decimal(s, key); }
     private static long longValue(String s, String key) { return (long) decimal(s, key); }
     private static double decimal(String s, String key) {
-        Matcher m = Pattern.compile(String.format(NUMBER.pattern(), key)).matcher(s);
+        Matcher m = Pattern.compile(String.format(NUMBER, key)).matcher(s);
         if (!m.find()) throw new IllegalArgumentException("missing " + key);
         return Double.parseDouble(m.group(1));
     }
@@ -139,9 +139,9 @@ final class SceneStore {
         return value;
     }
     private static String optionalString(String s, String key) {
-        Matcher m = Pattern.compile(String.format(STRING.pattern(), key)).matcher(s);
+        Matcher m = Pattern.compile(String.format(STRING, key)).matcher(s);
         return m.find() ? unescape(m.group(1)) : null;
     }
     private static String escape(String s) { return s.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n"); }
-    private static String unescape(String s) { return s.replace("\\n", "\n").replace("\\\"", "\"").replace("\\\\", "\\"); }
+    private static String unescape(String s) { return s.replace("\\\\", "\\").replace("\\\"", "\"").replace("\\n", "\n"); }
 }
