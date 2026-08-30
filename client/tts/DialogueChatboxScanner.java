@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** Content-based scanner for modal dialogue, intentionally independent of interface ids. */
+// DisplayModeManagerContainer57 is the deobfuscated client UI widget/node type.
 final class DialogueChatboxScanner {
     static void pulse() {
         List<DisplayModeManagerContainer57> labels = new ArrayList<DisplayModeManagerContainer57>();
