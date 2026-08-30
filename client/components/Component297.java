@@ -43,7 +43,7 @@ final class Component297
             DisplayModeManagerContainer254.method1263(true);
         }
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) != 2) {
-            Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 2);
+            Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 2);
             SoftwareFallbackShader.method3553(false, (byte) 119, 2);
         }
         DisplayModeManagerContainer389.method243(37);

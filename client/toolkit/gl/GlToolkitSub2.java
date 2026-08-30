@@ -540,7 +540,7 @@ final class GlToolkitSub2
             ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
             method3792(110);
-            method3771((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
+            bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
             method3753(i_24_, 1);
             method3729(7681, (byte) 97, 8448);
             method3762(34167, 768, (byte) -87, 0);
@@ -759,7 +759,7 @@ final class GlToolkitSub2
             } else method3767(-21974);
             aClass100_7707.method884(i_49_, bool, i_51_, i_50_, (byte) 12, bool_46_);
             if (!aClass100_7707.method885(i_48_, (byte) -124, class258_sub3)) {
-                method3771((byte) -86, class258_sub3);
+                bindTexture((byte) -86, class258_sub3);
                 method3761(0, i_48_);
             }
             aBoolean7859 = this.aBoolean7846;
@@ -825,7 +825,7 @@ final class GlToolkitSub2
                 f_64_ = ((float) i_58_ * (aClass258_Sub3_Sub1_7776.aFloat9937) / (float) (aClass258_Sub3_Sub1_7776.anInt8547));
             }
             method3792(58);
-            method3771((byte) -117, aClass258_Sub3_Sub1_7776);
+            bindTexture((byte) -117, aClass258_Sub3_Sub1_7776);
             method3753(i_63_, 1);
             OpenGL.glColor4ub((byte) (i_60_ >> 16), (byte) (i_60_ >> 8), (byte) i_60_, (byte) (i_60_ >> 24));
             method3808(i_61_, 120);
@@ -1664,7 +1664,7 @@ final class GlToolkitSub2
             method3728(false, 86);
             method3752(112, false);
             method3748(0, false);
-            method3771((byte) -91, null);
+            bindTexture((byte) -91, null);
             method3757(-2, -88);
             method3761(0, 1);
             method3753(0, 1);
@@ -1726,7 +1726,12 @@ final class GlToolkitSub2
         } while (false);
     }
 
-    final void method3771(byte i, AbstractGlTexture class258) {
+    /**
+     * Bind {@code class258} on the active texture unit ({@code anInt7876}), or
+     * disable the previous target when {@code null}. Wraps glEnable/glDisable/
+     * glBindTexture; skips work if already bound.
+     */
+    final void bindTexture(byte i, AbstractGlTexture class258) {
         try {
             anInt7673++;
             if (i > -74) A(38, null, 4, -3);
@@ -1940,7 +1945,7 @@ final class GlToolkitSub2
                 ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
                 GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
                 method3792(90);
-                method3771((byte) -122, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
+                bindTexture((byte) -122, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
                 method3753(i_190_, 1);
                 method3729(7681, (byte) -61, 8448);
                 method3762(34167, 768, (byte) -87, 0);
@@ -2097,7 +2102,7 @@ final class GlToolkitSub2
             ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
             method3792(119);
-            method3771((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
+            bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
             method3753(1, 1);
             method3729(7681, (byte) -103, 8448);
             method3762(34167, 768, (byte) -87, 0);
@@ -2221,7 +2226,7 @@ final class GlToolkitSub2
             method3728(false, 48);
             method3752(107, false);
             method3748(0, false);
-            method3771((byte) -122, null);
+            bindTexture((byte) -122, null);
             method3757(-2, -45);
             method3761(0, 1);
             anInt7765 = 1;
@@ -2571,7 +2576,7 @@ final class GlToolkitSub2
         method3757(-2, -69);
         for (int i_276_ = this.anInt7795 - 1; i_276_ >= 0; i_276_--) {
             method3738(-15039, i_276_);
-            method3771((byte) -88, null);
+            bindTexture((byte) -88, null);
             OpenGL.glTexEnvi(8960, 8704, 34160);
         }
         method3729(8448, (byte) 119, 8448);

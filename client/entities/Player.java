@@ -84,7 +84,7 @@ final class Player extends DisplayModeManagerContainer58 {
         this.anInt10326 = 0;
         this.anIntArray10317[0] = i;
         if (i_1_ <= 55) anInt10567 = -3;
-        int i_2_ = method2436((byte) 103);
+        int i_2_ = getSize((byte) 103);
         this.y = (256 * i_2_ + 512 * this.anIntArray10317[0]);
         this.x = (this.anIntArray10320[0] * 512 + i_2_ * 256);
         if (Component72.localPlayer == this) DisplayModeManagerContainer154.method773(true);
@@ -138,11 +138,11 @@ final class Player extends DisplayModeManagerContainer58 {
         boolean bool = this.aBoolean10517;
         this.aBoolean10517 = (0x2 & i_11_) != 0;
         boolean bool_12_ = (i_11_ & 0x4) != 0;
-        int i_13_ = super.method2436((byte) 68);
+        int i_13_ = super.getSize((byte) 68);
         this.method2434((byte) 51, 1 + ((0x3f & i_11_) >> 3));
         aByte10552 = (byte) (i_11_ >> 6 & 0x3);
-        this.x += -i_13_ + method2436((byte) 47) << 8;
-        this.y += method2436((byte) 96) + -i_13_ << 8;
+        this.x += -i_13_ + getSize((byte) 47) << 8;
+        this.y += getSize((byte) 96) + -i_13_ << 8;
         aByte10556 = class348_sub49.readByte(-114);
         this.anInt10540 = class348_sub49.readByte(-89);
         this.anInt10522 = class348_sub49.readByte(i ^ ~0x1);
@@ -214,8 +214,8 @@ final class Player extends DisplayModeManagerContainer58 {
         int[] is_30_ = (this.appearance.anIntArray2095);
         this.appearance.method1228(i_14_, 105, method2421((byte) 121), is, aByte10538 == 1, is_20_);
         if (i_14_ != i_29_) {
-            this.x = (this.anIntArray10320[0] << 9) - -(method2436((byte) 89) << 8);
-            this.y = (this.anIntArray10317[0] << 9) - -(method2436((byte) 98) << 8);
+            this.x = (this.anIntArray10320[0] << 9) - -(getSize((byte) 89) << 8);
+            this.y = (this.anIntArray10317[0] << 9) - -(getSize((byte) 98) << 8);
         }
         if ((StringDefinition.anInt9591 == this.anInt10290) && is_30_ != null) {
             for (int i_31_ = 0; i_31_ < is_20_.length; i_31_++) {
@@ -457,11 +457,15 @@ final class Player extends DisplayModeManagerContainer58 {
         return false;
     }
 
-    final int method2436(byte i) {
+    /**
+     * Player tile size: NPC-transform appearance size when morphing, else the
+     * base entity {@link DisplayModeManagerContainer58#getSize}.
+     */
+    final int getSize(byte i) {
         if (i <= 39) method2455(-97, -62, (byte) 0, 103);
         anInt10546++;
         if (this.appearance != null && this.appearance.anInt2093 != -1) return (Component291.aClass278_2529.method2079(this.appearance.anInt2093, -1).anInt1399);
-        return super.method2436((byte) 72);
+        return super.getSize((byte) 72);
     }
 
     public static void method2458(boolean bool) {
@@ -507,7 +511,7 @@ final class Player extends DisplayModeManagerContainer58 {
             if (this.anInt10302 != 0) class64.FA(this.anInt10302);
             if (this.anInt10208 != 0) class64.VA(this.anInt10208);
             if (this.anInt10252 != 0) class64.H(0, this.anInt10252, 0);
-        } else this.method2424(i_74_, method2436((byte) 124) << 9, 0, method2436((byte) 58) << 9, (byte) 65, 0);
+        } else this.method2424(i_74_, getSize((byte) 124) << 9, 0, getSize((byte) 58) << 9, (byte) 65, 0);
         if (bool) class64.method624(this.aByte10255, this.aByte10206, this.aByte10270, (this.aByte10279 & 0xff));
         if (!this.aBoolean10521 && this.anInt10269 != -1 && this.anInt10240 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 76, this.anInt10269));

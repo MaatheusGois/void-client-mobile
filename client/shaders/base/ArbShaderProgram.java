@@ -72,7 +72,7 @@ final class ArbShaderProgram extends ShaderProgram {
         aBoolean6197 = bool;
         anInt6191++;
         this.aHa_Sub2_3684.method3738(-15039, 1);
-        this.aHa_Sub2_3684.method3771((byte) -97, aClass258_Sub3_6194);
+        this.aHa_Sub2_3684.bindTexture((byte) -97, aClass258_Sub3_6194);
         this.aHa_Sub2_3684.method3729(34165, (byte) 101, 7681);
         this.aHa_Sub2_3684.method3762(34166, 768, (byte) -87, 0);
         this.aHa_Sub2_3684.method3762(5890, 770, (byte) -87, 2);
@@ -122,7 +122,7 @@ final class ArbShaderProgram extends ShaderProgram {
             aBoolean6193 = false;
         }
         this.aHa_Sub2_3684.method3738(-15039, 1);
-        this.aHa_Sub2_3684.method3771((byte) -97, null);
+        this.aHa_Sub2_3684.bindTexture((byte) -97, null);
         this.aHa_Sub2_3684.method3729(8448, (byte) -61, 8448);
         this.aHa_Sub2_3684.method3762(5890, 768, (byte) -87, 0);
         this.aHa_Sub2_3684.method3762(34166, 770, (byte) -87, 2);
@@ -143,7 +143,7 @@ final class ArbShaderProgram extends ShaderProgram {
     final void method2140(AbstractGlTexture class258, byte i, int i_8_) {
         if (class258 == null) {
             if (!aBoolean6183) {
-                this.aHa_Sub2_3684.method3771((byte) -114, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
+                this.aHa_Sub2_3684.bindTexture((byte) -114, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
                 this.aHa_Sub2_3684.method3761(0, 1);
                 this.aHa_Sub2_3684.method3762(34168, 768, (byte) -87, 0);
                 this.aHa_Sub2_3684.method3775(false, 0, 770, 34168);
@@ -155,7 +155,7 @@ final class ArbShaderProgram extends ShaderProgram {
                 this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
                 aBoolean6183 = false;
             }
-            this.aHa_Sub2_3684.method3771((byte) -105, class258);
+            this.aHa_Sub2_3684.bindTexture((byte) -105, class258);
             this.aHa_Sub2_3684.method3761(0, i_8_);
         }
         if (i < -89) anInt6185++;

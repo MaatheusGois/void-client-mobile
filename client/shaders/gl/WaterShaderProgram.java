@@ -29,7 +29,7 @@ final class WaterShaderProgram extends ShaderProgram {
 
     final void method2140(AbstractGlTexture class258, byte i, int i_0_) {
         if (!aBoolean6266) {
-            this.aHa_Sub2_3684.method3771((byte) -128, class258);
+            this.aHa_Sub2_3684.bindTexture((byte) -128, class258);
             this.aHa_Sub2_3684.method3761(0, i_0_);
         }
         anInt6269++;
@@ -122,9 +122,9 @@ final class WaterShaderProgram extends ShaderProgram {
             GlFramebufferTexture class258_sub2 = this.aHa_Sub2_3684.method3741(444720536);
             if (aBoolean6272 && class258_sub2 != null) {
                 this.aHa_Sub2_3684.method3738(-15039, 1);
-                this.aHa_Sub2_3684.method3771((byte) -126, class258_sub2);
+                this.aHa_Sub2_3684.bindTexture((byte) -126, class258_sub2);
                 this.aHa_Sub2_3684.method3738(-15039, 0);
-                this.aHa_Sub2_3684.method3771((byte) -75, aClass83_6268.aClass258_Sub1_1443);
+                this.aHa_Sub2_3684.bindTexture((byte) -75, aClass83_6268.aClass258_Sub1_1443);
                 long l = aClass337_6274.aLong4178;
                 OpenGL.glUseProgramObjectARB(l);
                 OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l, "normalSampler"), 0);
@@ -142,9 +142,9 @@ final class WaterShaderProgram extends ShaderProgram {
             anInt6265++;
             if (aBoolean6266) {
                 this.aHa_Sub2_3684.method3738(-15039, 1);
-                this.aHa_Sub2_3684.method3771((byte) -108, null);
+                this.aHa_Sub2_3684.bindTexture((byte) -108, null);
                 this.aHa_Sub2_3684.method3738(-15039, 0);
-                this.aHa_Sub2_3684.method3771((byte) -121, null);
+                this.aHa_Sub2_3684.bindTexture((byte) -121, null);
                 OpenGL.glUseProgramObjectARB(0L);
                 aBoolean6266 = false;
             }

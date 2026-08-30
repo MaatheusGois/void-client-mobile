@@ -72,14 +72,14 @@ final class SpriteAtlasShader extends ShaderProgram {
             OpenGL.glTexGenfv(8194, 9473, Component362.aFloatArray5791, 0);
         } else {
             int i_9_ = (int) (16.0F * ((float) this.aHa_Sub2_3684.anInt7735 * f_7_));
-            this.aHa_Sub2_3684.method3771((byte) -81, aClass83_6259.aClass258_Sub3Array1448[i_9_ % 16]);
+            this.aHa_Sub2_3684.bindTexture((byte) -81, aClass83_6259.aClass258_Sub3Array1448[i_9_ % 16]);
         }
         this.aHa_Sub2_3684.method3738(-15039, 0);
     }
 
     final void method2140(AbstractGlTexture class258, byte i, int i_10_) {
         anInt6257++;
-        this.aHa_Sub2_3684.method3771((byte) -118, class258);
+        this.aHa_Sub2_3684.bindTexture((byte) -118, class258);
         this.aHa_Sub2_3684.method3761(0, i_10_);
         if (i > -89) method2140(null, (byte) 109, -112);
     }
@@ -88,7 +88,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         anInt6249++;
         aClass61_6254.callDisplayList('\001', 28666);
         this.aHa_Sub2_3684.method3738(-15039, 1);
-        this.aHa_Sub2_3684.method3771((byte) -113, null);
+        this.aHa_Sub2_3684.bindTexture((byte) -113, null);
         if (i > -75) anInt6248 = -7;
         this.aHa_Sub2_3684.method3738(-15039, 0);
     }
@@ -148,7 +148,7 @@ final class SpriteAtlasShader extends ShaderProgram {
         aClass61_6254.callDisplayList('\0', 28666);
         if (aClass83_6259.aBoolean1442) {
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -117, (aClass83_6259.aClass258_Sub1_1446));
+            this.aHa_Sub2_3684.bindTexture((byte) -117, (aClass83_6259.aClass258_Sub1_1446));
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }
         if (bool_11_ != false) anInt6248 = -68;

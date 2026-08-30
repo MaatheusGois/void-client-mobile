@@ -87,7 +87,8 @@ abstract class DisplayModeManagerContainer58
     static int anInt10277;
     int anInt10278;
     byte aByte10279;
-    private int anInt10280;
+    /** Entity footprint in tiles (1 = single tile). Returned by {@link #getSize}. */
+    private int size;
     static int anInt10281;
     int anInt10282;
     int anInt10283;
@@ -155,7 +156,7 @@ abstract class DisplayModeManagerContainer58
 
     final void method2409(byte i) {
         anInt10307++;
-        int i_2_ = 240 + (-1 + anInt10280 << 8);
+        int i_2_ = 240 + (-1 + size << 8);
         this.aShort8747 = (short) (i_2_ + this.y >> 9);
         this.aShort8750 = (short) (-i_2_ + this.y >> 9);
         this.aShort8751 = (short) (i_2_ + this.x >> 9);
@@ -302,7 +303,7 @@ abstract class DisplayModeManagerContainer58
         this.anInt10289 = -1;
         this.aByte10279 = (byte) 0;
         this.anInt10203 = 0;
-        anInt10280 = 1;
+        size = 1;
         this.aBoolean10226 = false;
         this.anInt10294 = 0;
         this.anInt10248 = -1;
@@ -612,7 +613,7 @@ abstract class DisplayModeManagerContainer58
     final void method2434(byte i, int i_86_) {
         if (i <= 20) this.anInt10295 = -101;
         anInt10235++;
-        anInt10280 = i_86_;
+        size = i_86_;
     }
 
     final void method2435(byte i, int i_87_, boolean bool) {
@@ -638,10 +639,11 @@ abstract class DisplayModeManagerContainer58
         return this.anInt10207;
     }
 
-    int method2436(byte i) {
+    /** Tile footprint width/height of this entity (pathing / scene placement). */
+    int getSize(byte i) {
         anInt10299++;
         if (i < 39) method2420(-75, 84);
-        return anInt10280;
+        return size;
     }
 
     final boolean method2376(int i) {

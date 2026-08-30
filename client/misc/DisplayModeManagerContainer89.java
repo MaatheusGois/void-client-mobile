@@ -70,34 +70,34 @@ final class DisplayModeManagerContainer89
                             bool = true;
                             if (i == 1) {
                                 Component296.anInt4657++;
-                                ParticleSystem class348_sub47 = (ParticleShader.method2148(Component379.aClass351_5929, DisplayModeManagerContainer64.aClass77_9029, i_5_ + 7158));
+                                ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(Component379.aClass351_5929, DisplayModeManagerContainer64.aClass77_9029, i_5_ + 7158));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, is[i_7_]);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByteInverse((byte) -75, 0);
-                                HashNodeSub14.method3243(i_5_ ^ 0x1c2a, class348_sub47);
+                                HashNodeSub14.enqueueOutboundPacket(i_5_ ^ 0x1c2a, class348_sub47);
                             } else if (i == 4) {
                                 Component197.anInt10073++;
-                                ParticleSystem class348_sub47 = (ParticleShader.method2148(RSACipher.aClass351_4905, DisplayModeManagerContainer64.aClass77_9029, -88));
+                                ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(RSACipher.aClass351_4905, DisplayModeManagerContainer64.aClass77_9029, -88));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, is[i_7_]);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByteAdd((byte) -128, 0);
-                                HashNodeSub14.method3243(126, class348_sub47);
+                                HashNodeSub14.enqueueOutboundPacket(126, class348_sub47);
                             } else if (i == 5) {
                                 Component43.anInt4979++;
-                                ParticleSystem class348_sub47 = (ParticleShader.method2148(HashNodeSub18.aClass351_9684, DisplayModeManagerContainer64.aClass77_9029, -83));
+                                ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(HashNodeSub18.aClass351_9684, DisplayModeManagerContainer64.aClass77_9029, -83));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(81, is[i_7_]);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                                HashNodeSub14.method3243(-112, class348_sub47);
+                                HashNodeSub14.enqueueOutboundPacket(-112, class348_sub47);
                             } else if (i == 6) {
                                 HuffmanDecoder.anInt3768++;
-                                ParticleSystem class348_sub47 = (ParticleShader.method2148(Component111.aClass351_3232, DisplayModeManagerContainer64.aClass77_9029, -83));
+                                ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(Component111.aClass351_3232, DisplayModeManagerContainer64.aClass77_9029, -83));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(-119, is[i_7_]);
-                                HashNodeSub14.method3243(i_5_ + 7281, class348_sub47);
+                                HashNodeSub14.enqueueOutboundPacket(i_5_ + 7281, class348_sub47);
                             } else if (i == 7) {
                                 Component14.anInt8588++;
-                                ParticleSystem class348_sub47 = (ParticleShader.method2148(DefinitionGroup.aClass351_9533, DisplayModeManagerContainer64.aClass77_9029, -116));
+                                ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(DefinitionGroup.aClass351_9533, DisplayModeManagerContainer64.aClass77_9029, -116));
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(i_5_ ^ 0x1c2c, is[i_7_]);
                                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByteAdd((byte) 92, 0);
-                                HashNodeSub14.method3243(127, class348_sub47);
+                                HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
                             }
                             break;
                         }

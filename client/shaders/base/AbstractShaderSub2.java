@@ -137,10 +137,10 @@ final class AbstractShaderSub2
                         }
                         DebugPanicSub1.anInt8493++;
                         Component380.anInt4985 = ResourceLoader.anInt3918;
-                        ParticleSystem class348_sub47 = ParticleShader.method2148(GraphicsToolkit.aClass351_4571, (DisplayModeManagerContainer64.aClass77_9029), -123);
+                        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(GraphicsToolkit.aClass351_4571, (DisplayModeManagerContainer64.aClass77_9029), -123);
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                        HashNodeSub14.method3243(118, class348_sub47);
+                        HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
                         break;
                     }
                 }

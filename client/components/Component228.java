@@ -47,7 +47,7 @@ final class Component228
         if (i_2_ != 0) {
             method1648((byte) 121);
             if (i <= 107) method1647(-124, -86);
-            aHa_Sub2_3000.method3771((byte) -93, aClass258_Sub3_2998);
+            aHa_Sub2_3000.bindTexture((byte) -93, aClass258_Sub3_2998);
             aHa_Sub2_3000.method3759(i_2_, -128, 4, interface8, 0);
         }
     }

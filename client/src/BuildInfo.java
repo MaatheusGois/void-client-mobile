@@ -92,7 +92,7 @@ final class BuildInfo {
             npc.method2434((byte) 111, npc.definition.anInt1399);
             npc.anInt10310 = (npc.definition.anInt1329) << 3;
             if (bool) npc.method2435((byte) -108, i_23_, true);
-            npc.method2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.method2436((byte) 50), i_19_);
+            npc.method2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.getSize((byte) 50), i_19_);
             if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
         }
         if (i == -724138005) Component80.aClass348_Sub49_Sub2_3813.stopBitAccess(false);

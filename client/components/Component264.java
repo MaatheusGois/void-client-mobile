@@ -43,10 +43,10 @@ final class Component264
             aHa_Sub2_8707.method3738(-15039, 1);
             aHa_Sub2_8707.method3749(f, 0.0F, 0.0F, (byte) 110, 0.0F);
             aHa_Sub2_8707.method3729(34165, (byte) -115, 34165);
-            aHa_Sub2_8707.method3771((byte) -95, class258_sub2_0_);
+            aHa_Sub2_8707.bindTexture((byte) -95, class258_sub2_0_);
             aHa_Sub2_8707.method3738(-15039, 0);
             aHa_Sub2_8707.method3761(0, 1);
-            aHa_Sub2_8707.method3771((byte) -90, class258_sub2);
+            aHa_Sub2_8707.bindTexture((byte) -90, class258_sub2);
             aHa_Sub2_8707.method3773(i ^ ~0xfffe, class206);
             for (int i_1_ = 0; i_1_ < 6; i_1_++) {
                 int i_2_ = 34069 + i_1_;
@@ -168,10 +168,10 @@ final class Component264
             aHa_Sub2_8707.method3770(-422613672, class206);
             aHa_Sub2_8707.method3738(i + -80573, 1);
             if (i != 65534) return true;
-            aHa_Sub2_8707.method3771((byte) -95, null);
+            aHa_Sub2_8707.bindTexture((byte) -95, null);
             aHa_Sub2_8707.method3729(8448, (byte) 121, 8448);
             aHa_Sub2_8707.method3738(-15039, 0);
-            aHa_Sub2_8707.method3771((byte) -88, null);
+            aHa_Sub2_8707.bindTexture((byte) -88, null);
             OpenGL.glPopAttrib();
             aHa_Sub2_8707.KA(NodederUtil.anIntArray6635[0], NodederUtil.anIntArray6635[1], NodederUtil.anIntArray6635[2], NodederUtil.anIntArray6635[3]);
             if (bool && !aHa_Sub2_8707.aBoolean7847) aClass258_Sub2_8701.method1950(69);

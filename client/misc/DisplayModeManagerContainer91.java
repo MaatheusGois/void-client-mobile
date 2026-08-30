@@ -125,11 +125,11 @@ final class DisplayModeManagerContainer91
                         if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_6_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3525.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
                         else {
                             Component298.anInt4628++;
-                            ParticleSystem class348_sub47 = (ParticleShader.method2148(HashNodeSub19.aClass351_9687, DisplayModeManagerContainer64.aClass77_9029, -94));
+                            ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(HashNodeSub19.aClass351_9687, DisplayModeManagerContainer64.aClass77_9029, -94));
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65) - -1);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
                             class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, !bool ? 0 : 1);
-                            HashNodeSub14.method3243(-116, class348_sub47);
+                            HashNodeSub14.enqueueOutboundPacket(-116, class348_sub47);
                         }
                     }
                 }

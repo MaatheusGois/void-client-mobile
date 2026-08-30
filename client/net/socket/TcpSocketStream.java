@@ -74,7 +74,7 @@ final class TcpSocketStream extends SocketStream {
                 i_7_ -= 256;
                 if (i_7_ < 0) i_7_ = 0;
                 int i_9_ = ((class348_sub9.anInt6694 + -i_7_) * i_8_ / class348_sub9.anInt6694);
-                Component72.localPlayer.method2436((byte) 100);
+                Component72.localPlayer.getSize((byte) 100);
                 if (i_6_ == -78) {
                     int i_10_ = 8192;
                     int i_11_ = (-i_3_ + ((class348_sub9.anInt6678 + class348_sub9.anInt6698) / 2));

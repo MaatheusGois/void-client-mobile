@@ -57,7 +57,7 @@ final class Component114
             if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.defaultCursorId;
             Component373.applyCustomCursor(0, i_4_);
             if (i == -43) {
-                int i_5_ = (Component72.localPlayer.method2436((byte) 103) << 8);
+                int i_5_ = (Component72.localPlayer.getSize((byte) 103) << 8);
                 DisplayModeManagerContainer147.method2655(98, Component72.localPlayer.plane, NodeSub51.anInt7267, i_5_ + (Component72.localPlayer.y), (Component72.localPlayer.x - -i_5_));
                 NodeSub51.anInt7267 = 0;
             }

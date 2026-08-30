@@ -503,10 +503,10 @@ final class ImageDefinition extends Definition {
         Component269.anInt8765++;
         anInt9142++;
         if (bool != false) method3065(-42, true, 43);
-        ParticleSystem class348_sub47 = ParticleShader.method2148(PrimitiveTypeDefinition.aClass351_9089, DisplayModeManagerContainer64.aClass77_9029, -97);
+        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(PrimitiveTypeDefinition.aClass351_9089, DisplayModeManagerContainer64.aClass77_9029, -97);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(52, i_74_);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeIntMiddle(i, (byte) 44);
-        HashNodeSub14.method3243(25, class348_sub47);
+        HashNodeSub14.enqueueOutboundPacket(25, class348_sub47);
     }
 
     final int[] getMonochromeOutput(int i, int i_75_) {

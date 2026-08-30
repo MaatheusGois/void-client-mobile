@@ -200,7 +200,7 @@ final class Component225
         int[] is = ShaderProgramSub7.anIntArray6290;
         for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
             Player player = InterfaceRenderer.players[is[i_33_]];
-            if (player != null) ImageCacheStore.method2556(false, player.method2436((byte) 60), player);
+            if (player != null) ImageCacheStore.method2556(false, player.getSize((byte) 60), player);
         }
         if (i != 4740) method347(null, null, 79, -21, 64);
     }

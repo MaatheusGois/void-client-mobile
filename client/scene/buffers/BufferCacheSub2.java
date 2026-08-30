@@ -527,7 +527,7 @@ final class BufferCacheSub2
             this.aHa_Sub2_8272.method3748(0, false);
             this.aHa_Sub2_8272.method3753(0, 1);
             this.aHa_Sub2_8272.method3757(-2, -100);
-            this.aHa_Sub2_8272.method3771((byte) -86, null);
+            this.aHa_Sub2_8272.bindTexture((byte) -86, null);
             DisplayModeManagerContainer306.aFloatArray4772[0] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7688) * ((float) this.anInt4592 * 128.0F)));
             DisplayModeManagerContainer306.aFloatArray4772[8] = 0.0F;
             DisplayModeManagerContainer306.aFloatArray4772[13] = 1.0F - (((float) (i_157_ * i_153_) / 128.0F + (float) (i_152_ * 2)) / (float) (this.aHa_Sub2_8272.anInt7641));
@@ -758,7 +758,7 @@ final class BufferCacheSub2
                 this.aHa_Sub2_8272.method3748(0, false);
                 this.aHa_Sub2_8272.method3753(128, 1);
                 this.aHa_Sub2_8272.method3757(-2, -88);
-                this.aHa_Sub2_8272.method3771((byte) -124, (this.aHa_Sub2_8272.aClass258_Sub3_7827));
+                this.aHa_Sub2_8272.bindTexture((byte) -124, (this.aHa_Sub2_8272.aClass258_Sub3_7827));
                 this.aHa_Sub2_8272.method3729(8448, (byte) 98, 7681);
                 this.aHa_Sub2_8272.method3762(34166, 770, (byte) -87, 0);
                 this.aHa_Sub2_8272.method3775(false, 0, 770, 34167);
@@ -768,7 +768,7 @@ final class BufferCacheSub2
                 }
                 this.aHa_Sub2_8272.method3762(5890, 768, (byte) -87, 0);
                 this.aHa_Sub2_8272.method3775(false, 0, 770, 5890);
-                this.aHa_Sub2_8272.method3771((byte) -96, null);
+                this.aHa_Sub2_8272.bindTexture((byte) -96, null);
                 this.aHa_Sub2_8272.L(i_209_, i_210_, (this.aHa_Sub2_8272.anInt7813));
             }
             if (aClass104_8266 != null) {

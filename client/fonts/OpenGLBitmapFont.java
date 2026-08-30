@@ -119,13 +119,13 @@ final class OpenGLBitmapFont extends BitmapFont {
         ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
         aHa_Sub2_6509.method3735(9473);
-        aHa_Sub2_6509.method3771((byte) -109, aClass258_Sub3_Sub1_6511);
+        aHa_Sub2_6509.bindTexture((byte) -109, aClass258_Sub3_Sub1_6511);
         if (aBoolean6512 || bool) {
             aHa_Sub2_6509.method3729(7681, (byte) -38, 8448);
             aHa_Sub2_6509.method3762(34168, 768, (byte) -87, 0);
         } else aHa_Sub2_6509.method3729(7681, (byte) -55, 7681);
         aHa_Sub2_6509.method3738(-15039, 1);
-        aHa_Sub2_6509.method3771((byte) -127, class258_sub3_sub1);
+        aHa_Sub2_6509.bindTexture((byte) -127, class258_sub3_sub1);
         aHa_Sub2_6509.method3729(7681, (byte) 97, 8448);
         aHa_Sub2_6509.method3762(34168, 768, (byte) -87, 0);
         OpenGL.glTexGeni(8192, 9472, 9216);
@@ -144,14 +144,14 @@ final class OpenGLBitmapFont extends BitmapFont {
         OpenGL.glDisable(3169);
         aHa_Sub2_6509.method3762(5890, 768, (byte) -87, 0);
         aHa_Sub2_6509.method3729(8448, (byte) -96, 8448);
-        aHa_Sub2_6509.method3771((byte) -91, null);
+        aHa_Sub2_6509.bindTexture((byte) -91, null);
         aHa_Sub2_6509.method3738(-15039, 0);
         if (aBoolean6512 || bool) aHa_Sub2_6509.method3762(5890, 768, (byte) -87, 0);
     }
 
     final void fa(char c, int i, int i_47_, int i_48_, boolean bool) {
         aHa_Sub2_6509.method3735(9473);
-        aHa_Sub2_6509.method3771((byte) -96, aClass258_Sub3_Sub1_6511);
+        aHa_Sub2_6509.bindTexture((byte) -96, aClass258_Sub3_Sub1_6511);
         if (aBoolean6512 || bool) {
             aHa_Sub2_6509.method3729(7681, (byte) 117, 8448);
             aHa_Sub2_6509.method3762(34168, 768, (byte) -87, 0);

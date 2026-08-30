@@ -99,7 +99,7 @@ final class TheoraVideoPlayer {
                     NodeSub3.method2739(0);
                     ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, DisplayModeManagerContainer109.aClass29_2339.anInt400);
-                    HashNodeSub14.method3243(9, class348_sub47);
+                    HashNodeSub14.enqueueOutboundPacket(9, class348_sub47);
                     Component302.method1802(0);
                     Component241.anInt2955 = 3;
                 }
@@ -184,7 +184,7 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.xteaEncrypt(i_5_, true, is, (class348_sub49_sub2.offset));
                         class348_sub49_sub2.writeLengthShort(1809639944, -i_4_ + (class348_sub49_sub2.offset));
                     }
-                    HashNodeSub14.method3243(-48, class348_sub47);
+                    HashNodeSub14.enqueueOutboundPacket(-48, class348_sub47);
                     Component302.method1802(0);
                     DisplayModeManagerContainer64.aClass77_9029 = new DisplayModeManagerContainer123(is);
                     for (int i_10_ = 0; i_10_ < 4; i_10_++)
@@ -234,7 +234,7 @@ final class TheoraVideoPlayer {
                     DisplayModeManagerContainer207 class348_sub49_sub2 = (class348_sub47.aClass348_Sub49_Sub2_7116);
                     class348_sub49_sub2.method3416(-18, DisplayModeManagerContainer64.aClass77_9029);
                     class348_sub49_sub2.method3408((DisplayModeManagerContainer109.aClass29_2351.anInt400), 18676);
-                    HashNodeSub14.method3243(-87, class348_sub47);
+                    HashNodeSub14.enqueueOutboundPacket(-87, class348_sub47);
                     Component302.method1802(0);
                     Component241.anInt2955 = 4;
                 } else if (Component241.anInt2955 == 7) {

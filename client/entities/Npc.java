@@ -331,7 +331,7 @@ final class Npc extends DisplayModeManagerContainer58 {
             if (this.anInt10302 != 0) this.aClass64Array10323[0].FA(this.anInt10302);
             if (this.anInt10208 != 0) this.aClass64Array10323[0].VA(this.anInt10208);
             if (this.anInt10252 != 0) this.aClass64Array10323[0].H(0, this.anInt10252, 0);
-        } else this.method2424(i_39_, this.method2436((byte) 78) << 9, 0, this.method2436((byte) 108) << 9, (byte) 92, 0);
+        } else this.method2424(i_39_, this.getSize((byte) 78) << 9, 0, this.getSize((byte) 108) << 9, (byte) 92, 0);
         if (bool) class64.method624(this.aByte10255, this.aByte10206, this.aByte10270, (0xff & this.aByte10279));
         if (this.anInt10269 == -1 || this.anInt10240 == -1) this.aClass64Array10323[1] = null;
         else {

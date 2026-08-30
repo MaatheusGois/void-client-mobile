@@ -35,10 +35,10 @@ final class ShaderProgramSub9
         if (aBoolean6316) {
             if (!aBoolean6308) {
                 this.aHa_Sub2_3684.method3738(-15039, 2);
-                this.aHa_Sub2_3684.method3771((byte) -84, null);
+                this.aHa_Sub2_3684.bindTexture((byte) -84, null);
             }
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -87, null);
+            this.aHa_Sub2_3684.bindTexture((byte) -87, null);
             this.aHa_Sub2_3684.method3738(-15039, 0);
             aClass61_6310.callDisplayList('\001', 28666);
             aBoolean6316 = false;
@@ -55,7 +55,7 @@ final class ShaderProgramSub9
 
     final void method2140(AbstractGlTexture class258, byte i, int i_5_) {
         if (i >= -89) aClass258_Sub2Array6317 = null;
-        this.aHa_Sub2_3684.method3771((byte) -115, class258);
+        this.aHa_Sub2_3684.bindTexture((byte) -115, class258);
         anInt6312++;
         this.aHa_Sub2_3684.method3761(0, i_5_);
     }
@@ -120,7 +120,7 @@ final class ShaderProgramSub9
         anInt6307++;
         if (aBoolean6316) {
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -91, aClass258_Sub2Array6317[i + -1]);
+            this.aHa_Sub2_3684.bindTexture((byte) -91, aClass258_Sub2Array6317[i + -1]);
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }
         if (i_7_ > -42) method2134(true, true);
@@ -138,7 +138,7 @@ final class ShaderProgramSub9
             else {
                 if (!aBoolean6308) {
                     this.aHa_Sub2_3684.method3738(-15039, 2);
-                    this.aHa_Sub2_3684.method3771((byte) -120, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
+                    this.aHa_Sub2_3684.bindTexture((byte) -120, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
                     this.aHa_Sub2_3684.method3738(-15039, 0);
                 }
                 aClass61_6310.callDisplayList('\0', 28666);

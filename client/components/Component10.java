@@ -31,7 +31,7 @@ final class Component10
         int i_12_ = (Component72.localPlayer.anIntArray10317[0]);
         if (i_11_ < 0 || i_11_ >= AbstractShaderSub4.anInt7319 || i_12_ < 0 || ParametricDefinition.anInt9109 <= i_12_) return false;
         if (i < 0 || i >= AbstractShaderSub4.anInt7319 || i_4_ < 0 || ParametricDefinition.anInt9109 <= i_4_) return false;
-        int i_13_ = (Component317.method574(i, Component72.localPlayer.method2436((byte) 70), i_6_, DefinitionSub11.anIntArray9185, bool, (byte) 120, i_9_, i_11_, i_12_, HashNodeSub14.anIntArray9626, i_4_, (NodeSub45.aClass361Array7108[Component72.localPlayer.plane]), i_8_, i_7_, i_10_));
+        int i_13_ = (Component317.method574(i, Component72.localPlayer.getSize((byte) 70), i_6_, DefinitionSub11.anIntArray9185, bool, (byte) 120, i_9_, i_11_, i_12_, HashNodeSub14.anIntArray9626, i_4_, (NodeSub45.aClass361Array7108[Component72.localPlayer.plane]), i_8_, i_7_, i_10_));
         if (i_13_ < 1) return false;
         Component253.anInt3203 = HashNodeSub14.anIntArray9626[-1 + i_13_];
         Component263.anInt1548 = DefinitionSub11.anIntArray9185[-1 + i_13_];

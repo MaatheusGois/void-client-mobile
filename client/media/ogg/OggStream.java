@@ -104,7 +104,7 @@ abstract class OggStream extends Node {
             } catch (Throwable throwable) {
                 int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
                 if (i_3_ == 2) GpsOverlay.aBoolean1952 = true;
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), 0);
+                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), 0);
                 method2965(string, i_3_, bool, i_1_);
                 return;
             } finally {
@@ -118,7 +118,7 @@ abstract class OggStream extends Node {
             }
         }
         Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1826(!bool, -142238264);
-        Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), i);
+        Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), i);
         Buffer.disposeActiveToolkit(i_1_ + -78);
         NodeSub8.toolkit.method3650(10000);
         NodeSub8.toolkit.X(32);

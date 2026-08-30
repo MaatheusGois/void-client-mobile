@@ -19,7 +19,7 @@ final class AbstractGlTextureSub1
     int anInt8529;
 
     final void method1958(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
-        this.aHa_Sub2_4851.method3771((byte) -110, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -110, this);
         anInt8526++;
         OpenGL.glCopyTexSubImage3D(this.anInt4849, 0, i_2_, i_6_, i_4_, i_3_, i_0_, i_1_, i_5_);
         OpenGL.glFlush();
@@ -40,7 +40,7 @@ final class AbstractGlTextureSub1
             this.anInt8523 = i_7_;
             this.anInt8522 = i_9_;
             this.anInt8529 = i_8_;
-            this.aHa_Sub2_4851.method3771((byte) -84, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -84, this);
             OpenGL.glPixelStorei(3317, 1);
             OpenGL.glTexImage3Dub(this.anInt4849, 0, this.anInt4858, this.anInt8523, this.anInt8529, this.anInt8522, 0, i_10_, 5121, is, 0);
             OpenGL.glPixelStorei(3317, 4);
@@ -193,7 +193,7 @@ final class AbstractGlTextureSub1
         this.anInt8523 = i_49_;
         this.anInt8529 = i_50_;
         this.anInt8522 = i_51_;
-        this.aHa_Sub2_4851.method3771((byte) -123, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -123, this);
         OpenGL.glTexImage3Dub(this.anInt4849, 0, this.anInt4858, this.anInt8523, this.anInt8529, this.anInt8522, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
         this.method1957(9728, true);
     }

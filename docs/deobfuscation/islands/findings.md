@@ -70,17 +70,34 @@ all three). Lines 4907, 4909, 4933, 4943: textbook `anIntArray1149[anInt1173++]`
 
 ---
 
-## 3. Top method#### resolved (5 of top-6)
+## 3. Top method#### resolved (5 of top-6) — DONE 2026-08-29
 
-| Token | Defining class | Inferred name | Evidence |
+| Token | Defining class | Renamed to | Evidence |
 |---|---|---|---|
-| `method3429` (149 refs) | `NodeSub51` (Preferences) | `applyPreferences` | calls `method1718` (rebuild) + `method3426` (commit) |
-| `method3771` (104 refs) | `GlToolkitSub2` | `setTextureUnit` | `glEnable/glDisable/glBindTexture` body, takes `AbstractGlTexture` |
-| `method2436` (104 refs) | `DisplayModeManagerContainer58` (2 defs) | `getSkillLevel` | returns `anInt10280`; magic `anInt10207 == -32768` = level base |
-| `method3243` (103 refs) | `HashNodeSub14` | `registerParticle` | adds `ParticleSystem` to `aClass262_9201` list |
-| `method2148` (100 refs) | `ParticleShader` | `createParticleSystem` | factory: `obtainParticleSystem` + packet encoding, logs "Encode packet" |
+| `method3429` (149→0) | `NodeSub51` (Preferences) | `applyPreference` | calls `method1718` + `method3426` commit |
+| `method3771` (104→0) | `GlToolkitSub2` | `bindTexture` | `glEnable/glDisable/glBindTexture` |
+| `method2436` (104→0) | `DisplayModeManagerContainer58` + `Player` | `getSize` | returns tile footprint; Player overrides via appearance |
+| `method3243` (103→0) | `HashNodeSub14` | `enqueueOutboundPacket` | queues write buffer; **not** particles |
+| `method2148` (100→0) | `ParticleShader` | `createOutboundPacket` | factory + `"Encode packet"` log |
 
-**Reflection:** zero for all five. All safe renames.
+Also renamed `anInt10280` → `size` on the entity base.
+
+**Correction vs earlier draft:** `method2148`/`method3243` are outbound **packet** helpers (type still named `ParticleSystem`). Do not call them particle FX.
+
+---
+
+## 3b. CS2 stacks — DONE 2026-08-29 (lote 51)
+
+| Old | New |
+|---|---|
+| `anIntArray1149` | `intStack` |
+| `aStringArray1152` | `stringStack` |
+| `aClass184Array1168` | `callFrames` |
+| `anInt1173` | `intStackPointer` |
+| `anInt1170` | `stringStackPointer` |
+| `anInt1154` | `callFramePointer` |
+
+Reflection: none. Desktop + iOS compile green after lote.
 
 ---
 

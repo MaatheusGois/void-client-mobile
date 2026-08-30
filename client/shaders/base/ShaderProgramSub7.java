@@ -47,10 +47,10 @@ final class ShaderProgramSub7
                         }
                         Component380.anInt4985 = ResourceLoader.anInt3918;
                         HashNodeSub7.anInt9540++;
-                        ParticleSystem class348_sub47 = ParticleShader.method2148(Component186.aClass351_4394, (DisplayModeManagerContainer64.aClass77_9029), -99);
+                        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component186.aClass351_4394, (DisplayModeManagerContainer64.aClass77_9029), -99);
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
                         class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                        HashNodeSub14.method3243(117, class348_sub47);
+                        HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
                         break;
                     }
                 }
@@ -63,7 +63,7 @@ final class ShaderProgramSub7
         if (i_4_ >= -42) aClass258_Sub4_6285 = null;
         if ((0x1 & i) == 1) {
             if (aClass83_6278.aBoolean1442) {
-                this.aHa_Sub2_3684.method3771((byte) -83, aClass83_6278.aClass258_Sub1_1440);
+                this.aHa_Sub2_3684.bindTexture((byte) -83, aClass83_6278.aClass258_Sub1_1440);
                 Component214.aFloatArray2131[2] = 0.0F;
                 Component214.aFloatArray2131[3] = (float) ((this.aHa_Sub2_3684.anInt7735) % 4000) / 4000.0F;
                 Component214.aFloatArray2131[0] = 0.0F;
@@ -71,16 +71,16 @@ final class ShaderProgramSub7
                 OpenGL.glTexGenfv(8194, 9473, Component214.aFloatArray2131, 0);
             } else {
                 int i_5_ = (16 * (this.aHa_Sub2_3684.anInt7735 % 4000) / 4000);
-                this.aHa_Sub2_3684.method3771((byte) -95, aClass83_6278.aClass258_Sub3Array1444[i_5_]);
+                this.aHa_Sub2_3684.bindTexture((byte) -95, aClass83_6278.aClass258_Sub3Array1444[i_5_]);
             }
         } else if (aClass83_6278.aBoolean1442) {
-            this.aHa_Sub2_3684.method3771((byte) -126, (aClass83_6278.aClass258_Sub1_1440));
+            this.aHa_Sub2_3684.bindTexture((byte) -126, (aClass83_6278.aClass258_Sub1_1440));
             Component214.aFloatArray2131[0] = 0.0F;
             Component214.aFloatArray2131[2] = 0.0F;
             Component214.aFloatArray2131[1] = 0.0F;
             Component214.aFloatArray2131[3] = 0.0F;
             OpenGL.glTexGenfv(8194, 9473, Component214.aFloatArray2131, 0);
-        } else this.aHa_Sub2_3684.method3771((byte) -110, aClass83_6278.aClass258_Sub3Array1444[0]);
+        } else this.aHa_Sub2_3684.bindTexture((byte) -110, aClass83_6278.aClass258_Sub3Array1444[0]);
         anInt6291++;
     }
 
@@ -97,7 +97,7 @@ final class ShaderProgramSub7
             OpenGL.glTexGenfv(8192, 9474, Component214.aFloatArray2131, 0);
             OpenGL.glPopMatrix();
             this.aHa_Sub2_3684.method3744((float) this.aHa_Sub2_3684.anInt7782, 770, 0.5F);
-            this.aHa_Sub2_3684.method3771((byte) -99, aClass258_Sub4_6285);
+            this.aHa_Sub2_3684.bindTexture((byte) -99, aClass258_Sub4_6285);
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }
         anInt6286++;
@@ -184,7 +184,7 @@ final class ShaderProgramSub7
         anInt6282++;
         if (this.aHa_Sub2_3684.anInt7782 > 0) {
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -115, null);
+            this.aHa_Sub2_3684.bindTexture((byte) -115, null);
             this.aHa_Sub2_3684.method3744(0.0F, 770, 1.0F);
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }

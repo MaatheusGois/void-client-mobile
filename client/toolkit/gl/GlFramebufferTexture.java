@@ -31,7 +31,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
     GlFramebufferTexture(GlToolkitSub2 var_ha_Sub2, int i, int i_4_) {
         super(var_ha_Sub2, 34067, i, i_4_ * (i_4_ * 6), false);
         this.anInt8538 = i_4_;
-        this.aHa_Sub2_4851.method3771((byte) -81, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -81, this);
         for (int i_5_ = 0; i_5_ < 6; i_5_++)
             OpenGL.glTexImage2Dub(i_5_ + 34069, 0, this.anInt4858, i_4_, i_4_, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
         this.method1957(9728, true);
@@ -49,7 +49,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
         super(var_ha_Sub2, 34067, i, i_6_ * (i_6_ * 6), bool);
         try {
             this.anInt8538 = i_6_;
-            this.aHa_Sub2_4851.method3771((byte) -127, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -127, this);
             for (int i_8_ = 0; i_8_ < 6; i_8_++)
                 OpenGL.glTexImage2Dub(i_8_ + 34069, 0, this.anInt4858, i_6_, i_6_, 0, i_7_, 5121, is[i_8_], 0);
             this.method1957(9728, true);
@@ -62,7 +62,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
         super(var_ha_Sub2, 34067, i, 6 * i_9_ * i_9_, bool);
         try {
             this.anInt8538 = i_9_;
-            this.aHa_Sub2_4851.method3771((byte) -77, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -77, this);
             if (bool) {
                 for (int i_10_ = 0; i_10_ < 6; i_10_++)
                     Component45.method3460(i_10_ + 34069, this.anInt4858, i_9_, this.aHa_Sub2_4851.anInt7812, i_9_, is[i_10_], 32993, -83);

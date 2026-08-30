@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class286_Sub3` (JODE-obfuscated).
- * Particle rendering shader program (extends renamed ShaderProgram). Constructs ParticleSystem instances (method2148) and drives particle draw state on the GlToolkitSub2 toolkit.
+ * Particle rendering shader program (extends renamed ShaderProgram). Constructs ParticleSystem instances (createOutboundPacket) and drives particle draw state on the GlToolkitSub2 toolkit.
  */
 
 import jaggl.OpenGL;
@@ -38,17 +38,17 @@ final class ParticleShader extends ShaderProgram {
         if (aClass61_6222 != null) {
             if (i_1_ >= -42) method2149(-65);
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            if ((i & 0x80) != 0) this.aHa_Sub2_3684.method3771((byte) -122, null);
+            if ((i & 0x80) != 0) this.aHa_Sub2_3684.bindTexture((byte) -122, null);
             else if ((0x1 & i_0_) != 1) {
-                if (!aClass83_6227.aBoolean1442) this.aHa_Sub2_3684.method3771((byte) -84, aClass83_6227.aClass258_Sub3Array1444[0]);
-                else this.aHa_Sub2_3684.method3771((byte) -97, aClass83_6227.aClass258_Sub1_1440);
+                if (!aClass83_6227.aBoolean1442) this.aHa_Sub2_3684.bindTexture((byte) -84, aClass83_6227.aClass258_Sub3Array1444[0]);
+                else this.aHa_Sub2_3684.bindTexture((byte) -97, aClass83_6227.aClass258_Sub1_1440);
                 OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0F, 0.0F, 0.0F, 1.0F);
             } else if (aClass83_6227.aBoolean1442) {
-                this.aHa_Sub2_3684.method3771((byte) -83, aClass83_6227.aClass258_Sub1_1440);
+                this.aHa_Sub2_3684.bindTexture((byte) -83, aClass83_6227.aClass258_Sub1_1440);
                 OpenGL.glProgramLocalParameter4fARB(34336, 65, aFloat6225, 0.0F, 0.0F, 1.0F);
             } else {
                 int i_2_ = (this.aHa_Sub2_3684.anInt7735 % 4000 * 16 / 4000);
-                this.aHa_Sub2_3684.method3771((byte) -88, aClass83_6227.aClass258_Sub3Array1444[i_2_]);
+                this.aHa_Sub2_3684.bindTexture((byte) -88, aClass83_6227.aClass258_Sub3Array1444[i_2_]);
                 OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0F, 0.0F, 0.0F, 1.0F);
             }
             this.aHa_Sub2_3684.method3738(-15039, 0);
@@ -68,12 +68,19 @@ final class ParticleShader extends ShaderProgram {
     final void method2140(AbstractGlTexture class258, byte i, int i_4_) {
         if (i <= -89) {
             anInt6216++;
-            this.aHa_Sub2_3684.method3771((byte) -115, class258);
+            this.aHa_Sub2_3684.bindTexture((byte) -115, class258);
             this.aHa_Sub2_3684.method3761(0, i_4_);
         }
     }
 
-    static final ParticleSystem method2148(StringCache class351, DisplayModeManagerContainer123 class77, int i) {
+    /**
+     * Obtain a pooled outbound packet buffer sized from {@code class351},
+     * Isaac-init with {@code class77}, and write the opcode. Debug logs
+     * {@code Encode packet N}. Pair with {@link HashNodeSub14#enqueueOutboundPacket}.
+     * (Return type is still {@code ParticleSystem} — historical misname for the
+     * outbound packet node.)
+     */
+    static final ParticleSystem createOutboundPacket(StringCache class351, DisplayModeManagerContainer123 class77, int i) {
         try {
             anInt6230++;
             ParticleSystem class348_sub47 = Component189.obtainParticleSystem((byte) -103);
@@ -167,7 +174,7 @@ final class ParticleShader extends ShaderProgram {
             if (i >= -75) method2134(true, false);
             aClass61_6222.callDisplayList('\001', 28666);
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -103, null);
+            this.aHa_Sub2_3684.bindTexture((byte) -103, null);
             this.aHa_Sub2_3684.method3738(-15039, 0);
         }
     }
@@ -302,7 +309,7 @@ final class ParticleShader extends ShaderProgram {
 
     public static void method2151(int i) {
         anIntArray6228 = null;
-        if (i > -72) method2148(null, null, 77);
+        if (i > -72) createOutboundPacket(null, null, 77);
         aCalendar6221 = null;
     }
 

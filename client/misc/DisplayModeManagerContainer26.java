@@ -39,7 +39,7 @@ final class DisplayModeManagerContainer26
             Component327 class318_sub1_sub3 = class148.aClass318_Sub1_Sub3_2040;
             if (class318_sub1_sub3 instanceof DisplayModeManagerContainer58) {
                 DisplayModeManagerContainer58 class318_sub1_sub3_sub3_4_ = (DisplayModeManagerContainer58) class318_sub1_sub3;
-                int i_5_ = 252 + (-1 + class318_sub1_sub3_sub3_4_.method2436((byte) 88)) * 256;
+                int i_5_ = 252 + (-1 + class318_sub1_sub3_sub3_4_.getSize((byte) 88)) * 256;
                 int i_6_ = (-i_5_ + (class318_sub1_sub3_sub3_4_.x) >> 9);
                 int i_7_ = (-i_5_ + (class318_sub1_sub3_sub3_4_.y) >> 9);
                 int i_8_ = i_5_ + (class318_sub1_sub3_sub3_4_.x) >> 9;

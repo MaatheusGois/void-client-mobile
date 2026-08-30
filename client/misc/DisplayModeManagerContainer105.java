@@ -102,7 +102,7 @@ final class DisplayModeManagerContainer105
                             int i_7_ = 0x3 & (class10.anInt178 >> 24);
                             if ((Component72.localPlayer.plane) == i_7_) {
                                 int i_8_ = 0x1fe00 & (class10.anInt178 << 9);
-                                int i_9_ = (Component72.localPlayer.method2436((byte) 52) << 8);
+                                int i_9_ = (Component72.localPlayer.getSize((byte) 52) << 8);
                                 int i_10_ = ((class10.anInt178 & 0xff7e29) >> 16);
                                 int i_11_ = (-(Component72.localPlayer.x) + 256 + (i_10_ << 9) + i_9_);
                                 int i_12_ = ((class10.anInt178 & 0xffc1) >> 8);
@@ -159,9 +159,9 @@ final class DisplayModeManagerContainer105
             Component246.aClass348_Sub16_Sub3_2718 = null;
         } else if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1 && !Component385.method1296(true)) {
             Renderable.anInt3973++;
-            ParticleSystem class348_sub47 = ParticleShader.method2148(GlToolkitSub2.aClass351_7554, DisplayModeManagerContainer64.aClass77_9029, -107);
+            ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(GlToolkitSub2.aClass351_7554, DisplayModeManagerContainer64.aClass77_9029, -107);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 118, Component119.anInt3428);
-            HashNodeSub14.method3243(-54, class348_sub47);
+            HashNodeSub14.enqueueOutboundPacket(-54, class348_sub47);
             Component119.anInt3428 = -1;
         }
     }

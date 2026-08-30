@@ -60,7 +60,7 @@ final class ImageCache {
                     class105 = NodeSub8.toolkit.method3691(class207s[0], true);
                     NodeSub1Sub1.aClass60_8807.putOne(class105, i_9_, (byte) -115);
                 }
-                ShaderSub2.method165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.method2436((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
+                ShaderSub2.method165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.getSize((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
                 int i_10_ = i_7_ + (Component71.anIntArray6062[0] + -18);
                 int i_11_ = -54 + (Component71.anIntArray6062[1] + i_4_) - 16;
                 i_10_ += i / 4 * 18;

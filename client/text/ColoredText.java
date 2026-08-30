@@ -138,8 +138,8 @@ final class ColoredText extends Component339 {
                     int i_23_ = -is[2] + is_21_[2];
                     int i_24_ = (int) ((float) is[0] + (float) i_22_ * f);
                     int i_25_ = (int) ((float) is[2] + (float) i_23_ * f);
-                    i_13_ = (Component72.localPlayer.method2436((byte) 71) + -1 << 8) + i_24_ >> 9;
-                    i_14_ = i_25_ - -(Component72.localPlayer.method2436((byte) 73) + -1 << 8) >> 9;
+                    i_13_ = (Component72.localPlayer.getSize((byte) 71) + -1 << 8) + i_24_ >> 9;
+                    i_14_ = i_25_ - -(Component72.localPlayer.getSize((byte) 73) + -1 << 8) >> 9;
                     int i_26_ = (Component72.localPlayer.plane);
                     if (i_26_ < 3 && ((0x2 & (ObjectDeserializer.aByteArrayArrayArray6962[1][i_24_ >> 9][i_25_ >> 9])) != 0)) i_26_++;
                 }
@@ -182,10 +182,10 @@ final class ColoredText extends Component339 {
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Player) {
                             Player player = ((Player) (class318_sub4.aClass318_Sub1_6410));
-                            int i_34_ = player.method2436((byte) 78);
+                            int i_34_ = player.getSize((byte) 78);
                             if (((0x1 & i_34_) == 0 && (0x1ff & (player.x)) == 0 && (0x1ff & (player.y)) == 0) || ((i_34_ & 0x1) == 1 && ((player.x) & 0x1ff) == 256 && ((player.y) & 0x1ff) == 256)) {
-                                int i_35_ = (player.x - (-1 + player.method2436((byte) 82) << 8));
-                                int i_36_ = (player.y + -(-1 + player.method2436((byte) 105) << 8));
+                                int i_35_ = (player.x - (-1 + player.getSize((byte) 82) << 8));
+                                int i_36_ = (player.y + -(-1 + player.getSize((byte) 105) << 8));
                                 for (int i_37_ = 0; (Component324.anInt2057 > i_37_); i_37_++) {
                                     NpcNode class348_sub22 = ((NpcNode) (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_37_], -6008)));
                                     if (class348_sub22 != null) {
@@ -193,7 +193,7 @@ final class ColoredText extends Component339 {
                                         if ((OpenGlShader.clientCycle != (npc.anInt10215)) && (npc.aBoolean10309)) {
                                             int i_38_ = ((npc.x) - ((npc.definition.anInt1399) + -1 << 8));
                                             int i_39_ = (-((-1 + (npc.definition.anInt1399)) << 8) + (npc.y));
-                                            if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.method2436((byte) 68))) >= (npc.definition.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.method2436((byte) 97))) >= (npc.definition.anInt1399))) {
+                                            if (i_35_ <= i_38_ && ((-(i_38_ + -i_35_ >> 9) + (player.getSize((byte) 68))) >= (npc.definition.anInt1399)) && i_36_ <= i_39_ && ((-(-i_36_ + i_39_ >> 9) + (player.getSize((byte) 97))) >= (npc.definition.anInt1399))) {
                                                 ParticleShader.addNpcMenuOptions(((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), false, npc);
                                                 npc.anInt10215 = OpenGlShader.clientCycle;
                                             }
@@ -205,9 +205,9 @@ final class ColoredText extends Component339 {
                                 for (int i_41_ = 0; (i_40_ > i_41_); i_41_++) {
                                     Player player_42_ = (InterfaceRenderer.players[is[i_41_]]);
                                     if ((player_42_ != null) && (OpenGlShader.clientCycle != (player_42_.anInt10215)) && (player != player_42_) && (player_42_.aBoolean10309)) {
-                                        int i_43_ = ((player_42_.x) + -((player_42_.method2436((byte) 94) - 1) << 8));
-                                        int i_44_ = ((player_42_.y) + -((-1 + (player_42_.method2436((byte) 82))) << 8));
-                                        if ((i_43_ >= i_35_) && ((player.method2436((byte) 70) - (-i_35_ + i_43_ >> 9)) >= player_42_.method2436((byte) 89)) && (i_44_ >= i_36_) && ((player.method2436((byte) 42) - (i_44_ - i_36_ >> 9)) >= player_42_.method2436((byte) 127))) {
+                                        int i_43_ = ((player_42_.x) + -((player_42_.getSize((byte) 94) - 1) << 8));
+                                        int i_44_ = ((player_42_.y) + -((-1 + (player_42_.getSize((byte) 82))) << 8));
+                                        if ((i_43_ >= i_35_) && ((player.getSize((byte) 70) - (-i_35_ + i_43_ >> 9)) >= player_42_.getSize((byte) 89)) && (i_44_ >= i_36_) && ((player.getSize((byte) 42) - (i_44_ - i_36_ >> 9)) >= player_42_.getSize((byte) 127))) {
                                             PlayerState.method3298((byte) 114, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player_42_);
                                             player_42_.anInt10215 = OpenGlShader.clientCycle;
                                         }
@@ -243,9 +243,9 @@ final class ColoredText extends Component339 {
                                     for (int i_52_ = 0; (i_51_ > i_52_); i_52_++) {
                                         Player player = (InterfaceRenderer.players[is[i_52_]]);
                                         if ((player != null) && (OpenGlShader.clientCycle != (player.anInt10215)) && (player.aBoolean10309)) {
-                                            int i_53_ = ((player.x) - ((-1 + (player.method2436((byte) 116))) << 8));
-                                            int i_54_ = ((player.y) + -((player.method2436((byte) 121)) + -1 << 8));
-                                            if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.definition.anInt1399)) >= player.method2436((byte) 114)) && (i_54_ >= i_46_) && (player.method2436((byte) 58) <= ((npc.definition.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
+                                            int i_53_ = ((player.x) - ((-1 + (player.getSize((byte) 116))) << 8));
+                                            int i_54_ = ((player.y) + -((player.getSize((byte) 121)) + -1 << 8));
+                                            if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.definition.anInt1399)) >= player.getSize((byte) 114)) && (i_54_ >= i_46_) && (player.getSize((byte) 58) <= ((npc.definition.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
                                                 PlayerState.method3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player);
                                                 player.anInt10215 = OpenGlShader.clientCycle;
                                             }

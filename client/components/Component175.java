@@ -44,15 +44,15 @@ final class Component175
                 Player player = (InterfaceRenderer.players[is[i_4_]]);
                 if (player.username != null && player.username.equalsIgnoreCase(string) && (((player == Component72.localPlayer) && (0x10 & PauseTimer.anInt500) != 0) || (player != null && (PauseTimer.anInt500 & 0x8) != 0))) {
                     NativeLibraryLoader.anInt2975++;
-                    ParticleSystem class348_sub47 = ParticleShader.method2148(RSACipher.aClass351_4907, (DisplayModeManagerContainer64.aClass77_9029), -102);
+                    ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(RSACipher.aClass351_4907, (DisplayModeManagerContainer64.aClass77_9029), -102);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, JaclibLoader.anInt169);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(is[i_4_], (byte) 3);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(Component281.anInt3829, (byte) 3);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeIntInverseMiddle(Component90.anInt2046, -4086);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeByteInverse((byte) -64, 0);
-                    HashNodeSub14.method3243(116, class348_sub47);
+                    HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
                     bool = true;
-                    Component10.method2252(true, player.anIntArray10320[0], player.anIntArray10317[0], (byte) -99, player.method2436((byte) 54), 0, player.method2436((byte) 91), -2, 0);
+                    Component10.method2252(true, player.anIntArray10320[0], player.anIntArray10317[0], (byte) -99, player.getSize((byte) 54), 0, player.getSize((byte) 91), -2, 0);
                     break;
                 }
             }

@@ -216,8 +216,8 @@ final class HashTable {
                     }
                     if (DefinitionSub21.cameraMode != 4) {
                         if (Component253.anInt3203 != 0) {
-                            int i_40_ = (-(i_4_ / 128) + (Component253.anInt3203 * 4 + 2) - (-(2 * Component72.localPlayer.method2436((byte) 77)) - -2));
-                            int i_41_ = (4 * Component263.anInt1548 - (-2 + i_3_ / 128) + (2 * (Component72.localPlayer.method2436((byte) 59) - 1)));
+                            int i_40_ = (-(i_4_ / 128) + (Component253.anInt3203 * 4 + 2) - (-(2 * Component72.localPlayer.getSize((byte) 77)) - -2));
+                            int i_41_ = (4 * Component263.anInt1548 - (-2 + i_3_ / 128) + (2 * (Component72.localPlayer.getSize((byte) 59) - 1)));
                             DisplayModeManagerContainer346.method1211(i_1_, (Component361.aClass105Array367[(!NodeSub13.aBoolean6759 ? 0 : 1)]), i, class46, var_aa, i_41_, 2, i_40_);
                         }
                         if (!Component72.localPlayer.aBoolean10551) var_ha.method3675(3, (byte) -125, -1 + (i - -((class46.width) / 2)), -1 + ((class46.height) / 2 + i_1_), 3, -1);

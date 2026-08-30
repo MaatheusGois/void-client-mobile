@@ -45,8 +45,8 @@ final class Component156
                 Component53.anInt193 = 0;
                 if (!Component338.aBoolean1712 && DefinitionSub8.aClass238_9165 != null) {
                     IOException_Sub1.anInt88++;
-                    ParticleSystem class348_sub47 = ParticleShader.method2148((Component98.aClass351_5938), (DisplayModeManagerContainer64.aClass77_9029), -106);
-                    HashNodeSub14.method3243(122, class348_sub47);
+                    ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component98.aClass351_5938), (DisplayModeManagerContainer64.aClass77_9029), -106);
+                    HashNodeSub14.enqueueOutboundPacket(122, class348_sub47);
                     try {
                         Component302.method1802(0);
                     } catch (java.io.IOException ioexception) {

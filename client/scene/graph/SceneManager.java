@@ -31,9 +31,9 @@ final class SceneManager {
             Component103.aClass237_Sub1_4197.method1694((NodeSub45.aClass361Array7108[i_7_]), i_1_, i_7_, NodeSub8.toolkit, i, i_5_, (byte) 106);
             if (i_3_ >= 0) {
                 int i_9_ = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350);
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), 1);
+                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), 1);
                 Component103.aClass237_Sub1_4197.method1689(i, i_7_, i_3_, NodeSub8.toolkit, i_8_, 50, i_4_, i_5_, i_2_, i_6_, (NodeSub45.aClass361Array7108[i_7_]));
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), i_9_);
+                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), i_9_);
             }
         }
         if (i_0_ < 12) aClass262_2859 = null;
@@ -44,7 +44,7 @@ final class SceneManager {
         int i_13_ = (player.anIntArray10320[0]);
         int i_14_ = (player.anIntArray10317[0]);
         if (i_13_ >= 0 && AbstractShaderSub4.anInt7319 > i_13_ && i_14_ >= 0 && i_14_ < ParametricDefinition.anInt9109 && (i_12_ >= 0 && i_12_ < AbstractShaderSub4.anInt7319 && i_10_ >= 0 && ParametricDefinition.anInt9109 > i_10_)) {
-            int i_15_ = (Component317.method574(i_12_, player.method2436((byte) 62), 0, DefinitionSub11.anIntArray9185, true, (byte) 120, -4, i_13_, i_14_, HashNodeSub14.anIntArray9626, i_10_, (NodeSub45.aClass361Array7108[(player.plane)]), 0, 0, 0));
+            int i_15_ = (Component317.method574(i_12_, player.getSize((byte) 62), 0, DefinitionSub11.anIntArray9185, true, (byte) 120, -4, i_13_, i_14_, HashNodeSub14.anIntArray9626, i_10_, (NodeSub45.aClass361Array7108[(player.plane)]), 0, 0, 0));
             if (i_15_ >= 1) {
                 if (i_11_ != 4) aClass262_2859 = null;
                 if (i_15_ <= 3) {

@@ -37,7 +37,7 @@ final class Component245
         try {
             anInt120++;
             NodeSub38.anInt7009++;
-            ParticleSystem class348_sub47 = ParticleShader.method2148(Component379.aClass351_5934, DisplayModeManagerContainer64.aClass77_9029, -104);
+            ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component379.aClass351_5934, DisplayModeManagerContainer64.aClass77_9029, -104);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 112, class46.packedId);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(class46_0_.childIndex, (byte) 3);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeIntMiddle(class46_0_.packedId, (byte) 44);
@@ -45,7 +45,7 @@ final class Component245
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, class46.childIndex);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(4325, class46.itemId);
             if (i > -50) aClass141_117 = null;
-            HashNodeSub14.method3243(-100, class348_sub47);
+            HashNodeSub14.enqueueOutboundPacket(-100, class348_sub47);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ak.E(" + i + ',' + (class46 != null ? "{...}" : "null") + ',' + (class46_0_ != null ? "{...}" : "null") + ')'));
         }

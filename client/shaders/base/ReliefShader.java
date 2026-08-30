@@ -57,7 +57,7 @@ final class ReliefShader {
                 OpenGL.glUniform2fARB(OpenGL.glGetUniformLocationARB(aClass337_2513.aLong4178, "sampleSize"), (1.0F / (float) class258_sub1_2_.anInt8523), (1.0F / (float) class258_sub1_2_.anInt8529));
                 for (int i_4_ = 0; i_4_ < class258_sub1.anInt8522; i_4_++) {
                     float f_5_ = ((float) i_4_ / (float) (class258_sub1.anInt8522));
-                    aHa_Sub2_2511.method3771((byte) -118, class258_sub1_2_);
+                    aHa_Sub2_2511.bindTexture((byte) -118, class258_sub1_2_);
                     OpenGL.glBegin(7);
                     OpenGL.glTexCoord3f(0.0F, 0.0F, f_5_);
                     OpenGL.glVertex2f(0.0F, 0.0F);

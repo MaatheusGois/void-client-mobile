@@ -100,8 +100,8 @@ final class Component386
             }
             int i_2_ = class318_sub1_sub3_sub3.x;
             int i_3_ = class318_sub1_sub3_sub3.y;
-            int i_4_ = (512 * (class318_sub1_sub3_sub3.anIntArray10320[-1 + class318_sub1_sub3_sub3.anInt10319]) + class318_sub1_sub3_sub3.method2436((byte) 117) * 256);
-            int i_5_ = (512 * (class318_sub1_sub3_sub3.anIntArray10317[-1 + class318_sub1_sub3_sub3.anInt10319]) - -(class318_sub1_sub3_sub3.method2436((byte) 72) * 256));
+            int i_4_ = (512 * (class318_sub1_sub3_sub3.anIntArray10320[-1 + class318_sub1_sub3_sub3.anInt10319]) + class318_sub1_sub3_sub3.getSize((byte) 117) * 256);
+            int i_5_ = (512 * (class318_sub1_sub3_sub3.anIntArray10317[-1 + class318_sub1_sub3_sub3.anInt10319]) - -(class318_sub1_sub3_sub3.getSize((byte) 72) * 256));
             if (i_2_ >= i_4_) {
                 if (i_4_ < i_2_) {
                     if (i_5_ > i_3_) class318_sub1_sub3_sub3.method2440((byte) 49, 6144);

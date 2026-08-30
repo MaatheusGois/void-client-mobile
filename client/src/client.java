@@ -795,7 +795,7 @@ public final class client extends Applet_Sub1 {
                 class318_sub1_sub3_sub3.anInt10261 = 0;
                 if ((class318_sub1_sub3_sub3.anInt10285) < 0) class318_sub1_sub3_sub3.aBoolean10309 = false;
                 else {
-                    int i_10_ = class318_sub1_sub3_sub3.method2436((byte) 71);
+                    int i_10_ = class318_sub1_sub3_sub3.getSize((byte) 71);
                     if ((i_10_ & 0x1) == 0) {
                         if (((class318_sub1_sub3_sub3.x) & 0x1ff) != 0 || ((class318_sub1_sub3_sub3.y) & 0x1ff) != 0) {
                             class318_sub1_sub3_sub3.aBoolean10309 = false;
@@ -856,7 +856,7 @@ public final class client extends Applet_Sub1 {
         for (int i = 0; i < Component324.anInt2057; i++) {
             Npc npc = (((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i], -6008)).npc);
             if ((npc.aBoolean10309) && npc.method2425(-1) != -1) {
-                int i_20_ = ((npc.method2436((byte) 119) - 1) * 256 + 252);
+                int i_20_ = ((npc.getSize((byte) 119) - 1) * 256 + 252);
                 int i_21_ = (npc.x - i_20_) >> 9;
                 int i_22_ = (npc.y - i_20_) >> 9;
                 DisplayModeManagerContainer58 class318_sub1_sub3_sub3 = DisplayModeManagerContainer26.method817(252, i_21_, (npc.plane), i_22_);
@@ -1212,7 +1212,7 @@ public final class client extends Applet_Sub1 {
                                                 i_66_ = (NodederUtil.anInt6633 >> 9) + (i_64_ >> 2);
                                                 i_67_ = (NodeSub7.anInt6652 >> 9) - (i_65_ >> 2);
                                             } else {
-                                                int i_68_ = ((Component72.localPlayer.method2436((byte) 51)) - 1) * 256;
+                                                int i_68_ = ((Component72.localPlayer.getSize((byte) 51)) - 1) * 256;
                                                 i_66_ = ((Component72.localPlayer.x) - i_68_ >> 9) + (i_64_ >> 2);
                                                 i_67_ = ((Component72.localPlayer.y) - i_68_ >> 9) - (i_65_ >> 2);
                                             }
@@ -1605,7 +1605,7 @@ public final class client extends Applet_Sub1 {
             if (i_93_ < i) class318_sub1_sub3_sub3 = (InterfaceRenderer.players[is[i_93_]]);
             else class318_sub1_sub3_sub3 = (((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_93_ - i], -6008)).npc);
             if (class318_sub1_sub3_sub3.anInt10285 >= 0) {
-                int i_94_ = class318_sub1_sub3_sub3.method2436((byte) 74);
+                int i_94_ = class318_sub1_sub3_sub3.getSize((byte) 74);
                 if ((i_94_ & 0x1) == 0) {
                     if ((class318_sub1_sub3_sub3.x & 0x1ff) == 0 && (class318_sub1_sub3_sub3.y & 0x1ff) == 0) continue;
                 } else if ((class318_sub1_sub3_sub3.x & 0x1ff) == 256 && ((class318_sub1_sub3_sub3.y) & 0x1ff) == 256) continue;
@@ -1637,7 +1637,7 @@ public final class client extends Applet_Sub1 {
             if (npc != null) {
                 byte i_97_ = (npc.definition.aByte1325);
                 if ((i_97_ & 0x1) != 0) {
-                    int i_98_ = npc.method2436((byte) 117);
+                    int i_98_ = npc.getSize((byte) 117);
                     if ((0x2 & i_97_) != 0 && npc.anInt10319 == 0 && Math.random() * 1000.0 < 10.0) {
                         int i_99_ = (int) Math.round(-5.0 + 10.0 * Math.random());
                         int i_100_ = (int) Math.round(10.0 * Math.random() - 5.0);
@@ -1725,8 +1725,8 @@ public final class client extends Applet_Sub1 {
                     Component53.anInt193++;
                     if (Component53.anInt193 > 50) {
                         IOException_Sub1.anInt88++;
-                        ParticleSystem class348_sub47 = ParticleShader.method2148((Component98.aClass351_5938), (DisplayModeManagerContainer64.aClass77_9029), -104);
-                        HashNodeSub14.method3243(-49, class348_sub47);
+                        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component98.aClass351_5938), (DisplayModeManagerContainer64.aClass77_9029), -104);
+                        HashNodeSub14.enqueueOutboundPacket(-49, class348_sub47);
                     }
                     try {
                         Component302.method1802(0);
@@ -1854,7 +1854,7 @@ public final class client extends Applet_Sub1 {
                         int i_114_ = 0;
                         if (!player.aBoolean10309) i_114_++;
                         if (player.anInt10223 > OpenGlShader.clientCycle) i_114_ += 2;
-                        i_114_ += 5 - player.method2436((byte) 101) << 2;
+                        i_114_ += 5 - player.getSize((byte) 101) << 2;
                         if (player.aBoolean10554) i_114_ += 512;
                         else {
                             if (NameFormatter.anInt495 == 0) i_114_ += 32;
@@ -1877,7 +1877,7 @@ public final class client extends Applet_Sub1 {
                     int i_116_ = 0;
                     if (!npc.aBoolean10309) i_116_++;
                     if (npc.anInt10223 > OpenGlShader.clientCycle) i_116_ += 2;
-                    i_116_ += 5 - npc.method2436((byte) 82) << 2;
+                    i_116_ += 5 - npc.getSize((byte) 82) << 2;
                     if (NameFormatter.anInt495 == 0) {
                         if (npc.definition.aBoolean1362) i_116_ += 64;
                         else i_116_ += 128;
@@ -2039,7 +2039,7 @@ public final class client extends Applet_Sub1 {
             } else SpriteAtlasShader.sleep((byte) -104, 10L);
             if (Component144.aBoolean3988) ReliefShader.method1416(5);
             if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 0);
+                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 0);
                 DisplayModeManagerContainer389.method243(37);
             }
         }
@@ -2053,7 +2053,7 @@ public final class client extends Applet_Sub1 {
             if (i_123_ < i_122_) class318_sub1_sub3_sub3 = (InterfaceRenderer.players[is[i_123_]]);
             else class318_sub1_sub3_sub3 = ((NpcNode) Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_123_ - i_122_], -6008)).npc;
             if (class318_sub1_sub3_sub3.plane == i && (class318_sub1_sub3_sub3.anInt10285) >= 0) {
-                int i_124_ = class318_sub1_sub3_sub3.method2436((byte) 114);
+                int i_124_ = class318_sub1_sub3_sub3.getSize((byte) 114);
                 if ((i_124_ & 0x1) == 0) {
                     if ((class318_sub1_sub3_sub3.x & 0x1ff) != 0 || (class318_sub1_sub3_sub3.y & 0x1ff) != 0) continue;
                 } else if ((class318_sub1_sub3_sub3.x & 0x1ff) != 256 || ((class318_sub1_sub3_sub3.y) & 0x1ff) != 256) continue;

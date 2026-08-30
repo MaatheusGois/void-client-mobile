@@ -33,7 +33,7 @@ abstract class AbstractGlTexture implements Interface9 {
         int i_0_ = 22 / ((i - -31) / 50);
         if (this.aHa_Sub2_4851.aBoolean7820) {
             int i_1_ = method1951(-120);
-            this.aHa_Sub2_4851.method3771((byte) -102, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -102, this);
             OpenGL.glGenerateMipmapEXT(this.anInt4849);
             aBoolean4860 = true;
             method1956(true);
@@ -87,7 +87,7 @@ abstract class AbstractGlTexture implements Interface9 {
     private final void method1956(boolean bool) {
         anInt4857++;
         if (bool != true) this.anInt4849 = -74;
-        this.aHa_Sub2_4851.method3771((byte) -87, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -87, this);
         if (aBoolean4856) {
             OpenGL.glTexParameteri(this.anInt4849, 10241, aBoolean4860 ? 9987 : 9729);
             OpenGL.glTexParameteri(this.anInt4849, 10240, 9729);

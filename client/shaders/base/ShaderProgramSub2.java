@@ -61,18 +61,18 @@ final class ShaderProgramSub2
     static final void method2145(int i) {
         anInt6210++;
         Component63.anInt4494++;
-        ParticleSystem class348_sub47 = ParticleShader.method2148(Component210.aClass351_5288, DisplayModeManagerContainer64.aClass77_9029, -124);
+        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component210.aClass351_5288, DisplayModeManagerContainer64.aClass77_9029, -124);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, MenuEntry.getWindowMode(-96));
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component236.anInt4017);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, PacketReader.anInt10432);
         if (i != -24498) friendFormerNames = null;
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
-        HashNodeSub14.method3243(-101, class348_sub47);
+        HashNodeSub14.enqueueOutboundPacket(-101, class348_sub47);
     }
 
     final void method2140(AbstractGlTexture class258, byte i, int i_5_) {
         anInt6206++;
-        this.aHa_Sub2_3684.method3771((byte) -80, class258);
+        this.aHa_Sub2_3684.bindTexture((byte) -80, class258);
         if (i >= -89) method2136(-67, -39, (byte) 18);
         this.aHa_Sub2_3684.method3761(0, i_5_);
     }

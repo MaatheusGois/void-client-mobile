@@ -41,7 +41,7 @@ final class GlWaterShader extends NodeSub5 {
         OpenGL.glUseProgramObjectARB(0L);
         this.aHa_Sub2_6618.method3738(-15039, 1);
         int i_1_ = -98 / ((i - 44) / 38);
-        this.aHa_Sub2_6618.method3771((byte) -86, null);
+        this.aHa_Sub2_6618.bindTexture((byte) -86, null);
         this.aHa_Sub2_6618.method3738(-15039, 0);
     }
 
@@ -54,7 +54,7 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
             if (aClass258_Sub3Array8837 == null) {
-                this.aHa_Sub2_6618.method3771((byte) -90, class258_sub3_2_);
+                this.aHa_Sub2_6618.bindTexture((byte) -90, class258_sub3_2_);
                 this.aHa_Sub2_6618.method3773(-1, aClass206_8825);
                 aClass206_8825.method1503(0, (byte) 3);
                 OpenGL.glViewport(0, 0, 256, 256);
@@ -81,7 +81,7 @@ final class GlWaterShader extends NodeSub5 {
                     OpenGL.glViewport(0, 0, i_4_, i_5_);
                     aClass206_8844.method1509(aClass258_Sub3Array8837[i_6_], 0, 0);
                     if (i_6_ == 0) {
-                        this.aHa_Sub2_6618.method3771((byte) -115, class258_sub3_2_);
+                        this.aHa_Sub2_6618.bindTexture((byte) -115, class258_sub3_2_);
                         OpenGL.glBegin(7);
                         OpenGL.glTexCoord2f(0.0F, 0.0F);
                         OpenGL.glVertex2i(0, 0);
@@ -93,7 +93,7 @@ final class GlWaterShader extends NodeSub5 {
                         OpenGL.glVertex2i(0, 1);
                         OpenGL.glEnd();
                     } else {
-                        this.aHa_Sub2_6618.method3771((byte) -82, aClass258_Sub3Array8837[i_6_ - 1]);
+                        this.aHa_Sub2_6618.bindTexture((byte) -82, aClass258_Sub3Array8837[i_6_ - 1]);
                         OpenGL.glBegin(7);
                         OpenGL.glTexCoord2f(0.0F, 0.0F);
                         OpenGL.glVertex2i(0, 0);
@@ -110,7 +110,7 @@ final class GlWaterShader extends NodeSub5 {
                     i_6_++;
                 }
                 this.aHa_Sub2_6618.method3770(-422613672, aClass206_8844);
-                this.aHa_Sub2_6618.method3771((byte) -100, aClass258_Sub3Array8837[i_6_ + -1]);
+                this.aHa_Sub2_6618.bindTexture((byte) -100, aClass258_Sub3Array8837[i_6_ + -1]);
                 this.aHa_Sub2_6618.method3773(-1, aClass206_8825);
                 aClass206_8825.method1503(0, (byte) 3);
                 OpenGL.glViewport(0, 0, 256, 256);
@@ -130,7 +130,7 @@ final class GlWaterShader extends NodeSub5 {
                 OpenGL.glEnd();
             }
             aClass206_8825.method1503(1, (byte) 3);
-            this.aHa_Sub2_6618.method3771((byte) -100, aClass258_Sub3_8835);
+            this.aHa_Sub2_6618.bindTexture((byte) -100, aClass258_Sub3_8835);
             long l = aClass337_8822.aLong4178;
             OpenGL.glUseProgramObjectARB(l);
             OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l, "baseTex"), 0);
@@ -146,7 +146,7 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glVertex2i(0, 1);
             OpenGL.glEnd();
             aClass206_8825.method1503(0, (byte) 3);
-            this.aHa_Sub2_6618.method3771((byte) -114, aClass258_Sub3_8830);
+            this.aHa_Sub2_6618.bindTexture((byte) -114, aClass258_Sub3_8830);
             OpenGL.glUniform3fARB(OpenGL.glGetUniformLocationARB(l, "step"), 0.0F, 0.00390625F, 0.0F);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, 0.0F);
@@ -169,9 +169,9 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l_7_, "bloomTex"), 1);
             OpenGL.glUniform3fARB(OpenGL.glGetUniformLocationARB(l_7_, "params"), DefinitionSub13.aFloat9204, RadixText.aFloat6120, 0.0F);
             this.aHa_Sub2_6618.method3738(-15039, 1);
-            this.aHa_Sub2_6618.method3771((byte) -99, aClass258_Sub3_8835);
+            this.aHa_Sub2_6618.bindTexture((byte) -99, aClass258_Sub3_8835);
             this.aHa_Sub2_6618.method3738(-15039, 0);
-            this.aHa_Sub2_6618.method3771((byte) -82, class258_sub3_2_);
+            this.aHa_Sub2_6618.bindTexture((byte) -82, class258_sub3_2_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("rda.H(" + (class258_sub3 != null ? "{...}" : "null") + ',' + (class258_sub3_2_ != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ')'));
         }

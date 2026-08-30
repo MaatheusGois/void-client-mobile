@@ -57,9 +57,9 @@ final class DisplayModeManagerContainer147
                 }
             }
             class348_sub9.anInt6678 = (class348_sub9.aNpc_6691.x);
-            class348_sub9.anInt6698 = ((class348_sub9.aNpc_6691.x) - -(class348_sub9.aNpc_6691.method2436((byte) 55) << 8));
+            class348_sub9.anInt6698 = ((class348_sub9.aNpc_6691.x) - -(class348_sub9.aNpc_6691.getSize((byte) 55) << 8));
             class348_sub9.anInt6689 = (class348_sub9.aNpc_6691.y);
-            class348_sub9.anInt6687 = ((class348_sub9.aNpc_6691.y) + (class348_sub9.aNpc_6691.method2436((byte) 92) << 8));
+            class348_sub9.anInt6687 = ((class348_sub9.aNpc_6691.y) + (class348_sub9.aNpc_6691.getSize((byte) 92) << 8));
             TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         }
         SceneNode class348_sub9 = ((SceneNode) HashNodeSub16Sub2.aClass356_10465.first(0));
@@ -99,9 +99,9 @@ final class DisplayModeManagerContainer147
                 }
             }
             class348_sub9.anInt6678 = (class348_sub9.aPlayer_6679.x);
-            class348_sub9.anInt6698 = ((class348_sub9.aPlayer_6679.x) + (class348_sub9.aPlayer_6679.method2436((byte) 123) << 8));
+            class348_sub9.anInt6698 = ((class348_sub9.aPlayer_6679.x) + (class348_sub9.aPlayer_6679.getSize((byte) 123) << 8));
             class348_sub9.anInt6689 = (class348_sub9.aPlayer_6679.y);
-            class348_sub9.anInt6687 = ((class348_sub9.aPlayer_6679.y) - -(class348_sub9.aPlayer_6679.method2436((byte) 126) << 8));
+            class348_sub9.anInt6687 = ((class348_sub9.aPlayer_6679.y) - -(class348_sub9.aPlayer_6679.getSize((byte) 126) << 8));
             TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         }
     }

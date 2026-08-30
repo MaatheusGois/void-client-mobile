@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer23
                             npc.method2434((byte) 120, npc.definition.anInt1399);
                             npc.anInt10310 = (npc.definition.anInt1329 << 3);
                             npc.method2435((byte) -108, (npc.definition.aByte1355 - -4 & ~0x631ffff8) << 11, true);
-                            npc.method2444(i_11_, true, i_10_, 123, npc.method2436((byte) 54), i_7_);
+                            npc.method2444(i_11_, true, i_10_, 123, npc.getSize((byte) 54), i_7_);
                         }
                     }
                 }

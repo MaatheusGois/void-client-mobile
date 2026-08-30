@@ -67,8 +67,8 @@ final class DisplayModeManagerContainer369
                     client.aClass262_5185.addTail(class348_sub9, i + -979210269);
                 } else if (player != null) {
                     class348_sub9.aPlayer_6679 = player;
-                    class348_sub9.anInt6698 = (player.method2436((byte) 74) + i_4_) << 9;
-                    class348_sub9.anInt6687 = (player.method2436((byte) 86) + i_3_) << 9;
+                    class348_sub9.anInt6698 = (player.getSize((byte) 74) + i_4_) << 9;
+                    class348_sub9.anInt6687 = (player.getSize((byte) 86) + i_3_) << 9;
                     class348_sub9.anInt6685 = Component168.method2357(-1, player);
                     class348_sub9.anInt6681 = 256;
                     class348_sub9.anInt6694 = (player.anInt10553 << 9);

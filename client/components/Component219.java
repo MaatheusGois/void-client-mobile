@@ -257,7 +257,7 @@ final class Component219
             }
         }
         if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) != 0) {
-            Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
+            Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
             SoftwareFallbackShader.method3553(false, (byte) 120, 0);
         }
         DisplayModeManagerContainer389.method243(37);

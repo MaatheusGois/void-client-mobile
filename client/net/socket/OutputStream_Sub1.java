@@ -24,7 +24,7 @@ final class OutputStream_Sub1 extends OutputStream {
             NodeSub8.toolkit.method3675(i_0_, (byte) -125, i_1_, i_3_, i_2_, -16777216);
         else {
             DisplayModeManagerContainer341.anInt6006++;
-            if (Component72.localPlayer != null && Component253.anInt3203 == (Component72.localPlayer.x + -(256 * Component72.localPlayer.method2436((byte) 90)) - -256) >> 9 && Component263.anInt1548 == (Component72.localPlayer.y + 256 + -(256 * Component72.localPlayer.method2436((byte) 112))) >> 9) {
+            if (Component72.localPlayer != null && Component253.anInt3203 == (Component72.localPlayer.x + -(256 * Component72.localPlayer.getSize((byte) 90)) - -256) >> 9 && Component263.anInt1548 == (Component72.localPlayer.y + 256 + -(256 * Component72.localPlayer.getSize((byte) 112))) >> 9) {
                 Component263.anInt1548 = -1;
                 Component253.anInt3203 = -1;
                 Component264.method2264(false);

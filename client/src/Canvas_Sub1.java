@@ -321,9 +321,9 @@ final class Canvas_Sub1 extends Canvas {
                 DisplayModeManagerContainer273.method1131(99);
                 if (RSACipher.aFrame4904 != null && DefinitionSub8.aClass238_9165 != null && Component49.clientState == 11) {
                     Component48.anInt4335++;
-                    ParticleSystem class348_sub47 = ParticleShader.method2148(DisplayModeManagerContainer363.aClass351_4094, (DisplayModeManagerContainer64.aClass77_9029), i ^ ~0x55);
+                    ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer363.aClass351_4094, (DisplayModeManagerContainer64.aClass77_9029), i ^ ~0x55);
                     class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 108, 1057001181);
-                    HashNodeSub14.method3243(-122, class348_sub47);
+                    HashNodeSub14.enqueueOutboundPacket(-122, class348_sub47);
                 }
                 if (Component37.anInt3931 == 0) {
                     int i_33_ = ((GraphicsToolkit.anInt4581 + -(AbstractShaderSub4.anInt7319 >> 4)) / 8);
@@ -343,8 +343,8 @@ final class Canvas_Sub1 extends Canvas {
                     if (Component49.clientState != 8) {
                         Buffer.setClientState(2, 10);
                         if (DefinitionSub8.aClass238_9165 != null) {
-                            ParticleSystem class348_sub47 = ParticleShader.method2148((CacheFileStore.aClass351_4223), (DisplayModeManagerContainer64.aClass77_9029), -106);
-                            HashNodeSub14.method3243(127, class348_sub47);
+                            ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((CacheFileStore.aClass351_4223), (DisplayModeManagerContainer64.aClass77_9029), -106);
+                            HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
                         }
                     } else Buffer.setClientState(2, 7);
                 } else Buffer.setClientState(i ^ 0x2, 3);

@@ -32,7 +32,7 @@ class GlTexture extends AbstractGlTexture {
         anInt8545 = -1;
         this.anInt8547 = i_1_;
         this.anInt8551 = i_2_;
-        this.aHa_Sub2_4851.method3771((byte) -111, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -111, this);
         OpenGL.glTexImage2Dub(this.anInt4849, 0, this.anInt4858, i_1_, i_2_, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
         this.method1957(9728, true);
     }
@@ -51,7 +51,7 @@ class GlTexture extends AbstractGlTexture {
         try {
             this.anInt8547 = i_7_;
             this.anInt8551 = i_8_;
-            this.aHa_Sub2_4851.method3771((byte) -91, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -91, this);
             if (bool && this.anInt4849 != 34037) {
                 Component210.method551(i_7_, i_9_, i, fs, 0, i_8_, i_6_);
                 this.method1955(true, (byte) -123);
@@ -78,7 +78,7 @@ class GlTexture extends AbstractGlTexture {
             }
             is = is_16_;
         }
-        this.aHa_Sub2_4851.method3771((byte) -80, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -80, this);
         if (i_13_ != i_15_) OpenGL.glPixelStorei(3314, i_15_);
         OpenGL.glTexSubImage2Di(this.anInt4849, 0, i_14_, i_10_, i_13_, i, 32993, (this.aHa_Sub2_4851.anInt7812), is, i_11_);
         if (i_13_ != i_15_) OpenGL.glPixelStorei(3314, 0);
@@ -101,7 +101,7 @@ class GlTexture extends AbstractGlTexture {
                 }
                 is = is_27_;
             }
-            this.aHa_Sub2_4851.method3771((byte) -79, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -79, this);
             if (this.anInt4849 == 34037 || !bool || i_24_ != 0 || i_25_ != 0) {
                 OpenGL.glPixelStorei(3314, i_24_);
                 OpenGL.glTexImage2Di(this.anInt4849, 0, this.anInt4858, this.anInt8547, this.anInt8551, 0, 32993, this.aHa_Sub2_4851.anInt7812, is, 4 * i_25_);
@@ -133,7 +133,7 @@ class GlTexture extends AbstractGlTexture {
                 }
                 is = is_37_;
             }
-            this.aHa_Sub2_4851.method3771((byte) -84, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -84, this);
             OpenGL.glPixelStorei(3317, 1);
             if (!bool || this.anInt4849 == 34037) {
                 OpenGL.glTexImage2Dub(this.anInt4849, 0, this.anInt4858, this.anInt8547, this.anInt8551, 0, i_35_, 5121, is, 0);
@@ -153,7 +153,7 @@ class GlTexture extends AbstractGlTexture {
         anInt8540++;
         if (i != 10243) method1966(-20, 83, 1, -22, (byte) -31, 74, -57, 109, -102);
         if (this.anInt4849 == 3553) {
-            this.aHa_Sub2_4851.method3771((byte) -102, this);
+            this.aHa_Sub2_4851.bindTexture((byte) -102, this);
             OpenGL.glTexParameteri(this.anInt4849, 10242, bool_42_ ? 10497 : 33071);
             OpenGL.glTexParameteri(this.anInt4849, 10243, !bool ? 33071 : 10497);
         }
@@ -168,7 +168,7 @@ class GlTexture extends AbstractGlTexture {
     final void method1967(int i, int i_51_, int i_52_, int i_53_, int i_54_, byte i_55_, int i_56_) {
         anInt8544++;
         int i_57_ = (this.aHa_Sub2_4851.anInt7641 + (-i_52_ - i_51_));
-        this.aHa_Sub2_4851.method3771((byte) -100, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -100, this);
         OpenGL.glCopyTexSubImage2D(this.anInt4849, 0, i, -i_51_ - (i_53_ - (this.anInt8551)), i_54_, i_57_, i_56_, i_51_);
         if (i_55_ != -120) method1965(true, true, -57);
         OpenGL.glFlush();
@@ -225,7 +225,7 @@ class GlTexture extends AbstractGlTexture {
             }
             is = is_71_;
         }
-        this.aHa_Sub2_4851.method3771((byte) -102, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -102, this);
         OpenGL.glPixelStorei(3317, 1);
         if (i_62_ != i_63_) OpenGL.glPixelStorei(3314, i_63_);
         OpenGL.glTexSubImage2Dub(this.anInt4849, 0, i, i_61_, i_62_, i_64_, i_65_, 5121, is, i_67_);
@@ -240,7 +240,7 @@ class GlTexture extends AbstractGlTexture {
         this.anInt8547 = i_79_;
         this.anInt8551 = i_80_;
         int i_81_ = (this.aHa_Sub2_4851.anInt7641 + (-i_78_ + -i_80_));
-        this.aHa_Sub2_4851.method3771((byte) -111, this);
+        this.aHa_Sub2_4851.bindTexture((byte) -111, this);
         OpenGL.glCopyTexImage2D(this.anInt4849, 0, this.anInt4858, i_77_, i_81_, i_79_, i_80_, 0);
         this.method1957(9728, true);
     }

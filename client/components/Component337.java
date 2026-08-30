@@ -29,7 +29,7 @@ final class Component337
         class348_sub47.aClass348_Sub49_Sub2_7116.offset += 7;
         class348_sub47.aClass348_Sub49_Sub2_7116.xteaEncrypt(i_1_, true, is, class348_sub47.aClass348_Sub49_Sub2_7116.offset);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthShort(1809639944, -i_0_ + (class348_sub47.aClass348_Sub49_Sub2_7116.offset));
-        HashNodeSub14.method3243(118, class348_sub47);
+        HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
         if (i <= 99) hashString(null, 70);
         AbstractShaderSub2.anInt7297 = 1;
         Component48.anInt4337 = -3;

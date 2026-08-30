@@ -54,7 +54,7 @@ final class Component377
                 class348_sub47.aClass348_Sub49_Sub2_7116.offset += 7;
                 class348_sub47.aClass348_Sub49_Sub2_7116.xteaEncrypt(i_4_, true, is, (class348_sub47.aClass348_Sub49_Sub2_7116.offset));
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthShort(1809639944, (class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_3_));
-                HashNodeSub14.method3243(2, class348_sub47);
+                HashNodeSub14.enqueueOutboundPacket(2, class348_sub47);
                 Component48.anInt4337 = -3;
                 AbstractShaderSub2.anInt7297 = 1;
                 RequestProcessor.anInt2264 = 0;

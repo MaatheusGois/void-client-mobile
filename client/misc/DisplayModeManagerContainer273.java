@@ -4176,8 +4176,8 @@ final class DisplayModeManagerContainer273
         DummyClass.aBoolean10174 = true;
         RenderableSub6.aShortArray6428 = Request.aShortArray6889 = HashNodeSub3.aShortArray9502 = Component226.aShortArray4172 = new short[256];
         Component323.aString5882 = FriendsIgnoreList.aClass274_3509.getLocalized(ObjectDeserializer.languageId, 544);
-        Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub14_7264, Component192.aClass348_Sub51_3959.aClass239_Sub14_7250.method1778(i + -32350));
-        Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub27_7261, Component192.aClass348_Sub51_3959.aClass239_Sub27_7255.method1840(-32350));
+        Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub14_7264, Component192.aClass348_Sub51_3959.aClass239_Sub14_7250.method1778(i + -32350));
+        Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub27_7261, Component192.aClass348_Sub51_3959.aClass239_Sub27_7255.method1840(-32350));
         DisplayModeManagerContainer136.anInt4718 = 0;
         DefinitionSub39.method3153(0);
         ShaderProgramSub2.method2145(-24498);

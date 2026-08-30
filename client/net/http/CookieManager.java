@@ -29,7 +29,7 @@ final class CookieManager extends ShaderProgram {
             if (aBoolean6301) {
                 aClass61_6302.callDisplayList('\001', 28666);
                 this.aHa_Sub2_3684.method3738(-15039, 1);
-                this.aHa_Sub2_3684.method3771((byte) -92, null);
+                this.aHa_Sub2_3684.bindTexture((byte) -92, null);
                 this.aHa_Sub2_3684.method3738(-15039, 0);
             } else this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
             anInt6297++;
@@ -54,7 +54,7 @@ final class CookieManager extends ShaderProgram {
 
     final void method2140(AbstractGlTexture class258, byte i, int i_1_) {
         anInt6303++;
-        this.aHa_Sub2_3684.method3771((byte) -86, class258);
+        this.aHa_Sub2_3684.bindTexture((byte) -86, class258);
         this.aHa_Sub2_3684.method3761(0, i_1_);
         if (i >= -89) method2172(12);
     }
@@ -139,7 +139,7 @@ final class CookieManager extends ShaderProgram {
         if (aClass61_6302 != null && class258_sub2 != null && bool) {
             aClass61_6302.callDisplayList('\0', 28666);
             this.aHa_Sub2_3684.method3738(-15039, 1);
-            this.aHa_Sub2_3684.method3771((byte) -77, class258_sub2);
+            this.aHa_Sub2_3684.bindTexture((byte) -77, class258_sub2);
             OpenGL.glMatrixMode(5890);
             OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.method945(true), 0);
             OpenGL.glMatrixMode(5888);

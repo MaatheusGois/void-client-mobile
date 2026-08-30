@@ -161,8 +161,8 @@ final class FriendsIgnoreList {
         if (i > -4) clearStatics(-6);
         anInt3484++;
         DisplayModeManagerContainer89.anInt8374++;
-        ParticleSystem class348_sub47 = ParticleShader.method2148(NodeSub34.aClass351_6970, DisplayModeManagerContainer64.aClass77_9029, -109);
-        HashNodeSub14.method3243(37, class348_sub47);
+        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(NodeSub34.aClass351_6970, DisplayModeManagerContainer64.aClass77_9029, -109);
+        HashNodeSub14.enqueueOutboundPacket(37, class348_sub47);
         for (NodeSub41 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0); class348_sub41 != null; class348_sub41 = (NodeSub41) Component15.aClass356_4915.next(0)) {
             if (!class348_sub41.isLinked((byte) 4)) {
                 class348_sub41 = (NodeSub41) Component15.aClass356_4915.first(0);

@@ -17,9 +17,9 @@ final class DisplayModeManagerContainer165
         if (i > -61) aClass114_3842 = null;
         anInt3843++;
         if (bool) {
-            ParticleSystem class348_sub47 = ParticleShader.method2148(Component41.aClass351_3150, DisplayModeManagerContainer64.aClass77_9029, -126);
+            ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component41.aClass351_3150, DisplayModeManagerContainer64.aClass77_9029, -126);
             class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_0_);
-            HashNodeSub14.method3243(42, class348_sub47);
+            HashNodeSub14.enqueueOutboundPacket(42, class348_sub47);
         } else ClientScriptExecutor.runScript(Component258.aClass273_1966, i_0_, -1);
     }
 

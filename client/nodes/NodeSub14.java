@@ -57,11 +57,11 @@ final class NodeSub14
         anInt6761++;
         ParticleSystem class348_sub47 = null;
         if (i_4_ == 0) {
-            class348_sub47 = ParticleShader.method2148(DisplayModeManagerContainer51.aClass351_2495, DisplayModeManagerContainer64.aClass77_9029, -100);
+            class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer51.aClass351_2495, DisplayModeManagerContainer64.aClass77_9029, -100);
             NodeSub46.anInt7112++;
         }
         if (i_4_ == 1) {
-            class348_sub47 = ParticleShader.method2148(Component281.aClass351_3825, DisplayModeManagerContainer64.aClass77_9029, -93);
+            class348_sub47 = ParticleShader.createOutboundPacket(Component281.aClass351_3825, DisplayModeManagerContainer64.aClass77_9029, -93);
             DisplayModeManagerContainer249.anInt4665++;
         }
         class348_sub47.aClass348_Sub49_Sub2_7116.writeShortLittle(i + Component330.regionTileY, (byte) 3);

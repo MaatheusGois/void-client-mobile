@@ -325,7 +325,11 @@ final class NodeSub51
         return aClass199_7221;
     }
 
-    final void method3429(byte i, Component339 class239, int i_7_) {
+    /**
+     * Apply one preference option ({@code class239.method1718}) then commit
+     * ({@code method3426}). Called from UI / settings change paths.
+     */
+    final void applyPreference(byte i, Component339 class239, int i_7_) {
         try {
             anInt7239++;
             if (i != 74) method3425(-10);

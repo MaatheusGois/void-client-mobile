@@ -27,7 +27,7 @@ final class DefinitionSub33
         if (!bool) NodeSub8.toolkit.method3710();
         else if (!NodeSub8.toolkit.method3671()) bool = false;
         if (bool_0_ == bool) return false;
-        Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243), bool ? 1 : 0);
+        Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243), bool ? 1 : 0);
         DisplayModeManagerContainer389.method243(37);
         return true;
     }

@@ -75,10 +75,10 @@ final class Component362
         if (bool) {
             int i_4_ = ((class318_sub1_sub3_sub3.anInt10300) + -(class318_sub1_sub3_sub3.anInt10239));
             int i_5_ = (OpenGlShader.clientCycle + -(class318_sub1_sub3_sub3.anInt10239));
-            int i_6_ = ((class318_sub1_sub3_sub3.anInt10293) * 512 + 256 * class318_sub1_sub3_sub3.method2436((byte) 90));
-            int i_7_ = (512 * (class318_sub1_sub3_sub3.anInt10314) - -(class318_sub1_sub3_sub3.method2436((byte) 44) * 256));
-            int i_8_ = (512 * (class318_sub1_sub3_sub3.anInt10241) + 256 * class318_sub1_sub3_sub3.method2436((byte) 98));
-            int i_9_ = ((class318_sub1_sub3_sub3.anInt10288) * 512 - -(class318_sub1_sub3_sub3.method2436((byte) 76) * 256));
+            int i_6_ = ((class318_sub1_sub3_sub3.anInt10293) * 512 + 256 * class318_sub1_sub3_sub3.getSize((byte) 90));
+            int i_7_ = (512 * (class318_sub1_sub3_sub3.anInt10314) - -(class318_sub1_sub3_sub3.getSize((byte) 44) * 256));
+            int i_8_ = (512 * (class318_sub1_sub3_sub3.anInt10241) + 256 * class318_sub1_sub3_sub3.getSize((byte) 98));
+            int i_9_ = ((class318_sub1_sub3_sub3.anInt10288) * 512 - -(class318_sub1_sub3_sub3.getSize((byte) 76) * 256));
             class318_sub1_sub3_sub3.x = (i_8_ * i_5_ + (i_4_ - i_5_) * i_6_) / i_4_;
             class318_sub1_sub3_sub3.y = (i_7_ * (-i_5_ + i_4_) - -(i_5_ * i_9_)) / i_4_;
         }

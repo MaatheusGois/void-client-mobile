@@ -32,7 +32,7 @@ final class LoadingManager {
         if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(i + -3690) == 0) {
             for (int i_0_ = 0; (i_0_ < HashNodeSub19.anInt9699); i_0_++) {
                 if (DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 31) == 115 || DefinitionGroup.anInterface6Array9534[i_0_].getKeyChar((byte) 71) == 83) {
-                    Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
+                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
                     DisplayModeManagerContainer42.aBoolean3847 = true;
                     break;
                 }
@@ -271,16 +271,16 @@ final class LoadingManager {
             ShaderProgramSub7.aClass45_6277 = null;
             GlToolkitSub3.method3886(i + 28556);
             DisplayModeManagerContainer64.aBoolean9038 = Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1;
-            Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
-            if (DisplayModeManagerContainer64.aBoolean9038) Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
+            Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
+            if (DisplayModeManagerContainer64.aBoolean9038) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
             else if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.aBoolean6113 && DefinitionSub20.aClass348_Sub4_9264.anInt6609 < 512 && DefinitionSub20.aClass348_Sub4_9264.anInt6609 != 0)
-                Component192.aClass348_Sub51_3959.method3429((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
+                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
             DisplayModeManagerContainer389.method243(i ^ ~0x6fd6);
             if (DisplayModeManagerContainer64.aBoolean9038) SoftwareFallbackShader.method3553(false, (byte) 108, 0);
             else SoftwareFallbackShader.method3553(false, (byte) 102, Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.method1829(-32350));
             // Default to fullscreen 800x600 — scales up cleanly on phone/tablet.
-            Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7227, 3);
-            if (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254 != null) Component192.aClass348_Sub51_3959.method3429((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7254, 3);
+            Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7227, 3);
+            if (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254 != null) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7254, 3);
             LogicError.method830(3, 800, (byte) 102, false, 600);
             DisplayModeManagerContainer292.method1311(5139, NodeSub8.toolkit);
             Component27.method3568(NodeSub8.toolkit, i ^ ~0x6ff7);

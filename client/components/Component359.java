@@ -23,9 +23,9 @@ final class Component359
         if (i < 44) method1868((byte) -81, null);
         anInt3155++;
         TheoraVideoPlayer.anInt1498++;
-        ParticleSystem class348_sub47 = ParticleShader.method2148(DisplayModeManagerContainer28.aClass351_8724, DisplayModeManagerContainer64.aClass77_9029, -99);
+        ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer28.aClass351_8724, DisplayModeManagerContainer64.aClass77_9029, -99);
         class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-        HashNodeSub14.method3243(118, class348_sub47);
+        HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
     }
 
     protected final void finalize() throws Throwable {
