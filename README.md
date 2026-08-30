@@ -33,6 +33,11 @@ https://github.com/user-attachments/assets/6ce421c3-5856-49f1-9daa-08f2341a6bbc
 
 https://github.com/user-attachments/assets/379d17f0-9077-4746-84fc-c9c4796f1507
 
+https://github.com/user-attachments/assets/bf26cd8f-5d09-42ab-b063-3d21a18ae926
+
+https://github.com/user-attachments/assets/2ae3b176-a325-4cb9-9b4d-3c74d764bc92
+
+
 ## What's new
 
 ### Apple TV
