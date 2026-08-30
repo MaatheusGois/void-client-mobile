@@ -140,7 +140,7 @@ final class TheoraVideoPlayer {
                         else class348_sub49_sub2.writeByte(false, DisplayModeManagerContainer109.aClass29_2344.anInt400);
                         class348_sub49_sub2.writeShort((byte) 107, 0);
                         int i_6_ = class348_sub49_sub2.offset;
-                        class348_sub49_sub2.writeInt((byte) 117, 634);
+                        class348_sub49_sub2.writeInt((byte) 117, ProtocolInfo.revision());
                         class348_sub49_sub2.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 92);
                         int i_7_ = class348_sub49_sub2.offset;
                         class348_sub49_sub2.writeString((byte) -5, DisplayModeManagerContainer282.username);
@@ -171,7 +171,7 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeByte(false, DisplayModeManagerContainer109.aClass29_2345.anInt400);
                         class348_sub49_sub2.writeShort((byte) 107, 0);
                         int i_4_ = class348_sub49_sub2.offset;
-                        class348_sub49_sub2.writeInt((byte) 119, 634);
+                        class348_sub49_sub2.writeInt((byte) 119, ProtocolInfo.revision());
                         class348_sub49_sub2.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, -109);
                         int i_5_ = class348_sub49_sub2.offset;
                         class348_sub49_sub2.writeString((byte) -5, DisplayModeManagerContainer282.username);

@@ -77,7 +77,7 @@ public final class client extends Applet_Sub1 {
                     Component321.aClass202_2589 = new Connection((Socket) Shader.aClass144_114.result, OggUrlStream.aClass297_8992, 25000);
                     Buffer class348_sub49 = new Buffer(5);
                     class348_sub49.writeByte(false, (DisplayModeManagerContainer109.aClass29_2341.anInt400));
-                    class348_sub49.writeInt((byte) 103, 634);
+                    class348_sub49.writeInt((byte) 103, ProtocolInfo.revision());
                     Component321.aClass202_2589.write((class348_sub49.payload), 5, 0, -1);
                     DisplayModeManagerContainer32.anInt846++;
                     CacheStore.aLong667 = Component240.currentTimeMillis(-70);
@@ -925,7 +925,7 @@ public final class client extends Applet_Sub1 {
                 Component19.aString8605 = null;
                 client var_client = new client();
                 NpcComposition.aClient1367 = var_client;
-                var_client.startFromFrame(Component53.currentBuildType.getId(0) + 32, 1024, false, 634, 37, (PacketReader.currentGameType.domain), 23499, 768);
+                var_client.startFromFrame(Component53.currentBuildType.getId(0) + 32, 1024, false, ProtocolInfo.revision(), 37, (PacketReader.currentGameType.domain), 23499, 768);
                 RSACipher.aFrame4904.setLocation(40, 40);
             } catch (Exception exception) {
                 ClientErrorReporter.reportError(null, exception, 15004);
@@ -1043,7 +1043,7 @@ public final class client extends Applet_Sub1 {
                 GlToolkitSub2.canvasHeight = 480;
             }
             NpcComposition.aClient1367 = this;
-            this.startFromApplet(DisplayModeManagerContainer23.canvasWidth, 634, GlToolkitSub2.canvasHeight, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
+            this.startFromApplet(DisplayModeManagerContainer23.canvasWidth, ProtocolInfo.revision(), GlToolkitSub2.canvasHeight, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
         }
     }
 

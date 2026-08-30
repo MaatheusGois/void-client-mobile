@@ -115,6 +115,6 @@ final class DisplayModeManagerContainer254
 
     public DisplayModeManagerContainer254() {
         this.anInt2138 = Loader.port;
-        this.anInt2148 = 43594;
+        this.anInt2148 = ProtocolInfo.secondaryPort();
     }
 }

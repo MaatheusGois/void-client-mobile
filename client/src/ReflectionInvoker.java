@@ -438,7 +438,7 @@ final class ReflectionInvoker implements Runnable {
         this.randomDat = null;
         this.useDirectDraw = false;
         taskHead = null;
-        gameName = string;
+        gameName = ProtocolInfo.cacheNamespace(string);
         this.signed = bool;
         javaVersion = "1.1";
         javaVendor = "Unknown";
@@ -492,7 +492,7 @@ final class ReflectionInvoker implements Runnable {
         }
         CacheDirectory.init((byte) -121, gameName, cacheId);
         if (this.signed) {
-            this.randomDat = new RandomAccessFileReader(CacheDirectory.resolveCacheFile(0, cacheId, "random.dat", null), "rw", 25L);
+            this.randomDat = new RandomAccessFileReader(CacheDirectory.resolveCacheFile(0, cacheId, "random.dat", gameName), "rw", 25L);
             this.cacheDat2 = new RandomAccessFileReader(CacheDirectory.getCacheFile(-2, "main_file_cache.dat2"), "rw", 209715200L);
             this.cacheIdx255 = new RandomAccessFileReader(CacheDirectory.getCacheFile(-2, "main_file_cache.idx255"), "rw", 1048576L);
             this.cacheIndexFiles = new RandomAccessFileReader[i_22_];

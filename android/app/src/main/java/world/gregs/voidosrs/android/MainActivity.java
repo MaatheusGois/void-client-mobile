@@ -1112,6 +1112,10 @@ public class MainActivity extends Activity {
         return null;
     }
 
+    private static int configuredServerPort() {
+        return ServerPrefs.gamePort();
+    }
+
     private static boolean isEmulator() {
         String fingerprint = Build.FINGERPRINT;
         String model = Build.MODEL;
@@ -1135,17 +1139,18 @@ public class MainActivity extends Activity {
         if (server == null) {
             return;
         }
+        final int port = configuredServerPort();
         clientStarted = true;
         AwtHost.setDisplaySize(width, height);
         new Thread(() -> {
             try {
                 Class<?> loaderCl = Class.forName("Loader");
-                Log.i("void-osrs", "boot server=" + server + ":43594"
+                Log.i("void-osrs", "boot server=" + server + ":" + port
                         + " emu=" + isEmulator()
                         + " override=" + readServerOverride());
-                hud("boot " + server + ":43594");
+                hud("boot " + server + ":" + port);
                 loaderCl.getField("address").set(null, server);
-                loaderCl.getField("port").setInt(null, 43594);
+                loaderCl.getField("port").setInt(null, port);
                 loaderCl.getField("debug").set(null, true);
                 loaderCl.getField("trace").set(null, true);
                 Object loader = loaderCl.getDeclaredConstructor().newInstance();

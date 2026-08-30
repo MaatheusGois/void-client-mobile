@@ -486,7 +486,7 @@ final class BuildInfo {
                         }
                     }
                 }
-                Component49.aClass324_4684.drawTextRightAligned("Build: 634", consoleH + (i_36_ + -20), -1, (Component236.canvasWidth + i_35_ + -25), -121, -16777216);
+                Component49.aClass324_4684.drawTextRightAligned("Build: " + ProtocolInfo.revision(), consoleH + (i_36_ + -20), -1, (Component236.canvasWidth + i_35_ + -25), -121, -16777216);
                 var_ha.KA(i_35_, i_36_, i_35_ - -Component236.canvasWidth, i_36_ - -consoleH);
                 var_ha.method3649((byte) -80, Component236.canvasWidth, -promptH + (consoleH + i_36_), -1, i_35_);
                 NodeList.aClass324_3326.drawText("--> " + AudioMixer.redactConsoleLine((byte) 31, Component126.consoleInput), -1, (i_36_ - (-consoleH + Component27.aClass143_4962.descent) - 1), 10 + i_35_, -16777216, -127);
