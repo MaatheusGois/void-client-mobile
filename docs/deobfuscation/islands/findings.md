@@ -225,13 +225,11 @@ Both methods have one definition and their call sites are limited to
 
 These remain TBD from the top-tokens list:
 
-- `method3494`, `method3493`, `method3738`, `method3850`, `method3850`
+- `method3494`, `method3493`, `method3738`, `method3850`, `method3849`
   (high call-site counts, not yet investigated)
 - `anInt3138` (174 refs, 3xxx range — probably particle count or scan counter)
 - `anInt4592`, `anInt4588` (4xxx range, possibly NPC list / entity array)
 - `anInt9139`, `anInt8983` (9xxx range — usually widgets / interfaces)
-- `anInt1678` (124 refs, in `Component8` — read from `aHa_Sub1_8460.anInt7477`
-  which is the toolkit's **canvasWidth** constant; rename to `canvasWidth`)
 
 **Next session** can pick any of these. Recommended order based on fan-out:
 `anInt3138` → `anInt4592` → `method3493/3494` (likely paired).
