@@ -184,7 +184,7 @@ def main() -> None:
         export_cards(catalog, args.export_dir)
         return
     def handler(request, address, server):
-        Handler(request, address, server, catalog)
+        return Handler(request, address, server, catalog)
 
     with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as server:
         server.daemon_threads = True
