@@ -30,7 +30,7 @@ final class DefinitionSub19
                         NodeSub36 class348_sub36 = new NodeSub36();
                         class348_sub36.aClass46_6989 = class46;
                         class348_sub36.anObjectArray6987 = class46.anObjectArray840;
-                        ClientScriptExecutor.method705(class348_sub36);
+                        ClientScriptExecutor.runHook(class348_sub36);
                     }
                     if (i == 1 && class46.anObjectArray701 != null) {
                         if (class46.childIndex >= 0) {
@@ -40,7 +40,7 @@ final class DefinitionSub19
                         NodeSub36 class348_sub36 = new NodeSub36();
                         class348_sub36.aClass46_6989 = class46;
                         class348_sub36.anObjectArray6987 = class46.anObjectArray701;
-                        ClientScriptExecutor.method705(class348_sub36);
+                        ClientScriptExecutor.runHook(class348_sub36);
                     }
                 }
             }

@@ -60,7 +60,7 @@ final class DisplayModeManagerContainer322
                         class348_sub36.anInt6984 = i_4_;
                         class348_sub36.anObjectArray6987 = (Component156.aClass46_3701.anObjectArray823);
                         class348_sub36.anInt6995 = i_5_;
-                        ClientScriptExecutor.method705(class348_sub36);
+                        ClientScriptExecutor.runHook(class348_sub36);
                     }
                 } else {
                     if (Component189.aBoolean3819) {
@@ -72,7 +72,7 @@ final class DisplayModeManagerContainer322
                             class348_sub36.anObjectArray6987 = (Component156.aClass46_3701.anObjectArray692);
                             class348_sub36.anInt6995 = i_5_;
                             class348_sub36.aClass46_6989 = Component156.aClass46_3701;
-                            ClientScriptExecutor.method705(class348_sub36);
+                            ClientScriptExecutor.runHook(class348_sub36);
                         }
                         if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.getAncestorComponent(Component156.aClass46_3701) != null)) Component245.method173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
                     } else if ((Component203.anInt8770 == 1 || Component203.method2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));

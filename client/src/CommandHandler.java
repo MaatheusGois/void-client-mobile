@@ -498,15 +498,15 @@ final class CommandHandler {
                             }
                         }
                         if (string.startsWith("csprofileclear")) {
-                            ClientScriptExecutor.method706();
+                            ClientScriptExecutor.onReset();
                             return;
                         }
                         if (string.startsWith("csprofileoutputc")) {
-                            ClientScriptExecutor.method715(100, false);
+                            ClientScriptExecutor.onAfterReset(100, false);
                             return;
                         }
                         if (string.startsWith("csprofileoutputt")) {
-                            ClientScriptExecutor.method715(10, true);
+                            ClientScriptExecutor.onAfterReset(10, true);
                             return;
                         }
                         if (string.startsWith("texsize")) {

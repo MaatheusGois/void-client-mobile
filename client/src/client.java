@@ -342,7 +342,7 @@ public final class client extends Applet_Sub1 {
         BrowserUrlOpener.method2871(-65);
         ImageTagText.method1276(i + -199);
         RunescapeInfo.clearStatics((byte) 119);
-        ClientScriptExecutor.method713();
+        ClientScriptExecutor.shutdown();
         StringCache.clearStatics(true);
         Component224.method2055(1);
         Component179.method2990((byte) 125);
@@ -1684,7 +1684,7 @@ public final class client extends Applet_Sub1 {
                 DisplayModeManagerContainer57 class46_106_ = BitmapFont.getComponent(i ^ 0x5a2d8500, class46.parentId);
                 if (class46_106_ == null || class46_106_.children == null || (class46_106_.children.length <= class46.childIndex) || class46 != (class46_106_.children[class46.childIndex])) continue;
             }
-            ClientScriptExecutor.method705(class348_sub36);
+            ClientScriptExecutor.runHook(class348_sub36);
         }
         for (; ; ) {
             NodeSub36 class348_sub36 = ((NodeSub36) Component6.aClass262_4473.peekFirst(i + -104));
@@ -1694,7 +1694,7 @@ public final class client extends Applet_Sub1 {
                 DisplayModeManagerContainer57 class46_107_ = BitmapFont.getComponent(1512932720, class46.parentId);
                 if (class46_107_ == null || class46_107_.children == null || (class46_107_.children.length <= class46.childIndex) || class46 != (class46_107_.children[class46.childIndex])) continue;
             }
-            ClientScriptExecutor.method705(class348_sub36);
+            ClientScriptExecutor.runHook(class348_sub36);
         }
         for (; ; ) {
             NodeSub36 class348_sub36 = ((NodeSub36) NodeSub1Sub2.aClass262_8810.peekFirst(i ^ 0x78));
@@ -1704,7 +1704,7 @@ public final class client extends Applet_Sub1 {
                 DisplayModeManagerContainer57 class46_108_ = BitmapFont.getComponent(1512932720, class46.parentId);
                 if (class46_108_ == null || class46_108_.children == null || (class46_108_.children.length <= class46.childIndex) || class46 != (class46_108_.children[class46.childIndex])) continue;
             }
-            ClientScriptExecutor.method705(class348_sub36);
+            ClientScriptExecutor.runHook(class348_sub36);
         }
         if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);
         if (OpenGlShader.clientCycle % 1500 == 0) ToolbarRefreshDefinition.method3088(9);

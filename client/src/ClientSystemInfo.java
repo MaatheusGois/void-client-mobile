@@ -350,7 +350,7 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer57 class46_27_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_27_ == null || (class46_27_.children) == null || ((class46_27_.children).length <= class46.childIndex) || (class46 != (class46_27_.children[class46.childIndex]))) continue;
                             }
-                            ClientScriptExecutor.method705(class348_sub36);
+                            ClientScriptExecutor.runHook(class348_sub36);
                         }
                         for (; ; ) {
                             NodeSub36 class348_sub36 = ((NodeSub36) Component6.aClass262_4473.peekFirst(8));
@@ -360,7 +360,7 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer57 class46_28_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_28_ == null || (class46_28_.children) == null || (class46.childIndex >= (class46_28_.children).length) || ((class46_28_.children[class46.childIndex]) != class46)) continue;
                             }
-                            ClientScriptExecutor.method705(class348_sub36);
+                            ClientScriptExecutor.runHook(class348_sub36);
                         }
                         for (; ; ) {
                             NodeSub36 class348_sub36 = ((NodeSub36) NodeSub1Sub2.aClass262_8810.peekFirst(i + -11424));
@@ -370,7 +370,7 @@ final class ClientSystemInfo extends Node {
                                 DisplayModeManagerContainer57 class46_29_ = BitmapFont.getComponent(1512932720, (class46.parentId));
                                 if (class46_29_ == null || (class46_29_.children) == null || (class46.childIndex >= (class46_29_.children).length) || ((class46_29_.children[class46.childIndex]) != class46)) continue;
                             }
-                            ClientScriptExecutor.method705(class348_sub36);
+                            ClientScriptExecutor.runHook(class348_sub36);
                         }
                         if (Component39.aClass46_2249 == null) HashNode.anInt7059 = 0;
                         if (Component156.aClass46_3701 != null) DisplayModeManagerContainer322.method2708(-30206);

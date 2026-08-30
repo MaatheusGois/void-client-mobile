@@ -740,7 +740,7 @@ final class PacketReader extends CacheNode {
             Component141.method2397((byte) -127);
             NodeSub36 class348_sub36 = new NodeSub36();
             class348_sub36.anObjectArray6987 = objects;
-            ClientScriptExecutor.method705(class348_sub36);
+            ClientScriptExecutor.runHook(class348_sub36);
             NodeSub3.aClass114_6584 = null;
             return true;
         }

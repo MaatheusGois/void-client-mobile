@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer196
                 NodeSub36 class348_sub36 = new NodeSub36();
                 class348_sub36.aClass46_6989 = class46;
                 class348_sub36.anObjectArray6987 = class46.anObjectArray680;
-                ClientScriptExecutor.method705(class348_sub36);
+                ClientScriptExecutor.runHook(class348_sub36);
             }
             Component281.anInt3829 = -1;
             r.aBoolean9722 = false;

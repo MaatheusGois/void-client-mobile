@@ -94,7 +94,7 @@ final class SceneNode extends Node {
                         class348_sub36.aString6994 = string;
                         class348_sub36.anObjectArray6987 = class46.optionScripts;
                         class348_sub36.anInt6986 = i_8_;
-                        ClientScriptExecutor.method705(class348_sub36);
+                        ClientScriptExecutor.runHook(class348_sub36);
                     }
                     if (Component49.clientState == 10 && client.getComponentSettings(class46).hasOption(-1 + i_8_, false)) {
                         if (i_8_ == 1) {

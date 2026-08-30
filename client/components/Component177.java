@@ -28,7 +28,7 @@ final class Component177
                     class348_sub36.aClass46_6989 = class46;
                     class348_sub36.aClass46_6983 = class46_0_;
                     class348_sub36.anObjectArray6987 = class46.anObjectArray679;
-                    ClientScriptExecutor.method705(class348_sub36);
+                    ClientScriptExecutor.runHook(class348_sub36);
                 }
             }
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(AbstractBuffer.aClass351_4266, DisplayModeManagerContainer64.aClass77_9029, -120);

@@ -120,7 +120,7 @@ final class ClientScriptExecutor {
         }
     }
 
-    private static final void method704(int i, boolean bool) {
+    private static final void executeCommand(int i, boolean bool) {
         if (i < 5100) {
             if (i == 5000) {
                 intStack[intStackPointer++] = NodeBase.anInt7276;
@@ -192,7 +192,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5008) {
                 String string = stringStack[--stringStackPointer];
-                method707(string, i);
+                parseCommand(string, i);
                 return;
             }
             if (i == 5009) {
@@ -2470,15 +2470,15 @@ final class ClientScriptExecutor {
         throw new IllegalStateException(String.valueOf(i));
     }
 
-    static final void method705(NodeSub36 class348_sub36) {
+    static final void runHook(NodeSub36 class348_sub36) {
         executeHook(class348_sub36, 200000);
     }
 
-    static final void method706() {
+    static final void onReset() {
         /* empty */
     }
 
-    private static final void method707(String string, int i) {
+    private static final void parseCommand(String string, int i) {
         if (Component353.anInt2581 != 0 || ((!ParametricDefinition.aBoolean9103 || HeapDumper.aBoolean1915) && !Component308.aBoolean5233)) {
             String string_240_ = string.toLowerCase();
             int i_241_ = 0;
@@ -2604,12 +2604,12 @@ final class ClientScriptExecutor {
         }
     }
 
-    private static final int method708(char c) {
+    private static final int isValidChar(char c) {
         if (Component251.method1693(c, -114)) return 1;
         return 0;
     }
 
-    private static final String method709(int i) {
+    private static final String formatDate(int i) {
         long l = ((long) i + 11745L) * 86400000L;
         aCalendar1160.setTime(new Date(l));
         int i_244_ = aCalendar1160.get(5);
@@ -2618,7 +2618,7 @@ final class ClientScriptExecutor {
         return (i_244_ + "-" + aStringArray1176[i_245_] + "-" + i_246_);
     }
 
-    private static final void method710(int i, boolean bool) {
+    private static final void executeInterfaceCommand(int i, boolean bool) {
         if (i < 300) {
             if (i == 100) {
                 intStackPointer -= 3;
@@ -2692,7 +2692,7 @@ final class ClientScriptExecutor {
             }
             if (i == 202) {
                 int i_256_ = intStack[--intStackPointer];
-                method714(i_256_);
+                sendInterfaceToBack(i_256_);
                 return;
             }
             if (i == 203) {
@@ -4579,7 +4579,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 4104) {
-                    stringStack[stringStackPointer++] = method709(intStack[--intStackPointer]);
+                    stringStack[stringStackPointer++] = formatDate(intStack[--intStackPointer]);
                     return;
                 }
                 if (i == 4105) {
@@ -4646,7 +4646,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 4113) {
                     int i_439_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = method708((char) i_439_);
+                    intStack[intStackPointer++] = isValidChar((char) i_439_);
                     return;
                 }
                 if (i == 4114) {
@@ -5073,10 +5073,10 @@ final class ClientScriptExecutor {
                 } else {
                     boolean bool;
                     bool = is_489_[i_488_] == 1;
-                    if (i_490_ >= 100 && i_490_ < 5000) method710(i_490_, bool);
+                    if (i_490_ >= 100 && i_490_ < 5000) executeInterfaceCommand(i_490_, bool);
                     else {
                         if (i_490_ < 5000 || i_490_ >= 10000) break;
-                        method704(i_490_, bool);
+                        executeCommand(i_490_, bool);
                     }
                 }
             }
@@ -5140,7 +5140,7 @@ final class ClientScriptExecutor {
         }
     }
 
-    public static void method713() {
+    public static void shutdown() {
         anIntArray1164 = null;
         aStringArray1155 = null;
         anIntArray1172 = null;
@@ -5157,7 +5157,7 @@ final class ClientScriptExecutor {
         aClass60_1174 = null;
     }
 
-    private static final void method714(int i) {
+    private static final void sendInterfaceToBack(int i) {
         DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, i);
         if (class46 != null) {
             int i_520_ = i >>> 16;
@@ -5179,7 +5179,7 @@ final class ClientScriptExecutor {
         }
     }
 
-    static final void method715(int i, boolean bool) {
+    static final void onAfterReset(int i, boolean bool) {
         /* empty */
     }
 
