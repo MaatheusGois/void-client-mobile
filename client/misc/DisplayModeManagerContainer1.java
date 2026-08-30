@@ -108,7 +108,7 @@ final class DisplayModeManagerContainer1
 
     final void removeSoft(byte i) {
         synchronized (cache) {
-            cache.method587(-112);
+            cache.purgeSoftReferences(-112);
         }
         int i_11_ = 119 / ((i - 47) / 55);
         anInt3316++;

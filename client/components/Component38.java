@@ -86,7 +86,7 @@ final class Component38
     final void method1410(int i) {
         synchronized (aClass60_2501) {
             if (i != -27995) method1409(-42, 23);
-            aClass60_2501.method587(-85);
+            aClass60_2501.purgeSoftReferences(-85);
         }
         anInt2502++;
     }

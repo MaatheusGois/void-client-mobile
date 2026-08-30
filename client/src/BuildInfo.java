@@ -31,8 +31,8 @@ final class BuildInfo {
         int i_5_ = i_3_;
         int i_6_ = -i_3_;
         int i_7_ = -1;
-        int i_8_ = LogicError.method831(Component22.anInt1745, i_3_ + i_0_, Component27.anInt4960, -108);
-        int i_9_ = LogicError.method831(Component22.anInt1745, -i_3_ + i_0_, Component27.anInt4960, 81);
+        int i_8_ = LogicError.clamp(Component22.anInt1745, i_3_ + i_0_, Component27.anInt4960, -108);
+        int i_9_ = LogicError.clamp(Component22.anInt1745, -i_3_ + i_0_, Component27.anInt4960, 81);
         MenuOpener.fillInts(-27, i_8_, DisplayModeManagerContainer167.anIntArrayArray255[i_2_], i_9_, i_1_);
         while (i_5_ > i_4_) {
             i_7_ += 2;
@@ -43,8 +43,8 @@ final class BuildInfo {
                 int i_10_ = -i_5_ + i_2_;
                 int i_11_ = i_5_ + i_2_;
                 if (i_11_ >= Component72.anInt1910 && PauseTimer.anInt513 >= i_10_) {
-                    int i_12_ = LogicError.method831(Component22.anInt1745, i_4_ + i_0_, Component27.anInt4960, 74);
-                    int i_13_ = LogicError.method831(Component22.anInt1745, i_0_ + -i_4_, Component27.anInt4960, 98);
+                    int i_12_ = LogicError.clamp(Component22.anInt1745, i_4_ + i_0_, Component27.anInt4960, 74);
+                    int i_13_ = LogicError.clamp(Component22.anInt1745, i_0_ + -i_4_, Component27.anInt4960, 98);
                     if (i_11_ <= PauseTimer.anInt513) MenuOpener.fillInts(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_11_]), i_13_, i_1_);
                     if (Component72.anInt1910 <= i_10_) MenuOpener.fillInts(-27, i_12_, (DisplayModeManagerContainer167.anIntArrayArray255[i_10_]), i_13_, i_1_);
                 }
@@ -52,8 +52,8 @@ final class BuildInfo {
             int i_14_ = -++i_4_ + i_2_;
             int i_15_ = i_2_ - -i_4_;
             if (Component72.anInt1910 <= i_15_ && PauseTimer.anInt513 >= i_14_) {
-                int i_16_ = LogicError.method831(Component22.anInt1745, i_0_ + i_5_, Component27.anInt4960, 52);
-                int i_17_ = LogicError.method831(Component22.anInt1745, i_0_ + -i_5_, Component27.anInt4960, -106);
+                int i_16_ = LogicError.clamp(Component22.anInt1745, i_0_ + i_5_, Component27.anInt4960, 52);
+                int i_17_ = LogicError.clamp(Component22.anInt1745, i_0_ + -i_5_, Component27.anInt4960, -106);
                 if (i_15_ <= PauseTimer.anInt513) MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_15_], i_17_, i_1_);
                 if (i_14_ >= Component72.anInt1910) MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_14_], i_17_, i_1_);
             }
@@ -106,7 +106,7 @@ final class BuildInfo {
             class318_sub5.anInt6418 = i_30_;
             class318_sub5.anInt6422 = i_29_;
             class318_sub5.anInt6421 = i + OpenGlShader.clientCycle;
-            if (i_28_ >= -48) method206(-90, -126, -8);
+            if (i_28_ >= -48) blendArgb(-90, -126, -8);
             class318_sub5.aString6416 = string;
             class318_sub5.anInt6415 = i_26_;
             class318_sub5.anInt6420 = i_27_;
@@ -116,7 +116,8 @@ final class BuildInfo {
         }
     }
 
-    static final int method206(int i, int i_31_, int i_32_) {
+    /** Alpha-composite {@code i_31_} over {@code i_32_}. */
+    static final int blendArgb(int i, int i_31_, int i_32_) {
         anInt152++;
         int i_33_ = i_31_ >>> 24;
         int i_34_ = -i_33_ + i_32_;

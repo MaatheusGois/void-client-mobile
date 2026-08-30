@@ -23,7 +23,7 @@ final class Component304
         anInt1140++;
         if (i != -1007) method700(14, 98);
         synchronized (aClass60_1145) {
-            aClass60_1145.method587(i + 883);
+            aClass60_1145.purgeSoftReferences(i + 883);
         }
     }
 

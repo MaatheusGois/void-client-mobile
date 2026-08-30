@@ -46,7 +46,7 @@ final class Component311
     final void method2602(int i) {
         anInt4089++;
         synchronized (aClass60_4087) {
-            aClass60_4087.method587(-91);
+            aClass60_4087.purgeSoftReferences(-91);
             if (i != 0) aClass60_4087 = null;
         }
     }

@@ -58,7 +58,7 @@ final class Component2
 
     static final boolean method195(int i, boolean bool, int i_11_) {
         anInt8364++;
-        Component44 class51 = GradientPreset.aClass263_9195.method2005(0, i_11_);
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, i_11_);
         if (i == 11) i = 10;
         if (bool != false) return false;
         if (i >= 5 && i <= 8) i = 4;
@@ -72,8 +72,8 @@ final class Component2
     static final void method196(boolean bool, int i, int i_13_, int i_14_, int i_15_) {
         if (bool != true) method192(null, -119, 63, 12);
         if (Component72.anInt1910 <= i_15_ && PauseTimer.anInt513 >= i_15_) {
-            i_14_ = LogicError.method831(Component22.anInt1745, i_14_, Component27.anInt4960, 71);
-            i = LogicError.method831(Component22.anInt1745, i, Component27.anInt4960, -87);
+            i_14_ = LogicError.clamp(Component22.anInt1745, i_14_, Component27.anInt4960, 71);
+            i = LogicError.clamp(Component22.anInt1745, i, Component27.anInt4960, -87);
             Model.method223(i, i_13_, i_15_, i_14_, (byte) 39);
         }
         anInt8357++;

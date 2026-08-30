@@ -106,7 +106,7 @@ final class NodeSub3
                 aHa_Sub3_6590.method3814((aS_Sub3_6566.anInt8294 & 0x8) != 0, (0x7 & aS_Sub3_6566.anInt8294) != 0, this.anInt6567, (byte) 48);
                 if (aHa_Sub3_6590.aBoolean8160) aHa_Sub3_6590.EA(2147483647, this.anInt6571, this.anInt6575, this.anInt6569);
                 MatrixSub2 class101_sub2 = aHa_Sub3_6590.method3820(false);
-                class101_sub2.method932(1.0F, 1.0F / this.aFloat6582, 1.0F / this.aFloat6582, (byte) -80);
+                class101_sub2.setScale(1.0F, 1.0F / this.aFloat6582, 1.0F / this.aFloat6582, (byte) -80);
                 aHa_Sub3_6590.method3853(i + -2, Component302.aClass251_6030);
                 aHa_Sub3_6590.method3925(55, anInterface5_Impl1_6577, 1);
                 aHa_Sub3_6590.method3862(i + 30, (aS_Sub3_6566.aClass130_8324));

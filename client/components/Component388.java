@@ -19,7 +19,7 @@ final class Component388
         anInt6077++;
         if (i != 20014) return -71;
         if (!this.preferences.method3425(-109)) {
-            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -107) && WorldNameText.method252(this.preferences.aClass239_Sub25_7271.method1829(-32350), 5126)) return 1;
+            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -107) && WorldNameText.method252(this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350), 5126)) return 1;
             return 0;
         }
         return 2;

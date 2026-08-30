@@ -168,7 +168,7 @@ final class NodeSub51
         if (bool || this.aClass239_Sub2_7228 == null) this.aClass239_Sub2_7228 = new DisplayModeManagerContainer199(this);
         if (bool || this.aClass239_Sub24_7235 == null) this.aClass239_Sub24_7235 = new ColoredText(this);
         if (bool || this.aClass239_Sub25_7251 == null) this.aClass239_Sub25_7251 = new Component256(this);
-        if (bool || this.aClass239_Sub25_7271 == null) this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.method1829(-32350), this);
+        if (bool || this.aClass239_Sub25_7271 == null) this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.getPreferenceValue(-32350), this);
         if (bool || this.aClass239_Sub27_7255 == null) this.aClass239_Sub27_7255 = new Component139(this);
         if (bool || this.aClass239_Sub27_7261 == null) this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.method1840(-32350), this);
         if (bool || this.aClass239_Sub18_7259 == null) this.aClass239_Sub18_7259 = new Component302(this);
@@ -217,7 +217,7 @@ final class NodeSub51
                             this.aClass239_Sub2_7228 = new DisplayModeManagerContainer199(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub24_7235 = new ColoredText(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub25_7251 = new Component256(class348_sub49.readUnsignedByte(255), this);
-                            this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.method1829(-32350), this);
+                            this.aClass239_Sub25_7271 = new Component256(this.aClass239_Sub25_7251.getPreferenceValue(-32350), this);
                             this.aClass239_Sub27_7255 = new Component139(class348_sub49.readUnsignedByte(255), this);
                             this.aClass239_Sub27_7261 = new Component139(this.aClass239_Sub27_7255.method1840(-32350), this);
                             this.aClass239_Sub18_7259 = new Component302(class348_sub49.readUnsignedByte(255), this);
@@ -255,7 +255,7 @@ final class NodeSub51
     final boolean method3425(int i) {
         if (i > -61) method3424(21, null);
         anInt7217++;
-        return this.aClass239_Sub25_7271.method1830((byte) -120) && (this.aClass239_Sub25_7271.method1829(-32350) == 0) && aClass199_7221.method1458(-23688) < 96;
+        return this.aClass239_Sub25_7271.method1830((byte) -120) && (this.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) && aClass199_7221.method1458(-23688) < 96;
     }
 
     private final void method3426(byte i) {
@@ -301,7 +301,7 @@ final class NodeSub51
         class348_sub49.writeByte(false, this.aClass239_Sub21_7270.method1812(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub2_7228.method1726(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub24_7235.method1820(-32350));
-        class348_sub49.writeByte(false, this.aClass239_Sub25_7251.method1829(-32350));
+        class348_sub49.writeByte(false, this.aClass239_Sub25_7251.getPreferenceValue(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub27_7255.method1840(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub18_7259.method1800(-32350));
         class348_sub49.writeByte(false, this.aClass239_Sub8_7227.method1751(i + -32374));

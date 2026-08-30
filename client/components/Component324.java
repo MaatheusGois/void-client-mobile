@@ -55,7 +55,7 @@ final class Component324
 
     final void method1204(int i) {
         synchronized (aClass60_2050) {
-            aClass60_2050.method587(-93);
+            aClass60_2050.purgeSoftReferences(-93);
         }
         anInt2049++;
         if (i != 0) aClass45_2048 = null;

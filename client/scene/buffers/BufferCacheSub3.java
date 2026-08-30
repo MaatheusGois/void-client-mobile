@@ -75,19 +75,19 @@ final class BufferCacheSub3
 
     static final void method4004(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         anInt8292++;
-        int i_10_ = LogicError.method831(PauseTimer.anInt513, i_4_, Component72.anInt1910, -118);
-        int i_11_ = LogicError.method831(PauseTimer.anInt513, i, Component72.anInt1910, 72);
-        int i_12_ = LogicError.method831(Component22.anInt1745, i_8_, Component27.anInt4960, -80);
-        int i_13_ = LogicError.method831(Component22.anInt1745, i_3_, Component27.anInt4960, -101);
-        int i_14_ = LogicError.method831(PauseTimer.anInt513, i_4_ + i_6_, Component72.anInt1910, -110);
-        int i_15_ = LogicError.method831(PauseTimer.anInt513, i + -i_6_, Component72.anInt1910, 28);
+        int i_10_ = LogicError.clamp(PauseTimer.anInt513, i_4_, Component72.anInt1910, -118);
+        int i_11_ = LogicError.clamp(PauseTimer.anInt513, i, Component72.anInt1910, 72);
+        int i_12_ = LogicError.clamp(Component22.anInt1745, i_8_, Component27.anInt4960, -80);
+        int i_13_ = LogicError.clamp(Component22.anInt1745, i_3_, Component27.anInt4960, -101);
+        int i_14_ = LogicError.clamp(PauseTimer.anInt513, i_4_ + i_6_, Component72.anInt1910, -110);
+        int i_15_ = LogicError.clamp(PauseTimer.anInt513, i + -i_6_, Component72.anInt1910, 28);
         if (i_7_ < -33) {
             for (int i_16_ = i_10_; i_16_ < i_14_; i_16_++)
                 MenuOpener.fillInts(-27, i_13_, DisplayModeManagerContainer167.anIntArrayArray255[i_16_], i_12_, i_9_);
             for (int i_17_ = i_11_; i_17_ > i_15_; i_17_--)
                 MenuOpener.fillInts(-27, i_13_, DisplayModeManagerContainer167.anIntArrayArray255[i_17_], i_12_, i_9_);
-            int i_18_ = LogicError.method831(Component22.anInt1745, i_8_ + i_6_, Component27.anInt4960, 114);
-            int i_19_ = LogicError.method831(Component22.anInt1745, -i_6_ + i_3_, Component27.anInt4960, 34);
+            int i_18_ = LogicError.clamp(Component22.anInt1745, i_8_ + i_6_, Component27.anInt4960, 114);
+            int i_19_ = LogicError.clamp(Component22.anInt1745, -i_6_ + i_3_, Component27.anInt4960, 34);
             for (int i_20_ = i_14_; i_20_ <= i_15_; i_20_++) {
                 int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_20_];
                 MenuOpener.fillInts(-27, i_18_, is, i_12_, i_9_);
@@ -548,13 +548,13 @@ final class BufferCacheSub3
                     this.aHa_Sub3_8322.setActiveTexture((byte) 63, (this.aHa_Sub3_8322.anInterface18_8147));
                     this.aHa_Sub3_8322.method3874(ShaderCompilerSub3.aClass229_6519, 116, Component385.aClass229_2207);
                     this.aHa_Sub3_8322.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-                    this.aHa_Sub3_8322.method3885(0, true, DebugPanicSub2.aClass70_8503);
+                    this.aHa_Sub3_8322.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
                     for (Node class348 = aClass262_8286.first(i_151_ + 5); class348 != null; class348 = aClass262_8286.next((byte) 106)) {
                         NodeSub38 class348_sub38 = (NodeSub38) class348;
                         class348_sub38.method3032(i_149_, i_153_, bools, false, i);
                     }
                     this.aHa_Sub3_8322.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-                    this.aHa_Sub3_8322.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+                    this.aHa_Sub3_8322.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
                     this.aHa_Sub3_8322.setActiveTexture((byte) 90, null);
                     this.aHa_Sub3_8322.L(i_165_, i_166_, this.aHa_Sub3_8322.anInt8105);
                 }

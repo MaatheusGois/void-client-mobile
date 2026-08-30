@@ -66,7 +66,7 @@ final class ImageCache {
                 i_10_ += i / 4 * 18;
                 i_11_ += 18 * (i % 4);
                 int i_12_ = -76 / ((i_1_ - 3) / 38);
-                class105.method974(i_10_, i_11_);
+                class105.drawAt(i_10_, i_11_);
                 if (class318_sub1_sub3_sub3 == class318_sub1_sub3_sub3_8_) NodeSub8.toolkit.method3668(18, -1 + i_11_, -256, i_10_ - 1, 18, 57);
                 Component103.method2663(-5590, i_10_ + -1, 18 + i_10_, i_11_ + -1, i_11_ - -18);
                 RenderableSub6 class318_sub6 = AbstractShader.method3529(32564);

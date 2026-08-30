@@ -398,10 +398,10 @@ final class ItemDefinition {
                 if (i_41_ >= 2) is = method1572(-1, -1, is);
             }
             if (i_37_ != 0) method1571(i_37_, is, (byte) 119);
-            var_ha_38_.method3662(36, is, (byte) 94, 0, 36, 32).method974(0, 0);
+            var_ha_38_.method3662(36, is, (byte) 94, 0, 36, 32).drawAt(0, 0);
             if (this.anInt2833 == -1) {
-                if (this.anInt2812 != -1) class105.method974(0, 0);
-            } else class105.method974(0, 0);
+                if (this.anInt2812 != -1) class105.drawAt(0, 0);
+            } else class105.drawAt(0, 0);
             if (i_39_ == 1 || (i_39_ == 2 && (this.anInt2820 == 1 || i != 1) && i != -1)) class324.drawText(method1557(i, i_40_ + -11517), -256, 9, 0, -16777215, i_40_ + -15);
             is = var_ha_38_.ShaderImpl(0, 0, 36, 32);
             for (int i_52_ = 0; i_52_ < is.length; i_52_++) {

@@ -140,11 +140,12 @@ final class Component256
     final void method1716(boolean bool) {
         anInt6108++;
         if (!this.preferences.method3428((byte) -106).method1460(-33)) this.preferenceValue = 0;
-        if (bool != false) method1829(31);
+        if (bool != false) getPreferenceValue(31);
         if (this.preferenceValue < 0 || this.preferenceValue > 5) this.preferenceValue = method1710(20014);
     }
 
-    final int method1829(int i) {
+    /** Return this preference's currently selected value. */
+    final int getPreferenceValue(int i) {
         anInt6107++;
         if (i != -32350) aBoolean6110 = false;
         return this.preferenceValue;

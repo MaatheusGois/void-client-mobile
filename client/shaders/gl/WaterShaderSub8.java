@@ -98,16 +98,16 @@ final class WaterShaderSub8
     }
 
     final void method3520(byte i) {
-        this.aHa_Sub3_4479.method3897(1, -4382);
+        this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
         if (i != 87) method3549(-29, (byte) -5);
         anInt7364++;
         this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 120, Component385.aClass229_2207);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-        this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.method3910((byte) -26, 1);
         this.aHa_Sub3_4479.setActiveTexture((byte) 86, null);
-        this.aHa_Sub3_4479.method3897(0, -4382);
-        this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
+        this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
     }
 
     WaterShaderSub8(GlToolkitSub3 var_ha_Sub3, Component209 class269) {
@@ -127,7 +127,7 @@ final class WaterShaderSub8
     }
 
     final void method3526(int i, int i_17_, int i_18_) {
-        this.aHa_Sub3_4479.method3897(1, -4382);
+        this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
         anInt7354++;
         if (i != 10756) method3527(-26, null, 111);
         if ((0x80 & i_17_) == 0) {
@@ -142,7 +142,7 @@ final class WaterShaderSub8
                 this.aHa_Sub3_4479.setActiveTexture((byte) -114, (aClass269_7353.anInterface18_Impl3Array3459[i_19_]));
             }
         } else this.aHa_Sub3_4479.setActiveTexture((byte) 85, null);
-        this.aHa_Sub3_4479.method3897(0, -4382);
+        this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
     }
 
     final boolean method3530(int i) {
@@ -161,13 +161,13 @@ final class WaterShaderSub8
     final void method3532(int i) {
         if (this.aHa_Sub3_4479.method3877((byte) -126) == 0) {
             MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3848(5);
-            this.aHa_Sub3_4479.method3897(1, i ^ ~0x39a4);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, i ^ ~0x39a4);
             MatrixSub2 class101_sub2_21_ = this.aHa_Sub3_4479.method3820(false);
             class101_sub2_21_.method898(class101_sub2);
             class101_sub2_21_.method914(0.125F, 1.0F, 0, 0.125F);
             class101_sub2_21_.method920(0.0F, false, aFloat7350, 0.0F);
             this.aHa_Sub3_4479.method3853(-32, DefinitionSub38.aClass251_9477);
-            this.aHa_Sub3_4479.method3897(0, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
         }
         anInt7352++;
         if (i != 10425) method3530(16);
@@ -181,14 +181,14 @@ final class WaterShaderSub8
 
     final void method3525(int i, boolean bool) {
         anInt7356++;
-        this.aHa_Sub3_4479.method3897(1, i ^ ~0x2a45);
+        this.aHa_Sub3_4479.setActiveTextureUnit(1, i ^ ~0x2a45);
         this.aHa_Sub3_4479.method3874((ShaderCompilerSub3.aClass229_6519), 111, (DisplayModeManagerContainer64.aClass229_9011));
         this.aHa_Sub3_4479.method3924(true, false, 0, DisplayModeManagerContainer173.aClass70_4247, false);
-        this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer343.aClass70_8737);
+        this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer343.aClass70_8737);
         this.aHa_Sub3_4479.method3910((byte) -26, 0);
-        this.aHa_Sub3_4479.method3897(0, -4382);
+        this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
         this.aHa_Sub3_4479.method3894(-28186, -16777216);
-        this.aHa_Sub3_4479.method3885(0, true, DefinitionSub39.aClass70_9485);
+        this.aHa_Sub3_4479.setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
         method3532(10425);
         if (i != 15192) aShort7355 = (short) 106;
     }

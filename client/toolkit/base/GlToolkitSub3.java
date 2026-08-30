@@ -958,15 +958,15 @@ abstract class GlToolkitSub3
         anInt8017++;
         method3894(-28186, mode);
         setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-        method3885(0, true, DefinitionSub39.aClass70_9485);
+        setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
         method3817(113, colour);
-        this.aClass101_Sub2_8074.method932(1.0F, (float) height, (float) width, (byte) -22);
+        this.aClass101_Sub2_8074.setScale(1.0F, (float) height, (float) width, (byte) -22);
         this.aClass101_Sub2_8074.method891(x, y, 0);
         method3915(0);
         method3926((byte) 67, false);
         method3933(-70);
         method3926((byte) 83, true);
-        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
@@ -1039,13 +1039,13 @@ abstract class GlToolkitSub3
             method3903(false);
             method3894(-28186, i_80_);
             setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-            method3885(0, true, DefinitionSub39.aClass70_9485);
+            setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
             method3817(112, i_81_);
             method3942(5);
             method3926((byte) 45, false);
             method3907(true);
             method3926((byte) 48, true);
-            method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+            setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
             setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         }
     }
@@ -1085,9 +1085,9 @@ abstract class GlToolkitSub3
             method3874(ShaderCompilerSub3.aClass229_6519, 114, ShaderCompilerSub3.aClass229_6519);
             setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
             method3894(-28186, i);
-            this.aClass101_Sub2_8074.method932(0.0F, (float) this.anInt7962, (float) this.anInt7931, (byte) -52);
+            this.aClass101_Sub2_8074.setScale(0.0F, (float) this.anInt7962, (float) this.anInt7931, (byte) -52);
             method3915(0);
-            this.aClass101_Sub2Array8131[0].method932(1.0F, interface18_impl3.method71((byte) -46, (float) this.anInt7962), interface18_impl3.method67((float) this.anInt7931, 109), (byte) -37);
+            this.aClass101_Sub2Array8131[0].setScale(1.0F, interface18_impl3.method71((byte) -46, (float) this.anInt7962), interface18_impl3.method67((float) this.anInt7931, 109), (byte) -37);
             this.aClass101_Sub2Array8131[0].method920(interface18_impl3.method71((byte) -52, (float) -i_86_), false, 0.0F, interface18_impl3.method67((float) -i_85_, 94));
             this.aClass251Array8113[0] = Component302.aClass251_6030;
             method3905((byte) 127);
@@ -1430,9 +1430,9 @@ abstract class GlToolkitSub3
         method3903(false);
         method3894(-28186, i_136_);
         setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-        method3885(0, true, DefinitionSub39.aClass70_9485);
+        setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
         method3817(83, i_137_);
-        this.aClass101_Sub2_8074.method932(1.0F, (float) i_135_, (float) i_135_, (byte) -75);
+        this.aClass101_Sub2_8074.setScale(1.0F, (float) i_135_, (float) i_135_, (byte) -75);
         this.aClass101_Sub2_8074.method891(i, i_134_, 0);
         method3915(0);
         method3926((byte) 75, false);
@@ -1440,7 +1440,7 @@ abstract class GlToolkitSub3
         method3862(0, aClass130_8190);
         method3899(256, 0, HashNodeSub16.aClass21_9661, true);
         method3926((byte) 41, true);
-        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
@@ -1571,7 +1571,8 @@ abstract class GlToolkitSub3
         anInt8032++;
     }
 
-    final void method3885(int i, boolean bool, DisplayModeManagerContainer88 class70) {
+    /** Configure the active texture environment and its alpha combine operation. */
+    final void setTextureEnvironment(int i, boolean bool, DisplayModeManagerContainer88 class70) {
         do {
             try {
                 method3829(class70, i, (byte) 80, false);
@@ -1748,7 +1749,8 @@ abstract class GlToolkitSub3
         } while (false);
     }
 
-    final void method3897(int i, int i_177_) {
+    /** Select the texture unit used by subsequent texture-state operations. */
+    final void setActiveTextureUnit(int i, int i_177_) {
         if (i != this.anInt8175) {
             this.anInt8175 = i;
             method3868(false);
@@ -2099,7 +2101,7 @@ abstract class GlToolkitSub3
         method3950(0);
         method3939((byte) 100);
         for (int i_228_ = this.anInt8090 + -1; i_228_ >= 0; i_228_--) {
-            method3897(i_228_, i ^ ~0x117a);
+            setActiveTextureUnit(i_228_, i ^ ~0x117a);
             method3920(i ^ 0x6d);
             method3935(-101);
             method3879(i + -8732);
@@ -2233,7 +2235,7 @@ abstract class GlToolkitSub3
         method3903(false);
         method3894(-28186, i_236_);
         setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-        method3885(0, true, DefinitionSub39.aClass70_9485);
+        setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
         method3817(94, i_237_);
         method3942(5);
         method3926((byte) 86, false);
@@ -2278,7 +2280,7 @@ abstract class GlToolkitSub3
             f_248_ = f_244_;
         }
         method3926((byte) 88, true);
-        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 
@@ -2478,15 +2480,15 @@ abstract class GlToolkitSub3
         method3903(false);
         method3894(-28186, i_271_);
         setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
-        method3885(0, true, DefinitionSub39.aClass70_9485);
+        setTextureEnvironment(0, true, DefinitionSub39.aClass70_9485);
         method3817(89, i_272_);
-        this.aClass101_Sub2_8074.method932(1.0F, (float) (-1 + i_270_), (float) (i_269_ - 1), (byte) -33);
+        this.aClass101_Sub2_8074.setScale(1.0F, (float) (-1 + i_270_), (float) (i_269_ - 1), (byte) -33);
         this.aClass101_Sub2_8074.method920(-f + (float) i_268_, false, 0.0F, (float) i - f);
         method3915(0);
         method3926((byte) 98, false);
         method3860(GlWaterShader.aClass21_8832, 4, 8);
         method3926((byte) 104, true);
-        method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
     }
 

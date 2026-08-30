@@ -60,7 +60,7 @@ final class Component361
     final void method302(int i) {
         synchronized (aClass60_360) {
             if (i != -797644856) aClass105Array367 = null;
-            aClass60_360.method587(i ^ 0x2f8b186f);
+            aClass60_360.purgeSoftReferences(i ^ 0x2f8b186f);
         }
         anInt372++;
     }

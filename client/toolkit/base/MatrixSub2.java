@@ -524,7 +524,7 @@ final class MatrixSub2
         this.aFloat5736 = class101_sub2_68_.aFloat5704;
         this.aFloat5732 = class101_sub2_68_.aFloat5691;
         this.aFloat5691 = class101_sub2_68_.aFloat5732;
-        if (i != -25519) method932(0.19733748F, -0.027194114F, -1.3929868F, (byte) 77);
+        if (i != -25519) setScale(0.19733748F, -0.027194114F, -1.3929868F, (byte) 77);
         this.aFloat5729 = -((this.aFloat5704 * class101_sub2_68_.aFloat5724) + ((class101_sub2_68_.aFloat5710 * this.aFloat5700) + (class101_sub2_68_.aFloat5729 * this.aFloat5711)));
         this.aFloat5716 = class101_sub2_68_.aFloat5716;
         this.aFloat5710 = -((class101_sub2_68_.aFloat5724 * this.aFloat5732) + ((this.aFloat5708 * class101_sub2_68_.aFloat5729) + (class101_sub2_68_.aFloat5710 * this.aFloat5722)));
@@ -549,7 +549,8 @@ final class MatrixSub2
         this.aFloat5724 = -(f_73_ * f_69_) + f * this.aFloat5724;
     }
 
-    final void method932(float f, float f_74_, float f_75_, byte i) {
+    /** Replace this transform with a diagonal scale matrix. */
+    final void setScale(float f, float f_74_, float f_75_, byte i) {
         this.aFloat5722 = f_74_;
         this.aFloat5704 = 0.0F;
         this.aFloat5700 = 0.0F;

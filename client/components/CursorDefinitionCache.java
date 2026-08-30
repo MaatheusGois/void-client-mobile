@@ -36,11 +36,11 @@ final class CursorDefinitionCache
 
     final void method1283(int i) {
         synchronized (aClass60_2185) {
-            aClass60_2185.method587(-76);
+            aClass60_2185.purgeSoftReferences(-76);
         }
         anInt2178++;
         synchronized (this.aClass60_2190) {
-            this.aClass60_2190.method587(-110);
+            this.aClass60_2190.purgeSoftReferences(-110);
         }
         if (i != 1) method1286(null, -124, null);
     }
@@ -118,12 +118,12 @@ final class CursorDefinitionCache
         }
         if (Component20.anInt6048 == 1) {
             Component24 class105 = (DefinitionSub37.aClass105Array9467[Node.anInt4292 / 100]);
-            class105.method974(i_7_ - 8, i_8_ + -8);
+            class105.drawAt(i_7_ - 8, i_8_ + -8);
             Component103.method2663(-5590, -8 + i_7_, -8 + (i_7_ - -class105.method966()), -8 + i_8_, class105.method980() + -8 + i_8_);
         }
         if (Component20.anInt6048 == 2) {
             Component24 class105 = (DefinitionSub37.aClass105Array9467[Node.anInt4292 / 100 + 4]);
-            class105.method974(i_7_ + -8, -8 + i_8_);
+            class105.drawAt(i_7_ + -8, -8 + i_8_);
             Component103.method2663(-5590, i_7_ - 8, class105.method966() + i_7_ + -8, -8 + i_8_, class105.method980() + -8 + i_8_);
         }
         Component156.method2192((byte) 80);

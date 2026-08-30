@@ -108,7 +108,8 @@ final class NodeSub10
         return i;
     }
 
-    static final int method2789(int i) {
+    /** Read {@code i} low-order bits from the current bitstream position. */
+    static final int readBits(int i) {
         int i_7_ = 0;
         int i_8_ = 0;
         int i_9_;
@@ -130,8 +131,8 @@ final class NodeSub10
 
     private static final void method2790(byte[] is) {
         method2784(is, 0);
-        anInt6725 = 1 << method2789(4);
-        anInt6721 = 1 << method2789(4);
+        anInt6725 = 1 << readBits(4);
+        anInt6721 = 1 << readBits(4);
         aFloatArray6707 = new float[anInt6721];
         for (int i = 0; i < 2; i++) {
             int i_11_ = i != 0 ? anInt6721 : anInt6725;
@@ -169,33 +170,33 @@ final class NodeSub10
                 anIntArray6705 = is_20_;
             }
         }
-        int i = method2789(8) + 1;
+        int i = readBits(8) + 1;
         aClass370Array6718 = new Component367[i];
         for (int i_23_ = 0; i_23_ < i; i_23_++)
             aClass370Array6718[i_23_] = new Component367();
-        int i_24_ = method2789(6) + 1;
+        int i_24_ = readBits(6) + 1;
         for (int i_25_ = 0; i_25_ < i_24_; i_25_++)
-            method2789(16);
-        int i_26_ = method2789(6) + 1;
+            readBits(16);
+        int i_26_ = readBits(6) + 1;
         aClass210Array6715 = new Component116[i_26_];
         for (int i_27_ = 0; i_27_ < i_26_; i_27_++)
             aClass210Array6715[i_27_] = new Component116();
-        int i_28_ = method2789(6) + 1;
+        int i_28_ = readBits(6) + 1;
         aClass343Array6710 = new Component107[i_28_];
         for (int i_29_ = 0; i_29_ < i_28_; i_29_++)
             aClass343Array6710[i_29_] = new Component107();
-        int i_30_ = method2789(6) + 1;
+        int i_30_ = readBits(6) + 1;
         aClass276Array6704 = new Component81[i_30_];
         for (int i_31_ = 0; i_31_ < i_30_; i_31_++)
             aClass276Array6704[i_31_] = new Component81();
-        int i_32_ = method2789(6) + 1;
+        int i_32_ = readBits(6) + 1;
         aBooleanArray6713 = new boolean[i_32_];
         anIntArray6709 = new int[i_32_];
         for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
             aBooleanArray6713[i_33_] = method2788() != 0;
-            method2789(16);
-            method2789(16);
-            anIntArray6709[i_33_] = method2789(8);
+            readBits(16);
+            readBits(16);
+            anIntArray6709[i_33_] = readBits(8);
         }
         aBoolean6724 = true;
     }
@@ -253,7 +254,7 @@ final class NodeSub10
     private final float[] method2794(int i) {
         method2784(aByteArrayArray6703[i], 0);
         method2788();
-        int i_38_ = method2789(Component80.method2253(anIntArray6709.length - 1, 123));
+        int i_38_ = readBits(Component80.method2253(anIntArray6709.length - 1, 123));
         boolean bool = aBooleanArray6713[i_38_];
         int i_39_ = bool ? anInt6721 : anInt6725;
         boolean bool_40_ = false;

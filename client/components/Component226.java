@@ -15,8 +15,8 @@ final class Component226
         anInt4170++;
         if (i_1_ < 66) method2656(119, -53, (byte) -62, 54, -62);
         if (i_0_ >= Component27.anInt4960 && Component22.anInt1745 >= i_0_) {
-            i = LogicError.method831(PauseTimer.anInt513, i, Component72.anInt1910, -123);
-            i_3_ = LogicError.method831(PauseTimer.anInt513, i_3_, Component72.anInt1910, 123);
+            i = LogicError.clamp(PauseTimer.anInt513, i, Component72.anInt1910, -123);
+            i_3_ = LogicError.clamp(PauseTimer.anInt513, i_3_, Component72.anInt1910, 123);
             Component9.method2641(i_3_, i, -76, i_0_, i_2_);
         }
     }

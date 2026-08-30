@@ -2990,9 +2990,9 @@ final class GlToolkitSub2
                         int i_330_ = (class105.method971() * class318_sub1_sub3_sub3.anInt10295 / 255);
                         int i_331_ = class105.method969();
                         if (class318_sub1_sub3_sub3.anInt10295 > 0 && i_330_ < 2) i_330_ = 2;
-                        class105.method974(i_329_, i_323_);
+                        class105.drawAt(i_329_, i_323_);
                         NodeSub8.toolkit.T(i_329_, i_323_, i_330_ + i_329_, i_331_ + i_323_);
-                        class105_328_.method974(i_329_, i_323_);
+                        class105_328_.drawAt(i_329_, i_323_);
                         NodeSub8.toolkit.KA(i_317_, i, i_317_ - -i_318_, i_315_ + i);
                         Component103.method2663(-5590, i_329_, i_329_ + class105.method966(), i_323_, i_323_ + i_331_);
                     } else i_323_ -= Math.max((Component27.aClass143_4962.maxAscent), NodeSub45.aClass105Array7107[0].method969());
@@ -3032,9 +3032,9 @@ final class GlToolkitSub2
                             int i_338_ = class105.method969();
                             i_323_ -= i_338_;
                             int i_339_ = (Component71.anIntArray6062[0] + (i_317_ + -(class105.method971() >> 1)));
-                            class105.method974(i_339_, i_323_);
+                            class105.drawAt(i_339_, i_323_);
                             NodeSub8.toolkit.T(i_339_, i_323_, i_339_ - -i_336_, i_323_ - -i_338_);
-                            class105_332_.method974(i_339_, i_323_);
+                            class105_332_.drawAt(i_339_, i_323_);
                             NodeSub8.toolkit.KA(i_317_, i, i_318_ + i_317_, i - -i_315_);
                             Component103.method2663(-5590, i_339_, class105.method966() + i_339_, i_323_, i_338_ + i_323_);
                             i_323_ -= 2;
@@ -3044,21 +3044,21 @@ final class GlToolkitSub2
                             if (player.anInt10540 != -1) {
                                 i_323_ -= 25;
                                 Component24 class105 = (Component141.aClass105Array9959[(player.anInt10540)]);
-                                class105.method974((-12 + i_317_ + (Component71.anIntArray6062[0])), i_323_);
+                                class105.drawAt((-12 + i_317_ + (Component71.anIntArray6062[0])), i_323_);
                                 Component103.method2663(-5590, i_317_ + (Component71.anIntArray6062[0] + -12), (i_317_ - -Component71.anIntArray6062[0] + (-12 + class105.method966())), i_323_, i_323_ + class105.method980());
                                 i_323_ -= 2;
                             }
                             if (player.anInt10522 != -1) {
                                 i_323_ -= 25;
                                 Component24 class105 = (Component235.aClass105Array3378[(player.anInt10522)]);
-                                class105.method974((-12 + i_317_ + (Component71.anIntArray6062[0])), i_323_);
+                                class105.drawAt((-12 + i_317_ + (Component71.anIntArray6062[0])), i_323_);
                                 Component103.method2663(-5590, (-12 + Component71.anIntArray6062[0] + i_317_), (Component71.anIntArray6062[0] + i_317_ - (12 + -class105.method966())), i_323_, i_323_ - -class105.method980());
                                 i_323_ -= 2;
                             }
                         } else if (class79.anInt1375 >= 0 && (class79.anInt1375 < Component235.aClass105Array3378.length)) {
                             Component24 class105 = (Component235.aClass105Array3378[class79.anInt1375]);
                             i_323_ -= 25;
-                            class105.method974((i_317_ + (Component71.anIntArray6062[0]) + -(class105.method971() >> 1)), i_323_);
+                            class105.drawAt((i_317_ + (Component71.anIntArray6062[0]) + -(class105.method971() >> 1)), i_323_);
                             Component103.method2663(-5590, (Component71.anIntArray6062[0] + (i_317_ - (class105.method971() >> 1))), (Component71.anIntArray6062[0] + (i_317_ - (class105.method971() >> 1)) + class105.method966()), i_323_, class105.method980() + i_323_);
                             i_323_ -= 2;
                         }
@@ -3072,7 +3072,7 @@ final class GlToolkitSub2
                                 if (class302 != null && class302.anInt3840 == 10 && (is[i_322_] == class302.anInt3833)) {
                                     Component24 class105 = (Component379.aClass105Array5933[class302.anInt3831]);
                                     if (i_340_ < class105.method969()) i_340_ = class105.method969();
-                                    class105.method974(-12 + ((Component71.anIntArray6062[0]) + i_317_), (i_323_ + -class105.method969()));
+                                    class105.drawAt(-12 + ((Component71.anIntArray6062[0]) + i_317_), (i_323_ + -class105.method969()));
                                     Component103.method2663(-5590, -12 + (i_317_ - -(Component71.anIntArray6062[0])), (i_317_ + (Component71.anIntArray6062[0] + -12 - -class105.method966())), -class105.method969() + i_323_, (i_323_ + -class105.method969() - -class105.method980()));
                                 }
                             }
@@ -3087,7 +3087,7 @@ final class GlToolkitSub2
                                 Component24 class105 = (Component379.aClass105Array5933[class302.anInt3831]);
                                 if (class105.method969() > i_342_) i_342_ = class105.method969();
                                 if (OpenGlShader.clientCycle % 20 < 10) {
-                                    class105.method974((-12 + i_317_ + Component71.anIntArray6062[0]), i_323_ + -class105.method969());
+                                    class105.drawAt((-12 + i_317_ + Component71.anIntArray6062[0]), i_323_ + -class105.method969());
                                     Component103.method2663(-5590, (-12 + i_317_ - -Component71.anIntArray6062[0]), (Component71.anIntArray6062[0] + (i_317_ + -12) - -class105.method966()), -class105.method969() + i_323_, (-class105.method969() + (i_323_ - -class105.method980())));
                                 }
                             }
@@ -3333,22 +3333,22 @@ final class GlToolkitSub2
                                             class324_387_.drawText(string, (i_427_ | (class31_349_.anInt444)), i_423_, i_416_ + i_411_, 0, -125);
                                         }
                                     } else {
-                                        if (class105_375_ != null) class105_375_.method974(i_416_ - (-i_401_ + i_359_), i_417_);
-                                        if (class105_379_ != null) class105_379_.method974(i_416_ - (-i_402_ - -i_361_), i_417_);
+                                        if (class105_375_ != null) class105_375_.drawAt(i_416_ - (-i_401_ + i_359_), i_417_);
+                                        if (class105_379_ != null) class105_379_.drawAt(i_416_ - (-i_402_ - -i_361_), i_417_);
                                         if (class105_377_ != null) {
                                             for (int i_431_ = 0; i_431_ < i_398_; i_431_++)
-                                                class105_377_.method974((i_403_ + i_416_ - (i_360_ - i_431_ * i_356_)), i_417_);
+                                                class105_377_.drawAt((i_403_ + i_416_ - (i_360_ - i_431_ * i_356_)), i_417_);
                                         }
-                                        if (class105_381_ != null) class105_381_.method974(i_406_ + (i_416_ + -i_362_), i_417_);
+                                        if (class105_381_ != null) class105_381_.drawAt(i_406_ + (i_416_ + -i_362_), i_417_);
                                         class324.drawText(string_396_, (class31.anInt444 | ~0xffffff), i_420_, i_416_ + i_404_, 0, i_316_ ^ ~0x74);
                                         if (class31_349_ != null) {
-                                            if (class105 != null) class105.method974((-i_370_ + i_416_ + i_407_), i_417_);
-                                            if (class105_364_ != null) class105_364_.method974(i_408_ + (i_416_ + -i_372_), i_417_);
+                                            if (class105 != null) class105.drawAt((-i_370_ + i_416_ + i_407_), i_417_);
+                                            if (class105_364_ != null) class105_364_.drawAt(i_408_ + (i_416_ + -i_372_), i_417_);
                                             if (class105_363_ != null) {
                                                 for (int i_432_ = 0; i_399_ > i_432_; i_432_++)
-                                                    class105_363_.method974((i_432_ * i_367_ + (-i_371_ + i_416_ + i_409_)), i_417_);
+                                                    class105_363_.drawAt((i_432_ * i_367_ + (-i_371_ + i_416_ + i_409_)), i_417_);
                                             }
-                                            if (class105_365_ != null) class105_365_.method974(i_410_ + i_416_ - i_373_, i_417_);
+                                            if (class105_365_ != null) class105_365_.drawAt(i_410_ + i_416_ - i_373_, i_417_);
                                             class324_387_.drawText(string, (class31_349_.anInt444) | ~0xffffff, i_423_, i_411_ + i_416_, 0, -119);
                                         }
                                     }

@@ -142,7 +142,7 @@ final class DisplayModeManagerContainer190
             aHa_Sub3_5419.C(!aBoolean5428);
             aHa_Sub3_5419.method3866(false, true);
             aHa_Sub3_5419.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
-            aHa_Sub3_5419.method3885(1, true, DefinitionSub39.aClass70_9485);
+            aHa_Sub3_5419.setTextureEnvironment(1, true, DefinitionSub39.aClass70_9485);
             for (int i_0_ = 0; anInt5406 > i_0_; i_0_++) {
                 Component45 class353 = aClass353Array5524[i_0_];
                 NativeLibLoader class334 = aClass334Array5442[i_0_];
@@ -165,7 +165,7 @@ final class DisplayModeManagerContainer190
                     aHa_Sub3_5419.method3933(-114);
                 }
             }
-            aHa_Sub3_5419.method3885(1, true, DisplayModeManagerContainer343.aClass70_8737);
+            aHa_Sub3_5419.setTextureEnvironment(1, true, DisplayModeManagerContainer343.aClass70_8737);
             aHa_Sub3_5419.setTextureCombineMode((byte) 47, 1, DisplayModeManagerContainer343.aClass70_8737);
             aHa_Sub3_5419.C(true);
         }

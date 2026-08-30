@@ -61,7 +61,7 @@ final class DisplayModeManagerContainer259
         anInt3434++;
         synchronized (aClass60_3433) {
             if (i != 46) method2037(-66);
-            aClass60_3433.method587(-94);
+            aClass60_3433.purgeSoftReferences(-94);
         }
     }
 

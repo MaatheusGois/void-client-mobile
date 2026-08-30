@@ -100,7 +100,7 @@ final class Component272
     final void method1716(boolean bool) {
         anInt5864++;
         if (method1735(bool)) {
-            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -94, this.preferences.aClass239_Sub25_7271.method1829(-32350))) this.preferenceValue = 1;
+            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -94, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 1;
             if (this.preferences.aClass239_Sub8_7254.method1751(-32350) == 1) this.preferenceValue = 1;
         }
         if (this.preferenceValue == 3) this.preferenceValue = 2;
@@ -118,7 +118,7 @@ final class Component272
     final int method1714(int i, int i_24_) {
         anInt5866++;
         if (NodeCache.method576(i_24_, 29)) {
-            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -113, this.preferences.aClass239_Sub25_7271.method1829(-32350))) return 3;
+            if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -113, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
             if (this.preferences.aClass239_Sub8_7254.method1751(-32350) == 1) return 3;
         }
         if (i_24_ == i) return 3;

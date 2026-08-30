@@ -25,11 +25,11 @@ final class Component386
     final void method1598(int i) {
         anInt2863++;
         synchronized (aClass60_2875) {
-            aClass60_2875.method587(-103);
+            aClass60_2875.purgeSoftReferences(-103);
         }
         synchronized (this.aClass60_2862) {
             if (i <= 42) method1598(36);
-            this.aClass60_2862.method587(-126);
+            this.aClass60_2862.purgeSoftReferences(-126);
         }
     }
 

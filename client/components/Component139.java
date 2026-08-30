@@ -32,8 +32,8 @@ final class Component139
         int i_17_ = i_10_ * (-3 + (i_6_ << 1));
         int i_18_ = i_15_ * (i_5_ - -1);
         if (Component72.anInt1910 <= i_1_ && PauseTimer.anInt513 >= i_1_) {
-            int i_19_ = LogicError.method831(Component22.anInt1745, i + i_4_, Component27.anInt4960, -89);
-            int i_20_ = LogicError.method831(Component22.anInt1745, -i_4_ + i, Component27.anInt4960, -116);
+            int i_19_ = LogicError.clamp(Component22.anInt1745, i + i_4_, Component27.anInt4960, -89);
+            int i_20_ = LogicError.clamp(Component22.anInt1745, -i_4_ + i, Component27.anInt4960, -116);
             MenuOpener.fillInts(-27, i_19_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_20_, i_3_);
         }
         int i_21_ = i_14_ * (i_6_ - 1);
@@ -62,8 +62,8 @@ final class Component139
             int i_22_ = i_1_ + -i_6_;
             int i_23_ = i_6_ + i_1_;
             if (i_23_ >= Component72.anInt1910 && i_22_ <= PauseTimer.anInt513) {
-                int i_24_ = LogicError.method831(Component22.anInt1745, i + i_5_, Component27.anInt4960, 86);
-                int i_25_ = LogicError.method831(Component22.anInt1745, -i_5_ + i, Component27.anInt4960, 32);
+                int i_24_ = LogicError.clamp(Component22.anInt1745, i + i_5_, Component27.anInt4960, 86);
+                int i_25_ = LogicError.clamp(Component22.anInt1745, -i_5_ + i, Component27.anInt4960, 32);
                 if (Component72.anInt1910 <= i_22_) MenuOpener.fillInts(i_2_ + -26, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_25_, i_3_);
                 if (PauseTimer.anInt513 >= i_23_) MenuOpener.fillInts(-27, i_24_, DisplayModeManagerContainer167.anIntArrayArray255[i_23_], i_25_, i_3_);
             }

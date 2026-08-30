@@ -77,7 +77,7 @@ final class Component352
     static final void method386(byte i) {
         anInt621++;
         if (i != -106) method386((byte) 21);
-        Component279.aClass60_225.method587(i + 9);
+        Component279.aClass60_225.purgeSoftReferences(i + 9);
     }
 
     public static void method387(int i) {

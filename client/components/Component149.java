@@ -42,13 +42,13 @@ final class Component149
                         i_6_ += Component110.method260(false);
                     }
                     var_ha.method3691(DisplayModeManagerContainer67.aClass207_1727, false).method965((PrimitiveTypeDefinition.aClass207_9090.anInt2702) + i_5_, (PrimitiveTypeDefinition.aClass207_9090.anInt2696) + i_6_, -(2 * (PrimitiveTypeDefinition.aClass207_9090.anInt2702)) + i_1_, -((PrimitiveTypeDefinition.aClass207_9090.anInt2696) * 2) + i_2_, 1, 0, 0);
-                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).method974(i_5_, i_6_);
+                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).drawAt(i_5_, i_6_);
                     PrimitiveTypeDefinition.aClass207_9090.method1518();
-                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).method974(i_5_ + i_1_ - i_3_, i_6_);
+                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).drawAt(i_5_ + i_1_ - i_3_, i_6_);
                     PrimitiveTypeDefinition.aClass207_9090.method1514();
-                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).method974(i_5_ - -i_1_ + -i_3_, -i_3_ + (i_6_ - -i_2_));
+                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).drawAt(i_5_ - -i_1_ + -i_3_, -i_3_ + (i_6_ - -i_2_));
                     PrimitiveTypeDefinition.aClass207_9090.method1518();
-                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).method974(i_5_, -i_3_ + i_6_ - -i_2_);
+                    var_ha.method3691(PrimitiveTypeDefinition.aClass207_9090, true).drawAt(i_5_, -i_3_ + i_6_ - -i_2_);
                     PrimitiveTypeDefinition.aClass207_9090.method1514();
                     var_ha.method3691(NodeSub7.aClass207_6643, true).method972(i_5_, (PrimitiveTypeDefinition.aClass207_9090.anInt2696) + i_6_, i_3_, -(2 * (PrimitiveTypeDefinition.aClass207_9090.anInt2696)) + i_2_);
                     NodeSub7.aClass207_6643.method1520();

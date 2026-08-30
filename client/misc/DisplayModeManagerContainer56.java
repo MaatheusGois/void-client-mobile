@@ -136,7 +136,7 @@ final class DisplayModeManagerContainer56
                     var_ha.method3656((byte) -112, i_26_, 1 + class105.method971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
                     var_ha.method3656((byte) -123, i_26_, class105.method971() / 2, (class348_sub21.anInt6853), (class348_sub21.anInt6855));
                 }
-                class105.method974((class348_sub21.anInt6853 + -(class105.method966() >> 1)), (class348_sub21.anInt6855 + -(class105.method980() >> 1)));
+                class105.drawAt((class348_sub21.anInt6853 + -(class105.method966() >> 1)), (class348_sub21.anInt6855 + -(class105.method980() >> 1)));
             }
             if (class42.aString597 != null && class323 != null) DisplayModeManagerContainer173.method2683(class323, class348_sub21, i_16_, 64, i_15_, var_ha, i_17_, i_18_, class42);
             if (class42.anInt578 != -1 || class42.aString597 != null) {

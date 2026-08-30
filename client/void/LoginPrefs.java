@@ -209,9 +209,9 @@ final class LoginPrefs {
         }
         try {
             Component269.method2478(1000);
-            DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
+            DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
             NodeSub20.method2953((byte) -113);
-            DisplayModeManagerContainer389.method243(37);
+            DisplayModeManagerContainer389.savePreferences(37);
             r.aBoolean9719 = false;
             System.out.println("void-osrs graphics auto-setup toolkit=" + DisplayModeManagerContainer282.anInt5584);
         } catch (Throwable t) {

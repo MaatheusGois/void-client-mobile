@@ -143,10 +143,10 @@ final class Component25
 
     static final void method1792(int i, int i_12_, int i_13_, int i_14_, byte i_15_, int i_16_) {
         anInt6013++;
-        int i_17_ = LogicError.method831(PauseTimer.anInt513, i, Component72.anInt1910, -90);
-        int i_18_ = LogicError.method831(PauseTimer.anInt513, i_13_, Component72.anInt1910, -94);
-        int i_19_ = LogicError.method831(Component22.anInt1745, i_12_, Component27.anInt4960, 77);
-        int i_20_ = LogicError.method831(Component22.anInt1745, i_14_, Component27.anInt4960, 59);
+        int i_17_ = LogicError.clamp(PauseTimer.anInt513, i, Component72.anInt1910, -90);
+        int i_18_ = LogicError.clamp(PauseTimer.anInt513, i_13_, Component72.anInt1910, -94);
+        int i_19_ = LogicError.clamp(Component22.anInt1745, i_12_, Component27.anInt4960, 77);
+        int i_20_ = LogicError.clamp(Component22.anInt1745, i_14_, Component27.anInt4960, 59);
         int i_21_ = -27 / ((i_15_ - -6) / 55);
         for (int i_22_ = i_17_; i_22_ <= i_18_; i_22_++)
             MenuOpener.fillInts(-27, i_20_, DisplayModeManagerContainer167.anIntArrayArray255[i_22_], i_19_, i_16_);

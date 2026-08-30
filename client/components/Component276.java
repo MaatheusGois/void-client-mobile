@@ -33,7 +33,7 @@ final class Component276
         anInt2595++;
         int i_1_ = 14 % ((-39 - i) / 51);
         synchronized (aClass60_2594) {
-            aClass60_2594.method587(-80);
+            aClass60_2594.purgeSoftReferences(-80);
         }
     }
 

@@ -45,9 +45,9 @@ final class WaterShader extends AbstractShader {
     final void method3520(byte i) {
         if (i != 87) aBoolean7376 = true;
         if (aBoolean7373) {
-            this.aHa_Sub3_4479.method3897(1, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
             this.aHa_Sub3_4479.setActiveTexture((byte) 70, null);
-            this.aHa_Sub3_4479.method3897(0, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             this.aHa_Sub3_4479.setActiveTexture((byte) 107, null);
             OpenGL.glUseProgramObjectARB(0L);
             aBoolean7373 = false;
@@ -126,9 +126,9 @@ final class WaterShader extends AbstractShader {
         if (i != 15192) method3551(58, -50, 40, true);
         Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.method3834(-16777216);
         if (aBoolean7376 && interface18_impl2 != null) {
-            this.aHa_Sub3_4479.method3897(1, i + -19574);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, i + -19574);
             this.aHa_Sub3_4479.setActiveTexture((byte) -63, interface18_impl2);
-            this.aHa_Sub3_4479.method3897(0, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             this.aHa_Sub3_4479.setActiveTexture((byte) -107, aClass269_7375.anInterface18_Impl1_3455);
             long l = aClass89_7369.aLong1510;
             OpenGL.glUseProgramObjectARB(l);

@@ -205,7 +205,7 @@ final class Component349
 
     private final Component245 method2417(int i, GraphicsToolkit var_ha, int i_20_, boolean bool) {
         anInt10007++;
-        Component44 class51 = GradientPreset.aClass263_9195.method2005(i, 0xffff & aShort10032);
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(i, 0xffff & aShort10032);
         s var_s;
         s var_s_21_;
         if (aBoolean10017) {

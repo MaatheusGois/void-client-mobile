@@ -210,10 +210,10 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk0")) {
                             SoftwareFallbackShader.method3553(false, (byte) 104, 0);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 0) {
+                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) {
                                 Applet_Sub1.printConsole("Entered tk0", 101);
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
-                                DisplayModeManagerContainer389.method243(37);
+                                DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 return;
                             } else Applet_Sub1.printConsole("Failed to enter tk0", 69);
@@ -221,10 +221,10 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk1")) {
                             SoftwareFallbackShader.method3553(false, (byte) 109, 1);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1) {
+                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1) {
                                 Applet_Sub1.printConsole("Entered tk1", -65);
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 1);
-                                DisplayModeManagerContainer389.method243(i ^ ~0x6b);
+                                DisplayModeManagerContainer389.savePreferences(i ^ ~0x6b);
                                 r.aBoolean9719 = false;
                                 return;
                             } else Applet_Sub1.printConsole("Failed to enter tk1", -56);
@@ -232,10 +232,10 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk2")) {
                             SoftwareFallbackShader.method3553(false, (byte) 115, 2);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
+                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
                                 Applet_Sub1.printConsole("Entered tk2", i + 151);
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 2);
-                                DisplayModeManagerContainer389.method243(37);
+                                DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                             } else {
                                 Applet_Sub1.printConsole("Failed to enter tk2", i ^ 0x22);
@@ -245,10 +245,10 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk3")) {
                             SoftwareFallbackShader.method3553(false, (byte) 107, 3);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 3) {
+                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 3) {
                                 Applet_Sub1.printConsole("Entered tk3", 78);
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 3);
-                                DisplayModeManagerContainer389.method243(37);
+                                DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 return;
                             } else Applet_Sub1.printConsole("Failed to enter tk3", 54);
@@ -256,10 +256,10 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk5")) {
                             SoftwareFallbackShader.method3553(false, (byte) 113, 5);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(i ^ 0x7e13) == 5) {
+                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i ^ 0x7e13) == 5) {
                                 Applet_Sub1.printConsole("Entered tk5", -108);
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 5);
-                                DisplayModeManagerContainer389.method243(37);
+                                DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                             } else {
                                 Applet_Sub1.printConsole("Failed to enter tk5", 63);
@@ -274,7 +274,7 @@ final class CommandHandler {
                                 if (i_6_ < 0 || (Node.method2710(-126, Component127.anInt2964) < i_6_)) Applet_Sub1.printConsole("Invalid buildarea value", 53);
                                 else {
                                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub6_7226), i_6_);
-                                    DisplayModeManagerContainer389.method243(37);
+                                    DisplayModeManagerContainer389.savePreferences(37);
                                     r.aBoolean9719 = false;
                                     Applet_Sub1.printConsole(("maxbuildarea=" + Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1743(-32350)), 98);
                                     return;
@@ -520,7 +520,7 @@ final class CommandHandler {
                         }
                         if (string.equals("autosetup")) {
                             Component269.method2478(1000);
-                            Applet_Sub1.printConsole(("Complete. Toolkit now: " + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(i + -32271)), -97);
+                            Applet_Sub1.printConsole(("Complete. Toolkit now: " + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i + -32271)), -97);
                             return;
                         }
                         if (string.equals("errormessage")) {
@@ -552,7 +552,7 @@ final class CommandHandler {
                             else {
                                 int i_21_ = (NodeSub41.parseInt(true, string.substring(1 + i_20_)));
                                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222), i_21_);
-                                DisplayModeManagerContainer389.method243(37);
+                                DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 HashNodeSub3.method3179(i + 79);
                                 if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350) == i_21_) {

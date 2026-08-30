@@ -883,7 +883,7 @@ final class ClientScriptExecutor {
                 if (i_105_ >= 1 && i_105_ <= 2) {
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub8_7227), i_105_);
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254), i_105_);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     return;
                 }
                 return;
@@ -943,7 +943,7 @@ final class ClientScriptExecutor {
                 if (Component225.aFrame476 != null) LogicError.method830(Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
                 if (RSACipher.aFrame4904 == null) {
                     String string = (Component262.quitUrl != null ? Component262.quitUrl : WaterShaderProgram.method2162(false));
-                    BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1, false, -47);
+                    BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, false, -47);
                     return;
                 } else {
                     DisplayModeManagerContainer343.saveClientPreferences(97);
@@ -969,7 +969,7 @@ final class ClientScriptExecutor {
                 String string = stringStack[--stringStackPointer];
                 boolean bool_118_ = intStack[--intStackPointer] == 1;
                 String string_119_ = WaterShaderProgram.method2162(false) + string;
-                BrowserDetector.openBrowserUrl(string_119_, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1, bool_118_, 104);
+                BrowserDetector.openBrowserUrl(string_119_, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, bool_118_, 104);
                 return;
             }
             if (i == 5422) {
@@ -1351,7 +1351,7 @@ final class ClientScriptExecutor {
                 int i_146_ = intStack[--intStackPointer];
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub10_7232), i_146_);
                 NodeSub20.method2953((byte) -126);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1361,7 +1361,7 @@ final class ClientScriptExecutor {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261), bool_147_ ? 1 : 0);
                 NodeSub20.method2953((byte) -122);
                 DefinitionSub9.method3072((byte) 32);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1370,39 +1370,39 @@ final class ClientScriptExecutor {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub14_7250), bool_148_ ? 2 : 1);
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264), bool_148_ ? 2 : 1);
                 DefinitionSub9.method3072((byte) -106);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6005) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), intStack[--intStackPointer] == 1 ? 1 : 0);
                 NodeSub20.method2953((byte) -111);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6007) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub13_7236), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6008) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub1_7246), intStack[--intStackPointer] == 1 ? 1 : 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6010) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270), intStack[--intStackPointer] == 1 ? 1 : 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6011) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub7_7238), intStack[--intStackPointer]);
                 NodeSub20.method2953((byte) -116);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1410,40 +1410,40 @@ final class ClientScriptExecutor {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub28_7230), intStack[--intStackPointer] == 1 ? 1 : 0);
                 Definition.method3038(-1);
                 DisplayModeManagerContainer154.method773(true);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6014) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub18_7259), intStack[--intStackPointer] == 1 ? 2 : 0);
                 NodeSub20.method2953((byte) -112);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6015) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub16_7247), intStack[--intStackPointer] == 1 ? 1 : 0);
                 NodeSub20.method2953((byte) -127);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6016) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub20_7248), intStack[--intStackPointer]);
-                SoftwareFallbackShader.method3553(false, (byte) 112, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350));
-                DisplayModeManagerContainer389.method243(37);
+                SoftwareFallbackShader.method3553(false, (byte) 112, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350));
+                DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6017) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub5_7240), intStack[--intStackPointer] == 1 ? 1 : 0);
                 Component243.method352(1);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6018) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7272), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1462,14 +1462,14 @@ final class ClientScriptExecutor {
                         } else Component225.method345(i_149_, (byte) -49);
                     }
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260), i_149_);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
                 return;
             }
             if (i == 6020) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7234), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1482,18 +1482,18 @@ final class ClientScriptExecutor {
             if (i == 6023) {
                 int i_152_ = intStack[--intStackPointer];
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub15_7224), i_152_);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6024) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub20_7216), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6025) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub6_7226), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1505,17 +1505,17 @@ final class ClientScriptExecutor {
             }
             if (i == 6028) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.customCursorSetting), intStack[--intStackPointer] != 0 ? 1 : 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6029) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub13_7236), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6030) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub9_7256), intStack[--intStackPointer] != 0 ? 1 : 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 NodeSub20.method2953((byte) -116);
                 return;
             }
@@ -1531,18 +1531,18 @@ final class ClientScriptExecutor {
                 boolean bool_156_ = intStack[intStackPointer + 1] == 1;
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), i_155_);
                 if (!bool_156_) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub29_7229), 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6033) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub17_7263), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6034) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub24_7235), intStack[--intStackPointer] == 1 ? 1 : 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 Definition.method3038(-1);
                 r.aBoolean9719 = false;
                 return;
@@ -1556,13 +1556,13 @@ final class ClientScriptExecutor {
             }
             if (i == 6036) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub23_7231), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 RuntimeException_Sub1.aBoolean4604 = true;
                 return;
             }
             if (i == 6037) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7215), intStack[--intStackPointer]);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
@@ -1581,7 +1581,7 @@ final class ClientScriptExecutor {
                         } else Component225.method345(i_158_, (byte) -52);
                     }
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7245), i_158_);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
                 return;
@@ -1591,7 +1591,7 @@ final class ClientScriptExecutor {
                 if (i_160_ > 255 || i_160_ < 0) i_160_ = 0;
                 if (i_160_ != Component192.aClass348_Sub51_3959.aClass239_Sub19_7257.method1805(-32350)) {
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub19_7257), i_160_);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
                 return;
@@ -1600,7 +1600,7 @@ final class ClientScriptExecutor {
                 int i_161_ = intStack[--intStackPointer];
                 if (i_161_ != Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350)) {
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222), i_161_);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     HashNodeSub3.method3179(0);
                 }
@@ -1700,11 +1700,11 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6131) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
+                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
                 return;
             }
             if (i == 6132) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.method1829(-32350);
+                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.getPreferenceValue(-32350);
                 return;
             }
             if (i == 6133) {
@@ -1720,7 +1720,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6138) {
-                intStack[intStackPointer++] = Component329.method1781(Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350), -84, 200);
+                intStack[intStackPointer++] = Component329.method1781(Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350), -84, 200);
                 return;
             }
             if (i == 6139) {
@@ -2248,44 +2248,44 @@ final class ClientScriptExecutor {
             } else if (i < 7100) {
                 if (i == 7000) {
                     int i_221_ = Component269.method2478(1000);
-                    intStack[intStackPointer++] = DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
+                    intStack[intStackPointer++] = DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
                     intStack[intStackPointer++] = i_221_;
                     NodeSub20.method2953((byte) -113);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
                 if (i == 7001) {
                     HeapDumper.resetGraphicsPreferences(47);
                     NodeSub20.method2953((byte) -126);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
                 if (i == 7002) {
                     DisplayModeManagerContainer32.method447((byte) -59);
                     NodeSub20.method2953((byte) -124);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
                 if (i == 7003) {
                     DisplayModeManagerContainer254.method1263(true);
                     NodeSub20.method2953((byte) -106);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
                 if (i == 7004) {
                     GradientPreset.method3076(0, true);
                     NodeSub20.method2953((byte) -107);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
                 if (i == 7005) {
                     Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub29_7229), 0);
-                    DisplayModeManagerContainer389.method243(37);
+                    DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
                 }
@@ -4889,9 +4889,9 @@ final class ClientScriptExecutor {
                     int i_480_ = intStack[intStackPointer];
                     int i_481_ = intStack[intStackPointer + 1];
                     Component355 class254 = MatrixSub3.aClass326_5764.method2600(i_481_, 28364);
-                    if (class254.method1925(false)) stringStack[stringStackPointer++] = (GradientPreset.aClass263_9195.method2005(0, i_480_).method475(class254.aString3258, i_481_, -16));
+                    if (class254.method1925(false)) stringStack[stringStackPointer++] = (GradientPreset.aClass263_9195.getDefinition(0, i_480_).method475(class254.aString3258, i_481_, -16));
                     else {
-                        intStack[intStackPointer++] = (GradientPreset.aClass263_9195.method2005(0, i_480_).method487(i_481_, class254.anInt3256, 81));
+                        intStack[intStackPointer++] = (GradientPreset.aClass263_9195.getDefinition(0, i_480_).method487(i_481_, class254.anInt3256, 81));
                         return;
                     }
                     return;

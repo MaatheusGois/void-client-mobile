@@ -205,10 +205,10 @@ final class ItemDefinitionProvider
     final void method1938(int i) {
         anInt3272++;
         synchronized (aClass60_3278) {
-            aClass60_3278.method587(-88);
+            aClass60_3278.purgeSoftReferences(-88);
         }
         synchronized (this.aClass60_3287) {
-            this.aClass60_3287.method587(-85);
+            this.aClass60_3287.purgeSoftReferences(-85);
         }
         synchronized (this.aClass175_3288) {
             this.aClass175_3288.method1344((byte) -124);

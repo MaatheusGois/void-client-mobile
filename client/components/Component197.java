@@ -172,7 +172,7 @@ final class Component197
     private final Component245 method2481(boolean bool, int i, int i_15_, GraphicsToolkit var_ha) {
         if (i_15_ != -4) aClass30_10082 = null;
         anInt10086++;
-        Component44 class51 = GradientPreset.aClass263_9195.method2005(0, aShort10081 & 0xffff);
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, aShort10081 & 0xffff);
         s var_s;
         s var_s_16_;
         if (aBoolean10066) {

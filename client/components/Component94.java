@@ -43,7 +43,7 @@ final class Component94
         anInt3665++;
         GraphicsToolkit var_ha = NodeSub8.toolkit;
         boolean bool = false;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(i + -5766) != 0) {
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i + -5766) != 0) {
             Canvas canvas = new Canvas();
             canvas.setSize(100, 100);
             var_ha = Component65.method958(true, 0, null, 0, canvas, null);

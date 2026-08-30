@@ -178,13 +178,13 @@ final class NodeSub14
                                 if (interface10 == null) interface10 = ((Interface10) CacheNodeSub2.method3297(i_39_, i_37_, i_38_));
                                 if (interface10 == null) interface10 = ((Interface10) (DefinitionSub32.method3135(i_39_, i_37_, i_38_)));
                                 if (interface10 != null) {
-                                    Component44 class51 = (GradientPreset.aClass263_9195.method2005(0, interface10.method42(-99)));
+                                    Component44 class51 = (GradientPreset.aClass263_9195.getDefinition(0, interface10.method42(-99)));
                                     if (!class51.aBoolean942 || Component387.aBoolean1900) {
                                         int i_40_ = class51.anInt921;
                                         if (class51.anIntArray945 != null) {
                                             for (int i_41_ = 0; ((class51.anIntArray945).length > i_41_); i_41_++) {
                                                 if ((class51.anIntArray945[i_41_]) != -1) {
-                                                    Component44 class51_42_ = (GradientPreset.aClass263_9195.method2005(0, (class51.anIntArray945[i_41_])));
+                                                    Component44 class51_42_ = (GradientPreset.aClass263_9195.getDefinition(0, (class51.anIntArray945[i_41_])));
                                                     if (class51_42_.anInt921 >= 0) i_40_ = (class51_42_.anInt921);
                                                 }
                                             }

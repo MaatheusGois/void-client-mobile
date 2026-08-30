@@ -102,7 +102,7 @@ abstract class OggStream extends Node {
                     NodeSub8.toolkit.method3651(var_za);
                 }
             } catch (Throwable throwable) {
-                int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350);
+                int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
                 if (i_3_ == 2) GpsOverlay.aBoolean1952 = true;
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), 0);
                 method2965(string, i_3_, bool, i_1_);

@@ -126,13 +126,13 @@ final class DisplayModeManagerContainer347
     final void method2080(int i) {
         anInt3587++;
         synchronized (aClass60_3577) {
-            aClass60_3577.method587(-118);
+            aClass60_3577.purgeSoftReferences(-118);
         }
         synchronized (this.aClass60_3590) {
-            this.aClass60_3590.method587(-100);
+            this.aClass60_3590.purgeSoftReferences(-100);
         }
         synchronized (this.aClass60_3592) {
-            this.aClass60_3592.method587(-107);
+            this.aClass60_3592.purgeSoftReferences(-107);
         }
         if (i <= 122) method2075(-125, -46, 9);
     }

@@ -110,7 +110,8 @@ final class LogicError {
         }
     }
 
-    static final int method831(int i, int i_25_, int i_26_, int i_27_) {
+    /** Clamp {@code i_25_} to the inclusive {@code [i_26_, i]} range. */
+    static final int clamp(int i, int i_25_, int i_26_, int i_27_) {
         anInt1476++;
         int i_28_ = 106 / ((-20 - i_27_) / 48);
         if (i_26_ > i_25_) return i_26_;

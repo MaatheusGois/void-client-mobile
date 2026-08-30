@@ -113,7 +113,7 @@ final class Component44
         }
         for (int i_0_ = 0; i_0_ < this.anIntArray945.length; i_0_++) {
             if (this.anIntArray945[i_0_] != -1) {
-                Component44 class51_1_ = this.aClass263_933.method2005(0, this.anIntArray945[i_0_]);
+                Component44 class51_1_ = this.aClass263_933.getDefinition(0, this.anIntArray945[i_0_]);
                 if (class51_1_.anInt887 != -1 || class51_1_.anIntArray904 != null) return true;
             }
         }
@@ -313,9 +313,9 @@ final class Component44
         if (i_34_ < 0 || -1 + this.anIntArray945.length <= i_34_ || this.anIntArray945[i_34_] == -1) {
             int i_35_ = (this.anIntArray945[-1 + this.anIntArray945.length]);
             if (i_35_ == -1) return null;
-            return this.aClass263_933.method2005(0, i_35_);
+            return this.aClass263_933.getDefinition(0, i_35_);
         }
-        return this.aClass263_933.method2005(i + -47, this.anIntArray945[i_34_]);
+        return this.aClass263_933.getDefinition(i + -47, this.anIntArray945[i_34_]);
     }
 
     final boolean method481(byte i, int i_36_) {

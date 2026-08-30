@@ -1272,7 +1272,7 @@ final class PacketReader extends CacheNode {
             byte[] is = new byte[DefinitionSub25.anInt9341];
             Component80.aClass348_Sub49_Sub2_3813.method3409(DefinitionSub25.anInt9341, is, 0, -32769);
             String string = WaterShaderSub8.decodeCp1252(is, 0, DefinitionSub25.anInt9341, 0);
-            BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 1, true, 99);
+            BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, true, 99);
             NodeSub3.aClass114_6584 = null;
             return true;
         }

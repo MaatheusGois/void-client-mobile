@@ -13,17 +13,17 @@ final class Component81
     int anInt3557;
 
     Component81() {
-        NodeSub10.method2789(16);
-        this.anInt3555 = (NodeSub10.method2788() != 0 ? NodeSub10.method2789(4) + 1 : 1);
-        if (NodeSub10.method2788() != 0) NodeSub10.method2789(8);
-        NodeSub10.method2789(2);
-        if (this.anInt3555 > 1) this.anInt3557 = NodeSub10.method2789(4);
+        NodeSub10.readBits(16);
+        this.anInt3555 = (NodeSub10.method2788() != 0 ? NodeSub10.readBits(4) + 1 : 1);
+        if (NodeSub10.method2788() != 0) NodeSub10.readBits(8);
+        NodeSub10.readBits(2);
+        if (this.anInt3555 > 1) this.anInt3557 = NodeSub10.readBits(4);
         this.anIntArray3556 = new int[this.anInt3555];
         this.anIntArray3554 = new int[this.anInt3555];
         for (int i = 0; i < this.anInt3555; i++) {
-            NodeSub10.method2789(8);
-            this.anIntArray3556[i] = NodeSub10.method2789(8);
-            this.anIntArray3554[i] = NodeSub10.method2789(8);
+            NodeSub10.readBits(8);
+            this.anIntArray3556[i] = NodeSub10.readBits(8);
+            this.anIntArray3554[i] = NodeSub10.readBits(8);
         }
     }
 }
