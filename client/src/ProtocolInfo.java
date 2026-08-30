@@ -56,7 +56,11 @@ public final class ProtocolInfo {
         }
     }
 
-    /** Selects a revision from a launcher argument before the applet is created. */
+    /**
+     * Selects a revision from a launcher argument before the applet is created.
+     * The launcher must call this during bootstrap, before starting client work;
+     * the selected value is immutable for the remainder of that client run.
+     */
     public static synchronized void selectRevision(int revision) {
         if (revision != REVISION_634 && revision != REVISION_667) {
             throw new IllegalArgumentException("Unsupported protocol revision: " + revision);

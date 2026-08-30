@@ -20,6 +20,7 @@ public final class ServerPrefs {
     public static final int MAX_HISTORY = 5;
     private static final int LEGACY_PORT = 43594;
     private static final int TARGET_LIVE_PORT = 443;
+    private static final String TARGET_PROTOCOL = "667";
 
     /**
      * Process-local newest host — tvOS RoboVM can hit {@code EPERM} writing under
@@ -47,7 +48,7 @@ public final class ServerPrefs {
     public static int gamePort() {
         int fallback = LEGACY_PORT;
         try {
-            if ("667".equals(System.getProperty("void.protocol"))) {
+            if (TARGET_PROTOCOL.equals(System.getProperty("void.protocol"))) {
                 fallback = TARGET_LIVE_PORT;
             }
             String raw = System.getProperty("void.port");
