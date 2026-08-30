@@ -135,7 +135,7 @@ final class Component182
         }
     }
 
-    final void method3399(int i, float f) {
+    final void writeFloatLE(int i, float f) {
         anInt9741++;
         int i_23_ = Stream.floatToRawIntBits(f);
         this.payload[this.offset++] = (byte) i_23_;
@@ -149,7 +149,7 @@ final class Component182
         super(i);
     }
 
-    final void method3400(float f, byte i) {
+    final void writeFloatBE(float f, byte i) {
         anInt9744++;
         int i_24_ = Stream.floatToRawIntBits(f);
         this.payload[this.offset++] = (byte) (i_24_ >> 24);

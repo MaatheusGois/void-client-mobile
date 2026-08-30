@@ -1494,14 +1494,14 @@ final class DisplayModeManagerContainer282
                         for (int i_345_ = 0; anInt5529 > i_345_; i_345_++) {
                             int i_346_ = is[i_345_] & 0xff;
                             if (i_346_ == 0) {
-                                class348_sub49_sub1.method3400(f_341_ * (float) is_340_[i_345_], (byte) -96);
-                                class348_sub49_sub1.method3400((float) is_338_[i_345_] * f_341_, (byte) -101);
-                                class348_sub49_sub1.method3400(f_341_ * (float) is_339_[i_345_], (byte) -95);
+                                class348_sub49_sub1.writeFloatBE(f_341_ * (float) is_340_[i_345_], (byte) -96);
+                                class348_sub49_sub1.writeFloatBE((float) is_338_[i_345_] * f_341_, (byte) -101);
+                                class348_sub49_sub1.writeFloatBE(f_341_ * (float) is_339_[i_345_], (byte) -95);
                             } else {
                                 float f_347_ = f / (float) i_346_;
-                                class348_sub49_sub1.method3400((float) is_340_[i_345_] * f_347_, (byte) -102);
-                                class348_sub49_sub1.method3400(f_347_ * (float) is_338_[i_345_], (byte) -127);
-                                class348_sub49_sub1.method3400((float) is_339_[i_345_] * f_347_, (byte) -84);
+                                class348_sub49_sub1.writeFloatBE((float) is_340_[i_345_] * f_347_, (byte) -102);
+                                class348_sub49_sub1.writeFloatBE(f_347_ * (float) is_338_[i_345_], (byte) -127);
+                                class348_sub49_sub1.writeFloatBE((float) is_339_[i_345_] * f_347_, (byte) -84);
                             }
                             class348_sub49_sub1.offset += -12 + i_295_;
                         }
@@ -1509,14 +1509,14 @@ final class DisplayModeManagerContainer282
                         for (int i_342_ = 0; i_342_ < anInt5529; i_342_++) {
                             int i_343_ = 0xff & is[i_342_];
                             if (i_343_ == 0) {
-                                class348_sub49_sub1.method3399(18291, (float) is_340_[i_342_] * f_341_);
-                                class348_sub49_sub1.method3399(18291, (float) is_338_[i_342_] * f_341_);
-                                class348_sub49_sub1.method3399(i + 18286, f_341_ * (float) is_339_[i_342_]);
+                                class348_sub49_sub1.writeFloatLE(18291, (float) is_340_[i_342_] * f_341_);
+                                class348_sub49_sub1.writeFloatLE(18291, (float) is_338_[i_342_] * f_341_);
+                                class348_sub49_sub1.writeFloatLE(i + 18286, f_341_ * (float) is_339_[i_342_]);
                             } else {
                                 float f_344_ = f / (float) i_343_;
-                                class348_sub49_sub1.method3399(i ^ 0x4776, (float) is_340_[i_342_] * f_344_);
-                                class348_sub49_sub1.method3399(18291, f_344_ * (float) is_338_[i_342_]);
-                                class348_sub49_sub1.method3399(18291, f_344_ * (float) is_339_[i_342_]);
+                                class348_sub49_sub1.writeFloatLE(i ^ 0x4776, (float) is_340_[i_342_] * f_344_);
+                                class348_sub49_sub1.writeFloatLE(18291, f_344_ * (float) is_338_[i_342_]);
+                                class348_sub49_sub1.writeFloatLE(18291, f_344_ * (float) is_339_[i_342_]);
                             }
                             class348_sub49_sub1.offset += -12 + i_295_;
                         }
@@ -1526,14 +1526,14 @@ final class DisplayModeManagerContainer282
                     class348_sub49_sub1.offset = i_299_;
                     if (aHa_Sub2_5598.aBoolean7775) {
                         for (int i_348_ = 0; i_348_ < anInt5529; i_348_++) {
-                            class348_sub49_sub1.method3400((aFloatArray5552[i_348_]), (byte) -127);
-                            class348_sub49_sub1.method3400((aFloatArray5571[i_348_]), (byte) -126);
+                            class348_sub49_sub1.writeFloatBE((aFloatArray5552[i_348_]), (byte) -127);
+                            class348_sub49_sub1.writeFloatBE((aFloatArray5571[i_348_]), (byte) -126);
                             class348_sub49_sub1.offset += i_295_ + -8;
                         }
                     } else {
                         for (int i_349_ = 0; i_349_ < anInt5529; i_349_++) {
-                            class348_sub49_sub1.method3399(i ^ 0x4776, (aFloatArray5552[i_349_]));
-                            class348_sub49_sub1.method3399(18291, aFloatArray5571[i_349_]);
+                            class348_sub49_sub1.writeFloatLE(i ^ 0x4776, (aFloatArray5552[i_349_]));
+                            class348_sub49_sub1.writeFloatLE(18291, aFloatArray5571[i_349_]);
                             class348_sub49_sub1.offset += -8 + i_295_;
                         }
                     }
