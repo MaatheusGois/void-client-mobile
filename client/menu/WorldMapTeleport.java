@@ -27,6 +27,8 @@ final class WorldMapTeleport {
         if (plane < 0 || plane > 3) {
             plane = Component72.localPlayer != null ? Component72.localPlayer.plane : 0;
         }
+        // addMenuEntry maps its sixth argument to param0 (X), its third to
+        // param1 (Y), and its tenth to identifier (plane): tele X Y Z.
         DisplayModeManagerContainer368.addMenuEntry(
                 false, type.aString565, y, (byte) -93, false, x, -1, true,
                 OPCODE_TELEPORT, (long) plane, "Teleport", 0L, -1);
