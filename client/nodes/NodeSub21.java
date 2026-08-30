@@ -10,9 +10,9 @@ final class NodeSub21
     int anInt6847;
     boolean aBoolean6848 = false;
     static int anInt6849;
-    int anInt6850;
-    int anInt6851;
-    int anInt6852;
+    int anInt6850; // World-map element plane.
+    int anInt6851; // Relative world-map Y.
+    int anInt6852; // Relative world-map X.
     int anInt6853;
     static String aString6854 = null;
     int anInt6855;
