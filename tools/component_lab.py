@@ -105,7 +105,7 @@ def buffer_svg(buffer: BufferView) -> str:
         hex_part = " ".join(f"{value:02x}" for value in chunk).ljust(47)
         ascii_part = "".join(chr(value) if 32 <= value < 127 else "." for value in chunk)
         rows.append(
-            f'<text x="32" y="{124 + len(rows) * 19}" class="code">'
+            f'<text x="32" y="{124 + offset // 16 * 19}" class="code">'
             f'<tspan class="number">{offset:04x}</tspan> {hex_part}  {html.escape(ascii_part)}</text>'
         )
     height = max(260, 124 + len(rows) * 19 + 34)
