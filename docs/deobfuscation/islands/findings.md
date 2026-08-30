@@ -227,6 +227,7 @@ These remain TBD from the top-tokens list:
 
 - `method3494`, `method3493`, `method3738`, `method3850`, `method3849`
   (high call-site counts, not yet investigated)
+- `method835` (69 refs; defining class and role still need confirmation)
 - `anInt3138` (174 refs, 3xxx range — probably particle count or scan counter)
 - `anInt4592`, `anInt4588` (4xxx range, possibly NPC list / entity array)
 - `anInt9139`, `anInt8983` (9xxx range — usually widgets / interfaces)

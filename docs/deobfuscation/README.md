@@ -83,9 +83,9 @@ Renaming these is high-leverage because every call-site is replaced:
 | `method3738` | 83 | TBD | investigate |
 | `method3850` | 77 | TBD | investigate |
 | `method3849` | 58 | TBD | investigate |
+| `method835` | 69 | TBD | investigate |
 | `method3400` | 0 | ✅ resolved | `writeFloatBE` (Component182) |
 | `method3399` | 0 | ✅ resolved | `writeFloatLE` (Component182) |
-| `method835` | 69 | TBD | investigate |
 
 ### Top shared `anInt####` (state fields)
 
