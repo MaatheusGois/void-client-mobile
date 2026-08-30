@@ -60,7 +60,32 @@ final class SceneEditor {
         }
     }
     void save(String name) throws IOException { store.save(name, scene); dirty = false; }
-    void load(String name) throws IOException { scene = store.load(name); undo.clear(); redo.clear(); dirty = false; }
+    void load(String name) throws IOException {
+        scene = store.load(name);
+        undo.clear();
+        redo.clear();
+        dirty = false;
+        nextId = 1;
+        for (SceneObject object : scene.objects()) {
+            if (object.id + 1 > nextId) {
+                nextId = object.id + 1;
+            }
+        }
+    }
+    /** Drop every object; preserves scene name / region. Pushes one undo frame. */
+    void clearObjects() {
+        change(new Runnable() {
+            public void run() {
+                java.util.ArrayList<Long> ids = new java.util.ArrayList<Long>();
+                for (SceneObject object : scene.objects()) {
+                    ids.add(Long.valueOf(object.id));
+                }
+                for (int i = 0; i < ids.size(); i++) {
+                    scene.remove(ids.get(i).longValue());
+                }
+            }
+        });
+    }
     void autosave() throws IOException { store.autosave(scene); }
 
     /** Parses only local, deterministic commands; no arbitrary code or file paths are accepted. */

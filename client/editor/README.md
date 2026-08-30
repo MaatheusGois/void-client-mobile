@@ -1,26 +1,59 @@
-# Local scene editor core
+# Local scene editor
 
-The `editor` source root contains the first, renderer-independent part of the
-local object scene editor. `Scene` and `SceneObject` are the persisted model;
-`SceneStore` writes versioned JSON below `user.home/void-scenes` using a
-temporary file and a `.bak` predecessor; `SceneEditor` exposes validated,
-deterministic commands and bounded undo/redo.
+Renderer-independent model + live placer for a **device-local** object scene
+editor. Scenes never modify the JS5 cache and never send packets to the server.
 
-Supported commands are:
+## Layers
+
+| Piece | Role |
+|---|---|
+| `Scene` / `SceneObject` | Versioned model (JSON) |
+| `SceneStore` | Atomic save under `user.home/void-scenes` (+ `.bak`) |
+| `SceneEditor` | Validated commands + undo/redo |
+| `SceneObjectAdapter` | Places/removes LocTypes via `SceneManager.method1591` |
+| `LiveSceneBridge` | Resyncs model ↔ live tile graph |
+| `SceneEditorHost` | Console / Microbot entry point |
+
+## In-game usage
+
+1. Log in, open the developer console (`` ` ``).
+2. `ed` — print help + status.
+3. `ed mode editor` **or** Microbot panel → **Editor: ON**.
+4. `spawn 1276` / `ed spawn 1276` — place LocType at your tile.
+5. `ed save demo` / `ed load demo` / `ed undo` / `ed clear`.
+
+Supported console surface:
 
 ```text
-add <objectId> <x> <y> <z> <plane>
-move <localId> <x> <y> <z>
-rotate <localId> <rotation>
-scale <localId> <scale>
-remove <localId>
-undo
-redo
-save <name>
+ed mode [editor|game]
+ed spawn <objectId>
+ed add <objectId> <x> <y> <z> <plane>
+ed move <localId> <x> <y> <z>
+ed rotate <localId> <0-3>
+ed scale <localId> <scale>   # stored only
+ed remove <localId>
+ed undo | redo | clear | apply | status
+ed save <name> | load <name>
 ```
 
-This layer is intentionally local-only and does not alter JS5 cache files or
-send changes to the game server. The next integration step is an explicit
-adapter that maps `SceneObject` values to renderable scene nodes; keeping that
-adapter separate prevents malformed scene files or editor commands from
-mutating the normal game mode.
+## Limits (this PR)
+
+- Default place type is scenery (`type=10`). Walls/decor need follow-up.
+- Terrain height is used; free `z` is stored but not applied.
+- Per-instance `scale` is stored but not applied (LocType default scale).
+- Objects vanish on region reload until `ed apply` / `ed load`.
+- No mouse pick / drag yet — console + Microbot toggle only.
+
+## Offline demo
+
+```bash
+export JAVA_HOME="$HOME/.jdks/jdk-17.0.20.1+1/Contents/Home"
+./gradlew :client:compileJava
+java -cp client/build/classes/java/main SceneEditorDemo
+```
+
+## Build
+
+```bash
+./gradlew :client:compileJava
+```

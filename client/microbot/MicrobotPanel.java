@@ -49,7 +49,7 @@ final class MicrobotPanel {
 
     /** Current panel pixel height (collapsed = header only). */
     static int height() {
-        return collapsed ? ROW_H + PAD * 2 : ROW_H * 4 + PAD * 2;
+        return collapsed ? ROW_H + PAD * 2 : ROW_H * 5 + PAD * 2;
     }
 
     /**
@@ -108,6 +108,10 @@ final class MicrobotPanel {
                 font.drawText(paused ? "Pause: ON" : "Pause: OFF",
                         paused ? OFF : ON, y, textX, SHADOW, -110);
                 y += ROW_H;
+                boolean editorOn = SceneEditorHost.isEditorMode();
+                font.drawText(editorOn ? "Editor: ON" : "Editor: OFF",
+                        editorOn ? ON : OFF, y, textX, SHADOW, -110);
+                y += ROW_H;
                 int absX = MicrobotWidgets.localAbsX();
                 int absY = MicrobotWidgets.localAbsY();
                 int plane = MicrobotWidgets.localPlane();
@@ -160,7 +164,7 @@ final class MicrobotPanel {
 
     /**
      * Map a canvas click to a row action.
-     * Row 0 = collapse/expand; 1 = combat; 2 = pause.
+     * Row 0 = collapse/expand; 1 = combat; 2 = pause; 3 = scene editor.
      */
     private static void onClick(int x, int y) {
         int relY = y - PANEL_Y - PAD;
@@ -178,6 +182,10 @@ final class MicrobotPanel {
         } else if (row == 2) {
             Microbot.pauseAllScripts = !Microbot.pauseAllScripts;
             Microbot.log("pause=" + Microbot.pauseAllScripts);
+        } else if (row == 3) {
+            boolean next = !SceneEditorHost.isEditorMode();
+            SceneEditorHost.setEditorMode(next);
+            Microbot.log("editor=" + next + " (console: ed spawn <id>)");
         }
     }
 
