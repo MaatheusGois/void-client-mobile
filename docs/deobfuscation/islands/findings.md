@@ -283,3 +283,61 @@ collides with hundreds of local `d` variables and with string literals
 (`FriendsIgnoreList` FR/ES text, `ReflectionInvoker` IP regex `"\\d+..."`,
 `Loader` `-d` flag). A blanket or "type-scoped" regex rewrite breaks the
 build. Rename `d` only with a real IDE refactoring tool in a dedicated pass.
+
+---
+
+## 12. lote 67 — world-map Helvetica `FontGlyphCache` (CONFIRMED, executed)
+
+Evidence from iOS broken map labels + `StaticElementRenderer` bake ladder
+(state 70–100) + `DisplayModeManagerContainer213` draw path.
+
+| Old | New | Evidence |
+|---|---|---|
+| `method2559` | `bakeGlyph` | AWT `drawString` + `PixelGrabber` + `method3662` |
+| `method2560` | `getBaselineAscent` | `maxAscent - topInkRow` |
+| `method2561` | `drawStringRaw` | glyph blit + optional shadow |
+| `method2562` | `clearCharsetMap` | nulls static char map |
+| `method2563` | `drawCenteredString` | center + clip gate (map labels) |
+| `method2564` | `measureStringWidth` | sum advances |
+| `method2565` | `getLineHeight` | `fontHeight - 1` |
+| `method1782` | `selectMapLabelFont` | zoom×tier → pt cache |
+| `aClass323_4921`…`4672` | `helveticaGlyphs11`…`30` | ctor point sizes 11–30 |
+| fields `anInt4040/41`, arrays | `fontHeight` / `baselineAscent` / `glyphAdvances` / `glyphSprites` / `charToGlyphIndex` / `clipBoundsScratch` | bake + draw |
+
+Also extracted `CHARSET` string constant; documented iOS `UIGraphics` bake
+requirement on `FontGlyphCache` header.
+
+Reflection: none. Desktop + iOS compile required after lote.
+
+---
+
+## 13. lote 68 — IF widget ids from `widget-map/` (CONFIRMED, executed)
+
+Evidence: live dump `widget-dumps/20260830-164259` + Shift+click picks +
+prior orb dump strings. Promoted into `MicrobotWidgets` (no OSRS globval copy).
+
+| Constant | Value | Evidence |
+|---|---|---|
+| `NOTES_GROUP` | 34 | "Notes" / Add note / Delete |
+| `CHAT_GROUP` | 137 | Quick Chat / Submit |
+| `INVENTORY_GROUP` | 149 | backpack; slots share `149:0` + childIndex |
+| `MUSIC_GROUP` | 187 | track list under `187:1` |
+| `QUESTS_GROUP` | 190 | Quests / filter / rows on `190:18` |
+| `MAGIC_GROUP` | 192 | Defensive Casting + Cast/Autocast spells |
+| `OPTIONS_GROUP` | 261 | Toggle Run / chat / graphics |
+| `PRAYER_GROUP` | 271 | quick-prayer setup / book |
+| `COMBAT_STYLES_GROUP` | 320 | attack styles panel |
+| `FRIENDS_GROUP` | 550 | Friends List |
+| `IGNORE_GROUP` | 551 | Ignore List |
+| `CLAN_CHAT_GROUP` | 589 | Talking in / Owner |
+| `GAMEFRAME_GROUP` | 746 | HUD root |
+| `QUICK_PRAYER_ORB_GROUP` | 749 | minimap orb group |
+| `COMBAT_OVERLAY_GROUP` | 884 | Unarmed / Combat Lvl |
+| `WORLD_MAP_BUTTON` | `746:178` | Shift+click sprite 1777 |
+| `QUICK_PRAYER_ORB` | `749:1` | packed `49086465` |
+| `PRAYER_BOOK_ICONS` | `271:8` | packed `17760264` |
+
+`JoystickAlias`: World Map + quick-prayer fire prefer these packed ids before
+full `openInterfaces` scan.
+
+Reflection: none. Desktop + iOS compile required after lote.

@@ -55,6 +55,8 @@ tasks.register('prepareClientSources', Sync) {
         exclude '**/DesktopAffiliationDisclaimer.java'
         // Desktop-only deob NDJSON logger (lambdas / Function break RoboVM Soot AOT).
         exclude '**/DeobProbe.java'
+        // Desktop-only widget crop dump (java.awt.Robot + ImageIO).
+        exclude '**/WidgetDump.java'
     }) {
         eachFile { details ->
             details.path = details.name

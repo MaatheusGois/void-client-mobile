@@ -22,7 +22,8 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
     static int anInt8641;
     static byte[][] aByteArrayArray8642;
     static int anInt8643;
-    static FontGlyphCache aClass323_8644;
+    /** World-map Helvetica glyph cache at 12pt (zoom ladder). */
+    static FontGlyphCache helveticaGlyphs12;
     static int anInt8645;
     static int anInt8646;
     static int anInt8647;
@@ -54,7 +55,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
 
     public static void method251(byte i) {
         if (i != 2) method250(-45, false, -102);
-        aClass323_8644 = null;
+        helveticaGlyphs12 = null;
         STELLARDAWN = null;
         aByteArrayArray8642 = null;
     }
@@ -114,7 +115,7 @@ final class WorldNameText extends DisplayModeManagerContainer194 implements Inte
 
     static final void method253(int i, int i_12_, int i_13_, int i_14_, int i_15_) {
         anInt8648++;
-        if (i_13_ != -648) aClass323_8644 = null;
+        if (i_13_ != -648) helveticaGlyphs12 = null;
         int i_16_ = 0;
         int i_17_ = i_15_;
         int i_18_ = -i_15_;

@@ -14,13 +14,20 @@ import java.util.Properties;
  * learn mode; the next learnable pad button is persisted and announced in chat as
  * {@code Eat Shark is bound to Triangle}.
  * <p>
- * <b>Widget evidence (desktop dump):</b>
+ * <b>Widget evidence (desktop dump + widget-map/):</b>
  * <ul>
- *   <li>Quick-prayer orb {@code packedId=49086465}: {@code Turn quick prayers on}
+ *   <li>Quick-prayer orb {@link MicrobotWidgets#QUICK_PRAYER_ORB} ({@code 749:1} /
+ *       packed {@code 49086465}): {@code Turn quick prayers on}
  *       / {@code Turn prayers off} (active state drops "quick") +
  *       {@code Select quick prayers} (setup — never learn/fire).</li>
- *   <li>Prayer-book icons share {@code packedId=17760264}; bind {@link #Binding#childIndex}
+ *   <li>Prayer-book icons share {@link MicrobotWidgets#PRAYER_BOOK_ICONS}
+ *       ({@code 271:8}); bind {@link #Binding#childIndex}
  *       and resolve with {@link NpcNode#getChildComponent}.</li>
+ *   <li>World Map globe {@link MicrobotWidgets#WORLD_MAP_BUTTON} ({@code 746:178},
+ *       sprite 1777) — preferred before label scan.</li>
+ *   <li>IF groups catalogued in {@link MicrobotWidgets} from {@code widget-map/MAP.md}
+ *       (Notes 34, Chat 137, Inv 149, Music 187, Quests 190, Magic 192,
+ *       Options 261, Prayer 271, Gameframe 746, …).</li>
  *   <li>Pad callbacks are off-thread — queue {@link #pendingFire} and drain in
  *       {@link #clientTick} or CC_OP freezes the UI.</li>
  *   <li>Chat labels must be ASCII (RS bitmap font has no ↑↓ / □△ — they render as '?').</li>
@@ -88,6 +95,22 @@ final class JoystickAlias {
         if (b != null) {
             pendingFire = null;
             fire(b);
+        }
+        // Desktop-only WidgetDump (reflection — class excluded from Android/iOS sync).
+        pollWidgetDump();
+        // Flush Shift+click widget identity (best leaf from this tick).
+        MobileKeyboard.flushWidgetPick();
+    }
+
+    /**
+     * Invokes {@code WidgetDump.poll()} when the desktop class is present.
+     * No-op on mobile (class excluded from source sync).
+     */
+    private static void pollWidgetDump() {
+        try {
+            Class.forName("WidgetDump").getMethod("poll").invoke(null);
+        } catch (Throwable ignored) {
+            // Desktop class missing or dump disabled — expected on mobile.
         }
     }
 
@@ -646,7 +669,17 @@ final class JoystickAlias {
     }
 
     private static boolean tryClickWorldMapControl() {
-        DisplayModeManagerContainer57 hit = findWorldMapWidget(DefinitionSub33.openInterfaces);
+        // Prefer the confirmed gameframe globe (widget-map / Shift+click) before a full scan.
+        DisplayModeManagerContainer57 hit = MicrobotWidgets.get(MicrobotWidgets.WORLD_MAP_BUTTON);
+        if (hit == null || hit.hidden) {
+            hit = findWorldMapWidget(DefinitionSub33.openInterfaces);
+        } else if (!isWorldMapLabel(hit.text) && !hasWorldMapOption(hit)) {
+            // Packed id present but labels empty — still try click; else fall back to scan.
+            DisplayModeManagerContainer57 scanned = findWorldMapWidget(DefinitionSub33.openInterfaces);
+            if (scanned != null) {
+                hit = scanned;
+            }
+        }
         if (hit == null) {
             return false;
         }
@@ -760,6 +793,19 @@ final class JoystickAlias {
                 || lower.equals("mapa")
                 || lower.indexOf("mappemonde") >= 0
                 || lower.indexOf("weltkarte") >= 0;
+    }
+
+    /** True if any option slot on {@code c} looks like the World Map control. */
+    private static boolean hasWorldMapOption(DisplayModeManagerContainer57 c) {
+        if (c == null) {
+            return false;
+        }
+        for (int i = 0; i <= 9; i++) {
+            if (isWorldMapLabel(Component63.getComponentOption(i, c, true))) {
+                return true;
+            }
+        }
+        return isWorldMapLabel(c.continueOption);
     }
 
     private static void fire(Binding b) {
@@ -1154,6 +1200,11 @@ final class JoystickAlias {
      * whichever it currently shows. Learned as one {@link Kind#QUICK_PRAYER} alias.
      */
     private static boolean fireQuickPrayerToggle() {
+        // Prefer confirmed orb packed id from widget-map / desktop dump.
+        DisplayModeManagerContainer57 known = MicrobotWidgets.get(MicrobotWidgets.QUICK_PRAYER_ORB);
+        if (known != null && !known.hidden && fireQuickPrayerOnOrb(known)) {
+            return true;
+        }
         DisplayModeManagerContainer57[][] roots = DefinitionSub33.openInterfaces;
         if (roots == null) {
             return false;

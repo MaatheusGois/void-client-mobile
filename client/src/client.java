@@ -387,7 +387,7 @@ public final class client extends Applet_Sub1 {
         Component79.method2645(i + -16777324);
         Component37.method2331(true);
         NodeSub21.method2956((byte) 53);
-        FontGlyphCache.method2562();
+        FontGlyphCache.clearCharsetMap();
         Component325.method722(13569);
         Component357.method1386(true);
         CookieBuilder.clearStatics(0);
@@ -1231,7 +1231,14 @@ public final class client extends Applet_Sub1 {
                                 }
                                 if (class46.contentType == NodeSub45.anInt7102) {
                                     Component39.aClass46_2249 = class46;
-                                    if (bool) Component163.aBoolean3174 = true;
+                                    if (bool) {
+                                        Component163.aBoolean3174 = true;
+                                        // Admin: right-click anywhere on the map → Teleport to here.
+                                        WorldMapTeleport.injectAtSurface(
+                                                i_51_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true) - i_43_,
+                                                i_52_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 72) - i_44_,
+                                                class46.width, class46.height);
+                                    }
                                     if (bool_54_) {
                                         int i_70_ = (int) ((double) (i_51_ + (class348_sub45.getX((byte) -127)) - i_43_ - ((class46.width) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));
                                         int i_71_ = (int) -((double) (i_52_ + (class348_sub45.getY(-111)) - i_44_ - ((class46.height) / 2)) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1247));

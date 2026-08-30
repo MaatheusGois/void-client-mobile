@@ -7,7 +7,8 @@ final class Component49
  * RENAMED from `Class240` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ implements Interface1 {
-    static FontGlyphCache aClass323_4672;
+        /** World-map Helvetica glyph cache at 30pt (largest ladder). */
+    static FontGlyphCache helveticaGlyphs30;
     static float aFloat4673;
     /**
      * Client FSM state (title / lobby / world / …). Examples used in-tree:
@@ -53,7 +54,7 @@ final class Component49
     public static void method1853(byte i) {
         aClass105Array4679 = null;
         if (i != 48) clientState = -62;
-        aClass323_4672 = null;
+        helveticaGlyphs30 = null;
         aClass324_4684 = null;
     }
 

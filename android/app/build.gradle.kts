@@ -47,6 +47,8 @@ val prepareClientSources by tasks.registering(Sync::class) {
         exclude("**/DesktopAffiliationDisclaimer.java")
         // Desktop-only deob NDJSON logger (lambdas break RoboVM; keep off mobile).
         exclude("**/DeobProbe.java")
+        // Desktop-only widget crop dump (java.awt.Robot + ImageIO).
+        exclude("**/WidgetDump.java")
         eachFile {
             path = name
         }

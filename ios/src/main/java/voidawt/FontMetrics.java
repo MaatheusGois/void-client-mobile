@@ -35,7 +35,11 @@ public class FontMetrics {
     }
 
     public int getAscent() {
-        return Math.max(1, (int) Math.ceil(uiFont.getAscender()));
+        // Match Graphics.drawString: max(UIFont ascender, CTLine ascent) so
+        // FontGlyphCache image height / baseline crop the same pixels we bake.
+        CTLine line = CTLine.create(font.attributed("Hg", UIColor.white()));
+        double ascent = Math.max(uiFont.getAscender(), line.getAscent());
+        return Math.max(1, (int) Math.ceil(ascent));
     }
 
     public int getMaxAscent() {
@@ -44,7 +48,9 @@ public class FontMetrics {
 
     public int getDescent() {
         // UIKit reports descender as a negative offset below the baseline.
-        return Math.max(1, (int) Math.ceil(-uiFont.getDescender()));
+        CTLine line = CTLine.create(font.attributed("Hg", UIColor.white()));
+        double descent = Math.max(-uiFont.getDescender(), line.getDescent());
+        return Math.max(1, (int) Math.ceil(descent));
     }
 
     public int getMaxDescent() {

@@ -194,42 +194,44 @@ final class StaticElementRenderer extends Renderable {
                         Component156.method2193(true, (byte) -127);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 70) {
-                        Component15.aClass323_4921 = new FontGlyphCache(var_ha, 11, true, DisplayModeManagerContainer50.gameCanvas);
+                        // Bake world-map Helvetica ladders (11→30pt). Uses AWT drawString;
+                        // iOS voidawt must use UIGraphics or labels bake garbled.
+                        Component15.helveticaGlyphs11 = new FontGlyphCache(var_ha, 11, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 73;
                         Component156.method2193(true, (byte) -123);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 73) {
-                        WorldNameText.aClass323_8644 = new FontGlyphCache(var_ha, 12, true, DisplayModeManagerContainer50.gameCanvas);
+                        WorldNameText.helveticaGlyphs12 = new FontGlyphCache(var_ha, 12, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 76;
                         Component156.method2193(true, (byte) -125);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 76) {
-                        DisplayModeManagerContainer271.aClass323_521 = new FontGlyphCache(var_ha, 14, true, DisplayModeManagerContainer50.gameCanvas);
+                        DisplayModeManagerContainer271.helveticaGlyphs14 = new FontGlyphCache(var_ha, 14, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 79;
                         Component156.method2193(true, (byte) -123);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 79) {
-                        Component39.aClass323_2252 = new FontGlyphCache(var_ha, 17, true, DisplayModeManagerContainer50.gameCanvas);
+                        Component39.helveticaGlyphs17 = new FontGlyphCache(var_ha, 17, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 82;
                         Component156.method2193(true, (byte) -124);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 82) {
-                        Component218.aClass323_2333 = new FontGlyphCache(var_ha, 19, true, DisplayModeManagerContainer50.gameCanvas);
+                        Component218.helveticaGlyphs19 = new FontGlyphCache(var_ha, 19, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 85;
                         Component156.method2193(true, (byte) -128);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 85) {
-                        DebugPanic.aClass323_4754 = new FontGlyphCache(var_ha, 22, true, DisplayModeManagerContainer50.gameCanvas);
+                        DebugPanic.helveticaGlyphs22 = new FontGlyphCache(var_ha, 22, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 88;
                         Component156.method2193(true, (byte) -124);
                         Component97.method867(true);
                     } else if (Node.anInt4290 == 88) {
-                        NodeSub3.aClass323_6581 = new FontGlyphCache(var_ha, 26, true, DisplayModeManagerContainer50.gameCanvas);
+                        NodeSub3.helveticaGlyphs26 = new FontGlyphCache(var_ha, 26, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 91;
                         Component156.method2193(true, (byte) -125);
                         Component97.method867(true);
                     } else {
-                        Component49.aClass323_4672 = new FontGlyphCache(var_ha, 30, true, DisplayModeManagerContainer50.gameCanvas);
+                        Component49.helveticaGlyphs30 = new FontGlyphCache(var_ha, 30, true, DisplayModeManagerContainer50.gameCanvas);
                         Node.anInt4290 = 100;
                         Component156.method2193(true, (byte) -119);
                         Component97.method867(true);

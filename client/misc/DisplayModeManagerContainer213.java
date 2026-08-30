@@ -218,10 +218,10 @@ abstract class DisplayModeManagerContainer213
                     for (int i_63_ = 0; i_60_ > i_63_; i_63_++) {
                         String string = GlToolkitSub3.aStringArray8019[i_63_];
                         if (i_60_ + -1 > i_63_) string = string.substring(0, string.length() - 4);
-                        int i_64_ = DisplayModeManagerContainer271.aClass323_521.method2564(string);
+                        int i_64_ = DisplayModeManagerContainer271.helveticaGlyphs14.measureStringWidth(string);
                         if (i_61_ < i_64_) i_61_ = i_64_;
                     }
-                    i_62_ = (i_60_ * DisplayModeManagerContainer271.aClass323_521.method2565() - -(DisplayModeManagerContainer271.aClass323_521.method2560() / 2));
+                    i_62_ = (i_60_ * DisplayModeManagerContainer271.helveticaGlyphs14.getLineHeight() - -(DisplayModeManagerContainer271.helveticaGlyphs14.getBaselineAscent() / 2));
                 }
                 int i_65_ = i_56_ / 2 + class348_sub21.anInt6853;
                 int i_66_ = class348_sub21.anInt6855;
@@ -251,15 +251,15 @@ abstract class DisplayModeManagerContainer213
                 if (class42.aString597 != null) {
                     i_69_ = i_66_;
                     i_68_ = i_65_ + -(i_61_ / 2) - 5;
-                    i_71_ = 3 + (i_60_ * DisplayModeManagerContainer271.aClass323_521.method2565() + i_69_);
+                    i_71_ = 3 + (i_60_ * DisplayModeManagerContainer271.helveticaGlyphs14.getLineHeight() + i_69_);
                     i_70_ = i_61_ + (i_68_ + 10);
                     if (class42.anInt602 != 0) var_ha.method3675(-i_68_ + i_70_, (byte) -125, i_68_, i_69_, i_71_ - i_69_, class42.anInt602);
                     if (class42.anInt604 != 0) var_ha.method3668(-i_68_ + i_70_, i_69_, class42.anInt604, i_68_, -i_69_ + i_71_, 67);
                     for (int i_72_ = 0; i_60_ > i_72_; i_72_++) {
                         String string = GlToolkitSub3.aStringArray8019[i_72_];
                         if (i_72_ < i_60_ + -1) string = string.substring(0, -4 + string.length());
-                        DisplayModeManagerContainer271.aClass323_521.method2563(var_ha, string, i_65_, i_66_, (class42.anInt580), true);
-                        i_66_ += DisplayModeManagerContainer271.aClass323_521.method2565();
+                        DisplayModeManagerContainer271.helveticaGlyphs14.drawCenteredString(var_ha, string, i_65_, i_66_, (class42.anInt580), true);
+                        i_66_ += DisplayModeManagerContainer271.helveticaGlyphs14.getLineHeight();
                     }
                 }
                 if (class42.anInt578 != -1 || class42.aString597 != null) {

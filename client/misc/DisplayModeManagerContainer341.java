@@ -2,11 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-final class DisplayModeManagerContainer341
 /**
  * RENAMED from `Class239_Sub15` (JODE-obfuscated).
- * Evidence: subclass of Component339 (hierarchy)
- */ extends Component339 {
+ * Preference subclass; also hosts {@link #selectMapLabelFont} (world-map Helvetica ladder).
+ */
+final class DisplayModeManagerContainer341 extends Component339 {
     static int anInt5996;
     static Component183 aClass114_5997 = new Component183(115, 11);
     static int anInt5998;
@@ -19,24 +19,31 @@ final class DisplayModeManagerContainer341
     static int anInt6005;
     static int anInt6006 = 0;
 
-    static final FontGlyphCache method1782(int i, int i_0_) {
-        if (i_0_ != 10144) return null;
+    /**
+     * Pick a baked Helvetica {@link FontGlyphCache} for a world-map label.
+     *
+     * @param sizeTier label importance 0/1/2 (larger tier → bigger pt at same zoom)
+     * @param magic    must be {@code 10144} (opaque gate)
+     * @return cache for current map zoom ({@code aFloat1247} ∈ {3,4,6,≥8}), or null
+     */
+    static final FontGlyphCache selectMapLabelFont(int sizeTier, int magic) {
+        if (magic != 10144) return null;
         anInt6004++;
-        if (i == 0) {
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return Component15.aClass323_4921;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return WorldNameText.aClass323_8644;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return DisplayModeManagerContainer271.aClass323_521;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return Component39.aClass323_2252;
-        } else if (i == 1) {
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return DisplayModeManagerContainer271.aClass323_521;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return Component39.aClass323_2252;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return Component218.aClass323_2333;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return DebugPanic.aClass323_4754;
-        } else if (i == 2) {
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return Component218.aClass323_2333;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return DebugPanic.aClass323_4754;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return NodeSub3.aClass323_6581;
-            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return Component49.aClass323_4672;
+        if (sizeTier == 0) {
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return Component15.helveticaGlyphs11;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return WorldNameText.helveticaGlyphs12;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return DisplayModeManagerContainer271.helveticaGlyphs14;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return Component39.helveticaGlyphs17;
+        } else if (sizeTier == 1) {
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return DisplayModeManagerContainer271.helveticaGlyphs14;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return Component39.helveticaGlyphs17;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return Component218.helveticaGlyphs19;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return DebugPanic.helveticaGlyphs22;
+        } else if (sizeTier == 2) {
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 3.0) return Component218.helveticaGlyphs19;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 4.0) return DebugPanic.helveticaGlyphs22;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 == 6.0) return NodeSub3.helveticaGlyphs26;
+            if ((double) DisplayModeManagerContainer229.aFloat1247 >= 8.0) return Component49.helveticaGlyphs30;
         }
         return null;
     }
@@ -126,7 +133,7 @@ final class DisplayModeManagerContainer341
 
     final int method1710(int i) {
         anInt5996++;
-        if (i != 20014) method1782(-76, -103);
+        if (i != 20014) selectMapLabelFont(-76, -103);
         if (this.preferences.method3428((byte) -105).method1458(-23688) < 96) return 0;
         return 2;
     }
