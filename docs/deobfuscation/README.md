@@ -12,8 +12,8 @@ Skill: [`.cursor/skills/void-client-deobfuscate/SKILL.md`](../../.cursor/skills/
 
 | Metric | Value |
 |---|---:|
-| Java files under `client/` | 791 |
-| Unique `method####` tokens | 3 315 |
+| Java files under `client/` | 798 |
+| Unique `method####` tokens | 3 075 |
 | Unique `anInt####` tokens | 6 287 |
 | Unique `aClass####` tokens | 26 |
 | Reflection-gate (`check_reflection.py`) | **PASS** (25 live targets / 51 unique refs) |
@@ -43,6 +43,13 @@ Already-clarified islands (from session log: lotes 47–49):
 | **Sprite rasterizer (lote 52, ready)** | `anInt8477`→`spriteAlpha`, `anInt8471`→`spriteWidth`, `anInt8450/8481`→`scanlineStart*` | ~1 200 |
 | **OpenGL renderer (lote 54, ready)** | `method3771`→`setTextureUnit`, `method3243`→`registerParticle`, `method2148`→`createParticleSystem` | ~400 |
 | **Display-state mirrors (lote 56, ready)** | 10 reflective `anInt####` fields → `canvasWidth`/`canvasHeight` (see findings §5) | 10 fields |
+
+### Latest batch (lote 69)
+
+The long-tail pass renamed 11 uniquely defined methods with evidence from
+bitstream parsing, ARGB compositing, cache lifecycle, sprite drawing, texture
+state, preference loading, and matrix construction. Together these names
+remove 530 obfuscated method references without changing behavior.
 
 ---
 
