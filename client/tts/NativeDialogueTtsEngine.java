@@ -19,7 +19,7 @@ public final class NativeDialogueTtsEngine implements DialogueTtsEngine {
         }
         try {
             String voice = gender == VoiceGender.FEMALE ? "Samantha" : "Alex";
-            desktopProcess = new ProcessBuilder("say", "-v", voice, text).start();
+            desktopProcess = new ProcessBuilder("say", "-v", voice, "--", text).start();
         } catch (Throwable t) {
             System.out.println("void-tts: native voice unavailable: " + t.getMessage());
         }

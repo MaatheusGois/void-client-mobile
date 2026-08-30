@@ -231,13 +231,13 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        super.onDestroy();
         AwtHost.stopSpeech();
         AwtHost.setSpeechHandler(null);
         if (dialogueTts != null) {
             dialogueTts.shutdown();
             dialogueTts = null;
         }
-        super.onDestroy();
     }
 
     /**
