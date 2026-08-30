@@ -40,14 +40,14 @@ final class HashNodeSub16Sub1
 
     static final void method3260(int i) {
         for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0)) {
-            if (class348_sub15.aClass55_Sub1_6768.method510((byte) -125)) DisplayModeManagerContainer282.method690((byte) 70, (class348_sub15.anInt6773));
+            if (class348_sub15.aClass55_Sub1_6768.method510((byte) -125)) DisplayModeManagerContainer282.getColorTag((byte) 70, (class348_sub15.anInt6773));
             else {
                 class348_sub15.aClass55_Sub1_6768.method522((byte) -91);
                 try {
                     class348_sub15.aClass55_Sub1_6768.method517(-2);
                 } catch (Exception exception) {
                     ClientErrorReporter.reportError("TV: " + class348_sub15.anInt6773, exception, 15004);
-                    DisplayModeManagerContainer282.method690((byte) 15, (class348_sub15.anInt6773));
+                    DisplayModeManagerContainer282.getColorTag((byte) 15, (class348_sub15.anInt6773));
                 }
                 if (!class348_sub15.aBoolean6783 && !class348_sub15.aBoolean6781) {
                     OggUrlStream class348_sub23_sub1 = class348_sub15.aClass55_Sub1_6768.method512(0);

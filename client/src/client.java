@@ -557,7 +557,7 @@ public final class client extends Applet_Sub1 {
         ReliefShader.method1411(true);
         DisplayModeManagerContainer105.method1499(i + -235);
         Component40.method2258((byte) -122);
-        DisplayModeManagerContainer282.method681(i + -14);
+        DisplayModeManagerContainer282.clearStatic(i + -14);
         Component132.method1091(-9341);
         Component182.method3403(84);
         GlFramebufferTexture.method1962(-1);
@@ -572,7 +572,7 @@ public final class client extends Applet_Sub1 {
         Component75.method1329(4);
         Component333.method2104(88);
         Component387.method1127(5125);
-        DisplayModeManagerContainer190.method676(126);
+        DisplayModeManagerContainer190.clearString(126);
         DisplayModeManagerContainer88.method725(16384);
         Component22.method1057(true);
         Component158.method288((byte) 119);
@@ -1105,7 +1105,7 @@ public final class client extends Applet_Sub1 {
                             HashNode.anInt7059 = 0;
                             Component163.aBoolean3174 = false;
                             DisplayModeManagerContainer87.aBoolean3103 = false;
-                            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.method661((byte) 111);
+                            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.resetNodeStates((byte) 111);
                         }
                         boolean bool;
                         bool = (AbstractGlTextureSub4.mouseHandler.getCursorX(true) + i_51_) >= i_45_ && AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 89) + i_52_ >= i_46_ && (AbstractGlTextureSub4.mouseHandler.getCursorX(true) + i_51_) < i_47_ && AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 74) + i_52_ < i_48_;
@@ -1179,7 +1179,7 @@ public final class client extends Applet_Sub1 {
                                             ColoredText.method1823(NodeSub8.toolkit, i_38_, i_39_, (byte) -50);
                                             for (RenderableSub6 class318_sub6 = ((RenderableSub6) InputStream_Sub2.aClass243_83.method1872(8)); class318_sub6 != null; class318_sub6 = ((RenderableSub6) (InputStream_Sub2.aClass243_83.method1878((byte) -67)))) {
                                                 if (i_40_ >= (class318_sub6.anInt6429) && (i_40_ < (class318_sub6.anInt6426)) && (i_41_ >= (class318_sub6.anInt6427)) && (i_41_ < (class318_sub6.anInt6425))) {
-                                                    DisplayModeManagerContainer190.method661((byte) 107);
+                                                    DisplayModeManagerContainer190.resetNodeStates((byte) 107);
                                                     Component266.method1777(-3, (class318_sub6.aClass318_Sub1_Sub3_Sub3_6431));
                                                 }
                                             }
@@ -1263,7 +1263,7 @@ public final class client extends Applet_Sub1 {
                                         }
                                         if (HashNode.anInt7059 == 2) {
                                             NpcDefinition.aBoolean6788 = true;
-                                            DisplayModeManagerContainer282.method689((byte) -59, (Component191.anInt2464 + (int) ((double) ((RenderableSub4.anInt6411) - (AbstractGlTextureSub4.mouseHandler.getCursorX(true))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))));
+                                            DisplayModeManagerContainer282.clearPosition((byte) -59, (Component191.anInt2464 + (int) ((double) ((RenderableSub4.anInt6411) - (AbstractGlTextureSub4.mouseHandler.getCursorX(true))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))));
                                             CookieManager.method2170((BufferCacheSub2.anInt8237 - (int) ((double) ((Component386.anInt2872) - (AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 83))) * 2.0 / (double) (DisplayModeManagerContainer229.aFloat1249))), (byte) 3);
                                         }
                                     } else {
@@ -1536,7 +1536,7 @@ public final class client extends Applet_Sub1 {
                             if (class46.children != null) method107(class46.children, class46.packedId, i_45_, i_46_, i_47_, i_48_, i_43_ - class46.scrollX, i_44_ - class46.scrollY, i_38_, i_39_, i_40_, i_41_);
                             NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.packedId, -6008)));
                             if (class348_sub41 != null) {
-                                if ((PacketReader.currentGameType == RunescapeInfo.RUNESCAPE) && (class348_sub41.anInt7053) == 0 && !Component364.aBoolean8335 && bool && !DisplayModeManagerContainer356.aBoolean6327) DisplayModeManagerContainer190.method661((byte) 105);
+                                if ((PacketReader.currentGameType == RunescapeInfo.RUNESCAPE) && (class348_sub41.anInt7053) == 0 && !Component364.aBoolean8335 && bool && !DisplayModeManagerContainer356.aBoolean6327) DisplayModeManagerContainer190.resetNodeStates((byte) 105);
                                 Component280.method1373(class348_sub41.anInt7050, i_43_, i_45_, i_47_, i_39_, i_38_, -1391, i_40_, i_48_, i_44_, i_41_, i_46_);
                             }
                         }
@@ -1621,7 +1621,7 @@ public final class client extends Applet_Sub1 {
                 DefinitionSub23.anInt9313 = ResourceLoader.anInt3918;
                 Component156.anInt3699--;
             }
-            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.method661((byte) 111);
+            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.resetNodeStates((byte) 111);
             for (int i_95_ = 0; i_95_ < 100; i_95_++) {
                 if (!Component102.method2203((byte) -85)) break;
             }

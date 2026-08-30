@@ -31,7 +31,7 @@ final class Component240
         anInt1111++;
         if (i != 9013) method597((byte) 86);
         for (ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0); class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0)) {
-            if (!class348_sub15.aBoolean6772) DisplayModeManagerContainer282.method690((byte) -94, (class348_sub15.anInt6773));
+            if (!class348_sub15.aBoolean6772) DisplayModeManagerContainer282.getColorTag((byte) -94, (class348_sub15.anInt6773));
             else class348_sub15.aBoolean6772 = false;
         }
     }

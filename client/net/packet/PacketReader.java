@@ -689,7 +689,7 @@ final class PacketReader extends CacheNode {
         if (KeyFocusHandler.aClass114_6528 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-124);
             Component141.method2397((byte) -124);
-            DisplayModeManagerContainer282.method690((byte) -107, i);
+            DisplayModeManagerContainer282.getColorTag((byte) -107, i);
             NodeSub3.aClass114_6584 = null;
             return true;
         }

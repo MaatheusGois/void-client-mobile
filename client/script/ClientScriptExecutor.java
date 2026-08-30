@@ -2319,7 +2319,7 @@ final class ClientScriptExecutor {
                 }
                 if (i == 7101) {
                     int i_224_ = intStack[--intStackPointer];
-                    if (i_224_ != -1) DisplayModeManagerContainer282.method690((byte) 17, i_224_);
+                    if (i_224_ != -1) DisplayModeManagerContainer282.getColorTag((byte) 17, i_224_);
                     return;
                 }
                 if (i == 7102) {
@@ -2905,7 +2905,7 @@ final class ClientScriptExecutor {
                     if (class17 != null) Component235.method2017(class46.anInt795, class17, 46);
                     Component111.markInterfaceDirty(-9343, class46);
                 }
-                if (class46.childIndex == -1) DisplayModeManagerContainer282.method687((byte) -117, class46.packedId);
+                if (class46.childIndex == -1) DisplayModeManagerContainer282.sendRsaRequest((byte) -117, class46.packedId);
                 return;
             }
             if (i == 1111) {

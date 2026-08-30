@@ -2290,11 +2290,11 @@ abstract class GlToolkitSub3
         anInterface5_Impl1_8193.method21(23315);
         anInterface5_Impl1_8203.method21(23315);
         anInterface5_Impl1_8201.method21(23315);
-        this.aClass64_Sub2_8198.method664(-23755);
-        this.aClass64_Sub2_8194.method664(-23755);
-        this.aClass64_Sub2_8187.method664(-23755);
-        this.aClass64_Sub2_8199.method664(-23755);
-        this.aClass64_Sub2_8189.method664(-23755);
+        this.aClass64_Sub2_8198.resetObjects(-23755);
+        this.aClass64_Sub2_8194.resetObjects(-23755);
+        this.aClass64_Sub2_8187.resetObjects(-23755);
+        this.aClass64_Sub2_8199.resetObjects(-23755);
+        this.aClass64_Sub2_8189.resetObjects(-23755);
         aClass280_8136.method2105(-122);
         anInterface5_Impl2_8195.method21(23315);
     }

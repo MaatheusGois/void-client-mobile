@@ -29,7 +29,7 @@ final class ClientSystemInfo extends Node {
             Component338.aBoolean1712 = false;
             SocketConnector.forceLogout(67);
         } else {
-            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.method661((byte) 95);
+            if (!Component364.aBoolean8335) DisplayModeManagerContainer190.resetNodeStates((byte) 95);
             for (int i_0_ = 0; i_0_ < 100; i_0_++) {
                 if (!Component102.method2203((byte) -52)) break;
             }

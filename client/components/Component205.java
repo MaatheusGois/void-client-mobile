@@ -47,7 +47,7 @@ final class Component205
         ColorTagNode class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.first(0);
         if (i <= 4) settingsCookie = null;
         for (/**/; class348_sub15 != null; class348_sub15 = (ColorTagNode) DisplayModeManagerContainer91.aClass356_389.next(0))
-            DisplayModeManagerContainer282.method690((byte) 108, (class348_sub15.anInt6773));
+            DisplayModeManagerContainer282.getColorTag((byte) 108, (class348_sub15.anInt6773));
     }
 
     public static void method1773(byte i) {
