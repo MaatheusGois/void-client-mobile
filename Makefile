@@ -41,6 +41,7 @@ help:
 	@echo "Component Lab:"
 	@echo "  make component-lab       browse components at http://127.0.0.1:8765"
 	@echo "  make component-lab-images export SVG cards (OUT=...)"
+	@echo ""
 	@echo "android"
 	@echo "  make android          installDebug + reverse + launch"
 	@echo "  make android-install  :app:installDebug"
