@@ -109,8 +109,10 @@ final class MicrobotPanel {
                         paused ? OFF : ON, y, textX, SHADOW, -110);
                 y += ROW_H;
                 boolean editorOn = SceneEditorHost.isEditorMode();
-                font.drawText(editorOn ? "Editor: ON" : "Editor: OFF",
-                        editorOn ? ON : OFF, y, textX, SHADOW, -110);
+                String editorLabel = editorOn
+                        ? "Editor: ON " + SceneEditorUi.currentAsset().label
+                        : "Editor: OFF";
+                font.drawText(editorLabel, editorOn ? ON : OFF, y, textX, SHADOW, -110);
                 y += ROW_H;
                 int absX = MicrobotWidgets.localAbsX();
                 int absY = MicrobotWidgets.localAbsY();

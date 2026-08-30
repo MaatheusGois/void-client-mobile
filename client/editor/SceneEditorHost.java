@@ -27,8 +27,10 @@ final class SceneEditorHost {
         editor().setMode(on ? SceneEditor.Mode.EDITOR : SceneEditor.Mode.GAME);
         if (!on) {
             LiveSceneBridge.clearLive();
+            SceneEditorUi.onEditorDisabled();
         } else {
             resync();
+            SceneEditorUi.onEditorEnabled();
         }
     }
 

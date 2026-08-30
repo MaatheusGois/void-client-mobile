@@ -1,59 +1,44 @@
 # Local scene editor
 
-Renderer-independent model + live placer for a **device-local** object scene
-editor. Scenes never modify the JS5 cache and never send packets to the server.
+Device-local object scene editor: model + JSON persistence + **live placer** +
+**in-game HUD** (asset palette, click/drag, action menu). Never writes JS5 and
+never sends packets.
+
+## In-game (what you asked for)
+
+1. Microbot → **Editor: ON** (or console `ed mode editor`).
+2. Right panel **City Assets** — pick Tree / Bench / …
+3. **Click** empty ground → place current asset.
+4. **Click** your object → select (magenta box); **drag** → move (orange trail).
+5. Bottom **action menu**: `[+] Add` / `[-] Remove`.
+6. Chat: `[System] Scene editor active…`
+
+Also still works from console: `ed spawn 1276`, `ed save demo`, etc.
 
 ## Layers
 
 | Piece | Role |
 |---|---|
-| `Scene` / `SceneObject` | Versioned model (JSON) |
-| `SceneStore` | Atomic save under `user.home/void-scenes` (+ `.bak`) |
-| `SceneEditor` | Validated commands + undo/redo |
-| `SceneObjectAdapter` | Places/removes LocTypes via `SceneManager.method1591` |
-| `LiveSceneBridge` | Resyncs model ↔ live tile graph |
-| `SceneEditorHost` | Console / Microbot entry point |
+| `Scene` / `SceneObject` | Versioned model |
+| `SceneStore` | `~/void-scenes/*.json` (+ `.bak`) |
+| `SceneEditor` | Commands + undo/redo |
+| `SceneObjectAdapter` / `LiveSceneBridge` | `SceneManager.method1591` sync |
+| `SceneEditorHost` | Console / Microbot entry |
+| `SceneEditorUi` | Palette + click/drag HUD |
 
-## In-game usage
+Tile under cursor comes from the existing Walk-here tip (opcode 19).
 
-1. Log in, open the developer console (`` ` ``).
-2. `ed` — print help + status.
-3. `ed mode editor` **or** Microbot panel → **Editor: ON**.
-4. `spawn 1276` / `ed spawn 1276` — place LocType at your tile.
-5. `ed save demo` / `ed load demo` / `ed undo` / `ed clear`.
+## Limits
 
-Supported console surface:
-
-```text
-ed mode [editor|game]
-ed spawn <objectId>
-ed add <objectId> <x> <y> <z> <plane>
-ed move <localId> <x> <y> <z>
-ed rotate <localId> <0-3>
-ed scale <localId> <scale>   # stored only
-ed remove <localId>
-ed undo | redo | clear | apply | status
-ed save <name> | load <name>
-```
-
-## Limits (this PR)
-
-- Default place type is scenery (`type=10`). Walls/decor need follow-up.
-- Terrain height is used; free `z` is stored but not applied.
-- Per-instance `scale` is stored but not applied (LocType default scale).
-- Objects vanish on region reload until `ed apply` / `ed load`.
-- No mouse pick / drag yet — console + Microbot toggle only.
-
-## Offline demo
-
-```bash
-export JAVA_HOME="$HOME/.jdks/jdk-17.0.20.1+1/Contents/Home"
-./gradlew :client:compileJava
-java -cp client/build/classes/java/main SceneEditorDemo
-```
+- Scenery type 10; free `z` / scale stored only
+- Region reload → `ed apply` or re-enable editor
+- Palette LocType ids are a starting set (edit `SceneEditorUi.ASSETS`)
+- Selection box is a 2D projection overlay, not a true 3D highlight
 
 ## Build
 
 ```bash
 ./gradlew :client:compileJava
+# or
+make desktop-run SERVER_IP=…
 ```
