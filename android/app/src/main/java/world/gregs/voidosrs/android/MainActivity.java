@@ -180,7 +180,13 @@ public class MainActivity extends Activity {
         dialogueTts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS) dialogueTts.setLanguage(Locale.US);
+                if (status == TextToSpeech.SUCCESS) {
+                    int language = dialogueTts.setLanguage(Locale.US);
+                    if (language == TextToSpeech.LANG_MISSING_DATA
+                            || language == TextToSpeech.LANG_NOT_SUPPORTED) {
+                        Log.w("void-osrs", "void-tts: en-US voice data unavailable");
+                    }
+                }
             }
         });
         AwtHost.setSpeechHandler(new AwtHost.SpeechHandler() {

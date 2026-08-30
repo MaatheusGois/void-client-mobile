@@ -35,6 +35,8 @@ final class DialogueChatboxScanner {
             DialogueTts.stop();
             return;
         }
+        // NPC gender data is not available in this PoC; only an explicitly named
+        // local-player speaker uses the appearance gender. All other speakers are male.
         VoiceGender gender = VoiceGender.MALE;
         Player player = Component72.localPlayer;
         if (player != null && player.displayName != null) {

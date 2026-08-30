@@ -1,6 +1,6 @@
 /** Stable façade; Piper/Sherpa can replace the engine without changing the hook. */
 public final class DialogueTts {
-    private static final DialogueTtsEngine ENGINE = new NativeDialogueTtsEngine();
+    private static volatile DialogueTtsEngine engine = new NativeDialogueTtsEngine();
     private static String lastText;
 
     public static synchronized void speak(String text, VoiceGender gender) {
@@ -8,15 +8,23 @@ public final class DialogueTts {
         if (cleaned.length() == 0 || cleaned.equals(lastText)) return;
         lastText = cleaned;
         System.out.println("void-tts: " + gender + " " + cleaned);
-        ENGINE.speak(cleaned, gender);
+        engine.speak(cleaned, gender);
     }
 
     public static synchronized void stop() {
         lastText = null;
-        ENGINE.stop();
+        engine.stop();
     }
 
-    /** Called once per client logic tick. Future swap: System property void.tts=piper. */
+    /** Replace the backend without changing the dialogue hook (Piper can use this later). */
+    public static synchronized void setEngine(DialogueTtsEngine replacement) {
+        if (replacement == null) throw new IllegalArgumentException("replacement");
+        engine.stop();
+        engine = replacement;
+        lastText = null;
+    }
+
+    /** Called once per client logic tick. Future selection: System property void.tts=piper. */
     public static void pulse() {
         DialogueChatboxScanner.pulse();
     }
