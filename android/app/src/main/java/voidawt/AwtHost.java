@@ -10,6 +10,27 @@ import voidawt.event.MouseEvent;
 import voidawt.event.MouseWheelEvent;
 
 public final class AwtHost {
+    public interface SpeechHandler {
+        void speak(String text, boolean female);
+        void stop();
+    }
+
+    private static volatile SpeechHandler speechHandler;
+
+    public static void setSpeechHandler(SpeechHandler handler) {
+        speechHandler = handler;
+    }
+
+    public static void speak(String text, boolean female) {
+        SpeechHandler handler = speechHandler;
+        if (handler != null) handler.speak(text, female);
+    }
+
+    public static void stopSpeech() {
+        SpeechHandler handler = speechHandler;
+        if (handler != null) handler.stop();
+    }
+
     /** Default matches fullscreen 800x600 (client boot / display prefs). */
     public static volatile int GAME_WIDTH = 800;
     public static volatile int GAME_HEIGHT = 600;

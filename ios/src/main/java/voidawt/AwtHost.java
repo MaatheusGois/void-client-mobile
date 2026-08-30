@@ -1,6 +1,9 @@
 package voidawt;
 
 import org.robovm.apple.dispatch.DispatchQueue;
+import org.robovm.apple.avfoundation.AVSpeechSynthesizer;
+import org.robovm.apple.avfoundation.AVSpeechUtterance;
+import org.robovm.apple.avfoundation.AVSpeechSynthesisVoice;
 
 import voidawt.event.FocusEvent;
 import voidawt.event.KeyEvent;
@@ -8,6 +11,28 @@ import voidawt.event.MouseEvent;
 import voidawt.event.MouseWheelEvent;
 
 public final class AwtHost {
+    private static final AVSpeechSynthesizer SPEECH = new AVSpeechSynthesizer();
+
+    public static void speak(final String text, final boolean female) {
+        DispatchQueue.getMainQueue().async(new Runnable() {
+            public void run() {
+                AVSpeechUtterance utterance = AVSpeechUtterance.create(text);
+                String language = female ? "en-US" : "en-US";
+                AVSpeechSynthesisVoice voice = AVSpeechSynthesisVoice.getVoice(language);
+                if (voice != null) utterance.setVoice(voice);
+                SPEECH.speakUtterance(utterance);
+            }
+        });
+    }
+
+    public static void stopSpeech() {
+        DispatchQueue.getMainQueue().async(new Runnable() {
+            public void run() {
+                SPEECH.stopSpeakingAtBoundary(0);
+            }
+        });
+    }
+
     /** Default matches fullscreen 800x600 (client boot / display prefs). */
     public static volatile int GAME_WIDTH = 800;
     public static volatile int GAME_HEIGHT = 600;
