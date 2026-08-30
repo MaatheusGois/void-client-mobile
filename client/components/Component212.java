@@ -42,7 +42,7 @@ final class Component212
     static int anInt10001;
     static int anInt10002;
 
-    public static void method2400(byte i) {
+    public static void clearStatic3(byte i) {
         if (i != 3) anIntArray9981 = null;
         anIntArray9981 = null;
     }
@@ -51,7 +51,7 @@ final class Component212
         do {
             try {
                 anInt9970++;
-                if (i_1_ > -106) method2402(-5, (byte) 56);
+                if (i_1_ > -106) isValidType(-5, (byte) 56);
                 if (!(class318_sub1 instanceof Component212)) break;
                 Component212 class318_sub1_sub1_sub2_3_ = (Component212) class318_sub1;
                 if (aClass64_9993 == null || class318_sub1_sub1_sub2_3_.aClass64_9993 == null) break;
@@ -76,7 +76,7 @@ final class Component212
         Object object = null;
         r var_r;
         if (aR9976 == null && aBoolean9988) {
-            Component245 class2 = method2401(var_ha, 262144, true, 22);
+            Component245 class2 = buildRenderable2(var_ha, 262144, true, 22);
             var_r = class2 == null ? null : class2.aR118;
         } else {
             var_r = aR9976;
@@ -85,7 +85,7 @@ final class Component212
         if (var_r != null) RequestProcessor.method1301(var_r, this.aByte6376, this.x, this.y, null);
     }
 
-    private final Component245 method2401(GraphicsToolkit var_ha, int i, boolean bool, int i_4_) {
+    private final Component245 buildRenderable2(GraphicsToolkit var_ha, int i, boolean bool, int i_4_) {
         anInt9985++;
         if (i_4_ != 22) method2404(null, -21, -25);
         Component44 class51 = GradientPreset.aClass263_9195.method2005(0, aShort9991 & 0xffff);
@@ -102,7 +102,7 @@ final class Component212
         return class51.method476(var_ha, var_s_5_, 22, i, this.x, bool, var_s, this.anInt6382, this.y, aByte9980, 128);
     }
 
-    static final boolean method2402(int i, byte i_6_) {
+    static final boolean isValidType(int i, byte i_6_) {
         anInt9994++;
         if (i_6_ >= -52) return true;
         return i == 4 || i == 8 || i == 11;
@@ -169,7 +169,7 @@ final class Component212
 
     static final void method2403(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
         anInt9977++;
-        if (i_10_ != 19206) method2402(-3, (byte) 46);
+        if (i_10_ != 19206) isValidType(-3, (byte) 46);
         Component114[] class302s = NodeSub27.aClass302Array6897;
         for (int i_13_ = 0; i_13_ < class302s.length; i_13_++) {
             Component114 class302 = class302s[i_13_];
@@ -208,7 +208,7 @@ final class Component212
             var_r = aR9976;
             aR9976 = null;
         } else {
-            Component245 class2 = method2401(var_ha, 262144, true, 22);
+            Component245 class2 = buildRenderable2(var_ha, 262144, true, 22);
             var_r = class2 == null ? null : class2.aR118;
         }
         if (var_r != null) Component387.method1130(var_r, this.aByte6376, this.x, this.y, null);
@@ -232,7 +232,7 @@ final class Component212
         anInt9984++;
         int i_19_ = 65 / ((-34 - i) / 53);
         if (aClass64_9993 != null && var_ha.method3667(aClass64_9993.ua(), i_18_) == 0) return aClass64_9993;
-        Component245 class2 = method2401(var_ha, i_18_, false, 22);
+        Component245 class2 = buildRenderable2(var_ha, i_18_, false, 22);
         if (class2 != null) return class2.aClass64_119;
         return null;
     }
@@ -251,7 +251,7 @@ final class Component212
                 aBoolean9988 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean9983 && Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) != 0);
                 int i_26_ = 2048;
                 if (aBoolean9989) i_26_ |= 0x10000;
-                Component245 class2 = method2401(var_ha, i_26_, aBoolean9988, 22);
+                Component245 class2 = buildRenderable2(var_ha, i_26_, aBoolean9988, 22);
                 if (class2 == null) break;
                 aClass64_9993 = class2.aClass64_119;
                 aR9976 = class2.aR118;

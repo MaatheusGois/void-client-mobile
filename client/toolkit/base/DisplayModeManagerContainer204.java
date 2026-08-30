@@ -31,7 +31,7 @@ abstract class DisplayModeManagerContainer204
         int i_4_ = ((WaterSurfaceShader.anInt6246 >> 12) - -(NodeBaseSub2.regionTileX >> 3));
         int i_5_ = ((Component330.regionTileY >> 3) + (Component317.anInt8685 >> 12));
         Component117.anInt4372 = Component72.localPlayer.plane = (byte) 0;
-        Component72.localPlayer.method2449(8, 8, (byte) 118);
+        Component72.localPlayer.setMovementState(8, 8, (byte) 118);
         if (i != -49) anInt1597 = 115;
         int i_6_ = 18;
         ImageCacheStore.anIntArray4031 = new int[i_6_];

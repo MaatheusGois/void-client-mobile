@@ -49,7 +49,7 @@ final class SceneManager {
                 if (i_11_ != 4) aClass262_2859 = null;
                 if (i_15_ <= 3) {
                     for (int i_16_ = 0; i_16_ < -1 + i_15_; i_16_++)
-                        player.method2451(i, HashNodeSub14.anIntArray9626[i_16_], i_11_ + -29038, DefinitionSub11.anIntArray9185[i_16_]);
+                        player.advanceMovement(i, HashNodeSub14.anIntArray9626[i_16_], i_11_ + -29038, DefinitionSub11.anIntArray9185[i_16_]);
                 }
             }
         }

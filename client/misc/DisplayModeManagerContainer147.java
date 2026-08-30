@@ -18,7 +18,7 @@ final class DisplayModeManagerContainer147
             TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 85))) {
             int i_4_ = 1;
-            Component241 class225 = class348_sub9.aNpc_6691.method2422((byte) 72);
+            Component241 class225 = class348_sub9.aNpc_6691.getDefinition((byte) 72);
             if (class348_sub9.aNpc_6691.anInt10268 == -1 || class348_sub9.aNpc_6691.aBoolean10213) i_4_ = 0;
             else if ((class225.anInt2919 == class348_sub9.aNpc_6691.anInt10268) || (class225.anInt2920 == class348_sub9.aNpc_6691.anInt10268) || (class225.anInt2949 == class348_sub9.aNpc_6691.anInt10268) || (class348_sub9.aNpc_6691.anInt10268 == class225.anInt2914))
                 i_4_ = 2;
@@ -66,7 +66,7 @@ final class DisplayModeManagerContainer147
         int i_6_ = -122 / (-i / 47);
         for (/**/; class348_sub9 != null; class348_sub9 = ((SceneNode) HashNodeSub16Sub2.aClass356_10465.next(0))) {
             int i_7_ = 1;
-            Component241 class225 = class348_sub9.aPlayer_6679.method2422((byte) 72);
+            Component241 class225 = class348_sub9.aPlayer_6679.getDefinition((byte) 72);
             if (class348_sub9.aPlayer_6679.anInt10268 != -1 && !class348_sub9.aPlayer_6679.aBoolean10213) {
                 if ((class348_sub9.aPlayer_6679.anInt10268 != class225.anInt2919) && (class225.anInt2920 != class348_sub9.aPlayer_6679.anInt10268) && (class225.anInt2949 != class348_sub9.aPlayer_6679.anInt10268) && (class348_sub9.aPlayer_6679.anInt10268 != class225.anInt2914)) {
                     if ((class348_sub9.aPlayer_6679.anInt10268 == class225.anInt2940) || (class225.anInt2924 == class348_sub9.aPlayer_6679.anInt10268) || ((class348_sub9.aPlayer_6679.anInt10268) == class225.anInt2947) || (class225.anInt2958 == class348_sub9.aPlayer_6679.anInt10268))

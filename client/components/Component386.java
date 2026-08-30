@@ -41,7 +41,7 @@ final class Component386
 
     static final void method1600(boolean bool, int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt2867++;
-        Component241 class225 = class318_sub1_sub3_sub3.method2422((byte) 72);
+        Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
         if (class318_sub1_sub3_sub3.anInt10319 == 0) {
             class318_sub1_sub3_sub3.anInt10326 = 0;
             Component366.anInt3062 = -1;

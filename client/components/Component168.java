@@ -64,7 +64,7 @@ final class Component168
     static final int method2357(int i, Player player) {
         anInt3951++;
         int i_4_ = (player.anInt10560);
-        Component241 class225 = player.method2422((byte) 72);
+        Component241 class225 = player.getDefinition((byte) 72);
         if (i != (player.anInt10268) && !(player.aBoolean10213)) {
             if ((player.anInt10268) != class225.anInt2919 && (player.anInt10268 != class225.anInt2920) && (class225.anInt2949 != (player.anInt10268)) && (player.anInt10268 != class225.anInt2914)) {
                 if ((class225.anInt2940 == (player.anInt10268)) || (player.anInt10268 == class225.anInt2924) || (player.anInt10268 == class225.anInt2947) || (player.anInt10268 == class225.anInt2958))

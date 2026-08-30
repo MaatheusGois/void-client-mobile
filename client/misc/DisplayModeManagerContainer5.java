@@ -27,7 +27,7 @@ final class DisplayModeManagerContainer5
     static final void method729(int i, int i_0_, byte i_1_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, int i_2_) {
         if (i_1_ < 60) method728(true);
         anInt1209++;
-        Component241 class225 = class318_sub1_sub3_sub3.method2422((byte) 72);
+        Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
         int i_3_ = 0x3fff & ((class318_sub1_sub3_sub3.anInt10282) - class318_sub1_sub3_sub3.aClass264_10217.anInt3370);
         if (i != -1) {
             if ((class318_sub1_sub3_sub3.anInt10275 == -1) || (i_3_ < 10240 && i_3_ > 2048)) {

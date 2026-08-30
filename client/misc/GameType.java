@@ -317,7 +317,7 @@ final class GameType {
                             class318_sub1_sub3_sub3.anInt10245 = 0;
                             class318_sub1_sub3_sub3.anInt10203 = 0;
                             if (class318_sub1_sub3_sub3.aBoolean10213) {
-                                class318_sub1_sub3_sub3.anInt10268 = class318_sub1_sub3_sub3.method2422((byte) 72).method1621((byte) -16);
+                                class318_sub1_sub3_sub3.anInt10268 = class318_sub1_sub3_sub3.getDefinition((byte) 72).method1621((byte) -16);
                                 if (class318_sub1_sub3_sub3.anInt10268 == -1) {
                                     class318_sub1_sub3_sub3.aBoolean10213 = false;
                                     break;

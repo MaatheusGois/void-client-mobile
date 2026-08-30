@@ -58,7 +58,7 @@ final class NodeSub8
                 npc.anInt10499 = -1;
             }
         }
-        return class318_sub1_sub3_sub3.method2428(i + -106);
+        return class318_sub1_sub3_sub3.getModelHeight(i + -106);
     }
 
     public static void method2775(byte i) {

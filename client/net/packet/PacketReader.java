@@ -138,7 +138,7 @@ final class PacketReader extends CacheNode {
         if (LruCache.aClass114_4388 == NodeSub3.aClass114_6584) {
             byte i = Component80.aClass348_Sub49_Sub2_3813.readByte(-100);
             int i_8_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-111);
-            Component141.method2397((byte) -126);
+            Component141.markDirty((byte) -126);
             DisplayModeManagerContainer368.method467(i_8_, -18075, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -146,7 +146,7 @@ final class PacketReader extends CacheNode {
         if (DisplayModeManagerContainer136.aClass114_4707 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -123);
             int i_9_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_9_, -6008));
             NodeSub41 class348_sub41_10_ = ((NodeSub41) Component15.aClass356_4915.get(i, -6008));
             if (class348_sub41_10_ != null) Component162.method1118((class348_sub41 == null || (class348_sub41_10_.anInt7050 != class348_sub41.anInt7050)), false, class348_sub41_10_, 2533);
@@ -176,7 +176,7 @@ final class PacketReader extends CacheNode {
         if (Component339.aClass114_3135 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) 62);
             int i_11_ = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -126);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             ColorTagNode.method2813(true, i, i_11_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -186,7 +186,7 @@ final class PacketReader extends CacheNode {
             int i_12_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
             int i_13_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(10);
             int i_14_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             SocketStream.method1703(7, i, i_13_ << 16 | i_14_, 4, i_12_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -204,7 +204,7 @@ final class PacketReader extends CacheNode {
         }
         if (NodeSub3.aClass114_6584 == Component75.aClass114_2285) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             SocketStream.method1703(3, i, -1, 4, -1);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -246,7 +246,7 @@ final class PacketReader extends CacheNode {
         }
         if (NodeSub3.aClass114_6584 == DisplayModeManagerContainer61.aClass114_3751) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(!bool);
-            Component141.method2397((byte) -126);
+            Component141.markDirty((byte) -126);
             Component184.method1189(-1, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -262,7 +262,7 @@ final class PacketReader extends CacheNode {
             int i_24_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(127);
             int i_25_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -128);
             int i_26_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             Component113.aBooleanArray2374[i_23_] = true;
             Component300.anIntArray3552[i_23_] = i;
             ItemDefinitionProvider.anIntArray3273[i_23_] = i_25_;
@@ -285,7 +285,7 @@ final class PacketReader extends CacheNode {
         }
         if (Component35.aClass114_4269 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) 71);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             NameFormatter.anInt495 = i;
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -298,7 +298,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component278.aClass114_3240) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-117);
             int i_27_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(125);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             DisplayModeManagerContainer28.method2396(i, i_27_, 0, 3);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -308,7 +308,7 @@ final class PacketReader extends CacheNode {
             if (i == 65535) i = -1;
             int i_28_ = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
             int i_29_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             DisplayModeManagerContainer88.method727((byte) -63, i_29_, i, i_28_);
             ItemDefinition class213 = Exception_Sub1.itemDefinitions.getItemDefinition(-126, i);
             DisplayModeManagerContainer145.method1085(class213.anInt2825, class213.anInt2787, (byte) -59, class213.anInt2781, i_28_);
@@ -514,7 +514,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component227.aClass114_1120) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-116);
             String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -85);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             GlExtensionManager.method3965(string, i, 2);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -654,7 +654,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == RadixText.aClass114_6121) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
             int i_78_ = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -118);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             GnpPositionLogger.method855(6, i, i_78_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -668,7 +668,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             int i_79_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-120);
             int i_80_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(125);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             DisplayModeManagerContainer159.method1540(-101, i, i_79_ + (i_80_ << 16));
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -681,14 +681,14 @@ final class PacketReader extends CacheNode {
         }
         if (NodeSub3.aClass114_6584 == DisplayModeManagerContainer165.aClass114_3842) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             SocketStream.method1703(5, i, StringDefinition.anInt9591, 4, 0);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
         if (KeyFocusHandler.aClass114_6528 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-124);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             DisplayModeManagerContainer282.getColorTag((byte) -107, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -724,7 +724,7 @@ final class PacketReader extends CacheNode {
             int i_86_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
             int i_87_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
             int i_88_ = (Component80.aClass348_Sub49_Sub2_3813.readShortAdd(126) << 2);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             Component188.method1844(i_85_, i_86_, true, i_88_, !bool, i_87_, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -737,7 +737,7 @@ final class PacketReader extends CacheNode {
                 else objects[1 + i] = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 122);
             }
             objects[0] = new Integer(Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126));
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             NodeSub36 class348_sub36 = new NodeSub36();
             class348_sub36.anObjectArray6987 = objects;
             ClientScriptExecutor.runHook(class348_sub36);
@@ -745,7 +745,7 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (CustomCursorSetting.aClass114_6075 == NodeSub3.aClass114_6584) {
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             Component284.method1851((byte) 125);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -754,14 +754,14 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -118);
             int i_89_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(127);
             if (i_89_ == 65535) i_89_ = -1;
-            Component141.method2397((byte) -126);
+            Component141.markDirty((byte) -126);
             SocketStream.method1703(2, i, i_89_, 4, -1);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
         if (NodeSub3.aClass114_6584 == Component235.aClass114_3368) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i, -6008));
             if (class348_sub41 != null) Component162.method1118(true, false, class348_sub41, 2533);
             if (Component297.aClass46_4730 != null) {
@@ -774,7 +774,7 @@ final class PacketReader extends CacheNode {
         if (InputStream_Sub1.aClass114_79 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-86);
             int i_90_ = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             OggStream.method2966(i_90_, i, false);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -878,7 +878,7 @@ final class PacketReader extends CacheNode {
             int i_105_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             int i_106_ = (Component80.aClass348_Sub49_Sub2_3813.readShortLittle(!bool) << 2);
             int i_107_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             MenuEntry.setCutsceneCamera(i_104_, i, i_106_, i_107_, i_105_, -127);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -904,7 +904,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component355.aClass114_3264) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
             byte i_109_ = Component80.aClass348_Sub49_Sub2_3813.readByte128(-8679);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             HashNodeSub14.method3244(i_109_, i, 120);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -924,7 +924,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShort(13638);
             int i_110_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             int i_111_ = Component80.aClass348_Sub49_Sub2_3813.readShort128((byte) 84);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             Component247.method1080(i_111_, -23697, i, i_110_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -932,7 +932,7 @@ final class PacketReader extends CacheNode {
         if (DisplayModeManagerContainer109.aClass114_2338 == NodeSub3.aClass114_6584) {
             String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 100);
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             GlExtensionManager.method3965(string, i, 2);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -940,7 +940,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == ShaderLinker.aClass114_10168) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-117);
             int i_112_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             DefinitionSub15.method3084(i, (byte) -88, i_112_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -980,7 +980,7 @@ final class PacketReader extends CacheNode {
         }
         if (ParticleSystem.aClass114_7124 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             if (i == -1) {
                 JaclibLoader.anInt167 = -1;
                 ShaderLinker.anInt10163 = -1;
@@ -1062,7 +1062,7 @@ final class PacketReader extends CacheNode {
             int i_134_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_135_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-109);
             int i_136_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(16);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             DisplayModeManagerContainer145.method1085(i_136_, i_134_, (byte) -86, i_135_, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1145,7 +1145,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component338.aClass114_1702) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShort(13638);
             int i_143_ = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
-            Component141.method2397((byte) -126);
+            Component141.markDirty((byte) -126);
             Component75.method1330(i, -19906, i_143_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1156,7 +1156,7 @@ final class PacketReader extends CacheNode {
             int i_145_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             if (i_145_ == 65535) i_145_ = -1;
             int i_146_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             if (i_146_ == 65535) i_146_ = -1;
             for (int i_147_ = i_146_; i_145_ >= i_147_; i_147_++) {
                 long l = ((long) i << 32) - -(long) i_147_;
@@ -1298,7 +1298,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
             if (i == 65535) i = -1;
             int i_168_ = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             Component361.method304(i, 437853543, i_168_);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1328,7 +1328,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component35.aClass114_4272) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-127);
             int i_173_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
-            Component141.method2397((byte) -128);
+            Component141.markDirty((byte) -128);
             Component326.method524(i_173_, true, i, -127);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1369,7 +1369,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
             int i_182_ = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -122);
             int i_183_ = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -95);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             NodeSub41 class348_sub41 = ((NodeSub41) Component15.aClass356_4915.get(i_182_, -6008));
             if (class348_sub41 != null) Component162.method1118(i != (class348_sub41.anInt7050), false, class348_sub41, 2533);
             Component103.method2661(i, i_182_, i_183_, false, 2);
@@ -1383,7 +1383,7 @@ final class PacketReader extends CacheNode {
             return true;
         }
         if (NodeSub3.aClass114_6584 == Component218.aClass114_2335) {
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             Component59.method1122(0);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1392,7 +1392,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_184_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
             int i_185_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             if (DefinitionSub33.openInterfaces[i] != null) {
                 for (int i_186_ = i_184_; i_185_ > i_186_; i_186_++) {
                     int i_187_ = Component80.aClass348_Sub49_Sub2_3813.readMedium(-1);
@@ -1473,7 +1473,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == Component162.aClass114_8385) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -124);
             String string = Component80.aClass348_Sub49_Sub2_3813.readString((byte) -97);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             Component372.method1803(i, string, -32394);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1482,14 +1482,14 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
             int i_199_ = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
             int i_200_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-            Component141.method2397((byte) -126);
+            Component141.markDirty((byte) -126);
             SocketStream.method1703(5, i, i_200_, 4, i_199_);
             NodeSub3.aClass114_6584 = null;
             return true;
         }
         if (Component63.aClass114_4500 == NodeSub3.aClass114_6584) {
             boolean bool_201_ = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21) == 1);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             DisplayModeManagerContainer145.aBoolean1801 = bool_201_;
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1508,7 +1508,7 @@ final class PacketReader extends CacheNode {
         if (NodeSub3.aClass114_6584 == DefinitionSub19.aClass114_9257) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
             int i_202_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(127);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             if (i == 2) DisplayModeManagerContainer273.method1134(92);
             r.anInt9721 = i_202_;
             NodeSub7.method2772(i_202_, (byte) 123);
@@ -1540,7 +1540,7 @@ final class PacketReader extends CacheNode {
             int i = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-16);
             if (i == 65535) i = -1;
             int i_207_ = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
-            Component141.method2397((byte) -125);
+            Component141.markDirty((byte) -125);
             SocketStream.method1703(1, i_207_, i, 4, -1);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1557,7 +1557,7 @@ final class PacketReader extends CacheNode {
             if (i_208_ == 65535) i_208_ = -1;
             int i_209_ = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
             int i_210_ = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
-            Component141.method2397((byte) -127);
+            Component141.markDirty((byte) -127);
             for (int i_211_ = i_208_; i_211_ <= i; i_211_++) {
                 long l = (long) i_211_ + ((long) i_209_ << 32);
                 ComponentSettings class348_sub44 = ((ComponentSettings) Component127.aClass356_2959.get(l, -6008));
@@ -1652,7 +1652,7 @@ final class PacketReader extends CacheNode {
         if (OpenGlShader.aClass114_7398 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -124);
             int i_226_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             DisplayModeManagerContainer368.method467(i_226_, -18075, i);
             NodeSub3.aClass114_6584 = null;
             return true;
@@ -1683,7 +1683,7 @@ final class PacketReader extends CacheNode {
         if (Component211.aClass114_1959 == NodeSub3.aClass114_6584) {
             int i = Component80.aClass348_Sub49_Sub2_3813.readIntInverseMiddle(255);
             int i_232_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-110);
-            Component141.method2397((byte) -124);
+            Component141.markDirty((byte) -124);
             DisplayModeManagerContainer207.method3411(i, 12, i_232_);
             NodeSub3.aClass114_6584 = null;
             return true;

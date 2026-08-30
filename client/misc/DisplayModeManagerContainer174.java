@@ -175,7 +175,7 @@ final class DisplayModeManagerContainer174
                     this.x = class318_sub1_sub3_sub3.x;
                     this.anInt6382 = Component300.method2064((class318_sub1_sub3_sub3.x), this.plane, 11219, (class318_sub1_sub3_sub3.y)) + -anInt10413;
                     if (anInt10367 >= 0) {
-                        Component241 class225 = class318_sub1_sub3_sub3.method2422((byte) 72);
+                        Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
                         int i_11_ = 0;
                         int i_12_ = 0;
                         if (class225.anIntArrayArray2939 != null && (class225.anIntArrayArray2939[anInt10367]) != null) {

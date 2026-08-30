@@ -550,7 +550,7 @@ class Buffer extends Node {
                 }
             } else if (OggStreamReader.aString9043 == null) Component193.method1922(DisplayModeManagerContainer51.password, RuntimeException_Sub1.anInt4596, DisplayModeManagerContainer282.username, true);
             else MenuOpener.method1157(RuntimeException_Sub1.anInt4596, (byte) -99);
-            if (Component212.method2402(Component49.clientState, (byte) -78)) {
+            if (Component212.isValidType(Component49.clientState, (byte) -78)) {
                 Component181.aClass45_1541.discardMode = 2;
                 VideoAdDisplay.aClass45_3183.discardMode = 2;
                 Component97.aClass45_1538.discardMode = 2;
@@ -559,7 +559,7 @@ class Buffer extends Node {
                 CacheNodeSub2.aClass45_10480.discardMode = 2;
                 SeekableFile.aClass45_1322.discardMode = 2;
             }
-            if (Component212.method2402(i_71_, (byte) -119)) {
+            if (Component212.isValidType(i_71_, (byte) -119)) {
                 Component82.anInt443 = 1;
                 Component129.anInt489 = 0;
                 NodeSub46.anInt7115 = 1;
@@ -590,7 +590,7 @@ class Buffer extends Node {
                     HardwareProbe.aClass248_6601.writeLoginState(i ^ ~0x4b, true);
                 }
             }
-            if (Component212.method2402(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.method3673();
+            if (Component212.isValidType(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.method3673();
             Component49.clientState = i_71_;
             // After state settles: restore/auto-login on title (once per session).
             if (i_71_ == 3) {

@@ -2962,10 +2962,10 @@ final class GlToolkitSub2
                         int i_325_ = 1;
                         if (i_321_ <= i_322_) {
                             i_324_ = class79.anInt1373;
-                            if (i_324_ == -1) i_324_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2909);
+                            if (i_324_ == -1) i_324_ = (class318_sub1_sub3_sub3.getDefinition((byte) 72).anInt2909);
                         } else {
                             Player player = (InterfaceRenderer.players[is[i_322_]]);
-                            i_324_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2909);
+                            i_324_ = (class318_sub1_sub3_sub3.getDefinition((byte) 72).anInt2909);
                             if (player.aBoolean10554) i_325_ = 2;
                         }
                         Component24[] class105s = NodeSub45.aClass105Array7107;
@@ -3004,8 +3004,8 @@ final class GlToolkitSub2
                             int i_333_ = -1;
                             if (class318_sub1_sub3_sub3 instanceof Npc) {
                                 i_333_ = class79.anInt1382;
-                                if (i_333_ == -1) i_333_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2923);
-                            } else i_333_ = (class318_sub1_sub3_sub3.method2422((byte) 72).anInt2923);
+                                if (i_333_ == -1) i_333_ = (class318_sub1_sub3_sub3.getDefinition((byte) 72).anInt2923);
+                            } else i_333_ = (class318_sub1_sub3_sub3.getDefinition((byte) 72).anInt2923);
                             if (i_333_ != -1) {
                                 Component24[] class105s = ((Component24[]) ShaderCompilerSub2.aClass60_6517.get(i_333_, -45));
                                 if (class105s == null) {

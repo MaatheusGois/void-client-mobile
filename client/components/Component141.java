@@ -70,7 +70,7 @@ final class Component141
         return (this.aClass235_9955.anInt3052);
     }
 
-    static final boolean method2397(byte i) {
+    static final boolean markDirty(byte i) {
         DisplayModeManagerContainer136.anInt4718++;
         Component284.aBoolean6147 = true;
         if (i > -123) anIntArray9949 = null;
@@ -78,7 +78,7 @@ final class Component141
         return true;
     }
 
-    public static void method2398(byte i) {
+    public static void clearStatic4(byte i) {
         if (i != -83) anIntArray9949 = null;
         aClass105Array9959 = null;
         anIntArray9949 = null;

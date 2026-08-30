@@ -53,7 +53,7 @@ abstract class Definition extends Node {
             i_0_ |= 0x4;
         }
         if ((~Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1820(-32350)) == i) i_0_ |= 0x40;
-        DisplayModeManagerContainer58.method2420(i_0_, i);
+        DisplayModeManagerContainer58.setCurrentTick(i_0_, i);
         GradientPreset.aClass263_9195.method2009(i_0_, (byte) 109);
         Exception_Sub1.itemDefinitions.method1942(i_0_, (byte) -125);
         Component291.aClass278_2529.method2073(-25032, i_0_);

@@ -89,7 +89,7 @@ final class HeapDumper {
                             } else is[i_6_] = i_7_;
                             is_5_[i_6_] = class348_sub49_sub2.readShortLittle(false);
                         }
-                        player.method2430(is_5_, is, -116);
+                        player.applyAnimation(is_5_, is, -116);
                     }
                     if ((0x400 & i_0_) != 0) {
                         int i_9_ = class348_sub49_sub2.readShortLittle(false);
@@ -224,7 +224,7 @@ final class HeapDumper {
                         Buffer class348_sub49 = new Buffer(is);
                         class348_sub49_sub2.readBytesReverse(is, 0, i_35_, (byte) -124);
                         Component101.aClass348_Sub49Array2105[i] = class348_sub49;
-                        player.method2452((byte) 84, class348_sub49);
+                        player.readUpdateMask((byte) 84, class348_sub49);
                     }
                     if ((0x800 & i_0_) != 0) i_2_ = class348_sub49_sub2.readByteInverse(-622951480);
                     if (!player.aBoolean10539) break;
@@ -234,7 +234,7 @@ final class HeapDumper {
                         else i_36_ = Component293.aByteArray3300[i];
                         Component140.method3208(player, i_36_, -21);
                         player.method2455(player.anInt10531, -26443, i_36_, player.anInt10549);
-                    } else player.method2449(player.anInt10531, player.anInt10549, (byte) 84);
+                    } else player.setMovementState(player.anInt10531, player.anInt10549, (byte) 84);
                 }
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("ns.A(" + (class348_sub49_sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_0_ + ',' + i_1_ + ',' + (player != null ? "{...}" : "null") + ')'));

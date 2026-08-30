@@ -31,7 +31,7 @@ final class DisplayModeManagerContainer345
         }
         int i_0_ = class79.anInt1364;
         if (i != -1) return 14;
-        Component241 class225 = npc.method2422((byte) 72);
+        Component241 class225 = npc.getDefinition((byte) 72);
         if ((npc.anInt10268) != -1 && !(npc.aBoolean10213)) {
             if ((npc.anInt10268) != class225.anInt2919 && (class225.anInt2920 != npc.anInt10268) && (class225.anInt2949 != npc.anInt10268) && (class225.anInt2914 != (npc.anInt10268))) {
                 if ((class225.anInt2940 == npc.anInt10268) || (class225.anInt2924 == npc.anInt10268) || (npc.anInt10268 == class225.anInt2947) || (npc.anInt10268 == class225.anInt2958))

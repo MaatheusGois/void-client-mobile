@@ -143,7 +143,7 @@ final class Npc extends DisplayModeManagerContainer58 {
             this.anInt10274 -= (float) i_21_ / 10.0F;
         } else this.anInt10274 -= (float) this.anInt10274 / 10.0F;
         class101.method891(this.x, (-this.anInt10274 + this.anInt6382 + -20), this.y);
-        Component241 class225 = this.method2422((byte) 72);
+        Component241 class225 = this.getDefinition((byte) 72);
         NpcComposition class79 = (this.definition.anIntArray1377 != null ? this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.definition);
         this.aBoolean10324 = false;
         RenderableSub4 class318_sub4 = null;
@@ -312,7 +312,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         if (i <= 84) this.definition = null;
         anInt10494++;
         int i_35_ = i_34_;
-        Component241 class225 = this.method2422((byte) 72);
+        Component241 class225 = this.getDefinition((byte) 72);
         DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
         DisplayModeManagerContainer167 class17_36_ = ((this.anInt10268 != -1 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.method835(this.anInt10268, 7) : null);
         int i_37_ = class225.anInt2932;
@@ -327,11 +327,11 @@ final class Npc extends DisplayModeManagerContainer58 {
         this.anInt10230 = class64.ma();
         this.method2439(-125, class64);
         if (i_37_ != 0 || i_38_ != 0) {
-            this.method2424(i_39_, i_37_, class225.anInt2943, i_38_, (byte) 78, class225.anInt2912);
+            this.updateRenderPosition(i_39_, i_37_, class225.anInt2943, i_38_, (byte) 78, class225.anInt2912);
             if (this.anInt10302 != 0) this.aClass64Array10323[0].FA(this.anInt10302);
             if (this.anInt10208 != 0) this.aClass64Array10323[0].VA(this.anInt10208);
             if (this.anInt10252 != 0) this.aClass64Array10323[0].H(0, this.anInt10252, 0);
-        } else this.method2424(i_39_, this.getSize((byte) 78) << 9, 0, this.getSize((byte) 108) << 9, (byte) 92, 0);
+        } else this.updateRenderPosition(i_39_, this.getSize((byte) 78) << 9, 0, this.getSize((byte) 108) << 9, (byte) 92, 0);
         if (bool) class64.animateColors(this.aByte10255, this.aByte10206, this.aByte10270, (0xff & this.aByte10279));
         if (this.anInt10269 == -1 || this.anInt10240 == -1) this.aClass64Array10323[1] = null;
         else {

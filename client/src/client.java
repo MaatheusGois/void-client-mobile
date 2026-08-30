@@ -268,7 +268,7 @@ public final class client extends Applet_Sub1 {
         Component285.method501(1);
         Buffer.clearStatics(i ^ ~0x6d);
         ParticleSystem.method3323(-44);
-        DisplayModeManagerContainer58.method2429(-123);
+        DisplayModeManagerContainer58.clearStatic2(-123);
         Component186.method3487(-65);
         DisplayModeManagerContainer238.method744((byte) 115);
         NodeSub27.method3001(0);
@@ -448,7 +448,7 @@ public final class client extends Applet_Sub1 {
         Component252.method2407(false);
         Component366.method1673(i ^ ~0x75);
         ShaderLinker.method2492(1);
-        Component141.method2398((byte) -83);
+        Component141.clearStatic4((byte) -83);
         VideoAdDisplay.method1889(255);
         KeyFocusHandler.clearStatics(i + 14537);
         BasicMouseHandler.clearStatics((byte) 48);
@@ -487,7 +487,7 @@ public final class client extends Applet_Sub1 {
         Component163.method1886(4908);
         ReferenceHolder.clearStatics(-112);
         DefinitionSub8.method3068(i + 13607);
-        Component212.method2400((byte) 3);
+        Component212.clearStatic3((byte) 3);
         Component349.clearStatic(61);
         DisplayModeManagerContainer23.method860((byte) 44);
         Component289.method2490(4);
@@ -1808,15 +1808,15 @@ public final class client extends Applet_Sub1 {
             if (GpsOverlay.method1167(Component49.clientState, (byte) -51)) {
                 RSACipher.method493(true);
                 Component97.method867(true);
-            } else if (Component212.method2402(Component49.clientState, (byte) -120)) Canvas_Sub1.loadAndBuildScene(0);
+            } else if (Component212.isValidType(Component49.clientState, (byte) -120)) Canvas_Sub1.loadAndBuildScene(0);
             if (i < 32) aClass262_5185 = null;
-            if (CacheNode.method3196(Component49.clientState, -74) && !Component212.method2402(Component49.clientState, (byte) -55)) {
+            if (CacheNode.method3196(Component49.clientState, -74) && !Component212.isValidType(Component49.clientState, (byte) -55)) {
                 method113((byte) 112);
                 NodeSub5.method2757(110);
                 TheoraVideoPlayer.method843((byte) 102);
-            } else if (!CacheFileStore.isReconnectState(Component49.clientState, -123) || Component212.method2402(Component49.clientState, (byte) -115)) {
+            } else if (!CacheFileStore.isReconnectState(Component49.clientState, -123) || Component212.isValidType(Component49.clientState, (byte) -115)) {
                 if (Component49.clientState == 12) TheoraVideoPlayer.method843((byte) 113);
-                else if (NativeLibLoader.isPostLoginState(true, Component49.clientState) && !Component212.method2402(Component49.clientState, (byte) -86)) ClientSystemInfo.method2991(11432);
+                else if (NativeLibLoader.isPostLoginState(true, Component49.clientState) && !Component212.isValidType(Component49.clientState, (byte) -86)) ClientSystemInfo.method2991(11432);
                 else if (Component49.clientState == 13) {
                     TheoraVideoPlayer.method843((byte) -75);
                     if (NodederUtil.anInt6634 != -3 && NodederUtil.anInt6634 != 2 && NodederUtil.anInt6634 != 15) LoggedOutDefinition.disconnectAndReset(false, (byte) 11);
@@ -1973,7 +1973,7 @@ public final class client extends Applet_Sub1 {
             if (GpsOverlay.method1167(Component49.clientState, (byte) -113)) DisplayModeManagerContainer292.method1309(bool_120_, 117);
             else if (!Component69.method2114(Component49.clientState, bool)) {
                 if (!CacheNode.method3197(Component49.clientState, (byte) 56)) {
-                    if (Component212.method2402(Component49.clientState, (byte) -78)) {
+                    if (Component212.isValidType(Component49.clientState, (byte) -78)) {
                         if (Component129.anInt489 == 1) {
                             if (DisplayModeManagerContainer259.anInt3441 > NodeSub46.anInt7115) NodeSub46.anInt7115 = DisplayModeManagerContainer259.anInt3441;
                             int i = ((-DisplayModeManagerContainer259.anInt3441 + NodeSub46.anInt7115) * 50 / NodeSub46.anInt7115);

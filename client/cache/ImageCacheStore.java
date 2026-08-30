@@ -86,7 +86,7 @@ final class ImageCacheStore {
             class318_sub1_sub3_sub3.anInt10239 = 0;
             class318_sub1_sub3_sub3.x = (512 * (class318_sub1_sub3_sub3.anIntArray10320[0]) + 256 * class318_sub1_sub3_sub3.getSize((byte) 120));
             class318_sub1_sub3_sub3.y = (512 * (class318_sub1_sub3_sub3.anIntArray10317[0]) + class318_sub1_sub3_sub3.getSize((byte) 88) * 256);
-            class318_sub1_sub3_sub3.method2427(70);
+            class318_sub1_sub3_sub3.resetCombat(70);
         }
         if ((Component72.localPlayer == class318_sub1_sub3_sub3) && (class318_sub1_sub3_sub3.x < 6144 || class318_sub1_sub3_sub3.y < 6144 || (class318_sub1_sub3_sub3.x >= 512 * (AbstractShaderSub4.anInt7319 + -12)) || (512 * (ParametricDefinition.anInt9109 - 12) <= class318_sub1_sub3_sub3.y))) {
             class318_sub1_sub3_sub3.anInt10291 = -1;
@@ -99,7 +99,7 @@ final class ImageCacheStore {
             class318_sub1_sub3_sub3.anInt10286 = -1;
             class318_sub1_sub3_sub3.x = (512 * (class318_sub1_sub3_sub3.anIntArray10320[0]) + 256 * class318_sub1_sub3_sub3.getSize((byte) 115));
             class318_sub1_sub3_sub3.y = (512 * (class318_sub1_sub3_sub3.anIntArray10317[0]) + 256 * class318_sub1_sub3_sub3.getSize((byte) 115));
-            class318_sub1_sub3_sub3.method2427(54);
+            class318_sub1_sub3_sub3.resetCombat(54);
         }
         int i_5_ = NodeSub8.method2774((byte) 108, class318_sub1_sub3_sub3);
         NodeBaseSub2.method3443(true, class318_sub1_sub3_sub3);

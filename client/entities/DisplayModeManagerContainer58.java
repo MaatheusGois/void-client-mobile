@@ -137,7 +137,7 @@ abstract class DisplayModeManagerContainer58
     int anInt10326;
     RenderableSub10 aClass318_Sub10_10327;
 
-    static final void method2420(int i, int i_0_) {
+    static final void setCurrentTick(int i, int i_0_) {
         if (i_0_ != -1) aBoolean10238 = false;
         DisplayModeManagerContainer288.anInt8628 = i;
         anInt10272++;
@@ -146,7 +146,7 @@ abstract class DisplayModeManagerContainer58
 
     abstract int method2421(byte i);
 
-    final Component241 method2422(byte i) {
+    final Component241 getDefinition(byte i) {
         if (i != 72) method2438(-88, 93, -127, 68, 7, -76, 116, (byte) 122);
         anInt10249++;
         int i_1_ = method2421((byte) 127);
@@ -164,7 +164,7 @@ abstract class DisplayModeManagerContainer58
         this.aShort8743 = (short) (this.x + -i_2_ >> 9);
     }
 
-    final boolean method2423(int i, int i_3_, int i_4_) {
+    final boolean ensureCombatArray(int i, int i_3_, int i_4_) {
         anInt10251++;
         if (this.anIntArray10296 == null) {
             if (i_4_ == -1) return true;
@@ -173,7 +173,7 @@ abstract class DisplayModeManagerContainer58
                 this.anIntArray10296[i_5_] = -1;
         }
         int i_6_ = 3 / ((-22 - i) / 58);
-        Component241 class225 = method2422((byte) 72);
+        Component241 class225 = getDefinition((byte) 72);
         int i_7_ = 256;
         if (class225.anIntArray2907 != null && class225.anIntArray2907[i_3_] > 0) i_7_ = class225.anIntArray2907[i_3_];
         if (i_4_ == -1) {
@@ -205,7 +205,7 @@ abstract class DisplayModeManagerContainer58
         return false;
     }
 
-    final void method2424(int i, int i_14_, int i_15_, int i_16_, byte i_17_, int i_18_) {
+    final void updateRenderPosition(int i, int i_14_, int i_15_, int i_16_, byte i_17_, int i_18_) {
         anInt10263++;
         int i_19_ = ((this.aShort8743 + this.aShort8751) >> 1);
         int i_20_ = ((this.aShort8750 + this.aShort8747) >> 1);
@@ -259,16 +259,16 @@ abstract class DisplayModeManagerContainer58
 
     int method2426(int i) {
         anInt10214++;
-        Component241 class225 = method2422((byte) 72);
+        Component241 class225 = getDefinition((byte) 72);
         if (class225.anInt2928 != -1) return class225.anInt2928;
         if (this.anInt10207 == -32768) return 200;
         if (i != 200) method2377((byte) -40);
         return -this.anInt10207;
     }
 
-    final void method2427(int i) {
+    final void resetCombat(int i) {
         anInt10313++;
-        if (i < 13) method2429(6);
+        if (i < 13) clearStatic2(6);
         this.anInt10319 = 0;
         this.anInt10322 = 0;
     }
@@ -342,9 +342,9 @@ abstract class DisplayModeManagerContainer58
         this.anInt10326 = 0;
     }
 
-    final int method2428(int i) {
+    final int getModelHeight(int i) {
         anInt10200++;
-        Component241 class225 = method2422((byte) 72);
+        Component241 class225 = getDefinition((byte) 72);
         if (i != 2) method2376(11);
         int i_49_ = (this.aClass264_10217.anInt3370);
         boolean bool;
@@ -370,7 +370,7 @@ abstract class DisplayModeManagerContainer58
         return i_50_;
     }
 
-    public static void method2429(int i) {
+    public static void clearStatic2(int i) {
         aClass170_10209 = null;
         aShortArrayArray10246 = null;
         anIntArray10266 = null;
@@ -380,7 +380,7 @@ abstract class DisplayModeManagerContainer58
         aShortArrayArray10258 = null;
     }
 
-    final void method2430(int[] is, int[] is_51_, int i) {
+    final void applyAnimation(int[] is, int[] is_51_, int i) {
         do {
             try {
                 anInt10233++;
@@ -618,7 +618,7 @@ abstract class DisplayModeManagerContainer58
 
     final void method2435(byte i, int i_87_, boolean bool) {
         anInt10298++;
-        Component241 class225 = method2422((byte) 72);
+        Component241 class225 = getDefinition((byte) 72);
         if (bool || class225.anInt2948 != 0 || this.anInt10310 != 0) {
             if (i != -108) method2438(-11, -118, -110, -2, -57, -110, 126, (byte) 93);
             this.anInt10282 = 0x3fff & i_87_;
@@ -642,7 +642,7 @@ abstract class DisplayModeManagerContainer58
     /** Tile footprint width/height of this entity (pathing / scene placement). */
     int getSize(byte i) {
         anInt10299++;
-        if (i < 39) method2420(-75, 84);
+        if (i < 39) setCurrentTick(-75, 84);
         return size;
     }
 
@@ -686,7 +686,7 @@ abstract class DisplayModeManagerContainer58
             }
         }
         int i_96_ = OpenGlShader.clientCycle;
-        if (i_89_ != -1012294866) method2423(84, 124, 113);
+        if (i_89_ != -1012294866) ensureCombatArray(84, 124, 113);
         if (bool) {
             this.anInt10276 = 1;
             this.anInt10260 = i_91_ >> 16;
@@ -802,7 +802,7 @@ abstract class DisplayModeManagerContainer58
 
     final void method2440(byte i, int i_118_) {
         anInt10277++;
-        Component241 class225 = method2422((byte) 72);
+        Component241 class225 = getDefinition((byte) 72);
         if (class225.anInt2948 != 0 || this.anInt10310 != 0) {
             this.aClass264_10217.method2021((byte) 119);
             if (i != 49) method2376(113);

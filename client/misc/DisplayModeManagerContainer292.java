@@ -243,7 +243,7 @@ final class DisplayModeManagerContainer292
                     } else is[i_55_] = i_56_;
                     is_54_[i_55_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
                 }
-                npc.method2430(is_54_, is, -100);
+                npc.applyAnimation(is_54_, is, -100);
             }
             if ((0x4 & i_40_) != 0) {
                 npc.anInt10499 = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);

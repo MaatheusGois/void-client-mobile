@@ -76,7 +76,7 @@ final class Player extends DisplayModeManagerContainer58 {
         }
     }
 
-    final void method2449(int i, int i_0_, byte i_1_) {
+    final void setMovementState(int i, int i_0_, byte i_1_) {
         anInt10541++;
         this.anInt10322 = 0;
         this.anIntArray10320[0] = i_0_;
@@ -98,7 +98,7 @@ final class Player extends DisplayModeManagerContainer58 {
         return this.username;
     }
 
-    final void method2451(byte i, int i_3_, int i_4_, int i_5_) {
+    final void advanceMovement(byte i, int i_3_, int i_4_, int i_5_) {
         if (i_4_ != -29034) this.anInt10557 = -47;
         anInt10528++;
         if (this.anInt10319 < 9) this.anInt10319++;
@@ -130,7 +130,7 @@ final class Player extends DisplayModeManagerContainer58 {
         return bool;
     }
 
-    final void method2452(byte i, Buffer class348_sub49) {
+    final void readUpdateMask(byte i, Buffer class348_sub49) {
         anInt10547++;
         class348_sub49.offset = 0;
         int i_11_ = class348_sub49.readUnsignedByte(255);
@@ -227,7 +227,7 @@ final class Player extends DisplayModeManagerContainer58 {
         }
         if (this.aClass318_Sub10_10327 != null) this.aClass318_Sub10_10327.method2529();
         if (this.anInt10268 != -1 && this.aBoolean10213) {
-            Component241 class225 = this.method2422((byte) 72);
+            Component241 class225 = this.getDefinition((byte) 72);
             if (!class225.method1623((this.anInt10268), -40)) {
                 this.aBoolean10213 = false;
                 this.anInt10268 = -1;
@@ -235,7 +235,7 @@ final class Player extends DisplayModeManagerContainer58 {
         }
     }
 
-    private final void method2453(int i, GraphicsToolkit var_ha, int i_32_, DisplayModeManagerContainer370 class64, int i_33_, int i_34_, DisplayModeManagerContainer204 class101, int i_35_) {
+    private final void processUpdate1(int i, GraphicsToolkit var_ha, int i_32_, DisplayModeManagerContainer370 class64, int i_33_, int i_34_, DisplayModeManagerContainer204 class101, int i_35_) {
         do {
             try {
                 anInt10548++;
@@ -257,7 +257,7 @@ final class Player extends DisplayModeManagerContainer58 {
         } while (false);
     }
 
-    private final void method2454(int i, int i_39_, int i_40_, int i_41_, DisplayModeManagerContainer370 class64, int i_42_, DisplayModeManagerContainer204 class101, GraphicsToolkit var_ha, int i_43_) {
+    private final void processUpdate2(int i, int i_39_, int i_40_, int i_41_, DisplayModeManagerContainer370 class64, int i_42_, DisplayModeManagerContainer204 class101, GraphicsToolkit var_ha, int i_43_) {
         do {
             try {
                 if (i != 6253) this.username = null;
@@ -302,7 +302,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final void method2455(int i, int i_50_, byte i_51_, int i_52_) {
         anInt10529++;
-        if (i_50_ != -26443) method2451((byte) -35, 9, 26, 87);
+        if (i_50_ != -26443) advanceMovement((byte) -35, 9, 26, 87);
         if (this.anInt10286 != -1 && RunescapeInfo.aClass87_191.method835(this.anInt10286, 7).anInt245 == 1) {
             this.anInt10286 = -1;
             this.anIntArray10236 = null;
@@ -319,9 +319,9 @@ final class Player extends DisplayModeManagerContainer58 {
         if (i_52_ >= 0 && AbstractShaderSub4.anInt7319 > i_52_ && i >= 0 && ParametricDefinition.anInt9109 > i) {
             if (this.anIntArray10320[0] >= 0 && (this.anIntArray10320[0] < AbstractShaderSub4.anInt7319) && this.anIntArray10317[0] >= 0 && (ParametricDefinition.anInt9109 > this.anIntArray10317[0])) {
                 if (i_51_ == 2) SceneManager.method1592((byte) 2, i, 4, i_52_, this);
-                method2451(i_51_, i_52_, -29034, i);
-            } else method2449(i, i_52_, (byte) 111);
-        } else method2449(i, i_52_, (byte) 112);
+                advanceMovement(i_51_, i_52_, -29034, i);
+            } else setMovementState(i, i_52_, (byte) 111);
+        } else setMovementState(i, i_52_, (byte) 112);
     }
 
     final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
@@ -340,7 +340,7 @@ final class Player extends DisplayModeManagerContainer58 {
         RenderableSub4 class318_sub4 = null;
         this.aBoolean10324 = false;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1) {
-            Component241 class225 = this.method2422((byte) 72);
+            Component241 class225 = this.getDefinition((byte) 72);
             if (class225.aBoolean2913 && (this.appearance.anInt2093 == -1 || Component291.aClass278_2529.method2079(this.appearance.anInt2093, i + -2).aBoolean1369)) {
                 DisplayModeManagerContainer167 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (RunescapeInfo.aClass87_191.method835(this.anInt10286, 7)) : null);
                 DisplayModeManagerContainer167 class17_55_ = ((this.anInt10268 == -1 || this.aBoolean10521 || (this.aBoolean10213 && class17 != null)) ? null : (RunescapeInfo.aClass87_191.method835(this.anInt10268, 7)));
@@ -366,8 +366,8 @@ final class Player extends DisplayModeManagerContainer58 {
                             Npc npc = (class348_sub22.npc);
                             int i_57_ = (-(Component72.localPlayer.x) + npc.x);
                             int i_58_ = (-(Component72.localPlayer.y) + npc.y);
-                            if (DisplayModeManagerContainer50.aBoolean3870) method2454(6253, i_57_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), 92160000, class101, var_ha, i_58_);
-                            else method2453(i_57_, var_ha, 92160000, (this.aClass64Array10323[0]), 0, i_58_, class101, class302.anInt3834);
+                            if (DisplayModeManagerContainer50.aBoolean3870) processUpdate2(6253, i_57_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), 92160000, class101, var_ha, i_58_);
+                            else processUpdate1(i_57_, var_ha, 92160000, (this.aClass64Array10323[0]), 0, i_58_, class101, class302.anInt3834);
                         }
                     }
                     if (class302.anInt3840 == 2) {
@@ -375,16 +375,16 @@ final class Player extends DisplayModeManagerContainer58 {
                         int i_60_ = (-(Component72.localPlayer.y) + 256 + class302.anInt3832);
                         int i_61_ = class302.anInt3837 << 9;
                         i_61_ *= i_61_;
-                        if (DisplayModeManagerContainer50.aBoolean3870) method2454(6253, i_59_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), i_61_, class101, var_ha, i_60_);
-                        else method2453(i_59_, var_ha, i_61_, (this.aClass64Array10323[0]), 0, i_60_, class101, class302.anInt3834);
+                        if (DisplayModeManagerContainer50.aBoolean3870) processUpdate2(6253, i_59_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), i_61_, class101, var_ha, i_60_);
+                        else processUpdate1(i_59_, var_ha, i_61_, (this.aClass64Array10323[0]), 0, i_60_, class101, class302.anInt3834);
                     }
                     if (class302.anInt3840 == 10 && class302.anInt3833 >= 0 && (class302.anInt3833 < (InterfaceRenderer.players).length)) {
                         Player player_62_ = (InterfaceRenderer.players[class302.anInt3833]);
                         if (player_62_ != null) {
                             int i_63_ = (-(Component72.localPlayer.x) + (player_62_.x));
                             int i_64_ = (-(Component72.localPlayer.y) + (player_62_.y));
-                            if (DisplayModeManagerContainer50.aBoolean3870) method2454(6253, i_63_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), 92160000, class101, var_ha, i_64_);
-                            else method2453(i_63_, var_ha, 92160000, (this.aClass64Array10323[0]), i ^ 0x1, i_64_, class101, class302.anInt3834);
+                            if (DisplayModeManagerContainer50.aBoolean3870) processUpdate2(6253, i_63_, Component72.anInt1906, class302.anInt3834, (this.aClass64Array10323[0]), 92160000, class101, var_ha, i_64_);
+                            else processUpdate1(i_63_, var_ha, 92160000, (this.aClass64Array10323[0]), i ^ 0x1, i_64_, class101, class302.anInt3834);
                         }
                     }
                 }
@@ -453,7 +453,7 @@ final class Player extends DisplayModeManagerContainer58 {
 
     final boolean method2388(int i) {
         anInt10523++;
-        if (i >= -65) method2449(-64, -39, (byte) 37);
+        if (i >= -65) setMovementState(-64, -39, (byte) 37);
         return false;
     }
 
@@ -477,7 +477,7 @@ final class Player extends DisplayModeManagerContainer58 {
     private final boolean method2459(int i, GraphicsToolkit var_ha, int i_69_) {
         anInt10525++;
         int i_70_ = i;
-        Component241 class225 = this.method2422((byte) 72);
+        Component241 class225 = this.getDefinition((byte) 72);
         DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.method835(this.anInt10286, 7));
         DisplayModeManagerContainer167 class17_71_ = ((this.anInt10268 != -1 && !this.aBoolean10521 && (!this.aBoolean10213 || class17 == null)) ? RunescapeInfo.aClass87_191.method835(this.anInt10268, 7) : null);
         int i_72_ = class225.anInt2932;
@@ -507,11 +507,11 @@ final class Player extends DisplayModeManagerContainer58 {
         this.anInt10230 = class64.ma();
         this.method2439(-115, class64);
         if (i_72_ != 0 || i_73_ != 0) {
-            this.method2424(i_74_, i_72_, class225.anInt2943, i_73_, (byte) 108, class225.anInt2912);
+            this.updateRenderPosition(i_74_, i_72_, class225.anInt2943, i_73_, (byte) 108, class225.anInt2912);
             if (this.anInt10302 != 0) class64.FA(this.anInt10302);
             if (this.anInt10208 != 0) class64.VA(this.anInt10208);
             if (this.anInt10252 != 0) class64.H(0, this.anInt10252, 0);
-        } else this.method2424(i_74_, getSize((byte) 124) << 9, 0, getSize((byte) 58) << 9, (byte) 65, 0);
+        } else this.updateRenderPosition(i_74_, getSize((byte) 124) << 9, 0, getSize((byte) 58) << 9, (byte) 65, 0);
         if (bool) class64.animateColors(this.aByte10255, this.aByte10206, this.aByte10270, (this.aByte10279 & 0xff));
         if (!this.aBoolean10521 && this.anInt10269 != -1 && this.anInt10240 != -1) {
             Component63 class368 = (NsnDefinition.aClass319_9245.method2543((byte) 76, this.anInt10269));

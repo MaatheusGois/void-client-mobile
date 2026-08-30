@@ -139,7 +139,7 @@ final class InputStream_Sub2 extends InputStream {
                             if (class348_sub22 != null) class318_sub1_sub3_sub3 = (class348_sub22.npc);
                         }
                         if (class318_sub1_sub3_sub3 != null) {
-                            Component241 class225 = class318_sub1_sub3_sub3.method2422((byte) 72);
+                            Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
                             if ((class225.anIntArrayArray2939 != null) && (class225.anIntArrayArray2939[i_55_]) != null) i_61_ -= (class225.anIntArrayArray2939[i_55_][1]);
                             if ((class225.anIntArrayArray2910 != null) && (class225.anIntArrayArray2910[i_55_]) != null) i_61_ -= (class225.anIntArrayArray2910[i_55_][1]);
                         }

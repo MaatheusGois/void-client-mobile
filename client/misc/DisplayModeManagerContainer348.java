@@ -63,7 +63,7 @@ final class DisplayModeManagerContainer348
         player.y = (((player.anIntArray10317[0]) << 9) - -(player.getSize((byte) 85) << 8));
         Component117.anInt4372 = player.plane = player.aByte6376 = i_5_;
         if (NpcComposition.method802((player.anIntArray10317[0]), (player.anIntArray10320[0]), true)) player.aByte6376++;
-        if (Component101.aClass348_Sub49Array2105[i_3_] != null) player.method2452((byte) 84, (Component101.aClass348_Sub49Array2105[i_3_]));
+        if (Component101.aClass348_Sub49Array2105[i_3_] != null) player.readUpdateMask((byte) 84, (Component101.aClass348_Sub49Array2105[i_3_]));
         ShaderCompilerSub1.anInt6513 = 0;
         ShaderProgramSub7.anIntArray6290[ShaderCompilerSub1.anInt6513++] = i_3_;
         NodeSub5.aByteArray6624[i_3_] = (byte) 0;

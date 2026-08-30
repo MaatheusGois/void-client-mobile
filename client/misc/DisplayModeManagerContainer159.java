@@ -40,7 +40,7 @@ final class DisplayModeManagerContainer159
             Component135 class359 = NpcDefinition.aClass359Array6802[i];
             Player player = (InterfaceRenderer.players[i] = new Player());
             player.anInt10290 = i;
-            if (Component101.aClass348_Sub49Array2105[i] != null) player.method2452((byte) 84, Component101.aClass348_Sub49Array2105[i]);
+            if (Component101.aClass348_Sub49Array2105[i] != null) player.readUpdateMask((byte) 84, Component101.aClass348_Sub49Array2105[i]);
             player.method2435((byte) -108, (class359.anInt4423), true);
             player.anInt10275 = class359.anInt4425;
             int i_4_ = class359.anInt4420;
@@ -53,7 +53,7 @@ final class DisplayModeManagerContainer159
             player.aByteArray10321[0] = Component293.aByteArray3300[i];
             player.plane = player.aByte6376 = (byte) i_5_;
             if (NpcComposition.method802(i_9_, i_8_, true)) player.aByte6376++;
-            player.method2449(i_9_, i_8_, (byte) 102);
+            player.setMovementState(i_9_, i_8_, (byte) 102);
             player.aBoolean10539 = false;
             NpcDefinition.aClass359Array6802[i] = null;
             return true;

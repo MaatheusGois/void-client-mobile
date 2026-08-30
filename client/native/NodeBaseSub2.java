@@ -46,7 +46,7 @@ final class NodeBaseSub2
                 int i_3_ = -1;
                 if ((class318_sub1_sub3_sub3.anIntArray10242) != null) i_3_ = (class318_sub1_sub3_sub3.anIntArray10242[i]);
                 if (i_3_ == -1) {
-                    if (!class318_sub1_sub3_sub3.method2423(-80, i, -1)) bool_2_ = false;
+                    if (!class318_sub1_sub3_sub3.ensureCombatArray(-80, i, -1)) bool_2_ = false;
                 } else {
                     bool_2_ = false;
                     boolean bool_4_ = false;
@@ -62,7 +62,7 @@ final class NodeBaseSub2
                     } else if ((0x8000 & i_3_) == 0) {
                         NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_3_, -6008));
                         if (class348_sub22 == null) {
-                            class318_sub1_sub3_sub3.method2423(-96, i, -1);
+                            class318_sub1_sub3_sub3.ensureCombatArray(-96, i, -1);
                             continue;
                         }
                         Npc npc = (class348_sub22.npc);
@@ -72,13 +72,13 @@ final class NodeBaseSub2
                         int i_11_ = i_3_ & 0x7fff;
                         Player player = (InterfaceRenderer.players[i_11_]);
                         if (player == null) {
-                            class318_sub1_sub3_sub3.method2423(67, i, -1);
+                            class318_sub1_sub3_sub3.ensureCombatArray(67, i, -1);
                             continue;
                         }
                         i_6_ = ((class318_sub1_sub3_sub3.y) - player.y);
                         i_7_ = (-(player.x) + (class318_sub1_sub3_sub3.x));
                     }
-                    if (i_7_ != 0 || i_6_ != 0) class318_sub1_sub3_sub3.method2423(-100, i, 0x3fff & (int) (Math.atan2(i_7_, i_6_) * 2607.5945876176133));
+                    if (i_7_ != 0 || i_6_ != 0) class318_sub1_sub3_sub3.ensureCombatArray(-100, i, 0x3fff & (int) (Math.atan2(i_7_, i_6_) * 2607.5945876176133));
                 }
             }
             if (bool_2_) {
