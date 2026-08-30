@@ -148,6 +148,24 @@ More: [ios/README.md](ios/README.md).
 
 ---
 
+## Component Lab
+
+The repository contains many opaque, decompiled `Component*` classes. The
+dependency-free Component Lab provides a safe, one-class-at-a-time source
+browser and creates deterministic SVG image cards suitable for visual AI
+analysis. It does not instantiate client classes or connect to a server, so
+experiments cannot corrupt a live game session.
+
+```bash
+make component-lab                         # open http://127.0.0.1:8765
+make component-lab-images OUT=/tmp/cards   # export one card per component
+```
+
+Select a class in the browser, inspect its source and open its image card.
+SVG files remain text-based and can be archived alongside deobfuscation notes.
+
+---
+
 ## Apple TV (tvOS)
 
 Same RoboVM host as iPad, built against **AppleTVOS.sdk** (`-Pvoid.platform=tvos`). Bundle id: `world.gregs.voidosrs.tvos`.
