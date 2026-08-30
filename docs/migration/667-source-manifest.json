@@ -1,0 +1,38 @@
+{
+  "target_revision": 667,
+  "source_repository": "https://github.com/StrongHold/runescape-667",
+  "source_commit": "f45c5e8a9e3369a7aeb11b68510fd00d4445d683",
+  "audited_at": "2026-08-30",
+  "source_contents": {
+    "client": true,
+    "server": false,
+    "cache_and_js5_artifacts": true,
+    "protocol_documentation": true,
+    "root_license_file": false
+  },
+  "source_layout": [
+    "client/",
+    "runescape/",
+    "loader/",
+    "docs/",
+    "lib/runescape.js5"
+  ],
+  "runtime": {
+    "primary_live_port": 443,
+    "secondary_live_port": 43594,
+    "non_live_port_bases": {
+      "game": 50000,
+      "js5": 40000
+    },
+    "java_target": 11,
+    "package_model": "named com.jagex packages"
+  },
+  "migration_policy": {
+    "current_profile": 634,
+    "target_profile": 667,
+    "profile_property": "void.protocol",
+    "cache_namespace_pattern": "runescape-{revision}",
+    "server_requirement": "A separately supplied server compatible with the pinned 667 protocol is required.",
+    "license_status": "No root license grant was identified; legal review is required before redistributing source or binary cache artifacts."
+  }
+}

@@ -21,7 +21,7 @@
 >
 > **Rights-holder contact** — If you are a rights holder and believe any content in this project infringes your rights, contact the project maintainers. We respond promptly and remove specifically identified material on receipt of a good-faith request, without requiring formal legal process.
 
-Deobfuscated 634 (2010-12-14) client — desktop JVM, plus Android and iOS ports of the same software renderer.
+Deobfuscated RuneScape 634 (2010-12-14) client with a versioned, opt-in 667 migration profile — desktop JVM, plus Android and iOS/tvOS ports of the same software renderer.
 
 Architecture / maintenance: **[ARCHITECTURE.md](ARCHITECTURE.md)**.
 
@@ -57,7 +57,9 @@ Long-press (right-click) an NPC, object, inventory item, or bank item → **Defa
 
 ## Server
 
-Clients expect a [Void](https://github.com/GregHib/void) (or compatible) game server on **TCP 43594** (JS5 + login). Run that separately, then point each client at the host IP (defaults below).
+The legacy profile expects a [Void](https://github.com/GregHib/void) (or compatible) game server on **TCP 43594** (JS5 + login). The audited 667 source is client-only, so a separately supplied 667-compatible server and RSA configuration are required. Run that separately, then point each client at the host IP (defaults below).
+
+Use `-Dvoid.protocol=667` to select the migration profile and `-Dvoid.port=<port>` to select its endpoint. The default remains 634 until the 667 protocol and cache gates pass.
 
 ```bash
 make help
@@ -72,6 +74,7 @@ make desktop              # ./gradlew :client:run → 127.0.0.1:43594
 make desktop-jar          # shadow jar
 make desktop-run SERVER_IP=192.168.1.10
 # or: java -jar client/build/libs/void-client-1.2.0.jar --address 192.168.1.10
+# migration probe: java -Dvoid.protocol=667 -Dvoid.port=443 -jar client/build/libs/void-client-1.2.0.jar
 ```
 
 **Limitation (gamepad):** connect the DualShock / Xbox / etc. **before** launching the desktop client. Hotplug after start is unreliable on macOS (SDL may see the pad as disconnected until restart).
@@ -145,6 +148,22 @@ make ios-device            # physical iPad (sign + devicectl)
 Same as Android. Soft keyboard opens on text-field taps.
 
 More: [ios/README.md](ios/README.md).
+
+---
+
+## 634 → 667 migration
+
+The migration is staged because revision numbers do not describe the JS5,
+cache, login, widget, script, or native changes. The pinned source audit,
+compatibility matrix, cache contract, legal status, and remaining gates are in
+[`docs/migration/667-compatibility-matrix.md`](docs/migration/667-compatibility-matrix.md).
+The machine-readable source pin is
+[`docs/migration/667-source-manifest.json`](docs/migration/667-source-manifest.json).
+
+The 667 profile uses a separate `runescape-667` cache namespace. Do not copy
+634 cache files into it. Until the matrix's protocol and server gates are
+complete, use the 634 profile for normal Void gameplay and keep the 634 branch
+as the source rollback.
 
 ---
 

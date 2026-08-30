@@ -31,11 +31,21 @@ public final class ServerPrefs {
     }
 
     /**
+     * Copies optional Android debug properties into the standard Java properties
+     * consumed by the generated client. Desktop and iOS only need the latter.
+     */
+    public static void applyClientProperties() {
+        applyProperty("void.protocol", "debug.void.protocol");
+        applyProperty("void.port", "debug.void.port");
+    }
+
+    /**
      * Primary JS5/login endpoint used by the mobile bootstrap. The client core
      * reads the same properties through {@code ProtocolInfo}; keeping this small
      * mirror here avoids importing a default-package class into the host.
      */
     public static int gamePort() {
+        applyClientProperties();
         int fallback = LEGACY_PORT;
         try {
             if ("667".equals(System.getProperty("void.protocol"))) {
@@ -49,6 +59,22 @@ public final class ServerPrefs {
             return parsed > 0 && parsed <= 65535 ? parsed : fallback;
         } catch (Throwable ignored) {
             return fallback;
+        }
+    }
+
+    private static void applyProperty(String javaName, String androidName) {
+        try {
+            String current = System.getProperty(javaName);
+            if (current != null && current.trim().length() > 0) {
+                return;
+            }
+            Class<?> properties = Class.forName("android.os.SystemProperties");
+            String value = (String) properties.getMethod("get", String.class, String.class)
+                    .invoke(null, androidName, "");
+            if (value != null && value.trim().length() > 0) {
+                System.setProperty(javaName, value.trim());
+            }
+        } catch (Throwable ignored) {
         }
     }
 

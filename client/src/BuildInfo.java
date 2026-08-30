@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class6` (JODE-obfuscated).
- * Build/version info ('Build: 634') plus the developer-console overlay:
+ * Build/version info plus the developer-console overlay:
  * {@link #drawDevConsole}, {@link #pollConsoleInput}, {@link #consoleBandHeight}.
  */
 
