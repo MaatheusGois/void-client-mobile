@@ -18,6 +18,7 @@ TVOS_DEVICE ?= Apple TV
 
 .PHONY: help \
 	desktop desktop-jar desktop-run \
+	component-lab component-lab-images \
 	desktop-log desktop-clear-log \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
@@ -36,6 +37,9 @@ help:
 	@echo "  make desktop-run      jar with --address (SERVER_IP or 127.0.0.1)"
 	@echo "  make desktop-log      jar + DeobProbe NDJSON (VOID_DEOB_LOG=…)"
 	@echo "  make desktop-clear-log  rm the DeobProbe log"
+	@echo "component lab"
+	@echo "  make component-lab       browse components at http://127.0.0.1:8765"
+	@echo "  make component-lab-images export SVG cards (OUT=...)"
 	@echo "android"
 	@echo "  make android          installDebug + reverse + launch"
 	@echo "  make android-install  :app:installDebug"
@@ -94,6 +98,12 @@ desktop-log: desktop-jar
 
 desktop-clear-log:
 	rm -f "$(DEOB_LOG)"
+
+component-lab:
+	python3 tools/component_lab.py
+
+component-lab-images:
+	python3 tools/component_lab.py --export-dir "$${OUT:-component-cards}"
 
 # ── android ──────────────────────────────────────────────────────────────────
 
