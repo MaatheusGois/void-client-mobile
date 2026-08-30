@@ -417,6 +417,11 @@ final class ColoredTextBuilder {
                         ShaderProgramSub2.method2146((byte) 84);
                         break;
                     }
+                    // Client-only world-map teleport — do not send a game packet.
+                    if (WorldMapTeleport.handle(class348_sub42_sub12)) {
+                        ShaderProgramSub2.method2146((byte) 84);
+                        break;
+                    }
                     // Clear Microbot targetMenu after any real (or attempted) menu consume.
                     MicrobotMenu.onMenuOptionClicked();
                     int i_74_ = (class348_sub42_sub12.param0);

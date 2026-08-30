@@ -1,6 +1,10 @@
 package voidawt;
 
 import org.robovm.apple.dispatch.DispatchQueue;
+import org.robovm.apple.avfoundation.AVSpeechSynthesizer;
+import org.robovm.apple.avfoundation.AVSpeechUtterance;
+import org.robovm.apple.avfoundation.AVSpeechSynthesisVoice;
+import org.robovm.apple.avfoundation.AVSpeechBoundary;
 
 import voidawt.event.FocusEvent;
 import voidawt.event.KeyEvent;
@@ -8,6 +12,30 @@ import voidawt.event.MouseEvent;
 import voidawt.event.MouseWheelEvent;
 
 public final class AwtHost {
+    private static final AVSpeechSynthesizer SPEECH = new AVSpeechSynthesizer();
+
+    public static void speak(final String text, final boolean female) {
+        DispatchQueue.getMainQueue().async(new Runnable() {
+            public void run() {
+                AVSpeechUtterance utterance = new AVSpeechUtterance(text);
+                AVSpeechSynthesisVoice voice = new AVSpeechSynthesisVoice("en-US");
+                utterance.setVoice(voice);
+                // iOS exposes gender on the voice metadata; pitch is a reliable
+                // fallback when only one en-US voice is installed.
+                utterance.setPitchMultiplier(female ? 1.15f : 0.85f);
+                SPEECH.enqueueSpeakUtterance(utterance);
+            }
+        });
+    }
+
+    public static void stopSpeech() {
+        DispatchQueue.getMainQueue().async(new Runnable() {
+            public void run() {
+                SPEECH.stopSpeaking(AVSpeechBoundary.Immediate);
+            }
+        });
+    }
+
     /** Default matches fullscreen 800x600 (client boot / display prefs). */
     public static volatile int GAME_WIDTH = 800;
     public static volatile int GAME_HEIGHT = 600;

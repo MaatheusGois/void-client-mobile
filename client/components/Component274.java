@@ -10,6 +10,7 @@ final class Component274
     static int occludedWallCount;
     static int anInt563;
     byte[] aByteArray564;
+    /** World-map element name / menu target (opBase). */
     String aString565;
     int anInt566;
     int anInt567;
@@ -22,6 +23,7 @@ final class Component274
     boolean aBoolean574;
     int anInt575 = -1;
     int anInt576;
+    /** World-map element action labels (ops). */
     String[] aStringArray577;
     int anInt578;
     static int anInt579;
@@ -41,6 +43,7 @@ final class Component274
     Component62 aClass153_593;
     static int anInt594;
     int anInt595;
+    /** World-map element category (opcode 19). */
     int anInt596;
     String aString597;
     private int anInt598;

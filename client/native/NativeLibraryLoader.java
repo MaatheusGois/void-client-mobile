@@ -165,6 +165,7 @@ final class NativeLibraryLoader {
                         if (class42.aStringArray577[1] != null) DisplayModeManagerContainer368.addMenuEntry(false, class42.aString565, 0, (byte) -69, false, class42.anInt596, -1, true, 1012, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.aStringArray577[1], class348_sub12.aClass348_Sub21_6751.anInt6847, -1);
                         if (class42.aStringArray577[0] != null) DisplayModeManagerContainer368.addMenuEntry(false, class42.aString565, 0, (byte) -92, false, class42.anInt596, -1, true, 1009, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.aStringArray577[0], class348_sub12.aClass348_Sub21_6751.anInt6847, -1);
                     }
+                    WorldMapTeleport.inject(class348_sub12, class42);
                     if (!class348_sub12.aClass348_Sub21_6751.aBoolean6848) {
                         class348_sub12.aClass348_Sub21_6751.aBoolean6848 = true;
                         ClientScriptExecutor.runScript(Component330.aClass273_1512, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.anInt596);
