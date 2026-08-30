@@ -143,5 +143,21 @@ final class SceneStore {
         return m.find() ? unescape(m.group(1)) : null;
     }
     private static String escape(String s) { return s.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n"); }
-    private static String unescape(String s) { return s.replace("\\\\", "\\").replace("\\\"", "\"").replace("\\n", "\n"); }
+    private static String unescape(String s) {
+        StringBuilder out = new StringBuilder(s.length());
+        boolean escaped = false;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (escaped) {
+                out.append(c == 'n' ? '\n' : c);
+                escaped = false;
+            } else if (c == '\\') {
+                escaped = true;
+            } else {
+                out.append(c);
+            }
+        }
+        if (escaped) out.append('\\');
+        return out.toString();
+    }
 }

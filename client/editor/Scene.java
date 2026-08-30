@@ -39,9 +39,10 @@ final class Scene {
         if (objects.size() >= MAX_OBJECTS && !objects.containsKey(object.id)) {
             throw new IllegalArgumentException("scene object limit exceeded");
         }
-        if (objects.put(object.id, object) != null) {
+        if (objects.containsKey(object.id)) {
             throw new IllegalArgumentException("duplicate scene object id: " + object.id);
         }
+        objects.put(object.id, object);
     }
 
     SceneObject remove(long id) {
