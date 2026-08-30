@@ -363,7 +363,7 @@ public final class client extends Applet_Sub1 {
         DisplayModeManagerContainer332.method318(122);
         Component331.method1047(1);
         Component214.method1254((byte) 62);
-        DisplayModeManagerContainer229.method746();
+        DisplayModeManagerContainer229.clearWorld();
         ResourceLoader.method2317((byte) 79);
         Component281.method2281(1);
         Component211.method1169(false);

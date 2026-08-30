@@ -37,7 +37,7 @@ final class DisplayModeManagerContainer310
         TheoraVideoPlayer.aBoolean1500 = bool;
         NewsFetcher.anInt4202 = i;
         Component60.anInt5909 = i_0_;
-        DisplayModeManagerContainer229.method754(i_1_);
+        DisplayModeManagerContainer229.selectArea(i_1_);
         if (i_2_ > -41) method297(true);
     }
 }

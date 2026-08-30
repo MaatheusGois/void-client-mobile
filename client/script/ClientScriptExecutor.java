@@ -537,7 +537,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5206) {
                 int i_64_ = intStack[--intStackPointer];
-                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.method766(i_64_ >> 14 & 0x3fff, i_64_ & 0x3fff);
+                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.findAreaAt(i_64_ >> 14 & 0x3fff, i_64_ & 0x3fff);
                 if (class348_sub42_sub14 == null) intStack[intStackPointer++] = -1;
                 else {
                     intStack[intStackPointer++] = (class348_sub42_sub14.anInt9628);
@@ -546,7 +546,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5207) {
-                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.method757(intStack[--intStackPointer]);
+                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.getArea(intStack[--intStackPointer]);
                 if (class348_sub42_sub14 == null || (class348_sub42_sub14.aString9632) == null) stringStack[stringStackPointer++] = "";
                 else {
                     stringStack[stringStackPointer++] = (class348_sub42_sub14.aString9632);
@@ -566,7 +566,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5210) {
                 int i_65_ = intStack[--intStackPointer];
-                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.method757(i_65_);
+                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.getArea(i_65_);
                 if (class348_sub42_sub14 == null) {
                     intStack[intStackPointer++] = 0;
                     intStack[intStackPointer++] = 0;
@@ -579,7 +579,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5211) {
                 int i_66_ = intStack[--intStackPointer];
-                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.method757(i_66_);
+                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.getArea(i_66_);
                 if (class348_sub42_sub14 == null) {
                     intStack[intStackPointer++] = 0;
                     intStack[intStackPointer++] = 0;
@@ -629,7 +629,7 @@ final class ClientScriptExecutor {
                 intStackPointer -= 2;
                 int i_71_ = intStack[intStackPointer];
                 int i_72_ = intStack[intStackPointer + 1];
-                HashTable class107 = DisplayModeManagerContainer229.method767(i_71_ >> 14 & 0x3fff, i_71_ & 0x3fff);
+                HashTable class107 = DisplayModeManagerContainer229.findAreasInRange(i_71_ >> 14 & 0x3fff, i_71_ & 0x3fff);
                 boolean bool_73_ = false;
                 for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) class107.first(-48); class348_sub42_sub14 != null; class348_sub42_sub14 = ((HashNodeSub14) class107.next((byte) 113))) {
                     if (class348_sub42_sub14.anInt9628 == i_72_) {
@@ -646,7 +646,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5218) {
                 int i_74_ = intStack[--intStackPointer];
-                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.method757(i_74_);
+                HashNodeSub14 class348_sub42_sub14 = DisplayModeManagerContainer229.getArea(i_74_);
                 if (class348_sub42_sub14 == null) intStack[intStackPointer++] = -1;
                 else {
                     intStack[intStackPointer++] = (class348_sub42_sub14.anInt9631);

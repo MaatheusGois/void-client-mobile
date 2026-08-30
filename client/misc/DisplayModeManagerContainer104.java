@@ -173,10 +173,10 @@ final class DisplayModeManagerContainer104
                     int i_21_ = (DebugOverlay.anInt3170 + -(int) ((float) i_13_ / DisplayModeManagerContainer229.aFloat1247));
                     Component280.anInt2446 = (int) ((float) (2 * i_13_) / DisplayModeManagerContainer229.aFloat1247);
                     Component361.anInt370 = (int) ((float) (i_12_ * 2) / DisplayModeManagerContainer229.aFloat1247);
-                    DisplayModeManagerContainer229.method751(i_18_ + DisplayModeManagerContainer229.anInt1266, i_19_ + DisplayModeManagerContainer229.anInt1263, i_20_ - -DisplayModeManagerContainer229.anInt1266, DisplayModeManagerContainer229.anInt1263 + i_21_, i_11_, i_14_, i_12_ + i_11_, i_13_ + i_14_ + 1);
-                    DisplayModeManagerContainer229.method748(var_ha);
+                    DisplayModeManagerContainer229.setWorldBounds(i_18_ + DisplayModeManagerContainer229.anInt1266, i_19_ + DisplayModeManagerContainer229.anInt1263, i_20_ - -DisplayModeManagerContainer229.anInt1266, DisplayModeManagerContainer229.anInt1263 + i_21_, i_11_, i_14_, i_12_ + i_11_, i_13_ + i_14_ + 1);
+                    DisplayModeManagerContainer229.computeTransform(var_ha);
                     if (i != -7) method2462(63, -7, -14);
-                    NodeList class262 = DisplayModeManagerContainer229.method758(var_ha);
+                    NodeList class262 = DisplayModeManagerContainer229.getRenderList(var_ha);
                     DisplayModeManagerContainer74.method2312(-13084, 0, class262, 0, var_ha);
                     if (WaterShader.anInt7379 > 0) {
                         LoadingManager.anInt2173--;

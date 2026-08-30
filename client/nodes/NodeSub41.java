@@ -87,7 +87,7 @@ final class NodeSub41
             int i_19_ = Component330.regionTileY;
             NodeBaseSub2.regionTileX = (-(AbstractShaderSub4.anInt7319 >> 4) + GraphicsToolkit.anInt4581) * 8;
             Component330.regionTileY = 8 * (DisplayModeManagerContainer363.anInt4095 - (ParametricDefinition.anInt9109 >> 4));
-            Request.aClass348_Sub42_Sub14_6885 = DisplayModeManagerContainer229.method766(GraphicsToolkit.anInt4581 * 8, DisplayModeManagerContainer363.anInt4095 * 8);
+            Request.aClass348_Sub42_Sub14_6885 = DisplayModeManagerContainer229.findAreaAt(GraphicsToolkit.anInt4581 * 8, DisplayModeManagerContainer363.anInt4095 * 8);
             CacheNodeSub2.aClass252_10488 = null;
             int i_20_ = NodeBaseSub2.regionTileX - i_18_;
             int i_21_ = -i_19_ + Component330.regionTileY;

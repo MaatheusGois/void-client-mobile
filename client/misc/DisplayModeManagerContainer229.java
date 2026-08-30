@@ -49,7 +49,7 @@ class DisplayModeManagerContainer229
     static int anInt1276;
     static int anInt1277;
 
-    static final void method745(GraphicsToolkit var_ha, NodeSub21 class348_sub21, Component274 class42) {
+    static final void transformPolygon(GraphicsToolkit var_ha, NodeSub21 class348_sub21, Component274 class42) {
         if (class42.anIntArray591 != null) {
             int[] is = new int[class42.anIntArray591.length];
             for (int i = 0; i < is.length / 2; i++) {
@@ -104,7 +104,7 @@ class DisplayModeManagerContainer229
         }
     }
 
-    public static void method746() {
+    public static void clearWorld() {
         aClass268_1239 = null;
         aClass183_1240 = null;
         aClass263_1245 = null;
@@ -131,20 +131,20 @@ class DisplayModeManagerContainer229
         aClass243ArrayArrayArray1269 = null;
     }
 
-    private static final void method747(GraphicsToolkit var_ha, NodeSub21 class348_sub21, int i, int i_15_, int i_16_, int i_17_) {
+    private static final void transformNode(GraphicsToolkit var_ha, NodeSub21 class348_sub21, int i, int i_15_, int i_16_, int i_17_) {
         class348_sub21.anInt6853 = (anInt1272 + (i_16_ + i * (class348_sub21.anInt6852 - anInt1274) >> 16));
         class348_sub21.anInt6855 = (anInt1268 - (i_17_ + i_15_ * (class348_sub21.anInt6851 - anInt1257) >> 16));
     }
 
-    static final void method748(GraphicsToolkit var_ha) {
+    static final void computeTransform(GraphicsToolkit var_ha) {
         int i = anInt1265 - anInt1274;
         int i_18_ = anInt1277 - anInt1257;
         int i_19_ = (anInt1276 - anInt1272 << 16) / i;
         int i_20_ = (anInt1268 - anInt1262 << 16) / i_18_;
-        method765(var_ha, i_19_, i_20_, 0, 0);
+        computeMinimap(var_ha, i_19_, i_20_, 0, 0);
     }
 
-    static final void method749() {
+    static final void clearBuffers() {
         aByteArray1273 = null;
         aByteArray1264 = null;
         aShortArray1270 = null;
@@ -157,7 +157,7 @@ class DisplayModeManagerContainer229
         anIntArray1260 = null;
     }
 
-    private static final void method750(GraphicsToolkit var_ha, Buffer class348_sub49, int i, int i_21_, int i_22_, int i_23_, int[] is, int[] is_24_) {
+    private static final void readTileFlags(GraphicsToolkit var_ha, Buffer class348_sub49, int i, int i_21_, int i_22_, int i_23_, int[] is, int[] is_24_) {
         int i_25_ = class348_sub49.readUnsignedByte(255);
         if ((i_25_ & 0x1) == 0) {
             boolean bool = (i_25_ & 0x2) == 0;
@@ -225,7 +225,7 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final void method751(int i, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_) {
+    static final void setWorldBounds(int i, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_) {
         anInt1274 = i - anInt1266;
         anInt1277 = i_40_ - anInt1263;
         anInt1265 = i_41_ - anInt1266;
@@ -236,7 +236,7 @@ class DisplayModeManagerContainer229
         anInt1268 = i_46_;
     }
 
-    static final void method752(CacheStore class45, DisplayModeManagerContainer259 class268, Component191 class183, Component309 class263, Component62 class153, Component258 class141, Interface17 interface17) {
+    static final void initWorld(CacheStore class45, DisplayModeManagerContainer259 class268, Component191 class183, Component309 class263, Component62 class153, Component258 class141, Interface17 interface17) {
         aClass45_1237 = class45;
         aClass268_1239 = class268;
         aClass183_1240 = class183;
@@ -256,7 +256,7 @@ class DisplayModeManagerContainer229
         Component54.method566(true, false, (byte) 11);
     }
 
-    private static final void method753() {
+    private static final void buildOverlay() {
         for (int i = 0; i < anInt1259; i++) {
             for (int i_48_ = 0; i_48_ < anInt1267; i_48_++) {
                 int i_49_ = aShortArray1261[i + i_48_ * anInt1259] & 0xffff;
@@ -325,11 +325,11 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final void method754(int i) {
+    static final void selectArea(int i) {
         aClass348_Sub42_Sub14_1243 = (HashNodeSub14) aClass356_1241.get(i, -6008);
     }
 
-    private static final void method755(GraphicsToolkit var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
+    private static final void drawMinimapTile(GraphicsToolkit var_ha, int i, int i_57_, int i_58_, int i_59_, int i_60_, int i_61_, int i_62_, short[] is, byte[] is_63_, boolean bool) {
         if (bool || i_60_ != 0 || i_61_ > 0) {
             if (i_61_ == 0) var_ha.fillRect(i, i_57_, i_58_, i_59_, i_60_, 0);
             else {
@@ -397,7 +397,7 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final void method756(GraphicsToolkit var_ha, int i, int i_75_) {
+    static final void loadArea(GraphicsToolkit var_ha, int i, int i_75_) {
         Buffer class348_sub49 = (new Buffer(aClass45_1237.getFile((aClass348_Sub42_Sub14_1243.aString9625), "area", -29832)));
         int i_76_ = class348_sub49.readUnsignedByte(255);
         int[] is = new int[i_76_];
@@ -415,7 +415,7 @@ class DisplayModeManagerContainer229
                     for (int i_84_ = 0; i_84_ < 64; i_84_++) {
                         int i_85_ = i_81_ * 64 + i_83_ - anInt1266;
                         int i_86_ = i_82_ * 64 + i_84_ - anInt1263;
-                        method750(var_ha, class348_sub49, i_81_, i_82_, i_85_, i_86_, is, is_79_);
+                        readTileFlags(var_ha, class348_sub49, i_81_, i_82_, i_85_, i_86_, is, is_79_);
                     }
                 }
             } else {
@@ -427,7 +427,7 @@ class DisplayModeManagerContainer229
                     for (int i_92_ = 0; i_92_ < 8; i_92_++) {
                         int i_93_ = i_87_ * 64 + i_89_ * 8 + i_91_ - anInt1266;
                         int i_94_ = i_88_ * 64 + i_90_ * 8 + i_92_ - anInt1263;
-                        method750(var_ha, class348_sub49, i_87_, i_88_, i_93_, i_94_, is, is_79_);
+                        readTileFlags(var_ha, class348_sub49, i_87_, i_88_, i_93_, i_94_, is, is_79_);
                     }
                 }
             }
@@ -446,7 +446,7 @@ class DisplayModeManagerContainer229
                     }
                 }
             }
-            method768(is_96_, aByteArray1264, aShortArray1270, i, i_75_);
+            interpolateTiles(is_96_, aByteArray1264, aShortArray1270, i, i_75_);
             for (int i_99_ = 0; i_99_ < aClass243ArrayArrayArray1269[i_95_].length; i_99_++) {
                 for (int i_100_ = 0; i_100_ < aClass243ArrayArrayArray1269[i_95_][0].length; i_100_++) {
                     Component315 class243 = aClass243ArrayArrayArray1269[i_95_][i_99_][i_100_];
@@ -460,24 +460,24 @@ class DisplayModeManagerContainer229
                 }
             }
         }
-        method768(aByteArray1273, aByteArray1264, aShortArray1270, i, i_75_);
+        interpolateTiles(aByteArray1273, aByteArray1264, aShortArray1270, i, i_75_);
         aByteArray1273 = null;
-        method753();
+        buildOverlay();
     }
 
-    static final HashNodeSub14 method757(int i) {
+    static final HashNodeSub14 getArea(int i) {
         return ((HashNodeSub14) aClass356_1241.get(i, -6008));
     }
 
-    static final NodeList method758(GraphicsToolkit var_ha) {
+    static final NodeList getRenderList(GraphicsToolkit var_ha) {
         int i = anInt1265 - anInt1274;
         int i_102_ = anInt1277 - anInt1257;
         int i_103_ = (anInt1276 - anInt1272 << 16) / i;
         int i_104_ = (anInt1268 - anInt1262 << 16) / i_102_;
-        return method762(var_ha, i_103_, i_104_, 0, 0);
+        return getTransformedNodes(var_ha, i_103_, i_104_, 0, 0);
     }
 
-    private static final int method759(d var_d, int i, int i_105_, int i_106_) {
+    private static final int getModelCount(d var_d, int i, int i_105_, int i_106_) {
         Component11 class277 = aClass268_1239.method2034(i, false);
         if (class277 == null) return 0;
         int i_107_ = class277.anInt3575;
@@ -503,7 +503,7 @@ class DisplayModeManagerContainer229
         return i_108_;
     }
 
-    static final void method760() {
+    static final void allocateTileBuffers() {
         aByteArray1273 = new byte[anInt1259 * anInt1267];
         aByteArray1256 = new byte[anInt1259 * anInt1267];
         aByteArray1275 = new byte[anInt1259 * anInt1267];
@@ -514,7 +514,7 @@ class DisplayModeManagerContainer229
         anIntArray1260 = new int[aClass268_1239.anInt3429 + 1];
     }
 
-    static final void method761() {
+    static final void processOverlay() {
         int[] is = new int[3];
         for (int i = 0; i < aClass252_1246.anInt3241; i++) {
             boolean bool = (aClass348_Sub42_Sub14_1243.method3236(is, (aClass252_1246.anIntArray3238[i] >> 14 & 0x3fff), aClass252_1246.anIntArray3238[i] & 0x3fff, aClass252_1246.anIntArray3238[i] >> 28 & 0x3, (byte) -28));
@@ -527,13 +527,13 @@ class DisplayModeManagerContainer229
         }
     }
 
-    private static final NodeList method762(GraphicsToolkit var_ha, int i, int i_115_, int i_116_, int i_117_) {
+    private static final NodeList getTransformedNodes(GraphicsToolkit var_ha, int i, int i_115_, int i_116_, int i_117_) {
         for (NodeSub21 class348_sub21 = (NodeSub21) aClass262_1254.first(4); class348_sub21 != null; class348_sub21 = (NodeSub21) aClass262_1254.next((byte) 74))
-            method747(var_ha, class348_sub21, i, i_115_, i_116_, i_117_);
+            transformNode(var_ha, class348_sub21, i, i_115_, i_116_, i_117_);
         return aClass262_1254;
     }
 
-    private static final void method763(GraphicsToolkit var_ha, int i, int i_118_, int i_119_, int i_120_, short[] is, byte[] is_121_) {
+    private static final void drawLabels(GraphicsToolkit var_ha, int i, int i_118_, int i_119_, int i_120_, short[] is, byte[] is_121_) {
         if (is != null) {
             for (int i_122_ = 0; i_122_ < is.length; i_122_++) {
                 Component44 class51 = aClass263_1245.method2005(0, is[i_122_] & 0xffff);
@@ -565,12 +565,12 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final void method764(d var_d, int i, int i_129_) {
+    static final void buildModelCounts(d var_d, int i, int i_129_) {
         for (int i_130_ = 0; i_130_ < aClass268_1239.anInt3429; i_130_++)
-            anIntArray1260[i_130_ + 1] = method759(var_d, i_130_, i, i_129_);
+            anIntArray1260[i_130_ + 1] = getModelCount(var_d, i_130_, i, i_129_);
     }
 
-    private static final void method765(GraphicsToolkit var_ha, int i, int i_131_, int i_132_, int i_133_) {
+    private static final void computeMinimap(GraphicsToolkit var_ha, int i, int i_131_, int i_132_, int i_133_) {
         int i_134_ = anInt1265 - anInt1274;
         int i_135_ = anInt1277 - anInt1257;
         if (anInt1265 < anInt1259) i_134_++;
@@ -607,13 +607,13 @@ class DisplayModeManagerContainer229
                             } else if (i_154_ > 0) {
                                 if (i_154_ == 65535) {
                                     NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.get(i_140_ << 16 | i_150_, -6008)));
-                                    if (class348_sub39 != null) method755(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025), true);
+                                    if (class348_sub39 != null) drawMinimapTile(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025), true);
                                 } else {
                                     aShortArray1252[0] = (short) (i_154_ - 1);
                                     aByteArray1248[0] = aByteArray1258[i_151_];
-                                    method755(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], aShortArray1252, aByteArray1248, true);
+                                    drawMinimapTile(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], aShortArray1252, aByteArray1248, true);
                                 }
-                            } else method755(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], null, null, true);
+                            } else drawMinimapTile(var_ha, i_137_, i_147_, i_139_, i_149_, i_152_, i_153_, aByteArray1275[i_151_], null, null, true);
                         }
                     }
                 } else {
@@ -649,13 +649,13 @@ class DisplayModeManagerContainer229
                                 if (i_165_ > 0) {
                                     if (i_165_ == 65535) {
                                         NodeSub39 class348_sub39 = ((NodeSub39) (aClass356_1271.get(i_159_ << 16 | i_164_, -6008)));
-                                        if (class348_sub39 != null) method763(var_ha, i_156_, i_161_, i_158_, i_163_, (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025));
+                                        if (class348_sub39 != null) drawLabels(var_ha, i_156_, i_161_, i_158_, i_163_, (class348_sub39.aShortArray7024), (class348_sub39.aByteArray7025));
                                     } else {
                                         aShortArray1252[0] = (short) (i_165_ - 1);
                                         aByteArray1248[0] = (aByteArray1258[i_159_ + i_164_ * anInt1259]);
-                                        method763(var_ha, i_156_, i_161_, i_158_, i_163_, aShortArray1252, aByteArray1248);
+                                        drawLabels(var_ha, i_156_, i_161_, i_158_, i_163_, aShortArray1252, aByteArray1248);
                                     }
-                                } else method763(var_ha, i_156_, i_161_, i_158_, i_163_, null, null);
+                                } else drawLabels(var_ha, i_156_, i_161_, i_158_, i_163_, null, null);
                             }
                         }
                     }
@@ -684,7 +684,7 @@ class DisplayModeManagerContainer229
                             int i_178_ = ((i_132_ + i * (i_175_ + 1) >> 16) + anInt1272);
                             int i_179_ = (anInt1268 - (i_133_ + i_131_ * (i_176_ + 1) >> 16));
                             int i_180_ = anInt1268 - (i_133_ + i_131_ * i_176_ >> 16);
-                            method755(var_ha, i_177_, i_179_, i_178_ - i_177_, i_180_ - i_179_, (class318_sub8.anInt6465), (class318_sub8.aByte6460) & 0xff, (class318_sub8.aByte6463), (class318_sub8.aShortArray6461), (class318_sub8.aByteArray6462), false);
+                            drawMinimapTile(var_ha, i_177_, i_179_, i_178_ - i_177_, i_180_ - i_179_, (class318_sub8.anInt6465), (class318_sub8.aByte6460) & 0xff, (class318_sub8.aByte6463), (class318_sub8.aShortArray6461), (class318_sub8.aByteArray6462), false);
                         }
                     }
                 }
@@ -702,7 +702,7 @@ class DisplayModeManagerContainer229
                             int i_188_ = ((i_132_ + i * (i_185_ + 1) >> 16) + anInt1272);
                             int i_189_ = (anInt1268 - (i_133_ + i_131_ * (i_186_ + 1) >> 16));
                             int i_190_ = anInt1268 - (i_133_ + i_131_ * i_186_ >> 16);
-                            method763(var_ha, i_187_, i_189_, i_188_ - i_187_, i_190_ - i_189_, (class318_sub8.aShortArray6461), (class318_sub8.aByteArray6462));
+                            drawLabels(var_ha, i_187_, i_189_, i_188_ - i_187_, i_190_ - i_189_, (class318_sub8.aShortArray6461), (class318_sub8.aByteArray6462));
                         }
                     }
                 }
@@ -710,14 +710,14 @@ class DisplayModeManagerContainer229
         }
     }
 
-    static final HashNodeSub14 method766(int i, int i_191_) {
+    static final HashNodeSub14 findAreaAt(int i, int i_191_) {
         for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.first(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.next(0)) {
             if (class348_sub42_sub14.aBoolean9639 && class348_sub42_sub14.method3238((byte) -120, i, i_191_)) return class348_sub42_sub14;
         }
         return null;
     }
 
-    static final HashTable method767(int i, int i_192_) {
+    static final HashTable findAreasInRange(int i, int i_192_) {
         HashTable class107 = new HashTable();
         for (HashNodeSub14 class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.first(0); class348_sub42_sub14 != null; class348_sub42_sub14 = (HashNodeSub14) aClass356_1241.next(0)) {
             if (class348_sub42_sub14.aBoolean9639 && class348_sub42_sub14.method3238((byte) 29, i, i_192_)) class107.add(true, class348_sub42_sub14);
@@ -725,7 +725,7 @@ class DisplayModeManagerContainer229
         return class107;
     }
 
-    private static final void method768(byte[] is, byte[] is_193_, short[] is_194_, int i, int i_195_) {
+    private static final void interpolateTiles(byte[] is, byte[] is_193_, short[] is_194_, int i, int i_195_) {
         int[] is_196_ = new int[anInt1267];
         int[] is_197_ = new int[anInt1267];
         int[] is_198_ = new int[anInt1267];

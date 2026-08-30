@@ -119,7 +119,7 @@ final class HashNodeSub3
         Component39.aClass46_2249 = null;
         Node.anInt4290 = 0;
         Component156.aClass262_3705 = null;
-        DisplayModeManagerContainer229.method749();
+        DisplayModeManagerContainer229.clearBuffers();
         DisplayModeManagerContainer229.aClass262_1254.clear(127);
         DebugPanic.aClass323_4754 = null;
         Component39.aClass323_2252 = null;

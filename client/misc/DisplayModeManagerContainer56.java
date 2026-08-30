@@ -123,7 +123,7 @@ final class DisplayModeManagerContainer56
                 }
             }
             if (DisplayModeManagerContainer229.anInt1272 > i_8_ || i_7_ > DisplayModeManagerContainer229.anInt1276 || i_10_ < DisplayModeManagerContainer229.anInt1262 || i_9_ > DisplayModeManagerContainer229.anInt1268) return true;
-            DisplayModeManagerContainer229.method745(var_ha, class348_sub21, class42);
+            DisplayModeManagerContainer229.transformPolygon(var_ha, class348_sub21, class42);
             if (class105 != null) {
                 if (WaterShader.anInt7379 > 0 && ((DefinitionSub30.anInt9399 != -1 && (DefinitionSub30.anInt9399 == class348_sub21.anInt6847)) || (Component225.anInt481 != -1 && (class42.anInt596 == Component225.anInt481)))) {
                     int i_25_;

@@ -214,8 +214,8 @@ final class TeleportHandler {
                     i_41_ += (-i_43_ + i) / 2;
                     i_39_ += (i_40_ + -i_42_) / 2;
                     if (VideoAdPlayer.aClass105_4643 == null || i_40_ != VideoAdPlayer.aClass105_4643.method971() || (VideoAdPlayer.aClass105_4643.method969() != i)) {
-                        DisplayModeManagerContainer229.method751(DisplayModeManagerContainer229.anInt1266, (DisplayModeManagerContainer229.anInt1267 + DisplayModeManagerContainer229.anInt1263), (DisplayModeManagerContainer229.anInt1266 - -DisplayModeManagerContainer229.anInt1259), DisplayModeManagerContainer229.anInt1263, i_39_, i_41_, i_42_ + i_39_, i_43_ + i_41_);
-                        DisplayModeManagerContainer229.method748(var_ha);
+                        DisplayModeManagerContainer229.setWorldBounds(DisplayModeManagerContainer229.anInt1266, (DisplayModeManagerContainer229.anInt1267 + DisplayModeManagerContainer229.anInt1263), (DisplayModeManagerContainer229.anInt1266 - -DisplayModeManagerContainer229.anInt1259), DisplayModeManagerContainer229.anInt1263, i_39_, i_41_, i_42_ + i_39_, i_43_ + i_41_);
+                        DisplayModeManagerContainer229.computeTransform(var_ha);
                         VideoAdPlayer.aClass105_4643 = var_ha.method3683(i_39_, i_41_, i_42_, i_43_, false);
                     }
                     VideoAdPlayer.aClass105_4643.method974(i_39_, i_41_);

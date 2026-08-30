@@ -163,7 +163,7 @@ final class StaticElementRenderer extends Renderable {
                     DisplayModeManagerContainer229.anInt1255 = (int) DisplayModeManagerContainer229.aFloat1247 >> 1;
                     DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.method2596(DisplayModeManagerContainer229.anInt1255, 12871);
                     ColorTagNode.method2811(false);
-                    DisplayModeManagerContainer229.method760();
+                    DisplayModeManagerContainer229.allocateTileBuffers();
                     Component156.aClass262_3705 = new NodeList();
                     DisplayModeManagerContainer229.anInt1250 += (int) (Math.random() * 5.0) + -2;
                     if (DisplayModeManagerContainer229.anInt1250 < -8) DisplayModeManagerContainer229.anInt1250 = -8;
@@ -171,7 +171,7 @@ final class StaticElementRenderer extends Renderable {
                     DisplayModeManagerContainer229.anInt1253 += -2 + (int) (5.0 * Math.random());
                     if (DisplayModeManagerContainer229.anInt1253 < -16) DisplayModeManagerContainer229.anInt1253 = -16;
                     if (DisplayModeManagerContainer229.anInt1253 > 16) DisplayModeManagerContainer229.anInt1253 = 16;
-                    DisplayModeManagerContainer229.method764(var_d, (DisplayModeManagerContainer229.anInt1250 >> 2 << 10), DisplayModeManagerContainer229.anInt1253 >> 1);
+                    DisplayModeManagerContainer229.buildModelCounts(var_d, (DisplayModeManagerContainer229.anInt1250 >> 2 << 10), DisplayModeManagerContainer229.anInt1253 >> 1);
                     DisplayModeManagerContainer229.aClass153_1238.method1220((byte) 73, 256, 1024);
                     DisplayModeManagerContainer229.aClass141_1242.method1178(256, 1, 256);
                     DisplayModeManagerContainer229.aClass263_1245.method2014(4096, true);
@@ -179,7 +179,7 @@ final class StaticElementRenderer extends Renderable {
                     Node.anInt4290 = 20;
                 } else if (Node.anInt4290 == 20) {
                     Component156.method2193(true, (byte) -123);
-                    DisplayModeManagerContainer229.method756(var_ha, DisplayModeManagerContainer229.anInt1250, DisplayModeManagerContainer229.anInt1253);
+                    DisplayModeManagerContainer229.loadArea(var_ha, DisplayModeManagerContainer229.anInt1250, DisplayModeManagerContainer229.anInt1253);
                     Node.anInt4290 = 60;
                     Component156.method2193(true, (byte) -122);
                     Component97.method867(true);
@@ -189,7 +189,7 @@ final class StaticElementRenderer extends Renderable {
                             if (!DisplayModeManagerContainer229.aClass45_1237.isGroupReadyByName(100, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements")) return;
                             DisplayModeManagerContainer229.aClass252_1246 = (Component358.loadStaticElements(DisplayModeManagerContainer229.aClass45_1237, (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.aString9625) + "_staticelements", Component387.aBoolean1900, (byte) -91));
                         } else DisplayModeManagerContainer229.aClass252_1246 = new Component278(0);
-                        DisplayModeManagerContainer229.method761();
+                        DisplayModeManagerContainer229.processOverlay();
                         Node.anInt4290 = 70;
                         Component156.method2193(true, (byte) -127);
                         Component97.method867(true);

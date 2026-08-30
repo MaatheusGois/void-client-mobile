@@ -215,7 +215,7 @@ final class LoadingManager {
             if (i_11_ < i_12_) return i_11_ * 100 / i_12_;
         }
         if (LoadingState.aClass56_1038 == RSARequest.currentLoadingState)
-            DisplayModeManagerContainer229.method752(NodeSub32.aClass45_6950, Component267.aClass268_2979, Component149.aClass183_4460, GradientPreset.aClass263_9195, DisplayModeManagerContainer64.aClass153_9031, Component245.aClass141_117, DisplayModeManagerContainer58.aClass170_10209);
+            DisplayModeManagerContainer229.initWorld(NodeSub32.aClass45_6950, Component267.aClass268_2979, Component149.aClass183_4460, GradientPreset.aClass263_9195, DisplayModeManagerContainer64.aClass153_9031, Component245.aClass141_117, DisplayModeManagerContainer58.aClass170_10209);
         if (LoadingState.aClass56_1039 == RSARequest.currentLoadingState) {
             // TODO make cache edit to extend these or change id's
             DisplayModeManagerContainer123.anIntArray1303 = (new int[Component329.aClass259_5995.anInt3305 + 1000]);
