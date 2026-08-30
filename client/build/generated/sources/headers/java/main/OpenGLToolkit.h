@@ -41,10 +41,10 @@ JNIEXPORT void JNICALL Java_OpenGLToolkit_A
 
 /*
  * Class:     OpenGLToolkit
- * Method:    fillRect
+ * Method:    fillRect2D
  * Signature: (IIIIII)V
  */
-JNIEXPORT void JNICALL Java_OpenGLToolkit_fillRect
+JNIEXPORT void JNICALL Java_OpenGLToolkit_fillRect2D
   (JNIEnv *, jobject, jint, jint, jint, jint, jint, jint);
 
 /*
