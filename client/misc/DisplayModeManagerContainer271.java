@@ -14,7 +14,8 @@ final class DisplayModeManagerContainer271
     static CacheStore aClass45_518;
     private final GlExtensionManager aClass377_519;
     static DisplayModeManagerContainer67 aClass112_520;
-    static FontGlyphCache aClass323_521;
+        /** World-map Helvetica glyph cache at 14pt. */
+    static FontGlyphCache helveticaGlyphs14;
 
     static final void method366(Object[] objects, byte i, int[] is) {
         do {
@@ -39,7 +40,7 @@ final class DisplayModeManagerContainer271
     public static void method367(int i) {
         aClass45_518 = null;
         aClass74_515 = null;
-        aClass323_521 = null;
+        helveticaGlyphs14 = null;
         if (i == -15833) aClass112_520 = null;
     }
 

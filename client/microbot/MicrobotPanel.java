@@ -11,8 +11,7 @@
  * unlinked ({@link Node#unlink}) so walk / tip menus never see them.
  * {@link DisplayModeManagerContainer1#updateMenuTip} also bails when {@link #isMouseOver()} so right-click
  * menus don't open through the HUD.
- * <p>
- * Rows (expanded): header → Combat toggle → Pause all scripts.
+ * Rows (expanded): header → Combat toggle → Pause all scripts → Position.
  */
 final class MicrobotPanel {
 
@@ -50,7 +49,7 @@ final class MicrobotPanel {
 
     /** Current panel pixel height (collapsed = header only). */
     static int height() {
-        return collapsed ? ROW_H + PAD * 2 : ROW_H * 3 + PAD * 2;
+        return collapsed ? ROW_H + PAD * 2 : ROW_H * 4 + PAD * 2;
     }
 
     /**
@@ -108,6 +107,12 @@ final class MicrobotPanel {
                 boolean paused = Microbot.pauseAllScripts;
                 font.drawText(paused ? "Pause: ON" : "Pause: OFF",
                         paused ? OFF : ON, y, textX, SHADOW, -110);
+                y += ROW_H;
+                int absX = MicrobotWidgets.localAbsX();
+                int absY = MicrobotWidgets.localAbsY();
+                int plane = MicrobotWidgets.localPlane();
+                font.drawText("Pos: " + absX + ", " + absY + ", " + plane,
+                        0xFFFFFFFF, y, textX, SHADOW, -110);
             }
         } catch (Throwable t) {
             System.out.println("microbot panel draw: " + t.getMessage());

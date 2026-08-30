@@ -9,7 +9,8 @@ final class Component218
  */ {
     static Component183 aClass114_2331 = new Component183(120, -2);
     static Request aClass348_Sub26_2332;
-    static FontGlyphCache aClass323_2333;
+        /** World-map Helvetica glyph cache at 19pt. */
+    static FontGlyphCache helveticaGlyphs19;
     static ParticleSystem[] aClass348_Sub47Array2334 = new ParticleSystem[300];
     static Component183 aClass114_2335;
 
@@ -19,7 +20,7 @@ final class Component218
         aClass114_2335 = null;
         if (i != 1) aClass114_2331 = null;
         aClass348_Sub47Array2334 = null;
-        aClass323_2333 = null;
+        helveticaGlyphs19 = null;
     }
 
     static {

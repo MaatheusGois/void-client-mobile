@@ -1,13 +1,18 @@
 package voidawt;
 
-import org.robovm.apple.coregraphics.CGAffineTransform;
 import org.robovm.apple.coregraphics.CGBitmapContext;
 import org.robovm.apple.coregraphics.CGColorSpace;
+import org.robovm.apple.coregraphics.CGImage;
 import org.robovm.apple.coregraphics.CGImageAlphaInfo;
+import org.robovm.apple.coregraphics.CGPoint;
+import org.robovm.apple.coregraphics.CGRect;
+import org.robovm.apple.coregraphics.CGSize;
 import org.robovm.apple.coretext.CTLine;
 import org.robovm.apple.foundation.NSAttributedString;
 import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UIFont;
+import org.robovm.apple.uikit.UIGraphics;
+import org.robovm.apple.uikit.UIImage;
 
 import voidawt.image.BufferedImage;
 import voidawt.image.ImageObserver;
@@ -97,16 +102,21 @@ public class Graphics {
     }
 
     /**
-     * Rasterize {@code str} via CoreText into a tight glyph bitmap, then blit
-     * non-empty pixels into the ARGB target.
+     * Rasterize {@code str} via UIKit ({@link UIGraphics}) into a tight glyph
+     * bitmap, then blit non-empty pixels into the ARGB target.
      * <p>
      * AWT {@code drawString(x,y)} treats {@code y} as the <em>baseline</em>.
+     * Raw {@code CGBitmapContext}+{@code CTLine} CTM/text-matrix combos keep
+     * producing upside-down / clipped / empty glyphs on device (world-map labels
+     * via {@code FontGlyphCache} bake look garbled). {@code UIGraphics} already
+     * sets a UIKit-flipped context so {@link NSAttributedString#draw(CGPoint)}
+     * comes out upright.
      * <p>
-     * Must NOT hop to the main queue: the splash paint thread can hold client
-     * locks while the main-thread pad tick injects mouse/camera into the same
-     * locks — {@code DispatchQueue.main.sync} deadlocks (cursor still moves,
-     * framebuffer stays black). {@link CTLine#draw} on a private
-     * {@link CGBitmapContext} is safe off-main.
+     * Runs on the caller thread (splash / game). Do <em>not</em> wrap in
+     * {@code DispatchQueue.main.sync}: the splash thread can hold client locks
+     * while the main-thread pad tick needs those same locks → deadlock (cursor
+     * moves, framebuffer stays black). Offscreen {@code beginImageContext} is
+     * enough; no main hop.
      * <p>
      * Callers: splash ({@code HelveticaFont}), glyph bake ({@code FontGlyphCache}).
      */
@@ -129,20 +139,23 @@ public class Graphics {
         int bw = Math.max(1, (int) Math.ceil(width) + pad * 2);
         int bh = Math.max(1, (int) Math.ceil(ascent + descent) + pad * 2);
 
-        byte[] rgba = new byte[bw * bh * 4];
-        CGColorSpace space = CGColorSpace.createDeviceRGB();
-        CGBitmapContext ctx = CGBitmapContext.create(
-                rgba, bw, bh, 8, bw * 4L, space, CGImageAlphaInfo.PremultipliedLast);
-        if (ctx == null) {
-            return;
+        // opaque=false keeps clear alpha; scale=1 → 1 bitmap px per point.
+        UIGraphics.beginImageContext(new CGSize(bw, bh), false, 1.0);
+        byte[] rgba;
+        try {
+            // UIKit point = top-left of the line bounding box (not AWT baseline).
+            attributed.draw(new CGPoint(pad, pad));
+            UIImage image = UIGraphics.getImageFromCurrentImageContext();
+            if (image == null) {
+                return;
+            }
+            rgba = extractRgba(image, bw, bh);
+            if (rgba == null) {
+                return;
+            }
+        } finally {
+            UIGraphics.endImageContext();
         }
-        // Top-left user space (matches UIKit / our ARGB blit).
-        ctx.translateCTM(0, bh);
-        ctx.scaleCTM(1, -1);
-        ctx.setTextMatrix(CGAffineTransform.Identity());
-        // Baseline at ascent below the top padding.
-        ctx.setTextPosition(pad, pad + ascent);
-        line.draw(ctx);
 
         int[] dst = target.peekArgb();
         int tw = target.getWidth();
@@ -155,8 +168,7 @@ public class Graphics {
                 continue;
             }
             int dyOff = dy * tw;
-            // After CTM flip, CGBitmapContext still stores bottom-up — reverse rows.
-            int srcRow = (bh - 1 - row) * bw * 4;
+            int srcRow = row * bw * 4;
             for (int col = 0; col < bw; col++) {
                 int o = srcRow + col * 4;
                 int a = rgba[o + 3] & 0xff;
@@ -173,6 +185,28 @@ public class Graphics {
                 dst[dyOff + dx] = (a << 24) | (r << 16) | (g << 8) | b;
             }
         }
+    }
+
+    /**
+     * Copy UIImage → PremultipliedLast RGBA, keeping alpha (unlike
+     * {@code ArgbBridge.copy}, which forces opaque and would paint black over the splash).
+     */
+    private static byte[] extractRgba(UIImage image, int w, int h) {
+        CGImage cg = image.getCGImage();
+        if (cg == null) {
+            return null;
+        }
+        byte[] rgba = new byte[w * h * 4];
+        CGColorSpace space = CGColorSpace.createDeviceRGB();
+        CGBitmapContext ctx = CGBitmapContext.create(
+                rgba, w, h, 8, w * 4L, space, CGImageAlphaInfo.PremultipliedLast);
+        if (ctx == null) {
+            return null;
+        }
+        // Same path as ArgbBridge.copy: drawImage into default context → top-row-first buffer.
+        ctx.clearRect(new CGRect(0, 0, w, h));
+        ctx.drawImage(new CGRect(0, 0, w, h), cg);
+        return rgba;
     }
 
     public boolean drawImage(Image img, int x, int y, ImageObserver observer) {

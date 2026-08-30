@@ -28,7 +28,8 @@ final class NodeSub3
     static int anInt6578;
     static int anInt6579;
     static int anInt6580;
-    static FontGlyphCache aClass323_6581;
+        /** World-map Helvetica glyph cache at 26pt. */
+    static FontGlyphCache helveticaGlyphs26;
     float aFloat6582;
     static int anInt6583;
     static Component183 aClass114_6584 = null;
@@ -117,7 +118,7 @@ final class NodeSub3
 
     public static void method2738(byte i) {
         aClass114_6584 = null;
-        aClass323_6581 = null;
+        helveticaGlyphs26 = null;
         int i_21_ = 89 / ((19 - i) / 43);
     }
 

@@ -19,6 +19,7 @@ TVOS_DEVICE ?= Apple TV
 .PHONY: help \
 	desktop desktop-jar desktop-run \
 	component-lab component-lab-images \
+	widget-dump-request widget-lab widget-map \
 	desktop-log desktop-clear-log \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
@@ -41,6 +42,11 @@ help:
 	@echo "Component Lab:"
 	@echo "  make component-lab       browse components at http://127.0.0.1:8765"
 	@echo "  make component-lab-images export SVG cards (OUT=...)"
+	@echo "  make widget-lab          browse live WidgetDump crops (--widgets-dir)"
+	@echo "  make widget-dump-request touch REQUEST (needs VOID_WIDGET_DUMP desktop-run)"
+	@echo "  make widget-map         build widget-map/ from latest dump (no clicks)"
+	@echo "  Shift+click in-game     pick widget → widget-map/picks.jsonl"
+	@echo "  Ctrl+Shift+click        dump IF group tree → widget-map/group-N.txt"
 	@echo ""
 	@echo "android"
 	@echo "  make android          installDebug + reverse + launch"
@@ -83,10 +89,17 @@ desktop-jar: check-java17
 	JAVA_HOME="$(JAVA_17)" PATH="$(JAVA_17)/bin:$$PATH" ./gradlew :client:shadowJar
 
 # Rebuild jar, kill any prior desktop client, then launch with --address.
+# Optional live widget dump: VOID_WIDGET_DUMP=widget-dumps make desktop-run …
 desktop-run: desktop-jar
 	@pkill -f 'void-client-1\.2\.0\.jar' 2>/dev/null || true
 	@sleep 1
-	"$(JAVA_17)/bin/java" -jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR)
+	@if [ -n "$$VOID_WIDGET_DUMP" ]; then mkdir -p "$$VOID_WIDGET_DUMP"; fi
+	@if [ -n "$$VOID_WIDGET_DUMP" ]; then \
+		"$(JAVA_17)/bin/java" -Dvoid.widget.dump="$$VOID_WIDGET_DUMP" \
+			-jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR); \
+	else \
+		"$(JAVA_17)/bin/java" -jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR); \
+	fi
 
 # Run with the DeobProbe NDJSON harness enabled. Logs go to $(DEOB_LOG)
 # (default deob-log.ndjson). Use a hypothesis id and grep the log later:
@@ -101,11 +114,27 @@ desktop-log: desktop-jar
 desktop-clear-log:
 	rm -f "$(DEOB_LOG)"
 
+WIDGET_DUMP_DIR ?= widget-dumps
+
 component-lab:
 	python3 tools/component_lab.py
 
 component-lab-images:
 	python3 tools/component_lab.py --export-dir "$${OUT:-component-cards}"
+
+# Browse PNGs produced by WidgetDump (see VOID_WIDGET_DUMP / make widget-dump-request).
+widget-lab:
+	python3 tools/component_lab.py --widgets-dir "$(WIDGET_DUMP_DIR)" --port "$${PORT:-8767}"
+
+# Ask a running desktop client (with VOID_WIDGET_DUMP set) to dump open widgets now.
+widget-dump-request:
+	@mkdir -p "$(WIDGET_DUMP_DIR)"
+	@touch "$(WIDGET_DUMP_DIR)/REQUEST"
+	@echo "queued dump → $(WIDGET_DUMP_DIR)/REQUEST (watch desktop console for void-osrs widget-dump:)"
+
+# Build widget-map/ from latest (or DUMP=…) WidgetDump run — no clicks.
+widget-map:
+	python3 tools/widget_map_from_dump.py --latest
 
 # ── android ──────────────────────────────────────────────────────────────────
 

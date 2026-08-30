@@ -15,7 +15,8 @@ final class Component15
     int anInt4918;
     static int anInt4919 = 0;
     int anInt4920;
-    static FontGlyphCache aClass323_4921;
+    /** World-map Helvetica glyph cache at 11pt (smallest zoom ladder step). */
+    static FontGlyphCache helveticaGlyphs11;
     Component85 aClass221_4922;
     int anInt4923;
     int anInt4924;
@@ -27,7 +28,7 @@ final class Component15
     static int anInt4930 = 0;
 
     public static void method1109(byte i) {
-        aClass323_4921 = null;
+        helveticaGlyphs11 = null;
         if (i != -22) method1111(127, -73, -7, -77, -85, 79);
         aClass356_4915 = null;
     }

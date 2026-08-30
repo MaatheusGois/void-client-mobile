@@ -37,6 +37,15 @@ Menu build path that can inject dumps:
 `Component66.buildComponentMenu` → `JoystickAlias.injectItemMenu` (and similar).
 
 Click path for hit testing: `MobileKeyboard` / `ifPress` logs (`id=` = `packedId`).
+**Shift+left-click** any widget → `void-osrs widget-pick … iface=group:child … parents=…`
+(group/childId/sprite/contentType/size + container chain). Appends to `widget-map/picks.jsonl`.
+
+**Ctrl+Shift+click** the same → also dumps the whole IF group tree to console and
+`widget-map/group-<id>.txt` (containers `t0` + children). Use this to map an open
+interface from the view in one gesture.
+
+Identity is **never** a Java filename — it is `iface=group:child` (cache archive path).
+Known constants live in `MicrobotWidgets` once confirmed.
 
 Resolve child the same way CC_OP does:
 

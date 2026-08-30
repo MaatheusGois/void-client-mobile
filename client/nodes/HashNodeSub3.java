@@ -121,19 +121,19 @@ final class HashNodeSub3
         Component156.aClass262_3705 = null;
         DisplayModeManagerContainer229.clearBuffers();
         DisplayModeManagerContainer229.aClass262_1254.clear(127);
-        DebugPanic.aClass323_4754 = null;
-        Component39.aClass323_2252 = null;
+        DebugPanic.helveticaGlyphs22 = null;
+        Component39.helveticaGlyphs17 = null;
         VideoAdPlayer.aClass105_4643 = null;
-        Component15.aClass323_4921 = null;
-        Component218.aClass323_2333 = null;
-        NodeSub3.aClass323_6581 = null;
-        DisplayModeManagerContainer271.aClass323_521 = null;
+        Component15.helveticaGlyphs11 = null;
+        Component218.helveticaGlyphs19 = null;
+        NodeSub3.helveticaGlyphs26 = null;
+        DisplayModeManagerContainer271.helveticaGlyphs14 = null;
         DisplayModeManagerContainer229.aClass252_1246 = null;
-        WorldNameText.aClass323_8644 = null;
+        WorldNameText.helveticaGlyphs12 = null;
         Component377.anInt859 = -1;
         if (i <= -44) {
             ModelStore.anInt4609 = -1;
-            Component49.aClass323_4672 = null;
+            Component49.helveticaGlyphs30 = null;
             if (DisplayModeManagerContainer229.aClass153_1238 != null) {
                 DisplayModeManagerContainer229.aClass153_1238.method1219(7851);
                 DisplayModeManagerContainer229.aClass153_1238.method1220((byte) -100, 64, 128);

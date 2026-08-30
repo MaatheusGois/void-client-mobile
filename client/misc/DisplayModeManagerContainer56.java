@@ -99,17 +99,17 @@ final class DisplayModeManagerContainer56
             int i_21_ = 0;
             int i_22_ = 0;
             if (class42.aString597 != null) {
-                class323 = DisplayModeManagerContainer341.method1782(class42.anInt576, 10144);
+                class323 = DisplayModeManagerContainer341.selectMapLabelFont(class42.anInt576, 10144);
                 if (class323 != null) {
                     i_15_ = (AbstractGlTextureSub1.aClass143_8527.method1188(class42.aString597, null, GlToolkitSub3.aStringArray8019, (byte) 87, null));
                     i_17_ = (class348_sub21.anInt6855 - (class42.anInt568 * (DisplayModeManagerContainer229.anInt1268 + -DisplayModeManagerContainer229.anInt1262) / (DisplayModeManagerContainer229.anInt1277 - DisplayModeManagerContainer229.anInt1257)));
                     i_16_ = (class348_sub21.anInt6853 + ((-DisplayModeManagerContainer229.anInt1272 + DisplayModeManagerContainer229.anInt1276) * class42.anInt566 / (DisplayModeManagerContainer229.anInt1265 + -DisplayModeManagerContainer229.anInt1274)));
-                    if (class105 == null) i_17_ -= i_15_ * class323.method2560() / 2;
-                    else i_17_ -= ((class105.method980() >> 1) - -(i_15_ * class323.method2565()));
+                    if (class105 == null) i_17_ -= i_15_ * class323.getBaselineAscent() / 2;
+                    else i_17_ -= ((class105.method980() >> 1) - -(i_15_ * class323.getLineHeight()));
                     for (int i_23_ = 0; i_15_ > i_23_; i_23_++) {
                         String string = GlToolkitSub3.aStringArray8019[i_23_];
                         if (i_23_ < -1 + i_15_) string = string.substring(0, -4 + string.length());
-                        int i_24_ = class323.method2564(string);
+                        int i_24_ = class323.measureStringWidth(string);
                         if (i_18_ < i_24_) i_18_ = i_24_;
                     }
                     i_19_ = i_6_ + i_16_ + -(i_18_ / 2);
@@ -117,7 +117,7 @@ final class DisplayModeManagerContainer56
                     if (i_7_ > i_19_) i_7_ = i_19_;
                     i_21_ = i_17_ + i_5_;
                     if (i_20_ > i_8_) i_8_ = i_20_;
-                    i_22_ = i_5_ + (i_17_ + class323.method2565() * i_15_);
+                    i_22_ = i_5_ + (i_17_ + class323.getLineHeight() * i_15_);
                     if (i_9_ > i_21_) i_9_ = i_21_;
                     if (i_10_ < i_22_) i_10_ = i_22_;
                 }

@@ -34,7 +34,8 @@ abstract class DebugPanic implements Interface5 {
     static int anInt4751;
     static int anInt4752;
     static int anInt4753 = 0;
-    static FontGlyphCache aClass323_4754;
+        /** World-map Helvetica glyph cache at 22pt. */
+    static FontGlyphCache helveticaGlyphs22;
     private final int anInt4755;
     static int anInt4756;
     static int anInt4757;
@@ -93,7 +94,7 @@ abstract class DebugPanic implements Interface5 {
     }
 
     void method21(int i) {
-        if (i != 23315) aClass323_4754 = null;
+        if (i != 23315) helveticaGlyphs22 = null;
         anInt4749++;
         if (anInt4746 > 0) {
             this.aClass377_4759.method3969(anInt4747, anInt4746, 3089);
@@ -124,7 +125,7 @@ abstract class DebugPanic implements Interface5 {
 
     public static void method2124(int i) {
         aClass348_Sub16_Sub3_4743 = null;
-        aClass323_4754 = null;
+        helveticaGlyphs22 = null;
         friendWorldNames = null;
         if (i != 0) method2119(-1.1717526F, -45, -2.0738192F, 18, -0.4863547F);
     }

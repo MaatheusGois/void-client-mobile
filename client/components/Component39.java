@@ -11,7 +11,8 @@ final class Component39
     static DisplayModeManagerContainer57 aClass46_2249;
     static short aShort2250 = 205;
     static int anInt2251;
-    static FontGlyphCache aClass323_2252;
+        /** World-map Helvetica glyph cache at 17pt. */
+    static FontGlyphCache helveticaGlyphs17;
     static int anInt2253;
     /**
      * Developer-console purple overlay fade (0 → ~102).
@@ -28,7 +29,7 @@ final class Component39
         aClass114_2255 = null;
         aClass46_2249 = null;
         aClass114_2248 = null;
-        aClass323_2252 = null;
+        helveticaGlyphs17 = null;
     }
 
     static final boolean method1299(int i, int i_0_, int i_1_) {

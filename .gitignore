@@ -109,3 +109,8 @@ hs_err_pid*
 !/client/client.iml
 
 .gradle/
+
+# Local lab / dump artifacts
+widget-dumps/
+component-cards/
+deob-log*.ndjson
