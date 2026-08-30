@@ -488,7 +488,7 @@ public final class client extends Applet_Sub1 {
         ReferenceHolder.clearStatics(-112);
         DefinitionSub8.method3068(i + 13607);
         Component212.method2400((byte) 3);
-        Component349.method2415(61);
+        Component349.clearStatic(61);
         DisplayModeManagerContainer23.method860((byte) 44);
         Component289.method2490(4);
         NodeSub18.method2936((byte) -25);

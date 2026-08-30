@@ -115,7 +115,7 @@ final class Component349
     final boolean method2391(GraphicsToolkit var_ha, int i, int i_12_, int i_13_) {
         anInt10005++;
         if (i_13_ != 0) return false;
-        DisplayModeManagerContainer370 class64 = method2414(-1, var_ha, 131072);
+        DisplayModeManagerContainer370 class64 = getRenderable(-1, var_ha, 131072);
         if (class64 != null) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(this.x, this.anInt6382, this.y);
@@ -125,7 +125,7 @@ final class Component349
         return false;
     }
 
-    private final DisplayModeManagerContainer370 method2414(int i, GraphicsToolkit var_ha, int i_14_) {
+    private final DisplayModeManagerContainer370 getRenderable(int i, GraphicsToolkit var_ha, int i_14_) {
         if (i != -1) method2392(false);
         anInt10004++;
         if (this.aClass64_10028 != null && var_ha.method3667(this.aClass64_10028.ua(), i_14_) == 0) return this.aClass64_10028;
@@ -139,12 +139,12 @@ final class Component349
         if (i > -125) aShort10032 = (short) -95;
     }
 
-    public static void method2415(int i) {
+    public static void clearStatic(int i) {
         aClass348_Sub42_Sub17Array10010 = null;
         int i_15_ = 93 / ((i - -62) / 35);
     }
 
-    final int method2416(int i) {
+    final int getShaderId(int i) {
         if (i != 15) aByte10015 = (byte) 66;
         anInt10009++;
         if (this.aClass64_10028 != null) return this.aClass64_10028.ShaderImpl() / 4;
@@ -197,7 +197,7 @@ final class Component349
     }
 
     final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
-        if (aClass30_10025 == null) aClass30_10025 = (OggUrlStream.method2967(this.x, method2414(i + -8, var_ha, 0), this.y, this.anInt6382, 2));
+        if (aClass30_10025 == null) aClass30_10025 = (OggUrlStream.method2967(this.x, getRenderable(i + -8, var_ha, 0), this.y, this.anInt6382, 2));
         if (i != 7) return null;
         anInt10013++;
         return aClass30_10025;

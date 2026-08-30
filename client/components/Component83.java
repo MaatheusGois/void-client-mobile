@@ -64,7 +64,7 @@ final class Component83
             DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (class348_sub42_sub6.aClass318_Sub1_Sub3_Sub4_9538);
             if (class318_sub1_sub3_sub4.aBoolean10345) {
                 class348_sub42_sub6.unlink((byte) 76);
-                class318_sub1_sub3_sub4.method2466(false);
+                class318_sub1_sub3_sub4.unload(false);
             } else if (OpenGlShader.clientCycle >= (class318_sub1_sub3_sub4.anInt10349)) {
                 class318_sub1_sub3_sub4.method2470(NodeSub51.anInt7267, (byte) -16);
                 if (class318_sub1_sub3_sub4.aBoolean10345) class348_sub42_sub6.unlink((byte) 42);

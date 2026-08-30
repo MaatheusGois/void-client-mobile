@@ -941,7 +941,7 @@ class DisplayModeManagerContainer87
                 if (i_221_ == 0) {
                     if (this.aBoolean3109) this.anIntArrayArrayArray3122[0][i_214_ + i_216_][i + i_212_] = 0;
                     else if (i_219_ != 0) this.anIntArrayArrayArray3122[i_219_][i_214_ + i_216_][i + i_212_] = -960 + (this.anIntArrayArrayArray3122[-1 + i_219_][i_214_ + i_216_][i + i_212_]);
-                    else this.anIntArrayArrayArray3122[0][i_214_ + i_216_][i_212_ - -i] = (8 * -(DisplayModeManagerContainer104.method2462(-113, i_217_ + 932731, i_218_ + 556238)) << 2);
+                    else this.anIntArrayArrayArray3122[0][i_214_ + i_216_][i_212_ - -i] = (8 * -(DisplayModeManagerContainer104.generateTerrainHeight(-113, i_217_ + 932731, i_218_ + 556238)) << 2);
                     break;
                 }
                 if (i_221_ == 1) {

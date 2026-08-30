@@ -83,7 +83,7 @@ final class Component251
                                 Component349 class318_sub1_sub3_sub1_19_ = (new Component349(var_ha, class51, i_0_, i_2_, i_15_, i_14_, i_16_, this.aBoolean3109, i, i_9_ + (i + -1), i_5_, -1 + (i_8_ + i_5_), i_4_, i_7_, bool));
                                 class318_sub1_sub3 = class318_sub1_sub3_sub1_19_;
                                 class318_sub1_sub3_sub1 = class318_sub1_sub3_sub1_19_;
-                                i_18_ = class318_sub1_sub3_sub1_19_.method2416(15);
+                                i_18_ = class318_sub1_sub3_sub1_19_.getShaderId(15);
                             } else {
                                 i_18_ = 15;
                                 class318_sub1_sub3 = (new Component29(var_ha, class51, i_0_, i_2_, i_15_, i_14_, i_16_, this.aBoolean3109, i, i_9_ + (i + -1), i_5_, -1 + (i_5_ + i_8_), i_4_, i_7_, i_6_));

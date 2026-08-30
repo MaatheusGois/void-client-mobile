@@ -23,7 +23,7 @@ final class Component353
     static final void method1434(int i) {
         anInt2573++;
         for (RenderableSub6 class318_sub6 = (RenderableSub6) InputStream_Sub2.aClass243_83.method1875(60); class318_sub6 != null; class318_sub6 = ((RenderableSub6) InputStream_Sub2.aClass243_83.method1875(60)))
-            DisplayModeManagerContainer104.method2461(class318_sub6, true);
+            DisplayModeManagerContainer104.clearSub6(class318_sub6, true);
         int i_0_;
         int i_1_;
         if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) {

@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer104
 
     final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10352++;
-        DisplayModeManagerContainer370 class64 = method2465(var_ha, anInt10355, (anInt10334 == 0 ? 0 : 5) | 0x800, (byte) -82);
+        DisplayModeManagerContainer370 class64 = buildRenderable(var_ha, anInt10355, (anInt10334 == 0 ? 0 : 5) | 0x800, (byte) -82);
         if (class64 == null) return null;
         if (anInt10334 != 0) class64.a(anInt10334 * 2048);
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
@@ -75,7 +75,7 @@ final class DisplayModeManagerContainer104
         return anInt10331;
     }
 
-    static final void method2461(RenderableSub6 class318_sub6, boolean bool) {
+    static final void clearSub6(RenderableSub6 class318_sub6, boolean bool) {
         if (bool != true) aClass46_10336 = null;
         class318_sub6.aClass318_Sub1_Sub3_Sub3_6431 = null;
         anInt10361++;
@@ -106,7 +106,7 @@ final class DisplayModeManagerContainer104
         throw new IllegalStateException();
     }
 
-    static final int method2462(int i, int i_3_, int i_4_) {
+    static final int generateTerrainHeight(int i, int i_3_, int i_4_) {
         anInt10351++;
         int i_5_ = (Component281.method2278(4, 91923 + i_4_, (byte) 120, i_3_ + 45365) - 128 + ((Component281.method2278(2, 37821 + i_4_, (byte) 122, 10294 + i_3_) - 128 >> 1) + (-128 + Component281.method2278(1, i_4_, (byte) 120, i_3_) >> 2)));
         i_5_ = (int) (0.3 * (double) i_5_) + 35;
@@ -150,7 +150,7 @@ final class DisplayModeManagerContainer104
         return frame;
     }
 
-    static final void method2464(byte i, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, int i_14_, d var_d) {
+    static final void loadStatic(byte i, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, int i_14_, d var_d) {
         do {
             try {
                 anInt10357++;
@@ -175,7 +175,7 @@ final class DisplayModeManagerContainer104
                     Component361.anInt370 = (int) ((float) (i_12_ * 2) / DisplayModeManagerContainer229.aFloat1247);
                     DisplayModeManagerContainer229.setWorldBounds(i_18_ + DisplayModeManagerContainer229.anInt1266, i_19_ + DisplayModeManagerContainer229.anInt1263, i_20_ - -DisplayModeManagerContainer229.anInt1266, DisplayModeManagerContainer229.anInt1263 + i_21_, i_11_, i_14_, i_12_ + i_11_, i_13_ + i_14_ + 1);
                     DisplayModeManagerContainer229.computeTransform(var_ha);
-                    if (i != -7) method2462(63, -7, -14);
+                    if (i != -7) generateTerrainHeight(63, -7, -14);
                     NodeList class262 = DisplayModeManagerContainer229.getRenderList(var_ha);
                     DisplayModeManagerContainer74.method2312(-13084, 0, class262, 0, var_ha);
                     if (WaterShader.anInt7379 > 0) {
@@ -204,7 +204,7 @@ final class DisplayModeManagerContainer104
         } while (false);
     }
 
-    private final DisplayModeManagerContainer370 method2465(GraphicsToolkit var_ha, int i, int i_26_, byte i_27_) {
+    private final DisplayModeManagerContainer370 buildRenderable(GraphicsToolkit var_ha, int i, int i_26_, byte i_27_) {
         anInt10353++;
         if (i_27_ != -82) return null;
         Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 122, i);
@@ -214,7 +214,7 @@ final class DisplayModeManagerContainer104
         return class368.method3565(0, -1, this.anInt6382, i_26_, true, var_ha, -1, this.x, -129, RunescapeInfo.aClass87_191, var_s_28_, this.y, var_s);
     }
 
-    final void method2466(boolean bool) {
+    final void unload(boolean bool) {
         if (bool == false) {
             if (aClass318_Sub10_10341 != null) aClass318_Sub10_10341.method2534();
             anInt10359++;
@@ -268,7 +268,7 @@ final class DisplayModeManagerContainer104
     final void method2387(GraphicsToolkit var_ha, int i) {
         if (i >= -125) anInt10331 = 38;
         anInt10354++;
-        DisplayModeManagerContainer370 class64 = method2465(var_ha, anInt10355, 0, (byte) -82);
+        DisplayModeManagerContainer370 class64 = buildRenderable(var_ha, anInt10355, 0, (byte) -82);
         if (class64 != null) {
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(this.x, this.anInt6382, this.y);
