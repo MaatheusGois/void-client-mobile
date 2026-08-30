@@ -97,6 +97,17 @@ final class SceneStore {
             if (o.name != null) out.append(",\"label\":\"").append(escape(o.name)).append("\"");
             out.append('}');
         }
+        out.append("],\"removals\":[");
+        first = true;
+        for (SceneRemoval r : scene.removals()) {
+            if (!first) out.append(',');
+            first = false;
+            out.append("{\"objectId\":").append(r.objectId)
+                    .append(",\"x\":").append(r.x).append(",\"y\":").append(r.y)
+                    .append(",\"plane\":").append(r.plane)
+                    .append(",\"rotation\":").append(r.rotation)
+                    .append(",\"shape\":").append(r.shape).append('}');
+        }
         return out.append("]}").toString();
     }
 
@@ -107,9 +118,10 @@ final class SceneStore {
             Scene scene = new Scene(string(json, "name"));
             scene.region = integer(json, "region");
             int start = json.indexOf("\"objects\":[");
-            int end = json.lastIndexOf("]}");
-            if (start < 0 || end < start) throw new IOException("invalid objects array");
-            String body = json.substring(start + 11, end);
+            if (start < 0) throw new IOException("invalid objects array");
+            int objectsEnd = findMatchingArrayEnd(json, start + 10);
+            if (objectsEnd < 0) throw new IOException("invalid objects array");
+            String body = json.substring(start + 11, objectsEnd);
             Matcher matcher = OBJECT.matcher(body);
             while (matcher.find()) {
                 String item = matcher.group(1);
@@ -122,11 +134,40 @@ final class SceneStore {
                 object.name = optionalString(item, "label");
                 scene.add(object);
             }
+            int remStart = json.indexOf("\"removals\":[");
+            if (remStart >= 0) {
+                int remEnd = findMatchingArrayEnd(json, remStart + 11);
+                if (remEnd > remStart) {
+                    String remBody = json.substring(remStart + 12, remEnd);
+                    Matcher rm = OBJECT.matcher(remBody);
+                    while (rm.find()) {
+                        String item = rm.group(1);
+                        int shape = item.contains("\"shape\"") ? integer(item, "shape") : 10;
+                        int rot = item.contains("\"rotation\"") ? integer(item, "rotation") : 0;
+                        scene.recordRemoval(integer(item, "objectId"), integer(item, "x"),
+                                integer(item, "y"), integer(item, "plane"), rot, shape);
+                    }
+                }
+            }
             scene.validate();
             return scene;
         } catch (IllegalArgumentException e) {
             throw new IOException("invalid scene: " + e.getMessage());
         }
+    }
+
+    /** Index of the {@code ]} that closes the array whose {@code [} is at {@code openBracket}. */
+    private static int findMatchingArrayEnd(String json, int openBracket) {
+        int depth = 0;
+        for (int i = openBracket; i < json.length(); i++) {
+            char c = json.charAt(i);
+            if (c == '[') depth++;
+            else if (c == ']') {
+                depth--;
+                if (depth == 0) return i;
+            }
+        }
+        return -1;
     }
 
     private static int integer(String s, String key) { return (int) decimal(s, key); }

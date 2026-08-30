@@ -27,6 +27,26 @@ final class SceneEditor {
         nextId = id + 1;
         return object;
     }
+
+    /**
+     * Own a stock LocType: queue a world removal at the tile and add an editor
+     * object in one undo frame (so undo restores both).
+     */
+    SceneObject claimStock(int objectId, int x, int y, int z, int plane, int rotation, int shape) {
+        final long id = nextId;
+        final SceneObject object = new SceneObject(id, objectId, x, y, z, plane);
+        object.rotation = rotation & 3;
+        final int rot = rotation & 3;
+        final int shp = shape;
+        change(new Runnable() {
+            public void run() {
+                scene.recordRemoval(objectId, x, y, plane, rot, shp);
+                scene.add(object);
+            }
+        });
+        nextId = id + 1;
+        return object;
+    }
     void remove(final long id) {
         change(new Runnable() { public void run() {
             if (scene.remove(id) == null) throw new IllegalArgumentException("object not found: " + id);

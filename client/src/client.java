@@ -1811,6 +1811,7 @@ public final class client extends Applet_Sub1 {
             // Consume overlay clicks before menu/walk/iface handlers see them.
             if (Loader.microbotEnabled) MicrobotPanel.pollInput();
             SceneEditorUi.pollInput();
+            SceneEditorHost.tick();
             // Purple console band: eat presses so they don't click-through to the game.
             BuildInfo.pollConsoleInput();
             if (HashNodeSub16Sub2.isDevConsoleOpen(true)) PauseTimer.processDevConsoleInput(125);

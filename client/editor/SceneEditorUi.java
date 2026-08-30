@@ -1,11 +1,12 @@
-import java.util.Collection;
-
 /**
- * In-world scene editor HUD matching the local-object mockup:
- * asset palette, click-to-place, select, drag-to-move, add/remove action strip.
+ * In-world scene editor HUD: asset palette, click-to-place, select, drag-to-move.
+ * Right-click Move / Remove / Rotate live in {@link SceneEditorMenu}.
  * <p>
  * Tile under cursor is read from the existing Walk-here menu tip (opcode 19)
  * built each frame by {@link ColoredText#method1823} — no custom raycast.
+ * <p>
+ * While the game right-click menu is open ({@link Component364#aBoolean8335}),
+ * world clicks are <b>not</b> eaten so Move/Remove/Rotate can fire.
  */
 final class SceneEditorUi {
     /** Curated LocType palette (RS634-ish). Ids are adjustable via console. */
@@ -31,8 +32,6 @@ final class SceneEditorUi {
     private static final int BG = 0xC0121218;
     private static final int ACCENT = 0xFF00E5FF;
     private static final int SELECT = 0xFFFF00AA;
-    private static final int ADD_COL = 0xFF66FF66;
-    private static final int REM_COL = 0xFFFF6666;
     private static final int SHADOW = 0xFF000000;
     private static final int GHOST = 0x88AAAAAA;
     private static final int DRAG_LINE = 0xFFFF8800;
@@ -40,6 +39,7 @@ final class SceneEditorUi {
     private static int selectedAsset;
     private static long selectedId = -1L;
     private static boolean dragging;
+    private static boolean moveArmed;
     private static int dragHoverAbsX = -1;
     private static int dragHoverAbsY = -1;
     private static int hoverAbsX = -1;
@@ -66,7 +66,8 @@ final class SceneEditorUi {
             announced = true;
             try {
                 ShaderProgramSub2.addChatMessage("", 5, (byte) -100, 0,
-                        "[System] Scene editor active. Pick an asset, click to place, drag to move.",
+                        "[System] Scene editor ON. Right-click → Move / Remove / Rotate. "
+                                + "Ctrl+click = claim+drag. Objects stay when editor turns OFF.",
                         "", "");
             } catch (Throwable ignored) {
                 /* chat may be unavailable mid-login */
@@ -77,7 +78,27 @@ final class SceneEditorUi {
     static void onEditorDisabled() {
         selectedId = -1L;
         dragging = false;
+        moveArmed = false;
         announced = false;
+    }
+
+    /** Right-click Move / Ctrl+click — select and arm destination click. */
+    static void beginMove(long id) {
+        selectedId = id;
+        moveArmed = true;
+        dragging = false;
+    }
+
+    static void select(long id) {
+        selectedId = id;
+        moveArmed = false;
+        dragging = false;
+    }
+
+    static void clearSelection() {
+        selectedId = -1L;
+        moveArmed = false;
+        dragging = false;
     }
 
     /** Called from the draw loop after Microbot HUD. */
@@ -96,7 +117,6 @@ final class SceneEditorUi {
             }
             refreshHoverTile();
             drawPalette(toolkit, font);
-            drawActionMenu(toolkit, font);
             drawWorldOverlay(toolkit, font);
             drawToolBanner(toolkit, font);
         } catch (Throwable t) {
@@ -105,8 +125,8 @@ final class SceneEditorUi {
     }
 
     /**
-     * Eat world / palette clicks while editor mode is on.
-     * Must run with {@link MicrobotPanel#pollInput()} before walk/menu consume.
+     * Eat palette / world clicks while editor mode is on — except when the
+     * right-click menu is open, so Move/Remove/Rotate receive the click.
      */
     static void pollInput() {
         mouseOverUi = false;
@@ -119,9 +139,14 @@ final class SceneEditorUi {
         try {
             int mx = AbstractGlTextureSub4.mouseHandler.getCursorX(true);
             int my = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 100);
-            mouseOverUi = hitPalette(mx, my) || hitActionMenu(mx, my);
+            mouseOverUi = hitPalette(mx, my);
 
             refreshHoverTile();
+
+            // Let the open context menu consume left-clicks (Move/Remove/Rotate).
+            if (Component364.aBoolean8335) {
+                return;
+            }
 
             Node node = Component327.aClass262_8744.first(4);
             while (node != null) {
@@ -135,15 +160,11 @@ final class SceneEditorUi {
                         if (hitPalette(cx, cy)) {
                             onPaletteClick(cx, cy);
                             click.unlink((byte) 97);
-                        } else if (hitActionMenu(cx, cy)) {
-                            onActionClick(cx, cy);
-                            click.unlink((byte) 97);
                         } else if (!BuildInfo.isMouseOverConsole() && !MicrobotPanel.contains(cx, cy)) {
                             onWorldPress(cx, cy);
                             click.unlink((byte) 97);
                         }
                     } else if (type == 3) {
-                        // left mouse release — finish drag
                         if (dragging) {
                             onWorldRelease();
                             click.unlink((byte) 97);
@@ -163,6 +184,31 @@ final class SceneEditorUi {
     }
 
     private static void onWorldPress(int cx, int cy) {
+        boolean ctrl = isCtrlDown();
+        if (ctrl) {
+            MenuEntry obj = SceneEditorMenu.findObjectTip();
+            if (obj != null) {
+                int objectId = SceneEditorMenu.objectIdOf(obj);
+                int localX = obj.param0;
+                int localY = obj.param1;
+                int absX = localX + NodeBaseSub2.regionTileX;
+                int absY = localY + Component330.regionTileY;
+                int plane = MicrobotWidgets.localPlane();
+                int rot = SceneEditorMenu.decodeRotation(obj.identifier);
+                try {
+                    SceneObject claimed = SceneEditorHost.claimAt(objectId, absX, absY, plane, rot);
+                    selectedId = claimed.id;
+                    dragging = true;
+                    moveArmed = false;
+                    dragHoverAbsX = absX;
+                    dragHoverAbsY = absY;
+                } catch (Throwable t) {
+                    System.out.println("scene-editor claim: " + t.getMessage());
+                }
+                return;
+            }
+        }
+
         int[] tile = tipTileAbs();
         if (tile == null) {
             return;
@@ -171,12 +217,37 @@ final class SceneEditorUi {
         if (hit != null) {
             selectedId = hit.id;
             dragging = true;
+            moveArmed = false;
             dragHoverAbsX = tile[0];
             dragHoverAbsY = tile[1];
             return;
         }
-        // Empty tile → place current asset
+        // Move armed via right-click → click destination tile
+        if (moveArmed && selectedId >= 0) {
+            try {
+                SceneObject o = SceneEditorHost.editor().scene().get(selectedId);
+                if (o != null) {
+                    SceneEditorHost.editor().move(selectedId, tile[0], tile[1], o.z);
+                    SceneEditorHost.resync();
+                    SceneEditorHost.persistQuiet();
+                    chat("Moved to " + tile[0] + "," + tile[1]);
+                }
+            } catch (Throwable t) {
+                System.out.println("scene-editor move-to: " + t.getMessage());
+            }
+            moveArmed = false;
+            return;
+        }
         placeAt(tile[0], tile[1], tile[2]);
+    }
+
+    private static boolean isCtrlDown() {
+        try {
+            return Component280.aClass346_2449 != null
+                    && Component280.aClass346_2449.isKeyDown(82, -125);
+        } catch (Throwable t) {
+            return false;
+        }
     }
 
     private static void onWorldRelease() {
@@ -190,6 +261,7 @@ final class SceneEditorUi {
                 if (o != null && (o.x != dragHoverAbsX || o.y != dragHoverAbsY)) {
                     SceneEditorHost.editor().move(selectedId, dragHoverAbsX, dragHoverAbsY, o.z);
                     SceneEditorHost.resync();
+                    SceneEditorHost.persistQuiet();
                 }
             } catch (Throwable t) {
                 System.out.println("scene-editor move: " + t.getMessage());
@@ -204,22 +276,9 @@ final class SceneEditorUi {
             SceneObject added = SceneEditorHost.editor().add(asset.objectId, absX, absY, 0, plane);
             selectedId = added.id;
             SceneEditorHost.resync();
+            SceneEditorHost.persistQuiet();
         } catch (Throwable t) {
             System.out.println("scene-editor place: " + t.getMessage());
-        }
-    }
-
-    private static void removeSelected() {
-        if (selectedId < 0) {
-            return;
-        }
-        try {
-            SceneEditorHost.editor().remove(selectedId);
-            selectedId = -1L;
-            dragging = false;
-            SceneEditorHost.resync();
-        } catch (Throwable t) {
-            System.out.println("scene-editor remove: " + t.getMessage());
         }
     }
 
@@ -239,7 +298,6 @@ final class SceneEditorUi {
         return best;
     }
 
-    /** Absolute tile under cursor from Walk-here tip, or null. */
     private static int[] tipTileAbs() {
         MenuEntry walk = findWalkTip();
         if (walk == null) {
@@ -353,58 +411,11 @@ final class SceneEditorUi {
         }
     }
 
-    private static int actionMenuX() {
-        return Math.max(8, SocketConnector.canvasWidth / 2 - 70);
-    }
-
-    private static int actionMenuY() {
-        return Math.max(8, NpcNode.canvasHeight - 90);
-    }
-
-    private static boolean hitActionMenu(int x, int y) {
-        int ax = actionMenuX();
-        int ay = actionMenuY();
-        return x >= ax && x < ax + 140 && y >= ay && y < ay + 54;
-    }
-
-    private static void onActionClick(int x, int y) {
-        int relY = y - actionMenuY();
-        if (relY < 28) {
-            int[] tile = tipTileAbs();
-            if (tile != null) {
-                placeAt(tile[0], tile[1], tile[2]);
-            } else {
-                try {
-                    SceneEditorHost.spawnAtPlayer(currentAsset().objectId);
-                    SceneObject last = null;
-                    for (SceneObject o : SceneEditorHost.editor().scene().objects()) {
-                        last = o;
-                    }
-                    if (last != null) {
-                        selectedId = last.id;
-                    }
-                } catch (Throwable t) {
-                    System.out.println("scene-editor add: " + t.getMessage());
-                }
-            }
-        } else {
-            removeSelected();
-        }
-    }
-
-    private static void drawActionMenu(GraphicsToolkit toolkit, BitmapFont font) {
-        int ax = actionMenuX();
-        int ay = actionMenuY();
-        toolkit.fillRect2D(ax, ay, 140, 54, BG, 1);
-        toolkit.fillRect2D(ax, ay, 140, 1, ACCENT, 1);
-        font.drawText("action menu", ACCENT, ay + 12, ax + 8, SHADOW, -110);
-        font.drawText("[+] Add " + shortLabel(currentAsset().label), ADD_COL, ay + 28, ax + 8, SHADOW, -110);
-        font.drawText("[-] Remove", REM_COL, ay + 44, ax + 8, SHADOW, -110);
-    }
-
     private static void drawToolBanner(GraphicsToolkit toolkit, BitmapFont font) {
         Asset a = currentAsset();
-        String text = a.label + " Tool Active";
+        String text = moveArmed
+                ? "Move: click destination tile"
+                : (a.label + " Tool Active");
         font.drawText(text, SELECT, 18, 160, SHADOW, -110);
     }
 
@@ -416,7 +427,7 @@ final class SceneEditorUi {
         if (dragging && dragHoverAbsX >= 0 && selected != null) {
             projectAndBox(toolkit, dragHoverAbsX, dragHoverAbsY, selected.plane, GHOST, 20);
             drawDragLine(toolkit, selected.x, selected.y, selected.plane, dragHoverAbsX, dragHoverAbsY);
-        } else if (hoverAbsX >= 0 && selectedId < 0) {
+        } else if (hoverAbsX >= 0 && selectedId < 0 && !moveArmed) {
             projectAndBox(toolkit, hoverAbsX, hoverAbsY, MicrobotWidgets.localPlane(), 0x6600E5FF, 16);
         }
     }
@@ -454,7 +465,6 @@ final class SceneEditorUi {
             if (sx0 < 0 || sy0 < 0 || sx1 < 0 || sy1 < 0) {
                 return;
             }
-            // Approximate line with small rects along the segment.
             int steps = Math.max(Math.abs(sx1 - sx0), Math.abs(sy1 - sy0)) / 4;
             if (steps < 1) {
                 steps = 1;
@@ -469,8 +479,13 @@ final class SceneEditorUi {
         }
     }
 
-    private static String shortLabel(String s) {
-        return s.length() > 8 ? s.substring(0, 8) : s;
+    private static void chat(String msg) {
+        try {
+            ShaderProgramSub2.addChatMessage("", 5, (byte) -100, 0,
+                    "<col=00e5ff>[Editor] " + msg + "</col>", "", "");
+        } catch (Throwable ignored) {
+            /* empty */
+        }
     }
 
     static final class Asset {
