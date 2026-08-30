@@ -37,6 +37,7 @@ public final class ProtocolInfo {
             try {
                 int parsed = Integer.parseInt(property);
                 if (parsed == REVISION_634 || parsed == REVISION_667) {
+                    selectedRevision = parsed;
                     return parsed;
                 }
             } catch (NumberFormatException ignored) {
@@ -45,6 +46,7 @@ public final class ProtocolInfo {
             warn("unsupported " + REVISION_PROPERTY + "='" + property
                     + "'; using " + DEFAULT_REVISION);
         }
+        selectedRevision = DEFAULT_REVISION;
         return DEFAULT_REVISION;
     }
 

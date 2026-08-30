@@ -193,8 +193,11 @@ public class Loader extends Applet {
         aProperties1.put("sskey", "");
         aProperties1.put("force64mb", "false");
         aProperties1.put("worldflags", "8");
-        aProperties1.put("revision", Integer.toString(ProtocolInfo.revision()));
-        aProperties1.put("protocol", Integer.toString(ProtocolInfo.revision()));
+        // Keep both names synchronized: the legacy applet and the 667 loader
+        // read different revision parameter names during the staged migration.
+        String revision = Integer.toString(ProtocolInfo.revision());
+        aProperties1.put("revision", revision);
+        aProperties1.put("protocol", revision);
         aProperties1.put("port", Integer.toString(port));
     }
 
