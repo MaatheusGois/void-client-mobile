@@ -40,6 +40,10 @@ final class Player extends DisplayModeManagerContainer58 {
     int anInt10542;
     static int anInt10543;
     String username;
+
+    boolean isFemaleVoice() {
+        return aByte10538 == 1;
+    }
     static int anInt10545;
     static int anInt10546;
     static int anInt10547;

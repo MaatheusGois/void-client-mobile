@@ -42,6 +42,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.speech.tts.TextToSpeech;
+import java.util.Locale;
 
 import java.util.List;
 
@@ -51,6 +53,7 @@ import world.gregs.voidosrs.AffiliationDisclaimer;
 import world.gregs.voidosrs.ServerPrefs;
 
 public class MainActivity extends Activity {
+    private TextToSpeech dialogueTts;
     private volatile boolean clientStarted;
     private TextView debugHud;
     private static volatile MainActivity instance;
@@ -174,6 +177,28 @@ public class MainActivity extends Activity {
         hideSystemUi();
         requestAudioFocus();
         instance = this;
+        dialogueTts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    int language = dialogueTts.setLanguage(Locale.US);
+                    if (language == TextToSpeech.LANG_MISSING_DATA
+                            || language == TextToSpeech.LANG_NOT_SUPPORTED) {
+                        Log.w("void-osrs", "void-tts: en-US voice data unavailable");
+                    }
+                }
+            }
+        });
+        AwtHost.setSpeechHandler(new AwtHost.SpeechHandler() {
+            public void speak(String text, boolean female) {
+                if (dialogueTts == null) return;
+                dialogueTts.setPitch(female ? 1.15f : 0.85f);
+                dialogueTts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "void-dialogue");
+            }
+            public void stop() {
+                if (dialogueTts != null) dialogueTts.stop();
+            }
+        });
         installLogBridge();
         // On-screen debug HUD off — still mirrors to logcat via installLogBridge.
         // debugHud = buildDebugHud();
@@ -208,6 +233,17 @@ public class MainActivity extends Activity {
         game.requestFocus();
         maybeShowDisclaimerThenContinue();
         pollLoginButton();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AwtHost.stopSpeech();
+        AwtHost.setSpeechHandler(null);
+        if (dialogueTts != null) {
+            dialogueTts.shutdown();
+            dialogueTts = null;
+        }
     }
 
     /**

@@ -949,6 +949,7 @@ public final class client extends Applet_Sub1 {
                 SoftwareFallbackShader.method3553(false, (byte) 102, 0);
             }
         } else processGameTick(123);
+        DialogueTts.pulse();
     }
 
     public final void init() {
