@@ -31,7 +31,8 @@ final class DisplayModeManagerContainer389
         }
     }
 
-    static final void method243(int i) {
+    /** Persist the serialized preferences buffer to the cache preferences file. */
+    static final void savePreferences(int i) {
         anInt8620++;
         RandomAccessFileReader class234 = null;
         try {

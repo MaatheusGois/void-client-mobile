@@ -63,9 +63,9 @@ final class Component201
             if (OutputStream_Sub2.aClass105_106 != null && Component221.aClass105_1800 != null) {
                 int i_8_ = ((i - 2 * Component221.aClass105_1800.method971()) / OutputStream_Sub2.aClass105_106.method971());
                 for (int i_9_ = 0; i_9_ < i_8_; i_9_++)
-                    OutputStream_Sub2.aClass105_106.method974((Component221.aClass105_1800.method971() + i_4_ + (OutputStream_Sub2.aClass105_106.method971() * i_9_)), i_5_);
-                Component221.aClass105_1800.method974(i_4_, i_5_);
-                NodeSub5.aClass105_6627.method974((-NodeSub5.aClass105_6627.method971() + i_4_ - -i), i_5_);
+                    OutputStream_Sub2.aClass105_106.drawAt((Component221.aClass105_1800.method971() + i_4_ + (OutputStream_Sub2.aClass105_106.method971() * i_9_)), i_5_);
+                Component221.aClass105_1800.drawAt(i_4_, i_5_);
+                NodeSub5.aClass105_6627.drawAt((-NodeSub5.aClass105_6627.method971() + i_4_ - -i), i_5_);
             }
             if (bool == false) {
                 NodeList.aClass324_3326.drawText(string, (StringDefinition.anInt9586) | ~0xffffff, 14 + i_5_, 3 + i_4_, -1, -127);

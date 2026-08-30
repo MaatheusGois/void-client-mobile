@@ -46,13 +46,13 @@ final class Component258
 
     final void method1174(byte i) {
         synchronized (aClass60_1963) {
-            aClass60_1963.method587(-87);
+            aClass60_1963.purgeSoftReferences(-87);
         }
         anInt1969++;
         synchronized (this.aClass60_1976) {
             if (i > -89) {
                 /* empty */
-            } else this.aClass60_1976.method587(-79);
+            } else this.aClass60_1976.purgeSoftReferences(-79);
         }
     }
 

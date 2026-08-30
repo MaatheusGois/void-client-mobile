@@ -36,8 +36,8 @@ final class RenderableSub2
                         } else if (Component71.method1813(8806, (class348_sub42_sub12.opcode))) {
                             Object object = null;
                             Component44 class51;
-                            if (class348_sub42_sub12.opcode != 1001) class51 = (GradientPreset.aClass263_9195.method2005(0, (int) (0x7fffffffL & ((class348_sub42_sub12.identifier) >>> 32))));
-                            else class51 = (GradientPreset.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.identifier)));
+                            if (class348_sub42_sub12.opcode != 1001) class51 = (GradientPreset.aClass263_9195.getDefinition(0, (int) (0x7fffffffL & ((class348_sub42_sub12.identifier) >>> 32))));
+                            else class51 = (GradientPreset.aClass263_9195.getDefinition(0, (int) (class348_sub42_sub12.identifier)));
                             if (class51.anIntArray945 != null) class51 = (class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47));
                             if (class51 != null) is = class51.anIntArray917;
                         }
@@ -47,7 +47,7 @@ final class RenderableSub2
                 if (is != null) string += ImageTagText.method1273(is, true);
                 NodeList.aClass324_3326.method2567(i_1_, string, (byte) 116, i_4_, 0, i_7_ - -3, DisplayModeManagerContainer196.aClass105Array4234, Component143.anIntArray2330);
                 if (!class348_sub42_sub12.aBoolean9597) break;
-                ColoredText.aClass105_6097.method974(Component27.aClass143_4962.stringWidth(true, string) + (i_7_ - -5), -12 + i_1_);
+                ColoredText.aClass105_6097.drawAt(Component27.aClass143_4962.stringWidth(true, string) + (i_7_ - -5), -12 + i_1_);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("vo.C(" + i + ',' + i_0_ + ',' + i_1_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + (class348_sub42_sub12 != null ? "{...}" : "null") + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ')'));
             }

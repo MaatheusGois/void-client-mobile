@@ -66,8 +66,8 @@ final class OutputStream_Sub2 extends OutputStream {
                 } else if (Component71.method1813(8806, (class348_sub42_sub12.opcode))) {
                     Object object = null;
                     Component44 class51;
-                    if ((class348_sub42_sub12.opcode) == 1001) class51 = (GradientPreset.aClass263_9195.method2005(0, (int) (class348_sub42_sub12.identifier)));
-                    else class51 = (GradientPreset.aClass263_9195.method2005(0, (int) (0x7fffffffL & (class348_sub42_sub12.identifier) >>> 32)));
+                    if ((class348_sub42_sub12.opcode) == 1001) class51 = (GradientPreset.aClass263_9195.getDefinition(0, (int) (class348_sub42_sub12.identifier)));
+                    else class51 = (GradientPreset.aClass263_9195.getDefinition(0, (int) (0x7fffffffL & (class348_sub42_sub12.identifier) >>> 32)));
                     if (class51.anIntArray945 != null) class51 = class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47);
                     if (class51 != null) is = class51.anIntArray917;
                 }

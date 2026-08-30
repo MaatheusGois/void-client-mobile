@@ -33,12 +33,12 @@ final class Component144
 
     final void method2542(int i) {
         synchronized (aClass60_3989) {
-            aClass60_3989.method587(-126);
+            aClass60_3989.purgeSoftReferences(-126);
         }
         if (i >= -99) aDouble3980 = 0.5896741197263589;
         anInt3986++;
         synchronized (this.aClass60_3990) {
-            this.aClass60_3990.method587(-106);
+            this.aClass60_3990.purgeSoftReferences(-106);
         }
     }
 

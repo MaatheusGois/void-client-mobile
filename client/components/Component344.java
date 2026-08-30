@@ -80,12 +80,12 @@ final class Component344 {
 
     final void method838(int i) {
         synchronized (aClass60_1487) {
-            aClass60_1487.method587(-121);
+            aClass60_1487.purgeSoftReferences(-121);
         }
         if (i != 7) method838(-111);
         anInt1489++;
         synchronized (aClass60_1491) {
-            aClass60_1491.method587(-127);
+            aClass60_1491.purgeSoftReferences(-127);
         }
     }
 

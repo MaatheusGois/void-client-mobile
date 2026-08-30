@@ -47,19 +47,19 @@ final class Component255
 
     static final void method535(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, byte i_12_) {
         anInt1062++;
-        int i_13_ = LogicError.method831(PauseTimer.anInt513, i_11_, Component72.anInt1910, 111);
-        int i_14_ = LogicError.method831(PauseTimer.anInt513, i_7_, Component72.anInt1910, -104);
+        int i_13_ = LogicError.clamp(PauseTimer.anInt513, i_11_, Component72.anInt1910, 111);
+        int i_14_ = LogicError.clamp(PauseTimer.anInt513, i_7_, Component72.anInt1910, -104);
         if (i_12_ >= -62) method535(80, -63, -10, 41, -65, 39, (byte) -89);
-        int i_15_ = LogicError.method831(Component22.anInt1745, i, Component27.anInt4960, -79);
-        int i_16_ = LogicError.method831(Component22.anInt1745, i_9_, Component27.anInt4960, 92);
-        int i_17_ = LogicError.method831(PauseTimer.anInt513, i_11_ + i_8_, Component72.anInt1910, 32);
-        int i_18_ = LogicError.method831(PauseTimer.anInt513, -i_8_ + i_7_, Component72.anInt1910, 41);
+        int i_15_ = LogicError.clamp(Component22.anInt1745, i, Component27.anInt4960, -79);
+        int i_16_ = LogicError.clamp(Component22.anInt1745, i_9_, Component27.anInt4960, 92);
+        int i_17_ = LogicError.clamp(PauseTimer.anInt513, i_11_ + i_8_, Component72.anInt1910, 32);
+        int i_18_ = LogicError.clamp(PauseTimer.anInt513, -i_8_ + i_7_, Component72.anInt1910, 41);
         for (int i_19_ = i_13_; i_17_ > i_19_; i_19_++)
             MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_19_], i_15_, i_10_);
         for (int i_20_ = i_14_; i_18_ < i_20_; i_20_--)
             MenuOpener.fillInts(-27, i_16_, DisplayModeManagerContainer167.anIntArrayArray255[i_20_], i_15_, i_10_);
-        int i_21_ = LogicError.method831(Component22.anInt1745, i_8_ + i, Component27.anInt4960, 121);
-        int i_22_ = LogicError.method831(Component22.anInt1745, -i_8_ + i_9_, Component27.anInt4960, -101);
+        int i_21_ = LogicError.clamp(Component22.anInt1745, i_8_ + i, Component27.anInt4960, 121);
+        int i_22_ = LogicError.clamp(Component22.anInt1745, -i_8_ + i_9_, Component27.anInt4960, -101);
         for (int i_23_ = i_17_; i_23_ <= i_18_; i_23_++) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_23_];
             MenuOpener.fillInts(-27, i_21_, is, i_15_, i_10_);

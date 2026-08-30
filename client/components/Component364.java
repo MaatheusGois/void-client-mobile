@@ -218,8 +218,8 @@ class Component364
             int i_30_ = aClass105_8342.method980();
             int i_31_ = aClass105_8339.method966();
             int i_32_ = aClass105_8339.method980();
-            aClass105_8342.method974(i, i_28_ - -(((this.aClass369_4635.anInt4963) + -i_30_) / 2));
-            aClass105_8339.method974((this.aClass369_4635.anInt4971 + (i + -i_31_)), i_28_ + (this.aClass369_4635.anInt4963 + -i_32_) / 2);
+            aClass105_8342.drawAt(i, i_28_ - -(((this.aClass369_4635.anInt4963) + -i_30_) / 2));
+            aClass105_8339.drawAt((this.aClass369_4635.anInt4971 + (i + -i_31_)), i_28_ + (this.aClass369_4635.anInt4963 + -i_32_) / 2);
             NodeSub8.toolkit.KA(i, i_28_, (this.aClass369_4635.anInt4971 + i), i_28_ - -aClass105_8343.method980());
             aClass105_8343.method972(i + i_29_, i_28_, -i_29_ + (this.aClass369_4635.anInt4971) - i_31_, this.aClass369_4635.anInt4963);
             int i_33_ = aClass105_8338.method980();

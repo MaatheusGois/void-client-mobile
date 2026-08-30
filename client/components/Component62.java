@@ -47,11 +47,11 @@ final class Component62
     final void method1222(boolean bool) {
         if (bool != true) method1222(false);
         synchronized (aClass60_2083) {
-            aClass60_2083.method587(-99);
+            aClass60_2083.purgeSoftReferences(-99);
         }
         anInt2082++;
         synchronized (this.aClass60_2089) {
-            this.aClass60_2089.method587(-78);
+            this.aClass60_2089.purgeSoftReferences(-78);
         }
     }
 

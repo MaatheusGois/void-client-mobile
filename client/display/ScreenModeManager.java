@@ -28,7 +28,7 @@ final class ScreenModeManager {
             if (Component225.aFrame476 != null) {
                 InputHandler.canvasWidth = i_0_;
                 DisplayModeManagerContainer295.canvasWidth = i_3_;
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
             }
         }
         // Prefer fallback to resizable (2) — not preferred prefs — if exclusive FS

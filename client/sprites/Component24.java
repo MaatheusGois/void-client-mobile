@@ -66,7 +66,8 @@ abstract class Component24
         method982(i, i_61_, i_62_, i_63_, 1, 0, 1, 1);
     }
 
-    final void method974(int i, int i_64_) {
+    /** Draw this sprite at its native dimensions with the default draw flags. */
+    final void drawAt(int i, int i_64_) {
         method964(i, i_64_, 1, 0, 1);
     }
 

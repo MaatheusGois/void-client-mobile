@@ -92,16 +92,16 @@ final class Component367
     }
 
     Component367() {
-        NodeSub10.method2789(24);
-        this.anInt4514 = NodeSub10.method2789(16);
-        anInt4518 = NodeSub10.method2789(24);
+        NodeSub10.readBits(24);
+        this.anInt4514 = NodeSub10.readBits(16);
+        anInt4518 = NodeSub10.readBits(24);
         anIntArray4516 = new int[anInt4518];
         boolean bool = NodeSub10.method2788() != 0;
         if (bool) {
             int i = 0;
-            int i_20_ = NodeSub10.method2789(5) + 1;
+            int i_20_ = NodeSub10.readBits(5) + 1;
             while (i < anInt4518) {
-                int i_21_ = NodeSub10.method2789(Component80.method2253(anInt4518 - i, 126));
+                int i_21_ = NodeSub10.readBits(Component80.method2253(anInt4518 - i, 126));
                 for (int i_22_ = 0; i_22_ < i_21_; i_22_++)
                     anIntArray4516[i++] = i_20_;
                 i_20_++;
@@ -110,22 +110,22 @@ final class Component367
             boolean bool_23_ = NodeSub10.method2788() != 0;
             for (int i = 0; i < anInt4518; i++) {
                 if (bool_23_ && NodeSub10.method2788() == 0) anIntArray4516[i] = 0;
-                else anIntArray4516[i] = NodeSub10.method2789(5) + 1;
+                else anIntArray4516[i] = NodeSub10.readBits(5) + 1;
             }
         }
         method3579();
-        int i = NodeSub10.method2789(4);
+        int i = NodeSub10.readBits(4);
         if (i > 0) {
-            float f = NodeSub10.method2786(NodeSub10.method2789(32));
-            float f_24_ = NodeSub10.method2786(NodeSub10.method2789(32));
-            int i_25_ = NodeSub10.method2789(4) + 1;
+            float f = NodeSub10.method2786(NodeSub10.readBits(32));
+            float f_24_ = NodeSub10.method2786(NodeSub10.readBits(32));
+            int i_25_ = NodeSub10.readBits(4) + 1;
             boolean bool_26_ = NodeSub10.method2788() != 0;
             int i_27_;
             if (i == 1) i_27_ = method3580(anInt4518, this.anInt4514);
             else i_27_ = anInt4518 * this.anInt4514;
             anIntArray4517 = new int[i_27_];
             for (int i_28_ = 0; i_28_ < i_27_; i_28_++)
-                anIntArray4517[i_28_] = NodeSub10.method2789(i_25_);
+                anIntArray4517[i_28_] = NodeSub10.readBits(i_25_);
             aFloatArrayArray4515 = new float[anInt4518][this.anInt4514];
             if (i == 1) {
                 for (int i_29_ = 0; i_29_ < anInt4518; i_29_++) {

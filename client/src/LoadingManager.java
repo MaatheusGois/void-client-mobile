@@ -275,9 +275,9 @@ final class LoadingManager {
             if (DisplayModeManagerContainer64.aBoolean9038) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
             else if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.aBoolean6113 && DefinitionSub20.aClass348_Sub4_9264.anInt6609 < 512 && DefinitionSub20.aClass348_Sub4_9264.anInt6609 != 0)
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
-            DisplayModeManagerContainer389.method243(i ^ ~0x6fd6);
+            DisplayModeManagerContainer389.savePreferences(i ^ ~0x6fd6);
             if (DisplayModeManagerContainer64.aBoolean9038) SoftwareFallbackShader.method3553(false, (byte) 108, 0);
-            else SoftwareFallbackShader.method3553(false, (byte) 102, Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.method1829(-32350));
+            else SoftwareFallbackShader.method3553(false, (byte) 102, Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.getPreferenceValue(-32350));
             // Default to fullscreen 800x600 — scales up cleanly on phone/tablet.
             Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7227, 3);
             if (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254 != null) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, Component192.aClass348_Sub51_3959.aClass239_Sub8_7254, 3);

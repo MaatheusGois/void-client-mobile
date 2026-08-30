@@ -236,7 +236,7 @@ final class CollisionMap {
                         DisplayModeManagerContainer229.computeTransform(var_ha);
                         VideoAdPlayer.aClass105_4643 = var_ha.method3683(i_39_, i_41_, i_42_, i_43_, false);
                     }
-                    VideoAdPlayer.aClass105_4643.method974(i_39_, i_41_);
+                    VideoAdPlayer.aClass105_4643.drawAt(i_39_, i_41_);
                     int i_44_ = Component361.anInt370 * i_42_ / DisplayModeManagerContainer229.anInt1259;
                     int i_45_ = i_43_ * Component280.anInt2446 / DisplayModeManagerContainer229.anInt1267;
                     int i_46_ = i_39_ - -(i_42_ * Component63.anInt4509 / DisplayModeManagerContainer229.anInt1259);

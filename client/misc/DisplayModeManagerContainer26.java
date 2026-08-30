@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer26
         anInt1455++;
         synchronized (aClass60_1449) {
             if (bool != false) method819((byte) 107, 46);
-            aClass60_1449.method587(-119);
+            aClass60_1449.purgeSoftReferences(-119);
         }
     }
 
@@ -153,14 +153,14 @@ final class DisplayModeManagerContainer26
         if (RadixParser.aClass105_2309 != null && RSARequest.aClass105_9658 != null && RSARequest.aClass105_9659 != null) {
             int i_30_ = (-(RSARequest.aClass105_9659.method971() * 2) + i_25_) / RadixParser.aClass105_2309.method971();
             for (int i_31_ = 0; i_31_ < i_30_; i_31_++)
-                RadixParser.aClass105_2309.method974(i_24_ + (RSARequest.aClass105_9659.method971() - -(i_31_ * RadixParser.aClass105_2309.method971())), -RadixParser.aClass105_2309.method969() + (i_28_ + i_26_));
+                RadixParser.aClass105_2309.drawAt(i_24_ + (RSARequest.aClass105_9659.method971() - -(i_31_ * RadixParser.aClass105_2309.method971())), -RadixParser.aClass105_2309.method969() + (i_28_ + i_26_));
             int i_32_ = ((i_26_ - (i + RSARequest.aClass105_9659.method969())) / RSARequest.aClass105_9658.method969());
             for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
-                RSARequest.aClass105_9658.method974(i_24_, (RSARequest.aClass105_9658.method969() * i_33_ + (i_28_ + i)));
-                DisplayModeManagerContainer74.aClass105_4808.method974(-DisplayModeManagerContainer74.aClass105_4808.method971() + i_25_ + i_24_, (RSARequest.aClass105_9658.method969() * i_33_ + i + i_28_));
+                RSARequest.aClass105_9658.drawAt(i_24_, (RSARequest.aClass105_9658.method969() * i_33_ + (i_28_ + i)));
+                DisplayModeManagerContainer74.aClass105_4808.drawAt(-DisplayModeManagerContainer74.aClass105_4808.method971() + i_25_ + i_24_, (RSARequest.aClass105_9658.method969() * i_33_ + i + i_28_));
             }
-            RSARequest.aClass105_9659.method974(i_24_, (-RSARequest.aClass105_9659.method969() + i_28_ + i_26_));
-            Component338.aClass105_1706.method974(i_24_ + (i_25_ + -RSARequest.aClass105_9659.method971()), i_28_ - (-i_26_ + RSARequest.aClass105_9659.method969()));
+            RSARequest.aClass105_9659.drawAt(i_24_, (-RSARequest.aClass105_9659.method969() + i_28_ + i_26_));
+            Component338.aClass105_1706.drawAt(i_24_ + (i_25_ + -RSARequest.aClass105_9659.method971()), i_28_ - (-i_26_ + RSARequest.aClass105_9659.method969()));
         }
         int i_34_ = -24 % ((i_27_ - 85) / 35);
     }

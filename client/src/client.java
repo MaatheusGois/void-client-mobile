@@ -940,7 +940,7 @@ public final class client extends Applet_Sub1 {
     final void pulseGame(byte i) {
         if (i != 93) anIntArray5176 = null;
         anInt5183++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
             try {
                 processGameTick(i ^ 0x66);
             } catch (Throwable throwable) {
@@ -1593,7 +1593,7 @@ public final class client extends Applet_Sub1 {
     final void pulseDrawFrame(int i) {
         if (i != -11018) closeResources(9);
         anInt5186++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
             try {
                 method116(true);
             } catch (Throwable throwable) {
@@ -2048,7 +2048,7 @@ public final class client extends Applet_Sub1 {
             if (Component144.aBoolean3988) ReliefShader.method1416(5);
             if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
                 Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 0);
-                DisplayModeManagerContainer389.method243(37);
+                DisplayModeManagerContainer389.savePreferences(37);
             }
         }
     }
@@ -2099,7 +2099,7 @@ public final class client extends Applet_Sub1 {
             if (i < 40) aClass262_5185 = null;
             if (Component72.localPlayer != null)
                 string += ("2)" + Component117.anInt4372 + "," + (NodeBaseSub2.regionTileX + (Component72.localPlayer.anIntArray10320[0])) + "," + (Component330.regionTileY + (Component72.localPlayer.anIntArray10317[0])) + "|");
-            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
+            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
             string += "7)" + Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) + "|";
             string += "8)" + Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) + "|";
             string += "9)" + Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1800(-32350) + "|";
@@ -2110,7 +2110,7 @@ public final class client extends Applet_Sub1 {
             string += "14)" + Component49.clientState;
             if (DefinitionSub20.aClass348_Sub4_9264 != null) string += "|15)" + (DefinitionSub20.aClass348_Sub4_9264.anInt6609);
             try {
-                if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) == 2) {
+                if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
                     Field field = ClassLoader.class.getDeclaredField("nativeLibraries");
                     field.setAccessible(true);
                     Vector vector = ((Vector) field.get((aClass5189 != null ? aClass5189 : (aClass5189 = client.class)).getClassLoader()));

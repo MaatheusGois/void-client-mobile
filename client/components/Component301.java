@@ -132,7 +132,7 @@ final class Component301
                                 for (int i_34_ = i_28_; (i_29_ > i_34_); i_34_++) {
                                     if (-i_24_ <= i_34_ + -i_26_ && i_24_ >= -i_26_ + i_34_ && (bools[i_24_ + (-i_25_ + i_33_)][-i_26_ + i_34_ + i_24_])) {
                                         MatrixSub2 class101_sub2 = aHa_Sub3_4111.method3820(false);
-                                        class101_sub2.method932(1.0F, f, f, (byte) -65);
+                                        class101_sub2.setScale(1.0F, f, f, (byte) -65);
                                         class101_sub2.method891(-i_30_, -i_27_, 0);
                                         aHa_Sub3_4111.method3853(i ^ ~0x9f, Component302.aClass251_6030);
                                         aClass97ArrayArray4122[i_30_][i_27_].method871((byte) 116);
@@ -185,7 +185,7 @@ final class Component301
                             stream.a();
                             if (interface5_impl2.method22(-23) && i_39_ > 0) {
                                 MatrixSub2 class101_sub2 = aHa_Sub3_4111.method3820(false);
-                                class101_sub2.method932(1.0F, f, f, (byte) -62);
+                                class101_sub2.setScale(1.0F, f, f, (byte) -62);
                                 class101_sub2.method891(-i_38_, -i_35_, 0);
                                 aHa_Sub3_4111.method3853(i ^ ~0x9f, (Component302.aClass251_6030));
                                 class97.method875(-82, interface5_impl2, i_39_ / 3);

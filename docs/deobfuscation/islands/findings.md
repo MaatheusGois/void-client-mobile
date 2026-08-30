@@ -311,6 +311,30 @@ Reflection: none. Desktop + iOS compile required after lote.
 
 ---
 
+## 14. lote 69 — evidenced long-tail methods (CONFIRMED, executed)
+
+Each selected token had exactly one definition and no mobile reflection
+references. The call-site evidence supports the following names:
+
+| Old | New | Evidence |
+|---|---|---|
+| `LogicError.method831` | `clamp` | lower/upper bound checks and `Math.min` |
+| `NodeSub10.method2789` | `readBits` | consumes the shared bitstream cursor |
+| `DisplayModeManagerContainer389.method243` | `savePreferences` | serializes preferences into the cache file |
+| `BuildInfo.method206` | `blendArgb` | alpha extraction and channel compositing |
+| `NodeCache.method587` | `purgeSoftReferences` | removes cleared soft entries from LRU history |
+| `GlToolkitSub3.method3885` | `setTextureEnvironment` | configures texture environment and alpha operation |
+| `GlToolkitSub3.method3897` | `setActiveTextureUnit` | changes the active texture-unit index |
+| `Component256.method1829` | `getPreferenceValue` | returns the preference's selected value |
+| `Component24.method974` | `drawAt` | draws a sprite at native dimensions |
+| `Component309.method2005` | `getDefinition` | loads and caches a scene-object definition |
+| `MatrixSub2.method932` | `setScale` | writes a diagonal scale transform |
+
+The batch removes 530 obfuscated method references while preserving behavior.
+Reflection gate, desktop compilation, and iOS compilation pass.
+
+---
+
 ## 13. lote 68 — IF widget ids from `widget-map/` (CONFIRMED, executed)
 
 Evidence: live dump `widget-dumps/20260830-164259` + Shift+click picks +

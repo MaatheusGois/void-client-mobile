@@ -68,7 +68,7 @@ final class ImageTagText {
     static final void method1271(int i) {
         anInt2166++;
         synchronized (DisplayModeManagerContainer173.aClass60_4254) {
-            DisplayModeManagerContainer173.aClass60_4254.method587(-86);
+            DisplayModeManagerContainer173.aClass60_4254.purgeSoftReferences(-86);
             if (i != 0) method1276(25);
         }
     }

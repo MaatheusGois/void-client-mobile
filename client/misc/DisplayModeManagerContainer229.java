@@ -265,7 +265,7 @@ class DisplayModeManagerContainer229
                         NodeSub39 class348_sub39 = ((NodeSub39) aClass356_1271.get(i << 16 | i_48_, -6008));
                         if (class348_sub39 != null) {
                             for (int i_50_ = 0; i_50_ < (class348_sub39.aShortArray7024).length; i_50_++) {
-                                Component44 class51 = (aClass263_1245.method2005(0, (class348_sub39.aShortArray7024[i_50_]) & 0xffff));
+                                Component44 class51 = (aClass263_1245.getDefinition(0, (class348_sub39.aShortArray7024[i_50_]) & 0xffff));
                                 int i_51_ = class51.anInt921;
                                 if (class51.anIntArray945 != null) {
                                     class51 = class51.method480(anInterface17_1244, (byte) 47);
@@ -280,7 +280,7 @@ class DisplayModeManagerContainer229
                             }
                         }
                     } else {
-                        Component44 class51 = aClass263_1245.method2005(0, i_49_ - 1);
+                        Component44 class51 = aClass263_1245.getDefinition(0, i_49_ - 1);
                         int i_52_ = class51.anInt921;
                         if (class51.anIntArray945 != null) {
                             class51 = class51.method480(anInterface17_1244, (byte) 47);
@@ -304,7 +304,7 @@ class DisplayModeManagerContainer229
                         for (RenderableSub8 class318_sub8 = (RenderableSub8) class243.method1872(8); class318_sub8 != null; class318_sub8 = ((RenderableSub8) class243.method1878((byte) 127))) {
                             if (class318_sub8.aShortArray6461 != null) {
                                 for (int i_55_ = 0; i_55_ < (class318_sub8.aShortArray6461).length; i_55_++) {
-                                    Component44 class51 = (aClass263_1245.method2005(0, (class318_sub8.aShortArray6461[i_55_]) & 0xffff));
+                                    Component44 class51 = (aClass263_1245.getDefinition(0, (class318_sub8.aShortArray6461[i_55_]) & 0xffff));
                                     int i_56_ = class51.anInt921;
                                     if (class51.anIntArray945 != null) {
                                         class51 = (class51.method480(anInterface17_1244, (byte) 47));
@@ -353,7 +353,7 @@ class DisplayModeManagerContainer229
             for (int i_69_ = 0; i_69_ < is.length; i_69_++) {
                 int i_70_ = is_63_[i_69_] & 0x3f;
                 if (i_70_ == 0 || i_70_ == 2 || i_70_ == 3 || i_70_ == 9) {
-                    Component44 class51 = aClass263_1245.method2005(0, is[i_69_] & 0xffff);
+                    Component44 class51 = aClass263_1245.getDefinition(0, is[i_69_] & 0xffff);
                     if (class51.anInt875 == -1) {
                         int i_71_ = -3355444;
                         if (class51.anInt874 == 1) i_71_ = -3407872;
@@ -536,7 +536,7 @@ class DisplayModeManagerContainer229
     private static final void drawLabels(GraphicsToolkit var_ha, int i, int i_118_, int i_119_, int i_120_, short[] is, byte[] is_121_) {
         if (is != null) {
             for (int i_122_ = 0; i_122_ < is.length; i_122_++) {
-                Component44 class51 = aClass263_1245.method2005(0, is[i_122_] & 0xffff);
+                Component44 class51 = aClass263_1245.getDefinition(0, is[i_122_] & 0xffff);
                 int i_123_ = class51.anInt875;
                 if (i_123_ != -1) {
                     SceneManager class218 = aClass141_1242.method1173((byte) 31, i_123_);

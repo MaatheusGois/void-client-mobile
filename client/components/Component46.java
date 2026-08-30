@@ -68,7 +68,7 @@ final class Component46
         anInt2846++;
         if (i != 0) this.anInt2845 = -97;
         synchronized (aClass60_2848) {
-            aClass60_2848.method587(i ^ ~0x6b);
+            aClass60_2848.purgeSoftReferences(i ^ ~0x6b);
         }
     }
 

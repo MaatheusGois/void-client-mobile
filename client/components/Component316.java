@@ -22,7 +22,7 @@ final class Component316
     final void method1390(int i) {
         synchronized (aClass60_2479) {
             int i_0_ = 25 / ((i - 69) / 33);
-            aClass60_2479.method587(-98);
+            aClass60_2479.purgeSoftReferences(-98);
         }
         anInt2486++;
     }

@@ -34,10 +34,10 @@ final class Component16
 
     static final void method1328(int i) {
         if (i != -26162) friendRanks = null;
-        StringCache.aClass60_4327.method587(-118);
+        StringCache.aClass60_4327.purgeSoftReferences(-118);
         anInt2281++;
-        Component142.aClass60_4417.method587(-89);
-        ColoredText.aClass60_6096.method587(-87);
-        DefinitionSub9.aClass60_9171.method587(-95);
+        Component142.aClass60_4417.purgeSoftReferences(-89);
+        ColoredText.aClass60_6096.purgeSoftReferences(-87);
+        DefinitionSub9.aClass60_9171.purgeSoftReferences(-95);
     }
 }

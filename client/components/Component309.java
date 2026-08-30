@@ -38,7 +38,8 @@ final class Component309
         }
     }
 
-    final Component44 method2005(int i, int i_0_) {
+    /** Load and cache the scene-object definition identified by {@code i_0_}. */
+    final Component44 getDefinition(int i, int i_0_) {
         anInt3351++;
         Component44 class51;
         synchronized (aClass60_3350) {
@@ -73,16 +74,16 @@ final class Component309
         if (i >= 68) {
             anInt3353++;
             synchronized (aClass60_3350) {
-                aClass60_3350.method587(-106);
+                aClass60_3350.purgeSoftReferences(-106);
             }
             synchronized (this.aClass60_3360) {
-                this.aClass60_3360.method587(-125);
+                this.aClass60_3360.purgeSoftReferences(-125);
             }
             synchronized (this.aClass60_3361) {
-                this.aClass60_3361.method587(-122);
+                this.aClass60_3361.purgeSoftReferences(-122);
             }
             synchronized (this.aClass60_3362) {
-                this.aClass60_3362.method587(-101);
+                this.aClass60_3362.purgeSoftReferences(-101);
             }
         }
     }

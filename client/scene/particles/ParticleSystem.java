@@ -72,7 +72,7 @@ final class ParticleSystem extends Node {
                     NodeSub8.toolkit.method3643(DisplayModeManagerContainer50.gameCanvas, dimension.width, dimension.height);
                 } else DisplayModeManagerContainer77.method1108((byte) -99, DisplayModeManagerContainer50.gameCanvas);
                 NodeSub8.toolkit.method3677(DisplayModeManagerContainer50.gameCanvas);
-            } else SoftwareFallbackShader.method3553(false, (byte) 100, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350));
+            } else SoftwareFallbackShader.method3553(false, (byte) 100, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350));
             anInt7123++;
             Component160.method3466(i + -1347);
             NodeSub16Sub2.aBoolean8870 = true;

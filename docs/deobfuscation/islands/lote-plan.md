@@ -302,6 +302,29 @@ python3 .cursor/skills/void-client-deobfuscate/scripts/count_methods.py
 > reflection gate, not a separate compile.
 
 **Done definition:** `count_methods.py` reports < 100 unique
-`method####`. Current: **3 320**. Target after lote 50: < 3 250.
+`method####`. Current: **3 075**. Target after lote 50: < 3 250.
 After lote 51: ~3 326 (lote 51 renames anInt fields, not method####).
 After lote 52: ~3 326 (same reason — anInt#### island).
+
+## lote 69 — evidenced long-tail methods *(530 refs freed)*
+
+**STATUS: DONE** — all selected tokens had exactly one definition and no
+mobile reflection references.
+
+| Old | New | Evidence |
+|---|---|---|
+| `LogicError.method831` | `clamp` | lower/upper bound checks and `Math.min` |
+| `NodeSub10.method2789` | `readBits` | consumes the shared bitstream cursor |
+| `DisplayModeManagerContainer389.method243` | `savePreferences` | serializes preferences into the cache file |
+| `BuildInfo.method206` | `blendArgb` | alpha extraction and channel compositing |
+| `NodeCache.method587` | `purgeSoftReferences` | removes cleared soft entries from LRU history |
+| `GlToolkitSub3.method3885` | `setTextureEnvironment` | configures texture environment and alpha operation |
+| `GlToolkitSub3.method3897` | `setActiveTextureUnit` | changes the active texture-unit index |
+| `Component256.method1829` | `getPreferenceValue` | returns the preference's selected value |
+| `Component24.method974` | `drawAt` | draws a sprite at native dimensions |
+| `Component309.method2005` | `getDefinition` | loads and caches a scene-object definition |
+| `MatrixSub2.method932` | `setScale` | writes a diagonal scale transform |
+
+Verification: reflection gate PASS; desktop and iOS Java compilation
+successful. Android assemble was attempted but dependency resolution could not
+find the pre-existing `com.android.application:8.7.3` plugin in this sandbox.

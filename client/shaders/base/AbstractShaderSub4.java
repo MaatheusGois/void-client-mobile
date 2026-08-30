@@ -90,7 +90,7 @@ final class AbstractShaderSub4
     final void method3525(int i, boolean bool) {
         if (i != 15192) method3527(-85, null, -72);
         if (anInterface18_Impl2Array7315 != null && bool) {
-            this.aHa_Sub3_4479.method3897(1, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
             this.aHa_Sub3_4479.method3871(Component82.aClass113_430, 0);
             MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3820(false);
             class101_sub2.method899(1024);
@@ -98,20 +98,20 @@ final class AbstractShaderSub4
             if (aBoolean7311) {
                 this.aHa_Sub3_4479.method3874((ShaderCompilerSub3.aClass229_6519), 113, (DisplayModeManagerContainer64.aClass229_9011));
                 this.aHa_Sub3_4479.method3924(true, false, 0, DisplayModeManagerContainer173.aClass70_4247, false);
-                this.aHa_Sub3_4479.method3885(0, true, DebugPanicSub2.aClass70_8503);
+                this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
             } else {
                 this.aHa_Sub3_4479.method3874((Component385.aClass229_2207), 117, (ShaderCompilerSub3.aClass229_6519));
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, (DisplayModeManagerContainer343.aClass70_8737));
-                this.aHa_Sub3_4479.method3897(2, -4382);
+                this.aHa_Sub3_4479.setActiveTextureUnit(2, -4382);
                 this.aHa_Sub3_4479.method3874((ShaderCompilerSub3.aClass229_6519), 122, (DisplayModeManagerContainer64.aClass229_9011));
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, (DisplayModeManagerContainer343.aClass70_8737));
                 this.aHa_Sub3_4479.method3924(true, false, 1, (DisplayModeManagerContainer343.aClass70_8737), false);
-                this.aHa_Sub3_4479.method3885(0, true, DebugPanicSub2.aClass70_8503);
+                this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
                 this.aHa_Sub3_4479.setActiveTexture((byte) -61, (this.aHa_Sub3_4479.anInterface18_8147));
             }
-            this.aHa_Sub3_4479.method3897(0, i + -19574);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, i + -19574);
             aBoolean7317 = true;
-        } else this.aHa_Sub3_4479.method3885(0, true, DebugPanicSub2.aClass70_8503);
+        } else this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
         anInt7313++;
     }
 
@@ -124,27 +124,27 @@ final class AbstractShaderSub4
 
     final void method3520(byte i) {
         if (aBoolean7317) {
-            this.aHa_Sub3_4479.method3897(1, i ^ ~0x114a);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, i ^ ~0x114a);
             this.aHa_Sub3_4479.setActiveTexture((byte) -121, null);
             this.aHa_Sub3_4479.method3871(Component324.aClass113_2047, 0);
             this.aHa_Sub3_4479.method3879(-8629);
             if (aBoolean7311) {
                 this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 120, Component385.aClass229_2207);
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-                this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+                this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
             } else {
                 this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 115, Component385.aClass229_2207);
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
-                this.aHa_Sub3_4479.method3897(2, i + -4469);
+                this.aHa_Sub3_4479.setActiveTextureUnit(2, i + -4469);
                 this.aHa_Sub3_4479.method3874((Component385.aClass229_2207), i ^ 0x21, (Component385.aClass229_2207));
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
                 this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, (DisplayModeManagerContainer343.aClass70_8737));
-                this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+                this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
                 this.aHa_Sub3_4479.setActiveTexture((byte) 64, null);
             }
-            this.aHa_Sub3_4479.method3897(0, i ^ ~0x114a);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, i ^ ~0x114a);
             aBoolean7317 = false;
-        } else this.aHa_Sub3_4479.method3885(0, true, DisplayModeManagerContainer173.aClass70_4247);
+        } else this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
         anInt7312++;
         if (i != 87) aBoolean7311 = true;
         this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, i + 13, Component385.aClass229_2207);
@@ -330,9 +330,9 @@ final class AbstractShaderSub4
     final void method3526(int i, int i_40_, int i_41_) {
         if (i != 10756) method3520((byte) -127);
         if (aBoolean7317) {
-            this.aHa_Sub3_4479.method3897(1, i + -15138);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, i + -15138);
             this.aHa_Sub3_4479.setActiveTexture((byte) -67, anInterface18_Impl2Array7315[-1 + i_40_]);
-            this.aHa_Sub3_4479.method3897(0, i ^ ~0x3b19);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, i ^ ~0x3b19);
         }
         anInt7322++;
     }

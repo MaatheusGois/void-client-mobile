@@ -70,7 +70,7 @@ final class Component366
         int i_1_ = i_0_;
         boolean bool = false;
         if (i_1_ == -1) {
-            Component44 class51 = GradientPreset.aClass263_9195.method2005(i ^ 0x45, this.anInt3063);
+            Component44 class51 = GradientPreset.aClass263_9195.getDefinition(i ^ 0x45, this.anInt3063);
             Component44 class51_2_ = class51;
             if (class51.anIntArray945 != null) class51 = class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47);
             if (class51 == null) return;
@@ -125,7 +125,7 @@ final class Component366
 
     final DisplayModeManagerContainer370 method1668(boolean bool, boolean bool_3_, int i, int i_4_, GraphicsToolkit var_ha) {
         anInt3082++;
-        Component44 class51 = GradientPreset.aClass263_9195.method2005(0, this.anInt3063);
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, this.anInt3063);
         if (class51.anIntArray945 != null) class51 = class51.method480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47);
         if (class51 == null) {
             method1674(-1, var_ha);
@@ -220,7 +220,7 @@ final class Component366
                 Component30[] class129s = class64.method619();
                 DisplayModeManagerContainer173[] class342s = class64.method604();
                 if ((this.aClass318_Sub10_3081 == null || this.aClass318_Sub10_3081.aBoolean6470) && (class129s != null || class342s != null)) {
-                    Component44 class51 = GradientPreset.aClass263_9195.method2005(0, this.anInt3063);
+                    Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, this.anInt3063);
                     if (class51.anIntArray945 != null) class51 = class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47);
                     if (class51 != null) this.aClass318_Sub10_3081 = RenderableSub10.method2526(OpenGlShader.clientCycle, true);
                 }

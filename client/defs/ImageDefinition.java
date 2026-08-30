@@ -335,7 +335,7 @@ final class ImageDefinition extends Definition {
                                                     NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                                 } else if ((class46.colour) == 0 && i_28_ == 0) {
                                                     if ((class46.spriteAngle) != 0) class105.method981(((float) i_24_ + ((float) (class46.width) / 2.0F)), (((float) (class46.height) / 2.0F) + (float) i_25_), (4096 * (class46.width) / i_53_), (class46.spriteAngle));
-                                                    else if ((i_53_ == (class46.width)) && ((class46.height) == i_54_)) class105.method974(i_24_, i_25_);
+                                                    else if ((i_53_ == (class46.width)) && ((class46.height) == i_54_)) class105.drawAt(i_24_, i_25_);
                                                     else class105.method973(i_24_, i_25_, (class46.width), (class46.height));
                                                 } else if (class46.spriteAngle != 0) class105.method977(((float) i_24_ + ((float) (class46.width) / 2.0F)), ((float) i_25_ + ((float) (class46.height) / 2.0F)), (4096 * class46.width / i_53_), (class46.spriteAngle), 0, i_55_, 1);
                                                 else if (((class46.width) == i_53_) && (class46.height == i_54_)) class105.method964(i_24_, i_25_, 0, i_55_, 1);

@@ -87,9 +87,9 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
                 IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
                 aClass378_7346.method3957(anIDirect3DVertexShader7345, (byte) -89);
                 aClass378_7346.method3962(22927, anIDirect3DPixelShader7343);
-                this.aHa_Sub3_4479.method3897(1, -4382);
+                this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
                 this.aHa_Sub3_4479.setActiveTexture((byte) 63, interface18_impl2);
-                this.aHa_Sub3_4479.method3897(0, -4382);
+                this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
                 this.aHa_Sub3_4479.setActiveTexture((byte) -127, aClass269_7348.anInterface18_Impl1_3455);
                 aBoolean7344 = true;
                 method3531(false);
@@ -121,9 +121,9 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
         if (aBoolean7344) {
             aClass378_7346.method3957(null, (byte) -89);
             aClass378_7346.method3962(22927, null);
-            this.aHa_Sub3_4479.method3897(1, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
             this.aHa_Sub3_4479.setActiveTexture((byte) -98, null);
-            this.aHa_Sub3_4479.method3897(0, -4382);
+            this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             this.aHa_Sub3_4479.setActiveTexture((byte) -124, null);
             aBoolean7344 = false;
         }

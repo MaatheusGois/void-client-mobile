@@ -88,7 +88,7 @@ final class Component212
     private final Component245 buildRenderable2(GraphicsToolkit var_ha, int i, boolean bool, int i_4_) {
         anInt9985++;
         if (i_4_ != 22) method2404(null, -21, -25);
-        Component44 class51 = GradientPreset.aClass263_9195.method2005(0, aShort9991 & 0xffff);
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, aShort9991 & 0xffff);
         s var_s;
         s var_s_5_;
         if (aBoolean9983) {
@@ -179,7 +179,7 @@ final class Component212
                     Component24 class105 = (Component379.aClass105Array5933[class302.anInt3831]);
                     int i_14_ = -12 + (i - -Component71.anIntArray6062[0]);
                     int i_15_ = i_8_ - -Component71.anIntArray6062[1] - 28;
-                    class105.method974(i_14_, i_15_);
+                    class105.drawAt(i_14_, i_15_);
                     Component103.method2663(-5590, i_14_, i_14_ - -class105.method966(), i_15_, class105.method980() + i_15_);
                 }
             }

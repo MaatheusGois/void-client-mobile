@@ -42,11 +42,11 @@ final class Component297
             i_2_ = 2;
             DisplayModeManagerContainer254.method1263(true);
         }
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) != 2) {
+        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) != 2) {
             Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 2);
             SoftwareFallbackShader.method3553(false, (byte) 119, 2);
         }
-        DisplayModeManagerContainer389.method243(37);
+        DisplayModeManagerContainer389.savePreferences(37);
         return i_2_;
     }
 

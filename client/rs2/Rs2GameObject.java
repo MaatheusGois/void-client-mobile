@@ -143,7 +143,7 @@ final class Rs2GameObject {
         }
         Interface10 iface = (Interface10) node;
         try {
-            Component44 def = GradientPreset.aClass263_9195.method2005(0, iface.method42(-100));
+            Component44 def = GradientPreset.aClass263_9195.getDefinition(0, iface.method42(-100));
             if (def == null) {
                 return null;
             }

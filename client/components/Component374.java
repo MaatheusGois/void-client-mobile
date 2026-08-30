@@ -53,11 +53,11 @@ final class Component374
 
     static final void method2638(int i) {
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-            DisplayModeManagerContainer310.aClass60_355.method587(-98);
+            DisplayModeManagerContainer310.aClass60_355.purgeSoftReferences(-98);
         }
         anInt4136++;
         synchronized (Component387.aClass60_1894) {
-            Component387.aClass60_1894.method587(i + 4530);
+            Component387.aClass60_1894.purgeSoftReferences(i + 4530);
         }
         if (i != -4631) anInt4135 = 37;
     }

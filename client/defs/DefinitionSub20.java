@@ -17,7 +17,7 @@ final class DefinitionSub20
     static final void method3102(int i) {
         if (i != 22385) aClass348_Sub4_9264 = null;
         anInt9265++;
-        Component9.aClass60_4139.method587(-110);
+        Component9.aClass60_4139.purgeSoftReferences(-110);
     }
 
     private final int method3103(int i, int i_0_, int i_1_) {

@@ -113,8 +113,8 @@ final class Component116
             anIntArray2721[i_42_] = anIntArray2726[i_42_];
         int i_43_ = anIntArray2724[anInt2722 - 1];
         int i_44_ = Component80.method2253(i_43_ - 1, -17);
-        anIntArray2728[0] = NodeSub10.method2789(i_44_);
-        anIntArray2728[1] = NodeSub10.method2789(i_44_);
+        anIntArray2728[0] = NodeSub10.readBits(i_44_);
+        anIntArray2728[1] = NodeSub10.readBits(i_44_);
         int i_45_ = 2;
         for (int i_46_ = 0; i_46_ < anIntArray2725.length; i_46_++) {
             int i_47_ = anIntArray2725[i_46_];
@@ -181,13 +181,13 @@ final class Component116
     }
 
     Component116() {
-        int i = NodeSub10.method2789(16);
+        int i = NodeSub10.readBits(16);
         if (i != 1) throw new RuntimeException();
-        int i_65_ = NodeSub10.method2789(5);
+        int i_65_ = NodeSub10.readBits(5);
         int i_66_ = 0;
         anIntArray2725 = new int[i_65_];
         for (int i_67_ = 0; i_67_ < i_65_; i_67_++) {
-            int i_68_ = NodeSub10.method2789(4);
+            int i_68_ = NodeSub10.readBits(4);
             anIntArray2725[i_67_] = i_68_;
             if (i_68_ >= i_66_) i_66_ = i_68_ + 1;
         }
@@ -196,17 +196,17 @@ final class Component116
         anIntArray2723 = new int[i_66_];
         anIntArrayArray2730 = new int[i_66_][];
         for (int i_69_ = 0; i_69_ < i_66_; i_69_++) {
-            anIntArray2720[i_69_] = NodeSub10.method2789(3) + 1;
-            int i_70_ = anIntArray2729[i_69_] = NodeSub10.method2789(2);
-            if (i_70_ != 0) anIntArray2723[i_69_] = NodeSub10.method2789(8);
+            anIntArray2720[i_69_] = NodeSub10.readBits(3) + 1;
+            int i_70_ = anIntArray2729[i_69_] = NodeSub10.readBits(2);
+            if (i_70_ != 0) anIntArray2723[i_69_] = NodeSub10.readBits(8);
             i_70_ = 1 << i_70_;
             int[] is = new int[i_70_];
             anIntArrayArray2730[i_69_] = is;
             for (int i_71_ = 0; i_71_ < i_70_; i_71_++)
-                is[i_71_] = NodeSub10.method2789(8) - 1;
+                is[i_71_] = NodeSub10.readBits(8) - 1;
         }
-        anInt2722 = NodeSub10.method2789(2) + 1;
-        int i_72_ = NodeSub10.method2789(4);
+        anInt2722 = NodeSub10.readBits(2) + 1;
+        int i_72_ = NodeSub10.readBits(4);
         int i_73_ = 2;
         for (int i_74_ = 0; i_74_ < i_65_; i_74_++)
             i_73_ += anIntArray2720[anIntArray2725[i_74_]];
@@ -217,7 +217,7 @@ final class Component116
         for (int i_75_ = 0; i_75_ < i_65_; i_75_++) {
             int i_76_ = anIntArray2725[i_75_];
             for (int i_77_ = 0; i_77_ < anIntArray2720[i_76_]; i_77_++)
-                anIntArray2726[i_73_++] = NodeSub10.method2789(i_72_);
+                anIntArray2726[i_73_++] = NodeSub10.readBits(i_72_);
         }
         if (anIntArray2721 == null || anIntArray2721.length < i_73_) {
             anIntArray2721 = new int[i_73_];

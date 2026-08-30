@@ -120,10 +120,10 @@ abstract class Definition extends Node {
         int i_42_ = i_33_ * (-1 + i_16_);
         if (i_6_ >= Component72.anInt1910 && PauseTimer.anInt513 >= i_6_) {
             int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_6_];
-            int i_43_ = LogicError.method831(Component22.anInt1745, i_5_ + -i, Component27.anInt4960, 77);
-            int i_44_ = LogicError.method831(Component22.anInt1745, i + i_5_, Component27.anInt4960, -68);
-            int i_45_ = LogicError.method831(Component22.anInt1745, i_5_ + -i_15_, Component27.anInt4960, i_7_ + -115);
-            int i_46_ = LogicError.method831(Component22.anInt1745, i_5_ + i_15_, Component27.anInt4960, 97);
+            int i_43_ = LogicError.clamp(Component22.anInt1745, i_5_ + -i, Component27.anInt4960, 77);
+            int i_44_ = LogicError.clamp(Component22.anInt1745, i + i_5_, Component27.anInt4960, -68);
+            int i_45_ = LogicError.clamp(Component22.anInt1745, i_5_ + -i_15_, Component27.anInt4960, i_7_ + -115);
+            int i_46_ = LogicError.clamp(Component22.anInt1745, i_5_ + i_15_, Component27.anInt4960, 97);
             MenuOpener.fillInts(-27, i_45_, is, i_43_, i_10_);
             MenuOpener.fillInts(-27, i_46_, is, i_45_, i_9_);
             MenuOpener.fillInts(-27, i_44_, is, i_46_, i_10_);
@@ -176,11 +176,11 @@ abstract class Definition extends Node {
             int i_47_ = -i_13_ + i_6_;
             int i_48_ = i_13_ + i_6_;
             if (i_48_ >= Component72.anInt1910 && PauseTimer.anInt513 >= i_47_) {
-                int i_49_ = LogicError.method831(Component22.anInt1745, i_12_ + i_5_, Component27.anInt4960, 36);
-                int i_50_ = LogicError.method831(Component22.anInt1745, -i_12_ + i_5_, Component27.anInt4960, 97);
+                int i_49_ = LogicError.clamp(Component22.anInt1745, i_12_ + i_5_, Component27.anInt4960, 36);
+                int i_50_ = LogicError.clamp(Component22.anInt1745, -i_12_ + i_5_, Component27.anInt4960, 97);
                 if (bool) {
-                    int i_51_ = LogicError.method831(Component22.anInt1745, i_5_ - -i_14_, Component27.anInt4960, i_7_ ^ ~0x5c);
-                    int i_52_ = LogicError.method831(Component22.anInt1745, -i_14_ + i_5_, Component27.anInt4960, 32);
+                    int i_51_ = LogicError.clamp(Component22.anInt1745, i_5_ - -i_14_, Component27.anInt4960, i_7_ ^ ~0x5c);
+                    int i_52_ = LogicError.clamp(Component22.anInt1745, -i_14_ + i_5_, Component27.anInt4960, 32);
                     if (Component72.anInt1910 <= i_47_) {
                         int[] is = DisplayModeManagerContainer167.anIntArrayArray255[i_47_];
                         MenuOpener.fillInts(-27, i_52_, is, i_50_, i_10_);

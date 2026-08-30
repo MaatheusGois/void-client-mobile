@@ -393,11 +393,11 @@ final class DisplayModeManagerContainer57
         DefinitionSub20.method3102(22385);
         Component352.method386((byte) -106);
         ImageTagText.method1271(0);
-        Component45.aClass60_4346.method587(-108);
-        ShaderCompilerSub2.aClass60_6517.method587(-109);
-        NodeSub1Sub1.aClass60_8807.method587(-113);
-        Component225.aClass60_463.method587(-83);
-        ClientScriptExecutor.aClass60_1174.method587(-91);
+        Component45.aClass60_4346.purgeSoftReferences(-108);
+        ShaderCompilerSub2.aClass60_6517.purgeSoftReferences(-109);
+        NodeSub1Sub1.aClass60_8807.purgeSoftReferences(-113);
+        Component225.aClass60_463.purgeSoftReferences(-83);
+        ClientScriptExecutor.aClass60_1174.purgeSoftReferences(-91);
         int i_17_ = 54 / ((26 - i) / 53);
     }
 

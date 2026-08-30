@@ -185,7 +185,8 @@ final class NodeCache {
         }
     }
 
-    final void method587(int i) {
+    /** Remove cleared soft-reference entries from the LRU history. */
+    final void purgeSoftReferences(int i) {
         anInt1096++;
         for (CacheNode class348_sub42_sub8 = (CacheNode) history.first(-71); class348_sub42_sub8 != null; class348_sub42_sub8 = ((CacheNode) history.next((byte) 50))) {
             if (class348_sub42_sub8.isSoft(-4)) {
@@ -194,7 +195,7 @@ final class NodeCache {
                 remaining += class348_sub42_sub8.weight;
             }
         }
-        if (i >= -75) method587(-97);
+        if (i >= -75) purgeSoftReferences(-97);
     }
 
     final Object method588(int i) {

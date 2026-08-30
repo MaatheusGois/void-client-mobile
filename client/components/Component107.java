@@ -9,9 +9,9 @@ final class Component107
  */ {
     private final int anInt4255;
     private final int anInt4256;
-    private final int anInt4257 = NodeSub10.method2789(16);
-    private final int anInt4258 = NodeSub10.method2789(24);
-    private final int anInt4259 = NodeSub10.method2789(24);
+    private final int anInt4257 = NodeSub10.readBits(16);
+    private final int anInt4258 = NodeSub10.readBits(24);
+    private final int anInt4259 = NodeSub10.readBits(24);
     private final int[] anIntArray4260;
     private final int anInt4261;
 
@@ -65,19 +65,19 @@ final class Component107
     }
 
     Component107() {
-        anInt4256 = NodeSub10.method2789(24) + 1;
-        anInt4255 = NodeSub10.method2789(6) + 1;
-        anInt4261 = NodeSub10.method2789(8);
+        anInt4256 = NodeSub10.readBits(24) + 1;
+        anInt4255 = NodeSub10.readBits(6) + 1;
+        anInt4261 = NodeSub10.readBits(8);
         int[] is = new int[anInt4255];
         for (int i = 0; i < anInt4255; i++) {
             int i_19_ = 0;
-            int i_20_ = NodeSub10.method2789(3);
+            int i_20_ = NodeSub10.readBits(3);
             boolean bool = NodeSub10.method2788() != 0;
-            if (bool) i_19_ = NodeSub10.method2789(5);
+            if (bool) i_19_ = NodeSub10.readBits(5);
             is[i] = i_19_ << 3 | i_20_;
         }
         anIntArray4260 = new int[anInt4255 * 8];
         for (int i = 0; i < anInt4255 * 8; i++)
-            anIntArray4260[i] = ((is[i >> 3] & 1 << (i & 0x7)) != 0 ? NodeSub10.method2789(8) : -1);
+            anIntArray4260[i] = ((is[i >> 3] & 1 << (i & 0x7)) != 0 ? NodeSub10.readBits(8) : -1);
     }
 }
