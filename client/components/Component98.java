@@ -30,7 +30,7 @@ final class Component98
     static final void queueAreaSound(int i, int i_0_, boolean bool, int i_1_, byte i_2_, int i_3_, int i_4_, int i_5_) {
         if (i_2_ > -85) getEffectivePlane(-14, 70, 13, -100);
         anInt5940++;
-        if ((bool ? Component192.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && Component335.anInt2021 < 50 && i != -1)
+        if ((bool ? Component192.preferences.aClass239_Sub26_7215.method1838(-32350) : Component192.preferences.aClass239_Sub26_7272.method1838(-32350)) != 0 && i_3_ != 0 && Component335.anInt2021 < 50 && i != -1)
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i, i_3_, i_5_, i_0_, i_1_, i_4_, null);
     }
 

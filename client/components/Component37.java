@@ -55,7 +55,7 @@ final class Component37
         if (i == 86) {
             DefinitionSub25.anInt9341 = 0;
             DefinitionSub36.aClass114_9456 = null;
-            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+            Component80.packetBuffer.offset = 0;
             SocketStream.aClass114_3133 = null;
             Component339.aClass114_3145 = null;
             NodeSub50.anInt7213 = 0;

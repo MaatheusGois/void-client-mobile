@@ -43,7 +43,7 @@ final class Component373
      * Tracks the live id in {@link Component244#currentCursorId}.
      */
     static final void applyCustomCursor(int i, int i_0_) {
-        if (i == Component192.aClass348_Sub51_3959.customCursorSetting.getValue(-32350)) i_0_ = -1;
+        if (i == Component192.preferences.customCursorSetting.getValue(-32350)) i_0_ = -1;
         anInt456++;
         // Sentinel tip-sort values (DefaultClick / Microbot) are not valid cursor defs —
         // fall back so the pointer does not stick on the default left-click sprite.

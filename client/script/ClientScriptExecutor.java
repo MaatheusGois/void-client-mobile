@@ -134,9 +134,9 @@ final class ClientScriptExecutor {
                 Component200.anInt3713 = intStack[intStackPointer + 2];
                 anInt1156++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(NodeSub14.aClass351_6766, (DisplayModeManagerContainer64.aClass77_9029), -111);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, NodeBase.anInt7276);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, DisplayModeInfo.aClass227_1055.anInt2970);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component200.anInt3713);
+                class348_sub47.particleBuffer.writeByte(false, NodeBase.anInt7276);
+                class348_sub47.particleBuffer.writeByte(false, DisplayModeInfo.aClass227_1055.anInt2970);
+                class348_sub47.particleBuffer.writeByte(false, Component200.anInt3713);
                 HashNodeSub14.enqueueOutboundPacket(-77, class348_sub47);
                 return;
             }
@@ -151,11 +151,11 @@ final class ClientScriptExecutor {
                 if (string_8_.length() > 80) string_8_ = string_8_.substring(0, 80);
                 anInt1157++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component184.aClass351_1987, (DisplayModeManagerContainer64.aClass77_9029), -117);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, (Component31.method1745(string, -65) + 2 + Component31.method1745(string_8_, -65)));
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_9_ - 1);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_10_);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_8_);
+                class348_sub47.particleBuffer.writeByte(false, (Component31.method1745(string, -65) + 2 + Component31.method1745(string_8_, -65)));
+                class348_sub47.particleBuffer.writeString((byte) -5, string);
+                class348_sub47.particleBuffer.writeByte(false, i_9_ - 1);
+                class348_sub47.particleBuffer.writeByte(false, i_10_);
+                class348_sub47.particleBuffer.writeString((byte) -5, string_8_);
                 HashNodeSub14.enqueueOutboundPacket(-85, class348_sub47);
                 return;
             }
@@ -186,7 +186,7 @@ final class ClientScriptExecutor {
             if (i == 5006) {
                 int i_14_ = intStack[--intStackPointer];
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Sprite.aClass351_6925, (DisplayModeManagerContainer64.aClass77_9029), -100);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_14_);
+                class348_sub47.particleBuffer.writeByte(false, i_14_);
                 HashNodeSub14.enqueueOutboundPacket(-70, class348_sub47);
                 return;
             }
@@ -202,11 +202,11 @@ final class ClientScriptExecutor {
                 if (Component353.anInt2581 != 0 || ((!ParametricDefinition.aBoolean9103 || HeapDumper.aBoolean1915) && !Component308.aBoolean5233)) {
                     anInt1159++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((DefinitionSub22.aClass351_9304), (DisplayModeManagerContainer64.aClass77_9029), -116);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_16_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                    AbstractShaderSub4.writeHuffmanString((class348_sub47.aClass348_Sub49_Sub2_7116), -70, string_15_);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(109, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_16_);
+                    class348_sub47.particleBuffer.writeByte(false, 0);
+                    int i_16_ = (class348_sub47.particleBuffer.offset);
+                    class348_sub47.particleBuffer.writeString((byte) -5, string);
+                    AbstractShaderSub4.writeHuffmanString((class348_sub47.particleBuffer), -70, string_15_);
+                    class348_sub47.particleBuffer.writeLengthByte(109, (class348_sub47.particleBuffer.offset) - i_16_);
                     HashNodeSub14.enqueueOutboundPacket(2, class348_sub47);
                     return;
                 }
@@ -371,12 +371,12 @@ final class ClientScriptExecutor {
             if (i == 5059) {
                 anInt1165++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(CacheStore.aClass351_643, (DisplayModeManagerContainer64.aClass77_9029), -93);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_41_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
-                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) 12, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(115, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_41_);
+                class348_sub47.particleBuffer.writeByte(false, 0);
+                int i_41_ = (class348_sub47.particleBuffer.offset);
+                class348_sub47.particleBuffer.writeByte(false, 0);
+                class348_sub47.particleBuffer.writeShort((byte) 107, aClass43_1151.anInt615);
+                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) 12, aClass43_1151.anIntArray617, (class348_sub47.particleBuffer));
+                class348_sub47.particleBuffer.writeLengthByte(115, (class348_sub47.particleBuffer.offset) - i_41_);
                 HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
                 return;
             }
@@ -384,24 +384,24 @@ final class ClientScriptExecutor {
                 String string = stringStack[--stringStackPointer];
                 anInt1166++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component177.aClass351_2109, (DisplayModeManagerContainer64.aClass77_9029), -89);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_42_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
-                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -125, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(102, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_42_);
+                class348_sub47.particleBuffer.writeByte(false, 0);
+                int i_42_ = (class348_sub47.particleBuffer.offset);
+                class348_sub47.particleBuffer.writeString((byte) -5, string);
+                class348_sub47.particleBuffer.writeShort((byte) 107, aClass43_1151.anInt615);
+                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -125, aClass43_1151.anIntArray617, (class348_sub47.particleBuffer));
+                class348_sub47.particleBuffer.writeLengthByte(102, (class348_sub47.particleBuffer.offset) - i_42_);
                 HashNodeSub14.enqueueOutboundPacket(127, class348_sub47);
                 return;
             }
             if (i == 5061) {
                 anInt1165++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(CacheStore.aClass351_643, (DisplayModeManagerContainer64.aClass77_9029), -104);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                int i_43_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 1);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, aClass43_1151.anInt615);
-                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -126, aClass43_1151.anIntArray617, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(92, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_43_);
+                class348_sub47.particleBuffer.writeByte(false, 0);
+                int i_43_ = (class348_sub47.particleBuffer.offset);
+                class348_sub47.particleBuffer.writeByte(false, 1);
+                class348_sub47.particleBuffer.writeShort((byte) 107, aClass43_1151.anInt615);
+                aClass43_1151.aClass348_Sub42_Sub10_614.method3210((byte) -126, aClass43_1151.anIntArray617, (class348_sub47.particleBuffer));
+                class348_sub47.particleBuffer.writeLengthByte(92, (class348_sub47.particleBuffer.offset) - i_43_);
                 HashNodeSub14.enqueueOutboundPacket(-111, class348_sub47);
                 return;
             }
@@ -832,7 +832,7 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5301) {
-                if (Component225.aFrame476 != null) LogicError.method830(Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+                if (Component225.aFrame476 != null) LogicError.method830(Component192.preferences.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
                 return;
             }
             if (i == 5302) {
@@ -875,14 +875,14 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5308) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub8_7227.method1751(-32350);
                 return;
             }
             if (i == 5309) {
                 int i_105_ = intStack[--intStackPointer];
                 if (i_105_ >= 1 && i_105_ <= 2) {
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub8_7227), i_105_);
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub8_7254), i_105_);
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub8_7227), i_105_);
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub8_7254), i_105_);
                     DisplayModeManagerContainer389.savePreferences(37);
                     return;
                 }
@@ -896,10 +896,10 @@ final class ClientScriptExecutor {
                 int i_107_ = intStack[--intStackPointer];
                 anInt1171++;
                 ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((DefinitionSub17.aClass351_9234), (DisplayModeManagerContainer64.aClass77_9029), -101);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, (Component31.method1745(string, -65) + Component31.method1745(string_106_, -65) + 1));
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_106_);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_107_);
+                class348_sub47.particleBuffer.writeByte(false, (Component31.method1745(string, -65) + Component31.method1745(string_106_, -65) + 1));
+                class348_sub47.particleBuffer.writeString((byte) -5, string);
+                class348_sub47.particleBuffer.writeString((byte) -5, string_106_);
+                class348_sub47.particleBuffer.writeByte(false, i_107_);
                 HashNodeSub14.enqueueOutboundPacket(-66, class348_sub47);
                 return;
             }
@@ -940,10 +940,10 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5411) {
-                if (Component225.aFrame476 != null) LogicError.method830(Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+                if (Component225.aFrame476 != null) LogicError.method830(Component192.preferences.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
                 if (RSACipher.aFrame4904 == null) {
                     String string = (Component262.quitUrl != null ? Component262.quitUrl : WaterShaderProgram.method2162(false));
-                    BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, false, -47);
+                    BrowserDetector.openBrowserUrl(string, OggUrlStream.aClass297_8992, Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, false, -47);
                     return;
                 } else {
                     DisplayModeManagerContainer343.saveClientPreferences(97);
@@ -965,11 +965,11 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5421) {
-                if (Component225.aFrame476 != null) LogicError.method830(Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+                if (Component225.aFrame476 != null) LogicError.method830(Component192.preferences.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
                 String string = stringStack[--stringStackPointer];
                 boolean bool_118_ = intStack[--intStackPointer] == 1;
                 String string_119_ = WaterShaderProgram.method2162(false) + string;
-                BrowserDetector.openBrowserUrl(string_119_, OggUrlStream.aClass297_8992, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, bool_118_, 104);
+                BrowserDetector.openBrowserUrl(string_119_, OggUrlStream.aClass297_8992, Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1, bool_118_, 104);
                 return;
             }
             if (i == 5422) {
@@ -1349,7 +1349,7 @@ final class ClientScriptExecutor {
         } else if (i < 6100) {
             if (i == 6001) {
                 int i_146_ = intStack[--intStackPointer];
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub10_7232), i_146_);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub10_7232), i_146_);
                 NodeSub20.method2953((byte) -126);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
@@ -1357,8 +1357,8 @@ final class ClientScriptExecutor {
             }
             if (i == 6002) {
                 boolean bool_147_ = intStack[--intStackPointer] == 1;
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7255), bool_147_ ? 1 : 0);
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261), bool_147_ ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7255), bool_147_ ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7261), bool_147_ ? 1 : 0);
                 NodeSub20.method2953((byte) -122);
                 DefinitionSub9.method3072((byte) 32);
                 DisplayModeManagerContainer389.savePreferences(37);
@@ -1367,47 +1367,47 @@ final class ClientScriptExecutor {
             }
             if (i == 6003) {
                 boolean bool_148_ = intStack[--intStackPointer] == 1;
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub14_7250), bool_148_ ? 2 : 1);
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264), bool_148_ ? 2 : 1);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub14_7250), bool_148_ ? 2 : 1);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub14_7264), bool_148_ ? 2 : 1);
                 DefinitionSub9.method3072((byte) -106);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6005) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub4_7220), intStack[--intStackPointer] == 1 ? 1 : 0);
                 NodeSub20.method2953((byte) -111);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6007) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub13_7236), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub13_7236), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6008) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub1_7246), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub1_7246), intStack[--intStackPointer] == 1 ? 1 : 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6010) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub21_7270), intStack[--intStackPointer] == 1 ? 1 : 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6011) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub7_7238), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub7_7238), intStack[--intStackPointer]);
                 NodeSub20.method2953((byte) -116);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6012) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub28_7230), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub28_7230), intStack[--intStackPointer] == 1 ? 1 : 0);
                 Definition.method3038(-1);
                 DisplayModeManagerContainer154.method773(true);
                 DisplayModeManagerContainer389.savePreferences(37);
@@ -1415,41 +1415,41 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6014) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub18_7259), intStack[--intStackPointer] == 1 ? 2 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub18_7259), intStack[--intStackPointer] == 1 ? 2 : 0);
                 NodeSub20.method2953((byte) -112);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6015) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub16_7247), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub16_7247), intStack[--intStackPointer] == 1 ? 1 : 0);
                 NodeSub20.method2953((byte) -127);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6016) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub20_7248), intStack[--intStackPointer]);
-                SoftwareFallbackShader.method3553(false, (byte) 112, Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350));
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub20_7248), intStack[--intStackPointer]);
+                SoftwareFallbackShader.method3553(false, (byte) 112, Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
                 DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6017) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub5_7240), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub5_7240), intStack[--intStackPointer] == 1 ? 1 : 0);
                 Component243.method352(1);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6018) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7272), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub26_7272), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6019) {
                 int i_149_ = intStack[--intStackPointer];
-                int i_150_ = Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350);
+                int i_150_ = Component192.preferences.aClass239_Sub26_7260.method1838(-32350);
                 if (i_149_ != i_150_) {
                     if (NativeLibLoader.isPostLoginState(true, Component49.clientState)) {
                         if (i_150_ == 0 && Component119.anInt3428 != -1) {
@@ -1461,38 +1461,38 @@ final class ClientScriptExecutor {
                             DisplayModeManagerContainer238.aBoolean1236 = false;
                         } else Component225.method345(i_149_, (byte) -49);
                     }
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260), i_149_);
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub26_7260), i_149_);
                     DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
                 return;
             }
             if (i == 6020) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7234), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub26_7234), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6021) {
-                int i_151_ = Component192.aClass348_Sub51_3959.aClass239_Sub14_7250.method1778(-32350);
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264), intStack[--intStackPointer] == 1 ? 0 : i_151_);
+                int i_151_ = Component192.preferences.aClass239_Sub14_7250.method1778(-32350);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub14_7264), intStack[--intStackPointer] == 1 ? 0 : i_151_);
                 DefinitionSub9.method3072((byte) -118);
                 return;
             }
             if (i == 6023) {
                 int i_152_ = intStack[--intStackPointer];
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub15_7224), i_152_);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub15_7224), i_152_);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6024) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub20_7216), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub20_7216), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6025) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub6_7226), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
@@ -1504,17 +1504,17 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6028) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.customCursorSetting), intStack[--intStackPointer] != 0 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.customCursorSetting), intStack[--intStackPointer] != 0 ? 1 : 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6029) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub13_7236), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub13_7236), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6030) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub9_7256), intStack[--intStackPointer] != 0 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub9_7256), intStack[--intStackPointer] != 0 ? 1 : 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 NodeSub20.method2953((byte) -116);
                 return;
@@ -1529,46 +1529,46 @@ final class ClientScriptExecutor {
                 intStackPointer -= 2;
                 int i_155_ = intStack[intStackPointer];
                 boolean bool_156_ = intStack[intStackPointer + 1] == 1;
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), i_155_);
-                if (!bool_156_) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub29_7229), 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), i_155_);
+                if (!bool_156_) Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6033) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub17_7263), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub17_7263), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 return;
             }
             if (i == 6034) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub24_7235), intStack[--intStackPointer] == 1 ? 1 : 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub24_7235), intStack[--intStackPointer] == 1 ? 1 : 0);
                 DisplayModeManagerContainer389.savePreferences(37);
                 Definition.method3038(-1);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6035) {
-                int i_157_ = Component192.aClass348_Sub51_3959.aClass239_Sub27_7255.method1840(-32350);
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261), intStack[--intStackPointer] == 1 ? 1 : i_157_);
+                int i_157_ = Component192.preferences.aClass239_Sub27_7255.method1840(-32350);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7261), intStack[--intStackPointer] == 1 ? 1 : i_157_);
                 NodeSub20.method2953((byte) -110);
                 DefinitionSub9.method3072((byte) 125);
                 return;
             }
             if (i == 6036) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub23_7231), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub23_7231), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 RuntimeException_Sub1.aBoolean4604 = true;
                 return;
             }
             if (i == 6037) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7215), intStack[--intStackPointer]);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub26_7215), intStack[--intStackPointer]);
                 DisplayModeManagerContainer389.savePreferences(37);
                 r.aBoolean9719 = false;
                 return;
             }
             if (i == 6038) {
                 int i_158_ = intStack[--intStackPointer];
-                int i_159_ = Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350);
+                int i_159_ = Component192.preferences.aClass239_Sub26_7245.method1838(-32350);
                 if (i_158_ != i_159_ && Component119.anInt3428 == Component35.anInt4270) {
                     if (!NativeLibLoader.isPostLoginState(true, Component49.clientState)) {
                         if (i_159_ == 0) {
@@ -1580,7 +1580,7 @@ final class ClientScriptExecutor {
                             DisplayModeManagerContainer238.aBoolean1236 = false;
                         } else Component225.method345(i_158_, (byte) -52);
                     }
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub26_7245), i_158_);
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub26_7245), i_158_);
                     DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
@@ -1589,8 +1589,8 @@ final class ClientScriptExecutor {
             if (i == 6039) {
                 int i_160_ = intStack[--intStackPointer];
                 if (i_160_ > 255 || i_160_ < 0) i_160_ = 0;
-                if (i_160_ != Component192.aClass348_Sub51_3959.aClass239_Sub19_7257.method1805(-32350)) {
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub19_7257), i_160_);
+                if (i_160_ != Component192.preferences.aClass239_Sub19_7257.method1805(-32350)) {
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub19_7257), i_160_);
                     DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                 }
@@ -1598,8 +1598,8 @@ final class ClientScriptExecutor {
             }
             if (i == 6040) {
                 int i_161_ = intStack[--intStackPointer];
-                if (i_161_ != Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350)) {
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222), i_161_);
+                if (i_161_ != Component192.preferences.aClass239_Sub3_7222.method1727(-32350)) {
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub3_7222), i_161_);
                     DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     HashNodeSub3.method3179(0);
@@ -1608,67 +1608,67 @@ final class ClientScriptExecutor {
             }
         } else if (i < 6200) {
             if (i == 6101) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub10_7232.method1764(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub10_7232.method1764(-32350);
                 return;
             }
             if (i == 6102) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub27_7255.method1840(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub27_7255.method1840(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6103) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub14_7250.method1778(-32350) == 2 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub14_7250.method1778(-32350) == 2 ? 1 : 0);
                 return;
             }
             if (i == 6105) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350) == 1 ? 1 : 0;
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub4_7220.method1737(-32350) == 1 ? 1 : 0;
                 return;
             }
             if (i == 6107) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub13_7236.method1776(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub13_7236.method1776(-32350);
                 return;
             }
             if (i == 6108) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub1_7246.method1720(-32350) == 1 ? 1 : 0;
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub1_7246.method1720(-32350) == 1 ? 1 : 0;
                 return;
             }
             if (i == 6110) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub21_7270.method1812(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6111) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub7_7238.method1748(-32350);
                 return;
             }
             if (i == 6112) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub28_7230.method1845(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6114) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1800(-32350) == 2 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub18_7259.method1800(-32350) == 2 ? 1 : 0);
                 return;
             }
             if (i == 6115) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub16_7247.method1789(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub16_7247.method1789(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6116) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub20_7248.method1808(-32350);
                 return;
             }
             if (i == 6117) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1 ? 1 : 0;
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub5_7240.method1739(-32350) == 1 ? 1 : 0;
                 return;
             }
             if (i == 6118) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub26_7272.method1838(-32350);
                 return;
             }
             if (i == 6119) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub26_7260.method1838(-32350);
                 return;
             }
             if (i == 6120) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub26_7234.method1838(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub26_7234.method1838(-32350);
                 return;
             }
             if (i == 6123) {
@@ -1676,35 +1676,35 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6124) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub20_7216.method1808(-32350);
                 return;
             }
             if (i == 6125) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1743(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub6_7226.method1743(-32350);
                 return;
             }
             if (i == 6127) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1771(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub12_7243.method1771(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6128) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.customCursorSetting.getValue(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.customCursorSetting.getValue(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6129) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub13_7236.method1776(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub13_7236.method1776(-32350);
                 return;
             }
             if (i == 6130) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub9_7256.method1759(-32350) == 1 ? 1 : 0;
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub9_7256.method1759(-32350) == 1 ? 1 : 0;
                 return;
             }
             if (i == 6131) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
                 return;
             }
             if (i == 6132) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.getPreferenceValue(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub25_7251.getPreferenceValue(-32350);
                 return;
             }
             if (i == 6133) {
@@ -1712,27 +1712,27 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6135) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub17_7263.method1798(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub17_7263.method1798(-32350);
                 return;
             }
             if (i == 6136) {
-                intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1820(-32350) == 1 ? 1 : 0);
+                intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub24_7235.method1820(-32350) == 1 ? 1 : 0);
                 return;
             }
             if (i == 6138) {
-                intStack[intStackPointer++] = Component329.method1781(Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350), -84, 200);
+                intStack[intStackPointer++] = Component329.method1781(Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350), -84, 200);
                 return;
             }
             if (i == 6139) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.method1818(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub23_7231.method1818(-32350);
                 return;
             }
             if (i == 6142) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub26_7215.method1838(-32350);
                 return;
             }
             if (i == 6143) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub26_7245.method1838(-32350);
                 return;
             }
             if (i == 6144) {
@@ -1740,11 +1740,11 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 6145) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub19_7257.method1805(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub19_7257.method1805(-32350);
                 return;
             }
             if (i == 6146) {
-                intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
+                intStack[intStackPointer++] = Component192.preferences.aClass239_Sub3_7222.method1727(-32350);
                 return;
             }
             if (i == 6147) {
@@ -1863,7 +1863,7 @@ final class ClientScriptExecutor {
                         else {
                             Component387.aBoolean1899 = true;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((DisplayModeManagerContainer64.aClass351_9034), (DisplayModeManagerContainer64.aClass77_9029), -115);
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 101, Component364.anInt8349);
+                            class348_sub47.particleBuffer.writeInt((byte) 101, Component364.anInt8349);
                             HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
                             intStack[intStackPointer++] = 0;
                             return;
@@ -2248,7 +2248,7 @@ final class ClientScriptExecutor {
             } else if (i < 7100) {
                 if (i == 7000) {
                     int i_221_ = Component269.method2478(1000);
-                    intStack[intStackPointer++] = DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
+                    intStack[intStackPointer++] = DisplayModeManagerContainer282.anInt5584 = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
                     intStack[intStackPointer++] = i_221_;
                     NodeSub20.method2953((byte) -113);
                     DisplayModeManagerContainer389.savePreferences(37);
@@ -2284,7 +2284,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 7005) {
-                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub29_7229), 0);
+                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 0);
                     DisplayModeManagerContainer389.savePreferences(37);
                     r.aBoolean9719 = false;
                     return;
@@ -2302,7 +2302,7 @@ final class ClientScriptExecutor {
                     return;
                 }
                 if (i == 7007) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub29_7229.method1848(-32350);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub29_7229.method1848(-32350);
                     return;
                 }
             } else if (i < 7200) {
@@ -2333,136 +2333,136 @@ final class ClientScriptExecutor {
                 }
             } else if (i < 7300) {
                 if (i == 7201) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1736(123) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub4_7220.method1736(123) ? 1 : 0;
                     return;
                 }
                 if (i == 7202) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1809(117) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub21_7270.method1809(117) ? 1 : 0;
                     return;
                 }
                 if (i == 7203) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1747(111) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub7_7238.method1747(111) ? 1 : 0;
                     return;
                 }
                 if (i == 7204) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1801(125) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub18_7259.method1801(125) ? 1 : 0;
                     return;
                 }
                 if (i == 7205) {
-                    intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1806(108) && NodeSub8.toolkit.method3699()) ? 1 : 0;
+                    intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub20_7216.method1806(108) && NodeSub8.toolkit.method3699()) ? 1 : 0;
                     return;
                 }
                 if (i == 7206) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub15_7224.method1786(93) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub15_7224.method1786(93) ? 1 : 0;
                     return;
                 }
                 if (i == 7207) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1744(103) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub6_7226.method1744(103) ? 1 : 0;
                     return;
                 }
                 if (i == 7208) {
-                    intStack[intStackPointer++] = (Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1774(120) && NodeSub8.toolkit.method3627()) ? 1 : 0;
+                    intStack[intStackPointer++] = (Component192.preferences.aClass239_Sub12_7243.method1774(120) && NodeSub8.toolkit.method3627()) ? 1 : 0;
                     return;
                 }
                 if (i == 7209) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub9_7256.method1757(115) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub9_7256.method1757(115) ? 1 : 0;
                     return;
                 }
                 if (i == 7210) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1824(124) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub24_7235.method1824(124) ? 1 : 0;
                     return;
                 }
                 if (i == 7211) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.method1817(108) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub23_7231.method1817(108) ? 1 : 0;
                     return;
                 }
                 if (i == 7212) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub16_7247.method1790(94) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub16_7247.method1790(94) ? 1 : 0;
                     return;
                 }
                 if (i == 7213) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1729(91) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub3_7222.method1729(91) ? 1 : 0;
                     return;
                 }
                 if (i == 7214) {
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.method1831(95) ? 1 : 0;
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub25_7251.method1831(95) ? 1 : 0;
                     return;
                 }
             } else if (i < 7400) {
                 if (i == 7301) {
                     int i_226_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.getValue(3, i_226_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub4_7220.getValue(3, i_226_);
                     return;
                 }
                 if (i == 7302) {
                     int i_227_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.getValue(3, i_227_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub21_7270.getValue(3, i_227_);
                     return;
                 }
                 if (i == 7303) {
                     int i_228_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.getValue(3, i_228_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub7_7238.getValue(3, i_228_);
                     return;
                 }
                 if (i == 7304) {
                     int i_229_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.getValue(3, i_229_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub18_7259.getValue(3, i_229_);
                     return;
                 }
                 if (i == 7305) {
                     int i_230_ = intStack[--intStackPointer];
                     if (NodeSub8.toolkit.method3699()) {
-                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.getValue(3, i_230_);
+                        intStack[intStackPointer++] = Component192.preferences.aClass239_Sub20_7216.getValue(3, i_230_);
                         return;
                     } else intStack[intStackPointer++] = 3;
                     return;
                 }
                 if (i == 7306) {
                     int i_231_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub15_7224.getValue(3, i_231_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub15_7224.getValue(3, i_231_);
                     return;
                 }
                 if (i == 7307) {
                     int i_232_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.getValue(3, i_232_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub6_7226.getValue(3, i_232_);
                     return;
                 }
                 if (i == 7308) {
                     int i_233_ = intStack[--intStackPointer];
                     if (NodeSub8.toolkit.method3627()) {
-                        intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.getValue(3, i_233_);
+                        intStack[intStackPointer++] = Component192.preferences.aClass239_Sub12_7243.getValue(3, i_233_);
                         return;
                     } else intStack[intStackPointer++] = 3;
                     return;
                 }
                 if (i == 7309) {
                     int i_234_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub9_7256.getValue(3, i_234_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub9_7256.getValue(3, i_234_);
                     return;
                 }
                 if (i == 7310) {
                     int i_235_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.getValue(3, i_235_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub24_7235.getValue(3, i_235_);
                     return;
                 }
                 if (i == 7311) {
                     int i_236_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.getValue(3, i_236_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub23_7231.getValue(3, i_236_);
                     return;
                 }
                 if (i == 7312) {
                     int i_237_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub16_7247.getValue(3, i_237_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub16_7247.getValue(3, i_237_);
                     return;
                 }
                 if (i == 7313) {
                     int i_238_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.getValue(3, i_238_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub3_7222.getValue(3, i_238_);
                     return;
                 }
                 if (i == 7314) {
                     int i_239_ = intStack[--intStackPointer];
-                    intStack[intStackPointer++] = Component192.aClass348_Sub51_3959.aClass239_Sub25_7251.getValue(3, i_239_);
+                    intStack[intStackPointer++] = Component192.preferences.aClass239_Sub25_7251.getValue(3, i_239_);
                     return;
                 }
             }
@@ -2594,12 +2594,12 @@ final class ClientScriptExecutor {
             }
             anInt1158++;
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component275.aClass351_2686, DisplayModeManagerContainer64.aClass77_9029, -88);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-            int i_243_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_241_);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, i_242_);
-            AbstractShaderSub4.writeHuffmanString((class348_sub47.aClass348_Sub49_Sub2_7116), -101, string);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(119, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) - i_243_);
+            class348_sub47.particleBuffer.writeByte(false, 0);
+            int i_243_ = (class348_sub47.particleBuffer.offset);
+            class348_sub47.particleBuffer.writeByte(false, i_241_);
+            class348_sub47.particleBuffer.writeByte(false, i_242_);
+            AbstractShaderSub4.writeHuffmanString((class348_sub47.particleBuffer), -101, string);
+            class348_sub47.particleBuffer.writeLengthByte(119, (class348_sub47.particleBuffer.offset) - i_243_);
             HashNodeSub14.enqueueOutboundPacket(124, class348_sub47);
         }
     }
@@ -3666,7 +3666,7 @@ final class ClientScriptExecutor {
                     if (DisplayModeManagerContainer368.isDecimal(string, 73)) i_304_ = NodeSub41.parseInt(true, string);
                     anInt1163++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((NodeSub14.aClass351_6764), (DisplayModeManagerContainer64.aClass77_9029), -112);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 102, i_304_);
+                    class348_sub47.particleBuffer.writeInt((byte) 102, i_304_);
                     HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
                     return;
                 }
@@ -3674,8 +3674,8 @@ final class ClientScriptExecutor {
                     String string = stringStack[--stringStackPointer];
                     anInt1162++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(CacheFileStore.aClass351_4225, (DisplayModeManagerContainer64.aClass77_9029), -96);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string.length() + 1);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+                    class348_sub47.particleBuffer.writeByte(false, string.length() + 1);
+                    class348_sub47.particleBuffer.writeString((byte) -5, string);
                     HashNodeSub14.enqueueOutboundPacket(-81, class348_sub47);
                     return;
                 }
@@ -3683,8 +3683,8 @@ final class ClientScriptExecutor {
                     String string = stringStack[--stringStackPointer];
                     anInt1153++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((DefinitionSub5.aClass351_9130), (DisplayModeManagerContainer64.aClass77_9029), -93);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string.length() + 1);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+                    class348_sub47.particleBuffer.writeByte(false, string.length() + 1);
+                    class348_sub47.particleBuffer.writeString((byte) -5, string);
                     HashNodeSub14.enqueueOutboundPacket(35, class348_sub47);
                     return;
                 }
@@ -3715,7 +3715,7 @@ final class ClientScriptExecutor {
                     int i_311_ = intStack[--intStackPointer];
                     anInt1167++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((GradientPreset.aClass351_9189), (DisplayModeManagerContainer64.aClass77_9029), -121);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_311_);
+                    class348_sub47.particleBuffer.writeShort((byte) 107, i_311_);
                     HashNodeSub14.enqueueOutboundPacket(122, class348_sub47);
                     return;
                 }

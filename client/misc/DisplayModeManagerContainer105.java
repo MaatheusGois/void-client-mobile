@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer105
                     if (class10.anInt188 < 0) {
                         int i_5_ = 8192;
                         int i_6_;
-                        if (class10.anInt178 == 0) i_6_ = ((class10.anInt184 * (class10.aByte180 == 3 ? Component192.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350))) >> 2);
+                        if (class10.anInt178 == 0) i_6_ = ((class10.anInt184 * (class10.aByte180 == 3 ? Component192.preferences.aClass239_Sub26_7215.method1838(-32350) : Component192.preferences.aClass239_Sub26_7272.method1838(-32350))) >> 2);
                         else {
                             int i_7_ = 0x3 & (class10.anInt178 >> 24);
                             if ((Component72.localPlayer.plane) == i_7_) {
@@ -113,7 +113,7 @@ final class DisplayModeManagerContainer105
                                     continue;
                                 }
                                 if (i_14_ < 0) i_14_ = 0;
-                                i_6_ = ((i_8_ + -i_14_) * (Component192.aClass348_Sub51_3959.aClass239_Sub26_7234.method1838(-32350) * class10.anInt184) / i_8_) >> 2;
+                                i_6_ = ((i_8_ + -i_14_) * (Component192.preferences.aClass239_Sub26_7234.method1838(-32350) * class10.anInt184) / i_8_) >> 2;
                                 if ((class10.aClass318_Sub1_172 != null) && (class10.aClass318_Sub1_172 instanceof Component327)) {
                                     Component327 class318_sub1_sub3 = ((Component327) (class10.aClass318_Sub1_172));
                                     short i_15_ = (class318_sub1_sub3.aShort8743);
@@ -151,16 +151,16 @@ final class DisplayModeManagerContainer105
         }
         anInt4890++;
         if (DisplayModeManagerContainer238.aBoolean1236 && !Component385.method1296(true)) {
-            if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1) {
-                if (Component246.aClass348_Sub16_Sub3_2718 != null) DefinitionSub15.method3086(2, Component246.aClass348_Sub16_Sub3_2718, Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350), Component54.aClass45_8667, false, 0, Component119.anInt3428);
-                else NodeSub1Sub3.method2732(0, Component119.anInt3428, false, 124, Component54.aClass45_8667, Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350));
+            if (Component192.preferences.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1) {
+                if (Component246.aClass348_Sub16_Sub3_2718 != null) DefinitionSub15.method3086(2, Component246.aClass348_Sub16_Sub3_2718, Component192.preferences.aClass239_Sub26_7260.method1838(-32350), Component54.aClass45_8667, false, 0, Component119.anInt3428);
+                else NodeSub1Sub3.method2732(0, Component119.anInt3428, false, 124, Component54.aClass45_8667, Component192.preferences.aClass239_Sub26_7260.method1838(-32350));
             }
             DisplayModeManagerContainer238.aBoolean1236 = false;
             Component246.aClass348_Sub16_Sub3_2718 = null;
-        } else if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1 && !Component385.method1296(true)) {
+        } else if (Component192.preferences.aClass239_Sub26_7260.method1838(-32350) != 0 && Component119.anInt3428 != -1 && !Component385.method1296(true)) {
             Renderable.anInt3973++;
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(GlToolkitSub2.aClass351_7554, DisplayModeManagerContainer64.aClass77_9029, -107);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 118, Component119.anInt3428);
+            class348_sub47.particleBuffer.writeInt((byte) 118, Component119.anInt3428);
             HashNodeSub14.enqueueOutboundPacket(-54, class348_sub47);
             Component119.anInt3428 = -1;
         }

@@ -73,7 +73,7 @@ final class StringDefinition extends HashNode {
 
     static final void method3225(int i) {
         anInt9589++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub14_7264.method1778(-32350) == 2) {
+        if (Component192.preferences.aClass239_Sub14_7264.method1778(-32350) == 2) {
             byte i_5_ = (byte) (0xff & -4 + DisplayModeManagerContainer341.anInt6006);
             int i_6_ = DisplayModeManagerContainer341.anInt6006 % AbstractShaderSub4.anInt7319;
             for (int i_7_ = 0; i_7_ < 4; i_7_++) {

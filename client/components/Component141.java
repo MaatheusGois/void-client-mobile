@@ -162,8 +162,8 @@ final class Component141
         if (!string.equals("")) {
             TheoraVideoPlayer.anInt1498++;
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer28.aClass351_8724, DisplayModeManagerContainer64.aClass77_9029, -124);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+            class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
+            class348_sub47.particleBuffer.writeString((byte) -5, string);
             HashNodeSub14.enqueueOutboundPacket(121, class348_sub47);
         }
     }

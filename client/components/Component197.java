@@ -53,7 +53,7 @@ final class Component197
                 this.y = i_3_;
                 aByte10079 = (byte) i_4_;
                 aByte10062 = (byte) i_5_;
-                aBoolean10064 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10066 && Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) != 0);
+                aBoolean10064 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10066 && Component192.preferences.aClass239_Sub7_7238.method1748(-32350) != 0);
                 int i_7_ = 2048;
                 if (aBoolean10090) i_7_ |= 0x10000;
                 Component245 class2 = method2481(aBoolean10064, i_7_, -4, var_ha);

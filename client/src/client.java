@@ -126,7 +126,7 @@ public final class client extends Applet_Sub1 {
         HardwareProbe.aClass248_6601 = new Component253();
         MenuEntry.initArrayPools(new int[]{20, 260}, new int[]{1000, 100}, 0);
         if (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE) Component17.aByteArrayArray3882 = new byte[50][];
-        Component192.aClass348_Sub51_3959 = DisplayModeManagerContainer288.method247(24916);
+        Component192.preferences = DisplayModeManagerContainer288.method247(24916);
         if (DisplayModeManagerContainer345.aClass364_165 == Component326.LIVE) MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
         else if (Component168.method2354(DisplayModeManagerContainer345.aClass364_165, i ^ ~0x7044)) {
             MenuOpener.aClass161_4839.aString2147 = this.getCodeBase().getHost();
@@ -940,7 +940,7 @@ public final class client extends Applet_Sub1 {
     final void pulseGame(byte i) {
         if (i != 93) anIntArray5176 = null;
         anInt5183++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
+        if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
             try {
                 processGameTick(i ^ 0x66);
             } catch (Throwable throwable) {
@@ -1593,7 +1593,7 @@ public final class client extends Applet_Sub1 {
     final void pulseDrawFrame(int i) {
         if (i != -11018) closeResources(9);
         anInt5186++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
+        if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
             try {
                 method116(true);
             } catch (Throwable throwable) {
@@ -1845,7 +1845,7 @@ public final class client extends Applet_Sub1 {
     static final void method115() {
         int i = ShaderCompilerSub1.anInt6513;
         int[] is = ShaderProgramSub7.anIntArray6290;
-        int i_112_ = Component192.aClass348_Sub51_3959.aClass239_Sub13_7236.method1776(-32350);
+        int i_112_ = Component192.preferences.aClass239_Sub13_7236.method1776(-32350);
         boolean bool = i_112_ == 1 && i > 200 || i_112_ == 0 && i > 50;
         for (int i_113_ = 0; i_113_ < i; i_113_++) {
             Player player = InterfaceRenderer.players[is[i_113_]];
@@ -1970,7 +1970,7 @@ public final class client extends Applet_Sub1 {
                     RuntimeException_Sub1.aBoolean4604 = false;
                 }
             }
-            if (Component225.aFrame476 != null && !Component143.aBoolean2329 && Component92.method1977((byte) -79, Component49.clientState)) LogicError.method830(Component192.aClass348_Sub51_3959.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
+            if (Component225.aFrame476 != null && !Component143.aBoolean2329 && Component92.method1977((byte) -79, Component49.clientState)) LogicError.method830(Component192.preferences.aClass239_Sub8_7227.method1751(-32350), -1, (byte) 102, false, -1);
             boolean bool_120_ = false;
             if (Component297.aBoolean4726) {
                 bool_120_ = true;
@@ -2038,7 +2038,7 @@ public final class client extends Applet_Sub1 {
                 }
             }
             Component240.method598(9013);
-            int i = Component192.aClass348_Sub51_3959.aClass239_Sub17_7263.method1798(-32350);
+            int i = Component192.preferences.aClass239_Sub17_7263.method1798(-32350);
             if (i == 0) SpriteAtlasShader.sleep((byte) -127, 15L);
             else if (i != 1) {
                 if (i != 2) {
@@ -2046,8 +2046,8 @@ public final class client extends Applet_Sub1 {
                 } else SpriteAtlasShader.sleep((byte) -97, 5L);
             } else SpriteAtlasShader.sleep((byte) -104, 10L);
             if (Component144.aBoolean3988) ReliefShader.method1416(5);
-            if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 0);
+            if (Component192.preferences.aClass239_Sub11_7265.method1768(-32350) == 1 && Component49.clientState == 3 && r.anInt9721 != -1) {
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub11_7265), 0);
                 DisplayModeManagerContainer389.savePreferences(37);
             }
         }
@@ -2099,18 +2099,18 @@ public final class client extends Applet_Sub1 {
             if (i < 40) aClass262_5185 = null;
             if (Component72.localPlayer != null)
                 string += ("2)" + Component117.anInt4372 + "," + (NodeBaseSub2.regionTileX + (Component72.localPlayer.anIntArray10320[0])) + "," + (Component330.regionTileY + (Component72.localPlayer.anIntArray10317[0])) + "|");
-            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
-            string += "7)" + Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) + "|";
-            string += "8)" + Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) + "|";
-            string += "9)" + Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1800(-32350) + "|";
-            string += "10)" + Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1820(-32350) + "|";
-            string += "11)" + Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1771(-32350) + "|";
-            string += "12)" + Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) + "|";
+            string += ("3)" + Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) + "|4)" + Component192.preferences.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
+            string += "7)" + Component192.preferences.aClass239_Sub28_7230.method1845(-32350) + "|";
+            string += "8)" + Component192.preferences.aClass239_Sub7_7238.method1748(-32350) + "|";
+            string += "9)" + Component192.preferences.aClass239_Sub18_7259.method1800(-32350) + "|";
+            string += "10)" + Component192.preferences.aClass239_Sub24_7235.method1820(-32350) + "|";
+            string += "11)" + Component192.preferences.aClass239_Sub12_7243.method1771(-32350) + "|";
+            string += "12)" + Component192.preferences.aClass239_Sub27_7261.method1840(-32350) + "|";
             string += "13)" + Component127.anInt2964 + "|";
             string += "14)" + Component49.clientState;
             if (DefinitionSub20.aClass348_Sub4_9264 != null) string += "|15)" + (DefinitionSub20.aClass348_Sub4_9264.anInt6609);
             try {
-                if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
+                if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
                     Field field = ClassLoader.class.getDeclaredField("nativeLibraries");
                     field.setAccessible(true);
                     Vector vector = ((Vector) field.get((aClass5189 != null ? aClass5189 : (aClass5189 = client.class)).getClassLoader()));

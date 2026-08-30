@@ -47,7 +47,7 @@ final class NodeSub41
                     int i_14_ = i_2_ + i_10_;
                     if (i_13_ > 0 && i_14_ > 0 && i_13_ < -1 + i && -1 + i_1_ > i_14_) {
                         Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, i_4_);
-                        if (i_12_ != 22 || Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350) != 0 || class51.anInt874 != 0 || (class51.anInt920 == 1) || class51.aBoolean947) {
+                        if (i_12_ != 22 || Component192.preferences.aClass239_Sub4_7220.method1737(-32350) != 0 || class51.anInt874 != 0 || (class51.anInt920 == 1) || class51.aBoolean947) {
                             bool_7_ = true;
                             if (!class51.method485(9773)) {
                                 Component101.anInt2101++;
@@ -76,11 +76,11 @@ final class NodeSub41
 
     static final void method3157(int i, byte i_15_, int i_16_, int i_17_, boolean bool) {
         anInt7049++;
-        if (bool || i_16_ != GraphicsToolkit.anInt4581 || DisplayModeManagerContainer363.anInt4095 != i || (Component117.anInt4372 != Component385.anInt2204 && Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 1)) {
+        if (bool || i_16_ != GraphicsToolkit.anInt4581 || DisplayModeManagerContainer363.anInt4095 != i || (Component117.anInt4372 != Component385.anInt2204 && Component192.preferences.aClass239_Sub27_7261.method1840(-32350) != 1)) {
             GraphicsToolkit.anInt4581 = i_16_;
             DisplayModeManagerContainer363.anInt4095 = i;
             Component385.anInt2204 = Component117.anInt4372;
-            if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) Component385.anInt2204 = 0;
+            if (Component192.preferences.aClass239_Sub27_7261.method1840(-32350) == 1) Component385.anInt2204 = 0;
             Buffer.setClientState(2, i_17_);
             Component149.method3511(true, Applet_Sub1.aClass324_20, Component163.aClass143_3179, FriendsIgnoreList.aClass274_3495.getLocalized(ObjectDeserializer.languageId, 544), 2, NodeSub8.toolkit);
             int i_18_ = NodeBaseSub2.regionTileX;

@@ -24,7 +24,7 @@ final class Component359
         anInt3155++;
         TheoraVideoPlayer.anInt1498++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer28.aClass351_8724, DisplayModeManagerContainer64.aClass77_9029, -99);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
+        class348_sub47.particleBuffer.writeByte(false, 0);
         HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
     }
 

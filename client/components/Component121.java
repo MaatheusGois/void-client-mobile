@@ -36,8 +36,8 @@ final class Component121
     static final void method3614(int i, int i_3_, int i_4_, ParticleSystem class348_sub47, int i_5_) {
         anInt4539++;
         if (i_5_ != -19692) method3613(10);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 124, i);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_4_);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_3_);
+        class348_sub47.particleBuffer.writeInt((byte) 124, i);
+        class348_sub47.particleBuffer.writeShort((byte) 107, i_4_);
+        class348_sub47.particleBuffer.writeShort((byte) 107, i_3_);
     }
 }

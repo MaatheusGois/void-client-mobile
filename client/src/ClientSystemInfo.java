@@ -36,16 +36,16 @@ final class ClientSystemInfo extends Node {
             if (Component49.clientState == 10) {
                 while (ShaderProgram.method2138(i ^ 0x2ca2)) {
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component211.aClass351_1961, (DisplayModeManagerContainer64.aClass77_9029), -92);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                    ObjectDeserializer.writeReflectionCheckResults((byte) 121, (class348_sub47.aClass348_Sub49_Sub2_7116));
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(113, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) + -i_1_);
+                    class348_sub47.particleBuffer.writeByte(false, 0);
+                    int i_1_ = (class348_sub47.particleBuffer.offset);
+                    ObjectDeserializer.writeReflectionCheckResults((byte) 121, (class348_sub47.particleBuffer));
+                    class348_sub47.particleBuffer.writeLengthByte(113, (class348_sub47.particleBuffer.offset) + -i_1_);
                     HashNodeSub14.enqueueOutboundPacket(119, class348_sub47);
                 }
                 if (Component323.aClass348_Sub26_5881 != null) {
                     if ((Component323.aClass348_Sub26_5881.anInt6887) != -1) {
                         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((AbstractShaderSub4.aClass351_7318), (DisplayModeManagerContainer64.aClass77_9029), -81);
-                        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component323.aClass348_Sub26_5881.anInt6887);
+                        class348_sub47.particleBuffer.writeShort((byte) 107, Component323.aClass348_Sub26_5881.anInt6887);
                         HashNodeSub14.enqueueOutboundPacket(122, class348_sub47);
                         Component323.aClass348_Sub26_5881 = null;
                         MatrixSub2.aLong5745 = Component240.currentTimeMillis(-106) + 30000L;
@@ -56,7 +56,7 @@ final class ClientSystemInfo extends Node {
                     ParticleSystem class348_sub47 = null;
                     int i_2_ = 0;
                     for (NodeSub45 class348_sub45_3_ = ((NodeSub45) CacheNodeSub1.aClass262_10479.first(4)); class348_sub45_3_ != null; class348_sub45_3_ = (NodeSub45) CacheNodeSub1.aClass262_10479.next((byte) 79)) {
-                        if (class348_sub47 != null && (class348_sub47.aClass348_Sub49_Sub2_7116.offset - i_2_ >= 240)) break;
+                        if (class348_sub47 != null && (class348_sub47.particleBuffer.offset - i_2_ >= 240)) break;
                         class348_sub45_3_.unlink((byte) 107);
                         int i_4_ = class348_sub45_3_.getY(-15);
                         if (i_4_ >= -1) {
@@ -70,8 +70,8 @@ final class ClientSystemInfo extends Node {
                             if (class348_sub47 == null) {
                                 CollisionMap.anInt4450++;
                                 class348_sub47 = (ParticleShader.createOutboundPacket(StringDefinition.aClass351_9590, DisplayModeManagerContainer64.aClass77_9029, -94));
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                                i_2_ = class348_sub47.aClass348_Sub49_Sub2_7116.offset;
+                                class348_sub47.particleBuffer.writeByte(false, 0);
+                                i_2_ = class348_sub47.particleBuffer.offset;
                             }
                             int i_6_ = -BufferCacheSub2.anInt8270 + i_5_;
                             BufferCacheSub2.anInt8270 = i_5_;
@@ -82,27 +82,27 @@ final class ClientSystemInfo extends Node {
                                 if (i_8_ < 32 && i_6_ >= -128 && i_6_ <= 127 && i_7_ >= -128 && i_7_ <= 127) {
                                     i_6_ += 128;
                                     i_7_ += 128;
-                                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 128 + i_8_);
-                                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_7_ + (i_6_ << 8));
+                                    class348_sub47.particleBuffer.writeByte(false, 128 + i_8_);
+                                    class348_sub47.particleBuffer.writeShort((byte) 107, i_7_ + (i_6_ << 8));
                                 } else if (i_8_ >= 32) {
-                                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, 57344 + i_8_);
-                                    if (i_5_ == 1 || i_4_ == -1) class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 99, -2147483648);
-                                    else class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 101, i_4_ << 16 | i_5_);
+                                    class348_sub47.particleBuffer.writeShort((byte) 107, 57344 + i_8_);
+                                    if (i_5_ == 1 || i_4_ == -1) class348_sub47.particleBuffer.writeInt((byte) 99, -2147483648);
+                                    else class348_sub47.particleBuffer.writeInt((byte) 101, i_4_ << 16 | i_5_);
                                 } else {
-                                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 192 + i_8_);
-                                    if (i_5_ != 1 && i_4_ != -1) class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 100, i_5_ | i_4_ << 16);
-                                    else class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 114, -2147483648);
+                                    class348_sub47.particleBuffer.writeByte(false, 192 + i_8_);
+                                    if (i_5_ != 1 && i_4_ != -1) class348_sub47.particleBuffer.writeInt((byte) 100, i_5_ | i_4_ << 16);
+                                    else class348_sub47.particleBuffer.writeInt((byte) 114, -2147483648);
                                 }
                             } else {
                                 i_6_ += 32;
                                 i_7_ += 32;
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (i_7_ + (i_6_ << 6) + (i_8_ << 12)));
+                                class348_sub47.particleBuffer.writeShort((byte) 107, (i_7_ + (i_6_ << 6) + (i_8_ << 12)));
                             }
                             Component117.aLong4367 = class348_sub45_3_.getWhen((byte) -109);
                         }
                     }
                     if (class348_sub47 != null) {
-                        class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(105, class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_2_);
+                        class348_sub47.particleBuffer.writeLengthByte(105, class348_sub47.particleBuffer.offset + -i_2_);
                         HashNodeSub14.enqueueOutboundPacket(23, class348_sub47);
                     }
                 }
@@ -122,21 +122,21 @@ final class ClientSystemInfo extends Node {
                     int i_12_ = (int) l;
                     RunescapeInfo.anInt182++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(DisplayModeManagerContainer91.aClass351_395, (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, i_12_ | i_11_ << 15);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 121, i_9_ << 16 | i_10_);
+                    class348_sub47.particleBuffer.writeShort((byte) 107, i_12_ | i_11_ << 15);
+                    class348_sub47.particleBuffer.writeInt((byte) 121, i_9_ << 16 | i_10_);
                     HashNodeSub14.enqueueOutboundPacket(25, class348_sub47);
                 }
                 if (Component193.anInt3246 > 0) {
                     DefinitionSub26.anInt9348++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((ShaderCompilerSub1Sub1.aClass351_8798), (DisplayModeManagerContainer64.aClass77_9029), -111);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 3 * Component193.anInt3246);
+                    class348_sub47.particleBuffer.writeByte(false, 3 * Component193.anInt3246);
                     for (int i_13_ = 0; (i_13_ < Component193.anInt3246); i_13_++) {
                         Interface6 interface6 = Component17.anInterface6Array3884[i_13_];
                         long l = ((interface6.getWhen((byte) -29) + -NodeSub7.aLong6651) / 50L);
                         NodeSub7.aLong6651 = interface6.getWhen((byte) 106);
                         if (l > 65535L) l = 65535L;
-                        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, interface6.getKeyCode(false));
-                        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) l);
+                        class348_sub47.particleBuffer.writeByte(false, interface6.getKeyCode(false));
+                        class348_sub47.particleBuffer.writeShort((byte) 107, (int) l);
                     }
                     HashNodeSub14.enqueueOutboundPacket(-49, class348_sub47);
                 }
@@ -146,25 +146,25 @@ final class ClientSystemInfo extends Node {
                     DummyClass.aBoolean10174 = false;
                     Component335.anInt2035 = 20;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component337.aClass351_3648, (DisplayModeManagerContainer64.aClass77_9029), i + -11549);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAddLittle(i ^ 0x3c4d, (int) Component112.cameraYaw >> 3);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, (int) DisplayModeManagerContainer154.cameraPitch >> 3);
+                    class348_sub47.particleBuffer.writeShortAddLittle(i ^ 0x3c4d, (int) Component112.cameraYaw >> 3);
+                    class348_sub47.particleBuffer.writeShort((byte) 107, (int) DisplayModeManagerContainer154.cameraPitch >> 3);
                     HashNodeSub14.enqueueOutboundPacket(-31, class348_sub47);
                 }
                 if (DisplayModeManagerContainer322.aBoolean4278 != Component143.aBoolean2329) {
                     Component209.anInt3460++;
                     DisplayModeManagerContainer322.aBoolean4278 = Component143.aBoolean2329;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((InputStream_Sub1.aClass351_77), (DisplayModeManagerContainer64.aClass77_9029), i ^ ~0x2cc8);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, !Component143.aBoolean2329 ? 0 : 1);
+                    class348_sub47.particleBuffer.writeByte(false, !Component143.aBoolean2329 ? 0 : 1);
                     HashNodeSub14.enqueueOutboundPacket(i + -11501, class348_sub47);
                 }
                 if (!r.aBoolean9719) {
                     Component240.anInt1110++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component182.aClass351_9743), (DisplayModeManagerContainer64.aClass77_9029), -113);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                    int i_14_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-                    Buffer class348_sub49 = Component192.aClass348_Sub51_3959.method3427(i ^ 0x2cb0);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 82);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(96, (class348_sub47.aClass348_Sub49_Sub2_7116.offset) + -i_14_);
+                    class348_sub47.particleBuffer.writeByte(false, 0);
+                    int i_14_ = (class348_sub47.particleBuffer.offset);
+                    Buffer class348_sub49 = Component192.preferences.method3427(i ^ 0x2cb0);
+                    class348_sub47.particleBuffer.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 82);
+                    class348_sub47.particleBuffer.writeLengthByte(96, (class348_sub47.particleBuffer.offset) + -i_14_);
                     HashNodeSub14.enqueueOutboundPacket(i + -11473, class348_sub47);
                     r.aBoolean9719 = true;
                 }
@@ -338,7 +338,7 @@ final class ClientSystemInfo extends Node {
                         if (DisplayModeManagerContainer87.aBoolean3103) {
                             Component122.anInt1568++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((GlToolkitSub2.aClass351_7715), (DisplayModeManagerContainer64.aClass77_9029), i + -11525);
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeInt((byte) 117, (InputStream_Sub2.anInt85 << 14 | (DefinitionSub26.anInt9349 << 28) | NpcComposition.anInt1404));
+                            class348_sub47.particleBuffer.writeInt((byte) 117, (InputStream_Sub2.anInt85 << 14 | (DefinitionSub26.anInt9349 << 28) | NpcComposition.anInt1404));
                             HashNodeSub14.enqueueOutboundPacket(30, class348_sub47);
                             DisplayModeManagerContainer87.aBoolean3103 = false;
                         }

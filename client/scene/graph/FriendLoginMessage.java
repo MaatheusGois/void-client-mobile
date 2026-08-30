@@ -27,7 +27,7 @@ final class FriendLoginMessage extends RenderableSub9 {
             DisplayModeInfo[] class57s = Component248.getDisplayModes((byte) -107, OggUrlStream.aClass297_8992);
             DisplayModeInfo[] class57s_0_ = new DisplayModeInfo[class57s.length];
             int i_1_ = 0;
-            int i_2_ = Component192.aClass348_Sub51_3959.aClass239_Sub23_7231.method1818(-32350);
+            int i_2_ = Component192.preferences.aClass239_Sub23_7231.method1818(-32350);
             while_108_:
             for (int i_3_ = 0; class57s.length > i_3_; i_3_++) {
                 DisplayModeInfo class57 = class57s[i_3_];

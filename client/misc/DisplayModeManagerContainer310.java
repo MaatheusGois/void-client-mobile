@@ -29,9 +29,9 @@ final class DisplayModeManagerContainer310
 
     static final void method298(boolean bool, int i, int i_0_, int i_1_, int i_2_) {
         anInt354++;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) HashNodeSub3.method3177(-98, false);
+        if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) HashNodeSub3.method3177(-98, false);
         else {
-            Component331.anInt1720 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
+            Component331.anInt1720 = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
             SoftwareFallbackShader.method3553(true, (byte) 103, 0);
         }
         TheoraVideoPlayer.aBoolean1500 = bool;

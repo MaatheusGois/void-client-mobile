@@ -98,15 +98,15 @@ final class TheoraVideoPlayer {
                     DisplayModeManagerContainer273.aClass144_5800 = null;
                     NodeSub3.method2739(0);
                     ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, DisplayModeManagerContainer109.aClass29_2339.anInt400);
+                    class348_sub47.particleBuffer.writeByte(false, DisplayModeManagerContainer109.aClass29_2339.anInt400);
                     HashNodeSub14.enqueueOutboundPacket(9, class348_sub47);
                     Component302.method1802(0);
                     Component241.anInt2955 = 3;
                 }
                 if (Component241.anInt2955 == 3) {
                     if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 107)) return;
-                    DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -118, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                    int i_3_ = ((Component80.aClass348_Sub49_Sub2_3813.payload[0]) & 0xff);
+                    DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -118, (Component80.packetBuffer.payload));
+                    int i_3_ = ((Component80.packetBuffer.payload[0]) & 0xff);
                     if (i_3_ != 0) {
                         Component241.anInt2955 = 0;
                         WorldNameText.method254(i_3_, (byte) -113);
@@ -115,7 +115,7 @@ final class TheoraVideoPlayer {
                         InflaterDecompressor.returnFromLoginFailure((byte) 3);
                         return;
                     }
-                    Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+                    Component80.packetBuffer.offset = 0;
                     Buffer class348_sub49 = new Buffer(518);
                     int[] is = new int[4];
                     is[0] = (int) (Math.random() * 9.9999999E7);
@@ -134,7 +134,7 @@ final class TheoraVideoPlayer {
                     class348_sub49.applyRsa(Sprite.aBigInteger6921, (byte) -76, (Component269.aBigInteger8762));
                     NodeSub3.method2739(0);
                     ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
-                    DisplayModeManagerContainer207 class348_sub49_sub2 = (class348_sub47.aClass348_Sub49_Sub2_7116);
+                    DisplayModeManagerContainer207 class348_sub49_sub2 = (class348_sub47.particleBuffer);
                     if (Component205.anInt5969 == 2) {
                         if (Component49.clientState != 13) class348_sub49_sub2.writeByte(false, DisplayModeManagerContainer109.aClass29_2342.anInt400);
                         else class348_sub49_sub2.writeByte(false, DisplayModeManagerContainer109.aClass29_2344.anInt400);
@@ -148,11 +148,11 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeByte(false, MenuEntry.getWindowMode(-71));
                         class348_sub49_sub2.writeShort((byte) 107, Component236.canvasWidth);
                         class348_sub49_sub2.writeShort((byte) 107, PacketReader.canvasHeight);
-                        class348_sub49_sub2.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
+                        class348_sub49_sub2.writeByte(false, Component192.preferences.aClass239_Sub20_7248.method1808(-32350));
                         BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
                         class348_sub49_sub2.writeString((byte) -5, Component205.settingsCookie);
                         class348_sub49_sub2.writeInt((byte) 120, Connection.affiliateId);
-                        Buffer class348_sub49_8_ = Component192.aClass348_Sub51_3959.method3427(24);
+                        Buffer class348_sub49_8_ = Component192.preferences.method3427(24);
                         class348_sub49_sub2.writeByte(false, (class348_sub49_8_.offset));
                         class348_sub49_sub2.writeBytes(class348_sub49_8_.offset, 0, (class348_sub49_8_.payload), 74);
                         r.aBoolean9719 = true;
@@ -189,13 +189,13 @@ final class TheoraVideoPlayer {
                     DisplayModeManagerContainer64.aClass77_9029 = new DisplayModeManagerContainer123(is);
                     for (int i_10_ = 0; i_10_ < 4; i_10_++)
                         is[i_10_] += 50;
-                    Component80.aClass348_Sub49_Sub2_3813.method3406(-111, is);
+                    Component80.packetBuffer.method3406(-111, is);
                     Component241.anInt2955 = 4;
                 }
                 if (Component241.anInt2955 == 4) {
                     if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 94)) return;
-                    DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -117, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                    int i_11_ = ((Component80.aClass348_Sub49_Sub2_3813.payload[0]) & 0xff);
+                    DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -117, (Component80.packetBuffer.payload));
+                    int i_11_ = ((Component80.packetBuffer.payload[0]) & 0xff);
                     if (i_11_ != 21) {
                         if (i_11_ == 29) Component241.anInt2955 = 13;
                         else {
@@ -231,7 +231,7 @@ final class TheoraVideoPlayer {
                 if (Component241.anInt2955 == 6) {
                     NodeSub3.method2739(0);
                     ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
-                    DisplayModeManagerContainer207 class348_sub49_sub2 = (class348_sub47.aClass348_Sub49_Sub2_7116);
+                    DisplayModeManagerContainer207 class348_sub49_sub2 = (class348_sub47.particleBuffer);
                     class348_sub49_sub2.method3416(-18, DisplayModeManagerContainer64.aClass77_9029);
                     class348_sub49_sub2.method3408((DisplayModeManagerContainer109.aClass29_2351.anInt400), 18676);
                     HashNodeSub14.enqueueOutboundPacket(-87, class348_sub47);
@@ -239,8 +239,8 @@ final class TheoraVideoPlayer {
                     Component241.anInt2955 = 4;
                 } else if (Component241.anInt2955 == 7) {
                     if (DefinitionSub8.aClass238_9165.availableAtLeast(1, 118)) {
-                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -109, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                        int i_12_ = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
+                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -109, (Component80.packetBuffer.payload));
+                        int i_12_ = 0xff & (Component80.packetBuffer.payload[0]);
                         Component241.anInt2955 = 0;
                         Component227.anInt1121 = (3 + i_12_) * 60;
                         WorldNameText.method254(21, (byte) -95);
@@ -250,9 +250,9 @@ final class TheoraVideoPlayer {
                     }
                 } else if (Component241.anInt2955 == 13) {
                     if (DefinitionSub8.aClass238_9165.availableAtLeast(1, 102)) {
-                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -128, (Component80.aClass348_Sub49_Sub2_3813.payload));
+                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -128, (Component80.packetBuffer.payload));
                         Component241.anInt2955 = 0;
-                        HashNodeSub7.anInt9541 = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
+                        HashNodeSub7.anInt9541 = 0xff & (Component80.packetBuffer.payload[0]);
                         WorldNameText.method254(29, (byte) -97);
                         DefinitionSub8.aClass238_9165.close((byte) 36);
                         DefinitionSub8.aClass238_9165 = null;
@@ -260,13 +260,13 @@ final class TheoraVideoPlayer {
                     }
                 } else if (Component241.anInt2955 == 8) {
                     if (DefinitionSub8.aClass238_9165.availableAtLeast(1, 107)) {
-                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -107, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                        DisplayModeManagerContainer154.anInt1288 = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
+                        DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -107, (Component80.packetBuffer.payload));
+                        DisplayModeManagerContainer154.anInt1288 = 0xff & (Component80.packetBuffer.payload[0]);
                         Component241.anInt2955 = 9;
                     }
                 } else {
                     if (Component241.anInt2955 == 9) {
-                        DisplayModeManagerContainer207 class348_sub49_sub2 = Component80.aClass348_Sub49_Sub2_3813;
+                        DisplayModeManagerContainer207 class348_sub49_sub2 = Component80.packetBuffer;
                         if (Component205.anInt5969 == 2) {
                             if (!DefinitionSub8.aClass238_9165.availableAtLeast(DisplayModeManagerContainer154.anInt1288, 93)) return;
                             DefinitionSub8.aClass238_9165.readBytes(DisplayModeManagerContainer154.anInt1288, 0, (byte) 60, (class348_sub49_sub2.payload));
@@ -355,11 +355,11 @@ final class TheoraVideoPlayer {
                     }
                     if (Component241.anInt2955 == 11) {
                         if (!DefinitionSub8.aClass238_9165.availableAtLeast(3, 94)) return;
-                        DefinitionSub8.aClass238_9165.readBytes(3, 0, (byte) 11, (Component80.aClass348_Sub49_Sub2_3813.payload));
+                        DefinitionSub8.aClass238_9165.readBytes(3, 0, (byte) 11, (Component80.packetBuffer.payload));
                         Component241.anInt2955 = 12;
                     }
                     if (Component241.anInt2955 == 12) {
-                        DisplayModeManagerContainer207 class348_sub49_sub2 = Component80.aClass348_Sub49_Sub2_3813;
+                        DisplayModeManagerContainer207 class348_sub49_sub2 = Component80.packetBuffer;
                         class348_sub49_sub2.offset = 0;
                         if (class348_sub49_sub2.method3404(-1510)) {
                             if (!DefinitionSub8.aClass238_9165.availableAtLeast(1, 110)) return;
@@ -371,17 +371,17 @@ final class TheoraVideoPlayer {
                     }
                     if (Component241.anInt2955 == 10) {
                         if (DefinitionSub8.aClass238_9165.availableAtLeast(DefinitionSub25.anInt9341, 96)) {
-                            DefinitionSub8.aClass238_9165.readBytes(DefinitionSub25.anInt9341, 0, (byte) 28, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                            Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+                            DefinitionSub8.aClass238_9165.readBytes(DefinitionSub25.anInt9341, 0, (byte) 28, (Component80.packetBuffer.payload));
+                            Component80.packetBuffer.offset = 0;
                             Component241.anInt2955 = 0;
                             int i_13_ = DefinitionSub25.anInt9341;
                             WorldNameText.method254(2, (byte) -124);
                             DisplayModeManagerContainer273.method1135(0);
-                            DisplayModeManagerContainer348.method1741(Component80.aClass348_Sub49_Sub2_3813, (byte) 118);
+                            DisplayModeManagerContainer348.method1741(Component80.packetBuffer, (byte) 118);
                             GraphicsToolkit.anInt4581 = -1;
                             if (NodeSub3.aClass114_6584 != Component248.aClass114_304) DefinitionSub26.method3120(-92);
                             else Component330.method853((byte) 99);
-                            if (i_13_ != Component80.aClass348_Sub49_Sub2_3813.offset) throw new RuntimeException("lswp pos:" + (Component80.aClass348_Sub49_Sub2_3813.offset) + " psize:" + i_13_);
+                            if (i_13_ != Component80.packetBuffer.offset) throw new RuntimeException("lswp pos:" + (Component80.packetBuffer.offset) + " psize:" + i_13_);
                             NodeSub3.aClass114_6584 = null;
                         }
                     } else {
@@ -389,19 +389,19 @@ final class TheoraVideoPlayer {
                         if (Component241.anInt2955 == 14) {
                             if (DefinitionSub25.anInt9341 == -2) {
                                 if (!DefinitionSub8.aClass238_9165.availableAtLeast(2, 106)) return;
-                                DefinitionSub8.aClass238_9165.readBytes(2, 0, (byte) -128, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                                Component80.aClass348_Sub49_Sub2_3813.offset = 0;
-                                DefinitionSub25.anInt9341 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                                DefinitionSub8.aClass238_9165.readBytes(2, 0, (byte) -128, (Component80.packetBuffer.payload));
+                                Component80.packetBuffer.offset = 0;
+                                DefinitionSub25.anInt9341 = Component80.packetBuffer.readUnsignedShort(842397944);
                             }
                             if (DefinitionSub8.aClass238_9165.availableAtLeast(DefinitionSub25.anInt9341, 117)) {
-                                DefinitionSub8.aClass238_9165.readBytes(DefinitionSub25.anInt9341, 0, (byte) -104, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                                Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+                                DefinitionSub8.aClass238_9165.readBytes(DefinitionSub25.anInt9341, 0, (byte) -104, (Component80.packetBuffer.payload));
+                                Component80.packetBuffer.offset = 0;
                                 int i_15_ = DefinitionSub25.anInt9341;
                                 Component241.anInt2955 = 0;
                                 WorldNameText.method254(15, (byte) -120);
                                 Component37.method2330((byte) 86);
-                                DisplayModeManagerContainer348.method1741(Component80.aClass348_Sub49_Sub2_3813, (byte) 118);
-                                if (i_15_ != (Component80.aClass348_Sub49_Sub2_3813.offset)) throw new RuntimeException("lswpr pos:" + (Component80.aClass348_Sub49_Sub2_3813.offset) + " psize:" + i_15_);
+                                DisplayModeManagerContainer348.method1741(Component80.packetBuffer, (byte) 118);
+                                if (i_15_ != (Component80.packetBuffer.offset)) throw new RuntimeException("lswpr pos:" + (Component80.packetBuffer.offset) + " psize:" + i_15_);
                                 NodeSub3.aClass114_6584 = null;
                             }
                         }

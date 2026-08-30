@@ -161,7 +161,7 @@ final class LoginPrefs {
         }
         // Title draw clears pref 1→0 once the iface is up (see client.method116).
         // Leaving earlier left pref at 1 → next cold start forced safe-mode toolkit.
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub11_7265.method1768(-32350) == 1) {
             return;
         }
         if (!graphicsSetupHandled) {
@@ -209,7 +209,7 @@ final class LoginPrefs {
         }
         try {
             Component269.method2478(1000);
-            DisplayModeManagerContainer282.anInt5584 = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
+            DisplayModeManagerContainer282.anInt5584 = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
             NodeSub20.method2953((byte) -113);
             DisplayModeManagerContainer389.savePreferences(37);
             r.aBoolean9719 = false;

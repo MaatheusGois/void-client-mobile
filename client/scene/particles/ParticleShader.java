@@ -88,17 +88,17 @@ final class ParticleShader extends ShaderProgram {
             class348_sub47.anInt7122 = class351.size;
             class348_sub47.aClass351_7118 = class351;
             if (class348_sub47.anInt7122 != -1) {
-                if (class348_sub47.anInt7122 == -2) class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(10000);
-                else if (class348_sub47.anInt7122 <= 18) class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(20);
-                else if (class348_sub47.anInt7122 <= 98) class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(100);
-                else class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(260);
-            } else class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(260);
-            class348_sub47.aClass348_Sub49_Sub2_7116.method3416(-17, class77);
+                if (class348_sub47.anInt7122 == -2) class348_sub47.particleBuffer = new DisplayModeManagerContainer207(10000);
+                else if (class348_sub47.anInt7122 <= 18) class348_sub47.particleBuffer = new DisplayModeManagerContainer207(20);
+                else if (class348_sub47.anInt7122 <= 98) class348_sub47.particleBuffer = new DisplayModeManagerContainer207(100);
+                else class348_sub47.particleBuffer = new DisplayModeManagerContainer207(260);
+            } else class348_sub47.particleBuffer = new DisplayModeManagerContainer207(260);
+            class348_sub47.particleBuffer.method3416(-17, class77);
 
             if (Loader.debug) {
                 System.out.println("Encode packet " + class348_sub47.aClass351_7118.getOpcode(200));
             }
-            class348_sub47.aClass348_Sub49_Sub2_7116.method3408(class348_sub47.aClass351_7118.getOpcode(200), 18676);
+            class348_sub47.particleBuffer.method3408(class348_sub47.aClass351_7118.getOpcode(200), 18676);
             class348_sub47.anInt7119 = 0;
             return class348_sub47;
         } catch (RuntimeException runtimeexception) {

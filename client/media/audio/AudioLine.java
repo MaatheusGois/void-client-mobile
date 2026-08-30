@@ -234,7 +234,7 @@ class AudioLine {
     }
 
     static final void method2090(int i, int i_20_, boolean bool, byte i_21_, int i_22_, int i_23_, int i_24_) {
-        if ((bool ? Component192.aClass348_Sub51_3959.aClass239_Sub26_7215.method1838(-32350) : Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350)) != 0 && i != 0 && Component335.anInt2021 < 50 && i_24_ != -1)
+        if ((bool ? Component192.preferences.aClass239_Sub26_7215.method1838(-32350) : Component192.preferences.aClass239_Sub26_7272.method1838(-32350)) != 0 && i != 0 && Component335.anInt2021 < 50 && i_24_ != -1)
             GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo(!bool ? (byte) 2 : (byte) 3, i_24_, i, i_23_, i_22_, 0, i_20_, null);
         if (i_21_ == -35) anInt3608++;
     }

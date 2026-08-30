@@ -24,10 +24,10 @@ final class Component251
     final void method1689(int i, int i_0_, int i_1_, GraphicsToolkit var_ha, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, CollisionMap class361) {
         try {
             anInt5823++;
-            if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(i_3_ ^ ~0x7e6f) != 0 || Component255.method536(i_5_, false, i, Component385.anInt2204, i_2_)) {
+            if (Component192.preferences.aClass239_Sub27_7261.method1840(i_3_ ^ ~0x7e6f) != 0 || Component255.method536(i_5_, false, i, Component385.anInt2204, i_2_)) {
                 if (this.anInt5824 > i_0_) this.anInt5824 = i_0_;
                 Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, i_1_);
-                if (Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1820(i_3_ + -32400) != 0 || !class51.aBoolean931) {
+                if (Component192.preferences.aClass239_Sub24_7235.method1820(i_3_ + -32400) != 0 || !class51.aBoolean931) {
                     int i_8_;
                     int i_9_;
                     if (i_7_ == 1 || i_7_ == 3) {
@@ -65,7 +65,7 @@ final class Component251
                     boolean bool_17_ = (i_6_ == -1 && class51.anInt868 == -1 && class51.anIntArray943 == null && class51.anIntArray945 == null && !class51.aBoolean929);
                     if (!Component297.aBoolean4728 || ((!Component211.method1172((byte) -85, i_4_) || class51.anInt955 == 1) && (!BuildType.method1639(i_4_, i_3_ ^ 0x3918) || class51.anInt955 != 0))) {
                         if (i_4_ == 22) {
-                            if ((Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350) != 0) || (class51.anInt874 != 0) || (class51.anInt920 == 1) || class51.aBoolean947) {
+                            if ((Component192.preferences.aClass239_Sub4_7220.method1737(-32350) != 0) || (class51.anInt874 != 0) || (class51.anInt920 == 1) || class51.aBoolean947) {
                                 DisplayModeManagerContainer28 class318_sub1_sub1;
                                 if (bool_17_) {
                                     Component212 class318_sub1_sub1_sub2 = (new Component212(var_ha, class51, i_0_, i_2_, i_15_, i_14_, i_16_, this.aBoolean3109, i_7_, bool));

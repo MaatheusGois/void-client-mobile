@@ -189,11 +189,11 @@ final class DisplayModeManagerContainer292
         for (int i_38_ = 0; i_38_ < DisplayModeManagerContainer204.anInt1597; i_38_++) {
             int i_39_ = Component354.anIntArray224[i_38_];
             Npc npc = (((NpcNode) Component21.aClass356_3654.get(i_39_, -6008)).npc);
-            int i_40_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
-            if ((0x10 & i_40_) != 0) i_40_ += Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(i ^ ~0xff00) << 8;
+            int i_40_ = Component80.packetBuffer.readUnsignedByte(255);
+            if ((0x10 & i_40_) != 0) i_40_ += Component80.packetBuffer.readUnsignedByte(i ^ ~0xff00) << 8;
             if ((0x2 & i_40_) != 0) {
                 if (npc.definition.method793(i ^ ~0xffff)) Component298.method181(true, npc);
-                npc.method2448((Component291.aClass278_2529.method2079(Component80.aClass348_Sub49_Sub2_3813.readShortAdd(-1), -1)), -2);
+                npc.method2448((Component291.aClass278_2529.method2079(Component80.packetBuffer.readShortAdd(-1), -1)), -2);
                 npc.method2434((byte) 95, npc.definition.anInt1399);
                 npc.anInt10310 = npc.definition.anInt1329 << 3;
                 if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, (npc.plane), (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
@@ -201,62 +201,62 @@ final class DisplayModeManagerContainer292
             if ((0x8 & i_40_) != 0) {
                 int[] is = new int[4];
                 for (int i_41_ = 0; i_41_ < 4; i_41_++) {
-                    is[i_41_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                    is[i_41_] = Component80.packetBuffer.readUnsignedShort(842397944);
                     if (is[i_41_] == 65535) is[i_41_] = -1;
                 }
-                int i_42_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -121);
+                int i_42_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -121);
                 NpcDefinition.method2931(i_42_, (byte) 115, is, npc);
             }
             if ((i_40_ & 0x20) != 0) {
-                int i_43_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-                int i_44_ = Component80.aClass348_Sub49_Sub2_3813.readIntMiddleEndian((byte) 82);
+                int i_43_ = Component80.packetBuffer.readShortLittle(false);
+                int i_44_ = Component80.packetBuffer.readIntMiddleEndian((byte) 82);
                 if (i_43_ == 65535) i_43_ = -1;
-                int i_45_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
+                int i_45_ = Component80.packetBuffer.readUnsignedByte(255);
                 int i_46_ = 0x7 & i_45_;
                 int i_47_ = (i_45_ & 0x79) >> 3;
                 if (i_47_ == 15) i_47_ = -1;
                 npc.method2437(i_46_, i_43_, i ^ 0x3c569b2e, i_47_, false, i_44_);
             }
             if ((0x4000 & i_40_) != 0) {
-                int i_48_ = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
+                int i_48_ = Component80.packetBuffer.readByteInverse((byte) 21);
                 int[] is = new int[i_48_];
                 int[] is_49_ = new int[i_48_];
                 int[] is_50_ = new int[i_48_];
                 for (int i_51_ = 0; i_48_ > i_51_; i_51_++) {
-                    int i_52_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                    int i_52_ = Component80.packetBuffer.readUnsignedShort(842397944);
                     if (i_52_ == 65535) i_52_ = -1;
                     is[i_51_] = i_52_;
-                    is_49_[i_51_] = Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21);
-                    is_50_[i_51_] = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-109);
+                    is_49_[i_51_] = Component80.packetBuffer.readByteInverse((byte) 21);
+                    is_50_[i_51_] = Component80.packetBuffer.readShortAddLittle(-109);
                 }
                 WaterShaderSub8.method3548(-7387, npc, is_50_, is, is_49_);
             }
             if ((i_40_ & 0x200) != 0) {
-                int i_53_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -121);
+                int i_53_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -121);
                 int[] is = new int[i_53_];
                 int[] is_54_ = new int[i_53_];
                 for (int i_55_ = 0; i_53_ > i_55_; i_55_++) {
-                    int i_56_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
+                    int i_56_ = Component80.packetBuffer.readShortAdd(124);
                     if ((0xc000 & i_56_) == 49152) {
-                        int i_57_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(i + 842463480);
+                        int i_57_ = Component80.packetBuffer.readUnsignedShort(i + 842463480);
                         is[i_55_] = Component224.bitwiseOr(i_57_, i_56_ << 16);
                     } else is[i_55_] = i_56_;
-                    is_54_[i_55_] = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                    is_54_[i_55_] = Component80.packetBuffer.readUnsignedShort(842397944);
                 }
                 npc.applyAnimation(is_54_, is, -100);
             }
             if ((0x4 & i_40_) != 0) {
-                npc.anInt10499 = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(124);
-                npc.anInt10512 = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
+                npc.anInt10499 = Component80.packetBuffer.readShortAdd(124);
+                npc.anInt10512 = Component80.packetBuffer.readShortLittle(false);
             }
             if ((0x1000 & i_40_) != 0) {
-                npc.anInt10293 = Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697);
-                npc.anInt10314 = Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697);
-                npc.anInt10241 = Component80.aClass348_Sub49_Sub2_3813.readByte(-128);
-                npc.anInt10288 = Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697);
-                npc.anInt10239 = (Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false) + OpenGlShader.clientCycle);
-                npc.anInt10300 = (Component80.aClass348_Sub49_Sub2_3813.readShortAdd(12) - -OpenGlShader.clientCycle);
-                npc.anInt10231 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) 66);
+                npc.anInt10293 = Component80.packetBuffer.readByteSubtract(-27697);
+                npc.anInt10314 = Component80.packetBuffer.readByteSubtract(-27697);
+                npc.anInt10241 = Component80.packetBuffer.readByte(-128);
+                npc.anInt10288 = Component80.packetBuffer.readByteSubtract(-27697);
+                npc.anInt10239 = (Component80.packetBuffer.readShortLittle(false) + OpenGlShader.clientCycle);
+                npc.anInt10300 = (Component80.packetBuffer.readShortAdd(12) - -OpenGlShader.clientCycle);
+                npc.anInt10231 = Component80.packetBuffer.readUnsignedByteSubtract((byte) 66);
                 npc.anInt10314 += npc.anIntArray10317[0];
                 npc.anInt10322 = 0;
                 npc.anInt10288 += npc.anIntArray10317[0];
@@ -265,55 +265,55 @@ final class DisplayModeManagerContainer292
                 npc.anInt10319 = 1;
             }
             if ((i_40_ & 0x2000) != 0) {
-                npc.aByte10255 = Component80.aClass348_Sub49_Sub2_3813.readByteInverse(-622951480);
-                npc.aByte10206 = Component80.aClass348_Sub49_Sub2_3813.readByteSubtract(-27697);
-                npc.aByte10270 = Component80.aClass348_Sub49_Sub2_3813.readByteInverse(i + -622885944);
-                npc.aByte10279 = (byte) Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
-                npc.anInt10248 = OpenGlShader.clientCycle + Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
-                npc.anInt10250 = OpenGlShader.clientCycle + Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                npc.aByte10255 = Component80.packetBuffer.readByteInverse(-622951480);
+                npc.aByte10206 = Component80.packetBuffer.readByteSubtract(-27697);
+                npc.aByte10270 = Component80.packetBuffer.readByteInverse(i + -622885944);
+                npc.aByte10279 = (byte) Component80.packetBuffer.readUnsignedByte(255);
+                npc.anInt10248 = OpenGlShader.clientCycle + Component80.packetBuffer.readUnsignedShort(842397944);
+                npc.anInt10250 = OpenGlShader.clientCycle + Component80.packetBuffer.readUnsignedShort(842397944);
             }
             if ((i_40_ & 0x40) != 0) {
-                int i_58_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -100);
+                int i_58_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -100);
                 if (i_58_ > 0) {
                     for (int i_59_ = 0; i_58_ > i_59_; i_59_++) {
                         int i_60_ = -1;
                         int i_61_ = -1;
                         int i_62_ = -1;
-                        int i_63_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-126);
+                        int i_63_ = Component80.packetBuffer.readSmart(-126);
                         if (i_63_ == 32767) {
-                            i_63_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-118);
-                            i_61_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-117);
-                            i_60_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-122);
-                            i_62_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-123);
-                        } else if (i_63_ != 32766) i_61_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-123);
+                            i_63_ = Component80.packetBuffer.readSmart(-118);
+                            i_61_ = Component80.packetBuffer.readSmart(-117);
+                            i_60_ = Component80.packetBuffer.readSmart(-122);
+                            i_62_ = Component80.packetBuffer.readSmart(-123);
+                        } else if (i_63_ != 32766) i_61_ = Component80.packetBuffer.readSmart(-123);
                         else i_63_ = -1;
-                        int i_64_ = Component80.aClass348_Sub49_Sub2_3813.readSmart(-122);
-                        int i_65_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
+                        int i_64_ = Component80.packetBuffer.readSmart(-122);
+                        int i_65_ = Component80.packetBuffer.readUnsignedByte(255);
                         npc.method2438(i_61_, OpenGlShader.clientCycle, i_63_, i_62_, i_60_, i_64_, i_65_, (byte) 124);
                     }
                 }
             }
             if ((i_40_ & 0x80) != 0) {
-                npc.anInt10275 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
+                npc.anInt10275 = Component80.packetBuffer.readUnsignedShort(842397944);
                 if ((npc.anInt10275) == 65535) npc.anInt10275 = -1;
             }
             if ((0x1 & i_40_) != 0) {
-                npc.aString10292 = Component80.aClass348_Sub49_Sub2_3813.readString((byte) 121);
+                npc.aString10292 = Component80.packetBuffer.readString((byte) 121);
                 npc.anInt10264 = 100;
             }
             if ((i_40_ & 0x800) != 0) {
-                int i_66_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedShort(842397944);
-                npc.anInt10227 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -84);
-                npc.anInt10271 = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -88);
+                int i_66_ = Component80.packetBuffer.readUnsignedShort(842397944);
+                npc.anInt10227 = Component80.packetBuffer.readUnsignedByteSubtract((byte) -84);
+                npc.anInt10271 = Component80.packetBuffer.readUnsignedByteSubtract((byte) -88);
                 npc.anInt10210 = 0x7fff & i_66_;
                 npc.aBoolean10226 = (0x8000 & i_66_) != 0;
                 npc.anInt10287 = (npc.anInt10227 + OpenGlShader.clientCycle + npc.anInt10210);
             }
             if ((i_40_ & 0x400) != 0) {
-                int i_67_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-                int i_68_ = Component80.aClass348_Sub49_Sub2_3813.readIntLittle((byte) -127);
+                int i_67_ = Component80.packetBuffer.readShortLittle(false);
+                int i_68_ = Component80.packetBuffer.readIntLittle((byte) -127);
                 if (i_67_ == 65535) i_67_ = -1;
-                int i_69_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -116);
+                int i_69_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -116);
                 int i_70_ = i_69_ & 0x7;
                 int i_71_ = (i_69_ & 0x7e) >> 3;
                 if (i_71_ == 15) i_71_ = -1;

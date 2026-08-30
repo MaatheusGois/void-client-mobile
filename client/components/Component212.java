@@ -248,7 +248,7 @@ final class Component212
                 this.x = i_21_;
                 aByte9980 = (byte) i_24_;
                 aShort9991 = (short) class51.anInt941;
-                aBoolean9988 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean9983 && Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) != 0);
+                aBoolean9988 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean9983 && Component192.preferences.aClass239_Sub7_7238.method1748(-32350) != 0);
                 int i_26_ = 2048;
                 if (aBoolean9989) i_26_ |= 0x10000;
                 Component245 class2 = buildRenderable2(var_ha, i_26_, aBoolean9988, 22);

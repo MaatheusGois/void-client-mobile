@@ -83,7 +83,7 @@ final class Component349
                 aBoolean10017 = bool;
                 aBoolean10019 = bool_10_;
                 this.aByte6376 = (byte) i_0_;
-                aBoolean10003 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10017 && Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) != 0);
+                aBoolean10003 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10017 && Component192.preferences.aClass239_Sub7_7238.method1748(-32350) != 0);
                 int i_11_ = 2048;
                 if (aBoolean10019) i_11_ |= 0x10000;
                 Component245 class2 = method2417(0, var_ha, i_11_, aBoolean10003);

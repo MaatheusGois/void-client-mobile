@@ -28,7 +28,7 @@ final class DefinitionSub9
 
     static final void method3072(byte i) {
         anInt9168++;
-        int i_0_ = Component192.aClass348_Sub51_3959.aClass239_Sub14_7264.method1778(-32350);
+        int i_0_ = Component192.preferences.aClass239_Sub14_7264.method1778(-32350);
         int i_1_ = 14 / ((i - -34) / 61);
         if (i_0_ == 0) {
             Component156.aByteArrayArrayArray3700 = null;

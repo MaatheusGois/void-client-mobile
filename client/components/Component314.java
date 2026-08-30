@@ -31,8 +31,8 @@ final class Component314
         if (RequestProcessor.aClass19Array2261 != null) {
             DisplayModeManagerContainer96.anInt4698++;
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component186.aClass351_4405, DisplayModeManagerContainer64.aClass77_9029, -97);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+            class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
+            class348_sub47.particleBuffer.writeString((byte) -5, string);
             if (i > -50) createOpenGLToolkit(104, 26, null, null, -19);
             HashNodeSub14.enqueueOutboundPacket(-43, class348_sub47);
         }

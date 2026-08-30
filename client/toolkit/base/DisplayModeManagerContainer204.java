@@ -26,7 +26,7 @@ abstract class DisplayModeManagerContainer204
     abstract void method892(int i, int i_2_, int i_3_, int[] is);
 
     static final void method893(byte i) {
-        DefinitionSub22.method3111(91, Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1743(-32350));
+        DefinitionSub22.method3111(91, Component192.preferences.aClass239_Sub6_7226.method1743(-32350));
         anInt1595++;
         int i_4_ = ((WaterSurfaceShader.anInt6246 >> 12) - -(NodeBaseSub2.regionTileX >> 3));
         int i_5_ = ((Component330.regionTileY >> 3) + (Component317.anInt8685 >> 12));

@@ -179,7 +179,7 @@ final class DisplayModeManagerContainer56
 
     DisplayModeManagerContainer56(Buffer class348_sub49) {
         int i = class348_sub49.readUnsignedByte(255);
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) != 1 || NodeCache.aHa1098.method3704() <= 0) {
+        if (Component192.preferences.aClass239_Sub28_7230.method1845(-32350) != 1 || NodeCache.aHa1098.method3704() <= 0) {
             if ((0x1 & i) != 0) class348_sub49.readInt((byte) -126);
             if ((0x2 & i) != 0) class348_sub49.readUnsignedShort(842397944);
             if ((i & 0x4) != 0) class348_sub49.readUnsignedShort(842397944);
