@@ -1,5 +1,5 @@
 /** Voice selection used by dialogue TTS backends. */
-enum VoiceGender {
+public enum VoiceGender {
     MALE,
     FEMALE
 }

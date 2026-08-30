@@ -1,7 +1,7 @@
 import java.lang.reflect.Method;
 
 /** Phase A backend: the host OS voice (say on desktop, AwtHost on mobile). */
-final class NativeDialogueTtsEngine implements DialogueTtsEngine {
+public final class NativeDialogueTtsEngine implements DialogueTtsEngine {
     private volatile Process desktopProcess;
 
     @Override

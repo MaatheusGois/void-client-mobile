@@ -62,6 +62,7 @@ java {
                 "components",
                 "misc",
                 "deob",
+                "tts",
             )
             resources.srcDirs("resources")
         }

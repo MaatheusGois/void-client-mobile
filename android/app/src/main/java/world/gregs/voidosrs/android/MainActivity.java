@@ -204,17 +204,6 @@ public class MainActivity extends Activity {
                 runOnUiThread(() -> showKeyboard());
             }
 
-            @Override
-            protected void onDestroy() {
-                AwtHost.stopSpeech();
-                AwtHost.setSpeechHandler(null);
-                if (dialogueTts != null) {
-                    dialogueTts.shutdown();
-                    dialogueTts = null;
-                }
-                super.onDestroy();
-            }
-
             public void hideSoftKeyboard(String reason) {
                 Log.i("void-osrs", "softKeyboard hide: " + reason);
                 runOnUiThread(() -> hideKeyboard());
@@ -238,6 +227,17 @@ public class MainActivity extends Activity {
         game.requestFocus();
         maybeShowDisclaimerThenContinue();
         pollLoginButton();
+    }
+
+    @Override
+    protected void onDestroy() {
+        AwtHost.stopSpeech();
+        AwtHost.setSpeechHandler(null);
+        if (dialogueTts != null) {
+            dialogueTts.shutdown();
+            dialogueTts = null;
+        }
+        super.onDestroy();
     }
 
     /**

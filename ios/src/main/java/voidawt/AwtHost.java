@@ -4,6 +4,7 @@ import org.robovm.apple.dispatch.DispatchQueue;
 import org.robovm.apple.avfoundation.AVSpeechSynthesizer;
 import org.robovm.apple.avfoundation.AVSpeechUtterance;
 import org.robovm.apple.avfoundation.AVSpeechSynthesisVoice;
+import org.robovm.apple.avfoundation.AVSpeechBoundary;
 
 import voidawt.event.FocusEvent;
 import voidawt.event.KeyEvent;
@@ -16,11 +17,13 @@ public final class AwtHost {
     public static void speak(final String text, final boolean female) {
         DispatchQueue.getMainQueue().async(new Runnable() {
             public void run() {
-                AVSpeechUtterance utterance = AVSpeechUtterance.create(text);
-                String language = female ? "en-US" : "en-US";
-                AVSpeechSynthesisVoice voice = AVSpeechSynthesisVoice.getVoice(language);
-                if (voice != null) utterance.setVoice(voice);
-                SPEECH.speakUtterance(utterance);
+                AVSpeechUtterance utterance = new AVSpeechUtterance(text);
+                AVSpeechSynthesisVoice voice = new AVSpeechSynthesisVoice("en-US");
+                utterance.setVoice(voice);
+                // iOS exposes gender on the voice metadata; pitch is a reliable
+                // fallback when only one en-US voice is installed.
+                utterance.setPitchMultiplier(female ? 1.15f : 0.85f);
+                SPEECH.enqueueSpeakUtterance(utterance);
             }
         });
     }
@@ -28,7 +31,7 @@ public final class AwtHost {
     public static void stopSpeech() {
         DispatchQueue.getMainQueue().async(new Runnable() {
             public void run() {
-                SPEECH.stopSpeakingAtBoundary(0);
+                SPEECH.stopSpeaking(AVSpeechBoundary.Immediate);
             }
         });
     }
