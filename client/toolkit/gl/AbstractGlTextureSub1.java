@@ -158,12 +158,12 @@ final class AbstractGlTextureSub1
             if (DefinitionSub5.aBoolean9121) DebugPanicSub1.method2131(0);
             Component315.method1879(true);
             JaclibLoader.toolkit.ra(-1, 1583160, 40, 127);
-            Component182.method3398(true, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
+            Component182.renderScene(true, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
             if (DefinitionSub5.aBoolean9121) DisplayModeManagerContainer42.method2290();
             JaclibLoader.toolkit.pa();
             Component315.method1879(false);
         }
-        Component182.method3398(false, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
+        Component182.renderScene(false, is, i_20_, i_21_, i_25_, i_26_, bool_27_);
         if (DefinitionSub5.aBoolean9121) {
             for (int i_46_ = 0; i_46_ < Component291.anInt2524; i_46_++)
                 Component2.aBooleanArrayArrayArray8361[i_46_] = Component95.aBooleanArrayArrayArray1751[i_46_];

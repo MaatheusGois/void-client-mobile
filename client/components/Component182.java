@@ -21,14 +21,14 @@ final class Component182
     static int anInt9750;
     static int anInt9751 = 0;
 
-    static final void method3398(boolean bool, byte[][][] is, int i, byte i_0_, int i_1_, int i_2_, boolean bool_3_) {
-        int i_4_ = bool ? 1 : 0;
+    static final void renderScene(boolean isPrimary, byte[][][] is, int i, byte i_0_, int i_1_, int i_2_, boolean bool_3_) {
+        int i_4_ = isPrimary ? 1 : 0;
         Component305.opaqueOnscreenCount = 0;
         HashNodeSub3.translucentOnscreenCount = 0;
         RandomAccessFileReader.anInt3049++;
         if ((i_2_ & 0x2) == 0) {
             for (RenderableObject class318_sub1 = Node.aClass318_Sub1Array4293[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
-                if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
+                if (!SceneNode.method2778(class318_sub1, isPrimary, is, i, i_0_)) {
                     BufferCacheSub2.method4001(class318_sub1);
                     if (class318_sub1.anInt6389 != -1) Component71.aClass318_Sub1Array6066[Component305.opaqueOnscreenCount++] = class318_sub1;
                 }
@@ -36,13 +36,13 @@ final class Component182
         }
         if ((i_2_ & 0x1) == 0) {
             for (RenderableObject class318_sub1 = AudioMixer.aClass318_Sub1Array3226[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
-                if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
+                if (!SceneNode.method2778(class318_sub1, isPrimary, is, i, i_0_)) {
                     BufferCacheSub2.method4001(class318_sub1);
                     if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = class318_sub1;
                 }
             }
             for (RenderableObject class318_sub1 = Component95.aClass318_Sub1Array1754[i_4_]; class318_sub1 != null; class318_sub1 = class318_sub1.aClass318_Sub1_6379) {
-                if (!SceneNode.method2778(class318_sub1, bool, is, i, i_0_)) {
+                if (!SceneNode.method2778(class318_sub1, isPrimary, is, i, i_0_)) {
                     if (class318_sub1.method2377((byte) 122)) {
                         BufferCacheSub2.method4001(class318_sub1);
                         if (class318_sub1.anInt6389 != -1) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = class318_sub1;
@@ -52,9 +52,9 @@ final class Component182
                     }
                 }
             }
-            if (!bool) {
+            if (!isPrimary) {
                 for (int i_5_ = 0; i_5_ < Component328.dynamicOnscreenCount; i_5_++) {
-                    if (!SceneNode.method2778((DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]), bool, is, i, i_0_)) {
+                    if (!SceneNode.method2778((DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]), isPrimary, is, i, i_0_)) {
                         BufferCacheSub2.method4001(DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);
                         if ((DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_].anInt6389) != -1) {
                             if (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_].method2377((byte) 122)) ReferenceTable.aClass318_Sub1Array3737[HashNodeSub3.translucentOnscreenCount++] = (DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i_5_]);

@@ -221,7 +221,15 @@ Both methods have one definition and their call sites are limited to
 `Component182` users. No reflection strings reference them. This resolves
 160 call-site tokens without changing wire behavior.
 
-## 8. Unresolved tokens (need more work)
+## 8. Lote 65 — `Component182` scene renderer (CONFIRMED, executed)
+
+`method3398` is the scene-rendering pass called by
+`AbstractGlTextureSub1.method1960` for both primary and alternate rendering
+modes. It collects opaque and translucent renderables, updates visibility
+maps, draws scene layers, and flushes the toolkit when required. It is now
+named `renderScene`; the two call sites are unchanged in behavior.
+
+## 9. Unresolved tokens (need more work)
 
 These remain TBD from the top-tokens list:
 
