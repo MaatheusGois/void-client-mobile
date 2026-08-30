@@ -1801,7 +1801,7 @@ final class DisplayModeManagerContainer190
         anInt5410++;
         if (aShortArray5423 == null) return true;
         for (int i = 0; i < aShortArray5423.length; i++) {
-            if (aShortArray5423[i] != -1 && !aHa_Sub3_5419.aD4579.method4(-7953, aShortArray5423[i])) return false;
+            if (aShortArray5423[i] != -1 && !aHa_Sub3_5419.modelProvider.isModelLoaded(-7953, aShortArray5423[i])) return false;
         }
         return true;
     }
@@ -1810,13 +1810,13 @@ final class DisplayModeManagerContainer190
         this(var_ha_Sub3, i, i_336_, true, false);
         do {
             try {
-                d var_d = var_ha_Sub3.aD4579;
+                d var_d = var_ha_Sub3.modelProvider;
                 int[] is = new int[class124.anInt1817];
                 anIntArray5455 = new int[1 + class124.anInt1821];
                 for (int i_337_ = 0; i_337_ < class124.anInt1817; i_337_++) {
                     if (class124.aByteArray1843 == null || class124.aByteArray1843[i_337_] != 2) {
                         if (class124.aShortArray1822 != null && (class124.aShortArray1822[i_337_] != -1)) {
-                            Component319 class12 = var_d.method3(((class124.aShortArray1822[i_337_]) & 0xffff), -6662);
+                            Model class12 = var_d.getModel(((class124.aShortArray1822[i_337_]) & 0xffff), -6662);
                             if (((anInt5472 & 0x40) == 0 || !class12.aBoolean209) && class12.aBoolean204) continue;
                         }
                         is[anInt5478++] = i_337_;
@@ -1830,7 +1830,7 @@ final class DisplayModeManagerContainer190
                 boolean bool = (0x100 & anInt5463) != 0;
                 for (int i_338_ = 0; i_338_ < anInt5478; i_338_++) {
                     int i_339_ = is[i_338_];
-                    Component319 class12 = null;
+                    Model class12 = null;
                     int i_340_ = 0;
                     int i_341_ = 0;
                     int i_342_ = 0;
@@ -1843,7 +1843,7 @@ final class DisplayModeManagerContainer190
                                 Component291 class189 = DisplayModeManagerContainer306.method742(104, (class162.anInt2153));
                                 if (class189.aBoolean2531) bool_344_ = true;
                                 if (class189.anInt2525 != -1) {
-                                    Component319 class12_346_ = var_d.method3((class189.anInt2525), -6662);
+                                    Model class12_346_ = var_d.getModel((class189.anInt2525), -6662);
                                     if (class12_346_.anInt200 == 2) aBoolean5428 = true;
                                 }
                             }
@@ -1858,7 +1858,7 @@ final class DisplayModeManagerContainer190
                     if (class124.aShortArray1822 != null) {
                         i_347_ = class124.aShortArray1822[i_339_];
                         if (i_347_ != -1) {
-                            class12 = var_d.method3(0xffff & i_347_, -6662);
+                            class12 = var_d.getModel(0xffff & i_347_, -6662);
                             if ((0x40 & anInt5472) != 0 && class12.aBoolean209) {
                                 i_347_ = -1;
                                 class12 = null;
@@ -1998,7 +1998,7 @@ final class DisplayModeManagerContainer190
                     else i_377_ = 0xff & (class124.aByteArray1834[i_374_]);
                     short i_378_ = (class124.aShortArray1822 != null ? class124.aShortArray1822[i_374_] : (short) -1);
                     if (i_378_ != -1 && (anInt5472 & 0x40) != 0) {
-                        Component319 class12 = var_d.method3(0xffff & i_378_, -6662);
+                        Model class12 = var_d.getModel(0xffff & i_378_, -6662);
                         if (class12.aBoolean209) i_378_ = (short) -1;
                     }
                     float f = 0.0F;
@@ -2653,21 +2653,21 @@ final class DisplayModeManagerContainer190
 
     final void Shader(short i, short i_570_) {
         anInt5403++;
-        d var_d = aHa_Sub3_5419.aD4579;
+        d var_d = aHa_Sub3_5419.modelProvider;
         for (int i_571_ = 0; anInt5478 > i_571_; i_571_++) {
             if (i == aShortArray5423[i_571_]) aShortArray5423[i_571_] = i_570_;
         }
         byte i_572_ = 0;
         byte i_573_ = 0;
         if (i != -1) {
-            Component319 class12 = var_d.method3(i & 0xffff, -6662);
+            Model class12 = var_d.getModel(i & 0xffff, -6662);
             i_573_ = class12.aByte216;
             i_572_ = class12.aByte201;
         }
         byte i_574_ = 0;
         byte i_575_ = 0;
         if (i_570_ != -1) {
-            Component319 class12 = var_d.method3(0xffff & i_570_, -6662);
+            Model class12 = var_d.getModel(0xffff & i_570_, -6662);
             i_575_ = class12.aByte216;
             if (class12.aByte198 != 0 || class12.aByte211 != 0) aBoolean5502 = true;
             i_574_ = class12.aByte201;

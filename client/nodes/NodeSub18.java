@@ -164,7 +164,7 @@ final class NodeSub18
 
     static final void method2942(DisplayModeManagerContainer57 class46, byte i) {
         anInt6805++;
-        if (class46.contentType == Component283.anInt4610) {
+        if (class46.contentType == ModelStore.anInt4610) {
             if (Component72.localPlayer.username == null) {
                 class46.anInt779 = 0;
                 class46.anInt753 = 0;

@@ -356,7 +356,7 @@ public final class client extends Applet_Sub1 {
         LoadingState.getProgress(85);
         Component226.method2657((byte) 124);
         Component110.method261((byte) -120);
-        Component283.method1880(i + -221);
+        ModelStore.method1880(i + -221);
         HuffmanDecoder.clearStatics(i + -76);
         Component286.method1136((byte) -98);
         KeyStoreLoader.clearStatics(21745);
@@ -914,7 +914,7 @@ public final class client extends Applet_Sub1 {
                 } else PacketReader.currentGameType = RunescapeInfo.RUNESCAPE;
                 DisplayModeManagerContainer254.aBoolean2151 = false;
                 Component205.settingsCookie = "";
-                Component283.aLong4615 = 0L;
+                ModelStore.aLong4615 = 0L;
                 OggStreamReader.aString9043 = null;
                 Connection.affiliateId = 0;
                 DisplayModeManagerContainer105.aBoolean4888 = Component177.aBoolean2110 = true;
@@ -1027,7 +1027,7 @@ public final class client extends Applet_Sub1 {
             String string_31_ = this.getParameter("userFlow");
             if (string_31_ != null) {
                 try {
-                    Component283.aLong4615 = Long.parseLong(string_31_);
+                    ModelStore.aLong4615 = Long.parseLong(string_31_);
                 } catch (NumberFormatException numberformatexception) {
                     /* empty */
                 }

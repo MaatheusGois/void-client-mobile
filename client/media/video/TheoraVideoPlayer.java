@@ -160,7 +160,7 @@ final class TheoraVideoPlayer {
                         DefinitionSub20.aClass348_Sub4_9264.method2747(1, class348_sub49_9_);
                         class348_sub49_sub2.writeBytes((class348_sub49_9_.payload).length, 0, (class348_sub49_9_.payload), -73);
                         class348_sub49_sub2.writeShort((byte) 107, DisplayModeManagerContainer136.anInt4718);
-                        class348_sub49_sub2.writeLong(Component283.aLong4615, (byte) -63);
+                        class348_sub49_sub2.writeLong(ModelStore.aLong4615, (byte) -63);
                         class348_sub49_sub2.writeByte(false, Component19.aString8605 == null ? 0 : 1);
                         if (Component19.aString8605 != null) class348_sub49_sub2.writeString((byte) -5, (Component19.aString8605));
                         class348_sub49_sub2.writeByte(false, (!DefinitionSub31.method3131((byte) 50, "jagtheora") ? 0 : 1));

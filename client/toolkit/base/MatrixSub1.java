@@ -37,7 +37,7 @@ final class MatrixSub1
     float aFloat5681;
     static int anInt5682;
     static int anInt5683;
-    static d aD5684;
+    static d modelProvider;
     float aFloat5685;
     float aFloat5686;
     static int anInt5687;
@@ -47,7 +47,7 @@ final class MatrixSub1
     public static void method911(int i) {
         if (i != 0) method911(-121);
         aClass223_5689 = null;
-        aD5684 = null;
+        modelProvider = null;
         aClass246_5675 = null;
         aClass351_5677 = null;
     }

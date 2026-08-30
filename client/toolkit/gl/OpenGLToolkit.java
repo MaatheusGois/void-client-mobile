@@ -157,13 +157,13 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     }
 
     private final boolean WA(short i) {//
-        synchronized (this.aD4579) {
-            if (!this.aD4579.method4(-7953, i)) return false;
-            Component319 class12 = this.aD4579.method3(i, -6662);
+        synchronized (this.modelProvider) {
+            if (!this.modelProvider.isModelLoaded(-7953, i)) return false;
+            Model class12 = this.modelProvider.getModel(i, -6662);
             if (class12 == null) return false;
             int[] is;
-            if (class12.anInt200 != 2) is = this.aD4579.method5(true, i, 0.7F, 128, 128, -128);
-            else is = this.aD4579.method6(-21540, 128, 0.7F, i, true, 128);
+            if (class12.anInt200 != 2) is = this.modelProvider.getTriangles(true, i, 0.7F, 128, 128, -128);
+            else is = this.modelProvider.getIndices(-21540, 128, 0.7F, i, true, 128);
             CA(i, is, class12.aShort208, class12.anInt200, class12.aByte213, class12.aByte202, class12.anInt206, class12.aBoolean199, class12.aByte201, class12.aByte216, class12.aByte198, class12.aByte211, class12.aBoolean209, class12.aBoolean204, class12.aBoolean212, class12.aBoolean217, class12.aBoolean215, class12.aByte205, class12.aBoolean218, class12.aBoolean207, class12.anInt203);
         }
         return true;
@@ -287,7 +287,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     private final boolean c(short i) {//
         synchronized (this) {
-            Component319 class12 = this.aD4579.method3(i, -6662);
+            Model class12 = this.modelProvider.getModel(i, -6662);
             if (class12 == null) return false;
             AA(i, class12.aShort208, class12.anInt200, class12.aByte213, class12.aByte202, class12.anInt206, class12.aBoolean199, class12.aByte201, class12.aByte216, class12.aByte198, class12.aByte211, class12.aBoolean209, class12.aBoolean204, class12.aBoolean212, class12.aBoolean217, class12.aBoolean215, class12.aByte205, class12.aBoolean218, class12.aBoolean207, class12.anInt203);
         }
@@ -472,7 +472,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
                 if (!DefinitionSub19.tryLoadNativeLibrary(-30282, "sw3d")) throw new RuntimeException("");
                 Component36.method1949((byte) -128);
-                MA(aD4579, 0, 0);
+                MA(modelProvider, 0, 0);
                 Component54.method566(false, true, (byte) 23);
                 aBoolean5142 = true;
                 aClass101_5131 = new OpenGLMatrix();

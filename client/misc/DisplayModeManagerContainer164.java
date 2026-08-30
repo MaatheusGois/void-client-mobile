@@ -1323,7 +1323,7 @@ final class DisplayModeManagerContainer164
 
     private final int method642(int i, short i_305_, int i_306_) {
         int i_307_ = RunescapeInfo.anIntArray179[method637(i, i_306_)];
-        Component319 class12 = aHa_Sub1_5353.aD4579.method3(i_305_ & 0xffff, -6662);
+        Model class12 = aHa_Sub1_5353.modelProvider.getModel(i_305_ & 0xffff, -6662);
         int i_308_ = class12.aByte201 & 0xff;
         if (i_308_ != 0) {
             int i_309_ = 131586 * i_306_;
@@ -2100,7 +2100,7 @@ final class DisplayModeManagerContainer164
     final void Shader(short i, short i_582_) {
         if (aShortArray5388 != null) {
             if (!aBoolean5391 && i_582_ >= 0) {
-                Component319 class12 = aHa_Sub1_5353.aD4579.method3(i_582_ & 0xffff, -6662);
+                Model class12 = aHa_Sub1_5353.modelProvider.getModel(i_582_ & 0xffff, -6662);
                 if (class12.aByte198 != 0 || class12.aByte211 != 0) aBoolean5391 = true;
             }
             for (int i_583_ = 0; i_583_ < anInt5351; i_583_++) {
@@ -2956,7 +2956,7 @@ final class DisplayModeManagerContainer164
         anInt5316 = i;
         anInt5344 = i_785_;
         anInt5349 = i_786_;
-        d var_d = aHa_Sub1_5353.aD4579;
+        d var_d = aHa_Sub1_5353.modelProvider;
         anInt5340 = class124.anInt1836;
         anInt5387 = class124.anInt1821;
         anIntArray5356 = class124.anIntArray1841;
@@ -2981,7 +2981,7 @@ final class DisplayModeManagerContainer164
         boolean bool = (anInt5316 & 0x100) != 0;
         for (int i_789_ = 0; i_789_ < anInt5351; i_789_++) {
             int i_790_ = is[i_789_];
-            Component319 class12 = null;
+            Model class12 = null;
             int i_791_ = 0;
             int i_792_ = 0;
             int i_793_ = 0;
@@ -2994,7 +2994,7 @@ final class DisplayModeManagerContainer164
                         Component291 class189 = DisplayModeManagerContainer306.method742(104, (class162.anInt2153));
                         if (class189.aBoolean2531) bool_795_ = true;
                         if (class189.anInt2525 != -1) {
-                            Component319 class12_797_ = var_d.method3((class189.anInt2525), -6662);
+                            Model class12_797_ = var_d.getModel((class189.anInt2525), -6662);
                             if (class12_797_.anInt200 == 2) aBoolean5382 = true;
                         }
                     }
@@ -3005,7 +3005,7 @@ final class DisplayModeManagerContainer164
             if (class124.aShortArray1822 != null) {
                 i_798_ = class124.aShortArray1822[i_790_];
                 if (i_798_ != -1) {
-                    class12 = var_d.method3(i_798_ & 0xffff, -6662);
+                    class12 = var_d.getModel(i_798_ & 0xffff, -6662);
                     if ((i_787_ & 0x40) == 0 || !class12.aBoolean209) {
                         i_793_ = class12.aByte213;
                         i_794_ = class12.aByte202;
@@ -3049,7 +3049,7 @@ final class DisplayModeManagerContainer164
             else i_805_ = class124.aByteArray1820[i_804_];
             int i_806_ = (class124.aShortArray1822 == null ? -1 : class124.aShortArray1822[i_804_]);
             if (i_806_ != -1 && (i_787_ & 0x40) != 0) {
-                Component319 class12 = var_d.method3(i_806_ & 0xffff, -6662);
+                Model class12 = var_d.getModel(i_806_ & 0xffff, -6662);
                 if (class12.aBoolean209) i_806_ = -1;
             }
             if (i_806_ != -1) {
@@ -3206,7 +3206,7 @@ final class DisplayModeManagerContainer164
             for (int i_870_ = 0; i_870_ < anInt5351; i_870_++) {
                 short i_871_ = class124.aShortArray1822[i_870_];
                 if (i_871_ != -1) {
-                    Component319 class12 = aHa_Sub1_5353.aD4579.method3(i_871_, -6662);
+                    Model class12 = aHa_Sub1_5353.modelProvider.getModel(i_871_, -6662);
                     if ((i_787_ & 0x40) == 0 || !class12.aBoolean209) {
                         aShortArray5388[i_870_] = i_871_;
                         bool_869_ = true;

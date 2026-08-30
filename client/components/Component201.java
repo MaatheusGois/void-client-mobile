@@ -28,21 +28,21 @@ final class Component201
             Component148.anIntArray3464[3] = anInt8711;
             Component148.anIntArray3464[1] = anInt8717;
             Component148.anIntArray3464[4] = anInt8708;
-            d var_d = aHa_Sub3_8718.aD4579;
+            d var_d = aHa_Sub3_8718.modelProvider;
             Component148.anIntArray3464[5] = anInt8714;
             Component148.anIntArray3464[2] = anInt8715;
             Component148.anIntArray3464[0] = anInt8716;
             boolean bool_0_ = false;
             int i = 0;
             for (int i_1_ = 0; i_1_ < 6; i_1_++) {
-                if (!var_d.method4(-7953, Component148.anIntArray3464[i_1_])) return null;
-                Component319 class12 = var_d.method3(Component148.anIntArray3464[i_1_], -6662);
+                if (!var_d.isModelLoaded(-7953, Component148.anIntArray3464[i_1_])) return null;
+                Model class12 = var_d.getModel(Component148.anIntArray3464[i_1_], -6662);
                 int i_2_ = class12.aBoolean199 ? 64 : 128;
                 if (i < i_2_) i = i_2_;
                 if (class12.aByte205 > 0) bool_0_ = true;
             }
             for (int i_3_ = 0; i_3_ < 6; i_3_++)
-                Component329.anIntArrayArray5991[i_3_] = var_d.method5(false, Component148.anIntArray3464[i_3_], 1.0F, i, i, 81);
+                Component329.anIntArrayArray5991[i_3_] = var_d.getTriangles(false, Component148.anIntArray3464[i_3_], 1.0F, i, i, 81);
             anInterface18_Impl2_8719 = aHa_Sub3_8718.method3900(Component329.anIntArrayArray5991, bool_0_, 61, i);
         }
         return anInterface18_Impl2_8719;

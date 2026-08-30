@@ -29,8 +29,8 @@ final class DisplayModeManagerContainer365
     private final boolean method730(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_0_) {
         if (aClass105_1221 == null) {
             if (anInt1230 == 0) {
-                if (MatrixSub1.aD5684.method4(-7953, anInt1224)) {
-                    int[] is = MatrixSub1.aD5684.method6(-21540, anInt1220, 0.7F, anInt1224, false, anInt1220);
+                if (MatrixSub1.modelProvider.isModelLoaded(-7953, anInt1224)) {
+                    int[] is = MatrixSub1.modelProvider.getIndices(-21540, anInt1220, 0.7F, anInt1224, false, anInt1220);
                     aClass105_1221 = var_ha.method3662(anInt1220, is, (byte) 94, 0, anInt1220, anInt1220);
                 }
             } else if (anInt1230 == 2) method740(var_ha, class72_0_);

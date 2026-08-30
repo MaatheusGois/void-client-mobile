@@ -10,7 +10,7 @@
 import jaggl.OpenGL;
 
 final class SpriteAtlasShader extends ShaderProgram {
-    static d aD6247;
+    static d modelProvider;
     static int anInt6248 = -1;
     static int anInt6249;
     static int anInt6250;
@@ -156,7 +156,7 @@ final class SpriteAtlasShader extends ShaderProgram {
 
     public static void method2160(int i) {
         if (i == 0) {
-            aD6247 = null;
+            modelProvider = null;
             anIntArray6260 = null;
         }
     }

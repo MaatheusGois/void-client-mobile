@@ -52,9 +52,9 @@ final class DefinitionSub29
     final void initImageCache(int i, int i_10_, int i_11_) {
         super.initImageCache(i, i_10_, i_11_);
         anInt9382++;
-        if (anInt9380 >= 0 && SpriteAtlasShader.aD6247 != null) {
-            int i_12_ = (!(SpriteAtlasShader.aD6247.method3(anInt9380, -6662).aBoolean199) ? 128 : 64);
-            anIntArray9375 = SpriteAtlasShader.aD6247.method5(false, anInt9380, 1.0F, i_12_, i_12_, -123);
+        if (anInt9380 >= 0 && SpriteAtlasShader.modelProvider != null) {
+            int i_12_ = (!(SpriteAtlasShader.modelProvider.getModel(anInt9380, -6662).aBoolean199) ? 128 : 64);
+            anIntArray9375 = SpriteAtlasShader.modelProvider.getTriangles(false, anInt9380, 1.0F, i_12_, i_12_, -123);
             anInt9379 = i_12_;
             anInt9374 = i_12_;
         }

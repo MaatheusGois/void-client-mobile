@@ -1333,8 +1333,8 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5624) {
-                intStack[intStackPointer++] = (int) (Component283.aLong4615 >> 32);
-                intStack[intStackPointer++] = (int) (Component283.aLong4615 & 0xffffL);
+                intStack[intStackPointer++] = (int) (ModelStore.aLong4615 >> 32);
+                intStack[intStackPointer++] = (int) (ModelStore.aLong4615 & 0xffffL);
                 return;
             }
             if (i == 5625) {

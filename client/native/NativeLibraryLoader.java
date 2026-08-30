@@ -131,15 +131,15 @@ final class NativeLibraryLoader {
             DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.method2596(DisplayModeManagerContainer229.anInt1255, i + 12871);
         }
         anInt2971++;
-        if (i != (~Component283.anInt4609) && Component377.anInt859 != -1) {
-            int i_8_ = Component283.anInt4609 - NodeSub36.anInt6992;
+        if (i != (~ModelStore.anInt4609) && Component377.anInt859 != -1) {
+            int i_8_ = ModelStore.anInt4609 - NodeSub36.anInt6992;
             if (i_8_ < 2 || i_8_ > 2) i_8_ /= 8;
             int i_9_ = -DebugOverlay.anInt3170 + Component377.anInt859;
             NodeSub36.anInt6992 = i_8_ + NodeSub36.anInt6992;
             if (i_9_ < 2 || i_9_ > 2) i_9_ /= 8;
             DebugOverlay.anInt3170 -= -i_9_;
             if (i_8_ == 0 && i_9_ == 0) {
-                Component283.anInt4609 = -1;
+                ModelStore.anInt4609 = -1;
                 Component377.anInt859 = -1;
             }
             ColorTagNode.method2811(false);

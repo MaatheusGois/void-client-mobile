@@ -25,7 +25,7 @@ final class HashNodeSub17
             anInt9674++;
             if (class277.anInt3569 == -1) {
                 if (class277.anInt3575 != -1) {
-                    Component319 class12 = var_ha.aD4579.method3(class277.anInt3575, -6662);
+                    Model class12 = var_ha.modelProvider.getModel(class277.anInt3575, -6662);
                     if (!class12.aBoolean209) return class12.aShort208;
                 }
             } else return class277.anInt3569;

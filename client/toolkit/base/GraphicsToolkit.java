@@ -30,7 +30,7 @@ abstract class GraphicsToolkit {
     static int anInt4577;
     /** Friend world ids (0 = offline). */
     static int[] friendWorldIds = new int[200];
-    d aD4579;
+    d modelProvider;
     static int anInt4580;
     static int anInt4581;
     static float aFloat4582;
@@ -397,7 +397,7 @@ abstract class GraphicsToolkit {
     abstract Component24 method3711(int[] is, int i, int i_212_, int i_213_, int i_214_, boolean bool);
 
     GraphicsToolkit(d var_d) {
-        this.aD4579 = var_d;
+        this.modelProvider = var_d;
         int i = -1;
         for (int i_215_ = 0; i_215_ < 8; i_215_++) {
             if (!DefinitionSub26.aBooleanArray9351[i_215_]) {

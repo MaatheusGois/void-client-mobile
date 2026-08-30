@@ -21,6 +21,28 @@ Concrete evidence for each island is in `findings.md`.
 
 ## lote 50 — `ModelProvider` interface island  *(~80 method refs freed)*
 
+**STATUS: DONE (partial — see caveat).** Executed 2026-08-30.
+
+Renamed (string-safe, word-bounded):
+- `method1`→`getVertices`, `method2`→`getModelCount`, `method3`→`getModel`,
+  `method4`→`isModelLoaded`, `method5`→`getTriangles`, `method6`→`getIndices`
+  (across the interface `d`, its impl `ModelStore`, and all call sites).
+- `aD####` (fields of type `d`) → `modelProvider` (109 refs).
+- `Component319` → `Model` (file + class), `Component283` → `ModelStore`
+  (file + class).
+
+**CAVEAT — interface name `d` NOT renamed.** A single-letter identifier
+cannot be safely renamed by regex: a blanket `\bd\b`→`ModelProvider` rewrite
+corrupts string literals (FR/ES locale text in `FriendsIgnoreList`, the IP
+regex in `ReflectionInvoker`, the `-d` flag in `Loader`) and expression
+positions, and a "type-scoped" heuristic still rewrote local `d` variables
+into invalid syntax. The interface keeps the name `d` for now — rename it
+with a real IDE refactor in a dedicated pass. Everything that references it
+(`modelProvider` fields, `Model`/`ModelStore`) is already clean.
+
+**Reflection check:** none. Gate `check_reflection.py` → PASS.
+`:client:compileJava` → SUCCESS. `method####` count 3 326 → 3 320.
+
 **Scope:**
 - `client/toolkit/base/d.java` → rename file to `ModelProvider.java`,
   rename class to `ModelProvider`.
@@ -271,6 +293,6 @@ python3 .cursor/skills/void-client-deobfuscate/scripts/count_methods.py
 > reflection gate, not a separate compile.
 
 **Done definition:** `count_methods.py` reports < 100 unique
-`method####`. Current: **3 326**. Target after lote 50: < 3 250.
+`method####`. Current: **3 320**. Target after lote 50: < 3 250.
 After lote 51: ~3 326 (lote 51 renames anInt fields, not method####).
 After lote 52: ~3 326 (same reason — anInt#### island).

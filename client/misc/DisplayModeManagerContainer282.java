@@ -262,7 +262,7 @@ final class DisplayModeManagerContainer282
         anInt5582++;
         int i_33_ = (RunescapeInfo.anIntArray179[Component357.method1384(i_32_, i ^ 0x54b313bc, i_29_)]);
         if (i_31_ != -1) {
-            Component319 class12 = aHa_Sub2_5598.aD4579.method3(i_31_ & 0xffff, -6662);
+            Model class12 = aHa_Sub2_5598.modelProvider.getModel(i_31_ & 0xffff, -6662);
             int i_34_ = 0xff & class12.aByte201;
             if (i_34_ != 0) {
                 int i_35_;
@@ -295,7 +295,7 @@ final class DisplayModeManagerContainer282
         anInt5551++;
         if (aShortArray5601 == null) return true;
         for (int i = 0; i < aShortArray5601.length; i++) {
-            if (aShortArray5601[i] != -1 && !aHa_Sub2_5598.aD4579.method4(-7953, aShortArray5601[i])) return false;
+            if (aShortArray5601[i] != -1 && !aHa_Sub2_5598.modelProvider.isModelLoaded(-7953, aShortArray5601[i])) return false;
         }
         return true;
     }
@@ -564,30 +564,30 @@ final class DisplayModeManagerContainer282
             RenderableSub2.anIntArray6393[0] = i_128_;
             IOException_Sub1.anIntArray91[0] = i_129_;
             RenderableSub2.anIntArray6393[1] = i_131_;
-            Component283.anIntArray4623[0] = i_130_;
+            ModelStore.anIntArray4623[0] = i_130_;
             IOException_Sub1.anIntArray91[1] = i_129_;
             RenderableSub2.anIntArray6393[2] = i_128_;
             if (i != 1566382404) method621();
-            Component283.anIntArray4623[1] = i_130_;
+            ModelStore.anIntArray4623[1] = i_130_;
             IOException_Sub1.anIntArray91[2] = i_132_;
-            Component283.anIntArray4623[2] = i_130_;
+            ModelStore.anIntArray4623[2] = i_130_;
             RenderableSub2.anIntArray6393[3] = i_131_;
             IOException_Sub1.anIntArray91[3] = i_132_;
             RenderableSub2.anIntArray6393[4] = i_128_;
-            Component283.anIntArray4623[3] = i_130_;
+            ModelStore.anIntArray4623[3] = i_130_;
             IOException_Sub1.anIntArray91[4] = i_129_;
-            Component283.anIntArray4623[4] = i_133_;
+            ModelStore.anIntArray4623[4] = i_133_;
             RenderableSub2.anIntArray6393[5] = i_131_;
             IOException_Sub1.anIntArray91[5] = i_129_;
-            Component283.anIntArray4623[5] = i_133_;
+            ModelStore.anIntArray4623[5] = i_133_;
             RenderableSub2.anIntArray6393[6] = i_128_;
             IOException_Sub1.anIntArray91[6] = i_132_;
             RenderableSub2.anIntArray6393[7] = i_131_;
-            Component283.anIntArray4623[6] = i_133_;
+            ModelStore.anIntArray4623[6] = i_133_;
             IOException_Sub1.anIntArray91[7] = i_132_;
-            Component283.anIntArray4623[7] = i_133_;
+            ModelStore.anIntArray4623[7] = i_133_;
             for (int i_134_ = 0; i_134_ < 8; i_134_++) {
-                float f_135_ = (float) Component283.anIntArray4623[i_134_];
+                float f_135_ = (float) ModelStore.anIntArray4623[i_134_];
                 float f_136_ = (float) IOException_Sub1.anIntArray91[i_134_];
                 float f_137_ = (float) RenderableSub2.anIntArray6393[i_134_];
                 float f_138_ = (CookieManager.aFloat6304 * f_135_ + (f_137_ * FriendLoginMessage.aFloat8784 + Component233.aFloat3994 * f_136_) + f_114_);
@@ -1263,21 +1263,21 @@ final class DisplayModeManagerContainer282
 
     final void Shader(short i, short i_284_) {
         anInt5590++;
-        d var_d = aHa_Sub2_5598.aD4579;
+        d var_d = aHa_Sub2_5598.modelProvider;
         for (int i_285_ = 0; i_285_ < anInt5632; i_285_++) {
             if (aShortArray5601[i_285_] == i) aShortArray5601[i_285_] = i_284_;
         }
         byte i_286_ = 0;
         byte i_287_ = 0;
         if (i != -1) {
-            Component319 class12 = var_d.method3(0xffff & i, -6662);
+            Model class12 = var_d.getModel(0xffff & i, -6662);
             i_287_ = class12.aByte216;
             i_286_ = class12.aByte201;
         }
         byte i_288_ = 0;
         byte i_289_ = 0;
         if (i_284_ != -1) {
-            Component319 class12 = var_d.method3(i_284_ & 0xffff, -6662);
+            Model class12 = var_d.getModel(i_284_ & 0xffff, -6662);
             if (class12.aByte198 != 0 || class12.aByte211 != 0) aBoolean5638 = true;
             i_288_ = class12.aByte201;
             i_289_ = class12.aByte216;
@@ -1689,7 +1689,7 @@ final class DisplayModeManagerContainer282
 
     static final void method689(byte i, int i_377_) {
         Component377.anInt859 = -1;
-        Component283.anInt4609 = -1;
+        ModelStore.anInt4609 = -1;
         if (i != -59) anInt5584 = 77;
         anInt5577++;
         NodeSub36.anInt6992 = i_377_;
@@ -2877,13 +2877,13 @@ final class DisplayModeManagerContainer282
                 if (ShaderSub3.method166((byte) 69, i_697_, i)) aClass123_5563 = new Component132(null, 5126, 3, 0);
                 if (Component334.method1193(i_697_, i, true)) aClass123_5610 = new Component132(null, 5121, 4, 0);
                 if (ClientErrorReporter.hasRoofFlag(i, i_697_, -31)) aClass270_5575 = new Component148();
-                d var_d = var_ha_Sub2.aD4579;
+                d var_d = var_ha_Sub2.modelProvider;
                 anIntArray5528 = new int[class124.anInt1821 + 1];
                 int[] is = new int[class124.anInt1817];
                 for (int i_698_ = 0; (i_698_ < class124.anInt1817); i_698_++) {
                     if (class124.aByteArray1843 == null || class124.aByteArray1843[i_698_] != 2) {
                         if (class124.aShortArray1822 != null && (class124.aShortArray1822[i_698_] != -1)) {
-                            Component319 class12 = var_d.method3(((class124.aShortArray1822[i_698_]) & 0xffff), -6662);
+                            Model class12 = var_d.getModel(((class124.aShortArray1822[i_698_]) & 0xffff), -6662);
                             if (((anInt5556 & 0x40) == 0 || !class12.aBoolean209) && class12.aBoolean204) continue;
                         }
                         is[anInt5632++] = i_698_;
@@ -2897,7 +2897,7 @@ final class DisplayModeManagerContainer282
                 boolean bool = (0x100 & anInt5648) != 0;
                 for (int i_699_ = 0; anInt5632 > i_699_; i_699_++) {
                     int i_700_ = is[i_699_];
-                    Component319 class12 = null;
+                    Model class12 = null;
                     int i_701_ = 0;
                     int i_702_ = 0;
                     int i_703_ = 0;
@@ -2910,7 +2910,7 @@ final class DisplayModeManagerContainer282
                                 Component291 class189 = DisplayModeManagerContainer306.method742(104, (class162.anInt2153));
                                 if (class189.aBoolean2531) bool_705_ = true;
                                 if (class189.anInt2525 != -1) {
-                                    Component319 class12_707_ = var_d.method3((class189.anInt2525), -6662);
+                                    Model class12_707_ = var_d.getModel((class189.anInt2525), -6662);
                                     if (class12_707_.anInt200 == 2) aBoolean5595 = true;
                                 }
                             }
@@ -2925,7 +2925,7 @@ final class DisplayModeManagerContainer282
                     if (class124.aShortArray1822 != null) {
                         i_708_ = class124.aShortArray1822[i_700_];
                         if (i_708_ != -1) {
-                            class12 = var_d.method3(i_708_ & 0xffff, -6662);
+                            class12 = var_d.getModel(i_708_ & 0xffff, -6662);
                             if ((anInt5556 & 0x40) != 0 && class12.aBoolean209) {
                                 i_708_ = -1;
                                 class12 = null;
@@ -3064,7 +3064,7 @@ final class DisplayModeManagerContainer282
                     else i_738_ = 0;
                     short i_739_ = (class124.aShortArray1822 == null ? (short) -1 : class124.aShortArray1822[i_735_]);
                     if (i_739_ != -1 && (0x40 & anInt5556) != 0) {
-                        Component319 class12 = var_d.method3(i_739_ & 0xffff, -6662);
+                        Model class12 = var_d.getModel(i_739_ & 0xffff, -6662);
                         if (class12.aBoolean209) i_739_ = (short) -1;
                     }
                     float f = 0.0F;

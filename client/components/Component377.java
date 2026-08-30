@@ -42,7 +42,7 @@ final class Component377
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string_1_);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Connection.affiliateId);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-                class348_sub47.aClass348_Sub49_Sub2_7116.writeLong(Component283.aLong4615, (byte) 104);
+                class348_sub47.aClass348_Sub49_Sub2_7116.writeLong(ModelStore.aLong4615, (byte) 104);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, ObjectDeserializer.languageId);
                 class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(bool, (PacketReader.currentGameType.id));
                 BufferCacheSub2.method4002((class348_sub47.aClass348_Sub49_Sub2_7116), (byte) 55);

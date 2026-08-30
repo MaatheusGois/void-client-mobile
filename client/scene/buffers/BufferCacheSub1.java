@@ -98,7 +98,7 @@ final class BufferCacheSub1
                             }
                         }
                         int i_25_ = -16777216;
-                        if (is_6_[i_14_] != -1 && method3997(aHa_Sub1_8217.aD4579.method3(is_6_[i_14_], -6662).aByte213)) i_25_ = -1694498816;
+                        if (is_6_[i_14_] != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(is_6_[i_14_], -6662).aByte213)) i_25_ = -1694498816;
                         class198.anIntArray2623[i_14_] = (i_25_ | Component10.method2250(method3991((is_4_[i_14_] >> 8), i_18_), 118, i_23_, i_8_));
                         if (is_5_ != null) class198.aByteArray2617[i_14_] = (byte) i_18_;
                     }
@@ -178,7 +178,7 @@ final class BufferCacheSub1
                         if (i_36_ == 0) class266.aByte3386 |= 0x2;
                     } else if (i_36_ == 0) return;
                     if ((this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i + 1][i_0_]) && (this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i + 1][i_0_ + 1]) && (this.anIntArrayArray4584[i][i_0_] == this.anIntArrayArray4584[i][i_0_ + 1])) class266.aByte3386 |= 0x1;
-                    if (i_37_ != -1 && (class266.aByte3386 & 0x2) == 0 && !(aHa_Sub1_8217.aD4579.method3(i_37_, -6662).aBoolean209)) {
+                    if (i_37_ != -1 && (class266.aByte3386 & 0x2) == 0 && !(aHa_Sub1_8217.modelProvider.getModel(i_37_, -6662).aBoolean209)) {
                         int i_38_;
                         if (is_3_ != null && i_9_ != 0) {
                             i_38_ = 255 * is_3_[i_29_] / i_9_;
@@ -295,7 +295,7 @@ final class BufferCacheSub1
                     }
                     boolean bool_51_ = false;
                     for (int i_52_ = 0; i_52_ < class145.aShort2010; i_52_++) {
-                        if (is_6_[i_52_ * 3] != -1 && !(aHa_Sub1_8217.aD4579.method3(is_6_[i_52_ * 3], -6662).aBoolean209)) bool_51_ = true;
+                        if (is_6_[i_52_ * 3] != -1 && !(aHa_Sub1_8217.modelProvider.getModel(is_6_[i_52_ * 3], -6662).aBoolean209)) bool_51_ = true;
                     }
                     if (is_5_ != null) class145.anIntArray2011 = new int[class145.aShort2010];
                     if (bool_51_) {
@@ -311,13 +311,13 @@ final class BufferCacheSub1
                             boolean bool_57_ = false;
                             boolean bool_58_ = true;
                             int i_59_ = is_6_[i_54_];
-                            if (i_59_ == -1 || (aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) bool_58_ = false;
+                            if (i_59_ == -1 || (aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) bool_58_ = false;
                             else bool_57_ = true;
                             i_59_ = is_6_[i_55_];
-                            if (i_59_ == -1 || (aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) bool_58_ = false;
+                            if (i_59_ == -1 || (aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) bool_58_ = false;
                             else bool_57_ = true;
                             i_59_ = is_6_[i_56_];
-                            if (i_59_ == -1 || (aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) bool_58_ = false;
+                            if (i_59_ == -1 || (aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) bool_58_ = false;
                             else bool_57_ = true;
                             if (bool_58_) {
                                 class145.aShortArray2008[i_53_] = (short) i_59_;
@@ -325,11 +325,11 @@ final class BufferCacheSub1
                             } else {
                                 if (bool_57_) {
                                     i_59_ = is_6_[i_54_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_54_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_54_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                     i_59_ = is_6_[i_55_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_55_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_55_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                     i_59_ = is_6_[i_56_];
-                                    if (i_59_ != -1 && !(aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_56_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.aD4579.method3(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
+                                    if (i_59_ != -1 && !(aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aBoolean209)) class145.anIntArray2001[i_56_] = (Component380.anIntArray4983[(Component361.method303((aHa_Sub1_8217.modelProvider.getModel(i_59_, -6662).aShort208) & 0xffff, 30)) & 0xffff]);
                                 }
                                 class145.aShortArray2008[i_53_] = (short) -1;
                             }
@@ -392,7 +392,7 @@ final class BufferCacheSub1
                 if (is_67_[i_89_] >= 0 || is_68_ != null && is_68_[i_89_] >= 0) i_88_++;
                 int i_90_ = is_69_[i_89_];
                 if (i_90_ != -1) {
-                    Component319 class12 = aHa_Sub1_8217.aD4579.method3(i_90_, -6662);
+                    Model class12 = aHa_Sub1_8217.modelProvider.getModel(i_90_, -6662);
                     if (!class12.aBoolean209) {
                         bool_87_ = true;
                         if (method3997(class12.aByte213) || class12.aByte198 != 0 || class12.aByte211 != 0) class236.aByte3100 |= 0x4;
@@ -420,7 +420,7 @@ final class BufferCacheSub1
                     class236.aShortArray3090[class236.aShort3099] = (short) is_65_[i_91_];
                     class236.aShortArray3101[class236.aShort3099] = (short) is_66_[i_91_];
                     if (bool_87_) {
-                        if (is_69_[i_91_] != -1 && !(aHa_Sub1_8217.aD4579.method3(is_69_[i_91_], -6662).aBoolean209)) {
+                        if (is_69_[i_91_] != -1 && !(aHa_Sub1_8217.modelProvider.getModel(is_69_[i_91_], -6662).aBoolean209)) {
                             class236.aShortArray3095[class236.aShort3099] = (short) is_69_[i_91_];
                             class236.aShortArray3098[class236.aShort3099] = (short) is_70_[i_91_];
                         } else class236.aShortArray3095[class236.aShort3099] = (short) -1;
@@ -438,8 +438,8 @@ final class BufferCacheSub1
                 if (i_92_ == -1) class102.aByte1606 |= 0x2;
             }
             if ((this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i + 1][i_60_ + 1]) && (this.anIntArrayArray4584[i][i_60_] == this.anIntArrayArray4584[i][i_60_ + 1])) class102.aByte1606 |= 0x1;
-            Component319 class12 = null;
-            if (i_93_ != -1) class12 = aHa_Sub1_8217.aD4579.method3(i_93_, -6662);
+            Model class12 = null;
+            if (i_93_ != -1) class12 = aHa_Sub1_8217.modelProvider.getModel(i_93_, -6662);
             if (class12 != null && (class102.aByte1606 & 0x2) == 0 && !class12.aBoolean209) {
                 class102.aShort1601 = (short) (aByteArrayArray8220[i][i_60_] - aByteArrayArray8232[i][i_60_]);
                 class102.aShort1603 = (short) (aByteArrayArray8220[i + 1][i_60_] - aByteArrayArray8232[i + 1][i_60_]);
@@ -599,19 +599,19 @@ final class BufferCacheSub1
                                 if (i_215_ > 0) {
                                     if (i_216_ != -1) {
                                         int i_217_ = -16777216;
-                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.aD4579.method3(i_216_, -6662).aByte213)) i_217_ = -1694498816;
+                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) i_217_ = -1694498816;
                                         class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_207_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_208_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_206_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_207_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_208_]) / (float) (this.anInt4592)), (i_217_ | ((class145.anIntArray2001[i_206_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_207_]) & 0xffffff)), (i_217_ | ((class145.anIntArray2001[i_208_]) & 0xffffff)), (class167.anInt2192), is_108_[i_206_], is_108_[i_207_], is_108_[i_208_], i_216_);
                                     } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
-                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.aD4579.method3(i_216_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                        if (i_216_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (BuildInfo.method206((class145.anIntArray2001[i_206_]), (is_108_[i_206_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_207_]), (is_108_[i_207_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_208_]), (is_108_[i_208_] << 24 | (class167.anInt2192)), 255)));
                                         class109.anInt1674 = 0;
                                     }
                                 } else if (i_216_ != -1) {
                                     int i_218_ = -16777216;
-                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.aD4579.method3(i_216_, -6662).aByte213))) i_218_ = -1694498816;
+                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) i_218_ = -1694498816;
                                     class109.method1024((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], ((float) (class145.aShortArray2009[i_206_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_207_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_208_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_206_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_207_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_208_]) / (float) this.anInt4592), i_218_ | (class145.anIntArray2001[i_206_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_207_]) & 0xffffff, i_218_ | (class145.anIntArray2001[i_208_]) & 0xffffff, 0, 0, 0, 0, i_216_);
                                 } else if (((class145.anIntArray2001[i_206_]) & 0xffffff) != 0) {
-                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.aD4579.method3(i_216_, -6662).aByte213))) class109.anInt1674 = -1694498816;
+                                    if (i_216_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_216_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_212_, (float) i_213_, (float) i_214_, (float) i_209_, (float) i_210_, (float) i_211_, (float) is_107_[i_206_], (float) is_107_[i_207_], (float) is_107_[i_208_], (class145.anIntArray2001[i_206_]), (class145.anIntArray2001[i_207_]), (class145.anIntArray2001[i_208_]));
                                     class109.anInt1674 = 0;
                                 }
@@ -634,23 +634,23 @@ final class BufferCacheSub1
                             class109.aBoolean1671 = (i_223_ < 0 || i_224_ < 0 || i_225_ < 0 || (i_223_ > class109.anInt1679) || (i_224_ > class109.anInt1679) || (i_225_ > class109.anInt1679));
                             short i_230_ = (class145.aShortArray2008[i_219_]);
                             if (i_229_ < 765) {
-                                if (i_230_ != -1 && method3997(aHa_Sub1_8217.aD4579.method3(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                 if (i_229_ > 0) {
                                     if (i_230_ != -1) {
                                         int i_231_ = -16777216;
-                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.aD4579.method3(i_230_, -6662).aByte213)) i_231_ = -1694498816;
+                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) i_231_ = -1694498816;
                                         class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_221_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2009[i_222_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_220_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_221_]) / (float) (this.anInt4592)), ((float) (class145.aShortArray2002[i_222_]) / (float) (this.anInt4592)), (i_231_ | ((class145.anIntArray2001[i_220_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_221_]) & 0xffffff)), (i_231_ | ((class145.anIntArray2001[i_222_]) & 0xffffff)), (class167.anInt2192), is_108_[i_220_], is_108_[i_221_], is_108_[i_222_], i_230_);
                                     } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
-                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.aD4579.method3(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
+                                        if (i_230_ != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213)) class109.anInt1674 = -1694498816;
                                         class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (BuildInfo.method206((class145.anIntArray2001[i_220_]), (is_108_[i_220_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_221_]), (is_108_[i_221_] << 24 | (class167.anInt2192)), 255)), (BuildInfo.method206((class145.anIntArray2001[i_222_]), (is_108_[i_222_] << 24 | (class167.anInt2192)), 255)));
                                         class109.anInt1674 = 0;
                                     }
                                 } else if (i_230_ != -1) {
                                     int i_232_ = -16777216;
-                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.aD4579.method3(i_230_, -6662).aByte213))) i_232_ = -1694498816;
+                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) i_232_ = -1694498816;
                                     class109.method1024((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], ((float) (class145.aShortArray2009[i_220_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_221_]) / (float) this.anInt4592), ((float) (class145.aShortArray2009[i_222_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_220_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_221_]) / (float) this.anInt4592), ((float) (class145.aShortArray2002[i_222_]) / (float) this.anInt4592), i_232_ | (class145.anIntArray2001[i_220_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_221_]) & 0xffffff, i_232_ | (class145.anIntArray2001[i_222_]) & 0xffffff, 0, 0, 0, 0, i_230_);
                                 } else if (((class145.anIntArray2001[i_220_]) & 0xffffff) != 0) {
-                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.aD4579.method3(i_230_, -6662).aByte213))) class109.anInt1674 = -1694498816;
+                                    if (i_230_ != -1 && (method3997(aHa_Sub1_8217.modelProvider.getModel(i_230_, -6662).aByte213))) class109.anInt1674 = -1694498816;
                                     class109.method1027((float) i_226_, (float) i_227_, (float) i_228_, (float) i_223_, (float) i_224_, (float) i_225_, (float) is_107_[i_220_], (float) is_107_[i_221_], (float) is_107_[i_222_], (class145.anIntArray2001[i_220_]), (class145.anIntArray2001[i_221_]), (class145.anIntArray2001[i_222_]));
                                     class109.anInt1674 = 0;
                                 }
@@ -870,7 +870,7 @@ final class BufferCacheSub1
                     i_128_ = (class109.anInt1668 + (int) (f_149_ * (float) (aHa_Sub1_8217.anInt7497) / (float) anInt8228));
                 }
             }
-            boolean bool_176_ = (class266.aShort3379 != -1 && method3997(aHa_Sub1_8217.aD4579.method3(class266.aShort3379, -6662).aByte213));
+            boolean bool_176_ = (class266.aShort3379 != -1 && method3997(aHa_Sub1_8217.modelProvider.getModel(class266.aShort3379, -6662).aByte213));
             if (anInt8228 == -1) {
                 int i_177_ = i_115_ + i_116_ + i_117_;
                 if (((i_125_ - i_127_) * (i_124_ - i_128_) - (i_126_ - i_128_) * (i_123_ - i_127_)) > 0) {

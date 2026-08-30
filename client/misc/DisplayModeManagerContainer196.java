@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer196
         Component377.anInt859 = -1;
         DebugOverlay.anInt3170 = -(DisplayModeManagerContainer229.anInt1267 * i_3_ / i_5_) + DisplayModeManagerContainer229.anInt1267;
         NodeSub36.anInt6992 = DisplayModeManagerContainer229.anInt1259 * i_1_ / i_4_;
-        Component283.anInt4609 = -1;
+        ModelStore.anInt4609 = -1;
         int i_6_ = 50 / ((-12 - i_2_) / 40);
         ColorTagNode.method2811(false);
     }

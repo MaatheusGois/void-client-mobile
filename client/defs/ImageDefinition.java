@@ -158,7 +158,7 @@ final class ImageDefinition extends Definition {
                                         continue;
                                     }
                                     if (class46.contentType == NodeSub45.anInt7102) {
-                                        DisplayModeManagerContainer104.method2464((byte) -7, i_24_, class46.width, class46.height, NodeSub8.toolkit, i_25_, DefinitionSub4.aD9113);
+                                        DisplayModeManagerContainer104.method2464((byte) -7, i_24_, class46.width, class46.height, NodeSub8.toolkit, i_25_, DefinitionSub4.modelProvider);
                                         InflaterDecompressor.aBooleanArray2076[i_23_] = true;
                                         NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                         continue;

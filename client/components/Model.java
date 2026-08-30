@@ -1,11 +1,13 @@
-/* Component319 - Decompiled by JODE
+/* Model - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-final class Component319
+final class Model
 /**
- * RENAMED from `Class12` (JODE-obfuscated).
- * Evidence: root class; no distinctive extends/strings
+ * RENAMED from `Class12` (JODE-obfuscated) -> `Model`.
+ * Evidence: root class; no distinctive extends/strings.
+ * This is the **Model / Renderable** struct returned by the
+ * `ModelProvider` interface (formerly `d`).
  */ {
     byte aByte198;
     boolean aBoolean199;
@@ -44,7 +46,7 @@ final class Component319
         if (i != -40) method224((byte) 100, null);
     }
 
-    public Component319() {
+    public Model() {
         /* empty */
     }
 }

@@ -453,7 +453,7 @@ abstract class GlToolkitSub3
                 byte i_25_ = this.aBoolean8160 ? (byte) 3 : (byte) 0;
                 if (i >= 0) {
                     interface18_impl3 = aClass372_8137.method3587((byte) -97, i);
-                    Component319 class12 = this.aD4579.method3(i, -6662);
+                    Model class12 = this.modelProvider.getModel(i, -6662);
                     if (class12.aByte198 == 0 && class12.aByte211 == 0) method3879(-8629);
                     else {
                         int i_26_ = !class12.aBoolean199 ? 128 : 64;
@@ -2688,14 +2688,14 @@ abstract class GlToolkitSub3
                 this.anInt7931 = anInt7958 = dimension.width;
                 this.anInt8178 = i_289_;
                 Component54.method566(false, true, (byte) -127);
-                if (this.aD4579 == null) {
+                if (this.modelProvider == null) {
                     this.aNativeInterface7924 = new NativeInterface(0, this.anInt8178);
                     aClass372_8137 = null;
                 } else {
-                    aClass372_8137 = new Component86(this, this.aD4579);
-                    this.aNativeInterface7924 = new NativeInterface(this.aD4579.method2(true), this.anInt8178);
-                    for (int i_290_ = 0; this.aD4579.method2(true) > i_290_; i_290_++) {
-                        Component319 class12 = this.aD4579.method3(i_290_, -6662);
+                    aClass372_8137 = new Component86(this, this.modelProvider);
+                    this.aNativeInterface7924 = new NativeInterface(this.modelProvider.getModelCount(true), this.anInt8178);
+                    for (int i_290_ = 0; this.modelProvider.getModelCount(true) > i_290_; i_290_++) {
+                        Model class12 = this.modelProvider.getModel(i_290_, -6662);
                         if (class12 != null) this.aNativeInterface7924.initTextureMetrics(i_290_, class12.aByte201, class12.aByte216);
                     }
                 }

@@ -132,7 +132,7 @@ final class HashNodeSub3
         WorldNameText.aClass323_8644 = null;
         Component377.anInt859 = -1;
         if (i <= -44) {
-            Component283.anInt4609 = -1;
+            ModelStore.anInt4609 = -1;
             Component49.aClass323_4672 = null;
             if (DisplayModeManagerContainer229.aClass153_1238 != null) {
                 DisplayModeManagerContainer229.aClass153_1238.method1219(7851);

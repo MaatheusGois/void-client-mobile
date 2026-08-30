@@ -581,7 +581,7 @@ final class BufferCacheSub3
     final void U(int i, int i_167_, int[] is, int[] is_168_, int[] is_169_, int[] is_170_, int[] is_171_, int[] is_172_, int[] is_173_, int[] is_174_, int i_175_, int i_176_, int i_177_, boolean bool) {
         try {
             anInt8295++;
-            d var_d = this.aHa_Sub3_8322.aD4579;
+            d var_d = this.aHa_Sub3_8322.modelProvider;
             if (is_170_ != null && anIntArrayArrayArray8314 == null) anIntArrayArrayArray8314 = new int[this.anInt4587][this.anInt4590][];
             if (is_168_ != null && anIntArrayArrayArray8308 == null) anIntArrayArrayArray8308 = new int[this.anInt4587][this.anInt4590][];
             this.anIntArrayArrayArray8321[i][i_167_] = is;
@@ -594,7 +594,7 @@ final class BufferCacheSub3
             for (int i_178_ = 0; i_178_ < is_171_.length; i_178_++) {
                 int i_179_ = is_173_[i_178_];
                 int i_180_ = is_174_[i_178_];
-                if ((this.anInt8294 & 0x20) != 0 && i_179_ != -1 && var_d.method3(i_179_, -6662).aBoolean209) {
+                if ((this.anInt8294 & 0x20) != 0 && i_179_ != -1 && var_d.getModel(i_179_, -6662).aBoolean209) {
                     i_180_ = 128;
                     i_179_ = -1;
                 }

@@ -53,7 +53,7 @@ final class DisplayModeManagerContainer254
                 DisplayModeManagerContainer28.aFloat8725 = Component214.aFloat2137;
                 Canvas_Sub1.anInt70 = Component38.anInt2500;
                 ColoredText.aClass299_6098 = HeapDumpHelper.aClass299_4938;
-                DisplayModeManagerContainer370.aFloat1136 = Component283.aFloat4626;
+                DisplayModeManagerContainer370.aFloat1136 = ModelStore.aFloat4626;
                 DebugOverlay.aFloat3172 = Component209.aFloat3462;
                 CacheStore.aFloat670 = NodeSub3.aFloat6586;
                 AbstractGlTextureSub4.aFloat8560 = Component98.aFloat5945;

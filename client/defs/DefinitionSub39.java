@@ -20,7 +20,7 @@ final class DefinitionSub39
         if (i != -27) method3152(86);
         int i_0_ = DefinitionSub6.anInt9139;
         int i_1_ = ShaderProgramSub2.anInt6212;
-        Component319.method224((byte) -40, is);
+        Model.method224((byte) -40, is);
         NodeSub27.method3000(CustomCursorSetting.anInt6076, 0, DisplayModeManagerContainer356.anInt6325, 0, i ^ 0x28);
         if (aClass50Array9481 != null) {
             for (int i_2_ = 0; aClass50Array9481.length > i_2_; i_2_++) {

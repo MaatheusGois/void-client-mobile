@@ -385,7 +385,7 @@ final class GlToolkitSub1
     }
 
     final boolean method3714(int i) {
-        return this.aD4579.method3(i, -6662).aBoolean217 || this.aD4579.method3(i, -6662).aBoolean215;
+        return this.modelProvider.getModel(i, -6662).aBoolean217 || this.modelProvider.getModel(i, -6662).aBoolean215;
     }
 
     final void Q(int i, int i_99_, int i_100_, int i_101_, int i_102_, int i_103_, byte[] is, int i_104_, int i_105_) {
@@ -1195,10 +1195,10 @@ final class GlToolkitSub1
         synchronized (aClass60_7498) {
             class348_sub25 = (NodeSub25) aClass60_7498.get(i, 77);
             if (class348_sub25 == null) {
-                if (!this.aD4579.method4(-7953, i)) return null;
-                Component319 class12 = this.aD4579.method3(i, -6662);
+                if (!this.modelProvider.isModelLoaded(-7953, i)) return null;
+                Model class12 = this.modelProvider.getModel(i, -6662);
                 int i_354_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
-                class348_sub25 = new NodeSub25(i, i_354_, this.aD4579.method5(true, i, 0.7F, i_354_, i_354_, 71), class12.anInt200 != 1);
+                class348_sub25 = new NodeSub25(i, i_354_, this.modelProvider.getTriangles(true, i, 0.7F, i_354_, i_354_, 71), class12.anInt200 != 1);
                 aClass60_7498.putOne(class348_sub25, i, (byte) -122);
             }
         }
@@ -1240,10 +1240,10 @@ final class GlToolkitSub1
         synchronized (aClass60_7498) {
             class348_sub25 = ((NodeSub25) aClass60_7498.get((long) i | ~0x7fffffffffffffffL, 107));
             if (class348_sub25 == null) {
-                if (!this.aD4579.method4(-7953, i)) return null;
-                Component319 class12 = this.aD4579.method3(i, -6662);
+                if (!this.modelProvider.isModelLoaded(-7953, i)) return null;
+                Model class12 = this.modelProvider.getModel(i, -6662);
                 int i_356_ = (class12.aBoolean199 || aBoolean7489 ? 64 : this.anInt7501);
-                class348_sub25 = new NodeSub25(i, i_356_, this.aD4579.method6(-21540, i_356_, 0.7F, i, true, i_356_), class12.anInt200 != 1);
+                class348_sub25 = new NodeSub25(i, i_356_, this.modelProvider.getIndices(-21540, i_356_, 0.7F, i, true, i_356_), class12.anInt200 != 1);
                 aClass60_7498.putOne(class348_sub25, (long) i | ~0x7fffffffffffffffL, (byte) -126);
             }
         }
@@ -1329,7 +1329,7 @@ final class GlToolkitSub1
 
     final void method3720(int i, int i_377_, int i_378_, int i_379_, int i_380_, int i_381_, int i_382_, int i_383_, int i_384_, int i_385_) {
         if (i_379_ != 0 && i_380_ != 0) {
-            if (i_382_ != 65535 && !(this.aD4579.method3(i_382_, -6662).aBoolean209)) {
+            if (i_382_ != 65535 && !(this.modelProvider.getModel(i_382_, -6662).aBoolean209)) {
                 if (anInt7512 != i_382_) {
                     Component24 class105 = ((Component24) aClass60_7499.get(i_382_, 97));
                     if (class105 == null) {
@@ -1480,7 +1480,7 @@ final class GlToolkitSub1
     }
 
     final int method3722(int i) {
-        return (this.aD4579.method3(i, -6662).aShort208 & 0xffff);
+        return (this.modelProvider.getModel(i, -6662).aShort208 & 0xffff);
     }
 
     final boolean method3699() {
@@ -1988,7 +1988,7 @@ final class GlToolkitSub1
     }
 
     final boolean method3725(int i) {
-        return this.aD4579.method4(-7953, i);
+        return this.modelProvider.isModelLoaded(-7953, i);
     }
 
     private GlToolkitSub1(d var_d) {
@@ -2227,7 +2227,7 @@ final class GlToolkitSub1
     }
 
     final int method3726(int i) {
-        return this.aD4579.method3(i, -6662).anInt200;
+        return this.modelProvider.getModel(i, -6662).anInt200;
     }
 
     final int I() {
@@ -2248,7 +2248,7 @@ final class GlToolkitSub1
                 class348_sub25.anInt6879 += i_634_;
                 int i_635_ = class348_sub25.anInt6879 / 20;
                 if (i_635_ > 0) {
-                    Component319 class12 = this.aD4579.method3((class348_sub25.anInt6883), -6662);
+                    Model class12 = this.modelProvider.getModel((class348_sub25.anInt6883), -6662);
                     class348_sub25.method2995((class12.aByte198 * i_634_ * 50 / 1000), (class12.aByte211 * i_634_ * 50 / 1000));
                     class348_sub25.anInt6879 -= i_635_ * 20;
                 }
@@ -2296,6 +2296,6 @@ final class GlToolkitSub1
     }
 
     final boolean method3727(int i) {
-        return aBoolean7489 || this.aD4579.method3(i, -6662).aBoolean199;
+        return aBoolean7489 || this.modelProvider.getModel(i, -6662).aBoolean199;
     }
 }

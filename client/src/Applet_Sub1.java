@@ -137,9 +137,9 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     private final void pulseLogicFrame(int i) {
         anInt8++;
         long l = Component240.currentTimeMillis(i + -88);
-        long l_1_ = ShaderCompilerSub2Sub1.aLongArray8800[Component283.anInt4613];
-        ShaderCompilerSub2Sub1.aLongArray8800[Component283.anInt4613] = l;
-        Component283.anInt4613 = 0x1f & 1 + Component283.anInt4613;
+        long l_1_ = ShaderCompilerSub2Sub1.aLongArray8800[ModelStore.anInt4613];
+        ShaderCompilerSub2Sub1.aLongArray8800[ModelStore.anInt4613] = l;
+        ModelStore.anInt4613 = 0x1f & 1 + ModelStore.anInt4613;
         if (l_1_ != 0L && l > l_1_) {
             /* empty */
         }

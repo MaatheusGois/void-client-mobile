@@ -163,7 +163,7 @@ final class LoadingManager {
         if (i != -28660) return 2;
         if (RSARequest.currentLoadingState == LoadingState.aClass56_1035) {
             if (Sprite.anInt6923 != -1 && !ShaderSub3.aClass45_5207.isFileReady(-10499, Sprite.anInt6923, 0)) return 99;
-            DefinitionSub4.aD9113 = new Component283(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
+            DefinitionSub4.modelProvider = new ModelStore(NodeSub11.aClass45_4770, Component14.aClass45_8589, Component158.aClass45_322);
             MatrixSub3.aClass326_5764 = new Component311(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             DisplayModeManagerContainer282.aClass261_5558 = new DisplayModeManagerContainer1(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541);
             Component339.cursorDefinitions = new CursorDefinitionCache(PacketReader.currentGameType, ObjectDeserializer.languageId, Component181.aClass45_1541, Component158.aClass45_322);
@@ -198,7 +198,7 @@ final class LoadingManager {
             DisplayModeManagerContainer58.aClass170_10209 = new DisplayModeManagerContainer292();
             Definition.method3038(-1);
             RuntimeException_Sub1.method4011(i + 29684, Component339.aClass45_3146);
-            NodeSub29.method3004(ShaderSub3.aClass45_5207, false, DefinitionSub4.aD9113);
+            NodeSub29.method3004(ShaderSub3.aClass45_5207, false, DefinitionSub4.modelProvider);
             HuffmanDecoder class296 = new HuffmanDecoder(Component110.aClass45_233.getFile("huffman", "", -29832));
             GlToolkitSub3.method3896(class296, (byte) 13);
             try {

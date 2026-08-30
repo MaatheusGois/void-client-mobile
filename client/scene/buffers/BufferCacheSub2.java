@@ -677,7 +677,7 @@ final class BufferCacheSub2
         try {
             anInt8261++;
             if (is_177_ != null && anIntArrayArrayArray8258 == null) anIntArrayArrayArray8258 = new int[this.anInt4587][this.anInt4590][];
-            d var_d = this.aHa_Sub2_8272.aD4579;
+            d var_d = this.aHa_Sub2_8272.modelProvider;
             if (is_179_ != null && anIntArrayArrayArray8252 == null) anIntArrayArrayArray8252 = new int[this.anInt4587][this.anInt4590][];
             this.anIntArrayArrayArray8268[i][i_176_] = is;
             this.anIntArrayArrayArray8234[i][i_176_] = is_178_;
@@ -689,7 +689,7 @@ final class BufferCacheSub2
             for (int i_187_ = 0; i_187_ < is_180_.length; i_187_++) {
                 int i_188_ = is_182_[i_187_];
                 int i_189_ = is_183_[i_187_];
-                if ((0x20 & this.anInt8235) != 0 && i_188_ != -1 && var_d.method3(i_188_, -6662).aBoolean209) {
+                if ((0x20 & this.anInt8235) != 0 && i_188_ != -1 && var_d.getModel(i_188_, -6662).aBoolean209) {
                     i_188_ = -1;
                     i_189_ = 128;
                 }

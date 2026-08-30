@@ -481,7 +481,7 @@ class DisplayModeManagerContainer229
         Component11 class277 = aClass268_1239.method2034(i, false);
         if (class277 == null) return 0;
         int i_107_ = class277.anInt3575;
-        if (i_107_ >= 0 && var_d.method3(i_107_, -6662).aBoolean209) i_107_ = -1;
+        if (i_107_ >= 0 && var_d.getModel(i_107_, -6662).aBoolean209) i_107_ = -1;
         int i_108_;
         if (class277.anInt3569 >= 0) {
             int i_109_ = class277.anInt3569;
@@ -490,7 +490,7 @@ class DisplayModeManagerContainer229
             else if (i_110_ > 127) i_110_ = 127;
             int i_111_ = (i_109_ + i_105_ & 0xfc00) + (i_109_ & 0x380) + i_110_;
             i_108_ = ~0xffffff | (Component380.anIntArray4983[Component361.method303(Component243.method353(96, -119, i_111_), 30) & 0xffff]);
-        } else if (i_107_ >= 0) i_108_ = (~0xffffff | (Component380.anIntArray4983[(Component361.method303(Component243.method353(96, -85, (var_d.method3(i_107_, -6662).aShort208)), 30)) & 0xffff]));
+        } else if (i_107_ >= 0) i_108_ = (~0xffffff | (Component380.anIntArray4983[(Component361.method303(Component243.method353(96, -85, (var_d.getModel(i_107_, -6662).aShort208)), 30)) & 0xffff]));
         else if (class277.anInt3563 == -1) i_108_ = 0;
         else {
             int i_112_ = class277.anInt3563;

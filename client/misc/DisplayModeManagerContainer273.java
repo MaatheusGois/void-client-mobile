@@ -116,7 +116,7 @@ final class DisplayModeManagerContainer273
         CacheStore.anInt657 = 0;
         Applet_Sub1.anInt12 = 0;
         Component289.anInt10123 = 0;
-        Component283.anInt4618 = 0;
+        ModelStore.anInt4618 = 0;
         Buffer.anInt7166 = 0;
         Component337.anInt3646 = 0;
         Npc.anInt10504 = 0;
@@ -485,7 +485,7 @@ final class DisplayModeManagerContainer273
         NodeSub51.anInt7242 = 0;
         TcpSocketStream.anInt5835 = 0;
         Component241.anInt2903 = 0;
-        Component283.anInt4616 = 0;
+        ModelStore.anInt4616 = 0;
         SpriteAtlasShader.anInt6250 = 0;
         GlToolkitSub2.anInt7527 = 0;
         DisplayModeManagerContainer105.anInt4878 = 0;
@@ -505,7 +505,7 @@ final class DisplayModeManagerContainer273
         Component158.anInt321 = 0;
         GlExtensionManager.anInt9836 = 0;
         GpiLogger.anInt8846 = 0;
-        Component319.anInt210 = 0;
+        Model.anInt210 = 0;
         Component139.anInt6129 = 0;
         BufferCacheSub3.anInt8292 = 0;
         DebugPanicSub1.anInt8487 = 0;
@@ -716,7 +716,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer88.anInt1205 = 0;
         Component19.anInt8613 = 0;
         ColoredTextBuilder.anInt4074 = 0;
-        Component283.anInt4614 = 0;
+        ModelStore.anInt4614 = 0;
         ResourceLoader.anInt3897 = 0;
         MatrixSub1.anInt5670 = 0;
         Component98.anInt5941 = 0;
@@ -1126,7 +1126,7 @@ final class DisplayModeManagerContainer273
         Component211.anInt1956 = 0;
         ItemDefinitionProvider.anInt3275 = 0;
         ScreenModeManager.anInt2838 = 0;
-        Component319.anInt214 = 0;
+        Model.anInt214 = 0;
         GlTexture.anInt8542 = 0;
         MatrixSub2.anInt5717 = 0;
         BasicMouseHandler.anInt7438 = 0;
@@ -1426,7 +1426,7 @@ final class DisplayModeManagerContainer273
         Component266.anInt5981 = 0;
         GlExtensionManager.anInt9817 = 0;
         Component253.anInt3200 = 0;
-        Component283.anInt4617 = 0;
+        ModelStore.anInt4617 = 0;
         ShaderProgramSub9.anInt6312 = 0;
         Component334.anInt2018 = 0;
         GlToolkitSub2.anInt7538 = 0;
@@ -3203,7 +3203,7 @@ final class DisplayModeManagerContainer273
         GlToolkitSub3.anInt7926 = 0;
         GlToolkitSub3.anInt7989 = 0;
         Component49.anInt4678 = 0;
-        Component283.anInt4620 = 0;
+        ModelStore.anInt4620 = 0;
         Component98.anInt5935 = 0;
         NodeList.anInt3333 = 0;
         Component7.anInt2878 = 0;
@@ -3267,7 +3267,7 @@ final class DisplayModeManagerContainer273
         Component141.anInt9956 = 0;
         RadixText.anInt6119 = 0;
         GlToolkitSub3.anInt7949 = 0;
-        Component283.anInt4612 = 0;
+        ModelStore.anInt4612 = 0;
         TeleportHandler.anInt4446 = 0;
         LogicError.anInt1464 = 0;
         MatrixSub1.anInt5657 = 0;
@@ -4079,7 +4079,7 @@ final class DisplayModeManagerContainer273
         DisplayModeManagerContainer58.anInt10254 = 0;
         DisplayModeManagerContainer57.anInt684 = 0;
         DisplayModeManagerContainer58.anInt10281 = 0;
-        Component283.anInt4621 = 0;
+        ModelStore.anInt4621 = 0;
         Component10.anInt3808 = 0;
         Component62.anInt2079 = 0;
         DisplayModeManagerContainer389.anInt8622 = 0;

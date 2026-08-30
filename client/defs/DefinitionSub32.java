@@ -57,14 +57,14 @@ final class DefinitionSub32
                 NodeSub3.aFloat6586 = (Component329.aClass190_5990.aFloat2545 - CacheStore.aFloat670) * f_6_ + CacheStore.aFloat670;
                 Component129.anInt486 = (i_4_ * Component372.anInt6042 + (Component329.aClass190_5990.anInt2546 * i_5_)) >> 8;
                 Component214.aFloat2137 = (DisplayModeManagerContainer28.aFloat8725 + (-DisplayModeManagerContainer28.aFloat8725 + (Component329.aClass190_5990.aFloat2547)) * f_6_);
-                Component283.aFloat4626 = (DisplayModeManagerContainer370.aFloat1136 + f_6_ * ((Component329.aClass190_5990.aFloat2544) - DisplayModeManagerContainer370.aFloat1136));
+                ModelStore.aFloat4626 = (DisplayModeManagerContainer370.aFloat1136 + f_6_ * ((Component329.aClass190_5990.aFloat2544) - DisplayModeManagerContainer370.aFloat1136));
                 Component38.anInt2500 = (((i_4_ * (0xff00 & Canvas_Sub1.anInt70) + (0xff00 & (Component329.aClass190_5990.anInt2549)) * i_5_) & 0xff0000) + (~0xff00ff & (i_4_ * (0xff00ff & Canvas_Sub1.anInt70) - -(i_5_ * (0xff00ff & (Component329.aClass190_5990.anInt2549)))))) >>> 8;
                 TeleportHandler.aFloat4455 = (Component163.aFloat3177 + f_6_ * (-Component163.aFloat3177 + (Component329.aClass190_5990.aFloat2536)));
                 Component209.aFloat3462 = (DebugOverlay.aFloat3172 + (Component329.aClass190_5990.aFloat2542 - DebugOverlay.aFloat3172) * f_6_);
                 if (ColoredText.aClass299_6098 != (Component329.aClass190_5990.aClass299_2541)) HeapDumpHelper.aClass299_4938 = (NodeCache.aHa1098.method3706(ColoredText.aClass299_6098, (Component329.aClass190_5990.aClass299_2541), f_6_, HeapDumpHelper.aClass299_4938));
             } else {
                 HeapDumpHelper.aClass299_4938 = (Component329.aClass190_5990.aClass299_2541);
-                Component283.aFloat4626 = Component329.aClass190_5990.aFloat2544;
+                ModelStore.aFloat4626 = Component329.aClass190_5990.aFloat2544;
                 NodeSub3.aFloat6586 = Component329.aClass190_5990.aFloat2545;
                 Component98.aFloat5945 = Component329.aClass190_5990.aFloat2551;
                 Component129.anInt486 = Component329.aClass190_5990.anInt2546;

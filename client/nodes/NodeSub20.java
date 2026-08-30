@@ -122,7 +122,7 @@ final class NodeSub20
     final void method2949(byte i, int i_22_, int i_23_, int i_24_, float f) {
         if (i == 97) {
             if (this.anInt6841 != -1) {
-                Component319 class12 = aHa_Sub2_6831.aD4579.method3(this.anInt6841, -6662);
+                Model class12 = aHa_Sub2_6831.modelProvider.getModel(this.anInt6841, -6662);
                 int i_25_ = 0xff & class12.aByte201;
                 if (i_25_ != 0 && class12.aByte213 != 4) {
                     int i_26_;

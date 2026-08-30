@@ -74,7 +74,7 @@ final class Component2
         if (Component72.anInt1910 <= i_15_ && PauseTimer.anInt513 >= i_15_) {
             i_14_ = LogicError.method831(Component22.anInt1745, i_14_, Component27.anInt4960, 71);
             i = LogicError.method831(Component22.anInt1745, i, Component27.anInt4960, -87);
-            Component319.method223(i, i_13_, i_15_, i_14_, (byte) 39);
+            Model.method223(i, i_13_, i_15_, i_14_, (byte) 39);
         }
         anInt8357++;
     }

@@ -744,7 +744,7 @@ final class GlToolkitSub2
             byte i_51_ = !this.aBoolean7846 ? (byte) 0 : (byte) 3;
             if (i >= 0) {
                 class258_sub3 = aClass354_7723.method3467(i, 256);
-                Component319 class12 = this.aD4579.method3(i, -6662);
+                Model class12 = this.modelProvider.getModel(i, -6662);
                 if (class12.aByte198 != 0 || class12.aByte211 != 0) {
                     int i_52_ = class12.aBoolean199 ? 64 : 128;
                     int i_53_ = i_52_ * 50;
@@ -1179,7 +1179,7 @@ final class GlToolkitSub2
                 }
                 Component54.method566(false, true, (byte) -128);
                 aBoolean7734 = true;
-                aClass354_7723 = new Component160(this, this.aD4579);
+                aClass354_7723 = new Component160(this, this.modelProvider);
                 method3786(false);
                 this.aClass188_7736 = new ReliefShader(this);
                 aClass18_7720 = new DisplayModeManagerContainer220(this);

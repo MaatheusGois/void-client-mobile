@@ -24,7 +24,7 @@ final class Component100
         anInt8692++;
         if (i != -121) method2256((byte) 33);
         if (aClass258_Sub2_8688 == null) {
-            d var_d = aHa_Sub2_8693.aD4579;
+            d var_d = aHa_Sub2_8693.modelProvider;
             Component17.anIntArray3883[3] = anInt8690;
             Component17.anIntArray3883[4] = anInt8686;
             Component17.anIntArray3883[2] = anInt8691;
@@ -34,14 +34,14 @@ final class Component100
             boolean bool = false;
             int i_0_ = 0;
             for (int i_1_ = 0; i_1_ < 6; i_1_++) {
-                if (!var_d.method4(i ^ 0x1f68, Component17.anIntArray3883[i_1_])) return null;
-                Component319 class12 = var_d.method3(Component17.anIntArray3883[i_1_], -6662);
+                if (!var_d.isModelLoaded(i ^ 0x1f68, Component17.anIntArray3883[i_1_])) return null;
+                Model class12 = var_d.getModel(Component17.anIntArray3883[i_1_], -6662);
                 int i_2_ = !class12.aBoolean199 ? 128 : 64;
                 if (i_0_ < i_2_) i_0_ = i_2_;
                 if (class12.aByte205 > 0) bool = true;
             }
             for (int i_3_ = 0; i_3_ < 6; i_3_++)
-                DisplayModeManagerContainer196.anIntArrayArray4233[i_3_] = var_d.method5(false, Component17.anIntArray3883[i_3_], 1.0F, i_0_, i_0_, i + 192);
+                DisplayModeManagerContainer196.anIntArrayArray4233[i_3_] = var_d.getTriangles(false, Component17.anIntArray3883[i_3_], 1.0F, i_0_, i_0_, i + 192);
             aClass258_Sub2_8688 = new GlFramebufferTexture(aHa_Sub2_8693, 6407, i_0_, bool, DisplayModeManagerContainer196.anIntArrayArray4233);
         }
         return aClass258_Sub2_8688;

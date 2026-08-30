@@ -62,7 +62,7 @@ abstract class OggStream extends Node {
         anInt6866++;
         Component38.method1406(true);
         if (i == 0) {
-            NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.aD9113, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+            NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.modelProvider, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
             if (string != null) {
                 NodeSub8.toolkit.GA(0);
                 Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -117, Component65.aClass45_1627);
@@ -73,7 +73,7 @@ abstract class OggStream extends Node {
         } else {
             GraphicsToolkit var_ha = null;
             if (string != null) {
-                var_ha = Component65.method958(true, 0, DefinitionSub4.aD9113, 0, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+                var_ha = Component65.method958(true, 0, DefinitionSub4.modelProvider, 0, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 var_ha.GA(0);
                 Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -115, Component65.aClass45_1627);
                 BitmapFont class324 = var_ha.method3686(class143, Component170.method1519((Component158.aClass45_322), DisplayModeManagerContainer167.p12FullGroupId, 0), true);
@@ -81,7 +81,7 @@ abstract class OggStream extends Node {
                 Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
             }
             try {
-                NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.aD9113, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+                NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.modelProvider, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 if (string != null) {
                     var_ha.GA(0);
                     Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -51, Component65.aClass45_1627);

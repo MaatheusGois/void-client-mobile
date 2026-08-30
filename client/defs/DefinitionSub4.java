@@ -10,7 +10,7 @@ final class DefinitionSub4
     /** Linked list of open {@link MenuEntry} rows for the current hover. */
     static NodeList menuEntries = new NodeList();
     static int occludedCpCount;
-    static d aD9113;
+    static d modelProvider;
     static DisplayModeManagerContainer204 aClass101_9114;
     static int anInt9115;
 
@@ -26,7 +26,7 @@ final class DefinitionSub4
         if (i > -32) method3058(-76, 25, -12);
         aClass101_9114 = null;
         menuEntries = null;
-        aD9113 = null;
+        modelProvider = null;
     }
 
     public DefinitionSub4() {

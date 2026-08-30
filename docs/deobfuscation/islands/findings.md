@@ -222,3 +222,18 @@ These remain TBD from the top-tokens list:
 
 **Next session** can pick any of these. Recommended order based on fan-out:
 `anInt3138` → `anInt4592` → `method3493/3494` (likely paired).
+
+---
+
+## 8. lote 50 executed — interface name `d` DEFERRED (IMPORTANT)
+
+lote 50 renamed `method1-6`→`getVertices/getModelCount/getModel/isModelLoaded/
+getTriangles/getIndices`, `aD####`→`modelProvider`, `Component319`→`Model`,
+`Component283`→`ModelStore`. The interface itself (`client/toolkit/base/d.java`)
+keeps the name `d`.
+
+**Do NOT rename `d`→`ModelProvider` by regex.** A single-letter identifier
+collides with hundreds of local `d` variables and with string literals
+(`FriendsIgnoreList` FR/ES text, `ReflectionInvoker` IP regex `"\\d+..."`,
+`Loader` `-d` flag). A blanket or "type-scoped" regex rewrite breaks the
+build. Rename `d` only with a real IDE refactoring tool in a dedicated pass.

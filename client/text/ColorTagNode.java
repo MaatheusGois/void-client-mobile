@@ -36,22 +36,22 @@ final class ColorTagNode extends Node {
         anInt6777++;
         if (NodeSub36.anInt6992 < 0) {
             NodeSub36.anInt6992 = 0;
-            Component283.anInt4609 = -1;
+            ModelStore.anInt4609 = -1;
             Component377.anInt859 = -1;
         }
         if (NodeSub36.anInt6992 > DisplayModeManagerContainer229.anInt1259) {
             NodeSub36.anInt6992 = DisplayModeManagerContainer229.anInt1259;
             Component377.anInt859 = -1;
-            Component283.anInt4609 = -1;
+            ModelStore.anInt4609 = -1;
         }
         if (DebugOverlay.anInt3170 < 0) {
             Component377.anInt859 = -1;
             DebugOverlay.anInt3170 = 0;
-            Component283.anInt4609 = -1;
+            ModelStore.anInt4609 = -1;
         }
         if (DisplayModeManagerContainer229.anInt1267 < DebugOverlay.anInt3170) {
             DebugOverlay.anInt3170 = DisplayModeManagerContainer229.anInt1267;
-            Component283.anInt4609 = -1;
+            ModelStore.anInt4609 = -1;
             Component377.anInt859 = -1;
         }
         if (bool != false) aDouble6774 = 1.5874482848681375;

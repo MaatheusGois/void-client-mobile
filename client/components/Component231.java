@@ -109,7 +109,7 @@ final class Component231
                 if (NodeSub34.aHa6968 == null) {
                     Canvas canvas = new Canvas();
                     canvas.setSize(36, 32);
-                    NodeSub34.aHa6968 = Component65.method958(true, 0, DefinitionSub4.aD9113, 0, canvas, Component257.aClass45_4796);
+                    NodeSub34.aHa6968 = Component65.method958(true, 0, DefinitionSub4.modelProvider, 0, canvas, Component257.aClass45_4796);
                     DefinitionSub9.aClass324_9173 = (NodeSub34.aHa6968.method3686(Component388.method1819(LoadingState.p11FullGroupId, 0, -44, Component65.aClass45_1627), Component170.method1519(Component158.aClass45_322, LoadingState.p11FullGroupId, 0), true));
                 }
                 for (NodeSub7 class348_sub7 = ((NodeSub7) Component305.aClass262_9931.first(i + 4)); class348_sub7 != null; class348_sub7 = (NodeSub7) Component305.aClass262_9931.next((byte) 118)) {

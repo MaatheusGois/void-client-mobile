@@ -89,7 +89,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     static final void method2839(int i, int i_0_, int i_1_) {
         anInt8890++;
-        Component283.anInt4609 = i - DisplayModeManagerContainer229.anInt1266;
+        ModelStore.anInt4609 = i - DisplayModeManagerContainer229.anInt1266;
         Component377.anInt859 = i_1_ + -DisplayModeManagerContainer229.anInt1263;
         if (i_0_ != -17) method2839(-112, -58, -95);
     }

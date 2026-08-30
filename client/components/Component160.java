@@ -14,7 +14,7 @@ final class Component160
     static int[][][] anIntArrayArrayArray4356;
     static int anInt4357;
     static int anInt4358;
-    private final d aD4359;
+    private final d modelProvider;
     static int anInt4360;
     private NodeCache aClass60_4361 = new NodeCache(256);
 
@@ -94,17 +94,17 @@ final class Component160
         anInt4357++;
         Object object = aClass60_4361.get(i, -127);
         if (object != null) return (GlTexture) object;
-        if (!aD4359.method4(-7953, i)) return null;
-        Component319 class12 = aD4359.method3(i, -6662);
+        if (!modelProvider.isModelLoaded(-7953, i)) return null;
+        Model class12 = modelProvider.getModel(i, -6662);
         int i_5_ = (!class12.aBoolean199 ? aHa_Sub2_4355.anInt7712 : 64);
         GlTexture class258_sub3;
         if (class12.aBoolean218 && aHa_Sub2_4355.method3666()) {
-            float[] fs = aD4359.method1(i_5_, 0.7F, false, -30824, i_5_, i);
+            float[] fs = modelProvider.getVertices(i_5_, 0.7F, false, -30824, i_5_, i);
             class258_sub3 = new GlTexture(aHa_Sub2_4355, 3553, 34842, i_5_, i_5_, class12.aByte205 != 0, fs, 6408);
         } else {
             int[] is;
-            if (class12.anInt200 == 2 || !Component111.isOrthogonalWallType((byte) 4, class12.aByte213)) is = aD4359.method6(-21540, i_5_, 0.7F, i, false, i_5_);
-            else is = aD4359.method5(true, i, 0.7F, i_5_, i_5_, i_4_ + -196);
+            if (class12.anInt200 == 2 || !Component111.isOrthogonalWallType((byte) 4, class12.aByte213)) is = modelProvider.getIndices(-21540, i_5_, 0.7F, i, false, i_5_);
+            else is = modelProvider.getTriangles(true, i, 0.7F, i_5_, i_5_, i_4_ + -196);
             class258_sub3 = new GlTexture(aHa_Sub2_4355, 3553, 6408, i_5_, i_5_, class12.aByte205 != 0, is, 0, 0, false);
         }
         class258_sub3.method1965(class12.aBoolean215, class12.aBoolean217, 10243);
@@ -128,7 +128,7 @@ final class Component160
     Component160(GlToolkitSub2 var_ha_Sub2, d var_d) {
         try {
             aHa_Sub2_4355 = var_ha_Sub2;
-            aD4359 = var_d;
+            modelProvider = var_d;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("eo.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));
         }

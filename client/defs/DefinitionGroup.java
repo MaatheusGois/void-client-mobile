@@ -27,7 +27,7 @@ final class DefinitionGroup extends HashNode {
     final int[] method3183(d var_d, int i, int i_0_, boolean bool, double d, CacheStore class45, byte i_1_) {
         try {
             anInt9522++;
-            SpriteAtlasShader.aD6247 = var_d;
+            SpriteAtlasShader.modelProvider = var_d;
             Node.aClass45_4286 = class45;
             for (int i_2_ = 0; aClass348_Sub40Array9520.length > i_2_; i_2_++)
                 aClass348_Sub40Array9520[i_2_].initImageCache(i, i_0_, -256);
@@ -102,7 +102,7 @@ final class DefinitionGroup extends HashNode {
             int i_19_ = 0;
             int i_20_ = -109 / ((10 - i) / 60);
             for (/**/; i_19_ < anIntArray9523.length; i_19_++) {
-                if (!var_d.method4(-7953, anIntArray9523[i_19_])) return false;
+                if (!var_d.isModelLoaded(-7953, anIntArray9523[i_19_])) return false;
             }
             return true;
         } catch (RuntimeException runtimeexception) {
@@ -112,7 +112,7 @@ final class DefinitionGroup extends HashNode {
 
     final int[] method3185(int i, d var_d, int i_21_, boolean bool, double d, boolean bool_22_, CacheStore class45, int i_23_) {
         try {
-            SpriteAtlasShader.aD6247 = var_d;
+            SpriteAtlasShader.modelProvider = var_d;
             Node.aClass45_4286 = class45;
             anInt9526++;
             for (int i_24_ = 0; aClass348_Sub40Array9520.length > i_24_; i_24_++)
@@ -180,7 +180,7 @@ final class DefinitionGroup extends HashNode {
         try {
             anInt9525++;
             Node.aClass45_4286 = class45;
-            SpriteAtlasShader.aD6247 = var_d;
+            SpriteAtlasShader.modelProvider = var_d;
             if (i_42_ >= -1) method3183(null, -60, 98, false, -0.11623531533038078, null, (byte) -72);
             for (int i_43_ = 0; aClass348_Sub40Array9520.length > i_43_; i_43_++)
                 aClass348_Sub40Array9520[i_43_].initImageCache(i, i_41_, -256);
