@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,6 +13,10 @@ import java.util.regex.Pattern;
 final class SceneStore {
     private static final String NUMBER = "\"%s\"\\s*:\\s*(-?\\d+(?:\\.\\d+)?)";
     private static final String STRING = "\"%s\"\\s*:\\s*\"((?:\\\\.|[^\"\\\\])*)\"";
+    private static final Pattern OBJECT = Pattern.compile("\\{((?:\"(?:\\\\.|[^\"\\\\])*\"|[^{}])*)\\}");
+    private static final Map<String, Pattern> NUMBER_PATTERNS = patterns(NUMBER,
+            "version", "region", "id", "objectId", "x", "y", "z", "plane", "rotation", "scale");
+    private static final Map<String, Pattern> STRING_PATTERNS = patterns(STRING, "name", "label");
     private final File directory;
 
     SceneStore() {
@@ -104,7 +110,7 @@ final class SceneStore {
             int end = json.lastIndexOf("]}");
             if (start < 0 || end < start) throw new IOException("invalid objects array");
             String body = json.substring(start + 11, end);
-            Matcher matcher = Pattern.compile("\\{([^{}]*)\\}").matcher(body);
+            Matcher matcher = OBJECT.matcher(body);
             while (matcher.find()) {
                 String item = matcher.group(1);
                 SceneObject object = new SceneObject(longValue(item, "id"), integer(item, "objectId"),
@@ -126,7 +132,7 @@ final class SceneStore {
     private static int integer(String s, String key) { return (int) decimal(s, key); }
     private static long longValue(String s, String key) { return (long) decimal(s, key); }
     private static double decimal(String s, String key) {
-        Matcher m = Pattern.compile(String.format(NUMBER, key)).matcher(s);
+        Matcher m = NUMBER_PATTERNS.get(key).matcher(s);
         if (!m.find()) throw new IllegalArgumentException("missing " + key);
         return Double.parseDouble(m.group(1));
     }
@@ -139,8 +145,15 @@ final class SceneStore {
         return value;
     }
     private static String optionalString(String s, String key) {
-        Matcher m = Pattern.compile(String.format(STRING, key)).matcher(s);
+        Pattern pattern = STRING_PATTERNS.get(key);
+        if (pattern == null) throw new IllegalArgumentException("invalid string field");
+        Matcher m = pattern.matcher(s);
         return m.find() ? unescape(m.group(1)) : null;
+    }
+    private static Map<String, Pattern> patterns(String template, String... keys) {
+        Map<String, Pattern> out = new HashMap<String, Pattern>();
+        for (String key : keys) out.put(key, Pattern.compile(String.format(template, key)));
+        return out;
     }
     private static String escape(String s) { return s.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n"); }
     private static String unescape(String s) {

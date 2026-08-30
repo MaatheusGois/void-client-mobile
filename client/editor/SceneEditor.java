@@ -43,7 +43,14 @@ final class SceneEditor {
     void scale(final long id, final float scale) {
         change(new Runnable() { public void run() { SceneObject o = required(id); o.scale = scale; o.validate(); }});
     }
-    void undo() { if (!undo.isEmpty()) { redo.push(scene); scene = undo.pop(); dirty = true; } }
+    void undo() {
+        if (!undo.isEmpty()) {
+            redo.push(scene);
+            while (redo.size() > HISTORY_LIMIT) redo.removeLast();
+            scene = undo.pop();
+            dirty = true;
+        }
+    }
     void redo() {
         if (!redo.isEmpty()) {
             undo.push(scene);

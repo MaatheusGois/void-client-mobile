@@ -36,7 +36,7 @@ final class Scene {
     void add(SceneObject object) {
         if (object == null) throw new IllegalArgumentException("object is null");
         object.validate();
-        if (objects.size() >= MAX_OBJECTS && !objects.containsKey(object.id)) {
+        if (objects.size() >= MAX_OBJECTS) {
             throw new IllegalArgumentException("scene object limit exceeded");
         }
         if (objects.containsKey(object.id)) {
