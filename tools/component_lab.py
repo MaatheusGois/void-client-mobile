@@ -106,7 +106,9 @@ pre{padding:16px;overflow:auto;background:#101827;border:1px solid #293952;font:
 
 
 class Handler(BaseHTTPRequestHandler):
-    catalog: dict[str, Component] = {}
+    def __init__(self, request, client_address, server, catalog: dict[str, Component]):
+        self.catalog = catalog
+        super().__init__(request, client_address, server)
 
     def reply(self, body: str, content_type: str = "text/html; charset=utf-8", status: int = 200) -> None:
         data = body.encode("utf-8")
@@ -174,8 +176,8 @@ def main() -> None:
     if args.export_dir:
         export_cards(catalog, args.export_dir)
         return
-    Handler.catalog = catalog
-    with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), Handler) as server:
+    handler = lambda request, address, server: Handler(request, address, server, catalog)
+    with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as server:
         print(f"Component Lab: http://127.0.0.1:{args.port}/ ({len(catalog)} components)")
         try:
             server.serve_forever()
