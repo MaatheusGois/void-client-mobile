@@ -49,11 +49,11 @@ final class DisplayModeManagerContainer153
                 DisplayModeManagerContainer249.anInt4669 = 16 * (class348_sub42_sub13.anInt9615) + (!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26);
                 int i_14_ = 21 + (class348_sub42_sub13.anInt9615) * 16;
                 int i_15_ = Component227.anInt1117 + DisplayModeManagerContainer136.anInt4717;
-                if (i_12_ + i_15_ > Component236.anInt4017) i_15_ = -i_12_ + DisplayModeManagerContainer136.anInt4717;
+                if (i_12_ + i_15_ > Component236.canvasWidth) i_15_ = -i_12_ + DisplayModeManagerContainer136.anInt4717;
                 if (i_15_ < 0) i_15_ = 0;
                 int i_16_ = !DisplayModeManagerContainer5.aBoolean1211 ? 31 : 33;
                 int i_17_ = 13 + i_11_ + -i_16_;
-                if (i_17_ + i_14_ > PacketReader.anInt10432) i_17_ = PacketReader.anInt10432 - i_14_;
+                if (i_17_ + i_14_ > PacketReader.canvasHeight) i_17_ = PacketReader.canvasHeight - i_14_;
                 DisplayModeManagerContainer368.anInt5252 = i_15_;
                 if (i_17_ < 0) i_17_ = 0;
                 Component359.aClass348_Sub42_Sub13_3152 = class348_sub42_sub13;

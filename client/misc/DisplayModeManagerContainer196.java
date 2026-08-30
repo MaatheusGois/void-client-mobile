@@ -77,7 +77,7 @@ final class DisplayModeManagerContainer196
     final int getAlignedOffset(int i, int i_7_, int i_8_) {
         anInt4232++;
         if (i_8_ != 1595) return 38;
-        int i_9_ = (Math.max(PacketReader.anInt10432, i));
+        int i_9_ = (Math.max(PacketReader.canvasHeight, i));
         if (Component134.aClass341_5808 == this) return 0;
         if (this == Component251.aClass341_5821) return i_9_ - i_7_;
         if (DisplayModeManagerContainer91.aClass341_399 == this) return (i_9_ - i_7_) / 2;

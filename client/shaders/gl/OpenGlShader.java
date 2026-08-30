@@ -145,35 +145,35 @@ final class OpenGlShader extends AbstractShader {
                     if (RSACipher.aFrame4904 != null) container = RSACipher.aFrame4904;
                     else if (ToolkitFactory.anApplet1530 == null) container = DefinitionSub9.anApplet_Sub1_9169;
                     else container = ToolkitFactory.anApplet1530;
-                    SocketConnector.anInt3473 = container.getSize().width;
-                    NpcNode.anInt6857 = container.getSize().height;
+                    SocketConnector.canvasWidth = container.getSize().width;
+                    NpcNode.canvasHeight = container.getSize().height;
                     if (RSACipher.aFrame4904 == container) {
                         Insets insets = RSACipher.aFrame4904.getInsets();
-                        SocketConnector.anInt3473 -= insets.left - -insets.right;
-                        NpcNode.anInt6857 -= insets.bottom + insets.top;
+                        SocketConnector.canvasWidth -= insets.left - -insets.right;
+                        NpcNode.canvasHeight -= insets.bottom + insets.top;
                     }
                     if (MenuEntry.getWindowMode(-86) == 1) {
-                        DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                        GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
-                        Component236.anInt4017 = SocketConnector.anInt3473;
-                        PacketReader.anInt10432 = NpcNode.anInt6857;
-                        NodeSub48.anInt7129 = 0;
-                        DisplayModeManagerContainer147.anInt4167 = 0;
+                        DisplayModeManagerContainer23.canvasWidth = SocketConnector.canvasWidth;
+                        GlToolkitSub2.canvasHeight = NpcNode.canvasHeight;
+                        Component236.canvasWidth = SocketConnector.canvasWidth;
+                        PacketReader.canvasHeight = NpcNode.canvasHeight;
+                        NodeSub48.perFrameReset = 0;
+                        DisplayModeManagerContainer147.perDrawReset = 0;
                     } else SpriteAtlasShader.method2158((byte) 56);
                     if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
-                        if (Component236.anInt4017 < 1024 && PacketReader.anInt10432 < 768) {
+                        if (Component236.canvasWidth < 1024 && PacketReader.canvasHeight < 768) {
                             /* empty */
                         }
                     }
-                    DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
+                    DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, (PacketReader.canvasHeight));
                     if (NodeSub8.toolkit != null) {
                         if (Component210.gameCanvasAttached) s.method3980(120, DisplayModeManagerContainer50.gameCanvas);
-                        else NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, PacketReader.anInt10432);
+                        else NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.canvasWidth, PacketReader.canvasHeight);
                     }
                     if (RSACipher.aFrame4904 == container) {
                         Insets insets = RSACipher.aFrame4904.getInsets();
-                        DisplayModeManagerContainer50.gameCanvas.setLocation(insets.left - -NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167 + insets.top);
-                    } else DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.anInt7129), DisplayModeManagerContainer147.anInt4167);
+                        DisplayModeManagerContainer50.gameCanvas.setLocation(insets.left - -NodeSub48.perFrameReset, DisplayModeManagerContainer147.perDrawReset + insets.top);
+                    } else DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.perFrameReset), DisplayModeManagerContainer147.perDrawReset);
                     if (r.anInt9721 != -1) Component339.method1713(true, 520);
                     Component211.method1170((byte) -78);
                 } else {

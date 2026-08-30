@@ -8,7 +8,7 @@ final class DisplayModeManagerContainer147
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt4166;
-    static int anInt4167 = 0;
+    static int perDrawReset = 0;
     static int anInt4168 = 0;
     static int anInt4169;
 

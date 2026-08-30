@@ -29,7 +29,7 @@ final class Component236
     private int[] anIntArray4014;
     static Component183 aClass114_4015 = new Component183(116, 6);
     private String[] aStringArray4016;
-    static int anInt4017;
+    static int canvasWidth;
 
     final void method2548(byte i) {
         if (i <= 117) method2550(null, -119, (byte) 18);

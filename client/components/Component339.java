@@ -47,7 +47,7 @@ abstract class Component339
     abstract void method1712(int i, int i_2_);
 
     static final void method1713(boolean bool, int i) {
-        Component272.method1728(PacketReader.anInt10432, -1, r.anInt9721, bool, Component236.anInt4017);
+        Component272.method1728(PacketReader.canvasHeight, -1, r.anInt9721, bool, Component236.canvasWidth);
         if (i == 520) anInt3137++;
     }
 

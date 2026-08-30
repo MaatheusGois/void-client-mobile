@@ -10,7 +10,7 @@ final class NodeSub48
     int anInt7126;
     Task[] aClass144Array7127;
     byte[][][] aByteArrayArrayArray7128;
-    static int anInt7129 = 0;
+    static int perFrameReset = 0;
     int anInt7130;
     int[] anIntArray7131;
     int[] anIntArray7132;

@@ -13,7 +13,7 @@ final class PacketReader extends CacheNode {
     private final Object anObject10429;
     static int anInt10430;
     static long[][][] aLongArrayArrayArray10431;
-    static int anInt10432;
+    static int canvasHeight;
     static int anInt10433;
     /** Active {@link GameType} for this session (applet modewhere / CLI). */
     static GameType currentGameType = null;

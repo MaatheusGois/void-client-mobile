@@ -14,7 +14,7 @@ abstract class SocketConnector {
     int port;
     static int anInt3471;
     static int anInt3472;
-    static int anInt3473;
+    static int canvasWidth;
     static int anInt3474;
     static int[] anIntArray3475 = {1, 4, 1, 2};
     String host;
@@ -27,7 +27,7 @@ abstract class SocketConnector {
 
     public static void clearStatics(int i) {
         anIntArray3475 = null;
-        if (i != 1) anInt3473 = -69;
+        if (i != 1) canvasWidth = -69;
     }
 
     /**

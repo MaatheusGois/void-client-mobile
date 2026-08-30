@@ -118,7 +118,7 @@ final class DisplayModeManagerContainer1
     static final void updateMenuTip(int i) {
         int i_12_ = 81 % ((i - -70) / 35);
         anInt3313++;
-        if (!Component364.aBoolean8335) PauseHandler.aBoolean9535 = ((Component9.anInt4143 != -1 && DisplayModeManagerContainer306.menuEntryCount >= Component9.anInt4143) || (PacketReader.anInt10432 < 16 * DisplayModeManagerContainer306.menuEntryCount - -(!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26)));
+        if (!Component364.aBoolean8335) PauseHandler.aBoolean9535 = ((Component9.anInt4143 != -1 && DisplayModeManagerContainer306.menuEntryCount >= Component9.anInt4143) || (PacketReader.canvasHeight < 16 * DisplayModeManagerContainer306.menuEntryCount - -(!DisplayModeManagerContainer5.aBoolean1211 ? 22 : 26)));
         CursorDefinitionCache.aClass262_2187.clear(103);
         DefinitionSub38.aClass262_9478.clear(104);
         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 83)) {

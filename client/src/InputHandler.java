@@ -10,7 +10,7 @@
 abstract class InputHandler {
     static int anInt4274;
     static boolean aBoolean4275;
-    static int anInt4276;
+    static int canvasWidth;
     static int anInt4277;
 
     abstract void sync(int i);

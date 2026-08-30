@@ -7,7 +7,7 @@ final class DisplayModeManagerContainer23
  * RENAMED from `Class92` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static int anInt1524;
+    static int canvasWidth;
     static Interface4[] anInterface4Array1525;
     static int anInt1526;
     static int anInt1527;
@@ -78,6 +78,6 @@ final class DisplayModeManagerContainer23
     }
 
     static {
-        anInt1524 = 765;
+        canvasWidth = 765;
     }
 }

@@ -36,7 +36,7 @@ final class Component43
                 i_2_ = BufferCacheSub3.method4008((byte) -128);
                 i_3_ = Component110.method260(false);
             }
-            Component280.method1373(r.anInt9721, i_2_, i_2_, Component236.anInt4017 + i_2_, i_1_, i_0_, -1391, i_0_ + i_2_, PacketReader.anInt10432 + i_3_, i_3_, i_3_ + i_1_, i_3_);
+            Component280.method1373(r.anInt9721, i_2_, i_2_, Component236.canvasWidth + i_2_, i_1_, i_0_, -1391, i_0_ + i_2_, PacketReader.canvasHeight + i_3_, i_3_, i_3_ + i_1_, i_3_);
             if (Component39.aClass46_2249 != null) NativeLibraryLoader.method1630(0, i_3_ + i_1_, i_2_ + i_0_);
         }
     }

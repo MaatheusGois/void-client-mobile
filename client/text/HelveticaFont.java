@@ -35,12 +35,12 @@ final class HelveticaFont {
                 if (color_0_ == null) color_0_ = new Color(140, 17, 17);
                 if (color_2_ == null) color_2_ = new Color(255, 255, 255);
                 try {
-                    if (DisplayModeManagerContainer173.anImage4249 == null) DisplayModeManagerContainer173.anImage4249 = (DisplayModeManagerContainer50.gameCanvas.createImage(Component236.anInt4017, PacketReader.anInt10432));
+                    if (DisplayModeManagerContainer173.anImage4249 == null) DisplayModeManagerContainer173.anImage4249 = (DisplayModeManagerContainer50.gameCanvas.createImage(Component236.canvasWidth, PacketReader.canvasHeight));
                     Graphics graphics_3_ = DisplayModeManagerContainer173.anImage4249.getGraphics();
                     graphics_3_.setColor(Color.black);
-                    graphics_3_.fillRect(0, 0, Component236.anInt4017, PacketReader.anInt10432);
-                    int i_4_ = -152 + Component236.anInt4017 / 2;
-                    int i_5_ = -18 + PacketReader.anInt10432 / 2;
+                    graphics_3_.fillRect(0, 0, Component236.canvasWidth, PacketReader.canvasHeight);
+                    int i_4_ = -152 + Component236.canvasWidth / 2;
+                    int i_5_ = -18 + PacketReader.canvasHeight / 2;
                     graphics_3_.setColor(color_0_);
                     graphics_3_.drawRect(i_4_, i_5_, 303, 33);
                     graphics_3_.setColor(color);
@@ -55,14 +55,14 @@ final class HelveticaFont {
                     if (HashNodeSub16.aString9665 != null) {
                         graphics_3_.setFont(StringCache.aFont4329);
                         graphics_3_.setColor(color_2_);
-                        graphics_3_.drawString(HashNodeSub16.aString9665, (Component236.anInt4017 / 2 - (HashNodeSub16.aString9665.length() * 6 / 2)), -26 + PacketReader.anInt10432 / 2);
+                        graphics_3_.drawString(HashNodeSub16.aString9665, (Component236.canvasWidth / 2 - (HashNodeSub16.aString9665.length() * 6 / 2)), -26 + PacketReader.canvasHeight / 2);
                     }
                     graphics.drawImage(DisplayModeManagerContainer173.anImage4249, 0, 0, null);
                 } catch (Exception exception) {
                     graphics.setColor(Color.black);
-                    graphics.fillRect(0, 0, Component236.anInt4017, PacketReader.anInt10432);
-                    int i_6_ = -152 + Component236.anInt4017 / 2;
-                    int i_7_ = PacketReader.anInt10432 / 2 + -18;
+                    graphics.fillRect(0, 0, Component236.canvasWidth, PacketReader.canvasHeight);
+                    int i_6_ = -152 + Component236.canvasWidth / 2;
+                    int i_7_ = PacketReader.canvasHeight / 2 + -18;
                     graphics.setColor(color_0_);
                     graphics.drawRect(i_6_, i_7_, 303, 33);
                     graphics.setColor(color);
@@ -75,7 +75,7 @@ final class HelveticaFont {
                     if (HashNodeSub16.aString9665 != null) {
                         graphics.setFont(StringCache.aFont4329);
                         graphics.setColor(color_2_);
-                        graphics.drawString(HashNodeSub16.aString9665, (Component236.anInt4017 / 2 + -(6 * HashNodeSub16.aString9665.length() / 2)), PacketReader.anInt10432 / 2 - 26);
+                        graphics.drawString(HashNodeSub16.aString9665, (Component236.canvasWidth / 2 + -(6 * HashNodeSub16.aString9665.length() / 2)), PacketReader.canvasHeight / 2 - 26);
                     }
                     graphics.drawString(string, i_6_ - -((304 + -(string.length() * 6)) / 2), 22 + i_7_);
                 }

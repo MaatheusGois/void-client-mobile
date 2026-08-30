@@ -1035,14 +1035,14 @@ public final class client extends Applet_Sub1 {
             Component19.aString8605 = this.getParameter("additionalInfo");
             if (Component19.aString8605 != null && Component19.aString8605.length() > 50) Component19.aString8605 = null;
             if (RunescapeInfo.RUNESCAPE == PacketReader.currentGameType) {
-                GlToolkitSub2.anInt7666 = 503;
-                DisplayModeManagerContainer23.anInt1524 = 765;
+                GlToolkitSub2.canvasHeight = 503;
+                DisplayModeManagerContainer23.canvasWidth = 765;
             } else if (PacketReader.currentGameType == WorldNameText.STELLARDAWN) {
-                DisplayModeManagerContainer23.anInt1524 = 640;
-                GlToolkitSub2.anInt7666 = 480;
+                DisplayModeManagerContainer23.canvasWidth = 640;
+                GlToolkitSub2.canvasHeight = 480;
             }
             NpcComposition.aClient1367 = this;
-            this.startFromApplet(DisplayModeManagerContainer23.anInt1524, 634, GlToolkitSub2.anInt7666, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
+            this.startFromApplet(DisplayModeManagerContainer23.canvasWidth, 634, GlToolkitSub2.canvasHeight, Component53.currentBuildType.getId(0) + 32, 37, PacketReader.currentGameType.domain, 50);
         }
     }
 
@@ -1952,11 +1952,11 @@ public final class client extends Applet_Sub1 {
                     i -= insets.left + insets.right;
                     i_119_ -= insets.top - -insets.bottom;
                 }
-                if (i != SocketConnector.anInt3473 || i_119_ != NpcNode.anInt6857 || RuntimeException_Sub1.aBoolean4604) {
+                if (i != SocketConnector.canvasWidth || i_119_ != NpcNode.canvasHeight || RuntimeException_Sub1.aBoolean4604) {
                     if (NodeSub8.toolkit == null || NodeSub8.toolkit.method3695()) OpenGlShader.method3556(false);
                     else {
-                        NpcNode.anInt6857 = i_119_;
-                        SocketConnector.anInt3473 = i;
+                        NpcNode.canvasHeight = i_119_;
+                        SocketConnector.canvasWidth = i;
                     }
                     NodeSub16Sub2.aLong8866 = Component240.currentTimeMillis(-66) - -500L;
                     RuntimeException_Sub1.aBoolean4604 = false;
@@ -2091,7 +2091,7 @@ public final class client extends Applet_Sub1 {
             if (i < 40) aClass262_5185 = null;
             if (Component72.localPlayer != null)
                 string += ("2)" + Component117.anInt4372 + "," + (NodeBaseSub2.regionTileX + (Component72.localPlayer.anIntArray10320[0])) + "," + (Component330.regionTileY + (Component72.localPlayer.anIntArray10317[0])) + "|");
-            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.anInt4017 + "," + PacketReader.anInt10432 + "|");
+            string += ("3)" + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1829(-32350) + "|4)" + Component192.aClass348_Sub51_3959.aClass239_Sub20_7216.method1808(-32350) + "|5)" + MenuEntry.getWindowMode(-65) + "|6)" + Component236.canvasWidth + "," + PacketReader.canvasHeight + "|");
             string += "7)" + Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) + "|";
             string += "8)" + Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) + "|";
             string += "9)" + Component192.aClass348_Sub51_3959.aClass239_Sub18_7259.method1800(-32350) + "|";

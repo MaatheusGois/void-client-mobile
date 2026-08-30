@@ -15,7 +15,7 @@ final class NpcNode
  * <p>
  * RENAMED from {@code Class348_Sub22} / {@code NodeSub22}.
  */ extends Node {
-    static int anInt6857;
+    static int canvasHeight;
     static int anInt6858;
     Npc npc;
     static int anInt6860;

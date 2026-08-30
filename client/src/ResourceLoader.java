@@ -75,7 +75,7 @@ final class ResourceLoader implements Runnable {
                             i = 0xffffff | i << 24;
                             Component211.method1170((byte) -121);
                             NodeSub8.toolkit.GA(0);
-                            Component24 class105 = (NodeSub8.toolkit.method3629(Component236.anInt4017, PacketReader.anInt10432, true));
+                            Component24 class105 = (NodeSub8.toolkit.method3629(Component236.canvasWidth, PacketReader.canvasHeight, true));
                             NodeSub8.toolkit.method3681(class105, 0);
                             anInterface16_3919.method58(true, -126);
                             NodeSub8.toolkit.method3672();

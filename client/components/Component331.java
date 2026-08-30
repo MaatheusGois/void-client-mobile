@@ -83,8 +83,8 @@ final class Component331
         int i_15_;
         int i_16_;
         if (class46_14_ == null) {
-            i_15_ = PacketReader.anInt10432;
-            i_16_ = Component236.anInt4017;
+            i_15_ = PacketReader.canvasHeight;
+            i_16_ = Component236.canvasWidth;
         } else {
             i_15_ = class46_14_.height;
             i_16_ = class46_14_.width;

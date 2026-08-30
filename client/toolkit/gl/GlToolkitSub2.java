@@ -168,7 +168,7 @@ final class GlToolkitSub2
     static int anInt7663;
     private OpenGL anOpenGL7664;
     static int anInt7665;
-    static int anInt7666 = 503;
+    static int canvasHeight = 503;
     static int anInt7667;
     static int anInt7668;
     static int anInt7669;

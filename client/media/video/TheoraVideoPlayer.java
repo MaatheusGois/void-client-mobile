@@ -55,9 +55,9 @@ final class TheoraVideoPlayer {
             i = BufferCacheSub3.method4008((byte) -124);
             i_1_ = Component110.method260(false);
         }
-        Component146.method1252(i_1_, r.anInt9721, i_1_, -1, i, i + Component236.anInt4017, i_1_ - -PacketReader.anInt10432, (byte) 116, i);
+        Component146.method1252(i_1_, r.anInt9721, i_1_, -1, i, i + Component236.canvasWidth, i_1_ - -PacketReader.canvasHeight, (byte) 116, i);
         if (Component161.aClass46Array1942 != null) {
-            ImageDefinition.method3064(i, Component257.anInt4792, true, NodeSub1.anInt6555, i_1_, Component374.aClass46_4130.anInt760, i + Component236.anInt4017, false, Component161.aClass46Array1942, -1412584499, i_1_ - -PacketReader.anInt10432);
+            ImageDefinition.method3064(i, Component257.anInt4792, true, NodeSub1.anInt6555, i_1_, Component374.aClass46_4130.anInt760, i + Component236.canvasWidth, false, Component161.aClass46Array1942, -1412584499, i_1_ - -PacketReader.canvasHeight);
             Component161.aClass46Array1942 = null;
         }
     }
@@ -146,8 +146,8 @@ final class TheoraVideoPlayer {
                         class348_sub49_sub2.writeString((byte) -5, DisplayModeManagerContainer282.username);
                         class348_sub49_sub2.writeByte(false, (RuntimeException_Sub1.anInt4596));
                         class348_sub49_sub2.writeByte(false, MenuEntry.getWindowMode(-71));
-                        class348_sub49_sub2.writeShort((byte) 107, Component236.anInt4017);
-                        class348_sub49_sub2.writeShort((byte) 107, PacketReader.anInt10432);
+                        class348_sub49_sub2.writeShort((byte) 107, Component236.canvasWidth);
+                        class348_sub49_sub2.writeShort((byte) 107, PacketReader.canvasHeight);
                         class348_sub49_sub2.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
                         BufferCacheSub2.method4002(class348_sub49_sub2, (byte) 55);
                         class348_sub49_sub2.writeString((byte) -5, Component205.settingsCookie);

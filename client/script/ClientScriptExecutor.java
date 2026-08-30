@@ -848,8 +848,8 @@ final class ClientScriptExecutor {
                 return;
             }
             if (i == 5305) {
-                int i_100_ = InputHandler.anInt4276;
-                int i_101_ = DisplayModeManagerContainer295.anInt5911;
+                int i_100_ = InputHandler.canvasWidth;
+                int i_101_ = DisplayModeManagerContainer295.canvasWidth;
                 int i_102_ = -1;
                 DisplayModeInfo[] class57s = FriendLoginMessage.getFilteredDisplayModes(1494);
                 for (int i_103_ = 0; i_103_ < class57s.length; i_103_++) {

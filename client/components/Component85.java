@@ -18,7 +18,7 @@ final class Component85
 
     final int method1607(int i, int i_0_, byte i_1_) {
         anInt2882++;
-        int i_2_ = (Math.max(Component236.anInt4017, i));
+        int i_2_ = (Math.max(Component236.canvasWidth, i));
         if (Component364.aClass221_8344 == this) return 0;
         if (i_1_ >= -103) aBoolean2881 = true;
         if (this == DisplayModeManagerContainer369.aClass221_2893) return i_2_ - i_0_;

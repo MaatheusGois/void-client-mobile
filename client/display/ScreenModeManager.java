@@ -17,7 +17,7 @@ final class ScreenModeManager {
     static int anInt2839;
 
     static final void setScreenMode(byte i, boolean bool, int i_0_, int i_1_, int i_2_, int i_3_) {
-        if (Component225.aFrame476 != null && (i_2_ != 3 || i_0_ != InputHandler.anInt4276 || i_3_ != DisplayModeManagerContainer295.anInt5911)) {
+        if (Component225.aFrame476 != null && (i_2_ != 3 || i_0_ != InputHandler.canvasWidth || i_3_ != DisplayModeManagerContainer295.canvasWidth)) {
             LoadingState.startLoadingTask(Component225.aFrame476, OggUrlStream.aClass297_8992, false);
             Component225.aFrame476 = null;
         }
@@ -26,8 +26,8 @@ final class ScreenModeManager {
         if (i_2_ == 3 && Component225.aFrame476 == null) {
             Component225.aFrame476 = DisplayModeManagerContainer104.createFrame(i_3_, i_0_, (OggUrlStream.aClass297_8992), 0, 14199, 0);
             if (Component225.aFrame476 != null) {
-                InputHandler.anInt4276 = i_0_;
-                DisplayModeManagerContainer295.anInt5911 = i_3_;
+                InputHandler.canvasWidth = i_0_;
+                DisplayModeManagerContainer295.canvasWidth = i_3_;
                 DisplayModeManagerContainer389.method243(37);
             }
         }
@@ -37,43 +37,43 @@ final class ScreenModeManager {
         else {
             java.awt.Container container;
             if (Component225.aFrame476 != null) {
-                NpcNode.anInt6857 = i_3_;
-                SocketConnector.anInt3473 = i_0_;
+                NpcNode.canvasHeight = i_3_;
+                SocketConnector.canvasWidth = i_0_;
                 container = Component225.aFrame476;
             } else if (RSACipher.aFrame4904 == null) {
                 if (ToolkitFactory.anApplet1530 == null) container = DefinitionSub9.anApplet_Sub1_9169;
                 else container = ToolkitFactory.anApplet1530;
-                SocketConnector.anInt3473 = container.getSize().width;
-                NpcNode.anInt6857 = container.getSize().height;
+                SocketConnector.canvasWidth = container.getSize().width;
+                NpcNode.canvasHeight = container.getSize().height;
             } else {
                 Insets insets = RSACipher.aFrame4904.getInsets();
-                SocketConnector.anInt3473 = RSACipher.aFrame4904.getSize().width + (-insets.left + -insets.right);
-                NpcNode.anInt6857 = RSACipher.aFrame4904.getSize().height - (insets.top - -insets.bottom);
+                SocketConnector.canvasWidth = RSACipher.aFrame4904.getSize().width + (-insets.left + -insets.right);
+                NpcNode.canvasHeight = RSACipher.aFrame4904.getSize().height - (insets.top - -insets.bottom);
                 container = RSACipher.aFrame4904;
             }
             if (i_2_ == 1) {
                 // Fill the container instead of centering a fixed 765x503 canvas.
-                DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-                GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
-                Component236.anInt4017 = SocketConnector.anInt3473;
-                PacketReader.anInt10432 = NpcNode.anInt6857;
-                NodeSub48.anInt7129 = 0;
-                DisplayModeManagerContainer147.anInt4167 = 0;
+                DisplayModeManagerContainer23.canvasWidth = SocketConnector.canvasWidth;
+                GlToolkitSub2.canvasHeight = NpcNode.canvasHeight;
+                Component236.canvasWidth = SocketConnector.canvasWidth;
+                PacketReader.canvasHeight = NpcNode.canvasHeight;
+                NodeSub48.perFrameReset = 0;
+                DisplayModeManagerContainer147.perDrawReset = 0;
             } else SpriteAtlasShader.method2158((byte) 56);
             if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
-                if (Component236.anInt4017 < 1024 && (PacketReader.anInt10432 < 768)) {
+                if (Component236.canvasWidth < 1024 && (PacketReader.canvasHeight < 768)) {
                     /* empty */
                 }
             }
             if (bool) ParticleSystem.method3327(1406);
             else {
-                DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, (PacketReader.anInt10432));
-                if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.anInt4017, (PacketReader.anInt10432));
+                DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, (PacketReader.canvasHeight));
+                if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.canvasWidth, (PacketReader.canvasHeight));
                 else s.method3980(86, DisplayModeManagerContainer50.gameCanvas);
                 if (RSACipher.aFrame4904 == container) {
                     Insets insets = RSACipher.aFrame4904.getInsets();
-                    DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.anInt7129 + insets.left), (insets.top - -DisplayModeManagerContainer147.anInt4167));
-                } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
+                    DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.perFrameReset + insets.left), (insets.top - -DisplayModeManagerContainer147.perDrawReset));
+                } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.perFrameReset, DisplayModeManagerContainer147.perDrawReset);
             }
             // Must match getWindowMode (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
             Cp1252Decoder.fullscreenAvailable = i_2_ >= 2;

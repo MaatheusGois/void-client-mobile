@@ -30,12 +30,12 @@ final class SpriteAtlasShader extends ShaderProgram {
         anInt6256++;
         if (i == 56) {
             // Always fill the container (no letterboxed max-size caps).
-            DisplayModeManagerContainer147.anInt4167 = 0;
-            NodeSub48.anInt7129 = 0;
-            Component236.anInt4017 = SocketConnector.anInt3473;
-            PacketReader.anInt10432 = NpcNode.anInt6857;
-            DisplayModeManagerContainer23.anInt1524 = SocketConnector.anInt3473;
-            GlToolkitSub2.anInt7666 = NpcNode.anInt6857;
+            DisplayModeManagerContainer147.perDrawReset = 0;
+            NodeSub48.perFrameReset = 0;
+            Component236.canvasWidth = SocketConnector.canvasWidth;
+            PacketReader.canvasHeight = NpcNode.canvasHeight;
+            DisplayModeManagerContainer23.canvasWidth = SocketConnector.canvasWidth;
+            GlToolkitSub2.canvasHeight = NpcNode.canvasHeight;
         }
     }
 

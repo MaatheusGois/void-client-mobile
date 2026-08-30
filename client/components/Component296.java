@@ -28,8 +28,8 @@ class Component296
     public void method9(byte i, boolean bool) {
         anInt4653++;
         if (bool) {
-            int i_1_ = ((this.aClass288_4659.aClass221_4955.method1607(DisplayModeManagerContainer23.anInt1524, this.aClass105_4655.method966(), (byte) -117)) + this.aClass288_4659.anInt4950);
-            int i_2_ = ((this.aClass288_4659.aClass341_4952.getAlignedOffset(GlToolkitSub2.anInt7666, this.aClass105_4655.method980(), 1595)) - -this.aClass288_4659.anInt4951);
+            int i_1_ = ((this.aClass288_4659.aClass221_4955.method1607(DisplayModeManagerContainer23.canvasWidth, this.aClass105_4655.method966(), (byte) -117)) + this.aClass288_4659.anInt4950);
+            int i_2_ = ((this.aClass288_4659.aClass341_4952.getAlignedOffset(GlToolkitSub2.canvasHeight, this.aClass105_4655.method980(), 1595)) - -this.aClass288_4659.anInt4951);
             this.aClass105_4655.method974(i_1_, i_2_);
         }
         if (i != -49) anInt4656 = 26;

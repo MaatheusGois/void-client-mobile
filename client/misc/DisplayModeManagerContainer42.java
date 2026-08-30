@@ -116,11 +116,11 @@ final class DisplayModeManagerContainer42
             i_7_ = 21 + DisplayModeManagerContainer306.menuEntryCount * 16;
         }
         int i_10_ = -(i_6_ / 2) + i_4_;
-        if (Component236.anInt4017 < i_6_ + i_10_) i_10_ = -i_6_ + Component236.anInt4017;
+        if (Component236.canvasWidth < i_6_ + i_10_) i_10_ = -i_6_ + Component236.canvasWidth;
         if (i_10_ < 0) i_10_ = 0;
         int i_11_ = i_5_;
         if (i > -108) method2290();
-        if (i_11_ + i_7_ > PacketReader.anInt10432) i_11_ = PacketReader.anInt10432 + -i_7_;
+        if (i_11_ + i_7_ > PacketReader.canvasHeight) i_11_ = PacketReader.canvasHeight + -i_7_;
         if (i_11_ < 0) i_11_ = 0;
         DisplayModeManagerContainer136.anInt4717 = i_10_;
         Component364.aBoolean8335 = true;

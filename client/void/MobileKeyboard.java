@@ -121,7 +121,7 @@ final class MobileKeyboard {
         if (kb <= 0 || focusH <= 0) {
             return 0;
         }
-        int gh = GlToolkitSub2.anInt7666;
+        int gh = GlToolkitSub2.canvasHeight;
         if (gh <= 0) {
             gh = 503;
         }
@@ -154,8 +154,8 @@ final class MobileKeyboard {
     }
 
     private static boolean inChatBand(DisplayModeManagerContainer57 c, int screenX, int screenY) {
-        int sw = Math.max(1, DisplayModeManagerContainer23.anInt1524);
-        int sh = Math.max(1, GlToolkitSub2.anInt7666);
+        int sw = Math.max(1, DisplayModeManagerContainer23.canvasWidth);
+        int sh = Math.max(1, GlToolkitSub2.canvasHeight);
         if (isFullscreen(c)) {
             return false;
         }
@@ -178,8 +178,8 @@ final class MobileKeyboard {
     }
 
     private static boolean isFullscreen(DisplayModeManagerContainer57 c) {
-        int sw = Math.max(1, DisplayModeManagerContainer23.anInt1524);
-        int sh = Math.max(1, GlToolkitSub2.anInt7666);
+        int sw = Math.max(1, DisplayModeManagerContainer23.canvasWidth);
+        int sh = Math.max(1, GlToolkitSub2.canvasHeight);
         return c.width >= sw - 8 && c.height >= sh - 8;
     }
 
@@ -220,9 +220,9 @@ final class MobileKeyboard {
         if (px <= 0 || vh < 32) {
             return 0;
         }
-        int canvasH = PacketReader.anInt10432;
+        int canvasH = PacketReader.canvasHeight;
         if (canvasH <= 0) {
-            canvasH = GlToolkitSub2.anInt7666;
+            canvasH = GlToolkitSub2.canvasHeight;
         }
         if (canvasH <= 0) {
             return 0;
@@ -249,7 +249,7 @@ final class MobileKeyboard {
         if (px <= 0 || vh < 32) {
             return 0;
         }
-        int gh = GlToolkitSub2.anInt7666;
+        int gh = GlToolkitSub2.canvasHeight;
         if (gh <= 0) {
             gh = 503;
         }

@@ -204,12 +204,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         container.setLayout(null);
         DisplayModeManagerContainer50.gameCanvas = new Canvas_Sub1(this);
         container.add(DisplayModeManagerContainer50.gameCanvas);
-        DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, PacketReader.anInt10432);
+        DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, PacketReader.canvasHeight);
         DisplayModeManagerContainer50.gameCanvas.setVisible(true);
         if (container == RSACipher.aFrame4904) {
             Insets insets = RSACipher.aFrame4904.getInsets();
-            DisplayModeManagerContainer50.gameCanvas.setLocation((insets.left + NodeSub48.anInt7129), insets.top - -DisplayModeManagerContainer147.anInt4167);
-        } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
+            DisplayModeManagerContainer50.gameCanvas.setLocation((insets.left + NodeSub48.perFrameReset), insets.top - -DisplayModeManagerContainer147.perDrawReset);
+        } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.perFrameReset, DisplayModeManagerContainer147.perDrawReset);
         DisplayModeManagerContainer50.gameCanvas.addFocusListener(this);
         DisplayModeManagerContainer50.gameCanvas.requestFocus();
         ToolbarRefreshDefinition.aBoolean9229 = true;
@@ -229,7 +229,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             Component297.aBoolean4726 = true;
             if (AbstractShaderSub4.aBoolean7320 && -NodeSub12.aLong6748 + Component240.currentTimeMillis(-57) > 1000) {
                 Rectangle rectangle = graphics.getClipBounds();
-                if (rectangle == null || (rectangle.width >= SocketConnector.anInt3473 && (NpcNode.anInt6857 <= rectangle.height))) DisplayModeManagerContainer351.aBoolean2674 = true;
+                if (rectangle == null || (rectangle.width >= SocketConnector.canvasWidth && (NpcNode.canvasHeight <= rectangle.height))) DisplayModeManagerContainer351.aBoolean2674 = true;
             }
         }
     }
@@ -248,12 +248,12 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         if (Component146.anInt2127++ > 50) {
             Component146.anInt2127 -= 50;
             Component297.aBoolean4726 = true;
-            DisplayModeManagerContainer50.gameCanvas.setSize(Component236.anInt4017, PacketReader.anInt10432);
+            DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, PacketReader.canvasHeight);
             DisplayModeManagerContainer50.gameCanvas.setVisible(true);
             if (RSACipher.aFrame4904 != null && Component225.aFrame476 == null) {
                 Insets insets = RSACipher.aFrame4904.getInsets();
-                DisplayModeManagerContainer50.gameCanvas.setLocation((insets.left - -NodeSub48.anInt7129), (insets.top + DisplayModeManagerContainer147.anInt4167));
-            } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.anInt7129, DisplayModeManagerContainer147.anInt4167);
+                DisplayModeManagerContainer50.gameCanvas.setLocation((insets.left - -NodeSub48.perFrameReset), (insets.top + DisplayModeManagerContainer147.perDrawReset));
+            } else DisplayModeManagerContainer50.gameCanvas.setLocation(NodeSub48.perFrameReset, DisplayModeManagerContainer147.perDrawReset);
         }
         pulseDrawFrame(-11018);
         if (i > -107) shutdown(true, true);
@@ -480,10 +480,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
         anInt25++;
         try {
             if (DefinitionSub9.anApplet_Sub1_9169 == null) {
-                NodeSub48.anInt7129 = 0;
-                NpcNode.anInt6857 = PacketReader.anInt10432 = i_16_;
-                SocketConnector.anInt3473 = Component236.anInt4017 = i;
-                DisplayModeManagerContainer147.anInt4167 = 0;
+                NodeSub48.perFrameReset = 0;
+                NpcNode.canvasHeight = PacketReader.canvasHeight = i_16_;
+                SocketConnector.canvasWidth = Component236.canvasWidth = i;
+                DisplayModeManagerContainer147.perDrawReset = 0;
                 NodeSub1Sub3.anInt8818 = i_15_;
                 DefinitionSub9.anApplet_Sub1_9169 = this;
                 NodeSub8.anApplet6662 = ToolkitFactory.anApplet1530;
@@ -506,11 +506,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
     final void startFromFrame(int i, int i_20_, boolean bool, int i_21_, int i_22_, String string, int i_23_, int i_24_) {
         try {
             if (i_23_ != 23499) return;
-            SocketConnector.anInt3473 = Component236.anInt4017 = i_20_;
-            NpcNode.anInt6857 = PacketReader.anInt10432 = i_24_;
+            SocketConnector.canvasWidth = Component236.canvasWidth = i_20_;
+            NpcNode.canvasHeight = PacketReader.canvasHeight = i_24_;
             DefinitionSub9.anApplet_Sub1_9169 = this;
-            DisplayModeManagerContainer147.anInt4167 = 0;
-            NodeSub48.anInt7129 = 0;
+            DisplayModeManagerContainer147.perDrawReset = 0;
+            NodeSub48.perFrameReset = 0;
             NodeSub1Sub3.anInt8818 = i_21_;
             NodeSub8.anApplet6662 = null;
             RSACipher.aFrame4904 = new Frame();
@@ -520,7 +520,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             RSACipher.aFrame4904.setVisible(true);
             RSACipher.aFrame4904.toFront();
             Insets insets = RSACipher.aFrame4904.getInsets();
-            RSACipher.aFrame4904.setSize(insets.right + (insets.left + SocketConnector.anInt3473), (insets.bottom + (NpcNode.anInt6857 + insets.top)));
+            RSACipher.aFrame4904.setSize(insets.right + (insets.left + SocketConnector.canvasWidth), (insets.bottom + (NpcNode.canvasHeight + insets.top)));
             BuildType.aClass297_2993 = OggUrlStream.aClass297_8992 = new ReflectionInvoker(i, string, i_22_, true);
             Task class144 = OggUrlStream.aClass297_8992.startThread(this, i_23_ + -33739, 1);
             while (class144.status == 0) SpriteAtlasShader.sleep((byte) 21, 10L);

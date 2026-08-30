@@ -18,7 +18,7 @@ final class DisplayModeManagerContainer249
     private final RSACipher aClass52_4671;
 
     public final void method9(byte i, boolean bool) {
-        if (bool) NodeSub8.toolkit.fillRect(0, 0, Component236.anInt4017, PacketReader.anInt10432, aClass52_4671.anInt4899, 0);
+        if (bool) NodeSub8.toolkit.fillRect(0, 0, Component236.canvasWidth, PacketReader.canvasHeight, aClass52_4671.anInt4899, 0);
         anInt4668++;
         if (i != -49) anInt4666 = -20;
     }

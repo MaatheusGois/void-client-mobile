@@ -140,7 +140,7 @@ final class InterfaceRenderer implements Interface16 {
     private final int method2215(byte i, int i_2_) {
         anInt5033++;
         if (i < 23) anImage5030 = null;
-        if (aBoolean5020) return (-i_2_ + Component236.anInt4017) / 2;
+        if (aBoolean5020) return (-i_2_ + Component236.canvasWidth) / 2;
         return 0;
     }
 
@@ -192,9 +192,9 @@ final class InterfaceRenderer implements Interface16 {
                 try {
                     int i_5_ = Component44.aClass311_897.method2320((byte) 103);
                     String string = Component44.aClass311_897.method2318(-9324);
-                    if (DisplayModeManagerContainer173.anImage4249 == null) DisplayModeManagerContainer173.anImage4249 = (DisplayModeManagerContainer50.gameCanvas.createImage(Component236.anInt4017, PacketReader.anInt10432));
+                    if (DisplayModeManagerContainer173.anImage4249 == null) DisplayModeManagerContainer173.anImage4249 = (DisplayModeManagerContainer50.gameCanvas.createImage(Component236.canvasWidth, PacketReader.canvasHeight));
                     Graphics graphics_6_ = DisplayModeManagerContainer173.anImage4249.getGraphics();
-                    graphics_6_.clearRect(0, 0, Component236.anInt4017, PacketReader.anInt10432);
+                    graphics_6_.clearRect(0, 0, Component236.canvasWidth, PacketReader.canvasHeight);
                     int i_7_ = anImage5030.getWidth(null);
                     int i_8_ = anImage5026.getWidth(null);
                     int i_9_ = anImage5056.getWidth(null);
@@ -261,7 +261,7 @@ final class InterfaceRenderer implements Interface16 {
 
     private final int method2218(int i, int i_40_) {
         anInt5028++;
-        if (aBoolean5045) return (-i + PacketReader.anInt10432) / 2;
+        if (aBoolean5045) return (-i + PacketReader.canvasHeight) / 2;
         if (i_40_ != -6277) anImage5026 = null;
         return 0;
     }

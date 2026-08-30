@@ -7,7 +7,7 @@ final class DisplayModeManagerContainer295
  * RENAMED from `Class239_Sub8` (JODE-obfuscated).
  * Evidence: subclass of Component339 (hierarchy)
  */ extends Component339 {
-    static int anInt5911;
+    static int canvasWidth;
     static int anInt5912;
     static int anInt5913;
     static int anInt5914;
@@ -112,7 +112,7 @@ final class DisplayModeManagerContainer295
 
     final int method1751(int i) {
         anInt5917++;
-        if (i != -32350) anInt5911 = 114;
+        if (i != -32350) canvasWidth = 114;
         return this.anInt3138;
     }
 
@@ -131,7 +131,7 @@ final class DisplayModeManagerContainer295
     }
 
     final int method1714(int i, int i_9_) {
-        if (i != 3) anInt5911 = 95;
+        if (i != 3) canvasWidth = 95;
         anInt5923++;
         return 1;
     }

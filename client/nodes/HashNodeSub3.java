@@ -162,10 +162,10 @@ final class HashNodeSub3
         int i_16_ = Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350);
         do {
             if (i_16_ == 2) {
-                Component221.method1083(NodeSub8.toolkit, 100, (byte) 9, PacketReader.anInt10432, 100, Component236.anInt4017);
+                Component221.method1083(NodeSub8.toolkit, 100, (byte) 9, PacketReader.canvasHeight, 100, Component236.canvasWidth);
                 break;
             } else if (i_16_ != 3) break;
-            DisplayModeManagerContainer220.method282(2, NodeSub8.toolkit, Component236.anInt4017, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.anInt10432, 2);
+            DisplayModeManagerContainer220.method282(2, NodeSub8.toolkit, Component236.canvasWidth, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.canvasHeight, 2);
         } while (false);
         if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, DisplayModeManagerContainer50.gameCanvas);
         if (NodeSub8.toolkit != null) Component200.method2196((byte) -9);

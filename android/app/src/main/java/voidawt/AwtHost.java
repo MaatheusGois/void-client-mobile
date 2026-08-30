@@ -99,8 +99,8 @@ public final class AwtHost {
             if (frame == null) {
                 return null;
             }
-            int fw = Class.forName("InputHandler").getDeclaredField("anInt4276").getInt(null);
-            int fh = Class.forName("DisplayModeManagerContainer295").getDeclaredField("anInt5911").getInt(null);
+            int fw = Class.forName("InputHandler").getDeclaredField("canvasWidth").getInt(null);
+            int fh = Class.forName("DisplayModeManagerContainer295").getDeclaredField("canvasWidth").getInt(null);
             if (fw <= 0 || fh <= 0) {
                 return null;
             }
@@ -112,14 +112,14 @@ public final class AwtHost {
 
     private static void syncClientViewport(int width, int height) {
         try {
-            setStaticInt("DisplayModeManagerContainer23", "anInt1524", width);
-            setStaticInt("GlToolkitSub2", "anInt7666", height);
-            setStaticInt("Component236", "anInt4017", width);
-            setStaticInt("PacketReader", "anInt10432", height);
-            setStaticInt("SocketConnector", "anInt3473", width);
-            setStaticInt("NpcNode", "anInt6857", height);
-            setStaticInt("NodeSub48", "anInt7129", 0);
-            setStaticInt("DisplayModeManagerContainer147", "anInt4167", 0);
+            setStaticInt("DisplayModeManagerContainer23", "canvasWidth", width);
+            setStaticInt("GlToolkitSub2", "canvasHeight", height);
+            setStaticInt("Component236", "canvasWidth", width);
+            setStaticInt("PacketReader", "canvasHeight", height);
+            setStaticInt("SocketConnector", "canvasWidth", width);
+            setStaticInt("NpcNode", "canvasHeight", height);
+            setStaticInt("NodeSub48", "perFrameReset", 0);
+            setStaticInt("DisplayModeManagerContainer147", "perDrawReset", 0);
             // getWindowMode: true → mode 2 (resizable / FS available); aFrame476 → mode 3.
             setStaticBoolean("Cp1252Decoder", "fullscreenAvailable", true);
         } catch (Throwable ignored) {
