@@ -124,7 +124,7 @@ final class Component385
         if (bool != true) method1297((byte) 88, null, null, null, null);
         anInt2200++;
         if (PlayerState.anInt7068 != 0) return true;
-        return Component122.aClass348_Sub16_Sub3_1564.method2860(120);
+        return Component122.aClass348_Sub16_Sub3_1564.isOutputReady(120);
     }
 
     static final void method1297(byte i, Player player, int[] is, int[] is_7_, int[] is_8_) {

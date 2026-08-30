@@ -56,7 +56,7 @@ final class DisplayModeManagerContainer172
             DebugPanic.aClass348_Sub16_Sub3_4743 = null;
             Renderable.anInt3971 = i_2_;
             Component255.anInt1059 = i;
-            Component329.anInt5994 = (Component122.aClass348_Sub16_Sub3_1564.method2844((byte) 103) / i_3_);
+            Component329.anInt5994 = (Component122.aClass348_Sub16_Sub3_1564.getActiveVoices((byte) 103) / i_3_);
             if (Component329.anInt5994 < 1) Component329.anInt5994 = 1;
         } else NodeSub1Sub3.method2732(i_2_, i_1_, bool, 123, class45, i);
     }

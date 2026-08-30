@@ -39,14 +39,14 @@ final class GpiLogger extends NodeSub16 {
         this.aClass348_Sub16_Sub4_8855.synthesizeSamples(is, i, i_0_);
         while_125_:
         for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.next((byte) 121)) {
-            if (!aClass348_Sub16_Sub3_8852.method2847(-107, class348_sub43)) {
+            if (!aClass348_Sub16_Sub3_8852.isVoiceActive(-107, class348_sub43)) {
                 int i_1_ = i;
                 int i_2_ = i_0_;
                 while (class348_sub43.anInt7086 < i_2_) {
                     method2825(i_1_ + i_2_, class348_sub43, i_1_, (byte) -114, class348_sub43.anInt7086, is);
                     i_1_ += class348_sub43.anInt7086;
                     i_2_ -= class348_sub43.anInt7086;
-                    if (aClass348_Sub16_Sub3_8852.method2852(is, i_2_, class348_sub43, i_1_, (byte) -4)) continue while_125_;
+                    if (aClass348_Sub16_Sub3_8852.synthesizeVoice(is, i_2_, class348_sub43, i_1_, (byte) -4)) continue while_125_;
                 }
                 method2825(i_1_ + i_2_, class348_sub43, i_1_, (byte) -114, i_2_, is);
                 class348_sub43.anInt7086 -= i_2_;
@@ -102,12 +102,12 @@ final class GpiLogger extends NodeSub16 {
         anInt8850++;
         while_127_:
         for (PlayerState class348_sub43 = ((PlayerState) this.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = (PlayerState) this.aClass262_8848.next((byte) 38)) {
-            if (!aClass348_Sub16_Sub3_8852.method2847(53, class348_sub43)) {
+            if (!aClass348_Sub16_Sub3_8852.isVoiceActive(53, class348_sub43)) {
                 int i_8_ = i;
                 while (i_8_ > class348_sub43.anInt7086) {
                     method2824(class348_sub43.anInt7086, (byte) 115, class348_sub43);
                     i_8_ -= class348_sub43.anInt7086;
-                    if (aClass348_Sub16_Sub3_8852.method2852(null, i_8_, class348_sub43, 0, (byte) -4)) continue while_127_;
+                    if (aClass348_Sub16_Sub3_8852.synthesizeVoice(null, i_8_, class348_sub43, 0, (byte) -4)) continue while_127_;
                 }
                 method2824(i_8_, (byte) 84, class348_sub43);
                 class348_sub43.anInt7086 -= i_8_;

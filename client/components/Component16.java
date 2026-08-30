@@ -22,7 +22,7 @@ final class Component16
     static final BrowserUrlOpener method1326(BrowserUrlOpener class348_sub16_sub3, int i) {
         anInt2278++;
         BrowserUrlOpener class348_sub16_sub3_0_ = (class348_sub16_sub3 == null ? new BrowserUrlOpener() : new BrowserUrlOpener(class348_sub16_sub3));
-        class348_sub16_sub3_0_.method2841(i, -94, 128);
+        class348_sub16_sub3_0_.flushPending(i, -94, 128);
         return class348_sub16_sub3_0_;
     }
 

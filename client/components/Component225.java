@@ -128,7 +128,7 @@ final class Component225
 
     static final void method345(int i, byte i_17_) {
         anInt469++;
-        if (PlayerState.anInt7068 == 0) Component122.aClass348_Sub16_Sub3_1564.method2861(0, i);
+        if (PlayerState.anInt7068 == 0) Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, i);
         else Component255.anInt1059 = i;
         if (i_17_ > -26) method349(-111);
     }

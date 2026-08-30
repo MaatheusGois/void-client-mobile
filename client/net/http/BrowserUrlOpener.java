@@ -87,11 +87,11 @@ final class BrowserUrlOpener extends NodeSub16 {
     private NodeSub2 aClass348_Sub2_8963;
     private boolean aBoolean8964;
 
-    static final void method2839(int i, int i_0_, int i_1_) {
+    static final void setMixerOffsets(int i, int i_0_, int i_1_) {
         anInt8890++;
         ModelStore.anInt4609 = i - DisplayModeManagerContainer229.anInt1266;
         Component377.anInt859 = i_1_ + -DisplayModeManagerContainer229.anInt1263;
-        if (i_0_ != -17) method2839(-112, -58, -95);
+        if (i_0_ != -17) setMixerOffsets(-112, -58, -95);
     }
 
     final synchronized NodeSub16 getPreviousNode() {
@@ -99,40 +99,40 @@ final class BrowserUrlOpener extends NodeSub16 {
         return null;
     }
 
-    private final synchronized void method2840(boolean bool, byte i) {
+    private final synchronized void resetChannel(boolean bool, byte i) {
         aClass204_8944.method1487();
         anInt8950++;
         aClass348_Sub2_8963 = null;
-        method2851(true, bool);
+        resetAllNotes(true, bool);
         if (i >= -74) method2879(-43, 88, -33);
     }
 
-    final synchronized void method2841(int i, int i_2_, int i_3_) {
+    final synchronized void flushPending(int i, int i_2_, int i_3_) {
         if (i_2_ < -34) {
             anInt8935++;
-            method2854(i_3_, i, 98);
+            setControllerValue(i_3_, i, 98);
         }
     }
 
-    private final void method2842(int i, int i_4_) {
+    private final void handleMidiStatus(int i, int i_4_) {
         anInt8922++;
         int i_5_ = i_4_ & 0xf0;
         if (i_5_ == 128) {
             int i_6_ = i_4_ & 0xf;
             int i_7_ = (0x7f44 & i_4_) >> 8;
             int i_8_ = (0x7f9fe0 & i_4_) >> 16;
-            method2849(i_8_, i_7_, (byte) 97, i_6_);
+            noteOn(i_8_, i_7_, (byte) 97, i_6_);
         } else if (i_5_ == 144) {
             int i_9_ = 0xf & i_4_;
             int i_10_ = 0x7f & i_4_ >> 8;
             int i_11_ = 0x7f & i_4_ >> 16;
-            if (i_11_ <= 0) method2849(64, i_10_, (byte) 74, i_9_);
-            else method2853(0, i_11_, i_10_, i_9_);
+            if (i_11_ <= 0) noteOn(64, i_10_, (byte) 74, i_9_);
+            else noteOff(0, i_11_, i_10_, i_9_);
         } else if (i_5_ == 160) {
             int i_12_ = 0xf & i_4_;
             int i_13_ = i_4_ >> 8 & 0x7f;
             int i_14_ = (i_4_ & 0x7fba60) >> 16;
-            method2863(i_14_, 90, i_12_, i_13_);
+            noop2(i_14_, 90, i_12_, i_13_);
         } else if (i_5_ == 176) {
             int i_15_ = 0xf & i_4_;
             int i_16_ = (0x7f93 & i_4_) >> 8;
@@ -156,7 +156,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_16_ == 65) {
                 if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.bitwiseOr((this.anIntArray8895[i_15_]), 2);
                 else {
-                    method2858(-106, i_15_);
+                    resetChannelAftertouch(-106, i_15_);
                     this.anIntArray8895[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8895[i_15_]), -3);
                 }
             }
@@ -165,8 +165,8 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_16_ == 101) anIntArray8904[i_15_] = (16384 - -GpsOverlay.bitwiseAnd(anIntArray8904[i_15_], 127) + (i_17_ << 7));
             if (i_16_ == 100) anIntArray8904[i_15_] = i_17_ + (GpsOverlay.bitwiseAnd(16256, anIntArray8904[i_15_]) + 16384);
             if (i_16_ == 120) method2872(2005674600, i_15_);
-            if (i_16_ == 121) method2865(0, i_15_);
-            if (i_16_ == 123) method2855(i_15_, (byte) -70);
+            if (i_16_ == 121) allNotesOff(0, i_15_);
+            if (i_16_ == 123) killNotes(i_15_, (byte) -70);
             if (i_16_ == 6) {
                 int i_18_ = anIntArray8904[i_15_];
                 if (i_18_ == 16384) anIntArray8902[i_15_] = ((i_17_ << 7) + GpsOverlay.bitwiseAnd(anIntArray8902[i_15_], -16257));
@@ -180,12 +180,12 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_16_ == 81) {
                 if (i_17_ >= 64) this.anIntArray8895[i_15_] = Component224.bitwiseOr((this.anIntArray8895[i_15_]), 4);
                 else {
-                    method2850(i_15_, 0);
+                    resetChannelPitch(i_15_, 0);
                     this.anIntArray8895[i_15_] = GpsOverlay.bitwiseAnd((this.anIntArray8895[i_15_]), -5);
                 }
             }
-            if (i_16_ == 17) method2857(i_15_, 125, (i_17_ << 7) + (~0x3f80 & anIntArray8942[i_15_]));
-            if (i_16_ == 49) method2857(i_15_, 125, i_17_ + (~0x7f & anIntArray8942[i_15_]));
+            if (i_16_ == 17) setPitchBend(i_15_, 125, (i_17_ << 7) + (~0x3f80 & anIntArray8942[i_15_]));
+            if (i_16_ == 49) setPitchBend(i_15_, 125, i_17_ + (~0x7f & anIntArray8942[i_15_]));
         } else if (i_5_ == 192) {
             int i_20_ = i_4_ & 0xf;
             int i_21_ = 0x7f & i_4_ >> 8;
@@ -193,7 +193,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         } else if (i_5_ == 208) {
             int i_22_ = 0xf & i_4_;
             int i_23_ = (0x7f48 & i_4_) >> 8;
-            method2859(i_22_, i_23_, -32);
+            noop1(i_22_, i_23_, -32);
         } else {
             if (i < 54) anInt8956 = -51;
             if (i_5_ == 224) {
@@ -202,27 +202,27 @@ final class BrowserUrlOpener extends NodeSub16 {
                 method2875(i_24_, 2, i_25_);
             } else {
                 i_5_ = 0xff & i_4_;
-                if (i_5_ == 255) method2851(true, true);
+                if (i_5_ == 255) resetAllNotes(true, true);
             }
         }
     }
 
-    final synchronized void method2843(int i, int i_26_, int i_27_) {
+    final synchronized void setChannelPitchBendRange(int i, int i_26_, int i_27_) {
         if (i_26_ < 0) {
             for (int i_28_ = 0; i_28_ < 16; i_28_++)
                 anIntArray8925[i_28_] = i;
         } else anIntArray8925[i_26_] = i;
         anInt8907++;
-        if (i_27_ != -7836) method2843(41, 73, 85);
+        if (i_27_ != -7836) setChannelPitchBendRange(41, 73, 85);
     }
 
-    final int method2844(byte i) {
+    final int getActiveVoices(byte i) {
         int i_29_ = -88 / ((8 - i) / 40);
         anInt8892++;
         return anInt8933;
     }
 
-    private final int method2845(int i, PlayerState class348_sub43) {
+    private final int calculateSampleIncrement(int i, PlayerState class348_sub43) {
         try {
             if (i != 0) anInt8956 = 53;
             anInt8934++;
@@ -244,10 +244,10 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final synchronized void method2846(boolean bool, boolean bool_34_, NodeSub2 class348_sub2, boolean bool_35_) {
+    private final synchronized void loadDefinitionStream(boolean bool, boolean bool_34_, NodeSub2 class348_sub2, boolean bool_35_) {
         do {
             try {
-                method2840(bool_34_, (byte) -127);
+                resetChannel(bool_34_, (byte) -127);
                 anInt8889++;
                 aClass204_8944.method1482(class348_sub2.aByteArray6564);
                 aLong8959 = 0L;
@@ -270,7 +270,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         } while (false);
     }
 
-    final boolean method2847(int i, PlayerState class348_sub43) {
+    final boolean isVoiceActive(int i, PlayerState class348_sub43) {
         try {
             anInt8948++;
             int i_37_ = 47 / ((i - -62) / 36);
@@ -287,7 +287,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final int method2848(PlayerState class348_sub43, byte i) {
+    private final int getChannelVolume(PlayerState class348_sub43, byte i) {
         try {
             if (i != -70) anIntArray8942 = null;
             anInt8936++;
@@ -299,7 +299,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2849(int i, int i_39_, byte i_40_, int i_41_) {
+    private final void noteOn(int i, int i_39_, byte i_40_, int i_41_) {
         anInt8941++;
         PlayerState class348_sub43 = aClass348_Sub43ArrayArray8928[i_41_][i_39_];
         if (class348_sub43 != null) {
@@ -316,7 +316,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2850(int i, int i_44_) {
+    private final void resetChannelPitch(int i, int i_44_) {
         if ((0x4 & this.anIntArray8895[i]) != 0) {
             for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 65))) {
                 if (i == class348_sub43.anInt7067) class348_sub43.anInt7082 = 0;
@@ -325,11 +325,11 @@ final class BrowserUrlOpener extends NodeSub16 {
         if (i_44_ == 0) anInt8897++;
     }
 
-    private final void method2851(boolean bool, boolean bool_45_) {
+    private final void resetAllNotes(boolean bool, boolean bool_45_) {
         if (bool_45_) method2872(2005674600, -1);
-        else method2855(-1, (byte) -79);
+        else killNotes(-1, (byte) -79);
         anInt8951++;
-        method2865(0, -1);
+        allNotesOff(0, -1);
         if (bool != true) anIntArray8947 = null;
         for (int i = 0; i < 16; i++)
             anIntArray8916[i] = anIntArray8945[i];
@@ -337,7 +337,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             anIntArray8947[i] = GpsOverlay.bitwiseAnd(anIntArray8945[i], -128);
     }
 
-    final boolean method2852(int[] is, int i, PlayerState class348_sub43, int i_46_, byte i_47_) {
+    final boolean synthesizeVoice(int[] is, int i, PlayerState class348_sub43, int i_46_, byte i_47_) {
         try {
             class348_sub43.anInt7086 = Component231.sampleRate / 100;
             anInt8952++;
@@ -354,7 +354,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 if (i_48_ < 0) i_48_ = 0;
                 class348_sub43.anInt7089 = i_48_;
             }
-            class348_sub43.aClass348_Sub16_Sub5_7081.method2901(method2845(0, class348_sub43));
+            class348_sub43.aClass348_Sub16_Sub5_7081.method2901(calculateSampleIncrement(0, class348_sub43));
             Component234 class23 = class348_sub43.aClass23_7075;
             boolean bool = false;
             class348_sub43.anInt7076 += class23.anInt352;
@@ -393,15 +393,15 @@ final class BrowserUrlOpener extends NodeSub16 {
                 }
                 return true;
             }
-            class348_sub43.aClass348_Sub16_Sub5_7081.method2888(class348_sub43.anInt7086, method2868(class348_sub43, -76), method2848(class348_sub43, (byte) -70));
+            class348_sub43.aClass348_Sub16_Sub5_7081.method2888(class348_sub43.anInt7086, getChannelPitchBend(class348_sub43, -76), getChannelVolume(class348_sub43, (byte) -70));
             return false;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.U(" + (is != null ? "{...}" : "null") + ',' + i + ',' + (class348_sub43 != null ? "{...}" : "null") + ',' + i_46_ + ',' + i_47_ + ')'));
         }
     }
 
-    private final void method2853(int i, int i_49_, int i_50_, int i_51_) {
-        method2849(64, i_50_, (byte) 86, i_51_);
+    private final void noteOff(int i, int i_49_, int i_50_, int i_51_) {
+        noteOn(64, i_50_, (byte) 86, i_51_);
         anInt8931++;
         if ((0x2 & this.anIntArray8895[i_51_]) != 0) {
             for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.last(i ^ ~0x51)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.previous(-50))) {
@@ -436,9 +436,9 @@ final class BrowserUrlOpener extends NodeSub16 {
                 class348_sub43.anInt7069 = i;
                 class348_sub43.anInt7090 = 0;
                 class348_sub43.anInt7084 = 0;
-                if (this.anIntArray8914[i_51_] == 0) class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, method2845(0, class348_sub43), method2868(class348_sub43, i + -82), method2848(class348_sub43, (byte) -70)));
+                if (this.anIntArray8914[i_51_] == 0) class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, calculateSampleIncrement(0, class348_sub43), getChannelPitchBend(class348_sub43, i + -82), getChannelVolume(class348_sub43, (byte) -70)));
                 else {
-                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, method2845(0, class348_sub43), 0, method2848(class348_sub43, (byte) -70)));
+                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, calculateSampleIncrement(0, class348_sub43), 0, getChannelVolume(class348_sub43, (byte) -70)));
                     method2874(i ^ 0x7a, (class348_sub17.aShortArray6795[i_50_]) < 0, class348_sub43);
                 }
                 if (class348_sub17.aShortArray6795[i_50_] < 0) class348_sub43.aClass348_Sub16_Sub5_7081.method2917(-1);
@@ -456,7 +456,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2854(int i, int i_54_, int i_55_) {
+    private final void setControllerValue(int i, int i_54_, int i_55_) {
         anInt8943++;
         anIntArray8945[i_54_] = i;
         if (i_55_ < 39) aClass45_8926 = null;
@@ -464,7 +464,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         method2873((byte) -21, i, i_54_);
     }
 
-    private final void method2855(int i, byte i_56_) {
+    private final void killNotes(int i, byte i_56_) {
         anInt8927++;
         if (i_56_ < -42) {
             for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 60))) {
@@ -476,14 +476,14 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2856(byte i) {
+    private final void updateClock(byte i) {
         anInt8955++;
         int i_57_ = anInt8960;
         int i_58_ = anInt8956;
         long l = aLong8957;
         if (aClass348_Sub2_8963 != null && anInt8962 == i_58_) {
-            method2846(false, aBoolean8964, aClass348_Sub2_8963, aBoolean8961);
-            method2856((byte) 124);
+            loadDefinitionStream(false, aBoolean8964, aClass348_Sub2_8963, aBoolean8961);
+            updateClock((byte) 124);
         } else {
             while (i_58_ == anInt8956) {
                 while (aClass204_8944.anIntArray2681[i_57_] == i_58_) {
@@ -494,20 +494,20 @@ final class BrowserUrlOpener extends NodeSub16 {
                         aClass204_8944.method1486(i_57_);
                         if (aClass204_8944.method1480()) {
                             if (aClass348_Sub2_8963 != null) {
-                                method2869(aClass348_Sub2_8963, aBoolean8961, false);
-                                method2856((byte) 124);
+                                unloadDefinitions(aClass348_Sub2_8963, aBoolean8961, false);
+                                updateClock((byte) 124);
                                 return;
                             }
                             if (aBoolean8961 && i_58_ != 0) aClass204_8944.method1484(l);
                             else {
-                                method2851(true, true);
+                                resetAllNotes(true, true);
                                 aClass204_8944.method1487();
                                 return;
                             }
                         }
                         break;
                     }
-                    if ((0x80 & i_59_) != 0) method2842(i ^ 0x40, i_59_);
+                    if ((0x80 & i_59_) != 0) handleMidiStatus(i ^ 0x40, i_59_);
                     aClass204_8944.method1485(i_57_);
                     aClass204_8944.method1486(i_57_);
                 }
@@ -527,16 +527,16 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2857(int i, int i_60_, int i_61_) {
+    private final void setPitchBend(int i, int i_60_, int i_61_) {
         anInt8917++;
         anIntArray8942[i] = i_61_;
         this.anIntArray8906[i] = (int) (0.5 + 2097152.0 * Math.pow(2.0, 5.4931640625E-4 * (double) i_61_));
         if (i_60_ < 124) this.anIntArray8906 = null;
     }
 
-    private final void method2858(int i, int i_62_) {
+    private final void resetChannelAftertouch(int i, int i_62_) {
         anInt8893++;
-        if (i >= -101) method2856((byte) -89);
+        if (i >= -101) updateClock((byte) -89);
         if ((this.anIntArray8895[i_62_] & 0x2) != 0) {
             for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(4)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 41))) {
                 if ((class348_sub43.anInt7067 == i_62_) && (aClass348_Sub43ArrayArray8928[i_62_][class348_sub43.anInt7071]) == null && class348_sub43.anInt7087 < 0) class348_sub43.anInt7087 = 0;
@@ -558,18 +558,18 @@ final class BrowserUrlOpener extends NodeSub16 {
                 aLong8959 += (long) i_64_ * (long) i_63_;
                 aClass348_Sub16_Sub1_8958.skip(i_64_);
                 i -= i_64_;
-                method2856((byte) 124);
+                updateClock((byte) 124);
             } while (aClass204_8944.method1491());
         }
         aClass348_Sub16_Sub1_8958.skip(i);
     }
 
-    private final void method2859(int i, int i_65_, int i_66_) {
+    private final void noop1(int i, int i_65_, int i_66_) {
         anInt8905++;
         if (i_66_ != -32) anIntArray8916 = null;
     }
 
-    final synchronized boolean method2860(int i) {
+    final synchronized boolean isOutputReady(int i) {
         if (i <= 94) getPreviousNode();
         anInt8949++;
         return aClass204_8944.method1491();
@@ -591,7 +591,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     aClass348_Sub16_Sub1_8958.synthesizeSamples(is, i, i_69_);
                     i += i_69_;
                     i_67_ -= i_69_;
-                    method2856((byte) 124);
+                    updateClock((byte) 124);
                 } while (aClass204_8944.method1491());
             }
             aClass348_Sub16_Sub1_8958.synthesizeSamples(is, i, i_67_);
@@ -600,7 +600,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void method2861(int i, int i_70_) {
+    final synchronized void setSampleRate(int i, int i_70_) {
         if (i != 0) method2878(56, 73, 54);
         anInt8933 = i_70_;
         anInt8938++;
@@ -659,23 +659,23 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final void method2863(int i, int i_73_, int i_74_, int i_75_) {
+    private final void noop2(int i, int i_73_, int i_74_, int i_75_) {
         if (i_73_ <= 38) anIntArray8942 = null;
         anInt8940++;
     }
 
-    final synchronized void method2864(byte i) {
+    final synchronized void flushAllDefinitions(byte i) {
         anInt8924++;
         if (i <= 46) aClass204_8944 = null;
         for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.first(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.next(0))
             class348_sub17.method2933((byte) -103);
     }
 
-    private final void method2865(int i, int i_76_) {
+    private final void allNotesOff(int i, int i_76_) {
         anInt8900++;
         if (i_76_ < 0) {
             for (i_76_ = 0; i_76_ < 16; i_76_++)
-                method2865(i, i_76_);
+                allNotesOff(i, i_76_);
         } else {
             anIntArray8953[i_76_] = 12800;
             anIntArray8894[i_76_] = 8192;
@@ -683,17 +683,17 @@ final class BrowserUrlOpener extends NodeSub16 {
             anIntArray8937[i_76_] = 8192;
             anIntArray8899[i_76_] = i;
             anIntArray8939[i_76_] = 8192;
-            method2858(-124, i_76_);
-            method2850(i_76_, 0);
+            resetChannelAftertouch(-124, i_76_);
+            resetChannelPitch(i_76_, 0);
             this.anIntArray8895[i_76_] = 0;
             anIntArray8904[i_76_] = 32767;
             anIntArray8902[i_76_] = 256;
             this.anIntArray8914[i_76_] = 0;
-            method2857(i_76_, 127, 8192);
+            setPitchBend(i_76_, 127, 8192);
         }
     }
 
-    final synchronized boolean method2866(NodeSub2 class348_sub2, int i, AssetCacheLoader class26, CacheStore class45, int i_77_) {
+    final synchronized boolean loadDefinitions(NodeSub2 class348_sub2, int i, AssetCacheLoader class26, CacheStore class45, int i_77_) {
         try {
             class348_sub2.method2733();
             anInt8954++;
@@ -721,7 +721,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void method2867(int i) {
+    final synchronized void clearDefinitions(int i) {
         anInt8903++;
         if (i == 4) {
             for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.first(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.next(i ^ 0x4))
@@ -729,7 +729,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    private final int method2868(PlayerState class348_sub43, int i) {
+    private final int getChannelPitchBend(PlayerState class348_sub43, int i) {
         try {
             if (i >= -16) method2879(-95, 66, 110);
             anInt8920++;
@@ -767,10 +767,10 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void method2869(NodeSub2 class348_sub2, boolean bool, boolean bool_88_) {
+    final synchronized void unloadDefinitions(NodeSub2 class348_sub2, boolean bool, boolean bool_88_) {
         try {
             anInt8932++;
-            method2846(bool_88_, true, class348_sub2, bool);
+            loadDefinitionStream(bool_88_, true, class348_sub2, bool);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.L(" + (class348_sub2 != null ? "{...}" : "null") + ',' + bool + ',' + bool_88_ + ')'));
         }
@@ -778,7 +778,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     final synchronized void method2870(NodeSub2 class348_sub2, long l, boolean bool, boolean bool_89_, byte i) {
         try {
-            method2846(false, bool_89_, class348_sub2, bool);
+            loadDefinitionStream(false, bool_89_, class348_sub2, bool);
             if (i > 17) {
                 anInt8930++;
                 method2876((long) aClass204_8944.anInt2683 * l, -125);
@@ -870,14 +870,14 @@ final class BrowserUrlOpener extends NodeSub16 {
                                 if (aClass204_8944.method1480()) {
                                     if (aBoolean8961 && i_100_ != 0) aClass204_8944.method1484(l_101_);
                                     else {
-                                        method2851(true, true);
+                                        resetAllNotes(true, true);
                                         aClass204_8944.method1487();
                                         return;
                                     }
                                 }
                                 break;
                             }
-                            if ((i_102_ & 0x80) != 0 && (0xf0 & i_102_) != 144) method2842(65, i_102_);
+                            if ((i_102_ & 0x80) != 0 && (0xf0 & i_102_) != 144) handleMidiStatus(65, i_102_);
                             aClass204_8944.method1485(i_99_);
                             aClass204_8944.method1486(i_99_);
                         }
@@ -897,8 +897,8 @@ final class BrowserUrlOpener extends NodeSub16 {
     }
 
     final synchronized void method2877(int i) {
-        method2840(true, (byte) -95);
-        if (i != -128) method2849(103, -71, (byte) -108, -63);
+        resetChannel(true, (byte) -95);
+        if (i != -128) noteOn(103, -71, (byte) -108, -63);
         anInt8913++;
     }
 
@@ -945,8 +945,8 @@ final class BrowserUrlOpener extends NodeSub16 {
         aClass204_8944 = new Component198();
         aClass348_Sub16_Sub1_8958 = new GpiLogger(this);
         aClass356_8891 = new LruCache(128);
-        method2843(256, -1, -7836);
-        method2851(true, true);
+        setChannelPitchBendRange(256, -1, -7836);
+        resetAllNotes(true, true);
     }
 
     BrowserUrlOpener(BrowserUrlOpener class348_sub16_sub3_107_) {
@@ -974,8 +974,8 @@ final class BrowserUrlOpener extends NodeSub16 {
         aClass348_Sub16_Sub1_8958 = new GpiLogger(this);
         try {
             aClass356_8891 = class348_sub16_sub3_107_.aClass356_8891;
-            method2843(256, -1, -7836);
-            method2851(true, true);
+            setChannelPitchBendRange(256, -1, -7836);
+            resetAllNotes(true, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.<init>(" + ((class348_sub16_sub3_107_ != null) ? "{...}" : "null") + ')'));
         }

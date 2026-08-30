@@ -97,26 +97,26 @@ final class ScreenModeManager {
             do {
                 try {
                     if (PlayerState.anInt7068 == 1) {
-                        int i_6_ = Component122.aClass348_Sub16_Sub3_1564.method2844((byte) 123);
-                        if (i_6_ > 0 && Component122.aClass348_Sub16_Sub3_1564.method2860(124)) {
+                        int i_6_ = Component122.aClass348_Sub16_Sub3_1564.getActiveVoices((byte) 123);
+                        if (i_6_ > 0 && Component122.aClass348_Sub16_Sub3_1564.isOutputReady(124)) {
                             i_6_ -= Component329.anInt5994;
                             if (i_6_ < 0) i_6_ = 0;
-                            Component122.aClass348_Sub16_Sub3_1564.method2861(0, i_6_);
+                            Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, i_6_);
                             break;
                         }
                         Component122.aClass348_Sub16_Sub3_1564.method2877(-128);
-                        Component122.aClass348_Sub16_Sub3_1564.method2867(i ^ 0x1eaf);
+                        Component122.aClass348_Sub16_Sub3_1564.clearDefinitions(i ^ 0x1eaf);
                         Component258.aClass26_1977 = null;
                         if (DisplayModeManagerContainer77.aClass45_1848 != null) PlayerState.anInt7068 = 2;
                         else PlayerState.anInt7068 = 0;
                         ShaderProgram.aClass348_Sub2_3683 = null;
                     }
                     if (PlayerState.anInt7068 != 3) break;
-                    int i_7_ = Component122.aClass348_Sub16_Sub3_1564.method2844((byte) -87);
-                    if (i_7_ < Component255.anInt1059 && Component122.aClass348_Sub16_Sub3_1564.method2860(95)) {
+                    int i_7_ = Component122.aClass348_Sub16_Sub3_1564.getActiveVoices((byte) -87);
+                    if (i_7_ < Component255.anInt1059 && Component122.aClass348_Sub16_Sub3_1564.isOutputReady(95)) {
                         i_7_ += DefinitionSub35.anInt9444;
                         if (Component255.anInt1059 < i_7_) i_7_ = Component255.anInt1059;
-                        Component122.aClass348_Sub16_Sub3_1564.method2861(i ^ 0x1eab, i_7_);
+                        Component122.aClass348_Sub16_Sub3_1564.setSampleRate(i ^ 0x1eab, i_7_);
                     } else {
                         DefinitionSub35.anInt9444 = 0;
                         PlayerState.anInt7068 = 0;

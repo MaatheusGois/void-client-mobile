@@ -72,26 +72,26 @@ final class WaterShaderProgram extends ShaderProgram {
                 if (Component258.aClass26_1977 == null) Component258.aClass26_1977 = new AssetCacheLoader(CookieBuilder.aClass45_611, Component79.aClass45_4147);
                 BrowserUrlOpener class348_sub16_sub3 = Component122.aClass348_Sub16_Sub3_1564;
                 if (DebugPanic.aClass348_Sub16_Sub3_4743 != null) class348_sub16_sub3 = DebugPanic.aClass348_Sub16_Sub3_4743;
-                if (class348_sub16_sub3.method2866((ShaderProgram.aClass348_Sub2_3683), 22050, Component258.aClass26_1977, WaterShader.aClass45_7371, -35)) {
+                if (class348_sub16_sub3.loadDefinitions((ShaderProgram.aClass348_Sub2_3683), 22050, Component258.aClass26_1977, WaterShader.aClass45_7371, -35)) {
                     Component122.aClass348_Sub16_Sub3_1564 = class348_sub16_sub3;
-                    Component122.aClass348_Sub16_Sub3_1564.method2864((byte) 52);
+                    Component122.aClass348_Sub16_Sub3_1564.flushAllDefinitions((byte) 52);
                     if (DefinitionSub35.anInt9444 <= 0) {
                         PlayerState.anInt7068 = 0;
-                        Component122.aClass348_Sub16_Sub3_1564.method2861(0, Component255.anInt1059);
+                        Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, Component255.anInt1059);
                         for (int i = 0; i < AbstractShaderSub3.anIntArray7299.length; i++) {
-                            Component122.aClass348_Sub16_Sub3_1564.method2843(AbstractShaderSub3.anIntArray7299[i], i, -7836);
+                            Component122.aClass348_Sub16_Sub3_1564.setChannelPitchBendRange(AbstractShaderSub3.anIntArray7299[i], i, -7836);
                             AbstractShaderSub3.anIntArray7299[i] = 255;
                         }
                     } else {
                         PlayerState.anInt7068 = 3;
-                        Component122.aClass348_Sub16_Sub3_1564.method2861(0, (Math.min(Component255.anInt1059, DefinitionSub35.anInt9444)));
+                        Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, (Math.min(Component255.anInt1059, DefinitionSub35.anInt9444)));
                         for (int i = 0; (AbstractShaderSub3.anIntArray7299.length > i); i++) {
-                            Component122.aClass348_Sub16_Sub3_1564.method2843(AbstractShaderSub3.anIntArray7299[i], i, -7836);
+                            Component122.aClass348_Sub16_Sub3_1564.setChannelPitchBendRange(AbstractShaderSub3.anIntArray7299[i], i, -7836);
                             AbstractShaderSub3.anIntArray7299[i] = 255;
                         }
                     }
                     if (DebugPanic.aClass348_Sub16_Sub3_4743 == null) {
-                        if (Component205.aLong5971 <= 0) Component122.aClass348_Sub16_Sub3_1564.method2869(ShaderProgram.aClass348_Sub2_3683, InputHandler.aBoolean4275, false);
+                        if (Component205.aLong5971 <= 0) Component122.aClass348_Sub16_Sub3_1564.unloadDefinitions(ShaderProgram.aClass348_Sub2_3683, InputHandler.aBoolean4275, false);
                         else Component122.aClass348_Sub16_Sub3_1564.method2870(ShaderProgram.aClass348_Sub2_3683, Component205.aLong5971, InputHandler.aBoolean4275, true, (byte) 24);
                     }
                     if (Component269.aClass279_8764 != null) Component269.aClass279_8764.method2088(bool, Component122.aClass348_Sub16_Sub3_1564);

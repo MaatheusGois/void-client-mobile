@@ -621,7 +621,7 @@ final class ClientScriptExecutor {
                 HashNodeSub14 class348_sub42_sub14 = ImageTagText.method1269(-17096);
                 if (class348_sub42_sub14 != null) {
                     boolean bool_70_ = class348_sub42_sub14.method3236(anIntArray1175, i_69_ >> 14 & 0x3fff, i_69_ & 0x3fff, i_69_ >> 28 & 0x3, (byte) -28);
-                    if (bool_70_) BrowserUrlOpener.method2839(anIntArray1175[1], -17, anIntArray1175[2]);
+                    if (bool_70_) BrowserUrlOpener.setMixerOffsets(anIntArray1175[1], -17, anIntArray1175[2]);
                 }
                 return;
             }
@@ -660,7 +660,7 @@ final class ClientScriptExecutor {
             }
             if (i == 5221) {
                 int i_75_ = intStack[--intStackPointer];
-                BrowserUrlOpener.method2839(i_75_ >> 14 & 0x3fff, -17, i_75_ & 0x3fff);
+                BrowserUrlOpener.setMixerOffsets(i_75_ >> 14 & 0x3fff, -17, i_75_ & 0x3fff);
                 return;
             }
             if (i == 5222) {

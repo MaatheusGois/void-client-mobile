@@ -58,7 +58,7 @@ abstract class NodeSub5
                     AbstractShaderSub3.anIntArray7299[i_9_] = i_7_;
             }
         }
-        Component122.aClass348_Sub16_Sub3_1564.method2843(i_7_, i_8_, -7836);
+        Component122.aClass348_Sub16_Sub3_1564.setChannelPitchBendRange(i_7_, i_8_, -7836);
     }
 
     abstract void method2756(byte i, int i_10_);
