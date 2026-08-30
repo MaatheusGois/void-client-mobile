@@ -19,12 +19,12 @@ final class DefinitionSub37
     private int anInt9466 = 1;
     static Component24[] aClass105Array9467;
 
-    static final void decodedOperation3146(int i, int i_0_, byte i_1_, int i_2_, int i_3_, int i_4_, byte[] is, byte[] is_5_, int i_6_) {
+    static final void method3146(int i, int i_0_, byte i_1_, int i_2_, int i_3_, int i_4_, byte[] is, byte[] is_5_, int i_6_) {
         try {
             anInt9464++;
             int i_7_ = -(i_0_ >> 2);
             i_0_ = -(i_0_ & 0x3);
-            if (i_1_ >= -12) decodedOperation3148(true);
+            if (i_1_ >= -12) method3148(true);
             for (int i_8_ = -i_3_; i_8_ < 0; i_8_++) {
                 for (int i_9_ = i_7_; i_9_ < 0; i_9_++) {
                     is[i_4_++] += -is_5_[i_6_++];
@@ -42,9 +42,9 @@ final class DefinitionSub37
         }
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_11_) {
+    final void method3049(Buffer class348_sub49, int i, int i_11_) {
         anInt9460++;
-        if (i_11_ != 31015) decodedOperation3147((byte) 32);
+        if (i_11_ != 31015) method3147((byte) 32);
         int i_12_ = i;
         while_212_:
         do {
@@ -66,7 +66,7 @@ final class DefinitionSub37
     final int[] getMonochromeOutput(int i, int i_13_) {
         anInt9457++;
         int[] is = this.imageCache.getPixels(0, i);
-        if (i_13_ != 255) decodedOperation3148(true);
+        if (i_13_ != 255) method3148(true);
         if (this.imageCache.cacheMiss) {
             int i_14_ = 1 + (anInt9463 + anInt9463);
             int i_15_ = 65536 / i_14_;
@@ -74,7 +74,7 @@ final class DefinitionSub37
             int i_17_ = 65536 / i_16_;
             int[][] is_18_ = new int[i_14_][];
             for (int i_19_ = -anInt9463 + i; i - -anInt9463 >= i_19_; i_19_++) {
-                int[] is_20_ = this.decodedOperation3048(DisplayModeManagerContainer356.anInt6325 & i_19_, 633706337, 0);
+                int[] is_20_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & i_19_, 633706337, 0);
                 int[] is_21_ = new int[DefinitionSub6.anInt9139];
                 int i_22_ = 0;
                 for (int i_23_ = -anInt9466; anInt9466 >= i_23_; i_23_++)
@@ -98,8 +98,8 @@ final class DefinitionSub37
         return is;
     }
 
-    static final void decodedOperation3147(byte i) {
-        if (i != 27) decodedOperation3146(-85, 87, (byte) 91, 46, -77, 54, null, null, -117);
+    static final void method3147(byte i) {
+        if (i != 27) method3146(-85, 87, (byte) 91, 46, -77, 54, null, null, -117);
         Component253.anInt3203 = -1;
         Component263.anInt1548 = -1;
         Component293.anInt3306 = 0;
@@ -117,7 +117,7 @@ final class DefinitionSub37
             int i_32_ = 65536 / i_31_;
             int[][][] is_33_ = new int[i_29_][][];
             for (int i_34_ = i + -anInt9463; i_34_ <= anInt9463 + i; i_34_++) {
-                int[][] is_35_ = this.decodedOperation3039((byte) 55, DisplayModeManagerContainer356.anInt6325 & i_34_, 0);
+                int[][] is_35_ = this.method3039((byte) 55, DisplayModeManagerContainer356.anInt6325 & i_34_, 0);
                 int[][] is_36_ = new int[3][DefinitionSub6.anInt9139];
                 int i_37_ = 0;
                 int i_38_ = 0;
@@ -176,10 +176,10 @@ final class DefinitionSub37
         super(1, false);
     }
 
-    public static void decodedOperation3148(boolean bool) {
+    public static void method3148(boolean bool) {
         anIntArray9458 = null;
         aLongArray9465 = null;
-        if (bool != true) decodedOperation3146(79, -54, (byte) -128, -109, 85, -107, null, null, 58);
+        if (bool != true) method3146(79, -54, (byte) -128, -109, 85, -107, null, null, 58);
         aClass105Array9467 = null;
     }
 

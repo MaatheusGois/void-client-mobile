@@ -14,7 +14,7 @@ final class NodeSub25
     int anInt6883;
     private int[] anIntArray6884;
 
-    final void decodedOperation2995(int i, int i_0_) {
+    final void method2995(int i, int i_0_) {
         if (i != 0 || i_0_ != 0) {
             if (anIntArray6881 == null || anIntArray6881.length != anIntArray6884.length) anIntArray6881 = new int[anIntArray6884.length];
             int i_1_ = anIntArray6884.length;
@@ -36,11 +36,11 @@ final class NodeSub25
         }
     }
 
-    public static void decodedOperation2996() {
+    public static void method2996() {
         anIntArray6881 = null;
     }
 
-    final int[] decodedOperation2997() {
+    final int[] method2997() {
         return anIntArray6884;
     }
 

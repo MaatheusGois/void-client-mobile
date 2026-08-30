@@ -17,8 +17,8 @@ final class Component60
 
     final int getValue(int i, int i_0_) {
         anInt5905++;
-        if (this.preferences.decodedOperation3425(-93)) return 3;
-        if (this.preferences.aClass239_Sub24_7235.decodedOperation1820(i ^ ~0x7e5e) == 0) return 3;
+        if (this.preferences.method3425(-93)) return 3;
+        if (this.preferences.aClass239_Sub24_7235.method1820(i ^ ~0x7e5e) == 0) return 3;
         if (i != 3) anInt5909 = -111;
         return 1;
     }
@@ -32,9 +32,9 @@ final class Component60
     }
 
     final void validateValue(boolean bool) {
-        if (this.preferences.decodedOperation3425(-82)) this.preferenceValue = 0;
+        if (this.preferences.method3425(-82)) this.preferenceValue = 0;
         anInt5904++;
-        if (this.preferences.aClass239_Sub24_7235.decodedOperation1820(-32350) == 0) this.preferenceValue = 0;
+        if (this.preferences.aClass239_Sub24_7235.method1820(-32350) == 0) this.preferenceValue = 0;
         if (bool != false) setValue(-60, 72);
         if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
@@ -45,15 +45,15 @@ final class Component60
         this.preferenceValue = i_1_;
     }
 
-    final boolean decodedOperation1747(int i) {
+    final boolean method1747(int i) {
         anInt5908++;
-        if (this.preferences.decodedOperation3425(-127)) return false;
-        if (this.preferences.aClass239_Sub24_7235.decodedOperation1820(-32350) == 0) return false;
-        if (i < 85) decodedOperation1747(105);
+        if (this.preferences.method3425(-127)) return false;
+        if (this.preferences.aClass239_Sub24_7235.method1820(-32350) == 0) return false;
+        if (i < 85) method1747(105);
         return true;
     }
 
-    final int decodedOperation1748(int i) {
+    final int method1748(int i) {
         if (i != -32350) return 111;
         anInt5910++;
         return this.preferenceValue;

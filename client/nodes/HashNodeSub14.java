@@ -33,53 +33,53 @@ final class HashNodeSub14
     int anInt9644;
     static int anInt9645 = 1;
 
-    final boolean decodedOperation3236(int[] is, int i, int i_0_, int i_1_, byte i_2_) {
+    final boolean method3236(int[] is, int i, int i_0_, int i_1_, byte i_2_) {
         anInt9623++;
         for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 117)) {
-            if (class348_sub18.decodedOperation2935(i_0_, i, i_1_, true)) {
-                class348_sub18.decodedOperation2940(i_0_, true, is, i);
+            if (class348_sub18.method2935(i_0_, i, i_1_, true)) {
+                class348_sub18.method2940(i_0_, true, is, i);
                 return true;
             }
         }
-        if (i_2_ != -28) decodedOperation3244(123, -16, 116);
+        if (i_2_ != -28) method3244(123, -16, 116);
         return false;
     }
 
-    public static void decodedOperation3237(byte i) {
+    public static void method3237(byte i) {
         friendLoginMessages = null;
         anIntArray9626 = null;
         aByteArray9622 = null;
         if (i != 42) anInt9645 = -112;
     }
 
-    final boolean decodedOperation3238(byte i, int i_3_, int i_4_) {
+    final boolean method3238(byte i, int i_3_, int i_4_) {
         int i_5_ = 113 % ((-26 - i) / 46);
         anInt9641++;
         for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 117)) {
-            if (class348_sub18.decodedOperation2934(3589, i_3_, i_4_)) return true;
+            if (class348_sub18.method2934(3589, i_3_, i_4_)) return true;
         }
         return false;
     }
 
-    final boolean decodedOperation3239(boolean bool, int i, int i_6_, int[] is) {
+    final boolean method3239(boolean bool, int i, int i_6_, int[] is) {
         anInt9638++;
-        if (bool != true) decodedOperation3238((byte) 9, -26, -68);
+        if (bool != true) method3238((byte) 9, -26, -68);
         for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 126)) {
-            if (class348_sub18.decodedOperation2939(i_6_, 2, i)) {
-                class348_sub18.decodedOperation2937(i_6_, i, -3069, is);
+            if (class348_sub18.method2939(i_6_, 2, i)) {
+                class348_sub18.method2937(i_6_, i, -3069, is);
                 return true;
             }
         }
         return false;
     }
 
-    final void decodedOperation3240(byte i) {
+    final void method3240(byte i) {
         this.anInt9643 = 12800;
         this.anInt9644 = 12800;
         this.anInt9627 = 0;
         anInt9636++;
         this.anInt9635 = 0;
-        if (i != 37) decodedOperation3244(30, -85, -43);
+        if (i != 37) method3244(30, -85, -43);
         for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(i + -33); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 52)) {
             if (this.anInt9643 > class348_sub18.anInt6812) this.anInt9643 = class348_sub18.anInt6812;
             if (class348_sub18.anInt6813 > this.anInt9627) this.anInt9627 = class348_sub18.anInt6813;
@@ -88,7 +88,7 @@ final class HashNodeSub14
         }
     }
 
-    static final void decodedOperation3241(int i, byte i_7_, GraphicsToolkit var_ha) {
+    static final void method3241(int i, byte i_7_, GraphicsToolkit var_ha) {
         anInt9637++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) HashNodeSub10.activeOccluderCount = 0;
         else {
@@ -110,13 +110,13 @@ final class HashNodeSub14
             DefinitionSub4.aClass101_9114 = var_ha.method3640();
             HashNodeSub10.activeOccluderCount = 0;
             int i_8_ = 0;
-            if (i_7_ < 37) decodedOperation3241(-25, (byte) 65, null);
+            if (i_7_ < 37) method3241(-25, (byte) 65, null);
             for (/**/; RadixText.occluderCountA > i_8_; i_8_++)
-                RenderableSub2.decodedOperation2498(Component335.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
+                RenderableSub2.method2498(Component335.aClass338Array2034[i_8_], var_ha, (byte) -112, i);
             for (int i_9_ = 0; i_9_ < Component325.occluderCountB; i_9_++)
-                RenderableSub2.decodedOperation2498((DisplayModeManagerContainer104.aClass338Array10330[i_9_]), var_ha, (byte) -127, i);
+                RenderableSub2.method2498((DisplayModeManagerContainer104.aClass338Array10330[i_9_]), var_ha, (byte) -127, i);
             for (int i_10_ = 0; i_10_ < ComponentSettings.anInt7101; i_10_++)
-                RenderableSub2.decodedOperation2498(InterfaceRenderer.aClass338Array5060[i_10_], var_ha, (byte) -128, i);
+                RenderableSub2.method2498(InterfaceRenderer.aClass338Array5060[i_10_], var_ha, (byte) -128, i);
             Component241.occludedPixelCount = 0;
             if (HashNodeSub10.activeOccluderCount > 0) {
                 int i_11_ = DisplayModeManagerContainer194.anIntArray5091.length;
@@ -136,8 +136,8 @@ final class HashNodeSub14
                 Component360.anInt4319 = 1;
                 for (int i_14_ = 0; (i_14_ < HashNodeSub10.activeOccluderCount); i_14_++) {
                     Component103 class338 = HashNodeSub19.aClass338Array9700[i_14_];
-                    DefinitionSub29.decodedOperation3125(class338.aShortArray4194[3], class338.aShortArray4183[0], class338.aShortArray4194[1], class338.aShortArray4188[3], class338.aShortArray4188[1], (byte) -105, class338.aShortArray4183[1], class338.aShortArray4188[0], class338.aShortArray4194[0], class338.aShortArray4183[3]);
-                    DefinitionSub29.decodedOperation3125(class338.aShortArray4194[3], class338.aShortArray4183[1], class338.aShortArray4194[2], class338.aShortArray4188[3], class338.aShortArray4188[2], (byte) -118, class338.aShortArray4183[2], class338.aShortArray4188[1], class338.aShortArray4194[1], class338.aShortArray4183[3]);
+                    DefinitionSub29.method3125(class338.aShortArray4194[3], class338.aShortArray4183[0], class338.aShortArray4194[1], class338.aShortArray4188[3], class338.aShortArray4188[1], (byte) -105, class338.aShortArray4183[1], class338.aShortArray4188[0], class338.aShortArray4194[0], class338.aShortArray4183[3]);
+                    DefinitionSub29.method3125(class338.aShortArray4194[3], class338.aShortArray4183[1], class338.aShortArray4194[2], class338.aShortArray4188[3], class338.aShortArray4188[2], (byte) -118, class338.aShortArray4183[2], class338.aShortArray4188[1], class338.aShortArray4194[1], class338.aShortArray4183[3]);
                 }
                 Component360.anInt4319 = 2;
             }
@@ -145,15 +145,15 @@ final class HashNodeSub14
         }
     }
 
-    final boolean decodedOperation3242(int[] is, int i, int i_15_, int i_16_) {
+    final boolean method3242(int[] is, int i, int i_15_, int i_16_) {
         anInt9624++;
         for (NodeSub18 class348_sub18 = (NodeSub18) this.aClass262_9629.first(4); class348_sub18 != null; class348_sub18 = (NodeSub18) this.aClass262_9629.next((byte) 115)) {
-            if (class348_sub18.decodedOperation2934(3589, i_16_, i_15_)) {
-                class348_sub18.decodedOperation2940(i_15_, true, is, i_16_);
+            if (class348_sub18.method2934(3589, i_16_, i_15_)) {
+                class348_sub18.method2940(i_15_, true, is, i_16_);
                 return true;
             }
         }
-        if (i <= 59) decodedOperation3242(null, -121, 72, 68);
+        if (i <= 59) method3242(null, -121, 72, 68);
         return false;
     }
 
@@ -171,8 +171,8 @@ final class HashNodeSub14
         int i_17_ = -41 / ((i - 79) / 37);
     }
 
-    static final void decodedOperation3244(int i, int i_18_, int i_19_) {
-        NodeSub5.decodedOperation2755(-1, i_18_, i);
+    static final void method3244(int i, int i_18_, int i_19_) {
+        NodeSub5.method2755(-1, i_18_, i);
         anInt9633++;
         if (i_19_ <= 108) enqueueOutboundPacket(-47, null);
     }

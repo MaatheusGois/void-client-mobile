@@ -23,17 +23,17 @@ final class Component380
     static int anInt4994;
     static int anInt4995;
 
-    public static void decodedOperation1112(int i) {
+    public static void method1112(int i) {
         if (i != 1) aClass267Array4987 = null;
         aClass45_4984 = null;
         anIntArray4983 = null;
         aClass267Array4987 = null;
     }
 
-    static final boolean decodedOperation1113(int i, int i_0_, int i_1_) {
+    static final boolean method1113(int i, int i_0_, int i_1_) {
         anInt4995++;
         if (i_1_ >= -3) aClass45_4984 = null;
-        return (ReliefShader.decodedOperation1412((byte) -35, i_0_, i) & (FriendsIgnoreList.hasCollisionBlockFlags(i, i_0_, 72) | (i & 0x2000) != 0 | ReferenceHolder.hasBit16(i_0_, (byte) 114, i)));
+        return (ReliefShader.method1412((byte) -35, i_0_, i) & (FriendsIgnoreList.hasCollisionBlockFlags(i, i_0_, 72) | (i & 0x2000) != 0 | ReferenceHolder.hasBit16(i_0_, (byte) 114, i)));
     }
 
     public final long method52(byte i) {
@@ -58,13 +58,13 @@ final class Component380
         return l;
     }
 
-    static final void decodedOperation1114(int i, int i_2_) {
+    static final void method1114(int i, int i_2_) {
         anInt4986++;
         if (i < 0 || i > 2) i = 0;
         NodederUtil.anInt6637 = i;
         NodeSub51.aClass318_Sub10Array7249 = new RenderableSub10[1 + (ReferenceHolder.anIntArray9558[NodederUtil.anInt6637])];
         GlTexture.anInt8550 = 0;
-        if (i_2_ >= -118) decodedOperation1114(-43, -71);
+        if (i_2_ >= -118) method1114(-43, -71);
         Component239.anInt4559 = 0;
     }
 

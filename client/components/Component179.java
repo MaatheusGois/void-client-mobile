@@ -37,20 +37,20 @@ final class Component179
         if (i != 13) aString9058 = null;
     }
 
-    final float decodedOperation2983(byte i) {
+    final float method2983(byte i) {
         if (i <= 61) return -0.49539495F;
         anInt9052++;
         return aFloat9062;
     }
 
-    final float decodedOperation2984(byte i) {
+    final float method2984(byte i) {
         anInt9060++;
         if (i != 97) aFloat9048 = -0.6790166F;
         return aFloat9048;
     }
 
-    static final boolean decodedOperation2985(int i, int i_0_, int i_1_) {
-        if (i != -31735) decodedOperation2990((byte) -62);
+    static final boolean method2985(int i, int i_0_, int i_1_) {
+        if (i != -31735) method2990((byte) -62);
         anInt9059++;
         return (0x100 & i_1_) != 0;
     }
@@ -84,7 +84,7 @@ final class Component179
                     aFloat9048 = ((float) ((l - -l_4_) * (long) anInt9054) / (float) anInt9055);
                     int i_6_ = class348_sub49.readIntLittleEndian(-93);
                     if (i_6_ < 0 || i_6_ > (-class348_sub49.offset + (class348_sub49.payload).length)) throw new IllegalStateException();
-                    aString9058 = (Component66.decodedOperation1793(class348_sub49.payload, class348_sub49.offset, -123, i_6_));
+                    aString9058 = (Component66.method1793(class348_sub49.payload, class348_sub49.offset, -123, i_6_));
                 }
                 if ((i_2_ | 0x80) != 0) return;
             }
@@ -92,13 +92,13 @@ final class Component179
         }
     }
 
-    final String decodedOperation2986(int i) {
+    final String method2986(int i) {
         anInt9053++;
-        if (i < 26) decodedOperation2986(-122);
+        if (i < 26) method2986(-122);
         return aString9051;
     }
 
-    static final void decodedOperation2987(int i, int i_7_, int i_8_, int i_9_, int i_10_) {
+    static final void method2987(int i, int i_7_, int i_8_, int i_9_, int i_10_) {
         anInt9047++;
         if (i_7_ == 8 || i_7_ == 16) {
             for (int i_11_ = 0; (ComponentSettings.anInt7101 > i_11_); i_11_++) {
@@ -116,26 +116,26 @@ final class Component179
                     if (i_7_ == 2) class357.aShort4398 = (short) 0;
                 } else class357.aShort4409 = (short) 0;
             }
-            ParticleShader.decodedOperation2152(false);
+            ParticleShader.method2152(false);
         }
         if (i_9_ != -3951) anIntArray9050 = null;
     }
 
-    static final void decodedOperation2988(boolean bool) {
-        NodeCache.aHa1098.DualToolkit(((float) Component192.preferences.aClass239_Sub10_7232.decodedOperation1764(-32350) * 0.1F + 0.7F) * Component214.aFloat2137);
+    static final void method2988(boolean bool) {
+        NodeCache.aHa1098.DualToolkit(((float) Component192.preferences.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * Component214.aFloat2137);
         anInt9049++;
         NodeCache.aHa1098.ZA(DisplayModeManagerContainer96.anInt4703, ModelStore.aFloat4626, CollisionMap.aFloat4455, (float) (Component158.anInt325 << 2), (float) (Component349.anInt10023 << 2), (float) (Component169.anInt2601 << 2));
         NodeCache.aHa1098.method3653(HeapDumpHelper.aClass299_4938);
         if (bool != true) anIntArray9050 = null;
     }
 
-    final String decodedOperation2989(int i) {
+    final String method2989(int i) {
         int i_12_ = 4 / ((i - -63) / 50);
         anInt9061++;
         return aString9058;
     }
 
-    public static void decodedOperation2990(byte i) {
+    public static void method2990(byte i) {
         anIntArray9050 = null;
         if (i <= 101) anIntArray9050 = null;
     }

@@ -23,10 +23,10 @@ final class DisplayModeManagerContainer123
     static int anInt1302;
     static int[] anIntArray1303;
 
-    static final boolean decodedOperation776(int i, int i_0_, int i_1_) {
+    static final boolean method776(int i, int i_0_, int i_1_) {
         anInt1297++;
-        if (i_1_ != 65536) decodedOperation780(-106, -24, 57);
-        boolean bool = ((i & 0x37) != 0 ? Component380.decodedOperation1113(i_0_, i, -7) : PacketReader.isPacketAllowed(i_0_, i, (byte) 111));
+        if (i_1_ != 65536) method780(-106, -24, 57);
+        boolean bool = ((i & 0x37) != 0 ? Component380.method1113(i_0_, i, -7) : PacketReader.isPacketAllowed(i_0_, i, (byte) 111));
         return bool | (FriendsIgnoreList.hasCollisionBlockFlags(i_0_, i, i_1_ ^ 0x1003d) | (0x10000 & i_0_) != 0);
     }
 
@@ -168,7 +168,7 @@ final class DisplayModeManagerContainer123
         anInt1292 = 256;
     }
 
-    final int decodedOperation778(byte i) {
+    final int method778(byte i) {
         anInt1300++;
         if (anInt1292 == 0) {
             method779(false);
@@ -193,16 +193,16 @@ final class DisplayModeManagerContainer123
             anIntArray1296[i] = i_14_ = (anIntArray1296[GpsOverlay.bitwiseAnd(255, i_13_ >> 2)] - (-anInt1293 - anInt1291));
             anIntArray1289[i] = anInt1291 = i_13_ + anIntArray1296[(GpsOverlay.bitwiseAnd(261268, i_14_) >> 278777480 >> 242087490)];
         }
-        if (bool != false) decodedOperation776(-33, -56, 52);
+        if (bool != false) method776(-33, -56, 52);
     }
 
-    static final boolean decodedOperation780(int i, int i_15_, int i_16_) {
+    static final boolean method780(int i, int i_15_, int i_16_) {
         if (i_15_ != 0) return true;
         anInt1299++;
         return (0x400 & i_16_) != 0;
     }
 
-    final int decodedOperation781(byte i) {
+    final int method781(byte i) {
         if (anInt1292 == 0) {
             method779(false);
             anInt1292 = 256;
@@ -212,7 +212,7 @@ final class DisplayModeManagerContainer123
         return anIntArray1289[--anInt1292];
     }
 
-    public static void decodedOperation782(int i) {
+    public static void method782(int i) {
         anIntArray1303 = null;
         if (i != 1) anInt1290 = 114;
         aClass273_1298 = null;

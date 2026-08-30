@@ -28,7 +28,7 @@ final class NewsFetcher implements Runnable {
     static int anInt4210;
     static int anInt4211;
 
-    public static void decodedOperation2664(int i) {
+    public static void method2664(int i) {
         if (i == 3) aClass351_4207 = null;
     }
 
@@ -51,15 +51,15 @@ final class NewsFetcher implements Runnable {
         aBoolean4205 = true;
     }
 
-    static final void decodedOperation2665(int i, byte i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
+    static final void method2665(int i, byte i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
         anInt4200++;
         int i_5_ = i_4_ - i;
         int i_6_ = -i_2_ + i_3_;
         if (i_5_ == 0) {
-            if (i_6_ != 0) Component226.decodedOperation2656(i_2_, i, (byte) 124, i_1_, i_3_);
+            if (i_6_ != 0) Component226.method2656(i_2_, i, (byte) 124, i_1_, i_3_);
             return;
         } else if (i_6_ == 0) {
-            Component2.decodedOperation196(true, i_4_, i_1_, i, i_2_);
+            Component2.method196(true, i_4_, i_1_, i, i_2_);
             return;
         }
         int i_7_ = (i_6_ << 12) / i_5_;
@@ -107,10 +107,10 @@ final class NewsFetcher implements Runnable {
             i_10_ = (-i_8_ + Component72.anInt1910 << 12) / i_7_;
             i_9_ = Component72.anInt1910;
         }
-        DisplayModeManagerContainer341.decodedOperation1783(i_10_, -1, i_9_, i_12_, i_11_, i_1_);
+        DisplayModeManagerContainer341.method1783(i_10_, -1, i_9_, i_12_, i_11_, i_1_);
     }
 
-    static final void decodedOperation2666(int i, int i_13_, DisplayModeManagerContainer57 class46, byte i_14_) {
+    static final void method2666(int i, int i_13_, DisplayModeManagerContainer57 class46, byte i_14_) {
         anInt4199++;
         if (class46 != null) {
             if (class46.anObjectArray714 != null) {
@@ -126,13 +126,13 @@ final class NewsFetcher implements Runnable {
             r.aBoolean9722 = true;
             JaclibLoader.anInt169 = class46.childIndex;
             Component182.anInt9747 = class46.anInt824;
-            if (i_14_ != 21) decodedOperation2665(-99, (byte) -106, 10, -37, 26, -123);
+            if (i_14_ != 21) method2665(-99, (byte) -106, 10, -37, 26, -123);
             Component90.anInt2046 = class46.packedId;
             Component111.markInterfaceDirty(-9343, class46);
         }
     }
 
-    final DisplayModeManagerContainer61 decodedOperation2667(boolean bool, int i) {
+    final DisplayModeManagerContainer61 method2667(boolean bool, int i) {
         anInt4210++;
         if (bool != false) return null;
         if (aClass295Array4204 == null || i < 0 || i >= aClass295Array4204.length) return null;
@@ -143,7 +143,7 @@ final class NewsFetcher implements Runnable {
         /* empty */
     }
 
-    final boolean decodedOperation2668(int i) {
+    final boolean method2668(int i) {
         anInt4208++;
         if (aBoolean4205) return true;
         if (aClass144_4201 == null) {
@@ -164,7 +164,7 @@ final class NewsFetcher implements Runnable {
         return aBoolean4205;
     }
 
-    static final void decodedOperation2669(Object[] objects, long[] ls, int i) {
+    static final void method2669(Object[] objects, long[] ls, int i) {
         try {
             if (i < -5) {
                 anInt4209++;

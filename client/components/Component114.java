@@ -36,29 +36,29 @@ final class Component114
                     if (DefinitionSub21.cameraMode == 4) CommandHandler.updateOrbitCamera((byte) 125, l);
                 } else Canvas_Sub1.updateFollowCamera(-1, l);
             }
-            ParticleSystem.decodedOperation3324(NodeSub8.toolkit, (byte) 83, OpenGlShader.clientCycle);
-            if (r.anInt9721 != -1) DisplayModeManagerContainer216.decodedOperation769(r.anInt9721, (byte) 118);
+            ParticleSystem.method3324(NodeSub8.toolkit, (byte) 83, OpenGlShader.clientCycle);
+            if (r.anInt9721 != -1) DisplayModeManagerContainer216.method769(r.anInt9721, (byte) 118);
             for (int i_3_ = 0; i_3_ < NodeSub38.anInt7008; i_3_++) {
                 if (InflaterDecompressor.aBooleanArray2076[i_3_]) DisplayModeManagerContainer259.aBooleanArray3438[i_3_] = true;
                 Component143.aBooleanArray2326[i_3_] = InflaterDecompressor.aBooleanArray2076[i_3_];
                 InflaterDecompressor.aBooleanArray2076[i_3_] = false;
             }
             Component255.anInt1064 = OpenGlShader.clientCycle;
-            Component2.decodedOperation198(null, false, -1, -1);
-            Component143.decodedOperation1343(-1, null, 1, -1);
+            Component2.method198(null, false, -1, -1);
+            Component143.method1343(-1, null, 1, -1);
             if (r.anInt9721 != -1) {
                 NodeSub38.anInt7008 = 0;
-                TheoraVideoPlayer.decodedOperation842(false);
+                TheoraVideoPlayer.method842(false);
             }
             NodeSub8.toolkit.la();
-            HashNodeSub20.decodedOperation3281((byte) 46, NodeSub8.toolkit);
+            HashNodeSub20.method3281((byte) 46, NodeSub8.toolkit);
             int i_4_ = DisplayModeManagerContainer67.getTipCursorId(3112);
             if (i_4_ == -1) i_4_ = Component149.widgetCursorId;
             if (i_4_ == -1) i_4_ = HashNodeSub16Sub1.defaultCursorId;
             Component373.applyCustomCursor(0, i_4_);
             if (i == -43) {
                 int i_5_ = (Component72.localPlayer.getSize((byte) 103) << 8);
-                DisplayModeManagerContainer147.decodedOperation2655(98, Component72.localPlayer.plane, NodeSub51.anInt7267, i_5_ + (Component72.localPlayer.y), (Component72.localPlayer.x - -i_5_));
+                DisplayModeManagerContainer147.method2655(98, Component72.localPlayer.plane, NodeSub51.anInt7267, i_5_ + (Component72.localPlayer.y), (Component72.localPlayer.x - -i_5_));
                 NodeSub51.anInt7267 = 0;
             }
         } catch (RuntimeException runtimeexception) {

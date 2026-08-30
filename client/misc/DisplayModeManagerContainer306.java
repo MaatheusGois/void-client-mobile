@@ -24,22 +24,22 @@ final class DisplayModeManagerContainer306
     private final CacheStore aClass45_4785;
     static int anInt4786;
 
-    public static void decodedOperation741(byte i) {
+    public static void method741(byte i) {
         aFloatArray4772 = null;
         anIntArray4780 = null;
-        if (i != -128) decodedOperation743(113, -98);
+        if (i != -128) method743(113, -98);
         aClass114_4779 = null;
         aClass219_4782 = null;
     }
 
-    static final Component291 decodedOperation742(int i, int i_0_) {
+    static final Component291 method742(int i, int i_0_) {
         anInt4777++;
         Component291 class189 = (Component291) Component46.aClass60_2844.get(i_0_, -104);
         if (class189 != null) return class189;
         byte[] is = Component76.aClass45_8601.getFile(-1860, 0, i_0_);
-        if (i != 104) decodedOperation741((byte) 98);
+        if (i != 104) method741((byte) 98);
         class189 = new Component291();
-        if (is != null) class189.decodedOperation1419(i_0_, new Buffer(is), (byte) 64);
+        if (is != null) class189.method1419(i_0_, new Buffer(is), (byte) 64);
         Component46.aClass60_2844.putOne(class189, i_0_, (byte) -114);
         return class189;
     }
@@ -51,10 +51,10 @@ final class DisplayModeManagerContainer306
         return 0;
     }
 
-    static final void decodedOperation743(int i, int i_2_) {
+    static final void method743(int i, int i_2_) {
         anInt4775++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_2_, (byte) 105, i);//9
-        class348_sub42_sub15.decodedOperation3251(i ^ ~0x3eb0);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_2_, (byte) 105, i);//9
+        class348_sub42_sub15.method3251(i ^ ~0x3eb0);
     }
 
     public final Component325 method32(int i) {

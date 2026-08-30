@@ -11,8 +11,8 @@ final class Component148
     static int[] anIntArray3464 = new int[6];
     static int anInt3465;
 
-    public static void decodedOperation2043(boolean bool) {
-        if (bool != true) decodedOperation2043(false);
+    public static void method2043(boolean bool) {
+        if (bool != true) method2043(false);
         anIntArray3464 = null;
     }
 }

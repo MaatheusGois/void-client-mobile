@@ -48,7 +48,7 @@ final class CollisionMap {
     /** Clears bits {@code i} from the clip flag at local ({@code i_1_},{@code i_2_}). */
     private final void clearCollisionFlag(int i, int i_0_, int i_1_, int i_2_) {
         this.collisionFlags[i_1_][i_2_] = GpsOverlay.bitwiseAnd((this.collisionFlags[i_1_][i_2_]), ~i);
-        if (i_0_ > -120) decodedOperation3509(-18, true, false, 122, 119, -54, 18, -57);
+        if (i_0_ > -120) method3509(-18, true, false, 122, 119, -54, 18, -57);
         anInt4452++;
     }
 
@@ -178,16 +178,16 @@ final class CollisionMap {
         return false;
     }
 
-    final void decodedOperation3496(int i, int i_16_, int i_17_) {
+    final void method3496(int i, int i_16_, int i_17_) {
         i -= this.offsetY;
-        if (i_17_ != 1) decodedOperation3510(113, 9, 32, -49, -123, false, false);
+        if (i_17_ != 1) method3510(113, 9, 32, -49, -123, false, false);
         anInt4444++;
         i_16_ -= this.offsetX;
         this.collisionFlags[i_16_][i] = Component224.bitwiseOr((this.collisionFlags[i_16_][i]), 262144);
     }
 
     final boolean method3497(int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
-        if (i != -28388) decodedOperation3504(-75, -117, 49, -113, 42, -115, 105, -59);
+        if (i != -28388) method3504(-75, -117, 49, -113, 42, -115, 105, -59);
         anInt4449++;
         int i_27_ = i_22_ - -i_20_;
         int i_28_ = i_23_ + i_24_;
@@ -217,12 +217,12 @@ final class CollisionMap {
         return false;
     }
 
-    static final void decodedOperation3498(int i, GraphicsToolkit var_ha, int i_39_, int i_40_, boolean bool, int i_41_) {
+    static final void method3498(int i, GraphicsToolkit var_ha, int i_39_, int i_40_, boolean bool, int i_41_) {
         do {
             try {
                 anInt4442++;
                 var_ha.KA(i_39_, i_41_, i_40_ + i_39_, i_41_ + i);
-                var_ha.decodedOperation3675(i_40_, (byte) -125, i_39_, i_41_, i, -16777216);
+                var_ha.method3675(i_40_, (byte) -125, i_39_, i_41_, i, -16777216);
                 if (Node.anInt4290 >= 100) {
                     float f = ((float) DisplayModeManagerContainer229.anInt1267 / (float) DisplayModeManagerContainer229.anInt1259);
                     int i_42_ = i_40_;
@@ -231,7 +231,7 @@ final class CollisionMap {
                     else i_43_ = (int) ((float) i_40_ * f);
                     i_41_ += (-i_43_ + i) / 2;
                     i_39_ += (i_40_ + -i_42_) / 2;
-                    if (VideoAdPlayer.aClass105_4643 == null || i_40_ != VideoAdPlayer.aClass105_4643.decodedOperation971() || (VideoAdPlayer.aClass105_4643.decodedOperation969() != i)) {
+                    if (VideoAdPlayer.aClass105_4643 == null || i_40_ != VideoAdPlayer.aClass105_4643.method971() || (VideoAdPlayer.aClass105_4643.method969() != i)) {
                         DisplayModeManagerContainer229.setWorldBounds(DisplayModeManagerContainer229.anInt1266, (DisplayModeManagerContainer229.anInt1267 + DisplayModeManagerContainer229.anInt1263), (DisplayModeManagerContainer229.anInt1266 - -DisplayModeManagerContainer229.anInt1259), DisplayModeManagerContainer229.anInt1263, i_39_, i_41_, i_42_ + i_39_, i_43_ + i_41_);
                         DisplayModeManagerContainer229.computeTransform(var_ha);
                         VideoAdPlayer.aClass105_4643 = var_ha.method3683(i_39_, i_41_, i_42_, i_43_, false);
@@ -240,7 +240,7 @@ final class CollisionMap {
                     int i_44_ = Component361.anInt370 * i_42_ / DisplayModeManagerContainer229.anInt1259;
                     int i_45_ = i_43_ * Component280.anInt2446 / DisplayModeManagerContainer229.anInt1267;
                     int i_46_ = i_39_ - -(i_42_ * Component63.anInt4509 / DisplayModeManagerContainer229.anInt1259);
-                    if (bool != true) decodedOperation3498(44, null, -27, -91, true, -26);
+                    if (bool != true) method3498(44, null, -27, -91, true, -26);
                     int i_47_ = (-i_45_ + i_41_ - (-i_43_ + (i_43_ * DisplayModeManagerContainer34.anInt8665 / DisplayModeManagerContainer229.anInt1267)));
                     int i_48_ = -1996554240;
                     if (WorldNameText.STELLARDAWN == PacketReader.currentGameType) i_48_ = -1996488705;
@@ -251,16 +251,16 @@ final class CollisionMap {
                     if (LoadingManager.anInt2173 <= 50) i_49_ = LoadingManager.anInt2173 * 5;
                     else i_49_ = -(5 * LoadingManager.anInt2173) + 500;
                     for (NodeSub21 class348_sub21 = ((NodeSub21) DisplayModeManagerContainer229.aClass262_1254.first(4)); class348_sub21 != null; class348_sub21 = (NodeSub21) DisplayModeManagerContainer229.aClass262_1254.next((byte) 126)) {
-                        Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.decodedOperation1225(class348_sub21.anInt6847, (byte) 71));
-                        if (NodeCache.decodedOperation589(class42, -4)) {
+                        Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 71));
+                        if (NodeCache.method589(class42, -4)) {
                             if (DefinitionSub30.anInt9399 == (class348_sub21.anInt6847)) {
                                 int i_50_ = (i_39_ + (i_42_ * (class348_sub21.anInt6852) / DisplayModeManagerContainer229.anInt1259));
                                 int i_51_ = (((DisplayModeManagerContainer229.anInt1267 - (class348_sub21.anInt6851)) * i_43_ / DisplayModeManagerContainer229.anInt1267) + i_41_);
-                                var_ha.decodedOperation3675(4, (byte) -125, i_50_ - 2, -2 + i_51_, 4, (i_49_ << 24 | 0xffff00));
+                                var_ha.method3675(4, (byte) -125, i_50_ - 2, -2 + i_51_, 4, (i_49_ << 24 | 0xffff00));
                             } else if (Component225.anInt481 != -1 && (class42.anInt596 == Component225.anInt481)) {
                                 int i_52_ = (i_39_ - -((class348_sub21.anInt6852) * i_42_ / DisplayModeManagerContainer229.anInt1259));
                                 int i_53_ = i_41_ - -(i_43_ * (DisplayModeManagerContainer229.anInt1267 + -(class348_sub21.anInt6851)) / DisplayModeManagerContainer229.anInt1267);
-                                var_ha.decodedOperation3675(4, (byte) -125, i_52_ + -2, -2 + i_53_, 4, (i_49_ << 24 | 0xffff00));
+                                var_ha.method3675(4, (byte) -125, i_52_ + -2, -2 + i_53_, 4, (i_49_ << 24 | 0xffff00));
                             }
                         }
                     }
@@ -272,16 +272,16 @@ final class CollisionMap {
         } while (false);
     }
 
-    final void decodedOperation3499(byte i, int i_54_, int i_55_) {
+    final void method3499(byte i, int i_54_, int i_55_) {
         i_55_ -= this.offsetY;
         i_54_ -= this.offsetX;
         anInt4446++;
         if (i == -52) this.collisionFlags[i_54_][i_55_] = GpsOverlay.bitwiseAnd((this.collisionFlags[i_54_][i_55_]), -262145);
     }
 
-    final void decodedOperation3500(int i) {
+    final void method3500(int i) {
         int i_56_ = 0;
-        if (i != 700) decodedOperation3509(120, true, false, 4, -12, 14, -33, -109);
+        if (i != 700) method3509(120, true, false, 4, -12, 14, -33, -109);
         for (/**/; i_56_ < this.width; i_56_++) {
             for (int i_57_ = 0; this.length > i_57_; i_57_++) {
                 if (i_56_ != 0 && i_57_ != 0 && i_56_ < this.width + -5 && (i_57_ < -5 + this.length)) this.collisionFlags[i_56_][i_57_] = 2097152;
@@ -291,7 +291,7 @@ final class CollisionMap {
         anInt4451++;
     }
 
-    final void decodedOperation3501(byte i, int i_58_, int i_59_) {
+    final void method3501(byte i, int i_58_, int i_59_) {
         i_59_ -= this.offsetX;
         anInt4447++;
         i_58_ -= this.offsetY;
@@ -299,17 +299,17 @@ final class CollisionMap {
         this.collisionFlags[i_59_][i_58_] = GpsOverlay.bitwiseAnd((this.collisionFlags[i_59_][i_58_]), -2097153);
     }
 
-    static final void decodedOperation3502(int i, int i_61_, int i_62_, int i_63_) {
+    static final void method3502(int i, int i_61_, int i_62_, int i_63_) {
         anInt4439++;
         String string = ("tele " + i_62_ + "," + (i_63_ >> 6) + "," + (i >> 6) + "," + (0x3f & i_63_) + "," + (0x3f & i));
-        if (i_61_ != 2) decodedOperation3502(-25, -23, 24, 63);
+        if (i_61_ != 2) method3502(-25, -23, 24, 63);
         CommandHandler.handleCommand(string, true, false, (byte) -79);
     }
 
-    final boolean decodedOperation3503(int i, byte i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_) {
+    final boolean method3503(int i, byte i_64_, int i_65_, int i_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_) {
         anInt4436++;
         if (i_66_ > 1) {
-            if (Component188.decodedOperation1842(i_68_, i_65_, -1, i_66_, i, i_70_, i_71_, i_66_, i_67_)) return true;
+            if (Component188.method1842(i_68_, i_65_, -1, i_66_, i, i_70_, i_71_, i_66_, i_67_)) return true;
             return method3497(-28388, i_71_, i_69_, i_66_, i_67_, i, i_66_, i_70_, i_65_, i_68_);
         }
         int i_72_ = 64 % ((2 - i_64_) / 45);
@@ -322,7 +322,7 @@ final class CollisionMap {
         return i_70_ == i_74_ - -1 && i_71_ <= i && i_73_ >= i && (0x20 & (this.collisionFlags[-this.offsetX + i][i_70_ - this.offsetY])) == 0 && (0x1 & i_69_) == 0;
     }
 
-    final boolean decodedOperation3504(int i, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
+    final boolean method3504(int i, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
         anInt4454++;
         if (i_79_ != 1) this.length = -59;
         if (i_81_ != 1) {
@@ -595,7 +595,7 @@ final class CollisionMap {
         }
     }
 
-    final void decodedOperation3507(int i, int i_97_, byte i_98_) {
+    final void method3507(int i, int i_97_, byte i_98_) {
         if (i_98_ > -32) this.width = 85;
         i -= this.offsetY;
         anInt4431++;
@@ -603,12 +603,12 @@ final class CollisionMap {
         this.collisionFlags[i_97_][i] = Component224.bitwiseOr((this.collisionFlags[i_97_][i]), 2097152);
     }
 
-    public static void decodedOperation3508(int i) {
+    public static void method3508(int i) {
         aClass114_4433 = null;
         if (i != 2) aFloat4455 = 0.7198636F;
     }
 
-    final void decodedOperation3509(int i, boolean bool, boolean bool_99_, int i_100_, int i_101_, int i_102_, int i_103_, int i_104_) {
+    final void method3509(int i, boolean bool, boolean bool_99_, int i_100_, int i_101_, int i_102_, int i_103_, int i_104_) {
         anInt4432++;
         if (i_103_ > 52) {
             int i_105_ = 256;
@@ -631,7 +631,7 @@ final class CollisionMap {
         }
     }
 
-    final void decodedOperation3510(int i, int i_109_, int i_110_, int i_111_, int i_112_, boolean bool, boolean bool_113_) {
+    final void method3510(int i, int i_109_, int i_110_, int i_111_, int i_112_, boolean bool, boolean bool_113_) {
         anInt4445++;
         int i_114_ = 49 / ((i_110_ - 6) / 46);
         i -= this.offsetY;

@@ -14,7 +14,7 @@ final class RenderableSub3
     int anInt6405;
     int anInt6406;
 
-    final boolean decodedOperation2500(int i, int i_0_) {
+    final boolean method2500(int i, int i_0_) {
         if (!this.aBoolean6401) return false;
         int i_1_ = (this.anInt6406 - this.anInt6405);
         int i_2_ = (this.anInt6404 - this.anInt6402);

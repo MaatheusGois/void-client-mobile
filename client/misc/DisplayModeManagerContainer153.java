@@ -13,12 +13,12 @@ final class DisplayModeManagerContainer153
     static int anInt1575;
     static int anInt1576;
 
-    static final void decodedOperation880(int i, byte[] is, byte[] is_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
+    static final void method880(int i, byte[] is, byte[] is_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         try {
             anInt1575++;
             int i_7_ = -(i >> 2);
             i = -(i & 0x3);
-            if (i_2_ != 13880) decodedOperation880(9, null, null, -128, 85, -75, 62, 85, -51);
+            if (i_2_ != 13880) method880(9, null, null, -128, 85, -75, 62, 85, -51);
             for (int i_8_ = -i_3_; i_8_ < 0; i_8_++) {
                 for (int i_9_ = i_7_; i_9_ < 0; i_9_++) {
                     is[i_4_++] += is_0_[i_1_++];
@@ -36,12 +36,12 @@ final class DisplayModeManagerContainer153
         }
     }
 
-    static final void decodedOperation881(HashNodeSub13 class348_sub42_sub13, int i, boolean bool, int i_11_) {
+    static final void method881(HashNodeSub13 class348_sub42_sub13, int i, boolean bool, int i_11_) {
         anInt1576++;
         if (Component364.aBoolean8335) {
             int i_12_ = 0;
             for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.first(-59)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class348_sub42_sub13.aClass107_9621.next((byte) 108))) {
-                int i_13_ = OutputStream_Sub2.decodedOperation138(class348_sub42_sub12, false);
+                int i_13_ = OutputStream_Sub2.method138(class348_sub42_sub12, false);
                 if (i_13_ > i_12_) i_12_ = i_13_;
             }
             i_12_ += 8;
@@ -63,15 +63,15 @@ final class DisplayModeManagerContainer153
         }
     }
 
-    static final void decodedOperation882(byte i) {
-        if (i != 11) decodedOperation882((byte) -62);
+    static final void method882(byte i) {
+        if (i != 11) method882((byte) -62);
         DefinitionSub33.openInterfaces = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
         anInt1573++;
         Component14.aClass46ArrayArray8584 = new DisplayModeManagerContainer57[Component267.aClass45_2978.getGroupCapacity(-1)][];
         ImageTagText.aBooleanArray2162 = new boolean[Component267.aClass45_2978.getGroupCapacity(-1)];
     }
 
-    public static void decodedOperation883(byte i) {
+    public static void method883(byte i) {
         aBooleanArrayArray1572 = null;
         anIntArray1574 = null;
         int i_18_ = -74 / ((i - 17) / 46);

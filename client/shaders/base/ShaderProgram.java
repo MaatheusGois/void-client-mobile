@@ -17,7 +17,7 @@ abstract class ShaderProgram {
 
     abstract void method2134(boolean bool, boolean bool_0_);
 
-    public static void decodedOperation2135(int i) {
+    public static void method2135(int i) {
         if (i == 0) aClass348_Sub2_3683 = null;
     }
 
@@ -25,7 +25,7 @@ abstract class ShaderProgram {
 
     abstract boolean method2137(int i);
 
-    static final boolean decodedOperation2138(int i) {
+    static final boolean method2138(int i) {
         anInt3681++;
         NodeSub48 class348_sub48 = (NodeSub48) NodeSub35.aClass262_6978.first(4);
         if (class348_sub48 == null) return false;

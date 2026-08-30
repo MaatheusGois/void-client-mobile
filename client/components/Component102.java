@@ -17,10 +17,10 @@ final class Component102
     private final CacheStore aClass45_4804;
     static int anInt4805;
 
-    static final int decodedOperation2201(int i) {
+    static final int method2201(int i) {
         anInt4805++;
         synchronized (DisplayModeManagerContainer310.aClass60_355) {
-            if (i != 2121) decodedOperation2202(-113);
+            if (i != 2121) method2202(-113);
             return DisplayModeManagerContainer310.aClass60_355.countHard(0);
         }
     }
@@ -32,7 +32,7 @@ final class Component102
         return aClass45_4804.getAverageLoadPercent((byte) -31);
     }
 
-    public static void decodedOperation2202(int i) {
+    public static void method2202(int i) {
         aClass114_4798 = null;
         if (i != -17902) anInt4803 = 78;
     }
@@ -43,7 +43,7 @@ final class Component102
         return Component325.aClass69_1195;
     }
 
-    static final boolean decodedOperation2203(byte i) {
+    static final boolean method2203(byte i) {
         int i_1_ = 11 % ((12 - i) / 53);
         anInt4802++;
         try {
@@ -52,7 +52,7 @@ final class Component102
             SocketConnector.forceLogout(106);
             return true;
         } catch (Exception exception) {
-            String string = ("T2 - " + (NodeSub3.aClass114_6584 != null ? NodeSub3.aClass114_6584.decodedOperation1058((byte) 119) : -1) + "," + (Component339.aClass114_3145 != null ? Component339.aClass114_3145.decodedOperation1058((byte) 119) : -1) + "," + (DefinitionSub36.aClass114_9456 == null ? -1 : DefinitionSub36.aClass114_9456.decodedOperation1058((byte) 113)) + " - " + DefinitionSub25.anInt9341 + "," + ((Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX) + "," + (Component330.regionTileY - -(Component72.localPlayer.anIntArray10317[0])) + " - ");
+            String string = ("T2 - " + (NodeSub3.aClass114_6584 != null ? NodeSub3.aClass114_6584.method1058((byte) 119) : -1) + "," + (Component339.aClass114_3145 != null ? Component339.aClass114_3145.method1058((byte) 119) : -1) + "," + (DefinitionSub36.aClass114_9456 == null ? -1 : DefinitionSub36.aClass114_9456.method1058((byte) 113)) + " - " + DefinitionSub25.anInt9341 + "," + ((Component72.localPlayer.anIntArray10320[0]) + NodeBaseSub2.regionTileX) + "," + (Component330.regionTileY - -(Component72.localPlayer.anIntArray10317[0])) + " - ");
             for (int i_2_ = 0; DefinitionSub25.anInt9341 > i_2_ && i_2_ < 50; i_2_++)
                 string += (Component80.packetBuffer.payload[i_2_]) + ",";
             ClientErrorReporter.reportError(string, exception, 15004);

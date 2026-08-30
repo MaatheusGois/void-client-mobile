@@ -24,11 +24,11 @@ final class RenderableSub10
     private boolean aBoolean6484;
     private int anInt6485;
 
-    final Component122 decodedOperation2525() {
+    final Component122 method2525() {
         return this.aClass98_6481;
     }
 
-    static final RenderableSub10 decodedOperation2526(int i, boolean bool) {
+    static final RenderableSub10 method2526(int i, boolean bool) {
         if (GlTexture.anInt8550 != Component239.anInt4559) {
             RenderableSub10 class318_sub10 = NodeSub51.aClass318_Sub10Array7249[Component239.anInt4559];
             Component239.anInt4559 = Component239.anInt4559 + 1 & (ReferenceHolder.anIntArray9558[NodederUtil.anInt6637]);
@@ -38,18 +38,18 @@ final class RenderableSub10
         return new RenderableSub10(i, bool);
     }
 
-    public static void decodedOperation2527() {
+    public static void method2527() {
         aBooleanArray6474 = null;
         aBooleanArray6477 = null;
     }
 
-    final void decodedOperation2528(GraphicsToolkit var_ha) {
-        this.aClass98_6481.aClass88_1569.decodedOperation845((byte) 89);
-        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1878((byte) 126))
-            class318_sub7.decodedOperation2511(true, var_ha, aLong6471);
+    final void method2528(GraphicsToolkit var_ha) {
+        this.aClass98_6481.aClass88_1569.method845((byte) 89);
+        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.method1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.method1878((byte) 126))
+            class318_sub7.method2511(true, var_ha, aLong6471);
     }
 
-    final void decodedOperation2529() {
+    final void method2529() {
         aBoolean6484 = true;
     }
 
@@ -75,7 +75,7 @@ final class RenderableSub10
     }
 
     private final void method2531(int i, boolean bool) {
-        InflaterDecompressor.aClass243_2077.decodedOperation1869(-88, this);
+        InflaterDecompressor.aClass243_2077.method1869(-88, this);
         aLong6472 = i;
         aLong6471 = i;
         aBoolean6484 = true;
@@ -86,7 +86,7 @@ final class RenderableSub10
         for (int i = 0; i < 32; i++)
             aBooleanArray6474[i] = false;
         while_110_:
-        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1878((byte) -28)) {
+        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.method1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.method1878((byte) -28)) {
             if (class129s != null) {
                 for (int i = 0; i < class129s.length; i++) {
                     if ((class318_sub7.aClass129_6436 == class129s[i]) || (class318_sub7.aClass129_6436 == class129s[i].aClass129_1888)) {
@@ -109,7 +109,7 @@ final class RenderableSub10
                 if (i == 32 || anInt6480 == 32) break;
                 if (!aBooleanArray6474[i]) {
                     StaticElementRenderer class318_sub7 = new StaticElementRenderer(var_ha, class129s[i], this, aLong6472);
-                    aClass243_6478.decodedOperation1869(-126, class318_sub7);
+                    aClass243_6478.method1869(-126, class318_sub7);
                     anInt6480++;
                     aBooleanArray6474[i] = true;
                 }
@@ -117,16 +117,16 @@ final class RenderableSub10
         }
     }
 
-    final void decodedOperation2533(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    final void method2533(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         this.anInt6483 = i;
     }
 
-    final void decodedOperation2534() {
+    final void method2534() {
         aBoolean6473 = true;
     }
 
-    final boolean decodedOperation2535(GraphicsToolkit var_ha, long l) {
-        if (aLong6472 != aLong6471) decodedOperation2534();
+    final boolean method2535(GraphicsToolkit var_ha, long l) {
+        if (aLong6472 != aLong6471) method2534();
         else method2537();
         if (l - aLong6472 > 750L) {
             method2530();
@@ -134,19 +134,19 @@ final class RenderableSub10
         }
         int i = (int) (l - aLong6471);
         if (aBoolean6484) {
-            for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1878((byte) 122)) {
+            for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.method1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.method1878((byte) 122)) {
                 for (int i_4_ = 0; i_4_ < class318_sub7.aClass181_6441.anInt2422; i_4_++)
-                    class318_sub7.decodedOperation2513(var_ha, 1, l, 3, !aBoolean6473);
+                    class318_sub7.method2513(var_ha, 1, l, 3, !aBoolean6473);
             }
             aBoolean6484 = false;
         }
-        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.decodedOperation1878((byte) -72))
-            class318_sub7.decodedOperation2513(var_ha, i, l, 3, !aBoolean6473);
+        for (StaticElementRenderer class318_sub7 = (StaticElementRenderer) aClass243_6478.method1872(8); class318_sub7 != null; class318_sub7 = (StaticElementRenderer) aClass243_6478.method1878((byte) -72))
+            class318_sub7.method2513(var_ha, i, l, 3, !aBoolean6473);
         aLong6471 = l;
         return true;
     }
 
-    final void decodedOperation2536(GraphicsToolkit var_ha, long l, Component30[] class129s, DisplayModeManagerContainer173[] class342s, boolean bool) {
+    final void method2536(GraphicsToolkit var_ha, long l, Component30[] class129s, DisplayModeManagerContainer173[] class342s, boolean bool) {
         if (!this.aBoolean6470) {
             method2532(var_ha, class129s, bool);
             method2538(class342s, bool);
@@ -186,9 +186,9 @@ final class RenderableSub10
                 if (i == 8 || anInt6485 == 8) break;
                 if (!aBooleanArray6477[i]) {
                     HashNodeSub20 class348_sub42_sub20 = null;
-                    if ((class342s[i].decodedOperation2685((byte) -13).anInt2296) == 1 && StaticElementRenderer.anInt6450 < 32) {
+                    if ((class342s[i].method2685((byte) -13).anInt2296) == 1 && StaticElementRenderer.anInt6450 < 32) {
                         class348_sub42_sub20 = new HashNodeSub20(class342s[i], this);
-                        OpenGlShader.aClass32_7415.decodedOperation335(class348_sub42_sub20, -8098, class342s[i].anInt4245);
+                        OpenGlShader.aClass32_7415.method335(class348_sub42_sub20, -8098, class342s[i].anInt4245);
                         StaticElementRenderer.anInt6450++;
                     }
                     if (class348_sub42_sub20 == null) class348_sub42_sub20 = new HashNodeSub20(class342s[i], this);
@@ -200,15 +200,15 @@ final class RenderableSub10
         }
     }
 
-    final Component122 decodedOperation2539() {
-        this.aClass98_6481.aClass88_1569.decodedOperation845((byte) 43);
+    final Component122 method2539() {
+        this.aClass98_6481.aClass88_1569.method845((byte) 43);
         for (int i = 0; i < (this.aClass318_Sub9_Sub2_Sub1Array6475).length; i++) {
-            if ((this.aClass318_Sub9_Sub2_Sub1Array6475[i] != null) && this.aClass318_Sub9_Sub2_Sub1Array6475[i].aClass318_Sub7_10419 != null) this.aClass98_6481.aClass88_1569.decodedOperation844((this.aClass318_Sub9_Sub2_Sub1Array6475[i]), true);
+            if ((this.aClass318_Sub9_Sub2_Sub1Array6475[i] != null) && this.aClass318_Sub9_Sub2_Sub1Array6475[i].aClass318_Sub7_10419 != null) this.aClass98_6481.aClass88_1569.method844((this.aClass318_Sub9_Sub2_Sub1Array6475[i]), true);
         }
         return this.aClass98_6481;
     }
 
-    final void decodedOperation2540(long l) {
+    final void method2540(long l) {
         aLong6472 = l;
     }
 

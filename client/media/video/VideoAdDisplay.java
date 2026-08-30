@@ -14,13 +14,13 @@ final class VideoAdDisplay {
     static CacheStore aClass45_3183;
     static int anInt3184;
 
-    public static void decodedOperation1889(int i) {
-        if (i != 255) decodedOperation1889(-18);
+    public static void method1889(int i) {
+        if (i != 255) method1889(-18);
         aClass21_3181 = null;
         aClass45_3183 = null;
     }
 
-    static final int decodedOperation1890(int i, byte i_0_, int i_1_, int i_2_) {
+    static final int method1890(int i, byte i_0_, int i_1_, int i_2_) {
         anInt3180++;
         int i_3_ = 88 % (-i_0_ / 55);
         if (i > 243) i_1_ >>= 4;
@@ -31,8 +31,8 @@ final class VideoAdDisplay {
         return ((i >> 1) + (i_1_ >> 5 << 7) + ((0xff & i_2_) >> 2 << 10));
     }
 
-    static final boolean decodedOperation1891(int i) {
-        if (i != 314376967) decodedOperation1890(-22, (byte) -36, 19, 113);
+    static final boolean method1891(int i) {
+        if (i != 314376967) method1890(-22, (byte) -36, 19, 113);
         anInt3184++;
         if (Component156.aBoolean3697) {
             try {

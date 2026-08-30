@@ -51,7 +51,7 @@ final class CustomCursorSetting extends Component339 {
 
     /** {@code 0}=custom cursors off, {@code 1}=on. */
     final int getValue(int i) {
-        if (i != -32350) decodedOperation1816(84);
+        if (i != -32350) method1816(84);
         anInt6071++;
         return this.preferenceValue;
     }
@@ -60,7 +60,7 @@ final class CustomCursorSetting extends Component339 {
         super(class348_sub51);
     }
 
-    public static void decodedOperation1816(int i) {
+    public static void method1816(int i) {
         aClass114_6075 = null;
         if (i != 1) aClass114_6075 = null;
     }

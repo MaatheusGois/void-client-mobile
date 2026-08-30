@@ -25,7 +25,7 @@ final class DefinitionSub38
         super(1, false);
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         if (i_0_ != 31015) anInt9470 = -15;
         int i_1_ = i;
         while_213_:
@@ -47,11 +47,11 @@ final class DefinitionSub38
     }
 
     final int[][] getColourOutput(int i, int i_2_) {
-        if (i_2_ != -1564599039) decodedOperation3150(true);
+        if (i_2_ != -1564599039) method3150(true);
         anInt9468++;
         int[][] is = this.imageCacheStore.getPixels(-117, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_3_ = this.decodedOperation3039((byte) -88, i, 0);
+            int[][] is_3_ = this.method3039((byte) -88, i, 0);
             int[] is_4_ = is_3_[0];
             int[] is_5_ = is_3_[1];
             int[] is_6_ = is_3_[2];
@@ -74,25 +74,25 @@ final class DefinitionSub38
         return is;
     }
 
-    public static void decodedOperation3149(int i) {
+    public static void method3149(int i) {
         aClass74_9475 = null;
         anIntArray9480 = null;
         aClass304_9471 = null;
         aClass251_9477 = null;
         aClass262_9478 = null;
-        if (i < 32) decodedOperation3149(58);
+        if (i < 32) method3149(58);
     }
 
-    static final void decodedOperation3150(boolean bool) {
+    static final void method3150(boolean bool) {
         anInt9469++;
         int i = 0;
-        if (bool != true) decodedOperation3150(false);
+        if (bool != true) method3150(false);
         for (/**/; Component324.anInt2057 > i; i++) {
             int i_14_ = DisplayModeManagerContainer238.anIntArray1233[i];
             NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_14_, -6008));
             if (class348_sub22 != null) {
                 Npc npc = (class348_sub22.npc);
-                ImageCacheStore.decodedOperation2556(false, npc.definition.anInt1399, npc);
+                ImageCacheStore.method2556(false, npc.definition.anInt1399, npc);
             }
         }
     }
@@ -101,7 +101,7 @@ final class DefinitionSub38
         anInt9476++;
         int[] is = this.imageCache.getPixels(0, i);
         if (this.imageCache.cacheMiss) {
-            int[] is_16_ = this.decodedOperation3048(i, 633706337, 0);
+            int[] is_16_ = this.method3048(i, 633706337, 0);
             for (int i_17_ = 0; i_17_ < DefinitionSub6.anInt9139; i_17_++) {
                 int i_18_ = is_16_[i_17_];
                 if (anInt9474 > i_18_) is[i_17_] = anInt9474;

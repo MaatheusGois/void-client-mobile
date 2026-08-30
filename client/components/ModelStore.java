@@ -32,23 +32,23 @@ final class ModelStore
     public final int[] getIndices(int i, int i_0_, float f, int i_1_, boolean bool, int i_2_) {
         if (i != -21540) getModel(-46, 6);
         anInt4617++;
-        return method1881(i_1_, false).decodedOperation3183(this, i_2_, i_0_, (aClass12Array4611[i_1_].aBoolean207), f, aClass45_4624, (byte) 11);
+        return method1881(i_1_, false).method3183(this, i_2_, i_0_, (aClass12Array4611[i_1_].aBoolean207), f, aClass45_4624, (byte) 11);
     }
 
-    public static void decodedOperation1880(int i) {
+    public static void method1880(int i) {
         if (i >= -103) anInt4610 = -87;
         anIntArray4623 = null;
     }
 
     private final DefinitionGroup method1881(int i, boolean bool) {
         anInt4620++;
-        HashNode class348_sub42 = aClass308_4622.decodedOperation2302(i, (byte) -34);
+        HashNode class348_sub42 = aClass308_4622.method2302(i, (byte) -34);
         if (class348_sub42 != null) return (DefinitionGroup) class348_sub42;
         byte[] is = aClass45_4619.getSingletonFile((byte) 73, i);
         if (is == null) return null;
         if (bool != false) getVertices(-58, 1.9039171F, false, -106, -22, -18);
         DefinitionGroup class348_sub42_sub5 = new DefinitionGroup(new Buffer(is));
-        aClass308_4622.decodedOperation2305(i, class348_sub42_sub5, -1);
+        aClass308_4622.method2305(i, class348_sub42_sub5, -1);
         return class348_sub42_sub5;
     }
 
@@ -61,20 +61,20 @@ final class ModelStore
     public final int[] getTriangles(boolean bool, int i, float f, int i_4_, int i_5_, int i_6_) {
         int i_7_ = 41 / ((i_6_ - -69) / 48);
         anInt4614++;
-        return method1881(i, false).decodedOperation3185(i_4_, this, 0, aClass12Array4611[i].aBoolean207, f, bool, aClass45_4624, i_5_);
+        return method1881(i, false).method3185(i_4_, this, 0, aClass12Array4611[i].aBoolean207, f, bool, aClass45_4624, i_5_);
     }
 
     public final boolean isModelLoaded(int i, int i_8_) {
         anInt4616++;
         DefinitionGroup class348_sub42_sub5 = method1881(i_8_, false);
         if (i != -7953) isModelLoaded(56, -109);
-        return class348_sub42_sub5 != null && class348_sub42_sub5.decodedOperation3184(this, aClass45_4624, -85);
+        return class348_sub42_sub5 != null && class348_sub42_sub5.method3184(this, aClass45_4624, -85);
     }
 
     public final float[] getVertices(int i, float f, boolean bool, int i_9_, int i_10_, int i_11_) {
         if (i_9_ != -30824) return null;
         anInt4612++;
-        return method1881(i_11_, false).decodedOperation3186(i, this, (aClass12Array4611[i_11_].aBoolean207), i_10_, aClass45_4624, -20);
+        return method1881(i_11_, false).method3186(i, this, (aClass12Array4611[i_11_].aBoolean207), i_10_, aClass45_4624, -20);
     }
 
     public final int getModelCount(boolean bool) {

@@ -17,13 +17,13 @@ final class Component214
     static int anInt2136;
     static float aFloat2137;
 
-    public static void decodedOperation1254(byte i) {
+    public static void method1254(byte i) {
         aBooleanArrayArray2133 = null;
         aFloatArray2131 = null;
         if (i <= 11) aBooleanArrayArray2133 = null;
     }
 
-    final void decodedOperation1255(Buffer class348_sub49, int i) {
+    final void method1255(Buffer class348_sub49, int i) {
         for (; ; ) {
             int i_0_ = class348_sub49.readUnsignedByte(255);
             if (i_0_ == 0) break;
@@ -37,11 +37,11 @@ final class Component214
         anInt2136++;
         if (i_1_ != 1) {
             if (i_1_ == 2) this.anInt2135 = 0;
-        } else this.aChar2132 = Cp1252Decoder.decodedOperation462(class348_sub49.readByte(-119), -128);
-        if (i >= -73) decodedOperation1255(null, -43);
+        } else this.aChar2132 = Cp1252Decoder.method462(class348_sub49.readByte(-119), -128);
+        if (i >= -73) method1255(null, -43);
     }
 
-    static final boolean decodedOperation1257(int i, int i_2_, int i_3_) {
+    static final boolean method1257(int i, int i_2_, int i_3_) {
         if (i > -23) aBooleanArrayArray2133 = null;
         anInt2134++;
         return (0x20 & i_3_) != 0;

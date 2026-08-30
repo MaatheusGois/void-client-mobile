@@ -20,7 +20,7 @@ final class DisplayModeManagerContainer196
     static DisplayModeManagerContainer77[] aClass124Array4236 = new DisplayModeManagerContainer77[4];
     static int anInt4237;
 
-    static final void decodedOperation2676(int i, int i_0_, int i_1_, byte i_2_, int i_3_) {
+    static final void method2676(int i, int i_0_, int i_1_, byte i_2_, int i_3_) {
         anInt4231++;
         float f = (float) DisplayModeManagerContainer229.anInt1267 / (float) DisplayModeManagerContainer229.anInt1259;
         int i_4_ = i;
@@ -34,7 +34,7 @@ final class DisplayModeManagerContainer196
         NodeSub36.anInt6992 = DisplayModeManagerContainer229.anInt1259 * i_1_ / i_4_;
         ModelStore.anInt4609 = -1;
         int i_6_ = 50 / ((-12 - i_2_) / 40);
-        ColorTagNode.decodedOperation2811(false);
+        ColorTagNode.method2811(false);
     }
 
     public final String toString() {
@@ -42,7 +42,7 @@ final class DisplayModeManagerContainer196
         throw new IllegalStateException();
     }
 
-    public static void decodedOperation2677(int i) {
+    public static void method2677(int i) {
         anIntArrayArray4233 = null;
         aClass348_Sub24_4226 = null;
         if (i >= 93) {
@@ -55,7 +55,7 @@ final class DisplayModeManagerContainer196
         /* empty */
     }
 
-    static final void decodedOperation2678(int i) {
+    static final void method2678(int i) {
         if (i != -2049) anIntArrayArray4233 = null;
         anInt4229++;
         if (r.aBoolean9722) {
@@ -89,27 +89,27 @@ final class DisplayModeManagerContainer196
         anInt4237++;
         for (int i = string_11_.indexOf(string_10_); i != -1; i = string_11_.indexOf(string_10_, string.length() + i))
             string_11_ = (string_11_.substring(0, i) + string + string_11_.substring(string_10_.length() + i));
-        if (bool != true) decodedOperation2678(45);
+        if (bool != true) method2678(45);
         return string_11_;
     }
 
-    static final void decodedOperation2681(int i) {
+    static final void method2681(int i) {
         if (i == 9864) {
             anInt4230++;
             if (NodeSub8.toolkit != null) {
-                if (Component210.gameCanvasAttached) Component38.decodedOperation1406(true);
-                DisplayModeManagerContainer5.aClass76_1208.decodedOperation775((byte) 69);
-                DisplayModeManagerContainer58.decodedOperation2433();
-                Component308.decodedOperation464(i + -9865);
+                if (Component210.gameCanvasAttached) Component38.method1406(true);
+                DisplayModeManagerContainer5.aClass76_1208.method775((byte) 69);
+                DisplayModeManagerContainer58.method2433();
+                Component308.method464(i + -9865);
                 FriendsIgnoreList.clearHudSprites(-127);
-                Component126.decodedOperation3513(-113);
-                Component329.decodedOperation1779((byte) 124);
-                if (Component293.aClass305_3304 != null) Component293.aClass305_3304.decodedOperation2295((byte) 96);
-                DisplayModeManagerContainer356.decodedOperation2269(true);
-                NodeSub18.decodedOperation2938((byte) 127);
-                DisplayModeManagerContainer172.decodedOperation369(-29776);
-                Component239.decodedOperation3616(12639);
-                HashNodeSub3.decodedOperation3177(-78, false);
+                Component126.method3513(-113);
+                Component329.method1779((byte) 124);
+                if (Component293.aClass305_3304 != null) Component293.aClass305_3304.method2295((byte) 96);
+                DisplayModeManagerContainer356.method2269(true);
+                NodeSub18.method2938((byte) 127);
+                DisplayModeManagerContainer172.method369(-29776);
+                Component239.method3616(12639);
+                HashNodeSub3.method3177(-78, false);
                 for (int i_12_ = 0; i_12_ < 2048; i_12_++) {
                     Player player = (InterfaceRenderer.players[i_12_]);
                     if (player != null) {

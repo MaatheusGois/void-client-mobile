@@ -20,21 +20,21 @@ abstract class DisplayModeManagerContainer28
     final boolean method2382(byte i) {
         if (i > -51) aClass351_8724 = null;
         anInt8723++;
-        return ShaderSub2.decodedOperation164(this.aByte6376, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
+        return ShaderSub2.method164(this.aByte6376, (this.x >> Component149.anInt4459), (byte) -97, (this.y >> Component149.anInt4459));
     }
 
     final int method2384(NodeSub1[] class348_sub1s, int i) {
         anInt8722++;
         int i_0_ = 88 % ((i - -14) / 61);
-        return this.decodedOperation2390(class348_sub1s, (this.x >> Component149.anInt4459), -2, (this.y >> Component149.anInt4459));
+        return this.method2390(class348_sub1s, (this.x >> Component149.anInt4459), -2, (this.y >> Component149.anInt4459));
     }
 
-    public static void decodedOperation2395(byte i) {
+    public static void method2395(byte i) {
         aClass351_8724 = null;
-        if (i != 50) decodedOperation2395((byte) 65);
+        if (i != 50) method2395((byte) 65);
     }
 
-    static final void decodedOperation2396(int i, int i_1_, int i_2_, int i_3_) {
+    static final void method2396(int i, int i_1_, int i_2_, int i_3_) {
         i <<= i_3_;
         anInt8726++;
         i_1_ <<= 3;

@@ -31,30 +31,30 @@ final class LogicError {
         int i_0_ = 0;
         int i_1_ = i;
         for (/**/; i_0_ < 8; i_0_++) {
-            aLongArray1473[i_0_] = (SpriteSub2.decodedOperation993((SpriteSub2.decodedOperation993((NodeSub8.decodedOperation2777(255L, aByteArray1475[i_1_ + 6]) << 8), (SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777(((long) (aByteArray1475[i_1_ - -5]) << 16), 255L << 16), (SpriteSub2.decodedOperation993((SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777(255L << 32, ((long) (aByteArray1475[i_1_ + 3]) << 32)), (SpriteSub2.decodedOperation993(SpriteSub2.decodedOperation993((NodeSub8.decodedOperation2777(255L << 48, ((long) (aByteArray1475[1 + i_1_]) << 48))), ((long) (aByteArray1475[i_1_]) << 56)), NodeSub8.decodedOperation2777(((long) (aByteArray1475[i_1_ + 2]) << 40), 255L << 40))))), NodeSub8.decodedOperation2777(aByteArray1475[4 + i_1_], 255L) << 24)))))), NodeSub8.decodedOperation2777(255L, aByteArray1475[i_1_ - -7])));
+            aLongArray1473[i_0_] = (SpriteSub2.method993((SpriteSub2.method993((NodeSub8.method2777(255L, aByteArray1475[i_1_ + 6]) << 8), (SpriteSub2.method993(NodeSub8.method2777(((long) (aByteArray1475[i_1_ - -5]) << 16), 255L << 16), (SpriteSub2.method993((SpriteSub2.method993(NodeSub8.method2777(255L << 32, ((long) (aByteArray1475[i_1_ + 3]) << 32)), (SpriteSub2.method993(SpriteSub2.method993((NodeSub8.method2777(255L << 48, ((long) (aByteArray1475[1 + i_1_]) << 48))), ((long) (aByteArray1475[i_1_]) << 56)), NodeSub8.method2777(((long) (aByteArray1475[i_1_ + 2]) << 40), 255L << 40))))), NodeSub8.method2777(aByteArray1475[4 + i_1_], 255L) << 24)))))), NodeSub8.method2777(255L, aByteArray1475[i_1_ - -7])));
             i_1_ += 8;
         }
         for (int i_2_ = 0; i_2_ < 8; i_2_++)
-            aLongArray1469[i_2_] = SpriteSub2.decodedOperation993(aLongArray1473[i_2_], (aLongArray1472[i_2_] = aLongArray1474[i_2_]));
+            aLongArray1469[i_2_] = SpriteSub2.method993(aLongArray1473[i_2_], (aLongArray1472[i_2_] = aLongArray1474[i_2_]));
         for (int i_3_ = 1; i_3_ <= 10; i_3_++) {
             for (int i_4_ = 0; i_4_ < 8; i_4_++) {
                 aLongArray1471[i_4_] = 0L;
                 int i_5_ = 0;
                 int i_6_ = 56;
                 for (/**/; i_5_ < 8; i_5_++) {
-                    aLongArray1471[i_4_] = (SpriteSub2.decodedOperation993(aLongArray1471[i_4_], (InputStream_Sub1.aLongArrayArray75[i_5_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1472[GpsOverlay.bitwiseAnd(7, i_4_ - i_5_)]) >>> i_6_)))])));
+                    aLongArray1471[i_4_] = (SpriteSub2.method993(aLongArray1471[i_4_], (InputStream_Sub1.aLongArrayArray75[i_5_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1472[GpsOverlay.bitwiseAnd(7, i_4_ - i_5_)]) >>> i_6_)))])));
                     i_6_ -= 8;
                 }
             }
             for (int i_7_ = 0; i_7_ < 8; i_7_++)
                 aLongArray1472[i_7_] = aLongArray1471[i_7_];
-            aLongArray1472[0] = SpriteSub2.decodedOperation993(aLongArray1472[0], InputStream_Sub1.aLongArray76[i_3_]);
+            aLongArray1472[0] = SpriteSub2.method993(aLongArray1472[0], InputStream_Sub1.aLongArray76[i_3_]);
             for (int i_8_ = 0; i_8_ < 8; i_8_++) {
                 aLongArray1471[i_8_] = aLongArray1472[i_8_];
                 int i_9_ = 0;
                 int i_10_ = 56;
                 for (/**/; i_9_ < 8; i_9_++) {
-                    aLongArray1471[i_8_] = (SpriteSub2.decodedOperation993(aLongArray1471[i_8_], (InputStream_Sub1.aLongArrayArray75[i_9_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1469[GpsOverlay.bitwiseAnd(-i_9_ + i_8_, 7)]) >>> i_10_)))])));
+                    aLongArray1471[i_8_] = (SpriteSub2.method993(aLongArray1471[i_8_], (InputStream_Sub1.aLongArrayArray75[i_9_][(GpsOverlay.bitwiseAnd(255, (int) ((aLongArray1469[GpsOverlay.bitwiseAnd(-i_9_ + i_8_, 7)]) >>> i_10_)))])));
                     i_10_ -= 8;
                 }
             }
@@ -62,16 +62,16 @@ final class LogicError {
                 aLongArray1469[i_11_] = aLongArray1471[i_11_];
         }
         for (int i_12_ = 0; i_12_ < 8; i_12_++)
-            aLongArray1474[i_12_] = (SpriteSub2.decodedOperation993(aLongArray1474[i_12_], SpriteSub2.decodedOperation993(aLongArray1473[i_12_], aLongArray1469[i_12_])));
+            aLongArray1474[i_12_] = (SpriteSub2.method993(aLongArray1474[i_12_], SpriteSub2.method993(aLongArray1473[i_12_], aLongArray1469[i_12_])));
     }
 
-    static final void decodedOperation828(byte i, int i_13_, int i_14_) {
-        if (i != 38) decodedOperation828((byte) 63, 119, 33);
+    static final void method828(byte i, int i_13_, int i_14_) {
+        if (i != 38) method828((byte) 63, 119, 33);
         anInt1467++;
         if (Component158.aHa326 != null) {
             int i_15_ = Component82.anInt425;
             int i_16_ = AudioMixer.anInt3225;
-            DisplayModeManagerContainer295.decodedOperation1752(-1, i_13_, i_14_);
+            DisplayModeManagerContainer295.method1752(-1, i_13_, i_14_);
             if (Buffer.anInt7207 == 0) {
                 DisplayModeManagerContainer167.anInterface4_252 = null;
                 DisplayModeManagerContainer167.anInterface4_252 = (Component158.aHa326.method3634(Component158.aHa326.method3665((GpiLogger.anInt8854), Component25.anInt6008), Component158.aHa326.method3624((GpiLogger.anInt8854), Component25.anInt6008)));
@@ -98,9 +98,9 @@ final class LogicError {
             aLongArray1474[i_20_] = 0L;
     }
 
-    static final void decodedOperation830(int i, int i_21_, byte i_22_, boolean bool, int i_23_) {
+    static final void method830(int i, int i_21_, byte i_22_, boolean bool, int i_23_) {
         anInt1461++;
-        HashNodeSub3.decodedOperation3179(0);
+        HashNodeSub3.method3179(0);
         NodeSub16Sub2.aLong8866 = 0L;
         int i_24_ = MenuEntry.getWindowMode(-82);
         if (i_22_ == 102) {
@@ -185,7 +185,7 @@ final class LogicError {
         Component313.arraycopy(aByteArray1465, 0, aByteArray1475, 32, 32);
         method827(0);
         int i_38_ = 0;
-        if (bool != true) decodedOperation830(-1, -123, (byte) 39, false, 61);
+        if (bool != true) method830(-1, -123, (byte) 39, false, 61);
         int i_39_ = i;
         while (i_38_ < 8) {
             long l = aLongArray1474[i_38_];

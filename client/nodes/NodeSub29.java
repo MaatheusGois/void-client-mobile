@@ -11,9 +11,9 @@ final class NodeSub29
     static int anInt6910;
     short aShort6911;
 
-    public static void decodedOperation3003(int i) {
+    public static void method3003(int i) {
         aClass45_6909 = null;
-        if (i != -4587) decodedOperation3003(-101);
+        if (i != -4587) method3003(-101);
     }
 
     public NodeSub29() {

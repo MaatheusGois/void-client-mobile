@@ -59,17 +59,17 @@ final class ScreenModeManager {
                 PacketReader.canvasHeight = NpcNode.canvasHeight;
                 NodeSub48.perFrameReset = 0;
                 DisplayModeManagerContainer147.perDrawReset = 0;
-            } else SpriteAtlasShader.decodedOperation2158((byte) 56);
+            } else SpriteAtlasShader.method2158((byte) 56);
             if (Component326.LIVE != DisplayModeManagerContainer345.aClass364_165) {
                 if (Component236.canvasWidth < 1024 && (PacketReader.canvasHeight < 768)) {
                     /* empty */
                 }
             }
-            if (bool) ParticleSystem.decodedOperation3327(1406);
+            if (bool) ParticleSystem.method3327(1406);
             else {
                 DisplayModeManagerContainer50.gameCanvas.setSize(Component236.canvasWidth, (PacketReader.canvasHeight));
                 if (!Component210.gameCanvasAttached) NodeSub8.toolkit.method3669(DisplayModeManagerContainer50.gameCanvas, Component236.canvasWidth, (PacketReader.canvasHeight));
-                else s.decodedOperation3980(86, DisplayModeManagerContainer50.gameCanvas);
+                else s.method3980(86, DisplayModeManagerContainer50.gameCanvas);
                 if (RSACipher.aFrame4904 == container) {
                     Insets insets = RSACipher.aFrame4904.getInsets();
                     DisplayModeManagerContainer50.gameCanvas.setLocation((NodeSub48.perFrameReset + insets.left), (insets.top - -DisplayModeManagerContainer147.perDrawReset));
@@ -77,21 +77,21 @@ final class ScreenModeManager {
             }
             // Must match getWindowMode (1=fixed, 2=resizable) or CS2 shows "unable to enter display mode".
             Cp1252Decoder.fullscreenAvailable = i_2_ >= 2;
-            if (r.anInt9721 != -1) Component339.decodedOperation1713(true, 520);
-            if (DefinitionSub8.aClass238_9165 != null && NativeLibLoader.isPostLoginState(true, Component49.clientState)) ShaderProgramSub2.decodedOperation2145(-24498);
+            if (r.anInt9721 != -1) Component339.method1713(true, 520);
+            if (DefinitionSub8.aClass238_9165 != null && NativeLibLoader.isPostLoginState(true, Component49.clientState)) ShaderProgramSub2.method2145(-24498);
             for (int i_5_ = 0; i_5_ < 100; i_5_++)
                 InflaterDecompressor.aBooleanArray2076[i_5_] = true;
             Component297.aBoolean4726 = true;
         }
     }
 
-    static final boolean decodedOperation1581(int i, char c) {
+    static final boolean method1581(int i, char c) {
         anInt2838++;
         if (i >= -18) return false;
         return (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 
-    static final void decodedOperation1582(int i) {
+    static final void method1582(int i) {
         anInt2837++;
         if (i == 7851) {
             do {
@@ -104,7 +104,7 @@ final class ScreenModeManager {
                             Component122.aClass348_Sub16_Sub3_1564.setSampleRate(0, i_6_);
                             break;
                         }
-                        Component122.aClass348_Sub16_Sub3_1564.decodedOperation2877(-128);
+                        Component122.aClass348_Sub16_Sub3_1564.method2877(-128);
                         Component122.aClass348_Sub16_Sub3_1564.clearDefinitions(i ^ 0x1eaf);
                         Component258.aClass26_1977 = null;
                         if (DisplayModeManagerContainer77.aClass45_1848 != null) PlayerState.anInt7068 = 2;
@@ -123,7 +123,7 @@ final class ScreenModeManager {
                     }
                 } catch (Exception exception) {
                     exception.printStackTrace();
-                    Component122.aClass348_Sub16_Sub3_1564.decodedOperation2877(-128);
+                    Component122.aClass348_Sub16_Sub3_1564.method2877(-128);
                     DisplayModeManagerContainer77.aClass45_1848 = null;
                     ShaderProgram.aClass348_Sub2_3683 = null;
                     DebugPanic.aClass348_Sub16_Sub3_4743 = null;

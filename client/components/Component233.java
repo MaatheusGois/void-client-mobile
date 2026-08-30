@@ -14,7 +14,7 @@ final class Component233
     static int scrollWheelDiff = 0;
     static float aFloat3994;
 
-    static final boolean decodedOperation2547(int i, byte i_0_) {
+    static final boolean method2547(int i, byte i_0_) {
         anInt3993++;
         if (ImageTagText.aBooleanArray2162[i]) return true;
         if (!Component267.aClass45_2978.isGroupReady((byte) -124, i)) return false;

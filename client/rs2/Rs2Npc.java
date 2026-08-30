@@ -51,7 +51,7 @@ final class Rs2Npc {
             }
             NpcComposition def = n.definition;
             if (def.anIntArray1377 != null) {
-                def = def.decodedOperation794(DisplayModeManagerContainer58.aClass170_10209, -1);
+                def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
                 if (def == null) {
                     continue;
                 }
@@ -77,7 +77,7 @@ final class Rs2Npc {
             return false;
         }
         if (def.anIntArray1377 != null) {
-            def = def.decodedOperation794(DisplayModeManagerContainer58.aClass170_10209, -1);
+            def = def.method794(DisplayModeManagerContainer58.aClass170_10209, -1);
             if (def == null) {
                 return false;
             }

@@ -21,15 +21,15 @@ final class Component38
     static int[] anIntArray2509 = new int[2];
     static int anInt2510;
 
-    final void decodedOperation1404(byte i) {
+    final void method1404(byte i) {
         synchronized (aClass60_2501) {
             aClass60_2501.clear(0);
-            if (i >= -20) decodedOperation1407((byte) -33);
+            if (i >= -20) method1407((byte) -33);
         }
         anInt2508++;
     }
 
-    static final void decodedOperation1405(int i, boolean bool, boolean bool_0_) {
+    static final void method1405(int i, boolean bool, boolean bool_0_) {
         anInt2506++;
         NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) 42, i, bool);
         if (class348_sub13 != null && bool_0_ == true) {
@@ -40,21 +40,21 @@ final class Component38
         }
     }
 
-    static final void decodedOperation1406(boolean bool) {
+    static final void method1406(boolean bool) {
         if (bool == true) {
-            Component223.decodedOperation175((byte) -6);
+            Component223.method175((byte) -6);
             anInt2505++;
             Component210.gameCanvasAttached = false;
         }
     }
 
-    public static void decodedOperation1407(byte i) {
+    public static void method1407(byte i) {
         int i_2_ = 92 / ((-3 - i) / 60);
         anIntArray2509 = null;
         aClass223_2507 = null;
     }
 
-    final Component236 decodedOperation1408(int i, int i_3_) {
+    final Component236 method1408(int i, int i_3_) {
         anInt2504++;
         Component236 class321;
         synchronized (aClass60_2501) {
@@ -66,16 +66,16 @@ final class Component38
             is = aClass45_2498.getFile(-1860, 35, i_3_);
         }
         class321 = new Component236();
-        if (is != null) class321.decodedOperation2551(-125, new Buffer(is));
+        if (is != null) class321.method2551(-125, new Buffer(is));
         if (i != -12637) aClass60_2501 = null;
-        class321.decodedOperation2548((byte) 127);
+        class321.method2548((byte) 127);
         synchronized (aClass60_2501) {
             aClass60_2501.putOne(class321, i_3_, (byte) -99);
         }
         return class321;
     }
 
-    final void decodedOperation1409(int i, int i_4_) {
+    final void method1409(int i, int i_4_) {
         synchronized (aClass60_2501) {
             if (i_4_ != -20721) aClass45_2498 = null;
             aClass60_2501.processSoftEntries(i_4_ + 20723, i);
@@ -83,9 +83,9 @@ final class Component38
         anInt2503++;
     }
 
-    final void decodedOperation1410(int i) {
+    final void method1410(int i) {
         synchronized (aClass60_2501) {
-            if (i != -27995) decodedOperation1409(-42, 23);
+            if (i != -27995) method1409(-42, 23);
             aClass60_2501.purgeSoftReferences(-85);
         }
         anInt2502++;

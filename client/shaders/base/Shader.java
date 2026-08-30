@@ -11,12 +11,12 @@ abstract class Shader
     static Task aClass144_114;
     static int anInt115;
 
-    public static void decodedOperation158(byte i) {
+    public static void method158(byte i) {
         aClass144_114 = null;
         int i_0_ = -87 % ((-25 - i) / 41);
     }
 
-    static final void decodedOperation159(int i) {
+    static final void method159(int i) {
         if (Component92.consoleHistoryDepth > 0) {
             int i_1_ = 0;
             for (int i_2_ = 0; ArbShaderProgram.consoleLines.length > i_2_; i_2_++) {
@@ -34,7 +34,7 @@ abstract class Shader
         /* empty */
     }
 
-    static final int decodedOperation160(int i, int i_3_) {
+    static final int method160(int i, int i_3_) {
         anInt113++;
         double d = (double) (i_3_ >> 16 & 0xff) / 256.0;
         double d_4_ = (double) (0xff & i_3_ >> 8) / 256.0;

@@ -22,14 +22,14 @@ final class DisplayModeManagerContainer254
     static int anInt2150;
     static boolean aBoolean2151 = false;
 
-    static final boolean decodedOperation1258(int i, int i_0_, int i_1_) {
-        if (i_0_ != -9301) decodedOperation1263(true);
+    static final boolean method1258(int i, int i_0_, int i_1_) {
+        if (i_0_ != -9301) method1263(true);
         anInt2150++;
         return (0x800 & i) != 0;
     }
 
-    final void decodedOperation1259(int i) {
-        if (i != 0) decodedOperation1258(39, 119, 4);
+    final void method1259(int i) {
+        if (i != 0) method1258(39, 119, 4);
         anInt2149++;
         if (!aBoolean2146) {
             aBoolean2139 = true;
@@ -38,17 +38,17 @@ final class DisplayModeManagerContainer254
         else aBoolean2139 = false;
     }
 
-    static final void decodedOperation1260(boolean bool, int i, DisplayModeManagerContainer56 class190) {
+    static final void method1260(boolean bool, int i, DisplayModeManagerContainer56 class190) {
         if (DefinitionSub10.aBoolean9181) {
             DefinitionSub10.aBoolean9181 = false;
             i = 0;
         }
         anInt2140++;
-        if (Component329.aClass190_5990 == null || !Component329.aClass190_5990.decodedOperation1424(class190, (byte) 84)) {
+        if (Component329.aClass190_5990 == null || !Component329.aClass190_5990.method1424(class190, (byte) 84)) {
             Component329.aClass190_5990 = class190;
             ObjectDeserializer.aLong6963 = Component240.currentTimeMillis(-78);
             DisplayModeManagerContainer105.anInt4889 = SpriteAtlasShader.anInt6248 = i;
-            if (DisplayModeManagerContainer105.anInt4889 == 0) DefinitionSub32.decodedOperation3134(-1);
+            if (DisplayModeManagerContainer105.anInt4889 == 0) DefinitionSub32.method3134(-1);
             else {
                 DisplayModeManagerContainer28.aFloat8725 = Component214.aFloat2137;
                 Canvas_Sub1.anInt70 = Component38.anInt2500;
@@ -65,17 +65,17 @@ final class DisplayModeManagerContainer254
         if (bool != false) aBoolean2151 = true;
     }
 
-    public static void decodedOperation1261(byte i) {
+    public static void method1261(byte i) {
         if (i > 46) anIntArray2145 = null;
     }
 
-    final Task decodedOperation1262(ReflectionInvoker class297, byte i) {
-        if (i != 36) decodedOperation1258(-105, -70, -80);
+    final Task method1262(ReflectionInvoker class297, byte i) {
+        if (i != 36) method1258(-105, -70, -80);
         anInt2144++;
         return class297.openSocket(aBoolean2139, (aBoolean2146 ? this.anInt2138 : this.anInt2148), this.aString2147, i ^ 0x6e65);
     }
 
-    static final void decodedOperation1263(boolean bool) {
+    static final void method1263(boolean bool) {
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7255), 1);
         anInt2142++;
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub27_7261), 1);
@@ -96,15 +96,15 @@ final class DisplayModeManagerContainer254
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub15_7224), 0);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), 0);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub12_7243), 0);
-        DisplayModeManagerContainer87.decodedOperation1686(55);
+        DisplayModeManagerContainer87.method1686(55);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub23_7231), 2);
         Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub29_7229), 2);
-        Definition.decodedOperation3038(-1);
-        DisplayModeManagerContainer154.decodedOperation773(bool);
+        Definition.method3038(-1);
+        DisplayModeManagerContainer154.method773(bool);
         RuntimeException_Sub1.aBoolean4604 = true;
     }
 
-    final boolean decodedOperation1264(byte i, DisplayModeManagerContainer254 class161_2_) {
+    final boolean method1264(byte i, DisplayModeManagerContainer254 class161_2_) {
         if (i <= 69) return false;
         anInt2141++;
         if (class161_2_ != null) {

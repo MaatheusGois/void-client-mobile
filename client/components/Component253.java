@@ -212,7 +212,7 @@ final class Component253
         return pendingNormal.size(0) - -sentNormal.size(0);
     }
 
-    static final void decodedOperation1895(int i, byte[] is, int i_16_, int i_17_, int i_18_, int i_19_, byte[] is_20_, int i_21_, byte i_22_) {
+    static final void method1895(int i, byte[] is, int i_16_, int i_17_, int i_18_, int i_19_, byte[] is_20_, int i_21_, byte i_22_) {
         try {
             anInt3198++;
             int i_23_ = -(i_21_ >> 2);

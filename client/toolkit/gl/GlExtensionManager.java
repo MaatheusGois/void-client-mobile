@@ -237,11 +237,11 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    static final void decodedOperation3965(String string, int i, int i_1_) {
+    static final void method3965(String string, int i, int i_1_) {
         try {
             anInt9841++;
-            RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, i_1_);//2
-            class348_sub42_sub15.decodedOperation3246(-25490);
+            RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_1_);//2
+            class348_sub42_sub15.method3246(-25490);
             class348_sub42_sub15.aString9654 = string;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.AA(" + (string != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
@@ -269,7 +269,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9852++;
             if (bool_2_ == false) {
-                OpenGL.glTexEnvi(8960, i + 34176, DisplayModeInfo.decodedOperation531((byte) 101, class70));
+                OpenGL.glTexEnvi(8960, i + 34176, DisplayModeInfo.method531((byte) 101, class70));
                 if (bool) OpenGL.glTexEnvi(8960, i + 34192, !bool_3_ ? 770 : 771);
                 else OpenGL.glTexEnvi(8960, i + 34192, !bool_3_ ? 768 : 769);
             }
@@ -302,7 +302,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         OpenGL.glClear(256);
     }
 
-    final synchronized void decodedOperation3966(long l, int i) {
+    final synchronized void method3966(long l, int i) {
         try {
             anInt9853++;
             Node class348 = new Node();
@@ -320,7 +320,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
 
     final void setClipboard(int i) {
         anInt9861++;
-        OpenGL.glTexEnvi(8960, 34162, NodeSub32.decodedOperation3021((byte) 32, (this.aClass229Array8092[(this.anInt8175)])));
+        OpenGL.glTexEnvi(8960, 34162, NodeSub32.method3021((byte) 32, (this.aClass229Array8092[(this.anInt8175)])));
         if (i >= -99) method3658(-123, -102, -33, -112);
     }
 
@@ -334,7 +334,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final synchronized void decodedOperation3967(int i, byte i_8_, int i_9_) {
+    final synchronized void method3967(int i, byte i_8_, int i_9_) {
         anInt9898++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
         if (i_8_ != 59) useProgram(false);
@@ -344,7 +344,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
 
     final void getUniformiv(byte i) {
         anInt9896++;
-        if (i != 101) decodedOperation3967(52, (byte) -47, 49);
+        if (i != 101) method3967(52, (byte) -47, 49);
     }
 
     final void processEvents(int i) {
@@ -356,7 +356,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         OpenGL.glLightModelfv(2899, RuntimeException_Sub1.aFloatArray4602, i);
     }
 
-    public static void decodedOperation3968(int i) {
+    public static void method3968(int i) {
         int i_10_ = 69 % ((-67 - i) / 57);
         aClass138_9860 = null;
     }
@@ -365,7 +365,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9846++;
             if (i_14_ != 32) anOpenGL9856 = null;
-            if (!aBoolean9926 && (!Component353.decodedOperation1436(i_14_ ^ 0x46, i_12_) || !Component353.decodedOperation1436(i_14_ + 83, i))) {
+            if (!aBoolean9926 && (!Component353.method1436(i_14_ ^ 0x46, i_12_) || !Component353.method1436(i_14_ + 83, i))) {
                 if (aBoolean9919) return new WorldNameText(this, class304, i_12_, i, is, i_11_, i_13_);
                 Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1183, Component373.nextPowerOfTwo(i_12_, (byte) 108), Component373.nextPowerOfTwo(i, (byte) 108));
                 class14_sub1.method70(0, i_11_, (byte) -45, i_13_, i, i_12_, 0, is, class304);
@@ -390,7 +390,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
                     OpenGL.glDisable(3169);
                     OpenGL.glDisable(3170);
                 } else {
-                    int i_16_ = Component327.decodedOperation2411(class113, 25602);
+                    int i_16_ = Component327.method2411(class113, 25602);
                     OpenGL.glTexGeni(8192, 9472, i_16_);
                     OpenGL.glEnable(3168);
                     OpenGL.glTexGeni(8193, 9472, i_16_);
@@ -414,7 +414,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final void getWindowSize(int i) {
         OpenGL.glMatrixMode(5890);
         anInt9888++;
-        if (HashNodeSub18.aClass251_9685 != this.aClass251Array8113[this.anInt8175]) OpenGL.glLoadMatrixf(this.aClass101_Sub2Array8131[this.anInt8175].decodedOperation918(Component237.aFloatArray3015, 0), 0);
+        if (HashNodeSub18.aClass251_9685 != this.aClass251Array8113[this.anInt8175]) OpenGL.glLoadMatrixf(this.aClass101_Sub2Array8131[this.anInt8175].method918(Component237.aFloatArray3015, 0), 0);
         else OpenGL.glLoadIdentity();
         if (i != 1) drawArraysInstanced(37, null);
         OpenGL.glMatrixMode(5888);
@@ -433,7 +433,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final void querySurface(int i) {
         anInt9862++;
         if (i != 10) makeContextCurrent(null, 34, null);
-        OpenGL.glTexEnvi(8960, 34161, NodeSub32.decodedOperation3021((byte) 32, (this.aClass229Array8086[(this.anInt8175)])));
+        OpenGL.glTexEnvi(8960, 34161, NodeSub32.method3021((byte) 32, (this.aClass229Array8086[(this.anInt8175)])));
     }
 
     final Interface3 method3665(int i, int i_19_) {
@@ -537,7 +537,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final synchronized void decodedOperation3969(int i, int i_26_, int i_27_) {
+    final synchronized void method3969(int i, int i_26_, int i_27_) {
         if (i_27_ != 3089) this.anIntArray9927 = null;
         anInt9850++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
@@ -565,23 +565,23 @@ final class GlExtensionManager extends GlToolkitSub3 {
         if (aBoolean9911) OpenGL.glPopMatrix();
         anInt9840++;
         if (i != 1) hideWindow(69);
-        if (this.aClass196_8184.decodedOperation1450(-98)) {
+        if (this.aClass196_8184.method1450(-98)) {
             if (!aBoolean9914) {
-                OpenGL.glLoadMatrixf(this.aClass101_Sub2_8083.decodedOperation918(Component237.aFloatArray3015, 0), 0);
+                OpenGL.glLoadMatrixf(this.aClass101_Sub2_8083.method918(Component237.aFloatArray3015, 0), 0);
                 aBoolean9914 = true;
                 uniform3i(0);
                 disableVertexAttrib((byte) -104);
             }
             if (!this.aBoolean8069) {
                 OpenGL.glPushMatrix();
-                OpenGL.glMultMatrixf(this.aClass101_Sub2_8074.decodedOperation918(Component237.aFloatArray3015, i ^ 0x1), 0);
+                OpenGL.glMultMatrixf(this.aClass101_Sub2_8074.method918(Component237.aFloatArray3015, i ^ 0x1), 0);
                 aBoolean9911 = true;
             } else aBoolean9911 = false;
         } else if (this.aBoolean8069) {
             OpenGL.glLoadIdentity();
             aBoolean9911 = false;
         } else {
-            OpenGL.glLoadMatrixf(this.aClass101_Sub2_8074.decodedOperation918(Component237.aFloatArray3015, 0), 0);
+            OpenGL.glLoadMatrixf(this.aClass101_Sub2_8074.method918(Component237.aFloatArray3015, 0), 0);
             aBoolean9911 = false;
         }
     }
@@ -760,8 +760,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
             }
             Component342 class68 = interface5_impl2.method25((byte) 51);
             DebugPanicSub2 class285_sub2 = (DebugPanicSub2) interface5_impl2;
-            class285_sub2.decodedOperation2125(0);
-            OpenGL.glDrawElements(i_44_, i_45_, Component387.decodedOperation1128(-20, class68), (class285_sub2.decodedOperation2122(27819) + (long) (i_41_ * (class68.anInt1178))));
+            class285_sub2.method2125(0);
+            OpenGL.glDrawElements(i_44_, i_45_, Component387.method1128(-20, class68), (class285_sub2.method2122(27819) + (long) (i_41_ * (class68.anInt1178))));
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.JC(" + (class21 != null ? "{...}" : "null") + ',' + i + ',' + (interface5_impl2 != null ? "{...}" : "null") + ',' + i_40_ + ',' + i_41_ + ',' + i_42_ + ',' + i_43_ + ')'));
         }
@@ -774,12 +774,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
         int i_47_;
         for (i_47_ = 0; this.anInt8151 > i_47_; i_47_++) {
             NodeSub1 class348_sub1 = this.aClass348_Sub1Array8132[i_47_];
-            int i_48_ = class348_sub1.decodedOperation2720(-1);
+            int i_48_ = class348_sub1.method2720(-1);
             int i_49_ = i_47_ + 16386;
-            float f = class348_sub1.decodedOperation2721(-37) / 255.0F;
-            RuntimeException_Sub1.aFloatArray4602[0] = (float) class348_sub1.decodedOperation2724(-1);
-            RuntimeException_Sub1.aFloatArray4602[1] = (float) class348_sub1.decodedOperation2722(124);
-            RuntimeException_Sub1.aFloatArray4602[2] = (float) class348_sub1.decodedOperation2717((byte) 111);
+            float f = class348_sub1.method2721(-37) / 255.0F;
+            RuntimeException_Sub1.aFloatArray4602[0] = (float) class348_sub1.method2724(-1);
+            RuntimeException_Sub1.aFloatArray4602[1] = (float) class348_sub1.method2722(124);
+            RuntimeException_Sub1.aFloatArray4602[2] = (float) class348_sub1.method2717((byte) 111);
             RuntimeException_Sub1.aFloatArray4602[3] = 1.0F;
             OpenGL.glLightfv(i_49_, 4611, RuntimeException_Sub1.aFloatArray4602, 0);
             RuntimeException_Sub1.aFloatArray4602[2] = (float) GpsOverlay.bitwiseAnd(255, i_48_) * f;
@@ -787,7 +787,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
             RuntimeException_Sub1.aFloatArray4602[0] = (float) GpsOverlay.bitwiseAnd(255, i_48_ >> 16) * f;
             RuntimeException_Sub1.aFloatArray4602[3] = 1.0F;
             OpenGL.glLightfv(i_49_, 4609, RuntimeException_Sub1.aFloatArray4602, 0);
-            OpenGL.glLightf(i_49_, 4617, 1.0F / (float) (class348_sub1.decodedOperation2723(-1) * class348_sub1.decodedOperation2723(-1)));
+            OpenGL.glLightf(i_49_, 4617, 1.0F / (float) (class348_sub1.method2723(-1) * class348_sub1.method2723(-1)));
             OpenGL.glEnable(i_49_);
         }
         for (/**/; i_47_ < this.anInt8122; i_47_++)
@@ -866,10 +866,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             anInt9890++;
             if (i_56_ != 2) this.aMapBuffer9913 = null;
-            if (!aBoolean9926 && (!Component353.decodedOperation1436(60, i) || !Component353.decodedOperation1436(-73, i_57_))) {
+            if (!aBoolean9926 && (!Component353.method1436(60, i) || !Component353.method1436(-73, i_57_))) {
                 if (aBoolean9919) return new WorldNameText(this, class304, i, i_57_, fs, i_54_, i_55_);
                 Component19 class14_sub1 = new Component19(this, class304, Component342.aClass68_1187, Component373.nextPowerOfTwo(i, (byte) 108), Component373.nextPowerOfTwo(i_57_, (byte) 108));
-                class14_sub1.decodedOperation240(i_55_, (byte) -126, fs, class304, 0, i_54_, 0, i, i_57_);
+                class14_sub1.method240(i_55_, (byte) -126, fs, class304, 0, i_54_, 0, i, i_57_);
                 return class14_sub1;
             }
             return new Component19(this, class304, i, i_57_, bool, fs, i_54_, i_55_);
@@ -907,7 +907,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             int i_64_ = 101 / ((i_60_ - -21) / 46);
             anInt9830++;
-            if (aBoolean9926 || Component353.decodedOperation1436(103, i) && Component353.decodedOperation1436(-53, i_63_)) return new Component19(this, i, i_63_, bool, is, i_61_, i_62_);
+            if (aBoolean9926 || Component353.method1436(103, i) && Component353.method1436(-53, i_63_)) return new Component19(this, i, i_63_, bool, is, i_61_, i_62_);
             if (!aBoolean9919) {
                 Component19 class14_sub1 = new Component19(this, Component83.aClass304_1662, Component342.aClass68_1183, Component373.nextPowerOfTwo(i, (byte) 108), Component373.nextPowerOfTwo(i_63_, (byte) 108));
                 class14_sub1.method68(i_62_, 22809, is, 0, i_61_, i, 0, i_63_);
@@ -968,7 +968,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9878++;
     }
 
-    final synchronized void decodedOperation3971(int i, int i_70_) {
+    final synchronized void method3971(int i, int i_70_) {
         anInt9819++;
         Node class348 = new Node();
         class348.key = i_70_;
@@ -986,7 +986,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final void drawElements(DisplayModeManagerContainer88 class70, int i, byte i_71_, boolean bool) {
         try {
             if (i_71_ == 80) {
-                OpenGL.glTexEnvi(8960, i + 34184, DisplayModeInfo.decodedOperation531((byte) 123, class70));
+                OpenGL.glTexEnvi(8960, i + 34184, DisplayModeInfo.method531((byte) 123, class70));
                 anInt9885++;
                 OpenGL.glTexEnvi(8960, 34200 + i, bool ? 771 : 770);
             }
@@ -1016,11 +1016,11 @@ final class GlExtensionManager extends GlToolkitSub3 {
                 Component255 class58 = class58s[i_77_];
                 DebugPanicSub1 class285_sub1 = aClass285_Sub1Array9907[i_77_];
                 int i_78_ = 0;
-                int i_79_ = class285_sub1.decodedOperation2130(3545);
-                long l = class285_sub1.decodedOperation2122(27819);
-                class285_sub1.decodedOperation2125(0);
-                for (int i_80_ = 0; (i_80_ < class58.decodedOperation538((byte) -119)); i_80_++) {
-                    ColoredTextBuilder class325 = class58.decodedOperation537(i_80_, -119);
+                int i_79_ = class285_sub1.method2130(3545);
+                long l = class285_sub1.method2122(27819);
+                class285_sub1.method2125(0);
+                for (int i_80_ = 0; (i_80_ < class58.method538((byte) -119)); i_80_++) {
+                    ColoredTextBuilder class325 = class58.method537(i_80_, -119);
                     if (class325 == ColoredTextBuilder.aClass325_4073) {
                         OpenGL.glVertexPointer(3, 5126, i_79_, (long) i_78_ + l);
                         bool_76_ = true;
@@ -1164,7 +1164,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         try {
             if (i_88_ != -84) enableScissorTest(false);
             anInt9882++;
-            if (aBoolean9926 || (Component353.decodedOperation1436(i_88_ + 15, i_89_) && Component353.decodedOperation1436(65, i))) return new Component19(this, class304, class68, i_89_, i);
+            if (aBoolean9926 || (Component353.method1436(i_88_ + 15, i_89_) && Component353.method1436(65, i))) return new Component19(this, class304, class68, i_89_, i);
             if (!aBoolean9919) return new Component19(this, class304, class68, Component373.nextPowerOfTwo(i_89_, (byte) 108), Component373.nextPowerOfTwo(i, (byte) 108));
             return new WorldNameText(this, class304, class68, i_89_, i);
         } catch (RuntimeException runtimeexception) {

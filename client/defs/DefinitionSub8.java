@@ -28,7 +28,7 @@ final class DefinitionSub8
     int anInt9164;
     static SocketStream aClass238_9165;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         int i_1_ = i;
         while_151_:
         do {
@@ -80,14 +80,14 @@ final class DefinitionSub8
             } while (false);
             this.anInt9164 = class348_sub49.readUnsignedByte(255);
         } while (false);
-        if (i_0_ != 31015) decodedOperation3070(20, 127, -38, 124, -110, true, 16);
+        if (i_0_ != 31015) method3070(20, 127, -38, 124, -110, true, 16);
         anInt9153++;
     }
 
     final int[] getMonochromeOutput(int i, int i_2_) {
         anInt9154++;
         int[] is = this.imageCache.getPixels(0, i);
-        if (this.imageCache.cacheMiss) decodedOperation3069(i, is, (byte) 98);
+        if (this.imageCache.cacheMiss) method3069(i, is, (byte) 98);
         return is;
     }
 
@@ -100,7 +100,7 @@ final class DefinitionSub8
     }
 
     final void postDecode(int i) {
-        aByteArray9152 = GraphicsToolkit.decodedOperation3664(this.anInt9156, 95);
+        aByteArray9152 = GraphicsToolkit.method3664(this.anInt9156, 95);
         anInt9148++;
         method3067((byte) -98);
         int i_3_ = this.anInt9150 + -1;
@@ -130,13 +130,13 @@ final class DefinitionSub8
         anInt9151++;
     }
 
-    public static void decodedOperation3068(int i) {
+    public static void method3068(int i) {
         aColorArray9163 = null;
         if (i != 13715) aClass238_9165 = null;
         aClass238_9165 = null;
     }
 
-    final void decodedOperation3069(int i, int[] is, byte i_8_) {
+    final void method3069(int i, int[] is, byte i_8_) {
         anInt9161++;
         int i_9_ = (Component302.anIntArray6035[i] * this.anInt9164);
         if (i_8_ > 91) {
@@ -156,14 +156,14 @@ final class DefinitionSub8
                 if (this.aBoolean9160) {
                     for (int i_52_ = 0; (DefinitionSub6.anInt9139 > i_52_); i_52_++) {
                         int i_53_ = (this.anInt9158 * RenderableSub6.anIntArray6432[i_52_]);
-                        int i_54_ = decodedOperation3070(i_46_, i_41_, i_42_, i_53_ * i_39_ >> 12, i_47_, true, i_48_);
+                        int i_54_ = method3070(i_46_, i_41_, i_42_, i_53_ * i_39_ >> 12, i_47_, true, i_48_);
                         i_54_ = i_40_ * i_54_ >> 12;
                         is[i_52_] = (i_54_ >> 1) + 2048;
                     }
                 } else {
                     for (int i_49_ = 0; i_49_ < DefinitionSub6.anInt9139; i_49_++) {
                         int i_50_ = (this.anInt9158 * RenderableSub6.anIntArray6432[i_49_]);
-                        int i_51_ = decodedOperation3070(i_46_, i_41_, i_42_, i_39_ * i_50_ >> 12, i_47_, true, i_48_);
+                        int i_51_ = method3070(i_46_, i_41_, i_42_, i_39_ * i_50_ >> 12, i_47_, true, i_48_);
                         is[i_49_] = i_51_ * i_40_ >> 12;
                     }
                 }
@@ -183,7 +183,7 @@ final class DefinitionSub8
                     int i_19_ = HelveticaFont.anIntArray2631[i_12_];
                     for (int i_20_ = 0; DefinitionSub6.anInt9139 > i_20_; i_20_++) {
                         int i_21_ = (RenderableSub6.anIntArray6432[i_20_] * this.anInt9158);
-                        int i_22_ = decodedOperation3070(i_17_, i_12_, i_13_, i_11_ * i_21_ >> 12, i_19_, true, i_18_);
+                        int i_22_ = method3070(i_17_, i_12_, i_13_, i_11_ * i_21_ >> 12, i_19_, true, i_18_);
                         is[i_20_] = i_10_ * i_22_ >> 12;
                     }
                 }
@@ -204,14 +204,14 @@ final class DefinitionSub8
                         if (this.aBoolean9160 && (this.anInt9150 - 1 == i_23_)) {
                             for (int i_33_ = 0; DefinitionSub6.anInt9139 > i_33_; i_33_++) {
                                 int i_34_ = (RenderableSub6.anIntArray6432[i_33_] * (this.anInt9158));
-                                int i_35_ = decodedOperation3070(i_32_, i_25_, i_26_, i_34_ * i_24_ >> 12, i_31_, true, i_30_);
+                                int i_35_ = method3070(i_32_, i_25_, i_26_, i_34_ * i_24_ >> 12, i_31_, true, i_30_);
                                 i_35_ = is[i_33_] - -(i_35_ * i_10_ >> 12);
                                 is[i_33_] = (i_35_ >> 1) + 2048;
                             }
                         } else {
                             for (int i_36_ = 0; (i_36_ < DefinitionSub6.anInt9139); i_36_++) {
                                 int i_37_ = (this.anInt9158 * RenderableSub6.anIntArray6432[i_36_]);
-                                int i_38_ = decodedOperation3070(i_32_, i_25_, i_26_, i_37_ * i_24_ >> 12, i_31_, true, i_30_);
+                                int i_38_ = method3070(i_32_, i_25_, i_26_, i_37_ * i_24_ >> 12, i_31_, true, i_30_);
                                 is[i_36_] += i_10_ * i_38_ >> 12;
                             }
                         }
@@ -221,7 +221,7 @@ final class DefinitionSub8
         }
     }
 
-    private final int decodedOperation3070(int i, int i_55_, int i_56_, int i_57_, int i_58_, boolean bool, int i_59_) {
+    private final int method3070(int i, int i_55_, int i_56_, int i_57_, int i_58_, boolean bool, int i_59_) {
         anInt9155++;
         int i_60_ = i_57_ >> 12;
         int i_61_ = i_60_ - -1;

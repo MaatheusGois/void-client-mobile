@@ -139,7 +139,7 @@ abstract class DisplayModeManagerContainer370
         }
     }
 
-    final void decodedOperation603(byte i, int i_40_, int[] is, int i_41_, int i_42_, int i_43_, HashNodeSub17 class348_sub42_sub17, int i_44_, HashNodeSub17 class348_sub42_sub17_45_, boolean bool, int i_46_) {
+    final void method603(byte i, int i_40_, int[] is, int i_41_, int i_42_, int i_43_, HashNodeSub17 class348_sub42_sub17, int i_44_, HashNodeSub17 class348_sub42_sub17_45_, boolean bool, int i_46_) {
         try {
             anInt1133++;
             if (i_42_ != -1) {
@@ -169,7 +169,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void method605(int i, int[] is, int i_48_, int i_49_, int i_50_, int i_51_, boolean bool);
 
-    static final void decodedOperation606(int i, boolean bool, String string) {
+    static final void method606(int i, boolean bool, String string) {
         anInt1128++;
         string = string.toLowerCase();
         short[] is = new short[16];
@@ -177,8 +177,8 @@ abstract class DisplayModeManagerContainer370
         int i_53_ = bool ? 32768 : 0;
         int i_54_ = ((!bool ? Component31.aClass355_5900.anInt4365 : Component31.aClass355_5900.anInt4364) + i_53_);
         for (int i_55_ = i_53_; i_55_ < i_54_; i_55_++) {
-            HashNodeSub10 class348_sub42_sub10 = Component31.aClass355_5900.decodedOperation3471(i_55_, (byte) -102);
-            if (class348_sub42_sub10.aBoolean9562 && class348_sub42_sub10.decodedOperation3219(98).toLowerCase().indexOf(string) != -1) {
+            HashNodeSub10 class348_sub42_sub10 = Component31.aClass355_5900.method3471(i_55_, (byte) -102);
+            if (class348_sub42_sub10.aBoolean9562 && class348_sub42_sub10.method3219(98).toLowerCase().indexOf(string) != -1) {
                 if (i_52_ >= 50) {
                     Component353.aShortArray2579 = null;
                     DisplayModeManagerContainer154.anInt1285 = -1;
@@ -198,8 +198,8 @@ abstract class DisplayModeManagerContainer370
         Component353.aShortArray2579 = is;
         String[] strings = new String[DisplayModeManagerContainer154.anInt1285];
         for (int i_58_ = 0; DisplayModeManagerContainer154.anInt1285 > i_58_; i_58_++)
-            strings[i_58_] = Component31.aClass355_5900.decodedOperation3471(is[i_58_], (byte) -91).decodedOperation3219(NodeSub21.bitwiseXor(i, 81));
-        RadixParser.decodedOperation1333(Component353.aShortArray2579, i + 26073, strings);
+            strings[i_58_] = Component31.aClass355_5900.method3471(is[i_58_], (byte) -91).method3219(NodeSub21.bitwiseXor(i, 81));
+        RadixParser.method1333(Component353.aShortArray2579, i + 26073, strings);
     }
 
     abstract void Interface4Impl();
@@ -247,7 +247,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void LA(int i);
 
-    abstract void decodedOperation608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_71_);
+    abstract void method608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_71_);
 
     abstract int ua();
 
@@ -255,7 +255,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract int ma();
 
-    public static void decodedOperation609(byte i) {
+    public static void method609(byte i) {
         if (i <= -7) {
             huffman = null;
             anIntArray1127 = null;
@@ -270,7 +270,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract int EA();
 
-    final void decodedOperation611(int i, int i_74_, HashNodeSub17 class348_sub42_sub17) {
+    final void method611(int i, int i_74_, HashNodeSub17 class348_sub42_sub17) {
         anInt1126++;
         if (i != -1) {
             acquireRenderLock();
@@ -307,13 +307,13 @@ abstract class DisplayModeManagerContainer370
 
     abstract void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i);
 
-    static final boolean decodedOperation616(int i, int i_81_, int i_82_) {
+    static final boolean method616(int i, int i_81_, int i_82_) {
         anInt1129++;
         if (i != 2) return false;
         return (i_81_ & 0x800) != 0;
     }
 
-    final void decodedOperation617(int i, int i_83_, HashNodeSub17 class348_sub42_sub17, int i_84_, HashNodeSub17 class348_sub42_sub17_85_, boolean bool, boolean bool_86_, int i_87_, int i_88_) {
+    final void method617(int i, int i_83_, HashNodeSub17 class348_sub42_sub17, int i_84_, HashNodeSub17 class348_sub42_sub17_85_, boolean bool, boolean bool_86_, int i_87_, int i_88_) {
         try {
             anInt1125++;
             if (i != -1) {
@@ -370,12 +370,12 @@ abstract class DisplayModeManagerContainer370
 
     abstract int ShaderImpl();
 
-    final void decodedOperation625(HashNodeSub17 class348_sub42_sub17, int i, byte i_101_, int i_102_, HashNodeSub17 class348_sub42_sub17_103_, int i_104_, int i_105_, int i_106_, HashNodeSub17 class348_sub42_sub17_107_, boolean bool, int i_108_, HashNodeSub17 class348_sub42_sub17_109_, int i_110_, boolean[] bools, int i_111_) {
+    final void method625(HashNodeSub17 class348_sub42_sub17, int i, byte i_101_, int i_102_, HashNodeSub17 class348_sub42_sub17_103_, int i_104_, int i_105_, int i_106_, HashNodeSub17 class348_sub42_sub17_107_, boolean bool, int i_108_, HashNodeSub17 class348_sub42_sub17_109_, int i_110_, boolean[] bools, int i_111_) {
         try {
             anInt1135++;
             if (i_104_ != -1) {
                 if (i_101_ <= 103) aFloat1136 = 0.38855714F;
-                if (bools == null || i_105_ == -1) decodedOperation617(i_104_, i, class348_sub42_sub17, 0, class348_sub42_sub17_107_, false, bool, i_108_, i_106_);
+                if (bools == null || i_105_ == -1) method617(i_104_, i, class348_sub42_sub17, 0, class348_sub42_sub17_107_, false, bool, i_108_, i_106_);
                 else {
                     acquireRenderLock();
                     if (NA()) {
@@ -407,7 +407,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract void ia(short i, short i_115_);
 
-    final void decodedOperation626(int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, int i_121_, s var_s, int i_122_) {
+    final void method626(int i, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, int i_121_, s var_s, int i_122_) {
         anInt1137++;
         boolean bool = false;
         boolean bool_123_ = false;

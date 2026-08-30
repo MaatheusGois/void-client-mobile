@@ -22,22 +22,22 @@ final class Component377
     static int anInt859;
     static int[] anIntArray860;
 
-    public static void decodedOperation448(byte i) {
+    public static void method448(byte i) {
         aCharArray852 = null;
         anIntArray860 = null;
         int i_0_ = -50 % ((37 - i) / 40);
     }
 
-    static final void decodedOperation449(String string, String string_1_, boolean bool, int i, boolean bool_2_) {
+    static final void method449(String string, String string_1_, boolean bool, int i, boolean bool_2_) {
         do {
             try {
                 anInt849++;
-                ParticleSystem class348_sub47 = DisplayModeManagerContainer351.decodedOperation1478(true);
+                ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
                 class348_sub47.particleBuffer.writeByte(bool, DisplayModeManagerContainer109.aClass29_2348.anInt400);
                 class348_sub47.particleBuffer.writeShort((byte) 107, 0);
                 int i_3_ = (class348_sub47.particleBuffer.offset);
                 class348_sub47.particleBuffer.writeShort((byte) 107, 634);
-                int[] is = Cp1252Decoder.decodedOperation463(class348_sub47, false);
+                int[] is = Cp1252Decoder.method463(class348_sub47, false);
                 int i_4_ = (class348_sub47.particleBuffer.offset);
                 class348_sub47.particleBuffer.writeString((byte) -5, string_1_);
                 class348_sub47.particleBuffer.writeShort((byte) 107, Connection.affiliateId);
@@ -45,7 +45,7 @@ final class Component377
                 class348_sub47.particleBuffer.writeLong(ModelStore.aLong4615, (byte) 104);
                 class348_sub47.particleBuffer.writeByte(bool, ObjectDeserializer.languageId);
                 class348_sub47.particleBuffer.writeByte(bool, (PacketReader.currentGameType.id));
-                BufferCacheSub2.decodedOperation4002((class348_sub47.particleBuffer), (byte) 55);
+                BufferCacheSub2.method4002((class348_sub47.particleBuffer), (byte) 55);
                 String string_5_ = Component19.aString8605;
                 class348_sub47.particleBuffer.writeByte(false, string_5_ == null ? 0 : 1);
                 if (string_5_ != null) class348_sub47.particleBuffer.writeString((byte) -5, string_5_);
@@ -61,7 +61,7 @@ final class Component377
                 SpriteSub1.anInt8398 = 0;
                 if (i >= 13) break;
                 Component301.aBoolean4127 = true;
-                CookieManager.decodedOperation2172(60);
+                CookieManager.method2172(60);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("iq.D(" + (string != null ? "{...}" : "null") + ',' + (string_1_ != null ? "{...}" : "null") + ',' + bool + ',' + i + ',' + bool_2_ + ')'));
             }
@@ -69,13 +69,13 @@ final class Component377
         } while (false);
     }
 
-    static final int decodedOperation450(int i, String string, int i_6_) {
+    static final int method450(int i, String string, int i_6_) {
         if (i != -20188) return 88;
         anInt850++;
         return RadixText.parseIntRadix(-123, i_6_, true, string);
     }
 
-    final void decodedOperation451(Component377 class48_7_, byte i) {
+    final void method451(Component377 class48_7_, byte i) {
         this.anInt857 = class48_7_.anInt857;
         this.anInt858 = class48_7_.anInt858;
         this.anInt856 = class48_7_.anInt856;
@@ -83,12 +83,12 @@ final class Component377
         anInt855++;
         this.anInt847 = class48_7_.anInt847;
         this.anInt853 = class48_7_.anInt853;
-        if (i != -110) decodedOperation448((byte) -93);
+        if (i != -110) method448((byte) -93);
     }
 
-    final Component377 decodedOperation452(boolean bool) {
+    final Component377 method452(boolean bool) {
         anInt848++;
-        if (bool != true) decodedOperation448((byte) -81);
+        if (bool != true) method448((byte) -81);
         return new Component377(this.anInt858, this.anInt856, this.anInt857, this.anInt854, this.anInt847, this.anInt853);
     }
 

@@ -17,7 +17,7 @@ final class NodeBaseSub1
     static int anInt9775 = -1;
     static int anInt9776 = 0;
 
-    static final int decodedOperation3439(int i) {
+    static final int method3439(int i) {
         anInt9771++;
         if (i <= 92) return 99;
         if (Buffer.anInt7207 == 1) return GpiLogger.anInt8854;
@@ -28,14 +28,14 @@ final class NodeBaseSub1
         this.aNativeHeap9770 = new NativeHeap(i);
     }
 
-    final void decodedOperation3440(int i) {
+    final void method3440(int i) {
         anInt9772++;
         this.aNativeHeap9770.b();
         int i_0_ = -30 / ((i - -26) / 52);
     }
 
-    public static void decodedOperation3441(int i) {
+    public static void method3441(int i) {
         aClass113_9773 = null;
-        if (i != 1) decodedOperation3439(-118);
+        if (i != 1) method3439(-118);
     }
 }

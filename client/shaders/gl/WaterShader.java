@@ -55,7 +55,7 @@ final class WaterShader extends AbstractShader {
         anInt7368++;
     }
 
-    static final String decodedOperation3551(int i, int i_5_, int i_6_, boolean bool) {
+    static final String method3551(int i, int i_5_, int i_6_, boolean bool) {
         anInt7374++;
         if (i_5_ < 2 || i_5_ > 36) throw new IllegalArgumentException("Invalid radix:" + i_5_);
         if (!bool || i_6_ < 0) return Integer.toString(i_6_, i_5_);
@@ -86,7 +86,7 @@ final class WaterShader extends AbstractShader {
     }
 
     final void method3527(int i, Interface18 interface18, int i_12_) {
-        if (i_12_ != -16776) decodedOperation3552(-90);
+        if (i_12_ != -16776) method3552(-90);
         anInt7380++;
         if (!aBoolean7373) {
             this.aHa_Sub3_4479.setActiveTexture((byte) 102, interface18);
@@ -106,15 +106,15 @@ final class WaterShader extends AbstractShader {
             if (class45 != null && class377.aBoolean9921 && class377.aBoolean9922) {
                 DisplayModeManagerContainer271 class39 = (ShaderCompiler.compileShader(class377, class45.getFile("gl", "environment_mapped_water_v", -29832), -108, 35633));
                 DisplayModeManagerContainer271 class39_13_ = (ShaderCompiler.compileShader(class377, class45.getFile("gl", "environment_mapped_water_f", -29832), -122, 35632));
-                aClass89_7369 = BitmapFont.decodedOperation2582(class377, new DisplayModeManagerContainer271[]{class39, class39_13_}, -2113);
-                aBoolean7376 = (aClass89_7369 != null && aClass269_7375.decodedOperation2041((byte) 120));
+                aClass89_7369 = BitmapFont.method2582(class377, new DisplayModeManagerContainer271[]{class39, class39_13_}, -2113);
+                aBoolean7376 = (aClass89_7369 != null && aClass269_7375.method2041((byte) 120));
             } else aBoolean7376 = false;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ko.<init>(" + (class377 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + (class269 != null ? "{...}" : "null") + ')'));
         }
     }
 
-    public static void decodedOperation3552(int i) {
+    public static void method3552(int i) {
         aClass45_7371 = null;
         aClass114_7367 = null;
         aStringArray7378 = null;
@@ -123,7 +123,7 @@ final class WaterShader extends AbstractShader {
 
     final void method3525(int i, boolean bool) {
         anInt7370++;
-        if (i != 15192) decodedOperation3551(58, -50, 40, true);
+        if (i != 15192) method3551(58, -50, 40, true);
         Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.deleteFramebuffer(-16777216);
         if (aBoolean7376 && interface18_impl2 != null) {
             this.aHa_Sub3_4479.setActiveTextureUnit(1, i + -19574);

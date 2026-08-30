@@ -29,7 +29,7 @@ final class Component301
     static Component183 aClass114_4126 = new Component183(5, 8);
     static boolean aBoolean4127 = false;
 
-    final boolean decodedOperation2628(int i, byte i_0_, r var_r, int i_1_) {
+    final boolean method2628(int i, byte i_0_, r var_r, int i_1_) {
         anInt4119++;
         CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         int i_2_ = 13 % ((i_0_ - -21) / 45);
@@ -64,10 +64,10 @@ final class Component301
         if (i_5_ <= 0 || i_4_ <= 0) return false;
         int i_11_ = 8;
         i_6_ += (i_11_ + -1) * this.anInt4113;
-        return RenderableSub4.decodedOperation2503(i_6_, i_3_, i_11_, this.aByteArray4112, i_5_, -16259, i_4_);
+        return RenderableSub4.method2503(i_6_, i_3_, i_11_, this.aByteArray4112, i_5_, -16259, i_4_);
     }
 
-    final void decodedOperation2629(int i, r var_r, int i_12_, int i_13_) {
+    final void method2629(int i, r var_r, int i_12_, int i_13_) {
         anInt4114++;
         CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         i_13_ += 1 + var_r_Sub1.anInt10468;
@@ -105,12 +105,12 @@ final class Component301
             i_20_ += i_23_;
         }
         if (i_17_ > 0 && i_16_ > 0) {
-            DefinitionSub37.decodedOperation3146(i_18_, i_17_, (byte) -116, i_20_, i_16_, i_14_, this.aByteArray4112, (var_r_Sub1.aByteArray10471), i_15_);
+            DefinitionSub37.method3146(i_18_, i_17_, (byte) -116, i_20_, i_16_, i_14_, this.aByteArray4112, (var_r_Sub1.aByteArray10471), i_15_);
             method2634(i, -1, i_13_, i_16_, i_17_);
         }
     }
 
-    final void decodedOperation2630(int i, int i_24_, int i_25_, boolean bool, boolean[][] bools, int i_26_) {
+    final void method2630(int i, int i_24_, int i_25_, boolean bool, boolean[][] bools, int i_26_) {
         anInt4115++;
         aHa_Sub3_4111.getFramebufferParameter(false, true);
         aHa_Sub3_4111.iconifyWindow(-32, false);
@@ -133,9 +133,9 @@ final class Component301
                                     if (-i_24_ <= i_34_ + -i_26_ && i_24_ >= -i_26_ + i_34_ && (bools[i_24_ + (-i_25_ + i_33_)][-i_26_ + i_34_ + i_24_])) {
                                         MatrixSub2 class101_sub2 = aHa_Sub3_4111.getUniformLocation(false);
                                         class101_sub2.setScale(1.0F, f, f, (byte) -65);
-                                        class101_sub2.decodedOperation891(-i_30_, -i_27_, 0);
+                                        class101_sub2.method891(-i_30_, -i_27_, 0);
                                         aHa_Sub3_4111.deleteVertexArrays(i ^ ~0x9f, Component302.aClass251_6030);
-                                        aClass97ArrayArray4122[i_30_][i_27_].decodedOperation871((byte) 116);
+                                        aClass97ArrayArray4122[i_30_][i_27_].method871((byte) 116);
                                         break while_119_;
                                     }
                                 }
@@ -186,9 +186,9 @@ final class Component301
                             if (interface5_impl2.method22(-23) && i_39_ > 0) {
                                 MatrixSub2 class101_sub2 = aHa_Sub3_4111.getUniformLocation(false);
                                 class101_sub2.setScale(1.0F, f, f, (byte) -62);
-                                class101_sub2.decodedOperation891(-i_38_, -i_35_, 0);
+                                class101_sub2.method891(-i_38_, -i_35_, 0);
                                 aHa_Sub3_4111.deleteVertexArrays(i ^ ~0x9f, (Component302.aClass251_6030));
-                                class97.decodedOperation875(-82, interface5_impl2, i_39_ / 3);
+                                class97.method875(-82, interface5_impl2, i_39_ / 3);
                             }
                         }
                     }
@@ -198,15 +198,15 @@ final class Component301
         aHa_Sub3_4111.getProgramInfoLog(-8629);
     }
 
-    public static void decodedOperation2631(int i) {
+    public static void method2631(int i) {
         int i_47_ = -46 / ((65 - i) / 61);
         aClass114_4126 = null;
     }
 
-    final void decodedOperation2632(int i) {
+    final void method2632(int i) {
         aClass97ArrayArray4122 = new Component263[anInt4121][anInt4118];
         anInt4125++;
-        if (i != 128) decodedOperation2630(-93, -74, 10, false, null, 48);
+        if (i != 128) method2630(-93, -74, 10, false, null, 48);
         for (int i_48_ = 0; anInt4118 > i_48_; i_48_++) {
             for (int i_49_ = 0; i_49_ < anInt4121; i_49_++) {
                 aClass97ArrayArray4122[i_49_][i_48_] = new Component263(aHa_Sub3_4111, this, aS_Sub3_4116, i_49_, i_48_, anInt4124, 128 * i_49_ - -1, 128 * i_48_ + 1);
@@ -215,7 +215,7 @@ final class Component301
         }
     }
 
-    final void decodedOperation2633(int i, int i_50_, r var_r, int i_51_) {
+    final void method2633(int i, int i_50_, r var_r, int i_51_) {
         anInt4120++;
         CacheNodeSub1 var_r_Sub1 = (CacheNodeSub1) var_r;
         i_51_ += var_r_Sub1.anInt10474 + 1;
@@ -254,7 +254,7 @@ final class Component301
             i_56_ += i_61_;
         }
         if (i_55_ > 0 && i_54_ > 0) {
-            DisplayModeManagerContainer153.decodedOperation880(i_55_, this.aByteArray4112, var_r_Sub1.aByteArray10471, i_53_, i + 13593, i_54_, i_52_, i_56_, i_58_);
+            DisplayModeManagerContainer153.method880(i_55_, this.aByteArray4112, var_r_Sub1.aByteArray10471, i_53_, i + 13593, i_54_, i_52_, i_56_, i_58_);
             method2634(i_51_, -1, i_50_, i_54_, i_55_);
         }
     }

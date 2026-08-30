@@ -17,7 +17,7 @@ final class Component299
     private HashNode aClass348_Sub42_454;
     static int anInt455;
 
-    final HashNode decodedOperation334(long l, byte i) {
+    final HashNode method334(long l, byte i) {
         try {
             aLong453 = l;
             anInt449++;
@@ -37,7 +37,7 @@ final class Component299
         }
     }
 
-    final void decodedOperation335(HashNode class348_sub42, int i, long l) {
+    final void method335(HashNode class348_sub42, int i, long l) {
         try {
             anInt447++;
             if (i != -8098) aClass348_Sub42_454 = null;
@@ -63,7 +63,7 @@ final class Component299
         }
     }
 
-    final HashNode decodedOperation336(boolean bool) {
+    final HashNode method336(boolean bool) {
         anInt455++;
         if (aClass348_Sub42_454 == null) return null;
         if (bool != true) return null;

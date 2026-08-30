@@ -53,9 +53,9 @@ abstract class SpriteSub3
     static int scanlineY;
     private static int anInt8482;
 
-    abstract void decodedOperation964(int i, int i_0_, int i_1_, int i_2_, int i_3_);
+    abstract void method964(int i, int i_0_, int i_1_, int i_2_, int i_3_);
 
-    final int decodedOperation971() {
+    final int method971() {
         return this.spriteWidth;
     }
 
@@ -67,25 +67,25 @@ abstract class SpriteSub3
     }
 
     final void method965(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
-        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
+        if (this.toolkit.method3716()) throw new IllegalStateException();
         if (anIntArray8462 == null) anIntArray8462 = new int[4];
         this.toolkit.K(anIntArray8462);
         this.toolkit.T(this.toolkit.anInt7496, this.toolkit.anInt7476, i + i_5_, i_4_ + i_6_);
-        int i_10_ = decodedOperation966();
-        int i_11_ = decodedOperation980();
+        int i_10_ = method966();
+        int i_11_ = method980();
         int i_12_ = (i_5_ + i_10_ - 1) / i_10_;
         int i_13_ = (i_6_ + i_11_ - 1) / i_11_;
         for (int i_14_ = 0; i_14_ < i_13_; i_14_++) {
             int i_15_ = i_14_ * i_11_;
             for (int i_16_ = 0; i_16_ < i_12_; i_16_++)
-                decodedOperation964(i + i_16_ * i_10_, i_4_ + i_15_, i_7_, i_8_, i_9_);
+                method964(i + i_16_ * i_10_, i_4_ + i_15_, i_7_, i_8_, i_9_);
         }
         this.toolkit.KA(anIntArray8462[0], anIntArray8462[1], anIntArray8462[2], anIntArray8462[3]);
     }
 
     final void method983(float f, float f_17_, float f_18_, float f_19_, float f_20_, float f_21_, int i, Shader var_aa, int i_22_, int i_23_) {
-        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
-        if (decodedOperation997(f, f_17_, f_18_, f_19_, f_20_, f_21_)) {
+        if (this.toolkit.method3716()) throw new IllegalStateException();
+        if (method997(f, f_17_, f_18_, f_19_, f_20_, f_21_)) {
             ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             method995(var_aa_Sub3.anIntArray5201, var_aa_Sub3.anIntArray5202, anInt8473 - i_22_, -i_23_ - (anInt8468 - anInt8466));
         }
@@ -103,8 +103,8 @@ abstract class SpriteSub3
     abstract void method995(int[] is, int[] is_28_, int i, int i_29_);
 
     final void method962(float f, float f_30_, float f_31_, float f_32_, float f_33_, float f_34_, int i, int i_35_, int i_36_, int i_37_) {
-        if (this.toolkit.decodedOperation3716()) throw new IllegalStateException();
-        if (decodedOperation997(f, f_30_, f_31_, f_32_, f_33_, f_34_)) {
+        if (this.toolkit.method3716()) throw new IllegalStateException();
+        if (method997(f, f_30_, f_31_, f_32_, f_33_, f_34_)) {
             anInt8480 = i_35_;
             if (i != 1) {
                 spriteAlpha = i_35_ >>> 24;
@@ -145,11 +145,11 @@ abstract class SpriteSub3
 
     abstract void method982(int i, int i_48_, int i_49_, int i_50_, int i_51_, int i_52_, int i_53_, int i_54_);
 
-    final int decodedOperation969() {
+    final int method969() {
         return this.spriteHeight;
     }
 
-    final int decodedOperation980() {
+    final int method980() {
         return (this.anInt8464 + this.spriteHeight + this.anInt8456);
     }
 
@@ -159,13 +159,13 @@ abstract class SpriteSub3
         this.spriteHeight = i_55_;
     }
 
-    final int decodedOperation966() {
+    final int method966() {
         return (this.anInt8461 + this.spriteWidth + this.anInt8454);
     }
 
     abstract void method963(int i, int i_56_, Shader var_aa, int i_57_, int i_58_);
 
-    private final boolean decodedOperation997(float f, float f_59_, float f_60_, float f_61_, float f_62_, float f_63_) {
+    private final boolean method997(float f, float f_59_, float f_60_, float f_61_, float f_62_, float f_63_) {
         int i = (this.anInt8461 + this.spriteWidth + this.anInt8454);
         int i_64_ = (this.anInt8464 + this.spriteHeight + this.anInt8456);
         if (i != this.spriteWidth || i_64_ != this.spriteHeight) {

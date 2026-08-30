@@ -18,16 +18,16 @@ final class Component188
     static int anInt6142;
     static int anInt6143;
 
-    static final boolean decodedOperation1842(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+    static final boolean method1842(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
         anInt6134++;
         if (i_1_ != -1) return false;
         if (i_3_ >= i + i_5_ || i_3_ - -i_6_ <= i_5_) return false;
         return i_0_ + i_7_ > i_4_ && i_0_ < i_2_ + i_4_;
     }
 
-    static final void decodedOperation1843(int i, int i_8_, DisplayModeManagerContainer57 class46, boolean bool, int i_9_) {
+    static final void method1843(int i, int i_8_, DisplayModeManagerContainer57 class46, boolean bool, int i_9_) {
         anInt6135++;
-        if (i_8_ != -326) decodedOperation1844(32, -33, false, 1, false, 64, -83);
+        if (i_8_ != -326) method1844(32, -33, false, 1, false, 64, -83);
         int i_10_ = class46.width;
         int i_11_ = class46.height;
         if (class46.widthMode == 0) class46.width = class46.baseWidth;
@@ -59,7 +59,7 @@ final class Component188
         }
     }
 
-    static final void decodedOperation1844(int i, int i_12_, boolean bool, int i_13_, boolean bool_14_, int i_15_, int i_16_) {
+    static final void method1844(int i, int i_12_, boolean bool, int i_13_, boolean bool_14_, int i_15_, int i_16_) {
         HashNodeSub4.anInt9515 = i_13_;
         Component300.anInt3550 = i_16_;
         if (bool_14_ == false) {
@@ -70,7 +70,7 @@ final class Component188
             if (bool && GlFramebufferTexture.anInt8537 >= 100) {
                 Component317.anInt8685 = 256 + 512 * Component300.anInt3550;
                 WaterSurfaceShader.anInt6246 = 256 + NodeSub35.anInt6981 * 512;
-                DisplayModeManagerContainer50.anInt3855 = (Component300.decodedOperation2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685) + -HashNodeSub4.anInt9515);
+                DisplayModeManagerContainer50.anInt3855 = (Component300.method2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685) + -HashNodeSub4.anInt9515);
             }
             DefinitionSub21.cameraMode = 2;
             JaclibLoader.anInt167 = ShaderLinker.anInt10163 = -1;
@@ -92,7 +92,7 @@ final class Component188
     }
 
     final void validateValue(boolean bool) {
-        if (bool != false) decodedOperation1847(null, 64);
+        if (bool != false) method1847(null, 64);
         anInt6142++;
         if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = getDefaultValue(20014);
     }
@@ -103,19 +103,19 @@ final class Component188
         return 1;
     }
 
-    final int decodedOperation1845(int i) {
+    final int method1845(int i) {
         anInt6141++;
         if (i != -32350) return -127;
         return this.preferenceValue;
     }
 
-    static final boolean decodedOperation1846(int i, int i_18_, int i_19_) {
+    static final boolean method1846(int i, int i_18_, int i_19_) {
         if (i_19_ <= 42) return true;
         anInt6143++;
-        return DisplayModeManagerContainer347.decodedOperation2075(i_18_, -126, i) | (0x40000 & i_18_) != 0 || Component224.decodedOperation2056(i_18_, 122, i);
+        return DisplayModeManagerContainer347.method2075(i_18_, -126, i) | (0x40000 & i_18_) != 0 || Component224.method2056(i_18_, 122, i);
     }
 
-    static final String[] decodedOperation1847(String[] strings, int i) {
+    static final String[] method1847(String[] strings, int i) {
         anInt6140++;
         String[] strings_20_ = new String[5];
         for (int i_21_ = i; i_21_ < 5; i_21_++) {

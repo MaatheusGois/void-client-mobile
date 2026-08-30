@@ -24,12 +24,12 @@ final class Component184
     int ascent;
     int descent;
 
-    public static void decodedOperation1180(byte i) {
-        if (i != -76) decodedOperation1180((byte) 27);
+    public static void method1180(byte i) {
+        if (i != -76) method1180((byte) 27);
         aClass351_1987 = null;
     }
 
-    final String decodedOperation1181(Component24[] class105s, int i, String string, byte i_0_) {
+    final String method1181(Component24[] class105s, int i, String string, byte i_0_) {
         try {
             anInt1989++;
             if (i >= method1186(string, class105s, false)) return string;
@@ -59,7 +59,7 @@ final class Component184
                                                     try {
                                                         int i_8_ = (NodeSub41.parseInt(true, (string_7_.substring(4))));
                                                         i_2_ = -1;
-                                                        i_3_ += (class105s[i_8_].decodedOperation966());
+                                                        i_3_ += (class105s[i_8_].method966());
                                                         if (i_3_ > i) return (string_5_ + "...");
                                                         string_5_ = (string.substring(0, i_6_ - -1));
                                                     } catch (Exception exception) {
@@ -76,7 +76,7 @@ final class Component184
                         } else c = '<';
                     }
                     if (i_1_ == -1) {
-                        i_3_ += 0xff & (aByteArray1986[Component160.decodedOperation3464(c, false) & 0xff]);
+                        i_3_ += 0xff & (aByteArray1986[Component160.method3464(c, false) & 0xff]);
                         if (aByteArrayArray1979 != null && i_2_ != -1) i_3_ += aByteArrayArray1979[i_2_][c];
                         i_2_ = c;
                         int i_9_ = i_3_;
@@ -101,7 +101,7 @@ final class Component184
 
     final int stringWidth(boolean bool, String string) {
         anInt1981++;
-        if (bool != true) decodedOperation1181(null, 54, null, (byte) 21);
+        if (bool != true) method1181(null, 54, null, (byte) 21);
         return method1186(string, null, false);
     }
 
@@ -111,7 +111,7 @@ final class Component184
         return 0xff & aByteArray1986[i_11_];
     }
 
-    final int decodedOperation1185(Component24[] class105s, int i, int i_12_, int i_13_, String string) {
+    final int method1185(Component24[] class105s, int i, int i_12_, int i_13_, String string) {
         try {
             anInt1990++;
             if (i_12_ == i) i_12_ = this.ascent;
@@ -152,7 +152,7 @@ final class Component184
                                                     try {
                                                         int i_21_ = (NodeSub41.parseInt(true, (string_20_.substring(4))));
                                                         i_16_ = -1;
-                                                        i_17_ += (class105s[i_21_].decodedOperation966());
+                                                        i_17_ += (class105s[i_21_].method966());
                                                     } catch (Exception exception) {
                                                         /* empty */
                                                     }
@@ -166,7 +166,7 @@ final class Component184
                         } else c = '>';
                     }
                     if (i == -1) {
-                        i_17_ += 0xff & (aByteArray1986[Component160.decodedOperation3464(c, false) & 0xff]);
+                        i_17_ += 0xff & (aByteArray1986[Component160.method3464(c, false) & 0xff]);
                         if (aByteArrayArray1979 != null && i_16_ != -1) i_17_ += aByteArrayArray1979[i_16_][c];
                         i_16_ = c;
                     }
@@ -178,7 +178,7 @@ final class Component184
         }
     }
 
-    final int decodedOperation1187(String string, boolean bool, int i, Component24[] class105s) {
+    final int method1187(String string, boolean bool, int i, Component24[] class105s) {
         try {
             anInt1984++;
             int i_22_ = method1188(string, new int[]{i}, DisplayModeManagerContainer51.aStringArray2494, (byte) 87, class105s);
@@ -197,7 +197,7 @@ final class Component184
     final int method1188(String string, int[] is, String[] strings, byte i, Component24[] class105s) {
         try {
             anInt1978++;
-            if (i != 87) decodedOperation1190(null, 80, null, 55);
+            if (i != 87) method1190(null, 80, null, 55);
             if (string == null) return 0;
             int i_26_ = 0;
             int i_27_ = 0;
@@ -209,7 +209,7 @@ final class Component184
             int i_33_ = 0;
             int i_34_ = string.length();
             for (int i_35_ = 0; i_34_ > i_35_; i_35_++) {
-                int i_36_ = Component160.decodedOperation3464(string.charAt(i_35_), false) & 0xff;
+                int i_36_ = Component160.method3464(string.charAt(i_35_), false) & 0xff;
                 int i_37_ = 0;
                 if (i_36_ == 60) i_31_ = i_35_;
                 else {
@@ -270,7 +270,7 @@ final class Component184
                             try {
                                 int i_40_ = (NodeSub41.parseInt(true, (string_39_.substring(4))));
                                 i_32_ = -1;
-                                i_37_ += class105s[i_40_].decodedOperation966();
+                                i_37_ += class105s[i_40_].method966();
                             } catch (Exception exception) {
                                 /* empty */
                             }
@@ -322,17 +322,17 @@ final class Component184
         }
     }
 
-    static final void decodedOperation1189(int i, int i_41_) {
+    static final void method1189(int i, int i_41_) {
         anInt1991++;
         if (i != -1) aClass351_1987 = null;
         ColorTagNode class348_sub15 = ((ColorTagNode) DisplayModeManagerContainer91.aClass356_389.get(i_41_, -6008));
         if (class348_sub15 != null) {
             class348_sub15.aBoolean6781 = !class348_sub15.aBoolean6781;
-            class348_sub15.aClass55_Sub1_6768.decodedOperation514((byte) 116, class348_sub15.aBoolean6781);
+            class348_sub15.aClass55_Sub1_6768.method514((byte) 116, class348_sub15.aBoolean6781);
         }
     }
 
-    final int decodedOperation1190(Component24[] class105s, int i, String string, int i_42_) {
+    final int method1190(Component24[] class105s, int i, String string, int i_42_) {
         try {
             anInt1983++;
             if (i != 1) this.ascent = -13;
@@ -378,7 +378,7 @@ final class Component184
             for (int i_55_ = 0; i_55_ < 256; i_55_++) {
                 if (i_55_ != 32 && i_55_ != 160) {
                     for (int i_56_ = 0; i_56_ < 256; i_56_++) {
-                        if (i_56_ != 32 && i_56_ != 160) aByteArrayArray1979[i_55_][i_56_] = (byte) (DisplayModeManagerContainer295.decodedOperation1756(aByteArray1986, -34, i_56_, i_55_, is_47_, is_51_, is_44_, is_43_));
+                        if (i_56_ != 32 && i_56_ != 160) aByteArrayArray1979[i_55_][i_56_] = (byte) (DisplayModeManagerContainer295.method1756(aByteArray1986, -34, i_56_, i_55_, is_47_, is_51_, is_44_, is_43_));
                     }
                 }
             }

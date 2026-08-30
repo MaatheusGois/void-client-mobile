@@ -11,14 +11,14 @@ final class Component177
     static StringCache aClass351_2109 = new StringCache(19, -1);
     static boolean aBoolean2110 = false;
 
-    public static void decodedOperation1236(byte i) {
+    public static void method1236(byte i) {
         aClass351_2109 = null;
-        if (i >= -78) decodedOperation1237((byte) 54, null);
+        if (i >= -78) method1237((byte) 54, null);
     }
 
-    static final void decodedOperation1237(byte i, DisplayModeManagerContainer57 class46) {
+    static final void method1237(byte i, DisplayModeManagerContainer57 class46) {
         anInt2108++;
-        if (i < 69) decodedOperation1236((byte) -52);
+        if (i < 69) method1236((byte) -52);
         if (r.aBoolean9722) {
             HuffmanDecoder.anInt3775++;
             if (class46.anObjectArray679 != null) {

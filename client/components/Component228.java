@@ -25,20 +25,20 @@ final class Component228
     static int anInt3013;
     static int[] anIntArray3014 = new int[1];
 
-    final void decodedOperation1643(byte[] is, int i, int i_0_, byte i_1_) {
+    final void method1643(byte[] is, int i, int i_0_, byte i_1_) {
         aClass119_Sub2_3011.method35(is, i, 110, aHa_Sub2_3000.setStencilOp(i, 4) * i_0_);
         anInt3005++;
         method1646(aClass119_Sub2_3011, 113, i_0_);
         if (i_1_ < 8) method1648((byte) 82);
     }
 
-    final void decodedOperation1644(byte i) {
+    final void method1644(byte i) {
         if (i > -83) anInt3006 = -60;
         anInt3013++;
         method1646(anInterface8_3001, 115, anInt3008);
     }
 
-    public static void decodedOperation1645(int i) {
+    public static void method1645(int i) {
         if (i >= 35) anIntArray3014 = null;
     }
 
@@ -46,17 +46,17 @@ final class Component228
         anInt3007++;
         if (i_2_ != 0) {
             method1648((byte) 121);
-            if (i <= 107) decodedOperation1647(-124, -86);
+            if (i <= 107) method1647(-124, -86);
             aHa_Sub2_3000.bindTexture((byte) -93, aClass258_Sub3_2998);
             aHa_Sub2_3000.glDrawElements(i_2_, -128, 4, interface8, 0);
         }
     }
 
-    static final void decodedOperation1647(int i, int i_3_) {
+    static final void method1647(int i, int i_3_) {
         if (i != -128) anIntArray3014 = null;
         anInt3012++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_3_, (byte) 105, 1);
-        class348_sub42_sub15.decodedOperation3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_3_, (byte) 105, 1);
+        class348_sub42_sub15.method3251(-16058);
     }
 
     Component228(GlToolkitSub2 var_ha_Sub2, Component65 class104, BufferCacheSub2 var_s_Sub2, int i, int i_4_, int i_5_, int i_6_, int i_7_) {
@@ -103,7 +103,7 @@ final class Component228
                         }
                     }
                 }
-                anInterface8_3001 = (aHa_Sub2_3000.decodedOperation3733(5123, -39, class348_sub49.offset, class348_sub49.payload, false));
+                anInterface8_3001 = (aHa_Sub2_3000.method3733(5123, -39, class348_sub49.offset, class348_sub49.payload, false));
                 aClass119_Sub2_3011 = new Component261(aHa_Sub2_3000, 5123, null, 1);
             }
         } catch (RuntimeException runtimeexception) {
@@ -149,9 +149,9 @@ final class Component228
                     }
                     if (aClass258_Sub3_2998 == null) {
                         aClass258_Sub3_2998 = new GlTexture(aHa_Sub2_3000, 3553, 6406, 128, 128, false, (aHa_Sub2_3000.aByteArray7879), 6406, false);
-                        aClass258_Sub3_2998.decodedOperation1965(false, false, 10243);
-                        aClass258_Sub3_2998.decodedOperation1957(9728, true);
-                    } else aClass258_Sub3_2998.decodedOperation1970(0, 0, 128, false, 0, 128, 6406, -69, aHa_Sub2_3000.aByteArray7879, 0);
+                        aClass258_Sub3_2998.method1965(false, false, 10243);
+                        aClass258_Sub3_2998.method1957(9728, true);
+                    } else aClass258_Sub3_2998.method1970(0, 0, 128, false, 0, 128, 6406, -69, aHa_Sub2_3000.aByteArray7879, 0);
                 }
             }
         }

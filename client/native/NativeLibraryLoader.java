@@ -116,19 +116,19 @@ final class NativeLibraryLoader {
         return Player.aHashtable10565.isEmpty();
     }
 
-    static final void decodedOperation1630(int i, int i_6_, int i_7_) {
+    static final void method1630(int i, int i_6_, int i_7_) {
         if (DisplayModeManagerContainer229.aFloat1249 > DisplayModeManagerContainer229.aFloat1247) {
             DisplayModeManagerContainer229.aFloat1247 += (double) DisplayModeManagerContainer229.aFloat1247 / 30.0;
             if (DisplayModeManagerContainer229.aFloat1249 < DisplayModeManagerContainer229.aFloat1247) DisplayModeManagerContainer229.aFloat1247 = DisplayModeManagerContainer229.aFloat1249;
-            ColorTagNode.decodedOperation2811(false);
+            ColorTagNode.method2811(false);
             DisplayModeManagerContainer229.anInt1255 = (int) DisplayModeManagerContainer229.aFloat1247 >> 1;
-            DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.decodedOperation2596(DisplayModeManagerContainer229.anInt1255, 12871);
+            DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.method2596(DisplayModeManagerContainer229.anInt1255, 12871);
         } else if (DisplayModeManagerContainer229.aFloat1247 > DisplayModeManagerContainer229.aFloat1249) {
             DisplayModeManagerContainer229.aFloat1247 -= (double) DisplayModeManagerContainer229.aFloat1247 / 30.0;
             if (DisplayModeManagerContainer229.aFloat1249 > DisplayModeManagerContainer229.aFloat1247) DisplayModeManagerContainer229.aFloat1247 = DisplayModeManagerContainer229.aFloat1249;
-            ColorTagNode.decodedOperation2811(false);
+            ColorTagNode.method2811(false);
             DisplayModeManagerContainer229.anInt1255 = (int) DisplayModeManagerContainer229.aFloat1247 >> 1;
-            DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.decodedOperation2596(DisplayModeManagerContainer229.anInt1255, i + 12871);
+            DisplayModeManagerContainer229.aByteArrayArrayArray1251 = ColoredTextBuilder.method2596(DisplayModeManagerContainer229.anInt1255, i + 12871);
         }
         anInt2971++;
         if (i != (~ModelStore.anInt4609) && Component377.anInt859 != -1) {
@@ -142,7 +142,7 @@ final class NativeLibraryLoader {
                 ModelStore.anInt4609 = -1;
                 Component377.anInt859 = -1;
             }
-            ColorTagNode.decodedOperation2811(false);
+            ColorTagNode.method2811(false);
         }
         if (WaterShader.anInt7379 > 0) {
             LoadingManager.anInt2173--;
@@ -156,8 +156,8 @@ final class NativeLibraryLoader {
         }
         if (Component163.aBoolean3174 && Component156.aClass262_3705 != null) {
             for (NodeSub12 class348_sub12 = (NodeSub12) Component156.aClass262_3705.first(4); class348_sub12 != null; class348_sub12 = ((NodeSub12) Component156.aClass262_3705.next((byte) 116))) {
-                Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.decodedOperation1225(class348_sub12.aClass348_Sub21_6751.anInt6847, (byte) 125));
-                if (class348_sub12.decodedOperation2799(i_6_, i_7_, 95)) {
+                Component274 class42 = (DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub12.aClass348_Sub21_6751.anInt6847, (byte) 125));
+                if (class348_sub12.method2799(i_6_, i_7_, 95)) {
                     if (class42.aStringArray577 != null) {
                         if (class42.aStringArray577[4] != null) DisplayModeManagerContainer368.addMenuEntry(false, class42.aString565, 0, (byte) -100, false, class42.anInt596, -1, true, 1006, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.aStringArray577[4], class348_sub12.aClass348_Sub21_6751.anInt6847, -1);
                         if (class42.aStringArray577[3] != null) DisplayModeManagerContainer368.addMenuEntry(false, class42.aString565, 0, (byte) -127, false, class42.anInt596, -1, true, 1003, class348_sub12.aClass348_Sub21_6751.anInt6847, class42.aStringArray577[3], class348_sub12.aClass348_Sub21_6751.anInt6847, -1);

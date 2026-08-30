@@ -23,23 +23,23 @@ final class Component122
     static int anInt1570;
     static int anInt1571;
 
-    static final boolean decodedOperation877(int i, int i_0_, byte i_1_) {
+    static final boolean method877(int i, int i_0_, byte i_1_) {
         if (i_1_ != -127) anIntArrayArray1566 = null;
         anInt1567++;
-        return ShaderProgramSub9.decodedOperation2174((byte) 126, i, i_0_) || Connection.decodedOperation1475((byte) -107, i_0_, i);
+        return ShaderProgramSub9.method2174((byte) 126, i, i_0_) || Connection.method1475((byte) -107, i_0_, i);
     }
 
-    static final byte[] decodedOperation878(String string, int i) {
+    static final byte[] method878(String string, int i) {
         anInt1571++;
         int i_2_ = string.length();
         if (i_2_ == 0) return new byte[0];
         int i_3_ = ~0x3 & 3 + i_2_;
         int i_4_ = i_3_ / 4 * 3;
-        if (i_3_ + -2 >= i_2_ || Component134.decodedOperation1399(7, string.charAt(i_3_ + -2)) == -1) i_4_ -= 2;
-        else if (i_2_ <= i_3_ + -1 || Component134.decodedOperation1399(7, string.charAt(i_3_ - 1)) == -1) i_4_--;
-        if (i > -92) decodedOperation877(-51, -45, (byte) -74);
+        if (i_3_ + -2 >= i_2_ || Component134.method1399(7, string.charAt(i_3_ + -2)) == -1) i_4_ -= 2;
+        else if (i_2_ <= i_3_ + -1 || Component134.method1399(7, string.charAt(i_3_ - 1)) == -1) i_4_--;
+        if (i > -92) method877(-51, -45, (byte) -74);
         byte[] is = new byte[i_4_];
-        RenderableSub2.decodedOperation2497(is, (byte) 0, string, 0);
+        RenderableSub2.method2497(is, (byte) 0, string, 0);
         return is;
     }
 
@@ -47,7 +47,7 @@ final class Component122
         /* empty */
     }
 
-    public static void decodedOperation879(int i) {
+    public static void method879(int i) {
         aClass348_Sub16_Sub3_1564 = null;
         if (i > 67) anIntArrayArray1566 = null;
     }

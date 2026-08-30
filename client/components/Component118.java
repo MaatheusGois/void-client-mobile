@@ -18,25 +18,25 @@ class Component118
     static int anInt4957;
     int anInt4958;
 
-    public static void decodedOperation2185(int i) {
+    public static void method2185(int i) {
         WIP = null;
         if (i != 2) WIP = null;
     }
 
-    static final int decodedOperation2186(byte i, String string) {
+    static final int method2186(byte i, String string) {
         anInt4954++;
-        if (i != -114) decodedOperation2187(-85, -44, 56);
+        if (i != -114) method2187(-85, -44, 56);
         return string.length() + 2;
     }
 
-    static final boolean decodedOperation2187(int i, int i_0_, int i_1_) {
+    static final boolean method2187(int i, int i_0_, int i_1_) {
         anInt4956++;
-        if (i_0_ > -70) decodedOperation2187(-57, -121, 54);
-        return ((Node.decodedOperation2709(i_1_, i, -1) | DisplayModeManagerContainer369.decodedOperation1613(false, i_1_, i) | Component40.decodedOperation2259(0, i_1_, i)) & DisplayModeManagerContainer370.decodedOperation616(2, i, i_1_));
+        if (i_0_ > -70) method2187(-57, -121, 54);
+        return ((Node.method2709(i_1_, i, -1) | DisplayModeManagerContainer369.method1613(false, i_1_, i) | Component40.method2259(0, i_1_, i)) & DisplayModeManagerContainer370.method616(2, i, i_1_));
     }
 
     public DisplayModeManagerContainer369 method51(byte i) {
-        if (i <= 116) decodedOperation2186((byte) 116, null);
+        if (i <= 116) method2186((byte) 116, null);
         anInt4957++;
         return DefinitionSub21.aClass223_9274;
     }

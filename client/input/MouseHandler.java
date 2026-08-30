@@ -41,8 +41,8 @@ abstract class MouseHandler {
         if (class181 != null) return class181;
         byte[] is = Component205.aClass45_5964.getFile(-1860, i_0_, i);
         class181 = new Component113();
-        if (is != null) class181.decodedOperation1370(24, new Buffer(is));
-        class181.decodedOperation1371(4);
+        if (is != null) class181.method1370(24, new Buffer(is));
+        class181.method1371(4);
         Component298.aClass60_4636.putOne(class181, i, (byte) -103);
         return class181;
     }

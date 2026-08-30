@@ -29,7 +29,7 @@ final class Component309
     NodeCache aClass60_3362;
     int anInt3363;
 
-    final void decodedOperation2004(boolean bool, byte i) {
+    final void method2004(boolean bool, byte i) {
         anInt3346++;
         if (bool == !this.aBoolean3359) {
             this.aBoolean3359 = bool;
@@ -48,13 +48,13 @@ final class Component309
         if (class51 != null) return class51;
         byte[] is;
         synchronized (aClass45_3343) {
-            is = aClass45_3343.getFile(i + -1860, Component284.decodedOperation1850(i_0_, 111), Component364.decodedOperation185(i_0_, (byte) -90));
+            is = aClass45_3343.getFile(i + -1860, Component284.method1850(i_0_, 111), Component364.method185(i_0_, (byte) -90));
         }
         class51 = new Component44();
         class51.anInt941 = i_0_;
         class51.aClass263_933 = this;
-        if (is != null) class51.decodedOperation479((byte) 0, new Buffer(is));
-        class51.decodedOperation488(-105);
+        if (is != null) class51.method479((byte) 0, new Buffer(is));
+        class51.method488(-105);
         if (i != 0) this.aClass60_3361 = null;
         if (!this.aBoolean3359 && class51.aBoolean942) {
             class51.anIntArray917 = null;
@@ -70,7 +70,7 @@ final class Component309
         return class51;
     }
 
-    final void decodedOperation2006(int i) {
+    final void method2006(int i) {
         if (i >= 68) {
             anInt3353++;
             synchronized (aClass60_3350) {
@@ -88,7 +88,7 @@ final class Component309
         }
     }
 
-    static final boolean decodedOperation2007(int i, int i_1_, int i_2_, CollisionMap class361, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
+    static final boolean method2007(int i, int i_1_, int i_2_, CollisionMap class361, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         anInt3354++;
         int i_10_ = i_8_;
         int i_11_ = i_4_;
@@ -97,7 +97,7 @@ final class Component309
         int i_14_ = -i_12_ + i_8_;
         int i_15_ = -i_13_ + i_4_;
         r.anIntArrayArray9723[i_12_][i_13_] = 99;
-        if (i_1_ >= -27) decodedOperation2011((byte) 103);
+        if (i_1_ >= -27) method2011((byte) 103);
         DisplayModeManagerContainer369.anIntArrayArray2900[i_12_][i_13_] = 0;
         int i_16_ = 0;
         OpenGlShader.anIntArray7397[i_16_] = i_10_;
@@ -138,7 +138,7 @@ final class Component309
                                     } else break;
                                     break while_82_;
                                 }
-                                if (Component188.decodedOperation1842(i_5_, i_2_, -1, 2, i_10_, i_11_, i_3_, 2, i_6_)) {
+                                if (Component188.method1842(i_5_, i_2_, -1, 2, i_10_, i_11_, i_3_, 2, i_6_)) {
                                     Component95.anInt1753 = i_11_;
                                     DefinitionSub30.anInt9388 = i_10_;
                                     return true;
@@ -152,7 +152,7 @@ final class Component309
                             }
                             break while_85_;
                         } while (false);
-                        if (class361.decodedOperation3503(i_10_, (byte) -82, i_2_, 2, i_6_, i_5_, i_7_, i_11_, i_3_)) {
+                        if (class361.method3503(i_10_, (byte) -82, i_2_, 2, i_6_, i_5_, i_7_, i_11_, i_3_)) {
                             DefinitionSub30.anInt9388 = i_10_;
                             Component95.anInt1753 = i_11_;
                             return true;
@@ -166,7 +166,7 @@ final class Component309
                     }
                     break while_85_;
                 } while (false);
-                if (class361.decodedOperation3504(i_2_, i_11_, i_3_, i_10_, i, 1, i_9_, 2)) {
+                if (class361.method3504(i_2_, i_11_, i_3_, i_10_, i, 1, i_9_, 2)) {
                     DefinitionSub30.anInt9388 = i_10_;
                     Component95.anInt1753 = i_11_;
                     return true;
@@ -235,7 +235,7 @@ final class Component309
         return false;
     }
 
-    final void decodedOperation2008(int i, boolean bool) {
+    final void method2008(int i, boolean bool) {
         anInt3344++;
         if (!this.aBoolean3355 == bool) {
             this.aBoolean3355 = bool;
@@ -244,7 +244,7 @@ final class Component309
         }
     }
 
-    final void decodedOperation2009(int i, byte i_21_) {
+    final void method2009(int i, byte i_21_) {
         this.anInt3363 = i;
         anInt3348++;
         synchronized (this.aClass60_3360) {
@@ -259,7 +259,7 @@ final class Component309
         }
     }
 
-    final void decodedOperation2010(int i, int i_22_) {
+    final void method2010(int i, int i_22_) {
         anInt3349++;
         synchronized (aClass60_3350) {
             aClass60_3350.processSoftEntries(2, i);
@@ -272,11 +272,11 @@ final class Component309
         }
         synchronized (this.aClass60_3362) {
             this.aClass60_3362.processSoftEntries(2, i);
-            if (i_22_ != -1) decodedOperation2013(null, (byte) 96);
+            if (i_22_ != -1) method2013(null, (byte) 96);
         }
     }
 
-    public static void decodedOperation2011(byte i) {
+    public static void method2011(byte i) {
         anIntArray3347 = null;
         if (i > -19) aCharArray3352 = null;
         aCharArray3352 = null;
@@ -298,8 +298,8 @@ final class Component309
         }
     }
 
-    static final void decodedOperation2013(byte[] is, byte i) {
-        if (i != 112) decodedOperation2007(84, 119, -100, null, 92, -110, 96, 62, 31, 11, 62);
+    static final void method2013(byte[] is, byte i) {
+        if (i != 112) method2007(84, 119, -100, null, 92, -110, 96, 62, 31, 11, 62);
         anInt3357++;
         Buffer class348_sub49 = new Buffer(is);
         for (; ; ) {
@@ -331,7 +331,7 @@ final class Component309
         }
     }
 
-    final void decodedOperation2014(int i, boolean bool) {
+    final void method2014(int i, boolean bool) {
         aClass60_3350 = new NodeCache(i);
         anInt3358++;
         if (bool != true) this.aClass60_3362 = null;

@@ -14,13 +14,13 @@ final class DefinitionSub20
     static HardwareProbe aClass348_Sub4_9264;
     static int anInt9265;
 
-    static final void decodedOperation3102(int i) {
+    static final void method3102(int i) {
         if (i != 22385) aClass348_Sub4_9264 = null;
         anInt9265++;
         Component9.aClass60_4139.purgeSoftReferences(-110);
     }
 
-    private final int decodedOperation3103(int i, int i_0_, int i_1_) {
+    private final int method3103(int i, int i_0_, int i_1_) {
         anInt9262++;
         if (i_1_ < 14) aClass348_Sub4_9264 = null;
         int i_2_ = i_0_ - -(57 * i);
@@ -32,7 +32,7 @@ final class DefinitionSub20
         super(0, true);
     }
 
-    public static void decodedOperation3104(boolean bool) {
+    public static void method3104(boolean bool) {
         if (bool == false) {
             aClass348_Sub4_9264 = null;
             RC = null;
@@ -45,7 +45,7 @@ final class DefinitionSub20
         if (this.imageCache.cacheMiss) {
             int i_4_ = Component302.anIntArray6035[i];
             for (int i_5_ = 0; (i_5_ < DefinitionSub6.anInt9139); i_5_++)
-                is[i_5_] = decodedOperation3103(i_4_, RenderableSub6.anIntArray6432[i_5_], 22) % 4096;
+                is[i_5_] = method3103(i_4_, RenderableSub6.anIntArray6432[i_5_], 22) % 4096;
         }
         if (i_3_ != 255) getMonochromeOutput(38, -42);
         return is;

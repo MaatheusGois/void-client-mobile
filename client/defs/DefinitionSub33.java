@@ -19,7 +19,7 @@ final class DefinitionSub33
     static int anInt9429;
     static int anInt9430;
 
-    static final boolean decodedOperation3137(boolean bool, byte i) {
+    static final boolean method3137(boolean bool, byte i) {
         anInt9426++;
         boolean bool_0_ = NodeSub8.toolkit.method3666();
         if (i != -24) return true;
@@ -32,7 +32,7 @@ final class DefinitionSub33
         return true;
     }
 
-    public static void decodedOperation3138(byte i) {
+    public static void method3138(byte i) {
         openInterfaces = null;
         int i_1_ = 93 % ((-58 - i) / 55);
     }
@@ -47,7 +47,7 @@ final class DefinitionSub33
             int[] is_5_ = is[2];
             for (int i_6_ = 0; (DefinitionSub6.anInt9139 > i_6_); i_6_++) {
                 method3139(i_6_, i, (byte) -31);
-                int[][] is_7_ = this.decodedOperation3039((byte) 43, AbstractBuffer.anInt4265, 0);
+                int[][] is_7_ = this.method3039((byte) 43, AbstractBuffer.anInt4265, 0);
                 is_3_[i_6_] = is_7_[0][Component221.anInt1796];
                 is_4_[i_6_] = is_7_[1][Component221.anInt1796];
                 is_5_[i_6_] = is_7_[2][Component221.anInt1796];
@@ -63,14 +63,14 @@ final class DefinitionSub33
         if (this.imageCache.cacheMiss) {
             for (int i_9_ = 0; (i_9_ < DefinitionSub6.anInt9139); i_9_++) {
                 method3139(i_9_, i, (byte) -31);
-                int[] is_10_ = this.decodedOperation3048(AbstractBuffer.anInt4265, i_8_ ^ 0x25c5979e, 0);
+                int[] is_10_ = this.method3048(AbstractBuffer.anInt4265, i_8_ ^ 0x25c5979e, 0);
                 is[i_9_] = is_10_[Component221.anInt1796];
             }
         }
         return is;
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_11_) {
+    final void method3049(Buffer class348_sub49, int i, int i_11_) {
         if (i_11_ != 31015) openInterfaces = null;
         anInt9430++;
         if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;

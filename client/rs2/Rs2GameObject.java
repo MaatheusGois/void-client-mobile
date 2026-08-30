@@ -32,7 +32,7 @@ final class Rs2GameObject {
         if (opcode <= 0) {
             return false;
         }
-        long packed = DefinitionSub21.decodedOperation3107((byte) 95, hit.iface, hit.localY, hit.localX);
+        long packed = DefinitionSub21.method3107((byte) 95, hit.iface, hit.localY, hit.localX);
         String target = "<col=00ffff>" + (hit.def.aString884 != null ? hit.def.aString884 : "");
         NewMenuEntry entry = new NewMenuEntry(act, target, opcode, packed, hit.localX, hit.localY, -1);
         Microbot.doInvoke(entry);
@@ -143,12 +143,12 @@ final class Rs2GameObject {
         }
         Interface10 iface = (Interface10) node;
         try {
-            Component44 def = GradientPreset.aClass263_9195.getDefinition(0, iface.decodedOperation42(-100));
+            Component44 def = GradientPreset.aClass263_9195.getDefinition(0, iface.method42(-100));
             if (def == null) {
                 return null;
             }
             if (def.anIntArray945 != null) {
-                def = def.decodedOperation480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47);
+                def = def.method480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47);
                 if (def == null) {
                     return null;
                 }

@@ -19,9 +19,9 @@ final class Component350
         super(8, 5, 8, 8, 2, 0.1F, 0.55F, 3.0F);
     }
 
-    static final void decodedOperation556(boolean bool) {
+    static final void method556(boolean bool) {
         anInt8656++;
-        if (Component44.aClass311_897 != null) Component44.aClass311_897.decodedOperation2319((byte) -75);
+        if (Component44.aClass311_897 != null) Component44.aClass311_897.method2319((byte) -75);
         if (bool == false) {
             if (NodeSub32.aThread6946 != null) {
                 for (; ; ) {
@@ -36,7 +36,7 @@ final class Component350
         }
     }
 
-    static final Definition decodedOperation557(int i, byte i_0_) {
+    static final Definition method557(int i, byte i_0_) {
         int i_1_ = 22 / ((i_0_ - 37) / 63);
         anInt8653++;
         int i_2_ = i;
@@ -312,7 +312,7 @@ final class Component350
         }
     }
 
-    static final Component35 decodedOperation558(int i) {
+    static final Component35 method558(int i) {
         int i_7_ = -98 % ((i - -34) / 33);
         anInt8658++;
         try {
@@ -322,15 +322,15 @@ final class Component350
         }
     }
 
-    final byte[] decodedOperation559(int i, int i_8_, byte i_9_, int i_10_) {
+    final byte[] method559(int i, int i_8_, byte i_9_, int i_10_) {
         aByteArray8657 = new byte[2 * (i_8_ * i) * i_10_];
         if (i_9_ < 85) aByteArray8657 = null;
         anInt8655++;
-        this.decodedOperation542(i_8_, i, 0, i_10_);
+        this.method542(i_8_, i, 0, i_10_);
         return aByteArray8657;
     }
 
-    static final void decodedOperation560(RenderableSub4 class318_sub4, int i) {
+    static final void method560(RenderableSub4 class318_sub4, int i) {
         try {
             anInt8652++;
             class318_sub4.aClass318_Sub1_6410 = null;
@@ -340,7 +340,7 @@ final class Component350
                 class318_sub4.aClass318_Sub3Array6414[i_13_].aBoolean6401 = false;
             synchronized (Renderable.aClass243Array3974) {
                 if (Renderable.aClass243Array3974.length > i_11_ && Component374.anIntArray4128[i_11_] < 200) {
-                    Renderable.aClass243Array3974[i_11_].decodedOperation1869(-126, class318_sub4);
+                    Renderable.aClass243Array3974[i_11_].method1869(-126, class318_sub4);
                     Component374.anIntArray4128[i_11_]++;
                 }
             }

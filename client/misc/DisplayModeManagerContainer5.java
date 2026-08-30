@@ -15,7 +15,7 @@ final class DisplayModeManagerContainer5
     static Component161 aClass138_1213;
     static boolean[] aBooleanArray1214;
 
-    public static void decodedOperation728(boolean bool) {
+    public static void method728(boolean bool) {
         aClass209_1212 = null;
         aClass76_1208 = null;
         aClass76_1210 = null;
@@ -24,8 +24,8 @@ final class DisplayModeManagerContainer5
         aClass138_1213 = null;
     }
 
-    static final void decodedOperation729(int i, int i_0_, byte i_1_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, int i_2_) {
-        if (i_1_ < 60) decodedOperation728(true);
+    static final void method729(int i, int i_0_, byte i_1_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, int i_2_) {
+        if (i_1_ < 60) method728(true);
         anInt1209++;
         Component241 class225 = class318_sub1_sub3_sub3.getDefinition((byte) 72);
         int i_3_ = 0x3fff & ((class318_sub1_sub3_sub3.anInt10282) - class318_sub1_sub3_sub3.aClass264_10217.anInt3370);
@@ -80,8 +80,8 @@ final class DisplayModeManagerContainer5
                 class318_sub1_sub3_sub3.anInt10268 = class225.anInt2916;
             }
             class318_sub1_sub3_sub3.aBoolean10213 = false;
-        } else if (!(class318_sub1_sub3_sub3.aBoolean10213) || !class225.decodedOperation1623((class318_sub1_sub3_sub3.anInt10268), -118)) {
-            class318_sub1_sub3_sub3.anInt10268 = class225.decodedOperation1621((byte) 37);
+        } else if (!(class318_sub1_sub3_sub3.aBoolean10213) || !class225.method1623((class318_sub1_sub3_sub3.anInt10268), -118)) {
+            class318_sub1_sub3_sub3.anInt10268 = class225.method1621((byte) 37);
             class318_sub1_sub3_sub3.aBoolean10213 = (class318_sub1_sub3_sub3.anInt10268) != -1;
         }
     }

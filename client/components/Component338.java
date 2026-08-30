@@ -27,28 +27,28 @@ abstract class Component338
     /*synthetic*/ static Class aClass1713;
     /*synthetic*/ static Class aClass1714;
 
-    final boolean decodedOperation1029(boolean bool) {
+    final boolean method1029(boolean bool) {
         anInt1707++;
         if (bool != true) aBoolean1712 = false;
         return (this.anInt1708 & 0x1) != 0;
     }
 
-    public static void decodedOperation1030(int i) {
+    public static void method1030(int i) {
         aClass114_1702 = null;
         aClass105_1706 = null;
-        if (i > -19) decodedOperation1034(-89, null, null, -72);
+        if (i > -19) method1034(-89, null, null, -72);
     }
 
-    final boolean decodedOperation1031(int i) {
+    final boolean method1031(int i) {
         int i_0_ = 101 / ((54 - i) / 47);
         anInt1699++;
         return (0x4 & this.anInt1708) != 0;
     }
 
-    static final int decodedOperation1032(int i) {
+    static final int method1032(int i) {
         anInt1701++;
         int i_1_ = 0;
-        if (i != -1) decodedOperation1034(117, null, null, 29);
+        if (i != -1) method1034(117, null, null, 29);
         Field[] fields = (aClass1713 != null ? aClass1713 : (aClass1713 = NodeSub51.class)).getDeclaredFields();
         Field[] fields_2_ = fields;
         for (int i_3_ = 0; fields_2_.length > i_3_; i_3_++) {
@@ -58,13 +58,13 @@ abstract class Component338
         return i_1_ - -1;
     }
 
-    final boolean decodedOperation1033(int i) {
+    final boolean method1033(int i) {
         anInt1703++;
         int i_4_ = -62 % ((i - -5) / 47);
         return (0x8 & this.anInt1708) != 0;
     }
 
-    static final void decodedOperation1034(int i, Buffer class348_sub49, ReflectionInvoker class297, int i_5_) {
+    static final void method1034(int i, Buffer class348_sub49, ReflectionInvoker class297, int i_5_) {
         try {
             anInt1710++;
             NodeSub48 class348_sub48 = new NodeSub48();
@@ -100,8 +100,8 @@ abstract class Component338
                                 class348_sub48.anIntArray7132[i_6_] = i_7_;
                                 Class[] var_classes = new Class[i_9_];
                                 for (int i_13_ = 0; (i_13_ < i_9_); i_13_++)
-                                    var_classes[i_13_] = (PrimitiveTypeDefinition.decodedOperation3052(11012, strings[i_13_]));
-                                class348_sub48.aClass144Array7127[i_6_] = (class297.getDeclaredMethod(var_classes, 76, PrimitiveTypeDefinition.decodedOperation3052(11012, string), string_8_));
+                                    var_classes[i_13_] = (PrimitiveTypeDefinition.method3052(11012, strings[i_13_]));
+                                class348_sub48.aClass144Array7127[i_6_] = (class297.getDeclaredMethod(var_classes, 76, PrimitiveTypeDefinition.method3052(11012, string), string_8_));
                                 class348_sub48.aByteArrayArrayArray7128[i_6_] = is;
                             }
                         } else {
@@ -111,7 +111,7 @@ abstract class Component338
                             if (i_7_ == 1) i_15_ = class348_sub49.readInt((byte) -126);
                             class348_sub48.anIntArray7132[i_6_] = i_7_;
                             class348_sub48.anIntArray7136[i_6_] = i_15_;
-                            class348_sub48.aClass144Array7135[i_6_] = (class297.getDeclaredField(0, string_14_, PrimitiveTypeDefinition.decodedOperation3052(11012, string)));
+                            class348_sub48.aClass144Array7135[i_6_] = (class297.getDeclaredField(0, string_14_, PrimitiveTypeDefinition.method3052(11012, string)));
                         }
                     } catch (ClassNotFoundException classnotfoundexception) {
                         class348_sub48.anIntArray7131[i_6_] = -1;
@@ -132,7 +132,7 @@ abstract class Component338
         }
     }
 
-    static final Sprite decodedOperation1035(int i, int i_16_, Canvas canvas, int i_17_) {
+    static final Sprite method1035(int i, int i_16_, Canvas canvas, int i_17_) {
         anInt1705++;
         if (i != 9029) return null;
         try {
@@ -146,9 +146,9 @@ abstract class Component338
         }
     }
 
-    final boolean decodedOperation1036(byte i) {
+    final boolean method1036(byte i) {
         anInt1709++;
-        if (i != -35) decodedOperation1034(11, null, null, -12);
+        if (i != -35) method1034(11, null, null, -12);
         return (this.anInt1708 & 0x2) != 0;
     }
 

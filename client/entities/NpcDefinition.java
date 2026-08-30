@@ -25,7 +25,7 @@ final class NpcDefinition extends Node {
     static Component135[] aClass359Array6802 = new Component135[2048];
     static int anInt6803;
 
-    static final void decodedOperation2928(boolean bool) {
+    static final void method2928(boolean bool) {
         if (bool == true) {
             GlFramebufferTexture.aClass10Array8531 = new RunescapeInfo[50];
             anInt6790++;
@@ -47,12 +47,12 @@ final class NpcDefinition extends Node {
         return runtimeexception_sub1;
     }
 
-    public static void decodedOperation2930(byte i) {
+    public static void method2930(byte i) {
         aClass359Array6802 = null;
         int i_0_ = -14 / ((i - 61) / 43);
     }
 
-    static final void decodedOperation2931(int i, byte i_1_, int[] is, Npc npc) {
+    static final void method2931(int i, byte i_1_, int[] is, Npc npc) {
         do {
             try {
                 anInt6801++;
@@ -73,7 +73,7 @@ final class NpcDefinition extends Node {
                             npc.anInt10294 = 0;
                             npc.anInt10267 = 0;
                             npc.anInt10244 = 1;
-                            if (!npc.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(npc, npc.anInt10267, class17, -72);
+                            if (!npc.aBoolean10309) DisplayModeManagerContainer260.method2178(npc, npc.anInt10267, class17, -72);
                         }
                         if (i_3_ == 2) npc.anInt10294 = 0;
                     }
@@ -87,7 +87,7 @@ final class NpcDefinition extends Node {
                         npc.anIntArray10236 = is;
                     }
                 }
-                if (i_1_ <= 31) decodedOperation2931(-66, (byte) 125, null, null);
+                if (i_1_ <= 31) method2931(-66, (byte) 125, null, null);
                 if (!bool) break;
                 npc.anIntArray10236 = is;
                 npc.anInt10218 = i;
@@ -99,7 +99,7 @@ final class NpcDefinition extends Node {
         } while (false);
     }
 
-    final boolean decodedOperation2932(AssetCacheLoader class26, int[] is, byte[] is_5_, int i) {
+    final boolean method2932(AssetCacheLoader class26, int[] is, byte[] is_5_, int i) {
         try {
             anInt6803++;
             boolean bool = true;
@@ -111,8 +111,8 @@ final class NpcDefinition extends Node {
                     if (i_8_ != 0) {
                         if (i_8_ != i_6_) {
                             i_6_ = i_8_;
-                            if ((--i_8_ & 0x1) == 0) class348_sub19_sub1 = class26.decodedOperation308(i_8_ >> 2, is, -2);
-                            else class348_sub19_sub1 = class26.decodedOperation309(is, i_8_ >> 2, -1);
+                            if ((--i_8_ & 0x1) == 0) class348_sub19_sub1 = class26.method308(i_8_ >> 2, is, -2);
+                            else class348_sub19_sub1 = class26.method309(is, i_8_ >> 2, -1);
                             if (class348_sub19_sub1 == null) bool = false;
                         }
                         if (class348_sub19_sub1 != null) {
@@ -128,7 +128,7 @@ final class NpcDefinition extends Node {
         }
     }
 
-    final void decodedOperation2933(byte i) {
+    final void method2933(byte i) {
         anInt6794++;
         if (i >= -65) this.aClass23Array6796 = null;
         anIntArray6793 = null;
@@ -351,7 +351,7 @@ final class NpcDefinition extends Node {
                 int i_64_ = is_27_[1 + i_62_];
                 int i_65_ = (-i_59_ + i_63_) / 2 + (-i_59_ + i_63_) * i_60_;
                 for (int i_66_ = i_59_; i_66_ < i_63_; i_66_++) {
-                    int i_67_ = Component355.decodedOperation1928(-i_59_ + i_63_, -110, i_65_);
+                    int i_67_ = Component355.method1928(-i_59_ + i_63_, -110, i_65_);
                     this.aByteArray6799[i_66_] = (byte) (32 + (this.aByteArray6799[i_66_]) * i_67_ >> 6);
                     i_65_ += -i_60_ + i_64_;
                 }
@@ -383,7 +383,7 @@ final class NpcDefinition extends Node {
                 int i_76_ = is_28_[i_74_ - -1] << 1;
                 int i_77_ = (-i_70_ + i_75_) * i_71_ + (-i_70_ + i_75_) / 2;
                 for (int i_78_ = i_70_; i_75_ > i_78_; i_78_++) {
-                    int i_79_ = Component355.decodedOperation1928(-i_70_ + i_75_, -34, i_77_);
+                    int i_79_ = Component355.method1928(-i_70_ + i_75_, -34, i_77_);
                     int i_80_ = ((0xff & this.aByteArray6792[i_78_]) + i_79_);
                     if (i_80_ < 0) i_80_ = 0;
                     if (i_80_ > 128) i_80_ = 128;

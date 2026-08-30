@@ -16,19 +16,19 @@ final class Request extends Node {
     static int[] anIntArray6890 = new int[32];
     static DisplayModeManagerContainer238 aClass74_6891;
 
-    public static void decodedOperation2998(byte i) {
+    public static void method2998(byte i) {
         anIntArray6890 = null;
         aClass348_Sub42_Sub14_6885 = null;
         aClass74_6891 = null;
         aShortArray6889 = null;
-        if (i != -35) decodedOperation2999((byte) -26, -20);
+        if (i != -35) method2999((byte) -26, -20);
     }
 
-    static final void decodedOperation2999(byte i, int i_0_) {
+    static final void method2999(byte i, int i_0_) {
         anInt6886++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_0_, (byte) 105, 7);
-        if (i < 42) decodedOperation2999((byte) 62, -64);
-        class348_sub42_sub15.decodedOperation3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 7);
+        if (i < 42) method2999((byte) 62, -64);
+        class348_sub42_sub15.method3251(-16058);
     }
 
     Request(String string) {

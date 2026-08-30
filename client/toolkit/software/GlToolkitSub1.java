@@ -244,7 +244,7 @@ final class GlToolkitSub1
     }
 
     final void renderModelEx(Component122 class98, int i) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
         for (RenderableSub9 class318_sub9_65_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_65_ != class318_sub9; class318_sub9_65_ = class318_sub9_65_.aClass318_Sub9_6469) {
             RenderableSub9Sub2 class318_sub9_sub2 = (RenderableSub9Sub2) class318_sub9_65_;
@@ -335,15 +335,15 @@ final class GlToolkitSub1
         int i_94_ = class318_sub9_sub2.anInt8792;
         int i_95_ = i_93_;
         i_93_ <<= 1;
-        if (i_94_ == -1) decodedOperation3723(i, i_91_, i_92_, i_95_, class318_sub9_sub2.anInt8790, 1);
+        if (i_94_ == -1) method3723(i, i_91_, i_92_, i_95_, class318_sub9_sub2.anInt8790, 1);
         else {
             if (anInt7512 != i_94_) {
                 Component24 class105 = (Component24) aClass60_7499.get(i_94_, 117);
                 if (class105 == null) {
-                    int[] is = decodedOperation3719(i_94_);
+                    int[] is = method3719(i_94_);
                     if (is != null) {
-                        int i_96_ = (decodedOperation3727(i_94_) ? 64 : this.anInt7501);
-                        class105 = this.decodedOperation3662(i_96_, is, (byte) 94, 0, i_96_, i_96_);
+                        int i_96_ = (method3727(i_94_) ? 64 : this.anInt7501);
+                        class105 = this.method3662(i_96_, is, (byte) 94, 0, i_96_, i_96_);
                         aClass60_7499.putOne(class105, i_94_, (byte) -121);
                     } else return;
                 }
@@ -379,12 +379,12 @@ final class GlToolkitSub1
         return this.anInt7482;
     }
 
-    final DisplayModeManagerContainer204 decodedOperation3705() {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+    final DisplayModeManagerContainer204 method3705() {
+        Component385 class167 = method3724(Thread.currentThread());
         return class167.aClass101_Sub1_2209;
     }
 
-    final boolean decodedOperation3714(int i) {
+    final boolean method3714(int i) {
         return this.modelProvider.getModel(i, -6662).aBoolean217 || this.modelProvider.getModel(i, -6662).aBoolean215;
     }
 
@@ -535,7 +535,7 @@ final class GlToolkitSub1
     }
 
     final void f(int i, int i_156_) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         this.anInt7482 = i;
         this.anInt7494 = i_156_;
         class167.anInt2210 = this.anInt7494 - 255;
@@ -684,7 +684,7 @@ final class GlToolkitSub1
         } else is[0] = is[1] = is[2] = -1;
     }
 
-    final boolean decodedOperation3716() {
+    final boolean method3716() {
         return aBoolean7470;
     }
 
@@ -693,7 +693,7 @@ final class GlToolkitSub1
     }
 
     final void renderModel(Component122 class98) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
         for (RenderableSub9 class318_sub9_208_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_208_ != class318_sub9; class318_sub9_208_ = class318_sub9_208_.aClass318_Sub9_6469) {
             RenderableSub9Sub2 class318_sub9_sub2 = (RenderableSub9Sub2) class318_sub9_208_;
@@ -732,7 +732,7 @@ final class GlToolkitSub1
 
     private final void method3717() {
         for (int i = 0; i < this.anInt7485; i++)
-            aClass167Array7480[i].decodedOperation1292(64);
+            aClass167Array7480[i].method1292(64);
         la();
     }
 
@@ -780,7 +780,7 @@ final class GlToolkitSub1
     final void method3643(Canvas canvas, int i, int i_232_) {
         Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
         if (class348_sub31 == null) {
-            class348_sub31 = Component338.decodedOperation1035(9029, i_232_, canvas, i);
+            class348_sub31 = Component338.method1035(9029, i_232_, canvas, i);
             aClass356_7467.put((byte) 21, canvas.hashCode(), class348_sub31);
         } else if (class348_sub31.anInt6917 != i || class348_sub31.anInt6920 != i_232_) method3669(canvas, i, i_232_);
     }
@@ -930,7 +930,7 @@ final class GlToolkitSub1
     }
 
     final void draw3DTriangle(int i, int i_270_, int i_271_, int i_272_, int i_273_, int i_274_, int i_275_, int i_276_, int i_277_, int i_278_, int i_279_, int i_280_, int i_281_) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         Component8 class109 = class167.aClass109_2220;
         class109.aBoolean1669 = false;
         i -= this.anInt7509;
@@ -979,7 +979,7 @@ final class GlToolkitSub1
     }
 
     final void C(boolean bool) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         class167.aBoolean2202 = bool;
     }
 
@@ -1190,7 +1190,7 @@ final class GlToolkitSub1
         }
     }
 
-    final int[] decodedOperation3718(int i) {
+    final int[] method3718(int i) {
         NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
             class348_sub25 = (NodeSub25) aClass60_7498.get(i, 77);
@@ -1203,12 +1203,12 @@ final class GlToolkitSub1
             }
         }
         class348_sub25.aBoolean6882 = true;
-        return class348_sub25.decodedOperation2997();
+        return class348_sub25.method2997();
     }
 
     final void release() {
         if (aBoolean7471) {
-            CookieManager.decodedOperation2173(false, -101, true);
+            CookieManager.method2173(false, -101, true);
             aBoolean7471 = false;
         }
         this.aClass348_Sub31_7469 = null;
@@ -1235,7 +1235,7 @@ final class GlToolkitSub1
         }
     }
 
-    final int[] decodedOperation3719(int i) {
+    final int[] method3719(int i) {
         NodeSub25 class348_sub25;
         synchronized (aClass60_7498) {
             class348_sub25 = ((NodeSub25) aClass60_7498.get((long) i | ~0x7fffffffffffffffL, 107));
@@ -1248,7 +1248,7 @@ final class GlToolkitSub1
             }
         }
         class348_sub25.aBoolean6882 = true;
-        return class348_sub25.decodedOperation2997();
+        return class348_sub25.method2997();
     }
 
     final s method3648(int i, int i_357_, int[][] is, int[][] is_358_, int i_359_, int i_360_, int i_361_) {
@@ -1300,17 +1300,17 @@ final class GlToolkitSub1
             float[] fs = this.aFloatArray7511;
             if (i_371_ < 0) {
                 int i_373_ = is.length + i_371_;
-                Component313.decodedOperation1578(is, -i_371_, is, 0, i_373_);
+                Component313.method1578(is, -i_371_, is, 0, i_373_);
             } else if (i_371_ > 0) {
                 int i_374_ = is.length - i_371_;
-                Component313.decodedOperation1578(is, 0, is, i_371_, i_374_);
+                Component313.method1578(is, 0, is, i_371_, i_374_);
             }
             if (i_372_ < 0) {
                 int i_375_ = fs.length + i_372_;
-                Component313.decodedOperation1574(fs, -i_372_, fs, 0, i_375_);
+                Component313.method1574(fs, -i_372_, fs, 0, i_375_);
             } else if (i_372_ > 0) {
                 int i_376_ = fs.length - i_372_;
-                Component313.decodedOperation1574(fs, 0, fs, i_372_, i_376_);
+                Component313.method1574(fs, 0, fs, i_372_, i_376_);
             }
         }
     }
@@ -1327,23 +1327,23 @@ final class GlToolkitSub1
         method3717();
     }
 
-    final void decodedOperation3720(int i, int i_377_, int i_378_, int i_379_, int i_380_, int i_381_, int i_382_, int i_383_, int i_384_, int i_385_) {
+    final void method3720(int i, int i_377_, int i_378_, int i_379_, int i_380_, int i_381_, int i_382_, int i_383_, int i_384_, int i_385_) {
         if (i_379_ != 0 && i_380_ != 0) {
             if (i_382_ != 65535 && !(this.modelProvider.getModel(i_382_, -6662).aBoolean209)) {
                 if (anInt7512 != i_382_) {
                     Component24 class105 = ((Component24) aClass60_7499.get(i_382_, 97));
                     if (class105 == null) {
-                        int[] is = decodedOperation3719(i_382_);
+                        int[] is = method3719(i_382_);
                         if (is == null) return;
-                        int i_386_ = (decodedOperation3727(i_382_) ? 64 : this.anInt7501);
-                        class105 = this.decodedOperation3662(i_386_, is, (byte) 94, 0, i_386_, i_386_);
+                        int i_386_ = (method3727(i_382_) ? 64 : this.anInt7501);
+                        class105 = this.method3662(i_386_, is, (byte) 94, 0, i_386_, i_386_);
                         aClass60_7499.putOne(class105, i_382_, (byte) -100);
                     }
                     anInt7512 = i_382_;
                     aClass105_7513 = class105;
                 }
                 ((SpriteSub3) aClass105_7513).method996(i - i_379_, i_377_ - i_380_, i_378_, i_379_ << 1, i_380_ << 1, i_384_, i_383_, i_385_, 1);
-            } else decodedOperation3723(i, i_377_, i_378_, i_379_, i_383_, i_385_);
+            } else method3723(i, i_377_, i_378_, i_379_, i_383_, i_385_);
         }
     }
 
@@ -1352,7 +1352,7 @@ final class GlToolkitSub1
     }
 
     final void EA(int i, int i_387_, int i_388_, int i_389_) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         class167.anInt2211 = i;
         class167.anInt2192 = i_387_;
         class167.anInt2197 = i_388_;
@@ -1456,7 +1456,7 @@ final class GlToolkitSub1
     }
 
     final void method3678(int i) {
-        aClass167Array7480[i].decodedOperation1291(10000, null);
+        aClass167Array7480[i].method1291(10000, null);
     }
 
     final void method3672() {
@@ -1479,7 +1479,7 @@ final class GlToolkitSub1
         method3717();
     }
 
-    final int decodedOperation3722(int i) {
+    final int method3722(int i) {
         return (this.modelProvider.getModel(i, -6662).aShort208 & 0xffff);
     }
 
@@ -1508,7 +1508,7 @@ final class GlToolkitSub1
         return new SpriteCapture(this, is, i, i_422_, i_423_, i_424_, bool);
     }
 
-    final Component24 decodedOperation3691(Component170 class207, boolean bool) {
+    final Component24 method3691(Component170 class207, boolean bool) {
         int[] is = class207.anIntArray2697;
         byte[] is_430_ = class207.aByteArray2699;
         int i = class207.anInt2702;
@@ -1550,7 +1550,7 @@ final class GlToolkitSub1
         return class105_sub3;
     }
 
-    private final void decodedOperation3723(int i, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_) {
+    private final void method3723(int i, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_) {
         if (i_449_ < 0) i_449_ = -i_449_;
         int i_452_ = i_447_ - i_449_;
         if (i_452_ < this.anInt7476) i_452_ = this.anInt7476;
@@ -1704,7 +1704,7 @@ final class GlToolkitSub1
     }
 
     final void setLineWidth(int i, int i_494_, int i_495_, int i_496_, int i_497_, int i_498_, int i_499_) {
-        Component385 class167 = decodedOperation3724(Thread.currentThread());
+        Component385 class167 = method3724(Thread.currentThread());
         Component8 class109 = class167.aClass109_2220;
         int i_500_ = i_495_ - i;
         int i_501_ = i_496_ - i_494_;
@@ -1723,8 +1723,8 @@ final class GlToolkitSub1
             int i_508_ = i_498_ * i_506_ + 1 >> 17;
             int i_509_ = i_498_ * i_505_ >> 17;
             int i_510_ = i_498_ * i_505_ + 1 >> 17;
-            i -= class109.decodedOperation1028();
-            i_494_ -= class109.decodedOperation1017();
+            i -= class109.method1028();
+            i_494_ -= class109.method1017();
             int i_511_ = i + i_507_;
             int i_512_ = i - i_508_;
             int i_513_ = i + i_500_ - i_508_;
@@ -1738,9 +1738,9 @@ final class GlToolkitSub1
             else throw new IllegalArgumentException();
             C(false);
             class109.aBoolean1671 = (i_511_ < 0 || i_511_ > class109.anInt1679 || i_512_ < 0 || i_512_ > class109.anInt1679 || i_513_ < 0 || i_513_ > class109.anInt1679);
-            class109.decodedOperation1018((float) i_515_, (float) i_516_, (float) i_517_, (float) i_511_, (float) i_512_, (float) i_513_, 100.0F, 100.0F, 100.0F, i_497_);
+            class109.method1018((float) i_515_, (float) i_516_, (float) i_517_, (float) i_511_, (float) i_512_, (float) i_513_, 100.0F, 100.0F, 100.0F, i_497_);
             class109.aBoolean1671 = (i_511_ < 0 || i_511_ > class109.anInt1679 || i_513_ < 0 || i_513_ > class109.anInt1679 || i_514_ < 0 || i_514_ > class109.anInt1679);
-            class109.decodedOperation1018((float) i_515_, (float) i_517_, (float) i_518_, (float) i_511_, (float) i_513_, (float) i_514_, 100.0F, 100.0F, 100.0F, i_497_);
+            class109.method1018((float) i_515_, (float) i_517_, (float) i_518_, (float) i_511_, (float) i_513_, (float) i_514_, 100.0F, 100.0F, 100.0F, i_497_);
             C(true);
         }
     }
@@ -1911,7 +1911,7 @@ final class GlToolkitSub1
         } else throw new IllegalArgumentException();
     }
 
-    final Component385 decodedOperation3724(Runnable runnable) {
+    final Component385 method3724(Runnable runnable) {
         for (int i = 0; i < this.anInt7485; i++) {
             if (aClass167Array7480[i].aRunnable2198 == runnable) return aClass167Array7480[i];
         }
@@ -1950,7 +1950,7 @@ final class GlToolkitSub1
         Sprite class348_sub31 = ((Sprite) aClass356_7467.get(canvas.hashCode(), -6008));
         if (class348_sub31 != null) {
             class348_sub31.unlink((byte) 95);
-            class348_sub31 = Component338.decodedOperation1035(9029, i_578_, canvas, i);
+            class348_sub31 = Component338.method1035(9029, i_578_, canvas, i);
             aClass356_7467.put((byte) 112, canvas.hashCode(), class348_sub31);
             if (aCanvas7468 == canvas && aClass49_7475 == null) {
                 Dimension dimension = canvas.getSize();
@@ -1987,7 +1987,7 @@ final class GlToolkitSub1
         return i_586_;
     }
 
-    final boolean decodedOperation3725(int i) {
+    final boolean method3725(int i) {
         return this.modelProvider.isModelLoaded(-7953, i);
     }
 
@@ -2016,7 +2016,7 @@ final class GlToolkitSub1
             this.aClass101_Sub1_7492 = new MatrixSub1();
             setTextureUnitCount(1);
             resetTextureState(0);
-            Component54.decodedOperation566(true, true, (byte) -126);
+            Component54.method566(true, true, (byte) -126);
             aBoolean7471 = true;
             anInt7466 = (int) Component240.currentTimeMillis(-70);
         } catch (Throwable throwable) {
@@ -2203,7 +2203,7 @@ final class GlToolkitSub1
     }
 
     final void resetTextureState(int i) {
-        aClass167Array7480[i].decodedOperation1291(10000, Thread.currentThread());
+        aClass167Array7480[i].method1291(10000, Thread.currentThread());
     }
 
     final void method3707(Rectangle[] rectangles, int i, int i_631_, int i_632_) throws Exception_Sub1 {
@@ -2226,7 +2226,7 @@ final class GlToolkitSub1
         return i;
     }
 
-    final int decodedOperation3726(int i) {
+    final int method3726(int i) {
         return this.modelProvider.getModel(i, -6662).anInt200;
     }
 
@@ -2242,14 +2242,14 @@ final class GlToolkitSub1
 
     final void method3646(int i) {
         int i_634_ = i - anInt7466;
-        for (Object object = aClass60_7498.decodedOperation588(-5052); object != null; object = aClass60_7498.decodedOperation579(-117)) {
+        for (Object object = aClass60_7498.method588(-5052); object != null; object = aClass60_7498.method579(-117)) {
             NodeSub25 class348_sub25 = (NodeSub25) object;
             if (class348_sub25.aBoolean6882) {
                 class348_sub25.anInt6879 += i_634_;
                 int i_635_ = class348_sub25.anInt6879 / 20;
                 if (i_635_ > 0) {
                     Model class12 = this.modelProvider.getModel((class348_sub25.anInt6883), -6662);
-                    class348_sub25.decodedOperation2995((class12.aByte198 * i_634_ * 50 / 1000), (class12.aByte211 * i_634_ * 50 / 1000));
+                    class348_sub25.method2995((class12.aByte198 * i_634_ * 50 / 1000), (class12.aByte211 * i_634_ * 50 / 1000));
                     class348_sub25.anInt6879 -= i_635_ * 20;
                 }
                 class348_sub25.aBoolean6882 = false;
@@ -2295,7 +2295,7 @@ final class GlToolkitSub1
         return i | i_640_;
     }
 
-    final boolean decodedOperation3727(int i) {
+    final boolean method3727(int i) {
         return aBoolean7489 || this.modelProvider.getModel(i, -6662).aBoolean199;
     }
 }

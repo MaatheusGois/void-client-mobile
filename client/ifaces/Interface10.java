@@ -3,7 +3,7 @@
  */
 
 interface Interface10 {
-    boolean decodedOperation38(int i);
+    boolean method38(int i);
 
     int method39(int i);
 
@@ -11,7 +11,7 @@ interface Interface10 {
 
     int method41(int i);
 
-    int decodedOperation42(int i);
+    int method42(int i);
 
     void method43(GraphicsToolkit var_ha, int i);
 

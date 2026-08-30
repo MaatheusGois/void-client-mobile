@@ -31,7 +31,7 @@ final class n
     public final native void w(boolean bool);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final native void fa(char c, int i, int i_9_, int i_10_, boolean bool);

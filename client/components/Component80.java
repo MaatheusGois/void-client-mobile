@@ -11,7 +11,7 @@ abstract class Component80
     static DisplayModeManagerContainer207 packetBuffer = new DisplayModeManagerContainer207(7500);
     static int anInt3814;
 
-    static final int decodedOperation2253(int i, int i_0_) {
+    static final int method2253(int i, int i_0_) {
         anInt3814++;
         int i_1_ = -124 % ((i_0_ - 55) / 63);
         int i_2_ = 0;
@@ -42,15 +42,15 @@ abstract class Component80
         /* empty */
     }
 
-    public static void decodedOperation2254(int i) {
+    public static void method2254(int i) {
         packetBuffer = null;
         if (i != -14804) packetBuffer = null;
     }
 
-    static final void decodedOperation2255(int i, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
+    static final void method2255(int i, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
         Component208.ensureIntArrayCapacity((byte) 117, i);
         anInt3812++;
-        if (i_4_ >= -65) decodedOperation2255(-118, -20, (byte) -121, 100, -62, 77, -119);
+        if (i_4_ >= -65) method2255(-118, -20, (byte) -121, 100, -62, 77, -119);
         int i_9_ = 0;
         int i_10_ = -i_5_ + i;
         if (i_10_ < 0) i_10_ = 0;

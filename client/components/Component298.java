@@ -37,14 +37,14 @@ abstract class Component298
     public void method7(int i) {
         anInt4639++;
         if (i == 10286) {
-            Component184 class143 = Component98.decodedOperation1766((byte) -85, (this.aClass369_4635.anInt4965), aClass45_4631);
-            aClass324_4637 = (NodeSub8.toolkit.method3686(class143, Component170.decodedOperation1523(this.aClass45_4632, (this.aClass369_4635.anInt4965)), true));
+            Component184 class143 = Component98.method1766((byte) -85, (this.aClass369_4635.anInt4965), aClass45_4631);
+            aClass324_4637 = (NodeSub8.toolkit.method3686(class143, Component170.method1523(this.aClass45_4632, (this.aClass369_4635.anInt4965)), true));
         }
     }
 
-    static final Component381 decodedOperation179(int i, Buffer class348_sub49) {
+    static final Component381 method179(int i, Buffer class348_sub49) {
         anInt4629++;
-        Component27 class369 = NodeSub16Sub2.decodedOperation2834((byte) -127, class348_sub49);
+        Component27 class369 = NodeSub16Sub2.method2834((byte) -127, class348_sub49);
         int i_3_ = class348_sub49.readInt((byte) -126);
         int i_4_ = class348_sub49.readInt((byte) -126);
         if (i != 16533) aClass60_4636 = null;
@@ -52,18 +52,18 @@ abstract class Component298
         return new Component381(class369.aClass221_4968, class369.aClass341_4973, class369.anInt4970, class369.anInt4959, class369.anInt4971, class369.anInt4963, class369.anInt4966, class369.anInt4965, class369.anInt4961, i_3_, i_4_, i_5_);
     }
 
-    public static void decodedOperation180(int i) {
+    public static void method180(int i) {
         aClass60_4636 = null;
-        if (i != -19960) decodedOperation180(-71);
+        if (i != -19960) method180(-71);
     }
 
-    static final void decodedOperation181(boolean bool, Npc npc) {
-        if (bool != true) decodedOperation180(54);
+    static final void method181(boolean bool, Npc npc) {
+        if (bool != true) method180(54);
         anInt4627++;
         for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 78))) {
             if ((class348_sub9.aNpc_6691) == npc) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                 }
                 class348_sub9.unlink((byte) 27);
@@ -74,18 +74,18 @@ abstract class Component298
 
     abstract void method182(int i, int i_6_, int i_7_, boolean bool);
 
-    final int decodedOperation183(int i) {
+    final int method183(int i) {
         anInt4633++;
         if (i <= 16) this.aClass369_4635 = null;
-        int i_8_ = Component44.aClass311_897.decodedOperation2320((byte) 106);
+        int i_8_ = Component44.aClass311_897.method2320((byte) 106);
         int i_9_ = 100 * i_8_;
         if (anInt4630 != i_8_ || i_8_ == 0) {
             anInt4630 = i_8_;
             aLong4640 = Component240.currentTimeMillis(-125);
         } else {
-            int i_10_ = Component44.aClass311_897.decodedOperation2315((byte) 121);
+            int i_10_ = Component44.aClass311_897.method2315((byte) 121);
             if (i_8_ < i_10_) {
-                long l = aLong4640 - Component44.aClass311_897.decodedOperation2323(0);
+                long l = aLong4640 - Component44.aClass311_897.method2323(0);
                 if (l > 0L) {
                     long l_11_ = (long) (i_10_ - i_8_) * (10000L * l / (long) i_8_);
                     long l_12_ = (-aLong4640 + Component240.currentTimeMillis(-89)) * 10000L;
@@ -100,12 +100,12 @@ abstract class Component298
     public final void method9(byte i, boolean bool) {
         if (i == -49) {
             anInt4634++;
-            int i_13_ = ((this.aClass369_4635.aClass221_4968.decodedOperation1607(DisplayModeManagerContainer23.canvasWidth, this.aClass369_4635.anInt4971, (byte) -123)) + this.aClass369_4635.anInt4970);
+            int i_13_ = ((this.aClass369_4635.aClass221_4968.method1607(DisplayModeManagerContainer23.canvasWidth, this.aClass369_4635.anInt4971, (byte) -123)) + this.aClass369_4635.anInt4970);
             int i_14_ = ((this.aClass369_4635.aClass341_4973.getAlignedOffset(GlToolkitSub2.canvasHeight, this.aClass369_4635.anInt4963, i ^ ~0x60b)) + this.aClass369_4635.anInt4959);
             method178(i_13_, bool, (byte) -84, i_14_);
             method182(63, i_14_, i_13_, bool);
-            String string = Component44.aClass311_897.decodedOperation2318(i ^ 0x245b);
-            if (-aLong4640 + Component240.currentTimeMillis(-100) > 10000L) string += " (" + Component44.aClass311_897.decodedOperation2324(i + 149).getStageId(-117) + ")";
+            String string = Component44.aClass311_897.method2318(i ^ 0x245b);
+            if (-aLong4640 + Component240.currentTimeMillis(-100) > 10000L) string += " (" + Component44.aClass311_897.method2324(i + 149).getStageId(-117) + ")";
             aClass324_4637.drawTextCentred((byte) 115, (i_13_ + this.aClass369_4635.anInt4971 / 2), this.aClass369_4635.anInt4961, string, -1, (this.aClass369_4635.anInt4966 + 4 + (i_14_ - -(this.aClass369_4635.anInt4963 / 2))));
         }
     }

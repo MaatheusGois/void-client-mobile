@@ -24,10 +24,10 @@ final class Component308
         int i_4_ = i_0_ * anInt5227 >> 12;
         if (i_1_ > -98) aBoolean5233 = false;
         int i_5_ = i_0_ * anInt5230 >> 12;
-        DisplayModeManagerContainer292.decodedOperation1308(this.anInt864, i_4_, i_2_, this.anInt865, (byte) -123, this.anInt862, i_3_, i_5_);
+        DisplayModeManagerContainer292.method1308(this.anInt864, i_4_, i_2_, this.anInt865, (byte) -123, this.anInt862, i_3_, i_5_);
     }
 
-    static final void decodedOperation464(int i) {
+    static final void method464(int i) {
         anInt5229++;
         NativeLibLoader.anInt4155 = i;
         Component83.aClass105_1664 = null;
@@ -48,7 +48,7 @@ final class Component308
             int i_15_ = i_12_ * anInt5232 >> 12;
             int i_16_ = i * anInt5227 >> 12;
             int i_17_ = i * anInt5230 >> 12;
-            Component263.decodedOperation872(this.anInt865, 1, this.anInt862, i_16_, i_17_, i_15_, i_14_);
+            Component263.method872(this.anInt865, 1, this.anInt862, i_16_, i_17_, i_15_, i_14_);
         }
     }
 
@@ -59,6 +59,6 @@ final class Component308
         if (i <= 87) anInt5231 = 56;
         int i_22_ = i_19_ * anInt5227 >> 12;
         int i_23_ = i_19_ * anInt5230 >> 12;
-        Component203.decodedOperation2486(0, i_21_, this.anInt864, i_23_, i_20_, i_22_);
+        Component203.method2486(0, i_21_, this.anInt864, i_23_, i_20_, i_22_);
     }
 }

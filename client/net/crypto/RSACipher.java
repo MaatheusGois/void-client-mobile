@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class52` (JODE-obfuscated).
- * RSA cipher. Holds the RSA public exponent BigInteger("10001",16) (=65537) and implements Interface12 (method51 -> DisplayModeManagerContainer369). decodedOperation490(byte, Buffer) builds a ciphered block.
+ * RSA cipher. Holds the RSA public exponent BigInteger("10001",16) (=65537) and implements Interface12 (method51 -> DisplayModeManagerContainer369). method490(byte, Buffer) builds a ciphered block.
  */
 
 import java.awt.*;
@@ -26,11 +26,11 @@ final class RSACipher implements Interface12 {
     static int[] anIntArray4906;
     static StringCache aClass351_4907;
 
-    static final CookieBuilder decodedOperation490(byte i, Buffer class348_sub49) {
+    static final CookieBuilder method490(byte i, Buffer class348_sub49) {
         anInt4897++;
         CookieBuilder class43 = new CookieBuilder();
         class43.anInt615 = class348_sub49.readUnsignedShort(842397944);
-        class43.aClass348_Sub42_Sub10_614 = Component31.aClass355_5900.decodedOperation3471(class43.anInt615, (byte) -90);
+        class43.aClass348_Sub42_Sub10_614 = Component31.aClass355_5900.method3471(class43.anInt615, (byte) -90);
         int i_0_ = -91 / ((9 - i) / 54);
         return class43;
     }
@@ -41,7 +41,7 @@ final class RSACipher implements Interface12 {
         return Component386.aClass223_2868;
     }
 
-    static final void decodedOperation491(byte i) {
+    static final void method491(byte i) {
         for (int i_1_ = 0; (ObjectDeserializer.aByteArrayArrayArray6962.length > i_1_); i_1_++) {
             for (int i_2_ = 0; i_2_ < ObjectDeserializer.aByteArrayArrayArray6962[0].length; i_2_++) {
                 for (int i_3_ = 0; (ObjectDeserializer.aByteArrayArrayArray6962[0][0].length > i_3_); i_3_++)
@@ -52,7 +52,7 @@ final class RSACipher implements Interface12 {
         anInt4902++;
     }
 
-    public static void decodedOperation492(int i) {
+    public static void method492(int i) {
         aClass351_4905 = null;
         aClass351_4907 = null;
         aFrame4904 = null;
@@ -67,14 +67,14 @@ final class RSACipher implements Interface12 {
         this.anInt4899 = i;
     }
 
-    static final void decodedOperation493(boolean bool) {
+    static final void method493(boolean bool) {
         if (ShaderCompilerSub2.aClass56Array6515 == null) {
             ShaderCompilerSub2.aClass56Array6515 = LoadingState.allStages(-91);
             RSARequest.currentLoadingState = ShaderCompilerSub2.aClass56Array6515[0];
             Component69.aLong3660 = Component240.currentTimeMillis(-119);
         }
         anInt4900++;
-        if (Component44.aClass311_897 == null) DisplayModeManagerContainer88.decodedOperation726(116);
+        if (Component44.aClass311_897 == null) DisplayModeManagerContainer88.method726(116);
         LoadingState class56 = RSARequest.currentLoadingState;
         int i = LoadingManager.pulseLoading(-28660);
         if (class56 == RSARequest.currentLoadingState) {
@@ -104,19 +104,19 @@ final class RSACipher implements Interface12 {
         }
         if (bool == true) {
             if (Component44.aClass311_897 != null) {
-                Component44.aClass311_897.decodedOperation2316((RSARequest.currentLoadingState), DisplayModeManagerContainer190.aString5420, Component111.anInt3236, Component69.aLong3660, false);
+                Component44.aClass311_897.method2316((RSARequest.currentLoadingState), DisplayModeManagerContainer190.aString5420, Component111.anInt3236, Component69.aLong3660, false);
                 if (Component280.anInterface16Array2447 != null) {
                     for (int i_5_ = Component121.anInt4544 - -1; (Component280.anInterface16Array2447.length > i_5_); i_5_++) {
-                        if (Component280.anInterface16Array2447[i_5_].method60(-19079) >= 100 && Component121.anInt4544 == -1 + i_5_ && Component49.clientState >= 1 && Component44.aClass311_897.decodedOperation2322(0)) {
+                        if (Component280.anInterface16Array2447[i_5_].method60(-19079) >= 100 && Component121.anInt4544 == -1 + i_5_ && Component49.clientState >= 1 && Component44.aClass311_897.method2322(0)) {
                             try {
                                 Component280.anInterface16Array2447[i_5_].method57(117);
                             } catch (Exception exception) {
                                 Component280.anInterface16Array2447 = null;
                                 break;
                             }
-                            Component44.aClass311_897.decodedOperation2321(10559, Component280.anInterface16Array2447[i_5_]);
+                            Component44.aClass311_897.method2321(10559, Component280.anInterface16Array2447[i_5_]);
                             Component121.anInt4544++;
-                            if ((Component121.anInt4544 >= (-1 + Component280.anInterface16Array2447.length)) && Component280.anInterface16Array2447.length > 1) Component121.anInt4544 = !Component134.aClass111_5813.decodedOperation1044(26) ? -1 : 0;
+                            if ((Component121.anInt4544 >= (-1 + Component280.anInterface16Array2447.length)) && Component280.anInterface16Array2447.length > 1) Component121.anInt4544 = !Component134.aClass111_5813.method1044(26) ? -1 : 0;
                         }
                     }
                 }
@@ -124,7 +124,7 @@ final class RSACipher implements Interface12 {
         }
     }
 
-    static final int decodedOperation494(int i, int i_6_) {
+    static final int method494(int i, int i_6_) {
         if (i <= 78) rsaPublicExponent = null;
         anInt4898++;
         return 0x7f & i_6_;

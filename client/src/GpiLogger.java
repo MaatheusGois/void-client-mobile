@@ -54,20 +54,20 @@ final class GpiLogger extends NodeSub16 {
         }
     }
 
-    static final void decodedOperation2822(int i, DisplayModeManagerContainer207 class348_sub49_sub2, int i_3_) {
+    static final void method2822(int i, DisplayModeManagerContainer207 class348_sub49_sub2, int i_3_) {
         MatrixSub3.anInt5768 = 0;
         anInt8846++;
         JagTheoraDecoder.aBoolean979 = false;
         if (i < -17) {
-            NsnDefinition.decodedOperation3094(-21478, class348_sub49_sub2);
-            Component121.decodedOperation3612(75, class348_sub49_sub2);
+            NsnDefinition.method3094(-21478, class348_sub49_sub2);
+            Component121.method3612(75, class348_sub49_sub2);
             if (JagTheoraDecoder.aBoolean979) System.out.println("---endgpp---");
             if (class348_sub49_sub2.offset != i_3_) throw new RuntimeException("gpi1 pos:" + class348_sub49_sub2.offset + " psize:" + i_3_);
         }
     }
 
-    public static void decodedOperation2823(int i) {
-        if (i != 0) decodedOperation2823(33);
+    public static void method2823(int i) {
+        if (i != 0) method2823(33);
         aClass351_8857 = null;
         aClass74_8853 = null;
     }
@@ -79,11 +79,11 @@ final class GpiLogger extends NodeSub16 {
             class348_sub43.anInt7082 = (i_5_ * i + class348_sub43.anInt7082 & 0xfffff);
             if (i_6_ <= i) {
                 if ((aClass348_Sub16_Sub3_8852.anIntArray8914[class348_sub43.anInt7067]) != 0) {
-                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2914(), 0, class348_sub43.aClass348_Sub16_Sub5_7081.getSample()));
+                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub43.aClass348_Sub16_Sub5_7081.method2914(), 0, class348_sub43.aClass348_Sub16_Sub5_7081.getSample()));
                     aClass348_Sub16_Sub3_8852.method2874(95, (class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0, class348_sub43);
                 } else
-                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2914(), class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2906(), class348_sub43.aClass348_Sub16_Sub5_7081.getSample()));
-                if ((class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0) class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2917(-1);
+                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub43.aClass348_Sub16_Sub5_7081.method2914(), class348_sub43.aClass348_Sub16_Sub5_7081.method2906(), class348_sub43.aClass348_Sub16_Sub5_7081.getSample()));
+                if ((class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0) class348_sub43.aClass348_Sub16_Sub5_7081.method2917(-1);
                 i = class348_sub43.anInt7082 / i_5_;
             }
         }
@@ -133,14 +133,14 @@ final class GpiLogger extends NodeSub16 {
                     if (i_15_ < i_14_) i_14_ = i_15_;
                     NodeSub16Sub5 class348_sub16_sub5 = (class348_sub43.aClass348_Sub16_Sub5_7081);
                     if ((aClass348_Sub16_Sub3_8852.anIntArray8914[class348_sub43.anInt7067]) != 0) {
-                        class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub16_sub5.decodedOperation2914(), 0, class348_sub16_sub5.getSample()));
+                        class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub16_sub5.method2914(), 0, class348_sub16_sub5.getSample()));
                         aClass348_Sub16_Sub3_8852.method2874(116, ((class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0), class348_sub43);
-                        class348_sub43.aClass348_Sub16_Sub5_7081.setPitch(i_14_, class348_sub16_sub5.decodedOperation2906());
-                    } else class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub16_sub5.decodedOperation2914(), class348_sub16_sub5.decodedOperation2906(), class348_sub16_sub5.getSample()));
-                    if ((class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0) class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2917(-1);
-                    class348_sub16_sub5.decodedOperation2902(i_14_);
+                        class348_sub43.aClass348_Sub16_Sub5_7081.setPitch(i_14_, class348_sub16_sub5.method2906());
+                    } else class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode((class348_sub43.aClass348_Sub19_Sub1_7077), class348_sub16_sub5.method2914(), class348_sub16_sub5.method2906(), class348_sub16_sub5.getSample()));
+                    if ((class348_sub43.aClass348_Sub17_7085.aShortArray6795[class348_sub43.anInt7071]) < 0) class348_sub43.aClass348_Sub16_Sub5_7081.method2917(-1);
+                    class348_sub16_sub5.method2902(i_14_);
                     class348_sub16_sub5.synthesizeSamples(is, i_9_, -i_9_ + i);
-                    if (class348_sub16_sub5.decodedOperation2895()) this.aClass348_Sub16_Sub4_8855.decodedOperation2883(class348_sub16_sub5);
+                    if (class348_sub16_sub5.method2895()) this.aClass348_Sub16_Sub4_8855.method2883(class348_sub16_sub5);
                 }
                 class348_sub43.anInt7082 += i_11_ * i_12_;
             }
@@ -150,7 +150,7 @@ final class GpiLogger extends NodeSub16 {
         }
     }
 
-    static final DisplayModeManagerContainer32 decodedOperation2826(int i) {
+    static final DisplayModeManagerContainer32 method2826(int i) {
         anInt8845++;
         try {
             return new Component12();

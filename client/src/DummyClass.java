@@ -17,7 +17,7 @@ final class DummyClass extends Component76 {
     int anInt10177;
     static int anInt10178;
 
-    static final void decodedOperation3575(byte i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
+    static final void method3575(byte i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
         if (i_3_ <= PauseTimer.anInt513 && i_2_ >= Component72.anInt1910) {
             boolean bool;
             if (Component27.anInt4960 <= i_4_) {
@@ -61,7 +61,7 @@ final class DummyClass extends Component76 {
         anInt10173++;
     }
 
-    static boolean decodedOperation3576(boolean bool, boolean bool_9_) {
+    static boolean method3576(boolean bool, boolean bool_9_) {
         return bool | bool_9_;
     }
 
@@ -71,13 +71,13 @@ final class DummyClass extends Component76 {
         return Component38.aClass223_2507;
     }
 
-    static final Component24 decodedOperation3577(int i, byte i_10_, CacheStore class45) {
+    static final Component24 method3577(int i, byte i_10_, CacheStore class45) {
         anInt10176++;
         Component24 class105 = (Component24) Component35.aClass60_4273.get(i, -68);
         int i_11_ = -86 / ((55 - i_10_) / 51);
         if (class105 == null) {
-            if (ShaderProgramSub7.aBoolean6289) class105 = NodeSub8.toolkit.decodedOperation3691(Component170.decodedOperation1512(class45, i), true);
-            else class105 = GlTexture.decodedOperation1969(class45.getSingletonFile((byte) 73, i), -5901);
+            if (ShaderProgramSub7.aBoolean6289) class105 = NodeSub8.toolkit.method3691(Component170.method1512(class45, i), true);
+            else class105 = GlTexture.method1969(class45.getSingletonFile((byte) 73, i), -5901);
             Component35.aClass60_4273.putOne(class105, i, (byte) -108);
         }
         return class105;

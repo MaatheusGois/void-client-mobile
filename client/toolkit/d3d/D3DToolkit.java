@@ -42,7 +42,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     IDirect3DDevice anIDirect3DDevice9810;
     GeometryBuffer aGeometryBuffer9811;
 
-    private static final int decodedOperation3952(Component246 class209, byte i) {
+    private static final int method3952(Component246 class209, byte i) {
         if (DisplayModeManagerContainer5.aClass209_1212 == class209) return 2;
         if (DisplayModeManagerContainer105.aClass209_4874 == class209) return 1;
         if (i <= 57) anIntArray9790 = null;
@@ -72,7 +72,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
                 i_3_ = 5;
             } while (false);
             if (bool) i_1_ |= 0x10;
-            this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, i_3_, decodedOperation3961(class70, i_0_ + -78) | i_1_);
+            this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, i_3_, method3961(class70, i_0_ + -78) | i_1_);
         }
     }
 
@@ -104,8 +104,8 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i != 0) getProcAddress((byte) -110, 113);
     }
 
-    private static final int decodedOperation3953(Component158 class21, byte i) {
-        if (i != -111) decodedOperation3952(null, (byte) -118);
+    private static final int method3953(Component158 class21, byte i) {
+        if (i != -111) method3952(null, (byte) -118);
         if (class21 == Component217.aClass21_3217) return 2;
         if (GlWaterShader.aClass21_8832 == class21) return 3;
         if (Component11.aClass21_3572 == class21) return 1;
@@ -115,7 +115,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         throw new IllegalArgumentException("");
     }
 
-    final void decodedOperation3954(int i, Component294 class310_sub2) {
+    final void method3954(int i, Component294 class310_sub2) {
         method3956((byte) -56, class310_sub2);
         if (aBooleanArray9786[this.anInt8175] == !class310_sub2.aBoolean6334) {
             this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 1, !class310_sub2.aBoolean6334 ? 3 : 1);
@@ -166,7 +166,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
             aFloatArray9797[5] = 1.0F;
             aFloatArray9797[14] = 0.0F;
             aFloatArray9797[4] = 0.0F;
-        } else this.aClass101_Sub2_8074.decodedOperation918(aFloatArray9797, 0);
+        } else this.aClass101_Sub2_8074.method918(aFloatArray9797, 0);
         if (i < -18) this.anIDirect3DDevice9810.SetTransform(256, aFloatArray9797);
     }
 
@@ -194,7 +194,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (bool) i_16_ |= 0x20;
         if (bool_12_) aD3DPRESENT_PARAMETERS9800 = null;
         if (bool_13_) i_16_ |= 0x10;
-        this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, i_15_, i_16_ | decodedOperation3961(class70, 2));
+        this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, i_15_, i_16_ | method3961(class70, 2));
     }
 
     final void uniform3i(int i) {
@@ -207,7 +207,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return null;
     }
 
-    private static final int decodedOperation3955(int i, Component267 class229) {
+    private static final int method3955(int i, Component267 class229) {
         if (ShaderCompilerSub3.aClass229_6519 == class229) return 2;
         if (Component385.aClass229_2207 == class229) return 4;
         if (Component253.aClass229_3196 != class229) {
@@ -215,7 +215,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
                 if (class229 == NodeSub7.aClass229_6644) return 10;
             } else return 7;
         } else return 26;
-        if (i <= 16) decodedOperation3955(-116, null);
+        if (i <= 16) method3955(-116, null);
         throw new IllegalArgumentException();
     }
 
@@ -246,7 +246,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
             if (0 < d3dcaps.MaxActiveLights && 2 > d3dcaps.MaxActiveLights) throw new RuntimeException("");
             if (d3dcaps.MaxStreams < 5) throw new RuntimeException("");
             D3DPRESENT_PARAMETERS d3dpresent_parameters = new D3DPRESENT_PARAMETERS(canvas);
-            if (!decodedOperation3964(d3dpresent_parameters, 0, i, idirect3d, i_20_, integer.intValue())) throw new RuntimeException("");
+            if (!method3964(d3dpresent_parameters, 0, i, idirect3d, i_20_, integer.intValue())) throw new RuntimeException("");
             d3dpresent_parameters.PresentationInterval = -2147483648;
             d3dpresent_parameters.EnableAutoDepthStencil = true;
             d3dpresent_parameters.Windowed = true;
@@ -279,16 +279,16 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i <= -53) {
             if (aClass209Array9795[this.anInt8175] == class310.aClass209_3894) {
                 if (aBooleanArray9804[this.anInt8175] == !class310.aBoolean3892) {
-                    this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 7, (class310.aBoolean3892 ? decodedOperation3952(class310.aClass209_3894, (byte) 86) : 0));
+                    this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 7, (class310.aBoolean3892 ? method3952(class310.aClass209_3894, (byte) 86) : 0));
                     aBooleanArray9804[this.anInt8175] = class310.aBoolean3892;
                 }
             } else {
-                int i_22_ = decodedOperation3952(class310.aClass209_3894, (byte) 82);
+                int i_22_ = method3952(class310.aClass209_3894, (byte) 82);
                 this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 6, i_22_);
                 this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 5, i_22_);
                 aClass209Array9795[this.anInt8175] = class310.aClass209_3894;
                 if (aBooleanArray9804[this.anInt8175] != class310.aBoolean3892) {
-                    this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 7, (!class310.aBoolean3892 ? 0 : decodedOperation3952(class310.aClass209_3894, (byte) 68)));
+                    this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 7, (!class310.aBoolean3892 ? 0 : method3952(class310.aClass209_3894, (byte) 68)));
                     aBooleanArray9804[this.anInt8175] = class310.aBoolean3892;
                 }
             }
@@ -306,10 +306,10 @@ public final class D3DToolkit extends GlToolkitSub3 {
 
     final void enableShader(boolean bool) {
         this.anIDirect3DDevice9810.SetTransform(3, this.aFloatArray8135);
-        if (bool != true) decodedOperation3963(-7, null);
+        if (bool != true) method3963(-7, null);
     }
 
-    final void decodedOperation3957(IDirect3DVertexShader idirect3dvertexshader, byte i) {
+    final void method3957(IDirect3DVertexShader idirect3dvertexshader, byte i) {
         if (i == -89) {
             anIDirect3DVertexShader9794 = idirect3dvertexshader;
             this.anIDirect3DDevice9810.SetVertexShader(idirect3dvertexshader);
@@ -319,7 +319,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
 
     final void showCursor(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_24_, int i_25_, int i_26_, int i_27_) {
         this.anIDirect3DDevice9810.SetIndices(((Component93) interface5_impl2).anIDirect3DIndexBuffer8517);
-        this.anIDirect3DDevice9810.DrawIndexedPrimitive(decodedOperation3953(class21, (byte) -111), 0, i_24_, i_26_, i_25_, i);
+        this.anIDirect3DDevice9810.DrawIndexedPrimitive(method3953(class21, (byte) -111), 0, i_24_, i_26_, i_25_, i);
         if (i_27_ < 46) getMouseState(true, null, null);
     }
 
@@ -343,7 +343,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     final boolean getMouseState(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68) {
         D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
         if (bool != true) aBooleanArray9786 = null;
-        return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), !bool) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 4, decodedOperation3958(22, class68, class304))), false));
+        return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), !bool) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 4, method3958(22, class68, class304))), false));
     }
 
     final void getActiveUniform(Object object, byte i, Canvas canvas) {
@@ -360,7 +360,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
     }
 
-    static final int decodedOperation3958(int i, Component342 class68, DisplayModeManagerContainer42 class304) {
+    static final int method3958(int i, Component342 class68, DisplayModeManagerContainer42 class304) {
         if (class68 == Component342.aClass68_1183) {
             if (NodeSub45.aClass304_7103 != class304) {
                 if (Component83.aClass304_1662 == class304) return 21;
@@ -413,12 +413,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         for (i_35_ = 0; this.anInt8151 > i_35_; i_35_++) {
             NodeSub1 class348_sub1 = this.aClass348_Sub1Array8132[i_35_];
             int i_36_ = i_35_ - -2;
-            int i_37_ = class348_sub1.decodedOperation2720(-1);
-            float f = class348_sub1.decodedOperation2721(-115) / 255.0F;
-            aD3DLIGHT9808.SetPosition((float) class348_sub1.decodedOperation2724(-1), (float) class348_sub1.decodedOperation2722(123), (float) class348_sub1.decodedOperation2717((byte) 115));
+            int i_37_ = class348_sub1.method2720(-1);
+            float f = class348_sub1.method2721(-115) / 255.0F;
+            aD3DLIGHT9808.SetPosition((float) class348_sub1.method2724(-1), (float) class348_sub1.method2722(123), (float) class348_sub1.method2717((byte) 115));
             aD3DLIGHT9808.SetDiffuse(f * (float) ((i_37_ & 0xff34ed) >> 16), (float) (0xff & i_37_ >> 8) * f, f * (float) (i_37_ & 0xff), 0.0F);
-            aD3DLIGHT9808.SetAttenuation(0.0F, 0.0F, 1.0F / (float) (class348_sub1.decodedOperation2723(-1) * class348_sub1.decodedOperation2723(-1)));
-            aD3DLIGHT9808.SetRange((float) class348_sub1.decodedOperation2723(-1));
+            aD3DLIGHT9808.SetAttenuation(0.0F, 0.0F, 1.0F / (float) (class348_sub1.method2723(-1) * class348_sub1.method2723(-1)));
+            aD3DLIGHT9808.SetRange((float) class348_sub1.method2723(-1));
             this.anIDirect3DDevice9810.SetLight(i_36_, aD3DLIGHT9808);
             this.anIDirect3DDevice9810.LightEnable(i_36_, true);
         }
@@ -478,7 +478,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
 
     final void getVertexAttribfv(int i) {
         if (i != 12) method3634(null, null);
-        if (this.aClass196_8184.decodedOperation1450(-32)) this.aClass101_Sub2_8083.decodedOperation918(aFloatArray9797, 0);
+        if (this.aClass196_8184.method1450(-32)) this.aClass101_Sub2_8083.method918(aFloatArray9797, 0);
         else {
             aFloatArray9797[1] = 0.0F;
             aFloatArray9797[7] = 0.0F;
@@ -551,11 +551,11 @@ public final class D3DToolkit extends GlToolkitSub3 {
     }
 
     final void setCursor(byte i) {
-        if (i != -33) decodedOperation3962(-41, null);
+        if (i != -33) method3962(-41, null);
         this.anIDirect3DDevice9810.SetViewport(this.anInt8181, this.anInt8109, this.anInt7931, this.anInt7962, 0.0F, 1.0F);
     }
 
-    final void decodedOperation3959(int i, Component378 class310_sub3) {
+    final void method3959(int i, Component378 class310_sub3) {
         method3956((byte) -73, class310_sub3);
         if (!aBooleanArray9786[this.anInt8175]) {
             this.anIDirect3DDevice9810.SetSamplerState(this.anInt8175, 1, 1);
@@ -569,7 +569,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     }
 
     final void getVertexAttribiv(int i, int i_45_, Component158 class21, boolean bool) {
-        this.anIDirect3DDevice9810.DrawPrimitive(decodedOperation3953(class21, (byte) -111), i_45_, i);
+        this.anIDirect3DDevice9810.DrawPrimitive(method3953(class21, (byte) -111), i_45_, i);
         if (bool != true) aClass209Array9795 = null;
     }
 
@@ -622,10 +622,10 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i == 0 || -2005530519 == i) {
             Component312 class53 = (Component312) this.anObject7919;
             destroySurface(false);
-            class53.decodedOperation496((byte) 84);
+            class53.method496((byte) 84);
             aD3DPRESENT_PARAMETERS9800.BackBufferHeight = 0;
             aD3DPRESENT_PARAMETERS9800.BackBufferWidth = 0;
-            if (decodedOperation3964(aD3DPRESENT_PARAMETERS9800, 0, anInt9799, anIDirect3D9793, anInt9807, this.anInt8117)) {
+            if (method3964(aD3DPRESENT_PARAMETERS9800, 0, anInt9799, anIDirect3D9793, anInt9807, this.anInt8117)) {
                 int i_53_ = this.anIDirect3DDevice9810.Reset(aD3DPRESENT_PARAMETERS9800);
                 if (ue.a(i_53_, false)) {
                     class53.method497(this.anIDirect3DDevice9810.b(0), (byte) -107, this.anIDirect3DDevice9810.c());
@@ -639,7 +639,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     }
 
     final void querySurface(int i) {
-        int i_54_ = (aBooleanArray9784[this.anInt8175] ? decodedOperation3955(24, (this.aClass229Array8086[this.anInt8175])) : 1);
+        int i_54_ = (aBooleanArray9784[this.anInt8175] ? method3955(24, (this.aClass229Array8086[this.anInt8175])) : 1);
         if (i != 10) I();
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 1, i_54_);
     }
@@ -663,7 +663,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i != 100) anIntArray9805 = null;
     }
 
-    private static final int decodedOperation3961(DisplayModeManagerContainer88 class70, int i) {
+    private static final int method3961(DisplayModeManagerContainer88 class70, int i) {
         if (i != 2) aFloatArray9797 = null;
         if (DisplayModeManagerContainer173.aClass70_4247 == class70) return 2;
         if (class70 == DebugPanicSub2.aClass70_8503) return 0;
@@ -678,7 +678,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return new dxVertexLayout(this, class58s);
     }
 
-    final void decodedOperation3962(int i, IDirect3DPixelShader idirect3dpixelshader) {
+    final void method3962(int i, IDirect3DPixelShader idirect3dpixelshader) {
         if (i != 22927) aFloatArray9797 = null;
         this.anIDirect3DDevice9810.SetPixelShader(idirect3dpixelshader);
     }
@@ -724,7 +724,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    private static final int decodedOperation3963(int i, Component111 class251) {
+    private static final int method3963(int i, Component111 class251) {
         if (i != 594) return 7;
         if (class251 == MenuOpener.aClass251_4835) return 1;
         if (class251 != Component302.aClass251_6030) {
@@ -747,7 +747,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     final boolean validateProgram(Component342 class68, DisplayModeManagerContainer42 class304, byte i) {
         D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
         int i_69_ = 96 / ((i - 85) / 37);
-        return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), false) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 3, decodedOperation3958(22, class68, class304))), false));
+        return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), false) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 3, method3958(22, class68, class304))), false));
     }
 
     final void getActiveAttrib(byte i) {
@@ -787,16 +787,16 @@ public final class D3DToolkit extends GlToolkitSub3 {
 
     final void setClipboard(int i) {
         if (i <= -99) {
-            int i_71_ = (aBooleanArray9784[this.anInt8175] ? decodedOperation3955(50, (this.aClass229Array8092[this.anInt8175])) : 1);
+            int i_71_ = (aBooleanArray9784[this.anInt8175] ? method3955(50, (this.aClass229Array8092[this.anInt8175])) : 1);
             this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 4, i_71_);
         }
     }
 
     final void getWindowSize(int i) {
         if (anIDirect3DVertexShader9794 == null && ((this.aClass251Array8113[this.anInt8175]) != HashNodeSub18.aClass251_9685)) {
-            if (Component302.aClass251_6030 == (this.aClass251Array8113[this.anInt8175])) this.anIDirect3DDevice9810.SetTransform(this.anInt8175 + 16, this.aClass101_Sub2Array8131[this.anInt8175].decodedOperation928(aFloatArray9797, i));
-            else this.anIDirect3DDevice9810.SetTransform(16 - -this.anInt8175, this.aClass101_Sub2Array8131[this.anInt8175].decodedOperation918(aFloatArray9797, i ^ 0x1));
-            int i_72_ = decodedOperation3963(594, (this.aClass251Array8113[this.anInt8175]));
+            if (Component302.aClass251_6030 == (this.aClass251Array8113[this.anInt8175])) this.anIDirect3DDevice9810.SetTransform(this.anInt8175 + 16, this.aClass101_Sub2Array8131[this.anInt8175].method928(aFloatArray9797, i));
+            else this.anIDirect3DDevice9810.SetTransform(16 - -this.anInt8175, this.aClass101_Sub2Array8131[this.anInt8175].method918(aFloatArray9797, i ^ 0x1));
+            int i_72_ = method3963(594, (this.aClass251Array8113[this.anInt8175]));
             if (anIntArray9805[this.anInt8175] != i_72_) {
                 this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 24, i_72_);
                 anIntArray9805[this.anInt8175] = i_72_;
@@ -822,10 +822,10 @@ public final class D3DToolkit extends GlToolkitSub3 {
                 this.anIDirect3DDevice9810.BeginScene();
             }
         }
-        if (i != 12727) decodedOperation3953(null, (byte) 28);
+        if (i != 12727) method3953(null, (byte) 28);
     }
 
-    private static final boolean decodedOperation3964(D3DPRESENT_PARAMETERS d3dpresent_parameters, int i, int j, IDirect3D idirect3d, int k, int l) {
+    private static final boolean method3964(D3DPRESENT_PARAMETERS d3dpresent_parameters, int i, int j, IDirect3D idirect3d, int k, int l) {
         try {
             int i1;
             int j1;
@@ -889,9 +889,9 @@ public final class D3DToolkit extends GlToolkitSub3 {
 
     final void swapBuffers(int i, int i_88_) throws Exception_Sub1 {
         this.anIDirect3DDevice9810.EndScene();
-        if (aClass53_9787.decodedOperation498(-107)) {
+        if (aClass53_9787.method498(-107)) {
             anInt9785 = 0;
-            if (ue.a((byte) 97, aClass53_9787.decodedOperation495((byte) 91, 0))) method3960(false);
+            if (ue.a((byte) 97, aClass53_9787.method495((byte) 91, 0))) method3960(false);
         } else {
             if (50 < ++anInt9785) throw new Exception_Sub1();
             method3960(false);
@@ -902,7 +902,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
     final void waitNative(int i, Interface5_Impl1 interface5_impl1, int i_89_) {
         int i_90_ = -112 % ((i - -26) / 39);
         Component371 class366 = (Component371) interface5_impl1;
-        this.anIDirect3DDevice9810.SetStreamSource(i_89_, class366.anIDirect3DVertexBuffer8511, 0, class366.decodedOperation3519(3545));
+        this.anIDirect3DDevice9810.SetStreamSource(i_89_, class366.anIDirect3DVertexBuffer8511, 0, class366.method3519(3545));
     }
 
     final void NativeHandle() {

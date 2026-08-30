@@ -34,7 +34,7 @@ abstract class DisplayModeManagerContainer213
             aShortArray1082[i_0_] = (short) i_0_;
         for (int i_1_ = 0; i_1_ < 255; i_1_++) {
             int i_2_ = -i_1_ + 255;
-            int i_3_ = DisplayModeManagerContainer77.decodedOperation1097((byte) 106, i_2_, random);
+            int i_3_ = DisplayModeManagerContainer77.method1097((byte) 106, i_2_, random);
             short i_4_ = aShortArray1082[i_3_];
             aShortArray1082[i_3_] = aShortArray1082[i_2_];
             aShortArray1082[i_2_] = aShortArray1082[256 + i_2_] = i_4_;
@@ -51,7 +51,7 @@ abstract class DisplayModeManagerContainer213
 
     abstract void method541(int i);
 
-    final void decodedOperation542(int i, int i_6_, int i_7_, int i_8_) {
+    final void method542(int i, int i_6_, int i_7_, int i_8_) {
         anInt1073++;
         int[] is = new int[i_6_];
         int[] is_9_ = new int[i];
@@ -107,18 +107,18 @@ abstract class DisplayModeManagerContainer213
                         int i_40_ = aShortArray1082[i_32_ + i_27_];
                         int i_41_ = aShortArray1082[i_28_ - -i_32_];
                         int i_42_ = aShortArray1082[i_38_ + i_27_];
-                        int i_43_ = Component281.decodedOperation2279(true, (aShortArray1082[i_25_ - -i_42_]), i_19_, i_24_, i_22_);
-                        int i_44_ = Component281.decodedOperation2279(true, (aShortArray1082[i_26_ + i_42_]), i_19_, i_24_, i_33_);
+                        int i_43_ = Component281.method2279(true, (aShortArray1082[i_25_ - -i_42_]), i_19_, i_24_, i_22_);
+                        int i_44_ = Component281.method2279(true, (aShortArray1082[i_26_ + i_42_]), i_19_, i_24_, i_33_);
                         int i_45_ = i_43_ - -((i_44_ - i_43_) * i_35_ >> 12);
-                        i_43_ = Component281.decodedOperation2279(true, (aShortArray1082[i_39_ + i_25_]), i_19_, i_31_, i_22_);
-                        i_44_ = Component281.decodedOperation2279(true, (aShortArray1082[i_26_ + i_39_]), i_19_, i_31_, i_33_);
+                        i_43_ = Component281.method2279(true, (aShortArray1082[i_39_ + i_25_]), i_19_, i_31_, i_22_);
+                        i_44_ = Component281.method2279(true, (aShortArray1082[i_26_ + i_39_]), i_19_, i_31_, i_33_);
                         int i_46_ = i_43_ + ((i_44_ + -i_43_) * i_35_ >> 12);
-                        i_43_ = Component281.decodedOperation2279(true, (aShortArray1082[i_40_ + i_25_]), i_37_, i_24_, i_22_);
+                        i_43_ = Component281.method2279(true, (aShortArray1082[i_40_ + i_25_]), i_37_, i_24_, i_22_);
                         int i_47_ = ((i_46_ + -i_45_) * i_36_ >> 12) + i_45_;
-                        i_44_ = Component281.decodedOperation2279(true, (aShortArray1082[i_40_ + i_26_]), i_37_, i_24_, i_33_);
+                        i_44_ = Component281.method2279(true, (aShortArray1082[i_40_ + i_26_]), i_37_, i_24_, i_33_);
                         i_45_ = i_43_ + (i_35_ * (i_44_ - i_43_) >> 12);
-                        i_43_ = Component281.decodedOperation2279(true, (aShortArray1082[i_25_ - -i_41_]), i_37_, i_31_, i_22_);
-                        i_44_ = Component281.decodedOperation2279(true, (aShortArray1082[i_26_ - -i_41_]), i_37_, i_31_, i_33_);
+                        i_43_ = Component281.method2279(true, (aShortArray1082[i_25_ - -i_41_]), i_37_, i_31_, i_22_);
+                        i_44_ = Component281.method2279(true, (aShortArray1082[i_26_ - -i_41_]), i_37_, i_31_, i_33_);
                         i_46_ = (((-i_43_ + i_44_) * i_35_ >> 12) + i_43_);
                         int i_48_ = ((i_46_ - i_45_) * i_36_ >> 12) + i_45_;
                         method546(i_47_ + ((-i_47_ + i_48_) * i_34_ >> 12), i_17_, i_7_ ^ ~0x1);
@@ -131,13 +131,13 @@ abstract class DisplayModeManagerContainer213
 
     abstract void method543(boolean bool);
 
-    static final void decodedOperation544(String string, boolean bool, int i) {
+    static final void method544(String string, boolean bool, int i) {
         anInt1075++;
         ShaderProgramSub2.addChatMessage("", i, (byte) -96, 0, string, "", "");
-        if (bool != false) decodedOperation547(null, -103);
+        if (bool != false) method547(null, -103);
     }
 
-    static final void decodedOperation545(int i, int i_49_) {
+    static final void method545(int i, int i_49_) {
         StringCache.aClass60_4327.processSoftEntries(2, i);
         anInt1077++;
         Component142.aClass60_4417.processSoftEntries(2, i);
@@ -148,14 +148,14 @@ abstract class DisplayModeManagerContainer213
 
     abstract void method546(int i, int i_50_, int i_51_);
 
-    static final int decodedOperation547(String string, int i) {
+    static final int method547(String string, int i) {
         anInt1076++;
         if (!Component210.aClass297_5297.signed) return -1;
         if (Component300.aHashtable3548.containsKey(string)) return 100;
         String string_52_ = NativeLibLoader.toNativeLibraryFileName(string, 3);
         if (string_52_ == null) return -1;
         String string_53_ = NodeSub41.aString7048 + string_52_;
-        if (i != 7468) decodedOperation549((byte) 28, null, null, null);
+        if (i != 7468) method549((byte) 28, null, null, null);
         if (!Component385.aClass45_2208.containsNamed("", string_53_, -88)) return -1;
         if (!Component385.aClass45_2208.isGroupReadyByName(i ^ 0x1d48, string_53_)) return Component385.aClass45_2208.getNamedGroupLoadPercent(string_53_, 0);
         byte[] is = Component385.aClass45_2208.getFile(string_53_, "", -29832);
@@ -171,7 +171,7 @@ abstract class DisplayModeManagerContainer213
         }
         if (is != null && file != null) {
             boolean bool = true;
-            byte[] is_54_ = ColoredText.decodedOperation1821(i ^ 0x1d5b, file);
+            byte[] is_54_ = ColoredText.method1821(i ^ 0x1d5b, file);
             if (is_54_ == null || is_54_.length != is.length) bool = false;
             else {
                 for (int i_55_ = 0; i_55_ < is_54_.length; i_55_++) {
@@ -189,24 +189,24 @@ abstract class DisplayModeManagerContainer213
                 }
                 return -1;
             }
-            CursorDefinitionCache.decodedOperation1286(file, 64, string);
+            CursorDefinitionCache.method1286(file, 64, string);
             return 100;
         }
         return -1;
     }
 
-    public static void decodedOperation548(int i) {
+    public static void method548(int i) {
         aClass114_1068 = null;
         if (i != 10) aClass114_1068 = null;
     }
 
-    static final void decodedOperation549(byte i, NodeSub21 class348_sub21, GraphicsToolkit var_ha, Component274 class42) {
+    static final void method549(byte i, NodeSub21 class348_sub21, GraphicsToolkit var_ha, Component274 class42) {
         try {
             anInt1080++;
-            Component24 class105 = class42.decodedOperation375(var_ha, false);
+            Component24 class105 = class42.method375(var_ha, false);
             if (class105 != null) {
-                int i_56_ = class105.decodedOperation971();
-                if (i_56_ < class105.decodedOperation969()) i_56_ = class105.decodedOperation969();
+                int i_56_ = class105.method971();
+                if (i_56_ < class105.method969()) i_56_ = class105.method969();
                 int i_57_ = 10;
                 int i_58_ = class348_sub21.anInt6853;
                 int i_59_ = class348_sub21.anInt6855;
@@ -242,19 +242,19 @@ abstract class DisplayModeManagerContainer213
                     i_66_ = -(i_56_ / 2) + DisplayModeManagerContainer229.anInt1268 - (i_57_ - -i_62_);
                 }
                 int i_67_ = (int) (32767.0 * (Math.atan2(i_58_ - (class348_sub21.anInt6853), -(class348_sub21.anInt6855) + i_59_) / 3.141592653589793)) & 0xffff;
-                class105.decodedOperation981((float) i_56_ / 2.0F + (float) i_58_, (float) i_56_ / 2.0F + (float) i_59_, 4096, i_67_);
+                class105.method981((float) i_56_ / 2.0F + (float) i_58_, (float) i_56_ / 2.0F + (float) i_59_, 4096, i_67_);
                 int i_68_ = -2;
                 int i_69_ = -2;
                 int i_70_ = -2;
-                if (i != -43) decodedOperation545(-91, -16);
+                if (i != -43) method545(-91, -16);
                 int i_71_ = -2;
                 if (class42.aString597 != null) {
                     i_69_ = i_66_;
                     i_68_ = i_65_ + -(i_61_ / 2) - 5;
                     i_71_ = 3 + (i_60_ * DisplayModeManagerContainer271.helveticaGlyphs14.getLineHeight() + i_69_);
                     i_70_ = i_61_ + (i_68_ + 10);
-                    if (class42.anInt602 != 0) var_ha.decodedOperation3675(-i_68_ + i_70_, (byte) -125, i_68_, i_69_, i_71_ - i_69_, class42.anInt602);
-                    if (class42.anInt604 != 0) var_ha.decodedOperation3668(-i_68_ + i_70_, i_69_, class42.anInt604, i_68_, -i_69_ + i_71_, 67);
+                    if (class42.anInt602 != 0) var_ha.method3675(-i_68_ + i_70_, (byte) -125, i_68_, i_69_, i_71_ - i_69_, class42.anInt602);
+                    if (class42.anInt604 != 0) var_ha.method3668(-i_68_ + i_70_, i_69_, class42.anInt604, i_68_, -i_69_ + i_71_, 67);
                     for (int i_72_ = 0; i_60_ > i_72_; i_72_++) {
                         String string = GlToolkitSub3.aStringArray8019[i_72_];
                         if (i_72_ < i_60_ + -1) string = string.substring(0, -4 + string.length());

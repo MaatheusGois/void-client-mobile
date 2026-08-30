@@ -52,18 +52,18 @@ final class HardwareProbe extends Node {
         if (aString6597.length() > 10) aString6597 = aString6597.substring(0, 10);
     }
 
-    final int decodedOperation2746(byte i) {
+    final int method2746(byte i) {
         anInt6600++;
         int i_0_ = 23;
-        i_0_ += Component118.decodedOperation2186((byte) -114, aString6604);
-        i_0_ += Component118.decodedOperation2186((byte) -114, aString6614);
-        i_0_ += Component118.decodedOperation2186((byte) -114, aString6610);
+        i_0_ += Component118.method2186((byte) -114, aString6604);
+        i_0_ += Component118.method2186((byte) -114, aString6614);
+        i_0_ += Component118.method2186((byte) -114, aString6610);
         int i_1_ = 42 % ((44 - i) / 49);
-        i_0_ += Component118.decodedOperation2186((byte) -114, aString6597);
+        i_0_ += Component118.method2186((byte) -114, aString6597);
         return i_0_;
     }
 
-    final void decodedOperation2747(int i, Buffer class348_sub49) {
+    final void method2747(int i, Buffer class348_sub49) {
         class348_sub49.writeByte(false, 5);
         anInt6611++;
         class348_sub49.writeByte(false, anInt6613);
@@ -91,14 +91,14 @@ final class HardwareProbe extends Node {
         }
     }
 
-    public static void decodedOperation2748(int i) {
+    public static void method2748(int i) {
         int i_2_ = 80 / ((52 - i) / 57);
         aClass173_6602 = null;
         aClass248_6601 = null;
     }
 
-    static final int decodedOperation2749(int i) {
-        if (i != -1) decodedOperation2749(20);
+    static final int method2749(int i) {
+        if (i != -1) method2749(20);
         anInt6593++;
         return NodeBaseSub1.anInt9774;
     }

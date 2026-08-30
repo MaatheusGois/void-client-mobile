@@ -52,14 +52,14 @@ final class DisplayModeManagerContainer104
         DisplayModeManagerContainer370 class64 = buildRenderable(var_ha, anInt10355, (anInt10334 == 0 ? 0 : 5) | 0x800, (byte) -82);
         if (class64 == null) return null;
         if (anInt10334 != 0) class64.a(anInt10334 * 2048);
-        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
-        class101.decodedOperation894(this.x, this.anInt6382, this.y);
+        DisplayModeManagerContainer204 class101 = var_ha.method3705();
+        class101.method894(this.x, this.anInt6382, this.y);
         method2467(class64, var_ha, -1, class101);
-        RenderableSub4 class318_sub4 = OutputStream_Sub2.decodedOperation136(i, false, false);
-        if (DisplayModeManagerContainer50.aBoolean3870) class64.decodedOperation608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
+        RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, false, false);
+        if (DisplayModeManagerContainer50.aBoolean3870) class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         else class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         if (aClass318_Sub10_10341 != null) {
-            Component122 class98 = aClass318_Sub10_10341.decodedOperation2525();
+            Component122 class98 = aClass318_Sub10_10341.method2525();
             if (!DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModel(class98);
             else var_ha.renderModelEx(class98, Component72.anInt1906);
         }
@@ -80,7 +80,7 @@ final class DisplayModeManagerContainer104
         class318_sub6.aClass318_Sub1_Sub3_Sub3_6431 = null;
         anInt10361++;
         if (Component6.anInt4474 < 20) {
-            Component240.aClass243_1114.decodedOperation1869(-89, class318_sub6);
+            Component240.aClass243_1114.method1869(-89, class318_sub6);
             Component6.anInt4474++;
         }
     }
@@ -97,7 +97,7 @@ final class DisplayModeManagerContainer104
 
     protected final void finalize() {
         anInt10329++;
-        if (aClass318_Sub10_10341 != null) aClass318_Sub10_10341.decodedOperation2534();
+        if (aClass318_Sub10_10341 != null) aClass318_Sub10_10341.method2534();
     }
 
     final void method2392(boolean bool) {
@@ -108,7 +108,7 @@ final class DisplayModeManagerContainer104
 
     static final int generateTerrainHeight(int i, int i_3_, int i_4_) {
         anInt10351++;
-        int i_5_ = (Component281.decodedOperation2278(4, 91923 + i_4_, (byte) 120, i_3_ + 45365) - 128 + ((Component281.decodedOperation2278(2, 37821 + i_4_, (byte) 122, 10294 + i_3_) - 128 >> 1) + (-128 + Component281.decodedOperation2278(1, i_4_, (byte) 120, i_3_) >> 2)));
+        int i_5_ = (Component281.method2278(4, 91923 + i_4_, (byte) 120, i_3_ + 45365) - 128 + ((Component281.method2278(2, 37821 + i_4_, (byte) 122, 10294 + i_3_) - 128 >> 1) + (-128 + Component281.method2278(1, i_4_, (byte) 120, i_3_) >> 2)));
         i_5_ = (int) (0.3 * (double) i_5_) + 35;
         if (i_5_ >= 10) {
             if (i_5_ > 60) i_5_ = 60;
@@ -154,7 +154,7 @@ final class DisplayModeManagerContainer104
         do {
             try {
                 anInt10357++;
-                if (Node.anInt4290 < 100) StaticElementRenderer.decodedOperation2512(var_d, var_ha, i ^ 0x74);
+                if (Node.anInt4290 < 100) StaticElementRenderer.method2512(var_d, var_ha, i ^ 0x74);
                 var_ha.KA(i_11_, i_14_, i_12_ + i_11_, i_14_ + i_13_);
                 if (Node.anInt4290 < 100) {
                     int i_15_ = 20;
@@ -177,7 +177,7 @@ final class DisplayModeManagerContainer104
                     DisplayModeManagerContainer229.computeTransform(var_ha);
                     if (i != -7) generateTerrainHeight(63, -7, -14);
                     NodeList class262 = DisplayModeManagerContainer229.getRenderList(var_ha);
-                    DisplayModeManagerContainer74.decodedOperation2312(-13084, 0, class262, 0, var_ha);
+                    DisplayModeManagerContainer74.method2312(-13084, 0, class262, 0, var_ha);
                     if (WaterShader.anInt7379 > 0) {
                         LoadingManager.anInt2173--;
                         if (LoadingManager.anInt2173 == 0) {
@@ -207,23 +207,23 @@ final class DisplayModeManagerContainer104
     private final DisplayModeManagerContainer370 buildRenderable(GraphicsToolkit var_ha, int i, int i_26_, byte i_27_) {
         anInt10353++;
         if (i_27_ != -82) return null;
-        Component63 class368 = NsnDefinition.aClass319_9245.decodedOperation2543((byte) 122, i);
+        Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 122, i);
         s var_s = NodeSub1Sub1.aSArray8801[this.plane];
         s var_s_28_ = (this.aByte6376 < 3 ? (NodeSub1Sub1.aSArray8801[1 + this.aByte6376]) : null);
-        if (!this.aBoolean10345) return class368.decodedOperation3565(anInt10339, anInt10335, this.anInt6382, i_26_, true, var_ha, anInt10350, this.x, -129, RunescapeInfo.aClass87_191, var_s_28_, this.y, var_s);
-        return class368.decodedOperation3565(0, -1, this.anInt6382, i_26_, true, var_ha, -1, this.x, -129, RunescapeInfo.aClass87_191, var_s_28_, this.y, var_s);
+        if (!this.aBoolean10345) return class368.method3565(anInt10339, anInt10335, this.anInt6382, i_26_, true, var_ha, anInt10350, this.x, -129, RunescapeInfo.aClass87_191, var_s_28_, this.y, var_s);
+        return class368.method3565(0, -1, this.anInt6382, i_26_, true, var_ha, -1, this.x, -129, RunescapeInfo.aClass87_191, var_s_28_, this.y, var_s);
     }
 
     final void unload(boolean bool) {
         if (bool == false) {
-            if (aClass318_Sub10_10341 != null) aClass318_Sub10_10341.decodedOperation2534();
+            if (aClass318_Sub10_10341 != null) aClass318_Sub10_10341.method2534();
             anInt10359++;
         }
     }
 
     final boolean method2377(byte i) {
         anInt10358++;
-        if (i != 122) decodedOperation2388(-40);
+        if (i != 122) method2388(-40);
         return aBoolean10338;
     }
 
@@ -235,10 +235,10 @@ final class DisplayModeManagerContainer104
                 Component30[] class129s = class64.method619();
                 DisplayModeManagerContainer173[] class342s = class64.method604();
                 if (i == -1) {
-                    if ((aClass318_Sub10_10341 == null || (aClass318_Sub10_10341.aBoolean6470)) && (class129s != null || class342s != null)) aClass318_Sub10_10341 = RenderableSub10.decodedOperation2526(OpenGlShader.clientCycle, true);
+                    if ((aClass318_Sub10_10341 == null || (aClass318_Sub10_10341.aBoolean6470)) && (class129s != null || class342s != null)) aClass318_Sub10_10341 = RenderableSub10.method2526(OpenGlShader.clientCycle, true);
                     if (aClass318_Sub10_10341 == null) break;
-                    aClass318_Sub10_10341.decodedOperation2536(var_ha, OpenGlShader.clientCycle, class129s, class342s, false);
-                    aClass318_Sub10_10341.decodedOperation2533(this.plane, this.aShort8743, this.aShort8751, this.aShort8750, this.aShort8747);
+                    aClass318_Sub10_10341.method2536(var_ha, OpenGlShader.clientCycle, class129s, class342s, false);
+                    aClass318_Sub10_10341.method2533(this.plane, this.aShort8743, this.aShort8751, this.aShort8750, this.aShort8747);
                 }
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("lf.BA(" + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i + ',' + (class101 != null ? "{...}" : "null") + ')'));
@@ -259,7 +259,7 @@ final class DisplayModeManagerContainer104
         return null;
     }
 
-    final boolean decodedOperation2388(int i) {
+    final boolean method2388(int i) {
         if (i >= -65) return false;
         anInt10328++;
         return false;
@@ -270,8 +270,8 @@ final class DisplayModeManagerContainer104
         anInt10354++;
         DisplayModeManagerContainer370 class64 = buildRenderable(var_ha, anInt10355, 0, (byte) -82);
         if (class64 != null) {
-            DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
-            class101.decodedOperation894(this.x, this.anInt6382, this.y);
+            DisplayModeManagerContainer204 class101 = var_ha.method3705();
+            class101.method894(this.x, this.anInt6382, this.y);
             method2467(class64, var_ha, -1, class101);
         }
     }
@@ -282,20 +282,20 @@ final class DisplayModeManagerContainer104
         return false;
     }
 
-    static final void decodedOperation2468(int i) {
+    static final void method2468(int i) {
         anInt10348++;
         if (i == 3613) {
             int i_31_ = 0;
             for (int i_32_ = 0; AbstractShaderSub4.anInt7319 > i_32_; i_32_++) {
                 for (int i_33_ = 0; ParametricDefinition.anInt9109 > i_33_; i_33_++) {
-                    if (AbstractShaderSub4.decodedOperation3542(i_33_, Component335.aClass357ArrayArrayArray2029, i_32_, 0, i_31_, true)) i_31_++;
+                    if (AbstractShaderSub4.method3542(i_33_, Component335.aClass357ArrayArrayArray2029, i_32_, 0, i_31_, true)) i_31_++;
                     if (i_31_ >= 512) return;
                 }
             }
         }
     }
 
-    public static void decodedOperation2469(boolean bool) {
+    public static void method2469(boolean bool) {
         aClass46_10336 = null;
         if (bool == true) aClass338Array10330 = null;
     }
@@ -311,17 +311,17 @@ final class DisplayModeManagerContainer104
         anInt10355 = i;
         anInt10334 = i_45_;
         this.anInt10349 = i_35_ + i_34_;
-        Component63 class368 = NsnDefinition.aClass319_9245.decodedOperation2543((byte) 57, anInt10355);
+        Component63 class368 = NsnDefinition.aClass319_9245.method2543((byte) 57, anInt10355);
         int i_46_ = class368.anInt4503;
         if (i_46_ == -1) this.aBoolean10345 = true;
         else {
             aClass17_10332 = RunescapeInfo.aClass87_191.getSequence(i_46_, 7);
             this.aBoolean10345 = false;
         }
-        if (this.anInt10349 == i_35_) DisplayModeManagerContainer260.decodedOperation2178(this, anInt10335, aClass17_10332, -99);
+        if (this.anInt10349 == i_35_) DisplayModeManagerContainer260.method2178(this, anInt10335, aClass17_10332, -99);
     }
 
-    final void decodedOperation2470(int i, byte i_47_) {
+    final void method2470(int i, byte i_47_) {
         if (i_47_ <= -14) {
             anInt10333++;
             if (!this.aBoolean10345) {
@@ -334,7 +334,7 @@ final class DisplayModeManagerContainer104
                         break;
                     }
                 }
-                if (!this.aBoolean10345) DisplayModeManagerContainer260.decodedOperation2178(this, anInt10335, aClass17_10332, -59);
+                if (!this.aBoolean10345) DisplayModeManagerContainer260.method2178(this, anInt10335, aClass17_10332, -59);
             }
         }
     }

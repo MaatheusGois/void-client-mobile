@@ -80,7 +80,7 @@ final class Component113
     boolean aBoolean2443;
     private int anInt2444;
 
-    static final void decodedOperation1367(int i, int i_0_, float f, int i_1_, float[] fs, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, float[] fs_7_) {
+    static final void method1367(int i, int i_0_, float f, int i_1_, float[] fs, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, float[] fs_7_) {
         try {
             i_2_ -= i;
             anInt2409++;
@@ -91,7 +91,7 @@ final class Component113
             float f_10_ = (fs_7_[6] * (float) i_1_ + (float) i_4_ * fs_7_[7] + (float) i_2_ * fs_7_[8]);
             float f_11_ = (float) Math.sqrt(f_8_ * f_8_ + f_9_ * f_9_ + f_10_ * f_10_);
             float f_12_ = 0.5F + ((float) Math.atan2(f_8_, f_10_) / 6.2831855F);
-            if (i_6_ != -4) decodedOperation1369((byte) 98);
+            if (i_6_ != -4) method1369((byte) 98);
             float f_13_ = f + (0.5F + ((float) Math.asin(f_9_ / f_11_) / 3.1415927F));
             if (i_0_ == 1) {
                 float f_15_ = f_12_;
@@ -113,7 +113,7 @@ final class Component113
     }
 
     private final void method1368(int i, Buffer class348_sub49, int i_16_) {
-        if (i >= -43) decodedOperation1369((byte) -111);
+        if (i >= -43) method1369((byte) -111);
         anInt2396++;
         if (i_16_ == 1) {
             this.aShort2431 = (short) class348_sub49.readUnsignedShort(842397944);
@@ -200,12 +200,12 @@ final class Component113
         } else this.anInt2442 = this.anInt2417 = (class348_sub49.readUnsignedShort(842397944) << -374037204 << 1009462498);
     }
 
-    public static void decodedOperation1369(byte i) {
+    public static void method1369(byte i) {
         aBooleanArray2374 = null;
         if (i != 2) anInt2398 = 113;
     }
 
-    final void decodedOperation1370(int i, Buffer class348_sub49) {
+    final void method1370(int i, Buffer class348_sub49) {
         anInt2400++;
         for (; ; ) {
             int i_24_ = class348_sub49.readUnsignedByte(255);
@@ -215,7 +215,7 @@ final class Component113
         int i_25_ = 117 / ((i - -51) / 43);
     }
 
-    final void decodedOperation1371(int i) {
+    final void method1371(int i) {
         this.anInt2429 = (0xff8084 & anInt2428) >> 16;
         anInt2420 = anInt2434 >> 16 & 0xff;
         if (this.anInt2384 > -2 || this.anInt2423 > -2) this.aBoolean2397 = true;

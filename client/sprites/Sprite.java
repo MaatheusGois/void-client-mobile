@@ -42,7 +42,7 @@ abstract class Sprite extends Node {
 
     abstract void method3008(Canvas canvas, int i, int i_1_, int i_2_);
 
-    static final void decodedOperation3009(int i, int i_3_, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+    static final void method3009(int i, int i_3_, int i_4_, int i_5_, int i_6_, byte i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         if (i_11_ != i_4_ || i != i_9_ || i_8_ != i_5_ || i_3_ != i_6_) {
             int i_12_ = i_11_;
             int i_13_ = i_9_;
@@ -69,16 +69,16 @@ abstract class Sprite extends Node {
                 int i_34_ = i_25_ * i_26_;
                 int i_35_ = i_11_ + (i_29_ + (i_31_ + i_33_) >> 12);
                 int i_36_ = i_9_ + (i_30_ - -i_32_ + i_34_ >> 12);
-                DisplayModeManagerContainer341.decodedOperation1783(i_12_, -1, i_13_, i_36_, i_35_, i_10_);
+                DisplayModeManagerContainer341.method1783(i_12_, -1, i_13_, i_36_, i_35_, i_10_);
                 i_13_ = i_36_;
                 i_12_ = i_35_;
             }
-        } else DisplayModeManagerContainer341.decodedOperation1783(i_11_, -1, i_9_, i_6_, i_5_, i_10_);
+        } else DisplayModeManagerContainer341.method1783(i_11_, -1, i_9_, i_6_, i_5_, i_10_);
         anInt6919++;
         int i_37_ = 64 % ((50 - i_7_) / 51);
     }
 
-    public static void decodedOperation3010(int i) {
+    public static void method3010(int i) {
         aClass351_6925 = null;
         aBigInteger6921 = null;
         if (i != -1316) aClass351_6925 = null;
@@ -87,7 +87,7 @@ abstract class Sprite extends Node {
 
     abstract void method3011(int i, int i_38_, int i_39_, Graphics graphics, int i_40_, int i_41_, int i_42_, int i_43_);
 
-    static final void decodedOperation3012(int i, int i_44_, int i_45_, int i_46_, int i_47_, byte i_48_, int i_49_, int i_50_) {
+    static final void method3012(int i, int i_44_, int i_45_, int i_46_, int i_47_, byte i_48_, int i_49_, int i_50_) {
         anInt6918++;
         int i_51_ = 0;
         int i_52_ = i;
@@ -190,7 +190,7 @@ abstract class Sprite extends Node {
         }
     }
 
-    static final int decodedOperation3013(int i, boolean bool) {
+    static final int method3013(int i, boolean bool) {
         if (bool != true) anInt6923 = -14;
         anInt6915++;
         return i & 0xff;
@@ -202,13 +202,13 @@ abstract class Sprite extends Node {
         if ((class348_sub49.payload.length - class348_sub49.offset) >= 1) {
             int i_89_ = class348_sub49.readUnsignedByte(255);
             if (i_89_ >= 0 && i_89_ <= 1 && (class348_sub49.payload.length - class348_sub49.offset) >= 2) {
-                if (i != -40) decodedOperation3012(13, -47, -27, 107, -90, (byte) -19, -61, 36);
+                if (i != -40) method3012(13, -47, -27, 107, -90, (byte) -19, -61, 36);
                 int i_90_ = class348_sub49.readUnsignedShort(842397944);
                 if (i_90_ * 6 <= (-class348_sub49.offset + (class348_sub49.payload).length)) {
                     for (int i_91_ = 0; i_91_ < i_90_; i_91_++) {
                         int i_92_ = class348_sub49.readUnsignedShort(842397944);
                         int i_93_ = class348_sub49.readInt((byte) -126);
-                        if ((DisplayModeManagerContainer123.anIntArray1303.length > i_92_) && WaterShaderProgram.aBooleanArray6270[i_92_] && ((Component329.aClass259_5995.decodedOperation1976(i_92_, -107).aChar2132) != '1' || i_93_ >= -1 && i_93_ <= 1)) DisplayModeManagerContainer123.anIntArray1303[i_92_] = i_93_;
+                        if ((DisplayModeManagerContainer123.anIntArray1303.length > i_92_) && WaterShaderProgram.aBooleanArray6270[i_92_] && ((Component329.aClass259_5995.method1976(i_92_, -107).aChar2132) != '1' || i_93_ >= -1 && i_93_ <= 1)) DisplayModeManagerContainer123.anIntArray1303[i_92_] = i_93_;
                     }
                 }
             }

@@ -35,7 +35,7 @@ final class Component202
     private static int[] anIntArray1430;
     private static int[] anIntArray1431;
 
-    private final int decodedOperation806(int i, int i_0_, int i_1_) {
+    private final int method806(int i, int i_0_, int i_1_) {
         if (i_1_ == 1) {
             if ((i & 0x7fff) < 16384) return i_0_;
             return -i_0_;
@@ -46,34 +46,34 @@ final class Component202
         return 0;
     }
 
-    final void decodedOperation807(Buffer class348_sub49) {
+    final void method807(Buffer class348_sub49) {
         aClass197_1418 = new Component108();
-        aClass197_1418.decodedOperation1452(class348_sub49);
+        aClass197_1418.method1452(class348_sub49);
         aClass197_1408 = new Component108();
-        aClass197_1408.decodedOperation1452(class348_sub49);
+        aClass197_1408.method1452(class348_sub49);
         int i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
             class348_sub49.offset--;
             aClass197_1415 = new Component108();
-            aClass197_1415.decodedOperation1452(class348_sub49);
+            aClass197_1415.method1452(class348_sub49);
             aClass197_1425 = new Component108();
-            aClass197_1425.decodedOperation1452(class348_sub49);
+            aClass197_1425.method1452(class348_sub49);
         }
         i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
             class348_sub49.offset--;
             aClass197_1413 = new Component108();
-            aClass197_1413.decodedOperation1452(class348_sub49);
+            aClass197_1413.method1452(class348_sub49);
             aClass197_1423 = new Component108();
-            aClass197_1423.decodedOperation1452(class348_sub49);
+            aClass197_1423.method1452(class348_sub49);
         }
         i = class348_sub49.readUnsignedByte(255);
         if (i != 0) {
             class348_sub49.offset--;
             aClass197_1414 = new Component108();
-            aClass197_1414.decodedOperation1452(class348_sub49);
+            aClass197_1414.method1452(class348_sub49);
             aClass197_1420 = new Component108();
-            aClass197_1420.decodedOperation1452(class348_sub49);
+            aClass197_1420.method1452(class348_sub49);
         }
         for (int i_2_ = 0; i_2_ < 10; i_2_++) {
             int i_3_ = class348_sub49.readSmart(-118);
@@ -88,10 +88,10 @@ final class Component202
         this.anInt1407 = class348_sub49.readUnsignedShort(842397944);
         aClass349_1419 = new Component13();
         aClass197_1417 = new Component108();
-        aClass349_1419.decodedOperation3446(class348_sub49, aClass197_1417);
+        aClass349_1419.method3446(class348_sub49, aClass197_1417);
     }
 
-    public static void decodedOperation808() {
+    public static void method808() {
         anIntArray1409 = null;
         anIntArray1416 = null;
         anIntArray1412 = null;
@@ -102,18 +102,18 @@ final class Component202
         anIntArray1426 = null;
     }
 
-    final int[] decodedOperation809(int i, int i_4_) {
-        Component313.decodedOperation1573(anIntArray1409, 0, i);
+    final int[] method809(int i, int i_4_) {
+        Component313.method1573(anIntArray1409, 0, i);
         if (i_4_ < 10) return anIntArray1409;
         double d = (double) i / ((double) i_4_ + 0.0);
-        aClass197_1418.decodedOperation1453();
-        aClass197_1408.decodedOperation1453();
+        aClass197_1418.method1453();
+        aClass197_1408.method1453();
         int i_5_ = 0;
         int i_6_ = 0;
         int i_7_ = 0;
         if (aClass197_1415 != null) {
-            aClass197_1415.decodedOperation1453();
-            aClass197_1425.decodedOperation1453();
+            aClass197_1415.method1453();
+            aClass197_1425.method1453();
             i_5_ = (int) ((double) (aClass197_1415.anInt2606 - aClass197_1415.anInt2607) * 32.768 / d);
             i_6_ = (int) ((double) aClass197_1415.anInt2607 * 32.768 / d);
         }
@@ -121,8 +121,8 @@ final class Component202
         int i_9_ = 0;
         int i_10_ = 0;
         if (aClass197_1413 != null) {
-            aClass197_1413.decodedOperation1453();
-            aClass197_1423.decodedOperation1453();
+            aClass197_1413.method1453();
+            aClass197_1423.method1453();
             i_8_ = (int) ((double) (aClass197_1413.anInt2606 - aClass197_1413.anInt2607) * 32.768 / d);
             i_9_ = (int) ((double) aClass197_1413.anInt2607 * 32.768 / d);
         }
@@ -136,39 +136,39 @@ final class Component202
             }
         }
         for (int i_12_ = 0; i_12_ < i; i_12_++) {
-            int i_13_ = aClass197_1418.decodedOperation1451(i);
-            int i_14_ = aClass197_1408.decodedOperation1451(i);
+            int i_13_ = aClass197_1418.method1451(i);
+            int i_14_ = aClass197_1408.method1451(i);
             if (aClass197_1415 != null) {
-                int i_15_ = aClass197_1415.decodedOperation1451(i);
-                int i_16_ = aClass197_1425.decodedOperation1451(i);
-                i_13_ += decodedOperation806(i_7_, i_16_, aClass197_1415.anInt2603) >> 1;
+                int i_15_ = aClass197_1415.method1451(i);
+                int i_16_ = aClass197_1425.method1451(i);
+                i_13_ += method806(i_7_, i_16_, aClass197_1415.anInt2603) >> 1;
                 i_7_ += (i_15_ * i_5_ >> 16) + i_6_;
             }
             if (aClass197_1413 != null) {
-                int i_17_ = aClass197_1413.decodedOperation1451(i);
-                int i_18_ = aClass197_1423.decodedOperation1451(i);
-                i_14_ = (i_14_ * ((decodedOperation806(i_10_, i_18_, aClass197_1413.anInt2603) >> 1) + 32768)) >> 15;
+                int i_17_ = aClass197_1413.method1451(i);
+                int i_18_ = aClass197_1423.method1451(i);
+                i_14_ = (i_14_ * ((method806(i_10_, i_18_, aClass197_1413.anInt2603) >> 1) + 32768)) >> 15;
                 i_10_ += (i_17_ * i_8_ >> 16) + i_9_;
             }
             for (int i_19_ = 0; i_19_ < 5; i_19_++) {
                 if (anIntArray1410[i_19_] != 0) {
                     int i_20_ = i_12_ + anIntArray1424[i_19_];
                     if (i_20_ < i) {
-                        anIntArray1409[i_20_] += decodedOperation806(anIntArray1431[i_19_], i_14_ * anIntArray1430[i_19_] >> 15, (aClass197_1418.anInt2603));
+                        anIntArray1409[i_20_] += method806(anIntArray1431[i_19_], i_14_ * anIntArray1430[i_19_] >> 15, (aClass197_1418.anInt2603));
                         anIntArray1431[i_19_] += ((i_13_ * anIntArray1429[i_19_] >> 16) + anIntArray1426[i_19_]);
                     }
                 }
             }
         }
         if (aClass197_1414 != null) {
-            aClass197_1414.decodedOperation1453();
-            aClass197_1420.decodedOperation1453();
+            aClass197_1414.method1453();
+            aClass197_1420.method1453();
             int i_21_ = 0;
             boolean bool = false;
             boolean bool_22_ = true;
             for (int i_23_ = 0; i_23_ < i; i_23_++) {
-                int i_24_ = aClass197_1414.decodedOperation1451(i);
-                int i_25_ = aClass197_1420.decodedOperation1451(i);
+                int i_24_ = aClass197_1414.method1451(i);
+                int i_25_ = aClass197_1420.method1451(i);
                 int i_26_;
                 if (bool_22_) i_26_ = (aClass197_1414.anInt2607 + ((aClass197_1414.anInt2606 - aClass197_1414.anInt2607) * i_24_ >> 8));
                 else i_26_ = (aClass197_1414.anInt2607 + ((aClass197_1414.anInt2606 - aClass197_1414.anInt2607) * i_25_ >> 8));
@@ -186,10 +186,10 @@ final class Component202
                 anIntArray1409[i_28_] += anIntArray1409[i_28_ - i_27_] * anInt1422 / 100;
         }
         if (aClass349_1419.anIntArray4299[0] > 0 || aClass349_1419.anIntArray4299[1] > 0) {
-            aClass197_1417.decodedOperation1453();
-            int i_29_ = aClass197_1417.decodedOperation1451(i + 1);
-            int i_30_ = aClass349_1419.decodedOperation3451(0, (float) i_29_ / 65536.0F);
-            int i_31_ = aClass349_1419.decodedOperation3451(1, (float) i_29_ / 65536.0F);
+            aClass197_1417.method1453();
+            int i_29_ = aClass197_1417.method1451(i + 1);
+            int i_30_ = aClass349_1419.method3451(0, (float) i_29_ / 65536.0F);
+            int i_31_ = aClass349_1419.method3451(1, (float) i_29_ / 65536.0F);
             if (i >= i_30_ + i_31_) {
                 int i_32_ = 0;
                 int i_33_ = i_31_;
@@ -201,7 +201,7 @@ final class Component202
                     for (int i_36_ = 0; i_36_ < i_32_; i_36_++)
                         i_34_ -= (int) (((long) anIntArray1409[i_32_ - 1 - i_36_] * (long) (Component13.anIntArrayArray4301[1][i_36_])) >> 16);
                     anIntArray1409[i_32_] = i_34_;
-                    i_29_ = aClass197_1417.decodedOperation1451(i + 1);
+                    i_29_ = aClass197_1417.method1451(i + 1);
                 }
                 i_33_ = 128;
                 for (; ; ) {
@@ -213,11 +213,11 @@ final class Component202
                         for (int i_39_ = 0; i_39_ < i_31_; i_39_++)
                             i_37_ -= (int) (((long) (anIntArray1409[i_32_ - 1 - i_39_]) * (long) (Component13.anIntArrayArray4301[1][i_39_])) >> 16);
                         anIntArray1409[i_32_] = i_37_;
-                        i_29_ = aClass197_1417.decodedOperation1451(i + 1);
+                        i_29_ = aClass197_1417.method1451(i + 1);
                     }
                     if (i_32_ >= i - i_30_) break;
-                    i_30_ = aClass349_1419.decodedOperation3451(0, (float) i_29_ / 65536.0F);
-                    i_31_ = aClass349_1419.decodedOperation3451(1, (float) i_29_ / 65536.0F);
+                    i_30_ = aClass349_1419.method3451(0, (float) i_29_ / 65536.0F);
+                    i_31_ = aClass349_1419.method3451(1, (float) i_29_ / 65536.0F);
                     i_33_ += 128;
                 }
                 for (/**/; i_32_ < i; i_32_++) {
@@ -227,7 +227,7 @@ final class Component202
                     for (int i_42_ = 0; i_42_ < i_31_; i_42_++)
                         i_40_ -= (int) (((long) anIntArray1409[i_32_ - 1 - i_42_] * (long) (Component13.anIntArrayArray4301[1][i_42_])) >> 16);
                     anIntArray1409[i_32_] = i_40_;
-                    i_29_ = aClass197_1417.decodedOperation1451(i + 1);
+                    i_29_ = aClass197_1417.method1451(i + 1);
                 }
             }
         }

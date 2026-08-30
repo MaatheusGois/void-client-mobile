@@ -27,11 +27,11 @@ final class DisplayModeManagerContainer159
     static int anInt2748;
     boolean aBoolean2749;
 
-    static final boolean decodedOperation1538(int i, byte i_0_, DisplayModeManagerContainer207 class348_sub49_sub2) {
+    static final boolean method1538(int i, byte i_0_, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt2732++;
         int i_1_ = class348_sub49_sub2.readBits((byte) -24, 2);
         if (i_1_ == 0) {
-            if (class348_sub49_sub2.readBits((byte) -24, 1) != 0) decodedOperation1538(i, (byte) 105, class348_sub49_sub2);
+            if (class348_sub49_sub2.readBits((byte) -24, 1) != 0) method1538(i, (byte) 105, class348_sub49_sub2);
             int i_2_ = class348_sub49_sub2.readBits((byte) -24, 6);
             int i_3_ = class348_sub49_sub2.readBits((byte) -24, 6);
             boolean bool = (class348_sub49_sub2.readBits((byte) -24, 1) == 1);
@@ -41,7 +41,7 @@ final class DisplayModeManagerContainer159
             Player player = (InterfaceRenderer.players[i] = new Player());
             player.anInt10290 = i;
             if (Component101.aClass348_Sub49Array2105[i] != null) player.readUpdateMask((byte) 84, Component101.aClass348_Sub49Array2105[i]);
-            player.decodedOperation2435((byte) -108, (class359.anInt4423), true);
+            player.method2435((byte) -108, (class359.anInt4423), true);
             player.anInt10275 = class359.anInt4425;
             int i_4_ = class359.anInt4420;
             int i_5_ = i_4_ >> 28;
@@ -52,7 +52,7 @@ final class DisplayModeManagerContainer159
             int i_9_ = -Component330.regionTileY + i_3_ + (i_7_ << 6);
             player.aByteArray10321[0] = Component293.aByteArray3300[i];
             player.plane = player.aByte6376 = (byte) i_5_;
-            if (NpcComposition.decodedOperation802(i_9_, i_8_, true)) player.aByte6376++;
+            if (NpcComposition.method802(i_9_, i_8_, true)) player.aByte6376++;
             player.setMovementState(i_9_, i_8_, (byte) 102);
             player.aBoolean10539 = false;
             NpcDefinition.aClass359Array6802[i] = null;
@@ -108,19 +108,19 @@ final class DisplayModeManagerContainer159
         return false;
     }
 
-    final void decodedOperation1539(int i, byte i_27_, int i_28_, int i_29_, int i_30_) {
+    final void method1539(int i, byte i_27_, int i_28_, int i_29_, int i_30_) {
         anInt2741++;
-        if (i_27_ <= 114) decodedOperation1538(-108, (byte) -46, null);
+        if (i_27_ <= 114) method1538(-108, (byte) -46, null);
         anInt2735 = i_28_;
         anInt2738 = i;
         anInt2743 = i_30_;
         anInt2740 = i_29_;
     }
 
-    static final void decodedOperation1540(int i, int i_31_, int i_32_) {
+    static final void method1540(int i, int i_31_, int i_32_) {
         anInt2746++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_31_, (byte) 105, 13);
-        class348_sub42_sub15.decodedOperation3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_31_, (byte) 105, 13);
+        class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_32_;
         if (i >= -84) anIntArray2744 = null;
     }
@@ -293,13 +293,13 @@ final class DisplayModeManagerContainer159
         if (i == 32402) anInt2748++;
     }
 
-    public static void decodedOperation1543(int i) {
+    public static void method1543(int i) {
         anIntArray2744 = null;
         if (i != -4524) anInt2747 = 24;
     }
 
-    final void decodedOperation1544(int i, boolean bool, int i_39_) {
-        if (i != 8688) decodedOperation1544(86, false, 92);
+    final void method1544(int i, boolean bool, int i_39_) {
+        if (i != 8688) method1544(86, false, 92);
         anInt2733++;
         int i_40_;
         while_74_:
@@ -346,13 +346,13 @@ final class DisplayModeManagerContainer159
     }
 
     protected DisplayModeManagerContainer159() {
-        if (ReferenceTable.anIntArray3726 == null) Component258.decodedOperation1177((byte) 122);
+        if (ReferenceTable.anIntArray3726 == null) Component258.method1177((byte) 122);
         method1542(32402);
     }
 
     DisplayModeManagerContainer159(GraphicsToolkit var_ha, Buffer class348_sub49, int i) {
         try {
-            if (ReferenceTable.anIntArray3726 == null) Component258.decodedOperation1177((byte) 122);
+            if (ReferenceTable.anIntArray3726 == null) Component258.method1177((byte) 122);
             this.anInt2731 = class348_sub49.readUnsignedByte(255);
             this.aBoolean2737 = (0x8 & this.anInt2731) != 0;
             this.aBoolean2749 = (this.anInt2731 & 0x10) != 0;
@@ -372,7 +372,7 @@ final class DisplayModeManagerContainer159
                 this.aShortArray2742[i_48_] = (short) Component224.bitwiseOr(i_51_, i_50_ << 8);
             }
             i_46_ = ((i_46_ << Component149.anInt4459) + DisplayModeManagerContainer64.anInt9037);
-            int i_52_ = (RunescapeInfo.anIntArray179 == null ? (Component380.anIntArray4983[Component361.decodedOperation303(class348_sub49.readUnsignedShort(842397944), 30) & 0xffff]) : (RunescapeInfo.anIntArray179[class348_sub49.readUnsignedShort(842397944)]));
+            int i_52_ = (RunescapeInfo.anIntArray179 == null ? (Component380.anIntArray4983[Component361.method303(class348_sub49.readUnsignedShort(842397944), 30) & 0xffff]) : (RunescapeInfo.anIntArray179[class348_sub49.readUnsignedShort(842397944)]));
             int i_53_ = class348_sub49.readUnsignedByte(255);
             anInt2739 = (0xe0 & i_53_) << 3;
             this.anInt2734 = 0x1f & i_53_;

@@ -20,12 +20,12 @@ final class Component14
     static int anInt8593;
 
     public final DisplayModeManagerContainer369 method51(byte i) {
-        if (i < 116) decodedOperation3572(118);
+        if (i < 116) method3572(118);
         anInt8586++;
         return Buffer.aClass223_7175;
     }
 
-    static final CacheStore decodedOperation3571(boolean bool, int i, byte i_0_, int i_1_) {
+    static final CacheStore method3571(boolean bool, int i, byte i_0_, int i_1_) {
         anInt8593++;
         if (i_0_ != -23) return null;
         CacheIndexReader class137 = null;
@@ -45,10 +45,10 @@ final class Component14
         }
     }
 
-    public static void decodedOperation3572(int i) {
+    public static void method3572(int i) {
         aClass114_8590 = null;
         aClass45_8589 = null;
-        if (i != 1000000) decodedOperation3571(false, -66, (byte) 13, 13);
+        if (i != 1000000) method3571(false, -66, (byte) 13, 13);
         aClass46ArrayArray8584 = null;
         anObject8592 = null;
     }

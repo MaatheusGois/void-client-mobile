@@ -12,7 +12,7 @@ final class ShaderImpl
     public final native void w(boolean bool);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     private final native void ma(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_0_, int[] is, int[] is_1_);

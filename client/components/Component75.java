@@ -18,25 +18,25 @@ final class Component75
         throw new IllegalStateException();
     }
 
-    public static void decodedOperation1329(int i) {
-        if (i != 4) decodedOperation1329(95);
+    public static void method1329(int i) {
+        if (i != 4) method1329(95);
         aClass114_2285 = null;
     }
 
-    static final void decodedOperation1330(int i, int i_0_, int i_1_) {
+    static final void method1330(int i, int i_0_, int i_1_) {
         anInt2284++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_1_, (byte) 105, 5);
-        class348_sub42_sub15.decodedOperation3246(-25490);
-        if (i_0_ != -19906) decodedOperation1329(71);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_1_, (byte) 105, 5);
+        class348_sub42_sub15.method3246(-25490);
+        if (i_0_ != -19906) method1329(71);
         class348_sub42_sub15.anInt9652 = i;
     }
 
-    static final byte[] decodedOperation1331(byte i, Object object, int i_2_, int i_3_) {
+    static final byte[] method1331(byte i, Object object, int i_2_, int i_3_) {
         anInt2283++;
         if (object == null) return null;
         if (object instanceof byte[]) {
             byte[] is = (byte[]) object;
-            return ToolkitFactory.decodedOperation864(i_2_, is, i_3_, -104);
+            return ToolkitFactory.method864(i_2_, is, i_3_, -104);
         }
         if (i < 89) aClass114_2285 = null;
         if (object instanceof AbstractBuffer) {

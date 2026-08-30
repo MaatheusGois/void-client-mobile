@@ -17,9 +17,9 @@ final class RenderableSub5
     int anInt6422;
     static int anInt6423;
 
-    static final void decodedOperation2505(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+    static final void method2505(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
         anInt6423++;
-        ShaderSub2.decodedOperation165(i_4_, i_2_, i_0_, i_3_, i_7_, i_1_, i_5_, (byte) 61, i, i_6_);
+        ShaderSub2.method165(i_4_, i_2_, i_0_, i_3_, i_7_, i_1_, i_5_, (byte) 61, i, i_6_);
     }
 
     public RenderableSub5() {

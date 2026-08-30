@@ -34,13 +34,13 @@ final class i
     final native void ZA(i var_i_2_, i var_i_3_, int i, boolean bool, boolean bool_4_);
 
     final void method613(DisplayModeManagerContainer370 class64, int i, int i_5_, int i_6_, boolean bool) {
-        anOa5117.method3973().decodedOperation144(this, class64, i, i_5_, i_6_, bool);
+        anOa5117.method3973().method144(this, class64, i, i_5_, i_6_, bool);
     }
 
     final native void Shader(short i, short i_7_);
 
     final boolean isInFrustumExt(int i, int i_8_, DisplayModeManagerContainer204 class101, boolean bool, int i_9_, int i_10_) {
-        return anOa5117.method3973().decodedOperation143(this, i, i_8_, class101, bool, i_10_);
+        return anOa5117.method3973().method143(this, i, i_8_, class101, bool, i_10_);
     }
 
     final native int EA();
@@ -53,11 +53,11 @@ final class i
 
     final native void P(int i, int i_11_, int i_12_, int i_13_);
 
-    final void decodedOperation608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_14_) {
-        if (class318_sub3 == null) anOa5117.method3973().decodedOperation149(this, class101, null, i, i_14_);
+    final void method608(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i, int i_14_) {
+        if (class318_sub3 == null) anOa5117.method3973().method149(this, class101, null, i, i_14_);
         else {
             OpenGLToolkit.anIntArray5132[5] = 0;
-            anOa5117.method3973().decodedOperation149(this, class101, OpenGLToolkit.anIntArray5132, i, i_14_);
+            anOa5117.method3973().method149(this, class101, OpenGLToolkit.anIntArray5132, i, i_14_);
             class318_sub3.anInt6405 = OpenGLToolkit.anIntArray5132[0];
             class318_sub3.anInt6402 = OpenGLToolkit.anIntArray5132[1];
             class318_sub3.anInt6406 = OpenGLToolkit.anIntArray5132[2];
@@ -87,11 +87,11 @@ final class i
     final native void VA(int i);
 
     final boolean isInFrustumExtended(int i, int i_19_, DisplayModeManagerContainer204 class101, boolean bool, int i_20_) {
-        return anOa5117.method3973().decodedOperation146(this, i, i_19_, class101, bool);
+        return anOa5117.method3973().method146(this, i, i_19_, class101, bool);
     }
 
     final DisplayModeManagerContainer370 createRenderPass(byte i, int i_21_, boolean bool) {
-        return anOa5117.method3973().decodedOperation152(this, i, i_21_, bool);
+        return anOa5117.method3973().method152(this, i, i_21_, bool);
     }
 
     final native int ShaderImpl();
@@ -127,7 +127,7 @@ final class i
     final native void ia(short i, short i_73_);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final native int WA();
@@ -152,10 +152,10 @@ final class i
     }
 
     final void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
-        if (class318_sub3 == null) anOa5117.method3973().decodedOperation145(this, class101, null, i);
+        if (class318_sub3 == null) anOa5117.method3973().method145(this, class101, null, i);
         else {
             OpenGLToolkit.anIntArray5132[5] = 0;
-            anOa5117.method3973().decodedOperation145(this, class101, OpenGLToolkit.anIntArray5132, i);
+            anOa5117.method3973().method145(this, class101, OpenGLToolkit.anIntArray5132, i);
             class318_sub3.anInt6405 = OpenGLToolkit.anIntArray5132[0];
             class318_sub3.anInt6402 = OpenGLToolkit.anIntArray5132[1];
             class318_sub3.anInt6406 = OpenGLToolkit.anIntArray5132[2];
@@ -205,7 +205,7 @@ final class i
     }
 
     private final void method693(int[] is, DisplayModeManagerContainer204 class101) {
-        anOa5117.method3973().decodedOperation151(this, is, class101);
+        anOa5117.method3973().method151(this, is, class101);
     }
 
     final native int ua();
@@ -233,7 +233,7 @@ final class i
         int i_89_ = 0;
         for (int i_90_ = 0; i_90_ < i_87_; i_90_++) {
             DisplayModeManagerContainer133 class162 = class124.aClass162Array1832[i_90_];
-            Component291 class189 = DisplayModeManagerContainer306.decodedOperation742(104, class162.anInt2153);
+            Component291 class189 = DisplayModeManagerContainer306.method742(104, class162.anInt2153);
             is_88_[i_89_++] = class162.anInt2155;
             is_88_[i_89_++] = class189.anInt2526;
             is_88_[i_89_++] = class189.anInt2530;

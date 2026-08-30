@@ -10,12 +10,12 @@ import java.io.FileWriter;
  * (plaintext, same style as {@code void-server.txt}). Saved on every login attempt.
  * <p>
  * Auto-login mirrors CS2 opcode 5600: restore creds on title (state 3), then on a
- * later tick transition to state 6 (connecting), which starts {@code decodedOperation1922}.
+ * later tick transition to state 6 (connecting), which starts {@code method1922}.
  * <p>
  * Graphics Auto Setup must finish first. Leaving state 3 on the first tick skipped
  * the title draw that clears pref {@code aClass239_Sub11_7265} and the CS2 that
  * mounts Auto Setup (opcodes 6144/6147 → 7000). That left the client stuck on the
- * safe-mode toolkit and never ran {@code decodedOperation2478}.
+ * safe-mode toolkit and never ran {@code method2478}.
  */
 final class LoginPrefs {
     /**
@@ -161,7 +161,7 @@ final class LoginPrefs {
         }
         // Title draw clears pref 1→0 once the iface is up (see client.method116).
         // Leaving earlier left pref at 1 → next cold start forced safe-mode toolkit.
-        if (Component192.preferences.aClass239_Sub11_7265.decodedOperation1768(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub11_7265.method1768(-32350) == 1) {
             return;
         }
         if (!graphicsSetupHandled) {
@@ -179,7 +179,7 @@ final class LoginPrefs {
         }
         pendingAutoLogin = false;
         System.out.println("void-osrs auto-login go user=" + DisplayModeManagerContainer282.username);
-        // Enter connecting — setClientState(6) calls decodedOperation1922 and leaves the title UI.
+        // Enter connecting — setClientState(6) calls method1922 and leaves the title UI.
         Buffer.setClientState(2, 6);
     }
 
@@ -208,9 +208,9 @@ final class LoginPrefs {
             return;
         }
         try {
-            Component269.decodedOperation2478(1000);
+            Component269.method2478(1000);
             DisplayModeManagerContainer282.anInt5584 = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
-            NodeSub20.decodedOperation2953((byte) -113);
+            NodeSub20.method2953((byte) -113);
             DisplayModeManagerContainer389.savePreferences(37);
             r.aBoolean9719 = false;
             System.out.println("void-osrs graphics auto-setup toolkit=" + DisplayModeManagerContainer282.anInt5584);
@@ -251,7 +251,7 @@ final class LoginPrefs {
                 if (target == null) {
                     return;
                 }
-                Component162.decodedOperation1118(true, true, target, 2533);
+                Component162.method1118(true, true, target, 2533);
             }
         } catch (Throwable ignored) {
         }

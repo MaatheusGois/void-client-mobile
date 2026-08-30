@@ -50,7 +50,7 @@ final class RunescapeInfo {
     static final boolean hasOverlayFlag(int i, boolean bool, int i_0_) {
         if (bool != false) return false;
         anInt190++;
-        return (i & 0x800) != 0 | DisplayModeManagerContainer347.decodedOperation2077(-106, i_0_, i) || PacketReader.isPacketAllowed(i, i_0_, (byte) 88);
+        return (i & 0x800) != 0 | DisplayModeManagerContainer347.method2077(-106, i_0_, i) || PacketReader.isPacketAllowed(i, i_0_, (byte) 88);
     }
 
     final boolean isPositionalSound(byte i) {

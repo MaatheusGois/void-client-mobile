@@ -15,9 +15,9 @@ final class NodeSub34
     int anInt6973;
     static int anInt6974;
 
-    public static void decodedOperation3026(boolean bool) {
+    public static void method3026(boolean bool) {
         anIntArray6972 = null;
-        if (bool != true) decodedOperation3026(false);
+        if (bool != true) method3026(false);
         aClass351_6970 = null;
         aHa6968 = null;
     }

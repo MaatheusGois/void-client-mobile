@@ -31,14 +31,14 @@ final class Component236
     private String[] aStringArray4016;
     static int canvasWidth;
 
-    final void decodedOperation2548(byte i) {
+    final void method2548(byte i) {
         if (i <= 117) method2550(null, -119, (byte) 18);
         anInt3999++;
         if (aString4010 == null) aString4010 = aString4012;
     }
 
-    public static void decodedOperation2549(byte i) {
-        if (i > -74) decodedOperation2549((byte) 75);
+    public static void method2549(byte i) {
+        if (i > -74) method2549((byte) 75);
         aClass114_4015 = null;
     }
 
@@ -134,7 +134,7 @@ final class Component236
         } else aString4012 = class348_sub49.readGjstr2(-13487);
     }
 
-    final void decodedOperation2551(int i, Buffer class348_sub49) {
+    final void method2551(int i, Buffer class348_sub49) {
         int i_19_ = -14 / ((i - -56) / 61);
         anInt3995++;
         for (; ; ) {

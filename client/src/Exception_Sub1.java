@@ -13,13 +13,13 @@ final class Exception_Sub1 extends Exception {
         /* empty */
     }
 
-    public static void decodedOperation140(byte i) {
+    public static void method140(byte i) {
         itemDefinitions = null;
         anIntArray110 = null;
         if (i == -126) anIntArrayArray111 = null;
     }
 
-    static final DisplayModeManagerContainer57 decodedOperation141(DisplayModeManagerContainer57 class46, byte i) {
+    static final DisplayModeManagerContainer57 method141(DisplayModeManagerContainer57 class46, byte i) {
         anInt109++;
         int i_0_ = 98 / ((i - -14) / 41);
         DisplayModeManagerContainer57 class46_1_ = client.getAncestorComponent(class46);

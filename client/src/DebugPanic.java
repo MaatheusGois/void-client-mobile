@@ -42,14 +42,14 @@ abstract class DebugPanic implements Interface5 {
     static int anInt4758;
     GlExtensionManager aClass377_4759;
 
-    static final float decodedOperation2119(float f, int i, float f_0_, int i_1_, float f_2_) {
+    static final float method2119(float f, int i, float f_0_, int i_1_, float f_2_) {
         anInt4738++;
-        if (i_1_ >= -59) decodedOperation2119(1.299765F, 45, -0.43444797F, -35, 0.059617087F);
+        if (i_1_ >= -59) method2119(1.299765F, 45, -0.43444797F, -35, 0.059617087F);
         float[] fs = Component244.aFloatArrayArray4174[i];
         return fs[1] * f + f_2_ * fs[0] + fs[2] * f_0_;
     }
 
-    final Buffer decodedOperation2120(int i, MapBuffer mapbuffer, boolean bool) {
+    final Buffer method2120(int i, MapBuffer mapbuffer, boolean bool) {
         anInt4756++;
         if (i != 0) this.aClass377_4759 = null;
         if (anInt4736 == 0) {
@@ -74,7 +74,7 @@ abstract class DebugPanic implements Interface5 {
         return null;
     }
 
-    final boolean decodedOperation2121(int i, Source source, int i_3_) {
+    final boolean method2121(int i, Source source, int i_3_) {
         anInt4745++;
         if (i != 25625) method2126((byte) -74);
         if (i_3_ > anInt4739) {
@@ -97,19 +97,19 @@ abstract class DebugPanic implements Interface5 {
         if (i != 23315) helveticaGlyphs22 = null;
         anInt4749++;
         if (anInt4746 > 0) {
-            this.aClass377_4759.decodedOperation3969(anInt4747, anInt4746, 3089);
+            this.aClass377_4759.method3969(anInt4747, anInt4746, 3089);
             anInt4746 = -1;
         }
     }
 
-    final long decodedOperation2122(int i) {
+    final long method2122(int i) {
         anInt4758++;
         if (i != 27819) return 59L;
         if (anInt4746 == 0) return aNativeHeapBuffer4748.getAddress();
         return 0L;
     }
 
-    final boolean decodedOperation2123(MapBuffer mapbuffer, int i) {
+    final boolean method2123(MapBuffer mapbuffer, int i) {
         anInt4735++;
         boolean bool = true;
         if (i != anInt4736) {
@@ -123,11 +123,11 @@ abstract class DebugPanic implements Interface5 {
         return bool;
     }
 
-    public static void decodedOperation2124(int i) {
+    public static void method2124(int i) {
         aClass348_Sub16_Sub3_4743 = null;
         helveticaGlyphs22 = null;
         friendWorldNames = null;
-        if (i != 0) decodedOperation2119(-1.1717526F, -45, -2.0738192F, 18, -0.4863547F);
+        if (i != 0) method2119(-1.1717526F, -45, -2.0738192F, 18, -0.4863547F);
     }
 
     void method23(int i, int i_4_) {
@@ -146,7 +146,7 @@ abstract class DebugPanic implements Interface5 {
         if (i != 15959) friendWorldNames = null;
     }
 
-    final void decodedOperation2125(int i) {
+    final void method2125(int i) {
         anInt4742++;
         if (i == 0) {
             if (this.aClass377_4759.aBoolean9920) OpenGL.glBindBufferARB(anInt4755, anInt4746);
@@ -155,7 +155,7 @@ abstract class DebugPanic implements Interface5 {
 
     public int method16(boolean bool) {
         anInt4740++;
-        if (bool != false) decodedOperation2122(127);
+        if (bool != false) method2122(127);
         return anInt4747;
     }
 

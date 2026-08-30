@@ -15,7 +15,7 @@ final class DefinitionSub2
     static int anInt9100;
     static int anInt9101 = -1;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9100++;
         int i_1_ = i;
         while_132_:
@@ -40,7 +40,7 @@ final class DefinitionSub2
         super(0, true);
     }
 
-    public static void decodedOperation3053(int i) {
+    public static void method3053(int i) {
         if (i == 4) anIntArray9096 = null;
     }
 

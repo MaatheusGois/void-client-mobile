@@ -100,11 +100,11 @@ final class BrowserUrlOpener extends NodeSub16 {
     }
 
     private final synchronized void resetChannel(boolean bool, byte i) {
-        aClass204_8944.decodedOperation1487();
+        aClass204_8944.method1487();
         anInt8950++;
         aClass348_Sub2_8963 = null;
         resetAllNotes(true, bool);
-        if (i >= -74) decodedOperation2879(-43, 88, -33);
+        if (i >= -74) method2879(-43, 88, -33);
     }
 
     final synchronized void flushPending(int i, int i_2_, int i_3_) {
@@ -164,7 +164,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             if (i_16_ == 98) anIntArray8904[i_15_] = (GpsOverlay.bitwiseAnd(16256, anIntArray8904[i_15_]) + i_17_);
             if (i_16_ == 101) anIntArray8904[i_15_] = (16384 - -GpsOverlay.bitwiseAnd(anIntArray8904[i_15_], 127) + (i_17_ << 7));
             if (i_16_ == 100) anIntArray8904[i_15_] = i_17_ + (GpsOverlay.bitwiseAnd(16256, anIntArray8904[i_15_]) + 16384);
-            if (i_16_ == 120) decodedOperation2872(2005674600, i_15_);
+            if (i_16_ == 120) method2872(2005674600, i_15_);
             if (i_16_ == 121) allNotesOff(0, i_15_);
             if (i_16_ == 123) killNotes(i_15_, (byte) -70);
             if (i_16_ == 6) {
@@ -252,15 +252,15 @@ final class BrowserUrlOpener extends NodeSub16 {
                 aClass204_8944.method1482(class348_sub2.aByteArray6564);
                 aLong8959 = 0L;
                 aBoolean8961 = bool_35_;
-                int i = aClass204_8944.decodedOperation1483();
+                int i = aClass204_8944.method1483();
                 for (int i_36_ = 0; i_36_ < i; i_36_++) {
-                    aClass204_8944.decodedOperation1492(i_36_);
+                    aClass204_8944.method1492(i_36_);
                     aClass204_8944.method1485(i_36_);
-                    aClass204_8944.decodedOperation1486(i_36_);
+                    aClass204_8944.method1486(i_36_);
                 }
-                anInt8960 = aClass204_8944.decodedOperation1490();
+                anInt8960 = aClass204_8944.method1490();
                 anInt8956 = aClass204_8944.anIntArray2681[anInt8960];
-                aLong8957 = aClass204_8944.decodedOperation1488(anInt8956);
+                aLong8957 = aClass204_8944.method1488(anInt8956);
                 if (bool == false) break;
                 aClass348_Sub16_Sub1_8958 = null;
             } catch (RuntimeException runtimeexception) {
@@ -326,7 +326,7 @@ final class BrowserUrlOpener extends NodeSub16 {
     }
 
     private final void resetAllNotes(boolean bool, boolean bool_45_) {
-        if (bool_45_) decodedOperation2872(2005674600, -1);
+        if (bool_45_) method2872(2005674600, -1);
         else killNotes(-1, (byte) -79);
         anInt8951++;
         allNotesOff(0, -1);
@@ -342,7 +342,7 @@ final class BrowserUrlOpener extends NodeSub16 {
             class348_sub43.anInt7086 = Component231.sampleRate / 100;
             anInt8952++;
             if (class348_sub43.anInt7087 >= 0 && ((class348_sub43.aClass348_Sub16_Sub5_7081) == null || class348_sub43.aClass348_Sub16_Sub5_7081.isExhausted())) {
-                class348_sub43.decodedOperation3299((byte) 36);
+                class348_sub43.method3299((byte) 36);
                 class348_sub43.unlink((byte) 66);
                 if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
                 return true;
@@ -354,7 +354,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 if (i_48_ < 0) i_48_ = 0;
                 class348_sub43.anInt7089 = i_48_;
             }
-            class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2901(calculateSampleIncrement(0, class348_sub43));
+            class348_sub43.aClass348_Sub16_Sub5_7081.method2901(calculateSampleIncrement(0, class348_sub43));
             Component234 class23 = class348_sub43.aClass23_7075;
             boolean bool = false;
             class348_sub43.anInt7076 += class23.anInt352;
@@ -382,11 +382,11 @@ final class BrowserUrlOpener extends NodeSub16 {
                 if (class348_sub43.anInt7084 == -2 + class23.aByteArray344.length) bool = true;
             }
             if (bool) {
-                class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2902(class348_sub43.anInt7086);
+                class348_sub43.aClass348_Sub16_Sub5_7081.method2902(class348_sub43.anInt7086);
                 if (is == null) class348_sub43.aClass348_Sub16_Sub5_7081.skip(i);
                 else class348_sub43.aClass348_Sub16_Sub5_7081.synthesizeSamples(is, i_46_, i);
-                if (class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.decodedOperation2883(class348_sub43.aClass348_Sub16_Sub5_7081);
-                class348_sub43.decodedOperation3299((byte) -100);
+                if (class348_sub43.aClass348_Sub16_Sub5_7081.method2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.method2883(class348_sub43.aClass348_Sub16_Sub5_7081);
+                class348_sub43.method3299((byte) -100);
                 if (class348_sub43.anInt7087 >= 0) {
                     class348_sub43.unlink((byte) 124);
                     if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][(class348_sub43.anInt7088)]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
@@ -441,7 +441,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, calculateSampleIncrement(0, class348_sub43), 0, getChannelVolume(class348_sub43, (byte) -70)));
                     method2874(i ^ 0x7a, (class348_sub17.aShortArray6795[i_50_]) < 0, class348_sub43);
                 }
-                if (class348_sub17.aShortArray6795[i_50_] < 0) class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2917(-1);
+                if (class348_sub17.aShortArray6795[i_50_] < 0) class348_sub43.aClass348_Sub16_Sub5_7081.method2917(-1);
                 if (class348_sub43.anInt7088 >= 0) {
                     PlayerState class348_sub43_53_ = (aClass348_Sub43ArrayArray8915[i_51_][class348_sub43.anInt7088]);
                     if (class348_sub43_53_ != null && class348_sub43_53_.anInt7087 < 0) {
@@ -487,21 +487,21 @@ final class BrowserUrlOpener extends NodeSub16 {
         } else {
             while (i_58_ == anInt8956) {
                 while (aClass204_8944.anIntArray2681[i_57_] == i_58_) {
-                    aClass204_8944.decodedOperation1492(i_57_);
-                    int i_59_ = aClass204_8944.decodedOperation1494(i_57_);
+                    aClass204_8944.method1492(i_57_);
+                    int i_59_ = aClass204_8944.method1494(i_57_);
                     if (i_59_ == 1) {
-                        aClass204_8944.decodedOperation1495();
-                        aClass204_8944.decodedOperation1486(i_57_);
-                        if (aClass204_8944.decodedOperation1480()) {
+                        aClass204_8944.method1495();
+                        aClass204_8944.method1486(i_57_);
+                        if (aClass204_8944.method1480()) {
                             if (aClass348_Sub2_8963 != null) {
                                 unloadDefinitions(aClass348_Sub2_8963, aBoolean8961, false);
                                 updateClock((byte) 124);
                                 return;
                             }
-                            if (aBoolean8961 && i_58_ != 0) aClass204_8944.decodedOperation1484(l);
+                            if (aBoolean8961 && i_58_ != 0) aClass204_8944.method1484(l);
                             else {
                                 resetAllNotes(true, true);
-                                aClass204_8944.decodedOperation1487();
+                                aClass204_8944.method1487();
                                 return;
                             }
                         }
@@ -509,20 +509,20 @@ final class BrowserUrlOpener extends NodeSub16 {
                     }
                     if ((0x80 & i_59_) != 0) handleMidiStatus(i ^ 0x40, i_59_);
                     aClass204_8944.method1485(i_57_);
-                    aClass204_8944.decodedOperation1486(i_57_);
+                    aClass204_8944.method1486(i_57_);
                 }
-                i_57_ = aClass204_8944.decodedOperation1490();
+                i_57_ = aClass204_8944.method1490();
                 i_58_ = aClass204_8944.anIntArray2681[i_57_];
-                l = aClass204_8944.decodedOperation1488(i_58_);
+                l = aClass204_8944.method1488(i_58_);
             }
-            if (i != 124) decodedOperation2879(-127, -46, -96);
+            if (i != 124) method2879(-127, -46, -96);
             aLong8957 = l;
             anInt8956 = i_58_;
             anInt8960 = i_57_;
             if (aClass348_Sub2_8963 != null && i_58_ > anInt8962) {
                 anInt8960 = -1;
                 anInt8956 = anInt8962;
-                aLong8957 = aClass204_8944.decodedOperation1488(anInt8956);
+                aLong8957 = aClass204_8944.method1488(anInt8956);
             }
         }
     }
@@ -546,7 +546,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     final synchronized void skip(int i) {
         anInt8908++;
-        if (aClass204_8944.decodedOperation1491()) {
+        if (aClass204_8944.method1491()) {
             int i_63_ = (aClass204_8944.anInt2683 * anInt8921 / Component231.sampleRate);
             do {
                 long l = aLong8959 + (long) i_63_ * (long) i;
@@ -559,7 +559,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 aClass348_Sub16_Sub1_8958.skip(i_64_);
                 i -= i_64_;
                 updateClock((byte) 124);
-            } while (aClass204_8944.decodedOperation1491());
+            } while (aClass204_8944.method1491());
         }
         aClass348_Sub16_Sub1_8958.skip(i);
     }
@@ -572,13 +572,13 @@ final class BrowserUrlOpener extends NodeSub16 {
     final synchronized boolean isOutputReady(int i) {
         if (i <= 94) getPreviousNode();
         anInt8949++;
-        return aClass204_8944.decodedOperation1491();
+        return aClass204_8944.method1491();
     }
 
     final synchronized void synthesizeSamples(int[] is, int i, int i_67_) {
         try {
             anInt8898++;
-            if (aClass204_8944.decodedOperation1491()) {
+            if (aClass204_8944.method1491()) {
                 int i_68_ = (anInt8921 * aClass204_8944.anInt2683 / Component231.sampleRate);
                 do {
                     long l = aLong8959 + (long) i_67_ * (long) i_68_;
@@ -592,7 +592,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     i += i_69_;
                     i_67_ -= i_69_;
                     updateClock((byte) 124);
-                } while (aClass204_8944.decodedOperation1491());
+                } while (aClass204_8944.method1491());
             }
             aClass348_Sub16_Sub1_8958.synthesizeSamples(is, i, i_67_);
         } catch (RuntimeException runtimeexception) {
@@ -601,7 +601,7 @@ final class BrowserUrlOpener extends NodeSub16 {
     }
 
     final synchronized void setSampleRate(int i, int i_70_) {
-        if (i != 0) decodedOperation2878(56, 73, 54);
+        if (i != 0) method2878(56, 73, 54);
         anInt8933 = i_70_;
         anInt8938++;
     }
@@ -668,7 +668,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         anInt8924++;
         if (i <= 46) aClass204_8944 = null;
         for (NpcDefinition class348_sub17 = (NpcDefinition) aClass356_8891.first(0); class348_sub17 != null; class348_sub17 = (NpcDefinition) aClass356_8891.next(0))
-            class348_sub17.decodedOperation2933((byte) -103);
+            class348_sub17.method2933((byte) -103);
     }
 
     private final void allNotesOff(int i, int i_76_) {
@@ -695,7 +695,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     final synchronized boolean loadDefinitions(NodeSub2 class348_sub2, int i, AssetCacheLoader class26, CacheStore class45, int i_77_) {
         try {
-            class348_sub2.decodedOperation2733();
+            class348_sub2.method2733();
             anInt8954++;
             boolean bool = true;
             int[] is = null;
@@ -704,17 +704,17 @@ final class BrowserUrlOpener extends NodeSub16 {
                 int i_78_ = (int) class348_sub8.key;
                 NpcDefinition class348_sub17 = ((NpcDefinition) aClass356_8891.get(i_78_, -6008));
                 if (class348_sub17 == null) {
-                    class348_sub17 = ReliefShader.decodedOperation1417(0, class45, i_78_);
+                    class348_sub17 = ReliefShader.method1417(0, class45, i_78_);
                     if (class348_sub17 == null) {
                         bool = false;
                         continue;
                     }
                     aClass356_8891.put((byte) 69, i_78_, class348_sub17);
                 }
-                if (!class348_sub17.decodedOperation2932(class26, is, (class348_sub8.aByteArray6657), 0)) bool = false;
+                if (!class348_sub17.method2932(class26, is, (class348_sub8.aByteArray6657), 0)) bool = false;
             }
             if (i_77_ >= -13) return true;
-            if (bool) class348_sub2.decodedOperation2735();
+            if (bool) class348_sub2.method2735();
             return bool;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.CA(" + (class348_sub2 != null ? "{...}" : "null") + ',' + i + ',' + (class26 != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i_77_ + ')'));
@@ -731,7 +731,7 @@ final class BrowserUrlOpener extends NodeSub16 {
 
     private final int getChannelPitchBend(PlayerState class348_sub43, int i) {
         try {
-            if (i >= -16) decodedOperation2879(-95, 66, 110);
+            if (i >= -16) method2879(-95, 66, 110);
             anInt8920++;
             if (anIntArray8925[class348_sub43.anInt7067] == 0) return 0;
             Component234 class23 = class348_sub43.aClass23_7075;
@@ -776,7 +776,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void decodedOperation2870(NodeSub2 class348_sub2, long l, boolean bool, boolean bool_89_, byte i) {
+    final synchronized void method2870(NodeSub2 class348_sub2, long l, boolean bool, boolean bool_89_, byte i) {
         try {
             loadDefinitionStream(false, bool_89_, class348_sub2, bool);
             if (i > 17) {
@@ -793,20 +793,20 @@ final class BrowserUrlOpener extends NodeSub16 {
         return aClass348_Sub16_Sub1_8958;
     }
 
-    public static void decodedOperation2871(int i) {
+    public static void method2871(int i) {
         anIntArrayArray8910 = null;
         if (i != -65) openUrl(null, null, 96, -71);
         aClass45_8926 = null;
     }
 
-    private final void decodedOperation2872(int i, int i_90_) {
+    private final void method2872(int i, int i_90_) {
         anInt8918++;
         for (PlayerState class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.first(i + -2005674596)); class348_sub43 != null; class348_sub43 = ((PlayerState) aClass348_Sub16_Sub1_8958.aClass262_8848.next((byte) 68))) {
             if (i_90_ < 0 || (class348_sub43.anInt7067 == i_90_)) {
                 if (class348_sub43.aClass348_Sub16_Sub5_7081 != null) {
-                    class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2902(Component231.sampleRate / 100);
-                    if (class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.decodedOperation2883(class348_sub43.aClass348_Sub16_Sub5_7081);
-                    class348_sub43.decodedOperation3299((byte) 72);
+                    class348_sub43.aClass348_Sub16_Sub5_7081.method2902(Component231.sampleRate / 100);
+                    if (class348_sub43.aClass348_Sub16_Sub5_7081.method2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.method2883(class348_sub43.aClass348_Sub16_Sub5_7081);
+                    class348_sub43.method3299((byte) 72);
                 }
                 if (class348_sub43.anInt7087 < 0) aClass348_Sub43ArrayArray8928[class348_sub43.anInt7067][class348_sub43.anInt7071] = null;
                 class348_sub43.unlink((byte) 21);
@@ -840,7 +840,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                     class348_sub43.aClass348_Sub16_Sub5_7081.togglePhase(true);
                 }
             } else i_95_ = (int) (((long) i_94_ * (long) (this.anIntArray8914[(class348_sub43.anInt7067)])) >> 6);
-            if (i > 93) class348_sub43.aClass348_Sub16_Sub5_7081.decodedOperation2924(i_95_);
+            if (i > 93) class348_sub43.aClass348_Sub16_Sub5_7081.method2924(i_95_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.WA(" + i + ',' + bool + ',' + (class348_sub43 != null ? "{...}" : "null") + ')'));
         }
@@ -862,16 +862,16 @@ final class BrowserUrlOpener extends NodeSub16 {
                     long l_101_ = aLong8957;
                     while (anInt8956 == i_100_) {
                         while ((aClass204_8944.anIntArray2681[i_99_]) == i_100_) {
-                            aClass204_8944.decodedOperation1492(i_99_);
-                            int i_102_ = aClass204_8944.decodedOperation1494(i_99_);
+                            aClass204_8944.method1492(i_99_);
+                            int i_102_ = aClass204_8944.method1494(i_99_);
                             if (i_102_ == 1) {
-                                aClass204_8944.decodedOperation1495();
-                                aClass204_8944.decodedOperation1486(i_99_);
-                                if (aClass204_8944.decodedOperation1480()) {
-                                    if (aBoolean8961 && i_100_ != 0) aClass204_8944.decodedOperation1484(l_101_);
+                                aClass204_8944.method1495();
+                                aClass204_8944.method1486(i_99_);
+                                if (aClass204_8944.method1480()) {
+                                    if (aBoolean8961 && i_100_ != 0) aClass204_8944.method1484(l_101_);
                                     else {
                                         resetAllNotes(true, true);
-                                        aClass204_8944.decodedOperation1487();
+                                        aClass204_8944.method1487();
                                         return;
                                     }
                                 }
@@ -879,12 +879,12 @@ final class BrowserUrlOpener extends NodeSub16 {
                             }
                             if ((i_102_ & 0x80) != 0 && (0xf0 & i_102_) != 144) handleMidiStatus(65, i_102_);
                             aClass204_8944.method1485(i_99_);
-                            aClass204_8944.decodedOperation1486(i_99_);
+                            aClass204_8944.method1486(i_99_);
                         }
                         aLong8959 = l_101_;
-                        i_99_ = aClass204_8944.decodedOperation1490();
+                        i_99_ = aClass204_8944.method1490();
                         i_100_ = (aClass204_8944.anIntArray2681[i_99_]);
-                        l_101_ = aClass204_8944.decodedOperation1488(i_100_);
+                        l_101_ = aClass204_8944.method1488(i_100_);
                     }
                     anInt8960 = i_99_;
                     aLong8957 = l_101_;
@@ -896,7 +896,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void decodedOperation2877(int i) {
+    final synchronized void method2877(int i) {
         resetChannel(true, (byte) -95);
         if (i != -128) noteOn(103, -71, (byte) -108, -63);
         anInt8913++;
@@ -907,16 +907,16 @@ final class BrowserUrlOpener extends NodeSub16 {
         return 0;
     }
 
-    static final DisplayModeManagerContainer28 decodedOperation2878(int i, int i_103_, int i_104_) {
+    static final DisplayModeManagerContainer28 method2878(int i, int i_103_, int i_104_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_103_][i_104_];
         if (class357 == null || class357.aClass318_Sub1_Sub1_4402 == null) return null;
         return class357.aClass318_Sub1_Sub1_4402;
     }
 
-    static final void decodedOperation2879(int i, int i_105_, int i_106_) {
+    static final void method2879(int i, int i_105_, int i_106_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_105_][i_106_];
         if (class357 != null) {
-            Component191.decodedOperation1376(class357.aClass318_Sub1_Sub1_4402);
+            Component191.method1376(class357.aClass318_Sub1_Sub1_4402);
             if (class357.aClass318_Sub1_Sub1_4402 != null) class357.aClass318_Sub1_Sub1_4402 = null;
         }
     }

@@ -20,14 +20,14 @@ class HashNode extends Node {
     HashNode next;
     static int anInt7064;
 
-    public static void decodedOperation3161(int i) {
-        if (i != 0) decodedOperation3161(-27);
+    public static void method3161(int i) {
+        if (i != 0) method3161(-27);
         aClass2_7058 = null;
     }
 
     final void unlink(boolean bool) {
         anInt7064++;
-        if (bool != true) decodedOperation3163((byte) 50);
+        if (bool != true) method3163((byte) 50);
         if (this.previous != null) {
             this.previous.next = this.next;
             this.next.previous = this.previous;
@@ -36,7 +36,7 @@ class HashNode extends Node {
         }
     }
 
-    static final void decodedOperation3163(byte i) {
+    static final void method3163(byte i) {
         ShaderCompilerSub1.anInt6513 = 0;
         anInt7062++;
         if (i == -114) {

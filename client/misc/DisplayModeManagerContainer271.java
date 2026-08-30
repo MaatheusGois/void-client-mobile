@@ -17,7 +17,7 @@ final class DisplayModeManagerContainer271
         /** World-map Helvetica glyph cache at 14pt. */
     static FontGlyphCache helveticaGlyphs14;
 
-    static final void decodedOperation366(Object[] objects, byte i, int[] is) {
+    static final void method366(Object[] objects, byte i, int[] is) {
         do {
             try {
                 AudioLine.method2092(is.length - 1, 0, is, -119, objects);
@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer271
     }
 
     protected final void finalize() throws Throwable {
-        aClass377_519.decodedOperation3966(this.aLong517, 34192);
+        aClass377_519.method3966(this.aLong517, 34192);
         anInt516++;
         super.finalize();
     }

@@ -11,13 +11,13 @@ final class DisplayModeManagerContainer216
     static int anInt5653;
     static float aFloat5654 = 1.0F;
 
-    static final void decodedOperation769(int i, byte i_0_) {
+    static final void method769(int i, byte i_0_) {
         anInt5653++;
-        if (i_0_ > 109 && Component233.decodedOperation2547(i, (byte) 84)) HashNodeSub4.method3180(-1, (DefinitionSub33.openInterfaces[i]), 24235);
+        if (i_0_ > 109 && Component233.method2547(i, (byte) 84)) HashNodeSub4.method3180(-1, (DefinitionSub33.openInterfaces[i]), 24235);
     }
 
-    static final void decodedOperation770(int i, int i_1_, int i_2_, DisplayModeManagerContainer28 class318_sub1_sub1) {
-        Component186 class357 = NodeSub46.decodedOperation3321(i, i_1_, i_2_);
+    static final void method770(int i, int i_1_, int i_2_, DisplayModeManagerContainer28 class318_sub1_sub1) {
+        Component186 class357 = NodeSub46.method3321(i, i_1_, i_2_);
         if (class357 != null) {
             class357.aClass318_Sub1_Sub1_4402 = class318_sub1_sub1;
             int i_3_ = ShaderSub1.aSArray5191 == Component9.aSArray4142 ? 1 : 0;

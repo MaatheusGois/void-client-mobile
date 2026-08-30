@@ -34,7 +34,7 @@ final class DefinitionSub21
     final int[] getMonochromeOutput(int i, int i_0_) {
         anInt9267++;
         int[] is = this.imageCache.getPixels(0, i);
-        if (i_0_ != 255) decodedOperation3108(-114, -119, -89);
+        if (i_0_ != 255) method3108(-114, -119, -89);
         if (this.imageCache.cacheMiss) {
             int i_1_ = -2048 + Component302.anIntArray6035[i];
             for (int i_2_ = 0; (i_2_ < DefinitionSub6.anInt9139); i_2_++) {
@@ -51,7 +51,7 @@ final class DefinitionSub21
                 int i_7_ = anInt9281 + i_1_;
                 i_7_ = i_7_ < -2048 ? i_7_ - -4096 : i_7_;
                 i_7_ = i_7_ > 2048 ? -4096 + i_7_ : i_7_;
-                is[i_2_] = (decodedOperation3108(i_5_, 9619, i_4_) || decodedOperation3105(i_7_, -7981, i_6_)) ? 4096 : 0;
+                is[i_2_] = (method3108(i_5_, 9619, i_4_) || method3105(i_7_, -7981, i_6_)) ? 4096 : 0;
             }
         }
         return is;
@@ -60,10 +60,10 @@ final class DefinitionSub21
     final void postDecode(int i) {
         anInt9272++;
         if (i <= 108) getMonochromeOutput(69, 74);
-        Component7.decodedOperation1605(26188);
+        Component7.method1605(26188);
     }
 
-    private final boolean decodedOperation3105(int i, int i_8_, int i_9_) {
+    private final boolean method3105(int i, int i_8_, int i_9_) {
         anInt9273++;
         int i_10_ = (i_9_ + i) * anInt9279 >> 12;
         int i_11_ = Component296.anIntArray4654[(i_10_ * 255 & 0xfff2f) >> 12];
@@ -74,14 +74,14 @@ final class DefinitionSub21
         return i_11_ > i + -i_9_ && -i_9_ + i > -i_11_;
     }
 
-    public static void decodedOperation3106(byte i) {
+    public static void method3106(byte i) {
         aLongArray9283 = null;
         ignoreLastNames = null;
         aClass223_9274 = null;
         int i_12_ = 69 % ((19 - i) / 41);
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_13_) {
+    final void method3049(Buffer class348_sub49, int i, int i_13_) {
         anInt9268++;
         if (i_13_ != 31015) getMonochromeOutput(72, 12);
         int i_14_ = i;
@@ -132,20 +132,20 @@ final class DefinitionSub21
         } while (false);
     }
 
-    static final long decodedOperation3107(byte i, Interface10 interface10, int i_15_, int i_16_) {
+    static final long method3107(byte i, Interface10 interface10, int i_15_, int i_16_) {
         anInt9270++;
         long l = 4194304L;
         long l_17_ = -9223372036854775808L;
-        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, interface10.decodedOperation42(-107));
+        Component44 class51 = GradientPreset.aClass263_9195.getDefinition(0, interface10.method42(-107));
         long l_18_ = interface10.method39(-14) << 14 | (i_16_ | i_15_ << 7) | interface10.method41(-32228) << 20 | 0x40000000;
         if (class51.anInt874 == 0) l_18_ |= l_17_;
         if (class51.anInt895 == 1) l_18_ |= l;
         int i_19_ = 57 % ((-24 - i) / 57);
-        l_18_ |= (long) interface10.decodedOperation42(-102) << 32;
+        l_18_ |= (long) interface10.method42(-102) << 32;
         return l_18_;
     }
 
-    private final boolean decodedOperation3108(int i, int i_20_, int i_21_) {
+    private final boolean method3108(int i, int i_20_, int i_21_) {
         if (i_20_ != 9619) return true;
         anInt9271++;
         int i_22_ = anInt9279 * (i - i_21_) >> 12;

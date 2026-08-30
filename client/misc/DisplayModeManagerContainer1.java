@@ -63,7 +63,7 @@ final class DisplayModeManagerContainer1
         MenuEntry.anInt9594++;
         anInt3318++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component208.aClass351_1766, DisplayModeManagerContainer64.aClass77_9029, i + -107);
-        class348_sub47.particleBuffer.writeByte(false, 1 - -Component31.decodedOperation1745(string, -65));
+        class348_sub47.particleBuffer.writeByte(false, 1 - -Component31.method1745(string, -65));
         if (i == 16) {
             class348_sub47.particleBuffer.writeByteSubtract((byte) -70, i_8_);
             class348_sub47.particleBuffer.writeString((byte) -5, string);
@@ -84,7 +84,7 @@ final class DisplayModeManagerContainer1
             is = cacheStore.getFile(-1860, i_9_, i);
         }
         class225 = new Component241();
-        if (is != null) class225.decodedOperation1620(new Buffer(is), -108);
+        if (is != null) class225.method1620(new Buffer(is), -108);
         synchronized (cache) {
             cache.putOne(class225, i, (byte) -109);
         }
@@ -173,7 +173,7 @@ final class DisplayModeManagerContainer1
                 int i_16_ = AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 116);
                 boolean bool = false;
                 if (Component359.aClass348_Sub42_Sub13_3152 != null) {
-                    if (DisplayModeManagerContainer368.anInt5252 + -10 > i_15_ || ((DisplayModeManagerContainer368.anInt5252 - -NodeSub1Sub1.anInt8806 + 10) < i_15_) || -10 + MouseHandler.menuOriginY > i_16_ || (DisplayModeManagerContainer249.anInt4669 + MouseHandler.menuOriginY + 10 < i_16_)) HashNodeSub19.decodedOperation3277((byte) -48);
+                    if (DisplayModeManagerContainer368.anInt5252 + -10 > i_15_ || ((DisplayModeManagerContainer368.anInt5252 - -NodeSub1Sub1.anInt8806 + 10) < i_15_) || -10 + MouseHandler.menuOriginY > i_16_ || (DisplayModeManagerContainer249.anInt4669 + MouseHandler.menuOriginY + 10 < i_16_)) HashNodeSub19.method3277((byte) -48);
                     else bool = true;
                 }
                 if (!bool) {
@@ -203,14 +203,14 @@ final class DisplayModeManagerContainer1
                                 ClientErrorReporter class156 = new ClientErrorReporter(Component237.aClass107_3022);
                                 for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(75)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 74))) {
                                     if (i_17_ == i_22_) {
-                                        if (class348_sub42_sub13.anInt9615 > 1) DisplayModeManagerContainer153.decodedOperation881(class348_sub42_sub13, i_16_, true, i_18_);
+                                        if (class348_sub42_sub13.anInt9615 > 1) DisplayModeManagerContainer153.method881(class348_sub42_sub13, i_16_, true, i_18_);
                                         break;
                                     }
                                     i_22_++;
                                 }
                             }
                         }
-                    } else ShaderProgramSub2.decodedOperation2146((byte) 70);
+                    } else ShaderProgramSub2.method2146((byte) 70);
                 }
             }
             if (i_14_ == 0) {
@@ -238,7 +238,7 @@ final class DisplayModeManagerContainer1
                             i_29_++;
                         }
                     }
-                    ShaderProgramSub2.decodedOperation2146((byte) 78);
+                    ShaderProgramSub2.method2146((byte) 78);
                 } else if (DisplayModeManagerContainer136.anInt4717 <= i_23_ && (i_23_ <= DisplayModeManagerContainer136.anInt4717 - -Component227.anInt1117) && i_24_ >= DefinitionGroup.anInt9532 && ((DefinitionGroup.anInt9532 - -Component251.anInt5819) >= i_24_)) {
                     if (PauseHandler.aBoolean9535) {
                         int i_30_ = -1;
@@ -263,7 +263,7 @@ final class DisplayModeManagerContainer1
                             for (HashNodeSub13 class348_sub42_sub13 = ((HashNodeSub13) class156.firstHashNode(18)); class348_sub42_sub13 != null; class348_sub42_sub13 = ((HashNodeSub13) class156.nextHashNode((byte) 55))) {
                                 if (i_34_ == i_30_) {
                                     ColoredTextBuilder.processMenuAction((byte) 122, ((MenuEntry) (class348_sub42_sub13.aClass107_9621.sentinel.next)), i_24_, i_23_);
-                                    ShaderProgramSub2.decodedOperation2146((byte) 118);
+                                    ShaderProgramSub2.method2146((byte) 118);
                                     break;
                                 }
                                 i_34_++;
@@ -283,7 +283,7 @@ final class DisplayModeManagerContainer1
                         if (i_35_ != -1) {
                             int i_39_ = 0;
                             Component37 class312 = new Component37(DefinitionSub4.menuEntries);
-                            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.decodedOperation2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.decodedOperation2329(10))) {
+                            for (MenuEntry class348_sub42_sub12 = ((MenuEntry) class312.method2327((byte) -53)); class348_sub42_sub12 != null; class348_sub42_sub12 = ((MenuEntry) class312.method2329(10))) {
                                 if (i_35_ == i_39_) {
                                     ColoredTextBuilder.processMenuAction((byte) 107, class348_sub42_sub12, i_24_, i_23_);
                                     break;
@@ -291,19 +291,19 @@ final class DisplayModeManagerContainer1
                                 i_39_++;
                             }
                         }
-                        ShaderProgramSub2.decodedOperation2146((byte) -46);
+                        ShaderProgramSub2.method2146((byte) -46);
                     }
                 }
             }
         } else {
-            if (i_14_ == 0 && ((Component203.anInt8770 == 1 && DisplayModeManagerContainer306.menuEntryCount > 2) || Component203.decodedOperation2485(-100))) i_14_ = 2;
+            if (i_14_ == 0 && ((Component203.anInt8770 == 1 && DisplayModeManagerContainer306.menuEntryCount > 2) || Component203.method2485(-100))) i_14_ = 2;
             if (i_14_ == 2 && DisplayModeManagerContainer306.menuEntryCount > 0 && class348_sub45 != null) {
-                if (Component156.aClass46_3701 == null && HashNode.anInt7059 == 0) DisplayModeManagerContainer42.decodedOperation2291((byte) -124, class348_sub45.getX((byte) -127), class348_sub45.getY(-104));
+                if (Component156.aClass46_3701 == null && HashNode.anInt7059 == 0) DisplayModeManagerContainer42.method2291((byte) -124, class348_sub45.getX((byte) -127), class348_sub45.getY(-104));
                 else Component21.anInt3655 = 2;
             }
             if (i_14_ == 0) {
-                if (Component192.menuTip != null) Component272.decodedOperation1731(1);
-                else if (r.aBoolean9722) DisplayModeManagerContainer196.decodedOperation2678(-2049);
+                if (Component192.menuTip != null) Component272.method1731(1);
+                else if (r.aBoolean9722) DisplayModeManagerContainer196.method2678(-2049);
             }
             if (Component156.aClass46_3701 == null && HashNode.anInt7059 == 0) {
                 Component161.aMenuEntry_1946 = null;

@@ -13,19 +13,19 @@ final class ShaderCompilerSub3
     static int[] anIntArray6522 = new int[1000];
     static float aFloat6523;
 
-    static final void decodedOperation2615(int i, int i_0_) {
+    static final void method2615(int i, int i_0_) {
         anInt6521++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_0_, (byte) 105, 12);
-        class348_sub42_sub15.decodedOperation3251(-16058);
-        if (i >= -59) decodedOperation2617((byte) -108);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 12);
+        class348_sub42_sub15.method3251(-16058);
+        if (i >= -59) method2617((byte) -108);
     }
 
-    static final void decodedOperation2616(int i) {
+    static final void method2616(int i) {
         anInt6520++;
-        if (i == 12) ParticleShader.decodedOperation2152(false);
+        if (i == 12) ParticleShader.method2152(false);
     }
 
-    public static void decodedOperation2617(byte i) {
+    public static void method2617(byte i) {
         anIntArray6522 = null;
         int i_1_ = -3 / ((i - 3) / 54);
         aClass229_6519 = null;

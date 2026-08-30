@@ -26,20 +26,20 @@ final class DisplayModeManagerContainer365
     private int anInt1231;
     int anInt1232;
 
-    private final boolean decodedOperation730(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_0_) {
+    private final boolean method730(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_0_) {
         if (aClass105_1221 == null) {
             if (anInt1230 == 0) {
                 if (MatrixSub1.modelProvider.isModelLoaded(-7953, anInt1224)) {
                     int[] is = MatrixSub1.modelProvider.getIndices(-21540, anInt1220, 0.7F, anInt1224, false, anInt1220);
-                    aClass105_1221 = var_ha.decodedOperation3662(anInt1220, is, (byte) 94, 0, anInt1220, anInt1220);
+                    aClass105_1221 = var_ha.method3662(anInt1220, is, (byte) 94, 0, anInt1220, anInt1220);
                 }
-            } else if (anInt1230 == 2) decodedOperation740(var_ha, class72_0_);
-            else if (anInt1230 == 1) decodedOperation735(var_ha, class72_0_);
+            } else if (anInt1230 == 2) method740(var_ha, class72_0_);
+            else if (anInt1230 == 1) method735(var_ha, class72_0_);
         }
         return aClass105_1221 != null;
     }
 
-    public static void decodedOperation731() {
+    public static void method731() {
         aClass64_1227 = null;
         aClass105_1215 = null;
         aClass105_1228 = null;
@@ -69,12 +69,12 @@ final class DisplayModeManagerContainer365
                     is[i_4_ + i_6_] = is[i_4_ + i_8_] = is[i_5_ + i_6_] = is[i_5_ + i_8_] = 127 - i_10_ << 24 | 0xffffff;
                 }
             }
-            aClass105_1228 = var_ha.decodedOperation3662(128, is_1_, (byte) 94, 0, 128, 128);
-            aClass105_1215 = var_ha.decodedOperation3662(128, is, (byte) 94, 0, 128, 128);
+            aClass105_1228 = var_ha.method3662(128, is_1_, (byte) 94, 0, 128, 128);
+            aClass105_1215 = var_ha.method3662(128, is, (byte) 94, 0, 128, 128);
         }
     }
 
-    final boolean decodedOperation733(int i, int i_11_, int i_12_, int i_13_) {
+    final boolean method733(int i, int i_11_, int i_12_, int i_13_) {
         int i_14_;
         int i_15_;
         int i_16_;
@@ -105,7 +105,7 @@ final class DisplayModeManagerContainer365
             return false;
         }
         int i_18_ = Component373.nextPowerOfTwo(anInt1217, (byte) 108);
-        if (i_18_ > i_13_) i_18_ = PrimitiveTypeDefinition.decodedOperation3051(i_13_, 4096);
+        if (i_18_ > i_13_) i_18_ = PrimitiveTypeDefinition.method3051(i_13_, 4096);
         if (i_18_ > 512) i_18_ = 512;
         if (i_18_ != anInt1220) anInt1220 = i_18_;
         anInt1231 = (int) (Math.asin((float) i_15_ / 256.0F) * 2607.5945876176133) & 0x3fff;
@@ -114,11 +114,11 @@ final class DisplayModeManagerContainer365
         return true;
     }
 
-    final void decodedOperation734() {
+    final void method734() {
         aClass105_1221 = null;
     }
 
-    private final void decodedOperation735(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_19_) {
+    private final void method735(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_19_) {
         method738(var_ha);
         method732(var_ha);
         var_ha.K(anIntArray1226);
@@ -162,24 +162,24 @@ final class DisplayModeManagerContainer365
         var_ha.DA(anInt1220 / 2, anInt1220 / 2, i_28_, i_28_);
         var_ha.loadModelviewMatrix(var_ha.method3654());
         DisplayModeManagerContainer204 class101 = var_ha.method3654();
-        class101.decodedOperation894(0, 0, var_ha.i() - class64.HA());
-        class64.decodedOperation608(class101, null, 1024, 1);
+        class101.method894(0, 0, var_ha.i() - class64.HA());
+        class64.method608(class101, null, 1024, 1);
         int i_29_ = anInt1220 * 13 / 16;
         int i_30_ = (anInt1220 - i_29_) / 2;
-        aClass105_1215.decodedOperation970(i_30_, i_30_, i_29_, i_29_, 0, ~0xffffff | anInt1222, 1);
+        aClass105_1215.method970(i_30_, i_30_, i_29_, i_29_, 0, ~0xffffff | anInt1222, 1);
         aClass105_1221 = var_ha.method3683(0, 0, anInt1220, anInt1220, true);
         var_ha.NativeHandle();
         var_ha.fillRect2D(0, 0, anInt1220, anInt1220, 0, 0);
-        aClass105_1228.decodedOperation970(0, 0, anInt1220, anInt1220, 1, 0, 0);
+        aClass105_1228.method970(0, 0, anInt1220, anInt1220, 1, 0, 0);
         aClass105_1221.capturePixels(0, 0, 0);
         var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);
     }
 
-    final boolean decodedOperation736(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_31_) {
-        return aClass105_1221 != null || decodedOperation730(var_ha, class72_31_);
+    final boolean method736(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_31_) {
+        return aClass105_1221 != null || method730(var_ha, class72_31_);
     }
 
-    final void decodedOperation737(GraphicsToolkit var_ha, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
+    final void method737(GraphicsToolkit var_ha, int i, int i_32_, int i_33_, int i_34_, int i_35_, int i_36_) {
         if (aClass105_1221 != null) {
             int i_37_ = anInt1231 - i_35_ & 0x3fff;
             int i_38_ = anInt1219 - i_36_ & 0x3fff;
@@ -187,16 +187,16 @@ final class DisplayModeManagerContainer365
             if (i_37_ > 8192) i_37_ -= 16384;
             int i_39_ = i_37_ * i_34_ / 4096 + (i_34_ - anInt1217) / 2;
             int i_40_ = i_38_ * i_34_ / -4096 + (i_33_ - anInt1217) / 2;
-            if (i_39_ < i_34_ && i_39_ + anInt1217 > 0 && i_40_ < i_33_ && i_40_ + anInt1217 > 0) aClass105_1221.decodedOperation973(i_40_ + i, i_39_ + i_32_, anInt1217, anInt1217);
+            if (i_39_ < i_34_ && i_39_ + anInt1217 > 0 && i_40_ < i_33_ && i_40_ + anInt1217 > 0) aClass105_1221.method973(i_40_ + i, i_39_ + i_32_, anInt1217, anInt1217);
         }
     }
 
     private static final void method738(GraphicsToolkit var_ha) {
         if (aClass64_1227 == null) {
             DisplayModeManagerContainer77 class124 = new DisplayModeManagerContainer77(580, 1104, 1);
-            class124.decodedOperation1105(109, (byte) 0, (byte) 0, (short) 0, (short) 1024, (byte) 0, (short) 0, (short) 32767, (short) 1024, (short) 1024);
-            class124.decodedOperation1101(128, 0, 0, -93);
-            class124.decodedOperation1101(-128, 0, 0, 108);
+            class124.method1105(109, (byte) 0, (byte) 0, (short) 0, (short) 1024, (byte) 0, (short) 0, (short) 32767, (short) 1024, (short) 1024);
+            class124.method1101(128, 0, 0, -93);
+            class124.method1101(-128, 0, 0, 108);
             for (int i = 0; i <= 24; i++) {
                 int i_41_ = i * 8192 / 24;
                 int i_42_ = DisplayModeManagerContainer88.anIntArray1207[i_41_];
@@ -206,21 +206,21 @@ final class DisplayModeManagerContainer365
                     int i_46_ = DisplayModeManagerContainer88.anIntArray1204[i_45_] >> 7;
                     int i_47_ = DisplayModeManagerContainer88.anIntArray1207[i_45_] * i_42_ >> 21;
                     int i_48_ = DisplayModeManagerContainer88.anIntArray1207[i_45_] * i_43_ >> 21;
-                    class124.decodedOperation1101(i_46_, -i_47_, i_48_, 127);
+                    class124.method1101(i_46_, -i_47_, i_48_, 127);
                 }
                 if (i > 0) {
                     int i_49_ = i * 23 + 2;
                     int i_50_ = i_49_ - 23;
-                    class124.decodedOperation1102(0, (byte) 0, (byte) 0, (short) 0, (byte) 52, (short) 127, i_50_, (byte) 0, i_49_);
+                    class124.method1102(0, (byte) 0, (byte) 0, (short) 0, (byte) 52, (short) 127, i_50_, (byte) 0, i_49_);
                     for (int i_51_ = 1; i_51_ < 23; i_51_++) {
                         int i_52_ = i_50_ + 1;
                         int i_53_ = i_49_ + 1;
-                        class124.decodedOperation1102(i_50_, (byte) 0, (byte) 0, (short) 0, (byte) 41, (short) 127, i_52_, (byte) 0, i_49_);
-                        class124.decodedOperation1102(i_52_, (byte) 0, (byte) 0, (short) 0, (byte) 67, (short) 127, i_53_, (byte) 0, i_49_);
+                        class124.method1102(i_50_, (byte) 0, (byte) 0, (short) 0, (byte) 41, (short) 127, i_52_, (byte) 0, i_49_);
+                        class124.method1102(i_52_, (byte) 0, (byte) 0, (short) 0, (byte) 67, (short) 127, i_53_, (byte) 0, i_49_);
                         i_50_ = i_52_;
                         i_49_ = i_53_;
                     }
-                    class124.decodedOperation1102(i_49_, (byte) 0, (byte) 0, (short) 0, (byte) 98, (short) 127, i_50_, (byte) 0, 1);
+                    class124.method1102(i_49_, (byte) 0, (byte) 0, (short) 0, (byte) 98, (short) 127, i_50_, (byte) 0, 1);
                 }
             }
             class124.anInt1821 = class124.anInt1836;
@@ -231,7 +231,7 @@ final class DisplayModeManagerContainer365
         }
     }
 
-    static final void decodedOperation739() {
+    static final void method739() {
         aClass64_1227 = null;
         aClass105_1228 = null;
     }
@@ -247,7 +247,7 @@ final class DisplayModeManagerContainer365
         anInt1230 = i;
     }
 
-    private final void decodedOperation740(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_60_) {
+    private final void method740(GraphicsToolkit var_ha, DisplayModeManagerContainer365 class72_60_) {
         DisplayModeManagerContainer77 class124 = Component189.loadFromCache(0, Component92.aClass45_3309, anInt1224, -1);
         if (class124 != null) {
             var_ha.K(anIntArray1226);
@@ -293,9 +293,9 @@ final class DisplayModeManagerContainer365
             int i_75_ = Math.max(i_71_, i_72_);
             var_ha.DA(i_73_, i_74_, i_75_, i_75_);
             var_ha.loadModelviewMatrix(var_ha.method3654());
-            DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
-            class101.decodedOperation894(0, 0, var_ha.i() - class64.HA());
-            class64.decodedOperation608(class101, null, var_ha.i(), 1);
+            DisplayModeManagerContainer204 class101 = var_ha.method3705();
+            class101.method894(0, 0, var_ha.i() - class64.HA());
+            class64.method608(class101, null, var_ha.i(), 1);
             aClass105_1221 = var_ha.method3683(0, 0, anInt1220, anInt1220, true);
             aClass105_1221.capturePixels(0, 0, 3);
             var_ha.KA(anIntArray1226[0], anIntArray1226[1], anIntArray1226[2], anIntArray1226[3]);

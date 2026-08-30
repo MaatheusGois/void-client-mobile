@@ -28,7 +28,7 @@ final class DefinitionSub23
     private int anInt9322;
     private int anInt9323;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9308++;
         if (i_0_ != 31015) aBoolean9307 = true;
         int i_1_ = i;
@@ -101,22 +101,22 @@ final class DefinitionSub23
     private final void method3112(int i, int i_2_, int[][] is, Random random, int i_3_, int i_4_, int i_5_) {
         try {
             anInt9309++;
-            int i_6_ = (anInt9310 <= 0 ? 4096 : 4096 - DisplayModeManagerContainer77.decodedOperation1097((byte) 117, anInt9310, random));
+            int i_6_ = (anInt9310 <= 0 ? 4096 : 4096 - DisplayModeManagerContainer77.method1097((byte) 117, anInt9310, random));
             int i_7_ = 88 % ((i - 57) / 55);
             int i_8_ = anInt9306 * anInt9314 >> 12;
-            int i_9_ = (anInt9306 - (i_8_ > 0 ? DisplayModeManagerContainer77.decodedOperation1097((byte) 82, i_8_, random) : 0));
+            int i_9_ = (anInt9306 - (i_8_ > 0 ? DisplayModeManagerContainer77.method1097((byte) 82, i_8_, random) : 0));
             if (DefinitionSub6.anInt9139 <= i_3_) i_3_ -= DefinitionSub6.anInt9139;
             if (i_9_ <= 0) {
                 if (DefinitionSub6.anInt9139 < i_3_ + i_5_) {
                     int i_10_ = DefinitionSub6.anInt9139 + -i_3_;
                     for (int i_11_ = 0; i_11_ < i_2_; i_11_++) {
                         int[] is_12_ = is[i_11_ + i_4_];
-                        Component313.decodedOperation1579(is_12_, i_3_, i_10_, i_6_);
-                        Component313.decodedOperation1579(is_12_, 0, i_5_ - i_10_, i_6_);
+                        Component313.method1579(is_12_, i_3_, i_10_, i_6_);
+                        Component313.method1579(is_12_, 0, i_5_ - i_10_, i_6_);
                     }
                 } else {
                     for (int i_13_ = 0; i_2_ > i_13_; i_13_++)
-                        Component313.decodedOperation1579(is[i_13_ + i_4_], i_3_, i_5_, i_6_);
+                        Component313.method1579(is[i_13_ + i_4_], i_3_, i_5_, i_6_);
                 }
             } else if (i_2_ > 0 && i_5_ > 0) {
                 int i_14_ = i_5_ / 2;
@@ -140,11 +140,11 @@ final class DefinitionSub23
                                 is_21_[GpsOverlay.bitwiseAnd((CustomCursorSetting.anInt6076), i_25_ + i_3_)] = is_21_[(GpsOverlay.bitwiseAnd(i_3_ - -i_5_ + (-i_25_ - 1), CustomCursorSetting.anInt6076))] = Math.min(i_26_, i_22_);
                             }
                         }
-                        if (DefinitionSub6.anInt9139 >= i_19_ + i_18_) Component313.decodedOperation1579(is_21_, i_18_, i_19_, i_22_);
+                        if (DefinitionSub6.anInt9139 >= i_19_ + i_18_) Component313.method1579(is_21_, i_18_, i_19_, i_22_);
                         else {
                             int i_27_ = -i_18_ + DefinitionSub6.anInt9139;
-                            Component313.decodedOperation1579(is_21_, i_18_, i_27_, i_22_);
-                            Component313.decodedOperation1579(is_21_, 0, i_19_ - i_27_, i_22_);
+                            Component313.method1579(is_21_, i_18_, i_27_, i_22_);
+                            Component313.method1579(is_21_, 0, i_19_ - i_27_, i_22_);
                         }
                     } else {
                         int i_28_ = -1 + (-i_20_ + i_2_);
@@ -161,20 +161,20 @@ final class DefinitionSub23
                                     is_21_[GpsOverlay.bitwiseAnd((CustomCursorSetting.anInt6076), i_3_ + i_32_)] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, -i_32_ + i_5_ + (i_3_ + -1)))] = Math.min(i_29_, i_33_);
                                 }
                             }
-                            if (i_19_ + i_18_ <= DefinitionSub6.anInt9139) Component313.decodedOperation1579(is_21_, i_18_, i_19_, i_29_);
+                            if (i_19_ + i_18_ <= DefinitionSub6.anInt9139) Component313.method1579(is_21_, i_18_, i_19_, i_29_);
                             else {
                                 int i_34_ = -i_18_ + DefinitionSub6.anInt9139;
-                                Component313.decodedOperation1579(is_21_, i_18_, i_34_, i_29_);
-                                Component313.decodedOperation1579(is_21_, 0, -i_34_ + i_19_, i_29_);
+                                Component313.method1579(is_21_, i_18_, i_34_, i_29_);
+                                Component313.method1579(is_21_, 0, -i_34_ + i_19_, i_29_);
                             }
                         } else {
                             for (int i_35_ = 0; i_35_ < i_16_; i_35_++)
                                 is_21_[GpsOverlay.bitwiseAnd(i_35_ + i_3_, (CustomCursorSetting.anInt6076))] = is_21_[(GpsOverlay.bitwiseAnd(CustomCursorSetting.anInt6076, -i_35_ + (i_3_ - (-i_5_ + 1))))] = i_6_ * i_35_ / i_16_;
-                            if (DefinitionSub6.anInt9139 >= i_18_ - -i_19_) Component313.decodedOperation1579(is_21_, i_18_, i_19_, i_6_);
+                            if (DefinitionSub6.anInt9139 >= i_18_ - -i_19_) Component313.method1579(is_21_, i_18_, i_19_, i_6_);
                             else {
                                 int i_36_ = -i_18_ + DefinitionSub6.anInt9139;
-                                Component313.decodedOperation1579(is_21_, i_18_, i_36_, i_6_);
-                                Component313.decodedOperation1579(is_21_, 0, i_19_ - i_36_, i_6_);
+                                Component313.method1579(is_21_, i_18_, i_36_, i_6_);
+                                Component313.method1579(is_21_, 0, i_19_ - i_36_, i_6_);
                             }
                         }
                     }
@@ -192,7 +192,7 @@ final class DefinitionSub23
         String[] strings = new String[i - -1];
         int i_37_ = 0;
         int i_38_ = 0;
-        if (bool != true) decodedOperation3114((byte) -76);
+        if (bool != true) method3114((byte) -76);
         for (int i_39_ = 0; i_39_ < i; i_39_++) {
             int i_40_;
             for (i_40_ = i_38_; string.charAt(i_40_) != c; i_40_++) {
@@ -205,9 +205,9 @@ final class DefinitionSub23
         return strings;
     }
 
-    public static void decodedOperation3114(byte i) {
+    public static void method3114(byte i) {
         aClass348_Sub22Array9319 = null;
-        if (i > -63) decodedOperation3114((byte) -91);
+        if (i > -63) method3114((byte) -91);
     }
 
     public DefinitionSub23() {
@@ -247,8 +247,8 @@ final class DefinitionSub23
             int[][] is_57_ = new int[i_55_][3];
             Random random = new Random(anInt9318);
             for (; ; ) {
-                int i_58_ = i_51_ + DisplayModeManagerContainer77.decodedOperation1097((byte) 106, i_52_ - i_51_, random);
-                int i_59_ = (DisplayModeManagerContainer77.decodedOperation1097((byte) 117, -i_53_ + i_54_, random) + i_53_);
+                int i_58_ = i_51_ + DisplayModeManagerContainer77.method1097((byte) 106, i_52_ - i_51_, random);
+                int i_59_ = (DisplayModeManagerContainer77.method1097((byte) 117, -i_53_ + i_54_, random) + i_53_);
                 int i_60_ = i_46_ + i_58_;
                 if (i_60_ > DefinitionSub6.anInt9139) {
                     i_60_ = DefinitionSub6.anInt9139;
@@ -320,7 +320,7 @@ final class DefinitionSub23
                     i_49_ = i_50_;
                     i_45_ = i_44_;
                     i_50_ = 0;
-                    i_44_ = DisplayModeManagerContainer77.decodedOperation1097((byte) 113, DefinitionSub6.anInt9139, random);
+                    i_44_ = DisplayModeManagerContainer77.method1097((byte) 113, DefinitionSub6.anInt9139, random);
                     i_43_ = -i_45_ + i_44_;
                     i_46_ = 0;
                     int i_80_ = i_43_;

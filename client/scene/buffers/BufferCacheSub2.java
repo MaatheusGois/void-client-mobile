@@ -70,7 +70,7 @@ final class BufferCacheSub2
         if (aClass104_8266 != null && var_r != null) {
             int i_3_ = (i - ((this.aHa_Sub2_8272.anInt7772 * i_0_) >> 8) >> this.aHa_Sub2_8272.anInt7731);
             int i_4_ = (-(i_0_ * this.aHa_Sub2_8272.anInt7777 >> 8) + i_1_ >> this.aHa_Sub2_8272.anInt7731);
-            aClass104_8266.decodedOperation951(var_r, i_3_, i_4_, 70);
+            aClass104_8266.method951(var_r, i_3_, i_4_, 70);
         }
     }
 
@@ -134,16 +134,16 @@ final class BufferCacheSub2
                     is[i][i_33_] = (byte) ((aByteArrayArray8273[i][1 + i_33_] >> 3) + (aByteArrayArray8273[i][-1 + i_33_] >> 2) + ((aByteArrayArray8273[i + 1][i_33_] >> 3) + ((aByteArrayArray8273[i - 1][i_33_] >> 2) + (aByteArrayArray8273[i][i_33_] >> 1))));
             }
             aClass348_Sub20Array8282 = new NodeSub20[aClass356_8278.size(1)];
-            aClass356_8278.decodedOperation3477(3, aClass348_Sub20Array8282);
+            aClass356_8278.method3477(3, aClass348_Sub20Array8282);
             for (int i = 0; aClass348_Sub20Array8282.length > i; i++)
-                aClass348_Sub20Array8282[i].decodedOperation2946(2147483647, anInt8284);
+                aClass348_Sub20Array8282[i].method2946(2147483647, anInt8284);
             int i = 24;
             if (anIntArrayArrayArray8252 != null) i += 4;
             if ((0x7 & this.anInt8235) != 0) i += 12;
             jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = this.aHa_Sub2_8272.aNativeHeap7730.a(anInt8284 * i, false);
             Stream stream = new Stream(nativeheapbuffer);
             NodeSub20[] class348_sub20s = new NodeSub20[anInt8284];
-            int i_34_ = PrimitiveTypeDefinition.decodedOperation3051(anInt8284 / 4, 4096);
+            int i_34_ = PrimitiveTypeDefinition.method3051(anInt8284 / 4, 4096);
             if (i_34_ < 1) i_34_ = 1;
             LruCache class356 = new LruCache(i_34_);
             NodeSub20[] class348_sub20s_35_ = new NodeSub20[anInt8280];
@@ -326,7 +326,7 @@ final class BufferCacheSub2
                                 if (i_69_ != -1 && ((class348_sub20s[i_91_].key) > class348_sub20s_38_[i_64_].key)) class348_sub20s[i_91_] = class348_sub20s_38_[i_64_];
                             }
                             for (int i_98_ = 0; i_98_ < i_60_; i_98_++)
-                                class348_sub20s_35_[i_98_].decodedOperation2949((byte) 97, i_91_, i_74_, i_75_, f_89_);
+                                class348_sub20s_35_[i_98_].method2949((byte) 97, i_91_, i_74_, i_75_, f_89_);
                             anInt8257++;
                         }
                     }
@@ -334,7 +334,7 @@ final class BufferCacheSub2
             }
             for (int i_99_ = 0; anInt8246 > i_99_; i_99_++) {
                 NodeSub20 class348_sub20 = class348_sub20s[i_99_];
-                if (class348_sub20 != null) class348_sub20.decodedOperation2951(3, i_99_);
+                if (class348_sub20 != null) class348_sub20.method2951(3, i_99_);
             }
             for (int i_100_ = 0; this.tileWidth > i_100_; i_100_++) {
                 for (int i_101_ = 0; i_101_ < this.tileLength; i_101_++) {
@@ -351,22 +351,22 @@ final class BufferCacheSub2
                             NodeSub20 class348_sub20_109_ = class348_sub20s[i_107_];
                             NodeSub20 class348_sub20_110_ = null;
                             if (class348_sub20 != null) {
-                                class348_sub20.decodedOperation2945(i_100_, (byte) 18, i_101_, i_103_);
+                                class348_sub20.method2945(i_100_, (byte) 18, i_101_, i_103_);
                                 class348_sub20_110_ = class348_sub20;
                             }
                             if (class348_sub20_108_ != null) {
-                                class348_sub20_108_.decodedOperation2945(i_100_, (byte) 18, i_101_, i_103_);
+                                class348_sub20_108_.method2945(i_100_, (byte) 18, i_101_, i_103_);
                                 if (class348_sub20_110_ == null || ((class348_sub20_110_.key) > (class348_sub20_108_.key))) class348_sub20_110_ = class348_sub20_108_;
                             }
                             if (class348_sub20_109_ != null) {
-                                class348_sub20_109_.decodedOperation2945(i_100_, (byte) 18, i_101_, i_103_);
+                                class348_sub20_109_.method2945(i_100_, (byte) 18, i_101_, i_103_);
                                 if (class348_sub20_110_ == null || ((class348_sub20_109_.key) < (class348_sub20_110_.key))) class348_sub20_110_ = class348_sub20_109_;
                             }
                             if (class348_sub20_110_ != null) {
-                                if (class348_sub20 != null) class348_sub20_110_.decodedOperation2951(3, i_105_);
-                                if (class348_sub20_108_ != null) class348_sub20_110_.decodedOperation2951(3, i_106_);
-                                if (class348_sub20_109_ != null) class348_sub20_110_.decodedOperation2951(3, i_107_);
-                                class348_sub20_110_.decodedOperation2945(i_100_, (byte) 18, i_101_, i_103_);
+                                if (class348_sub20 != null) class348_sub20_110_.method2951(3, i_105_);
+                                if (class348_sub20_108_ != null) class348_sub20_110_.method2951(3, i_106_);
+                                if (class348_sub20_109_ != null) class348_sub20_110_.method2951(3, i_107_);
+                                class348_sub20_110_.method2945(i_100_, (byte) 18, i_101_, i_103_);
                             }
                             i_103_++;
                         }
@@ -374,7 +374,7 @@ final class BufferCacheSub2
                 }
             }
             stream.a();
-            anInterface2_8279 = this.aHa_Sub2_8272.decodedOperation3739(8448, nativeheapbuffer, false, i, stream.b());
+            anInterface2_8279 = this.aHa_Sub2_8272.method3739(8448, nativeheapbuffer, false, i, stream.b());
             this.aClass123_8276 = new Component132(anInterface2_8279, 5126, 3, 0);
             aClass123_8274 = new Component132(anInterface2_8279, 5121, 4, 12);
             int i_111_;
@@ -390,10 +390,10 @@ final class BufferCacheSub2
             for (int i_112_ = 0; i_112_ < aClass348_Sub20Array8282.length; i_112_++) {
                 NodeSub20 class348_sub20 = aClass348_Sub20Array8282[i_112_];
                 ls[i_112_] = class348_sub20.key;
-                class348_sub20.decodedOperation2952(17795, anInt8246);
+                class348_sub20.method2952(17795, anInt8246);
             }
-            NewsFetcher.decodedOperation2669(aClass348_Sub20Array8282, ls, -21);
-            if (aClass104_8266 != null) aClass104_8266.decodedOperation957(0);
+            NewsFetcher.method2669(aClass348_Sub20Array8282, ls, -21);
+            if (aClass104_8266 != null) aClass104_8266.method957(0);
         }
         anInt8247++;
         anIntArrayArrayArray8258 = null;
@@ -431,7 +431,7 @@ final class BufferCacheSub2
             int i_124_ = is_118_[i_120_++];
             int i_125_ = is_117_[i_120_];
             int i_126_ = is_118_[i_120_++];
-            if (((-i_123_ + i_121_) * (i_124_ + -i_126_) - (i_125_ - i_123_) * (i_124_ - i_122_)) > 0) var_r_Sub2.decodedOperation3294(i_125_, i_121_, i_122_, 63, i_123_, i_126_, i_124_);
+            if (((-i_123_ + i_121_) * (i_124_ + -i_126_) - (i_125_ - i_123_) * (i_124_ - i_122_)) > 0) var_r_Sub2.method3294(i_125_, i_121_, i_122_, 63, i_123_, i_126_, i_124_);
         }
     }
 
@@ -444,7 +444,7 @@ final class BufferCacheSub2
         if (aClass104_8266 != null && var_r != null) {
             int i_131_ = (i - ((i_128_ * this.aHa_Sub2_8272.anInt7772) >> 8) >> this.aHa_Sub2_8272.anInt7731);
             int i_132_ = (-((this.aHa_Sub2_8272.anInt7777 * i_128_) >> 8) + i_129_ >> this.aHa_Sub2_8272.anInt7731);
-            aClass104_8266.decodedOperation959(i_131_, i_132_, (byte) 107, var_r);
+            aClass104_8266.method959(i_131_, i_132_, (byte) 107, var_r);
         }
     }
 
@@ -496,13 +496,13 @@ final class BufferCacheSub2
         if (aClass104_8266 == null || var_r == null) return false;
         int i_145_ = (-(i_142_ * this.aHa_Sub2_8272.anInt7772 >> 8) + i >> this.aHa_Sub2_8272.anInt7731);
         int i_146_ = (i_143_ + -((this.aHa_Sub2_8272.anInt7777 * i_142_) >> 8) >> this.aHa_Sub2_8272.anInt7731);
-        return aClass104_8266.decodedOperation954(i_145_, (byte) 88, i_146_, var_r);
+        return aClass104_8266.method954(i_145_, (byte) 88, i_146_, var_r);
     }
 
-    static final boolean decodedOperation3999(int i, int i_147_, int i_148_) {
+    static final boolean method3999(int i, int i_147_, int i_148_) {
         if (i_148_ != 458752) anInt8237 = -28;
         anInt8238++;
-        return (0x70000 & i_147_) != 0 | DisplayModeManagerContainer369.decodedOperation1613(false, i, i_147_) || Component118.decodedOperation2187(i_147_, -121, i);
+        return (0x70000 & i_147_) != 0 | DisplayModeManagerContainer369.method1613(false, i, i_147_) || Component118.method2187(i_147_, -121, i);
     }
 
     final void method3983(int i, int i_149_, int i_150_, boolean[][] bools, boolean bool, int i_151_) {
@@ -510,7 +510,7 @@ final class BufferCacheSub2
         anInt8255++;
     }
 
-    public static void decodedOperation4000(int i) {
+    public static void method4000(int i) {
         if (i != 8448) aString8265 = null;
         anIntArray8269 = null;
         aString8265 = null;
@@ -614,7 +614,7 @@ final class BufferCacheSub2
         }
     }
 
-    static final void decodedOperation4001(RenderableObject class318_sub1) {
+    static final void method4001(RenderableObject class318_sub1) {
         JaclibLoader.toolkit.H(class318_sub1.x, (class318_sub1.anInt6382 + (class318_sub1.method2394(true) >> 1)), class318_sub1.y, HashNodeSub3.anIntArray9505);
         class318_sub1.anInt6386 = HashNodeSub3.anIntArray9505[0];
         class318_sub1.anInt6380 = HashNodeSub3.anIntArray9505[1];
@@ -627,17 +627,17 @@ final class BufferCacheSub2
         int i_168_ = (this.tileSize >> this.aHa_Sub2_8272.anInt7731);
         CacheNodeSub2 var_r_Sub2 = (CacheNodeSub2) var_r;
         CacheNodeSub2 var_r_Sub2_169_;
-        if (var_r_Sub2 == null || !var_r_Sub2.decodedOperation3296((byte) 104, i_168_, i_168_)) var_r_Sub2_169_ = new CacheNodeSub2(this.aHa_Sub2_8272, i_168_, i_168_);
+        if (var_r_Sub2 == null || !var_r_Sub2.method3296((byte) 104, i_168_, i_168_)) var_r_Sub2_169_ = new CacheNodeSub2(this.aHa_Sub2_8272, i_168_, i_168_);
         else {
             var_r_Sub2_169_ = var_r_Sub2;
-            var_r_Sub2_169_.decodedOperation3293((byte) 0);
+            var_r_Sub2_169_.method3293((byte) 0);
         }
-        var_r_Sub2_169_.decodedOperation3292(i_168_, i_168_, 0, 25053, 0);
+        var_r_Sub2_169_.method3292(i_168_, i_168_, 0, 25053, 0);
         method3998((byte) -82, i, i_167_, var_r_Sub2_169_);
         return var_r_Sub2_169_;
     }
 
-    static final void decodedOperation4002(Buffer class348_sub49, byte i) {
+    static final void method4002(Buffer class348_sub49, byte i) {
         anInt8248++;
         byte[] is = new byte[24];
         if (i == 55) {
@@ -745,11 +745,11 @@ final class BufferCacheSub2
             }
             if (i != -1) {
                 this.aHa_Sub2_8272.deleteTexture((byte) -120, (float) i);
-                this.aHa_Sub2_8272.decodedOperation3760(1);
+                this.aHa_Sub2_8272.method3760(1);
             } else this.aHa_Sub2_8272.setColorMask((byte) -62);
             this.aHa_Sub2_8272.setLightingEnabled((0x7 & (this.anInt8235)) != 0, 120);
             for (int i_208_ = 0; aClass348_Sub20Array8282.length > i_208_; i_208_++)
-                aClass348_Sub20Array8282[i_208_].decodedOperation2948(5123, i_204_, is);
+                aClass348_Sub20Array8282[i_208_].method2948(5123, i_204_, is);
             if (!aClass262_8256.isEmpty((byte) 18)) {
                 int i_209_ = this.aHa_Sub2_8272.anInt7856;
                 int i_210_ = this.aHa_Sub2_8272.anInt7782;
@@ -764,7 +764,7 @@ final class BufferCacheSub2
                 this.aHa_Sub2_8272.glTexEnvCombineMode(false, 0, 770, 34167);
                 for (Node class348 = aClass262_8256.first(4); class348 != null; class348 = aClass262_8256.next((byte) 92)) {
                     NodeSub32 class348_sub32 = (NodeSub32) class348;
-                    class348_sub32.decodedOperation3023(bools, 255, i_194_, i_196_, i_192_);
+                    class348_sub32.method3023(bools, 255, i_194_, i_196_, i_192_);
                 }
                 this.aHa_Sub2_8272.glTexEnvCombine(5890, 768, (byte) -87, 0);
                 this.aHa_Sub2_8272.glTexEnvCombineMode(false, 0, 770, 5890);
@@ -775,7 +775,7 @@ final class BufferCacheSub2
                 OpenGL.glPushMatrix();
                 OpenGL.glTranslatef(0.0F, -1.0F, 0.0F);
                 this.aHa_Sub2_8272.glSetVertexPointer(this.aClass123_8276, null, -26411, this.aClass123_8277, null);
-                aClass104_8266.decodedOperation956(bool, 112, bools, i_192_, i_196_, i_194_);
+                aClass104_8266.method956(bool, 112, bools, i_192_, i_196_, i_194_);
                 OpenGL.glPopMatrix();
             }
         }

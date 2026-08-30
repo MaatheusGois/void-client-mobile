@@ -19,12 +19,12 @@ final class DisplayModeManagerContainer322
         /* empty */
     }
 
-    public static void decodedOperation2707(boolean bool) {
+    public static void method2707(boolean bool) {
         aByteArrayArray4281 = null;
-        if (bool != false) decodedOperation2708(57);
+        if (bool != false) method2708(57);
     }
 
-    static final void decodedOperation2708(int i) {
+    static final void method2708(int i) {
         Component111.markInterfaceDirty(-9343, Component156.aClass46_3701);
         anInt4280++;
         RenderableObject.anInt6392++;
@@ -34,8 +34,8 @@ final class DisplayModeManagerContainer322
             int i_0_ = 0;
             int i_1_ = 0;
             if (Component210.gameCanvasAttached) {
-                i_0_ = BufferCacheSub3.decodedOperation4008((byte) -124);
-                i_1_ = Component110.decodedOperation260(false);
+                i_0_ = BufferCacheSub3.method4008((byte) -124);
+                i_1_ = Component110.method260(false);
             }
             int i_2_ = i_0_ + AbstractGlTextureSub4.mouseHandler.getCursorX(true);
             int i_3_ = i_1_ + AbstractGlTextureSub4.mouseHandler.getCursorY((byte) 80);
@@ -64,7 +64,7 @@ final class DisplayModeManagerContainer322
                     }
                 } else {
                     if (Component189.aBoolean3819) {
-                        DisplayModeManagerContainer196.decodedOperation2678(-2049);
+                        DisplayModeManagerContainer196.method2678(-2049);
                         if (Component156.aClass46_3701.anObjectArray692 != null) {
                             NodeSub36 class348_sub36 = new NodeSub36();
                             class348_sub36.aClass46_6983 = DisplayModeManagerContainer104.aClass46_10336;
@@ -74,9 +74,9 @@ final class DisplayModeManagerContainer322
                             class348_sub36.aClass46_6989 = Component156.aClass46_3701;
                             ClientScriptExecutor.runHook(class348_sub36);
                         }
-                        if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.getAncestorComponent(Component156.aClass46_3701) != null)) Component245.decodedOperation173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
-                    } else if ((Component203.anInt8770 == 1 || Component203.decodedOperation2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.decodedOperation191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));
-                    else if (MatrixSub1.decodedOperation913((byte) 127)) Component2.decodedOperation191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 + (DefinitionSub13.anInt9203)));
+                        if (DisplayModeManagerContainer104.aClass46_10336 != null && (client.getAncestorComponent(Component156.aClass46_3701) != null)) Component245.method173(-67, Component156.aClass46_3701, (DisplayModeManagerContainer104.aClass46_10336));
+                    } else if ((Component203.anInt8770 == 1 || Component203.method2485(-113)) && DisplayModeManagerContainer306.menuEntryCount > 2) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 - -(DefinitionSub13.anInt9203)));
+                    else if (MatrixSub1.method913((byte) 127)) Component2.method191(true, (GlToolkitSub3.anInt8001 + RenderableSub4.anInt6411), (Component386.anInt2872 + (DefinitionSub13.anInt9203)));
                     Component156.aClass46_3701 = null;
                 }
             }

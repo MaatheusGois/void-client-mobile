@@ -20,7 +20,7 @@ final class HashNodeSub17
     static StringCache aClass351_9679 = new StringCache(27, 7);
     static int anInt9680;
 
-    static final int decodedOperation3266(GraphicsToolkit var_ha, int i, Component11 class277) {
+    static final int method3266(GraphicsToolkit var_ha, int i, Component11 class277) {
         try {
             anInt9674++;
             if (class277.anInt3569 == -1) {
@@ -36,13 +36,13 @@ final class HashNodeSub17
         }
     }
 
-    final boolean decodedOperation3267(byte i, int i_0_) {
+    final boolean method3267(byte i, int i_0_) {
         anInt9676++;
         if (i >= -91) return false;
         return (this.aClass4Array9673[i_0_].aBoolean129);
     }
 
-    final boolean decodedOperation3268(int i) {
+    final boolean method3268(int i) {
         anInt9675++;
         if (this.aClass4Array9673 != null) return true;
         if (aByteArrayArray9671 == null) {
@@ -71,7 +71,7 @@ final class HashNodeSub17
             int i_4_ = Component161.aClass45_1940.getFileCount(0, anInt9669);
             this.aClass4Array9673 = new Component376[i_4_];
             is = Component161.aClass45_1940.getFileIds(anInt9669, 0);
-            if (i > -115) decodedOperation3266(null, 123, null);
+            if (i > -115) method3266(null, 123, null);
         }
         for (int i_5_ = 0; i_5_ < is.length; i_5_++) {
             byte[] is_6_ = aByteArrayArray9671[i_5_];
@@ -97,17 +97,17 @@ final class HashNodeSub17
         return true;
     }
 
-    public static void decodedOperation3269(boolean bool) {
+    public static void method3269(boolean bool) {
         aClass348_Sub42_Sub17Array9672 = null;
         aClass351_9679 = null;
         anIntArrayArray9678 = null;
-        if (bool != true) decodedOperation3270((byte) -116);
+        if (bool != true) method3270((byte) -116);
     }
 
-    static final void decodedOperation3270(byte i) {
-        if (i <= 106) decodedOperation3266(null, -91, null);
+    static final void method3270(byte i) {
+        if (i <= 106) method3266(null, -91, null);
         for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 115)) {
-            if (Component66.isInterfaceItemOpcode(69, class348_sub42_sub12.opcode)) DisplayModeManagerContainer89.decodedOperation202(6, class348_sub42_sub12);
+            if (Component66.isInterfaceItemOpcode(69, class348_sub42_sub12.opcode)) DisplayModeManagerContainer89.method202(6, class348_sub42_sub12);
         }
         anInt9680++;
     }
@@ -116,13 +116,13 @@ final class HashNodeSub17
         anInt9669 = i;
     }
 
-    final boolean decodedOperation3271(int i, int i_9_) {
+    final boolean method3271(int i, int i_9_) {
         anInt9670++;
-        if (i_9_ != 14) decodedOperation3269(false);
+        if (i_9_ != 14) method3269(false);
         return (this.aClass4Array9673[i].aBoolean139);
     }
 
-    final boolean decodedOperation3272(int i, int i_10_) {
+    final boolean method3272(int i, int i_10_) {
         anInt9677++;
         if (i_10_ != 0) return true;
         return (this.aClass4Array9673[i].aBoolean131);

@@ -13,7 +13,7 @@ final class Component166
     static Rectangle[] aRectangleArray2371 = new Rectangle[100];
     static Component169 aClass196_2372;
 
-    public static void decodedOperation1366(byte i) {
+    public static void method1366(byte i) {
         aClass196_2372 = null;
         anIntArray2370 = null;
         aRectangleArray2371 = null;

@@ -53,9 +53,9 @@ class Component185
         anInt5310++;
     }
 
-    public static void decodedOperation564(byte i) {
+    public static void method564(byte i) {
         languageNames = null;
         anIntArray5306 = null;
-        if (i >= -39) decodedOperation564((byte) 50);
+        if (i >= -39) method564((byte) 50);
     }
 }

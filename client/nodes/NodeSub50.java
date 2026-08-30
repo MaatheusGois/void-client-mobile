@@ -14,16 +14,16 @@ final class NodeSub50
     static int anInt7213 = 0;
     static int anInt7214;
 
-    public static void decodedOperation3418(int i) {
+    public static void method3418(int i) {
         if (i >= 108) aByteArrayArray7212 = null;
     }
 
-    static final void decodedOperation3419(int i) {
+    static final void method3419(int i) {
         ClientSystemInfo.anIntArray6878 = null;
         FriendLoginMessage.anIntArray8785 = null;
         DefinitionSub6.anIntArray9135 = null;
         anInt7210++;
-        if (i != 13022) decodedOperation3418(-79);
+        if (i != 13022) method3418(-79);
         HashNodeSub3.aBoolean9498 = false;
         DisplayModeManagerContainer232.anIntArray4692 = null;
         NodeSub8.anIntArray6655 = null;
@@ -37,9 +37,9 @@ final class NodeSub50
         this.stringValue = string;
     }
 
-    static final int decodedOperation3420(int i) {
-        if (i != 0) decodedOperation3420(101);
+    static final int method3420(int i) {
+        if (i != 0) method3420(101);
         anInt7214++;
-        return DisplayModeManagerContainer207.decodedOperation3405(2012104999, false);
+        return DisplayModeManagerContainer207.method3405(2012104999, false);
     }
 }

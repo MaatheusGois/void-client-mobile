@@ -21,7 +21,7 @@ final class DisplayModeManagerContainer154
     static float cameraPitch = 1024.0F;
     static int anInt1288;
 
-    static final boolean decodedOperation771(int i, byte i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int[] is, int i_5_) {
+    static final boolean method771(int i, byte i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int[] is, int i_5_) {
         anInt1281++;
         if (i_3_ > Component314.anInt3872) i_3_ = Component314.anInt3872;
         if (i_4_ < 0) i_4_ = 0;
@@ -68,18 +68,18 @@ final class DisplayModeManagerContainer154
         return true;
     }
 
-    public static void decodedOperation772(byte i) {
+    public static void method772(byte i) {
         aClass169_1286 = null;
         LOCAL = null;
-        if (i >= -110) decodedOperation771(-68, (byte) 45, 58, 119, 101, -92, null, 79);
+        if (i >= -110) method771(-68, (byte) 45, 58, 119, 101, -92, null, 79);
     }
 
-    static final void decodedOperation773(boolean bool) {
+    static final void method773(boolean bool) {
         DefinitionSub10.aBoolean9181 = bool;
         anInt1284++;
     }
 
-    final void decodedOperation774(RenderableSub4 class318_sub4, int i) {
+    final void method774(RenderableSub4 class318_sub4, int i) {
         anInt1280++;
         RenderableObject class318_sub1 = class318_sub4.aClass318_Sub1_6410;
         boolean bool = true;
@@ -92,30 +92,30 @@ final class DisplayModeManagerContainer154
         }
         if (!bool) {
             if (this.aBoolean1283) {
-                for (RenderableSub4 class318_sub4_7_ = ((RenderableSub4) this.aClass243_1282.decodedOperation1872(8)); class318_sub4_7_ != null; class318_sub4_7_ = (RenderableSub4) this.aClass243_1282.decodedOperation1878((byte) -103)) {
+                for (RenderableSub4 class318_sub4_7_ = ((RenderableSub4) this.aClass243_1282.method1872(8)); class318_sub4_7_ != null; class318_sub4_7_ = (RenderableSub4) this.aClass243_1282.method1878((byte) -103)) {
                     if (class318_sub1 == (class318_sub4_7_.aClass318_Sub1_6410)) {
                         class318_sub4_7_.unlink(false);
-                        Component350.decodedOperation560(class318_sub4_7_, -41);
+                        Component350.method560(class318_sub4_7_, -41);
                     }
                 }
             }
-            for (RenderableSub4 class318_sub4_8_ = ((RenderableSub4) this.aClass243_1282.decodedOperation1872(8)); class318_sub4_8_ != null; class318_sub4_8_ = (RenderableSub4) this.aClass243_1282.decodedOperation1878((byte) -44)) {
+            for (RenderableSub4 class318_sub4_8_ = ((RenderableSub4) this.aClass243_1282.method1872(8)); class318_sub4_8_ != null; class318_sub4_8_ = (RenderableSub4) this.aClass243_1282.method1878((byte) -44)) {
                 if (class318_sub1.anInt6389 >= class318_sub4_8_.aClass318_Sub1_6410.anInt6389) {
                     DebugOverlay.linkRenderable(class318_sub4_8_, class318_sub4, true);
                     return;
                 }
             }
             if (i != 18802) aClass169_1286 = null;
-            this.aClass243_1282.decodedOperation1869(-107, class318_sub4);
+            this.aClass243_1282.method1869(-107, class318_sub4);
         }
     }
 
-    final void decodedOperation775(byte i) {
+    final void method775(byte i) {
         for (; ; ) {
-            RenderableSub4 class318_sub4 = ((RenderableSub4) this.aClass243_1282.decodedOperation1875(60));
+            RenderableSub4 class318_sub4 = ((RenderableSub4) this.aClass243_1282.method1875(60));
             if (class318_sub4 == null) break;
             class318_sub4.unlink(false);
-            Component350.decodedOperation560(class318_sub4, 123);
+            Component350.method560(class318_sub4, 123);
         }
         anInt1278++;
         if (i != 69) anInt1288 = -20;

@@ -17,13 +17,13 @@ final class NodeSub13 extends Node {
     int[] amounts = new int[1];
     static boolean aBoolean6759 = true;
 
-    static final void decodedOperation2801(int i, int i_0_, int i_1_, int i_2_, int i_3_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i_4_) {
+    static final void method2801(int i, int i_0_, int i_1_, int i_2_, int i_3_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, byte i_4_) {
         int i_5_ = 1 / ((i_4_ - 6) / 48);
         anInt6754++;
-        ShaderSub2.decodedOperation165(class318_sub1_sub3_sub3.plane, i_2_, i, i_3_, class318_sub1_sub3_sub3.x, 0, class318_sub1_sub3_sub3.y, (byte) 110, i_0_, i_1_);
+        ShaderSub2.method165(class318_sub1_sub3_sub3.plane, i_2_, i, i_3_, class318_sub1_sub3_sub3.x, 0, class318_sub1_sub3_sub3.y, (byte) 110, i_0_, i_1_);
     }
 
-    private final long decodedOperation2802(int[] is, int i, boolean bool, int[] is_6_, byte i_7_) {
+    private final long method2802(int[] is, int i, boolean bool, int[] is_6_, byte i_7_) {
         try {
             anInt6755++;
             long[] ls = DefinitionSub21.aLongArray9283;
@@ -48,7 +48,7 @@ final class NodeSub13 extends Node {
         }
     }
 
-    final DisplayModeManagerContainer370 decodedOperation2803(DisplayModeManagerContainer167 class17, Component101 class154, int i, int i_10_, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, boolean bool, int i_14_) {
+    final DisplayModeManagerContainer370 method2803(DisplayModeManagerContainer167 class17, Component101 class154, int i, int i_10_, int i_11_, int i_12_, int i_13_, GraphicsToolkit var_ha, boolean bool, int i_14_) {
         try {
             anInt6756++;
             DisplayModeManagerContainer370 class64 = null;
@@ -77,12 +77,12 @@ final class NodeSub13 extends Node {
                 i_22_ = class17.anIntArray237[i_10_];
                 i_15_ |= 0x20;
                 int i_26_ = i_22_ >>> 16;
-                class348_sub42_sub17 = RunescapeInfo.aClass87_191.decodedOperation839(i_26_, i_14_ + 4);
+                class348_sub42_sub17 = RunescapeInfo.aClass87_191.method839(i_26_, i_14_ + 4);
                 i_22_ &= 0xffff;
                 if (class348_sub42_sub17 != null) {
-                    bool_19_ |= class348_sub42_sub17.decodedOperation3272(i_22_, 0);
-                    bool_18_ |= class348_sub42_sub17.decodedOperation3271(i_22_, 14);
-                    bool_21_ |= class348_sub42_sub17.decodedOperation3267((byte) -112, i_22_);
+                    bool_19_ |= class348_sub42_sub17.method3272(i_22_, 0);
+                    bool_18_ |= class348_sub42_sub17.method3271(i_22_, 14);
+                    bool_21_ |= class348_sub42_sub17.method3267((byte) -112, i_22_);
                     bool_20_ |= class17.aBoolean242;
                 }
                 if ((class17.aBoolean241 || DisplayModeManagerContainer332.aBoolean5002) && i_12_ != -1 && class17.anIntArray237.length > i_12_) {
@@ -91,11 +91,11 @@ final class NodeSub13 extends Node {
                     int i_27_ = i_23_ >>> 16;
                     i_23_ &= 0xffff;
                     if (i_27_ == i_26_) class348_sub42_sub17_25_ = class348_sub42_sub17;
-                    else class348_sub42_sub17_25_ = RunescapeInfo.aClass87_191.decodedOperation839(i_23_ >>> 16, 3);
+                    else class348_sub42_sub17_25_ = RunescapeInfo.aClass87_191.method839(i_23_ >>> 16, 3);
                     if (class348_sub42_sub17_25_ != null) {
-                        bool_19_ |= class348_sub42_sub17_25_.decodedOperation3272(i_23_, 0);
-                        bool_18_ |= class348_sub42_sub17_25_.decodedOperation3271(i_23_, 14);
-                        bool_21_ |= class348_sub42_sub17_25_.decodedOperation3267((byte) -118, i_23_);
+                        bool_19_ |= class348_sub42_sub17_25_.method3272(i_23_, 0);
+                        bool_18_ |= class348_sub42_sub17_25_.method3271(i_23_, 14);
+                        bool_21_ |= class348_sub42_sub17_25_.method3267((byte) -118, i_23_);
                     }
                 }
                 if (bool_19_) i_15_ |= 0x80;
@@ -103,19 +103,19 @@ final class NodeSub13 extends Node {
                 if (bool_20_) i_15_ |= 0x200;
                 if (bool_21_) i_15_ |= 0x400;
             }
-            long l = decodedOperation2802((class154 != null ? class154.anIntArray2095 : null), i, bool, is, (byte) -74);
+            long l = method2802((class154 != null ? class154.anIntArray2095 : null), i, bool, is, (byte) -74);
             if (Connection.aClass60_2671 != null) class64 = (DisplayModeManagerContainer370) Connection.aClass60_2671.get(l, i_14_ ^ 0x56);
             if (class64 == null || var_ha.method3667(class64.ua(), i_15_) != 0) {
                 if (class64 != null) i_15_ = var_ha.bitwiseOr(i_15_, class64.ua());
                 int i_28_ = i_15_;
                 boolean bool_29_ = false;
                 for (int i_30_ = 0; is.length > i_30_; i_30_++) {
-                    if (is[i_30_] != -1 && !Exception_Sub1.itemDefinitions.getItemDefinition(-91, is[i_30_]).decodedOperation1565(bool, -1)) bool_29_ = true;
+                    if (is[i_30_] != -1 && !Exception_Sub1.itemDefinitions.getItemDefinition(-91, is[i_30_]).method1565(bool, -1)) bool_29_ = true;
                 }
                 if (bool_29_) return null;
                 DisplayModeManagerContainer77[] class124s = new DisplayModeManagerContainer77[is.length];
                 for (int i_31_ = 0; i_31_ < is.length; i_31_++) {
-                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.itemDefinitions.getItemDefinition(NodeSub21.bitwiseXor(i_14_, -112), is[i_31_]).decodedOperation1558(bool, false);
+                    if (is[i_31_] != -1) class124s[i_31_] = Exception_Sub1.itemDefinitions.getItemDefinition(NodeSub21.bitwiseXor(i_14_, -112), is[i_31_]).method1558(bool, false);
                 }
                 if (class225 != null && class225.anIntArrayArray2939 != null) {
                     for (int i_32_ = 0; (class225.anIntArrayArray2939.length > i_32_); i_32_++) {
@@ -126,8 +126,8 @@ final class NodeSub13 extends Node {
                             int i_36_ = (class225.anIntArrayArray2939[i_32_][3]);
                             int i_37_ = (class225.anIntArrayArray2939[i_32_][4]);
                             int i_38_ = (class225.anIntArrayArray2939[i_32_][5]);
-                            if (i_36_ != 0 || i_37_ != 0 || i_38_ != 0) class124s[i_32_].decodedOperation1107(6875, i_37_, i_38_, i_36_);
-                            if (i_33_ != 0 || i_34_ != 0 || i_35_ != 0) class124s[i_32_].decodedOperation1099((byte) -91, i_35_, i_33_, i_34_);
+                            if (i_36_ != 0 || i_37_ != 0 || i_38_ != 0) class124s[i_32_].method1107(6875, i_37_, i_38_, i_36_);
+                            if (i_33_ != 0 || i_34_ != 0 || i_35_ != 0) class124s[i_32_].method1099((byte) -91, i_35_, i_33_, i_34_);
                         }
                     }
                 }
@@ -148,7 +148,7 @@ final class NodeSub13 extends Node {
             }
             if (class17 == null || class348_sub42_sub17 == null) return class64;
             DisplayModeManagerContainer370 class64_41_ = class64.createRenderPass((byte) 1, i_15_, true);
-            class64_41_.decodedOperation617(i_22_, i_24_, class348_sub42_sub17_25_, 0, class348_sub42_sub17, false, class17.aBoolean242, i_23_, i_11_ + i_14_);
+            class64_41_.method617(i_22_, i_24_, class348_sub42_sub17_25_, 0, class348_sub42_sub17, false, class17.aBoolean242, i_23_, i_11_ + i_14_);
             return class64_41_;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ie.B(" + (class17 != null ? "{...}" : "null") + ',' + (class154 != null ? "{...}" : "null") + ',' + i + ',' + i_10_ + ',' + i_11_ + ',' + i_12_ + ',' + i_13_ + ',' + (var_ha != null ? "{...}" : "null") + ',' + bool + ',' + i_14_ + ')'));

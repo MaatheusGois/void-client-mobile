@@ -16,7 +16,7 @@ final class Component85
         /* empty */
     }
 
-    final int decodedOperation1607(int i, int i_0_, byte i_1_) {
+    final int method1607(int i, int i_0_, byte i_1_) {
         anInt2882++;
         int i_2_ = (Math.max(Component236.canvasWidth, i));
         if (Component364.aClass221_8344 == this) return 0;

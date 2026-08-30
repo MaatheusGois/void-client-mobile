@@ -25,8 +25,8 @@ final class ComponentDownloader {
     private int anInt418;
     private int anInt419;
 
-    static final void decodedOperation319(int i, int i_0_, byte i_1_, int i_2_, int i_3_) {
-        if (i_1_ != -18) decodedOperation322(73);
+    static final void method319(int i, int i_0_, byte i_1_, int i_2_, int i_3_) {
+        if (i_1_ != -18) method322(73);
         anInt414++;
         Component226.anInt4171 = i_2_;
         DisplayModeManagerContainer50.anInt3861 = i_0_;
@@ -34,7 +34,7 @@ final class ComponentDownloader {
         Component275.anInt2688 = i_3_;
     }
 
-    final void decodedOperation320(int i, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
+    final void method320(int i, int i_4_, byte i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
         anInt415++;
         anInt409 = i_6_;
         anInt417 = i_12_;
@@ -49,24 +49,24 @@ final class ComponentDownloader {
         if (i_5_ != -4) aClass84_413 = null;
     }
 
-    final boolean decodedOperation321(int i, int i_14_, int i_15_, int i_16_) {
+    final boolean method321(int i, int i_14_, int i_15_, int i_16_) {
         anInt411++;
         if (anInt418 > i_16_ || i_16_ > anInt419) return false;
         if (anInt416 > i_15_ || i_15_ > anInt406) return false;
         if (i_14_ < anInt412 || anInt404 < i_14_) return false;
-        if (i != -14735) decodedOperation323(null, null, (byte) 29);
+        if (i != -14735) method323(null, null, (byte) 29);
         int i_17_ = -anInt409 + i_16_;
         int i_18_ = i_14_ + -anInt408;
         return anInt405 > i_17_ * i_17_ + i_18_ * i_18_;
     }
 
-    public static void decodedOperation322(int i) {
+    public static void method322(int i) {
         anIntArray407 = null;
         aClass84_413 = null;
-        if (i != 1) decodedOperation322(-112);
+        if (i != 1) method322(-112);
     }
 
-    static final void decodedOperation323(CacheStore class45, ReflectionInvoker class297, byte i) {
+    static final void method323(CacheStore class45, ReflectionInvoker class297, byte i) {
         try {
             NodeSub41.aString7048 = "";
             Component210.aClass297_5297 = class297;

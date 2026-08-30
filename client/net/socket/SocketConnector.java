@@ -69,7 +69,7 @@ abstract class SocketConnector {
             Component200.anInt3712 = i_6_;
             DisplayModeManagerContainer67.aClass207_1727 = null;
             NodeSub32.anInt6938 = i_1_;
-            Component135.decodedOperation3490(true);
+            Component135.method3490(true);
             int i_9_ = -77 % ((i_4_ - 29) / 34);
             DisplayModeManagerContainer61.aBoolean3763 = true;
         } catch (RuntimeException runtimeexception) {

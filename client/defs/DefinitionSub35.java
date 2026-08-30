@@ -41,9 +41,9 @@ final class DefinitionSub35
         int[] is = this.imageCache.getPixels(0, i);
         if (this.imageCache.cacheMiss) {
             int i_5_ = Component253.anInt3201 * anInt9448 >> 12;
-            int[] is_6_ = this.decodedOperation3048(DisplayModeManagerContainer356.anInt6325 & -1 + i, 633706337, 0);
-            int[] is_7_ = this.decodedOperation3048(i, 633706337, 0);
-            int[] is_8_ = this.decodedOperation3048(DisplayModeManagerContainer356.anInt6325 & i - -1, i_4_ + 633706082, 0);
+            int[] is_6_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & -1 + i, 633706337, 0);
+            int[] is_7_ = this.method3048(i, 633706337, 0);
+            int[] is_8_ = this.method3048(DisplayModeManagerContainer356.anInt6325 & i - -1, i_4_ + 633706082, 0);
             for (int i_9_ = 0; DefinitionSub6.anInt9139 > i_9_; i_9_++) {
                 int i_10_ = i_5_ * (is_8_[i_9_] - is_6_[i_9_]) >> 12;
                 int i_11_ = (i_5_ * (-is_7_[CustomCursorSetting.anInt6076 & i_9_ - -1] + is_7_[-1 + i_9_ & CustomCursorSetting.anInt6076]) >> 12);
@@ -67,9 +67,9 @@ final class DefinitionSub35
         return is;
     }
 
-    public static void decodedOperation3144(byte i) {
+    public static void method3144(byte i) {
         aClass161_9443 = null;
-        if (i < 34) decodedOperation3144((byte) 127);
+        if (i < 34) method3144((byte) 127);
     }
 
     final void postDecode(int i) {
@@ -78,7 +78,7 @@ final class DefinitionSub35
         method3143(-119);
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_18_) {
+    final void method3049(Buffer class348_sub49, int i, int i_18_) {
         int i_19_ = i;
         while_210_:
         do {

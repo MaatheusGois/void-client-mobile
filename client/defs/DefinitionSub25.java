@@ -17,8 +17,8 @@ final class DefinitionSub25
     static Component324 aClass150_9342;
     private int anInt9343 = 20;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
-        if (i_0_ != 31015) decodedOperation3049(null, 44, 80);
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
+        if (i_0_ != 31015) method3049(null, 44, 80);
         int i_1_ = i;
         while_200_:
         do {
@@ -72,7 +72,7 @@ final class DefinitionSub25
         return is;
     }
 
-    public static void decodedOperation3117(int i) {
+    public static void method3117(int i) {
         aClass150_9342 = null;
         if (i < 10) anInt9335 = 113;
     }

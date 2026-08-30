@@ -15,7 +15,7 @@ abstract class Component163
     static int anInt3178;
     static Component184 aClass143_3179;
 
-    static final void decodedOperation1885(int i, int i_0_, int i_1_, int i_2_, int i_3_, float[] fs, int i_4_, float f, int i_5_, int i_6_, float f_7_, float[] fs_8_) {
+    static final void method1885(int i, int i_0_, int i_1_, int i_2_, int i_3_, float[] fs, int i_4_, float f, int i_5_, int i_6_, float f_7_, float[] fs_8_) {
         try {
             i_4_ -= i_5_;
             i_0_ -= i;
@@ -46,16 +46,16 @@ abstract class Component163
         }
     }
 
-    public static void decodedOperation1886(int i) {
-        if (i != 4908) decodedOperation1885(-84, 89, 50, 37, 107, null, -109, 0.5058839F, -21, -30, 0.003914575F, null);
+    public static void method1886(int i) {
+        if (i != 4908) method1885(-84, 89, 50, 37, 107, null, -109, 0.5058839F, -21, -30, 0.003914575F, null);
         anIntArray3173 = null;
         aClass143_3179 = null;
     }
 
-    static final boolean decodedOperation1887(int i, int i_16_, int i_17_) {
+    static final boolean method1887(int i, int i_16_, int i_17_) {
         anInt3178++;
         if (i != 0) return true;
-        return ParametricDefinition.decodedOperation3056(63, i_17_, i_16_) | (0x70000 & i_17_) != 0 || Component235.decodedOperation2015(i_17_, i_16_, i + 7);
+        return ParametricDefinition.method3056(63, i_17_, i_16_) | (0x70000 & i_17_) != 0 || Component235.method2015(i_17_, i_16_, i + 7);
     }
 
     abstract CacheNode method1888(int i, CacheNode class348_sub42_sub8);

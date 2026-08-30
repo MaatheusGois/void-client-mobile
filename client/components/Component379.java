@@ -29,14 +29,14 @@ final class Component379
         this.preferenceValue = i_0_;
     }
 
-    final boolean decodedOperation1757(int i) {
+    final boolean method1757(int i) {
         anInt5927++;
-        if (this.preferences.decodedOperation3425(-122)) return false;
-        if (i < 85) decodedOperation1759(117);
-        return this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE;
+        if (this.preferences.method3425(-122)) return false;
+        if (i < 85) method1759(117);
+        return this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE;
     }
 
-    public static void decodedOperation1758(int i) {
+    public static void method1758(int i) {
         if (i != -16211) aClass351_5934 = null;
         GAME4 = null;
         aClass351_5929 = null;
@@ -46,12 +46,12 @@ final class Component379
 
     final int getValue(int i, int i_2_) {
         anInt5926++;
-        if (this.preferences.decodedOperation3425(-114)) return 3;
-        if (this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE) {
+        if (this.preferences.method3425(-114)) return 3;
+        if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) {
             if (i_2_ == 0) {
-                if (this.preferences.aClass239_Sub16_7247.decodedOperation1789(-32350) == 1) return 2;
-                if (this.preferences.aClass239_Sub24_7235.decodedOperation1820(i + -32353) == 1) return 2;
-                if (this.preferences.aClass239_Sub18_7259.decodedOperation1800(-32350) > 0) return 2;
+                if (this.preferences.aClass239_Sub16_7247.method1789(-32350) == 1) return 2;
+                if (this.preferences.aClass239_Sub24_7235.method1820(i + -32353) == 1) return 2;
+                if (this.preferences.aClass239_Sub18_7259.method1800(-32350) > 0) return 2;
             }
             return 1;
         }
@@ -62,12 +62,12 @@ final class Component379
     final void validateValue(boolean bool) {
         anInt5931++;
         if (bool != false) aClass351_5929 = null;
-        if (this.preferences.decodedOperation3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
-        else if (this.preferences.decodedOperation3425(-125)) this.preferenceValue = 0;
+        if (this.preferences.method3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
+        else if (this.preferences.method3425(-125)) this.preferenceValue = 0;
         if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = getDefaultValue(20014);
     }
 
-    final int decodedOperation1759(int i) {
+    final int method1759(int i) {
         anInt5930++;
         if (i != -32350) getValue(-83, -18);
         return this.preferenceValue;

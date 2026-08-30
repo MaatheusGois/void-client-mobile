@@ -29,34 +29,34 @@ final class RSARequest extends HashNode {
     /** Current boot/loading stage driven by {@link LoadingManager#pulseLoading}. */
     static LoadingState currentLoadingState;
 
-    final int decodedOperation3245(boolean bool) {
+    final int method3245(boolean bool) {
         anInt9646++;
-        if (bool != true) decodedOperation3248(-60);
+        if (bool != true) method3248(-60);
         return (int) (this.key >>> 32 & 0xffL);
     }
 
-    final void decodedOperation3246(int i) {
+    final void method3246(int i) {
         this.accessAge |= ~0x7fffffffffffffffL;
         anInt9653++;
-        if (decodedOperation3250((byte) -89) == 0L) AbstractShaderSub4.aClass107_7325.add(true, this);
+        if (method3250((byte) -89) == 0L) AbstractShaderSub4.aClass107_7325.add(true, this);
         if (i != -25490) aClass105_9659 = null;
     }
 
-    public static void decodedOperation3247(int i) {
-        if (i > -49) decodedOperation3247(49);
+    public static void method3247(int i) {
+        if (i > -49) method3247(49);
         currentLoadingState = null;
         aClass105_9658 = null;
         aClass105_9659 = null;
         aBigInteger9657 = null;
     }
 
-    final int decodedOperation3248(int i) {
+    final int method3248(int i) {
         if (i != 1) return -110;
         anInt9647++;
         return (int) this.key;
     }
 
-    static final Component359 decodedOperation3249(int i, int i_0_, GlToolkitSub2 var_ha_Sub2, String string) {
+    static final Component359 method3249(int i, int i_0_, GlToolkitSub2 var_ha_Sub2, String string) {
         try {
             anInt9656++;
             int i_1_ = -89 / ((29 - i_0_) / 47);
@@ -83,9 +83,9 @@ final class RSARequest extends HashNode {
         }
     }
 
-    final long decodedOperation3250(byte i) {
+    final long method3250(byte i) {
         anInt9649++;
-        if (i >= -37) decodedOperation3250((byte) 79);
+        if (i >= -37) method3250((byte) 79);
         return this.accessAge & 0x7fffffffffffffffL;
     }
 
@@ -93,7 +93,7 @@ final class RSARequest extends HashNode {
         this.key = (long) i << 32 | (long) i_2_;
     }
 
-    final void decodedOperation3251(int i) {
+    final void method3251(int i) {
         anInt9648++;
         this.accessAge = (~0x7fffffffffffffffL & this.accessAge | Component240.currentTimeMillis(-120) + 500L);
         BufferCacheSub2.aClass107_8241.add(true, this);

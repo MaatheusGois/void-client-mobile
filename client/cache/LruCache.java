@@ -32,7 +32,7 @@ final class LruCache {
     private int iteratorIndex = 0;
 
     final int size(int i) {
-        if (i != 1) decodedOperation3479(20);
+        if (i != 1) method3479(20);
         anInt4387++;
         int i_0_ = 0;
         for (int i_1_ = 0; this.capacity > i_1_; i_1_++) {
@@ -45,7 +45,7 @@ final class LruCache {
 
     final int getCapacity(boolean bool) {
         anInt4376++;
-        if (bool != true) decodedOperation3478(false);
+        if (bool != true) method3478(false);
         return this.capacity;
     }
 
@@ -53,7 +53,7 @@ final class LruCache {
         anInt4384++;
         if (lookupCursor == null) return null;
         Node class348 = (this.buckets[(int) ((long) (this.capacity - 1) & aLong4385)]);
-        if (bool != true) decodedOperation3479(4);
+        if (bool != true) method3479(4);
         for (/**/; lookupCursor != class348; lookupCursor = lookupCursor.next) {
             if (lookupCursor.key == aLong4385) {
                 Node class348_3_ = lookupCursor;
@@ -65,7 +65,7 @@ final class LruCache {
         return null;
     }
 
-    final int decodedOperation3477(int i, Node[] class348s) {
+    final int method3477(int i, Node[] class348s) {
         if (i != 3) anInt4383 = -76;
         anInt4380++;
         int i_4_ = 0;
@@ -77,18 +77,18 @@ final class LruCache {
         return i_4_;
     }
 
-    public static void decodedOperation3478(boolean bool) {
+    public static void method3478(boolean bool) {
         aClass114_4388 = null;
         if (bool != false) anInt4383 = 67;
     }
 
-    static final NodeSub21 decodedOperation3479(int i) {
+    static final NodeSub21 method3479(int i) {
         anInt4378++;
         if (i != -1) anInt4383 = 43;
         if (DisplayModeManagerContainer229.aClass262_1254 == null || r.aClass312_9716 == null) return null;
-        for (NodeSub21 class348_sub21 = (NodeSub21) r.aClass312_9716.decodedOperation2329(10); class348_sub21 != null; class348_sub21 = (NodeSub21) r.aClass312_9716.decodedOperation2329(i ^ ~0xa)) {
-            Component274 class42 = DisplayModeManagerContainer229.aClass153_1238.decodedOperation1225(class348_sub21.anInt6847, (byte) 92);
-            if (class42 != null && class42.aBoolean609 && class42.decodedOperation373(DisplayModeManagerContainer229.anInterface17_1244, 127)) return class348_sub21;
+        for (NodeSub21 class348_sub21 = (NodeSub21) r.aClass312_9716.method2329(10); class348_sub21 != null; class348_sub21 = (NodeSub21) r.aClass312_9716.method2329(i ^ ~0xa)) {
+            Component274 class42 = DisplayModeManagerContainer229.aClass153_1238.method1225(class348_sub21.anInt6847, (byte) 92);
+            if (class42 != null && class42.aBoolean609 && class42.method373(DisplayModeManagerContainer229.anInterface17_1244, 127)) return class348_sub21;
         }
         return null;
     }

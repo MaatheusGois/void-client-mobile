@@ -18,22 +18,22 @@ final class Component175
     static int anInt5849;
     static int anInt5850;
 
-    static final void decodedOperation1719(boolean bool, String string, String string_0_, int i, int i_1_) {
+    static final void method1719(boolean bool, String string, String string_0_, int i, int i_1_) {
         try {
-            DisplayModeManagerContainer109.decodedOperation1356(true, string_0_, i_1_, i, bool, string, true);
+            DisplayModeManagerContainer109.method1356(true, string_0_, i_1_, i, bool, string, true);
             anInt5845++;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("aj.G(" + bool + ',' + (string != null ? "{...}" : "null") + ',' + (string_0_ != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));
         }
     }
 
-    final int decodedOperation1720(int i) {
+    final int method1720(int i) {
         anInt5843++;
         if (i != -32350) getValue(82, -89);
         return this.preferenceValue;
     }
 
-    static final void decodedOperation1721(String string, byte i) {
+    static final void method1721(String string, byte i) {
         anInt5849++;
         if (r.aBoolean9722 && (0x18 & PauseTimer.anInt500) != 0) {
             int i_2_ = -88 / ((i - -33) / 37);
@@ -52,12 +52,12 @@ final class Component175
                     class348_sub47.particleBuffer.writeByteInverse((byte) -64, 0);
                     HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
                     bool = true;
-                    Component10.decodedOperation2252(true, player.anIntArray10320[0], player.anIntArray10317[0], (byte) -99, player.getSize((byte) 54), 0, player.getSize((byte) 91), -2, 0);
+                    Component10.method2252(true, player.anIntArray10320[0], player.anIntArray10317[0], (byte) -99, player.getSize((byte) 54), 0, player.getSize((byte) 91), -2, 0);
                     break;
                 }
             }
-            if (!bool) DisplayModeManagerContainer213.decodedOperation544((FriendsIgnoreList.aClass274_3504.getLocalized(ObjectDeserializer.languageId, 544)) + string, false, 4);
-            if (r.aBoolean9722) DisplayModeManagerContainer196.decodedOperation2678(-2049);
+            if (!bool) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3504.getLocalized(ObjectDeserializer.languageId, 544)) + string, false, 4);
+            if (r.aBoolean9722) DisplayModeManagerContainer196.method2678(-2049);
         }
     }
 
@@ -70,13 +70,13 @@ final class Component175
         super(class348_sub51);
     }
 
-    static final boolean decodedOperation1722(int i, int i_5_, byte i_6_) {
+    static final boolean method1722(int i, int i_5_, byte i_6_) {
         int i_7_ = 92 % ((i_6_ - 48) / 32);
         anInt5848++;
         return (0x10000 & i) != 0;
     }
 
-    public static void decodedOperation1723(byte i) {
+    public static void method1723(byte i) {
         aShortArrayArray5847 = null;
         if (i != 119) anInt5850 = -51;
     }

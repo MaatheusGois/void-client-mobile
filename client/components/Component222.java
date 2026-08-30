@@ -23,7 +23,7 @@ final class Component222 implements Runnable {
     static int anInt2714;
     private final int capacity;
 
-    public static void decodedOperation1525(byte i) {
+    public static void method1525(byte i) {
         if (i != 4) aClass262_2707 = null;
         aClass262_2707 = null;
     }
@@ -79,7 +79,7 @@ final class Component222 implements Runnable {
     }
 
     final void detachOutput(int i) {
-        if (i != -21179) decodedOperation1525((byte) 113);
+        if (i != -21179) method1525((byte) 113);
         anInt2711++;
         outputStream = new OutputStream_Sub1();
     }

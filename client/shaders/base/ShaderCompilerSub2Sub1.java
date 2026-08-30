@@ -9,8 +9,8 @@ final class ShaderCompilerSub2Sub1
  */ extends ShaderCompilerSub2 {
     static long[] aLongArray8800 = new long[32];
 
-    public static void decodedOperation2614(int i) {
+    public static void method2614(int i) {
         aLongArray8800 = null;
-        if (i < 27) decodedOperation2614(42);
+        if (i < 27) method2614(42);
     }
 }

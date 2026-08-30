@@ -18,7 +18,7 @@ final class Component378
     private final int anInt6339;
 
     public final void method63(byte i) {
-        this.aClass378_3893.decodedOperation3959(-101, this);
+        this.aClass378_3893.method3959(-101, this);
         if (i >= -21) method2314(78);
     }
 
@@ -36,7 +36,7 @@ final class Component378
         anInt6338 = i;
         anInt6337 = i_1_;
         anInt6339 = i_0_;
-        anIDirect3DVolumeTexture6336 = (this.aClass378_3893.anIDirect3DDevice9810.a(i, i_0_, i_1_, 1, 0, D3DToolkit.decodedOperation3958(22, this.aClass68_3895, class304), 1));
+        anIDirect3DVolumeTexture6336 = (this.aClass378_3893.anIDirect3DDevice9810.a(i, i_0_, i_1_, 1, 0, D3DToolkit.method3958(22, this.aClass68_3895, class304), 1));
         PixelBuffer pixelbuffer = (this.aClass378_3893.aPixelBuffer9803);
         int i_2_ = anIDirect3DVolumeTexture6336.LockBox(0, 0, 0, 0, i, i_0_, i_1_, 0, pixelbuffer);
         if (ue.a(i_2_, false)) {

@@ -11,7 +11,7 @@ final class Component33
     static Component127 aClass226_2639;
     static Component24[] aClass105Array2640;
 
-    public static void decodedOperation1463(byte i) {
+    public static void method1463(byte i) {
         aClass351_2638 = null;
         aClass105Array2640 = null;
         if (i != 25) aClass105Array2640 = null;

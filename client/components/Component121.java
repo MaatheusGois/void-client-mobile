@@ -15,8 +15,8 @@ final class Component121
     static int anInt4544 = -1;
     static int anInt4545 = -1;
 
-    static final void decodedOperation3612(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
-        if (i < 59) decodedOperation3614(-51, 64, -115, null, -96);
+    static final void method3612(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
+        if (i < 59) method3614(-51, 64, -115, null, -96);
         for (int i_0_ = 0; i_0_ < MatrixSub3.anInt5768; i_0_++) {
             int i_1_ = DisplayModeManagerContainer220.anIntArray279[i_0_];
             Player player = InterfaceRenderer.players[i_1_];
@@ -28,14 +28,14 @@ final class Component121
         anInt4541++;
     }
 
-    public static void decodedOperation3613(int i) {
-        if (i != 64) decodedOperation3612(-7, null);
+    public static void method3613(int i) {
+        if (i != 64) method3612(-7, null);
         aClass60_4543 = null;
     }
 
-    static final void decodedOperation3614(int i, int i_3_, int i_4_, ParticleSystem class348_sub47, int i_5_) {
+    static final void method3614(int i, int i_3_, int i_4_, ParticleSystem class348_sub47, int i_5_) {
         anInt4539++;
-        if (i_5_ != -19692) decodedOperation3613(10);
+        if (i_5_ != -19692) method3613(10);
         class348_sub47.particleBuffer.writeInt((byte) 124, i);
         class348_sub47.particleBuffer.writeShort((byte) 107, i_4_);
         class348_sub47.particleBuffer.writeShort((byte) 107, i_3_);

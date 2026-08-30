@@ -316,7 +316,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             }
             aBoolean17 = false;
         }
-        Component36.decodedOperation1945((byte) -128, true);
+        Component36.method1945((byte) -128, true);
         NativeLibraryLoader.unloadNativeLibraries(!bool_4_);
         if (DisplayModeManagerContainer50.gameCanvas != null) {
             try {
@@ -414,13 +414,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
                         /* empty */
                     }
                 }
-                ShaderSub3.decodedOperation168((byte) 103);
-                Component162.decodedOperation1119(false);
+                ShaderSub3.method168((byte) 103);
+                Component162.method1119(false);
                 recreateGameCanvas((byte) -97);
                 initializeClient(28740);
-                NodeSub8.aClass241_6660 = Component267.decodedOperation1631(false);
+                NodeSub8.aClass241_6660 = Component267.method1631(false);
                 while (Component22.aLong1739 == 0L || (Component240.currentTimeMillis(-124) < Component22.aLong1739)) {
-                    MatrixSub2.anInt5744 = NodeSub8.aClass241_6660.decodedOperation1861(0, DisplayModeManagerContainer306.aLong4783);
+                    MatrixSub2.anInt5744 = NodeSub8.aClass241_6660.method1861(0, DisplayModeManagerContainer306.aLong4783);
                     for (int i = 0; MatrixSub2.anInt5744 > i; i++)
                         pulseLogicFrame(-1);
                     updateFpsCounter(-119);

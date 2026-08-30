@@ -17,7 +17,7 @@ final class t
         int i_4_ = 0;
         float[] fs = new float[aClass262_5149.size(0)];
         for (NodeSub1 class348_sub1 = (NodeSub1) aClass262_5149.first(4); class348_sub1 != null; class348_sub1 = (NodeSub1) aClass262_5149.next((byte) 34))
-            fs[i_4_++] = class348_sub1.decodedOperation2721(-37);
+            fs[i_4_++] = class348_sub1.method2721(-37);
         q(fs);
         for (int i_5_ = 0; i_5_ < i_1_ + i_1_; i_5_++) {
             for (int i_6_ = 0; i_6_ < i_1_ + i_1_; i_6_++) {
@@ -33,8 +33,8 @@ final class t
     final native void Interface4Impl(r var_r, int i, int i_9_, int i_10_, int i_11_, boolean bool);
 
     final void method3979(int i, int i_12_) {
-        if (anInt5151 < 0) anOa5150.method3973().decodedOperation142(this, i, i_12_);
-        else anOa5150.method3973().decodedOperation147(this, i, i_12_, anInt5151);
+        if (anInt5151 < 0) anOa5150.method3973().method142(this, i, i_12_);
+        else anOa5150.method3973().method147(this, i, i_12_, anInt5151);
     }
 
     public final native void w(boolean bool);
@@ -98,7 +98,7 @@ final class t
 
     final void method3981(NodeSub1 class348_sub1, int[] is) {
         aClass262_5149.addTail(class348_sub1, -20180);
-        V(class348_sub1.hashCode(), class348_sub1.decodedOperation2724(-1), class348_sub1.decodedOperation2722(124), class348_sub1.decodedOperation2717((byte) 83), class348_sub1.decodedOperation2723(-1), class348_sub1.decodedOperation2720(-1), is);
+        V(class348_sub1.hashCode(), class348_sub1.method2724(-1), class348_sub1.method2722(124), class348_sub1.method2717((byte) 83), class348_sub1.method2723(-1), class348_sub1.method2720(-1), is);
     }
 
     final native void CA(r var_r, int i, int i_45_, int i_46_, int i_47_, boolean bool);
@@ -126,7 +126,7 @@ final class t
         int i_66_ = 0;
         float[] fs = new float[aClass262_5149.size(0)];
         for (NodeSub1 class348_sub1 = (NodeSub1) aClass262_5149.first(4); class348_sub1 != null; class348_sub1 = (NodeSub1) aClass262_5149.next((byte) 40))
-            fs[i_66_++] = class348_sub1.decodedOperation2721(-65);
+            fs[i_66_++] = class348_sub1.method2721(-65);
         q(fs);
         for (int i_67_ = 0; i_67_ < i_64_ + i_64_; i_67_++) {
             for (int i_68_ = 0; i_68_ < i_64_ + i_64_; i_68_++) {
@@ -142,7 +142,7 @@ final class t
     final native r fa(int i, int i_71_, r var_r);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     private final native void ga(OpenGLToolkit var_oa, NativeHandle var_ya, int i, int i_72_, int[][] is, int[][] is_73_, int i_74_, int i_75_, int i_76_);
@@ -150,6 +150,6 @@ final class t
     final native void U(int i, int i_77_, int[] is, int[] is_78_, int[] is_79_, int[] is_80_, int[] is_81_, int[] is_82_, int[] is_83_, int[] is_84_, int i_85_, int i_86_, int i_87_, boolean bool);
 
     final void method3987(int i, int i_88_, int i_89_, int i_90_, int i_91_, int i_92_, int i_93_, boolean[][] bools) {
-        anOa5150.method3973().decodedOperation148(this, i, i_88_, i_89_, i_90_, i_91_, i_92_, i_93_, bools);
+        anOa5150.method3973().method148(this, i, i_88_, i_89_, i_90_, i_91_, i_92_, i_93_, bools);
     }
 }

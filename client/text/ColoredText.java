@@ -35,19 +35,19 @@ final class ColoredText extends Component339 {
         super(class348_sub51);
     }
 
-    final int decodedOperation1820(int i) {
+    final int method1820(int i) {
         if (i != -32350) return -43;
         anInt6091++;
         return this.preferenceValue;
     }
 
-    static final byte[] decodedOperation1821(int i, File file) {
+    static final byte[] method1821(int i, File file) {
         anInt6086++;
         int i_2_ = 34 % ((i - 31) / 39);
-        return DisplayModeManagerContainer363.decodedOperation2607((int) file.length(), file, 121);
+        return DisplayModeManagerContainer363.method2607((int) file.length(), file, 121);
     }
 
-    public static void decodedOperation1822(byte i) {
+    public static void method1822(byte i) {
         aClass114_6089 = null;
         aClass60_6096 = null;
         aClass105_6097 = null;
@@ -64,16 +64,16 @@ final class ColoredText extends Component339 {
 
     final int getValue(int i, int i_3_) {
         anInt6092++;
-        if (this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE) {
-            if (this.preferences.decodedOperation3425(i + -70)) return 3;
-            if (i_3_ == 0 || this.preferences.aClass239_Sub9_7256.decodedOperation1759(-32350) == 1) return 1;
+        if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) {
+            if (this.preferences.method3425(i + -70)) return 3;
+            if (i_3_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
             return 2;
         }
         if (i != 3) validateValue(true);
         return 3;
     }
 
-    static final void decodedOperation1823(GraphicsToolkit var_ha, int i, int i_4_, byte i_5_) {
+    static final void method1823(GraphicsToolkit var_ha, int i, int i_4_, byte i_5_) {
         anInt6088++;
         int i_6_ = 56 % ((68 - i_5_) / 58);
         if (i >= 0 && i_4_ >= 0 && DisplayModeManagerContainer220.anInt282 != 0 && DisplayModeManagerContainer50.anInt3861 != 0) {
@@ -85,15 +85,15 @@ final class ColoredText extends Component339 {
             int i_11_;
             int i_12_;
             if (Component210.gameCanvasAttached) {
-                HashTable.decodedOperation1010(false, false);
+                HashTable.method1010(false, false);
                 class101 = var_ha.method3640();
                 int[] is = var_ha.Y();
                 i_7_ = is[0];
                 i_8_ = is[1];
                 i_9_ = is[3];
                 i_10_ = is[2];
-                i_11_ = i + Component221.decodedOperation1082(-81, false);
-                i_12_ = OggStream.decodedOperation2960(false, -52) + i_4_;
+                i_11_ = i + Component221.method1082(-81, false);
+                i_12_ = OggStream.method2960(false, -52) + i_4_;
             } else {
                 var_ha.DA(Component226.anInt4171, Component275.anInt2688, DisplayModeManagerContainer220.anInt282, DisplayModeManagerContainer50.anInt3861);
                 i_8_ = Component275.anInt2688;
@@ -107,7 +107,7 @@ final class ColoredText extends Component339 {
                 i_12_ = i_4_;
                 i_11_ = i;
             }
-            Component127.decodedOperation1626(1, true);
+            Component127.method1626(1, true);
             if (i_10_ == 0) i_10_ = 1;
             if (i_9_ == 0) i_9_ = 1;
             if (NodeSub1Sub1.aSArray8801 != null && (!r.aBoolean9722 || (0x40 & PauseTimer.anInt500) != 0)) {
@@ -132,7 +132,7 @@ final class ColoredText extends Component339 {
                 int[] is_21_ = {i_18_, i_20_, i_16_};
                 class101.method890(is);
                 class101.method890(is_21_);
-                float f = Component83.decodedOperation1012((float) is[1], (float) is_21_[0], (float) is[2], (float) is_21_[2], 4, (float) is[0], (byte) 123, (float) is_21_[1]);
+                float f = Component83.method1012((float) is[1], (float) is_21_[0], (float) is[2], (float) is_21_[2], 4, (float) is[0], (byte) 123, (float) is_21_[1]);
                 if (f > 0.0F) {
                     int i_22_ = is_21_[0] + -is[0];
                     int i_23_ = -is[2] + is_21_[2];
@@ -150,25 +150,25 @@ final class ColoredText extends Component339 {
                         DisplayModeManagerContainer368.addMenuEntry(false, "", i_14_, (byte) -82, true, i_13_, -1, true, 19, i_14_ | i_13_ << 0, Component323.aString5882, 0L, Component79.anInt4144);
                     } else {
                         DisplayModeManagerContainer57 class46 = NpcNode.getChildComponent(JaclibLoader.anInt169, (byte) -54, Component90.anInt2046);
-                        if (class46 == null) DisplayModeManagerContainer196.decodedOperation2678(-2049);
+                        if (class46 == null) DisplayModeManagerContainer196.method2678(-2049);
                         else DisplayModeManagerContainer368.addMenuEntry(false, " ->", i_14_, (byte) -101, true, i_13_, -1, true, 15, i_13_ << 0 | i_14_, DisplayModeManagerContainer332.aString5001, 0L, (Component182.anInt9747));
                     }
                 }
             }
-            if (Component210.gameCanvasAttached) DebugPanicSub1.decodedOperation2129((byte) 86);
+            if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 86);
             for (int i_27_ = 0; (i_27_ < (!Component210.gameCanvasAttached ? 1 : 2)); i_27_++) {
                 boolean bool = i_27_ == 0;
                 DisplayModeManagerContainer154 class76 = (bool ? DisplayModeManagerContainer5.aClass76_1208 : PacketReader.aClass76_10436);
                 int i_28_ = i;
                 int i_29_ = i_4_;
                 if (Component210.gameCanvasAttached) {
-                    HashTable.decodedOperation1010(false, bool);
-                    i_28_ += Component221.decodedOperation1082(-92, bool);
-                    i_29_ += OggStream.decodedOperation2960(bool, -48);
+                    HashTable.method1010(false, bool);
+                    i_28_ += Component221.method1082(-92, bool);
+                    i_29_ += OggStream.method2960(bool, -48);
                 }
                 Component315 class243 = class76.aClass243_1282;
-                for (RenderableSub4 class318_sub4 = (RenderableSub4) class243.decodedOperation1872(8); class318_sub4 != null; class318_sub4 = (RenderableSub4) class243.decodedOperation1878((byte) -123)) {
-                    if ((RuntimeException_Sub1.aBoolean4599 || ((Component72.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) && class318_sub4.decodedOperation2504(i_29_, i_28_, var_ha, -115)) {
+                for (RenderableSub4 class318_sub4 = (RenderableSub4) class243.method1872(8); class318_sub4 != null; class318_sub4 = (RenderableSub4) class243.method1878((byte) -123)) {
+                    if ((RuntimeException_Sub1.aBoolean4599 || ((Component72.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) && class318_sub4.method2504(i_29_, i_28_, var_ha, -115)) {
                         boolean bool_30_ = false;
                         boolean bool_31_ = false;
                         int i_32_;
@@ -208,14 +208,14 @@ final class ColoredText extends Component339 {
                                         int i_43_ = ((player_42_.x) + -((player_42_.getSize((byte) 94) - 1) << 8));
                                         int i_44_ = ((player_42_.y) + -((-1 + (player_42_.getSize((byte) 82))) << 8));
                                         if ((i_43_ >= i_35_) && ((player.getSize((byte) 70) - (-i_35_ + i_43_ >> 9)) >= player_42_.getSize((byte) 89)) && (i_44_ >= i_36_) && ((player.getSize((byte) 42) - (i_44_ - i_36_ >> 9)) >= player_42_.getSize((byte) 127))) {
-                                            PlayerState.decodedOperation3298((byte) 114, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player_42_);
+                                            PlayerState.method3298((byte) 114, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player_42_);
                                             player_42_.anInt10215 = OpenGlShader.clientCycle;
                                         }
                                     }
                                 }
                             }
                             if (OpenGlShader.clientCycle == player.anInt10215) continue;
-                            PlayerState.decodedOperation3298((byte) 96, ((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), player);
+                            PlayerState.method3298((byte) 96, ((Component72.localPlayer.plane) != class318_sub4.aClass318_Sub1_6410.plane), player);
                             player.anInt10215 = OpenGlShader.clientCycle;
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Npc) {
@@ -246,7 +246,7 @@ final class ColoredText extends Component339 {
                                             int i_53_ = ((player.x) - ((-1 + (player.getSize((byte) 116))) << 8));
                                             int i_54_ = ((player.y) + -((player.getSize((byte) 121)) + -1 << 8));
                                             if ((i_53_ >= i_45_) && ((-(-i_45_ + i_53_ >> 9) + (npc.definition.anInt1399)) >= player.getSize((byte) 114)) && (i_54_ >= i_46_) && (player.getSize((byte) 58) <= ((npc.definition.anInt1399) - (i_54_ + -i_46_ >> 9)))) {
-                                                PlayerState.decodedOperation3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player);
+                                                PlayerState.method3298((byte) 125, ((class318_sub4.aClass318_Sub1_6410.plane) != (Component72.localPlayer.plane)), player);
                                                 player.anInt10215 = OpenGlShader.clientCycle;
                                             }
                                         }
@@ -267,8 +267,8 @@ final class ColoredText extends Component339 {
                                 while (class348_sub34 != null) {
                                     ItemDefinition class213 = (Exception_Sub1.itemDefinitions.getItemDefinition(79, (class348_sub34.anInt6973)));
                                     if (r.aBoolean9722 && ((Component72.localPlayer.plane) == class318_sub4.aClass318_Sub1_6410.plane)) {
-                                        Component355 class254 = (Component163.anInt3176 != -1 ? (MatrixSub3.aClass326_5764.decodedOperation2600(Component163.anInt3176, 28364)) : null);
-                                        if ((PauseTimer.anInt500 & 0x1) != 0 && (class254 == null || ((class254.anInt3256) != (class213.decodedOperation1567((class254.anInt3256), 29, Component163.anInt3176))))) {
+                                        Component355 class254 = (Component163.anInt3176 != -1 ? (MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364)) : null);
+                                        if ((PauseTimer.anInt500 & 0x1) != 0 && (class254 == null || ((class254.anInt3256) != (class213.method1567((class254.anInt3256), 29, Component163.anInt3176))))) {
                                             Component263.anInt1555++;
                                             DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=ff9040>" + (class213.itemName)), i_32_, (byte) -76, false, i_33_, -1, true, 49, i_57_, DisplayModeManagerContainer332.aString5001, class348_sub34.anInt6973, (Component182.anInt9747));
                                         }
@@ -300,14 +300,14 @@ final class ColoredText extends Component339 {
                         }
                         if (class318_sub4.aClass318_Sub1_6410 instanceof Interface10) {
                             Interface10 interface10 = ((Interface10) (class318_sub4.aClass318_Sub1_6410));
-                            Component44 class51 = (GradientPreset.aClass263_9195.getDefinition(0, interface10.decodedOperation42(-100)));
-                            if (class51.anIntArray945 != null) class51 = (class51.decodedOperation480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47));
+                            Component44 class51 = (GradientPreset.aClass263_9195.getDefinition(0, interface10.method42(-100)));
+                            if (class51.anIntArray945 != null) class51 = (class51.method480((DisplayModeManagerContainer58.aClass170_10209), (byte) 47));
                             if (class51 != null) {
                                 if (r.aBoolean9722 && ((Component72.localPlayer.plane) == (class318_sub4.aClass318_Sub1_6410.plane))) {
-                                    Component355 class254 = (Component163.anInt3176 != -1 ? (MatrixSub3.aClass326_5764.decodedOperation2600(Component163.anInt3176, 28364)) : null);
-                                    if (((0x4 & PauseTimer.anInt500) != 0) && (class254 == null || ((class254.anInt3256) != (class51.decodedOperation487(Component163.anInt3176, (class254.anInt3256), 54))))) {
+                                    Component355 class254 = (Component163.anInt3176 != -1 ? (MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364)) : null);
+                                    if (((0x4 & PauseTimer.anInt500) != 0) && (class254 == null || ((class254.anInt3256) != (class51.method487(Component163.anInt3176, (class254.anInt3256), 54))))) {
                                         Component7.anInt2877++;
-                                        DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=00ffff>" + (class51.aString884)), i_32_, (byte) -94, false, i_33_, -1, true, 2, interface10.hashCode(), DisplayModeManagerContainer332.aString5001, (DefinitionSub21.decodedOperation3107((byte) 95, interface10, i_32_, i_33_)), Component182.anInt9747);
+                                        DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> <col=00ffff>" + (class51.aString884)), i_32_, (byte) -94, false, i_33_, -1, true, 2, interface10.hashCode(), DisplayModeManagerContainer332.aString5001, (DefinitionSub21.method3107((byte) 95, interface10, i_32_, i_33_)), Component182.anInt9747);
                                     }
                                 }
                                 if (class318_sub4.aClass318_Sub1_6410.plane == (Component72.localPlayer.plane)) {
@@ -324,7 +324,7 @@ final class ColoredText extends Component339 {
                                                 if (i_61_ == 4) i_62_ = 1007;
                                                 if ((class51.anInt950) == i_61_) i_63_ = (class51.anInt869);
                                                 if (i_61_ == (class51.anInt951)) i_63_ = (class51.anInt877);
-                                                DisplayModeManagerContainer368.addMenuEntry(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (DefinitionSub21.decodedOperation3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
+                                                DisplayModeManagerContainer368.addMenuEntry(false, ("<col=00ffff>" + (class51.aString884)), i_32_, (byte) -100, false, i_33_, -1, true, i_62_, interface10.hashCode(), strings[i_61_], (DefinitionSub21.method3107((byte) -116, interface10, i_32_, i_33_)), i_63_);
                                                 Component178.anInt1445++;
                                             }
                                         }
@@ -339,25 +339,25 @@ final class ColoredText extends Component339 {
                         }
                     }
                 }
-                if (Component210.gameCanvasAttached) DebugPanicSub1.decodedOperation2129((byte) 86);
+                if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 86);
             }
-            Component127.decodedOperation1626(1, false);
+            Component127.method1626(1, false);
         }
     }
 
     final void validateValue(boolean bool) {
-        if (this.preferences.decodedOperation3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
-        else if (this.preferences.decodedOperation3425(-95)) this.preferenceValue = 0;
+        if (this.preferences.method3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
+        else if (this.preferences.method3425(-95)) this.preferenceValue = 0;
         anInt6090++;
         if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = getDefaultValue(20014);
         if (bool != false) aClass60_6096 = null;
     }
 
-    final boolean decodedOperation1824(int i) {
+    final boolean method1824(int i) {
         anInt6087++;
-        if (i < 85) decodedOperation1823(null, 104, -95, (byte) 26);
-        if (this.preferences.decodedOperation3422(674) == RunescapeInfo.RUNESCAPE) {
-            return !this.preferences.decodedOperation3425(-96);
+        if (i < 85) method1823(null, 104, -95, (byte) 26);
+        if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) {
+            return !this.preferences.method3425(-96);
         }
         return false;
     }

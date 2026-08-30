@@ -60,7 +60,7 @@ final class Component274
     boolean aBoolean609;
     static int anInt610;
 
-    final void decodedOperation372(int i) {
+    final void method372(int i) {
         anInt608++;
         if (i != -25359) this.anInt578 = -106;
         if (this.anIntArray591 != null) {
@@ -75,7 +75,7 @@ final class Component274
         }
     }
 
-    final boolean decodedOperation373(Interface17 interface17, int i) {
+    final boolean method373(Interface17 interface17, int i) {
         anInt594++;
         int i_1_;
         if (anInt606 == -1) {
@@ -93,7 +93,7 @@ final class Component274
         return i_2_ >= anInt587 && i_2_ <= anInt586;
     }
 
-    final Component24 decodedOperation374(boolean bool, GraphicsToolkit var_ha, byte i) {
+    final Component24 method374(boolean bool, GraphicsToolkit var_ha, byte i) {
         anInt579++;
         int i_3_ = bool ? this.anInt605 : this.anInt578;
         if (i != 127) return null;
@@ -101,29 +101,29 @@ final class Component274
         Component24 class105 = (Component24) this.aClass153_593.aClass60_2089.get(i_4_, 64);
         if (class105 != null) return class105;
         if (!this.aClass153_593.aClass45_2087.isSingletonFileReady(false, i_3_)) return null;
-        Component170 class207 = Component170.decodedOperation1521((this.aClass153_593.aClass45_2087), i_3_, 0);
+        Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), i_3_, 0);
         if (class207 != null) {
-            class105 = var_ha.decodedOperation3691(class207, true);
+            class105 = var_ha.method3691(class207, true);
             this.aClass153_593.aClass60_2089.putOne(class105, i_4_, (byte) -111);
         }
         return class105;
     }
 
-    final Component24 decodedOperation375(GraphicsToolkit var_ha, boolean bool) {
+    final Component24 method375(GraphicsToolkit var_ha, boolean bool) {
         anInt563++;
-        if (bool != false) decodedOperation375(null, true);
+        if (bool != false) method375(null, true);
         Component24 class105 = (Component24) (this.aClass153_593.aClass60_2089.get(anInt598 | 0x20000 | var_ha.anInt4567 << 29, -75));
         if (class105 != null) return class105;
         this.aClass153_593.aClass45_2087.isSingletonFileReady(bool, anInt598);
-        Component170 class207 = Component170.decodedOperation1521((this.aClass153_593.aClass45_2087), anInt598, 0);
+        Component170 class207 = Component170.method1521((this.aClass153_593.aClass45_2087), anInt598, 0);
         if (class207 != null) {
-            class105 = var_ha.decodedOperation3691(class207, true);
+            class105 = var_ha.method3691(class207, true);
             this.aClass153_593.aClass60_2089.putOne(class105, var_ha.anInt4567 << 29 | (anInt598 | 0x20000), (byte) -121);
         }
         return class105;
     }
 
-    final String decodedOperation376(String string, int i, byte i_5_) {
+    final String method376(String string, int i, byte i_5_) {
         anInt589++;
         int i_6_ = -100 / ((63 - i_5_) / 58);
         if (aClass356_588 == null) return string;
@@ -205,10 +205,10 @@ final class Component274
                 } else this.aBoolean609 = false;
             } else this.anInt580 = class348_sub49.readMedium(-1);
         } else this.anInt578 = class348_sub49.readUnsignedShort(842397944);
-        if (i_7_ > -113) decodedOperation375(null, true);
+        if (i_7_ > -113) method375(null, true);
     }
 
-    final int decodedOperation378(int i, int i_18_, boolean bool) {
+    final int method378(int i, int i_18_, boolean bool) {
         anInt600++;
         if (aClass356_588 == null) return i;
         if (bool != false) return -1;
@@ -217,7 +217,7 @@ final class Component274
         return class348_sub35.intValue;
     }
 
-    final void decodedOperation379(Buffer class348_sub49, int i) {
+    final void method379(Buffer class348_sub49, int i) {
         if (i < 81) anInt590 = 17;
         anInt610++;
         for (; ; ) {

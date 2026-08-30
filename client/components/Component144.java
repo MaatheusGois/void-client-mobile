@@ -22,7 +22,7 @@ final class Component144
     NodeCache aClass60_3990 = new NodeCache(60);
     int anInt3991;
 
-    final void decodedOperation2541(int i, int i_0_) {
+    final void method2541(int i, int i_0_) {
         anInt3978++;
         this.anInt3991 = i_0_;
         synchronized (this.aClass60_3990) {
@@ -31,7 +31,7 @@ final class Component144
         if (i < 72) aClass315Array3982 = null;
     }
 
-    final void decodedOperation2542(int i) {
+    final void method2542(int i) {
         synchronized (aClass60_3989) {
             aClass60_3989.purgeSoftReferences(-126);
         }
@@ -42,8 +42,8 @@ final class Component144
         }
     }
 
-    final Component63 decodedOperation2543(byte i, int i_1_) {
-        if (i <= 38) decodedOperation2542(-73);
+    final Component63 method2543(byte i, int i_1_) {
+        if (i <= 38) method2542(-73);
         anInt3983++;
         Component63 class368;
         synchronized (aClass60_3989) {
@@ -52,19 +52,19 @@ final class Component144
         if (class368 != null) return class368;
         byte[] is;
         synchronized (aClass45_3979) {
-            is = aClass45_3979.getFile(-1860, Component349.decodedOperation2419((byte) 127, i_1_), NodeSub1Sub2.decodedOperation2729(i_1_, 16));
+            is = aClass45_3979.getFile(-1860, Component349.method2419((byte) 127, i_1_), NodeSub1Sub2.method2729(i_1_, 16));
         }
         class368 = new Component63();
         class368.aClass319_4513 = this;
         class368.anInt4501 = i_1_;
-        if (is != null) class368.decodedOperation3559(28105, new Buffer(is));
+        if (is != null) class368.method3559(28105, new Buffer(is));
         synchronized (aClass60_3989) {
             aClass60_3989.putOne(class368, i_1_, (byte) -127);
         }
         return class368;
     }
 
-    final void decodedOperation2544(int i, byte i_2_) {
+    final void method2544(int i, byte i_2_) {
         synchronized (aClass60_3989) {
             aClass60_3989.processSoftEntries(2, i);
             if (i_2_ >= -11) this.aClass45_3981 = null;
@@ -75,14 +75,14 @@ final class Component144
         }
     }
 
-    public static void decodedOperation2545(boolean bool) {
+    public static void method2545(boolean bool) {
         if (bool == true) {
             aClass315Array3982 = null;
             anObject3985 = null;
         }
     }
 
-    final void decodedOperation2546(int i) {
+    final void method2546(int i) {
         anInt3984++;
         synchronized (aClass60_3989) {
             aClass60_3989.clear(0);

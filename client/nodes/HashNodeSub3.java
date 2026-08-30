@@ -20,7 +20,7 @@ final class HashNodeSub3
     static int anInt9508;
     static int anInt9509;
 
-    static final void decodedOperation3174(int i, int i_0_, int i_1_, boolean bool, byte i_2_, int i_3_) {
+    static final void method3174(int i, int i_0_, int i_1_, boolean bool, byte i_2_, int i_3_) {
         if (i_1_ < 1) i_1_ = 1;
         anInt9507++;
         if (i_3_ < 1) i_3_ = 1;
@@ -54,8 +54,8 @@ final class HashNodeSub3
                     int i_8_ = (-i_7_ + i_3_) / 2;
                     if (bool) {
                         NodeSub8.toolkit.la();
-                        NodeSub8.toolkit.decodedOperation3675(i_1_, (byte) -125, i, i_0_, i_8_, -16777216);
-                        NodeSub8.toolkit.decodedOperation3675(i_1_, (byte) -125, i, i_3_ + i_0_ - i_8_, i_8_, -16777216);
+                        NodeSub8.toolkit.method3675(i_1_, (byte) -125, i, i_0_, i_8_, -16777216);
+                        NodeSub8.toolkit.method3675(i_1_, (byte) -125, i, i_3_ + i_0_ - i_8_, i_8_, -16777216);
                     }
                     i_0_ += i_8_;
                     i_3_ -= 2 * i_8_;
@@ -70,8 +70,8 @@ final class HashNodeSub3
                 int i_10_ = (i_1_ + -i_9_) / 2;
                 if (bool) {
                     NodeSub8.toolkit.la();
-                    NodeSub8.toolkit.decodedOperation3675(i_10_, (byte) -125, i, i_0_, i_3_, -16777216);
-                    NodeSub8.toolkit.decodedOperation3675(i_10_, (byte) -125, -i_10_ + i + i_1_, i_0_, i_3_, -16777216);
+                    NodeSub8.toolkit.method3675(i_10_, (byte) -125, i, i_0_, i_3_, -16777216);
+                    NodeSub8.toolkit.method3675(i_10_, (byte) -125, -i_10_ + i + i_1_, i_0_, i_3_, -16777216);
                 }
                 i += i_10_;
                 i_1_ -= i_10_ * 2;
@@ -85,33 +85,33 @@ final class HashNodeSub3
         int i_11_ = -3 % ((-8 - i_2_) / 56);
     }
 
-    static final void decodedOperation3175(byte i) {
-        if (!CacheNode.decodedOperation3196(Component49.clientState, -114) && !CacheFileStore.isReconnectState(Component49.clientState, -103)) {
+    static final void method3175(byte i) {
+        if (!CacheNode.method3196(Component49.clientState, -114) && !CacheFileStore.isReconnectState(Component49.clientState, -103)) {
             int i_12_ = ((Component72.localPlayer.anIntArray10320[0]) >> 3);
             int i_13_ = ((Component72.localPlayer.anIntArray10317[0]) >> 3);
             if (i_12_ < 0 || AbstractShaderSub4.anInt7319 >> 3 <= i_12_ || i_13_ < 0 || (ParametricDefinition.anInt9109 >> 3 <= i_13_)) KeyFocusHandler.setClientVarp(0, AbstractShaderSub4.anInt7319 >> 4, (ParametricDefinition.anInt9109 >> 4), (byte) -13);
             else KeyFocusHandler.setClientVarp(5000, i_12_, i_13_, (byte) -13);
         } else KeyFocusHandler.setClientVarp(5000, WaterSurfaceShader.anInt6246 >> 12, Component317.anInt8685 >> 12, (byte) -13);
         anInt9509++;
-        DefinitionSub32.decodedOperation3134(-1);
-        Component179.decodedOperation2988(true);
+        DefinitionSub32.method3134(-1);
+        Component179.method2988(true);
         int i_14_ = -8 % ((-30 - i) / 38);
-        DefinitionSub30.decodedOperation3126((byte) 98);
-        DisplayModeManagerContainer273.decodedOperation1131(117);
+        DefinitionSub30.method3126((byte) 98);
+        DisplayModeManagerContainer273.method1131(117);
     }
 
     HashNodeSub3(byte[] is) {
         this.aByteArray9499 = is;
     }
 
-    public static void decodedOperation3176(boolean bool) {
+    public static void method3176(boolean bool) {
         anIntArray9505 = null;
         aShortArray9502 = null;
         if (bool != true) aShortArray9502 = null;
         aClass114_9503 = null;
     }
 
-    static final void decodedOperation3177(int i, boolean bool) {
+    static final void method3177(int i, boolean bool) {
         if (!bool || DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243 == null) Component266.anInt5976 = -1;
         else Component266.anInt5976 = (DisplayModeManagerContainer229.aClass348_Sub42_Sub14_1243.anInt9628);
         anInt9500++;
@@ -135,42 +135,42 @@ final class HashNodeSub3
             ModelStore.anInt4609 = -1;
             Component49.helveticaGlyphs30 = null;
             if (DisplayModeManagerContainer229.aClass153_1238 != null) {
-                DisplayModeManagerContainer229.aClass153_1238.decodedOperation1219(7851);
-                DisplayModeManagerContainer229.aClass153_1238.decodedOperation1220((byte) -100, 64, 128);
+                DisplayModeManagerContainer229.aClass153_1238.method1219(7851);
+                DisplayModeManagerContainer229.aClass153_1238.method1220((byte) -100, 64, 128);
             }
-            if (DisplayModeManagerContainer229.aClass141_1242 != null) DisplayModeManagerContainer229.aClass141_1242.decodedOperation1178(64, 1, 64);
-            if (DisplayModeManagerContainer229.aClass263_1245 != null) DisplayModeManagerContainer229.aClass263_1245.decodedOperation2014(64, true);
-            Component267.aClass194_2981.decodedOperation1444(64, -124);
+            if (DisplayModeManagerContainer229.aClass141_1242 != null) DisplayModeManagerContainer229.aClass141_1242.method1178(64, 1, 64);
+            if (DisplayModeManagerContainer229.aClass263_1245 != null) DisplayModeManagerContainer229.aClass263_1245.method2014(64, true);
+            Component267.aClass194_2981.method1444(64, -124);
         }
     }
 
-    static final void decodedOperation3178(CacheStore class45, int i, int[] is, CacheStore class45_15_) {
+    static final void method3178(CacheStore class45, int i, int[] is, CacheStore class45_15_) {
         try {
             anInt9506++;
             if (is != null) NodeSub1.anIntArray6547 = is;
             s.aClass45_4585 = class45;
-            if (i >= -6) decodedOperation3177(-36, true);
+            if (i >= -6) method3177(-36, true);
             DisplayModeManagerContainer271.aClass45_518 = class45_15_;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("lk.F(" + (class45 != null ? "{...}" : "null") + ',' + i + ',' + (is != null ? "{...}" : "null") + ',' + (class45_15_ != null ? "{...}" : "null") + ')'));
         }
     }
 
-    static final void decodedOperation3179(int i) {
-        Component223.decodedOperation175((byte) -50);
+    static final void method3179(int i) {
+        Component223.method175((byte) -50);
         anInt9508++;
-        int i_16_ = Component192.preferences.aClass239_Sub3_7222.decodedOperation1727(-32350);
+        int i_16_ = Component192.preferences.aClass239_Sub3_7222.method1727(-32350);
         do {
             if (i_16_ == 2) {
-                Component221.decodedOperation1083(NodeSub8.toolkit, 100, (byte) 9, PacketReader.canvasHeight, 100, Component236.canvasWidth);
+                Component221.method1083(NodeSub8.toolkit, 100, (byte) 9, PacketReader.canvasHeight, 100, Component236.canvasWidth);
                 break;
             } else if (i_16_ != 3) break;
-            DisplayModeManagerContainer220.decodedOperation282(2, NodeSub8.toolkit, Component236.canvasWidth, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.canvasHeight, 2);
+            DisplayModeManagerContainer220.method282(2, NodeSub8.toolkit, Component236.canvasWidth, (byte) 73, CacheStore.anInt666, Component134.anInt5812, PacketReader.canvasHeight, 2);
         } while (false);
-        if (Component192.preferences.aClass239_Sub3_7222.decodedOperation1735(false)) s.decodedOperation3980(i + 93, DisplayModeManagerContainer50.gameCanvas);
-        if (NodeSub8.toolkit != null) Component200.decodedOperation2196((byte) -9);
-        DisplayModeManagerContainer50.aBoolean3870 = i != Component192.preferences.aClass239_Sub3_7222.decodedOperation1727(-32350);
-        Component210.gameCanvasAttached = Component192.preferences.aClass239_Sub3_7222.decodedOperation1735(false);
+        if (Component192.preferences.aClass239_Sub3_7222.method1735(false)) s.method3980(i + 93, DisplayModeManagerContainer50.gameCanvas);
+        if (NodeSub8.toolkit != null) Component200.method2196((byte) -9);
+        DisplayModeManagerContainer50.aBoolean3870 = i != Component192.preferences.aClass239_Sub3_7222.method1727(-32350);
+        Component210.gameCanvasAttached = Component192.preferences.aClass239_Sub3_7222.method1735(false);
     }
 
     static {

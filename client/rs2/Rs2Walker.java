@@ -2,7 +2,7 @@
  * Simplified walker — BFS on local collision then walk-click (opcode 19) via
  * menu-inject. Transports/doors deferred (Microbot shortestpath later).
  * <p>
- * Uses {@link Component10#decodedOperation2252} as an internal reliability assist after the
+ * Uses {@link Component10#method2252} as an internal reliability assist after the
  * click is issued when the path is short.
  */
 final class Rs2Walker {

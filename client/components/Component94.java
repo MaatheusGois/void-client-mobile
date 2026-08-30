@@ -32,7 +32,7 @@ final class Component94
     int anInt3679;
     int anInt3680;
 
-    final boolean decodedOperation2115(Component94 class284_0_, boolean bool) {
+    final boolean method2115(Component94 class284_0_, boolean bool) {
         if (bool != true) return true;
         anInt3664++;
         return class284_0_.anInt3673 == this.anInt3673 && (this.anInt3667 == class284_0_.anInt3667) && (this.anInt3671 == class284_0_.anInt3671);
@@ -46,7 +46,7 @@ final class Component94
         if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i + -5766) != 0) {
             Canvas canvas = new Canvas();
             canvas.setSize(100, 100);
-            var_ha = Component65.decodedOperation958(true, 0, null, 0, canvas, null);
+            var_ha = Component65.method958(true, 0, null, 0, canvas, null);
             bool = true;
         }
         long l = Component240.currentTimeMillis(i + 26482);
@@ -54,16 +54,16 @@ final class Component94
             var_ha.draw3DTriangle(5, 10, 100, 75, 50, 100, 15, 90, 100, -65536, -65536, -65536, 1);
         int i_2_ = (int) (-l + Component240.currentTimeMillis(-71));
         if (i != -26584) benchmarkToolkitMs(-124);
-        var_ha.decodedOperation3675(100, (byte) -125, 0, 0, 100, -16777216);
+        var_ha.method3675(100, (byte) -125, 0, 0, 100, -16777216);
         if (bool) var_ha.method3635((byte) 121);
         return i_2_;
     }
 
-    public static void decodedOperation2117(int i) {
+    public static void method2117(int i) {
         if (i == 0) anIntArrayArray3677 = null;
     }
 
-    static final Component163 decodedOperation2118(byte i) {
+    static final Component163 method2118(byte i) {
         anInt3674++;
         try {
             if (i != -42) consoleScroll = -23;

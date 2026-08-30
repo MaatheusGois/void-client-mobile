@@ -22,7 +22,7 @@ final class RenderableSub9Sub2Sub1
         Component256.aClass318_Sub9_Sub2_Sub1Array6103[client.anInt5171] = this;
         client.anInt5171 = client.anInt5171 + 1 & 0x3ff;
         this.unlink(false);
-        this.decodedOperation2514(-108);
+        this.method2514(-108);
     }
 
     private final void method2521() {
@@ -31,10 +31,10 @@ final class RenderableSub9Sub2Sub1
         this.aClass318_Sub7_10419.aClass318_Sub10_6439.aClass318_Sub9_Sub2_Sub1Array6475[i] = this;
         aShort10416 = (short) this.aClass318_Sub7_10419.aClass318_Sub10_6439.anInt6476;
         this.aClass318_Sub7_10419.aClass318_Sub10_6439.anInt6476 = i + 1 & 0x1fff;
-        this.aClass318_Sub7_10419.aClass243_6433.decodedOperation1869(-98, this);
+        this.aClass318_Sub7_10419.aClass243_6433.method1869(-98, this);
     }
 
-    final void decodedOperation2522(GraphicsToolkit var_ha, long l) {
+    final void method2522(GraphicsToolkit var_ha, long l) {
         int i = this.anInt8791 >> 12 + Component149.anInt4459;
         int i_0_ = this.anInt8789 >> 12 + Component149.anInt4459;
         int i_1_ = this.anInt8796 >> 12;
@@ -95,39 +95,39 @@ final class RenderableSub9Sub2Sub1
                     int i_8_ = this.anInt8789 >> 12;
                     if (class357.aClass318_Sub1_Sub4_4406 != null) {
                         ComponentDownloader class30 = class357.aClass318_Sub1_Sub4_4406.method2381(var_ha, 7);
-                        if (class30 != null && class30.decodedOperation321(-14735, i_8_, i_1_, i_7_)) {
+                        if (class30 != null && class30.method321(-14735, i_8_, i_1_, i_7_)) {
                             method2520();
                             return;
                         }
                     }
                     if (class357.aClass318_Sub1_Sub4_4403 != null) {
                         ComponentDownloader class30 = class357.aClass318_Sub1_Sub4_4403.method2381(var_ha, 7);
-                        if (class30 != null && class30.decodedOperation321(-14735, i_8_, i_1_, i_7_)) {
+                        if (class30 != null && class30.method321(-14735, i_8_, i_1_, i_7_)) {
                             method2520();
                             return;
                         }
                     }
                     if (class357.aClass318_Sub1_Sub1_4402 != null) {
                         ComponentDownloader class30 = class357.aClass318_Sub1_Sub1_4402.method2381(var_ha, 7);
-                        if (class30 != null && class30.decodedOperation321(-14735, i_8_, i_1_, i_7_)) {
+                        if (class30 != null && class30.method321(-14735, i_8_, i_1_, i_7_)) {
                             method2520();
                             return;
                         }
                     }
                     for (Component3 class148 = class357.aClass148_4396; class148 != null; class148 = class148.aClass148_2038) {
                         ComponentDownloader class30 = class148.aClass318_Sub1_Sub3_2040.method2381(var_ha, 7);
-                        if (class30 != null && class30.decodedOperation321(-14735, i_8_, i_1_, i_7_)) {
+                        if (class30 != null && class30.method321(-14735, i_8_, i_1_, i_7_)) {
                             method2520();
                             return;
                         }
                     }
                 }
-                class318_sub10.aClass98_6481.aClass88_1569.decodedOperation844(this, true);
+                class318_sub10.aClass98_6481.aClass88_1569.method844(this, true);
             }
         }
     }
 
-    final void decodedOperation2523(StaticElementRenderer class318_sub7, int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, boolean bool, boolean bool_19_) {
+    final void method2523(StaticElementRenderer class318_sub7, int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, boolean bool, boolean bool_19_) {
         this.aClass318_Sub7_10419 = class318_sub7;
         this.anInt8791 = i << 12;
         this.anInt8796 = i_9_ << 12;
@@ -145,7 +145,7 @@ final class RenderableSub9Sub2Sub1
         method2521();
     }
 
-    final void decodedOperation2524(long l, int i) {
+    final void method2524(long l, int i) {
         aShort10420 -= i;
         if (aShort10420 <= 0) method2520();
         else {
@@ -261,19 +261,19 @@ final class RenderableSub9Sub2Sub1
             }
             if (class181.anIntArray2380 != null) {
                 for (int i_52_ = 0; i_52_ < class181.anIntArray2380.length; i_52_++) {
-                    HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) (OpenGlShader.aClass32_7415.decodedOperation334(class181.anIntArray2380[i_52_], (byte) 121)));
+                    HashNodeSub20 class348_sub42_sub20 = ((HashNodeSub20) (OpenGlShader.aClass32_7415.method334(class181.anIntArray2380[i_52_], (byte) 121)));
                     while (class348_sub42_sub20 != null) {
                         RadixParser class174 = (class348_sub42_sub20.aClass174_9704);
                         double d_53_ = i_20_ - class348_sub42_sub20.anInt9712;
                         double d_54_ = i_21_ - class348_sub42_sub20.anInt9706;
                         double d_55_ = i_22_ - class348_sub42_sub20.anInt9710;
                         double d_56_ = d_53_ * d_53_ + d_54_ * d_54_ + d_55_ * d_55_;
-                        if (d_56_ > (double) class174.aLong2301) class348_sub42_sub20 = (HashNodeSub20) OpenGlShader.aClass32_7415.decodedOperation336(true);
+                        if (d_56_ > (double) class174.aLong2301) class348_sub42_sub20 = (HashNodeSub20) OpenGlShader.aClass32_7415.method336(true);
                         else {
                             double d_57_ = Math.sqrt(d_56_);
                             if (d_57_ == 0.0) d_57_ = 1.0;
                             double d_58_ = ((d_53_ * (double) (class348_sub42_sub20.anInt9705) + d_54_ * (double) (class174.anInt2290) + d_55_ * (double) (class348_sub42_sub20.anInt9707)) * 65535.0 / ((double) class174.anInt2299 * d_57_));
-                            if (d_58_ < (double) class174.anInt2298) class348_sub42_sub20 = ((HashNodeSub20) OpenGlShader.aClass32_7415.decodedOperation336(true));
+                            if (d_58_ < (double) class174.anInt2298) class348_sub42_sub20 = ((HashNodeSub20) OpenGlShader.aClass32_7415.method336(true));
                             else {
                                 double d_59_ = 0.0;
                                 if (class174.anInt2289 == 1) d_59_ = (d_57_ / 16.0 * (double) (class174.anInt2304));
@@ -304,7 +304,7 @@ final class RenderableSub9Sub2Sub1
                                         this.anInt8789 += d_62_ * (double) i;
                                     }
                                 }
-                                class348_sub42_sub20 = ((HashNodeSub20) OpenGlShader.aClass32_7415.decodedOperation336(true));
+                                class348_sub42_sub20 = ((HashNodeSub20) OpenGlShader.aClass32_7415.method336(true));
                             }
                         }
                     }
@@ -314,7 +314,7 @@ final class RenderableSub9Sub2Sub1
                 if (class181.anIntArray2385 == null) {
                     class181.anIntArray2385 = new int[class181.anIntArray2395.length];
                     for (int i_63_ = 0; i_63_ < class181.anIntArray2395.length; i_63_++) {
-                        Component52.decodedOperation1943(false, (class181.anIntArray2395[i_63_]));
+                        Component52.method1943(false, (class181.anIntArray2395[i_63_]));
                         class181.anIntArray2385[i_63_] = ((NodeSub35) Component317.aClass356_8679.get(class181.anIntArray2395[i_63_], -6008)).intValue;
                     }
                 }

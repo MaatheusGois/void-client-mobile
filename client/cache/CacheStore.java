@@ -239,7 +239,7 @@ final class CacheStore {
         return true;
     }
 
-    static final void decodedOperation395(int i) throws Exception_Sub1 {
+    static final void method395(int i) throws Exception_Sub1 {
         if (Buffer.anInt7207 == 1) Component158.aHa326.swapBuffers(NewsFetcher.anInt4211, DefinitionSub8.anInt9157);
         else Component158.aHa326.swapBuffers(0, 0);
         if (i >= 73) anInt642++;

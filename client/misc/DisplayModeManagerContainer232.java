@@ -19,12 +19,12 @@ final class DisplayModeManagerContainer232
     static int anInt4696;
 
     public final void method7(int i) {
-        aClass105_4688 = DummyClass.decodedOperation3577((aClass120_4687.anInt4912), (byte) 116, aClass45_4694);
+        aClass105_4688 = DummyClass.method3577((aClass120_4687.anInt4912), (byte) 116, aClass45_4694);
         if (i != 10286) aBooleanArrayArray4693 = null;
         anInt4695++;
     }
 
-    static final Cp1252Decoder decodedOperation2022(Buffer class348_sub49, int i) {
+    static final Cp1252Decoder method2022(Buffer class348_sub49, int i) {
         if (i != 0) return null;
         anInt4691++;
         return new Cp1252Decoder(class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(i + 13638), class348_sub49.readShort(13638), class348_sub49.readMedium(-1), class348_sub49.readMedium(-1), class348_sub49.readUnsignedByte(255));
@@ -32,17 +32,17 @@ final class DisplayModeManagerContainer232
 
     public final void method9(byte i, boolean bool) {
         anInt4696++;
-        if (i != -49) decodedOperation2022(null, 101);
+        if (i != -49) method2022(null, 101);
         if (bool) {
             int i_0_ = (Math.max(Component236.canvasWidth, DisplayModeManagerContainer23.canvasWidth));
             int i_1_ = (Math.max(PacketReader.canvasHeight, GlToolkitSub2.canvasHeight));
             // Stretch title/login background to the full viewport (same full-bleed
             // feel as in-game). Cover/fit left letterboxing or cropped art.
-            aClass105_4688.decodedOperation973(0, 0, i_0_, i_1_);
+            aClass105_4688.method973(0, 0, i_0_, i_1_);
         }
     }
 
-    public static void decodedOperation2023(byte i) {
+    public static void method2023(byte i) {
         if (i > -13) aClass74_4689 = null;
         aClass74_4689 = null;
         anIntArray4692 = null;

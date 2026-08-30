@@ -12,7 +12,7 @@ final class NodeSub16Sub4
     private int anInt8967 = -1;
     private int anInt8968 = 0;
 
-    final synchronized void decodedOperation2880(NodeSub16 class348_sub16) {
+    final synchronized void method2880(NodeSub16 class348_sub16) {
         class348_sub16.unlink((byte) 94);
     }
 
@@ -34,7 +34,7 @@ final class NodeSub16Sub4
             method2885();
             NodeSub30 class348_sub30 = (NodeSub30) aClass262_8966.first(4);
             synchronized (class348_sub30) {
-                int i_1_ = class348_sub30.decodedOperation3005(this);
+                int i_1_ = class348_sub30.method3005(this);
                 if (i_1_ < 0) {
                     class348_sub30.anInt6912 = 0;
                     method2882(class348_sub30);
@@ -54,19 +54,19 @@ final class NodeSub16Sub4
         for (/**/; (class348 != aClass262_8966.sentinel && (((NodeSub30) class348).anInt6912 <= class348_sub30.anInt6912)); class348 = class348.next) {
             /* empty */
         }
-        HashNodeSub16Sub2.decodedOperation3265(-106, class348_sub30, class348);
+        HashNodeSub16Sub2.method3265(-106, class348_sub30, class348);
         anInt8967 = ((NodeSub30) aClass262_8966.sentinel.next).anInt6912;
     }
 
     private final void method2882(NodeSub30 class348_sub30) {
         class348_sub30.unlink((byte) 105);
-        class348_sub30.decodedOperation3006();
+        class348_sub30.method3006();
         Node class348 = (aClass262_8966.sentinel.next);
         if (class348 == aClass262_8966.sentinel) anInt8967 = -1;
         else anInt8967 = ((NodeSub30) class348).anInt6912;
     }
 
-    final synchronized void decodedOperation2883(NodeSub16 class348_sub16) {
+    final synchronized void method2883(NodeSub16 class348_sub16) {
         aClass262_8965.addHead(class348_sub16, -109);
     }
 
@@ -89,7 +89,7 @@ final class NodeSub16Sub4
             class348_sub16.synthesize(is, i, i_2_);
     }
 
-    final synchronized int decodedOperation2887() {
+    final synchronized int method2887() {
         return aClass262_8965.size(0);
     }
 
@@ -120,7 +120,7 @@ final class NodeSub16Sub4
             method2885();
             NodeSub30 class348_sub30 = (NodeSub30) aClass262_8966.first(4);
             synchronized (class348_sub30) {
-                int i_5_ = class348_sub30.decodedOperation3005(this);
+                int i_5_ = class348_sub30.method3005(this);
                 if (i_5_ < 0) {
                     class348_sub30.anInt6912 = 0;
                     method2882(class348_sub30);

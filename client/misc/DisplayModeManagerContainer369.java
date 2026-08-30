@@ -16,9 +16,9 @@ final class DisplayModeManagerContainer369
     static int[] anIntArray2899;
     static int[][] anIntArrayArray2900;
 
-    public static void decodedOperation1612(byte i) {
+    public static void method1612(byte i) {
         anIntArray2899 = null;
-        if (i != -9) decodedOperation1614(-47, null, -126, -99, 117, null, null, 90);
+        if (i != -9) method1614(-47, null, -126, -99, 117, null, null, 90);
         anIntArrayArray2900 = null;
         aClass221_2893 = null;
     }
@@ -28,8 +28,8 @@ final class DisplayModeManagerContainer369
         throw new IllegalStateException();
     }
 
-    static final boolean decodedOperation1613(boolean bool, int i, int i_0_) {
-        if (bool != false) decodedOperation1612((byte) -104);
+    static final boolean method1613(boolean bool, int i, int i_0_) {
+        if (bool != false) method1612((byte) -104);
         anInt2897++;
         return (i_0_ & 0x22) != 0;
     }
@@ -38,7 +38,7 @@ final class DisplayModeManagerContainer369
         this.anInt2896 = i_1_;
     }
 
-    static final void decodedOperation1614(int i, Npc npc, int i_2_, int i_3_, int i_4_, Player player, Component44 class51, int i_5_) {
+    static final void method1614(int i, Npc npc, int i_2_, int i_3_, int i_4_, Player player, Component44 class51, int i_5_) {
         try {
             anInt2898++;
             if (i != 979190089) aBoolean2895 = false;
@@ -52,12 +52,12 @@ final class DisplayModeManagerContainer369
                     NpcComposition class79 = (npc.definition);
                     if (class79.anIntArray1377 != null) {
                         class348_sub9.aBoolean6684 = true;
-                        class79 = class79.decodedOperation794((DisplayModeManagerContainer58.aClass170_10209), i ^ ~0x3a5d4149);
+                        class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), i ^ ~0x3a5d4149);
                     }
                     if (class79 != null) {
                         class348_sub9.anInt6698 = (i_4_ + class79.anInt1399 << 9);
                         class348_sub9.anInt6687 = (i_3_ - -class79.anInt1399 << 9);
-                        class348_sub9.anInt6685 = DisplayModeManagerContainer345.decodedOperation214(npc, -1);
+                        class348_sub9.anInt6685 = DisplayModeManagerContainer345.method214(npc, -1);
                         class348_sub9.anInt6696 = class79.anInt1340;
                         class348_sub9.anInt6694 = class79.anInt1392 << 9;
                         class348_sub9.anInt6677 = class79.anInt1356;
@@ -69,7 +69,7 @@ final class DisplayModeManagerContainer369
                     class348_sub9.aPlayer_6679 = player;
                     class348_sub9.anInt6698 = (player.getSize((byte) 74) + i_4_) << 9;
                     class348_sub9.anInt6687 = (player.getSize((byte) 86) + i_3_) << 9;
-                    class348_sub9.anInt6685 = Component168.decodedOperation2357(-1, player);
+                    class348_sub9.anInt6685 = Component168.method2357(-1, player);
                     class348_sub9.anInt6681 = 256;
                     class348_sub9.anInt6694 = (player.anInt10553 << 9);
                     class348_sub9.anInt6677 = player.anInt10558;
@@ -99,7 +99,7 @@ final class DisplayModeManagerContainer369
                 class348_sub9.aBoolean6674 = class51.aBoolean888;
                 if (class51.anIntArray945 != null) {
                     class348_sub9.aBoolean6684 = true;
-                    class348_sub9.decodedOperation2781((byte) 21);
+                    class348_sub9.method2781((byte) 21);
                 }
                 if (class348_sub9.anIntArray6697 != null) class348_sub9.anInt6670 = (class348_sub9.anInt6680 - -(int) ((double) (-class348_sub9.anInt6680 + class348_sub9.anInt6668) * Math.random()));
                 SceneManager.aClass262_2859.addTail(class348_sub9, -20180);

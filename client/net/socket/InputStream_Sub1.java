@@ -15,7 +15,7 @@ final class InputStream_Sub1 extends InputStream {
     static int anInt78;
     static Component183 aClass114_79;
 
-    public static void decodedOperation124(int i) {
+    public static void method124(int i) {
         aLongArrayArray75 = null;
         if (i == 2) {
             aClass351_77 = null;
@@ -24,57 +24,57 @@ final class InputStream_Sub1 extends InputStream {
         }
     }
 
-    static final boolean decodedOperation125(int i, int i_0_, int i_1_, Component269 class318_sub1_sub4, byte i_2_) {
+    static final boolean method125(int i, int i_0_, int i_1_, Component269 class318_sub1_sub4, byte i_2_) {
         anInt72++;
         if (!DefinitionSub23.aBoolean9307 || !Component234.aBoolean351) return false;
         if (Component241.occludedPixelCount < 100) return false;
-        if (!ShaderSub2.decodedOperation164(i_1_, i_0_, (byte) -97, i)) return false;
+        if (!ShaderSub2.method164(i_1_, i_0_, (byte) -97, i)) return false;
         int i_3_ = i_0_ << Component149.anInt4459;
         int i_4_ = i << Component149.anInt4459;
         if (i_2_ != 120) return false;
         int i_5_ = -1 + ShaderSub1.aSArray5191[i_1_].getHeight((byte) -86, i, i_0_);
         int i_6_ = i_5_ + class318_sub1_sub4.method2394(true);
         if (class318_sub1_sub4.aShort8759 == 1) {
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_5_, i_6_, i_5_, i_4_ + Component148.anInt3465, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, i_3_, i_4_, i_3_, Component148.anInt3465 + i_4_, i_5_, i_6_, i_5_, i_4_ + Component148.anInt3465, false)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 2) {
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, i_3_ - -Component148.anInt3465, i_4_ - -Component148.anInt3465, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, Component148.anInt3465 + i_3_, i_4_ + Component148.anInt3465, Component148.anInt3465 + i_3_, Component148.anInt3465 + i_4_, i_6_, i_5_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, i_3_ - -Component148.anInt3465, i_4_ - -Component148.anInt3465, i_3_, Component148.anInt3465 + i_4_, i_6_, i_6_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, Component148.anInt3465 + i_3_, i_4_ + Component148.anInt3465, Component148.anInt3465 + i_3_, Component148.anInt3465 + i_4_, i_6_, i_5_, i_5_, i_4_ - -Component148.anInt3465, false)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 4) {
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_ + Component148.anInt3465, Component148.anInt3465 + i_3_, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_6_, i_6_, i_5_, i_4_, false)) return false;
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_ + Component148.anInt3465, i_3_ - -Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_5_, i_6_, i_5_, Component148.anInt3465 + i_4_, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_ + Component148.anInt3465, Component148.anInt3465 + i_3_, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_6_, i_6_, i_5_, i_4_, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_ + Component148.anInt3465, i_3_ - -Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_ - -Component148.anInt3465, i_5_, i_6_, i_5_, Component148.anInt3465 + i_4_, false)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 8) {
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, Component148.anInt3465 + i_3_, i_4_, i_3_, i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
-            if (!ShaderProgramSub7.decodedOperation2169(i_3_, i_3_ + Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_, i_6_, i_5_, i_5_, i_4_, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, Component148.anInt3465 + i_3_, i_4_, i_3_, i_4_, i_6_, i_6_, i_5_, i_4_, false)) return false;
+            if (!ShaderProgramSub7.method2169(i_3_, i_3_ + Component148.anInt3465, i_4_, Component148.anInt3465 + i_3_, i_4_, i_6_, i_5_, i_5_, i_4_, false)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 16) {
-            if (!Component221.decodedOperation1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
+            if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 32) {
-            if (!Component221.decodedOperation1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_ + DisplayModeManagerContainer64.anInt9037, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
+            if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, DisplayModeManagerContainer64.anInt9037 + i_4_, i_3_ + DisplayModeManagerContainer64.anInt9037, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 64) {
-            if (!Component221.decodedOperation1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, DisplayModeManagerContainer64.anInt9037 + i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
+            if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, DisplayModeManagerContainer64.anInt9037 + i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
             Component274.occludedWallCount++;
             return true;
         }
         if (class318_sub1_sub4.aShort8759 == 128) {
-            if (!Component221.decodedOperation1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
+            if (!Component221.method1084(i_6_, DisplayModeManagerContainer64.anInt9037, i_4_, i_3_, i_5_, DisplayModeManagerContainer64.anInt9037, 18507)) return false;
             Component274.occludedWallCount++;
             return true;
         }
@@ -87,15 +87,15 @@ final class InputStream_Sub1 extends InputStream {
         return -1;
     }
 
-    static final void decodedOperation126(int i) {
-        DisplayModeManagerContainer58.decodedOperation2433();
+    static final void method126(int i) {
+        DisplayModeManagerContainer58.method2433();
         anInt73++;
         for (int i_7_ = 0; i_7_ < 4; i_7_++)
-            NodeSub45.aClass361Array7108[i_7_].decodedOperation3500(700);
-        if (i != -16203) decodedOperation125(125, -95, 109, null, (byte) -52);
-        Component308.decodedOperation464(-1);
-        NodeSub18.decodedOperation2938((byte) 98);
-        Component205.decodedOperation1772(28);
+            NodeSub45.aClass361Array7108[i_7_].method3500(700);
+        if (i != -16203) method125(125, -95, 109, null, (byte) -52);
+        Component308.method464(-1);
+        NodeSub18.method2938((byte) 98);
+        Component205.method1772(28);
         System.gc();
         NodeSub8.toolkit.NativeHandle();
     }
@@ -113,14 +113,14 @@ final class InputStream_Sub1 extends InputStream {
             long l_12_ = l_10_ << 1;
             if (l_12_ >= 256L) l_12_ ^= 0x11dL;
             long l_13_ = l_12_ ^ l;
-            aLongArrayArray75[0][i] = (Component11.decodedOperation2068(l_13_, (Component11.decodedOperation2068(l_9_ << 8, (Component11.decodedOperation2068(l_11_ << 16, (Component11.decodedOperation2068(l_12_ << 24, (Component11.decodedOperation2068(l << 32, (Component11.decodedOperation2068(Component11.decodedOperation2068(l << 56, l << 48), l_10_ << 40))))))))))));
+            aLongArrayArray75[0][i] = (Component11.method2068(l_13_, (Component11.method2068(l_9_ << 8, (Component11.method2068(l_11_ << 16, (Component11.method2068(l_12_ << 24, (Component11.method2068(l << 32, (Component11.method2068(Component11.method2068(l << 56, l << 48), l_10_ << 40))))))))))));
             for (int i_14_ = 1; i_14_ < 8; i_14_++)
-                aLongArrayArray75[i_14_][i] = Component11.decodedOperation2068((aLongArrayArray75[i_14_ + -1][i] >>> 8), (aLongArrayArray75[i_14_ - 1][i] << 56));
+                aLongArrayArray75[i_14_][i] = Component11.method2068((aLongArrayArray75[i_14_ + -1][i] >>> 8), (aLongArrayArray75[i_14_ - 1][i] << 56));
         }
         aLongArray76[0] = 0L;
         for (int i = 1; i <= 10; i++) {
             int i_15_ = -8 + i * 8;
-            aLongArray76[i] = (SpriteSub2.decodedOperation993((SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777(aLongArrayArray75[6][6 + i_15_], 65280L), (SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777((aLongArrayArray75[5][5 + i_15_]), 16711680L), (SpriteSub2.decodedOperation993((SpriteSub2.decodedOperation993((SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777((aLongArrayArray75[2][i_15_ + 2]), 280375465082880L), (SpriteSub2.decodedOperation993(NodeSub8.decodedOperation2777(71776119061217280L, (aLongArrayArray75[1][1 + i_15_])), (NodeSub8.decodedOperation2777(aLongArrayArray75[0][i_15_], -72057594037927936L)))))), NodeSub8.decodedOperation2777(1095216660480L, (aLongArrayArray75[3][3 + i_15_])))), NodeSub8.decodedOperation2777((aLongArrayArray75[4][i_15_ - -4]), 4278190080L))))))), NodeSub8.decodedOperation2777(aLongArrayArray75[7][7 + i_15_], 255L)));
+            aLongArray76[i] = (SpriteSub2.method993((SpriteSub2.method993(NodeSub8.method2777(aLongArrayArray75[6][6 + i_15_], 65280L), (SpriteSub2.method993(NodeSub8.method2777((aLongArrayArray75[5][5 + i_15_]), 16711680L), (SpriteSub2.method993((SpriteSub2.method993((SpriteSub2.method993(NodeSub8.method2777((aLongArrayArray75[2][i_15_ + 2]), 280375465082880L), (SpriteSub2.method993(NodeSub8.method2777(71776119061217280L, (aLongArrayArray75[1][1 + i_15_])), (NodeSub8.method2777(aLongArrayArray75[0][i_15_], -72057594037927936L)))))), NodeSub8.method2777(1095216660480L, (aLongArrayArray75[3][3 + i_15_])))), NodeSub8.method2777((aLongArrayArray75[4][i_15_ - -4]), 4278190080L))))))), NodeSub8.method2777(aLongArrayArray75[7][7 + i_15_], 255L)));
         }
         aClass351_77 = new StringCache(8, 1);
         anInt78 = 0;

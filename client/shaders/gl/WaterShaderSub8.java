@@ -45,14 +45,14 @@ final class WaterShaderSub8
         return new String(cs, 0, i_2_);
     }
 
-    static final int decodedOperation3547(int i, int i_6_) {
+    static final int method3547(int i, int i_6_) {
         if (DisplayModeManagerContainer173.anIntArrayArray4253 != null) return DisplayModeManagerContainer173.anIntArrayArray4253[i][i_6_] & 0xffffff;
         return 0;
     }
 
-    static final void decodedOperation3548(int i, Npc npc, int[] is, int[] is_7_, int[] is_8_) {
+    static final void method3548(int i, Npc npc, int[] is, int[] is_7_, int[] is_8_) {
         try {
-            if (i != -7387) decodedOperation3550((byte) 10);
+            if (i != -7387) method3550((byte) 10);
             for (int i_9_ = 0; is_7_.length > i_9_; i_9_++) {
                 int i_10_ = is_7_[i_9_];
                 int i_11_ = is[i_9_];
@@ -73,7 +73,7 @@ final class WaterShaderSub8
                                     class182.anInt2455 = 1;
                                     class182.anInt2451 = 0;
                                     class182.anInt2445 = 0;
-                                    if (!npc.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(npc, 0, class17, -75);
+                                    if (!npc.aBoolean10309) DisplayModeManagerContainer260.method2178(npc, 0, class17, -75);
                                 } else if (i_14_ == 2) class182.anInt2445 = 0;
                             }
                             if (class182 == null) {
@@ -84,7 +84,7 @@ final class WaterShaderSub8
                                 class182.anInt2445 = 0;
                                 class182.anInt2451 = 0;
                                 class182.anInt2448 = i_12_;
-                                if (!npc.aBoolean10309) DisplayModeManagerContainer260.decodedOperation2178(npc, 0, class17, -19);
+                                if (!npc.aBoolean10309) DisplayModeManagerContainer260.method2178(npc, 0, class17, -19);
                             }
                         } else npc.aClass182Array10308[i_13_] = null;
                     }
@@ -99,7 +99,7 @@ final class WaterShaderSub8
 
     final void method3520(byte i) {
         this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
-        if (i != 87) decodedOperation3549(-29, (byte) -5);
+        if (i != 87) method3549(-29, (byte) -5);
         anInt7364++;
         this.aHa_Sub3_4479.texStorage3D(Component385.aClass229_2207, 120, Component385.aClass229_2207);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
@@ -119,7 +119,7 @@ final class WaterShaderSub8
         }
     }
 
-    static final boolean decodedOperation3549(int i, byte i_15_) {
+    static final boolean method3549(int i, byte i_15_) {
         anInt7351++;
         int i_16_ = -72 / ((37 - i_15_) / 48);
         if (i == 25 || i == 20 || i == 44 || i == 46 || i == 60) return true;
@@ -148,10 +148,10 @@ final class WaterShaderSub8
     final boolean method3530(int i) {
         if (i > -57) return false;
         anInt7360++;
-        return aClass269_7353.decodedOperation2039(116);
+        return aClass269_7353.method2039(116);
     }
 
-    public static void decodedOperation3550(byte i) {
+    public static void method3550(byte i) {
         aClass114_7363 = null;
         aClass45_7362 = null;
         int i_20_ = -90 % ((-54 - i) / 60);
@@ -164,8 +164,8 @@ final class WaterShaderSub8
             this.aHa_Sub3_4479.setActiveTextureUnit(1, i ^ ~0x39a4);
             MatrixSub2 class101_sub2_21_ = this.aHa_Sub3_4479.getUniformLocation(false);
             class101_sub2_21_.method898(class101_sub2);
-            class101_sub2_21_.decodedOperation914(0.125F, 1.0F, 0, 0.125F);
-            class101_sub2_21_.decodedOperation920(0.0F, false, aFloat7350, 0.0F);
+            class101_sub2_21_.method914(0.125F, 1.0F, 0, 0.125F);
+            class101_sub2_21_.method920(0.0F, false, aFloat7350, 0.0F);
             this.aHa_Sub3_4479.deleteVertexArrays(-32, DefinitionSub38.aClass251_9477);
             this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
         }

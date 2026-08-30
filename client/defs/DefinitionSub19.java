@@ -16,15 +16,15 @@ final class DefinitionSub19
     static int[] anIntArray9259 = new int[2];
     /*synthetic*/ static Class aClass9260;
 
-    static final void decodedOperation3097(DisplayModeManagerContainer57[] class46s, int i, int i_0_) {
+    static final void method3097(DisplayModeManagerContainer57[] class46s, int i, int i_0_) {
         if (i_0_ >= 116) {
             for (int i_1_ = 0; class46s.length > i_1_; i_1_++) {
                 DisplayModeManagerContainer57 class46 = class46s[i_1_];
                 if (class46 != null) {
                     if (class46.type == 0) {
-                        if (class46.children != null) decodedOperation3097(class46.children, i, 125);
+                        if (class46.children != null) method3097(class46.children, i, 125);
                         NodeSub41 class348_sub41 = ((NodeSub41) (Component15.aClass356_4915.get(class46.packedId, -6008)));
-                        if (class348_sub41 != null) Component205.decodedOperation1775((byte) -8, (class348_sub41.anInt7050), i);
+                        if (class348_sub41 != null) Component205.method1775((byte) -8, (class348_sub41.anInt7050), i);
                     }
                     if (i == 0 && class46.anObjectArray840 != null) {
                         NodeSub36 class348_sub36 = new NodeSub36();
@@ -65,17 +65,17 @@ final class DefinitionSub19
         return NodederUtil.loadNativeLibrary((aClass9260 != null ? aClass9260 : (aClass9260 = Component330.class)), (byte) 20, string);
     }
 
-    public static void decodedOperation3099(byte i) {
+    public static void method3099(byte i) {
         aClass114_9254 = null;
         aClass114_9257 = null;
         anIntArray9259 = null;
         if (i >= -63) anIntArray9259 = null;
     }
 
-    static final boolean decodedOperation3100(int i, boolean bool, int i_4_) {
+    static final boolean method3100(int i, boolean bool, int i_4_) {
         anInt9253++;
         if (bool != false) anIntArray9259 = null;
-        return GameType.decodedOperation1637(i, 32768, i_4_) | (0x800 & i_4_) != 0 || Component224.decodedOperation2056(i_4_, 86, i);
+        return GameType.method1637(i, 32768, i_4_) | (0x800 & i_4_) != 0 || Component224.method2056(i_4_, 86, i);
     }
 
     static {

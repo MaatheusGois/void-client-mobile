@@ -13,13 +13,13 @@ final class Component279
     static int anInt228;
     static Component183 aClass114_229 = new Component183(51, 17);
 
-    public static void decodedOperation255(int i) {
+    public static void method255(int i) {
         aClass60_225 = null;
         if (i != 6725) aClass60_225 = null;
         aClass114_229 = null;
     }
 
-    static final int decodedOperation256(int i, byte i_0_) {
+    static final int method256(int i, byte i_0_) {
         anInt228++;
         if (i_0_ < 61) countChar(-27, null, 'G');
         return i >>> 7;

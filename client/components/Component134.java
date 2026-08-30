@@ -36,7 +36,7 @@ final class Component134
         int i_13_ = i_12_ + 1;
         float f_14_ = f_11_ - (float) i_12_;
         float f_15_ = (float) i_4_ - f_14_;
-        float f_16_ = DisplayModeManagerContainer173.decodedOperation2684(6, f_14_);
+        float f_16_ = DisplayModeManagerContainer173.method2684(6, f_14_);
         i_13_ &= i_10_;
         i_12_ &= i_10_;
         int i_17_ = anIntArray5804[i_12_];
@@ -47,7 +47,7 @@ final class Component134
             int i_22_ = i_21_ + 1;
             float f_23_ = (float) -i_21_ + f_20_;
             float f_24_ = -f_23_ + 1.0F;
-            float f_25_ = DisplayModeManagerContainer173.decodedOperation2684(i_4_ ^ 0x7, f_23_);
+            float f_25_ = DisplayModeManagerContainer173.method2684(i_4_ ^ 0x7, f_23_);
             i_21_ &= i_9_;
             i_22_ &= i_9_;
             int i_26_ = anIntArray5804[i_17_ + i_21_];
@@ -62,29 +62,29 @@ final class Component134
                 float f_35_ = 1.0F - f_34_;
                 i_32_ &= i_8_;
                 i_33_ &= i_8_;
-                float f_36_ = DisplayModeManagerContainer173.decodedOperation2684(i_4_ ^ 0x7, f_34_);
-                fs[i_2_++] = f_3_ * (Component112.decodedOperation2337((Component112.decodedOperation2337((Component112.decodedOperation2337((DebugPanic.decodedOperation2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_26_ + i_32_]), 7), f_15_, -70, f_35_)), true, (DebugPanic.decodedOperation2119(f_24_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_33_ - -i_26_])), f_15_, -73, f_34_)), f_36_)), true, (Component112.decodedOperation2337((DebugPanic.decodedOperation2119(f_23_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_32_ + i_27_])), f_15_, -75, f_35_)), true, (DebugPanic.decodedOperation2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_27_ + i_33_]), 7), f_15_, -91, f_34_)), f_36_)), f_25_)), true, (Component112.decodedOperation2337((Component112.decodedOperation2337((DebugPanic.decodedOperation2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_32_]), 7), f_14_, -72, f_35_)), true, (DebugPanic.decodedOperation2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_33_]), 7), f_14_, -75, f_34_)), f_36_)), true, (Component112.decodedOperation2337((DebugPanic.decodedOperation2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_32_]), 7), f_14_, -100, f_35_)), true, (DebugPanic.decodedOperation2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_33_]), 7), f_14_, -72, f_34_)), f_36_)), f_25_)), f_16_));
+                float f_36_ = DisplayModeManagerContainer173.method2684(i_4_ ^ 0x7, f_34_);
+                fs[i_2_++] = f_3_ * (Component112.method2337((Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_26_ + i_32_]), 7), f_15_, -70, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_33_ - -i_26_])), f_15_, -73, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd(7, (anIntArray5804[i_32_ + i_27_])), f_15_, -75, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_27_ + i_33_]), 7), f_15_, -91, f_34_)), f_36_)), f_25_)), true, (Component112.method2337((Component112.method2337((DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_32_]), 7), f_14_, -72, f_35_)), true, (DebugPanic.method2119(f_24_, GpsOverlay.bitwiseAnd((anIntArray5804[i_28_ + i_33_]), 7), f_14_, -75, f_34_)), f_36_)), true, (Component112.method2337((DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_32_]), 7), f_14_, -100, f_35_)), true, (DebugPanic.method2119(f_23_, GpsOverlay.bitwiseAnd((anIntArray5804[i_29_ + i_33_]), 7), f_14_, -72, f_34_)), f_36_)), f_25_)), f_16_));
             }
         }
     }
 
-    static final int decodedOperation1399(int i, char c) {
+    static final int method1399(int i, char c) {
         anInt5805++;
-        if (i != 7) decodedOperation1400(-22);
+        if (i != 7) method1400(-22);
         if (c >= 0 && Component31.anIntArray5902.length > c) return Component31.anIntArray5902[c];
         return -1;
     }
 
-    public static void decodedOperation1400(int i) {
-        if (i != 1) decodedOperation1401(null, 48, -14, -102, 78, 29);
+    public static void method1400(int i) {
+        if (i != 1) method1401(null, 48, -14, -102, 78, 29);
         aClass341_5808 = null;
         aClass111_5813 = null;
     }
 
-    static final GlRectangleTexture decodedOperation1401(GlToolkitSub2 var_ha_Sub2, int i, int i_37_, int i_38_, int i_39_, int i_40_) {
+    static final GlRectangleTexture method1401(GlToolkitSub2 var_ha_Sub2, int i, int i_37_, int i_38_, int i_39_, int i_40_) {
         anInt5809++;
         if (i_37_ != 34037) aClass341_5808 = null;
-        if (var_ha_Sub2.aBoolean7793 || Component353.decodedOperation1436(-20, i_38_) && Component353.decodedOperation1436(-119, i_40_)) return new GlRectangleTexture(var_ha_Sub2, 3553, i, i_39_, i_38_, i_40_, true);
+        if (var_ha_Sub2.aBoolean7793 || Component353.method1436(-20, i_38_) && Component353.method1436(-119, i_40_)) return new GlRectangleTexture(var_ha_Sub2, 3553, i, i_39_, i_38_, i_40_, true);
         if (!var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, i, i_39_, i_38_, i_40_, Component373.nextPowerOfTwo(i_38_, (byte) 108), Component373.nextPowerOfTwo(i_40_, (byte) 108), true);
         return new GlRectangleTexture(var_ha_Sub2, 34037, i, i_39_, i_38_, i_40_, true);
     }
@@ -101,18 +101,18 @@ final class Component134
         }
     }
 
-    static final void decodedOperation1402(int i) {
+    static final void method1402(int i) {
         if (i == 1) {
             DisplayModeManagerContainer343.aClass60_8732.clear(0);
             anInt5811++;
         }
     }
 
-    static final void decodedOperation1403(int i, int i_45_, byte[] is, boolean bool, int i_46_, int i_47_, int i_48_) {
+    static final void method1403(int i, int i_45_, byte[] is, boolean bool, int i_46_, int i_47_, int i_48_) {
         anInt5806++;
-        if (i_45_ > 0 && !Component353.decodedOperation1436(69, i_45_)) throw new IllegalArgumentException("");
-        if (i > 0 && !Component353.decodedOperation1436(100, i)) throw new IllegalArgumentException("");
-        int i_49_ = Component191.decodedOperation1382(i_46_, -6409);
+        if (i_45_ > 0 && !Component353.method1436(69, i_45_)) throw new IllegalArgumentException("");
+        if (i > 0 && !Component353.method1436(100, i)) throw new IllegalArgumentException("");
+        int i_49_ = Component191.method1382(i_46_, -6409);
         int i_50_ = 0;
         int i_51_ = Math.min(i_45_, i);
         if (bool != false) anInt5807 = -127;

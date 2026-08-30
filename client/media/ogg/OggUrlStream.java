@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub23_Sub1` (JODE-obfuscated).
- * URL-backed Ogg audio stream. extends OggStream; reads Ogg data from a java.net.URL (decodedOperation2967 builds the stream from a DisplayModeManagerContainer370 resource).
+ * URL-backed Ogg audio stream. extends OggStream; reads Ogg data from a java.net.URL (method2967 builds the stream from a DisplayModeManagerContainer370 resource).
  */
 
 import jagtheora.ogg.OggPacket;
@@ -36,7 +36,7 @@ final class OggUrlStream extends OggStream {
     private double aDouble9005;
     private final VorbisInfo aVorbisInfo9006 = new VorbisInfo();
 
-    static final ComponentDownloader decodedOperation2967(int i, DisplayModeManagerContainer370 class64, int i_0_, int i_1_, int i_2_) {
+    static final ComponentDownloader method2967(int i, DisplayModeManagerContainer370 class64, int i_0_, int i_1_, int i_2_) {
         anInt8991++;
         if (i_2_ != 2) aByteArrayArray8996 = null;
         if (class64 == null) return null;
@@ -49,32 +49,32 @@ final class OggUrlStream extends OggStream {
         aVorbisComment9002 = new VorbisComment();
     }
 
-    public static void decodedOperation2968(byte i) {
+    public static void method2968(byte i) {
         aClass297_8992 = null;
         aByteArrayArray8996 = null;
-        if (i > -114) decodedOperation2968((byte) -12);
+        if (i > -114) method2968((byte) -12);
     }
 
-    final int decodedOperation2969(int i) {
+    final int method2969(int i) {
         if (i != -11020) aVorbisComment9002 = null;
         anInt8989++;
-        if (aClass348_Sub16_Sub2_8995 != null) return aClass348_Sub16_Sub2_8995.decodedOperation2829(i + 10949);
+        if (aClass348_Sub16_Sub2_8995 != null) return aClass348_Sub16_Sub2_8995.method2829(i + 10949);
         return 0;
     }
 
-    static final DisplayModeManagerContainer368 decodedOperation2970(int i, Buffer class348_sub49) {
+    static final DisplayModeManagerContainer368 method2970(int i, Buffer class348_sub49) {
         anInt8998++;
-        if (i != 2) decodedOperation2972(null, -114, 15);
+        if (i != 2) method2972(null, -114, 15);
         return new DisplayModeManagerContainer368(class348_sub49.readShort(13638), class348_sub49.readShort(i + 13636), class348_sub49.readShort(13638), class348_sub49.readShort(i ^ 0x3544), class348_sub49.readShort(13638), class348_sub49.readShort(i + 13636), class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readMedium(-1), class348_sub49.readUnsignedByte(255));
     }
 
-    final NodeSub16Sub2 decodedOperation2971(int i) {
+    final NodeSub16Sub2 method2971(int i) {
         if (i > -6) return null;
         anInt8997++;
         return aClass348_Sub16_Sub2_8995;
     }
 
-    static final boolean decodedOperation2972(String string, int i, int i_3_) {
+    static final boolean method2972(String string, int i, int i_3_) {
         anInt9004++;
         if (aClass297_8992.signed) {
             Component223.aClass161_125 = new DisplayModeManagerContainer254();
@@ -101,12 +101,12 @@ final class OggUrlStream extends OggStream {
         return true;
     }
 
-    final double decodedOperation2973(byte i) {
+    final double method2973(byte i) {
         anInt8999++;
         double d = aDouble9005;
         if (i != 123) return 0.20418061173976032;
         if (aClass348_Sub16_Sub2_8995 != null) {
-            d = aClass348_Sub16_Sub2_8995.decodedOperation2837(i ^ ~0x5599);
+            d = aClass348_Sub16_Sub2_8995.method2837(i ^ ~0x5599);
             if (d < 0.0) d = aDouble9005;
         }
         return (double) -(256.0F / (float) Component231.sampleRate) + d;
@@ -117,9 +117,9 @@ final class OggUrlStream extends OggStream {
         anInt9003++;
         if (aDSPState8993 != null) aDSPState8993.a();
         aVorbisComment9002.a();
-        if (i != 13) decodedOperation2967(-99, null, -83, -13, 63);
+        if (i != 13) method2967(-99, null, -83, -13, 63);
         aVorbisInfo9006.a();
-        if (aClass348_Sub16_Sub2_8995 != null) aClass348_Sub16_Sub2_8995.decodedOperation2836(-1);
+        if (aClass348_Sub16_Sub2_8995 != null) aClass348_Sub16_Sub2_8995.method2836(-1);
     }
 
     final void handlePacket(byte i, OggPacket oggpacket) {
@@ -141,11 +141,11 @@ final class OggUrlStream extends OggStream {
             if (aDouble9005 == -1.0) aDouble9005 = (float) anInt9001 / (float) aVorbisInfo9006.rate;
             aDSPState8993.read(fs[0].length);
             anInt9001 += fs[0].length;
-            HashNodeSub4 class348_sub42_sub4 = aClass348_Sub16_Sub2_8995.decodedOperation2838(fs[0].length, aDouble9005, 1401320384);
+            HashNodeSub4 class348_sub42_sub4 = aClass348_Sub16_Sub2_8995.method2838(fs[0].length, aDouble9005, 1401320384);
             InputHandler.quantizeFloatsToShorts(16383, (class348_sub42_sub4.aShortArrayArray9518), fs);
             for (int i_8_ = 0; i_8_ < aVorbisInfo9006.channels; i_8_++)
-                class348_sub42_sub4.aShortArrayArray9518[i_8_] = aClass163_8994.decodedOperation1268(-56, (class348_sub42_sub4.aShortArrayArray9518[i_8_]));
-            aClass348_Sub16_Sub2_8995.decodedOperation2835(class348_sub42_sub4, 30700);
+                class348_sub42_sub4.aShortArrayArray9518[i_8_] = aClass163_8994.method1268(-56, (class348_sub42_sub4.aShortArrayArray9518[i_8_]));
+            aClass348_Sub16_Sub2_8995.method2835(class348_sub42_sub4, 30700);
         }
         if (i > -91) shutdown((byte) -106);
     }

@@ -48,7 +48,7 @@ final class NodeSub10
         anInt6711 = 0;
     }
 
-    public static void decodedOperation2785() {
+    public static void method2785() {
         aByteArray6714 = null;
         aClass370Array6718 = null;
         aClass210Array6715 = null;
@@ -67,7 +67,7 @@ final class NodeSub10
         anIntArray6705 = null;
     }
 
-    static final float decodedOperation2786(int i) {
+    static final float method2786(int i) {
         int i_0_ = i & 0x1fffff;
         int i_1_ = i & ~0x7fffffff;
         int i_2_ = (i & 0x7fe00000) >> 21;
@@ -155,9 +155,9 @@ final class NodeSub10
                 fs_18_[2 * i_19_ + 1] = -(float) Math.sin((double) (4 * i_19_ + 2) * 3.141592653589793 / (double) i_11_);
             }
             int[] is_20_ = new int[i_14_];
-            int i_21_ = Component80.decodedOperation2253(i_14_ - 1, -53);
+            int i_21_ = Component80.method2253(i_14_ - 1, -53);
             for (int i_22_ = 0; i_22_ < i_14_; i_22_++)
-                is_20_[i_22_] = DisplayModeManagerContainer26.decodedOperation818(i_21_, 0, i_22_);
+                is_20_[i_22_] = DisplayModeManagerContainer26.method818(i_21_, 0, i_22_);
             if (i == 0) {
                 aFloatArray6722 = fs;
                 aFloatArray6720 = fs_16_;
@@ -201,7 +201,7 @@ final class NodeSub10
         aBoolean6724 = true;
     }
 
-    final NodeSub19Sub1 decodedOperation2791(int[] is) {
+    final NodeSub19Sub1 method2791(int[] is) {
         if (is != null && is[0] <= 0) return null;
         if (aByteArray6731 == null) {
             anInt6730 = 0;
@@ -212,7 +212,7 @@ final class NodeSub10
         }
         for (/**/; anInt6732 < aByteArrayArray6703.length; anInt6732++) {
             if (is != null && is[0] <= 0) return null;
-            float[] fs = decodedOperation2794(anInt6732);
+            float[] fs = method2794(anInt6732);
             if (fs != null) {
                 int i = anInt6733;
                 int i_34_ = fs.length;
@@ -232,7 +232,7 @@ final class NodeSub10
         return new NodeSub19Sub1(anInt6702, is_37_, anInt6723, anInt6717, aBoolean6728);
     }
 
-    private static final boolean decodedOperation2792(CacheStore class45) {
+    private static final boolean method2792(CacheStore class45) {
         if (!aBoolean6724) {
             byte[] is = class45.getFile(-1860, 0, 0);
             if (is == null) return false;
@@ -241,8 +241,8 @@ final class NodeSub10
         return true;
     }
 
-    static final NodeSub10 decodedOperation2793(CacheStore class45, int i) {
-        if (!decodedOperation2792(class45)) {
+    static final NodeSub10 method2793(CacheStore class45, int i) {
+        if (!method2792(class45)) {
             class45.isSingletonFileReady(false, i);
             return null;
         }
@@ -251,10 +251,10 @@ final class NodeSub10
         return new NodeSub10(is);
     }
 
-    private final float[] decodedOperation2794(int i) {
+    private final float[] method2794(int i) {
         method2784(aByteArrayArray6703[i], 0);
         method2788();
-        int i_38_ = readBits(Component80.decodedOperation2253(anIntArray6709.length - 1, 123));
+        int i_38_ = readBits(Component80.method2253(anIntArray6709.length - 1, 123));
         boolean bool = aBooleanArray6713[i_38_];
         int i_39_ = bool ? anInt6721 : anInt6725;
         boolean bool_40_ = false;
@@ -291,17 +291,17 @@ final class NodeSub10
         Component81 class276 = aClass276Array6704[anIntArray6709[i_38_]];
         int i_49_ = class276.anInt3557;
         int i_50_ = class276.anIntArray3556[i_49_];
-        boolean bool_51_ = !aClass210Array6715[i_50_].decodedOperation1534();
+        boolean bool_51_ = !aClass210Array6715[i_50_].method1534();
         boolean bool_52_ = bool_51_;
         for (int i_53_ = 0; i_53_ < class276.anInt3555; i_53_++) {
             Component107 class343 = (aClass343Array6710[class276.anIntArray3554[i_53_]]);
             float[] fs = aFloatArray6707;
-            class343.decodedOperation2688(fs, i_39_ >> 1, bool_52_);
+            class343.method2688(fs, i_39_ >> 1, bool_52_);
         }
         if (!bool_51_) {
             int i_54_ = class276.anInt3557;
             int i_55_ = class276.anIntArray3556[i_54_];
-            aClass210Array6715[i_55_].decodedOperation1530(aFloatArray6707, i_39_ >> 1);
+            aClass210Array6715[i_55_].method1530(aFloatArray6707, i_39_ >> 1);
         }
         if (bool_51_) {
             for (int i_56_ = i_39_ >> 1; i_56_ < i_39_; i_56_++)
@@ -339,7 +339,7 @@ final class NodeSub10
                 fs[4 * i_69_ + 3] = (f - f_71_) * f_73_ - (f_70_ - f_72_) * f_74_;
                 fs[4 * i_69_ + 1] = (f_70_ - f_72_) * f_73_ + (f - f_71_) * f_74_;
             }
-            int i_75_ = Component80.decodedOperation2253(i_39_ - 1, -52);
+            int i_75_ = Component80.method2253(i_39_ - 1, -52);
             for (int i_76_ = 0; i_76_ < i_75_ - 3; i_76_++) {
                 int i_77_ = i_39_ >> i_76_ + 2;
                 int i_78_ = 8 << i_76_;
@@ -453,8 +453,8 @@ final class NodeSub10
         method2787(is);
     }
 
-    static final NodeSub10 decodedOperation2795(CacheStore class45, int i, int i_115_) {
-        if (!decodedOperation2792(class45)) {
+    static final NodeSub10 method2795(CacheStore class45, int i, int i_115_) {
+        if (!method2792(class45)) {
             class45.isFileReady(-10499, i, i_115_);
             return null;
         }

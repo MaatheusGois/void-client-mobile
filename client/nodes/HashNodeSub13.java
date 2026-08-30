@@ -17,7 +17,7 @@ final class HashNodeSub13
     static int anInt9620;
     HashTable aClass107_9621;
 
-    static final void decodedOperation3232(double d, byte i) {
+    static final void method3232(double d, byte i) {
         if (i <= -54) {
             if (d != Component201.aDouble8713) {
                 for (int i_0_ = 0; i_0_ < 256; i_0_++) {
@@ -30,14 +30,14 @@ final class HashNodeSub13
         }
     }
 
-    final boolean decodedOperation3233(MenuEntry class348_sub42_sub12, int i) {
+    final boolean method3233(MenuEntry class348_sub42_sub12, int i) {
         anInt9613++;
         boolean bool = true;
         class348_sub42_sub12.unlink(true);
         MenuEntry class348_sub42_sub12_2_ = ((MenuEntry) this.aClass107_9621.first(-74));
         while (class348_sub42_sub12_2_ != null) {
-            if (RenderableSub2.decodedOperation2496(class348_sub42_sub12_2_.opcode, class348_sub42_sub12.opcode, true)) {
-                Component325.decodedOperation721(class348_sub42_sub12_2_, class348_sub42_sub12, -1);
+            if (RenderableSub2.method2496(class348_sub42_sub12_2_.opcode, class348_sub42_sub12.opcode, true)) {
+                Component325.method721(class348_sub42_sub12_2_, class348_sub42_sub12, -1);
                 this.anInt9615++;
                 return !bool;
             }
@@ -50,10 +50,10 @@ final class HashNodeSub13
         return bool;
     }
 
-    final boolean decodedOperation3234(byte i, MenuEntry class348_sub42_sub12) {
+    final boolean method3234(byte i, MenuEntry class348_sub42_sub12) {
         anInt9614++;
         int i_4_ = 41 % ((-30 - i) / 39);
-        int i_5_ = decodedOperation3235(-17937);
+        int i_5_ = method3235(-17937);
         class348_sub42_sub12.unlink(true);
         this.anInt9615--;
         if (this.anInt9615 == 0) {
@@ -63,7 +63,7 @@ final class HashNodeSub13
             Component293.aClass60_3301.putOne(this, class348_sub42_sub12.groupKey, (byte) -128);
             return false;
         }
-        return i_5_ != decodedOperation3235(-17937);
+        return i_5_ != method3235(-17937);
     }
 
     HashNodeSub13(String string) {
@@ -71,7 +71,7 @@ final class HashNodeSub13
         this.aClass107_9621 = new HashTable();
     }
 
-    final int decodedOperation3235(int i) {
+    final int method3235(int i) {
         if (i != -17937) return 104;
         anInt9619++;
         if ((this.aClass107_9621.sentinel) != this.aClass107_9621.sentinel.next) return ((MenuEntry) this.aClass107_9621.sentinel.next).opcode;

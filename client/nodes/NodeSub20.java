@@ -34,26 +34,26 @@ final class NodeSub20
     static int anInt6845;
     private Stream aStream6846;
 
-    final void decodedOperation2945(int i, byte i_0_, int i_1_, int i_2_) {
+    final void method2945(int i, byte i_0_, int i_1_, int i_2_) {
         anInt6845++;
         if (i_0_ != 18) this.anInt6825 = 85;
         anIntArray6842[i_1_ * aS_Sub2_6839.tileWidth + i] = Component224.bitwiseOr((anIntArray6842[i_1_ * aS_Sub2_6839.tileWidth + i]), 1 << i_2_);
     }
 
-    final void decodedOperation2946(int i, int i_3_) {
+    final void method2946(int i, int i_3_) {
         aNativeHeapBuffer6840 = aHa_Sub2_6831.aNativeHeap7730.a(4 * i_3_, true);
         anInt6834++;
         if (i != 2147483647) aHa_Sub2_6831 = null;
         aStream6846 = new Stream(aNativeHeapBuffer6840);
     }
 
-    static final void decodedOperation2947(boolean bool, int i, int i_4_, int i_5_, int i_6_, int i_7_) {
+    static final void method2947(boolean bool, int i, int i_4_, int i_5_, int i_6_, int i_7_) {
         anInt6837++;
-        if (bool != true) decodedOperation2950(121);
-        if (Component192.preferences.aClass239_Sub26_7272.decodedOperation1838(-32350) != 0 && i_5_ != 0 && Component335.anInt2021 < 50 && i_4_ != -1) GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo((byte) 1, i_4_, i_5_, i_6_, i, 0, i_7_, null);
+        if (bool != true) method2950(121);
+        if (Component192.preferences.aClass239_Sub26_7272.method1838(-32350) != 0 && i_5_ != 0 && Component335.anInt2021 < 50 && i_4_ != -1) GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo((byte) 1, i_4_, i_5_, i_6_, i, 0, i_7_, null);
     }
 
-    final void decodedOperation2948(int i, int i_8_, int[] is) {
+    final void method2948(int i, int i_8_, int[] is) {
         anInt6829++;
         int i_9_ = 0;
         Component182 class348_sub49_sub1 = aHa_Sub2_6831.aClass348_Sub49_Sub1_7798;
@@ -119,7 +119,7 @@ final class NodeSub20
         if (i != 5123) this.anInt6826 = 66;
     }
 
-    final void decodedOperation2949(byte i, int i_22_, int i_23_, int i_24_, float f) {
+    final void method2949(byte i, int i_22_, int i_23_, int i_24_, float f) {
         if (i == 97) {
             if (this.anInt6841 != -1) {
                 Model class12 = aHa_Sub2_6831.modelProvider.getModel(this.anInt6841, -6662);
@@ -171,29 +171,29 @@ final class NodeSub20
         }
     }
 
-    public static void decodedOperation2950(int i) {
+    public static void method2950(int i) {
         if (i <= 37) aFloat6835 = 2.1337976F;
         anIntArray6830 = null;
     }
 
-    final void decodedOperation2951(int i, int i_36_) {
+    final void method2951(int i, int i_36_) {
         aStream6846.e(i_36_ * 4 + i);
         anInt6827++;
         aStream6846.f(-1);
     }
 
-    final void decodedOperation2952(int i, int i_37_) {
+    final void method2952(int i, int i_37_) {
         if (i == 17795) {
             aStream6846.a();
             anInt6828++;
-            Interface2 interface2 = aHa_Sub2_6831.decodedOperation3739(8448, aNativeHeapBuffer6840, false, 4, i_37_ * 4);
+            Interface2 interface2 = aHa_Sub2_6831.method3739(8448, aNativeHeapBuffer6840, false, 4, i_37_ * 4);
             aClass123_6844 = new Component132(interface2, 5121, 4, 0);
             aStream6846 = null;
             aNativeHeapBuffer6840 = null;
         }
     }
 
-    static final void decodedOperation2953(byte i) {
+    static final void method2953(byte i) {
         if (i > -102) anIntArray6830 = null;
         anInt6836++;
         if (Component49.clientState == 3) Buffer.setClientState(2, 4);

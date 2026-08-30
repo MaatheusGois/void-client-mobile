@@ -12,9 +12,9 @@ final class DefinitionSub13
     static int anInt9203 = -1;
     static float aFloat9204;
 
-    public static void decodedOperation3080(byte i) {
+    public static void method3080(byte i) {
         aClass262_9201 = null;
-        if (i < 39) decodedOperation3080((byte) 100);
+        if (i < 39) method3080((byte) 100);
     }
 
     public DefinitionSub13() {
@@ -26,7 +26,7 @@ final class DefinitionSub13
         int[] is = this.imageCache.getPixels(i_0_ + -255, i);
         if (i_0_ != 255) getMonochromeOutput(19, -84);
         if (this.imageCache.cacheMiss) {
-            int[][] is_1_ = this.decodedOperation3039((byte) -119, i, 0);
+            int[][] is_1_ = this.method3039((byte) -119, i, 0);
             int[] is_2_ = is_1_[0];
             int[] is_3_ = is_1_[1];
             int[] is_4_ = is_1_[2];

@@ -18,13 +18,13 @@ final class Component83
     static int anInt1663;
     static Component24 aClass105_1664;
 
-    static final float decodedOperation1012(float f, float f_0_, float f_1_, float f_2_, int i, float f_3_, byte i_4_, float f_5_) {
+    static final float method1012(float f, float f_0_, float f_1_, float f_2_, int i, float f_3_, byte i_4_, float f_5_) {
         anInt1659++;
         float f_6_ = 0.0F;
         float f_7_ = -f_3_ + f_0_;
         float f_8_ = -f + f_5_;
         float f_9_ = -f_1_ + f_2_;
-        if (i_4_ < 99) decodedOperation1015(-13, -42, false);
+        if (i_4_ < 99) method1015(-13, -42, false);
         float f_10_ = 0.0F;
         float f_11_ = 0.0F;
         float f_12_ = 0.0F;
@@ -40,7 +40,7 @@ final class Component83
                 int i_19_ = NodeSub1Sub1.aSArray8801[i_18_].getInterpolatedHeight((int) f_13_, (int) f_15_, (byte) 109);
                 if (f_14_ > (float) i_19_) {
                     if (i < 2) return f_6_;
-                    return (f_6_ - 0.1F + decodedOperation1012(f_11_, f_13_, f_12_, f_15_, i - 1, f_10_, (byte) 122, f_14_) * 0.1F);
+                    return (f_6_ - 0.1F + method1012(f_11_, f_13_, f_12_, f_15_, i - 1, f_10_, (byte) 122, f_14_) * 0.1F);
                 }
             }
             f_10_ = f_13_;
@@ -51,14 +51,14 @@ final class Component83
         return -1.0F;
     }
 
-    public static void decodedOperation1013(byte i) {
+    public static void method1013(byte i) {
         WTWIP = null;
-        if (i < 111) decodedOperation1013((byte) 17);
+        if (i < 111) method1013((byte) 17);
         aClass304_1662 = null;
         aClass105_1664 = null;
     }
 
-    static final void decodedOperation1014(int i) {
+    static final void method1014(int i) {
         anInt1660++;
         for (PauseHandler class348_sub42_sub6 = (PauseHandler) CacheNodeSub2.aClass262_10492.first(4); class348_sub42_sub6 != null; class348_sub42_sub6 = ((PauseHandler) CacheNodeSub2.aClass262_10492.next((byte) 55))) {
             DisplayModeManagerContainer104 class318_sub1_sub3_sub4 = (class348_sub42_sub6.aClass318_Sub1_Sub3_Sub4_9538);
@@ -66,15 +66,15 @@ final class Component83
                 class348_sub42_sub6.unlink((byte) 76);
                 class318_sub1_sub3_sub4.unload(false);
             } else if (OpenGlShader.clientCycle >= (class318_sub1_sub3_sub4.anInt10349)) {
-                class318_sub1_sub3_sub4.decodedOperation2470(NodeSub51.anInt7267, (byte) -16);
+                class318_sub1_sub3_sub4.method2470(NodeSub51.anInt7267, (byte) -16);
                 if (class318_sub1_sub3_sub4.aBoolean10345) class348_sub42_sub6.unlink((byte) 42);
-                else Component84.decodedOperation850(class318_sub1_sub3_sub4, true);
+                else Component84.method850(class318_sub1_sub3_sub4, true);
             }
         }
         if (i != -4) aBoolean1661 = false;
     }
 
-    static final void decodedOperation1015(int i, int i_20_, boolean bool) {
+    static final void method1015(int i, int i_20_, boolean bool) {
         anInt1658++;
         DisplayModeManagerContainer56 class190 = NodeList.aClass190ArrayArray3335[i][i_20_];
         if (class190 != null) {
@@ -82,6 +82,6 @@ final class Component83
             Component158.anInt325 = class190.anInt2538;
             Component349.anInt10023 = class190.anInt2548;
         }
-        Component179.decodedOperation2988(bool);
+        Component179.method2988(bool);
     }
 }

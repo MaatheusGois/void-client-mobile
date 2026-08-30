@@ -19,15 +19,15 @@ final class Component304
     static int anInt1147;
     static Component186[][][] aClass357ArrayArrayArray1148;
 
-    final void decodedOperation694(int i) {
+    final void method694(int i) {
         anInt1140++;
-        if (i != -1007) decodedOperation700(14, 98);
+        if (i != -1007) method700(14, 98);
         synchronized (aClass60_1145) {
             aClass60_1145.purgeSoftReferences(i + 883);
         }
     }
 
-    final void decodedOperation695(boolean bool) {
+    final void method695(boolean bool) {
         if (bool != true) aClass351_1144 = null;
         synchronized (aClass60_1145) {
             aClass60_1145.clear(0);
@@ -35,7 +35,7 @@ final class Component304
         anInt1139++;
     }
 
-    static final void decodedOperation696(int i, int i_0_, int i_1_, int i_2_) {
+    static final void method696(int i, int i_0_, int i_1_, int i_2_) {
         if (i_2_ == -1007) {
             if (i == 1009) ClientScriptExecutor.runScript(DisplayModeManagerContainer363.aClass273_4091, i_1_, i_0_);
             else if (i != 1012) {
@@ -47,7 +47,7 @@ final class Component304
         }
     }
 
-    final void decodedOperation697(int i, int i_3_) {
+    final void method697(int i, int i_3_) {
         if (i_3_ == 26) {
             anInt1142++;
             synchronized (aClass60_1145) {
@@ -56,14 +56,14 @@ final class Component304
         }
     }
 
-    public static void decodedOperation698(int i) {
+    public static void method698(int i) {
         aClass351_1144 = null;
         if (i != 2) aClass357ArrayArrayArray1148 = null;
         aClass357ArrayArrayArray1148 = null;
         aClass110_Sub1Array1146 = null;
     }
 
-    static final void decodedOperation699(CacheStore class45, byte i, CacheStore class45_4_, CacheStore class45_5_, CacheStore class45_6_) {
+    static final void method699(CacheStore class45, byte i, CacheStore class45_4_, CacheStore class45_5_, CacheStore class45_6_) {
         try {
             DefinitionSub28.aClass45_9365 = class45_6_;
             anInt1147++;
@@ -77,7 +77,7 @@ final class Component304
         }
     }
 
-    final HashNodeSub1 decodedOperation700(int i, int i_8_) {
+    final HashNodeSub1 method700(int i, int i_8_) {
         anInt1143++;
         int i_9_ = -128 / ((-3 - i_8_) / 49);
         HashNodeSub1 class348_sub42_sub1;
@@ -90,7 +90,7 @@ final class Component304
             is = aClass45_1141.getFile(-1860, 26, i);
         }
         class348_sub42_sub1 = new HashNodeSub1();
-        if (is != null) class348_sub42_sub1.decodedOperation3168(new Buffer(is), (byte) -101);
+        if (is != null) class348_sub42_sub1.method3168(new Buffer(is), (byte) -101);
         synchronized (aClass60_1145) {
             aClass60_1145.putOne(class348_sub42_sub1, i, (byte) -114);
         }

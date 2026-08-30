@@ -27,16 +27,16 @@ final class TcpSocketStream extends SocketStream {
     static int anInt5839;
     static boolean aBoolean5840 = true;
 
-    static final void decodedOperation1707(int i) {
-        if (i != 26469) decodedOperation1708(20, 93, 118, 24, (byte) -1, null);
-        ImageCacheStore.aClass308_4036.decodedOperation2303(true);
+    static final void method1707(int i) {
+        if (i != 26469) method1708(20, 93, 118, 24, (byte) -1, null);
+        ImageCacheStore.aClass308_4036.method2303(true);
         anInt5829++;
     }
 
     final void writeBytes(int i, int i_0_, int i_1_, byte[] is) throws IOException {
         anInt5833++;
         output.queueWrite((byte) 5, i_1_, i, is);
-        if (i_0_ < 89) decodedOperation1708(-99, 31, -13, 83, (byte) 112, null);
+        if (i_0_ < 89) method1708(-99, 31, -13, 83, (byte) 112, null);
     }
 
     final void shutdownStreams(int i) {
@@ -46,26 +46,26 @@ final class TcpSocketStream extends SocketStream {
         output.detachOutput(-21179);
     }
 
-    static final void decodedOperation1708(int i, int i_3_, int i_4_, int i_5_, byte i_6_, SceneNode class348_sub9) {
+    static final void method1708(int i, int i_3_, int i_4_, int i_5_, byte i_6_, SceneNode class348_sub9) {
         anInt5830++;
         if (class348_sub9.anInt6685 != -1 || class348_sub9.anIntArray6697 != null) {
             int i_7_ = 0;
-            int i_8_ = ((class348_sub9.anInt6677 * Component192.preferences.aClass239_Sub26_7234.decodedOperation1838(-32350)) >> 8);
+            int i_8_ = ((class348_sub9.anInt6677 * Component192.preferences.aClass239_Sub26_7234.method1838(-32350)) >> 8);
             if (class348_sub9.anInt6698 >= i_3_) {
                 if (class348_sub9.anInt6678 > i_3_) i_7_ += -i_3_ + class348_sub9.anInt6678;
             } else i_7_ += -class348_sub9.anInt6698 + i_3_;
             if (i_5_ <= class348_sub9.anInt6687) {
                 if (class348_sub9.anInt6689 > i_5_) i_7_ += -i_5_ + class348_sub9.anInt6689;
             } else i_7_ += -class348_sub9.anInt6687 + i_5_;
-            if (class348_sub9.anInt6694 == 0 || (-256 + i_7_ > class348_sub9.anInt6694) || Component192.preferences.aClass239_Sub26_7234.decodedOperation1838(-32350) == 0 || class348_sub9.anInt6693 != i_4_) {
+            if (class348_sub9.anInt6694 == 0 || (-256 + i_7_ > class348_sub9.anInt6694) || Component192.preferences.aClass239_Sub26_7234.method1838(-32350) == 0 || class348_sub9.anInt6693 != i_4_) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub19_Sub1_6686 = null;
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                     class348_sub9.aClass348_Sub10_6688 = null;
                 }
                 if (class348_sub9.aClass348_Sub16_Sub5_6673 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6673);
+                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6673);
                     class348_sub9.aClass348_Sub16_Sub5_6673 = null;
                     class348_sub9.aClass348_Sub10_6683 = null;
                     class348_sub9.aClass348_Sub19_Sub1_6692 = null;
@@ -89,28 +89,28 @@ final class TcpSocketStream extends SocketStream {
                         i_10_ = ((16384 - i_14_ >> 1) + i_14_ * i_13_ / 8192);
                     }
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
-                        class348_sub9.aClass348_Sub16_Sub5_6676.decodedOperation2915(i_9_);
-                        class348_sub9.aClass348_Sub16_Sub5_6676.decodedOperation2909(i_10_);
+                        class348_sub9.aClass348_Sub16_Sub5_6676.method2915(i_9_);
+                        class348_sub9.aClass348_Sub16_Sub5_6676.method2909(i_10_);
                     } else if (class348_sub9.anInt6685 >= 0) {
-                        int i_15_ = ((class348_sub9.anInt6681 == 256 && (class348_sub9.anInt6696 == 256)) ? 256 : (Component40.decodedOperation2257(class348_sub9.anInt6681, class348_sub9.anInt6696, (byte) -120)));
+                        int i_15_ = ((class348_sub9.anInt6681 == 256 && (class348_sub9.anInt6696 == 256)) ? 256 : (Component40.method2257(class348_sub9.anInt6681, class348_sub9.anInt6696, (byte) -120)));
                         if (class348_sub9.aBoolean6674) {
-                            if ((class348_sub9.aClass348_Sub10_6688) == null) class348_sub9.aClass348_Sub10_6688 = (NodeSub10.decodedOperation2793(Component323.aClass45_5878, (class348_sub9.anInt6685)));
+                            if ((class348_sub9.aClass348_Sub10_6688) == null) class348_sub9.aClass348_Sub10_6688 = (NodeSub10.method2793(Component323.aClass45_5878, (class348_sub9.anInt6685)));
                             if ((class348_sub9.aClass348_Sub10_6688) != null) {
-                                if ((class348_sub9.aClass348_Sub19_Sub1_6686) == null) class348_sub9.aClass348_Sub19_Sub1_6686 = class348_sub9.aClass348_Sub10_6688.decodedOperation2791(new int[]{22050});
+                                if ((class348_sub9.aClass348_Sub19_Sub1_6686) == null) class348_sub9.aClass348_Sub19_Sub1_6686 = class348_sub9.aClass348_Sub10_6688.method2791(new int[]{22050});
                                 if ((class348_sub9.aClass348_Sub19_Sub1_6686) != null) {
                                     NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode((class348_sub9.aClass348_Sub19_Sub1_6686), i_15_, i_9_ << 6, i_10_));
-                                    class348_sub16_sub5.decodedOperation2917(-1);
-                                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2883(class348_sub16_sub5);
+                                    class348_sub16_sub5.method2917(-1);
+                                    PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                     class348_sub9.aClass348_Sub16_Sub5_6676 = class348_sub16_sub5;
                                 }
                             }
                         } else {
-                            Component277 class317 = Component277.decodedOperation2372(Component30.aClass45_1878, (class348_sub9.anInt6685), 0);
+                            Component277 class317 = Component277.method2372(Component30.aClass45_1878, (class348_sub9.anInt6685), 0);
                             if (class317 != null) {
-                                NodeSub19Sub1 class348_sub19_sub1 = class317.decodedOperation2369().decodedOperation2944(DisplayModeInfo.aClass163_1050);
+                                NodeSub19Sub1 class348_sub19_sub1 = class317.method2369().method2944(DisplayModeInfo.aClass163_1050);
                                 NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, i_15_, i_9_ << 6, i_10_));
-                                class348_sub16_sub5.decodedOperation2917(-1);
-                                PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2883(class348_sub16_sub5);
+                                class348_sub16_sub5.method2917(-1);
+                                PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                 class348_sub9.aClass348_Sub16_Sub5_6676 = class348_sub16_sub5;
                             }
                         }
@@ -122,34 +122,34 @@ final class TcpSocketStream extends SocketStream {
                                 if (class348_sub9.aBoolean6699) {
                                     if ((class348_sub9.aClass348_Sub10_6683) == null) {
                                         int i_17_ = (int) ((double) (class348_sub9.anIntArray6697).length * Math.random());
-                                        class348_sub9.aClass348_Sub10_6683 = (NodeSub10.decodedOperation2793(Component323.aClass45_5878, (class348_sub9.anIntArray6697[i_17_])));
+                                        class348_sub9.aClass348_Sub10_6683 = (NodeSub10.method2793(Component323.aClass45_5878, (class348_sub9.anIntArray6697[i_17_])));
                                     }
                                     if ((class348_sub9.aClass348_Sub10_6683) != null) {
-                                        if ((class348_sub9.aClass348_Sub19_Sub1_6692) == null) class348_sub9.aClass348_Sub19_Sub1_6692 = (class348_sub9.aClass348_Sub10_6683.decodedOperation2791(new int[]{22050}));
+                                        if ((class348_sub9.aClass348_Sub19_Sub1_6692) == null) class348_sub9.aClass348_Sub19_Sub1_6692 = (class348_sub9.aClass348_Sub10_6683.method2791(new int[]{22050}));
                                         if ((class348_sub9.aClass348_Sub19_Sub1_6692) != null) {
                                             NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode((class348_sub9.aClass348_Sub19_Sub1_6692), i_16_, i_9_ << 6, i_10_));
-                                            class348_sub16_sub5.decodedOperation2917(0);
-                                            PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2883(class348_sub16_sub5);
+                                            class348_sub16_sub5.method2917(0);
+                                            PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                             class348_sub9.aClass348_Sub16_Sub5_6673 = class348_sub16_sub5;
                                             class348_sub9.anInt6670 = ((int) ((double) ((class348_sub9.anInt6668) - (class348_sub9.anInt6680)) * Math.random()) + (class348_sub9.anInt6680));
                                         }
                                     }
                                 } else {
                                     int i_18_ = (int) (Math.random() * (double) (class348_sub9.anIntArray6697).length);
-                                    Component277 class317 = Component277.decodedOperation2372((Component30.aClass45_1878), (class348_sub9.anIntArray6697[i_18_]), 0);
+                                    Component277 class317 = Component277.method2372((Component30.aClass45_1878), (class348_sub9.anIntArray6697[i_18_]), 0);
                                     if (class317 == null) break;
-                                    NodeSub19Sub1 class348_sub19_sub1 = (class317.decodedOperation2369().decodedOperation2944(DisplayModeInfo.aClass163_1050));
+                                    NodeSub19Sub1 class348_sub19_sub1 = (class317.method2369().method2944(DisplayModeInfo.aClass163_1050));
                                     NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, i_16_, i_9_ << 6, i_10_));
-                                    class348_sub16_sub5.decodedOperation2917(0);
-                                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2883(class348_sub16_sub5);
+                                    class348_sub16_sub5.method2917(0);
+                                    PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                     class348_sub9.anInt6670 = ((int) ((double) (-(class348_sub9.anInt6680) + (class348_sub9.anInt6668)) * Math.random()) + (class348_sub9.anInt6680));
                                     class348_sub9.aClass348_Sub16_Sub5_6673 = class348_sub16_sub5;
                                 }
                                 break;
                             }
                         } else {
-                            class348_sub9.aClass348_Sub16_Sub5_6673.decodedOperation2915(i_9_);
-                            class348_sub9.aClass348_Sub16_Sub5_6673.decodedOperation2909(i_10_);
+                            class348_sub9.aClass348_Sub16_Sub5_6673.method2915(i_9_);
+                            class348_sub9.aClass348_Sub16_Sub5_6673.method2909(i_10_);
                             if (!class348_sub9.aClass348_Sub16_Sub5_6673.isLinked((byte) 4)) {
                                 class348_sub9.aClass348_Sub10_6683 = null;
                                 class348_sub9.aClass348_Sub19_Sub1_6692 = null;
@@ -176,7 +176,7 @@ final class TcpSocketStream extends SocketStream {
     final int readBytes(int i, int i_19_, byte i_20_, byte[] is) throws IOException {
         int i_21_ = 84 / ((-56 - i_20_) / 47);
         anInt5831++;
-        return input.decodedOperation3617(i, i_19_, 0, is);
+        return input.method3617(i, i_19_, 0, is);
     }
 
     final boolean availableAtLeast(int i, int i_22_) throws IOException {

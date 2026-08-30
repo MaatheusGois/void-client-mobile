@@ -16,19 +16,19 @@ final class Component72
     static int anInt1910 = 0;
     static int anInt1911 = 7000;
 
-    public static void decodedOperation1137(int i) {
-        if (i != 3) decodedOperation1138(null, true, null, (byte) 70);
+    public static void method1137(int i) {
+        if (i != 3) method1138(null, true, null, (byte) 70);
         anIntArray1909 = null;
         localPlayer = null;
     }
 
-    static final void decodedOperation1138(String string, boolean bool, String string_0_, byte i) {
+    static final void method1138(String string, boolean bool, String string_0_, byte i) {
         try {
             anInt1908++;
             DisplayModeManagerContainer282.username = string;
             DisplayModeManagerContainer51.password = string_0_;
             DisplayModeManagerContainer58.aBoolean10238 = bool;
-            if (!DisplayModeManagerContainer58.aBoolean10238 && (DisplayModeManagerContainer282.username.equals("") || DisplayModeManagerContainer51.password.equals(""))) WorldNameText.decodedOperation254(3, (byte) -100);
+            if (!DisplayModeManagerContainer58.aBoolean10238 && (DisplayModeManagerContainer282.username.equals("") || DisplayModeManagerContainer51.password.equals(""))) WorldNameText.method254(3, (byte) -100);
             else {
                 // Persist for next launch / auto-login (desktop + mobile).
                 LoginPrefs.remember(DisplayModeManagerContainer282.username, DisplayModeManagerContainer51.password);
@@ -38,7 +38,7 @@ final class Component72
                     HashNodeSub7.anInt9541 = -1;
                 }
                 Component338.aBoolean1712 = false;
-                WorldNameText.decodedOperation254(-3, (byte) -94);
+                WorldNameText.method254(-3, (byte) -94);
                 Component241.anInt2955 = 1;
                 Component53.anInt197 = 0;
                 Component212.anInt9971 = 0;

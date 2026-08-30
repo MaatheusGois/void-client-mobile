@@ -15,7 +15,7 @@ abstract class Component387
     static boolean aBoolean1899 = false;
     static boolean aBoolean1900 = false;
 
-    public static void decodedOperation1127(int i) {
+    public static void method1127(int i) {
         aClass45_1897 = null;
         aClass356_1895 = null;
         if (i == 5125) aClass60_1894 = null;
@@ -25,7 +25,7 @@ abstract class Component387
         /* empty */
     }
 
-    static final int decodedOperation1128(int i, Component342 class68) {
+    static final int method1128(int i, Component342 class68) {
         anInt1896++;
         if (Component342.aClass68_1179 != class68) {
             if (class68 != Component342.aClass68_1181) {
@@ -40,11 +40,11 @@ abstract class Component387
                 } else return 5121;
             } else return 5122;
         } else return 5120;
-        if (i > -19) decodedOperation1129(-7, -90);
+        if (i > -19) method1129(-7, -90);
         throw new IllegalArgumentException("");
     }
 
-    static final void decodedOperation1129(int i, int i_0_) {
+    static final void method1129(int i, int i_0_) {
         WaterShader.anInt7379 = 3;
         LoadingManager.anInt2173 = i_0_;
         Component225.anInt481 = -1;
@@ -52,7 +52,7 @@ abstract class Component387
         anInt1898++;
     }
 
-    static final boolean decodedOperation1130(r var_r, int i, int i_1_, int i_2_, boolean[] bools) {
+    static final boolean method1130(r var_r, int i, int i_1_, int i_2_, boolean[] bools) {
         boolean bool = false;
         if (ShaderSub1.aSArray5191 != Component9.aSArray4142) {
             int i_3_ = NodeSub1Sub1.aSArray8801[i].getInterpolatedHeight(i_1_, i_2_, (byte) -109);

@@ -14,8 +14,8 @@ public class dxVertexLayout extends Component387 {
         for (int i_0_ = 0; i_0_ < class58s.length; i_0_++) {
             int i_1_ = 0;
             Component255 class58 = class58s[i_0_];
-            for (int i_2_ = 0; (i_2_ < class58.decodedOperation538((byte) -126)); i_2_++) {
-                ColoredTextBuilder class325 = class58.decodedOperation537(i_2_, 126);
+            for (int i_2_ = 0; (i_2_ < class58.method538((byte) -126)); i_2_++) {
+                ColoredTextBuilder class325 = class58.method537(i_2_, 126);
                 if (ColoredTextBuilder.aClass325_4073 == class325) vertexelementcollection.addElement(i_0_, 2, 0, 0, 0, i_1_);
                 else if (class325 == ColoredTextBuilder.aClass325_4075) vertexelementcollection.addElement(i_0_, 2, 0, 3, 0, i_1_);
                 else if (ColoredTextBuilder.aClass325_4076 != class325) {

@@ -27,17 +27,17 @@ final class Component186
     short aShort4409;
     static long[] aLongArray4410 = new long[100];
 
-    final void decodedOperation3485(boolean bool) {
+    final void method3485(boolean bool) {
         Component3 class148;
         for (/**/; this.aClass148_4396 != null; this.aClass148_4396 = class148) {
             class148 = this.aClass148_4396.aClass148_2038;
-            this.aClass148_4396.decodedOperation1199((byte) -106);
+            this.aClass148_4396.method1199((byte) -106);
         }
         anInt4393++;
-        if (bool != true) decodedOperation3486(41, false, -64, 33L, -50);
+        if (bool != true) method3486(41, false, -64, 33L, -50);
     }
 
-    static final String decodedOperation3486(int i, boolean bool, int i_0_, long l, int i_1_) {
+    static final String method3486(int i, boolean bool, int i_0_, long l, int i_1_) {
         try {
             anInt4392++;
             char c = ',';
@@ -81,7 +81,7 @@ final class Component186
         this.aByte4399 = (byte) i;
     }
 
-    public static void decodedOperation3487(int i) {
+    public static void method3487(int i) {
         aLongArray4410 = null;
         aClass351_4394 = null;
         if (i >= -45) aClass351_4405 = null;

@@ -42,19 +42,19 @@ class ShaderCompiler {
         }
     }
 
-    static final HashNodeSub19 decodedOperation2609(int i, int i_2_) {
+    static final HashNodeSub19 method2609(int i, int i_2_) {
         anInt4101++;
-        HashNodeSub19 class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.decodedOperation2302(i_2_, (byte) -68));
+        HashNodeSub19 class348_sub42_sub19 = ((HashNodeSub19) ImageCacheStore.aClass308_4036.method2302(i_2_, (byte) -68));
         if (class348_sub42_sub19 != null) return class348_sub42_sub19;
         byte[] is = Component22.aClass45_1743.getFile(-1860, i_2_, 0);
         if (is == null || is.length <= 1) return null;
         try {
-            class348_sub42_sub19 = RenderableSub4.decodedOperation2502(is, -104);
+            class348_sub42_sub19 = RenderableSub4.method2502(is, -104);
         } catch (Exception exception) {
             throw new RuntimeException(exception.getMessage() + " S: " + i_2_);
         }
         if (i > -103) return null;
-        ImageCacheStore.aClass308_4036.decodedOperation2305(i_2_, class348_sub42_sub19, -1);
+        ImageCacheStore.aClass308_4036.method2305(i_2_, class348_sub42_sub19, -1);
         return class348_sub42_sub19;
     }
 }

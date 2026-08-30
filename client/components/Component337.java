@@ -15,14 +15,14 @@ final class Component337
     static Component184 aClass143_3649;
     static int anInt3650;
 
-    static final void decodedOperation2106(String string, int i) {
+    static final void method2106(String string, int i) {
         anInt3645++;
-        ParticleSystem class348_sub47 = DisplayModeManagerContainer351.decodedOperation1478(true);
+        ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
         class348_sub47.particleBuffer.writeByte(false, DisplayModeManagerContainer109.aClass29_2353.anInt400);
         class348_sub47.particleBuffer.writeShort((byte) 107, 0);
         int i_0_ = (class348_sub47.particleBuffer.offset);
         class348_sub47.particleBuffer.writeShort((byte) 107, 634);
-        int[] is = Cp1252Decoder.decodedOperation463(class348_sub47, false);
+        int[] is = Cp1252Decoder.method463(class348_sub47, false);
         int i_1_ = (class348_sub47.particleBuffer.offset);
         class348_sub47.particleBuffer.writeString((byte) -5, string);
         class348_sub47.particleBuffer.writeByte(false, ObjectDeserializer.languageId);
@@ -37,11 +37,11 @@ final class Component337
         SpriteSub1.anInt8398 = 0;
     }
 
-    public static void decodedOperation2107(byte i) {
+    public static void method2107(byte i) {
         aClass351_3648 = null;
         aClass143_3649 = null;
         aClass351_3644 = null;
-        if (i != 77) decodedOperation2107((byte) -107);
+        if (i != 77) method2107((byte) -107);
     }
 
     /** Jagex string hash used for archive name tables. */
@@ -50,7 +50,7 @@ final class Component337
         int i_2_ = string.length();
         int i_3_ = 0;
         for (int i_4_ = 0; i_2_ > i_4_; i_4_++)
-            i_3_ = (Component160.decodedOperation3464(string.charAt(i_4_), false) + ((i_3_ << 5) - i_3_));
+            i_3_ = (Component160.method3464(string.charAt(i_4_), false) + ((i_3_ << 5) - i_3_));
         if (i != -29286) return 0;
         return i_3_;
     }

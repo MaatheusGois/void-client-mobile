@@ -125,22 +125,22 @@ final class NodeList {
         } while (false);
     }
 
-    static final void decodedOperation1992(RenderableObject class318_sub1, int i, int i_20_, int i_21_) {
+    static final void method1992(RenderableObject class318_sub1, int i, int i_20_, int i_21_) {
         if (i_20_ < StaticElementRenderer.anInt6451) {
             Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_];
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.decodedOperation2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), 0, (byte) -116, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), 0, (byte) -116, Component148.anInt3465);
         }
         if (i_21_ < StaticElementRenderer.anInt6451) {
             Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_][i_21_ + 1];
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.decodedOperation2388(-92)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -128, 0);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-92)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -128, 0);
         }
         if (i_20_ < StaticElementRenderer.anInt6451 && i_21_ < NodeSub41.anInt7054) {
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_ + 1]);
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.decodedOperation2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -117, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-107)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), Component148.anInt3465, (byte) -117, Component148.anInt3465);
         }
         if (i_20_ < StaticElementRenderer.anInt6451 && i_21_ > 0) {
             Component186 class357 = (Component335.aClass357ArrayArrayArray2029[i][i_20_ + 1][i_21_ - 1]);
-            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.decodedOperation2388(-90)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), -Component148.anInt3465, (byte) -116, Component148.anInt3465);
+            if (class357 != null && class357.aClass318_Sub1_Sub1_4402 != null && class357.aClass318_Sub1_Sub1_4402.method2388(-90)) class318_sub1.method2380(JaclibLoader.toolkit, 0, true, (class357.aClass318_Sub1_Sub1_4402), -Component148.anInt3465, (byte) -116, Component148.anInt3465);
         }
     }
 
@@ -156,10 +156,10 @@ final class NodeList {
         return class348;
     }
 
-    public static void decodedOperation1994(int i) {
+    public static void method1994(int i) {
         aClass190ArrayArray3335 = null;
         anObject3331 = null;
-        if (i != -13722) decodedOperation2000(-104, 106, null, null);
+        if (i != -13722) method2000(-104, 106, null, null);
         aClass45_3323 = null;
         aClass324_3326 = null;
     }
@@ -218,10 +218,10 @@ final class NodeList {
         class348.next.previous = class348;
     }
 
-    static final GraphicsToolkit decodedOperation2000(int i, int i_23_, Canvas canvas, d var_d) {
+    static final GraphicsToolkit method2000(int i, int i_23_, Canvas canvas, d var_d) {
         try {
             anInt3324++;
-            if (i != 3) decodedOperation1992(null, -40, 69, -1);
+            if (i != 3) method1992(null, -40, 69, -1);
             return new GlToolkitSub2(canvas, var_d, i_23_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("uh.D(" + i + ',' + i_23_ + ',' + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ')'));

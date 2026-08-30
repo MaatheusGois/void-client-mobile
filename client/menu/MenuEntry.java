@@ -147,7 +147,7 @@ final class MenuEntry extends HashNode {
         if (Component205.anInt5973 >= 100) {
             int i_8_ = Component48.anInt4336 * 512 - -256;
             int i_9_ = Component337.anInt3647 * 512 - -256;
-            int i_10_ = (Component300.decodedOperation2064(i_8_, Component117.anInt4372, 11219, i_9_) + -Component221.anInt1797);
+            int i_10_ = (Component300.method2064(i_8_, Component117.anInt4372, 11219, i_9_) + -Component221.anInt1797);
             int i_11_ = i_8_ - WaterSurfaceShader.anInt6246;
             int i_12_ = -DisplayModeManagerContainer50.anInt3855 + i_10_;
             int i_13_ = i_9_ - Component317.anInt8685;

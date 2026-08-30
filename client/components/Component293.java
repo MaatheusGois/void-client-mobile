@@ -16,14 +16,14 @@ final class Component293
     int anInt3305;
     static int anInt3306 = 0;
 
-    public static void decodedOperation1975(byte i) {
+    public static void method1975(byte i) {
         aClass60_3301 = null;
         int i_0_ = -54 / ((i - 77) / 37);
         aClass305_3304 = null;
         aByteArray3300 = null;
     }
 
-    final Component214 decodedOperation1976(int i, int i_1_) {
+    final Component214 method1976(int i, int i_1_) {
         anInt3302++;
         Component214 class160;
         synchronized (aClass60_3303) {
@@ -36,7 +36,7 @@ final class Component293
             is = aClass45_3299.getFile(-1860, 19, i);
         }
         class160 = new Component214();
-        if (is != null) class160.decodedOperation1255(new Buffer(is), -1);
+        if (is != null) class160.method1255(new Buffer(is), -1);
         synchronized (aClass60_3303) {
             aClass60_3303.putOne(class160, i, (byte) -120);
         }

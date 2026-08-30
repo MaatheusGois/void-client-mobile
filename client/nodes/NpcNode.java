@@ -31,13 +31,13 @@ final class NpcNode
     static final DisplayModeManagerContainer57 getChildComponent(int childIndex, byte opaque, int packedParentId) {
         anInt6858++;
         DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(opaque + 1512932774, packedParentId);
-        if (opaque != -54) decodedOperation2958(-23, null);
+        if (opaque != -54) method2958(-23, null);
         if (childIndex == -1) return class46;
         if (class46 == null || class46.children == null || (childIndex >= class46.children.length)) return null;
         return class46.children[childIndex];
     }
 
-    static final int decodedOperation2958(int i, CacheStore class45) {
+    static final int method2958(int i, CacheStore class45) {
         anInt6861++;
         int i_2_ = 0;
         if (class45.isSingletonFileReady(false, anInt6862)) i_2_++;
@@ -60,14 +60,14 @@ final class NpcNode
         return i_2_;
     }
 
-    static final void decodedOperation2959(int i) {
+    static final void method2959(int i) {
         Component280.aClass346_2449.reset(14174);
         anInt6860++;
         AbstractGlTextureSub4.mouseHandler.destroy(0);
         NpcComposition.aClient1367.recreateGameCanvas((byte) -49);
         DisplayModeManagerContainer50.gameCanvas.setBackground(Color.black);
         Component244.currentCursorId = i;
-        Component280.aClass346_2449 = NodeSub3.decodedOperation2743(DisplayModeManagerContainer50.gameCanvas, (byte) 84);
+        Component280.aClass346_2449 = NodeSub3.method2743(DisplayModeManagerContainer50.gameCanvas, (byte) 84);
         AbstractGlTextureSub4.mouseHandler = NodeSub18.createMouseHandler(DisplayModeManagerContainer50.gameCanvas, 0, true);
     }
 

@@ -57,34 +57,34 @@ final class InterfaceRenderer implements Interface16 {
     private final void method2211(boolean bool) throws IllegalAccessException, NoSuchFieldException {
         anInt5055++;
         Class var_class = ToolkitFactory.anApplet1530.getClass();
-        anImage5047 = (Image) decodedOperation2213(var_class, 2, "bar");
-        anImage5035 = (Image) decodedOperation2213(var_class, 2, "background");
-        anImage5032 = (Image) decodedOperation2213(var_class, 2, "left");
-        anImage5037 = (Image) decodedOperation2213(var_class, 2, "right");
-        anImage5054 = (Image) decodedOperation2213(var_class, 2, "top");
-        anImage5041 = (Image) decodedOperation2213(var_class, 2, "bottom");
-        anImage5030 = (Image) decodedOperation2213(var_class, 2, "bodyLeft");
-        anImage5026 = (Image) decodedOperation2213(var_class, 2, "bodyRight");
-        anImage5056 = (Image) decodedOperation2213(var_class, 2, "bodyFill");
-        aFont5053 = (Font) decodedOperation2213(var_class, 2, "bf");
-        aFontMetrics5024 = (FontMetrics) decodedOperation2213(var_class, 2, "bfm");
-        aColor5034 = (Color) decodedOperation2213(var_class, 2, "colourtext");
-        Object object = decodedOperation2213(var_class, 2, "lb");
+        anImage5047 = (Image) method2213(var_class, 2, "bar");
+        anImage5035 = (Image) method2213(var_class, 2, "background");
+        anImage5032 = (Image) method2213(var_class, 2, "left");
+        anImage5037 = (Image) method2213(var_class, 2, "right");
+        anImage5054 = (Image) method2213(var_class, 2, "top");
+        anImage5041 = (Image) method2213(var_class, 2, "bottom");
+        anImage5030 = (Image) method2213(var_class, 2, "bodyLeft");
+        anImage5026 = (Image) method2213(var_class, 2, "bodyRight");
+        anImage5056 = (Image) method2213(var_class, 2, "bodyFill");
+        aFont5053 = (Font) method2213(var_class, 2, "bf");
+        aFontMetrics5024 = (FontMetrics) method2213(var_class, 2, "bfm");
+        aColor5034 = (Color) method2213(var_class, 2, "colourtext");
+        Object object = method2213(var_class, 2, "lb");
         Class var_class_0_ = object.getClass();
-        aBoolean5020 = decodedOperation2216(object, bool, var_class_0_, "xMiddle");
-        aBoolean5045 = decodedOperation2216(object, bool, var_class_0_, "yMiddle");
-        anInt5021 = decodedOperation2212(object, var_class_0_, "xOffset", 95);
-        anInt5051 = decodedOperation2212(object, var_class_0_, "yOffset", -124);
-        anInt5023 = decodedOperation2212(object, var_class_0_, "width", 104);
-        anInt5036 = decodedOperation2212(object, var_class_0_, "height", -45);
-        anInt5029 = decodedOperation2212(object, var_class_0_, "boxXOffset", -91);
-        anInt5040 = decodedOperation2212(object, var_class_0_, "boxYOffset", -74);
-        anInt5050 = decodedOperation2212(object, var_class_0_, "boxWidth", 120);
-        anInt5046 = decodedOperation2212(object, var_class_0_, "textYOffset", -47);
-        anInt5042 = decodedOperation2212(object, var_class_0_, "offsetPerTenCycles", 107);
+        aBoolean5020 = method2216(object, bool, var_class_0_, "xMiddle");
+        aBoolean5045 = method2216(object, bool, var_class_0_, "yMiddle");
+        anInt5021 = method2212(object, var_class_0_, "xOffset", 95);
+        anInt5051 = method2212(object, var_class_0_, "yOffset", -124);
+        anInt5023 = method2212(object, var_class_0_, "width", 104);
+        anInt5036 = method2212(object, var_class_0_, "height", -45);
+        anInt5029 = method2212(object, var_class_0_, "boxXOffset", -91);
+        anInt5040 = method2212(object, var_class_0_, "boxYOffset", -74);
+        anInt5050 = method2212(object, var_class_0_, "boxWidth", 120);
+        anInt5046 = method2212(object, var_class_0_, "textYOffset", -47);
+        anInt5042 = method2212(object, var_class_0_, "offsetPerTenCycles", 107);
     }
 
-    private final int decodedOperation2212(Object object, Class var_class, String string, int i) throws IllegalAccessException, NoSuchFieldException {
+    private final int method2212(Object object, Class var_class, String string, int i) throws IllegalAccessException, NoSuchFieldException {
         try {
             int i_1_ = -38 / ((i - 24) / 60);
             anInt5039++;
@@ -95,7 +95,7 @@ final class InterfaceRenderer implements Interface16 {
         }
     }
 
-    private final Object decodedOperation2213(Class var_class, int i, String string) throws IllegalAccessException, NoSuchFieldException {
+    private final Object method2213(Class var_class, int i, String string) throws IllegalAccessException, NoSuchFieldException {
         try {
             if (i != 2) return null;
             anInt5038++;
@@ -116,7 +116,7 @@ final class InterfaceRenderer implements Interface16 {
 
     public final boolean method56(byte i, long l) {
         try {
-            if (i < 30) decodedOperation2215((byte) 25, -63);
+            if (i < 30) method2215((byte) 25, -63);
             anInt5061++;
             return true;
         } catch (RuntimeException runtimeexception) {
@@ -124,7 +124,7 @@ final class InterfaceRenderer implements Interface16 {
         }
     }
 
-    public static void decodedOperation2214(int i) {
+    public static void method2214(int i) {
         aClass351_5057 = null;
         if (i != 0) players = null;
         aClass338Array5060 = null;
@@ -137,7 +137,7 @@ final class InterfaceRenderer implements Interface16 {
         return 100;
     }
 
-    private final int decodedOperation2215(byte i, int i_2_) {
+    private final int method2215(byte i, int i_2_) {
         anInt5033++;
         if (i < 23) anImage5030 = null;
         if (aBoolean5020) return (-i_2_ + Component236.canvasWidth) / 2;
@@ -150,14 +150,14 @@ final class InterfaceRenderer implements Interface16 {
     }
 
     public final void method59(int i) {
-        ImageCache.decodedOperation1428(true);
+        ImageCache.method1428(true);
         anInt5025++;
         if (i != -9719) aBoolean5022 = false;
     }
 
-    private final boolean decodedOperation2216(Object object, boolean bool, Class var_class, String string) throws IllegalAccessException, NoSuchFieldException {
+    private final boolean method2216(Object object, boolean bool, Class var_class, String string) throws IllegalAccessException, NoSuchFieldException {
         try {
-            if (bool != true) decodedOperation2217(4, -90, 15);
+            if (bool != true) method2217(4, -90, 15);
             anInt5048++;
             Field field = var_class.getDeclaredField(string);
             return field.getBoolean(object);
@@ -166,7 +166,7 @@ final class InterfaceRenderer implements Interface16 {
         }
     }
 
-    static final boolean decodedOperation2217(int i, int i_3_, int i_4_) {
+    static final boolean method2217(int i, int i_3_, int i_4_) {
         anInt5027++;
         if (i_4_ != 0) aClass338Array5060 = null;
         return (i_3_ & 0x21) != 0;
@@ -174,7 +174,7 @@ final class InterfaceRenderer implements Interface16 {
 
     public final void method58(boolean bool, int i) {
         anInt5044++;
-        if (i > -69) decodedOperation2215((byte) -61, -24);
+        if (i > -69) method2215((byte) -61, -24);
         if (!aBoolean5022) {
             if (ToolkitFactory.anApplet1530 == null) aBoolean5022 = true;
             else if (aFont5053 == null) {
@@ -185,13 +185,13 @@ final class InterfaceRenderer implements Interface16 {
                 }
             }
         }
-        if (aBoolean5022) decodedOperation2219(33);
+        if (aBoolean5022) method2219(33);
         else {
             Graphics graphics = DisplayModeManagerContainer50.gameCanvas.getGraphics();
             if (graphics != null) {
                 try {
-                    int i_5_ = Component44.aClass311_897.decodedOperation2320((byte) 103);
-                    String string = Component44.aClass311_897.decodedOperation2318(-9324);
+                    int i_5_ = Component44.aClass311_897.method2320((byte) 103);
+                    String string = Component44.aClass311_897.method2318(-9324);
                     if (DisplayModeManagerContainer173.anImage4249 == null) DisplayModeManagerContainer173.anImage4249 = (DisplayModeManagerContainer50.gameCanvas.createImage(Component236.canvasWidth, PacketReader.canvasHeight));
                     Graphics graphics_6_ = DisplayModeManagerContainer173.anImage4249.getGraphics();
                     graphics_6_.clearRect(0, 0, Component236.canvasWidth, PacketReader.canvasHeight);
@@ -201,12 +201,12 @@ final class InterfaceRenderer implements Interface16 {
                     int i_10_ = anImage5030.getHeight(null);
                     int i_11_ = anImage5026.getHeight(null);
                     int i_12_ = anImage5056.getHeight(null);
-                    graphics_6_.drawImage(anImage5030, (decodedOperation2215((byte) 84, i_7_) - (-anInt5029 + anInt5050 / 2)), decodedOperation2218(i_10_, -6277) + anInt5040, null);
+                    graphics_6_.drawImage(anImage5030, (method2215((byte) 84, i_7_) - (-anInt5029 + anInt5050 / 2)), method2218(i_10_, -6277) + anInt5040, null);
                     int i_13_ = i_7_ + -(anInt5050 / 2) + anInt5029;
                     int i_14_ = anInt5029 + anInt5050 / 2;
                     for (int i_15_ = i_13_; i_14_ >= i_15_; i_15_ += i_9_)
-                        graphics_6_.drawImage(anImage5056, i_15_ + (decodedOperation2215((byte) 77, i_7_) - -anInt5029), (decodedOperation2218(i_12_, -6277) + anInt5040), null);
-                    graphics_6_.drawImage(anImage5026, (decodedOperation2215((byte) 25, i_8_) - (-anInt5029 - anInt5050 / 2)), (decodedOperation2218(i_11_, -6277) - -anInt5040), null);
+                        graphics_6_.drawImage(anImage5056, i_15_ + (method2215((byte) 77, i_7_) - -anInt5029), (method2218(i_12_, -6277) + anInt5040), null);
+                    graphics_6_.drawImage(anImage5026, (method2215((byte) 25, i_8_) - (-anInt5029 - anInt5050 / 2)), (method2218(i_11_, -6277) - -anInt5040), null);
                     int i_16_ = anImage5032.getWidth(null);
                     int i_17_ = anImage5032.getHeight(null);
                     int i_18_ = anImage5037.getWidth(null);
@@ -217,8 +217,8 @@ final class InterfaceRenderer implements Interface16 {
                     int i_23_ = anImage5041.getWidth(null);
                     int i_24_ = anImage5047.getWidth(null);
                     int i_25_ = anImage5035.getWidth(null);
-                    int i_26_ = decodedOperation2215((byte) 122, anInt5023) + anInt5021;
-                    int i_27_ = decodedOperation2218(anInt5036, -6277) - -anInt5051;
+                    int i_26_ = method2215((byte) 122, anInt5023) + anInt5021;
+                    int i_27_ = method2218(anInt5036, -6277) - -anInt5051;
                     graphics_6_.drawImage(anImage5032, i_26_, i_27_ - -((anInt5036 + -i_17_) / 2), null);
                     graphics_6_.drawImage(anImage5037, anInt5023 + i_26_ - i_18_, (anInt5036 - i_19_) / 2 + i_27_, null);
                     if (anImage5059 == null) anImage5059 = (DisplayModeManagerContainer50.gameCanvas.createImage(-i_18_ + (-i_16_ + anInt5023), anInt5036));
@@ -232,7 +232,7 @@ final class InterfaceRenderer implements Interface16 {
                         Image image = DisplayModeManagerContainer50.gameCanvas.createImage(i_31_, (-i_22_ + (anInt5036 + -i_20_)));
                         int i_32_ = image.getWidth(null);
                         Graphics graphics_33_ = image.getGraphics();
-                        int i_34_ = anInt5042 * ShaderSub2.decodedOperation163(512) / 10 % i_24_;
+                        int i_34_ = anInt5042 * ShaderSub2.method163(512) / 10 % i_24_;
                         for (int i_35_ = -i_24_ + i_34_; i_35_ < i_32_; i_35_ += i_24_)
                             graphics_33_.drawImage(anImage5047, i_35_, 0, null);
                         graphics_28_.drawImage(image, 0, i_22_, null);
@@ -259,16 +259,16 @@ final class InterfaceRenderer implements Interface16 {
         }
     }
 
-    private final int decodedOperation2218(int i, int i_40_) {
+    private final int method2218(int i, int i_40_) {
         anInt5028++;
         if (aBoolean5045) return (-i + PacketReader.canvasHeight) / 2;
         if (i_40_ != -6277) anImage5026 = null;
         return 0;
     }
 
-    private final void decodedOperation2219(int i) {
+    private final void method2219(int i) {
         anInt5031++;
-        HelveticaFont.decodedOperation1455(Component44.aClass311_897.decodedOperation2320((byte) 78), Component137.aColorArray1928[CursorDefinition.anInt2884], Component44.aClass311_897.decodedOperation2318(-9324), (DefinitionSub8.aColorArray9163[CursorDefinition.anInt2884]), (byte) -100, DisplayModeManagerContainer368.aColorArray5242[CursorDefinition.anInt2884]);
+        HelveticaFont.method1455(Component44.aClass311_897.method2320((byte) 78), Component137.aColorArray1928[CursorDefinition.anInt2884], Component44.aClass311_897.method2318(-9324), (DefinitionSub8.aColorArray9163[CursorDefinition.anInt2884]), (byte) -100, DisplayModeManagerContainer368.aColorArray5242[CursorDefinition.anInt2884]);
         if (i != 33) method55((byte) 1);
     }
 

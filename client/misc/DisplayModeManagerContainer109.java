@@ -27,13 +27,13 @@ final class DisplayModeManagerContainer109
     static Component336 aClass29_2353 = new Component336(28, -2);
     private static Component336[] aClass29Array2354 = new Component336[32];
 
-    public static void decodedOperation1355(int i) {
+    public static void method1355(int i) {
         aClass29_2346 = null;
         aClass29_2349 = null;
         aClass29_2344 = null;
         aClass29_2352 = null;
         aClass114_2338 = null;
-        if (i > -74) decodedOperation1356(true, null, -116, -47, true, null, true);
+        if (i > -74) method1356(true, null, -116, -47, true, null, true);
         aClass29_2350 = null;
         aClass29Array2354 = null;
         aClass29_2353 = null;
@@ -47,7 +47,7 @@ final class DisplayModeManagerContainer109
         aClass29_2347 = null;
     }
 
-    static final void decodedOperation1356(boolean bool, String string, int i, int i_0_, boolean bool_1_, String string_2_, boolean bool_3_) {
+    static final void method1356(boolean bool, String string, int i, int i_0_, boolean bool_1_, String string_2_, boolean bool_3_) {
         try {
             anInt2337++;
             RadixParser.aClass45_2306.discardMode = 1;
@@ -56,9 +56,9 @@ final class DisplayModeManagerContainer109
             int i_4_ = -1;
             String string_5_ = null;
             if (i_0_ != -1) {
-                Component355 class254 = MatrixSub3.aClass326_5764.decodedOperation2600(i_0_, 28364);
-                if (class254 == null || bool != class254.decodedOperation1925(!bool_3_)) return;
-                if (class254.decodedOperation1925(!bool_3_)) string_5_ = class254.aString3258;
+                Component355 class254 = MatrixSub3.aClass326_5764.method2600(i_0_, 28364);
+                if (class254 == null || bool != class254.method1925(!bool_3_)) return;
+                if (class254.method1925(!bool_3_)) string_5_ = class254.aString3258;
                 else i_4_ = class254.anInt3256;
             }
             int i_6_ = 0;
@@ -69,8 +69,8 @@ final class DisplayModeManagerContainer109
                 if ((!bool_1_ || class213.aBoolean2755) && class213.anInt2833 == -1 && class213.anInt2812 == -1 && class213.anInt2799 == 0 && class213.itemName.toLowerCase().indexOf(string_2_) != -1) {
                     if (i_0_ != -1) {
                         if (bool) {
-                            if (!string.equals(class213.decodedOperation1561(string_5_, i_0_, -1511086397))) continue;
-                        } else if (class213.decodedOperation1567(i_4_, -116, i_0_) != i) continue;
+                            if (!string.equals(class213.method1561(string_5_, i_0_, -1511086397))) continue;
+                        } else if (class213.method1567(i_4_, -116, i_0_) != i) continue;
                     }
                     if (i_6_ >= 250) {
                         Component353.aShortArray2579 = null;
@@ -92,7 +92,7 @@ final class DisplayModeManagerContainer109
             String[] strings = new String[DisplayModeManagerContainer154.anInt1285];
             for (int i_10_ = 0; DisplayModeManagerContainer154.anInt1285 > i_10_; i_10_++)
                 strings[i_10_] = Exception_Sub1.itemDefinitions.getItemDefinition(123, is[i_10_]).itemName;
-            RadixParser.decodedOperation1333(Component353.aShortArray2579, 26073, strings);
+            RadixParser.method1333(Component353.aShortArray2579, 26073, strings);
             RadixParser.aClass45_2306.clearUnpacked((byte) 116);
             RadixParser.aClass45_2306.discardMode = 2;
         } catch (RuntimeException runtimeexception) {
@@ -101,7 +101,7 @@ final class DisplayModeManagerContainer109
     }
 
     static {
-        Component336[] class29s = Component364.decodedOperation188((byte) 59);
+        Component336[] class29s = Component364.method188((byte) 59);
         for (int i = 0; i < class29s.length; i++)
             aClass29Array2354[class29s[i].anInt400] = class29s[i];
     }

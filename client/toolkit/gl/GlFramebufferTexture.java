@@ -20,7 +20,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
     static int anInt8537;
     int anInt8538;
 
-    final void decodedOperation1961(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    final void method1961(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         anInt8533++;
         OpenGL.glFramebufferTexture2DEXT(i, i_1_, i_0_, this.anInt4859, i_2_);
         if (i_3_ != -1) aStringArray8532 = null;
@@ -33,8 +33,8 @@ final class GlFramebufferTexture extends AbstractGlTexture {
         this.anInt8538 = i_4_;
         this.aHa_Sub2_4851.bindTexture((byte) -81, this);
         for (int i_5_ = 0; i_5_ < 6; i_5_++)
-            OpenGL.glTexImage2Dub(i_5_ + 34069, 0, this.anInt4858, i_4_, i_4_, 0, SceneNode.decodedOperation2779(true, (this.anInt4858)), 5121, null, 0);
-        this.decodedOperation1957(9728, true);
+            OpenGL.glTexImage2Dub(i_5_ + 34069, 0, this.anInt4858, i_4_, i_4_, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
+        this.method1957(9728, true);
     }
 
     public final void method37(int i) {
@@ -52,7 +52,7 @@ final class GlFramebufferTexture extends AbstractGlTexture {
             this.aHa_Sub2_4851.bindTexture((byte) -127, this);
             for (int i_8_ = 0; i_8_ < 6; i_8_++)
                 OpenGL.glTexImage2Dub(i_8_ + 34069, 0, this.anInt4858, i_6_, i_6_, 0, i_7_, 5121, is[i_8_], 0);
-            this.decodedOperation1957(9728, true);
+            this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_7_ + ')'));
         }
@@ -65,18 +65,18 @@ final class GlFramebufferTexture extends AbstractGlTexture {
             this.aHa_Sub2_4851.bindTexture((byte) -77, this);
             if (bool) {
                 for (int i_10_ = 0; i_10_ < 6; i_10_++)
-                    Component45.decodedOperation3460(i_10_ + 34069, this.anInt4858, i_9_, this.aHa_Sub2_4851.anInt7812, i_9_, is[i_10_], 32993, -83);
+                    Component45.method3460(i_10_ + 34069, this.anInt4858, i_9_, this.aHa_Sub2_4851.anInt7812, i_9_, is[i_10_], 32993, -83);
             } else {
                 for (int i_11_ = 0; i_11_ < 6; i_11_++)
                     OpenGL.glTexImage2Di(i_11_ + 34069, 0, this.anInt4858, i_9_, i_9_, 0, 32993, (this.aHa_Sub2_4851.anInt7812), is[i_11_], 0);
             }
-            this.decodedOperation1957(9728, true);
+            this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("q.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_9_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ')'));
         }
     }
 
-    public static void decodedOperation1962(int i) {
+    public static void method1962(int i) {
         aStringArray8532 = null;
         aLongArray8530 = null;
         aClass10Array8531 = null;

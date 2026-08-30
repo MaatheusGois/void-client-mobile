@@ -6,9 +6,9 @@
  * ParametricDefinition — definição com faixa parametrizada (antigo `ParametricDefinition`).
  * <p>
  * Lê dois limites de um buffer ({@code anInt9104} inferior e {@code anInt9107}
- * superior, padrão 0..4096) via {@code decodedOperation3049}. {@code getMonochromeOutput}
+ * superior, padrão 0..4096) via {@code method3049}. {@code getMonochromeOutput}
  * mapeia um array de valores para 4096 se estiver dentro da faixa, senão 0 —
- * padrão comum de varp/varbit/filtro de estado. {@code decodedOperation3055} traduz
+ * padrão comum de varp/varbit/filtro de estado. {@code method3055} traduz
  * {@code DisplayModeManagerContainer42} (enum de tipo) para opcode ClientScript (6407..6410).
  * Renomeado com base em faixa 0..4096 + uso de {@code readUnsignedShort}.
  */
@@ -29,7 +29,7 @@ final class ParametricDefinition extends Definition {
     static int anInt9109 = 104;
     static int anInt9110;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         int i_1_ = i;
         do {
             if (i_1_ == 0) {
@@ -39,10 +39,10 @@ final class ParametricDefinition extends Definition {
             anInt9107 = class348_sub49.readUnsignedShort(842397944);
         } while (false);
         anInt9102++;
-        if (i_0_ != 31015) decodedOperation3056(-75, 18, 53);
+        if (i_0_ != 31015) method3056(-75, 18, 53);
     }
 
-    static final void decodedOperation3054(boolean bool, int i, int i_2_) {
+    static final void method3054(boolean bool, int i, int i_2_) {
         anInt9105++;
         if (i_2_ < -127) {
             NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) -122, i, bool);
@@ -55,9 +55,9 @@ final class ParametricDefinition extends Definition {
         anInt9104 = 0;
     }
 
-    static final int decodedOperation3055(int i, DisplayModeManagerContainer42 class304) {
+    static final int method3055(int i, DisplayModeManagerContainer42 class304) {
         anInt9106++;
-        if (i < 94) decodedOperation3054(false, -98, -116);
+        if (i < 94) method3054(false, -98, -116);
         if (class304 != NodeSub45.aClass304_7103) {
             if (Component83.aClass304_1662 == class304) return 6408;
             if (class304 == DefinitionSub38.aClass304_9471) return 6406;
@@ -74,7 +74,7 @@ final class ParametricDefinition extends Definition {
         if (i_3_ != 255) anInt9107 = -121;
         int[] is = this.imageCache.getPixels(i_3_ + -255, i);
         if (this.imageCache.cacheMiss) {
-            int[] is_4_ = this.decodedOperation3048(i, 633706337, 0);
+            int[] is_4_ = this.method3048(i, 633706337, 0);
             for (int i_5_ = 0; (DefinitionSub6.anInt9139 > i_5_); i_5_++) {
                 int i_6_ = is_4_[i_5_];
                 is[i_5_] = i_6_ >= anInt9104 && (i_6_ <= anInt9107) ? 4096 : 0;
@@ -83,7 +83,7 @@ final class ParametricDefinition extends Definition {
         return is;
     }
 
-    static final boolean decodedOperation3056(int i, int i_7_, int i_8_) {
+    static final boolean method3056(int i, int i_7_, int i_8_) {
         if (i < 0) anInt9109 = 114;
         anInt9108++;
         return (0x22 & i_7_) != 0;

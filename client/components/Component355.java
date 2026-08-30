@@ -17,7 +17,7 @@ final class Component355
     static int anInt3263;
     static Component183 aClass114_3264 = new Component183(6, 2);
 
-    final void decodedOperation1924(Buffer class348_sub49, byte i) {
+    final void method1924(Buffer class348_sub49, byte i) {
         int i_0_ = -47 % ((i - -74) / 49);
         for (; ; ) {
             int i_1_ = class348_sub49.readUnsignedByte(255);
@@ -27,13 +27,13 @@ final class Component355
         anInt3263++;
     }
 
-    final boolean decodedOperation1925(boolean bool) {
+    final boolean method1925(boolean bool) {
         anInt3262++;
         if (bool != false) return true;
         return aChar3259 == 115;
     }
 
-    public static void decodedOperation1926(int i) {
+    public static void method1926(int i) {
         if (i >= -125) aClass114_3264 = null;
         aClass114_3264 = null;
     }
@@ -44,14 +44,14 @@ final class Component355
             if (i == 2) this.anInt3256 = class348_sub49.readInt((byte) -126);
             else if (i == 4) this.aBoolean3261 = false;
             else if (i == 5) this.aString3258 = class348_sub49.readString((byte) 91);
-        } else aChar3259 = Cp1252Decoder.decodedOperation462(class348_sub49.readByte(-115), -128);
+        } else aChar3259 = Cp1252Decoder.method462(class348_sub49.readByte(-115), -128);
         if (bool != true) this.aBoolean3261 = true;
     }
 
-    static final int decodedOperation1928(int i, int i_2_, int i_3_) {
+    static final int method1928(int i, int i_2_, int i_3_) {
         anInt3260++;
         int i_4_ = i_3_ >>> 31;
-        if (i_2_ > 0) decodedOperation1928(82, -44, -111);
+        if (i_2_ > 0) method1928(82, -44, -111);
         return (i_3_ - -i_4_) / i + -i_4_;
     }
 

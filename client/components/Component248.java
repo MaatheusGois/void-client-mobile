@@ -20,11 +20,11 @@ final class Component248
     String aString314;
     static Component183 aClass114_315;
 
-    static final void decodedOperation283(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
-        for (RenderableSub5 class318_sub5 = (RenderableSub5) Component241.aClass243_2957.decodedOperation1872(8); class318_sub5 != null; class318_sub5 = ((RenderableSub5) Component241.aClass243_2957.decodedOperation1878((byte) 0))) {
+    static final void method283(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+        for (RenderableSub5 class318_sub5 = (RenderableSub5) Component241.aClass243_2957.method1872(8); class318_sub5 != null; class318_sub5 = ((RenderableSub5) Component241.aClass243_2957.method1878((byte) 0))) {
             if (class318_sub5.anInt6421 <= OpenGlShader.clientCycle) class318_sub5.unlink(false);
             else {
-                RenderableSub5.decodedOperation2505(i_0_ >> 1, class318_sub5.anInt6420 * 2, 0, i_5_, i_2_ >> 1, class318_sub5.anInt6418, 256 + (class318_sub5.anInt6422 << 9), i_1_, (class318_sub5.anInt6419 << 9) + 256);
+                RenderableSub5.method2505(i_0_ >> 1, class318_sub5.anInt6420 * 2, 0, i_5_, i_2_ >> 1, class318_sub5.anInt6418, 256 + (class318_sub5.anInt6422 << 9), i_1_, (class318_sub5.anInt6419 << 9) + 256);
                 NodeList.aClass324_3326.drawTextCentred((byte) 122, i_3_ - -Component71.anIntArray6062[0], ~0xffffff | class318_sub5.anInt6415, class318_sub5.aString6416, 0, i_4_ - -Component71.anIntArray6062[1]);
             }
         }
@@ -32,13 +32,13 @@ final class Component248
         if (i >= -108) aClass114_304 = null;
     }
 
-    public static void decodedOperation284(byte i) {
+    public static void method284(byte i) {
         aClass114_315 = null;
         aClass114_304 = null;
         if (i == 51) aClass174Array311 = null;
     }
 
-    static final DisplayModeManagerContainer369[] decodedOperation285(int i) {
+    static final DisplayModeManagerContainer369[] method285(int i) {
         anInt309++;
         if (i > -62) getDisplayModes((byte) 66, null);
         return (new DisplayModeManagerContainer369[]{Component386.aClass223_2868, Buffer.aClass223_7175, Component55.aClass223_3934, Component316.aClass223_2489, MatrixSub1.aClass223_5689, DefinitionSub21.aClass223_9274, DisplayModeManagerContainer332.aClass223_4997, RadixParser.aClass223_2307, Component90.aClass223_2045, Component38.aClass223_2507});

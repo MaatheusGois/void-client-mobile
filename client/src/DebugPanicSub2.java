@@ -27,7 +27,7 @@ final class DebugPanicSub2
         anInt8499++;
     }
 
-    public static void decodedOperation2132(int i) {
+    public static void method2132(int i) {
         aClass70_8503 = null;
         if (i >= -8) anInt8498 = -77;
         anIntArray8507 = null;
@@ -37,7 +37,7 @@ final class DebugPanicSub2
     public final Buffer method24(boolean bool, boolean bool_1_) {
         if (bool_1_ != false) aClass70_8503 = null;
         anInt8500++;
-        return super.decodedOperation2120(0, (this.aClass377_4759.aMapBuffer9913), bool);
+        return super.method2120(0, (this.aClass377_4759.aMapBuffer9913), bool);
     }
 
     public final int method16(boolean bool) {
@@ -49,7 +49,7 @@ final class DebugPanicSub2
     public final boolean method22(int i) {
         anInt8501++;
         if (i != -23) return false;
-        return super.decodedOperation2123((this.aClass377_4759.aMapBuffer9913), 0);
+        return super.method2123((this.aClass377_4759.aMapBuffer9913), 0);
     }
 
     public final Component342 method25(byte i) {

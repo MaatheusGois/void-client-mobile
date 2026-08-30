@@ -11,7 +11,7 @@ final class Component169
     static int anInt2600;
     static int anInt2601 = -50;
 
-    final boolean decodedOperation1450(int i) {
+    final boolean method1450(int i) {
         anInt2600++;
         if (i >= -1) return true;
         return this == Component166.aClass196_2372 | DisplayModeManagerContainer57.aClass196_838 == this;

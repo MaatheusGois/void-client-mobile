@@ -30,7 +30,7 @@ final class Component333
     private RenderableSub9Sub2[][] aClass318_Sub9_Sub2ArrayArray3642;
     static int anInt3643 = 0;
 
-    private final void decodedOperation2098(GlToolkitSub3 var_ha_Sub3, int i, int i_0_) {
+    private final void method2098(GlToolkitSub3 var_ha_Sub3, int i, int i_0_) {
         anInt3629++;
         Component210.aFloat5299 = var_ha_Sub3.aFloat8093;
         int i_1_ = 75 % ((2 - i) / 34);
@@ -49,17 +49,17 @@ final class Component333
         if (Component210.aFloat5299 != var_ha_Sub3.aFloat8093) var_ha_Sub3.DualToolkit(Component210.aFloat5299);
     }
 
-    final void decodedOperation2100(byte i, GlToolkitSub3 var_ha_Sub3) {
+    final void method2100(byte i, GlToolkitSub3 var_ha_Sub3) {
         anInterface5_Impl1_3638.method20(786336, (byte) 123, 24);
         int i_2_ = -125 / ((i - 65) / 49);
         anInt3625++;
     }
 
-    final void decodedOperation2101(GlToolkitSub3 var_ha_Sub3, Component122 class98, int i, int i_3_) {
+    final void method2101(GlToolkitSub3 var_ha_Sub3, Component122 class98, int i, int i_3_) {
         try {
             anInt3633++;
             if (var_ha_Sub3.aClass101_Sub2_8080 != null) {
-                if (i >= 0) decodedOperation2098(var_ha_Sub3, -121, i);
+                if (i >= 0) method2098(var_ha_Sub3, -121, i);
                 else method2103((byte) -33, var_ha_Sub3);
                 float f = (var_ha_Sub3.aClass101_Sub2_8080.aFloat5736);
                 float f_4_ = (var_ha_Sub3.aClass101_Sub2_8080.aFloat5691);
@@ -80,7 +80,7 @@ final class Component333
                     int i_12_ = -i_8_ + i_9_;
                     int i_13_;
                     if (2 + i_12_ > 1600) {
-                        i_13_ = (Component80.decodedOperation2253(i_12_, i_3_ + 119) + 1 + -RequestProcessor.anInt2265);
+                        i_13_ = (Component80.method2253(i_12_, i_3_ + 119) + 1 + -RequestProcessor.anInt2265);
                         i_12_ = 2 + (i_12_ >> i_13_);
                     } else {
                         i_13_ = 0;
@@ -137,7 +137,7 @@ final class Component333
 
     private final void method2102(boolean bool, GlToolkitSub3 var_ha_Sub3, int i) {
         anInt3640++;
-        if (bool != false) decodedOperation2098(null, 21, -85);
+        if (bool != false) method2098(null, 21, -85);
         int i_20_ = 0;
         MatrixSub2 class101_sub2 = var_ha_Sub3.maximizeWindow(-22036);
         float f = class101_sub2.aFloat5711;
@@ -361,12 +361,12 @@ final class Component333
         var_ha_Sub3.getWindowPos(5);
     }
 
-    public static void decodedOperation2104(int i) {
+    public static void method2104(int i) {
         aClass114_3641 = null;
-        if (i < 66) decodedOperation2104(127);
+        if (i < 66) method2104(127);
     }
 
-    final void decodedOperation2105(int i) {
+    final void method2105(int i) {
         if (i > -118) aClass114_3641 = null;
         anInt3634++;
         anInterface5_Impl1_3638.method21(23315);

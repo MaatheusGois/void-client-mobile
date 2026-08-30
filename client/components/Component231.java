@@ -27,7 +27,7 @@ final class Component231
     boolean aBoolean342;
     int anInt343;
 
-    final void decodedOperation290(Buffer class348_sub49, int i) {
+    final void method290(Buffer class348_sub49, int i) {
         if (i != -1) this.anInt332 = 25;
         for (; ; ) {
             int i_0_ = class348_sub49.readUnsignedByte(255);
@@ -49,7 +49,7 @@ final class Component231
                 if (i == 5) this.aBoolean334 = false;
             } else this.aBoolean342 = false;
         } else this.anInt336 = class348_sub49.readUnsignedShort(842397944) << 2;
-        if (i_1_ != -4) decodedOperation290(null, 12);
+        if (i_1_ != -4) method290(null, 12);
         anInt333++;
     }
 
@@ -91,36 +91,36 @@ final class Component231
         this.anInt341 = (int) (d_7_ * (double) this.anInt343);
     }
 
-    public static void decodedOperation293(byte i) {
+    public static void method293(byte i) {
         aClass114_330 = null;
-        if (i >= -40) decodedOperation295(-6, -74, -119, null, -35, null, 125, 67, -102);
+        if (i >= -40) method295(-6, -74, -119, null, -35, null, 125, 67, -102);
     }
 
-    static final void decodedOperation294(GraphicsToolkit var_ha, int i) {
+    static final void method294(GraphicsToolkit var_ha, int i) {
         anInt328++;
         if (Component305.aClass262_9931.size(i) != 0) {
             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) {
                 for (NodeSub7 class348_sub7 = ((NodeSub7) Component305.aClass262_9931.first(4)); class348_sub7 != null; class348_sub7 = (NodeSub7) Component305.aClass262_9931.next((byte) 31)) {
-                    Exception_Sub1.itemDefinitions.decodedOperation1932(var_ha, class348_sub7.anInt6647, class348_sub7.anInt6648, Component49.aClass324_4684, (!class348_sub7.aBoolean6650 ? null : (Component72.localPlayer.appearance)), class348_sub7.anInt6642, false, (byte) 83, var_ha, class348_sub7.anInt6649, false, class348_sub7.anInt6645);
+                    Exception_Sub1.itemDefinitions.method1932(var_ha, class348_sub7.anInt6647, class348_sub7.anInt6648, Component49.aClass324_4684, (!class348_sub7.aBoolean6650 ? null : (Component72.localPlayer.appearance)), class348_sub7.anInt6642, false, (byte) 83, var_ha, class348_sub7.anInt6649, false, class348_sub7.anInt6645);
                     class348_sub7.unlink((byte) 29);
                 }
-                Component160.decodedOperation3466(i + -113);
+                Component160.method3466(i + -113);
             } else {
                 if (NodeSub34.aHa6968 == null) {
                     Canvas canvas = new Canvas();
                     canvas.setSize(36, 32);
-                    NodeSub34.aHa6968 = Component65.decodedOperation958(true, 0, DefinitionSub4.modelProvider, 0, canvas, Component257.aClass45_4796);
-                    DefinitionSub9.aClass324_9173 = (NodeSub34.aHa6968.method3686(Component388.decodedOperation1819(LoadingState.p11FullGroupId, 0, -44, Component65.aClass45_1627), Component170.decodedOperation1519(Component158.aClass45_322, LoadingState.p11FullGroupId, 0), true));
+                    NodeSub34.aHa6968 = Component65.method958(true, 0, DefinitionSub4.modelProvider, 0, canvas, Component257.aClass45_4796);
+                    DefinitionSub9.aClass324_9173 = (NodeSub34.aHa6968.method3686(Component388.method1819(LoadingState.p11FullGroupId, 0, -44, Component65.aClass45_1627), Component170.method1519(Component158.aClass45_322, LoadingState.p11FullGroupId, 0), true));
                 }
                 for (NodeSub7 class348_sub7 = ((NodeSub7) Component305.aClass262_9931.first(i + 4)); class348_sub7 != null; class348_sub7 = (NodeSub7) Component305.aClass262_9931.next((byte) 118)) {
-                    Exception_Sub1.itemDefinitions.decodedOperation1932(NodeSub34.aHa6968, class348_sub7.anInt6647, class348_sub7.anInt6648, DefinitionSub9.aClass324_9173, (class348_sub7.aBoolean6650 ? (Component72.localPlayer.appearance) : null), class348_sub7.anInt6642, false, (byte) 83, var_ha, class348_sub7.anInt6649, false, class348_sub7.anInt6645);
+                    Exception_Sub1.itemDefinitions.method1932(NodeSub34.aHa6968, class348_sub7.anInt6647, class348_sub7.anInt6648, DefinitionSub9.aClass324_9173, (class348_sub7.aBoolean6650 ? (Component72.localPlayer.appearance) : null), class348_sub7.anInt6642, false, (byte) 83, var_ha, class348_sub7.anInt6649, false, class348_sub7.anInt6645);
                     class348_sub7.unlink((byte) 21);
                 }
             }
         }
     }
 
-    static final void decodedOperation295(int i, int i_11_, int i_12_, byte[] is, int i_13_, byte[] is_14_, int i_15_, int i_16_, int i_17_) {
+    static final void method295(int i, int i_11_, int i_12_, byte[] is, int i_13_, byte[] is_14_, int i_15_, int i_16_, int i_17_) {
         try {
             anInt338++;
             int i_18_ = -(i_13_ >> 2);

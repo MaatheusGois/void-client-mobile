@@ -51,7 +51,7 @@ final class D3DShader extends AbstractShader {
         else idirect3dvertexshader = (i_0_ == 2147483647 ? anIDirect3DVertexShader7332 : anIDirect3DVertexShader7334);
         if (anIDirect3DVertexShader7333 != idirect3dvertexshader) {
             anIDirect3DVertexShader7333 = idirect3dvertexshader;
-            aClass378_7328.decodedOperation3957(idirect3dvertexshader, (byte) -89);
+            aClass378_7328.method3957(idirect3dvertexshader, (byte) -89);
             method3545(121);
             method3524(-14775);
             method3532(10425);
@@ -59,7 +59,7 @@ final class D3DShader extends AbstractShader {
             method3531(false);
             method3522(-16252);
         }
-        class101_sub2.decodedOperation919(0.0F, aFloatArray7327, -1.0F, 0.0F, (float) i_0_, (byte) -120);
+        class101_sub2.method919(0.0F, aFloatArray7327, -1.0F, 0.0F, (float) i_0_, (byte) -120);
         idirect3ddevice.a(12, aFloatArray7327);
     }
 
@@ -82,7 +82,7 @@ final class D3DShader extends AbstractShader {
             aBoolean7326 = false;
         }
         if (null != anIDirect3DVertexShader7333) {
-            aClass378_7328.decodedOperation3957(null, (byte) -89);
+            aClass378_7328.method3957(null, (byte) -89);
             anIDirect3DVertexShader7333 = null;
         }
     }
@@ -97,7 +97,7 @@ final class D3DShader extends AbstractShader {
         if (null != anIDirect3DVertexShader7333) {
             IDirect3DDevice idirect3ddevice = aClass378_7328.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = aClass378_7328.maximizeWindow(i + -22048);
-            idirect3ddevice.a(0, class101_sub2.decodedOperation924(11, aFloatArray7337));
+            idirect3ddevice.a(0, class101_sub2.method924(11, aFloatArray7337));
         }
     }
 
@@ -170,9 +170,9 @@ final class D3DShader extends AbstractShader {
                 idirect3ddevice.a(13, ((this.aHa_Sub3_4479.aFloat8093) * (this.aHa_Sub3_4479.aFloat8180)), ((this.aHa_Sub3_4479.aFloat8087) * (this.aHa_Sub3_4479.aFloat8093)), ((this.aHa_Sub3_4479.aFloat8168) * (this.aHa_Sub3_4479.aFloat8093)), 1.0F);
                 idirect3ddevice.a(14, ((this.aHa_Sub3_4479.aFloat8174) * (this.aHa_Sub3_4479.aFloat8180)), ((this.aHa_Sub3_4479.aFloat8087) * (this.aHa_Sub3_4479.aFloat8174)), ((this.aHa_Sub3_4479.aFloat8174) * (this.aHa_Sub3_4479.aFloat8168)), 1.0F);
                 idirect3ddevice.a(16, ((this.aHa_Sub3_4479.aFloat8180) * (this.aHa_Sub3_4479.aFloat8186)), ((this.aHa_Sub3_4479.aFloat8087) * (this.aHa_Sub3_4479.aFloat8186)), ((this.aHa_Sub3_4479.aFloat8168) * (this.aHa_Sub3_4479.aFloat8186)), 1.0F);
-                class101_sub2.decodedOperation923((this.aHa_Sub3_4479.aFloatArray8170[0]), (this.aHa_Sub3_4479.aFloatArray8170[1]), (byte) -97, (this.aHa_Sub3_4479.aFloatArray8170[2]), aFloatArray7327);
+                class101_sub2.method923((this.aHa_Sub3_4479.aFloatArray8170[0]), (this.aHa_Sub3_4479.aFloatArray8170[1]), (byte) -97, (this.aHa_Sub3_4479.aFloatArray8170[2]), aFloatArray7327);
                 idirect3ddevice.SetVertexShaderConstantF(15, aFloatArray7327, 1);
-                class101_sub2.decodedOperation923((this.aHa_Sub3_4479.aFloatArray8102[0]), (this.aHa_Sub3_4479.aFloatArray8102[1]), (byte) -99, (this.aHa_Sub3_4479.aFloatArray8102[2]), aFloatArray7327);
+                class101_sub2.method923((this.aHa_Sub3_4479.aFloatArray8102[0]), (this.aHa_Sub3_4479.aFloatArray8102[1]), (byte) -99, (this.aHa_Sub3_4479.aFloatArray8102[2]), aFloatArray7327);
                 idirect3ddevice.SetVertexShaderConstantF(17, aFloatArray7327, 1);
             }
         }
@@ -183,7 +183,7 @@ final class D3DShader extends AbstractShader {
         if (anIDirect3DVertexShader7333 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7328.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = aClass378_7328.maximizeWindow(-22036);
-            idirect3ddevice.a(0, class101_sub2.decodedOperation924(11, aFloatArray7337));
+            idirect3ddevice.a(0, class101_sub2.method924(11, aFloatArray7337));
         }
     }
 
@@ -192,7 +192,7 @@ final class D3DShader extends AbstractShader {
         if (null != anIDirect3DVertexShader7333) {
             IDirect3DDevice idirect3ddevice = aClass378_7328.anIDirect3DDevice9810;
             MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.clear(5);
-            idirect3ddevice.SetVertexShaderConstantF(8, class101_sub2.decodedOperation915(aFloatArray7337, i + -10424), 2);
+            idirect3ddevice.SetVertexShaderConstantF(8, class101_sub2.method915(aFloatArray7337, i + -10424), 2);
         }
     }
 }

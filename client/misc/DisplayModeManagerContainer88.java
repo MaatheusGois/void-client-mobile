@@ -13,27 +13,27 @@ final class DisplayModeManagerContainer88
     static int anInt1206;
     static int[] anIntArray1207 = new int[16384];
 
-    public static void decodedOperation725(int i) {
+    public static void method725(int i) {
         anIntArray1207 = null;
         anIntArray1204 = null;
         if (i != 16384) anIntArray1207 = null;
     }
 
-    static final void decodedOperation726(int i) {
+    static final void method726(int i) {
         if (i <= 88) anIntArray1204 = null;
         anInt1206++;
         if (RSARequest.currentLoadingState != null) {
             Component44.aClass311_897 = new ResourceLoader();
-            Component44.aClass311_897.decodedOperation2316(RSARequest.currentLoadingState, RSARequest.currentLoadingState.aClass274_1012.getLocalized(ObjectDeserializer.languageId, 544), RSARequest.currentLoadingState.maxProgress, Component69.aLong3660, false);
+            Component44.aClass311_897.method2316(RSARequest.currentLoadingState, RSARequest.currentLoadingState.aClass274_1012.getLocalized(ObjectDeserializer.languageId, 544), RSARequest.currentLoadingState.maxProgress, Component69.aLong3660, false);
             NodeSub32.aThread6946 = new Thread(Component44.aClass311_897, "");
             NodeSub32.aThread6946.start();
         }
     }
 
-    static final void decodedOperation727(byte i, int i_0_, int i_1_, int i_2_) {
+    static final void method727(byte i, int i_0_, int i_1_, int i_2_) {
         anInt1205++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_2_, (byte) 105, 9);
-        class348_sub42_sub15.decodedOperation3246(i + -25427);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_2_, (byte) 105, 9);
+        class348_sub42_sub15.method3246(i + -25427);
         class348_sub42_sub15.anInt9652 = i_1_;
         class348_sub42_sub15.anInt9651 = i_0_;
         if (i != -63) anIntArray1207 = null;

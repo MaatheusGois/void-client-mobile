@@ -31,7 +31,7 @@ final class Model
     boolean aBoolean217;
     boolean aBoolean218;
 
-    static final void decodedOperation223(int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
+    static final void method223(int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
         if (i_2_ > i) MenuOpener.fillInts(-27, i_2_, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i, i_0_);
         else MenuOpener.fillInts(-27, i, DisplayModeManagerContainer167.anIntArrayArray255[i_1_], i_2_, i_0_);
         anInt214++;
@@ -40,10 +40,10 @@ final class Model
         }
     }
 
-    static final void decodedOperation224(byte i, int[][] is) {
+    static final void method224(byte i, int[][] is) {
         DisplayModeManagerContainer167.anIntArrayArray255 = is;
         anInt210++;
-        if (i != -40) decodedOperation224((byte) 100, null);
+        if (i != -40) method224((byte) 100, null);
     }
 
     public Model() {

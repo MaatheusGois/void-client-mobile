@@ -12,13 +12,13 @@ final class Component129
     static int anInt488;
     static int anInt489 = 0;
 
-    static final void decodedOperation354(int i) {
+    static final void method354(int i) {
         HashNodeSub3.aBoolean9498 = true;
-        if (i != 2) decodedOperation355(84);
+        if (i != 2) method355(84);
         anInt488++;
     }
 
-    public static void decodedOperation355(int i) {
+    public static void method355(int i) {
         anIntArray487 = null;
         if (i != 4297) anInt489 = -9;
     }

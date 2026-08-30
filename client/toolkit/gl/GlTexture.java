@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class258_Sub3` (JODE-obfuscated).
- * Concrete OpenGL texture. extends AbstractGlTexture; uploads pixel data via OpenGL.glTexImage2D in decodedOperation1963/constructor.
+ * Concrete OpenGL texture. extends AbstractGlTexture; uploads pixel data via OpenGL.glTexImage2D in method1963/constructor.
  */
 
 import jaggl.OpenGL;
@@ -33,11 +33,11 @@ class GlTexture extends AbstractGlTexture {
         this.anInt8547 = i_1_;
         this.anInt8551 = i_2_;
         this.aHa_Sub2_4851.bindTexture((byte) -111, this);
-        OpenGL.glTexImage2Dub(this.anInt4849, 0, this.anInt4858, i_1_, i_2_, 0, SceneNode.decodedOperation2779(true, (this.anInt4858)), 5121, null, 0);
-        this.decodedOperation1957(9728, true);
+        OpenGL.glTexImage2Dub(this.anInt4849, 0, this.anInt4858, i_1_, i_2_, 0, SceneNode.method2779(true, (this.anInt4858)), 5121, null, 0);
+        this.method1957(9728, true);
     }
 
-    final void decodedOperation1963(int i, int i_3_, int i_4_, int i_5_) {
+    final void method1963(int i, int i_3_, int i_4_, int i_5_) {
         anInt8541++;
         if (i_4_ != 0) anInt8550 = -125;
         OpenGL.glFramebufferTexture2DEXT(i, i_5_, this.anInt4849, this.anInt4859, i_3_);
@@ -53,19 +53,19 @@ class GlTexture extends AbstractGlTexture {
             this.anInt8551 = i_8_;
             this.aHa_Sub2_4851.bindTexture((byte) -91, this);
             if (bool && this.anInt4849 != 34037) {
-                Component210.decodedOperation551(i_7_, i_9_, i, fs, 0, i_8_, i_6_);
-                this.decodedOperation1955(true, (byte) -123);
+                Component210.method551(i_7_, i_9_, i, fs, 0, i_8_, i_6_);
+                this.method1955(true, (byte) -123);
             } else {
                 OpenGL.glTexImage2Df(this.anInt4849, 0, this.anInt4858, this.anInt8547, this.anInt8551, 0, i_9_, 5126, fs, 0);
-                this.decodedOperation1955(false, (byte) -123);
+                this.method1955(false, (byte) -123);
             }
-            this.decodedOperation1957(9728, true);
+            this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_6_ + ',' + i_7_ + ',' + i_8_ + ',' + bool + ',' + (fs != null ? "{...}" : "null") + ',' + i_9_ + ')'));
         }
     }
 
-    final void decodedOperation1964(boolean bool, int i, int i_10_, int[] is, int i_11_, byte i_12_, int i_13_, int i_14_, int i_15_) {
+    final void method1964(boolean bool, int i, int i_10_, int[] is, int i_11_, byte i_12_, int i_13_, int i_14_, int i_15_) {
         anInt8543++;
         if (i_15_ == 0) i_15_ = i_13_;
         if (bool) {
@@ -106,12 +106,12 @@ class GlTexture extends AbstractGlTexture {
                 OpenGL.glPixelStorei(3314, i_24_);
                 OpenGL.glTexImage2Di(this.anInt4849, 0, this.anInt4858, this.anInt8547, this.anInt8551, 0, 32993, this.aHa_Sub2_4851.anInt7812, is, 4 * i_25_);
                 OpenGL.glPixelStorei(3314, 0);
-                this.decodedOperation1955(false, (byte) -123);
+                this.method1955(false, (byte) -123);
             } else {
-                Component45.decodedOperation3460(this.anInt4849, this.anInt4858, this.anInt8551, this.aHa_Sub2_4851.anInt7812, this.anInt8547, is, 32993, -103);
-                this.decodedOperation1955(true, (byte) -123);
+                Component45.method3460(this.anInt4849, this.anInt4858, this.anInt8551, this.aHa_Sub2_4851.anInt7812, this.anInt8547, is, 32993, -103);
+                this.method1955(true, (byte) -123);
             }
-            this.decodedOperation1957(9728, true);
+            this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_24_ + ',' + i_25_ + ',' + bool_26_ + ')'));
         }
@@ -137,21 +137,21 @@ class GlTexture extends AbstractGlTexture {
             OpenGL.glPixelStorei(3317, 1);
             if (!bool || this.anInt4849 == 34037) {
                 OpenGL.glTexImage2Dub(this.anInt4849, 0, this.anInt4858, this.anInt8547, this.anInt8551, 0, i_35_, 5121, is, 0);
-                this.decodedOperation1955(false, (byte) -123);
+                this.method1955(false, (byte) -123);
             } else {
-                Component134.decodedOperation1403(i_34_, i_33_, is, false, i_35_, i, i_32_);
-                this.decodedOperation1955(true, (byte) -123);
+                Component134.method1403(i_34_, i_33_, is, false, i_35_, i, i_32_);
+                this.method1955(true, (byte) -123);
             }
             OpenGL.glPixelStorei(3317, 4);
-            this.decodedOperation1957(9728, true);
+            this.method1957(9728, true);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("tp.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_32_ + ',' + i_33_ + ',' + i_34_ + ',' + bool + ',' + (is != null ? "{...}" : "null") + ',' + i_35_ + ',' + bool_36_ + ')'));
         }
     }
 
-    final void decodedOperation1965(boolean bool, boolean bool_42_, int i) {
+    final void method1965(boolean bool, boolean bool_42_, int i) {
         anInt8540++;
-        if (i != 10243) decodedOperation1966(-20, 83, 1, -22, (byte) -31, 74, -57, 109, -102);
+        if (i != 10243) method1966(-20, 83, 1, -22, (byte) -31, 74, -57, 109, -102);
         if (this.anInt4849 == 3553) {
             this.aHa_Sub2_4851.bindTexture((byte) -102, this);
             OpenGL.glTexParameteri(this.anInt4849, 10242, bool_42_ ? 10497 : 33071);
@@ -159,23 +159,23 @@ class GlTexture extends AbstractGlTexture {
         }
     }
 
-    static final void decodedOperation1966(int i, int i_43_, int i_44_, int i_45_, byte i_46_, int i_47_, int i_48_, int i_49_, int i_50_) {
+    static final void method1966(int i, int i_43_, int i_44_, int i_45_, byte i_46_, int i_47_, int i_48_, int i_49_, int i_50_) {
         Component335.aClass338Array2034[RadixText.occluderCountA++] = new Component103(i_47_, i_49_, i_50_, i, i, i_50_, i_45_, i_43_, i_43_, i_45_, i_44_, i_44_, i_48_, i_48_);
         anInt8548++;
-        if (i_46_ != 0) decodedOperation1968();
+        if (i_46_ != 0) method1968();
     }
 
-    final void decodedOperation1967(int i, int i_51_, int i_52_, int i_53_, int i_54_, byte i_55_, int i_56_) {
+    final void method1967(int i, int i_51_, int i_52_, int i_53_, int i_54_, byte i_55_, int i_56_) {
         anInt8544++;
         int i_57_ = (this.aHa_Sub2_4851.anInt7641 + (-i_52_ - i_51_));
         this.aHa_Sub2_4851.bindTexture((byte) -100, this);
         OpenGL.glCopyTexSubImage2D(this.anInt4849, 0, i, -i_51_ - (i_53_ - (this.anInt8551)), i_54_, i_57_, i_56_, i_51_);
-        if (i_55_ != -120) decodedOperation1965(true, true, -57);
+        if (i_55_ != -120) method1965(true, true, -57);
         OpenGL.glFlush();
     }
 
-    static final void decodedOperation1968() {
-        NodeBase.decodedOperation3437(1, Component291.anInt2524);
+    static final void method1968() {
+        NodeBase.method3437(1, Component291.anInt2524);
     }
 
     public final void method37(int i) {
@@ -186,7 +186,7 @@ class GlTexture extends AbstractGlTexture {
         anInt8549 = -1;
     }
 
-    static final Component24 decodedOperation1969(byte[] is, int i) {
+    static final Component24 method1969(byte[] is, int i) {
         anInt8546++;
         if (i != -5901) anInt8550 = 83;
         if (is == null) throw new RuntimeException("");
@@ -202,18 +202,18 @@ class GlTexture extends AbstractGlTexture {
                 int[] is_60_ = new int[i_59_ * i_58_];
                 PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_58_, i_59_, is_60_, 0, i_58_);
                 pixelgrabber.grabPixels();
-                return NodeSub8.toolkit.decodedOperation3662(i_58_, is_60_, (byte) 94, 0, i_58_, i_59_);
+                return NodeSub8.toolkit.method3662(i_58_, is_60_, (byte) 94, 0, i_58_, i_59_);
             } catch (InterruptedException interruptedexception) {
                 /* empty */
             }
         }
     }
 
-    final void decodedOperation1970(int i, int i_61_, int i_62_, boolean bool, int i_63_, int i_64_, int i_65_, int i_66_, byte[] is, int i_67_) {
+    final void method1970(int i, int i_61_, int i_62_, boolean bool, int i_63_, int i_64_, int i_65_, int i_66_, byte[] is, int i_67_) {
         if (i_63_ == 0) i_63_ = i_62_;
         anInt8539++;
         if (bool) {
-            int i_68_ = Component191.decodedOperation1382(i_65_, -6409);
+            int i_68_ = Component191.method1382(i_65_, -6409);
             int i_69_ = i_68_ * i_62_;
             int i_70_ = i_63_ * i_68_;
             byte[] is_71_ = new byte[i_64_ * i_69_];
@@ -242,6 +242,6 @@ class GlTexture extends AbstractGlTexture {
         int i_81_ = (this.aHa_Sub2_4851.anInt7641 + (-i_78_ + -i_80_));
         this.aHa_Sub2_4851.bindTexture((byte) -111, this);
         OpenGL.glCopyTexImage2D(this.anInt4849, 0, this.anInt4858, i_77_, i_81_, i_79_, i_80_, 0);
-        this.decodedOperation1957(9728, true);
+        this.method1957(9728, true);
     }
 }

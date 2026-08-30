@@ -40,19 +40,19 @@ final class NodeSub3
     int anInt6589 = 0;
     private final GlToolkitSub3 aHa_Sub3_6590;
 
-    final void decodedOperation2736(byte i, int i_0_) {
-        if (i != -57) decodedOperation2736((byte) 25, -39);
+    final void method2736(byte i, int i_0_) {
+        if (i != -57) method2736((byte) 25, -39);
         anInt6580++;
         aNativeHeapBuffer6572 = aHa_Sub3_6590.invalidateSubFramebuffer((byte) 77, true, i_0_ * 4);
         aStream6574 = new Stream(aNativeHeapBuffer6572, 0, 4 * i_0_);
     }
 
-    final void decodedOperation2737(byte i, int[] is, int i_1_) {
+    final void method2737(byte i, int[] is, int i_1_) {
         anInt6583++;
         Interface5_Impl2 interface5_impl2 = aHa_Sub3_6590.enableVertexAttrib(47, this.anInt6589 * 3);
         Buffer buffer = interface5_impl2.method24(true, false);
         if (buffer != null) {
-            if (i != -30) decodedOperation2736((byte) 116, 72);
+            if (i != -30) method2736((byte) 116, 72);
             Stream stream = aHa_Sub3_6590.uniform4i(buffer, 9179);
             int i_2_ = 0;
             int i_3_ = 32767;
@@ -116,19 +116,19 @@ final class NodeSub3
         }
     }
 
-    public static void decodedOperation2738(byte i) {
+    public static void method2738(byte i) {
         aClass114_6584 = null;
         helveticaGlyphs26 = null;
         int i_21_ = 89 / ((19 - i) / 43);
     }
 
-    static final void decodedOperation2739(int i) {
+    static final void method2739(int i) {
         DefinitionSub13.aClass262_9201.clear(98);
         anInt6579++;
         NodeSub34.anInt6969 = i;
     }
 
-    final void decodedOperation2740(int i, int i_22_) {
+    final void method2740(int i, int i_22_) {
         anInt6576++;
         aStream6574.a();
         anInterface5_Impl1_6577 = aHa_Sub3_6590.uniform4f(false, 16711680);
@@ -138,7 +138,7 @@ final class NodeSub3
         aStream6574 = null;
     }
 
-    final void decodedOperation2741(int i, float f, int i_24_, int i_25_, int i_26_) {
+    final void method2741(int i, float f, int i_24_, int i_25_, int i_26_) {
         if (this.anInt6567 != -1) {
             Model class12 = aHa_Sub3_6590.modelProvider.getModel(this.anInt6567, -6662);
             int i_27_ = class12.aByte201 & 0xff;
@@ -182,7 +182,7 @@ final class NodeSub3
             else if (i_37_ > 255) i_37_ = 255;
             i_26_ = i_37_ | (i_35_ << 16 | i_36_ << 8);
         }
-        if (i_24_ != 1624) decodedOperation2743(null, (byte) 67);
+        if (i_24_ != 1624) method2743(null, (byte) 67);
         if (aHa_Sub3_6590.anInt8178 == 0) {
             aStream6574.f((byte) i_26_);
             aStream6574.f((byte) (i_26_ >> 8));
@@ -194,20 +194,20 @@ final class NodeSub3
         }
     }
 
-    final void decodedOperation2742(int i, int i_38_, int i_39_, byte i_40_) {
+    final void method2742(int i, int i_38_, int i_39_, byte i_40_) {
         anInt6570++;
         anIntArray6573[i_38_ * aS_Sub3_6566.tileWidth - -i_39_] = Component224.bitwiseOr((anIntArray6573[(i_38_ * aS_Sub3_6566.tileWidth - -i_39_)]), 1 << i);
         if (i_40_ > -65) aFloat6586 = -1.0413289F;
         this.anInt6589++;
     }
 
-    static final InputHandler decodedOperation2743(Component component, byte i) {
+    static final InputHandler method2743(Component component, byte i) {
         anInt6587++;
         int i_41_ = -16 % ((i - -58) / 63);
         return new KeyFocusHandler(component);
     }
 
-    final void decodedOperation2744(byte i, int i_42_) {
+    final void method2744(byte i, int i_42_) {
         anInt6578++;
         if (i > -106) this.anInt6571 = -80;
         aStream6574.e(4 * i_42_ + 3);

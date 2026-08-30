@@ -16,7 +16,7 @@ final class Component13
     private static float aFloat4305;
     private static float[][] aFloatArrayArray4306 = new float[2][8];
 
-    final void decodedOperation3446(Buffer class348_sub49, Component108 class197) {
+    final void method3446(Buffer class348_sub49, Component108 class197) {
         int i = class348_sub49.readUnsignedByte(255);
         this.anIntArray4299[0] = i >> 4;
         this.anIntArray4299[1] = i & 0xf;
@@ -45,7 +45,7 @@ final class Component13
         } else anIntArray4304[0] = anIntArray4304[1] = 0;
     }
 
-    private final float decodedOperation3447(int i, int i_5_, float f) {
+    private final float method3447(int i, int i_5_, float f) {
         float f_6_ = ((float) anIntArrayArrayArray4302[i][0][i_5_] + f * (float) (anIntArrayArrayArray4302[i][1][i_5_] - anIntArrayArrayArray4302[i][0][i_5_]));
         f_6_ *= 1.2207031E-4F;
         return method3448(f_6_);
@@ -56,18 +56,18 @@ final class Component13
         return f_7_ * 3.1415927F / 11025.0F;
     }
 
-    private final float decodedOperation3449(int i, int i_8_, float f) {
+    private final float method3449(int i, int i_8_, float f) {
         float f_9_ = ((float) anIntArrayArrayArray4300[i][0][i_8_] + f * (float) (anIntArrayArrayArray4300[i][1][i_8_] - anIntArrayArrayArray4300[i][0][i_8_]));
         f_9_ *= 0.0015258789F;
         return 1.0F - (float) Math.pow(10.0, -f_9_ / 20.0F);
     }
 
-    public static void decodedOperation3450() {
+    public static void method3450() {
         aFloatArrayArray4306 = null;
         anIntArrayArray4301 = null;
     }
 
-    final int decodedOperation3451(int i, float f) {
+    final int method3451(int i, float f) {
         if (i == 0) {
             float f_10_ = ((float) anIntArray4304[0] + (float) (anIntArray4304[1] - anIntArray4304[0]) * f);
             f_10_ *= 0.0030517578F;
@@ -75,12 +75,12 @@ final class Component13
             anInt4303 = (int) (aFloat4305 * 65536.0F);
         }
         if (this.anIntArray4299[i] == 0) return 0;
-        float f_11_ = decodedOperation3449(i, 0, f);
-        aFloatArrayArray4306[i][0] = -2.0F * f_11_ * (float) Math.cos(decodedOperation3447(i, 0, f));
+        float f_11_ = method3449(i, 0, f);
+        aFloatArrayArray4306[i][0] = -2.0F * f_11_ * (float) Math.cos(method3447(i, 0, f));
         aFloatArrayArray4306[i][1] = f_11_ * f_11_;
         for (int i_12_ = 1; i_12_ < this.anIntArray4299[i]; i_12_++) {
-            f_11_ = decodedOperation3449(i, i_12_, f);
-            float f_13_ = (-2.0F * f_11_ * (float) Math.cos(decodedOperation3447(i, i_12_, f)));
+            f_11_ = method3449(i, i_12_, f);
+            float f_13_ = (-2.0F * f_11_ * (float) Math.cos(method3447(i, i_12_, f)));
             float f_14_ = f_11_ * f_11_;
             aFloatArrayArray4306[i][i_12_ * 2 + 1] = aFloatArrayArray4306[i][i_12_ * 2 - 1] * f_14_;
             aFloatArrayArray4306[i][i_12_ * 2] = (aFloatArrayArray4306[i][i_12_ * 2 - 1] * f_13_ + aFloatArrayArray4306[i][i_12_ * 2 - 2] * f_14_);

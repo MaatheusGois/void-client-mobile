@@ -105,12 +105,12 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("cleartext")) {
-                            Component241.aClass243_2957.decodedOperation1876((byte) -45);
+                            Component241.aClass243_2957.method1876((byte) -45);
                             Applet_Sub1.printConsole("Text coords cleared", i + 21);
                             return;
                         }
                         if (string.equalsIgnoreCase("gc")) {
-                            DisplayModeManagerContainer57.decodedOperation427(i + 180);
+                            DisplayModeManagerContainer57.method427(i + 180);
                             for (int i_1_ = 0; i_1_ < 10; i_1_++)
                                 System.gc();
                             Runtime runtime = Runtime.getRuntime();
@@ -119,14 +119,14 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("compact")) {
-                            DisplayModeManagerContainer57.decodedOperation427(-41);
+                            DisplayModeManagerContainer57.method427(-41);
                             for (int i_3_ = 0; i_3_ < 10; i_3_++)
                                 System.gc();
                             Runtime runtime = Runtime.getRuntime();
                             int i_4_ = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);
                             Applet_Sub1.printConsole(("Memory before cleanup=" + i_4_ + "k"), 115);
-                            Component201.decodedOperation2271(31268);
-                            DisplayModeManagerContainer57.decodedOperation427(96);
+                            Component201.method2271(31268);
+                            DisplayModeManagerContainer57.method427(96);
                             for (int i_5_ = 0; i_5_ < 10; i_5_++)
                                 System.gc();
                             i_4_ = (int) ((runtime.totalMemory() + -runtime.freeMemory()) / 1024L);
@@ -147,7 +147,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("rotateconnectmethods")) {
-                            Component223.aClass161_125.decodedOperation1259(0);
+                            Component223.aClass161_125.method1259(0);
                             Applet_Sub1.printConsole("Rotated connection methods", i ^ ~0x13);
                             return;
                         }
@@ -169,21 +169,21 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("rebuild")) {
-                            NodeSub20.decodedOperation2953((byte) -117);
-                            Component308.decodedOperation464(-1);
+                            NodeSub20.method2953((byte) -117);
+                            Component308.method464(-1);
                             Applet_Sub1.printConsole("Rebuilding map", -113);
                             return;
                         }
                         if (string.equalsIgnoreCase("rebuildprofile")) {
                             Component330.aLong1516 = Component240.currentTimeMillis(-75);
                             AbstractGlTextureSub4.aBoolean8558 = true;
-                            NodeSub20.decodedOperation2953((byte) -114);
-                            Component308.decodedOperation464(-1);
+                            NodeSub20.method2953((byte) -114);
+                            Component308.method464(-1);
                             Applet_Sub1.printConsole("Rebuilding map (with profiling)", -117);
                             return;
                         }
                         if (string.equalsIgnoreCase("wm1")) {
-                            LogicError.decodedOperation830(1, -1, (byte) 102, false, -1);
+                            LogicError.method830(1, -1, (byte) 102, false, -1);
                             if (MenuEntry.getWindowMode(-61) == 1) {
                                 Applet_Sub1.printConsole("wm1 succeeded", -65);
                                 return;
@@ -191,7 +191,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("wm2")) {
-                            LogicError.decodedOperation830(2, -1, (byte) 102, false, -1);
+                            LogicError.method830(2, -1, (byte) 102, false, -1);
                             if (MenuEntry.getWindowMode(-119) == 2) Applet_Sub1.printConsole("wm2 succeeded", -109);
                             else {
                                 Applet_Sub1.printConsole("wm2 failed", i + 154);
@@ -200,7 +200,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("wm3")) {
-                            LogicError.decodedOperation830(3, 1024, (byte) 102, false, 768);
+                            LogicError.method830(3, 1024, (byte) 102, false, 768);
                             if (MenuEntry.getWindowMode(i ^ 0x3d) == 3) Applet_Sub1.printConsole("wm3 succeeded", 111);
                             else {
                                 Applet_Sub1.printConsole("wm3 failed", 83);
@@ -209,7 +209,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("tk0")) {
-                            SoftwareFallbackShader.decodedOperation3553(false, (byte) 104, 0);
+                            SoftwareFallbackShader.method3553(false, (byte) 104, 0);
                             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) {
                                 Applet_Sub1.printConsole("Entered tk0", 101);
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 0);
@@ -220,7 +220,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("tk1")) {
-                            SoftwareFallbackShader.decodedOperation3553(false, (byte) 109, 1);
+                            SoftwareFallbackShader.method3553(false, (byte) 109, 1);
                             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1) {
                                 Applet_Sub1.printConsole("Entered tk1", -65);
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 1);
@@ -231,7 +231,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("tk2")) {
-                            SoftwareFallbackShader.decodedOperation3553(false, (byte) 115, 2);
+                            SoftwareFallbackShader.method3553(false, (byte) 115, 2);
                             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
                                 Applet_Sub1.printConsole("Entered tk2", i + 151);
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 2);
@@ -244,7 +244,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("tk3")) {
-                            SoftwareFallbackShader.decodedOperation3553(false, (byte) 107, 3);
+                            SoftwareFallbackShader.method3553(false, (byte) 107, 3);
                             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 3) {
                                 Applet_Sub1.printConsole("Entered tk3", 78);
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 3);
@@ -255,7 +255,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equalsIgnoreCase("tk5")) {
-                            SoftwareFallbackShader.decodedOperation3553(false, (byte) 113, 5);
+                            SoftwareFallbackShader.method3553(false, (byte) 113, 5);
                             if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i ^ 0x7e13) == 5) {
                                 Applet_Sub1.printConsole("Entered tk5", -108);
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 5);
@@ -271,12 +271,12 @@ final class CommandHandler {
                             if (string.length() < 6) Applet_Sub1.printConsole("Invalid buildarea value", i + -36);
                             else {
                                 int i_6_ = (NodeSub41.parseInt(true, string.substring(6)));
-                                if (i_6_ < 0 || (Node.decodedOperation2710(-126, Component127.anInt2964) < i_6_)) Applet_Sub1.printConsole("Invalid buildarea value", 53);
+                                if (i_6_ < 0 || (Node.method2710(-126, Component127.anInt2964) < i_6_)) Applet_Sub1.printConsole("Invalid buildarea value", 53);
                                 else {
                                     Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), i_6_);
                                     DisplayModeManagerContainer389.savePreferences(37);
                                     r.aBoolean9719 = false;
-                                    Applet_Sub1.printConsole(("maxbuildarea=" + Component192.preferences.aClass239_Sub6_7226.decodedOperation1743(-32350)), 98);
+                                    Applet_Sub1.printConsole(("maxbuildarea=" + Component192.preferences.aClass239_Sub6_7226.method1743(-32350)), 98);
                                     return;
                                 }
                                 return;
@@ -304,7 +304,7 @@ final class CommandHandler {
                         }
                         if (string.startsWith("bloom")) {
                             boolean bool_7_ = NodeSub8.toolkit.method3666();
-                            if (DefinitionSub33.decodedOperation3137(!bool_7_, (byte) -24)) {
+                            if (DefinitionSub33.method3137(!bool_7_, (byte) -24)) {
                                 if (bool_7_) {
                                     Applet_Sub1.printConsole("Bloom disabled", i + -49);
                                     return;
@@ -346,9 +346,9 @@ final class CommandHandler {
                         if (string.equalsIgnoreCase("resetminimap")) {
                             Component158.aClass45_322.clearPacked(i ^ ~0x4e);
                             Component158.aClass45_322.clearUnpacked((byte) 127);
-                            Component245.aClass141_117.decodedOperation1175((byte) 125);
-                            DisplayModeManagerContainer64.aClass153_9031.decodedOperation1219(7851);
-                            Component308.decodedOperation464(-1);
+                            Component245.aClass141_117.method1175((byte) 125);
+                            DisplayModeManagerContainer64.aClass153_9031.method1219(7851);
+                            Component308.method464(-1);
                             Applet_Sub1.printConsole("Minimap reset", 70);
                             return;
                         }
@@ -359,7 +359,7 @@ final class CommandHandler {
                                     if (i_8_ > 4) i_8_ = 4;
                                 } else i_8_ = 1;
                                 Component25.anInt6012 = i_8_;
-                                NodeSub20.decodedOperation2953((byte) -128);
+                                NodeSub20.method2953((byte) -128);
                                 Applet_Sub1.printConsole(("Render cores now: " + (Component25.anInt6012)), -77);
                             } else {
                                 Applet_Sub1.printConsole("Current toolkit doesn't support multiple cores", i + 138);
@@ -370,18 +370,18 @@ final class CommandHandler {
                         if (string.startsWith("cachespace")) {
                             Applet_Sub1.printConsole(("I(s): " + StringCache.aClass60_4327.getRemaining(-18529) + "/" + StringCache.aClass60_4327.getCapacity(-4)), -101);
                             Applet_Sub1.printConsole(("I(m): " + Component142.aClass60_4417.getRemaining(-18529) + "/" + Component142.aClass60_4417.getCapacity(i ^ 0x4d)), 127);
-                            Applet_Sub1.printConsole(("O(s): " + Exception_Sub1.itemDefinitions.aClass175_3288.decodedOperation1350((byte) 126) + "/" + Exception_Sub1.itemDefinitions.aClass175_3288.decodedOperation1339(100)), i + 203);
+                            Applet_Sub1.printConsole(("O(s): " + Exception_Sub1.itemDefinitions.aClass175_3288.method1350((byte) 126) + "/" + Exception_Sub1.itemDefinitions.aClass175_3288.method1339(100)), i + 203);
                             return;
                         }
                         if (string.equalsIgnoreCase("getcamerapos")) {
-                            Applet_Sub1.printConsole(("Pos: " + (Component72.localPlayer.plane) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) >> 6) + "," + ((Component317.anInt8685 >> 9) + Component330.regionTileY >> 6) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) & 0x3f) + "," + ((Component317.anInt8685 >> 9) - -Component330.regionTileY & 0x3f) + " Height: " + ((Component300.decodedOperation2064(WaterSurfaceShader.anInt6246, (Component72.localPlayer.plane), 11219, Component317.anInt8685)) - DisplayModeManagerContainer50.anInt3855)), 126);
-                            Applet_Sub1.printConsole(("Look: " + (Component72.localPlayer.plane) + "," + (Component48.anInt4336 - -NodeBaseSub2.regionTileX >> 6) + "," + (Component330.regionTileY + Component337.anInt3647 >> 6) + "," + (0x3f & Component48.anInt4336 - -NodeBaseSub2.regionTileX) + "," + (0x3f & Component337.anInt3647 - -Component330.regionTileY) + " Height: " + ((Component300.decodedOperation2064(Component48.anInt4336, (Component72.localPlayer.plane), 11219, Component337.anInt3647)) - Component221.anInt1797)), -90);
+                            Applet_Sub1.printConsole(("Pos: " + (Component72.localPlayer.plane) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) >> 6) + "," + ((Component317.anInt8685 >> 9) + Component330.regionTileY >> 6) + "," + (((WaterSurfaceShader.anInt6246 >> 9) - -NodeBaseSub2.regionTileX) & 0x3f) + "," + ((Component317.anInt8685 >> 9) - -Component330.regionTileY & 0x3f) + " Height: " + ((Component300.method2064(WaterSurfaceShader.anInt6246, (Component72.localPlayer.plane), 11219, Component317.anInt8685)) - DisplayModeManagerContainer50.anInt3855)), 126);
+                            Applet_Sub1.printConsole(("Look: " + (Component72.localPlayer.plane) + "," + (Component48.anInt4336 - -NodeBaseSub2.regionTileX >> 6) + "," + (Component330.regionTileY + Component337.anInt3647 >> 6) + "," + (0x3f & Component48.anInt4336 - -NodeBaseSub2.regionTileX) + "," + (0x3f & Component337.anInt3647 - -Component330.regionTileY) + " Height: " + ((Component300.method2064(Component48.anInt4336, (Component72.localPlayer.plane), 11219, Component337.anInt3647)) - Component221.anInt1797)), -90);
                             return;
                         }
                         if (string.equals("renderprofile") || string.equals("rp")) {
                             ReliefShader.aBoolean2514 = !ReliefShader.aBoolean2514;
                             NodeSub8.toolkit.method3647(ReliefShader.aBoolean2514);
-                            Component362.decodedOperation1042((byte) 23);
+                            Component362.method1042((byte) 23);
                             Applet_Sub1.printConsole(("showprofiling=" + ReliefShader.aBoolean2514), 106);
                             return;
                         }
@@ -402,13 +402,13 @@ final class CommandHandler {
                                 }
                             }
                             if (i_9_ == -1) {
-                                Applet_Sub1.printConsole(("Java toolkit: " + Component329.decodedOperation1781(0, -85, i_10_)), i + -32);
-                                Applet_Sub1.printConsole(("SSE toolkit:  " + Component329.decodedOperation1781(2, -73, i_10_)), 60);
-                                Applet_Sub1.printConsole(("D3D toolkit:  " + Component329.decodedOperation1781(3, i + -24, i_10_)), i ^ ~0x11);
-                                Applet_Sub1.printConsole(("GL toolkit:   " + Component329.decodedOperation1781(1, -84, i_10_)), -121);
-                                Applet_Sub1.printConsole(("GLX toolkit:  " + Component329.decodedOperation1781(5, -77, i_10_)), -101);
+                                Applet_Sub1.printConsole(("Java toolkit: " + Component329.method1781(0, -85, i_10_)), i + -32);
+                                Applet_Sub1.printConsole(("SSE toolkit:  " + Component329.method1781(2, -73, i_10_)), 60);
+                                Applet_Sub1.printConsole(("D3D toolkit:  " + Component329.method1781(3, i + -24, i_10_)), i ^ ~0x11);
+                                Applet_Sub1.printConsole(("GL toolkit:   " + Component329.method1781(1, -84, i_10_)), -121);
+                                Applet_Sub1.printConsole(("GLX toolkit:  " + Component329.method1781(5, -77, i_10_)), -101);
                                 return;
-                            } else Applet_Sub1.printConsole(("Performance: " + Component329.decodedOperation1781(i_9_, -69, i_10_)), -84);
+                            } else Applet_Sub1.printConsole(("Performance: " + Component329.method1781(i_9_, -69, i_10_)), -84);
                             return;
                         }
                         if (string.equals("nonpcs")) {
@@ -417,13 +417,13 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equals("autoworld")) {
-                            HashNodeSub20.decodedOperation3283(127);
+                            HashNodeSub20.method3283(127);
                             Applet_Sub1.printConsole("auto world selected", -59);
                             return;
                         }
                         if (string.startsWith("switchworld")) {
                             int i_11_ = Integer.parseInt(string.substring(12));
-                            OggUrlStream.decodedOperation2972((DisplayModeManagerContainer348.decodedOperation1742(false, i_11_).aString5794), i_11_, -93);
+                            OggUrlStream.method2972((DisplayModeManagerContainer348.method1742(false, i_11_).aString5794), i_11_, -93);
                             Applet_Sub1.printConsole("switched", 70);
                             return;
                         }
@@ -460,18 +460,18 @@ final class CommandHandler {
                         }
                         if (string.equals("showcolmap")) {
                             Component121.aBoolean4542 = true;
-                            Component308.decodedOperation464(-1);
+                            Component308.method464(-1);
                             Applet_Sub1.printConsole("colmap is shown", 53);
                             return;
                         }
                         if (string.equals("hidecolmap")) {
                             Component121.aBoolean4542 = false;
-                            Component308.decodedOperation464(i ^ 0x4e);
+                            Component308.method464(i ^ 0x4e);
                             Applet_Sub1.printConsole("colmap is hidden", 61);
                             return;
                         }
                         if (string.equals("resetcache")) {
-                            NodeSub18.decodedOperation2938((byte) 122);
+                            NodeSub18.method2938((byte) 122);
                             Applet_Sub1.printConsole("Caches reset", -113);
                             return;
                         }
@@ -493,7 +493,7 @@ final class CommandHandler {
                             String[] strings = (DefinitionSub23.splitByChar(' ', true, string.substring(12)));
                             if (strings.length >= 2) {
                                 int i_17_ = (strings.length > 2 ? Integer.parseInt(strings[2]) : 0);
-                                Component193.decodedOperation1922(strings[1], i_17_, strings[0], true);
+                                Component193.method1922(strings[1], i_17_, strings[0], true);
                                 return;
                             }
                         }
@@ -515,11 +515,11 @@ final class CommandHandler {
                             return;
                         }
                         if (string.equals("soundstreamcount")) {
-                            Applet_Sub1.printConsole(("Active streams: " + PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2887()), 84);
+                            Applet_Sub1.printConsole(("Active streams: " + PlayerState.aClass348_Sub16_Sub4_7065.method2887()), 84);
                             return;
                         }
                         if (string.equals("autosetup")) {
-                            Component269.decodedOperation2478(1000);
+                            Component269.method2478(1000);
                             Applet_Sub1.printConsole(("Complete. Toolkit now: " + Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i + -32271)), -97);
                             return;
                         }
@@ -542,7 +542,7 @@ final class CommandHandler {
                         if (string.startsWith("w2debug")) {
                             int i_19_ = Integer.parseInt(string.substring(8, 9));
                             Component171.anInt10096 = i_19_;
-                            NodeSub20.decodedOperation2953((byte) -103);
+                            NodeSub20.method2953((byte) -103);
                             Applet_Sub1.printConsole("Toggled!", -99);
                             return;
                         }
@@ -554,8 +554,8 @@ final class CommandHandler {
                                 Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub3_7222), i_21_);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
-                                HashNodeSub3.decodedOperation3179(i + 79);
-                                if (Component192.preferences.aClass239_Sub3_7222.decodedOperation1727(-32350) == i_21_) {
+                                HashNodeSub3.method3179(i + 79);
+                                if (Component192.preferences.aClass239_Sub3_7222.method1727(-32350) == i_21_) {
                                     Applet_Sub1.printConsole("Successfully changed ortho mode", -82);
                                     return;
                                 } else Applet_Sub1.printConsole("Failed to change ortho mode", -112);
@@ -564,7 +564,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("orthozoom ")) {
-                            if (Component192.preferences.aClass239_Sub3_7222.decodedOperation1727(i + -32271) == 0) Applet_Sub1.printConsole("enable ortho mode first (use 'ortho <n>')", i + 182);
+                            if (Component192.preferences.aClass239_Sub3_7222.method1727(i + -32271) == 0) Applet_Sub1.printConsole("enable ortho mode first (use 'ortho <n>')", i + 182);
                             else {
                                 int i_22_ = (NodeSub41.parseInt(true, string.substring(string.indexOf(' ') - -1)));
                                 Component72.anInt1911 = i_22_;
@@ -577,7 +577,7 @@ final class CommandHandler {
                             int i_23_ = (NodeSub41.parseInt(true, string.substring(1 + string.indexOf(' '))));
                             Component134.anInt5812 = CacheStore.anInt666 = i_23_;
                             Applet_Sub1.printConsole("ortho tile size=" + i_23_, -70);
-                            HashNodeSub3.decodedOperation3179(0);
+                            HashNodeSub3.method3179(0);
                             return;
                         }
                         if (string.equals("orthocamlock")) {
@@ -618,12 +618,12 @@ final class CommandHandler {
                                 Applet_Sub1.printConsole("No such file", 120);
                                 return;
                             }
-                            byte[] is = ColoredText.decodedOperation1821(i ^ 0x41, file);
+                            byte[] is = ColoredText.method1821(i ^ 0x41, file);
                             if (is == null) {
                                 Applet_Sub1.printConsole("Failed to read file", 119);
                                 return;
                             }
-                            String[] strings = (DefinitionSub23.splitByChar('\n', true, (DisplayModeManagerContainer1.replaceChar(Component66.decodedOperation1795(is, true), (byte) -89, '\r', ""))));
+                            String[] strings = (DefinitionSub23.splitByChar('\n', true, (DisplayModeManagerContainer1.replaceChar(Component66.method1795(is, true), (byte) -89, '\r', ""))));
                             PauseHandler.runConsoleCommands(0, strings);
                         }
                         if (string.startsWith("zoom ")) {
@@ -632,7 +632,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("fps ") && (DisplayModeManagerContainer345.aClass364_165 != Component326.LIVE)) {
-                            DisplayModeManagerContainer61.decodedOperation2222((NodeSub41.parseInt(true, string.substring(4))), (byte) -124);
+                            DisplayModeManagerContainer61.method2222((NodeSub41.parseInt(true, string.substring(4))), (byte) -124);
                             return;
                         }
                     } catch (Exception exception) {

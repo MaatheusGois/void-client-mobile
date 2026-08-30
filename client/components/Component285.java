@@ -20,25 +20,25 @@ final class Component285
     int anInt976;
     int anInt977;
 
-    final int decodedOperation499(int i) {
+    final int method499(int i) {
         anInt972++;
         if (i != 21110) return -38;
         if ((aByte966 & 0x8) != 8) return 0;
         return 1;
     }
 
-    static final int decodedOperation500(int i, int i_0_) {
+    static final int method500(int i, int i_0_) {
         anInt975++;
         if (i != 7) return -107;
         return i_0_ >>> 8;
     }
 
-    public static void decodedOperation501(int i) {
+    public static void method501(int i) {
         aStringArray974 = null;
-        if (i != 1) decodedOperation501(-15);
+        if (i != 1) method501(-15);
     }
 
-    final int decodedOperation502(byte i) {
+    final int method502(byte i) {
         anInt971++;
         int i_1_ = 4 / ((3 - i) / 43);
         return aByte966 & 0x7;
@@ -48,7 +48,7 @@ final class Component285
         /* empty */
     }
 
-    static final void decodedOperation503(int i, int i_2_, byte i_3_, int i_4_, int i_5_) {
+    static final void method503(int i, int i_2_, byte i_3_, int i_4_, int i_5_) {
         anInt968++;
         int i_6_ = HashNodeSub16Sub2.anInt10463;
         while_4_:
@@ -73,7 +73,7 @@ final class Component285
             if (i > NodeSub3.anInt6585) NodeSub3.anInt6585 = i;
             return;
         } while (false);
-        if (i_3_ != -74) decodedOperation501(46);
+        if (i_3_ != -74) method501(46);
     }
 
     Component285(Buffer class348_sub49) {

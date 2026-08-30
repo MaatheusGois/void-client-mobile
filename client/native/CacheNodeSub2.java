@@ -21,7 +21,7 @@ final class CacheNodeSub2
     static int anInt10491;
     static NodeList aClass262_10492 = new NodeList();
 
-    final void decodedOperation3292(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    final void method3292(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         this.anInt10484 = i_1_;
         this.anInt10489 = i_3_;
         anInt10481++;
@@ -29,7 +29,7 @@ final class CacheNodeSub2
         if (i_2_ == 25053) this.anInt10482 = i_0_ + -i_3_;
     }
 
-    final void decodedOperation3293(byte i) {
+    final void method3293(byte i) {
         anInt10485++;
         int i_4_ = -1;
         int i_5_ = -8 + this.aByteArray10486.length;
@@ -48,7 +48,7 @@ final class CacheNodeSub2
         }
     }
 
-    final void decodedOperation3294(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+    final void method3294(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         anInt10491++;
         int i_12_ = 0;
         if (i_11_ != i_7_) i_12_ = (-i_6_ + i_9_ << 16) / (i_11_ + -i_7_);
@@ -75,13 +75,13 @@ final class CacheNodeSub2
                     i_11_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_7_, -36, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -36, 0, this.aByteArray10486, i >> 16);
                         i_6_ += i_12_;
                         i_7_ += this.anInt10482;
                         i += i_15_;
                     }
                     while (--i_10_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_7_, -104, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_7_, -104, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_7_ += this.anInt10482;
                         i_9_ += i_14_;
@@ -91,13 +91,13 @@ final class CacheNodeSub2
                     i_11_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_7_, -111, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -111, 0, this.aByteArray10486, i_6_ >> 16);
                         i_7_ += this.anInt10482;
                         i += i_15_;
                         i_6_ += i_12_;
                     }
                     while (--i_10_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_7_, -120, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -120, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_14_;
                         i_7_ += this.anInt10482;
                         i += i_15_;
@@ -120,13 +120,13 @@ final class CacheNodeSub2
                     i_10_ -= i_7_;
                     i_7_ = this.anInt10482 * i_7_;
                     while (--i_10_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_7_, -75, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -75, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_15_;
                         i_7_ += this.anInt10482;
                         i_6_ += i_12_;
                     }
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_7_, -62, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_7_, -62, 0, this.aByteArray10486, i >> 16);
                         i_7_ += this.anInt10482;
                         i_6_ += i_12_;
                         i += i_14_;
@@ -136,13 +136,13 @@ final class CacheNodeSub2
                     i_10_ -= i_7_;
                     i_7_ *= this.anInt10482;
                     while (--i_10_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_7_, -102, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_7_, -102, 0, this.aByteArray10486, i_6_ >> 16);
                         i_7_ += this.anInt10482;
                         i_9_ += i_15_;
                         i_6_ += i_12_;
                     }
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_7_, -92, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_7_, -92, 0, this.aByteArray10486, i_6_ >> 16);
                         i += i_14_;
                         i_6_ += i_12_;
                         i_7_ += this.anInt10482;
@@ -167,13 +167,13 @@ final class CacheNodeSub2
                     i_11_ -= i_10_;
                     i_10_ = this.anInt10482 * i_10_;
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_10_, -68, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -68, 0, this.aByteArray10486, i_6_ >> 16);
                         i_6_ += i_14_;
                         i_10_ += this.anInt10482;
                         i += i_15_;
                     }
                     while (--i_7_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_10_, -101, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -101, 0, this.aByteArray10486, i_9_ >> 16);
                         i_9_ += i_12_;
                         i += i_15_;
                         i_10_ += this.anInt10482;
@@ -183,13 +183,13 @@ final class CacheNodeSub2
                     i_11_ -= i_10_;
                     i_10_ *= this.anInt10482;
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_10_, -99, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_10_, -99, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_6_ += i_14_;
                         i_10_ += this.anInt10482;
                     }
                     while (--i_7_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_10_, -122, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -122, 0, this.aByteArray10486, i >> 16);
                         i += i_15_;
                         i_9_ += i_12_;
                         i_10_ += this.anInt10482;
@@ -212,13 +212,13 @@ final class CacheNodeSub2
                     i_7_ -= i_10_;
                     i_10_ = this.anInt10482 * i_10_;
                     while (--i_7_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_10_, -36, 0, this.aByteArray10486, i >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -36, 0, this.aByteArray10486, i >> 16);
                         i_10_ += this.anInt10482;
                         i += i_15_;
                         i_9_ += i_14_;
                     }
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_10_, -48, 0, this.aByteArray10486, i_6_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_10_, -48, 0, this.aByteArray10486, i_6_ >> 16);
                         i_9_ += i_14_;
                         i_6_ += i_12_;
                         i_10_ += this.anInt10482;
@@ -228,13 +228,13 @@ final class CacheNodeSub2
                     i_7_ -= i_10_;
                     i_10_ *= this.anInt10482;
                     while (--i_7_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_10_, -83, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i >> 16, i_10_, -83, 0, this.aByteArray10486, i_9_ >> 16);
                         i += i_15_;
                         i_9_ += i_14_;
                         i_10_ += this.anInt10482;
                     }
                     while (--i_11_ >= 0) {
-                        DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_10_, -104, 0, this.aByteArray10486, i_9_ >> 16);
+                        DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_10_, -104, 0, this.aByteArray10486, i_9_ >> 16);
                         i_10_ += this.anInt10482;
                         i_9_ += i_14_;
                         i_6_ += i_12_;
@@ -258,13 +258,13 @@ final class CacheNodeSub2
                 i_7_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_7_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_11_, -62, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i >> 16, i_11_, -62, 0, this.aByteArray10486, i_9_ >> 16);
                     i += i_12_;
                     i_9_ += i_14_;
                     i_11_ += this.anInt10482;
                 }
                 while (--i_10_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_11_, -66, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -66, 0, this.aByteArray10486, i_9_ >> 16);
                     i_6_ += i_15_;
                     i_9_ += i_14_;
                     i_11_ += this.anInt10482;
@@ -274,13 +274,13 @@ final class CacheNodeSub2
                 i_7_ -= i_11_;
                 i_11_ *= this.anInt10482;
                 while (--i_7_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_11_, -67, 0, this.aByteArray10486, i >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -67, 0, this.aByteArray10486, i >> 16);
                     i_9_ += i_14_;
                     i += i_12_;
                     i_11_ += this.anInt10482;
                 }
                 while (--i_10_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_11_, -108, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -108, 0, this.aByteArray10486, i_6_ >> 16);
                     i_9_ += i_14_;
                     i_6_ += i_15_;
                     i_11_ += this.anInt10482;
@@ -303,13 +303,13 @@ final class CacheNodeSub2
                 i_10_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_10_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_9_ >> 16, i_11_, -85, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_9_ >> 16, i_11_, -85, 0, this.aByteArray10486, i_6_ >> 16);
                     i_6_ += i_12_;
                     i_11_ += this.anInt10482;
                     i_9_ += i_14_;
                 }
                 while (--i_7_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i >> 16, i_11_, -92, 0, this.aByteArray10486, i_6_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i >> 16, i_11_, -92, 0, this.aByteArray10486, i_6_ >> 16);
                     i_11_ += this.anInt10482;
                     i += i_15_;
                     i_6_ += i_12_;
@@ -319,13 +319,13 @@ final class CacheNodeSub2
                 i_10_ -= i_11_;
                 i_11_ = this.anInt10482 * i_11_;
                 while (--i_10_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_11_, -113, 0, this.aByteArray10486, i_9_ >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -113, 0, this.aByteArray10486, i_9_ >> 16);
                     i_11_ += this.anInt10482;
                     i_6_ += i_12_;
                     i_9_ += i_14_;
                 }
                 while (--i_7_ >= 0) {
-                    DisplayModeManagerContainer42.decodedOperation2289(i_6_ >> 16, i_11_, -125, 0, this.aByteArray10486, i >> 16);
+                    DisplayModeManagerContainer42.method2289(i_6_ >> 16, i_11_, -125, 0, this.aByteArray10486, i >> 16);
                     i_6_ += i_12_;
                     i += i_15_;
                     i_11_ += this.anInt10482;
@@ -334,14 +334,14 @@ final class CacheNodeSub2
         }
     }
 
-    public static void decodedOperation3295(int i) {
+    public static void method3295(int i) {
         aClass45_10480 = null;
         aClass252_10488 = null;
         aClass262_10492 = null;
-        if (i != -1) decodedOperation3295(109);
+        if (i != -1) method3295(109);
     }
 
-    final boolean decodedOperation3296(byte i, int i_16_, int i_17_) {
+    final boolean method3296(byte i, int i_16_, int i_17_) {
         int i_18_ = 65 % ((i - 45) / 39);
         anInt10490++;
         return i_16_ * i_17_ <= this.aByteArray10486.length;
@@ -351,7 +351,7 @@ final class CacheNodeSub2
         this.aByteArray10486 = new byte[i * i_19_];
     }
 
-    static final Component269 decodedOperation3297(int i, int i_20_, int i_21_) {
+    static final Component269 method3297(int i, int i_20_, int i_21_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_20_][i_21_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub4_4406;

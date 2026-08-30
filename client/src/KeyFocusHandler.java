@@ -128,7 +128,7 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
     static final void setClientVarp(int i, int i_6_, int i_7_, byte i_8_) {
         anInt6536++;
         DisplayModeManagerContainer56 class190 = NodeList.aClass190ArrayArray3335[i_6_][i_7_];
-        if (i_8_ == -13) DisplayModeManagerContainer254.decodedOperation1260(false, i, (class190 == null ? FriendsIgnoreList.aClass190_3547 : class190));
+        if (i_8_ == -13) DisplayModeManagerContainer254.method1260(false, i, (class190 == null ? FriendsIgnoreList.aClass190_3547 : class190));
     }
 
     private final int modifierFlags(byte i) {
@@ -211,7 +211,7 @@ final class KeyFocusHandler extends InputHandler implements KeyListener, FocusLi
     }
 
     KeyFocusHandler(Component component) {
-        Component182.decodedOperation3402((byte) -82);
+        Component182.method3402((byte) -82);
         attachListeners(component, 2);
     }
 }

@@ -20,7 +20,7 @@ final class Component117
     static int anInt4372;
     private Interface15 anInterface15_4373;
 
-    static final void decodedOperation3470(int i) {
+    static final void method3470(int i) {
         if (i == 1) {
             anInt4371++;
             if (!Cp1252Decoder.aBoolean5224) {
@@ -31,7 +31,7 @@ final class Component117
         }
     }
 
-    final HashNodeSub10 decodedOperation3471(int i, byte i_0_) {
+    final HashNodeSub10 method3471(int i, byte i_0_) {
         anInt4363++;
         HashNodeSub10 class348_sub42_sub10 = (HashNodeSub10) aClass60_4362.get(i, 70);
         if (class348_sub42_sub10 != null) return class348_sub42_sub10;
@@ -40,14 +40,14 @@ final class Component117
         else is = aClass45_4368.getFile(-1860, 1, i);
         class348_sub42_sub10 = new HashNodeSub10();
         class348_sub42_sub10.aClass355_9567 = this;
-        if (is != null) class348_sub42_sub10.decodedOperation3218(new Buffer(is), 0);
-        if (i_0_ >= -86) decodedOperation3473(-12);
-        if (i >= 32768) class348_sub42_sub10.decodedOperation3209(false);
+        if (is != null) class348_sub42_sub10.method3218(new Buffer(is), 0);
+        if (i_0_ >= -86) method3473(-12);
+        if (i >= 32768) class348_sub42_sub10.method3209(false);
         aClass60_4362.putOne(class348_sub42_sub10, i, (byte) -125);
         return class348_sub42_sub10;
     }
 
-    final String decodedOperation3472(long l, int[] is, int i, Component161 class138) {
+    final String method3472(long l, int[] is, int i, Component161 class138) {
         try {
             if (i != -1) aClass45_4368 = null;
             anInt4370++;
@@ -61,7 +61,7 @@ final class Component117
         }
     }
 
-    public static void decodedOperation3473(int i) {
+    public static void method3473(int i) {
         if (i != 12949) anInt4372 = -30;
         anObject4366 = null;
     }

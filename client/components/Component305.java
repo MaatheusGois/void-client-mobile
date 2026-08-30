@@ -13,7 +13,7 @@ final class Component305
     static NodeList aClass262_9931 = new NodeList();
     static int[] anIntArray9932 = new int[1000];
 
-    public static void decodedOperation190(byte i) {
+    public static void method190(byte i) {
         if (i < 23) anIntArray9932 = null;
         aClass207Array9929 = null;
         aClass262_9931 = null;
@@ -27,8 +27,8 @@ final class Component305
     final void method186(int i, int i_1_, byte i_2_, int i_3_, int i_4_) {
         if (i_2_ <= 21) aClass207Array9929 = null;
         anInt9928++;
-        int i_5_ = this.aClass105_8350.decodedOperation966();
-        int i_6_ = (((DummyClass) this.aClass369_4635).anInt10177 * ShaderSub2.decodedOperation163(512) / 10 % i_5_);
-        this.aClass105_8350.decodedOperation972(i_3_ - (i_5_ - i_6_), i, -i_6_ + (i_4_ - -i_5_), i_1_);
+        int i_5_ = this.aClass105_8350.method966();
+        int i_6_ = (((DummyClass) this.aClass369_4635).anInt10177 * ShaderSub2.method163(512) / 10 % i_5_);
+        this.aClass105_8350.method972(i_3_ - (i_5_ - i_6_), i, -i_6_ + (i_4_ - -i_5_), i_1_);
     }
 }

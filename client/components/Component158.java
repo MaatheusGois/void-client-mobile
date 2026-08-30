@@ -20,7 +20,7 @@ final class Component158
         throw new IllegalStateException();
     }
 
-    public static void decodedOperation288(byte i) {
+    public static void method288(byte i) {
         aClass45_322 = null;
         if (i > 93) {
             aHa326 = null;
@@ -28,7 +28,7 @@ final class Component158
         }
     }
 
-    static final void decodedOperation289(int i, int i_0_, int i_1_, int i_2_) {
+    static final void method289(int i, int i_0_, int i_1_, int i_2_) {
         anInt324++;
         if (Component381.anInt8583 != i_2_ || DisplayModeManagerContainer61.anInt3760 != i_0_ || i_1_ != DisplayModeManagerContainer91.anInt396) {
             Component381.anInt8583 = i_2_;
@@ -45,7 +45,7 @@ final class Component158
             ColorTagNode.aDouble6774 = d_7_;
             DisplayModeManagerContainer61.aDouble3761 = d_6_;
             NodeSub16Sub2.aDouble8869 = d_4_ * d_6_;
-            if (i != -15902) decodedOperation288((byte) -120);
+            if (i != -15902) method288((byte) -120);
             DefinitionGroup.aDouble9531 = d_7_ * -d_4_;
             Component186.aDouble4404 = d_5_;
             Component144.aDouble3980 = 0.0;

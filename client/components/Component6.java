@@ -16,9 +16,9 @@ final class Component6
     int anInt4476;
     static Component183 aClass114_4477;
 
-    public static void decodedOperation3518(int i) {
+    public static void method3518(int i) {
         aClass262_4473 = null;
-        if (i != 88) decodedOperation3518(-49);
+        if (i != 88) method3518(-49);
         aClass114_4477 = null;
     }
 

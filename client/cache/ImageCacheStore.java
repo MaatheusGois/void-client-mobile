@@ -28,8 +28,8 @@ final class ImageCacheStore {
     boolean cacheMiss;
     static Component17 aClass308_4036;
 
-    static final int decodedOperation2552(boolean bool, int i, int i_0_, int i_1_) {
-        if (i_1_ != -24667) decodedOperation2554((byte) 95);
+    static final int method2552(boolean bool, int i, int i_0_, int i_1_) {
+        if (i_1_ != -24667) method2554((byte) 95);
         anInt4023++;
         NodeSub13 class348_sub13 = AbstractGlTextureSub4.getContainerNode((byte) 4, i, bool);
         if (class348_sub13 == null) return -1;
@@ -45,7 +45,7 @@ final class ImageCacheStore {
         return buffers;
     }
 
-    static final void decodedOperation2554(byte i) {
+    static final void method2554(byte i) {
         if (i != -45) anInt4032 = 61;
         anInt4030++;
         if (Component37.anInt3931 == 1 || Component37.anInt3931 == 3 || (Component37.anInt3931 != Component178.anInt1447 && (Component37.anInt3931 == 0 || Component178.anInt1447 == 0))) {
@@ -56,21 +56,21 @@ final class ImageCacheStore {
         Component178.anInt1447 = Component37.anInt3931;
     }
 
-    public static void decodedOperation2555(byte i) {
-        if (i != 28) decodedOperation2554((byte) 21);
+    public static void method2555(byte i) {
+        if (i != 28) method2554((byte) 21);
         anIntArray4031 = null;
         aClass114_4027 = null;
         aClass308_4036 = null;
     }
 
-    static final void decodedOperation2556(boolean bool, int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void method2556(boolean bool, int i, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt4028++;
         int i_3_ = -1;
         int i_4_ = 0;
-        if (OpenGlShader.clientCycle < class318_sub1_sub3_sub3.anInt10239) RadixText.decodedOperation1834(class318_sub1_sub3_sub3, (byte) -16);
-        else if (OpenGlShader.clientCycle <= (class318_sub1_sub3_sub3.anInt10300)) Component362.decodedOperation1041(-1, class318_sub1_sub3_sub3);
+        if (OpenGlShader.clientCycle < class318_sub1_sub3_sub3.anInt10239) RadixText.method1834(class318_sub1_sub3_sub3, (byte) -16);
+        else if (OpenGlShader.clientCycle <= (class318_sub1_sub3_sub3.anInt10300)) Component362.method1041(-1, class318_sub1_sub3_sub3);
         else {
-            Component386.decodedOperation1600(false, 0, class318_sub1_sub3_sub3);
+            Component386.method1600(false, 0, class318_sub1_sub3_sub3);
             i_3_ = Component366.anInt3062;
             i_4_ = Component162.anInt8387;
         }
@@ -101,16 +101,16 @@ final class ImageCacheStore {
             class318_sub1_sub3_sub3.y = (512 * (class318_sub1_sub3_sub3.anIntArray10317[0]) + 256 * class318_sub1_sub3_sub3.getSize((byte) 115));
             class318_sub1_sub3_sub3.resetCombat(54);
         }
-        int i_5_ = NodeSub8.decodedOperation2774((byte) 108, class318_sub1_sub3_sub3);
-        NodeBaseSub2.decodedOperation3443(true, class318_sub1_sub3_sub3);
-        DisplayModeManagerContainer5.decodedOperation729(i_3_, i_5_, (byte) 67, class318_sub1_sub3_sub3, i_4_);
-        Component140.decodedOperation3208(class318_sub1_sub3_sub3, i_3_, -98);
-        GameType.decodedOperation1635(-69, class318_sub1_sub3_sub3);
+        int i_5_ = NodeSub8.method2774((byte) 108, class318_sub1_sub3_sub3);
+        NodeBaseSub2.method3443(true, class318_sub1_sub3_sub3);
+        DisplayModeManagerContainer5.method729(i_3_, i_5_, (byte) 67, class318_sub1_sub3_sub3, i_4_);
+        Component140.method3208(class318_sub1_sub3_sub3, i_3_, -98);
+        GameType.method1635(-69, class318_sub1_sub3_sub3);
     }
 
     final int[][] getPixels(int i, int i_6_) {
         anInt4034++;
-        if (i >= -75) decodedOperation2554((byte) -61);
+        if (i >= -75) method2554((byte) -61);
         if (capacity != imageCount) {
             if (capacity == 1) {
                 this.cacheMiss = i_6_ != singleImageId;

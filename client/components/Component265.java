@@ -24,7 +24,7 @@ final class Component265
     static Component150 aClass227_1591 = new Component150(1);
     private int anInt1592;
 
-    final void decodedOperation884(int i, boolean bool, int i_0_, int i_1_, byte i_2_, boolean bool_3_) {
+    final void method884(int i, boolean bool, int i_0_, int i_1_, byte i_2_, boolean bool_3_) {
         anInt1587++;
         bool_3_ &= aHa_Sub2_1581.method3639();
         if (!bool_3_ && (i_0_ == 4 || i_0_ == 8 || i_0_ == 9)) {
@@ -53,15 +53,15 @@ final class Component265
         if (i_2_ <= 9) aClass83_1582 = null;
     }
 
-    final boolean decodedOperation885(int i, byte i_4_, AbstractGlTexture class258) {
+    final boolean method885(int i, byte i_4_, AbstractGlTexture class258) {
         anInt1590++;
         if (anInt1578 == 0) return false;
-        if (i_4_ != -124) decodedOperation889((byte) 99, 7);
+        if (i_4_ != -124) method889((byte) 99, 7);
         aClass286Array1588[0x7fffffff & anInt1578].method2140(class258, (byte) -98, i);
         return true;
     }
 
-    public static void decodedOperation886(int i) {
+    public static void method886(int i) {
         aClass356_1585 = null;
         aClass78Array1579 = null;
         if (i != 16) aClass78Array1579 = null;
@@ -69,12 +69,12 @@ final class Component265
         aClass227_1591 = null;
     }
 
-    static final void decodedOperation887(DisplayModeManagerContainer57 class46, int i, int i_5_, int i_6_) {
+    static final void method887(DisplayModeManagerContainer57 class46, int i, int i_5_, int i_6_) {
         if (i_6_ == 2147483647) {
             anInt1589++;
-            if (Component156.aClass46_3701 == null && !Component364.aBoolean8335 && (class46 != null && (Exception_Sub1.decodedOperation141(class46, (byte) -79) != null))) {
+            if (Component156.aClass46_3701 == null && !Component364.aBoolean8335 && (class46 != null && (Exception_Sub1.method141(class46, (byte) -79) != null))) {
                 Component156.aClass46_3701 = class46;
-                Component374.aClass46_4130 = Exception_Sub1.decodedOperation141(class46, (byte) -117);
+                Component374.aClass46_4130 = Exception_Sub1.method141(class46, (byte) -117);
                 RenderableObject.anInt6392 = 0;
                 Component386.anInt2872 = i_5_;
                 RenderableSub4.anInt6411 = i;
@@ -86,14 +86,14 @@ final class Component265
     /** Tip priority for option slot {@code i_7_} ({@link DisplayModeManagerContainer57#optionPriorities}), or {@code -1}. */
     static final int getOptionPriority(byte i, int i_7_, DisplayModeManagerContainer57 class46) {
         anInt1580++;
-        if (i != 57) decodedOperation886(7);
+        if (i != 57) method886(7);
         if (!client.getComponentSettings(class46).hasOption(i_7_, false) && class46.optionScripts == null) return -1;
         if (class46.optionPriorities != null && i_7_ < class46.optionPriorities.length) return class46.optionPriorities[i_7_];
         return -1;
     }
 
-    final boolean decodedOperation889(byte i, int i_8_) {
-        if (i >= -45) decodedOperation885(7, (byte) -70, null);
+    final boolean method889(byte i, int i_8_) {
+        if (i >= -45) method885(7, (byte) -70, null);
         anInt1577++;
         return aClass286Array1588[i_8_].method2137(-112);
     }

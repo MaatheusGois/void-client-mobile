@@ -26,19 +26,19 @@ final class Component314
         }
     }
 
-    static final void decodedOperation2298(byte i, String string) {
+    static final void method2298(byte i, String string) {
         anInt3876++;
         if (RequestProcessor.aClass19Array2261 != null) {
             DisplayModeManagerContainer96.anInt4698++;
             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component186.aClass351_4405, DisplayModeManagerContainer64.aClass77_9029, -97);
-            class348_sub47.particleBuffer.writeByte(false, Component31.decodedOperation1745(string, -65));
+            class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
             class348_sub47.particleBuffer.writeString((byte) -5, string);
             if (i > -50) createOpenGLToolkit(104, 26, null, null, -19);
             HashNodeSub14.enqueueOutboundPacket(-43, class348_sub47);
         }
     }
 
-    public static void decodedOperation2299(byte i) {
+    public static void method2299(byte i) {
         anIntArray3873 = null;
         if (i != -128) createOpenGLToolkit(66, -48, null, null, 100);
     }

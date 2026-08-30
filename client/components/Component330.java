@@ -15,21 +15,21 @@ final class Component330
     static int regionTileY;
     static int[] anIntArray1518 = new int[14];
 
-    public static void decodedOperation852(int i) {
+    public static void method852(int i) {
         aClass273_1512 = null;
         if (i != 6) aLong1516 = 20L;
         anIntArray1518 = null;
     }
 
-    static final void decodedOperation853(byte i) {
+    static final void method853(byte i) {
         anInt1515++;
         int i_0_ = Component80.packetBuffer.readUnsignedByte(255);
         int i_1_ = Component80.packetBuffer.readShortAddLittle(-121);
         boolean bool = Component80.packetBuffer.readUnsignedByte(i + 156) == 1;
         int i_2_ = Component80.packetBuffer.readShortAdd(i + -172);
         Component37.anInt3931 = Component80.packetBuffer.readByteAdd((byte) -112);
-        ImageCacheStore.decodedOperation2554((byte) -45);
-        DefinitionSub22.decodedOperation3111(125, i_0_);
+        ImageCacheStore.method2554((byte) -45);
+        DefinitionSub22.method3111(125, i_0_);
         Component80.packetBuffer.startBitAccess(-122);
         for (int i_3_ = 0; i_3_ < 4; i_3_++) {
             for (int i_4_ = 0; (AbstractShaderSub4.anInt7319 >> 3 > i_4_); i_4_++) {
@@ -44,7 +44,7 @@ final class Component330
         int i_7_ = (-Component80.packetBuffer.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_7_][4];
         int i_8_ = 0;
-        if (i != 99) decodedOperation852(-55);
+        if (i != 99) method852(-55);
         for (/**/; i_8_ < i_7_; i_8_++) {
             for (int i_9_ = 0; i_9_ < 4; i_9_++)
                 Component31.anIntArrayArray5894[i_8_][i_9_] = Component80.packetBuffer.readInt((byte) -126);
@@ -89,14 +89,14 @@ final class Component330
                 }
             }
         }
-        NodeSub41.decodedOperation3157(i_1_, (byte) 124, i_2_, 11, bool);
+        NodeSub41.method3157(i_1_, (byte) 124, i_2_, 11, bool);
     }
 
     public Component330() {
         /* empty */
     }
 
-    static final void decodedOperation854(byte i) {
+    static final void method854(byte i) {
         anInt1513++;
         if (Component241.anInt2955 == 5 && i < -48) Component241.anInt2955 = 6;
     }

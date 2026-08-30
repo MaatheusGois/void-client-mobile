@@ -25,14 +25,14 @@ final class ColorTagNode extends Node {
     int anInt6782;
     boolean aBoolean6783;
 
-    public static void decodedOperation2810(byte i) {
+    public static void method2810(byte i) {
         anIntArray6770 = null;
         anIntArray6775 = null;
         if (i != 79) method2814(null, 57);
         anIntArrayArray6780 = null;
     }
 
-    static final void decodedOperation2811(boolean bool) {
+    static final void method2811(boolean bool) {
         anInt6777++;
         if (NodeSub36.anInt6992 < 0) {
             NodeSub36.anInt6992 = 0;
@@ -57,16 +57,16 @@ final class ColorTagNode extends Node {
         if (bool != false) aDouble6774 = 1.5874482848681375;
     }
 
-    static final String decodedOperation2812(int i, HashNodeSub13 class348_sub42_sub13) {
+    static final String method2812(int i, HashNodeSub13 class348_sub42_sub13) {
         anInt6779++;
-        if (i != -44) decodedOperation2812(91, null);
+        if (i != -44) method2812(91, null);
         return (class348_sub42_sub13.aString9617 + " <col=ffffff>>");
     }
 
-    static final void decodedOperation2813(boolean bool, int i, int i_0_) {
+    static final void method2813(boolean bool, int i, int i_0_) {
         anInt6778++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_0_, (byte) 105, 7);
-        class348_sub42_sub15.decodedOperation3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_0_, (byte) 105, 7);
+        class348_sub42_sub15.method3246(-25490);
         if (bool != true) anInt6769 = -113;
         class348_sub42_sub15.anInt9652 = i;
     }

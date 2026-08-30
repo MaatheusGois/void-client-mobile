@@ -19,7 +19,7 @@ final class OpenGLMatrix
 
     private final native void NA(long l, int i);
 
-    final void decodedOperation891(int i, int i_0_, int i_1_) {
+    final void method891(int i, int i_0_, int i_1_) {
         a(this.nativeid, i, i_0_, i_1_);
     }
 
@@ -92,7 +92,7 @@ final class OpenGLMatrix
     private final native void a(long l, int i, int i_27_, int i_28_);
 
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     final void method896(int i) {
@@ -113,7 +113,7 @@ final class OpenGLMatrix
         la();
     }
 
-    final void decodedOperation894(int i, int i_30_, int i_31_) {
+    final void method894(int i, int i_30_, int i_31_) {
         FA(this.nativeid, i, i_30_, i_31_);
     }
 

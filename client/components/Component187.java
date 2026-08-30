@@ -9,7 +9,7 @@ final class Component187
  */ {
     private static DisplayModeManagerContainer172 aClass40_2750 = new DisplayModeManagerContainer172();
 
-    private static final int decodedOperation1545(int i, DisplayModeManagerContainer172 class40) {
+    private static final int method1545(int i, DisplayModeManagerContainer172 class40) {
         for (; ; ) {
             if (class40.anInt546 >= i) {
                 int i_0_ = ((class40.anInt554 >> class40.anInt546 - i) & (1 << i) - 1);
@@ -71,8 +71,8 @@ final class Component187
         }
     }
 
-    private static final byte decodedOperation1548(DisplayModeManagerContainer172 class40) {
-        return (byte) decodedOperation1545(8, class40);
+    private static final byte method1548(DisplayModeManagerContainer172 class40) {
+        return (byte) method1545(8, class40);
     }
 
     private static final void method1549(DisplayModeManagerContainer172 class40) {
@@ -185,7 +185,7 @@ final class Component187
         }
     }
 
-    public static void decodedOperation1551() {
+    public static void method1551() {
         aClass40_2750 = null;
     }
 
@@ -216,27 +216,27 @@ final class Component187
         if (ParticleShader.anIntArray6228 == null) ParticleShader.anIntArray6228 = new int[class40.anInt526 * 100000];
         boolean bool_50_ = true;
         while (bool_50_) {
-            byte i_51_ = decodedOperation1548(class40);
+            byte i_51_ = method1548(class40);
             if (i_51_ == 23) break;
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1548(class40);
-            i_51_ = decodedOperation1553(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1548(class40);
+            i_51_ = method1553(class40);
             class40.anInt530 = 0;
-            int i_52_ = decodedOperation1548(class40);
+            int i_52_ = method1548(class40);
             class40.anInt530 = class40.anInt530 << 8 | i_52_ & 0xff;
-            i_52_ = decodedOperation1548(class40);
+            i_52_ = method1548(class40);
             class40.anInt530 = class40.anInt530 << 8 | i_52_ & 0xff;
-            i_52_ = decodedOperation1548(class40);
+            i_52_ = method1548(class40);
             class40.anInt530 = class40.anInt530 << 8 | i_52_ & 0xff;
             for (int i_53_ = 0; i_53_ < 16; i_53_++) {
-                i_51_ = decodedOperation1553(class40);
+                i_51_ = method1553(class40);
                 class40.aBooleanArray532[i_53_] = i_51_ == 1;
             }
             for (int i_54_ = 0; i_54_ < 256; i_54_++)
@@ -244,19 +244,19 @@ final class Component187
             for (int i_55_ = 0; i_55_ < 16; i_55_++) {
                 if (class40.aBooleanArray532[i_55_]) {
                     for (int i_56_ = 0; i_56_ < 16; i_56_++) {
-                        i_51_ = decodedOperation1553(class40);
+                        i_51_ = method1553(class40);
                         if (i_51_ == 1) class40.aBooleanArray523[(i_55_ * 16 + i_56_)] = true;
                     }
                 }
             }
             method1550(class40);
             int i_57_ = class40.anInt541 + 2;
-            int i_58_ = decodedOperation1545(3, class40);
-            int i_59_ = decodedOperation1545(15, class40);
+            int i_58_ = method1545(3, class40);
+            int i_59_ = method1545(15, class40);
             for (int i_60_ = 0; i_60_ < i_59_; i_60_++) {
                 int i_61_ = 0;
                 for (; ; ) {
-                    i_51_ = decodedOperation1553(class40);
+                    i_51_ = method1553(class40);
                     if (i_51_ == 0) break;
                     i_61_++;
                 }
@@ -274,12 +274,12 @@ final class Component187
                 class40.aByteArray531[i_64_] = i_66_;
             }
             for (int i_67_ = 0; i_67_ < i_58_; i_67_++) {
-                int i_68_ = decodedOperation1545(5, class40);
+                int i_68_ = method1545(5, class40);
                 for (int i_69_ = 0; i_69_ < i_57_; i_69_++) {
                     for (; ; ) {
-                        i_51_ = decodedOperation1553(class40);
+                        i_51_ = method1553(class40);
                         if (i_51_ == 0) break;
-                        i_51_ = decodedOperation1553(class40);
+                        i_51_ = method1553(class40);
                         if (i_51_ == 0) i_68_++;
                         else i_68_--;
                     }
@@ -323,9 +323,9 @@ final class Component187
             int i_83_ = i;
             int i_84_;
             int i_85_;
-            for (i_85_ = decodedOperation1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
+            for (i_85_ = method1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
                 i_83_++;
-                i_84_ = decodedOperation1553(class40);
+                i_84_ = method1553(class40);
             }
             int i_86_ = is_49_[i_85_ - is_48_[i_83_]];
             while (i_86_ != i_74_) {
@@ -347,9 +347,9 @@ final class Component187
                         }
                         i_76_--;
                         i_83_ = i;
-                        for (i_85_ = decodedOperation1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
+                        for (i_85_ = method1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
                             i_83_++;
-                            i_84_ = decodedOperation1553(class40);
+                            i_84_ = method1553(class40);
                         }
                         i_86_ = is_49_[i_85_ - is_48_[i_83_]];
                     } while (i_86_ == 0 || i_86_ == 1);
@@ -414,9 +414,9 @@ final class Component187
                     }
                     i_76_--;
                     i_83_ = i;
-                    for (i_85_ = decodedOperation1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
+                    for (i_85_ = method1545(i_83_, class40); i_85_ > is[i_83_]; i_85_ = i_85_ << 1 | i_84_) {
                         i_83_++;
-                        i_84_ = decodedOperation1553(class40);
+                        i_84_ = method1553(class40);
                     }
                     i_86_ = is_49_[i_85_ - is_48_[i_83_]];
                 }
@@ -445,7 +445,7 @@ final class Component187
         }
     }
 
-    private static final byte decodedOperation1553(DisplayModeManagerContainer172 class40) {
-        return (byte) decodedOperation1545(1, class40);
+    private static final byte method1553(DisplayModeManagerContainer172 class40) {
+        return (byte) method1545(1, class40);
     }
 }

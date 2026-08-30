@@ -11,12 +11,12 @@ final class Component277
     private int anInt3968;
     private final Component202[] aClass80Array3969;
 
-    final NodeSub19Sub1 decodedOperation2369() {
-        byte[] is = decodedOperation2371();
+    final NodeSub19Sub1 method2369() {
+        byte[] is = method2371();
         return new NodeSub19Sub1(22050, is, 22050 * anInt3967 / 1000, 22050 * anInt3968 / 1000);
     }
 
-    final int decodedOperation2370() {
+    final int method2370() {
         int i = 9999999;
         for (int i_0_ = 0; i_0_ < 10; i_0_++) {
             if (aClass80Array3969[i_0_] != null && aClass80Array3969[i_0_].anInt1407 / 20 < i) i = aClass80Array3969[i_0_].anInt1407 / 20;
@@ -33,7 +33,7 @@ final class Component277
         return i;
     }
 
-    private final byte[] decodedOperation2371() {
+    private final byte[] method2371() {
         int i = 0;
         for (int i_2_ = 0; i_2_ < 10; i_2_++) {
             if (aClass80Array3969[i_2_] != null && (aClass80Array3969[i_2_].anInt1421 + aClass80Array3969[i_2_].anInt1407) > i) i = (aClass80Array3969[i_2_].anInt1421 + aClass80Array3969[i_2_].anInt1407);
@@ -45,7 +45,7 @@ final class Component277
             if (aClass80Array3969[i_4_] != null) {
                 int i_5_ = (aClass80Array3969[i_4_].anInt1421 * 22050 / 1000);
                 int i_6_ = (aClass80Array3969[i_4_].anInt1407 * 22050 / 1000);
-                int[] is_7_ = (aClass80Array3969[i_4_].decodedOperation809(i_5_, aClass80Array3969[i_4_].anInt1421));
+                int[] is_7_ = (aClass80Array3969[i_4_].method809(i_5_, aClass80Array3969[i_4_].anInt1421));
                 for (int i_8_ = 0; i_8_ < i_5_; i_8_++) {
                     int i_9_ = is[i_8_ + i_6_] + (is_7_[i_8_] >> 8);
                     if ((i_9_ + 128 & ~0xff) != 0) i_9_ = i_9_ >> 31 ^ 0x7f;
@@ -63,7 +63,7 @@ final class Component277
             if (i_10_ != 0) {
                 class348_sub49.offset--;
                 aClass80Array3969[i] = new Component202();
-                aClass80Array3969[i].decodedOperation807(class348_sub49);
+                aClass80Array3969[i].method807(class348_sub49);
             }
         }
         anInt3967 = class348_sub49.readUnsignedShort(842397944);
@@ -74,7 +74,7 @@ final class Component277
         aClass80Array3969 = new Component202[10];
     }
 
-    static final Component277 decodedOperation2372(CacheStore class45, int i, int i_11_) {
+    static final Component277 method2372(CacheStore class45, int i, int i_11_) {
         byte[] is = class45.getFile(-1860, i, i_11_);
         if (is == null) return null;
         return new Component277(new Buffer(is));

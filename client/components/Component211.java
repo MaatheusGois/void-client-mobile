@@ -17,25 +17,25 @@ final class Component211
     static StringCache aClass351_1961 = new StringCache(77, -1);
     static int anInt1962;
 
-    static final void decodedOperation1168(int i, int i_0_, Rectangle[] rectangles) throws Exception_Sub1 {
+    static final void method1168(int i, int i_0_, Rectangle[] rectangles) throws Exception_Sub1 {
         anInt1957++;
         if (Buffer.anInt7207 != 1) Component158.aHa326.method3707(rectangles, i, 0, 0);
         else Component158.aHa326.method3707(rectangles, i, NewsFetcher.anInt4211, DefinitionSub8.anInt9157);
         if (i_0_ != 0) aClass351_1961 = null;
     }
 
-    public static void decodedOperation1169(boolean bool) {
+    public static void method1169(boolean bool) {
         aClass351_1961 = null;
         aClass114_1959 = null;
         if (bool != false) aClass351_1961 = null;
     }
 
-    static final void decodedOperation1170(byte i) {
+    static final void method1170(byte i) {
         anInt1956++;
         if (Component225.aFrame476 == null) {
             int i_1_ = NodeSub48.perFrameReset;
             int i_2_ = DisplayModeManagerContainer147.perDrawReset;
-            if (i > -25) decodedOperation1172((byte) -22, -1);
+            if (i > -25) method1172((byte) -22, -1);
             int i_3_ = -i_1_ + -Component236.canvasWidth + SocketConnector.canvasWidth;
             int i_4_ = -i_2_ + (NpcNode.canvasHeight + -PacketReader.canvasHeight);
             do {
@@ -69,14 +69,14 @@ final class Component211
         }
     }
 
-    static final String decodedOperation1171(int i, int i_7_, boolean bool) {
+    static final String method1171(int i, int i_7_, boolean bool) {
         if (i_7_ < 43) return null;
         anInt1958++;
         if (!bool || i < 0) return Integer.toString(i);
-        return WaterShader.decodedOperation3551(8320, 10, i, bool);
+        return WaterShader.method3551(8320, 10, i, bool);
     }
 
-    static final boolean decodedOperation1172(byte i, int i_8_) {
+    static final boolean method1172(byte i, int i_8_) {
         anInt1960++;
         int i_9_ = 35 / ((-45 - i) / 38);
         return (i_8_ >= 0 && i_8_ <= 3) || i_8_ == 9;

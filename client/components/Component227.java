@@ -15,10 +15,10 @@ final class Component227
     int anInt1122;
     static Component183 aClass114_1123 = new Component183(78, -1);
 
-    public static void decodedOperation601(byte i) {
+    public static void method601(byte i) {
         aClass114_1120 = null;
         aClass114_1123 = null;
-        if (i != -85) decodedOperation601((byte) -70);
+        if (i != -85) method601((byte) -70);
     }
 
     public Component227() {

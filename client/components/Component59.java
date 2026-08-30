@@ -11,7 +11,7 @@ final class Component59
     static Component183 aClass114_1871 = new Component183(52, -1);
     static int anInt1872 = 0;
 
-    static final void decodedOperation1122(int i) {
+    static final void method1122(int i) {
         for (int i_0_ = i; i_0_ < 5; i_0_++)
             Component113.aBooleanArray2374[i_0_] = false;
         anInt1870++;
@@ -23,8 +23,8 @@ final class Component59
         OpenGlShader.anInt7403 = 0;
     }
 
-    public static void decodedOperation1123(int i) {
+    public static void method1123(int i) {
         aClass114_1871 = null;
-        if (i != -1) decodedOperation1122(-78);
+        if (i != -1) method1122(-78);
     }
 }

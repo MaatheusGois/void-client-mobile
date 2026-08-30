@@ -30,42 +30,42 @@ abstract class Definition extends Node {
     static int anInt7044;
     boolean use2dImageCache;
 
-    static final Component308 decodedOperation3036(Buffer class348_sub49, int i) {
+    static final Component308 method3036(Buffer class348_sub49, int i) {
         anInt7026++;
         if (i > -4) return null;
         return new Component308(class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readShort(13638), class348_sub49.readMedium(-1), class348_sub49.readMedium(-1), class348_sub49.readUnsignedByte(255));
     }
 
     int method3037(int i) {
-        if (i >= -113) decodedOperation3048(-125, -85, 60);
+        if (i >= -113) method3048(-125, -85, 60);
         anInt7027++;
         return -1;
     }
 
-    static final void decodedOperation3038(int i) {
+    static final void method3038(int i) {
         anInt7044++;
         int i_0_ = 0;
-        if (Component192.preferences.aClass239_Sub28_7230.decodedOperation1845(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub28_7230.method1845(-32350) == 1) {
             i_0_ |= 0x1;
             i_0_ |= 0x10;
             i_0_ |= 0x20;
             i_0_ |= 0x2;
             i_0_ |= 0x4;
         }
-        if ((~Component192.preferences.aClass239_Sub24_7235.decodedOperation1820(-32350)) == i) i_0_ |= 0x40;
+        if ((~Component192.preferences.aClass239_Sub24_7235.method1820(-32350)) == i) i_0_ |= 0x40;
         DisplayModeManagerContainer58.setCurrentTick(i_0_, i);
-        GradientPreset.aClass263_9195.decodedOperation2009(i_0_, (byte) 109);
-        Exception_Sub1.itemDefinitions.decodedOperation1942(i_0_, (byte) -125);
-        Component291.aClass278_2529.decodedOperation2073(-25032, i_0_);
-        NsnDefinition.aClass319_9245.decodedOperation2541(119, i_0_);
-        AbstractShaderSub1.decodedOperation3535(i_0_, ~i);
-        Component209.decodedOperation2040(i_0_, true);
-        Component325.decodedOperation720(i_0_, i + 1227);
-        DisplayModeManagerContainer295.decodedOperation1750(14056, i_0_);
-        NodeSub20.decodedOperation2953((byte) -106);
+        GradientPreset.aClass263_9195.method2009(i_0_, (byte) 109);
+        Exception_Sub1.itemDefinitions.method1942(i_0_, (byte) -125);
+        Component291.aClass278_2529.method2073(-25032, i_0_);
+        NsnDefinition.aClass319_9245.method2541(119, i_0_);
+        AbstractShaderSub1.method3535(i_0_, ~i);
+        Component209.method2040(i_0_, true);
+        Component325.method720(i_0_, i + 1227);
+        DisplayModeManagerContainer295.method1750(14056, i_0_);
+        NodeSub20.method2953((byte) -106);
     }
 
-    final int[][] decodedOperation3039(byte i, int i_1_, int i_2_) {
+    final int[][] method3039(byte i, int i_1_, int i_2_) {
         anInt7039++;
         int i_3_ = 9 / ((6 - i) / 37);
         if (this.aClass348_Sub40Array7031[i_2_].use2dImageCache) {
@@ -79,13 +79,13 @@ abstract class Definition extends Node {
         return this.aClass348_Sub40Array7031[i_2_].getColourOutput(i_1_, -1564599039);
     }
 
-    public static void decodedOperation3040(boolean bool) {
+    public static void method3040(boolean bool) {
         aClass279_7042 = null;
-        if (bool != true) decodedOperation3036(null, -43);
+        if (bool != true) method3036(null, -43);
         containers = null;
     }
 
-    static final void decodedOperation3041(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+    static final void method3041(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         anInt7030++;
         int i_12_ = 0;
         int i_13_ = i_8_;
@@ -243,20 +243,20 @@ abstract class Definition extends Node {
     /** RGB filter output, or throws if unsupported. */
     int[][] getColourOutput(int i, int i_57_) {
         anInt7040++;
-        if (i_57_ != -1564599039) decodedOperation3048(-4, -64, 20);
+        if (i_57_ != -1564599039) method3048(-4, -64, 20);
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
-    final int[] decodedOperation3048(int i, int i_58_, int i_59_) {
+    final int[] method3048(int i, int i_58_, int i_59_) {
         anInt7034++;
         if (i_58_ != 633706337) this.imageCache = null;
         if (!this.aClass348_Sub40Array7031[i_59_].use2dImageCache) return (this.aClass348_Sub40Array7031[i_59_].getColourOutput(i, -1564599039)[0]);
         return this.aClass348_Sub40Array7031[i_59_].getMonochromeOutput(i, i_58_ + -633706082);
     }
 
-    void decodedOperation3049(Buffer class348_sub49, int i, int i_60_) {
+    void method3049(Buffer class348_sub49, int i, int i_60_) {
         anInt7028++;
-        if (i_60_ != 31015) decodedOperation3038(-16);
+        if (i_60_ != 31015) method3038(-16);
     }
 
     Definition(int i, boolean bool) {

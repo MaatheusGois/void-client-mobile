@@ -19,7 +19,7 @@ final class Component66
     static int anInt6027;
     static int anInt6028;
 
-    static final String decodedOperation1793(byte[] is, int i, int i_0_, int i_1_) {
+    static final String method1793(byte[] is, int i, int i_0_, int i_1_) {
         anInt6020++;
         char[] cs = new char[i_1_];
         int i_2_ = 0;
@@ -69,19 +69,19 @@ final class Component66
         anInt6025++;
     }
 
-    public static void decodedOperation1794(int i) {
+    public static void method1794(int i) {
         if (i != 63) anIntArray6021 = null;
         aClass273_6018 = null;
         anIntArray6021 = null;
     }
 
     final void validateValue(boolean bool) {
-        if (bool != false) decodedOperation1793(null, 50, -30, -126);
+        if (bool != false) method1793(null, 50, -30, -126);
         if (this.preferenceValue < 0 && this.preferenceValue > 4) this.preferenceValue = getDefaultValue(20014);
         anInt6024++;
     }
 
-    static final String decodedOperation1795(byte[] is, boolean bool) {
+    static final String method1795(byte[] is, boolean bool) {
         if (bool != true) buildComponentMenu(4, -104, null, (byte) -82);
         anInt6026++;
         return WaterShaderSub8.decodeCp1252(is, 0, is.length, 0);
@@ -103,8 +103,8 @@ final class Component66
         // Preferred inventory/bank action for this item id (Wear, Withdraw-All, …).
         String preferredItem = DefaultClickSwapper.getPreferredItemAction(class46.itemId);
         if (r.aBoolean9722) {
-            Component355 class254 = (Component163.anInt3176 != -1 ? MatrixSub3.aClass326_5764.decodedOperation2600(Component163.anInt3176, 28364) : null);
-            if (client.getComponentSettings(class46).canBeTargeted(1) && (PauseTimer.anInt500 & 0x20) != 0 && (class254 == null || (class46.decodedOperation428(class254.anInt3256, Component163.anInt3176, -128) != class254.anInt3256))) {
+            Component355 class254 = (Component163.anInt3176 != -1 ? MatrixSub3.aClass326_5764.method2600(Component163.anInt3176, 28364) : null);
+            if (client.getComponentSettings(class46).canBeTargeted(1) && (PauseTimer.anInt500 & 0x20) != 0 && (class254 == null || (class46.method428(class254.anInt3256, Component163.anInt3176, -128) != class254.anInt3256))) {
                 Component82.anInt436++;
                 DisplayModeManagerContainer368.addMenuEntry(false, (DisplayModeManagerContainer332.aString5000 + " -> " + class46.text) + Loader.getDebug(class46.packedId >> 16, class46.packedId & 0xffff), class46.packedId, (byte) -90, false, class46.childIndex, class46.itemId, true, 6, class46.packedId | (class46.childIndex << 0), DisplayModeManagerContainer332.aString5001, 0L, Component182.anInt9747);
             }
@@ -130,7 +130,7 @@ final class Component66
             DisplayModeManagerContainer368.addMenuEntry(false, class46.text + Loader.getDebug(class46.packedId >> 16, class46.packedId & 0xffff), class46.packedId, (byte) -83, false, class46.childIndex, class46.itemId, true, 13, (class46.childIndex << 0) | class46.packedId, string, 0L, usePrio);
             DisplayModeManagerContainer109.anInt2340++;
         }
-        if (i_12_ >= -55) decodedOperation1793(null, -19, 70, -103);
+        if (i_12_ >= -55) method1793(null, -19, 70, -103);
         for (int i_14_ = 4; i_14_ >= 0; i_14_--) {
             String string_15_ = Component63.getComponentOption(i_14_, class46, true);
             if (string_15_ != null) {
@@ -160,7 +160,7 @@ final class Component66
         super(i, class348_sub51);
     }
 
-    final int decodedOperation1798(int i) {
+    final int method1798(int i) {
         anInt6028++;
         if (i != -32350) return 61;
         return this.preferenceValue;
@@ -169,7 +169,7 @@ final class Component66
     final int getDefaultValue(int i) {
         if (i != 20014) aClass273_6018 = null;
         anInt6027++;
-        if (this.preferences.decodedOperation3428((byte) -96).decodedOperation1462(-113) > 1) return 4;
+        if (this.preferences.method3428((byte) -96).method1462(-113) > 1) return 4;
         return 2;
     }
 }

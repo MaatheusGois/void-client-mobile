@@ -24,22 +24,22 @@ final class Component31
         return 0;
     }
 
-    final int decodedOperation1743(int i) {
+    final int method1743(int i) {
         anInt5896++;
         if (i != -32350) return -65;
         return this.preferenceValue;
     }
 
-    final boolean decodedOperation1744(int i) {
-        if (i <= 85) decodedOperation1743(-113);
+    final boolean method1744(int i) {
+        if (i <= 85) method1743(-113);
         anInt5903++;
-        int i_0_ = this.preferences.decodedOperation3428((byte) -93).decodedOperation1458(-23688);
+        int i_0_ = this.preferences.method3428((byte) -93).method1458(-23688);
         return i_0_ >= 96;
     }
 
     final void validateValue(boolean bool) {
         anInt5897++;
-        int i = this.preferences.decodedOperation3428((byte) -105).decodedOperation1458(-23688);
+        int i = this.preferences.method3428((byte) -105).method1458(-23688);
         if (i < 96) this.preferenceValue = 0;
         if (bool != false) aClass355_5900 = null;
         if (this.preferenceValue > 1 && i < 128) this.preferenceValue = 1;
@@ -49,7 +49,7 @@ final class Component31
 
     final int getValue(int i, int i_1_) {
         anInt5899++;
-        int i_2_ = this.preferences.decodedOperation3428((byte) -104).decodedOperation1458(i ^ ~0x5c84);
+        int i_2_ = this.preferences.method3428((byte) -104).method1458(i ^ ~0x5c84);
         if (i_2_ < 96) return 3;
         if (i_1_ > 1 && i_2_ < 128) return 3;
         if (i_1_ > i && i_2_ < 192) return 3;
@@ -62,8 +62,8 @@ final class Component31
         this.preferenceValue = i_3_;
     }
 
-    static final int decodedOperation1745(String string, int i) {
-        if (i != -65) decodedOperation1745(null, 67);
+    static final int method1745(String string, int i) {
+        if (i != -65) method1745(null, 67);
         anInt5895++;
         return string.length() + 1;
     }
@@ -72,7 +72,7 @@ final class Component31
         super(i, class348_sub51);
     }
 
-    public static void decodedOperation1746(int i) {
+    public static void method1746(int i) {
         anIntArray5902 = null;
         if (i != -15628) aClass355_5900 = null;
         aClass355_5900 = null;

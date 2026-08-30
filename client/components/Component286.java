@@ -12,7 +12,7 @@ final class Component286
     static char[] aCharArray1903 = {'[', ']', '#'};
     static StringCache aClass351_1904;
 
-    public static void decodedOperation1136(byte i) {
+    public static void method1136(byte i) {
         aCharArray1903 = null;
         if (i == -98) {
             aClass114_1901 = null;

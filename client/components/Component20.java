@@ -25,8 +25,8 @@ final class Component20
 
     final int getValue(int i, int i_0_) {
         anInt6051++;
-        if (!Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
-        if (i != 3) decodedOperation1807((byte) 64);
+        if (!Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;
+        if (i != 3) method1807((byte) 64);
         return 1;
     }
 
@@ -34,13 +34,13 @@ final class Component20
         super(i, class348_sub51);
     }
 
-    final boolean decodedOperation1806(int i) {
+    final boolean method1806(int i) {
         if (i < 85) getValue(-53, -119);
         anInt6049++;
-        return Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
+        return Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350));
     }
 
-    public static void decodedOperation1807(byte i) {
+    public static void method1807(byte i) {
         anIntArrayArray6054 = null;
         if (i != -121) anIntArrayArray6054 = null;
         aClass114_6056 = null;
@@ -50,7 +50,7 @@ final class Component20
         super(class348_sub51);
     }
 
-    final int decodedOperation1808(int i) {
+    final int method1808(int i) {
         anInt6053++;
         if (i != -32350) anInt6048 = -97;
         return this.preferenceValue;
@@ -65,7 +65,7 @@ final class Component20
     final void validateValue(boolean bool) {
         anInt6050++;
         if (bool != false) getValue(-51, -128);
-        if (this.preferences.aClass239_Sub25_7271.decodedOperation1830((byte) -123) && !Node.decodedOperation2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 0;
+        if (this.preferences.aClass239_Sub25_7271.method1830((byte) -123) && !Node.method2714(7351, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 0;
         if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 }

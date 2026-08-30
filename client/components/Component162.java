@@ -24,34 +24,34 @@ final class Component162
 
     public final void method9(byte i, boolean bool) {
         anInt8379++;
-        int i_0_ = ((this.aClass288_4659.aClass221_4955.decodedOperation1607(DisplayModeManagerContainer23.canvasWidth, this.aClass105_4655.decodedOperation966(), (byte) -117)) - -this.aClass288_4659.anInt4950);
-        int i_1_ = ((this.aClass288_4659.aClass341_4952.getAlignedOffset(GlToolkitSub2.canvasHeight, this.aClass105_4655.decodedOperation980(), 1595)) + this.aClass288_4659.anInt4951);
-        this.aClass105_4655.decodedOperation981((float) (this.aClass105_4655.decodedOperation966() / 2 + i_0_), (float) (this.aClass105_4655.decodedOperation980() / 2 + i_1_), 4096, anInt8383);
+        int i_0_ = ((this.aClass288_4659.aClass221_4955.method1607(DisplayModeManagerContainer23.canvasWidth, this.aClass105_4655.method966(), (byte) -117)) - -this.aClass288_4659.anInt4950);
+        int i_1_ = ((this.aClass288_4659.aClass341_4952.getAlignedOffset(GlToolkitSub2.canvasHeight, this.aClass105_4655.method980(), 1595)) + this.aClass288_4659.anInt4951);
+        this.aClass105_4655.method981((float) (this.aClass105_4655.method966() / 2 + i_0_), (float) (this.aClass105_4655.method980() / 2 + i_1_), 4096, anInt8383);
         anInt8383 += ((Component383) this.aClass288_4659).anInt8577;
         if (i != -49) method9((byte) -26, true);
     }
 
-    static final void decodedOperation1118(boolean bool, boolean bool_2_, NodeSub41 class348_sub41, int i) {
+    static final void method1118(boolean bool, boolean bool_2_, NodeSub41 class348_sub41, int i) {
         anInt8382++;
         int i_3_ = class348_sub41.anInt7050;
         int i_4_ = (int) class348_sub41.key;
         if (i == 2533) {
             class348_sub41.unlink((byte) 35);
-            if (bool) DisplayModeManagerContainer194.decodedOperation235(i_3_, (byte) -116);
-            CursorDefinitionCache.decodedOperation1288(i ^ ~0x9e2, i_3_);
+            if (bool) DisplayModeManagerContainer194.method235(i_3_, (byte) -116);
+            CursorDefinitionCache.method1288(i ^ ~0x9e2, i_3_);
             DisplayModeManagerContainer57 class46 = BitmapFont.getComponent(1512932720, i_4_);
             if (class46 != null) Component111.markInterfaceDirty(-9343, class46);
-            HashNodeSub17.decodedOperation3270((byte) 119);
-            if (!bool_2_ && r.anInt9721 != -1) Component205.decodedOperation1775((byte) -8, r.anInt9721, 1);
+            HashNodeSub17.method3270((byte) 119);
+            if (!bool_2_ && r.anInt9721 != -1) Component205.method1775((byte) -8, r.anInt9721, 1);
             Component79 class333 = new Component79(Component15.aClass356_4915);
-            for (NodeSub41 class348_sub41_5_ = (NodeSub41) class333.decodedOperation2644((byte) 123); class348_sub41_5_ != null; class348_sub41_5_ = (NodeSub41) class333.method2646((byte) 99)) {
+            for (NodeSub41 class348_sub41_5_ = (NodeSub41) class333.method2644((byte) 123); class348_sub41_5_ != null; class348_sub41_5_ = (NodeSub41) class333.method2646((byte) 99)) {
                 if (!class348_sub41_5_.isLinked((byte) 4)) {
-                    class348_sub41_5_ = (NodeSub41) class333.decodedOperation2644((byte) 123);
+                    class348_sub41_5_ = (NodeSub41) class333.method2644((byte) 123);
                     if (class348_sub41_5_ == null) break;
                 }
                 if (class348_sub41_5_.anInt7053 == 3) {
                     int i_6_ = (int) class348_sub41_5_.key;
-                    if (i_3_ == i_6_ >>> 16) decodedOperation1118(true, bool_2_, class348_sub41_5_, 2533);
+                    if (i_3_ == i_6_ >>> 16) method1118(true, bool_2_, class348_sub41_5_, 2533);
                 }
             }
         }
@@ -61,10 +61,10 @@ final class Component162
         super(class45, class288_sub1);
     }
 
-    static final void decodedOperation1119(boolean bool) {
+    static final void method1119(boolean bool) {
         anInt8381++;
         try {
-            if (bool != false) decodedOperation1118(false, false, null, -35);
+            if (bool != false) method1118(false, false, null, -35);
             try {
                 Runtime runtime = Runtime.getRuntime();
                 Integer integer = runtime.availableProcessors();
@@ -77,11 +77,11 @@ final class Component162
         }
     }
 
-    public static void decodedOperation1120(int i) {
+    public static void method1120(int i) {
         aClass114_8384 = null;
         aClass271_8378 = null;
         aClass114_8385 = null;
-        if (i != 1) decodedOperation1119(true);
+        if (i != 1) method1119(true);
     }
 
     static {

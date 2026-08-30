@@ -22,17 +22,17 @@ abstract class Component112
         /** Download/load percent for group {@code i_0_} (0..100). */
     abstract int getGroupLoadPercent(int i, int i_0_);
 
-    static final void decodedOperation2336(Component44 class51, int i, int i_1_, int i_2_, int i_3_) {
+    static final void method2336(Component44 class51, int i, int i_1_, int i_2_, int i_3_) {
         anInt3940++;
         if (i_3_ > -126) anInt3941 = 15;
         for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.first(4); class348_sub9 != null; class348_sub9 = (SceneNode) SceneManager.aClass262_2859.next((byte) 123)) {
             if (i_2_ == class348_sub9.anInt6693 && (class348_sub9.anInt6678 == i << 9) && (i_1_ << 9 == class348_sub9.anInt6689) && (class348_sub9.aClass51_6695.anInt941 == class51.anInt941)) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                 }
                 if (class348_sub9.aClass348_Sub16_Sub5_6673 != null) {
-                    PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6673);
+                    PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6673);
                     class348_sub9.aClass348_Sub16_Sub5_6673 = null;
                 }
                 class348_sub9.unlink((byte) 125);
@@ -41,8 +41,8 @@ abstract class Component112
         }
     }
 
-    static final float decodedOperation2337(float f, boolean bool, float f_4_, float f_5_) {
-        if (bool != true) decodedOperation2337(-0.96692735F, false, 0.1946915F, -1.0497112F);
+    static final float method2337(float f, boolean bool, float f_4_, float f_5_) {
+        if (bool != true) method2337(-0.96692735F, false, 0.1946915F, -1.0497112F);
         anInt3942++;
         return f + (-f + f_4_) * f_5_;
     }

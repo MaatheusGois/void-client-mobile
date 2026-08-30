@@ -28,7 +28,7 @@ final class MatrixSub1
     float aFloat5672;
     float aFloat5673;
     static int anInt5674;
-    static Component163 aClass246_5675 = Component94.decodedOperation2118((byte) -42);
+    static Component163 aClass246_5675 = Component94.method2118((byte) -42);
     static int anInt5676;
     static StringCache aClass351_5677 = new StringCache(56, 7);
     float aFloat5678;
@@ -44,8 +44,8 @@ final class MatrixSub1
     static int anInt5688;
     static DisplayModeManagerContainer369 aClass223_5689 = new DisplayModeManagerContainer369(4, 1);
 
-    public static void decodedOperation911(int i) {
-        if (i != 0) decodedOperation911(-121);
+    public static void method911(int i) {
+        if (i != 0) method911(-121);
         aClass223_5689 = null;
         modelProvider = null;
         aClass246_5675 = null;
@@ -58,7 +58,7 @@ final class MatrixSub1
         this.aFloat5655 = this.aFloat5662 = this.aFloat5673 = this.aFloat5680 = this.aFloat5669 = this.aFloat5666 = this.aFloat5686 = this.aFloat5685 = this.aFloat5681 = 0.0F;
     }
 
-    final void decodedOperation894(int i, int i_0_, int i_1_) {
+    final void method894(int i, int i_0_, int i_1_) {
         anInt5674++;
         this.aFloat5685 = (float) i_0_;
         this.aFloat5655 = this.aFloat5662 = this.aFloat5673 = this.aFloat5680 = this.aFloat5669 = this.aFloat5666 = 0.0F;
@@ -91,7 +91,7 @@ final class MatrixSub1
         this.aFloat5685 = (-(this.aFloat5666 * (float) i_3_) + (this.aFloat5655 * (float) -i - (float) i_2_ * this.aFloat5678));
     }
 
-    static final int decodedOperation912(int i) {
+    static final int method912(int i) {
         if (i != 0) return -41;
         anInt5657++;
         return Component83.anInt1663;
@@ -121,7 +121,7 @@ final class MatrixSub1
         is[2] = (int) (this.aFloat5664 * (float) i_16_ + ((float) i * this.aFloat5662 + (float) i_15_ * this.aFloat5680));
     }
 
-    final void decodedOperation891(int i, int i_17_, int i_18_) {
+    final void method891(int i, int i_17_, int i_18_) {
         this.aFloat5685 += (float) i_17_;
         this.aFloat5681 += (float) i_18_;
         this.aFloat5686 += (float) i;
@@ -247,7 +247,7 @@ final class MatrixSub1
         is[0] = (int) (this.aFloat5662 * f_38_ + (f * this.aFloat5672 + this.aFloat5655 * f_37_));
     }
 
-    static final boolean decodedOperation913(byte i) {
+    static final boolean method913(byte i) {
         if (i <= 115) return true;
         anInt5679++;
         return DisplayModeManagerContainer306.menuEntryCount > 0;

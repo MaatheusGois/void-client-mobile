@@ -16,7 +16,7 @@ final class DisplayModeManagerContainer57
  * RENAMED from {@code Class46} (JODE-obfuscated).
  */ {
     Object[] anObjectArray671;
-    /** Type-5 item sprite outline thickness (passed to itemDefs.decodedOperation1941). */
+    /** Type-5 item sprite outline thickness (passed to itemDefs.method1941). */
     int outline;
     /** Type-4 text vertical line spacing (pixels); also wraps via font metrics. */
     int lineHeight = 0;
@@ -276,7 +276,7 @@ final class DisplayModeManagerContainer57
     static int anInt825;
     int anInt826;
     static int anInt827;
-    /** Type-5 sprite rotation angle (0 = upright; used by decodedOperation981/decodedOperation977). */
+    /** Type-5 sprite rotation angle (0 = upright; used by method981/method977). */
     int spriteAngle;
     static int anInt829;
     /** Packed interface id ({@code group << 16 | child}) — menu {@code param1}. */
@@ -300,7 +300,7 @@ final class DisplayModeManagerContainer57
     /** Decoded width before mode/parent resolve (CS2 if_setsize writes here too). */
     int baseWidth;
 
-    static final void decodedOperation424(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, int i_3_, int i_4_, byte[][][] is, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
+    static final void method424(int i, int i_0_, GraphicsToolkit var_ha, int i_1_, int i_2_, int i_3_, int i_4_, byte[][][] is, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         try {
             anInt768++;
             if (i_7_ != i_1_ && i_3_ != 0) {
@@ -323,11 +323,11 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final Shader decodedOperation425(GraphicsToolkit var_ha, byte i) {
+    final Shader method425(GraphicsToolkit var_ha, byte i) {
         anInt767++;
         Shader var_aa = (Shader) ColoredText.aClass60_6096.get(this.packedId, 119);
         if (var_aa != null) return var_aa;
-        Component170 class207 = Component170.decodedOperation1521(Component327.aClass45_8755, this.spriteId, 0);
+        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.spriteId, 0);
         if (class207 == null) return null;
         int i_10_ = (class207.anInt2703 + (class207.anInt2702 + class207.anInt2698));
         int i_11_ = (class207.anInt2700 + (class207.anInt2696 + class207.anInt2701));
@@ -357,42 +357,42 @@ final class DisplayModeManagerContainer57
         return var_aa;
     }
 
-    final BitmapFont decodedOperation426(GraphicsToolkit var_ha, byte i) {
+    final BitmapFont method426(GraphicsToolkit var_ha, byte i) {
         anInt827++;
-        BitmapFont class324 = DisplayModeManagerContainer194.decodedOperation232(var_ha, (byte) -53, false, this.fontId);
-        if (i != 68) decodedOperation436(-71, -56, -125);
+        BitmapFont class324 = DisplayModeManagerContainer194.method232(var_ha, (byte) -53, false, this.fontId);
+        if (i != 68) method436(-71, -56, -125);
         HashNodeSub13.aBoolean9616 = class324 == null;
         return class324;
     }
 
-    static final void decodedOperation427(int i) {
+    static final void method427(int i) {
         anInt837++;
-        Component267.aClass268_2979.decodedOperation2033((byte) 46);
-        Component149.aClass183_4460.decodedOperation1377(2);
-        DefinitionSub25.aClass150_9342.decodedOperation1204(0);
-        GradientPreset.aClass263_9195.decodedOperation2006(88);
-        Component291.aClass278_2529.decodedOperation2080(127);
-        Exception_Sub1.itemDefinitions.decodedOperation1938(126);
-        RunescapeInfo.aClass87_191.decodedOperation838(7);
-        NsnDefinition.aClass319_9245.decodedOperation2542(-101);
-        Component267.aClass194_2981.decodedOperation1443(83);
-        Component209.aClass217_3453.decodedOperation1590(0);
+        Component267.aClass268_2979.method2033((byte) 46);
+        Component149.aClass183_4460.method1377(2);
+        DefinitionSub25.aClass150_9342.method1204(0);
+        GradientPreset.aClass263_9195.method2006(88);
+        Component291.aClass278_2529.method2080(127);
+        Exception_Sub1.itemDefinitions.method1938(126);
+        RunescapeInfo.aClass87_191.method838(7);
+        NsnDefinition.aClass319_9245.method2542(-101);
+        Component267.aClass194_2981.method1443(83);
+        Component209.aClass217_3453.method1590(0);
         DisplayModeManagerContainer282.aClass261_5558.removeSoft((byte) -91);
-        Component245.aClass141_117.decodedOperation1174((byte) -99);
-        DisplayModeManagerContainer64.aClass153_9031.decodedOperation1222(true);
-        DisplayModeManagerContainer64.aClass187_9036.decodedOperation1410(-27995);
-        MatrixSub3.aClass326_5764.decodedOperation2602(0);
-        ComponentDownloader.aClass84_413.decodedOperation816(false);
-        Component132.aClass25_1813.decodedOperation302(-797644856);
-        NodeSub1.aClass185_6559.decodedOperation1390(23);
-        Component339.cursorDefinitions.decodedOperation1283(1);
-        Component257.aClass65_4787.decodedOperation694(-1007);
-        DisplayModeManagerContainer306.aClass219_4782.decodedOperation1598(111);
-        Component374.decodedOperation2638(-4631);
-        Component16.decodedOperation1328(-26162);
-        DefinitionSub20.decodedOperation3102(22385);
-        Component352.decodedOperation386((byte) -106);
-        ImageTagText.decodedOperation1271(0);
+        Component245.aClass141_117.method1174((byte) -99);
+        DisplayModeManagerContainer64.aClass153_9031.method1222(true);
+        DisplayModeManagerContainer64.aClass187_9036.method1410(-27995);
+        MatrixSub3.aClass326_5764.method2602(0);
+        ComponentDownloader.aClass84_413.method816(false);
+        Component132.aClass25_1813.method302(-797644856);
+        NodeSub1.aClass185_6559.method1390(23);
+        Component339.cursorDefinitions.method1283(1);
+        Component257.aClass65_4787.method694(-1007);
+        DisplayModeManagerContainer306.aClass219_4782.method1598(111);
+        Component374.method2638(-4631);
+        Component16.method1328(-26162);
+        DefinitionSub20.method3102(22385);
+        Component352.method386((byte) -106);
+        ImageTagText.method1271(0);
         Component45.aClass60_4346.purgeSoftReferences(-108);
         ShaderCompilerSub2.aClass60_6517.purgeSoftReferences(-109);
         NodeSub1Sub1.aClass60_8807.purgeSoftReferences(-113);
@@ -401,7 +401,7 @@ final class DisplayModeManagerContainer57
         int i_17_ = 54 / ((26 - i) / 53);
     }
 
-    final int decodedOperation428(int i, int i_18_, int i_19_) {
+    final int method428(int i, int i_18_, int i_19_) {
         anInt736++;
         if (aClass356_711 == null) return i;
         if (i_19_ >= -124) this.yTextAlign = 46;
@@ -410,16 +410,16 @@ final class DisplayModeManagerContainer57
         return class348_sub35.intValue;
     }
 
-    final String decodedOperation429(int i, String string, int i_20_) {
+    final String method429(int i, String string, int i_20_) {
         anInt783++;
-        if (i_20_ != -1) decodedOperation437(-123, null, null, -35, null);
+        if (i_20_ != -1) method437(-123, null, null, -35, null);
         if (aClass356_711 == null) return string;
         NodeSub50 class348_sub50 = (NodeSub50) aClass356_711.get(i, -6008);
         if (class348_sub50 == null) return string;
         return class348_sub50.stringValue;
     }
 
-    final DisplayModeManagerContainer370 decodedOperation430(Component324 class150, Component344 class87, int i, GraphicsToolkit var_ha, int i_21_, int i_22_, ItemDefinitionProvider class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
+    final DisplayModeManagerContainer370 method430(Component324 class150, Component344 class87, int i, GraphicsToolkit var_ha, int i_21_, int i_22_, ItemDefinitionProvider class255, Interface17 interface17, int i_23_, Component101 class154, DisplayModeManagerContainer167 class17, DisplayModeManagerContainer1 class261, DisplayModeManagerContainer347 class278, int i_24_) {
         try {
             anInt684++;
             HashNodeSub13.aBoolean9616 = false;
@@ -427,7 +427,7 @@ final class DisplayModeManagerContainer57
             if (this.anInt770 == 1 && this.anInt753 == -1) return null;
             if (this.anInt770 == 1) {
                 int i_25_ = i;
-                if (class17 != null) i |= class17.decodedOperation263(i_24_, 106, i_21_, true);
+                if (class17 != null) i |= class17.method263(i_24_, 106, i_21_, true);
                 long l = this.anInt753 + ((this.anInt770 << 16) + (var_ha.anInt4567 << 29));
                 DisplayModeManagerContainer370 class64 = (DisplayModeManagerContainer370) Component142.aClass60_4417.get(l, -90);
                 if (class64 == null || var_ha.method3667(class64.ua(), i) != 0) {
@@ -437,26 +437,26 @@ final class DisplayModeManagerContainer57
                         HashNodeSub13.aBoolean9616 = true;
                         return null;
                     }
-                    if (class124.anInt1830 < 13) class124.decodedOperation1092(2, 114);
+                    if (class124.anInt1830 < 13) class124.method1092(2, 114);
                     class64 = var_ha.method3625(class124, i, DisplayModeManagerContainer288.anInt8628, 64, 768);
                     Component142.aClass60_4417.putOne(class64, l, (byte) -125);
                 }
-                if (class17 != null) class64 = class17.decodedOperation269(-101, class64, i_24_, i_22_, i, i_21_);
+                if (class17 != null) class64 = class17.method269(-101, class64, i_24_, i_22_, i, i_21_);
                 class64.s(i_25_);
                 return class64;
             }
             if (this.anInt770 == 2) {
-                DisplayModeManagerContainer370 class64 = (class278.decodedOperation2079(this.anInt753, -1).decodedOperation803(interface17, var_ha, i_22_, i_24_, class17, class87, i_21_, 104, i));
+                DisplayModeManagerContainer370 class64 = (class278.method2079(this.anInt753, -1).method803(interface17, var_ha, i_22_, i_24_, class17, class87, i_21_, 104, i));
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;
                     return null;
                 }
                 return class64;
             }
-            if (i_23_ != 255) decodedOperation432(null, -50);
+            if (i_23_ != 255) method432(null, -50);
             if (this.anInt770 == 3) {
                 if (class154 == null) return null;
-                DisplayModeManagerContainer370 class64 = class154.decodedOperation1230(class255, -402058072, class87, class150, interface17, class278, i_21_, i_24_, i, class17, i_22_, var_ha);
+                DisplayModeManagerContainer370 class64 = class154.method1230(class255, -402058072, class87, class150, interface17, class278, i_21_, i_24_, i, class17, i_22_, var_ha);
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;
                     return null;
@@ -465,7 +465,7 @@ final class DisplayModeManagerContainer57
             }
             if (this.anInt770 == 4) {
                 ItemDefinition class213 = class255.getItemDefinition(i_23_ + -365, this.anInt753);
-                DisplayModeManagerContainer370 class64 = class213.decodedOperation1559(class154, class17, var_ha, i, i_22_, 10, i_21_, (byte) 88, i_24_);
+                DisplayModeManagerContainer370 class64 = class213.method1559(class154, class17, var_ha, i, i_22_, 10, i_21_, (byte) 88, i_24_);
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;
                     return null;
@@ -473,7 +473,7 @@ final class DisplayModeManagerContainer57
                 return class64;
             }
             if (this.anInt770 == 6) {
-                DisplayModeManagerContainer370 class64 = (class278.decodedOperation2079(this.anInt753, -1).decodedOperation800(0, null, class87, false, null, 0, class261, i_21_, class17, interface17, var_ha, 0, null, i_24_, 0, i, i_22_));
+                DisplayModeManagerContainer370 class64 = (class278.method2079(this.anInt753, -1).method800(0, null, class87, false, null, 0, class261, i_21_, class17, interface17, var_ha, 0, null, i_24_, 0, i, i_22_));
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;
                     return null;
@@ -485,7 +485,7 @@ final class DisplayModeManagerContainer57
                 int i_26_ = this.anInt753 >>> 16;
                 int i_27_ = 0xffff & this.anInt753;
                 int i_28_ = this.anInt779;
-                DisplayModeManagerContainer370 class64 = class154.decodedOperation1232(i_24_, i, i_28_, i_27_, class87, class150, -15331, i_26_, i_22_, var_ha, i_21_, class17);
+                DisplayModeManagerContainer370 class64 = class154.method1232(i_24_, i, i_28_, i_27_, class87, class150, -15331, i_26_, i_22_, var_ha, i_21_, class17);
                 if (class64 == null) {
                     HashNodeSub13.aBoolean9616 = true;
                     return null;
@@ -498,7 +498,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final void decodedOperation431(int i, int i_29_, byte i_30_) {
+    final void method431(int i, int i_29_, byte i_30_) {
         anInt712++;
         if (this.optionPriorities == null || (i >= this.optionPriorities.length)) {
             int[] is = new int[1 + i];
@@ -514,7 +514,7 @@ final class DisplayModeManagerContainer57
         if (i_30_ > -18) this.anInt779 = 13;
     }
 
-    private final Object[] decodedOperation432(Buffer class348_sub49, int i) {
+    private final Object[] method432(Buffer class348_sub49, int i) {
         if (i != -1) return null;
         anInt691++;
         int i_33_ = class348_sub49.readUnsignedByte(255);
@@ -674,7 +674,7 @@ final class DisplayModeManagerContainer57
         this.anInt797 = class348_sub49.readUnsignedByte(255);
         this.useOption = class348_sub49.readString((byte) -87);
         int i_52_ = -1;
-        if (DefinitionSub5.decodedOperation3060(i_40_, bool) != 0) {
+        if (DefinitionSub5.method3060(i_40_, bool) != 0) {
             i_52_ = class348_sub49.readUnsignedShort(842397944);
             this.anInt824 = class348_sub49.readUnsignedShort(842397944);
             if (i_52_ == 65535) i_52_ = -1;
@@ -701,35 +701,35 @@ final class DisplayModeManagerContainer57
                 aClass356_711.put((byte) 119, i_59_, new NodeSub50(string));
             }
         }
-        this.anObjectArray815 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray811 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray683 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray680 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray714 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray777 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray751 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray671 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray764 = decodedOperation432(class348_sub49, -1);
-        this.optionScripts = decodedOperation432(class348_sub49, -1);
-        if (i >= 0) this.anObjectArray679 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray839 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray763 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray785 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray742 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray805 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray823 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray692 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray803 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray685 = decodedOperation432(class348_sub49, -1);
-        this.anObjectArray708 = decodedOperation432(class348_sub49, -1);
-        this.anIntArray686 = decodedOperation441(!bool, class348_sub49);
-        this.anIntArray771 = decodedOperation441(!bool, class348_sub49);
-        this.anIntArray731 = decodedOperation441(!bool, class348_sub49);
-        this.anIntArray818 = decodedOperation441(false, class348_sub49);
-        this.anIntArray831 = decodedOperation441(false, class348_sub49);
+        this.anObjectArray815 = method432(class348_sub49, -1);
+        this.anObjectArray811 = method432(class348_sub49, -1);
+        this.anObjectArray683 = method432(class348_sub49, -1);
+        this.anObjectArray680 = method432(class348_sub49, -1);
+        this.anObjectArray714 = method432(class348_sub49, -1);
+        this.anObjectArray777 = method432(class348_sub49, -1);
+        this.anObjectArray751 = method432(class348_sub49, -1);
+        this.anObjectArray671 = method432(class348_sub49, -1);
+        this.anObjectArray764 = method432(class348_sub49, -1);
+        this.optionScripts = method432(class348_sub49, -1);
+        if (i >= 0) this.anObjectArray679 = method432(class348_sub49, -1);
+        this.anObjectArray839 = method432(class348_sub49, -1);
+        this.anObjectArray763 = method432(class348_sub49, -1);
+        this.anObjectArray785 = method432(class348_sub49, -1);
+        this.anObjectArray742 = method432(class348_sub49, -1);
+        this.anObjectArray805 = method432(class348_sub49, -1);
+        this.anObjectArray823 = method432(class348_sub49, -1);
+        this.anObjectArray692 = method432(class348_sub49, -1);
+        this.anObjectArray803 = method432(class348_sub49, -1);
+        this.anObjectArray685 = method432(class348_sub49, -1);
+        this.anObjectArray708 = method432(class348_sub49, -1);
+        this.anIntArray686 = method441(!bool, class348_sub49);
+        this.anIntArray771 = method441(!bool, class348_sub49);
+        this.anIntArray731 = method441(!bool, class348_sub49);
+        this.anIntArray818 = method441(false, class348_sub49);
+        this.anIntArray831 = method441(false, class348_sub49);
     }
 
-    final void decodedOperation434(boolean bool) {
+    final void method434(boolean bool) {
         this.anIntArray771 = null;
         this.anIntArray731 = null;
         this.anObjectArray820 = null;
@@ -770,16 +770,16 @@ final class DisplayModeManagerContainer57
         this.anObjectArray680 = null;
     }
 
-    final void decodedOperation435(int i, int i_60_) {
+    final void method435(int i, int i_60_) {
         anInt802++;
         if (aClass356_711 != null) {
             Node class348 = aClass356_711.get(i, -6008);
             if (class348 != null) class348.unlink((byte) 63);
         }
-        if (i_60_ != -3437) decodedOperation425(null, (byte) 83);
+        if (i_60_ != -3437) method425(null, (byte) 83);
     }
 
-    final void decodedOperation436(int i, int i_61_, int i_62_) {
+    final void method436(int i, int i_61_, int i_62_) {
         anInt694++;
         if (aClass356_711 == null) {
             aClass356_711 = new LruCache(16);
@@ -791,17 +791,17 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final void decodedOperation437(int i, DisplayModeManagerContainer370 class64, GraphicsToolkit var_ha, int i_63_, DisplayModeManagerContainer204 class101) {
+    final void method437(int i, DisplayModeManagerContainer370 class64, GraphicsToolkit var_ha, int i_63_, DisplayModeManagerContainer204 class101) {
         do {
             try {
-                if (i != -20154) decodedOperation438(15, -50, null);
+                if (i != -20154) method438(15, -50, null);
                 anInt718++;
                 class64.transformVertices(class101);
                 Component30[] class129s = class64.method619();
                 DisplayModeManagerContainer173[] class342s = class64.method604();
-                if ((this.aClass318_Sub10_740 == null || this.aClass318_Sub10_740.aBoolean6470) && (class129s != null || class342s != null)) this.aClass318_Sub10_740 = RenderableSub10.decodedOperation2526(i_63_, false);
+                if ((this.aClass318_Sub10_740 == null || this.aClass318_Sub10_740.aBoolean6470) && (class129s != null || class342s != null)) this.aClass318_Sub10_740 = RenderableSub10.method2526(i_63_, false);
                 if (this.aClass318_Sub10_740 == null) break;
-                this.aClass318_Sub10_740.decodedOperation2536(var_ha, i_63_, class129s, class342s, false);
+                this.aClass318_Sub10_740.method2536(var_ha, i_63_, class129s, class342s, false);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("at.J(" + i + ',' + (class64 != null ? "{...}" : "null") + ',' + (var_ha != null ? "{...}" : "null") + ',' + i_63_ + ',' + (class101 != null ? "{...}" : "null") + ')'));
             }
@@ -809,7 +809,7 @@ final class DisplayModeManagerContainer57
         } while (false);
     }
 
-    final void decodedOperation438(int i, int i_64_, String string) {
+    final void method438(int i, int i_64_, String string) {
         if (this.optionLabels == null || i >= this.optionLabels.length) {
             String[] strings = new String[i + 1];
             if (this.optionLabels != null) {
@@ -824,7 +824,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    final void decodedOperation439(int i, int i_66_, String string) {
+    final void method439(int i, int i_66_, String string) {
         anInt758++;
         if (i != 0) this.spriteId = -106;
         if (aClass356_711 == null) {
@@ -837,7 +837,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    static final void decodedOperation440(int i, byte i_67_) {
+    static final void method440(int i, byte i_67_) {
         DefinitionSub19.anIntArray9259 = new int[i];
         if (i_67_ == -61) {
             LoadingState.anIntArray1045 = new int[i];
@@ -848,7 +848,7 @@ final class DisplayModeManagerContainer57
         }
     }
 
-    private final int[] decodedOperation441(boolean bool, Buffer class348_sub49) {
+    private final int[] method441(boolean bool, Buffer class348_sub49) {
         anInt722++;
         int i = class348_sub49.readUnsignedByte(255);
         if (bool != false) return null;
@@ -859,46 +859,46 @@ final class DisplayModeManagerContainer57
         return is;
     }
 
-    public static void decodedOperation442(byte i) {
+    public static void method442(byte i) {
         if (i <= -8) {
             aClass196_838 = null;
             aByteArray821 = null;
         }
     }
 
-    final Component24 decodedOperation443(GraphicsToolkit var_ha, byte i) {
+    final Component24 method443(GraphicsToolkit var_ha, byte i) {
         anInt819++;
         HashNodeSub13.aBoolean9616 = false;
         long l = (((long) this.shadowColour << 40) + (((this.aBoolean790 ? 1L : 0L) << 38) + (((long) this.outline << 36) + ((this.aBoolean745 ? 1L : 0L) << 35))) + ((long) this.spriteId + ((!this.aBoolean735 ? 0L : 1L) << 39)));
         Component24 class105 = (Component24) StringCache.aClass60_4327.get(l, -71);
-        if (i > -27) decodedOperation434(true);
+        if (i > -27) method434(true);
         if (class105 != null) return class105;
-        Component170 class207 = Component170.decodedOperation1521(Component327.aClass45_8755, this.spriteId, 0);
+        Component170 class207 = Component170.method1521(Component327.aClass45_8755, this.spriteId, 0);
         if (class207 == null) {
             HashNodeSub13.aBoolean9616 = true;
             return null;
         }
-        if (this.aBoolean790) class207.decodedOperation1514();
-        if (this.aBoolean735) class207.decodedOperation1518();
-        if (this.outline > 0) class207.decodedOperation1513(this.outline);
-        else if (this.shadowColour != 0) class207.decodedOperation1513(1);
-        if (this.outline >= 1) class207.decodedOperation1515(1);
-        if (this.outline >= 2) class207.decodedOperation1515(16777215);
-        if (this.shadowColour != 0) class207.decodedOperation1511(~0xffffff | this.shadowColour);
-        class105 = var_ha.decodedOperation3691(class207, true);
-        StringCache.aClass60_4327.put(31902, class105, l, (class105.decodedOperation971() * class105.decodedOperation969() * 4));
+        if (this.aBoolean790) class207.method1514();
+        if (this.aBoolean735) class207.method1518();
+        if (this.outline > 0) class207.method1513(this.outline);
+        else if (this.shadowColour != 0) class207.method1513(1);
+        if (this.outline >= 1) class207.method1515(1);
+        if (this.outline >= 2) class207.method1515(16777215);
+        if (this.shadowColour != 0) class207.method1511(~0xffffff | this.shadowColour);
+        class105 = var_ha.method3691(class207, true);
+        StringCache.aClass60_4327.put(31902, class105, l, (class105.method971() * class105.method969() * 4));
         return class105;
     }
 
-    final DisplayModeManagerContainer50 decodedOperation444(boolean bool, Component361 class25, DisplayModeManagerContainer26 class84) {
+    final DisplayModeManagerContainer50 method444(boolean bool, Component361 class25, DisplayModeManagerContainer26 class84) {
         try {
-            if (bool != false) decodedOperation424(122, -123, null, -111, 40, 28, -109, null, 76, 127, -66, 8, -45);
+            if (bool != false) method424(122, -123, null, -111, 40, 28, -109, null, 76, 127, -66, 8, -45);
             anInt804++;
             if (this.anInt705 == -1) return null;
             long l = (((long) this.anInt693 << 16 & 65535L << 16) | (((long) this.anInt733 << 32 & 65535L << 32) | ((long) this.anInt674 << 48 & 65535L << 48)) | (long) this.anInt705 & 0xffffL);
             DisplayModeManagerContainer50 class305 = ((DisplayModeManagerContainer50) DefinitionSub9.aClass60_9171.get(l, 78));
             if (class305 == null) {
-                class305 = class84.decodedOperation823(this.anInt733, this.anInt693, this.anInt674, -43, class25, this.anInt705);
+                class305 = class84.method823(this.anInt733, this.anInt693, this.anInt674, -43, class25, this.anInt705);
                 DefinitionSub9.aClass60_9171.putOne(class305, l, (byte) -120);
             }
             return class305;

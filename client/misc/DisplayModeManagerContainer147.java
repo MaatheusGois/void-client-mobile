@@ -12,10 +12,10 @@ final class DisplayModeManagerContainer147
     static int anInt4168 = 0;
     static int anInt4169;
 
-    static final void decodedOperation2655(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    static final void method2655(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         anInt4166++;
         for (SceneNode class348_sub9 = (SceneNode) SceneManager.aClass262_2859.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) SceneManager.aClass262_2859.next((byte) 97)))
-            TcpSocketStream.decodedOperation1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
+            TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         for (SceneNode class348_sub9 = (SceneNode) client.aClass262_5185.first(4); class348_sub9 != null; class348_sub9 = ((SceneNode) client.aClass262_5185.next((byte) 85))) {
             int i_4_ = 1;
             Component241 class225 = class348_sub9.aNpc_6691.getDefinition((byte) 72);
@@ -25,9 +25,9 @@ final class DisplayModeManagerContainer147
             else if ((class348_sub9.aNpc_6691.anInt10268 == class225.anInt2940) || (class225.anInt2924 == class348_sub9.aNpc_6691.anInt10268) || (class225.anInt2947 == class348_sub9.aNpc_6691.anInt10268) || (class348_sub9.aNpc_6691.anInt10268 == class225.anInt2958))
                 i_4_ = 3;
             if (class348_sub9.anInt6675 != i_4_) {
-                int i_5_ = DisplayModeManagerContainer345.decodedOperation214((class348_sub9.aNpc_6691), -1);
+                int i_5_ = DisplayModeManagerContainer345.method214((class348_sub9.aNpc_6691), -1);
                 NpcComposition class79 = (class348_sub9.aNpc_6691.definition);
-                if (class79.anIntArray1377 != null) class79 = class79.decodedOperation794((DisplayModeManagerContainer58.aClass170_10209), -1);
+                if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                 if (class79 == null || i_5_ == -1) {
                     class348_sub9.anInt6675 = i_4_;
                     class348_sub9.aBoolean6674 = false;
@@ -41,7 +41,7 @@ final class DisplayModeManagerContainer147
                     else {
                         class348_sub9.anInt6677 -= 512;
                         if (class348_sub9.anInt6677 <= 0) {
-                            PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                            PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                             bool = true;
                             class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                         }
@@ -60,7 +60,7 @@ final class DisplayModeManagerContainer147
             class348_sub9.anInt6698 = ((class348_sub9.aNpc_6691.x) - -(class348_sub9.aNpc_6691.getSize((byte) 55) << 8));
             class348_sub9.anInt6689 = (class348_sub9.aNpc_6691.y);
             class348_sub9.anInt6687 = ((class348_sub9.aNpc_6691.y) + (class348_sub9.aNpc_6691.getSize((byte) 92) << 8));
-            TcpSocketStream.decodedOperation1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
+            TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         }
         SceneNode class348_sub9 = ((SceneNode) HashNodeSub16Sub2.aClass356_10465.first(0));
         int i_6_ = -122 / (-i / 47);
@@ -74,7 +74,7 @@ final class DisplayModeManagerContainer147
                 } else i_7_ = 2;
             } else i_7_ = 0;
             if (class348_sub9.anInt6675 != i_7_) {
-                int i_8_ = (Component168.decodedOperation2357(-1, (class348_sub9.aPlayer_6679)));
+                int i_8_ = (Component168.method2357(-1, (class348_sub9.aPlayer_6679)));
                 if (i_8_ == class348_sub9.anInt6685 && (class348_sub9.aPlayer_6679.aBoolean10517 == class348_sub9.aBoolean6674)) {
                     class348_sub9.anInt6677 = class348_sub9.aPlayer_6679.anInt10558;
                     class348_sub9.anInt6675 = i_7_;
@@ -83,7 +83,7 @@ final class DisplayModeManagerContainer147
                     if ((class348_sub9.aClass348_Sub16_Sub5_6676) != null) {
                         class348_sub9.anInt6677 -= 512;
                         if (class348_sub9.anInt6677 <= 0) {
-                            PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(class348_sub9.aClass348_Sub16_Sub5_6676);
+                            PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                             class348_sub9.aClass348_Sub16_Sub5_6676 = null;
                             bool = true;
                         }
@@ -102,7 +102,7 @@ final class DisplayModeManagerContainer147
             class348_sub9.anInt6698 = ((class348_sub9.aPlayer_6679.x) + (class348_sub9.aPlayer_6679.getSize((byte) 123) << 8));
             class348_sub9.anInt6689 = (class348_sub9.aPlayer_6679.y);
             class348_sub9.anInt6687 = ((class348_sub9.aPlayer_6679.y) - -(class348_sub9.aPlayer_6679.getSize((byte) 126) << 8));
-            TcpSocketStream.decodedOperation1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
+            TcpSocketStream.method1708(i_1_, i_3_, i_0_, i_2_, (byte) -78, class348_sub9);
         }
     }
 }

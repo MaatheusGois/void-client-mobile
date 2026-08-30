@@ -16,14 +16,14 @@ final class Component373
     private final NodeCache aClass60_460 = new NodeCache(128);
     static int anInt461;
 
-    final Component208 decodedOperation337(boolean bool, int i) {
+    final Component208 method337(boolean bool, int i) {
         anInt457++;
         Component208 class117;
         synchronized (aClass60_460) {
             class117 = (Component208) aClass60_460.get(i, 111);
         }
         if (class117 != null) return class117;
-        byte[] is = aClass45_458.getFile(-1860, DisplayModeManagerContainer89.decodedOperation200(-107, i), Sprite.decodedOperation3013(i, bool));
+        byte[] is = aClass45_458.getFile(-1860, DisplayModeManagerContainer89.method200(-107, i), Sprite.method3013(i, bool));
         class117 = new Component208();
         if (is != null) class117.decode(0, new Buffer(is));
         synchronized (aClass60_460) {
@@ -54,7 +54,7 @@ final class Component373
                 Component170 class207 = class222.getSprite((byte) 71);
                 if (class207 == null) i_0_ = -1;
                 else {
-                    OggUrlStream.aClass297_8992.setCustomCursor(class207.decodedOperation1522(), class207.decodedOperation1516(), 17, new Point(class222.hotspotX, class222.hotspotY), DisplayModeManagerContainer50.gameCanvas, class207.decodedOperation1510());
+                    OggUrlStream.aClass297_8992.setCustomCursor(class207.method1522(), class207.method1516(), 17, new Point(class222.hotspotX, class222.hotspotY), DisplayModeManagerContainer50.gameCanvas, class207.method1510());
                     Component244.currentCursorId = i_0_;
                 }
             }
@@ -65,7 +65,7 @@ final class Component373
         }
     }
 
-    static final void decodedOperation339(int i, int i_1_, byte[] is, int i_2_, int i_3_, int i_4_) {
+    static final void method339(int i, int i_1_, byte[] is, int i_2_, int i_3_, int i_4_) {
         anInt461++;
         if (i_4_ > i_1_) {
             i += i_1_;

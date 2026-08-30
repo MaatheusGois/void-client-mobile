@@ -44,10 +44,10 @@ abstract class Component327
     final boolean method2382(byte i) {
         anInt8748++;
         if (i > -51) return true;
-        return RenderableSub2.decodedOperation2499(this.aByte6376, this.aShort8747, this.aShort8750, this.method2394(true), this.aShort8743, (byte) 116, (this.aShort8751));
+        return RenderableSub2.method2499(this.aByte6376, this.aShort8747, this.aShort8750, this.method2394(true), this.aShort8743, (byte) 116, (this.aShort8751));
     }
 
-    static final int decodedOperation2408(byte i) {
+    static final int method2408(byte i) {
         anInt8754++;
         int i_4_ = -71 % ((-2 - i) / 44);
         return DefinitionSub31.anInt9411++;
@@ -57,7 +57,7 @@ abstract class Component327
         if (i <= -109) anInt8746++;
     }
 
-    static final boolean decodedOperation2410(byte i, int i_5_, int i_6_) {
+    static final boolean method2410(byte i, int i_5_, int i_6_) {
         anInt8752++;
         if (i >= -21) return true;
         if (!Component364.aBoolean8335) return false;
@@ -68,7 +68,7 @@ abstract class Component327
         if (i_5_ == -1 && class46.type == 0) {
             for (MenuEntry class348_sub42_sub12 = ((MenuEntry) DefinitionSub4.menuEntries.first(4)); class348_sub42_sub12 != null; class348_sub42_sub12 = (MenuEntry) DefinitionSub4.menuEntries.next((byte) 56)) {
                 if (class348_sub42_sub12.opcode == 6 || class348_sub42_sub12.opcode == 1011 || (class348_sub42_sub12.opcode == 13) || (class348_sub42_sub12.opcode == 18) || (class348_sub42_sub12.opcode == 16)) {
-                    for (DisplayModeManagerContainer57 class46_9_ = BitmapFont.getComponent(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = DisplayModeManagerContainer87.decodedOperation1687(class46_9_, 3)) {
+                    for (DisplayModeManagerContainer57 class46_9_ = BitmapFont.getComponent(1512932720, (class348_sub42_sub12.param1)); class46_9_ != null; class46_9_ = DisplayModeManagerContainer87.method1687(class46_9_, 3)) {
                         if (class46_9_.packedId == class46.packedId) return true;
                     }
                 }
@@ -96,20 +96,20 @@ abstract class Component327
         this.aByte6376 = (byte) i_10_;
     }
 
-    static final int decodedOperation2411(Component22 class113, int i) {
+    static final int method2411(Component22 class113, int i) {
         anInt8742++;
         if (class113 == NodeBaseSub1.aClass113_9773) return 9216;
         if (class113 == Component82.aClass113_430) return 34065;
         if (DisplayModeManagerContainer1.aClass113_3314 == class113) return 34066;
-        if (i != 25602) decodedOperation2413(-121, null);
+        if (i != 25602) method2413(-121, null);
         throw new IllegalArgumentException();
     }
 
-    public static void decodedOperation2412(boolean bool) {
+    public static void method2412(boolean bool) {
         aClass45_8755 = null;
         aClass114_8756 = null;
         aClass262_8744 = null;
-        if (bool != true) decodedOperation2408((byte) -121);
+        if (bool != true) method2408((byte) -121);
     }
 
     final int method2384(NodeSub1[] class348_sub1s, int i) {
@@ -193,7 +193,7 @@ abstract class Component327
         return i_19_;
     }
 
-    static final int decodedOperation2413(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
+    static final int method2413(int i, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt8749++;
         int i_35_ = class348_sub49_sub2.readBits((byte) -24, 2);
         if (i != 1) aClass262_8744 = null;

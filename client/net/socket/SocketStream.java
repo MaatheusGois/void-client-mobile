@@ -5,7 +5,7 @@
 /**
  * RENAMED from `Class238` (JODE-obfuscated).
  * Abstract byte-I/O connection stream ({@link #readBytes}/{@link #writeBytes}).
- * {@link #shutdownStreams} detaches buffers; {@link #decodedOperation1703} builds an
+ * {@link #shutdownStreams} detaches buffers; {@link #method1703} builds an
  * {@link RSARequest} during handshake. Parent of {@link TcpSocketStream}.
  */
 
@@ -22,16 +22,16 @@ abstract class SocketStream {
     /** Detach real I/O (replace with dummy streams). */
     abstract void shutdownStreams(int i);
 
-    static final void decodedOperation1703(int i, int i_2_, int i_3_, int i_4_, int i_5_) {
+    static final void method1703(int i, int i_2_, int i_3_, int i_4_, int i_5_) {
         anInt3132++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_2_, (byte) 105, i_4_);//4
-        class348_sub42_sub15.decodedOperation3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_2_, (byte) 105, i_4_);//4
+        class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9651 = i_3_;
         class348_sub42_sub15.anInt9652 = i;
         class348_sub42_sub15.anInt9650 = i_5_;
     }
 
-    public static void decodedOperation1704(byte i) {
+    public static void method1704(byte i) {
         if (i >= -90) aClass114_3133 = null;
         aClass114_3133 = null;
     }

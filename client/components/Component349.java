@@ -65,15 +65,15 @@ final class Component349
             var_r = aR10036;
             aR10036 = null;
         } else {
-            Component245 class2 = decodedOperation2417(0, var_ha, 262144, true);
+            Component245 class2 = method2417(0, var_ha, 262144, true);
             var_r = class2 != null ? class2.aR118 : null;
         }
         if (i != 836) method41(-125);
-        if (var_r != null) Component387.decodedOperation1130(var_r, this.aByte6376, this.x, this.y, null);
+        if (var_r != null) Component387.method1130(var_r, this.aByte6376, this.x, this.y, null);
     }
 
     Component349(GraphicsToolkit var_ha, Component44 class51, int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool_10_) {
-        super(i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, class51.anInt895 == 1, SceneNode.decodedOperation2782(i_9_, i_8_, 0));
+        super(i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, class51.anInt895 == 1, SceneNode.method2782(i_9_, i_8_, 0));
         do {
             try {
                 aShort10032 = (short) class51.anInt941;
@@ -83,10 +83,10 @@ final class Component349
                 aBoolean10017 = bool;
                 aBoolean10019 = bool_10_;
                 this.aByte6376 = (byte) i_0_;
-                aBoolean10003 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10017 && Component192.preferences.aClass239_Sub7_7238.decodedOperation1748(-32350) != 0);
+                aBoolean10003 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10017 && Component192.preferences.aClass239_Sub7_7238.method1748(-32350) != 0);
                 int i_11_ = 2048;
                 if (aBoolean10019) i_11_ |= 0x10000;
-                Component245 class2 = decodedOperation2417(0, var_ha, i_11_, aBoolean10003);
+                Component245 class2 = method2417(0, var_ha, i_11_, aBoolean10003);
                 if (class2 == null) break;
                 this.aClass64_10028 = class2.aClass64_119;
                 aR10036 = class2.aR118;
@@ -100,13 +100,13 @@ final class Component349
     }
 
     final int method2379(int i) {
-        if (i != -25675) decodedOperation2418(null, (byte) -68);
+        if (i != -25675) method2418(null, (byte) -68);
         anInt10027++;
         if (this.aClass64_10028 != null) return this.aClass64_10028.ma();
         return 0;
     }
 
-    public final boolean decodedOperation38(int i) {
+    public final boolean method38(int i) {
         if (i != -18443) return false;
         anInt10037++;
         return aBoolean10003;
@@ -117,8 +117,8 @@ final class Component349
         if (i_13_ != 0) return false;
         DisplayModeManagerContainer370 class64 = getRenderable(-1, var_ha, 131072);
         if (class64 != null) {
-            DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
-            class101.decodedOperation894(this.x, this.anInt6382, this.y);
+            DisplayModeManagerContainer204 class101 = var_ha.method3705();
+            class101.method894(this.x, this.anInt6382, this.y);
             if (DisplayModeManagerContainer50.aBoolean3870) return class64.isInFrustumExt(i_12_, i, class101, false, 0, Component72.anInt1906);
             return class64.isInFrustumExtended(i_12_, i, class101, false, 0);
         }
@@ -129,7 +129,7 @@ final class Component349
         if (i != -1) method2392(false);
         anInt10004++;
         if (this.aClass64_10028 != null && var_ha.method3667(this.aClass64_10028.ua(), i_14_) == 0) return this.aClass64_10028;
-        Component245 class2 = decodedOperation2417(0, var_ha, i_14_, false);
+        Component245 class2 = method2417(0, var_ha, i_14_, false);
         if (class2 == null) return null;
         return class2.aClass64_119;
     }
@@ -151,7 +151,7 @@ final class Component349
         return 15;
     }
 
-    final boolean decodedOperation2388(int i) {
+    final boolean method2388(int i) {
         anInt10035++;
         if (i > -65) return true;
         return aBoolean10019;
@@ -183,7 +183,7 @@ final class Component349
         } while (false);
     }
 
-    public final int decodedOperation42(int i) {
+    public final int method42(int i) {
         if (i > -62) return 126;
         anInt10012++;
         return aShort10032 & 0xffff;
@@ -191,19 +191,19 @@ final class Component349
 
     final void method2392(boolean bool) {
         anInt10020++;
-        if (bool != true) decodedOperation38(120);
+        if (bool != true) method38(120);
         aBoolean10019 = false;
         if (this.aClass64_10028 != null) this.aClass64_10028.s(~0x10000 & this.aClass64_10028.ua());
     }
 
     final ComponentDownloader method2381(GraphicsToolkit var_ha, int i) {
-        if (aClass30_10025 == null) aClass30_10025 = (OggUrlStream.decodedOperation2967(this.x, getRenderable(i + -8, var_ha, 0), this.y, this.anInt6382, 2));
+        if (aClass30_10025 == null) aClass30_10025 = (OggUrlStream.method2967(this.x, getRenderable(i + -8, var_ha, 0), this.y, this.anInt6382, 2));
         if (i != 7) return null;
         anInt10013++;
         return aClass30_10025;
     }
 
-    private final Component245 decodedOperation2417(int i, GraphicsToolkit var_ha, int i_20_, boolean bool) {
+    private final Component245 method2417(int i, GraphicsToolkit var_ha, int i_20_, boolean bool) {
         anInt10007++;
         Component44 class51 = GradientPreset.aClass263_9195.getDefinition(i, 0xffff & aShort10032);
         s var_s;
@@ -216,7 +216,7 @@ final class Component349
             if (this.aByte6376 >= 3) var_s_21_ = null;
             else var_s_21_ = (NodeSub1Sub1.aSArray8801[this.aByte6376 - -1]);
         }
-        return class51.decodedOperation476(var_ha, var_s_21_, (aByte10024 != 11 ? aByte10024 : 10), i_20_, this.x, bool, var_s, this.anInt6382, this.y, (aByte10024 != 11 ? (int) aByte10015 : aByte10015 + 4), 128);
+        return class51.method476(var_ha, var_s_21_, (aByte10024 != 11 ? aByte10024 : 10), i_20_, this.x, bool, var_s, this.anInt6382, this.y, (aByte10024 != 11 ? (int) aByte10015 : aByte10015 + 4), 128);
     }
 
     final boolean method2376(int i) {
@@ -241,16 +241,16 @@ final class Component349
         Object object = null;
         r var_r;
         if (aR10036 == null && aBoolean10003) {
-            Component245 class2 = decodedOperation2417(i + 14218, var_ha, 262144, true);
+            Component245 class2 = method2417(i + 14218, var_ha, 262144, true);
             var_r = class2 != null ? class2.aR118 : null;
         } else {
             var_r = aR10036;
             aR10036 = null;
         }
-        if (var_r != null) RequestProcessor.decodedOperation1301(var_r, this.aByte6376, this.x, this.y, null);
+        if (var_r != null) RequestProcessor.method1301(var_r, this.aByte6376, this.x, this.y, null);
     }
 
-    static final int decodedOperation2418(String string, byte i) {
+    static final int method2418(String string, byte i) {
         anInt10011++;
         int i_22_ = -51 / ((i - 3) / 42);
         int i_23_ = string.length();
@@ -260,7 +260,7 @@ final class Component349
         return i_24_;
     }
 
-    static final int decodedOperation2419(byte i, int i_26_) {
+    static final int method2419(byte i, int i_26_) {
         anInt10018++;
         if (i < 122) return -49;
         return i_26_ >>> 8;
@@ -275,11 +275,11 @@ final class Component349
     final RenderableSub4 method2386(int i, GraphicsToolkit var_ha) {
         anInt10031++;
         if (this.aClass64_10028 == null) return null;
-        DisplayModeManagerContainer204 class101 = var_ha.decodedOperation3705();
-        class101.decodedOperation894(this.x, this.anInt6382, this.y);
-        RenderableSub4 class318_sub4 = OutputStream_Sub2.decodedOperation136(i, aBoolean10014, false);
+        DisplayModeManagerContainer204 class101 = var_ha.method3705();
+        class101.method894(this.x, this.anInt6382, this.y);
+        RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10014, false);
         if (!DisplayModeManagerContainer50.aBoolean3870) this.aClass64_10028.render(class101, class318_sub4.aClass318_Sub3Array6414[0], 0);
-        else this.aClass64_10028.decodedOperation608(class101, class318_sub4.aClass318_Sub3Array6414[0], Component72.anInt1906, 0);
+        else this.aClass64_10028.method608(class101, class318_sub4.aClass318_Sub3Array6414[0], Component72.anInt1906, 0);
         return class318_sub4;
     }
 }

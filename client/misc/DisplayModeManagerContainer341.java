@@ -49,33 +49,33 @@ final class DisplayModeManagerContainer341 extends Component339 {
     }
 
     final void validateValue(boolean bool) {
-        if (bool != false) decodedOperation1783(115, -122, -59, 41, -49, 92);
+        if (bool != false) method1783(115, -122, -59, 41, -49, 92);
         anInt5999++;
-        if (this.preferences.decodedOperation3428((byte) -84).decodedOperation1458(-23688) < 96) this.preferenceValue = 0;
+        if (this.preferences.method3428((byte) -84).method1458(-23688) < 96) this.preferenceValue = 0;
         if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 
     final int getValue(int i, int i_1_) {
         anInt6005++;
-        if (i != 3) decodedOperation1784(99);
-        if (this.preferences.decodedOperation3428((byte) -85).decodedOperation1458(-23688) < 96) return 3;
+        if (i != 3) method1784(99);
+        if (this.preferences.method3428((byte) -85).method1458(-23688) < 96) return 3;
         return 1;
     }
 
     DisplayModeManagerContainer341(int i, NodeSub51 class348_sub51) {
         super(i, class348_sub51);
-        Component380.decodedOperation1114(this.preferenceValue, -122);
+        Component380.method1114(this.preferenceValue, -122);
     }
 
-    static final void decodedOperation1783(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
+    static final void method1783(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         anInt5998++;
         int i_7_ = -i_3_ + i_4_;
         int i_8_ = i_5_ + -i;
         if ((~i_8_) == i_2_) {
-            if (i_7_ != 0) Component9.decodedOperation2641(i_4_, i_3_, -117, i, i_6_);
+            if (i_7_ != 0) Component9.method2641(i_4_, i_3_, -117, i, i_6_);
             return;
         } else if (i_7_ == 0) {
-            Model.decodedOperation223(i_5_, i_6_, i_3_, i, (byte) 47);
+            Model.method223(i_5_, i_6_, i_3_, i, (byte) 47);
             return;
         }
         if (i_7_ < 0) i_7_ = -i_7_;
@@ -128,41 +128,41 @@ final class DisplayModeManagerContainer341 extends Component339 {
         anInt6003++;
         this.preferenceValue = i_20_;
         int i_21_ = 33 % ((i - 82) / 35);
-        Component380.decodedOperation1114(this.preferenceValue, -122);
+        Component380.method1114(this.preferenceValue, -122);
     }
 
     final int getDefaultValue(int i) {
         anInt5996++;
         if (i != 20014) selectMapLabelFont(-76, -103);
-        if (this.preferences.decodedOperation3428((byte) -105).decodedOperation1458(-23688) < 96) return 0;
+        if (this.preferences.method3428((byte) -105).method1458(-23688) < 96) return 0;
         return 2;
     }
 
     DisplayModeManagerContainer341(NodeSub51 class348_sub51) {
         super(class348_sub51);
-        Component380.decodedOperation1114(this.preferenceValue, -120);
+        Component380.method1114(this.preferenceValue, -120);
     }
 
-    final int decodedOperation1784(int i) {
+    final int method1784(int i) {
         anInt6000++;
         if (i != -32350) return -82;
         return this.preferenceValue;
     }
 
-    public static void decodedOperation1785(int i) {
+    public static void method1785(int i) {
         aClass114_5997 = null;
         if (i != 8) aClass114_5997 = null;
     }
 
-    final boolean decodedOperation1786(int i) {
-        if (i < 85) decodedOperation1784(-69);
+    final boolean method1786(int i) {
+        if (i < 85) method1784(-69);
         anInt6001++;
-        return this.preferences.decodedOperation3428((byte) -104).decodedOperation1458(-23688) >= 96;
+        return this.preferences.method3428((byte) -104).method1458(-23688) >= 96;
     }
 
-    static final void decodedOperation1787(int i, int i_22_) {
+    static final void method1787(int i, int i_22_) {
         anInt6002++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, i_22_);//8
-        class348_sub42_sub15.decodedOperation3251(-16058);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_22_);//8
+        class348_sub42_sub15.method3251(-16058);
     }
 }

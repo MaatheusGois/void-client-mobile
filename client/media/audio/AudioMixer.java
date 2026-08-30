@@ -25,7 +25,7 @@ final class AudioMixer implements Runnable {
 
     /** Mask {@code directlogin} password chars with {@code *} for console echo. */
     static final String redactConsoleLine(byte i, String string) {
-        if (i != 31) decodedOperation1911((byte) 87);
+        if (i != 31) method1911((byte) 87);
         anInt3222++;
         String string_0_ = null;
         int i_1_ = string.indexOf("--> ");
@@ -65,18 +65,18 @@ final class AudioMixer implements Runnable {
         }
     }
 
-    public static void decodedOperation1910(int i) {
+    public static void method1910(int i) {
         anIntArray3220 = null;
-        if (i != 0) decodedOperation1910(-18);
+        if (i != 0) method1910(-18);
         aClass318_Sub1Array3226 = null;
     }
 
-    static final void decodedOperation1911(byte i) {
+    static final void method1911(byte i) {
         if (i != 99) anIntArray3220 = null;
         OpenGlShader.aClass32_7415 = new Component299(8);
         anInt3219++;
         StaticElementRenderer.anInt6450 = 0;
-        for (RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.decodedOperation1872(8); class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.decodedOperation1878((byte) -115))
+        for (RenderableSub10 class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1872(8); class318_sub10 != null; class318_sub10 = (RenderableSub10) InflaterDecompressor.aClass243_2077.method1878((byte) -115))
             class318_sub10.method2530();
     }
 }

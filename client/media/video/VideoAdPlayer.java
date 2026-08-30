@@ -19,7 +19,7 @@ final class VideoAdPlayer implements Interface1 {
     private final CacheStore aClass45_4650;
     private final CacheStore aClass45_4651;
 
-    public static void decodedOperation716(int i) {
+    public static void method716(int i) {
         if (i == 1) {
             aClass105_4643 = null;
             anIntArray4648 = null;
@@ -28,9 +28,9 @@ final class VideoAdPlayer implements Interface1 {
 
     public final void method9(byte i, boolean bool) {
         if (bool) {
-            int i_0_ = ((aClass158_4646.aClass221_4948.decodedOperation1607(DisplayModeManagerContainer23.canvasWidth, aClass158_4646.anInt4931, (byte) -119)) + aClass158_4646.anInt4947);
+            int i_0_ = ((aClass158_4646.aClass221_4948.method1607(DisplayModeManagerContainer23.canvasWidth, aClass158_4646.anInt4931, (byte) -119)) + aClass158_4646.anInt4947);
             int i_1_ = ((aClass158_4646.aClass341_4945.getAlignedOffset(GlToolkitSub2.canvasHeight, aClass158_4646.anInt4936, i + 1644)) + aClass158_4646.anInt4932);
-            aClass324_4649.decodedOperation2584(null, aClass158_4646.anInt4937, aClass158_4646.anInt4940, null, aClass158_4646.anInt4935, aClass158_4646.anInt4946, aClass158_4646.anInt4936, null, i_1_, 0, 0, aClass158_4646.anInt4931, i_0_, false, aClass158_4646.anInt4943, aClass158_4646.aString4942);
+            aClass324_4649.method2584(null, aClass158_4646.anInt4937, aClass158_4646.anInt4940, null, aClass158_4646.anInt4935, aClass158_4646.anInt4946, aClass158_4646.anInt4936, null, i_1_, 0, 0, aClass158_4646.anInt4931, i_0_, false, aClass158_4646.anInt4943, aClass158_4646.aString4942);
         }
         if (i == -49) anInt4642++;
     }
@@ -44,7 +44,7 @@ final class VideoAdPlayer implements Interface1 {
         return bool;
     }
 
-    static final boolean decodedOperation717(int i) {
+    static final boolean method717(int i) {
         anInt4645++;
         if (Component156.aBoolean3697) {
             try {
@@ -54,14 +54,14 @@ final class VideoAdPlayer implements Interface1 {
                 /* empty */
             }
         }
-        if (i != -2511) decodedOperation716(-67);
+        if (i != -2511) method716(-67);
         return false;
     }
 
     public final void method7(int i) {
         anInt4647++;
-        Component184 class143 = Component98.decodedOperation1766((byte) -45, aClass158_4646.anInt4944, aClass45_4651);
-        if (i == 10286) aClass324_4649 = (NodeSub8.toolkit.method3686(class143, Component170.decodedOperation1523(aClass45_4650, aClass158_4646.anInt4944), true));
+        Component184 class143 = Component98.method1766((byte) -45, aClass158_4646.anInt4944, aClass45_4651);
+        if (i == 10286) aClass324_4649 = (NodeSub8.toolkit.method3686(class143, Component170.method1523(aClass45_4650, aClass158_4646.anInt4944), true));
     }
 
     VideoAdPlayer(CacheStore class45, CacheStore class45_3_, HeapDumpHelper class158) {

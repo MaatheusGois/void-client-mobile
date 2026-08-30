@@ -42,7 +42,7 @@ final class SpriteSub1
     static int anInt8422;
     static int anInt8423;
 
-    final int decodedOperation980() {
+    final int method980() {
         anInt8402++;
         return anInt8417 + (anInt8419 + anInt8397);
     }
@@ -61,26 +61,26 @@ final class SpriteSub1
         anInterface18_Impl3_8403.method68(i_7_, 22809, is, i, i_6_, i_4_, i_3_, i_5_);
     }
 
-    static final Component14 decodedOperation987(int i, Buffer class348_sub49) {
+    static final Component14 method987(int i, Buffer class348_sub49) {
         anInt8405++;
-        Component27 class369 = NodeSub16Sub2.decodedOperation2834((byte) -118, class348_sub49);
-        if (i != 743571200) decodedOperation989(-21, 36, 81);
+        Component27 class369 = NodeSub16Sub2.method2834((byte) -118, class348_sub49);
+        if (i != 743571200) method989(-21, 36, 81);
         int i_8_ = class348_sub49.readInt((byte) -126);
         int i_9_ = class348_sub49.readInt((byte) -126);
         return new Component14(class369.aClass221_4968, class369.aClass341_4973, class369.anInt4970, class369.anInt4959, class369.anInt4971, class369.anInt4963, class369.anInt4966, class369.anInt4965, class369.anInt4961, i_8_, i_9_);
     }
 
-    final int decodedOperation966() {
+    final int method966() {
         anInt8399++;
         return anInt8416 + anInt8400 + anInt8411;
     }
 
-    final int decodedOperation969() {
+    final int method969() {
         anInt8404++;
         return anInt8417;
     }
 
-    static final CollisionMap decodedOperation988(int i, int i_10_, int i_11_) {
+    static final CollisionMap method988(int i, int i_10_, int i_11_) {
         anInt8415++;
         CollisionMap class361 = new CollisionMap();
         class361.width = 6 + i_11_;
@@ -90,7 +90,7 @@ final class SpriteSub1
         class361.offsetY = -1;
         class361.collisionFlags = (new int[class361.width]
                 [class361.length]);
-        class361.decodedOperation3500(700);
+        class361.method3500(700);
         return class361;
     }
 
@@ -107,8 +107,8 @@ final class SpriteSub1
         aHa_Sub3_8407.setTextureEnvironment(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.uniformMatrix4fv(-28186, i_17_);
         if (aBoolean8418) {
-            float f_21_ = (float) decodedOperation966();
-            float f_22_ = (float) decodedOperation980();
+            float f_21_ = (float) method966();
+            float f_22_ = (float) method980();
             float f_23_ = (-f + f_13_) / f_21_;
             float f_24_ = (-f_12_ + f_14_) / f_21_;
             float f_25_ = (f_15_ - f) / f_22_;
@@ -128,8 +128,8 @@ final class SpriteSub1
             f_12_ = f_28_ + (f_12_ + f_30_);
             f_16_ = f_16_ + f_30_ + f_34_;
         }
-        class101_sub2.decodedOperation935(1.0F, f_14_ - f_12_, -f + f_15_, 0.0F, 0.0F, -f_12_ + f_16_, 0.0F, 0.0F, f_13_ - f, 0);
-        class101_sub2.decodedOperation920(f_12_, false, 0.0F, f);
+        class101_sub2.method935(1.0F, f_14_ - f_12_, -f + f_15_, 0.0F, 0.0F, -f_12_ + f_16_, 0.0F, 0.0F, f_13_ - f, 0);
+        class101_sub2.method920(f_12_, false, 0.0F, f);
         class101_sub2_20_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -47, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 123), (byte) -66);
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.setDrawable(0);
@@ -156,20 +156,20 @@ final class SpriteSub1
         if (bool_42_ & bool) {
             class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -26, (float) i_37_), anInterface18_Impl3_8403.method67((float) i_36_, 118), (byte) -75);
             class101_sub2.setScale(0.0F, (float) i_37_, (float) i_36_, (byte) -83);
-            class101_sub2.decodedOperation891(i, i_35_, 0);
+            class101_sub2.method891(i, i_35_, 0);
             aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
             aHa_Sub3_8407.setDrawable(0);
             aHa_Sub3_8407.warpPointer(-63);
         } else if (bool_42_) {
             int i_43_ = i_37_ + i_35_;
-            int i_44_ = decodedOperation980();
+            int i_44_ = method980();
             class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -99, (float) anInt8417), anInterface18_Impl3_8403.method67((float) i_36_, 110), (byte) -120);
             aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
             int i_45_ = anInt8419 + i_35_;
             int i_46_ = i_45_ - -anInt8417;
             while (i_46_ <= i_43_) {
                 class101_sub2.setScale(0.0F, (float) anInt8417, (float) i_36_, (byte) -32);
-                class101_sub2.decodedOperation891(i, i_45_, 0);
+                class101_sub2.method891(i, i_45_, 0);
                 aHa_Sub3_8407.setDrawable(0);
                 i_46_ += i_44_;
                 i_45_ += i_44_;
@@ -180,19 +180,19 @@ final class SpriteSub1
                 class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -81, (float) i_47_), anInterface18_Impl3_8403.method67((float) i_36_, 127), (byte) -16);
                 aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
                 class101_sub2.setScale(0.0F, (float) i_47_, (float) i_36_, (byte) -101);
-                class101_sub2.decodedOperation891(i, i_45_, 0);
+                class101_sub2.method891(i, i_45_, 0);
                 aHa_Sub3_8407.setDrawable(0);
                 aHa_Sub3_8407.warpPointer(-91);
             }
         } else if (bool) {
             int i_61_ = i - -i_36_;
-            int i_62_ = decodedOperation966();
+            int i_62_ = method966();
             class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -121, (float) i_37_), anInterface18_Impl3_8403.method67((float) anInt8411, 77), (byte) -27);
             aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
             int i_63_ = i - -anInt8400;
             for (int i_64_ = anInt8411 + i_63_; i_64_ <= i_61_; i_64_ += i_62_) {
                 class101_sub2.setScale(0.0F, (float) i_37_, (float) anInt8411, (byte) -69);
-                class101_sub2.decodedOperation891(i_63_, i_35_, 0);
+                class101_sub2.method891(i_63_, i_35_, 0);
                 aHa_Sub3_8407.setDrawable(0);
                 i_63_ += i_62_;
                 aHa_Sub3_8407.warpPointer(-40);
@@ -202,15 +202,15 @@ final class SpriteSub1
                 class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -62, (float) i_37_), anInterface18_Impl3_8403.method67((float) i_65_, 119), (byte) -10);
                 aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
                 class101_sub2.setScale(0.0F, (float) i_37_, (float) i_65_, (byte) -120);
-                class101_sub2.decodedOperation891(i_63_, i_35_, 0);
+                class101_sub2.method891(i_63_, i_35_, 0);
                 aHa_Sub3_8407.setDrawable(0);
                 aHa_Sub3_8407.warpPointer(-57);
             }
         } else {
             int i_48_ = i_37_ + i_35_;
             int i_49_ = i + i_36_;
-            int i_50_ = decodedOperation966();
-            int i_51_ = decodedOperation980();
+            int i_50_ = method966();
+            int i_51_ = method980();
             int i_52_ = anInt8419 + i_35_;
             int i_53_ = i_52_ + anInt8417;
             while (i_48_ >= i_53_) {
@@ -219,7 +219,7 @@ final class SpriteSub1
                 int i_54_ = anInt8400 + i;
                 for (int i_55_ = i_54_ - -anInt8411; i_55_ <= i_49_; i_55_ += i_50_) {
                     class101_sub2.setScale(0.0F, (float) anInt8417, (float) anInt8411, (byte) -65);
-                    class101_sub2.decodedOperation891(i_54_, i_52_, 0);
+                    class101_sub2.method891(i_54_, i_52_, 0);
                     aHa_Sub3_8407.setDrawable(0);
                     i_54_ += i_50_;
                     aHa_Sub3_8407.warpPointer(-113);
@@ -229,7 +229,7 @@ final class SpriteSub1
                     class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -82, (float) anInt8417), anInterface18_Impl3_8403.method67((float) i_56_, 86), (byte) -35);
                     aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
                     class101_sub2.setScale(0.0F, (float) anInt8417, (float) i_56_, (byte) -26);
-                    class101_sub2.decodedOperation891(i_54_, i_52_, 0);
+                    class101_sub2.method891(i_54_, i_52_, 0);
                     aHa_Sub3_8407.setDrawable(0);
                     aHa_Sub3_8407.warpPointer(-79);
                 }
@@ -244,7 +244,7 @@ final class SpriteSub1
                 int i_59_ = anInt8411 + i_58_;
                 while (i_49_ >= i_59_) {
                     class101_sub2.setScale(0.0F, (float) i_57_, (float) anInt8411, (byte) -98);
-                    class101_sub2.decodedOperation891(i_58_, i_52_, 0);
+                    class101_sub2.method891(i_58_, i_52_, 0);
                     aHa_Sub3_8407.setDrawable(0);
                     i_58_ += i_50_;
                     i_59_ += i_50_;
@@ -255,7 +255,7 @@ final class SpriteSub1
                     class101_sub2_41_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -102, (float) i_57_), anInterface18_Impl3_8403.method67((float) i_60_, 115), (byte) -90);
                     aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
                     class101_sub2.setScale(0.0F, (float) i_57_, (float) i_60_, (byte) -95);
-                    class101_sub2.decodedOperation891(i_58_, i_52_, 0);
+                    class101_sub2.method891(i_58_, i_52_, 0);
                     aHa_Sub3_8407.setDrawable(0);
                     aHa_Sub3_8407.warpPointer(-54);
                 }
@@ -278,13 +278,13 @@ final class SpriteSub1
         aHa_Sub3_8407.linkProgram(86, 1);
         aHa_Sub3_8407.swapInterval2(true, 1);
         if (aBoolean8418) {
-            float f_74_ = (float) anInt8411 / (float) decodedOperation966();
-            float f_75_ = (float) anInt8417 / (float) decodedOperation980();
-            class101_sub2.decodedOperation935(1.0F, f_74_ * (-f_66_ + f_68_), f_75_ * (-f + f_69_), 0.0F, 0.0F, f_75_ * (f_70_ - f_66_), 0.0F, 0.0F, (f_67_ - f) * f_74_, 0);
-            class101_sub2.decodedOperation920(((float) anInt8419 + f_66_) * f_75_, false, 0.0F, ((float) anInt8400 + f) * f_74_);
+            float f_74_ = (float) anInt8411 / (float) method966();
+            float f_75_ = (float) anInt8417 / (float) method980();
+            class101_sub2.method935(1.0F, f_74_ * (-f_66_ + f_68_), f_75_ * (-f + f_69_), 0.0F, 0.0F, f_75_ * (f_70_ - f_66_), 0.0F, 0.0F, (f_67_ - f) * f_74_, 0);
+            class101_sub2.method920(((float) anInt8419 + f_66_) * f_75_, false, 0.0F, ((float) anInt8400 + f) * f_74_);
         } else {
-            class101_sub2.decodedOperation935(1.0F, -f_66_ + f_68_, f_69_ - f, 0.0F, 0.0F, -f_66_ + f_70_, 0.0F, 0.0F, f_67_ - f, 0);
-            class101_sub2.decodedOperation920(f_66_, false, 0.0F, f);
+            class101_sub2.method935(1.0F, -f_66_ + f_68_, f_69_ - f, 0.0F, 0.0F, -f_66_ + f_70_, 0.0F, 0.0F, f_67_ - f, 0);
+            class101_sub2.method920(f_66_, false, 0.0F, f);
         }
         class101_sub2_73_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -87, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 75), (byte) -60);
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
@@ -294,8 +294,8 @@ final class SpriteSub1
         aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
         MatrixSub2 class101_sub2_76_ = aHa_Sub3_8407.getUniformLocation(false);
         class101_sub2_76_.method898(class101_sub2);
-        class101_sub2_76_.decodedOperation891(-i_71_, -i_72_, 0);
-        class101_sub2_76_.decodedOperation914(interface18_impl3.method71((byte) -32, 1.0F), 1.0F, 0, interface18_impl3.method67(1.0F, 71));
+        class101_sub2_76_.method891(-i_71_, -i_72_, 0);
+        class101_sub2_76_.method914(interface18_impl3.method71((byte) -32, 1.0F), 1.0F, 0, interface18_impl3.method67(1.0F, 71));
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.setDrawable(0);
         aHa_Sub3_8407.warpPointer(-109);
@@ -340,11 +340,11 @@ final class SpriteSub1
         method986(0, 0, anInt8411, anInt8417, is_79_, 0, anInt8411);
     }
 
-    static final boolean decodedOperation989(int i, int i_92_, int i_93_) {
+    static final boolean method989(int i, int i_92_, int i_93_) {
         anInt8401++;
-        if (ClientErrorReporter.hasCollisionBlockFlags(i_93_, i, i_92_ ^ 0x1fe) | (0x10000 & i) != 0 || ParticleSystem.decodedOperation3325(i, i_93_, true)) return true;
+        if (ClientErrorReporter.hasCollisionBlockFlags(i_93_, i, i_92_ ^ 0x1fe) | (0x10000 & i) != 0 || ParticleSystem.method3325(i, i_93_, true)) return true;
         if (i_92_ != -385) return false;
-        return (i_93_ & 0x37) == 0 && Component224.decodedOperation2056(i, 120, i_93_);
+        return (i_93_ & 0x37) == 0 && Component224.method2056(i, 120, i_93_);
     }
 
     final void method982(int i, int i_94_, int i_95_, int i_96_, int i_97_, int i_98_, int i_99_, int i_100_) {
@@ -361,13 +361,13 @@ final class SpriteSub1
         aHa_Sub3_8407.uniformMatrix4fv(-28186, i_98_);
         class101_sub2_101_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -44, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 101), (byte) -30);
         if (aBoolean8418) {
-            i_95_ = i_95_ * anInt8411 / decodedOperation966();
-            i_96_ = anInt8417 * i_96_ / decodedOperation980();
+            i_95_ = i_95_ * anInt8411 / method966();
+            i_96_ = anInt8417 * i_96_ / method980();
             i += anInt8400 * i_95_ / anInt8411;
             i_94_ += anInt8419 * i_96_ / anInt8417;
         }
         class101_sub2.setScale(0.0F, (float) i_96_, (float) i_95_, (byte) -100);
-        class101_sub2.decodedOperation891(i, i_94_, 0);
+        class101_sub2.method891(i, i_94_, 0);
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.setDrawable(0);
         aHa_Sub3_8407.warpPointer(-118);
@@ -384,7 +384,7 @@ final class SpriteSub1
         is[2] = anInt8416;
     }
 
-    final void decodedOperation964(int i, int i_102_, int i_103_, int i_104_, int i_105_) {
+    final void method964(int i, int i_102_, int i_103_, int i_104_, int i_105_) {
         anInt8409++;
         MatrixSub2 class101_sub2 = aHa_Sub3_8407.getClipboard(-92);
         MatrixSub2 class101_sub2_106_ = aHa_Sub3_8407.getUniformLocation(false);
@@ -399,7 +399,7 @@ final class SpriteSub1
         aHa_Sub3_8407.setTextureEnvironment(1, true, DefinitionSub39.aClass70_9485);
         aHa_Sub3_8407.uniformMatrix4fv(-28186, i_104_);
         class101_sub2.setScale(0.0F, (float) anInt8417, (float) anInt8411, (byte) -44);
-        class101_sub2.decodedOperation891(i, i_102_, 0);
+        class101_sub2.method891(i, i_102_, 0);
         class101_sub2_106_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -125, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 111), (byte) -19);
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.setDrawable(0);
@@ -409,7 +409,7 @@ final class SpriteSub1
         aHa_Sub3_8407.setTextureEnvironment(1, true, DisplayModeManagerContainer343.aClass70_8737);
     }
 
-    final int decodedOperation971() {
+    final int method971() {
         anInt8420++;
         return anInt8411;
     }
@@ -437,7 +437,7 @@ final class SpriteSub1
         aHa_Sub3_8407.swapInterval2(true, 1);
         MatrixSub2 class101_sub2 = aHa_Sub3_8407.getClipboard(-120);
         class101_sub2.setScale(0.0F, (float) anInt8417, (float) anInt8411, (byte) -55);
-        class101_sub2.decodedOperation891(i, i_113_, 0);
+        class101_sub2.method891(i, i_113_, 0);
         aHa_Sub3_8407.setDrawable(0);
         MatrixSub2 class101_sub2_116_ = aHa_Sub3_8407.getUniformLocation(false);
         class101_sub2_116_.setScale(1.0F, anInterface18_Impl3_8403.method71((byte) -102, (float) anInt8417), anInterface18_Impl3_8403.method67((float) anInt8411, 106), (byte) -33);
@@ -448,7 +448,7 @@ final class SpriteSub1
         aHa_Sub3_8407.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
         MatrixSub2 class101_sub2_117_ = aHa_Sub3_8407.getUniformLocation(false);
         class101_sub2_117_.setScale(1.0F, interface18_impl3.method71((byte) -108, (float) anInt8417), interface18_impl3.method67((float) anInt8411, 95), (byte) -81);
-        class101_sub2_117_.decodedOperation920(interface18_impl3.method71((byte) -27, (float) (i_113_ + -i_115_)), false, 0.0F, interface18_impl3.method67((float) (i - i_114_), 122));
+        class101_sub2_117_.method920(interface18_impl3.method71((byte) -27, (float) (i_113_ + -i_115_)), false, 0.0F, interface18_impl3.method67((float) (i - i_114_), 122));
         aHa_Sub3_8407.deleteVertexArrays(-32, Component302.aClass251_6030);
         aHa_Sub3_8407.warpPointer(-81);
         aHa_Sub3_8407.getProgramInfoLog(-8629);

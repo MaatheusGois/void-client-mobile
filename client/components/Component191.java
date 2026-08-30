@@ -19,7 +19,7 @@ final class Component191
     static int[] anIntArray2466 = new int[14];
     static int anInt2467;
 
-    static final void decodedOperation1376(RenderableObject class318_sub1) {
+    static final void method1376(RenderableObject class318_sub1) {
         if (class318_sub1 != null) {
             for (int i = 0; i < 2; i++) {
                 RenderableObject class318_sub1_0_ = null;
@@ -56,27 +56,27 @@ final class Component191
         }
     }
 
-    final void decodedOperation1377(int i) {
+    final void method1377(int i) {
         anInt2457++;
-        if (i != 2) decodedOperation1376(null);
+        if (i != 2) method1376(null);
         synchronized (aClass60_2458) {
             aClass60_2458.purgeSoftReferences(-125);
         }
     }
 
-    public static void decodedOperation1378(int i) {
+    public static void method1378(int i) {
         aClass250_2462 = null;
         anIntArray2466 = null;
-        if (i != 14) decodedOperation1382(99, -102);
+        if (i != 14) method1382(99, -102);
     }
 
-    static final boolean decodedOperation1379(int i, int i_4_, int i_5_) {
+    static final boolean method1379(int i, int i_4_, int i_5_) {
         anInt2459++;
         if (i != 4) return true;
-        return (CacheNode.decodedOperation3194(i_5_, i_4_, (byte) 126) & RadixText.decodedOperation1837(i_4_, 46, i_5_));
+        return (CacheNode.method3194(i_5_, i_4_, (byte) 126) & RadixText.method1837(i_4_, 46, i_5_));
     }
 
-    final Component231 decodedOperation1380(boolean bool, int i) {
+    final Component231 method1380(boolean bool, int i) {
         anInt2460++;
         if (bool != true) return null;
         Component231 class22;
@@ -89,22 +89,22 @@ final class Component191
             is = aClass45_2461.getFile(-1860, 1, i);
         }
         class22 = new Component231();
-        if (is != null) class22.decodedOperation290(new Buffer(is), -1);
+        if (is != null) class22.method290(new Buffer(is), -1);
         synchronized (aClass60_2458) {
             aClass60_2458.putOne(class22, i, (byte) -124);
         }
         return class22;
     }
 
-    final void decodedOperation1381(boolean bool) {
+    final void method1381(boolean bool) {
         synchronized (aClass60_2458) {
-            if (bool != true) decodedOperation1382(-96, 76);
+            if (bool != true) method1382(-96, 76);
             aClass60_2458.clear(0);
         }
         anInt2465++;
     }
 
-    static final int decodedOperation1382(int i, int i_6_) {
+    static final int method1382(int i, int i_6_) {
         anInt2463++;
         if (i != 6406) {
             if (i != 6409) {
@@ -119,7 +119,7 @@ final class Component191
         throw new IllegalArgumentException("");
     }
 
-    final void decodedOperation1383(int i, int i_7_) {
+    final void method1383(int i, int i_7_) {
         anInt2467++;
         synchronized (aClass60_2458) {
             aClass60_2458.processSoftEntries(2, i_7_);

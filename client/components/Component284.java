@@ -18,7 +18,7 @@ final class Component284
     static int anInt6152;
     static int anInt6153;
 
-    final int decodedOperation1848(int i) {
+    final int method1848(int i) {
         if (i != -32350) getValue(100, 29);
         anInt6145++;
         return this.preferenceValue;
@@ -44,10 +44,10 @@ final class Component284
         anInt6148++;
     }
 
-    static final boolean decodedOperation1849(char c, int i) {
+    static final boolean method1849(char c, int i) {
         anInt6149++;
         if (Character.isISOControl(c)) return false;
-        if (Npc.decodedOperation2446(c, (byte) 105)) return true;
+        if (Npc.method2446(c, (byte) 105)) return true;
         char[] cs = Component316.aCharArray2488;
         for (int i_2_ = 0; cs.length > i_2_; i_2_++) {
             int i_3_ = cs[i_2_];
@@ -62,7 +62,7 @@ final class Component284
         return false;
     }
 
-    static final int decodedOperation1850(int i, int i_8_) {
+    static final int method1850(int i, int i_8_) {
         anInt6144++;
         int i_9_ = 101 % ((-20 - i_8_) / 37);
         return i >>> 8;
@@ -74,7 +74,7 @@ final class Component284
         return 1;
     }
 
-    static final void decodedOperation1851(byte i) {
+    static final void method1851(byte i) {
         anInt6152++;
         for (int i_11_ = 0; i_11_ < 5; i_11_++)
             Component113.aBooleanArray2374[i_11_] = false;

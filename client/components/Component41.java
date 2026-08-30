@@ -13,7 +13,7 @@ abstract class Component41
 
     abstract void method1856(byte i);
 
-    static final long decodedOperation1857(byte i) {
+    static final long method1857(byte i) {
         anInt3148++;
         if (i != -45) return -58L;
         return NodeSub8.aClass241_6660.method1862(-18931);
@@ -23,7 +23,7 @@ abstract class Component41
 
     abstract int method1859(int i, long l);
 
-    public static void decodedOperation1860(byte i) {
+    public static void method1860(byte i) {
         aClass351_3150 = null;
         int i_0_ = -52 / ((-22 - i) / 55);
     }
@@ -32,7 +32,7 @@ abstract class Component41
         /* empty */
     }
 
-    final int decodedOperation1861(int i, long l) {
+    final int method1861(int i, long l) {
         try {
             anInt3149++;
             long l_1_ = method1858(-73);

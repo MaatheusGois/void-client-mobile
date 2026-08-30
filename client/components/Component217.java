@@ -10,12 +10,12 @@ final class Component217
     static int anInt3216;
     static Component158 aClass21_3217 = new Component158();
 
-    public static void decodedOperation1907(byte i) {
+    public static void method1907(byte i) {
         aClass21_3217 = null;
         int i_0_ = -55 / ((i - -39) / 60);
     }
 
-    static final int decodedOperation1908(int i, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_, int i_5_) {
+    static final int method1908(int i, int i_1_, int i_2_, boolean bool, int i_3_, int i_4_, int i_5_) {
         i_2_ &= 0x3;
         anInt3216++;
         if (bool != true) aClass21_3217 = null;

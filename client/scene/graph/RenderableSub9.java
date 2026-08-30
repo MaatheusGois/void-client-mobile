@@ -11,7 +11,7 @@ class RenderableSub9
     RenderableSub9 aClass318_Sub9_6468;
     RenderableSub9 aClass318_Sub9_6469;
 
-    final void decodedOperation2514(int i) {
+    final void method2514(int i) {
         anInt6467++;
         if (this.aClass318_Sub9_6468 != null) {
             this.aClass318_Sub9_6468.aClass318_Sub9_6469 = this.aClass318_Sub9_6469;

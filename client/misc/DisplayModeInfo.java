@@ -22,14 +22,14 @@ final class DisplayModeInfo {
     int height;
     static Component150 aClass227_1055;
 
-    static final void decodedOperation529(int i, boolean bool) {
+    static final void method529(int i, boolean bool) {
         anInt1053++;
-        if (bool != true) decodedOperation530(-105);
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, 2);
-        class348_sub42_sub15.decodedOperation3251(-16058);
+        if (bool != true) method530(-105);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, 2);
+        class348_sub42_sub15.method3251(-16058);
     }
 
-    public static void decodedOperation530(int i) {
+    public static void method530(int i) {
         aClass17Array1048 = null;
         aClass227_1055 = null;
         aClass163_1050 = null;
@@ -37,7 +37,7 @@ final class DisplayModeInfo {
         if (i != 14) aClass251_1051 = null;
     }
 
-    static final int decodedOperation531(byte i, DisplayModeManagerContainer88 class70) {
+    static final int method531(byte i, DisplayModeManagerContainer88 class70) {
         int i_0_ = -45 / ((i - 54) / 43);
         anInt1049++;
         if (DisplayModeManagerContainer173.aClass70_4247 != class70) {

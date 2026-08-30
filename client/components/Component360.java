@@ -23,20 +23,20 @@ final class Component360
     int anInt4320;
     static int anInt4321;
 
-    static final int decodedOperation3452(int i, byte i_0_, int i_1_) {
-        if (i_0_ != -15) decodedOperation3452(80, (byte) 123, -88);
+    static final int method3452(int i, byte i_0_, int i_1_) {
+        if (i_0_ != -15) method3452(80, (byte) 123, -88);
         anInt4315++;
         int i_2_ = i_1_ + -1 & i >> 31;
         return (i + (i >>> 31)) % i_1_ + i_2_;
     }
 
-    final Component360 decodedOperation3453(boolean bool) {
+    final Component360 method3453(boolean bool) {
         anInt4318++;
-        if (bool != true) decodedOperation3453(false);
+        if (bool != true) method3453(false);
         return new Component360(this.anInt4313, this.anInt4314, this.anInt4311, this.anInt4316, this.anInt4317, this.anInt4308);
     }
 
-    final void decodedOperation3454(Component360 class350_3_, boolean bool) {
+    final void method3454(Component360 class350_3_, boolean bool) {
         this.anInt4308 = class350_3_.anInt4308;
         this.anInt4314 = class350_3_.anInt4314;
         if (bool == true) {

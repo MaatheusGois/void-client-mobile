@@ -19,7 +19,7 @@ final class Component275
     static Component183 aClass114_2693;
     static int[] anIntArray2694;
 
-    static final void decodedOperation1496(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+    static final void method1496(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         Component208.ensureIntArrayCapacity((byte) 118, i_2_);
         anInt2685++;
         int i_6_ = 0;
@@ -115,15 +115,15 @@ final class Component275
                 }
             }
         }
-        if (i_3_ != 2) decodedOperation1497(79);
+        if (i_3_ != 2) method1497(79);
     }
 
-    public static void decodedOperation1497(int i) {
+    public static void method1497(int i) {
         anIntArray2694 = null;
         defaultSettings = null;
         aClass351_2691 = null;
         aClass114_2693 = null;
-        if (i != 16384) decodedOperation1496(-23, 118, -17, -52, 33, 108, 2);
+        if (i != 16384) method1496(-23, 118, -17, -52, 33, 108, 2);
         aClass351_2686 = null;
     }
 

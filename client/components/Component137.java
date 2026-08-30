@@ -23,20 +23,20 @@ abstract class Component137
     int anInt1929;
     private final int anInt1930;
 
-    static final void decodedOperation1148(int i, int i_0_) {
+    static final void method1148(int i, int i_0_) {
         anInt1925++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i, (byte) 105, i_0_);//6
-        class348_sub42_sub15.decodedOperation3251(i_0_ ^ ~0x3ebf);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i, (byte) 105, i_0_);//6
+        class348_sub42_sub15.method3251(i_0_ ^ ~0x3ebf);
     }
 
-    public static void decodedOperation1149(int i) {
+    public static void method1149(int i) {
         int i_1_ = -90 / ((-50 - i) / 37);
         aColorArray1928 = null;
     }
 
-    final void decodedOperation1150(byte[] is, int i, int i_2_) {
+    final void method1150(byte[] is, int i, int i_2_) {
         anInt1926++;
-        if (i != 0) decodedOperation1148(-47, 124);
+        if (i != 0) method1148(-47, 124);
         method1152(i ^ ~0x74);
         if (anInt1921 >= i_2_) OpenGL.glBufferSubDataARBub(anInt1930, 0, i_2_, is, 0);
         else {
@@ -52,10 +52,10 @@ abstract class Component137
         super.finalize();
     }
 
-    static final Component184 decodedOperation1151(int i, GraphicsToolkit var_ha, int i_3_) {
+    static final Component184 method1151(int i, GraphicsToolkit var_ha, int i_3_) {
         anInt1924++;
         if (i != -25411) return null;
-        Component48 class352 = Component272.decodedOperation1734(i_3_, var_ha, (byte) -81, true);
+        Component48 class352 = Component272.method1734(i_3_, var_ha, (byte) -81, true);
         if (class352 == null) return null;
         return class352.aClass143_4333;
     }

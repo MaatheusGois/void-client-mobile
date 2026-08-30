@@ -17,7 +17,7 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method890(int[] is);
 
-    abstract void decodedOperation891(int i, int i_0_, int i_1_);
+    abstract void method891(int i, int i_0_, int i_1_);
 
     public DisplayModeManagerContainer204() {
         /* empty */
@@ -25,8 +25,8 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method892(int i, int i_2_, int i_3_, int[] is);
 
-    static final void decodedOperation893(byte i) {
-        DefinitionSub22.decodedOperation3111(91, Component192.preferences.aClass239_Sub6_7226.decodedOperation1743(-32350));
+    static final void method893(byte i) {
+        DefinitionSub22.method3111(91, Component192.preferences.aClass239_Sub6_7226.method1743(-32350));
         anInt1595++;
         int i_4_ = ((WaterSurfaceShader.anInt6246 >> 12) - -(NodeBaseSub2.regionTileX >> 3));
         int i_5_ = ((Component330.regionTileY >> 3) + (Component317.anInt8685 >> 12));
@@ -75,10 +75,10 @@ abstract class DisplayModeManagerContainer204
         int i_11_;
         if (Component49.clientState != 3) i_11_ = 8;
         else i_11_ = 4;
-        NodeSub41.decodedOperation3157(i_5_, (byte) 123, i_4_, i_11_, false);
+        NodeSub41.method3157(i_5_, (byte) 123, i_4_, i_11_, false);
     }
 
-    abstract void decodedOperation894(int i, int i_12_, int i_13_);
+    abstract void method894(int i, int i_12_, int i_13_);
 
     abstract void method895(int i);
 
@@ -92,7 +92,7 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method900(int i);
 
-    static final void decodedOperation901(Component24[] class105s, int i) {
+    static final void method901(Component24[] class105s, int i) {
         try {
             anInt1599++;
             Component175.anInt5850 = class105s.length;
@@ -100,7 +100,7 @@ abstract class DisplayModeManagerContainer204
             DisplayModeManagerContainer196.aClass105Array4234 = new Component24[Component175.anInt5850 + 10];
             Component313.arraycopyObjects(class105s, 0, DisplayModeManagerContainer196.aClass105Array4234, 0, Component175.anInt5850);
             for (int i_17_ = 0; Component175.anInt5850 > i_17_; i_17_++)
-                Component143.anIntArray2330[i_17_] = DisplayModeManagerContainer196.aClass105Array4234[i_17_].decodedOperation980();
+                Component143.anIntArray2330[i_17_] = DisplayModeManagerContainer196.aClass105Array4234[i_17_].method980();
             if (i != 515880227) anInt1597 = 49;
             for (int i_18_ = Component175.anInt5850; (i_18_ < DisplayModeManagerContainer196.aClass105Array4234.length); i_18_++)
                 Component143.anIntArray2330[i_18_] = 12;
@@ -113,11 +113,11 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method903(int i, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_);
 
-    static final GlRectangleTexture decodedOperation904(int i, GlToolkitSub2 var_ha_Sub2, int i_24_, int i_25_, int i_26_) {
+    static final GlRectangleTexture method904(int i, GlToolkitSub2 var_ha_Sub2, int i_24_, int i_25_, int i_26_) {
         try {
             anInt1594++;
-            if (i <= 42) decodedOperation906(123);
-            if (var_ha_Sub2.aBoolean7793 || (Component353.decodedOperation1436(82, i_25_) && Component353.decodedOperation1436(81, i_26_))) return new GlRectangleTexture(var_ha_Sub2, 3553, i_24_, i_25_, i_26_);
+            if (i <= 42) method906(123);
+            if (var_ha_Sub2.aBoolean7793 || (Component353.method1436(82, i_25_) && Component353.method1436(81, i_26_))) return new GlRectangleTexture(var_ha_Sub2, 3553, i_24_, i_25_, i_26_);
             if (var_ha_Sub2.aBoolean7837) return new GlRectangleTexture(var_ha_Sub2, 34037, i_24_, i_25_, i_26_);
             return new GlRectangleTexture(var_ha_Sub2, i_24_, i_25_, i_26_, Component373.nextPowerOfTwo(i_25_, (byte) 108), Component373.nextPowerOfTwo(i_26_, (byte) 108));
         } catch (RuntimeException runtimeexception) {
@@ -127,16 +127,16 @@ abstract class DisplayModeManagerContainer204
 
     abstract void method905(int i, int i_27_, int i_28_, int[] is);
 
-    public static void decodedOperation906(int i) {
+    public static void method906(int i) {
         anIntArray1593 = null;
-        if (i != -31777) decodedOperation901(null, -89);
+        if (i != -31777) method901(null, -89);
     }
 
     abstract DisplayModeManagerContainer204 method907();
 
     abstract void method908(int i);
 
-    static final void decodedOperation909(int i) {
+    static final void method909(int i) {
         anInt1598++;
         if (DefinitionSub30.aBoolean9403 && i == 3553) {
             while (ScreenModeManager.anInt2834 < Component304.aClass110_Sub1Array1146.length) {

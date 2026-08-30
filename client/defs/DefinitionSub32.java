@@ -19,11 +19,11 @@ final class DefinitionSub32
     private static short[] aShortArray9423 = {6798, 8741, 25238, 4626, 4550};
     static short[][] aShortArrayArray9424 = {aShortArray9423, aShortArray9421, aShortArray9422};
 
-    static final GlRectangleTexture decodedOperation3132(int[] is, int i, int i_0_, int i_1_, int i_2_, GlToolkitSub2 var_ha_Sub2, boolean bool, byte i_3_) {
+    static final GlRectangleTexture method3132(int[] is, int i, int i_0_, int i_1_, int i_2_, GlToolkitSub2 var_ha_Sub2, boolean bool, byte i_3_) {
         try {
-            if (i_3_ != 12) decodedOperation3134(9);
+            if (i_3_ != 12) method3134(9);
             anInt9418++;
-            if (!var_ha_Sub2.aBoolean7793 && (!Component353.decodedOperation1436(-74, i_2_) || !Component353.decodedOperation1436(127, i_1_))) {
+            if (!var_ha_Sub2.aBoolean7793 && (!Component353.method1436(-74, i_2_) || !Component353.method1436(127, i_1_))) {
                 if (!var_ha_Sub2.aBoolean7837) return (new GlRectangleTexture(var_ha_Sub2, i_2_, i_1_, Component373.nextPowerOfTwo(i_2_, (byte) 108), Component373.nextPowerOfTwo(i_1_, (byte) 108), is));
                 return new GlRectangleTexture(var_ha_Sub2, 34037, i_2_, i_1_, bool, is, i_0_, i);
             }
@@ -33,7 +33,7 @@ final class DefinitionSub32
         }
     }
 
-    public static void decodedOperation3133(byte i) {
+    public static void method3133(byte i) {
         aClass273_9415 = null;
         if (i != -109) aClass273_9415 = null;
         aShortArray9423 = null;
@@ -42,7 +42,7 @@ final class DefinitionSub32
         aShortArray9422 = null;
     }
 
-    static final void decodedOperation3134(int i) {
+    static final void method3134(int i) {
         anInt9419++;
         if ((~SpriteAtlasShader.anInt6248) <= i) {
             long l = Component240.currentTimeMillis(i ^ 0x3c);
@@ -79,18 +79,18 @@ final class DefinitionSub32
         }
     }
 
-    static final Component203 decodedOperation3135(int i, int i_7_, int i_8_) {
+    static final Component203 method3135(int i, int i_7_, int i_8_) {
         Component186 class357 = Component335.aClass357ArrayArrayArray2029[i][i_7_][i_8_];
         if (class357 == null) return null;
         return class357.aClass318_Sub1_Sub5_4395;
     }
 
     final int[][] getColourOutput(int i, int i_9_) {
-        if (i_9_ != -1564599039) decodedOperation3133((byte) 4);
+        if (i_9_ != -1564599039) method3133((byte) 4);
         anInt9417++;
         int[][] is = this.imageCacheStore.getPixels(-78, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_10_ = this.decodedOperation3039((byte) -104, i, 0);
+            int[][] is_10_ = this.method3039((byte) -104, i, 0);
             int[] is_11_ = is_10_[0];
             int[] is_12_ = is_10_[1];
             int[] is_13_ = is_10_[2];
@@ -115,20 +115,20 @@ final class DefinitionSub32
         int[] is = this.imageCache.getPixels(0, i);
         if (i_18_ != 255) getColourOutput(-113, -46);
         if (this.imageCache.cacheMiss) {
-            int[] is_19_ = this.decodedOperation3048(i, 633706337, 0);
+            int[] is_19_ = this.method3048(i, 633706337, 0);
             for (int i_20_ = 0; (i_20_ < DefinitionSub6.anInt9139); i_20_++)
                 is[i_20_] = 4096 + -is_19_[i_20_];
         }
         return is;
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_21_) {
+    final void method3049(Buffer class348_sub49, int i, int i_21_) {
         anInt9414++;
         if (i_21_ != 31015) aClass273_9415 = null;
         if (i == 0) this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
     }
 
-    static final String decodedOperation3136(byte i, Buffer class348_sub49) {
+    static final String method3136(byte i, Buffer class348_sub49) {
         anInt9416++;
         if (i != 64) aShortArray9423 = null;
         return BasicMouseHandler.readJagStringLimited(32767, class348_sub49, -77);

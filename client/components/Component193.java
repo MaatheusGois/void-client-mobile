@@ -21,12 +21,12 @@ final class Component193
     static int anInt3254;
     static int anInt3255;
 
-    static final void decodedOperation1919(int i, float f, byte[] is, float f_0_, int i_1_, float f_2_, DisplayModeManagerContainer51 class186, float f_3_, int i_4_, byte i_5_, int i_6_, float f_7_, int i_8_) {
+    static final void method1919(int i, float f, byte[] is, float f_0_, int i_1_, float f_2_, DisplayModeManagerContainer51 class186, float f_3_, int i_4_, byte i_5_, int i_6_, float f_7_, int i_8_) {
         try {
             int i_9_ = 0;
-            if (i_5_ < 11) decodedOperation1919(97, -1.4756906F, null, 0.7518226F, 93, -0.33127537F, null, -0.6670833F, 25, (byte) -96, 123, -1.8054857F, 43);
+            if (i_5_ < 11) method1919(97, -1.4756906F, null, 0.7518226F, 93, -0.33127537F, null, -0.6670833F, 25, (byte) -96, 123, -1.8054857F, 43);
             for (/**/; i_9_ < i_6_; i_9_++) {
-                Player.decodedOperation2460(f, i_1_, f_0_, i_4_, i, f_7_, class186, i_9_, (byte) 30, i_8_, f_3_, is, i_6_, f_2_);
+                Player.method2460(f, i_1_, f_0_, i_4_, i, f_7_, class186, i_9_, (byte) 30, i_8_, f_3_, is, i_6_, f_2_);
                 i_1_ += i * i_8_;
             }
             anInt3250++;
@@ -35,13 +35,13 @@ final class Component193
         }
     }
 
-    static final int decodedOperation1920(int i, int i_10_) {
+    static final int method1920(int i, int i_10_) {
         if (i != 127) return -32;
         anInt3252++;
         return 0x7f & i_10_;
     }
 
-    final void decodedOperation1921(byte i, Buffer class348_sub49) {
+    final void method1921(byte i, Buffer class348_sub49) {
         if (i != -69) method1923(-117, -120, null);
         anInt3255++;
         for (; ; ) {
@@ -51,13 +51,13 @@ final class Component193
         }
     }
 
-    static final void decodedOperation1922(String string, int i, String string_12_, boolean bool) {
+    static final void method1922(String string, int i, String string_12_, boolean bool) {
         try {
             if (bool == true) {
                 anInt3247++;
                 RuntimeException_Sub1.anInt4596 = i;
                 Component205.anInt5969 = 2;
-                Component72.decodedOperation1138(string_12_, false, string, (byte) -45);
+                Component72.method1138(string_12_, false, string, (byte) -45);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("u.E(" + (string != null ? "{...}" : "null") + ',' + i + ',' + (string_12_ != null ? "{...}" : "null") + ',' + bool + ')'));

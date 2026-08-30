@@ -35,19 +35,19 @@ final class ImageCache {
         return buffers;
     }
 
-    static final void decodedOperation1428(boolean bool) {
+    static final void method1428(boolean bool) {
         DisplayModeManagerContainer173.anImage4249 = null;
         anInt2569++;
         StringCache.aFont4329 = null;
-        if (bool != true) decodedOperation1431(-122);
+        if (bool != true) method1431(-122);
     }
 
-    static final void decodedOperation1429(String string, int i) {
+    static final void method1429(String string, int i) {
         ShaderProgramSub2.addChatMessage("", i, (byte) -125, 0, string, "", "");
         anInt2560++;
     }
 
-    static final void decodedOperation1430(int i, byte i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, DisplayModeManagerContainer58 class318_sub1_sub3_sub3_8_) {
+    static final void method1430(int i, byte i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, DisplayModeManagerContainer58 class318_sub1_sub3_sub3, DisplayModeManagerContainer58 class318_sub1_sub3_sub3_8_) {
         try {
             anInt2567++;
             int i_9_ = class318_sub1_sub3_sub3.method2425(-1);
@@ -55,34 +55,34 @@ final class ImageCache {
                 Object object = null;
                 Component24 class105 = ((Component24) NodeSub1Sub1.aClass60_8807.get(i_9_, 118));
                 if (class105 == null) {
-                    Component170[] class207s = Component170.decodedOperation1519(Component158.aClass45_322, i_9_, 0);
+                    Component170[] class207s = Component170.method1519(Component158.aClass45_322, i_9_, 0);
                     if (class207s == null) return;
-                    class105 = NodeSub8.toolkit.decodedOperation3691(class207s[0], true);
+                    class105 = NodeSub8.toolkit.method3691(class207s[0], true);
                     NodeSub1Sub1.aClass60_8807.putOne(class105, i_9_, (byte) -115);
                 }
-                ShaderSub2.decodedOperation165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.getSize((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
+                ShaderSub2.method165(class318_sub1_sub3_sub3_8_.plane, i_5_, 0, i_3_ >> 1, class318_sub1_sub3_sub3_8_.x, class318_sub1_sub3_sub3_8_.getSize((byte) 126) * 256, class318_sub1_sub3_sub3_8_.y, (byte) 92, i_6_ >> 1, i_2_);
                 int i_10_ = i_7_ + (Component71.anIntArray6062[0] + -18);
                 int i_11_ = -54 + (Component71.anIntArray6062[1] + i_4_) - 16;
                 i_10_ += i / 4 * 18;
                 i_11_ += 18 * (i % 4);
                 int i_12_ = -76 / ((i_1_ - 3) / 38);
                 class105.drawAt(i_10_, i_11_);
-                if (class318_sub1_sub3_sub3 == class318_sub1_sub3_sub3_8_) NodeSub8.toolkit.decodedOperation3668(18, -1 + i_11_, -256, i_10_ - 1, 18, 57);
-                Component103.decodedOperation2663(-5590, i_10_ + -1, 18 + i_10_, i_11_ + -1, i_11_ - -18);
-                RenderableSub6 class318_sub6 = AbstractShader.decodedOperation3529(32564);
+                if (class318_sub1_sub3_sub3 == class318_sub1_sub3_sub3_8_) NodeSub8.toolkit.method3668(18, -1 + i_11_, -256, i_10_ - 1, 18, 57);
+                Component103.method2663(-5590, i_10_ + -1, 18 + i_10_, i_11_ + -1, i_11_ - -18);
+                RenderableSub6 class318_sub6 = AbstractShader.method3529(32564);
                 class318_sub6.anInt6426 = 16 + i_10_;
                 class318_sub6.anInt6427 = i_11_;
                 class318_sub6.aClass318_Sub1_Sub3_Sub3_6431 = class318_sub1_sub3_sub3;
                 class318_sub6.anInt6425 = i_11_ - -16;
                 class318_sub6.anInt6429 = i_10_;
-                InputStream_Sub2.aClass243_83.decodedOperation1869(-87, class318_sub6);
+                InputStream_Sub2.aClass243_83.method1869(-87, class318_sub6);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qk.G(" + i + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ',' + i_4_ + ',' + i_5_ + ',' + i_6_ + ',' + i_7_ + ',' + (class318_sub1_sub3_sub3 != null ? "{...}" : "null") + ',' + ((class318_sub1_sub3_sub3_8_ != null) ? "{...}" : "null") + ')'));
         }
     }
 
-    public static void decodedOperation1431(int i) {
+    public static void method1431(int i) {
         aClass304_2571 = null;
         aClass227_2568 = null;
         if (i != 0) aClass227_2568 = null;

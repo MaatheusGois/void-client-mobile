@@ -31,14 +31,14 @@ abstract class Component339 {
 
     /** All {@link BuildType}s: LIVE, RC, WIP. */
     static final BuildType[] values(int i) {
-        if (i > -110) decodedOperation1715(97);
+        if (i > -110) method1715(97);
         anInt3141++;
         return (new BuildType[]{Component342.LIVE, DefinitionSub20.RC, Component118.WIP});
     }
 
     abstract int getDefaultValue(int i);
 
-    static final void decodedOperation1711(int i, CacheStore class45, int i_0_, CacheStore class45_1_) {
+    static final void method1711(int i, CacheStore class45, int i_0_, CacheStore class45_1_) {
         try {
             MenuOpener.aClass45_4843 = class45_1_;
             anInt3140++;
@@ -51,14 +51,14 @@ abstract class Component339 {
 
     abstract void setValue(int i, int i_2_);
 
-    static final void decodedOperation1713(boolean bool, int i) {
-        Component272.decodedOperation1728(PacketReader.canvasHeight, -1, r.anInt9721, bool, Component236.canvasWidth);
+    static final void method1713(boolean bool, int i) {
+        Component272.method1728(PacketReader.canvasHeight, -1, r.anInt9721, bool, Component236.canvasWidth);
         if (i == 520) anInt3137++;
     }
 
     abstract int getValue(int i, int i_3_);
 
-    public static void decodedOperation1715(int i) {
+    public static void method1715(int i) {
         aClass114_3145 = null;
         aClass114_3143 = null;
         aClass45_3146 = null;
@@ -75,9 +75,9 @@ abstract class Component339 {
         this.preferenceValue = getDefaultValue(20014);
     }
 
-    static final void decodedOperation1717(int i, int i_4_, int i_5_, int i_6_) {
+    static final void method1717(int i, int i_4_, int i_5_, int i_6_) {
         ObjectDeserializer.aByteArrayArrayArray6962 = new byte[i_6_][i_5_][i_4_];
-        if (i != 19278) decodedOperation1717(35, 126, -83, 85);
+        if (i != 19278) method1717(35, 126, -83, 85);
         anInt3134++;
     }
 

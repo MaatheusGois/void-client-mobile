@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub42_Sub11` (JODE-obfuscated).
- * Text/string definition node (extends renamed HashNode). Parses char[]/String fields from a Buffer (decodedOperation3221); holds char arrays and a StringCache for cached string table entries.
+ * Text/string definition node (extends renamed HashNode). Parses char[]/String fields from a Buffer (method3221); holds char arrays and a StringCache for cached string table entries.
  */
 
 final class StringDefinition extends HashNode {
@@ -23,12 +23,12 @@ final class StringDefinition extends HashNode {
     static int anInt9591 = -1;
     int[] anIntArray9592;
 
-    public static void decodedOperation3220(byte i) {
+    public static void method3220(byte i) {
         if (i < 96) anInt9591 = 45;
         aClass351_9590 = null;
     }
 
-    final void decodedOperation3221(int i, Buffer class348_sub49) {
+    final void method3221(int i, Buffer class348_sub49) {
         int i_0_ = 81 / ((-39 - i) / 52);
         anInt9583++;
         for (; ; ) {
@@ -38,27 +38,27 @@ final class StringDefinition extends HashNode {
         }
     }
 
-    final int decodedOperation3222(byte i, char c) {
+    final int method3222(byte i, char c) {
         anInt9585++;
         if (this.anIntArray9580 == null) return -1;
         int i_2_ = 0;
-        if (i > -97) decodedOperation3221(126, null);
+        if (i > -97) method3221(126, null);
         for (/**/; this.anIntArray9580.length > i_2_; i_2_++) {
             if (this.aCharArray9582[i_2_] == c) return this.anIntArray9580[i_2_];
         }
         return -1;
     }
 
-    static final void decodedOperation3223() {
+    static final void method3223() {
         for (int i = 0; i < Component328.dynamicOnscreenCount; i++) {
             Component327 class318_sub1_sub3 = DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i];
-            NodeSub46.decodedOperation3320(class318_sub1_sub3, true);
+            NodeSub46.method3320(class318_sub1_sub3, true);
             DisplayModeManagerContainer310.aClass318_Sub1_Sub3Array357[i] = null;
         }
         Component328.dynamicOnscreenCount = 0;
     }
 
-    final void decodedOperation3224(byte i) {
+    final void method3224(byte i) {
         if (this.anIntArray9580 != null) {
             for (int i_3_ = 0; (this.anIntArray9580.length > i_3_); i_3_++)
                 this.anIntArray9580[i_3_] = Component224.bitwiseOr((this.anIntArray9580[i_3_]), 32768);
@@ -68,12 +68,12 @@ final class StringDefinition extends HashNode {
             for (int i_4_ = 0; (this.anIntArray9592.length > i_4_); i_4_++)
                 this.anIntArray9592[i_4_] = Component224.bitwiseOr((this.anIntArray9592[i_4_]), 32768);
         }
-        if (i <= 102) decodedOperation3222((byte) 78, '\uffc1');
+        if (i <= 102) method3222((byte) 78, '\uffc1');
     }
 
-    static final void decodedOperation3225(int i) {
+    static final void method3225(int i) {
         anInt9589++;
-        if (Component192.preferences.aClass239_Sub14_7264.decodedOperation1778(-32350) == 2) {
+        if (Component192.preferences.aClass239_Sub14_7264.method1778(-32350) == 2) {
             byte i_5_ = (byte) (0xff & -4 + DisplayModeManagerContainer341.anInt6006);
             int i_6_ = DisplayModeManagerContainer341.anInt6006 % AbstractShaderSub4.anInt7319;
             for (int i_7_ = 0; i_7_ < 4; i_7_++) {
@@ -96,7 +96,7 @@ final class StringDefinition extends HashNode {
                             i_11_ = ShaderLinker.anInt10163;
                             i_10_ = JaclibLoader.anInt167;
                         }
-                        if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_10_ >> 9][i_11_ >> 9])) != 0) AbstractShaderSub4.decodedOperation3542(i_11_ >> 9, Component335.aClass357ArrayArrayArray2029, i_10_ >> 9, 0, 0, false);
+                        if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_10_ >> 9][i_11_ >> 9])) != 0) AbstractShaderSub4.method3542(i_11_ >> 9, Component335.aClass357ArrayArrayArray2029, i_10_ >> 9, 0, 0, false);
                         if (HashNodeSub19.anInt9701 < 2560) {
                             int i_12_ = WaterSurfaceShader.anInt6246 >> 9;
                             int i_13_ = Component317.anInt8685 >> 9;
@@ -117,7 +117,7 @@ final class StringDefinition extends HashNode {
                                     if (i_15_ > i_13_) i_13_++;
                                     else if (i_15_ < i_13_) i_13_--;
                                     if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_12_][i_13_])) != 0) {
-                                        AbstractShaderSub4.decodedOperation3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                        AbstractShaderSub4.method3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                         break;
                                     }
                                     i_19_ += i_18_;
@@ -126,7 +126,7 @@ final class StringDefinition extends HashNode {
                                         else if (i_14_ < i_12_) i_12_--;
                                         i_19_ -= 65536;
                                         if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_12_][i_13_])) != 0) {
-                                            AbstractShaderSub4.decodedOperation3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                            AbstractShaderSub4.method3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                             break;
                                         }
                                     }
@@ -139,7 +139,7 @@ final class StringDefinition extends HashNode {
                                         if (i_12_ > i_14_) i_12_--;
                                     } else i_12_++;
                                     if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_12_][i_13_])) != 0) {
-                                        AbstractShaderSub4.decodedOperation3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                        AbstractShaderSub4.method3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                         break;
                                     }
                                     i_21_ += i_20_;
@@ -148,7 +148,7 @@ final class StringDefinition extends HashNode {
                                         else if (i_13_ > i_15_) i_13_--;
                                         i_21_ -= 65536;
                                         if ((0x4 & (ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][i_12_][i_13_])) != 0) {
-                                            AbstractShaderSub4.decodedOperation3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
+                                            AbstractShaderSub4.method3542(i_13_, (Component335.aClass357ArrayArrayArray2029), i_12_, 0, 1, false);
                                             break;
                                         }
                                     }
@@ -156,22 +156,22 @@ final class StringDefinition extends HashNode {
                             }
                         }
                     } else {
-                        int i_22_ = Component300.decodedOperation2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685);
+                        int i_22_ = Component300.method2064(WaterSurfaceShader.anInt6246, Component117.anInt4372, 11219, Component317.anInt8685);
                         if (i_22_ - DisplayModeManagerContainer50.anInt3855 < 3200 && ((ObjectDeserializer.aByteArrayArrayArray6962[Component117.anInt4372][WaterSurfaceShader.anInt6246 >> 9][Component317.anInt8685 >> 9]) & 0x4) != 0)
-                            AbstractShaderSub4.decodedOperation3542(Component317.anInt8685 >> 9, Component335.aClass357ArrayArrayArray2029, WaterSurfaceShader.anInt6246 >> 9, 0, 1, false);
+                            AbstractShaderSub4.method3542(Component317.anInt8685 >> 9, Component335.aClass357ArrayArrayArray2029, WaterSurfaceShader.anInt6246 >> 9, 0, 1, false);
                     }
                 }
             }
         }
     }
 
-    final int decodedOperation3226(char c, int i) {
+    final int method3226(char c, int i) {
         anInt9584++;
         if (this.anIntArray9592 == null) return -1;
         for (int i_23_ = 0; this.anIntArray9592.length > i_23_; i_23_++) {
             if (this.aCharArray9588[i_23_] == c) return this.anIntArray9592[i_23_];
         }
-        if (i != 57249897) decodedOperation3221(-16, null);
+        if (i != 57249897) method3221(-16, null);
         return -1;
     }
 
@@ -184,7 +184,7 @@ final class StringDefinition extends HashNode {
                 for (int i_26_ = 0; i_26_ < i_25_; i_26_++) {
                     this.anIntArray9592[i_26_] = class348_sub49.readUnsignedShort(842397944);
                     byte i_27_ = class348_sub49.readByte(-121);
-                    this.aCharArray9588[i_26_] = (i_27_ != 0 ? Cp1252Decoder.decodedOperation462(i_27_, -128) : '\0');
+                    this.aCharArray9588[i_26_] = (i_27_ != 0 ? Cp1252Decoder.method462(i_27_, -128) : '\0');
                 }
             } else if (i_24_ == 3) {
                 int i_28_ = class348_sub49.readUnsignedByte(255);
@@ -193,7 +193,7 @@ final class StringDefinition extends HashNode {
                 for (int i_29_ = 0; i_28_ > i_29_; i_29_++) {
                     this.anIntArray9580[i_29_] = class348_sub49.readUnsignedShort(842397944);
                     byte i_30_ = class348_sub49.readByte(-115);
-                    this.aCharArray9582[i_29_] = (i_30_ != 0 ? Cp1252Decoder.decodedOperation462(i_30_, -128) : '\0');
+                    this.aCharArray9582[i_29_] = (i_30_ != 0 ? Cp1252Decoder.method462(i_30_, -128) : '\0');
                 }
             }
         } else this.aString9587 = class348_sub49.readString((byte) 100);

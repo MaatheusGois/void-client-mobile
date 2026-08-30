@@ -24,16 +24,16 @@ final class NodeSub1Sub3
     final void method2716(int i, float f) {
         anInt8821++;
         this.aFloat6550 = f;
-        if (i != -1) decodedOperation2732(-79, -120, true, 36, null, 19);
+        if (i != -1) method2732(-79, -120, true, 36, null, 19);
     }
 
     NodeSub1Sub3(int i, int i_3_, int i_4_, int i_5_, int i_6_, float f) {
         super(i, i_3_, i_4_, i_5_, i_6_, f);
     }
 
-    static final void decodedOperation2732(int i, int i_7_, boolean bool, int i_8_, CacheStore class45, int i_9_) {
+    static final void method2732(int i, int i_7_, boolean bool, int i_8_, CacheStore class45, int i_9_) {
         anInt8820++;
         if (i_8_ < 90) anInt8818 = -21;
-        OpenGlShader.decodedOperation3555(class45, -89, bool, 0L, i_9_, i, i_7_);
+        OpenGlShader.method3555(class45, -89, bool, 0L, i_9_, i, i_7_);
     }
 }

@@ -66,7 +66,7 @@ final class FontGlyphCache {
      * Pipeline: allocate AWT image ({@code charWidth × ascent+descent}) → black
      * fill → white {@code drawString} at baseline {@code maxAscent} → optional
      * +1px faux-bold → {@link PixelGrabber} → zero pure-black RGB → upload via
-     * {@code GraphicsToolkit.decodedOperation3662}.
+     * {@code GraphicsToolkit.method3662}.
      *
      * @param glyphIndex slot in {@link #glyphSprites} / {@link #glyphAdvances}
      * @param fauxBold   when true, widen some letters and double-draw at x+1
@@ -121,7 +121,7 @@ final class FontGlyphCache {
         baselineAscent = baselineY - topInkRow;
         fontHeight = metricsHeight;
         glyphAdvances[glyphIndex] = advance;
-        glyphSprites[glyphIndex] = var_ha.decodedOperation3662(bakeWidth, pixels, (byte) 94, 0, bakeWidth, imageHeight);
+        glyphSprites[glyphIndex] = var_ha.method3662(bakeWidth, pixels, (byte) 94, 0, bakeWidth, imageHeight);
     }
 
     /** {@link #baselineAscent} — for vertical layout of multi-line map labels. */
@@ -138,8 +138,8 @@ final class FontGlyphCache {
         rgb |= ~0xffffff;
         for (int i = 0; i < string.length(); i++) {
             int glyph = charToGlyphIndex[string.charAt(i)];
-            if (shadow) glyphSprites[glyph].decodedOperation964(x + 1, y + 1, 0, -16777216, 1);
-            glyphSprites[glyph].decodedOperation964(x, y, 0, rgb, 1);
+            if (shadow) glyphSprites[glyph].method964(x + 1, y + 1, 0, -16777216, 1);
+            glyphSprites[glyph].method964(x, y, 0, rgb, 1);
             x += glyphAdvances[glyph];
         }
     }

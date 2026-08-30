@@ -8,7 +8,7 @@
  * Estende {@code NodeBase} (abstração de recurso nativo) e expõe um ponteiro
  * {@code nativeid} gerenciado em C++. Cada instância corresponde a um
  * objeto nativo alocado via {@code Shader(OpenGLToolkit, int)} e liberado em
- * {@code finalize()} → {@code Component36.decodedOperation1947}. Os métodos nativos
+ * {@code finalize()} → {@code Component36.method1947}. Os métodos nativos
  * curtos {@code w}, {@code ga}, {@code r} são delegações diretas para
  * o lado nativo (render/áudio/input dependendo do subtipo {@code OpenGLToolkit}).
  * <p>
@@ -32,7 +32,7 @@ final class NativeHandle extends NodeBase implements Interface19 {
 
     @Override
     protected final void finalize() {
-        if (this.nativeid != 0L) Component36.decodedOperation1947(0, this);
+        if (this.nativeid != 0L) Component36.method1947(0, this);
     }
 
     /** Aloca o objeto nativo associado a {@code var_oa} com tipo {@code i}. */

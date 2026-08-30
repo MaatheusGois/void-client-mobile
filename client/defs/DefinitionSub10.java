@@ -19,7 +19,7 @@ final class DefinitionSub10
     static int[] anIntArray9183;
     static boolean aBoolean9184;
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_0_) {
+    final void method3049(Buffer class348_sub49, int i, int i_0_) {
         anInt9179++;
         int i_1_ = i;
         while_152_:
@@ -37,7 +37,7 @@ final class DefinitionSub10
             } while (false);
             this.use2dImageCache = class348_sub49.readUnsignedByte(255) == 1;
         } while (false);
-        if (i_0_ != 31015) decodedOperation3049(null, -85, -85);
+        if (i_0_ != 31015) method3049(null, -85, -85);
     }
 
     final void postDecode(int i) {
@@ -50,7 +50,7 @@ final class DefinitionSub10
         anInt9177++;
         int[] is = this.imageCache.getPixels(0, i);
         if (this.imageCache.cacheMiss) {
-            int[] is_3_ = this.decodedOperation3048(i, 633706337, 0);
+            int[] is_3_ = this.method3048(i, 633706337, 0);
             for (int i_4_ = 0; DefinitionSub6.anInt9139 > i_4_; i_4_++)
                 is[i_4_] = anInt9176 - -(anInt9182 * is_3_[i_4_] >> 12);
         }
@@ -61,9 +61,9 @@ final class DefinitionSub10
     final int[][] getColourOutput(int i, int i_5_) {
         anInt9178++;
         int[][] is = this.imageCacheStore.getPixels(-113, i);
-        if (i_5_ != -1564599039) decodedOperation3049(null, -10, -112);
+        if (i_5_ != -1564599039) method3049(null, -10, -112);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_6_ = this.decodedOperation3039((byte) -55, i, 0);
+            int[][] is_6_ = this.method3039((byte) -55, i, 0);
             int[] is_7_ = is_6_[0];
             int[] is_8_ = is_6_[1];
             int[] is_9_ = is_6_[2];
@@ -79,7 +79,7 @@ final class DefinitionSub10
         return is;
     }
 
-    public static void decodedOperation3074(int i) {
+    public static void method3074(int i) {
         anIntArray9183 = null;
         aClass308_9180 = null;
         if (i != 0) anIntArray9183 = null;

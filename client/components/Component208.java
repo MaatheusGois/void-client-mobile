@@ -41,8 +41,8 @@ final class Component208
 
     /** Decodes one enum opcode from {@code class348_sub49} (types, defaults, value table). */
     private final void decodeOpcode(Buffer class348_sub49, int i, int i_0_) {
-        if (i_0_ == 1) this.keyType = Cp1252Decoder.decodedOperation462(class348_sub49.readByte(-91), -128);
-        else if (i_0_ == 2) this.valueType = Cp1252Decoder.decodedOperation462(class348_sub49.readByte(-119), -128);
+        if (i_0_ == 1) this.keyType = Cp1252Decoder.method462(class348_sub49.readByte(-91), -128);
+        else if (i_0_ == 2) this.valueType = Cp1252Decoder.method462(class348_sub49.readByte(-119), -128);
         else if (i_0_ == 3) defaultString = class348_sub49.readString((byte) 86);
         else if (i_0_ == 4) defaultInt = class348_sub49.readInt((byte) -126);
         else if (i_0_ == 5 || i_0_ == 6) {

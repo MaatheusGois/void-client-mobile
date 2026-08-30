@@ -16,17 +16,17 @@ final class DisplayModeManagerContainer345
     static NamedInteger aClass364_165;
     static int anInt166 = 0;
 
-    public static void decodedOperation213(byte i) {
+    public static void method213(byte i) {
         anIntArray164 = null;
-        if (i != -106) decodedOperation214(null, 18);
+        if (i != -106) method214(null, 18);
         aClass364_165 = null;
     }
 
-    static final int decodedOperation214(Npc npc, int i) {
+    static final int method214(Npc npc, int i) {
         anInt163++;
         NpcComposition class79 = (npc.definition);
         if (class79.anIntArray1377 != null) {
-            class79 = class79.decodedOperation794(DisplayModeManagerContainer58.aClass170_10209, i);
+            class79 = class79.method794(DisplayModeManagerContainer58.aClass170_10209, i);
             if (class79 == null) return -1;
         }
         int i_0_ = class79.anInt1364;

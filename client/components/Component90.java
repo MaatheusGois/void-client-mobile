@@ -11,12 +11,12 @@ final class Component90
     static DisplayModeManagerContainer369 aClass223_2045 = new DisplayModeManagerContainer369(8, 1);
     static int anInt2046;
 
-    public static void decodedOperation1200(boolean bool) {
+    public static void method1200(boolean bool) {
         aClass223_2045 = null;
         if (bool != false) anInt2046 = 37;
     }
 
-    static final int decodedOperation1201(int i, int i_0_, int i_1_, int i_2_) {
+    static final int method1201(int i, int i_0_, int i_1_, int i_2_) {
         i_2_ &= 0x3;
         anInt2044++;
         if (i_2_ == 0) return i_0_;

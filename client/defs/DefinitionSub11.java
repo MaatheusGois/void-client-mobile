@@ -12,7 +12,7 @@ final class DefinitionSub11
     private int anInt9187 = 585;
     static int anInt9188;
 
-    public static void decodedOperation3075(boolean bool) {
+    public static void method3075(boolean bool) {
         anIntArray9185 = null;
         if (bool != false) anIntArray9185 = null;
     }
@@ -59,7 +59,7 @@ final class DefinitionSub11
         return is;
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_8_) {
+    final void method3049(Buffer class348_sub49, int i, int i_8_) {
         anInt9188++;
         if (i_8_ == 31015) {
             int i_9_ = i;

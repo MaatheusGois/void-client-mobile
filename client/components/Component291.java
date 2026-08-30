@@ -40,7 +40,7 @@ final class Component291
         } else class348_sub49.readByte(-106);
     }
 
-    final void decodedOperation1419(int i, Buffer class348_sub49, byte i_2_) {
+    final void method1419(int i, Buffer class348_sub49, byte i_2_) {
         anInt2528++;
         int i_3_ = 93 / ((i_2_ - -24) / 55);
         for (; ; ) {
@@ -50,14 +50,14 @@ final class Component291
         }
     }
 
-    static final boolean decodedOperation1420(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, CollisionMap class361, int i_13_, int i_14_) {
+    static final boolean method1420(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, CollisionMap class361, int i_13_, int i_14_) {
         anInt2521++;
         int i_15_ = i_10_;
         int i_16_ = i_7_;
         int i_17_ = 64;
         int i_18_ = 64;
         int i_19_ = i_10_ - i_17_;
-        if (i_6_ >= -65) decodedOperation1420(115, 22, 74, 19, 100, -62, 111, 76, 26, null, -41, -28);
+        if (i_6_ >= -65) method1420(115, 22, 74, 19, 100, -62, 111, 76, 26, null, -41, -28);
         r.anIntArrayArray9723[i_17_][i_18_] = 99;
         int i_20_ = i_7_ + -i_18_;
         DisplayModeManagerContainer369.anIntArrayArray2900[i_17_][i_18_] = 0;
@@ -101,7 +101,7 @@ final class Component291
                                     } else break;
                                     break while_45_;
                                 }
-                                if (Component188.decodedOperation1842(i, i_14_, -1, i_12_, i_15_, i_16_, i_9_, i_12_, i_8_)) {
+                                if (Component188.method1842(i, i_14_, -1, i_12_, i_15_, i_16_, i_9_, i_12_, i_8_)) {
                                     Component95.anInt1753 = i_16_;
                                     DefinitionSub30.anInt9388 = i_15_;
                                     return true;
@@ -115,7 +115,7 @@ final class Component291
                             }
                             break while_48_;
                         } while (false);
-                        if (class361.decodedOperation3503(i_15_, (byte) -98, i_14_, i_12_, i_8_, i, i_11_, i_16_, i_9_)) {
+                        if (class361.method3503(i_15_, (byte) -98, i_14_, i_12_, i_8_, i, i_11_, i_16_, i_9_)) {
                             DefinitionSub30.anInt9388 = i_15_;
                             Component95.anInt1753 = i_16_;
                             return true;
@@ -129,7 +129,7 @@ final class Component291
                     }
                     break while_48_;
                 } while (false);
-                if (class361.decodedOperation3504(i_14_, i_16_, i_9_, i_15_, i_13_, 1, i_5_, i_12_)) {
+                if (class361.method3504(i_14_, i_16_, i_9_, i_15_, i_13_, 1, i_5_, i_12_)) {
                     Component95.anInt1753 = i_16_;
                     DefinitionSub30.anInt9388 = i_15_;
                     return true;
@@ -243,9 +243,9 @@ final class Component291
         return false;
     }
 
-    public static void decodedOperation1421(byte i) {
+    public static void method1421(byte i) {
         aClass278_2529 = null;
-        if (i != -85) decodedOperation1421((byte) 39);
+        if (i != -85) method1421((byte) 39);
         aClass114_2527 = null;
     }
 

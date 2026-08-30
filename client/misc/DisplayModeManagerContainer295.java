@@ -22,7 +22,7 @@ final class DisplayModeManagerContainer295
     static int anInt5923;
     static int anInt5924;
 
-    static final int decodedOperation1749(Component362 class110_sub1, Component362 class110_sub1_0_, boolean bool, int i, byte i_1_) {
+    static final int method1749(Component362 class110_sub1, Component362 class110_sub1_0_, boolean bool, int i, byte i_1_) {
         try {
             anInt5916++;
             if (i == 1) {
@@ -34,7 +34,7 @@ final class DisplayModeManagerContainer295
                 }
                 return -i_3_ + i_2_;
             }
-            if (i == 2) return (Component71.decodedOperation1811(9152, (class110_sub1_0_.decodedOperation1038(false).aString3663), ObjectDeserializer.languageId, (class110_sub1.decodedOperation1038(false).aString3663)));
+            if (i == 2) return (Component71.method1811(9152, (class110_sub1_0_.method1038(false).aString3663), ObjectDeserializer.languageId, (class110_sub1.method1038(false).aString3663)));
             if (i == 3) {
                 if (class110_sub1.aString5787.equals("-")) {
                     if (class110_sub1_0_.aString5787.equals("-")) return 0;
@@ -44,39 +44,39 @@ final class DisplayModeManagerContainer295
                     if (!bool) return -1;
                     return 1;
                 }
-                return (Component71.decodedOperation1811(9152, class110_sub1_0_.aString5787, ObjectDeserializer.languageId, class110_sub1.aString5787));
+                return (Component71.method1811(9152, class110_sub1_0_.aString5787, ObjectDeserializer.languageId, class110_sub1.aString5787));
             }
             if (i == 4) {
-                if (!class110_sub1.decodedOperation1033(-85)) {
-                    if (!class110_sub1_0_.decodedOperation1033(101)) return 0;
+                if (!class110_sub1.method1033(-85)) {
+                    if (!class110_sub1_0_.method1033(101)) return 0;
                     return -1;
                 }
-                if (class110_sub1_0_.decodedOperation1033(70)) return 0;
+                if (class110_sub1_0_.method1033(70)) return 0;
                 return 1;
             }
             if (i == 5) {
-                if (class110_sub1.decodedOperation1036((byte) -35)) {
-                    if (!class110_sub1_0_.decodedOperation1036((byte) -35)) return 1;
+                if (class110_sub1.method1036((byte) -35)) {
+                    if (!class110_sub1_0_.method1036((byte) -35)) return 1;
                     return 0;
                 }
-                if (!class110_sub1_0_.decodedOperation1036((byte) -35)) return 0;
+                if (!class110_sub1_0_.method1036((byte) -35)) return 0;
                 return -1;
             }
             if (i == 6) {
-                if (class110_sub1.decodedOperation1031(i_1_ ^ ~0x61)) {
-                    if (class110_sub1_0_.decodedOperation1031(-105)) return 0;
+                if (class110_sub1.method1031(i_1_ ^ ~0x61)) {
+                    if (class110_sub1_0_.method1031(-105)) return 0;
                     return 1;
                 }
-                if (class110_sub1_0_.decodedOperation1031(i_1_ ^ ~0x60)) return -1;
+                if (class110_sub1_0_.method1031(i_1_ ^ ~0x60)) return -1;
                 return 0;
             }
             if (i_1_ != -30) return 63;
             if (i == 7) {
-                if (class110_sub1.decodedOperation1029(true)) {
-                    if (!class110_sub1_0_.decodedOperation1029(true)) return 1;
+                if (class110_sub1.method1029(true)) {
+                    if (!class110_sub1_0_.method1029(true)) return 1;
                     return 0;
                 }
-                if (class110_sub1_0_.decodedOperation1029(true)) return -1;
+                if (class110_sub1_0_.method1029(true)) return -1;
                 return 0;
             }
             if (i == 8) {
@@ -98,19 +98,19 @@ final class DisplayModeManagerContainer295
     }
 
     final int getDefaultValue(int i) {
-        if (i != 20014) decodedOperation1749(null, null, false, 94, (byte) -39);
+        if (i != 20014) method1749(null, null, false, 94, (byte) -39);
         anInt5914++;
         // Prefer fullscreen 800x600 on mobile (voidawt fakes exclusive FS).
         return 3;
     }
 
-    static final void decodedOperation1750(int i, int i_6_) {
+    static final void method1750(int i, int i_6_) {
         anInt5912++;
         HashNodeSub1.anInt9488 = i_6_;
         Connection.aClass60_2671.clear(0);
     }
 
-    final int decodedOperation1751(int i) {
+    final int method1751(int i) {
         anInt5917++;
         if (i != -32350) canvasWidth = 114;
         return this.preferenceValue;
@@ -136,7 +136,7 @@ final class DisplayModeManagerContainer295
         return 1;
     }
 
-    static final void decodedOperation1752(int i, int i_10_, int i_11_) {
+    static final void method1752(int i, int i_10_, int i_11_) {
         Component210.anInt5283 = i_11_;
         anInt5922++;
         HashTable.anInt1651 = i_10_;
@@ -176,10 +176,10 @@ final class DisplayModeManagerContainer295
         if (bool != false) anIntArrayArray5921 = null;
     }
 
-    static final int decodedOperation1754(boolean bool, int i, int i_12_, int i_13_) {
+    static final int method1754(boolean bool, int i, int i_12_, int i_13_) {
         anInt5920++;
         if (Node.anInt4290 < 100) return -2;
-        if (bool != true) decodedOperation1754(false, 115, 112, -104);
+        if (bool != true) method1754(false, 115, 112, -104);
         int i_14_ = -2;
         int i_15_ = 2147483647;
         int i_16_ = i_12_ - DisplayModeManagerContainer229.anInt1266;
@@ -199,12 +199,12 @@ final class DisplayModeManagerContainer295
         return i_14_;
     }
 
-    public static void decodedOperation1755(int i) {
+    public static void method1755(int i) {
         anIntArrayArray5921 = null;
-        if (i != 1) decodedOperation1749(null, null, false, -43, (byte) 102);
+        if (i != 1) method1749(null, null, false, -43, (byte) 102);
     }
 
-    static final int decodedOperation1756(byte[] is, int i, int i_22_, int i_23_, byte[][] is_24_, byte[][] is_25_, int[] is_26_, int[] is_27_) {
+    static final int method1756(byte[] is, int i, int i_22_, int i_23_, byte[][] is_24_, byte[][] is_25_, int[] is_26_, int[] is_27_) {
         try {
             anInt5918++;
             int i_28_ = -19 % ((i - 64) / 39);

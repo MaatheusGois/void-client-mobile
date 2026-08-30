@@ -22,16 +22,16 @@ final class CacheNodeSub1
     static int[] anIntArray10478 = new int[1];
     static NodeList aClass262_10479;
 
-    final void decodedOperation3286(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    final void method3286(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         this.anInt10466 = i - i_3_;
         this.anInt10467 = i_1_ + -i_2_;
         this.anInt10468 = i_3_;
-        if (i_0_ > -96) decodedOperation3289(27);
+        if (i_0_ > -96) method3289(27);
         anInt10473++;
         this.anInt10474 = i_2_;
     }
 
-    final void decodedOperation3287(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
+    final void method3287(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_) {
         anInt10472++;
         int i_10_ = 0;
         if (i_7_ != i) i_10_ = (-i_5_ + i_6_ << 16) / (i_7_ + -i);
@@ -59,13 +59,13 @@ final class CacheNodeSub1
                         i -= i_7_;
                         i_7_ = this.anInt10466 * i_7_;
                         while (--i >= 0) {
-                            Component373.decodedOperation339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_9_ += i_10_;
                             i_7_ += this.anInt10466;
                             i_6_ += i_11_;
                         }
                         while (--i_8_ >= 0) {
-                            Component373.decodedOperation339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_6_ += i_11_;
                             i_7_ += this.anInt10466;
                             i_5_ += i_13_;
@@ -75,13 +75,13 @@ final class CacheNodeSub1
                         i -= i_7_;
                         i_7_ = this.anInt10466 * i_7_;
                         while (--i >= 0) {
-                            Component373.decodedOperation339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                             i_7_ += this.anInt10466;
                             i_6_ += i_11_;
                             i_9_ += i_10_;
                         }
                         while (--i_8_ >= 0) {
-                            Component373.decodedOperation339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_6_ += i_11_;
                             i_5_ += i_13_;
                             i_7_ += this.anInt10466;
@@ -104,13 +104,13 @@ final class CacheNodeSub1
                         i_8_ -= i_7_;
                         i_7_ *= this.anInt10466;
                         while (--i_8_ >= 0) {
-                            Component373.decodedOperation339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                             i_6_ += i_11_;
                         }
                         while (--i >= 0) {
-                            Component373.decodedOperation339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                            Component373.method339(i_7_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                             i_9_ += i_13_;
@@ -120,13 +120,13 @@ final class CacheNodeSub1
                         i_8_ -= i_7_;
                         i_7_ *= this.anInt10466;
                         while (--i_8_ >= 0) {
-                            Component373.decodedOperation339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                             i_6_ += i_11_;
                             i_7_ += this.anInt10466;
                             i_5_ += i_10_;
                         }
                         while (--i >= 0) {
-                            Component373.decodedOperation339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                            Component373.method339(i_7_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                             i_7_ += this.anInt10466;
                             i_9_ += i_13_;
                             i_5_ += i_10_;
@@ -150,13 +150,13 @@ final class CacheNodeSub1
                     i -= i_8_;
                     i_8_ *= this.anInt10466;
                     while (--i >= 0) {
-                        Component373.decodedOperation339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
                         i_9_ += i_13_;
                     }
                     while (--i_7_ >= 0) {
-                        Component373.decodedOperation339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                         i_5_ += i_10_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
@@ -166,13 +166,13 @@ final class CacheNodeSub1
                     i -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i >= 0) {
-                        Component373.decodedOperation339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_6_ += i_11_;
                         i_8_ += this.anInt10466;
                         i_9_ += i_13_;
                     }
                     while (--i_7_ >= 0) {
-                        Component373.decodedOperation339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_5_ += i_10_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_11_;
@@ -195,13 +195,13 @@ final class CacheNodeSub1
                     i_7_ -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i_7_ >= 0) {
-                        Component373.decodedOperation339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                         i_8_ += this.anInt10466;
                         i_5_ += i_11_;
                         i_9_ += i_13_;
                     }
                     while (--i >= 0) {
-                        Component373.decodedOperation339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                        Component373.method339(i_8_, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                         i_6_ += i_10_;
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
@@ -211,13 +211,13 @@ final class CacheNodeSub1
                     i_7_ -= i_8_;
                     i_8_ = this.anInt10466 * i_8_;
                     while (--i_7_ >= 0) {
-                        Component373.decodedOperation339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_5_ += i_11_;
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
                     }
                     while (--i >= 0) {
-                        Component373.decodedOperation339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                        Component373.method339(i_8_, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                         i_9_ += i_13_;
                         i_8_ += this.anInt10466;
                         i_6_ += i_10_;
@@ -241,13 +241,13 @@ final class CacheNodeSub1
                 i_8_ -= i;
                 i = this.anInt10466 * i;
                 while (--i_8_ >= 0) {
-                    Component373.decodedOperation339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i += this.anInt10466;
                     i_5_ += i_10_;
                     i_6_ += i_13_;
                 }
                 while (--i_7_ >= 0) {
-                    Component373.decodedOperation339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_11_;
                     i_5_ += i_10_;
@@ -257,13 +257,13 @@ final class CacheNodeSub1
                 i_8_ -= i;
                 i *= this.anInt10466;
                 while (--i_8_ >= 0) {
-                    Component373.decodedOperation339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                     i_6_ += i_13_;
                     i_5_ += i_10_;
                     i += this.anInt10466;
                 }
                 while (--i_7_ >= 0) {
-                    Component373.decodedOperation339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_11_;
                     i_5_ += i_10_;
@@ -286,13 +286,13 @@ final class CacheNodeSub1
                 i_7_ -= i;
                 i = this.anInt10466 * i;
                 while (--i_7_ >= 0) {
-                    Component373.decodedOperation339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_5_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i_9_ += i_13_;
                     i += this.anInt10466;
                     i_5_ += i_10_;
                 }
                 while (--i_8_ >= 0) {
-                    Component373.decodedOperation339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
+                    Component373.method339(i, i_6_ >> 16, this.aByteArray10471, 0, 1354705384, i_9_ >> 16);
                     i_6_ += i_11_;
                     i += this.anInt10466;
                     i_9_ += i_13_;
@@ -302,13 +302,13 @@ final class CacheNodeSub1
                 i_7_ -= i;
                 i *= this.anInt10466;
                 while (--i_7_ >= 0) {
-                    Component373.decodedOperation339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_5_ >> 16);
                     i_5_ += i_10_;
                     i_9_ += i_13_;
                     i += this.anInt10466;
                 }
                 while (--i_8_ >= 0) {
-                    Component373.decodedOperation339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
+                    Component373.method339(i, i_9_ >> 16, this.aByteArray10471, 0, 1354705384, i_6_ >> 16);
                     i += this.anInt10466;
                     i_9_ += i_13_;
                     i_6_ += i_11_;
@@ -317,15 +317,15 @@ final class CacheNodeSub1
         }
     }
 
-    public static void decodedOperation3288(byte i) {
+    public static void method3288(byte i) {
         int i_14_ = 107 % ((i - 27) / 34);
         anIntArray10478 = null;
         aClass351_10477 = null;
         aClass262_10479 = null;
     }
 
-    final void decodedOperation3289(int i) {
-        if (i <= 1) decodedOperation3286(-75, -2, 86, -31, 120);
+    final void method3289(int i) {
+        if (i <= 1) method3286(-75, -2, 86, -31, 120);
         anInt10475++;
         int i_15_ = -1;
         int i_16_ = -8 + this.aByteArray10471.length;
@@ -342,20 +342,20 @@ final class CacheNodeSub1
         while (i_15_ < this.aByteArray10471.length + -1) this.aByteArray10471[++i_15_] = (byte) 0;
     }
 
-    static final void decodedOperation3290(int i) {
+    static final void method3290(int i) {
         if (i < 30) aClass262_10479 = null;
-        IOException_Sub1.configureAudio(Component192.preferences.aClass239_Sub5_7240.decodedOperation1739(-32350) == 1, 2, true, 22050);
+        IOException_Sub1.configureAudio(Component192.preferences.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
         anInt10470++;
-        Definition.aClass279_7042 = Component321.decodedOperation1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
-        HashNodeSub18.decodedOperation3273(true, -114, Component16.decodedOperation1326(null, 9));
-        Component276.aClass279_2596 = Component321.decodedOperation1439(2048, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 1, 7);
+        Definition.aClass279_7042 = Component321.method1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
+        HashNodeSub18.method3273(true, -114, Component16.method1326(null, 9));
+        Component276.aClass279_2596 = Component321.method1439(2048, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 1, 7);
         PlayerState.aClass348_Sub16_Sub4_7065 = new NodeSub16Sub4();
-        Component276.aClass279_2596.decodedOperation2088(false, PlayerState.aClass348_Sub16_Sub4_7065);
+        Component276.aClass279_2596.method2088(false, PlayerState.aClass348_Sub16_Sub4_7065);
         DisplayModeInfo.aClass163_1050 = new ImageTagText(22050, Component231.sampleRate);
-        DefinitionSub17Sub1.decodedOperation3093(110);
+        DefinitionSub17Sub1.method3093(110);
     }
 
-    final boolean decodedOperation3291(int i, int i_17_, byte i_18_) {
+    final boolean method3291(int i, int i_17_, byte i_18_) {
         anInt10469++;
         if (i_18_ != -59) this.anInt10467 = 41;
         return i_17_ * i <= this.aByteArray10471.length;

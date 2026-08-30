@@ -19,7 +19,7 @@ final class Component108
     private int anInt2611;
     private int anInt2612;
 
-    final int decodedOperation1451(int i) {
+    final int method1451(int i) {
         if (anInt2609 >= anInt2610) {
             anInt2612 = anIntArray2602[anInt2611++] << 15;
             if (anInt2611 >= anInt2604) anInt2611 = anInt2604 - 1;
@@ -31,14 +31,14 @@ final class Component108
         return anInt2612 - anInt2608 >> 15;
     }
 
-    final void decodedOperation1452(Buffer class348_sub49) {
+    final void method1452(Buffer class348_sub49) {
         this.anInt2603 = class348_sub49.readUnsignedByte(255);
         this.anInt2607 = class348_sub49.readInt((byte) -126);
         this.anInt2606 = class348_sub49.readInt((byte) -126);
         method1454(class348_sub49);
     }
 
-    final void decodedOperation1453() {
+    final void method1453() {
         anInt2610 = 0;
         anInt2611 = 0;
         anInt2608 = 0;

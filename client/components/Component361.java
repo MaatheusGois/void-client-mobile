@@ -21,7 +21,7 @@ final class Component361
     static int anInt371;
     static int anInt372;
 
-    final void decodedOperation299(int i, int i_0_) {
+    final void method299(int i, int i_0_) {
         if (i_0_ != 16) aClass45_366 = null;
         synchronized (aClass60_360) {
             aClass60_360.processSoftEntries(2, i);
@@ -29,7 +29,7 @@ final class Component361
         anInt365++;
     }
 
-    final void decodedOperation300(byte i) {
+    final void method300(byte i) {
         anInt371++;
         int i_1_ = 111 % ((i - -40) / 57);
         synchronized (aClass60_360) {
@@ -37,7 +37,7 @@ final class Component361
         }
     }
 
-    final PauseTimer decodedOperation301(int i, int i_2_) {
+    final PauseTimer method301(int i, int i_2_) {
         anInt361++;
         PauseTimer class38;
         synchronized (aClass60_360) {
@@ -50,14 +50,14 @@ final class Component361
         }
         if (i_2_ < 6) aClass60_360 = null;
         class38 = new PauseTimer();
-        if (is != null) class38.decodedOperation364(new Buffer(is), (byte) 54);
+        if (is != null) class38.method364(new Buffer(is), (byte) 54);
         synchronized (aClass60_360) {
             aClass60_360.putOne(class38, i, (byte) -109);
         }
         return class38;
     }
 
-    final void decodedOperation302(int i) {
+    final void method302(int i) {
         synchronized (aClass60_360) {
             if (i != -797644856) aClass105Array367 = null;
             aClass60_360.purgeSoftReferences(i ^ 0x2f8b186f);
@@ -65,7 +65,7 @@ final class Component361
         anInt372++;
     }
 
-    static final short decodedOperation303(int i, int i_3_) {
+    static final short method303(int i, int i_3_) {
         anInt362++;
         int i_4_ = (i & 0xfe66) >> 10;
         int i_5_ = i >> 3 & 0x70;
@@ -80,17 +80,17 @@ final class Component361
         return (short) (i_9_ | (i_8_ >> 4 << 7 | i_4_ << 10));
     }
 
-    static final void decodedOperation304(int i, int i_10_, int i_11_) {
+    static final void method304(int i, int i_10_, int i_11_) {
         anInt363++;
         if (i_10_ != 437853543) aBoolean368 = true;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_11_, (byte) 105, 16);
-        class348_sub42_sub15.decodedOperation3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_11_, (byte) 105, 16);
+        class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i;
     }
 
-    public static void decodedOperation305(byte i) {
+    public static void method305(byte i) {
         anIntArray369 = null;
-        if (i != 79) decodedOperation303(-22, -13);
+        if (i != 79) method303(-22, -13);
         aClass351_364 = null;
         aClass105Array367 = null;
     }

@@ -19,7 +19,7 @@ final class DisplayModeManagerContainer363
     static int[] anIntArray4097 = new int[2];
     static DisplayModeManagerContainer238 aClass74_4098 = new DisplayModeManagerContainer238(4, 7);
 
-    public static void decodedOperation2604(byte i) {
+    public static void method2604(byte i) {
         aClass273_4091 = null;
         if (i >= -49) sleepMillis(31, -15L);
         aClass74_4098 = null;
@@ -28,7 +28,7 @@ final class DisplayModeManagerContainer363
         anIntArray4097 = null;
     }
 
-    static final boolean decodedOperation2605(byte i) {
+    static final boolean method2605(byte i) {
         anInt4092++;
         if (i != -99) anIntArray4097 = null;
         return PlayerState.anInt7068 != 0;
@@ -49,7 +49,7 @@ final class DisplayModeManagerContainer363
         }
     }
 
-    static final byte[] decodedOperation2607(int i, File file, int i_1_) {
+    static final byte[] method2607(int i, File file, int i_1_) {
         anInt4093++;
         try {
             int i_2_ = -87 / ((28 - i_1_) / 54);

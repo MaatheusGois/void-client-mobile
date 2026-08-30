@@ -52,7 +52,7 @@ final class Component294
             anInt6333 = Component373.nextPowerOfTwo(i, (byte) 108);
             anInt6331 = Component373.nextPowerOfTwo(i_6_, (byte) 108);
         }
-        anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(i, i_6_, 1, 0, D3DToolkit.decodedOperation3958(22, this.aClass68_3895, this.aClass304_3896), 1));
+        anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(i, i_6_, 1, 0, D3DToolkit.method3958(22, this.aClass68_3895, this.aClass304_3896), 1));
     }
 
     public final void method64(Component246 class209, int i) {
@@ -98,8 +98,8 @@ final class Component294
             anInt6333 = Component373.nextPowerOfTwo(i, (byte) 108);
             anInt6331 = Component373.nextPowerOfTwo(i_16_, (byte) 108);
         }
-        if (bool) anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 0, 1024, D3DToolkit.decodedOperation3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));
-        else anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 1, 0, D3DToolkit.decodedOperation3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));
+        if (bool) anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 0, 1024, D3DToolkit.method3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));
+        else anIDirect3DTexture6332 = (this.aClass378_3893.anIDirect3DDevice9810.a(anInt6333, anInt6331, 1, 0, D3DToolkit.method3958(22, Component342.aClass68_1183, this.aClass304_3896), 1));
         PixelBuffer pixelbuffer = (this.aClass378_3893.aPixelBuffer9803);
         int i_19_ = anIDirect3DTexture6332.LockRect(0, 0, 0, i, i_16_, 0, pixelbuffer);
         if (ue.a(i_19_, false)) {
@@ -142,7 +142,7 @@ final class Component294
 
     public final void method63(byte i) {
         if (i > -21) method64(null, 39);
-        this.aClass378_3893.decodedOperation3954(13700, this);
+        this.aClass378_3893.method3954(13700, this);
     }
 
     public final void method70(int i, int i_31_, byte i_32_, int i_33_, int i_34_, int i_35_, int i_36_, byte[] is, DisplayModeManagerContainer42 class304) {

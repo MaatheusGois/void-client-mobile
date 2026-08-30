@@ -30,7 +30,7 @@ final class DisplayModeManagerContainer199
     final int getDefaultValue(int i) {
         if (i != 20014) validateValue(true);
         anInt5853++;
-        if (!this.preferences.decodedOperation3425(-76)) return 0;
+        if (!this.preferences.method3425(-76)) return 0;
         return 1;
     }
 
@@ -38,7 +38,7 @@ final class DisplayModeManagerContainer199
         super(class348_sub51);
     }
 
-    public static void decodedOperation1724(int i) {
+    public static void method1724(int i) {
         aClass105Array5857 = null;
         if (i != -4) aClass105Array5857 = null;
     }
@@ -65,13 +65,13 @@ final class DisplayModeManagerContainer199
         }
         int i_3_ = DisplayModeManagerContainer273.cameraFocusX >> 9;
         int i_4_ = Component353.cameraFocusZ >> 9;
-        int i_5_ = Component300.decodedOperation2064(DisplayModeManagerContainer273.cameraFocusX, Component117.anInt4372, 11219, Component353.cameraFocusZ);
+        int i_5_ = Component300.method2064(DisplayModeManagerContainer273.cameraFocusX, Component117.anInt4372, 11219, Component353.cameraFocusZ);
         int i_6_ = 0;
         if (i_3_ > 3 && i_4_ > 3 && -4 + AbstractShaderSub4.anInt7319 > i_3_ && ParametricDefinition.anInt9109 - 4 > i_4_) {
             for (int i_7_ = i_3_ - 4; i_3_ - -4 >= i_7_; i_7_++) {
                 for (int i_8_ = -4 + i_4_; i_8_ <= 4 + i_4_; i_8_++) {
                     int i_9_ = Component117.anInt4372;
-                    if (i_9_ < 3 && NpcComposition.decodedOperation802(i_8_, i_7_, true)) i_9_++;
+                    if (i_9_ < 3 && NpcComposition.method802(i_8_, i_7_, true)) i_9_++;
                     int i_10_ = 0;
                     if ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104) != null && (Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_]) != null) i_10_ = 8 * ((Component103.aClass237_Sub1_4197.aByteArrayArrayArray3104[i_9_][i_7_][i_8_]) & 0xff) << 2;
                     if (ShaderSub1.aSArray5191 != null && ShaderSub1.aSArray5191[i_9_] != null) {
@@ -94,7 +94,7 @@ final class DisplayModeManagerContainer199
         anInt5852++;
     }
 
-    final int decodedOperation1726(int i) {
+    final int method1726(int i) {
         anInt5856++;
         if (i != -32350) aClass105Array5857 = null;
         return this.preferenceValue;

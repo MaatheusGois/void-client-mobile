@@ -17,10 +17,10 @@ final class DisplayModeManagerContainer238
         throw new IllegalStateException();
     }
 
-    public static void decodedOperation744(byte i) {
+    public static void method744(byte i) {
         aClass114_1234 = null;
         anIntArray1233 = null;
-        if (i < 87) decodedOperation744((byte) -102);
+        if (i < 87) method744((byte) -102);
     }
 
     DisplayModeManagerContainer238(int i, int i_0_) {

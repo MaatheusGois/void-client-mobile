@@ -4,7 +4,7 @@
 
 /**
  * RENAMED from `Class348_Sub9` (JODE-obfuscated).
- * Scene-graph node (extends Node) wrapping a RenderableObject. decodedOperation2778 inserts a renderable into the tile heightmap / render list after visibility checks.
+ * Scene-graph node (extends Node) wrapping a RenderableObject. method2778 inserts a renderable into the tile heightmap / render list after visibility checks.
  */
 
 final class SceneNode extends Node {
@@ -41,7 +41,7 @@ final class SceneNode extends Node {
     int anInt6698;
     boolean aBoolean6699;
 
-    static final boolean decodedOperation2778(RenderableObject class318_sub1, boolean bool, byte[][][] is, int i, byte i_0_) {
+    static final boolean method2778(RenderableObject class318_sub1, boolean bool, byte[][][] is, int i, byte i_0_) {
         if (!DefinitionSub17.aBoolean9242) return false;
         int i_1_ = class318_sub1.x >> Component149.anInt4459;
         int i_2_ = i_1_;
@@ -59,7 +59,7 @@ final class SceneNode extends Node {
                     if ((is != null && class318_sub1.plane >= i && (is[class318_sub1.plane][i_5_][i_6_]) == i_0_) || !class318_sub1.method2378(0) || class318_sub1.method2382((byte) -79)) {
                         if (!bool && i_5_ >= Component256.anInt6111 - 16 && i_5_ <= Component256.anInt6111 + 16 && i_6_ >= DebugPanicSub2.anInt8502 - 16 && i_6_ <= DebugPanicSub2.anInt8502 + 16) {
                             if (DefinitionSub5.aBoolean9121) {
-                                Component144.aClass315Array3982[GpsOverlay.anInt1949++].decodedOperation2361(-15481, class318_sub1);
+                                Component144.aClass315Array3982[GpsOverlay.anInt1949++].method2361(-15481, class318_sub1);
                                 GpsOverlay.anInt1949 %= DisplayModeManagerContainer216.anInt5652;
                             } else class318_sub1.method2387(JaclibLoader.toolkit, -128);
                         }
@@ -70,19 +70,19 @@ final class SceneNode extends Node {
         return true;
     }
 
-    static final int decodedOperation2779(boolean bool, int i) {
+    static final int method2779(boolean bool, int i) {
         anInt6672++;
         if (i == 6407 || i == 34843 || i == 34837) return 6407;
         if (i == 6408 || i == 34842 || i == 34836) return 6408;
         if (i == 6406 || i == 34844) return 6406;
         if (i == 6409 || i == 34846) return 6409;
         if (i == 6410 || i == 34847) return 6410;
-        if (bool != true) decodedOperation2780(36, null, (byte) -28, -58, -120);
+        if (bool != true) method2780(36, null, (byte) -28, -58, -120);
         if (i == 6402) return 6402;
         throw new IllegalArgumentException("");
     }
 
-    static final void decodedOperation2780(int i, String string, byte i_7_, int i_8_, int i_9_) {
+    static final void method2780(int i, String string, byte i_7_, int i_8_, int i_9_) {
         do {
             try {
                 anInt6669++;
@@ -100,62 +100,62 @@ final class SceneNode extends Node {
                         if (i_8_ == 1) {
                             Component162.anInt8380++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((DisplayModeManagerContainer91.aClass351_398), (DisplayModeManagerContainer64.aClass77_9029), -93);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
                         }
                         if (i_8_ == 2) {
                             InputStream_Sub1.anInt71++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component33.aClass351_2638), (DisplayModeManagerContainer64.aClass77_9029), -98);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(126, class348_sub47);
                         }
                         if (i_8_ == 3) {
                             Component156.anInt3703++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((WaterSurfaceShader.aClass351_6244), (DisplayModeManagerContainer64.aClass77_9029), -93);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(-80, class348_sub47);
                         }
                         if (i_8_ == 4) {
                             Component330.anInt1514++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((ShaderSub3.aClass351_5204), (DisplayModeManagerContainer64.aClass77_9029), -82);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(116, class348_sub47);
                         }
                         int i_10_ = -80 / ((64 - i_7_) / 43);
                         if (i_8_ == 5) {
                             MatrixSub2.anInt5714++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Cp1252Decoder.aClass351_5217), (DisplayModeManagerContainer64.aClass77_9029), -94);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(123, class348_sub47);
                         }
                         if (i_8_ == 6) {
                             Component49.anInt4680++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((CursorDefinition.aClass351_2892), (DisplayModeManagerContainer64.aClass77_9029), -100);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(-4, class348_sub47);
                         }
                         if (i_8_ == 7) {
                             Component374.anInt4134++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component142.aClass351_4418), (DisplayModeManagerContainer64.aClass77_9029), -84);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
                         }
                         if (i_8_ == 8) {
                             DisplayModeManagerContainer67.anInt1726++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((Component315.aClass351_3165), (DisplayModeManagerContainer64.aClass77_9029), -117);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(-96, class348_sub47);
                         }
                         if (i_8_ == 9) {
                             NewsFetcher.anInt4198++;
                             ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((ResourceLoader.aClass351_3898), (DisplayModeManagerContainer64.aClass77_9029), -107);
-                            Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                            Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                             HashNodeSub14.enqueueOutboundPacket(119, class348_sub47);
                         }
                         if (i_8_ != 10) break;
                         Component17.anInt3886++;
                         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component337.aClass351_3644, (DisplayModeManagerContainer64.aClass77_9029), -120);
-                        Component121.decodedOperation3614(i_9_, i, class46.itemId, class348_sub47, -19692);
+                        Component121.method3614(i_9_, i, class46.itemId, class348_sub47, -19692);
                         HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
                     }
                 }
@@ -166,7 +166,7 @@ final class SceneNode extends Node {
         } while (false);
     }
 
-    final void decodedOperation2781(byte i) {
+    final void method2781(byte i) {
         anInt6671++;
         int i_11_ = this.anInt6685;
         if (i == 21) {
@@ -174,7 +174,7 @@ final class SceneNode extends Node {
             if (this.aClass51_6695 == null) {
                 if (this.aNpc_6691 == null) {
                     if ((this.aPlayer_6679) != null) {
-                        this.anInt6685 = (Component168.decodedOperation2357(-1, (this.aPlayer_6679)));
+                        this.anInt6685 = (Component168.method2357(-1, (this.aPlayer_6679)));
                         this.anInt6694 = (this.aPlayer_6679.anInt10553) << 9;
                         this.anInt6677 = (this.aPlayer_6679.anInt10558);
                         this.anInt6681 = 256;
@@ -182,11 +182,11 @@ final class SceneNode extends Node {
                         this.aBoolean6674 = (this.aPlayer_6679.aBoolean10517);
                     }
                 } else {
-                    int i_12_ = (DisplayModeManagerContainer345.decodedOperation214((this.aNpc_6691), -1));
+                    int i_12_ = (DisplayModeManagerContainer345.method214((this.aNpc_6691), -1));
                     if (i_12_ != i_11_) {
                         this.anInt6685 = i_12_;
                         NpcComposition class79 = (this.aNpc_6691.definition);
-                        if (class79.anIntArray1377 != null) class79 = class79.decodedOperation794((DisplayModeManagerContainer58.aClass170_10209), -1);
+                        if (class79.anIntArray1377 != null) class79 = class79.method794((DisplayModeManagerContainer58.aClass170_10209), -1);
                         if (class79 == null) {
                             this.anInt6677 = this.anInt6694 = 0;
                             this.anInt6681 = 256;
@@ -202,7 +202,7 @@ final class SceneNode extends Node {
                     }
                 }
             } else {
-                Component44 class51 = (this.aClass51_6695.decodedOperation480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47));
+                Component44 class51 = (this.aClass51_6695.method480(DisplayModeManagerContainer58.aClass170_10209, (byte) 47));
                 if (class51 == null) {
                     this.anInt6681 = 256;
                     this.aBoolean6674 = false;
@@ -228,7 +228,7 @@ final class SceneNode extends Node {
                 }
             }
             if (((i_11_ != this.anInt6685) || bool == !this.aBoolean6674) && this.aClass348_Sub16_Sub5_6676 != null) {
-                PlayerState.aClass348_Sub16_Sub4_7065.decodedOperation2880(this.aClass348_Sub16_Sub5_6676);
+                PlayerState.aClass348_Sub16_Sub4_7065.method2880(this.aClass348_Sub16_Sub5_6676);
                 this.aClass348_Sub19_Sub1_6686 = null;
                 this.aClass348_Sub16_Sub5_6676 = null;
                 this.aClass348_Sub10_6688 = null;
@@ -236,18 +236,18 @@ final class SceneNode extends Node {
         }
     }
 
-    static final byte decodedOperation2782(int i, int i_13_, int i_14_) {
-        if (i_14_ != 0) decodedOperation2783(-96, (byte) -65, -96);
+    static final byte method2782(int i, int i_13_, int i_14_) {
+        if (i_14_ != 0) method2783(-96, (byte) -65, -96);
         anInt6690++;
         if (i_13_ != 9) return (byte) 0;
         if ((i & 0x1) == 0) return (byte) 1;
         return (byte) 2;
     }
 
-    static final boolean decodedOperation2783(int i, byte i_15_, int i_16_) {
+    static final boolean method2783(int i, byte i_15_, int i_16_) {
         anInt6682++;
         int i_17_ = 53 / ((15 - i_15_) / 55);
-        return (HashNodeSub16Sub1.hasFlag0x10(i_16_, i, 118) & Component63.decodedOperation3563(i_16_, (byte) 56, i));
+        return (HashNodeSub16Sub1.hasFlag0x10(i_16_, i, 118) & Component63.method3563(i_16_, (byte) 56, i));
     }
 
     public SceneNode() {

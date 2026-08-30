@@ -17,18 +17,18 @@ final class Component46
     static int anInt2847;
     private NodeCache aClass60_2848 = new NodeCache(64);
 
-    public static void decodedOperation1585(int i) {
-        if (i != -1) decodedOperation1585(-34);
+    public static void method1585(int i) {
+        if (i != -1) method1585(-34);
         aClass60_2844 = null;
     }
 
-    static final void decodedOperation1586(boolean bool, byte i, String string) {
+    static final void method1586(boolean bool, byte i, String string) {
         if (i >= -51) aClass60_2844 = null;
         anInt2840++;
-        Component110.decodedOperation259(-1, 113, bool, string, -1);
+        Component110.method259(-1, 113, bool, string, -1);
     }
 
-    final void decodedOperation1587(int i, int i_0_) {
+    final void method1587(int i, int i_0_) {
         if (i_0_ != 3758) aClass60_2848 = null;
         synchronized (aClass60_2848) {
             aClass60_2848.processSoftEntries(2, i);
@@ -36,7 +36,7 @@ final class Component46
         anInt2841++;
     }
 
-    final Component146 decodedOperation1588(int i, int i_1_) {
+    final Component146 method1588(int i, int i_1_) {
         anInt2847++;
         Component146 class159;
         synchronized (aClass60_2848) {
@@ -49,22 +49,22 @@ final class Component46
             if (i >= -17) aClass60_2848 = null;
         }
         class159 = new Component146();
-        if (is != null) class159.decodedOperation1253(new Buffer(is), true);
+        if (is != null) class159.method1253(new Buffer(is), true);
         synchronized (aClass60_2848) {
             aClass60_2848.putOne(class159, i_1_, (byte) -124);
         }
         return class159;
     }
 
-    final void decodedOperation1589(byte i) {
+    final void method1589(byte i) {
         anInt2843++;
         synchronized (aClass60_2848) {
             aClass60_2848.clear(0);
         }
-        if (i < 126) decodedOperation1588(-98, -35);
+        if (i < 126) method1588(-98, -35);
     }
 
-    final void decodedOperation1590(int i) {
+    final void method1590(int i) {
         anInt2846++;
         if (i != 0) this.anInt2845 = -97;
         synchronized (aClass60_2848) {

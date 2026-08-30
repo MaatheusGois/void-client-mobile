@@ -18,7 +18,7 @@ final class NodeBaseSub2
     NativeHeap aNativeHeap9782;
     static boolean aBoolean9783 = false;
 
-    static final Component321 decodedOperation3442(int i, byte[] is, GlExtensionManager class377, int i_0_) {
+    static final Component321 method3442(int i, byte[] is, GlExtensionManager class377, int i_0_) {
         try {
             anInt9779++;
             if (is == null) return null;
@@ -38,7 +38,7 @@ final class NodeBaseSub2
         }
     }
 
-    static final void decodedOperation3443(boolean bool, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
+    static final void method3443(boolean bool, DisplayModeManagerContainer58 class318_sub1_sub3_sub3) {
         anInt9778++;
         if ((class318_sub1_sub3_sub3.anIntArray10242) != null || (class318_sub1_sub3_sub3.anIntArray10296) != null) {
             boolean bool_2_ = bool;
@@ -88,11 +88,11 @@ final class NodeBaseSub2
         }
     }
 
-    public static void decodedOperation3444(int i) {
+    public static void method3444(int i) {
         if (i <= -85) aClass138_9781 = null;
     }
 
-    final void decodedOperation3445(int i) {
+    final void method3445(int i) {
         this.aNativeHeap9782.b();
         if (i != -9503) regionTileX = -29;
         anInt9777++;

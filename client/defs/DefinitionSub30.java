@@ -30,7 +30,7 @@ final class DefinitionSub30
     private int anInt9402 = 0;
     static boolean aBoolean9403 = false;
 
-    static final void decodedOperation3126(byte i) {
+    static final void method3126(byte i) {
         if (i != 98) anInt9388 = 46;
         NodeCache.aHa1098.method3700(Component98.aFloat5945, NodeSub3.aFloat6586, Component209.aFloat3462);
         anInt9387++;
@@ -52,58 +52,58 @@ final class DefinitionSub30
         do {
             class348_sub42_sub15 = (RSARequest) BufferCacheSub2.aClass107_8241.first(-87);
             if (class348_sub42_sub15 == null) return null;
-            if (Component240.currentTimeMillis(-59) < class348_sub42_sub15.decodedOperation3250((byte) -51)) return null;
+            if (Component240.currentTimeMillis(-59) < class348_sub42_sub15.method3250((byte) -51)) return null;
             class348_sub42_sub15.unlink((byte) 113);
             class348_sub42_sub15.unlink(true);
         } while ((~0x7fffffffffffffffL & class348_sub42_sub15.accessAge) == 0L);
         return class348_sub42_sub15;
     }
 
-    static final void decodedOperation3128(int i, String string) {
+    static final void method3128(int i, String string) {
         do {
             try {
                 anInt9391++;
                 if (string != null) {
                     if (friendCount >= 200 && !DisplayModeManagerContainer105.aBoolean4888 || friendCount >= 200) {
-                        DisplayModeManagerContainer213.decodedOperation544((FriendsIgnoreList.aClass274_3493.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
+                        DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3493.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
                         String string_0_ = FriendsIgnoreList.aClass274_3494.getLocalized(ObjectDeserializer.languageId, 544);
-                        if (string_0_ != null) DisplayModeManagerContainer213.decodedOperation544(string_0_, false, 4);
+                        if (string_0_ != null) DisplayModeManagerContainer213.method544(string_0_, false, 4);
                     } else {
-                        String string_1_ = DebugPanicSub1.decodedOperation2127(2, string);
+                        String string_1_ = DebugPanicSub1.method2127(2, string);
                         if (string_1_ != null) {
                             for (int i_2_ = 0; (friendCount > i_2_); i_2_++) {
-                                String string_3_ = (DebugPanicSub1.decodedOperation2127(2, Component178.friendNames[i_2_]));
+                                String string_3_ = (DebugPanicSub1.method2127(2, Component178.friendNames[i_2_]));
                                 if (string_3_ != null && string_3_.equals(string_1_)) {
-                                    DisplayModeManagerContainer213.decodedOperation544((string + (FriendsIgnoreList.aClass274_3521.getLocalized((ObjectDeserializer.languageId), 544))), false, 4);
+                                    DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.getLocalized((ObjectDeserializer.languageId), 544))), false, 4);
                                     return;
                                 }
                                 if (ShaderProgramSub2.friendFormerNames[i_2_] != null) {
-                                    String string_4_ = (DebugPanicSub1.decodedOperation2127(2, (ShaderProgramSub2.friendFormerNames[i_2_])));
+                                    String string_4_ = (DebugPanicSub1.method2127(2, (ShaderProgramSub2.friendFormerNames[i_2_])));
                                     if (string_4_ != null && string_4_.equals(string_1_)) {
-                                        DisplayModeManagerContainer213.decodedOperation544((string + (FriendsIgnoreList.aClass274_3521.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
+                                        DisplayModeManagerContainer213.method544((string + (FriendsIgnoreList.aClass274_3521.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                         return;
                                     }
                                 }
                             }
                             for (int i_5_ = 0; i_5_ < MenuEntry.ignoreCount; i_5_++) {
-                                String string_6_ = (DebugPanicSub1.decodedOperation2127(2, Component44.ignoreNames[i_5_]));
+                                String string_6_ = (DebugPanicSub1.method2127(2, Component44.ignoreNames[i_5_]));
                                 if (string_6_ != null && string_6_.equals(string_1_)) {
-                                    DisplayModeManagerContainer213.decodedOperation544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
+                                    DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                     return;
                                 }
                                 if (DefinitionSub21.ignoreLastNames[i_5_] != null) {
-                                    String string_7_ = (DebugPanicSub1.decodedOperation2127(2, (DefinitionSub21.ignoreLastNames[i_5_])));
+                                    String string_7_ = (DebugPanicSub1.method2127(2, (DefinitionSub21.ignoreLastNames[i_5_])));
                                     if (string_7_ != null && string_7_.equals(string_1_)) {
-                                        DisplayModeManagerContainer213.decodedOperation544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
+                                        DisplayModeManagerContainer213.method544(((FriendsIgnoreList.aClass274_3526.getLocalized(ObjectDeserializer.languageId, 544)) + string + (FriendsIgnoreList.aClass274_3527.getLocalized(ObjectDeserializer.languageId, 544))), false, 4);
                                         return;
                                     }
                                 }
                             }
-                            if (DebugPanicSub1.decodedOperation2127(2, (Component72.localPlayer.username)).equals(string_1_)) DisplayModeManagerContainer213.decodedOperation544((FriendsIgnoreList.aClass274_3524.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
+                            if (DebugPanicSub1.method2127(2, (Component72.localPlayer.username)).equals(string_1_)) DisplayModeManagerContainer213.method544((FriendsIgnoreList.aClass274_3524.getLocalized(ObjectDeserializer.languageId, 544)), false, 4);
                             else {
                                 Component334.anInt2012++;
                                 ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(InterfaceRenderer.aClass351_5057, DisplayModeManagerContainer64.aClass77_9029, -85));
-                                class348_sub47.particleBuffer.writeByte(false, Component31.decodedOperation1745(string, -65));
+                                class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
                                 class348_sub47.particleBuffer.writeString((byte) -5, string);
                                 HashNodeSub14.enqueueOutboundPacket(123, class348_sub47);
                                 if (i <= -31) break;
@@ -123,7 +123,7 @@ final class DefinitionSub30
         anInt9393++;
         int[][] is = this.imageCacheStore.getPixels(-105, i);
         if (this.imageCacheStore.cacheMiss) {
-            int[][] is_9_ = this.decodedOperation3039((byte) 50, i, 0);
+            int[][] is_9_ = this.method3039((byte) 50, i, 0);
             int[] is_10_ = is_9_[0];
             int[] is_11_ = is_9_[1];
             int[] is_12_ = is_9_[2];
@@ -247,7 +247,7 @@ final class DefinitionSub30
         }
     }
 
-    final void decodedOperation3049(Buffer class348_sub49, int i, int i_39_) {
+    final void method3049(Buffer class348_sub49, int i, int i_39_) {
         while_209_:
         do {
             try {

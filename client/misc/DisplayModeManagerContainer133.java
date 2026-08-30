@@ -15,15 +15,15 @@ final class DisplayModeManagerContainer133
     static DisplayModeManagerContainer238 aClass74_2157 = new DisplayModeManagerContainer238(5, 16);
     int anInt2158;
 
-    static final void decodedOperation1265(int i) {
+    static final void method1265(int i) {
         anInt2152++;
         if (i != 16) aClass74_2157 = null;
-        if (Definition.aClass279_7042 != null) Definition.aClass279_7042.decodedOperation2093(true);
-        if (Component276.aClass279_2596 != null) Component276.aClass279_2596.decodedOperation2093(true);
+        if (Definition.aClass279_7042 != null) Definition.aClass279_7042.method2093(true);
+        if (Component276.aClass279_2596 != null) Component276.aClass279_2596.method2093(true);
     }
 
-    final DisplayModeManagerContainer133 decodedOperation1266(int i, int i_0_) {
-        if (i != 5) decodedOperation1266(82, -25);
+    final DisplayModeManagerContainer133 method1266(int i, int i_0_) {
+        if (i != 5) method1266(82, -25);
         anInt2154++;
         return new DisplayModeManagerContainer133(this.anInt2153, i_0_, this.anInt2156, this.anInt2158);
     }
@@ -35,8 +35,8 @@ final class DisplayModeManagerContainer133
         this.anInt2153 = i;
     }
 
-    public static void decodedOperation1267(byte i) {
+    public static void method1267(byte i) {
         aClass74_2157 = null;
-        if (i != 85) decodedOperation1267((byte) 121);
+        if (i != 85) method1267((byte) 121);
     }
 }

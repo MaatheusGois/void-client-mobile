@@ -7,7 +7,7 @@ final class Component313
  * RENAMED from `Class214` (JODE-obfuscated).
  * Evidence: root class; no distinctive extends/strings
  */ {
-    static final void decodedOperation1573(int[] is, int i, int i_0_) {
+    static final void method1573(int[] is, int i, int i_0_) {
         i_0_ = i + i_0_ - 7;
         while (i < i_0_) {
             is[i++] = 0;
@@ -23,7 +23,7 @@ final class Component313
         while (i < i_0_) is[i++] = 0;
     }
 
-    static final void decodedOperation1574(float[] fs, int i, float[] fs_1_, int i_2_, int i_3_) {
+    static final void method1574(float[] fs, int i, float[] fs_1_, int i_2_, int i_3_) {
         if (fs == fs_1_) {
             if (i == i_2_) return;
             if (i_2_ > i && i_2_ < i + i_3_) {
@@ -186,7 +186,7 @@ final class Component313
         while (i < i_12_) is_10_[i_11_++] = is[i++];
     }
 
-    static final void decodedOperation1578(int[] is, int i, int[] is_13_, int i_14_, int i_15_) {
+    static final void method1578(int[] is, int i, int[] is_13_, int i_14_, int i_15_) {
         if (is == is_13_) {
             if (i == i_14_) return;
             if (i_14_ > i && i_14_ < i + i_15_) {
@@ -226,7 +226,7 @@ final class Component313
         while (i < i_15_) is_13_[i_14_++] = is[i++];
     }
 
-    static final void decodedOperation1579(int[] is, int i, int i_16_, int i_17_) {
+    static final void method1579(int[] is, int i, int i_16_, int i_17_) {
         i_16_ = i + i_16_ - 7;
         while (i < i_16_) {
             is[i++] = i_17_;

@@ -45,12 +45,12 @@ final class SoftwareBitmapFont extends BitmapFont {
             i_6_ += i_11_;
         }
         if (i_2_ > 0 && i_3_ > 0) {
-            if ((i_1_ & ~0xffffff) == -16777216) decodedOperation2588(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_1_, i_8_, i_5_, i_2_, i_3_, i_6_, i_7_);
-            else if ((i_1_ & ~0xffffff) != 0) decodedOperation2586(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_1_, i_8_, i_5_, i_2_, i_3_, i_6_, i_7_);
+            if ((i_1_ & ~0xffffff) == -16777216) method2588(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_1_, i_8_, i_5_, i_2_, i_3_, i_6_, i_7_);
+            else if ((i_1_ & ~0xffffff) != 0) method2586(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_1_, i_8_, i_5_, i_2_, i_3_, i_6_, i_7_);
         }
     }
 
-    private final void decodedOperation2586(byte[] is, int[] is_12_, int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_) {
+    private final void method2586(byte[] is, int[] is_12_, int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_) {
         int i_19_ = i >>> 24;
         int i_20_ = 255 - i_19_;
         for (int i_21_ = -i_16_; i_21_ < 0; i_21_++) {
@@ -66,7 +66,7 @@ final class SoftwareBitmapFont extends BitmapFont {
         }
     }
 
-    private final void decodedOperation2587(byte[] is, int[] is_25_, int i, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, int i_34_, Shader var_aa, int i_35_, int i_36_) {
+    private final void method2587(byte[] is, int[] is_25_, int i, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, int i_34_, Shader var_aa, int i_35_, int i_36_) {
         ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_37_ = var_aa_Sub3.anIntArray5201;
         int[] is_38_ = var_aa_Sub3.anIntArray5202;
@@ -112,7 +112,7 @@ final class SoftwareBitmapFont extends BitmapFont {
         }
     }
 
-    private final void decodedOperation2588(byte[] is, int[] is_49_, int i, int i_50_, int i_51_, int i_52_, int i_53_, int i_54_, int i_55_) {
+    private final void method2588(byte[] is, int[] is_49_, int i, int i_50_, int i_51_, int i_52_, int i_53_, int i_54_, int i_55_) {
         int i_56_ = -(i_52_ >> 2);
         i_52_ = -(i_52_ & 0x3);
         for (int i_57_ = -i_53_; i_57_ < 0; i_57_++) {
@@ -171,7 +171,7 @@ final class SoftwareBitmapFont extends BitmapFont {
                 i_68_ += i_73_;
             }
             if (i_64_ > 0 && i_65_ > 0) {
-                if ((i_61_ & ~0xffffff) == -16777216) decodedOperation2587(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_61_, i_70_, i_67_, i_64_, i_65_, i_68_, i_69_, i, i_60_, anIntArray6489[c], var_aa, i_62_, i_63_);
+                if ((i_61_ & ~0xffffff) == -16777216) method2587(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_61_, i_70_, i_67_, i_64_, i_65_, i_68_, i_69_, i, i_60_, anIntArray6489[c], var_aa, i_62_, i_63_);
                 else method2589(aByteArrayArray6490[c], aHa_Sub1_6486.anIntArray7483, i_61_, i_70_, i_67_, i_64_, i_65_, i_68_, i_69_, i, i_60_, anIntArray6489[c], var_aa, i_62_, i_63_);
             }
         }

@@ -21,22 +21,22 @@ final class Component331
     private int[][] anIntArrayArray1724;
     private final boolean[] aBooleanArray1725;
 
-    final DisplayModeManagerContainer260 decodedOperation1043(int i, byte i_0_) {
+    final DisplayModeManagerContainer260 method1043(int i, byte i_0_) {
         anInt1721++;
         byte[] is = aClass45_1718.getFile(-1860, 1, i);
         if (i_0_ < 12) return null;
         DisplayModeManagerContainer260 class287 = new DisplayModeManagerContainer260();
-        class287.decodedOperation2183(new Buffer(is), 21890);
+        class287.method2183(new Buffer(is), 21890);
         return class287;
     }
 
-    final boolean decodedOperation1044(int i) {
+    final boolean method1044(int i) {
         if (i < 15) anIntArrayArray1724 = null;
         anInt1717++;
         return anInt1715 != -1;
     }
 
-    static final int decodedOperation1045(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, byte i_6_) {
+    static final int method1045(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, byte i_6_) {
         i_5_ &= 0x3;
         anInt1716++;
         if ((i_2_ & 0x1) == 1) {
@@ -51,7 +51,7 @@ final class Component331
         return i;
     }
 
-    final int[] decodedOperation1046(int i, int i_8_) {
+    final int[] method1046(int i, int i_8_) {
         anInt1719++;
         if (i < 0 || anIntArrayArray1724.length <= i) {
             if (anInt1715 == -1) return new int[0];
@@ -61,9 +61,9 @@ final class Component331
         int i_9_ = i_8_ == (~anInt1715) ? 0 : 1;
         Random random = new Random();
         int[] is = new int[anIntArrayArray1724[i].length];
-        Component313.decodedOperation1578(anIntArrayArray1724[i], 0, is, 0, is.length);
+        Component313.method1578(anIntArrayArray1724[i], 0, is, 0, is.length);
         for (int i_10_ = i_9_; is.length > i_10_; i_10_++) {
-            int i_11_ = i_9_ + DisplayModeManagerContainer77.decodedOperation1097((byte) 80, is.length - i_9_, random);
+            int i_11_ = i_9_ + DisplayModeManagerContainer77.method1097((byte) 80, is.length - i_9_, random);
             int i_12_ = is[i_10_];
             is[i_10_] = is[i_11_];
             is[i_11_] = i_12_;
@@ -71,15 +71,15 @@ final class Component331
         return is;
     }
 
-    public static void decodedOperation1047(int i) {
+    public static void method1047(int i) {
         if (i != 1) anInt1720 = 93;
         aClass114_1722 = null;
     }
 
-    static final void decodedOperation1048(DisplayModeManagerContainer57 class46, int i) {
+    static final void method1048(DisplayModeManagerContainer57 class46, int i) {
         anInt1723++;
         int i_13_ = 113 % ((-25 - i) / 59);
-        DisplayModeManagerContainer57 class46_14_ = DisplayModeManagerContainer87.decodedOperation1687(class46, 3);
+        DisplayModeManagerContainer57 class46_14_ = DisplayModeManagerContainer87.method1687(class46, 3);
         int i_15_;
         int i_16_;
         if (class46_14_ == null) {
@@ -89,8 +89,8 @@ final class Component331
             i_15_ = class46_14_.height;
             i_16_ = class46_14_.width;
         }
-        Component188.decodedOperation1843(i_16_, -326, class46, false, i_15_);
-        Component19.decodedOperation239((byte) -114, i_16_, i_15_, class46);
+        Component188.method1843(i_16_, -326, class46, false, i_15_);
+        Component19.method239((byte) -114, i_16_, i_15_, class46);
     }
 
     Component331(GameType class230, int i, CacheStore class45) {
@@ -105,7 +105,7 @@ final class Component331
                 anInt1715 = -1;
             } else {
                 int i_18_ = class348_sub49.readUnsignedByte(255);
-                DisplayModeManagerContainer369[] class223s = Component248.decodedOperation285(-122);
+                DisplayModeManagerContainer369[] class223s = Component248.method285(-122);
                 boolean bool = true;
                 if (class223s.length == i_18_) {
                     for (int i_19_ = 0; (class223s.length > i_19_); i_19_++) {

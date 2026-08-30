@@ -23,7 +23,7 @@ final class NodeSub1Sub2
         if (i_0_ == 70) this.anInt6562 = i;
     }
 
-    static final int decodedOperation2729(int i, int i_3_) {
+    static final int method2729(int i, int i_3_) {
         anInt8813++;
         if (i_3_ != 16) return 23;
         return 0xff & i;
@@ -51,7 +51,7 @@ final class NodeSub1Sub2
         super(i, i_9_, i_10_, i_11_, i_12_, f);
     }
 
-    public static void decodedOperation2731(byte i) {
+    public static void method2731(byte i) {
         aByteArrayArray8816 = null;
         if (i != -23) whirlpoolDigest(14, 86, null, -106);
         aClass262_8810 = null;

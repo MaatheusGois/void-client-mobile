@@ -21,15 +21,15 @@ abstract class r
         /* empty */
     }
 
-    static final void decodedOperation3284(boolean bool, double d) {
+    static final void method3284(boolean bool, double d) {
         Component352.aClass101_624.method898(Component44.aClass101_905);
         anInt9717++;
-        if (bool != true) decodedOperation3285(10);
-        Component352.aClass101_624.decodedOperation891(0, 0, (int) d);
+        if (bool != true) method3285(10);
+        Component352.aClass101_624.method891(0, 0, (int) d);
         Component158.aHa326.loadModelviewMatrix(Component352.aClass101_624);
     }
 
-    public static void decodedOperation3285(int i) {
+    public static void method3285(int i) {
         int i_0_ = -61 % ((i - -73) / 32);
         aClass101_9720 = null;
         anIntArray9724 = null;

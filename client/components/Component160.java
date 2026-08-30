@@ -18,15 +18,15 @@ final class Component160
     static int anInt4360;
     private NodeCache aClass60_4361 = new NodeCache(256);
 
-    final void decodedOperation3463(byte i) {
+    final void method3463(byte i) {
         anInt4360++;
         aClass60_4361.clear(0);
         if (i != -110) aClass60_4361 = null;
     }
 
-    static final byte decodedOperation3464(char c, boolean bool) {
+    static final byte method3464(char c, boolean bool) {
         anInt4354++;
-        if (bool != false) decodedOperation3464('\uffe1', false);
+        if (bool != false) method3464('\uffe1', false);
         byte i;
         if ((c <= 0 || c >= 128) && (c < 160 || c > 255)) {
             if (c != 8364) {
@@ -72,7 +72,7 @@ final class Component160
         return i;
     }
 
-    static final boolean decodedOperation3465(int i, int i_0_, Component103 class338) {
+    static final boolean method3465(int i, int i_0_, Component103 class338) {
         anInt4358++;
         DefinitionSub4.aClass101_9114.method897(class338.anIntArray4187[i], class338.anIntArray4191[i], class338.anIntArray4184[i], ShaderLinker.anIntArray10172);
         int i_1_ = ShaderLinker.anIntArray10172[2];
@@ -83,14 +83,14 @@ final class Component160
         return true;
     }
 
-    static final void decodedOperation3466(int i) {
+    static final void method3466(int i) {
         int i_2_ = 22 / ((-2 - i) / 52);
         anInt4352++;
         for (int i_3_ = 0; i_3_ < 100; i_3_++)
             InflaterDecompressor.aBooleanArray2076[i_3_] = true;
     }
 
-    final GlTexture decodedOperation3467(int i, int i_4_) {
+    final GlTexture method3467(int i, int i_4_) {
         anInt4357++;
         Object object = aClass60_4361.get(i, -127);
         if (object != null) return (GlTexture) object;
@@ -107,18 +107,18 @@ final class Component160
             else is = modelProvider.getTriangles(true, i, 0.7F, i_5_, i_5_, i_4_ + -196);
             class258_sub3 = new GlTexture(aHa_Sub2_4355, 3553, 6408, i_5_, i_5_, class12.aByte205 != 0, is, 0, 0, false);
         }
-        class258_sub3.decodedOperation1965(class12.aBoolean215, class12.aBoolean217, 10243);
-        if (i_4_ != 256) decodedOperation3466(22);
+        class258_sub3.method1965(class12.aBoolean215, class12.aBoolean217, 10243);
+        if (i_4_ != 256) method3466(22);
         aClass60_4361.putOne(class258_sub3, i, (byte) -114);
         return class258_sub3;
     }
 
-    public static void decodedOperation3468(int i) {
+    public static void method3468(int i) {
         anIntArrayArrayArray4356 = null;
         if (i != -1401) anIntArrayArrayArray4356 = null;
     }
 
-    final void decodedOperation3469(int i) {
+    final void method3469(int i) {
         if (i == 8218) {
             anInt4353++;
             aClass60_4361.processSoftEntries(2, 5);

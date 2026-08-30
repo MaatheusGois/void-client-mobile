@@ -16,7 +16,7 @@ final class Component54
     static int anInt8673;
     private byte[] aByteArray8674;
 
-    static final Component142 decodedOperation565(int i, int i_0_, DisplayModeManagerContainer77 class124, int[] is) {
+    static final Component142 method565(int i, int i_0_, DisplayModeManagerContainer77 class124, int[] is) {
         try {
             anInt8673++;
             int[] is_1_ = null;
@@ -97,7 +97,7 @@ final class Component54
                             f_22_ = (float) (class124.anIntArray1844[i_20_]) / 1024.0F;
                             f_23_ = (float) (class124.anIntArray1859[i_20_]) / 1024.0F;
                         }
-                        fs[i_20_] = (Component143.decodedOperation1347(class124.aShortArray1825[i_20_], class124.aShortArray1849[i_20_], f_22_, f_23_, 126, f, class124.aShortArray1829[i_20_], GpsOverlay.bitwiseAnd(255, (class124.aByteArray1833[i_20_]))));
+                        fs[i_20_] = (Component143.method1347(class124.aShortArray1825[i_20_], class124.aShortArray1849[i_20_], f_22_, f_23_, 126, f, class124.aShortArray1829[i_20_], GpsOverlay.bitwiseAnd(255, (class124.aByteArray1833[i_20_]))));
                     }
                 }
             }
@@ -107,16 +107,16 @@ final class Component54
         }
     }
 
-    static final void decodedOperation566(boolean bool, boolean bool_25_, byte i) {
+    static final void method566(boolean bool, boolean bool_25_, byte i) {
         anInt8671++;
         int i_26_ = -94 / ((-67 - i) / 59);
         if (bool) {
             DefinitionSub26.anInt9346++;
-            Component256.decodedOperation1827(1415665776);
+            Component256.method1827(1415665776);
         }
         if (bool_25_) {
             AssetCacheLoader.anInt383++;
-            NodederUtil.decodedOperation2770(2);
+            NodederUtil.method2770(2);
         }
     }
 
@@ -134,15 +134,15 @@ final class Component54
         super(12, 5, 16, 2, 2, 0.45F);
     }
 
-    final byte[] decodedOperation567(int i, byte i_30_, int i_31_, int i_32_) {
+    final byte[] method567(int i, byte i_30_, int i_31_, int i_32_) {
         anInt8672++;
         aByteArray8674 = new byte[2 * i_32_ * i * i_31_];
-        this.decodedOperation542(i, i_32_, 0, i_31_);
+        this.method542(i, i_32_, 0, i_31_);
         int i_33_ = -61 % ((70 - i_30_) / 37);
         return aByteArray8674;
     }
 
-    public static void decodedOperation568(boolean bool) {
+    public static void method568(boolean bool) {
         aClass45_8670 = null;
         aClass45_8667 = null;
         if (bool != true) aClass45_8670 = null;

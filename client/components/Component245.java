@@ -15,25 +15,25 @@ final class Component245
     static int anInt121;
     static int anInt122;
 
-    static final Component362 decodedOperation170(boolean bool) {
-        if (bool != true) decodedOperation174(-106, -36);
+    static final Component362 method170(boolean bool) {
+        if (bool != true) method174(-106, -36);
         anInt122++;
         if (NodeSub36.anInt6985 < Component304.aClass110_Sub1Array1146.length) return Component304.aClass110_Sub1Array1146[NodeSub36.anInt6985++];
         return null;
     }
 
-    public static void decodedOperation171(byte i) {
+    public static void method171(byte i) {
         aClass141_117 = null;
-        if (i != 72) decodedOperation173(39, null, null);
+        if (i != 72) method173(39, null, null);
     }
 
-    static final void decodedOperation172(int i, CacheStore class45) {
-        if (i != 30284) decodedOperation170(true);
+    static final void method172(int i, CacheStore class45) {
+        if (i != 30284) method170(true);
         anInt116++;
         Component54.aClass45_8670 = class45;
     }
 
-    static final void decodedOperation173(int i, DisplayModeManagerContainer57 class46, DisplayModeManagerContainer57 class46_0_) {
+    static final void method173(int i, DisplayModeManagerContainer57 class46, DisplayModeManagerContainer57 class46_0_) {
         try {
             anInt120++;
             NodeSub38.anInt7009++;
@@ -51,7 +51,7 @@ final class Component245
         }
     }
 
-    static final void decodedOperation174(int i, int i_1_) {
+    static final void method174(int i, int i_1_) {
         if (i_1_ != -30742) aClass141_117 = null;
         anInt121++;
         Component9.aClass60_4139.processSoftEntries(2, i);

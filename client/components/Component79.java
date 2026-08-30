@@ -15,21 +15,21 @@ final class Component79
     static int anInt4149;
     private Node aClass348_4150;
 
-    static final void decodedOperation2643(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+    static final void method2643(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
         if (DisplayModeManagerContainer173.anIntArrayArray4253 != null) DisplayModeManagerContainer173.anIntArrayArray4253[i][i_0_] = ~0xffffff | i_1_;
         if (Component175.aShortArrayArray5847 != null) Component175.aShortArrayArray5847[i][i_0_] = (short) i_2_;
         if (NodeSub1Sub2.aByteArrayArray8816 != null) NodeSub1Sub2.aByteArrayArray8816[i][i_0_] = (byte) i_3_;
     }
 
-    final Node decodedOperation2644(byte i) {
+    final Node method2644(byte i) {
         anInt4148 = 0;
-        if (i != 123) decodedOperation2643(-115, 5, -49, 81, 25);
+        if (i != 123) method2643(-115, 5, -49, 81, 25);
         anInt4145++;
         return method2646((byte) 117);
     }
 
-    public static void decodedOperation2645(int i) {
-        if (i != -16777216) decodedOperation2643(-59, 61, -83, 34, -32);
+    public static void method2645(int i) {
+        if (i != -16777216) method2643(-59, 61, -83, 34, -32);
         aClass45_4147 = null;
     }
 

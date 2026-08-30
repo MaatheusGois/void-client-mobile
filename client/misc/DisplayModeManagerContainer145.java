@@ -19,10 +19,10 @@ final class DisplayModeManagerContainer145
     static String[] ignoreDisplayNames;
     static int anInt1809;
 
-    static final void decodedOperation1085(int i, int i_0_, byte i_1_, int i_2_, int i_3_) {
+    static final void method1085(int i, int i_0_, byte i_1_, int i_2_, int i_3_) {
         anInt1805++;
-        RSARequest class348_sub42_sub15 = FriendLoginMessage.decodedOperation2516(i_3_, (byte) 105, 8);
-        class348_sub42_sub15.decodedOperation3246(-25490);
+        RSARequest class348_sub42_sub15 = FriendLoginMessage.method2516(i_3_, (byte) 105, 8);
+        class348_sub42_sub15.method3246(-25490);
         class348_sub42_sub15.anInt9652 = i_0_;
         if (i_1_ < -57) {
             class348_sub42_sub15.anInt9650 = i;
@@ -37,8 +37,8 @@ final class DisplayModeManagerContainer145
         friendReferred = null;
     }
 
-    static final boolean decodedOperation1087(int i, int i_4_, int i_5_) {
-        if (i != 12644) decodedOperation1085(55, -60, (byte) -29, -35, -112);
+    static final boolean method1087(int i, int i_4_, int i_5_) {
+        if (i != 12644) method1085(55, -60, (byte) -29, -35, -112);
         anInt1809++;
         return (0x84080 & i_5_) != 0;
     }
@@ -69,7 +69,7 @@ final class DisplayModeManagerContainer145
         return false;
     }
 
-    static final void decodedOperation1090(byte[][] is, int i, Component251 class237_sub1) {
+    static final void method1090(byte[][] is, int i, Component251 class237_sub1) {
         try {
             anInt1802++;
             int i_13_ = DisplayModeManagerContainer322.aByteArrayArray4281.length;
@@ -79,8 +79,8 @@ final class DisplayModeManagerContainer145
                     if (is_15_ != null) {
                         int i_16_ = (64 * (OggStreamReader.anIntArray9042[i_14_] >> 8) + -NodeBaseSub2.regionTileX);
                         int i_17_ = ((OggStreamReader.anIntArray9042[i_14_] & 0xff) * 64 - Component330.regionTileY);
-                        Component381.decodedOperation3570(false);
-                        class237_sub1.decodedOperation1695(is_15_, (NodeSub45.aClass361Array7108), i_17_, NodeSub8.toolkit, i_16_, i ^ 0x1054f);
+                        Component381.method3570(false);
+                        class237_sub1.method1695(is_15_, (NodeSub45.aClass361Array7108), i_17_, NodeSub8.toolkit, i_16_, i ^ 0x1054f);
                     }
                 }
             }

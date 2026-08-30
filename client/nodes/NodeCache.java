@@ -38,8 +38,8 @@ final class NodeCache {
         return i_0_;
     }
 
-    static final boolean decodedOperation576(int i, int i_1_) {
-        if (i_1_ <= 21) decodedOperation589(null, -21);
+    static final boolean method576(int i, int i_1_) {
+        if (i_1_ <= 21) method589(null, -21);
         anInt1088++;
         return i == 2 || i == 3;
     }
@@ -59,7 +59,7 @@ final class NodeCache {
                         if ((long) i_2_ < ++class348_sub42_sub8.accessAge) {
                             CacheNode class348_sub42_sub8_3_ = MatrixSub1.aClass246_5675.method1888(3, class348_sub42_sub8);
                             table.put((byte) 86, (class348_sub42_sub8.key), class348_sub42_sub8_3_);
-                            Component317.decodedOperation573(class348_sub42_sub8_3_, class348_sub42_sub8, (byte) 63);
+                            Component317.method573(class348_sub42_sub8_3_, class348_sub42_sub8, (byte) 63);
                             class348_sub42_sub8.unlink((byte) 116);
                             class348_sub42_sub8.unlink(true);
                         }
@@ -77,7 +77,7 @@ final class NodeCache {
         this(i, i);
     }
 
-    final Object decodedOperation579(int i) {
+    final Object method579(int i) {
         anInt1094++;
         CacheNode class348_sub42_sub8 = (CacheNode) table.next(0);
         while (class348_sub42_sub8 != null) {
@@ -121,7 +121,7 @@ final class NodeCache {
 
     final void putOne(Object object, long l, byte i) {
         try {
-            if (i >= -92) decodedOperation589(null, -7);
+            if (i >= -92) method589(null, -7);
             anInt1095++;
             put(31902, object, l, 1);
         } catch (RuntimeException runtimeexception) {
@@ -159,7 +159,7 @@ final class NodeCache {
         }
     }
 
-    public static void decodedOperation584(byte i) {
+    public static void method584(byte i) {
         aHa1098 = null;
         int i_7_ = -19 % ((i - 59) / 55);
     }
@@ -198,7 +198,7 @@ final class NodeCache {
         if (i >= -75) purgeSoftReferences(-97);
     }
 
-    final Object decodedOperation588(int i) {
+    final Object method588(int i) {
         anInt1087++;
         CacheNode class348_sub42_sub8 = (CacheNode) table.first(0);
         if (i != -5052) getCapacity(77);
@@ -215,12 +215,12 @@ final class NodeCache {
         return null;
     }
 
-    static final boolean decodedOperation589(Component274 class42, int i) {
+    static final boolean method589(Component274 class42, int i) {
         anInt1103++;
         if (class42 == null) return false;
         if (i != -4) return false;
         if (!class42.aBoolean574) return false;
-        if (!class42.decodedOperation373(DisplayModeManagerContainer229.anInterface17_1244, i ^ ~0x2d)) return false;
+        if (!class42.method373(DisplayModeManagerContainer229.anInterface17_1244, i ^ ~0x2d)) return false;
         if (HeapDumpHelper.aClass356_4934.get(class42.anInt581, i ^ 0x1774) != null) return false;
         return Component140.aClass356_10442.get(class42.anInt596, i + -6004) == null;
     }

@@ -24,7 +24,7 @@ final class ShaderProgramSub9
     static int anInt6318;
     static int anInt6319;
 
-    static final boolean decodedOperation2174(byte i, int i_0_, int i_1_) {
+    static final boolean method2174(byte i, int i_0_, int i_1_) {
         anInt6313++;
         int i_2_ = 52 % ((i - 68) / 41);
         return false;
@@ -46,7 +46,7 @@ final class ShaderProgramSub9
         if (i < -75) this.aHa_Sub2_3684.glTexEnvi(8448, (byte) -75, 8448);
     }
 
-    static final int decodedOperation2175(int i, byte i_3_, int i_4_) {
+    static final int method2175(int i, byte i_3_, int i_4_) {
         anInt6319++;
         if (i_3_ >= -14) return 64;
         if (i_4_ == 1 || i_4_ == 3) return NodeSub20.anIntArray6830[i & 0x3];
@@ -202,7 +202,7 @@ final class ShaderProgramSub9
         }
     }
 
-    static final void decodedOperation2177(int i, int i_22_, DisplayModeManagerContainer207 class348_sub49_sub2) {
+    static final void method2177(int i, int i_22_, DisplayModeManagerContainer207 class348_sub49_sub2) {
         anInt6311++;
         boolean bool = (class348_sub49_sub2.readBits((byte) -24, i) == 1);
         if (bool) DisplayModeManagerContainer220.anIntArray279[MatrixSub3.anInt5768++] = i_22_;
@@ -215,12 +215,12 @@ final class ShaderProgramSub9
                 Component135 class359 = (NpcDefinition.aClass359Array6802[i_22_] = new Component135());
                 class359.anInt4420 = ((Component330.regionTileY - -(player.anIntArray10317[0]) >> 6) + ((player.anIntArray10320[0] + NodeBaseSub2.regionTileX) >> 6 << 14) + ((player.plane) << 28));
                 if (player.anInt10524 != -1) class359.anInt4423 = player.anInt10524;
-                else class359.anInt4423 = player.aClass264_10217.decodedOperation2019((byte) -91);
+                else class359.anInt4423 = player.aClass264_10217.method2019((byte) -91);
                 class359.aBoolean4426 = player.aBoolean10554;
                 class359.anInt4425 = (player.anInt10275);
-                if (player.anInt10553 > 0) DisplayModeManagerContainer61.decodedOperation2221(player, -28482);
+                if (player.anInt10553 > 0) DisplayModeManagerContainer61.method2221(player, -28482);
                 InterfaceRenderer.players[i_22_] = null;
-                if (class348_sub49_sub2.readBits((byte) -24, 1) != 0) DisplayModeManagerContainer159.decodedOperation1538(i_22_, (byte) 105, class348_sub49_sub2);
+                if (class348_sub49_sub2.readBits((byte) -24, 1) != 0) DisplayModeManagerContainer159.method1538(i_22_, (byte) 105, class348_sub49_sub2);
             }
         } else if (i_23_ == 1) {
             int i_24_ = class348_sub49_sub2.readBits((byte) -24, 3);
@@ -250,7 +250,7 @@ final class ShaderProgramSub9
                 player.anInt10531 = i_26_;
                 player.aBoolean10539 = true;
                 player.anInt10549 = i_25_;
-            } else player.decodedOperation2455(i_26_, -26443, (Component293.aByteArray3300[i_22_]), i_25_);
+            } else player.method2455(i_26_, -26443, (Component293.aByteArray3300[i_22_]), i_25_);
         } else if (i_23_ == 2) {
             int i_27_ = class348_sub49_sub2.readBits((byte) -24, 4);
             int i_28_ = (player.anIntArray10320[0]);
@@ -302,7 +302,7 @@ final class ShaderProgramSub9
                 player.aBoolean10539 = true;
                 player.anInt10549 = i_28_;
                 player.anInt10531 = i_29_;
-            } else player.decodedOperation2455(i_29_, -26443, (Component293.aByteArray3300[i_22_]), i_28_);
+            } else player.method2455(i_29_, -26443, (Component293.aByteArray3300[i_22_]), i_28_);
         } else {
             int i_30_ = class348_sub49_sub2.readBits((byte) -24, 1);
             if (i_30_ == 0) {
@@ -318,9 +318,9 @@ final class ShaderProgramSub9
                     player.anInt10531 = i_36_;
                     player.anInt10549 = i_35_;
                     player.aBoolean10539 = true;
-                } else player.decodedOperation2455(i_36_, -26443, (Component293.aByteArray3300[i_22_]), i_35_);
+                } else player.method2455(i_36_, -26443, (Component293.aByteArray3300[i_22_]), i_35_);
                 player.plane = player.aByte6376 = (byte) (0x3 & (player.plane) + i_32_);
-                if (NpcComposition.decodedOperation802(i_36_, i_35_, true)) player.aByte6376++;
+                if (NpcComposition.method802(i_36_, i_35_, true)) player.aByte6376++;
                 if (StringDefinition.anInt9591 == i_22_) {
                     if ((player.plane) != Component117.anInt4372) NodeSub16Sub2.aBoolean8870 = true;
                     Component117.anInt4372 = (player.plane);
@@ -336,9 +336,9 @@ final class ShaderProgramSub9
                     player.aBoolean10539 = true;
                     player.anInt10531 = i_42_;
                     player.anInt10549 = i_41_;
-                } else player.decodedOperation2455(i_42_, -26443, (Component293.aByteArray3300[i_22_]), i_41_);
+                } else player.method2455(i_42_, -26443, (Component293.aByteArray3300[i_22_]), i_41_);
                 player.plane = player.aByte6376 = (byte) ((player.plane) + i_38_ & 0x3);
-                if (NpcComposition.decodedOperation802(i_42_, i_41_, true)) player.aByte6376++;
+                if (NpcComposition.method802(i_42_, i_41_, true)) player.aByte6376++;
                 if (StringDefinition.anInt9591 == i_22_) Component117.anInt4372 = (player.plane);
             }
         }

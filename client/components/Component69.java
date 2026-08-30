@@ -16,16 +16,16 @@ final class Component69
     static int anInt3662;
     String aString3663;
 
-    public static void decodedOperation2113(byte i) {
+    public static void method2113(byte i) {
         anIntArray3659 = null;
         anIntArray3661 = null;
-        if (i != 74) decodedOperation2113((byte) -2);
+        if (i != 74) method2113((byte) -2);
         aFloatArray3658 = null;
     }
 
-    static final boolean decodedOperation2114(int i, boolean bool) {
+    static final boolean method2114(int i, boolean bool) {
         anInt3656++;
-        if (bool != true) decodedOperation2114(90, true);
+        if (bool != true) method2114(90, true);
         return i == 3 || i == 5 || i == 6;
     }
 

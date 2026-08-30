@@ -12,7 +12,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
     private final int[] anIntArray6501;
     private final byte[][] aByteArrayArray6502;
 
-    private final void decodedOperation2590(byte[] is, int[] is_0_, int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
+    private final void method2590(byte[] is, int[] is_0_, int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
         int i_7_ = -(i_3_ >> 2);
         i_3_ = -(i_3_ & 0x3);
         for (int i_8_ = -i_4_; i_8_ < 0; i_8_++) {
@@ -61,7 +61,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
         }
     }
 
-    private final void decodedOperation2592(byte[] is, int[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, Shader var_aa, int i_34_, int i_35_) {
+    private final void method2592(byte[] is, int[] is_24_, int i, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_, Shader var_aa, int i_34_, int i_35_) {
         ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is_36_ = var_aa_Sub3.anIntArray5201;
         int[] is_37_ = var_aa_Sub3.anIntArray5202;
@@ -161,7 +161,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
                 i_58_ += i_63_;
             }
             if (i_54_ > 0 && i_55_ > 0) {
-                if (bool) decodedOperation2592(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, i_51_, i_60_, i_57_, i_54_, i_55_, i_58_, i_59_, i, i_50_, anIntArray6500[c], var_aa, i_52_, i_53_);
+                if (bool) method2592(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, i_51_, i_60_, i_57_, i_54_, i_55_, i_58_, i_59_, i, i_50_, anIntArray6500[c], var_aa, i_52_, i_53_);
                 else method2593(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, anIntArray6496, i_51_, i_60_, i_57_, i_54_, i_55_, i_58_, i_59_, i, i_50_, anIntArray6500[c], var_aa, i_52_, i_53_);
             }
         }
@@ -201,7 +201,7 @@ final class SoftwareBitmapFont2 extends BitmapFont {
             i_70_ += i_75_;
         }
         if (i_66_ > 0 && i_67_ > 0) {
-            if (bool) decodedOperation2590(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, i_65_, i_72_, i_69_, i_66_, i_67_, i_70_, i_71_);
+            if (bool) method2590(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, i_65_, i_72_, i_69_, i_66_, i_67_, i_70_, i_71_);
             else method2591(aByteArrayArray6502[c], aHa_Sub1_6499.anIntArray7483, anIntArray6496, i_72_, i_69_, i_66_, i_67_, i_70_, i_71_);
         }
     }
