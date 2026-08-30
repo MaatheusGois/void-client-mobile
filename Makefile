@@ -18,6 +18,7 @@ TVOS_DEVICE ?= Apple TV
 
 .PHONY: help \
 	desktop desktop-jar desktop-run \
+	desktop-log desktop-clear-log \
 	android android-install android-build android-reverse android-run \
 	android-stop android-log android-clean android-server \
 	android-apk \
@@ -33,6 +34,8 @@ help:
 	@echo "  make desktop          :client:run"
 	@echo "  make desktop-jar      :client:shadowJar"
 	@echo "  make desktop-run      jar with --address (SERVER_IP or 127.0.0.1)"
+	@echo "  make desktop-log      jar + DeobProbe NDJSON (VOID_DEOB_LOG=…)"
+	@echo "  make desktop-clear-log  rm the DeobProbe log"
 	@echo "android"
 	@echo "  make android          installDebug + reverse + launch"
 	@echo "  make android-install  :app:installDebug"
@@ -78,6 +81,19 @@ desktop-run: desktop-jar
 	@pkill -f 'void-client-1\.2\.0\.jar' 2>/dev/null || true
 	@sleep 1
 	"$(JAVA_17)/bin/java" -jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR)
+
+# Run with the DeobProbe NDJSON harness enabled. Logs go to $(DEOB_LOG)
+# (default deob-log.ndjson). Use a hypothesis id and grep the log later:
+#   VOID_DEOB_LOG=deob-H1.ndjson make desktop-log
+DEOB_LOG ?= deob-log.ndjson
+
+desktop-log: desktop-jar
+	@pkill -f 'void-client-1\.2\.0\.jar' 2>/dev/null || true
+	@sleep 1
+	"$(JAVA_17)/bin/java" -Dvoid.deob.log="$(DEOB_LOG)" -jar "$(DESKTOP_JAR)" --address $(DESKTOP_ADDR)
+
+desktop-clear-log:
+	rm -f "$(DEOB_LOG)"
 
 # ── android ──────────────────────────────────────────────────────────────────
 

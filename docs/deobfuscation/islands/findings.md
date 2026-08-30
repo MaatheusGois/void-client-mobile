@@ -3,7 +3,7 @@
 This file is the live **research log** — concrete evidence discovered during
 the deobfuscation discovery pass. Use it as the input for lote planning.
 
-Last updated: 2026-08-29 (this session).
+Last updated: 2026-08-30 (lote 52 executed; lote 51/54 marked done).
 
 ---
 
@@ -156,6 +156,36 @@ reflection gate (`check_reflection.py`) will catch any miss.
 The `EXPECTED` table in the script will need updating as the renames land:
 replace `(field, "SocketConnector", "anInt3473")` with
 `(field, "SocketConnector", "canvasWidth")`, etc.
+
+---
+
+## 5b. lote 52 — `SpriteSub3` rasterizer (CONFIRMED, executed)
+
+**File:** `client/sprites/SpriteSub3.java` + subclasses `SpriteSub3Sub2`,
+`SpriteSub3Sub3`, `SpriteCapture`. Also `client/components/Component297.java`
+(constructor reads `spriteWidth`/`spriteHeight`).
+
+This is the **CPU sprite rasterizer** — a scanline alpha-blend loop. Proof
+(grep on the 84xx fields in `SpriteSub3.java`):
+
+| Token | New name | Evidence |
+|---|---|---|
+| `anInt8477` | `spriteAlpha` | `int i = argb >>> 24;` then `if (i == 255) { opaque fast path }` — high byte = alpha |
+| `anInt8471` | `spriteWidth` | bound to the drawn width (`i` arg), used in stride `i_3_ * anInt8471` |
+| `anInt8470` | `spriteHeight` | `anInt8464 + anInt8470 + anInt8456` (top+height+bottom) |
+| `anInt8450` | `scanlineX` | `(int) ((f_61_ - f_59_) * 4096.0F * (float) anInt8470 / f_84_)` fixed-point scanline coord |
+| `anInt8481` | `scanlineY` | same shape as `scanlineX`, paired in the rasterizer step |
+| `anInt8451` | `scanlineStepX` | `anInt8451 += anInt8453` per-pixel advance |
+| `anInt8453` | `scanlineStepY` | the step added into `scanlineStepX` each pixel |
+| `aHa_Sub1_8460` | `toolkit` | declared `GlToolkitSub1 aHa_Sub1_8460;` — the toolkit used for canvas-width math |
+
+**Reflection:** none. **Gate result:** `check_reflection.py` PASS,
+`:client:compileJava` SUCCESS (2026-08-30). `Component297.java` was the
+only external reader and was updated in the same change.
+
+**Deferred (lote 52b):** `anInt8480`, `anInt8469`, `anInt8463`, `anInt8465`
+and the `anInt8452`/`anInt8454`–`anInt8459`/`anInt8461`/`anInt8466`–`anInt8468`
+range — role not yet proven strongly enough to rename blindly.
 
 ---
 

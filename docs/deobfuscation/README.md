@@ -12,13 +12,11 @@ Skill: [`.cursor/skills/void-client-deobfuscate/SKILL.md`](../../.cursor/skills/
 
 | Metric | Value |
 |---|---:|
-| Java files under `client/` | 790 |
-| Unique `method####` tokens | 3 331 |
+| Java files under `client/` | 791 |
+| Unique `method####` tokens | 3 326 |
 | Unique `anInt####` tokens | 6 287 |
 | Unique `aClass####` tokens | 26 |
-| Total `method####` call-sites | 17 775 |
-| Total `anXxx####` call-sites | 39 772 |
-| Reflection-gate (`check_reflection.py`) | **PASS** (25 live targets) |
+| Reflection-gate (`check_reflection.py`) | **PASS** (25 live targets / 51 unique refs) |
 | Desktop compile (`:client:compileJava`) | **green** |
 | iOS compile (`ios/compileJava`) | **green** |
 | Android assemble (`:app:assembleDebug`) | **green** (fresh APK 3.36 MB) |

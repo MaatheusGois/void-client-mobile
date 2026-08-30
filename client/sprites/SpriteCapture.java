@@ -10,18 +10,18 @@ final class SpriteCapture extends SpriteSub3 {
     int[] anIntArray9933;
 
     final void method994(int i, int i_0_) {
-        int[] is = this.aHa_Sub1_8460.anIntArray7483;
-        if (SpriteSub3.anInt8481 == 0) {
-            if (SpriteSub3.anInt8450 == 0) {
+        int[] is = this.toolkit.anIntArray7483;
+        if (SpriteSub3.scanlineY == 0) {
+            if (SpriteSub3.scanlineX == 0) {
                 int i_1_ = SpriteSub3.anInt8468;
                 while (i_1_ < 0) {
-                    int i_2_ = SpriteSub3.anInt8451;
+                    int i_2_ = SpriteSub3.scanlineStepX;
                     int i_3_ = SpriteSub3.anInt8458;
                     int i_4_ = SpriteSub3.anInt8467;
                     int i_5_ = SpriteSub3.anInt8478;
-                    if (i_3_ >= 0 && i_4_ >= 0 && i_3_ - (this.anInt8471 << 12) < 0 && (i_4_ - (this.anInt8470 << 12) < 0)) {
+                    if (i_3_ >= 0 && i_4_ >= 0 && i_3_ - (this.spriteWidth << 12) < 0 && (i_4_ - (this.spriteHeight << 12) < 0)) {
                         for (/**/; i_5_ < 0; i_5_++) {
-                            int i_6_ = (((i_4_ >> 12) * this.anInt8471) + (i_3_ >> 12));
+                            int i_6_ = (((i_4_ >> 12) * this.spriteWidth) + (i_3_ >> 12));
                             int i_7_ = i_2_++;
                             int[] is_8_ = is;
                             int i_9_ = i;
@@ -43,8 +43,8 @@ final class SpriteCapture extends SpriteSub3 {
                                     is_8_[i_7_] = i_17_ - i_19_ | i_19_ - (i_19_ >>> 8);
                                 } else if (i_9_ == 2) {
                                     int i_20_ = (this.anIntArray9933[i_6_]);
-                                    int i_21_ = (((i_20_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_22_ = (((i_20_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_21_ = (((i_20_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_22_ = (((i_20_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_8_[i_7_] = (((i_21_ | i_22_) >>> 8) + SpriteSub3.anInt8474);
                                 } else throw new IllegalArgumentException();
                             } else if (i_10_ == 1) {
@@ -59,7 +59,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_26_ = 256 - i_25_;
                                             int i_27_ = is_8_[i_7_];
                                             is_8_[i_7_] = ((((i_24_ & 0xff00ff) * i_25_ + ((i_27_ & 0xff00ff) * i_26_)) & ~0xff00ff) + (((i_24_ & 0xff00) * i_25_ + ((i_27_ & 0xff00) * i_26_)) & 0xff0000)) >> 8;
-                                        } else if (SpriteSub3.anInt8477 == 255) {
+                                        } else if (SpriteSub3.spriteAlpha == 255) {
                                             int i_32_ = (((i_24_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                             int i_33_ = (((i_24_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                             int i_34_ = (((i_24_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -70,7 +70,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_30_ = (((i_24_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                             i_24_ = ((i_28_ | i_29_ | i_30_) >>> 8);
                                             int i_31_ = is_8_[i_7_];
-                                            is_8_[i_7_] = (((((i_24_ & 0xff00ff) * (SpriteSub3.anInt8477)) + ((i_31_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_24_ & 0xff00) * (SpriteSub3.anInt8477)) + ((i_31_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                            is_8_[i_7_] = (((((i_24_ & 0xff00ff) * (SpriteSub3.spriteAlpha)) + ((i_31_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_24_ & 0xff00) * (SpriteSub3.spriteAlpha)) + ((i_31_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                         }
                                     }
                                 } else if (i_9_ == 3) {
@@ -80,17 +80,17 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_38_ = ((i_35_ & 0xff00ff) + (i_36_ & 0xff00ff));
                                     int i_39_ = ((i_38_ & 0x1000100) + (i_37_ - i_38_ & 0x10000));
                                     i_39_ = i_37_ - i_39_ | i_39_ - (i_39_ >>> 8);
-                                    if (i_35_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                    if (i_35_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                         i_35_ = i_39_;
                                         i_39_ = is_8_[i_7_];
-                                        i_39_ = (((((i_35_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_39_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_35_ & 0xff00) * SpriteSub3.anInt8477) + ((i_39_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        i_39_ = (((((i_35_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_39_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_35_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_39_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                     is_8_[i_7_] = i_39_;
                                 } else if (i_9_ == 2) {
                                     int i_40_ = (this.anIntArray9933[i_6_]);
                                     if (i_40_ != 0) {
-                                        int i_41_ = (((i_40_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_42_ = (((i_40_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_41_ = (((i_40_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_42_ = (((i_40_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         is_8_[i_7_++] = (((i_41_ | i_42_) >>> 8) + SpriteSub3.anInt8474);
                                     }
                                 } else throw new IllegalArgumentException();
@@ -132,8 +132,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 } else if (i_9_ == 2) {
                                     int i_59_ = (this.anIntArray9933[i_6_]);
                                     if (i_59_ != 0) {
-                                        int i_60_ = (((i_59_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_61_ = (((i_59_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_60_ = (((i_59_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_61_ = (((i_59_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         i_59_ = (((i_60_ | i_61_) >>> 8) + SpriteSub3.anInt8474);
                                         int i_62_ = is_8_[i_7_];
                                         int i_63_ = i_59_ + i_62_;
@@ -146,26 +146,26 @@ final class SpriteCapture extends SpriteSub3 {
                         }
                     }
                     i_1_++;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
-            } else if (SpriteSub3.anInt8450 < 0) {
+            } else if (SpriteSub3.scanlineX < 0) {
                 int i_65_ = SpriteSub3.anInt8468;
                 while (i_65_ < 0) {
-                    int i_66_ = SpriteSub3.anInt8451;
+                    int i_66_ = SpriteSub3.scanlineStepX;
                     int i_67_ = SpriteSub3.anInt8458;
                     int i_68_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_69_ = SpriteSub3.anInt8478;
-                    if (i_67_ >= 0 && i_67_ - (this.anInt8471 << 12) < 0) {
+                    if (i_67_ >= 0 && i_67_ - (this.spriteWidth << 12) < 0) {
                         int i_70_;
-                        if ((i_70_ = i_68_ - (this.anInt8470 << 12)) >= 0) {
-                            i_70_ = ((SpriteSub3.anInt8450 - i_70_) / SpriteSub3.anInt8450);
+                        if ((i_70_ = i_68_ - (this.spriteHeight << 12)) >= 0) {
+                            i_70_ = ((SpriteSub3.scanlineX - i_70_) / SpriteSub3.scanlineX);
                             i_69_ += i_70_;
-                            i_68_ += SpriteSub3.anInt8450 * i_70_;
+                            i_68_ += SpriteSub3.scanlineX * i_70_;
                             i_66_ += i_70_;
                         }
-                        if ((i_70_ = ((i_68_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_69_) i_69_ = i_70_;
+                        if ((i_70_ = ((i_68_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_69_) i_69_ = i_70_;
                         for (/**/; i_69_ < 0; i_69_++) {
-                            int i_71_ = (((i_68_ >> 12) * this.anInt8471) + (i_67_ >> 12));
+                            int i_71_ = (((i_68_ >> 12) * this.spriteWidth) + (i_67_ >> 12));
                             int i_72_ = i_66_++;
                             int[] is_73_ = is;
                             int i_74_ = i;
@@ -187,8 +187,8 @@ final class SpriteCapture extends SpriteSub3 {
                                     is_73_[i_72_] = i_82_ - i_84_ | i_84_ - (i_84_ >>> 8);
                                 } else if (i_74_ == 2) {
                                     int i_85_ = (this.anIntArray9933[i_71_]);
-                                    int i_86_ = (((i_85_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_87_ = (((i_85_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_86_ = (((i_85_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_87_ = (((i_85_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_73_[i_72_] = (((i_86_ | i_87_) >>> 8) + SpriteSub3.anInt8474);
                                 } else throw new IllegalArgumentException();
                             } else if (i_75_ == 1) {
@@ -203,7 +203,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_91_ = 256 - i_90_;
                                             int i_92_ = is_73_[i_72_];
                                             is_73_[i_72_] = ((((i_89_ & 0xff00ff) * i_90_ + ((i_92_ & 0xff00ff) * i_91_)) & ~0xff00ff) + (((i_89_ & 0xff00) * i_90_ + ((i_92_ & 0xff00) * i_91_)) & 0xff0000)) >> 8;
-                                        } else if (SpriteSub3.anInt8477 == 255) {
+                                        } else if (SpriteSub3.spriteAlpha == 255) {
                                             int i_97_ = (((i_89_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                             int i_98_ = (((i_89_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                             int i_99_ = (((i_89_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -214,7 +214,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_95_ = (((i_89_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                             i_89_ = ((i_93_ | i_94_ | i_95_) >>> 8);
                                             int i_96_ = is_73_[i_72_];
-                                            is_73_[i_72_] = (((((i_89_ & 0xff00ff) * (SpriteSub3.anInt8477)) + ((i_96_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_89_ & 0xff00) * (SpriteSub3.anInt8477)) + ((i_96_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                            is_73_[i_72_] = (((((i_89_ & 0xff00ff) * (SpriteSub3.spriteAlpha)) + ((i_96_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_89_ & 0xff00) * (SpriteSub3.spriteAlpha)) + ((i_96_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                         }
                                     }
                                 } else if (i_74_ == 3) {
@@ -224,17 +224,17 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_103_ = ((i_100_ & 0xff00ff) + (i_101_ & 0xff00ff));
                                     int i_104_ = ((i_103_ & 0x1000100) + (i_102_ - i_103_ & 0x10000));
                                     i_104_ = i_102_ - i_104_ | i_104_ - (i_104_ >>> 8);
-                                    if (i_100_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                    if (i_100_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                         i_100_ = i_104_;
                                         i_104_ = is_73_[i_72_];
-                                        i_104_ = (((((i_100_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_104_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_100_ & 0xff00) * SpriteSub3.anInt8477) + ((i_104_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        i_104_ = (((((i_100_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_104_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_100_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_104_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                     is_73_[i_72_] = i_104_;
                                 } else if (i_74_ == 2) {
                                     int i_105_ = (this.anIntArray9933[i_71_]);
                                     if (i_105_ != 0) {
-                                        int i_106_ = (((i_105_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_107_ = (((i_105_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_106_ = (((i_105_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_107_ = (((i_105_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         is_73_[i_72_++] = (((i_106_ | i_107_) >>> 8) + SpriteSub3.anInt8474);
                                     }
                                 } else throw new IllegalArgumentException();
@@ -276,8 +276,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 } else if (i_74_ == 2) {
                                     int i_124_ = (this.anIntArray9933[i_71_]);
                                     if (i_124_ != 0) {
-                                        int i_125_ = (((i_124_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_126_ = (((i_124_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_125_ = (((i_124_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_126_ = (((i_124_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         i_124_ = (((i_125_ | i_126_) >>> 8) + SpriteSub3.anInt8474);
                                         int i_127_ = is_73_[i_72_];
                                         int i_128_ = i_124_ + i_127_;
@@ -287,31 +287,31 @@ final class SpriteCapture extends SpriteSub3 {
                                     }
                                 }
                             } else throw new IllegalArgumentException();
-                            i_68_ += SpriteSub3.anInt8450;
+                            i_68_ += SpriteSub3.scanlineX;
                         }
                     }
                     i_65_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             } else {
                 int i_130_ = SpriteSub3.anInt8468;
                 while (i_130_ < 0) {
-                    int i_131_ = SpriteSub3.anInt8451;
+                    int i_131_ = SpriteSub3.scanlineStepX;
                     int i_132_ = SpriteSub3.anInt8458;
                     int i_133_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_134_ = SpriteSub3.anInt8478;
-                    if (i_132_ >= 0 && (i_132_ - (this.anInt8471 << 12) < 0)) {
+                    if (i_132_ >= 0 && (i_132_ - (this.spriteWidth << 12) < 0)) {
                         if (i_133_ < 0) {
-                            int i_135_ = ((SpriteSub3.anInt8450 - 1 - i_133_) / SpriteSub3.anInt8450);
+                            int i_135_ = ((SpriteSub3.scanlineX - 1 - i_133_) / SpriteSub3.scanlineX);
                             i_134_ += i_135_;
-                            i_133_ += SpriteSub3.anInt8450 * i_135_;
+                            i_133_ += SpriteSub3.scanlineX * i_135_;
                             i_131_ += i_135_;
                         }
                         int i_136_;
-                        if ((i_136_ = ((1 + i_133_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_134_) i_134_ = i_136_;
+                        if ((i_136_ = ((1 + i_133_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_134_) i_134_ = i_136_;
                         for (/**/; i_134_ < 0; i_134_++) {
-                            int i_137_ = (((i_133_ >> 12) * this.anInt8471) + (i_132_ >> 12));
+                            int i_137_ = (((i_133_ >> 12) * this.spriteWidth) + (i_132_ >> 12));
                             int i_138_ = i_131_++;
                             int[] is_139_ = is;
                             int i_140_ = i;
@@ -333,8 +333,8 @@ final class SpriteCapture extends SpriteSub3 {
                                     is_139_[i_138_] = i_148_ - i_150_ | i_150_ - (i_150_ >>> 8);
                                 } else if (i_140_ == 2) {
                                     int i_151_ = (this.anIntArray9933[i_137_]);
-                                    int i_152_ = (((i_151_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_153_ = (((i_151_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_152_ = (((i_151_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_153_ = (((i_151_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_139_[i_138_] = (((i_152_ | i_153_) >>> 8) + SpriteSub3.anInt8474);
                                 } else throw new IllegalArgumentException();
                             } else if (i_141_ == 1) {
@@ -349,7 +349,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_157_ = 256 - i_156_;
                                             int i_158_ = is_139_[i_138_];
                                             is_139_[i_138_] = (((((i_155_ & 0xff00ff) * i_156_) + ((i_158_ & 0xff00ff) * i_157_)) & ~0xff00ff) + ((((i_155_ & 0xff00) * i_156_) + ((i_158_ & 0xff00) * i_157_)) & 0xff0000)) >> 8;
-                                        } else if (SpriteSub3.anInt8477 == 255) {
+                                        } else if (SpriteSub3.spriteAlpha == 255) {
                                             int i_163_ = (((i_155_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                             int i_164_ = (((i_155_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                             int i_165_ = (((i_155_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -360,7 +360,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_161_ = (((i_155_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                             i_155_ = (i_159_ | i_160_ | i_161_) >>> 8;
                                             int i_162_ = is_139_[i_138_];
-                                            is_139_[i_138_] = (((((i_155_ & 0xff00ff) * (SpriteSub3.anInt8477)) + ((i_162_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_155_ & 0xff00) * (SpriteSub3.anInt8477)) + ((i_162_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                            is_139_[i_138_] = (((((i_155_ & 0xff00ff) * (SpriteSub3.spriteAlpha)) + ((i_162_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_155_ & 0xff00) * (SpriteSub3.spriteAlpha)) + ((i_162_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                         }
                                     }
                                 } else if (i_140_ == 3) {
@@ -370,17 +370,17 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_169_ = ((i_166_ & 0xff00ff) + (i_167_ & 0xff00ff));
                                     int i_170_ = ((i_169_ & 0x1000100) + (i_168_ - i_169_ & 0x10000));
                                     i_170_ = i_168_ - i_170_ | i_170_ - (i_170_ >>> 8);
-                                    if (i_166_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                    if (i_166_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                         i_166_ = i_170_;
                                         i_170_ = is_139_[i_138_];
-                                        i_170_ = (((((i_166_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_170_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_166_ & 0xff00) * SpriteSub3.anInt8477) + ((i_170_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        i_170_ = (((((i_166_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_170_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_166_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_170_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                     is_139_[i_138_] = i_170_;
                                 } else if (i_140_ == 2) {
                                     int i_171_ = (this.anIntArray9933[i_137_]);
                                     if (i_171_ != 0) {
-                                        int i_172_ = (((i_171_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_173_ = (((i_171_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_172_ = (((i_171_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_173_ = (((i_171_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         is_139_[i_138_++] = (((i_172_ | i_173_) >>> 8) + SpriteSub3.anInt8474);
                                     }
                                 } else throw new IllegalArgumentException();
@@ -422,8 +422,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 } else if (i_140_ == 2) {
                                     int i_190_ = (this.anIntArray9933[i_137_]);
                                     if (i_190_ != 0) {
-                                        int i_191_ = (((i_190_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_192_ = (((i_190_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_191_ = (((i_190_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_192_ = (((i_190_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         i_190_ = (((i_191_ | i_192_) >>> 8) + SpriteSub3.anInt8474);
                                         int i_193_ = is_139_[i_138_];
                                         int i_194_ = i_190_ + i_193_;
@@ -433,33 +433,33 @@ final class SpriteCapture extends SpriteSub3 {
                                     }
                                 }
                             } else throw new IllegalArgumentException();
-                            i_133_ += SpriteSub3.anInt8450;
+                            i_133_ += SpriteSub3.scanlineX;
                         }
                     }
                     i_130_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             }
-        } else if (SpriteSub3.anInt8481 < 0) {
-            if (SpriteSub3.anInt8450 == 0) {
+        } else if (SpriteSub3.scanlineY < 0) {
+            if (SpriteSub3.scanlineX == 0) {
                 int i_196_ = SpriteSub3.anInt8468;
                 while (i_196_ < 0) {
-                    int i_197_ = SpriteSub3.anInt8451;
+                    int i_197_ = SpriteSub3.scanlineStepX;
                     int i_198_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_199_ = SpriteSub3.anInt8467;
                     int i_200_ = SpriteSub3.anInt8478;
-                    if (i_199_ >= 0 && (i_199_ - (this.anInt8470 << 12) < 0)) {
+                    if (i_199_ >= 0 && (i_199_ - (this.spriteHeight << 12) < 0)) {
                         int i_201_;
-                        if ((i_201_ = i_198_ - (this.anInt8471 << 12)) >= 0) {
-                            i_201_ = ((SpriteSub3.anInt8481 - i_201_) / SpriteSub3.anInt8481);
+                        if ((i_201_ = i_198_ - (this.spriteWidth << 12)) >= 0) {
+                            i_201_ = ((SpriteSub3.scanlineY - i_201_) / SpriteSub3.scanlineY);
                             i_200_ += i_201_;
-                            i_198_ += SpriteSub3.anInt8481 * i_201_;
+                            i_198_ += SpriteSub3.scanlineY * i_201_;
                             i_197_ += i_201_;
                         }
-                        if ((i_201_ = ((i_198_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_200_) i_200_ = i_201_;
+                        if ((i_201_ = ((i_198_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_200_) i_200_ = i_201_;
                         for (/**/; i_200_ < 0; i_200_++) {
-                            int i_202_ = (((i_199_ >> 12) * this.anInt8471) + (i_198_ >> 12));
+                            int i_202_ = (((i_199_ >> 12) * this.spriteWidth) + (i_198_ >> 12));
                             int i_203_ = i_197_++;
                             int[] is_204_ = is;
                             int i_205_ = i;
@@ -481,8 +481,8 @@ final class SpriteCapture extends SpriteSub3 {
                                     is_204_[i_203_] = i_213_ - i_215_ | i_215_ - (i_215_ >>> 8);
                                 } else if (i_205_ == 2) {
                                     int i_216_ = (this.anIntArray9933[i_202_]);
-                                    int i_217_ = (((i_216_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_218_ = (((i_216_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_217_ = (((i_216_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_218_ = (((i_216_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_204_[i_203_] = (((i_217_ | i_218_) >>> 8) + SpriteSub3.anInt8474);
                                 } else throw new IllegalArgumentException();
                             } else if (i_206_ == 1) {
@@ -497,7 +497,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_222_ = 256 - i_221_;
                                             int i_223_ = is_204_[i_203_];
                                             is_204_[i_203_] = (((((i_220_ & 0xff00ff) * i_221_) + ((i_223_ & 0xff00ff) * i_222_)) & ~0xff00ff) + ((((i_220_ & 0xff00) * i_221_) + ((i_223_ & 0xff00) * i_222_)) & 0xff0000)) >> 8;
-                                        } else if (SpriteSub3.anInt8477 == 255) {
+                                        } else if (SpriteSub3.spriteAlpha == 255) {
                                             int i_228_ = (((i_220_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                             int i_229_ = (((i_220_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                             int i_230_ = (((i_220_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -508,7 +508,7 @@ final class SpriteCapture extends SpriteSub3 {
                                             int i_226_ = (((i_220_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                             i_220_ = (i_224_ | i_225_ | i_226_) >>> 8;
                                             int i_227_ = is_204_[i_203_];
-                                            is_204_[i_203_] = (((((i_220_ & 0xff00ff) * (SpriteSub3.anInt8477)) + ((i_227_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_220_ & 0xff00) * (SpriteSub3.anInt8477)) + ((i_227_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                            is_204_[i_203_] = (((((i_220_ & 0xff00ff) * (SpriteSub3.spriteAlpha)) + ((i_227_ & 0xff00ff) * (SpriteSub3.anInt8472))) & ~0xff00ff) + ((((i_220_ & 0xff00) * (SpriteSub3.spriteAlpha)) + ((i_227_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                         }
                                     }
                                 } else if (i_205_ == 3) {
@@ -518,17 +518,17 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_234_ = ((i_231_ & 0xff00ff) + (i_232_ & 0xff00ff));
                                     int i_235_ = ((i_234_ & 0x1000100) + (i_233_ - i_234_ & 0x10000));
                                     i_235_ = i_233_ - i_235_ | i_235_ - (i_235_ >>> 8);
-                                    if (i_231_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                    if (i_231_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                         i_231_ = i_235_;
                                         i_235_ = is_204_[i_203_];
-                                        i_235_ = (((((i_231_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_235_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_231_ & 0xff00) * SpriteSub3.anInt8477) + ((i_235_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        i_235_ = (((((i_231_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_235_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_231_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_235_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                     is_204_[i_203_] = i_235_;
                                 } else if (i_205_ == 2) {
                                     int i_236_ = (this.anIntArray9933[i_202_]);
                                     if (i_236_ != 0) {
-                                        int i_237_ = (((i_236_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_238_ = (((i_236_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_237_ = (((i_236_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_238_ = (((i_236_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         is_204_[i_203_++] = (((i_237_ | i_238_) >>> 8) + SpriteSub3.anInt8474);
                                     }
                                 } else throw new IllegalArgumentException();
@@ -570,8 +570,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 } else if (i_205_ == 2) {
                                     int i_255_ = (this.anIntArray9933[i_202_]);
                                     if (i_255_ != 0) {
-                                        int i_256_ = (((i_255_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                        int i_257_ = (((i_255_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                        int i_256_ = (((i_255_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                        int i_257_ = (((i_255_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                         i_255_ = (((i_256_ | i_257_) >>> 8) + SpriteSub3.anInt8474);
                                         int i_258_ = is_204_[i_203_];
                                         int i_259_ = i_255_ + i_258_;
@@ -581,39 +581,39 @@ final class SpriteCapture extends SpriteSub3 {
                                     }
                                 }
                             } else throw new IllegalArgumentException();
-                            i_198_ += SpriteSub3.anInt8481;
+                            i_198_ += SpriteSub3.scanlineY;
                         }
                     }
                     i_196_++;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
-            } else if (SpriteSub3.anInt8450 < 0) {
+            } else if (SpriteSub3.scanlineX < 0) {
                 int i_261_ = SpriteSub3.anInt8468;
                 while (i_261_ < 0) {
-                    int i_262_ = SpriteSub3.anInt8451;
+                    int i_262_ = SpriteSub3.scanlineStepX;
                     int i_263_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_264_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_265_ = SpriteSub3.anInt8478;
                     int i_266_;
-                    if ((i_266_ = i_263_ - (this.anInt8471 << 12)) >= 0) {
-                        i_266_ = ((SpriteSub3.anInt8481 - i_266_) / SpriteSub3.anInt8481);
+                    if ((i_266_ = i_263_ - (this.spriteWidth << 12)) >= 0) {
+                        i_266_ = ((SpriteSub3.scanlineY - i_266_) / SpriteSub3.scanlineY);
                         i_265_ += i_266_;
-                        i_263_ += SpriteSub3.anInt8481 * i_266_;
-                        i_264_ += SpriteSub3.anInt8450 * i_266_;
+                        i_263_ += SpriteSub3.scanlineY * i_266_;
+                        i_264_ += SpriteSub3.scanlineX * i_266_;
                         i_262_ += i_266_;
                     }
-                    if ((i_266_ = ((i_263_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_265_) i_265_ = i_266_;
-                    if ((i_266_ = i_264_ - (this.anInt8470 << 12)) >= 0) {
-                        i_266_ = ((SpriteSub3.anInt8450 - i_266_) / SpriteSub3.anInt8450);
+                    if ((i_266_ = ((i_263_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_265_) i_265_ = i_266_;
+                    if ((i_266_ = i_264_ - (this.spriteHeight << 12)) >= 0) {
+                        i_266_ = ((SpriteSub3.scanlineX - i_266_) / SpriteSub3.scanlineX);
                         i_265_ += i_266_;
-                        i_263_ += SpriteSub3.anInt8481 * i_266_;
-                        i_264_ += SpriteSub3.anInt8450 * i_266_;
+                        i_263_ += SpriteSub3.scanlineY * i_266_;
+                        i_264_ += SpriteSub3.scanlineX * i_266_;
                         i_262_ += i_266_;
                     }
-                    if ((i_266_ = ((i_264_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_265_) i_265_ = i_266_;
+                    if ((i_266_ = ((i_264_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_265_) i_265_ = i_266_;
                     for (/**/; i_265_ < 0; i_265_++) {
-                        int i_267_ = (((i_264_ >> 12) * this.anInt8471) + (i_263_ >> 12));
+                        int i_267_ = (((i_264_ >> 12) * this.spriteWidth) + (i_263_ >> 12));
                         int i_268_ = i_262_++;
                         int[] is_269_ = is;
                         int i_270_ = i;
@@ -635,8 +635,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 is_269_[i_268_] = i_278_ - i_280_ | i_280_ - (i_280_ >>> 8);
                             } else if (i_270_ == 2) {
                                 int i_281_ = (this.anIntArray9933[i_267_]);
-                                int i_282_ = (((i_281_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_283_ = (((i_281_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_282_ = (((i_281_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_283_ = (((i_281_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 is_269_[i_268_] = (((i_282_ | i_283_) >>> 8) + SpriteSub3.anInt8474);
                             } else throw new IllegalArgumentException();
                         } else if (i_271_ == 1) {
@@ -651,7 +651,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_287_ = 256 - i_286_;
                                         int i_288_ = is_269_[i_268_];
                                         is_269_[i_268_] = ((((i_285_ & 0xff00ff) * i_286_ + ((i_288_ & 0xff00ff) * i_287_)) & ~0xff00ff) + (((i_285_ & 0xff00) * i_286_ + ((i_288_ & 0xff00) * i_287_)) & 0xff0000)) >> 8;
-                                    } else if (SpriteSub3.anInt8477 == 255) {
+                                    } else if (SpriteSub3.spriteAlpha == 255) {
                                         int i_293_ = (((i_285_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                         int i_294_ = (((i_285_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                         int i_295_ = (((i_285_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -662,7 +662,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_291_ = (((i_285_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                         i_285_ = (i_289_ | i_290_ | i_291_) >>> 8;
                                         int i_292_ = is_269_[i_268_];
-                                        is_269_[i_268_] = (((((i_285_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_292_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_285_ & 0xff00) * SpriteSub3.anInt8477) + ((i_292_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        is_269_[i_268_] = (((((i_285_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_292_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_285_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_292_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                 }
                             } else if (i_270_ == 3) {
@@ -672,17 +672,17 @@ final class SpriteCapture extends SpriteSub3 {
                                 int i_299_ = ((i_296_ & 0xff00ff) + (i_297_ & 0xff00ff));
                                 int i_300_ = ((i_299_ & 0x1000100) + (i_298_ - i_299_ & 0x10000));
                                 i_300_ = i_298_ - i_300_ | i_300_ - (i_300_ >>> 8);
-                                if (i_296_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                if (i_296_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                     i_296_ = i_300_;
                                     i_300_ = is_269_[i_268_];
-                                    i_300_ = (((((i_296_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_300_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_296_ & 0xff00) * SpriteSub3.anInt8477) + ((i_300_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                    i_300_ = (((((i_296_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_300_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_296_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_300_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                                 }
                                 is_269_[i_268_] = i_300_;
                             } else if (i_270_ == 2) {
                                 int i_301_ = (this.anIntArray9933[i_267_]);
                                 if (i_301_ != 0) {
-                                    int i_302_ = (((i_301_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_303_ = (((i_301_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_302_ = (((i_301_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_303_ = (((i_301_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_269_[i_268_++] = (((i_302_ | i_303_) >>> 8) + SpriteSub3.anInt8474);
                                 }
                             } else throw new IllegalArgumentException();
@@ -724,8 +724,8 @@ final class SpriteCapture extends SpriteSub3 {
                             } else if (i_270_ == 2) {
                                 int i_320_ = (this.anIntArray9933[i_267_]);
                                 if (i_320_ != 0) {
-                                    int i_321_ = (((i_320_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_322_ = (((i_320_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_321_ = (((i_320_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_322_ = (((i_320_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     i_320_ = (((i_321_ | i_322_) >>> 8) + SpriteSub3.anInt8474);
                                     int i_323_ = is_269_[i_268_];
                                     int i_324_ = i_320_ + i_323_;
@@ -735,40 +735,40 @@ final class SpriteCapture extends SpriteSub3 {
                                 }
                             }
                         } else throw new IllegalArgumentException();
-                        i_263_ += SpriteSub3.anInt8481;
-                        i_264_ += SpriteSub3.anInt8450;
+                        i_263_ += SpriteSub3.scanlineY;
+                        i_264_ += SpriteSub3.scanlineX;
                     }
                     i_261_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             } else {
                 int i_326_ = SpriteSub3.anInt8468;
                 while (i_326_ < 0) {
-                    int i_327_ = SpriteSub3.anInt8451;
+                    int i_327_ = SpriteSub3.scanlineStepX;
                     int i_328_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_329_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_330_ = SpriteSub3.anInt8478;
                     int i_331_;
-                    if ((i_331_ = i_328_ - (this.anInt8471 << 12)) >= 0) {
-                        i_331_ = ((SpriteSub3.anInt8481 - i_331_) / SpriteSub3.anInt8481);
+                    if ((i_331_ = i_328_ - (this.spriteWidth << 12)) >= 0) {
+                        i_331_ = ((SpriteSub3.scanlineY - i_331_) / SpriteSub3.scanlineY);
                         i_330_ += i_331_;
-                        i_328_ += SpriteSub3.anInt8481 * i_331_;
-                        i_329_ += SpriteSub3.anInt8450 * i_331_;
+                        i_328_ += SpriteSub3.scanlineY * i_331_;
+                        i_329_ += SpriteSub3.scanlineX * i_331_;
                         i_327_ += i_331_;
                     }
-                    if ((i_331_ = ((i_328_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_330_) i_330_ = i_331_;
+                    if ((i_331_ = ((i_328_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_330_) i_330_ = i_331_;
                     if (i_329_ < 0) {
-                        i_331_ = ((SpriteSub3.anInt8450 - 1 - i_329_) / SpriteSub3.anInt8450);
+                        i_331_ = ((SpriteSub3.scanlineX - 1 - i_329_) / SpriteSub3.scanlineX);
                         i_330_ += i_331_;
-                        i_328_ += SpriteSub3.anInt8481 * i_331_;
-                        i_329_ += SpriteSub3.anInt8450 * i_331_;
+                        i_328_ += SpriteSub3.scanlineY * i_331_;
+                        i_329_ += SpriteSub3.scanlineX * i_331_;
                         i_327_ += i_331_;
                     }
-                    if ((i_331_ = ((1 + i_329_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_330_) i_330_ = i_331_;
+                    if ((i_331_ = ((1 + i_329_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_330_) i_330_ = i_331_;
                     for (/**/; i_330_ < 0; i_330_++) {
-                        int i_332_ = (((i_329_ >> 12) * this.anInt8471) + (i_328_ >> 12));
+                        int i_332_ = (((i_329_ >> 12) * this.spriteWidth) + (i_328_ >> 12));
                         int i_333_ = i_327_++;
                         int[] is_334_ = is;
                         int i_335_ = i;
@@ -790,8 +790,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 is_334_[i_333_] = i_343_ - i_345_ | i_345_ - (i_345_ >>> 8);
                             } else if (i_335_ == 2) {
                                 int i_346_ = (this.anIntArray9933[i_332_]);
-                                int i_347_ = (((i_346_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_348_ = (((i_346_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_347_ = (((i_346_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_348_ = (((i_346_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 is_334_[i_333_] = (((i_347_ | i_348_) >>> 8) + SpriteSub3.anInt8474);
                             } else throw new IllegalArgumentException();
                         } else if (i_336_ == 1) {
@@ -806,7 +806,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_352_ = 256 - i_351_;
                                         int i_353_ = is_334_[i_333_];
                                         is_334_[i_333_] = ((((i_350_ & 0xff00ff) * i_351_ + ((i_353_ & 0xff00ff) * i_352_)) & ~0xff00ff) + (((i_350_ & 0xff00) * i_351_ + ((i_353_ & 0xff00) * i_352_)) & 0xff0000)) >> 8;
-                                    } else if (SpriteSub3.anInt8477 == 255) {
+                                    } else if (SpriteSub3.spriteAlpha == 255) {
                                         int i_358_ = (((i_350_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                         int i_359_ = (((i_350_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                         int i_360_ = (((i_350_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -817,7 +817,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_356_ = (((i_350_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                         i_350_ = (i_354_ | i_355_ | i_356_) >>> 8;
                                         int i_357_ = is_334_[i_333_];
-                                        is_334_[i_333_] = (((((i_350_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_357_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_350_ & 0xff00) * SpriteSub3.anInt8477) + ((i_357_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        is_334_[i_333_] = (((((i_350_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_357_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_350_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_357_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                 }
                             } else if (i_335_ == 3) {
@@ -827,17 +827,17 @@ final class SpriteCapture extends SpriteSub3 {
                                 int i_364_ = ((i_361_ & 0xff00ff) + (i_362_ & 0xff00ff));
                                 int i_365_ = ((i_364_ & 0x1000100) + (i_363_ - i_364_ & 0x10000));
                                 i_365_ = i_363_ - i_365_ | i_365_ - (i_365_ >>> 8);
-                                if (i_361_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                if (i_361_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                     i_361_ = i_365_;
                                     i_365_ = is_334_[i_333_];
-                                    i_365_ = (((((i_361_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_365_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_361_ & 0xff00) * SpriteSub3.anInt8477) + ((i_365_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                    i_365_ = (((((i_361_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_365_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_361_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_365_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                                 }
                                 is_334_[i_333_] = i_365_;
                             } else if (i_335_ == 2) {
                                 int i_366_ = (this.anIntArray9933[i_332_]);
                                 if (i_366_ != 0) {
-                                    int i_367_ = (((i_366_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_368_ = (((i_366_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_367_ = (((i_366_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_368_ = (((i_366_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_334_[i_333_++] = (((i_367_ | i_368_) >>> 8) + SpriteSub3.anInt8474);
                                 }
                             } else throw new IllegalArgumentException();
@@ -879,8 +879,8 @@ final class SpriteCapture extends SpriteSub3 {
                             } else if (i_335_ == 2) {
                                 int i_385_ = (this.anIntArray9933[i_332_]);
                                 if (i_385_ != 0) {
-                                    int i_386_ = (((i_385_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_387_ = (((i_385_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_386_ = (((i_385_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_387_ = (((i_385_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     i_385_ = (((i_386_ | i_387_) >>> 8) + SpriteSub3.anInt8474);
                                     int i_388_ = is_334_[i_333_];
                                     int i_389_ = i_385_ + i_388_;
@@ -890,33 +890,33 @@ final class SpriteCapture extends SpriteSub3 {
                                 }
                             }
                         } else throw new IllegalArgumentException();
-                        i_328_ += SpriteSub3.anInt8481;
-                        i_329_ += SpriteSub3.anInt8450;
+                        i_328_ += SpriteSub3.scanlineY;
+                        i_329_ += SpriteSub3.scanlineX;
                     }
                     i_326_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             }
-        } else if (SpriteSub3.anInt8450 == 0) {
+        } else if (SpriteSub3.scanlineX == 0) {
             int i_391_ = SpriteSub3.anInt8468;
             while (i_391_ < 0) {
-                int i_392_ = SpriteSub3.anInt8451;
+                int i_392_ = SpriteSub3.scanlineStepX;
                 int i_393_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                 int i_394_ = SpriteSub3.anInt8467;
                 int i_395_ = SpriteSub3.anInt8478;
-                if (i_394_ >= 0 && i_394_ - (this.anInt8470 << 12) < 0) {
+                if (i_394_ >= 0 && i_394_ - (this.spriteHeight << 12) < 0) {
                     if (i_393_ < 0) {
-                        int i_396_ = ((SpriteSub3.anInt8481 - 1 - i_393_) / SpriteSub3.anInt8481);
+                        int i_396_ = ((SpriteSub3.scanlineY - 1 - i_393_) / SpriteSub3.scanlineY);
                         i_395_ += i_396_;
-                        i_393_ += SpriteSub3.anInt8481 * i_396_;
+                        i_393_ += SpriteSub3.scanlineY * i_396_;
                         i_392_ += i_396_;
                     }
                     int i_397_;
-                    if ((i_397_ = ((1 + i_393_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_395_) i_395_ = i_397_;
+                    if ((i_397_ = ((1 + i_393_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_395_) i_395_ = i_397_;
                     for (/**/; i_395_ < 0; i_395_++) {
-                        int i_398_ = (((i_394_ >> 12) * this.anInt8471) + (i_393_ >> 12));
+                        int i_398_ = (((i_394_ >> 12) * this.spriteWidth) + (i_393_ >> 12));
                         int i_399_ = i_392_++;
                         int[] is_400_ = is;
                         int i_401_ = i;
@@ -938,8 +938,8 @@ final class SpriteCapture extends SpriteSub3 {
                                 is_400_[i_399_] = i_409_ - i_411_ | i_411_ - (i_411_ >>> 8);
                             } else if (i_401_ == 2) {
                                 int i_412_ = (this.anIntArray9933[i_398_]);
-                                int i_413_ = (((i_412_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_414_ = (((i_412_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_413_ = (((i_412_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_414_ = (((i_412_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 is_400_[i_399_] = (((i_413_ | i_414_) >>> 8) + SpriteSub3.anInt8474);
                             } else throw new IllegalArgumentException();
                         } else if (i_402_ == 1) {
@@ -954,7 +954,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_418_ = 256 - i_417_;
                                         int i_419_ = is_400_[i_399_];
                                         is_400_[i_399_] = ((((i_416_ & 0xff00ff) * i_417_ + ((i_419_ & 0xff00ff) * i_418_)) & ~0xff00ff) + (((i_416_ & 0xff00) * i_417_ + ((i_419_ & 0xff00) * i_418_)) & 0xff0000)) >> 8;
-                                    } else if (SpriteSub3.anInt8477 == 255) {
+                                    } else if (SpriteSub3.spriteAlpha == 255) {
                                         int i_424_ = (((i_416_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                         int i_425_ = (((i_416_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                         int i_426_ = (((i_416_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -965,7 +965,7 @@ final class SpriteCapture extends SpriteSub3 {
                                         int i_422_ = (((i_416_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                         i_416_ = (i_420_ | i_421_ | i_422_) >>> 8;
                                         int i_423_ = is_400_[i_399_];
-                                        is_400_[i_399_] = (((((i_416_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_423_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_416_ & 0xff00) * SpriteSub3.anInt8477) + ((i_423_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
+                                        is_400_[i_399_] = (((((i_416_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_423_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_416_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_423_ & 0xff00) * (SpriteSub3.anInt8472))) & 0xff0000)) >> 8;
                                     }
                                 }
                             } else if (i_401_ == 3) {
@@ -975,17 +975,17 @@ final class SpriteCapture extends SpriteSub3 {
                                 int i_430_ = ((i_427_ & 0xff00ff) + (i_428_ & 0xff00ff));
                                 int i_431_ = ((i_430_ & 0x1000100) + (i_429_ - i_430_ & 0x10000));
                                 i_431_ = i_429_ - i_431_ | i_431_ - (i_431_ >>> 8);
-                                if (i_427_ == 0 && SpriteSub3.anInt8477 != 255) {
+                                if (i_427_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                     i_427_ = i_431_;
                                     i_431_ = is_400_[i_399_];
-                                    i_431_ = (((((i_427_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_431_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_427_ & 0xff00) * SpriteSub3.anInt8477) + ((i_431_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                    i_431_ = (((((i_427_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_431_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_427_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_431_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                                 }
                                 is_400_[i_399_] = i_431_;
                             } else if (i_401_ == 2) {
                                 int i_432_ = (this.anIntArray9933[i_398_]);
                                 if (i_432_ != 0) {
-                                    int i_433_ = (((i_432_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_434_ = (((i_432_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_433_ = (((i_432_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_434_ = (((i_432_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     is_400_[i_399_++] = (((i_433_ | i_434_) >>> 8) + SpriteSub3.anInt8474);
                                 }
                             } else throw new IllegalArgumentException();
@@ -1027,8 +1027,8 @@ final class SpriteCapture extends SpriteSub3 {
                             } else if (i_401_ == 2) {
                                 int i_451_ = (this.anIntArray9933[i_398_]);
                                 if (i_451_ != 0) {
-                                    int i_452_ = (((i_451_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                    int i_453_ = (((i_451_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                    int i_452_ = (((i_451_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                    int i_453_ = (((i_451_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                     i_451_ = (((i_452_ | i_453_) >>> 8) + SpriteSub3.anInt8474);
                                     int i_454_ = is_400_[i_399_];
                                     int i_455_ = i_451_ + i_454_;
@@ -1038,39 +1038,39 @@ final class SpriteCapture extends SpriteSub3 {
                                 }
                             }
                         } else throw new IllegalArgumentException();
-                        i_393_ += SpriteSub3.anInt8481;
+                        i_393_ += SpriteSub3.scanlineY;
                     }
                 }
                 i_391_++;
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
-        } else if (SpriteSub3.anInt8450 < 0) {
+        } else if (SpriteSub3.scanlineX < 0) {
             for (int i_457_ = SpriteSub3.anInt8468; i_457_ < 0; i_457_++) {
-                int i_458_ = SpriteSub3.anInt8451;
+                int i_458_ = SpriteSub3.scanlineStepX;
                 int i_459_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                 int i_460_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                 int i_461_ = SpriteSub3.anInt8478;
                 if (i_459_ < 0) {
-                    int i_462_ = ((SpriteSub3.anInt8481 - 1 - i_459_) / SpriteSub3.anInt8481);
+                    int i_462_ = ((SpriteSub3.scanlineY - 1 - i_459_) / SpriteSub3.scanlineY);
                     i_461_ += i_462_;
-                    i_459_ += SpriteSub3.anInt8481 * i_462_;
-                    i_460_ += SpriteSub3.anInt8450 * i_462_;
+                    i_459_ += SpriteSub3.scanlineY * i_462_;
+                    i_460_ += SpriteSub3.scanlineX * i_462_;
                     i_458_ += i_462_;
                 }
                 int i_463_;
-                if ((i_463_ = (1 + i_459_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481) > i_461_) i_461_ = i_463_;
-                if ((i_463_ = i_460_ - (this.anInt8470 << 12)) >= 0) {
-                    i_463_ = ((SpriteSub3.anInt8450 - i_463_) / SpriteSub3.anInt8450);
+                if ((i_463_ = (1 + i_459_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY) > i_461_) i_461_ = i_463_;
+                if ((i_463_ = i_460_ - (this.spriteHeight << 12)) >= 0) {
+                    i_463_ = ((SpriteSub3.scanlineX - i_463_) / SpriteSub3.scanlineX);
                     i_461_ += i_463_;
-                    i_459_ += SpriteSub3.anInt8481 * i_463_;
-                    i_460_ += SpriteSub3.anInt8450 * i_463_;
+                    i_459_ += SpriteSub3.scanlineY * i_463_;
+                    i_460_ += SpriteSub3.scanlineX * i_463_;
                     i_458_ += i_463_;
                 }
-                if ((i_463_ = ((i_460_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_461_) i_461_ = i_463_;
+                if ((i_463_ = ((i_460_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_461_) i_461_ = i_463_;
                 for (/**/; i_461_ < 0; i_461_++) {
-                    int i_464_ = ((i_460_ >> 12) * this.anInt8471 + (i_459_ >> 12));
+                    int i_464_ = ((i_460_ >> 12) * this.spriteWidth + (i_459_ >> 12));
                     int i_465_ = i_458_++;
                     int[] is_466_ = is;
                     int i_467_ = i;
@@ -1092,8 +1092,8 @@ final class SpriteCapture extends SpriteSub3 {
                             is_466_[i_465_] = i_475_ - i_477_ | i_477_ - (i_477_ >>> 8);
                         } else if (i_467_ == 2) {
                             int i_478_ = (this.anIntArray9933[i_464_]);
-                            int i_479_ = (((i_478_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                            int i_480_ = ((i_478_ & 0xff00) * SpriteSub3.anInt8477 & 0xff0000);
+                            int i_479_ = (((i_478_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                            int i_480_ = ((i_478_ & 0xff00) * SpriteSub3.spriteAlpha & 0xff0000);
                             is_466_[i_465_] = (((i_479_ | i_480_) >>> 8) + SpriteSub3.anInt8474);
                         } else throw new IllegalArgumentException();
                     } else if (i_468_ == 1) {
@@ -1108,7 +1108,7 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_484_ = 256 - i_483_;
                                     int i_485_ = is_466_[i_465_];
                                     is_466_[i_465_] = ((((i_482_ & 0xff00ff) * i_483_ + (i_485_ & 0xff00ff) * i_484_) & ~0xff00ff) + (((i_482_ & 0xff00) * i_483_ + (i_485_ & 0xff00) * i_484_) & 0xff0000)) >> 8;
-                                } else if (SpriteSub3.anInt8477 == 255) {
+                                } else if (SpriteSub3.spriteAlpha == 255) {
                                     int i_490_ = (((i_482_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                     int i_491_ = (((i_482_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                     int i_492_ = (((i_482_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -1119,7 +1119,7 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_488_ = (((i_482_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                     i_482_ = (i_486_ | i_487_ | i_488_) >>> 8;
                                     int i_489_ = is_466_[i_465_];
-                                    is_466_[i_465_] = (((((i_482_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_489_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_482_ & 0xff00) * SpriteSub3.anInt8477) + ((i_489_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                    is_466_[i_465_] = (((((i_482_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_489_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_482_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_489_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                                 }
                             }
                         } else if (i_467_ == 3) {
@@ -1129,17 +1129,17 @@ final class SpriteCapture extends SpriteSub3 {
                             int i_496_ = (i_493_ & 0xff00ff) + (i_494_ & 0xff00ff);
                             int i_497_ = ((i_496_ & 0x1000100) + (i_495_ - i_496_ & 0x10000));
                             i_497_ = i_495_ - i_497_ | i_497_ - (i_497_ >>> 8);
-                            if (i_493_ == 0 && SpriteSub3.anInt8477 != 255) {
+                            if (i_493_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                 i_493_ = i_497_;
                                 i_497_ = is_466_[i_465_];
-                                i_497_ = (((((i_493_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_497_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_493_ & 0xff00) * SpriteSub3.anInt8477) + ((i_497_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                i_497_ = (((((i_493_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_497_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_493_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_497_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                             }
                             is_466_[i_465_] = i_497_;
                         } else if (i_467_ == 2) {
                             int i_498_ = (this.anIntArray9933[i_464_]);
                             if (i_498_ != 0) {
-                                int i_499_ = (((i_498_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_500_ = (((i_498_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_499_ = (((i_498_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_500_ = (((i_498_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 is_466_[i_465_++] = (((i_499_ | i_500_) >>> 8) + SpriteSub3.anInt8474);
                             }
                         } else throw new IllegalArgumentException();
@@ -1181,8 +1181,8 @@ final class SpriteCapture extends SpriteSub3 {
                         } else if (i_467_ == 2) {
                             int i_517_ = (this.anIntArray9933[i_464_]);
                             if (i_517_ != 0) {
-                                int i_518_ = (((i_517_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_519_ = (((i_517_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_518_ = (((i_517_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_519_ = (((i_517_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 i_517_ = (((i_518_ | i_519_) >>> 8) + SpriteSub3.anInt8474);
                                 int i_520_ = is_466_[i_465_];
                                 int i_521_ = i_517_ + i_520_;
@@ -1192,38 +1192,38 @@ final class SpriteCapture extends SpriteSub3 {
                             }
                         }
                     } else throw new IllegalArgumentException();
-                    i_459_ += SpriteSub3.anInt8481;
-                    i_460_ += SpriteSub3.anInt8450;
+                    i_459_ += SpriteSub3.scanlineY;
+                    i_460_ += SpriteSub3.scanlineX;
                 }
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
         } else {
             for (int i_523_ = SpriteSub3.anInt8468; i_523_ < 0; i_523_++) {
-                int i_524_ = SpriteSub3.anInt8451;
+                int i_524_ = SpriteSub3.scanlineStepX;
                 int i_525_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                 int i_526_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                 int i_527_ = SpriteSub3.anInt8478;
                 if (i_525_ < 0) {
-                    int i_528_ = ((SpriteSub3.anInt8481 - 1 - i_525_) / SpriteSub3.anInt8481);
+                    int i_528_ = ((SpriteSub3.scanlineY - 1 - i_525_) / SpriteSub3.scanlineY);
                     i_527_ += i_528_;
-                    i_525_ += SpriteSub3.anInt8481 * i_528_;
-                    i_526_ += SpriteSub3.anInt8450 * i_528_;
+                    i_525_ += SpriteSub3.scanlineY * i_528_;
+                    i_526_ += SpriteSub3.scanlineX * i_528_;
                     i_524_ += i_528_;
                 }
                 int i_529_;
-                if ((i_529_ = (1 + i_525_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481) > i_527_) i_527_ = i_529_;
+                if ((i_529_ = (1 + i_525_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY) > i_527_) i_527_ = i_529_;
                 if (i_526_ < 0) {
-                    i_529_ = ((SpriteSub3.anInt8450 - 1 - i_526_) / SpriteSub3.anInt8450);
+                    i_529_ = ((SpriteSub3.scanlineX - 1 - i_526_) / SpriteSub3.scanlineX);
                     i_527_ += i_529_;
-                    i_525_ += SpriteSub3.anInt8481 * i_529_;
-                    i_526_ += SpriteSub3.anInt8450 * i_529_;
+                    i_525_ += SpriteSub3.scanlineY * i_529_;
+                    i_526_ += SpriteSub3.scanlineX * i_529_;
                     i_524_ += i_529_;
                 }
-                if ((i_529_ = (1 + i_526_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450) > i_527_) i_527_ = i_529_;
+                if ((i_529_ = (1 + i_526_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX) > i_527_) i_527_ = i_529_;
                 for (/**/; i_527_ < 0; i_527_++) {
-                    int i_530_ = ((i_526_ >> 12) * this.anInt8471 + (i_525_ >> 12));
+                    int i_530_ = ((i_526_ >> 12) * this.spriteWidth + (i_525_ >> 12));
                     int i_531_ = i_524_++;
                     int[] is_532_ = is;
                     int i_533_ = i;
@@ -1245,8 +1245,8 @@ final class SpriteCapture extends SpriteSub3 {
                             is_532_[i_531_] = i_541_ - i_543_ | i_543_ - (i_543_ >>> 8);
                         } else if (i_533_ == 2) {
                             int i_544_ = (this.anIntArray9933[i_530_]);
-                            int i_545_ = (((i_544_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                            int i_546_ = ((i_544_ & 0xff00) * SpriteSub3.anInt8477 & 0xff0000);
+                            int i_545_ = (((i_544_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                            int i_546_ = ((i_544_ & 0xff00) * SpriteSub3.spriteAlpha & 0xff0000);
                             is_532_[i_531_] = (((i_545_ | i_546_) >>> 8) + SpriteSub3.anInt8474);
                         } else throw new IllegalArgumentException();
                     } else if (i_534_ == 1) {
@@ -1261,7 +1261,7 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_550_ = 256 - i_549_;
                                     int i_551_ = is_532_[i_531_];
                                     is_532_[i_531_] = ((((i_548_ & 0xff00ff) * i_549_ + (i_551_ & 0xff00ff) * i_550_) & ~0xff00ff) + (((i_548_ & 0xff00) * i_549_ + (i_551_ & 0xff00) * i_550_) & 0xff0000)) >> 8;
-                                } else if (SpriteSub3.anInt8477 == 255) {
+                                } else if (SpriteSub3.spriteAlpha == 255) {
                                     int i_556_ = (((i_548_ & 0xff0000) * SpriteSub3.anInt8469) & ~0xffffff);
                                     int i_557_ = (((i_548_ & 0xff00) * SpriteSub3.anInt8463) & 0xff0000);
                                     int i_558_ = (((i_548_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
@@ -1272,7 +1272,7 @@ final class SpriteCapture extends SpriteSub3 {
                                     int i_554_ = (((i_548_ & 0xff) * SpriteSub3.anInt8465) & 0xff00);
                                     i_548_ = (i_552_ | i_553_ | i_554_) >>> 8;
                                     int i_555_ = is_532_[i_531_];
-                                    is_532_[i_531_] = (((((i_548_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_555_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_548_ & 0xff00) * SpriteSub3.anInt8477) + ((i_555_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                    is_532_[i_531_] = (((((i_548_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_555_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_548_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_555_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                                 }
                             }
                         } else if (i_533_ == 3) {
@@ -1282,17 +1282,17 @@ final class SpriteCapture extends SpriteSub3 {
                             int i_562_ = (i_559_ & 0xff00ff) + (i_560_ & 0xff00ff);
                             int i_563_ = ((i_562_ & 0x1000100) + (i_561_ - i_562_ & 0x10000));
                             i_563_ = i_561_ - i_563_ | i_563_ - (i_563_ >>> 8);
-                            if (i_559_ == 0 && SpriteSub3.anInt8477 != 255) {
+                            if (i_559_ == 0 && SpriteSub3.spriteAlpha != 255) {
                                 i_559_ = i_563_;
                                 i_563_ = is_532_[i_531_];
-                                i_563_ = (((((i_559_ & 0xff00ff) * SpriteSub3.anInt8477) + ((i_563_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_559_ & 0xff00) * SpriteSub3.anInt8477) + ((i_563_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
+                                i_563_ = (((((i_559_ & 0xff00ff) * SpriteSub3.spriteAlpha) + ((i_563_ & 0xff00ff) * SpriteSub3.anInt8472)) & ~0xff00ff) + ((((i_559_ & 0xff00) * SpriteSub3.spriteAlpha) + ((i_563_ & 0xff00) * SpriteSub3.anInt8472)) & 0xff0000)) >> 8;
                             }
                             is_532_[i_531_] = i_563_;
                         } else if (i_533_ == 2) {
                             int i_564_ = (this.anIntArray9933[i_530_]);
                             if (i_564_ != 0) {
-                                int i_565_ = (((i_564_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_566_ = (((i_564_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_565_ = (((i_564_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_566_ = (((i_564_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 is_532_[i_531_++] = (((i_565_ | i_566_) >>> 8) + SpriteSub3.anInt8474);
                             }
                         } else throw new IllegalArgumentException();
@@ -1334,8 +1334,8 @@ final class SpriteCapture extends SpriteSub3 {
                         } else if (i_533_ == 2) {
                             int i_583_ = (this.anIntArray9933[i_530_]);
                             if (i_583_ != 0) {
-                                int i_584_ = (((i_583_ & 0xff00ff) * SpriteSub3.anInt8477) & ~0xff00ff);
-                                int i_585_ = (((i_583_ & 0xff00) * SpriteSub3.anInt8477) & 0xff0000);
+                                int i_584_ = (((i_583_ & 0xff00ff) * SpriteSub3.spriteAlpha) & ~0xff00ff);
+                                int i_585_ = (((i_583_ & 0xff00) * SpriteSub3.spriteAlpha) & 0xff0000);
                                 i_583_ = (((i_584_ | i_585_) >>> 8) + SpriteSub3.anInt8474);
                                 int i_586_ = is_532_[i_531_];
                                 int i_587_ = i_583_ + i_586_;
@@ -1345,34 +1345,34 @@ final class SpriteCapture extends SpriteSub3 {
                             }
                         }
                     } else throw new IllegalArgumentException();
-                    i_525_ += SpriteSub3.anInt8481;
-                    i_526_ += SpriteSub3.anInt8450;
+                    i_525_ += SpriteSub3.scanlineY;
+                    i_526_ += SpriteSub3.scanlineX;
                 }
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
         }
     }
 
     final void method979(int i, int i_589_, int i_590_, int i_591_, int i_592_, int i_593_) {
-        int[] is = this.aHa_Sub1_8460.anIntArray7483;
+        int[] is = this.toolkit.anIntArray7483;
         for (int i_594_ = 0; i_594_ < i_591_; i_594_++) {
-            int i_595_ = (i_589_ + i_594_) * this.anInt8471 + i;
-            int i_596_ = ((i_593_ + i_594_) * this.aHa_Sub1_8460.anInt7477 + i_592_);
+            int i_595_ = (i_589_ + i_594_) * this.spriteWidth + i;
+            int i_596_ = ((i_593_ + i_594_) * this.toolkit.anInt7477 + i_592_);
             for (int i_597_ = 0; i_597_ < i_590_; i_597_++)
                 this.anIntArray9933[i_595_ + i_597_] = is[i_596_ + i_597_];
         }
     }
 
     final void method982(int i, int i_598_, int i_599_, int i_600_, int i_601_, int i_602_, int i_603_, int i_604_) {
-        if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
+        if (this.toolkit.method3716()) throw new IllegalStateException();
         if (i_599_ > 0 && i_600_ > 0) {
             int i_605_ = 0;
             int i_606_ = 0;
-            int i_607_ = this.aHa_Sub1_8460.anInt7477;
-            int i_608_ = (this.anInt8461 + this.anInt8471 + this.anInt8454);
-            int i_609_ = (this.anInt8464 + this.anInt8470 + this.anInt8456);
+            int i_607_ = this.toolkit.anInt7477;
+            int i_608_ = (this.anInt8461 + this.spriteWidth + this.anInt8454);
+            int i_609_ = (this.anInt8464 + this.spriteHeight + this.anInt8456);
             int i_610_ = (i_608_ << 16) / i_599_;
             int i_611_ = (i_609_ << 16) / i_600_;
             if (this.anInt8461 > 0) {
@@ -1385,35 +1385,35 @@ final class SpriteCapture extends SpriteSub3 {
                 i_598_ += i_613_;
                 i_606_ += i_613_ * i_611_ - (this.anInt8464 << 16);
             }
-            if (this.anInt8471 < i_608_) i_599_ = ((this.anInt8471 << 16) - i_605_ + i_610_ - 1) / i_610_;
-            if (this.anInt8470 < i_609_) i_600_ = ((this.anInt8470 << 16) - i_606_ + i_611_ - 1) / i_611_;
+            if (this.spriteWidth < i_608_) i_599_ = ((this.spriteWidth << 16) - i_605_ + i_610_ - 1) / i_610_;
+            if (this.spriteHeight < i_609_) i_600_ = ((this.spriteHeight << 16) - i_606_ + i_611_ - 1) / i_611_;
             int i_614_ = i + i_598_ * i_607_;
             int i_615_ = i_607_ - i_599_;
-            if (i_598_ + i_600_ > this.aHa_Sub1_8460.anInt7503) i_600_ -= (i_598_ + i_600_ - (this.aHa_Sub1_8460.anInt7503));
-            if (i_598_ < this.aHa_Sub1_8460.anInt7476) {
-                int i_616_ = ((this.aHa_Sub1_8460.anInt7476) - i_598_);
+            if (i_598_ + i_600_ > this.toolkit.anInt7503) i_600_ -= (i_598_ + i_600_ - (this.toolkit.anInt7503));
+            if (i_598_ < this.toolkit.anInt7476) {
+                int i_616_ = ((this.toolkit.anInt7476) - i_598_);
                 i_600_ -= i_616_;
                 i_614_ += i_616_ * i_607_;
                 i_606_ += i_611_ * i_616_;
             }
-            if (i + i_599_ > this.aHa_Sub1_8460.anInt7507) {
-                int i_617_ = (i + i_599_ - (this.aHa_Sub1_8460.anInt7507));
+            if (i + i_599_ > this.toolkit.anInt7507) {
+                int i_617_ = (i + i_599_ - (this.toolkit.anInt7507));
                 i_599_ -= i_617_;
                 i_615_ += i_617_;
             }
-            if (i < this.aHa_Sub1_8460.anInt7496) {
-                int i_618_ = ((this.aHa_Sub1_8460.anInt7496) - i);
+            if (i < this.toolkit.anInt7496) {
+                int i_618_ = ((this.toolkit.anInt7496) - i);
                 i_599_ -= i_618_;
                 i_614_ += i_618_;
                 i_605_ += i_610_ * i_618_;
                 i_615_ += i_618_;
             }
-            int[] is = (this.aHa_Sub1_8460.anIntArray7483);
+            int[] is = (this.toolkit.anIntArray7483);
             if (i_603_ == 0) {
                 if (i_601_ == 1) {
                     int i_619_ = i_605_;
                     for (int i_620_ = -i_600_; i_620_ < 0; i_620_++) {
-                        int i_621_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_621_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_622_ = -i_599_; i_622_ < 0; i_622_++) {
                             is[i_614_++] = (this.anIntArray9933[(i_605_ >> 16) + i_621_]);
                             i_605_ += i_610_;
@@ -1430,7 +1430,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_625_ = i_602_ & 0xff;
                     int i_626_ = i_605_;
                     for (int i_627_ = -i_600_; i_627_ < 0; i_627_++) {
-                        int i_628_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_628_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_629_ = -i_599_; i_629_ < 0; i_629_++) {
                             int i_630_ = (this.anIntArray9933[(i_605_ >> 16) + i_628_]);
                             int i_631_ = (i_630_ & 0xff0000) * i_623_ & ~0xffffff;
@@ -1448,7 +1448,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_601_ == 3) {
                     int i_634_ = i_605_;
                     for (int i_635_ = -i_600_; i_635_ < 0; i_635_++) {
-                        int i_636_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_636_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_637_ = -i_599_; i_637_ < 0; i_637_++) {
                             int i_638_ = (this.anIntArray9933[(i_605_ >> 16) + i_636_]);
                             int i_639_ = i_638_ + i_602_;
@@ -1471,7 +1471,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_602_ = (i_644_ | i_645_) >>> 8;
                     int i_646_ = i_605_;
                     for (int i_647_ = -i_600_; i_647_ < 0; i_647_++) {
-                        int i_648_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_648_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_649_ = -i_599_; i_649_ < 0; i_649_++) {
                             int i_650_ = (this.anIntArray9933[(i_605_ >> 16) + i_648_]);
                             i_644_ = (i_650_ & 0xff00ff) * i_642_ & ~0xff00ff;
@@ -1491,7 +1491,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_601_ == 1) {
                     int i_651_ = i_605_;
                     for (int i_652_ = -i_600_; i_652_ < 0; i_652_++) {
-                        int i_653_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_653_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_654_ = -i_599_; i_654_ < 0; i_654_++) {
                             int i_655_ = (this.anIntArray9933[(i_605_ >> 16) + i_653_]);
                             if (i_655_ != 0) is[i_614_++] = i_655_;
@@ -1510,7 +1510,7 @@ final class SpriteCapture extends SpriteSub3 {
                         int i_657_ = i_602_ >>> 24;
                         int i_658_ = 256 - i_657_;
                         for (int i_659_ = -i_600_; i_659_ < 0; i_659_++) {
-                            int i_660_ = ((i_606_ >> 16) * this.anInt8471);
+                            int i_660_ = ((i_606_ >> 16) * this.spriteWidth);
                             for (int i_661_ = -i_599_; i_661_ < 0; i_661_++) {
                                 int i_662_ = (this.anIntArray9933[(i_605_ >> 16) + i_660_]);
                                 if (i_662_ != 0) {
@@ -1530,7 +1530,7 @@ final class SpriteCapture extends SpriteSub3 {
                         int i_667_ = i_602_ >>> 24;
                         int i_668_ = 256 - i_667_;
                         for (int i_669_ = -i_600_; i_669_ < 0; i_669_++) {
-                            int i_670_ = ((i_606_ >> 16) * this.anInt8471);
+                            int i_670_ = ((i_606_ >> 16) * this.spriteWidth);
                             for (int i_671_ = -i_599_; i_671_ < 0; i_671_++) {
                                 int i_672_ = (this.anIntArray9933[(i_605_ >> 16) + i_670_]);
                                 if (i_672_ != 0) {
@@ -1563,7 +1563,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_681_ = i_602_ >>> 24;
                     int i_682_ = 256 - i_681_;
                     for (int i_683_ = -i_600_; i_683_ < 0; i_683_++) {
-                        int i_684_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_684_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_685_ = -i_599_; i_685_ < 0; i_685_++) {
                             int i_686_ = (this.anIntArray9933[(i_605_ >> 16) + i_684_]);
                             int i_687_ = i_686_ + i_602_;
@@ -1592,7 +1592,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_602_ = (i_692_ | i_693_) >>> 8;
                     int i_694_ = i_605_;
                     for (int i_695_ = -i_600_; i_695_ < 0; i_695_++) {
-                        int i_696_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_696_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_697_ = -i_599_; i_697_ < 0; i_697_++) {
                             int i_698_ = (this.anIntArray9933[(i_605_ >> 16) + i_696_]);
                             if (i_698_ != 0) {
@@ -1614,7 +1614,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_601_ == 1) {
                     int i_699_ = i_605_;
                     for (int i_700_ = -i_600_; i_700_ < 0; i_700_++) {
-                        int i_701_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_701_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_702_ = -i_599_; i_702_ < 0; i_702_++) {
                             int i_703_ = (this.anIntArray9933[(i_605_ >> 16) + i_701_]);
                             if (i_703_ != 0) {
@@ -1638,7 +1638,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_709_ = (i_602_ & 0xff00) >> 8;
                     int i_710_ = i_602_ & 0xff;
                     for (int i_711_ = -i_600_; i_711_ < 0; i_711_++) {
-                        int i_712_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_712_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_713_ = -i_599_; i_713_ < 0; i_713_++) {
                             int i_714_ = (this.anIntArray9933[(i_605_ >> 16) + i_712_]);
                             if (i_714_ != 0) {
@@ -1663,7 +1663,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_601_ == 3) {
                     int i_721_ = i_605_;
                     for (int i_722_ = -i_600_; i_722_ < 0; i_722_++) {
-                        int i_723_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_723_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_724_ = -i_599_; i_724_ < 0; i_724_++) {
                             int i_725_ = (this.anIntArray9933[(i_605_ >> 16) + i_723_]);
                             int i_726_ = i_725_ + i_602_;
@@ -1691,7 +1691,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_602_ = (i_731_ | i_732_) >>> 8;
                     int i_733_ = i_605_;
                     for (int i_734_ = -i_600_; i_734_ < 0; i_734_++) {
-                        int i_735_ = ((i_606_ >> 16) * this.anInt8471);
+                        int i_735_ = ((i_606_ >> 16) * this.spriteWidth);
                         for (int i_736_ = -i_599_; i_736_ < 0; i_736_++) {
                             int i_737_ = (this.anIntArray9933[(i_605_ >> 16) + i_735_]);
                             if (i_737_ != 0) {
@@ -1731,7 +1731,7 @@ final class SpriteCapture extends SpriteSub3 {
         super(var_ha_Sub1, i_745_, i_746_);
         if (bool) this.anIntArray9933 = new int[i_745_ * i_746_];
         else this.anIntArray9933 = is;
-        i_744_ -= this.anInt8471;
+        i_744_ -= this.spriteWidth;
         int i_747_ = 0;
         for (int i_748_ = 0; i_748_ < i_746_; i_748_++) {
             for (int i_749_ = 0; i_749_ < i_745_; i_749_++) {
@@ -1749,79 +1749,79 @@ final class SpriteCapture extends SpriteSub3 {
     }
 
     final void method995(int[] is, int[] is_752_, int i, int i_753_) {
-        int[] is_754_ = this.aHa_Sub1_8460.anIntArray7483;
-        if (SpriteSub3.anInt8481 == 0) {
-            if (SpriteSub3.anInt8450 == 0) {
+        int[] is_754_ = this.toolkit.anIntArray7483;
+        if (SpriteSub3.scanlineY == 0) {
+            if (SpriteSub3.scanlineX == 0) {
                 int i_755_ = SpriteSub3.anInt8468;
                 while (i_755_ < 0) {
                     int i_756_ = i_755_ + i_753_;
                     if (i_756_ >= 0) {
                         if (i_756_ >= is.length) break;
-                        int i_757_ = SpriteSub3.anInt8451;
+                        int i_757_ = SpriteSub3.scanlineStepX;
                         int i_758_ = SpriteSub3.anInt8458;
                         int i_759_ = SpriteSub3.anInt8467;
                         int i_760_ = SpriteSub3.anInt8478;
-                        if (i_758_ >= 0 && i_759_ >= 0 && i_758_ - (this.anInt8471 << 12) < 0 && i_759_ - (this.anInt8470 << 12) < 0) {
+                        if (i_758_ >= 0 && i_759_ >= 0 && i_758_ - (this.spriteWidth << 12) < 0 && i_759_ - (this.spriteHeight << 12) < 0) {
                             int i_761_ = is[i_756_] - i;
                             int i_762_ = -is_752_[i_756_];
-                            int i_763_ = i_761_ - (i_757_ - SpriteSub3.anInt8451);
+                            int i_763_ = i_761_ - (i_757_ - SpriteSub3.scanlineStepX);
                             if (i_763_ > 0) {
                                 i_757_ += i_763_;
                                 i_760_ += i_763_;
-                                i_758_ += SpriteSub3.anInt8481 * i_763_;
-                                i_759_ += SpriteSub3.anInt8450 * i_763_;
+                                i_758_ += SpriteSub3.scanlineY * i_763_;
+                                i_759_ += SpriteSub3.scanlineX * i_763_;
                             } else i_762_ -= i_763_;
                             if (i_760_ < i_762_) i_760_ = i_762_;
                             for (/**/; i_760_ < 0; i_760_++) {
-                                int i_764_ = (this.anIntArray9933[(((i_759_ >> 12) * this.anInt8471) + (i_758_ >> 12))]);
+                                int i_764_ = (this.anIntArray9933[(((i_759_ >> 12) * this.spriteWidth) + (i_758_ >> 12))]);
                                 if (i_764_ != 0) is_754_[i_757_++] = i_764_;
                                 else i_757_++;
                             }
                         }
                     }
                     i_755_++;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
-            } else if (SpriteSub3.anInt8450 < 0) {
+            } else if (SpriteSub3.scanlineX < 0) {
                 int i_765_ = SpriteSub3.anInt8468;
                 while (i_765_ < 0) {
                     int i_766_ = i_765_ + i_753_;
                     if (i_766_ >= 0) {
                         if (i_766_ >= is.length) break;
-                        int i_767_ = SpriteSub3.anInt8451;
+                        int i_767_ = SpriteSub3.scanlineStepX;
                         int i_768_ = SpriteSub3.anInt8458;
                         int i_769_ = (SpriteSub3.anInt8467 + SpriteSub3.anInt8475);
                         int i_770_ = SpriteSub3.anInt8478;
-                        if (i_768_ >= 0 && i_768_ - (this.anInt8471 << 12) < 0) {
+                        if (i_768_ >= 0 && i_768_ - (this.spriteWidth << 12) < 0) {
                             int i_771_;
-                            if ((i_771_ = i_769_ - (this.anInt8470 << 12)) >= 0) {
-                                i_771_ = ((SpriteSub3.anInt8450 - i_771_) / SpriteSub3.anInt8450);
+                            if ((i_771_ = i_769_ - (this.spriteHeight << 12)) >= 0) {
+                                i_771_ = ((SpriteSub3.scanlineX - i_771_) / SpriteSub3.scanlineX);
                                 i_770_ += i_771_;
-                                i_769_ += SpriteSub3.anInt8450 * i_771_;
+                                i_769_ += SpriteSub3.scanlineX * i_771_;
                                 i_767_ += i_771_;
                             }
-                            if ((i_771_ = ((i_769_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_770_) i_770_ = i_771_;
+                            if ((i_771_ = ((i_769_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_770_) i_770_ = i_771_;
                             int i_772_ = is[i_766_] - i;
                             int i_773_ = -is_752_[i_766_];
-                            int i_774_ = i_772_ - (i_767_ - SpriteSub3.anInt8451);
+                            int i_774_ = i_772_ - (i_767_ - SpriteSub3.scanlineStepX);
                             if (i_774_ > 0) {
                                 i_767_ += i_774_;
                                 i_770_ += i_774_;
-                                i_768_ += SpriteSub3.anInt8481 * i_774_;
-                                i_769_ += SpriteSub3.anInt8450 * i_774_;
+                                i_768_ += SpriteSub3.scanlineY * i_774_;
+                                i_769_ += SpriteSub3.scanlineX * i_774_;
                             } else i_773_ -= i_774_;
                             if (i_770_ < i_773_) i_770_ = i_773_;
                             for (/**/; i_770_ < 0; i_770_++) {
-                                int i_775_ = (this.anIntArray9933[(((i_769_ >> 12) * this.anInt8471) + (i_768_ >> 12))]);
+                                int i_775_ = (this.anIntArray9933[(((i_769_ >> 12) * this.spriteWidth) + (i_768_ >> 12))]);
                                 if (i_775_ != 0) is_754_[i_767_++] = i_775_;
                                 else i_767_++;
-                                i_769_ += SpriteSub3.anInt8450;
+                                i_769_ += SpriteSub3.scanlineX;
                             }
                         }
                     }
                     i_765_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             } else {
                 int i_776_ = SpriteSub3.anInt8468;
@@ -1829,133 +1829,133 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_777_ = i_776_ + i_753_;
                     if (i_777_ >= 0) {
                         if (i_777_ >= is.length) break;
-                        int i_778_ = SpriteSub3.anInt8451;
+                        int i_778_ = SpriteSub3.scanlineStepX;
                         int i_779_ = SpriteSub3.anInt8458;
                         int i_780_ = (SpriteSub3.anInt8467 + SpriteSub3.anInt8475);
                         int i_781_ = SpriteSub3.anInt8478;
-                        if (i_779_ >= 0 && i_779_ - (this.anInt8471 << 12) < 0) {
+                        if (i_779_ >= 0 && i_779_ - (this.spriteWidth << 12) < 0) {
                             if (i_780_ < 0) {
-                                int i_782_ = ((SpriteSub3.anInt8450 - 1 - i_780_) / SpriteSub3.anInt8450);
+                                int i_782_ = ((SpriteSub3.scanlineX - 1 - i_780_) / SpriteSub3.scanlineX);
                                 i_781_ += i_782_;
-                                i_780_ += SpriteSub3.anInt8450 * i_782_;
+                                i_780_ += SpriteSub3.scanlineX * i_782_;
                                 i_778_ += i_782_;
                             }
                             int i_783_;
-                            if ((i_783_ = ((1 + i_780_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_781_) i_781_ = i_783_;
+                            if ((i_783_ = ((1 + i_780_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_781_) i_781_ = i_783_;
                             int i_784_ = is[i_777_] - i;
                             int i_785_ = -is_752_[i_777_];
-                            int i_786_ = i_784_ - (i_778_ - SpriteSub3.anInt8451);
+                            int i_786_ = i_784_ - (i_778_ - SpriteSub3.scanlineStepX);
                             if (i_786_ > 0) {
                                 i_778_ += i_786_;
                                 i_781_ += i_786_;
-                                i_779_ += SpriteSub3.anInt8481 * i_786_;
-                                i_780_ += SpriteSub3.anInt8450 * i_786_;
+                                i_779_ += SpriteSub3.scanlineY * i_786_;
+                                i_780_ += SpriteSub3.scanlineX * i_786_;
                             } else i_785_ -= i_786_;
                             if (i_781_ < i_785_) i_781_ = i_785_;
                             for (/**/; i_781_ < 0; i_781_++) {
-                                int i_787_ = (this.anIntArray9933[(((i_780_ >> 12) * this.anInt8471) + (i_779_ >> 12))]);
+                                int i_787_ = (this.anIntArray9933[(((i_780_ >> 12) * this.spriteWidth) + (i_779_ >> 12))]);
                                 if (i_787_ != 0) is_754_[i_778_++] = i_787_;
                                 else i_778_++;
-                                i_780_ += SpriteSub3.anInt8450;
+                                i_780_ += SpriteSub3.scanlineX;
                             }
                         }
                     }
                     i_776_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             }
-        } else if (SpriteSub3.anInt8481 < 0) {
-            if (SpriteSub3.anInt8450 == 0) {
+        } else if (SpriteSub3.scanlineY < 0) {
+            if (SpriteSub3.scanlineX == 0) {
                 int i_788_ = SpriteSub3.anInt8468;
                 while (i_788_ < 0) {
                     int i_789_ = i_788_ + i_753_;
                     if (i_789_ >= 0) {
                         if (i_789_ >= is.length) break;
-                        int i_790_ = SpriteSub3.anInt8451;
+                        int i_790_ = SpriteSub3.scanlineStepX;
                         int i_791_ = (SpriteSub3.anInt8458 + SpriteSub3.anInt8479);
                         int i_792_ = SpriteSub3.anInt8467;
                         int i_793_ = SpriteSub3.anInt8478;
-                        if (i_792_ >= 0 && i_792_ - (this.anInt8470 << 12) < 0) {
+                        if (i_792_ >= 0 && i_792_ - (this.spriteHeight << 12) < 0) {
                             int i_794_;
-                            if ((i_794_ = i_791_ - (this.anInt8471 << 12)) >= 0) {
-                                i_794_ = ((SpriteSub3.anInt8481 - i_794_) / SpriteSub3.anInt8481);
+                            if ((i_794_ = i_791_ - (this.spriteWidth << 12)) >= 0) {
+                                i_794_ = ((SpriteSub3.scanlineY - i_794_) / SpriteSub3.scanlineY);
                                 i_793_ += i_794_;
-                                i_791_ += SpriteSub3.anInt8481 * i_794_;
+                                i_791_ += SpriteSub3.scanlineY * i_794_;
                                 i_790_ += i_794_;
                             }
-                            if ((i_794_ = ((i_791_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_793_) i_793_ = i_794_;
+                            if ((i_794_ = ((i_791_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_793_) i_793_ = i_794_;
                             int i_795_ = is[i_789_] - i;
                             int i_796_ = -is_752_[i_789_];
-                            int i_797_ = i_795_ - (i_790_ - SpriteSub3.anInt8451);
+                            int i_797_ = i_795_ - (i_790_ - SpriteSub3.scanlineStepX);
                             if (i_797_ > 0) {
                                 i_790_ += i_797_;
                                 i_793_ += i_797_;
-                                i_791_ += SpriteSub3.anInt8481 * i_797_;
-                                i_792_ += SpriteSub3.anInt8450 * i_797_;
+                                i_791_ += SpriteSub3.scanlineY * i_797_;
+                                i_792_ += SpriteSub3.scanlineX * i_797_;
                             } else i_796_ -= i_797_;
                             if (i_793_ < i_796_) i_793_ = i_796_;
                             for (/**/; i_793_ < 0; i_793_++) {
-                                int i_798_ = (this.anIntArray9933[(((i_792_ >> 12) * this.anInt8471) + (i_791_ >> 12))]);
+                                int i_798_ = (this.anIntArray9933[(((i_792_ >> 12) * this.spriteWidth) + (i_791_ >> 12))]);
                                 if (i_798_ != 0) is_754_[i_790_++] = i_798_;
                                 else i_790_++;
-                                i_791_ += SpriteSub3.anInt8481;
+                                i_791_ += SpriteSub3.scanlineY;
                             }
                         }
                     }
                     i_788_++;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
-            } else if (SpriteSub3.anInt8450 < 0) {
+            } else if (SpriteSub3.scanlineX < 0) {
                 int i_799_ = SpriteSub3.anInt8468;
                 while (i_799_ < 0) {
                     int i_800_ = i_799_ + i_753_;
                     if (i_800_ >= 0) {
                         if (i_800_ >= is.length) break;
-                        int i_801_ = SpriteSub3.anInt8451;
+                        int i_801_ = SpriteSub3.scanlineStepX;
                         int i_802_ = (SpriteSub3.anInt8458 + SpriteSub3.anInt8479);
                         int i_803_ = (SpriteSub3.anInt8467 + SpriteSub3.anInt8475);
                         int i_804_ = SpriteSub3.anInt8478;
                         int i_805_;
-                        if ((i_805_ = i_802_ - (this.anInt8471 << 12)) >= 0) {
-                            i_805_ = ((SpriteSub3.anInt8481 - i_805_) / SpriteSub3.anInt8481);
+                        if ((i_805_ = i_802_ - (this.spriteWidth << 12)) >= 0) {
+                            i_805_ = ((SpriteSub3.scanlineY - i_805_) / SpriteSub3.scanlineY);
                             i_804_ += i_805_;
-                            i_802_ += SpriteSub3.anInt8481 * i_805_;
-                            i_803_ += SpriteSub3.anInt8450 * i_805_;
+                            i_802_ += SpriteSub3.scanlineY * i_805_;
+                            i_803_ += SpriteSub3.scanlineX * i_805_;
                             i_801_ += i_805_;
                         }
-                        if ((i_805_ = ((i_802_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_804_) i_804_ = i_805_;
-                        if ((i_805_ = i_803_ - (this.anInt8470 << 12)) >= 0) {
-                            i_805_ = ((SpriteSub3.anInt8450 - i_805_) / SpriteSub3.anInt8450);
+                        if ((i_805_ = ((i_802_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_804_) i_804_ = i_805_;
+                        if ((i_805_ = i_803_ - (this.spriteHeight << 12)) >= 0) {
+                            i_805_ = ((SpriteSub3.scanlineX - i_805_) / SpriteSub3.scanlineX);
                             i_804_ += i_805_;
-                            i_802_ += SpriteSub3.anInt8481 * i_805_;
-                            i_803_ += SpriteSub3.anInt8450 * i_805_;
+                            i_802_ += SpriteSub3.scanlineY * i_805_;
+                            i_803_ += SpriteSub3.scanlineX * i_805_;
                             i_801_ += i_805_;
                         }
-                        if ((i_805_ = ((i_803_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_804_) i_804_ = i_805_;
+                        if ((i_805_ = ((i_803_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_804_) i_804_ = i_805_;
                         int i_806_ = is[i_800_] - i;
                         int i_807_ = -is_752_[i_800_];
-                        int i_808_ = i_806_ - (i_801_ - SpriteSub3.anInt8451);
+                        int i_808_ = i_806_ - (i_801_ - SpriteSub3.scanlineStepX);
                         if (i_808_ > 0) {
                             i_801_ += i_808_;
                             i_804_ += i_808_;
-                            i_802_ += SpriteSub3.anInt8481 * i_808_;
-                            i_803_ += SpriteSub3.anInt8450 * i_808_;
+                            i_802_ += SpriteSub3.scanlineY * i_808_;
+                            i_803_ += SpriteSub3.scanlineX * i_808_;
                         } else i_807_ -= i_808_;
                         if (i_804_ < i_807_) i_804_ = i_807_;
                         for (/**/; i_804_ < 0; i_804_++) {
-                            int i_809_ = (this.anIntArray9933[(((i_803_ >> 12) * this.anInt8471) + (i_802_ >> 12))]);
+                            int i_809_ = (this.anIntArray9933[(((i_803_ >> 12) * this.spriteWidth) + (i_802_ >> 12))]);
                             if (i_809_ != 0) is_754_[i_801_++] = i_809_;
                             else i_801_++;
-                            i_802_ += SpriteSub3.anInt8481;
-                            i_803_ += SpriteSub3.anInt8450;
+                            i_802_ += SpriteSub3.scanlineY;
+                            i_803_ += SpriteSub3.scanlineX;
                         }
                     }
                     i_799_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             } else {
                 int i_810_ = SpriteSub3.anInt8468;
@@ -1963,142 +1963,142 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_811_ = i_810_ + i_753_;
                     if (i_811_ >= 0) {
                         if (i_811_ >= is.length) break;
-                        int i_812_ = SpriteSub3.anInt8451;
+                        int i_812_ = SpriteSub3.scanlineStepX;
                         int i_813_ = (SpriteSub3.anInt8458 + SpriteSub3.anInt8479);
                         int i_814_ = (SpriteSub3.anInt8467 + SpriteSub3.anInt8475);
                         int i_815_ = SpriteSub3.anInt8478;
                         int i_816_;
-                        if ((i_816_ = i_813_ - (this.anInt8471 << 12)) >= 0) {
-                            i_816_ = ((SpriteSub3.anInt8481 - i_816_) / SpriteSub3.anInt8481);
+                        if ((i_816_ = i_813_ - (this.spriteWidth << 12)) >= 0) {
+                            i_816_ = ((SpriteSub3.scanlineY - i_816_) / SpriteSub3.scanlineY);
                             i_815_ += i_816_;
-                            i_813_ += SpriteSub3.anInt8481 * i_816_;
-                            i_814_ += SpriteSub3.anInt8450 * i_816_;
+                            i_813_ += SpriteSub3.scanlineY * i_816_;
+                            i_814_ += SpriteSub3.scanlineX * i_816_;
                             i_812_ += i_816_;
                         }
-                        if ((i_816_ = ((i_813_ - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_815_) i_815_ = i_816_;
+                        if ((i_816_ = ((i_813_ - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_815_) i_815_ = i_816_;
                         if (i_814_ < 0) {
-                            i_816_ = ((SpriteSub3.anInt8450 - 1 - i_814_) / SpriteSub3.anInt8450);
+                            i_816_ = ((SpriteSub3.scanlineX - 1 - i_814_) / SpriteSub3.scanlineX);
                             i_815_ += i_816_;
-                            i_813_ += SpriteSub3.anInt8481 * i_816_;
-                            i_814_ += SpriteSub3.anInt8450 * i_816_;
+                            i_813_ += SpriteSub3.scanlineY * i_816_;
+                            i_814_ += SpriteSub3.scanlineX * i_816_;
                             i_812_ += i_816_;
                         }
-                        if ((i_816_ = ((1 + i_814_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_815_) i_815_ = i_816_;
+                        if ((i_816_ = ((1 + i_814_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_815_) i_815_ = i_816_;
                         int i_817_ = is[i_811_] - i;
                         int i_818_ = -is_752_[i_811_];
-                        int i_819_ = i_817_ - (i_812_ - SpriteSub3.anInt8451);
+                        int i_819_ = i_817_ - (i_812_ - SpriteSub3.scanlineStepX);
                         if (i_819_ > 0) {
                             i_812_ += i_819_;
                             i_815_ += i_819_;
-                            i_813_ += SpriteSub3.anInt8481 * i_819_;
-                            i_814_ += SpriteSub3.anInt8450 * i_819_;
+                            i_813_ += SpriteSub3.scanlineY * i_819_;
+                            i_814_ += SpriteSub3.scanlineX * i_819_;
                         } else i_818_ -= i_819_;
                         if (i_815_ < i_818_) i_815_ = i_818_;
                         for (/**/; i_815_ < 0; i_815_++) {
-                            int i_820_ = (this.anIntArray9933[(((i_814_ >> 12) * this.anInt8471) + (i_813_ >> 12))]);
+                            int i_820_ = (this.anIntArray9933[(((i_814_ >> 12) * this.spriteWidth) + (i_813_ >> 12))]);
                             if (i_820_ != 0) is_754_[i_812_++] = i_820_;
                             else i_812_++;
-                            i_813_ += SpriteSub3.anInt8481;
-                            i_814_ += SpriteSub3.anInt8450;
+                            i_813_ += SpriteSub3.scanlineY;
+                            i_814_ += SpriteSub3.scanlineX;
                         }
                     }
                     i_810_++;
                     SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                     SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                    SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                    SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
                 }
             }
-        } else if (SpriteSub3.anInt8450 == 0) {
+        } else if (SpriteSub3.scanlineX == 0) {
             int i_821_ = SpriteSub3.anInt8468;
             while (i_821_ < 0) {
                 int i_822_ = i_821_ + i_753_;
                 if (i_822_ >= 0) {
                     if (i_822_ >= is.length) break;
-                    int i_823_ = SpriteSub3.anInt8451;
+                    int i_823_ = SpriteSub3.scanlineStepX;
                     int i_824_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_825_ = SpriteSub3.anInt8467;
                     int i_826_ = SpriteSub3.anInt8478;
-                    if (i_825_ >= 0 && (i_825_ - (this.anInt8470 << 12) < 0)) {
+                    if (i_825_ >= 0 && (i_825_ - (this.spriteHeight << 12) < 0)) {
                         if (i_824_ < 0) {
-                            int i_827_ = ((SpriteSub3.anInt8481 - 1 - i_824_) / SpriteSub3.anInt8481);
+                            int i_827_ = ((SpriteSub3.scanlineY - 1 - i_824_) / SpriteSub3.scanlineY);
                             i_826_ += i_827_;
-                            i_824_ += SpriteSub3.anInt8481 * i_827_;
+                            i_824_ += SpriteSub3.scanlineY * i_827_;
                             i_823_ += i_827_;
                         }
                         int i_828_;
-                        if ((i_828_ = ((1 + i_824_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_826_) i_826_ = i_828_;
+                        if ((i_828_ = ((1 + i_824_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_826_) i_826_ = i_828_;
                         int i_829_ = is[i_822_] - i;
                         int i_830_ = -is_752_[i_822_];
-                        int i_831_ = i_829_ - (i_823_ - SpriteSub3.anInt8451);
+                        int i_831_ = i_829_ - (i_823_ - SpriteSub3.scanlineStepX);
                         if (i_831_ > 0) {
                             i_823_ += i_831_;
                             i_826_ += i_831_;
-                            i_824_ += SpriteSub3.anInt8481 * i_831_;
-                            i_825_ += SpriteSub3.anInt8450 * i_831_;
+                            i_824_ += SpriteSub3.scanlineY * i_831_;
+                            i_825_ += SpriteSub3.scanlineX * i_831_;
                         } else i_830_ -= i_831_;
                         if (i_826_ < i_830_) i_826_ = i_830_;
                         for (/**/; i_826_ < 0; i_826_++) {
-                            int i_832_ = (this.anIntArray9933[(((i_825_ >> 12) * this.anInt8471) + (i_824_ >> 12))]);
+                            int i_832_ = (this.anIntArray9933[(((i_825_ >> 12) * this.spriteWidth) + (i_824_ >> 12))]);
                             if (i_832_ != 0) is_754_[i_823_++] = i_832_;
                             else i_823_++;
-                            i_824_ += SpriteSub3.anInt8481;
+                            i_824_ += SpriteSub3.scanlineY;
                         }
                     }
                 }
                 i_821_++;
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
-        } else if (SpriteSub3.anInt8450 < 0) {
+        } else if (SpriteSub3.scanlineX < 0) {
             int i_833_ = SpriteSub3.anInt8468;
             while (i_833_ < 0) {
                 int i_834_ = i_833_ + i_753_;
                 if (i_834_ >= 0) {
                     if (i_834_ >= is.length) break;
-                    int i_835_ = SpriteSub3.anInt8451;
+                    int i_835_ = SpriteSub3.scanlineStepX;
                     int i_836_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_837_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_838_ = SpriteSub3.anInt8478;
                     if (i_836_ < 0) {
-                        int i_839_ = ((SpriteSub3.anInt8481 - 1 - i_836_) / SpriteSub3.anInt8481);
+                        int i_839_ = ((SpriteSub3.scanlineY - 1 - i_836_) / SpriteSub3.scanlineY);
                         i_838_ += i_839_;
-                        i_836_ += SpriteSub3.anInt8481 * i_839_;
-                        i_837_ += SpriteSub3.anInt8450 * i_839_;
+                        i_836_ += SpriteSub3.scanlineY * i_839_;
+                        i_837_ += SpriteSub3.scanlineX * i_839_;
                         i_835_ += i_839_;
                     }
                     int i_840_;
-                    if ((i_840_ = ((1 + i_836_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_838_) i_838_ = i_840_;
-                    if ((i_840_ = i_837_ - (this.anInt8470 << 12)) >= 0) {
-                        i_840_ = ((SpriteSub3.anInt8450 - i_840_) / SpriteSub3.anInt8450);
+                    if ((i_840_ = ((1 + i_836_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_838_) i_838_ = i_840_;
+                    if ((i_840_ = i_837_ - (this.spriteHeight << 12)) >= 0) {
+                        i_840_ = ((SpriteSub3.scanlineX - i_840_) / SpriteSub3.scanlineX);
                         i_838_ += i_840_;
-                        i_836_ += SpriteSub3.anInt8481 * i_840_;
-                        i_837_ += SpriteSub3.anInt8450 * i_840_;
+                        i_836_ += SpriteSub3.scanlineY * i_840_;
+                        i_837_ += SpriteSub3.scanlineX * i_840_;
                         i_835_ += i_840_;
                     }
-                    if ((i_840_ = ((i_837_ - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_838_) i_838_ = i_840_;
+                    if ((i_840_ = ((i_837_ - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_838_) i_838_ = i_840_;
                     int i_841_ = is[i_834_] - i;
                     int i_842_ = -is_752_[i_834_];
-                    int i_843_ = i_841_ - (i_835_ - SpriteSub3.anInt8451);
+                    int i_843_ = i_841_ - (i_835_ - SpriteSub3.scanlineStepX);
                     if (i_843_ > 0) {
                         i_835_ += i_843_;
                         i_838_ += i_843_;
-                        i_836_ += SpriteSub3.anInt8481 * i_843_;
-                        i_837_ += SpriteSub3.anInt8450 * i_843_;
+                        i_836_ += SpriteSub3.scanlineY * i_843_;
+                        i_837_ += SpriteSub3.scanlineX * i_843_;
                     } else i_842_ -= i_843_;
                     if (i_838_ < i_842_) i_838_ = i_842_;
                     for (/**/; i_838_ < 0; i_838_++) {
-                        int i_844_ = (this.anIntArray9933[(((i_837_ >> 12) * this.anInt8471) + (i_836_ >> 12))]);
+                        int i_844_ = (this.anIntArray9933[(((i_837_ >> 12) * this.spriteWidth) + (i_836_ >> 12))]);
                         if (i_844_ != 0) is_754_[i_835_++] = i_844_;
                         else i_835_++;
-                        i_836_ += SpriteSub3.anInt8481;
-                        i_837_ += SpriteSub3.anInt8450;
+                        i_836_ += SpriteSub3.scanlineY;
+                        i_837_ += SpriteSub3.scanlineX;
                     }
                 }
                 i_833_++;
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
         } else {
             int i_845_ = SpriteSub3.anInt8468;
@@ -2106,83 +2106,83 @@ final class SpriteCapture extends SpriteSub3 {
                 int i_846_ = i_845_ + i_753_;
                 if (i_846_ >= 0) {
                     if (i_846_ >= is.length) break;
-                    int i_847_ = SpriteSub3.anInt8451;
+                    int i_847_ = SpriteSub3.scanlineStepX;
                     int i_848_ = SpriteSub3.anInt8458 + SpriteSub3.anInt8479;
                     int i_849_ = SpriteSub3.anInt8467 + SpriteSub3.anInt8475;
                     int i_850_ = SpriteSub3.anInt8478;
                     if (i_848_ < 0) {
-                        int i_851_ = ((SpriteSub3.anInt8481 - 1 - i_848_) / SpriteSub3.anInt8481);
+                        int i_851_ = ((SpriteSub3.scanlineY - 1 - i_848_) / SpriteSub3.scanlineY);
                         i_850_ += i_851_;
-                        i_848_ += SpriteSub3.anInt8481 * i_851_;
-                        i_849_ += SpriteSub3.anInt8450 * i_851_;
+                        i_848_ += SpriteSub3.scanlineY * i_851_;
+                        i_849_ += SpriteSub3.scanlineX * i_851_;
                         i_847_ += i_851_;
                     }
                     int i_852_;
-                    if ((i_852_ = ((1 + i_848_ - (this.anInt8471 << 12) - SpriteSub3.anInt8481) / SpriteSub3.anInt8481)) > i_850_) i_850_ = i_852_;
+                    if ((i_852_ = ((1 + i_848_ - (this.spriteWidth << 12) - SpriteSub3.scanlineY) / SpriteSub3.scanlineY)) > i_850_) i_850_ = i_852_;
                     if (i_849_ < 0) {
-                        i_852_ = ((SpriteSub3.anInt8450 - 1 - i_849_) / SpriteSub3.anInt8450);
+                        i_852_ = ((SpriteSub3.scanlineX - 1 - i_849_) / SpriteSub3.scanlineX);
                         i_850_ += i_852_;
-                        i_848_ += SpriteSub3.anInt8481 * i_852_;
-                        i_849_ += SpriteSub3.anInt8450 * i_852_;
+                        i_848_ += SpriteSub3.scanlineY * i_852_;
+                        i_849_ += SpriteSub3.scanlineX * i_852_;
                         i_847_ += i_852_;
                     }
-                    if ((i_852_ = ((1 + i_849_ - (this.anInt8470 << 12) - SpriteSub3.anInt8450) / SpriteSub3.anInt8450)) > i_850_) i_850_ = i_852_;
+                    if ((i_852_ = ((1 + i_849_ - (this.spriteHeight << 12) - SpriteSub3.scanlineX) / SpriteSub3.scanlineX)) > i_850_) i_850_ = i_852_;
                     int i_853_ = is[i_846_] - i;
                     int i_854_ = -is_752_[i_846_];
-                    int i_855_ = i_853_ - (i_847_ - SpriteSub3.anInt8451);
+                    int i_855_ = i_853_ - (i_847_ - SpriteSub3.scanlineStepX);
                     if (i_855_ > 0) {
                         i_847_ += i_855_;
                         i_850_ += i_855_;
-                        i_848_ += SpriteSub3.anInt8481 * i_855_;
-                        i_849_ += SpriteSub3.anInt8450 * i_855_;
+                        i_848_ += SpriteSub3.scanlineY * i_855_;
+                        i_849_ += SpriteSub3.scanlineX * i_855_;
                     } else i_854_ -= i_855_;
                     if (i_850_ < i_854_) i_850_ = i_854_;
                     for (/**/; i_850_ < 0; i_850_++) {
-                        int i_856_ = (this.anIntArray9933[(((i_849_ >> 12) * this.anInt8471) + (i_848_ >> 12))]);
+                        int i_856_ = (this.anIntArray9933[(((i_849_ >> 12) * this.spriteWidth) + (i_848_ >> 12))]);
                         if (i_856_ != 0) is_754_[i_847_++] = i_856_;
                         else i_847_++;
-                        i_848_ += SpriteSub3.anInt8481;
-                        i_849_ += SpriteSub3.anInt8450;
+                        i_848_ += SpriteSub3.scanlineY;
+                        i_849_ += SpriteSub3.scanlineX;
                     }
                 }
                 i_845_++;
                 SpriteSub3.anInt8458 += SpriteSub3.anInt8457;
                 SpriteSub3.anInt8467 += SpriteSub3.anInt8452;
-                SpriteSub3.anInt8451 += SpriteSub3.anInt8453;
+                SpriteSub3.scanlineStepX += SpriteSub3.scanlineStepY;
             }
         }
     }
 
     final void method963(int i, int i_857_, Shader var_aa, int i_858_, int i_859_) {
-        if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
+        if (this.toolkit.method3716()) throw new IllegalStateException();
         i += this.anInt8461;
         i_857_ += this.anInt8464;
         int i_860_ = 0;
-        int i_861_ = this.aHa_Sub1_8460.anInt7477;
-        int i_862_ = this.anInt8471;
-        int i_863_ = this.anInt8470;
+        int i_861_ = this.toolkit.anInt7477;
+        int i_862_ = this.spriteWidth;
+        int i_863_ = this.spriteHeight;
         int i_864_ = i_861_ - i_862_;
         int i_865_ = 0;
         int i_866_ = i + i_857_ * i_861_;
-        if (i_857_ < this.aHa_Sub1_8460.anInt7476) {
-            int i_867_ = (this.aHa_Sub1_8460.anInt7476 - i_857_);
+        if (i_857_ < this.toolkit.anInt7476) {
+            int i_867_ = (this.toolkit.anInt7476 - i_857_);
             i_863_ -= i_867_;
-            i_857_ = this.aHa_Sub1_8460.anInt7476;
+            i_857_ = this.toolkit.anInt7476;
             i_860_ += i_867_ * i_862_;
             i_866_ += i_867_ * i_861_;
         }
-        if (i_857_ + i_863_ > this.aHa_Sub1_8460.anInt7503) i_863_ -= i_857_ + i_863_ - this.aHa_Sub1_8460.anInt7503;
-        if (i < this.aHa_Sub1_8460.anInt7496) {
-            int i_868_ = (this.aHa_Sub1_8460.anInt7496 - i);
+        if (i_857_ + i_863_ > this.toolkit.anInt7503) i_863_ -= i_857_ + i_863_ - this.toolkit.anInt7503;
+        if (i < this.toolkit.anInt7496) {
+            int i_868_ = (this.toolkit.anInt7496 - i);
             i_862_ -= i_868_;
-            i = this.aHa_Sub1_8460.anInt7496;
+            i = this.toolkit.anInt7496;
             i_860_ += i_868_;
             i_866_ += i_868_;
             i_865_ += i_868_;
             i_864_ += i_868_;
         }
-        if (i + i_862_ > this.aHa_Sub1_8460.anInt7507) {
-            int i_869_ = (i + i_862_ - (this.aHa_Sub1_8460.anInt7507));
+        if (i + i_862_ > this.toolkit.anInt7507) {
+            int i_869_ = (i + i_862_ - (this.toolkit.anInt7507));
             i_862_ -= i_869_;
             i_865_ += i_869_;
             i_864_ += i_869_;
@@ -2191,12 +2191,12 @@ final class SpriteCapture extends SpriteSub3 {
             ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
             int[] is = var_aa_Sub3.anIntArray5201;
             int[] is_870_ = var_aa_Sub3.anIntArray5202;
-            int[] is_871_ = (this.aHa_Sub1_8460.anIntArray7483);
+            int[] is_871_ = (this.toolkit.anIntArray7483);
             int i_872_ = i_857_;
             if (i_859_ > i_872_) {
                 i_872_ = i_859_;
                 i_866_ += (i_859_ - i_857_) * i_861_;
-                i_860_ += (i_859_ - i_857_) * this.anInt8471;
+                i_860_ += (i_859_ - i_857_) * this.spriteWidth;
             }
             int i_873_ = (Math.min(i_859_ + is.length, i_857_ + i_863_));
             for (int i_874_ = i_872_; i_874_ < i_873_; i_874_++) {
@@ -2237,41 +2237,41 @@ final class SpriteCapture extends SpriteSub3 {
     }
 
     final void method964(int i, int i_883_, int i_884_, int i_885_, int i_886_) {
-        if (this.aHa_Sub1_8460.method3716()) throw new IllegalStateException();
-        int i_887_ = this.aHa_Sub1_8460.anInt7477;
+        if (this.toolkit.method3716()) throw new IllegalStateException();
+        int i_887_ = this.toolkit.anInt7477;
         i += this.anInt8461;
         i_883_ += this.anInt8464;
         int i_888_ = i_883_ * i_887_ + i;
         int i_889_ = 0;
-        int i_890_ = this.anInt8470;
-        int i_891_ = this.anInt8471;
+        int i_890_ = this.spriteHeight;
+        int i_891_ = this.spriteWidth;
         int i_892_ = i_887_ - i_891_;
         int i_893_ = 0;
-        if (i_883_ < this.aHa_Sub1_8460.anInt7476) {
-            int i_894_ = (this.aHa_Sub1_8460.anInt7476 - i_883_);
+        if (i_883_ < this.toolkit.anInt7476) {
+            int i_894_ = (this.toolkit.anInt7476 - i_883_);
             i_890_ -= i_894_;
-            i_883_ = this.aHa_Sub1_8460.anInt7476;
+            i_883_ = this.toolkit.anInt7476;
             i_889_ += i_894_ * i_891_;
             i_888_ += i_894_ * i_887_;
         }
-        if (i_883_ + i_890_ > this.aHa_Sub1_8460.anInt7503) i_890_ -= i_883_ + i_890_ - this.aHa_Sub1_8460.anInt7503;
-        if (i < this.aHa_Sub1_8460.anInt7496) {
-            int i_895_ = (this.aHa_Sub1_8460.anInt7496 - i);
+        if (i_883_ + i_890_ > this.toolkit.anInt7503) i_890_ -= i_883_ + i_890_ - this.toolkit.anInt7503;
+        if (i < this.toolkit.anInt7496) {
+            int i_895_ = (this.toolkit.anInt7496 - i);
             i_891_ -= i_895_;
-            i = this.aHa_Sub1_8460.anInt7496;
+            i = this.toolkit.anInt7496;
             i_889_ += i_895_;
             i_888_ += i_895_;
             i_893_ += i_895_;
             i_892_ += i_895_;
         }
-        if (i + i_891_ > this.aHa_Sub1_8460.anInt7507) {
-            int i_896_ = (i + i_891_ - (this.aHa_Sub1_8460.anInt7507));
+        if (i + i_891_ > this.toolkit.anInt7507) {
+            int i_896_ = (i + i_891_ - (this.toolkit.anInt7507));
             i_891_ -= i_896_;
             i_893_ += i_896_;
             i_892_ += i_896_;
         }
         if (i_891_ > 0 && i_890_ > 0) {
-            int[] is = (this.aHa_Sub1_8460.anIntArray7483);
+            int[] is = (this.toolkit.anIntArray7483);
             if (i_886_ == 0) {
                 if (i_884_ == 1) {
                     for (int i_897_ = -i_890_; i_897_ < 0; i_897_++) {
@@ -2556,8 +2556,8 @@ final class SpriteCapture extends SpriteSub3 {
         if (i_997_ > 0 && i_998_ > 0) {
             int i_1003_ = 0;
             int i_1004_ = 0;
-            int i_1005_ = (this.anInt8461 + this.anInt8471 + this.anInt8454);
-            int i_1006_ = (this.anInt8464 + this.anInt8470 + this.anInt8456);
+            int i_1005_ = (this.anInt8461 + this.spriteWidth + this.anInt8454);
+            int i_1006_ = (this.anInt8464 + this.spriteHeight + this.anInt8456);
             int i_1007_ = (i_1005_ << 16) / i_997_;
             int i_1008_ = (i_1006_ << 16) / i_998_;
             if (this.anInt8461 > 0) {
@@ -2570,36 +2570,36 @@ final class SpriteCapture extends SpriteSub3 {
                 i_995_ += i_1010_;
                 i_1004_ += i_1010_ * i_1008_ - (this.anInt8464 << 16);
             }
-            if (this.anInt8471 < i_1005_) i_997_ = ((this.anInt8471 << 16) - i_1003_ + i_1007_ - 1) / i_1007_;
-            if (this.anInt8470 < i_1006_) i_998_ = ((this.anInt8470 << 16) - i_1004_ + i_1008_ - 1) / i_1008_;
-            int i_1011_ = i + i_995_ * this.aHa_Sub1_8460.anInt7477;
-            int i_1012_ = (this.aHa_Sub1_8460.anInt7477 - i_997_);
-            if (i_995_ + i_998_ > this.aHa_Sub1_8460.anInt7503) i_998_ -= (i_995_ + i_998_ - (this.aHa_Sub1_8460.anInt7503));
-            if (i_995_ < this.aHa_Sub1_8460.anInt7476) {
-                int i_1013_ = (this.aHa_Sub1_8460.anInt7476) - i_995_;
+            if (this.spriteWidth < i_1005_) i_997_ = ((this.spriteWidth << 16) - i_1003_ + i_1007_ - 1) / i_1007_;
+            if (this.spriteHeight < i_1006_) i_998_ = ((this.spriteHeight << 16) - i_1004_ + i_1008_ - 1) / i_1008_;
+            int i_1011_ = i + i_995_ * this.toolkit.anInt7477;
+            int i_1012_ = (this.toolkit.anInt7477 - i_997_);
+            if (i_995_ + i_998_ > this.toolkit.anInt7503) i_998_ -= (i_995_ + i_998_ - (this.toolkit.anInt7503));
+            if (i_995_ < this.toolkit.anInt7476) {
+                int i_1013_ = (this.toolkit.anInt7476) - i_995_;
                 i_998_ -= i_1013_;
-                i_1011_ += i_1013_ * this.aHa_Sub1_8460.anInt7477;
+                i_1011_ += i_1013_ * this.toolkit.anInt7477;
                 i_1004_ += i_1008_ * i_1013_;
             }
-            if (i + i_997_ > this.aHa_Sub1_8460.anInt7507) {
-                int i_1014_ = (i + i_997_ - (this.aHa_Sub1_8460.anInt7507));
+            if (i + i_997_ > this.toolkit.anInt7507) {
+                int i_1014_ = (i + i_997_ - (this.toolkit.anInt7507));
                 i_997_ -= i_1014_;
                 i_1012_ += i_1014_;
             }
-            if (i < this.aHa_Sub1_8460.anInt7496) {
-                int i_1015_ = (this.aHa_Sub1_8460.anInt7496) - i;
+            if (i < this.toolkit.anInt7496) {
+                int i_1015_ = (this.toolkit.anInt7496) - i;
                 i_997_ -= i_1015_;
                 i_1011_ += i_1015_;
                 i_1003_ += i_1007_ * i_1015_;
                 i_1012_ += i_1015_;
             }
-            float[] fs = (this.aHa_Sub1_8460.aFloatArray7511);
-            int[] is = (this.aHa_Sub1_8460.anIntArray7483);
+            float[] fs = (this.toolkit.aFloatArray7511);
+            int[] is = (this.toolkit.anIntArray7483);
             if (i_1001_ == 0) {
                 if (i_999_ == 1) {
                     int i_1016_ = i_1003_;
                     for (int i_1017_ = -i_998_; i_1017_ < 0; i_1017_++) {
-                        int i_1018_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1018_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1019_ = -i_997_; i_1019_ < 0; i_1019_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 is[i_1011_] = (this.anIntArray9933[(i_1003_ >> 16) + i_1018_]);
@@ -2620,7 +2620,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_1022_ = i_1000_ & 0xff;
                     int i_1023_ = i_1003_;
                     for (int i_1024_ = -i_998_; i_1024_ < 0; i_1024_++) {
-                        int i_1025_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1025_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1026_ = -i_997_; i_1026_ < 0; i_1026_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1027_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1025_]);
@@ -2642,7 +2642,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_999_ == 3) {
                     int i_1031_ = i_1003_;
                     for (int i_1032_ = -i_998_; i_1032_ < 0; i_1032_++) {
-                        int i_1033_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1033_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1034_ = -i_997_; i_1034_ < 0; i_1034_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1035_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1033_]);
@@ -2669,7 +2669,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_1000_ = (i_1041_ | i_1042_) >>> 8;
                     int i_1043_ = i_1003_;
                     for (int i_1044_ = -i_998_; i_1044_ < 0; i_1044_++) {
-                        int i_1045_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1045_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1046_ = -i_997_; i_1046_ < 0; i_1046_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1047_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1045_]);
@@ -2693,7 +2693,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_999_ == 1) {
                     int i_1048_ = i_1003_;
                     for (int i_1049_ = -i_998_; i_1049_ < 0; i_1049_++) {
-                        int i_1050_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1050_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1051_ = -i_997_; i_1051_ < 0; i_1051_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1052_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1050_]);
@@ -2717,7 +2717,7 @@ final class SpriteCapture extends SpriteSub3 {
                         int i_1054_ = i_1000_ >>> 24;
                         int i_1055_ = 256 - i_1054_;
                         for (int i_1056_ = -i_998_; i_1056_ < 0; i_1056_++) {
-                            int i_1057_ = ((i_1004_ >> 16) * this.anInt8471);
+                            int i_1057_ = ((i_1004_ >> 16) * this.spriteWidth);
                             for (int i_1058_ = -i_997_; i_1058_ < 0; i_1058_++) {
                                 if ((float) i_996_ < fs[i_1011_]) {
                                     int i_1059_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1057_]);
@@ -2741,7 +2741,7 @@ final class SpriteCapture extends SpriteSub3 {
                         int i_1064_ = i_1000_ >>> 24;
                         int i_1065_ = 256 - i_1064_;
                         for (int i_1066_ = -i_998_; i_1066_ < 0; i_1066_++) {
-                            int i_1067_ = ((i_1004_ >> 16) * this.anInt8471);
+                            int i_1067_ = ((i_1004_ >> 16) * this.spriteWidth);
                             for (int i_1068_ = -i_997_; i_1068_ < 0; i_1068_++) {
                                 if ((float) i_996_ < fs[i_1011_]) {
                                     int i_1069_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1067_]);
@@ -2779,7 +2779,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_1078_ = i_1000_ >>> 24;
                     int i_1079_ = 256 - i_1078_;
                     for (int i_1080_ = -i_998_; i_1080_ < 0; i_1080_++) {
-                        int i_1081_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1081_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1082_ = -i_997_; i_1082_ < 0; i_1082_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1083_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1081_]);
@@ -2812,7 +2812,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_1000_ = (i_1089_ | i_1090_) >>> 8;
                     int i_1091_ = i_1003_;
                     for (int i_1092_ = -i_998_; i_1092_ < 0; i_1092_++) {
-                        int i_1093_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1093_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1094_ = -i_997_; i_1094_ < 0; i_1094_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1095_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1093_]);
@@ -2838,7 +2838,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_999_ == 1) {
                     int i_1096_ = i_1003_;
                     for (int i_1097_ = -i_998_; i_1097_ < 0; i_1097_++) {
-                        int i_1098_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1098_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1099_ = -i_997_; i_1099_ < 0; i_1099_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1100_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1098_]);
@@ -2866,7 +2866,7 @@ final class SpriteCapture extends SpriteSub3 {
                     int i_1106_ = (i_1000_ & 0xff00) >> 8;
                     int i_1107_ = i_1000_ & 0xff;
                     for (int i_1108_ = -i_998_; i_1108_ < 0; i_1108_++) {
-                        int i_1109_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1109_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1110_ = -i_997_; i_1110_ < 0; i_1110_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1111_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1109_]);
@@ -2895,7 +2895,7 @@ final class SpriteCapture extends SpriteSub3 {
                 if (i_999_ == 3) {
                     int i_1118_ = i_1003_;
                     for (int i_1119_ = -i_998_; i_1119_ < 0; i_1119_++) {
-                        int i_1120_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1120_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1121_ = -i_997_; i_1121_ < 0; i_1121_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1122_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1120_]);
@@ -2927,7 +2927,7 @@ final class SpriteCapture extends SpriteSub3 {
                     i_1000_ = (i_1128_ | i_1129_) >>> 8;
                     int i_1130_ = i_1003_;
                     for (int i_1131_ = -i_998_; i_1131_ < 0; i_1131_++) {
-                        int i_1132_ = ((i_1004_ >> 16) * this.anInt8471);
+                        int i_1132_ = ((i_1004_ >> 16) * this.spriteWidth);
                         for (int i_1133_ = -i_997_; i_1133_ < 0; i_1133_++) {
                             if ((float) i_996_ < fs[i_1011_]) {
                                 int i_1134_ = (this.anIntArray9933[(i_1003_ >> 16) + i_1132_]);

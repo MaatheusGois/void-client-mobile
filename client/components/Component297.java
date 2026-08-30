@@ -67,13 +67,13 @@ final class Component297
                 if (class105 instanceof SpriteCapture) {
                     SpriteCapture class105_sub3_sub1 = (SpriteCapture) class105;
                     this.anIntArray4731 = (class105_sub3_sub1.anIntArray9933);
-                    this.anInt4722 = class105_sub3_sub1.anInt8470;
-                    this.anInt4725 = class105_sub3_sub1.anInt8471;
+                    this.anInt4722 = class105_sub3_sub1.spriteHeight;
+                    this.anInt4725 = class105_sub3_sub1.spriteWidth;
                 } else {
                     if (!(class105 instanceof SpriteSub3Sub3)) throw new RuntimeException();
                     SpriteSub3Sub3 class105_sub3_sub3 = (SpriteSub3Sub3) class105;
-                    this.anInt4725 = class105_sub3_sub3.anInt8471;
-                    this.anInt4722 = class105_sub3_sub3.anInt8470;
+                    this.anInt4725 = class105_sub3_sub3.spriteWidth;
+                    this.anInt4722 = class105_sub3_sub3.spriteHeight;
                     this.anIntArray4731 = (class105_sub3_sub3.anIntArray9936);
                 }
                 if (class216 == null) break;

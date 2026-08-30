@@ -61,6 +61,7 @@ java {
                 "display",
                 "components",
                 "misc",
+                "deob",
             )
             resources.srcDirs("resources")
         }

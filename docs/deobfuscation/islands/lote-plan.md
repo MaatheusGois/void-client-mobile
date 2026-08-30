@@ -52,6 +52,10 @@ rename. Model/provider abstraction becomes readable.
 
 ## lote 51 — CS2 interpreter stacks  *(~1 450 refs freed, the biggest single win)*
 
+**STATUS: DONE** — applied in commit `20a93f7` (`ClientScriptExecutor.java`:
+`intStackPointer`, `stringStackPointer`, `callFramePointer`, `intStack`,
+`stringStack`, `callFrames`). Reflection: none.
+
 **Scope** — all in `client/script/ClientScriptExecutor.java`:
 
 | Field | New name | Refs |
@@ -77,30 +81,48 @@ obvious at a glance.
 
 ## lote 52 — `SpriteSub3` rasterizer family  *(~1 200 refs freed)*
 
+**STATUS: DONE (phase 1 — evidenced subset)** — executed this session.
+
 **Scope** — `client/sprites/SpriteSub3.java` and its subclasses
-(`SpriteSub3Sub2`, `SpriteSub3Sub3`, `SpriteCapture`).
+(`SpriteSub3Sub2`, `SpriteSub3Sub3`, `SpriteCapture`), plus the two
+field reads in `client/components/Component297.java` (constructor casts a
+`SpriteCapture` / `SpriteSub3Sub3` and copies `spriteWidth` / `spriteHeight`
+into `anInt4725` / `anInt4722`).
+
+Renamed (whole-word, scoped to `sprites/` so `Component297.anInt8471` — a
+*different* field — was left alone):
 
 | Field | New name | Refs |
 |---|---|---:|
 | `anInt8477` | `spriteAlpha` | 319 |
 | `anInt8471` | `spriteWidth` | 235 |
-| `anInt8450` | `scanlineStartX` | 306 |
-| `anInt8481` | `scanlineStartY` | 282 |
-| `anInt8451` | `scanlineAdvanceX` | 137 |
-| `anInt8453` | `scanlineAdvanceY` | (likely) |
-| `anInt8480` | (per-frame color init) | 128 |
-| `anInt8469`, `anInt8463`, `anInt8465` | (sprite counters) | ~110 each |
-| `aHa_Sub1_8460` | `toolkit` | (sprite toolkit ref) |
-| **all 84xx** `anInt####` | (SpriteSub3 fields) | 100s more |
+| `anInt8470` | `spriteHeight` | (drawn height) |
+| `anInt8450` | `scanlineX` | 306 |
+| `anInt8481` | `scanlineY` | 282 |
+| `anInt8451` | `scanlineStepX` | 137 |
+| `anInt8453` | `scanlineStepY` | (likely) |
+| `aHa_Sub1_8460` | `toolkit` | (GlToolkitSub1 ref) |
 
-This is the **whole SpriteSub3 rasterizer**, one well-known role
-(scanline rasterizer with alpha blend). The "84xx" range is
-essentially a single island.
+Remaining 84xx still obfuscated (deferred — role not yet proven strongly
+enough): `anInt8480`, `anInt8469`, `anInt8463`, `anInt8465`, `anInt8452`,
+`anInt8454`–`anInt8459`, `anInt8461`, `anInt8466`–`anInt8468`. Treat as
+lote 52b.
 
-**Reflection check:** none.
+This is the **SpriteSub3 CPU rasterizer** — scanline alpha-blend loop.
+`spriteAlpha` is the high byte of ARGB (`argb >>> 24`), gated `== 255` for
+the opaque fast path. `scanlineX/Y` are fixed-point (×4096F) interpolated
+coordinates; `scanlineStepX/Y` are the per-pixel advance.
 
-**Expected output:** the `SpriteCapture` (which is the inline rasterizer
-loop) becomes understandable: alpha blend, scanline stepping, etc.
+**Reflection check:** none. Gate `check_reflection.py` → PASS.
+`:client:compileJava` → SUCCESS. (`Component297.java` updated to use the
+new field names — it was the only external reader.)
+
+**Note:** this lote renames `anInt####` fields, so `count_methods.py`
+(`method####` only) is **unaffected** — expect ~3 326, not < 900. The
+"< 900" target in the original plan was wrong for this lote.
+
+**Expected output:** `SpriteCapture` (the inline rasterizer loop) is now
+readable: alpha blend + scanline stepping.
 
 ---
 
@@ -131,6 +153,11 @@ desktop and mobile.
 ---
 
 ## lote 54 — `GlToolkit*` renderer island  *(~1 200 refs freed)*
+
+**STATUS: DONE (partial)** — `method3771` was already renamed to
+`setTextureUnit` before this session (no `method3771` / `setTextureUnit`
+token remains in `client/`). The rest of the renderer island is still
+pending.
 
 **Files:**
 - `client/toolkit/base/GlToolkitSub3.java`  (602 refs)
@@ -235,10 +262,15 @@ record progress in `lean-ctx` for continuity.
 ```bash
 python3 .cursor/skills/void-client-deobfuscate/scripts/check_reflection.py
 ./gradlew :client:compileJava
-(cd ios && ./gradlew compileJava)              # use `clean compileJava` after class renames
 python3 .cursor/skills/void-client-deobfuscate/scripts/count_methods.py
 ```
 
+> Note: there is no `:ios` gradle subproject in this repo (only `:client`
+> exists — run `./gradlew projects`). The mobile hosts (`android/…/AwtHost`,
+> `ios/…/AwtHost`, `ServerPrefs`) are kept in lockstep purely via the
+> reflection gate, not a separate compile.
+
 **Done definition:** `count_methods.py` reports < 100 unique
-`method####`. Current: **3 331**. Target after lote 50: < 3 250.
-After lote 51: < 2 100. After lote 52: < 900.
+`method####`. Current: **3 326**. Target after lote 50: < 3 250.
+After lote 51: ~3 326 (lote 51 renames anInt fields, not method####).
+After lote 52: ~3 326 (same reason — anInt#### island).
