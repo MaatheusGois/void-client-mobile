@@ -30,7 +30,7 @@ final class DisplayModeManagerContainer136
     }
 
     final void method1152(int i) {
-        this.aHa_Sub2_1927.method3750(91, this);
+        this.aHa_Sub2_1927.glBindArrayBuffer(91, this);
         if (i >= -78) method10(false);
         anInt4710++;
     }

@@ -118,8 +118,8 @@ final class Component237
                                 }
                             }
                         }
-                        if (i_13_ < 0) var_ha_Sub2.method3757(-1, -124);
-                        else var_ha_Sub2.method3757(i_13_, -100);
+                        if (i_13_ < 0) var_ha_Sub2.glResetViewport(-1, -124);
+                        else var_ha_Sub2.glResetViewport(i_13_, -100);
                         if (!bool || (Component328.aFloat1478 == var_ha_Sub2.aFloat7768)) {
                             if (var_ha_Sub2.aFloat7768 != 1.0F) var_ha_Sub2.DualToolkit(1.0F);
                         } else var_ha_Sub2.DualToolkit(Component328.aFloat1478);
@@ -394,8 +394,8 @@ final class Component237
             }
             if (aClass348_Sub49_Sub1_3020.offset != 0) {
                 anInterface2_3027.method11(24, aClass348_Sub49_Sub1_3020.offset, (aClass348_Sub49_Sub1_3020.payload), -9894);
-                var_ha_Sub2.method3794(aClass123_3029, aClass123_3028, i_18_ + -786006967, aClass123_3025, null);
-                var_ha_Sub2.method3756((aClass348_Sub49_Sub1_3020.offset / 24), 7, 0, 120);
+                var_ha_Sub2.glSetVertexPointer(aClass123_3029, aClass123_3028, i_18_ + -786006967, aClass123_3025, null);
+                var_ha_Sub2.glDrawArrays((aClass348_Sub49_Sub1_3020.offset / 24), 7, 0, 120);
             }
         }
     }

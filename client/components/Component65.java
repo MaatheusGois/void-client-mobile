@@ -148,7 +148,7 @@ final class Component65
         int i_38_ = 80 / ((i - 15) / 60);
         anInt1614++;
         aHa_Sub2_1616.method3748(0, false);
-        aHa_Sub2_1616.method3757(-2, -119);
+        aHa_Sub2_1616.glResetViewport(-2, -119);
         aHa_Sub2_1616.method3761(0, 1);
         aHa_Sub2_1616.method3753(1, 1);
         float f = 1.0F / (float) (aHa_Sub2_1616.anInt7733 * 128);

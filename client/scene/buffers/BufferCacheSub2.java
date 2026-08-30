@@ -523,10 +523,10 @@ final class BufferCacheSub2
             this.aHa_Sub2_8272.method3755(-32);
             this.aHa_Sub2_8272.method3807(false, 2);
             this.aHa_Sub2_8272.method3728(false, 92);
-            this.aHa_Sub2_8272.method3752(117, false);
+            this.aHa_Sub2_8272.glEnableScissorTest(117, false);
             this.aHa_Sub2_8272.method3748(0, false);
             this.aHa_Sub2_8272.method3753(0, 1);
-            this.aHa_Sub2_8272.method3757(-2, -100);
+            this.aHa_Sub2_8272.glResetViewport(-2, -100);
             this.aHa_Sub2_8272.bindTexture((byte) -86, null);
             DisplayModeManagerContainer306.aFloatArray4772[0] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7688) * ((float) this.anInt4592 * 128.0F)));
             DisplayModeManagerContainer306.aFloatArray4772[8] = 0.0F;
@@ -567,9 +567,9 @@ final class BufferCacheSub2
             if ((0x7 & this.anInt8235) == 0) this.aHa_Sub2_8272.method3728(false, 56);
             else {
                 this.aHa_Sub2_8272.method3728(true, 91);
-                this.aHa_Sub2_8272.method3796(16384);
+                this.aHa_Sub2_8272.glSetLightAmbient(16384);
             }
-            this.aHa_Sub2_8272.method3794(this.aClass123_8276, aClass123_8274, -26411, this.aClass123_8277, this.aClass123_8275);
+            this.aHa_Sub2_8272.glSetVertexPointer(this.aClass123_8276, aClass123_8274, -26411, this.aClass123_8277, this.aClass123_8275);
             if (this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.payload.length < anInt8257 * 2) this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798 = new Component182(anInt8257 * 2);
             else this.aHa_Sub2_8272.aClass348_Sub49_Sub1_7798.offset = 0;
             int i_158_ = 0;
@@ -609,7 +609,7 @@ final class BufferCacheSub2
             }
             if (i_158_ > 0) {
                 Component261 class119_sub2 = new Component261(this.aHa_Sub2_8272, 5123, (class348_sub49_sub1.payload), (class348_sub49_sub1.offset));
-                this.aHa_Sub2_8272.method3759(i_158_, -128, 4, class119_sub2, 0);
+                this.aHa_Sub2_8272.glDrawElements(i_158_, -128, 4, class119_sub2, 0);
             }
         }
     }
@@ -757,24 +757,24 @@ final class BufferCacheSub2
                 this.aHa_Sub2_8272.method3728(false, 97);
                 this.aHa_Sub2_8272.method3748(0, false);
                 this.aHa_Sub2_8272.method3753(128, 1);
-                this.aHa_Sub2_8272.method3757(-2, -88);
+                this.aHa_Sub2_8272.glResetViewport(-2, -88);
                 this.aHa_Sub2_8272.bindTexture((byte) -124, (this.aHa_Sub2_8272.aClass258_Sub3_7827));
-                this.aHa_Sub2_8272.method3729(8448, (byte) 98, 7681);
-                this.aHa_Sub2_8272.method3762(34166, 770, (byte) -87, 0);
-                this.aHa_Sub2_8272.method3775(false, 0, 770, 34167);
+                this.aHa_Sub2_8272.glTexEnvi(8448, (byte) 98, 7681);
+                this.aHa_Sub2_8272.glTexEnvCombine(34166, 770, (byte) -87, 0);
+                this.aHa_Sub2_8272.glTexEnvCombineMode(false, 0, 770, 34167);
                 for (Node class348 = aClass262_8256.first(4); class348 != null; class348 = aClass262_8256.next((byte) 92)) {
                     NodeSub32 class348_sub32 = (NodeSub32) class348;
                     class348_sub32.method3023(bools, 255, i_194_, i_196_, i_192_);
                 }
-                this.aHa_Sub2_8272.method3762(5890, 768, (byte) -87, 0);
-                this.aHa_Sub2_8272.method3775(false, 0, 770, 5890);
+                this.aHa_Sub2_8272.glTexEnvCombine(5890, 768, (byte) -87, 0);
+                this.aHa_Sub2_8272.glTexEnvCombineMode(false, 0, 770, 5890);
                 this.aHa_Sub2_8272.bindTexture((byte) -96, null);
                 this.aHa_Sub2_8272.L(i_209_, i_210_, (this.aHa_Sub2_8272.anInt7813));
             }
             if (aClass104_8266 != null) {
                 OpenGL.glPushMatrix();
                 OpenGL.glTranslatef(0.0F, -1.0F, 0.0F);
-                this.aHa_Sub2_8272.method3794(this.aClass123_8276, null, -26411, this.aClass123_8277, null);
+                this.aHa_Sub2_8272.glSetVertexPointer(this.aClass123_8276, null, -26411, this.aClass123_8277, null);
                 aClass104_8266.method956(bool, 112, bools, i_192_, i_196_, i_194_);
                 OpenGL.glPopMatrix();
             }

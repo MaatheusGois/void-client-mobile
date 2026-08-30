@@ -29,7 +29,7 @@ final class MenuOpener extends Component137 implements Interface8 {
 
     final void method1152(int i) {
         anInt4840++;
-        this.aHa_Sub2_1927.method3793(1, this);
+        this.aHa_Sub2_1927.glBindElementBuffer(1, this);
         if (i >= -78) aClass161_4839 = null;
     }
 

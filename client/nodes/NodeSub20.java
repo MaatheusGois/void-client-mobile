@@ -103,15 +103,15 @@ final class NodeSub20
         }
         if (i_9_ > 0) {
             aClass119_Sub2_6843.method35(class348_sub49_sub1.payload, 5123, 64, class348_sub49_sub1.offset);
-            aHa_Sub2_6831.method3794(aS_Sub2_6839.aClass123_8276, aClass123_6844, -26411, aS_Sub2_6839.aClass123_8277, aS_Sub2_6839.aClass123_8275);
+            aHa_Sub2_6831.glSetVertexPointer(aS_Sub2_6839.aClass123_8276, aClass123_6844, -26411, aS_Sub2_6839.aClass123_8277, aS_Sub2_6839.aClass123_8275);
             aHa_Sub2_6831.method3746(((0x7 & aS_Sub2_6839.anInt8235) != 0), this.anInt6841, ((aS_Sub2_6839.anInt8235 & 0x8) != 0), 112);
             if (aHa_Sub2_6831.aBoolean7846) aHa_Sub2_6831.EA(2147483647, this.anInt6825, this.anInt6833, this.anInt6826);
             OpenGL.glMatrixMode(5890);
             OpenGL.glPushMatrix();
             OpenGL.glScalef(1.0F / this.aFloat6832, 1.0F / this.aFloat6832, 1.0F);
             OpenGL.glMatrixMode(5888);
-            aHa_Sub2_6831.method3794(aS_Sub2_6839.aClass123_8276, aClass123_6844, -26411, aS_Sub2_6839.aClass123_8277, aS_Sub2_6839.aClass123_8275);
-            aHa_Sub2_6831.method3759(i_9_, -128, 4, aClass119_Sub2_6843, 0);
+            aHa_Sub2_6831.glSetVertexPointer(aS_Sub2_6839.aClass123_8276, aClass123_6844, -26411, aS_Sub2_6839.aClass123_8277, aS_Sub2_6839.aClass123_8275);
+            aHa_Sub2_6831.glDrawElements(i_9_, -128, 4, aClass119_Sub2_6843, 0);
             OpenGL.glMatrixMode(5890);
             OpenGL.glPopMatrix();
             OpenGL.glMatrixMode(5888);

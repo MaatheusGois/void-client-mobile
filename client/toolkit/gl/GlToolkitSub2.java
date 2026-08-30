@@ -392,8 +392,8 @@ final class GlToolkitSub2
             this.anInt7782 = i_0_;
             this.anInt7856 = i;
             this.anInt7813 = i_1_;
-            method3803(16711680);
-            method3732(92);
+            glSetFogParams(16711680);
+            glEnableFog(92);
         }
         anInt7694++;
     }
@@ -401,7 +401,7 @@ final class GlToolkitSub2
     final void method3728(boolean bool, int i) {
         if (aBoolean7784 != bool) {
             aBoolean7784 = bool;
-            method3768((byte) -121);
+            glEnableLighting((byte) -121);
             anInt7765 &= ~0x7;
         }
         if (i < 18) anInt7804 = -98;
@@ -417,7 +417,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3729(int i, byte i_5_, int i_6_) {
+    final void glTexEnvi(int i, byte i_5_, int i_6_) {
         if (anInt7876 == 0) {
             boolean bool = false;
             if (anInt7804 != i) {
@@ -439,7 +439,7 @@ final class GlToolkitSub2
         anInt7655++;
     }
 
-    private final void method3730(byte i) {
+    private final void glSetTextureMatrix(byte i) {
         OpenGL.glMatrixMode(5889);
         anInt7693++;
         OpenGL.glLoadMatrixf(aFloatArray7779, 0);
@@ -475,11 +475,11 @@ final class GlToolkitSub2
         anInt7558++;
         method3806(96);
         method3772((byte) 124);
-        if (anInt7865 == 3) method3747((byte) -63);
-        else if (anInt7865 == 2) method3730((byte) 119);
+        if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
+        else if (anInt7865 == 2) glSetTextureMatrix((byte) 119);
     }
 
-    private final void method3732(int i) {
+    private final void glEnableFog(int i) {
         if (!aBoolean7801 || this.anInt7782 < 0) OpenGL.glDisable(2912);
         else OpenGL.glEnable(2912);
         int i_13_ = 96 % (i / 63);
@@ -497,7 +497,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3734(boolean bool) {
+    final void glPopMatrix(boolean bool) {
         OpenGL.glPopMatrix();
         anInt7696++;
         if (bool != true) this.anInt7772 = 37;
@@ -511,12 +511,12 @@ final class GlToolkitSub2
     final void method3735(int i) {
         if (i != 9473) method3661(-10, -73, null, null);
         if (anInt7765 != 4) {
-            method3763(i ^ 0x3201);
+            glSetupOrthoProjection(i ^ 0x3201);
             method3807(false, 2);
             method3728(false, 79);
-            method3752(i ^ 0x257a, false);
+            glEnableScissorTest(i ^ 0x257a, false);
             method3748(0, false);
-            method3757(-2, -111);
+            glResetViewport(-2, -111);
             method3753(1, 1);
             anInt7765 = 4;
         }
@@ -542,8 +542,8 @@ final class GlToolkitSub2
             method3792(110);
             bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
             method3753(i_24_, 1);
-            method3729(7681, (byte) 97, 8448);
-            method3762(34167, 768, (byte) -87, 0);
+            glTexEnvi(7681, (byte) 97, 8448);
+            glTexEnvCombine(34167, 768, (byte) -87, 0);
             float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
             float f_27_ = (class258_sub3_sub1.aFloat9938 / (float) (class258_sub3_sub1.anInt9939));
             float f_28_ = (float) i_21_ - (float) i;
@@ -558,7 +558,7 @@ final class GlToolkitSub2
             OpenGL.glTexCoord2f(f * (float) (i_21_ + -i_25_), (float) (-i_26_ + i_22_) * f_27_);
             OpenGL.glVertex2f(0.35F + (f_28_ + (float) i_21_), 0.35F + ((float) i_22_ + f_29_));
             OpenGL.glEnd();
-            method3762(5890, 768, (byte) -87, 0);
+            glTexEnvCombine(5890, 768, (byte) -87, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.ME(" + i + ',' + i_20_ + ',' + i_21_ + ',' + i_22_ + ',' + i_23_ + ',' + i_24_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_25_ + ',' + i_26_ + ')'));
         }
@@ -577,7 +577,7 @@ final class GlToolkitSub2
         aClass262_7752.addTail(class348_sub35, -20180);
     }
 
-    final void method3738(int i, int i_34_) {
+    final void glActiveTexture(int i, int i_34_) {
         if (i != -15039) aClass258Array7828 = null;
         if (i_34_ != anInt7876) {
             OpenGL.glActiveTexture(33984 + i_34_);
@@ -600,8 +600,8 @@ final class GlToolkitSub2
     private final void method3740(int i) {
         if (anInt7865 != 2) {
             anInt7865 = 2;
-            method3730((byte) 125);
-            method3754((byte) 90);
+            glSetTextureMatrix((byte) 125);
+            glLoadModelviewMatrix((byte) 90);
             anInt7765 &= ~0x7;
         }
         if (i != -14388) this.anInt7735 = -85;
@@ -655,8 +655,8 @@ final class GlToolkitSub2
         anInt7638++;
         if (anInt7865 != 3) {
             anInt7865 = 3;
-            method3747((byte) -63);
-            method3754((byte) 89);
+            glSetProjectionMatrix((byte) -63);
+            glLoadModelviewMatrix((byte) 89);
             anInt7765 &= ~0x7;
         }
         if (i != 3) anInt7799 = -50;
@@ -713,7 +713,7 @@ final class GlToolkitSub2
         anInt7571++;
         aFloat7786 = f;
         aFloat7857 = f_45_;
-        method3803(16711680);
+        glSetFogParams(16711680);
     }
 
     private final void method3745(byte i) {
@@ -727,7 +727,7 @@ final class GlToolkitSub2
             if (anInterface11_7740 == null) {
                 this.anInt7688 = anInt7645;
                 this.anInt7641 = anInt7523;
-                method3809(true);
+                glSetViewport(true);
             }
             method3755(-32);
             la();
@@ -748,15 +748,15 @@ final class GlToolkitSub2
                 if (class12.aByte198 != 0 || class12.aByte211 != 0) {
                     int i_52_ = class12.aBoolean199 ? 64 : 128;
                     int i_53_ = i_52_ * 50;
-                    method3799(((float) (this.anInt7735 % i_53_ * class12.aByte211) / (float) i_53_), 0.0F, (float) (class12.aByte198 * (this.anInt7735 % i_53_)) / (float) i_53_, (byte) 126);
-                } else method3767(-21974);
+                    glTranslateProjection(((float) (this.anInt7735 % i_53_ * class12.aByte211) / (float) i_53_), 0.0F, (float) (class12.aByte198 * (this.anInt7735 % i_53_)) / (float) i_53_, (byte) 126);
+                } else glResetModelview(-21974);
                 if (!this.aBoolean7846) {
                     i_51_ = class12.aByte213;
                     i_50_ = class12.anInt206;
                     i_49_ = class12.aByte202;
                 }
                 i_48_ = class12.anInt203;
-            } else method3767(-21974);
+            } else glResetModelview(-21974);
             aClass100_7707.method884(i_49_, bool, i_51_, i_50_, (byte) 12, bool_46_);
             if (!aClass100_7707.method885(i_48_, (byte) -124, class258_sub3)) {
                 bindTexture((byte) -86, class258_sub3);
@@ -769,7 +769,7 @@ final class GlToolkitSub2
         anInt7765 &= ~0x7;
     }
 
-    private final void method3747(byte i) {
+    private final void glSetProjectionMatrix(byte i) {
         anInt7597++;
         float f = ((float) -this.anInt7853 * aFloat7851 / (float) this.anInt7771);
         float f_54_ = (aFloat7851 * (float) -this.anInt7810 / (float) this.anInt7794);
@@ -791,7 +791,7 @@ final class GlToolkitSub2
         anInt7710++;
         if (aBoolean7759 != bool) {
             aBoolean7759 = bool;
-            method3795(-30199);
+            glSetDepthMask(-30199);
             anInt7765 &= ~0x1f;
         }
         if (i != 0) method3773(-58, null);
@@ -828,12 +828,12 @@ final class GlToolkitSub2
             bindTexture((byte) -117, aClass258_Sub3_Sub1_7776);
             method3753(i_63_, 1);
             OpenGL.glColor4ub((byte) (i_60_ >> 16), (byte) (i_60_ >> 8), (byte) i_60_, (byte) (i_60_ >> 24));
-            method3808(i_61_, 120);
-            method3729(34165, (byte) 101, 34165);
-            method3762(34166, 768, (byte) -87, 0);
-            method3762(5890, 770, (byte) -87, 2);
-            method3775(false, 0, 770, 34166);
-            method3775(false, 2, 770, 5890);
+            glSetTextureEnvColor(i_61_, 120);
+            glTexEnvi(34165, (byte) 101, 34165);
+            glTexEnvCombine(34166, 768, (byte) -87, 0);
+            glTexEnvCombine(5890, 770, (byte) -87, 2);
+            glTexEnvCombineMode(false, 0, 770, 34166);
+            glTexEnvCombineMode(false, 2, 770, 5890);
             float f_65_ = (float) i;
             float f_66_ = (float) i_57_;
             float f_67_ = (float) i_58_ + f_65_;
@@ -848,10 +848,10 @@ final class GlToolkitSub2
             OpenGL.glTexCoord2f(f, 0.0F);
             OpenGL.glVertex2f(f_67_, f_66_);
             OpenGL.glEnd();
-            method3762(5890, 768, (byte) -87, 0);
-            method3762(34166, 770, (byte) -87, 2);
-            method3775(false, 0, 770, 5890);
-            method3775(false, 2, 770, 34166);
+            glTexEnvCombine(5890, 768, (byte) -87, 0);
+            glTexEnvCombine(34166, 770, (byte) -87, 2);
+            glTexEnvCombineMode(false, 0, 770, 5890);
+            glTexEnvCombineMode(false, 2, 770, 34166);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.Q(" + i + ',' + i_57_ + ',' + i_58_ + ',' + i_59_ + ',' + i_60_ + ',' + i_61_ + ',' + (is != null ? "{...}" : "null") + ',' + i_62_ + ',' + i_63_ + ')'));
         }
@@ -866,7 +866,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3749(float f, float f_69_, float f_70_, byte i, float f_71_) {
+    final void glTexEnvfv(float f, float f_69_, float f_70_, byte i, float f_71_) {
         InputStream_Sub2.aFloatArray84[2] = f_70_;
         if (i <= 45) method3769(-35L, false);
         anInt7576++;
@@ -885,7 +885,7 @@ final class GlToolkitSub2
                 this.aClass101_Sub3_7766.method942(3128);
                 this.aClass101_Sub3_7767.method946(this.aClass101_Sub3_7766, -7929);
                 if (anInt7865 == 1) break;
-                method3754((byte) 89);
+                glLoadModelviewMatrix((byte) 89);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, "qo.DE(" + (class101 != null ? "{...}" : "null") + ')');
             }
@@ -893,7 +893,7 @@ final class GlToolkitSub2
         } while (false);
     }
 
-    final void method3750(int i, Interface2 interface2) {
+    final void glBindArrayBuffer(int i, Interface2 interface2) {
         try {
             if (i <= 39) this.anInt7782 = 120;
             if (interface2 != anInterface2_7852) {
@@ -936,7 +936,7 @@ final class GlToolkitSub2
         aClass105_Sub2_7744 = null;
         this.anInt7641 = anInt7523;
         method3755(-32);
-        method3809(true);
+        glSetViewport(true);
         la();
     }
 
@@ -953,7 +953,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3752(int i, boolean bool) {
+    final void glEnableScissorTest(int i, boolean bool) {
         if (!bool != !aBoolean7763) {
             if (!bool) OpenGL.glDisable(2929);
             else OpenGL.glEnable(2929);
@@ -1003,9 +1003,9 @@ final class GlToolkitSub2
                 this.aFloat7823 = (float) (anInt7808 & 0xff) / 255.0F;
                 this.aFloat7781 = (float) (0xff0000 & anInt7808) / 1.671168E7F;
                 this.aFloat7816 = (float) (0xff00 & anInt7808) / 65280.0F;
-                method3787(-93);
+                glSetLightModelAmbient(-93);
             }
-            method3779(29890);
+            glSetLightDiffuse(29890);
         }
         if (f_94_ != aFloatArray7850[0] || aFloatArray7850[1] != f_95_ || aFloatArray7850[2] != f_96_) {
             aFloatArray7850[2] = f_96_;
@@ -1021,7 +1021,7 @@ final class GlToolkitSub2
             aFloatArray7811[2] = -this.aFloatArray7825[2];
             aFloatArray7811[1] = -this.aFloatArray7825[1];
             aFloatArray7811[0] = -this.aFloatArray7825[0];
-            method3796(16384);
+            glSetLightAmbient(16384);
             this.anInt7777 = (int) (256.0F * f_96_ / f_95_);
             this.anInt7772 = (int) (256.0F * f_94_ / f_95_);
         }
@@ -1126,7 +1126,7 @@ final class GlToolkitSub2
                 aLong7636 = aLong7553 = anOpenGL7664.init(canvas, 8, 8, 8, 24, 0, this.anInt7713);
                 if (aLong7553 == 0) throw new RuntimeException("");
                 method3776(22544);
-                int i_99_ = method3774((byte) -62);
+                int i_99_ = glQueryStrings((byte) -62);
                 if (i_99_ != 0) throw new RuntimeException("");
                 this.anInt7812 = this.aBoolean7775 ? 33639 : 5121;
                 if (aString7790.indexOf("radeon") != -1) {
@@ -1191,7 +1191,7 @@ final class GlToolkitSub2
                     }
                 }
                 aClass100_7707 = new Component265(this);
-                method3791(25858);
+                glResetTextureUnits(25858);
                 method3745((byte) 123);
                 method3673();
             } catch (Throwable throwable) {
@@ -1255,13 +1255,13 @@ final class GlToolkitSub2
         anInt7591++;
     }
 
-    private final void method3754(byte i) {
+    private final void glLoadModelviewMatrix(byte i) {
         anInt7689++;
         if (i > 77) {
             OpenGL.glLoadIdentity();
             OpenGL.glMultMatrixf(this.aClass101_Sub3_7766.method940(1), 0);
             if (aBoolean7859) aClass100_7707.aClass286_Sub1_1586.method2141(false);
-            method3796(16384);
+            glSetLightAmbient(16384);
             method3783(0);
         }
     }
@@ -1274,7 +1274,7 @@ final class GlToolkitSub2
         if (i == -32) anInt7708++;
     }
 
-    final void method3756(int i, int i_106_, int i_107_, int i_108_) {
+    final void glDrawArrays(int i, int i_106_, int i_107_, int i_108_) {
         if (i_108_ <= 32) aFloat7857 = -0.7407605F;
         anInt7555++;
         OpenGL.glDrawArrays(i_106_, i_107_, i);
@@ -1303,18 +1303,18 @@ final class GlToolkitSub2
     final void DualToolkit(float f) {
         if (this.aFloat7768 != f) {
             this.aFloat7768 = f;
-            method3787(-105);
+            glSetLightModelAmbient(-105);
         }
         anInt7668++;
     }
 
-    final void method3757(int i, int i_114_) {
+    final void glResetViewport(int i, int i_114_) {
         method3801(true, i, -104);
         anInt7649++;
-        if (i_114_ > -43) method3768((byte) 85);
+        if (i_114_ > -43) glEnableLighting((byte) 85);
     }
 
-    final void method3758(boolean bool, MatrixSub3 class101_sub3) {
+    final void glPushModelMatrix(boolean bool, MatrixSub3 class101_sub3) {
         try {
             OpenGL.glPushMatrix();
             if (bool != false) method3650(51);
@@ -1330,13 +1330,13 @@ final class GlToolkitSub2
         return new SpriteSub2(this, i, i_115_, i_116_, i_117_);
     }
 
-    final void method3759(int i, int i_118_, int i_119_, Interface8 interface8, int i_120_) {
+    final void glDrawElements(int i, int i_118_, int i_119_, Interface8 interface8, int i_120_) {
         try {
             anInt7619++;
             int i_121_ = interface8.method34(-5711);
             if (i_118_ >= -127) aClass100_7707 = null;
             i_120_ *= method3785(i_121_, 4);
-            method3793(1, interface8);
+            glBindElementBuffer(1, interface8);
             OpenGL.glDrawElements(i_119_, i, i_121_, (interface8.method36((byte) 78) + (long) i_120_));
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.MA(" + i + ',' + i_118_ + ',' + i_119_ + ',' + (interface8 != null ? "{...}" : "null") + ',' + i_120_ + ')'));
@@ -1446,12 +1446,12 @@ final class GlToolkitSub2
     }
 
     final void method3760(int i) {
-        if (i != 1) method3759(65, 117, -33, null, -33);
+        if (i != 1) glDrawElements(65, 117, -33, null, -33);
         anInt7643++;
         if (anInt7765 != 16) {
             method3742(3);
             method3807(true, 2);
-            method3752(122, true);
+            glEnableScissorTest(122, true);
             method3748(0, true);
             method3753(1, i);
             anInt7765 = 16;
@@ -1461,13 +1461,13 @@ final class GlToolkitSub2
     final void method3761(int i, int i_133_) {
         if (i != 0) aClass262_7751 = null;
         anInt7654++;
-        if (i_133_ == 1) method3729(7681, (byte) 114, 7681);
-        else if (i_133_ == 0) method3729(8448, (byte) 107, 8448);
+        if (i_133_ == 1) glTexEnvi(7681, (byte) 114, 7681);
+        else if (i_133_ == 0) glTexEnvi(8448, (byte) 107, 8448);
         else if (i_133_ != 2) {
             if (i_133_ != 3) {
-                if (i_133_ == 4) method3729(34023, (byte) 123, 34023);
-            } else method3729(260, (byte) 97, 8448);
-        } else method3729(34165, (byte) 126, 7681);
+                if (i_133_ == 4) glTexEnvi(34023, (byte) 123, 34023);
+            } else glTexEnvi(260, (byte) 97, 8448);
+        } else glTexEnvi(34165, (byte) 126, 7681);
     }
 
     final boolean method3695() {
@@ -1475,14 +1475,14 @@ final class GlToolkitSub2
         return true;
     }
 
-    final void method3762(int i, int i_134_, byte i_135_, int i_136_) {
+    final void glTexEnvCombine(int i, int i_134_, byte i_135_, int i_136_) {
         anInt7671++;
         OpenGL.glTexEnvi(8960, 34176 - -i_136_, i);
         OpenGL.glTexEnvi(8960, i_136_ + 34192, i_134_);
         if (i_135_ != -87) r(48, 67, -20, 106, -89, 67, 104);
     }
 
-    private final void method3763(int i) {
+    private final void glSetupOrthoProjection(int i) {
         anInt7516++;
         if (anInt7865 != 1) {
             OpenGL.glMatrixMode(5889);
@@ -1493,7 +1493,7 @@ final class GlToolkitSub2
             anInt7865 = 1;
             anInt7765 &= ~0x18;
         }
-        if (i != 5888) method3763(-122);
+        if (i != 5888) glSetupOrthoProjection(-122);
     }
 
     final void method3764(int i, Interface11 interface11) {
@@ -1521,7 +1521,7 @@ final class GlToolkitSub2
         aClass262_7755.addTail(class348, -20180);
     }
 
-    final void method3766(byte i, MatrixSub3 class101_sub3) {
+    final void glLoadModelMatrix(byte i, MatrixSub3 class101_sub3) {
         do {
             try {
                 anInt7623++;
@@ -1558,7 +1558,7 @@ final class GlToolkitSub2
         } while (false);
     }
 
-    private final void method3767(int i) {
+    private final void glResetModelview(int i) {
         if (i != -21974) aClass105_Sub2_7744 = null;
         anInt7599++;
         if (aBoolean7860) {
@@ -1620,7 +1620,7 @@ final class GlToolkitSub2
         anInt7541++;
     }
 
-    private final void method3768(byte i) {
+    private final void glEnableLighting(byte i) {
         anInt7519++;
         if (i >= -69) this.aClass64_Sub3_7802 = null;
         if (!aBoolean7784 || aBoolean7805) OpenGL.glDisable(2896);
@@ -1662,10 +1662,10 @@ final class GlToolkitSub2
             method3755(-32);
             method3807(false, 2);
             method3728(false, 86);
-            method3752(112, false);
+            glEnableScissorTest(112, false);
             method3748(0, false);
             bindTexture((byte) -91, null);
-            method3757(-2, -88);
+            glResetViewport(-2, -88);
             method3761(0, 1);
             method3753(0, 1);
             OpenGL.glMatrixMode(5889);
@@ -1885,7 +1885,7 @@ final class GlToolkitSub2
         }
     }
 
-    private final int method3774(byte i) {
+    private final int glQueryStrings(byte i) {
         anInt7518++;
         int i_183_ = 0;
         aString7845 = OpenGL.glGetString(7936).toLowerCase();
@@ -1947,8 +1947,8 @@ final class GlToolkitSub2
                 method3792(90);
                 bindTexture((byte) -122, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
                 method3753(i_190_, 1);
-                method3729(7681, (byte) -61, 8448);
-                method3762(34167, 768, (byte) -87, 0);
+                glTexEnvi(7681, (byte) -61, 8448);
+                glTexEnvCombine(34167, 768, (byte) -87, 0);
                 float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
                 float f_196_ = (class258_sub3_sub1.aFloat9938 / (float) (class258_sub3_sub1.anInt9939));
                 float f_197_ = (float) -i + (float) i_187_;
@@ -2001,7 +2001,7 @@ final class GlToolkitSub2
                     f_205_ = f_201_;
                     f_204_ = f_200_;
                 }
-                method3762(5890, 768, (byte) -87, 0);
+                glTexEnvCombine(5890, 768, (byte) -87, 0);
             }
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.IF(" + i + ',' + i_186_ + ',' + i_187_ + ',' + i_188_ + ',' + i_189_ + ',' + i_190_ + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_191_ + ',' + i_192_ + ',' + i_193_ + ',' + i_194_ + ',' + i_195_ + ')'));
@@ -2104,8 +2104,8 @@ final class GlToolkitSub2
             method3792(119);
             bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
             method3753(1, 1);
-            method3729(7681, (byte) -103, 8448);
-            method3762(34167, 768, (byte) -87, 0);
+            glTexEnvi(7681, (byte) -103, 8448);
+            glTexEnvCombine(34167, 768, (byte) -87, 0);
             float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
             float f_214_ = (class258_sub3_sub1.aFloat9938 / (float) (class258_sub3_sub1.anInt9939));
             OpenGL.glColor4ub((byte) (i >> 16), (byte) (i >> 8), (byte) i, (byte) (i >> 24));
@@ -2119,7 +2119,7 @@ final class GlToolkitSub2
             OpenGL.glTexCoord2f(f * (float) (-i_212_ + anInt7855), f_214_ * (float) (-i_213_ + anInt7773));
             OpenGL.glVertex2i(anInt7855, anInt7773);
             OpenGL.glEnd();
-            method3762(5890, 768, (byte) -87, 0);
+            glTexEnvCombine(5890, 768, (byte) -87, 0);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.A(" + i + ',' + (var_aa != null ? "{...}" : "null") + ',' + i_212_ + ',' + i_213_ + ')'));
         }
@@ -2135,7 +2135,7 @@ final class GlToolkitSub2
         return null;
     }
 
-    final void method3775(boolean bool, int i, int i_216_, int i_217_) {
+    final void glTexEnvCombineMode(boolean bool, int i, int i_216_, int i_217_) {
         anInt7531++;
         if (bool != false) method3644();
         OpenGL.glTexEnvi(8960, 34184 + i, i_217_);
@@ -2185,7 +2185,7 @@ final class GlToolkitSub2
         if (i_229_ < anInt7855) anInt7855 = i_229_;
         OpenGL.glEnable(3089);
         method3772((byte) 125);
-        method3811((byte) 11);
+        glSetScissor((byte) 11);
     }
 
     final void method3669(Canvas canvas, int i, int i_231_) {
@@ -2221,20 +2221,20 @@ final class GlToolkitSub2
 
     private final void method3778(byte i) {
         if (anInt7765 != 1) {
-            method3763(5888);
+            glSetupOrthoProjection(5888);
             method3807(false, 2);
             method3728(false, 48);
-            method3752(107, false);
+            glEnableScissorTest(107, false);
             method3748(0, false);
             bindTexture((byte) -122, null);
-            method3757(-2, -45);
+            glResetViewport(-2, -45);
             method3761(0, 1);
             anInt7765 = 1;
         }
         if (i <= -115) anInt7594++;
     }
 
-    private final void method3779(int i) {
+    private final void glSetLightDiffuse(int i) {
         InputStream_Sub2.aFloatArray84[3] = 1.0F;
         anInt7588++;
         InputStream_Sub2.aFloatArray84[0] = this.aFloat7832 * this.aFloat7781;
@@ -2373,7 +2373,7 @@ final class GlToolkitSub2
         if (anInt7765 != 8) {
             method3740(-14388);
             method3807(true, 2);
-            method3752(114, true);
+            glEnableScissorTest(114, true);
             method3748(i + 62, true);
             method3753(1, 1);
             anInt7765 = 8;
@@ -2424,7 +2424,7 @@ final class GlToolkitSub2
         }
     }
 
-    private final void method3787(int i) {
+    private final void glSetLightModelAmbient(int i) {
         InputStream_Sub2.aFloatArray84[3] = 1.0F;
         anInt7661++;
         InputStream_Sub2.aFloatArray84[0] = this.aFloat7768 * this.aFloat7781;
@@ -2463,7 +2463,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3788(int i) {
+    final void glPushMatrix(int i) {
         anInt7647++;
         if (i == -18516) OpenGL.glPushMatrix();
     }
@@ -2492,13 +2492,13 @@ final class GlToolkitSub2
         anInt7868 = i;
         OpenGL.glEnable(3089);
         method3772((byte) 126);
-        method3811((byte) 11);
+        glSetScissor((byte) 11);
     }
 
     final void method3789(byte i, float f) {
         if (aFloat7851 != f) {
             aFloat7851 = f;
-            if (anInt7865 == 3) method3747((byte) -63);
+            if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
         }
         if (i <= -101) anInt7545++;
     }
@@ -2516,7 +2516,7 @@ final class GlToolkitSub2
     final void C(boolean bool) {
         aBoolean7870 = bool;
         anInt7602++;
-        method3795(-30199);
+        glSetDepthMask(-30199);
     }
 
     final void method3663() {
@@ -2528,8 +2528,8 @@ final class GlToolkitSub2
             anInt7724++;
             anInt7867 = i_262_;
             anInt7770 = i_263_;
-            method3809(true);
-            method3811((byte) 11);
+            glSetViewport(true);
+            glSetScissor((byte) 11);
         }
     }
 
@@ -2571,17 +2571,17 @@ final class GlToolkitSub2
         method3797(0);
     }
 
-    private final void method3791(int i) {
+    private final void glResetTextureUnits(int i) {
         anInt7543++;
-        method3757(-2, -69);
+        glResetViewport(-2, -69);
         for (int i_276_ = this.anInt7795 - 1; i_276_ >= 0; i_276_--) {
-            method3738(-15039, i_276_);
+            glActiveTexture(-15039, i_276_);
             bindTexture((byte) -88, null);
             OpenGL.glTexEnvi(8960, 8704, 34160);
         }
-        method3729(8448, (byte) 119, 8448);
-        method3762(34168, 770, (byte) -87, 2);
-        method3767(-21974);
+        glTexEnvi(8448, (byte) 119, 8448);
+        glTexEnvCombine(34168, 770, (byte) -87, 2);
+        glResetModelview(-21974);
         anInt7764 = 1;
         OpenGL.glEnable(3042);
         OpenGL.glBlendFunc(770, 771);
@@ -2593,7 +2593,7 @@ final class GlToolkitSub2
         aBoolean7758 = true;
         method3807(true, 2);
         method3728(true, 71);
-        method3752(124, true);
+        glEnableScissorTest(124, true);
         method3748(0, true);
         method3755(i ^ ~0x651d);
         anOpenGL7664.setSwapInterval(0);
@@ -2627,12 +2627,12 @@ final class GlToolkitSub2
     final void method3792(int i) {
         if (i < 45) method3777(-72);
         if (anInt7765 != 2) {
-            method3763(5888);
+            glSetupOrthoProjection(5888);
             method3807(false, 2);
             method3728(false, 66);
-            method3752(115, false);
+            glEnableScissorTest(115, false);
             method3748(0, false);
-            method3757(-2, -67);
+            glResetViewport(-2, -67);
             anInt7765 = 2;
         }
         anInt7608++;
@@ -2645,7 +2645,7 @@ final class GlToolkitSub2
         return i;
     }
 
-    final void method3793(int i, Interface8 interface8) {
+    final void glBindElementBuffer(int i, Interface8 interface8) {
         do {
             try {
                 if (i == 1) {
@@ -2661,27 +2661,27 @@ final class GlToolkitSub2
         } while (false);
     }
 
-    final void method3794(Component132 class123, Component132 class123_279_, int i, Component132 class123_280_, Component132 class123_281_) {
+    final void glSetVertexPointer(Component132 class123, Component132 class123_279_, int i, Component132 class123_280_, Component132 class123_281_) {
         try {
             if (class123 != null) {
-                method3750(i + 26493, class123.anInterface2_1811);
+                glBindArrayBuffer(i + 26493, class123.anInterface2_1811);
                 OpenGL.glVertexPointer(class123.aByte1814, class123.aShort1810, anInterface2_7852.method13((byte) -97), (anInterface2_7852.method12((byte) 42) - -(long) (class123.aByte1812)));
                 OpenGL.glEnableClientState(32884);
             } else OpenGL.glDisableClientState(32884);
             anInt7529++;
             if (class123_281_ != null) {
-                method3750(56, class123_281_.anInterface2_1811);
+                glBindArrayBuffer(56, class123_281_.anInterface2_1811);
                 OpenGL.glNormalPointer(class123_281_.aShort1810, anInterface2_7852.method13((byte) -97), (anInterface2_7852.method12((byte) 42) - -(long) (class123_281_.aByte1812)));
                 OpenGL.glEnableClientState(32885);
             } else OpenGL.glDisableClientState(32885);
             if (class123_279_ != null) {
-                method3750(67, class123_279_.anInterface2_1811);
+                glBindArrayBuffer(67, class123_279_.anInterface2_1811);
                 OpenGL.glColorPointer(class123_279_.aByte1814, class123_279_.aShort1810, anInterface2_7852.method13((byte) -97), (anInterface2_7852.method12((byte) 42) + (long) (class123_279_.aByte1812)));
                 OpenGL.glEnableClientState(32886);
             } else OpenGL.glDisableClientState(32886);
             if (i == -26411) {
                 if (class123_280_ != null) {
-                    method3750(119, class123_280_.anInterface2_1811);
+                    glBindArrayBuffer(119, class123_280_.anInterface2_1811);
                     OpenGL.glTexCoordPointer(class123_280_.aByte1814, class123_280_.aShort1810, anInterface2_7852.method13((byte) -97), (anInterface2_7852.method12((byte) 42) - -(long) class123_280_.aByte1812));
                     OpenGL.glEnableClientState(32888);
                 } else OpenGL.glDisableClientState(32888);
@@ -2710,7 +2710,7 @@ final class GlToolkitSub2
         return this.aClass101_Sub3_7760;
     }
 
-    private final void method3795(int i) {
+    private final void glSetDepthMask(int i) {
         OpenGL.glDepthMask(aBoolean7759 && aBoolean7870);
         anInt7578++;
         if (i != -30199) K(null);
@@ -2736,7 +2736,7 @@ final class GlToolkitSub2
         anInt7691++;
     }
 
-    final void method3796(int i) {
+    final void glSetLightAmbient(int i) {
         OpenGL.glLightfv(i, 4611, this.aFloatArray7825, 0);
         anInt7536++;
         OpenGL.glLightfv(16385, 4611, aFloatArray7811, 0);
@@ -2820,7 +2820,7 @@ final class GlToolkitSub2
         throw new IllegalArgumentException("");
     }
 
-    private final void method3799(float f, float f_296_, float f_297_, byte i) {
+    private final void glTranslateProjection(float f, float f_296_, float f_297_, byte i) {
         OpenGL.glMatrixMode(5890);
         anInt7585++;
         if (aBoolean7860) OpenGL.glLoadIdentity();
@@ -3479,7 +3479,7 @@ final class GlToolkitSub2
         }
     }
 
-    private final void method3803(int i) {
+    private final void glSetFogParams(int i) {
         aFloat7824 = -aFloat7786 + (float) (anInt7814 - this.anInt7813);
         anInt7639++;
         this.aFloat7792 = aFloat7824 - aFloat7857 * (float) this.anInt7782;
@@ -3495,7 +3495,7 @@ final class GlToolkitSub2
     final void method3804(boolean bool, byte i) {
         if (!bool == aBoolean7805) {
             aBoolean7805 = bool;
-            method3768((byte) -117);
+            glEnableLighting((byte) -117);
         }
         if (i < -56) anInt7564++;
     }
@@ -3515,9 +3515,9 @@ final class GlToolkitSub2
             this.anInt7826 = i;
             anInt7814 = i_458_;
             method3806(98);
-            method3803(16711680);
-            if (anInt7865 == 3) method3747((byte) -63);
-            else if (anInt7865 == 2) method3730((byte) 121);
+            glSetFogParams(16711680);
+            if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
+            else if (anInt7865 == 2) glSetTextureMatrix((byte) 121);
         }
     }
 
@@ -3640,12 +3640,12 @@ final class GlToolkitSub2
         anInt7517++;
         if (!bool != !aBoolean7801) {
             aBoolean7801 = bool;
-            method3732(-87);
+            glEnableFog(-87);
             anInt7765 &= ~0x1f;
         }
     }
 
-    final void method3808(int i, int i_473_) {
+    final void glSetTextureEnvColor(int i, int i_473_) {
         InputStream_Sub2.aFloatArray84[2] = (float) GpsOverlay.bitwiseAnd(i, 255) / 255.0F;
         if (i_473_ <= 116) this.anInt7771 = 76;
         InputStream_Sub2.aFloatArray84[3] = (float) (i >>> 24) / 255.0F;
@@ -3663,7 +3663,7 @@ final class GlToolkitSub2
         return is;
     }
 
-    private final void method3809(boolean bool) {
+    private final void glSetViewport(boolean bool) {
         OpenGL.glViewport(anInt7770, anInt7867, this.anInt7688, this.anInt7641);
         anInt7718++;
         if (bool != true) this.aClass64_Sub3_7780 = null;
@@ -3683,7 +3683,7 @@ final class GlToolkitSub2
         }
     }
 
-    private final void method3811(byte i) {
+    private final void glSetScissor(byte i) {
         anInt7690++;
         if (i == 11) {
             if (anInt7855 >= anInt7868 && anInt7773 <= anInt7787) OpenGL.glScissor(anInt7770 + anInt7868, (anInt7867 + this.anInt7641 - anInt7787), -anInt7868 + anInt7855, -anInt7773 + anInt7787);

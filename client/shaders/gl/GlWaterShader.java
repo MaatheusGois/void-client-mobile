@@ -39,10 +39,10 @@ final class GlWaterShader extends NodeSub5 {
     final void method2756(byte i, int i_0_) {
         anInt8831++;
         OpenGL.glUseProgramObjectARB(0L);
-        this.aHa_Sub2_6618.method3738(-15039, 1);
+        this.aHa_Sub2_6618.glActiveTexture(-15039, 1);
         int i_1_ = -98 / ((i - 44) / 38);
         this.aHa_Sub2_6618.bindTexture((byte) -86, null);
-        this.aHa_Sub2_6618.method3738(-15039, 0);
+        this.aHa_Sub2_6618.glActiveTexture(-15039, 0);
     }
 
     final void method2750(GlTexture class258_sub3, GlTexture class258_sub3_2_, int i, byte i_3_) {
@@ -168,9 +168,9 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l_7_, "sceneTex"), 0);
             OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l_7_, "bloomTex"), 1);
             OpenGL.glUniform3fARB(OpenGL.glGetUniformLocationARB(l_7_, "params"), DefinitionSub13.aFloat9204, RadixText.aFloat6120, 0.0F);
-            this.aHa_Sub2_6618.method3738(-15039, 1);
+            this.aHa_Sub2_6618.glActiveTexture(-15039, 1);
             this.aHa_Sub2_6618.bindTexture((byte) -99, aClass258_Sub3_8835);
-            this.aHa_Sub2_6618.method3738(-15039, 0);
+            this.aHa_Sub2_6618.glActiveTexture(-15039, 0);
             this.aHa_Sub2_6618.bindTexture((byte) -82, class258_sub3_2_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("rda.H(" + (class258_sub3 != null ? "{...}" : "null") + ',' + (class258_sub3_2_ != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ')'));

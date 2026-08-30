@@ -34,16 +34,16 @@ final class ShaderProgramSub9
         anInt6318++;
         if (aBoolean6316) {
             if (!aBoolean6308) {
-                this.aHa_Sub2_3684.method3738(-15039, 2);
+                this.aHa_Sub2_3684.glActiveTexture(-15039, 2);
                 this.aHa_Sub2_3684.bindTexture((byte) -84, null);
             }
-            this.aHa_Sub2_3684.method3738(-15039, 1);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             this.aHa_Sub2_3684.bindTexture((byte) -87, null);
-            this.aHa_Sub2_3684.method3738(-15039, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
             aClass61_6310.callDisplayList('\001', 28666);
             aBoolean6316 = false;
-        } else this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
-        if (i < -75) this.aHa_Sub2_3684.method3729(8448, (byte) -75, 8448);
+        } else this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 5890);
+        if (i < -75) this.aHa_Sub2_3684.glTexEnvi(8448, (byte) -75, 8448);
     }
 
     static final int method2175(int i, byte i_3_, int i_4_) {
@@ -65,7 +65,7 @@ final class ShaderProgramSub9
         if (i >= -7) method2140(null, (byte) 112, -64);
         anInt6314++;
         aClass61_6310.beginDisplayList((byte) 105, 0);
-        this.aHa_Sub2_3684.method3738(-15039, 1);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
         OpenGL.glTexGeni(8192, 9472, 34065);
         OpenGL.glTexGeni(8193, 9472, 34065);
         OpenGL.glTexGeni(8194, 9472, 34065);
@@ -77,22 +77,22 @@ final class ShaderProgramSub9
         OpenGL.glRotatef(22.5F, 1.0F, 0.0F, 0.0F);
         OpenGL.glMatrixMode(5888);
         if (aBoolean6308) {
-            this.aHa_Sub2_3684.method3729(260, (byte) 104, 7681);
-            this.aHa_Sub2_3684.method3762(5890, 770, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3775(false, 0, 770, 34167);
+            this.aHa_Sub2_3684.glTexEnvi(260, (byte) 104, 7681);
+            this.aHa_Sub2_3684.glTexEnvCombine(5890, 770, (byte) -87, 0);
+            this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 34167);
         } else {
-            this.aHa_Sub2_3684.method3729(7681, (byte) 126, 8448);
-            this.aHa_Sub2_3684.method3762(34168, 768, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3738(-15039, 2);
-            this.aHa_Sub2_3684.method3729(260, (byte) 124, 7681);
-            this.aHa_Sub2_3684.method3762(34168, 768, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3762(34168, 770, (byte) -87, 1);
-            this.aHa_Sub2_3684.method3775(false, 0, 770, 34167);
+            this.aHa_Sub2_3684.glTexEnvi(7681, (byte) 126, 8448);
+            this.aHa_Sub2_3684.glTexEnvCombine(34168, 768, (byte) -87, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 2);
+            this.aHa_Sub2_3684.glTexEnvi(260, (byte) 124, 7681);
+            this.aHa_Sub2_3684.glTexEnvCombine(34168, 768, (byte) -87, 0);
+            this.aHa_Sub2_3684.glTexEnvCombine(34168, 770, (byte) -87, 1);
+            this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 34167);
         }
-        this.aHa_Sub2_3684.method3738(-15039, 0);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         aClass61_6310.endDisplayList(-1);
         aClass61_6310.beginDisplayList((byte) 114, 1);
-        this.aHa_Sub2_3684.method3738(-15039, 1);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
         OpenGL.glDisable(3168);
         OpenGL.glDisable(3169);
         OpenGL.glDisable(3170);
@@ -100,28 +100,28 @@ final class ShaderProgramSub9
         OpenGL.glLoadIdentity();
         OpenGL.glMatrixMode(5888);
         if (aBoolean6308) {
-            this.aHa_Sub2_3684.method3729(8448, (byte) 115, 8448);
-            this.aHa_Sub2_3684.method3762(5890, 768, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
+            this.aHa_Sub2_3684.glTexEnvi(8448, (byte) 115, 8448);
+            this.aHa_Sub2_3684.glTexEnvCombine(5890, 768, (byte) -87, 0);
+            this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 5890);
         } else {
-            this.aHa_Sub2_3684.method3729(8448, (byte) -9, 8448);
-            this.aHa_Sub2_3684.method3762(5890, 768, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3738(-15039, 2);
-            this.aHa_Sub2_3684.method3729(8448, (byte) 92, 8448);
-            this.aHa_Sub2_3684.method3762(5890, 768, (byte) -87, 0);
-            this.aHa_Sub2_3684.method3762(34168, 768, (byte) -87, 1);
-            this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
+            this.aHa_Sub2_3684.glTexEnvi(8448, (byte) -9, 8448);
+            this.aHa_Sub2_3684.glTexEnvCombine(5890, 768, (byte) -87, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 2);
+            this.aHa_Sub2_3684.glTexEnvi(8448, (byte) 92, 8448);
+            this.aHa_Sub2_3684.glTexEnvCombine(5890, 768, (byte) -87, 0);
+            this.aHa_Sub2_3684.glTexEnvCombine(34168, 768, (byte) -87, 1);
+            this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 5890);
         }
-        this.aHa_Sub2_3684.method3738(-15039, 0);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         aClass61_6310.endDisplayList(-1);
     }
 
     final void method2136(int i, int i_6_, byte i_7_) {
         anInt6307++;
         if (aBoolean6316) {
-            this.aHa_Sub2_3684.method3738(-15039, 1);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             this.aHa_Sub2_3684.bindTexture((byte) -91, aClass258_Sub2Array6317[i + -1]);
-            this.aHa_Sub2_3684.method3738(-15039, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         }
         if (i_7_ > -42) method2134(true, true);
     }
@@ -134,12 +134,12 @@ final class ShaderProgramSub9
     final void method2134(boolean bool, boolean bool_8_) {
         if (bool_8_ == false) {
             anInt6306++;
-            if (aClass61_6310 == null || !bool) this.aHa_Sub2_3684.method3775(false, 0, 770, 34168);
+            if (aClass61_6310 == null || !bool) this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 34168);
             else {
                 if (!aBoolean6308) {
-                    this.aHa_Sub2_3684.method3738(-15039, 2);
+                    this.aHa_Sub2_3684.glActiveTexture(-15039, 2);
                     this.aHa_Sub2_3684.bindTexture((byte) -120, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
-                    this.aHa_Sub2_3684.method3738(-15039, 0);
+                    this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
                 }
                 aClass61_6310.callDisplayList('\0', 28666);
                 aBoolean6316 = true;
@@ -148,7 +148,7 @@ final class ShaderProgramSub9
     }
 
     final void method2139(boolean bool, byte i) {
-        this.aHa_Sub2_3684.method3729(8448, (byte) 121, 7681);
+        this.aHa_Sub2_3684.glTexEnvi(8448, (byte) 121, 7681);
         anInt6309++;
         int i_9_ = 96 / ((i - -60) / 38);
     }

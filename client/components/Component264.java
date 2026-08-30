@@ -37,14 +37,14 @@ final class Component264
             OpenGL.glViewport(0, 0, aClass258_Sub2_8701.anInt8538, aClass258_Sub2_8701.anInt8538);
             aHa_Sub2_8707.method3807(false, i + -65532);
             aHa_Sub2_8707.method3728(false, i + -65411);
-            aHa_Sub2_8707.method3752(114, false);
+            aHa_Sub2_8707.glEnableScissorTest(114, false);
             aHa_Sub2_8707.method3748(i + -65534, false);
-            aHa_Sub2_8707.method3757(-2, -91);
-            aHa_Sub2_8707.method3738(-15039, 1);
-            aHa_Sub2_8707.method3749(f, 0.0F, 0.0F, (byte) 110, 0.0F);
-            aHa_Sub2_8707.method3729(34165, (byte) -115, 34165);
+            aHa_Sub2_8707.glResetViewport(-2, -91);
+            aHa_Sub2_8707.glActiveTexture(-15039, 1);
+            aHa_Sub2_8707.glTexEnvfv(f, 0.0F, 0.0F, (byte) 110, 0.0F);
+            aHa_Sub2_8707.glTexEnvi(34165, (byte) -115, 34165);
             aHa_Sub2_8707.bindTexture((byte) -95, class258_sub2_0_);
-            aHa_Sub2_8707.method3738(-15039, 0);
+            aHa_Sub2_8707.glActiveTexture(-15039, 0);
             aHa_Sub2_8707.method3761(0, 1);
             aHa_Sub2_8707.bindTexture((byte) -90, class258_sub2);
             aHa_Sub2_8707.method3773(i ^ ~0xfffe, class206);
@@ -166,11 +166,11 @@ final class Component264
             }
             class206.method1500(2983, 0);
             aHa_Sub2_8707.method3770(-422613672, class206);
-            aHa_Sub2_8707.method3738(i + -80573, 1);
+            aHa_Sub2_8707.glActiveTexture(i + -80573, 1);
             if (i != 65534) return true;
             aHa_Sub2_8707.bindTexture((byte) -95, null);
-            aHa_Sub2_8707.method3729(8448, (byte) 121, 8448);
-            aHa_Sub2_8707.method3738(-15039, 0);
+            aHa_Sub2_8707.glTexEnvi(8448, (byte) 121, 8448);
+            aHa_Sub2_8707.glActiveTexture(-15039, 0);
             aHa_Sub2_8707.bindTexture((byte) -88, null);
             OpenGL.glPopAttrib();
             aHa_Sub2_8707.KA(NodederUtil.anIntArray6635[0], NodederUtil.anIntArray6635[1], NodederUtil.anIntArray6635[2], NodederUtil.anIntArray6635[3]);

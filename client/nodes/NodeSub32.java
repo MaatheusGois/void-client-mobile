@@ -171,9 +171,9 @@ final class NodeSub32
                     int i_40_ = i_39_ - i_35_;
                     int i_41_ = -i_36_ + i_38_;
                     if (i_40_ > -i_37_ && i_37_ > i_40_ && i_41_ > -i_37_ && i_37_ > i_41_ && bools[i_40_ + i_37_][i_37_ + i_41_]) {
-                        aHa_Sub2_6951.method3808(((int) (255.0F * aClass348_Sub1_6937.method2721(-66)) << 24), i + -136);
-                        aHa_Sub2_6951.method3794(aClass123_6927, aClass123_6943, i + -26666, null, null);
-                        aHa_Sub2_6951.method3759(anInt6934, -128, 4, anInterface8_6945, 0);
+                        aHa_Sub2_6951.glSetTextureEnvColor(((int) (255.0F * aClass348_Sub1_6937.method2721(-66)) << 24), i + -136);
+                        aHa_Sub2_6951.glSetVertexPointer(aClass123_6927, aClass123_6943, i + -26666, null, null);
+                        aHa_Sub2_6951.glDrawElements(anInt6934, -128, 4, anInterface8_6945, 0);
                         return;
                     }
                 }

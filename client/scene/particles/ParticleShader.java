@@ -37,7 +37,7 @@ final class ParticleShader extends ShaderProgram {
         anInt6224++;
         if (aClass61_6222 != null) {
             if (i_1_ >= -42) method2149(-65);
-            this.aHa_Sub2_3684.method3738(-15039, 1);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             if ((i & 0x80) != 0) this.aHa_Sub2_3684.bindTexture((byte) -122, null);
             else if ((0x1 & i_0_) != 1) {
                 if (!aClass83_6227.aBoolean1442) this.aHa_Sub2_3684.bindTexture((byte) -84, aClass83_6227.aClass258_Sub3Array1444[0]);
@@ -51,7 +51,7 @@ final class ParticleShader extends ShaderProgram {
                 this.aHa_Sub2_3684.bindTexture((byte) -88, aClass83_6227.aClass258_Sub3Array1444[i_2_]);
                 OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0F, 0.0F, 0.0F, 1.0F);
             }
-            this.aHa_Sub2_3684.method3738(-15039, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
             if ((0x40 & i) == 0) {
                 HashNodeSub1.aFloatArray9491[2] = (this.aHa_Sub2_3684.aFloat7823 * (this.aHa_Sub2_3684.aFloat7768));
                 HashNodeSub1.aFloatArray9491[0] = (this.aHa_Sub2_3684.aFloat7781 * (this.aHa_Sub2_3684.aFloat7768));
@@ -139,23 +139,23 @@ final class ParticleShader extends ShaderProgram {
         anInt6217++;
         aClass61_6222 = new Component128(this.aHa_Sub2_3684, 2);
         aClass61_6222.beginDisplayList((byte) 103, 0);
-        this.aHa_Sub2_3684.method3738(-15039, 1);
-        this.aHa_Sub2_3684.method3808(-16777216, 118);
-        this.aHa_Sub2_3684.method3729(260, (byte) 114, 7681);
-        this.aHa_Sub2_3684.method3775(false, 0, 770, 34166);
-        this.aHa_Sub2_3684.method3738(-15039, 0);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
+        this.aHa_Sub2_3684.glSetTextureEnvColor(-16777216, 118);
+        this.aHa_Sub2_3684.glTexEnvi(260, (byte) 114, 7681);
+        this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 34166);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         OpenGL.glBindProgramARB(34336, aClass171_6220.anInt2270);
         OpenGL.glEnable(34336);
         aClass61_6222.endDisplayList(-1);
         aClass61_6222.beginDisplayList((byte) 127, 1);
         int i_10_ = 65 / ((i - 62) / 49);
-        this.aHa_Sub2_3684.method3738(-15039, 1);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
         OpenGL.glMatrixMode(5890);
         OpenGL.glLoadIdentity();
         OpenGL.glMatrixMode(5888);
         this.aHa_Sub2_3684.method3761(0, 0);
-        this.aHa_Sub2_3684.method3775(false, 0, 770, 5890);
-        this.aHa_Sub2_3684.method3738(-15039, 0);
+        this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 5890);
+        this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         OpenGL.glBindProgramARB(34336, 0);
         OpenGL.glDisable(34336);
         OpenGL.glDisable(34820);
@@ -173,9 +173,9 @@ final class ParticleShader extends ShaderProgram {
         if (aClass61_6222 != null) {
             if (i >= -75) method2134(true, false);
             aClass61_6222.callDisplayList('\001', 28666);
-            this.aHa_Sub2_3684.method3738(-15039, 1);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             this.aHa_Sub2_3684.bindTexture((byte) -103, null);
-            this.aHa_Sub2_3684.method3738(-15039, 0);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         }
     }
 
@@ -183,12 +183,12 @@ final class ParticleShader extends ShaderProgram {
         anInt6232++;
         if (aClass61_6222 != null) {
             aClass61_6222.callDisplayList('\0', 28666);
-            this.aHa_Sub2_3684.method3738(-15039, 1);
+            this.aHa_Sub2_3684.glActiveTexture(-15039, 1);
             OpenGL.glMatrixMode(5890);
             if (bool_11_ == false) {
                 OpenGL.glLoadMatrixf(this.aHa_Sub2_3684.aClass101_Sub3_7767.method940(1), 0);
                 OpenGL.glMatrixMode(5888);
-                this.aHa_Sub2_3684.method3738(-15039, 0);
+                this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
                 if (this.aHa_Sub2_3684.anInt7735 != anInt6219) {
                     int i = ((this.aHa_Sub2_3684.anInt7735) % 5000 * 128 / 5000);
                     for (int i_12_ = 0; i_12_ < 64; i_12_++) {
