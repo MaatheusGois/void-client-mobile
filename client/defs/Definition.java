@@ -45,14 +45,14 @@ abstract class Definition extends Node {
     static final void method3038(int i) {
         anInt7044++;
         int i_0_ = 0;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub28_7230.method1845(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub28_7230.method1845(-32350) == 1) {
             i_0_ |= 0x1;
             i_0_ |= 0x10;
             i_0_ |= 0x20;
             i_0_ |= 0x2;
             i_0_ |= 0x4;
         }
-        if ((~Component192.aClass348_Sub51_3959.aClass239_Sub24_7235.method1820(-32350)) == i) i_0_ |= 0x40;
+        if ((~Component192.preferences.aClass239_Sub24_7235.method1820(-32350)) == i) i_0_ |= 0x40;
         DisplayModeManagerContainer58.setCurrentTick(i_0_, i);
         GradientPreset.aClass263_9195.method2009(i_0_, (byte) 109);
         Exception_Sub1.itemDefinitions.method1942(i_0_, (byte) -125);

@@ -343,7 +343,7 @@ final class Player extends DisplayModeManagerContainer58 {
         class101.method891(this.x, (-20 + (this.anInt6382 - this.anInt10274)), this.y);
         RenderableSub4 class318_sub4 = null;
         this.aBoolean10324 = false;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub21_7270.method1812(-32350) == 1) {
             Component241 class225 = this.getDefinition((byte) 72);
             if (class225.aBoolean2913 && (this.appearance.anInt2093 == -1 || Component291.aClass278_2529.method2079(this.appearance.anInt2093, i + -2).aBoolean1369)) {
                 DisplayModeManagerContainer167 class17 = ((this.anInt10286 != -1 && this.anInt10218 == 0) ? (RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7)) : null);

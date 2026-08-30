@@ -64,18 +64,18 @@ final class DefinitionSub26
     static final void method3120(int i) {
         Component37.anInt3931 = 0;
         anInt9345++;
-        int i_15_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByteSubtract((byte) -118);
-        int i_16_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-117);
-        int i_17_ = Component80.aClass348_Sub49_Sub2_3813.readShortLittle(false);
-        boolean bool = (Component80.aClass348_Sub49_Sub2_3813.readByteInverse((byte) 21) == 1);
+        int i_15_ = Component80.packetBuffer.readUnsignedByteSubtract((byte) -118);
+        int i_16_ = Component80.packetBuffer.readShortAddLittle(-117);
+        int i_17_ = Component80.packetBuffer.readShortLittle(false);
+        boolean bool = (Component80.packetBuffer.readByteInverse((byte) 21) == 1);
 
         ImageCacheStore.method2554((byte) -45);
         DefinitionSub22.method3111(111, i_15_);
-        int i_18_ = (-Component80.aClass348_Sub49_Sub2_3813.offset + DefinitionSub25.anInt9341) / 16;
+        int i_18_ = (-Component80.packetBuffer.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_18_][4];
         for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
             for (int i_20_ = 0; i_20_ < 4; i_20_++)
-                Component31.anIntArrayArray5894[i_19_][i_20_] = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
+                Component31.anIntArrayArray5894[i_19_][i_20_] = Component80.packetBuffer.readInt((byte) -126);
         }
         OggUrlStream.aByteArrayArray8996 = new byte[i_18_][];
         Component30.aByteArrayArray1887 = new byte[i_18_][];

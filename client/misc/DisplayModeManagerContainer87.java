@@ -1245,8 +1245,8 @@ class DisplayModeManagerContainer87
 
     static final void method1686(int i) {
         int i_308_ = -110 / ((i - -74) / 44);
-        if (DefinitionSub29.anInt9372 > 1) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub17_7263), 4);
-        else Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub17_7263), 2);
+        if (DefinitionSub29.anInt9372 > 1) Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub17_7263), 4);
+        else Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub17_7263), 2);
         anInt3106++;
     }
 

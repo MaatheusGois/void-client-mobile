@@ -22,7 +22,7 @@ final class Component55
         if (i != 0) method2333(true);
         anInt3933++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(ShaderSub3.aClass351_5200, DisplayModeManagerContainer64.aClass77_9029, i ^ ~0x53);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, DisplayModeManagerContainer136.anInt4718);
+        class348_sub47.particleBuffer.writeShort((byte) 107, DisplayModeManagerContainer136.anInt4718);
         HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
     }
 }

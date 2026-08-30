@@ -103,8 +103,8 @@ final class DefinitionSub30
                             else {
                                 Component334.anInt2012++;
                                 ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(InterfaceRenderer.aClass351_5057, DisplayModeManagerContainer64.aClass77_9029, -85));
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component31.method1745(string, -65));
-                                class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+                                class348_sub47.particleBuffer.writeByte(false, Component31.method1745(string, -65));
+                                class348_sub47.particleBuffer.writeString((byte) -5, string);
                                 HashNodeSub14.enqueueOutboundPacket(123, class348_sub47);
                                 if (i <= -31) break;
                                 method3127(-4);

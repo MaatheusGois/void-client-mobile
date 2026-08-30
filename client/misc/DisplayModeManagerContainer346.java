@@ -61,7 +61,7 @@ final class DisplayModeManagerContainer346
 
     static final void method1212(int i, int i_13_, int i_14_, int i_15_) {
         anInt2059++;
-        i = Component192.aClass348_Sub51_3959.aClass239_Sub26_7260.method1838(-32350) * i >> 8;
+        i = Component192.preferences.aClass239_Sub26_7260.method1838(-32350) * i >> 8;
         if (i_14_ == i_13_ && !DisplayModeManagerContainer238.aBoolean1236) Component65.method960(1);
         else if (i_13_ != -1 && (i_13_ != Component119.anInt3428 || !Component385.method1296(true)) && i != 0 && !DisplayModeManagerContainer238.aBoolean1236) {
             DisplayModeManagerContainer172.method368(i, 18002, false, i_13_, Component54.aClass45_8667, 0, i_15_);

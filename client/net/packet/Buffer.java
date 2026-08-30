@@ -580,8 +580,8 @@ class Buffer extends Node {
             if (bool != bool_72_) {
                 if (bool) {
                     Component119.anInt3428 = Component35.anInt4270;
-                    if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350) != 0) {
-                        Component168.method2355(Component192.aClass348_Sub51_3959.aClass239_Sub26_7245.method1838(-32350), (byte) 50, false, Component54.aClass45_8667, Component35.anInt4270, 0, 2);
+                    if (Component192.preferences.aClass239_Sub26_7245.method1838(-32350) != 0) {
+                        Component168.method2355(Component192.preferences.aClass239_Sub26_7245.method1838(-32350), (byte) 50, false, Component54.aClass45_8667, Component35.anInt4270, 0, 2);
                         DefinitionSub17Sub1.method3093(i ^ 0x66);
                     } else Sprite.resetMusic(2, 22684);
                     HardwareProbe.aClass248_6601.writeLoginState(-117, false);

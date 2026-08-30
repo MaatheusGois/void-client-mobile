@@ -112,7 +112,7 @@ final class Cp1252Decoder extends Component47 {
             class348_sub49.writeInt((byte) 120, (int) (9.9999999E7 * Math.random()));
         class348_sub49.writeShort((byte) 107, (int) (9.9999999E7 * Math.random()));
         class348_sub49.applyRsa(Sprite.aBigInteger6921, (byte) -98, Component269.aBigInteger8762);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 80);
+        class348_sub47.particleBuffer.writeBytes(class348_sub49.offset, 0, class348_sub49.payload, 80);
         return is;
     }
 

@@ -40,7 +40,7 @@ final class DisplayModeManagerContainer389
             while (class144.status == 0) SpriteAtlasShader.sleep((byte) -122, 1L);
             if (class144.status == 1) {
                 class234 = (RandomAccessFileReader) class144.result;
-                Buffer class348_sub49 = Component192.aClass348_Sub51_3959.method3427(24);
+                Buffer class348_sub49 = Component192.preferences.method3427(24);
                 class234.write((byte) 114, 0, (class348_sub49.offset), (class348_sub49.payload));
             }
         } catch (Exception exception) {

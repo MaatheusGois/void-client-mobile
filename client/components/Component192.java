@@ -8,7 +8,7 @@ final class Component192
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt3958;
-    static NodeSub51 aClass348_Sub51_3959;
+    static NodeSub51 preferences;
     static int anInt3960;
     /** Open-addressed hash → id pairs for archive names. */
     private final int[] buckets;
@@ -108,7 +108,7 @@ final class Component192
 
     public static void clearStatics(boolean bool) {
         menuTip = null;
-        aClass348_Sub51_3959 = null;
+        preferences = null;
         if (bool != true) clearSoftCache(46);
     }
 
@@ -127,6 +127,6 @@ final class Component192
     static final void clearSoftCache(int i) {
         Component279.aClass60_225.clear(0);
         anInt3965++;
-        if (i != -1) aClass348_Sub51_3959 = null;
+        if (i != -1) preferences = null;
     }
 }

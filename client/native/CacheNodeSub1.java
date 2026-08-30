@@ -344,7 +344,7 @@ final class CacheNodeSub1
 
     static final void method3290(int i) {
         if (i < 30) aClass262_10479 = null;
-        IOException_Sub1.configureAudio(Component192.aClass348_Sub51_3959.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
+        IOException_Sub1.configureAudio(Component192.preferences.aClass239_Sub5_7240.method1739(-32350) == 1, 2, true, 22050);
         anInt10470++;
         Definition.aClass279_7042 = Component321.method1439(22050, OggUrlStream.aClass297_8992, DisplayModeManagerContainer50.gameCanvas, 0, 7);
         HashNodeSub18.method3273(true, -114, Component16.method1326(null, 9));

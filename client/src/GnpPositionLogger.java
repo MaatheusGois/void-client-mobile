@@ -46,7 +46,7 @@ final class GnpPositionLogger {
             NodeSub32.anInt6930 = Component21.aClass356_3654.size(1);
             Component21.aClass356_3654.method3477(3, DefinitionSub23.aClass348_Sub22Array9319);
         }
-        if (DefinitionSub25.anInt9341 != Component80.aClass348_Sub49_Sub2_3813.offset) throw new RuntimeException("gnp1 pos:" + (Component80.aClass348_Sub49_Sub2_3813.offset) + " psize:" + DefinitionSub25.anInt9341);
+        if (DefinitionSub25.anInt9341 != Component80.packetBuffer.offset) throw new RuntimeException("gnp1 pos:" + (Component80.packetBuffer.offset) + " psize:" + DefinitionSub25.anInt9341);
         if (i <= 47) aClass74_1519 = null;
         for (int i_4_ = 0; Component324.anInt2057 > i_4_; i_4_++) {
             if (Component21.aClass356_3654.get(DisplayModeManagerContainer238.anIntArray1233[i_4_], -6008) == null) throw new RuntimeException("gnp2 pos:" + i_4_ + " size:" + Component324.anInt2057);

@@ -165,8 +165,8 @@ final class HashNodeSub14
     static final void enqueueOutboundPacket(int i, ParticleSystem class348_sub47) {
         anInt9630++;
         DefinitionSub13.aClass262_9201.addTail(class348_sub47, -20180);
-        class348_sub47.anInt7119 = class348_sub47.aClass348_Sub49_Sub2_7116.offset;
-        class348_sub47.aClass348_Sub49_Sub2_7116.offset = 0;
+        class348_sub47.anInt7119 = class348_sub47.particleBuffer.offset;
+        class348_sub47.particleBuffer.offset = 0;
         NodeSub34.anInt6969 += class348_sub47.anInt7119;
         int i_17_ = -41 / ((i - 79) / 37);
     }

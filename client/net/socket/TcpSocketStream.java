@@ -50,14 +50,14 @@ final class TcpSocketStream extends SocketStream {
         anInt5830++;
         if (class348_sub9.anInt6685 != -1 || class348_sub9.anIntArray6697 != null) {
             int i_7_ = 0;
-            int i_8_ = ((class348_sub9.anInt6677 * Component192.aClass348_Sub51_3959.aClass239_Sub26_7234.method1838(-32350)) >> 8);
+            int i_8_ = ((class348_sub9.anInt6677 * Component192.preferences.aClass239_Sub26_7234.method1838(-32350)) >> 8);
             if (class348_sub9.anInt6698 >= i_3_) {
                 if (class348_sub9.anInt6678 > i_3_) i_7_ += -i_3_ + class348_sub9.anInt6678;
             } else i_7_ += -class348_sub9.anInt6698 + i_3_;
             if (i_5_ <= class348_sub9.anInt6687) {
                 if (class348_sub9.anInt6689 > i_5_) i_7_ += -i_5_ + class348_sub9.anInt6689;
             } else i_7_ += -class348_sub9.anInt6687 + i_5_;
-            if (class348_sub9.anInt6694 == 0 || (-256 + i_7_ > class348_sub9.anInt6694) || Component192.aClass348_Sub51_3959.aClass239_Sub26_7234.method1838(-32350) == 0 || class348_sub9.anInt6693 != i_4_) {
+            if (class348_sub9.anInt6694 == 0 || (-256 + i_7_ > class348_sub9.anInt6694) || Component192.preferences.aClass239_Sub26_7234.method1838(-32350) == 0 || class348_sub9.anInt6693 != i_4_) {
                 if (class348_sub9.aClass348_Sub16_Sub5_6676 != null) {
                     PlayerState.aClass348_Sub16_Sub4_7065.method2880(class348_sub9.aClass348_Sub16_Sub5_6676);
                     class348_sub9.aClass348_Sub19_Sub1_6686 = null;

@@ -210,9 +210,9 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk0")) {
                             SoftwareFallbackShader.method3553(false, (byte) 104, 0);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) {
+                            if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 0) {
                                 Applet_Sub1.printConsole("Entered tk0", 101);
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 0);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 return;
@@ -221,9 +221,9 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk1")) {
                             SoftwareFallbackShader.method3553(false, (byte) 109, 1);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1) {
+                            if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 1) {
                                 Applet_Sub1.printConsole("Entered tk1", -65);
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 1);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 1);
                                 DisplayModeManagerContainer389.savePreferences(i ^ ~0x6b);
                                 r.aBoolean9719 = false;
                                 return;
@@ -232,9 +232,9 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk2")) {
                             SoftwareFallbackShader.method3553(false, (byte) 115, 2);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
+                            if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 2) {
                                 Applet_Sub1.printConsole("Entered tk2", i + 151);
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 2);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 2);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                             } else {
@@ -245,9 +245,9 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk3")) {
                             SoftwareFallbackShader.method3553(false, (byte) 107, 3);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350) == 3) {
+                            if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350) == 3) {
                                 Applet_Sub1.printConsole("Entered tk3", 78);
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 3);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 3);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 return;
@@ -256,9 +256,9 @@ final class CommandHandler {
                         }
                         if (string.equalsIgnoreCase("tk5")) {
                             SoftwareFallbackShader.method3553(false, (byte) 113, 5);
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i ^ 0x7e13) == 5) {
+                            if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i ^ 0x7e13) == 5) {
                                 Applet_Sub1.printConsole("Entered tk5", -108);
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 5);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), 5);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                             } else {
@@ -273,10 +273,10 @@ final class CommandHandler {
                                 int i_6_ = (NodeSub41.parseInt(true, string.substring(6)));
                                 if (i_6_ < 0 || (Node.method2710(-126, Component127.anInt2964) < i_6_)) Applet_Sub1.printConsole("Invalid buildarea value", 53);
                                 else {
-                                    Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub6_7226), i_6_);
+                                    Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub6_7226), i_6_);
                                     DisplayModeManagerContainer389.savePreferences(37);
                                     r.aBoolean9719 = false;
-                                    Applet_Sub1.printConsole(("maxbuildarea=" + Component192.aClass348_Sub51_3959.aClass239_Sub6_7226.method1743(-32350)), 98);
+                                    Applet_Sub1.printConsole(("maxbuildarea=" + Component192.preferences.aClass239_Sub6_7226.method1743(-32350)), 98);
                                     return;
                                 }
                                 return;
@@ -433,12 +433,12 @@ final class CommandHandler {
                         }
                         if (string.startsWith("pc")) {
                             ParticleSystem class348_sub47 = (ParticleShader.createOutboundPacket(DefinitionSub22.aClass351_9304, DisplayModeManagerContainer64.aClass77_9029, -97));
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 0);
-                            int i_12_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
+                            class348_sub47.particleBuffer.writeByte(false, 0);
+                            int i_12_ = (class348_sub47.particleBuffer.offset);
                             int i_13_ = string.indexOf(" ", 4);
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string.substring(3, i_13_));
-                            AbstractShaderSub4.writeHuffmanString((class348_sub47.aClass348_Sub49_Sub2_7116), i + -12, string.substring(i_13_));
-                            class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthByte(114, (class348_sub47.aClass348_Sub49_Sub2_7116.offset + -i_12_));
+                            class348_sub47.particleBuffer.writeString((byte) -5, string.substring(3, i_13_));
+                            AbstractShaderSub4.writeHuffmanString((class348_sub47.particleBuffer), i + -12, string.substring(i_13_));
+                            class348_sub47.particleBuffer.writeLengthByte(114, (class348_sub47.particleBuffer.offset + -i_12_));
                             HashNodeSub14.enqueueOutboundPacket(i ^ ~0x49, class348_sub47);
                             return;
                         }
@@ -520,7 +520,7 @@ final class CommandHandler {
                         }
                         if (string.equals("autosetup")) {
                             Component269.method2478(1000);
-                            Applet_Sub1.printConsole(("Complete. Toolkit now: " + Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i + -32271)), -97);
+                            Applet_Sub1.printConsole(("Complete. Toolkit now: " + Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i + -32271)), -97);
                             return;
                         }
                         if (string.equals("errormessage")) {
@@ -551,11 +551,11 @@ final class CommandHandler {
                             if (i_20_ < 0) Applet_Sub1.printConsole("Syntax: ortho <n>", 66);
                             else {
                                 int i_21_ = (NodeSub41.parseInt(true, string.substring(1 + i_20_)));
-                                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222), i_21_);
+                                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub3_7222), i_21_);
                                 DisplayModeManagerContainer389.savePreferences(37);
                                 r.aBoolean9719 = false;
                                 HashNodeSub3.method3179(i + 79);
-                                if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(-32350) == i_21_) {
+                                if (Component192.preferences.aClass239_Sub3_7222.method1727(-32350) == i_21_) {
                                     Applet_Sub1.printConsole("Successfully changed ortho mode", -82);
                                     return;
                                 } else Applet_Sub1.printConsole("Failed to change ortho mode", -112);
@@ -564,7 +564,7 @@ final class CommandHandler {
                             return;
                         }
                         if (string.startsWith("orthozoom ")) {
-                            if (Component192.aClass348_Sub51_3959.aClass239_Sub3_7222.method1727(i + -32271) == 0) Applet_Sub1.printConsole("enable ortho mode first (use 'ortho <n>')", i + 182);
+                            if (Component192.preferences.aClass239_Sub3_7222.method1727(i + -32271) == 0) Applet_Sub1.printConsole("enable ortho mode first (use 'ortho <n>')", i + 182);
                             else {
                                 int i_22_ = (NodeSub41.parseInt(true, string.substring(string.indexOf(' ') - -1)));
                                 Component72.anInt1911 = i_22_;
@@ -643,10 +643,10 @@ final class CommandHandler {
                 if (Component49.clientState == 10) {
                     Component102.anInt4799++;
                     ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket((MatrixSub2.aClass351_5699), (DisplayModeManagerContainer64.aClass77_9029), i ^ 0x24);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, string.length() + 3);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, bool ? 1 : 0);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, bool_0_ ? 1 : 0);
-                    class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+                    class348_sub47.particleBuffer.writeByte(false, string.length() + 3);
+                    class348_sub47.particleBuffer.writeByte(false, bool ? 1 : 0);
+                    class348_sub47.particleBuffer.writeByte(false, bool_0_ ? 1 : 0);
+                    class348_sub47.particleBuffer.writeString((byte) -5, string);
                     HashNodeSub14.enqueueOutboundPacket(120, class348_sub47);
                 }
                 if (Component49.clientState == 10) {

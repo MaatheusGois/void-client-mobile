@@ -50,7 +50,7 @@ final class NodeSub20
     static final void method2947(boolean bool, int i, int i_4_, int i_5_, int i_6_, int i_7_) {
         anInt6837++;
         if (bool != true) method2950(121);
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub26_7272.method1838(-32350) != 0 && i_5_ != 0 && Component335.anInt2021 < 50 && i_4_ != -1) GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo((byte) 1, i_4_, i_5_, i_6_, i, 0, i_7_, null);
+        if (Component192.preferences.aClass239_Sub26_7272.method1838(-32350) != 0 && i_5_ != 0 && Component335.anInt2021 < 50 && i_4_ != -1) GlFramebufferTexture.aClass10Array8531[Component335.anInt2021++] = new RunescapeInfo((byte) 1, i_4_, i_5_, i_6_, i, 0, i_7_, null);
     }
 
     final void method2948(int i, int i_8_, int[] is) {

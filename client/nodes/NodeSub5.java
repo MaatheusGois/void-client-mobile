@@ -97,8 +97,8 @@ abstract class NodeSub5
                     }
                     if (AbstractShaderSub2.anInt7297 == 4) {
                         if (DefinitionSub8.aClass238_9165.availableAtLeast(1, 104)) {
-                            DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -116, (Component80.aClass348_Sub49_Sub2_3813.payload));
-                            int i_11_ = 0xff & (Component80.aClass348_Sub49_Sub2_3813.payload[0]);
+                            DefinitionSub8.aClass238_9165.readBytes(1, 0, (byte) -116, (Component80.packetBuffer.payload));
+                            int i_11_ = 0xff & (Component80.packetBuffer.payload[0]);
                             Component48.anInt4337 = i_11_;
                             AbstractShaderSub2.anInt7297 = 0;
                             DefinitionSub8.aClass238_9165.close((byte) 36);

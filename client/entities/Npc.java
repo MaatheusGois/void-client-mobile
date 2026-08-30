@@ -147,7 +147,7 @@ final class Npc extends DisplayModeManagerContainer58 {
         NpcComposition class79 = (this.definition.anIntArray1377 != null ? this.definition.method794(DisplayModeManagerContainer58.aClass170_10209, -1) : this.definition);
         this.aBoolean10324 = false;
         RenderableSub4 class318_sub4 = null;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
+        if (Component192.preferences.aClass239_Sub21_7270.method1812(-32350) == i && class79.aBoolean1369 && class225.aBoolean2913) {
             DisplayModeManagerContainer167 class17 = ((this.anInt10286 == -1 || this.anInt10218 != 0) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10286, 7));
             DisplayModeManagerContainer167 class17_22_ = ((this.anInt10268 == -1 || (this.aBoolean10213 && class17 != null)) ? null : RunescapeInfo.aClass87_191.getSequence(this.anInt10268, 7));
             DisplayModeManagerContainer370 class64 = (Node.method2711(this.anInt10302, i_20_, this.aClass64Array10323[0], this.anInt10208, false, (class17_22_ == null ? this.anInt10267 : this.anInt10245), 0xffff & this.definition.aShort1339, this.definition.anInt1399, this.anInt10252, var_ha, 0xff & this.definition.aByte1353, this.definition.aShort1350 & 0xffff, this.definition.aByte1347 & 0xff, class17_22_ == null ? class17 : class17_22_));

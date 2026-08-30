@@ -23,7 +23,7 @@ final class Component142
     }
 
     static final void method3489(int i) {
-        NodeCache.aHa1098.DualToolkit(((float) Component192.aClass348_Sub51_3959.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * 1.1523438F);
+        NodeCache.aHa1098.DualToolkit(((float) Component192.preferences.aClass239_Sub10_7232.method1764(-32350) * 0.1F + 0.7F) * 1.1523438F);
         anInt4413++;
         NodeCache.aHa1098.ZA(DisplayModeManagerContainer259.anInt3439, 0.69921875F, 1.2F, -200.0F, -240.0F, -200.0F);
         NodeCache.aHa1098.L(DisplayModeManagerContainer259.anInt3444, -1, 0);

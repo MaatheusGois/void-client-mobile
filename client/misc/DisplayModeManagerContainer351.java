@@ -24,7 +24,7 @@ final class DisplayModeManagerContainer351
         if (bool != true) return null;
         class348_sub47.anInt7122 = 0;
         class348_sub47.aClass351_7118 = null;
-        class348_sub47.aClass348_Sub49_Sub2_7116 = new DisplayModeManagerContainer207(5000);
+        class348_sub47.particleBuffer = new DisplayModeManagerContainer207(5000);
         return class348_sub47;
     }
 
@@ -32,7 +32,7 @@ final class DisplayModeManagerContainer351
         anInt2675++;
         int i_4_ = i_2_ - -NodeBaseSub2.regionTileX;
         int i_5_ = Component330.regionTileY + i;
-        if (Component335.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && AbstractShaderSub4.anInt7319 > i_2_ && ParametricDefinition.anInt9109 > i && (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Component72.localPlayer.plane))) {
+        if (Component335.aClass357ArrayArrayArray2029 != null && i_2_ >= 0 && i >= 0 && AbstractShaderSub4.anInt7319 > i_2_ && ParametricDefinition.anInt9109 > i && (Component192.preferences.aClass239_Sub27_7261.method1840(-32350) != 0 || i_3_ == (Component72.localPlayer.plane))) {
             long l = i_5_ << 14 | i_3_ << 28 | i_4_;
             NodeSub37 class348_sub37 = ((NodeSub37) Component387.aClass356_1895.get(l, -6008));
             if (class348_sub37 == null) Component21.method2110(i_3_, i_2_, i);

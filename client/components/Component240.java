@@ -66,8 +66,8 @@ final class Component240
             HeapDumper.resetGraphicsPreferences(120);
             i_3_ = 4;
         }
-        if (i_1_ != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350)) {
-            Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), i_1_);
+        if (i_1_ != Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350)) {
+            Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7251), i_1_);
             SoftwareFallbackShader.method3553(false, (byte) 122, i_1_);
         }
         if (i >= -20) aClass243_1114 = null;

@@ -8,7 +8,7 @@ abstract class Component80
  * Evidence: root class; no distinctive extends/strings
  */ {
     static int anInt3812;
-    static DisplayModeManagerContainer207 aClass348_Sub49_Sub2_3813 = new DisplayModeManagerContainer207(7500);
+    static DisplayModeManagerContainer207 packetBuffer = new DisplayModeManagerContainer207(7500);
     static int anInt3814;
 
     static final int method2253(int i, int i_0_) {
@@ -43,8 +43,8 @@ abstract class Component80
     }
 
     public static void method2254(int i) {
-        aClass348_Sub49_Sub2_3813 = null;
-        if (i != -14804) aClass348_Sub49_Sub2_3813 = null;
+        packetBuffer = null;
+        if (i != -14804) packetBuffer = null;
     }
 
     static final void method2255(int i, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {

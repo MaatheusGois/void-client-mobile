@@ -18,17 +18,17 @@ final class Component337
     static final void method2106(String string, int i) {
         anInt3645++;
         ParticleSystem class348_sub47 = DisplayModeManagerContainer351.method1478(true);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, DisplayModeManagerContainer109.aClass29_2353.anInt400);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, 0);
-        int i_0_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, 634);
+        class348_sub47.particleBuffer.writeByte(false, DisplayModeManagerContainer109.aClass29_2353.anInt400);
+        class348_sub47.particleBuffer.writeShort((byte) 107, 0);
+        int i_0_ = (class348_sub47.particleBuffer.offset);
+        class348_sub47.particleBuffer.writeShort((byte) 107, 634);
         int[] is = Cp1252Decoder.method463(class348_sub47, false);
-        int i_1_ = (class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, ObjectDeserializer.languageId);
-        class348_sub47.aClass348_Sub49_Sub2_7116.offset += 7;
-        class348_sub47.aClass348_Sub49_Sub2_7116.xteaEncrypt(i_1_, true, is, class348_sub47.aClass348_Sub49_Sub2_7116.offset);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeLengthShort(1809639944, -i_0_ + (class348_sub47.aClass348_Sub49_Sub2_7116.offset));
+        int i_1_ = (class348_sub47.particleBuffer.offset);
+        class348_sub47.particleBuffer.writeString((byte) -5, string);
+        class348_sub47.particleBuffer.writeByte(false, ObjectDeserializer.languageId);
+        class348_sub47.particleBuffer.offset += 7;
+        class348_sub47.particleBuffer.xteaEncrypt(i_1_, true, is, class348_sub47.particleBuffer.offset);
+        class348_sub47.particleBuffer.writeLengthShort(1809639944, -i_0_ + (class348_sub47.particleBuffer.offset));
         HashNodeSub14.enqueueOutboundPacket(118, class348_sub47);
         if (i <= 99) hashString(null, 70);
         AbstractShaderSub2.anInt7297 = 1;

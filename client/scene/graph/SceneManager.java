@@ -27,13 +27,13 @@ final class SceneManager {
         if (i >= 1 && i_5_ >= 1 && -2 + AbstractShaderSub4.anInt7319 >= i && i_5_ <= -2 + ParametricDefinition.anInt9109) {
             int i_8_ = i_7_;
             if (i_8_ < 3 && NpcComposition.method802(i_5_, i, true)) i_8_++;
-            if ((Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 0 && !Component255.method536(i_5_, false, i, Component385.anInt2204, i_8_)) || Component335.aClass357ArrayArrayArray2029 == null) return;
+            if ((Component192.preferences.aClass239_Sub27_7261.method1840(-32350) == 0 && !Component255.method536(i_5_, false, i, Component385.anInt2204, i_8_)) || Component335.aClass357ArrayArrayArray2029 == null) return;
             Component103.aClass237_Sub1_4197.method1694((NodeSub45.aClass361Array7108[i_7_]), i_1_, i_7_, NodeSub8.toolkit, i, i_5_, (byte) 106);
             if (i_3_ >= 0) {
-                int i_9_ = Component192.aClass348_Sub51_3959.aClass239_Sub4_7220.method1737(-32350);
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), 1);
+                int i_9_ = Component192.preferences.aClass239_Sub4_7220.method1737(-32350);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub4_7220), 1);
                 Component103.aClass237_Sub1_4197.method1689(i, i_7_, i_3_, NodeSub8.toolkit, i_8_, 50, i_4_, i_5_, i_2_, i_6_, (NodeSub45.aClass361Array7108[i_7_]));
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub4_7220), i_9_);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub4_7220), i_9_);
             }
         }
         if (i_0_ < 12) aClass262_2859 = null;

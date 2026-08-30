@@ -23,31 +23,31 @@ final class Component330
 
     static final void method853(byte i) {
         anInt1515++;
-        int i_0_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
-        int i_1_ = Component80.aClass348_Sub49_Sub2_3813.readShortAddLittle(-121);
-        boolean bool = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(i + 156) == 1;
-        int i_2_ = Component80.aClass348_Sub49_Sub2_3813.readShortAdd(i + -172);
-        Component37.anInt3931 = Component80.aClass348_Sub49_Sub2_3813.readByteAdd((byte) -112);
+        int i_0_ = Component80.packetBuffer.readUnsignedByte(255);
+        int i_1_ = Component80.packetBuffer.readShortAddLittle(-121);
+        boolean bool = Component80.packetBuffer.readUnsignedByte(i + 156) == 1;
+        int i_2_ = Component80.packetBuffer.readShortAdd(i + -172);
+        Component37.anInt3931 = Component80.packetBuffer.readByteAdd((byte) -112);
         ImageCacheStore.method2554((byte) -45);
         DefinitionSub22.method3111(125, i_0_);
-        Component80.aClass348_Sub49_Sub2_3813.startBitAccess(-122);
+        Component80.packetBuffer.startBitAccess(-122);
         for (int i_3_ = 0; i_3_ < 4; i_3_++) {
             for (int i_4_ = 0; (AbstractShaderSub4.anInt7319 >> 3 > i_4_); i_4_++) {
                 for (int i_5_ = 0; (i_5_ < ParametricDefinition.anInt9109 >> 3); i_5_++) {
-                    int i_6_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
+                    int i_6_ = Component80.packetBuffer.readBits((byte) -24, 1);
                     if (i_6_ != 1) Component240.anIntArrayArrayArray1116[i_3_][i_4_][i_5_] = -1;
-                    else Component240.anIntArrayArrayArray1116[i_3_][i_4_][i_5_] = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 26);
+                    else Component240.anIntArrayArrayArray1116[i_3_][i_4_][i_5_] = Component80.packetBuffer.readBits((byte) -24, 26);
                 }
             }
         }
-        Component80.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
-        int i_7_ = (-Component80.aClass348_Sub49_Sub2_3813.offset + DefinitionSub25.anInt9341) / 16;
+        Component80.packetBuffer.stopBitAccess(false);
+        int i_7_ = (-Component80.packetBuffer.offset + DefinitionSub25.anInt9341) / 16;
         Component31.anIntArrayArray5894 = new int[i_7_][4];
         int i_8_ = 0;
         if (i != 99) method852(-55);
         for (/**/; i_8_ < i_7_; i_8_++) {
             for (int i_9_ = 0; i_9_ < 4; i_9_++)
-                Component31.anIntArrayArray5894[i_8_][i_9_] = Component80.aClass348_Sub49_Sub2_3813.readInt((byte) -126);
+                Component31.anIntArrayArray5894[i_8_][i_9_] = Component80.packetBuffer.readInt((byte) -126);
         }
         ImageCacheStore.anIntArray4031 = null;
         Applet_Sub1.anIntArray38 = new int[i_7_];

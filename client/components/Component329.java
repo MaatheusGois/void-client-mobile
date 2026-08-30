@@ -68,9 +68,9 @@ final class Component329
     static final int method1781(int i, int i_1_, int i_2_) {
         anInt5983++;
         if (Sprite.anInt6923 == -1) return 1;
-        if (i != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350)) {
+        if (i != Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350)) {
             GlRectangleTexture.method1971(-2, FriendsIgnoreList.aClass274_3496.getLocalized(ObjectDeserializer.languageId, 544), true, i);
-            if (i != Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350)) return -1;
+            if (i != Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350)) return -1;
         }
         try {
             Dimension dimension = DisplayModeManagerContainer50.gameCanvas.getSize();

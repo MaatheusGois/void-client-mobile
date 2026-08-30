@@ -67,7 +67,7 @@ final class HashNodeSub10
         DefinitionSub36.aClass114_9456 = null;
         NodeSub50.anInt7213 = 0;
         Component339.aClass114_3145 = null;
-        Component80.aClass348_Sub49_Sub2_3813.offset = 0;
+        Component80.packetBuffer.offset = 0;
         int i_3_ = -122 % ((i - 13) / 45);
         SocketStream.aClass114_3133 = null;
         DisplayModeManagerContainer50.method2296(-99);

@@ -73,7 +73,7 @@ abstract class Component269
             if (bool_6_) {
                 try {
                     i_9_ = Component329.method1781(3, -70, 1000);
-                    if (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(i + -33350) == 3) {
+                    if (Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(i + -33350) == 3) {
                         Component6 class365 = NodeSub8.toolkit.c();
                         long l = (0xffffffffffffL & class365.aLong4471);
                         int i_10_ = class365.anInt4476;

@@ -62,11 +62,11 @@ final class ShaderProgramSub2
         anInt6210++;
         Component63.anInt4494++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component210.aClass351_5288, DisplayModeManagerContainer64.aClass77_9029, -124);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, MenuEntry.getWindowMode(-96));
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, Component236.canvasWidth);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShort((byte) 107, PacketReader.canvasHeight);
+        class348_sub47.particleBuffer.writeByte(false, MenuEntry.getWindowMode(-96));
+        class348_sub47.particleBuffer.writeShort((byte) 107, Component236.canvasWidth);
+        class348_sub47.particleBuffer.writeShort((byte) 107, PacketReader.canvasHeight);
         if (i != -24498) friendFormerNames = null;
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350));
+        class348_sub47.particleBuffer.writeByte(false, Component192.preferences.aClass239_Sub20_7248.method1808(-32350));
         HashNodeSub14.enqueueOutboundPacket(-101, class348_sub47);
     }
 

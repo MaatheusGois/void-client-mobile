@@ -504,8 +504,8 @@ final class ImageDefinition extends Definition {
         anInt9142++;
         if (bool != false) method3065(-42, true, 43);
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(PrimitiveTypeDefinition.aClass351_9089, DisplayModeManagerContainer64.aClass77_9029, -97);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeShortAdd(52, i_74_);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeIntMiddle(i, (byte) 44);
+        class348_sub47.particleBuffer.writeShortAdd(52, i_74_);
+        class348_sub47.particleBuffer.writeIntMiddle(i, (byte) 44);
         HashNodeSub14.enqueueOutboundPacket(25, class348_sub47);
     }
 

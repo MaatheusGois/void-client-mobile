@@ -62,7 +62,7 @@ abstract class OggStream extends Node {
         anInt6866++;
         Component38.method1406(true);
         if (i == 0) {
-            NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.modelProvider, Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+            NodeSub8.toolkit = Component65.method958(true, 0, DefinitionSub4.modelProvider, Component192.preferences.aClass239_Sub20_7248.method1808(-32350) * 2, DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
             if (string != null) {
                 NodeSub8.toolkit.GA(0);
                 Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -117, Component65.aClass45_1627);
@@ -81,7 +81,7 @@ abstract class OggStream extends Node {
                 Component149.method3511(true, class324, class143, string, i_1_ + 2, var_ha);
             }
             try {
-                NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.modelProvider, 2 * Component192.aClass348_Sub51_3959.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
+                NodeSub8.toolkit = Component65.method958(true, i, DefinitionSub4.modelProvider, 2 * Component192.preferences.aClass239_Sub20_7248.method1808(i_1_ + -32350), DisplayModeManagerContainer50.gameCanvas, Component257.aClass45_4796);
                 if (string != null) {
                     var_ha.GA(0);
                     Component184 class143 = Component388.method1819(DisplayModeManagerContainer167.p12FullGroupId, 0, -51, Component65.aClass45_1627);
@@ -102,9 +102,9 @@ abstract class OggStream extends Node {
                     NodeSub8.toolkit.method3651(var_za);
                 }
             } catch (Throwable throwable) {
-                int i_3_ = Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.getPreferenceValue(-32350);
+                int i_3_ = Component192.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350);
                 if (i_3_ == 2) GpsOverlay.aBoolean1952 = true;
-                Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), 0);
+                Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7271), 0);
                 method2965(string, i_3_, bool, i_1_);
                 return;
             } finally {
@@ -117,16 +117,16 @@ abstract class OggStream extends Node {
                 }
             }
         }
-        Component192.aClass348_Sub51_3959.aClass239_Sub25_7271.method1826(!bool, -142238264);
-        Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7271), i);
+        Component192.preferences.aClass239_Sub25_7271.method1826(!bool, -142238264);
+        Component192.preferences.applyPreference((byte) 74, (Component192.preferences.aClass239_Sub25_7271), i);
         Buffer.disposeActiveToolkit(i_1_ + -78);
         NodeSub8.toolkit.method3650(10000);
         NodeSub8.toolkit.X(32);
         Component270.aClass101_2123 = NodeSub8.toolkit.method3654();
         Cp1252Decoder.aClass101_5209 = NodeSub8.toolkit.method3654();
         Component200.method2196((byte) -9);
-        NodeSub8.toolkit.method3630(Component192.aClass348_Sub51_3959.aClass239_Sub2_7228.method1726(-32350) == 1);
-        if (NodeSub8.toolkit.method3627()) DefinitionSub33.method3137(Component192.aClass348_Sub51_3959.aClass239_Sub12_7243.method1771(-32350) == 1, (byte) -24);
+        NodeSub8.toolkit.method3630(Component192.preferences.aClass239_Sub2_7228.method1726(-32350) == 1);
+        if (NodeSub8.toolkit.method3627()) DefinitionSub33.method3137(Component192.preferences.aClass239_Sub12_7243.method1771(-32350) == 1, (byte) -24);
         Component263.method873(AbstractShaderSub4.anInt7319 >> 3, 21719, NodeSub8.toolkit, ParametricDefinition.anInt9109 >> 3);
         DisplayModeManagerContainer154.method773(true);
         r.aBoolean9719 = false;

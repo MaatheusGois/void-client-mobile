@@ -63,10 +63,10 @@ final class DisplayModeManagerContainer1
         MenuEntry.anInt9594++;
         anInt3318++;
         ParticleSystem class348_sub47 = ParticleShader.createOutboundPacket(Component208.aClass351_1766, DisplayModeManagerContainer64.aClass77_9029, i + -107);
-        class348_sub47.aClass348_Sub49_Sub2_7116.writeByte(false, 1 - -Component31.method1745(string, -65));
+        class348_sub47.particleBuffer.writeByte(false, 1 - -Component31.method1745(string, -65));
         if (i == 16) {
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeByteSubtract((byte) -70, i_8_);
-            class348_sub47.aClass348_Sub49_Sub2_7116.writeString((byte) -5, string);
+            class348_sub47.particleBuffer.writeByteSubtract((byte) -70, i_8_);
+            class348_sub47.particleBuffer.writeString((byte) -5, string);
             HashNodeSub14.enqueueOutboundPacket(117, class348_sub47);
         }
     }

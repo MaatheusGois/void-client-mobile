@@ -26,7 +26,7 @@ final class Component353
             DisplayModeManagerContainer104.clearSub6(class318_sub6, true);
         int i_0_;
         int i_1_;
-        if (Component192.aClass348_Sub51_3959.aClass239_Sub27_7261.method1840(-32350) == 1) {
+        if (Component192.preferences.aClass239_Sub27_7261.method1840(-32350) == 1) {
             i_0_ = 0;
             i_1_ = 3;
         } else i_0_ = i_1_ = Component385.anInt2204;

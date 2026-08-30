@@ -62,8 +62,8 @@ final class BuildInfo {
 
     static final void method204(int i) {
         anInt155++;
-        while (Component80.aClass348_Sub49_Sub2_3813.method3415(-62, DefinitionSub25.anInt9341) >= 15) {
-            int i_18_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 15);
+        while (Component80.packetBuffer.method3415(-62, DefinitionSub25.anInt9341) >= 15) {
+            int i_18_ = Component80.packetBuffer.readBits((byte) -24, 15);
             if (i_18_ == 32767) break;
             boolean bool = false;
             NpcNode class348_sub22 = ((NpcNode) Component21.aClass356_3654.get(i_18_, -6008));
@@ -79,23 +79,23 @@ final class BuildInfo {
             DisplayModeManagerContainer238.anIntArray1233[Component324.anInt2057++] = i_18_;
             npc.anInt10306 = OggStreamReader.anInt9041;
             if ((npc.definition) != null && npc.definition.method793(0)) Component298.method181(true, npc);
-            int i_19_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 2);
-            int i_20_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
-            int i_21_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 5);
+            int i_19_ = Component80.packetBuffer.readBits((byte) -24, 2);
+            int i_20_ = Component80.packetBuffer.readBits((byte) -24, 1);
+            int i_21_ = Component80.packetBuffer.readBits((byte) -24, 5);
             if (i_21_ > 15) i_21_ -= 32;
-            int i_22_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 5);
+            int i_22_ = Component80.packetBuffer.readBits((byte) -24, 5);
             if (i_22_ > 15) i_22_ -= 32;
-            int i_23_ = 0x3d01 & 4 + Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 3) << 11;
-            int i_24_ = Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 1);
+            int i_23_ = 0x3d01 & 4 + Component80.packetBuffer.readBits((byte) -24, 3) << 11;
+            int i_24_ = Component80.packetBuffer.readBits((byte) -24, 1);
             if (i_24_ == 1) Component354.anIntArray224[DisplayModeManagerContainer204.anInt1597++] = i_18_;
-            npc.method2448((Component291.aClass278_2529.method2079(Component80.aClass348_Sub49_Sub2_3813.readBits((byte) -24, 14), -1)), i ^ 0x2b297815);
+            npc.method2448((Component291.aClass278_2529.method2079(Component80.packetBuffer.readBits((byte) -24, 14), -1)), i ^ 0x2b297815);
             npc.method2434((byte) 111, npc.definition.anInt1399);
             npc.anInt10310 = (npc.definition.anInt1329) << 3;
             if (bool) npc.method2435((byte) -108, i_23_, true);
             npc.method2444((Component72.localPlayer.anIntArray10317[0]) - -i_21_, i_20_ == 1, (Component72.localPlayer.anIntArray10320[0]) + i_22_, i + 724138125, npc.getSize((byte) 50), i_19_);
             if (npc.definition.method793(0)) DisplayModeManagerContainer369.method1614(979190089, npc, npc.plane, (npc.anIntArray10317[0]), (npc.anIntArray10320[0]), null, null, 0);
         }
-        if (i == -724138005) Component80.aClass348_Sub49_Sub2_3813.stopBitAccess(false);
+        if (i == -724138005) Component80.packetBuffer.stopBitAccess(false);
     }
 
     static final void method205(int i, int i_25_, int i_26_, String string, int i_27_, int i_28_, int i_29_, int i_30_) {

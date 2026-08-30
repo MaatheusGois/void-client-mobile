@@ -206,7 +206,7 @@ final class Component289
                 aBoolean10138 = bool;
                 this.x = i_8_;
                 aByte10118 = (byte) i_14_;
-                aBoolean10137 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10138 && Component192.aClass348_Sub51_3959.aClass239_Sub7_7238.method1748(-32350) != 0);
+                aBoolean10137 = (var_ha.method3682() && class51.aBoolean894 && !aBoolean10138 && Component192.preferences.aClass239_Sub7_7238.method1748(-32350) != 0);
                 Component245 class2 = method2491((byte) -51, aBoolean10137, 2048, var_ha);
                 if (class2 == null) break;
                 aClass64_10124 = class2.aClass64_119;

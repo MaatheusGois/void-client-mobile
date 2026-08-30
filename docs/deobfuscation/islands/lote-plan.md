@@ -350,3 +350,22 @@ opcode/stack-effect tracing. Do not bulk-rename either area by token frequency;
 that would violate the uniqueness and clear-call-site requirements. The next safe
 step is to produce opcode-table evidence (or split a verified bootstrap subfamily)
 before attempting another 500-reference batch.
+
+## lote 71 — evidenced shared buffer/state handles *(1,341 refs freed)*
+
+**STATUS: DONE** — three uniquely defined fields were renamed using their
+declared types and call-site behavior:
+
+| Old | New | References |
+|---|---|---:|
+| `Component80.aClass348_Sub49_Sub2_3813` | `packetBuffer` | 516 |
+| `Component192.aClass348_Sub51_3959` | `preferences` | 502 |
+| `ParticleSystem.aClass348_Sub49_Sub2_7116` | `particleBuffer` | 323 |
+
+`packetBuffer` is the shared incoming packet buffer (reads, bit access, and
+packet framing); `preferences` is the global `NodeSub51` preference state
+queried by audio, display, and gameplay code; `particleBuffer` is the
+per-system serialization buffer allocated by `ParticleShader`.
+
+No reflection strings reference these fields. The renames were whole-word
+mechanical edits across Java sources only.
