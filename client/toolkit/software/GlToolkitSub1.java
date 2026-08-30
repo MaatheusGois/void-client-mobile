@@ -64,7 +64,7 @@ final class GlToolkitSub1
     }
 
     final void GA(int i) {
-        fillRect(0, 0, this.anInt7477, anInt7486, i, 0);
+        fillRect2D(0, 0, this.anInt7477, anInt7486, i, 0);
     }
 
     final int[] ShaderImpl(int i, int i_0_, int i_1_, int i_2_) {
@@ -78,7 +78,7 @@ final class GlToolkitSub1
         return is;
     }
 
-    final void method3628(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+    final void fillRect3D(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
         U(i, i_7_, i_8_, i_10_, i_11_);
         U(i, i_7_ + i_9_ - 1, i_8_, i_10_, i_11_);
         P(i, i_7_ + 1, i_9_ - 2, i_10_, i_11_);
@@ -1125,7 +1125,7 @@ final class GlToolkitSub1
         method3713();
     }
 
-    final void fillRect(int i, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_) {
+    final void fillRect2D(int i, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_) {
         if (i < this.anInt7496) {
             i_335_ -= this.anInt7496 - i;
             i = this.anInt7496;

@@ -66,8 +66,8 @@ final class Component149
                     int i_9_ = 4;
                     int i_10_ = 6 - -i_9_;
                     int i_11_ = i_9_ + 6;
-                    var_ha.fillRect(i_10_ + -i_9_, i_11_ + -i_9_, i_9_ + i_7_ + i_9_, i_8_ + (i_9_ - -i_9_), -16777216, 0);
-                    var_ha.method3628(i_10_ - i_9_, -i_9_ + i_11_, i_9_ + (i_7_ + i_9_), i_9_ + i_9_ + i_8_, -1, 0);
+                    var_ha.fillRect2D(i_10_ + -i_9_, i_11_ + -i_9_, i_9_ + i_7_ + i_9_, i_8_ + (i_9_ - -i_9_), -16777216, 0);
+                    var_ha.fillRect3D(i_10_ - i_9_, -i_9_ + i_11_, i_9_ + (i_7_ + i_9_), i_9_ + i_9_ + i_8_, -1, 0);
                     class324.method2584(null, 0, -1, null, -1, 1, i_8_, null, i_11_, 0, 0, i_7_, i_10_, false, 1, string);
                     Component354.method226(i_10_ - i_9_, i_9_ + i_7_ - -i_9_, i_11_ + -i_9_, i + -2, i_9_ + i_8_ - -i_9_);
                 }

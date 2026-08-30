@@ -79,7 +79,7 @@ final class DisplayModeManagerContainer50
                 int[] is = (class12.anInt200 == 2 ? MatrixSub1.modelProvider.getIndices(-21540, anInt3863, 0.7F, anInt3858, false, anInt3863) : MatrixSub1.modelProvider.getTriangles(false, anInt3858, 0.7F, anInt3863, anInt3863, -119));
                 aClass105_3867 = var_ha.method3662(anInt3863, is, (byte) 94, 0, anInt3863, anInt3863);
             }
-            if (class12.anInt200 == 2) var_ha.fillRect(i_7_, i_9_, i_8_, i_13_, i_12_, 0);
+            if (class12.anInt200 == 2) var_ha.fillRect2D(i_7_, i_9_, i_8_, i_13_, i_12_, 0);
             if (aClass105_3867 != null) {
                 int i_14_ = class12.anInt200 == 2 ? 1 : 0;
                 int i_15_ = i_13_ * i_11_ / -4096;
@@ -101,7 +101,7 @@ final class DisplayModeManagerContainer50
                         aClass105_3867.method970(i_7_ + i_17_, i_18_ + i_9_, i_13_, i_13_, 1, 0, i_14_);
                 }
             }
-        } else var_ha.fillRect(i_7_, i_9_, i_8_, i_13_, i_12_, 0);
+        } else var_ha.fillRect2D(i_7_, i_9_, i_8_, i_13_, i_12_, 0);
         for (int i_19_ = -1 + anInt3852; i_19_ >= 0; i_19_--)
             aClass72Array3865[i_19_].method737(var_ha, i_7_, i_9_, i_8_, i_13_, i_11_, i_10_);
         int i_20_ = 103 % ((i_6_ - 14) / 32);

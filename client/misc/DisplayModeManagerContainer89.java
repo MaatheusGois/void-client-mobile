@@ -23,8 +23,8 @@ final class DisplayModeManagerContainer89
     final void method178(int i, boolean bool, byte i_0_, int i_1_) {
         if (i_0_ >= -6) method202(-4, null);
         anInt8376++;
-        NodeSub8.toolkit.method3628(-2 + i, i_1_, 4 + this.aClass369_4635.anInt4971, this.aClass369_4635.anInt4963 + 2, (((Component381) this.aClass369_4635).anInt8580), 0);
-        NodeSub8.toolkit.method3628(i + -1, i_1_ + 1, this.aClass369_4635.anInt4971 + 2, this.aClass369_4635.anInt4963, 0, 0);
+        NodeSub8.toolkit.fillRect3D(-2 + i, i_1_, 4 + this.aClass369_4635.anInt4971, this.aClass369_4635.anInt4963 + 2, (((Component381) this.aClass369_4635).anInt8580), 0);
+        NodeSub8.toolkit.fillRect3D(i + -1, i_1_ + 1, this.aClass369_4635.anInt4971 + 2, this.aClass369_4635.anInt4963, 0, 0);
     }
 
     static final NodeSub21 method199(int i) {

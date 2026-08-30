@@ -48,7 +48,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean method3627();
 
-    abstract void method3628(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_);
+    abstract void fillRect3D(int x, int y, int z, int w, int u, int v);
 
     abstract Component24 method3629(int i, int i_14_, boolean bool);
 
@@ -234,7 +234,7 @@ abstract class GraphicsToolkit {
 
     final void method3668(int i, int i_105_, int i_106_, int i_107_, int i_108_, int i_109_) {
         anInt4574++;
-        if (i_109_ >= 21) method3628(i_107_, i_105_, i, i_108_, i_106_, 1);
+        if (i_109_ >= 21) fillRect3D(i_107_, i_105_, i, i_108_, i_106_, 1);
     }
 
     abstract void HA(int i, int i_110_, int i_111_, int i_112_, int[] is);
@@ -255,7 +255,7 @@ abstract class GraphicsToolkit {
 
     final void method3675(int i, byte i_125_, int i_126_, int i_127_, int i_128_, int i_129_) {
         if (i_125_ == -125) {
-            fillRect(i_126_, i_127_, i, i_128_, i_129_, 1);
+            fillRect2D(i_126_, i_127_, i, i_128_, i_129_, 1);
             anInt4566++;
         }
     }
@@ -380,7 +380,7 @@ abstract class GraphicsToolkit {
      * @param colour packed ARGB (alpha in high byte; console uses {@code 0x332277 | alpha<<24})
      * @param mode   blend mode (1 = normal translucent fill used by console / Microbot panel)
      */
-    abstract void fillRect(int x, int y, int width, int height, int colour, int mode);
+    abstract void fillRect2D(int x, int y, int width, int height, int colour, int mode);
 
     abstract void GA(int i);
 

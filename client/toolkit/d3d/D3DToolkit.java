@@ -909,4 +909,13 @@ public final class D3DToolkit extends GlToolkitSub3 {
         method3946(-32, true);
         this.anIDirect3DDevice9810.Clear(2, 0, 1.0F, 0);
     }
+
+    final void fillRect2D(int x, int y, int width, int height, int colour, int mode) {
+        super.fillRect2D(x, y, width, height, colour, mode);
+    }
+
+    final void fillRect3D(int x, int y, int z, int w, int u, int v) {
+        // Not used in D3DToolkit
+    }
+
 }

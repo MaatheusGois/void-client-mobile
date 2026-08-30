@@ -91,8 +91,8 @@ final class MicrobotPanel {
             }
             int h = height();
             // Shader(x, y, width, height, argb, mode) — filled rect.
-            renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
-            renderer.fillRect(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
+            renderer.fillRect2D(PANEL_X, PANEL_Y, WIDTH, h, BG, 1);
+            renderer.fillRect2D(PANEL_X, PANEL_Y, WIDTH, 1, ACCENT, 1);
 
             int textX = PANEL_X + PAD;
             int y = PANEL_Y + PAD + 12;

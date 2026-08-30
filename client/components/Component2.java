@@ -86,9 +86,9 @@ final class Component2
     }
 
     final void method178(int i, boolean bool, byte i_16_, int i_17_) {
-        NodeSub8.toolkit.method3628(-2 + i, i_17_, 4 + this.aClass369_4635.anInt4971, 2 + this.aClass369_4635.anInt4963, (((Component14) this.aClass369_4635).anInt8585), 0);
+        NodeSub8.toolkit.fillRect3D(-2 + i, i_17_, 4 + this.aClass369_4635.anInt4971, 2 + this.aClass369_4635.anInt4963, (((Component14) this.aClass369_4635).anInt8585), 0);
         anInt8360++;
-        NodeSub8.toolkit.method3628(i - 1, 1 + i_17_, this.aClass369_4635.anInt4971 - -2, this.aClass369_4635.anInt4963, 0, 0);
+        NodeSub8.toolkit.fillRect3D(i - 1, 1 + i_17_, this.aClass369_4635.anInt4971 - -2, this.aClass369_4635.anInt4963, 0, 0);
         if (i_16_ > -6) aClass114_8365 = null;
     }
 
@@ -96,8 +96,8 @@ final class Component2
         anInt8355++;
         int i_20_ = -110 / ((-20 - i) / 57);
         int i_21_ = (this.method183(116) * this.aClass369_4635.anInt4971 / 10000);
-        NodeSub8.toolkit.fillRect(i_19_, 2 + i_18_, i_21_, (this.aClass369_4635.anInt4963) - 2, ((Component14) this.aClass369_4635).anInt8591, 0);
-        NodeSub8.toolkit.fillRect(i_21_ + i_19_, 2 + i_18_, this.aClass369_4635.anInt4971 - i_21_, this.aClass369_4635.anInt4963 - 2, 0, 0);
+        NodeSub8.toolkit.fillRect2D(i_19_, 2 + i_18_, i_21_, (this.aClass369_4635.anInt4963) - 2, ((Component14) this.aClass369_4635).anInt8591, 0);
+        NodeSub8.toolkit.fillRect2D(i_21_ + i_19_, 2 + i_18_, this.aClass369_4635.anInt4971 - i_21_, this.aClass369_4635.anInt4963 - 2, 0, 0);
     }
 
     static final void method198(DisplayModeManagerContainer57 class46, boolean bool, int i, int i_22_) {

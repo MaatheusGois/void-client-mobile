@@ -388,7 +388,7 @@ final class ItemDefinition {
             var_ha_38_.f(50, 2147483647);
             var_ha_38_.NativeHandle();
             var_ha_38_.la();
-            var_ha_38_.fillRect(0, 0, 36, 32, 0, 0);
+            var_ha_38_.fillRect2D(0, 0, 36, 32, 0, 0);
             class64.render(class101_49_, null, 1);
             var_ha_38_.f(i_50_, i_51_);
             int[] is = var_ha_38_.ShaderImpl(0, 0, 36, 32);

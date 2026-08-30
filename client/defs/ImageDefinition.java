@@ -254,10 +254,10 @@ final class ImageDefinition extends Definition {
                                 if (Component143.aBooleanArray2326[i_23_] || GlToolkitSub3.anInt8045 > 1) {
                                     if (class46.type == 3) {
                                         if (i_28_ == 0) {
-                                            if (class46.filled) NodeSub8.toolkit.fillRect(i_24_, i_25_, (class46.width), (class46.height), (class46.colour), 0);
-                                            else NodeSub8.toolkit.method3628(i_24_, i_25_, (class46.width), (class46.height), (class46.colour), 0);
-                                        } else if (!class46.filled) NodeSub8.toolkit.method3628(i_24_, i_25_, class46.width, class46.height, (0xffffff & class46.colour | (-(i_28_ & 0xff) + 255 << 24)), 1);
-                                        else NodeSub8.toolkit.fillRect(i_24_, i_25_, class46.width, class46.height, (0xffffff & class46.colour | (-(0xff & i_28_) + 255 << 24)), 1);
+                                            if (class46.filled) NodeSub8.toolkit.fillRect2D(i_24_, i_25_, (class46.width), (class46.height), (class46.colour), 0);
+                                            else NodeSub8.toolkit.fillRect3D(i_24_, i_25_, (class46.width), (class46.height), (class46.colour), 0);
+                                        } else if (!class46.filled) NodeSub8.toolkit.fillRect3D(i_24_, i_25_, class46.width, class46.height, (0xffffff & class46.colour | (-(i_28_ & 0xff) + 255 << 24)), 1);
+                                        else NodeSub8.toolkit.fillRect2D(i_24_, i_25_, class46.width, class46.height, (0xffffff & class46.colour | (-(0xff & i_28_) + 255 << 24)), 1);
                                         if (Component210.gameCanvasAttached) {
                                             if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);

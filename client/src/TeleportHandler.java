@@ -226,8 +226,8 @@ final class TeleportHandler {
                     int i_47_ = (-i_45_ + i_41_ - (-i_43_ + (i_43_ * DisplayModeManagerContainer34.anInt8665 / DisplayModeManagerContainer229.anInt1267)));
                     int i_48_ = -1996554240;
                     if (WorldNameText.STELLARDAWN == PacketReader.currentGameType) i_48_ = -1996488705;
-                    var_ha.fillRect(i_46_, i_47_, i_44_, i_45_, i_48_, 1);
-                    var_ha.method3628(i_46_, i_47_, i_44_, i_45_, i_48_, 0);
+                    var_ha.fillRect2D(i_46_, i_47_, i_44_, i_45_, i_48_, 1);
+                    var_ha.fillRect3D(i_46_, i_47_, i_44_, i_45_, i_48_, 0);
                     if (WaterShader.anInt7379 <= 0) break;
                     int i_49_;
                     if (LoadingManager.anInt2173 <= 50) i_49_ = LoadingManager.anInt2173 * 5;

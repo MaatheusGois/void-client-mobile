@@ -462,7 +462,7 @@ final class BuildInfo {
                 final int cellPitch = consoleCellPitch();
                 final int promptH = consolePromptStripH();
                 var_ha.KA(i_35_, i_36_, Component236.canvasWidth + i_35_, i_36_ + consoleH);
-                var_ha.fillRect(i_35_, i_36_, Component236.canvasWidth, consoleH, 0x332277 | Component39.consoleFadeAlpha << 24, 1);
+                var_ha.fillRect2D(i_35_, i_36_, Component236.canvasWidth, consoleH, 0x332277 | Component39.consoleFadeAlpha << 24, 1);
                 Component103.method2663(-5590, i_35_, Component236.canvasWidth + i_35_, i_36_, i_36_ + consoleH);
                 int i_37_ = (consoleH - promptH) / cellPitch;
                 if (i_37_ < 1) {
@@ -473,7 +473,7 @@ final class BuildInfo {
                     int i_39_ = (i_37_ * i_38_ / (-1 + (i_37_ - -Component14.consoleLineCount)));
                     int i_40_ = 4;
                     if (Component14.consoleLineCount > 1) i_40_ += ((Component14.consoleLineCount + (-1 + -Component94.consoleScroll)) * (i_38_ - i_39_) / (Component14.consoleLineCount + -1));
-                    var_ha.fillRect(-16 + (Component236.canvasWidth + i_35_), i_36_ + i_40_, 12, i_39_, 0x332277 | Component39.consoleFadeAlpha << 24, 2);
+                    var_ha.fillRect2D(-16 + (Component236.canvasWidth + i_35_), i_36_ + i_40_, 12, i_39_, 0x332277 | Component39.consoleFadeAlpha << 24, 2);
                     for (int i_41_ = Component94.consoleScroll; ((i_41_ < i_37_ + Component94.consoleScroll) && Component14.consoleLineCount > i_41_); i_41_++) {
                         String[] strings = (DefinitionSub23.splitByChar('\010', true, ArbShaderProgram.consoleLines[i_41_]));
                         int i_42_ = (-16 + Component236.canvasWidth + -8) / strings.length;

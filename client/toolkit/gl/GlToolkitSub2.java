@@ -973,15 +973,15 @@ final class GlToolkitSub2
         }
     }
 
-    final void fillRect(int i, int i_85_, int i_86_, int i_87_, int i_88_, int i_89_) {
+    final void fillRect2D(int x, int y, int width, int height, int colour, int mode) {
         anInt7601++;
-        float f = (float) i + 0.35F;
-        float f_90_ = (float) i_85_ + 0.35F;
-        float f_91_ = (float) i_86_ + f;
+        float f = (float) x + 0.35F;
+        float f_90_ = (float) y + 0.35F;
+        float f_91_ = (float) width + f;
         method3778((byte) -127);
-        float f_92_ = f_90_ + (float) i_87_;
-        method3753(i_89_, 1);
-        OpenGL.glColor4ub((byte) (i_88_ >> 16), (byte) (i_88_ >> 8), (byte) i_88_, (byte) (i_88_ >> 24));
+        float f_92_ = f_90_ + (float) height;
+        method3753(mode, 1);
+        OpenGL.glColor4ub((byte) (colour >> 16), (byte) (colour >> 8), (byte) colour, (byte) (colour >> 24));
         if (aBoolean7843) OpenGL.glDisable(32925);
         OpenGL.glBegin(7);
         OpenGL.glVertex2f(f, f_90_);
@@ -2291,7 +2291,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3628(int i, int i_238_, int i_239_, int i_240_, int i_241_, int i_242_) {
+    final void fillRect3D(int i, int i_238_, int i_239_, int i_240_, int i_241_, int i_242_) {
         anInt7615++;
         float f = 0.35F + (float) i;
         float f_243_ = 0.35F + (float) i_238_;

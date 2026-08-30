@@ -953,15 +953,15 @@ abstract class GlToolkitSub3
 
     abstract void method3844(int i, Canvas canvas, Object object);
 
-    final void fillRect(int i, int i_70_, int i_71_, int i_72_, int i_73_, int i_74_) {
+    void fillRect2D(int x, int y, int width, int height, int colour, int mode) {
         method3903(false);
         anInt8017++;
-        method3894(-28186, i_73_);
+        method3894(-28186, mode);
         method3849((byte) 47, 0, DefinitionSub39.aClass70_9485);
         method3885(0, true, DefinitionSub39.aClass70_9485);
-        method3817(113, i_74_);
-        this.aClass101_Sub2_8074.method932(1.0F, (float) i_72_, (float) i_71_, (byte) -22);
-        this.aClass101_Sub2_8074.method891(i, i_70_, 0);
+        method3817(113, colour);
+        this.aClass101_Sub2_8074.method932(1.0F, (float) height, (float) width, (byte) -22);
+        this.aClass101_Sub2_8074.method891(x, y, 0);
         method3915(0);
         method3926((byte) 67, false);
         method3933(-70);

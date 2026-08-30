@@ -38,7 +38,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     private final native void MA(d var_d, int i, int i_0_);
 
-    final void method3628(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+    final void fillRect3D(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
         U(i, i_1_, i_2_, i_4_, i_5_);
         U(i, i_1_ + i_3_ - 1, i_2_, i_4_, i_5_);
         P(i, i_1_ + 1, i_3_ - 1, i_4_, i_5_);
@@ -60,7 +60,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final native void A(int i, Shader var_aa, int i_11_, int i_12_);
 
-    final native void fillRect(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_);
+    final native void fillRect2D(int x, int y, int width, int height, int colour, int mode);
 
     final void method3698() {
         /* empty */

@@ -76,7 +76,7 @@ final class Component49
         if (class295 != null) {
             int i_7_ = ((aClass125_4685.aClass221_4922.method1607(DisplayModeManagerContainer23.canvasWidth, aClass125_4685.anInt4929, (byte) -118)) - -aClass125_4685.anInt4924);
             int i_8_ = ((aClass125_4685.aClass341_4925.getAlignedOffset(GlToolkitSub2.canvasHeight, aClass125_4685.anInt4923, i ^ ~0x60b)) - -aClass125_4685.anInt4920);
-            if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.method3628(i_7_, i_8_, aClass125_4685.anInt4929, aClass125_4685.anInt4923, aClass125_4685.anInt4917, 0);
+            if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.fillRect3D(i_7_, i_8_, aClass125_4685.anInt4929, aClass125_4685.anInt4923, aClass125_4685.anInt4917, 0);
             i_8_ += method1855(5, class295.aString3756, true, NodeList.aClass324_3326, i_7_, i_8_) * 12;
             i_8_ += 8;
             if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.method3709(i_7_, i_8_, i_7_ + aClass125_4685.anInt4929 + -1, i_8_, aClass125_4685.anInt4917, 0);

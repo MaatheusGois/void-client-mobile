@@ -1221,4 +1221,14 @@ final class GlExtensionManager extends GlToolkitSub3 {
             throw NpcDefinition.wrapThrowable(runtimeexception, "bga.IA(" + (interface4 != null ? "{...}" : "null") + ')');
         }
     }
+
+    final void fillRect2D(int x, int y, int width, int height, int colour, int mode) {
+        // Delegate to parent GlToolkitSub3 implementation
+        super.fillRect2D(x, y, width, height, colour, mode);
+    }
+
+    final void fillRect3D(int x, int y, int z, int w, int u, int v) {
+        // Not used in GlExtensionManager
+    }
+
 }

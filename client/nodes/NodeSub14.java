@@ -159,7 +159,7 @@ final class NodeSub14
                             }
                         }
                     }
-                    var_ha.fillRect(i_18_, i_19_, 4 * RuntimeException_Sub1.anInt4600, RuntimeException_Sub1.anInt4600 * 4, i_15_, 2);
+                    var_ha.fillRect2D(i_18_, i_19_, 4 * RuntimeException_Sub1.anInt4600, RuntimeException_Sub1.anInt4600 * 4, i_15_, 2);
                     Component83.aClass105_1664.method979((-i_5_ + i_16_) * 4 + 48, (-(4 * (i_17_ - i_6_)) + 464 + -(RuntimeException_Sub1.anInt4600 * 4)), RuntimeException_Sub1.anInt4600 * 4, 4 * RuntimeException_Sub1.anInt4600, i_18_, i_19_);
                 }
             }
