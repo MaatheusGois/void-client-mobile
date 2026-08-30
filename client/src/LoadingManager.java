@@ -200,7 +200,7 @@ final class LoadingManager {
             RuntimeException_Sub1.method4011(i + 29684, Component339.aClass45_3146);
             NodeSub29.method3004(ShaderSub3.aClass45_5207, false, DefinitionSub4.modelProvider);
             HuffmanDecoder class296 = new HuffmanDecoder(Component110.aClass45_233.getFile("huffman", "", -29832));
-            GlToolkitSub3.method3896(class296, (byte) 13);
+            GlToolkitSub3.uniformMatrix2fv(class296, (byte) 13);
             try {
                 jagmisc.init();
             } catch (Throwable throwable) {
@@ -269,7 +269,7 @@ final class LoadingManager {
             Component280.anInterface16Array2447 = null;
             NodeSub32.aThread6946 = null;
             ShaderProgramSub7.aClass45_6277 = null;
-            GlToolkitSub3.method3886(i + 28556);
+            GlToolkitSub3.uniform1f(i + 28556);
             DisplayModeManagerContainer64.aBoolean9038 = Component192.aClass348_Sub51_3959.aClass239_Sub11_7265.method1768(-32350) == 1;
             Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub11_7265), 1);
             if (DisplayModeManagerContainer64.aBoolean9038) Component192.aClass348_Sub51_3959.applyPreference((byte) 74, (Component192.aClass348_Sub51_3959.aClass239_Sub25_7251), 0);

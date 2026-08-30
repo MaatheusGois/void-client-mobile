@@ -26,7 +26,7 @@ final class Component228
     static int[] anIntArray3014 = new int[1];
 
     final void method1643(byte[] is, int i, int i_0_, byte i_1_) {
-        aClass119_Sub2_3011.method35(is, i, 110, aHa_Sub2_3000.method3785(i, 4) * i_0_);
+        aClass119_Sub2_3011.method35(is, i, 110, aHa_Sub2_3000.setStencilOp(i, 4) * i_0_);
         anInt3005++;
         method1646(aClass119_Sub2_3011, 113, i_0_);
         if (i_1_ < 8) method1648((byte) 82);

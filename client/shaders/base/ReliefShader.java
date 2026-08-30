@@ -39,7 +39,7 @@ final class ReliefShader {
             DisplayModeManagerContainer105 class206 = aHa_Sub2_2511.aClass206_7778;
             int i_3_ = 30 % ((-55 - i) / 59);
             HashNodeSub2 class348_sub42_sub2 = new HashNodeSub2(aHa_Sub2_2511, 6408, (class258_sub1.anInt8523), (class258_sub1.anInt8529));
-            aHa_Sub2_2511.method3773(-1, class206);
+            aHa_Sub2_2511.popTexture(-1, class206);
             boolean bool = false;
             class206.method1508(0, class348_sub42_sub2, -12);
             if (class206.method1507(117)) {
@@ -78,7 +78,7 @@ final class ReliefShader {
                 bool = true;
             }
             class206.method1500(2983, 0);
-            aHa_Sub2_2511.method3770(-422613672, class206);
+            aHa_Sub2_2511.pushTexture(-422613672, class206);
             return bool;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qi.D(" + (class258_sub1 != null ? "{...}" : "null") + ',' + (class258_sub1_2_ != null ? "{...}" : "null") + ',' + i + ',' + f + ')'));

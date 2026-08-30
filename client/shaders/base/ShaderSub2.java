@@ -55,21 +55,21 @@ final class ShaderSub2
             if (Component210.gameCanvasAttached) HashTable.method1010(false, true);
             else {
                 Component270.aClass101_2123.method891(i_10_, 0, 0);
-                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.loadModelviewMatrix(Component270.aClass101_2123);
             }
             if (!DisplayModeManagerContainer50.aBoolean3870) NodeSub8.toolkit.da(i_9_, i_15_, i_11_, Component71.anIntArray6062);
             else NodeSub8.toolkit.HA(i_9_, i_15_, i_11_, Component72.anInt1906, Component71.anIntArray6062);
             if (Component210.gameCanvasAttached) DebugPanicSub1.method2129((byte) 60);
             else {
                 Component270.aClass101_2123.method891(-i_10_, 0, 0);
-                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.loadModelviewMatrix(Component270.aClass101_2123);
             }
         }
     }
 
     ShaderSub2(GlToolkitSub3 var_ha_Sub3, int i, int i_16_, byte[] is) {
         try {
-            this.anInterface18_Impl3_5196 = var_ha_Sub3.method3944(is, i, DefinitionSub38.aClass304_9471, 2, false, i_16_);
+            this.anInterface18_Impl3_5196 = var_ha_Sub3.getWindowTitle(is, i, DefinitionSub38.aClass304_9471, 2, false, i_16_);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_16_ + ',' + (is != null ? "{...}" : "null") + ')'));
@@ -78,7 +78,7 @@ final class ShaderSub2
 
     ShaderSub2(GlToolkitSub3 var_ha_Sub3, int i, int i_17_, int[] is) {
         try {
-            this.anInterface18_Impl3_5196 = var_ha_Sub3.method3839(i_17_, i, -15137, false, is);
+            this.anInterface18_Impl3_5196 = var_ha_Sub3.deleteRenderbuffer(i_17_, i, -15137, false, is);
             this.anInterface18_Impl3_5196.method66(false, false, 25688);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("lp.<init>(" + (var_ha_Sub3 != null ? "{...}" : "null") + ',' + i + ',' + i_17_ + ',' + (is != null ? "{...}" : "null") + ')'));

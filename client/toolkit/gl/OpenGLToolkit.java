@@ -75,12 +75,12 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return true;
     }
 
-    final void method3685(Component122 class98, int i) {
+    final void renderModelEx(Component122 class98, int i) {
         method3975(class98, false);
         method3973().method155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.method840(0));
     }
 
-    final void method3676(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_) {
+    final void draw3DTriangle(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_) {
         /* empty */
     }
 
@@ -186,7 +186,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         }
     }
 
-    final void method3659(int i) {
+    final void resetTextureState(int i) {
         anAArray5143[i].method154();
     }
 
@@ -209,8 +209,8 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
     final void method3650(int i) {
         anInt5128 = anInt5127 = i;
         if (this.anInt5141 > 1) throw new IllegalStateException("No MT");
-        method3631(this.anInt5141);
-        method3659(0);
+        setTextureUnitCount(this.anInt5141);
+        resetTextureState(0);
     }
 
     final int method3667(int i, int i_92_) {
@@ -230,7 +230,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         }
     }
 
-    final void method3636(int i, int i_95_, int i_96_, int i_97_, int i_98_, int i_99_, Shader var_aa, int i_100_, int i_101_) {
+    final void drawTexturedRect(int i, int i_95_, int i_96_, int i_97_, int i_98_, int i_99_, Shader var_aa, int i_100_, int i_101_) {
         Z(i, i_95_, i_96_, i_97_, i_98_, i_99_, var_aa, i_100_, i_101_);
     }
 
@@ -245,7 +245,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     private final native void n(long l, long l_102_);
 
-    final void method3684(Component122 class98) {
+    final void renderModel(Component122 class98) {
         if (class98.aClass88_1569.method840(0) != 0) {
             method3975(class98, false);
             method3973().method155(this, anIntArray5136, anIntArray5135, anIntArray5139, aShortArray5133, class98.aClass88_1569.method840(0));
@@ -258,7 +258,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final native int JA(int i, int i_103_, int i_104_, int i_105_, int i_106_, int i_107_);
 
-    final void method3652() {
+    final void release() {
         if (!aBoolean5124) {
             anAArray5143 = null;
             aP5137 = null;
@@ -329,7 +329,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final native void pa();
 
-    final void method3688(int i, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_) {
+    final void setLineWidth(int i, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_) {
         method3973().method150(this, i, i_125_, i_126_, i_127_, i_128_, i_129_, i_130_);
     }
 
@@ -349,7 +349,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return new Component6(0, "SSE", 1, "CPU", 0L);
     }
 
-    final void method3674(int i, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_) {
+    final void drawColoredQuad(int i, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_) {
         /* empty */
     }
 
@@ -359,7 +359,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return new j(this, i, i_143_, i_144_, i_145_, !bool);
     }
 
-    final void method3631(int i) {
+    final void setTextureUnitCount(int i) {
         this.anInt5141 = i;
         anAArray5143 = new a[this.anInt5141];
         for (int i_146_ = 0; i_146_ < this.anInt5141; i_146_++)
@@ -389,7 +389,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return true;
     }
 
-    final void method3626(int i, int i_156_) throws Exception_Sub1 {
+    final void swapBuffers(int i, int i_156_) throws Exception_Sub1 {
         if (aP5137 == null) throw new IllegalStateException("off");
         aP5137.method3433(i, i_156_);
     }
@@ -452,7 +452,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
 
     final native void EA(int i, int i_171_, int i_172_, int i_173_);
 
-    final void method3633() {
+    final void finish() {
         /* empty */
     }
 
@@ -476,9 +476,9 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
                 Component54.method566(false, true, (byte) 23);
                 aBoolean5142 = true;
                 aClass101_5131 = new OpenGLMatrix();
-                method3638(new OpenGLMatrix());
-                method3631(1);
-                method3659(0);
+                loadModelviewMatrix(new OpenGLMatrix());
+                setTextureUnitCount(1);
+                resetTextureState(0);
                 if (canvas == null) break;
                 method3643(canvas, i, i_177_);
                 method3677(canvas);
@@ -524,7 +524,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return aClass101_5125;
     }
 
-    final void method3709(int i, int i_194_, int i_195_, int i_196_, int i_197_, int i_198_) {
+    final void drawColoredRect(int i, int i_194_, int i_195_, int i_196_, int i_197_, int i_198_) {
         Interface4Impl(i, i_194_, i_195_, i_196_, i_197_, i_198_);
     }
 
@@ -566,11 +566,11 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return true;
     }
 
-    final void method3703(int i, int i_212_, int i_213_, int i_214_, int i_215_, int i_216_, Shader var_aa, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_) {
+    final void drawTexturedQuad(int i, int i_212_, int i_213_, int i_214_, int i_215_, int i_216_, Shader var_aa, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_) {
         /* empty */
     }
 
-    final void method3638(DisplayModeManagerContainer204 class101) {
+    final void loadModelviewMatrix(DisplayModeManagerContainer204 class101) {
         aClass101_5125 = class101;
         ma(((OpenGLMatrix) class101).nativeid);
     }
@@ -593,7 +593,7 @@ final class OpenGLToolkit extends GraphicsToolkit implements Interface19 {
         return true;
     }
 
-    final void method3673() {
+    final void copyScreen() {
         /* empty */
     }
 

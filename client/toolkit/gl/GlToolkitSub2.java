@@ -398,7 +398,7 @@ final class GlToolkitSub2
         anInt7694++;
     }
 
-    final void method3728(boolean bool, int i) {
+    final void setLightingEnabled(boolean bool, int i) {
         if (aBoolean7784 != bool) {
             aBoolean7784 = bool;
             glEnableLighting((byte) -121);
@@ -444,7 +444,7 @@ final class GlToolkitSub2
         anInt7693++;
         OpenGL.glLoadMatrixf(aFloatArray7779, 0);
         OpenGL.glMatrixMode(5888);
-        if (i <= 113) method3659(-64);
+        if (i <= 113) resetTextureState(-64);
     }
 
     final void method3653(Component80 class299) {
@@ -473,7 +473,7 @@ final class GlToolkitSub2
         this.anInt7810 = i_10_;
         this.anInt7853 = i;
         anInt7558++;
-        method3806(96);
+        setupProjection(96);
         method3772((byte) 124);
         if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
         else if (anInt7865 == 2) glSetTextureMatrix((byte) 119);
@@ -512,12 +512,12 @@ final class GlToolkitSub2
         if (i != 9473) method3661(-10, -73, null, null);
         if (anInt7765 != 4) {
             glSetupOrthoProjection(i ^ 0x3201);
-            method3807(false, 2);
-            method3728(false, 79);
+            beginFrame(false, 2);
+            setLightingEnabled(false, 79);
             glEnableScissorTest(i ^ 0x257a, false);
-            method3748(0, false);
+            drawSprite(0, false);
             glResetViewport(-2, -111);
-            method3753(1, 1);
+            setBlendMode(1, 1);
             anInt7765 = 4;
         }
         anInt7514++;
@@ -534,14 +534,14 @@ final class GlToolkitSub2
         return anInt7814;
     }
 
-    final void method3636(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Shader var_aa, int i_25_, int i_26_) {
+    final void drawTexturedRect(int i, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Shader var_aa, int i_25_, int i_26_) {
         try {
             anInt7727++;
             ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
-            method3792(110);
+            bindTexture(110);
             bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
-            method3753(i_24_, 1);
+            setBlendMode(i_24_, 1);
             glTexEnvi(7681, (byte) 97, 8448);
             glTexEnvCombine(34167, 768, (byte) -87, 0);
             float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
@@ -729,7 +729,7 @@ final class GlToolkitSub2
                 this.anInt7641 = anInt7523;
                 glSetViewport(true);
             }
-            method3755(-32);
+            disableTexture2D(-32);
             la();
         }
     }
@@ -760,7 +760,7 @@ final class GlToolkitSub2
             aClass100_7707.method884(i_49_, bool, i_51_, i_50_, (byte) 12, bool_46_);
             if (!aClass100_7707.method885(i_48_, (byte) -124, class258_sub3)) {
                 bindTexture((byte) -86, class258_sub3);
-                method3761(0, i_48_);
+                setTextureEnvMode(0, i_48_);
             }
             aBoolean7859 = this.aBoolean7846;
             anInt7796 = i;
@@ -787,14 +787,14 @@ final class GlToolkitSub2
         return aClass348_Sub5_Sub1_7721 != null && (this.anInt7713 <= 1 || aBoolean7822);
     }
 
-    final void method3748(int i, boolean bool) {
+    final void drawSprite(int i, boolean bool) {
         anInt7710++;
         if (aBoolean7759 != bool) {
             aBoolean7759 = bool;
             glSetDepthMask(-30199);
             anInt7765 &= ~0x1f;
         }
-        if (i != 0) method3773(-58, null);
+        if (i != 0) popTexture(-58, null);
     }
 
     final void K(int[] is) {
@@ -824,9 +824,9 @@ final class GlToolkitSub2
                 f = ((float) i_59_ * (aClass258_Sub3_Sub1_7776.aFloat9938) / (float) (aClass258_Sub3_Sub1_7776.anInt8551));
                 f_64_ = ((float) i_58_ * (aClass258_Sub3_Sub1_7776.aFloat9937) / (float) (aClass258_Sub3_Sub1_7776.anInt8547));
             }
-            method3792(58);
+            bindTexture(58);
             bindTexture((byte) -117, aClass258_Sub3_Sub1_7776);
-            method3753(i_63_, 1);
+            setBlendMode(i_63_, 1);
             OpenGL.glColor4ub((byte) (i_60_ >> 16), (byte) (i_60_ >> 8), (byte) i_60_, (byte) (i_60_ >> 24));
             glSetTextureEnvColor(i_61_, 120);
             glTexEnvi(34165, (byte) 101, 34165);
@@ -857,7 +857,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3684(Component122 class98) {
+    final void renderModel(Component122 class98) {
         try {
             aClass233_7711.method1651(this, (byte) -119, -1, class98);
             anInt7569++;
@@ -876,7 +876,7 @@ final class GlToolkitSub2
         OpenGL.glTexEnvfv(8960, 8705, InputStream_Sub2.aFloatArray84, 0);
     }
 
-    final void method3638(DisplayModeManagerContainer204 class101) {
+    final void loadModelviewMatrix(DisplayModeManagerContainer204 class101) {
         do {
             try {
                 anInt7549++;
@@ -906,10 +906,10 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3676(int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_, int i_82_, int i_83_) {
-        method3778((byte) -123);
+    final void draw3DTriangle(int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_, int i_82_, int i_83_) {
+        enableTexture2D((byte) -123);
         anInt7567++;
-        method3753(i_83_, 1);
+        setBlendMode(i_83_, 1);
         OpenGL.glBegin(4);
         OpenGL.glColor4ub((byte) (i_80_ >> 16), (byte) (i_80_ >> 8), (byte) i_80_, (byte) (i_80_ >> 24));
         OpenGL.glVertex3f((float) i + 0.35F, (float) i_72_ + 0.35F, (float) i_73_);
@@ -926,7 +926,7 @@ final class GlToolkitSub2
             if (anInterface11_7740 != aClass206_7739) throw new RuntimeException();
             aClass206_7739.method1500(2983, 0);
             aClass206_7739.method1500(2983, 8);
-            method3770(-422613672, aClass206_7739);
+            pushTexture(-422613672, aClass206_7739);
         } else {
             if (!aBoolean7866) throw new RuntimeException("");
             aClass105_Sub2_7744.method979(0, 0, this.anInt7688, this.anInt7641, 0, 0);
@@ -935,7 +935,7 @@ final class GlToolkitSub2
         this.anInt7688 = anInt7645;
         aClass105_Sub2_7744 = null;
         this.anInt7641 = anInt7523;
-        method3755(-32);
+        disableTexture2D(-32);
         glSetViewport(true);
         la();
     }
@@ -978,9 +978,9 @@ final class GlToolkitSub2
         float f = (float) x + 0.35F;
         float f_90_ = (float) y + 0.35F;
         float f_91_ = (float) width + f;
-        method3778((byte) -127);
+        enableTexture2D((byte) -127);
         float f_92_ = f_90_ + (float) height;
-        method3753(mode, 1);
+        setBlendMode(mode, 1);
         OpenGL.glColor4ub((byte) (colour >> 16), (byte) (colour >> 8), (byte) colour, (byte) (colour >> 24));
         if (aBoolean7843) OpenGL.glDisable(32925);
         OpenGL.glBegin(7);
@@ -1034,7 +1034,7 @@ final class GlToolkitSub2
 
     final void GA(int i) {
         anInt7592++;
-        method3753(0, 1);
+        setBlendMode(0, 1);
         OpenGL.glClearColor((float) (i & 0xff0000) / 1.671168E7F, (float) (0xff00 & i) / 65280.0F, (float) (0xff & i) / 255.0F, (float) (i >>> 24) / 255.0F);
         OpenGL.glClear(16384);
     }
@@ -1125,7 +1125,7 @@ final class GlToolkitSub2
                 anOpenGL7664 = new OpenGL();
                 aLong7636 = aLong7553 = anOpenGL7664.init(canvas, 8, 8, 8, 24, 0, this.anInt7713);
                 if (aLong7553 == 0) throw new RuntimeException("");
-                method3776(22544);
+                resetTextureUnits(22544);
                 int i_99_ = glQueryStrings((byte) -62);
                 if (i_99_ != 0) throw new RuntimeException("");
                 this.anInt7812 = this.aBoolean7775 ? 33639 : 5121;
@@ -1180,7 +1180,7 @@ final class GlToolkitSub2
                 Component54.method566(false, true, (byte) -128);
                 aBoolean7734 = true;
                 aClass354_7723 = new Component160(this, this.modelProvider);
-                method3786(false);
+                initTextures(false);
                 this.aClass188_7736 = new ReliefShader(this);
                 aClass18_7720 = new DisplayModeManagerContainer220(this);
                 if (aClass18_7720.method280(1)) {
@@ -1193,10 +1193,10 @@ final class GlToolkitSub2
                 aClass100_7707 = new Component265(this);
                 glResetTextureUnits(25858);
                 method3745((byte) 123);
-                method3673();
+                copyScreen();
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
-                method3652();
+                release();
                 throw new RuntimeException("");
             }
         } catch (RuntimeException runtimeexception) {
@@ -1204,7 +1204,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3753(int i, int i_103_) {
+    final void setBlendMode(int i, int i_103_) {
         if (i_103_ != 1) this.aBoolean7837 = false;
         if (i != anInt7764) {
             boolean bool;
@@ -1262,11 +1262,11 @@ final class GlToolkitSub2
             OpenGL.glMultMatrixf(this.aClass101_Sub3_7766.method940(1), 0);
             if (aBoolean7859) aClass100_7707.aClass286_Sub1_1586.method2141(false);
             glSetLightAmbient(16384);
-            method3783(0);
+            setupLights(0);
         }
     }
 
-    final void method3755(int i) {
+    final void disableTexture2D(int i) {
         if (anInt7865 != 0) {
             anInt7765 &= ~0x1f;
             anInt7865 = 0;
@@ -1281,9 +1281,9 @@ final class GlToolkitSub2
     }
 
     final void U(int i, int i_109_, int i_110_, int i_111_, int i_112_) {
-        method3778((byte) -119);
+        enableTexture2D((byte) -119);
         anInt7525++;
-        method3753(i_112_, 1);
+        setBlendMode(i_112_, 1);
         float f = (float) i + 0.35F;
         OpenGL.glColor4ub((byte) (i_111_ >> 16), (byte) (i_111_ >> 8), (byte) i_111_, (byte) (i_111_ >> 24));
         float f_113_ = (float) i_109_ + 0.35F;
@@ -1309,7 +1309,7 @@ final class GlToolkitSub2
     }
 
     final void glResetViewport(int i, int i_114_) {
-        method3801(true, i, -104);
+        getError(true, i, -104);
         anInt7649++;
         if (i_114_ > -43) glEnableLighting((byte) 85);
     }
@@ -1335,7 +1335,7 @@ final class GlToolkitSub2
             anInt7619++;
             int i_121_ = interface8.method34(-5711);
             if (i_118_ >= -127) aClass100_7707 = null;
-            i_120_ *= method3785(i_121_, 4);
+            i_120_ *= setStencilOp(i_121_, 4);
             glBindElementBuffer(1, interface8);
             OpenGL.glDrawElements(i_119_, i, i_121_, (interface8.method36((byte) 78) + (long) i_120_));
         } catch (RuntimeException runtimeexception) {
@@ -1422,10 +1422,10 @@ final class GlToolkitSub2
         this.anInt7735 = i;
     }
 
-    final void method3709(int i, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_) {
-        method3778((byte) -124);
+    final void drawColoredRect(int i, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_) {
+        enableTexture2D((byte) -124);
         anInt7611++;
-        method3753(i_127_, 1);
+        setBlendMode(i_127_, 1);
         float f = (float) i_124_ - (float) i;
         float f_128_ = (float) -i_123_ + (float) i_125_;
         if (f == 0.0F && f_128_ == 0.0F) f = 1.0F;
@@ -1450,15 +1450,15 @@ final class GlToolkitSub2
         anInt7643++;
         if (anInt7765 != 16) {
             method3742(3);
-            method3807(true, 2);
+            beginFrame(true, 2);
             glEnableScissorTest(122, true);
-            method3748(0, true);
-            method3753(1, i);
+            drawSprite(0, true);
+            setBlendMode(1, i);
             anInt7765 = 16;
         }
     }
 
-    final void method3761(int i, int i_133_) {
+    final void setTextureEnvMode(int i, int i_133_) {
         if (i != 0) aClass262_7751 = null;
         anInt7654++;
         if (i_133_ == 1) glTexEnvi(7681, (byte) 114, 7681);
@@ -1517,7 +1517,7 @@ final class GlToolkitSub2
         anInt7566++;
         Node class348 = new Node();
         class348.key = i_137_;
-        if (i <= 64) method3685(null, -38);
+        if (i <= 64) renderModelEx(null, -38);
         aClass262_7755.addTail(class348, -20180);
     }
 
@@ -1527,7 +1527,7 @@ final class GlToolkitSub2
                 anInt7623++;
                 OpenGL.glLoadMatrixf(class101_sub3.method940(i + -54), 0);
                 if (i == 55) break;
-                method3782(null, -47);
+                setCullFace(null, -47);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.GC(" + i + ',' + (class101_sub3 != null ? "{...}" : "null") + ')'));
             }
@@ -1578,8 +1578,8 @@ final class GlToolkitSub2
         if (i_141_ < 0) i_141_ = -i_141_;
         anInt7728++;
         if (anInt7868 <= i + i_141_ && anInt7855 >= -i_141_ + i && anInt7773 <= i_140_ + i_141_ && i_140_ + -i_141_ <= anInt7787) {
-            method3778((byte) -117);
-            method3753(i_143_, 1);
+            enableTexture2D((byte) -117);
+            setBlendMode(i_143_, 1);
             OpenGL.glColor4ub((byte) (i_142_ >> 16), (byte) (i_142_ >> 8), (byte) i_142_, (byte) (i_142_ >> 24));
             float f = (float) i + 0.35F;
             float f_144_ = (float) i_140_ + 0.35F;
@@ -1615,8 +1615,8 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3659(int i) {
-        method3776(22544);
+    final void resetTextureState(int i) {
+        resetTextureUnits(22544);
         anInt7541++;
     }
 
@@ -1627,13 +1627,13 @@ final class GlToolkitSub2
         else OpenGL.glEnable(2896);
     }
 
-    final void method3652() {
+    final void release() {
         for (Node class348 = aClass262_7732.first(4); class348 != null; class348 = aClass262_7732.next((byte) 55))
             ((NodeBaseSub1) class348).method3440(-82);
         anInt7563++;
         if (aClass18_7720 != null) aClass18_7720.method279((byte) -126);
         if (anOpenGL7664 != null) {
-            method3797(0);
+            releaseSurface(0);
             Enumeration enumeration = aHashtable7577.keys();
             while (enumeration.hasMoreElements()) {
                 Canvas canvas = (Canvas) enumeration.nextElement();
@@ -1649,7 +1649,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3673() {
+    final void copyScreen() {
         anInt7568++;
         if (aBoolean7774 && this.anInt7688 > 0 && this.anInt7641 > 0) {
             int i = anInt7868;
@@ -1659,15 +1659,15 @@ final class GlToolkitSub2
             la();
             OpenGL.glReadBuffer(1028);
             OpenGL.glDrawBuffer(1029);
-            method3755(-32);
-            method3807(false, 2);
-            method3728(false, 86);
+            disableTexture2D(-32);
+            beginFrame(false, 2);
+            setLightingEnabled(false, 86);
             glEnableScissorTest(112, false);
-            method3748(0, false);
+            drawSprite(0, false);
             bindTexture((byte) -91, null);
             glResetViewport(-2, -88);
-            method3761(0, 1);
-            method3753(0, 1);
+            setTextureEnvMode(0, 1);
+            setBlendMode(0, 1);
             OpenGL.glMatrixMode(5889);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -1700,12 +1700,12 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3770(int i, Interface11 interface11) {
+    final void pushTexture(int i, Interface11 interface11) {
         do {
             try {
                 anInt7598++;
                 if (this.aBoolean7815) {
-                    method3805(8387, interface11);
+                    popTextureUnit(8387, interface11);
                     method3764(-17083, interface11);
                 } else {
                     if (anInt7746 < 0 || anInterface11Array7743[anInt7746] != interface11) throw new RuntimeException();
@@ -1763,11 +1763,11 @@ final class GlToolkitSub2
         anInt7612++;
     }
 
-    final void method3674(int i, int i_157_, int i_158_, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_) {
+    final void drawColoredQuad(int i, int i_157_, int i_158_, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_) {
         anInt7656++;
         if (i_158_ != i || i_157_ != i_159_) {
-            method3778((byte) -119);
-            method3753(i_161_, 1);
+            enableTexture2D((byte) -119);
+            setBlendMode(i_161_, 1);
             float f = (float) i_158_ - (float) i;
             float f_165_ = (float) i_159_ - (float) i_157_;
             float f_166_ = (float) (1.0 / Math.sqrt(f_165_ * f_165_ + f * f));
@@ -1867,12 +1867,12 @@ final class GlToolkitSub2
         return true;
     }
 
-    final void method3773(int i, Interface11 interface11) {
+    final void popTexture(int i, Interface11 interface11) {
         try {
             anInt7617++;
             if (i != -1) aString7845 = null;
             if (this.aBoolean7815) {
-                method3782(interface11, 327685);
+                setCullFace(interface11, 327685);
                 method3751(interface11, i ^ ~0x4f);
             } else {
                 if (anInt7746 >= 3) throw new RuntimeException();
@@ -1938,15 +1938,15 @@ final class GlToolkitSub2
         return i_183_;
     }
 
-    final void method3703(int i, int i_186_, int i_187_, int i_188_, int i_189_, int i_190_, Shader var_aa, int i_191_, int i_192_, int i_193_, int i_194_, int i_195_) {
+    final void drawTexturedQuad(int i, int i_186_, int i_187_, int i_188_, int i_189_, int i_190_, Shader var_aa, int i_191_, int i_192_, int i_193_, int i_194_, int i_195_) {
         try {
             anInt7618++;
             if (i_187_ != i || i_188_ != i_186_) {
                 ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
                 GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
-                method3792(90);
+                bindTexture(90);
                 bindTexture((byte) -122, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
-                method3753(i_190_, 1);
+                setBlendMode(i_190_, 1);
                 glTexEnvi(7681, (byte) -61, 8448);
                 glTexEnvCombine(34167, 768, (byte) -87, 0);
                 float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
@@ -2101,9 +2101,9 @@ final class GlToolkitSub2
             anInt7695++;
             ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
             GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
-            method3792(119);
+            bindTexture(119);
             bindTexture((byte) -88, var_aa_Sub1.aClass258_Sub3_Sub1_5193);
-            method3753(1, 1);
+            setBlendMode(1, 1);
             glTexEnvi(7681, (byte) -103, 8448);
             glTexEnvCombine(34167, 768, (byte) -87, 0);
             float f = (class258_sub3_sub1.aFloat9937 / (float) (class258_sub3_sub1.anInt9940));
@@ -2142,7 +2142,7 @@ final class GlToolkitSub2
         OpenGL.glTexEnvi(8960, 34200 + i, i_216_);
     }
 
-    private final void method3776(int i) {
+    private final void resetTextureUnits(int i) {
         anInt7609++;
         if (i != 22544) this.aNativeHeap7730 = null;
         int i_218_ = 0;
@@ -2152,10 +2152,10 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3688(int i, int i_219_, int i_220_, int i_221_, int i_222_, int i_223_, int i_224_) {
+    final void setLineWidth(int i, int i_219_, int i_220_, int i_221_, int i_222_, int i_223_, int i_224_) {
         anInt7662++;
         OpenGL.glLineWidth((float) i_223_);
-        method3709(i, i_219_, i_220_, i_221_, i_222_, i_224_);
+        drawColoredRect(i, i_219_, i_220_, i_221_, i_222_, i_224_);
         OpenGL.glLineWidth(1.0F);
     }
 
@@ -2168,7 +2168,7 @@ final class GlToolkitSub2
         this.anInt7809 = i_227_;
     }
 
-    private final void method3777(int i) {
+    private final void resetBlendState(int i) {
         anInt7632++;
         aFloatArray7779[10] = aFloat7854;
         aFloatArray7779[14] = aFloat7842;
@@ -2219,16 +2219,16 @@ final class GlToolkitSub2
         }
     }
 
-    private final void method3778(byte i) {
+    private final void enableTexture2D(byte i) {
         if (anInt7765 != 1) {
             glSetupOrthoProjection(5888);
-            method3807(false, 2);
-            method3728(false, 48);
+            beginFrame(false, 2);
+            setLightingEnabled(false, 48);
             glEnableScissorTest(107, false);
-            method3748(0, false);
+            drawSprite(0, false);
             bindTexture((byte) -122, null);
             glResetViewport(-2, -45);
-            method3761(0, 1);
+            setTextureEnvMode(0, 1);
             anInt7765 = 1;
         }
         if (i <= -115) anInt7594++;
@@ -2250,7 +2250,7 @@ final class GlToolkitSub2
         }
     }
 
-    final synchronized void method3780(int i, int i_235_, int i_236_) {
+    final synchronized void setDepthTest(int i, int i_235_, int i_236_) {
         anInt7616++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
         class348_sub35.key = i_236_;
@@ -2278,11 +2278,11 @@ final class GlToolkitSub2
         throw new IllegalArgumentException();
     }
 
-    final void method3782(Interface11 interface11, int i) {
+    final void setCullFace(Interface11 interface11, int i) {
         try {
             anInt7640++;
             if (anInt7738 >= 3) throw new RuntimeException();
-            if (i != 327685) method3688(-94, -9, -90, -108, 41, -52, 70);
+            if (i != 327685) setLineWidth(-94, -9, -90, -108, 41, -52, 70);
             if (anInt7738 >= 0) anInterface11Array7741[anInt7738].method45((byte) -47);
             anInterface11_7745 = anInterface11Array7741[++anInt7738] = interface11;
             anInterface11_7745.method49(-27141);
@@ -2296,9 +2296,9 @@ final class GlToolkitSub2
         float f = 0.35F + (float) i;
         float f_243_ = 0.35F + (float) i_238_;
         float f_244_ = f + (float) i_239_ - 1.0F;
-        method3778((byte) -119);
+        enableTexture2D((byte) -119);
         float f_245_ = -1.0F + (f_243_ + (float) i_240_);
-        method3753(i_242_, 1);
+        setBlendMode(i_242_, 1);
         OpenGL.glColor4ub((byte) (i_241_ >> 16), (byte) (i_241_ >> 8), (byte) i_241_, (byte) (i_241_ >> 24));
         if (aBoolean7843) OpenGL.glDisable(32925);
         OpenGL.glBegin(2);
@@ -2344,7 +2344,7 @@ final class GlToolkitSub2
         return false;
     }
 
-    private final void method3783(int i) {
+    private final void setupLights(int i) {
         anInt7527++;
         int i_250_;
         for (i_250_ = i; anInt7862 > i_250_; i_250_++) {
@@ -2369,20 +2369,20 @@ final class GlToolkitSub2
         anInt7839 = anInt7862;
     }
 
-    final void method3784(byte i) {
+    final void setColorMask(byte i) {
         if (anInt7765 != 8) {
             method3740(-14388);
-            method3807(true, 2);
+            beginFrame(true, 2);
             glEnableScissorTest(114, true);
-            method3748(i + 62, true);
-            method3753(1, 1);
+            drawSprite(i + 62, true);
+            setBlendMode(1, 1);
             anInt7765 = 8;
         }
         anInt7665++;
         if (i != -62) aCanvas7626 = null;
     }
 
-    final int method3785(int i, int i_253_) {
+    final int setStencilOp(int i, int i_253_) {
         anInt7682++;
         if (i == 5121 || i == 5120) return 1;
         if (i_253_ != 4) this.aBoolean7793 = false;
@@ -2391,7 +2391,7 @@ final class GlToolkitSub2
         throw new IllegalArgumentException("");
     }
 
-    final void method3685(Component122 class98, int i) {
+    final void renderModelEx(Component122 class98, int i) {
         try {
             aClass233_7711.method1651(this, (byte) -116, i, class98);
             anInt7687++;
@@ -2400,7 +2400,7 @@ final class GlToolkitSub2
         }
     }
 
-    private final void method3786(boolean bool) {
+    private final void initTextures(boolean bool) {
         anInt7630++;
         aClass258Array7828 = new AbstractGlTexture[this.anInt7795];
         this.aClass258_Sub3_7827 = new GlTexture(this, 3553, 6408, 1, 1);
@@ -2495,7 +2495,7 @@ final class GlToolkitSub2
         glSetScissor((byte) 11);
     }
 
-    final void method3789(byte i, float f) {
+    final void deleteTexture(byte i, float f) {
         if (aFloat7851 != f) {
             aFloat7851 = f;
             if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
@@ -2523,7 +2523,7 @@ final class GlToolkitSub2
         anInt7604++;
     }
 
-    final void method3790(int i, int i_262_, int i_263_) {
+    final void bindTextureNative(int i, int i_262_, int i_263_) {
         if (i > 94) {
             anInt7724++;
             anInt7867 = i_262_;
@@ -2568,7 +2568,7 @@ final class GlToolkitSub2
 
     final void method3678(int i) {
         anInt7663++;
-        method3797(0);
+        releaseSurface(0);
     }
 
     private final void glResetTextureUnits(int i) {
@@ -2591,11 +2591,11 @@ final class GlToolkitSub2
         aBoolean7761 = true;
         OpenGL.glColorMask(true, true, true, true);
         aBoolean7758 = true;
-        method3807(true, 2);
-        method3728(true, 71);
+        beginFrame(true, 2);
+        setLightingEnabled(true, 71);
         glEnableScissorTest(124, true);
-        method3748(0, true);
-        method3755(i ^ ~0x651d);
+        drawSprite(0, true);
+        disableTexture2D(i ^ ~0x651d);
         anOpenGL7664.setSwapInterval(0);
         OpenGL.glShadeModel(7425);
         OpenGL.glClearDepth(1.0F);
@@ -2624,14 +2624,14 @@ final class GlToolkitSub2
         la();
     }
 
-    final void method3792(int i) {
-        if (i < 45) method3777(-72);
+    final void bindTexture(int i) {
+        if (i < 45) resetBlendState(-72);
         if (anInt7765 != 2) {
             glSetupOrthoProjection(5888);
-            method3807(false, 2);
-            method3728(false, 66);
+            beginFrame(false, 2);
+            setLightingEnabled(false, 66);
             glEnableScissorTest(115, false);
-            method3748(0, false);
+            drawSprite(0, false);
             glResetViewport(-2, -67);
             anInt7765 = 2;
         }
@@ -2728,7 +2728,7 @@ final class GlToolkitSub2
 
     final void NativeHandle() {
         anInt7534++;
-        method3748(0, true);
+        drawSprite(0, true);
         OpenGL.glClear(256);
     }
 
@@ -2760,7 +2760,7 @@ final class GlToolkitSub2
                 anInt7610++;
                 anInt7862 = i;
                 if (anInt7865 == 1) break;
-                method3783(0);
+                setupLights(0);
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.FF(" + i + ',' + (class348_sub1s != null ? "{...}" : "null") + ')'));
             }
@@ -2772,7 +2772,7 @@ final class GlToolkitSub2
         anInt7620++;
     }
 
-    private final void method3797(int i) {
+    private final void releaseSurface(int i) {
         if (i != 0) this.anIntArray7883 = null;
         anInt7546++;
         anOpenGL7664.a();
@@ -2804,7 +2804,7 @@ final class GlToolkitSub2
         return i_290_;
     }
 
-    final int method3798(int i, int i_295_) {
+    final int createSurface(int i, int i_295_) {
         anInt7698++;
         if (i_295_ != 2) this.aFloat7872 = -1.3399854F;
         if (i != 6406 && i != 6409) {
@@ -2830,7 +2830,7 @@ final class GlToolkitSub2
         aBoolean7860 = true;
     }
 
-    final synchronized void method3800(int i, int i_299_) {
+    final synchronized void swapInterval(int i, int i_299_) {
         anInt7570++;
         NodeSub35 class348_sub35 = new NodeSub35(i_299_);
         if (i > 71) aClass262_7753.addTail(class348_sub35, -20180);
@@ -2842,9 +2842,9 @@ final class GlToolkitSub2
     }
 
     final void P(int i, int i_300_, int i_301_, int i_302_, int i_303_) {
-        method3778((byte) -124);
+        enableTexture2D((byte) -124);
         anInt7583++;
-        method3753(i_303_, 1);
+        setBlendMode(i_303_, 1);
         float f = 0.35F + (float) i;
         OpenGL.glColor4ub((byte) (i_302_ >> 16), (byte) (i_302_ >> 8), (byte) i_302_, (byte) (i_302_ >> 24));
         float f_304_ = (float) i_300_ + 0.35F;
@@ -2906,7 +2906,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3801(boolean bool, int i, int i_310_) {
+    final void getError(boolean bool, int i, int i_310_) {
         int i_311_ = 57 / ((39 - i_310_) / 52);
         anInt7644++;
         method3746(bool, i, true, 115);
@@ -2919,14 +2919,14 @@ final class GlToolkitSub2
 
     final void method3707(Rectangle[] rectangles, int i, int i_313_, int i_314_) throws Exception_Sub1 {
         try {
-            method3626(i_313_, i_314_);
+            swapBuffers(i_313_, i_314_);
             anInt7584++;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("qo.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_313_ + ',' + i_314_ + ')'));
         }
     }
 
-    static final void method3802(int i, int i_315_, int i_316_, int i_317_, int i_318_, int i_319_, int i_320_) {
+    static final void getString(int i, int i_315_, int i_316_, int i_317_, int i_318_, int i_319_, int i_320_) {
         anInt7572++;
         int i_321_ = ShaderCompilerSub1.anInt6513;
         TheoraVideoPlayer.anInt1497 = 0;
@@ -3492,7 +3492,7 @@ final class GlToolkitSub2
         OpenGL.glFogfv(2918, InputStream_Sub2.aFloatArray84, 0);
     }
 
-    final void method3804(boolean bool, byte i) {
+    final void getIntegerv(boolean bool, byte i) {
         if (!bool == aBoolean7805) {
             aBoolean7805 = bool;
             glEnableLighting((byte) -117);
@@ -3500,7 +3500,7 @@ final class GlToolkitSub2
         if (i < -56) anInt7564++;
     }
 
-    final void method3626(int i, int i_457_) throws Exception_Sub1 {
+    final void swapBuffers(int i, int i_457_) throws Exception_Sub1 {
         try {
             anOpenGL7664.swapBuffers();
         } catch (Exception exception) {
@@ -3514,7 +3514,7 @@ final class GlToolkitSub2
         if (i != this.anInt7826 || anInt7814 != i_458_) {
             this.anInt7826 = i;
             anInt7814 = i_458_;
-            method3806(98);
+            setupProjection(98);
             glSetFogParams(16711680);
             if (anInt7865 == 3) glSetProjectionMatrix((byte) -63);
             else if (anInt7865 == 2) glSetTextureMatrix((byte) 121);
@@ -3526,7 +3526,7 @@ final class GlToolkitSub2
         anInt7651++;
     }
 
-    final void method3805(int i, Interface11 interface11) {
+    final void popTextureUnit(int i, Interface11 interface11) {
         try {
             anInt7697++;
             if (anInt7738 < 0 || interface11 != anInterface11Array7741[anInt7738]) throw new RuntimeException();
@@ -3544,7 +3544,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3631(int i) {
+    final void setTextureUnitCount(int i) {
         anInt7520++;
         if (i != 1) throw new IllegalArgumentException("");
     }
@@ -3554,7 +3554,7 @@ final class GlToolkitSub2
         return null;
     }
 
-    private final void method3806(int i) {
+    private final void setupProjection(int i) {
         anInt7614++;
         float[] fs = aFloatArray7779;
         float f = ((float) (this.anInt7826 * -this.anInt7853) / (float) this.anInt7771);
@@ -3598,10 +3598,10 @@ final class GlToolkitSub2
             fs[13] = 0.0F;
             fs[6] = 0.0F;
         }
-        method3777(-24051);
+        resetBlendState(-24051);
     }
 
-    final void method3633() {
+    final void finish() {
         anInt7692++;
         OpenGL.glFinish();
     }
@@ -3635,7 +3635,7 @@ final class GlToolkitSub2
         }
     }
 
-    final void method3807(boolean bool, int i) {
+    final void beginFrame(boolean bool, int i) {
         if (i != 2) anInt7814 = -59;
         anInt7517++;
         if (!bool != !aBoolean7801) {
@@ -3674,7 +3674,7 @@ final class GlToolkitSub2
         return aBoolean7843 && (!method3666() || aBoolean7822);
     }
 
-    final synchronized void method3810(int i, int i_478_, int i_479_) {
+    final synchronized void clearBuffers(int i, int i_478_, int i_479_) {
         if (i_479_ < -57) {
             anInt7677++;
             NodeSub35 class348_sub35 = new NodeSub35(i_478_);

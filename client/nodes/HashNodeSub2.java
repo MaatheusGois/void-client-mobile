@@ -96,8 +96,8 @@ final class HashNodeSub2
             Component2.aBooleanArrayArrayArray8361 = new boolean[i_1_][][];
             if (LoggedOutDefinition.aClass293Array9432 != null) Component92.method1978();
             LoggedOutDefinition.aClass293Array9432 = new Component176[Npc.anInt10503];
-            JaclibLoader.toolkit.method3631((LoggedOutDefinition.aClass293Array9432).length + 1);
-            JaclibLoader.toolkit.method3659(0);
+            JaclibLoader.toolkit.setTextureUnitCount((LoggedOutDefinition.aClass293Array9432).length + 1);
+            JaclibLoader.toolkit.resetTextureState(0);
             for (int i_6_ = 0; i_6_ < LoggedOutDefinition.aClass293Array9432.length; i_6_++) {
                 LoggedOutDefinition.aClass293Array9432[i_6_] = new Component176(i_6_ + 1, JaclibLoader.toolkit);
                 new Thread(LoggedOutDefinition.aClass293Array9432[i_6_], "wr" + i_6_).start();
@@ -124,7 +124,7 @@ final class HashNodeSub2
     final void method3172(int i) {
         anInt8566++;
         if (anInt8569 > 0) {
-            aHa_Sub2_8564.method3810(anInt8569, anInt8571, -101);
+            aHa_Sub2_8564.clearBuffers(anInt8569, anInt8571, -101);
             anInt8569 = 0;
         }
         if (i != 4) method3171(null, 57, 49, -22, 43, -43, -45, true, true);
@@ -155,7 +155,7 @@ final class HashNodeSub2
             anInt8569 = LoggedOutDefinition.anIntArray9431[0];
             OpenGL.glBindRenderbufferEXT(36161, anInt8569);
             OpenGL.glRenderbufferStorageEXT(36161, anInt8567, (this.anInt8572), (this.anInt8565));
-            anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.method3798(anInt8567, 2));
+            anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.createSurface(anInt8567, 2));
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_11_ + ',' + i_12_ + ')'));
         }
@@ -171,7 +171,7 @@ final class HashNodeSub2
             anInt8569 = LoggedOutDefinition.anIntArray9431[0];
             OpenGL.glBindRenderbufferEXT(36161, anInt8569);
             OpenGL.glRenderbufferStorageMultisampleEXT(36161, i_15_, anInt8567, this.anInt8572, this.anInt8565);
-            anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.method3798(anInt8567, 2));
+            anInt8571 = (this.anInt8565 * this.anInt8572 * aHa_Sub2_8564.createSurface(anInt8567, 2));
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("kw.<init>(" + (var_ha_Sub2 != null ? "{...}" : "null") + ',' + i + ',' + i_13_ + ',' + i_14_ + ',' + i_15_ + ')'));
         }

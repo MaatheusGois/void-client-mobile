@@ -103,7 +103,7 @@ final class ColoredText extends Component339 {
                 var_ha.KA(Component247.anInt4911, TcpSocketStream.anInt5832, DisplayModeManagerContainer220.anInt282, DisplayModeManagerContainer50.anInt3861);
                 class101 = var_ha.method3654();
                 class101.method903(WorldNameText.anInt8633, Component54.anInt8668, CookieBuilder.anInt620, ComponentSettings.anInt7092, Component337.anInt3650, NodeSub51.anInt7244);
-                var_ha.method3638(class101);
+                var_ha.loadModelviewMatrix(class101);
                 i_12_ = i_4_;
                 i_11_ = i;
             }

@@ -242,7 +242,7 @@ final class Canvas_Sub1 extends Canvas {
                     NodeSub45.aClass361Array7108[i_28_].method3500(i ^ 0x2bc);
                 RSACipher.method491((byte) -86);
                 MatrixSub2.method921((byte) 99, false);
-                GlToolkitSub3.method3936(i + i);
+                GlToolkitSub3.createCursor(i + i);
                 Component293.aClass305_3304 = null;
                 Component326.aBoolean5265 = false;
                 Component381.method3570(false);

@@ -57,7 +57,7 @@ final class ShaderProgramSub9
         if (i >= -89) aClass258_Sub2Array6317 = null;
         this.aHa_Sub2_3684.bindTexture((byte) -115, class258);
         anInt6312++;
-        this.aHa_Sub2_3684.method3761(0, i_5_);
+        this.aHa_Sub2_3684.setTextureEnvMode(0, i_5_);
     }
 
     private final void method2176(int i) {

@@ -74,10 +74,10 @@ final class SpriteSub2
         float f_22_ = f_1_ - f + f_3_;
         float f_23_ = -f_0_ + f_4_ + f_2_;
         aClass258_Sub3_Sub1_8434.method1957(9728, (i_7_ & 0x1) != 0);
-        aHa_Sub2_8430.method3792(59);
+        aHa_Sub2_8430.bindTexture(59);
         aHa_Sub2_8430.bindTexture((byte) -93, aClass258_Sub3_Sub1_8434);
-        aHa_Sub2_8430.method3753(i_6_, 1);
-        aHa_Sub2_8430.method3761(0, i);
+        aHa_Sub2_8430.setBlendMode(i_6_, 1);
+        aHa_Sub2_8430.setTextureEnvMode(0, i);
         OpenGL.glColor4ub((byte) (i_5_ >> 16), (byte) (i_5_ >> 8), (byte) i_5_, (byte) (i_5_ >> 24));
         OpenGL.glBegin(7);
         OpenGL.glTexCoord2f(0.0F, (aClass258_Sub3_Sub1_8434.aFloat9938));
@@ -137,14 +137,14 @@ final class SpriteSub2
         ShaderSub1 var_aa_Sub1 = (ShaderSub1) var_aa;
         GlRectangleTexture class258_sub3_sub1 = var_aa_Sub1.aClass258_Sub3_Sub1_5193;
         aClass258_Sub3_Sub1_8434.method1957(9728, false);
-        aHa_Sub2_8430.method3792(75);
+        aHa_Sub2_8430.bindTexture(75);
         aHa_Sub2_8430.bindTexture((byte) -99, aClass258_Sub3_Sub1_8434);
-        aHa_Sub2_8430.method3761(0, 1);
+        aHa_Sub2_8430.setTextureEnvMode(0, 1);
         aHa_Sub2_8430.glActiveTexture(-15039, 1);
         aHa_Sub2_8430.bindTexture((byte) -123, class258_sub3_sub1);
         aHa_Sub2_8430.glTexEnvi(7681, (byte) -101, 8448);
         aHa_Sub2_8430.glTexEnvCombine(34168, 768, (byte) -87, 0);
-        aHa_Sub2_8430.method3753(1, 1);
+        aHa_Sub2_8430.setBlendMode(1, 1);
         i += anInt8447;
         i_31_ += anInt8446;
         int i_34_ = aClass258_Sub3_Sub1_8434.anInt9940 + i;
@@ -171,7 +171,7 @@ final class SpriteSub2
         OpenGL.glVertex2i((aClass258_Sub3_Sub1_8434.anInt9940) + i, i_31_);
         OpenGL.glEnd();
         aHa_Sub2_8430.glTexEnvCombine(5890, 768, (byte) -87, 0);
-        aHa_Sub2_8430.method3761(0, 0);
+        aHa_Sub2_8430.setTextureEnvMode(0, 0);
         aHa_Sub2_8430.bindTexture((byte) -105, null);
         aHa_Sub2_8430.glActiveTexture(-15039, 0);
     }
@@ -226,14 +226,14 @@ final class SpriteSub2
         float f_65_ = -f + f_45_ + f_47_;
         aClass258_Sub3_Sub1_8434.method1957(9728, (0x1 & i) != 0);
         float f_66_ = f_48_ - f_44_ + f_46_;
-        aHa_Sub2_8430.method3792(106);
+        aHa_Sub2_8430.bindTexture(106);
         aHa_Sub2_8430.bindTexture((byte) -123, aClass258_Sub3_Sub1_8434);
-        aHa_Sub2_8430.method3761(0, 1);
+        aHa_Sub2_8430.setTextureEnvMode(0, 1);
         aHa_Sub2_8430.glActiveTexture(-15039, 1);
         aHa_Sub2_8430.bindTexture((byte) -98, class258_sub3_sub1);
         aHa_Sub2_8430.glTexEnvi(7681, (byte) -17, 8448);
         aHa_Sub2_8430.glTexEnvCombine(34168, 768, (byte) -87, 0);
-        aHa_Sub2_8430.method3753(1, 1);
+        aHa_Sub2_8430.setBlendMode(1, 1);
         float f_67_ = (class258_sub3_sub1.aFloat9937 / (float) class258_sub3_sub1.anInt9940);
         float f_68_ = (class258_sub3_sub1.aFloat9938 / (float) class258_sub3_sub1.anInt9939);
         OpenGL.glBegin(7);
@@ -252,7 +252,7 @@ final class SpriteSub2
         OpenGL.glVertex2f(f_45_, f_46_);
         OpenGL.glEnd();
         aHa_Sub2_8430.glTexEnvCombine(5890, 768, (byte) -87, 0);
-        aHa_Sub2_8430.method3761(0, 0);
+        aHa_Sub2_8430.setTextureEnvMode(0, 0);
         aHa_Sub2_8430.bindTexture((byte) -84, null);
         aHa_Sub2_8430.glActiveTexture(-15039, 0);
     }
@@ -265,14 +265,14 @@ final class SpriteSub2
     final void method964(int i, int i_69_, int i_70_, int i_71_, int i_72_) {
         aClass258_Sub3_Sub1_8434.method1957(9728, false);
         anInt8425++;
-        aHa_Sub2_8430.method3792(121);
-        aHa_Sub2_8430.method3753(i_72_, 1);
+        aHa_Sub2_8430.bindTexture(121);
+        aHa_Sub2_8430.setBlendMode(i_72_, 1);
         OpenGL.glColor4ub((byte) (i_71_ >> 16), (byte) (i_71_ >> 8), (byte) i_71_, (byte) (i_71_ >> 24));
         i += anInt8447;
         i_69_ += anInt8446;
         if (aClass258_Sub3_Sub1_8431 == null) {
             aHa_Sub2_8430.bindTexture((byte) -127, aClass258_Sub3_Sub1_8434);
-            aHa_Sub2_8430.method3761(0, i_70_);
+            aHa_Sub2_8430.setTextureEnvMode(0, i_70_);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
             OpenGL.glVertex2i(i, i_69_);
@@ -329,10 +329,10 @@ final class SpriteSub2
         int i_80_ = i_75_ + i;
         int i_81_ = i_76_ + i_74_;
         aClass258_Sub3_Sub1_8434.method1957(9728, false);
-        aHa_Sub2_8430.method3792(54);
+        aHa_Sub2_8430.bindTexture(54);
         aHa_Sub2_8430.bindTexture((byte) -88, aClass258_Sub3_Sub1_8434);
-        aHa_Sub2_8430.method3753(i_79_, 1);
-        aHa_Sub2_8430.method3761(0, i_77_);
+        aHa_Sub2_8430.setBlendMode(i_79_, 1);
+        aHa_Sub2_8430.setTextureEnvMode(0, i_77_);
         OpenGL.glColor4ub((byte) (i_78_ >> 16), (byte) (i_78_ >> 8), (byte) i_78_, (byte) (i_78_ >> 24));
         if (aClass258_Sub3_Sub1_8434.aBoolean9941 && !aBoolean8427) {
             float f = (aClass258_Sub3_Sub1_8434.aFloat9938 * (float) i_76_ / (float) (aClass258_Sub3_Sub1_8434.anInt9939));
@@ -423,8 +423,8 @@ final class SpriteSub2
     final void method982(int i, int i_92_, int i_93_, int i_94_, int i_95_, int i_96_, int i_97_, int i_98_) {
         anInt8443++;
         aClass258_Sub3_Sub1_8434.method1957(9728, (0x1 & i_98_) != 0);
-        aHa_Sub2_8430.method3792(103);
-        aHa_Sub2_8430.method3753(i_97_, 1);
+        aHa_Sub2_8430.bindTexture(103);
+        aHa_Sub2_8430.setBlendMode(i_97_, 1);
         OpenGL.glColor4ub((byte) (i_96_ >> 16), (byte) (i_96_ >> 8), (byte) i_96_, (byte) (i_96_ >> 24));
         if (aBoolean8427) {
             float f = (float) i_93_ / (float) method966();
@@ -435,7 +435,7 @@ final class SpriteSub2
             float f_103_ = (f_101_ + (float) (aClass258_Sub3_Sub1_8434.anInt9939) * f_99_);
             if (aClass258_Sub3_Sub1_8431 == null) {
                 aHa_Sub2_8430.bindTexture((byte) -85, aClass258_Sub3_Sub1_8434);
-                aHa_Sub2_8430.method3761(0, i_95_);
+                aHa_Sub2_8430.setTextureEnvMode(0, i_95_);
                 OpenGL.glBegin(7);
                 OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
                 OpenGL.glVertex2f(f_100_, f_101_);
@@ -467,7 +467,7 @@ final class SpriteSub2
             }
         } else if (aClass258_Sub3_Sub1_8431 == null) {
             aHa_Sub2_8430.bindTexture((byte) -101, aClass258_Sub3_Sub1_8434);
-            aHa_Sub2_8430.method3761(0, i_95_);
+            aHa_Sub2_8430.setTextureEnvMode(0, i_95_);
             OpenGL.glBegin(7);
             OpenGL.glTexCoord2f(0.0F, aClass258_Sub3_Sub1_8434.aFloat9938);
             OpenGL.glVertex2i(i, i_92_);

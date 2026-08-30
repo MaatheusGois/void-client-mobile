@@ -144,13 +144,13 @@ final class Component65
     }
 
     final void method956(boolean bool, int i, boolean[][] bools, int i_35_, int i_36_, int i_37_) {
-        aHa_Sub2_1616.method3728(false, 114);
+        aHa_Sub2_1616.setLightingEnabled(false, 114);
         int i_38_ = 80 / ((i - 15) / 60);
         anInt1614++;
-        aHa_Sub2_1616.method3748(0, false);
+        aHa_Sub2_1616.drawSprite(0, false);
         aHa_Sub2_1616.glResetViewport(-2, -119);
-        aHa_Sub2_1616.method3761(0, 1);
-        aHa_Sub2_1616.method3753(1, 1);
+        aHa_Sub2_1616.setTextureEnvMode(0, 1);
+        aHa_Sub2_1616.setBlendMode(1, 1);
         float f = 1.0F / (float) (aHa_Sub2_1616.anInt7733 * 128);
         if (bool) {
             for (int i_51_ = 0; i_51_ < anInt1625; i_51_++) {

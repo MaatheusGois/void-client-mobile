@@ -561,7 +561,7 @@ public final class client extends Applet_Sub1 {
         Component132.method1091(-9341);
         Component182.method3403(84);
         GlFramebufferTexture.method1962(-1);
-        GlToolkitSub3.method3870(113);
+        GlToolkitSub3.getInternalFormat(113);
         ColoredTextBuilder.method2597(-27327);
         Component342.method719((byte) 72);
         Component209.method2042((byte) -67);

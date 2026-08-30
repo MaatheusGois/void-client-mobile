@@ -67,7 +67,7 @@ final class Component209
                     }
                 }
             }
-            this.anInterface18_Impl1_3455 = aHa_Sub3_3457.method3872(16, 128, Component83.aClass304_1662, true, 128, is_0_);
+            this.anInterface18_Impl1_3455 = aHa_Sub3_3457.texParameter(16, 128, Component83.aClass304_1662, true, 128, is_0_);
         }
         anInt3456++;
         return this.anInterface18_Impl1_3455 != null;
@@ -82,24 +82,24 @@ final class Component209
         this.anInterface18_Impl3Array3459 = null;
         aHa_Sub3_3457 = var_ha_Sub3;
         this.aBoolean3458 = aHa_Sub3_3457.aBoolean8159;
-        if (this.aBoolean3458 && !aHa_Sub3_3457.method3931(true, ImageCache.aClass304_2571, Component342.aClass68_1183)) this.aBoolean3458 = false;
-        if (this.aBoolean3458 || aHa_Sub3_3457.method3880(Component342.aClass68_1183, ImageCache.aClass304_2571, (byte) 123)) {
+        if (this.aBoolean3458 && !aHa_Sub3_3457.getMouseState(true, ImageCache.aClass304_2571, Component342.aClass68_1183)) this.aBoolean3458 = false;
+        if (this.aBoolean3458 || aHa_Sub3_3457.validateProgram(Component342.aClass68_1183, ImageCache.aClass304_2571, (byte) 123)) {
             OutputStream_Sub1.method134((byte) -126);
             if (this.aBoolean3458) {
                 byte[] is = Cp1252Decoder.unwrapBytes(false, Component117.anObject4366, 53146732);
-                this.anInterface18_Impl1_3452 = aHa_Sub3_3457.method3872(16, 128, ImageCache.aClass304_2571, true, 128, is);
+                this.anInterface18_Impl1_3452 = aHa_Sub3_3457.texParameter(16, 128, ImageCache.aClass304_2571, true, 128, is);
                 is = Cp1252Decoder.unwrapBytes(false, Component150.anObject2969, 53146732);
-                aHa_Sub3_3457.method3872(16, 128, ImageCache.aClass304_2571, true, 128, is);
+                aHa_Sub3_3457.texParameter(16, 128, ImageCache.aClass304_2571, true, 128, is);
             } else {
                 this.anInterface18_Impl3Array3459 = new Interface18_Impl3[16];
                 for (int i = 0; i < 16; i++) {
                     byte[] is = Component75.method1331((byte) 100, Component117.anObject4366, 128 * (i * 128 * 2), 32768);
-                    this.anInterface18_Impl3Array3459[i] = aHa_Sub3_3457.method3944(is, 128, ImageCache.aClass304_2571, 2, true, 128);
+                    this.anInterface18_Impl3Array3459[i] = aHa_Sub3_3457.getWindowTitle(is, 128, ImageCache.aClass304_2571, 2, true, 128);
                 }
                 anInterface18_Impl3Array3454 = new Interface18_Impl3[16];
                 for (int i = 0; i < 16; i++) {
                     byte[] is = Component75.method1331((byte) 120, Component150.anObject2969, 128 * (128 * i) * 2, 32768);
-                    anInterface18_Impl3Array3454[i] = aHa_Sub3_3457.method3944(is, 128, ImageCache.aClass304_2571, 2, true, 128);
+                    anInterface18_Impl3Array3454[i] = aHa_Sub3_3457.getWindowTitle(is, 128, ImageCache.aClass304_2571, 2, true, 128);
                 }
             }
         }

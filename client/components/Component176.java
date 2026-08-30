@@ -40,7 +40,7 @@ final class Component176
     }
 
     private final void method2207() {
-        aHa3746.method3659(anInt3749);
+        aHa3746.resetTextureState(anInt3749);
         while (!aBoolean3750 && aBoolean3745) {
             if (aClass315_3743 == null || aClass315_3743.method2360(-112)) {
                 aBoolean3744 = false;

@@ -92,7 +92,7 @@ final class OutputStream_Sub1 extends OutputStream {
             Component381.method3570(false);
             if (i >= 80) {
                 Component270.aClass101_2123.method903(WaterSurfaceShader.anInt6246, DisplayModeManagerContainer50.anInt3855, Component317.anInt8685, -HashNodeSub19.anInt9701 & 0x3fff, -Component298.anInt4638 & 0x3fff, 0x3fff & -Component103.anInt4186);
-                NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+                NodeSub8.toolkit.loadModelviewMatrix(Component270.aClass101_2123);
                 NodeSub8.toolkit.DA(i_0_ / 2 + i_1_, i_3_ + i_2_ / 2, Component263.anInt1550 << 1, Component263.anInt1550 << 1);
                 ComponentDownloader.method319(Component263.anInt1550 << 1, Component263.anInt1550 << 1, (byte) -18, i_1_ + i_0_ / 2, i_3_ + i_2_ / 2);
                 HashNodeSub20.method3282(0x3fff & -(HashNodeSub19.anInt9701), Component317.anInt8685, DisplayModeManagerContainer50.anInt3855, 0, -Component298.anInt4638 & 0x3fff, WaterSurfaceShader.anInt6246, -Component103.anInt4186 & 0x3fff);
@@ -105,7 +105,7 @@ final class OutputStream_Sub1 extends OutputStream {
                 Component381.method3570(false);
                 if (Component49.clientState == 10) {
                     Component248.method283(-127, i_0_, 256, i_2_, i_1_, i_3_, 256);
-                    GlToolkitSub2.method3802(i_3_, i_2_, 2, i_1_, i_0_, 256, 256);
+                    GlToolkitSub2.getString(i_3_, i_2_, 2, i_1_, i_0_, 256, 256);
                     Component212.method2403(i_1_, 256, i_3_, i_0_, 19206, i_2_, 256);
                     CursorDefinitionCache.method1289(i_2_, i_0_, i_3_, 8, i_1_);
                 }

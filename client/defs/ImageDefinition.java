@@ -397,7 +397,7 @@ final class ImageDefinition extends Definition {
                                                 i_65_ += (i_63_ * (class46.anInt799) >> 9);
                                             }
                                             Component270.aClass101_2123.method910();
-                                            NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+                                            NodeSub8.toolkit.loadModelviewMatrix(Component270.aClass101_2123);
                                             NodeSub8.toolkit.DA(i_64_, i_65_, i_62_, i_63_);
                                             NodeSub8.toolkit.NativeHandle();
                                             if (class46.aBoolean754) NodeSub8.toolkit.C(false);
@@ -419,12 +419,12 @@ final class ImageDefinition extends Definition {
                                             if (!class46.aBoolean784) {
                                                 if (!class46.aBoolean689) {
                                                     class64.render((Cp1252Decoder.aClass101_5209), null, 1);
-                                                    if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.method3684(class46.aClass318_Sub10_740.method2539());
+                                                    if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.renderModel(class46.aClass318_Sub10_740.method2539());
                                                 } else class64.method608((Cp1252Decoder.aClass101_5209), null, ((class46.anInt716) << 2), 1);
                                             } else if (class46.aBoolean689) class64.method608((Cp1252Decoder.aClass101_5209), null, (class46.anInt716), 1);
                                             else {
                                                 class64.render((Cp1252Decoder.aClass101_5209), null, 1);
-                                                if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.method3684(class46.aClass318_Sub10_740.method2539());
+                                                if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.renderModel(class46.aClass318_Sub10_740.method2539());
                                             }
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);
                                             if (class46.aBoolean754) NodeSub8.toolkit.C(true);
@@ -449,8 +449,8 @@ final class ImageDefinition extends Definition {
                                             i_68_ = i_25_;
                                             i_69_ = i_24_;
                                         }
-                                        if (class46.lineWidth != 1) NodeSub8.toolkit.method3688(i_69_, i_68_, i_70_, i_71_, class46.colour, class46.lineWidth, 0);
-                                        else NodeSub8.toolkit.method3709(i_69_, i_68_, i_70_, i_71_, class46.colour, 0);
+                                        if (class46.lineWidth != 1) NodeSub8.toolkit.setLineWidth(i_69_, i_68_, i_70_, i_71_, class46.colour, class46.lineWidth, 0);
+                                        else NodeSub8.toolkit.drawColoredRect(i_69_, i_68_, i_70_, i_71_, class46.colour, 0);
                                         if (Component210.gameCanvasAttached) {
                                             if (bool) Component103.method2663(-5590, i_19_, i_21_, i_20_, i_22_);
                                             else Component285.method503(i_22_, i_19_, (byte) -74, i_21_, i_20_);

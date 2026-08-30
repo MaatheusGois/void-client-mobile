@@ -74,7 +74,7 @@ final class AbstractShaderSub2
 
     final void method3521(boolean bool, byte i) {
         if (i != -103) aShortArrayArrayArray7290 = null;
-        this.aHa_Sub3_4479.method3874((DisplayModeManagerContainer64.aClass229_9011), 106, (ShaderCompilerSub3.aClass229_6519));
+        this.aHa_Sub3_4479.texStorage3D((DisplayModeManagerContainer64.aClass229_9011), 106, (ShaderCompilerSub3.aClass229_6519));
         anInt7292++;
     }
 

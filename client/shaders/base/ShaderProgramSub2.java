@@ -22,7 +22,7 @@ final class ShaderProgramSub2
 
     final void method2133(int i) {
         if (i < -75) {
-            this.aHa_Sub2_3684.method3804(false, (byte) -61);
+            this.aHa_Sub2_3684.getIntegerv(false, (byte) -61);
             anInt6211++;
         }
     }
@@ -74,7 +74,7 @@ final class ShaderProgramSub2
         anInt6206++;
         this.aHa_Sub2_3684.bindTexture((byte) -80, class258);
         if (i >= -89) method2136(-67, -39, (byte) 18);
-        this.aHa_Sub2_3684.method3761(0, i_5_);
+        this.aHa_Sub2_3684.setTextureEnvMode(0, i_5_);
     }
 
     static final void method2146(byte i) {
@@ -102,7 +102,7 @@ final class ShaderProgramSub2
     }
 
     final void method2134(boolean bool, boolean bool_9_) {
-        this.aHa_Sub2_3684.method3804(true, (byte) -83);
+        this.aHa_Sub2_3684.getIntegerv(true, (byte) -83);
         if (bool_9_ != false) method2136(-78, 73, (byte) 12);
         anInt6204++;
     }

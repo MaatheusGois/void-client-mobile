@@ -590,7 +590,7 @@ class Buffer extends Node {
                     HardwareProbe.aClass248_6601.writeLoginState(i ^ ~0x4b, true);
                 }
             }
-            if (Component212.isValidType(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.method3673();
+            if (Component212.isValidType(i_71_, (byte) -64) || i_71_ == 13) NodeSub8.toolkit.copyScreen();
             Component49.clientState = i_71_;
             // After state settles: restore/auto-login on title (once per session).
             if (i_71_ == 3) {

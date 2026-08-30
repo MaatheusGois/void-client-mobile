@@ -20,7 +20,7 @@ final class TransparentWaterShader extends AbstractShader {
     }
 
     final void method3521(boolean bool, byte i) {
-        this.aHa_Sub3_4479.method3874(DisplayModeManagerContainer64.aClass229_9011, 127, Component253.aClass229_3196);
+        this.aHa_Sub3_4479.texStorage3D(DisplayModeManagerContainer64.aClass229_9011, 127, Component253.aClass229_3196);
         if (i != -103) method3524(55);
     }
 
@@ -49,7 +49,7 @@ final class TransparentWaterShader extends AbstractShader {
     final void method3523(byte i) {
         if (anIDirect3DVertexShader7341 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
-            MatrixSub2 class101_sub2 = aClass378_7340.method3948(-22036);
+            MatrixSub2 class101_sub2 = aClass378_7340.maximizeWindow(-22036);
             idirect3ddevice.a(0, class101_sub2.method924(i ^ 0x7, aFloatArray7338));
         }
         if (i != 12) aClass378_7340 = null;
@@ -61,14 +61,14 @@ final class TransparentWaterShader extends AbstractShader {
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DebugPanicSub2.aClass70_8503);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
-            this.aHa_Sub3_4479.method3852(9, true);
+            this.aHa_Sub3_4479.genVertexArrays(9, true);
         }
     }
 
     final void method3524(int i) {
         if (anIDirect3DVertexShader7341 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
-            idirect3ddevice.a(4, this.aHa_Sub3_4479.method3835(aFloatArray7338, -104));
+            idirect3ddevice.a(4, this.aHa_Sub3_4479.createRenderbuffer(aFloatArray7338, -104));
         }
         if (i != -14775) aClass378_7340 = null;
     }
@@ -76,7 +76,7 @@ final class TransparentWaterShader extends AbstractShader {
     final void method3532(int i) {
         if (anIDirect3DVertexShader7341 != null) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
-            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3848(5);
+            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.clear(5);
             class101_sub2.method915(aFloatArray7338, i ^ 0x28b8);
             aFloatArray7338[0] *= 0.25F;
             aFloatArray7338[2] *= 0.25F;
@@ -99,7 +99,7 @@ final class TransparentWaterShader extends AbstractShader {
     final void method3531(boolean bool) {
         if (null != anIDirect3DVertexShader7341) {
             IDirect3DDevice idirect3ddevice = aClass378_7340.anIDirect3DDevice9810;
-            MatrixSub2 class101_sub2 = aClass378_7340.method3948(-22036);
+            MatrixSub2 class101_sub2 = aClass378_7340.maximizeWindow(-22036);
             idirect3ddevice.a(0, class101_sub2.method924(11, aFloatArray7338));
         }
         if (bool) method3524(46);
@@ -116,7 +116,7 @@ final class TransparentWaterShader extends AbstractShader {
                 float f_5_ = f_4_ - 512.0F;
                 idirect3ddevice.a(10, f_5_, 1.0F / (-f_5_ + f_4_), f_4_, 1.0F / (-f_4_ + f));
             }
-            this.aHa_Sub3_4479.method3894(-28186, this.aHa_Sub3_4479.anInt8144);
+            this.aHa_Sub3_4479.uniformMatrix4fv(-28186, this.aHa_Sub3_4479.anInt8144);
         }
     }
 
@@ -124,8 +124,8 @@ final class TransparentWaterShader extends AbstractShader {
         if (i != 15192) method3531(true);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
-        this.aHa_Sub3_4479.method3924(false, false, 2, DebugPanicSub2.aClass70_8503, true);
-        this.aHa_Sub3_4479.method3852(9, false);
+        this.aHa_Sub3_4479.getSwapInterval(false, false, 2, DebugPanicSub2.aClass70_8503, true);
+        this.aHa_Sub3_4479.genVertexArrays(9, false);
         aClass378_7340.method3957(anIDirect3DVertexShader7341, (byte) -89);
         method3523((byte) 12);
         method3532(10425);

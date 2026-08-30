@@ -55,7 +55,7 @@ final class CookieManager extends ShaderProgram {
     final void method2140(AbstractGlTexture class258, byte i, int i_1_) {
         anInt6303++;
         this.aHa_Sub2_3684.bindTexture((byte) -86, class258);
-        this.aHa_Sub2_3684.method3761(0, i_1_);
+        this.aHa_Sub2_3684.setTextureEnvMode(0, i_1_);
         if (i >= -89) method2172(12);
     }
 

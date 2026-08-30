@@ -35,7 +35,7 @@ abstract class DisplayModeManagerContainer194
 
     public final void method63(byte i) {
         anInt5104++;
-        int i_0_ = this.aClass377_5082.method3877((byte) -126);
+        int i_0_ = this.aClass377_5082.shaderSource((byte) -126);
         if (i > -21) this.aClass377_5082 = null;
         int i_1_ = (this.aClass377_5082.anIntArray9927[i_0_]);
         if (this.anInt5093 != i_1_) {

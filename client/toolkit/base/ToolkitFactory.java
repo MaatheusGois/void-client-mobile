@@ -37,7 +37,7 @@ final class ToolkitFactory {
             if (l == 0L) throw new RuntimeException("");
             if (i != 25542) return null;
             GlExtensionManager class377 = new GlExtensionManager(opengl, canvas, l, var_d, class45, i_1_);
-            class377.method3930((byte) 26);
+            class377.setKeyState((byte) 26);
             return class377;
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("lt.D(" + (canvas != null ? "{...}" : "null") + ',' + (var_d != null ? "{...}" : "null") + ',' + (class45 != null ? "{...}" : "null") + ',' + i + ',' + i_1_ + ')'));

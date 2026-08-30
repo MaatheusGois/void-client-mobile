@@ -160,7 +160,7 @@ final class DisplayModeManagerContainer365
         int i_28_ = 1024 * anInt1220 / (class64.RA() - class64.V());
         if (anInt1222 != 0) i_28_ = i_28_ * 13 / 16;
         var_ha.DA(anInt1220 / 2, anInt1220 / 2, i_28_, i_28_);
-        var_ha.method3638(var_ha.method3654());
+        var_ha.loadModelviewMatrix(var_ha.method3654());
         DisplayModeManagerContainer204 class101 = var_ha.method3654();
         class101.method894(0, 0, var_ha.i() - class64.HA());
         class64.method608(class101, null, 1024, 1);
@@ -292,7 +292,7 @@ final class DisplayModeManagerContainer365
             int i_74_ = class64.fa() + i_72_ / 2;
             int i_75_ = Math.max(i_71_, i_72_);
             var_ha.DA(i_73_, i_74_, i_75_, i_75_);
-            var_ha.method3638(var_ha.method3654());
+            var_ha.loadModelviewMatrix(var_ha.method3654());
             DisplayModeManagerContainer204 class101 = var_ha.method3705();
             class101.method894(0, 0, var_ha.i() - class64.HA());
             class64.method608(class101, null, var_ha.i(), 1);

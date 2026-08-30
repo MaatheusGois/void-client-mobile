@@ -22,7 +22,7 @@ final class SoftwareFallbackShader extends AbstractShader {
         this.aHa_Sub3_4479.setActiveTexture((byte) 79, interface18);
         if (i_0_ != -16776) aBoolean7385 = false;
         anInt7381++;
-        this.aHa_Sub3_4479.method3923(true, i);
+        this.aHa_Sub3_4479.swapInterval2(true, i);
     }
 
     static final void method3553(boolean bool, byte i, int i_1_) {
@@ -40,19 +40,19 @@ final class SoftwareFallbackShader extends AbstractShader {
 
     final void method3525(int i, boolean bool) {
         anInt7384++;
-        Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.method3834(-16777216);
+        Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.deleteFramebuffer(-16777216);
         if (i != 15192) aBoolean7385 = false;
         if (interface18_impl2 != null && bool) {
             this.aHa_Sub3_4479.setActiveTextureUnit(1, i + -19574);
             this.aHa_Sub3_4479.setActiveTexture((byte) 96, interface18_impl2);
-            this.aHa_Sub3_4479.method3871(DisplayModeManagerContainer1.aClass113_3314, i + -15192);
+            this.aHa_Sub3_4479.getTexParameter(DisplayModeManagerContainer1.aClass113_3314, i + -15192);
             this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
-            this.aHa_Sub3_4479.method3874(ShaderCompilerSub3.aClass229_6519, 104, Component253.aClass229_3196);
-            this.aHa_Sub3_4479.method3924(true, false, 2, (DisplayModeManagerContainer343.aClass70_8737), false);
+            this.aHa_Sub3_4479.texStorage3D(ShaderCompilerSub3.aClass229_6519, 104, Component253.aClass229_3196);
+            this.aHa_Sub3_4479.getSwapInterval(true, false, 2, (DisplayModeManagerContainer343.aClass70_8737), false);
             this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
-            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3820(false);
-            class101_sub2.method926(i + -30891, this.aHa_Sub3_4479.method3854((byte) -44));
-            this.aHa_Sub3_4479.method3853(i ^ ~0x3b47, DefinitionSub38.aClass251_9477);
+            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.getUniformLocation(false);
+            class101_sub2.method926(i + -30891, this.aHa_Sub3_4479.genBuffers((byte) -44));
+            this.aHa_Sub3_4479.deleteVertexArrays(i ^ ~0x3b47, DefinitionSub38.aClass251_9477);
             this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             aBoolean7385 = true;
         } else this.aHa_Sub3_4479.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
@@ -68,16 +68,16 @@ final class SoftwareFallbackShader extends AbstractShader {
         anInt7386++;
         if (aBoolean7385) {
             this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
-            this.aHa_Sub3_4479.method3871(Component324.aClass113_2047, i ^ 0x57);
-            this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 103, (Component385.aClass229_2207));
+            this.aHa_Sub3_4479.getTexParameter(Component324.aClass113_2047, i ^ 0x57);
+            this.aHa_Sub3_4479.texStorage3D(Component385.aClass229_2207, 103, (Component385.aClass229_2207));
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
             this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
-            this.aHa_Sub3_4479.method3879(-8629);
+            this.aHa_Sub3_4479.getProgramInfoLog(-8629);
             this.aHa_Sub3_4479.setActiveTexture((byte) -111, null);
             this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
             aBoolean7385 = false;
         } else this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
-        this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, i ^ 0x2c, Component385.aClass229_2207);
+        this.aHa_Sub3_4479.texStorage3D(Component385.aClass229_2207, i ^ 0x2c, Component385.aClass229_2207);
     }
 
     final void method3526(int i, int i_2_, int i_3_) {
@@ -94,7 +94,7 @@ final class SoftwareFallbackShader extends AbstractShader {
     final void method3521(boolean bool, byte i) {
         if (i == -103) {
             anInt7383++;
-            this.aHa_Sub3_4479.method3874(ShaderCompilerSub3.aClass229_6519, 99, Component385.aClass229_2207);
+            this.aHa_Sub3_4479.texStorage3D(ShaderCompilerSub3.aClass229_6519, 99, Component385.aClass229_2207);
         }
     }
 

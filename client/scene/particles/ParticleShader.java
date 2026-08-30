@@ -69,7 +69,7 @@ final class ParticleShader extends ShaderProgram {
         if (i <= -89) {
             anInt6216++;
             this.aHa_Sub2_3684.bindTexture((byte) -115, class258);
-            this.aHa_Sub2_3684.method3761(0, i_4_);
+            this.aHa_Sub2_3684.setTextureEnvMode(0, i_4_);
         }
     }
 
@@ -153,7 +153,7 @@ final class ParticleShader extends ShaderProgram {
         OpenGL.glMatrixMode(5890);
         OpenGL.glLoadIdentity();
         OpenGL.glMatrixMode(5888);
-        this.aHa_Sub2_3684.method3761(0, 0);
+        this.aHa_Sub2_3684.setTextureEnvMode(0, 0);
         this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 5890);
         this.aHa_Sub2_3684.glActiveTexture(-15039, 0);
         OpenGL.glBindProgramARB(34336, 0);

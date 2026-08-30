@@ -46,10 +46,10 @@ final class NodeSub38
                         int i_4_ = -i_1_ + i_3_;
                         int i_5_ = -i + i_2_;
                         if (-i_0_ < i_4_ && i_4_ < i_0_ && i_5_ > -i_0_ && i_0_ > i_5_ && bools[i_4_ - -i_0_][i_0_ + i_5_]) {
-                            aHa_Sub3_7007.method3909((byte) (int) (255.0F * aClass348_Sub1_7004.method2721(-37)), -112);
-                            aHa_Sub3_7007.method3925(-123, anInterface5_Impl1_7020, 0);
-                            aHa_Sub3_7007.method3862(0, (aHa_Sub3_7007.aClass130_8202));
-                            aHa_Sub3_7007.method3938(VideoAdDisplay.aClass21_3181, anInt7018 / 3, anInterface5_Impl2_7002, 0, 0, anInt7013, 116);
+                            aHa_Sub3_7007.isExtensionSupported((byte) (int) (255.0F * aClass348_Sub1_7004.method2721(-37)), -112);
+                            aHa_Sub3_7007.waitNative(-123, anInterface5_Impl1_7020, 0);
+                            aHa_Sub3_7007.drawArraysInstanced(0, (aHa_Sub3_7007.aClass130_8202));
+                            aHa_Sub3_7007.showCursor(VideoAdDisplay.aClass21_3181, anInt7018 / 3, anInterface5_Impl2_7002, 0, 0, anInt7013, 116);
                             return;
                         }
                     }
@@ -226,9 +226,9 @@ final class NodeSub38
             }
             if (anInt7018 > 0) {
                 aClass356_7011 = new LruCache(Component373.nextPowerOfTwo(anInt7018, (byte) 108));
-                anInterface5_Impl2_7002 = aHa_Sub3_7007.method3840(-28633, false);
+                anInterface5_Impl2_7002 = aHa_Sub3_7007.blitFramebuffer(-28633, false);
                 anInterface5_Impl2_7002.method23(15959, anInt7018);
-                jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = aHa_Sub3_7007.method3869((byte) 86, false, 16 * anInt7018);
+                jaclib.memory.heap.NativeHeapBuffer nativeheapbuffer = aHa_Sub3_7007.invalidateSubFramebuffer((byte) 86, false, 16 * anInt7018);
                 aStream7022 = new Stream(nativeheapbuffer);
                 for (; ; ) {
                     Buffer buffer = anInterface5_Impl2_7002.method24(true, false);
@@ -291,7 +291,7 @@ final class NodeSub38
                     }
                 }
                 aStream7022.a();
-                anInterface5_Impl1_7020 = aHa_Sub3_7007.method3889(false, 16711680);
+                anInterface5_Impl1_7020 = aHa_Sub3_7007.uniform4f(false, 16711680);
                 anInterface5_Impl1_7020.method17(nativeheapbuffer, 16, 16 * anInt7013, (byte) -108);
             } else {
                 anInterface5_Impl1_7020 = null;

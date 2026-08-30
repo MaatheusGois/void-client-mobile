@@ -73,7 +73,7 @@ final class Cp1252Decoder extends Component47 {
         if (object == null) return null;
         if (object instanceof byte[]) {
             byte[] is = (byte[]) object;
-            if (bool) return GlToolkitSub3.method3873(is, 0);
+            if (bool) return GlToolkitSub3.texStorage2D(is, 0);
             return is;
         }
         if (i != 53146732) return null;

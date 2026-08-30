@@ -102,7 +102,7 @@ abstract class RenderableObject extends Renderable {
                                     i_16_ = i_19_;
                                     i_17_ = i_20_;
                                 }
-                                var_ha.method3703(i_14_, i_15_, i_16_, i_17_, (class42.anIntArray572[((class42.aByteArray564[i_13_]) & 0xff)]), 1, var_aa, i_6_, i, class42.anInt584, class42.anInt575, (class42.anInt601));
+                                var_ha.drawTexturedQuad(i_14_, i_15_, i_16_, i_17_, (class42.anIntArray572[((class42.aByteArray564[i_13_]) & 0xff)]), 1, var_aa, i_6_, i, class42.anInt584, class42.anInt575, (class42.anInt601));
                             }
                             int i_21_ = is[-2 + is.length];
                             int i_22_ = is[-1 + is.length];
@@ -120,11 +120,11 @@ abstract class RenderableObject extends Renderable {
                                 i_22_ = i_24_;
                                 i_24_ = i_27_;
                             }
-                            var_ha.method3703(i_21_, i_22_, i_23_, i_24_, (class42.anIntArray572[(class42.aByteArray564[((class42.aByteArray564).length - 1)]) & 0xff]), 1, var_aa, i_6_, i, class42.anInt584, class42.anInt575, class42.anInt601);
+                            var_ha.drawTexturedQuad(i_21_, i_22_, i_23_, i_24_, (class42.anIntArray572[(class42.aByteArray564[((class42.aByteArray564).length - 1)]) & 0xff]), 1, var_aa, i_6_, i, class42.anInt584, class42.anInt575, class42.anInt601);
                         } else {
                             for (int i_28_ = 0; -1 + is.length / 2 > i_28_; i_28_++)
-                                var_ha.method3636(is[i_28_ * 2], is[2 * i_28_ + 1], is[2 * (i_28_ - -1)], is[2 * i_28_ + 3], (class42.anIntArray572[((class42.aByteArray564[i_28_]) & 0xff)]), 1, var_aa, i_6_, i);
-                            var_ha.method3636(is[is.length + -2], is[-1 + is.length], is[0], is[1], (class42.anIntArray572[(class42.aByteArray564[((class42.aByteArray564).length + -1)]) & 0xff]), 1, var_aa, i_6_, i);
+                                var_ha.drawTexturedRect(is[i_28_ * 2], is[2 * i_28_ + 1], is[2 * (i_28_ - -1)], is[2 * i_28_ + 3], (class42.anIntArray572[((class42.aByteArray564[i_28_]) & 0xff)]), 1, var_aa, i_6_, i);
+                            var_ha.drawTexturedRect(is[is.length + -2], is[-1 + is.length], is[0], is[1], (class42.anIntArray572[(class42.aByteArray564[((class42.aByteArray564).length + -1)]) & 0xff]), 1, var_aa, i_6_, i);
                         }
                     }
                     Component24 class105 = null;

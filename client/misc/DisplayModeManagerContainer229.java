@@ -77,7 +77,7 @@ class DisplayModeManagerContainer229
                         i_3_ = i_5_;
                         i_5_ = i_8_;
                     }
-                    var_ha.method3674(i_2_, i_3_, i_4_, i_5_, (class42.anIntArray572[(class42.aByteArray564[i] & 0xff)]), 1, class42.anInt584, class42.anInt575, class42.anInt601);
+                    var_ha.drawColoredQuad(i_2_, i_3_, i_4_, i_5_, (class42.anIntArray572[(class42.aByteArray564[i] & 0xff)]), 1, class42.anInt584, class42.anInt575, class42.anInt601);
                 }
                 int i = is[is.length - 2];
                 int i_9_ = is[is.length - 1];
@@ -95,7 +95,7 @@ class DisplayModeManagerContainer229
                     i_9_ = i_11_;
                     i_11_ = i_14_;
                 }
-                var_ha.method3674(i, i_9_, i_10_, i_11_, (class42.anIntArray572[(class42.aByteArray564[(class42.aByteArray564.length - 1)]) & 0xff]), 1, class42.anInt584, class42.anInt575, class42.anInt601);
+                var_ha.drawColoredQuad(i, i_9_, i_10_, i_11_, (class42.anIntArray572[(class42.aByteArray564[(class42.aByteArray564.length - 1)]) & 0xff]), 1, class42.anInt584, class42.anInt575, class42.anInt601);
             } else {
                 for (int i = 0; i < is.length / 2 - 1; i++)
                     var_ha.method3645(is[i * 2 + 1], is[i * 2], is[(i + 1) * 2], -8003, (class42.anIntArray572[(class42.aByteArray564[i] & 0xff)]), is[(i + 1) * 2 + 1]);

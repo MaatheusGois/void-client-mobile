@@ -96,7 +96,7 @@ final class InputStream_Sub2 extends InputStream {
                 int i_47_ = i_46_ >> 2;
                 int i_48_ = i_46_ & 0x3;
                 int i_49_ = Component129.anIntArray487[i_47_];
-                GlToolkitSub3.method3824(i_45_, i_42_, i_47_, i_44_, i_48_, 115, GradientPreset.anInt9200, i_49_);
+                GlToolkitSub3.vertexAttribPointer(i_45_, i_42_, i_47_, i_44_, i_48_, 115, GradientPreset.anInt9200, i_49_);
             } else if (class74 == ArbShaderProgram.aClass74_6201) {
                 int i_50_ = Component80.aClass348_Sub49_Sub2_3813.readUnsignedByte(255);
                 int i_51_ = (i_50_ >> 4 & 0xf) + DisplayModeManagerContainer347.anInt3581 * 2;

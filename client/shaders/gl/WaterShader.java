@@ -90,7 +90,7 @@ final class WaterShader extends AbstractShader {
         anInt7380++;
         if (!aBoolean7373) {
             this.aHa_Sub3_4479.setActiveTexture((byte) 102, interface18);
-            this.aHa_Sub3_4479.method3923(true, i);
+            this.aHa_Sub3_4479.swapInterval2(true, i);
         }
     }
 
@@ -124,7 +124,7 @@ final class WaterShader extends AbstractShader {
     final void method3525(int i, boolean bool) {
         anInt7370++;
         if (i != 15192) method3551(58, -50, 40, true);
-        Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.method3834(-16777216);
+        Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.deleteFramebuffer(-16777216);
         if (aBoolean7376 && interface18_impl2 != null) {
             this.aHa_Sub3_4479.setActiveTextureUnit(1, i + -19574);
             this.aHa_Sub3_4479.setActiveTexture((byte) -63, interface18_impl2);

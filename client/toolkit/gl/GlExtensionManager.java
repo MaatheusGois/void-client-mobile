@@ -208,14 +208,14 @@ final class GlExtensionManager extends GlToolkitSub3 {
         super.method3646(i);
     }
 
-    final void method3841(byte i) {
+    final void readPixels(byte i) {
         if (i == -116) {
             OpenGL.glDepthMask(this.aBoolean8124 && this.aBoolean8118);
             anInt9837++;
         }
     }
 
-    final Component387 method3812(int i, Component255[] class58s) {
+    final Component387 createShader(int i, Component255[] class58s) {
         try {
             anInt9875++;
             if (i != 0) this.aMapBuffer9913 = null;
@@ -225,7 +225,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3818(boolean bool) {
+    final void useProgram(boolean bool) {
         anInt9844++;
         if (bool != true) aClass262_9899 = null;
         if (this.aBoolean8110) {
@@ -248,7 +248,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3881(Object object, byte i, Canvas canvas) {
+    final void getActiveUniform(Object object, byte i, Canvas canvas) {
         try {
             anInt9880++;
             if (i == 99) {
@@ -260,12 +260,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3901(byte i) {
+    final void polygonMode(byte i) {
         anInt9831++;
         if (i <= -18) method3970(1);
     }
 
-    final void method3924(boolean bool, boolean bool_2_, int i, DisplayModeManagerContainer88 class70, boolean bool_3_) {
+    final void getSwapInterval(boolean bool, boolean bool_2_, int i, DisplayModeManagerContainer88 class70, boolean bool_3_) {
         try {
             anInt9852++;
             if (bool_2_ == false) {
@@ -278,7 +278,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final boolean method3880(Component342 class68, DisplayModeManagerContainer42 class304, byte i) {
+    final boolean validateProgram(Component342 class68, DisplayModeManagerContainer42 class304, byte i) {
         try {
             anInt9849++;
             int i_4_ = -21 / ((85 - i) / 37);
@@ -288,9 +288,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3813(boolean bool) {
+    final void enableShader(boolean bool) {
         OpenGL.glMatrixMode(5889);
-        if (bool != true) method3652();
+        if (bool != true) release();
         anInt9884++;
         OpenGL.glLoadMatrixf(this.aFloatArray8135, 0);
         OpenGL.glMatrixMode(5888);
@@ -298,7 +298,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
 
     final void NativeHandle() {
         anInt9839++;
-        this.method3946(-32, true);
+        this.iconifyWindow(-32, true);
         OpenGL.glClear(256);
     }
 
@@ -318,13 +318,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
         return null;
     }
 
-    final void method3935(int i) {
+    final void setClipboard(int i) {
         anInt9861++;
         OpenGL.glTexEnvi(8960, 34162, NodeSub32.method3021((byte) 32, (this.aClass229Array8092[(this.anInt8175)])));
         if (i >= -99) method3658(-123, -102, -33, -112);
     }
 
-    final Interface18_Impl1 method3872(int i, int i_6_, DisplayModeManagerContainer42 class304, boolean bool, int i_7_, byte[] is) {
+    final Interface18_Impl1 texParameter(int i, int i_6_, DisplayModeManagerContainer42 class304, boolean bool, int i_7_, byte[] is) {
         try {
             if (bool != true) aString9916 = null;
             anInt9832++;
@@ -337,17 +337,17 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final synchronized void method3967(int i, byte i_8_, int i_9_) {
         anInt9898++;
         NodeSub35 class348_sub35 = new NodeSub35(i);
-        if (i_8_ != 59) method3818(false);
+        if (i_8_ != 59) useProgram(false);
         class348_sub35.key = i_9_;
         aClass262_9901.addTail(class348_sub35, -20180);
     }
 
-    final void method3884(byte i) {
+    final void getUniformiv(byte i) {
         anInt9896++;
         if (i != 101) method3967(52, (byte) -47, 49);
     }
 
-    final void method3928(int i) {
+    final void processEvents(int i) {
         RuntimeException_Sub1.aFloatArray4602[0] = this.aFloat8180 * this.aFloat8093;
         anInt9864++;
         RuntimeException_Sub1.aFloatArray4602[2] = this.aFloat8093 * this.aFloat8168;
@@ -361,7 +361,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         aClass138_9860 = null;
     }
 
-    final Interface18_Impl3 method3843(int i, int i_11_, int i_12_, int i_13_, byte[] is, DisplayModeManagerContainer42 class304, int i_14_, boolean bool) {
+    final Interface18_Impl3 scissor(int i, int i_11_, int i_12_, int i_13_, byte[] is, DisplayModeManagerContainer42 class304, int i_14_, boolean bool) {
         try {
             anInt9846++;
             if (i_14_ != 32) anOpenGL9856 = null;
@@ -377,11 +377,11 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3910(byte i, int i_15_) {
+    final void getProcAddress(byte i, int i_15_) {
         if (i == -26) anInt9834++;
     }
 
-    final void method3871(Component22 class113, int i) {
+    final void getTexParameter(Component22 class113, int i) {
         try {
             if (i == 0) {
                 anInt9836++;
@@ -404,23 +404,23 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3926(byte i, boolean bool) {
+    final void signalNative(byte i, boolean bool) {
         anInt9847++;
         if (i <= 34) aBoolean9914 = false;
         if (bool) OpenGL.glEnable(32925);
         else OpenGL.glDisable(32925);
     }
 
-    final void method3940(int i) {
+    final void getWindowSize(int i) {
         OpenGL.glMatrixMode(5890);
         anInt9888++;
         if (HashNodeSub18.aClass251_9685 != this.aClass251Array8113[this.anInt8175]) OpenGL.glLoadMatrixf(this.aClass101_Sub2Array8131[this.anInt8175].method918(Component237.aFloatArray3015, 0), 0);
         else OpenGL.glLoadIdentity();
-        if (i != 1) method3862(37, null);
+        if (i != 1) drawArraysInstanced(37, null);
         OpenGL.glMatrixMode(5888);
     }
 
-    final void method3925(int i, Interface5_Impl1 interface5_impl1, int i_17_) {
+    final void waitNative(int i, Interface5_Impl1 interface5_impl1, int i_17_) {
         try {
             anInt9814++;
             int i_18_ = 86 / ((i - -26) / 39);
@@ -430,9 +430,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3920(int i) {
+    final void querySurface(int i) {
         anInt9862++;
-        if (i != 10) method3911(null, 34, null);
+        if (i != 10) makeContextCurrent(null, 34, null);
         OpenGL.glTexEnvi(8960, 34161, NodeSub32.method3021((byte) 32, (this.aClass229Array8086[(this.anInt8175)])));
     }
 
@@ -441,7 +441,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         return null;
     }
 
-    final void method3819(byte i) {
+    final void deleteProgram(byte i) {
         anInt9887++;
         int i_20_ = this.anIntArray9927[this.anInt8175];
         if (i_20_ != 0) {
@@ -452,7 +452,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         if (i >= -19) aLong9906 = 83L;
     }
 
-    final void method3882(byte i) {
+    final void getActiveAttrib(byte i) {
         anInt9874++;
         for (int i_21_ = -1 + this.anInt8090; i_21_ >= 0; i_21_--) {
             OpenGL.glActiveTexture(i_21_ + 33984);
@@ -487,10 +487,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
         OpenGL.glFogi(2917, 9729);
         OpenGL.glHint(3156, 4353);
         anOpenGL9856.setSwapInterval(0);
-        super.method3882((byte) 122);
+        super.getActiveAttrib((byte) 122);
     }
 
-    final void method3827(byte i) {
+    final void bufferSubData(byte i) {
         anInt9879++;
         if (this.aBoolean8148 && this.aBoolean8123 && this.anInt8091 >= 0) OpenGL.glEnable(2912);
         else OpenGL.glDisable(2912);
@@ -506,7 +506,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final Object method3876(int i, Canvas canvas) {
+    final Object getShaderSource(int i, Canvas canvas) {
         try {
             anInt9894++;
             if (i != -1) GA(-118);
@@ -545,7 +545,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         aClass262_9899.addTail(class348_sub35, i_27_ ^ ~0x42c2);
     }
 
-    final void method3842(boolean bool) {
+    final void enableScissorTest(boolean bool) {
         RuntimeException_Sub1.aFloatArray4602[2] = this.aFloat8168 * this.aFloat8174;
         RuntimeException_Sub1.aFloatArray4602[3] = 1.0F;
         RuntimeException_Sub1.aFloatArray4602[0] = this.aFloat8180 * this.aFloat8174;
@@ -564,13 +564,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
     private final void method3970(int i) {
         if (aBoolean9911) OpenGL.glPopMatrix();
         anInt9840++;
-        if (i != 1) method3950(69);
+        if (i != 1) hideWindow(69);
         if (this.aClass196_8184.method1450(-98)) {
             if (!aBoolean9914) {
                 OpenGL.glLoadMatrixf(this.aClass101_Sub2_8083.method918(Component237.aFloatArray3015, 0), 0);
                 aBoolean9914 = true;
-                method3892(0);
-                method3823((byte) -104);
+                uniform3i(0);
+                disableVertexAttrib((byte) -104);
             }
             if (!this.aBoolean8069) {
                 OpenGL.glPushMatrix();
@@ -586,8 +586,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3652() {
-        super.method3652();
+    final void release() {
+        super.release();
         anInt9868++;
         if (anOpenGL9856 != null) {
             anOpenGL9856.a();
@@ -596,7 +596,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3851(int i) {
+    final void bindVertexArray(int i) {
         if (i != 25644) this.aBoolean9921 = false;
         anInt9871++;
         this.aFloat8115 = (float) (this.anInt8154 + -this.anInt8105);
@@ -615,14 +615,14 @@ final class GlExtensionManager extends GlToolkitSub3 {
         return false;
     }
 
-    final void method3883(int i) {
+    final void getUniformfv(int i) {
         if (!this.aBoolean8145 || this.aBoolean8149) OpenGL.glDisable(2896);
         else OpenGL.glEnable(2896);
         anInt9818++;
         int i_28_ = -61 / ((i - 20) / 36);
     }
 
-    final void method3921(int i) {
+    final void createSurface(int i) {
         anInt9824++;
         if (i == 1) {
             if (!this.aBoolean8209) OpenGL.glDisable(3089);
@@ -630,8 +630,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3937(byte i) {
-        if (i != -33) method3832(35, (byte) -122);
+    final void setCursor(byte i) {
+        if (i != -33) framebufferTexture2D(35, (byte) -122);
         OpenGL.glViewport(this.anInt8181, this.anInt8109, this.anInt7931, this.anInt7962);
         anInt9827++;
     }
@@ -733,7 +733,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3938(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_40_, int i_41_, int i_42_, int i_43_) {
+    final void showCursor(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_40_, int i_41_, int i_42_, int i_43_) {
         try {
             if (i_43_ <= 46) aClass262_9903 = null;
             anInt9867++;
@@ -767,10 +767,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3823(byte i) {
+    final void disableVertexAttrib(byte i) {
         anInt9812++;
         int i_46_ = -79 / ((i - -39) / 62);
-        this.method3942(5);
+        this.getWindowPos(5);
         int i_47_;
         for (i_47_ = 0; this.anInt8151 > i_47_; i_47_++) {
             NodeSub1 class348_sub1 = this.aClass348_Sub1Array8132[i_47_];
@@ -792,10 +792,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
         for (/**/; i_47_ < this.anInt8122; i_47_++)
             OpenGL.glDisable(16386 - -i_47_);
-        super.method3823((byte) 107);
+        super.disableVertexAttrib((byte) 107);
     }
 
-    final void method3844(int i, Canvas canvas, Object object) {
+    final void viewport(int i, Canvas canvas, Object object) {
         try {
             if (i != 12727) anInt9925 = 5;
             anInt9821++;
@@ -806,12 +806,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3633() {
+    final void finish() {
         OpenGL.glFinish();
         anInt9876++;
     }
 
-    final boolean method3931(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68) {
+    final boolean getMouseState(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68) {
         try {
             if (bool != true) aClass262_9905 = null;
             anInt9855++;
@@ -821,7 +821,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3899(int i, int i_50_, Component158 class21, boolean bool) {
+    final void getVertexAttribiv(int i, int i_50_, Component158 class21, boolean bool) {
         try {
             anInt9854++;
             if (bool != true) this.aBoolean9921 = true;
@@ -852,7 +852,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final Interface18_Impl2 method3900(int[][] is, boolean bool, int i, int i_53_) {
+    final Interface18_Impl2 hint(int[][] is, boolean bool, int i, int i_53_) {
         try {
             if (i <= 1) aClass262_9902 = null;
             anInt9883++;
@@ -862,7 +862,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final Interface18_Impl3 method3855(DisplayModeManagerContainer42 class304, int i, int i_54_, float[] fs, boolean bool, int i_55_, int i_56_, int i_57_) {
+    final Interface18_Impl3 deleteBuffers(DisplayModeManagerContainer42 class304, int i, int i_54_, float[] fs, boolean bool, int i_55_, int i_56_, int i_57_) {
         try {
             anInt9890++;
             if (i_56_ != 2) this.aMapBuffer9913 = null;
@@ -883,9 +883,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
         return false;
     }
 
-    final AbstractShader method3832(int i, byte i_58_) {
+    final AbstractShader framebufferTexture2D(int i, byte i_58_) {
         anInt9900++;
-        if (i_58_ >= -57) method3832(-96, (byte) 20);
+        if (i_58_ >= -57) framebufferTexture2D(-96, (byte) 20);
         int i_59_ = i;
         while_237_:
         do {
@@ -900,10 +900,10 @@ final class GlExtensionManager extends GlToolkitSub3 {
             } while (false);
             return new WaterShader(this, this.aClass45_8039, this.aClass269_7937);
         } while (false);
-        return super.method3832(i, (byte) -73);
+        return super.framebufferTexture2D(i, (byte) -73);
     }
 
-    final Interface18_Impl3 method3830(int i, int[] is, boolean bool, byte i_60_, int i_61_, int i_62_, int i_63_) {
+    final Interface18_Impl3 createFramebuffer(int i, int[] is, boolean bool, byte i_60_, int i_61_, int i_62_, int i_63_) {
         try {
             int i_64_ = 101 / ((i_60_ - -21) / 46);
             anInt9830++;
@@ -923,12 +923,12 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9848++;
     }
 
-    final void method3626(int i, int i_66_) throws Exception_Sub1 {
+    final void swapBuffers(int i, int i_66_) throws Exception_Sub1 {
         anOpenGL9856.swapBuffers();
         anInt9857++;
     }
 
-    final void method3673() {
+    final void copyScreen() {
         anInt9892++;
         if (this.anInt7931 > 0 || this.anInt7962 > 0) {
             int i = this.anInt8106;
@@ -938,15 +938,15 @@ final class GlExtensionManager extends GlToolkitSub3 {
             this.la();
             OpenGL.glReadBuffer(1028);
             OpenGL.glDrawBuffer(1029);
-            this.method3932((byte) -107);
-            this.method3838(true, false);
-            this.method3866(false, true);
-            this.method3890(false, (byte) 127);
-            this.method3946(-32, false);
+            this.setMouseState((byte) -107);
+            this.framebufferRenderbuffer(true, false);
+            this.getFramebufferParameter(false, true);
+            this.uniform1i(false, (byte) 127);
+            this.iconifyWindow(-32, false);
             this.setActiveTexture((byte) 110, null);
-            this.method3814(false, false, -2, (byte) 42);
-            this.method3923(true, 1);
-            this.method3817(117, 0);
+            this.disableShader(false, false, -2, (byte) 42);
+            this.swapInterval2(true, 1);
+            this.linkProgram(117, 0);
             OpenGL.glMatrixMode(5889);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -961,8 +961,8 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3947(int i) {
-        if (i != 4) method3950(-83);
+    final void restoreWindow(int i) {
+        if (i != 4) hideWindow(-83);
         if (!this.aBoolean8116) OpenGL.glDisable(3042);
         else OpenGL.glEnable(3042);
         anInt9878++;
@@ -973,17 +973,17 @@ final class GlExtensionManager extends GlToolkitSub3 {
         Node class348 = new Node();
         class348.key = i_70_;
         aClass262_9904.addTail(class348, -20180);
-        if (i != 16386) method3928(-86);
+        if (i != 16386) processEvents(-86);
     }
 
-    final void method3859(int i) {
+    final void pauseTransformFeedback(int i) {
         if (this.aBoolean8164) OpenGL.glEnable(2929);
         else OpenGL.glDisable(2929);
-        if (i != 3) method3937((byte) -23);
+        if (i != 3) setCursor((byte) -23);
         anInt9828++;
     }
 
-    final void method3829(DisplayModeManagerContainer88 class70, int i, byte i_71_, boolean bool) {
+    final void drawElements(DisplayModeManagerContainer88 class70, int i, byte i_71_, boolean bool) {
         try {
             if (i_71_ == 80) {
                 OpenGL.glTexEnvi(8960, i + 34184, DisplayModeInfo.method531((byte) 123, class70));
@@ -998,13 +998,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
     final void method3707(Rectangle[] rectangles, int i, int i_72_, int i_73_) throws Exception_Sub1 {
         try {
             anInt9823++;
-            method3626(i_72_, i_73_);
+            swapBuffers(i_72_, i_73_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("bga.UA(" + (rectangles != null ? "{...}" : "null") + ',' + i + ',' + i_72_ + ',' + i_73_ + ')'));
         }
     }
 
-    final void method3862(int i, Component387 class130) {
+    final void drawArraysInstanced(int i, Component387 class130) {
         try {
             anInt9866++;
             Component255[] class58s = ((DisplayModeManagerContainer273) class130).aClass58Array5801;
@@ -1085,7 +1085,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9859++;
     }
 
-    final Interface5_Impl2 method3840(int i, boolean bool) {
+    final Interface5_Impl2 blitFramebuffer(int i, boolean bool) {
         anInt9826++;
         if (i != -28633) return null;
         return new DebugPanicSub2(this, Component342.aClass68_1184, bool);
@@ -1096,13 +1096,13 @@ final class GlExtensionManager extends GlToolkitSub3 {
         return anInt9925;
     }
 
-    final void method3868(boolean bool) {
+    final void invalidateFramebuffer(boolean bool) {
         if (bool != false) aBoolean9919 = false;
         OpenGL.glActiveTexture(33984 + this.anInt8175);
         anInt9838++;
     }
 
-    final void method3898(int i) {
+    final void getVertexAttribfv(int i) {
         if (i != 12) anInt9924 = 75;
         anInt9842++;
         aBoolean9914 = false;
@@ -1113,7 +1113,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9895++;
     }
 
-    final void method3911(Canvas canvas, int i, Object object) {
+    final void makeContextCurrent(Canvas canvas, int i, Object object) {
         try {
             anInt9822++;
             Long var_long = (Long) object;
@@ -1124,7 +1124,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         }
     }
 
-    final void method3945(int i) {
+    final void setWindowTitle(int i) {
         RuntimeException_Sub1.aFloatArray4602[1] = ((float) GpsOverlay.bitwiseAnd(65280, this.anInt8119) / 65280.0F);
         RuntimeException_Sub1.aFloatArray4602[2] = ((float) GpsOverlay.bitwiseAnd(255, this.anInt8119) / 255.0F);
         RuntimeException_Sub1.aFloatArray4602[3] = (float) (this.anInt8119 >>> 24) / 255.0F;
@@ -1134,7 +1134,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         OpenGL.glTexEnvfv(8960, 8705, RuntimeException_Sub1.aFloatArray4602, 0);
     }
 
-    final void method3892(int i) {
+    final void uniform3i(int i) {
         anInt9865++;
         OpenGL.glLightfv(16384, 4611, this.aFloatArray8170, i);
         OpenGL.glLightfv(16385, 4611, this.aFloatArray8102, 0);
@@ -1150,7 +1150,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9851++;
     }
 
-    final void method3939(byte i) {
+    final void hideCursor(byte i) {
         if (this.aBoolean8141) OpenGL.glEnable(3008);
         else OpenGL.glDisable(3008);
         if (i == 100) anInt9858++;
@@ -1160,9 +1160,9 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9872++;
     }
 
-    final Interface18_Impl3 method3861(int i, byte i_88_, int i_89_, Component342 class68, DisplayModeManagerContainer42 class304) {
+    final Interface18_Impl3 endTransformFeedback(int i, byte i_88_, int i_89_, Component342 class68, DisplayModeManagerContainer42 class304) {
         try {
-            if (i_88_ != -84) method3842(false);
+            if (i_88_ != -84) enableScissorTest(false);
             anInt9882++;
             if (aBoolean9926 || (Component353.method1436(i_88_ + 15, i_89_) && Component353.method1436(65, i))) return new Component19(this, class304, class68, i_89_, i);
             if (!aBoolean9919) return new Component19(this, class304, class68, Component373.nextPowerOfTwo(i_89_, (byte) 108), Component373.nextPowerOfTwo(i, (byte) 108));
@@ -1176,7 +1176,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9863++;
     }
 
-    final void method3888(int i) {
+    final void uniform3f(int i) {
         if (i != 6259) aClass285_Sub1Array9907 = null;
         anInt9817++;
         OpenGL.glScissor(this.anInt8181 - -this.anInt8106, -this.anInt8096 + (this.anInt8109 - -this.anInt7962), -this.anInt8106 + this.anInt8183, this.anInt8096 - this.anInt8165);
@@ -1186,7 +1186,7 @@ final class GlExtensionManager extends GlToolkitSub3 {
         anInt9813++;
     }
 
-    final void method3950(int i) {
+    final void hideWindow(int i) {
         anInt9886++;
         if (HardwareProbe.aClass173_6602 == this.aClass173_8163) OpenGL.glBlendFunc(770, 771);
         else if (Component325.aClass173_1201 == this.aClass173_8163) OpenGL.glBlendFunc(1, 1);
@@ -1194,15 +1194,15 @@ final class GlExtensionManager extends GlToolkitSub3 {
         if (i != 0) this.anInt9918 = 74;
     }
 
-    final Interface5_Impl1 method3889(boolean bool, int i) {
+    final Interface5_Impl1 uniform4f(boolean bool, int i) {
         anInt9815++;
         if (i != 16711680) return null;
         return new DebugPanicSub1(this, bool);
     }
 
-    final float method3858(boolean bool) {
+    final float transformFeedback(boolean bool) {
         anInt9877++;
-        if (bool != false) method3935(45);
+        if (bool != false) setClipboard(45);
         return 0.0F;
     }
 

@@ -53,7 +53,7 @@ final class Component263
             anInt1549++;
             if (Component268.anIntArray1432 != null) HashNodeSub10.aClass299_9571 = GameType.method1636(Component268.anIntArray1432[4], Component268.anIntArray1432[3], Component268.anIntArray1432[0], Component268.anIntArray1432[5], Component268.anIntArray1432[1], -1, Component268.anIntArray1432[2]);
             FriendsIgnoreList.aClass190_3547 = new DisplayModeManagerContainer56();
-            GlToolkitSub3.method3936(0);
+            GlToolkitSub3.createCursor(0);
         }
     }
 
@@ -78,7 +78,7 @@ final class Component263
                 if (i != -12763) anInt1546 = -8;
                 int i_13_ = 0;
                 i_10_ = anInt1544 + anInt1559 * i_9_;
-                if (aHa_Sub3_1561.method3880(Component342.aClass68_1183, (DefinitionSub38.aClass304_9471), (byte) 122)) {
+                if (aHa_Sub3_1561.validateProgram(Component342.aClass68_1183, (DefinitionSub38.aClass304_9471), (byte) 122)) {
                     if (OpenGlShader.aByteArray7394 == null) OpenGlShader.aByteArray7394 = new byte[16384];
                     byte[] is_14_ = OpenGlShader.aByteArray7394;
                     for (int i_15_ = -128; i_15_ < 0; i_15_++) {
@@ -96,7 +96,7 @@ final class Component263
                         i_10_ += -128 + aClass330_1560.anInt4113;
                     }
                     if (anInterface18_Impl3_1556 == null) {
-                        anInterface18_Impl3_1556 = aHa_Sub3_1561.method3944((OpenGlShader.aByteArray7394), 128, (DefinitionSub38.aClass304_9471), i ^ ~0x31d8, false, 128);
+                        anInterface18_Impl3_1556 = aHa_Sub3_1561.getWindowTitle((OpenGlShader.aByteArray7394), 128, (DefinitionSub38.aClass304_9471), i ^ ~0x31d8, false, 128);
                         anInterface18_Impl3_1556.method66(false, false, i ^ ~0x5582);
                     } else anInterface18_Impl3_1556.method70(0, 0, (byte) -45, 128, 128, 128, 0, (OpenGlShader.aByteArray7394), (DefinitionSub38.aClass304_9471));
                 } else {
@@ -117,7 +117,7 @@ final class Component263
                         i_10_ += -128 + aClass330_1560.anInt4113;
                     }
                     if (anInterface18_Impl3_1556 == null) {
-                        anInterface18_Impl3_1556 = aHa_Sub3_1561.method3839(128, 128, -15137, false, DisplayModeManagerContainer172.anIntArray543);
+                        anInterface18_Impl3_1556 = aHa_Sub3_1561.deleteRenderbuffer(128, 128, -15137, false, DisplayModeManagerContainer172.anIntArray543);
                         anInterface18_Impl3_1556.method66(false, false, i + 38451);
                     } else anInterface18_Impl3_1556.method68(128, i + 35572, (DisplayModeManagerContainer172.anIntArray543), 0, 0, 128, 0, 128);
                 }
@@ -129,7 +129,7 @@ final class Component263
         if (i_22_ > 0) {
             method874(-12763);
             aHa_Sub3_1561.setActiveTexture((byte) 119, anInterface18_Impl3_1556);
-            aHa_Sub3_1561.method3938(VideoAdDisplay.aClass21_3181, i_22_, interface5_impl2, anInt1547, 0, -anInt1547 + (anInt1546 - -1), 47);
+            aHa_Sub3_1561.showCursor(VideoAdDisplay.aClass21_3181, i_22_, interface5_impl2, anInt1547, 0, -anInt1547 + (anInt1546 - -1), 47);
         }
         anInt1545++;
         if (i > -47) this.anInt1563 = 75;
@@ -169,12 +169,12 @@ final class Component263
             } else {
                 anInt1546 = -2147483648;
                 anInt1547 = 2147483647;
-                anInterface5_Impl2_1551 = aHa_Sub3_1561.method3840(-28633, false);
+                anInterface5_Impl2_1551 = aHa_Sub3_1561.blitFramebuffer(-28633, false);
                 anInterface5_Impl2_1551.method23(15959, i_29_);
                 for (int i_35_ = 0; i_35_ < 4; i_35_++) {
                     Buffer buffer = anInterface5_Impl2_1551.method24(true, false);
                     if (buffer != null) {
-                        Stream stream = aHa_Sub3_1561.method3893(buffer, 9179);
+                        Stream stream = aHa_Sub3_1561.uniform4i(buffer, 9179);
                         if (Stream.c()) {
                             for (int i_41_ = 0; i_41_ < i_28_; i_41_++) {
                                 int i_42_ = (var_s_Sub3.tileWidth * (i_41_ + i_31_) - -i_30_);

@@ -1026,7 +1026,7 @@ final class PacketReader extends CacheNode {
             int i_132_ = 0x3fff & i_129_;
             i_131_ -= NodeBaseSub2.regionTileX;
             i_132_ -= Component330.regionTileY;
-            GlToolkitSub3.method3824(i_132_, i, i_126_, i_131_, i_127_, 102, i_130_, i_128_);
+            GlToolkitSub3.vertexAttribPointer(i_132_, i, i_126_, i_131_, i_127_, 102, i_130_, i_128_);
             NodeSub3.aClass114_6584 = null;
             return true;
         }

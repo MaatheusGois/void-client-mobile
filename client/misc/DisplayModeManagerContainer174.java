@@ -225,8 +225,8 @@ final class DisplayModeManagerContainer174
         else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if (aClass318_Sub10_10378 != null) {
             Component122 class98 = aClass318_Sub10_10378.method2525();
-            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.method3685(class98, Component72.anInt1906);
-            else var_ha.method3684(class98);
+            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModelEx(class98, Component72.anInt1906);
+            else var_ha.renderModel(class98);
         }
         aBoolean10399 = class64.F();
         anInt10410 = class64.fa();

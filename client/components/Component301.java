@@ -112,11 +112,11 @@ final class Component301
 
     final void method2630(int i, int i_24_, int i_25_, boolean bool, boolean[][] bools, int i_26_) {
         anInt4115++;
-        aHa_Sub3_4111.method3866(false, true);
-        aHa_Sub3_4111.method3946(-32, false);
-        aHa_Sub3_4111.method3817(79, 1);
-        aHa_Sub3_4111.method3923(true, 1);
-        aHa_Sub3_4111.method3814(false, false, -2, (byte) 82);
+        aHa_Sub3_4111.getFramebufferParameter(false, true);
+        aHa_Sub3_4111.iconifyWindow(-32, false);
+        aHa_Sub3_4111.linkProgram(79, 1);
+        aHa_Sub3_4111.swapInterval2(true, 1);
+        aHa_Sub3_4111.disableShader(false, false, -2, (byte) 82);
         float f = 1.0F / (float) (aHa_Sub3_4111.anInt8125 * i);
         if (bool) {
             for (int i_27_ = 0; anInt4118 > i_27_; i_27_++) {
@@ -131,10 +131,10 @@ final class Component301
                             if (-i_25_ + i_33_ >= -i_24_ && i_24_ >= -i_25_ + i_33_) {
                                 for (int i_34_ = i_28_; (i_29_ > i_34_); i_34_++) {
                                     if (-i_24_ <= i_34_ + -i_26_ && i_24_ >= -i_26_ + i_34_ && (bools[i_24_ + (-i_25_ + i_33_)][-i_26_ + i_34_ + i_24_])) {
-                                        MatrixSub2 class101_sub2 = aHa_Sub3_4111.method3820(false);
+                                        MatrixSub2 class101_sub2 = aHa_Sub3_4111.getUniformLocation(false);
                                         class101_sub2.setScale(1.0F, f, f, (byte) -65);
                                         class101_sub2.method891(-i_30_, -i_27_, 0);
-                                        aHa_Sub3_4111.method3853(i ^ ~0x9f, Component302.aClass251_6030);
+                                        aHa_Sub3_4111.deleteVertexArrays(i ^ ~0x9f, Component302.aClass251_6030);
                                         aClass97ArrayArray4122[i_30_][i_27_].method871((byte) 116);
                                         break while_119_;
                                     }
@@ -151,10 +151,10 @@ final class Component301
                 for (int i_38_ = 0; i_38_ < anInt4121; i_38_++) {
                     Component263 class97 = aClass97ArrayArray4122[i_38_][i_35_];
                     if (class97 != null) {
-                        Interface5_Impl2 interface5_impl2 = aHa_Sub3_4111.method3822(118, (class97.anInt1563) * 3);
+                        Interface5_Impl2 interface5_impl2 = aHa_Sub3_4111.enableVertexAttrib(118, (class97.anInt1563) * 3);
                         Buffer buffer = interface5_impl2.method24(true, false);
                         if (buffer != null) {
-                            Stream stream = aHa_Sub3_4111.method3893(buffer, 9179);
+                            Stream stream = aHa_Sub3_4111.uniform4i(buffer, 9179);
                             int i_39_ = 0;
                             int i_40_ = i_38_ << anInt4124;
                             int i_41_ = i_38_ + 1 << anInt4124;
@@ -184,10 +184,10 @@ final class Component301
                             }
                             stream.a();
                             if (interface5_impl2.method22(-23) && i_39_ > 0) {
-                                MatrixSub2 class101_sub2 = aHa_Sub3_4111.method3820(false);
+                                MatrixSub2 class101_sub2 = aHa_Sub3_4111.getUniformLocation(false);
                                 class101_sub2.setScale(1.0F, f, f, (byte) -62);
                                 class101_sub2.method891(-i_38_, -i_35_, 0);
-                                aHa_Sub3_4111.method3853(i ^ ~0x9f, (Component302.aClass251_6030));
+                                aHa_Sub3_4111.deleteVertexArrays(i ^ ~0x9f, (Component302.aClass251_6030));
                                 class97.method875(-82, interface5_impl2, i_39_ / 3);
                             }
                         }
@@ -195,7 +195,7 @@ final class Component301
                 }
             }
         }
-        aHa_Sub3_4111.method3879(-8629);
+        aHa_Sub3_4111.getProgramInfoLog(-8629);
     }
 
     public static void method2631(int i) {

@@ -175,8 +175,8 @@ final class Npc extends DisplayModeManagerContainer58 {
         }
         if (this.aClass318_Sub10_10327 != null) {
             Component122 class98 = this.aClass318_Sub10_10327.method2525();
-            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.method3685(class98, Component72.anInt1906);
-            else var_ha.method3684(class98);
+            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModelEx(class98, Component72.anInt1906);
+            else var_ha.renderModel(class98);
         }
         for (int i_25_ = 0; (this.aClass64Array10323.length > i_25_); i_25_++) {
             if (this.aClass64Array10323[i_25_] != null) this.aBoolean10324 |= this.aClass64Array10323[i_25_].F();

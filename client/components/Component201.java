@@ -43,7 +43,7 @@ final class Component201
             }
             for (int i_3_ = 0; i_3_ < 6; i_3_++)
                 Component329.anIntArrayArray5991[i_3_] = var_d.getTriangles(false, Component148.anIntArray3464[i_3_], 1.0F, i, i, 81);
-            anInterface18_Impl2_8719 = aHa_Sub3_8718.method3900(Component329.anIntArrayArray5991, bool_0_, 61, i);
+            anInterface18_Impl2_8719 = aHa_Sub3_8718.hint(Component329.anIntArrayArray5991, bool_0_, 61, i);
         }
         return anInterface18_Impl2_8719;
     }

@@ -520,12 +520,12 @@ final class BufferCacheSub2
     final void method3987(int i, int i_152_, int i_153_, int i_154_, int i_155_, int i_156_, int i_157_, boolean[][] bools) {
         anInt8262++;
         if (anInt8284 > 0) {
-            this.aHa_Sub2_8272.method3755(-32);
-            this.aHa_Sub2_8272.method3807(false, 2);
-            this.aHa_Sub2_8272.method3728(false, 92);
+            this.aHa_Sub2_8272.disableTexture2D(-32);
+            this.aHa_Sub2_8272.beginFrame(false, 2);
+            this.aHa_Sub2_8272.setLightingEnabled(false, 92);
             this.aHa_Sub2_8272.glEnableScissorTest(117, false);
-            this.aHa_Sub2_8272.method3748(0, false);
-            this.aHa_Sub2_8272.method3753(0, 1);
+            this.aHa_Sub2_8272.drawSprite(0, false);
+            this.aHa_Sub2_8272.setBlendMode(0, 1);
             this.aHa_Sub2_8272.glResetViewport(-2, -100);
             this.aHa_Sub2_8272.bindTexture((byte) -86, null);
             DisplayModeManagerContainer306.aFloatArray4772[0] = ((float) i_153_ / ((float) (this.aHa_Sub2_8272.anInt7688) * ((float) this.tileSize * 128.0F)));
@@ -564,9 +564,9 @@ final class BufferCacheSub2
             DisplayModeManagerContainer306.aFloatArray4772[1] = 0.0F;
             OpenGL.glMatrixMode(5888);
             OpenGL.glLoadMatrixf(DisplayModeManagerContainer306.aFloatArray4772, 0);
-            if ((0x7 & this.anInt8235) == 0) this.aHa_Sub2_8272.method3728(false, 56);
+            if ((0x7 & this.anInt8235) == 0) this.aHa_Sub2_8272.setLightingEnabled(false, 56);
             else {
-                this.aHa_Sub2_8272.method3728(true, 91);
+                this.aHa_Sub2_8272.setLightingEnabled(true, 91);
                 this.aHa_Sub2_8272.glSetLightAmbient(16384);
             }
             this.aHa_Sub2_8272.glSetVertexPointer(this.aClass123_8276, aClass123_8274, -26411, this.aClass123_8277, this.aClass123_8275);
@@ -744,19 +744,19 @@ final class BufferCacheSub2
                 }
             }
             if (i != -1) {
-                this.aHa_Sub2_8272.method3789((byte) -120, (float) i);
+                this.aHa_Sub2_8272.deleteTexture((byte) -120, (float) i);
                 this.aHa_Sub2_8272.method3760(1);
-            } else this.aHa_Sub2_8272.method3784((byte) -62);
-            this.aHa_Sub2_8272.method3728((0x7 & (this.anInt8235)) != 0, 120);
+            } else this.aHa_Sub2_8272.setColorMask((byte) -62);
+            this.aHa_Sub2_8272.setLightingEnabled((0x7 & (this.anInt8235)) != 0, 120);
             for (int i_208_ = 0; aClass348_Sub20Array8282.length > i_208_; i_208_++)
                 aClass348_Sub20Array8282[i_208_].method2948(5123, i_204_, is);
             if (!aClass262_8256.isEmpty((byte) 18)) {
                 int i_209_ = this.aHa_Sub2_8272.anInt7856;
                 int i_210_ = this.aHa_Sub2_8272.anInt7782;
                 this.aHa_Sub2_8272.L(0, i_210_, (this.aHa_Sub2_8272.anInt7813));
-                this.aHa_Sub2_8272.method3728(false, 97);
-                this.aHa_Sub2_8272.method3748(0, false);
-                this.aHa_Sub2_8272.method3753(128, 1);
+                this.aHa_Sub2_8272.setLightingEnabled(false, 97);
+                this.aHa_Sub2_8272.drawSprite(0, false);
+                this.aHa_Sub2_8272.setBlendMode(128, 1);
                 this.aHa_Sub2_8272.glResetViewport(-2, -88);
                 this.aHa_Sub2_8272.bindTexture((byte) -124, (this.aHa_Sub2_8272.aClass258_Sub3_7827));
                 this.aHa_Sub2_8272.glTexEnvi(8448, (byte) 98, 7681);

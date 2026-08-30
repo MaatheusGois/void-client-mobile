@@ -41,7 +41,7 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
     final void method3532(int i) {
         if (aBoolean7344) {
             IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
-            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3848(i + -10420);
+            MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.clear(i + -10420);
             idirect3ddevice.SetVertexShaderConstantF(12, class101_sub2.method915(aFloatArray7342, 1), 2);
         }
         if (i != 10425) anIDirect3DVertexShader7345 = null;
@@ -82,7 +82,7 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
 
     final void method3525(int i, boolean bool) {
         if (i == 15192) {
-            Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.method3834(-16777216);
+            Interface18_Impl2 interface18_impl2 = this.aHa_Sub3_4479.deleteFramebuffer(-16777216);
             if (aBoolean7347 && null != interface18_impl2) {
                 IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
                 aClass378_7346.method3957(anIDirect3DVertexShader7345, (byte) -89);
@@ -111,7 +111,7 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
     final void method3523(byte i) {
         if (aBoolean7344) {
             IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
-            MatrixSub2 class101_sub2 = aClass378_7346.method3948(-22036);
+            MatrixSub2 class101_sub2 = aClass378_7346.maximizeWindow(-22036);
             idirect3ddevice.a(0, class101_sub2.method924(11, aFloatArray7342));
         }
         if (i != 12) aFloatArray7342 = null;
@@ -134,7 +134,7 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
         if (i == -14775) {
             if (aBoolean7344) {
                 IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
-                idirect3ddevice.a(8, this.aHa_Sub3_4479.method3835(aFloatArray7342, i + 14651));
+                idirect3ddevice.a(8, this.aHa_Sub3_4479.createRenderbuffer(aFloatArray7342, i + 14651));
             }
         }
     }
@@ -143,8 +143,8 @@ final class EnvironmentMappedWaterShader extends AbstractShader {
         if (!bool) {
             if (aBoolean7344) {
                 IDirect3DDevice idirect3ddevice = aClass378_7346.anIDirect3DDevice9810;
-                MatrixSub2 class101_sub2 = aClass378_7346.method3887((byte) -123);
-                MatrixSub2 class101_sub2_7_ = aClass378_7346.method3948(-22036);
+                MatrixSub2 class101_sub2 = aClass378_7346.uniform2f((byte) -123);
+                MatrixSub2 class101_sub2_7_ = aClass378_7346.maximizeWindow(-22036);
                 idirect3ddevice.a(0, class101_sub2_7_.method924(11, aFloatArray7342));
                 idirect3ddevice.a(4, class101_sub2.method930(0, aFloatArray7342));
             }
