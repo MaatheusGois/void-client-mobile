@@ -246,7 +246,7 @@ final class Player extends DisplayModeManagerContainer58 {
                         DisplayModeManagerContainer370 class64_38_ = (Canvas_Sub1.getCachedModel(this.anInt10252, this.anInt10302, this.anInt10208, i_37_, i_35_, (byte) -35, var_ha));
                         if (class64_38_ == null) break;
                         var_ha.C(false);
-                        class64_38_.method615(class101, null, 0);
+                        class64_38_.render(class101, null, 0);
                         var_ha.C(true);
                     }
                 }
@@ -350,7 +350,7 @@ final class Player extends DisplayModeManagerContainer58 {
                     this.aBoolean10324 = true;
                     var_ha.C(false);
                     if (DisplayModeManagerContainer50.aBoolean3870) class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), Component72.anInt1906, 0);
-                    else class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
+                    else class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
                     var_ha.C(true);
                 }
             }
@@ -402,7 +402,7 @@ final class Player extends DisplayModeManagerContainer58 {
             }
         } else {
             for (int i_66_ = 0; i_66_ < (this.aClass64Array10323).length; i_66_++) {
-                if (this.aClass64Array10323[i_66_] != null) this.aClass64Array10323[i_66_].method615(class101, (class318_sub4.aClass318_Sub3Array6414[i_66_]), (this == Component72.localPlayer ? 1 : 0));
+                if (this.aClass64Array10323[i_66_] != null) this.aClass64Array10323[i_66_].render(class101, (class318_sub4.aClass318_Sub3Array6414[i_66_]), (this == Component72.localPlayer ? 1 : 0));
             }
         }
         if (this.aClass318_Sub10_10327 != null) {

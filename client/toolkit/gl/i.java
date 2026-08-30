@@ -71,7 +71,7 @@ final class i
 
     private final native void l(long l, int i, int[] is, int i_15_, int i_16_, int i_17_, int i_18_, boolean bool);
 
-    final boolean method618() {
+    final boolean areTexturesReady() {
         return true;
     }
 
@@ -98,7 +98,7 @@ final class i
 
     final native int HA();
 
-    final void method612() {
+    final void prepareFrame() {
         /* empty */
     }
 
@@ -132,11 +132,11 @@ final class i
 
     final native int WA();
 
-    final void method610(DisplayModeManagerContainer204 class101, int i, boolean bool) {
+    final void clipVertices(DisplayModeManagerContainer204 class101, int i, boolean bool) {
         A(((OpenGLMatrix) class101).nativeid, i, bool);
     }
 
-    final void method622() {
+    final void acquireRenderLock() {
         if (anOa5117.anInt5141 > 1) {
             synchronized (this) {
                 while (this.aBoolean1124) {
@@ -151,7 +151,7 @@ final class i
         }
     }
 
-    final void method615(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
+    final void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
         if (class318_sub3 == null) anOa5117.method3973().method145(this, class101, null, i);
         else {
             OpenGLToolkit.anIntArray5132[5] = 0;
@@ -167,7 +167,7 @@ final class i
 
     final native boolean r();
 
-    final void method620(DisplayModeManagerContainer204 class101) {
+    final void transformVertices(DisplayModeManagerContainer204 class101) {
         method693(OpenGLToolkit.anIntArray5140, class101);
         int i = 0;
         if (this.aClass129Array5119 != null) {

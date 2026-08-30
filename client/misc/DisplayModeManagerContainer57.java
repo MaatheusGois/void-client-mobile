@@ -796,7 +796,7 @@ final class DisplayModeManagerContainer57
             try {
                 if (i != -20154) method438(15, -50, null);
                 anInt718++;
-                class64.method620(class101);
+                class64.transformVertices(class101);
                 Component30[] class129s = class64.method619();
                 DisplayModeManagerContainer173[] class342s = class64.method604();
                 if ((this.aClass318_Sub10_740 == null || this.aClass318_Sub10_740.aBoolean6470) && (class129s != null || class342s != null)) this.aClass318_Sub10_740 = RenderableSub10.method2526(i_63_, false);

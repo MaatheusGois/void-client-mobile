@@ -94,7 +94,7 @@ final class Component329
                     for (int i_6_ = 0; i_6_ <= i_5_; i_6_++) {
                         Cp1252Decoder.aClass101_5209.method894((int) ((-((float) i_5_ / 2.0F) + (float) i_6_) * (float) Component148.anInt3465), 0, (i_5_ + 1) * Component148.anInt3465);
                         i_3_++;
-                        class64.method615(Cp1252Decoder.aClass101_5209, null, 0);
+                        class64.render(Cp1252Decoder.aClass101_5209, null, 0);
                         if (Component240.currentTimeMillis(-105) + -l >= (long) i_2_) break while_80_;
                     }
                 }

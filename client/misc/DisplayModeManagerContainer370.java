@@ -143,7 +143,7 @@ abstract class DisplayModeManagerContainer370
         try {
             anInt1133++;
             if (i_42_ != -1) {
-                method622();
+                acquireRenderLock();
                 if (NA()) {
                     Component376 class4 = (class348_sub42_sub17_45_.aClass4Array9673[i_42_]);
                     if (i != -55) this.aBoolean1124 = false;
@@ -266,14 +266,14 @@ abstract class DisplayModeManagerContainer370
 
     abstract void O(int i, int i_72_, int i_73_);
 
-    abstract void method610(DisplayModeManagerContainer204 class101, int i, boolean bool);
+    abstract void clipVertices(DisplayModeManagerContainer204 class101, int i, boolean bool);
 
     abstract int EA();
 
     final void method611(int i, int i_74_, HashNodeSub17 class348_sub42_sub17) {
         anInt1126++;
         if (i != -1) {
-            method622();
+            acquireRenderLock();
             if (NA()) {
                 Component376 class4 = (class348_sub42_sub17.aClass4Array9673[i]);
                 ObjectDeserializer class348_sub33 = class4.aClass348_Sub33_134;
@@ -291,7 +291,7 @@ abstract class DisplayModeManagerContainer370
         }
     }
 
-    abstract void method612();
+    abstract void prepareFrame();
 
     abstract int da();
 
@@ -305,7 +305,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract DisplayModeManagerContainer370 method614(byte i, int i_80_, boolean bool);
 
-    abstract void method615(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i);
+    abstract void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i);
 
     static final boolean method616(int i, int i_81_, int i_82_) {
         anInt1129++;
@@ -317,7 +317,7 @@ abstract class DisplayModeManagerContainer370
         try {
             anInt1125++;
             if (i != -1) {
-                method622();
+                acquireRenderLock();
                 if (NA()) {
                     Component376 class4 = (class348_sub42_sub17_85_.aClass4Array9673[i]);
                     ObjectDeserializer class348_sub33 = class4.aClass348_Sub33_134;
@@ -338,7 +338,7 @@ abstract class DisplayModeManagerContainer370
 
     abstract boolean r();
 
-    abstract boolean method618();
+    abstract boolean areTexturesReady();
 
     abstract int fa();
 
@@ -350,11 +350,11 @@ abstract class DisplayModeManagerContainer370
 
     abstract void H(int i, int i_90_, int i_91_);
 
-    abstract void method620(DisplayModeManagerContainer204 class101);
+    abstract void transformVertices(DisplayModeManagerContainer204 class101);
 
     abstract void method621();
 
-    abstract void method622();
+    abstract void acquireRenderLock();
 
     abstract void k(int i);
 
@@ -377,7 +377,7 @@ abstract class DisplayModeManagerContainer370
                 if (i_101_ <= 103) aFloat1136 = 0.38855714F;
                 if (bools == null || i_105_ == -1) method617(i_104_, i, class348_sub42_sub17, 0, class348_sub42_sub17_107_, false, bool, i_108_, i_106_);
                 else {
-                    method622();
+                    acquireRenderLock();
                     if (NA()) {
                         Component376 class4 = (class348_sub42_sub17_107_.aClass4Array9673[i_104_]);
                         ObjectDeserializer class348_sub33 = class4.aClass348_Sub33_134;

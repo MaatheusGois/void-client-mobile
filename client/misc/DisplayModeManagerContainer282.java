@@ -26,7 +26,7 @@ final class DisplayModeManagerContainer282
     private short aShort5540;
     private DisplayModeManagerContainer173[] aClass342Array5541;
     private byte[] aByteArray5542;
-    private int[] anIntArray5543;
+    private int[] vertexX;
     private short aShort5544;
     static int anInt5545;
     static int anInt5546;
@@ -76,7 +76,7 @@ final class DisplayModeManagerContainer282
     static int anInt5590;
     private short aShort5591;
     private short[] aShortArray5592;
-    private int[] anIntArray5593;
+    private int[] vertexY;
     private byte[] aByteArray5594;
     private boolean aBoolean5595 = false;
     private Component377[] aClass48Array5596;
@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer282
     static int anInt5641;
     private int anInt5642;
     static int anInt5643;
-    private int[] anIntArray5644;
+    private int[] vertexZ;
     private short aShort5645;
     private short aShort5646;
     private Interface8 anInterface8_5647;
@@ -141,9 +141,9 @@ final class DisplayModeManagerContainer282
         int i_0_ = DisplayModeManagerContainer88.anIntArray1207[i];
         int i_1_ = DisplayModeManagerContainer88.anIntArray1204[i];
         for (int i_2_ = 0; i_2_ < anInt5557; i_2_++) {
-            int i_3_ = (-(i_0_ * anIntArray5644[i_2_]) + anIntArray5593[i_2_] * i_1_ >> 14);
-            anIntArray5644[i_2_] = (anIntArray5593[i_2_] * i_0_ - -(anIntArray5644[i_2_] * i_1_) >> 14);
-            anIntArray5593[i_2_] = i_3_;
+            int i_3_ = (-(i_0_ * vertexZ[i_2_]) + vertexY[i_2_] * i_1_ >> 14);
+            vertexZ[i_2_] = (vertexY[i_2_] * i_0_ - -(vertexZ[i_2_] * i_1_) >> 14);
+            vertexY[i_2_] = i_3_;
         }
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
         aBoolean5527 = false;
@@ -249,9 +249,9 @@ final class DisplayModeManagerContainer282
         int i_25_ = DisplayModeManagerContainer88.anIntArray1207[i];
         int i_26_ = DisplayModeManagerContainer88.anIntArray1204[i];
         for (int i_27_ = 0; anInt5557 > i_27_; i_27_++) {
-            int i_28_ = ((anIntArray5543[i_27_] * i_26_ + i_25_ * anIntArray5593[i_27_]) >> 14);
-            anIntArray5593[i_27_] = (-(i_25_ * anIntArray5543[i_27_]) + anIntArray5593[i_27_] * i_26_) >> 14;
-            anIntArray5543[i_27_] = i_28_;
+            int i_28_ = ((vertexX[i_27_] * i_26_ + i_25_ * vertexY[i_27_]) >> 14);
+            vertexY[i_27_] = (-(i_25_ * vertexX[i_27_]) + vertexY[i_27_] * i_26_) >> 14;
+            vertexX[i_27_] = i_28_;
         }
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
         aBoolean5527 = false;
@@ -291,7 +291,7 @@ final class DisplayModeManagerContainer282
         return (i_33_ << 8) - (i_30_ & 0xff) - -255;
     }
 
-    final boolean method618() {
+    final boolean areTexturesReady() {
         anInt5551++;
         if (aShortArray5601 == null) return true;
         for (int i = 0; i < aShortArray5601.length; i++) {
@@ -306,9 +306,9 @@ final class DisplayModeManagerContainer282
             DisplayModeManagerContainer282 class64_sub3_44_ = (DisplayModeManagerContainer282) class64;
             if (anInt5632 != 0 && class64_sub3_44_.anInt5632 != 0) {
                 int i_45_ = class64_sub3_44_.anInt5557;
-                int[] is = class64_sub3_44_.anIntArray5543;
-                int[] is_46_ = class64_sub3_44_.anIntArray5593;
-                int[] is_47_ = class64_sub3_44_.anIntArray5644;
+                int[] is = class64_sub3_44_.vertexX;
+                int[] is_46_ = class64_sub3_44_.vertexY;
+                int[] is_47_ = class64_sub3_44_.vertexZ;
                 short[] is_48_ = class64_sub3_44_.aShortArray5564;
                 short[] is_49_ = class64_sub3_44_.aShortArray5583;
                 short[] is_50_ = class64_sub3_44_.aShortArray5576;
@@ -353,11 +353,11 @@ final class DisplayModeManagerContainer282
                 int i_66_ = class64_sub3_44_.aShort5617;
                 int i_67_ = class64_sub3_44_.aShort5646;
                 for (int i_68_ = 0; i_68_ < anInt5557; i_68_++) {
-                    int i_69_ = -i_42_ + anIntArray5593[i_68_];
+                    int i_69_ = -i_42_ + vertexY[i_68_];
                     if (i_62_ <= i_69_ && i_69_ <= i_63_) {
-                        int i_70_ = -i + anIntArray5543[i_68_];
+                        int i_70_ = -i + vertexX[i_68_];
                         if (i_70_ >= i_64_ && i_70_ <= i_65_) {
-                            int i_71_ = anIntArray5644[i_68_] + -i_43_;
+                            int i_71_ = vertexZ[i_68_] + -i_43_;
                             if (i_66_ <= i_71_ && i_71_ <= i_67_) {
                                 int i_72_ = -1;
                                 int i_73_ = anIntArray5528[i_68_];
@@ -467,9 +467,9 @@ final class DisplayModeManagerContainer282
                 Component151 class118 = aClass118Array5621[i];
                 Component377 class48 = aClass48Array5596[i];
                 if (!class118.aBoolean1791 || !aHa_Sub2_5598.method3666()) {
-                    float f = ((float) ((anIntArray5543[class118.anInt1782]) + ((anIntArray5543[class118.anInt1788]) + (anIntArray5543[class118.anInt1781]))) * 0.3333333F);
-                    float f_90_ = ((float) ((anIntArray5593[class118.anInt1788]) + ((anIntArray5593[class118.anInt1781]) + (anIntArray5593[class118.anInt1782]))) * 0.3333333F);
-                    float f_91_ = ((float) ((anIntArray5644[class118.anInt1788]) + (anIntArray5644[class118.anInt1781]) + (anIntArray5644[class118.anInt1782])) * 0.3333333F);
+                    float f = ((float) ((vertexX[class118.anInt1782]) + ((vertexX[class118.anInt1788]) + (vertexX[class118.anInt1781]))) * 0.3333333F);
+                    float f_90_ = ((float) ((vertexY[class118.anInt1788]) + ((vertexY[class118.anInt1781]) + (vertexY[class118.anInt1782]))) * 0.3333333F);
+                    float f_91_ = ((float) ((vertexZ[class118.anInt1788]) + (vertexZ[class118.anInt1781]) + (vertexZ[class118.anInt1782])) * 0.3333333F);
                     float f_92_ = (DisplayModeManagerContainer56.aFloat2555 + (f_91_ * Component55.aFloat3935 + (f_90_ * Component100.aFloat8696 + Component385.aFloat2203 * f)));
                     float f_93_ = (ClientErrorReporter.aFloat2111 + (ScreenModeManager.aFloat2836 * f_91_ + (f_90_ * Component278.aFloat3242 + Component112.aFloat3943 * f)));
                     float f_94_ = (f * FriendLoginMessage.aFloat8784 + f_90_ * Component233.aFloat3994 + f_91_ * CookieManager.aFloat6304 + Component297.aFloat4720);
@@ -613,9 +613,9 @@ final class DisplayModeManagerContainer282
                 int[] is = aHa_Sub2_5598.anIntArray7880;
                 int[] is_143_ = aHa_Sub2_5598.anIntArray7883;
                 for (int i_144_ = 0; i_144_ < anInt5557; i_144_++) {
-                    float f_145_ = (float) anIntArray5543[i_144_];
-                    float f_146_ = (float) anIntArray5644[i_144_];
-                    float f_147_ = (float) anIntArray5593[i_144_];
+                    float f_145_ = (float) vertexX[i_144_];
+                    float f_146_ = (float) vertexZ[i_144_];
+                    float f_147_ = (float) vertexY[i_144_];
                     float f_148_ = f_114_ + (f_146_ * CookieManager.aFloat6304 + (FriendLoginMessage.aFloat8784 * f_145_ + f_147_ * Component233.aFloat3994));
                     float f_149_ = f + (f_147_ * Component100.aFloat8696 + f_145_ * Component385.aFloat2203 + Component55.aFloat3935 * f_146_);
                     float f_150_ = f_113_ + (Component278.aFloat3242 * f_147_ + f_145_ * Component112.aFloat3943 + f_146_ * ScreenModeManager.aFloat2836);
@@ -655,9 +655,9 @@ final class DisplayModeManagerContainer282
     final void O(int i, int i_162_, int i_163_) {
         anInt5618++;
         for (int i_164_ = 0; anInt5557 > i_164_; i_164_++) {
-            if (i != 128) anIntArray5543[i_164_] = i * anIntArray5543[i_164_] >> 7;
-            if (i_162_ != 128) anIntArray5593[i_164_] = anIntArray5593[i_164_] * i_162_ >> 7;
-            if (i_163_ != 128) anIntArray5644[i_164_] = anIntArray5644[i_164_] * i_163_ >> 7;
+            if (i != 128) vertexX[i_164_] = i * vertexX[i_164_] >> 7;
+            if (i_162_ != 128) vertexY[i_164_] = vertexY[i_164_] * i_162_ >> 7;
+            if (i_163_ != 128) vertexZ[i_164_] = vertexZ[i_164_] * i_163_ >> 7;
         }
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
         aBoolean5527 = false;
@@ -703,7 +703,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final void method612() {
+    final void prepareFrame() {
         anInt5560++;
         if (anInt5529 > 0 && anInt5537 > 0) {
             method688(5, false);
@@ -723,9 +723,9 @@ final class DisplayModeManagerContainer282
         int i_171_ = DisplayModeManagerContainer88.anIntArray1207[i];
         int i_172_ = DisplayModeManagerContainer88.anIntArray1204[i];
         for (int i_173_ = 0; i_173_ < anInt5557; i_173_++) {
-            int i_174_ = ((anIntArray5543[i_173_] * i_172_ + anIntArray5644[i_173_] * i_171_) >> 14);
-            anIntArray5644[i_173_] = anIntArray5644[i_173_] * i_172_ + -(anIntArray5543[i_173_] * i_171_) >> 14;
-            anIntArray5543[i_173_] = i_174_;
+            int i_174_ = ((vertexX[i_173_] * i_172_ + vertexZ[i_173_] * i_171_) >> 14);
+            vertexZ[i_173_] = vertexZ[i_173_] * i_172_ + -(vertexX[i_173_] * i_171_) >> 14;
+            vertexX[i_173_] = i_174_;
         }
         for (int i_175_ = 0; i_175_ < anInt5529; i_175_++) {
             int i_176_ = ((aShortArray5564[i_175_] * i_172_ + aShortArray5576[i_175_] * i_171_) >> 14);
@@ -749,8 +749,8 @@ final class DisplayModeManagerContainer282
             if (i < 91) method619();
             int[] is_177_ = aHa_Sub2_5598.anIntArray7883;
             for (int i_178_ = 0; anInt5557 > i_178_; i_178_++) {
-                int i_179_ = ((-((aHa_Sub2_5598.anInt7772 * anIntArray5593[i_178_]) >> 8) + anIntArray5543[i_178_] >> aHa_Sub2_5598.anInt7731) - var_r_Sub2.anInt10489);
-                int i_180_ = (((anIntArray5644[i_178_] + -((aHa_Sub2_5598.anInt7777 * anIntArray5593[i_178_]) >> 8)) >> aHa_Sub2_5598.anInt7731) + -var_r_Sub2.anInt10484);
+                int i_179_ = ((-((aHa_Sub2_5598.anInt7772 * vertexY[i_178_]) >> 8) + vertexX[i_178_] >> aHa_Sub2_5598.anInt7731) - var_r_Sub2.anInt10489);
+                int i_180_ = (((vertexZ[i_178_] + -((aHa_Sub2_5598.anInt7777 * vertexY[i_178_]) >> 8)) >> aHa_Sub2_5598.anInt7731) + -var_r_Sub2.anInt10484);
                 int i_181_ = anIntArray5528[i_178_];
                 int i_182_ = anIntArray5528[1 + i_178_];
                 for (int i_183_ = i_181_; i_182_ > i_183_; i_183_++) {
@@ -804,9 +804,9 @@ final class DisplayModeManagerContainer282
     final void H(int i, int i_204_, int i_205_) {
         anInt5547++;
         for (int i_206_ = 0; anInt5557 > i_206_; i_206_++) {
-            if (i != 0) anIntArray5543[i_206_] += i;
-            if (i_204_ != 0) anIntArray5593[i_206_] += i_204_;
-            if (i_205_ != 0) anIntArray5644[i_206_] += i_205_;
+            if (i != 0) vertexX[i_206_] += i;
+            if (i_204_ != 0) vertexY[i_206_] += i_204_;
+            if (i_205_ != 0) vertexZ[i_206_] += i_205_;
         }
         aBoolean5527 = false;
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
@@ -817,9 +817,9 @@ final class DisplayModeManagerContainer282
         int i_207_ = DisplayModeManagerContainer88.anIntArray1207[i];
         int i_208_ = DisplayModeManagerContainer88.anIntArray1204[i];
         for (int i_209_ = 0; anInt5557 > i_209_; i_209_++) {
-            int i_210_ = ((i_208_ * anIntArray5543[i_209_] + i_207_ * anIntArray5644[i_209_]) >> 14);
-            anIntArray5644[i_209_] = anIntArray5644[i_209_] * i_208_ + -(anIntArray5543[i_209_] * i_207_) >> 14;
-            anIntArray5543[i_209_] = i_210_;
+            int i_210_ = ((i_208_ * vertexX[i_209_] + i_207_ * vertexZ[i_209_]) >> 14);
+            vertexZ[i_209_] = vertexZ[i_209_] * i_208_ + -(vertexX[i_209_] * i_207_) >> 14;
+            vertexX[i_209_] = i_210_;
         }
         aBoolean5527 = false;
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
@@ -830,7 +830,7 @@ final class DisplayModeManagerContainer282
         return aBoolean5595;
     }
 
-    final void method622() {
+    final void acquireRenderLock() {
         anInt5613++;
     }
 
@@ -856,26 +856,26 @@ final class DisplayModeManagerContainer282
             boolean bool_217_ = Component40.method2259(i_212_, anInt5556, i);
             boolean bool_218_ = bool_217_ | (bool_216_ | bool_215_);
             if (bool_218_) {
-                if (!bool_215_) class64_sub3_211_.anIntArray5543 = anIntArray5543;
-                else if (class64_sub3_213_.anIntArray5543 != null && (class64_sub3_213_.anIntArray5543.length >= anInt5642)) class64_sub3_211_.anIntArray5543 = class64_sub3_213_.anIntArray5543;
-                else class64_sub3_211_.anIntArray5543 = class64_sub3_213_.anIntArray5543 = new int[anInt5642];
+                if (!bool_215_) class64_sub3_211_.vertexX = vertexX;
+                else if (class64_sub3_213_.vertexX != null && (class64_sub3_213_.vertexX.length >= anInt5642)) class64_sub3_211_.vertexX = class64_sub3_213_.vertexX;
+                else class64_sub3_211_.vertexX = class64_sub3_213_.vertexX = new int[anInt5642];
                 if (bool_216_) {
-                    if (class64_sub3_213_.anIntArray5593 != null && (anInt5642 <= class64_sub3_213_.anIntArray5593.length)) class64_sub3_211_.anIntArray5593 = class64_sub3_213_.anIntArray5593;
-                    else class64_sub3_211_.anIntArray5593 = class64_sub3_213_.anIntArray5593 = new int[anInt5642];
-                } else class64_sub3_211_.anIntArray5593 = anIntArray5593;
+                    if (class64_sub3_213_.vertexY != null && (anInt5642 <= class64_sub3_213_.vertexY.length)) class64_sub3_211_.vertexY = class64_sub3_213_.vertexY;
+                    else class64_sub3_211_.vertexY = class64_sub3_213_.vertexY = new int[anInt5642];
+                } else class64_sub3_211_.vertexY = vertexY;
                 if (bool_217_) {
-                    if (class64_sub3_213_.anIntArray5644 == null || (class64_sub3_213_.anIntArray5644.length < anInt5642)) class64_sub3_211_.anIntArray5644 = class64_sub3_213_.anIntArray5644 = new int[anInt5642];
-                    else class64_sub3_211_.anIntArray5644 = class64_sub3_213_.anIntArray5644;
-                } else class64_sub3_211_.anIntArray5644 = anIntArray5644;
+                    if (class64_sub3_213_.vertexZ == null || (class64_sub3_213_.vertexZ.length < anInt5642)) class64_sub3_211_.vertexZ = class64_sub3_213_.vertexZ = new int[anInt5642];
+                    else class64_sub3_211_.vertexZ = class64_sub3_213_.vertexZ;
+                } else class64_sub3_211_.vertexZ = vertexZ;
                 for (int i_219_ = 0; anInt5642 > i_219_; i_219_++) {
-                    if (bool_215_) class64_sub3_211_.anIntArray5543[i_219_] = anIntArray5543[i_219_];
-                    if (bool_216_) class64_sub3_211_.anIntArray5593[i_219_] = anIntArray5593[i_219_];
-                    if (bool_217_) class64_sub3_211_.anIntArray5644[i_219_] = anIntArray5644[i_219_];
+                    if (bool_215_) class64_sub3_211_.vertexX[i_219_] = vertexX[i_219_];
+                    if (bool_216_) class64_sub3_211_.vertexY[i_219_] = vertexY[i_219_];
+                    if (bool_217_) class64_sub3_211_.vertexZ[i_219_] = vertexZ[i_219_];
                 }
             } else {
-                class64_sub3_211_.anIntArray5644 = anIntArray5644;
-                class64_sub3_211_.anIntArray5593 = anIntArray5593;
-                class64_sub3_211_.anIntArray5543 = anIntArray5543;
+                class64_sub3_211_.vertexZ = vertexZ;
+                class64_sub3_211_.vertexY = vertexY;
+                class64_sub3_211_.vertexX = vertexX;
             }
             if (Component118.method2187(i, -79, anInt5556)) {
                 class64_sub3_211_.aClass123_5605 = class64_sub3_213_.aClass123_5605;
@@ -1063,9 +1063,9 @@ final class DisplayModeManagerContainer282
 
     final void Interface4Impl() {
         for (int i = 0; i < anInt5642; i++) {
-            anIntArray5543[i] = 7 + anIntArray5543[i] >> 4;
-            anIntArray5593[i] = 7 + anIntArray5593[i] >> 4;
-            anIntArray5644[i] = anIntArray5644[i] - -7 >> 4;
+            vertexX[i] = 7 + vertexX[i] >> 4;
+            vertexY[i] = 7 + vertexY[i] >> 4;
+            vertexZ[i] = vertexZ[i] - -7 >> 4;
         }
         anInt5585++;
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
@@ -1171,9 +1171,9 @@ final class DisplayModeManagerContainer282
         anInt5643++;
         if (anIntArrayArray5539 == null) return false;
         for (int i = 0; i < anInt5642; i++) {
-            anIntArray5543[i] <<= 4;
-            anIntArray5593[i] <<= 4;
-            anIntArray5644[i] <<= 4;
+            vertexX[i] <<= 4;
+            vertexY[i] <<= 4;
+            vertexZ[i] <<= 4;
         }
         Component85.anInt2880 = 0;
         NodeBase.anInt7275 = 0;
@@ -1212,13 +1212,13 @@ final class DisplayModeManagerContainer282
                     } else if (var_s_257_ == null || (i_261_ < 0 || (((i_262_ - -var_s_257_.anInt4592) >> var_s_257_.anInt4588) >= var_s_257_.anInt4587) || i_263_ < 0 || (var_s_257_.anInt4590 <= (var_s_257_.anInt4592 + i_264_ >> var_s_257_.anInt4588)))) break;
                     if (i == 1) {
                         for (int i_265_ = 0; i_265_ < anInt5557; i_265_++)
-                            anIntArray5593[i_265_] = (-i_259_ + anIntArray5593[i_265_] + var_s.method3986((anIntArray5543[i_265_] + i_258_), i_260_ + (anIntArray5644[i_265_]), (byte) -93));
+                            vertexY[i_265_] = (-i_259_ + vertexY[i_265_] + var_s.method3986((vertexX[i_265_] + i_258_), i_260_ + (vertexZ[i_265_]), (byte) -93));
                     } else if (i == 2) {
                         int i_279_ = aShort5591;
                         if (i_279_ == 0) break;
                         for (int i_280_ = 0; anInt5557 > i_280_; i_280_++) {
-                            int i_281_ = ((anIntArray5593[i_280_] << 16) / i_279_);
-                            if (i_281_ < i_256_) anIntArray5593[i_280_] = (anIntArray5593[i_280_] - -((-i_259_ + (var_s.method3986((anIntArray5543[i_280_] - -i_258_), (i_260_ + anIntArray5644[i_280_]), (byte) -94))) * (-i_281_ + i_256_) / i_256_));
+                            int i_281_ = ((vertexY[i_280_] << 16) / i_279_);
+                            if (i_281_ < i_256_) vertexY[i_280_] = (vertexY[i_280_] - -((-i_259_ + (var_s.method3986((vertexX[i_280_] - -i_258_), (i_260_ + vertexZ[i_280_]), (byte) -94))) * (-i_281_ + i_256_) / i_256_));
                         }
                     } else if (i == 3) {
                         int i_266_ = (0xff & i_256_) * 4;
@@ -1231,16 +1231,16 @@ final class DisplayModeManagerContainer282
                     } else if (i == 4) {
                         int i_277_ = aShort5629 - aShort5591;
                         for (int i_278_ = 0; anInt5557 > i_278_; i_278_++)
-                            anIntArray5593[i_278_] = (anIntArray5593[i_278_] - (-(var_s_257_.method3986(anIntArray5543[i_278_] + i_258_, anIntArray5644[i_278_] + i_260_, (byte) 71)) - -i_259_ - i_277_));
+                            vertexY[i_278_] = (vertexY[i_278_] - (-(var_s_257_.method3986(vertexX[i_278_] + i_258_, vertexZ[i_278_] + i_260_, (byte) 71)) - -i_259_ - i_277_));
                     } else if (i == 5) {
                         int i_270_ = -aShort5591 + aShort5629;
                         for (int i_271_ = 0; anInt5557 > i_271_; i_271_++) {
-                            int i_272_ = anIntArray5543[i_271_] + i_258_;
-                            int i_273_ = anIntArray5644[i_271_] + i_260_;
+                            int i_272_ = vertexX[i_271_] + i_258_;
+                            int i_273_ = vertexZ[i_271_] + i_260_;
                             int i_274_ = var_s.method3986(i_272_, i_273_, (byte) -100);
                             int i_275_ = var_s_257_.method3986(i_272_, i_273_, (byte) 93);
                             int i_276_ = -i_256_ + i_274_ + -i_275_;
-                            anIntArray5593[i_271_] = i_274_ + (-i_259_ + (((anIntArray5593[i_271_] << 8) / i_270_ * i_276_) >> 8));
+                            vertexY[i_271_] = i_274_ + (-i_259_ + (((vertexY[i_271_] << 8) / i_270_ * i_276_) >> 8));
                         }
                     }
                     aBoolean5527 = false;
@@ -1335,9 +1335,9 @@ final class DisplayModeManagerContainer282
                 if (bool_293_) {
                     if (aHa_Sub2_5598.aBoolean7775) {
                         for (int i_300_ = 0; anInt5557 > i_300_; i_300_++) {
-                            int i_301_ = (Stream.floatToRawIntBits((float) anIntArray5543[i_300_]));
-                            int i_302_ = (Stream.floatToRawIntBits((float) anIntArray5593[i_300_]));
-                            int i_303_ = (Stream.floatToRawIntBits((float) anIntArray5644[i_300_]));
+                            int i_301_ = (Stream.floatToRawIntBits((float) vertexX[i_300_]));
+                            int i_302_ = (Stream.floatToRawIntBits((float) vertexY[i_300_]));
+                            int i_303_ = (Stream.floatToRawIntBits((float) vertexZ[i_300_]));
                             int i_304_ = anIntArray5528[i_300_];
                             int i_305_ = anIntArray5528[i_300_ - -1];
                             for (int i_306_ = i_304_; i_306_ < i_305_; i_306_++) {
@@ -1351,9 +1351,9 @@ final class DisplayModeManagerContainer282
                         }
                     } else {
                         for (int i_308_ = 0; anInt5557 > i_308_; i_308_++) {
-                            int i_309_ = (Stream.floatToRawIntBits((float) anIntArray5543[i_308_]));
-                            int i_310_ = (Stream.floatToRawIntBits((float) anIntArray5593[i_308_]));
-                            int i_311_ = (Stream.floatToRawIntBits((float) anIntArray5644[i_308_]));
+                            int i_309_ = (Stream.floatToRawIntBits((float) vertexX[i_308_]));
+                            int i_310_ = (Stream.floatToRawIntBits((float) vertexY[i_308_]));
+                            int i_311_ = (Stream.floatToRawIntBits((float) vertexZ[i_308_]));
                             int i_312_ = anIntArray5528[i_308_];
                             int i_313_ = anIntArray5528[1 + i_308_];
                             for (int i_314_ = i_312_; i_314_ < i_313_; i_314_++) {
@@ -1569,7 +1569,7 @@ final class DisplayModeManagerContainer282
         }
     }
 
-    final void method615(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
+    final void render(DisplayModeManagerContainer204 class101, RenderableSub3 class318_sub3, int i) {
         try {
             anInt5611++;
             if (anInt5529 != 0) {
@@ -1712,27 +1712,27 @@ final class DisplayModeManagerContainer282
         if (aBoolean5555) {
             aBoolean5555 = false;
             if (aClass129Array5640 == null && aClass342Array5541 == null && aClass118Array5621 == null) {
-                if (anIntArray5543 != null && !Component244.method2659((byte) 123, anInt5648, anInt5556)) {
+                if (vertexX != null && !Component244.method2659((byte) 123, anInt5648, anInt5556)) {
                     if (aClass123_5605 == null || (aClass123_5605.anInterface2_1811 != null)) {
                         if (!aBoolean5527) method692((byte) -123);
-                        anIntArray5543 = null;
+                        vertexX = null;
                     } else aBoolean5555 = true;
                 }
-                if (anIntArray5593 != null && !BufferCacheSub2.method3999(anInt5556, anInt5648, 458752)) {
+                if (vertexY != null && !BufferCacheSub2.method3999(anInt5556, anInt5648, 458752)) {
                     if (aClass123_5605 != null && (aClass123_5605.anInterface2_1811 == null)) aBoolean5555 = true;
                     else {
                         if (!aBoolean5527) method692((byte) -123);
-                        anIntArray5593 = null;
+                        vertexY = null;
                     }
                 }
-                if (anIntArray5644 != null && !Component62.method1221(-3157, anInt5648, anInt5556)) {
+                if (vertexZ != null && !Component62.method1221(-3157, anInt5648, anInt5556)) {
                     if (aClass123_5605 == null || (aClass123_5605.anInterface2_1811 != null)) {
                         if (!aBoolean5527) method692((byte) -123);
-                        anIntArray5644 = null;
+                        vertexZ = null;
                     } else aBoolean5555 = true;
                 }
             }
-            if (aShortArray5649 != null && anIntArray5543 == null && anIntArray5593 == null && anIntArray5644 == null) {
+            if (aShortArray5649 != null && vertexX == null && vertexY == null && vertexZ == null) {
                 aShortArray5649 = null;
                 anIntArray5528 = null;
             }
@@ -1822,7 +1822,7 @@ final class DisplayModeManagerContainer282
         return aBoolean5638;
     }
 
-    final void method620(DisplayModeManagerContainer204 class101) {
+    final void transformVertices(DisplayModeManagerContainer204 class101) {
         do {
             try {
                 anInt5548++;
@@ -1832,15 +1832,15 @@ final class DisplayModeManagerContainer282
                         Component30 class129 = aClass129Array5640[i];
                         Component30 class129_384_ = class129;
                         if (class129.aClass129_1888 != null) class129_384_ = class129.aClass129_1888;
-                        class129_384_.anInt1882 = (int) (class101_sub3.aFloat5747 + (((float) (anIntArray5593[(class129.anInt1881)]) * (class101_sub3.aFloat5750)) + ((class101_sub3.aFloat5770) * (float) (anIntArray5543[(class129.anInt1881)])) + ((float) (anIntArray5644[(class129.anInt1881)]) * (class101_sub3.aFloat5781))));
-                        class129_384_.anInt1891 = (int) (class101_sub3.aFloat5772 + (((float) (anIntArray5593[(class129.anInt1881)]) * (class101_sub3.aFloat5769)) + ((class101_sub3.aFloat5761) * (float) (anIntArray5543[(class129.anInt1881)])) + ((float) (anIntArray5644[(class129.anInt1881)]) * (class101_sub3.aFloat5762))));
-                        class129_384_.anInt1889 = (int) (class101_sub3.aFloat5751 + (((float) (anIntArray5543[(class129.anInt1881)]) * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (float) (anIntArray5593[(class129.anInt1881)])) + ((float) (anIntArray5644[(class129.anInt1881)]) * (class101_sub3.aFloat5784))));
-                        class129_384_.anInt1883 = (int) (class101_sub3.aFloat5747 + (((class101_sub3.aFloat5770) * (float) (anIntArray5543[(class129.anInt1877)])) + ((float) (anIntArray5593[(class129.anInt1877)]) * (class101_sub3.aFloat5750)) + ((float) (anIntArray5644[(class129.anInt1877)]) * (class101_sub3.aFloat5781))));
-                        class129_384_.anInt1890 = (int) (class101_sub3.aFloat5772 + (((class101_sub3.aFloat5762) * (float) (anIntArray5644[(class129.anInt1877)])) + (((float) (anIntArray5543[(class129.anInt1877)]) * (class101_sub3.aFloat5761)) + ((float) (anIntArray5593[(class129.anInt1877)]) * class101_sub3.aFloat5769))));
-                        class129_384_.anInt1880 = (int) (class101_sub3.aFloat5751 + (((class101_sub3.aFloat5784) * (float) (anIntArray5644[(class129.anInt1877)])) + (((class101_sub3.aFloat5754) * (float) (anIntArray5593[(class129.anInt1877)])) + ((float) (anIntArray5543[(class129.anInt1877)]) * class101_sub3.aFloat5756))));
-                        class129_384_.anInt1876 = (int) (class101_sub3.aFloat5747 + (((float) (anIntArray5593[(class129.anInt1892)]) * (class101_sub3.aFloat5750)) + ((float) (anIntArray5543[(class129.anInt1892)]) * (class101_sub3.aFloat5770)) + ((class101_sub3.aFloat5781) * (float) (anIntArray5644[(class129.anInt1892)]))));
-                        class129_384_.anInt1874 = (int) (class101_sub3.aFloat5772 + (((float) (anIntArray5644[(class129.anInt1892)]) * (class101_sub3.aFloat5762)) + (((class101_sub3.aFloat5761) * (float) (anIntArray5543[(class129.anInt1892)])) + ((class101_sub3.aFloat5769) * (float) (anIntArray5593[(class129.anInt1892)])))));
-                        class129_384_.anInt1884 = (int) (((class101_sub3.aFloat5754) * (float) (anIntArray5593[(class129.anInt1892)])) + ((class101_sub3.aFloat5756) * (float) (anIntArray5543[(class129.anInt1892)])) + ((float) (anIntArray5644[(class129.anInt1892)]) * (class101_sub3.aFloat5784)) + (class101_sub3.aFloat5751));
+                        class129_384_.anInt1882 = (int) (class101_sub3.aFloat5747 + (((float) (vertexY[(class129.anInt1881)]) * (class101_sub3.aFloat5750)) + ((class101_sub3.aFloat5770) * (float) (vertexX[(class129.anInt1881)])) + ((float) (vertexZ[(class129.anInt1881)]) * (class101_sub3.aFloat5781))));
+                        class129_384_.anInt1891 = (int) (class101_sub3.aFloat5772 + (((float) (vertexY[(class129.anInt1881)]) * (class101_sub3.aFloat5769)) + ((class101_sub3.aFloat5761) * (float) (vertexX[(class129.anInt1881)])) + ((float) (vertexZ[(class129.anInt1881)]) * (class101_sub3.aFloat5762))));
+                        class129_384_.anInt1889 = (int) (class101_sub3.aFloat5751 + (((float) (vertexX[(class129.anInt1881)]) * (class101_sub3.aFloat5756)) + ((class101_sub3.aFloat5754) * (float) (vertexY[(class129.anInt1881)])) + ((float) (vertexZ[(class129.anInt1881)]) * (class101_sub3.aFloat5784))));
+                        class129_384_.anInt1883 = (int) (class101_sub3.aFloat5747 + (((class101_sub3.aFloat5770) * (float) (vertexX[(class129.anInt1877)])) + ((float) (vertexY[(class129.anInt1877)]) * (class101_sub3.aFloat5750)) + ((float) (vertexZ[(class129.anInt1877)]) * (class101_sub3.aFloat5781))));
+                        class129_384_.anInt1890 = (int) (class101_sub3.aFloat5772 + (((class101_sub3.aFloat5762) * (float) (vertexZ[(class129.anInt1877)])) + (((float) (vertexX[(class129.anInt1877)]) * (class101_sub3.aFloat5761)) + ((float) (vertexY[(class129.anInt1877)]) * class101_sub3.aFloat5769))));
+                        class129_384_.anInt1880 = (int) (class101_sub3.aFloat5751 + (((class101_sub3.aFloat5784) * (float) (vertexZ[(class129.anInt1877)])) + (((class101_sub3.aFloat5754) * (float) (vertexY[(class129.anInt1877)])) + ((float) (vertexX[(class129.anInt1877)]) * class101_sub3.aFloat5756))));
+                        class129_384_.anInt1876 = (int) (class101_sub3.aFloat5747 + (((float) (vertexY[(class129.anInt1892)]) * (class101_sub3.aFloat5750)) + ((float) (vertexX[(class129.anInt1892)]) * (class101_sub3.aFloat5770)) + ((class101_sub3.aFloat5781) * (float) (vertexZ[(class129.anInt1892)]))));
+                        class129_384_.anInt1874 = (int) (class101_sub3.aFloat5772 + (((float) (vertexZ[(class129.anInt1892)]) * (class101_sub3.aFloat5762)) + (((class101_sub3.aFloat5761) * (float) (vertexX[(class129.anInt1892)])) + ((class101_sub3.aFloat5769) * (float) (vertexY[(class129.anInt1892)])))));
+                        class129_384_.anInt1884 = (int) (((class101_sub3.aFloat5754) * (float) (vertexY[(class129.anInt1892)])) + ((class101_sub3.aFloat5756) * (float) (vertexX[(class129.anInt1892)])) + ((float) (vertexZ[(class129.anInt1892)]) * (class101_sub3.aFloat5784)) + (class101_sub3.aFloat5751));
                     }
                 }
                 if (aClass342Array5541 == null) break;
@@ -1850,9 +1850,9 @@ final class DisplayModeManagerContainer282
                     if (class342.aClass342_4248 != null) class342_385_ = class342.aClass342_4248;
                     if (class342.aClass101_4252 == null) class342.aClass101_4252 = class101_sub3.method907();
                     else class342.aClass101_4252.method898(class101_sub3);
-                    class342_385_.anInt4238 = (int) (class101_sub3.aFloat5747 + (((float) (anIntArray5644[(class342.anInt4244)]) * (class101_sub3.aFloat5781)) + (((float) (anIntArray5543[(class342.anInt4244)]) * (class101_sub3.aFloat5770)) + ((class101_sub3.aFloat5750) * (float) (anIntArray5593[(class342.anInt4244)])))));
-                    class342_385_.anInt4239 = (int) (class101_sub3.aFloat5772 + (((float) (anIntArray5593[(class342.anInt4244)]) * (class101_sub3.aFloat5769)) + ((class101_sub3.aFloat5761) * (float) (anIntArray5543[(class342.anInt4244)])) + ((float) (anIntArray5644[(class342.anInt4244)]) * (class101_sub3.aFloat5762))));
-                    class342_385_.anInt4240 = (int) (class101_sub3.aFloat5751 + (((float) (anIntArray5644[(class342.anInt4244)]) * (class101_sub3.aFloat5784)) + (((float) (anIntArray5543[(class342.anInt4244)]) * (class101_sub3.aFloat5756)) + ((float) (anIntArray5593[(class342.anInt4244)]) * (class101_sub3.aFloat5754)))));
+                    class342_385_.anInt4238 = (int) (class101_sub3.aFloat5747 + (((float) (vertexZ[(class342.anInt4244)]) * (class101_sub3.aFloat5781)) + (((float) (vertexX[(class342.anInt4244)]) * (class101_sub3.aFloat5770)) + ((class101_sub3.aFloat5750) * (float) (vertexY[(class342.anInt4244)])))));
+                    class342_385_.anInt4239 = (int) (class101_sub3.aFloat5772 + (((float) (vertexY[(class342.anInt4244)]) * (class101_sub3.aFloat5769)) + ((class101_sub3.aFloat5761) * (float) (vertexX[(class342.anInt4244)])) + ((float) (vertexZ[(class342.anInt4244)]) * (class101_sub3.aFloat5762))));
+                    class342_385_.anInt4240 = (int) (class101_sub3.aFloat5751 + (((float) (vertexZ[(class342.anInt4244)]) * (class101_sub3.aFloat5784)) + (((float) (vertexX[(class342.anInt4244)]) * (class101_sub3.aFloat5756)) + ((float) (vertexY[(class342.anInt4244)]) * (class101_sub3.aFloat5754)))));
                 }
             } catch (RuntimeException runtimeexception) {
                 throw NpcDefinition.wrapThrowable(runtimeexception, "paa.J(" + (class101 != null ? "{...}" : "null") + ')');
@@ -1885,10 +1885,10 @@ final class DisplayModeManagerContainer282
                         int[] is_394_ = anIntArrayArray5539[i_393_];
                         for (int i_395_ = 0; (i_395_ < is_394_.length); i_395_++) {
                             int i_396_ = is_394_[i_395_];
-                            NodeBase.anInt7275 += anIntArray5543[i_396_];
-                            Component85.anInt2880 += anIntArray5593[i_396_];
+                            NodeBase.anInt7275 += vertexX[i_396_];
+                            Component85.anInt2880 += vertexY[i_396_];
                             i_391_++;
-                            Component113.anInt2398 += anIntArray5644[i_396_];
+                            Component113.anInt2398 += vertexZ[i_396_];
                         }
                     }
                 }
@@ -1911,9 +1911,9 @@ final class DisplayModeManagerContainer282
                         int[] is_399_ = anIntArrayArray5539[i_398_];
                         for (int i_400_ = 0; i_400_ < is_399_.length; i_400_++) {
                             int i_401_ = is_399_[i_400_];
-                            anIntArray5543[i_401_] += i_386_;
-                            anIntArray5593[i_401_] += i_387_;
-                            anIntArray5644[i_401_] += i_388_;
+                            vertexX[i_401_] += i_386_;
+                            vertexY[i_401_] += i_387_;
+                            vertexZ[i_401_] += i_388_;
                         }
                     }
                 }
@@ -1925,64 +1925,64 @@ final class DisplayModeManagerContainer282
                         if ((0x1 & i_389_) == 0) {
                             for (int i_416_ = 0; (is_404_.length > i_416_); i_416_++) {
                                 int i_417_ = is_404_[i_416_];
-                                anIntArray5543[i_417_] -= NodeBase.anInt7275;
-                                anIntArray5593[i_417_] -= Component85.anInt2880;
-                                anIntArray5644[i_417_] -= Component113.anInt2398;
+                                vertexX[i_417_] -= NodeBase.anInt7275;
+                                vertexY[i_417_] -= Component85.anInt2880;
+                                vertexZ[i_417_] -= Component113.anInt2398;
                                 if (i_388_ != 0) {
                                     int i_418_ = DisplayModeManagerContainer88.anIntArray1207[i_388_];
                                     int i_419_ = DisplayModeManagerContainer88.anIntArray1204[i_388_];
-                                    int i_420_ = ((anIntArray5543[i_417_] * i_419_ + i_418_ * anIntArray5593[i_417_] - -16383) >> 14);
-                                    anIntArray5593[i_417_] = (anIntArray5593[i_417_] * i_419_ + -(i_418_ * anIntArray5543[i_417_]) - -16383) >> 14;
-                                    anIntArray5543[i_417_] = i_420_;
+                                    int i_420_ = ((vertexX[i_417_] * i_419_ + i_418_ * vertexY[i_417_] - -16383) >> 14);
+                                    vertexY[i_417_] = (vertexY[i_417_] * i_419_ + -(i_418_ * vertexX[i_417_]) - -16383) >> 14;
+                                    vertexX[i_417_] = i_420_;
                                 }
                                 if (i_386_ != 0) {
                                     int i_421_ = DisplayModeManagerContainer88.anIntArray1207[i_386_];
                                     int i_422_ = DisplayModeManagerContainer88.anIntArray1204[i_386_];
-                                    int i_423_ = ((-(anIntArray5644[i_417_] * i_421_) + (i_422_ * anIntArray5593[i_417_] + 16383)) >> 14);
-                                    anIntArray5644[i_417_] = ((16383 + i_422_ * anIntArray5644[i_417_] + i_421_ * anIntArray5593[i_417_]) >> 14);
-                                    anIntArray5593[i_417_] = i_423_;
+                                    int i_423_ = ((-(vertexZ[i_417_] * i_421_) + (i_422_ * vertexY[i_417_] + 16383)) >> 14);
+                                    vertexZ[i_417_] = ((16383 + i_422_ * vertexZ[i_417_] + i_421_ * vertexY[i_417_]) >> 14);
+                                    vertexY[i_417_] = i_423_;
                                 }
                                 if (i_387_ != 0) {
                                     int i_424_ = DisplayModeManagerContainer88.anIntArray1207[i_387_];
                                     int i_425_ = DisplayModeManagerContainer88.anIntArray1204[i_387_];
-                                    int i_426_ = (i_424_ * anIntArray5644[i_417_] - -(i_425_ * anIntArray5543[i_417_]) + 16383) >> 14;
-                                    anIntArray5644[i_417_] = (16383 + (anIntArray5644[i_417_] * i_425_ - (anIntArray5543[i_417_] * i_424_))) >> 14;
-                                    anIntArray5543[i_417_] = i_426_;
+                                    int i_426_ = (i_424_ * vertexZ[i_417_] - -(i_425_ * vertexX[i_417_]) + 16383) >> 14;
+                                    vertexZ[i_417_] = (16383 + (vertexZ[i_417_] * i_425_ - (vertexX[i_417_] * i_424_))) >> 14;
+                                    vertexX[i_417_] = i_426_;
                                 }
-                                anIntArray5543[i_417_] += NodeBase.anInt7275;
-                                anIntArray5593[i_417_] += Component85.anInt2880;
-                                anIntArray5644[i_417_] += Component113.anInt2398;
+                                vertexX[i_417_] += NodeBase.anInt7275;
+                                vertexY[i_417_] += Component85.anInt2880;
+                                vertexZ[i_417_] += Component113.anInt2398;
                             }
                         } else {
                             for (int i_405_ = 0; is_404_.length > i_405_; i_405_++) {
                                 int i_406_ = is_404_[i_405_];
-                                anIntArray5543[i_406_] -= NodeBase.anInt7275;
-                                anIntArray5593[i_406_] -= Component85.anInt2880;
-                                anIntArray5644[i_406_] -= Component113.anInt2398;
+                                vertexX[i_406_] -= NodeBase.anInt7275;
+                                vertexY[i_406_] -= Component85.anInt2880;
+                                vertexZ[i_406_] -= Component113.anInt2398;
                                 if (i_386_ != 0) {
                                     int i_407_ = DisplayModeManagerContainer88.anIntArray1207[i_386_];
                                     int i_408_ = DisplayModeManagerContainer88.anIntArray1204[i_386_];
-                                    int i_409_ = ((16383 + (i_408_ * anIntArray5593[i_406_] + -(anIntArray5644[i_406_] * i_407_))) >> 14);
-                                    anIntArray5644[i_406_] = ((16383 + (anIntArray5593[i_406_] * i_407_ - -(i_408_ * anIntArray5644[i_406_]))) >> 14);
-                                    anIntArray5593[i_406_] = i_409_;
+                                    int i_409_ = ((16383 + (i_408_ * vertexY[i_406_] + -(vertexZ[i_406_] * i_407_))) >> 14);
+                                    vertexZ[i_406_] = ((16383 + (vertexY[i_406_] * i_407_ - -(i_408_ * vertexZ[i_406_]))) >> 14);
+                                    vertexY[i_406_] = i_409_;
                                 }
                                 if (i_388_ != 0) {
                                     int i_410_ = DisplayModeManagerContainer88.anIntArray1207[i_388_];
                                     int i_411_ = DisplayModeManagerContainer88.anIntArray1204[i_388_];
-                                    int i_412_ = ((16383 + (anIntArray5543[i_406_] * i_411_ + (i_410_ * anIntArray5593[i_406_]))) >> 14);
-                                    anIntArray5593[i_406_] = (-(i_410_ * anIntArray5543[i_406_]) + (anIntArray5593[i_406_] * i_411_ - -16383)) >> 14;
-                                    anIntArray5543[i_406_] = i_412_;
+                                    int i_412_ = ((16383 + (vertexX[i_406_] * i_411_ + (i_410_ * vertexY[i_406_]))) >> 14);
+                                    vertexY[i_406_] = (-(i_410_ * vertexX[i_406_]) + (vertexY[i_406_] * i_411_ - -16383)) >> 14;
+                                    vertexX[i_406_] = i_412_;
                                 }
                                 if (i_387_ != 0) {
                                     int i_413_ = DisplayModeManagerContainer88.anIntArray1207[i_387_];
                                     int i_414_ = DisplayModeManagerContainer88.anIntArray1204[i_387_];
-                                    int i_415_ = ((i_413_ * anIntArray5644[i_406_] - (-(anIntArray5543[i_406_] * i_414_) - 16383)) >> 14);
-                                    anIntArray5644[i_406_] = (anIntArray5644[i_406_] * i_414_ + (-(i_413_ * anIntArray5543[i_406_]) - -16383)) >> 14;
-                                    anIntArray5543[i_406_] = i_415_;
+                                    int i_415_ = ((i_413_ * vertexZ[i_406_] - (-(vertexX[i_406_] * i_414_) - 16383)) >> 14);
+                                    vertexZ[i_406_] = (vertexZ[i_406_] * i_414_ + (-(i_413_ * vertexX[i_406_]) - -16383)) >> 14;
+                                    vertexX[i_406_] = i_415_;
                                 }
-                                anIntArray5543[i_406_] += NodeBase.anInt7275;
-                                anIntArray5593[i_406_] += Component85.anInt2880;
-                                anIntArray5644[i_406_] += Component113.anInt2398;
+                                vertexX[i_406_] += NodeBase.anInt7275;
+                                vertexY[i_406_] += Component85.anInt2880;
+                                vertexZ[i_406_] += Component113.anInt2398;
                             }
                         }
                     }
@@ -2034,15 +2034,15 @@ final class DisplayModeManagerContainer282
                         int[] is_447_ = anIntArrayArray5539[i_446_];
                         for (int i_448_ = 0; i_448_ < is_447_.length; i_448_++) {
                             int i_449_ = is_447_[i_448_];
-                            anIntArray5543[i_449_] -= NodeBase.anInt7275;
-                            anIntArray5593[i_449_] -= Component85.anInt2880;
-                            anIntArray5644[i_449_] -= Component113.anInt2398;
-                            anIntArray5543[i_449_] = i_386_ * anIntArray5543[i_449_] >> 7;
-                            anIntArray5593[i_449_] = anIntArray5593[i_449_] * i_387_ >> 7;
-                            anIntArray5644[i_449_] = anIntArray5644[i_449_] * i_388_ >> 7;
-                            anIntArray5543[i_449_] += NodeBase.anInt7275;
-                            anIntArray5593[i_449_] += Component85.anInt2880;
-                            anIntArray5644[i_449_] += Component113.anInt2398;
+                            vertexX[i_449_] -= NodeBase.anInt7275;
+                            vertexY[i_449_] -= Component85.anInt2880;
+                            vertexZ[i_449_] -= Component113.anInt2398;
+                            vertexX[i_449_] = i_386_ * vertexX[i_449_] >> 7;
+                            vertexY[i_449_] = vertexY[i_449_] * i_387_ >> 7;
+                            vertexZ[i_449_] = vertexZ[i_449_] * i_388_ >> 7;
+                            vertexX[i_449_] += NodeBase.anInt7275;
+                            vertexY[i_449_] += Component85.anInt2880;
+                            vertexZ[i_449_] += Component113.anInt2398;
                         }
                     }
                 }
@@ -2169,10 +2169,10 @@ final class DisplayModeManagerContainer282
             Component85.anInt2880 = 0;
             int i_482_ = 0;
             for (int i_483_ = 0; i_483_ < anInt5557; i_483_++) {
-                NodeBase.anInt7275 += anIntArray5543[i_483_];
-                Component85.anInt2880 += anIntArray5593[i_483_];
+                NodeBase.anInt7275 += vertexX[i_483_];
+                Component85.anInt2880 += vertexY[i_483_];
                 i_482_++;
-                Component113.anInt2398 += anIntArray5644[i_483_];
+                Component113.anInt2398 += vertexZ[i_483_];
             }
             if (i_482_ <= 0) {
                 Component85.anInt2880 = i_480_;
@@ -2185,51 +2185,51 @@ final class DisplayModeManagerContainer282
             }
         } else if (i == 1) {
             for (int i_484_ = 0; i_484_ < anInt5557; i_484_++) {
-                anIntArray5543[i_484_] += i_479_;
-                anIntArray5593[i_484_] += i_480_;
-                anIntArray5644[i_484_] += i_481_;
+                vertexX[i_484_] += i_479_;
+                vertexY[i_484_] += i_480_;
+                vertexZ[i_484_] += i_481_;
             }
         } else if (i == 2) {
             for (int i_485_ = 0; i_485_ < anInt5557; i_485_++) {
-                anIntArray5543[i_485_] -= NodeBase.anInt7275;
-                anIntArray5593[i_485_] -= Component85.anInt2880;
-                anIntArray5644[i_485_] -= Component113.anInt2398;
+                vertexX[i_485_] -= NodeBase.anInt7275;
+                vertexY[i_485_] -= Component85.anInt2880;
+                vertexZ[i_485_] -= Component113.anInt2398;
                 if (i_481_ != 0) {
                     int i_486_ = DisplayModeManagerContainer88.anIntArray1207[i_481_];
                     int i_487_ = DisplayModeManagerContainer88.anIntArray1204[i_481_];
-                    int i_488_ = (16383 + (i_487_ * anIntArray5543[i_485_] + anIntArray5593[i_485_] * i_486_) >> 14);
-                    anIntArray5593[i_485_] = ((-(anIntArray5543[i_485_] * i_486_) + anIntArray5593[i_485_] * i_487_ + 16383) >> 14);
-                    anIntArray5543[i_485_] = i_488_;
+                    int i_488_ = (16383 + (i_487_ * vertexX[i_485_] + vertexY[i_485_] * i_486_) >> 14);
+                    vertexY[i_485_] = ((-(vertexX[i_485_] * i_486_) + vertexY[i_485_] * i_487_ + 16383) >> 14);
+                    vertexX[i_485_] = i_488_;
                 }
                 if (i_479_ != 0) {
                     int i_489_ = DisplayModeManagerContainer88.anIntArray1207[i_479_];
                     int i_490_ = DisplayModeManagerContainer88.anIntArray1204[i_479_];
-                    int i_491_ = ((-(anIntArray5644[i_485_] * i_489_) + i_490_ * anIntArray5593[i_485_] + 16383) >> 14);
-                    anIntArray5644[i_485_] = ((i_489_ * anIntArray5593[i_485_] - (-(i_490_ * anIntArray5644[i_485_]) + -16383)) >> 14);
-                    anIntArray5593[i_485_] = i_491_;
+                    int i_491_ = ((-(vertexZ[i_485_] * i_489_) + i_490_ * vertexY[i_485_] + 16383) >> 14);
+                    vertexZ[i_485_] = ((i_489_ * vertexY[i_485_] - (-(i_490_ * vertexZ[i_485_]) + -16383)) >> 14);
+                    vertexY[i_485_] = i_491_;
                 }
                 if (i_480_ != 0) {
                     int i_492_ = DisplayModeManagerContainer88.anIntArray1207[i_480_];
                     int i_493_ = DisplayModeManagerContainer88.anIntArray1204[i_480_];
-                    int i_494_ = (16383 + (anIntArray5644[i_485_] * i_492_ - -(i_493_ * anIntArray5543[i_485_])) >> 14);
-                    anIntArray5644[i_485_] = (16383 + (-(anIntArray5543[i_485_] * i_492_) + i_493_ * anIntArray5644[i_485_]) >> 14);
-                    anIntArray5543[i_485_] = i_494_;
+                    int i_494_ = (16383 + (vertexZ[i_485_] * i_492_ - -(i_493_ * vertexX[i_485_])) >> 14);
+                    vertexZ[i_485_] = (16383 + (-(vertexX[i_485_] * i_492_) + i_493_ * vertexZ[i_485_]) >> 14);
+                    vertexX[i_485_] = i_494_;
                 }
-                anIntArray5543[i_485_] += NodeBase.anInt7275;
-                anIntArray5593[i_485_] += Component85.anInt2880;
-                anIntArray5644[i_485_] += Component113.anInt2398;
+                vertexX[i_485_] += NodeBase.anInt7275;
+                vertexY[i_485_] += Component85.anInt2880;
+                vertexZ[i_485_] += Component113.anInt2398;
             }
         } else if (i == 3) {
             for (int i_495_ = 0; i_495_ < anInt5557; i_495_++) {
-                anIntArray5543[i_495_] -= NodeBase.anInt7275;
-                anIntArray5593[i_495_] -= Component85.anInt2880;
-                anIntArray5644[i_495_] -= Component113.anInt2398;
-                anIntArray5543[i_495_] = i_479_ * anIntArray5543[i_495_] / 128;
-                anIntArray5593[i_495_] = i_480_ * anIntArray5593[i_495_] / 128;
-                anIntArray5644[i_495_] = anIntArray5644[i_495_] * i_481_ / 128;
-                anIntArray5543[i_495_] += NodeBase.anInt7275;
-                anIntArray5593[i_495_] += Component85.anInt2880;
-                anIntArray5644[i_495_] += Component113.anInt2398;
+                vertexX[i_495_] -= NodeBase.anInt7275;
+                vertexY[i_495_] -= Component85.anInt2880;
+                vertexZ[i_495_] -= Component113.anInt2398;
+                vertexX[i_495_] = i_479_ * vertexX[i_495_] / 128;
+                vertexY[i_495_] = i_480_ * vertexY[i_495_] / 128;
+                vertexZ[i_495_] = vertexZ[i_495_] * i_481_ / 128;
+                vertexX[i_495_] += NodeBase.anInt7275;
+                vertexY[i_495_] += Component85.anInt2880;
+                vertexZ[i_495_] += Component113.anInt2398;
             }
         } else if (i == 5) {
             for (int i_496_ = 0; i_496_ < anInt5632; i_496_++) {
@@ -2315,7 +2315,7 @@ final class DisplayModeManagerContainer282
     final void v() {
         anInt5535++;
         for (int i = 0; anInt5557 > i; i++)
-            anIntArray5644[i] = -anIntArray5644[i];
+            vertexZ[i] = -vertexZ[i];
         for (int i = 0; anInt5529 > i; i++)
             aShortArray5576[i] = (short) -aShortArray5576[i];
         for (int i = 0; anInt5632 > i; i++) {
@@ -2330,18 +2330,18 @@ final class DisplayModeManagerContainer282
         if (aClass123_5605 != null) aClass123_5605.anInterface2_1811 = null;
     }
 
-    final void method610(DisplayModeManagerContainer204 class101, int i, boolean bool) {
+    final void clipVertices(DisplayModeManagerContainer204 class101, int i, boolean bool) {
         try {
             anInt5550++;
             if (aShortArray5608 != null) {
                 int[] is = new int[3];
                 for (int i_509_ = 0; i_509_ < anInt5557; i_509_++) {
                     if ((i & aShortArray5608[i_509_]) != 0) {
-                        if (!bool) class101.method897(anIntArray5543[i_509_], anIntArray5593[i_509_], anIntArray5644[i_509_], is);
-                        else class101.method892(anIntArray5543[i_509_], anIntArray5593[i_509_], anIntArray5644[i_509_], is);
-                        anIntArray5543[i_509_] = is[0];
-                        anIntArray5593[i_509_] = is[1];
-                        anIntArray5644[i_509_] = is[2];
+                        if (!bool) class101.method897(vertexX[i_509_], vertexY[i_509_], vertexZ[i_509_], is);
+                        else class101.method892(vertexX[i_509_], vertexY[i_509_], vertexZ[i_509_], is);
+                        vertexX[i_509_] = is[0];
+                        vertexY[i_509_] = is[1];
+                        vertexZ[i_509_] = is[2];
                     }
                 }
             }
@@ -2369,10 +2369,10 @@ final class DisplayModeManagerContainer282
                         for (int i_520_ = 0; i_520_ < is_519_.length; i_520_++) {
                             int i_521_ = is_519_[i_520_];
                             if (aShortArray5608 == null || (i_513_ & aShortArray5608[i_521_]) != 0) {
-                                NodeBase.anInt7275 += anIntArray5543[i_521_];
-                                Component85.anInt2880 += anIntArray5593[i_521_];
+                                NodeBase.anInt7275 += vertexX[i_521_];
+                                Component85.anInt2880 += vertexY[i_521_];
                                 i_516_++;
-                                Component113.anInt2398 += anIntArray5644[i_521_];
+                                Component113.anInt2398 += vertexZ[i_521_];
                             }
                         }
                     }
@@ -2406,9 +2406,9 @@ final class DisplayModeManagerContainer282
                         for (int i_528_ = 0; is_527_.length > i_528_; i_528_++) {
                             int i_529_ = is_527_[i_528_];
                             if (aShortArray5608 == null || (aShortArray5608[i_529_] & i_513_) != 0) {
-                                anIntArray5543[i_529_] += i_510_;
-                                anIntArray5593[i_529_] += i_511_;
-                                anIntArray5644[i_529_] += i_512_;
+                                vertexX[i_529_] += i_510_;
+                                vertexY[i_529_] += i_511_;
+                                vertexZ[i_529_] += i_512_;
                             }
                         }
                     }
@@ -2422,33 +2422,33 @@ final class DisplayModeManagerContainer282
                             for (int i_533_ = 0; is_532_.length > i_533_; i_533_++) {
                                 int i_534_ = is_532_[i_533_];
                                 if (aShortArray5608 == null || ((i_513_ & aShortArray5608[i_534_]) != 0)) {
-                                    anIntArray5543[i_534_] -= NodeBase.anInt7275;
-                                    anIntArray5593[i_534_] -= Component85.anInt2880;
-                                    anIntArray5644[i_534_] -= Component113.anInt2398;
+                                    vertexX[i_534_] -= NodeBase.anInt7275;
+                                    vertexY[i_534_] -= Component85.anInt2880;
+                                    vertexZ[i_534_] -= Component113.anInt2398;
                                     if (i_512_ != 0) {
                                         int i_535_ = DisplayModeManagerContainer88.anIntArray1207[i_512_];
                                         int i_536_ = DisplayModeManagerContainer88.anIntArray1204[i_512_];
-                                        int i_537_ = ((i_535_ * anIntArray5593[i_534_] - (-(anIntArray5543[i_534_] * i_536_) - 16383)) >> 14);
-                                        anIntArray5593[i_534_] = (-(anIntArray5543[i_534_] * i_535_) + (anIntArray5593[i_534_] * i_536_) + 16383) >> 14;
-                                        anIntArray5543[i_534_] = i_537_;
+                                        int i_537_ = ((i_535_ * vertexY[i_534_] - (-(vertexX[i_534_] * i_536_) - 16383)) >> 14);
+                                        vertexY[i_534_] = (-(vertexX[i_534_] * i_535_) + (vertexY[i_534_] * i_536_) + 16383) >> 14;
+                                        vertexX[i_534_] = i_537_;
                                     }
                                     if (i_510_ != 0) {
                                         int i_538_ = DisplayModeManagerContainer88.anIntArray1207[i_510_];
                                         int i_539_ = DisplayModeManagerContainer88.anIntArray1204[i_510_];
-                                        int i_540_ = ((-(anIntArray5644[i_534_] * i_538_) + (i_539_ * anIntArray5593[i_534_]) + 16383) >> 14);
-                                        anIntArray5644[i_534_] = (16383 + ((i_538_ * anIntArray5593[i_534_]) + (anIntArray5644[i_534_] * i_539_))) >> 14;
-                                        anIntArray5593[i_534_] = i_540_;
+                                        int i_540_ = ((-(vertexZ[i_534_] * i_538_) + (i_539_ * vertexY[i_534_]) + 16383) >> 14);
+                                        vertexZ[i_534_] = (16383 + ((i_538_ * vertexY[i_534_]) + (vertexZ[i_534_] * i_539_))) >> 14;
+                                        vertexY[i_534_] = i_540_;
                                     }
                                     if (i_511_ != 0) {
                                         int i_541_ = DisplayModeManagerContainer88.anIntArray1207[i_511_];
                                         int i_542_ = DisplayModeManagerContainer88.anIntArray1204[i_511_];
-                                        int i_543_ = ((i_541_ * anIntArray5644[i_534_] + ((i_542_ * anIntArray5543[i_534_]) - -16383)) >> 14);
-                                        anIntArray5644[i_534_] = ((16383 + ((anIntArray5644[i_534_] * i_542_) + -(anIntArray5543[i_534_] * i_541_))) >> 14);
-                                        anIntArray5543[i_534_] = i_543_;
+                                        int i_543_ = ((i_541_ * vertexZ[i_534_] + ((i_542_ * vertexX[i_534_]) - -16383)) >> 14);
+                                        vertexZ[i_534_] = ((16383 + ((vertexZ[i_534_] * i_542_) + -(vertexX[i_534_] * i_541_))) >> 14);
+                                        vertexX[i_534_] = i_543_;
                                     }
-                                    anIntArray5543[i_534_] += NodeBase.anInt7275;
-                                    anIntArray5593[i_534_] += Component85.anInt2880;
-                                    anIntArray5644[i_534_] += Component113.anInt2398;
+                                    vertexX[i_534_] += NodeBase.anInt7275;
+                                    vertexY[i_534_] += Component85.anInt2880;
+                                    vertexZ[i_534_] += Component113.anInt2398;
                                 }
                             }
                         }
@@ -2575,15 +2575,15 @@ final class DisplayModeManagerContainer282
                             for (int i_605_ = 0; (i_605_ < is_604_.length); i_605_++) {
                                 int i_606_ = is_604_[i_605_];
                                 if (aShortArray5608 == null || (aShortArray5608[i_606_] & i_513_) != 0) {
-                                    int i_607_ = ((8192 + (is_594_[2] * anIntArray5644[i_606_]) + ((is_594_[1] * anIntArray5593[i_606_]) + (is_594_[0] * anIntArray5543[i_606_]))) >> 14);
-                                    int i_608_ = ((is_594_[5] * anIntArray5644[i_606_] + ((anIntArray5543[i_606_] * is_594_[3]) + (is_594_[4] * anIntArray5593[i_606_])) + 8192) >> 14);
+                                    int i_607_ = ((8192 + (is_594_[2] * vertexZ[i_606_]) + ((is_594_[1] * vertexY[i_606_]) + (is_594_[0] * vertexX[i_606_]))) >> 14);
+                                    int i_608_ = ((is_594_[5] * vertexZ[i_606_] + ((vertexX[i_606_] * is_594_[3]) + (is_594_[4] * vertexY[i_606_])) + 8192) >> 14);
                                     i_607_ += i_599_;
                                     i_608_ += i_600_;
-                                    int i_609_ = ((8192 + (is_594_[8] * anIntArray5644[i_606_]) + ((anIntArray5543[i_606_] * is_594_[6]) + (is_594_[7] * anIntArray5593[i_606_]))) >> 14);
+                                    int i_609_ = ((8192 + (is_594_[8] * vertexZ[i_606_]) + ((vertexX[i_606_] * is_594_[6]) + (is_594_[7] * vertexY[i_606_]))) >> 14);
                                     i_609_ += i_601_;
-                                    anIntArray5543[i_606_] = i_607_;
-                                    anIntArray5593[i_606_] = i_608_;
-                                    anIntArray5644[i_606_] = i_609_;
+                                    vertexX[i_606_] = i_607_;
+                                    vertexY[i_606_] = i_608_;
+                                    vertexZ[i_606_] = i_609_;
                                 }
                             }
                         }
@@ -2598,15 +2598,15 @@ final class DisplayModeManagerContainer282
                             for (int i_651_ = 0; (i_651_ < is_650_.length); i_651_++) {
                                 int i_652_ = is_650_[i_651_];
                                 if (aShortArray5608 == null || ((i_513_ & aShortArray5608[i_652_]) != 0)) {
-                                    anIntArray5543[i_652_] -= NodeBase.anInt7275;
-                                    anIntArray5593[i_652_] -= Component85.anInt2880;
-                                    anIntArray5644[i_652_] -= Component113.anInt2398;
-                                    anIntArray5543[i_652_] = (anIntArray5543[i_652_] * i_510_ >> 7);
-                                    anIntArray5593[i_652_] = (anIntArray5593[i_652_] * i_511_ >> 7);
-                                    anIntArray5644[i_652_] = (i_512_ * anIntArray5644[i_652_] >> 7);
-                                    anIntArray5543[i_652_] += NodeBase.anInt7275;
-                                    anIntArray5593[i_652_] += Component85.anInt2880;
-                                    anIntArray5644[i_652_] += Component113.anInt2398;
+                                    vertexX[i_652_] -= NodeBase.anInt7275;
+                                    vertexY[i_652_] -= Component85.anInt2880;
+                                    vertexZ[i_652_] -= Component113.anInt2398;
+                                    vertexX[i_652_] = (vertexX[i_652_] * i_510_ >> 7);
+                                    vertexY[i_652_] = (vertexY[i_652_] * i_511_ >> 7);
+                                    vertexZ[i_652_] = (i_512_ * vertexZ[i_652_] >> 7);
+                                    vertexX[i_652_] += NodeBase.anInt7275;
+                                    vertexY[i_652_] += Component85.anInt2880;
+                                    vertexZ[i_652_] += Component113.anInt2398;
                                 }
                             }
                         }
@@ -2677,15 +2677,15 @@ final class DisplayModeManagerContainer282
                             for (int i_643_ = 0; is_642_.length > i_643_; i_643_++) {
                                 int i_644_ = is_642_[i_643_];
                                 if (aShortArray5608 == null || (aShortArray5608[i_644_] & i_513_) != 0) {
-                                    int i_645_ = ((8192 + (is_632_[1] * anIntArray5593[i_644_]) + ((is_632_[0] * anIntArray5543[i_644_]) + (is_632_[2] * anIntArray5644[i_644_]))) >> 14);
-                                    int i_646_ = ((is_632_[4] * anIntArray5593[i_644_] + (anIntArray5543[i_644_] * is_632_[3]) - (-(is_632_[5] * anIntArray5644[i_644_]) - 8192)) >> 14);
+                                    int i_645_ = ((8192 + (is_632_[1] * vertexY[i_644_]) + ((is_632_[0] * vertexX[i_644_]) + (is_632_[2] * vertexZ[i_644_]))) >> 14);
+                                    int i_646_ = ((is_632_[4] * vertexY[i_644_] + (vertexX[i_644_] * is_632_[3]) - (-(is_632_[5] * vertexZ[i_644_]) - 8192)) >> 14);
                                     i_645_ += i_637_;
                                     i_646_ += i_638_;
-                                    int i_647_ = ((is_632_[7] * anIntArray5593[i_644_] + (is_632_[6] * anIntArray5543[i_644_]) - -(is_632_[8] * anIntArray5644[i_644_]) - -8192) >> 14);
-                                    anIntArray5543[i_644_] = i_645_;
+                                    int i_647_ = ((is_632_[7] * vertexY[i_644_] + (is_632_[6] * vertexX[i_644_]) - -(is_632_[8] * vertexZ[i_644_]) - -8192) >> 14);
+                                    vertexX[i_644_] = i_645_;
                                     i_647_ += i_639_;
-                                    anIntArray5593[i_644_] = i_646_;
-                                    anIntArray5644[i_644_] = i_647_;
+                                    vertexY[i_644_] = i_646_;
+                                    vertexZ[i_644_] = i_647_;
                                 }
                             }
                         }
@@ -2809,11 +2809,11 @@ final class DisplayModeManagerContainer282
         int i_688_ = 0;
         int i_689_ = 0;
         for (int i_690_ = 0; i_690_ < anInt5557; i_690_++) {
-            int i_691_ = anIntArray5543[i_690_];
-            int i_692_ = anIntArray5593[i_690_];
+            int i_691_ = vertexX[i_690_];
+            int i_692_ = vertexY[i_690_];
             if (i_692_ > i_686_) i_686_ = i_692_;
             if (i_692_ < i_683_) i_683_ = i_692_;
-            int i_693_ = anIntArray5644[i_690_];
+            int i_693_ = vertexZ[i_690_];
             if (i_685_ < i_691_) i_685_ = i_691_;
             if (i_682_ > i_691_) i_682_ = i_691_;
             if (i_693_ > i_687_) i_687_ = i_693_;
@@ -2825,7 +2825,7 @@ final class DisplayModeManagerContainer282
         }
         aShort5591 = (short) i_683_;
         aShort5617 = (short) i_684_;
-        if (i != -123) method618();
+        if (i != -123) areTexturesReady();
         aShort5646 = (short) i_687_;
         aShort5540 = (short) i_682_;
         aShort5629 = (short) i_686_;
@@ -2949,10 +2949,10 @@ final class DisplayModeManagerContainer282
                     aBoolean5595 |= bool_709_;
                 }
                 NodeSub16Sub2.method2832(is, ls, 0);
-                anIntArray5644 = class124.anIntArray1852;
-                anIntArray5593 = class124.anIntArray1847;
+                vertexZ = class124.anIntArray1852;
+                vertexY = class124.anIntArray1847;
                 anInt5642 = class124.anInt1836;
-                anIntArray5543 = class124.anIntArray1841;
+                vertexX = class124.anIntArray1841;
                 aShortArray5608 = class124.aShortArray1842;
                 anInt5557 = class124.anInt1821;
                 aClass342Array5541 = class124.aClass342Array1866;
@@ -3011,12 +3011,12 @@ final class DisplayModeManagerContainer282
                     short i_720_ = class124.aShortArray1863[i_719_];
                     short i_721_ = class124.aShortArray1835[i_719_];
                     short i_722_ = class124.aShortArray1855[i_719_];
-                    int i_723_ = anIntArray5543[i_721_] + -anIntArray5543[i_720_];
-                    int i_724_ = anIntArray5593[i_721_] - anIntArray5593[i_720_];
-                    int i_725_ = -anIntArray5644[i_720_] + anIntArray5644[i_721_];
-                    int i_726_ = -anIntArray5543[i_720_] + anIntArray5543[i_722_];
-                    int i_727_ = anIntArray5593[i_722_] + -anIntArray5593[i_720_];
-                    int i_728_ = -anIntArray5644[i_720_] + anIntArray5644[i_722_];
+                    int i_723_ = vertexX[i_721_] + -vertexX[i_720_];
+                    int i_724_ = vertexY[i_721_] - vertexY[i_720_];
+                    int i_725_ = -vertexZ[i_720_] + vertexZ[i_721_];
+                    int i_726_ = -vertexX[i_720_] + vertexX[i_722_];
+                    int i_727_ = vertexY[i_722_] + -vertexY[i_720_];
+                    int i_728_ = -vertexZ[i_720_] + vertexZ[i_722_];
                     int i_729_ = i_724_ * i_728_ + -(i_727_ * i_725_);
                     int i_730_ = -(i_728_ * i_723_) + i_726_ * i_725_;
                     int i_731_;

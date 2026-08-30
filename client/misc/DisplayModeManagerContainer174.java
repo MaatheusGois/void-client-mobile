@@ -127,7 +127,7 @@ final class DisplayModeManagerContainer174
         do {
             try {
                 anInt10406++;
-                class64.method620(class101);
+                class64.transformVertices(class101);
                 Component30[] class129s = class64.method619();
                 DisplayModeManagerContainer173[] class342s = class64.method604();
                 if ((aClass318_Sub10_10378 == null || aClass318_Sub10_10378.aBoolean6470) && (class129s != null || class342s != null)) aClass318_Sub10_10378 = RenderableSub10.method2526(OpenGlShader.clientCycle, true);
@@ -221,7 +221,7 @@ final class DisplayModeManagerContainer174
         class101.method891((int) aDouble10408, (int) aDouble10384, (int) aDouble10371);
         method2473(class101, class64, var_ha, -2393);
         RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, false, false);
-        if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if (aClass318_Sub10_10378 != null) {
             Component122 class98 = aClass318_Sub10_10378.method2525();

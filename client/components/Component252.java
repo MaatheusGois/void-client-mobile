@@ -152,7 +152,7 @@ final class Component252
             DisplayModeManagerContainer370 class64 = (Exception_Sub1.itemDefinitions.getItemDefinition(i ^ 0x6c, this.anInt10180).method1559(null, null, var_ha, 2048, 0, this.anInt10186, 0, (byte) 88, -1));
             if (class64 != null) {
                 if (DisplayModeManagerContainer50.aBoolean3870) class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[2]), Component72.anInt1906, 0);
-                else class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[2]), 0);
+                else class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[2]), 0);
                 aBoolean10191 |= class64.F();
                 anInt10184 = class64.ma();
             }
@@ -160,7 +160,7 @@ final class Component252
         if (this.anInt10189 != -1) {
             DisplayModeManagerContainer370 class64 = (Exception_Sub1.itemDefinitions.getItemDefinition(i ^ ~0x3b, this.anInt10189).method1559(null, null, var_ha, 2048, 0, this.anInt10190, 0, (byte) 88, -1));
             if (class64 != null) {
-                if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[1]), 0);
+                if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[1]), 0);
                 else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[1]), Component72.anInt1906, 0);
                 aBoolean10191 |= class64.F();
                 if (anInt10184 < class64.ma()) anInt10184 = class64.ma();
@@ -168,7 +168,7 @@ final class Component252
         }
         DisplayModeManagerContainer370 class64 = (Exception_Sub1.itemDefinitions.getItemDefinition(-48, this.anInt10181).method1559(null, null, var_ha, 2048, 0, this.anInt10185, 0, (byte) 88, -1));
         if (class64 != null) {
-            if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+            if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
             else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
             aBoolean10191 |= class64.F();
             if (anInt10184 < class64.ma()) anInt10184 = class64.ma();

@@ -67,14 +67,14 @@ final class Component289
         class101.method894((this.x - -this.aShort8781), this.anInt6382, (this.y - -this.aShort8769));
         RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10130, false);
         if (DisplayModeManagerContainer50.aBoolean3870) aClass64_10124.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
-        else aClass64_10124.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        else aClass64_10124.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         return class318_sub4;
     }
 
     public final void method40(int i) {
         if (i != -12031) aByte10145 = (byte) -104;
         anInt10147++;
-        if (aClass64_10124 != null) aClass64_10124.method612();
+        if (aClass64_10124 != null) aClass64_10124.prepareFrame();
     }
 
     final boolean method2377(byte i) {

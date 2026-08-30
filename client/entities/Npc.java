@@ -155,7 +155,7 @@ final class Npc extends DisplayModeManagerContainer58 {
                 class318_sub4 = (OutputStream_Sub2.method136(1 + (this.aClass64Array10323).length, method2442(1810797122), false));
                 this.aBoolean10324 = true;
                 var_ha.C(false);
-                if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
+                if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), 0);
                 else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[(this.aClass64Array10323).length]), Component72.anInt1906, 0);
                 var_ha.C(true);
             }
@@ -170,7 +170,7 @@ final class Npc extends DisplayModeManagerContainer58 {
             }
         } else {
             for (int i_23_ = 0; (this.aClass64Array10323.length > i_23_); i_23_++) {
-                if (this.aClass64Array10323[i_23_] != null) this.aClass64Array10323[i_23_].method615(class101, (class318_sub4.aClass318_Sub3Array6414[i_23_]), 0);
+                if (this.aClass64Array10323[i_23_] != null) this.aClass64Array10323[i_23_].render(class101, (class318_sub4.aClass318_Sub3Array6414[i_23_]), 0);
             }
         }
         if (this.aClass318_Sub10_10327 != null) {

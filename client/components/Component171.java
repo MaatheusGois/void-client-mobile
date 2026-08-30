@@ -123,7 +123,7 @@ final class Component171
         int i_12_ = this.x >> 9;
         int i_13_ = this.y >> 9;
         this.aClass235_10115.method1670(i_12_, class101, i_13_, var_ha, i_12_, class64, true, (byte) -73, i_13_);
-        if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if ((this.aClass235_10115.aClass318_Sub10_3081) != null) {
             Component122 class98 = this.aClass235_10115.aClass318_Sub10_3081.method2525();

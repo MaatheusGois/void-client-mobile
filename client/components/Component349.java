@@ -45,7 +45,7 @@ final class Component349
 
     public final void method40(int i) {
         if (i == -12031) {
-            if (this.aClass64_10028 != null) this.aClass64_10028.method612();
+            if (this.aClass64_10028 != null) this.aClass64_10028.prepareFrame();
             anInt10022++;
         }
     }
@@ -278,7 +278,7 @@ final class Component349
         DisplayModeManagerContainer204 class101 = var_ha.method3705();
         class101.method894(this.x, this.anInt6382, this.y);
         RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10014, false);
-        if (!DisplayModeManagerContainer50.aBoolean3870) this.aClass64_10028.method615(class101, class318_sub4.aClass318_Sub3Array6414[0], 0);
+        if (!DisplayModeManagerContainer50.aBoolean3870) this.aClass64_10028.render(class101, class318_sub4.aClass318_Sub3Array6414[0], 0);
         else this.aClass64_10028.method608(class101, class318_sub4.aClass318_Sub3Array6414[0], Component72.anInt1906, 0);
         return class318_sub4;
     }

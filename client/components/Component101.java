@@ -250,7 +250,7 @@ final class Component101
             if (class225 != null) class101s = class225.method1618(var_ha, 0);
             if (bool_52_ && class101s != null) {
                 for (int i_54_ = 0; i_54_ < 12; i_54_++) {
-                    if (class101s[i_54_] != null) class64_51_.method610(class101s[i_54_], 1 << i_54_, true);
+                    if (class101s[i_54_] != null) class64_51_.clipVertices(class101s[i_54_], 1 << i_54_, true);
                 }
             }
             int i_55_ = 0;
@@ -267,13 +267,13 @@ final class Component101
                         i_58_ &= 0x3fff;
                         DisplayModeManagerContainer204 class101 = var_ha.method3654();
                         class101.method895(i_58_);
-                        class64_51_.method610(class101, 1 << i_57_, false);
+                        class64_51_.clipVertices(class101, 1 << i_57_, false);
                     }
                 }
             }
             if (bool_52_ && class101s != null) {
                 for (int i_59_ = 0; i_59_ < 12; i_59_++) {
-                    if (class101s[i_59_] != null) class64_51_.method610(class101s[i_59_], 1 << i_59_, false);
+                    if (class101s[i_59_] != null) class64_51_.clipVertices(class101s[i_59_], 1 << i_59_, false);
                 }
             }
             if (class348_sub42_sub17 != null && class348_sub42_sub17_30_ != null)

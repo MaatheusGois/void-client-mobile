@@ -355,7 +355,7 @@ final class ItemDefinition {
                 bool_47_ = true;
             }
             DisplayModeManagerContainer370 class64 = var_ha_38_.method3625(class124, i_46_, 64, anInt2791 + 64, 768 + anInt2824);
-            if (!class64.method618()) return null;
+            if (!class64.areTexturesReady()) return null;
             if (bool_47_) class64.O(anInt2786, anInt2794, anInt2765);
             Component24 class105 = null;
             if (this.anInt2833 == -1) {
@@ -389,7 +389,7 @@ final class ItemDefinition {
             var_ha_38_.NativeHandle();
             var_ha_38_.la();
             var_ha_38_.fillRect(0, 0, 36, 32, 0, 0);
-            class64.method615(class101_49_, null, 1);
+            class64.render(class101_49_, null, 1);
             var_ha_38_.f(i_50_, i_51_);
             int[] is = var_ha_38_.ShaderImpl(0, 0, 36, 32);
             if (i_40_ != -102) method1554(false, 37);

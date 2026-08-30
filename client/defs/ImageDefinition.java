@@ -418,12 +418,12 @@ final class ImageDefinition extends Definition {
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.T(i_24_, i_25_, (class46.width) + i_24_, (i_25_ + (class46.height)));
                                             if (!class46.aBoolean784) {
                                                 if (!class46.aBoolean689) {
-                                                    class64.method615((Cp1252Decoder.aClass101_5209), null, 1);
+                                                    class64.render((Cp1252Decoder.aClass101_5209), null, 1);
                                                     if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.method3684(class46.aClass318_Sub10_740.method2539());
                                                 } else class64.method608((Cp1252Decoder.aClass101_5209), null, ((class46.anInt716) << 2), 1);
                                             } else if (class46.aBoolean689) class64.method608((Cp1252Decoder.aClass101_5209), null, (class46.anInt716), 1);
                                             else {
-                                                class64.method615((Cp1252Decoder.aClass101_5209), null, 1);
+                                                class64.render((Cp1252Decoder.aClass101_5209), null, 1);
                                                 if ((class46.aClass318_Sub10_740) != null) NodeSub8.toolkit.method3684(class46.aClass318_Sub10_740.method2539());
                                             }
                                             if (Component29.aBoolean10046) NodeSub8.toolkit.KA(i, i_12_, i_14_, i_17_);

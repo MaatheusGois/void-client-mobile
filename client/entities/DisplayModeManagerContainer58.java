@@ -430,7 +430,7 @@ abstract class DisplayModeManagerContainer58
                         DisplayModeManagerContainer370 class64_65_ = class64s[1];
                         DisplayModeManagerContainer370 class64_66_ = class64s[2];
                         if (class64 != null) {
-                            class64.method620(class101);
+                            class64.transformVertices(class101);
                             int i_67_ = 0;
                             int i_68_ = 0;
                             int i_69_ = 0;
@@ -448,7 +448,7 @@ abstract class DisplayModeManagerContainer58
                             Component30[] class129s_71_ = null;
                             DisplayModeManagerContainer173[] class342s_72_ = null;
                             if (class64_65_ != null) {
-                                class64_65_.method620(class101);
+                                class64_65_.transformVertices(class101);
                                 class129s_71_ = class64_65_.method619();
                                 class342s_72_ = class64_65_.method604();
                             }
@@ -463,7 +463,7 @@ abstract class DisplayModeManagerContainer58
                             Component30[] class129s_73_ = null;
                             DisplayModeManagerContainer173[] class342s_74_ = null;
                             if (class64_66_ != null) {
-                                class64_66_.method620(class101);
+                                class64_66_.transformVertices(class101);
                                 class129s_73_ = class64_66_.method619();
                                 class342s_74_ = class64_66_.method604();
                             }

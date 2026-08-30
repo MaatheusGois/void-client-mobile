@@ -108,7 +108,7 @@ final class Component29
         class101.method894(this.x, this.anInt6382, this.y);
         RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean10056, false);
         this.aClass235_10045.method1670(this.aShort8751, class101, this.aShort8747, var_ha, this.aShort8743, class64, true, (byte) -73, this.aShort8750);
-        if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if ((this.aClass235_10045.aClass318_Sub10_3081) != null) {
             Component122 class98 = this.aClass235_10045.aClass318_Sub10_3081.method2525();

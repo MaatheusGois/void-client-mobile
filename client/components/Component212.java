@@ -129,7 +129,7 @@ final class Component212
         class101.method894(this.x, this.anInt6382, this.y);
         RenderableSub4 class318_sub4 = OutputStream_Sub2.method136(i, aBoolean9974, false);
         if (DisplayModeManagerContainer50.aBoolean3870) aClass64_9993.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
-        else aClass64_9993.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        else aClass64_9993.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         return class318_sub4;
     }
 
@@ -189,7 +189,7 @@ final class Component212
     public final void method40(int i) {
         if (i == -12031) {
             anInt9982++;
-            if (aClass64_9993 != null) aClass64_9993.method612();
+            if (aClass64_9993 != null) aClass64_9993.prepareFrame();
         }
     }
 

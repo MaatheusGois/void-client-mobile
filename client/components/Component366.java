@@ -225,7 +225,7 @@ final class Component366
                     if (class51 != null) this.aClass318_Sub10_3081 = RenderableSub10.method2526(OpenGlShader.clientCycle, true);
                 }
                 if (this.aClass318_Sub10_3081 == null) break;
-                class64.method620(class101);
+                class64.transformVertices(class101);
                 if (bool) this.aClass318_Sub10_3081.method2536(var_ha, OpenGlShader.clientCycle, class129s, class342s, false);
                 else this.aClass318_Sub10_3081.method2540(OpenGlShader.clientCycle);
                 this.aClass318_Sub10_3081.method2533(aByte3085, i_8_, i, i_10_, i_7_);

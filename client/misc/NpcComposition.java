@@ -571,7 +571,7 @@ final class NpcComposition {
             if (class225 != null) class101s = class225.method1618(var_ha, 0);
             if (bool_83_ && class101s != null) {
                 for (int i_85_ = 0; i_85_ < 12; i_85_++) {
-                    if (class101s[i_85_] != null) class64_82_.method610(class101s[i_85_], 1 << i_85_, true);
+                    if (class101s[i_85_] != null) class64_82_.clipVertices(class101s[i_85_], 1 << i_85_, true);
                 }
             }
             int i_86_ = 0;
@@ -589,13 +589,13 @@ final class NpcComposition {
                         i_89_ &= 0x3fff;
                         DisplayModeManagerContainer204 class101 = var_ha.method3654();
                         class101.method895(i_89_);
-                        class64_82_.method610(class101, 1 << i_88_, false);
+                        class64_82_.clipVertices(class101, 1 << i_88_, false);
                     }
                 }
             }
             if (bool_83_ && class101s != null) {
                 for (int i_90_ = 0; i_90_ < 12; i_90_++) {
-                    if (class101s[i_90_] != null) class64_82_.method610(class101s[i_90_], 1 << i_90_, false);
+                    if (class101s[i_90_] != null) class64_82_.clipVertices(class101s[i_90_], 1 << i_90_, false);
                 }
             }
             if (class348_sub42_sub17 != null && class348_sub42_sub17_63_ != null)

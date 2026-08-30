@@ -108,7 +108,7 @@ final class ShaderLinker extends Component203 implements Interface10 {
         int i_3_ = this.x >> 9;
         int i_4_ = this.y >> 9;
         this.aClass235_10155.method1670(i_3_, class101, i_4_, var_ha, i_3_, class64, true, (byte) -73, i_4_);
-        if (!DisplayModeManagerContainer50.aBoolean3870) class64.method615(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
+        if (!DisplayModeManagerContainer50.aBoolean3870) class64.render(class101, (class318_sub4.aClass318_Sub3Array6414[0]), 0);
         else class64.method608(class101, (class318_sub4.aClass318_Sub3Array6414[0]), Component72.anInt1906, 0);
         if ((this.aClass235_10155.aClass318_Sub10_3081) != null) {
             Component122 class98 = this.aClass235_10155.aClass318_Sub10_3081.method2525();
