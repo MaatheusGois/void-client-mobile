@@ -21,7 +21,7 @@ final class Component182
     static int anInt9750;
     static int anInt9751 = 0;
 
-    static final void method3398(boolean bool, byte[][][] is, int i, byte i_0_, int i_1_, int i_2_, boolean bool_3_) {
+    static final void renderScene(boolean bool, byte[][][] is, int i, byte i_0_, int i_1_, int i_2_, boolean bool_3_) {
         int i_4_ = bool ? 1 : 0;
         Component305.opaqueOnscreenCount = 0;
         HashNodeSub3.translucentOnscreenCount = 0;
