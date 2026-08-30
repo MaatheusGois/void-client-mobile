@@ -38,7 +38,7 @@ help:
 	@echo "  make desktop-log      jar + DeobProbe NDJSON (VOID_DEOB_LOG=…)"
 	@echo "  make desktop-clear-log  rm the DeobProbe log"
 	@echo ""
-	@echo "component lab"
+	@echo "Component Lab:"
 	@echo "  make component-lab       browse components at http://127.0.0.1:8765"
 	@echo "  make component-lab-images export SVG cards (OUT=...)"
 	@echo "android"

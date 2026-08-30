@@ -41,7 +41,7 @@ class Component:
         return tuple(dict.fromkeys(METHOD_RE.findall(self.source)))
 
     @property
-    def fields(self) -> int:
+    def field_count(self) -> int:
         return sum(1 for line in self.source.splitlines() if ";" in line and "(" not in line)
 
 
@@ -73,7 +73,7 @@ def image_svg(component: Component) -> str:
 <rect width="100%" height="100%" fill="#101827"/>
 <rect width="100%" height="84" fill="#17243a"/>
 <text x="32" y="36" class="title">{html.escape(component.name)}</text>
-<text x="32" y="62" class="meta">{component.lines} lines · {component.fields} fields · methods: {html.escape(methods)}</text>
+<text x="32" y="62" class="meta">{component.lines} lines · {component.field_count} fields · methods: {html.escape(methods)}</text>
 <text x="32" y="98" class="hint">Void Component Lab · source card · first 180 lines</text>
 {text}
 <style>
@@ -142,7 +142,7 @@ class Handler(BaseHTTPRequestHandler):
         else:
             methods = ", ".join(component.methods) or "none detected"
             content = (f"<h2>{html.escape(component.name)}</h2>"
-                       f'<p class="stats">{component.lines} lines · {component.fields} field-like declarations</p>'
+                       f'<p class="stats">{component.lines} lines · {component.field_count} field-like declarations</p>'
                        f'<p>Methods: {html.escape(methods)}</p>'
                        f'<p><a class="button" href="/component/{html.escape(component.name)}.svg">'
                        "Open image card</a> · right-click it to save for AI analysis</p>"
@@ -176,7 +176,9 @@ def main() -> None:
     if args.export_dir:
         export_cards(catalog, args.export_dir)
         return
-    handler = lambda request, address, server: Handler(request, address, server, catalog)
+    def handler(request, address, server):
+        return Handler(request, address, server, catalog)
+
     with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as server:
         print(f"Component Lab: http://127.0.0.1:{args.port}/ ({len(catalog)} components)")
         try:
