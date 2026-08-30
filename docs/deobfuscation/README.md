@@ -13,7 +13,7 @@ Skill: [`.cursor/skills/void-client-deobfuscate/SKILL.md`](../../.cursor/skills/
 | Metric | Value |
 |---|---:|
 | Java files under `client/` | 791 |
-| Unique `method####` tokens | 3 326 |
+| Unique `method####` tokens | 3 315 |
 | Unique `anInt####` tokens | 6 287 |
 | Unique `aClass####` tokens | 26 |
 | Reflection-gate (`check_reflection.py`) | **PASS** (25 live targets / 51 unique refs) |
@@ -82,8 +82,8 @@ Renaming these is high-leverage because every call-site is replaced:
 | `method3494` | 87 | TBD | likely paired with `method3493` |
 | `method3738` | 83 | TBD | investigate |
 | `method3850` | 77 | TBD | investigate |
-| `method3400` | 72 | TBD | likely paired with `method3399` |
-| `method3399` | 72 | TBD | investigate |
+| `method3400` | 0 | ✅ resolved | `writeFloatBE` (Component182) |
+| `method3399` | 0 | ✅ resolved | `writeFloatLE` (Component182) |
 | `method835` | 69 | TBD | investigate |
 
 ### Top shared `anInt####` (state fields)
