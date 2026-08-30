@@ -14,12 +14,11 @@ import argparse
 import html
 import re
 import socketserver
-import threading
 from dataclasses import dataclass
 from pathlib import Path
 from string import Template
 from http.server import BaseHTTPRequestHandler
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import unquote, urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
