@@ -28,7 +28,7 @@ final class RadixText extends Component339 {
         return (i_0_ & 0x84080) != 0;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) return 112;
         anInt6116++;
         return 127;
@@ -50,13 +50,13 @@ final class RadixText extends Component339 {
         }
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (bool != false) occluderCountA = 87;
-        if (this.preferenceValue < 0 && this.preferenceValue > 127) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 && this.preferenceValue > 127) this.preferenceValue = getDefaultValue(20014);
         anInt6117++;
     }
 
-    final int method1714(int i, int i_5_) {
+    final int getValue(int i, int i_5_) {
         if (i != 3) method1834(null, (byte) 50);
         anInt6124++;
         return 1;
@@ -111,7 +111,7 @@ final class RadixText extends Component339 {
         return (i_15_ & 0x800) != 0;
     }
 
-    final void method1712(int i, int i_16_) {
+    final void setValue(int i, int i_16_) {
         int i_17_ = 63 % ((i - 82) / 35);
         anInt6119++;
         this.preferenceValue = i_16_;

@@ -48,14 +48,14 @@ final class DisplayModeManagerContainer341 extends Component339 {
         return null;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (bool != false) method1783(115, -122, -59, 41, -49, 92);
         anInt5999++;
         if (this.preferences.method3428((byte) -84).method1458(-23688) < 96) this.preferenceValue = 0;
-        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 2) this.preferenceValue = getDefaultValue(20014);
     }
 
-    final int method1714(int i, int i_1_) {
+    final int getValue(int i, int i_1_) {
         anInt6005++;
         if (i != 3) method1784(99);
         if (this.preferences.method3428((byte) -85).method1458(-23688) < 96) return 3;
@@ -124,14 +124,14 @@ final class DisplayModeManagerContainer341 extends Component339 {
         }
     }
 
-    final void method1712(int i, int i_20_) {
+    final void setValue(int i, int i_20_) {
         anInt6003++;
         this.preferenceValue = i_20_;
         int i_21_ = 33 % ((i - 82) / 35);
         Component380.method1114(this.preferenceValue, -122);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5996++;
         if (i != 20014) selectMapLabelFont(-76, -103);
         if (this.preferences.method3428((byte) -105).method1458(-23688) < 96) return 0;

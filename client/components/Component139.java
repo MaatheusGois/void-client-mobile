@@ -81,13 +81,13 @@ final class Component139
         aClass341_6128 = null;
     }
 
-    final void method1712(int i, int i_26_) {
+    final void setValue(int i, int i_26_) {
         this.preferenceValue = i_26_;
         anInt6132++;
         int i_27_ = 123 / ((82 - i) / 35);
     }
 
-    final int method1714(int i, int i_28_) {
+    final int getValue(int i, int i_28_) {
         if (i != 3) aClass341_6128 = null;
         anInt6130++;
         return 3;
@@ -101,16 +101,16 @@ final class Component139
         super(class348_sub51);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6133++;
-        if (i != 20014) method1716(true);
+        if (i != 20014) validateValue(true);
         if ((this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) && this.preferences.method3425(-111)) return 0;
         return 1;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt6131++;
-        this.preferenceValue = method1710(20014);
-        if (bool != false) method1710(98);
+        this.preferenceValue = getDefaultValue(20014);
+        if (bool != false) getDefaultValue(98);
     }
 }

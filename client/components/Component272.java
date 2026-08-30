@@ -22,7 +22,7 @@ final class Component272
     static int anInt5870;
     static int anInt5871;
 
-    final void method1712(int i, int i_0_) {
+    final void setValue(int i, int i_0_) {
         this.preferenceValue = i_0_;
         anInt5862++;
         int i_1_ = -40 / ((i - 82) / 35);
@@ -43,7 +43,7 @@ final class Component272
         super(class348_sub51);
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) anInt5871 = -72;
         anInt5867++;
         return 0;
@@ -97,15 +97,15 @@ final class Component272
         return i_21_ < (~i_22_) || i_22_ >= 160 || Component352.cp1252HighChars[i_22_ + -128] != 0;
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt5864++;
         if (method1735(bool)) {
             if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -94, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) this.preferenceValue = 1;
             if (this.preferences.aClass239_Sub8_7254.method1751(-32350) == 1) this.preferenceValue = 1;
         }
         if (this.preferenceValue == 3) this.preferenceValue = 2;
-        if (bool != false) method1716(true);
-        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = method1710(20014);
+        if (bool != false) validateValue(true);
+        if (this.preferenceValue < 0 || this.preferenceValue > 3) this.preferenceValue = getDefaultValue(20014);
     }
 
     static final void method1733(byte i, int i_23_) {
@@ -115,7 +115,7 @@ final class Component272
         class348_sub42_sub15.method3251(-16058);
     }
 
-    final int method1714(int i, int i_24_) {
+    final int getValue(int i, int i_24_) {
         anInt5866++;
         if (NodeCache.method576(i_24_, 29)) {
             if (this.preferences.aClass239_Sub25_7271.method1830((byte) -97) && !DisplayModeManagerContainer346.method1210((byte) -113, this.preferences.aClass239_Sub25_7271.getPreferenceValue(-32350))) return 3;

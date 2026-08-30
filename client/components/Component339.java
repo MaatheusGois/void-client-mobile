@@ -6,7 +6,7 @@
  * Base class for a single client preference option (RENAMED from `Class239`).
  * Subclasses ({@code Component20}, {@code Component25}, …) clamp
  * {@link #preferenceValue} to their legal range and read/write via
- * {@link #method1710}/{@link #method1712}/{@link #method1716}.
+ * {@link #getDefaultValue}/{@link #setValue}/{@link #validateValue}.
  * Held by {@link NodeSub51} (preferences root).
  */
 abstract class Component339 {
@@ -36,7 +36,7 @@ abstract class Component339 {
         return (new BuildType[]{Component342.LIVE, DefinitionSub20.RC, Component118.WIP});
     }
 
-    abstract int method1710(int i);
+    abstract int getDefaultValue(int i);
 
     static final void method1711(int i, CacheStore class45, int i_0_, CacheStore class45_1_) {
         try {
@@ -49,14 +49,14 @@ abstract class Component339 {
         }
     }
 
-    abstract void method1712(int i, int i_2_);
+    abstract void setValue(int i, int i_2_);
 
     static final void method1713(boolean bool, int i) {
         Component272.method1728(PacketReader.canvasHeight, -1, r.anInt9721, bool, Component236.canvasWidth);
         if (i == 520) anInt3137++;
     }
 
-    abstract int method1714(int i, int i_3_);
+    abstract int getValue(int i, int i_3_);
 
     public static void method1715(int i) {
         aClass114_3145 = null;
@@ -68,11 +68,11 @@ abstract class Component339 {
         if (i < 13) values(-99);
     }
 
-    abstract void method1716(boolean bool);
+    abstract void validateValue(boolean bool);
 
     Component339(NodeSub51 class348_sub51) {
         this.preferences = class348_sub51;
-        this.preferenceValue = method1710(20014);
+        this.preferenceValue = getDefaultValue(20014);
     }
 
     static final void method1717(int i, int i_4_, int i_5_, int i_6_) {
@@ -86,10 +86,10 @@ abstract class Component339 {
         this.preferenceValue = i;
     }
 
-    final void method1718(int i, int i_7_) {
-        if (i_7_ < 3) method1712(12, 42);
+    final void applyValue(int i, int i_7_) {
+        if (i_7_ < 3) setValue(12, 42);
         anInt3139++;
-        if (method1714(3, i) != 3) method1712(124, i);
+        if (getValue(3, i) != 3) setValue(124, i);
     }
 
     static {

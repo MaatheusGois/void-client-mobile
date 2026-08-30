@@ -23,7 +23,7 @@ final class Component256
     static int anInt6112;
     boolean aBoolean6113 = false;
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         anInt6100++;
         if (i != 3) aBoolean6110 = false;
         if (!this.preferences.method3428((byte) -89).method1460(-38)) return 3;
@@ -31,7 +31,7 @@ final class Component256
         return 2;
     }
 
-    final void method1712(int i, int i_1_) {
+    final void setValue(int i, int i_1_) {
         int i_2_ = -50 / ((i - 82) / 35);
         this.preferenceValue = i_1_;
         anInt6106++;
@@ -113,7 +113,7 @@ final class Component256
         }
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         this.aBoolean6113 = true;
         anInt6101++;
         if (i != 20014) aBoolean6110 = false;
@@ -137,11 +137,11 @@ final class Component256
         }
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt6108++;
         if (!this.preferences.method3428((byte) -106).method1460(-33)) this.preferenceValue = 0;
         if (bool != false) getPreferenceValue(31);
-        if (this.preferenceValue < 0 || this.preferenceValue > 5) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue < 0 || this.preferenceValue > 5) this.preferenceValue = getDefaultValue(20014);
     }
 
     /** Return this preference's currently selected value. */

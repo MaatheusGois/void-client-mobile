@@ -339,3 +339,14 @@ input bindings) now describe their native operation. The two distinct
 `destroyContext` and `destroyContextIfNeeded` to preserve Java overload validity.
 
 Reflection gate: PASS. `:client:compileJava`: PASS after the collision fix.
+
+## Next-batch blocker (2026-08-30)
+
+After lote 70, no evidence-backed single family meets the requested 500-reference
+threshold. The apparent 646-reference `client.java` hotspot is reflection-heavy
+bootstrap code, while the next largest semantically coherent candidate
+(`ClientScriptExecutor`) is 379 references and its unresolved handlers require
+opcode/stack-effect tracing. Do not bulk-rename either area by token frequency;
+that would violate the uniqueness and clear-call-site requirements. The next safe
+step is to produce opcode-table evidence (or split a verified bootstrap subfamily)
+before attempting another 500-reference batch.

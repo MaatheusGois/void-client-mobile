@@ -44,23 +44,23 @@ final class LibraryCreditsText extends Component339 {
         aClass114_5949 = null;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt5956++;
         if (i != 20014) return -48;
         return 0;
     }
 
-    final void method1716(boolean bool) {
-        if (bool != false) method1716(false);
+    final void validateValue(boolean bool) {
+        if (bool != false) validateValue(false);
         anInt5954++;
-        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue != 1 && this.preferenceValue != 0) this.preferenceValue = getDefaultValue(20014);
     }
 
     LibraryCreditsText(int i, NodeSub51 class348_sub51) {
         super(i, class348_sub51);
     }
 
-    final void method1712(int i, int i_2_) {
+    final void setValue(int i, int i_2_) {
         anInt5952++;
         this.preferenceValue = i_2_;
         int i_3_ = 98 / ((82 - i) / 35);
@@ -146,7 +146,7 @@ final class LibraryCreditsText extends Component339 {
         super(class348_sub51);
     }
 
-    final int method1714(int i, int i_15_) {
+    final int getValue(int i, int i_15_) {
         if (i != 3) return 94;
         anInt5955++;
         return 1;

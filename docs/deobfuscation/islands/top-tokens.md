@@ -5,6 +5,9 @@ needs investigation. See `findings.md` for evidence on each.
 
 ## `method####` (top by call-site count)
 
+The preference option family (`method1710/1712/1714/1716/1718`) is resolved as
+`getDefaultValue/setValue/getValue/validateValue/applyValue`; see findings §17.
+
 | Token | Refs | Status | Defining class | Inferred name | Notes |
 |---|---:|---|---|---|---|
 | `method3429` | 149 | **resolved** | `NodeSub51` (Preferences) | `applyPreferences` | commits prefs + rebuilds |

@@ -25,7 +25,7 @@ final class ColoredText extends Component339 {
     static Component24 aClass105_6097;
     static Component80 aClass299_6098;
 
-    final void method1712(int i, int i_0_) {
+    final void setValue(int i, int i_0_) {
         int i_1_ = -73 % ((i - 82) / 35);
         this.preferenceValue = i_0_;
         anInt6085++;
@@ -56,20 +56,20 @@ final class ColoredText extends Component339 {
         if (i != 110) aClass299_6098 = null;
     }
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         if (i != 20014) return -20;
         anInt6084++;
         return 1;
     }
 
-    final int method1714(int i, int i_3_) {
+    final int getValue(int i, int i_3_) {
         anInt6092++;
         if (this.preferences.method3422(674) == RunescapeInfo.RUNESCAPE) {
             if (this.preferences.method3425(i + -70)) return 3;
             if (i_3_ == 0 || this.preferences.aClass239_Sub9_7256.method1759(-32350) == 1) return 1;
             return 2;
         }
-        if (i != 3) method1716(true);
+        if (i != 3) validateValue(true);
         return 3;
     }
 
@@ -345,11 +345,11 @@ final class ColoredText extends Component339 {
         }
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         if (this.preferences.method3422(674) != RunescapeInfo.RUNESCAPE) this.preferenceValue = 1;
         else if (this.preferences.method3425(-95)) this.preferenceValue = 0;
         anInt6090++;
-        if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = method1710(20014);
+        if (this.preferenceValue != 0 && this.preferenceValue != 1) this.preferenceValue = getDefaultValue(20014);
         if (bool != false) aClass60_6096 = null;
     }
 

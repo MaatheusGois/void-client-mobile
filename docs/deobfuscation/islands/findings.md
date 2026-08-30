@@ -347,6 +347,47 @@ One naming collision exposed two distinct `destroyContext(int)` bodies in
 `GlToolkitSub3`; the second was named `destroyContextIfNeeded`, with its sole
 call site updated. Reflection gate and client compilation pass.
 
+## 16. Remaining-batch assessment (2026-08-30)
+
+The requested next batch of at least 500 `method####` references is currently
+blocked by evidence quality, not by tooling. The post-lote-70 inventory reports
+2,895 unique obfuscated method references, but no remaining single coherent
+family has 500 references with uniquely defined methods and proven call-site
+semantics:
+
+* `client/src/client.java` has 646 references, but is the bootstrap/main loop
+  and is reflection-sensitive; its methods cross virtually every subsystem.
+* `ClientScriptExecutor` has 379 references and is the CS2 dispatcher. The
+  remaining handlers are opcode-specific and cannot be named safely without
+  tracing opcode tables and stack effects.
+* `PacketReader` has 159 references; although protocol-shaped, it is below the
+  threshold and several handlers are shared/dispatch-driven.
+* The remaining renderer/display files contain fewer than 500 references each,
+  and their high-confidence GL surface was already consumed by lote 70.
+
+No code rename was made speculatively. A qualifying batch requires either
+opcode-table evidence for the CS2 handlers or a reflection-safe, semantically
+isolated bootstrap subfamily; neither is present in the current source/docs.
+
+## 17. lote 71 — preference option contract (CONFIRMED, executed)
+
+The `Component339` preference base class and its 29 concrete option classes
+share one virtual contract. Constructor/default-value paths, validation clamps,
+and `NodeSub51`'s commit path establish the meanings below; the methods only
+carry opaque guard integers and do not alter the wire format.
+
+| Old | New | Evidence |
+|---|---|---|
+| `method1710(int)` | `getDefaultValue(int)` | returns the option's default |
+| `method1712(int,int)` | `setValue(int,int)` | decodes/stores the option value |
+| `method1714(int,int)` | `getValue(int,int)` | returns the selected value |
+| `method1716(boolean)` | `validateValue(boolean)` | clamps invalid preference values |
+| `method1718(int,int)` | `applyValue(int,int)` | validates then commits an option |
+
+The rename was restricted to the preference override family (30 Java files),
+avoiding unrelated methods with the same obfuscated token. It replaced 181
+method references. No reflection strings reference this contract.
+
 ---
 
 ## 13. lote 68 — IF widget ids from `widget-map/` (CONFIRMED, executed)

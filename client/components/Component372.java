@@ -17,7 +17,7 @@ final class Component372
     static int anInt6046;
     static int anInt6047;
 
-    final int method1710(int i) {
+    final int getDefaultValue(int i) {
         anInt6041++;
         if (i != 20014) return -14;
         return 0;
@@ -31,12 +31,12 @@ final class Component372
         super(i, class348_sub51);
     }
 
-    final void method1716(boolean bool) {
+    final void validateValue(boolean bool) {
         anInt6045++;
         if (bool != false) anInt6043 = 2;
     }
 
-    final int method1714(int i, int i_0_) {
+    final int getValue(int i, int i_0_) {
         if (i != 3) anInt6043 = 15;
         anInt6039++;
         return 1;
@@ -50,7 +50,7 @@ final class Component372
         class348_sub42_sub15.aString9654 = string;
     }
 
-    final void method1712(int i, int i_2_) {
+    final void setValue(int i, int i_2_) {
         anInt6046++;
         this.preferenceValue = i_2_;
         int i_3_ = -25 / ((82 - i) / 35);
