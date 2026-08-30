@@ -42,6 +42,7 @@ class Component:
 
     @property
     def field_count(self) -> int:
+        """Approximate declarations for quick triage, not a Java parser."""
         return sum(1 for line in self.source.splitlines() if ";" in line and "(" not in line)
 
 
@@ -132,6 +133,9 @@ class Handler(BaseHTTPRequestHandler):
             self.reply("not found", "text/plain; charset=utf-8", 404)
 
     def show(self, name: str | None) -> None:
+        if name is not None and not re.fullmatch(r"[A-Za-z0-9_]+", name):
+            self.reply("not found", "text/plain; charset=utf-8", 404)
+            return
         nav = "".join(
             f'<a class="{"selected" if item == name else ""}" href="/component/{html.escape(item)}">'
             f'{html.escape(item)}</a>' for item in self.catalog
@@ -150,6 +154,9 @@ class Handler(BaseHTTPRequestHandler):
         self.reply(PAGE.substitute(NAV=nav, CONTENT=content))
 
     def svg(self, name: str) -> None:
+        if not re.fullmatch(r"[A-Za-z0-9_]+", name):
+            self.reply("not found", "text/plain; charset=utf-8", 404)
+            return
         component = self.catalog.get(name)
         if component is None:
             self.reply("not found", "text/plain; charset=utf-8", 404)
@@ -180,6 +187,7 @@ def main() -> None:
         return Handler(request, address, server, catalog)
 
     with socketserver.ThreadingTCPServer(("127.0.0.1", args.port), handler) as server:
+        server.daemon_threads = True
         print(f"Component Lab: http://127.0.0.1:{args.port}/ ({len(catalog)} components)")
         try:
             server.serve_forever()
