@@ -18,8 +18,8 @@ needs investigation. See `findings.md` for evidence on each.
 | `method3738` | 83 | TBD | — | — | |
 | `method3850` | 77 | TBD | — | — | |
 | `method3` | 74 | **resolved** | `toolkit/base/d.java` (interface) | `getModel` | see `findings.md` §1 — whole `d` interface is the ModelProvider |
-| `method3400` | 72 | TBD | — | — | likely paired with `method3399` (72 refs) |
-| `method3399` | 72 | TBD | — | — | probably `method3400`'s pair |
+| `method3400` | 0 | **resolved** | `Component182` (`Buffer`) | `writeFloatBE` | big-endian IEEE-754 float writer |
+| `method3399` | 0 | **resolved** | `Component182` (`Buffer`) | `writeFloatLE` | little-endian IEEE-754 float writer |
 | `method835` | 69 | TBD | — | — | already-named in `Component192` callsites as `lookup`? check |
 | `method1710` | 64 | TBD | — | — | |
 | `method3849` | 58 | TBD | — | — | |

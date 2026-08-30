@@ -268,6 +268,15 @@ lote small (15 renames max) and re-run the gate after each batch.
 
 ---
 
+## lote 59 — `Component182` float writers *(160 refs freed)*
+
+**STATUS: DONE** — `method3399` → `writeFloatLE` and `method3400` →
+`writeFloatBE`, including all call sites.
+
+The method bodies convert floats with `Stream.floatToRawIntBits` and write the
+four bytes in little- and big-endian order respectively. This is a mechanical
+rename with one definition per method and no reflection bridge.
+
 ## lote 58+ — Long tail
 
 After the above, the high-fan-out tokens are gone. The remaining

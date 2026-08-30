@@ -120,13 +120,13 @@ final class NodeSub32
         if (i_32_ > 255) i_32_ = 255;
         int i_33_ = (int) (f_28_ * (float) (0xff & i_30_));
         if (aHa_Sub2_6951.aBoolean7775) {
-            aClass348_Sub49_Sub1_6953.method3400((float) i_6_, (byte) -122);
-            aClass348_Sub49_Sub1_6953.method3400((float) i_8_, (byte) -115);
-            aClass348_Sub49_Sub1_6953.method3400((float) i_7_, (byte) -94);
+            aClass348_Sub49_Sub1_6953.writeFloatBE((float) i_6_, (byte) -122);
+            aClass348_Sub49_Sub1_6953.writeFloatBE((float) i_8_, (byte) -115);
+            aClass348_Sub49_Sub1_6953.writeFloatBE((float) i_7_, (byte) -94);
         } else {
-            aClass348_Sub49_Sub1_6953.method3399(18291, (float) i_6_);
-            aClass348_Sub49_Sub1_6953.method3399(18291, (float) i_8_);
-            aClass348_Sub49_Sub1_6953.method3399(18291, (float) i_7_);
+            aClass348_Sub49_Sub1_6953.writeFloatLE(18291, (float) i_6_);
+            aClass348_Sub49_Sub1_6953.writeFloatLE(18291, (float) i_8_);
+            aClass348_Sub49_Sub1_6953.writeFloatLE(18291, (float) i_7_);
         }
         if (i_33_ > 255) i_33_ = 255;
         aClass348_Sub49_Sub1_6953.writeByte(false, i_31_);

@@ -3,7 +3,7 @@
 This file is the live **research log** — concrete evidence discovered during
 the deobfuscation discovery pass. Use it as the input for lote planning.
 
-Last updated: 2026-08-30 (lote 52 executed; lote 51/54 marked done).
+Last updated: 2026-08-30 (lote 59 executed; lote 51/54 marked done).
 
 ---
 
@@ -207,25 +207,37 @@ holds the 30+ `aClass239_SubN_NNNN` sub-preference fields.
 
 ---
 
-## 7. Unresolved tokens (need more work)
+## 7. Lote 59 — `Component182` float writers (CONFIRMED, executed)
+
+`Component182` is a `Buffer` subclass. Its paired methods serialize an IEEE-754
+float into the buffer using opposite byte orders:
+
+| Old token | New name | Evidence |
+|---|---|---|
+| `method3399` | `writeFloatLE` | `floatToRawIntBits`, then bytes are emitted least-significant first |
+| `method3400` | `writeFloatBE` | `floatToRawIntBits`, then bytes are emitted most-significant first |
+
+Both methods have one definition and their call sites are limited to
+`Component182` users. No reflection strings reference them. This resolves
+160 call-site tokens without changing wire behavior.
+
+## 8. Unresolved tokens (need more work)
 
 These remain TBD from the top-tokens list:
 
-- `method3494`, `method3493`, `method3738`, `method3850`, `method3850`
+- `method3494`, `method3493`, `method3738`, `method3850`, `method3849`
   (high call-site counts, not yet investigated)
-- `method3400`, `method3399` (likely paired)
+- `method835` (69 refs; defining class and role still need confirmation)
 - `anInt3138` (174 refs, 3xxx range — probably particle count or scan counter)
 - `anInt4592`, `anInt4588` (4xxx range, possibly NPC list / entity array)
 - `anInt9139`, `anInt8983` (9xxx range — usually widgets / interfaces)
-- `anInt1678` (124 refs, in `Component8` — read from `aHa_Sub1_8460.anInt7477`
-  which is the toolkit's **canvasWidth** constant; rename to `canvasWidth`)
 
 **Next session** can pick any of these. Recommended order based on fan-out:
 `anInt3138` → `anInt4592` → `method3493/3494` (likely paired).
 
 ---
 
-## 8. lote 50 executed — interface name `d` DEFERRED (IMPORTANT)
+## 9. lote 50 executed — interface name `d` DEFERRED (IMPORTANT)
 
 lote 50 renamed `method1-6`→`getVertices/getModelCount/getModel/isModelLoaded/
 getTriangles/getIndices`, `aD####`→`modelProvider`, `Component319`→`Model`,
