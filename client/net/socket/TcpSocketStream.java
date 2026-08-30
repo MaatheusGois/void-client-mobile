@@ -98,7 +98,7 @@ final class TcpSocketStream extends SocketStream {
                             if ((class348_sub9.aClass348_Sub10_6688) != null) {
                                 if ((class348_sub9.aClass348_Sub19_Sub1_6686) == null) class348_sub9.aClass348_Sub19_Sub1_6686 = class348_sub9.aClass348_Sub10_6688.method2791(new int[]{22050});
                                 if ((class348_sub9.aClass348_Sub19_Sub1_6686) != null) {
-                                    NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911((class348_sub9.aClass348_Sub19_Sub1_6686), i_15_, i_9_ << 6, i_10_));
+                                    NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode((class348_sub9.aClass348_Sub19_Sub1_6686), i_15_, i_9_ << 6, i_10_));
                                     class348_sub16_sub5.method2917(-1);
                                     PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                     class348_sub9.aClass348_Sub16_Sub5_6676 = class348_sub16_sub5;
@@ -108,7 +108,7 @@ final class TcpSocketStream extends SocketStream {
                             Component277 class317 = Component277.method2372(Component30.aClass45_1878, (class348_sub9.anInt6685), 0);
                             if (class317 != null) {
                                 NodeSub19Sub1 class348_sub19_sub1 = class317.method2369().method2944(DisplayModeInfo.aClass163_1050);
-                                NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911(class348_sub19_sub1, i_15_, i_9_ << 6, i_10_));
+                                NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, i_15_, i_9_ << 6, i_10_));
                                 class348_sub16_sub5.method2917(-1);
                                 PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                 class348_sub9.aClass348_Sub16_Sub5_6676 = class348_sub16_sub5;
@@ -127,7 +127,7 @@ final class TcpSocketStream extends SocketStream {
                                     if ((class348_sub9.aClass348_Sub10_6683) != null) {
                                         if ((class348_sub9.aClass348_Sub19_Sub1_6692) == null) class348_sub9.aClass348_Sub19_Sub1_6692 = (class348_sub9.aClass348_Sub10_6683.method2791(new int[]{22050}));
                                         if ((class348_sub9.aClass348_Sub19_Sub1_6692) != null) {
-                                            NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911((class348_sub9.aClass348_Sub19_Sub1_6692), i_16_, i_9_ << 6, i_10_));
+                                            NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode((class348_sub9.aClass348_Sub19_Sub1_6692), i_16_, i_9_ << 6, i_10_));
                                             class348_sub16_sub5.method2917(0);
                                             PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                             class348_sub9.aClass348_Sub16_Sub5_6673 = class348_sub16_sub5;
@@ -139,7 +139,7 @@ final class TcpSocketStream extends SocketStream {
                                     Component277 class317 = Component277.method2372((Component30.aClass45_1878), (class348_sub9.anIntArray6697[i_18_]), 0);
                                     if (class317 == null) break;
                                     NodeSub19Sub1 class348_sub19_sub1 = (class317.method2369().method2944(DisplayModeInfo.aClass163_1050));
-                                    NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.method2911(class348_sub19_sub1, i_16_, i_9_ << 6, i_10_));
+                                    NodeSub16Sub5 class348_sub16_sub5 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, i_16_, i_9_ << 6, i_10_));
                                     class348_sub16_sub5.method2917(0);
                                     PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                                     class348_sub9.anInt6670 = ((int) ((double) (-(class348_sub9.anInt6680) + (class348_sub9.anInt6668)) * Math.random()) + (class348_sub9.anInt6680));

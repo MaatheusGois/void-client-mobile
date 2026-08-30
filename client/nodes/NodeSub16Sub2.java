@@ -45,12 +45,12 @@ final class NodeSub16Sub2
     }
 
     private final synchronized HashNodeSub4 method2828(int i) {
-        if (i != -23076) method2817(null, 71, 78);
+        if (i != -23076) synthesizeSamples(null, 71, 78);
         anInt8872++;
         return (HashNodeSub4) aClass262_8861.first(i + 23080);
     }
 
-    final NodeSub16 method2818() {
+    final NodeSub16 getPreviousNode() {
         anInt8877++;
         return null;
     }
@@ -87,7 +87,7 @@ final class NodeSub16Sub2
         }
     }
 
-    final synchronized void method2817(int[] is, int i, int i_2_) {
+    final synchronized void synthesizeSamples(int[] is, int i, int i_2_) {
         anInt8863++;
         if (!aBoolean8886) {
             if (method2828(-23076) == null) {
@@ -148,7 +148,7 @@ final class NodeSub16Sub2
         }
     }
 
-    final NodeSub16 method2816() {
+    final NodeSub16 getNextNode() {
         anInt8867++;
         return null;
     }
@@ -162,7 +162,7 @@ final class NodeSub16Sub2
     final synchronized double method2837(int i) {
         anInt8868++;
         if (anInt8888 < 1) return -1.0;
-        if (i != -21987) method2818();
+        if (i != -21987) getPreviousNode();
         HashNodeSub4 class348_sub42_sub4 = (HashNodeSub4) aClass262_8861.first(4);
         if (class348_sub42_sub4 == null) return -1.0;
         return ((double) -((float) (class348_sub42_sub4.aShortArrayArray9518[0]).length / (float) Component231.sampleRate) + class348_sub42_sub4.aDouble9512);
@@ -181,7 +181,7 @@ final class NodeSub16Sub2
         return class348_sub42_sub4;
     }
 
-    final synchronized void method2819(int i) {
+    final synchronized void skip(int i) {
         anInt8864++;
         if (!aBoolean8886) {
             for (; ; ) {
@@ -203,7 +203,7 @@ final class NodeSub16Sub2
         }
     }
 
-    final int method2821() {
+    final int getDuration() {
         anInt8873++;
         return 1;
     }

@@ -27,7 +27,7 @@ final class NodeSub16Sub5
         if (i == 0) method2926(i_0_, i_1_);
         else {
             int i_2_ = method2904(i_0_, i_1_);
-            int i_3_ = method2889(i_0_, i_1_);
+            int i_3_ = decibelsToAmplitude(i_0_, i_1_);
             if (anInt8970 == i_2_ && anInt8974 == i_3_) anInt8972 = 0;
             else {
                 int i_4_ = i_0_ - anInt8976;
@@ -47,26 +47,26 @@ final class NodeSub16Sub5
         }
     }
 
-    private static final int method2889(int i, int i_5_) {
+    private static final int decibelsToAmplitude(int i, int i_5_) {
         if (i_5_ < 0) return -i;
         return (int) ((double) i * Math.sqrt((double) i_5_ * 1.220703125E-4) + 0.5);
     }
 
-    final boolean method2890() {
+    final boolean isExhausted() {
         return anInt8983 < 0 || anInt8983 >= (((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984).length << 8;
     }
 
-    final synchronized void method2891(boolean bool) {
+    final synchronized void togglePhase(boolean bool) {
         anInt8979 = (anInt8979 ^ anInt8979 >> 31) + (anInt8979 >>> 31);
         if (bool) anInt8979 = -anInt8979;
     }
 
-    final synchronized int method2892() {
+    final synchronized int getSample() {
         if (anInt8977 < 0) return -1;
         return anInt8977;
     }
 
-    final int method2820() {
+    final int getVolume() {
         int i = anInt8976 * 3 >> 6;
         i = (i ^ i >> 31) + (i >>> 31);
         if (anInt8980 == 0) i -= (i * anInt8983 / ((((NodeSub19Sub1) this.aClass348_Sub19_6787).aByteArray8984).length << 8));
@@ -155,7 +155,7 @@ final class NodeSub16Sub5
         if (anInt8972 != 0) {
             if (anInt8969 == -2147483648) anInt8969 = 0;
             anInt8972 = 0;
-            method2918();
+            resetPhase();
         }
     }
 
@@ -199,7 +199,7 @@ final class NodeSub16Sub5
         if (i == -2147483648) i = i_35_ = i_36_ = 0;
         else {
             i_35_ = method2904(i, anInt8977);
-            i_36_ = method2889(i, anInt8977);
+            i_36_ = decibelsToAmplitude(i, anInt8977);
         }
         if (anInt8976 != i || anInt8970 != i_35_ || anInt8974 != i_36_) {
             if (anInt8976 < i) {
@@ -231,7 +231,7 @@ final class NodeSub16Sub5
             this.unlink((byte) 79);
             return true;
         }
-        method2918();
+        resetPhase();
         return false;
     }
 
@@ -374,7 +374,7 @@ final class NodeSub16Sub5
         return i_64_;
     }
 
-    final int method2821() {
+    final int getDuration() {
         if (anInt8969 == 0 && anInt8972 == 0) return 0;
         return 1;
     }
@@ -492,7 +492,7 @@ final class NodeSub16Sub5
         return i_98_ >> 1;
     }
 
-    static final NodeSub16Sub5 method2911(NodeSub19Sub1 class348_sub19_sub1, int i, int i_104_, int i_105_) {
+    static final NodeSub16Sub5 createSynthNode(NodeSub19Sub1 class348_sub19_sub1, int i, int i_104_, int i_105_) {
         if (class348_sub19_sub1.aByteArray8984 == null || (class348_sub19_sub1.aByteArray8984).length == 0) return null;
         return new NodeSub16Sub5(class348_sub19_sub1, i, i_104_, i_105_);
     }
@@ -558,28 +558,28 @@ final class NodeSub16Sub5
     }
 
     final synchronized void method2915(int i) {
-        method2926(i << 6, method2892());
+        method2926(i << 6, getSample());
     }
 
-    final NodeSub16 method2818() {
+    final NodeSub16 getPreviousNode() {
         return null;
     }
 
-    final synchronized void method2916(int i, int i_124_) {
-        method2888(i, i_124_, method2892());
+    final synchronized void setPitch(int i, int i_124_) {
+        method2888(i, i_124_, getSample());
     }
 
     final synchronized void method2917(int i) {
         anInt8980 = i;
     }
 
-    private final void method2918() {
+    private final void resetPhase() {
         anInt8976 = anInt8969;
         anInt8970 = method2904(anInt8969, anInt8977);
-        anInt8974 = method2889(anInt8969, anInt8977);
+        anInt8974 = decibelsToAmplitude(anInt8969, anInt8977);
     }
 
-    private final int method2919(int[] is, int i, int i_125_, int i_126_, int i_127_) {
+    private final int interpolateSamples(int[] is, int i, int i_125_, int i_126_, int i_127_) {
         while (anInt8972 > 0) {
             int i_128_ = i + anInt8972;
             if (i_128_ > i_126_) i_128_ = i_126_;
@@ -680,11 +680,11 @@ final class NodeSub16Sub5
     }
 
     private final synchronized void method2923(int i) {
-        method2926(i, method2892());
+        method2926(i, getSample());
     }
 
-    final synchronized void method2817(int[] is, int i, int i_159_) {
-        if (anInt8969 == 0 && anInt8972 == 0) method2819(i_159_);
+    final synchronized void synthesizeSamples(int[] is, int i, int i_159_) {
+        if (anInt8969 == 0 && anInt8972 == 0) skip(i_159_);
         else {
             NodeSub19Sub1 class348_sub19_sub1 = ((NodeSub19Sub1) this.aClass348_Sub19_6787);
             int i_160_ = anInt8975 << 8;
@@ -719,7 +719,7 @@ final class NodeSub16Sub5
                         anInt8979 = -anInt8979;
                     }
                     for (; ; ) {
-                        i_164_ = method2919(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8982 - 1]));
+                        i_164_ = interpolateSamples(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8982 - 1]));
                         if (anInt8983 < i_161_) break;
                         anInt8983 = i_161_ + i_161_ - 1 - anInt8983;
                         anInt8979 = -anInt8979;
@@ -736,7 +736,7 @@ final class NodeSub16Sub5
                     }
                 } else {
                     for (; ; ) {
-                        i_164_ = method2919(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8975]));
+                        i_164_ = interpolateSamples(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8975]));
                         if (anInt8983 < i_161_) break;
                         anInt8983 = i_160_ + (anInt8983 - i_160_) % i_163_;
                     }
@@ -753,7 +753,7 @@ final class NodeSub16Sub5
                                 if (--anInt8980 == 0) break;
                             }
                             do {
-                                i_164_ = method2919(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8982 - 1]));
+                                i_164_ = interpolateSamples(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8982 - 1]));
                                 if (anInt8983 < i_161_) return;
                                 anInt8983 = i_161_ + i_161_ - 1 - anInt8983;
                                 anInt8979 = -anInt8979;
@@ -778,7 +778,7 @@ final class NodeSub16Sub5
                             }
                         } else {
                             for (; ; ) {
-                                i_164_ = method2919(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8975]));
+                                i_164_ = interpolateSamples(is, i_164_, i_161_, i_159_, (class348_sub19_sub1.aByteArray8984[anInt8975]));
                                 if (anInt8983 < i_161_) return;
                                 int i_166_ = (anInt8983 - i_160_) / i_163_;
                                 if (i_166_ >= anInt8980) {
@@ -800,7 +800,7 @@ final class NodeSub16Sub5
                         this.unlink((byte) 24);
                     }
                 } else {
-                    method2919(is, i_164_, i_162_, i_159_, 0);
+                    interpolateSamples(is, i_164_, i_162_, i_159_, 0);
                     if (anInt8983 >= i_162_) {
                         anInt8983 = i_162_;
                         method2896();
@@ -818,7 +818,7 @@ final class NodeSub16Sub5
         anInt8983 = i;
     }
 
-    final NodeSub16 method2816() {
+    final NodeSub16 getNextNode() {
         return null;
     }
 
@@ -845,10 +845,10 @@ final class NodeSub16Sub5
         anInt8969 = i;
         anInt8977 = i_178_;
         anInt8972 = 0;
-        method2918();
+        resetPhase();
     }
 
-    final synchronized void method2819(int i) {
+    final synchronized void skip(int i) {
         if (anInt8972 > 0) {
             if (i >= anInt8972) {
                 if (anInt8969 == -2147483648) {
@@ -858,7 +858,7 @@ final class NodeSub16Sub5
                     i = anInt8972;
                 }
                 anInt8972 = 0;
-                method2918();
+                resetPhase();
             } else {
                 anInt8976 += anInt8973 * i;
                 anInt8970 += anInt8971 * i;
@@ -973,7 +973,7 @@ final class NodeSub16Sub5
         anInt8969 = i_185_;
         anInt8977 = i_186_;
         anInt8983 = 0;
-        method2918();
+        resetPhase();
     }
 
     private final int method2927(int[] is, int i, int i_187_, int i_188_, int i_189_) {

@@ -12,20 +12,20 @@ abstract class NodeSub16
     int anInt6786;
     NodeSub19 aClass348_Sub19_6787;
 
-    final void method2815(int[] is, int i, int i_0_) {
-        if (this.aBoolean6784) method2817(is, i, i_0_);
-        else method2819(i_0_);
+    final void synthesize(int[] is, int i, int i_0_) {
+        if (this.aBoolean6784) synthesizeSamples(is, i, i_0_);
+        else skip(i_0_);
     }
 
-    abstract NodeSub16 method2816();
+    abstract NodeSub16 getNextNode();
 
-    abstract void method2817(int[] is, int i, int i_1_);
+    abstract void synthesizeSamples(int[] is, int i, int i_1_);
 
-    abstract NodeSub16 method2818();
+    abstract NodeSub16 getPreviousNode();
 
-    abstract void method2819(int i);
+    abstract void skip(int i);
 
-    int method2820() {
+    int getVolume() {
         return 255;
     }
 
@@ -33,5 +33,5 @@ abstract class NodeSub16
         /* empty */
     }
 
-    abstract int method2821();
+    abstract int getDuration();
 }

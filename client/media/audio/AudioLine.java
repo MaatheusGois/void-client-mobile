@@ -140,7 +140,7 @@ class AudioLine {
         if (aClass348_Sub16_3604 != null && anInt3615 <= 0) {
             anInt3615 += Component231.sampleRate >> 4;
             ColorTagNode.method2814(aClass348_Sub16_3604, 112);
-            method2085(-1846918107, aClass348_Sub16_3604, aClass348_Sub16_3604.method2820());
+            method2085(-1846918107, aClass348_Sub16_3604, aClass348_Sub16_3604.getVolume());
             int i_6_ = 0;
             int i_7_ = 255;
             int i_8_ = 7;
@@ -168,15 +168,15 @@ class AudioLine {
                                 class348_sub16_12_ = (class348_sub16_12_.aClass348_Sub16_6785);
                             } else {
                                 class348_sub16_12_.aBoolean6784 = true;
-                                int i_13_ = class348_sub16_12_.method2821();
+                                int i_13_ = class348_sub16_12_.getDuration();
                                 i_6_ += i_13_;
                                 if (class348_sub19 != null) class348_sub19.anInt6824 += i_13_;
                                 if (i_6_ >= anInt3601) break while_88_;
-                                NodeSub16 class348_sub16_14_ = class348_sub16_12_.method2816();
+                                NodeSub16 class348_sub16_14_ = class348_sub16_12_.getNextNode();
                                 if (class348_sub16_14_ != null) {
                                     int i_15_ = (class348_sub16_12_.anInt6786);
-                                    for (/**/; class348_sub16_14_ != null; class348_sub16_14_ = class348_sub16_12_.method2818())
-                                        method2085(-1846918107, class348_sub16_14_, (i_15_ * class348_sub16_14_.method2820() >> 8));
+                                    for (/**/; class348_sub16_14_ != null; class348_sub16_14_ = class348_sub16_12_.getPreviousNode())
+                                        method2085(-1846918107, class348_sub16_14_, (i_15_ * class348_sub16_14_.getVolume() >> 8));
                                 }
                                 NodeSub16 class348_sub16_16_ = (class348_sub16_12_.aClass348_Sub16_6785);
                                 class348_sub16_12_.aClass348_Sub16_6785 = null;
@@ -203,7 +203,7 @@ class AudioLine {
             }
         }
         if (anInt3615 < 0) anInt3615 = 0;
-        if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.method2817(is, 0, i);
+        if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.synthesizeSamples(is, 0, i);
         aLong3602 = Component240.currentTimeMillis(-102);
     }
 
@@ -229,7 +229,7 @@ class AudioLine {
         anInt3611++;
         anInt3615 -= i;
         if (anInt3615 < 0) anInt3615 = 0;
-        if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.method2819(i);
+        if (aClass348_Sub16_3604 != null) aClass348_Sub16_3604.skip(i);
         if (i_19_ > -75) method2090(13, 6, true, (byte) 40, 67, -121, -107);
     }
 

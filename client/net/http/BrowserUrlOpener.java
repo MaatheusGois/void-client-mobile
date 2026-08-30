@@ -94,7 +94,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         if (i_0_ != -17) method2839(-112, -58, -95);
     }
 
-    final synchronized NodeSub16 method2818() {
+    final synchronized NodeSub16 getPreviousNode() {
         anInt8946++;
         return null;
     }
@@ -341,7 +341,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         try {
             class348_sub43.anInt7086 = Component231.sampleRate / 100;
             anInt8952++;
-            if (class348_sub43.anInt7087 >= 0 && ((class348_sub43.aClass348_Sub16_Sub5_7081) == null || class348_sub43.aClass348_Sub16_Sub5_7081.method2890())) {
+            if (class348_sub43.anInt7087 >= 0 && ((class348_sub43.aClass348_Sub16_Sub5_7081) == null || class348_sub43.aClass348_Sub16_Sub5_7081.isExhausted())) {
                 class348_sub43.method3299((byte) 36);
                 class348_sub43.unlink((byte) 66);
                 if (class348_sub43.anInt7088 > 0 && (class348_sub43 == (aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088]))) aClass348_Sub43ArrayArray8915[class348_sub43.anInt7067][class348_sub43.anInt7088] = null;
@@ -383,8 +383,8 @@ final class BrowserUrlOpener extends NodeSub16 {
             }
             if (bool) {
                 class348_sub43.aClass348_Sub16_Sub5_7081.method2902(class348_sub43.anInt7086);
-                if (is == null) class348_sub43.aClass348_Sub16_Sub5_7081.method2819(i);
-                else class348_sub43.aClass348_Sub16_Sub5_7081.method2817(is, i_46_, i);
+                if (is == null) class348_sub43.aClass348_Sub16_Sub5_7081.skip(i);
+                else class348_sub43.aClass348_Sub16_Sub5_7081.synthesizeSamples(is, i_46_, i);
                 if (class348_sub43.aClass348_Sub16_Sub5_7081.method2895()) aClass348_Sub16_Sub1_8958.aClass348_Sub16_Sub4_8855.method2883(class348_sub43.aClass348_Sub16_Sub5_7081);
                 class348_sub43.method3299((byte) -100);
                 if (class348_sub43.anInt7087 >= 0) {
@@ -436,9 +436,9 @@ final class BrowserUrlOpener extends NodeSub16 {
                 class348_sub43.anInt7069 = i;
                 class348_sub43.anInt7090 = 0;
                 class348_sub43.anInt7084 = 0;
-                if (this.anIntArray8914[i_51_] == 0) class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.method2911(class348_sub19_sub1, method2845(0, class348_sub43), method2868(class348_sub43, i + -82), method2848(class348_sub43, (byte) -70)));
+                if (this.anIntArray8914[i_51_] == 0) class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, method2845(0, class348_sub43), method2868(class348_sub43, i + -82), method2848(class348_sub43, (byte) -70)));
                 else {
-                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.method2911(class348_sub19_sub1, method2845(0, class348_sub43), 0, method2848(class348_sub43, (byte) -70)));
+                    class348_sub43.aClass348_Sub16_Sub5_7081 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, method2845(0, class348_sub43), 0, method2848(class348_sub43, (byte) -70)));
                     method2874(i ^ 0x7a, (class348_sub17.aShortArray6795[i_50_]) < 0, class348_sub43);
                 }
                 if (class348_sub17.aShortArray6795[i_50_] < 0) class348_sub43.aClass348_Sub16_Sub5_7081.method2917(-1);
@@ -544,7 +544,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized void method2819(int i) {
+    final synchronized void skip(int i) {
         anInt8908++;
         if (aClass204_8944.method1491()) {
             int i_63_ = (aClass204_8944.anInt2683 * anInt8921 / Component231.sampleRate);
@@ -556,12 +556,12 @@ final class BrowserUrlOpener extends NodeSub16 {
                 }
                 int i_64_ = (int) ((-1L + -aLong8959 + aLong8957 + (long) i_63_) / (long) i_63_);
                 aLong8959 += (long) i_64_ * (long) i_63_;
-                aClass348_Sub16_Sub1_8958.method2819(i_64_);
+                aClass348_Sub16_Sub1_8958.skip(i_64_);
                 i -= i_64_;
                 method2856((byte) 124);
             } while (aClass204_8944.method1491());
         }
-        aClass348_Sub16_Sub1_8958.method2819(i);
+        aClass348_Sub16_Sub1_8958.skip(i);
     }
 
     private final void method2859(int i, int i_65_, int i_66_) {
@@ -570,12 +570,12 @@ final class BrowserUrlOpener extends NodeSub16 {
     }
 
     final synchronized boolean method2860(int i) {
-        if (i <= 94) method2818();
+        if (i <= 94) getPreviousNode();
         anInt8949++;
         return aClass204_8944.method1491();
     }
 
-    final synchronized void method2817(int[] is, int i, int i_67_) {
+    final synchronized void synthesizeSamples(int[] is, int i, int i_67_) {
         try {
             anInt8898++;
             if (aClass204_8944.method1491()) {
@@ -588,13 +588,13 @@ final class BrowserUrlOpener extends NodeSub16 {
                     }
                     int i_69_ = (int) ((-1L + (long) i_68_ + aLong8957 + -aLong8959) / (long) i_68_);
                     aLong8959 += (long) i_68_ * (long) i_69_;
-                    aClass348_Sub16_Sub1_8958.method2817(is, i, i_69_);
+                    aClass348_Sub16_Sub1_8958.synthesizeSamples(is, i, i_69_);
                     i += i_69_;
                     i_67_ -= i_69_;
                     method2856((byte) 124);
                 } while (aClass204_8944.method1491());
             }
-            aClass348_Sub16_Sub1_8958.method2817(is, i, i_67_);
+            aClass348_Sub16_Sub1_8958.synthesizeSamples(is, i, i_67_);
         } catch (RuntimeException runtimeexception) {
             throw NpcDefinition.wrapThrowable(runtimeexception, ("ma.C(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_67_ + ')'));
         }
@@ -788,7 +788,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         }
     }
 
-    final synchronized NodeSub16 method2816() {
+    final synchronized NodeSub16 getNextNode() {
         anInt8912++;
         return aClass348_Sub16_Sub1_8958;
     }
@@ -837,7 +837,7 @@ final class BrowserUrlOpener extends NodeSub16 {
                 i_94_ <<= 8;
                 if (i_94_ <= i_95_) {
                     i_95_ = i_94_ + i_94_ - 1 - i_95_;
-                    class348_sub43.aClass348_Sub16_Sub5_7081.method2891(true);
+                    class348_sub43.aClass348_Sub16_Sub5_7081.togglePhase(true);
                 }
             } else i_95_ = (int) (((long) i_94_ * (long) (this.anIntArray8914[(class348_sub43.anInt7067)])) >> 6);
             if (i > 93) class348_sub43.aClass348_Sub16_Sub5_7081.method2924(i_95_);
@@ -902,7 +902,7 @@ final class BrowserUrlOpener extends NodeSub16 {
         anInt8913++;
     }
 
-    final synchronized int method2821() {
+    final synchronized int getDuration() {
         anInt8901++;
         return 0;
     }

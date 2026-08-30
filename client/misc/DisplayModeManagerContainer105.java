@@ -135,7 +135,7 @@ final class DisplayModeManagerContainer105
                             if (class10.aByte180 != 1) {
                                 if (class10.isPositionalSound((byte) -112)) class348_sub19_sub1 = (class10.aClass348_Sub19_Sub1_189);
                             } else class348_sub19_sub1 = class10.aClass317_183.method2369().method2944(DisplayModeInfo.aClass163_1050);
-                            NodeSub16Sub5 class348_sub16_sub5 = (class10.aClass348_Sub16_Sub5_176 = (NodeSub16Sub5.method2911(class348_sub19_sub1, class10.anInt173, i_6_, i_5_)));
+                            NodeSub16Sub5 class348_sub16_sub5 = (class10.aClass348_Sub16_Sub5_176 = (NodeSub16Sub5.createSynthNode(class348_sub19_sub1, class10.anInt173, i_6_, i_5_)));
                             class348_sub16_sub5.method2917(-1 + class10.anInt177);
                             PlayerState.aClass348_Sub16_Sub4_7065.method2883(class348_sub16_sub5);
                         }

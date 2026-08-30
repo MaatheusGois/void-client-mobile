@@ -76,7 +76,7 @@ final class ColorTagNode extends Node {
         if (i >= 39) {
             if (class348_sub16.aClass348_Sub19_6787 != null) class348_sub16.aClass348_Sub19_6787.anInt6824 = 0;
             anInt6771++;
-            for (NodeSub16 class348_sub16_1_ = class348_sub16.method2816(); class348_sub16_1_ != null; class348_sub16_1_ = class348_sub16.method2818())
+            for (NodeSub16 class348_sub16_1_ = class348_sub16.getNextNode(); class348_sub16_1_ != null; class348_sub16_1_ = class348_sub16.getPreviousNode())
                 method2814(class348_sub16_1_, 40);
         }
     }

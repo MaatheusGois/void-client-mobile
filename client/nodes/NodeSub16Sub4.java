@@ -16,7 +16,7 @@ final class NodeSub16Sub4
         class348_sub16.unlink((byte) 94);
     }
 
-    final synchronized void method2819(int i) {
+    final synchronized void skip(int i) {
         do {
             if (anInt8967 < 0) {
                 method2884(i);
@@ -46,7 +46,7 @@ final class NodeSub16Sub4
         } while (i != 0);
     }
 
-    final NodeSub16 method2816() {
+    final NodeSub16 getNextNode() {
         return (NodeSub16) aClass262_8965.first(4);
     }
 
@@ -72,7 +72,7 @@ final class NodeSub16Sub4
 
     private final void method2884(int i) {
         for (NodeSub16 class348_sub16 = (NodeSub16) aClass262_8965.first(4); class348_sub16 != null; class348_sub16 = (NodeSub16) aClass262_8965.next((byte) 104))
-            class348_sub16.method2819(i);
+            class348_sub16.skip(i);
     }
 
     private final void method2885() {
@@ -86,22 +86,22 @@ final class NodeSub16Sub4
 
     private final void method2886(int[] is, int i, int i_2_) {
         for (NodeSub16 class348_sub16 = (NodeSub16) aClass262_8965.first(4); class348_sub16 != null; class348_sub16 = (NodeSub16) aClass262_8965.next((byte) 41))
-            class348_sub16.method2815(is, i, i_2_);
+            class348_sub16.synthesize(is, i, i_2_);
     }
 
     final synchronized int method2887() {
         return aClass262_8965.size(0);
     }
 
-    final NodeSub16 method2818() {
+    final NodeSub16 getPreviousNode() {
         return (NodeSub16) aClass262_8965.next((byte) 95);
     }
 
-    final int method2821() {
+    final int getDuration() {
         return 0;
     }
 
-    final synchronized void method2817(int[] is, int i, int i_3_) {
+    final synchronized void synthesizeSamples(int[] is, int i, int i_3_) {
         do {
             if (anInt8967 < 0) {
                 method2886(is, i, i_3_);
