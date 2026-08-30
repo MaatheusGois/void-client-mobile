@@ -80,7 +80,7 @@ final class AbstractShaderSub1
     final void method3527(int i, Interface18 interface18, int i_12_) {
         this.aHa_Sub3_4479.setActiveTexture((byte) 81, interface18);
         anInt7280++;
-        this.aHa_Sub3_4479.method3923(true, i);
+        this.aHa_Sub3_4479.swapInterval2(true, i);
         if (i_12_ == -16776) {
             /* empty */
         }

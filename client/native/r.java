@@ -26,7 +26,7 @@ abstract class r
         anInt9717++;
         if (bool != true) method3285(10);
         Component352.aClass101_624.method891(0, 0, (int) d);
-        Component158.aHa326.method3638(Component352.aClass101_624);
+        Component158.aHa326.loadModelviewMatrix(Component352.aClass101_624);
     }
 
     public static void method3285(int i) {

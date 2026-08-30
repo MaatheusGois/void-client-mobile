@@ -79,7 +79,7 @@ final class Component329
             long l = Component240.currentTimeMillis(-88);
             NodeSub8.toolkit.la();
             Component270.aClass101_2123.method894(0, DisplayModeManagerContainer64.anInt9037, 0);
-            NodeSub8.toolkit.method3638(Component270.aClass101_2123);
+            NodeSub8.toolkit.loadModelviewMatrix(Component270.aClass101_2123);
             NodeSub8.toolkit.DA(dimension.width / 2, dimension.height / 2, 512, 512);
             NodeSub8.toolkit.DualToolkit(1.0F);
             if (i_1_ >= -66) aClass190_5990 = null;
@@ -99,7 +99,7 @@ final class Component329
                     }
                 }
             }
-            NodeSub8.toolkit.method3633();
+            NodeSub8.toolkit.finish();
             long l_7_ = (long) (1000 * i_3_) / (Component240.currentTimeMillis(-86) + -l);
             NodeSub8.toolkit.GA(0);
             NodeSub8.toolkit.NativeHandle();

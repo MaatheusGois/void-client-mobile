@@ -44,7 +44,7 @@ abstract class GraphicsToolkit {
 
     abstract void F(int i, int i_7_);
 
-    abstract void method3626(int i, int i_8_) throws Exception_Sub1;
+    abstract void swapBuffers(int i, int i_8_) throws Exception_Sub1;
 
     abstract boolean method3627();
 
@@ -60,7 +60,7 @@ abstract class GraphicsToolkit {
 
     abstract int I();
 
-    abstract void method3631(int i);
+    abstract void setTextureUnitCount(int i);
 
     abstract void method3632(int[] is);
 
@@ -72,7 +72,7 @@ abstract class GraphicsToolkit {
      */
     abstract void DualToolkit(float f);
 
-    abstract void method3633();
+    abstract void finish();
 
     /**
      * Obfuscated short renamed incorrectly during class rename (was not NativeHandle).
@@ -86,14 +86,14 @@ abstract class GraphicsToolkit {
         int i_15_ = -90 % ((i - 8) / 33);
         anInt4573++;
         DefinitionSub26.aBooleanArray9351[this.anInt4567] = false;
-        method3652();
+        release();
     }
 
-    abstract void method3636(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, Shader var_aa, int i_21_, int i_22_);
+    abstract void drawTexturedRect(int i, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_, Shader var_aa, int i_21_, int i_22_);
 
     abstract Component6 c();//c
 
-    abstract void method3638(DisplayModeManagerContainer204 class101);
+    abstract void loadModelviewMatrix(DisplayModeManagerContainer204 class101);
 
     /**
      * Obfuscated short renamed incorrectly during class rename (was not ShaderImpl).
@@ -125,7 +125,7 @@ abstract class GraphicsToolkit {
 
     final void method3645(int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_) {
         anInt4563++;
-        method3709(i_41_, i, i_42_, i_45_, i_44_, 1);
+        drawColoredRect(i_41_, i, i_42_, i_45_, i_44_, 1);
         if (i_43_ != -8003) method3665(75, 67);
     }
 
@@ -146,7 +146,7 @@ abstract class GraphicsToolkit {
 
     abstract void P(int i, int i_55_, int i_56_, int i_57_, int i_58_);
 
-    abstract void method3652();
+    abstract void release();
 
     abstract void NodeBase(int i, int i_59_, int i_60_, int i_61_, int i_62_);
 
@@ -180,7 +180,7 @@ abstract class GraphicsToolkit {
 
     abstract void method3658(int i, int i_76_, int i_77_, int i_78_);
 
-    abstract void method3659(int i);
+    abstract void resetTextureState(int i);
 
     final void method3660(int i, int i_79_, int i_80_, int i_81_, boolean bool) {
         if (bool != true) H(-122, 91, -22, null);
@@ -247,9 +247,9 @@ abstract class GraphicsToolkit {
 
     abstract void method3672();
 
-    abstract void method3673();
+    abstract void copyScreen();
 
-    abstract void method3674(int i, int i_114_, int i_115_, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, int i_121_);
+    abstract void drawColoredQuad(int i, int i_114_, int i_115_, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, int i_121_);
 
     abstract void EA(int i, int i_122_, int i_123_, int i_124_);
 
@@ -260,7 +260,7 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract void method3676(int i, int i_130_, int i_131_, int i_132_, int i_133_, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_);
+    abstract void draw3DTriangle(int i, int i_130_, int i_131_, int i_132_, int i_133_, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_);
 
     abstract void method3677(Canvas canvas);
 
@@ -284,9 +284,9 @@ abstract class GraphicsToolkit {
 
     abstract Component24 method3683(int i, int i_143_, int i_144_, int i_145_, boolean bool);
 
-    abstract void method3684(Component122 class98);
+    abstract void renderModel(Component122 class98);
 
-    abstract void method3685(Component122 class98, int i);
+    abstract void renderModelEx(Component122 class98, int i);
 
     abstract void K(int[] is);
 
@@ -306,10 +306,10 @@ abstract class GraphicsToolkit {
 
     abstract void method3687(Interface4 interface4);
 
-    abstract void method3688(int i, int i_158_, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_);
+    abstract void setLineWidth(int i, int i_158_, int i_159_, int i_160_, int i_161_, int i_162_, int i_163_);
 
     final void method3689(byte i) throws Exception_Sub1 {
-        method3626(0, 0);
+        swapBuffers(0, 0);
         if (i >= 53) anInt4572++;
     }
 
@@ -360,7 +360,7 @@ abstract class GraphicsToolkit {
 
     abstract NodeBase method3702(int i);
 
-    abstract void method3703(int i, int i_184_, int i_185_, int i_186_, int i_187_, int i_188_, Shader var_aa, int i_189_, int i_190_, int i_191_, int i_192_, int i_193_);
+    abstract void drawTexturedQuad(int i, int i_184_, int i_185_, int i_186_, int i_187_, int i_188_, Shader var_aa, int i_189_, int i_190_, int i_191_, int i_192_, int i_193_);
 
     abstract int method3704();
 
@@ -390,7 +390,7 @@ abstract class GraphicsToolkit {
 
     abstract boolean method3708();
 
-    abstract void method3709(int i, int i_207_, int i_208_, int i_209_, int i_210_, int i_211_);
+    abstract void drawColoredRect(int i, int i_207_, int i_208_, int i_209_, int i_210_, int i_211_);
 
     abstract void method3710();
 

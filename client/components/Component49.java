@@ -80,7 +80,7 @@ final class Component49
             if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.fillRect3D(i_7_, i_8_, aClass125_4685.anInt4929, aClass125_4685.anInt4923, aClass125_4685.anInt4917, 0);
             i_8_ += method1855(5, class295.aString3756, true, NodeList.aClass324_3326, i_7_, i_8_) * 12;
             i_8_ += 8;
-            if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.method3709(i_7_, i_8_, i_7_ + aClass125_4685.anInt4929 + -1, i_8_, aClass125_4685.anInt4917, 0);
+            if (aClass125_4685.aBoolean4914) NodeSub8.toolkit.drawColoredRect(i_7_, i_8_, i_7_ + aClass125_4685.anInt4929 + -1, i_8_, aClass125_4685.anInt4917, 0);
             i_8_ = ++i_8_ + method1855(5, class295.aString3754, true, NodeList.aClass324_3326, i_7_, i_8_) * 12;
             i_8_ += 5;
             i_8_ += method1855(5, class295.aString3758, true, NodeList.aClass324_3326, i_7_, i_8_) * 12;

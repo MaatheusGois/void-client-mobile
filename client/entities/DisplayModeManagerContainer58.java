@@ -603,8 +603,8 @@ abstract class DisplayModeManagerContainer58
         Component175.aShortArrayArray5847 = null;
         if (LoggedOutDefinition.aClass293Array9432 != null) {
             Component92.method1978();
-            JaclibLoader.toolkit.method3631(1);
-            JaclibLoader.toolkit.method3659(0);
+            JaclibLoader.toolkit.setTextureUnitCount(1);
+            JaclibLoader.toolkit.resetTextureState(0);
         }
         if (Component144.aClass315Array3982 != null) Component144.aClass315Array3982 = null;
         JaclibLoader.toolkit = null;

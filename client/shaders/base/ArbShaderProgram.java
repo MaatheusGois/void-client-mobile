@@ -144,7 +144,7 @@ final class ArbShaderProgram extends ShaderProgram {
         if (class258 == null) {
             if (!aBoolean6183) {
                 this.aHa_Sub2_3684.bindTexture((byte) -114, (this.aHa_Sub2_3684.aClass258_Sub3_7827));
-                this.aHa_Sub2_3684.method3761(0, 1);
+                this.aHa_Sub2_3684.setTextureEnvMode(0, 1);
                 this.aHa_Sub2_3684.glTexEnvCombine(34168, 768, (byte) -87, 0);
                 this.aHa_Sub2_3684.glTexEnvCombineMode(false, 0, 770, 34168);
                 aBoolean6183 = true;
@@ -156,7 +156,7 @@ final class ArbShaderProgram extends ShaderProgram {
                 aBoolean6183 = false;
             }
             this.aHa_Sub2_3684.bindTexture((byte) -105, class258);
-            this.aHa_Sub2_3684.method3761(0, i_8_);
+            this.aHa_Sub2_3684.setTextureEnvMode(0, i_8_);
         }
         if (i < -89) anInt6185++;
     }

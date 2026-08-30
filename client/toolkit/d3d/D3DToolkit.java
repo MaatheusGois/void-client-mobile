@@ -49,12 +49,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         throw new IllegalArgumentException();
     }
 
-    final void method3928(int i) {
+    final void processEvents(int i) {
         aD3DLIGHT9789.SetAmbient(this.aFloat8180 * this.aFloat8093, this.aFloat8093 * this.aFloat8087, this.aFloat8168 * this.aFloat8093, (float) i);
         aBoolean9801 = false;
     }
 
-    final void method3829(DisplayModeManagerContainer88 class70, int i, byte i_0_, boolean bool) {
+    final void drawElements(DisplayModeManagerContainer88 class70, int i, byte i_0_, boolean bool) {
         if (i_0_ == 80) {
             int i_1_ = 0;
             int i_2_ = i;
@@ -94,14 +94,14 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return is;
     }
 
-    final void method3868(boolean bool) {
-        if (bool) method3832(-4, (byte) -39);
+    final void invalidateFramebuffer(boolean bool) {
+        if (bool) framebufferTexture2D(-4, (byte) -39);
     }
 
-    final void method3862(int i, Component387 class130) {
+    final void drawArraysInstanced(int i, Component387 class130) {
         dxVertexLayout var_dxVertexLayout = (dxVertexLayout) class130;
         this.anIDirect3DDevice9810.SetVertexDeclaration(var_dxVertexLayout.anIDirect3DVertexDeclaration5803);
-        if (i != 0) method3910((byte) -110, 113);
+        if (i != 0) getProcAddress((byte) -110, 113);
     }
 
     private static final int method3953(Component158 class21, byte i) {
@@ -129,7 +129,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
     }
 
-    final void method3841(byte i) {
+    final void readPixels(byte i) {
         this.anIDirect3DDevice9810.a(14, ((this.aBoolean8124) && (this.aBoolean8118)));
         if (i != -116) method3960(true);
     }
@@ -138,17 +138,17 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final Interface18_Impl1 method3872(int i, int i_10_, DisplayModeManagerContainer42 class304, boolean bool, int i_11_, byte[] is) {
+    final Interface18_Impl1 texParameter(int i, int i_10_, DisplayModeManagerContainer42 class304, boolean bool, int i_11_, byte[] is) {
         if (bool != true) return null;
         return new Component378(this, class304, i_10_, i_11_, i, is);
     }
 
-    final void method3827(byte i) {
+    final void bufferSubData(byte i) {
         if (i > -30) aClass53_9787 = null;
         this.anIDirect3DDevice9810.a(28, (this.aBoolean8148 && this.aBoolean8123 && this.anInt8091 >= 0));
     }
 
-    final void method3901(byte i) {
+    final void polygonMode(byte i) {
         if (this.aBoolean8069) {
             aFloatArray9797[1] = 0.0F;
             aFloatArray9797[2] = 0.0F;
@@ -170,12 +170,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i < -18) this.anIDirect3DDevice9810.SetTransform(256, aFloatArray9797);
     }
 
-    final void method3926(byte i, boolean bool) {
+    final void signalNative(byte i, boolean bool) {
         if (i < 34) this.aBoolean9798 = false;
         this.anIDirect3DDevice9810.a(161, bool);
     }
 
-    final void method3924(boolean bool, boolean bool_12_, int i, DisplayModeManagerContainer88 class70, boolean bool_13_) {
+    final void getSwapInterval(boolean bool, boolean bool_12_, int i, DisplayModeManagerContainer88 class70, boolean bool_13_) {
         int i_14_ = i;
         int i_15_;
         while_233_:
@@ -197,7 +197,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, i_15_, i_16_ | method3961(class70, 2));
     }
 
-    final void method3892(int i) {
+    final void uniform3i(int i) {
         aD3DLIGHT9789.SetDirection(-this.aFloatArray8170[0], -this.aFloatArray8170[1], -this.aFloatArray8170[2]);
         aD3DLIGHT9796.SetDirection(-this.aFloatArray8102[i], -this.aFloatArray8102[1], -this.aFloatArray8102[2]);
         aBoolean9801 = false;
@@ -219,7 +219,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         throw new IllegalArgumentException();
     }
 
-    final void method3910(byte i, int i_18_) {
+    final void getProcAddress(byte i, int i_18_) {
         if (i != -26) this.aD3DCAPS9791 = null;
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 11, i_18_);
     }
@@ -261,16 +261,16 @@ public final class D3DToolkit extends GlToolkitSub3 {
             }
             Component312 class53 = new Component312(idirect3ddevice.b(0), idirect3ddevice.c());
             class378 = new D3DToolkit(i, i_20_, canvas, var_hb, idirect3d, idirect3ddevice, class53, d3dpresent_parameters, d3dcaps, var_d, class45, integer.intValue());
-            class378.method3930((byte) 26);
+            class378.setKeyState((byte) 26);
             class378_19_ = class378;
         } catch (RuntimeException runtimeexception) {
-            if (class378 != null) class378.method3652();
+            if (class378 != null) class378.release();
             throw runtimeexception;
         }
         return class378_19_;
     }
 
-    final void method3911(Canvas canvas, int i, Object object) {
+    final void makeContextCurrent(Canvas canvas, int i, Object object) {
         if (i != 1) anIDirect3D9793 = null;
     }
 
@@ -294,8 +294,8 @@ public final class D3DToolkit extends GlToolkitSub3 {
             }
             if (!aBooleanArray9784[this.anInt8175]) {
                 aBooleanArray9784[this.anInt8175] = true;
-                method3935(-123);
-                method3920(10);
+                setClipboard(-123);
+                querySurface(10);
             }
         }
     }
@@ -304,7 +304,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return null;
     }
 
-    final void method3813(boolean bool) {
+    final void enableShader(boolean bool) {
         this.anIDirect3DDevice9810.SetTransform(3, this.aFloatArray8135);
         if (bool != true) method3963(-7, null);
     }
@@ -313,14 +313,14 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i == -89) {
             anIDirect3DVertexShader9794 = idirect3dvertexshader;
             this.anIDirect3DDevice9810.SetVertexShader(idirect3dvertexshader);
-            method3940(1);
+            getWindowSize(1);
         }
     }
 
-    final void method3938(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_24_, int i_25_, int i_26_, int i_27_) {
+    final void showCursor(Component158 class21, int i, Interface5_Impl2 interface5_impl2, int i_24_, int i_25_, int i_26_, int i_27_) {
         this.anIDirect3DDevice9810.SetIndices(((Component93) interface5_impl2).anIDirect3DIndexBuffer8517);
         this.anIDirect3DDevice9810.DrawIndexedPrimitive(method3953(class21, (byte) -111), 0, i_24_, i_26_, i_25_, i);
-        if (i_27_ < 46) method3931(true, null, null);
+        if (i_27_ < 46) getMouseState(true, null, null);
     }
 
     final Interface4 method3634(Interface3 interface3, Interface13 interface13) {
@@ -331,26 +331,26 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final void method3888(int i) {
-        if (i != 6259) method3882((byte) -77);
+    final void uniform3f(int i) {
+        if (i != 6259) getActiveAttrib((byte) -77);
         this.anIDirect3DDevice9810.SetScissorRect(this.anInt8181 - -this.anInt8106, this.anInt8109 - -this.anInt8165, this.anInt8183, this.anInt8096);
     }
 
     final void method3707(Rectangle[] rectangles, int i, int i_28_, int i_29_) throws Exception_Sub1 {
-        method3626(i_28_, i_29_);
+        swapBuffers(i_28_, i_29_);
     }
 
-    final boolean method3931(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68) {
+    final boolean getMouseState(boolean bool, DisplayModeManagerContainer42 class304, Component342 class68) {
         D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
         if (bool != true) aBooleanArray9786 = null;
         return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), !bool) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 4, method3958(22, class68, class304))), false));
     }
 
-    final void method3881(Object object, byte i, Canvas canvas) {
+    final void getActiveUniform(Object object, byte i, Canvas canvas) {
         if (i == 99) aClass53_9787 = (Component312) object;
     }
 
-    final void method3842(boolean bool) {
+    final void enableScissorTest(boolean bool) {
         float f = (!this.aBoolean8110 ? 0.0F : this.aFloat8174);
         float f_30_ = (!this.aBoolean8110 ? 0.0F : -this.aFloat8186);
         aD3DLIGHT9789.SetDiffuse(f * this.aFloat8180, this.aFloat8087 * f, f * this.aFloat8168, 0.0F);
@@ -378,7 +378,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return false;
     }
 
-    final void method3633() {
+    final void finish() {
         IDirect3DEventQuery idirect3deventquery = this.anIDirect3DDevice9810.b();
         if (ue.a(idirect3deventquery.Issue(), false)) {
             for (; ; ) {
@@ -394,7 +394,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final void method3945(int i) {
+    final void setWindowTitle(int i) {
         this.anIDirect3DDevice9810.SetRenderState(60, this.anInt8119);
         if (i > -107) this.aBoolean9802 = false;
     }
@@ -407,7 +407,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final void method3823(byte i) {
+    final void disableVertexAttrib(byte i) {
         int i_34_ = -115 % ((i - -39) / 62);
         int i_35_;
         for (i_35_ = 0; this.anInt8151 > i_35_; i_35_++) {
@@ -424,17 +424,17 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
         for (/**/; i_35_ < this.anInt8122; i_35_++)
             this.anIDirect3DDevice9810.LightEnable(i_35_ - -2, false);
-        super.method3823((byte) 57);
+        super.disableVertexAttrib((byte) 57);
     }
 
-    final void method3819(byte i) {
+    final void deleteProgram(byte i) {
         if (aBooleanArray9784[this.anInt8175]) {
             aBooleanArray9784[this.anInt8175] = false;
             this.anIDirect3DDevice9810.SetTexture(this.anInt8175, null);
-            method3935(-110);
-            method3920(10);
+            setClipboard(-110);
+            querySurface(10);
         }
-        if (i >= -19) method3855(null, -78, 86, null, false, 82, 55, -34);
+        if (i >= -19) deleteBuffers(null, -78, 86, null, false, 82, 55, -34);
     }
 
     private D3DToolkit(int i, int i_38_, Canvas canvas, hb var_hb, IDirect3D idirect3d, IDirect3DDevice idirect3ddevice, Component312 class53, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, d var_d, CacheStore class45, int i_39_) {
@@ -476,7 +476,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
     }
 
-    final void method3898(int i) {
+    final void getVertexAttribfv(int i) {
         if (i != 12) method3634(null, null);
         if (this.aClass196_8184.method1450(-32)) this.aClass101_Sub2_8083.method918(aFloatArray9797, 0);
         else {
@@ -500,13 +500,13 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.SetTransform(2, aFloatArray9797);
     }
 
-    final void method3652() {
+    final void release() {
         this.aHb9788.a((byte) 13);
-        super.method3652();
+        super.release();
     }
 
-    final Interface5_Impl2 method3840(int i, boolean bool) {
-        if (i != -28633) method3937((byte) 102);
+    final Interface5_Impl2 blitFramebuffer(int i, boolean bool) {
+        if (i != -28633) setCursor((byte) 102);
         return new Component93(this, Component342.aClass68_1184, bool);
     }
 
@@ -518,7 +518,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return 0;
     }
 
-    final void method3851(int i) {
+    final void bindVertexArray(int i) {
         this.aFloat8115 = (float) (this.anInt8154 + -this.anInt8105);
         this.aFloat8173 = ((float) -this.anInt8091 + this.aFloat8115);
         if (this.aFloat8173 < (float) this.anInt8095) this.aFloat8173 = (float) this.anInt8095;
@@ -528,12 +528,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.SetRenderState(34, this.anInt8144);
     }
 
-    final Interface18_Impl3 method3855(DisplayModeManagerContainer42 class304, int i, int i_40_, float[] fs, boolean bool, int i_41_, int i_42_, int i_43_) {
+    final Interface18_Impl3 deleteBuffers(DisplayModeManagerContainer42 class304, int i, int i_40_, float[] fs, boolean bool, int i_41_, int i_42_, int i_43_) {
         if (i_42_ != 2) aD3DLIGHT9796 = null;
         return null;
     }
 
-    final void method3884(byte i) {
+    final void getUniformiv(byte i) {
         if (!aBoolean9801) {
             this.anIDirect3DDevice9810.LightEnable(0, false);
             this.anIDirect3DDevice9810.LightEnable(1, false);
@@ -550,7 +550,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return false;
     }
 
-    final void method3937(byte i) {
+    final void setCursor(byte i) {
         if (i != -33) method3962(-41, null);
         this.anIDirect3DDevice9810.SetViewport(this.anInt8181, this.anInt8109, this.anInt7931, this.anInt7962, 0.0F, 1.0F);
     }
@@ -568,7 +568,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         int i_44_ = 82 % ((i - 44) / 56);
     }
 
-    final void method3899(int i, int i_45_, Component158 class21, boolean bool) {
+    final void getVertexAttribiv(int i, int i_45_, Component158 class21, boolean bool) {
         this.anIDirect3DDevice9810.DrawPrimitive(method3953(class21, (byte) -111), i_45_, i);
         if (bool != true) aClass209Array9795 = null;
     }
@@ -577,26 +577,26 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final void method3818(boolean bool) {
-        if (bool != true) method3633();
-        method3842(bool);
-        method3884((byte) 101);
+    final void useProgram(boolean bool) {
+        if (bool != true) finish();
+        enableScissorTest(bool);
+        getUniformiv((byte) 101);
     }
 
-    final void method3673() {
+    final void copyScreen() {
         /* empty */
     }
 
-    final void method3947(int i) {
+    final void restoreWindow(int i) {
         if (i == 4) this.anIDirect3DDevice9810.a(27, this.aBoolean8116);
     }
 
-    final void method3859(int i) {
+    final void pauseTransformFeedback(int i) {
         this.anIDirect3DDevice9810.a(7, this.aBoolean8164);
-        if (i != 3) method3882((byte) 51);
+        if (i != 3) getActiveAttrib((byte) 51);
     }
 
-    final Interface18_Impl3 method3843(int i, int i_49_, int i_50_, int i_51_, byte[] is, DisplayModeManagerContainer42 class304, int i_52_, boolean bool) {
+    final Interface18_Impl3 scissor(int i, int i_49_, int i_50_, int i_51_, byte[] is, DisplayModeManagerContainer42 class304, int i_52_, boolean bool) {
         if (i_52_ != 32) anInt9785 = 94;
         return new Component294(this, class304, i_50_, i, bool, is, i_49_, i_51_);
     }
@@ -606,22 +606,22 @@ public final class D3DToolkit extends GlToolkitSub3 {
         super.method3646(i);
     }
 
-    final float method3858(boolean bool) {
+    final float transformFeedback(boolean bool) {
         if (bool) aBoolean9801 = true;
         return -0.5F;
     }
 
-    final Object method3876(int i, Canvas canvas) {
+    final Object getShaderSource(int i, Canvas canvas) {
         if (i != -1) return null;
         return null;
     }
 
     private final boolean method3960(boolean bool) {
         int i = this.anIDirect3DDevice9810.TestCooperativeLevel();
-        if (bool) method3880(null, null, (byte) -68);
+        if (bool) validateProgram(null, null, (byte) -68);
         if (i == 0 || -2005530519 == i) {
             Component312 class53 = (Component312) this.anObject7919;
-            method3922(false);
+            destroySurface(false);
             class53.method496((byte) 84);
             aD3DPRESENT_PARAMETERS9800.BackBufferHeight = 0;
             aD3DPRESENT_PARAMETERS9800.BackBufferWidth = 0;
@@ -629,8 +629,8 @@ public final class D3DToolkit extends GlToolkitSub3 {
                 int i_53_ = this.anIDirect3DDevice9810.Reset(aD3DPRESENT_PARAMETERS9800);
                 if (ue.a(i_53_, false)) {
                     class53.method497(this.anIDirect3DDevice9810.b(0), (byte) -107, this.anIDirect3DDevice9810.c());
-                    method3902((byte) -42);
-                    method3882((byte) 113);
+                    frontFace((byte) -42);
+                    getActiveAttrib((byte) 113);
                     return true;
                 }
             }
@@ -638,13 +638,13 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return false;
     }
 
-    final void method3920(int i) {
+    final void querySurface(int i) {
         int i_54_ = (aBooleanArray9784[this.anInt8175] ? method3955(24, (this.aClass229Array8086[this.anInt8175])) : 1);
         if (i != 10) I();
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 1, i_54_);
     }
 
-    final Interface18_Impl3 method3830(int i, int[] is, boolean bool, byte i_55_, int i_56_, int i_57_, int i_58_) {
+    final Interface18_Impl3 createFramebuffer(int i, int[] is, boolean bool, byte i_55_, int i_56_, int i_57_, int i_58_) {
         int i_59_ = -31 % ((-21 - i_55_) / 46);
         return new Component294(this, i, i_58_, bool, is, i_56_, i_57_);
     }
@@ -653,12 +653,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final Interface18_Impl2 method3900(int[][] is, boolean bool, int i, int i_60_) {
+    final Interface18_Impl2 hint(int[][] is, boolean bool, int i, int i_60_) {
         if (i <= 1) aFloatArray9797 = null;
         return new Component78(this, i_60_, bool, is);
     }
 
-    final void method3939(byte i) {
+    final void hideCursor(byte i) {
         this.anIDirect3DDevice9810.a(15, this.aBoolean8141);
         if (i != 100) anIntArray9805 = null;
     }
@@ -673,7 +673,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         throw new IllegalArgumentException();
     }
 
-    final Component387 method3812(int i, Component255[] class58s) {
+    final Component387 createShader(int i, Component255[] class58s) {
         if (i != 0) anInt9807 = 29;
         return new dxVertexLayout(this, class58s);
     }
@@ -687,21 +687,21 @@ public final class D3DToolkit extends GlToolkitSub3 {
         /* empty */
     }
 
-    final Interface5_Impl1 method3889(boolean bool, int i) {
+    final Interface5_Impl1 uniform4f(boolean bool, int i) {
         if (i != 16711680) return null;
         return new Component371(this, bool);
     }
 
-    final void method3921(int i) {
+    final void createSurface(int i) {
         this.anIDirect3DDevice9810.a(174, this.aBoolean8209);
-        if (i != 1) method3858(true);
+        if (i != 1) transformFeedback(true);
     }
 
     final void b(int i, int i_61_, int i_62_, int i_63_, double d) {
         /* empty */
     }
 
-    final AbstractShader method3832(int i, byte i_64_) {
+    final AbstractShader framebufferTexture2D(int i, byte i_64_) {
         if (i_64_ >= -57) aClass209Array9795 = null;
         int i_65_ = i;
         while_234_:
@@ -717,7 +717,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
             } while (false);
             return new EnvironmentMappedWaterShader(this, this.aClass45_8039, this.aClass269_7937);
         } while (false);
-        return super.method3832(i, (byte) -74);
+        return super.framebufferTexture2D(i, (byte) -74);
     }
 
     final void method3700(float f, float f_66_, float f_67_) {
@@ -736,7 +736,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return 0;
     }
 
-    final void method3871(Component22 class113, int i) {
+    final void getTexParameter(Component22 class113, int i) {
         int i_68_ = i;
         if (Component82.aClass113_430 == class113) i_68_ = 65536;
         else if (NodeBaseSub1.aClass113_9773 == class113) i_68_ = 131072;
@@ -744,13 +744,13 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 11, this.anInt8175 | i_68_);
     }
 
-    final boolean method3880(Component342 class68, DisplayModeManagerContainer42 class304, byte i) {
+    final boolean validateProgram(Component342 class68, DisplayModeManagerContainer42 class304, byte i) {
         D3DDISPLAYMODE d3ddisplaymode = new D3DDISPLAYMODE();
         int i_69_ = 96 / ((i - 85) / 37);
         return (ue.a(anIDirect3D9793.a(anInt9799, d3ddisplaymode), false) && ue.a((anIDirect3D9793.CheckDeviceFormat(anInt9799, anInt9807, d3ddisplaymode.Format, 0, 3, method3958(22, class68, class304))), false));
     }
 
-    final void method3882(byte i) {
+    final void getActiveAttrib(byte i) {
         for (int i_70_ = 0; i_70_ < this.anInt8090; i_70_++) {
             this.anIDirect3DDevice9810.SetSamplerState(i_70_, 7, 0);
             this.anIDirect3DDevice9810.SetSamplerState(i_70_, 6, 2);
@@ -766,7 +766,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.SetRenderState(9, 2);
         this.anIDirect3DDevice9810.SetRenderState(23, 4);
         this.anIDirect3DDevice9810.SetRenderState(25, 5);
-        if (i <= 45) method3861(109, (byte) -95, -59, null, null);
+        if (i <= 45) endTransformFeedback(109, (byte) -95, -59, null, null);
         this.anIDirect3DDevice9810.SetRenderState(24, 0);
         this.anIDirect3DDevice9810.SetRenderState(22, 2);
         this.anIDirect3DDevice9810.SetRenderState(147, 1);
@@ -777,7 +777,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         aD3DLIGHT9796.SetType(3);
         aD3DLIGHT9808.SetType(1);
         aBoolean9801 = false;
-        super.method3882((byte) 63);
+        super.getActiveAttrib((byte) 63);
     }
 
     final Component6 c() {
@@ -785,14 +785,14 @@ public final class D3DToolkit extends GlToolkitSub3 {
         return new Component6(d3dadapter_identifier.VendorID, "Direct3D", 9, d3dadapter_identifier.Description, d3dadapter_identifier.DriverVersion);
     }
 
-    final void method3935(int i) {
+    final void setClipboard(int i) {
         if (i <= -99) {
             int i_71_ = (aBooleanArray9784[this.anInt8175] ? method3955(50, (this.aClass229Array8092[this.anInt8175])) : 1);
             this.anIDirect3DDevice9810.SetTextureStageState(this.anInt8175, 4, i_71_);
         }
     }
 
-    final void method3940(int i) {
+    final void getWindowSize(int i) {
         if (anIDirect3DVertexShader9794 == null && ((this.aClass251Array8113[this.anInt8175]) != HashNodeSub18.aClass251_9685)) {
             if (Component302.aClass251_6030 == (this.aClass251Array8113[this.anInt8175])) this.anIDirect3DDevice9810.SetTransform(this.anInt8175 + 16, this.aClass101_Sub2Array8131[this.anInt8175].method928(aFloatArray9797, i));
             else this.anIDirect3DDevice9810.SetTransform(16 - -this.anInt8175, this.aClass101_Sub2Array8131[this.anInt8175].method918(aFloatArray9797, i ^ 0x1));
@@ -808,12 +808,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         if (i != 1) aBoolean9801 = true;
     }
 
-    final Interface18_Impl3 method3861(int i, byte i_73_, int i_74_, Component342 class68, DisplayModeManagerContainer42 class304) {
+    final Interface18_Impl3 endTransformFeedback(int i, byte i_73_, int i_74_, Component342 class68, DisplayModeManagerContainer42 class304) {
         if (i_73_ != -84) return null;
         return new Component294(this, class304, class68, i_74_, i);
     }
 
-    final void method3844(int i, Canvas canvas, Object object) {
+    final void viewport(int i, Canvas canvas, Object object) {
         if (canvas == this.aCanvas7925) {
             Dimension dimension = canvas.getSize();
             if (dimension.width > 0 && 0 < dimension.height) {
@@ -868,12 +868,12 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
     }
 
-    final void method3883(int i) {
+    final void getUniformfv(int i) {
         int i_87_ = 60 % ((i - 20) / 36);
         this.anIDirect3DDevice9810.a(137, ((this.aBoolean8145) && !(this.aBoolean8149)));
     }
 
-    final void method3950(int i) {
+    final void hideWindow(int i) {
         if (i != 0) anIntArray9809 = null;
         if (HardwareProbe.aClass173_6602 == this.aClass173_8163) {
             this.anIDirect3DDevice9810.SetRenderState(19, 5);
@@ -887,7 +887,7 @@ public final class D3DToolkit extends GlToolkitSub3 {
         }
     }
 
-    final void method3626(int i, int i_88_) throws Exception_Sub1 {
+    final void swapBuffers(int i, int i_88_) throws Exception_Sub1 {
         this.anIDirect3DDevice9810.EndScene();
         if (aClass53_9787.method498(-107)) {
             anInt9785 = 0;
@@ -899,14 +899,14 @@ public final class D3DToolkit extends GlToolkitSub3 {
         this.anIDirect3DDevice9810.BeginScene();
     }
 
-    final void method3925(int i, Interface5_Impl1 interface5_impl1, int i_89_) {
+    final void waitNative(int i, Interface5_Impl1 interface5_impl1, int i_89_) {
         int i_90_ = -112 % ((i - -26) / 39);
         Component371 class366 = (Component371) interface5_impl1;
         this.anIDirect3DDevice9810.SetStreamSource(i_89_, class366.anIDirect3DVertexBuffer8511, 0, class366.method3519(3545));
     }
 
     final void NativeHandle() {
-        method3946(-32, true);
+        iconifyWindow(-32, true);
         this.anIDirect3DDevice9810.Clear(2, 0, 1.0F, 0);
     }
 

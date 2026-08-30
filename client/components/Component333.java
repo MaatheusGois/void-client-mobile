@@ -34,17 +34,17 @@ final class Component333
         anInt3629++;
         Component210.aFloat5299 = var_ha_Sub3.aFloat8093;
         int i_1_ = 75 % ((2 - i) / 34);
-        var_ha_Sub3.method3867((float) i_0_, -86);
-        var_ha_Sub3.method3857((byte) 92);
-        var_ha_Sub3.method3865(false, 36);
-        var_ha_Sub3.method3946(-32, false);
-        var_ha_Sub3.method3942(5);
+        var_ha_Sub3.getRenderbufferParameter((float) i_0_, -86);
+        var_ha_Sub3.bindBufferBase((byte) 92);
+        var_ha_Sub3.getBufferParameter(false, 36);
+        var_ha_Sub3.iconifyWindow(-32, false);
+        var_ha_Sub3.getWindowPos(5);
     }
 
     private final void method2099(int i, GlToolkitSub3 var_ha_Sub3) {
         anInt3628++;
-        var_ha_Sub3.method3946(i + -26358, true);
-        var_ha_Sub3.method3865(true, 54);
+        var_ha_Sub3.iconifyWindow(i + -26358, true);
+        var_ha_Sub3.getBufferParameter(true, 54);
         if (i != 26326) anIntArray3631 = null;
         if (Component210.aFloat5299 != var_ha_Sub3.aFloat8093) var_ha_Sub3.DualToolkit(Component210.aFloat5299);
     }
@@ -120,7 +120,7 @@ final class Component333
                                 }
                             }
                         }
-                        var_ha_Sub3.method3814(false, false, i_15_ >= 0 ? i_15_ : -1, (byte) 117);
+                        var_ha_Sub3.disableShader(false, false, i_15_ >= 0 ? i_15_ : -1, (byte) 117);
                         if (bool && (Component210.aFloat5299 != var_ha_Sub3.aFloat8093)) var_ha_Sub3.DualToolkit(Component210.aFloat5299);
                         else if (var_ha_Sub3.aFloat8093 != 1.0F) var_ha_Sub3.DualToolkit(1.0F);
                         method2102(false, var_ha_Sub3, i_12_);
@@ -139,7 +139,7 @@ final class Component333
         anInt3640++;
         if (bool != false) method2098(null, 21, -85);
         int i_20_ = 0;
-        MatrixSub2 class101_sub2 = var_ha_Sub3.method3948(-22036);
+        MatrixSub2 class101_sub2 = var_ha_Sub3.maximizeWindow(-22036);
         float f = class101_sub2.aFloat5711;
         float f_21_ = class101_sub2.aFloat5700;
         float f_22_ = class101_sub2.aFloat5704;
@@ -157,7 +157,7 @@ final class Component333
         float f_34_ = -f_22_ + f_25_;
         Buffer buffer = anInterface5_Impl1_3638.method19(true, 26775);
         if (buffer != null) {
-            Stream stream = var_ha_Sub3.method3893(buffer, 9179);
+            Stream stream = var_ha_Sub3.uniform4i(buffer, 9179);
             if (Stream.c()) {
                 for (int i_58_ = i + -1; i_58_ >= 0; i_58_--) {
                     int i_59_ = (Math.min(anIntArray3636[i_58_], 64));
@@ -343,10 +343,10 @@ final class Component333
             }
             stream.a();
             if (anInterface5_Impl1_3638.method18(6331)) {
-                var_ha_Sub3.method3925(66, anInterface5_Impl1_3638, 0);
-                var_ha_Sub3.method3925(68, anInterface5_Impl1_3630, 1);
-                var_ha_Sub3.method3862(0, aClass130_3637);
-                var_ha_Sub3.method3938(VideoAdDisplay.aClass21_3181, 2 * i_20_, anInterface5_Impl2_3635, 0, 0, i_20_ * 4, 118);
+                var_ha_Sub3.waitNative(66, anInterface5_Impl1_3638, 0);
+                var_ha_Sub3.waitNative(68, anInterface5_Impl1_3630, 1);
+                var_ha_Sub3.drawArraysInstanced(0, aClass130_3637);
+                var_ha_Sub3.showCursor(VideoAdDisplay.aClass21_3181, 2 * i_20_, anInterface5_Impl2_3635, 0, 0, i_20_ * 4, 118);
             }
         }
     }
@@ -355,10 +355,10 @@ final class Component333
         if (i != -33) aClass318_Sub9_Sub2ArrayArray3642 = null;
         anInt3639++;
         Component210.aFloat5299 = var_ha_Sub3.aFloat8093;
-        var_ha_Sub3.method3825(8);
-        var_ha_Sub3.method3865(false, i + 89);
-        var_ha_Sub3.method3946(-32, false);
-        var_ha_Sub3.method3942(5);
+        var_ha_Sub3.bindBuffer(8);
+        var_ha_Sub3.getBufferParameter(false, i + 89);
+        var_ha_Sub3.iconifyWindow(-32, false);
+        var_ha_Sub3.getWindowPos(5);
     }
 
     public static void method2104(int i) {
@@ -378,15 +378,15 @@ final class Component333
         anIntArray3631 = new int[8191];
         aClass318_Sub9_Sub2ArrayArray3642 = new RenderableSub9Sub2[64][768];
         anIntArray3636 = new int[1600];
-        aClass130_3637 = (var_ha_Sub3.method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4076, ColoredTextBuilder.aClass325_4078}), new Component255(ColoredTextBuilder.aClass325_4075)})));
-        anInterface5_Impl1_3638 = var_ha_Sub3.method3889(true, 16711680);
-        anInterface5_Impl1_3630 = var_ha_Sub3.method3889(false, 16711680);
+        aClass130_3637 = (var_ha_Sub3.createShader(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4076, ColoredTextBuilder.aClass325_4078}), new Component255(ColoredTextBuilder.aClass325_4075)})));
+        anInterface5_Impl1_3638 = var_ha_Sub3.uniform4f(true, 16711680);
+        anInterface5_Impl1_3630 = var_ha_Sub3.uniform4f(false, 16711680);
         anInterface5_Impl1_3630.method20(393168, (byte) 124, 12);
-        anInterface5_Impl2_3635 = var_ha_Sub3.method3840(-28633, false);
+        anInterface5_Impl2_3635 = var_ha_Sub3.blitFramebuffer(-28633, false);
         anInterface5_Impl2_3635.method23(15959, 49146);
         Buffer buffer = anInterface5_Impl2_3635.method24(true, false);
         if (buffer != null) {
-            Stream stream = var_ha_Sub3.method3893(buffer, 9179);
+            Stream stream = var_ha_Sub3.uniform4i(buffer, 9179);
             if (Stream.c()) {
                 for (int i = 0; i < 8191; i++) {
                     int i_82_ = i * 4;
@@ -413,7 +413,7 @@ final class Component333
         }
         Buffer buffer_83_ = anInterface5_Impl1_3630.method19(true, 26775);
         if (buffer_83_ != null) {
-            Stream stream = var_ha_Sub3.method3893(buffer_83_, 9179);
+            Stream stream = var_ha_Sub3.uniform4i(buffer_83_, 9179);
             if (Stream.c()) {
                 for (int i = 0; i < 8191; i++) {
                     stream.a(0.0F);

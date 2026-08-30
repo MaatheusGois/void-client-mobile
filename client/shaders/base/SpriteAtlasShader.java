@@ -80,7 +80,7 @@ final class SpriteAtlasShader extends ShaderProgram {
     final void method2140(AbstractGlTexture class258, byte i, int i_10_) {
         anInt6257++;
         this.aHa_Sub2_3684.bindTexture((byte) -118, class258);
-        this.aHa_Sub2_3684.method3761(0, i_10_);
+        this.aHa_Sub2_3684.setTextureEnvMode(0, i_10_);
         if (i > -89) method2140(null, (byte) 109, -112);
     }
 

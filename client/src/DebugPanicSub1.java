@@ -58,7 +58,7 @@ final class DebugPanicSub1
 
     static final void method2129(byte i) {
         anInt8494++;
-        Component158.aHa326.method3638(r.aClass101_9720);
+        Component158.aHa326.loadModelviewMatrix(r.aClass101_9720);
         if (i < 9) anInt8492 = -40;
         Component158.aHa326.DA(Component253.anInt3202, DisplayModeManagerContainer348.anInt5886, DisplayModeManagerContainer288.anInt8630, DisplayModeManagerContainer91.anInt394);
     }

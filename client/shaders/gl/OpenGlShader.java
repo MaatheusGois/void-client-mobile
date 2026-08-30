@@ -46,8 +46,8 @@ final class OpenGlShader extends AbstractShader {
     final void method3528(int i) {
         if (i <= 45) method3557(true);
         anInt7401++;
-        int i_0_ = this.aHa_Sub3_4479.method3941(102);
-        MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.method3887((byte) 98);
+        int i_0_ = this.aHa_Sub3_4479.setWindowSize(102);
+        MatrixSub2 class101_sub2 = this.aHa_Sub3_4479.uniform2f((byte) 98);
         if (!aBoolean7411) OpenGL.glBindProgramARB(34336, (i_0_ != 2147483647 ? aClass193_7404.anInt2584 : aClass193_7395.anInt2584));
         else OpenGL.glBindProgramARB(34336, (i_0_ == 2147483647 ? aClass193_7392.anInt2584 : aClass193_7407.anInt2584));
         OpenGL.glEnable(34336);
@@ -67,7 +67,7 @@ final class OpenGlShader extends AbstractShader {
         anInt7408++;
         this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
         this.aHa_Sub3_4479.setActiveTexture((byte) -128, null);
-        this.aHa_Sub3_4479.method3874(Component385.aClass229_2207, 116, Component385.aClass229_2207);
+        this.aHa_Sub3_4479.texStorage3D(Component385.aClass229_2207, 116, Component385.aClass229_2207);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer173.aClass70_4247);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 2, DefinitionSub39.aClass70_9485);
         this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer173.aClass70_4247);
@@ -99,10 +99,10 @@ final class OpenGlShader extends AbstractShader {
                 aBoolean7399 = false;
             }
             this.aHa_Sub3_4479.setActiveTexture((byte) -122, interface18);
-            this.aHa_Sub3_4479.method3923(true, i);
+            this.aHa_Sub3_4479.swapInterval2(true, i);
         } else if (!aBoolean7399) {
             this.aHa_Sub3_4479.setActiveTexture((byte) 99, (this.aHa_Sub3_4479.anInterface18_8147));
-            this.aHa_Sub3_4479.method3923(true, 1);
+            this.aHa_Sub3_4479.swapInterval2(true, 1);
             this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DisplayModeManagerContainer343.aClass70_8737);
             this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer343.aClass70_8737);
             aBoolean7399 = true;
@@ -118,9 +118,9 @@ final class OpenGlShader extends AbstractShader {
             int i_5_ = this.aHa_Sub3_4479.i();
             float f = (float) i_4_ - 0.125F * (float) (-i_5_ + i_4_);
             float f_6_ = -(0.25F * (float) (-i_5_ + i_4_)) + (float) i_4_;
-            OpenGL.glProgramLocalParameter4fARB(34336, 0, f_6_, f, 1.0F / (float) this.aHa_Sub3_4479.method3833((byte) -58), (float) this.aHa_Sub3_4479.method3826((byte) -70) / 255.0F);
+            OpenGL.glProgramLocalParameter4fARB(34336, 0, f_6_, f, 1.0F / (float) this.aHa_Sub3_4479.checkFramebufferStatus((byte) -58), (float) this.aHa_Sub3_4479.bufferData((byte) -70) / 255.0F);
             this.aHa_Sub3_4479.setActiveTextureUnit(1, -4382);
-            this.aHa_Sub3_4479.method3894(-28186, this.aHa_Sub3_4479.method3863(-104));
+            this.aHa_Sub3_4479.uniformMatrix4fv(-28186, this.aHa_Sub3_4479.drawElementsInstanced(-104));
             this.aHa_Sub3_4479.setActiveTextureUnit(0, -4382);
         }
         anInt7412++;
@@ -192,7 +192,7 @@ final class OpenGlShader extends AbstractShader {
                 aClass193_7404 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_unlit", -29832), class377, 4);
                 aClass193_7407 = NodeBaseSub2.method3442(34336, class45.getFile("gl", "uw_model_lit", -29832), class377, 4);
                 if (aClass193_7395 != null & aClass193_7392 != null & aClass193_7404 != null & aClass193_7407 != null) {
-                    anInterface18_Impl3_7390 = this.aHa_Sub3_4479.method3839(1, 2, -15137, false, (new int[]{0, -1}));
+                    anInterface18_Impl3_7390 = this.aHa_Sub3_4479.deleteRenderbuffer(1, 2, -15137, false, (new int[]{0, -1}));
                     anInterface18_Impl3_7390.method66(false, false, 25688);
                     aBoolean7391 = true;
                 } else aBoolean7391 = false;
@@ -216,10 +216,10 @@ final class OpenGlShader extends AbstractShader {
         aBoolean7411 = bool;
         this.aHa_Sub3_4479.setActiveTextureUnit(1, i ^ ~0x2a45);
         this.aHa_Sub3_4479.setActiveTexture((byte) -32, anInterface18_Impl3_7390);
-        this.aHa_Sub3_4479.method3874((ShaderCompilerSub3.aClass229_6519), 109, Component253.aClass229_3196);
+        this.aHa_Sub3_4479.texStorage3D((ShaderCompilerSub3.aClass229_6519), 109, Component253.aClass229_3196);
         this.aHa_Sub3_4479.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
         if (i == 15192) {
-            this.aHa_Sub3_4479.method3924(true, false, 2, DisplayModeManagerContainer173.aClass70_4247, false);
+            this.aHa_Sub3_4479.getSwapInterval(true, false, 2, DisplayModeManagerContainer173.aClass70_4247, false);
             this.aHa_Sub3_4479.setTextureEnvironment(0, true, DisplayModeManagerContainer343.aClass70_8737);
             this.aHa_Sub3_4479.setActiveTextureUnit(0, i + -19574);
             method3528(75);

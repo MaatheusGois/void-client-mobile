@@ -92,7 +92,7 @@ final class GlToolkitSub1
         }
     }
 
-    final void method3703(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, Shader var_aa, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_) {
+    final void drawTexturedQuad(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, Shader var_aa, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_) {
         ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is = var_aa_Sub3.anIntArray5201;
         int[] is_22_ = var_aa_Sub3.anIntArray5202;
@@ -243,7 +243,7 @@ final class GlToolkitSub1
         return new ShaderSub3(i, i_63_, is, is_64_);
     }
 
-    final void method3685(Component122 class98, int i) {
+    final void renderModelEx(Component122 class98, int i) {
         Component385 class167 = method3724(Thread.currentThread());
         RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
         for (RenderableSub9 class318_sub9_65_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_65_ != class318_sub9; class318_sub9_65_ = class318_sub9_65_.aClass318_Sub9_6469) {
@@ -495,7 +495,7 @@ final class GlToolkitSub1
         /* empty */
     }
 
-    final void method3638(DisplayModeManagerContainer204 class101) {
+    final void loadModelviewMatrix(DisplayModeManagerContainer204 class101) {
         this.aClass101_Sub1_7492 = (MatrixSub1) class101;
     }
 
@@ -692,7 +692,7 @@ final class GlToolkitSub1
         /* empty */
     }
 
-    final void method3684(Component122 class98) {
+    final void renderModel(Component122 class98) {
         Component385 class167 = method3724(Thread.currentThread());
         RenderableSub9 class318_sub9 = (class98.aClass88_1569.aClass318_Sub9_1503);
         for (RenderableSub9 class318_sub9_208_ = class318_sub9.aClass318_Sub9_6469; class318_sub9_208_ != class318_sub9; class318_sub9_208_ = class318_sub9_208_.aClass318_Sub9_6469) {
@@ -803,18 +803,18 @@ final class GlToolkitSub1
         }
     }
 
-    final void method3633() {
+    final void finish() {
         /* empty */
     }
 
-    final void method3631(int i) {
+    final void setTextureUnitCount(int i) {
         this.anInt7485 = i;
         aClass167Array7480 = new Component385[this.anInt7485];
         for (int i_240_ = 0; i_240_ < this.anInt7485; i_240_++)
             aClass167Array7480[i_240_] = new Component385(this);
     }
 
-    final void method3709(int i, int i_241_, int i_242_, int i_243_, int i_244_, int i_245_) {
+    final void drawColoredRect(int i, int i_241_, int i_242_, int i_243_, int i_244_, int i_245_) {
         i_242_ -= i;
         i_243_ -= i_241_;
         if (i_243_ == 0) {
@@ -929,7 +929,7 @@ final class GlToolkitSub1
         }
     }
 
-    final void method3676(int i, int i_270_, int i_271_, int i_272_, int i_273_, int i_274_, int i_275_, int i_276_, int i_277_, int i_278_, int i_279_, int i_280_, int i_281_) {
+    final void draw3DTriangle(int i, int i_270_, int i_271_, int i_272_, int i_273_, int i_274_, int i_275_, int i_276_, int i_277_, int i_278_, int i_279_, int i_280_, int i_281_) {
         Component385 class167 = method3724(Thread.currentThread());
         Component8 class109 = class167.aClass109_2220;
         class109.aBoolean1669 = false;
@@ -983,7 +983,7 @@ final class GlToolkitSub1
         class167.aBoolean2202 = bool;
     }
 
-    final void method3636(int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, Shader var_aa, int i_290_, int i_291_) {
+    final void drawTexturedRect(int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, Shader var_aa, int i_290_, int i_291_) {
         ShaderSub3 var_aa_Sub3 = (ShaderSub3) var_aa;
         int[] is = var_aa_Sub3.anIntArray5201;
         int[] is_292_ = var_aa_Sub3.anIntArray5202;
@@ -1206,7 +1206,7 @@ final class GlToolkitSub1
         return class348_sub25.method2997();
     }
 
-    final void method3652() {
+    final void release() {
         if (aBoolean7471) {
             CookieManager.method2173(false, -101, true);
             aBoolean7471 = false;
@@ -1703,7 +1703,7 @@ final class GlToolkitSub1
         } else throw new IllegalArgumentException();
     }
 
-    final void method3688(int i, int i_494_, int i_495_, int i_496_, int i_497_, int i_498_, int i_499_) {
+    final void setLineWidth(int i, int i_494_, int i_495_, int i_496_, int i_497_, int i_498_, int i_499_) {
         Component385 class167 = method3724(Thread.currentThread());
         Component8 class109 = class167.aClass109_2220;
         int i_500_ = i_495_ - i;
@@ -1758,8 +1758,8 @@ final class GlToolkitSub1
     final void method3650(int i) {
         DisplayModeManagerContainer164.anInt5346 = DisplayModeManagerContainer164.anInt5350 = i;
         if (this.anInt7485 > 1) throw new IllegalStateException("No MT");
-        method3631(this.anInt7485);
-        method3659(0);
+        setTextureUnitCount(this.anInt7485);
+        resetTextureState(0);
     }
 
     final NodeSub1 method3690(int i, int i_520_, int i_521_, int i_522_, int i_523_, float f) {
@@ -1922,7 +1922,7 @@ final class GlToolkitSub1
         return 0;
     }
 
-    final void method3626(int i, int i_572_) throws Exception_Sub1 {
+    final void swapBuffers(int i, int i_572_) throws Exception_Sub1 {
         if (aCanvas7468 == null || this.aClass348_Sub31_7469 == null) throw new IllegalStateException("off");
         try {
             Graphics graphics = aCanvas7468.getGraphics();
@@ -2014,8 +2014,8 @@ final class GlToolkitSub1
         try {
             aClass60_7498 = new NodeCache(256);
             this.aClass101_Sub1_7492 = new MatrixSub1();
-            method3631(1);
-            method3659(0);
+            setTextureUnitCount(1);
+            resetTextureState(0);
             Component54.method566(true, true, (byte) -126);
             aBoolean7471 = true;
             anInt7466 = (int) Component240.currentTimeMillis(-70);
@@ -2045,7 +2045,7 @@ final class GlToolkitSub1
         return method3629(i, i_591_, false);
     }
 
-    final void method3674(int i, int i_592_, int i_593_, int i_594_, int i_595_, int i_596_, int i_597_, int i_598_, int i_599_) {
+    final void drawColoredQuad(int i, int i_592_, int i_593_, int i_594_, int i_595_, int i_596_, int i_597_, int i_598_, int i_599_) {
         i_593_ -= i;
         i_594_ -= i_592_;
         if (i_594_ == 0) {
@@ -2202,7 +2202,7 @@ final class GlToolkitSub1
         return new Component6(0, "Pure Java", 1, "CPU", 0L);
     }
 
-    final void method3659(int i) {
+    final void resetTextureState(int i) {
         aClass167Array7480[i].method1291(10000, Thread.currentThread());
     }
 
@@ -2277,7 +2277,7 @@ final class GlToolkitSub1
         } else is[0] = is[1] = is[2] = -1;
     }
 
-    final void method3673() {
+    final void copyScreen() {
         /* empty */
     }
 

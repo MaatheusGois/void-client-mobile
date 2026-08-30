@@ -55,7 +55,7 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
             if (aClass258_Sub3Array8837 == null) {
                 this.aHa_Sub2_6618.bindTexture((byte) -90, class258_sub3_2_);
-                this.aHa_Sub2_6618.method3773(-1, aClass206_8825);
+                this.aHa_Sub2_6618.popTexture(-1, aClass206_8825);
                 aClass206_8825.method1503(0, (byte) 3);
                 OpenGL.glViewport(0, 0, 256, 256);
                 long l = aClass337_8842.aLong4178;
@@ -73,7 +73,7 @@ final class GlWaterShader extends NodeSub5 {
                 OpenGL.glVertex2i(0, 1);
                 OpenGL.glEnd();
             } else {
-                this.aHa_Sub2_6618.method3773(-1, aClass206_8844);
+                this.aHa_Sub2_6618.popTexture(-1, aClass206_8844);
                 int i_4_ = PrimitiveTypeDefinition.method3051(anInt8841, 4096);
                 int i_5_ = PrimitiveTypeDefinition.method3051(anInt8833, 4096);
                 int i_6_ = 0;
@@ -109,9 +109,9 @@ final class GlWaterShader extends NodeSub5 {
                     if (i_4_ > 256) i_4_ >>= 1;
                     i_6_++;
                 }
-                this.aHa_Sub2_6618.method3770(-422613672, aClass206_8844);
+                this.aHa_Sub2_6618.pushTexture(-422613672, aClass206_8844);
                 this.aHa_Sub2_6618.bindTexture((byte) -100, aClass258_Sub3Array8837[i_6_ + -1]);
-                this.aHa_Sub2_6618.method3773(-1, aClass206_8825);
+                this.aHa_Sub2_6618.popTexture(-1, aClass206_8825);
                 aClass206_8825.method1503(0, (byte) 3);
                 OpenGL.glViewport(0, 0, 256, 256);
                 long l = aClass337_8824.aLong4178;
@@ -162,7 +162,7 @@ final class GlWaterShader extends NodeSub5 {
             OpenGL.glPopAttrib();
             OpenGL.glPopMatrix();
             OpenGL.glMatrixMode(5888);
-            this.aHa_Sub2_6618.method3770(-422613672, aClass206_8825);
+            this.aHa_Sub2_6618.pushTexture(-422613672, aClass206_8825);
             long l_7_ = aClass337_8836.aLong4178;
             OpenGL.glUseProgramObjectARB(l_7_);
             OpenGL.glUniform1iARB(OpenGL.glGetUniformLocationARB(l_7_, "sceneTex"), 0);
@@ -300,15 +300,15 @@ final class GlWaterShader extends NodeSub5 {
             aClass258_Sub3_8835.method1965(false, false, 10243);
             aClass258_Sub3_8830 = new GlTexture(this.aHa_Sub2_6618, 3553, 34842, 256, 256);
             aClass258_Sub3_8830.method1965(false, false, 10243);
-            this.aHa_Sub2_6618.method3773(-1, aClass206_8825);
+            this.aHa_Sub2_6618.popTexture(-1, aClass206_8825);
             aClass206_8825.method1509(aClass258_Sub3_8835, 0, 0);
             aClass206_8825.method1509(aClass258_Sub3_8830, 0, 1);
             aClass206_8825.method1503(0, (byte) 3);
             if (!aClass206_8825.method1507(124)) {
-                this.aHa_Sub2_6618.method3770(-422613672, aClass206_8825);
+                this.aHa_Sub2_6618.pushTexture(-422613672, aClass206_8825);
                 return false;
             }
-            this.aHa_Sub2_6618.method3770(-422613672, aClass206_8825);
+            this.aHa_Sub2_6618.pushTexture(-422613672, aClass206_8825);
             aClass337_8842 = (ShaderLinker.linkProgram(this.aHa_Sub2_6618, -1, (new Component359[]{RSARequest.method3249(35632, 80, this.aHa_Sub2_6618, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")})));
             aClass337_8824 = (ShaderLinker.linkProgram(this.aHa_Sub2_6618, -1, (new Component359[]{RSARequest.method3249(35632, -45, this.aHa_Sub2_6618, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")})));
             aClass337_8836 = (ShaderLinker.linkProgram(this.aHa_Sub2_6618, -1, (new Component359[]{RSARequest.method3249(35632, -108, this.aHa_Sub2_6618, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")})));

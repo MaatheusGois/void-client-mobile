@@ -28,7 +28,7 @@ final class WaterSurfaceShader extends ShaderProgram {
     final void method2140(AbstractGlTexture class258, byte i, int i_0_) {
         if (!aBoolean6233) {
             this.aHa_Sub2_3684.bindTexture((byte) -124, class258);
-            this.aHa_Sub2_3684.method3761(0, i_0_);
+            this.aHa_Sub2_3684.setTextureEnvMode(0, i_0_);
         }
         anInt6240++;
         if (i > -89) anInt6246 = 45;

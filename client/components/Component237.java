@@ -35,16 +35,16 @@ final class Component237
         anInt3019++;
         Component328.aFloat1478 = var_ha_Sub2.aFloat7768;
         if (i_0_ != 24484) method1655(null, -66, 67);
-        var_ha_Sub2.method3789((byte) -119, (float) i);
+        var_ha_Sub2.deleteTexture((byte) -119, (float) i);
         var_ha_Sub2.method3760(i_0_ + -24483);
         OpenGL.glDisable(16384);
         OpenGL.glDisable(16385);
-        var_ha_Sub2.method3748(0, false);
+        var_ha_Sub2.drawSprite(0, false);
         OpenGL.glNormal3f(0.0F, -1.0F, 0.0F);
     }
 
     private final void method1650(GlToolkitSub2 var_ha_Sub2, byte i) {
-        var_ha_Sub2.method3748(0, true);
+        var_ha_Sub2.drawSprite(0, true);
         anInt3016++;
         OpenGL.glEnable(16384);
         OpenGL.glEnable(16385);
@@ -138,10 +138,10 @@ final class Component237
     private final void method1652(boolean bool, GlToolkitSub2 var_ha_Sub2) {
         Component328.aFloat1478 = var_ha_Sub2.aFloat7768;
         anInt3021++;
-        var_ha_Sub2.method3784((byte) -62);
+        var_ha_Sub2.setColorMask((byte) -62);
         OpenGL.glDisable(16384);
         OpenGL.glDisable(16385);
-        var_ha_Sub2.method3748(0, bool);
+        var_ha_Sub2.drawSprite(0, bool);
         OpenGL.glNormal3f(0.0F, -1.0F, 0.0F);
     }
 

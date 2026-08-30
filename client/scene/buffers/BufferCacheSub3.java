@@ -395,15 +395,15 @@ final class BufferCacheSub3
             }
             stream.a();
             stream_46_.a();
-            anInterface5_Impl1_8326 = this.aHa_Sub3_8322.method3889(false, 16711680);
+            anInterface5_Impl1_8326 = this.aHa_Sub3_8322.uniform4f(false, 16711680);
             anInterface5_Impl1_8326.method17(nativeheapbuffer, 4, anInt8303 * 4, (byte) -126);
-            anInterface5_Impl1_8327 = this.aHa_Sub3_8322.method3889(false, 16711680);
+            anInterface5_Impl1_8327 = this.aHa_Sub3_8322.uniform4f(false, 16711680);
             anInterface5_Impl1_8327.method17(nativeheapbuffer_45_, i, i * anInt8303, (byte) -59);
             if ((0x7 & this.anInt8294) == 0) {
-                if (anIntArrayArrayArray8314 == null) this.aClass130_8324 = (this.aHa_Sub3_8322.method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078}), new Component255(ColoredTextBuilder.aClass325_4076)})));
-                else this.aClass130_8324 = (this.aHa_Sub3_8322.method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4077}), new Component255(ColoredTextBuilder.aClass325_4076)})));
-            } else if (anIntArrayArrayArray8314 != null) this.aClass130_8324 = (this.aHa_Sub3_8322.method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4077, ColoredTextBuilder.aClass325_4075}), new Component255(ColoredTextBuilder.aClass325_4076)})));
-            else this.aClass130_8324 = (this.aHa_Sub3_8322.method3812(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4075}), new Component255(ColoredTextBuilder.aClass325_4076)})));
+                if (anIntArrayArrayArray8314 == null) this.aClass130_8324 = (this.aHa_Sub3_8322.createShader(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078}), new Component255(ColoredTextBuilder.aClass325_4076)})));
+                else this.aClass130_8324 = (this.aHa_Sub3_8322.createShader(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4077}), new Component255(ColoredTextBuilder.aClass325_4076)})));
+            } else if (anIntArrayArrayArray8314 != null) this.aClass130_8324 = (this.aHa_Sub3_8322.createShader(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4077, ColoredTextBuilder.aClass325_4075}), new Component255(ColoredTextBuilder.aClass325_4076)})));
+            else this.aClass130_8324 = (this.aHa_Sub3_8322.createShader(0, (new Component255[]{new Component255(new ColoredTextBuilder[]{ColoredTextBuilder.aClass325_4073, ColoredTextBuilder.aClass325_4078, ColoredTextBuilder.aClass325_4075}), new Component255(ColoredTextBuilder.aClass325_4076)})));
             int i_125_ = 0;
             for (int i_126_ = 0; i_126_ < class348_sub3s.length; i_126_++) {
                 if (class348_sub3s[i_126_].anInt6589 > 0) class348_sub3s[i_125_++] = class348_sub3s[i_126_];
@@ -523,30 +523,30 @@ final class BufferCacheSub3
                         if (bools_162_[i_163_ - i_158_]) ArbShaderProgram.anIntArray6189[NodeSub48.anInt7133++] = i_161_ + this.tileWidth * i_163_;
                     }
                 }
-                if (i_150_ == -1) this.aHa_Sub3_8322.method3825(8);
+                if (i_150_ == -1) this.aHa_Sub3_8322.bindBuffer(8);
                 else {
-                    this.aHa_Sub3_8322.method3867((float) i_150_, 101);
-                    this.aHa_Sub3_8322.method3857((byte) -71);
+                    this.aHa_Sub3_8322.getRenderbufferParameter((float) i_150_, 101);
+                    this.aHa_Sub3_8322.bindBufferBase((byte) -71);
                 }
-                this.aHa_Sub3_8322.method3942(5);
-                this.aHa_Sub3_8322.method3866(((this.anInt8294) & 0x7) != 0, true);
-                this.aHa_Sub3_8322.method3814(false, false, -1, (byte) 101);
-                this.aHa_Sub3_8322.method3925(112, anInterface5_Impl1_8327, 0);
+                this.aHa_Sub3_8322.getWindowPos(5);
+                this.aHa_Sub3_8322.getFramebufferParameter(((this.anInt8294) & 0x7) != 0, true);
+                this.aHa_Sub3_8322.disableShader(false, false, -1, (byte) 101);
+                this.aHa_Sub3_8322.waitNative(112, anInterface5_Impl1_8327, 0);
                 for (int i_164_ = 0; i_164_ < aClass348_Sub3Array8328.length; i_164_++)
                     aClass348_Sub3Array8328[i_164_].method2737((byte) -30, ArbShaderProgram.anIntArray6189, NodeSub48.anInt7133);
-                MatrixSub2 class101_sub2 = this.aHa_Sub3_8322.method3934(-97);
+                MatrixSub2 class101_sub2 = this.aHa_Sub3_8322.getClipboard(-97);
                 class101_sub2.method894(0, -1, 0);
-                this.aHa_Sub3_8322.method3915(0);
+                this.aHa_Sub3_8322.setDrawable(0);
                 if (!aClass262_8286.isEmpty((byte) 18)) {
                     int i_165_ = this.aHa_Sub3_8322.anInt8144;
                     int i_166_ = this.aHa_Sub3_8322.anInt8091;
                     this.aHa_Sub3_8322.L(0, i_166_, this.aHa_Sub3_8322.anInt8105);
-                    this.aHa_Sub3_8322.method3866(false, true);
-                    this.aHa_Sub3_8322.method3946(-32, false);
-                    this.aHa_Sub3_8322.method3817(60, 128);
-                    this.aHa_Sub3_8322.method3814(false, false, -2, (byte) 100);
+                    this.aHa_Sub3_8322.getFramebufferParameter(false, true);
+                    this.aHa_Sub3_8322.iconifyWindow(-32, false);
+                    this.aHa_Sub3_8322.linkProgram(60, 128);
+                    this.aHa_Sub3_8322.disableShader(false, false, -2, (byte) 100);
                     this.aHa_Sub3_8322.setActiveTexture((byte) 63, (this.aHa_Sub3_8322.anInterface18_8147));
-                    this.aHa_Sub3_8322.method3874(ShaderCompilerSub3.aClass229_6519, 116, Component385.aClass229_2207);
+                    this.aHa_Sub3_8322.texStorage3D(ShaderCompilerSub3.aClass229_6519, 116, Component385.aClass229_2207);
                     this.aHa_Sub3_8322.setTextureCombineMode((byte) 47, 0, DefinitionSub39.aClass70_9485);
                     this.aHa_Sub3_8322.setTextureEnvironment(0, true, DebugPanicSub2.aClass70_8503);
                     for (Node class348 = aClass262_8286.first(i_151_ + 5); class348 != null; class348 = aClass262_8286.next((byte) 106)) {
@@ -559,9 +559,9 @@ final class BufferCacheSub3
                     this.aHa_Sub3_8322.L(i_165_, i_166_, this.aHa_Sub3_8322.anInt8105);
                 }
                 if (aClass330_8307 != null) {
-                    this.aHa_Sub3_8322.method3925(-91, anInterface5_Impl1_8327, 0);
-                    this.aHa_Sub3_8322.method3925(-71, anInterface5_Impl1_8326, 1);
-                    this.aHa_Sub3_8322.method3862(0, this.aClass130_8324);
+                    this.aHa_Sub3_8322.waitNative(-91, anInterface5_Impl1_8327, 0);
+                    this.aHa_Sub3_8322.waitNative(-71, anInterface5_Impl1_8326, 1);
+                    this.aHa_Sub3_8322.drawArraysInstanced(0, this.aClass130_8324);
                     aClass330_8307.method2630(128, i_153_, i, bool, bools, i_149_);
                 }
             }
@@ -676,7 +676,7 @@ final class BufferCacheSub3
     final void method3987(int i, int i_212_, int i_213_, int i_214_, int i_215_, int i_216_, int i_217_, boolean[][] bools) {
         anInt8304++;
         if (anInt8329 > 0) {
-            Interface5_Impl2 interface5_impl2 = this.aHa_Sub3_8322.method3822(28, anInt8301);
+            Interface5_Impl2 interface5_impl2 = this.aHa_Sub3_8322.enableVertexAttrib(28, anInt8301);
             int i_218_ = 0;
             int i_219_ = 32767;
             int i_220_ = -32768;
@@ -686,7 +686,7 @@ final class BufferCacheSub3
                 // method24 returns jaclib GPU memory Buffer.
                 jaclib.memory.Buffer buffer = interface5_impl2.method24(true, false);
                 if (buffer != null) {
-                    Stream stream = this.aHa_Sub3_8322.method3893(buffer, 9179);
+                    Stream stream = this.aHa_Sub3_8322.uniform4i(buffer, 9179);
                     if (Stream.c()) {
                         for (int i_227_ = i_215_; i_217_ > i_227_; i_227_++) {
                             int i_228_ = i_227_ * this.tileWidth - -i_214_;
@@ -731,16 +731,16 @@ final class BufferCacheSub3
                 }
             }
             if (i_218_ > 0) {
-                this.aHa_Sub3_8322.method3932((byte) -127);
-                this.aHa_Sub3_8322.method3838(true, false);
-                this.aHa_Sub3_8322.method3866(false, true);
-                this.aHa_Sub3_8322.method3890(false, (byte) 113);
-                this.aHa_Sub3_8322.method3946(-32, false);
-                this.aHa_Sub3_8322.method3817(61, 0);
-                this.aHa_Sub3_8322.method3814(false, false, -2, (byte) 98);
+                this.aHa_Sub3_8322.setMouseState((byte) -127);
+                this.aHa_Sub3_8322.framebufferRenderbuffer(true, false);
+                this.aHa_Sub3_8322.getFramebufferParameter(false, true);
+                this.aHa_Sub3_8322.uniform1i(false, (byte) 113);
+                this.aHa_Sub3_8322.iconifyWindow(-32, false);
+                this.aHa_Sub3_8322.linkProgram(61, 0);
+                this.aHa_Sub3_8322.disableShader(false, false, -2, (byte) 98);
                 this.aHa_Sub3_8322.setActiveTexture((byte) -22, null);
-                MatrixSub2 class101_sub2 = this.aHa_Sub3_8322.method3934(-71);
-                float[] fs = this.aHa_Sub3_8322.method3837(true);
+                MatrixSub2 class101_sub2 = this.aHa_Sub3_8322.getClipboard(-71);
+                float[] fs = this.aHa_Sub3_8322.renderbufferStorage(true);
                 fs[6] = 0.0F;
                 fs[13] = -(((float) (2 * i_212_) + (float) (i_213_ * i_217_) / 128.0F) / (float) (this.aHa_Sub3_8322.anInt7962)) + 1.0F;
                 fs[11] = 0.0F;
@@ -758,18 +758,18 @@ final class BufferCacheSub3
                 fs[12] = -1.0F - (((float) (i_213_ * i_214_) / 128.0F - (float) (2 * i)) / (float) (this.aHa_Sub3_8322.anInt7931));
                 fs[1] = 0.0F;
                 class101_sub2.method935(0.0F, 0.0F, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0);
-                this.aHa_Sub3_8322.method3821(-4845);
-                this.aHa_Sub3_8322.method3915(0);
+                this.aHa_Sub3_8322.getAttribLocation(-4845);
+                this.aHa_Sub3_8322.setDrawable(0);
                 if ((0x7 & this.anInt8294) != 0) {
-                    this.aHa_Sub3_8322.method3866(true, true);
-                    this.aHa_Sub3_8322.method3892(0);
-                } else this.aHa_Sub3_8322.method3866(false, true);
-                this.aHa_Sub3_8322.method3926((byte) 59, false);
-                this.aHa_Sub3_8322.method3925(63, anInterface5_Impl1_8327, 0);
-                this.aHa_Sub3_8322.method3925(-90, anInterface5_Impl1_8326, 1);
-                this.aHa_Sub3_8322.method3862(0, this.aClass130_8324);
-                this.aHa_Sub3_8322.method3938(VideoAdDisplay.aClass21_3181, i_218_ / 3, interface5_impl2, i_219_, 0, -i_219_ + i_220_ - -1, 114);
-                this.aHa_Sub3_8322.method3926((byte) 82, true);
+                    this.aHa_Sub3_8322.getFramebufferParameter(true, true);
+                    this.aHa_Sub3_8322.uniform3i(0);
+                } else this.aHa_Sub3_8322.getFramebufferParameter(false, true);
+                this.aHa_Sub3_8322.signalNative((byte) 59, false);
+                this.aHa_Sub3_8322.waitNative(63, anInterface5_Impl1_8327, 0);
+                this.aHa_Sub3_8322.waitNative(-90, anInterface5_Impl1_8326, 1);
+                this.aHa_Sub3_8322.drawArraysInstanced(0, this.aClass130_8324);
+                this.aHa_Sub3_8322.showCursor(VideoAdDisplay.aClass21_3181, i_218_ / 3, interface5_impl2, i_219_, 0, -i_219_ + i_220_ - -1, 114);
+                this.aHa_Sub3_8322.signalNative((byte) 82, true);
             }
         }
     }

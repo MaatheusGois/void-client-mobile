@@ -27,7 +27,7 @@ final class Component264
             DisplayModeManagerContainer105 class206 = aHa_Sub2_8707.aClass206_7778;
             aHa_Sub2_8707.K(NodederUtil.anIntArray6635);
             aHa_Sub2_8707.la();
-            aHa_Sub2_8707.method3755(-32);
+            aHa_Sub2_8707.disableTexture2D(-32);
             OpenGL.glMatrixMode(5889);
             OpenGL.glLoadIdentity();
             OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -35,19 +35,19 @@ final class Component264
             OpenGL.glLoadIdentity();
             OpenGL.glPushAttrib(2048);
             OpenGL.glViewport(0, 0, aClass258_Sub2_8701.anInt8538, aClass258_Sub2_8701.anInt8538);
-            aHa_Sub2_8707.method3807(false, i + -65532);
-            aHa_Sub2_8707.method3728(false, i + -65411);
+            aHa_Sub2_8707.beginFrame(false, i + -65532);
+            aHa_Sub2_8707.setLightingEnabled(false, i + -65411);
             aHa_Sub2_8707.glEnableScissorTest(114, false);
-            aHa_Sub2_8707.method3748(i + -65534, false);
+            aHa_Sub2_8707.drawSprite(i + -65534, false);
             aHa_Sub2_8707.glResetViewport(-2, -91);
             aHa_Sub2_8707.glActiveTexture(-15039, 1);
             aHa_Sub2_8707.glTexEnvfv(f, 0.0F, 0.0F, (byte) 110, 0.0F);
             aHa_Sub2_8707.glTexEnvi(34165, (byte) -115, 34165);
             aHa_Sub2_8707.bindTexture((byte) -95, class258_sub2_0_);
             aHa_Sub2_8707.glActiveTexture(-15039, 0);
-            aHa_Sub2_8707.method3761(0, 1);
+            aHa_Sub2_8707.setTextureEnvMode(0, 1);
             aHa_Sub2_8707.bindTexture((byte) -90, class258_sub2);
-            aHa_Sub2_8707.method3773(i ^ ~0xfffe, class206);
+            aHa_Sub2_8707.popTexture(i ^ ~0xfffe, class206);
             for (int i_1_ = 0; i_1_ < 6; i_1_++) {
                 int i_2_ = 34069 + i_1_;
                 class206.method1498(0, i + -65591, i_2_, aClass258_Sub2_8701);
@@ -165,7 +165,7 @@ final class Component264
                 }
             }
             class206.method1500(2983, 0);
-            aHa_Sub2_8707.method3770(-422613672, class206);
+            aHa_Sub2_8707.pushTexture(-422613672, class206);
             aHa_Sub2_8707.glActiveTexture(i + -80573, 1);
             if (i != 65534) return true;
             aHa_Sub2_8707.bindTexture((byte) -95, null);

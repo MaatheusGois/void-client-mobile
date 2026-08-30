@@ -46,7 +46,7 @@ abstract class AbstractGlTexture implements Interface9 {
     private final int method1951(int i) {
         anInt4861++;
         if (i >= -96) anInt4847 = -92;
-        int i_2_ = (this.aHa_Sub2_4851.method3798(this.anInt4858, 2) * anInt4847);
+        int i_2_ = (this.aHa_Sub2_4851.createSurface(this.anInt4858, 2) * anInt4847);
         if (aBoolean4860) return i_2_ * 4 / 3;
         return i_2_;
     }

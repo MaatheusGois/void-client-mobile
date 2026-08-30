@@ -180,7 +180,7 @@ final class DisplayModeManagerContainer282
             if (aClass270_5575 != null) {
                 if (aClass270_5575.anInterface8_3463 == null) writeVertexData((aByte5581 & 0x10) != 0, (byte) 27);
                 if (aClass270_5575.anInterface8_3463 != null) {
-                    aHa_Sub2_5598.method3728(aClass123_5563 != null, 118);
+                    aHa_Sub2_5598.setLightingEnabled(aClass123_5563 != null, 118);
                     aHa_Sub2_5598.glSetVertexPointer(aClass123_5605, aClass123_5610, -26411, aClass123_5620, aClass123_5563);
                     int i_7_ = -1 + anIntArray5626.length;
                     for (int i_8_ = 0; i_7_ > i_8_; i_8_++) {
@@ -188,7 +188,7 @@ final class DisplayModeManagerContainer282
                         int i_10_ = anIntArray5626[i_8_ + 1];
                         int i_11_ = aShortArray5601[i_9_] & 0xffff;
                         if (i_11_ == 65535) i_11_ = -1;
-                        aHa_Sub2_5598.method3801(aClass123_5563 != null, i_11_, 125);
+                        aHa_Sub2_5598.getError(aClass123_5563 != null, i_11_, 125);
                         aHa_Sub2_5598.glDrawElements((-i_9_ + i_10_) * 3, -128, 4, (aClass270_5575.anInterface8_3463), i_9_ * 3);
                     }
                 }
@@ -461,7 +461,7 @@ final class DisplayModeManagerContainer282
             MatrixSub3 class101_sub3 = aHa_Sub2_5598.aClass101_Sub3_7729;
             aHa_Sub2_5598.glPushMatrix(-18516);
             aHa_Sub2_5598.C(!aBoolean5595);
-            aHa_Sub2_5598.method3728(false, 35);
+            aHa_Sub2_5598.setLightingEnabled(false, 35);
             aHa_Sub2_5598.glSetVertexPointer(aHa_Sub2_5598.aClass123_7849, null, -26411, aHa_Sub2_5598.aClass123_7833, null);
             for (int i = 0; i < anInt5536; i++) {
                 Component151 class118 = aClass118Array5621[i];
@@ -479,7 +479,7 @@ final class DisplayModeManagerContainer282
                     int i_96_ = class48.anInt858;
                     OpenGL.glColor4ub((byte) (i_96_ >> 16), (byte) (i_96_ >> 8), (byte) i_96_, (byte) (i_96_ >> 24));
                     aHa_Sub2_5598.glResetViewport(class118.aShort1787, -77);
-                    aHa_Sub2_5598.method3753(class118.aByte1789, 1);
+                    aHa_Sub2_5598.setBlendMode(class118.aByte1789, 1);
                     aHa_Sub2_5598.glDrawArrays(4, 7, 0, 93);
                 }
             }
@@ -1147,7 +1147,7 @@ final class DisplayModeManagerContainer282
                                     class318_sub3.anInt6403 = (-(class318_sub3.anInt6405) + ((aHa_Sub2_5598.anInt7853) + ((aHa_Sub2_5598.anInt7771) * (aShort5634 + i_250_) / i)));
                                 }
                             }
-                            aHa_Sub2_5598.method3789((byte) -122, (float) i);
+                            aHa_Sub2_5598.deleteTexture((byte) -122, (float) i);
                             aHa_Sub2_5598.method3760(1);
                             aHa_Sub2_5598.glPushModelMatrix(false, class101_sub3_236_);
                             preparePass((byte) 127);
@@ -1668,7 +1668,7 @@ final class DisplayModeManagerContainer282
                                     class318_sub3.aBoolean6401 = true;
                                 }
                             }
-                            aHa_Sub2_5598.method3784((byte) -62);
+                            aHa_Sub2_5598.setColorMask((byte) -62);
                             aHa_Sub2_5598.glPushModelMatrix(false, class101_sub3_350_);
                             preparePass((byte) 127);
                             aHa_Sub2_5598.glPopMatrix(true);

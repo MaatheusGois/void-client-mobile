@@ -134,7 +134,7 @@ abstract class DebugPanic implements Interface5 {
         anInt4752++;
         if (i_4_ > anInt4739) {
             method2126((byte) -36);
-            if (anInt4746 <= 0) aNativeHeapBuffer4748 = this.aClass377_4759.method3869((byte) 47, false, i_4_);
+            if (anInt4746 <= 0) aNativeHeapBuffer4748 = this.aClass377_4759.invalidateSubFramebuffer((byte) 47, false, i_4_);
             else {
                 OpenGL.glBindBufferARB(anInt4755, anInt4746);
                 OpenGL.glBufferDataARBub(anInt4755, i_4_, null, 0, !aBoolean4750 ? 35044 : 35040);

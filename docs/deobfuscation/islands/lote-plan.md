@@ -328,3 +328,14 @@ mobile reflection references.
 Verification: reflection gate PASS; desktop and iOS Java compilation
 successful. Android assemble was attempted but dependency resolution could not
 find the pre-existing `com.android.application:8.7.3` plugin in this sandbox.
+
+## lote 70 — GL binding surface *(1,283 refs freed)*
+
+**STATUS: DONE** — applied the existing high-confidence `scripts/lote54_rename.py`
+binding map across the renderer hierarchy and call sites. Direct OpenGL
+operation names (buffer, shader, texture, framebuffer, state, window, and
+input bindings) now describe their native operation. The two distinct
+`destroyContext(int)` implementations were kept distinct as
+`destroyContext` and `destroyContextIfNeeded` to preserve Java overload validity.
+
+Reflection gate: PASS. `:client:compileJava`: PASS after the collision fix.

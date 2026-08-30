@@ -43,17 +43,17 @@ final class NodeSub3
     final void method2736(byte i, int i_0_) {
         if (i != -57) method2736((byte) 25, -39);
         anInt6580++;
-        aNativeHeapBuffer6572 = aHa_Sub3_6590.method3869((byte) 77, true, i_0_ * 4);
+        aNativeHeapBuffer6572 = aHa_Sub3_6590.invalidateSubFramebuffer((byte) 77, true, i_0_ * 4);
         aStream6574 = new Stream(aNativeHeapBuffer6572, 0, 4 * i_0_);
     }
 
     final void method2737(byte i, int[] is, int i_1_) {
         anInt6583++;
-        Interface5_Impl2 interface5_impl2 = aHa_Sub3_6590.method3822(47, this.anInt6589 * 3);
+        Interface5_Impl2 interface5_impl2 = aHa_Sub3_6590.enableVertexAttrib(47, this.anInt6589 * 3);
         Buffer buffer = interface5_impl2.method24(true, false);
         if (buffer != null) {
             if (i != -30) method2736((byte) 116, 72);
-            Stream stream = aHa_Sub3_6590.method3893(buffer, 9179);
+            Stream stream = aHa_Sub3_6590.uniform4i(buffer, 9179);
             int i_2_ = 0;
             int i_3_ = 32767;
             int i_4_ = -32768;
@@ -103,15 +103,15 @@ final class NodeSub3
             }
             stream.a();
             if (interface5_impl2.method22(i + 7) && i_2_ > 0) {
-                aHa_Sub3_6590.method3814((aS_Sub3_6566.anInt8294 & 0x8) != 0, (0x7 & aS_Sub3_6566.anInt8294) != 0, this.anInt6567, (byte) 48);
+                aHa_Sub3_6590.disableShader((aS_Sub3_6566.anInt8294 & 0x8) != 0, (0x7 & aS_Sub3_6566.anInt8294) != 0, this.anInt6567, (byte) 48);
                 if (aHa_Sub3_6590.aBoolean8160) aHa_Sub3_6590.EA(2147483647, this.anInt6571, this.anInt6575, this.anInt6569);
-                MatrixSub2 class101_sub2 = aHa_Sub3_6590.method3820(false);
+                MatrixSub2 class101_sub2 = aHa_Sub3_6590.getUniformLocation(false);
                 class101_sub2.setScale(1.0F, 1.0F / this.aFloat6582, 1.0F / this.aFloat6582, (byte) -80);
-                aHa_Sub3_6590.method3853(i + -2, Component302.aClass251_6030);
-                aHa_Sub3_6590.method3925(55, anInterface5_Impl1_6577, 1);
-                aHa_Sub3_6590.method3862(i + 30, (aS_Sub3_6566.aClass130_8324));
-                aHa_Sub3_6590.method3938(VideoAdDisplay.aClass21_3181, i_2_, interface5_impl2, i_3_, 0, 1 + -i_3_ + i_4_, 104);
-                aHa_Sub3_6590.method3879(-8629);
+                aHa_Sub3_6590.deleteVertexArrays(i + -2, Component302.aClass251_6030);
+                aHa_Sub3_6590.waitNative(55, anInterface5_Impl1_6577, 1);
+                aHa_Sub3_6590.drawArraysInstanced(i + 30, (aS_Sub3_6566.aClass130_8324));
+                aHa_Sub3_6590.showCursor(VideoAdDisplay.aClass21_3181, i_2_, interface5_impl2, i_3_, 0, 1 + -i_3_ + i_4_, 104);
+                aHa_Sub3_6590.getProgramInfoLog(-8629);
             }
         }
     }
@@ -131,7 +131,7 @@ final class NodeSub3
     final void method2740(int i, int i_22_) {
         anInt6576++;
         aStream6574.a();
-        anInterface5_Impl1_6577 = aHa_Sub3_6590.method3889(false, 16711680);
+        anInterface5_Impl1_6577 = aHa_Sub3_6590.uniform4f(false, 16711680);
         anInterface5_Impl1_6577.method17(aNativeHeapBuffer6572, 4, 4 * i_22_, (byte) -110);
         int i_23_ = 44 % ((i - 19) / 33);
         aNativeHeapBuffer6572 = null;

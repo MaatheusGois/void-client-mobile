@@ -41,7 +41,7 @@ final class BrowserDetector {
                 DisplayModeManagerContainer167.aBoolean247 = true;
             }
         }
-        if (bool) return GlToolkitSub3.method3873(is, 0);
+        if (bool) return GlToolkitSub3.texStorage2D(is, 0);
         return is;
     }
 

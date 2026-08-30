@@ -140,7 +140,7 @@ final class DisplayModeManagerContainer190
     private final void renderParticles(int i) {
         if (aClass353Array5524 != null) {
             aHa_Sub3_5419.C(!aBoolean5428);
-            aHa_Sub3_5419.method3866(false, true);
+            aHa_Sub3_5419.getFramebufferParameter(false, true);
             aHa_Sub3_5419.setTextureCombineMode((byte) 47, 1, DefinitionSub39.aClass70_9485);
             aHa_Sub3_5419.setTextureEnvironment(1, true, DefinitionSub39.aClass70_9485);
             for (int i_0_ = 0; anInt5406 > i_0_; i_0_++) {
@@ -154,15 +154,15 @@ final class DisplayModeManagerContainer190
                     float f_4_ = (NodeSub12.aFloat6752 + (RenderableSub6.aFloat6430 * f_2_ + (NodeSub20.aFloat6835 * f + f_1_ * Component200.aFloat3710)));
                     float f_5_ = Component49.aFloat4673 + (Component45.aFloat4338 * f_1_ + f * ShaderCompilerSub3.aFloat6523 + f_2_ * GraphicsToolkit.aFloat4582);
                     float f_6_ = ((float) (1.0 / Math.sqrt(f_5_ * f_5_ + (f_4_ * f_4_ + f_3_ * f_3_))) * (float) class353.anInt4347);
-                    MatrixSub2 class101_sub2 = aHa_Sub3_5419.method3934(-96);
+                    MatrixSub2 class101_sub2 = aHa_Sub3_5419.getClipboard(-96);
                     class101_sub2.method936(class334.anInt4151, 0, (class353.aShort4340 * class334.anInt4162) >> 7, (-(f_3_ * f_6_) + ((float) class334.anInt4158 + f_3_)), -(f_6_ * f_5_) + f_5_, ((float) class334.anInt4154 + f_4_ - f_4_ * f_6_), (class334.anInt4165 * class353.aShort4341) >> 7);
                     class101_sub2.method917((aHa_Sub3_5419.aClass101_Sub2_8082), (byte) 112);
-                    aHa_Sub3_5419.method3915(0);
+                    aHa_Sub3_5419.setDrawable(0);
                     int i_7_ = class334.anInt4156;
-                    aHa_Sub3_5419.method3814(false, false, class353.aShort4348, (byte) 108);
-                    aHa_Sub3_5419.method3817(92, class353.aByte4343);
-                    aHa_Sub3_5419.method3894(-28186, i_7_);
-                    aHa_Sub3_5419.method3933(-114);
+                    aHa_Sub3_5419.disableShader(false, false, class353.aShort4348, (byte) 108);
+                    aHa_Sub3_5419.linkProgram(92, class353.aByte4343);
+                    aHa_Sub3_5419.uniformMatrix4fv(-28186, i_7_);
+                    aHa_Sub3_5419.warpPointer(-114);
                 }
             }
             aHa_Sub3_5419.setTextureEnvironment(1, true, DisplayModeManagerContainer343.aClass70_8737);
@@ -182,7 +182,7 @@ final class DisplayModeManagerContainer190
         if (!bool_9_ && !bool && !bool_8_ && !bool_10_) return true;
         boolean bool_11_ = true;
         if (bool_9_) {
-            if (aClass290_5520.anInterface5_Impl1_3708 == null) aClass290_5520.anInterface5_Impl1_3708 = aHa_Sub3_5419.method3889(aBoolean5462, 16711680);
+            if (aClass290_5520.anInterface5_Impl1_3708 == null) aClass290_5520.anInterface5_Impl1_3708 = aHa_Sub3_5419.uniform4f(aBoolean5462, 16711680);
             Interface5_Impl1 interface5_impl1 = aClass290_5520.anInterface5_Impl1_3708;
             interface5_impl1.method20(12 * anInt5475, (byte) 125, 12);
             Buffer buffer = interface5_impl1.method19(true, 26775);
@@ -195,7 +195,7 @@ final class DisplayModeManagerContainer190
             } else bool_11_ = false;
         }
         if (bool) {
-            if (aClass290_5482.anInterface5_Impl1_3708 == null) aClass290_5482.anInterface5_Impl1_3708 = aHa_Sub3_5419.method3889(aBoolean5462, 16711680);
+            if (aClass290_5482.anInterface5_Impl1_3708 == null) aClass290_5482.anInterface5_Impl1_3708 = aHa_Sub3_5419.uniform4f(aBoolean5462, 16711680);
             Interface5_Impl1 interface5_impl1 = aClass290_5482.anInterface5_Impl1_3708;
             interface5_impl1.method20(4 * anInt5475, (byte) 125, 4);
             Buffer buffer = interface5_impl1.method19(true, 26775);
@@ -226,7 +226,7 @@ final class DisplayModeManagerContainer190
             }
         }
         if (bool_8_) {
-            if (aClass290_5424.anInterface5_Impl1_3708 == null) aClass290_5424.anInterface5_Impl1_3708 = aHa_Sub3_5419.method3889(aBoolean5462, 16711680);
+            if (aClass290_5424.anInterface5_Impl1_3708 == null) aClass290_5424.anInterface5_Impl1_3708 = aHa_Sub3_5419.uniform4f(aBoolean5462, 16711680);
             Interface5_Impl1 interface5_impl1 = aClass290_5424.anInterface5_Impl1_3708;
             interface5_impl1.method20(anInt5475 * 12, (byte) 125, 12);
             Buffer buffer = interface5_impl1.method19(true, 26775);
@@ -255,7 +255,7 @@ final class DisplayModeManagerContainer190
             }
         }
         if (bool_10_) {
-            if (aClass290_5460.anInterface5_Impl1_3708 == null) aClass290_5460.anInterface5_Impl1_3708 = aHa_Sub3_5419.method3889(aBoolean5462, 16711680);
+            if (aClass290_5460.anInterface5_Impl1_3708 == null) aClass290_5460.anInterface5_Impl1_3708 = aHa_Sub3_5419.uniform4f(aBoolean5462, 16711680);
             Interface5_Impl1 interface5_impl1 = aClass290_5460.anInterface5_Impl1_3708;
             interface5_impl1.method20(anInt5475 * 8, (byte) 126, 8);
             Buffer buffer = interface5_impl1.method19(true, 26775);
@@ -865,13 +865,13 @@ final class DisplayModeManagerContainer190
     private final boolean ensureInterface(int i) {
         anInt5421++;
         if (aClass192_5485.aBoolean2577) return true;
-        if (aClass192_5485.anInterface5_Impl2_2576 == null) aClass192_5485.anInterface5_Impl2_2576 = aHa_Sub3_5419.method3840(-28633, aBoolean5462);
+        if (aClass192_5485.anInterface5_Impl2_2576 == null) aClass192_5485.anInterface5_Impl2_2576 = aHa_Sub3_5419.blitFramebuffer(-28633, aBoolean5462);
         Interface5_Impl2 interface5_impl2 = aClass192_5485.anInterface5_Impl2_2576;
         interface5_impl2.method23(15959, 6 * anInt5516);
         Buffer buffer = interface5_impl2.method24(true, false);
         int i_146_ = 84 / ((-70 - i) / 49);
         if (buffer != null) {
-            Stream stream = aHa_Sub3_5419.method3893(buffer, 9179);
+            Stream stream = aHa_Sub3_5419.uniform4i(buffer, 9179);
             if (Stream.c()) {
                 for (int i_148_ = 0; anInt5516 > i_148_; i_148_++) {
                     stream.d(aShortArray5508[i_148_]);
@@ -1293,9 +1293,9 @@ final class DisplayModeManagerContainer190
                                     class318_sub3.aBoolean6401 = true;
                                 }
                             }
-                            aHa_Sub3_5419.method3867((float) i, -68);
-                            aHa_Sub3_5419.method3857((byte) -21);
-                            aHa_Sub3_5419.method3815(0, class101_sub2_180_);
+                            aHa_Sub3_5419.getRenderbufferParameter((float) i, -68);
+                            aHa_Sub3_5419.bindBufferBase((byte) -21);
+                            aHa_Sub3_5419.setShaderUniform(0, class101_sub2_180_);
                             tick(416776206);
                             renderParticles(94);
                         }
@@ -1760,8 +1760,8 @@ final class DisplayModeManagerContainer190
                                     class318_sub3.aBoolean6401 = true;
                                 }
                             }
-                            aHa_Sub3_5419.method3825(8);
-                            aHa_Sub3_5419.method3815(0, class101_sub2_307_);
+                            aHa_Sub3_5419.bindBuffer(8);
+                            aHa_Sub3_5419.setShaderUniform(0, class101_sub2_307_);
                             tick(416776206);
                             renderParticles(76);
                         }
@@ -2319,27 +2319,27 @@ final class DisplayModeManagerContainer190
         anInt5441++;
         if (anInt5516 != 0) {
             if (checkVisibility(i ^ ~0x18d78060) && ensureInterface(-128)) {
-                aHa_Sub3_5419.method3925(i + -416776294, (aClass290_5520.anInterface5_Impl1_3711), 0);
-                aHa_Sub3_5419.method3925(i ^ 0x18d78057, (aClass290_5482.anInterface5_Impl1_3711), 1);
-                aHa_Sub3_5419.method3925(i ^ ~0x18d78079, (aClass290_5460.anInterface5_Impl1_3711), 2);
+                aHa_Sub3_5419.waitNative(i + -416776294, (aClass290_5520.anInterface5_Impl1_3711), 0);
+                aHa_Sub3_5419.waitNative(i ^ 0x18d78057, (aClass290_5482.anInterface5_Impl1_3711), 1);
+                aHa_Sub3_5419.waitNative(i ^ ~0x18d78079, (aClass290_5460.anInterface5_Impl1_3711), 2);
                 boolean bool;
                 if ((anInt5472 & 0x37) == 0) {
                     bool = false;
-                    aHa_Sub3_5419.method3866(false, true);
-                    aHa_Sub3_5419.method3862(0, (aHa_Sub3_5419.aClass130_8191));
+                    aHa_Sub3_5419.getFramebufferParameter(false, true);
+                    aHa_Sub3_5419.drawArraysInstanced(0, (aHa_Sub3_5419.aClass130_8191));
                 } else {
                     bool = true;
-                    aHa_Sub3_5419.method3866(true, true);
-                    aHa_Sub3_5419.method3925(i ^ ~0x18d7806c, (aClass290_5424.anInterface5_Impl1_3711), 3);
-                    aHa_Sub3_5419.method3862(0, (aHa_Sub3_5419.aClass130_8208));
+                    aHa_Sub3_5419.getFramebufferParameter(true, true);
+                    aHa_Sub3_5419.waitNative(i ^ ~0x18d7806c, (aClass290_5424.anInterface5_Impl1_3711), 3);
+                    aHa_Sub3_5419.drawArraysInstanced(0, (aHa_Sub3_5419.aClass130_8208));
                 }
                 for (int i_474_ = 0; anIntArray5415.length > i_474_; i_474_++) {
                     int i_475_ = anIntArray5404[i_474_];
                     int i_476_ = anIntArray5404[1 + i_474_];
                     int i_477_ = aShortArray5423[i_475_] & 0xffff;
                     if (i_477_ == 65535) i_477_ = -1;
-                    aHa_Sub3_5419.method3814(true, bool, i_477_, (byte) 102);
-                    aHa_Sub3_5419.method3938(VideoAdDisplay.aClass21_3181, -i_475_ + i_476_, (aClass192_5485.anInterface5_Impl2_2572), anIntArray5415[i_474_], 3 * i_475_, anIntArray5473[i_474_], 54);
+                    aHa_Sub3_5419.disableShader(true, bool, i_477_, (byte) 102);
+                    aHa_Sub3_5419.showCursor(VideoAdDisplay.aClass21_3181, -i_475_ + i_476_, (aClass192_5485.anInterface5_Impl2_2572), anIntArray5415[i_474_], 3 * i_475_, anIntArray5473[i_474_], 54);
                 }
             }
             beginFrame(262144);

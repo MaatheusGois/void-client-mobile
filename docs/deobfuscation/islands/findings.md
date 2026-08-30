@@ -3,7 +3,7 @@
 This file is the live **research log** — concrete evidence discovered during
 the deobfuscation discovery pass. Use it as the input for lote planning.
 
-Last updated: 2026-08-30 (lote 66 executed; lote 51/54/59/65 marked done).
+Last updated: 2026-08-30 (lote 70 executed; lote 51/54/59/65/69 marked done).
 
 ---
 
@@ -332,6 +332,20 @@ references. The call-site evidence supports the following names:
 
 The batch removes 530 obfuscated method references while preserving behavior.
 Reflection gate, desktop compilation, and iOS compilation pass.
+
+## 15. lote 70 — GL binding surface (CONFIRMED, executed)
+
+The existing renderer mapping in `scripts/lote54_rename.py` was applied
+mechanically to the GL toolkit hierarchy and all client call sites. It changed
+1,283 method references, covering the evidenced native-operation families:
+frame/swap, texture and sampler state, shader/program lifecycle, vertex and
+index buffers, framebuffer/renderbuffer operations, uniforms, viewport/clear,
+window/input bindings, and event processing. The mapping is grounded in the
+corresponding `OpenGL` calls and the shared abstract toolkit contract.
+
+One naming collision exposed two distinct `destroyContext(int)` bodies in
+`GlToolkitSub3`; the second was named `destroyContextIfNeeded`, with its sole
+call site updated. Reflection gate and client compilation pass.
 
 ---
 

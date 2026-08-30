@@ -48,7 +48,7 @@ abstract class Component137
 
     protected final void finalize() throws Throwable {
         anInt1922++;
-        this.aHa_Sub2_1927.method3780(anInt1921, -1, this.anInt1929);
+        this.aHa_Sub2_1927.setDepthTest(anInt1921, -1, this.anInt1929);
         super.finalize();
     }
 

@@ -275,7 +275,7 @@ final class DisplayModeManagerContainer105
 
     protected final void finalize() throws Throwable {
         anInt4864++;
-        aHa_Sub2_4883.method3800(96, anInt4891);
+        aHa_Sub2_4883.swapInterval(96, anInt4891);
         super.finalize();
     }
 

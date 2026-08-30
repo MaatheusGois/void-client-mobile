@@ -51,7 +51,7 @@ final class Component94
         }
         long l = Component240.currentTimeMillis(i + 26482);
         for (int i_1_ = 0; i_1_ < 10000; i_1_++)
-            var_ha.method3676(5, 10, 100, 75, 50, 100, 15, 90, 100, -65536, -65536, -65536, 1);
+            var_ha.draw3DTriangle(5, 10, 100, 75, 50, 100, 15, 90, 100, -65536, -65536, -65536, 1);
         int i_2_ = (int) (-l + Component240.currentTimeMillis(-71));
         if (i != -26584) benchmarkToolkitMs(-124);
         var_ha.method3675(100, (byte) -125, 0, 0, 100, -16777216);

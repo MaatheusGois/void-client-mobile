@@ -375,7 +375,7 @@ final class ItemDefinition {
             var_ha_38_.DA(16, 16, 512, 512);
             DisplayModeManagerContainer204 class101 = var_ha_38_.method3654();
             class101.method910();
-            var_ha_38_.method3638(class101);
+            var_ha_38_.loadModelviewMatrix(class101);
             var_ha_38_.DualToolkit(1.0F);
             var_ha_38_.ZA(16777215, 1.0F, 1.0F, -50.0F, -10.0F, -50.0F);
             DisplayModeManagerContainer204 class101_49_ = var_ha_38_.method3705();

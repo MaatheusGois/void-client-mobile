@@ -411,8 +411,8 @@ final class Player extends DisplayModeManagerContainer58 {
         }
         if (this.aClass318_Sub10_10327 != null) {
             Component122 class98 = this.aClass318_Sub10_10327.method2525();
-            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.method3685(class98, Component72.anInt1906);
-            else var_ha.method3684(class98);
+            if (DisplayModeManagerContainer50.aBoolean3870) var_ha.renderModelEx(class98, Component72.anInt1906);
+            else var_ha.renderModel(class98);
         }
         for (int i_67_ = 0; (i_67_ < this.aClass64Array10323.length); i_67_++) {
             if (this.aClass64Array10323[i_67_] != null) this.aBoolean10324 |= this.aClass64Array10323[i_67_].F();
