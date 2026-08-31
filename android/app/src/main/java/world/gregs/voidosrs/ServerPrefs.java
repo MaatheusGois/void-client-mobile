@@ -18,9 +18,6 @@ import java.util.ArrayList;
  */
 public final class ServerPrefs {
     public static final int MAX_HISTORY = 5;
-    private static final int LEGACY_PORT = 43594;
-    private static final int TARGET_LIVE_PORT = 443;
-    private static final String TARGET_PROTOCOL = "667";
 
     /**
      * Process-local newest host — tvOS RoboVM can hit {@code EPERM} writing under
@@ -38,29 +35,6 @@ public final class ServerPrefs {
     public static void applyClientProperties() {
         applyProperty("void.protocol", "debug.void.protocol");
         applyProperty("void.port", "debug.void.port");
-    }
-
-    /**
-     * Primary JS5/login endpoint used by the mobile bootstrap. The client core
-     * reads the same properties through {@code ProtocolInfo}; keeping this small
-     * mirror here avoids importing a default-package class into the host. Keep
-     * the fallback and validation aligned with {@code ProtocolInfo.port()}.
-     */
-    public static int gamePort() {
-        int fallback = LEGACY_PORT;
-        try {
-            if (TARGET_PROTOCOL.equals(System.getProperty("void.protocol"))) {
-                fallback = TARGET_LIVE_PORT;
-            }
-            String raw = System.getProperty("void.port");
-            if (raw == null || raw.trim().length() == 0) {
-                return fallback;
-            }
-            int parsed = Integer.parseInt(raw.trim());
-            return parsed > 0 && parsed <= 65535 ? parsed : fallback;
-        } catch (Throwable ignored) {
-            return fallback;
-        }
     }
 
     private static void applyProperty(String javaName, String androidName) {

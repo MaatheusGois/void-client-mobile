@@ -1140,9 +1140,8 @@ public class GameController extends GCEventViewController {
             return;
         }
         ServerPrefs.applyClientProperties();
-        final int port = ServerPrefs.gamePort();
         clientStarted = true;
-        System.out.println("void-osrs boot start server=" + server + ":" + port
+        System.out.println("void-osrs boot start server=" + server
                 + " size=" + width + "x" + height);
         AwtHost.setDisplaySize(width, height);
         AwtHost.presenter = game;
@@ -1150,8 +1149,9 @@ public class GameController extends GCEventViewController {
             public void run() {
                 try {
                     Class<?> loaderCl = Class.forName("Loader");
+                    int port = loaderCl.getField("port").getInt(null);
+                    System.out.println("void-osrs boot endpoint=" + server + ":" + port);
                     loaderCl.getField("address").set(null, server);
-                    loaderCl.getField("port").setInt(null, port);
                     loaderCl.getField("debug").set(null, true);
                     Object loader = loaderCl.getDeclaredConstructor().newInstance();
                     loaderCl.getMethod("setSize", int.class, int.class).invoke(loader, AwtHost.GAME_WIDTH, AwtHost.GAME_HEIGHT);
