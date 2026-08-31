@@ -43,7 +43,8 @@ public final class ServerPrefs {
     /**
      * Primary JS5/login endpoint used by the mobile bootstrap. The client core
      * reads the same properties through {@code ProtocolInfo}; keeping this small
-     * mirror here avoids importing a default-package class into the host.
+     * mirror here avoids importing a default-package class into the host. Keep
+     * the fallback and validation aligned with {@code ProtocolInfo.port()}.
      */
     public static int gamePort() {
         int fallback = LEGACY_PORT;

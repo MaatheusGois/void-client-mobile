@@ -58,8 +58,9 @@ public final class ProtocolInfo {
 
     /**
      * Selects a revision from a launcher argument before the applet is created.
-     * The launcher must call this during bootstrap, before starting client work;
-     * the selected value is immutable for the remainder of that client run.
+     * The launcher must call this during bootstrap, before starting client work.
+     * Later calls replace the selection deliberately, which lets the desktop
+     * launcher update the endpoint default after parsing its arguments.
      */
     public static synchronized void selectRevision(int revision) {
         if (revision != REVISION_634 && revision != REVISION_667) {
@@ -93,7 +94,7 @@ public final class ProtocolInfo {
      */
     public static String cacheNamespace(String gameName) {
         String base = gameName;
-        if (base == null || base.length() == 0) {
+        if (base == null || base.isEmpty()) {
             base = "runescape";
         }
         int suffix = base.lastIndexOf('-');
