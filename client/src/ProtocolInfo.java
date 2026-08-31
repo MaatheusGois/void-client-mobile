@@ -99,10 +99,6 @@ public final class ProtocolInfo {
         }
     }
 
-    public static boolean is667() {
-        return revision() == REVISION_667;
-    }
-
     /**
      * Returns the configured game port. The port is server-specific; keep the
      * Void-compatible 43594 default until a compatible 667 server is selected.
