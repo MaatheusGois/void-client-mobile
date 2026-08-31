@@ -20,7 +20,6 @@ public class Loader extends Applet {
     public static boolean splitPorts = false;
     public static boolean debug = false;
     public static boolean trace = false;
-    private static boolean portWasProvided = false;
     /** Enable Microbot runtime (menu-inject bot API). Desktop default on. */
     public static boolean microbotEnabled = true;
     public static String address = "127.0.0.1";
@@ -44,6 +43,7 @@ public class Loader extends Applet {
     public static void main(String[] args) {
         // libsw3d.dylib + modern macOS JAWT: Finalizer crashes in canvas::~canvas.
         disableSw3dOnMacOs();
+        port = ProtocolInfo.port();
         try {
             for (int i = 0; i < args.length; i++) {
                 String arg = args[i];
@@ -55,7 +55,6 @@ public class Loader extends Applet {
                     case "-p":
                     case "--port":
                         port = parsePort(requiredArgument(args, ++i, arg));
-                        portWasProvided = true;
                         break;
                     case "--protocol":
                         ProtocolInfo.selectRevision(Integer.parseInt(requiredArgument(args, ++i, arg)));
@@ -74,10 +73,6 @@ public class Loader extends Applet {
         } catch (IllegalArgumentException | UnsupportedOperationException exception) {
             System.err.println("void-osrs: " + exception.getMessage());
             return;
-        }
-        // Explicit --port always wins over the configured endpoint.
-        if (!portWasProvided) {
-            port = ProtocolInfo.port();
         }
         // First launch only — blocks until the user accepts (persisted under user.home).
         if (!showAffiliationDisclaimerIfNeeded()) {
