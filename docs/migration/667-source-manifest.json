@@ -30,8 +30,10 @@
   "migration_policy": {
     "current_profile": 634,
     "target_profile": 667,
+    "target_status": "not runnable; selection fails closed until the core, cache, login, and server ports are complete",
     "profile_property": "void.protocol",
-    "cache_namespace_pattern": "runescape-{revision}",
+    "cache_namespace_pattern": "runescape for the working 634 profile; runescape-667 for a completed 667 profile",
+    "default_port": 43594,
     "server_requirement": "A separately supplied server compatible with the pinned 667 protocol is required.",
     "license_status": "No root license grant was identified; legal review is required before redistributing source or binary cache artifacts."
   }

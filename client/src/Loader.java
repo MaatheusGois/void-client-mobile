@@ -44,32 +44,38 @@ public class Loader extends Applet {
     public static void main(String[] args) {
         // libsw3d.dylib + modern macOS JAWT: Finalizer crashes in canvas::~canvas.
         disableSw3dOnMacOs();
-        for (int i = 0; i < args.length; i++) {
-            String arg = args[i];
-            switch (arg) {
-                case "-ip":
-                case "--address":
-                    address = args[i + 1];
-                    break;
-                case "-p":
-                case "--port":
-                    port = Integer.parseInt(args[++i]);
-                    portWasProvided = true;
-                    break;
-                case "--protocol":
-                    ProtocolInfo.selectRevision(Integer.parseInt(args[++i]));
-                    break;
-                case "-d":
-                case "--debug":
-                    debug = true;
-                    break;
-                case "-t":
-                case "--trace":
-                    trace = true;
-                    break;
+        try {
+            for (int i = 0; i < args.length; i++) {
+                String arg = args[i];
+                switch (arg) {
+                    case "-ip":
+                    case "--address":
+                        address = requiredArgument(args, ++i, arg);
+                        break;
+                    case "-p":
+                    case "--port":
+                        port = parsePort(requiredArgument(args, ++i, arg));
+                        portWasProvided = true;
+                        break;
+                    case "--protocol":
+                        ProtocolInfo.selectRevision(Integer.parseInt(requiredArgument(args, ++i, arg)));
+                        break;
+                    case "-d":
+                    case "--debug":
+                        debug = true;
+                        break;
+                    case "-t":
+                    case "--trace":
+                        trace = true;
+                        break;
+                }
             }
+            ProtocolInfo.ensureSupported();
+        } catch (IllegalArgumentException | UnsupportedOperationException exception) {
+            System.err.println("void-osrs: " + exception.getMessage());
+            return;
         }
-        // A protocol flag may change the default endpoint; explicit --port always wins.
+        // Explicit --port always wins over the configured endpoint.
         if (!portWasProvided) {
             port = ProtocolInfo.port();
         }
@@ -118,6 +124,24 @@ public class Loader extends Applet {
         }
     }
 
+    private static String requiredArgument(String[] args, int index, String option) {
+        if (index >= args.length || args[index].startsWith("-")) {
+            throw new IllegalArgumentException("missing value for " + option);
+        }
+        return args[index];
+    }
+
+    private static int parsePort(String value) {
+        try {
+            int parsed = Integer.parseInt(value);
+            if (parsed > 0 && parsed <= 65535) {
+                return parsed;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        throw new IllegalArgumentException("invalid port: " + value);
+    }
+
     /**
      * Native SW3D / jaggl toolkits are unsafe on modern macOS JAWT (Finalize crash
      * or noisy RuntimeException during Auto Setup probes). Force software GraphicsToolkit.
@@ -150,11 +174,13 @@ public class Loader extends Applet {
     }
 
     void doApplet() {
+        ProtocolInfo.ensureSupported();
         setParms();
         startClient();
     }
 
     public void doFrame() {
+        ProtocolInfo.ensureSupported();
         setParms();
         openFrame();
         // After the JFrame is up — SDL/GameController sees already-paired DualShock/Xbox
@@ -194,8 +220,7 @@ public class Loader extends Applet {
         aProperties1.put("sskey", "");
         aProperties1.put("force64mb", "false");
         aProperties1.put("worldflags", "8");
-        // Keep both names synchronized: the legacy applet and the 667 loader
-        // read different revision parameter names during the staged migration.
+        // Keep both names synchronized for the legacy applet contract.
         String revision = Integer.toString(ProtocolInfo.revision());
         aProperties1.put("revision", revision);
         aProperties1.put("protocol", revision);

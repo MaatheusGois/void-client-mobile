@@ -2,9 +2,10 @@
  * Versioned protocol and cache settings shared by the desktop and rewritten mobile
  * client sources.
  *
- * <p>The 667 profile is intentionally opt-in until the 667 packet, cache, and RSA
- * implementations are imported. Keeping the 634 profile as the default preserves a
- * working rollback while allowing each migration gate to be exercised independently.</p>
+ * <p>The 667 source has been audited and pinned, but its packet, cache, and RSA
+ * implementations have not been imported. The current client therefore exposes
+ * only the working 634 profile and rejects attempts to run the incomplete target
+ * profile instead of sending 634 packets with a 667 revision.</p>
  */
 public final class ProtocolInfo {
     public static final int REVISION_634 = 634;
@@ -24,24 +25,27 @@ public final class ProtocolInfo {
     }
 
     /**
-     * Returns the selected client revision. Use {@code -Dvoid.protocol=667} for the
-     * migration profile or {@code -Dvoid.protocol=634} for the rollback profile.
+     * Returns the implemented client revision. The target 667 profile is rejected
+     * by {@link #ensureSupported()} until its core and protocol ports are complete.
      */
     public static int revision() {
         int selected = selectedRevision;
-        if (selected == REVISION_634 || selected == REVISION_667) {
+        if (selected == REVISION_634) {
             return selected;
         }
         synchronized (ProtocolInfo.class) {
             selected = selectedRevision;
-            if (selected == REVISION_634 || selected == REVISION_667) {
+            if (selected == REVISION_634) {
                 return selected;
             }
             String property = readProperty(REVISION_PROPERTY);
             if (property != null) {
                 try {
                     int parsed = Integer.parseInt(property);
-                    if (parsed == REVISION_634 || parsed == REVISION_667) {
+                    if (parsed == REVISION_667) {
+                        throw unsupportedTarget();
+                    }
+                    if (parsed == REVISION_634) {
                         selectedRevision = parsed;
                         return parsed;
                     }
@@ -58,15 +62,41 @@ public final class ProtocolInfo {
 
     /**
      * Selects a revision from a launcher argument before the applet is created.
-     * The launcher must call this during bootstrap, before starting client work.
-     * Later calls replace the selection deliberately, which lets the desktop
-     * launcher update the endpoint default after parsing its arguments.
+     * The only runnable revision is currently 634. This method deliberately
+     * rejects 667 so a launcher cannot put the 634 packet implementation on a
+     * 667 connection by changing one integer.
      */
     public static synchronized void selectRevision(int revision) {
-        if (revision != REVISION_634 && revision != REVISION_667) {
+        if (revision == REVISION_667) {
+            throw unsupportedTarget();
+        }
+        if (revision != REVISION_634) {
             throw new IllegalArgumentException("Unsupported protocol revision: " + revision);
         }
         selectedRevision = revision;
+    }
+
+    /**
+     * Fails before applet/client startup when the target profile was requested
+     * through a system property. Mobile hosts call this through {@link Loader}
+     * before creating the generated client.
+     */
+    public static void ensureSupported() {
+        String property = readProperty(REVISION_PROPERTY);
+        if (property == null) {
+            return;
+        }
+        try {
+            int requested = Integer.parseInt(property);
+            if (requested == REVISION_667) {
+                throw unsupportedTarget();
+            }
+            if (requested != REVISION_634) {
+                throw new IllegalArgumentException("Unsupported protocol revision: " + requested);
+            }
+        } catch (NumberFormatException ignored) {
+            throw new IllegalArgumentException("Invalid " + REVISION_PROPERTY + "='" + property + "'");
+        }
     }
 
     public static boolean is667() {
@@ -74,23 +104,22 @@ public final class ProtocolInfo {
     }
 
     /**
-     * Returns the configured game port. The audited 667 source uses 443 as its
-     * primary live endpoint and 43594 as its secondary endpoint; Void's legacy
-     * profile continues to use 43594 as its primary endpoint.
+     * Returns the configured game port. The port is server-specific; keep the
+     * Void-compatible 43594 default until a compatible 667 server is selected.
      */
     public static int port() {
-        int fallback = is667() ? 443 : 43594;
-        return configuredPort(PORT_PROPERTY, fallback);
+        return configuredPort(PORT_PROPERTY, 43594);
     }
 
-    /** Returns the configured failover port, defaulting to the 667 secondary endpoint. */
+    /** Returns the configured failover port for the selected compatible server. */
     public static int secondaryPort() {
         return configuredPort(SECONDARY_PORT_PROPERTY, 43594);
     }
 
     /**
-     * Adds the revision to the cache namespace. This is deliberately idempotent so
-     * callers can pass either the applet game name or an already-versioned name.
+     * Adds a suffix only for the future 667 profile. The implemented 634 profile
+     * keeps the historical cache directory, while a completed 667 port will use a
+     * separate namespace and cannot consume those files.
      */
     public static String cacheNamespace(String gameName) {
         String base = gameName;
@@ -102,7 +131,7 @@ public final class ProtocolInfo {
                 || base.endsWith("-" + REVISION_667))) {
             base = base.substring(0, suffix);
         }
-        return base + "-" + revision();
+        return revision() == REVISION_667 ? base + "-" + REVISION_667 : base;
     }
 
     private static int configuredPort(String propertyName, int fallback) {
@@ -140,5 +169,10 @@ public final class ProtocolInfo {
         } catch (Throwable ignored) {
             // Mobile hosts may not expose a writable stderr during bootstrap.
         }
+    }
+
+    private static UnsupportedOperationException unsupportedTarget() {
+        return new UnsupportedOperationException(
+                "667 migration is not runnable: port the pinned client, cache, packets, and RSA first");
     }
 }

@@ -1,7 +1,7 @@
 # Client architecture
 
-Canonical RuneScape 634 (2010-12-14) Java client sources for Void, with
-versioned 667 migration settings. The same tree drives desktop JVM, Android
+Canonical RuneScape 634 (2010-12-14) Java client sources for Void, with a
+pinned 667 migration audit. The same tree drives desktop JVM, Android
 (ART), and iOS/tvOS (RoboVM AOT). Mobile hosts rewrite `java.awt` →
 `voidawt` (and friends); game logic stays here.
 
@@ -100,9 +100,9 @@ Client state is gated by obfuscated globals (e.g. `Component49.clientState`); po
 
 ## Networking
 
-Both **JS5** (cache download) and **game login** use the selected endpoint
-against a compatible game process. The safe default is TCP 43594; the opt-in
-667 profile defaults to 443 and accepts `-Dvoid.port=<port>`.
+Both **JS5** (cache download) and **game login** use the configured endpoint
+against a compatible game process. The working default is TCP 43594 and accepts
+`-Dvoid.port=<port>`. The incomplete 667 target is rejected before networking.
 
 | Layer | Location | Notes |
 |-------|----------|--------|
@@ -126,10 +126,11 @@ Defaults by host (overridable via `void.server` / `ServerPrefs` / in-app picker)
 `Loader.modewhere=0` (LIVE) keeps the configured port. LOCAL (`4`) remaps to
 `40000+worldid` — avoid unless ports are patched.
 
-`ProtocolInfo` centralizes the revision, endpoint, source pin, and cache
-namespace. Cache directories are `runescape-634` and `runescape-667`; do not
-reuse a 634 cache for the 667 profile. Current RSA keys and packet layouts
-remain 634 until the compatible server and 667 fixtures are selected.
+`ProtocolInfo` centralizes the implemented revision, endpoint, source pin, and
+cache namespace. The working 634 cache remains `runescape`; a completed 667
+port must use `runescape-667`. Do not reuse a 634 cache for a future 667
+profile. Current RSA keys and packet layouts remain 634 until the compatible
+server and 667 fixtures are selected.
 
 ---
 

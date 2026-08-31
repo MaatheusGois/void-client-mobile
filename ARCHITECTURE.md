@@ -1,18 +1,18 @@
 # Void mobile architecture (Android + iOS / tvOS)
 
 The desktop client is a decompiled RuneScape 634 Java applet (`client/src`) with
-versioned 667 migration settings. Android, iPad, and Apple TV run that **same
+a pinned 667 migration audit. Android, iPad, and Apple TV run that **same
 Java**, with a software renderer and a thin native host. OpenGL / DirectX /
 jaggl natives are stubbed so the toolkit falls back to the CPU pixel buffer.
 
 All mobile hosts talk to the configured compatible game process for JS5 and
-login. The legacy profile uses **TCP 43594**; the opt-in 667 profile defaults
-to the audited source's live endpoint, **TCP 443**, and accepts `void.port`.
-Start the compatible server before launching the app.
+login. The working profile uses **TCP 43594** and accepts `void.port`. The
+audited 667 source is not a runnable profile; startup rejects it until a
+compatible core, cache, login, and server are supplied.
 
 ```
                     ┌─────────────────────────────────────────┐
-                    │  void-client/client/src  (Java 634/667) │
+                    │  void-client/client/src  (Java 634)     │
                     │  Loader → applet → software ha_*        │
                     └────────────────┬────────────────────────┘
                                      │ Gradle rewrite
@@ -179,17 +179,17 @@ Title music needs JS5 archives (index 6 + instruments). Silence with working har
 
 ### 6. Networking (JS5 + login)
 
-Both JS5 (cache) and login use the selected endpoint against a compatible game
-process. The safe default is TCP 43594; the opt-in 667 profile defaults to TCP
-443 and accepts `-Dvoid.port=<port>`. `Loader.modewhere=0` (LIVE) keeps that
-port; do **not** switch to LOCAL (`4`) unless ports are patched — LOCAL rewrites
-to `40000+worldid`.
+Both JS5 (cache) and login use the configured endpoint against a compatible
+game process. The working default is TCP 43594 and accepts
+`-Dvoid.port=<port>`. `Loader.modewhere=0` (LIVE) keeps that port; do **not**
+switch to LOCAL (`4`) unless ports are patched — LOCAL rewrites to
+`40000+worldid`.
 
-`client/src/ProtocolInfo.java` is the single source for supported revisions,
-endpoint defaults, the pinned 667 source, and cache namespaces. The working
-profile is 634; `-Dvoid.protocol=667` or `Loader --protocol 667` selects the
-migration profile. Cache data is stored below the same cache root but in
-`runescape-634` or `runescape-667`, so a 667 parser cannot consume an old 634
+`client/src/ProtocolInfo.java` is the single source for the implemented
+revision, endpoint defaults, the pinned 667 source, and cache namespace policy.
+The working profile is 634; `-Dvoid.protocol=667` and `Loader --protocol 667`
+fail before networking. The 634 cache remains under `runescape`; a completed
+667 port must use `runescape-667`, so a 667 parser cannot consume the legacy
 store by accident. Current RSA keys and packet layouts are not silently claimed
 to be 667-compatible.
 
@@ -231,8 +231,9 @@ Mac Wi‑Fi firewall typically **blocks** inbound `:43594` from the phone. USB r
 | `Class314_Sub1` | local disk queue cap 250→512 | Cache warm path on device |
 
 Device cache lives at  
-`/data/data/world.gregs.voidosrs.android/files/.jagex_cache_32/runescape-634/`
-or `runescape-667/` (~hundreds of MB after first fill).
+`/data/data/world.gregs.voidosrs.android/files/.jagex_cache_32/runescape/`
+or, after a completed 667 port, `runescape-667/` (~hundreds of MB after first
+fill).
 
 #### Loading stages (what “Checking for updates X%” means)
 

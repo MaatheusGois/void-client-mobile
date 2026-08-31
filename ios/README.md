@@ -1,7 +1,7 @@
 # iOS / tvOS
 
-Same versioned client as Android, AOT via MobiVM/RoboVM. The working profile is
-634; the 667 profile is opt-in while protocol and cache ports are validated.
+Same 634 client as Android, AOT via MobiVM/RoboVM. The 667 source is audited but
+not yet a runnable profile.
 Root runbook: **[README.md](../README.md)**.
 
 Needs **arm64** JDK 17 (`make` checks `JAVA_17`, default `~/.jdks/jdk-17.0.20.1+1`).
@@ -15,7 +15,7 @@ make tvos-device   # physical Apple TV
 make tvos-clean    # clean (same ios/ module)
 ```
 
-Simulator → `127.0.0.1`. Device → set `void.server` before boot, use the in-app **Server** picker, or edit the default in `GameController`. Set `void.protocol` and `void.port` before boot to select a migration endpoint; cache data is isolated by revision.
+Simulator → `127.0.0.1`. Device → set `void.server` before boot, use the in-app **Server** picker, or edit the default in `GameController`. Set `void.port` before boot to select the 634 server endpoint. `void.protocol=667` is rejected before the client starts.
 
 ## Apple TV details
 

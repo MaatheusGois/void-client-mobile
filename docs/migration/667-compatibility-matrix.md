@@ -2,8 +2,8 @@
 
 This is the pinned audit and migration checklist for the 667 work. It is not a
 claim that the two clients are wire-compatible. The current source remains the
-working 634 implementation; the 667 profile is opt-in until the core and
-protocol ports below are complete.
+working 634 implementation; the incomplete 667 target is rejected before
+networking until the core and protocol ports below are complete.
 
 ## Source decision
 
@@ -31,20 +31,21 @@ set.
 - Current software renderer: `toolkit/software` presented by `voidawt.AwtHost`.
 - Current legacy endpoint: TCP `43594` for JS5 and login.
 - Version selection is centralized in `client/src/ProtocolInfo.java`.
-- `634` is the safe default while the migration is incomplete. Use
-  `-Dvoid.protocol=667` (or desktop `--protocol 667`) only for migration gates.
-- `-Dvoid.port=<1..65535>` overrides the endpoint. The audited 667 source
-  defaults to `443` primary and `43594` secondary; the legacy profile keeps
-  `43594` primary.
-- Cache namespaces are isolated as `runescape-634` and `runescape-667` under
-  the existing `.jagex_cache_<id>` / `.file_store_<id>` roots.
+- `634` is the only runnable profile while the migration is incomplete.
+  `-Dvoid.protocol=667` (or desktop `--protocol 667`) fails closed before
+  networking.
+- `-Dvoid.port=<1..65535>` overrides the compatible 634 server endpoint. The
+  audited source's live port is not a server contract for this client.
+- The working 634 cache keeps the historical `runescape` namespace. A
+  completed 667 port must use `runescape-667` under the existing
+  `.jagex_cache_<id>` / `.file_store_<id>` roots.
 
 ## Difference inventory
 
 | Area | Local 634 responsibility | Pinned 667 responsibility/difference | Risk | Required action | Status |
 |---|---|---|---|---|---|
 | Bootstrap | `client/src/Loader.java`, `client/src/client.java`; applet parameters and unnamed-package bootstrap | `loader/` and packaged `com.jagex` client; different startup/build model | High: duplicate classes cannot share a source set | Port the core behind the existing Void hosts, or isolate the packaged core in a separate source set; do not globally rename `634` | Profile/configuration added; core pending |
-| Revision/build | JS5/startup/login values in `client.java`, `TheoraVideoPlayer.java`, and console `BuildInfo` | Revision 667 and 667 build metadata | High: a revision literal does not port packet layouts | Route revision through `ProtocolInfo`; confirm every remaining revision-bearing field against the server | Centralized for known fields |
+| Revision/build | JS5/startup/login values in `client.java`, `TheoraVideoPlayer.java`, and console `BuildInfo` | Revision 667 and 667 build metadata | High: a revision literal does not port packet layouts | Keep the runnable profile at 634 until every revision-bearing field is ported with the server | 667 selection rejected; core pending |
 | JS5 handshake | `components/Component253.java` and loading state machine | 667 handshake/endpoint behavior and JS5 artifacts in `runescape/` / `lib/` | Critical: wrong handshake can look like a network failure | Port handshake bytes, retry states, XOR and response codes from the compatible server | Pending |
 | JS5 indexes/groups | `LoadingManager`, `CacheFileStore`, `Component219` load indexes 13/33/34 | 667 index/group IDs and named-file layout | Critical: stale 634 groups can decode as valid data | Import 667 index map and validate cold/warm cache plus named files | Cache namespace isolated; map pending |
 | Reference table | `client/cache/ReferenceTable.java`, protocols 5–6, CRC/Whirlpool/version checks | 667 reference-table protocol and index revisions | Critical: parser can accept the wrong metadata | Compare parser byte-for-byte and add fixtures from the pinned cache | Pending |
@@ -63,11 +64,11 @@ set.
 
 ## Cache and rollback contract
 
-The cache directory is versioned at initialization, not by a global string
-replacement. A normal client name such as `runescape` becomes
-`runescape-634` or `runescape-667`; `CacheDirectory` also clears its per-process
-file memoization when the namespace changes. A 667 cache must never be pointed
-at a 634 directory.
+The cache directory is selected at initialization, not by a global string
+replacement. The working 634 client keeps `runescape`; a completed 667 port
+must select `runescape-667`. `CacheDirectory` also clears its per-process file
+memoization when the namespace changes. A 667 cache must never be pointed at a
+634 directory.
 
 Rollback is:
 
@@ -82,7 +83,7 @@ makes cold-cache comparisons reproducible.
 ## Migration gates
 
 - [x] Pin source commit and record that it is client-only.
-- [x] Centralize revision, endpoint, and cache namespace selection.
+- [x] Centralize the implemented revision, endpoint, and future cache namespace policy.
 - [x] Keep 634 as the default rollback-safe profile.
 - [ ] Compile a clean 667 core without duplicate 634 classes.
 - [ ] Connect to JS5 and load the 667 master index from a cold cache.
@@ -110,4 +111,5 @@ Recorded on 2026-08-30 from the migration branch:
 The Android result is an environment dependency failure, not evidence of
 protocol compatibility. Re-run `assembleDebug` after the Android plugin is
 available; then run the cold-cache, login, renderer, input, audio, resume, and
-device gates before changing `DEFAULT_REVISION` to 667.
+device gates only after a real 667 core and compatible server have been
+integrated.
