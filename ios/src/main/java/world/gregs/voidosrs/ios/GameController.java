@@ -1139,14 +1139,18 @@ public class GameController extends GCEventViewController {
             System.out.println("void-osrs boot wait server");
             return;
         }
+        ServerPrefs.applyClientProperties();
         clientStarted = true;
-        System.out.println("void-osrs boot start server=" + server + " size=" + width + "x" + height);
+        System.out.println("void-osrs boot start server=" + server
+                + " size=" + width + "x" + height);
         AwtHost.setDisplaySize(width, height);
         AwtHost.presenter = game;
         new Thread(new Runnable() {
             public void run() {
                 try {
                     Class<?> loaderCl = Class.forName("Loader");
+                    int port = loaderCl.getField("port").getInt(null);
+                    System.out.println("void-osrs boot endpoint=" + server + ":" + port);
                     loaderCl.getField("address").set(null, server);
                     loaderCl.getField("debug").set(null, true);
                     Object loader = loaderCl.getDeclaredConstructor().newInstance();

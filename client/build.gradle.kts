@@ -20,8 +20,8 @@ dependencies {
 java {
     sourceSets {
         main {
-            // All roots stay in the Java *unnamed* (default) package — a named package
-            // cannot reference the 634 types. Nested dirs (toolkit/gl, …) are EACH a
+            // Current roots stay in the Java *unnamed* (default) package — a named
+            // package cannot reference these types. Nested dirs (toolkit/gl, …) are EACH a
             // separate srcDir so the directory name is not treated as a package.
             // See client/microbot/README.md for the domain map.
             java.srcDirs(

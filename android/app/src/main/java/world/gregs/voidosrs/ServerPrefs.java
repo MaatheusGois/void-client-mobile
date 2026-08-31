@@ -28,6 +28,31 @@ public final class ServerPrefs {
     private ServerPrefs() {
     }
 
+    /**
+     * Copies optional Android debug properties into the standard Java properties
+     * consumed by the generated client. Desktop and iOS only need the latter.
+     */
+    public static void applyClientProperties() {
+        applyProperty("void.protocol", "debug.void.protocol");
+        applyProperty("void.port", "debug.void.port");
+    }
+
+    private static void applyProperty(String javaName, String androidName) {
+        try {
+            String current = System.getProperty(javaName);
+            if (current != null && current.trim().length() > 0) {
+                return;
+            }
+            Class<?> properties = Class.forName("android.os.SystemProperties");
+            String value = (String) properties.getMethod("get", String.class, String.class)
+                    .invoke(null, androidName, "");
+            if (value != null && value.trim().length() > 0) {
+                System.setProperty(javaName, value.trim());
+            }
+        } catch (Throwable ignored) {
+        }
+    }
+
     /** {@code user.home/void-server.txt} */
     public static File file() {
         String home = System.getProperty("user.home", ".");

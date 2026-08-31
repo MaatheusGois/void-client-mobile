@@ -1135,17 +1135,18 @@ public class MainActivity extends Activity {
         if (server == null) {
             return;
         }
+        ServerPrefs.applyClientProperties();
         clientStarted = true;
         AwtHost.setDisplaySize(width, height);
         new Thread(() -> {
             try {
                 Class<?> loaderCl = Class.forName("Loader");
-                Log.i("void-osrs", "boot server=" + server + ":43594"
+                int port = loaderCl.getField("port").getInt(null);
+                Log.i("void-osrs", "boot server=" + server + ":" + port
                         + " emu=" + isEmulator()
                         + " override=" + readServerOverride());
-                hud("boot " + server + ":43594");
+                hud("boot " + server + ":" + port);
                 loaderCl.getField("address").set(null, server);
-                loaderCl.getField("port").setInt(null, 43594);
                 loaderCl.getField("debug").set(null, true);
                 loaderCl.getField("trace").set(null, true);
                 Object loader = loaderCl.getDeclaredConstructor().newInstance();

@@ -438,7 +438,7 @@ final class ReflectionInvoker implements Runnable {
         this.randomDat = null;
         this.useDirectDraw = false;
         taskHead = null;
-        gameName = string;
+        gameName = ProtocolInfo.cacheNamespace(string);
         this.signed = bool;
         javaVersion = "1.1";
         javaVendor = "Unknown";

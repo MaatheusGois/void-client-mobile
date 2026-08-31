@@ -20,7 +20,7 @@ public class CacheDirectory {
     private static String userHome;
     /** True after {@link #init}; {@link #resolveCacheFile} requires it. */
     private static boolean initialized = false;
-    /** Optional game subdirectory under the cache root. */
+    /** Versioned game subdirectory under the cache root. */
     private static String gameSubdir;
 
     /** Locate/create {@code string} under rscache / jagex_cache paths; memoized. */
@@ -72,7 +72,8 @@ public class CacheDirectory {
     public static void init(byte i, String string, int i_11_) {
         cacheId = i_11_;
         if (i != -121) initialized = false;
-        gameSubdir = string;
+        gameSubdir = ProtocolInfo.cacheNamespace(string);
+        resolvedFiles.clear();
         try {
             userHome = System.getProperty("user.home");
             if (userHome != null) userHome += "/";

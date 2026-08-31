@@ -1,6 +1,9 @@
 # Client architecture
 
-Canonical **RuneScape 634** (2010-12-14) Java client sources for Void. Same tree drives desktop JVM, Android (ART), and iOS (RoboVM AOT). Mobile hosts rewrite `java.awt` → `voidawt` (and friends); game logic stays here.
+Canonical RuneScape 634 (2010-12-14) Java client sources for Void, with a
+pinned 667 migration audit. The same tree drives desktop JVM, Android
+(ART), and iOS/tvOS (RoboVM AOT). Mobile hosts rewrite `java.awt` →
+`voidawt` (and friends); game logic stays here.
 
 Repo-level mobile host details (AWT shim, audio, `adb reverse`, RoboVM patches): see [`../ARCHITECTURE.md`](../ARCHITECTURE.md).
 
@@ -19,14 +22,16 @@ Repo-level mobile host details (AWT shim, audio, `adb reverse`, RoboVM patches):
      │ real AWT/OpenGL │      │ software ha_* only  │    │ software ha_* only│
      └─────────────────┘      └─────────────────────┘    └───────────────────┘
                                          │
-                              TCP 43594 → Void game (JS5 + login)
+                            configured endpoint → compatible game server
 ```
 
 ---
 
 ## Package model (critical)
 
-All 634 types live in the Java **unnamed (default) package**. Nested folders on disk are **not** Java packages.
+All current 634 types live in the Java **unnamed (default) package**. Nested
+folders on disk are **not** Java packages. The audited 667 source uses named
+`com.jagex` packages, so it must not be copied into this source set unchanged.
 
 Each leaf that holds `.java` is registered as its own Gradle `srcDir` in `build.gradle.kts`, so the folder name is never treated as a package. A named package (e.g. `package microbot`) **cannot** reference default-package types — keep new helpers default-package too.
 
@@ -95,7 +100,9 @@ Client state is gated by obfuscated globals (e.g. `Component49.clientState`); po
 
 ## Networking
 
-Both **JS5** (cache download) and **game login** use **TCP 43594** against a Void-compatible game process.
+Both **JS5** (cache download) and **game login** use the configured endpoint
+against a compatible game process. The working default is TCP 43594 and accepts
+`-Dvoid.port=<port>`. The incomplete 667 target is rejected before networking.
 
 | Layer | Location | Notes |
 |-------|----------|--------|
@@ -116,7 +123,14 @@ Defaults by host (overridable via `void.server` / `ServerPrefs` / in-app picker)
 | iOS Simulator | `127.0.0.1` |
 | Physical phone | LAN / saved history |
 
-`Loader.modewhere=0` (LIVE) keeps port 43594. LOCAL (`4`) remaps to `40000+worldid` — avoid unless ports are patched.
+`Loader.modewhere=0` (LIVE) keeps the configured port. LOCAL (`4`) remaps to
+`40000+worldid` — avoid unless ports are patched.
+
+`ProtocolInfo` centralizes the implemented revision, endpoint, source pin, and
+cache namespace. The working 634 cache remains `runescape`; a completed 667
+port must use `runescape-667`. Do not reuse a 634 cache for a future 667
+profile. Current RSA keys and packet layouts remain 634 until the compatible
+server and 667 fixtures are selected.
 
 ---
 

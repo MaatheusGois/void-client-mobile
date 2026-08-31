@@ -21,7 +21,7 @@ final class Component337
         class348_sub47.particleBuffer.writeByte(false, DisplayModeManagerContainer109.aClass29_2353.anInt400);
         class348_sub47.particleBuffer.writeShort((byte) 107, 0);
         int i_0_ = (class348_sub47.particleBuffer.offset);
-        class348_sub47.particleBuffer.writeShort((byte) 107, 634);
+        class348_sub47.particleBuffer.writeShort((byte) 107, ProtocolInfo.revision());
         int[] is = Cp1252Decoder.method463(class348_sub47, false);
         int i_1_ = (class348_sub47.particleBuffer.offset);
         class348_sub47.particleBuffer.writeString((byte) -5, string);

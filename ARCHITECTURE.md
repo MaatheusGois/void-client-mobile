@@ -1,8 +1,14 @@
 # Void mobile architecture (Android + iOS / tvOS)
 
-The desktop client is a decompiled **RuneScape 634** Java applet (`client/src`). Android, iPad, and Apple TV run that **same Java**, with a software renderer and a thin native host. OpenGL / DirectX / jaggl natives are stubbed so the toolkit falls back to the CPU pixel buffer.
+The desktop client is a decompiled RuneScape 634 Java applet (`client/src`) with
+a pinned 667 migration audit. Android, iPad, and Apple TV run that **same
+Java**, with a software renderer and a thin native host. OpenGL / DirectX /
+jaggl natives are stubbed so the toolkit falls back to the CPU pixel buffer.
 
-All mobile hosts talk to the Void game process on **TCP 43594** (JS5 + login). Start `:game:run` on the Mac before launching the app.
+All mobile hosts talk to the configured compatible game process for JS5 and
+login. The working profile uses **TCP 43594** and accepts `void.port`. The
+audited 667 source is not a runnable profile; startup rejects it until a
+compatible core, cache, login, and server are supplied.
 
 ```
                     ┌─────────────────────────────────────────┐
@@ -28,7 +34,7 @@ All mobile hosts talk to the Void game process on **TCP 43594** (JS5 + login). S
 
 | Path | Role |
 |------|------|
-| `client/src` | Canonical 634 sources. Keep using `java.awt` here. |
+| `client/src` | Canonical current sources and version profile. Keep using `java.awt` here. |
 | `android/` | Android Gradle app. Owns **shared** `voidawt`, JNI stubs, `MainActivity`. |
 | `android/scripts/gen_stubs.py` | Regenerates `jagdx` / `jaggl` / `jaclib` / `jagtheora` / `jagex3` stubs from `refs/2011scape-client`. |
 | `ios/` | MobiVM/RoboVM 2.3.25 project. Copies Android Java, overlays iOS/tvOS-only files. |
@@ -44,7 +50,8 @@ Do **not** edit `android/app/build/generated` or `ios/build/generated`. They are
 
 ### 1. Package rewrite (both platforms)
 
-The 634 code imports desktop JDK types Android/iOS do not provide. `prepareClientSources` copies `client/src` and rewrites imports:
+The current client code imports desktop JDK types Android/iOS do not provide.
+`prepareClientSources` copies `client/src` and rewrites imports:
 
 | Original | Replacement | Why |
 |----------|-------------|-----|
@@ -58,7 +65,9 @@ The 634 code imports desktop JDK types Android/iOS do not provide. `prepareClien
 Android: `android/app/build.gradle.kts`.  
 iOS: `ios/build.gradle` (`prepareClientSources` + `prepareSharedSources`).
 
-`Loader` is still the entry: hosts set `Loader.address`, call `setSize`, `init`. Cache lives under `user.home` (Android app files dir / iOS Documents).
+`Loader` is still the entry: hosts set `Loader.address`, `Loader.port`, call
+`setSize`, and `init`. Cache lives under `user.home` (Android app files dir /
+iOS Documents).
 
 ### 2. AWT shim (`voidawt`)
 
@@ -170,7 +179,19 @@ Title music needs JS5 archives (index 6 + instruments). Silence with working har
 
 ### 6. Networking (JS5 + login)
 
-Both JS5 (cache) and login use **TCP 43594** against the Void game process (`:game:run` on the Mac). `Loader.modewhere=0` (LIVE) keeps that port; do **not** switch to LOCAL (`4`) unless ports are patched — LOCAL rewrites to `40000+worldid`.
+Both JS5 (cache) and login use the configured endpoint against a compatible
+game process. The working default is TCP 43594 and accepts
+`-Dvoid.port=<port>`. `Loader.modewhere=0` (LIVE) keeps that port; do **not**
+switch to LOCAL (`4`) unless ports are patched — LOCAL rewrites to
+`40000+worldid`.
+
+`client/src/ProtocolInfo.java` is the single source for the implemented
+revision, endpoint defaults, the pinned 667 source, and cache namespace policy.
+The working profile is 634; `-Dvoid.protocol=667` and `Loader --protocol 667`
+fail before networking. The 634 cache remains under `runescape`; a completed
+667 port must use `runescape-667`, so a 667 parser cannot consume the legacy
+store by accident. Current RSA keys and packet layouts are not silently claimed
+to be 667-compatible.
 
 | Host | Default |
 |------|---------|
@@ -210,7 +231,9 @@ Mac Wi‑Fi firewall typically **blocks** inbound `:43594` from the phone. USB r
 | `Class314_Sub1` | local disk queue cap 250→512 | Cache warm path on device |
 
 Device cache lives at  
-`/data/data/world.gregs.voidosrs.android/files/.jagex_cache_32/runescape/` (~hundreds of MB after first fill).
+`/data/data/world.gregs.voidosrs.android/files/.jagex_cache_32/runescape/`
+or, after a completed 667 port, `runescape-667/` (~hundreds of MB after first
+fill).
 
 #### Loading stages (what “Checking for updates X%” means)
 
